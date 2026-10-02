@@ -109,27 +109,27 @@ final class qe {
         field_c = null;
     }
 
-    final static void b(int param0) {
-        int var2 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1 = null;
-        var2 = Geoblox.field_C;
+    final static void adjustThemeReleaseQuota(int additionalReleases) {
+        int clientControlFlowGuard = 0;
+        RuntimeException caughtQuotaUpdateFailure = null;
+        RuntimeException quotaUpdateFailureForContext = null;
+        clientControlFlowGuard = Geoblox.field_C;
         try {
           if (ji.difficultyStep != 0) {
             if (ji.difficultyStep < 21) {
               fa.releasesPerTheme = fa.releasesPerTheme + 10;
             }
           }
-          fa.releasesPerTheme = fa.releasesPerTheme + param0;
+          fa.releasesPerTheme = fa.releasesPerTheme + additionalReleases;
           sa.releasesPerDifficultyStep = fa.releasesPerTheme / 3;
           L1: while (fa.releasesPerTheme > 3 * sa.releasesPerDifficultyStep) {
             sa.releasesPerDifficultyStep = sa.releasesPerDifficultyStep + 1;
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1), "qe.B(" + param0 + ')');
+        } catch (java.lang.RuntimeException quotaUpdateFailure) {
+          caughtQuotaUpdateFailure = quotaUpdateFailure;
+          quotaUpdateFailureForContext = caughtQuotaUpdateFailure;
+          throw t.a((Throwable) ((Object) quotaUpdateFailureForContext), "qe.B(" + additionalReleases + ')');
         }
     }
 

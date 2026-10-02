@@ -69,6 +69,22 @@ export function validateManifest(rules, directory = root) {
     const recorded = probe.toString().match(/const expectedNativeSha256 = '([a-f0-9]{64})'/)?.[1];
     if (hash(probe) !== item.sha256 || recorded !== item.nativeOutputSha256)
       throw new Error(`Reviewed native probe differs: ${item.file}`);
+    if (item.additionalTraces !== undefined) {
+      if (!Array.isArray(item.additionalTraces) || !item.additionalTraces.length ||
+          new Set(item.additionalTraces.map(trace => trace.constant)).size !== item.additionalTraces.length)
+        throw new Error('Invalid additional native trace identities');
+      for (const trace of item.additionalTraces) {
+        if (!/^[A-Za-z_$][A-Za-z0-9_$]*$/.test(trace.constant) || !sha256(trace.sha256) ||
+            !Number.isInteger(trace.scenarios) || trace.scenarios <= 0)
+          throw new Error('Invalid additional native trace identity');
+        // The probe source hash above binds the actual assertions and coverage.
+        // Also bind each separately recorded trace to its source constant.
+        const escaped = trace.constant.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const actual = probe.toString().match(new RegExp(`const ${escaped} = '([a-f0-9]{64})'`))?.[1];
+        if (actual !== trace.sha256)
+          throw new Error(`Reviewed additional native trace differs: ${item.file}`);
+      }
+    }
   }
   const toolRoot = path.join(directory, 'tools');
   const tool = JSON.parse(fs.readFileSync(path.join(toolRoot, 'PIN.json')));

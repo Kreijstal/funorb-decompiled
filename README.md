@@ -19,6 +19,13 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and retain all 152,514 bindings
 and 388 override relationships.
 
+Difficulty and spawning now name the step flags, sprite-variant/category
+bounds, special-kind probability, release interval and queue geometry.
+The current export adds 38 rules and retains all prior names. Independent
+native fixtures verify 84,661 additional difficulty/reset/selection cases,
+including floating-point casts, recursive failures, partial writes and seeded
+random draw consumption. Raw source and decompiler pins are unchanged.
+
 The boundary scan now has guarded semantic names for every local and parameter.
 An independent geometric oracle verifies 425,042 pixel cases at two framebuffer
 strides, plus guard arithmetic and invalid-raster read ordering, against native
@@ -42,8 +49,9 @@ parsing, original render order, exact condition inversion and retained declarati
 blocks protect scopes, effects, NaNs, labels, catches and lock release.
 
 All 303 sources compile, preserving 20,931 declaration identities and 388
-override edges. Raw/readable rebinding compares 152,514 bindings. The readable
-manifest explicitly migrates 35 local ordinals while retaining all 1,170 names.
+override edges. Raw/readable rebinding compares 152,514 bindings. The structural
+pass migrated 35 local ordinals; the current naming pass
+adds 38 identities while retaining all prior names.
 The generic emitter passes 11 test groups and 556 native comparisons; floating,
 nested-cycle, exception-exit and catch regressions also pass. A clean committed
 source archive regenerates all raw Java and diagnostics byte-for-byte.

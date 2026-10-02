@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 1,170 guarded naming rules: 22 classes, 382 fields,
-175 methods, 209 parameters and 382 local declarations. Both 303-file corpora
+The current export has 1,208 guarded naming rules: 22 classes, 389 fields,
+181 methods, 217 parameters and 399 local declarations. Both 303-file corpora
 compile, preserving 152,514 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -67,6 +67,7 @@ JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-text-write.m
 JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-gameplay.mjs /path/to/verified-geoblox-classes
 JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-result-sequence.mjs /path/to/verified-geoblox-classes
 JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-result-helpers.mjs /path/to/verified-geoblox-classes
+JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-nine-slice.mjs /path/to/verified-geoblox-classes
 ```
 
 Matching/scoring covers 708 controlled scenarios and 55,728 ticks per variant.
@@ -131,6 +132,25 @@ still precedes framebuffer access, and an occupied left cardinal pixel can
 return before an invalid right pixel index. The prior 52,164 gameplay trace
 remains byte-identical; boundary matrix counts are verified separately.
 
+Difficulty and spawning add 38 guarded names for the flag table, selection
+bounds, probabilities, interval settings, reset/quota helpers, guard parameters
+and spawn-queue locals. Independent native oracles check 82,944 flag cases,
+56 array/index cases, 60 real-table progression ticks, 112 float/cast interval
+cases, 150 bounded quota adjustments, seven reset guards and 1,332 selection
+cases. The category/variant selectors use seeded Random instances; bounds,
+guard outcomes and the number of consumed draws are independently checked.
+Special-kind checks cover closed probability gates and invalid guards.
+
+The additional 84,661-case trace has its own pin:
+`8c66899b5955eac3380cc3aefd3cbe17a5063cc68f98cd507ff406cea4ae587b`.
+The original 52,164-case gameplay trace remains unchanged. The single manifest
+binds both trace constants and the full probe source hash. All variants verify
+actual resulting state, including recursive guard failures and partial writes.
+Spawn-queue angle/position locals and live special-kind thresholds also have
+source evidence; these tests do not execute full spawning with real assets or
+verify the live Math.random distribution. Quota tests use bounded inputs and
+do not cover extreme overflow-driven loops.
+
 Contact-physics producers, actual asset loading, new unlock delivery, device
 audio and whole-game equivalence remain unverified. Text-writer guards <=23
 retain a PCM side effect outside the direct writer probe. These source checks
@@ -154,8 +174,9 @@ This removes 2,128 generated else wrappers (3,481 to 1,353) and 2,213 raw source
 lines across 208 files. The fresh javac inventory preserves all 20,931
 declaration identities and 388 override edges. The only duplicate-name method,
 `wg.finalize`, is byte-identical. Current raw/readable comparison checks 152,514
-bindings. The update explicitly migrates 35 named local ordinals; all 1,170
-reviewed semantic names remain. Reference inventory changes comprise 86 merged
+bindings. The structural update migrated 35 named local ordinals. The current
+naming pass adds 38 guarded identities with the raw input unchanged, retaining all
+1,170 prior semantic names. Reference inventory changes comprise 86 merged
 unit increments, one assignment moved into an initializer and one unreachable
 checked-catch sentinel. This inventory audit does not establish whole-program
 equivalence.
@@ -188,8 +209,9 @@ The retained loop-exit fixtures cover 7,200 native comparisons.
 A clean Git source archive regenerates all 303 raw files and current diagnostics
 byte-for-byte. Previous integral-sign and literal-shift cleanup remains, with
 its historical proof recorded in the raw provenance. Current source/decompiler
-identity and naming migrations live in the same `publication.sourceChange` and
-`ruleChanges` records; no JSON snapshots are added.
+identity and naming migrations live in the single manifest. `ruleChanges`
+records naming changes; `sourceChange` is recorded when input identity changes.
+This naming pass keeps the input fixed; no JSON snapshots are added.
 
 ## Update this export
 
@@ -210,6 +232,6 @@ identity and naming migrations live in the same `publication.sourceChange` and
 | Java source tree | SHA-256 |
 | --- | --- |
 | Raw | `baeae8c226093d2a14392d9994aa74ddd4c735009a09e713af1b7cf39f202029` |
-| Readable | `28acc3358e687ca4bd75674d08882a3d3a639e3118837fb6c0a15d3835ef86af` |
+| Readable | `f9ce5d72b5bad149e74cdd8312b98dbbdda3f3f38e991be8dc744d2b8a226a52` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

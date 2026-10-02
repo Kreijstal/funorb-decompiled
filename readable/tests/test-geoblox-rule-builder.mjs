@@ -31,7 +31,7 @@ function fixture(change, check = true) {
 }
 
 test('one current manifest reproduces all guarded rules using Git history', () => {
-  assert.equal(JSON.parse(fixture().stdout).rules, 1170);
+  assert.equal(JSON.parse(fixture().stdout).rules, 1208);
 });
 test('previous Git objects and their hash cannot change silently', () => {
   for (const change of [
@@ -51,7 +51,7 @@ test('explicit additions and replacements check their complete previous identity
     const rule = {symbol: 'L:ul.b(I)V#2', originalName: 'stackIn_10_0', to: 'fixtureResult', evidence: 'Fixture addition'};
     data.renames.push(rule); data.publication.ruleChanges.push({symbol: rule.symbol, before: null, after: rule});
   };
-  assert.equal(JSON.parse(fixture(add, false).stdout).rules, 1171);
+  assert.equal(JSON.parse(fixture(add, false).stdout).rules, 1209);
   assert.throws(() => fixture(data => { add(data); data.publication.ruleChanges[0].before = {}; }),
     /differs from the previous guarded identity/);
   assert.throws(() => fixture(data => { add(data); data.publication.ruleChanges.push(data.publication.ruleChanges[0]); }),
@@ -92,6 +92,18 @@ test('native evidence binds current probe bytes and its fixed native trace', () 
     (_data, directory) => { fs.appendFileSync(path.join(directory, 'tests/test-geoblox-text-write.mjs'), '\n'); },
     (_data, directory) => { fs.appendFileSync(path.join(directory, 'tests/test-geoblox-gameplay.mjs'), '\n'); },
   ]) assert.throws(() => fixture(change), /Reviewed native probe differs/);
+  const gameplay = data => data.publication.nativeEvidence.find(item => item.file === 'tests/test-geoblox-gameplay.mjs');
+  assert.throws(() => fixture(data => { gameplay(data).additionalTraces[0].sha256 = '0'.repeat(64); }),
+    /Reviewed additional native trace differs/);
+  for (const change of [
+    data => { gameplay(data).additionalTraces[0].constant = 'invalid-name'; },
+    data => { gameplay(data).additionalTraces[0].sha256 = 'invalid'; },
+    data => { gameplay(data).additionalTraces[0].scenarios = 0; },
+  ]) assert.throws(() => fixture(change), /Invalid additional native trace identity/);
+  for (const change of [
+    data => { gameplay(data).additionalTraces = []; },
+    data => { gameplay(data).additionalTraces.push(gameplay(data).additionalTraces[0]); },
+  ]) assert.throws(() => fixture(change), /Invalid additional native trace identities/);
 });
 test('frozen tool bytes are still checked from the single current manifest workflow', () => {
   assert.throws(() => fixture((_data, directory) => {

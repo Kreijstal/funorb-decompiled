@@ -7,7 +7,7 @@ class f extends qf implements pl {
     private boolean field_mb;
     static int field_ib;
     static gk field_hb;
-    static int field_qb;
+    static int availableEntityCategoryCount;
     static java.awt.Canvas field_kb;
     static String fullscreenTimeoutText;
     private boolean field_ob;
@@ -96,7 +96,7 @@ class f extends qf implements pl {
             return;
         }
         if (param0 >= -48) {
-            field_qb = -112;
+            availableEntityCategoryCount = -112;
             vl.field_n = od.a(480, 0, 0, -3, MenuScreen.field_i, 640);
             if (null != vl.field_n) {
                 sl.a(vl.field_n, 57);

@@ -100,21 +100,21 @@ final class vd {
         }
     }
 
-    final static int a(int param0) {
-        if (param0 != 741924304) {
+    final static int chooseSpawnSpriteKind(int methodGuard) {
+        if (methodGuard != 741924304) {
             return 104;
         }
-        if (!(Math.random() < sa.field_c)) {
+        if (!(Math.random() < sa.specialSpriteKindProbability)) {
             return 0;
         }
-        double var1 = Math.random();
-        if (0.13 > var1) {
+        double specialKindRoll = Math.random();
+        if (0.13 > specialKindRoll) {
             return 3;
         }
-        if (var1 < 0.25) {
+        if (specialKindRoll < 0.25) {
             return 4;
         }
-        if (!(var1 < 0.65)) {
+        if (!(specialKindRoll < 0.65)) {
             return 2;
         }
         return 1;
@@ -132,7 +132,7 @@ final class vd {
             if (param0 > 113) {
               return 0;
             }
-            vd.a(-69);
+            vd.chooseSpawnSpriteKind(-69);
             return 0;
           }
           if (v.a(this.field_i, (byte) 89)) {
@@ -141,7 +141,7 @@ final class vd {
           if (param0 > 113) {
             return 0;
           }
-          vd.a(-69);
+          vd.chooseSpawnSpriteKind(-69);
           return 0;
         }
         if (this.field_c > 0) {
@@ -154,7 +154,7 @@ final class vd {
           if (param0 > 113) {
             return 0;
           }
-          vd.a(-69);
+          vd.chooseSpawnSpriteKind(-69);
           return 0;
         }
         if (v.a(this.field_i, (byte) 89)) {
@@ -163,7 +163,7 @@ final class vd {
         if (param0 > 113) {
           return 0;
         }
-        vd.a(-69);
+        vd.chooseSpawnSpriteKind(-69);
         return 0;
     }
 

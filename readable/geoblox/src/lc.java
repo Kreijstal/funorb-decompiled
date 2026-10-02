@@ -7,33 +7,33 @@ final class lc {
     boolean field_c;
     static int field_b;
 
-    final static void updateSpawnQueue(int param0) {
-        RuntimeException decompiledCaughtException = null;
-        GameplayEntity var1 = null;
-        RuntimeException var1_ref = null;
-        double var2 = 0.0;
-        float var4 = 0.0f;
-        float var5 = 0.0f;
-        float var6 = 0.0f;
-        float var7 = 0.0f;
-        double var8 = 0.0;
-        int var10 = 0;
-        var10 = Geoblox.field_C;
+    final static void updateSpawnQueue(int methodGuard) {
+        RuntimeException caughtSpawnQueueFailure = null;
+        GameplayEntity queuedEntityThenPooledEntity = null;
+        RuntimeException spawnQueueFailureForContext = null;
+        double spawnAngleRadians = 0.0;
+        float spawnPositionX = 0.0f;
+        float spawnPositionY = 0.0f;
+        float inwardDirectionX = 0.0f;
+        float inwardDirectionY = 0.0f;
+        double inverseSpawnDistance = 0.0;
+        int clientControlFlowGuard = 0;
+        clientControlFlowGuard = Geoblox.field_C;
         try {
-          var1 = (GameplayEntity) ((Object) SecondaryDeque.spawnQueue.firstForIteration(0));
+          queuedEntityThenPooledEntity = (GameplayEntity) ((Object) SecondaryDeque.spawnQueue.firstForIteration(0));
           L0: while (true) {
             L1: {
-              if (var1 != null) {
-                var1.advanceEntityAnimation(true);
-                var1 = (GameplayEntity) ((Object) SecondaryDeque.spawnQueue.nextForIteration(1));
-                if (var10 != 0) {
+              if (queuedEntityThenPooledEntity != null) {
+                queuedEntityThenPooledEntity.advanceEntityAnimation(true);
+                queuedEntityThenPooledEntity = (GameplayEntity) ((Object) SecondaryDeque.spawnQueue.nextForIteration(1));
+                if (clientControlFlowGuard != 0) {
                   break L1;
                 }
-                if (var10 == 0) {
+                if (clientControlFlowGuard == 0) {
                   continue L0;
                 }
               }
-              if (param0 != 255) {
+              if (methodGuard != 255) {
                 field_b = -11;
               }
             }
@@ -44,7 +44,7 @@ final class lc {
                     break L4;
                   }
                 }
-                if (~kb.field_c <= ~kc.field_a) {
+                if (~kb.spawnReleaseIntervalTicks <= ~kc.ticksSinceLastEntityRelease) {
                   if (ul.releasedInCurrentTheme != 0) {
                     break L3;
                   }
@@ -53,30 +53,30 @@ final class lc {
                   }
                 }
               }
-              if (0 < SecondaryDeque.spawnQueue.countNodes(param0 ^ -170)) {
+              if (0 < SecondaryDeque.spawnQueue.countNodes(methodGuard ^ -170)) {
                 if (!el.gameplaySession.spawnReleaseDisabled) {
                   ji.movingEntities.addLast(-48, SecondaryDeque.spawnQueue.removeFirst((byte) -124));
                   hd.recordEntityRelease(2);
-                  kc.field_a = 0;
+                  kc.ticksSinceLastEntityRelease = 0;
                 }
               }
             }
-            kc.field_a = kc.field_a + 1;
-            if (SecondaryDeque.spawnQueue.countNodes(param0 ^ 143) < 3) {
+            kc.ticksSinceLastEntityRelease = kc.ticksSinceLastEntityRelease + 1;
+            if (SecondaryDeque.spawnQueue.countNodes(methodGuard ^ 143) < 3) {
               if (ma.c((byte) -53)) {
                 if (!el.gameplaySession.canAdvanceSession(true)) {
-                  var1 = (GameplayEntity) ((Object) ra.availableEntities.removeFirst((byte) -101));
-                  if (null != var1) {
-                    var2 = 2.0 * Math.random() * 3.141592653589793;
-                    var4 = 240.0f * (float)Math.cos(var2) + 320.0f;
-                    var5 = 240.0f + (float)Math.sin(var2) * 240.0f;
-                    var6 = 320.0f - var4;
-                    var7 = -var5 + 240.0f;
-                    var8 = 1.0 / Math.sqrt((double)(var7 * var7 + var6 * var6));
-                    var7 = (float)((double)var7 * var8);
-                    var6 = (float)((double)var6 * var8);
-                    var1.initializeEntityMotion(101, var4, vd.a(param0 ^ 741924143), og.entityMotionSpeed * var6, nf.c((byte) -67), kc.field_a + kb.field_c * (1 + SecondaryDeque.spawnQueue.countNodes(111)), 0.0f, var5, var7 * og.entityMotionSpeed, ij.m(param0 ^ 131), 0.0f);
-                    SecondaryDeque.spawnQueue.addLast(-47, var1);
+                  queuedEntityThenPooledEntity = (GameplayEntity) ((Object) ra.availableEntities.removeFirst((byte) -101));
+                  if (null != queuedEntityThenPooledEntity) {
+                    spawnAngleRadians = 2.0 * Math.random() * 3.141592653589793;
+                    spawnPositionX = 240.0f * (float)Math.cos(spawnAngleRadians) + 320.0f;
+                    spawnPositionY = 240.0f + (float)Math.sin(spawnAngleRadians) * 240.0f;
+                    inwardDirectionX = 320.0f - spawnPositionX;
+                    inwardDirectionY = -spawnPositionY + 240.0f;
+                    inverseSpawnDistance = 1.0 / Math.sqrt((double)(inwardDirectionY * inwardDirectionY + inwardDirectionX * inwardDirectionX));
+                    inwardDirectionY = (float)((double)inwardDirectionY * inverseSpawnDistance);
+                    inwardDirectionX = (float)((double)inwardDirectionX * inverseSpawnDistance);
+                    queuedEntityThenPooledEntity.initializeEntityMotion(101, spawnPositionX, vd.chooseSpawnSpriteKind(methodGuard ^ 741924143), og.entityMotionSpeed * inwardDirectionX, nf.chooseSpawnSpriteVariant((byte) -67), kc.ticksSinceLastEntityRelease + kb.spawnReleaseIntervalTicks * (1 + SecondaryDeque.spawnQueue.countNodes(111)), 0.0f, spawnPositionY, inwardDirectionY * og.entityMotionSpeed, ij.chooseSpawnEntityCategory(methodGuard ^ 131), 0.0f);
+                    SecondaryDeque.spawnQueue.addLast(-47, queuedEntityThenPooledEntity);
                     mf.b(false);
                   }
                 }
@@ -84,10 +84,10 @@ final class lc {
             }
             return;
           }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1_ref = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1_ref), "lc.E(" + param0 + ')');
+        } catch (java.lang.RuntimeException spawnQueueFailure) {
+          caughtSpawnQueueFailure = spawnQueueFailure;
+          spawnQueueFailureForContext = caughtSpawnQueueFailure;
+          throw t.a((Throwable) ((Object) spawnQueueFailureForContext), "lc.E(" + methodGuard + ')');
         }
     }
 

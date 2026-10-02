@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kb {
-    static int field_c;
+    static int spawnReleaseIntervalTicks;
     static int field_b;
     static int field_d;
     static int[] field_a;
@@ -136,7 +136,7 @@ final class kb {
 
     public static void c(int param0) {
         if (param0 != 105) {
-            field_c = 71;
+            spawnReleaseIntervalTicks = 71;
             field_a = null;
             return;
         }

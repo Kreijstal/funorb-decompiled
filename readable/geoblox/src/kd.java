@@ -6,7 +6,7 @@ final class kd {
     static String field_d;
     static ng field_e;
     static String achievedText;
-    static int[] field_f;
+    static int[] difficultyStepFlags;
     static int field_c;
 
     public static void a(byte param0) {
@@ -14,7 +14,7 @@ final class kd {
         field_e = null;
         achievedText = null;
         field_d = null;
-        field_f = null;
+        difficultyStepFlags = null;
         field_b = null;
     }
 
@@ -40,30 +40,30 @@ final class kd {
     static {
         field_d = "It's the<br>bubble bonus!";
         achievedText = "Achieved";
-        field_f = new int[23];
-        field_f[14] = lb.a(field_f[14], 128);
-        field_f[12] = lb.a(field_f[12], 17);
-        field_f[0] = 0;
-        field_f[2] = lb.a(field_f[2], 12);
-        field_f[15] = lb.a(field_f[15], 3);
-        field_f[5] = lb.a(field_f[5], 140);
-        field_f[1] = lb.a(field_f[1], 4);
-        field_f[6] = lb.a(field_f[6], 1);
-        field_f[11] = lb.a(field_f[11], 132);
-        field_f[4] = lb.a(field_f[4], 0);
-        field_f[16] = lb.a(field_f[16], 0);
-        field_f[13] = lb.a(field_f[13], 16);
-        field_f[21] = lb.a(field_f[21], 16);
-        field_f[3] = lb.a(field_f[3], 133);
-        field_f[7] = lb.a(field_f[7], 4);
-        field_f[22] = lb.a(field_f[22], 0);
-        field_f[17] = lb.a(field_f[17], 128);
-        field_f[8] = lb.a(field_f[8], 136);
-        field_f[20] = lb.a(field_f[20], 132);
-        field_f[9] = lb.a(field_f[9], 2);
-        field_f[18] = lb.a(field_f[18], 2);
-        field_f[19] = lb.a(field_f[19], 16);
-        field_f[10] = lb.a(field_f[10], 4);
+        difficultyStepFlags = new int[23];
+        difficultyStepFlags[14] = lb.a(difficultyStepFlags[14], 128);
+        difficultyStepFlags[12] = lb.a(difficultyStepFlags[12], 17);
+        difficultyStepFlags[0] = 0;
+        difficultyStepFlags[2] = lb.a(difficultyStepFlags[2], 12);
+        difficultyStepFlags[15] = lb.a(difficultyStepFlags[15], 3);
+        difficultyStepFlags[5] = lb.a(difficultyStepFlags[5], 140);
+        difficultyStepFlags[1] = lb.a(difficultyStepFlags[1], 4);
+        difficultyStepFlags[6] = lb.a(difficultyStepFlags[6], 1);
+        difficultyStepFlags[11] = lb.a(difficultyStepFlags[11], 132);
+        difficultyStepFlags[4] = lb.a(difficultyStepFlags[4], 0);
+        difficultyStepFlags[16] = lb.a(difficultyStepFlags[16], 0);
+        difficultyStepFlags[13] = lb.a(difficultyStepFlags[13], 16);
+        difficultyStepFlags[21] = lb.a(difficultyStepFlags[21], 16);
+        difficultyStepFlags[3] = lb.a(difficultyStepFlags[3], 133);
+        difficultyStepFlags[7] = lb.a(difficultyStepFlags[7], 4);
+        difficultyStepFlags[22] = lb.a(difficultyStepFlags[22], 0);
+        difficultyStepFlags[17] = lb.a(difficultyStepFlags[17], 128);
+        difficultyStepFlags[8] = lb.a(difficultyStepFlags[8], 136);
+        difficultyStepFlags[20] = lb.a(difficultyStepFlags[20], 132);
+        difficultyStepFlags[9] = lb.a(difficultyStepFlags[9], 2);
+        difficultyStepFlags[18] = lb.a(difficultyStepFlags[18], 2);
+        difficultyStepFlags[19] = lb.a(difficultyStepFlags[19], 16);
+        difficultyStepFlags[10] = lb.a(difficultyStepFlags[10], 4);
         field_c = 0;
     }
 }

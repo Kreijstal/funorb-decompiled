@@ -35,6 +35,7 @@ Generated from explicit rules; original names remain lookup identities.
 | `F:ac.field_r:[Ljava/lang/String;` | `mustLoginAlternateTexts` | wi.a(BLrh;)V reads the explicit resource key 'mustlogin_alternate' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. All recorded indexed writes share that key prefix; numeric positions remain unchanged. |
 | `F:ad.field_n:Ljava/lang/String;` | `fullscreenFocusOrResolutionText` | wi.a(BLrh;)V reads the explicit resource key 'fs_focus_or_resolution' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:af.field_c:I` | `avatarFrameStepTicks` | Post-decremented each avatar update; a negative old value steps the frame and resets this to 20. Native menu/gameplay frame matrix covers -2, -1, 0, 1 and 20. |
+| `F:ag.field_k:I` | `availableSpriteVariantCount` | Bound passed through nf.c(B)I to qi.b(II)I. lc.a(I)V passes its result as spriteVariantIndex to ja.a(IFIFIIFFFIF)V; reset starts at three and difficulty bit 1 raises it up to seven. |
 | `F:ah.field_b:Ljava/lang/String;` | `connectionLostReconnectingText` | wi.a(BLrh;)V reads the explicit resource key 'connectionlost_reconnecting' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:ai.field_h:Ljava/lang/String;` | `createPasswordCharacterAlertText` | wi.a(BLrh;)V reads the explicit resource key 'create_alert_passchars' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:ai.field_p:I` | `requestedScreenId` | Requested destination ID compared with current screen during update/render; assigned by menu actions and gameplay. |
@@ -77,6 +78,7 @@ Generated from explicit rules; original names remain lookup identities.
 | `F:el.field_o:Lgh;` | `gameplaySession` | Current gh created by c activation; used for gameplay update/render and score access. |
 | `F:f.field_lb:[Ljava/lang/String;` | `quickChatShortcutKeys` | wi.a(BLrh;)V reads the explicit resource key 'quickchat_shortcut_keys' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. All recorded indexed writes share that key prefix; numeric positions remain unchanged. |
 | `F:f.field_nb:Ljava/lang/String;` | `fullscreenTimeoutText` | wi.a(BLrh;)V reads the explicit resource key 'fs_timeout' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
+| `F:f.field_qb:I` | `availableEntityCategoryCount` | Bound passed through ij.m(I)I to qi.b(II)I. lc.a(I)V passes its result as entityCategoryKey to ja.a(IFIFIIFFFIF)V; reset starts at four and difficulty bit 2 raises it up to seven. |
 | `F:fa.field_a:Z` | `entitiesDetachedThisTick` | The detach path sets this; session update resets it and excludes the board-clear bonus while it is true. |
 | `F:fa.field_b:I` | `releasesPerTheme` | qe.a calculates this theme release threshold; hd.f compares it with ul.field_b, and the HUD displays the difference. |
 | `F:fa.field_d:Ljava/lang/String;` | `idleMessage20MinText` | wi.a(BLrh;)V reads the explicit resource key 'idlemessage20min' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
@@ -167,6 +169,7 @@ Generated from explicit rules; original names remain lookup identities.
 | `F:ii.field_j:Ljava/lang/String;` | `createPasswordValidText` | wi.a(BLrh;)V reads the explicit resource key 'create_passwordvalid' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:ij.field_Y:Ljava/lang/String;` | `createPasswordTooltipText` | wi.a(BLrh;)V reads the explicit resource key 'create_password_tooltip' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:ij.field_Z:Ljava/lang/String;` | `menuText` | wi.a(BLrh;)V reads the explicit resource key 'menu' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
+| `F:ij.field_ab:F` | `spawnIntervalScale` | Float multiplier in sa.b(Z)V: int(201.0f / og.field_r * scale + 0.5f). Reset is 0.75; difficulty bit 128 adds 0.02857142873108387f when below the exact 0.8f threshold and then recomputes the interval. |
 | `F:ik.field_b:Ljava/lang/String;` | `waitingForFontsText` | wi.a(BLrh;)V reads the explicit resource key 'waitingfor_fonts' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:j.field_jb:Ljava/lang/String;` | `quitWarningText` | wi.a(BLrh;)V reads the explicit resource key 'warning_ifyouquit' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:ja.field_B:Z` | `detachedFromBoard` | ik/kc/bh set this when an entity or contact component detaches; entity reset clears it. Motion excludes detached entities from the attached count and accelerated-fall branch. |
@@ -220,8 +223,11 @@ Generated from explicit rules; original names remain lookup identities.
 | `F:ka.field_j:I` | `hitLeftX` | Lower X boundary in base menu hit test; initialized by constructor. |
 | `F:ka.field_k:I` | `firstItemY` | Menu top Y; hit test subtracts it and render initializes row Y from it. |
 | `F:ka.field_l:Z` | `keyboardSelectionActive` | True when navigation selects a row; pointer hover clears it and changes selection. |
+| `F:kb.field_c:I` | `spawnReleaseIntervalTicks` | sa.b(Z)V stores the rounded inverse-speed interval here. lc.a(I)V compares it with kc.field_a before releasing a queued entity, and includes it in queued entity lifetime calculations. |
+| `F:kc.field_a:I` | `ticksSinceLastEntityRelease` | lc.a(I)V increments this counter once per update and resets it to zero when releasing a queued entity. It is compared with kb.field_c and contributes to queued entity lifetimes; pg.a(I)V deliberately leaves it unchanged. |
 | `F:kc.field_b:Ljava/lang/String;` | `createNameCharacterAlertText` | wi.a(BLrh;)V reads the explicit resource key 'create_alert_namechars' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:kd.field_a:Ljava/lang/String;` | `achievedText` | wi.a(BLrh;)V reads the explicit resource key 'achieved' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
+| `F:kd.field_f:[I` | `difficultyStepFlags` | 23-entry table read by ld.b(Z)V using ji.difficultyStep. Independent native fixtures verify its exact initial entries and all 256 byte masks, with saturation, recursive re-reads and failure partial state. |
 | `F:kf.field_b:Ljava/lang/String;` | `pleaseTryAgainText` | wi.a(BLrh;)V reads the explicit resource key 'pleasetryagain' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:ki.field_a:Ljava/lang/String;` | `fullscreenNonmemberText` | wi.a(BLrh;)V reads the explicit resource key 'fs_nonmember' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:ki.field_e:Ljava/lang/String;` | `js5ConnectErrorText` | wi.a(BLrh;)V reads the explicit resource key 'error_js5connect' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
@@ -313,6 +319,7 @@ Generated from explicit rules; original names remain lookup identities.
 | `F:rj.field_e:Ljava/lang/String;` | `quitToWebsiteText` | wi.a(BLrh;)V reads the explicit resource key 'quittowebsite' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:rj.field_g:Ljava/lang/String;` | `loggingInText` | wi.a(BLrh;)V reads the explicit resource key 'logging_in' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:sa.field_b:I` | `releasesPerDifficultyStep` | qe.a computes ceil(fa.field_b/3) here; hd.f compares it with di.field_g to advance difficulty after that many releases. |
+| `F:sa.field_c:D` | `specialSpriteKindProbability` | vd.a(I)I compares Math.random() with this value before choosing kind 1/2/3/4 instead of zero. Difficulty bit 16 adds 0.05; steps past the table subtract 0.05 only above the exact retained 0.15000000000000002 threshold. |
 | `F:sb.field_c:Ljava/lang/String;` | `loginNoDisplayNameText` | wi.a(BLrh;)V reads the explicit resource key 'login_no_displayname' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:sb.field_f:Ljava/lang/String;` | `noHighscoresText` | wi.a(BLrh;)V reads the explicit resource key 'no_highscores' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:se.field_i:Ljava/lang/String;` | `creatingYourAccountText` | wi.a(BLrh;)V reads the explicit resource key 'creatingyouraccount' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
@@ -682,6 +689,17 @@ Generated from explicit rules; original names remain lookup identities.
 | `L:kc.b(I)V#7` | `visitedFlagThenResetIndex` | Initially carries the visited flag as an integer; reset to zero for neighbor cleanup or the visited-array reset index. |
 | `L:kc.b(I)V#8` | `popupOriginYInput` | Integer narrowing of the shocked entity Y position before selecting popup points; native routing checks original coordinates independently. |
 | `L:kc.b(I)V#9` | `popupOriginXInput` | Integer narrowing of the shocked entity X position before selecting popup points; native routing checks original coordinates independently. |
+| `L:lc.a(I)V#0` | `caughtSpawnQueueFailure` | Exception carrier assigned from the RuntimeException caught around the spawn update. |
+| `L:lc.a(I)V#1` | `queuedEntityThenPooledEntity` | First iterates SecondaryDeque.spawnQueue and animates each member; later holds the available entity removed for initialization. Both roles of the reused slot are retained. |
+| `L:lc.a(I)V#10` | `spawnQueueFailure` | RuntimeException catch parameter surrounding updateSpawnQueue. |
+| `L:lc.a(I)V#2` | `spawnQueueFailureForContext` | Caught RuntimeException alias passed to t.a with the original lc.E diagnostic string. |
+| `L:lc.a(I)V#3` | `spawnAngleRadians` | 2*Math.random()*PI angle used to place a pooled entity on the radius-240 spawn circle. |
+| `L:lc.a(I)V#4` | `spawnPositionX` | 320 + 240*cos(spawnAngleRadians); passed to initializeEntityMotion as positionX. |
+| `L:lc.a(I)V#5` | `spawnPositionY` | 240 + 240*sin(spawnAngleRadians); passed to initializeEntityMotion as positionY. |
+| `L:lc.a(I)V#6` | `inwardDirectionX` | Initially 320-spawnPositionX, then normalized by inverseSpawnDistance and multiplied by entityMotionSpeed for velocityX. |
+| `L:lc.a(I)V#7` | `inwardDirectionY` | Initially 240-spawnPositionY, then normalized by inverseSpawnDistance and multiplied by entityMotionSpeed for velocityY. |
+| `L:lc.a(I)V#8` | `inverseSpawnDistance` | Reciprocal square root of the inward offset squared length; normalizes both direction components. |
+| `L:lc.a(I)V#9` | `clientControlFlowGuard` | Entry snapshot of Geoblox.field_C controls whether the initial spawn-queue iterator continues. |
 | `L:ld.a(I)Z#0` | `previousCircleVerticalOffset` | Preserves circleVerticalOffset before increment so the error recurrence adds old plus new vertical offsets. |
 | `L:ld.a(I)Z#1` | `leftCardinalHit` | Carries integer true from the first nonzero pixel at (90,240) to the immediate return on this path inside the try. |
 | `L:ld.a(I)Z#10` | `lowerNearRightHit` | Carries integer true from lowerNearRowCenterIndex plus circleHorizontalOffset to the immediate return on this path inside the try. |
@@ -723,6 +741,11 @@ Generated from explicit rules; original names remain lookup identities.
 | `L:qa.b(B)V#30` | `avatarTintFadeFactor` | Float (50-old tint timer) multiplied by the original float literal 0.0066999997943639755 before channel narrowing. Native tint fixtures preserve this exact arithmetic. |
 | `L:qa.b(B)V#31` | `avatarFrameOffsetInSegment` | Current feedback frame minus the selected six-frame base; steering uses offsets 1, 3 and 5 as directional targets. |
 | `L:qa.b(B)V#32` | `unusedClientControlSnapshot` | Retained Geoblox.field_C entry read; the recovered menu animation body does not use this local. |
+| `L:qe.b(I)V#0` | `clientControlFlowGuard` | Entry snapshot of Geoblox.field_C retained in quota adjustment. |
+| `L:qe.b(I)V#1` | `caughtQuotaUpdateFailure` | Carrier assigned from the RuntimeException caught around quota arithmetic. |
+| `L:qe.b(I)V#2` | `quotaUpdateFailureForContext` | Alias of the caught RuntimeException passed to t.a with original qe.B diagnostic context. |
+| `L:qe.b(I)V#3` | `quotaUpdateFailure` | RuntimeException catch parameter for quota adjustment. |
+| `L:sa.b(Z)V#0` | `intervalTicks` | Rounded inverse-speed spawn interval assigned immediately to kb.field_c before the preserveReleaseQuota branch. |
 | `L:sk.a(I)Z#10` | `cascadeEntity` | Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity. |
 | `L:sk.a(I)Z#11` | `neighborIndex` | Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity. |
 | `L:sk.a(I)Z#12` | `neighborEntity` | Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity. |
@@ -778,6 +801,7 @@ Generated from explicit rules; original names remain lookup identities.
 | `L:ul.b(I)V#33` | `smallestPackedEntityId` | Initially the second neighbor ID, then permuted by the descending sort. The final smallest ID occupies packed bits 0..9. |
 | `L:ul.b(I)V#34` | `swappedEntityId` | Scratch entity ID during the descending three-ID sort; not a persistent reference to any particular neighbor. |
 | `L:ul.b(I)V#35` | `controlFlowGuard` | Snapshot of Geoblox.field_C at entry. The generated body retains this read even though this snapshot is unused by the reconstructed traversal. |
+| `L:vd.a(I)I#0` | `specialKindRoll` | Second Math.random() draw after the probability gate; thresholds 0.13, 0.25 and 0.65 select kind IDs 3, 4, 1 and 2. The draw and its order are retained. |
 | `L:wa.a(I)I#0` | `unfinishedPoints` | Drains active popups with removeFirst and accumulates their points into the returned integer. |
 | `L:wa.a(I)I#2` | `popup` | Drains active popups with removeFirst and accumulates their points into the returned integer. |
 | `L:wc.a(FB)V#0` | `sentinelDivisionGuard` | Retained division guard evaluated after copying the starting tint and before computing the palette index. Native invalid-guard fixtures preserve its exception and partial state. |
@@ -871,6 +895,7 @@ Generated from explicit rules; original names remain lookup identities.
 | `M:ib.e(I)Llh;` | `currentValidationState` | Abstract declaration implemented by q; both identities receive the same reviewed name so callers and overrides remain consistent. |
 | `M:ih.a(I)Z` | `areEntityQueuesSettled` | Returns true only when moving, spawn and transient animation queues are empty and the additional jl.field_t gate is clear. The attached queue may remain nonempty. |
 | `M:ih.a(IILja;I)V` | `linkEntityAtMaskContacts` | Probes mask coordinates, resolves encoded entity IDs and records avatar or entity contacts. |
+| `M:ij.m(I)I` | `chooseSpawnEntityCategory` | Normal guards above 18 sample qi.b with f.field_qb. Guards <=18 recursively consume one sample before returning a second; independent seeded native fixtures preserve both draws. |
 | `M:ik.a(Lja;Lja;Z)Z` | `linkTouchingEntities` | Links the entity pair and related-entity/category/variant counts while resolving the original special-kind contact rules. |
 | `M:il.b(IIIIII)V` | `rotateNearest` | Javac resolves this override of dm.b(IIIIII)V; retain the complete virtual family. |
 | `M:ja.a(FI)V` | `rotateEntityAroundBoard` | ja.java rotates the position offset from (320,240) using the float argument's sin/cos, updates positionX/positionY, recalculates the radial velocity components, and adjusts field_u. |
@@ -916,14 +941,18 @@ Generated from explicit rules; original names remain lookup identities.
 | `M:n.b(ILjava/lang/String;)Ljava/lang/String;` | `validationMessageForText` | Complete q override family across ag, cf, g, mk, n, q and uk. The state query evaluates candidate text and returns a validation-state identity; the message query describes that candidate or returns null. q current-input wrappers call these methods with the current input text. Full JVM descriptor, guards and asynchronous/pending behavior remain unchanged. |
 | `M:n.g(I)V` | `clearStaticReferences` | Clears n.field_l and n.field_k, with the original nonzero-guard call to n.c(byte) retained. The fields belong to unrelated static helpers, so this name does not claim they are sprite caches. |
 | `M:nb.a(IIIIIZ)V` | `spawnEntityAtPointer` | Initializes an entity at pointer coordinates with the supplied category/variant and optional special-kind selection. |
+| `M:nf.c(B)I` | `chooseSpawnSpriteVariant` | Normal guard -67 samples qi.b with ag.field_k. Guards at or above -55 return 66 without consuming the shared Random. Seeded native selection fixtures independently verify results and RNG consumption. |
+| `M:pg.a(I)V` | `resetGameplayDifficulty` | Resets speed, probability, selection bounds, difficulty/theme counters, release quota, spawn interval scale and rotation. Guard 9408 additionally resets remaining counters and recomputes the interval; seven native guards verify the partial-reset boundary. |
 | `M:q.a(ILjava/lang/String;)Llh;` | `validationStateForText` | Complete q override family across ag, cf, g, mk, n, q and uk. The state query evaluates candidate text and returns a validation-state identity; the message query describes that candidate or returns null. q current-input wrappers call these methods with the current input text. Full JVM descriptor, guards and asynchronous/pending behavior remain unchanged. |
 | `M:q.b(B)Ljava/lang/String;` | `currentValidationMessage` | With guard -103, calls b(422,current input text); other guards clear the input and retain the original failing path. The complete override family includes the abstract ib declaration, renamed in the same manifest. |
 | `M:q.b(ILjava/lang/String;)Ljava/lang/String;` | `validationMessageForText` | Complete q override family across ag, cf, g, mk, n, q and uk. The state query evaluates candidate text and returns a validation-state identity; the message query describes that candidate or returns null. q current-input wrappers call these methods with the current input text. Full JVM descriptor, guards and asynchronous/pending behavior remain unchanged. |
 | `M:q.e(I)Llh;` | `currentValidationState` | With guard 32, calls the abstract state query using the validated input's current text. The complete override family includes the abstract ib declaration, renamed in the same manifest. |
 | `M:qa.b(B)V` | `advanceMenuAvatarAnimation` | GameScreen invokes this with guard 127. Steps feedback frames, decrements hold/effect/fade timers and advances the fixed 600-tick blink clock; independent native state and sequence oracles cover these operations. |
+| `M:qe.b(I)V` | `adjustThemeReleaseQuota` | Adds the supplied signed delta plus ten when ji.field_h is nonzero and below 21, then stores the ceiling quota divided by three. Independent native checks cover 150 bounded signed-delta/step cases; extreme overflow-driven loops are outside the fixtures. |
 | `M:ra.a(ILrf;)V` | `selectBackgroundMusic` | Null or already-current track is a no-op. Otherwise stops the MIDI stream, resets its playback state, sets fe.field_e to the supplied track and starts it. A nonzero method guard writes ra.field_d; audio effects and exception wrapping remain intact. |
 | `M:rc.a(B)V` | `unlinkSecondaryNode` | Reconnects field_l/field_k neighbours and clears both second links without touching inherited hf links. |
 | `M:rh.a(B)V` | `updateAttachedEntities` | Iterates the attached queue, decreases match cooldowns, updates the selected sprites, checks avatar-contact special effects and computes the maximum squared distance from the board center. |
+| `M:sa.b(Z)V` | `recomputeSpawnReleaseInterval` | Computes and stores int(201.0f / og.field_r * ij.field_ab + 0.5f) before optionally setting sa.field_b to -10. Native fixtures verify 112 floating-point/cast/Boolean cases including NaNs, signed zero and infinities. |
 | `M:sk.a(I)Z` | `checkBoundaryLossAndStartCascade` | Checks the ownership raster boundary outside scene transitions; on loss starts the end sequence and traverses contacts from the farthest entity to assign staggered ending lifetimes. |
 | `M:td.a(ILgd;)V` | `playPcmSample` | Creates a stream at ratePercent 100 and volume 96, then registers it through GameplayEntity.registerAudioStream. This schedules playback; it does not advance the stream or output a device buffer itself. Guard -348 avoids the retained bad-guard recursion. |
 | `M:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;` | `writeTextAtOffset` | Overwrites destination characters sequentially from writeOffset and grows the builder only if the write extends its length. It returns the same builder; shorter and empty writes preserve trailing text. A source aliased to the destination is read live, not copied first. Invalid offsets and RuntimeExceptions retain context wrapping; source Errors escape. Native 152-case offset/aliasing/partial-write probe verifies these semantics. |
@@ -953,6 +982,7 @@ Generated from explicit rules; original names remain lookup identities.
 | `M:uk.a(ILjava/lang/String;)Llh;` | `validationStateForText` | Complete q override family across ag, cf, g, mk, n, q and uk. The state query evaluates candidate text and returns a validation-state identity; the message query describes that candidate or returns null. q current-input wrappers call these methods with the current input text. Full JVM descriptor, guards and asynchronous/pending behavior remain unchanged. |
 | `M:uk.b(ILjava/lang/String;)Ljava/lang/String;` | `validationMessageForText` | Complete q override family across ag, cf, g, mk, n, q and uk. The state query evaluates candidate text and returns a validation-state identity; the message query describes that candidate or returns null. q current-input wrappers call these methods with the current input text. Full JVM descriptor, guards and asynchronous/pending behavior remain unchanged. |
 | `M:ul.b(I)V` | `collectMatchCandidates` | Collects triples of connected entities sharing variant or category, storing sorted entity IDs and equality flags in the packed candidate array. |
+| `M:vd.a(I)I` | `chooseSpawnSpriteKind` | Guard 741924304 first gates on sa.field_c, then maps a fresh Math.random roll through 0.13/0.25/0.65 thresholds to kinds 3/4/1/2. Other guards return 104. Native checks cover closed probability gates and invalid guards, not live Math.random distribution. |
 | `M:wa.a(I)I` | `collectUnfinishedPopupPoints` | Removes every active popup and returns the sum of its uncredited points without multiplying them again. |
 | `M:wc.a(FB)V` | `requestAvatarTintForRadius` | rh passes the maximum attached squared distance from board center. When no tint fade is held, snapshots the current color, computes palette channel deltas and starts 50 ticks. Native fixtures verify normal, held, NaN and failure/partial-write cases. |
 | `M:wd.a(I)Lrc;` | `nextForIteration` | Returns and advances the cursor until reaching the sentinel; guard -59 used by conversion. Native model checks identity, order, reciprocity, transfers and primary-link independence. |
@@ -1048,6 +1078,7 @@ Generated from explicit rules; original names remain lookup identities.
 | `P:ih.a(IILja;I)V#1` | `contactY` | Y coordinate of the ownership-mask contact probe. |
 | `P:ih.a(IILja;I)V#2` | `entity` | Entity being linked to contacts decoded from the ownership mask. |
 | `P:ih.a(IILja;I)V#3` | `contactX` | X coordinate of the ownership-mask contact probe. |
+| `P:ij.m(I)I#0` | `methodGuard` | Retains the original compatibility guard and its side effects. Dedicated difficulty/reset/selection fixtures verify normal and boundary guards against native bytecode; original sentinel values are unchanged. |
 | `P:ik.a(Lja;Lja;Z)Z#0` | `firstEntity` | First member of the touching pair whose reciprocal neighbor counts are updated. |
 | `P:ik.a(Lja;Lja;Z)Z#1` | `secondEntity` | Second member of the touching pair whose reciprocal neighbor counts are updated. |
 | `P:ik.a(Lja;Lja;Z)Z#2` | `forceDetachSecond` | The incoming flag initializes the second-entity detach outcome only after duplicate suppression; verified native contact matrix covers both values. |
@@ -1087,11 +1118,13 @@ Generated from explicit rules; original names remain lookup identities.
 | `P:kl.a(Lgd;II)Lkl;#0` | `sample` | PCM factory inputs: sample supplies bytes and source frequency, ratePercent scales signed Q8 sample step, volume is shifted left six before construction. |
 | `P:kl.a(Lgd;II)Lkl;#1` | `ratePercent` | PCM factory inputs: sample supplies bytes and source frequency, ratePercent scales signed Q8 sample step, volume is shifted left six before construction. |
 | `P:kl.a(Lgd;II)Lkl;#2` | `volume` | PCM factory inputs: sample supplies bytes and source frequency, ratePercent scales signed Q8 sample step, volume is shifted left six before construction. |
+| `P:lc.a(I)V#0` | `methodGuard` | Normal caller supplies 255. Other values write lc.field_b=-11; XOR-derived guards used for selectors and deque counts retain original values. Source inspection, not a complete spawn-queue runtime proof. |
 | `P:ld.a(I)Z#0` | `methodGuard` | Actual boundary callers pass -61. The retained integer division can throw before even an occupied first cardinal pixel; native cases cover zero denominators, truncation boundaries and int subtraction overflow. |
 | `P:ld.a(IIII)V#0` | `originY` | Argument position in ug.spawnScorePopup(points, true, originY, 1, originX); parameter 2 retains its <=39 boundary-probe side effect. |
 | `P:ld.a(IIII)V#1` | `originX` | Argument position in ug.spawnScorePopup(points, true, originY, 1, originX); parameter 2 retains its <=39 boundary-probe side effect. |
 | `P:ld.a(IIII)V#2` | `methodGuard` | Argument position in ug.spawnScorePopup(points, true, originY, 1, originX); parameter 2 retains its <=39 boundary-probe side effect. |
 | `P:ld.a(IIII)V#3` | `points` | Argument position in ug.spawnScorePopup(points, true, originY, 1, originX); parameter 2 retains its <=39 boundary-probe side effect. |
+| `P:ld.b(Z)V#0` | `recursiveAdvanceGuard` | Normal hd.a(I)V callers pass false. True recursively advances the shared difficulty index and may fail on a later table re-read, preserving partial updates; it also negates the preserveReleaseQuota argument passed to sa.b(Z)V. |
 | `P:mk.a(ILjava/lang/String;)Llh;#0` | `guard` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
 | `P:mk.a(ILjava/lang/String;)Llh;#1` | `candidateText` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
 | `P:mk.b(ILjava/lang/String;)Ljava/lang/String;#0` | `guard` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
@@ -1117,6 +1150,8 @@ Generated from explicit rules; original names remain lookup identities.
 | `P:nb.a(IIIIIZ)V#3` | `pointerY` | Forwarded to the spawned entity Y position. |
 | `P:nb.a(IIIIIZ)V#4` | `variantId` | Forwarded to the entity motion initializer sprite variant index. |
 | `P:nb.a(IIIIIZ)V#5` | `specialKinds` | Selects special entity kinds instead of kind zero. |
+| `P:nf.c(B)I#0` | `methodGuard` | Retains the original compatibility guard and its side effects. Dedicated difficulty/reset/selection fixtures verify normal and boundary guards against native bytecode; original sentinel values are unchanged. |
+| `P:pg.a(I)V#0` | `methodGuard` | Retains the original compatibility guard and its side effects. Dedicated difficulty/reset/selection fixtures verify normal and boundary guards against native bytecode; original sentinel values are unchanged. |
 | `P:q.<init>(Ldj;)V#0` | `validatedInput` | Stored in q.field_g and used by the current-state/current-message wrappers. |
 | `P:q.a(ILjava/lang/String;)Llh;#0` | `guard` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
 | `P:q.a(ILjava/lang/String;)Llh;#1` | `candidateText` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
@@ -1125,8 +1160,10 @@ Generated from explicit rules; original names remain lookup identities.
 | `P:q.b(ILjava/lang/String;)Ljava/lang/String;#1` | `candidateText` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
 | `P:q.e(I)Llh;#0` | `guard` | Only value 32 delegates to the current input validation query; other values return null. The numeric sentinel is preserved. |
 | `P:qa.b(B)V#0` | `methodGuard` | Values below 72 leave animation state unchanged; actual menu caller passes 127. Native boundary fixtures check -128, 0, 71, 72 and 127. |
+| `P:qe.b(I)V#0` | `additionalReleases` | Signed delta added to fa.field_b after the step-dependent ten-release addition; native bounded negative, zero and positive delta fixtures verify the resulting ceiling quota. |
 | `P:ra.a(ILrf;)V#0` | `methodGuard` | Music-selection wrapper: parameter 1 is the rf track identity; parameter 0 retains the nonzero ra.field_d side effect after null/current-track early return. |
 | `P:ra.a(ILrf;)V#1` | `track` | Music-selection wrapper: parameter 1 is the rf track identity; parameter 0 retains the nonzero ra.field_d side effect after null/current-track early return. |
+| `P:sa.b(Z)V#0` | `preserveReleaseQuota` | True leaves sa.field_b unchanged after recomputing kb.field_c; false stores -10. Both paths and floating-point narrowing behavior are verified independently against native bytecode. |
 | `P:td.a(ILgd;)V#0` | `methodGuard` | PCM registration wrapper: parameter 0 must be -348 for the ordinary path; parameter 1 is supplied to createForPlaybackRate(sample,100,96). |
 | `P:td.a(ILgd;)V#1` | `sample` | PCM registration wrapper: parameter 0 must be -348 for the ordinary path; parameter 1 is supplied to createForPlaybackRate(sample,100,96). |
 | `P:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#0` | `sourceText` | CharSequence read once for length, then read sequentially with charAt. Source aliasing, length/character failures and partial writes are retained. |
@@ -1160,6 +1197,7 @@ Generated from explicit rules; original names remain lookup identities.
 | `P:uk.b(ILjava/lang/String;)Ljava/lang/String;#0` | `guard` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
 | `P:uk.b(ILjava/lang/String;)Ljava/lang/String;#1` | `candidateText` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
 | `P:ul.b(I)V#0` | `methodGuard` | Normal callers pass -2. Other values clear ul.field_a; match enumeration and RuntimeException context remain intact. |
+| `P:vd.a(I)I#0` | `methodGuard` | Retains the original compatibility guard and its side effects. Dedicated difficulty/reset/selection fixtures verify normal and boundary guards against native bytecode; original sentinel values are unchanged. |
 | `P:wc.a(FB)V#0` | `maxAttachedRadiusSquared` | Maximum attached squared distance from center (320,240) in rh; determines the tint palette position. Native requests use a fixed expected index table including NaN and invalid extremes. |
 | `P:wc.a(FB)V#1` | `methodGuard` | Retains -71 / ((-59-guard)/47); normal attachment caller passes 14. Native cases cover 14, 0 and division by zero at -59 with the original partial tint snapshot. |
 | `P:wd.a(I)Lrc;#0` | `methodGuard` | Retained original method guard; native deque probe uses the normal value and preserves alternate source branches. |

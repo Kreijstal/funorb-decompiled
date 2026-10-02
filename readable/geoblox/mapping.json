@@ -221,6 +221,13 @@
       "renamedSymbol": "F:af.avatarFrameStepTicks:I"
     },
     {
+      "symbol": "F:ag.field_k:I",
+      "originalName": "field_k",
+      "to": "availableSpriteVariantCount",
+      "evidence": "Bound passed through nf.c(B)I to qi.b(II)I. lc.a(I)V passes its result as spriteVariantIndex to ja.a(IFIFIIFFFIF)V; reset starts at three and difficulty bit 1 raises it up to seven.",
+      "renamedSymbol": "F:ag.availableSpriteVariantCount:I"
+    },
+    {
       "symbol": "F:ah.field_b:Ljava/lang/String;",
       "to": "connectionLostReconnectingText",
       "originalName": "field_b",
@@ -513,6 +520,13 @@
       "originalName": "field_nb",
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'fs_timeout' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null.",
       "renamedSymbol": "F:f.fullscreenTimeoutText:Ljava/lang/String;"
+    },
+    {
+      "symbol": "F:f.field_qb:I",
+      "originalName": "field_qb",
+      "to": "availableEntityCategoryCount",
+      "evidence": "Bound passed through ij.m(I)I to qi.b(II)I. lc.a(I)V passes its result as entityCategoryKey to ja.a(IFIFIIFFFIF)V; reset starts at four and difficulty bit 2 raises it up to seven.",
+      "renamedSymbol": "F:f.availableEntityCategoryCount:I"
     },
     {
       "symbol": "F:fa.field_a:Z",
@@ -1145,6 +1159,13 @@
       "renamedSymbol": "F:ij.menuText:Ljava/lang/String;"
     },
     {
+      "symbol": "F:ij.field_ab:F",
+      "originalName": "field_ab",
+      "to": "spawnIntervalScale",
+      "evidence": "Float multiplier in sa.b(Z)V: int(201.0f / og.field_r * scale + 0.5f). Reset is 0.75; difficulty bit 128 adds 0.02857142873108387f when below the exact 0.8f threshold and then recomputes the interval.",
+      "renamedSymbol": "F:ij.spawnIntervalScale:F"
+    },
+    {
       "symbol": "F:ik.field_b:Ljava/lang/String;",
       "to": "waitingForFontsText",
       "originalName": "field_b",
@@ -1516,6 +1537,20 @@
       "renamedSymbol": "F:MenuScreen.keyboardSelectionActive:Z"
     },
     {
+      "symbol": "F:kb.field_c:I",
+      "originalName": "field_c",
+      "to": "spawnReleaseIntervalTicks",
+      "evidence": "sa.b(Z)V stores the rounded inverse-speed interval here. lc.a(I)V compares it with kc.field_a before releasing a queued entity, and includes it in queued entity lifetime calculations.",
+      "renamedSymbol": "F:kb.spawnReleaseIntervalTicks:I"
+    },
+    {
+      "symbol": "F:kc.field_a:I",
+      "originalName": "field_a",
+      "to": "ticksSinceLastEntityRelease",
+      "evidence": "lc.a(I)V increments this counter once per update and resets it to zero when releasing a queued entity. It is compared with kb.field_c and contributes to queued entity lifetimes; pg.a(I)V deliberately leaves it unchanged.",
+      "renamedSymbol": "F:kc.ticksSinceLastEntityRelease:I"
+    },
+    {
       "symbol": "F:kc.field_b:Ljava/lang/String;",
       "to": "createNameCharacterAlertText",
       "originalName": "field_b",
@@ -1528,6 +1563,13 @@
       "originalName": "field_a",
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'achieved' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null.",
       "renamedSymbol": "F:kd.achievedText:Ljava/lang/String;"
+    },
+    {
+      "symbol": "F:kd.field_f:[I",
+      "originalName": "field_f",
+      "to": "difficultyStepFlags",
+      "evidence": "23-entry table read by ld.b(Z)V using ji.difficultyStep. Independent native fixtures verify its exact initial entries and all 256 byte masks, with saturation, recursive re-reads and failure partial state.",
+      "renamedSymbol": "F:kd.difficultyStepFlags:[I"
     },
     {
       "symbol": "F:kf.field_b:Ljava/lang/String;",
@@ -2165,6 +2207,13 @@
       "originalName": "field_b",
       "evidence": "qe.a computes ceil(fa.field_b/3) here; hd.f compares it with di.field_g to advance difficulty after that many releases.",
       "renamedSymbol": "F:sa.releasesPerDifficultyStep:I"
+    },
+    {
+      "symbol": "F:sa.field_c:D",
+      "originalName": "field_c",
+      "to": "specialSpriteKindProbability",
+      "evidence": "vd.a(I)I compares Math.random() with this value before choosing kind 1/2/3/4 instead of zero. Difficulty bit 16 adds 0.05; steps past the table subtract 0.05 only above the exact retained 0.15000000000000002 threshold.",
+      "renamedSymbol": "F:sa.specialSpriteKindProbability:D"
     },
     {
       "symbol": "F:sb.field_c:Ljava/lang/String;",
@@ -4750,6 +4799,83 @@
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#9"
     },
     {
+      "symbol": "L:lc.a(I)V#0",
+      "originalName": "decompiledCaughtException",
+      "to": "caughtSpawnQueueFailure",
+      "evidence": "Exception carrier assigned from the RuntimeException caught around the spawn update.",
+      "renamedSymbol": "L:lc.updateSpawnQueue(I)V#0"
+    },
+    {
+      "symbol": "L:lc.a(I)V#1",
+      "originalName": "var1",
+      "to": "queuedEntityThenPooledEntity",
+      "evidence": "First iterates SecondaryDeque.spawnQueue and animates each member; later holds the available entity removed for initialization. Both roles of the reused slot are retained.",
+      "renamedSymbol": "L:lc.updateSpawnQueue(I)V#1"
+    },
+    {
+      "symbol": "L:lc.a(I)V#10",
+      "originalName": "decompiledCaughtParameter0",
+      "to": "spawnQueueFailure",
+      "evidence": "RuntimeException catch parameter surrounding updateSpawnQueue.",
+      "renamedSymbol": "L:lc.updateSpawnQueue(I)V#10"
+    },
+    {
+      "symbol": "L:lc.a(I)V#2",
+      "originalName": "var1_ref",
+      "to": "spawnQueueFailureForContext",
+      "evidence": "Caught RuntimeException alias passed to t.a with the original lc.E diagnostic string.",
+      "renamedSymbol": "L:lc.updateSpawnQueue(I)V#2"
+    },
+    {
+      "symbol": "L:lc.a(I)V#3",
+      "originalName": "var2",
+      "to": "spawnAngleRadians",
+      "evidence": "2*Math.random()*PI angle used to place a pooled entity on the radius-240 spawn circle.",
+      "renamedSymbol": "L:lc.updateSpawnQueue(I)V#3"
+    },
+    {
+      "symbol": "L:lc.a(I)V#4",
+      "originalName": "var4",
+      "to": "spawnPositionX",
+      "evidence": "320 + 240*cos(spawnAngleRadians); passed to initializeEntityMotion as positionX.",
+      "renamedSymbol": "L:lc.updateSpawnQueue(I)V#4"
+    },
+    {
+      "symbol": "L:lc.a(I)V#5",
+      "originalName": "var5",
+      "to": "spawnPositionY",
+      "evidence": "240 + 240*sin(spawnAngleRadians); passed to initializeEntityMotion as positionY.",
+      "renamedSymbol": "L:lc.updateSpawnQueue(I)V#5"
+    },
+    {
+      "symbol": "L:lc.a(I)V#6",
+      "originalName": "var6",
+      "to": "inwardDirectionX",
+      "evidence": "Initially 320-spawnPositionX, then normalized by inverseSpawnDistance and multiplied by entityMotionSpeed for velocityX.",
+      "renamedSymbol": "L:lc.updateSpawnQueue(I)V#6"
+    },
+    {
+      "symbol": "L:lc.a(I)V#7",
+      "originalName": "var7",
+      "to": "inwardDirectionY",
+      "evidence": "Initially 240-spawnPositionY, then normalized by inverseSpawnDistance and multiplied by entityMotionSpeed for velocityY.",
+      "renamedSymbol": "L:lc.updateSpawnQueue(I)V#7"
+    },
+    {
+      "symbol": "L:lc.a(I)V#8",
+      "originalName": "var8",
+      "to": "inverseSpawnDistance",
+      "evidence": "Reciprocal square root of the inward offset squared length; normalizes both direction components.",
+      "renamedSymbol": "L:lc.updateSpawnQueue(I)V#8"
+    },
+    {
+      "symbol": "L:lc.a(I)V#9",
+      "originalName": "var10",
+      "to": "clientControlFlowGuard",
+      "evidence": "Entry snapshot of Geoblox.field_C controls whether the initial spawn-queue iterator continues.",
+      "renamedSymbol": "L:lc.updateSpawnQueue(I)V#9"
+    },
+    {
       "symbol": "L:ld.a(I)Z#0",
       "to": "previousCircleVerticalOffset",
       "originalName": "incrementValue$0",
@@ -5035,6 +5161,41 @@
       "to": "unusedClientControlSnapshot",
       "evidence": "Retained Geoblox.field_C entry read; the recovered menu animation body does not use this local.",
       "renamedSymbol": "L:qa.advanceMenuAvatarAnimation(B)V#32"
+    },
+    {
+      "symbol": "L:qe.b(I)V#0",
+      "originalName": "var2",
+      "to": "clientControlFlowGuard",
+      "evidence": "Entry snapshot of Geoblox.field_C retained in quota adjustment.",
+      "renamedSymbol": "L:qe.adjustThemeReleaseQuota(I)V#0"
+    },
+    {
+      "symbol": "L:qe.b(I)V#1",
+      "originalName": "decompiledCaughtException",
+      "to": "caughtQuotaUpdateFailure",
+      "evidence": "Carrier assigned from the RuntimeException caught around quota arithmetic.",
+      "renamedSymbol": "L:qe.adjustThemeReleaseQuota(I)V#1"
+    },
+    {
+      "symbol": "L:qe.b(I)V#2",
+      "originalName": "var1",
+      "to": "quotaUpdateFailureForContext",
+      "evidence": "Alias of the caught RuntimeException passed to t.a with original qe.B diagnostic context.",
+      "renamedSymbol": "L:qe.adjustThemeReleaseQuota(I)V#2"
+    },
+    {
+      "symbol": "L:qe.b(I)V#3",
+      "originalName": "decompiledCaughtParameter0",
+      "to": "quotaUpdateFailure",
+      "evidence": "RuntimeException catch parameter for quota adjustment.",
+      "renamedSymbol": "L:qe.adjustThemeReleaseQuota(I)V#3"
+    },
+    {
+      "symbol": "L:sa.b(Z)V#0",
+      "originalName": "var1",
+      "to": "intervalTicks",
+      "evidence": "Rounded inverse-speed spawn interval assigned immediately to kb.field_c before the preserveReleaseQuota branch.",
+      "renamedSymbol": "L:sa.recomputeSpawnReleaseInterval(Z)V#0"
     },
     {
       "symbol": "L:sk.a(I)Z#10",
@@ -5420,6 +5581,13 @@
       "originalName": "var16",
       "evidence": "Snapshot of Geoblox.field_C at entry. The generated body retains this read even though this snapshot is unused by the reconstructed traversal.",
       "renamedSymbol": "L:ul.collectMatchCandidates(I)V#35"
+    },
+    {
+      "symbol": "L:vd.a(I)I#0",
+      "originalName": "var1",
+      "to": "specialKindRoll",
+      "evidence": "Second Math.random() draw after the probability gate; thresholds 0.13, 0.25 and 0.65 select kind IDs 3, 4, 1 and 2. The draw and its order are retained.",
+      "renamedSymbol": "L:vd.chooseSpawnSpriteKind(I)I#0"
     },
     {
       "symbol": "L:wa.a(I)I#0",
@@ -6073,6 +6241,13 @@
       "renamedSymbol": "M:ih.linkEntityAtMaskContacts(IILGameplayEntity;I)V"
     },
     {
+      "symbol": "M:ij.m(I)I",
+      "originalName": "m",
+      "to": "chooseSpawnEntityCategory",
+      "evidence": "Normal guards above 18 sample qi.b with f.field_qb. Guards <=18 recursively consume one sample before returning a second; independent seeded native fixtures preserve both draws.",
+      "renamedSymbol": "M:ij.chooseSpawnEntityCategory(I)I"
+    },
+    {
       "symbol": "M:ik.a(Lja;Lja;Z)Z",
       "to": "linkTouchingEntities",
       "originalName": "a",
@@ -6388,6 +6563,20 @@
       "renamedSymbol": "M:nb.spawnEntityAtPointer(IIIIIZ)V"
     },
     {
+      "symbol": "M:nf.c(B)I",
+      "originalName": "c",
+      "to": "chooseSpawnSpriteVariant",
+      "evidence": "Normal guard -67 samples qi.b with ag.field_k. Guards at or above -55 return 66 without consuming the shared Random. Seeded native selection fixtures independently verify results and RNG consumption.",
+      "renamedSymbol": "M:nf.chooseSpawnSpriteVariant(B)I"
+    },
+    {
+      "symbol": "M:pg.a(I)V",
+      "originalName": "a",
+      "to": "resetGameplayDifficulty",
+      "evidence": "Resets speed, probability, selection bounds, difficulty/theme counters, release quota, spawn interval scale and rotation. Guard 9408 additionally resets remaining counters and recomputes the interval; seven native guards verify the partial-reset boundary.",
+      "renamedSymbol": "M:pg.resetGameplayDifficulty(I)V"
+    },
+    {
       "symbol": "M:q.a(ILjava/lang/String;)Llh;",
       "to": "validationStateForText",
       "originalName": "a",
@@ -6423,6 +6612,13 @@
       "renamedSymbol": "M:qa.advanceMenuAvatarAnimation(B)V"
     },
     {
+      "symbol": "M:qe.b(I)V",
+      "originalName": "b",
+      "to": "adjustThemeReleaseQuota",
+      "evidence": "Adds the supplied signed delta plus ten when ji.field_h is nonzero and below 21, then stores the ceiling quota divided by three. Independent native checks cover 150 bounded signed-delta/step cases; extreme overflow-driven loops are outside the fixtures.",
+      "renamedSymbol": "M:qe.adjustThemeReleaseQuota(I)V"
+    },
+    {
       "symbol": "M:ra.a(ILrf;)V",
       "to": "selectBackgroundMusic",
       "originalName": "a",
@@ -6442,6 +6638,13 @@
       "originalName": "a",
       "evidence": "Iterates the attached queue, decreases match cooldowns, updates the selected sprites, checks avatar-contact special effects and computes the maximum squared distance from the board center.",
       "renamedSymbol": "M:rh.updateAttachedEntities(B)V"
+    },
+    {
+      "symbol": "M:sa.b(Z)V",
+      "originalName": "b",
+      "to": "recomputeSpawnReleaseInterval",
+      "evidence": "Computes and stores int(201.0f / og.field_r * ij.field_ab + 0.5f) before optionally setting sa.field_b to -10. Native fixtures verify 112 floating-point/cast/Boolean cases including NaNs, signed zero and infinities.",
+      "renamedSymbol": "M:sa.recomputeSpawnReleaseInterval(Z)V"
     },
     {
       "symbol": "M:sk.a(I)Z",
@@ -6645,6 +6848,13 @@
       "originalName": "b",
       "evidence": "Collects triples of connected entities sharing variant or category, storing sorted entity IDs and equality flags in the packed candidate array.",
       "renamedSymbol": "M:ul.collectMatchCandidates(I)V"
+    },
+    {
+      "symbol": "M:vd.a(I)I",
+      "originalName": "a",
+      "to": "chooseSpawnSpriteKind",
+      "evidence": "Guard 741924304 first gates on sa.field_c, then maps a fresh Math.random roll through 0.13/0.25/0.65 thresholds to kinds 3/4/1/2. Other guards return 104. Native checks cover closed probability gates and invalid guards, not live Math.random distribution.",
+      "renamedSymbol": "M:vd.chooseSpawnSpriteKind(I)I"
     },
     {
       "symbol": "M:wa.a(I)I",
@@ -7312,6 +7522,13 @@
       "renamedSymbol": "P:ih.linkEntityAtMaskContacts(IILGameplayEntity;I)V#3"
     },
     {
+      "symbol": "P:ij.m(I)I#0",
+      "originalName": "param0",
+      "to": "methodGuard",
+      "evidence": "Retains the original compatibility guard and its side effects. Dedicated difficulty/reset/selection fixtures verify normal and boundary guards against native bytecode; original sentinel values are unchanged.",
+      "renamedSymbol": "P:ij.chooseSpawnEntityCategory(I)I#0"
+    },
+    {
       "symbol": "P:ik.a(Lja;Lja;Z)Z#0",
       "to": "firstEntity",
       "originalName": "param0",
@@ -7585,6 +7802,13 @@
       "renamedSymbol": "P:PcmSampleStream.createForPlaybackRate(LPcmSample;II)LPcmSampleStream;#2"
     },
     {
+      "symbol": "P:lc.a(I)V#0",
+      "originalName": "param0",
+      "to": "methodGuard",
+      "evidence": "Normal caller supplies 255. Other values write lc.field_b=-11; XOR-derived guards used for selectors and deque counts retain original values. Source inspection, not a complete spawn-queue runtime proof.",
+      "renamedSymbol": "P:lc.updateSpawnQueue(I)V#0"
+    },
+    {
       "symbol": "P:ld.a(I)Z#0",
       "to": "methodGuard",
       "originalName": "param0",
@@ -7618,6 +7842,13 @@
       "originalName": "param3",
       "evidence": "Argument position in ug.spawnScorePopup(points, true, originY, 1, originX); parameter 2 retains its <=39 boundary-probe side effect.",
       "renamedSymbol": "P:ld.spawnPointsPopup(IIII)V#3"
+    },
+    {
+      "symbol": "P:ld.b(Z)V#0",
+      "originalName": "param0",
+      "to": "recursiveAdvanceGuard",
+      "evidence": "Normal hd.a(I)V callers pass false. True recursively advances the shared difficulty index and may fail on a later table re-read, preserving partial updates; it also negates the preserveReleaseQuota argument passed to sa.b(Z)V.",
+      "renamedSymbol": "P:ld.advanceDifficulty(Z)V#0"
     },
     {
       "symbol": "P:mk.a(ILjava/lang/String;)Llh;#0",
@@ -7795,6 +8026,20 @@
       "renamedSymbol": "P:nb.spawnEntityAtPointer(IIIIIZ)V#5"
     },
     {
+      "symbol": "P:nf.c(B)I#0",
+      "originalName": "param0",
+      "to": "methodGuard",
+      "evidence": "Retains the original compatibility guard and its side effects. Dedicated difficulty/reset/selection fixtures verify normal and boundary guards against native bytecode; original sentinel values are unchanged.",
+      "renamedSymbol": "P:nf.chooseSpawnSpriteVariant(B)I#0"
+    },
+    {
+      "symbol": "P:pg.a(I)V#0",
+      "originalName": "param0",
+      "to": "methodGuard",
+      "evidence": "Retains the original compatibility guard and its side effects. Dedicated difficulty/reset/selection fixtures verify normal and boundary guards against native bytecode; original sentinel values are unchanged.",
+      "renamedSymbol": "P:pg.resetGameplayDifficulty(I)V#0"
+    },
+    {
       "symbol": "P:q.<init>(Ldj;)V#0",
       "to": "validatedInput",
       "originalName": "param0",
@@ -7851,6 +8096,13 @@
       "renamedSymbol": "P:qa.advanceMenuAvatarAnimation(B)V#0"
     },
     {
+      "symbol": "P:qe.b(I)V#0",
+      "originalName": "param0",
+      "to": "additionalReleases",
+      "evidence": "Signed delta added to fa.field_b after the step-dependent ten-release addition; native bounded negative, zero and positive delta fixtures verify the resulting ceiling quota.",
+      "renamedSymbol": "P:qe.adjustThemeReleaseQuota(I)V#0"
+    },
+    {
       "symbol": "P:ra.a(ILrf;)V#0",
       "to": "methodGuard",
       "originalName": "param0",
@@ -7863,6 +8115,13 @@
       "originalName": "param1",
       "evidence": "Music-selection wrapper: parameter 1 is the rf track identity; parameter 0 retains the nonzero ra.field_d side effect after null/current-track early return.",
       "renamedSymbol": "P:ra.selectBackgroundMusic(ILrf;)V#1"
+    },
+    {
+      "symbol": "P:sa.b(Z)V#0",
+      "originalName": "param0",
+      "to": "preserveReleaseQuota",
+      "evidence": "True leaves sa.field_b unchanged after recomputing kb.field_c; false stores -10. Both paths and floating-point narrowing behavior are verified independently against native bytecode.",
+      "renamedSymbol": "P:sa.recomputeSpawnReleaseInterval(Z)V#0"
     },
     {
       "symbol": "P:td.a(ILgd;)V#0",
@@ -8094,6 +8353,13 @@
       "originalName": "param0",
       "evidence": "Normal callers pass -2. Other values clear ul.field_a; match enumeration and RuntimeException context remain intact.",
       "renamedSymbol": "P:ul.collectMatchCandidates(I)V#0"
+    },
+    {
+      "symbol": "P:vd.a(I)I#0",
+      "originalName": "param0",
+      "to": "methodGuard",
+      "evidence": "Retains the original compatibility guard and its side effects. Dedicated difficulty/reset/selection fixtures verify normal and boundary guards against native bytecode; original sentinel values are unchanged.",
+      "renamedSymbol": "P:vd.chooseSpawnSpriteKind(I)I#0"
     },
     {
       "symbol": "P:wc.a(FB)V#0",
@@ -12047,9 +12313,9 @@
     },
     {
       "symbol": "F:ag.field_k:I",
-      "renamedSymbol": "F:ag.field_k:I",
+      "renamedSymbol": "F:ag.availableSpriteVariantCount:I",
       "originalName": "field_k",
-      "renamedName": "field_k",
+      "renamedName": "availableSpriteVariantCount",
       "declaration": {
         "file": "ag.java",
         "start": 169,
@@ -16491,9 +16757,9 @@
     },
     {
       "symbol": "F:f.field_qb:I",
-      "renamedSymbol": "F:f.field_qb:I",
+      "renamedSymbol": "F:f.availableEntityCategoryCount:I",
       "originalName": "field_qb",
-      "renamedName": "field_qb",
+      "renamedName": "availableEntityCategoryCount",
       "declaration": {
         "file": "f.java",
         "start": 227,
@@ -20011,9 +20277,9 @@
     },
     {
       "symbol": "F:ij.field_ab:F",
-      "renamedSymbol": "F:ij.field_ab:F",
+      "renamedSymbol": "F:ij.spawnIntervalScale:F",
       "originalName": "field_ab",
-      "renamedName": "field_ab",
+      "renamedName": "spawnIntervalScale",
       "declaration": {
         "file": "ij.java",
         "start": 121,
@@ -21881,9 +22147,9 @@
     },
     {
       "symbol": "F:kb.field_c:I",
-      "renamedSymbol": "F:kb.field_c:I",
+      "renamedSymbol": "F:kb.spawnReleaseIntervalTicks:I",
       "originalName": "field_c",
-      "renamedName": "field_c",
+      "renamedName": "spawnReleaseIntervalTicks",
       "declaration": {
         "file": "kb.java",
         "start": 70,
@@ -21903,9 +22169,9 @@
     },
     {
       "symbol": "F:kc.field_a:I",
-      "renamedSymbol": "F:kc.field_a:I",
+      "renamedSymbol": "F:kc.ticksSinceLastEntityRelease:I",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "ticksSinceLastEntityRelease",
       "declaration": {
         "file": "kc.java",
         "start": 70,
@@ -21991,9 +22257,9 @@
     },
     {
       "symbol": "F:kd.field_f:[I",
-      "renamedSymbol": "F:kd.field_f:[I",
+      "renamedSymbol": "F:kd.difficultyStepFlags:[I",
       "originalName": "field_f",
-      "renamedName": "field_f",
+      "renamedName": "difficultyStepFlags",
       "declaration": {
         "file": "kd.java",
         "start": 172,
@@ -29449,9 +29715,9 @@
     },
     {
       "symbol": "F:sa.field_c:D",
-      "renamedSymbol": "F:sa.field_c:D",
+      "renamedSymbol": "F:sa.specialSpriteKindProbability:D",
       "originalName": "field_c",
-      "renamedName": "field_c",
+      "renamedName": "specialSpriteKindProbability",
       "declaration": {
         "file": "sa.java",
         "start": 165,
@@ -97387,7 +97653,7 @@
       "symbol": "L:lc.a(I)V#0",
       "renamedSymbol": "L:lc.updateSpawnQueue(I)V#0",
       "originalName": "decompiledCaughtException",
-      "renamedName": "decompiledCaughtException",
+      "renamedName": "caughtSpawnQueueFailure",
       "declaration": {
         "file": "lc.java",
         "start": 204,
@@ -97398,7 +97664,7 @@
       "symbol": "L:lc.a(I)V#1",
       "renamedSymbol": "L:lc.updateSpawnQueue(I)V#1",
       "originalName": "var1",
-      "renamedName": "var1",
+      "renamedName": "queuedEntityThenPooledEntity",
       "declaration": {
         "file": "lc.java",
         "start": 249,
@@ -97409,7 +97675,7 @@
       "symbol": "L:lc.a(I)V#10",
       "renamedSymbol": "L:lc.updateSpawnQueue(I)V#10",
       "originalName": "decompiledCaughtParameter0",
-      "renamedName": "decompiledCaughtParameter0",
+      "renamedName": "spawnQueueFailure",
       "declaration": {
         "file": "lc.java",
         "start": 2949,
@@ -97420,7 +97686,7 @@
       "symbol": "L:lc.a(I)V#2",
       "renamedSymbol": "L:lc.updateSpawnQueue(I)V#2",
       "originalName": "var1_ref",
-      "renamedName": "var1_ref",
+      "renamedName": "spawnQueueFailureForContext",
       "declaration": {
         "file": "lc.java",
         "start": 287,
@@ -97431,7 +97697,7 @@
       "symbol": "L:lc.a(I)V#3",
       "renamedSymbol": "L:lc.updateSpawnQueue(I)V#3",
       "originalName": "var2",
-      "renamedName": "var2",
+      "renamedName": "spawnAngleRadians",
       "declaration": {
         "file": "lc.java",
         "start": 319,
@@ -97442,7 +97708,7 @@
       "symbol": "L:lc.a(I)V#4",
       "renamedSymbol": "L:lc.updateSpawnQueue(I)V#4",
       "originalName": "var4",
-      "renamedName": "var4",
+      "renamedName": "spawnPositionX",
       "declaration": {
         "file": "lc.java",
         "start": 345,
@@ -97453,7 +97719,7 @@
       "symbol": "L:lc.a(I)V#5",
       "renamedSymbol": "L:lc.updateSpawnQueue(I)V#5",
       "originalName": "var5",
-      "renamedName": "var5",
+      "renamedName": "spawnPositionY",
       "declaration": {
         "file": "lc.java",
         "start": 372,
@@ -97464,7 +97730,7 @@
       "symbol": "L:lc.a(I)V#6",
       "renamedSymbol": "L:lc.updateSpawnQueue(I)V#6",
       "originalName": "var6",
-      "renamedName": "var6",
+      "renamedName": "inwardDirectionX",
       "declaration": {
         "file": "lc.java",
         "start": 399,
@@ -97475,7 +97741,7 @@
       "symbol": "L:lc.a(I)V#7",
       "renamedSymbol": "L:lc.updateSpawnQueue(I)V#7",
       "originalName": "var7",
-      "renamedName": "var7",
+      "renamedName": "inwardDirectionY",
       "declaration": {
         "file": "lc.java",
         "start": 426,
@@ -97486,7 +97752,7 @@
       "symbol": "L:lc.a(I)V#8",
       "renamedSymbol": "L:lc.updateSpawnQueue(I)V#8",
       "originalName": "var8",
-      "renamedName": "var8",
+      "renamedName": "inverseSpawnDistance",
       "declaration": {
         "file": "lc.java",
         "start": 454,
@@ -97497,7 +97763,7 @@
       "symbol": "L:lc.a(I)V#9",
       "renamedSymbol": "L:lc.updateSpawnQueue(I)V#9",
       "originalName": "var10",
-      "renamedName": "var10",
+      "renamedName": "clientControlFlowGuard",
       "declaration": {
         "file": "lc.java",
         "start": 478,
@@ -119880,9 +120146,9 @@
     },
     {
       "symbol": "L:qe.b(I)V#0",
-      "renamedSymbol": "L:qe.b(I)V#0",
+      "renamedSymbol": "L:qe.adjustThemeReleaseQuota(I)V#0",
       "originalName": "var2",
-      "renamedName": "var2",
+      "renamedName": "clientControlFlowGuard",
       "declaration": {
         "file": "qe.java",
         "start": 4026,
@@ -119891,9 +120157,9 @@
     },
     {
       "symbol": "L:qe.b(I)V#1",
-      "renamedSymbol": "L:qe.b(I)V#1",
+      "renamedSymbol": "L:qe.adjustThemeReleaseQuota(I)V#1",
       "originalName": "decompiledCaughtException",
-      "renamedName": "decompiledCaughtException",
+      "renamedName": "caughtQuotaUpdateFailure",
       "declaration": {
         "file": "qe.java",
         "start": 4061,
@@ -119902,9 +120168,9 @@
     },
     {
       "symbol": "L:qe.b(I)V#2",
-      "renamedSymbol": "L:qe.b(I)V#2",
+      "renamedSymbol": "L:qe.adjustThemeReleaseQuota(I)V#2",
       "originalName": "var1",
-      "renamedName": "var1",
+      "renamedName": "quotaUpdateFailureForContext",
       "declaration": {
         "file": "qe.java",
         "start": 4120,
@@ -119913,9 +120179,9 @@
     },
     {
       "symbol": "L:qe.b(I)V#3",
-      "renamedSymbol": "L:qe.b(I)V#3",
+      "renamedSymbol": "L:qe.adjustThemeReleaseQuota(I)V#3",
       "originalName": "decompiledCaughtParameter0",
-      "renamedName": "decompiledCaughtParameter0",
+      "renamedName": "quotaUpdateFailure",
       "declaration": {
         "file": "qe.java",
         "start": 4567,
@@ -130165,9 +130431,9 @@
     },
     {
       "symbol": "L:sa.b(Z)V#0",
-      "renamedSymbol": "L:sa.b(Z)V#0",
+      "renamedSymbol": "L:sa.recomputeSpawnReleaseInterval(Z)V#0",
       "originalName": "var1",
-      "renamedName": "var1",
+      "renamedName": "intervalTicks",
       "declaration": {
         "file": "sa.java",
         "start": 3765,
@@ -150636,9 +150902,9 @@
     },
     {
       "symbol": "L:vd.a(I)I#0",
-      "renamedSymbol": "L:vd.a(I)I#0",
+      "renamedSymbol": "L:vd.chooseSpawnSpriteKind(I)I#0",
       "originalName": "var1",
-      "renamedName": "var1",
+      "renamedName": "specialKindRoll",
       "declaration": {
         "file": "vd.java",
         "start": 3891,
@@ -168665,9 +168931,9 @@
     },
     {
       "symbol": "M:ij.m(I)I",
-      "renamedSymbol": "M:ij.m(I)I",
+      "renamedSymbol": "M:ij.chooseSpawnEntityCategory(I)I",
       "originalName": "m",
-      "renamedName": "m",
+      "renamedName": "chooseSpawnEntityCategory",
       "declaration": {
         "file": "ij.java",
         "start": 2921,
@@ -173549,9 +173815,9 @@
     },
     {
       "symbol": "M:nf.c(B)I",
-      "renamedSymbol": "M:nf.c(B)I",
+      "renamedSymbol": "M:nf.chooseSpawnSpriteVariant(B)I",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "chooseSpawnSpriteVariant",
       "declaration": {
         "file": "nf.java",
         "start": 1490,
@@ -175287,9 +175553,9 @@
     },
     {
       "symbol": "M:pg.a(I)V",
-      "renamedSymbol": "M:pg.a(I)V",
+      "renamedSymbol": "M:pg.resetGameplayDifficulty(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resetGameplayDifficulty",
       "declaration": {
         "file": "pg.java",
         "start": 208,
@@ -176486,9 +176752,9 @@
     },
     {
       "symbol": "M:qe.b(I)V",
-      "renamedSymbol": "M:qe.b(I)V",
+      "renamedSymbol": "M:qe.adjustThemeReleaseQuota(I)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "adjustThemeReleaseQuota",
       "declaration": {
         "file": "qe.java",
         "start": 3998,
@@ -178301,9 +178567,9 @@
     },
     {
       "symbol": "M:sa.b(Z)V",
-      "renamedSymbol": "M:sa.b(Z)V",
+      "renamedSymbol": "M:sa.recomputeSpawnReleaseInterval(Z)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "recomputeSpawnReleaseInterval",
       "declaration": {
         "file": "sa.java",
         "start": 3733,
@@ -181557,9 +181823,9 @@
     },
     {
       "symbol": "M:vd.a(I)I",
-      "renamedSymbol": "M:vd.a(I)I",
+      "renamedSymbol": "M:vd.chooseSpawnSpriteKind(I)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "chooseSpawnSpriteKind",
       "declaration": {
         "file": "vd.java",
         "start": 3714,
@@ -203777,9 +204043,9 @@
     },
     {
       "symbol": "P:ij.m(I)I#0",
-      "renamedSymbol": "P:ij.m(I)I#0",
+      "renamedSymbol": "P:ij.chooseSpawnEntityCategory(I)I#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "methodGuard",
       "declaration": {
         "file": "ij.java",
         "start": 2927,
@@ -212612,7 +212878,7 @@
       "symbol": "P:lc.a(I)V#0",
       "renamedSymbol": "P:lc.updateSpawnQueue(I)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "methodGuard",
       "declaration": {
         "file": "lc.java",
         "start": 169,
@@ -212887,7 +213153,7 @@
       "symbol": "P:ld.b(Z)V#0",
       "renamedSymbol": "P:ld.advanceDifficulty(Z)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "recursiveAdvanceGuard",
       "declaration": {
         "file": "ld.java",
         "start": 4003,
@@ -217241,9 +217507,9 @@
     },
     {
       "symbol": "P:nf.c(B)I#0",
-      "renamedSymbol": "P:nf.c(B)I#0",
+      "renamedSymbol": "P:nf.chooseSpawnSpriteVariant(B)I#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "methodGuard",
       "declaration": {
         "file": "nf.java",
         "start": 1497,
@@ -220596,9 +220862,9 @@
     },
     {
       "symbol": "P:pg.a(I)V#0",
-      "renamedSymbol": "P:pg.a(I)V#0",
+      "renamedSymbol": "P:pg.resetGameplayDifficulty(I)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "methodGuard",
       "declaration": {
         "file": "pg.java",
         "start": 214,
@@ -223511,9 +223777,9 @@
     },
     {
       "symbol": "P:qe.b(I)V#0",
-      "renamedSymbol": "P:qe.b(I)V#0",
+      "renamedSymbol": "P:qe.adjustThemeReleaseQuota(I)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "additionalReleases",
       "declaration": {
         "file": "qe.java",
         "start": 4004,
@@ -227064,9 +227330,9 @@
     },
     {
       "symbol": "P:sa.b(Z)V#0",
-      "renamedSymbol": "P:sa.b(Z)V#0",
+      "renamedSymbol": "P:sa.recomputeSpawnReleaseInterval(Z)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "preserveReleaseQuota",
       "declaration": {
         "file": "sa.java",
         "start": 3743,
@@ -234577,9 +234843,9 @@
     },
     {
       "symbol": "P:vd.a(I)I#0",
-      "renamedSymbol": "P:vd.a(I)I#0",
+      "renamedSymbol": "P:vd.chooseSpawnSpriteKind(I)I#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "methodGuard",
       "declaration": {
         "file": "vd.java",
         "start": 3720,
@@ -241929,7 +242195,7 @@
       "original": "ag.java",
       "renamed": "ag.java",
       "inputSha256": "2518dac745333189472f08195165a1f6e1059064a0a857d2d1544f0ce484a2b4",
-      "outputSha256": "76c73fa22f0703810b44edfc232a8adc43b044504be46a7d89eaed2a59783440",
+      "outputSha256": "33d5c04977ad7274e811ea4e42c83e80276046888c0ceccfe3093c2379a35656",
       "edits": [
         {
           "start": 61,
@@ -241937,6 +242203,13 @@
           "symbol": "C:q",
           "original": "q",
           "renamed": "TextInputValidator"
+        },
+        {
+          "start": 169,
+          "end": 176,
+          "symbol": "F:ag.field_k:I",
+          "original": "field_k",
+          "renamed": "availableSpriteVariantCount"
         },
         {
           "start": 220,
@@ -245753,7 +246026,7 @@
       "original": "c.java",
       "renamed": "GameScreen.java",
       "inputSha256": "4902b3e8dbc184ef7e864332f4d9192eb675b6f71b666e0041b44b3ea012a1ad",
-      "outputSha256": "217a280ecf43aaf70b46b558f7e8b2119e11c632e6df00bad59e02b2224729a9",
+      "outputSha256": "ebb9e24d8e3e9a738aa79cdcc36ea23d5e3060110cefe7a3e6c8ae8fcb952826",
       "edits": [
         {
           "start": 50,
@@ -249415,6 +249688,13 @@
           "symbol": "F:ai.field_p:I",
           "original": "field_p",
           "renamed": "requestedScreenId"
+        },
+        {
+          "start": 95139,
+          "end": 95140,
+          "symbol": "M:pg.a(I)V",
+          "original": "a",
+          "renamed": "resetGameplayDifficulty"
         },
         {
           "start": 95173,
@@ -271104,8 +271384,15 @@
       "original": "f.java",
       "renamed": "f.java",
       "inputSha256": "52839c8913bbae1490fb5eecbf65b68b89c7abd96e5652a85e8ad875dbfde40f",
-      "outputSha256": "2ae44322b9bb767ca167cc4922e12c855bbfef0883cdbdd8c6a3164ebaf242ec",
+      "outputSha256": "1a88bde653ea958039060a46be8ccec387376fadc66fa73d424e0b59f050ae3f",
       "edits": [
+        {
+          "start": 227,
+          "end": 235,
+          "symbol": "F:f.field_qb:I",
+          "original": "field_qb",
+          "renamed": "availableEntityCategoryCount"
+        },
         {
           "start": 292,
           "end": 300,
@@ -271119,6 +271406,13 @@
           "symbol": "F:f.field_lb:[Ljava/lang/String;",
           "original": "field_lb",
           "renamed": "quickChatShortcutKeys"
+        },
+        {
+          "start": 3827,
+          "end": 3835,
+          "symbol": "F:f.field_qb:I",
+          "original": "field_qb",
+          "renamed": "availableEntityCategoryCount"
         },
         {
           "start": 3889,
@@ -276709,7 +277003,7 @@
       "original": "gh.java",
       "renamed": "GameplaySession.java",
       "inputSha256": "ca3a868589ede4f465a54f5357a045f9b856f2f5dc9c8bba475bd0b4f1195cb3",
-      "outputSha256": "703c8e20021ecf76dd578b0b32539a05ccc00669ddede84f8912bde4b0e9ad22",
+      "outputSha256": "edcec372a54240846585a9d5abbe5b27b662fd655ccc969e9cf72740aba11047",
       "edits": [
         {
           "start": 50,
@@ -279911,6 +280205,20 @@
           "renamed": "submissionBlocked"
         },
         {
+          "start": 42742,
+          "end": 42749,
+          "symbol": "F:ag.field_k:I",
+          "original": "field_k",
+          "renamed": "availableSpriteVariantCount"
+        },
+        {
+          "start": 42773,
+          "end": 42781,
+          "symbol": "F:f.field_qb:I",
+          "original": "field_qb",
+          "renamed": "availableEntityCategoryCount"
+        },
+        {
           "start": 42859,
           "end": 42860,
           "symbol": "M:hd.f(I)V",
@@ -281309,6 +281617,13 @@
           "symbol": "F:ji.field_h:I",
           "original": "field_h",
           "renamed": "difficultyStep"
+        },
+        {
+          "start": 56691,
+          "end": 56692,
+          "symbol": "M:qe.b(I)V",
+          "original": "b",
+          "renamed": "adjustThemeReleaseQuota"
         },
         {
           "start": 56713,
@@ -286895,8 +287210,15 @@
       "original": "ij.java",
       "renamed": "ij.java",
       "inputSha256": "5f26f1e3454a76ee19aac856d4498ab9dbbe7582f0095bab53937ebe5f3ce39c",
-      "outputSha256": "9b576b0f92bc0ae46a11ac14d3d4b452906f8498384a2a372cdbbbd04e134462",
+      "outputSha256": "69b0249e477353df2a2e2fe8a410e307679b4922c1d5848c404039be9df97e1e",
       "edits": [
+        {
+          "start": 121,
+          "end": 129,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
         {
           "start": 174,
           "end": 181,
@@ -286931,6 +287253,48 @@
           "symbol": "F:ij.field_Y:Ljava/lang/String;",
           "original": "field_Y",
           "renamed": "createPasswordTooltipText"
+        },
+        {
+          "start": 2921,
+          "end": 2922,
+          "symbol": "M:ij.m(I)I",
+          "original": "m",
+          "renamed": "chooseSpawnEntityCategory"
+        },
+        {
+          "start": 2927,
+          "end": 2933,
+          "symbol": "P:ij.m(I)I#0",
+          "original": "param0",
+          "renamed": "methodGuard"
+        },
+        {
+          "start": 2949,
+          "end": 2955,
+          "symbol": "P:ij.m(I)I#0",
+          "original": "param0",
+          "renamed": "methodGuard"
+        },
+        {
+          "start": 2980,
+          "end": 2981,
+          "symbol": "M:ij.m(I)I",
+          "original": "m",
+          "renamed": "chooseSpawnEntityCategory"
+        },
+        {
+          "start": 3013,
+          "end": 3021,
+          "symbol": "F:f.field_qb:I",
+          "original": "field_qb",
+          "renamed": "availableEntityCategoryCount"
+        },
+        {
+          "start": 3059,
+          "end": 3067,
+          "symbol": "F:f.field_qb:I",
+          "original": "field_qb",
+          "renamed": "availableEntityCategoryCount"
         },
         {
           "start": 3622,
@@ -287183,6 +287547,13 @@
           "symbol": "F:ij.field_Z:Ljava/lang/String;",
           "original": "field_Z",
           "renamed": "menuText"
+        },
+        {
+          "start": 8987,
+          "end": 8995,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
         },
         {
           "start": 9012,
@@ -302256,8 +302627,15 @@
       "original": "kb.java",
       "renamed": "kb.java",
       "inputSha256": "07f611e19f4859f7a56fe56677917653cfd1645c1b1472b1d530c8a048c17073",
-      "outputSha256": "f1cfcd3e18937bc30de05dd0f5f1f1bc5dc696f88e696d0936a792b149b030b0",
+      "outputSha256": "2c25ee682be7f29f879d8cfa68c16267a300e016d1aaf84c33b6937f5c4fe92f",
       "edits": [
+        {
+          "start": 70,
+          "end": 77,
+          "symbol": "F:kb.field_c:I",
+          "original": "field_c",
+          "renamed": "spawnReleaseIntervalTicks"
+        },
         {
           "start": 1063,
           "end": 1065,
@@ -302292,6 +302670,13 @@
           "symbol": "C:q",
           "original": "q",
           "renamed": "TextInputValidator"
+        },
+        {
+          "start": 4463,
+          "end": 4470,
+          "symbol": "F:kb.field_c:I",
+          "original": "field_c",
+          "renamed": "spawnReleaseIntervalTicks"
         }
       ]
     },
@@ -302299,8 +302684,15 @@
       "original": "kc.java",
       "renamed": "kc.java",
       "inputSha256": "e97c90e0f68aa3aa26cc72f78e89e1dae648e07710ab8dd64d469b97ce76d2b5",
-      "outputSha256": "6fe66e81ab011a9a873ffbea32433ec42b184c9b41d12321cf8c25ab6baf5f39",
+      "outputSha256": "e7713d043f3746431a5527f32d1069f14e0c10a6019e20fac34198c7d83556b0",
       "edits": [
+        {
+          "start": 70,
+          "end": 77,
+          "symbol": "F:kc.field_a:I",
+          "original": "field_a",
+          "renamed": "ticksSinceLastEntityRelease"
+        },
         {
           "start": 97,
           "end": 104,
@@ -306605,6 +306997,13 @@
           "symbol": "F:kc.field_b:Ljava/lang/String;",
           "original": "field_b",
           "renamed": "createNameCharacterAlertText"
+        },
+        {
+          "start": 28263,
+          "end": 28270,
+          "symbol": "F:kc.field_a:I",
+          "original": "field_a",
+          "renamed": "ticksSinceLastEntityRelease"
         }
       ]
     },
@@ -306612,7 +307011,7 @@
       "original": "kd.java",
       "renamed": "kd.java",
       "inputSha256": "a77df37993cdddd4a595783551fd510c5d8f08ce62c43a4f1a489046de15684b",
-      "outputSha256": "15b2691d32925256cfff39fcf209d516317de4fc4c2f7b9710ac0050806f987e",
+      "outputSha256": "08a2741db55abeb9ac77aa88e76cb1228273c3c7d65e59102bbf12421de0b360",
       "edits": [
         {
           "start": 146,
@@ -306622,6 +307021,13 @@
           "renamed": "achievedText"
         },
         {
+          "start": 172,
+          "end": 179,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
           "start": 325,
           "end": 332,
           "symbol": "F:kd.field_a:Ljava/lang/String;",
@@ -306629,11 +307035,340 @@
           "renamed": "achievedText"
         },
         {
+          "start": 373,
+          "end": 380,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
           "start": 913,
           "end": 920,
           "symbol": "F:kd.field_a:Ljava/lang/String;",
           "original": "field_a",
           "renamed": "achievedText"
+        },
+        {
+          "start": 943,
+          "end": 950,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
+          "start": 974,
+          "end": 981,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
+          "start": 993,
+          "end": 1000,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
+          "start": 1020,
+          "end": 1027,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
+          "start": 1039,
+          "end": 1046,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
+          "start": 1065,
+          "end": 1072,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
+          "start": 1089,
+          "end": 1096,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
+          "start": 1107,
+          "end": 1114,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
+          "start": 1132,
+          "end": 1139,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
+          "start": 1151,
+          "end": 1158,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
+          "start": 1176,
+          "end": 1183,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
+          "start": 1194,
+          "end": 1201,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
+          "start": 1220,
+          "end": 1227,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
+          "start": 1238,
+          "end": 1245,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
+          "start": 1262,
+          "end": 1269,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
+          "start": 1280,
+          "end": 1287,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
+          "start": 1304,
+          "end": 1311,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
+          "start": 1323,
+          "end": 1330,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
+          "start": 1350,
+          "end": 1357,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
+          "start": 1368,
+          "end": 1375,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
+          "start": 1392,
+          "end": 1399,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
+          "start": 1411,
+          "end": 1418,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
+          "start": 1436,
+          "end": 1443,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
+          "start": 1455,
+          "end": 1462,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
+          "start": 1481,
+          "end": 1488,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
+          "start": 1500,
+          "end": 1507,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
+          "start": 1526,
+          "end": 1533,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
+          "start": 1544,
+          "end": 1551,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
+          "start": 1570,
+          "end": 1577,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
+          "start": 1588,
+          "end": 1595,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
+          "start": 1612,
+          "end": 1619,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
+          "start": 1631,
+          "end": 1638,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
+          "start": 1656,
+          "end": 1663,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
+          "start": 1675,
+          "end": 1682,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
+          "start": 1702,
+          "end": 1709,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
+          "start": 1720,
+          "end": 1727,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
+          "start": 1746,
+          "end": 1753,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
+          "start": 1765,
+          "end": 1772,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
+          "start": 1792,
+          "end": 1799,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
+          "start": 1810,
+          "end": 1817,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
+          "start": 1834,
+          "end": 1841,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
+          "start": 1853,
+          "end": 1860,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
+          "start": 1878,
+          "end": 1885,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
+          "start": 1897,
+          "end": 1904,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
+          "start": 1923,
+          "end": 1930,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
+          "start": 1942,
+          "end": 1949,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
         }
       ]
     },
@@ -309970,7 +310705,7 @@
       "original": "lc.java",
       "renamed": "lc.java",
       "inputSha256": "053fecb1711cb1ba0affdb1a9f5f19c8a4ba7f707cc4ecae0920fb700ab3e535",
-      "outputSha256": "7b040d40831dfc77845c8cba0683ab59c63c76c5df98f47dd3274728fe2c0eb9",
+      "outputSha256": "d66dbb7a9537e26c3f79a913ca6c05c56781c1b1b55fcac2e2739155ba7cb352",
       "edits": [
         {
           "start": 163,
@@ -309980,11 +310715,102 @@
           "renamed": "updateSpawnQueue"
         },
         {
+          "start": 169,
+          "end": 175,
+          "symbol": "P:lc.a(I)V#0",
+          "original": "param0",
+          "renamed": "methodGuard"
+        },
+        {
+          "start": 204,
+          "end": 229,
+          "symbol": "L:lc.a(I)V#0",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtSpawnQueueFailure"
+        },
+        {
           "start": 246,
           "end": 248,
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
+        },
+        {
+          "start": 249,
+          "end": 253,
+          "symbol": "L:lc.a(I)V#1",
+          "original": "var1",
+          "renamed": "queuedEntityThenPooledEntity"
+        },
+        {
+          "start": 287,
+          "end": 295,
+          "symbol": "L:lc.a(I)V#2",
+          "original": "var1_ref",
+          "renamed": "spawnQueueFailureForContext"
+        },
+        {
+          "start": 319,
+          "end": 323,
+          "symbol": "L:lc.a(I)V#3",
+          "original": "var2",
+          "renamed": "spawnAngleRadians"
+        },
+        {
+          "start": 345,
+          "end": 349,
+          "symbol": "L:lc.a(I)V#4",
+          "original": "var4",
+          "renamed": "spawnPositionX"
+        },
+        {
+          "start": 372,
+          "end": 376,
+          "symbol": "L:lc.a(I)V#5",
+          "original": "var5",
+          "renamed": "spawnPositionY"
+        },
+        {
+          "start": 399,
+          "end": 403,
+          "symbol": "L:lc.a(I)V#6",
+          "original": "var6",
+          "renamed": "inwardDirectionX"
+        },
+        {
+          "start": 426,
+          "end": 430,
+          "symbol": "L:lc.a(I)V#7",
+          "original": "var7",
+          "renamed": "inwardDirectionY"
+        },
+        {
+          "start": 454,
+          "end": 458,
+          "symbol": "L:lc.a(I)V#8",
+          "original": "var8",
+          "renamed": "inverseSpawnDistance"
+        },
+        {
+          "start": 478,
+          "end": 483,
+          "symbol": "L:lc.a(I)V#9",
+          "original": "var10",
+          "renamed": "clientControlFlowGuard"
+        },
+        {
+          "start": 497,
+          "end": 502,
+          "symbol": "L:lc.a(I)V#9",
+          "original": "var10",
+          "renamed": "clientControlFlowGuard"
+        },
+        {
+          "start": 546,
+          "end": 550,
+          "symbol": "L:lc.a(I)V#1",
+          "original": "var1",
+          "renamed": "queuedEntityThenPooledEntity"
         },
         {
           "start": 554,
@@ -310015,11 +310841,32 @@
           "renamed": "firstForIteration"
         },
         {
+          "start": 651,
+          "end": 655,
+          "symbol": "L:lc.a(I)V#1",
+          "original": "var1",
+          "renamed": "queuedEntityThenPooledEntity"
+        },
+        {
+          "start": 683,
+          "end": 687,
+          "symbol": "L:lc.a(I)V#1",
+          "original": "var1",
+          "renamed": "queuedEntityThenPooledEntity"
+        },
+        {
           "start": 688,
           "end": 689,
           "symbol": "M:ja.b(Z)V",
           "original": "b",
           "renamed": "advanceEntityAnimation"
+        },
+        {
+          "start": 713,
+          "end": 717,
+          "symbol": "L:lc.a(I)V#1",
+          "original": "var1",
+          "renamed": "queuedEntityThenPooledEntity"
         },
         {
           "start": 721,
@@ -310050,6 +310897,27 @@
           "renamed": "nextForIteration"
         },
         {
+          "start": 773,
+          "end": 778,
+          "symbol": "L:lc.a(I)V#9",
+          "original": "var10",
+          "renamed": "clientControlFlowGuard"
+        },
+        {
+          "start": 853,
+          "end": 858,
+          "symbol": "L:lc.a(I)V#9",
+          "original": "var10",
+          "renamed": "clientControlFlowGuard"
+        },
+        {
+          "start": 950,
+          "end": 956,
+          "symbol": "P:lc.a(I)V#0",
+          "original": "param0",
+          "renamed": "methodGuard"
+        },
+        {
           "start": 1129,
           "end": 1136,
           "symbol": "F:ji.field_r:Ltf;",
@@ -310062,6 +310930,20 @@
           "symbol": "M:tf.c(I)Z",
           "original": "c",
           "renamed": "isEmpty"
+        },
+        {
+          "start": 1241,
+          "end": 1248,
+          "symbol": "F:kb.field_c:I",
+          "original": "field_c",
+          "renamed": "spawnReleaseIntervalTicks"
+        },
+        {
+          "start": 1256,
+          "end": 1263,
+          "symbol": "F:kc.field_a:I",
+          "original": "field_a",
+          "renamed": "ticksSinceLastEntityRelease"
         },
         {
           "start": 1292,
@@ -310104,6 +310986,13 @@
           "symbol": "M:tf.a(I)I",
           "original": "a",
           "renamed": "countNodes"
+        },
+        {
+          "start": 1521,
+          "end": 1527,
+          "symbol": "P:lc.a(I)V#0",
+          "original": "param0",
+          "renamed": "methodGuard"
         },
         {
           "start": 1563,
@@ -310162,6 +311051,27 @@
           "renamed": "recordEntityRelease"
         },
         {
+          "start": 1694,
+          "end": 1701,
+          "symbol": "F:kc.field_a:I",
+          "original": "field_a",
+          "renamed": "ticksSinceLastEntityRelease"
+        },
+        {
+          "start": 1770,
+          "end": 1777,
+          "symbol": "F:kc.field_a:I",
+          "original": "field_a",
+          "renamed": "ticksSinceLastEntityRelease"
+        },
+        {
+          "start": 1783,
+          "end": 1790,
+          "symbol": "F:kc.field_a:I",
+          "original": "field_a",
+          "renamed": "ticksSinceLastEntityRelease"
+        },
+        {
           "start": 1812,
           "end": 1814,
           "symbol": "C:wd",
@@ -310183,6 +311093,13 @@
           "renamed": "countNodes"
         },
         {
+          "start": 1825,
+          "end": 1831,
+          "symbol": "P:lc.a(I)V#0",
+          "original": "param0",
+          "renamed": "methodGuard"
+        },
+        {
           "start": 1908,
           "end": 1915,
           "symbol": "F:el.field_o:Lgh;",
@@ -310195,6 +311112,13 @@
           "symbol": "M:gh.b(Z)Z",
           "original": "b",
           "renamed": "canAdvanceSession"
+        },
+        {
+          "start": 1945,
+          "end": 1949,
+          "symbol": "L:lc.a(I)V#1",
+          "original": "var1",
+          "renamed": "queuedEntityThenPooledEntity"
         },
         {
           "start": 1953,
@@ -310218,6 +311142,160 @@
           "renamed": "removeFirst"
         },
         {
+          "start": 2025,
+          "end": 2029,
+          "symbol": "L:lc.a(I)V#1",
+          "original": "var1",
+          "renamed": "queuedEntityThenPooledEntity"
+        },
+        {
+          "start": 2053,
+          "end": 2057,
+          "symbol": "L:lc.a(I)V#3",
+          "original": "var2",
+          "renamed": "spawnAngleRadians"
+        },
+        {
+          "start": 2121,
+          "end": 2125,
+          "symbol": "L:lc.a(I)V#4",
+          "original": "var4",
+          "renamed": "spawnPositionX"
+        },
+        {
+          "start": 2153,
+          "end": 2157,
+          "symbol": "L:lc.a(I)V#3",
+          "original": "var2",
+          "renamed": "spawnAngleRadians"
+        },
+        {
+          "start": 2189,
+          "end": 2193,
+          "symbol": "L:lc.a(I)V#5",
+          "original": "var5",
+          "renamed": "spawnPositionY"
+        },
+        {
+          "start": 2221,
+          "end": 2225,
+          "symbol": "L:lc.a(I)V#3",
+          "original": "var2",
+          "renamed": "spawnAngleRadians"
+        },
+        {
+          "start": 2257,
+          "end": 2261,
+          "symbol": "L:lc.a(I)V#6",
+          "original": "var6",
+          "renamed": "inwardDirectionX"
+        },
+        {
+          "start": 2273,
+          "end": 2277,
+          "symbol": "L:lc.a(I)V#4",
+          "original": "var4",
+          "renamed": "spawnPositionX"
+        },
+        {
+          "start": 2299,
+          "end": 2303,
+          "symbol": "L:lc.a(I)V#7",
+          "original": "var7",
+          "renamed": "inwardDirectionY"
+        },
+        {
+          "start": 2307,
+          "end": 2311,
+          "symbol": "L:lc.a(I)V#5",
+          "original": "var5",
+          "renamed": "spawnPositionY"
+        },
+        {
+          "start": 2342,
+          "end": 2346,
+          "symbol": "L:lc.a(I)V#8",
+          "original": "var8",
+          "renamed": "inverseSpawnDistance"
+        },
+        {
+          "start": 2374,
+          "end": 2378,
+          "symbol": "L:lc.a(I)V#7",
+          "original": "var7",
+          "renamed": "inwardDirectionY"
+        },
+        {
+          "start": 2381,
+          "end": 2385,
+          "symbol": "L:lc.a(I)V#7",
+          "original": "var7",
+          "renamed": "inwardDirectionY"
+        },
+        {
+          "start": 2388,
+          "end": 2392,
+          "symbol": "L:lc.a(I)V#6",
+          "original": "var6",
+          "renamed": "inwardDirectionX"
+        },
+        {
+          "start": 2395,
+          "end": 2399,
+          "symbol": "L:lc.a(I)V#6",
+          "original": "var6",
+          "renamed": "inwardDirectionX"
+        },
+        {
+          "start": 2423,
+          "end": 2427,
+          "symbol": "L:lc.a(I)V#7",
+          "original": "var7",
+          "renamed": "inwardDirectionY"
+        },
+        {
+          "start": 2446,
+          "end": 2450,
+          "symbol": "L:lc.a(I)V#7",
+          "original": "var7",
+          "renamed": "inwardDirectionY"
+        },
+        {
+          "start": 2453,
+          "end": 2457,
+          "symbol": "L:lc.a(I)V#8",
+          "original": "var8",
+          "renamed": "inverseSpawnDistance"
+        },
+        {
+          "start": 2480,
+          "end": 2484,
+          "symbol": "L:lc.a(I)V#6",
+          "original": "var6",
+          "renamed": "inwardDirectionX"
+        },
+        {
+          "start": 2503,
+          "end": 2507,
+          "symbol": "L:lc.a(I)V#6",
+          "original": "var6",
+          "renamed": "inwardDirectionX"
+        },
+        {
+          "start": 2510,
+          "end": 2514,
+          "symbol": "L:lc.a(I)V#8",
+          "original": "var8",
+          "renamed": "inverseSpawnDistance"
+        },
+        {
+          "start": 2537,
+          "end": 2541,
+          "symbol": "L:lc.a(I)V#1",
+          "original": "var1",
+          "renamed": "queuedEntityThenPooledEntity"
+        },
+        {
           "start": 2542,
           "end": 2543,
           "symbol": "M:ja.a(IFIFIIFFFIF)V",
@@ -310225,11 +311303,60 @@
           "renamed": "initializeEntityMotion"
         },
         {
+          "start": 2549,
+          "end": 2553,
+          "symbol": "L:lc.a(I)V#4",
+          "original": "var4",
+          "renamed": "spawnPositionX"
+        },
+        {
+          "start": 2558,
+          "end": 2559,
+          "symbol": "M:vd.a(I)I",
+          "original": "a",
+          "renamed": "chooseSpawnSpriteKind"
+        },
+        {
+          "start": 2560,
+          "end": 2566,
+          "symbol": "P:lc.a(I)V#0",
+          "original": "param0",
+          "renamed": "methodGuard"
+        },
+        {
           "start": 2584,
           "end": 2591,
           "symbol": "F:og.field_r:F",
           "original": "field_r",
           "renamed": "entityMotionSpeed"
+        },
+        {
+          "start": 2594,
+          "end": 2598,
+          "symbol": "L:lc.a(I)V#6",
+          "original": "var6",
+          "renamed": "inwardDirectionX"
+        },
+        {
+          "start": 2603,
+          "end": 2604,
+          "symbol": "M:nf.c(B)I",
+          "original": "c",
+          "renamed": "chooseSpawnSpriteVariant"
+        },
+        {
+          "start": 2621,
+          "end": 2628,
+          "symbol": "F:kc.field_a:I",
+          "original": "field_a",
+          "renamed": "ticksSinceLastEntityRelease"
+        },
+        {
+          "start": 2634,
+          "end": 2641,
+          "symbol": "F:kb.field_c:I",
+          "original": "field_c",
+          "renamed": "spawnReleaseIntervalTicks"
         },
         {
           "start": 2649,
@@ -310253,11 +311380,39 @@
           "renamed": "countNodes"
         },
         {
+          "start": 2675,
+          "end": 2679,
+          "symbol": "L:lc.a(I)V#5",
+          "original": "var5",
+          "renamed": "spawnPositionY"
+        },
+        {
+          "start": 2681,
+          "end": 2685,
+          "symbol": "L:lc.a(I)V#7",
+          "original": "var7",
+          "renamed": "inwardDirectionY"
+        },
+        {
           "start": 2691,
           "end": 2698,
           "symbol": "F:og.field_r:F",
           "original": "field_r",
           "renamed": "entityMotionSpeed"
+        },
+        {
+          "start": 2703,
+          "end": 2704,
+          "symbol": "M:ij.m(I)I",
+          "original": "m",
+          "renamed": "chooseSpawnEntityCategory"
+        },
+        {
+          "start": 2705,
+          "end": 2711,
+          "symbol": "P:lc.a(I)V#0",
+          "original": "param0",
+          "renamed": "methodGuard"
         },
         {
           "start": 2747,
@@ -310279,6 +311434,62 @@
           "symbol": "M:tf.a(ILhf;)V",
           "original": "a",
           "renamed": "addLast"
+        },
+        {
+          "start": 2765,
+          "end": 2769,
+          "symbol": "L:lc.a(I)V#1",
+          "original": "var1",
+          "renamed": "queuedEntityThenPooledEntity"
+        },
+        {
+          "start": 2949,
+          "end": 2975,
+          "symbol": "L:lc.a(I)V#10",
+          "original": "decompiledCaughtParameter0",
+          "renamed": "spawnQueueFailure"
+        },
+        {
+          "start": 2989,
+          "end": 3014,
+          "symbol": "L:lc.a(I)V#0",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtSpawnQueueFailure"
+        },
+        {
+          "start": 3017,
+          "end": 3043,
+          "symbol": "L:lc.a(I)V#10",
+          "original": "decompiledCaughtParameter0",
+          "renamed": "spawnQueueFailure"
+        },
+        {
+          "start": 3055,
+          "end": 3063,
+          "symbol": "L:lc.a(I)V#2",
+          "original": "var1_ref",
+          "renamed": "spawnQueueFailureForContext"
+        },
+        {
+          "start": 3066,
+          "end": 3091,
+          "symbol": "L:lc.a(I)V#0",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtSpawnQueueFailure"
+        },
+        {
+          "start": 3135,
+          "end": 3143,
+          "symbol": "L:lc.a(I)V#2",
+          "original": "var1_ref",
+          "renamed": "spawnQueueFailureForContext"
+        },
+        {
+          "start": 3156,
+          "end": 3162,
+          "symbol": "P:lc.a(I)V#0",
+          "original": "param0",
+          "renamed": "methodGuard"
         },
         {
           "start": 12135,
@@ -310342,7 +311553,7 @@
       "original": "ld.java",
       "renamed": "ld.java",
       "inputSha256": "c1f72f38531bd56d74c162e7de60ff36cd49b67c79c33ba6efd3acb8784b8dd9",
-      "outputSha256": "69ec4ca65db0daefd1d73a43bd80beb17c3aba4f039fd36b4f6a3283e4cb941d",
+      "outputSha256": "fd7d6246abf8ad18e448b56e49a8c4ab7165e9f53b744e207aa15b7ecfeb2b04",
       "edits": [
         {
           "start": 66,
@@ -311493,6 +312704,13 @@
           "renamed": "advanceDifficulty"
         },
         {
+          "start": 4003,
+          "end": 4009,
+          "symbol": "P:ld.b(Z)V#0",
+          "original": "param0",
+          "renamed": "recursiveAdvanceGuard"
+        },
+        {
           "start": 4546,
           "end": 4553,
           "symbol": "F:ji.field_h:I",
@@ -311512,6 +312730,41 @@
           "symbol": "F:ji.field_h:I",
           "original": "field_h",
           "renamed": "difficultyStep"
+        },
+        {
+          "start": 4601,
+          "end": 4608,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
+          "start": 4636,
+          "end": 4643,
+          "symbol": "F:sa.field_c:D",
+          "original": "field_c",
+          "renamed": "specialSpriteKindProbability"
+        },
+        {
+          "start": 4684,
+          "end": 4691,
+          "symbol": "F:sa.field_c:D",
+          "original": "field_c",
+          "renamed": "specialSpriteKindProbability"
+        },
+        {
+          "start": 4697,
+          "end": 4704,
+          "symbol": "F:sa.field_c:D",
+          "original": "field_c",
+          "renamed": "specialSpriteKindProbability"
+        },
+        {
+          "start": 4773,
+          "end": 4780,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
         },
         {
           "start": 4784,
@@ -311535,11 +312788,46 @@
           "renamed": "entityMotionSpeed"
         },
         {
+          "start": 4872,
+          "end": 4878,
+          "symbol": "P:ld.b(Z)V#0",
+          "original": "param0",
+          "renamed": "recursiveAdvanceGuard"
+        },
+        {
+          "start": 4986,
+          "end": 4987,
+          "symbol": "M:sa.b(Z)V",
+          "original": "b",
+          "renamed": "recomputeSpawnReleaseInterval"
+        },
+        {
+          "start": 5034,
+          "end": 5041,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
           "start": 5045,
           "end": 5052,
           "symbol": "F:ji.field_h:I",
           "original": "field_h",
           "renamed": "difficultyStep"
+        },
+        {
+          "start": 5082,
+          "end": 5088,
+          "symbol": "P:ld.b(Z)V#0",
+          "original": "param0",
+          "renamed": "recursiveAdvanceGuard"
+        },
+        {
+          "start": 5112,
+          "end": 5119,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
         },
         {
           "start": 5123,
@@ -311549,11 +312837,60 @@
           "renamed": "difficultyStep"
         },
         {
+          "start": 5165,
+          "end": 5173,
+          "symbol": "F:f.field_qb:I",
+          "original": "field_qb",
+          "renamed": "availableEntityCategoryCount"
+        },
+        {
+          "start": 5199,
+          "end": 5207,
+          "symbol": "F:f.field_qb:I",
+          "original": "field_qb",
+          "renamed": "availableEntityCategoryCount"
+        },
+        {
+          "start": 5212,
+          "end": 5220,
+          "symbol": "F:f.field_qb:I",
+          "original": "field_qb",
+          "renamed": "availableEntityCategoryCount"
+        },
+        {
+          "start": 5281,
+          "end": 5288,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
           "start": 5292,
           "end": 5299,
           "symbol": "F:ji.field_h:I",
           "original": "field_h",
           "renamed": "difficultyStep"
+        },
+        {
+          "start": 5327,
+          "end": 5334,
+          "symbol": "F:sa.field_c:D",
+          "original": "field_c",
+          "renamed": "specialSpriteKindProbability"
+        },
+        {
+          "start": 5340,
+          "end": 5347,
+          "symbol": "F:sa.field_c:D",
+          "original": "field_c",
+          "renamed": "specialSpriteKindProbability"
+        },
+        {
+          "start": 5394,
+          "end": 5401,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
         },
         {
           "start": 5405,
@@ -311591,11 +312928,53 @@
           "renamed": "rotationStepRadians"
         },
         {
+          "start": 5522,
+          "end": 5529,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
           "start": 5533,
           "end": 5540,
           "symbol": "F:ji.field_h:I",
           "original": "field_h",
           "renamed": "difficultyStep"
+        },
+        {
+          "start": 5594,
+          "end": 5602,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 5625,
+          "end": 5633,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 5639,
+          "end": 5647,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 5706,
+          "end": 5712,
+          "symbol": "P:ld.b(Z)V#0",
+          "original": "param0",
+          "renamed": "recursiveAdvanceGuard"
+        },
+        {
+          "start": 5840,
+          "end": 5841,
+          "symbol": "M:sa.b(Z)V",
+          "original": "b",
+          "renamed": "recomputeSpawnReleaseInterval"
         },
         {
           "start": 5921,
@@ -311605,6 +312984,13 @@
           "renamed": "advanceDifficulty"
         },
         {
+          "start": 5948,
+          "end": 5955,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
           "start": 5959,
           "end": 5966,
           "symbol": "F:ji.field_h:I",
@@ -311612,11 +312998,39 @@
           "renamed": "difficultyStep"
         },
         {
+          "start": 6006,
+          "end": 6013,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
           "start": 6017,
           "end": 6024,
           "symbol": "F:ji.field_h:I",
           "original": "field_h",
           "renamed": "difficultyStep"
+        },
+        {
+          "start": 6052,
+          "end": 6059,
+          "symbol": "F:sa.field_c:D",
+          "original": "field_c",
+          "renamed": "specialSpriteKindProbability"
+        },
+        {
+          "start": 6065,
+          "end": 6072,
+          "symbol": "F:sa.field_c:D",
+          "original": "field_c",
+          "renamed": "specialSpriteKindProbability"
+        },
+        {
+          "start": 6119,
+          "end": 6126,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
         },
         {
           "start": 6130,
@@ -311654,6 +313068,13 @@
           "renamed": "rotationStepRadians"
         },
         {
+          "start": 6247,
+          "end": 6254,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
           "start": 6258,
           "end": 6265,
           "symbol": "F:ji.field_h:I",
@@ -311661,11 +313082,95 @@
           "renamed": "difficultyStep"
         },
         {
+          "start": 6319,
+          "end": 6327,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 6350,
+          "end": 6358,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 6364,
+          "end": 6372,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 6431,
+          "end": 6437,
+          "symbol": "P:ld.b(Z)V#0",
+          "original": "param0",
+          "renamed": "recursiveAdvanceGuard"
+        },
+        {
+          "start": 6565,
+          "end": 6566,
+          "symbol": "M:sa.b(Z)V",
+          "original": "b",
+          "renamed": "recomputeSpawnReleaseInterval"
+        },
+        {
+          "start": 6649,
+          "end": 6657,
+          "symbol": "F:f.field_qb:I",
+          "original": "field_qb",
+          "renamed": "availableEntityCategoryCount"
+        },
+        {
+          "start": 6679,
+          "end": 6687,
+          "symbol": "F:f.field_qb:I",
+          "original": "field_qb",
+          "renamed": "availableEntityCategoryCount"
+        },
+        {
+          "start": 6692,
+          "end": 6700,
+          "symbol": "F:f.field_qb:I",
+          "original": "field_qb",
+          "renamed": "availableEntityCategoryCount"
+        },
+        {
+          "start": 6741,
+          "end": 6748,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
           "start": 6752,
           "end": 6759,
           "symbol": "F:ji.field_h:I",
           "original": "field_h",
           "renamed": "difficultyStep"
+        },
+        {
+          "start": 6785,
+          "end": 6792,
+          "symbol": "F:sa.field_c:D",
+          "original": "field_c",
+          "renamed": "specialSpriteKindProbability"
+        },
+        {
+          "start": 6798,
+          "end": 6805,
+          "symbol": "F:sa.field_c:D",
+          "original": "field_c",
+          "renamed": "specialSpriteKindProbability"
+        },
+        {
+          "start": 6848,
+          "end": 6855,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
         },
         {
           "start": 6859,
@@ -311703,11 +313208,81 @@
           "renamed": "rotationStepRadians"
         },
         {
+          "start": 6970,
+          "end": 6977,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
           "start": 6981,
           "end": 6988,
           "symbol": "F:ji.field_h:I",
           "original": "field_h",
           "renamed": "difficultyStep"
+        },
+        {
+          "start": 7040,
+          "end": 7048,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 7069,
+          "end": 7077,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 7083,
+          "end": 7091,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 7146,
+          "end": 7152,
+          "symbol": "P:ld.b(Z)V#0",
+          "original": "param0",
+          "renamed": "recursiveAdvanceGuard"
+        },
+        {
+          "start": 7270,
+          "end": 7271,
+          "symbol": "M:sa.b(Z)V",
+          "original": "b",
+          "renamed": "recomputeSpawnReleaseInterval"
+        },
+        {
+          "start": 7347,
+          "end": 7354,
+          "symbol": "F:ag.field_k:I",
+          "original": "field_k",
+          "renamed": "availableSpriteVariantCount"
+        },
+        {
+          "start": 7375,
+          "end": 7382,
+          "symbol": "F:ag.field_k:I",
+          "original": "field_k",
+          "renamed": "availableSpriteVariantCount"
+        },
+        {
+          "start": 7388,
+          "end": 7395,
+          "symbol": "F:ag.field_k:I",
+          "original": "field_k",
+          "renamed": "availableSpriteVariantCount"
+        },
+        {
+          "start": 7415,
+          "end": 7421,
+          "symbol": "P:ld.b(Z)V#0",
+          "original": "param0",
+          "renamed": "recursiveAdvanceGuard"
         },
         {
           "start": 7440,
@@ -311717,6 +313292,13 @@
           "renamed": "advanceDifficulty"
         },
         {
+          "start": 7479,
+          "end": 7486,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
           "start": 7490,
           "end": 7497,
           "symbol": "F:ji.field_h:I",
@@ -311724,11 +313306,60 @@
           "renamed": "difficultyStep"
         },
         {
+          "start": 7530,
+          "end": 7538,
+          "symbol": "F:f.field_qb:I",
+          "original": "field_qb",
+          "renamed": "availableEntityCategoryCount"
+        },
+        {
+          "start": 7562,
+          "end": 7570,
+          "symbol": "F:f.field_qb:I",
+          "original": "field_qb",
+          "renamed": "availableEntityCategoryCount"
+        },
+        {
+          "start": 7575,
+          "end": 7583,
+          "symbol": "F:f.field_qb:I",
+          "original": "field_qb",
+          "renamed": "availableEntityCategoryCount"
+        },
+        {
+          "start": 7638,
+          "end": 7645,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
           "start": 7649,
           "end": 7656,
           "symbol": "F:ji.field_h:I",
           "original": "field_h",
           "renamed": "difficultyStep"
+        },
+        {
+          "start": 7682,
+          "end": 7689,
+          "symbol": "F:sa.field_c:D",
+          "original": "field_c",
+          "renamed": "specialSpriteKindProbability"
+        },
+        {
+          "start": 7695,
+          "end": 7702,
+          "symbol": "F:sa.field_c:D",
+          "original": "field_c",
+          "renamed": "specialSpriteKindProbability"
+        },
+        {
+          "start": 7745,
+          "end": 7752,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
         },
         {
           "start": 7756,
@@ -311766,11 +313397,60 @@
           "renamed": "rotationStepRadians"
         },
         {
+          "start": 7867,
+          "end": 7874,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
           "start": 7878,
           "end": 7885,
           "symbol": "F:ji.field_h:I",
           "original": "field_h",
           "renamed": "difficultyStep"
+        },
+        {
+          "start": 7937,
+          "end": 7945,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 7966,
+          "end": 7974,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 7980,
+          "end": 7988,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 8043,
+          "end": 8049,
+          "symbol": "P:ld.b(Z)V#0",
+          "original": "param0",
+          "renamed": "recursiveAdvanceGuard"
+        },
+        {
+          "start": 8167,
+          "end": 8168,
+          "symbol": "M:sa.b(Z)V",
+          "original": "b",
+          "renamed": "recomputeSpawnReleaseInterval"
+        },
+        {
+          "start": 8241,
+          "end": 8247,
+          "symbol": "P:ld.b(Z)V#0",
+          "original": "param0",
+          "renamed": "recursiveAdvanceGuard"
         },
         {
           "start": 8264,
@@ -311780,6 +313460,13 @@
           "renamed": "advanceDifficulty"
         },
         {
+          "start": 8291,
+          "end": 8298,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
           "start": 8302,
           "end": 8309,
           "symbol": "F:ji.field_h:I",
@@ -311787,11 +313474,46 @@
           "renamed": "difficultyStep"
         },
         {
+          "start": 8342,
+          "end": 8350,
+          "symbol": "F:f.field_qb:I",
+          "original": "field_qb",
+          "renamed": "availableEntityCategoryCount"
+        },
+        {
+          "start": 8386,
+          "end": 8393,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
           "start": 8397,
           "end": 8404,
           "symbol": "F:ji.field_h:I",
           "original": "field_h",
           "renamed": "difficultyStep"
+        },
+        {
+          "start": 8434,
+          "end": 8441,
+          "symbol": "F:sa.field_c:D",
+          "original": "field_c",
+          "renamed": "specialSpriteKindProbability"
+        },
+        {
+          "start": 8447,
+          "end": 8454,
+          "symbol": "F:sa.field_c:D",
+          "original": "field_c",
+          "renamed": "specialSpriteKindProbability"
+        },
+        {
+          "start": 8505,
+          "end": 8512,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
         },
         {
           "start": 8516,
@@ -311829,6 +313551,13 @@
           "renamed": "rotationStepRadians"
         },
         {
+          "start": 8639,
+          "end": 8646,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
           "start": 8650,
           "end": 8657,
           "symbol": "F:ji.field_h:I",
@@ -311836,11 +313565,88 @@
           "renamed": "difficultyStep"
         },
         {
+          "start": 8713,
+          "end": 8721,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 8746,
+          "end": 8754,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 8760,
+          "end": 8768,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 8831,
+          "end": 8837,
+          "symbol": "P:ld.b(Z)V#0",
+          "original": "param0",
+          "renamed": "recursiveAdvanceGuard"
+        },
+        {
+          "start": 8977,
+          "end": 8978,
+          "symbol": "M:sa.b(Z)V",
+          "original": "b",
+          "renamed": "recomputeSpawnReleaseInterval"
+        },
+        {
+          "start": 9066,
+          "end": 9074,
+          "symbol": "F:f.field_qb:I",
+          "original": "field_qb",
+          "renamed": "availableEntityCategoryCount"
+        },
+        {
+          "start": 9079,
+          "end": 9087,
+          "symbol": "F:f.field_qb:I",
+          "original": "field_qb",
+          "renamed": "availableEntityCategoryCount"
+        },
+        {
+          "start": 9128,
+          "end": 9135,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
           "start": 9139,
           "end": 9146,
           "symbol": "F:ji.field_h:I",
           "original": "field_h",
           "renamed": "difficultyStep"
+        },
+        {
+          "start": 9172,
+          "end": 9179,
+          "symbol": "F:sa.field_c:D",
+          "original": "field_c",
+          "renamed": "specialSpriteKindProbability"
+        },
+        {
+          "start": 9185,
+          "end": 9192,
+          "symbol": "F:sa.field_c:D",
+          "original": "field_c",
+          "renamed": "specialSpriteKindProbability"
+        },
+        {
+          "start": 9225,
+          "end": 9232,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
         },
         {
           "start": 9236,
@@ -311878,11 +313684,60 @@
           "renamed": "rotationStepRadians"
         },
         {
+          "start": 9353,
+          "end": 9360,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
           "start": 9364,
           "end": 9371,
           "symbol": "F:ji.field_h:I",
           "original": "field_h",
           "renamed": "difficultyStep"
+        },
+        {
+          "start": 9425,
+          "end": 9433,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 9456,
+          "end": 9464,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 9470,
+          "end": 9478,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 9537,
+          "end": 9543,
+          "symbol": "P:ld.b(Z)V#0",
+          "original": "param0",
+          "renamed": "recursiveAdvanceGuard"
+        },
+        {
+          "start": 9673,
+          "end": 9674,
+          "symbol": "M:sa.b(Z)V",
+          "original": "b",
+          "renamed": "recomputeSpawnReleaseInterval"
+        },
+        {
+          "start": 9764,
+          "end": 9771,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
         },
         {
           "start": 9775,
@@ -311892,11 +313747,53 @@
           "renamed": "difficultyStep"
         },
         {
+          "start": 9818,
+          "end": 9825,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
           "start": 9829,
           "end": 9836,
           "symbol": "F:ji.field_h:I",
           "original": "field_h",
           "renamed": "difficultyStep"
+        },
+        {
+          "start": 9890,
+          "end": 9898,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 9921,
+          "end": 9929,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 9935,
+          "end": 9943,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 10002,
+          "end": 10008,
+          "symbol": "P:ld.b(Z)V#0",
+          "original": "param0",
+          "renamed": "recursiveAdvanceGuard"
+        },
+        {
+          "start": 10138,
+          "end": 10139,
+          "symbol": "M:sa.b(Z)V",
+          "original": "b",
+          "renamed": "recomputeSpawnReleaseInterval"
         },
         {
           "start": 10217,
@@ -311927,11 +313824,60 @@
           "renamed": "rotationStepRadians"
         },
         {
+          "start": 10286,
+          "end": 10293,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
           "start": 10297,
           "end": 10304,
           "symbol": "F:ji.field_h:I",
           "original": "field_h",
           "renamed": "difficultyStep"
+        },
+        {
+          "start": 10356,
+          "end": 10364,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 10385,
+          "end": 10393,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 10399,
+          "end": 10407,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 10462,
+          "end": 10468,
+          "symbol": "P:ld.b(Z)V#0",
+          "original": "param0",
+          "renamed": "recursiveAdvanceGuard"
+        },
+        {
+          "start": 10588,
+          "end": 10589,
+          "symbol": "M:sa.b(Z)V",
+          "original": "b",
+          "renamed": "recomputeSpawnReleaseInterval"
+        },
+        {
+          "start": 10667,
+          "end": 10674,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
         },
         {
           "start": 10678,
@@ -311941,11 +313887,32 @@
           "renamed": "difficultyStep"
         },
         {
+          "start": 10716,
+          "end": 10724,
+          "symbol": "F:f.field_qb:I",
+          "original": "field_qb",
+          "renamed": "availableEntityCategoryCount"
+        },
+        {
+          "start": 10758,
+          "end": 10765,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
           "start": 10769,
           "end": 10776,
           "symbol": "F:ji.field_h:I",
           "original": "field_h",
           "renamed": "difficultyStep"
+        },
+        {
+          "start": 10813,
+          "end": 10820,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
         },
         {
           "start": 10824,
@@ -311955,11 +313922,53 @@
           "renamed": "difficultyStep"
         },
         {
+          "start": 10871,
+          "end": 10878,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
           "start": 10882,
           "end": 10889,
           "symbol": "F:ji.field_h:I",
           "original": "field_h",
           "renamed": "difficultyStep"
+        },
+        {
+          "start": 10947,
+          "end": 10955,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 10982,
+          "end": 10990,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 10996,
+          "end": 11004,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 11071,
+          "end": 11077,
+          "symbol": "P:ld.b(Z)V#0",
+          "original": "param0",
+          "renamed": "recursiveAdvanceGuard"
+        },
+        {
+          "start": 11227,
+          "end": 11228,
+          "symbol": "M:sa.b(Z)V",
+          "original": "b",
+          "renamed": "recomputeSpawnReleaseInterval"
         },
         {
           "start": 11322,
@@ -311990,11 +313999,74 @@
           "renamed": "rotationStepRadians"
         },
         {
+          "start": 11395,
+          "end": 11402,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
           "start": 11406,
           "end": 11413,
           "symbol": "F:ji.field_h:I",
           "original": "field_h",
           "renamed": "difficultyStep"
+        },
+        {
+          "start": 11469,
+          "end": 11477,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 11502,
+          "end": 11510,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 11516,
+          "end": 11524,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 11587,
+          "end": 11593,
+          "symbol": "P:ld.b(Z)V#0",
+          "original": "param0",
+          "renamed": "recursiveAdvanceGuard"
+        },
+        {
+          "start": 11733,
+          "end": 11734,
+          "symbol": "M:sa.b(Z)V",
+          "original": "b",
+          "renamed": "recomputeSpawnReleaseInterval"
+        },
+        {
+          "start": 11823,
+          "end": 11830,
+          "symbol": "F:sa.field_c:D",
+          "original": "field_c",
+          "renamed": "specialSpriteKindProbability"
+        },
+        {
+          "start": 11836,
+          "end": 11843,
+          "symbol": "F:sa.field_c:D",
+          "original": "field_c",
+          "renamed": "specialSpriteKindProbability"
+        },
+        {
+          "start": 11876,
+          "end": 11883,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
         },
         {
           "start": 11887,
@@ -312004,11 +314076,53 @@
           "renamed": "difficultyStep"
         },
         {
+          "start": 11932,
+          "end": 11939,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
           "start": 11943,
           "end": 11950,
           "symbol": "F:ji.field_h:I",
           "original": "field_h",
           "renamed": "difficultyStep"
+        },
+        {
+          "start": 12006,
+          "end": 12014,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 12039,
+          "end": 12047,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 12053,
+          "end": 12061,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 12124,
+          "end": 12130,
+          "symbol": "P:ld.b(Z)V#0",
+          "original": "param0",
+          "renamed": "recursiveAdvanceGuard"
+        },
+        {
+          "start": 12270,
+          "end": 12271,
+          "symbol": "M:sa.b(Z)V",
+          "original": "b",
+          "renamed": "recomputeSpawnReleaseInterval"
         },
         {
           "start": 12357,
@@ -312039,11 +314153,74 @@
           "renamed": "rotationStepRadians"
         },
         {
+          "start": 12428,
+          "end": 12435,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
           "start": 12439,
           "end": 12446,
           "symbol": "F:ji.field_h:I",
           "original": "field_h",
           "renamed": "difficultyStep"
+        },
+        {
+          "start": 12500,
+          "end": 12508,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 12531,
+          "end": 12539,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 12545,
+          "end": 12553,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 12612,
+          "end": 12618,
+          "symbol": "P:ld.b(Z)V#0",
+          "original": "param0",
+          "renamed": "recursiveAdvanceGuard"
+        },
+        {
+          "start": 12748,
+          "end": 12749,
+          "symbol": "M:sa.b(Z)V",
+          "original": "b",
+          "renamed": "recomputeSpawnReleaseInterval"
+        },
+        {
+          "start": 12829,
+          "end": 12837,
+          "symbol": "F:f.field_qb:I",
+          "original": "field_qb",
+          "renamed": "availableEntityCategoryCount"
+        },
+        {
+          "start": 12842,
+          "end": 12850,
+          "symbol": "F:f.field_qb:I",
+          "original": "field_qb",
+          "renamed": "availableEntityCategoryCount"
+        },
+        {
+          "start": 12887,
+          "end": 12894,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
         },
         {
           "start": 12898,
@@ -312053,6 +314230,13 @@
           "renamed": "difficultyStep"
         },
         {
+          "start": 12938,
+          "end": 12945,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
           "start": 12949,
           "end": 12956,
           "symbol": "F:ji.field_h:I",
@@ -312060,11 +314244,53 @@
           "renamed": "difficultyStep"
         },
         {
+          "start": 12992,
+          "end": 12999,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
           "start": 13003,
           "end": 13010,
           "symbol": "F:ji.field_h:I",
           "original": "field_h",
           "renamed": "difficultyStep"
+        },
+        {
+          "start": 13064,
+          "end": 13072,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 13095,
+          "end": 13103,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 13109,
+          "end": 13117,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 13176,
+          "end": 13182,
+          "symbol": "P:ld.b(Z)V#0",
+          "original": "param0",
+          "renamed": "recursiveAdvanceGuard"
+        },
+        {
+          "start": 13312,
+          "end": 13313,
+          "symbol": "M:sa.b(Z)V",
+          "original": "b",
+          "renamed": "recomputeSpawnReleaseInterval"
         },
         {
           "start": 13391,
@@ -312095,11 +314321,74 @@
           "renamed": "rotationStepRadians"
         },
         {
+          "start": 13460,
+          "end": 13467,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
           "start": 13471,
           "end": 13478,
           "symbol": "F:ji.field_h:I",
           "original": "field_h",
           "renamed": "difficultyStep"
+        },
+        {
+          "start": 13530,
+          "end": 13538,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 13559,
+          "end": 13567,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 13573,
+          "end": 13581,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 13636,
+          "end": 13642,
+          "symbol": "P:ld.b(Z)V#0",
+          "original": "param0",
+          "renamed": "recursiveAdvanceGuard"
+        },
+        {
+          "start": 13762,
+          "end": 13763,
+          "symbol": "M:sa.b(Z)V",
+          "original": "b",
+          "renamed": "recomputeSpawnReleaseInterval"
+        },
+        {
+          "start": 13836,
+          "end": 13843,
+          "symbol": "F:sa.field_c:D",
+          "original": "field_c",
+          "renamed": "specialSpriteKindProbability"
+        },
+        {
+          "start": 13849,
+          "end": 13856,
+          "symbol": "F:sa.field_c:D",
+          "original": "field_c",
+          "renamed": "specialSpriteKindProbability"
+        },
+        {
+          "start": 13885,
+          "end": 13892,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
         },
         {
           "start": 13896,
@@ -312109,11 +314398,53 @@
           "renamed": "difficultyStep"
         },
         {
+          "start": 13937,
+          "end": 13944,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
           "start": 13948,
           "end": 13955,
           "symbol": "F:ji.field_h:I",
           "original": "field_h",
           "renamed": "difficultyStep"
+        },
+        {
+          "start": 14007,
+          "end": 14015,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 14036,
+          "end": 14044,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 14050,
+          "end": 14058,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 14113,
+          "end": 14119,
+          "symbol": "P:ld.b(Z)V#0",
+          "original": "param0",
+          "renamed": "recursiveAdvanceGuard"
+        },
+        {
+          "start": 14239,
+          "end": 14240,
+          "symbol": "M:sa.b(Z)V",
+          "original": "b",
+          "renamed": "recomputeSpawnReleaseInterval"
         },
         {
           "start": 14310,
@@ -312144,11 +314475,53 @@
           "renamed": "rotationStepRadians"
         },
         {
+          "start": 14377,
+          "end": 14384,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
           "start": 14388,
           "end": 14395,
           "symbol": "F:ji.field_h:I",
           "original": "field_h",
           "renamed": "difficultyStep"
+        },
+        {
+          "start": 14445,
+          "end": 14453,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 14472,
+          "end": 14480,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 14486,
+          "end": 14494,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 14545,
+          "end": 14551,
+          "symbol": "P:ld.b(Z)V#0",
+          "original": "param0",
+          "renamed": "recursiveAdvanceGuard"
+        },
+        {
+          "start": 14661,
+          "end": 14662,
+          "symbol": "M:sa.b(Z)V",
+          "original": "b",
+          "renamed": "recomputeSpawnReleaseInterval"
         },
         {
           "start": 14723,
@@ -312233,7 +314606,7 @@
       "original": "le.java",
       "renamed": "le.java",
       "inputSha256": "81b6271630f20f9c8b49768999751b44e266eb59cdd9f2a5002c4ad7a5d62aea",
-      "outputSha256": "3859868aeddf64ba3b41f4e6467764e9f33d3a56d8ed49d040b321b8d92369c1",
+      "outputSha256": "fc5b752bc09b796629af564bca63d712e47786655f991c9d5a22ee3024815e76",
       "edits": [
         {
           "start": 265,
@@ -312318,6 +314691,13 @@
           "symbol": "F:ra.field_a:Ltf;",
           "original": "field_a",
           "renamed": "availableEntities"
+        },
+        {
+          "start": 448,
+          "end": 455,
+          "symbol": "F:kc.field_a:I",
+          "original": "field_a",
+          "renamed": "ticksSinceLastEntityRelease"
         },
         {
           "start": 472,
@@ -317787,7 +320167,7 @@
       "original": "nf.java",
       "renamed": "nf.java",
       "inputSha256": "c0948a54551bb70d86affa492ea330f80d61bc4fd771e856807b149d79a780a5",
-      "outputSha256": "e8bd634c50fc3c79d3b1233d9db07777438239e43ba83f3bf832ad03e96cc7a0",
+      "outputSha256": "c3157724c03e571f0cb95fd339b89de6da6674bd8091379468f95413bd662625",
       "edits": [
         {
           "start": 488,
@@ -317809,6 +320189,34 @@
           "symbol": "C:tf",
           "original": "tf",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 1490,
+          "end": 1491,
+          "symbol": "M:nf.c(B)I",
+          "original": "c",
+          "renamed": "chooseSpawnSpriteVariant"
+        },
+        {
+          "start": 1497,
+          "end": 1503,
+          "symbol": "P:nf.c(B)I#0",
+          "original": "param0",
+          "renamed": "methodGuard"
+        },
+        {
+          "start": 1519,
+          "end": 1525,
+          "symbol": "P:nf.c(B)I#0",
+          "original": "param0",
+          "renamed": "methodGuard"
+        },
+        {
+          "start": 1592,
+          "end": 1599,
+          "symbol": "F:ag.field_k:I",
+          "original": "field_k",
+          "renamed": "availableSpriteVariantCount"
         },
         {
           "start": 1684,
@@ -319747,7 +322155,7 @@
       "original": "pg.java",
       "renamed": "pg.java",
       "inputSha256": "6c6e4e27dfba1a43ab68b4f819008fe9411a6794645fc744094bb6eb212d6d70",
-      "outputSha256": "aee1d3da835b14a3a7acec7acf8baf9e3500ce79bdcdd667be861c6b7b5787c1",
+      "outputSha256": "edf845295512a33c4ae6a974f68fdec5bf0e17f244d4b6de992f5ac4676879c5",
       "edits": [
         {
           "start": 152,
@@ -319757,6 +322165,20 @@
           "renamed": "screenChangePending"
         },
         {
+          "start": 208,
+          "end": 209,
+          "symbol": "M:pg.a(I)V",
+          "original": "a",
+          "renamed": "resetGameplayDifficulty"
+        },
+        {
+          "start": 214,
+          "end": 220,
+          "symbol": "P:pg.a(I)V#0",
+          "original": "param0",
+          "renamed": "methodGuard"
+        },
+        {
           "start": 235,
           "end": 242,
           "symbol": "F:og.field_r:F",
@@ -319764,11 +322186,25 @@
           "renamed": "entityMotionSpeed"
         },
         {
+          "start": 277,
+          "end": 284,
+          "symbol": "F:sa.field_c:D",
+          "original": "field_c",
+          "renamed": "specialSpriteKindProbability"
+        },
+        {
           "start": 303,
           "end": 310,
           "symbol": "F:ul.field_b:I",
           "original": "field_b",
           "renamed": "releasedInCurrentTheme"
+        },
+        {
+          "start": 327,
+          "end": 334,
+          "symbol": "F:ag.field_k:I",
+          "original": "field_k",
+          "renamed": "availableSpriteVariantCount"
         },
         {
           "start": 375,
@@ -319785,6 +322221,27 @@
           "renamed": "releasesPerTheme"
         },
         {
+          "start": 423,
+          "end": 431,
+          "symbol": "F:f.field_qb:I",
+          "original": "field_qb",
+          "renamed": "availableEntityCategoryCount"
+        },
+        {
+          "start": 448,
+          "end": 449,
+          "symbol": "M:qe.b(I)V",
+          "original": "b",
+          "renamed": "adjustThemeReleaseQuota"
+        },
+        {
+          "start": 466,
+          "end": 474,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
           "start": 492,
           "end": 494,
           "symbol": "C:rc",
@@ -319799,6 +322256,13 @@
           "renamed": "rotationStepRadians"
         },
         {
+          "start": 539,
+          "end": 545,
+          "symbol": "P:pg.a(I)V#0",
+          "original": "param0",
+          "renamed": "methodGuard"
+        },
+        {
           "start": 598,
           "end": 605,
           "symbol": "F:di.field_g:I",
@@ -319806,11 +322270,25 @@
           "renamed": "releasedInDifficultyStep"
         },
         {
+          "start": 622,
+          "end": 623,
+          "symbol": "M:sa.b(Z)V",
+          "original": "b",
+          "renamed": "recomputeSpawnReleaseInterval"
+        },
+        {
           "start": 7687,
           "end": 7688,
           "symbol": "M:tf.a(ILhf;)V",
           "original": "a",
           "renamed": "addLast"
+        },
+        {
+          "start": 9710,
+          "end": 9711,
+          "symbol": "M:pg.a(I)V",
+          "original": "a",
+          "renamed": "resetGameplayDifficulty"
         }
       ]
     },
@@ -324223,8 +326701,50 @@
       "original": "qe.java",
       "renamed": "qe.java",
       "inputSha256": "d769e2688025a605351d42d95b5b985ce279459d08e0aad404c1b3890c068633",
-      "outputSha256": "29a0d5fbf123189774f22798db565408701032b245b88a8431b74b9bc6566815",
+      "outputSha256": "0aa399bedd273f5aea882c4c23ed45d584060fd3cbc763d3eafa335b2daecaf4",
       "edits": [
+        {
+          "start": 3998,
+          "end": 3999,
+          "symbol": "M:qe.b(I)V",
+          "original": "b",
+          "renamed": "adjustThemeReleaseQuota"
+        },
+        {
+          "start": 4004,
+          "end": 4010,
+          "symbol": "P:qe.b(I)V#0",
+          "original": "param0",
+          "renamed": "additionalReleases"
+        },
+        {
+          "start": 4026,
+          "end": 4030,
+          "symbol": "L:qe.b(I)V#0",
+          "original": "var2",
+          "renamed": "clientControlFlowGuard"
+        },
+        {
+          "start": 4061,
+          "end": 4086,
+          "symbol": "L:qe.b(I)V#1",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtQuotaUpdateFailure"
+        },
+        {
+          "start": 4120,
+          "end": 4124,
+          "symbol": "L:qe.b(I)V#2",
+          "original": "var1",
+          "renamed": "quotaUpdateFailureForContext"
+        },
+        {
+          "start": 4141,
+          "end": 4145,
+          "symbol": "L:qe.b(I)V#0",
+          "original": "var2",
+          "renamed": "clientControlFlowGuard"
+        },
         {
           "start": 4196,
           "end": 4203,
@@ -324268,6 +326788,13 @@
           "renamed": "releasesPerTheme"
         },
         {
+          "start": 4353,
+          "end": 4359,
+          "symbol": "P:qe.b(I)V#0",
+          "original": "param0",
+          "renamed": "additionalReleases"
+        },
+        {
           "start": 4374,
           "end": 4381,
           "symbol": "F:sa.field_b:I",
@@ -324308,6 +326835,55 @@
           "symbol": "F:sa.field_b:I",
           "original": "field_b",
           "renamed": "releasesPerDifficultyStep"
+        },
+        {
+          "start": 4567,
+          "end": 4593,
+          "symbol": "L:qe.b(I)V#3",
+          "original": "decompiledCaughtParameter0",
+          "renamed": "quotaUpdateFailure"
+        },
+        {
+          "start": 4607,
+          "end": 4632,
+          "symbol": "L:qe.b(I)V#1",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtQuotaUpdateFailure"
+        },
+        {
+          "start": 4635,
+          "end": 4661,
+          "symbol": "L:qe.b(I)V#3",
+          "original": "decompiledCaughtParameter0",
+          "renamed": "quotaUpdateFailure"
+        },
+        {
+          "start": 4673,
+          "end": 4677,
+          "symbol": "L:qe.b(I)V#2",
+          "original": "var1",
+          "renamed": "quotaUpdateFailureForContext"
+        },
+        {
+          "start": 4680,
+          "end": 4705,
+          "symbol": "L:qe.b(I)V#1",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtQuotaUpdateFailure"
+        },
+        {
+          "start": 4749,
+          "end": 4753,
+          "symbol": "L:qe.b(I)V#2",
+          "original": "var1",
+          "renamed": "quotaUpdateFailureForContext"
+        },
+        {
+          "start": 4766,
+          "end": 4772,
+          "symbol": "P:qe.b(I)V#0",
+          "original": "param0",
+          "renamed": "additionalReleases"
         }
       ]
     },
@@ -326664,7 +329240,7 @@
       "original": "sa.java",
       "renamed": "sa.java",
       "inputSha256": "d22232f25f8d04ef63527050aa9e070be4d4d5b4431613705e1fd6ae6aa8f188",
-      "outputSha256": "f500de666f7b13ba16c6b0ccf21178f97a4937a8e9d4204acf16fb1a6ea624a3",
+      "outputSha256": "8edc626fc670317d2bb796eb5d265a70de0a9bd7c7f03b4ed14d9e233d854a60",
       "edits": [
         {
           "start": 95,
@@ -326672,6 +329248,13 @@
           "symbol": "F:sa.field_b:I",
           "original": "field_b",
           "renamed": "releasesPerDifficultyStep"
+        },
+        {
+          "start": 165,
+          "end": 172,
+          "symbol": "F:sa.field_c:D",
+          "original": "field_c",
+          "renamed": "specialSpriteKindProbability"
         },
         {
           "start": 1942,
@@ -326688,11 +329271,60 @@
           "renamed": "PendingActionMarker"
         },
         {
+          "start": 3733,
+          "end": 3734,
+          "symbol": "M:sa.b(Z)V",
+          "original": "b",
+          "renamed": "recomputeSpawnReleaseInterval"
+        },
+        {
+          "start": 3743,
+          "end": 3749,
+          "symbol": "P:sa.b(Z)V#0",
+          "original": "param0",
+          "renamed": "preserveReleaseQuota"
+        },
+        {
+          "start": 3765,
+          "end": 3769,
+          "symbol": "L:sa.b(Z)V#0",
+          "original": "var1",
+          "renamed": "intervalTicks"
+        },
+        {
           "start": 3790,
           "end": 3797,
           "symbol": "F:og.field_r:F",
           "original": "field_r",
           "renamed": "entityMotionSpeed"
+        },
+        {
+          "start": 3803,
+          "end": 3811,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 3832,
+          "end": 3839,
+          "symbol": "F:kb.field_c:I",
+          "original": "field_c",
+          "renamed": "spawnReleaseIntervalTicks"
+        },
+        {
+          "start": 3842,
+          "end": 3846,
+          "symbol": "L:sa.b(Z)V#0",
+          "original": "var1",
+          "renamed": "intervalTicks"
+        },
+        {
+          "start": 3861,
+          "end": 3867,
+          "symbol": "P:sa.b(Z)V#0",
+          "original": "param0",
+          "renamed": "preserveReleaseQuota"
         },
         {
           "start": 3883,
@@ -326707,6 +329339,13 @@
           "symbol": "C:tf",
           "original": "tf",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 4615,
+          "end": 4622,
+          "symbol": "F:sa.field_c:D",
+          "original": "field_c",
+          "renamed": "specialSpriteKindProbability"
         },
         {
           "start": 5755,
@@ -339079,7 +341718,7 @@
       "original": "vd.java",
       "renamed": "vd.java",
       "inputSha256": "39eda8e79978a13caa10abd0c2f087011a759e5a5b5773a5d97154a41114f2b5",
-      "outputSha256": "8d88f75989291f356090f3f904c1ee763222777f40ce90d4641b4babd8d6659c",
+      "outputSha256": "167b8e2f94730d3b76eaa908d847c8a9134aceb9fb890c622e7f9e9a5d989cbc",
       "edits": [
         {
           "start": 347,
@@ -339110,6 +341749,62 @@
           "renamed": "highscoreModeNames"
         },
         {
+          "start": 3714,
+          "end": 3715,
+          "symbol": "M:vd.a(I)I",
+          "original": "a",
+          "renamed": "chooseSpawnSpriteKind"
+        },
+        {
+          "start": 3720,
+          "end": 3726,
+          "symbol": "P:vd.a(I)I#0",
+          "original": "param0",
+          "renamed": "methodGuard"
+        },
+        {
+          "start": 3742,
+          "end": 3748,
+          "symbol": "P:vd.a(I)I#0",
+          "original": "param0",
+          "renamed": "methodGuard"
+        },
+        {
+          "start": 3832,
+          "end": 3839,
+          "symbol": "F:sa.field_c:D",
+          "original": "field_c",
+          "renamed": "specialSpriteKindProbability"
+        },
+        {
+          "start": 3891,
+          "end": 3895,
+          "symbol": "L:vd.a(I)I#0",
+          "original": "var1",
+          "renamed": "specialKindRoll"
+        },
+        {
+          "start": 3932,
+          "end": 3936,
+          "symbol": "L:vd.a(I)I#0",
+          "original": "var1",
+          "renamed": "specialKindRoll"
+        },
+        {
+          "start": 3984,
+          "end": 3988,
+          "symbol": "L:vd.a(I)I#0",
+          "original": "var1",
+          "renamed": "specialKindRoll"
+        },
+        {
+          "start": 4045,
+          "end": 4049,
+          "symbol": "L:vd.a(I)I#0",
+          "original": "var1",
+          "renamed": "specialKindRoll"
+        },
+        {
           "start": 4253,
           "end": 4255,
           "symbol": "C:wh",
@@ -339117,11 +341812,39 @@
           "renamed": "SpriteState"
         },
         {
+          "start": 4435,
+          "end": 4436,
+          "symbol": "M:vd.a(I)I",
+          "original": "a",
+          "renamed": "chooseSpawnSpriteKind"
+        },
+        {
+          "start": 4634,
+          "end": 4635,
+          "symbol": "M:vd.a(I)I",
+          "original": "a",
+          "renamed": "chooseSpawnSpriteKind"
+        },
+        {
           "start": 4746,
           "end": 4748,
           "symbol": "C:wh",
           "original": "wh",
           "renamed": "SpriteState"
+        },
+        {
+          "start": 4914,
+          "end": 4915,
+          "symbol": "M:vd.a(I)I",
+          "original": "a",
+          "renamed": "chooseSpawnSpriteKind"
+        },
+        {
+          "start": 5095,
+          "end": 5096,
+          "symbol": "M:vd.a(I)I",
+          "original": "a",
+          "renamed": "chooseSpawnSpriteKind"
         },
         {
           "start": 5673,

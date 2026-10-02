@@ -129,7 +129,7 @@ final class ld {
         }
     }
 
-    final static void advanceDifficulty(boolean param0) {
+    final static void advanceDifficulty(boolean recursiveAdvanceGuard) {
         int stackIn_10_0 = 0;
         int stackIn_29_0 = 0;
         int stackIn_47_0 = 0;
@@ -148,307 +148,307 @@ final class ld {
         int stackIn_218_0 = 0;
         int stackIn_228_0 = 0;
         ji.difficultyStep = ji.difficultyStep + 1;
-        if (ji.difficultyStep >= kd.field_f.length) {
-          if (sa.field_c > 0.15000000000000002) {
-            sa.field_c = sa.field_c - 0.05;
+        if (ji.difficultyStep >= kd.difficultyStepFlags.length) {
+          if (sa.specialSpriteKindProbability > 0.15000000000000002) {
+            sa.specialSpriteKindProbability = sa.specialSpriteKindProbability - 0.05;
           }
           return;
         }
-        if ((4 & kd.field_f[ji.difficultyStep]) != 0) {
+        if ((4 & kd.difficultyStepFlags[ji.difficultyStep]) != 0) {
           og.entityMotionSpeed = og.entityMotionSpeed + 0.055555559694767f;
-          if (param0) {
+          if (recursiveAdvanceGuard) {
             stackIn_10_0 = 0;
           } else {
             stackIn_10_0 = 1;
           }
-          sa.b(stackIn_10_0 != 0);
+          sa.recomputeSpawnReleaseInterval(stackIn_10_0 != 0);
         }
-        if ((kd.field_f[ji.difficultyStep] & 1) == 0) {
-          if (!param0) {
-            if ((kd.field_f[ji.difficultyStep] & 2) != 0) {
-              if (f.field_qb < 7) {
-                f.field_qb = f.field_qb + 1;
+        if ((kd.difficultyStepFlags[ji.difficultyStep] & 1) == 0) {
+          if (!recursiveAdvanceGuard) {
+            if ((kd.difficultyStepFlags[ji.difficultyStep] & 2) != 0) {
+              if (f.availableEntityCategoryCount < 7) {
+                f.availableEntityCategoryCount = f.availableEntityCategoryCount + 1;
               }
             }
-            if (0 != (kd.field_f[ji.difficultyStep] & 16)) {
-              sa.field_c = sa.field_c + 0.05;
+            if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 16)) {
+              sa.specialSpriteKindProbability = sa.specialSpriteKindProbability + 0.05;
             }
-            if ((8 & kd.field_f[ji.difficultyStep]) != 0) {
+            if ((8 & kd.difficultyStepFlags[ji.difficultyStep]) != 0) {
               DualLinkNode.rotationStepRadians = DualLinkNode.rotationStepRadians * 1.100000023841858f;
             }
-            if (0 != (kd.field_f[ji.difficultyStep] & 128)) {
-              if (0.800000011920929f > ij.field_ab) {
-                ij.field_ab = ij.field_ab + 0.02857142873108387f;
+            if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 128)) {
+              if (0.800000011920929f > ij.spawnIntervalScale) {
+                ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
               }
-              if (param0) {
+              if (recursiveAdvanceGuard) {
                 stackIn_29_0 = 0;
               } else {
                 stackIn_29_0 = 1;
               }
-              sa.b(stackIn_29_0 != 0);
+              sa.recomputeSpawnReleaseInterval(stackIn_29_0 != 0);
             }
             return;
           }
           ld.advanceDifficulty(true);
-          if ((kd.field_f[ji.difficultyStep] & 2) == 0) {
-            if (0 != (kd.field_f[ji.difficultyStep] & 16)) {
-              sa.field_c = sa.field_c + 0.05;
+          if ((kd.difficultyStepFlags[ji.difficultyStep] & 2) == 0) {
+            if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 16)) {
+              sa.specialSpriteKindProbability = sa.specialSpriteKindProbability + 0.05;
             }
-            if ((8 & kd.field_f[ji.difficultyStep]) != 0) {
+            if ((8 & kd.difficultyStepFlags[ji.difficultyStep]) != 0) {
               DualLinkNode.rotationStepRadians = DualLinkNode.rotationStepRadians * 1.100000023841858f;
             }
-            if (0 != (kd.field_f[ji.difficultyStep] & 128)) {
-              if (0.800000011920929f > ij.field_ab) {
-                ij.field_ab = ij.field_ab + 0.02857142873108387f;
+            if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 128)) {
+              if (0.800000011920929f > ij.spawnIntervalScale) {
+                ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
               }
-              if (param0) {
+              if (recursiveAdvanceGuard) {
                 stackIn_61_0 = 0;
               } else {
                 stackIn_61_0 = 1;
               }
-              sa.b(stackIn_61_0 != 0);
+              sa.recomputeSpawnReleaseInterval(stackIn_61_0 != 0);
             }
             return;
           }
-          if (f.field_qb < 7) {
-            f.field_qb = f.field_qb + 1;
+          if (f.availableEntityCategoryCount < 7) {
+            f.availableEntityCategoryCount = f.availableEntityCategoryCount + 1;
           }
-          if (0 != (kd.field_f[ji.difficultyStep] & 16)) {
-            sa.field_c = sa.field_c + 0.05;
+          if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 16)) {
+            sa.specialSpriteKindProbability = sa.specialSpriteKindProbability + 0.05;
           }
-          if ((8 & kd.field_f[ji.difficultyStep]) != 0) {
+          if ((8 & kd.difficultyStepFlags[ji.difficultyStep]) != 0) {
             DualLinkNode.rotationStepRadians = DualLinkNode.rotationStepRadians * 1.100000023841858f;
           }
-          if (0 != (kd.field_f[ji.difficultyStep] & 128)) {
-            if (0.800000011920929f > ij.field_ab) {
-              ij.field_ab = ij.field_ab + 0.02857142873108387f;
+          if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 128)) {
+            if (0.800000011920929f > ij.spawnIntervalScale) {
+              ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
             }
-            if (param0) {
+            if (recursiveAdvanceGuard) {
               stackIn_47_0 = 0;
             } else {
               stackIn_47_0 = 1;
             }
-            sa.b(stackIn_47_0 != 0);
+            sa.recomputeSpawnReleaseInterval(stackIn_47_0 != 0);
           }
           return;
         }
-        if (ag.field_k < 7) {
-          ag.field_k = ag.field_k + 1;
-          if (param0) {
+        if (ag.availableSpriteVariantCount < 7) {
+          ag.availableSpriteVariantCount = ag.availableSpriteVariantCount + 1;
+          if (recursiveAdvanceGuard) {
             ld.advanceDifficulty(true);
           }
-          if ((kd.field_f[ji.difficultyStep] & 2) != 0) {
-            if (f.field_qb < 7) {
-              f.field_qb = f.field_qb + 1;
+          if ((kd.difficultyStepFlags[ji.difficultyStep] & 2) != 0) {
+            if (f.availableEntityCategoryCount < 7) {
+              f.availableEntityCategoryCount = f.availableEntityCategoryCount + 1;
             }
           }
-          if (0 != (kd.field_f[ji.difficultyStep] & 16)) {
-            sa.field_c = sa.field_c + 0.05;
+          if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 16)) {
+            sa.specialSpriteKindProbability = sa.specialSpriteKindProbability + 0.05;
           }
-          if ((8 & kd.field_f[ji.difficultyStep]) != 0) {
+          if ((8 & kd.difficultyStepFlags[ji.difficultyStep]) != 0) {
             DualLinkNode.rotationStepRadians = DualLinkNode.rotationStepRadians * 1.100000023841858f;
           }
-          if (0 != (kd.field_f[ji.difficultyStep] & 128)) {
-            if (0.800000011920929f > ij.field_ab) {
-              ij.field_ab = ij.field_ab + 0.02857142873108387f;
+          if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 128)) {
+            if (0.800000011920929f > ij.spawnIntervalScale) {
+              ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
             }
-            if (param0) {
+            if (recursiveAdvanceGuard) {
               stackIn_83_0 = 0;
             } else {
               stackIn_83_0 = 1;
             }
-            sa.b(stackIn_83_0 != 0);
+            sa.recomputeSpawnReleaseInterval(stackIn_83_0 != 0);
           }
           return;
         }
-        if (param0) {
+        if (recursiveAdvanceGuard) {
           ld.advanceDifficulty(true);
-          if ((kd.field_f[ji.difficultyStep] & 2) != 0) {
-            if (f.field_qb >= 7) {
-              if (0 != (kd.field_f[ji.difficultyStep] & 16)) {
-                sa.field_c = sa.field_c + 0.05;
+          if ((kd.difficultyStepFlags[ji.difficultyStep] & 2) != 0) {
+            if (f.availableEntityCategoryCount >= 7) {
+              if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 16)) {
+                sa.specialSpriteKindProbability = sa.specialSpriteKindProbability + 0.05;
               }
-              if ((8 & kd.field_f[ji.difficultyStep]) != 0) {
+              if ((8 & kd.difficultyStepFlags[ji.difficultyStep]) != 0) {
                 DualLinkNode.rotationStepRadians = DualLinkNode.rotationStepRadians * 1.100000023841858f;
               }
-              if (0 != (kd.field_f[ji.difficultyStep] & 128)) {
-                if (0.800000011920929f > ij.field_ab) {
-                  ij.field_ab = ij.field_ab + 0.02857142873108387f;
+              if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 128)) {
+                if (0.800000011920929f > ij.spawnIntervalScale) {
+                  ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
                 }
-                if (param0) {
+                if (recursiveAdvanceGuard) {
                   stackIn_100_0 = 0;
                 } else {
                   stackIn_100_0 = 1;
                 }
-                sa.b(stackIn_100_0 != 0);
+                sa.recomputeSpawnReleaseInterval(stackIn_100_0 != 0);
               }
               return;
             }
-            f.field_qb = f.field_qb + 1;
+            f.availableEntityCategoryCount = f.availableEntityCategoryCount + 1;
           }
-          if (0 != (kd.field_f[ji.difficultyStep] & 16)) {
-            sa.field_c = sa.field_c + 0.05;
-            if ((8 & kd.field_f[ji.difficultyStep]) != 0) {
+          if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 16)) {
+            sa.specialSpriteKindProbability = sa.specialSpriteKindProbability + 0.05;
+            if ((8 & kd.difficultyStepFlags[ji.difficultyStep]) != 0) {
               DualLinkNode.rotationStepRadians = DualLinkNode.rotationStepRadians * 1.100000023841858f;
             }
-            if (0 != (kd.field_f[ji.difficultyStep] & 128)) {
-              if (0.800000011920929f > ij.field_ab) {
-                ij.field_ab = ij.field_ab + 0.02857142873108387f;
+            if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 128)) {
+              if (0.800000011920929f > ij.spawnIntervalScale) {
+                ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
               }
-              if (param0) {
+              if (recursiveAdvanceGuard) {
                 stackIn_114_0 = 0;
               } else {
                 stackIn_114_0 = 1;
               }
-              sa.b(stackIn_114_0 != 0);
+              sa.recomputeSpawnReleaseInterval(stackIn_114_0 != 0);
             }
             return;
           }
-          if ((8 & kd.field_f[ji.difficultyStep]) == 0) {
-            if (0 != (kd.field_f[ji.difficultyStep] & 128)) {
-              if (0.800000011920929f > ij.field_ab) {
-                ij.field_ab = ij.field_ab + 0.02857142873108387f;
+          if ((8 & kd.difficultyStepFlags[ji.difficultyStep]) == 0) {
+            if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 128)) {
+              if (0.800000011920929f > ij.spawnIntervalScale) {
+                ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
               }
-              if (param0) {
+              if (recursiveAdvanceGuard) {
                 stackIn_125_0 = 0;
               } else {
                 stackIn_125_0 = 1;
               }
-              sa.b(stackIn_125_0 != 0);
+              sa.recomputeSpawnReleaseInterval(stackIn_125_0 != 0);
             }
             return;
           }
           DualLinkNode.rotationStepRadians = DualLinkNode.rotationStepRadians * 1.100000023841858f;
-          if (0 != (kd.field_f[ji.difficultyStep] & 128)) {
-            if (0.800000011920929f > ij.field_ab) {
-              ij.field_ab = ij.field_ab + 0.02857142873108387f;
+          if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 128)) {
+            if (0.800000011920929f > ij.spawnIntervalScale) {
+              ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
             }
-            if (param0) {
+            if (recursiveAdvanceGuard) {
               stackIn_135_0 = 0;
             } else {
               stackIn_135_0 = 1;
             }
-            sa.b(stackIn_135_0 != 0);
+            sa.recomputeSpawnReleaseInterval(stackIn_135_0 != 0);
           }
           return;
         }
-        if ((kd.field_f[ji.difficultyStep] & 2) != 0) {
-          if (f.field_qb >= 7) {
-            if (0 == (kd.field_f[ji.difficultyStep] & 16)) {
-              if ((8 & kd.field_f[ji.difficultyStep]) == 0) {
-                if (0 != (kd.field_f[ji.difficultyStep] & 128)) {
-                  if (0.800000011920929f > ij.field_ab) {
-                    ij.field_ab = ij.field_ab + 0.02857142873108387f;
+        if ((kd.difficultyStepFlags[ji.difficultyStep] & 2) != 0) {
+          if (f.availableEntityCategoryCount >= 7) {
+            if (0 == (kd.difficultyStepFlags[ji.difficultyStep] & 16)) {
+              if ((8 & kd.difficultyStepFlags[ji.difficultyStep]) == 0) {
+                if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 128)) {
+                  if (0.800000011920929f > ij.spawnIntervalScale) {
+                    ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
                   }
-                  if (param0) {
+                  if (recursiveAdvanceGuard) {
                     stackIn_172_0 = 0;
                   } else {
                     stackIn_172_0 = 1;
                   }
-                  sa.b(stackIn_172_0 != 0);
+                  sa.recomputeSpawnReleaseInterval(stackIn_172_0 != 0);
                 }
                 return;
               }
               DualLinkNode.rotationStepRadians = DualLinkNode.rotationStepRadians * 1.100000023841858f;
-              if (0 != (kd.field_f[ji.difficultyStep] & 128)) {
-                if (0.800000011920929f > ij.field_ab) {
-                  ij.field_ab = ij.field_ab + 0.02857142873108387f;
+              if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 128)) {
+                if (0.800000011920929f > ij.spawnIntervalScale) {
+                  ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
                 }
-                if (param0) {
+                if (recursiveAdvanceGuard) {
                   stackIn_182_0 = 0;
                 } else {
                   stackIn_182_0 = 1;
                 }
-                sa.b(stackIn_182_0 != 0);
+                sa.recomputeSpawnReleaseInterval(stackIn_182_0 != 0);
               }
               return;
             }
-            sa.field_c = sa.field_c + 0.05;
-            if ((8 & kd.field_f[ji.difficultyStep]) == 0) {
-              if (0 != (kd.field_f[ji.difficultyStep] & 128)) {
-                if (0.800000011920929f > ij.field_ab) {
-                  ij.field_ab = ij.field_ab + 0.02857142873108387f;
+            sa.specialSpriteKindProbability = sa.specialSpriteKindProbability + 0.05;
+            if ((8 & kd.difficultyStepFlags[ji.difficultyStep]) == 0) {
+              if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 128)) {
+                if (0.800000011920929f > ij.spawnIntervalScale) {
+                  ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
                 }
-                if (param0) {
+                if (recursiveAdvanceGuard) {
                   stackIn_160_0 = 0;
                 } else {
                   stackIn_160_0 = 1;
                 }
-                sa.b(stackIn_160_0 != 0);
+                sa.recomputeSpawnReleaseInterval(stackIn_160_0 != 0);
               }
               return;
             }
             DualLinkNode.rotationStepRadians = DualLinkNode.rotationStepRadians * 1.100000023841858f;
-            if (0 != (kd.field_f[ji.difficultyStep] & 128)) {
-              if (0.800000011920929f > ij.field_ab) {
-                ij.field_ab = ij.field_ab + 0.02857142873108387f;
+            if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 128)) {
+              if (0.800000011920929f > ij.spawnIntervalScale) {
+                ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
               }
-              if (param0) {
+              if (recursiveAdvanceGuard) {
                 stackIn_150_0 = 0;
               } else {
                 stackIn_150_0 = 1;
               }
-              sa.b(stackIn_150_0 != 0);
+              sa.recomputeSpawnReleaseInterval(stackIn_150_0 != 0);
             }
             return;
           }
-          f.field_qb = f.field_qb + 1;
+          f.availableEntityCategoryCount = f.availableEntityCategoryCount + 1;
         }
-        if (0 == (kd.field_f[ji.difficultyStep] & 16)) {
-          if ((8 & kd.field_f[ji.difficultyStep]) == 0) {
-            if (0 != (kd.field_f[ji.difficultyStep] & 128)) {
-              if (0.800000011920929f > ij.field_ab) {
-                ij.field_ab = ij.field_ab + 0.02857142873108387f;
+        if (0 == (kd.difficultyStepFlags[ji.difficultyStep] & 16)) {
+          if ((8 & kd.difficultyStepFlags[ji.difficultyStep]) == 0) {
+            if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 128)) {
+              if (0.800000011920929f > ij.spawnIntervalScale) {
+                ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
               }
-              if (param0) {
+              if (recursiveAdvanceGuard) {
                 stackIn_218_0 = 0;
               } else {
                 stackIn_218_0 = 1;
               }
-              sa.b(stackIn_218_0 != 0);
+              sa.recomputeSpawnReleaseInterval(stackIn_218_0 != 0);
             }
             return;
           }
           DualLinkNode.rotationStepRadians = DualLinkNode.rotationStepRadians * 1.100000023841858f;
-          if (0 != (kd.field_f[ji.difficultyStep] & 128)) {
-            if (0.800000011920929f > ij.field_ab) {
-              ij.field_ab = ij.field_ab + 0.02857142873108387f;
+          if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 128)) {
+            if (0.800000011920929f > ij.spawnIntervalScale) {
+              ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
             }
-            if (param0) {
+            if (recursiveAdvanceGuard) {
               stackIn_228_0 = 0;
             } else {
               stackIn_228_0 = 1;
             }
-            sa.b(stackIn_228_0 != 0);
+            sa.recomputeSpawnReleaseInterval(stackIn_228_0 != 0);
           }
           return;
         }
-        sa.field_c = sa.field_c + 0.05;
-        if ((8 & kd.field_f[ji.difficultyStep]) == 0) {
-          if (0 != (kd.field_f[ji.difficultyStep] & 128)) {
-            if (0.800000011920929f > ij.field_ab) {
-              ij.field_ab = ij.field_ab + 0.02857142873108387f;
+        sa.specialSpriteKindProbability = sa.specialSpriteKindProbability + 0.05;
+        if ((8 & kd.difficultyStepFlags[ji.difficultyStep]) == 0) {
+          if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 128)) {
+            if (0.800000011920929f > ij.spawnIntervalScale) {
+              ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
             }
-            if (param0) {
+            if (recursiveAdvanceGuard) {
               stackIn_196_0 = 0;
             } else {
               stackIn_196_0 = 1;
             }
-            sa.b(stackIn_196_0 != 0);
+            sa.recomputeSpawnReleaseInterval(stackIn_196_0 != 0);
           }
           return;
         }
         DualLinkNode.rotationStepRadians = DualLinkNode.rotationStepRadians * 1.100000023841858f;
-        if (0 != (kd.field_f[ji.difficultyStep] & 128)) {
-          if (0.800000011920929f > ij.field_ab) {
-            ij.field_ab = ij.field_ab + 0.02857142873108387f;
+        if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 128)) {
+          if (0.800000011920929f > ij.spawnIntervalScale) {
+            ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
           }
-          if (param0) {
+          if (recursiveAdvanceGuard) {
             stackIn_206_0 = 0;
           } else {
             stackIn_206_0 = 1;
           }
-          sa.b(stackIn_206_0 != 0);
+          sa.recomputeSpawnReleaseInterval(stackIn_206_0 != 0);
         }
     }
 

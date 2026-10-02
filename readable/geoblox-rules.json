@@ -197,6 +197,12 @@
       "evidence": "Post-decremented each avatar update; a negative old value steps the frame and resets this to 20. Native menu/gameplay frame matrix covers -2, -1, 0, 1 and 20."
     },
     {
+      "symbol": "F:ag.field_k:I",
+      "originalName": "field_k",
+      "to": "availableSpriteVariantCount",
+      "evidence": "Bound passed through nf.c(B)I to qi.b(II)I. lc.a(I)V passes its result as spriteVariantIndex to ja.a(IFIFIIFFFIF)V; reset starts at three and difficulty bit 1 raises it up to seven."
+    },
+    {
       "symbol": "F:ah.field_b:Ljava/lang/String;",
       "to": "connectionLostReconnectingText",
       "originalName": "field_b",
@@ -447,6 +453,12 @@
       "to": "fullscreenTimeoutText",
       "originalName": "field_nb",
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'fs_timeout' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:f.field_qb:I",
+      "originalName": "field_qb",
+      "to": "availableEntityCategoryCount",
+      "evidence": "Bound passed through ij.m(I)I to qi.b(II)I. lc.a(I)V passes its result as entityCategoryKey to ja.a(IFIFIIFFFIF)V; reset starts at four and difficulty bit 2 raises it up to seven."
     },
     {
       "symbol": "F:fa.field_a:Z",
@@ -989,6 +1001,12 @@
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'menu' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
     },
     {
+      "symbol": "F:ij.field_ab:F",
+      "originalName": "field_ab",
+      "to": "spawnIntervalScale",
+      "evidence": "Float multiplier in sa.b(Z)V: int(201.0f / og.field_r * scale + 0.5f). Reset is 0.75; difficulty bit 128 adds 0.02857142873108387f when below the exact 0.8f threshold and then recomputes the interval."
+    },
+    {
       "symbol": "F:ik.field_b:Ljava/lang/String;",
       "to": "waitingForFontsText",
       "originalName": "field_b",
@@ -1307,6 +1325,18 @@
       "originalName": "field_l"
     },
     {
+      "symbol": "F:kb.field_c:I",
+      "originalName": "field_c",
+      "to": "spawnReleaseIntervalTicks",
+      "evidence": "sa.b(Z)V stores the rounded inverse-speed interval here. lc.a(I)V compares it with kc.field_a before releasing a queued entity, and includes it in queued entity lifetime calculations."
+    },
+    {
+      "symbol": "F:kc.field_a:I",
+      "originalName": "field_a",
+      "to": "ticksSinceLastEntityRelease",
+      "evidence": "lc.a(I)V increments this counter once per update and resets it to zero when releasing a queued entity. It is compared with kb.field_c and contributes to queued entity lifetimes; pg.a(I)V deliberately leaves it unchanged."
+    },
+    {
       "symbol": "F:kc.field_b:Ljava/lang/String;",
       "to": "createNameCharacterAlertText",
       "originalName": "field_b",
@@ -1317,6 +1347,12 @@
       "to": "achievedText",
       "originalName": "field_a",
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'achieved' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:kd.field_f:[I",
+      "originalName": "field_f",
+      "to": "difficultyStepFlags",
+      "evidence": "23-entry table read by ld.b(Z)V using ji.difficultyStep. Independent native fixtures verify its exact initial entries and all 256 byte masks, with saturation, recursive re-reads and failure partial state."
     },
     {
       "symbol": "F:kf.field_b:Ljava/lang/String;",
@@ -1863,6 +1899,12 @@
       "to": "releasesPerDifficultyStep",
       "originalName": "field_b",
       "evidence": "qe.a computes ceil(fa.field_b/3) here; hd.f compares it with di.field_g to advance difficulty after that many releases."
+    },
+    {
+      "symbol": "F:sa.field_c:D",
+      "originalName": "field_c",
+      "to": "specialSpriteKindProbability",
+      "evidence": "vd.a(I)I compares Math.random() with this value before choosing kind 1/2/3/4 instead of zero. Difficulty bit 16 adds 0.05; steps past the table subtract 0.05 only above the exact retained 0.15000000000000002 threshold."
     },
     {
       "symbol": "F:sb.field_c:Ljava/lang/String;",
@@ -4079,6 +4121,72 @@
       "evidence": "Integer narrowing of the shocked entity X position before selecting popup points; native routing checks original coordinates independently."
     },
     {
+      "symbol": "L:lc.a(I)V#0",
+      "originalName": "decompiledCaughtException",
+      "to": "caughtSpawnQueueFailure",
+      "evidence": "Exception carrier assigned from the RuntimeException caught around the spawn update."
+    },
+    {
+      "symbol": "L:lc.a(I)V#1",
+      "originalName": "var1",
+      "to": "queuedEntityThenPooledEntity",
+      "evidence": "First iterates SecondaryDeque.spawnQueue and animates each member; later holds the available entity removed for initialization. Both roles of the reused slot are retained."
+    },
+    {
+      "symbol": "L:lc.a(I)V#10",
+      "originalName": "decompiledCaughtParameter0",
+      "to": "spawnQueueFailure",
+      "evidence": "RuntimeException catch parameter surrounding updateSpawnQueue."
+    },
+    {
+      "symbol": "L:lc.a(I)V#2",
+      "originalName": "var1_ref",
+      "to": "spawnQueueFailureForContext",
+      "evidence": "Caught RuntimeException alias passed to t.a with the original lc.E diagnostic string."
+    },
+    {
+      "symbol": "L:lc.a(I)V#3",
+      "originalName": "var2",
+      "to": "spawnAngleRadians",
+      "evidence": "2*Math.random()*PI angle used to place a pooled entity on the radius-240 spawn circle."
+    },
+    {
+      "symbol": "L:lc.a(I)V#4",
+      "originalName": "var4",
+      "to": "spawnPositionX",
+      "evidence": "320 + 240*cos(spawnAngleRadians); passed to initializeEntityMotion as positionX."
+    },
+    {
+      "symbol": "L:lc.a(I)V#5",
+      "originalName": "var5",
+      "to": "spawnPositionY",
+      "evidence": "240 + 240*sin(spawnAngleRadians); passed to initializeEntityMotion as positionY."
+    },
+    {
+      "symbol": "L:lc.a(I)V#6",
+      "originalName": "var6",
+      "to": "inwardDirectionX",
+      "evidence": "Initially 320-spawnPositionX, then normalized by inverseSpawnDistance and multiplied by entityMotionSpeed for velocityX."
+    },
+    {
+      "symbol": "L:lc.a(I)V#7",
+      "originalName": "var7",
+      "to": "inwardDirectionY",
+      "evidence": "Initially 240-spawnPositionY, then normalized by inverseSpawnDistance and multiplied by entityMotionSpeed for velocityY."
+    },
+    {
+      "symbol": "L:lc.a(I)V#8",
+      "originalName": "var8",
+      "to": "inverseSpawnDistance",
+      "evidence": "Reciprocal square root of the inward offset squared length; normalizes both direction components."
+    },
+    {
+      "symbol": "L:lc.a(I)V#9",
+      "originalName": "var10",
+      "to": "clientControlFlowGuard",
+      "evidence": "Entry snapshot of Geoblox.field_C controls whether the initial spawn-queue iterator continues."
+    },
+    {
       "symbol": "L:ld.a(I)Z#0",
       "to": "previousCircleVerticalOffset",
       "originalName": "incrementValue$0",
@@ -4323,6 +4431,36 @@
       "originalName": "var2",
       "to": "unusedClientControlSnapshot",
       "evidence": "Retained Geoblox.field_C entry read; the recovered menu animation body does not use this local."
+    },
+    {
+      "symbol": "L:qe.b(I)V#0",
+      "originalName": "var2",
+      "to": "clientControlFlowGuard",
+      "evidence": "Entry snapshot of Geoblox.field_C retained in quota adjustment."
+    },
+    {
+      "symbol": "L:qe.b(I)V#1",
+      "originalName": "decompiledCaughtException",
+      "to": "caughtQuotaUpdateFailure",
+      "evidence": "Carrier assigned from the RuntimeException caught around quota arithmetic."
+    },
+    {
+      "symbol": "L:qe.b(I)V#2",
+      "originalName": "var1",
+      "to": "quotaUpdateFailureForContext",
+      "evidence": "Alias of the caught RuntimeException passed to t.a with original qe.B diagnostic context."
+    },
+    {
+      "symbol": "L:qe.b(I)V#3",
+      "originalName": "decompiledCaughtParameter0",
+      "to": "quotaUpdateFailure",
+      "evidence": "RuntimeException catch parameter for quota adjustment."
+    },
+    {
+      "symbol": "L:sa.b(Z)V#0",
+      "originalName": "var1",
+      "to": "intervalTicks",
+      "evidence": "Rounded inverse-speed spawn interval assigned immediately to kb.field_c before the preserveReleaseQuota branch."
     },
     {
       "symbol": "L:sk.a(I)Z#10",
@@ -4653,6 +4791,12 @@
       "to": "controlFlowGuard",
       "originalName": "var16",
       "evidence": "Snapshot of Geoblox.field_C at entry. The generated body retains this read even though this snapshot is unused by the reconstructed traversal."
+    },
+    {
+      "symbol": "L:vd.a(I)I#0",
+      "originalName": "var1",
+      "to": "specialKindRoll",
+      "evidence": "Second Math.random() draw after the probability gate; thresholds 0.13, 0.25 and 0.65 select kind IDs 3, 4, 1 and 2. The draw and its order are retained."
     },
     {
       "symbol": "L:wa.a(I)I#0",
@@ -5213,6 +5357,12 @@
       "evidence": "Probes mask coordinates, resolves encoded entity IDs and records avatar or entity contacts."
     },
     {
+      "symbol": "M:ij.m(I)I",
+      "originalName": "m",
+      "to": "chooseSpawnEntityCategory",
+      "evidence": "Normal guards above 18 sample qi.b with f.field_qb. Guards <=18 recursively consume one sample before returning a second; independent seeded native fixtures preserve both draws."
+    },
+    {
       "symbol": "M:ik.a(Lja;Lja;Z)Z",
       "to": "linkTouchingEntities",
       "originalName": "a",
@@ -5483,6 +5633,18 @@
       "evidence": "Initializes an entity at pointer coordinates with the supplied category/variant and optional special-kind selection."
     },
     {
+      "symbol": "M:nf.c(B)I",
+      "originalName": "c",
+      "to": "chooseSpawnSpriteVariant",
+      "evidence": "Normal guard -67 samples qi.b with ag.field_k. Guards at or above -55 return 66 without consuming the shared Random. Seeded native selection fixtures independently verify results and RNG consumption."
+    },
+    {
+      "symbol": "M:pg.a(I)V",
+      "originalName": "a",
+      "to": "resetGameplayDifficulty",
+      "evidence": "Resets speed, probability, selection bounds, difficulty/theme counters, release quota, spawn interval scale and rotation. Guard 9408 additionally resets remaining counters and recomputes the interval; seven native guards verify the partial-reset boundary."
+    },
+    {
       "symbol": "M:q.a(ILjava/lang/String;)Llh;",
       "to": "validationStateForText",
       "originalName": "a",
@@ -5513,6 +5675,12 @@
       "evidence": "GameScreen invokes this with guard 127. Steps feedback frames, decrements hold/effect/fade timers and advances the fixed 600-tick blink clock; independent native state and sequence oracles cover these operations."
     },
     {
+      "symbol": "M:qe.b(I)V",
+      "originalName": "b",
+      "to": "adjustThemeReleaseQuota",
+      "evidence": "Adds the supplied signed delta plus ten when ji.field_h is nonzero and below 21, then stores the ceiling quota divided by three. Independent native checks cover 150 bounded signed-delta/step cases; extreme overflow-driven loops are outside the fixtures."
+    },
+    {
       "symbol": "M:ra.a(ILrf;)V",
       "to": "selectBackgroundMusic",
       "originalName": "a",
@@ -5529,6 +5697,12 @@
       "to": "updateAttachedEntities",
       "originalName": "a",
       "evidence": "Iterates the attached queue, decreases match cooldowns, updates the selected sprites, checks avatar-contact special effects and computes the maximum squared distance from the board center."
+    },
+    {
+      "symbol": "M:sa.b(Z)V",
+      "originalName": "b",
+      "to": "recomputeSpawnReleaseInterval",
+      "evidence": "Computes and stores int(201.0f / og.field_r * ij.field_ab + 0.5f) before optionally setting sa.field_b to -10. Native fixtures verify 112 floating-point/cast/Boolean cases including NaNs, signed zero and infinities."
     },
     {
       "symbol": "M:sk.a(I)Z",
@@ -5703,6 +5877,12 @@
       "to": "collectMatchCandidates",
       "originalName": "b",
       "evidence": "Collects triples of connected entities sharing variant or category, storing sorted entity IDs and equality flags in the packed candidate array."
+    },
+    {
+      "symbol": "M:vd.a(I)I",
+      "originalName": "a",
+      "to": "chooseSpawnSpriteKind",
+      "evidence": "Guard 741924304 first gates on sa.field_c, then maps a fresh Math.random roll through 0.13/0.25/0.65 thresholds to kinds 3/4/1/2. Other guards return 104. Native checks cover closed probability gates and invalid guards, not live Math.random distribution."
     },
     {
       "symbol": "M:wa.a(I)I",
@@ -6275,6 +6455,12 @@
       "evidence": "X coordinate of the ownership-mask contact probe."
     },
     {
+      "symbol": "P:ij.m(I)I#0",
+      "originalName": "param0",
+      "to": "methodGuard",
+      "evidence": "Retains the original compatibility guard and its side effects. Dedicated difficulty/reset/selection fixtures verify normal and boundary guards against native bytecode; original sentinel values are unchanged."
+    },
+    {
       "symbol": "P:ik.a(Lja;Lja;Z)Z#0",
       "to": "firstEntity",
       "originalName": "param0",
@@ -6509,6 +6695,12 @@
       "evidence": "PCM factory inputs: sample supplies bytes and source frequency, ratePercent scales signed Q8 sample step, volume is shifted left six before construction."
     },
     {
+      "symbol": "P:lc.a(I)V#0",
+      "originalName": "param0",
+      "to": "methodGuard",
+      "evidence": "Normal caller supplies 255. Other values write lc.field_b=-11; XOR-derived guards used for selectors and deque counts retain original values. Source inspection, not a complete spawn-queue runtime proof."
+    },
+    {
       "symbol": "P:ld.a(I)Z#0",
       "to": "methodGuard",
       "originalName": "param0",
@@ -6537,6 +6729,12 @@
       "to": "points",
       "originalName": "param3",
       "evidence": "Argument position in ug.spawnScorePopup(points, true, originY, 1, originX); parameter 2 retains its <=39 boundary-probe side effect."
+    },
+    {
+      "symbol": "P:ld.b(Z)V#0",
+      "originalName": "param0",
+      "to": "recursiveAdvanceGuard",
+      "evidence": "Normal hd.a(I)V callers pass false. True recursively advances the shared difficulty index and may fail on a later table re-read, preserving partial updates; it also negates the preserveReleaseQuota argument passed to sa.b(Z)V."
     },
     {
       "symbol": "P:mk.a(ILjava/lang/String;)Llh;#0",
@@ -6689,6 +6887,18 @@
       "evidence": "Selects special entity kinds instead of kind zero."
     },
     {
+      "symbol": "P:nf.c(B)I#0",
+      "originalName": "param0",
+      "to": "methodGuard",
+      "evidence": "Retains the original compatibility guard and its side effects. Dedicated difficulty/reset/selection fixtures verify normal and boundary guards against native bytecode; original sentinel values are unchanged."
+    },
+    {
+      "symbol": "P:pg.a(I)V#0",
+      "originalName": "param0",
+      "to": "methodGuard",
+      "evidence": "Retains the original compatibility guard and its side effects. Dedicated difficulty/reset/selection fixtures verify normal and boundary guards against native bytecode; original sentinel values are unchanged."
+    },
+    {
       "symbol": "P:q.<init>(Ldj;)V#0",
       "to": "validatedInput",
       "originalName": "param0",
@@ -6737,6 +6947,12 @@
       "evidence": "Values below 72 leave animation state unchanged; actual menu caller passes 127. Native boundary fixtures check -128, 0, 71, 72 and 127."
     },
     {
+      "symbol": "P:qe.b(I)V#0",
+      "originalName": "param0",
+      "to": "additionalReleases",
+      "evidence": "Signed delta added to fa.field_b after the step-dependent ten-release addition; native bounded negative, zero and positive delta fixtures verify the resulting ceiling quota."
+    },
+    {
       "symbol": "P:ra.a(ILrf;)V#0",
       "to": "methodGuard",
       "originalName": "param0",
@@ -6747,6 +6963,12 @@
       "to": "track",
       "originalName": "param1",
       "evidence": "Music-selection wrapper: parameter 1 is the rf track identity; parameter 0 retains the nonzero ra.field_d side effect after null/current-track early return."
+    },
+    {
+      "symbol": "P:sa.b(Z)V#0",
+      "originalName": "param0",
+      "to": "preserveReleaseQuota",
+      "evidence": "True leaves sa.field_b unchanged after recomputing kb.field_c; false stores -10. Both paths and floating-point narrowing behavior are verified independently against native bytecode."
     },
     {
       "symbol": "P:td.a(ILgd;)V#0",
@@ -6947,6 +7169,12 @@
       "evidence": "Normal callers pass -2. Other values clear ul.field_a; match enumeration and RuntimeException context remain intact."
     },
     {
+      "symbol": "P:vd.a(I)I#0",
+      "originalName": "param0",
+      "to": "methodGuard",
+      "evidence": "Retains the original compatibility guard and its side effects. Dedicated difficulty/reset/selection fixtures verify normal and boundary guards against native bytecode; original sentinel values are unchanged."
+    },
+    {
       "symbol": "P:wc.a(FB)V#0",
       "originalName": "param0",
       "to": "maxAttachedRadiusSquared",
@@ -7032,7 +7260,7 @@
     }
   ],
   "revision": 4,
-  "version": 31,
+  "version": 32,
   "generators": {
     "dekoblokoWork": {
       "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
@@ -7052,544 +7280,389 @@
   "publication": {
     "format": 1,
     "previousRules": {
-      "commit": "62138e59462ef61e57813073ab6e6679a95c0071",
+      "commit": "4d2daf07dd1b46de364e87eec133b38d1b8b9dcd",
       "path": "readable/geoblox-rules.json",
-      "sha256": "fce35beb82bf8a01334362e607d81876fbcf0b20134765884e84ce2e28d78433"
+      "sha256": "74f2ceba9cb06cf774aeb8ccd84f5d92d830aa541ea76da1831c7e1a2b8daee2"
     },
     "ruleChanges": [
       {
-        "symbol": "L:dm.b(IIIIII)V#0",
-        "before": {
-          "symbol": "L:dm.b(IIIIII)V#0",
-          "to": "writeIndexForwardXForwardY",
-          "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has forward source-x stepping (var27) and forward source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
-          "originalName": "incrementValue$0"
-        },
-        "after": {
-          "symbol": "L:dm.b(IIIIII)V#0",
-          "to": "writeIndexFixedXFixedY",
-          "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has fixed source-x stepping (var27) and fixed source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
-          "originalName": "incrementValue$8"
-        }
-      },
-      {
-        "symbol": "L:dm.b(IIIIII)V#1",
-        "before": {
-          "symbol": "L:dm.b(IIIIII)V#1",
-          "to": "writeIndexForwardXReverseY",
-          "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has forward source-x stepping (var27) and reverse source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
-          "originalName": "incrementValue$1"
-        },
-        "after": {
-          "symbol": "L:dm.b(IIIIII)V#1",
-          "to": "writeIndexFixedXForwardY",
-          "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has fixed source-x stepping (var27) and forward source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
-          "originalName": "incrementValue$6"
-        }
-      },
-      {
-        "symbol": "L:dm.b(IIIIII)V#2",
-        "before": {
-          "symbol": "L:dm.b(IIIIII)V#2",
-          "to": "writeIndexForwardXFixedY",
-          "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has forward source-x stepping (var27) and fixed source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
-          "originalName": "incrementValue$2"
-        },
-        "after": {
-          "symbol": "L:dm.b(IIIIII)V#2",
-          "to": "writeIndexFixedXReverseY",
-          "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has fixed source-x stepping (var27) and reverse source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
-          "originalName": "incrementValue$7"
-        }
-      },
-      {
-        "symbol": "L:dm.b(IIIIII)V#3",
-        "before": {
-          "symbol": "L:dm.b(IIIIII)V#3",
-          "to": "writeIndexReverseXForwardY",
-          "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has reverse source-x stepping (var27) and forward source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
-          "originalName": "incrementValue$3"
-        },
-        "after": {
-          "symbol": "L:dm.b(IIIIII)V#3",
-          "to": "writeIndexForwardXFixedY",
-          "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has forward source-x stepping (var27) and fixed source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
-          "originalName": "incrementValue$2"
-        }
-      },
-      {
-        "symbol": "L:dm.b(IIIIII)V#4",
-        "before": {
-          "symbol": "L:dm.b(IIIIII)V#4",
-          "to": "writeIndexReverseXReverseY",
-          "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has reverse source-x stepping (var27) and reverse source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
-          "originalName": "incrementValue$4"
-        },
-        "after": {
-          "symbol": "L:dm.b(IIIIII)V#4",
-          "to": "writeIndexForwardXForwardY",
-          "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has forward source-x stepping (var27) and forward source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
-          "originalName": "incrementValue$0"
-        }
-      },
-      {
-        "symbol": "L:dm.b(IIIIII)V#5",
-        "before": {
-          "symbol": "L:dm.b(IIIIII)V#5",
-          "to": "writeIndexReverseXFixedY",
-          "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has reverse source-x stepping (var27) and fixed source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
-          "originalName": "incrementValue$5"
-        },
-        "after": {
-          "symbol": "L:dm.b(IIIIII)V#5",
-          "to": "writeIndexForwardXReverseY",
-          "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has forward source-x stepping (var27) and reverse source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
-          "originalName": "incrementValue$1"
-        }
-      },
-      {
-        "symbol": "L:dm.b(IIIIII)V#6",
-        "before": {
-          "symbol": "L:dm.b(IIIIII)V#6",
-          "to": "writeIndexFixedXForwardY",
-          "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has fixed source-x stepping (var27) and forward source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
-          "originalName": "incrementValue$6"
-        },
-        "after": {
-          "symbol": "L:dm.b(IIIIII)V#6",
-          "to": "writeIndexReverseXFixedY",
-          "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has reverse source-x stepping (var27) and fixed source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
-          "originalName": "incrementValue$5"
-        }
-      },
-      {
-        "symbol": "L:dm.b(IIIIII)V#7",
-        "before": {
-          "symbol": "L:dm.b(IIIIII)V#7",
-          "to": "writeIndexFixedXReverseY",
-          "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has fixed source-x stepping (var27) and reverse source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
-          "originalName": "incrementValue$7"
-        },
-        "after": {
-          "symbol": "L:dm.b(IIIIII)V#7",
-          "to": "writeIndexReverseXForwardY",
-          "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has reverse source-x stepping (var27) and forward source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
-          "originalName": "incrementValue$3"
-        }
-      },
-      {
-        "symbol": "L:dm.b(IIIIII)V#8",
-        "before": {
-          "symbol": "L:dm.b(IIIIII)V#8",
-          "to": "writeIndexFixedXFixedY",
-          "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has fixed source-x stepping (var27) and fixed source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
-          "originalName": "incrementValue$8"
-        },
-        "after": {
-          "symbol": "L:dm.b(IIIIII)V#8",
-          "to": "writeIndexReverseXReverseY",
-          "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has reverse source-x stepping (var27) and reverse source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
-          "originalName": "incrementValue$4"
-        }
-      },
-      {
-        "symbol": "L:ja.f(I)V#1",
-        "before": {
-          "symbol": "L:ja.f(I)V#1",
-          "originalName": "var2",
-          "to": "clipLeftX",
-          "evidence": "ja.java begins with the sprite's left edge relative to field_o, then clips it at zero and adjusts the clipped width."
-        },
-        "after": {
-          "symbol": "L:ja.f(I)V#1",
-          "originalName": "var9",
-          "to": "negativeColumnCounter",
-          "evidence": "ja.java starts var9 at negative clipped width and increments it through each pixel in a row."
-        }
-      },
-      {
-        "symbol": "L:ja.f(I)V#2",
-        "before": {
-          "symbol": "L:ja.f(I)V#2",
-          "originalName": "var3",
-          "to": "clipTopY",
-          "evidence": "ja.java begins with the sprite's top edge relative to field_v, clips it at zero and adjusts the clipped height."
-        },
-        "after": {
-          "symbol": "L:ja.f(I)V#2",
-          "originalName": "var2",
-          "to": "clipLeftX",
-          "evidence": "ja.java begins with the sprite's left edge relative to field_o, then clips it at zero and adjusts the clipped width."
-        }
-      },
-      {
-        "symbol": "L:ja.f(I)V#3",
-        "before": {
-          "symbol": "L:ja.f(I)V#3",
-          "originalName": "var4",
-          "to": "clippedWidth",
-          "evidence": "ja.java initializes the sprite rectangle width and shortens it against bk.field_a.field_r after left clipping."
-        },
-        "after": {
-          "symbol": "L:ja.f(I)V#3",
-          "originalName": "var3",
-          "to": "clipTopY",
-          "evidence": "ja.java begins with the sprite's top edge relative to field_v, clips it at zero and adjusts the clipped height."
-        }
-      },
-      {
-        "symbol": "L:ja.f(I)V#4",
-        "before": {
-          "symbol": "L:ja.f(I)V#4",
-          "originalName": "var5",
-          "to": "clippedHeight",
-          "evidence": "ja.java initializes the sprite rectangle height and shortens it against bk.field_a.field_m after top clipping."
-        },
-        "after": {
-          "symbol": "L:ja.f(I)V#4",
-          "originalName": "var4",
-          "to": "clippedWidth",
-          "evidence": "ja.java initializes the sprite rectangle width and shortens it against bk.field_a.field_r after left clipping."
-        }
-      },
-      {
-        "symbol": "L:ja.f(I)V#5",
-        "before": {
-          "symbol": "L:ja.f(I)V#5",
-          "originalName": "var6",
-          "to": "framebufferIndex",
-          "evidence": "ja.java starts var6 at clipLeft+stride*clipTop and advances it through framebuffer writes."
-        },
-        "after": {
-          "symbol": "L:ja.f(I)V#5",
-          "originalName": "var5",
-          "to": "clippedHeight",
-          "evidence": "ja.java initializes the sprite rectangle height and shortens it against bk.field_a.field_m after top clipping."
-        }
-      },
-      {
-        "symbol": "L:ja.f(I)V#6",
-        "before": {
-          "symbol": "L:ja.f(I)V#6",
-          "originalName": "var7",
-          "to": "rowSkip",
-          "evidence": "ja.java assigns stride-clippedWidth to var7 and adds it after finishing each row."
-        },
-        "after": {
-          "symbol": "L:ja.f(I)V#6",
-          "originalName": "var6",
-          "to": "framebufferIndex",
-          "evidence": "ja.java starts var6 at clipLeft+stride*clipTop and advances it through framebuffer writes."
-        }
-      },
-      {
-        "symbol": "L:ja.f(I)V#7",
-        "before": {
-          "symbol": "L:ja.f(I)V#7",
-          "originalName": "var9",
-          "to": "negativeColumnCounter",
-          "evidence": "ja.java starts var9 at negative clipped width and increments it through each pixel in a row."
-        },
-        "after": {
-          "symbol": "L:ja.f(I)V#7",
-          "originalName": "var7",
-          "to": "rowSkip",
-          "evidence": "ja.java assigns stride-clippedWidth to var7 and adds it after finishing each row."
-        }
-      },
-      {
-        "symbol": "L:ja.j(I)V#1",
-        "before": {
-          "symbol": "L:ja.j(I)V#1",
-          "originalName": "var2",
-          "to": "entityOffsetX",
-          "evidence": "ja.java computes field_o-320 and uses this X offset in board-angle projection."
-        },
-        "after": {
-          "symbol": "L:ja.j(I)V#1",
-          "originalName": "var13",
-          "to": "negativeColumnCounter",
-          "evidence": "ja.java initializes var13 to negative clipped width and increments it across pixels in the inner row loop."
-        }
-      },
-      {
-        "symbol": "L:ja.j(I)V#10",
-        "before": {
-          "symbol": "L:ja.j(I)V#10",
-          "originalName": "var11",
-          "to": "framebufferRowSkip",
-          "evidence": "ja.java computes stride-clippedWidth into var11 and adds it after completing each row."
-        },
-        "after": {
-          "symbol": "L:ja.j(I)V#10",
-          "originalName": "var10",
-          "to": "framebufferIndex",
-          "evidence": "ja.java initializes var10 as wd.field_b.field_r*clipTopY+clipLeftX, then advances it over the clipped rectangle."
-        }
-      },
-      {
-        "symbol": "L:ja.j(I)V#11",
-        "before": {
-          "symbol": "L:ja.j(I)V#11",
-          "originalName": "var13",
-          "to": "negativeColumnCounter",
-          "evidence": "ja.java initializes var13 to negative clipped width and increments it across pixels in the inner row loop."
-        },
-        "after": {
-          "symbol": "L:ja.j(I)V#11",
-          "originalName": "var11",
-          "to": "framebufferRowSkip",
-          "evidence": "ja.java computes stride-clippedWidth into var11 and adds it after completing each row."
-        }
-      },
-      {
-        "symbol": "L:ja.j(I)V#2",
-        "before": {
-          "symbol": "L:ja.j(I)V#2",
-          "originalName": "var3",
-          "to": "entityOffsetY",
-          "evidence": "ja.java computes field_v-240 and uses this Y offset in board-angle projection."
-        },
-        "after": {
-          "symbol": "L:ja.j(I)V#2",
-          "originalName": "var2",
-          "to": "entityOffsetX",
-          "evidence": "ja.java computes field_o-320 and uses this X offset in board-angle projection."
-        }
-      },
-      {
-        "symbol": "L:ja.j(I)V#3",
-        "before": {
-          "symbol": "L:ja.j(I)V#3",
-          "originalName": "var4",
-          "to": "rotatedEntityX",
-          "evidence": "ja.java rotates var2/var3 with board angle and adds 320 to produce the clipped sprite's screen X."
-        },
-        "after": {
-          "symbol": "L:ja.j(I)V#3",
-          "originalName": "var3",
-          "to": "entityOffsetY",
-          "evidence": "ja.java computes field_v-240 and uses this Y offset in board-angle projection."
-        }
-      },
-      {
-        "symbol": "L:ja.j(I)V#4",
-        "before": {
-          "symbol": "L:ja.j(I)V#4",
-          "originalName": "var5",
-          "to": "rotatedEntityY",
-          "evidence": "ja.java rotates var2/var3 with board angle and adds 240 to produce the clipped sprite's screen Y."
-        },
-        "after": {
-          "symbol": "L:ja.j(I)V#4",
-          "originalName": "var4",
-          "to": "rotatedEntityX",
-          "evidence": "ja.java rotates var2/var3 with board angle and adds 320 to produce the clipped sprite's screen X."
-        }
-      },
-      {
-        "symbol": "L:ja.j(I)V#5",
-        "before": {
-          "symbol": "L:ja.j(I)V#5",
-          "originalName": "var6",
-          "to": "clipLeftX",
-          "evidence": "ja.java derives var6 from projected entity X, sprite half-width and wd.field_a, then clips its lower bound to zero."
-        },
-        "after": {
-          "symbol": "L:ja.j(I)V#5",
-          "originalName": "var5",
-          "to": "rotatedEntityY",
-          "evidence": "ja.java rotates var2/var3 with board angle and adds 240 to produce the clipped sprite's screen Y."
-        }
-      },
-      {
-        "symbol": "L:ja.j(I)V#6",
-        "before": {
-          "symbol": "L:ja.j(I)V#6",
-          "originalName": "var7",
-          "to": "clipTopY",
-          "evidence": "ja.java derives var7 from projected entity Y, sprite half-height and wd.field_d, then clips its lower bound to zero."
-        },
-        "after": {
-          "symbol": "L:ja.j(I)V#6",
-          "originalName": "var6",
-          "to": "clipLeftX",
-          "evidence": "ja.java derives var6 from projected entity X, sprite half-width and wd.field_a, then clips its lower bound to zero."
-        }
-      },
-      {
-        "symbol": "L:ja.j(I)V#7",
-        "before": {
-          "symbol": "L:ja.j(I)V#7",
-          "originalName": "var8",
-          "to": "clippedSpriteWidth",
-          "evidence": "ja.java starts var8 at offscreen sprite width plus eight and reduces it against wd.field_b.field_r."
-        },
-        "after": {
-          "symbol": "L:ja.j(I)V#7",
-          "originalName": "var7",
-          "to": "clipTopY",
-          "evidence": "ja.java derives var7 from projected entity Y, sprite half-height and wd.field_d, then clips its lower bound to zero."
-        }
-      },
-      {
-        "symbol": "L:ja.j(I)V#8",
-        "before": {
-          "symbol": "L:ja.j(I)V#8",
-          "originalName": "var9",
-          "to": "clippedSpriteHeight",
-          "evidence": "ja.java starts var9 at offscreen sprite height plus eight and reduces it against wd.field_b.field_m."
-        },
-        "after": {
-          "symbol": "L:ja.j(I)V#8",
-          "originalName": "var8",
-          "to": "clippedSpriteWidth",
-          "evidence": "ja.java starts var8 at offscreen sprite width plus eight and reduces it against wd.field_b.field_r."
-        }
-      },
-      {
-        "symbol": "L:ja.j(I)V#9",
-        "before": {
-          "symbol": "L:ja.j(I)V#9",
-          "originalName": "var10",
-          "to": "framebufferIndex",
-          "evidence": "ja.java initializes var10 as wd.field_b.field_r*clipTopY+clipLeftX, then advances it over the clipped rectangle."
-        },
-        "after": {
-          "symbol": "L:ja.j(I)V#9",
-          "originalName": "var9",
-          "to": "clippedSpriteHeight",
-          "evidence": "ja.java starts var9 at offscreen sprite height plus eight and reduces it against wd.field_b.field_m."
-        }
-      },
-      {
-        "symbol": "L:ul.b(I)V#1",
+        "symbol": "F:ag.field_k:I",
         "before": null,
         "after": {
-          "symbol": "L:ul.b(I)V#1",
-          "to": "secondNeighborIndex",
-          "originalName": "var9",
-          "evidence": "Second index into centralEntity.relatedEntities, strictly greater than firstNeighborIndex, so each pair is visited once per central entity."
+          "symbol": "F:ag.field_k:I",
+          "originalName": "field_k",
+          "to": "availableSpriteVariantCount",
+          "evidence": "Bound passed through nf.c(B)I to qi.b(II)I. lc.a(I)V passes its result as spriteVariantIndex to ja.a(IFIFIIFFFIF)V; reset starts at three and difficulty bit 1 raises it up to seven."
         }
       },
       {
-        "symbol": "L:ul.b(I)V#20",
-        "before": {
-          "symbol": "L:ul.b(I)V#20",
-          "to": "eligibleNeighborhoodVisited",
-          "originalName": "var1_int",
-          "evidence": "Integer flag set when an eligible central neighborhood visits a neighbor. It can enable feedback even when no three-entity match was emitted; it is not a successful-match flag."
-        },
-        "after": null
-      },
-      {
-        "symbol": "L:ul.b(I)V#21",
+        "symbol": "F:f.field_qb:I",
         "before": null,
         "after": {
-          "symbol": "L:ul.b(I)V#21",
-          "to": "eligibleNeighborhoodVisited",
-          "originalName": "var1_int",
-          "evidence": "Integer flag set when an eligible central neighborhood visits a neighbor. It can enable feedback even when no three-entity match was emitted; it is not a successful-match flag."
+          "symbol": "F:f.field_qb:I",
+          "originalName": "field_qb",
+          "to": "availableEntityCategoryCount",
+          "evidence": "Bound passed through ij.m(I)I to qi.b(II)I. lc.a(I)V passes its result as entityCategoryKey to ja.a(IFIFIIFFFIF)V; reset starts at four and difficulty bit 2 raises it up to seven."
         }
       },
       {
-        "symbol": "L:ul.b(I)V#22",
-        "before": {
-          "symbol": "L:ul.b(I)V#22",
-          "to": "dualMatchFound",
+        "symbol": "F:ij.field_ab:F",
+        "before": null,
+        "after": {
+          "symbol": "F:ij.field_ab:F",
+          "originalName": "field_ab",
+          "to": "spawnIntervalScale",
+          "evidence": "Float multiplier in sa.b(Z)V: int(201.0f / og.field_r * scale + 0.5f). Reset is 0.75; difficulty bit 128 adds 0.02857142873108387f when below the exact 0.8f threshold and then recomputes the interval."
+        }
+      },
+      {
+        "symbol": "F:kb.field_c:I",
+        "before": null,
+        "after": {
+          "symbol": "F:kb.field_c:I",
+          "originalName": "field_c",
+          "to": "spawnReleaseIntervalTicks",
+          "evidence": "sa.b(Z)V stores the rounded inverse-speed interval here. lc.a(I)V compares it with kc.field_a before releasing a queued entity, and includes it in queued entity lifetime calculations."
+        }
+      },
+      {
+        "symbol": "F:kc.field_a:I",
+        "before": null,
+        "after": {
+          "symbol": "F:kc.field_a:I",
+          "originalName": "field_a",
+          "to": "ticksSinceLastEntityRelease",
+          "evidence": "lc.a(I)V increments this counter once per update and resets it to zero when releasing a queued entity. It is compared with kb.field_c and contributes to queued entity lifetimes; pg.a(I)V deliberately leaves it unchanged."
+        }
+      },
+      {
+        "symbol": "F:kd.field_f:[I",
+        "before": null,
+        "after": {
+          "symbol": "F:kd.field_f:[I",
+          "originalName": "field_f",
+          "to": "difficultyStepFlags",
+          "evidence": "23-entry table read by ld.b(Z)V using ji.difficultyStep. Independent native fixtures verify its exact initial entries and all 256 byte masks, with saturation, recursive re-reads and failure partial state."
+        }
+      },
+      {
+        "symbol": "F:sa.field_c:D",
+        "before": null,
+        "after": {
+          "symbol": "F:sa.field_c:D",
+          "originalName": "field_c",
+          "to": "specialSpriteKindProbability",
+          "evidence": "vd.a(I)I compares Math.random() with this value before choosing kind 1/2/3/4 instead of zero. Difficulty bit 16 adds 0.05; steps past the table subtract 0.05 only above the exact retained 0.15000000000000002 threshold."
+        }
+      },
+      {
+        "symbol": "L:lc.a(I)V#0",
+        "before": null,
+        "after": {
+          "symbol": "L:lc.a(I)V#0",
+          "originalName": "decompiledCaughtException",
+          "to": "caughtSpawnQueueFailure",
+          "evidence": "Exception carrier assigned from the RuntimeException caught around the spawn update."
+        }
+      },
+      {
+        "symbol": "L:lc.a(I)V#1",
+        "before": null,
+        "after": {
+          "symbol": "L:lc.a(I)V#1",
+          "originalName": "var1",
+          "to": "queuedEntityThenPooledEntity",
+          "evidence": "First iterates SecondaryDeque.spawnQueue and animates each member; later holds the available entity removed for initialization. Both roles of the reused slot are retained."
+        }
+      },
+      {
+        "symbol": "L:lc.a(I)V#10",
+        "before": null,
+        "after": {
+          "symbol": "L:lc.a(I)V#10",
+          "originalName": "decompiledCaughtParameter0",
+          "to": "spawnQueueFailure",
+          "evidence": "RuntimeException catch parameter surrounding updateSpawnQueue."
+        }
+      },
+      {
+        "symbol": "L:lc.a(I)V#2",
+        "before": null,
+        "after": {
+          "symbol": "L:lc.a(I)V#2",
+          "originalName": "var1_ref",
+          "to": "spawnQueueFailureForContext",
+          "evidence": "Caught RuntimeException alias passed to t.a with the original lc.E diagnostic string."
+        }
+      },
+      {
+        "symbol": "L:lc.a(I)V#3",
+        "before": null,
+        "after": {
+          "symbol": "L:lc.a(I)V#3",
           "originalName": "var2",
-          "evidence": "Set when a candidate triple shares both category and sprite variant; chooses feedback mode 5 instead of mode 4 after traversal."
-        },
-        "after": null
+          "to": "spawnAngleRadians",
+          "evidence": "2*Math.random()*PI angle used to place a pooled entity on the radius-240 spawn circle."
+        }
       },
       {
-        "symbol": "L:ul.b(I)V#23",
-        "before": {
-          "symbol": "L:ul.b(I)V#23",
-          "to": "centralEntity",
-          "originalName": "var3",
-          "evidence": "Current attached entity from the deque. Its matching counts gate neighborhood traversal and its neighbor pairs form candidate triples."
-        },
+        "symbol": "L:lc.a(I)V#4",
+        "before": null,
         "after": {
-          "symbol": "L:ul.b(I)V#23",
-          "to": "dualMatchFound",
+          "symbol": "L:lc.a(I)V#4",
+          "originalName": "var4",
+          "to": "spawnPositionX",
+          "evidence": "320 + 240*cos(spawnAngleRadians); passed to initializeEntityMotion as positionX."
+        }
+      },
+      {
+        "symbol": "L:lc.a(I)V#5",
+        "before": null,
+        "after": {
+          "symbol": "L:lc.a(I)V#5",
+          "originalName": "var5",
+          "to": "spawnPositionY",
+          "evidence": "240 + 240*sin(spawnAngleRadians); passed to initializeEntityMotion as positionY."
+        }
+      },
+      {
+        "symbol": "L:lc.a(I)V#6",
+        "before": null,
+        "after": {
+          "symbol": "L:lc.a(I)V#6",
+          "originalName": "var6",
+          "to": "inwardDirectionX",
+          "evidence": "Initially 320-spawnPositionX, then normalized by inverseSpawnDistance and multiplied by entityMotionSpeed for velocityX."
+        }
+      },
+      {
+        "symbol": "L:lc.a(I)V#7",
+        "before": null,
+        "after": {
+          "symbol": "L:lc.a(I)V#7",
+          "originalName": "var7",
+          "to": "inwardDirectionY",
+          "evidence": "Initially 240-spawnPositionY, then normalized by inverseSpawnDistance and multiplied by entityMotionSpeed for velocityY."
+        }
+      },
+      {
+        "symbol": "L:lc.a(I)V#8",
+        "before": null,
+        "after": {
+          "symbol": "L:lc.a(I)V#8",
+          "originalName": "var8",
+          "to": "inverseSpawnDistance",
+          "evidence": "Reciprocal square root of the inward offset squared length; normalizes both direction components."
+        }
+      },
+      {
+        "symbol": "L:lc.a(I)V#9",
+        "before": null,
+        "after": {
+          "symbol": "L:lc.a(I)V#9",
+          "originalName": "var10",
+          "to": "clientControlFlowGuard",
+          "evidence": "Entry snapshot of Geoblox.field_C controls whether the initial spawn-queue iterator continues."
+        }
+      },
+      {
+        "symbol": "L:qe.b(I)V#0",
+        "before": null,
+        "after": {
+          "symbol": "L:qe.b(I)V#0",
           "originalName": "var2",
-          "evidence": "Set when a candidate triple shares both category and sprite variant; chooses feedback mode 5 instead of mode 4 after traversal."
+          "to": "clientControlFlowGuard",
+          "evidence": "Entry snapshot of Geoblox.field_C retained in quota adjustment."
         }
       },
       {
-        "symbol": "L:ul.b(I)V#24",
-        "before": {
-          "symbol": "L:ul.b(I)V#24",
-          "to": "variantMatchingAllowed",
-          "originalName": "var4",
-          "evidence": "Integer boolean for centralEntity.sameVariantEntityCount > 1; gates both subsequent spriteVariantIndex comparisons."
-        },
+        "symbol": "L:qe.b(I)V#1",
+        "before": null,
         "after": {
-          "symbol": "L:ul.b(I)V#24",
-          "to": "centralEntity",
-          "originalName": "var3",
-          "evidence": "Current attached entity from the deque. Its matching counts gate neighborhood traversal and its neighbor pairs form candidate triples."
+          "symbol": "L:qe.b(I)V#1",
+          "originalName": "decompiledCaughtException",
+          "to": "caughtQuotaUpdateFailure",
+          "evidence": "Carrier assigned from the RuntimeException caught around quota arithmetic."
         }
       },
       {
-        "symbol": "L:ul.b(I)V#25",
-        "before": {
-          "symbol": "L:ul.b(I)V#25",
-          "to": "categoryMatchingAllowed",
-          "originalName": "var5",
-          "evidence": "Integer boolean for centralEntity.sameCategoryEntityCount > 1; gates both subsequent entityCategoryKey comparisons."
-        },
+        "symbol": "L:qe.b(I)V#2",
+        "before": null,
         "after": {
-          "symbol": "L:ul.b(I)V#25",
-          "to": "variantMatchingAllowed",
-          "originalName": "var4",
-          "evidence": "Integer boolean for centralEntity.sameVariantEntityCount > 1; gates both subsequent spriteVariantIndex comparisons."
+          "symbol": "L:qe.b(I)V#2",
+          "originalName": "var1",
+          "to": "quotaUpdateFailureForContext",
+          "evidence": "Alias of the caught RuntimeException passed to t.a with original qe.B diagnostic context."
         }
       },
       {
-        "symbol": "L:ul.b(I)V#26",
-        "before": {
-          "symbol": "L:ul.b(I)V#26",
-          "to": "firstNeighborSharesVariant",
-          "originalName": "var7",
-          "evidence": "Gated equality of the central and first-neighbor spriteVariantIndex values; combines with the second neighbor to form tripleSharesVariant."
-        },
+        "symbol": "L:qe.b(I)V#3",
+        "before": null,
         "after": {
-          "symbol": "L:ul.b(I)V#26",
-          "to": "categoryMatchingAllowed",
-          "originalName": "var5",
-          "evidence": "Integer boolean for centralEntity.sameCategoryEntityCount > 1; gates both subsequent entityCategoryKey comparisons."
+          "symbol": "L:qe.b(I)V#3",
+          "originalName": "decompiledCaughtParameter0",
+          "to": "quotaUpdateFailure",
+          "evidence": "RuntimeException catch parameter for quota adjustment."
         }
       },
       {
-        "symbol": "L:ul.b(I)V#27",
-        "before": {
-          "symbol": "L:ul.b(I)V#27",
-          "to": "firstNeighborSharesCategory",
-          "originalName": "var8",
-          "evidence": "Gated equality of the central and first-neighbor entityCategoryKey values; combines with the second neighbor to form tripleSharesCategory."
-        },
+        "symbol": "L:sa.b(Z)V#0",
+        "before": null,
         "after": {
-          "symbol": "L:ul.b(I)V#27",
-          "to": "firstNeighborSharesVariant",
-          "originalName": "var7",
-          "evidence": "Gated equality of the central and first-neighbor spriteVariantIndex values; combines with the second neighbor to form tripleSharesVariant."
+          "symbol": "L:sa.b(Z)V#0",
+          "originalName": "var1",
+          "to": "intervalTicks",
+          "evidence": "Rounded inverse-speed spawn interval assigned immediately to kb.field_c before the preserveReleaseQuota branch."
         }
       },
       {
-        "symbol": "L:ul.b(I)V#28",
-        "before": {
-          "symbol": "L:ul.b(I)V#28",
-          "to": "secondNeighborIndex",
-          "originalName": "var9",
-          "evidence": "Second index into centralEntity.relatedEntities, strictly greater than firstNeighborIndex, so each pair is visited once per central entity."
-        },
+        "symbol": "L:vd.a(I)I#0",
+        "before": null,
         "after": {
-          "symbol": "L:ul.b(I)V#28",
-          "to": "firstNeighborSharesCategory",
-          "originalName": "var8",
-          "evidence": "Gated equality of the central and first-neighbor entityCategoryKey values; combines with the second neighbor to form tripleSharesCategory."
+          "symbol": "L:vd.a(I)I#0",
+          "originalName": "var1",
+          "to": "specialKindRoll",
+          "evidence": "Second Math.random() draw after the probability gate; thresholds 0.13, 0.25 and 0.65 select kind IDs 3, 4, 1 and 2. The draw and its order are retained."
+        }
+      },
+      {
+        "symbol": "M:ij.m(I)I",
+        "before": null,
+        "after": {
+          "symbol": "M:ij.m(I)I",
+          "originalName": "m",
+          "to": "chooseSpawnEntityCategory",
+          "evidence": "Normal guards above 18 sample qi.b with f.field_qb. Guards <=18 recursively consume one sample before returning a second; independent seeded native fixtures preserve both draws."
+        }
+      },
+      {
+        "symbol": "M:nf.c(B)I",
+        "before": null,
+        "after": {
+          "symbol": "M:nf.c(B)I",
+          "originalName": "c",
+          "to": "chooseSpawnSpriteVariant",
+          "evidence": "Normal guard -67 samples qi.b with ag.field_k. Guards at or above -55 return 66 without consuming the shared Random. Seeded native selection fixtures independently verify results and RNG consumption."
+        }
+      },
+      {
+        "symbol": "M:pg.a(I)V",
+        "before": null,
+        "after": {
+          "symbol": "M:pg.a(I)V",
+          "originalName": "a",
+          "to": "resetGameplayDifficulty",
+          "evidence": "Resets speed, probability, selection bounds, difficulty/theme counters, release quota, spawn interval scale and rotation. Guard 9408 additionally resets remaining counters and recomputes the interval; seven native guards verify the partial-reset boundary."
+        }
+      },
+      {
+        "symbol": "M:qe.b(I)V",
+        "before": null,
+        "after": {
+          "symbol": "M:qe.b(I)V",
+          "originalName": "b",
+          "to": "adjustThemeReleaseQuota",
+          "evidence": "Adds the supplied signed delta plus ten when ji.field_h is nonzero and below 21, then stores the ceiling quota divided by three. Independent native checks cover 150 bounded signed-delta/step cases; extreme overflow-driven loops are outside the fixtures."
+        }
+      },
+      {
+        "symbol": "M:sa.b(Z)V",
+        "before": null,
+        "after": {
+          "symbol": "M:sa.b(Z)V",
+          "originalName": "b",
+          "to": "recomputeSpawnReleaseInterval",
+          "evidence": "Computes and stores int(201.0f / og.field_r * ij.field_ab + 0.5f) before optionally setting sa.field_b to -10. Native fixtures verify 112 floating-point/cast/Boolean cases including NaNs, signed zero and infinities."
+        }
+      },
+      {
+        "symbol": "M:vd.a(I)I",
+        "before": null,
+        "after": {
+          "symbol": "M:vd.a(I)I",
+          "originalName": "a",
+          "to": "chooseSpawnSpriteKind",
+          "evidence": "Guard 741924304 first gates on sa.field_c, then maps a fresh Math.random roll through 0.13/0.25/0.65 thresholds to kinds 3/4/1/2. Other guards return 104. Native checks cover closed probability gates and invalid guards, not live Math.random distribution."
+        }
+      },
+      {
+        "symbol": "P:ij.m(I)I#0",
+        "before": null,
+        "after": {
+          "symbol": "P:ij.m(I)I#0",
+          "originalName": "param0",
+          "to": "methodGuard",
+          "evidence": "Retains the original compatibility guard and its side effects. Dedicated difficulty/reset/selection fixtures verify normal and boundary guards against native bytecode; original sentinel values are unchanged."
+        }
+      },
+      {
+        "symbol": "P:lc.a(I)V#0",
+        "before": null,
+        "after": {
+          "symbol": "P:lc.a(I)V#0",
+          "originalName": "param0",
+          "to": "methodGuard",
+          "evidence": "Normal caller supplies 255. Other values write lc.field_b=-11; XOR-derived guards used for selectors and deque counts retain original values. Source inspection, not a complete spawn-queue runtime proof."
+        }
+      },
+      {
+        "symbol": "P:ld.b(Z)V#0",
+        "before": null,
+        "after": {
+          "symbol": "P:ld.b(Z)V#0",
+          "originalName": "param0",
+          "to": "recursiveAdvanceGuard",
+          "evidence": "Normal hd.a(I)V callers pass false. True recursively advances the shared difficulty index and may fail on a later table re-read, preserving partial updates; it also negates the preserveReleaseQuota argument passed to sa.b(Z)V."
+        }
+      },
+      {
+        "symbol": "P:nf.c(B)I#0",
+        "before": null,
+        "after": {
+          "symbol": "P:nf.c(B)I#0",
+          "originalName": "param0",
+          "to": "methodGuard",
+          "evidence": "Retains the original compatibility guard and its side effects. Dedicated difficulty/reset/selection fixtures verify normal and boundary guards against native bytecode; original sentinel values are unchanged."
+        }
+      },
+      {
+        "symbol": "P:pg.a(I)V#0",
+        "before": null,
+        "after": {
+          "symbol": "P:pg.a(I)V#0",
+          "originalName": "param0",
+          "to": "methodGuard",
+          "evidence": "Retains the original compatibility guard and its side effects. Dedicated difficulty/reset/selection fixtures verify normal and boundary guards against native bytecode; original sentinel values are unchanged."
+        }
+      },
+      {
+        "symbol": "P:qe.b(I)V#0",
+        "before": null,
+        "after": {
+          "symbol": "P:qe.b(I)V#0",
+          "originalName": "param0",
+          "to": "additionalReleases",
+          "evidence": "Signed delta added to fa.field_b after the step-dependent ten-release addition; native bounded negative, zero and positive delta fixtures verify the resulting ceiling quota."
+        }
+      },
+      {
+        "symbol": "P:sa.b(Z)V#0",
+        "before": null,
+        "after": {
+          "symbol": "P:sa.b(Z)V#0",
+          "originalName": "param0",
+          "to": "preserveReleaseQuota",
+          "evidence": "True leaves sa.field_b unchanged after recomputing kb.field_c; false stores -10. Both paths and floating-point narrowing behavior are verified independently against native bytecode."
+        }
+      },
+      {
+        "symbol": "P:vd.a(I)I#0",
+        "before": null,
+        "after": {
+          "symbol": "P:vd.a(I)I#0",
+          "originalName": "param0",
+          "to": "methodGuard",
+          "evidence": "Retains the original compatibility guard and its side effects. Dedicated difficulty/reset/selection fixtures verify normal and boundary guards against native bytecode; original sentinel values are unchanged."
         }
       }
     ],
@@ -7602,6 +7675,10 @@
       {
         "file": "af.java",
         "sha256": "35ce09ec25e4b7a8f45a7a2a99038d3afa596a1c28e1a979ebc0a14621cff82f"
+      },
+      {
+        "file": "ag.java",
+        "sha256": "2518dac745333189472f08195165a1f6e1059064a0a857d2d1544f0ce484a2b4"
       },
       {
         "file": "bh.java",
@@ -7642,6 +7719,10 @@
       {
         "file": "gi.java",
         "sha256": "329e10e0ea5e8b0ed0c8108a8b8c940667b58e6ec7345eeedc877022b0d9469b"
+      },
+      {
+        "file": "gk.java",
+        "sha256": "a9a7d98397148037670f25e3740484779536e9523893aab0df4f3ff82c8ea15b"
       },
       {
         "file": "ha.java",
@@ -7692,12 +7773,24 @@
         "sha256": "03d7ef09781ab75b225f2d6007dd3af8f6e6ec9ab250cff286c45c34a102a579"
       },
       {
+        "file": "kb.java",
+        "sha256": "07f611e19f4859f7a56fe56677917653cfd1645c1b1472b1d530c8a048c17073"
+      },
+      {
         "file": "kc.java",
         "sha256": "e97c90e0f68aa3aa26cc72f78e89e1dae648e07710ab8dd64d469b97ce76d2b5"
       },
       {
+        "file": "kd.java",
+        "sha256": "a77df37993cdddd4a595783551fd510c5d8f08ce62c43a4f1a489046de15684b"
+      },
+      {
         "file": "kl.java",
         "sha256": "a75cfdd3309d25c4c36e8b7065b23c69f79133c220039ae034569998e3d360e5"
+      },
+      {
+        "file": "lc.java",
+        "sha256": "053fecb1711cb1ba0affdb1a9f5f19c8a4ba7f707cc4ecae0920fb700ab3e535"
       },
       {
         "file": "ld.java",
@@ -7716,8 +7809,16 @@
         "sha256": "5402ee171eed55e106f78bbb7c7773b563ad07f256b786f7ed9ea6b69cea3432"
       },
       {
+        "file": "nf.java",
+        "sha256": "c0948a54551bb70d86affa492ea330f80d61bc4fd771e856807b149d79a780a5"
+      },
+      {
         "file": "oc.java",
         "sha256": "aacf4c3882497080bf7f7e894e7cad6d3117625b01045cde06a39796a6973f2d"
+      },
+      {
+        "file": "pg.java",
+        "sha256": "6c6e4e27dfba1a43ab68b4f819008fe9411a6794645fc744094bb6eb212d6d70"
       },
       {
         "file": "qa.java",
@@ -7728,8 +7829,16 @@
         "sha256": "1f3b636038a3d90ac3622c6249cb4b0169cba653eaa37003fb0db1aec358ffb0"
       },
       {
+        "file": "qe.java",
+        "sha256": "d769e2688025a605351d42d95b5b985ce279459d08e0aad404c1b3890c068633"
+      },
+      {
         "file": "qf.java",
         "sha256": "3146e75866c022fc4a3c6197f0349a42ef3e03c7bb47105471af9257af6e15c6"
+      },
+      {
+        "file": "qi.java",
+        "sha256": "50e6497f038e2a156d5a7151ac990bd4fa86f681490845a503f6b84ad8cbe027"
       },
       {
         "file": "qk.java",
@@ -7758,6 +7867,14 @@
       {
         "file": "rj.java",
         "sha256": "5869e010e740d261ddb014341d0125056f09fd76715b84d5716f58651c636c9c"
+      },
+      {
+        "file": "sa.java",
+        "sha256": "d22232f25f8d04ef63527050aa9e070be4d4d5b4431613705e1fd6ae6aa8f188"
+      },
+      {
+        "file": "sc.java",
+        "sha256": "7b0a9b28745eca179630262b2d1292428c27963049f41b277f078d71539e10ff"
       },
       {
         "file": "td.java",
@@ -7824,9 +7941,17 @@
       },
       {
         "file": "tests/test-geoblox-gameplay.mjs",
-        "sha256": "ddcb89ae7f5845f0a7fa1c99167985090ed2f72669563e52b29b45e230d5e96f",
+        "sha256": "74e1e59d5f6235b371e647cafa4e1bb4a454132a060f202f15e4444aec4ba213",
         "nativeOutputSha256": "42be694a3c2f9a7a80ec7e0ec910bd312bdba5bc38f30293eb00faddcb17ac79",
-        "scenarios": 52164
+        "scenarios": 52164,
+        "additionalTraces": [
+          {
+            "constant": "expectedDifficultySha256",
+            "sha256": "8c66899b5955eac3380cc3aefd3cbe17a5063cc68f98cd507ff406cea4ae587b",
+            "scenarios": 84661,
+            "scope": "82944 flag cases, 56 bounds cases, 60 real-table ticks, 112 interval cases, 150 quota cases, seven reset guards and 1332 seeded/closed-gate selection cases. Independent oracles verify state, float casts, recursive failures, partial writes and RNG consumption. Whole-game equivalence and live Math.random distribution remain unverified."
+          }
+        ]
       }
     ],
     "textResources": {
@@ -9997,7 +10122,7 @@
       "sourceDeclarations": 20931,
       "bindingsCompared": 152514,
       "overrideRelationships": 388,
-      "identifierEdits": 18711,
+      "identifierEdits": 19062,
       "dictionaryRestorationFiles": 303,
       "wholeGameEquivalenceVerified": false,
       "nativeMatchingScenarios": 708,
@@ -10010,7 +10135,8 @@
         "Contact/conversion probes use one-pixel sprites and controlled palettes for kinds 0, 1 and 2. Conversion graphs control adjacency and initial counters; mask collision producers, real asset loading and full gameplay remain unverified.",
         "Reconciliation/routing fixtures use real minimal sprites, controlled display/audio buffers and constructor-free holders. Routing checks use isolated entities or one controlled reciprocal edge. Real asset loading, sound-device playback and new unlock delivery remain unverified.",
         "Avatar animation fixtures independently verify menu and gameplay timer/frame/tint state with sessionEnding=false. Gameplay ending-message selection, rendering with real assets and device audio remain outside the added animation checks.",
-        "Whole-game equivalence and FPS, heap and phone targets are not established."
+        "Whole-game equivalence and FPS, heap and phone targets are not established.",
+        "Spawn-queue angle/position locals and live special-kind selection remain supported by source inspection. The added selection probes test seeded category/variant RNG and closed special-kind gates; real spawn queue execution, live Math.random distribution and extreme quota-overflow loops remain unverified."
       ],
       "checks": {
         "ruleBuilderTests": 9,
@@ -10046,15 +10172,15 @@
         641
       ],
       "nativeBoundaryIndependentOracle": true,
-      "guardedNamingRules": 1170,
-      "namedLocalDeclarations": 382,
+      "guardedNamingRules": 1208,
+      "namedLocalDeclarations": 399,
       "nonselectorDeclarationsPreserved": 20920,
       "generatedSelectorsBefore": 265,
       "generatedSelectorsAfter": 11,
       "generatedSelectorsRemoved": 254,
       "rawSourceLinesRemoved": 2213,
       "returnReconstructionChangedJavaFiles": 181,
-      "localOrdinalMigrations": 35,
+      "localOrdinalMigrations": 0,
       "obsoleteNamedSelectorsRemoved": 1,
       "genericRegionContractTestGroups": 36,
       "genericExceptionExitTestGroups": 6,
@@ -10068,55 +10194,15 @@
       "genericEarlyExitTestGroups": 11,
       "nativeEmitterComparisons": 556,
       "sourceReferenceOccurrencesRemoved": 87,
-      "sourceReferenceOccurrencesAdded": 1
-    },
-    "sourceChange": {
-      "before": {
-        "source": {
-          "repository": "Kreijstal/funorb-decompiled",
-          "commit": "a298f846c1824a1e88dd6c63674bbe81e67152e1",
-          "subdirectory": "games/geoblox"
-        },
-        "generators": {
-          "dekoblokoWork": {
-            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
-            "trackedClean": true
-          },
-          "javaTools": {
-            "commit": "2f75cefb09f32e164f77b7f4adc6fd011d922f43",
-            "trackedClean": true,
-            "sourceArchive": {
-              "sha256": "8e6ff3d4a6c5439128cbbad964491358c73c92c2e6e0a0ff82edadda478a612e",
-              "reproduce": "git archive --format=tar 2f75cefb09f32e164f77b7f4adc6fd011d922f43 | sha256sum",
-              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
-            }
-          }
-        },
-        "inputTreeSha256": "0ce7d77ce24b5c74be0439d9d363ac7fb407bf949c9385ecc5f7e4cbcfe48f0f"
-      },
-      "after": {
-        "source": {
-          "repository": "Kreijstal/funorb-decompiled",
-          "commit": "589c78257fcea469a48c6a3f2eba15cf77fb7e1a",
-          "subdirectory": "games/geoblox"
-        },
-        "generators": {
-          "dekoblokoWork": {
-            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
-            "trackedClean": true
-          },
-          "javaTools": {
-            "commit": "44435d91c3e1f48530c0f2462caa3874968993bc",
-            "trackedClean": true,
-            "sourceArchive": {
-              "sha256": "91f00d39ebbcdeff76e1c4d507ba69839a1f5fe3573499906040ac6f712a63c1",
-              "reproduce": "git archive --format=tar 44435d91c3e1f48530c0f2462caa3874968993bc | sha256sum",
-              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
-            }
-          }
-        },
-        "inputTreeSha256": "baeae8c226093d2a14392d9994aa74ddd4c735009a09e713af1b7cf39f202029"
-      }
+      "sourceReferenceOccurrencesAdded": 1,
+      "nativeDifficultyFlagCases": 82944,
+      "nativeDifficultyBoundsCases": 56,
+      "nativeDifficultySequenceTicks": 60,
+      "nativeSpawnIntervalCases": 112,
+      "nativeThemeQuotaCases": 150,
+      "nativeDifficultyResetCases": 7,
+      "nativeSpawnSelectionCases": 1332,
+      "nativeDifficultyTraceSha256": "8c66899b5955eac3380cc3aefd3cbe17a5063cc68f98cd507ff406cea4ae587b"
     }
   }
 }

@@ -201,8 +201,56 @@ helper side effect; it is outside the direct text-writer probe.
 increments `ul.releasedInCurrentTheme` and `di.releasedInDifficultyStep` outside
 tutorial mode. The theme threshold is `fa.releasesPerTheme`; `qe.a` calculates
 `sa.releasesPerDifficultyStep` as its ceiling divided by three.
-`ld.advanceDifficulty` increments `ji.difficultyStep` and applies the difficulty
-bit flags to speed, rotation and entity selection parameters.
+`ld.advanceDifficulty` increments `ji.difficultyStep` and reads
+`kd.difficultyStepFlags`. Its normal callers pass `recursiveAdvanceGuard=false`.
+The true guard recursively advances the shared index and may throw when a
+caller resumes and re-reads an exhausted table; partial updates remain visible.
+
+| Flag bit | Observed effect |
+| --- | --- |
+| 1 | Raise `ag.availableSpriteVariantCount` when below seven |
+| 2 | Raise `f.availableEntityCategoryCount` when below seven |
+| 4 | Add to `og.entityMotionSpeed` and recompute the release interval |
+| 8 | Multiply `DualLinkNode.rotationStepRadians` by the retained float factor |
+| 16 | Add 0.05 to `sa.specialSpriteKindProbability` |
+| 128 | Raise `ij.spawnIntervalScale` when below 0.8f, then recompute the interval |
+
+`sa.recomputeSpawnReleaseInterval` stores
+`int(201.0f / entityMotionSpeed * spawnIntervalScale + 0.5f)` in
+`kb.spawnReleaseIntervalTicks`. Its `preserveReleaseQuota` parameter leaves
+`releasesPerDifficultyStep` unchanged when true; false writes -10 after storing
+the interval. The scale threshold is a gate, with no clamp after addition.
+Past the flag table, the special-kind probability is reduced by 0.05 only when
+above the original exact double threshold 0.15000000000000002.
+
+`pg.resetGameplayDifficulty` initializes three sprite variants, four categories,
+speed 0.4f, scale 0.75f, rotation and the release quota. Guard 9408 additionally
+resets remaining counters and updates the interval. `qe.adjustThemeReleaseQuota`
+adds the signed `additionalReleases` plus a step-dependent ten and computes the
+ceiling quota divided by three; the original arithmetic remains.
+
+`nf.chooseSpawnSpriteVariant` supplies `spriteVariantIndex` to entity motion
+initialization; `ij.chooseSpawnEntityCategory` supplies `entityCategoryKey`.
+Their Random source is shared. The variant guard can return 66 without drawing;
+a category guard at or below 18 discards an extra draw before returning the next.
+`vd.chooseSpawnSpriteKind` returns zero when its probability gate stays closed,
+or selects kinds 3/4/1/2 using the original live-random thresholds. Invalid guards
+return 104. These compatibility effects retain their exact sentinels.
+
+`updateSpawnQueue` now names `queuedEntityThenPooledEntity`, preserving both
+roles of the reused slot. `spawnAngleRadians` sets `spawnPositionX/Y` on the
+radius-240 circle; `inwardDirectionX/Y` initially hold offsets toward the centre,
+then are normalized using `inverseSpawnDistance` before velocity scaling.
+`kc.ticksSinceLastEntityRelease` resets to zero on release, then receives the
+same update's unconditional increment. These geometry names have direct source
+evidence.
+
+The existing gameplay probe verifies 84,661 additional cases against independent
+oracles and native bytecode: all 256 byte masks, saturation, recursive failures,
+index overflow/null tables, real-table progression, float casts, quota/reset
+guards, seeded category/variant draws and closed special-kind gates. It verifies
+partial state even after a failure. Full queue execution, live Math.random
+sampling and extreme quota-overflow loops remain outside those fixtures.
 
 `GameplaySession.sessionPhase` retains these numeric states:
 
@@ -491,13 +539,14 @@ the array indices, evidence, override families and remaining shared carriers.
 
 ## Remaining limitations
 
-There are 1,170 explicit guarded rules: 22 classes, 382 fields, 175 method
-declarations, 209 parameters and 382 locals. This is not full deobfuscation.
+There are 1,208 explicit guarded rules: 22 classes, 389 fields, 181 method
+declarations, 217 parameters and 399 locals. This is not full deobfuscation.
 Unknown flags, guard arguments and opaque shared helpers still need
 investigation. Current names and source identities live in the single manifest;
 previous naming and structural passes remain in Git. The latest source migration
 moves 35 named local ordinals by unique method/original-spelling identity.
-All 1,170 semantic naming rules are retained. The preceding pass removed the
+The subsequent naming pass retains all prior rules and adds 38 difficulty
+and spawning identities without changing the raw source. The preceding pass removed the
 vanished boundary selector; the current pass flattens proven early-exit arms.
 Complete parsing and preserved declaration scopes keep this reproducible.
 

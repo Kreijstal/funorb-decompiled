@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kc {
-    static int field_a;
+    static int ticksSinceLastEntityRelease;
     static String createNameCharacterAlertText;
     static int field_c;
 
@@ -637,6 +637,6 @@ final class kc {
     static {
         field_c = 0;
         createNameCharacterAlertText = "Names can only contain letters, numbers, spaces and underscores";
-        field_a = 0;
+        ticksSinceLastEntityRelease = 0;
     }
 }

@@ -3,7 +3,7 @@
  */
 final class ij extends oe implements pl {
     static int field_X;
-    static float field_ab;
+    static float spawnIntervalScale;
     private hk field_bb;
     static String menuText;
     static int field_cb;
@@ -80,12 +80,12 @@ final class ij extends oe implements pl {
         createPasswordTooltipText = null;
     }
 
-    final static int m(int param0) {
-        if (param0 <= 18) {
-            ij.m(48);
-            return qi.b(f.field_qb, 1);
+    final static int chooseSpawnEntityCategory(int methodGuard) {
+        if (methodGuard <= 18) {
+            ij.chooseSpawnEntityCategory(48);
+            return qi.b(f.availableEntityCategoryCount, 1);
         }
-        return qi.b(f.field_qb, 1);
+        return qi.b(f.availableEntityCategoryCount, 1);
     }
 
     ij(ng param0, uj param1) {
@@ -248,7 +248,7 @@ final class ij extends oe implements pl {
     static {
         field_X = 0;
         menuText = "Menu";
-        field_ab = 0.5f;
+        spawnIntervalScale = 0.5f;
         createPasswordTooltipText = "Enter a password for this account. Try to pick a strong password that can't easily be guessed.";
     }
 }

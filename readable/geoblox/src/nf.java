@@ -60,11 +60,11 @@ final class nf {
         this.a(-7008);
     }
 
-    final static int c(byte param0) {
-        if (param0 >= -55) {
+    final static int chooseSpawnSpriteVariant(byte methodGuard) {
+        if (methodGuard >= -55) {
             return 66;
         }
-        return qi.b(ag.field_k, 1);
+        return qi.b(ag.availableSpriteVariantCount, 1);
     }
 
     public static void b(byte param0) {

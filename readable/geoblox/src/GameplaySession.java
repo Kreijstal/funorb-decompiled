@@ -1259,8 +1259,8 @@ final class GameplaySession {
                 this.submissionBlocked = true;
               }
               if (ki.field_d == 3) {
-                ag.field_k = 7;
-                f.field_qb = 7;
+                ag.availableSpriteVariantCount = 7;
+                f.availableEntityCategoryCount = 7;
               }
               if (ki.field_d == 4) {
                 hd.recordEntityRelease(2);
@@ -1708,7 +1708,7 @@ final class GameplaySession {
           this.sceneTransitionRequested = false;
           this.sceneAnimationTick = 0;
           if (ji.difficultyStep > 0) {
-            qe.b(10);
+            qe.adjustThemeReleaseQuota(10);
             ld.advanceDifficulty(false);
           }
         }

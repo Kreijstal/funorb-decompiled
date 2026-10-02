@@ -2498,7 +2498,7 @@ final class GameScreen extends MenuScreen {
               }
             }
             kc.field_c = kc.field_c + 1;
-            pg.a(param1 ^ -9410);
+            pg.resetGameplayDifficulty(param1 ^ -9410);
             el.gameplaySession = new GameplaySession(this.gameApplet, var3_int != 0);
             le.a((byte) -39);
             ai.requestedScreenId = -1;

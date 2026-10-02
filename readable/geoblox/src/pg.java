@@ -8,23 +8,23 @@ final class pg {
     static boolean screenChangePending;
     static int field_b;
 
-    final static void a(int param0) {
+    final static void resetGameplayDifficulty(int methodGuard) {
         og.entityMotionSpeed = 0.4000000059604645f;
-        sa.field_c = 0.0;
+        sa.specialSpriteKindProbability = 0.0;
         ul.releasedInCurrentTheme = 0;
-        ag.field_k = 3;
+        ag.availableSpriteVariantCount = 3;
         fj.field_m = 0;
         ji.difficultyStep = 0;
         fa.releasesPerTheme = 40;
-        f.field_qb = 4;
-        qe.b(10);
-        ij.field_ab = 0.75f;
+        f.availableEntityCategoryCount = 4;
+        qe.adjustThemeReleaseQuota(10);
+        ij.spawnIntervalScale = 0.75f;
         DualLinkNode.rotationStepRadians = 0.01666666753590107f;
-        if (param0 != 9408) {
+        if (methodGuard != 9408) {
             return;
         }
         di.releasedInDifficultyStep = 0;
-        sa.b(true);
+        sa.recomputeSpawnReleaseInterval(true);
         el.field_t = 0;
         gb.field_c = 0;
     }
@@ -224,7 +224,7 @@ final class pg {
         field_c = null;
         field_a = null;
         if (param0 != 22059) {
-            pg.a(52);
+            pg.resetGameplayDifficulty(52);
         }
     }
 

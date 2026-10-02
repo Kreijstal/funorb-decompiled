@@ -5,7 +5,7 @@ final class ag extends TextInputValidator {
     private static long[] field_m;
     static int field_l;
     static boolean[] field_j;
-    static int field_k;
+    static int availableSpriteVariantCount;
     static int field_i;
 
     final String validationMessageForText(int guard, String candidateText) {

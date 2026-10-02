@@ -11,6 +11,9 @@ const root = fileURLToPath(new URL('../', import.meta.url));
 const nativeInput = process.argv[2] && path.resolve(process.argv[2]);
 if (!nativeInput) throw new Error('Usage: node readable/tests/test-geoblox-gameplay.mjs NATIVE_CLASSES');
 const expectedNativeSha256 = '42be694a3c2f9a7a80ec7e0ec910bd312bdba5bc38f30293eb00faddcb17ac79';
+// The additional matrix has its own trace; the existing gameplay baseline
+// remains independently pinned.
+const expectedDifficultySha256 = '8c66899b5955eac3380cc3aefd3cbe17a5063cc68f98cd507ff406cea4ae587b';
 const rules = JSON.parse(fs.readFileSync(path.join(root, 'geoblox-rules.json')));
 const aliases = new Map(rules.renames.map(rule => [rule.symbol, rule.to]));
 const temporary = fs.mkdtempSync(path.join(os.tmpdir(), 'geoblox-gameplay-'));
@@ -35,7 +38,7 @@ try {
     .verifiedTransformedClasses;
   assert.equal(nativeFiles.length, pin.files);
   assert.equal(nativeHash.digest('hex'), pin.sha256);
-  let expected;
+  let expected, expectedDifficulty;
   for (const variant of ['native', 'original', 'renamed']) {
     const native = variant === 'native', renamed = variant === 'renamed';
     const name = (key, original) => renamed ? aliases.get(key) ?? original : original;
@@ -706,6 +709,188 @@ try {
         System.err.println("boundary-matrix:"+pixelCases+":"+perimeterPixels+":"+guardCases+":"+rasterCases);
       }
       static boolean boundaryWithGuard(int guard) { return ${call('ld','a(I)Z')}(guard); }
+      static final class DifficultyState {
+        int step,variants,categories,interval,quota;
+        float speed,rotation,scale;
+        double chance;
+        DifficultyState copy() {
+          DifficultyState out=new DifficultyState();out.step=step;out.variants=variants;
+          out.categories=categories;out.interval=interval;out.quota=quota;
+          out.speed=speed;out.rotation=rotation;out.scale=scale;out.chance=chance;return out;
+        }
+        public String toString() {
+          return step+":"+variants+":"+categories+":"+interval+":"+quota+":"+
+            Float.floatToIntBits(speed)+":"+Float.floatToIntBits(rotation)+":"+
+            Float.floatToIntBits(scale)+":"+Double.doubleToLongBits(chance);
+        }
+      }
+      static DifficultyState difficultyState() {
+        DifficultyState state=new DifficultyState();
+        state.step=${global('ji','field_h','I')};state.variants=${global('ag','field_k','I')};
+        state.categories=${global('f','field_qb','I')};state.interval=${global('kb','field_c','I')};
+        state.quota=${global('sa','field_b','I')};state.speed=${global('og','field_r','F')};
+        state.rotation=${global('rc','field_h','F')};state.scale=${global('ij','field_ab','F')};
+        state.chance=${global('sa','field_c','D')};return state;
+      }
+      static void difficultyState(DifficultyState state) {
+        ${global('ji','field_h','I')}=state.step;${global('ag','field_k','I')}=state.variants;
+        ${global('f','field_qb','I')}=state.categories;${global('kb','field_c','I')}=state.interval;
+        ${global('sa','field_b','I')}=state.quota;${global('og','field_r','F')}=state.speed;
+        ${global('rc','field_h','F')}=state.rotation;${global('ij','field_ab','F')}=state.scale;
+        ${global('sa','field_c','D')}=state.chance;
+      }
+      static void intervalOracle(DifficultyState state,boolean preserveQuota) {
+        state.interval=(int)(201f/state.speed*state.scale+0.5f);
+        if(!preserveQuota)state.quota=-10;
+      }
+      static void difficultyOracle(DifficultyState state,int[] flags,boolean recursiveGuard) {
+        state.step++;
+        if(state.step>=flags.length) {
+          if(state.chance>0.15000000000000002)state.chance-=0.05;
+          return;
+        }
+        // Express the table's effects directly, independently of the emitted
+        // duplicated branches. A recursive call changes the shared index;
+        // later effects deliberately re-read that index and may fail.
+        if((flags[state.step]&4)!=0) {
+          state.speed+=0.055555559694767f;intervalOracle(state,!recursiveGuard);
+        }
+        if((flags[state.step]&1)!=0&&state.variants<7)state.variants++;
+        if(recursiveGuard)difficultyOracle(state,flags,true);
+        if((flags[state.step]&2)!=0&&state.categories<7)state.categories++;
+        if((flags[state.step]&16)!=0)state.chance+=0.05;
+        if((flags[state.step]&8)!=0)state.rotation*=1.100000023841858f;
+        if((flags[state.step]&128)!=0) {
+          if(state.scale<0.8f)state.scale+=0.02857142873108387f;
+          intervalOracle(state,!recursiveGuard);
+        }
+      }
+      static String failure(Runnable work) {
+        try {work.run();return "ok";}
+        catch(RuntimeException error){return error.getClass().getName();}
+      }
+      static java.security.MessageDigest difficultyDigest;
+      static void difficultyTrace(String value) {
+        difficultyDigest.update((value+"\\n").getBytes(java.nio.charset.StandardCharsets.UTF_8));
+      }
+      static void verifyDifficulty(DifficultyState initial,int[] flags,boolean recursiveGuard,String label) {
+        DifficultyState wanted=initial.copy();difficultyState(initial);
+        ${global('kd','field_f','[I')}=flags;
+        String expectedFailure=failure(()->difficultyOracle(wanted,flags,recursiveGuard));
+        String actualFailure=failure(()->${call('ld','b(Z)V')}(recursiveGuard));
+        check(actualFailure.equals(expectedFailure),"difficulty failure "+label+":"+expectedFailure+":"+actualFailure);
+        check(difficultyState().toString().equals(wanted.toString()),"difficulty state "+label+":"+wanted+":"+difficultyState());
+        difficultyTrace(label+":"+actualFailure+":"+difficultyState());
+      }
+      static int randomBoundOracle(java.util.Random random,int bound) {
+        if((bound&(bound-1))==0)return(int)(Integer.toUnsignedLong(random.nextInt())*bound>>>32);
+        long rejected=(1L<<32)%bound;
+        int draw;
+        do {draw=random.nextInt();}while((long)draw>Integer.MAX_VALUE-rejected);
+        return Math.floorMod(draw,bound);
+      }
+      static void difficultyMatrix() throws Exception {
+        difficultyDigest=java.security.MessageDigest.getInstance("SHA-256");
+        int[] originalFlags=${global('kd','field_f','[I')};
+        int[] expectedTable={0,4,12,133,0,140,1,4,136,2,4,132,17,16,128,3,0,128,2,16,132,16,0};
+        check(java.util.Arrays.equals(originalFlags,expectedTable),"original difficulty table");
+        int matrix=0,bounds=0,sequence=0,intervals=0,quotas=0,resets=0,selections=0;
+        for(int clientGuard=0;clientGuard<2;clientGuard++)for(int mask=0;mask<256;mask++)
+          for(int variants:new int[]{0,6,7})for(int categories:new int[]{0,6,7})
+          for(double chance:new double[]{-0d,0.15000000000000002,Double.NaN})
+          for(float scale:new float[]{Math.nextDown(0.8f),0.8f,Float.NaN})
+          for(boolean recursive:new boolean[]{false,true}) {
+            ${global('Geoblox','field_C','I')}=clientGuard;
+            DifficultyState state=new DifficultyState();state.step=-1;state.variants=variants;state.categories=categories;
+            state.chance=chance;state.scale=scale;state.speed=new float[]{0.4f,0f,Float.MAX_VALUE,Float.NaN}[mask&3];
+            state.rotation=0.01666666753590107f;state.interval=91;state.quota=17;
+            int[] flags={mask,mask^129,0};
+            verifyDifficulty(state,flags,recursive,"matrix:"+clientGuard+":"+mask+":"+variants+":"+categories+":"+
+              Double.doubleToLongBits(chance)+":"+Float.floatToIntBits(scale)+":"+recursive);
+            check(java.util.Arrays.equals(flags,new int[]{mask,mask^129,0}),"difficulty table read-only");matrix++;
+          }
+        for(int step:new int[]{Integer.MIN_VALUE,-2,-1,0,2,3,Integer.MAX_VALUE})
+          for(int[] flags:new int[][]{null,new int[0],new int[]{255},expectedTable})
+          for(boolean recursive:new boolean[]{false,true}) {
+            DifficultyState state=new DifficultyState();state.step=step;state.variants=6;state.categories=6;
+            state.speed=0.4f;state.scale=0.75f;state.chance=0.2;state.rotation=0.01666666753590107f;
+            state.interval=377;state.quota=17;
+            verifyDifficulty(state,flags,recursive,"bounds:"+step+":"+(flags==null?-1:flags.length)+":"+recursive);bounds++;
+          }
+        DifficultyState state=new DifficultyState();state.step=0;state.variants=3;state.categories=4;
+        state.speed=0.4f;state.scale=0.75f;state.rotation=0.01666666753590107f;state.interval=377;state.quota=17;
+        for(int tick=0;tick<60;tick++) {
+          verifyDifficulty(state,expectedTable,false,"sequence:"+tick);state=difficultyState();sequence++;
+        }
+        for(float speed:new float[]{0.4f,0f,-0f,Float.MIN_VALUE,Float.MAX_VALUE,Float.NEGATIVE_INFINITY,Float.POSITIVE_INFINITY,Float.NaN})
+          for(float scale:new float[]{-1f,-0f,0.75f,Math.nextDown(0.8f),0.8f,Float.NaN,Float.POSITIVE_INFINITY})
+          for(boolean preserve:new boolean[]{false,true}) {
+            DifficultyState initial=new DifficultyState();initial.speed=speed;initial.scale=scale;initial.quota=99;
+            DifficultyState wanted=initial.copy();intervalOracle(wanted,preserve);difficultyState(initial);
+            ${call('sa','b(Z)V')}(preserve);
+            check(wanted.toString().equals(difficultyState().toString()),"interval floating/cast oracle");
+            difficultyTrace("interval:"+preserve+":"+difficultyState());intervals++;
+          }
+        for(int step:new int[]{-1,0,1,20,21,22})for(int before:new int[]{-9,0,1,40,99})
+          for(int increment:new int[]{-11,0,1,2,10}) {
+            ${global('ji','field_h','I')}=step;${global('fa','field_b','I')}=before;${global('sa','field_b','I')}=91;
+            int total=before+increment+(step!=0&&step<21?10:0);
+            int quota=total>0?Math.floorDiv(total+2,3):total/3;
+            ${call('qe','b(I)V')}(increment);
+            check(${global('fa','field_b','I')}==total&&${global('sa','field_b','I')}==quota,"theme quota ceiling oracle");
+            difficultyTrace("quota:"+step+":"+before+":"+increment+":"+total+":"+quota);quotas++;
+          }
+        for(int methodGuard:new int[]{Integer.MIN_VALUE,-1,0,9407,9408,9409,Integer.MAX_VALUE}) {
+          ${global('ul','field_b','I')}=71;${global('fj','field_m','I')}=72;${global('di','field_g','I')}=73;
+          ${global('el','field_t','I')}=74;${global('gb','field_c','I')}=75;${global('kc','field_a','I')}=76;
+          ${global('kb','field_c','I')}=77;${call('pg','a(I)V')}(methodGuard);
+          state=difficultyState();
+          check(state.step==0&&state.variants==3&&state.categories==4&&state.quota==17&&state.chance==0,
+            "reset counts and quota");
+          check(Float.floatToIntBits(state.speed)==Float.floatToIntBits(0.4f)&&state.scale==0.75f&&
+            state.rotation==0.01666666753590107f,"reset motion");
+          check(${global('fa','field_b','I')}==50&&${global('ul','field_b','I')}==0&&${global('fj','field_m','I')}==0,
+            "reset theme progression");
+          boolean full=methodGuard==9408;
+          check(state.interval==(full?377:77)&&${global('di','field_g','I')}==(full?0:73)&&
+            ${global('el','field_t','I')}==(full?0:74)&&${global('gb','field_c','I')}==(full?0:75)&&
+            ${global('kc','field_a','I')}==76,"reset guard partial state");
+          difficultyTrace("reset:"+methodGuard+":"+state);resets++;
+        }
+        java.util.Random originalRandom=${global('gk','field_d','Ljava/util/Random;')};
+        for(int seed=0;seed<24;seed++)for(int count:new int[]{1,2,3,4,7}) {
+          ${global('ag','field_k','I')}=count;${global('f','field_qb','I')}=count;
+          for(byte guard:new byte[]{-128,-67,-56,-55,0,127}) {
+            ${global('gk','field_d','Ljava/util/Random;')}=new java.util.Random(seed);
+            java.util.Random oracle=new java.util.Random(seed);
+            int wanted=guard>=-55?66:randomBoundOracle(oracle,count);
+            int actual=${call('nf','c(B)I')}(guard);
+            check(actual==wanted&&${global('gk','field_d','Ljava/util/Random;')}.nextInt()==oracle.nextInt(),
+              "variant selector bound, guard and RNG consumption");
+            difficultyTrace("variant:"+seed+":"+count+":"+guard+":"+actual);selections++;
+          }
+          for(int guard:new int[]{Integer.MIN_VALUE,18,19,48,Integer.MAX_VALUE}) {
+            ${global('gk','field_d','Ljava/util/Random;')}=new java.util.Random(seed);
+            java.util.Random oracle=new java.util.Random(seed);
+            if(guard<=18)randomBoundOracle(oracle,count);
+            int wanted=randomBoundOracle(oracle,count),actual=${call('ij','m(I)I')}(guard);
+            check(actual==wanted&&${global('gk','field_d','Ljava/util/Random;')}.nextInt()==oracle.nextInt(),
+              "category selector bound, guard and RNG consumption");
+            difficultyTrace("category:"+seed+":"+count+":"+guard+":"+actual);selections++;
+          }
+        }
+        for(double chance:new double[]{-1d,-0d,0d,Double.NaN})for(int guard:new int[]{0,741924303,741924304}) {
+          ${global('sa','field_c','D')}=chance;
+          int actual=${call('vd','a(I)I')}(guard);check(actual==(guard==741924304?0:104),"kind selector closed gate");
+          difficultyTrace("kind:"+Double.doubleToLongBits(chance)+":"+guard+":"+actual);selections++;
+        }
+        ${global('gk','field_d','Ljava/util/Random;')}=originalRandom;
+        ${global('kd','field_f','[I')}=originalFlags;${global('Geoblox','field_C','I')}=0;
+        StringBuilder hash=new StringBuilder();for(byte value:difficultyDigest.digest())hash.append(String.format("%02x",value&255));
+        check(matrix==82944&&bounds==56&&sequence==60&&intervals==112&&quotas==150&&resets==7&&selections==1332,
+          "complete difficulty matrix coverage");
+        System.err.println("difficulty-matrix:"+matrix+":"+bounds+":"+sequence+":"+intervals+":"+quotas+":"+resets+":"+selections+":"+hash);
+      }
       public static void main(String[] args) throws Exception {
         Thread watchdog=new Thread(()->{try{Thread.sleep(45000);}catch(InterruptedException error){}System.exit(124);});
         watchdog.setDaemon(true);watchdog.start();
@@ -800,6 +985,7 @@ try {
         animation();
         tintRequests();
         routing();
+        difficultyMatrix();
         System.out.println("complete:"+cases+":conversion-failures:"+conversionFailures);
       }
     }`;
@@ -818,8 +1004,15 @@ try {
     const sha256 = crypto.createHash('sha256').update(output.stdout).digest('hex');
     assert.match(output.stderr.toString(), /(?:^|\n)boundary-matrix:425042:1300:18:5(?:\n|$)/,
       'complete boundary matrix must run independently in every variant');
+    const difficulty = output.stderr.toString().match(/(?:^|\n)difficulty-matrix:82944:56:60:112:150:7:1332:([a-f0-9]{64})(?:\n|$)/)?.[1];
+    assert.ok(difficulty, 'complete difficulty matrix must run independently in every variant');
+    assert.equal(difficulty,expectedDifficultySha256,variant);
+    if(expectedDifficulty===undefined)expectedDifficulty=difficulty;
+    else assert.equal(difficulty,expectedDifficulty,variant);
     console.log(JSON.stringify({variant,sha256,completion:output.stdout.toString().trim().split('\n').at(-1),
-      boundaryPixelChecks:425042,boundaryPerimeterPixels:1300,boundaryGuardChecks:18,boundaryRasterChecks:5}));
+      boundaryPixelChecks:425042,boundaryPerimeterPixels:1300,boundaryGuardChecks:18,boundaryRasterChecks:5,
+      difficultySha256:difficulty,difficultyFlagCases:82944,difficultyBoundsCases:56,difficultySequenceTicks:60,
+      spawnIntervalCases:112,themeQuotaCases:150,difficultyResetCases:7,spawnSelectionCases:1332}));
     assert.equal(sha256,expectedNativeSha256,variant);
     if(expected===undefined)expected=output.stdout;
     else assert.equal(Buffer.compare(output.stdout,expected),0,variant);

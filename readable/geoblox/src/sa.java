@@ -5,7 +5,7 @@ final class sa extends RuntimeException {
     static int releasesPerDifficultyStep;
     Throwable field_a;
     String field_d;
-    static double field_c;
+    static double specialSpriteKindProbability;
 
     final static void a(String param0, byte param1) {
         int stackIn_16_0 = 0;
@@ -117,10 +117,10 @@ final class sa extends RuntimeException {
         }
     }
 
-    final static void b(boolean param0) {
-        int var1 = (int)(201.0f / og.entityMotionSpeed * ij.field_ab + 0.5f);
-        kb.field_c = var1;
-        if (!param0) {
+    final static void recomputeSpawnReleaseInterval(boolean preserveReleaseQuota) {
+        int intervalTicks = (int)(201.0f / og.entityMotionSpeed * ij.spawnIntervalScale + 0.5f);
+        kb.spawnReleaseIntervalTicks = intervalTicks;
+        if (!preserveReleaseQuota) {
             releasesPerDifficultyStep = -10;
             return;
         }
@@ -147,7 +147,7 @@ final class sa extends RuntimeException {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 37) {
-            field_c = -0.44199917757712387;
+            specialSpriteKindProbability = -0.44199917757712387;
           }
           stackIn_3_0 = param0.b(param1 - 26135);
           return stackIn_3_0;
