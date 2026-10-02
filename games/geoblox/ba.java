@@ -25,7 +25,6 @@ final class ba implements Runnable {
     final void b(int param0) {
         try {
             InterruptedException var2 = null;
-            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             Object var2_ref = null;
             if (param0 >= -117) {
@@ -40,25 +39,17 @@ final class ba implements Runnable {
                 this.field_f = true;
                 this.notifyAll();
               }
-              if (this.field_m == null) {
-                this.field_m = null;
-                return;
-              }
-              L2: while (0 == this.field_m.field_a) {
-                bc.a(0, 1L);
-              }
-              if (1 == this.field_m.field_a) {
-                try {
-                  ((Thread) (this.field_m.field_b)).join();
-                  decompiledRegionSelector0 = 0;
-                } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  var2 = (InterruptedException) (Object) decompiledCaughtException;
-                  decompiledRegionSelector0 = 1;
+              if (this.field_m != null) {
+                L2: while (0 == this.field_m.field_a) {
+                  bc.a(0, 1L);
                 }
-                if (decompiledRegionSelector0 == 0) {
-                  this.field_m = null;
-                  return;
+                if (1 == this.field_m.field_a) {
+                  try {
+                    ((Thread) (this.field_m.field_b)).join();
+                  } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
+                    decompiledCaughtException = decompiledCaughtParameter0;
+                    var2 = (InterruptedException) (Object) decompiledCaughtException;
+                  }
                 }
               }
               this.field_m = null;

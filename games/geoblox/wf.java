@@ -44,22 +44,14 @@ abstract class wf extends ch {
               hi.field_G = oa.a(-12520) + 15000L;
               return var2;
             }
-            if (hj.field_a != 11) {
-              return var2;
-            }
-            if (ib.field_e != 0) {
-              return var2;
-            }
-            gi.b(param0 - 12617);
-          } else {
-            if (hj.field_a != 11) {
-              return var2;
-            }
-            if (ib.field_e != 0) {
-              return var2;
-            }
-            gi.b(param0 - 12617);
           }
+          if (hj.field_a != 11) {
+            return var2;
+          }
+          if (ib.field_e != 0) {
+            return var2;
+          }
+          gi.b(param0 - 12617);
           return var2;
         }
     }

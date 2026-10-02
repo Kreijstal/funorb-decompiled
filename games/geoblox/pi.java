@@ -228,29 +228,20 @@ final class pi extends vf {
           if (this.field_Q == null) {
             this.field_Q = new dm(var12, var13);
             Geoblox.a(1, this.field_Q);
-            var18.a(112, 144, var18.field_s << 4, var18.field_o << 4, -this.field_P << 10, 4096);
-            id.a(true);
-            this.field_Q.c(-(var18.field_s >> 1) + var9, var10 - var18.field_o, 256);
-            return;
+          } else {
+            if (this.field_Q.field_r < var12) {
+              this.field_Q = new dm(var12, var13);
+              Geoblox.a(1, this.field_Q);
+            } else {
+              if (this.field_Q.field_m < var13) {
+                this.field_Q = new dm(var12, var13);
+                Geoblox.a(1, this.field_Q);
+              } else {
+                Geoblox.a(1, this.field_Q);
+                vb.c();
+              }
+            }
           }
-          if (this.field_Q.field_r < var12) {
-            this.field_Q = new dm(var12, var13);
-            Geoblox.a(1, this.field_Q);
-            var18.a(112, 144, var18.field_s << 4, var18.field_o << 4, -this.field_P << 10, 4096);
-            id.a(true);
-            this.field_Q.c(-(var18.field_s >> 1) + var9, var10 - var18.field_o, 256);
-            return;
-          }
-          if (this.field_Q.field_m < var13) {
-            this.field_Q = new dm(var12, var13);
-            Geoblox.a(1, this.field_Q);
-            var18.a(112, 144, var18.field_s << 4, var18.field_o << 4, -this.field_P << 10, 4096);
-            id.a(true);
-            this.field_Q.c(-(var18.field_s >> 1) + var9, var10 - var18.field_o, 256);
-            return;
-          }
-          Geoblox.a(1, this.field_Q);
-          vb.c();
           var18.a(112, 144, var18.field_s << 4, var18.field_o << 4, -this.field_P << 10, 4096);
           id.a(true);
           this.field_Q.c(-(var18.field_s >> 1) + var9, var10 - var18.field_o, 256);

@@ -95,48 +95,27 @@ final class ra implements Iterable {
                 vl.field_p = vl.field_p | var3;
                 stackIn_35_0 = (!pb.field_t.c(13519)) ? 0 : 1;
                 var4 = stackIn_35_0;
-                pb.field_t.a(-35, new nj(param2));
-                if (var4 != 0) {
-                  gf.a((byte) -122);
-                }
-                if (!el.field_o.field_K) {
-                  ja.field_A.a(-44, new p(param2, param0, dc.field_a, el.field_g, sc.field_f, lb.field_b));
-                }
-                return;
+              } else {
+                dc.field_a = dc.field_a | 1 << var4;
+                el.field_g = el.field_g - (1 << var4);
+                vl.field_p = vl.field_p | var3;
+                stackIn_45_0 = (!pb.field_t.c(13519)) ? 0 : 1;
+                var4 = stackIn_45_0;
               }
-              dc.field_a = dc.field_a | 1 << var4;
-              el.field_g = el.field_g - (1 << var4);
-              vl.field_p = vl.field_p | var3;
-              stackIn_45_0 = (!pb.field_t.c(13519)) ? 0 : 1;
-              var4 = stackIn_45_0;
-              pb.field_t.a(-35, new nj(param2));
-              if (var4 != 0) {
-                gf.a((byte) -122);
+            } else {
+              field_b = (String) null;
+              if (var5 != 0) {
+                vl.field_p = vl.field_p | var3;
+                stackIn_23_0 = (!pb.field_t.c(13519)) ? 0 : 1;
+                var4 = stackIn_23_0;
+              } else {
+                dc.field_a = dc.field_a | 1 << var4;
+                el.field_g = el.field_g - (1 << var4);
+                vl.field_p = vl.field_p | var3;
+                stackIn_13_0 = (!pb.field_t.c(13519)) ? 0 : 1;
+                var4 = stackIn_13_0;
               }
-              if (!el.field_o.field_K) {
-                ja.field_A.a(-44, new p(param2, param0, dc.field_a, el.field_g, sc.field_f, lb.field_b));
-              }
-              return;
             }
-            field_b = (String) null;
-            if (var5 != 0) {
-              vl.field_p = vl.field_p | var3;
-              stackIn_23_0 = (!pb.field_t.c(13519)) ? 0 : 1;
-              var4 = stackIn_23_0;
-              pb.field_t.a(-35, new nj(param2));
-              if (var4 != 0) {
-                gf.a((byte) -122);
-              }
-              if (!el.field_o.field_K) {
-                ja.field_A.a(-44, new p(param2, param0, dc.field_a, el.field_g, sc.field_f, lb.field_b));
-              }
-              return;
-            }
-            dc.field_a = dc.field_a | 1 << var4;
-            el.field_g = el.field_g - (1 << var4);
-            vl.field_p = vl.field_p | var3;
-            stackIn_13_0 = (!pb.field_t.c(13519)) ? 0 : 1;
-            var4 = stackIn_13_0;
             pb.field_t.a(-35, new nj(param2));
             if (var4 != 0) {
               gf.a((byte) -122);
