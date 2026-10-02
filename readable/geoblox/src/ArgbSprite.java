@@ -317,166 +317,166 @@ final class ArgbSprite extends Sprite {
     }
 
     final void rotateNearest(int sourcePivotX, int sourcePivotY, int destinationX, int destinationY, int angle, int scale) {
-        int incrementValue$8 = 0;
-        int incrementValue$6 = 0;
-        int incrementValue$7 = 0;
-        int incrementValue$2 = 0;
-        int incrementValue$0 = 0;
-        int incrementValue$1 = 0;
-        int incrementValue$5 = 0;
-        int incrementValue$3 = 0;
-        int incrementValue$4 = 0;
-        double var7;
-        int var9;
-        int var10;
-        int var11;
-        int var12;
-        int var13;
-        int var14;
-        int var15;
-        int var16;
-        int var17;
-        int var18;
-        int var19;
-        int var20;
-        int var21;
-        int var22;
-        int var23;
-        double var24;
-        int var26;
-        int var27;
-        int var28;
-        int var29;
-        int var30;
-        int var31;
-        int var32;
-        int var33;
-        int var34;
-        int var35;
-        int var36;
-        int var37;
-        int var38;
-        int var39;
-        int var40;
-        int var41;
+        int writeIndexFixedXFixedY = 0;
+        int writeIndexFixedXForwardY = 0;
+        int writeIndexFixedXReverseY = 0;
+        int writeIndexForwardXFixedY = 0;
+        int writeIndexForwardXForwardY = 0;
+        int writeIndexForwardXReverseY = 0;
+        int writeIndexReverseXFixedY = 0;
+        int writeIndexReverseXForwardY = 0;
+        int writeIndexReverseXReverseY = 0;
+        double angleRadians;
+        int scaledSin;
+        int scaledCos;
+        int corner0X;
+        int corner0Y;
+        int corner1X;
+        int corner1Y;
+        int corner2X;
+        int corner2Y;
+        int corner3X;
+        int corner3Y;
+        int leftBound;
+        int rightThenNegativeWidth;
+        int topBound;
+        int bottomThenNegativeHeight;
+        int rowDestinationIndex;
+        double inverseScaleFactor;
+        int inverseSinStep;
+        int inverseCosStep;
+        int destinationOffsetX;
+        int destinationOffsetY;
+        int rowSourceXQ12;
+        int rowSourceYQ12;
+        int clipPixelCount;
+        int negativeRowCounter;
+        int destinationIndex;
+        int sourceXQ12;
+        int sourceYQ12;
+        int negativePixelCounter;
+        int sampledPixel;
+        int destinationPixel;
+        int storedAlpha;
+        int inverseAlpha256;
         if (scale == 0) {
           return;
         }
         {
           sourcePivotX = sourcePivotX - (this.trimX << 4);
           sourcePivotY = sourcePivotY - (this.trimY << 4);
-          var7 = (double)(angle & 65535) * 0.00009587379924285257;
-          var9 = (int)Math.floor(Math.sin(var7) * (double)scale + 0.5);
-          var10 = (int)Math.floor(Math.cos(var7) * (double)scale + 0.5);
-          var11 = -sourcePivotX * var10 + -sourcePivotY * var9;
-          var12 = -(-sourcePivotX) * var9 + -sourcePivotY * var10;
-          var13 = ((this.width << 4) - sourcePivotX) * var10 + -sourcePivotY * var9;
-          var14 = -((this.width << 4) - sourcePivotX) * var9 + -sourcePivotY * var10;
-          var15 = -sourcePivotX * var10 + ((this.height << 4) - sourcePivotY) * var9;
-          var16 = -(-sourcePivotX) * var9 + ((this.height << 4) - sourcePivotY) * var10;
-          var17 = ((this.width << 4) - sourcePivotX) * var10 + ((this.height << 4) - sourcePivotY) * var9;
-          var18 = -((this.width << 4) - sourcePivotX) * var9 + ((this.height << 4) - sourcePivotY) * var10;
-          if (var11 >= var13) {
-            var19 = var13;
-            var20 = var11;
+          angleRadians = (double)(angle & 65535) * 0.00009587379924285257;
+          scaledSin = (int)Math.floor(Math.sin(angleRadians) * (double)scale + 0.5);
+          scaledCos = (int)Math.floor(Math.cos(angleRadians) * (double)scale + 0.5);
+          corner0X = -sourcePivotX * scaledCos + -sourcePivotY * scaledSin;
+          corner0Y = -(-sourcePivotX) * scaledSin + -sourcePivotY * scaledCos;
+          corner1X = ((this.width << 4) - sourcePivotX) * scaledCos + -sourcePivotY * scaledSin;
+          corner1Y = -((this.width << 4) - sourcePivotX) * scaledSin + -sourcePivotY * scaledCos;
+          corner2X = -sourcePivotX * scaledCos + ((this.height << 4) - sourcePivotY) * scaledSin;
+          corner2Y = -(-sourcePivotX) * scaledSin + ((this.height << 4) - sourcePivotY) * scaledCos;
+          corner3X = ((this.width << 4) - sourcePivotX) * scaledCos + ((this.height << 4) - sourcePivotY) * scaledSin;
+          corner3Y = -((this.width << 4) - sourcePivotX) * scaledSin + ((this.height << 4) - sourcePivotY) * scaledCos;
+          if (corner0X >= corner1X) {
+            leftBound = corner1X;
+            rightThenNegativeWidth = corner0X;
           } else {
-            var19 = var11;
-            var20 = var13;
+            leftBound = corner0X;
+            rightThenNegativeWidth = corner1X;
           }
-          if (var15 < var19) {
-            var19 = var15;
+          if (corner2X < leftBound) {
+            leftBound = corner2X;
           }
-          if (var17 < var19) {
-            var19 = var17;
+          if (corner3X < leftBound) {
+            leftBound = corner3X;
           }
-          if (var15 > var20) {
-            var20 = var15;
+          if (corner2X > rightThenNegativeWidth) {
+            rightThenNegativeWidth = corner2X;
           }
-          if (var17 > var20) {
-            var20 = var17;
+          if (corner3X > rightThenNegativeWidth) {
+            rightThenNegativeWidth = corner3X;
           }
-          if (var12 >= var14) {
-            var21 = var14;
-            var22 = var12;
+          if (corner0Y >= corner1Y) {
+            topBound = corner1Y;
+            bottomThenNegativeHeight = corner0Y;
           } else {
-            var21 = var12;
-            var22 = var14;
+            topBound = corner0Y;
+            bottomThenNegativeHeight = corner1Y;
           }
-          if (var16 < var21) {
-            var21 = var16;
+          if (corner2Y < topBound) {
+            topBound = corner2Y;
           }
-          if (var18 < var21) {
-            var21 = var18;
+          if (corner3Y < topBound) {
+            topBound = corner3Y;
           }
-          if (var16 > var22) {
-            var22 = var16;
+          if (corner2Y > bottomThenNegativeHeight) {
+            bottomThenNegativeHeight = corner2Y;
           }
-          if (var18 > var22) {
-            var22 = var18;
+          if (corner3Y > bottomThenNegativeHeight) {
+            bottomThenNegativeHeight = corner3Y;
           }
-          var19 = var19 >> 12;
-          var20 = var20 + 4095 >> 12;
-          var21 = var21 >> 12;
-          var22 = var22 + 4095 >> 12;
-          var19 = var19 + destinationX;
-          var20 = var20 + destinationX;
-          var21 = var21 + destinationY;
-          var22 = var22 + destinationY;
-          var19 = var19 >> 4;
-          var20 = var20 + 15 >> 4;
-          var21 = var21 >> 4;
-          var22 = var22 + 15 >> 4;
-          if (var19 < SoftwareRasterizer.clipLeft) {
-            var19 = SoftwareRasterizer.clipLeft;
+          leftBound = leftBound >> 12;
+          rightThenNegativeWidth = rightThenNegativeWidth + 4095 >> 12;
+          topBound = topBound >> 12;
+          bottomThenNegativeHeight = bottomThenNegativeHeight + 4095 >> 12;
+          leftBound = leftBound + destinationX;
+          rightThenNegativeWidth = rightThenNegativeWidth + destinationX;
+          topBound = topBound + destinationY;
+          bottomThenNegativeHeight = bottomThenNegativeHeight + destinationY;
+          leftBound = leftBound >> 4;
+          rightThenNegativeWidth = rightThenNegativeWidth + 15 >> 4;
+          topBound = topBound >> 4;
+          bottomThenNegativeHeight = bottomThenNegativeHeight + 15 >> 4;
+          if (leftBound < SoftwareRasterizer.clipLeft) {
+            leftBound = SoftwareRasterizer.clipLeft;
           }
-          if (var20 > SoftwareRasterizer.clipRight) {
-            var20 = SoftwareRasterizer.clipRight;
+          if (rightThenNegativeWidth > SoftwareRasterizer.clipRight) {
+            rightThenNegativeWidth = SoftwareRasterizer.clipRight;
           }
-          if (var21 < SoftwareRasterizer.clipTop) {
-            var21 = SoftwareRasterizer.clipTop;
+          if (topBound < SoftwareRasterizer.clipTop) {
+            topBound = SoftwareRasterizer.clipTop;
           }
-          if (var22 > SoftwareRasterizer.clipBottom) {
-            var22 = SoftwareRasterizer.clipBottom;
+          if (bottomThenNegativeHeight > SoftwareRasterizer.clipBottom) {
+            bottomThenNegativeHeight = SoftwareRasterizer.clipBottom;
           }
-          var20 = var19 - var20;
-          if (var20 >= 0) {
+          rightThenNegativeWidth = leftBound - rightThenNegativeWidth;
+          if (rightThenNegativeWidth >= 0) {
             return;
           }
-          var22 = var21 - var22;
-          if (var22 >= 0) {
+          bottomThenNegativeHeight = topBound - bottomThenNegativeHeight;
+          if (bottomThenNegativeHeight >= 0) {
             return;
           }
           L14: {
-            var23 = var21 * SoftwareRasterizer.stride + var19;
-            var24 = 16777216.0 / (double)scale;
-            var26 = (int)Math.floor(Math.sin(var7) * var24 + 0.5);
-            var27 = (int)Math.floor(Math.cos(var7) * var24 + 0.5);
-            var28 = (var19 << 4) + 8 - destinationX;
-            var29 = (var21 << 4) + 8 - destinationY;
-            var30 = (sourcePivotX << 8) - (var29 * var26 >> 4);
-            var31 = (sourcePivotY << 8) + (var29 * var27 >> 4);
-            if (var27 == 0) {
-              if (var26 == 0) {
-                var33 = var22;
-                L59: while (var33 < 0) {
+            rowDestinationIndex = topBound * SoftwareRasterizer.stride + leftBound;
+            inverseScaleFactor = 16777216.0 / (double)scale;
+            inverseSinStep = (int)Math.floor(Math.sin(angleRadians) * inverseScaleFactor + 0.5);
+            inverseCosStep = (int)Math.floor(Math.cos(angleRadians) * inverseScaleFactor + 0.5);
+            destinationOffsetX = (leftBound << 4) + 8 - destinationX;
+            destinationOffsetY = (topBound << 4) + 8 - destinationY;
+            rowSourceXQ12 = (sourcePivotX << 8) - (destinationOffsetY * inverseSinStep >> 4);
+            rowSourceYQ12 = (sourcePivotY << 8) + (destinationOffsetY * inverseCosStep >> 4);
+            if (inverseCosStep == 0) {
+              if (inverseSinStep == 0) {
+                negativeRowCounter = bottomThenNegativeHeight;
+                L59: while (negativeRowCounter < 0) {
                   L60: {
-                    var34 = var23;
-                    var35 = var30;
-                    var36 = var31;
-                    var37 = var20;
-                    if (var35 >= 0) {
-                      if (var36 >= 0) {
-                        if (var35 - (this.width << 12) < 0) {
-                          if (var36 - (this.height << 12) < 0) {
-                            L61: while (var37 < 0) {
-                              var38 = this.pixels[(var36 >> 12) * this.width + (var35 >> 12)];
-                              var39 = SoftwareRasterizer.framebuffer[var34];
-                              var40 = var38 >>> 24;
-                              var41 = 256 - var40;
-                              incrementValue$8 = var34;
-                              var34++;
-                              SoftwareRasterizer.framebuffer[incrementValue$8] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
-                              var37++;
+                    destinationIndex = rowDestinationIndex;
+                    sourceXQ12 = rowSourceXQ12;
+                    sourceYQ12 = rowSourceYQ12;
+                    negativePixelCounter = rightThenNegativeWidth;
+                    if (sourceXQ12 >= 0) {
+                      if (sourceYQ12 >= 0) {
+                        if (sourceXQ12 - (this.width << 12) < 0) {
+                          if (sourceYQ12 - (this.height << 12) < 0) {
+                            L61: while (negativePixelCounter < 0) {
+                              sampledPixel = this.pixels[(sourceYQ12 >> 12) * this.width + (sourceXQ12 >> 12)];
+                              destinationPixel = SoftwareRasterizer.framebuffer[destinationIndex];
+                              storedAlpha = sampledPixel >>> 24;
+                              inverseAlpha256 = 256 - storedAlpha;
+                              writeIndexFixedXFixedY = destinationIndex;
+                              destinationIndex++;
+                              SoftwareRasterizer.framebuffer[writeIndexFixedXFixedY] = ((sampledPixel & 16711935) * storedAlpha + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((sampledPixel & 65280) * storedAlpha + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
+                              negativePixelCounter++;
                             }
                             break L60;
                           }
@@ -484,368 +484,368 @@ final class ArgbSprite extends Sprite {
                       }
                     }
                   }
-                  var33++;
-                  var23 = var23 + SoftwareRasterizer.stride;
+                  negativeRowCounter++;
+                  rowDestinationIndex = rowDestinationIndex + SoftwareRasterizer.stride;
                 }
                 return;
               }
-              if (var26 >= 0) {
-                var33 = var22;
-                L49: while (var33 < 0) {
+              if (inverseSinStep >= 0) {
+                negativeRowCounter = bottomThenNegativeHeight;
+                L49: while (negativeRowCounter < 0) {
                   L50: {
-                    var34 = var23;
-                    var35 = var30;
-                    var36 = var31 + (var28 * var26 >> 4);
-                    var37 = var20;
-                    if (var35 >= 0) {
-                      if (var35 - (this.width << 12) < 0) {
-                        if (var36 < 0) {
-                          var32 = (var26 - 1 - var36) / var26;
-                          var37 = var37 + var32;
-                          var36 = var36 + var26 * var32;
-                          var34 = var34 + var32;
+                    destinationIndex = rowDestinationIndex;
+                    sourceXQ12 = rowSourceXQ12;
+                    sourceYQ12 = rowSourceYQ12 + (destinationOffsetX * inverseSinStep >> 4);
+                    negativePixelCounter = rightThenNegativeWidth;
+                    if (sourceXQ12 >= 0) {
+                      if (sourceXQ12 - (this.width << 12) < 0) {
+                        if (sourceYQ12 < 0) {
+                          clipPixelCount = (inverseSinStep - 1 - sourceYQ12) / inverseSinStep;
+                          negativePixelCounter = negativePixelCounter + clipPixelCount;
+                          sourceYQ12 = sourceYQ12 + inverseSinStep * clipPixelCount;
+                          destinationIndex = destinationIndex + clipPixelCount;
                         }
-                        var32 = (1 + var36 - (this.height << 12) - var26) / var26;
-                        if ((1 + var36 - (this.height << 12) - var26) / var26 > var37) {
-                          var37 = var32;
+                        clipPixelCount = (1 + sourceYQ12 - (this.height << 12) - inverseSinStep) / inverseSinStep;
+                        if ((1 + sourceYQ12 - (this.height << 12) - inverseSinStep) / inverseSinStep > negativePixelCounter) {
+                          negativePixelCounter = clipPixelCount;
                         }
-                        L53: while (var37 < 0) {
-                          var38 = this.pixels[(var36 >> 12) * this.width + (var35 >> 12)];
-                          var39 = SoftwareRasterizer.framebuffer[var34];
-                          var40 = var38 >>> 24;
-                          var41 = 256 - var40;
-                          incrementValue$6 = var34;
-                          var34++;
-                          SoftwareRasterizer.framebuffer[incrementValue$6] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
-                          var36 = var36 + var26;
-                          var37++;
+                        L53: while (negativePixelCounter < 0) {
+                          sampledPixel = this.pixels[(sourceYQ12 >> 12) * this.width + (sourceXQ12 >> 12)];
+                          destinationPixel = SoftwareRasterizer.framebuffer[destinationIndex];
+                          storedAlpha = sampledPixel >>> 24;
+                          inverseAlpha256 = 256 - storedAlpha;
+                          writeIndexFixedXForwardY = destinationIndex;
+                          destinationIndex++;
+                          SoftwareRasterizer.framebuffer[writeIndexFixedXForwardY] = ((sampledPixel & 16711935) * storedAlpha + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((sampledPixel & 65280) * storedAlpha + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
+                          sourceYQ12 = sourceYQ12 + inverseSinStep;
+                          negativePixelCounter++;
                         }
                         break L50;
                       }
                     }
                   }
-                  var33++;
-                  var30 = var30 - var26;
-                  var23 = var23 + SoftwareRasterizer.stride;
+                  negativeRowCounter++;
+                  rowSourceXQ12 = rowSourceXQ12 - inverseSinStep;
+                  rowDestinationIndex = rowDestinationIndex + SoftwareRasterizer.stride;
                 }
                 break L14;
               }
-              var33 = var22;
-              L54: while (var33 < 0) {
+              negativeRowCounter = bottomThenNegativeHeight;
+              L54: while (negativeRowCounter < 0) {
                 L55: {
-                  var34 = var23;
-                  var35 = var30;
-                  var36 = var31 + (var28 * var26 >> 4);
-                  var37 = var20;
-                  if (var35 >= 0) {
-                    if (var35 - (this.width << 12) < 0) {
-                      var32 = var36 - (this.height << 12);
-                      if (var36 - (this.height << 12) >= 0) {
-                        var32 = (var26 - var32) / var26;
-                        var37 = var37 + var32;
-                        var36 = var36 + var26 * var32;
-                        var34 = var34 + var32;
+                  destinationIndex = rowDestinationIndex;
+                  sourceXQ12 = rowSourceXQ12;
+                  sourceYQ12 = rowSourceYQ12 + (destinationOffsetX * inverseSinStep >> 4);
+                  negativePixelCounter = rightThenNegativeWidth;
+                  if (sourceXQ12 >= 0) {
+                    if (sourceXQ12 - (this.width << 12) < 0) {
+                      clipPixelCount = sourceYQ12 - (this.height << 12);
+                      if (sourceYQ12 - (this.height << 12) >= 0) {
+                        clipPixelCount = (inverseSinStep - clipPixelCount) / inverseSinStep;
+                        negativePixelCounter = negativePixelCounter + clipPixelCount;
+                        sourceYQ12 = sourceYQ12 + inverseSinStep * clipPixelCount;
+                        destinationIndex = destinationIndex + clipPixelCount;
                       }
-                      var32 = (var36 - var26) / var26;
-                      if ((var36 - var26) / var26 > var37) {
-                        var37 = var32;
+                      clipPixelCount = (sourceYQ12 - inverseSinStep) / inverseSinStep;
+                      if ((sourceYQ12 - inverseSinStep) / inverseSinStep > negativePixelCounter) {
+                        negativePixelCounter = clipPixelCount;
                       }
-                      L58: while (var37 < 0) {
-                        var38 = this.pixels[(var36 >> 12) * this.width + (var35 >> 12)];
-                        var39 = SoftwareRasterizer.framebuffer[var34];
-                        var40 = var38 >>> 24;
-                        var41 = 256 - var40;
-                        incrementValue$7 = var34;
-                        var34++;
-                        SoftwareRasterizer.framebuffer[incrementValue$7] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
-                        var36 = var36 + var26;
-                        var37++;
+                      L58: while (negativePixelCounter < 0) {
+                        sampledPixel = this.pixels[(sourceYQ12 >> 12) * this.width + (sourceXQ12 >> 12)];
+                        destinationPixel = SoftwareRasterizer.framebuffer[destinationIndex];
+                        storedAlpha = sampledPixel >>> 24;
+                        inverseAlpha256 = 256 - storedAlpha;
+                        writeIndexFixedXReverseY = destinationIndex;
+                        destinationIndex++;
+                        SoftwareRasterizer.framebuffer[writeIndexFixedXReverseY] = ((sampledPixel & 16711935) * storedAlpha + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((sampledPixel & 65280) * storedAlpha + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
+                        sourceYQ12 = sourceYQ12 + inverseSinStep;
+                        negativePixelCounter++;
                       }
                       break L55;
                     }
                   }
                 }
-                var33++;
-                var30 = var30 - var26;
-                var23 = var23 + SoftwareRasterizer.stride;
+                negativeRowCounter++;
+                rowSourceXQ12 = rowSourceXQ12 - inverseSinStep;
+                rowDestinationIndex = rowDestinationIndex + SoftwareRasterizer.stride;
               }
               break L14;
             }
-            if (var27 >= 0) {
-              if (var26 == 0) {
-                var33 = var22;
-                L27: while (var33 < 0) {
+            if (inverseCosStep >= 0) {
+              if (inverseSinStep == 0) {
+                negativeRowCounter = bottomThenNegativeHeight;
+                L27: while (negativeRowCounter < 0) {
                   L28: {
-                    var34 = var23;
-                    var35 = var30 + (var28 * var27 >> 4);
-                    var36 = var31;
-                    var37 = var20;
-                    if (var36 >= 0) {
-                      if (var36 - (this.height << 12) < 0) {
-                        if (var35 < 0) {
-                          var32 = (var27 - 1 - var35) / var27;
-                          var37 = var37 + var32;
-                          var35 = var35 + var27 * var32;
-                          var34 = var34 + var32;
+                    destinationIndex = rowDestinationIndex;
+                    sourceXQ12 = rowSourceXQ12 + (destinationOffsetX * inverseCosStep >> 4);
+                    sourceYQ12 = rowSourceYQ12;
+                    negativePixelCounter = rightThenNegativeWidth;
+                    if (sourceYQ12 >= 0) {
+                      if (sourceYQ12 - (this.height << 12) < 0) {
+                        if (sourceXQ12 < 0) {
+                          clipPixelCount = (inverseCosStep - 1 - sourceXQ12) / inverseCosStep;
+                          negativePixelCounter = negativePixelCounter + clipPixelCount;
+                          sourceXQ12 = sourceXQ12 + inverseCosStep * clipPixelCount;
+                          destinationIndex = destinationIndex + clipPixelCount;
                         }
-                        var32 = (1 + var35 - (this.width << 12) - var27) / var27;
-                        if ((1 + var35 - (this.width << 12) - var27) / var27 > var37) {
-                          var37 = var32;
+                        clipPixelCount = (1 + sourceXQ12 - (this.width << 12) - inverseCosStep) / inverseCosStep;
+                        if ((1 + sourceXQ12 - (this.width << 12) - inverseCosStep) / inverseCosStep > negativePixelCounter) {
+                          negativePixelCounter = clipPixelCount;
                         }
-                        L31: while (var37 < 0) {
-                          var38 = this.pixels[(var36 >> 12) * this.width + (var35 >> 12)];
-                          var39 = SoftwareRasterizer.framebuffer[var34];
-                          var40 = var38 >>> 24;
-                          var41 = 256 - var40;
-                          incrementValue$2 = var34;
-                          var34++;
-                          SoftwareRasterizer.framebuffer[incrementValue$2] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
-                          var35 = var35 + var27;
-                          var37++;
+                        L31: while (negativePixelCounter < 0) {
+                          sampledPixel = this.pixels[(sourceYQ12 >> 12) * this.width + (sourceXQ12 >> 12)];
+                          destinationPixel = SoftwareRasterizer.framebuffer[destinationIndex];
+                          storedAlpha = sampledPixel >>> 24;
+                          inverseAlpha256 = 256 - storedAlpha;
+                          writeIndexForwardXFixedY = destinationIndex;
+                          destinationIndex++;
+                          SoftwareRasterizer.framebuffer[writeIndexForwardXFixedY] = ((sampledPixel & 16711935) * storedAlpha + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((sampledPixel & 65280) * storedAlpha + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
+                          sourceXQ12 = sourceXQ12 + inverseCosStep;
+                          negativePixelCounter++;
                         }
                         break L28;
                       }
                     }
                   }
-                  var33++;
-                  var31 = var31 + var27;
-                  var23 = var23 + SoftwareRasterizer.stride;
+                  negativeRowCounter++;
+                  rowSourceYQ12 = rowSourceYQ12 + inverseCosStep;
+                  rowDestinationIndex = rowDestinationIndex + SoftwareRasterizer.stride;
                 }
                 break L14;
               }
-              if (var26 >= 0) {
-                var33 = var22;
-                L15: while (var33 < 0) {
-                  var34 = var23;
-                  var35 = var30 + (var28 * var27 >> 4);
-                  var36 = var31 + (var28 * var26 >> 4);
-                  var37 = var20;
-                  if (var35 < 0) {
-                    var32 = (var27 - 1 - var35) / var27;
-                    var37 = var37 + var32;
-                    var35 = var35 + var27 * var32;
-                    var36 = var36 + var26 * var32;
-                    var34 = var34 + var32;
+              if (inverseSinStep >= 0) {
+                negativeRowCounter = bottomThenNegativeHeight;
+                L15: while (negativeRowCounter < 0) {
+                  destinationIndex = rowDestinationIndex;
+                  sourceXQ12 = rowSourceXQ12 + (destinationOffsetX * inverseCosStep >> 4);
+                  sourceYQ12 = rowSourceYQ12 + (destinationOffsetX * inverseSinStep >> 4);
+                  negativePixelCounter = rightThenNegativeWidth;
+                  if (sourceXQ12 < 0) {
+                    clipPixelCount = (inverseCosStep - 1 - sourceXQ12) / inverseCosStep;
+                    negativePixelCounter = negativePixelCounter + clipPixelCount;
+                    sourceXQ12 = sourceXQ12 + inverseCosStep * clipPixelCount;
+                    sourceYQ12 = sourceYQ12 + inverseSinStep * clipPixelCount;
+                    destinationIndex = destinationIndex + clipPixelCount;
                   }
-                  var32 = (1 + var35 - (this.width << 12) - var27) / var27;
-                  if ((1 + var35 - (this.width << 12) - var27) / var27 > var37) {
-                    var37 = var32;
+                  clipPixelCount = (1 + sourceXQ12 - (this.width << 12) - inverseCosStep) / inverseCosStep;
+                  if ((1 + sourceXQ12 - (this.width << 12) - inverseCosStep) / inverseCosStep > negativePixelCounter) {
+                    negativePixelCounter = clipPixelCount;
                   }
-                  if (var36 < 0) {
-                    var32 = (var26 - 1 - var36) / var26;
-                    var37 = var37 + var32;
-                    var35 = var35 + var27 * var32;
-                    var36 = var36 + var26 * var32;
-                    var34 = var34 + var32;
+                  if (sourceYQ12 < 0) {
+                    clipPixelCount = (inverseSinStep - 1 - sourceYQ12) / inverseSinStep;
+                    negativePixelCounter = negativePixelCounter + clipPixelCount;
+                    sourceXQ12 = sourceXQ12 + inverseCosStep * clipPixelCount;
+                    sourceYQ12 = sourceYQ12 + inverseSinStep * clipPixelCount;
+                    destinationIndex = destinationIndex + clipPixelCount;
                   }
-                  var32 = (1 + var36 - (this.height << 12) - var26) / var26;
-                  if ((1 + var36 - (this.height << 12) - var26) / var26 > var37) {
-                    var37 = var32;
+                  clipPixelCount = (1 + sourceYQ12 - (this.height << 12) - inverseSinStep) / inverseSinStep;
+                  if ((1 + sourceYQ12 - (this.height << 12) - inverseSinStep) / inverseSinStep > negativePixelCounter) {
+                    negativePixelCounter = clipPixelCount;
                   }
-                  L20: while (var37 < 0) {
-                    var38 = this.pixels[(var36 >> 12) * this.width + (var35 >> 12)];
-                    var39 = SoftwareRasterizer.framebuffer[var34];
-                    var40 = var38 >>> 24;
-                    var41 = 256 - var40;
-                    incrementValue$0 = var34;
-                    var34++;
-                    SoftwareRasterizer.framebuffer[incrementValue$0] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
-                    var35 = var35 + var27;
-                    var36 = var36 + var26;
-                    var37++;
+                  L20: while (negativePixelCounter < 0) {
+                    sampledPixel = this.pixels[(sourceYQ12 >> 12) * this.width + (sourceXQ12 >> 12)];
+                    destinationPixel = SoftwareRasterizer.framebuffer[destinationIndex];
+                    storedAlpha = sampledPixel >>> 24;
+                    inverseAlpha256 = 256 - storedAlpha;
+                    writeIndexForwardXForwardY = destinationIndex;
+                    destinationIndex++;
+                    SoftwareRasterizer.framebuffer[writeIndexForwardXForwardY] = ((sampledPixel & 16711935) * storedAlpha + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((sampledPixel & 65280) * storedAlpha + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
+                    sourceXQ12 = sourceXQ12 + inverseCosStep;
+                    sourceYQ12 = sourceYQ12 + inverseSinStep;
+                    negativePixelCounter++;
                   }
-                  var33++;
-                  var30 = var30 - var26;
-                  var31 = var31 + var27;
-                  var23 = var23 + SoftwareRasterizer.stride;
+                  negativeRowCounter++;
+                  rowSourceXQ12 = rowSourceXQ12 - inverseSinStep;
+                  rowSourceYQ12 = rowSourceYQ12 + inverseCosStep;
+                  rowDestinationIndex = rowDestinationIndex + SoftwareRasterizer.stride;
                 }
                 break L14;
               }
-              var33 = var22;
-              L21: while (var33 < 0) {
-                var34 = var23;
-                var35 = var30 + (var28 * var27 >> 4);
-                var36 = var31 + (var28 * var26 >> 4);
-                var37 = var20;
-                if (var35 < 0) {
-                  var32 = (var27 - 1 - var35) / var27;
-                  var37 = var37 + var32;
-                  var35 = var35 + var27 * var32;
-                  var36 = var36 + var26 * var32;
-                  var34 = var34 + var32;
+              negativeRowCounter = bottomThenNegativeHeight;
+              L21: while (negativeRowCounter < 0) {
+                destinationIndex = rowDestinationIndex;
+                sourceXQ12 = rowSourceXQ12 + (destinationOffsetX * inverseCosStep >> 4);
+                sourceYQ12 = rowSourceYQ12 + (destinationOffsetX * inverseSinStep >> 4);
+                negativePixelCounter = rightThenNegativeWidth;
+                if (sourceXQ12 < 0) {
+                  clipPixelCount = (inverseCosStep - 1 - sourceXQ12) / inverseCosStep;
+                  negativePixelCounter = negativePixelCounter + clipPixelCount;
+                  sourceXQ12 = sourceXQ12 + inverseCosStep * clipPixelCount;
+                  sourceYQ12 = sourceYQ12 + inverseSinStep * clipPixelCount;
+                  destinationIndex = destinationIndex + clipPixelCount;
                 }
-                var32 = (1 + var35 - (this.width << 12) - var27) / var27;
-                if ((1 + var35 - (this.width << 12) - var27) / var27 > var37) {
-                  var37 = var32;
+                clipPixelCount = (1 + sourceXQ12 - (this.width << 12) - inverseCosStep) / inverseCosStep;
+                if ((1 + sourceXQ12 - (this.width << 12) - inverseCosStep) / inverseCosStep > negativePixelCounter) {
+                  negativePixelCounter = clipPixelCount;
                 }
-                var32 = var36 - (this.height << 12);
-                if (var36 - (this.height << 12) >= 0) {
-                  var32 = (var26 - var32) / var26;
-                  var37 = var37 + var32;
-                  var35 = var35 + var27 * var32;
-                  var36 = var36 + var26 * var32;
-                  var34 = var34 + var32;
+                clipPixelCount = sourceYQ12 - (this.height << 12);
+                if (sourceYQ12 - (this.height << 12) >= 0) {
+                  clipPixelCount = (inverseSinStep - clipPixelCount) / inverseSinStep;
+                  negativePixelCounter = negativePixelCounter + clipPixelCount;
+                  sourceXQ12 = sourceXQ12 + inverseCosStep * clipPixelCount;
+                  sourceYQ12 = sourceYQ12 + inverseSinStep * clipPixelCount;
+                  destinationIndex = destinationIndex + clipPixelCount;
                 }
-                var32 = (var36 - var26) / var26;
-                if ((var36 - var26) / var26 > var37) {
-                  var37 = var32;
+                clipPixelCount = (sourceYQ12 - inverseSinStep) / inverseSinStep;
+                if ((sourceYQ12 - inverseSinStep) / inverseSinStep > negativePixelCounter) {
+                  negativePixelCounter = clipPixelCount;
                 }
-                L26: while (var37 < 0) {
-                  var38 = this.pixels[(var36 >> 12) * this.width + (var35 >> 12)];
-                  var39 = SoftwareRasterizer.framebuffer[var34];
-                  var40 = var38 >>> 24;
-                  var41 = 256 - var40;
-                  incrementValue$1 = var34;
-                  var34++;
-                  SoftwareRasterizer.framebuffer[incrementValue$1] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
-                  var35 = var35 + var27;
-                  var36 = var36 + var26;
-                  var37++;
+                L26: while (negativePixelCounter < 0) {
+                  sampledPixel = this.pixels[(sourceYQ12 >> 12) * this.width + (sourceXQ12 >> 12)];
+                  destinationPixel = SoftwareRasterizer.framebuffer[destinationIndex];
+                  storedAlpha = sampledPixel >>> 24;
+                  inverseAlpha256 = 256 - storedAlpha;
+                  writeIndexForwardXReverseY = destinationIndex;
+                  destinationIndex++;
+                  SoftwareRasterizer.framebuffer[writeIndexForwardXReverseY] = ((sampledPixel & 16711935) * storedAlpha + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((sampledPixel & 65280) * storedAlpha + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
+                  sourceXQ12 = sourceXQ12 + inverseCosStep;
+                  sourceYQ12 = sourceYQ12 + inverseSinStep;
+                  negativePixelCounter++;
                 }
-                var33++;
-                var30 = var30 - var26;
-                var31 = var31 + var27;
-                var23 = var23 + SoftwareRasterizer.stride;
+                negativeRowCounter++;
+                rowSourceXQ12 = rowSourceXQ12 - inverseSinStep;
+                rowSourceYQ12 = rowSourceYQ12 + inverseCosStep;
+                rowDestinationIndex = rowDestinationIndex + SoftwareRasterizer.stride;
               }
               break L14;
             }
-            if (var26 == 0) {
-              var33 = var22;
-              L44: while (var33 < 0) {
+            if (inverseSinStep == 0) {
+              negativeRowCounter = bottomThenNegativeHeight;
+              L44: while (negativeRowCounter < 0) {
                 L45: {
-                  var34 = var23;
-                  var35 = var30 + (var28 * var27 >> 4);
-                  var36 = var31;
-                  var37 = var20;
-                  if (var36 >= 0) {
-                    if (var36 - (this.height << 12) < 0) {
-                      var32 = var35 - (this.width << 12);
-                      if (var35 - (this.width << 12) >= 0) {
-                        var32 = (var27 - var32) / var27;
-                        var37 = var37 + var32;
-                        var35 = var35 + var27 * var32;
-                        var34 = var34 + var32;
+                  destinationIndex = rowDestinationIndex;
+                  sourceXQ12 = rowSourceXQ12 + (destinationOffsetX * inverseCosStep >> 4);
+                  sourceYQ12 = rowSourceYQ12;
+                  negativePixelCounter = rightThenNegativeWidth;
+                  if (sourceYQ12 >= 0) {
+                    if (sourceYQ12 - (this.height << 12) < 0) {
+                      clipPixelCount = sourceXQ12 - (this.width << 12);
+                      if (sourceXQ12 - (this.width << 12) >= 0) {
+                        clipPixelCount = (inverseCosStep - clipPixelCount) / inverseCosStep;
+                        negativePixelCounter = negativePixelCounter + clipPixelCount;
+                        sourceXQ12 = sourceXQ12 + inverseCosStep * clipPixelCount;
+                        destinationIndex = destinationIndex + clipPixelCount;
                       }
-                      var32 = (var35 - var27) / var27;
-                      if ((var35 - var27) / var27 > var37) {
-                        var37 = var32;
+                      clipPixelCount = (sourceXQ12 - inverseCosStep) / inverseCosStep;
+                      if ((sourceXQ12 - inverseCosStep) / inverseCosStep > negativePixelCounter) {
+                        negativePixelCounter = clipPixelCount;
                       }
-                      L48: while (var37 < 0) {
-                        var38 = this.pixels[(var36 >> 12) * this.width + (var35 >> 12)];
-                        var39 = SoftwareRasterizer.framebuffer[var34];
-                        var40 = var38 >>> 24;
-                        var41 = 256 - var40;
-                        incrementValue$5 = var34;
-                        var34++;
-                        SoftwareRasterizer.framebuffer[incrementValue$5] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
-                        var35 = var35 + var27;
-                        var37++;
+                      L48: while (negativePixelCounter < 0) {
+                        sampledPixel = this.pixels[(sourceYQ12 >> 12) * this.width + (sourceXQ12 >> 12)];
+                        destinationPixel = SoftwareRasterizer.framebuffer[destinationIndex];
+                        storedAlpha = sampledPixel >>> 24;
+                        inverseAlpha256 = 256 - storedAlpha;
+                        writeIndexReverseXFixedY = destinationIndex;
+                        destinationIndex++;
+                        SoftwareRasterizer.framebuffer[writeIndexReverseXFixedY] = ((sampledPixel & 16711935) * storedAlpha + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((sampledPixel & 65280) * storedAlpha + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
+                        sourceXQ12 = sourceXQ12 + inverseCosStep;
+                        negativePixelCounter++;
                       }
                       break L45;
                     }
                   }
                 }
-                var33++;
-                var31 = var31 + var27;
-                var23 = var23 + SoftwareRasterizer.stride;
+                negativeRowCounter++;
+                rowSourceYQ12 = rowSourceYQ12 + inverseCosStep;
+                rowDestinationIndex = rowDestinationIndex + SoftwareRasterizer.stride;
               }
               break L14;
             }
-            if (var26 >= 0) {
-              var33 = var22;
-              L32: while (var33 < 0) {
-                var34 = var23;
-                var35 = var30 + (var28 * var27 >> 4);
-                var36 = var31 + (var28 * var26 >> 4);
-                var37 = var20;
-                var32 = var35 - (this.width << 12);
-                if (var35 - (this.width << 12) >= 0) {
-                  var32 = (var27 - var32) / var27;
-                  var37 = var37 + var32;
-                  var35 = var35 + var27 * var32;
-                  var36 = var36 + var26 * var32;
-                  var34 = var34 + var32;
+            if (inverseSinStep >= 0) {
+              negativeRowCounter = bottomThenNegativeHeight;
+              L32: while (negativeRowCounter < 0) {
+                destinationIndex = rowDestinationIndex;
+                sourceXQ12 = rowSourceXQ12 + (destinationOffsetX * inverseCosStep >> 4);
+                sourceYQ12 = rowSourceYQ12 + (destinationOffsetX * inverseSinStep >> 4);
+                negativePixelCounter = rightThenNegativeWidth;
+                clipPixelCount = sourceXQ12 - (this.width << 12);
+                if (sourceXQ12 - (this.width << 12) >= 0) {
+                  clipPixelCount = (inverseCosStep - clipPixelCount) / inverseCosStep;
+                  negativePixelCounter = negativePixelCounter + clipPixelCount;
+                  sourceXQ12 = sourceXQ12 + inverseCosStep * clipPixelCount;
+                  sourceYQ12 = sourceYQ12 + inverseSinStep * clipPixelCount;
+                  destinationIndex = destinationIndex + clipPixelCount;
                 }
-                var32 = (var35 - var27) / var27;
-                if ((var35 - var27) / var27 > var37) {
-                  var37 = var32;
+                clipPixelCount = (sourceXQ12 - inverseCosStep) / inverseCosStep;
+                if ((sourceXQ12 - inverseCosStep) / inverseCosStep > negativePixelCounter) {
+                  negativePixelCounter = clipPixelCount;
                 }
-                if (var36 < 0) {
-                  var32 = (var26 - 1 - var36) / var26;
-                  var37 = var37 + var32;
-                  var35 = var35 + var27 * var32;
-                  var36 = var36 + var26 * var32;
-                  var34 = var34 + var32;
+                if (sourceYQ12 < 0) {
+                  clipPixelCount = (inverseSinStep - 1 - sourceYQ12) / inverseSinStep;
+                  negativePixelCounter = negativePixelCounter + clipPixelCount;
+                  sourceXQ12 = sourceXQ12 + inverseCosStep * clipPixelCount;
+                  sourceYQ12 = sourceYQ12 + inverseSinStep * clipPixelCount;
+                  destinationIndex = destinationIndex + clipPixelCount;
                 }
-                var32 = (1 + var36 - (this.height << 12) - var26) / var26;
-                if ((1 + var36 - (this.height << 12) - var26) / var26 > var37) {
-                  var37 = var32;
+                clipPixelCount = (1 + sourceYQ12 - (this.height << 12) - inverseSinStep) / inverseSinStep;
+                if ((1 + sourceYQ12 - (this.height << 12) - inverseSinStep) / inverseSinStep > negativePixelCounter) {
+                  negativePixelCounter = clipPixelCount;
                 }
-                L37: while (var37 < 0) {
-                  var38 = this.pixels[(var36 >> 12) * this.width + (var35 >> 12)];
-                  var39 = SoftwareRasterizer.framebuffer[var34];
-                  var40 = var38 >>> 24;
-                  var41 = 256 - var40;
-                  incrementValue$3 = var34;
-                  var34++;
-                  SoftwareRasterizer.framebuffer[incrementValue$3] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
-                  var35 = var35 + var27;
-                  var36 = var36 + var26;
-                  var37++;
+                L37: while (negativePixelCounter < 0) {
+                  sampledPixel = this.pixels[(sourceYQ12 >> 12) * this.width + (sourceXQ12 >> 12)];
+                  destinationPixel = SoftwareRasterizer.framebuffer[destinationIndex];
+                  storedAlpha = sampledPixel >>> 24;
+                  inverseAlpha256 = 256 - storedAlpha;
+                  writeIndexReverseXForwardY = destinationIndex;
+                  destinationIndex++;
+                  SoftwareRasterizer.framebuffer[writeIndexReverseXForwardY] = ((sampledPixel & 16711935) * storedAlpha + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((sampledPixel & 65280) * storedAlpha + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
+                  sourceXQ12 = sourceXQ12 + inverseCosStep;
+                  sourceYQ12 = sourceYQ12 + inverseSinStep;
+                  negativePixelCounter++;
                 }
-                var33++;
-                var30 = var30 - var26;
-                var31 = var31 + var27;
-                var23 = var23 + SoftwareRasterizer.stride;
+                negativeRowCounter++;
+                rowSourceXQ12 = rowSourceXQ12 - inverseSinStep;
+                rowSourceYQ12 = rowSourceYQ12 + inverseCosStep;
+                rowDestinationIndex = rowDestinationIndex + SoftwareRasterizer.stride;
               }
               break L14;
             }
-            var33 = var22;
-            L38: while (var33 < 0) {
-              var34 = var23;
-              var35 = var30 + (var28 * var27 >> 4);
-              var36 = var31 + (var28 * var26 >> 4);
-              var37 = var20;
-              var32 = var35 - (this.width << 12);
-              if (var35 - (this.width << 12) >= 0) {
-                var32 = (var27 - var32) / var27;
-                var37 = var37 + var32;
-                var35 = var35 + var27 * var32;
-                var36 = var36 + var26 * var32;
-                var34 = var34 + var32;
+            negativeRowCounter = bottomThenNegativeHeight;
+            L38: while (negativeRowCounter < 0) {
+              destinationIndex = rowDestinationIndex;
+              sourceXQ12 = rowSourceXQ12 + (destinationOffsetX * inverseCosStep >> 4);
+              sourceYQ12 = rowSourceYQ12 + (destinationOffsetX * inverseSinStep >> 4);
+              negativePixelCounter = rightThenNegativeWidth;
+              clipPixelCount = sourceXQ12 - (this.width << 12);
+              if (sourceXQ12 - (this.width << 12) >= 0) {
+                clipPixelCount = (inverseCosStep - clipPixelCount) / inverseCosStep;
+                negativePixelCounter = negativePixelCounter + clipPixelCount;
+                sourceXQ12 = sourceXQ12 + inverseCosStep * clipPixelCount;
+                sourceYQ12 = sourceYQ12 + inverseSinStep * clipPixelCount;
+                destinationIndex = destinationIndex + clipPixelCount;
               }
-              var32 = (var35 - var27) / var27;
-              if ((var35 - var27) / var27 > var37) {
-                var37 = var32;
+              clipPixelCount = (sourceXQ12 - inverseCosStep) / inverseCosStep;
+              if ((sourceXQ12 - inverseCosStep) / inverseCosStep > negativePixelCounter) {
+                negativePixelCounter = clipPixelCount;
               }
-              var32 = var36 - (this.height << 12);
-              if (var36 - (this.height << 12) >= 0) {
-                var32 = (var26 - var32) / var26;
-                var37 = var37 + var32;
-                var35 = var35 + var27 * var32;
-                var36 = var36 + var26 * var32;
-                var34 = var34 + var32;
+              clipPixelCount = sourceYQ12 - (this.height << 12);
+              if (sourceYQ12 - (this.height << 12) >= 0) {
+                clipPixelCount = (inverseSinStep - clipPixelCount) / inverseSinStep;
+                negativePixelCounter = negativePixelCounter + clipPixelCount;
+                sourceXQ12 = sourceXQ12 + inverseCosStep * clipPixelCount;
+                sourceYQ12 = sourceYQ12 + inverseSinStep * clipPixelCount;
+                destinationIndex = destinationIndex + clipPixelCount;
               }
-              var32 = (var36 - var26) / var26;
-              if ((var36 - var26) / var26 > var37) {
-                var37 = var32;
+              clipPixelCount = (sourceYQ12 - inverseSinStep) / inverseSinStep;
+              if ((sourceYQ12 - inverseSinStep) / inverseSinStep > negativePixelCounter) {
+                negativePixelCounter = clipPixelCount;
               }
-              L43: while (var37 < 0) {
-                var38 = this.pixels[(var36 >> 12) * this.width + (var35 >> 12)];
-                var39 = SoftwareRasterizer.framebuffer[var34];
-                var40 = var38 >>> 24;
-                var41 = 256 - var40;
-                incrementValue$4 = var34;
-                var34++;
-                SoftwareRasterizer.framebuffer[incrementValue$4] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
-                var35 = var35 + var27;
-                var36 = var36 + var26;
-                var37++;
+              L43: while (negativePixelCounter < 0) {
+                sampledPixel = this.pixels[(sourceYQ12 >> 12) * this.width + (sourceXQ12 >> 12)];
+                destinationPixel = SoftwareRasterizer.framebuffer[destinationIndex];
+                storedAlpha = sampledPixel >>> 24;
+                inverseAlpha256 = 256 - storedAlpha;
+                writeIndexReverseXReverseY = destinationIndex;
+                destinationIndex++;
+                SoftwareRasterizer.framebuffer[writeIndexReverseXReverseY] = ((sampledPixel & 16711935) * storedAlpha + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((sampledPixel & 65280) * storedAlpha + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
+                sourceXQ12 = sourceXQ12 + inverseCosStep;
+                sourceYQ12 = sourceYQ12 + inverseSinStep;
+                negativePixelCounter++;
               }
-              var33++;
-              var30 = var30 - var26;
-              var31 = var31 + var27;
-              var23 = var23 + SoftwareRasterizer.stride;
+              negativeRowCounter++;
+              rowSourceXQ12 = rowSourceXQ12 - inverseSinStep;
+              rowSourceYQ12 = rowSourceYQ12 + inverseCosStep;
+              rowDestinationIndex = rowDestinationIndex + SoftwareRasterizer.stride;
             }
             break L14;
           }
@@ -899,120 +899,120 @@ final class ArgbSprite extends Sprite {
     }
 
     final void drawHalfSize(int x, int y) {
-        int stackIn_3_0 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_12_0 = 0;
-        int[] stackIn_20_0 = null;
-        int stackIn_20_1 = 0;
-        int[] stackIn_21_0 = null;
-        int stackIn_21_1 = 0;
-        int stackIn_21_2 = 0;
-        int var3;
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        int var8;
-        int var9;
-        int var10;
-        int var11;
-        int var12;
-        int var13;
-        int var14;
-        int var15;
-        int var16;
-        int var17;
-        int var18;
-        int var19;
-        int var20;
-        int var21;
-        var3 = this.width >> 1;
-        var4 = this.height >> 1;
+        int firstSourceXCandidate = 0;
+        int lastBlockSourceXCandidate = 0;
+        int firstSourceYCandidate = 0;
+        int lastBlockSourceYCandidate = 0;
+        int[] samplePixelBuffer = null;
+        int sampleBaseIndex = 0;
+        int[] samplePixelBufferAlias = null;
+        int sampleBaseIndexAlias = 0;
+        int sampleRowOffset = 0;
+        int reducedWidth;
+        int reducedHeight;
+        int firstSourceX;
+        int lastBlockSourceX;
+        int firstSourceY;
+        int lastBlockSourceY;
+        int sourceBlockY;
+        int sourceIndex;
+        int destinationIndex;
+        int sourceBlockX;
+        int samplePixel;
+        int sampleAlpha;
+        int weightedRedThenRedBlue;
+        int weightedGreenThenPackedGreen;
+        int weightedBlue;
+        int alphaSum;
+        int sampleIndexThenAverageAlpha;
+        int inverseAlpha256;
+        int destinationPixel;
+        reducedWidth = this.width >> 1;
+        reducedHeight = this.height >> 1;
         x = x + this.trimX / 2;
         y = y + this.trimY / 2;
         if (x >= SoftwareRasterizer.clipLeft) {
-          stackIn_3_0 = 0;
+          firstSourceXCandidate = 0;
         } else {
-          stackIn_3_0 = SoftwareRasterizer.clipLeft - x << 1;
+          firstSourceXCandidate = SoftwareRasterizer.clipLeft - x << 1;
         }
-        var5 = stackIn_3_0;
-        if (x + var3 <= SoftwareRasterizer.clipRight) {
-          stackIn_6_0 = this.width - 2;
+        firstSourceX = firstSourceXCandidate;
+        if (x + reducedWidth <= SoftwareRasterizer.clipRight) {
+          lastBlockSourceXCandidate = this.width - 2;
         } else {
-          stackIn_6_0 = (SoftwareRasterizer.clipRight - x << 1) - 2;
+          lastBlockSourceXCandidate = (SoftwareRasterizer.clipRight - x << 1) - 2;
         }
-        var6 = stackIn_6_0;
+        lastBlockSourceX = lastBlockSourceXCandidate;
         if (y >= SoftwareRasterizer.clipTop) {
-          stackIn_9_0 = 0;
+          firstSourceYCandidate = 0;
         } else {
-          stackIn_9_0 = SoftwareRasterizer.clipTop - y << 1;
+          firstSourceYCandidate = SoftwareRasterizer.clipTop - y << 1;
         }
-        var7 = stackIn_9_0;
-        if (y + var4 <= SoftwareRasterizer.clipBottom) {
-          stackIn_12_0 = this.height - 2;
+        firstSourceY = firstSourceYCandidate;
+        if (y + reducedHeight <= SoftwareRasterizer.clipBottom) {
+          lastBlockSourceYCandidate = this.height - 2;
         } else {
-          stackIn_12_0 = (SoftwareRasterizer.clipBottom - y << 1) - 2;
+          lastBlockSourceYCandidate = (SoftwareRasterizer.clipBottom - y << 1) - 2;
         }
-        var8 = stackIn_12_0;
-        var9 = var7;
+        lastBlockSourceY = lastBlockSourceYCandidate;
+        sourceBlockY = firstSourceY;
         L4: while (true) {
-          if (var9 > var8) {
+          if (sourceBlockY > lastBlockSourceY) {
             return;
           }
           {
-            var10 = var9 * this.width + var5;
-            var11 = (y + (var9 >> 1)) * SoftwareRasterizer.stride + (x + (var5 >> 1));
-            var12 = var5;
+            sourceIndex = sourceBlockY * this.width + firstSourceX;
+            destinationIndex = (y + (sourceBlockY >> 1)) * SoftwareRasterizer.stride + (x + (firstSourceX >> 1));
+            sourceBlockX = firstSourceX;
             L5: while (true) {
-              if (var12 > var6) {
-                var9 += 2;
+              if (sourceBlockX > lastBlockSourceX) {
+                sourceBlockY += 2;
                 continue L4;
               }
               {
-                var13 = 0;
-                var14 = 0;
-                var15 = 0;
-                var16 = 0;
-                var17 = 0;
-                var18 = 0;
-                for (var19 = 0; var19 < 4; var19++) {
-                  stackIn_20_0 = this.pixels;
+                samplePixel = 0;
+                sampleAlpha = 0;
+                weightedRedThenRedBlue = 0;
+                weightedGreenThenPackedGreen = 0;
+                weightedBlue = 0;
+                alphaSum = 0;
+                for (sampleIndexThenAverageAlpha = 0; sampleIndexThenAverageAlpha < 4; sampleIndexThenAverageAlpha++) {
+                  samplePixelBuffer = this.pixels;
 
-                  stackIn_20_1 = var10 + (var19 & 1);
+                  sampleBaseIndex = sourceIndex + (sampleIndexThenAverageAlpha & 1);
 
-                  if ((var19 & 2) != 0) {
-                    stackIn_21_0 = (int[]) ((Object) stackIn_20_0);
-                    stackIn_21_1 = stackIn_20_1;
-                    stackIn_21_2 = 0;
+                  if ((sampleIndexThenAverageAlpha & 2) != 0) {
+                    samplePixelBufferAlias = (int[]) ((Object) samplePixelBuffer);
+                    sampleBaseIndexAlias = sampleBaseIndex;
+                    sampleRowOffset = 0;
                   } else {
-                    stackIn_21_0 = (int[]) ((Object) stackIn_20_0);
-                    stackIn_21_1 = stackIn_20_1;
-                    stackIn_21_2 = this.width;
+                    samplePixelBufferAlias = (int[]) ((Object) samplePixelBuffer);
+                    sampleBaseIndexAlias = sampleBaseIndex;
+                    sampleRowOffset = this.width;
                   }
-                  var13 = stackIn_21_0[stackIn_21_1 + stackIn_21_2];
-                  var14 = var13 >>> 24;
-                  var18 = var18 + var14;
-                  var15 = var15 + var14 * (var13 >> 16 & 255);
-                  var16 = var16 + var14 * (var13 >> 8 & 255);
-                  var17 = var17 + var14 * (var13 & 255);
+                  samplePixel = samplePixelBufferAlias[sampleBaseIndexAlias + sampleRowOffset];
+                  sampleAlpha = samplePixel >>> 24;
+                  alphaSum = alphaSum + sampleAlpha;
+                  weightedRedThenRedBlue = weightedRedThenRedBlue + sampleAlpha * (samplePixel >> 16 & 255);
+                  weightedGreenThenPackedGreen = weightedGreenThenPackedGreen + sampleAlpha * (samplePixel >> 8 & 255);
+                  weightedBlue = weightedBlue + sampleAlpha * (samplePixel & 255);
                 }
-                if (var18 == 0) {
-                  var12 += 2;
-                  var11++;
-                  var10 += 2;
+                if (alphaSum == 0) {
+                  sourceBlockX += 2;
+                  destinationIndex++;
+                  sourceIndex += 2;
                   continue L5;
                 }
                 {
-                  var15 = (var15 / var18 << 16) + var17 / var18;
-                  var16 = var16 / var18 << 8;
-                  var19 = var18 >> 2;
-                  var20 = 256 - var19;
-                  var21 = SoftwareRasterizer.framebuffer[var11];
-                  SoftwareRasterizer.framebuffer[var11] = (var19 * var15 + var20 * (var21 & 16711935) & -16711936) + (var19 * var16 + var20 * (var21 & 65280) & 16711680) >>> 8;
-                  var12 += 2;
-                  var11++;
-                  var10 += 2;
+                  weightedRedThenRedBlue = (weightedRedThenRedBlue / alphaSum << 16) + weightedBlue / alphaSum;
+                  weightedGreenThenPackedGreen = weightedGreenThenPackedGreen / alphaSum << 8;
+                  sampleIndexThenAverageAlpha = alphaSum >> 2;
+                  inverseAlpha256 = 256 - sampleIndexThenAverageAlpha;
+                  destinationPixel = SoftwareRasterizer.framebuffer[destinationIndex];
+                  SoftwareRasterizer.framebuffer[destinationIndex] = (sampleIndexThenAverageAlpha * weightedRedThenRedBlue + inverseAlpha256 * (destinationPixel & 16711935) & -16711936) + (sampleIndexThenAverageAlpha * weightedGreenThenPackedGreen + inverseAlpha256 * (destinationPixel & 65280) & 16711680) >>> 8;
+                  sourceBlockX += 2;
+                  destinationIndex++;
+                  sourceIndex += 2;
                   continue L5;
                 }
               }
@@ -1026,107 +1026,107 @@ final class ArgbSprite extends Sprite {
     }
 
     final void drawQuarterSize(int x, int y) {
-        int stackIn_3_0 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_12_0 = 0;
-        int var3;
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        int var8;
-        int[] var9;
-        int var10;
-        int var11;
-        int var12;
-        int var13;
-        int var14;
-        int var15;
-        int var16;
-        int var17;
-        int var18;
-        int var19;
-        int var20;
-        int var21;
-        int[] var22;
-        int[] var23;
-        var3 = this.width >> 2;
-        var4 = this.height >> 2;
+        int firstSourceXCandidate = 0;
+        int lastBlockSourceXCandidate = 0;
+        int firstSourceYCandidate = 0;
+        int lastBlockSourceYCandidate = 0;
+        int reducedWidth;
+        int reducedHeight;
+        int firstSourceX;
+        int lastBlockSourceX;
+        int firstSourceY;
+        int lastBlockSourceY;
+        int[] sampleBlockAlias;
+        int sourceBlockY;
+        int sourceBlockX;
+        int sourceIndex;
+        int destinationIndex;
+        int sampleRowThenAlpha;
+        int sampleColumnThenAlphaSum;
+        int weightedRedThenRedBlue;
+        int weightedGreenThenPackedGreen;
+        int weightedBlue;
+        int sampleIndexThenAverageAlpha;
+        int inverseAlpha256;
+        int destinationPixel;
+        int[] sampleBlockStorage;
+        int[] sampleBlockAllocationThenReadAlias;
+        reducedWidth = this.width >> 2;
+        reducedHeight = this.height >> 2;
         x = x + this.trimX / 4;
         y = y + this.trimY / 4;
         if (x >= SoftwareRasterizer.clipLeft) {
-          stackIn_3_0 = 0;
+          firstSourceXCandidate = 0;
         } else {
-          stackIn_3_0 = SoftwareRasterizer.clipLeft - x << 2;
+          firstSourceXCandidate = SoftwareRasterizer.clipLeft - x << 2;
         }
-        var5 = stackIn_3_0;
-        if (x + var3 <= SoftwareRasterizer.clipRight) {
-          stackIn_6_0 = this.width - 4;
+        firstSourceX = firstSourceXCandidate;
+        if (x + reducedWidth <= SoftwareRasterizer.clipRight) {
+          lastBlockSourceXCandidate = this.width - 4;
         } else {
-          stackIn_6_0 = (SoftwareRasterizer.clipRight - x << 2) - 4;
+          lastBlockSourceXCandidate = (SoftwareRasterizer.clipRight - x << 2) - 4;
         }
-        var6 = stackIn_6_0;
+        lastBlockSourceX = lastBlockSourceXCandidate;
         if (y >= SoftwareRasterizer.clipTop) {
-          stackIn_9_0 = 0;
+          firstSourceYCandidate = 0;
         } else {
-          stackIn_9_0 = SoftwareRasterizer.clipTop - y << 2;
+          firstSourceYCandidate = SoftwareRasterizer.clipTop - y << 2;
         }
-        var7 = stackIn_9_0;
-        if (y + var4 <= SoftwareRasterizer.clipBottom) {
-          stackIn_12_0 = this.height - 4;
+        firstSourceY = firstSourceYCandidate;
+        if (y + reducedHeight <= SoftwareRasterizer.clipBottom) {
+          lastBlockSourceYCandidate = this.height - 4;
         } else {
-          stackIn_12_0 = (SoftwareRasterizer.clipBottom - y << 2) - 4;
+          lastBlockSourceYCandidate = (SoftwareRasterizer.clipBottom - y << 2) - 4;
         }
-        var8 = stackIn_12_0;
-        var23 = new int[16];
-        var22 = var23;
-        var9 = var22;
-        var10 = var7;
+        lastBlockSourceY = lastBlockSourceYCandidate;
+        sampleBlockAllocationThenReadAlias = new int[16];
+        sampleBlockStorage = sampleBlockAllocationThenReadAlias;
+        sampleBlockAlias = sampleBlockStorage;
+        sourceBlockY = firstSourceY;
         L4: while (true) {
-          if (var10 > var8) {
+          if (sourceBlockY > lastBlockSourceY) {
             return;
           }
           {
-            var11 = var5;
+            sourceBlockX = firstSourceX;
             L5: while (true) {
-              if (var11 > var6) {
-                var10 += 4;
+              if (sourceBlockX > lastBlockSourceX) {
+                sourceBlockY += 4;
                 continue L4;
               }
               {
-                var12 = var10 * this.width + var11;
-                var13 = (y + (var10 >> 2)) * SoftwareRasterizer.stride + (x + (var11 >> 2));
-                for (var14 = 0; var14 < 4; var14++) {
-                  for (var15 = 0; var15 < 4; var15++) {
-                    var9[(var14 << 2) + var15] = this.pixels[var12 + var14 * this.width + var15];
+                sourceIndex = sourceBlockY * this.width + sourceBlockX;
+                destinationIndex = (y + (sourceBlockY >> 2)) * SoftwareRasterizer.stride + (x + (sourceBlockX >> 2));
+                for (sampleRowThenAlpha = 0; sampleRowThenAlpha < 4; sampleRowThenAlpha++) {
+                  for (sampleColumnThenAlphaSum = 0; sampleColumnThenAlphaSum < 4; sampleColumnThenAlphaSum++) {
+                    sampleBlockAlias[(sampleRowThenAlpha << 2) + sampleColumnThenAlphaSum] = this.pixels[sourceIndex + sampleRowThenAlpha * this.width + sampleColumnThenAlphaSum];
                   }
                 }
-                var23 = var22;
-                var14 = 0;
-                var15 = 0;
-                var16 = 0;
-                var17 = 0;
-                var18 = 0;
-                for (var19 = 0; var19 < 16; var19++) {
-                  var14 = var23[var19] >>> 24;
-                  var15 = var15 + var14;
-                  var16 = var16 + var14 * (var23[var19] >> 16 & 255);
-                  var17 = var17 + var14 * (var23[var19] >> 8 & 255);
-                  var18 = var18 + var14 * (var23[var19] & 255);
+                sampleBlockAllocationThenReadAlias = sampleBlockStorage;
+                sampleRowThenAlpha = 0;
+                sampleColumnThenAlphaSum = 0;
+                weightedRedThenRedBlue = 0;
+                weightedGreenThenPackedGreen = 0;
+                weightedBlue = 0;
+                for (sampleIndexThenAverageAlpha = 0; sampleIndexThenAverageAlpha < 16; sampleIndexThenAverageAlpha++) {
+                  sampleRowThenAlpha = sampleBlockAllocationThenReadAlias[sampleIndexThenAverageAlpha] >>> 24;
+                  sampleColumnThenAlphaSum = sampleColumnThenAlphaSum + sampleRowThenAlpha;
+                  weightedRedThenRedBlue = weightedRedThenRedBlue + sampleRowThenAlpha * (sampleBlockAllocationThenReadAlias[sampleIndexThenAverageAlpha] >> 16 & 255);
+                  weightedGreenThenPackedGreen = weightedGreenThenPackedGreen + sampleRowThenAlpha * (sampleBlockAllocationThenReadAlias[sampleIndexThenAverageAlpha] >> 8 & 255);
+                  weightedBlue = weightedBlue + sampleRowThenAlpha * (sampleBlockAllocationThenReadAlias[sampleIndexThenAverageAlpha] & 255);
                 }
-                if (var15 == 0) {
-                  var11 += 4;
+                if (sampleColumnThenAlphaSum == 0) {
+                  sourceBlockX += 4;
                   continue L5;
                 }
                 {
-                  var16 = (var16 / var15 << 16) + var18 / var15;
-                  var17 = var17 / var15 << 8;
-                  var19 = var15 >> 4;
-                  var20 = 256 - var19;
-                  var21 = SoftwareRasterizer.framebuffer[var13];
-                  SoftwareRasterizer.framebuffer[var13] = (var19 * var16 + var20 * (var21 & 16711935) & -16711936) + (var19 * var17 + var20 * (var21 & 65280) & 16711680) >>> 8;
-                  var11 += 4;
+                  weightedRedThenRedBlue = (weightedRedThenRedBlue / sampleColumnThenAlphaSum << 16) + weightedBlue / sampleColumnThenAlphaSum;
+                  weightedGreenThenPackedGreen = weightedGreenThenPackedGreen / sampleColumnThenAlphaSum << 8;
+                  sampleIndexThenAverageAlpha = sampleColumnThenAlphaSum >> 4;
+                  inverseAlpha256 = 256 - sampleIndexThenAverageAlpha;
+                  destinationPixel = SoftwareRasterizer.framebuffer[destinationIndex];
+                  SoftwareRasterizer.framebuffer[destinationIndex] = (sampleIndexThenAverageAlpha * weightedRedThenRedBlue + inverseAlpha256 * (destinationPixel & 16711935) & -16711936) + (sampleIndexThenAverageAlpha * weightedGreenThenPackedGreen + inverseAlpha256 * (destinationPixel & 65280) & 16711680) >>> 8;
+                  sourceBlockX += 4;
                   continue L5;
                 }
               }

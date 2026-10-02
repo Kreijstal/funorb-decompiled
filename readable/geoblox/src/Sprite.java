@@ -5,118 +5,118 @@ class Sprite extends SpriteState {
     int[] pixels;
 
     private final void sampleBilinear(int destinationIndex, int sourceX, int sourceY, int fractionX, int fractionY) {
-        int stackIn_5_0 = 0;
-        int stackIn_11_0 = 0;
-        int stackIn_19_0 = 0;
-        int stackIn_25_0 = 0;
-        int var6;
-        int var7;
-        int var8;
-        int var9;
-        int var10;
-        int var11;
-        int var12;
-        int var13;
-        int var14;
-        int var15;
-        int var16;
-        int var17;
-        int var18;
-        var6 = sourceY * this.width + sourceX;
+        int topLeftWeightCandidateQ24 = 0;
+        int topRightWeightCandidateQ24 = 0;
+        int bottomLeftWeightCandidateQ24 = 0;
+        int bottomRightWeightCandidateQ24 = 0;
+        int sourceIndex;
+        int topLeftPixel;
+        int topRightPixel;
+        int bottomLeftPixel;
+        int bottomRightPixel;
+        int topLeftWeightQ24ThenQ8;
+        int topRightWeightQ24ThenQ8;
+        int bottomLeftWeightQ24ThenQ8;
+        int bottomRightWeightQ24ThenQ8;
+        int totalWeightQ8;
+        int weightedRedBlue;
+        int weightedGreen;
+        int filteredPixel;
+        sourceIndex = sourceY * this.width + sourceX;
         fractionX = fractionX & 4095;
         fractionY = fractionY & 4095;
         if (sourceY < 0) {
-          var12 = 0;
-          var11 = 0;
-          var8 = 0;
-          var7 = 0;
+          topRightWeightQ24ThenQ8 = 0;
+          topLeftWeightQ24ThenQ8 = 0;
+          topRightPixel = 0;
+          topLeftPixel = 0;
         } else {
           if (sourceX < 0) {
-            var11 = 0;
-            var7 = 0;
+            topLeftWeightQ24ThenQ8 = 0;
+            topLeftPixel = 0;
           } else {
-            var7 = this.pixels[var6];
-            if (var7 == 0) {
-              stackIn_5_0 = 0;
+            topLeftPixel = this.pixels[sourceIndex];
+            if (topLeftPixel == 0) {
+              topLeftWeightCandidateQ24 = 0;
             } else {
-              stackIn_5_0 = (4096 - fractionX) * (4096 - fractionY);
+              topLeftWeightCandidateQ24 = (4096 - fractionX) * (4096 - fractionY);
             }
-            var11 = stackIn_5_0;
+            topLeftWeightQ24ThenQ8 = topLeftWeightCandidateQ24;
           }
           if (sourceX >= this.width - 1) {
-            var12 = 0;
-            var8 = 0;
+            topRightWeightQ24ThenQ8 = 0;
+            topRightPixel = 0;
           } else {
-            var8 = this.pixels[var6 + 1];
-            if (var8 == 0) {
-              stackIn_11_0 = 0;
+            topRightPixel = this.pixels[sourceIndex + 1];
+            if (topRightPixel == 0) {
+              topRightWeightCandidateQ24 = 0;
             } else {
-              stackIn_11_0 = fractionX * (4096 - fractionY);
+              topRightWeightCandidateQ24 = fractionX * (4096 - fractionY);
             }
-            var12 = stackIn_11_0;
+            topRightWeightQ24ThenQ8 = topRightWeightCandidateQ24;
           }
         }
         if (sourceY >= this.height - 1) {
-          var14 = 0;
-          var13 = 0;
-          var10 = 0;
-          var9 = 0;
+          bottomRightWeightQ24ThenQ8 = 0;
+          bottomLeftWeightQ24ThenQ8 = 0;
+          bottomRightPixel = 0;
+          bottomLeftPixel = 0;
         } else {
           if (sourceX < 0) {
-            var13 = 0;
-            var9 = 0;
+            bottomLeftWeightQ24ThenQ8 = 0;
+            bottomLeftPixel = 0;
           } else {
-            var9 = this.pixels[var6 + this.width];
-            if (var9 == 0) {
-              stackIn_19_0 = 0;
+            bottomLeftPixel = this.pixels[sourceIndex + this.width];
+            if (bottomLeftPixel == 0) {
+              bottomLeftWeightCandidateQ24 = 0;
             } else {
-              stackIn_19_0 = (4096 - fractionX) * fractionY;
+              bottomLeftWeightCandidateQ24 = (4096 - fractionX) * fractionY;
             }
-            var13 = stackIn_19_0;
+            bottomLeftWeightQ24ThenQ8 = bottomLeftWeightCandidateQ24;
           }
           if (sourceX >= this.width - 1) {
-            var14 = 0;
-            var10 = 0;
+            bottomRightWeightQ24ThenQ8 = 0;
+            bottomRightPixel = 0;
           } else {
-            var10 = this.pixels[var6 + this.width + 1];
-            if (var10 == 0) {
-              stackIn_25_0 = 0;
+            bottomRightPixel = this.pixels[sourceIndex + this.width + 1];
+            if (bottomRightPixel == 0) {
+              bottomRightWeightCandidateQ24 = 0;
             } else {
-              stackIn_25_0 = fractionX * fractionY;
+              bottomRightWeightCandidateQ24 = fractionX * fractionY;
             }
-            var14 = stackIn_25_0;
+            bottomRightWeightQ24ThenQ8 = bottomRightWeightCandidateQ24;
           }
         }
-        var11 = var11 >> 16;
-        var12 = var12 >> 16;
-        var13 = var13 >> 16;
-        var14 = var14 >> 16;
-        var15 = var11 + var12 + var13 + var14;
-        if (var15 < 256) {
-          if (var15 < 128) {
+        topLeftWeightQ24ThenQ8 = topLeftWeightQ24ThenQ8 >> 16;
+        topRightWeightQ24ThenQ8 = topRightWeightQ24ThenQ8 >> 16;
+        bottomLeftWeightQ24ThenQ8 = bottomLeftWeightQ24ThenQ8 >> 16;
+        bottomRightWeightQ24ThenQ8 = bottomRightWeightQ24ThenQ8 >> 16;
+        totalWeightQ8 = topLeftWeightQ24ThenQ8 + topRightWeightQ24ThenQ8 + bottomLeftWeightQ24ThenQ8 + bottomRightWeightQ24ThenQ8;
+        if (totalWeightQ8 < 256) {
+          if (totalWeightQ8 < 128) {
             return;
           }
           {
-            var16 = (var7 & 16711935) * var11 + (var8 & 16711935) * var12;
-            var16 = var16 + ((var9 & 16711935) * var13 + (var10 & 16711935) * var14);
-            var17 = (var7 & 65280) * var11 + (var8 & 65280) * var12;
-            var17 = var17 + ((var9 & 65280) * var13 + (var10 & 65280) * var14);
-            var18 = ((var16 >>> 16) / var15 << 16) + (var17 / var15 & 65280) + (var16 & 65535) / var15;
-            if (var18 == 0) {
-              var18 = 1;
+            weightedRedBlue = (topLeftPixel & 16711935) * topLeftWeightQ24ThenQ8 + (topRightPixel & 16711935) * topRightWeightQ24ThenQ8;
+            weightedRedBlue = weightedRedBlue + ((bottomLeftPixel & 16711935) * bottomLeftWeightQ24ThenQ8 + (bottomRightPixel & 16711935) * bottomRightWeightQ24ThenQ8);
+            weightedGreen = (topLeftPixel & 65280) * topLeftWeightQ24ThenQ8 + (topRightPixel & 65280) * topRightWeightQ24ThenQ8;
+            weightedGreen = weightedGreen + ((bottomLeftPixel & 65280) * bottomLeftWeightQ24ThenQ8 + (bottomRightPixel & 65280) * bottomRightWeightQ24ThenQ8);
+            filteredPixel = ((weightedRedBlue >>> 16) / totalWeightQ8 << 16) + (weightedGreen / totalWeightQ8 & 65280) + (weightedRedBlue & 65535) / totalWeightQ8;
+            if (filteredPixel == 0) {
+              filteredPixel = 1;
             }
-            SoftwareRasterizer.framebuffer[destinationIndex] = var18;
+            SoftwareRasterizer.framebuffer[destinationIndex] = filteredPixel;
           }
         } else {
-          var16 = (var7 & 16711935) * var11 + (var8 & 16711935) * var12;
-          var16 = var16 + ((var9 & 16711935) * var13 + (var10 & 16711935) * var14);
-          var17 = (var7 & 65280) * var11 + (var8 & 65280) * var12;
-          var17 = var17 + ((var9 & 65280) * var13 + (var10 & 65280) * var14);
-          var18 = (var16 >>> 8 & 16711935) + (var17 >>> 8 & 65280);
-          if (var18 == 0) {
-            var18 = 1;
+          weightedRedBlue = (topLeftPixel & 16711935) * topLeftWeightQ24ThenQ8 + (topRightPixel & 16711935) * topRightWeightQ24ThenQ8;
+          weightedRedBlue = weightedRedBlue + ((bottomLeftPixel & 16711935) * bottomLeftWeightQ24ThenQ8 + (bottomRightPixel & 16711935) * bottomRightWeightQ24ThenQ8);
+          weightedGreen = (topLeftPixel & 65280) * topLeftWeightQ24ThenQ8 + (topRightPixel & 65280) * topRightWeightQ24ThenQ8;
+          weightedGreen = weightedGreen + ((bottomLeftPixel & 65280) * bottomLeftWeightQ24ThenQ8 + (bottomRightPixel & 65280) * bottomRightWeightQ24ThenQ8);
+          filteredPixel = (weightedRedBlue >>> 8 & 16711935) + (weightedGreen >>> 8 & 65280);
+          if (filteredPixel == 0) {
+            filteredPixel = 1;
           }
-          SoftwareRasterizer.framebuffer[destinationIndex] = var18;
+          SoftwareRasterizer.framebuffer[destinationIndex] = filteredPixel;
         }
     }
 
@@ -746,91 +746,91 @@ class Sprite extends SpriteState {
     }
 
     final void trimTransparentBorders() {
-        int var8 = 0;
-        int var9 = 0;
-        int var1;
-        int var2;
-        int var3;
-        int var4;
-        int var5;
-        int var6;
-        int[] var7;
-        var1 = this.height - 1;
+        int copyRow = 0;
+        int copyColumn = 0;
+        int bottomEdge;
+        int rowOffsetThenTopEdge;
+        int scanThenRightEdge;
+        int scanThenLeftEdge;
+        int scanRowThenCroppedWidth;
+        int croppedHeight;
+        int[] croppedPixels;
+        bottomEdge = this.height - 1;
         L0: while (true) {
           L1: {
-            if (var1 >= 0) {
-              var2 = var1 * this.width;
-              for (var3 = 0; var3 < this.width; var3++) {
-                if (this.pixels[var2 + var3] != 0) {
+            if (bottomEdge >= 0) {
+              rowOffsetThenTopEdge = bottomEdge * this.width;
+              for (scanThenRightEdge = 0; scanThenRightEdge < this.width; scanThenRightEdge++) {
+                if (this.pixels[rowOffsetThenTopEdge + scanThenRightEdge] != 0) {
                   break L1;
                 }
               }
-              var1--;
+              bottomEdge--;
               continue L0;
             }
           }
-          var2 = 0;
+          rowOffsetThenTopEdge = 0;
           L3: while (true) {
             L4: {
-              if (var2 < var1) {
-                var3 = var2 * this.width;
-                for (var4 = 0; var4 < this.width; var4++) {
-                  if (this.pixels[var3 + var4] != 0) {
+              if (rowOffsetThenTopEdge < bottomEdge) {
+                scanThenRightEdge = rowOffsetThenTopEdge * this.width;
+                for (scanThenLeftEdge = 0; scanThenLeftEdge < this.width; scanThenLeftEdge++) {
+                  if (this.pixels[scanThenRightEdge + scanThenLeftEdge] != 0) {
                     break L4;
                   }
                 }
-                var2++;
+                rowOffsetThenTopEdge++;
                 continue L3;
               }
             }
-            var3 = this.width - 1;
+            scanThenRightEdge = this.width - 1;
             L6: while (true) {
               L7: {
-                if (var3 >= 0) {
-                  for (var4 = var2; var4 <= var1; var4++) {
-                    if (this.pixels[var4 * this.width + var3] != 0) {
+                if (scanThenRightEdge >= 0) {
+                  for (scanThenLeftEdge = rowOffsetThenTopEdge; scanThenLeftEdge <= bottomEdge; scanThenLeftEdge++) {
+                    if (this.pixels[scanThenLeftEdge * this.width + scanThenRightEdge] != 0) {
                       break L7;
                     }
                   }
-                  var3--;
+                  scanThenRightEdge--;
                   continue L6;
                 }
               }
-              var4 = 0;
+              scanThenLeftEdge = 0;
               L9: while (true) {
                 L10: {
-                  if (var4 < var3) {
-                    for (var5 = var2; var5 <= var1; var5++) {
-                      if (this.pixels[var5 * this.width + var4] != 0) {
+                  if (scanThenLeftEdge < scanThenRightEdge) {
+                    for (scanRowThenCroppedWidth = rowOffsetThenTopEdge; scanRowThenCroppedWidth <= bottomEdge; scanRowThenCroppedWidth++) {
+                      if (this.pixels[scanRowThenCroppedWidth * this.width + scanThenLeftEdge] != 0) {
                         break L10;
                       }
                     }
-                    var4++;
+                    scanThenLeftEdge++;
                     continue L9;
                   }
                 }
-                if (var4 == 0) {
-                  if (var3 == this.width - 1) {
-                    if (var2 == 0) {
-                      if (var1 == this.height - 1) {
+                if (scanThenLeftEdge == 0) {
+                  if (scanThenRightEdge == this.width - 1) {
+                    if (rowOffsetThenTopEdge == 0) {
+                      if (bottomEdge == this.height - 1) {
                         return;
                       }
                     }
                   }
                 }
-                var5 = var3 + 1 - var4;
-                var6 = var1 + 1 - var2;
-                var7 = new int[var5 * var6];
-                for (var8 = 0; var8 < var6; var8++) {
-                  for (var9 = 0; var9 < var5; var9++) {
-                    var7[var8 * var5 + var9] = this.pixels[(var8 + var2) * this.width + (var9 + var4)];
+                scanRowThenCroppedWidth = scanThenRightEdge + 1 - scanThenLeftEdge;
+                croppedHeight = bottomEdge + 1 - rowOffsetThenTopEdge;
+                croppedPixels = new int[scanRowThenCroppedWidth * croppedHeight];
+                for (copyRow = 0; copyRow < croppedHeight; copyRow++) {
+                  for (copyColumn = 0; copyColumn < scanRowThenCroppedWidth; copyColumn++) {
+                    croppedPixels[copyRow * scanRowThenCroppedWidth + copyColumn] = this.pixels[(copyRow + rowOffsetThenTopEdge) * this.width + (copyColumn + scanThenLeftEdge)];
                   }
                 }
-                this.pixels = var7;
-                this.width = var5;
-                this.height = var6;
-                this.trimX = this.trimX + var4;
-                this.trimY = this.trimY + var2;
+                this.pixels = croppedPixels;
+                this.width = scanRowThenCroppedWidth;
+                this.height = croppedHeight;
+                this.trimX = this.trimX + scanThenLeftEdge;
+                this.trimY = this.trimY + rowOffsetThenTopEdge;
                 return;
               }
             }
@@ -839,50 +839,50 @@ class Sprite extends SpriteState {
     }
 
     final void addOutline(int color) {
-        int var4 = 0;
-        int var5 = 0;
-        int incrementValue$1 = 0;
-        int[] var2;
-        int var3;
-        int var6;
-        var2 = new int[this.width * this.height];
-        var3 = 0;
-        for (var4 = 0; var4 < this.height; var4++) {
-          for (var5 = 0; var5 < this.width; var5++) {
+        int row = 0;
+        int column = 0;
+        int destinationWriteIndex = 0;
+        int[] outlinedPixels;
+        int pixelIndex;
+        int pixelOrOutlineColor;
+        outlinedPixels = new int[this.width * this.height];
+        pixelIndex = 0;
+        for (row = 0; row < this.height; row++) {
+          for (column = 0; column < this.width; column++) {
             L2: {
-              var6 = this.pixels[var3];
-              if (var6 == 0) {
-                if (var5 > 0) {
-                  if (this.pixels[var3 - 1] != 0) {
-                    var6 = color;
+              pixelOrOutlineColor = this.pixels[pixelIndex];
+              if (pixelOrOutlineColor == 0) {
+                if (column > 0) {
+                  if (this.pixels[pixelIndex - 1] != 0) {
+                    pixelOrOutlineColor = color;
                     break L2;
                   }
                 }
-                if (var4 > 0) {
-                  if (this.pixels[var3 - this.width] != 0) {
-                    var6 = color;
+                if (row > 0) {
+                  if (this.pixels[pixelIndex - this.width] != 0) {
+                    pixelOrOutlineColor = color;
                     break L2;
                   }
                 }
-                if (var5 < this.width - 1) {
-                  if (this.pixels[var3 + 1] != 0) {
-                    var6 = color;
+                if (column < this.width - 1) {
+                  if (this.pixels[pixelIndex + 1] != 0) {
+                    pixelOrOutlineColor = color;
                     break L2;
                   }
                 }
-                if (var4 < this.height - 1) {
-                  if (this.pixels[var3 + this.width] != 0) {
-                    var6 = color;
+                if (row < this.height - 1) {
+                  if (this.pixels[pixelIndex + this.width] != 0) {
+                    pixelOrOutlineColor = color;
                   }
                 }
               }
             }
-            incrementValue$1 = var3;
-            var3++;
-            var2[incrementValue$1] = var6;
+            destinationWriteIndex = pixelIndex;
+            pixelIndex++;
+            outlinedPixels[destinationWriteIndex] = pixelOrOutlineColor;
           }
         }
-        this.pixels = var2;
+        this.pixels = outlinedPixels;
     }
 
     private final static void blitColorKeyAlpha(int[] destinationPixels, int[] sourcePixels, int sourcePixel, int sourceIndex, int destinationIndex, int drawWidth, int drawHeight, int destinationRowSkip, int sourceRowSkip, int alpha256) {
@@ -1109,11 +1109,11 @@ class Sprite extends SpriteState {
     }
 
     final void drawRotatedCentered(int centerX, int centerY, int angle, int scale) {
-        int var5 = this.fullWidth << 3;
-        int var6 = this.fullHeight << 3;
-        centerX = (centerX << 4) + (var5 & 15);
-        centerY = (centerY << 4) + (var6 & 15);
-        this.rotateSmooth(var5, var6, centerX, centerY, angle, scale);
+        int sourcePivotXQ4 = this.fullWidth << 3;
+        int sourcePivotYQ4 = this.fullHeight << 3;
+        centerX = (centerX << 4) + (sourcePivotXQ4 & 15);
+        centerY = (centerY << 4) + (sourcePivotYQ4 & 15);
+        this.rotateSmooth(sourcePivotXQ4, sourcePivotYQ4, centerX, centerY, angle, scale);
     }
 
     private final static void blitMultiply(int destinationPixel, int[] destinationPixels, int[] sourcePixels, int sourcePixel, int sourceIndex, int destinationIndex, int drawWidth, int drawHeight, int destinationRowSkip, int sourceRowSkip) {
@@ -1322,28 +1322,28 @@ class Sprite extends SpriteState {
     }
 
     final void rotateClockwise() {
-        int var4 = 0;
-        int incrementValue$0 = 0;
-        int var3 = 0;
-        int[] var1 = new int[this.width * this.height];
-        int var2 = 0;
-        for (var3 = 0; var3 < this.width; var3++) {
-            for (var4 = this.height - 1; var4 >= 0; var4--) {
-                incrementValue$0 = var2;
-                var2++;
-                var1[incrementValue$0] = this.pixels[var3 + var4 * this.width];
+        int sourceRow = 0;
+        int destinationWriteIndex = 0;
+        int sourceColumnThenGeometrySwap = 0;
+        int[] rotatedPixels = new int[this.width * this.height];
+        int destinationIndex = 0;
+        for (sourceColumnThenGeometrySwap = 0; sourceColumnThenGeometrySwap < this.width; sourceColumnThenGeometrySwap++) {
+            for (sourceRow = this.height - 1; sourceRow >= 0; sourceRow--) {
+                destinationWriteIndex = destinationIndex;
+                destinationIndex++;
+                rotatedPixels[destinationWriteIndex] = this.pixels[sourceColumnThenGeometrySwap + sourceRow * this.width];
             }
         }
-        this.pixels = var1;
-        var3 = this.trimY;
+        this.pixels = rotatedPixels;
+        sourceColumnThenGeometrySwap = this.trimY;
         this.trimY = this.trimX;
-        this.trimX = this.fullHeight - this.height - var3;
-        var3 = this.height;
+        this.trimX = this.fullHeight - this.height - sourceColumnThenGeometrySwap;
+        sourceColumnThenGeometrySwap = this.height;
         this.height = this.width;
-        this.width = var3;
-        var3 = this.fullHeight;
+        this.width = sourceColumnThenGeometrySwap;
+        sourceColumnThenGeometrySwap = this.fullHeight;
         this.fullHeight = this.fullWidth;
-        this.fullWidth = var3;
+        this.fullWidth = sourceColumnThenGeometrySwap;
     }
 
     final void setAsRasterTarget() {
@@ -1351,29 +1351,29 @@ class Sprite extends SpriteState {
     }
 
     final Sprite copyMirroredHorizontally() {
-        int var2 = 0;
-        int var3 = 0;
-        Sprite var1 = new Sprite(this.width, this.height);
-        var1.fullWidth = this.fullWidth;
-        var1.fullHeight = this.fullHeight;
-        var1.trimX = this.fullWidth - this.width - this.trimX;
-        var1.trimY = this.trimY;
-        for (var2 = 0; var2 < this.height; var2++) {
-            for (var3 = 0; var3 < this.width; var3++) {
-                var1.pixels[var2 * this.width + var3] = this.pixels[var2 * this.width + this.width - 1 - var3];
+        int copyRow = 0;
+        int copyColumn = 0;
+        Sprite mirroredSprite = new Sprite(this.width, this.height);
+        mirroredSprite.fullWidth = this.fullWidth;
+        mirroredSprite.fullHeight = this.fullHeight;
+        mirroredSprite.trimX = this.fullWidth - this.width - this.trimX;
+        mirroredSprite.trimY = this.trimY;
+        for (copyRow = 0; copyRow < this.height; copyRow++) {
+            for (copyColumn = 0; copyColumn < this.width; copyColumn++) {
+                mirroredSprite.pixels[copyRow * this.width + copyColumn] = this.pixels[copyRow * this.width + this.width - 1 - copyColumn];
             }
         }
-        return var1;
+        return mirroredSprite;
     }
 
     void drawHalfSize(int x, int y) {
         x = x + (this.trimX >> 1);
         y = y + (this.trimY >> 1);
-        int var3 = x < SoftwareRasterizer.clipLeft ? SoftwareRasterizer.clipLeft - x << 1 : 0;
-        int var4 = x + (this.width >> 1) > SoftwareRasterizer.clipRight ? SoftwareRasterizer.clipRight - x << 1 : this.width;
-        int var5 = y < SoftwareRasterizer.clipTop ? SoftwareRasterizer.clipTop - y << 1 : 0;
-        int var6 = y + (this.height >> 1) > SoftwareRasterizer.clipBottom ? SoftwareRasterizer.clipBottom - y << 1 : this.height;
-        Sprite.blitHalfSize(this.pixels, var5 * this.width + var3, (y + (var5 >> 1)) * SoftwareRasterizer.stride + (x + (var3 >> 1)), (this.width << 1) - (var4 - var3) + (this.width & 1), SoftwareRasterizer.stride - (var4 - var3 >> 1), this.width, var4 - var3 >> 1, var6 - var5 >> 1);
+        int firstSourceX = x < SoftwareRasterizer.clipLeft ? SoftwareRasterizer.clipLeft - x << 1 : 0;
+        int sourceRightExclusive = x + (this.width >> 1) > SoftwareRasterizer.clipRight ? SoftwareRasterizer.clipRight - x << 1 : this.width;
+        int firstSourceY = y < SoftwareRasterizer.clipTop ? SoftwareRasterizer.clipTop - y << 1 : 0;
+        int sourceBottomExclusive = y + (this.height >> 1) > SoftwareRasterizer.clipBottom ? SoftwareRasterizer.clipBottom - y << 1 : this.height;
+        Sprite.blitHalfSize(this.pixels, firstSourceY * this.width + firstSourceX, (y + (firstSourceY >> 1)) * SoftwareRasterizer.stride + (x + (firstSourceX >> 1)), (this.width << 1) - (sourceRightExclusive - firstSourceX) + (this.width & 1), SoftwareRasterizer.stride - (sourceRightExclusive - firstSourceX >> 1), this.width, sourceRightExclusive - firstSourceX >> 1, sourceBottomExclusive - firstSourceY >> 1);
     }
 
     void draw(int x, int y) {
@@ -1569,75 +1569,75 @@ class Sprite extends SpriteState {
     }
 
     void drawQuarterSize(int x, int y) {
-        int var9 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_12_0 = 0;
-        int var3;
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        int var8;
-        int var10;
-        int var11;
-        int var12;
-        int var13;
-        int var14;
-        int var15;
-        var3 = this.width >> 2;
-        var4 = this.height >> 2;
+        int sourceBlockY = 0;
+        int sampleRow = 0;
+        int sampleColumn = 0;
+        int firstSourceXCandidate = 0;
+        int lastBlockSourceXCandidate = 0;
+        int firstSourceYCandidate = 0;
+        int lastBlockSourceYCandidate = 0;
+        int reducedWidth;
+        int reducedHeight;
+        int firstSourceX;
+        int lastBlockSourceX;
+        int firstSourceY;
+        int lastBlockSourceY;
+        int sourceIndex;
+        int destinationIndex;
+        int sourceBlockX;
+        int sourcePixelOrDestination;
+        int sumRedBlue;
+        int sumGreen;
+        reducedWidth = this.width >> 2;
+        reducedHeight = this.height >> 2;
         x = x + this.trimX / 4;
         y = y + this.trimY / 4;
         if (x >= SoftwareRasterizer.clipLeft) {
-          stackIn_3_0 = 0;
+          firstSourceXCandidate = 0;
         } else {
-          stackIn_3_0 = SoftwareRasterizer.clipLeft - x << 2;
+          firstSourceXCandidate = SoftwareRasterizer.clipLeft - x << 2;
         }
-        var5 = stackIn_3_0;
-        if (x + var3 <= SoftwareRasterizer.clipRight) {
-          stackIn_6_0 = this.width - 4;
+        firstSourceX = firstSourceXCandidate;
+        if (x + reducedWidth <= SoftwareRasterizer.clipRight) {
+          lastBlockSourceXCandidate = this.width - 4;
         } else {
-          stackIn_6_0 = (SoftwareRasterizer.clipRight - x << 2) - 4;
+          lastBlockSourceXCandidate = (SoftwareRasterizer.clipRight - x << 2) - 4;
         }
-        var6 = stackIn_6_0;
+        lastBlockSourceX = lastBlockSourceXCandidate;
         if (y >= SoftwareRasterizer.clipTop) {
-          stackIn_9_0 = 0;
+          firstSourceYCandidate = 0;
         } else {
-          stackIn_9_0 = SoftwareRasterizer.clipTop - y << 2;
+          firstSourceYCandidate = SoftwareRasterizer.clipTop - y << 2;
         }
-        var7 = stackIn_9_0;
-        if (y + var4 <= SoftwareRasterizer.clipBottom) {
-          stackIn_12_0 = this.height - 4;
+        firstSourceY = firstSourceYCandidate;
+        if (y + reducedHeight <= SoftwareRasterizer.clipBottom) {
+          lastBlockSourceYCandidate = this.height - 4;
         } else {
-          stackIn_12_0 = (SoftwareRasterizer.clipBottom - y << 2) - 4;
+          lastBlockSourceYCandidate = (SoftwareRasterizer.clipBottom - y << 2) - 4;
         }
-        var8 = stackIn_12_0;
-        for (var9 = var7; var9 <= var8; var9 += 4) {
-          var10 = var9 * this.width + var5;
-          var11 = (y + (var9 >> 2)) * SoftwareRasterizer.stride + (x + (var5 >> 2));
-          var12 = var5;
-          L5: while (var12 <= var6) {
-            var13 = 0;
-            var14 = 0;
-            var15 = 0;
-            for (var16 = 0; var16 < 4; var16++) {
-              for (var17 = 0; var17 < 4; var17++) {
-                var13 = this.pixels[var10 + var16 * this.width + var17];
-                if (var13 == 0) {
-                  var13 = SoftwareRasterizer.framebuffer[var11];
+        lastBlockSourceY = lastBlockSourceYCandidate;
+        for (sourceBlockY = firstSourceY; sourceBlockY <= lastBlockSourceY; sourceBlockY += 4) {
+          sourceIndex = sourceBlockY * this.width + firstSourceX;
+          destinationIndex = (y + (sourceBlockY >> 2)) * SoftwareRasterizer.stride + (x + (firstSourceX >> 2));
+          sourceBlockX = firstSourceX;
+          L5: while (sourceBlockX <= lastBlockSourceX) {
+            sourcePixelOrDestination = 0;
+            sumRedBlue = 0;
+            sumGreen = 0;
+            for (sampleRow = 0; sampleRow < 4; sampleRow++) {
+              for (sampleColumn = 0; sampleColumn < 4; sampleColumn++) {
+                sourcePixelOrDestination = this.pixels[sourceIndex + sampleRow * this.width + sampleColumn];
+                if (sourcePixelOrDestination == 0) {
+                  sourcePixelOrDestination = SoftwareRasterizer.framebuffer[destinationIndex];
                 }
-                var14 = var14 + (var13 & 16711935);
-                var15 = var15 + (var13 & 65280);
+                sumRedBlue = sumRedBlue + (sourcePixelOrDestination & 16711935);
+                sumGreen = sumGreen + (sourcePixelOrDestination & 65280);
               }
             }
-            SoftwareRasterizer.framebuffer[var11] = (var14 & 267390960 | var15 & 1044480) >> 4;
-            var12 += 4;
-            var10 += 4;
-            var11++;
+            SoftwareRasterizer.framebuffer[destinationIndex] = (sumRedBlue & 267390960 | sumGreen & 1044480) >> 4;
+            sourceBlockX += 4;
+            sourceIndex += 4;
+            destinationIndex++;
           }
         }
     }
@@ -2519,17 +2519,17 @@ class Sprite extends SpriteState {
     }
 
     final Sprite copy() {
-        int var3 = 0;
-        Sprite var1 = new Sprite(this.width, this.height);
-        var1.fullWidth = this.fullWidth;
-        var1.fullHeight = this.fullHeight;
-        var1.trimX = this.trimX;
-        var1.trimY = this.trimY;
-        int var2 = this.pixels.length;
-        for (var3 = 0; var3 < var2; var3++) {
-            var1.pixels[var3] = this.pixels[var3];
+        int copyIndex = 0;
+        Sprite copiedSprite = new Sprite(this.width, this.height);
+        copiedSprite.fullWidth = this.fullWidth;
+        copiedSprite.fullHeight = this.fullHeight;
+        copiedSprite.trimX = this.trimX;
+        copiedSprite.trimY = this.trimY;
+        int pixelCount = this.pixels.length;
+        for (copyIndex = 0; copyIndex < pixelCount; copyIndex++) {
+            copiedSprite.pixels[copyIndex] = this.pixels[copyIndex];
         }
-        return var1;
+        return copiedSprite;
     }
 
     Sprite(int fullWidth, int fullHeight, int trimX, int trimY, int width, int height, int[] pixels) {
@@ -2662,29 +2662,29 @@ class Sprite extends SpriteState {
         this.trimX = 0;
     }
 
-    Sprite(byte[] param0, java.awt.Component param1) {
-        Throwable decompiledCaughtException = null;
-        java.awt.Image var3 = null;
-        InterruptedException var3_ref = null;
-        java.awt.MediaTracker var4 = null;
-        java.awt.image.PixelGrabber var5 = null;
+    Sprite(byte[] encodedImageBytes, java.awt.Component imageObserverComponent) {
+        Throwable caughtImageLoadError = null;
+        java.awt.Image decodedImage = null;
+        InterruptedException interruptedImageLoadError = null;
+        java.awt.MediaTracker imageLoadTracker = null;
+        java.awt.image.PixelGrabber pixelGrabber = null;
         try {
-          var3 = java.awt.Toolkit.getDefaultToolkit().createImage(param0);
-          var4 = new java.awt.MediaTracker(param1);
-          var4.addImage(var3, 0);
-          var4.waitForAll();
-          this.width = var3.getWidth((java.awt.image.ImageObserver) ((Object) param1));
-          this.height = var3.getHeight((java.awt.image.ImageObserver) ((Object) param1));
+          decodedImage = java.awt.Toolkit.getDefaultToolkit().createImage(encodedImageBytes);
+          imageLoadTracker = new java.awt.MediaTracker(imageObserverComponent);
+          imageLoadTracker.addImage(decodedImage, 0);
+          imageLoadTracker.waitForAll();
+          this.width = decodedImage.getWidth((java.awt.image.ImageObserver) ((Object) imageObserverComponent));
+          this.height = decodedImage.getHeight((java.awt.image.ImageObserver) ((Object) imageObserverComponent));
           this.fullWidth = this.width;
           this.fullHeight = this.height;
           this.trimX = 0;
           this.trimY = 0;
           this.pixels = new int[this.width * this.height];
-          var5 = new java.awt.image.PixelGrabber(var3, 0, 0, this.width, this.height, this.pixels, 0, this.width);
-          var5.grabPixels();
-        } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = (InterruptedException) (Object) decompiledCaughtException;
+          pixelGrabber = new java.awt.image.PixelGrabber(decodedImage, 0, 0, this.width, this.height, this.pixels, 0, this.width);
+          pixelGrabber.grabPixels();
+        } catch (java.lang.InterruptedException imageLoadInterrupted) {
+          caughtImageLoadError = imageLoadInterrupted;
+          interruptedImageLoadError = (InterruptedException) (Object) caughtImageLoadError;
         }
     }
 }

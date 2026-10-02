@@ -24,13 +24,15 @@ bounds, special-kind probability, release interval and queue geometry.
 The previous naming pass added 38 rules. The Boolean-carrier pass removed
 14 obsolete names and migrated 61 local ordinals plus one generated field type.
 The preceding integral-guard pass preserved all 1,194 guarded rules unchanged.
-The previous naming passes covered assets and rendering contracts. The current
-pass adds 523 rules for all 23 private static sprite pixel kernels, their
-arguments and scratch locals, plus scaled-wrapper geometry. All 1,710 prior
-rules and the raw input remain unchanged. The 2,233 rules apply 25,527 identifier
-edits. An expanded existing native drawing probe verifies 45,074 sprite cases,
-including 43,750 independent channel/coordinate oracle checks. Original keys,
-indexes, signed/unsigned shifts and RGB/ARGB/indexed transparency remain intact.
+The previous naming pass covered all 23 private static sprite kernels. The
+current pass adds 171 rules and completes every parameter/local name in
+`Sprite`, `ArgbSprite` and `IndexedSprite`, including ARGB rotation, bilinear
+weights, reductions and sprite mutations. All 2,233 prior rules and the raw
+input remain unchanged. The 2,404 rules apply 27,222 identifier edits. An
+expanded existing native drawing probe adds 33,168 transform cases, including
+23,340 independent pixel/geometry oracles, while preserving its previous
+traces. Original shifts, transparency, inherited smooth rotation and RGB copy
+return types remain intact. AWT image loading is supported by source evidence.
 Independent native fixtures verify 84,661 additional difficulty/reset/selection cases,
 including floating-point casts, recursive failures, partial writes and seeded
 random draw consumption. The current input and decompiler revisions are pinned

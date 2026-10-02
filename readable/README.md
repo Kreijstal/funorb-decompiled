@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 2,233 guarded naming rules: 24 classes, 457 fields,
-270 methods, 709 parameters and 773 local declarations. Both 303-file corpora
+The current export has 2,404 guarded naming rules: 24 classes, 457 fields,
+270 methods, 711 parameters and 942 local declarations. Both 303-file corpora
 compile, preserving 150,801 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -37,22 +37,22 @@ git archive --format=tar 1fa1f5ca8db58810744ef29e04bcf31c74e81805 | sha256sum
 This identifies tracked decompiler source and its Git archive metadata. It is
 separate from a game JAR or the Java source-tree hashes below.
 
-The current naming pass adds 523 guarded identities: 23 private static pixel
-kernels, 259 parameters and 241 locals. Every such kernel in RGB `Sprite`,
-`ArgbSprite` and `IndexedSprite` now names its operation, buffers, cursors,
-channel arithmetic and saved increment indexes. Scaled wrappers name their
-16-bit source coordinates and crop/clip adjustments. The mirror applies 25,527
-identifier edits while preserving all 150,801 bindings and 388 override edges.
-Raw source, generator pins and all 1,710 prior rules are unchanged.
+The current naming pass adds 171 guarded identities: two image-constructor
+parameters and 169 locals. Every parameter and local declaration in `Sprite`,
+`ArgbSprite` and `IndexedSprite` now has a guarded semantic name. This completes
+the ARGB nearest-rotation geometry, bilinear weight/channel arithmetic,
+half/quarter reductions, copying, outlining, cropping and image-loading names.
+The mirror applies 27,222 identifier edits while preserving all 150,801 bindings
+and 388 override edges. Raw source, generator pins and all 2,233 prior rules
+are unchanged.
 
-The previous passes named rendering contracts and asset/loading identities.
-Original resource keys, numeric indexes, guards, zero-colour transparency,
-stored ARGB alpha and indexed run markers remain intact. RGB/indexed alpha
-kernels retain signed shifts; ARGB kernels retain unsigned shifts.
-The expanded existing drawing probe adds 45,074 pixel-buffer cases against
-fixed native bytecode: 43,750 have independent per-channel/coordinate oracles;
-1,324 reductions, skip-run and invalid-alpha cases compare native traces only.
-Real-asset rendering and whole-game equivalence remain unverified.
+The existing drawing probe retains its previous nine-slice and pixel traces.
+A separate 33,168-case transform trace adds 23,340 independent oracle cases for
+cardinal rotations, bilinear interpolation, reductions and sprite mutations.
+Another 9,828 cases preserve native general-angle/extreme-scale traces. ARGB
+smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
+sprites. AWT image loading/interruption, arbitrary malformed geometry,
+real-asset rendering and whole-game equivalence remain unverified.
 
 ## Reproduce and check
 
@@ -99,6 +99,19 @@ indexes are converted to unsigned values. Reductions, run-marker clipping and
 invalid alpha values have fixed native traces without independent oracles.
 The additional trace SHA-256 is
 `c986ff493508bf516e6bd33e187ee51ed478a012dfebf467a8b76e00f78a1f09`.
+
+The separate transform matrix independently checks 18,144 nearest cardinal
+rotations with negative/zero/positive power-of-two scales, fractional Q4
+centers, alternate pivots, cropped layouts and clipping. Its oracle maps each
+destination pixel directly to source coordinates instead of reproducing the
+nine clipping branches. Another 4,860 private bilinear cases check source-edge
+neighbors, fractional masks, truncated weights, the half-coverage threshold and
+forced nonzero output. The 216 reduction cases compute channel averages
+separately; 120 copy/mirror/quarter-turn/outline/crop cases check pixels,
+canvas/crop geometry, return class and buffer independence. The 9,828
+remaining rotations compare fixed native traces, recording exception kinds and
+resulting pixel buffers, and have no independent semantic oracle. The transform trace SHA-256 is
+`dd7445f0f6dc8c030467f58606545b95ee42afc9846ccaeebc79107f353583c1`.
 
 Matching/scoring covers 708 controlled scenarios and 55,728 ticks per variant.
 The text writer covers 152 cases, including retained suffixes, empty/growing
@@ -374,6 +387,6 @@ the same manifest; no JSON snapshots are added.
 | Java source tree | SHA-256 |
 | --- | --- |
 | Raw | `cf0cbc50ff6b23458db1a7beb4edb6829ab61e7e6ea3dc7d7d47f03e2492095d` |
-| Readable | `d39bf5f11c910b60c1889a31132de94a4e3ab2e023f03b6bc1ede8d53ecb4271` |
+| Readable | `b04e4d0b20a850f47638f25ed5621219c249081410a16c704be74973eafa4f84` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

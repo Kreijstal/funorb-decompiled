@@ -15,7 +15,8 @@ const aliases = new Map(JSON.parse(fs.readFileSync(path.join(root,'geoblox-rules
 const temporary=fs.mkdtempSync(path.join(os.tmpdir(),'geoblox-nine-slice-'));
 const expectedNativeSha256 = '16c92de1c3230786836344a4848c7046488b9cfa4a48078ca34024fdcbdc7be9';
 const expectedSpritePixelsSha256 = 'c986ff493508bf516e6bd33e187ee51ed478a012dfebf467a8b76e00f78a1f09';
-let expected=null, expectedSpritePixels=null;
+const expectedSpriteTransformsSha256 = 'dd7445f0f6dc8c030467f58606545b95ee42afc9846ccaeebc79107f353583c1';
+let expected=null, expectedSpritePixels=null, expectedSpriteTransforms=null;
 try {
   if(nativeInput) {
     const files=[];
@@ -53,7 +54,11 @@ try {
           field("${type('wh')}","${field('wh','field_m','I')}").getInt(sprite)+":"+s;
       }
       public static void main(String[]args)throws Exception {
-        if(args.length!=0){SpritePixelBehavior.main(args);return;}
+        if(args.length!=0){
+          if(args[0].equals("sprite-transforms"))SpriteTransformBehavior.main(args);
+          else SpritePixelBehavior.main(args);
+          return;
+        }
         Method build=Class.forName("${type('n')}").getDeclaredMethod("${name('M:n.a(IIIIBIIII)[Ldm;','a')}",
           int.class,int.class,int.class,int.class,byte.class,int.class,int.class,int.class,int.class);build.setAccessible(true);
         Field guard=field("${type('Geoblox')}","${field('Geoblox','field_C','I')}");
@@ -276,6 +281,197 @@ try {
         StringBuilder sha=new StringBuilder();for(byte b:trace.digest())sha.append(String.format("%02x",b&255));
         System.out.println("sprite-pixels:"+cases+":"+oracleCases+":"+traceCases+":"+sha);
       }
+    }
+    class SpriteTransformBehavior extends SpritePixelBehavior {
+      static int cases,oracleCases,traceCases;
+      static MessageDigest trace;
+      static void record(int[] pixels) {
+        for(int pixel:pixels){trace.update((byte)(pixel>>>24));trace.update((byte)(pixel>>>16));
+          trace.update((byte)(pixel>>>8));trace.update((byte)pixel);}
+        cases++;
+      }
+      static void check(int[] actual,int[] wanted,String label) {
+        if(!java.util.Arrays.equals(actual,wanted))throw new AssertionError(label);
+        oracleCases++;
+      }
+      static int[] reductionOracle(int[] source,int w,int h,int trimX,int trimY,int x,int y,
+          int block,int[] clip,boolean argb) {
+        int[] result=background();int left=x+trimX/block,top=y+trimY/block,count=block*block;
+        for(int dy=0;dy<targetHeight;dy++)for(int dx=0;dx<targetWidth;dx++) {
+          if(dx<clip[0]||dy<clip[1]||dx>=clip[2]||dy>=clip[3])continue;
+          int sx=(dx-left)*block,sy=(dy-top)*block;
+          if(sx<0||sy<0||sx+block>w||sy+block>h)continue;
+          int index=dy*targetWidth+dx,alphaSum=0;int[] channels=new int[3];
+          for(int by=0;by<block;by++)for(int bx=0;bx<block;bx++) {
+            int pixel=source[(sy+by)*w+sx+bx],alpha=argb?pixel>>>24:1;
+            if(!argb&&pixel==0)pixel=result[index];
+            alphaSum+=alpha;for(int c=0;c<3;c++)channels[c]+=((pixel>>>(c*8))&255)*alpha;
+          }
+          if(argb&&alphaSum==0)continue;
+          int filtered=0;for(int c=0;c<3;c++)filtered|=(channels[c]/(argb?alphaSum:count))<<(c*8);
+          result[index]=argb?blend(filtered,result[index],alphaSum/count,true):filtered;
+        }
+        return result;
+      }
+      static int[] cardinalOracle(int[] source,int w,int h,int trimX,int trimY,int pivotX,int pivotY,
+          int destinationX,int destinationY,int quarterTurns,int scale,int[] clip,boolean argb) {
+        int[] result=background();if(scale==0)return result;
+        int[] sin={0,1,0,-1},cos={1,0,-1,0};int inverse=16777216/scale;
+        int stepX=cos[quarterTurns]*inverse,stepY=sin[quarterTurns]*inverse;
+        for(int dy=0;dy<targetHeight;dy++)for(int dx=0;dx<targetWidth;dx++) {
+          if(dx<clip[0]||dy<clip[1]||dx>=clip[2]||dy>=clip[3])continue;
+          int rx=dx*16+8-destinationX,ry=dy*16+8-destinationY;
+          int sx=(pivotX-trimX*16)*256-Math.floorDiv(ry*stepY,16)+Math.floorDiv(rx*stepX,16);
+          int sy=(pivotY-trimY*16)*256+Math.floorDiv(ry*stepX,16)+Math.floorDiv(rx*stepY,16);
+          if(sx<0||sy<0||sx>=w*4096||sy>=h*4096)continue;
+          int index=dy*targetWidth+dx,pixel=source[(sy/4096)*w+sx/4096];
+          if(argb)result[index]=blend(pixel,result[index],pixel>>>24,true);
+          else if(pixel!=0)result[index]=pixel;
+        }
+        return result;
+      }
+      static int bilinearOracle(int[] source,int w,int h,int sourceX,int sourceY,int fx,int fy,int destination) {
+        fx=Math.floorMod(fx,4096);fy=Math.floorMod(fy,4096);
+        int total=0;int[] channels=new int[3];
+        for(int by=0;by<2;by++)for(int bx=0;bx<2;bx++) {
+          int x=sourceX+bx,y=sourceY+by;
+          if(x<0||y<0||x>=w||y>=h)continue;
+          int pixel=source[y*w+x];if(pixel==0)continue;
+          int weight=((bx==0?4096-fx:fx)*(by==0?4096-fy:fy))/65536;
+          total+=weight;for(int c=0;c<3;c++)channels[c]+=((pixel>>>(c*8))&255)*weight;
+        }
+        if(total<128)return destination;
+        int result=0;for(int c=0;c<3;c++)result|=(channels[c]/(total<256?total:256))<<(c*8);
+        return result==0?1:result;
+      }
+      static int geometry(Object sprite,String name)throws Exception {
+        return NineSliceBehavior.field("${type('wh')}",name).getInt(sprite);
+      }
+      static int[] pixels(Object sprite)throws Exception {
+        return (int[])NineSliceBehavior.field("${type('dm')}","${field('dm','field_v','[I')}").get(sprite);
+      }
+      public static void main(String[]args)throws Exception {
+        trace=MessageDigest.getInstance("SHA-256");
+        int[][] shapes={{1,1,1,1,0,0},{4,4,4,4,0,0},{5,3,7,5,1,1}};
+        int[][] clips={{0,0,11,9},{1,2,8,7},{5,0,6,9}};
+        int[][] positions={{0,0},{2,2},{8,7}};
+        for(boolean argb:new boolean[]{false,true})for(int[] shape:shapes)for(int pattern=0;pattern<2;pattern++) {
+          int w=shape[0],h=shape[1];int[] source=new int[w*h];
+          for(int i=0;i<source.length;i++)source[i]=colors[(i+pattern*3)%colors.length]
+            |(argb?(new int[]{0,1,127,128,254,255}[(i+pattern)%6])<<24:0);
+          int[] originalSource=source.clone();
+          ${type('dm')} sprite=argb?new ${type('il')}(shape[2],shape[3],shape[4],shape[5],w,h,source)
+            :new ${type('dm')}(shape[2],shape[3],shape[4],shape[5],w,h,source);
+          for(int[] clip:clips)for(int[] position:positions)for(int block:new int[]{2,4}) {
+            int[] target=background();${call('vb','a([III)V')}(target,targetWidth,targetHeight);
+            ${call('vb','e(IIII)V')}(clip[0],clip[1],clip[2],clip[3]);
+            if(block==2)sprite.${spriteCall('d(II)V')}(position[0],position[1]);
+            else sprite.${spriteCall('f(II)V')}(position[0],position[1]);
+            check(target,reductionOracle(source,w,h,shape[4],shape[5],position[0],position[1],block,clip,argb),
+              "reduction:"+argb+":"+w+":"+block);
+            record(target);
+          }
+          for(int[] clip:clips)for(int[] position:positions)for(int pivotShift:new int[]{0,8})
+          for(int fraction:new int[]{0,8,15})for(int scale:new int[]{-8192,-4096,-2048,0,2048,4096,8192})
+          for(int turns=0;turns<4;turns++) {
+            int[] target=background();${call('vb','a([III)V')}(target,targetWidth,targetHeight);
+            ${call('vb','e(IIII)V')}(clip[0],clip[1],clip[2],clip[3]);
+            int px=shape[2]*8+pivotShift,py=shape[3]*8-pivotShift;
+            int dx=position[0]*16+fraction,dy=position[1]*16+fraction;
+            sprite.${spriteCall('b(IIIIII)V')}(px,py,dx,dy,turns*16384,scale);
+            check(target,cardinalOracle(source,w,h,shape[4],shape[5],px,py,dx,dy,turns,scale,clip,argb),
+              "cardinal:"+argb+":"+w+":"+turns+":"+scale+":"+fraction);
+            record(target);
+          }
+          if(!java.util.Arrays.equals(source,originalSource))throw new AssertionError("transform source changed");
+        }
+        Method bilinear=Class.forName("${type('dm')}").getDeclaredMethod("${spriteCall('c(IIIII)V')}",
+          int.class,int.class,int.class,int.class,int.class);bilinear.setAccessible(true);
+        for(int pattern=0;pattern<3;pattern++) {
+          int[] source=new int[12];for(int i=0;i<source.length;i++)source[i]=colors[(i+pattern*3)%colors.length];
+          ${type('dm')} sprite=new ${type('dm')}(4,3,0,0,4,3,source);
+          for(int y=-1;y<3;y++)for(int x=-1;x<4;x++)
+          for(int fx:new int[]{-1,0,1,1023,2047,2048,4094,4095,8192})
+          for(int fy:new int[]{-1,0,1,1023,2047,2048,4094,4095,8192}) {
+            int[] target=background();${call('vb','a([III)V')}(target,targetWidth,targetHeight);
+            int[] wanted=target.clone();int index=37;
+            wanted[index]=bilinearOracle(source,4,3,x,y,fx,fy,wanted[index]);
+            bilinear.invoke(sprite,index,x,y,fx,fy);
+            check(target,wanted,"bilinear:"+pattern+":"+x+":"+y+":"+fx+":"+fy);record(target);
+          }
+        }
+        for(boolean argb:new boolean[]{false,true})for(int[] shape:shapes)
+        for(int pattern=0;pattern<4;pattern++)for(int operation=0;operation<5;operation++) {
+          int w=shape[0],h=shape[1];int[] initial=new int[w*h];
+          for(int i=0;i<initial.length;i++)initial[i]=pattern==3?0:pattern==2?(i==initial.length/2?1:0)
+            :colors[(i+pattern*3)%colors.length]|(argb&&i%2==0?0xff000000:0);
+          int[] source=initial.clone();
+          ${type('dm')} sprite=argb?new ${type('il')}(shape[2],shape[3],shape[4],shape[5],w,h,source)
+            :new ${type('dm')}(shape[2],shape[3],shape[4],shape[5],w,h,source);
+          ${type('dm')} result=sprite;int[] wanted=initial.clone();
+          int newWidth=w,newHeight=h,fullWidth=shape[2],fullHeight=shape[3],trimX=shape[4],trimY=shape[5];
+          if(operation==0)result=sprite.${spriteCall('b()Ldm;')}();
+          if(operation==1) {
+            result=sprite.${spriteCall('c()Ldm;')}();trimX=fullWidth-w-trimX;
+            for(int y=0;y<h;y++)for(int x=0;x<w;x++)wanted[y*w+x]=initial[y*w+w-1-x];
+          }
+          if(operation==2) {
+            sprite.${spriteCall('a()V')}();newWidth=h;newHeight=w;
+            fullWidth=shape[3];fullHeight=shape[2];trimX=shape[3]-h-shape[5];trimY=shape[4];
+            for(int y=0;y<h;y++)for(int x=0;x<w;x++)wanted[x*h+h-1-y]=initial[y*w+x];
+          }
+          if(operation==3) {
+            sprite.${spriteCall('g(I)V')}(0xc85a93);
+            for(int y=0;y<h;y++)for(int x=0;x<w;x++)if(initial[y*w+x]==0
+              &&(x>0&&initial[y*w+x-1]!=0||x+1<w&&initial[y*w+x+1]!=0
+                ||y>0&&initial[(y-1)*w+x]!=0||y+1<h&&initial[(y+1)*w+x]!=0))wanted[y*w+x]=0xc85a93;
+          }
+          if(operation==4) {
+            sprite.${spriteCall('d()V')}();int left=w,top=h,right=-1,bottom=-1;
+            for(int y=0;y<h;y++)for(int x=0;x<w;x++)if(initial[y*w+x]!=0) {
+              left=Math.min(left,x);right=Math.max(right,x);top=Math.min(top,y);bottom=Math.max(bottom,y);
+            }
+            if(right<0){newWidth=0;newHeight=0;wanted=new int[0];}
+            else {
+              newWidth=right-left+1;newHeight=bottom-top+1;trimX+=left;trimY+=top;
+              wanted=new int[newWidth*newHeight];for(int y=0;y<newHeight;y++)for(int x=0;x<newWidth;x++)
+                wanted[y*newWidth+x]=initial[(y+top)*w+x+left];
+            }
+          }
+          if(geometry(result,"${field('wh','field_r','I')}")!=newWidth||geometry(result,"${field('wh','field_m','I')}")!=newHeight
+            ||geometry(result,"${field('wh','field_s','I')}")!=fullWidth||geometry(result,"${field('wh','field_o','I')}")!=fullHeight
+            ||geometry(result,"${field('wh','field_u','I')}")!=trimX||geometry(result,"${field('wh','field_p','I')}")!=trimY)
+              throw new AssertionError("mutated geometry:"+argb+":"+w+":"+pattern+":"+operation);
+          if(operation<2&&(result==sprite||pixels(result)==source||result instanceof ${type('il')}))
+            throw new AssertionError("copy object/type/pixel independence");
+          if(!java.util.Arrays.equals(source,initial))throw new AssertionError("mutated source array");
+          check(pixels(result),wanted,"copy/rotate/outline/trim:"+argb+":"+w+":"+pattern+":"+operation);
+          for(int value:new int[]{newWidth,newHeight,fullWidth,fullHeight,trimX,trimY}) {
+            trace.update((byte)(value>>>24));trace.update((byte)(value>>>16));trace.update((byte)(value>>>8));trace.update((byte)value);
+          }
+          trace.update((byte)(result==sprite?1:0));trace.update((byte)(pixels(result)==source?1:0));
+          trace.update((byte)(result instanceof ${type('il')}?1:0));record(pixels(result));
+        }
+        for(boolean argb:new boolean[]{false,true})for(int[] shape:shapes)for(int[] clip:clips)
+        for(int[] position:positions)for(int angle:new int[]{-1,0,1,8192,16383,16384,16385,24576,32768,40960,49151,49152,65536})
+        for(int scale:new int[]{-4096,-1,0,1,2048,4096,Integer.MAX_VALUE})for(int mode=0;mode<2;mode++) {
+          int[] source=new int[shape[0]*shape[1]];for(int i=0;i<source.length;i++)
+            source[i]=colors[i%colors.length]|(argb?(i%2==0?0xff000000:0):0);
+          ${type('dm')} sprite=argb?new ${type('il')}(shape[2],shape[3],shape[4],shape[5],shape[0],shape[1],source)
+            :new ${type('dm')}(shape[2],shape[3],shape[4],shape[5],shape[0],shape[1],source);
+          int[] target=background();${call('vb','a([III)V')}(target,targetWidth,targetHeight);
+          ${call('vb','e(IIII)V')}(clip[0],clip[1],clip[2],clip[3]);
+          try {
+            if(mode==0)sprite.${spriteCall('b(IIIIII)V')}(shape[2]*8,shape[3]*8,position[0]*16+3,position[1]*16+11,angle,scale);
+            else sprite.${spriteCall('a(IIIIII)V')}(shape[2]*8,shape[3]*8,position[0]*16+3,position[1]*16+11,angle,scale);
+            trace.update((byte)0);
+          }catch(ArrayIndexOutOfBoundsException error){trace.update((byte)1);}
+          catch(ArithmeticException error){trace.update((byte)2);}
+          record(target);traceCases++;
+        }
+        StringBuilder sha=new StringBuilder();for(byte b:trace.digest())sha.append(String.format("%02x",b&255));
+        System.out.println("sprite-transforms:"+cases+":"+oracleCases+":"+traceCases+":"+sha);
+      }
     }`;
     const directory=path.join(temporary,variant),classes=path.join(directory,'classes');fs.mkdirSync(classes,{recursive:true});
     const harnessFile=path.join(directory,'NineSliceBehavior.java');fs.writeFileSync(harnessFile,harness);
@@ -296,6 +492,13 @@ try {
     assert.equal(spriteSha,expectedSpritePixelsSha256,variant+': fixed native sprite-pixel trace');
     if(expectedSpritePixels===null)expectedSpritePixels=spriteOutput;
     else assert.deepEqual(spriteOutput,expectedSpritePixels,variant+': sprite pixels and original failure mutations');
+    const transformOutput=captureProcess('java',['-Djava.awt.headless=true','-cp',classes+path.delimiter+cp,'NineSliceBehavior','sprite-transforms']).stdout;
+    const transformSha=crypto.createHash('sha256').update(transformOutput).digest('hex');
+    console.log(JSON.stringify({variant,spriteTransformTrace:transformOutput.toString().trim(),sha256:transformSha}));
+    assert.match(transformOutput.toString(),/^sprite-transforms:33168:23340:9828:[a-f0-9]{64}\n$/);
+    assert.equal(transformSha,expectedSpriteTransformsSha256,variant+': fixed native sprite-transform trace');
+    if(expectedSpriteTransforms===null)expectedSpriteTransforms=transformOutput;
+    else assert.deepEqual(transformOutput,expectedSpriteTransforms,variant+': transform pixel buffers and failure mutations');
   }
 }catch(error){if(error.stderr)process.stderr.write(error.stderr);throw error;}
 finally{fs.rmSync(temporary,{recursive:true,force:true});}

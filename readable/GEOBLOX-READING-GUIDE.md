@@ -126,8 +126,37 @@ boundaries, full canvas versus cropped pixels, alpha boundaries and unsigned
 palette indexes. A nonzero palette index can copy zero; index zero remains
 transparent even with a nonzero palette entry. Another 1,324 reduction,
 run-marker and invalid-alpha cases preserve fixed native traces. Those cases
-have no independent semantic oracle. Rotation and quarter-size scratch locals,
-real-asset rendering and whole-game behavior still need investigation.
+have no independent semantic oracle. Real-asset rendering and whole-game
+behavior still need investigation.
+
+Every parameter/local declaration in the three concrete sprite classes now has
+an explicit guarded name. `ArgbSprite.rotateNearest` shares RGB geometry names:
+Q4 pivots/destination centers, Q12 source coordinates, quantized inverse sine
+and cosine steps, transformed corner bounds and negative scan counters. One
+turn is 65,536 angle units; scale 4,096 is unity. The nine step-direction branches
+and their write-index snapshots remain explicit. ARGB adds `storedAlpha`,
+`inverseAlpha256` and `destinationPixel` to the sampled-pixel path.
+
+`sampleBilinear` names four neighbors and weights. Each weight starts in Q24,
+then truncates to Q8. Total surviving coverage below 128 skips the write;
+coverage 128 through 255 normalizes channels by the surviving weight, and a
+zero filtered RGB result becomes one. `ArgbSprite` inherits this RGB routine
+for smooth rotation. Its half/quarter reductions instead normalize channels
+by `alphaSum`, then blend with the average alpha. RGB reductions substitute
+the destination color for zero samples. Reused sample/weight/channel storage
+has explicit names rather than being split into invented variables.
+
+`copy` and `copyMirroredHorizontally` allocate independent RGB sprites even when
+inherited by ARGB. `rotateClockwise` exchanges crop/canvas dimensions and trim
+geometry. `addOutline` tests the original four-neighbor mask, and
+`trimTransparentBorders` updates the crop bounding box while keeping the logical
+canvas. The additional native transform probe independently checks these
+mutations, reductions, cardinal rotation and bilinear rules. General rotations
+and extreme scales retain trace-only checks. The image constructor now names
+its encoded bytes, image observer, tracker, pixel grabber and caught interruption;
+its original partial-initialization behavior is retained but not exercised by
+the native drawing fixtures. Step-direction branches, other classes, AWT loading,
+real assets and whole-game behavior remain unfinished.
 
 ## Tutorial prompts and progression
 
@@ -663,8 +692,8 @@ the array indices, evidence, override families and remaining shared carriers.
 
 ## Remaining limitations
 
-There are 2,233 explicit guarded rules: 24 classes, 457 fields, 270 method
-declarations, 709 parameters and 773 locals. This is not full deobfuscation.
+There are 2,404 explicit guarded rules: 24 classes, 457 fields, 270 method
+declarations, 711 parameters and 942 locals. This is not full deobfuscation.
 Unknown flags, guard arguments and opaque shared helpers still need
 investigation. Current names and source identities live in the single manifest;
 previous naming and structural passes remain in Git. The earlier early-exit migration
