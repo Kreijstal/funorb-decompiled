@@ -2,7 +2,7 @@
 
 The current export has 1,208 guarded naming rules: 22 classes, 389 fields,
 181 methods, 217 parameters and 399 local declarations. Both 303-file corpora
-compile, preserving 152,514 bindings and 388 override relationships. Unknown
+compile, preserving 152,437 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
 ## One current manifest
@@ -21,17 +21,17 @@ tool bytes; `funorb-stubs.jar` is the frozen compilation dependency. The
 [reading guide](GEOBLOX-READING-GUIDE.md) explains the named gameplay flow.
 
 The raw input is `games/geoblox` at
-`589c78257fcea469a48c6a3f2eba15cf77fb7e1a`. It comes from java-tools
-`44435d91c3e1f48530c0f2462caa3874968993bc` and Deko
+`30d11311c75ae8908eb7bfcb72b0b220d16fc456`. It comes from java-tools
+`2c72bb566a66adf31192ac0dd1447c2c99562b2e` and Deko
 `a572c4dd0f0174bfcd7777be53d7ceba2f970f18`. The adapted naming tool is
 `a0bc835957148b9b1e1f8221c59b79d899d22738`; its source archive SHA-256 is
 `cb10756aa3ecb28159c9b81f2fb78bf559b4111d9ad203819458b30d0d84cf8c`.
 
 The **decompiler repository source** SHA-256 is
-`91f00d39ebbcdeff76e1c4d507ba69839a1f5fe3573499906040ac6f712a63c1`:
+`e25751f7a750281c5d588faefd06764441973b2bdd35f372524ca6e5a36aa703`:
 
 ```sh
-git archive --format=tar 44435d91c3e1f48530c0f2462caa3874968993bc | sha256sum
+git archive --format=tar 2c72bb566a66adf31192ac0dd1447c2c99562b2e | sha256sum
 ```
 
 This identifies tracked decompiler source and its Git archive metadata. It is
@@ -143,8 +143,12 @@ Special-kind checks cover closed probability gates and invalid guards.
 
 The additional 84,661-case trace has its own pin:
 `8c66899b5955eac3380cc3aefd3cbe17a5063cc68f98cd507ff406cea4ae587b`.
+A further 32,768-case comparator matrix verifies `ig.a(ZIBI)Z` in both order
+modes with every byte guard, ties and integer overflow. Its independent oracle
+checks priority and arithmetic failures; its trace SHA-256 is
+`9be228f7421970f2214c74e8890327f8592f706dc90ccd0d0933e6f2fbe0a604`.
 The original 52,164-case gameplay trace remains unchanged. The single manifest
-binds both trace constants and the full probe source hash. All variants verify
+binds all three trace constants and the full probe source hash. All variants verify
 actual resulting state, including recursive guard failures and partial writes.
 Spawn-queue angle/position locals and live special-kind thresholds also have
 source evidence; these tests do not execute full spawning with real assets or
@@ -170,16 +174,31 @@ and retains a plain block when moving declarations would widen their scopes.
 Condition inversion preserves Boolean and NaN semantics. Shared labels, catches
 and synchronized bodies retain their destinations and scopes.
 
-This removes 2,128 generated else wrappers (3,481 to 1,353) and 2,213 raw source
+The previous early-exit pass removed 2,128 generated else wrappers (3,481 to 1,353) and 2,213 raw source
 lines across 208 files. The fresh javac inventory preserves all 20,931
 declaration identities and 388 override edges. The only duplicate-name method,
-`wg.finalize`, is byte-identical. Current raw/readable comparison checks 152,514
-bindings. The structural update migrated 35 named local ordinals. The current
-naming pass adds 38 guarded identities with the raw input unchanged, retaining all
+`wg.finalize`, is byte-identical. Current raw/readable comparison checks 152,437
+bindings. The structural update migrated 35 named local ordinals. The following
+naming pass added 38 guarded identities with the raw input unchanged, retaining all
 1,170 prior semantic names. Reference inventory changes comprise 86 merged
 unit increments, one assignment moved into an initializer and one unreachable
 checked-catch sentinel. This inventory audit does not establish whole-program
 equivalence.
+
+The current emitter also folds 77 literal assignment branches into conditional
+assignments, removing 308 lines across 36 files. All 17 repeated integer Boolean
+assignments in `ld.advanceDifficulty` are compact expressions. Folding requires
+complete single-assignment arms, the same primitive literal type and a proven
+local of that exact type. Reference values, effects, boxing and narrow constant
+assignments retain their branches. Integer carriers and shared tails remain.
+
+All 20,931 declarations and 388 override relationships retain their identities.
+All 1,208 naming rules are unchanged, with zero ordinal migrations. The 77
+removed references are duplicate assignment targets: 76 locals and one existing
+initializer carrier lifted into a generated helper field. One enclosing return
+guard in `ig.a(ZIBI)Z` also becomes shorter and is inverted by the existing
+early-exit pass. The emitter passes 14 groups and 700 native comparisons; the
+comparator matrix above checks the actual game method in all three variants.
 
 In the pinned java-tools checkout, run the focused checks:
 
@@ -192,7 +211,7 @@ node test/cfrExceptionLoopExits.test.js
 node test/cfrCatchSemanticsRegressions.test.js
 ```
 
-The emitter passes 11 groups and 556 native comparisons covering effect order,
+The retained early-exit fixtures cover 11 groups and 556 native comparisons of effect order,
 NaNs, labels, early returns, exceptions, variable/local-class scopes and lock
 release, including a retained scope block that previously acquired an
 unreachable default return. Structurer, floating-comparison and nested-cycle
@@ -211,7 +230,9 @@ byte-for-byte. Previous integral-sign and literal-shift cleanup remains, with
 its historical proof recorded in the raw provenance. Current source/decompiler
 identity and naming migrations live in the single manifest. `ruleChanges`
 records naming changes; `sourceChange` is recorded when input identity changes.
-This naming pass keeps the input fixed; no JSON snapshots are added.
+This structural pass changes the input with an explicit migration, preserving
+every naming rule. All six native probe sources and their traces are pinned in
+the same manifest; no JSON snapshots are added.
 
 ## Update this export
 
@@ -231,7 +252,7 @@ This naming pass keeps the input fixed; no JSON snapshots are added.
 
 | Java source tree | SHA-256 |
 | --- | --- |
-| Raw | `baeae8c226093d2a14392d9994aa74ddd4c735009a09e713af1b7cf39f202029` |
-| Readable | `f9ce5d72b5bad149e74cdd8312b98dbbdda3f3f38e991be8dc744d2b8a226a52` |
+| Raw | `db87af61f08e3fa11e6f19e45d63941889f9027d947e96dcf819b999be73d624` |
+| Readable | `d1f4825b2dc0103fce657ea60e70063b0a70fa6617f379238dfe4cacbcfe7d05` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

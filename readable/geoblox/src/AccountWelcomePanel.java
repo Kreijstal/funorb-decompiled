@@ -3211,11 +3211,7 @@ final class AccountWelcomePanel extends ee implements pl {
                   throw t.a((Throwable) ((Object) forwardedContextFailure), ((StringBuilder) (Object) forwardedContextBuilder).append(archiveContextToken).append(')').toString());
                 }
                 if (sharedFlowFlag != 0) {
-                  if (!ch.field_h) {
-                    invertedClientFlagValue = 1;
-                  } else {
-                    invertedClientFlagValue = 0;
-                  }
+                  invertedClientFlagValue = (!ch.field_h) ? 1 : 0;
                   ch.field_h = invertedClientFlagValue != 0;
                 }
             }

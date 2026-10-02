@@ -71,36 +71,20 @@ final class ul {
                 }
               }
               centralEntity.entityQueue = bh.field_c;
-              if (centralEntity.sameVariantEntityCount <= 1) {
-                stackIn_10_0 = 0;
-              } else {
-                stackIn_10_0 = 1;
-              }
+              stackIn_10_0 = (centralEntity.sameVariantEntityCount <= 1) ? 0 : 1;
               variantMatchingAllowed = stackIn_10_0;
-              if (centralEntity.sameCategoryEntityCount <= 1) {
-                stackIn_13_0 = 0;
-              } else {
-                stackIn_13_0 = 1;
-              }
+              stackIn_13_0 = (centralEntity.sameCategoryEntityCount <= 1) ? 0 : 1;
               categoryMatchingAllowed = stackIn_13_0;
               for (firstNeighborIndex = 0; firstNeighborIndex < centralEntity.relatedEntityCount; firstNeighborIndex++) {
                 eligibleNeighborhoodVisited = 1;
                 if (variantMatchingAllowed != 0) {
-                  if (centralEntity.spriteVariantIndex == centralEntity.relatedEntities[firstNeighborIndex].spriteVariantIndex) {
-                    stackIn_21_0 = 1;
-                  } else {
-                    stackIn_21_0 = 0;
-                  }
+                  stackIn_21_0 = (centralEntity.spriteVariantIndex == centralEntity.relatedEntities[firstNeighborIndex].spriteVariantIndex) ? 1 : 0;
                 } else {
                   stackIn_21_0 = 0;
                 }
                 firstNeighborSharesVariant = stackIn_21_0;
                 if (categoryMatchingAllowed != 0) {
-                  if (centralEntity.entityCategoryKey == centralEntity.relatedEntities[firstNeighborIndex].entityCategoryKey) {
-                    stackIn_27_0 = 1;
-                  } else {
-                    stackIn_27_0 = 0;
-                  }
+                  stackIn_27_0 = (centralEntity.entityCategoryKey == centralEntity.relatedEntities[firstNeighborIndex].entityCategoryKey) ? 1 : 0;
                 } else {
                   stackIn_27_0 = 0;
                 }
@@ -113,21 +97,13 @@ final class ul {
                   }
                   L12: for (secondNeighborIndex = firstNeighborIndex + 1; secondNeighborIndex < centralEntity.relatedEntityCount; secondNeighborIndex++) {
                     if (firstNeighborSharesCategory != 0) {
-                      if (centralEntity.relatedEntities[secondNeighborIndex].entityCategoryKey == centralEntity.entityCategoryKey) {
-                        stackIn_38_0 = 1;
-                      } else {
-                        stackIn_38_0 = 0;
-                      }
+                      stackIn_38_0 = (centralEntity.relatedEntities[secondNeighborIndex].entityCategoryKey == centralEntity.entityCategoryKey) ? 1 : 0;
                     } else {
                       stackIn_38_0 = 0;
                     }
                     tripleSharesCategory = stackIn_38_0;
                     if (firstNeighborSharesVariant != 0) {
-                      if (centralEntity.spriteVariantIndex == centralEntity.relatedEntities[secondNeighborIndex].spriteVariantIndex) {
-                        stackIn_44_0 = 1;
-                      } else {
-                        stackIn_44_0 = 0;
-                      }
+                      stackIn_44_0 = (centralEntity.spriteVariantIndex == centralEntity.relatedEntities[secondNeighborIndex].spriteVariantIndex) ? 1 : 0;
                     } else {
                       stackIn_44_0 = 0;
                     }
@@ -286,11 +262,7 @@ final class ul {
               var3_int -= 200;
             }
           }
-          if (0 >= var3_int) {
-            stackIn_15_0 = 0;
-          } else {
-            stackIn_15_0 = 1;
-          }
+          stackIn_15_0 = (0 >= var3_int) ? 0 : 1;
           return stackIn_15_0 != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

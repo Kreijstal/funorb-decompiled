@@ -534,11 +534,7 @@ final class v {
           if (param1 <= 12) {
             field_e = (String) null;
           }
-          if (jg.a((byte) -62, param0) == null) {
-            stackIn_5_0 = 0;
-          } else {
-            stackIn_5_0 = 1;
-          }
+          stackIn_5_0 = (jg.a((byte) -62, param0) == null) ? 0 : 1;
           return stackIn_5_0 != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

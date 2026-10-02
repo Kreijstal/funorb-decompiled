@@ -156,11 +156,7 @@ final class ld {
         }
         if ((4 & kd.difficultyStepFlags[ji.difficultyStep]) != 0) {
           og.entityMotionSpeed = og.entityMotionSpeed + 0.055555559694767f;
-          if (recursiveAdvanceGuard) {
-            stackIn_10_0 = 0;
-          } else {
-            stackIn_10_0 = 1;
-          }
+          stackIn_10_0 = (recursiveAdvanceGuard) ? 0 : 1;
           sa.recomputeSpawnReleaseInterval(stackIn_10_0 != 0);
         }
         if ((kd.difficultyStepFlags[ji.difficultyStep] & 1) == 0) {
@@ -180,11 +176,7 @@ final class ld {
               if (0.800000011920929f > ij.spawnIntervalScale) {
                 ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
               }
-              if (recursiveAdvanceGuard) {
-                stackIn_29_0 = 0;
-              } else {
-                stackIn_29_0 = 1;
-              }
+              stackIn_29_0 = (recursiveAdvanceGuard) ? 0 : 1;
               sa.recomputeSpawnReleaseInterval(stackIn_29_0 != 0);
             }
             return;
@@ -201,11 +193,7 @@ final class ld {
               if (0.800000011920929f > ij.spawnIntervalScale) {
                 ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
               }
-              if (recursiveAdvanceGuard) {
-                stackIn_61_0 = 0;
-              } else {
-                stackIn_61_0 = 1;
-              }
+              stackIn_61_0 = (recursiveAdvanceGuard) ? 0 : 1;
               sa.recomputeSpawnReleaseInterval(stackIn_61_0 != 0);
             }
             return;
@@ -223,11 +211,7 @@ final class ld {
             if (0.800000011920929f > ij.spawnIntervalScale) {
               ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
             }
-            if (recursiveAdvanceGuard) {
-              stackIn_47_0 = 0;
-            } else {
-              stackIn_47_0 = 1;
-            }
+            stackIn_47_0 = (recursiveAdvanceGuard) ? 0 : 1;
             sa.recomputeSpawnReleaseInterval(stackIn_47_0 != 0);
           }
           return;
@@ -252,11 +236,7 @@ final class ld {
             if (0.800000011920929f > ij.spawnIntervalScale) {
               ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
             }
-            if (recursiveAdvanceGuard) {
-              stackIn_83_0 = 0;
-            } else {
-              stackIn_83_0 = 1;
-            }
+            stackIn_83_0 = (recursiveAdvanceGuard) ? 0 : 1;
             sa.recomputeSpawnReleaseInterval(stackIn_83_0 != 0);
           }
           return;
@@ -275,11 +255,7 @@ final class ld {
                 if (0.800000011920929f > ij.spawnIntervalScale) {
                   ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
                 }
-                if (recursiveAdvanceGuard) {
-                  stackIn_100_0 = 0;
-                } else {
-                  stackIn_100_0 = 1;
-                }
+                stackIn_100_0 = (recursiveAdvanceGuard) ? 0 : 1;
                 sa.recomputeSpawnReleaseInterval(stackIn_100_0 != 0);
               }
               return;
@@ -295,11 +271,7 @@ final class ld {
               if (0.800000011920929f > ij.spawnIntervalScale) {
                 ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
               }
-              if (recursiveAdvanceGuard) {
-                stackIn_114_0 = 0;
-              } else {
-                stackIn_114_0 = 1;
-              }
+              stackIn_114_0 = (recursiveAdvanceGuard) ? 0 : 1;
               sa.recomputeSpawnReleaseInterval(stackIn_114_0 != 0);
             }
             return;
@@ -309,11 +281,7 @@ final class ld {
               if (0.800000011920929f > ij.spawnIntervalScale) {
                 ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
               }
-              if (recursiveAdvanceGuard) {
-                stackIn_125_0 = 0;
-              } else {
-                stackIn_125_0 = 1;
-              }
+              stackIn_125_0 = (recursiveAdvanceGuard) ? 0 : 1;
               sa.recomputeSpawnReleaseInterval(stackIn_125_0 != 0);
             }
             return;
@@ -323,11 +291,7 @@ final class ld {
             if (0.800000011920929f > ij.spawnIntervalScale) {
               ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
             }
-            if (recursiveAdvanceGuard) {
-              stackIn_135_0 = 0;
-            } else {
-              stackIn_135_0 = 1;
-            }
+            stackIn_135_0 = (recursiveAdvanceGuard) ? 0 : 1;
             sa.recomputeSpawnReleaseInterval(stackIn_135_0 != 0);
           }
           return;
@@ -340,11 +304,7 @@ final class ld {
                   if (0.800000011920929f > ij.spawnIntervalScale) {
                     ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
                   }
-                  if (recursiveAdvanceGuard) {
-                    stackIn_172_0 = 0;
-                  } else {
-                    stackIn_172_0 = 1;
-                  }
+                  stackIn_172_0 = (recursiveAdvanceGuard) ? 0 : 1;
                   sa.recomputeSpawnReleaseInterval(stackIn_172_0 != 0);
                 }
                 return;
@@ -354,11 +314,7 @@ final class ld {
                 if (0.800000011920929f > ij.spawnIntervalScale) {
                   ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
                 }
-                if (recursiveAdvanceGuard) {
-                  stackIn_182_0 = 0;
-                } else {
-                  stackIn_182_0 = 1;
-                }
+                stackIn_182_0 = (recursiveAdvanceGuard) ? 0 : 1;
                 sa.recomputeSpawnReleaseInterval(stackIn_182_0 != 0);
               }
               return;
@@ -369,11 +325,7 @@ final class ld {
                 if (0.800000011920929f > ij.spawnIntervalScale) {
                   ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
                 }
-                if (recursiveAdvanceGuard) {
-                  stackIn_160_0 = 0;
-                } else {
-                  stackIn_160_0 = 1;
-                }
+                stackIn_160_0 = (recursiveAdvanceGuard) ? 0 : 1;
                 sa.recomputeSpawnReleaseInterval(stackIn_160_0 != 0);
               }
               return;
@@ -383,11 +335,7 @@ final class ld {
               if (0.800000011920929f > ij.spawnIntervalScale) {
                 ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
               }
-              if (recursiveAdvanceGuard) {
-                stackIn_150_0 = 0;
-              } else {
-                stackIn_150_0 = 1;
-              }
+              stackIn_150_0 = (recursiveAdvanceGuard) ? 0 : 1;
               sa.recomputeSpawnReleaseInterval(stackIn_150_0 != 0);
             }
             return;
@@ -400,11 +348,7 @@ final class ld {
               if (0.800000011920929f > ij.spawnIntervalScale) {
                 ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
               }
-              if (recursiveAdvanceGuard) {
-                stackIn_218_0 = 0;
-              } else {
-                stackIn_218_0 = 1;
-              }
+              stackIn_218_0 = (recursiveAdvanceGuard) ? 0 : 1;
               sa.recomputeSpawnReleaseInterval(stackIn_218_0 != 0);
             }
             return;
@@ -414,11 +358,7 @@ final class ld {
             if (0.800000011920929f > ij.spawnIntervalScale) {
               ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
             }
-            if (recursiveAdvanceGuard) {
-              stackIn_228_0 = 0;
-            } else {
-              stackIn_228_0 = 1;
-            }
+            stackIn_228_0 = (recursiveAdvanceGuard) ? 0 : 1;
             sa.recomputeSpawnReleaseInterval(stackIn_228_0 != 0);
           }
           return;
@@ -429,11 +369,7 @@ final class ld {
             if (0.800000011920929f > ij.spawnIntervalScale) {
               ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
             }
-            if (recursiveAdvanceGuard) {
-              stackIn_196_0 = 0;
-            } else {
-              stackIn_196_0 = 1;
-            }
+            stackIn_196_0 = (recursiveAdvanceGuard) ? 0 : 1;
             sa.recomputeSpawnReleaseInterval(stackIn_196_0 != 0);
           }
           return;
@@ -443,11 +379,7 @@ final class ld {
           if (0.800000011920929f > ij.spawnIntervalScale) {
             ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
           }
-          if (recursiveAdvanceGuard) {
-            stackIn_206_0 = 0;
-          } else {
-            stackIn_206_0 = 1;
-          }
+          stackIn_206_0 = (recursiveAdvanceGuard) ? 0 : 1;
           sa.recomputeSpawnReleaseInterval(stackIn_206_0 != 0);
         }
     }

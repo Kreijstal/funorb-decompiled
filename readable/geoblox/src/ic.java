@@ -69,19 +69,11 @@ final class ic {
               sd.field_x = param13;
               ac.field_s = param7;
               f.field_ib = param0;
-              if (!param4) {
-                stackIn_3_0 = 0;
-              } else {
-                stackIn_3_0 = 1;
-              }
+              stackIn_3_0 = (!param4) ? 0 : 1;
               rb.field_c = stackIn_3_0 != 0;
               mk.field_l = param10;
               ol.field_I = param9;
-              if (!param5) {
-                stackIn_6_0 = 0;
-              } else {
-                stackIn_6_0 = 1;
-              }
+              stackIn_6_0 = (!param5) ? 0 : 1;
               ll.field_e = stackIn_6_0 != 0;
               qe.field_b = param6;
               if (GameplayEntity.field_D.field_n != null) {

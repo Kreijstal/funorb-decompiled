@@ -27,11 +27,7 @@ final class tg extends com.ms.dll.Callback {
         var9 = (com.ms.awt.WComponentPeer) null;
         var5 = var9.getTopHwnd();
         if (this.field_b == var5) {
-          if (this.field_e) {
-            stackIn_6_0 = 0;
-          } else {
-            stackIn_6_0 = 1;
-          }
+          stackIn_6_0 = (this.field_e) ? 0 : 1;
           if (stackIn_6_0 != (param1 ? 1 : 0)) {
             return;
           }

@@ -206,11 +206,7 @@ final class ed {
                 var11 += 256;
                 if (var11 >= var12) {
                   var11 = 0;
-                  if (var13 != 0) {
-                    stackIn_36_0 = 0;
-                  } else {
-                    stackIn_36_0 = 1;
-                  }
+                  stackIn_36_0 = (var13 != 0) ? 0 : 1;
                   var13 = stackIn_36_0;
                 }
                 if (var13 == 0) {

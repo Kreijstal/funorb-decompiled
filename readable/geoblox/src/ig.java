@@ -7,34 +7,36 @@ final class ig {
         int var4;
         int var5;
         int var6;
-        if (param0) {
-          if (hg.field_a[param3] < hg.field_a[param1]) {
-            return true;
-          }
-          if (hg.field_a[param3] > hg.field_a[param1]) {
-            return false;
-          }
+        if (!param0) {
           if (gk.field_a[param3] < gk.field_a[param1]) {
             return true;
           }
           if (gk.field_a[param3] > gk.field_a[param1]) {
             return false;
           }
-          {
-            var4 = cj.field_b[param3] + fb.field_m[param3] + k.field_i[param3];
-            var5 = fb.field_m[param1] + (k.field_i[param1] + cj.field_b[param1]);
-            var6 = 76 % ((-38 - param2) / 45);
-            if (var4 < var5) {
-              return true;
-            }
-            if (var4 > var5) {
-              return false;
-            }
-            if (param3 >= param1) {
-              return false;
-            }
+          if (hg.field_a[param1] > hg.field_a[param3]) {
             return true;
           }
+          if (hg.field_a[param3] > hg.field_a[param1]) {
+            return false;
+          }
+          var4 = cj.field_b[param3] + fb.field_m[param3] + k.field_i[param3];
+          var5 = fb.field_m[param1] + (k.field_i[param1] + cj.field_b[param1]);
+          var6 = 76 % ((-38 - param2) / 45);
+          if (var4 < var5) {
+            return true;
+          }
+          if (var4 > var5) {
+            return false;
+          }
+          stackIn_36_0 = (param3 >= param1) ? 0 : 1;
+          return stackIn_36_0 != 0;
+        }
+        if (hg.field_a[param3] < hg.field_a[param1]) {
+          return true;
+        }
+        if (hg.field_a[param3] > hg.field_a[param1]) {
+          return false;
         }
         if (gk.field_a[param3] < gk.field_a[param1]) {
           return true;
@@ -42,27 +44,21 @@ final class ig {
         if (gk.field_a[param3] > gk.field_a[param1]) {
           return false;
         }
-        if (hg.field_a[param1] > hg.field_a[param3]) {
+        {
+          var4 = cj.field_b[param3] + fb.field_m[param3] + k.field_i[param3];
+          var5 = fb.field_m[param1] + (k.field_i[param1] + cj.field_b[param1]);
+          var6 = 76 % ((-38 - param2) / 45);
+          if (var4 < var5) {
+            return true;
+          }
+          if (var4 > var5) {
+            return false;
+          }
+          if (param3 >= param1) {
+            return false;
+          }
           return true;
         }
-        if (hg.field_a[param3] > hg.field_a[param1]) {
-          return false;
-        }
-        var4 = cj.field_b[param3] + fb.field_m[param3] + k.field_i[param3];
-        var5 = fb.field_m[param1] + (k.field_i[param1] + cj.field_b[param1]);
-        var6 = 76 % ((-38 - param2) / 45);
-        if (var4 < var5) {
-          return true;
-        }
-        if (var4 > var5) {
-          return false;
-        }
-        if (param3 >= param1) {
-          stackIn_36_0 = 0;
-        } else {
-          stackIn_36_0 = 1;
-        }
-        return stackIn_36_0 != 0;
     }
 
     final static sl a(String param0, int param1, boolean param2) {

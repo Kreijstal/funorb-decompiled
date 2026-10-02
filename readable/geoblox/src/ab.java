@@ -239,11 +239,7 @@ final class ab {
                     var2.relatedEntities[var3].removeRelatedEntity(var2, 0);
                   }
                   var2.relatedEntityCount = 0;
-                  if (var2.entitySpriteKindId != 2) {
-                    stackIn_17_0 = 0;
-                  } else {
-                    stackIn_17_0 = 1;
-                  }
+                  stackIn_17_0 = (var2.entitySpriteKindId != 2) ? 0 : 1;
                   L11: {
                     var3 = stackIn_17_0;
                     ih.linkEntityAtMaskContacts(-1, td.field_E, var2, ng.field_G);
@@ -285,11 +281,7 @@ final class ab {
                     var11 = 240.0f - (var4.positionY + var6);
                     var10 = var10 * var10;
                     var11 = var11 * var11;
-                    if (!(var10 + var11 > var9 * var9 + var8 * var8)) {
-                      stackIn_36_0 = 0;
-                    } else {
-                      stackIn_36_0 = 1;
-                    }
+                    stackIn_36_0 = (!(var10 + var11 > var9 * var9 + var8 * var8)) ? 0 : 1;
                     var12 = stackIn_36_0;
                     var8 = 320.0f - var2.positionX;
                     var11 = 240.0f - (var6 + var2.positionY);
@@ -297,11 +289,7 @@ final class ab {
                     var9 = -var2.positionY + 240.0f;
                     var10 = var10 * var10;
                     var11 = var11 * var11;
-                    if (!(var9 * var9 + var8 * var8 < var11 + var10)) {
-                      stackIn_39_0 = 0;
-                    } else {
-                      stackIn_39_0 = 1;
-                    }
+                    stackIn_39_0 = (!(var9 * var9 + var8 * var8 < var11 + var10)) ? 0 : 1;
                     var13 = stackIn_39_0;
                     if (var12 != 0) {
                       if (var13 != 0) {

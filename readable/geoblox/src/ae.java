@@ -164,11 +164,7 @@ final class ae {
         this.field_e = MusicDecoder.readBits(16);
         this.field_f = MusicDecoder.readBits(24);
         this.field_a = new int[this.field_f];
-        if (MusicDecoder.readBit() == 0) {
-          stackIn_3_0 = 0;
-        } else {
-          stackIn_3_0 = 1;
-        }
+        stackIn_3_0 = (MusicDecoder.readBit() == 0) ? 0 : 1;
         L1: {
           var1 = stackIn_3_0;
           if (var1 != 0) {
@@ -186,11 +182,7 @@ final class ae {
             break L1;
           }
           {
-            if (MusicDecoder.readBit() == 0) {
-              stackIn_13_0 = 0;
-            } else {
-              stackIn_13_0 = 1;
-            }
+            stackIn_13_0 = (MusicDecoder.readBit() == 0) ? 0 : 1;
             var2 = stackIn_13_0;
             var14 = 0;
             var3_int = var14;
@@ -215,11 +207,7 @@ final class ae {
             var3 = MusicDecoder.d(MusicDecoder.readBits(32));
             var4 = MusicDecoder.d(MusicDecoder.readBits(32));
             var5 = MusicDecoder.readBits(4) + 1;
-            if (MusicDecoder.readBit() == 0) {
-              stackIn_23_0 = 0;
-            } else {
-              stackIn_23_0 = 1;
-            }
+            stackIn_23_0 = (MusicDecoder.readBit() == 0) ? 0 : 1;
             var6 = stackIn_23_0;
             if (var2 != 1) {
               var7 = this.field_f * this.field_e;

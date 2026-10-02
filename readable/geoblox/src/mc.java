@@ -44,11 +44,7 @@ final class mc {
             stackIn_12_0 = 1;
             return stackIn_12_0 != 0;
           }
-          if (!param5) {
-            stackIn_10_0 = 0;
-          } else {
-            stackIn_10_0 = 1;
-          }
+          stackIn_10_0 = (!param5) ? 0 : 1;
           bj.field_s = stackIn_10_0 != 0;
           rd.field_u = param2;
           dl.field_a = null;

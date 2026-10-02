@@ -255,11 +255,7 @@ final class MusicDecodeStage {
         int var10;
         int var11;
         int var13;
-        if (MusicDecoder.readBit() == 0) {
-          stackIn_3_0 = 0;
-        } else {
-          stackIn_3_0 = 1;
-        }
+        stackIn_3_0 = (MusicDecoder.readBit() == 0) ? 0 : 1;
         var1 = stackIn_3_0;
         if (var1 == 0) {
           return false;

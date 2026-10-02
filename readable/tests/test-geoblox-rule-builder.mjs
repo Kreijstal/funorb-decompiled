@@ -7,14 +7,14 @@ import {fileURLToPath} from 'node:url';
 import {captureProcess} from '../tools/lib/capture-process.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
+const current = JSON.parse(fs.readFileSync(path.join(root, 'geoblox-rules.json')));
 function fixture(change, check = true) {
   const temporary = fs.mkdtempSync(path.join(os.tmpdir(), 'geoblox-current-rules-'));
   try {
     captureProcess('git', ['clone', '--shared', '--no-checkout', '--quiet', path.resolve(root, '..'), temporary]);
     const directory = path.join(temporary, 'readable');
     for (const file of ['build-geoblox-rules.mjs', 'geoblox-rules.json',
-      'tests/test-geoblox-match-scoring.mjs', 'tests/test-geoblox-text-write.mjs',
-      'tests/test-geoblox-gameplay.mjs',
+      ...current.publication.nativeEvidence.map(item => item.file),
       'tools/PIN.json', 'tools/readable-java.mjs', 'tools/lib/ReadableJava.java', 'tools/lib/capture-process.mjs']) {
       const destination = path.join(directory, file);
       fs.mkdirSync(path.dirname(destination), {recursive: true});
@@ -89,12 +89,16 @@ test('native evidence binds current probe bytes and its fixed native trace', () 
   for (const change of [
     data => { data.publication.nativeEvidence[0].sha256 = '0'.repeat(64); },
     data => { data.publication.nativeEvidence[0].nativeOutputSha256 = '0'.repeat(64); },
-    (_data, directory) => { fs.appendFileSync(path.join(directory, 'tests/test-geoblox-text-write.mjs'), '\n'); },
-    (_data, directory) => { fs.appendFileSync(path.join(directory, 'tests/test-geoblox-gameplay.mjs'), '\n'); },
+    ...current.publication.nativeEvidence.map(item => (_data, directory) => {
+      fs.appendFileSync(path.join(directory, item.file), '\n');
+    }),
   ]) assert.throws(() => fixture(change), /Reviewed native probe differs/);
   const gameplay = data => data.publication.nativeEvidence.find(item => item.file === 'tests/test-geoblox-gameplay.mjs');
-  assert.throws(() => fixture(data => { gameplay(data).additionalTraces[0].sha256 = '0'.repeat(64); }),
-    /Reviewed additional native trace differs/);
+  for (const trace of current.publication.nativeEvidence.find(item =>
+    item.file === 'tests/test-geoblox-gameplay.mjs').additionalTraces)
+    assert.throws(() => fixture(data => {
+      gameplay(data).additionalTraces.find(item => item.constant === trace.constant).sha256 = '0'.repeat(64);
+    }), /Reviewed additional native trace differs/);
   for (const change of [
     data => { gameplay(data).additionalTraces[0].constant = 'invalid-name'; },
     data => { gameplay(data).additionalTraces[0].sha256 = 'invalid'; },

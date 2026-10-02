@@ -2486,11 +2486,7 @@ final class GameScreen extends MenuScreen {
                   if (ca.field_f.field_j) {
                     if (ca.field_f.field_k != null) {
                       var6 = ca.field_f.field_k[1];
-                      if (var6[0] != null) {
-                        stackIn_105_0 = 0;
-                      } else {
-                        stackIn_105_0 = 1;
-                      }
+                      stackIn_105_0 = (var6[0] != null) ? 0 : 1;
                       var3_int = stackIn_105_0;
                     }
                   }

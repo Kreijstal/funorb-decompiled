@@ -31,11 +31,7 @@ final class ml extends ff {
         int var8 = 0;
         try {
           if (!param4.field_l) {
-            if (param4.e((byte) 54)) {
-              stackIn_6_0 = 1;
-            } else {
-              stackIn_6_0 = 0;
-            }
+            stackIn_6_0 = (param4.e((byte) 54)) ? 1 : 0;
           } else {
             stackIn_6_0 = 1;
           }
@@ -57,11 +53,7 @@ final class ml extends ff {
           }
           var7 = stackIn_16_0;
           jf.a(this.field_y, var7, param0 + param4.field_v, param4.field_r, (-this.field_y[0].field_o + param4.field_h >> 1) + (param2 + param4.field_m), -17154);
-          if (param3) {
-            stackIn_19_0 = 16777215;
-          } else {
-            stackIn_19_0 = 7105644;
-          }
+          stackIn_19_0 = (param3) ? 16777215 : 7105644;
           var8 = stackIn_19_0;
           this.field_n.a(param4.field_s, param4.field_v + param0, -2 + param2 + param4.field_m, param4.field_r, param4.field_h, var8, -1, 1, 1, this.field_n.field_o);
           return;

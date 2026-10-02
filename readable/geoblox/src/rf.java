@@ -454,11 +454,7 @@ final class rf extends IntrusiveNode {
                   incrementValue$0 = var29;
                   var29++;
                   var64 = param0.field_j[incrementValue$0] & 255;
-                  if (var64 == var62) {
-                    stackIn_73_0 = 0;
-                  } else {
-                    stackIn_73_0 = 1;
-                  }
+                  stackIn_73_0 = (var64 == var62) ? 0 : 1;
                   var65 = stackIn_73_0;
                   var62 = var64 & 15;
                   if (var64 == 7) {

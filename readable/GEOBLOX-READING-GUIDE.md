@@ -204,7 +204,12 @@ tutorial mode. The theme threshold is `fa.releasesPerTheme`; `qe.a` calculates
 `ld.advanceDifficulty` increments `ji.difficultyStep` and reads
 `kd.difficultyStepFlags`. Its normal callers pass `recursiveAdvanceGuard=false`.
 The true guard recursively advances the shared index and may throw when a
-caller resumes and re-reads an exhausted table; partial updates remain visible.
+caller resumes and re-reads an exhausted table; partial updates remain visible. The
+17 duplicated Boolean assignment branches now use compact expressions such as
+`stackIn_10_0 = (recursiveAdvanceGuard) ? 0 : 1;`. The later `!= 0` conversion
+and shared tails remain explicit. This generic decompiler change preserves
+integer carrier types, all naming identities and condition evaluation order;
+the 84,661-case difficulty matrix checks its partial state and exceptions.
 
 | Flag bit | Observed effect |
 | --- | --- |
@@ -543,11 +548,14 @@ There are 1,208 explicit guarded rules: 22 classes, 389 fields, 181 method
 declarations, 217 parameters and 399 locals. This is not full deobfuscation.
 Unknown flags, guard arguments and opaque shared helpers still need
 investigation. Current names and source identities live in the single manifest;
-previous naming and structural passes remain in Git. The latest source migration
-moves 35 named local ordinals by unique method/original-spelling identity.
-The subsequent naming pass retains all prior rules and adds 38 difficulty
-and spawning identities without changing the raw source. The preceding pass removed the
-vanished boundary selector; the current pass flattens proven early-exit arms.
+previous naming and structural passes remain in Git. The earlier early-exit migration
+moved 35 named local ordinals by unique method/original-spelling identity.
+The subsequent naming pass retained all prior rules and added 38 difficulty
+and spawning identities without changing the raw source. The current migration
+folds 77 typed literal assignment branches and preserves all 1,208 rules with
+zero ordinal changes. Integer Boolean carriers and duplicated difficulty tails
+remain. The earlier terminal-return pass removed the vanished boundary selector;
+the current emitter also retains its proven early-exit reconstruction.
 Complete parsing and preserved declaration scopes keep this reproducible.
 
 The decompiler now checks explicit exception-region exit contracts, preserves

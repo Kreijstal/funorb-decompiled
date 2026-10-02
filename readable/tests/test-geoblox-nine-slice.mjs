@@ -13,7 +13,7 @@ const rawInput = process.argv[3] ? path.resolve(process.argv[3]) : path.resolve(
 if(process.argv.length>4)throw new Error('Usage: test-geoblox-nine-slice.mjs [VERIFIED_CLASSES [RAW_SOURCE]]');
 const aliases = new Map(JSON.parse(fs.readFileSync(path.join(root,'geoblox-rules.json'))).renames.map(r=>[r.symbol,r.to]));
 const temporary=fs.mkdtempSync(path.join(os.tmpdir(),'geoblox-nine-slice-'));
-const nativeOutputSha256='16c92de1c3230786836344a4848c7046488b9cfa4a48078ca34024fdcbdc7be9';
+const expectedNativeSha256 = '16c92de1c3230786836344a4848c7046488b9cfa4a48078ca34024fdcbdc7be9';
 let expected=null;
 try {
   if(nativeInput) {
@@ -84,7 +84,7 @@ try {
     captureProcess('javac',['--release','8','-proc:none','-encoding','UTF-8','-classpath',cp,'-d',classes,'@'+list]);
     const output=captureProcess('java',['-Djava.awt.headless=true','-cp',classes+path.delimiter+cp,'NineSliceBehavior']).stdout;
     assert.equal(output.toString().trim().split('\n').length,2592);
-    assert.equal(crypto.createHash('sha256').update(output).digest('hex'),nativeOutputSha256,variant+': matches recorded verified native bytecode output');
+    assert.equal(crypto.createHash('sha256').update(output).digest('hex'),expectedNativeSha256,variant+': matches recorded verified native bytecode output');
     if(expected===null)expected=output;else assert.deepEqual(output,expected,variant+': every sprite pixel and cleanup side effect must match');
     console.log(JSON.stringify({variant,cases:2592,sha256:crypto.createHash('sha256').update(output).digest('hex')}));
   }

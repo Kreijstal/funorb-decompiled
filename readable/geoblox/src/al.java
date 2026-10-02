@@ -160,11 +160,7 @@ final class al {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var2_ref = decompiledCaughtException;
               }
-              if (null == param1.getParameter("tuhstatbut")) {
-                stackIn_21_0 = 0;
-              } else {
-                stackIn_21_0 = 1;
-              }
+              stackIn_21_0 = (null == param1.getParameter("tuhstatbut")) ? 0 : 1;
               return stackIn_21_0 != 0;
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;

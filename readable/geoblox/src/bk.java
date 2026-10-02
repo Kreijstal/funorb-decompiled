@@ -52,11 +52,7 @@ final class bk {
         var8 = eh.field_d;
         var3 = var8.c((byte) 34);
         gj.field_u = var3 & 127;
-        if ((param1 & var3) == 0) {
-          stackIn_3_0 = 0;
-        } else {
-          stackIn_3_0 = 1;
-        }
+        stackIn_3_0 = ((param1 & var3) == 0) ? 0 : 1;
         vd.field_l = stackIn_3_0 != 0;
         bm.field_s = var8.c((byte) 34);
         uf.field_c = var8.b(2901);
@@ -67,11 +63,7 @@ final class bk {
           tj.field_b = var8.b(true);
           uk.field_o = var8.e(105);
         }
-        if (var8.c((byte) 34) != 1) {
-          stackIn_9_0 = 0;
-        } else {
-          stackIn_9_0 = 1;
-        }
+        stackIn_9_0 = (var8.c((byte) 34) != 1) ? 0 : 1;
         var4 = stackIn_9_0;
         cj.field_a = var8.e((byte) 117);
         if (var4 == 0) {

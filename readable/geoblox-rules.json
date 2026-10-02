@@ -4,10 +4,10 @@
   "purpose": "Offline readable source mirror; not a runtime patch",
   "source": {
     "repository": "Kreijstal/funorb-decompiled",
-    "commit": "589c78257fcea469a48c6a3f2eba15cf77fb7e1a",
+    "commit": "30d11311c75ae8908eb7bfcb72b0b220d16fc456",
     "subdirectory": "games/geoblox"
   },
-  "inputTreeSha256": "baeae8c226093d2a14392d9994aa74ddd4c735009a09e713af1b7cf39f202029",
+  "inputTreeSha256": "db87af61f08e3fa11e6f19e45d63941889f9027d947e96dcf819b999be73d624",
   "namingPolicy": "Confirmed semantic names without opaque suffixes; unknown symbols stay unchanged. Original spellings and JVM identities remain in the reverse symbol map. Every rule guards the original spelling. Local identities also use declaration ordinals; reused variables retain all supported roles. Numeric screen/action IDs and decompiler state remain unchanged.",
   "renames": [
     {
@@ -7260,18 +7260,18 @@
     }
   ],
   "revision": 4,
-  "version": 32,
+  "version": 33,
   "generators": {
     "dekoblokoWork": {
       "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "44435d91c3e1f48530c0f2462caa3874968993bc",
+      "commit": "2c72bb566a66adf31192ac0dd1447c2c99562b2e",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "91f00d39ebbcdeff76e1c4d507ba69839a1f5fe3573499906040ac6f712a63c1",
-        "reproduce": "git archive --format=tar 44435d91c3e1f48530c0f2462caa3874968993bc | sha256sum",
+        "sha256": "e25751f7a750281c5d588faefd06764441973b2bdd35f372524ca6e5a36aa703",
+        "reproduce": "git archive --format=tar 2c72bb566a66adf31192ac0dd1447c2c99562b2e | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
@@ -7280,397 +7280,16 @@
   "publication": {
     "format": 1,
     "previousRules": {
-      "commit": "4d2daf07dd1b46de364e87eec133b38d1b8b9dcd",
+      "commit": "6f2c473486cbe16994781770deebd466c83cce36",
       "path": "readable/geoblox-rules.json",
-      "sha256": "74f2ceba9cb06cf774aeb8ccd84f5d92d830aa541ea76da1831c7e1a2b8daee2"
+      "sha256": "27502b9b3b224be5c84ca716197ec5d439f6d136b658aa899f71107afe242bdf"
     },
-    "ruleChanges": [
-      {
-        "symbol": "F:ag.field_k:I",
-        "before": null,
-        "after": {
-          "symbol": "F:ag.field_k:I",
-          "originalName": "field_k",
-          "to": "availableSpriteVariantCount",
-          "evidence": "Bound passed through nf.c(B)I to qi.b(II)I. lc.a(I)V passes its result as spriteVariantIndex to ja.a(IFIFIIFFFIF)V; reset starts at three and difficulty bit 1 raises it up to seven."
-        }
-      },
-      {
-        "symbol": "F:f.field_qb:I",
-        "before": null,
-        "after": {
-          "symbol": "F:f.field_qb:I",
-          "originalName": "field_qb",
-          "to": "availableEntityCategoryCount",
-          "evidence": "Bound passed through ij.m(I)I to qi.b(II)I. lc.a(I)V passes its result as entityCategoryKey to ja.a(IFIFIIFFFIF)V; reset starts at four and difficulty bit 2 raises it up to seven."
-        }
-      },
-      {
-        "symbol": "F:ij.field_ab:F",
-        "before": null,
-        "after": {
-          "symbol": "F:ij.field_ab:F",
-          "originalName": "field_ab",
-          "to": "spawnIntervalScale",
-          "evidence": "Float multiplier in sa.b(Z)V: int(201.0f / og.field_r * scale + 0.5f). Reset is 0.75; difficulty bit 128 adds 0.02857142873108387f when below the exact 0.8f threshold and then recomputes the interval."
-        }
-      },
-      {
-        "symbol": "F:kb.field_c:I",
-        "before": null,
-        "after": {
-          "symbol": "F:kb.field_c:I",
-          "originalName": "field_c",
-          "to": "spawnReleaseIntervalTicks",
-          "evidence": "sa.b(Z)V stores the rounded inverse-speed interval here. lc.a(I)V compares it with kc.field_a before releasing a queued entity, and includes it in queued entity lifetime calculations."
-        }
-      },
-      {
-        "symbol": "F:kc.field_a:I",
-        "before": null,
-        "after": {
-          "symbol": "F:kc.field_a:I",
-          "originalName": "field_a",
-          "to": "ticksSinceLastEntityRelease",
-          "evidence": "lc.a(I)V increments this counter once per update and resets it to zero when releasing a queued entity. It is compared with kb.field_c and contributes to queued entity lifetimes; pg.a(I)V deliberately leaves it unchanged."
-        }
-      },
-      {
-        "symbol": "F:kd.field_f:[I",
-        "before": null,
-        "after": {
-          "symbol": "F:kd.field_f:[I",
-          "originalName": "field_f",
-          "to": "difficultyStepFlags",
-          "evidence": "23-entry table read by ld.b(Z)V using ji.difficultyStep. Independent native fixtures verify its exact initial entries and all 256 byte masks, with saturation, recursive re-reads and failure partial state."
-        }
-      },
-      {
-        "symbol": "F:sa.field_c:D",
-        "before": null,
-        "after": {
-          "symbol": "F:sa.field_c:D",
-          "originalName": "field_c",
-          "to": "specialSpriteKindProbability",
-          "evidence": "vd.a(I)I compares Math.random() with this value before choosing kind 1/2/3/4 instead of zero. Difficulty bit 16 adds 0.05; steps past the table subtract 0.05 only above the exact retained 0.15000000000000002 threshold."
-        }
-      },
-      {
-        "symbol": "L:lc.a(I)V#0",
-        "before": null,
-        "after": {
-          "symbol": "L:lc.a(I)V#0",
-          "originalName": "decompiledCaughtException",
-          "to": "caughtSpawnQueueFailure",
-          "evidence": "Exception carrier assigned from the RuntimeException caught around the spawn update."
-        }
-      },
-      {
-        "symbol": "L:lc.a(I)V#1",
-        "before": null,
-        "after": {
-          "symbol": "L:lc.a(I)V#1",
-          "originalName": "var1",
-          "to": "queuedEntityThenPooledEntity",
-          "evidence": "First iterates SecondaryDeque.spawnQueue and animates each member; later holds the available entity removed for initialization. Both roles of the reused slot are retained."
-        }
-      },
-      {
-        "symbol": "L:lc.a(I)V#10",
-        "before": null,
-        "after": {
-          "symbol": "L:lc.a(I)V#10",
-          "originalName": "decompiledCaughtParameter0",
-          "to": "spawnQueueFailure",
-          "evidence": "RuntimeException catch parameter surrounding updateSpawnQueue."
-        }
-      },
-      {
-        "symbol": "L:lc.a(I)V#2",
-        "before": null,
-        "after": {
-          "symbol": "L:lc.a(I)V#2",
-          "originalName": "var1_ref",
-          "to": "spawnQueueFailureForContext",
-          "evidence": "Caught RuntimeException alias passed to t.a with the original lc.E diagnostic string."
-        }
-      },
-      {
-        "symbol": "L:lc.a(I)V#3",
-        "before": null,
-        "after": {
-          "symbol": "L:lc.a(I)V#3",
-          "originalName": "var2",
-          "to": "spawnAngleRadians",
-          "evidence": "2*Math.random()*PI angle used to place a pooled entity on the radius-240 spawn circle."
-        }
-      },
-      {
-        "symbol": "L:lc.a(I)V#4",
-        "before": null,
-        "after": {
-          "symbol": "L:lc.a(I)V#4",
-          "originalName": "var4",
-          "to": "spawnPositionX",
-          "evidence": "320 + 240*cos(spawnAngleRadians); passed to initializeEntityMotion as positionX."
-        }
-      },
-      {
-        "symbol": "L:lc.a(I)V#5",
-        "before": null,
-        "after": {
-          "symbol": "L:lc.a(I)V#5",
-          "originalName": "var5",
-          "to": "spawnPositionY",
-          "evidence": "240 + 240*sin(spawnAngleRadians); passed to initializeEntityMotion as positionY."
-        }
-      },
-      {
-        "symbol": "L:lc.a(I)V#6",
-        "before": null,
-        "after": {
-          "symbol": "L:lc.a(I)V#6",
-          "originalName": "var6",
-          "to": "inwardDirectionX",
-          "evidence": "Initially 320-spawnPositionX, then normalized by inverseSpawnDistance and multiplied by entityMotionSpeed for velocityX."
-        }
-      },
-      {
-        "symbol": "L:lc.a(I)V#7",
-        "before": null,
-        "after": {
-          "symbol": "L:lc.a(I)V#7",
-          "originalName": "var7",
-          "to": "inwardDirectionY",
-          "evidence": "Initially 240-spawnPositionY, then normalized by inverseSpawnDistance and multiplied by entityMotionSpeed for velocityY."
-        }
-      },
-      {
-        "symbol": "L:lc.a(I)V#8",
-        "before": null,
-        "after": {
-          "symbol": "L:lc.a(I)V#8",
-          "originalName": "var8",
-          "to": "inverseSpawnDistance",
-          "evidence": "Reciprocal square root of the inward offset squared length; normalizes both direction components."
-        }
-      },
-      {
-        "symbol": "L:lc.a(I)V#9",
-        "before": null,
-        "after": {
-          "symbol": "L:lc.a(I)V#9",
-          "originalName": "var10",
-          "to": "clientControlFlowGuard",
-          "evidence": "Entry snapshot of Geoblox.field_C controls whether the initial spawn-queue iterator continues."
-        }
-      },
-      {
-        "symbol": "L:qe.b(I)V#0",
-        "before": null,
-        "after": {
-          "symbol": "L:qe.b(I)V#0",
-          "originalName": "var2",
-          "to": "clientControlFlowGuard",
-          "evidence": "Entry snapshot of Geoblox.field_C retained in quota adjustment."
-        }
-      },
-      {
-        "symbol": "L:qe.b(I)V#1",
-        "before": null,
-        "after": {
-          "symbol": "L:qe.b(I)V#1",
-          "originalName": "decompiledCaughtException",
-          "to": "caughtQuotaUpdateFailure",
-          "evidence": "Carrier assigned from the RuntimeException caught around quota arithmetic."
-        }
-      },
-      {
-        "symbol": "L:qe.b(I)V#2",
-        "before": null,
-        "after": {
-          "symbol": "L:qe.b(I)V#2",
-          "originalName": "var1",
-          "to": "quotaUpdateFailureForContext",
-          "evidence": "Alias of the caught RuntimeException passed to t.a with original qe.B diagnostic context."
-        }
-      },
-      {
-        "symbol": "L:qe.b(I)V#3",
-        "before": null,
-        "after": {
-          "symbol": "L:qe.b(I)V#3",
-          "originalName": "decompiledCaughtParameter0",
-          "to": "quotaUpdateFailure",
-          "evidence": "RuntimeException catch parameter for quota adjustment."
-        }
-      },
-      {
-        "symbol": "L:sa.b(Z)V#0",
-        "before": null,
-        "after": {
-          "symbol": "L:sa.b(Z)V#0",
-          "originalName": "var1",
-          "to": "intervalTicks",
-          "evidence": "Rounded inverse-speed spawn interval assigned immediately to kb.field_c before the preserveReleaseQuota branch."
-        }
-      },
-      {
-        "symbol": "L:vd.a(I)I#0",
-        "before": null,
-        "after": {
-          "symbol": "L:vd.a(I)I#0",
-          "originalName": "var1",
-          "to": "specialKindRoll",
-          "evidence": "Second Math.random() draw after the probability gate; thresholds 0.13, 0.25 and 0.65 select kind IDs 3, 4, 1 and 2. The draw and its order are retained."
-        }
-      },
-      {
-        "symbol": "M:ij.m(I)I",
-        "before": null,
-        "after": {
-          "symbol": "M:ij.m(I)I",
-          "originalName": "m",
-          "to": "chooseSpawnEntityCategory",
-          "evidence": "Normal guards above 18 sample qi.b with f.field_qb. Guards <=18 recursively consume one sample before returning a second; independent seeded native fixtures preserve both draws."
-        }
-      },
-      {
-        "symbol": "M:nf.c(B)I",
-        "before": null,
-        "after": {
-          "symbol": "M:nf.c(B)I",
-          "originalName": "c",
-          "to": "chooseSpawnSpriteVariant",
-          "evidence": "Normal guard -67 samples qi.b with ag.field_k. Guards at or above -55 return 66 without consuming the shared Random. Seeded native selection fixtures independently verify results and RNG consumption."
-        }
-      },
-      {
-        "symbol": "M:pg.a(I)V",
-        "before": null,
-        "after": {
-          "symbol": "M:pg.a(I)V",
-          "originalName": "a",
-          "to": "resetGameplayDifficulty",
-          "evidence": "Resets speed, probability, selection bounds, difficulty/theme counters, release quota, spawn interval scale and rotation. Guard 9408 additionally resets remaining counters and recomputes the interval; seven native guards verify the partial-reset boundary."
-        }
-      },
-      {
-        "symbol": "M:qe.b(I)V",
-        "before": null,
-        "after": {
-          "symbol": "M:qe.b(I)V",
-          "originalName": "b",
-          "to": "adjustThemeReleaseQuota",
-          "evidence": "Adds the supplied signed delta plus ten when ji.field_h is nonzero and below 21, then stores the ceiling quota divided by three. Independent native checks cover 150 bounded signed-delta/step cases; extreme overflow-driven loops are outside the fixtures."
-        }
-      },
-      {
-        "symbol": "M:sa.b(Z)V",
-        "before": null,
-        "after": {
-          "symbol": "M:sa.b(Z)V",
-          "originalName": "b",
-          "to": "recomputeSpawnReleaseInterval",
-          "evidence": "Computes and stores int(201.0f / og.field_r * ij.field_ab + 0.5f) before optionally setting sa.field_b to -10. Native fixtures verify 112 floating-point/cast/Boolean cases including NaNs, signed zero and infinities."
-        }
-      },
-      {
-        "symbol": "M:vd.a(I)I",
-        "before": null,
-        "after": {
-          "symbol": "M:vd.a(I)I",
-          "originalName": "a",
-          "to": "chooseSpawnSpriteKind",
-          "evidence": "Guard 741924304 first gates on sa.field_c, then maps a fresh Math.random roll through 0.13/0.25/0.65 thresholds to kinds 3/4/1/2. Other guards return 104. Native checks cover closed probability gates and invalid guards, not live Math.random distribution."
-        }
-      },
-      {
-        "symbol": "P:ij.m(I)I#0",
-        "before": null,
-        "after": {
-          "symbol": "P:ij.m(I)I#0",
-          "originalName": "param0",
-          "to": "methodGuard",
-          "evidence": "Retains the original compatibility guard and its side effects. Dedicated difficulty/reset/selection fixtures verify normal and boundary guards against native bytecode; original sentinel values are unchanged."
-        }
-      },
-      {
-        "symbol": "P:lc.a(I)V#0",
-        "before": null,
-        "after": {
-          "symbol": "P:lc.a(I)V#0",
-          "originalName": "param0",
-          "to": "methodGuard",
-          "evidence": "Normal caller supplies 255. Other values write lc.field_b=-11; XOR-derived guards used for selectors and deque counts retain original values. Source inspection, not a complete spawn-queue runtime proof."
-        }
-      },
-      {
-        "symbol": "P:ld.b(Z)V#0",
-        "before": null,
-        "after": {
-          "symbol": "P:ld.b(Z)V#0",
-          "originalName": "param0",
-          "to": "recursiveAdvanceGuard",
-          "evidence": "Normal hd.a(I)V callers pass false. True recursively advances the shared difficulty index and may fail on a later table re-read, preserving partial updates; it also negates the preserveReleaseQuota argument passed to sa.b(Z)V."
-        }
-      },
-      {
-        "symbol": "P:nf.c(B)I#0",
-        "before": null,
-        "after": {
-          "symbol": "P:nf.c(B)I#0",
-          "originalName": "param0",
-          "to": "methodGuard",
-          "evidence": "Retains the original compatibility guard and its side effects. Dedicated difficulty/reset/selection fixtures verify normal and boundary guards against native bytecode; original sentinel values are unchanged."
-        }
-      },
-      {
-        "symbol": "P:pg.a(I)V#0",
-        "before": null,
-        "after": {
-          "symbol": "P:pg.a(I)V#0",
-          "originalName": "param0",
-          "to": "methodGuard",
-          "evidence": "Retains the original compatibility guard and its side effects. Dedicated difficulty/reset/selection fixtures verify normal and boundary guards against native bytecode; original sentinel values are unchanged."
-        }
-      },
-      {
-        "symbol": "P:qe.b(I)V#0",
-        "before": null,
-        "after": {
-          "symbol": "P:qe.b(I)V#0",
-          "originalName": "param0",
-          "to": "additionalReleases",
-          "evidence": "Signed delta added to fa.field_b after the step-dependent ten-release addition; native bounded negative, zero and positive delta fixtures verify the resulting ceiling quota."
-        }
-      },
-      {
-        "symbol": "P:sa.b(Z)V#0",
-        "before": null,
-        "after": {
-          "symbol": "P:sa.b(Z)V#0",
-          "originalName": "param0",
-          "to": "preserveReleaseQuota",
-          "evidence": "True leaves sa.field_b unchanged after recomputing kb.field_c; false stores -10. Both paths and floating-point narrowing behavior are verified independently against native bytecode."
-        }
-      },
-      {
-        "symbol": "P:vd.a(I)I#0",
-        "before": null,
-        "after": {
-          "symbol": "P:vd.a(I)I#0",
-          "originalName": "param0",
-          "to": "methodGuard",
-          "evidence": "Retains the original compatibility guard and its side effects. Dedicated difficulty/reset/selection fixtures verify normal and boundary guards against native bytecode; original sentinel values are unchanged."
-        }
-      }
-    ],
+    "ruleChanges": [],
     "stubJarSha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2",
     "sourceEvidence": [
       {
         "file": "ab.java",
-        "sha256": "bb25bde0ac0dc65cbc8e6fed8c1ed7b1a5652ab8d97dc4f29a807afb3cccb876"
+        "sha256": "6e2480d81f3e43519346bf10c8f8af8ec62ada8d94cf1e9bf4048caef0c9c6bb"
       },
       {
         "file": "af.java",
@@ -7678,7 +7297,7 @@
       },
       {
         "file": "ag.java",
-        "sha256": "2518dac745333189472f08195165a1f6e1059064a0a857d2d1544f0ce484a2b4"
+        "sha256": "1564ffa14191072983fe1a7f94502569a5d4729d3a4636e0bc3d63948f67ebb2"
       },
       {
         "file": "bh.java",
@@ -7686,7 +7305,7 @@
       },
       {
         "file": "c.java",
-        "sha256": "4902b3e8dbc184ef7e864332f4d9192eb675b6f71b666e0041b44b3ea012a1ad"
+        "sha256": "aef74535c5f3b4b82d959cd12a89d7ed6c46dddf07c7af1b0d3c7c563cc8e36f"
       },
       {
         "file": "cf.java",
@@ -7738,7 +7357,7 @@
       },
       {
         "file": "ih.java",
-        "sha256": "c8b1ed5aa8a8fe0b42429fa077c3d9c5e345a3665ca0f6de763ab833fd2881d9"
+        "sha256": "297ac4e1af2a446efaad0e693fae25e174ad69a24aebbbd037a87a597e07bbcc"
       },
       {
         "file": "ij.java",
@@ -7746,7 +7365,7 @@
       },
       {
         "file": "ik.java",
-        "sha256": "0ca6a4ac4f56b83cf15137d44779513b911ec9e415c9a9feaece2ced96449532"
+        "sha256": "74f84a066810e28575de8f8d453512e87ccccb9eb1942d1c9184c5e18ae01439"
       },
       {
         "file": "ja.java",
@@ -7790,11 +7409,11 @@
       },
       {
         "file": "lc.java",
-        "sha256": "053fecb1711cb1ba0affdb1a9f5f19c8a4ba7f707cc4ecae0920fb700ab3e535"
+        "sha256": "3d705a0659ae67f44baaf5039f28e3ac0a62851cebb82611f4752478862f73b4"
       },
       {
         "file": "ld.java",
-        "sha256": "c1f72f38531bd56d74c162e7de60ff36cd49b67c79c33ba6efd3acb8784b8dd9"
+        "sha256": "f0425adfb2c73e6039534128e52dcb4fc1352ce98c9a90ab5d35bfd195ae86a0"
       },
       {
         "file": "le.java",
@@ -7846,11 +7465,11 @@
       },
       {
         "file": "r.java",
-        "sha256": "76b87dd7205976973d7628c7753d93f791a9862e10ded24d71c6f5251b5b251d"
+        "sha256": "493560fc43b82b90ac8d47a1bf65b16b5143385e5932a317fd729cf4378ba728"
       },
       {
         "file": "ra.java",
-        "sha256": "efeaec61a1bd33e72c78d052faef6b4173a81913386824db93d36091aec6c01e"
+        "sha256": "8d66cc5bebcf332e9c6cb120945b035ff9661602d782142c09dc837ba58ce961"
       },
       {
         "file": "rc.java",
@@ -7862,7 +7481,7 @@
       },
       {
         "file": "ri.java",
-        "sha256": "83865ad1e8b3dc193d80401459632fcb168ebacedb3b79918c1e2187ddc22a7c"
+        "sha256": "0f2311f0f901ce0ebc9b6d8733f9eb8b8559dc63c15cfb6f83c5b300ee7fc36e"
       },
       {
         "file": "rj.java",
@@ -7870,7 +7489,7 @@
       },
       {
         "file": "sa.java",
-        "sha256": "d22232f25f8d04ef63527050aa9e070be4d4d5b4431613705e1fd6ae6aa8f188"
+        "sha256": "4e1c5e7c10aee4e01cfb88252b763fa4b42a9ae1f2eb344321b53fa7faef7f28"
       },
       {
         "file": "sc.java",
@@ -7898,7 +7517,7 @@
       },
       {
         "file": "ul.java",
-        "sha256": "6a1d1cf7a18123085fa676c2cb4bde5d8bc8fcc63a77849d55aa20e33366ed74"
+        "sha256": "f01111ed6a40d9ef95d8a50623334f2c885a31e9245070478c898efa3be2572d"
       },
       {
         "file": "vd.java",
@@ -7922,7 +7541,7 @@
       },
       {
         "file": "wi.java",
-        "sha256": "cf13c5aa0a7fc0971911d32b369010d3b50d03ea11302f7146d80626e9200d95"
+        "sha256": "9684a65852414d580cb4e4d79c979bcfec79e674a62490be136324b923d4d288"
       }
     ],
     "nativeEvidence": [
@@ -7941,7 +7560,7 @@
       },
       {
         "file": "tests/test-geoblox-gameplay.mjs",
-        "sha256": "74e1e59d5f6235b371e647cafa4e1bb4a454132a060f202f15e4444aec4ba213",
+        "sha256": "9f7538d7e3f3892719b13a4fe9c1080ffb6357116ca4c5b0f41efedfbcfb9d7b",
         "nativeOutputSha256": "42be694a3c2f9a7a80ec7e0ec910bd312bdba5bc38f30293eb00faddcb17ac79",
         "scenarios": 52164,
         "additionalTraces": [
@@ -7950,12 +7569,39 @@
             "sha256": "8c66899b5955eac3380cc3aefd3cbe17a5063cc68f98cd507ff406cea4ae587b",
             "scenarios": 84661,
             "scope": "82944 flag cases, 56 bounds cases, 60 real-table ticks, 112 interval cases, 150 quota cases, seven reset guards and 1332 seeded/closed-gate selection cases. Independent oracles verify state, float casts, recursive failures, partial writes and RNG consumption. Whole-game equivalence and live Math.random distribution remain unverified."
+          },
+          {
+            "constant": "expectedComparatorSha256",
+            "sha256": "9be228f7421970f2214c74e8890327f8592f706dc90ccd0d0933e6f2fbe0a604",
+            "scenarios": 32768,
+            "scope": "ig.a(ZIBI)Z priority comparator: both order modes, every byte guard, ties and integer overflow; controlled two-entry tables, not whole-game execution."
           }
         ]
+      },
+      {
+        "file": "tests/test-geoblox-result-sequence.mjs",
+        "sha256": "e07871235f29018c85f908f0148a940111c2462bd38489729b595b439c3a28a1",
+        "nativeOutputSha256": "7b5891a65a952e19dbf395fb064530df9386712028f2a90eaf2afa5fa22dbb18",
+        "scenarios": 27,
+        "scope": "Controlled result sequence; 26043 ticks per variant, without live assets or device audio."
+      },
+      {
+        "file": "tests/test-geoblox-nine-slice.mjs",
+        "sha256": "7065157f26238eec927e0dd831aac68dd5c962da4a365ee18bca709af36b5508",
+        "nativeOutputSha256": "16c92de1c3230786836344a4848c7046488b9cfa4a48078ca34024fdcbdc7be9",
+        "scenarios": 2592,
+        "scope": "Controlled nine-slice sprites, every pixel and cleanup side effect."
+      },
+      {
+        "file": "tests/test-geoblox-result-helpers.mjs",
+        "sha256": "5fcfb59b2937813ed532a021c11c1248c3567d89e493c10db01da3ed2ee64a0e",
+        "nativeOutputSha256": "ec3c627a2eec22d24549607b97ae8c3b6d735e24217b26c61e8a5e510872ace6",
+        "scenarios": 13927,
+        "scope": "120 selectors, 4801 popup factories, 9000 position checks and six music cases; controlled globals."
       }
     ],
     "textResources": {
-      "loaderSourceSha256": "cf13c5aa0a7fc0971911d32b369010d3b50d03ea11302f7146d80626e9200d95",
+      "loaderSourceSha256": "9684a65852414d580cb4e4d79c979bcfec79e674a62490be136324b923d4d288",
       "review": {
         "allResourceReads": 744,
         "storedResourceReads": 218,
@@ -10120,9 +9766,9 @@
     },
     "verification": {
       "sourceDeclarations": 20931,
-      "bindingsCompared": 152514,
+      "bindingsCompared": 152437,
       "overrideRelationships": 388,
-      "identifierEdits": 19062,
+      "identifierEdits": 19060,
       "dictionaryRestorationFiles": 303,
       "wholeGameEquivalenceVerified": false,
       "nativeMatchingScenarios": 708,
@@ -10136,12 +9782,13 @@
         "Reconciliation/routing fixtures use real minimal sprites, controlled display/audio buffers and constructor-free holders. Routing checks use isolated entities or one controlled reciprocal edge. Real asset loading, sound-device playback and new unlock delivery remain unverified.",
         "Avatar animation fixtures independently verify menu and gameplay timer/frame/tint state with sessionEnding=false. Gameplay ending-message selection, rendering with real assets and device audio remain outside the added animation checks.",
         "Whole-game equivalence and FPS, heap and phone targets are not established.",
-        "Spawn-queue angle/position locals and live special-kind selection remain supported by source inspection. The added selection probes test seeded category/variant RNG and closed special-kind gates; real spawn queue execution, live Math.random distribution and extreme quota-overflow loops remain unverified."
+        "Spawn-queue angle/position locals and live special-kind selection remain supported by source inspection. The added selection probes test seeded category/variant RNG and closed special-kind gates; real spawn queue execution, live Math.random distribution and extreme quota-overflow loops remain unverified.",
+        "Conditional assignments preserve the integer Boolean carriers and duplicated difficulty tails. Comparator fixtures use controlled two-entry tables; real catalog ordering and invalid array access paths remain unverified."
       ],
       "checks": {
         "ruleBuilderTests": 9,
         "sourceRefusalGroups": 5,
-        "sourceRefusalScenarios": 11,
+        "sourceRefusalScenarios": 15,
         "textResourceTests": 6,
         "fullReproductionCheck": true,
         "dictionaryReversalByteExact": true
@@ -10178,7 +9825,7 @@
       "generatedSelectorsBefore": 265,
       "generatedSelectorsAfter": 11,
       "generatedSelectorsRemoved": 254,
-      "rawSourceLinesRemoved": 2213,
+      "rawSourceLinesRemoved": 308,
       "returnReconstructionChangedJavaFiles": 181,
       "localOrdinalMigrations": 0,
       "obsoleteNamedSelectorsRemoved": 1,
@@ -10192,9 +9839,9 @@
       "earlyExitChangedJavaFiles": 208,
       "elseWrappersRemoved": 2128,
       "genericEarlyExitTestGroups": 11,
-      "nativeEmitterComparisons": 556,
-      "sourceReferenceOccurrencesRemoved": 87,
-      "sourceReferenceOccurrencesAdded": 1,
+      "nativeEmitterComparisons": 700,
+      "sourceReferenceOccurrencesRemoved": 77,
+      "sourceReferenceOccurrencesAdded": 0,
       "nativeDifficultyFlagCases": 82944,
       "nativeDifficultyBoundsCases": 56,
       "nativeDifficultySequenceTicks": 60,
@@ -10202,7 +9849,67 @@
       "nativeThemeQuotaCases": 150,
       "nativeDifficultyResetCases": 7,
       "nativeSpawnSelectionCases": 1332,
-      "nativeDifficultyTraceSha256": "8c66899b5955eac3380cc3aefd3cbe17a5063cc68f98cd507ff406cea4ae587b"
+      "nativeDifficultyTraceSha256": "8c66899b5955eac3380cc3aefd3cbe17a5063cc68f98cd507ff406cea4ae587b",
+      "genericEmitterTestGroups": 14,
+      "genericTypedAssignmentTestGroups": 3,
+      "typedLiteralAssignmentsFolded": 77,
+      "difficultyAssignmentsFolded": 17,
+      "typedAssignmentChangedJavaFiles": 36,
+      "typedAssignmentElseWrappersRemoved": 77,
+      "nativeComparatorCases": 32768,
+      "nativeComparatorTraceSha256": "9be228f7421970f2214c74e8890327f8592f706dc90ccd0d0933e6f2fbe0a604",
+      "referenceRemovalAttribution": {
+        "localAssignmentTargets": 76,
+        "generatedInitializerHelperFieldTarget": "F:wi$1$CfrPartitionedBody.stackIn_2625_0:I"
+      }
+    },
+    "sourceChange": {
+      "before": {
+        "source": {
+          "repository": "Kreijstal/funorb-decompiled",
+          "commit": "589c78257fcea469a48c6a3f2eba15cf77fb7e1a",
+          "subdirectory": "games/geoblox"
+        },
+        "generators": {
+          "dekoblokoWork": {
+            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
+            "trackedClean": true
+          },
+          "javaTools": {
+            "commit": "44435d91c3e1f48530c0f2462caa3874968993bc",
+            "trackedClean": true,
+            "sourceArchive": {
+              "sha256": "91f00d39ebbcdeff76e1c4d507ba69839a1f5fe3573499906040ac6f712a63c1",
+              "reproduce": "git archive --format=tar 44435d91c3e1f48530c0f2462caa3874968993bc | sha256sum",
+              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
+            }
+          }
+        },
+        "inputTreeSha256": "baeae8c226093d2a14392d9994aa74ddd4c735009a09e713af1b7cf39f202029"
+      },
+      "after": {
+        "source": {
+          "repository": "Kreijstal/funorb-decompiled",
+          "commit": "30d11311c75ae8908eb7bfcb72b0b220d16fc456",
+          "subdirectory": "games/geoblox"
+        },
+        "generators": {
+          "dekoblokoWork": {
+            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
+            "trackedClean": true
+          },
+          "javaTools": {
+            "commit": "2c72bb566a66adf31192ac0dd1447c2c99562b2e",
+            "trackedClean": true,
+            "sourceArchive": {
+              "sha256": "e25751f7a750281c5d588faefd06764441973b2bdd35f372524ca6e5a36aa703",
+              "reproduce": "git archive --format=tar 2c72bb566a66adf31192ac0dd1447c2c99562b2e | sha256sum",
+              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
+            }
+          }
+        },
+        "inputTreeSha256": "db87af61f08e3fa11e6f19e45d63941889f9027d947e96dcf819b999be73d624"
+      }
     }
   }
 }

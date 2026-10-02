@@ -151,11 +151,7 @@ final class ih {
                 if (var35[var18] != 16777215) {
                   if (var35[var18] != 0) {
                     var24 = tl.entitiesById[-1 + var35[var18]];
-                    if (var24.entitySpriteKindId != 2) {
-                      stackIn_35_0 = 0;
-                    } else {
-                      stackIn_35_0 = 1;
-                    }
+                    stackIn_35_0 = (var24.entitySpriteKindId != 2) ? 0 : 1;
 
 
                     if (entity.entitySpriteKindId != 2) {

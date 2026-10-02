@@ -114,11 +114,7 @@ final class ik {
             }
             variantPropagationThenNeighborIndex = 0;
             propagateCategory = 0;
-            if (secondEntity.entitySpriteKindId != 1) {
-              secondIsKindOne = 0;
-            } else {
-              secondIsKindOne = 1;
-            }
+            secondIsKindOne = (secondEntity.entitySpriteKindId != 1) ? 0 : 1;
 
 
             if (firstEntity.entitySpriteKindId != 1) {

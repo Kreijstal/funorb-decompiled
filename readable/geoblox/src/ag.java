@@ -172,11 +172,7 @@ final class ag extends TextInputValidator {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != ca.a(candidateText, 1)) {
-            stackIn_3_0 = 0;
-          } else {
-            stackIn_3_0 = 1;
-          }
+          stackIn_3_0 = (null != ca.a(candidateText, 1)) ? 0 : 1;
           var3_int = stackIn_3_0;
           if (var3_int == 0) {
             stackIn_5_0 = si.field_m;

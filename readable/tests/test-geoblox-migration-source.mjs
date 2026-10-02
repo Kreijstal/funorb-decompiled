@@ -7,14 +7,15 @@ import {fileURLToPath} from 'node:url';
 import {captureProcess} from '../tools/lib/capture-process.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
+const current = JSON.parse(fs.readFileSync(path.join(root, 'geoblox-rules.json')));
 function rejection(change, message) {
   const temporary = fs.mkdtempSync(path.join(os.tmpdir(), 'geoblox-current-source-'));
   try {
     captureProcess('git', ['clone', '--shared', '--no-checkout', '--quiet', path.resolve(root, '..'), temporary]);
     const directory = path.join(temporary, 'readable');
     for (const file of ['reproduce-geoblox.mjs', 'build-geoblox-rules.mjs', 'text-resource-evidence.mjs',
-      'geoblox-rules.json', 'funorb-stubs.jar', 'tests/test-geoblox-match-scoring.mjs',
-      'tests/test-geoblox-text-write.mjs', 'tests/test-geoblox-gameplay.mjs', 'tools/PIN.json', 'tools/readable-java.mjs',
+      'geoblox-rules.json', 'funorb-stubs.jar', ...current.publication.nativeEvidence.map(item => item.file),
+      'tools/PIN.json', 'tools/readable-java.mjs',
       'tools/lib/ReadableJava.java', 'tools/lib/capture-process.mjs']) {
       const destination = path.join(directory, file);
       fs.mkdirSync(path.dirname(destination), {recursive: true});
@@ -43,11 +44,8 @@ test('wrapper refuses unreviewed rule changes and previous Git hash corruption',
 });
 test('wrapper rejects changed native probe bytes before compilation', () => {
   rejection(data => { data.publication.nativeEvidence[0].sha256 = '0'.repeat(64); }, /Reviewed native probe differs/);
-  rejection((_data, directory) => {
-    fs.appendFileSync(path.join(directory, 'tests/test-geoblox-text-write.mjs'), '\n');
-  }, /Reviewed native probe differs/);
-  rejection((_data, directory) => {
-    fs.appendFileSync(path.join(directory, 'tests/test-geoblox-gameplay.mjs'), '\n');
+  for (const item of current.publication.nativeEvidence) rejection((_data, directory) => {
+    fs.appendFileSync(path.join(directory, item.file), '\n');
   }, /Reviewed native probe differs/);
 });
 test('wrapper verifies resource assignments against the actual current source', () => {

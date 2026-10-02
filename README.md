@@ -16,15 +16,17 @@ mirror. The current [manifest](readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
-identities. Both 303-file Java corpora compile and retain all 152,514 bindings
+identities. Both 303-file Java corpora compile and retain all 152,437 bindings
 and 388 override relationships.
 
 Difficulty and spawning now name the step flags, sprite-variant/category
 bounds, special-kind probability, release interval and queue geometry.
-The current export adds 38 rules and retains all prior names. Independent
+The previous naming pass added 38 rules. The current structural export
+preserves all 1,208 guarded rules without ordinal migrations. Independent
 native fixtures verify 84,661 additional difficulty/reset/selection cases,
 including floating-point casts, recursive failures, partial writes and seeded
-random draw consumption. Raw source and decompiler pins are unchanged.
+random draw consumption. The current input and decompiler revisions are pinned
+in the manifest.
 
 The boundary scan now has guarded semantic names for every local and parameter.
 An independent geometric oracle verifies 425,042 pixel cases at two framebuffer
@@ -42,18 +44,23 @@ prior snapshots in Git.
 
 ## GeoBlox source refresh
 
-The latest owned decompiler flattens conditionals after proven early exits,
-removing 2,128 generated else wrappers and 2,213 Java source lines across 208
-GeoBlox files. The boundary scan now uses sequential pixel guards. Complete-arm
-parsing, original render order, exact condition inversion and retained declaration
-blocks protect scopes, effects, NaNs, labels, catches and lock release.
+The latest owned decompiler folds 77 literal assignment branches into conditional
+assignments, including all 17 repeated integer Boolean assignments in the
+difficulty method. This removes 308 lines across 36 files. Folding requires
+complete single-assignment arms and identical proven primitive types; boxing,
+narrowing and effectful expressions retain their original control flow.
+
+The earlier early-exit pass removed 2,128 else wrappers and 2,213 lines across
+208 files. Complete-arm parsing, original render order, exact inversion and
+retained declaration blocks protect scopes, effects, NaNs, labels and catches.
 
 All 303 sources compile, preserving 20,931 declaration identities and 388
-override edges. Raw/readable rebinding compares 152,514 bindings. The structural
-pass migrated 35 local ordinals; the current naming pass
-adds 38 identities while retaining all prior names.
-The generic emitter passes 11 test groups and 556 native comparisons; floating,
-nested-cycle, exception-exit and catch regressions also pass. A clean committed
+override edges. Raw/readable rebinding compares 152,437 bindings. The current
+pass preserves all 1,208 rules, with zero local ordinal migrations. The 77 removed
+references are duplicate assignment targets. The generic emitter passes 14 test
+groups and 700 native comparisons; floating, nested-cycle, exception-exit and
+catch regressions also pass. A 32,768-case independent comparator oracle checks
+the enclosing guard inversion in the actual game method. A clean committed
 source archive regenerates all raw Java and diagnostics byte-for-byte.
 
 The previous terminal-return reconstruction removed 254 selectors and the

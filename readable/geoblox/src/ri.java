@@ -119,17 +119,9 @@ final class ri {
                     ic.a((byte) 65);
                   }
                   if (!param0) {
-                    if ((var7 & 4) == 0) {
-                      stackIn_45_0 = 0;
-                    } else {
-                      stackIn_45_0 = 1;
-                    }
+                    stackIn_45_0 = ((var7 & 4) == 0) ? 0 : 1;
                     fe.field_b = stackIn_45_0 != 0;
-                    if ((var7 & 8) == 0) {
-                      stackIn_48_0 = 0;
-                    } else {
-                      stackIn_48_0 = 1;
-                    }
+                    stackIn_48_0 = ((var7 & 8) == 0) ? 0 : 1;
                     fb.field_l = stackIn_48_0 != 0;
                     if (!fb.field_l) {
                     }

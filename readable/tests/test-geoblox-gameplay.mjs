@@ -14,6 +14,7 @@ const expectedNativeSha256 = '42be694a3c2f9a7a80ec7e0ec910bd312bdba5bc38f30293eb
 // The additional matrix has its own trace; the existing gameplay baseline
 // remains independently pinned.
 const expectedDifficultySha256 = '8c66899b5955eac3380cc3aefd3cbe17a5063cc68f98cd507ff406cea4ae587b';
+const expectedComparatorSha256 = '9be228f7421970f2214c74e8890327f8592f706dc90ccd0d0933e6f2fbe0a604';
 const rules = JSON.parse(fs.readFileSync(path.join(root, 'geoblox-rules.json')));
 const aliases = new Map(rules.renames.map(rule => [rule.symbol, rule.to]));
 const temporary = fs.mkdtempSync(path.join(os.tmpdir(), 'geoblox-gameplay-'));
@@ -38,7 +39,7 @@ try {
     .verifiedTransformedClasses;
   assert.equal(nativeFiles.length, pin.files);
   assert.equal(nativeHash.digest('hex'), pin.sha256);
-  let expected, expectedDifficulty;
+  let expected, expectedDifficulty, expectedComparator;
   for (const variant of ['native', 'original', 'renamed']) {
     const native = variant === 'native', renamed = variant === 'renamed';
     const name = (key, original) => renamed ? aliases.get(key) ?? original : original;
@@ -709,6 +710,44 @@ try {
         System.err.println("boundary-matrix:"+pixelCases+":"+perimeterPixels+":"+guardCases+":"+rasterCases);
       }
       static boolean boundaryWithGuard(int guard) { return ${call('ld','a(I)Z')}(guard); }
+      static String comparatorOracle(boolean primary,byte guard,int[] firstTable,int[] secondTable,
+          int[] leftPart,int[] middlePart,int[] rightPart) {
+        int[] first=primary?firstTable:secondTable,second=primary?secondTable:firstTable;
+        if(first[1]!=first[0])return Boolean.toString(first[1]<first[0]);
+        if(second[1]!=second[0])return Boolean.toString(second[1]<second[0]);
+        int left=leftPart[1]+middlePart[1]+rightPart[1];
+        int right=middlePart[0]+(rightPart[0]+leftPart[0]);
+        if((-38-guard)/45==0)return "ArithmeticException";
+        if(left!=right)return Boolean.toString(left<right);
+        return "false";
+      }
+      static void comparatorMatrix() throws Exception {
+        java.security.MessageDigest digest=java.security.MessageDigest.getInstance("SHA-256");
+        int count=0;int[] values={Integer.MIN_VALUE,-1,0,1,Integer.MAX_VALUE};
+        for(int seed=0;seed<64;seed++) {
+          int[] first={values[seed%5],values[(seed/5)%5]};
+          int[] second={values[(seed/7)%5],values[(seed/11)%5]};
+          if(seed%4==0){first[1]=first[0];second[1]=second[0];}
+          int[] left={values[(seed/13)%5],values[(seed/17)%5]};
+          int[] middle={values[(seed/19)%5],values[(seed/23)%5]};
+          int[] right={values[(seed/29)%5],values[(seed/31)%5]};
+          ${global('hg','field_a','[I')}=first;${global('gk','field_a','[I')}=second;
+          ${global('cj','field_b','[I')}=left;${global('fb','field_m','[I')}=middle;
+          ${global('k','field_i','[I')}=right;
+          for(boolean primary:new boolean[]{false,true})for(int guard=-128;guard<=127;guard++) {
+            String actual;
+            try {actual=Boolean.toString(${call('ig','a(ZIBI)Z')}(primary,0,(byte)guard,1));}
+            catch(ArithmeticException failure){actual="ArithmeticException";}
+            String wanted=comparatorOracle(primary,(byte)guard,first,second,left,middle,right);
+            check(actual.equals(wanted),"comparator priority, overflow, tie and guard failure");
+            digest.update((seed+":"+primary+":"+guard+":"+actual+"\\n")
+              .getBytes(java.nio.charset.StandardCharsets.UTF_8));count++;
+          }
+        }
+        check(count==32768,"comparator coverage");StringBuilder hash=new StringBuilder();
+        for(byte value:digest.digest())hash.append(String.format("%02x",value&255));
+        System.err.println("comparator-matrix:"+count+":"+hash);
+      }
       static final class DifficultyState {
         int step,variants,categories,interval,quota;
         float speed,rotation,scale;
@@ -986,6 +1025,7 @@ try {
         tintRequests();
         routing();
         difficultyMatrix();
+        comparatorMatrix();
         System.out.println("complete:"+cases+":conversion-failures:"+conversionFailures);
       }
     }`;
@@ -1009,10 +1049,16 @@ try {
     assert.equal(difficulty,expectedDifficultySha256,variant);
     if(expectedDifficulty===undefined)expectedDifficulty=difficulty;
     else assert.equal(difficulty,expectedDifficulty,variant);
+    const comparator = output.stderr.toString().match(/(?:^|\n)comparator-matrix:32768:([a-f0-9]{64})(?:\n|$)/)?.[1];
+    assert.ok(comparator, 'complete comparator matrix must run independently in every variant');
+    assert.equal(comparator,expectedComparatorSha256,variant);
+    if(expectedComparator===undefined)expectedComparator=comparator;
+    else assert.equal(comparator,expectedComparator,variant);
     console.log(JSON.stringify({variant,sha256,completion:output.stdout.toString().trim().split('\n').at(-1),
       boundaryPixelChecks:425042,boundaryPerimeterPixels:1300,boundaryGuardChecks:18,boundaryRasterChecks:5,
       difficultySha256:difficulty,difficultyFlagCases:82944,difficultyBoundsCases:56,difficultySequenceTicks:60,
-      spawnIntervalCases:112,themeQuotaCases:150,difficultyResetCases:7,spawnSelectionCases:1332}));
+      spawnIntervalCases:112,themeQuotaCases:150,difficultyResetCases:7,spawnSelectionCases:1332,
+      comparatorSha256:comparator,comparatorCases:32768}));
     assert.equal(sha256,expectedNativeSha256,variant);
     if(expected===undefined)expected=output.stdout;
     else assert.equal(Buffer.compare(output.stdout,expected),0,variant);
