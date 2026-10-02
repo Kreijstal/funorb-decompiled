@@ -3,7 +3,7 @@
  */
 final class hg {
     static String field_d;
-    static Sprite[] field_b;
+    static Sprite[] blackOrbImplosionFrames;
     static int[] field_a;
     static int[] field_c;
 
@@ -20,7 +20,7 @@ final class hg {
             return;
         }
         field_a = null;
-        field_b = null;
+        blackOrbImplosionFrames = null;
         field_d = null;
     }
 

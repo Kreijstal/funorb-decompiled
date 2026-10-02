@@ -20,6 +20,53 @@ remain intact.
 `MenuScreen` handles selection and hit testing. Its overridden activation/input
 methods have matching names in `GameScreen`, preserving the virtual contracts.
 
+## Gameplay graphics and theme selection
+
+`Geoblox.prepareGameAssets` loads the game resources through named wrappers:
+`ug.loadSprite`, `wj.loadSpriteFrames`, `jg.loadIndexedSprite`,
+`w.loadPaletteFont` and `gi.loadBitmapFont`. Their arguments distinguish
+`groupName`, `resourceName`, glyph graphics and font metrics archives. The
+resolved `archiveGroupId` and `archiveFileId` locals retain their original
+lookup and failure order; sentinel guard arguments remain explicit.
+
+`geometrySourceFrames` supplies the seven theme/category groups. The ordinary
+kind-zero sprite table is `ke.entitySpritesByThemeCategoryAndVariant`;
+kind one uses `s.geometrySpritesByThemeAndCategory`, and kind two uses
+`MenuScreen.amorphousFramesByThemeAndVariant`. `jg.themeSpriteColors` tints the
+variant dimension; `themeCycleColors` supplies the animation interpolation
+sequence. Original kind IDs and array dimensions remain intact.
+
+Avatar graphics now read as `avatarEyeFrames`, `avatarMouthFrames` and
+`avatarCryBeginFrames`/`avatarCryMiddleFrames`/`avatarCryEndFrames`, with the
+Halloween source overrides retained. `blackOrbFrames`, `silverStarFrames`,
+`sparkleFrames`, `bangFrames` and the other effect arrays keep their original
+frame selection and reset behavior.
+
+`cd.selectThemeRenderAssets` chooses `ec.selectedThemeForeground` and
+`mf.selectedThemeBackground` for the committed `GameScreen.selectedThemeId`:
+
+| Theme ID | Resource group |
+| --- | --- |
+| 0 | jewels |
+| 1 | sun |
+| 2 | sweets |
+| 3 | germs |
+| 4 | baking |
+| 5 | sports |
+| 6 | space |
+
+The renderer rotates the chosen foreground into
+`jf.rotatedThemeForegroundRaster` using `boardAngleRadians`, and draws the
+chosen background at `(0,0)`. The original `jewls_foreground` and
+`jewls_background` resource spellings stay unchanged.
+
+`dd.uiPaletteFont.colorPalettes` makes HUD highlight updates readable;
+`kh.screenTitleSprites` retains the nine original screen indexes.
+`GameplaySession.showGameOverOverlay` is distinct from `sessionEnding`: it
+moves the score box and displays the title loaded from `gameover_title` at
+index six. Asset identity and use support these names; successful complete
+archive loading and real-asset rendering remain outside the native fixtures.
+
 ## Tutorial prompts and progression
 
 `GameplaySession.tutorialMode` selects tutorial behavior and suppresses
@@ -209,7 +256,7 @@ caller resumes and re-reads an exhausted table; partial updates remain visible. 
 `sa.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard)` directly. The proof
 requires a single adjacent use and a nonthrowing primitive condition whose
 inputs are unchanged. The local tail pass reduced the method from 220 lines
-to 69; the nested-continuation pass then reduced it to 56. The current integral
+to 69; the nested-continuation pass then reduced it to 56. The integral
 predicate proof reduces it to 38 lines: variant, recursive-advance and category
 updates each have one path, followed by one probability/rotation/interval tail.
 The category path still reads the shared flag table after recursive advancement;
@@ -554,8 +601,8 @@ the array indices, evidence, override families and remaining shared carriers.
 
 ## Remaining limitations
 
-There are 1,194 explicit guarded rules: 22 classes, 389 fields, 181 method
-declarations, 217 parameters and 385 locals. This is not full deobfuscation.
+There are 1,311 explicit guarded rules: 22 classes, 448 fields, 187 method
+declarations, 241 parameters and 413 locals. This is not full deobfuscation.
 Unknown flags, guard arguments and opaque shared helpers still need
 investigation. Current names and source identities live in the single manifest;
 previous naming and structural passes remain in Git. The earlier early-exit migration
@@ -573,11 +620,13 @@ cleanup and preserves bare return guards. That pass left the difficulty method a
 The previous nested pass removed another 21 lines across seven files and reduced
 it to 56 lines, coalescing its repeated probability/rotation/interval tail.
 Four unnamed snapshot ordinals reorder in v.a(B)V; method/original-spelling
-normalization preserves every declaration. The current cached integral-guard pass removes 18 lines across four files,
+normalization preserves every declaration. The preceding integral-guard pass
+removed 18 lines across four files,
 reducing the method to 38 lines and coalescing its recursive/category clones.
 Every declaration key and spelling is unchanged, with no ordinal migrations.
-All 1,194 naming rules remain unchanged. Other carriers, shared joins and opaque
-names remain. The earlier terminal-return
+All 1,194 rules survived that structural pass. The current naming pass adds
+117 asset/loading/overlay identities while retaining every prior rule and the
+same raw source. Other carriers, shared joins and opaque names remain. The earlier terminal-return
 pass removed the vanished boundary selector;
 the current emitter also retains its proven early-exit reconstruction.
 Complete parsing and preserved declaration scopes keep this reproducible.

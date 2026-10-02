@@ -2,20 +2,20 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ld {
-    static Sprite[] field_b;
+    static Sprite[] avatarCryEndFrames;
     static String field_a;
     static java.math.BigInteger field_c;
 
     public static void a(boolean param0) {
         field_c = null;
         if (!param0) {
-            field_b = (Sprite[]) null;
+            avatarCryEndFrames = (Sprite[]) null;
             field_a = null;
-            field_b = null;
+            avatarCryEndFrames = null;
             return;
         }
         field_a = null;
-        field_b = null;
+        avatarCryEndFrames = null;
     }
 
     final static boolean hasPixelsAtPlayfieldBoundary(int methodGuard) {

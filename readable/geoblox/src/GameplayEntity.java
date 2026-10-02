@@ -160,9 +160,9 @@ final class GameplayEntity extends DualLinkNode {
 
     private final void updatePaletteChannelDeltas(int param0) {
         int var2 = -121 % ((-63 - param0) / 39);
-        this.paletteRedDelta = -(jg.field_h[GameScreen.selectedThemeId][this.animationFrameIndex] >> 16 & 255) + (255 & jg.field_h[GameScreen.selectedThemeId][(this.animationFrameIndex + 1) % 7] >> 16);
-        this.paletteGreenDelta = -(jg.field_h[GameScreen.selectedThemeId][this.animationFrameIndex] >> 8 & 255) + ((jg.field_h[GameScreen.selectedThemeId][(1 + this.animationFrameIndex) % 7] & 65448) >> 8);
-        this.paletteBlueDelta = -(jg.field_h[GameScreen.selectedThemeId][this.animationFrameIndex] & 255) + (jg.field_h[GameScreen.selectedThemeId][(1 + this.animationFrameIndex) % 7] & 255);
+        this.paletteRedDelta = -(jg.themeCycleColors[GameScreen.selectedThemeId][this.animationFrameIndex] >> 16 & 255) + (255 & jg.themeCycleColors[GameScreen.selectedThemeId][(this.animationFrameIndex + 1) % 7] >> 16);
+        this.paletteGreenDelta = -(jg.themeCycleColors[GameScreen.selectedThemeId][this.animationFrameIndex] >> 8 & 255) + ((jg.themeCycleColors[GameScreen.selectedThemeId][(1 + this.animationFrameIndex) % 7] & 65448) >> 8);
+        this.paletteBlueDelta = -(jg.themeCycleColors[GameScreen.selectedThemeId][this.animationFrameIndex] & 255) + (jg.themeCycleColors[GameScreen.selectedThemeId][(1 + this.animationFrameIndex) % 7] & 255);
     }
 
     final void eraseEntityPixels(int param0) {
@@ -252,31 +252,31 @@ final class GameplayEntity extends DualLinkNode {
           this.drawBoardRotatedEntity(18);
         }
         if (0 == this.entitySpriteKindId) {
-          this.entitySprite = ke.field_a[GameScreen.selectedThemeId][this.entityCategoryKey][this.spriteVariantIndex];
+          this.entitySprite = ke.entitySpritesByThemeCategoryAndVariant[GameScreen.selectedThemeId][this.entityCategoryKey][this.spriteVariantIndex];
         } else {
           if (this.entitySpriteKindId == 4) {
             this.spriteVariantIndex = -1;
-            this.entitySprite = fc.field_g[0];
+            this.entitySprite = fc.blackOrbFrames[0];
             this.entityCategoryKey = -1;
           } else {
             if (this.entitySpriteKindId == 3) {
               this.entityCategoryKey = -1;
               this.spriteVariantIndex = -1;
-              this.entitySprite = hb.field_d[0];
+              this.entitySprite = hb.silverStarFrames[0];
             } else {
               if (1 == this.entitySpriteKindId) {
-                this.entitySprite = s.field_G[GameScreen.selectedThemeId][this.entityCategoryKey];
+                this.entitySprite = s.geometrySpritesByThemeAndCategory[GameScreen.selectedThemeId][this.entityCategoryKey];
                 this.spriteVariantIndex = -1;
-                this.interpolatedPaletteColor = jg.field_h[GameScreen.selectedThemeId][this.animationFrameIndex];
+                this.interpolatedPaletteColor = jg.themeCycleColors[GameScreen.selectedThemeId][this.animationFrameIndex];
                 this.updatePaletteChannelDeltas(53);
               } else {
                 if (2 != this.entitySpriteKindId) {
                   if (8 == this.entitySpriteKindId) {
-                    this.entitySprite = ej.field_a[this.animationFrameIndex];
+                    this.entitySprite = ej.amorphousCrackFrames[this.animationFrameIndex];
                     this.entityCategoryKey = -1;
                   }
                 } else {
-                  this.entitySprite = MenuScreen.field_m[GameScreen.selectedThemeId][this.spriteVariantIndex][this.animationFrameIndex];
+                  this.entitySprite = MenuScreen.amorphousFramesByThemeAndVariant[GameScreen.selectedThemeId][this.spriteVariantIndex][this.animationFrameIndex];
                   this.entityCategoryKey = -1;
                 }
               }
@@ -351,7 +351,7 @@ final class GameplayEntity extends DualLinkNode {
               if (this.entityUpdateTick % 24 == 0) {
                 kind2AnimationFrame = this.animationFrameIndex;
                 this.animationFrameIndex = this.animationFrameIndex + 1;
-                this.entitySprite = MenuScreen.field_m[GameScreen.selectedThemeId][this.spriteVariantIndex][kind2AnimationFrame];
+                this.entitySprite = MenuScreen.amorphousFramesByThemeAndVariant[GameScreen.selectedThemeId][this.spriteVariantIndex][kind2AnimationFrame];
                 this.animationFrameIndex = this.animationFrameIndex % 4;
               }
             } else {
@@ -359,14 +359,14 @@ final class GameplayEntity extends DualLinkNode {
                 if (this.entityUpdateTick % 24 == 0) {
                   kind8AnimationFrame = this.animationFrameIndex;
                   this.animationFrameIndex = this.animationFrameIndex + 1;
-                  this.entitySprite = ej.field_a[kind8AnimationFrame];
+                  this.entitySprite = ej.amorphousCrackFrames[kind8AnimationFrame];
                   this.animationFrameIndex = this.animationFrameIndex % 4;
                 }
               }
             }
           } else {
             paletteBlendFraction = 0.019999999552965164f * (float)(this.entityUpdateTick % 50);
-            this.interpolatedPaletteColor = (int)((float)this.paletteBlueDelta * paletteBlendFraction) + jg.field_h[GameScreen.selectedThemeId][this.animationFrameIndex] + (((int)(paletteBlendFraction * (float)this.paletteRedDelta) << 16) + ((int)((float)this.paletteGreenDelta * paletteBlendFraction) << 8));
+            this.interpolatedPaletteColor = (int)((float)this.paletteBlueDelta * paletteBlendFraction) + jg.themeCycleColors[GameScreen.selectedThemeId][this.animationFrameIndex] + (((int)(paletteBlendFraction * (float)this.paletteRedDelta) << 16) + ((int)((float)this.paletteGreenDelta * paletteBlendFraction) << 8));
             if (this.entityUpdateTick % 50 == 49) {
               this.animationFrameIndex = this.animationFrameIndex + 1;
               this.animationFrameIndex = this.animationFrameIndex % 7;
@@ -377,7 +377,7 @@ final class GameplayEntity extends DualLinkNode {
           if (this.entityUpdateTick % 20 == 0) {
             kind5AnimationFrame = this.animationFrameIndex;
             this.animationFrameIndex = this.animationFrameIndex + 1;
-            this.entitySprite = mi.field_B[kind5AnimationFrame];
+            this.entitySprite = mi.sparkleFrames[kind5AnimationFrame];
             this.animationFrameIndex = this.animationFrameIndex % 4;
           }
         }
@@ -391,7 +391,7 @@ final class GameplayEntity extends DualLinkNode {
                     if (4 > this.animationFrameIndex) {
                       kind6AnimationFrame = this.animationFrameIndex;
                       this.animationFrameIndex = this.animationFrameIndex + 1;
-                      this.entitySprite = vj.field_a[kind6AnimationFrame];
+                      this.entitySprite = vj.bangFrames[kind6AnimationFrame];
                     }
                   }
                 }
@@ -403,7 +403,7 @@ final class GameplayEntity extends DualLinkNode {
                 if ((this.entityUpdateTick & 15) == 0) {
                   kind3AnimationFrame = this.animationFrameIndex;
                   this.animationFrameIndex = this.animationFrameIndex + 1;
-                  this.entitySprite = hb.field_d[kind3AnimationFrame];
+                  this.entitySprite = hb.silverStarFrames[kind3AnimationFrame];
                   if (this.animationFrameIndex == 4) {
                     this.animationFrameIndex = 0;
                   }
@@ -414,7 +414,7 @@ final class GameplayEntity extends DualLinkNode {
             if (this.entityUpdateTick % 20 == 0) {
               kind7AnimationFrame = this.animationFrameIndex;
               this.animationFrameIndex = this.animationFrameIndex + 1;
-              this.entitySprite = hg.field_b[kind7AnimationFrame];
+              this.entitySprite = hg.blackOrbImplosionFrames[kind7AnimationFrame];
               this.animationFrameIndex = this.animationFrameIndex % 4;
             }
           }
@@ -423,7 +423,7 @@ final class GameplayEntity extends DualLinkNode {
             if ((15 & this.entityUpdateTick) == 0) {
               kind4AnimationFrame = this.animationFrameIndex;
               this.animationFrameIndex = this.animationFrameIndex + 1;
-              this.entitySprite = fc.field_g[kind4AnimationFrame];
+              this.entitySprite = fc.blackOrbFrames[kind4AnimationFrame];
               if (this.animationFrameIndex == 4) {
                 this.animationFrameIndex = 0;
               }

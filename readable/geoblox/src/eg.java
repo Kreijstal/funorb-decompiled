@@ -7,7 +7,7 @@ final class eg extends IntrusiveNode {
     int[] field_j;
     int[] field_g;
     int field_m;
-    static Sprite[] field_q;
+    static Sprite[] pointsPanelGlowFrames;
     cb[] field_i;
     static volatile int field_h;
     byte[][][] field_o;
@@ -16,7 +16,7 @@ final class eg extends IntrusiveNode {
     static String field_l;
 
     public static void b(boolean param0) {
-        field_q = null;
+        pointsPanelGlowFrames = null;
         if (param0) {
             field_l = (String) null;
             field_p = null;

@@ -6,7 +6,7 @@ final class g extends TextInputValidator {
     static String createEmailUnavailableAlertText;
     private dj field_k;
     static String serviceUnavailableText;
-    static Sprite field_i;
+    static Sprite countBoxSprite;
     private dj field_n;
 
     g(dj param0, dj param1, dj param2) {
@@ -219,7 +219,7 @@ final class g extends TextInputValidator {
         if (param0 >= -90) {
             return;
         }
-        field_i = null;
+        countBoxSprite = null;
         createEmailUnavailableAlertText = null;
         serviceUnavailableText = null;
     }

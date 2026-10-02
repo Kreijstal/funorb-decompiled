@@ -10,15 +10,15 @@ public final class Geoblox extends wf {
     public static int field_C;
 
     private final void loadSportsTheme(int param0) {
-        if (ll.field_f.a(0)) {
-            if (!(ll.field_f.a("sports", (byte) -126))) {
+        if (ll.gameGraphicsArchive.a(0)) {
+            if (!(ll.gameGraphicsArchive.a("sports", (byte) -126))) {
                 return;
             }
             if (param0 <= 37) {
                 this.initializeScreens(92);
             }
-            hd.field_H = ug.a("sports_foreground", ll.field_f, (byte) -78, "sports");
-            th.field_f = jg.a(ll.field_f, 1, "sports", "sports_background");
+            hd.sportsForegroundSprite = ug.loadSprite("sports_foreground", ll.gameGraphicsArchive, (byte) -78, "sports");
+            th.sportsBackgroundSprite = jg.loadIndexedSprite(ll.gameGraphicsArchive, 1, "sports", "sports_background");
             ll.themesLoaded[5] = true;
             return;
         }
@@ -38,25 +38,25 @@ public final class Geoblox extends wf {
         pc.a((byte) 124);
     }
 
-    private final boolean prepareGameAssets(int param0) {
-        int var2 = 0;
-        int[] array$0 = null;
-        Sprite[] var12 = null;
-        Sprite[] var3 = null;
-        int var4 = 0;
-        int var8_int = 0;
-        Sprite[] var5 = null;
-        Sprite[] var6 = null;
-        IndexedSprite[] var7 = null;
-        int[] var14 = null;
-        int[] var13 = null;
-        int[] var8 = null;
-        int var11 = 0;
-        int var5_int = 0;
-        int var6_int = 0;
-        int var7_int = 0;
-        int var9 = 0;
-        int var10 = field_C;
+    private final boolean prepareGameAssets(int methodGuard) {
+        int uiPaletteSize = 0;
+        int[] alternateUiPalette = null;
+        Sprite[] geometrySourceFrames = null;
+        Sprite[] geometryAliasThenAmorphousFrames = null;
+        int themeIndex = 0;
+        int geometryFrameHeight = 0;
+        Sprite[] avatarEyeSourceFrames = null;
+        Sprite[] avatarMouthSourceFrames = null;
+        IndexedSprite[] keyboardIconSprites = null;
+        int[] keyboardIconAdvanceWidths = null;
+        int[] keyboardWidthAlias = null;
+        int[] keyboardWidthsForFill = null;
+        int keyboardIconIndex = 0;
+        int geometryFrameThenVariantIndex = 0;
+        int categoryThenAnimationFrameIndex = 0;
+        int geometryWidthThenFrameIndex = 0;
+        int paletteVariantThenKeyboardIndex = 0;
+        int clientFlagSnapshot = field_C;
         oj.a(vc.field_i, (byte) -104);
         if (null != wj.field_F && null != fe.field_a && ah.field_c != null && null != cd.field_m) {
             lc.a(ca.unpackingMusicText, -2, 60.0f);
@@ -69,170 +69,170 @@ public final class Geoblox extends wf {
             ih.b(127);
             return false;
         }
-        if (null != ll.field_f && null != ii.field_k && ki.field_b != null) {
-            lc.a(oh.unpackingGraphicsText, param0 - 25871, 80.0f);
+        if (null != ll.gameGraphicsArchive && null != ii.fontMetricsArchive && ki.basicUiGraphicsArchive != null) {
+            lc.a(oh.unpackingGraphicsText, methodGuard - 25871, 80.0f);
             this.renderFrame(25853);
-            dd.field_G = w.a("", ll.field_f, ii.field_k, true, "font");
-            wf.field_p = dd.field_G.e(1);
-            dd.field_G.field_K[0][wf.field_p] = 16689938;
-            dd.field_G.field_K[0][dd.field_G.e(16777215)] = 1;
-            var2 = dd.field_G.field_K[0].length;
-            array$0 = new int[var2];
-            dd.field_G.field_K[1] = array$0;
-            sf.a(dd.field_G.field_K[0], 0, dd.field_G.field_K[1], 0, var2);
-            dd.field_G.field_K[1][wf.field_p] = 16777215;
-            var12 = wj.a("geoms", "", ll.field_f, 0);
-            var3 = var12;
-            var4 = -1;
-            for (var5_int = 0; var12.length > var5_int; var5_int++) {
-                var6_int = var5_int % 7;
-                if (!(var6_int != 0)) {
-                    var4++;
-                    if (var4 >= 7) {
+            dd.uiPaletteFont = w.loadPaletteFont("", ll.gameGraphicsArchive, ii.fontMetricsArchive, true, "font");
+            wf.field_p = dd.uiPaletteFont.e(1);
+            dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
+            dd.uiPaletteFont.colorPalettes[0][dd.uiPaletteFont.e(16777215)] = 1;
+            uiPaletteSize = dd.uiPaletteFont.colorPalettes[0].length;
+            alternateUiPalette = new int[uiPaletteSize];
+            dd.uiPaletteFont.colorPalettes[1] = alternateUiPalette;
+            sf.a(dd.uiPaletteFont.colorPalettes[0], 0, dd.uiPaletteFont.colorPalettes[1], 0, uiPaletteSize);
+            dd.uiPaletteFont.colorPalettes[1][wf.field_p] = 16777215;
+            geometrySourceFrames = wj.loadSpriteFrames("geoms", "", ll.gameGraphicsArchive, 0);
+            geometryAliasThenAmorphousFrames = geometrySourceFrames;
+            themeIndex = -1;
+            for (geometryFrameThenVariantIndex = 0; geometrySourceFrames.length > geometryFrameThenVariantIndex; geometryFrameThenVariantIndex++) {
+                categoryThenAnimationFrameIndex = geometryFrameThenVariantIndex % 7;
+                if (!(categoryThenAnimationFrameIndex != 0)) {
+                    themeIndex++;
+                    if (themeIndex >= 7) {
                         break;
                     }
                 }
-                var7_int = var12[var5_int].field_s;
-                var8_int = var12[var5_int].field_o;
-                s.field_G[var4][var6_int] = var12[var5_int];
-                for (var9 = 0; var9 < 7; var9++) {
-                    ke.field_a[var4][var6_int][var9] = new Sprite(var7_int, var8_int);
-                    ke.field_a[var4][var6_int][var9].e();
-                    var12[var5_int].b(0, 0, jg.field_f[var4][var9]);
+                geometryWidthThenFrameIndex = geometrySourceFrames[geometryFrameThenVariantIndex].field_s;
+                geometryFrameHeight = geometrySourceFrames[geometryFrameThenVariantIndex].field_o;
+                s.geometrySpritesByThemeAndCategory[themeIndex][categoryThenAnimationFrameIndex] = geometrySourceFrames[geometryFrameThenVariantIndex];
+                for (paletteVariantThenKeyboardIndex = 0; paletteVariantThenKeyboardIndex < 7; paletteVariantThenKeyboardIndex++) {
+                    ke.entitySpritesByThemeCategoryAndVariant[themeIndex][categoryThenAnimationFrameIndex][paletteVariantThenKeyboardIndex] = new Sprite(geometryWidthThenFrameIndex, geometryFrameHeight);
+                    ke.entitySpritesByThemeCategoryAndVariant[themeIndex][categoryThenAnimationFrameIndex][paletteVariantThenKeyboardIndex].e();
+                    geometrySourceFrames[geometryFrameThenVariantIndex].b(0, 0, jg.themeSpriteColors[themeIndex][paletteVariantThenKeyboardIndex]);
                 }
             }
-            var3 = wj.a("amorphic", "", ll.field_f, param0 ^ 25869);
-            for (var4 = 0; var4 < 7; var4++) {
-                for (var5_int = 0; var5_int < 7; var5_int++) {
-                    for (var6_int = 0; var6_int < var3.length; var6_int++) {
-                        MenuScreen.field_m[var4][var5_int][var6_int] = new Sprite(4 + var3[var6_int].field_s, 4 + var3[var6_int].field_o);
-                        MenuScreen.field_m[var4][var5_int][var6_int].e();
-                        var3[var6_int].b(2, 2, jg.field_f[var4][var5_int]);
-                        k.a(0, 0, MenuScreen.field_m[var4][var5_int][var6_int].field_s, param0 ^ -3266, MenuScreen.field_m[var4][var5_int][var6_int].field_o);
+            geometryAliasThenAmorphousFrames = wj.loadSpriteFrames("amorphic", "", ll.gameGraphicsArchive, methodGuard ^ 25869);
+            for (themeIndex = 0; themeIndex < 7; themeIndex++) {
+                for (geometryFrameThenVariantIndex = 0; geometryFrameThenVariantIndex < 7; geometryFrameThenVariantIndex++) {
+                    for (categoryThenAnimationFrameIndex = 0; categoryThenAnimationFrameIndex < geometryAliasThenAmorphousFrames.length; categoryThenAnimationFrameIndex++) {
+                        MenuScreen.amorphousFramesByThemeAndVariant[themeIndex][geometryFrameThenVariantIndex][categoryThenAnimationFrameIndex] = new Sprite(4 + geometryAliasThenAmorphousFrames[categoryThenAnimationFrameIndex].field_s, 4 + geometryAliasThenAmorphousFrames[categoryThenAnimationFrameIndex].field_o);
+                        MenuScreen.amorphousFramesByThemeAndVariant[themeIndex][geometryFrameThenVariantIndex][categoryThenAnimationFrameIndex].e();
+                        geometryAliasThenAmorphousFrames[categoryThenAnimationFrameIndex].b(2, 2, jg.themeSpriteColors[themeIndex][geometryFrameThenVariantIndex]);
+                        k.a(0, 0, MenuScreen.amorphousFramesByThemeAndVariant[themeIndex][geometryFrameThenVariantIndex][categoryThenAnimationFrameIndex].field_s, methodGuard ^ -3266, MenuScreen.amorphousFramesByThemeAndVariant[themeIndex][geometryFrameThenVariantIndex][categoryThenAnimationFrameIndex].field_o);
                     }
                 }
             }
             sh.field_y.a(255);
-            fi.field_d = gi.a(ii.field_k, 1, ll.field_f, "small_font", "");
-            fc.field_g = wj.a("black", "", ll.field_f, 0);
-            hg.field_b = wj.a("black_implode", "", ll.field_f, 0);
-            hb.field_d = wj.a("silver", "", ll.field_f, 0);
-            ej.field_a = wj.a("amorph_crack", "", ll.field_f, 0);
-            i.avatarMaskRaster = ug.a("player_back", ll.field_f, (byte) -78, "");
-            var5 = wj.a("player_eyes", "", ll.field_f, 0);
+            fi.smallFont = gi.loadBitmapFont(ii.fontMetricsArchive, 1, ll.gameGraphicsArchive, "small_font", "");
+            fc.blackOrbFrames = wj.loadSpriteFrames("black", "", ll.gameGraphicsArchive, 0);
+            hg.blackOrbImplosionFrames = wj.loadSpriteFrames("black_implode", "", ll.gameGraphicsArchive, 0);
+            hb.silverStarFrames = wj.loadSpriteFrames("silver", "", ll.gameGraphicsArchive, 0);
+            ej.amorphousCrackFrames = wj.loadSpriteFrames("amorph_crack", "", ll.gameGraphicsArchive, 0);
+            i.avatarMaskRaster = ug.loadSprite("player_back", ll.gameGraphicsArchive, (byte) -78, "");
+            avatarEyeSourceFrames = wj.loadSpriteFrames("player_eyes", "", ll.gameGraphicsArchive, 0);
             if (da.a(0, 125)) {
-                var5 = wj.a("player_eyes", "halloween", ll.field_f, 0);
+                avatarEyeSourceFrames = wj.loadSpriteFrames("player_eyes", "halloween", ll.gameGraphicsArchive, 0);
             }
-            fc.field_b = new Sprite[var5.length];
-            for (var6_int = 0; var5.length > var6_int; var6_int++) {
-                fc.field_b[var6_int] = new Sprite(4 + var5[var6_int].field_s, var5[var6_int].field_o + 4);
-                fc.field_b[var6_int].e();
-                var5[var6_int].c(2, 2);
-                k.a(0, 0, fc.field_b[var6_int].field_s, -27085, fc.field_b[var6_int].height);
-                fc.field_b[var6_int].d();
+            fc.avatarEyeFrames = new Sprite[avatarEyeSourceFrames.length];
+            for (categoryThenAnimationFrameIndex = 0; avatarEyeSourceFrames.length > categoryThenAnimationFrameIndex; categoryThenAnimationFrameIndex++) {
+                fc.avatarEyeFrames[categoryThenAnimationFrameIndex] = new Sprite(4 + avatarEyeSourceFrames[categoryThenAnimationFrameIndex].field_s, avatarEyeSourceFrames[categoryThenAnimationFrameIndex].field_o + 4);
+                fc.avatarEyeFrames[categoryThenAnimationFrameIndex].e();
+                avatarEyeSourceFrames[categoryThenAnimationFrameIndex].c(2, 2);
+                k.a(0, 0, fc.avatarEyeFrames[categoryThenAnimationFrameIndex].field_s, -27085, fc.avatarEyeFrames[categoryThenAnimationFrameIndex].height);
+                fc.avatarEyeFrames[categoryThenAnimationFrameIndex].d();
             }
-            var6 = wj.a("player_mouth", "", ll.field_f, 0);
-            if (da.a(0, param0 - 25774)) {
-                var6 = wj.a("player_mouth", "halloween", ll.field_f, 0);
+            avatarMouthSourceFrames = wj.loadSpriteFrames("player_mouth", "", ll.gameGraphicsArchive, 0);
+            if (da.a(0, methodGuard - 25774)) {
+                avatarMouthSourceFrames = wj.loadSpriteFrames("player_mouth", "halloween", ll.gameGraphicsArchive, 0);
             }
-            vh.field_H = new Sprite[var6.length];
-            for (var7_int = 0; var6.length > var7_int; var7_int++) {
-                vh.field_H[var7_int] = new Sprite(var6[var7_int].field_s + 4, var6[var7_int].field_o + 4);
-                vh.field_H[var7_int].e();
-                var6[var7_int].c(2, 2);
-                k.a(2 + var6[var7_int].trimY, 0, vh.field_H[var7_int].field_s, -27085, var6[var7_int].height);
-                vh.field_H[var7_int].d();
+            vh.avatarMouthFrames = new Sprite[avatarMouthSourceFrames.length];
+            for (geometryWidthThenFrameIndex = 0; avatarMouthSourceFrames.length > geometryWidthThenFrameIndex; geometryWidthThenFrameIndex++) {
+                vh.avatarMouthFrames[geometryWidthThenFrameIndex] = new Sprite(avatarMouthSourceFrames[geometryWidthThenFrameIndex].field_s + 4, avatarMouthSourceFrames[geometryWidthThenFrameIndex].field_o + 4);
+                vh.avatarMouthFrames[geometryWidthThenFrameIndex].e();
+                avatarMouthSourceFrames[geometryWidthThenFrameIndex].c(2, 2);
+                k.a(2 + avatarMouthSourceFrames[geometryWidthThenFrameIndex].trimY, 0, vh.avatarMouthFrames[geometryWidthThenFrameIndex].field_s, -27085, avatarMouthSourceFrames[geometryWidthThenFrameIndex].height);
+                vh.avatarMouthFrames[geometryWidthThenFrameIndex].d();
             }
             sh.field_y.a(255);
-            fe.field_j = jg.a(ll.field_f, 1, "sun", "sky_background");
-            ne.field_b = ug.a("sky_foreground", ll.field_f, (byte) -78, "sun");
+            fe.sunBackgroundSprite = jg.loadIndexedSprite(ll.gameGraphicsArchive, 1, "sun", "sky_background");
+            ne.sunForegroundSprite = ug.loadSprite("sky_foreground", ll.gameGraphicsArchive, (byte) -78, "sun");
             ll.themesLoaded[1] = true;
-            ee.field_A = ug.a("menu_background", ll.field_f, (byte) -78, "");
-            vc.field_j = ug.a("menu_foreground", ll.field_f, (byte) -78, "");
-            qj.transitionCurtain = ug.a("transition", ll.field_f, (byte) -78, "");
-            vg.field_f = wj.a("silver_shock", "", ll.field_f, 0);
-            mi.field_B = wj.a("sparkle", "", ll.field_f, 0);
-            for (var7_int = 0; mi.field_B.length > var7_int; var7_int++) {
-                mi.field_B[var7_int].g(1);
+            ee.menuBackgroundSprite = ug.loadSprite("menu_background", ll.gameGraphicsArchive, (byte) -78, "");
+            vc.menuForegroundSprite = ug.loadSprite("menu_foreground", ll.gameGraphicsArchive, (byte) -78, "");
+            qj.transitionCurtain = ug.loadSprite("transition", ll.gameGraphicsArchive, (byte) -78, "");
+            vg.silverStarShockFrames = wj.loadSpriteFrames("silver_shock", "", ll.gameGraphicsArchive, 0);
+            mi.sparkleFrames = wj.loadSpriteFrames("sparkle", "", ll.gameGraphicsArchive, 0);
+            for (geometryWidthThenFrameIndex = 0; mi.sparkleFrames.length > geometryWidthThenFrameIndex; geometryWidthThenFrameIndex++) {
+                mi.sparkleFrames[geometryWidthThenFrameIndex].g(1);
             }
-            vj.field_a = wj.a("bang", "", ll.field_f, 0);
-            eg.field_q = wj.a("bonus_glow", "", ll.field_f, 0);
-            pk.field_k = ug.a("bubble", ll.field_f, (byte) -78, "");
-            k.field_a = ug.a("pop", ll.field_f, (byte) -78, "");
-            eb.field_g = wj.a("box_mouse", "", ll.field_f, 0);
-            vf.field_H = wj.a("cry_begin", "", ll.field_f, 0);
-            ok.field_a = wj.a("cry_middle", "", ll.field_f, 0);
-            ld.field_b = wj.a("cry_end", "", ll.field_f, 0);
+            vj.bangFrames = wj.loadSpriteFrames("bang", "", ll.gameGraphicsArchive, 0);
+            eg.pointsPanelGlowFrames = wj.loadSpriteFrames("bonus_glow", "", ll.gameGraphicsArchive, 0);
+            pk.resultBubbleSprite = ug.loadSprite("bubble", ll.gameGraphicsArchive, (byte) -78, "");
+            k.popSprite = ug.loadSprite("pop", ll.gameGraphicsArchive, (byte) -78, "");
+            eb.mouseBoxFrames = wj.loadSpriteFrames("box_mouse", "", ll.gameGraphicsArchive, 0);
+            vf.avatarCryBeginFrames = wj.loadSpriteFrames("cry_begin", "", ll.gameGraphicsArchive, 0);
+            ok.avatarCryMiddleFrames = wj.loadSpriteFrames("cry_middle", "", ll.gameGraphicsArchive, 0);
+            ld.avatarCryEndFrames = wj.loadSpriteFrames("cry_end", "", ll.gameGraphicsArchive, 0);
             if (!(!da.a(0, 110))) {
-                vf.field_H = wj.a("cry_begin", "halloween", ll.field_f, 0);
-                ok.field_a = wj.a("cry_middle", "halloween", ll.field_f, 0);
-                ld.field_b = wj.a("cry_end", "halloween", ll.field_f, 0);
+                vf.avatarCryBeginFrames = wj.loadSpriteFrames("cry_begin", "halloween", ll.gameGraphicsArchive, 0);
+                ok.avatarCryMiddleFrames = wj.loadSpriteFrames("cry_middle", "halloween", ll.gameGraphicsArchive, 0);
+                ld.avatarCryEndFrames = wj.loadSpriteFrames("cry_end", "halloween", ll.gameGraphicsArchive, 0);
             }
-            var7 = new IndexedSprite[8];
-            var7[0] = jg.a(ll.field_f, 1, "", "keyboard_left");
-            var7[1] = jg.a(ll.field_f, 1, "", "keyboard_right");
-            var7[2] = jg.a(ll.field_f, 1, "", "keyboard_enter");
-            var7[3] = jg.a(ll.field_f, 1, "", "keyboard_space");
-            var7[4] = jg.a(ll.field_f, h.a(param0, 25868), "", "keyboard_esc");
-            var7[5] = jg.a(ll.field_f, 1, "", "keyboard_backspace");
-            var7[6] = jg.a(ll.field_f, 1, "", "keyboard_down");
-            var7[7] = jg.a(ll.field_f, 1, "", "keyboard_i");
-            var14 = new int[var7.length];
-            var13 = var14;
-            var8 = var13;
-            var11 = 0;
-            var9 = var11;
-            while (var11 < var14.length) {
-                var8[var11] = var7[var11].field_c - 3;
-                var11++;
+            keyboardIconSprites = new IndexedSprite[8];
+            keyboardIconSprites[0] = jg.loadIndexedSprite(ll.gameGraphicsArchive, 1, "", "keyboard_left");
+            keyboardIconSprites[1] = jg.loadIndexedSprite(ll.gameGraphicsArchive, 1, "", "keyboard_right");
+            keyboardIconSprites[2] = jg.loadIndexedSprite(ll.gameGraphicsArchive, 1, "", "keyboard_enter");
+            keyboardIconSprites[3] = jg.loadIndexedSprite(ll.gameGraphicsArchive, 1, "", "keyboard_space");
+            keyboardIconSprites[4] = jg.loadIndexedSprite(ll.gameGraphicsArchive, h.a(methodGuard, 25868), "", "keyboard_esc");
+            keyboardIconSprites[5] = jg.loadIndexedSprite(ll.gameGraphicsArchive, 1, "", "keyboard_backspace");
+            keyboardIconSprites[6] = jg.loadIndexedSprite(ll.gameGraphicsArchive, 1, "", "keyboard_down");
+            keyboardIconSprites[7] = jg.loadIndexedSprite(ll.gameGraphicsArchive, 1, "", "keyboard_i");
+            keyboardIconAdvanceWidths = new int[keyboardIconSprites.length];
+            keyboardWidthAlias = keyboardIconAdvanceWidths;
+            keyboardWidthsForFill = keyboardWidthAlias;
+            keyboardIconIndex = 0;
+            paletteVariantThenKeyboardIndex = keyboardIconIndex;
+            while (keyboardIconIndex < keyboardIconAdvanceWidths.length) {
+                keyboardWidthsForFill[keyboardIconIndex] = keyboardIconSprites[keyboardIconIndex].field_c - 3;
+                keyboardIconIndex++;
             }
-            fi.field_d.a(var7, var14);
+            fi.smallFont.a(keyboardIconSprites, keyboardIconAdvanceWidths);
             sh.field_y.a(255);
-            kh.field_h[0] = ug.a("main_title", ll.field_f, (byte) -78, "");
-            kh.field_h[2] = ug.a("bestscoreseach_title", ll.field_f, (byte) -78, "");
-            kh.field_h[3] = ug.a("myscores_title", ll.field_f, (byte) -78, "");
-            kh.field_h[1] = ug.a("allscores_title", ll.field_f, (byte) -78, "");
-            kh.field_h[6] = ug.a("gameover_title", ll.field_f, (byte) -78, "");
-            kh.field_h[4] = ug.a("achievements_title", ll.field_f, (byte) -78, "");
-            kh.field_h[5] = ug.a("instructions_title", ll.field_f, (byte) -78, "");
-            kh.field_h[7] = ug.a("achievements_tg_title", ll.field_f, (byte) -78, "");
-            kh.field_h[8] = ug.a("login_title", ll.field_f, (byte) -78, "");
-            ll.field_h = new Sprite[9];
-            ll.field_h[0] = ug.a("frame_topleft", ll.field_f, (byte) -78, "");
-            ll.field_h[1] = ug.a("frame_top", ll.field_f, (byte) -78, "");
-            ll.field_h[2] = ug.a("frame_topright", ll.field_f, (byte) -78, "");
-            ll.field_h[3] = ug.a("frame_left", ll.field_f, (byte) -78, "");
-            ll.field_h[4] = ug.a("frame_centre", ll.field_f, (byte) -78, "");
-            ll.field_h[5] = ug.a("frame_right", ll.field_f, (byte) -78, "");
-            ll.field_h[6] = ug.a("frame_bottomleft", ll.field_f, (byte) -78, "");
-            ll.field_h[7] = ug.a("frame_bottom", ll.field_f, (byte) -78, "");
-            ll.field_h[8] = ug.a("frame_bottomright", ll.field_f, (byte) -78, "");
-            re.field_h = ug.a("widget", ll.field_f, (byte) -78, "");
-            sd.field_y = ug.a("bar", ll.field_f, (byte) -78, "");
-            lj.field_d = ug.a("box_sml", ll.field_f, (byte) -78, "");
-            g.field_i = ug.a("box_count", ll.field_f, (byte) -78, "");
-            vh.field_G = ug.a("box_lgr", ll.field_f, (byte) -78, "");
-            tl.field_r = wj.a("intro_faces", "", ll.field_f, 0);
+            kh.screenTitleSprites[0] = ug.loadSprite("main_title", ll.gameGraphicsArchive, (byte) -78, "");
+            kh.screenTitleSprites[2] = ug.loadSprite("bestscoreseach_title", ll.gameGraphicsArchive, (byte) -78, "");
+            kh.screenTitleSprites[3] = ug.loadSprite("myscores_title", ll.gameGraphicsArchive, (byte) -78, "");
+            kh.screenTitleSprites[1] = ug.loadSprite("allscores_title", ll.gameGraphicsArchive, (byte) -78, "");
+            kh.screenTitleSprites[6] = ug.loadSprite("gameover_title", ll.gameGraphicsArchive, (byte) -78, "");
+            kh.screenTitleSprites[4] = ug.loadSprite("achievements_title", ll.gameGraphicsArchive, (byte) -78, "");
+            kh.screenTitleSprites[5] = ug.loadSprite("instructions_title", ll.gameGraphicsArchive, (byte) -78, "");
+            kh.screenTitleSprites[7] = ug.loadSprite("achievements_tg_title", ll.gameGraphicsArchive, (byte) -78, "");
+            kh.screenTitleSprites[8] = ug.loadSprite("login_title", ll.gameGraphicsArchive, (byte) -78, "");
+            ll.frameNineSliceSprites = new Sprite[9];
+            ll.frameNineSliceSprites[0] = ug.loadSprite("frame_topleft", ll.gameGraphicsArchive, (byte) -78, "");
+            ll.frameNineSliceSprites[1] = ug.loadSprite("frame_top", ll.gameGraphicsArchive, (byte) -78, "");
+            ll.frameNineSliceSprites[2] = ug.loadSprite("frame_topright", ll.gameGraphicsArchive, (byte) -78, "");
+            ll.frameNineSliceSprites[3] = ug.loadSprite("frame_left", ll.gameGraphicsArchive, (byte) -78, "");
+            ll.frameNineSliceSprites[4] = ug.loadSprite("frame_centre", ll.gameGraphicsArchive, (byte) -78, "");
+            ll.frameNineSliceSprites[5] = ug.loadSprite("frame_right", ll.gameGraphicsArchive, (byte) -78, "");
+            ll.frameNineSliceSprites[6] = ug.loadSprite("frame_bottomleft", ll.gameGraphicsArchive, (byte) -78, "");
+            ll.frameNineSliceSprites[7] = ug.loadSprite("frame_bottom", ll.gameGraphicsArchive, (byte) -78, "");
+            ll.frameNineSliceSprites[8] = ug.loadSprite("frame_bottomright", ll.gameGraphicsArchive, (byte) -78, "");
+            re.widgetSprite = ug.loadSprite("widget", ll.gameGraphicsArchive, (byte) -78, "");
+            sd.barSprite = ug.loadSprite("bar", ll.gameGraphicsArchive, (byte) -78, "");
+            lj.smallBoxSprite = ug.loadSprite("box_sml", ll.gameGraphicsArchive, (byte) -78, "");
+            g.countBoxSprite = ug.loadSprite("box_count", ll.gameGraphicsArchive, (byte) -78, "");
+            vh.largeBoxSprite = ug.loadSprite("box_lgr", ll.gameGraphicsArchive, (byte) -78, "");
+            tl.introFaceFrames = wj.loadSpriteFrames("intro_faces", "", ll.gameGraphicsArchive, 0);
             if (da.a(0, -105)) {
-                tl.field_r = wj.a("intro_faces", "halloween", ll.field_f, 0);
+                tl.introFaceFrames = wj.loadSpriteFrames("intro_faces", "halloween", ll.gameGraphicsArchive, 0);
             }
-            qh.field_O = wj.a("intro_geoms", "", ll.field_f, 0);
-            sl.field_f = wj.a("achievements", "", ll.field_f, 0);
-            am.field_b = ug.a("unachieved", ki.field_b, (byte) -78, "basic");
-            ug.a("locked", ki.field_b, (byte) -78, "basic");
-            uk.field_m = ug.a("orbcoin", ki.field_b, (byte) -78, "basic");
+            qh.introGeometryFrames = wj.loadSpriteFrames("intro_geoms", "", ll.gameGraphicsArchive, 0);
+            sl.achievementSprites = wj.loadSpriteFrames("achievements", "", ll.gameGraphicsArchive, 0);
+            am.unachievedSprite = ug.loadSprite("unachieved", ki.basicUiGraphicsArchive, (byte) -78, "basic");
+            ug.loadSprite("locked", ki.basicUiGraphicsArchive, (byte) -78, "basic");
+            uk.orbCoinSprite = ug.loadSprite("orbcoin", ki.basicUiGraphicsArchive, (byte) -78, "basic");
             GameScreen.selectedThemeId = 1;
-            cd.a((byte) 79);
+            cd.selectThemeRenderAssets((byte) 79);
             ih.b(-62);
-            ii.field_k = null;
-            ki.field_b = null;
+            ii.fontMetricsArchive = null;
+            ki.basicUiGraphicsArchive = null;
             return false;
         }
-        if (param0 != 25869) {
+        if (methodGuard != 25869) {
             reconnectMessages = (String[]) null;
         }
         lc.a(uj.field_a, -2, 100.0f);
-        this.renderFrame(param0 ^ 496);
+        this.renderFrame(methodGuard ^ 496);
         qg.b(9313);
         return true;
     }
@@ -280,25 +280,25 @@ public final class Geoblox extends wf {
                   if (fe.field_a.b(true)) {
                     if (cd.field_m.a(0)) {
                       if (cd.field_m.b(true)) {
-                        if (ii.field_k.a(0)) {
-                          if (ii.field_k.b(true)) {
-                            if (ll.field_f.a(0)) {
-                              if (ll.field_f.a("", (byte) -127)) {
-                                if (ll.field_f.a(0)) {
-                                  if (ll.field_f.a("sun", (byte) -127)) {
+                        if (ii.fontMetricsArchive.a(0)) {
+                          if (ii.fontMetricsArchive.b(true)) {
+                            if (ll.gameGraphicsArchive.a(0)) {
+                              if (ll.gameGraphicsArchive.a("", (byte) -127)) {
+                                if (ll.gameGraphicsArchive.a(0)) {
+                                  if (ll.gameGraphicsArchive.a("sun", (byte) -127)) {
                                     L8: {
                                       if (da.a(0, -112)) {
-                                        if (ll.field_f.a(0)) {
-                                          if (ll.field_f.a("halloween", (byte) -127)) {
+                                        if (ll.gameGraphicsArchive.a(0)) {
+                                          if (ll.gameGraphicsArchive.a("halloween", (byte) -127)) {
                                             break L8;
                                           }
                                         }
-                                        lc.a(gf.a(s.field_F, ll.field_f, "halloween", uj.field_c, true), -2, 45.0f);
+                                        lc.a(gf.a(s.field_F, ll.gameGraphicsArchive, "halloween", uj.field_c, true), -2, 45.0f);
                                         return false;
                                       }
                                     }
-                                    if (ki.field_b.a(0)) {
-                                      if (ki.field_b.a("basic", (byte) -124)) {
+                                    if (ki.basicUiGraphicsArchive.a(0)) {
+                                      if (ki.basicUiGraphicsArchive.a("basic", (byte) -124)) {
                                         if (param0) {
                                           return true;
                                         }
@@ -311,7 +311,7 @@ public final class Geoblox extends wf {
                                     }
                                     stackIn_47_0 = ff.waitingForGraphicsText;
 
-                                    stackIn_47_1 = ki.field_b;
+                                    stackIn_47_1 = ki.basicUiGraphicsArchive;
 
                                     stackIn_47_2 = "basic";
 
@@ -334,17 +334,17 @@ public final class Geoblox extends wf {
                                     return false;
                                   }
                                 }
-                                lc.a(gf.a(ff.waitingForGraphicsText, ll.field_f, "sun", AccountWelcomePanel.loadingGraphicsText, true), -2, 45.0f);
+                                lc.a(gf.a(ff.waitingForGraphicsText, ll.gameGraphicsArchive, "sun", AccountWelcomePanel.loadingGraphicsText, true), -2, 45.0f);
                                 return false;
                               }
                             }
-                            lc.a(gf.a(ff.waitingForGraphicsText, ll.field_f, "", AccountWelcomePanel.loadingGraphicsText, true), -2, 45.0f);
+                            lc.a(gf.a(ff.waitingForGraphicsText, ll.gameGraphicsArchive, "", AccountWelcomePanel.loadingGraphicsText, true), -2, 45.0f);
                             return false;
                           }
                         }
                         stackIn_27_0 = ik.waitingForFontsText;
 
-                        stackIn_27_1 = ii.field_k;
+                        stackIn_27_1 = ii.fontMetricsArchive;
 
                         stackIn_27_2 = "";
 
@@ -620,12 +620,12 @@ public final class Geoblox extends wf {
     }
 
     private final void loadGermsTheme(byte param0) {
-        if (ll.field_f.a(0)) {
-            if (!(ll.field_f.a("germs", (byte) -126))) {
+        if (ll.gameGraphicsArchive.a(0)) {
+            if (!(ll.gameGraphicsArchive.a("germs", (byte) -126))) {
                 return;
             }
-            sl.field_c = ug.a("germs_foreground", ll.field_f, (byte) -78, "germs");
-            sg.field_e = jg.a(ll.field_f, 1, "germs", "germs_background");
+            sl.germsForegroundSprite = ug.loadSprite("germs_foreground", ll.gameGraphicsArchive, (byte) -78, "germs");
+            sg.germsBackgroundSprite = jg.loadIndexedSprite(ll.gameGraphicsArchive, 1, "germs", "germs_background");
             int var2 = -24 / ((param0 + 13) / 61);
             ll.themesLoaded[3] = true;
             return;
@@ -878,7 +878,7 @@ public final class Geoblox extends wf {
               if (var2 != 2) {
                 break L5;
               }
-              oh.a(320, 240, fi.field_d, fi.field_d.field_o * 3 >> 1, -128, fi.field_d.field_o);
+              oh.a(320, 240, fi.smallFont, fi.smallFont.field_o * 3 >> 1, -128, fi.smallFont.field_o);
             }
           } else {
             if (kg.field_o) {
@@ -988,42 +988,42 @@ public final class Geoblox extends wf {
     }
 
     private final void loadJewelsTheme(boolean param0) {
-        if (ll.field_f.a(0)) {
-            if (!(ll.field_f.a("jewels", (byte) -128))) {
+        if (ll.gameGraphicsArchive.a(0)) {
+            if (!(ll.gameGraphicsArchive.a("jewels", (byte) -128))) {
                 return;
             }
             if (param0) {
                 return;
             }
-            kj.field_E = ug.a("jewls_foreground", ll.field_f, (byte) -78, "jewels");
-            bj.field_r = jg.a(ll.field_f, 1, "jewels", "jewls_background");
+            kj.jewelsForegroundSprite = ug.loadSprite("jewls_foreground", ll.gameGraphicsArchive, (byte) -78, "jewels");
+            bj.jewelsBackgroundSprite = jg.loadIndexedSprite(ll.gameGraphicsArchive, 1, "jewels", "jewls_background");
             ll.themesLoaded[0] = true;
             return;
         }
     }
 
     private final void loadBakingTheme(int param0) {
-        if (ll.field_f.a(param0 - 2)) {
-            if (!(ll.field_f.a("baking", (byte) -125))) {
+        if (ll.gameGraphicsArchive.a(param0 - 2)) {
+            if (!(ll.gameGraphicsArchive.a("baking", (byte) -125))) {
                 return;
             }
-            hi.field_F = ug.a("baking_foreground", ll.field_f, (byte) -78, "baking");
+            hi.bakingForegroundSprite = ug.loadSprite("baking_foreground", ll.gameGraphicsArchive, (byte) -78, "baking");
             if (param0 != 2) {
                 return;
             }
-            ca.field_g = jg.a(ll.field_f, param0 - 1, "baking", "baking_background");
+            ca.bakingBackgroundSprite = jg.loadIndexedSprite(ll.gameGraphicsArchive, param0 - 1, "baking", "baking_background");
             ll.themesLoaded[4] = true;
             return;
         }
     }
 
     private final void loadSpaceTheme(boolean param0) {
-        if (ll.field_f.a(0)) {
-            if (!ll.field_f.a("space", (byte) -127)) {
+        if (ll.gameGraphicsArchive.a(0)) {
+            if (!ll.gameGraphicsArchive.a("space", (byte) -127)) {
                 return;
             }
-            fl.field_a = ug.a("space_foreground", ll.field_f, (byte) -78, "space");
-            df.field_a = jg.a(ll.field_f, 1, "space", "space_background");
+            fl.spaceForegroundSprite = ug.loadSprite("space_foreground", ll.gameGraphicsArchive, (byte) -78, "space");
+            df.spaceBackgroundSprite = jg.loadIndexedSprite(ll.gameGraphicsArchive, 1, "space", "space_background");
             if (param0) {
                 return;
             }
@@ -1038,13 +1038,13 @@ public final class Geoblox extends wf {
             ak.field_b = null;
             ih.b(-105);
         }
-        ll.field_f = je.a(1, true, param0, true, (byte) -111);
+        ll.gameGraphicsArchive = je.a(1, true, param0, true, (byte) -111);
         wj.field_F = kk.a(2, (byte) -62);
         ah.field_c = kk.a(3, (byte) -62);
         cd.field_m = kk.a(4, (byte) -62);
         fe.field_a = kk.a(5, (byte) -62);
-        ii.field_k = kk.a(6, (byte) -62);
-        qe.a(ki.field_b, re.field_i, -84);
+        ii.fontMetricsArchive = kk.a(6, (byte) -62);
+        qe.a(ki.basicUiGraphicsArchive, re.field_i, -84);
     }
 
     final static void a(byte param0, int param1) {
@@ -1147,15 +1147,15 @@ public final class Geoblox extends wf {
     }
 
     private final void loadSweetsTheme(int param0) {
-        if (ll.field_f.a(0)) {
-            if (!(ll.field_f.a("sweets", (byte) -128))) {
+        if (ll.gameGraphicsArchive.a(0)) {
+            if (!(ll.gameGraphicsArchive.a("sweets", (byte) -128))) {
                 return;
             }
-            lb.field_d = ug.a("sweets_foreground", ll.field_f, (byte) -78, "sweets");
+            lb.sweetsForegroundSprite = ug.loadSprite("sweets_foreground", ll.gameGraphicsArchive, (byte) -78, "sweets");
             if (param0 != 7) {
                 return;
             }
-            pi.field_O = jg.a(ll.field_f, 1, "sweets", "sweets_background");
+            pi.sweetsBackgroundSprite = jg.loadIndexedSprite(ll.gameGraphicsArchive, 1, "sweets", "sweets_background");
             ll.themesLoaded[2] = true;
             return;
         }

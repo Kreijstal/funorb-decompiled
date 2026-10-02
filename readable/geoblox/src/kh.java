@@ -3,7 +3,7 @@
  */
 final class kh implements Runnable {
     d field_b;
-    static Sprite[] field_h;
+    static Sprite[] screenTitleSprites;
     volatile AudioOutput[] field_g;
     static String field_a;
     static int field_d;
@@ -13,9 +13,9 @@ final class kh implements Runnable {
 
     public static void a(int param0) {
         field_a = null;
-        field_h = null;
+        screenTitleSprites = null;
         if (param0 < 82) {
-            field_h = (Sprite[]) null;
+            screenTitleSprites = (Sprite[]) null;
         }
     }
 
@@ -85,6 +85,6 @@ final class kh implements Runnable {
     }
 
     static {
-        field_h = new Sprite[10];
+        screenTitleSprites = new Sprite[10];
     }
 }

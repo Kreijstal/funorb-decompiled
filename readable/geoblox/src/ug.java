@@ -23,7 +23,7 @@ final class ug {
         try {
           if (param1 >= -125) {
             var7 = (String) null;
-            ug.a((String) null, (rh) null, (byte) 14, (String) null);
+            ug.loadSprite((String) null, (rh) null, (byte) 14, (String) null);
           }
           var4_int = param0.length();
           param0.setLength(param3);
@@ -73,10 +73,10 @@ final class ug {
         md.activeScorePopups.addLast(-95, popup);
     }
 
-    final static Sprite a(String param0, rh param1, byte param2, String param3) {
-        int var4_int = 0;
+    final static Sprite loadSprite(String resourceName, rh graphicsArchive, byte methodGuard, String groupName) {
+        int archiveGroupId = 0;
         RuntimeException var4 = null;
-        int var5 = 0;
+        int archiveFileId = 0;
         Sprite stackIn_2_0 = null;
         Sprite stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
@@ -92,10 +92,10 @@ final class ug {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param1.a((byte) 127, param3);
-          var5 = param1.a(param0, -57, var4_int);
-          if (param2 == -78) {
-            stackIn_4_0 = qc.a(var4_int, param2 ^ -95, var5, param1);
+          archiveGroupId = graphicsArchive.a((byte) 127, groupName);
+          archiveFileId = graphicsArchive.a(resourceName, -57, archiveGroupId);
+          if (methodGuard == -78) {
+            stackIn_4_0 = qc.a(archiveGroupId, methodGuard ^ -95, archiveFileId, graphicsArchive);
             return stackIn_4_0;
           }
           stackIn_2_0 = (Sprite) null;
@@ -107,7 +107,7 @@ final class ug {
 
           stackIn_7_1 = new StringBuilder().append("ug.C(");
 
-          if (param0 == null) {
+          if (resourceName == null) {
             stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
             stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
             stackIn_8_2 = "null";
@@ -120,7 +120,7 @@ final class ug {
 
           stackIn_10_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',');
 
-          if (param1 == null) {
+          if (graphicsArchive == null) {
             stackIn_8_0 = (RuntimeException) ((Object) stackIn_8_0);
             stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
             stackIn_11_2 = "null";
@@ -131,9 +131,9 @@ final class ug {
           }
 
 
-          stackIn_13_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',').append(param2).append(',');
+          stackIn_13_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',').append(methodGuard).append(',');
 
-          if (param3 == null) {
+          if (groupName == null) {
             stackIn_8_0 = (RuntimeException) ((Object) stackIn_8_0);
             stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
             stackIn_14_2 = "null";
@@ -151,7 +151,7 @@ final class ug {
         field_a = null;
         if (param0 != 9144) {
             String var2 = (String) null;
-            ug.a((String) null, (rh) null, (byte) 53, (String) null);
+            ug.loadSprite((String) null, (rh) null, (byte) 53, (String) null);
         }
     }
 

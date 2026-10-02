@@ -4,11 +4,11 @@
 final class fl {
     static String field_b;
     static PcmSample[] field_c;
-    static Sprite field_a;
+    static Sprite spaceForegroundSprite;
     private static String field_z;
 
     public static void a(int param0) {
-        field_a = null;
+        spaceForegroundSprite = null;
         if (param0 != 33) {
             fl.a(76);
             field_c = null;

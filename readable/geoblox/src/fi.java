@@ -9,7 +9,7 @@ final class fi {
     private int field_c;
     private int field_f;
     private IntrusiveNode field_g;
-    static bg field_d;
+    static bg smallFont;
 
     final IntrusiveNode a(long param0, byte param1) {
         IntrusiveNode var5 = null;
@@ -60,7 +60,7 @@ final class fi {
             param1.previousNode.nextNode = param1;
             param1.field_a = param2;
             if (param0 != 102) {
-                field_d = (bg) null;
+                smallFont = (bg) null;
             }
             param1.nextNode.previousNode = param1;
         } catch (RuntimeException runtimeException) {
@@ -126,7 +126,7 @@ final class fi {
             return;
         }
         field_b = null;
-        field_d = null;
+        smallFont = null;
     }
 
     fi(int param0) {

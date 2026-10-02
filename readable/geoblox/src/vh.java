@@ -6,8 +6,8 @@ final class vh extends ee implements pl {
     private hk[] field_I;
     private ta field_J;
     static qg field_D;
-    static Sprite[] field_H;
-    static Sprite field_G;
+    static Sprite[] avatarMouthFrames;
+    static Sprite largeBoxSprite;
     static String tutorialRotationMessage;
 
     final static IndexedSprite a(int param0, rh param1, int param2, boolean param3) {
@@ -55,7 +55,7 @@ final class vh extends ee implements pl {
     final static boolean g(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 > -68) {
-          field_G = (Sprite) null;
+          largeBoxSprite = (Sprite) null;
         }
         L1: {
           if (oc.field_e != null) {
@@ -86,13 +86,13 @@ final class vh extends ee implements pl {
     }
 
     public static void b(boolean param0) {
-        field_H = null;
+        avatarMouthFrames = null;
         field_D = null;
         if (!param0) {
-            field_H = (Sprite[]) null;
+            avatarMouthFrames = (Sprite[]) null;
         }
         tutorialRotationMessage = null;
-        field_G = null;
+        largeBoxSprite = null;
     }
 
     final void a(int param0, int param1, byte param2, int param3) {

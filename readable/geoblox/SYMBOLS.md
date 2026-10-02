@@ -39,8 +39,10 @@ Generated from explicit rules; original names remain lookup identities.
 | `F:ah.field_b:Ljava/lang/String;` | `connectionLostReconnectingText` | wi.a(BLrh;)V reads the explicit resource key 'connectionlost_reconnecting' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:ai.field_h:Ljava/lang/String;` | `createPasswordCharacterAlertText` | wi.a(BLrh;)V reads the explicit resource key 'create_alert_passchars' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:ai.field_p:I` | `requestedScreenId` | Requested destination ID compared with current screen during update/render; assigned by menu actions and gameplay. |
+| `F:am.field_b:Ldm;` | `unachievedSprite` | Geoblox.java directly assigns this field from the recorded resource loader call(s): am.field_b = ug.a("unachieved", ki.field_b, (byte) -78, "basic"); |
 | `F:bf.field_i:Lrh;` | `activeTextArchive` | wi.a(BLrh;)V sets this to its archive argument before reading text resources, and clears it after the final read; fk.a(ILjava/lang/String;)[B reads from it. Other guard paths can also clear it. |
 | `F:bi.field_c:[Ljava/lang/String;` | `mustLogin3Texts` | wi.a(BLrh;)V reads the explicit resource key 'mustlogin3' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. All recorded indexed writes share that key prefix; numeric positions remain unchanged. |
+| `F:bj.field_r:Lna;` | `jewelsBackgroundSprite` | Geoblox.java directly assigns this field from the recorded resource loader call(s): bj.field_r = jg.a(ll.field_f, 1, "jewels", "jewls_background"); |
 | `F:bk.field_a:Ldm;` | `boardOwnershipRaster` | Attached entities stamp entityId+1 into this raster; contact detection and boundary testing inspect it. |
 | `F:bk.field_c:Ljava/lang/String;` | `loginUsernameText` | wi.a(BLrh;)V reads the explicit resource key 'login_username' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:bl.field_a:Ljava/lang/String;` | `achievementsText` | wi.a(BLrh;)V reads the explicit resource key 'achievements' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
@@ -54,6 +56,7 @@ Generated from explicit rules; original names remain lookup identities.
 | `F:c.field_p:LGeoblox;` | `gameApplet` | Geoblox constructor argument retained for session creation and host operations. |
 | `F:c.field_r:Ljava/lang/String;` | `createNameLeadingSpaceAlertText` | wi.a(BLrh;)V reads the explicit resource key 'create_alert_nameleadingspace' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:c.field_y:I` | `activeTicks` | Incremented only by normal screen update, reset on menu/session operations; used for timeout. |
+| `F:ca.field_g:Lna;` | `bakingBackgroundSprite` | Geoblox.java directly assigns this field from the recorded resource loader call(s): ca.field_g = jg.a(ll.field_f, param0 - 1, "baking", "baking_background"); |
 | `F:ca.field_h:Ljava/lang/String;` | `unpackingMusicText` | wi.a(BLrh;)V reads the explicit resource key 'unpacking_music' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:cd.field_j:I` | `gameplayOriginScreenId` | Menu activation stores its own screen ID alongside gameplay return destination; Geoblox consumes on the fh.c branch and uses for origin-specific setup. |
 | `F:ck.field_d:Ljava/lang/String;` | `cancelText` | wi.a(BLrh;)V reads the explicit resource key 'cancel' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
@@ -62,17 +65,24 @@ Generated from explicit rules; original names remain lookup identities.
 | `F:da.field_e:Ljava/lang/String;` | `createEmailValidText` | wi.a(BLrh;)V reads the explicit resource key 'create_emailvalid' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:dd.field_D:I` | `variantMatchCandidateCount` | ul increments this when a collected triple shares spriteVariantIndex, before cooldown eligibility or deduplication is checked. |
 | `F:dd.field_F:Ljava/lang/String;` | `loadingMusicText` | wi.a(BLrh;)V reads the explicit resource key 'loading_music' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
+| `F:dd.field_G:Lnc;` | `uiPaletteFont` | Geoblox.java directly assigns this field from the recorded resource loader call(s): dd.field_G = w.a("", ll.field_f, ii.field_k, true, "font"); |
+| `F:df.field_a:Lna;` | `spaceBackgroundSprite` | Geoblox.java directly assigns this field from the recorded resource loader call(s): df.field_a = jg.a(ll.field_f, 1, "space", "space_background"); |
 | `F:df.field_b:Ljava/lang/String;` | `endGameText` | wi.a(BLrh;)V reads the explicit resource key 'endgame' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:di.field_c:Ljava/lang/String;` | `createText` | wi.a(BLrh;)V reads the explicit resource key 'create' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:di.field_g:I` | `releasedInDifficultyStep` | hd.f increments this release counter and compares it with sa.field_b before ld.b advances difficulty. |
 | `F:dk.field_b:I` | `categoryMatchCandidateCount` | ul increments this when a collected triple shares entityCategoryKey, before cooldown eligibility or deduplication is checked. |
 | `F:dm.field_v:[I` | `pixels` | Pixel array read by nearest/smooth rotation and written by sprite operations. |
+| `F:eb.field_g:[Ldm;` | `mouseBoxFrames` | Geoblox.java directly assigns this field from the recorded resource loader call(s): eb.field_g = wj.a("box_mouse", "", ll.field_f, 0); |
 | `F:ec.field_a:Ljava/lang/String;` | `okText` | wi.a(BLrh;)V reads the explicit resource key 'ok' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
+| `F:ec.field_c:Ldm;` | `selectedThemeForeground` | cd.a(B)V selects this from foregrounds for the seven selectedThemeId values. gh.renderSession rotates it into jf.field_a for playfield rendering. |
+| `F:ee.field_A:Ldm;` | `menuBackgroundSprite` | Geoblox.java directly assigns this field from the recorded resource loader call(s): ee.field_A = ug.a("menu_background", ll.field_f, (byte) -78, ""); |
 | `F:ee.field_x:[Ljava/lang/String;` | `mustLogin2Texts` | wi.a(BLrh;)V reads the explicit resource key 'mustlogin2' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. All recorded indexed writes share that key prefix; numeric positions remain unchanged. |
 | `F:ee.field_y:Ljava/lang/String;` | `toServerListText` | wi.a(BLrh;)V reads the explicit resource key 'toserverlist' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:ef.field_c:Ljava/lang/String;` | `instructionsText` | wi.a(BLrh;)V reads the explicit resource key 'instructions' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
+| `F:eg.field_q:[Ldm;` | `pointsPanelGlowFrames` | Geoblox.java directly assigns this field from the recorded resource loader call(s): eg.field_q = wj.a("bonus_glow", "", ll.field_f, 0); gh renderSession indexes bonus_glow by pointsPanelFrameIndex at pointsPanelX. |
 | `F:eh.field_a:Ljava/lang/String;` | `openInPopupWindowText` | wi.a(BLrh;)V reads the explicit resource key 'openinpopupwindow' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:ei.field_gb:Ljava/lang/String;` | `fullscreenUnavailableTrySignedAppletText` | wi.a(BLrh;)V reads the explicit resource key 'fs_unavailable_try_signed_applet' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
+| `F:ej.field_a:[Ldm;` | `amorphousCrackFrames` | Geoblox.java directly assigns this field from the recorded resource loader call(s): ej.field_a = wj.a("amorph_crack", "", ll.field_f, 0); |
 | `F:ej.field_c:[Ljava/lang/String;` | `ratingModeNames` | wi.a(BLrh;)V reads the explicit resource key 'rating_mode_name' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. All recorded indexed writes share that key prefix; numeric positions remain unchanged. |
 | `F:el.field_i:I` | `gameplayReturnScreenId` | Stored when leaving gameplay via menus; Geoblox consumes as requested destination on the non-fh.c branch. -1 is the initial/reset sentinel. |
 | `F:el.field_o:Lgh;` | `gameplaySession` | Current gh created by c activation; used for gameplay update/render and score access. |
@@ -84,10 +94,16 @@ Generated from explicit rules; original names remain lookup identities.
 | `F:fa.field_d:Ljava/lang/String;` | `idleMessage20MinText` | wi.a(BLrh;)V reads the explicit resource key 'idlemessage20min' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:fa.field_g:[Ljava/lang/String;` | `membersExpansionBenefitTexts` | wi.a(BLrh;)V reads the explicit resource key 'members_expansion_benefits' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. All recorded indexed writes share that key prefix; numeric positions remain unchanged. |
 | `F:fa.field_h:Ljava/lang/String;` | `createDoubleSpaceAlertText` | wi.a(BLrh;)V reads the explicit resource key 'create_alert_doublespace' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
+| `F:fc.field_b:[Ldm;` | `avatarEyeFrames` | Geoblox.o(I)Z loads player_eyes into var5, optionally from halloween, then renders each source into this padded Sprite array. This names the asset identity, not an inferred emotion. |
 | `F:fc.field_e:Ljava/lang/String;` | `musicLabelText` | wi.a(BLrh;)V reads the explicit resource key 'music_colon' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
+| `F:fc.field_g:[Ldm;` | `blackOrbFrames` | Geoblox.java directly assigns this field from the recorded resource loader call(s): fc.field_g = wj.a("black", "", ll.field_f, 0); |
 | `F:fe.field_c:F` | `avatarTintGreenDelta` | Difference between target palette and current tint green channels; avatar updates multiply it by the float fade factor, narrow to int and shift by 8. Native tests retain fractional and negative channel arithmetic. |
+| `F:fe.field_j:Lna;` | `sunBackgroundSprite` | Geoblox.java directly assigns this field from the recorded resource loader call(s): fe.field_j = jg.a(ll.field_f, 1, "sun", "sky_background"); |
 | `F:ff.field_l:Ljava/lang/String;` | `waitingForGraphicsText` | wi.a(BLrh;)V reads the explicit resource key 'waitingfor_graphics' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
+| `F:fi.field_d:Lbg;` | `smallFont` | Geoblox.java directly assigns this field from the recorded resource loader call(s): fi.field_d = gi.a(ii.field_k, 1, ll.field_f, "small_font", ""); |
 | `F:fi.field_h:Ljava/lang/String;` | `changeDisplayNameText` | wi.a(BLrh;)V reads the explicit resource key 'changedisplayname' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
+| `F:fl.field_a:Ldm;` | `spaceForegroundSprite` | Geoblox.java directly assigns this field from the recorded resource loader call(s): fl.field_a = ug.a("space_foreground", ll.field_f, (byte) -78, "space"); |
+| `F:g.field_i:Ldm;` | `countBoxSprite` | Geoblox.java directly assigns this field from the recorded resource loader call(s): g.field_i = ug.a("box_count", ll.field_f, (byte) -78, ""); |
 | `F:g.field_l:Ljava/lang/String;` | `serviceUnavailableText` | wi.a(BLrh;)V reads the explicit resource key 'serviceunavailable' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:g.field_m:Ljava/lang/String;` | `createEmailUnavailableAlertText` | wi.a(BLrh;)V reads the explicit resource key 'create_alert_email_unavailable' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:gd.field_g:I` | `loopStart` | Constructor loop start copied to kl.field_q; looping routines shift it by eight for the lower boundary and resampling adjusts it. |
@@ -111,6 +127,7 @@ Generated from explicit rules; original names remain lookup identities.
 | `F:gh.field_I:LGeoblox;` | `gameApplet` | Retains the owning Geoblox constructor argument. |
 | `F:gh.field_J:F` | `boardAngleRadians` | Changed by rotation input; sin/cos in render and radians-to-16-bit-angle conversion rotate board sprite. |
 | `F:gh.field_K:Z` | `submissionBlocked` | Score/action submission checks this flag. Debug input and emitPointsPopup with the submission-blocking argument set it. |
+| `F:gh.field_L:Z` | `showGameOverOverlay` | gh.startSessionEndSequence sets this flag for non-tutorial ending. renderSession uses it to move the score box and draw kh.field_h[6], loaded from gameover_title. The constructor resets it false; it is distinct from sessionEnding. |
 | `F:gh.field_M:Lkl;` | `resultExpansionAudioStream` | Referenced only by updateResultSequence phase 2: an absent or out-of-range stream is replaced with sample 28 at a progress-dependent rate and registered in the mixer. |
 | `F:gh.field_N:Z` | `spawnReleaseDisabled` | lc skips transfer from the spawn queue into moving entities while this is set. Debug input toggles it; tutorial/end paths also set it. |
 | `F:gh.field_Q:Z` | `debugSpawnSpecialKinds` | Passed as nb.a parameter 5: true chooses special kinds 1/2/3/4 from category/variant; false selects ordinary kind zero. |
@@ -153,12 +170,16 @@ Generated from explicit rules; original names remain lookup identities.
 | `F:gk.field_c:Ljava/lang/String;` | `createDisplayNameHintText` | wi.a(BLrh;)V reads the explicit resource key 'create_displayname_hint' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:h.field_a:I` | `matchCandidateCount` | ul fills the packed candidate array and increments this count; ec sorts and consumes that many candidates. |
 | `F:ha.field_g:I` | `avatarShockFrameIndex` | Indexes vg.field_f in ij avatar drawing. A positive old shock timer updates this from the decremented timer modulo 15 then modulo 2; expiration preserves the prior index. |
+| `F:hb.field_d:[Ldm;` | `silverStarFrames` | Geoblox.java directly assigns this field from the recorded resource loader call(s): hb.field_d = wj.a("silver", "", ll.field_f, 0); |
 | `F:hb.field_h:Ljava/lang/String;` | `playFreeVersionText` | wi.a(BLrh;)V reads the explicit resource key 'playfreeversion' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:hc.field_U:Ljava/lang/String;` | `goBackText` | wi.a(BLrh;)V reads the explicit resource key 'goback' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
+| `F:hd.field_H:Ldm;` | `sportsForegroundSprite` | Geoblox.java directly assigns this field from the recorded resource loader call(s): hd.field_H = ug.a("sports_foreground", ll.field_f, (byte) -78, "sports"); |
 | `F:hf.field_b:Lhf;` | `nextNode` | tf.g(int) starts at sentinel.field_b and advances through field_b; head insertion places a node between the sentinel and this link. |
 | `F:hf.field_c:Lhf;` | `previousNode` | tf.a(boolean) starts at sentinel.field_c and traverses field_c; tail insertion links through this predecessor. |
 | `F:hf.field_e:Ljava/lang/String;` | `loginMessage3Text` | wi.a(BLrh;)V reads the explicit resource key 'loginm3' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
+| `F:hg.field_b:[Ldm;` | `blackOrbImplosionFrames` | Geoblox.java directly assigns this field from the recorded resource loader call(s): hg.field_b = wj.a("black_implode", "", ll.field_f, 0); |
 | `F:hh.field_b:Ljava/lang/String;` | `fullscreenCloseButtonText` | wi.a(BLrh;)V reads the explicit resource key 'fs_button_close' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
+| `F:hi.field_F:Ldm;` | `bakingForegroundSprite` | Geoblox.java directly assigns this field from the recorded resource loader call(s): hi.field_F = ug.a("baking_foreground", ll.field_f, (byte) -78, "baking"); |
 | `F:hi.field_I:Ljava/lang/String;` | `createIneligibleText` | wi.a(BLrh;)V reads the explicit resource key 'create_ineligible' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:i.field_a:Ldm;` | `avatarMaskRaster` | Avatar setup builds this mask; board initialization draws its white ownership marker before attached entity IDs. |
 | `F:ib.field_a:Z` | `gameAssetsInitialized` | Geoblox update sets true only after prepareGameAssets succeeds; rendering uses it to select loading screen. |
@@ -167,6 +188,7 @@ Generated from explicit rules; original names remain lookup identities.
 | `F:ih.field_b:Ljava/lang/String;` | `ticketingOneUnreadText` | wi.a(BLrh;)V reads the explicit resource key 'ticketing_oneunread' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:ii.field_b:Ljava/lang/String;` | `highscoresText` | wi.a(BLrh;)V reads the explicit resource key 'highscores' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:ii.field_j:Ljava/lang/String;` | `createPasswordValidText` | wi.a(BLrh;)V reads the explicit resource key 'create_passwordvalid' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
+| `F:ii.field_k:Lrh;` | `fontMetricsArchive` | Geoblox requestGameArchives assigns archive 6 here. prepareGameAssets passes it as the metric byte-source archive to w.a and gi.a, separate from the glyph graphics archive, before releasing it. |
 | `F:ij.field_Y:Ljava/lang/String;` | `createPasswordTooltipText` | wi.a(BLrh;)V reads the explicit resource key 'create_password_tooltip' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:ij.field_Z:Ljava/lang/String;` | `menuText` | wi.a(BLrh;)V reads the explicit resource key 'menu' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:ij.field_ab:F` | `spawnIntervalScale` | Float multiplier in sa.b(Z)V: int(201.0f / og.field_r * scale + 0.5f). Reset is 0.75; difficulty bit 128 adds 0.02857142873108387f when below the exact 0.8f threshold and then recomputes the interval. |
@@ -199,8 +221,11 @@ Generated from explicit rules; original names remain lookup identities.
 | `F:ja.field_y:I` | `paletteBlueDelta` | ja.java method m(int) computes the blue-channel difference between consecutive jg.field_h entries and stores it in field_y; b(boolean) uses it in the interpolated color. |
 | `F:ja.field_z:I` | `entitySpriteKindId` | ja constructor/configureEntitySprite store the kind here; selectEntitySprite switches on it to choose ke/s/ka/hb/fc/ej sprite banks, and advanceEntityAnimation chooses kind-specific timing. |
 | `F:jc.field_c:Ljava/lang/String;` | `toCustomerSupportText` | wi.a(BLrh;)V reads the explicit resource key 'tocustomersupport' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
+| `F:jf.field_a:Ldm;` | `rotatedThemeForegroundRaster` | gh constructor sizes this Sprite from ec.field_c. renderSession sets it as raster target, rotates selected foreground pixels into it using boardAngleRadians, and draws it centred. |
 | `F:jf.field_j:I` | `avatarTintFadeTicks` | A nonpositive value permits wc.a(FB)V to start a 50-tick tint fade. Both avatar updates always decrement it, but calculate tint only when the old value was positive; native request and expiration matrices verify this. |
 | `F:jg.field_c:Ljava/lang/String;` | `loginGameUpdatedText` | wi.a(BLrh;)V reads the explicit resource key 'login_gameupdated' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
+| `F:jg.field_f:[[I` | `themeSpriteColors` | Geoblox.o(I)Z uses this seven-by-seven RGB table to tint geometry and amorphic sprites by theme/variant. jg static initialization retains the literal palette values. |
+| `F:jg.field_h:[[I` | `themeCycleColors` | jg static initialization copies theme palettes from field_f and orders the copied colors using the retained derived RGB key. ja updatePaletteChannelDeltas and animateEntity read cyclic current/next frame colors here. |
 | `F:ji.field_d:Ljava/lang/String;` | `createPasswordLengthAlertText` | wi.a(BLrh;)V reads the explicit resource key 'create_alert_passlength' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:ji.field_h:I` | `difficultyStep` | ld.b increments this index and reads the difficulty bit-flag table to adjust speed, rotation and entity selection parameters. |
 | `F:ji.field_l:Ljava/lang/String;` | `createWelcomeText` | wi.a(BLrh;)V reads the explicit resource key 'create_welcome' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
@@ -212,6 +237,7 @@ Generated from explicit rules; original names remain lookup identities.
 | `F:jk.field_c:Ljava/lang/String;` | `returnToGameText` | wi.a(BLrh;)V reads the explicit resource key 'returntogame' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:jk.field_d:I` | `avatarSteeringDirectionId` | Value 0 approaches frame offset 3, 1 approaches 1 from above, and 2 approaches 5 from below. jj selects neutral, me.a(B)V selects 1 and wd.a(B)V selects 2. Native frame matrix also preserves behavior for other direction IDs. |
 | `F:jl.field_t:Z` | `avatarShockContactPending` | Set by kind-three avatar mask contact, blocks queue-settling checks and is cleared when reconciliation consumes avatarShockPending. Native routing verifies the reset independently. |
+| `F:k.field_a:Ldm;` | `popSprite` | Geoblox.java directly assigns this field from the recorded resource loader call(s): k.field_a = ug.a("pop", ll.field_f, (byte) -78, ""); |
 | `F:k.field_b:Ljava/lang/String;` | `fullscreenFocusText` | wi.a(BLrh;)V reads the explicit resource key 'fs_focus' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:k.field_k:Ljava/lang/String;` | `loginText` | wi.a(BLrh;)V reads the explicit resource key 'login' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:ka.field_b:I` | `selectedItemIndex` | Selected/hovered row index used for input dispatch and rendering highlighted row. |
@@ -223,25 +249,35 @@ Generated from explicit rules; original names remain lookup identities.
 | `F:ka.field_j:I` | `hitLeftX` | Lower X boundary in base menu hit test; initialized by constructor. |
 | `F:ka.field_k:I` | `firstItemY` | Menu top Y; hit test subtracts it and render initializes row Y from it. |
 | `F:ka.field_l:Z` | `keyboardSelectionActive` | True when navigation selects a row; pointer hover clears it and changes selection. |
+| `F:ka.field_m:[[[Ldm;` | `amorphousFramesByThemeAndVariant` | Geoblox.o(I)Z renders amorphic frames with jg.field_f[theme][variant]. ja.selectEntitySprite and animateEntity read [selectedThemeId][spriteVariantIndex][animationFrame] for kind 2. |
 | `F:kb.field_c:I` | `spawnReleaseIntervalTicks` | sa.b(Z)V stores the rounded inverse-speed interval here. lc.a(I)V compares it with kc.field_a before releasing a queued entity, and includes it in queued entity lifetime calculations. |
 | `F:kc.field_a:I` | `ticksSinceLastEntityRelease` | lc.a(I)V increments this counter once per update and resets it to zero when releasing a queued entity. It is compared with kb.field_c and contributes to queued entity lifetimes; pg.a(I)V deliberately leaves it unchanged. |
 | `F:kc.field_b:Ljava/lang/String;` | `createNameCharacterAlertText` | wi.a(BLrh;)V reads the explicit resource key 'create_alert_namechars' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:kd.field_a:Ljava/lang/String;` | `achievedText` | wi.a(BLrh;)V reads the explicit resource key 'achieved' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:kd.field_f:[I` | `difficultyStepFlags` | 23-entry table read by ld.b(Z)V using ji.difficultyStep. Independent native fixtures verify its exact initial entries and all 256 byte masks, with saturation, recursive re-reads and failure partial state. |
+| `F:ke.field_a:[[[Ldm;` | `entitySpritesByThemeCategoryAndVariant` | Geoblox.o(I)Z builds tinted geoms sprites by theme/category/palette variant. ja.selectEntitySprite reads [selectedThemeId][entityCategoryKey][spriteVariantIndex] for kind 0. |
 | `F:kf.field_b:Ljava/lang/String;` | `pleaseTryAgainText` | wi.a(BLrh;)V reads the explicit resource key 'pleasetryagain' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
+| `F:kh.field_h:[Ldm;` | `screenTitleSprites` | Geoblox.java directly assigns this field from the recorded resource loader call(s): kh.field_h[0] = ug.a("main_title", ll.field_f, (byte) -78, ""); kh.field_h[2] = ug.a("bestscoreseach_title", ll.field_f, (byte) -78, ""); kh.field_h[3] = ug.a("myscores_title", ll.field_f, (byte) -78, ""); kh.field_h[1] = ug.a("allscores_title", ll.field_f, (byte) -78, ""); kh.field_h[6] = ug.a("gameover_title", ll.field_f, (byte) -78, ""); kh.field_h[4] = ug.a("achievements_title", ll.field_f, (byte) -78, ""); kh.field_h[5] = ug.a("instructions_title", ll.field_f, (byte) -78, ""); kh.field_h[7] = ug.a("achievements_tg_title", ll.field_f, (byte) -78, ""); kh.field_h[8] = ug.a("login_title", ll.field_f, (byte) -78, ""); The original nine numeric screen indexes remain, including gameover_title at index 6. |
 | `F:ki.field_a:Ljava/lang/String;` | `fullscreenNonmemberText` | wi.a(BLrh;)V reads the explicit resource key 'fs_nonmember' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
+| `F:ki.field_b:Lrh;` | `basicUiGraphicsArchive` | wf archive initialization aliases l.field_h here. Geoblox.o(I)Z loads unachieved and orbcoin from its basic group before clearing the field. |
 | `F:ki.field_e:Ljava/lang/String;` | `js5ConnectErrorText` | wi.a(BLrh;)V reads the explicit resource key 'error_js5connect' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
+| `F:kj.field_E:Ldm;` | `jewelsForegroundSprite` | Geoblox.java directly assigns this field from the recorded resource loader call(s): kj.field_E = ug.a("jewls_foreground", ll.field_f, (byte) -78, "jewels"); |
 | `F:kk.field_v:Ljava/lang/String;` | `loginUsernameTooltipText` | wi.a(BLrh;)V reads the explicit resource key 'login_username_tooltip' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:kl.field_p:I` | `sampleStepFixed` | Signed Q8 source-sample increment used to advance samplePositionFixed. Ping-pong boundaries negate it; the rate-percent factory converts source and output frequencies into this step. |
 | `F:kl.field_x:I` | `samplePositionFixed` | PCM interpolation indexes sample bytes with this value>>8 and its fractional part &255. Bounds are samples.length<<8; advancing and looping update this signed Q8 position. |
+| `F:lb.field_d:Ldm;` | `sweetsForegroundSprite` | Geoblox.java directly assigns this field from the recorded resource loader call(s): lb.field_d = ug.a("sweets_foreground", ll.field_f, (byte) -78, "sweets"); |
+| `F:ld.field_b:[Ldm;` | `avatarCryEndFrames` | Geoblox.java directly assigns this field from the recorded resource loader call(s): ld.field_b = wj.a("cry_end", "", ll.field_f, 0); ld.field_b = wj.a("cry_end", "halloween", ll.field_f, 0); |
 | `F:lf.field_e:[C` | `extendedTextCharacters` | The 32-entry character table indexed by byteValue-128 in bc.a(I[BII)Ljava/lang/String;. Zero entries decode as question mark; table values are preserved byte for byte. |
 | `F:lh.field_a:Ljava/lang/String;` | `nextText` | wi.a(BLrh;)V reads the explicit resource key 'next' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:lh.field_c:Ljava/lang/String;` | `createAccountSuccessText` | wi.a(BLrh;)V reads the explicit resource key 'create_account_success' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:li.field_b:Ljava/lang/String;` | `tutorialCompleteMessage` | English initializer announces readiness for the real game and offers the Instructions page; uk.a returns it for tutorial step three. |
+| `F:lj.field_d:Ldm;` | `smallBoxSprite` | Geoblox.java directly assigns this field from the recorded resource loader call(s): lj.field_d = ug.a("box_sml", ll.field_f, (byte) -78, ""); |
 | `F:ll.field_a:Ljava/lang/String;` | `createMoreSuggestionsText` | wi.a(BLrh;)V reads the explicit resource key 'create_more_suggestions' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:ll.field_b:Ljava/lang/String;` | `backText` | wi.a(BLrh;)V reads the explicit resource key 'back' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:ll.field_c:Ljava/lang/String;` | `createEmailTooltipText` | wi.a(BLrh;)V reads the explicit resource key 'create_email_tooltip' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
+| `F:ll.field_f:Lrh;` | `gameGraphicsArchive` | Geoblox requestGameArchives assigns archive 1 here; asset preparation and theme loaders read font glyphs, game sprites and named theme groups from it. |
 | `F:ll.field_g:[Z` | `themesLoaded` | Theme loaders mark fixed indices after foreground/background resource loading. |
+| `F:ll.field_h:[Ldm;` | `frameNineSliceSprites` | Geoblox.java directly assigns this field from the recorded resource loader call(s): ll.field_h[0] = ug.a("frame_topleft", ll.field_f, (byte) -78, ""); ll.field_h[1] = ug.a("frame_top", ll.field_f, (byte) -78, ""); ll.field_h[2] = ug.a("frame_topright", ll.field_f, (byte) -78, ""); ll.field_h[3] = ug.a("frame_left", ll.field_f, (byte) -78, ""); ll.field_h[4] = ug.a("frame_centre", ll.field_f, (byte) -78, ""); ll.field_h[5] = ug.a("frame_right", ll.field_f, (byte) -78, ""); ll.field_h[6] = ug.a("frame_bottomleft", ll.field_f, (byte) -78, ""); ll.field_h[7] = ug.a("frame_bottom", ll.field_f, (byte) -78, ""); ll.field_h[8] = ug.a("frame_bottomright", ll.field_f, (byte) -78, ""); The original nine frame-part indexes remain. |
 | `F:md.field_a:Ltf;` | `activeScorePopups` | ug inserts initialized ScorePopup objects here; cf advances them, bd renders them and wa drains unfinished points. |
 | `F:md.field_b:F` | `avatarTintRedDelta` | Difference between target palette and current tint red channels, computed by wc.a(FB)V; avatar updates multiply it by the fade factor and shift the truncated value by 16. Native request and tint arithmetic oracles verify it. |
 | `F:md.field_d:[Ljava/lang/String;` | `mustLogin4Texts` | wi.a(BLrh;)V reads the explicit resource key 'mustlogin4' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. All recorded indexed writes share that key prefix; numeric positions remain unchanged. |
@@ -251,6 +287,8 @@ Generated from explicit rules; original names remain lookup identities.
 | `F:me.field_k:F` | `progress` | ug resets this to zero; cf advances it toward one; bd uses it to interpolate the popup toward the points panel. |
 | `F:me.field_m:Ljava/lang/String;` | `pointsText` | ug sets Integer.toString(points); bd renders this stored string. |
 | `F:me.field_n:F` | `originX` | ug copies its X argument here; bd interpolates from this coordinate to the panel target. |
+| `F:mf.field_a:Lna;` | `selectedThemeBackground` | cd.a(B)V selects this indexed background alongside ec.field_c for the seven selectedThemeId values; gh.renderSession draws it at (0,0). |
+| `F:mi.field_B:[Ldm;` | `sparkleFrames` | Geoblox.java directly assigns this field from the recorded resource loader call(s): mi.field_B = wj.a("sparkle", "", ll.field_f, 0); |
 | `F:mi.field_E:Ljava/lang/String;` | `invalidUserOrPasswordText` | wi.a(BLrh;)V reads the explicit resource key 'invaliduserorpass' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:mi.field_R:Ljava/lang/String;` | `connectionLostWithReasonText` | wi.a(BLrh;)V reads the explicit resource key 'connectionlost_withreason' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:mj.field_c:Ljava/lang/String;` | `fullscreenAcceptCountdownSingularText` | wi.a(BLrh;)V reads the explicit resource key 'fs_accept_countdown_sing' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
@@ -259,7 +297,9 @@ Generated from explicit rules; original names remain lookup identities.
 | `F:na.field_h:[I` | `palette` | Indexed raster looks up int color by unsigned byte pixel value. |
 | `F:na.field_i:[B` | `indices` | Byte indices consumed by indexed raster bodies. |
 | `F:nb.field_a:Ljava/lang/String;` | `loadingFontsText` | wi.a(BLrh;)V reads the explicit resource key 'loading_fonts' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
+| `F:nc.field_K:[[I` | `colorPalettes` | nc constructor installs the decoded palette at field_K[0]; glyph rasterizers map indexed bytes through selected palettes. Geoblox.o(I)Z copies palette zero into palette one before adjusting the original highlight entries. |
 | `F:nd.field_a:I` | `avatarFeedbackModeId` | Selects the vh.field_H avatar overlay and feedback state. Requests 0 through 5 set matching IDs; a new request 7 sets ID 6. |
+| `F:ne.field_b:Ldm;` | `sunForegroundSprite` | Geoblox.java directly assigns this field from the recorded resource loader call(s): ne.field_b = ug.a("sky_foreground", ll.field_f, (byte) -78, "sun"); |
 | `F:ne.field_d:Ljava/lang/String;` | `ticketingGoToWebsiteText` | wi.a(BLrh;)V reads the explicit resource key 'ticketing_gotowebsite' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:nf.field_A:I` | `screenTransitionTick` | Incremented while current/requested screens differ; reset at 160; drives clipping and curtain position in Geoblox render. |
 | `F:nf.field_E:Ljava/lang/String;` | `reloadGameText` | wi.a(BLrh;)V reads the explicit resource key 'reloadgame' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
@@ -279,6 +319,7 @@ Generated from explicit rules; original names remain lookup identities.
 | `F:oi.field_c:Ljava/lang/String;` | `createPasswordConfirmationTooltipText` | wi.a(BLrh;)V reads the explicit resource key 'create_password_confirm_tooltip' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:oi.field_d:Ljava/lang/String;` | `tutorialColourMatchMessage` | English initializer explains colour/shape matching and asks for three of a kind by colour; uk.a returns it for tutorial step one. |
 | `F:oj.field_e:Ljava/lang/String;` | `loadingExtraDataText` | wi.a(BLrh;)V reads the explicit resource key 'loading_extradata' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
+| `F:ok.field_a:[Ldm;` | `avatarCryMiddleFrames` | Geoblox.java directly assigns this field from the recorded resource loader call(s): ok.field_a = wj.a("cry_middle", "", ll.field_f, 0); ok.field_a = wj.a("cry_middle", "halloween", ll.field_f, 0); |
 | `F:ok.field_d:Ljava/lang/String;` | `justPlayText` | wi.a(BLrh;)V reads the explicit resource key 'justplay' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:ok.field_e:Ljava/lang/String;` | `createEmailConfirmationText` | wi.a(BLrh;)V reads the explicit resource key 'create_email_confirm' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:ok.field_i:Ljava/lang/String;` | `createEmailConfirmationTooltipText` | wi.a(BLrh;)V reads the explicit resource key 'create_email_confirm_tooltip' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
@@ -292,12 +333,15 @@ Generated from explicit rules; original names remain lookup identities.
 | `F:ph.field_g:Ljava/lang/String;` | `waitingForExtraDataText` | wi.a(BLrh;)V reads the explicit resource key 'waitingfor_extradata' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:ph.field_j:Ljava/lang/String;` | `createUsernameAvailableText` | wi.a(BLrh;)V reads the explicit resource key 'create_username_available' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:ph.field_k:Ljava/lang/String;` | `createUnableText` | wi.a(BLrh;)V reads the explicit resource key 'create_unable' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
+| `F:pi.field_O:Lna;` | `sweetsBackgroundSprite` | Geoblox.java directly assigns this field from the recorded resource loader call(s): pi.field_O = jg.a(ll.field_f, 1, "sweets", "sweets_background"); |
+| `F:pk.field_k:Ldm;` | `resultBubbleSprite` | Geoblox.java directly assigns this field from the recorded resource loader call(s): pk.field_k = ug.a("bubble", ll.field_f, (byte) -78, ""); gh renderResultSequence rotates this bubble around the playfield centre. |
 | `F:pk.field_o:[Z` | `connectivityVisitedByEntityId` | kc clears this array and marks entity IDs while traversing contact connectivity. |
 | `F:q.field_g:Ldj;` | `validatedInput` | Constructor captures the input whose current field_s is passed into the abstract validation methods by e(int) and b(byte). |
 | `F:qb.field_F:Ljava/lang/String;` | `js5IoErrorText` | wi.a(BLrh;)V reads the explicit resource key 'error_js5io' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:qb.field_L:Ljava/lang/String;` | `fullscreenMembersButtonText` | wi.a(BLrh;)V reads the explicit resource key 'fs_button_members' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:qf.field_bb:Lrf;` | `resultMusicTrack` | jg loads the bonus_bubble_jingle track into this field and registers it with the MIDI resources. updateResultSequence passes it to selectBackgroundMusic; cleanup clears it. |
 | `F:qg.field_b:Ljava/lang/String;` | `createPasswordText` | wi.a(BLrh;)V reads the explicit resource key 'create_password' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
+| `F:qh.field_O:[Ldm;` | `introGeometryFrames` | Geoblox.java directly assigns this field from the recorded resource loader call(s): qh.field_O = wj.a("intro_geoms", "", ll.field_f, 0); |
 | `F:qh.field_Q:Ljava/lang/String;` | `createPasswordHintText` | wi.a(BLrh;)V reads the explicit resource key 'create_password_hint' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:qh.field_S:Ljava/lang/String;` | `tutorialFailedMessage` | English initializer explicitly says the tutorial failed, explains reaching the edge of the play area and offers replay or the proper game; uk.a returns it for step five. |
 | `F:qj.field_b:Z` | `clearGameplayDuringTransition` | Set when transition is triggered via pg.field_e, forces cleared background instead of drawing gameplay; cleared on transition completion. |
@@ -313,20 +357,26 @@ Generated from explicit rules; original names remain lookup identities.
 | `F:rc.field_h:F` | `rotationStepRadians` | Gameplay applies this angular step with opposite signs for the two rotation controls; difficulty setup assigns it. |
 | `F:rc.field_k:Lrc;` | `nextSecondaryNode` | wd.a(int) iteration and wd.b(byte) counting follow field_k from the circular rc sentinel; rc.a(byte) reconnects field_l.field_k and field_k.field_l before clearing the secondary links. |
 | `F:rc.field_l:Lrc;` | `previousSecondaryNode` | rc.a(byte) reconnects field_l.field_k and field_k.field_l; field_l is the predecessor in the second link pair. |
+| `F:re.field_h:Ldm;` | `widgetSprite` | Geoblox.java directly assigns this field from the recorded resource loader call(s): re.field_h = ug.a("widget", ll.field_f, (byte) -78, ""); |
 | `F:re.field_j:Z` | `connectivityDirty` | Contact link changes set this; kc rebuilds connectivity only when dirty and clears it afterward. |
 | `F:rh.field_j:Ljava/lang/String;` | `createUsernameUnavailableText` | wi.a(BLrh;)V reads the explicit resource key 'create_username_unavailable' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:rj.field_c:I` | `avatarTintColor` | Packed color passed to both fc avatar frames and vh feedback overlays in ij and ri. Native animation oracles verify it stays unchanged after fade expiration and retains original int narrowing and addition. |
 | `F:rj.field_e:Ljava/lang/String;` | `quitToWebsiteText` | wi.a(BLrh;)V reads the explicit resource key 'quittowebsite' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:rj.field_g:Ljava/lang/String;` | `loggingInText` | wi.a(BLrh;)V reads the explicit resource key 'logging_in' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
+| `F:s.field_G:[[Ldm;` | `geometrySpritesByThemeAndCategory` | Geoblox.o(I)Z groups geoms frames by seven and stores the original sprites here. ja.selectEntitySprite reads [selectedThemeId][entityCategoryKey] for kind 1. |
 | `F:sa.field_b:I` | `releasesPerDifficultyStep` | qe.a computes ceil(fa.field_b/3) here; hd.f compares it with di.field_g to advance difficulty after that many releases. |
 | `F:sa.field_c:D` | `specialSpriteKindProbability` | vd.a(I)I compares Math.random() with this value before choosing kind 1/2/3/4 instead of zero. Difficulty bit 16 adds 0.05; steps past the table subtract 0.05 only above the exact retained 0.15000000000000002 threshold. |
 | `F:sb.field_c:Ljava/lang/String;` | `loginNoDisplayNameText` | wi.a(BLrh;)V reads the explicit resource key 'login_no_displayname' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:sb.field_f:Ljava/lang/String;` | `noHighscoresText` | wi.a(BLrh;)V reads the explicit resource key 'no_highscores' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
+| `F:sd.field_y:Ldm;` | `barSprite` | Geoblox.java directly assigns this field from the recorded resource loader call(s): sd.field_y = ug.a("bar", ll.field_f, (byte) -78, ""); |
 | `F:se.field_i:Ljava/lang/String;` | `creatingYourAccountText` | wi.a(BLrh;)V reads the explicit resource key 'creatingyouraccount' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:se.field_m:Ljava/lang/String;` | `createAnAccountText` | wi.a(BLrh;)V reads the explicit resource key 'create_createanaccount' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
+| `F:sg.field_e:Lna;` | `germsBackgroundSprite` | Geoblox.java directly assigns this field from the recorded resource loader call(s): sg.field_e = jg.a(ll.field_f, 1, "germs", "germs_background"); |
 | `F:sj.field_b:Ljava/lang/String;` | `createMismatchAlertText` | wi.a(BLrh;)V reads the explicit resource key 'create_alert_mismatch' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:sj.field_e:Ljava/lang/String;` | `fullscreenUnavailableText` | wi.a(BLrh;)V reads the explicit resource key 'fs_unavailable' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:sl.field_b:Ljava/lang/String;` | `loginEmailText` | wi.a(BLrh;)V reads the explicit resource key 'login_email' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
+| `F:sl.field_c:Ldm;` | `germsForegroundSprite` | Geoblox.java directly assigns this field from the recorded resource loader call(s): sl.field_c = ug.a("germs_foreground", ll.field_f, (byte) -78, "germs"); |
+| `F:sl.field_f:[Ldm;` | `achievementSprites` | Geoblox.java directly assigns this field from the recorded resource loader call(s): sl.field_f = wj.a("achievements", "", ll.field_f, 0); |
 | `F:sl.field_h:Ljava/lang/String;` | `orbPointsText` | wi.a(BLrh;)V reads the explicit resource key 'orbpoints' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:sl.field_i:Ljava/lang/String;` | `createInvalidAgeAlertText` | wi.a(BLrh;)V reads the explicit resource key 'create_alert_invalidage' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:t.field_i:[[I` | `menuActionIds` | Maps screen ID and item index to integer action identifiers dispatched by c menu handlers. |
@@ -334,9 +384,11 @@ Generated from explicit rules; original names remain lookup identities.
 | `F:tc.field_c:I` | `currentScreenId` | Committed screen ID; -1 delegates update/render to gameplay, nonnegative indexes screens; transition commits requested ID after 160 ticks. |
 | `F:tf.field_a:Lhf;` | `sentinel` | tf constructor creates an hf with both links pointing to itself; each traversal stops at this node. |
 | `F:tf.field_c:Lhf;` | `iterationCursor` | tf.g(int)/a(boolean) save the next node here; d(int)/b(int) return it and advance in the chosen direction. |
+| `F:th.field_f:Lna;` | `sportsBackgroundSprite` | Geoblox.java directly assigns this field from the recorded resource loader call(s): th.field_f = jg.a(ll.field_f, 1, "sports", "sports_background"); |
 | `F:th.field_g:Ljava/lang/String;` | `defaultPlayerNameText` | wi.a(BLrh;)V reads the explicit resource key 'DEFAULT_PLAYER_NAME' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:tl.field_g:[Lja;` | `entitiesById` | Ownership-mask contact decoding and packed match IDs index this array to resolve GameplayEntity objects. |
 | `F:tl.field_o:Ljava/lang/String;` | `previousText` | wi.a(BLrh;)V reads the explicit resource key 'prev' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
+| `F:tl.field_r:[Ldm;` | `introFaceFrames` | Geoblox.java directly assigns this field from the recorded resource loader call(s): tl.field_r = wj.a("intro_faces", "", ll.field_f, 0); tl.field_r = wj.a("intro_faces", "halloween", ll.field_f, 0); |
 | `F:ua.field_B:[F` | `workBlock` | Shared float decoding buffer, swapped with per-instance previousBlock. |
 | `F:ua.field_C:[F` | `previousBlock` | Previous float block used in overlap-add, swapped with shared work buffer at packet completion. |
 | `F:ua.field_E:[B` | `pcmBytes` | Output byte storage allocated to sample count, filled by ua.a([I)Lgd;. |
@@ -365,6 +417,7 @@ Generated from explicit rules; original names remain lookup identities.
 | `F:uj.field_e:Ljava/lang/String;` | `loginMessage2Text` | wi.a(BLrh;)V reads the explicit resource key 'loginm2' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:uk.field_j:F` | `avatarTintBlueDelta` | Difference between target palette and current tint blue channels; added without a shift after float multiplication and int narrowing. Native request and tint update oracles verify it. |
 | `F:uk.field_l:[Ljava/lang/String;` | `monthNames` | wi.a(BLrh;)V reads the explicit resource key 'monthnames' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. All recorded indexed writes share that key prefix; numeric positions remain unchanged. |
+| `F:uk.field_m:Ldm;` | `orbCoinSprite` | Geoblox.java directly assigns this field from the recorded resource loader call(s): uk.field_m = ug.a("orbcoin", ki.field_b, (byte) -78, "basic"); |
 | `F:ul.field_b:I` | `releasedInCurrentTheme` | hd.f increments this per release; the theme HUD subtracts it from fa.field_b; theme preparation resets it. |
 | `F:v.field_m:Ljava/lang/String;` | `createPasswordConfirmationText` | wi.a(BLrh;)V reads the explicit resource key 'create_password_confirm' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:vb.field_c:[I` | `framebuffer` | Shared destination of raster operations; writer audit. |
@@ -373,13 +426,19 @@ Generated from explicit rules; original names remain lookup identities.
 | `F:vb.field_f:I` | `stride` | Destination index x + y * field_f in raster bodies. |
 | `F:vb.field_i:I` | `clipTop` | Vertical lower clipping boundary in vb.d and na.a. |
 | `F:vb.field_k:I` | `clipRight` | Horizontal upper clipping boundary in vb.d and na.a. |
+| `F:vc.field_j:Ldm;` | `menuForegroundSprite` | Geoblox.java directly assigns this field from the recorded resource loader call(s): vc.field_j = ug.a("menu_foreground", ll.field_f, (byte) -78, ""); |
 | `F:vd.field_e:Ljava/lang/String;` | `tutorialShapeMatchMessage` | English initializer asks for three of a kind by shape; uk.a returns it for tutorial step two. |
 | `F:vd.field_m:[Ljava/lang/String;` | `highscoreModeNames` | wi.a(BLrh;)V reads the explicit resource key 'hs_mode_name' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. All recorded indexed writes share that key prefix; numeric positions remain unchanged. |
+| `F:vf.field_H:[Ldm;` | `avatarCryBeginFrames` | Geoblox.java directly assigns this field from the recorded resource loader call(s): vf.field_H = wj.a("cry_begin", "", ll.field_f, 0); vf.field_H = wj.a("cry_begin", "halloween", ll.field_f, 0); |
 | `F:vf.field_L:Ldm;` | `spriteScratchRaster` | Entity sprite preparation and ending-radius scanning use this temporary raster. |
 | `F:vg.field_d:Ljava/lang/String;` | `pleaseWaitText` | wi.a(BLrh;)V reads the explicit resource key 'pleasewait_dotdotdot' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
+| `F:vg.field_f:[Ldm;` | `silverStarShockFrames` | Geoblox.java directly assigns this field from the recorded resource loader call(s): vg.field_f = wj.a("silver_shock", "", ll.field_f, 0); |
 | `F:vh.field_E:Ljava/lang/String;` | `tutorialRotationMessage` | English initializer welcomes the player and explains rotating the play area with the left/right arrow keys; uk.a returns it for tutorial step zero. |
+| `F:vh.field_G:Ldm;` | `largeBoxSprite` | Geoblox.java directly assigns this field from the recorded resource loader call(s): vh.field_G = ug.a("box_lgr", ll.field_f, (byte) -78, ""); |
+| `F:vh.field_H:[Ldm;` | `avatarMouthFrames` | Geoblox.o(I)Z loads player_mouth into var6, optionally from halloween, then renders each source into this padded Sprite array. |
 | `F:vi.field_F:Ljava/lang/String;` | `loginJustPlayTooltipText` | wi.a(BLrh;)V reads the explicit resource key 'login_justplay_tooltip' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:vi.field_G:Ljava/lang/String;` | `createNewsOptInTooltipText` | wi.a(BLrh;)V reads the explicit resource key 'create_optin_news_tooltip' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
+| `F:vj.field_a:[Ldm;` | `bangFrames` | Geoblox.java directly assigns this field from the recorded resource loader call(s): vj.field_a = wj.a("bang", "", ll.field_f, 0); |
 | `F:w.field_a:Ljava/lang/String;` | `mouseOverIconText` | wi.a(BLrh;)V reads the explicit resource key 'mouseoveranicon' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:w.field_f:Z` | `avatarShockPending` | Set by rh.updateAttachedEntities for kind-3 entities touching the avatar with nonpositive cooldown. Consumed and cleared by kc.reconcileBoardEntities after shock feedback; le reset also clears it. ec.processMatchCandidates suppresses the empty-candidate chain reset while it is set. Producers are verified by source inspection; the native scoring probe controls this gate directly. |
 | `F:wa.field_a:I` | `avatarShockEffectTicks` | Request 3 starts a 50-tick effect even during a feedback hold. qa decrements this counter and ij draws the vg.field_f effect while it is positive. |
@@ -417,6 +476,24 @@ Generated from explicit rules; original names remain lookup identities.
 | `F:wj.field_E:Ljava/lang/String;` | `createDisplayNameText` | wi.a(BLrh;)V reads the explicit resource key 'create_displayname' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `L:Geoblox.a(I)V#4` | `transitionSplitY` | Computed as 6*transitionTick-445; divides clipping between incoming and outgoing screens. |
 | `L:Geoblox.m(I)V#0` | `screenIndex` | Loop index 0..8 creates and stores matching c screen instance. |
+| `L:Geoblox.o(I)Z#0` | `uiPaletteSize` | Palette zero length before allocating and copying palette one. |
+| `L:Geoblox.o(I)Z#1` | `alternateUiPalette` | New array installed as palette one before sf.a copies palette zero. |
+| `L:Geoblox.o(I)Z#10` | `keyboardWidthAlias` | Intermediate alias of var14 retained before filling alias var8. |
+| `L:Geoblox.o(I)Z#11` | `keyboardWidthsForFill` | Alias through var13 of keyboard advances filled by var11. |
+| `L:Geoblox.o(I)Z#12` | `keyboardIconIndex` | Iterates keyboard sprites while filling width-minus-three advances. |
+| `L:Geoblox.o(I)Z#13` | `geometryFrameThenVariantIndex` | Traverses all geoms frames, then indexes palette variants during amorphic tinting. |
+| `L:Geoblox.o(I)Z#14` | `categoryThenAnimationFrameIndex` | Geometry frame modulo seven, then amorphic animation frame index, then avatar eye frame index. |
+| `L:Geoblox.o(I)Z#15` | `geometryWidthThenFrameIndex` | Source geometry pixel width, then mouth frame index, then sparkle frame index. |
+| `L:Geoblox.o(I)Z#16` | `paletteVariantThenKeyboardIndex` | Indexes geometry tint variants, then receives the initial keyboard index alias before the width loop. |
+| `L:Geoblox.o(I)Z#17` | `clientFlagSnapshot` | Copies Geoblox.field_C at entry. Its undocumented semantics are not inferred; the unused original store is retained. |
+| `L:Geoblox.o(I)Z#2` | `geometrySourceFrames` | geoms source frames for original and tinted theme/category sprites. |
+| `L:Geoblox.o(I)Z#3` | `geometryAliasThenAmorphousFrames` | First aliases var12; later replaced by amorphic resource frames. Both roles of this reused slot are retained. |
+| `L:Geoblox.o(I)Z#4` | `themeIndex` | Increments once per seven geoms, then reused for the outer theme loop of amorphic tinting. |
+| `L:Geoblox.o(I)Z#5` | `geometryFrameHeight` | Current source Sprite field_o row count used to allocate tinted geometry sprites. |
+| `L:Geoblox.o(I)Z#6` | `avatarEyeSourceFrames` | player_eyes source frames from normal or halloween group before padded rendering. |
+| `L:Geoblox.o(I)Z#7` | `avatarMouthSourceFrames` | player_mouth source frames from normal or halloween group before padded rendering. |
+| `L:Geoblox.o(I)Z#8` | `keyboardIconSprites` | Eight indexed keyboard_left/right/enter/space/esc/backspace/down/i sprites. |
+| `L:Geoblox.o(I)Z#9` | `keyboardIconAdvanceWidths` | One width-minus-three entry per keyboard icon, passed with sprites to the small font. |
 | `L:bc.a(I[BII)Ljava/lang/String;#0` | `byteIndex` | Loop index over length input bytes. |
 | `L:bc.a(I[BII)Ljava/lang/String;#1` | `outputIndex` | Snapshot of decodedLength before its increment; used as the character-write index. |
 | `L:bc.a(I[BII)Ljava/lang/String;#2` | `decodedCharacters` | Local alias of the allocated output character buffer. |
@@ -576,6 +653,8 @@ Generated from explicit rules; original names remain lookup identities.
 | `L:gh.g(I)V#2` | `promptHeight` | Thirty pixels plus measured line count times line spacing; used for the background height with ten pixels padding. |
 | `L:gh.g(I)V#3` | `promptTop` | Step-dependent y origin (232/280/270/300) for tutorial background and text placement. |
 | `L:gh.g(I)V#5` | `promptText` | Tutorial text selected by uk.a(tutorialStepId,24146) and passed to font measuring/rendering. |
+| `L:gi.a(Lrh;ILrh;Ljava/lang/String;Ljava/lang/String;)Lbg;#0` | `archiveGroupId` | Resolved numeric group identity from group-name then resource-name lookup, passed to the original loading decoder. |
+| `L:gi.a(Lrh;ILrh;Ljava/lang/String;Ljava/lang/String;)Lbg;#2` | `archiveFileId` | Resolved numeric file identity from group-name then resource-name lookup, passed to the original loading decoder. |
 | `L:i.a(B)Lja;#0` | `maxDistanceSquared` | Starts at Float.MIN_VALUE and changes only when candidateDistanceSquared is strictly greater. |
 | `L:i.a(B)Lja;#2` | `farthestEntity` | Initially null, replaced by the current candidate only on a strictly greater squared distance, then returned through the Object carrier. |
 | `L:i.a(B)Lja;#3` | `candidateEntity` | Entity obtained from the attached deque last/previous walk; its position supplies the radius comparison. |
@@ -643,6 +722,8 @@ Generated from explicit rules; original names remain lookup identities.
 | `L:ja.n(I)V#8` | `fadeOpacity` | ja.java derives var10 from remaining and initial lifetime, clamps it to 0..256, and passes it to vf.field_L.d as the sprite alpha. |
 | `L:ja.n(I)V#9` | `controlFlowGuard` | ja.java assigns Geoblox.field_C to var11 for decompiler control-flow branching; it is not a gameplay state value. |
 | `L:jc.a(IZ)V#0` | `unusedClientControlSnapshot` | Retained read of Geoblox.field_C at entry; this local is unused by the recovered feedback body. |
+| `L:jg.a(Lrh;ILjava/lang/String;Ljava/lang/String;)Lna;#0` | `archiveGroupId` | Resolved numeric group identity from group-name then resource-name lookup, passed to the original loading decoder. |
+| `L:jg.a(Lrh;ILjava/lang/String;Ljava/lang/String;)Lna;#2` | `archiveFileId` | Resolved numeric file identity from group-name then resource-name lookup, passed to the original loading decoder. |
 | `L:ka.a(I)V#1` | `itemIndex` | Rendering row loop index bounded by item count. |
 | `L:ka.a(I)V#2` | `rowY` | Starts at first-item Y and advances by row spacing. |
 | `L:ka.a(Z)V#0` | `hitItemIndex` | Result of menu hit test, used for selection and pointer dispatch. |
@@ -771,6 +852,8 @@ Generated from explicit rules; original names remain lookup identities.
 | `L:ua.b(I)I#2` | `value` | Accumulated extracted bits returned by the method. |
 | `L:ua.b(I)I#3` | `outputShift` | Total previously consumed bits; shifts each chunk into the result. |
 | `L:ug.a(IZIII)V#0` | `popup` | The factory reuses a pooled ScorePopup and fills its instance fields before inserting it into the active queue. |
+| `L:ug.a(Ljava/lang/String;Lrh;BLjava/lang/String;)Ldm;#0` | `archiveGroupId` | Resolved numeric group identity from group-name then resource-name lookup, passed to the original loading decoder. |
+| `L:ug.a(Ljava/lang/String;Lrh;BLjava/lang/String;)Ldm;#2` | `archiveFileId` | Resolved numeric file identity from group-name then resource-name lookup, passed to the original loading decoder. |
 | `L:ul.b(I)V#0` | `firstNeighborIndex` | Index into centralEntity.relatedEntities in the outer pair-enumeration loop; secondNeighborIndex starts at this index plus one. |
 | `L:ul.b(I)V#1` | `secondNeighborIndex` | Second index into centralEntity.relatedEntities, strictly greater than firstNeighborIndex, so each pair is visited once per central entity. |
 | `L:ul.b(I)V#20` | `eligibleNeighborhoodVisited` | Integer flag set when an eligible central neighborhood visits a neighbor. It can enable feedback even when no three-entity match was emitted; it is not a successful-match flag. |
@@ -788,6 +871,8 @@ Generated from explicit rules; original names remain lookup identities.
 | `L:ul.b(I)V#33` | `swappedEntityId` | Scratch entity ID during the descending three-ID sort; not a persistent reference to any particular neighbor. |
 | `L:ul.b(I)V#34` | `controlFlowGuard` | Snapshot of Geoblox.field_C at entry. The generated body retains this read even though this snapshot is unused by the reconstructed traversal. |
 | `L:vd.a(I)I#0` | `specialKindRoll` | Second Math.random() draw after the probability gate; thresholds 0.13, 0.25 and 0.65 select kind IDs 3, 4, 1 and 2. The draw and its order are retained. |
+| `L:w.a(Ljava/lang/String;Lrh;Lrh;ZLjava/lang/String;)Lnc;#0` | `archiveGroupId` | Resolved numeric group identity from group-name then resource-name lookup, passed to the original loading decoder. |
+| `L:w.a(Ljava/lang/String;Lrh;Lrh;ZLjava/lang/String;)Lnc;#2` | `archiveFileId` | Resolved numeric file identity from group-name then resource-name lookup, passed to the original loading decoder. |
 | `L:wa.a(I)I#0` | `unfinishedPoints` | Drains active popups with removeFirst and accumulates their points into the returned integer. |
 | `L:wa.a(I)I#2` | `popup` | Drains active popups with removeFirst and accumulates their points into the returned integer. |
 | `L:wc.a(FB)V#0` | `sentinelDivisionGuard` | Retained division guard evaluated after copying the starting tint and before computing the palette index. Native invalid-guard fixtures preserve its exception and partial state. |
@@ -800,6 +885,8 @@ Generated from explicit rules; original names remain lookup identities.
 | `L:wd.c(B)Lrc;#0` | `firstNode` | Secondary deque traversal/removal role supported by sentinel/link inspection and native model-based identity/order/count checks. |
 | `L:wi$1$CfrPartitionedBody.run()V#0` | `caughtFailure` | Source-generated catch parameter for the original wi.a(BLrh;)V runtime catch, copied into the shared loading-failure field. |
 | `L:wi.a(BLrh;)V#0` | `textLoader` | Instance of the source-generated shared carrier that runs the three bounded interface-text helper parts. |
+| `L:wj.a(Ljava/lang/String;Ljava/lang/String;Lrh;I)[Ldm;#0` | `archiveGroupId` | Resolved numeric group identity from group-name then resource-name lookup, passed to the original loading decoder. |
+| `L:wj.a(Ljava/lang/String;Ljava/lang/String;Lrh;I)[Ldm;#2` | `archiveFileId` | Resolved numeric file identity from group-name then resource-name lookup, passed to the original loading decoder. |
 | `M:Geoblox.a(I)V` | `renderFrame` | ch draw turn invokes a(25853); GeoBlox draws loading/menu/game content and publishes Canvas. Rename abstract declaration and implementation as one virtual family. |
 | `M:Geoblox.a(ILdm;)V` | `setRasterTarget` | Geoblox.java calls oc.b(9) and vb.a(param1.field_v,param1.field_s,param1.field_o), wiring the supplied sprite pixel buffer and dimensions into the software raster target. |
 | `M:Geoblox.b(B)V` | `releaseGameResources` | Invokes global resource cleanup and clears game state references. Rename abstract declaration and implementation as one virtual family. |
@@ -837,6 +924,7 @@ Generated from explicit rules; original names remain lookup identities.
 | `M:c.c(II)V` | `setItemCount` | Assigns inherited item count from second argument; called after action-array length changes. |
 | `M:c.d(I)V` | `previewMusicVolume` | Starts sample 8 at j.field_gb volume, retaining preview stream and resetting preview ticks. |
 | `M:c.h(B)V` | `updateScreen` | Geoblox calls this on committed nonnegative screen ID; advances animation, processes keyboard/pointer and screen-specific state. |
+| `M:cd.a(B)V` | `selectThemeRenderAssets` | Selects ec.field_c and mf.field_a from matching foreground/background pairs for selectedThemeId 0 through 6. Guard <=75 still clears cd.field_m before selection. |
 | `M:cf.a(ILjava/lang/String;)Llh;` | `validationStateForText` | Complete q override family across ag, cf, g, mk, n, q and uk. The state query evaluates candidate text and returns a validation-state identity; the message query describes that candidate or returns null. q current-input wrappers call these methods with the current input text. Full JVM descriptor, guards and asynchronous/pending behavior remain unchanged. |
 | `M:cf.b(ILjava/lang/String;)Ljava/lang/String;` | `validationMessageForText` | Complete q override family across ag, cf, g, mk, n, q and uk. The state query evaluates candidate text and returns a validation-state identity; the message query describes that candidate or returns null. q current-input wrappers call these methods with the current input text. Full JVM descriptor, guards and asynchronous/pending behavior remain unchanged. |
 | `M:cf.d(B)V` | `advanceScorePopups` | Increases active popup progress; once it reaches one, credits points to score or the pending panel and returns the popup to the free pool. |
@@ -873,6 +961,7 @@ Generated from explicit rules; original names remain lookup identities.
 | `M:gh.g(I)V` | `renderTutorialPrompt` | When tutorial phase is zero, selects uk.a(step) and draws the prompt and continue/replay buttons; step five has both choices. |
 | `M:gh.h(I)V` | `resetScoreState` | Zeros score/popup accumulation, initializes associated score bookkeeping values and text using existing scoring methods, and resets the points panel position. |
 | `M:gh.j(I)V` | `prepareNextTheme` | Resets the session phase/result fields, selects the next theme ID and requests its assets/music. |
+| `M:gi.a(Lrh;ILrh;Ljava/lang/String;Ljava/lang/String;)Lbg;` | `loadBitmapFont` | Resolves glyph group/file and passes graphics and metric archives to rb.a, returning bg bitmap glyph font. Original guard and failure context remain. |
 | `M:gj.f(B)V` | `drawSpecialAttachedEntities` | Draws attached entities whose sprite-kind ID is nonzero. |
 | `M:hd.f(I)V` | `recordEntityRelease` | Increments theme/difficulty release counts and requests a theme transition or advances difficulty at their thresholds. |
 | `M:hf.a(Z)V` | `unlinkNode` | When the false guard is supplied, reconnects previous/next neighbours and clears both links; tf removal and insertion call this method. |
@@ -904,6 +993,7 @@ Generated from explicit rules; original names remain lookup identities.
 | `M:ja.m(I)V` | `updatePaletteChannelDeltas` | ja.java method m(int) extracts adjacent palette entries from jg.field_h and stores their red, green and blue channel differences in field_s, field_x and field_y. |
 | `M:ja.n(I)V` | `drawFadingEntity` | ja.java method n(int) computes a bounded opacity from field_r and field_p and passes it to the sprite draw call after positioning and rotation. |
 | `M:jc.a(IZ)V` | `requestAvatarFeedback` | Requests an avatar feedback mode while retaining hold, frame, sprite-guard and sound behavior. Native matrix verifies 3024 combinations with table-based state and actual PCM sample identity/count oracles. |
+| `M:jg.a(Lrh;ILjava/lang/String;Ljava/lang/String;)Lna;` | `loadIndexedSprite` | Resolves group then resource name and returns vh.a as a na indexed sprite; guard side effects remain. |
 | `M:ka.a(BI)V` | `increaseMenuValue` | Concrete increases music/effect sliders by ten; base dispatches right-direction keys here. Both base and concrete declarations are renamed. |
 | `M:ka.a(I)V` | `renderScreen` | Geoblox render calls c.a(-28750); base implementation renders item rows, concrete draws complete screen. Both base and concrete declarations are renamed. |
 | `M:ka.a(IB)V` | `decreaseMenuValue` | Concrete decreases music/effect sliders by ten; base dispatches left-direction keys here. Both base and concrete declarations are renamed. |
@@ -964,11 +1054,13 @@ Generated from explicit rules; original names remain lookup identities.
 | `M:ua.c()Lgd;` | `decodePcm` | Decodes all packets and builds gd from complete PCM output. |
 | `M:ua.c(I)[F` | `decodePacket` | Selects field_p packet by index and computes float output during music loading. |
 | `M:ug.a(IZIII)V` | `spawnScorePopup` | Takes a popup from the pool, initializes its points, chain and origin, and inserts it into the active queue. If the pool is empty it credits points directly. |
+| `M:ug.a(Ljava/lang/String;Lrh;BLjava/lang/String;)Ldm;` | `loadSprite` | Resolves group then resource name and returns qc.a as one dm Sprite; guard -78 remains. |
 | `M:uk.a(II)Ljava/lang/String;` | `tutorialMessageForStep` | Maps step IDs 0,1,2,3,5 to the five explicit tutorial strings; other IDs return null. |
 | `M:uk.a(ILjava/lang/String;)Llh;` | `validationStateForText` | Complete q override family across ag, cf, g, mk, n, q and uk. The state query evaluates candidate text and returns a validation-state identity; the message query describes that candidate or returns null. q current-input wrappers call these methods with the current input text. Full JVM descriptor, guards and asynchronous/pending behavior remain unchanged. |
 | `M:uk.b(ILjava/lang/String;)Ljava/lang/String;` | `validationMessageForText` | Complete q override family across ag, cf, g, mk, n, q and uk. The state query evaluates candidate text and returns a validation-state identity; the message query describes that candidate or returns null. q current-input wrappers call these methods with the current input text. Full JVM descriptor, guards and asynchronous/pending behavior remain unchanged. |
 | `M:ul.b(I)V` | `collectMatchCandidates` | Collects triples of connected entities sharing variant or category, storing sorted entity IDs and equality flags in the packed candidate array. |
 | `M:vd.a(I)I` | `chooseSpawnSpriteKind` | Guard 741924304 first gates on sa.field_c, then maps a fresh Math.random roll through 0.13/0.25/0.65 thresholds to kinds 3/4/1/2. Other guards return 104. Native checks cover closed probability gates and invalid guards, not live Math.random distribution. |
+| `M:w.a(Ljava/lang/String;Lrh;Lrh;ZLjava/lang/String;)Lnc;` | `loadPaletteFont` | Resolves glyph group/file and passes glyph and metric archives to pi.a. Result nc has indexed glyph bytes and mutable RGB palettes; Boolean guard effects remain. |
 | `M:wa.a(I)I` | `collectUnfinishedPopupPoints` | Removes every active popup and returns the sum of its uncredited points without multiplying them again. |
 | `M:wc.a(FB)V` | `requestAvatarTintForRadius` | rh passes the maximum attached squared distance from board center. When no tint fade is held, snapshots the current color, computes palette channel deltas and starts 50 ticks. Native fixtures verify normal, held, NaN and failure/partial-write cases. |
 | `M:wd.a(I)Lrc;` | `nextForIteration` | Returns and advances the cursor until reaching the sentinel; guard -59 used by conversion. Native model checks identity, order, reciprocity, transfers and primary-link independence. |
@@ -981,6 +1073,8 @@ Generated from explicit rules; original names remain lookup identities.
 | `M:wi$1$CfrPartitionedBody.runChunk1()V` | `loadInterfaceTextPart2` | Source-generated bounded helper for original wi.a(BLrh;)V. The number preserves source order and denotes a size-budget partition, not a semantic loading phase. |
 | `M:wi$1$CfrPartitionedBody.runChunk2()V` | `loadInterfaceTextPart3` | Source-generated bounded helper for original wi.a(BLrh;)V. The number preserves source order and denotes a size-budget partition, not a semantic loading phase. |
 | `M:wi.a(BLrh;)V` | `loadInterfaceText` | wf calls this after the text archive reports ready. It binds bf.field_i, reads named interface resources, decodes and assigns their strings, then releases the archive. It preserves the shared control flag, runtime catch and guard recursion. |
+| `M:wj.a(Ljava/lang/String;Ljava/lang/String;Lrh;I)[Ldm;` | `loadSpriteFrames` | Resolves group then resource name and returns ll.a as dm[] frames; nonzero guard side effects remain. |
+| `P:Geoblox.o(I)Z#0` | `methodGuard` | Normal preparation guard is 25869. Its arithmetic in progress/resource calls and reconnectMessages cleanup for other values remain unchanged. |
 | `P:ab.a(IF)V#1` | `boardAngleRadians` | Used to rotate entity movement/contact coordinates relative to the board. |
 | `P:ag.a(ILjava/lang/String;)Llh;#0` | `guard` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
 | `P:ag.a(ILjava/lang/String;)Llh;#1` | `candidateText` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
@@ -1013,6 +1107,7 @@ Generated from explicit rules; original names remain lookup identities.
 | `P:c.a(ZBII)V#3` | `rowY` | Row Y supplied by render loop and used in text/slider drawing. |
 | `P:c.b(IB)V#0` | `itemIndex` | Indexes action IDs for activation. |
 | `P:c.c(II)V#1` | `itemCount` | Copied into inherited item count. |
+| `P:cd.a(B)V#0` | `methodGuard` | Guard <=75 clears cd.field_m before theme selection. Normal call sites pass 79, 104 or 116; no theme-ID interpretation is imposed. |
 | `P:cf.a(ILjava/lang/String;)Llh;#0` | `guard` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
 | `P:cf.a(ILjava/lang/String;)Llh;#1` | `candidateText` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
 | `P:cf.b(ILjava/lang/String;)Ljava/lang/String;#0` | `guard` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
@@ -1058,6 +1153,11 @@ Generated from explicit rules; original names remain lookup identities.
 | `P:gh.a(II)V#1` | `methodGuard` | Normal pending-score callers pass -73. This argument retains the final division/remainder guard and its possible arithmetic exception. |
 | `P:gh.c(Z)V#0` | `markSubmissionBlocked` | When true sets field_K, which blocks score submission. |
 | `P:gh.f(I)V#0` | `methodGuard` | Normal updateSession calls with 10. This parameter contributes the boundary-loss guard, xor-10 music guard, unlock guard and final !=10 cleanup branch; none is simplified away. |
+| `P:gi.a(Lrh;ILrh;Ljava/lang/String;Ljava/lang/String;)Lbg;#0` | `fontMetricsArchive` | Resolves glyph group/file and passes graphics and metric archives to rb.a, returning bg bitmap glyph font. Original guard and failure context remain. Parameter 0 has this lookup/call-site role; descriptor and argument order remain fixed. |
+| `P:gi.a(Lrh;ILrh;Ljava/lang/String;Ljava/lang/String;)Lbg;#1` | `methodGuard` | Resolves glyph group/file and passes graphics and metric archives to rb.a, returning bg bitmap glyph font. Original guard and failure context remain. Parameter 1 has this lookup/call-site role; descriptor and argument order remain fixed. |
+| `P:gi.a(Lrh;ILrh;Ljava/lang/String;Ljava/lang/String;)Lbg;#2` | `glyphGraphicsArchive` | Resolves glyph group/file and passes graphics and metric archives to rb.a, returning bg bitmap glyph font. Original guard and failure context remain. Parameter 2 has this lookup/call-site role; descriptor and argument order remain fixed. |
+| `P:gi.a(Lrh;ILrh;Ljava/lang/String;Ljava/lang/String;)Lbg;#3` | `resourceName` | Resolves glyph group/file and passes graphics and metric archives to rb.a, returning bg bitmap glyph font. Original guard and failure context remain. Parameter 3 has this lookup/call-site role; descriptor and argument order remain fixed. |
+| `P:gi.a(Lrh;ILrh;Ljava/lang/String;Ljava/lang/String;)Lbg;#4` | `groupName` | Resolves glyph group/file and passes graphics and metric archives to rb.a, returning bg bitmap glyph font. Original guard and failure context remain. Parameter 4 has this lookup/call-site role; descriptor and argument order remain fixed. |
 | `P:i.a(B)Lja;#0` | `methodGuard` | At values >= -127 calls i.a(false), which clears avatarMaskRaster. Normal result and boundary-loss callers pass -128; no guard is removed. |
 | `P:ib.b(B)Ljava/lang/String;#0` | `guard` | Guard argument passed to the q implementation; original numeric sentinel and descriptor remain unchanged. |
 | `P:ib.e(I)Llh;#0` | `guard` | Guard argument passed to the q implementation; original numeric sentinel and descriptor remain unchanged. |
@@ -1085,6 +1185,10 @@ Generated from explicit rules; original names remain lookup identities.
 | `P:ja.b(II)I#1` | `bitOffset` | ja.java masks param1 with 7 to calculate padding to the next byte-aligned bit offset, then returns param1 plus that padding. |
 | `P:jc.a(IZ)V#0` | `feedbackRequestId` | Requests 0 through 5, or request 7 for mode six; native matrix includes -1 and 6 no-op requests. |
 | `P:jc.a(IZ)V#1` | `clearSpriteGuard` | Clears jc.field_a only when the feedback hold is not positive; normal gameplay passes false. Native matrix checks both values and an actual sprite identity. |
+| `P:jg.a(Lrh;ILjava/lang/String;Ljava/lang/String;)Lna;#0` | `graphicsArchive` | Resolves group then resource name and returns vh.a as a na indexed sprite; guard side effects remain. Parameter 0 has this lookup/call-site role; descriptor and argument order remain fixed. |
+| `P:jg.a(Lrh;ILjava/lang/String;Ljava/lang/String;)Lna;#1` | `methodGuard` | Resolves group then resource name and returns vh.a as a na indexed sprite; guard side effects remain. Parameter 1 has this lookup/call-site role; descriptor and argument order remain fixed. |
+| `P:jg.a(Lrh;ILjava/lang/String;Ljava/lang/String;)Lna;#2` | `groupName` | Resolves group then resource name and returns vh.a as a na indexed sprite; guard side effects remain. Parameter 2 has this lookup/call-site role; descriptor and argument order remain fixed. |
+| `P:jg.a(Lrh;ILjava/lang/String;Ljava/lang/String;)Lna;#3` | `resourceName` | Resolves group then resource name and returns vh.a as a na indexed sprite; guard side effects remain. Parameter 3 has this lookup/call-site role; descriptor and argument order remain fixed. |
 | `P:ka.a(BI)V#1` | `itemIndex` | Indexes action IDs for increase operation. |
 | `P:ka.a(IB)V#0` | `itemIndex` | Indexes action IDs for decrease operation. |
 | `P:ka.a(II)V#0` | `itemIndex` | Selected row passed to key handling. |
@@ -1177,6 +1281,10 @@ Generated from explicit rules; original names remain lookup identities.
 | `P:ug.a(IZIII)V#2` | `originY` | Stored as popup originY. |
 | `P:ug.a(IZIII)V#3` | `chainMultiplier` | Stored as popup chain multiplier; points are already multiplied by the scoring caller. |
 | `P:ug.a(IZIII)V#4` | `originX` | Stored as popup originX. |
+| `P:ug.a(Ljava/lang/String;Lrh;BLjava/lang/String;)Ldm;#0` | `resourceName` | Resolves group then resource name and returns qc.a as one dm Sprite; guard -78 remains. Parameter 0 has this lookup/call-site role; descriptor and argument order remain fixed. |
+| `P:ug.a(Ljava/lang/String;Lrh;BLjava/lang/String;)Ldm;#1` | `graphicsArchive` | Resolves group then resource name and returns qc.a as one dm Sprite; guard -78 remains. Parameter 1 has this lookup/call-site role; descriptor and argument order remain fixed. |
+| `P:ug.a(Ljava/lang/String;Lrh;BLjava/lang/String;)Ldm;#2` | `methodGuard` | Resolves group then resource name and returns qc.a as one dm Sprite; guard -78 remains. Parameter 2 has this lookup/call-site role; descriptor and argument order remain fixed. |
+| `P:ug.a(Ljava/lang/String;Lrh;BLjava/lang/String;)Ldm;#3` | `groupName` | Resolves group then resource name and returns qc.a as one dm Sprite; guard -78 remains. Parameter 3 has this lookup/call-site role; descriptor and argument order remain fixed. |
 | `P:uk.a(II)Ljava/lang/String;#0` | `tutorialStepId` | Switch-like dispatch selects the message for this tutorial step. |
 | `P:uk.a(ILjava/lang/String;)Llh;#0` | `guard` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
 | `P:uk.a(ILjava/lang/String;)Llh;#1` | `candidateText` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
@@ -1184,6 +1292,11 @@ Generated from explicit rules; original names remain lookup identities.
 | `P:uk.b(ILjava/lang/String;)Ljava/lang/String;#1` | `candidateText` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
 | `P:ul.b(I)V#0` | `methodGuard` | Normal callers pass -2. Other values clear ul.field_a; match enumeration and RuntimeException context remain intact. |
 | `P:vd.a(I)I#0` | `methodGuard` | Retains the original compatibility guard and its side effects. Dedicated difficulty/reset/selection fixtures verify normal and boundary guards against native bytecode; original sentinel values are unchanged. |
+| `P:w.a(Ljava/lang/String;Lrh;Lrh;ZLjava/lang/String;)Lnc;#0` | `groupName` | Resolves glyph group/file and passes glyph and metric archives to pi.a. Result nc has indexed glyph bytes and mutable RGB palettes; Boolean guard effects remain. Parameter 0 has this lookup/call-site role; descriptor and argument order remain fixed. |
+| `P:w.a(Ljava/lang/String;Lrh;Lrh;ZLjava/lang/String;)Lnc;#1` | `glyphGraphicsArchive` | Resolves glyph group/file and passes glyph and metric archives to pi.a. Result nc has indexed glyph bytes and mutable RGB palettes; Boolean guard effects remain. Parameter 1 has this lookup/call-site role; descriptor and argument order remain fixed. |
+| `P:w.a(Ljava/lang/String;Lrh;Lrh;ZLjava/lang/String;)Lnc;#2` | `fontMetricsArchive` | Resolves glyph group/file and passes glyph and metric archives to pi.a. Result nc has indexed glyph bytes and mutable RGB palettes; Boolean guard effects remain. Parameter 2 has this lookup/call-site role; descriptor and argument order remain fixed. |
+| `P:w.a(Ljava/lang/String;Lrh;Lrh;ZLjava/lang/String;)Lnc;#3` | `methodGuard` | Resolves glyph group/file and passes glyph and metric archives to pi.a. Result nc has indexed glyph bytes and mutable RGB palettes; Boolean guard effects remain. Parameter 3 has this lookup/call-site role; descriptor and argument order remain fixed. |
+| `P:w.a(Ljava/lang/String;Lrh;Lrh;ZLjava/lang/String;)Lnc;#4` | `resourceName` | Resolves glyph group/file and passes glyph and metric archives to pi.a. Result nc has indexed glyph bytes and mutable RGB palettes; Boolean guard effects remain. Parameter 4 has this lookup/call-site role; descriptor and argument order remain fixed. |
 | `P:wc.a(FB)V#0` | `maxAttachedRadiusSquared` | Maximum attached squared distance from center (320,240) in rh; determines the tint palette position. Native requests use a fixed expected index table including NaN and invalid extremes. |
 | `P:wc.a(FB)V#1` | `methodGuard` | Retains -71 / ((-59-guard)/47); normal attachment caller passes 14. Native cases cover 14, 0 and division by zero at -59 with the original partial tint snapshot. |
 | `P:wd.a(I)Lrc;#0` | `methodGuard` | Retained original method guard; native deque probe uses the normal value and preserves alternate source branches. |
@@ -1198,3 +1311,7 @@ Generated from explicit rules; original names remain lookup identities.
 | `P:wi$1$CfrPartitionedBody.<init>(BLrh;)V#1` | `initialTextArchive` | Source-generated carrier constructor argument initializes the corresponding shared loader parameter field; this is not an original gamepack method. |
 | `P:wi.a(BLrh;)V#0` | `loadGuard` | Argument role follows the corresponding reviewed text loader, resource reader or whole-array decoder; guard arithmetic and side effects remain unchanged. |
 | `P:wi.a(BLrh;)V#1` | `textArchive` | Argument role follows the corresponding reviewed text loader, resource reader or whole-array decoder; guard arithmetic and side effects remain unchanged. |
+| `P:wj.a(Ljava/lang/String;Ljava/lang/String;Lrh;I)[Ldm;#0` | `resourceName` | Resolves group then resource name and returns ll.a as dm[] frames; nonzero guard side effects remain. Parameter 0 has this lookup/call-site role; descriptor and argument order remain fixed. |
+| `P:wj.a(Ljava/lang/String;Ljava/lang/String;Lrh;I)[Ldm;#1` | `groupName` | Resolves group then resource name and returns ll.a as dm[] frames; nonzero guard side effects remain. Parameter 1 has this lookup/call-site role; descriptor and argument order remain fixed. |
+| `P:wj.a(Ljava/lang/String;Ljava/lang/String;Lrh;I)[Ldm;#2` | `graphicsArchive` | Resolves group then resource name and returns ll.a as dm[] frames; nonzero guard side effects remain. Parameter 2 has this lookup/call-site role; descriptor and argument order remain fixed. |
+| `P:wj.a(Ljava/lang/String;Ljava/lang/String;Lrh;I)[Ldm;#3` | `methodGuard` | Resolves group then resource name and returns ll.a as dm[] frames; nonzero guard side effects remain. Parameter 3 has this lookup/call-site role; descriptor and argument order remain fixed. |

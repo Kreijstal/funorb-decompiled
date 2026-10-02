@@ -6,7 +6,7 @@ final class hi extends ee implements ta, pl {
     static volatile int field_C;
     vh field_D;
     private hk field_H;
-    static Sprite field_F;
+    static Sprite bakingForegroundSprite;
     static String createIneligibleText;
     static long field_G;
     private hk field_J;
@@ -647,7 +647,7 @@ final class hi extends ee implements ta, pl {
             return;
         }
         createIneligibleText = null;
-        field_F = null;
+        bakingForegroundSprite = null;
     }
 
     final boolean a(int param0, int param1, char param2, el param3) {

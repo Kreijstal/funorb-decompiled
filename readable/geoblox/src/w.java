@@ -80,10 +80,10 @@ final class w {
         field_b = null;
     }
 
-    final static nc a(String param0, rh param1, rh param2, boolean param3, String param4) {
-        int var5_int = 0;
+    final static nc loadPaletteFont(String groupName, rh glyphGraphicsArchive, rh fontMetricsArchive, boolean methodGuard, String resourceName) {
+        int archiveGroupId = 0;
         RuntimeException var5 = null;
-        int var6 = 0;
+        int archiveFileId = 0;
         nc stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -101,12 +101,12 @@ final class w {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param3) {
+          if (!methodGuard) {
             field_b = (String[]) null;
           }
-          var5_int = param1.a((byte) 127, param0);
-          var6 = param1.a(param4, -107, var5_int);
-          stackIn_3_0 = pi.a(param2, var5_int, -128, param1, var6);
+          archiveGroupId = glyphGraphicsArchive.a((byte) 127, groupName);
+          archiveFileId = glyphGraphicsArchive.a(resourceName, -107, archiveGroupId);
+          stackIn_3_0 = pi.a(fontMetricsArchive, archiveGroupId, -128, glyphGraphicsArchive, archiveFileId);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -115,7 +115,7 @@ final class w {
 
           stackIn_6_1 = new StringBuilder().append("w.A(");
 
-          if (param0 == null) {
+          if (groupName == null) {
             stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
             stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
             stackIn_7_2 = "null";
@@ -128,7 +128,7 @@ final class w {
 
           stackIn_9_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
 
-          if (param1 == null) {
+          if (glyphGraphicsArchive == null) {
             stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
             stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
             stackIn_10_2 = "null";
@@ -141,7 +141,7 @@ final class w {
 
           stackIn_12_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',');
 
-          if (param2 == null) {
+          if (fontMetricsArchive == null) {
             stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
             stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
             stackIn_13_2 = "null";
@@ -152,9 +152,9 @@ final class w {
           }
 
 
-          stackIn_15_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',').append(param3).append(',');
+          stackIn_15_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',').append(methodGuard).append(',');
 
-          if (param4 == null) {
+          if (resourceName == null) {
             stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
             stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
             stackIn_16_2 = "null";

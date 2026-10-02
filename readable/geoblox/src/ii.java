@@ -13,13 +13,13 @@ final class ii {
     String field_g;
     int field_l;
     String field_m;
-    static rh field_k;
+    static rh fontMetricsArchive;
     static String createPasswordValidText;
 
     public static void a(int param0) {
         if (param0 >= 121) {
             field_h = null;
-            field_k = null;
+            fontMetricsArchive = null;
             createPasswordValidText = null;
             field_d = null;
             highscoresText = null;
@@ -27,7 +27,7 @@ final class ii {
         }
         highscoresText = (String) null;
         field_h = null;
-        field_k = null;
+        fontMetricsArchive = null;
         createPasswordValidText = null;
         field_d = null;
         highscoresText = null;

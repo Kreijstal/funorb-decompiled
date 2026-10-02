@@ -4,7 +4,7 @@
 final class ec {
     static int field_b;
     static String okText;
-    static Sprite field_c;
+    static Sprite selectedThemeForeground;
     static String[] field_e;
     static int field_d;
 
@@ -174,7 +174,7 @@ final class ec {
         if (!param0) {
             okText = (String) null;
         }
-        field_c = null;
+        selectedThemeForeground = null;
         okText = null;
         field_e = null;
     }

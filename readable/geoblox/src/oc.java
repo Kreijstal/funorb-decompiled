@@ -13,65 +13,65 @@ final class oc implements dh {
         int var2 = 0;
         int var3 = 0;
         int var4 = Geoblox.field_C;
-        fe.field_j.b(0, 0);
-        ne.field_b.b(320 - (ne.field_b.field_s >> 1), param0 - (ne.field_b.field_o >> 1));
-        kh.field_h[0].b(0, 20);
+        fe.sunBackgroundSprite.b(0, 0);
+        ne.sunForegroundSprite.b(320 - (ne.sunForegroundSprite.field_s >> 1), param0 - (ne.sunForegroundSprite.field_o >> 1));
+        kh.screenTitleSprites[0].b(0, 20);
         int var1 = -70 + MatchingTextValidator.field_j;
         if (var1 >= 0) {
             if (!((double)var1 * 0.0174532925 < 1.5707963267948966)) {
-                var2 = tl.field_r[vc.field_h].field_s >> 1;
+                var2 = tl.introFaceFrames[vc.field_h].field_s >> 1;
                 if (vc.field_h >= 11) {
                     var3 = (MatchingTextValidator.field_j - fh.field_c >> 1) * (MatchingTextValidator.field_j - fh.field_c >> 1) >> 1;
-                    tl.field_r[vc.field_h].b(-(tl.field_r[vc.field_h].field_s >> 1) + 320, var3 + (-(tl.field_r[vc.field_h].field_o >> 1) + 240), si.field_j);
-                    qh.field_O[0].b(var2 + 320, -34 + var3 - (qh.field_O[0].field_o >> 1) + 240);
-                    qh.field_O[1].b(-var2 + 320 - qh.field_O[1].field_s, -(qh.field_O[1].field_o >> 1) + (240 + var3 + 22));
+                    tl.introFaceFrames[vc.field_h].b(-(tl.introFaceFrames[vc.field_h].field_s >> 1) + 320, var3 + (-(tl.introFaceFrames[vc.field_h].field_o >> 1) + 240), si.field_j);
+                    qh.introGeometryFrames[0].b(var2 + 320, -34 + var3 - (qh.introGeometryFrames[0].field_o >> 1) + 240);
+                    qh.introGeometryFrames[1].b(-var2 + 320 - qh.introGeometryFrames[1].field_s, -(qh.introGeometryFrames[1].field_o >> 1) + (240 + var3 + 22));
                     return;
                 }
                 var3 = MatchingTextValidator.field_j << 2;
                 if (var2 + 320 < 1000 - var3) {
-                    qh.field_O[0].b(1000 - var3, -34 + (240 - (qh.field_O[0].field_o >> 1)));
+                    qh.introGeometryFrames[0].b(1000 - var3, -34 + (240 - (qh.introGeometryFrames[0].field_o >> 1)));
                 } else {
-                    qh.field_O[0].b(320 + var2, 206 - (qh.field_O[0].field_o >> 1));
+                    qh.introGeometryFrames[0].b(320 + var2, 206 - (qh.introGeometryFrames[0].field_o >> 1));
                 }
-                if (-qh.field_O[1].field_s + (320 - var2) > var3 - 1200) {
-                    qh.field_O[1].b(var3 - 1200, 22 + (240 - (qh.field_O[1].field_o >> 1)));
-                    tl.field_r[vc.field_h].b(320 - var2, 240 - (tl.field_r[vc.field_h].field_o >> 1), si.field_j);
+                if (-qh.introGeometryFrames[1].field_s + (320 - var2) > var3 - 1200) {
+                    qh.introGeometryFrames[1].b(var3 - 1200, 22 + (240 - (qh.introGeometryFrames[1].field_o >> 1)));
+                    tl.introFaceFrames[vc.field_h].b(320 - var2, 240 - (tl.introFaceFrames[vc.field_h].field_o >> 1), si.field_j);
                     return;
                 }
-                qh.field_O[1].b(-qh.field_O[1].field_s - var2 + 320, 240 - (qh.field_O[1].field_o >> 1) + 22);
-                tl.field_r[vc.field_h].b(320 - var2, 240 - (tl.field_r[vc.field_h].field_o >> 1), si.field_j);
+                qh.introGeometryFrames[1].b(-qh.introGeometryFrames[1].field_s - var2 + 320, 240 - (qh.introGeometryFrames[1].field_o >> 1) + 22);
+                tl.introFaceFrames[vc.field_h].b(320 - var2, 240 - (tl.introFaceFrames[vc.field_h].field_o >> 1), si.field_j);
                 return;
             }
-            kh.field_h[0].c(0, 20, (int)(0.5 + Math.sin(2.0 * ((double)var1 * 0.0174532925)) * 90.0));
+            kh.screenTitleSprites[0].c(0, 20, (int)(0.5 + Math.sin(2.0 * ((double)var1 * 0.0174532925)) * 90.0));
         }
-        var2 = tl.field_r[vc.field_h].field_s >> 1;
+        var2 = tl.introFaceFrames[vc.field_h].field_s >> 1;
         if (vc.field_h >= 11) {
             var3 = (MatchingTextValidator.field_j - fh.field_c >> 1) * (MatchingTextValidator.field_j - fh.field_c >> 1) >> 1;
-            tl.field_r[vc.field_h].b(-(tl.field_r[vc.field_h].field_s >> 1) + 320, var3 + (-(tl.field_r[vc.field_h].field_o >> 1) + 240), si.field_j);
-            qh.field_O[0].b(var2 + 320, -34 + var3 - (qh.field_O[0].field_o >> 1) + 240);
-            qh.field_O[1].b(-var2 + 320 - qh.field_O[1].field_s, -(qh.field_O[1].field_o >> 1) + (240 + var3 + 22));
+            tl.introFaceFrames[vc.field_h].b(-(tl.introFaceFrames[vc.field_h].field_s >> 1) + 320, var3 + (-(tl.introFaceFrames[vc.field_h].field_o >> 1) + 240), si.field_j);
+            qh.introGeometryFrames[0].b(var2 + 320, -34 + var3 - (qh.introGeometryFrames[0].field_o >> 1) + 240);
+            qh.introGeometryFrames[1].b(-var2 + 320 - qh.introGeometryFrames[1].field_s, -(qh.introGeometryFrames[1].field_o >> 1) + (240 + var3 + 22));
             return;
         }
         var3 = MatchingTextValidator.field_j << 2;
         if (var2 + 320 < 1000 - var3) {
-            qh.field_O[0].b(1000 - var3, -34 + (240 - (qh.field_O[0].field_o >> 1)));
-            if (-qh.field_O[1].field_s + (320 - var2) > var3 - 1200) {
-                qh.field_O[1].b(var3 - 1200, 22 + (240 - (qh.field_O[1].field_o >> 1)));
-                tl.field_r[vc.field_h].b(320 - var2, 240 - (tl.field_r[vc.field_h].field_o >> 1), si.field_j);
+            qh.introGeometryFrames[0].b(1000 - var3, -34 + (240 - (qh.introGeometryFrames[0].field_o >> 1)));
+            if (-qh.introGeometryFrames[1].field_s + (320 - var2) > var3 - 1200) {
+                qh.introGeometryFrames[1].b(var3 - 1200, 22 + (240 - (qh.introGeometryFrames[1].field_o >> 1)));
+                tl.introFaceFrames[vc.field_h].b(320 - var2, 240 - (tl.introFaceFrames[vc.field_h].field_o >> 1), si.field_j);
                 return;
             }
-            qh.field_O[1].b(-qh.field_O[1].field_s - var2 + 320, 240 - (qh.field_O[1].field_o >> 1) + 22);
-            tl.field_r[vc.field_h].b(320 - var2, 240 - (tl.field_r[vc.field_h].field_o >> 1), si.field_j);
+            qh.introGeometryFrames[1].b(-qh.introGeometryFrames[1].field_s - var2 + 320, 240 - (qh.introGeometryFrames[1].field_o >> 1) + 22);
+            tl.introFaceFrames[vc.field_h].b(320 - var2, 240 - (tl.introFaceFrames[vc.field_h].field_o >> 1), si.field_j);
             return;
         }
-        qh.field_O[0].b(320 + var2, 206 - (qh.field_O[0].field_o >> 1));
-        if (-qh.field_O[1].field_s + (320 - var2) > var3 - 1200) {
-            qh.field_O[1].b(var3 - 1200, 22 + (240 - (qh.field_O[1].field_o >> 1)));
-            tl.field_r[vc.field_h].b(320 - var2, 240 - (tl.field_r[vc.field_h].field_o >> 1), si.field_j);
+        qh.introGeometryFrames[0].b(320 + var2, 206 - (qh.introGeometryFrames[0].field_o >> 1));
+        if (-qh.introGeometryFrames[1].field_s + (320 - var2) > var3 - 1200) {
+            qh.introGeometryFrames[1].b(var3 - 1200, 22 + (240 - (qh.introGeometryFrames[1].field_o >> 1)));
+            tl.introFaceFrames[vc.field_h].b(320 - var2, 240 - (tl.introFaceFrames[vc.field_h].field_o >> 1), si.field_j);
             return;
         }
-        qh.field_O[1].b(-qh.field_O[1].field_s - var2 + 320, 240 - (qh.field_O[1].field_o >> 1) + 22);
-        tl.field_r[vc.field_h].b(320 - var2, 240 - (tl.field_r[vc.field_h].field_o >> 1), si.field_j);
+        qh.introGeometryFrames[1].b(-qh.introGeometryFrames[1].field_s - var2 + 320, 240 - (qh.introGeometryFrames[1].field_o >> 1) + 22);
+        tl.introFaceFrames[vc.field_h].b(320 - var2, 240 - (tl.introFaceFrames[vc.field_h].field_o >> 1), si.field_j);
     }
 
     public static void a(boolean param0) {

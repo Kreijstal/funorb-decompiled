@@ -200,9 +200,9 @@ class ac extends ff {
               if (param1) {
                 continue L7;
               }
-              am.field_b.f(var3_int, var4);
+              am.unachievedSprite.f(var3_int, var4);
             } else {
-              sl.field_f[var10].f(var3_int, var4);
+              sl.achievementSprites[var10].f(var3_int, var4);
             }
             incrementValue$0 = var6;
             var6++;
@@ -234,32 +234,32 @@ class ac extends ff {
           L9: {
             var10 = stackIn_60_0 + stackIn_60_1;
             if (var7 != -1) {
-              fi.field_d.b(pg.field_a[var7], 315, var10, 0, -1);
-              var11 = -fi.field_d.field_q + fi.field_d.field_o;
+              fi.smallFont.b(pg.field_a[var7], 315, var10, 0, -1);
+              var11 = -fi.smallFont.field_q + fi.smallFont.field_o;
               var12 = 280;
               if (0 != (1 << var7 & var5)) {
-                sl.field_f[var7].b(160, var12);
+                sl.achievementSprites[var7].b(160, var12);
                 var12 += 30;
-                dd.field_G.a(kd.achievedText, 318, var12, 0, -1);
+                dd.uiPaletteFont.a(kd.achievedText, 318, var12, 0, -1);
               } else {
-                am.field_b.b(160, var12);
+                am.unachievedSprite.b(160, var12);
                 var12 += 30;
-                dd.field_G.field_K[0][wf.field_p] = 15488514;
-                dd.field_G.a(ib.field_d, 318, var12, 0, -1);
-                dd.field_G.field_K[0][wf.field_p] = 16689938;
+                dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
+                dd.uiPaletteFont.a(ib.field_d, 318, var12, 0, -1);
+                dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
               }
-              var12 = var12 + (fi.field_d.a(ri.field_b[var7], 318, var12, 190, 200, 0, -1, 0, 0, 16) * var11 + var11);
+              var12 = var12 + (fi.smallFont.a(ri.field_b[var7], 318, var12, 190, 200, 0, -1, 0, 0, 16) * var11 + var11);
               var12 += 10;
-              fi.field_d.a(wj.a(sl.orbPointsText, new String[]{Integer.toString(th.field_h[var7])}, (byte) -50), 318, 360, 0, -1);
+              fi.smallFont.a(wj.a(sl.orbPointsText, new String[]{Integer.toString(th.field_h[var7])}, (byte) -50), 318, 360, 0, -1);
               for (var13 = 0; var13 < kk.field_s[var7]; var13++) {
-                uk.field_m.f(318 + 10 * var13, 370);
+                uk.orbCoinSprite.f(318 + 10 * var13, 370);
               }
               var12 = var12 + var11;
               break L9;
             }
-            fi.field_d.b(w.mouseOverIconText, 315, var10, 0, -1);
+            fi.smallFont.b(w.mouseOverIconText, 315, var10, 0, -1);
             if (fh.c(-94)) {
-              dd.field_G.a(ni.createToUseText, 125, 350, 395, 100, 0, -1, 1, 0, 26);
+              dd.uiPaletteFont.a(ni.createToUseText, 125, 350, 395, 100, 0, -1, 1, 0, 26);
             }
           }
           if (param2 > -61) {

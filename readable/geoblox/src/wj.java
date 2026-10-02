@@ -268,10 +268,10 @@ final class wj extends sh {
         }
     }
 
-    final static Sprite[] a(String param0, String param1, rh param2, int param3) {
-        int var4_int = 0;
+    final static Sprite[] loadSpriteFrames(String resourceName, String groupName, rh graphicsArchive, int methodGuard) {
+        int archiveGroupId = 0;
         RuntimeException var4 = null;
-        int var5 = 0;
+        int archiveFileId = 0;
         Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -286,12 +286,12 @@ final class wj extends sh {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param2.a((byte) 126, param1);
-          var5 = param2.a(param0, -114, var4_int);
-          if (param3 != 0) {
+          archiveGroupId = graphicsArchive.a((byte) 126, groupName);
+          archiveFileId = graphicsArchive.a(resourceName, -114, archiveGroupId);
+          if (methodGuard != 0) {
             field_G = (boolean[]) null;
           }
-          stackIn_3_0 = ll.a(var4_int, (byte) -81, var5, param2);
+          stackIn_3_0 = ll.a(archiveGroupId, (byte) -81, archiveFileId, graphicsArchive);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -300,7 +300,7 @@ final class wj extends sh {
 
           stackIn_6_1 = new StringBuilder().append("wj.C(");
 
-          if (param0 == null) {
+          if (resourceName == null) {
             stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
             stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
             stackIn_7_2 = "null";
@@ -313,7 +313,7 @@ final class wj extends sh {
 
           stackIn_9_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
 
-          if (param1 == null) {
+          if (groupName == null) {
             stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
             stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
             stackIn_10_2 = "null";
@@ -326,7 +326,7 @@ final class wj extends sh {
 
           stackIn_12_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',');
 
-          if (param2 == null) {
+          if (graphicsArchive == null) {
             stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
             stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
             stackIn_13_2 = "null";
@@ -335,7 +335,7 @@ final class wj extends sh {
             stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
             stackIn_13_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',').append(methodGuard).append(')').toString());
         }
     }
 

@@ -7,7 +7,7 @@ final class uk extends TextInputValidator {
     static float avatarTintBlueDelta;
     static int field_o;
     static String field_p;
-    static Sprite field_m;
+    static Sprite orbCoinSprite;
     static String[] monthNames;
     private String field_k;
 
@@ -84,7 +84,7 @@ final class uk extends TextInputValidator {
         int var2 = 0;
         int var3 = Geoblox.field_C;
         if (param1 != 24146) {
-            field_m = (Sprite) null;
+            orbCoinSprite = (Sprite) null;
             var2 = tutorialStepId;
             if (var2 == 0) {
                 return vh.tutorialRotationMessage;
@@ -397,7 +397,7 @@ final class uk extends TextInputValidator {
 
     final static boolean g(int param0) {
         if (param0 < 29) {
-            field_m = (Sprite) null;
+            orbCoinSprite = (Sprite) null;
             qg.b(9313);
             if (!fh.c(-117)) {
                 return hj.field_c ? true : false;
@@ -428,14 +428,14 @@ final class uk extends TextInputValidator {
 
     public static void d(byte param0) {
         if (param0 >= 70) {
-            field_m = null;
+            orbCoinSprite = null;
             field_p = null;
             field_i = null;
             monthNames = null;
             return;
         }
-        field_m = (Sprite) null;
-        field_m = null;
+        orbCoinSprite = (Sprite) null;
+        orbCoinSprite = null;
         field_p = null;
         field_i = null;
         monthNames = null;

@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ll {
-    static Sprite[] field_h;
+    static Sprite[] frameNineSliceSprites;
     static String createMoreSuggestionsText;
-    static rh field_f;
+    static rh gameGraphicsArchive;
     static rf field_d;
     static boolean field_e;
     static String createEmailTooltipText;
@@ -63,11 +63,11 @@ final class ll {
 
     public static void a(int param0) {
         createEmailTooltipText = null;
-        field_f = null;
+        gameGraphicsArchive = null;
         backText = null;
         createMoreSuggestionsText = null;
         field_d = null;
-        field_h = null;
+        frameNineSliceSprites = null;
         if (param0 != 7) {
             return;
         }

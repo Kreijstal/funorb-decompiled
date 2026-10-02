@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class MenuScreen {
-    static Sprite[][][] field_m;
+    static Sprite[][][] amorphousFramesByThemeAndVariant;
     int firstItemY;
     int itemCount;
     static float field_c;
@@ -144,7 +144,7 @@ abstract class MenuScreen {
 
     public static void a(byte param0) {
         int var1 = -15 / ((param0 - 75) / 32);
-        field_m = (Sprite[][][]) null;
+        amorphousFramesByThemeAndVariant = (Sprite[][][]) null;
         field_i = null;
     }
 
@@ -265,7 +265,7 @@ abstract class MenuScreen {
     }
 
     static {
-        field_m = new Sprite[7][7][4];
+        amorphousFramesByThemeAndVariant = new Sprite[7][7][4];
         avatarFeedbackFrameBase = 0;
         field_a = 0L;
     }

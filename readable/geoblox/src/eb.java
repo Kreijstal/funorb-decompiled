@@ -3,7 +3,7 @@
  */
 final class eb {
     float field_j;
-    static Sprite[] field_g;
+    static Sprite[] mouseBoxFrames;
     private int field_c;
     private ii[] field_a;
     String field_e;
@@ -34,7 +34,7 @@ final class eb {
 
     public static void a(byte param0) {
         field_f = null;
-        field_g = null;
+        mouseBoxFrames = null;
         if (param0 <= -68) {
             return;
         }

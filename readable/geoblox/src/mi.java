@@ -19,7 +19,7 @@ class mi extends kg {
     static int field_C;
     private Sprite[] field_eb;
     private boolean field_L;
-    static Sprite[] field_B;
+    static Sprite[] sparkleFrames;
     private int field_J;
     private Sprite[] field_D;
     private String field_Y;
@@ -169,7 +169,7 @@ class mi extends kg {
             }
           }
           if (param0 != -2147483648) {
-            field_B = (Sprite[]) null;
+            sparkleFrames = (Sprite[]) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -203,7 +203,7 @@ class mi extends kg {
         }
         invalidUserOrPasswordText = null;
         field_y = null;
-        field_B = null;
+        sparkleFrames = null;
     }
 
     private mi(long param0, mi param1, int param2, int param3, int param4, int param5, String param6) {

@@ -3,7 +3,7 @@
  */
 final class lb {
     static long field_c;
-    static Sprite field_d;
+    static Sprite sweetsForegroundSprite;
     static boolean field_a;
     static int field_b;
 
@@ -12,7 +12,7 @@ final class lb {
     }
 
     public static void a(int param0) {
-        field_d = null;
+        sweetsForegroundSprite = null;
         int var1 = -53 / ((param0 + 21) / 42);
     }
 

@@ -4,7 +4,7 @@
 final class th extends lf {
     static int[] field_h;
     static String defaultPlayerNameText;
-    static IndexedSprite field_f;
+    static IndexedSprite sportsBackgroundSprite;
 
     th(long param0, String param1) {
         super(param0, param1);
@@ -68,10 +68,10 @@ final class th extends lf {
 
     public static void d(byte param0) {
         field_h = null;
-        field_f = null;
+        sportsBackgroundSprite = null;
         defaultPlayerNameText = null;
         if (param0 != -109) {
-            field_f = (IndexedSprite) null;
+            sportsBackgroundSprite = (IndexedSprite) null;
         }
     }
 

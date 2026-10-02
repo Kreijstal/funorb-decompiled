@@ -4,13 +4,13 @@
 final class vj {
     static qa field_b;
     static int[] field_c;
-    static Sprite[] field_a;
+    static Sprite[] bangFrames;
     private static String field_z;
 
     public static void a(int param0) {
         int var1 = 86 % ((51 - param0) / 45);
         field_c = null;
-        field_a = null;
+        bangFrames = null;
         field_b = null;
     }
 

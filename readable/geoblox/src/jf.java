@@ -8,7 +8,7 @@ final class jf implements dh {
     static int[] field_b;
     private int field_e;
     static int avatarTintFadeTicks;
-    static Sprite field_a;
+    static Sprite rotatedThemeForegroundRaster;
     private int field_h;
     private m field_f;
     private int field_k;
@@ -21,7 +21,7 @@ final class jf implements dh {
             hk.field_C.b(gf.field_d, -54);
             return;
         }
-        field_a = (Sprite) null;
+        rotatedThemeForegroundRaster = (Sprite) null;
         hk.field_C.b(gf.field_d, -54);
     }
 
@@ -161,7 +161,7 @@ final class jf implements dh {
     }
 
     public static void b(byte param0) {
-        field_a = null;
+        rotatedThemeForegroundRaster = null;
         int var1 = 14 % ((param0 - 27) / 47);
         field_b = null;
     }

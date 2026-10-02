@@ -9,14 +9,14 @@ final class sd extends pb {
     static byte[][] field_C;
     int field_D;
     static int field_x;
-    static Sprite field_y;
+    static Sprite barSprite;
     static String field_z;
 
     public static void e(byte param0) {
         if (param0 < 88) {
             return;
         }
-        field_y = null;
+        barSprite = null;
         field_z = null;
         field_B = null;
         field_C = (byte[][]) null;

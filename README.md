@@ -23,8 +23,12 @@ Difficulty and spawning now name the step flags, sprite-variant/category
 bounds, special-kind probability, release interval and queue geometry.
 The previous naming pass added 38 rules. The Boolean-carrier pass removed
 14 obsolete names and migrated 61 local ordinals plus one generated field type.
-The current integral-guard pass preserves all 1,194 guarded rules unchanged. Independent
-native fixtures verify 84,661 additional difficulty/reset/selection cases,
+The preceding integral-guard pass preserved all 1,194 guarded rules unchanged.
+The current naming pass adds 117 identities for gameplay sprite tables, avatar
+frames, HUD graphics, theme selection, font/sprite loaders and preparation locals.
+It retains the same raw input and all prior rules: 1,311 rules now apply 19,829
+identifier edits, with original resource keys and numeric indexes preserved.
+Independent native fixtures verify 84,661 additional difficulty/reset/selection cases,
 including floating-point casts, recursive failures, partial writes and seeded
 random draw consumption. The current input and decompiler revisions are pinned
 in the manifest.
@@ -45,7 +49,7 @@ prior snapshots in Git.
 
 ## GeoBlox source refresh
 
-The latest owned decompiler reuses cached JVM integral-predicate evidence to
+The latest structural decompiler pass reuses cached JVM integral-predicate evidence to
 simplify relational inversions during nested-tail reconstruction. It removes
 18 lines across four files and reduces `ld.advanceDifficulty` from 56 lines to
 38. Variant, recursive-advance and category updates now each have one path;
@@ -61,11 +65,11 @@ uncertainty still refuses reconstruction. GeoBlox needs no generated block
 labels. The preceding Boolean pass eliminates 221 integer locals, including
 all 17 difficulty and 13 boundary result carriers.
 
-All 303 sources compile with 20,710 unchanged declaration identities and 388
-override edges. Exactly 26 references disappear with the two category-update
-clones and two recursive-advance clones; none are added. All 1,194 guarded names
-and evidence remain unchanged, with no ordinal migrations. The current mirror
-checks 150,801 bindings and makes 18,611 identifier edits. The emitter passes
+In that structural pass, all 303 sources compiled with 20,710 unchanged
+declaration identities and 388 override edges. Exactly 26 references disappeared with the two category-update
+clones and two recursive-advance clones; none were added. All 1,194 guarded names
+and evidence remained unchanged, with no ordinal migrations. That mirror
+checked 150,801 bindings and made 18,611 identifier edits. The emitter passes
 23 groups and 40,129 native comparisons, including 35,280 new integral-guard
 checks. All six game probes retain their native traces. Clean committed
 decompiler source reproduces all raw Java and diagnostics; dictionary reversal

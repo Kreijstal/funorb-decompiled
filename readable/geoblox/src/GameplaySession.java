@@ -47,7 +47,7 @@ final class GameplaySession {
     private int sceneAnimationTick;
     private boolean rotationControlsSwapped;
     private boolean matchBatchProcessedThisTick;
-    private boolean field_L;
+    private boolean showGameOverOverlay;
     boolean boardRasterDirty;
     private PcmSampleStream resultExpansionAudioStream;
     int newActionCount;
@@ -79,9 +79,9 @@ final class GameplaySession {
         }
         L0: {
           promptText = uk.tutorialMessageForStep(this.tutorialStepId, 24146);
-          lineSpacing = fi.field_d.field_o - fi.field_d.field_q + param0;
+          lineSpacing = fi.smallFont.field_o - fi.smallFont.field_q + param0;
           promptWidthThenButtonX = 460;
-          promptHeight = 30 + fi.field_d.b(promptText, promptWidthThenButtonX) * lineSpacing;
+          promptHeight = 30 + fi.smallFont.b(promptText, promptWidthThenButtonX) * lineSpacing;
           promptTop = 300;
           if (this.tutorialStepId == 0) {
             promptTop = 232;
@@ -101,49 +101,49 @@ final class GameplaySession {
           promptTop = 270;
         }
         L3: {
-          ma.a(promptTop, 70, 10 + promptHeight, (byte) -92, 500, ll.field_h);
-          fi.field_d.a(promptText, 95, 15 + promptTop, promptWidthThenButtonX, 300, 1, -1, 0, 0, lineSpacing);
+          ma.a(promptTop, 70, 10 + promptHeight, (byte) -92, 500, ll.frameNineSliceSprites);
+          fi.smallFont.a(promptText, 95, 15 + promptTop, promptWidthThenButtonX, 300, 1, -1, 0, 0, lineSpacing);
           if (this.tutorialStepId == 5) {
             if (qa.field_a > 100) {
               if (qa.field_a < 340) {
                 if (ue.field_e > 440) {
                   if (ue.field_e < 476) {
-                    dd.field_G.field_K[0][wf.field_p] = 15488514;
+                    dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
                   }
                 }
               }
             }
-            ma.a(440, 100, 36, (byte) -92, 240, eb.field_g);
-            dd.field_G.b(cf.field_j, 220, 468, 0, -1);
-            dd.field_G.field_K[0][wf.field_p] = 16689938;
-            ma.a(440, 380, 36, (byte) -92, 160, eb.field_g);
+            ma.a(440, 100, 36, (byte) -92, 240, eb.mouseBoxFrames);
+            dd.uiPaletteFont.b(cf.field_j, 220, 468, 0, -1);
+            dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
+            ma.a(440, 380, 36, (byte) -92, 160, eb.mouseBoxFrames);
             if (380 < qa.field_a) {
               if (540 > qa.field_a) {
                 if (ue.field_e > 440) {
                   if (476 > ue.field_e) {
-                    dd.field_G.field_K[0][wf.field_p] = 15488514;
+                    dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
                   }
                 }
               }
             }
-            dd.field_G.b(nk.startGameText, promptWidthThenButtonX, 468, 0, -1);
-            dd.field_G.field_K[0][wf.field_p] = 16689938;
+            dd.uiPaletteFont.b(nk.startGameText, promptWidthThenButtonX, 468, 0, -1);
+            dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
             if (var7 == 0) {
               break L3;
             }
           }
-          ma.a(440, 240, 36, (byte) -92, 160, eb.field_g);
+          ma.a(440, 240, 36, (byte) -92, 160, eb.mouseBoxFrames);
           if (250 < qa.field_a) {
             if (qa.field_a < 389) {
               if (ue.field_e > 440) {
                 if (476 > ue.field_e) {
-                  dd.field_G.field_K[0][wf.field_p] = 15488514;
+                  dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
                 }
               }
             }
           }
-          dd.field_G.b(mi.field_y, 320, 468, 0, -1);
-          dd.field_G.field_K[0][wf.field_p] = 16689938;
+          dd.uiPaletteFont.b(mi.field_y, 320, 468, 0, -1);
+          dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
         }
     }
 
@@ -319,10 +319,10 @@ final class GameplaySession {
             }
             var2_ref_String = "";
           }
-          var3_ref_String = gf.a(ff.waitingForGraphicsText, ll.field_f, var2_ref_String, AccountWelcomePanel.loadingGraphicsText, true);
-          var4 = 30 + dd.field_G.a(var3_ref_String);
-          ma.a(215, 320 - var4 / 2, 50, (byte) -92, var4, ll.field_h);
-          dd.field_G.b(var3_ref_String, 320, 250, 0, -1);
+          var3_ref_String = gf.a(ff.waitingForGraphicsText, ll.gameGraphicsArchive, var2_ref_String, AccountWelcomePanel.loadingGraphicsText, true);
+          var4 = 30 + dd.uiPaletteFont.a(var3_ref_String);
+          ma.a(215, 320 - var4 / 2, 50, (byte) -92, var4, ll.frameNineSliceSprites);
+          dd.uiPaletteFont.b(var3_ref_String, 320, 250, 0, -1);
           return;
         }
         L11: {
@@ -359,14 +359,14 @@ final class GameplaySession {
           }
         }
         sh.field_y.a(255);
-        mf.field_a.b(0, 0);
+        mf.selectedThemeBackground.b(0, 0);
         var3 = 4;
         var4 = 4;
         if (param0 >= -28) {
           this.updateSession(-63);
         }
         L17: {
-          if (this.field_L) {
+          if (this.showGameOverOverlay) {
             if (this.sceneAnimationTick <= 266) {
               var5_float = (float)this.sceneAnimationTick / 266.0f;
               var6_float = -var5_float + 1.0f;
@@ -387,29 +387,29 @@ final class GameplaySession {
             if (10 > var5) {
               var5 = 10;
             }
-            var6 = -fi.field_d.field_q + fi.field_d.field_o;
-            var7_int = fi.field_d.c(v.field_n, 640) + 40;
-            var8 = fi.field_d.b(v.field_n, 640) * var6 + 10;
-            ma.a(var5, -(var7_int / 2) + 320, 20 + var8, (byte) -92, var7_int, ll.field_h);
-            fi.field_d.b(v.field_n, 320, var5 + 28, 1, -1);
-            fi.field_d.b(v.field_n, 319, 28 + var5, 1, -1);
+            var6 = -fi.smallFont.field_q + fi.smallFont.field_o;
+            var7_int = fi.smallFont.c(v.field_n, 640) + 40;
+            var8 = fi.smallFont.b(v.field_n, 640) * var6 + 10;
+            ma.a(var5, -(var7_int / 2) + 320, 20 + var8, (byte) -92, var7_int, ll.frameNineSliceSprites);
+            fi.smallFont.b(v.field_n, 320, var5 + 28, 1, -1);
+            fi.smallFont.b(v.field_n, 319, 28 + var5, 1, -1);
             if (var14 == 0) {
               break L19;
             }
           }
           L22: {
-            lj.field_d.b(var3, var4);
+            lj.smallBoxSprite.b(var3, var4);
             if (0 == this.sessionPhase) {
               if (!ih.areEntityQueuesSettled(0)) {
                 break L22;
               }
             }
-            vh.field_G.b(446, 410);
+            vh.largeBoxSprite.b(446, 410);
             if (var14 == 0) {
               break L19;
             }
           }
-          g.field_i.b(468, 410);
+          g.countBoxSprite.b(468, 410);
         }
         L24: {
           if (!this.tutorialMode) {
@@ -438,11 +438,11 @@ final class GameplaySession {
         if (!this.debugReducedRendering) {
           ni.f(484842465);
         }
-        jf.field_a.e();
+        jf.rotatedThemeForegroundRaster.e();
         SoftwareRasterizer.c();
-        ec.field_c.rotateNearest(ec.field_c.field_s << 3, ec.field_c.field_o << 3, jf.field_a.field_s << 3, jf.field_a.field_o << 3, (int)(65535.0 * ((double)(-this.boardAngleRadians) / 6.283185307179586)), 4096);
+        ec.selectedThemeForeground.rotateNearest(ec.selectedThemeForeground.field_s << 3, ec.selectedThemeForeground.field_o << 3, jf.rotatedThemeForegroundRaster.field_s << 3, jf.rotatedThemeForegroundRaster.field_o << 3, (int)(65535.0 * ((double)(-this.boardAngleRadians) / 6.283185307179586)), 4096);
         sh.field_y.a(255);
-        w.a(jf.field_a, -(jf.field_a.field_s >> 1) + 320, -(jf.field_a.field_o >> 1) + 240);
+        w.a(jf.rotatedThemeForegroundRaster, -(jf.rotatedThemeForegroundRaster.field_s >> 1) + 320, -(jf.rotatedThemeForegroundRaster.field_o >> 1) + 240);
         if (!this.debugReducedRendering) {
           uh.d(4740);
         }
@@ -537,23 +537,23 @@ final class GameplaySession {
                             if (var8 < 10) {
                               var8 = 10;
                             }
-                            var9 = fi.field_d.field_o - fi.field_d.field_q;
-                            var10 = fi.field_d.c(v.field_n, 640) + 40;
-                            renderedEntityX = fi.field_d.b(v.field_n, 640) * var9 + 10;
+                            var9 = fi.smallFont.field_o - fi.smallFont.field_q;
+                            var10 = fi.smallFont.c(v.field_n, 640) + 40;
+                            renderedEntityX = fi.smallFont.b(v.field_n, 640) * var9 + 10;
                             SoftwareRasterizer.a((320 - var10 / 2) / 2, var8 / 2, var10 / 2, (20 + renderedEntityX) / 2, var5);
                             break L43;
                           }
-                          lj.field_d.a(var3 / 2, var4 / 2, lj.field_d.field_s / 2, lj.field_d.field_o / 2, var5);
+                          lj.smallBoxSprite.a(var3 / 2, var4 / 2, lj.smallBoxSprite.field_s / 2, lj.smallBoxSprite.field_o / 2, var5);
                         }
                         if (this.sessionPhase == 0) {
                           if (!ih.areEntityQueuesSettled(0)) {
-                            g.field_i.a(234, 205, g.field_i.field_s / 2, g.field_i.field_o / 2, var5);
+                            g.countBoxSprite.a(234, 205, g.countBoxSprite.field_s / 2, g.countBoxSprite.field_o / 2, var5);
                             if (var14 == 0) {
                               break L43;
                             }
                           }
                         }
-                        vh.field_G.a(223, 205, vh.field_G.field_s / 2, vh.field_G.field_o / 2, var5);
+                        vh.largeBoxSprite.a(223, 205, vh.largeBoxSprite.field_s / 2, vh.largeBoxSprite.field_o / 2, var5);
                       }
                       SoftwareRasterizer.d(160, 120, 21, 16777215);
                       SoftwareRasterizer.e(2, 2, 0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.field_b);
@@ -573,36 +573,36 @@ final class GameplaySession {
         L48: {
           if (!this.tutorialMode) {
             if (this.delayedActionCountdown > 0) {
-              lj.field_d.b(-(lj.field_d.field_s >> 1) + 320, 60 - (lj.field_d.field_o >> 1) + 240);
-              dd.field_G.b(wl.field_b, 320, 310, 0, -1);
+              lj.smallBoxSprite.b(-(lj.smallBoxSprite.field_s >> 1) + 320, 60 - (lj.smallBoxSprite.field_o >> 1) + 240);
+              dd.uiPaletteFont.b(wl.field_b, 320, 310, 0, -1);
             }
-            eg.field_q[this.pointsPanelFrameIndex].b(this.pointsPanelX, 4);
+            eg.pointsPanelGlowFrames[this.pointsPanelFrameIndex].b(this.pointsPanelX, 4);
             if (640 > this.pointsPanelX) {
               if (0 < this.pendingPopupPoints) {
-                dd.field_G.a(wj.a(ic.field_a, new String[]{this.popupPointsText.toString()}, (byte) -79), this.pointsPanelX + 20, 34, 0, -1);
+                dd.uiPaletteFont.a(wj.a(ic.field_a, new String[]{this.popupPointsText.toString()}, (byte) -79), this.pointsPanelX + 20, 34, 0, -1);
               }
             }
             if (this.showSessionCounters) {
-              dd.field_G.a(wj.a(sh.field_z, new String[]{Integer.toString(ec.field_b)}, (byte) -26), 400, 50, 0, -1);
-              dd.field_G.a(wj.a(qg.field_e, new String[]{Integer.toString(ji.difficultyStep)}, (byte) -71), 400, 80, 0, -1);
+              dd.uiPaletteFont.a(wj.a(sh.field_z, new String[]{Integer.toString(ec.field_b)}, (byte) -26), 400, 50, 0, -1);
+              dd.uiPaletteFont.a(wj.a(qg.field_e, new String[]{Integer.toString(ji.difficultyStep)}, (byte) -71), 400, 80, 0, -1);
             }
             L53: {
               bd.drawScorePopups(-117);
               this.c((byte) 64);
-              if (this.field_L) {
-                lj.field_d.b(var3, var4);
+              if (this.showGameOverOverlay) {
+                lj.smallBoxSprite.b(var3, var4);
                 if (this.sceneAnimationTick < 266) {
-                  kh.field_h[6].b(0, (this.sceneAnimationTick >> 1) - 113);
+                  kh.screenTitleSprites[6].b(0, (this.sceneAnimationTick >> 1) - 113);
                   if (var14 == 0) {
                     break L53;
                   }
                 }
-                kh.field_h[6].b(0, 20);
-                kh.field_h[6].c(0, 20, (int)(Math.cos((double)(-266 + this.sceneAnimationTick) / 40.0) * -64.0 + 64.0));
+                kh.screenTitleSprites[6].b(0, 20);
+                kh.screenTitleSprites[6].c(0, 20, (int)(Math.cos((double)(-266 + this.sceneAnimationTick) / 40.0) * -64.0 + 64.0));
               }
             }
             L55: {
-              dd.field_G.a(wj.a(pa.field_a, new String[]{this.scoreText.toString()}, (byte) -53), 15 + var3, 30 + var4, 0, -1);
+              dd.uiPaletteFont.a(wj.a(pa.field_a, new String[]{this.scoreText.toString()}, (byte) -53), 15 + var3, 30 + var4, 0, -1);
               if (ih.areEntityQueuesSettled(0)) {
                 L56: {
                   if (0 != this.sessionPhase) {
@@ -1261,37 +1261,37 @@ final class GameplaySession {
               if (ki.field_d == 5) {
                 GameScreen.selectedThemeId = 1;
                 IntrusiveNode.a(param0 ^ 1578896207, GameScreen.selectedThemeId);
-                cd.a((byte) 110);
+                cd.selectThemeRenderAssets((byte) 110);
               }
               if (ki.field_d == 6) {
                 GameScreen.selectedThemeId = 0;
                 IntrusiveNode.a(-126, GameScreen.selectedThemeId);
-                cd.a((byte) 126);
+                cd.selectThemeRenderAssets((byte) 126);
               }
               if (7 == ki.field_d) {
                 GameScreen.selectedThemeId = 6;
                 IntrusiveNode.a(-99, GameScreen.selectedThemeId);
-                cd.a((byte) 113);
+                cd.selectThemeRenderAssets((byte) 113);
               }
               if (ki.field_d == 8) {
                 GameScreen.selectedThemeId = 5;
                 IntrusiveNode.a(-124, GameScreen.selectedThemeId);
-                cd.a((byte) 115);
+                cd.selectThemeRenderAssets((byte) 115);
               }
               if (ki.field_d == 9) {
                 GameScreen.selectedThemeId = 3;
                 IntrusiveNode.a(-98, GameScreen.selectedThemeId);
-                cd.a((byte) 122);
+                cd.selectThemeRenderAssets((byte) 122);
               }
               if (10 == ki.field_d) {
                 GameScreen.selectedThemeId = 4;
                 IntrusiveNode.a(param0 ^ 1578896198, GameScreen.selectedThemeId);
-                cd.a((byte) 101);
+                cd.selectThemeRenderAssets((byte) 101);
               }
               if (ki.field_d == 11) {
                 GameScreen.selectedThemeId = 2;
                 IntrusiveNode.a(-118, GameScreen.selectedThemeId);
-                cd.a((byte) 82);
+                cd.selectThemeRenderAssets((byte) 82);
               }
               if (ki.field_d == 12) {
                 stackIn_454_0 = this;
@@ -1308,7 +1308,7 @@ final class GameplaySession {
               if (36 == ki.field_d) {
                 GameScreen.selectedThemeId = GameScreen.selectedThemeId + 1;
                 GameScreen.selectedThemeId = GameScreen.selectedThemeId % 7;
-                cd.a((byte) 108);
+                cd.selectThemeRenderAssets((byte) 108);
               }
               if (ki.field_d != 39) {
                 continue L60;
@@ -1456,7 +1456,7 @@ final class GameplaySession {
         L1: {
           if (!this.tutorialMode) {
             this.sessionEnding = true;
-            this.field_L = true;
+            this.showGameOverOverlay = true;
             this.emitPointsPopup(false);
             this.addScore((byte) 127, wa.collectUnfinishedPopupPoints(-25866));
             this.submitScore((byte) -70);
@@ -1720,35 +1720,35 @@ final class GameplaySession {
         }
         L1: {
           if (2 == this.sessionPhase) {
-            pk.field_k.b(320 - (this.sceneAnimationTick >> 1), 240 - (this.sceneAnimationTick >> 1), this.sceneAnimationTick, this.sceneAnimationTick, 150);
-            lj.field_d.b(this.resultPanelX, -(lj.field_d.field_o >> 1) + 240 + 60);
-            dd.field_G.a(sg.field_f, 15 + this.resultPanelX, 312, 0, -1);
+            pk.resultBubbleSprite.b(320 - (this.sceneAnimationTick >> 1), 240 - (this.sceneAnimationTick >> 1), this.sceneAnimationTick, this.sceneAnimationTick, 150);
+            lj.smallBoxSprite.b(this.resultPanelX, -(lj.smallBoxSprite.field_o >> 1) + 240 + 60);
+            dd.uiPaletteFont.a(sg.field_f, 15 + this.resultPanelX, 312, 0, -1);
             if (var4 == 0) {
               break L1;
             }
           }
           shrinkingDiameter = -this.sceneAnimationTick + 460 + 460;
           if (this.sessionPhase == 3) {
-            pk.field_k.b(-(shrinkingDiameter >> 1) + 320, 240 - (shrinkingDiameter >> 1), shrinkingDiameter, shrinkingDiameter, 150);
-            lj.field_d.b(-(lj.field_d.field_s >> 1) + 320, -(lj.field_d.field_o >> 1) + 240 + 60);
+            pk.resultBubbleSprite.b(-(shrinkingDiameter >> 1) + 320, 240 - (shrinkingDiameter >> 1), shrinkingDiameter, shrinkingDiameter, 150);
+            lj.smallBoxSprite.b(-(lj.smallBoxSprite.field_s >> 1) + 320, -(lj.smallBoxSprite.field_o >> 1) + 240 + 60);
             shrinkingBonusText = Integer.toString(this.resultBonusPoints);
-            dd.field_G.b(shrinkingBonusText, 320, 312, 0, -1);
+            dd.uiPaletteFont.b(shrinkingBonusText, 320, 312, 0, -1);
             if (this.boardEmptyAtResultStart) {
-              dd.field_G.b(ld.field_a, 320, 352, 0, -1);
+              dd.uiPaletteFont.b(ld.field_a, 320, 352, 0, -1);
             }
             if (var4 == 0) {
               break L1;
             }
           }
-          k.field_a.d(-(k.field_a.field_s >> 1) + 320, 240 - (k.field_a.field_o >> 1), this.resultSequenceCountdown - 150 + 150);
-          lj.field_d.b(-(lj.field_d.field_s >> 1) + 320, 300 - (lj.field_d.field_o >> 1));
+          k.popSprite.d(-(k.popSprite.field_s >> 1) + 320, 240 - (k.popSprite.field_o >> 1), this.resultSequenceCountdown - 150 + 150);
+          lj.smallBoxSprite.b(-(lj.smallBoxSprite.field_s >> 1) + 320, 300 - (lj.smallBoxSprite.field_o >> 1));
           countdownBonusText = Integer.toString(this.resultBonusPoints);
-          dd.field_G.b(countdownBonusText, 320, 312, 0, -1);
+          dd.uiPaletteFont.b(countdownBonusText, 320, 312, 0, -1);
           if (this.boardEmptyAtResultStart) {
-            dd.field_G.b(ld.field_a, 320, 352, 0, -1);
+            dd.uiPaletteFont.b(ld.field_a, 320, 352, 0, -1);
           }
         }
-        dd.field_G.a(kd.field_d, 426, 404, 200, 100, 0, -1, 2, 0, 30);
+        dd.uiPaletteFont.a(kd.field_d, 426, 404, 200, 100, 0, -1, 2, 0, 30);
     }
 
     private final void updateResultSequence(int methodGuard) {
@@ -1891,7 +1891,7 @@ final class GameplaySession {
               this.resultExpansionAudioStream = PcmSampleStream.createForPlaybackRate(fl.field_c[28], 2 * resultProgressPercent + 200, 45);
               GameplayEntity.registerAudioStream(false, this.resultExpansionAudioStream);
             }
-            if (this.resultPanelX <= 320 - (lj.field_d.field_s >> 1)) {
+            if (this.resultPanelX <= 320 - (lj.smallBoxSprite.field_s >> 1)) {
               break L10;
             }
             this.resultPanelX = this.resultPanelX - 1;
@@ -1959,31 +1959,31 @@ final class GameplaySession {
         }
         L0: {
           if (this.sessionPhase != 0) {
-            dd.field_G.a(tj.field_a, 426, 404, 200, 100, 0, -1, 2, 0, 30);
+            dd.uiPaletteFont.a(tj.field_a, 426, 404, 200, 100, 0, -1, 2, 0, 30);
             if (var3 == 0) {
               break L0;
             }
           }
           remainingThemeReleases = -ul.releasedInCurrentTheme + fa.releasesPerTheme;
-          dd.field_G.field_K[0][wf.field_p] = 15488514;
-          dd.field_G.c(w.field_e, 621, 441, 0, -1);
-          dd.field_G.field_K[0][wf.field_p] = 16689938;
-          dd.field_G.c(od.field_b, 621, 468, 0, -1);
+          dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
+          dd.uiPaletteFont.c(w.field_e, 621, 441, 0, -1);
+          dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
+          dd.uiPaletteFont.c(od.field_b, 621, 468, 0, -1);
           if (remainingThemeReleases <= 10) {
-            dd.field_G.field_K[0][wf.field_p] = mk.field_k[remainingThemeReleases % 5];
-            dd.field_G.c(Integer.toString(remainingThemeReleases), 515, 468, 0, -1);
-            dd.field_G.field_K[0][wf.field_p] = 16689938;
+            dd.uiPaletteFont.colorPalettes[0][wf.field_p] = mk.field_k[remainingThemeReleases % 5];
+            dd.uiPaletteFont.c(Integer.toString(remainingThemeReleases), 515, 468, 0, -1);
+            dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
             if (var3 == 0) {
               break L0;
             }
           }
           if (remainingThemeReleases <= 99999) {
-            dd.field_G.c(Integer.toString(remainingThemeReleases), 515, 468, 0, -1);
+            dd.uiPaletteFont.c(Integer.toString(remainingThemeReleases), 515, 468, 0, -1);
             if (var3 == 0) {
               break L0;
             }
           }
-          dd.field_G.c(Integer.toString(99999), 515, 468, 0, -1);
+          dd.uiPaletteFont.c(Integer.toString(99999), 515, 468, 0, -1);
         }
         if (param0 >= -39) {
           this.resultBonusPoints = 7;
@@ -2072,7 +2072,7 @@ final class GameplaySession {
         }
         int var2 = uh.b(16);
         GameScreen.selectedThemeId = var2;
-        cd.a((byte) 116);
+        cd.selectThemeRenderAssets((byte) 116);
         IntrusiveNode.a(param0 ^ -796, var2);
     }
 
@@ -2120,7 +2120,7 @@ final class GameplaySession {
         this.scoreText = new StringBuilder(5);
         this.pendingPopupPoints = 0;
         this.popupPointsText = new StringBuilder(5);
-        this.field_L = false;
+        this.showGameOverOverlay = false;
         this.sceneAnimationTick = 0;
         this.boardRasterDirty = false;
         this.sceneTransitionRequested = false;
@@ -2159,14 +2159,14 @@ final class GameplaySession {
           td.a((byte) -93);
           GameplayEntity.h(0);
           GameScreen.selectedThemeId = ee.field_B[0];
-          cd.a((byte) 104);
+          cd.selectThemeRenderAssets((byte) 104);
           this.debugPointerSpawnEnabled = false;
           this.submissionBlocked = false;
           this.spawnReleaseDisabled = false;
-          this.field_L = false;
+          this.showGameOverOverlay = false;
           IntrusiveNode.a(-116, 1);
-          if (jf.field_a == null) {
-            jf.field_a = new Sprite(ec.field_c.width, ec.field_c.height);
+          if (jf.rotatedThemeForegroundRaster == null) {
+            jf.rotatedThemeForegroundRaster = new Sprite(ec.selectedThemeForeground.width, ec.selectedThemeForeground.height);
           }
           oa.field_a = 4703;
           kb.field_d = 275;

@@ -6,7 +6,7 @@ final class pi extends vf {
     private int field_P;
     static int[][] field_R;
     private dg field_M;
-    static IndexedSprite field_O;
+    static IndexedSprite sweetsBackgroundSprite;
     static rf field_S;
     private String field_N;
 
@@ -263,10 +263,10 @@ final class pi extends vf {
         field_S = null;
         if (param0 != 24033) {
             field_R = (int[][]) null;
-            field_O = null;
+            sweetsBackgroundSprite = null;
             return;
         }
-        field_O = null;
+        sweetsBackgroundSprite = null;
     }
 
     final static void a(boolean param0, boolean param1) {

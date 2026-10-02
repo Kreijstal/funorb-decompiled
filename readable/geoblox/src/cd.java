@@ -11,42 +11,42 @@ final class cd extends jg {
     static ck field_i;
     static rh field_m;
 
-    final static void a(byte param0) {
+    final static void selectThemeRenderAssets(byte methodGuard) {
         int var2;
         var2 = Geoblox.field_C;
-        if (param0 <= 75) {
+        if (methodGuard <= 75) {
           field_m = (rh) null;
         }
         if (GameScreen.selectedThemeId == 4) {
-          ec.field_c = hi.field_F;
-          mf.field_a = ca.field_g;
+          ec.selectedThemeForeground = hi.bakingForegroundSprite;
+          mf.selectedThemeBackground = ca.bakingBackgroundSprite;
         } else {
           if (GameScreen.selectedThemeId == 1) {
-            mf.field_a = fe.field_j;
-            ec.field_c = ne.field_b;
+            mf.selectedThemeBackground = fe.sunBackgroundSprite;
+            ec.selectedThemeForeground = ne.sunForegroundSprite;
           } else {
             if (GameScreen.selectedThemeId == 3) {
-              ec.field_c = sl.field_c;
-              mf.field_a = sg.field_e;
+              ec.selectedThemeForeground = sl.germsForegroundSprite;
+              mf.selectedThemeBackground = sg.germsBackgroundSprite;
             } else {
               if (GameScreen.selectedThemeId != 0) {
                 if (6 != GameScreen.selectedThemeId) {
                   if (GameScreen.selectedThemeId != 5) {
                     if (2 == GameScreen.selectedThemeId) {
-                      mf.field_a = pi.field_O;
-                      ec.field_c = lb.field_d;
+                      mf.selectedThemeBackground = pi.sweetsBackgroundSprite;
+                      ec.selectedThemeForeground = lb.sweetsForegroundSprite;
                     }
                   } else {
-                    mf.field_a = th.field_f;
-                    ec.field_c = hd.field_H;
+                    mf.selectedThemeBackground = th.sportsBackgroundSprite;
+                    ec.selectedThemeForeground = hd.sportsForegroundSprite;
                   }
                 } else {
-                  ec.field_c = fl.field_a;
-                  mf.field_a = df.field_a;
+                  ec.selectedThemeForeground = fl.spaceForegroundSprite;
+                  mf.selectedThemeBackground = df.spaceBackgroundSprite;
                 }
               } else {
-                mf.field_a = bj.field_r;
-                ec.field_c = kj.field_E;
+                mf.selectedThemeBackground = bj.jewelsBackgroundSprite;
+                ec.selectedThemeForeground = kj.jewelsForegroundSprite;
               }
             }
           }

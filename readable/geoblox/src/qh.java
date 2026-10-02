@@ -12,7 +12,7 @@ final class qh extends ee implements pe, pl, ta {
     private hc field_I;
     static int field_J;
     private vf field_E;
-    static Sprite[] field_O;
+    static Sprite[] introGeometryFrames;
     private hk field_D;
     static boolean[] field_C;
     private vi field_P;
@@ -391,7 +391,7 @@ final class qh extends ee implements pe, pl, ta {
           if (param1 == -20) {
             return;
           }
-          field_O = (Sprite[]) null;
+          introGeometryFrames = (Sprite[]) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -467,7 +467,7 @@ final class qh extends ee implements pe, pl, ta {
 
     public static void h(int param0) {
         createPasswordHintText = null;
-        field_O = null;
+        introGeometryFrames = null;
         if (param0 == 0) {
             field_C = null;
             tutorialFailedMessage = null;

@@ -221,6 +221,12 @@
       "originalName": "field_p"
     },
     {
+      "symbol": "F:am.field_b:Ldm;",
+      "originalName": "field_b",
+      "to": "unachievedSprite",
+      "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): am.field_b = ug.a(\"unachieved\", ki.field_b, (byte) -78, \"basic\");"
+    },
+    {
       "symbol": "F:bf.field_i:Lrh;",
       "to": "activeTextArchive",
       "originalName": "field_i",
@@ -231,6 +237,12 @@
       "to": "mustLogin3Texts",
       "originalName": "field_c",
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'mustlogin3' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. All recorded indexed writes share that key prefix; numeric positions remain unchanged."
+    },
+    {
+      "symbol": "F:bj.field_r:Lna;",
+      "originalName": "field_r",
+      "to": "jewelsBackgroundSprite",
+      "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): bj.field_r = jg.a(ll.field_f, 1, \"jewels\", \"jewls_background\");"
     },
     {
       "symbol": "F:bk.field_a:Ldm;",
@@ -311,6 +323,12 @@
       "originalName": "field_y"
     },
     {
+      "symbol": "F:ca.field_g:Lna;",
+      "originalName": "field_g",
+      "to": "bakingBackgroundSprite",
+      "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): ca.field_g = jg.a(ll.field_f, param0 - 1, \"baking\", \"baking_background\");"
+    },
+    {
       "symbol": "F:ca.field_h:Ljava/lang/String;",
       "to": "unpackingMusicText",
       "originalName": "field_h",
@@ -359,6 +377,18 @@
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'loading_music' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
     },
     {
+      "symbol": "F:dd.field_G:Lnc;",
+      "originalName": "field_G",
+      "to": "uiPaletteFont",
+      "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): dd.field_G = w.a(\"\", ll.field_f, ii.field_k, true, \"font\");"
+    },
+    {
+      "symbol": "F:df.field_a:Lna;",
+      "originalName": "field_a",
+      "to": "spaceBackgroundSprite",
+      "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): df.field_a = jg.a(ll.field_f, 1, \"space\", \"space_background\");"
+    },
+    {
       "symbol": "F:df.field_b:Ljava/lang/String;",
       "to": "endGameText",
       "originalName": "field_b",
@@ -389,10 +419,28 @@
       "originalName": "field_v"
     },
     {
+      "symbol": "F:eb.field_g:[Ldm;",
+      "originalName": "field_g",
+      "to": "mouseBoxFrames",
+      "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): eb.field_g = wj.a(\"box_mouse\", \"\", ll.field_f, 0);"
+    },
+    {
       "symbol": "F:ec.field_a:Ljava/lang/String;",
       "to": "okText",
       "originalName": "field_a",
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'ok' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:ec.field_c:Ldm;",
+      "originalName": "field_c",
+      "to": "selectedThemeForeground",
+      "evidence": "cd.a(B)V selects this from foregrounds for the seven selectedThemeId values. gh.renderSession rotates it into jf.field_a for playfield rendering."
+    },
+    {
+      "symbol": "F:ee.field_A:Ldm;",
+      "originalName": "field_A",
+      "to": "menuBackgroundSprite",
+      "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): ee.field_A = ug.a(\"menu_background\", ll.field_f, (byte) -78, \"\");"
     },
     {
       "symbol": "F:ee.field_x:[Ljava/lang/String;",
@@ -413,6 +461,12 @@
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'instructions' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
     },
     {
+      "symbol": "F:eg.field_q:[Ldm;",
+      "originalName": "field_q",
+      "to": "pointsPanelGlowFrames",
+      "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): eg.field_q = wj.a(\"bonus_glow\", \"\", ll.field_f, 0); gh renderSession indexes bonus_glow by pointsPanelFrameIndex at pointsPanelX."
+    },
+    {
       "symbol": "F:eh.field_a:Ljava/lang/String;",
       "to": "openInPopupWindowText",
       "originalName": "field_a",
@@ -423,6 +477,12 @@
       "to": "fullscreenUnavailableTrySignedAppletText",
       "originalName": "field_gb",
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'fs_unavailable_try_signed_applet' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:ej.field_a:[Ldm;",
+      "originalName": "field_a",
+      "to": "amorphousCrackFrames",
+      "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): ej.field_a = wj.a(\"amorph_crack\", \"\", ll.field_f, 0);"
     },
     {
       "symbol": "F:ej.field_c:[Ljava/lang/String;",
@@ -491,10 +551,22 @@
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_alert_doublespace' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
     },
     {
+      "symbol": "F:fc.field_b:[Ldm;",
+      "originalName": "field_b",
+      "to": "avatarEyeFrames",
+      "evidence": "Geoblox.o(I)Z loads player_eyes into var5, optionally from halloween, then renders each source into this padded Sprite array. This names the asset identity, not an inferred emotion."
+    },
+    {
       "symbol": "F:fc.field_e:Ljava/lang/String;",
       "to": "musicLabelText",
       "originalName": "field_e",
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'music_colon' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:fc.field_g:[Ldm;",
+      "originalName": "field_g",
+      "to": "blackOrbFrames",
+      "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): fc.field_g = wj.a(\"black\", \"\", ll.field_f, 0);"
     },
     {
       "symbol": "F:fe.field_c:F",
@@ -503,16 +575,40 @@
       "evidence": "Difference between target palette and current tint green channels; avatar updates multiply it by the float fade factor, narrow to int and shift by 8. Native tests retain fractional and negative channel arithmetic."
     },
     {
+      "symbol": "F:fe.field_j:Lna;",
+      "originalName": "field_j",
+      "to": "sunBackgroundSprite",
+      "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): fe.field_j = jg.a(ll.field_f, 1, \"sun\", \"sky_background\");"
+    },
+    {
       "symbol": "F:ff.field_l:Ljava/lang/String;",
       "to": "waitingForGraphicsText",
       "originalName": "field_l",
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'waitingfor_graphics' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
     },
     {
+      "symbol": "F:fi.field_d:Lbg;",
+      "originalName": "field_d",
+      "to": "smallFont",
+      "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): fi.field_d = gi.a(ii.field_k, 1, ll.field_f, \"small_font\", \"\");"
+    },
+    {
       "symbol": "F:fi.field_h:Ljava/lang/String;",
       "to": "changeDisplayNameText",
       "originalName": "field_h",
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'changedisplayname' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:fl.field_a:Ldm;",
+      "originalName": "field_a",
+      "to": "spaceForegroundSprite",
+      "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): fl.field_a = ug.a(\"space_foreground\", ll.field_f, (byte) -78, \"space\");"
+    },
+    {
+      "symbol": "F:g.field_i:Ldm;",
+      "originalName": "field_i",
+      "to": "countBoxSprite",
+      "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): g.field_i = ug.a(\"box_count\", ll.field_f, (byte) -78, \"\");"
     },
     {
       "symbol": "F:g.field_l:Ljava/lang/String;",
@@ -651,6 +747,12 @@
       "to": "submissionBlocked",
       "originalName": "field_K",
       "evidence": "Score/action submission checks this flag. Debug input and emitPointsPopup with the submission-blocking argument set it."
+    },
+    {
+      "symbol": "F:gh.field_L:Z",
+      "originalName": "field_L",
+      "to": "showGameOverOverlay",
+      "evidence": "gh.startSessionEndSequence sets this flag for non-tutorial ending. renderSession uses it to move the score box and draw kh.field_h[6], loaded from gameover_title. The constructor resets it false; it is distinct from sessionEnding."
     },
     {
       "symbol": "F:gh.field_M:Lkl;",
@@ -905,6 +1007,12 @@
       "evidence": "Indexes vg.field_f in ij avatar drawing. A positive old shock timer updates this from the decremented timer modulo 15 then modulo 2; expiration preserves the prior index."
     },
     {
+      "symbol": "F:hb.field_d:[Ldm;",
+      "originalName": "field_d",
+      "to": "silverStarFrames",
+      "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): hb.field_d = wj.a(\"silver\", \"\", ll.field_f, 0);"
+    },
+    {
       "symbol": "F:hb.field_h:Ljava/lang/String;",
       "to": "playFreeVersionText",
       "originalName": "field_h",
@@ -915,6 +1023,12 @@
       "to": "goBackText",
       "originalName": "field_U",
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'goback' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:hd.field_H:Ldm;",
+      "originalName": "field_H",
+      "to": "sportsForegroundSprite",
+      "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): hd.field_H = ug.a(\"sports_foreground\", ll.field_f, (byte) -78, \"sports\");"
     },
     {
       "symbol": "F:hf.field_b:Lhf;",
@@ -935,10 +1049,22 @@
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'loginm3' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
     },
     {
+      "symbol": "F:hg.field_b:[Ldm;",
+      "originalName": "field_b",
+      "to": "blackOrbImplosionFrames",
+      "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): hg.field_b = wj.a(\"black_implode\", \"\", ll.field_f, 0);"
+    },
+    {
       "symbol": "F:hh.field_b:Ljava/lang/String;",
       "to": "fullscreenCloseButtonText",
       "originalName": "field_b",
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'fs_button_close' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:hi.field_F:Ldm;",
+      "originalName": "field_F",
+      "to": "bakingForegroundSprite",
+      "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): hi.field_F = ug.a(\"baking_foreground\", ll.field_f, (byte) -78, \"baking\");"
     },
     {
       "symbol": "F:hi.field_I:Ljava/lang/String;",
@@ -987,6 +1113,12 @@
       "to": "createPasswordValidText",
       "originalName": "field_j",
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_passwordvalid' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:ii.field_k:Lrh;",
+      "originalName": "field_k",
+      "to": "fontMetricsArchive",
+      "evidence": "Geoblox requestGameArchives assigns archive 6 here. prepareGameAssets passes it as the metric byte-source archive to w.a and gi.a, separate from the glyph graphics archive, before releasing it."
     },
     {
       "symbol": "F:ij.field_Y:Ljava/lang/String;",
@@ -1181,6 +1313,12 @@
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'tocustomersupport' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
     },
     {
+      "symbol": "F:jf.field_a:Ldm;",
+      "originalName": "field_a",
+      "to": "rotatedThemeForegroundRaster",
+      "evidence": "gh constructor sizes this Sprite from ec.field_c. renderSession sets it as raster target, rotates selected foreground pixels into it using boardAngleRadians, and draws it centred."
+    },
+    {
       "symbol": "F:jf.field_j:I",
       "originalName": "field_j",
       "to": "avatarTintFadeTicks",
@@ -1191,6 +1329,18 @@
       "to": "loginGameUpdatedText",
       "originalName": "field_c",
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'login_gameupdated' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:jg.field_f:[[I",
+      "originalName": "field_f",
+      "to": "themeSpriteColors",
+      "evidence": "Geoblox.o(I)Z uses this seven-by-seven RGB table to tint geometry and amorphic sprites by theme/variant. jg static initialization retains the literal palette values."
+    },
+    {
+      "symbol": "F:jg.field_h:[[I",
+      "originalName": "field_h",
+      "to": "themeCycleColors",
+      "evidence": "jg static initialization copies theme palettes from field_f and orders the copied colors using the retained derived RGB key. ja updatePaletteChannelDeltas and animateEntity read cyclic current/next frame colors here."
     },
     {
       "symbol": "F:ji.field_d:Ljava/lang/String;",
@@ -1259,6 +1409,12 @@
       "evidence": "Set by kind-three avatar mask contact, blocks queue-settling checks and is cleared when reconciliation consumes avatarShockPending. Native routing verifies the reset independently."
     },
     {
+      "symbol": "F:k.field_a:Ldm;",
+      "originalName": "field_a",
+      "to": "popSprite",
+      "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): k.field_a = ug.a(\"pop\", ll.field_f, (byte) -78, \"\");"
+    },
+    {
       "symbol": "F:k.field_b:Ljava/lang/String;",
       "to": "fullscreenFocusText",
       "originalName": "field_b",
@@ -1325,6 +1481,12 @@
       "originalName": "field_l"
     },
     {
+      "symbol": "F:ka.field_m:[[[Ldm;",
+      "originalName": "field_m",
+      "to": "amorphousFramesByThemeAndVariant",
+      "evidence": "Geoblox.o(I)Z renders amorphic frames with jg.field_f[theme][variant]. ja.selectEntitySprite and animateEntity read [selectedThemeId][spriteVariantIndex][animationFrame] for kind 2."
+    },
+    {
       "symbol": "F:kb.field_c:I",
       "originalName": "field_c",
       "to": "spawnReleaseIntervalTicks",
@@ -1355,10 +1517,22 @@
       "evidence": "23-entry table read by ld.b(Z)V using ji.difficultyStep. Independent native fixtures verify its exact initial entries and all 256 byte masks, with saturation, recursive re-reads and failure partial state."
     },
     {
+      "symbol": "F:ke.field_a:[[[Ldm;",
+      "originalName": "field_a",
+      "to": "entitySpritesByThemeCategoryAndVariant",
+      "evidence": "Geoblox.o(I)Z builds tinted geoms sprites by theme/category/palette variant. ja.selectEntitySprite reads [selectedThemeId][entityCategoryKey][spriteVariantIndex] for kind 0."
+    },
+    {
       "symbol": "F:kf.field_b:Ljava/lang/String;",
       "to": "pleaseTryAgainText",
       "originalName": "field_b",
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'pleasetryagain' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:kh.field_h:[Ldm;",
+      "originalName": "field_h",
+      "to": "screenTitleSprites",
+      "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): kh.field_h[0] = ug.a(\"main_title\", ll.field_f, (byte) -78, \"\"); kh.field_h[2] = ug.a(\"bestscoreseach_title\", ll.field_f, (byte) -78, \"\"); kh.field_h[3] = ug.a(\"myscores_title\", ll.field_f, (byte) -78, \"\"); kh.field_h[1] = ug.a(\"allscores_title\", ll.field_f, (byte) -78, \"\"); kh.field_h[6] = ug.a(\"gameover_title\", ll.field_f, (byte) -78, \"\"); kh.field_h[4] = ug.a(\"achievements_title\", ll.field_f, (byte) -78, \"\"); kh.field_h[5] = ug.a(\"instructions_title\", ll.field_f, (byte) -78, \"\"); kh.field_h[7] = ug.a(\"achievements_tg_title\", ll.field_f, (byte) -78, \"\"); kh.field_h[8] = ug.a(\"login_title\", ll.field_f, (byte) -78, \"\"); The original nine numeric screen indexes remain, including gameover_title at index 6."
     },
     {
       "symbol": "F:ki.field_a:Ljava/lang/String;",
@@ -1367,10 +1541,22 @@
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'fs_nonmember' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
     },
     {
+      "symbol": "F:ki.field_b:Lrh;",
+      "originalName": "field_b",
+      "to": "basicUiGraphicsArchive",
+      "evidence": "wf archive initialization aliases l.field_h here. Geoblox.o(I)Z loads unachieved and orbcoin from its basic group before clearing the field."
+    },
+    {
       "symbol": "F:ki.field_e:Ljava/lang/String;",
       "to": "js5ConnectErrorText",
       "originalName": "field_e",
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'error_js5connect' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:kj.field_E:Ldm;",
+      "originalName": "field_E",
+      "to": "jewelsForegroundSprite",
+      "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): kj.field_E = ug.a(\"jewls_foreground\", ll.field_f, (byte) -78, \"jewels\");"
     },
     {
       "symbol": "F:kk.field_v:Ljava/lang/String;",
@@ -1389,6 +1575,18 @@
       "to": "samplePositionFixed",
       "originalName": "field_x",
       "evidence": "PCM interpolation indexes sample bytes with this value>>8 and its fractional part &255. Bounds are samples.length<<8; advancing and looping update this signed Q8 position."
+    },
+    {
+      "symbol": "F:lb.field_d:Ldm;",
+      "originalName": "field_d",
+      "to": "sweetsForegroundSprite",
+      "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): lb.field_d = ug.a(\"sweets_foreground\", ll.field_f, (byte) -78, \"sweets\");"
+    },
+    {
+      "symbol": "F:ld.field_b:[Ldm;",
+      "originalName": "field_b",
+      "to": "avatarCryEndFrames",
+      "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): ld.field_b = wj.a(\"cry_end\", \"\", ll.field_f, 0); ld.field_b = wj.a(\"cry_end\", \"halloween\", ll.field_f, 0);"
     },
     {
       "symbol": "F:lf.field_e:[C",
@@ -1415,6 +1613,12 @@
       "originalName": "field_b"
     },
     {
+      "symbol": "F:lj.field_d:Ldm;",
+      "originalName": "field_d",
+      "to": "smallBoxSprite",
+      "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): lj.field_d = ug.a(\"box_sml\", ll.field_f, (byte) -78, \"\");"
+    },
+    {
       "symbol": "F:ll.field_a:Ljava/lang/String;",
       "to": "createMoreSuggestionsText",
       "originalName": "field_a",
@@ -1433,10 +1637,22 @@
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_email_tooltip' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
     },
     {
+      "symbol": "F:ll.field_f:Lrh;",
+      "originalName": "field_f",
+      "to": "gameGraphicsArchive",
+      "evidence": "Geoblox requestGameArchives assigns archive 1 here; asset preparation and theme loaders read font glyphs, game sprites and named theme groups from it."
+    },
+    {
       "symbol": "F:ll.field_g:[Z",
       "to": "themesLoaded",
       "evidence": "Theme loaders mark fixed indices after foreground/background resource loading.",
       "originalName": "field_g"
+    },
+    {
+      "symbol": "F:ll.field_h:[Ldm;",
+      "originalName": "field_h",
+      "to": "frameNineSliceSprites",
+      "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): ll.field_h[0] = ug.a(\"frame_topleft\", ll.field_f, (byte) -78, \"\"); ll.field_h[1] = ug.a(\"frame_top\", ll.field_f, (byte) -78, \"\"); ll.field_h[2] = ug.a(\"frame_topright\", ll.field_f, (byte) -78, \"\"); ll.field_h[3] = ug.a(\"frame_left\", ll.field_f, (byte) -78, \"\"); ll.field_h[4] = ug.a(\"frame_centre\", ll.field_f, (byte) -78, \"\"); ll.field_h[5] = ug.a(\"frame_right\", ll.field_f, (byte) -78, \"\"); ll.field_h[6] = ug.a(\"frame_bottomleft\", ll.field_f, (byte) -78, \"\"); ll.field_h[7] = ug.a(\"frame_bottom\", ll.field_f, (byte) -78, \"\"); ll.field_h[8] = ug.a(\"frame_bottomright\", ll.field_f, (byte) -78, \"\"); The original nine frame-part indexes remain."
     },
     {
       "symbol": "F:md.field_a:Ltf;",
@@ -1493,6 +1709,18 @@
       "evidence": "ug copies its X argument here; bd interpolates from this coordinate to the panel target."
     },
     {
+      "symbol": "F:mf.field_a:Lna;",
+      "originalName": "field_a",
+      "to": "selectedThemeBackground",
+      "evidence": "cd.a(B)V selects this indexed background alongside ec.field_c for the seven selectedThemeId values; gh.renderSession draws it at (0,0)."
+    },
+    {
+      "symbol": "F:mi.field_B:[Ldm;",
+      "originalName": "field_B",
+      "to": "sparkleFrames",
+      "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): mi.field_B = wj.a(\"sparkle\", \"\", ll.field_f, 0);"
+    },
+    {
       "symbol": "F:mi.field_E:Ljava/lang/String;",
       "to": "invalidUserOrPasswordText",
       "originalName": "field_E",
@@ -1541,10 +1769,22 @@
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'loading_fonts' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
     },
     {
+      "symbol": "F:nc.field_K:[[I",
+      "originalName": "field_K",
+      "to": "colorPalettes",
+      "evidence": "nc constructor installs the decoded palette at field_K[0]; glyph rasterizers map indexed bytes through selected palettes. Geoblox.o(I)Z copies palette zero into palette one before adjusting the original highlight entries."
+    },
+    {
       "symbol": "F:nd.field_a:I",
       "originalName": "field_a",
       "to": "avatarFeedbackModeId",
       "evidence": "Selects the vh.field_H avatar overlay and feedback state. Requests 0 through 5 set matching IDs; a new request 7 sets ID 6."
+    },
+    {
+      "symbol": "F:ne.field_b:Ldm;",
+      "originalName": "field_b",
+      "to": "sunForegroundSprite",
+      "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): ne.field_b = ug.a(\"sky_foreground\", ll.field_f, (byte) -78, \"sun\");"
     },
     {
       "symbol": "F:ne.field_d:Ljava/lang/String;",
@@ -1661,6 +1901,12 @@
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'loading_extradata' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
     },
     {
+      "symbol": "F:ok.field_a:[Ldm;",
+      "originalName": "field_a",
+      "to": "avatarCryMiddleFrames",
+      "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): ok.field_a = wj.a(\"cry_middle\", \"\", ll.field_f, 0); ok.field_a = wj.a(\"cry_middle\", \"halloween\", ll.field_f, 0);"
+    },
+    {
       "symbol": "F:ok.field_d:Ljava/lang/String;",
       "to": "justPlayText",
       "originalName": "field_d",
@@ -1739,6 +1985,18 @@
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_unable' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
     },
     {
+      "symbol": "F:pi.field_O:Lna;",
+      "originalName": "field_O",
+      "to": "sweetsBackgroundSprite",
+      "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): pi.field_O = jg.a(ll.field_f, 1, \"sweets\", \"sweets_background\");"
+    },
+    {
+      "symbol": "F:pk.field_k:Ldm;",
+      "originalName": "field_k",
+      "to": "resultBubbleSprite",
+      "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): pk.field_k = ug.a(\"bubble\", ll.field_f, (byte) -78, \"\"); gh renderResultSequence rotates this bubble around the playfield centre."
+    },
+    {
       "symbol": "F:pk.field_o:[Z",
       "to": "connectivityVisitedByEntityId",
       "originalName": "field_o",
@@ -1773,6 +2031,12 @@
       "to": "createPasswordText",
       "originalName": "field_b",
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_password' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:qh.field_O:[Ldm;",
+      "originalName": "field_O",
+      "to": "introGeometryFrames",
+      "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): qh.field_O = wj.a(\"intro_geoms\", \"\", ll.field_f, 0);"
     },
     {
       "symbol": "F:qh.field_Q:Ljava/lang/String;",
@@ -1865,6 +2129,12 @@
       "originalName": "field_l"
     },
     {
+      "symbol": "F:re.field_h:Ldm;",
+      "originalName": "field_h",
+      "to": "widgetSprite",
+      "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): re.field_h = ug.a(\"widget\", ll.field_f, (byte) -78, \"\");"
+    },
+    {
       "symbol": "F:re.field_j:Z",
       "to": "connectivityDirty",
       "originalName": "field_j",
@@ -1895,6 +2165,12 @@
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'logging_in' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
     },
     {
+      "symbol": "F:s.field_G:[[Ldm;",
+      "originalName": "field_G",
+      "to": "geometrySpritesByThemeAndCategory",
+      "evidence": "Geoblox.o(I)Z groups geoms frames by seven and stores the original sprites here. ja.selectEntitySprite reads [selectedThemeId][entityCategoryKey] for kind 1."
+    },
+    {
       "symbol": "F:sa.field_b:I",
       "to": "releasesPerDifficultyStep",
       "originalName": "field_b",
@@ -1919,6 +2195,12 @@
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'no_highscores' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
     },
     {
+      "symbol": "F:sd.field_y:Ldm;",
+      "originalName": "field_y",
+      "to": "barSprite",
+      "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): sd.field_y = ug.a(\"bar\", ll.field_f, (byte) -78, \"\");"
+    },
+    {
       "symbol": "F:se.field_i:Ljava/lang/String;",
       "to": "creatingYourAccountText",
       "originalName": "field_i",
@@ -1929,6 +2211,12 @@
       "to": "createAnAccountText",
       "originalName": "field_m",
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_createanaccount' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:sg.field_e:Lna;",
+      "originalName": "field_e",
+      "to": "germsBackgroundSprite",
+      "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): sg.field_e = jg.a(ll.field_f, 1, \"germs\", \"germs_background\");"
     },
     {
       "symbol": "F:sj.field_b:Ljava/lang/String;",
@@ -1947,6 +2235,18 @@
       "to": "loginEmailText",
       "originalName": "field_b",
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'login_email' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:sl.field_c:Ldm;",
+      "originalName": "field_c",
+      "to": "germsForegroundSprite",
+      "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): sl.field_c = ug.a(\"germs_foreground\", ll.field_f, (byte) -78, \"germs\");"
+    },
+    {
+      "symbol": "F:sl.field_f:[Ldm;",
+      "originalName": "field_f",
+      "to": "achievementSprites",
+      "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): sl.field_f = wj.a(\"achievements\", \"\", ll.field_f, 0);"
     },
     {
       "symbol": "F:sl.field_h:Ljava/lang/String;",
@@ -1991,6 +2291,12 @@
       "originalName": "field_c"
     },
     {
+      "symbol": "F:th.field_f:Lna;",
+      "originalName": "field_f",
+      "to": "sportsBackgroundSprite",
+      "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): th.field_f = jg.a(ll.field_f, 1, \"sports\", \"sports_background\");"
+    },
+    {
       "symbol": "F:th.field_g:Ljava/lang/String;",
       "to": "defaultPlayerNameText",
       "originalName": "field_g",
@@ -2007,6 +2313,12 @@
       "to": "previousText",
       "originalName": "field_o",
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'prev' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:tl.field_r:[Ldm;",
+      "originalName": "field_r",
+      "to": "introFaceFrames",
+      "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): tl.field_r = wj.a(\"intro_faces\", \"\", ll.field_f, 0); tl.field_r = wj.a(\"intro_faces\", \"halloween\", ll.field_f, 0);"
     },
     {
       "symbol": "F:ua.field_B:[F",
@@ -2177,6 +2489,12 @@
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'monthnames' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. All recorded indexed writes share that key prefix; numeric positions remain unchanged."
     },
     {
+      "symbol": "F:uk.field_m:Ldm;",
+      "originalName": "field_m",
+      "to": "orbCoinSprite",
+      "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): uk.field_m = ug.a(\"orbcoin\", ki.field_b, (byte) -78, \"basic\");"
+    },
+    {
       "symbol": "F:ul.field_b:I",
       "to": "releasedInCurrentTheme",
       "originalName": "field_b",
@@ -2225,6 +2543,12 @@
       "originalName": "field_k"
     },
     {
+      "symbol": "F:vc.field_j:Ldm;",
+      "originalName": "field_j",
+      "to": "menuForegroundSprite",
+      "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): vc.field_j = ug.a(\"menu_foreground\", ll.field_f, (byte) -78, \"\");"
+    },
+    {
       "symbol": "F:vd.field_e:Ljava/lang/String;",
       "to": "tutorialShapeMatchMessage",
       "evidence": "English initializer asks for three of a kind by shape; uk.a returns it for tutorial step two.",
@@ -2235,6 +2559,12 @@
       "to": "highscoreModeNames",
       "originalName": "field_m",
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'hs_mode_name' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. All recorded indexed writes share that key prefix; numeric positions remain unchanged."
+    },
+    {
+      "symbol": "F:vf.field_H:[Ldm;",
+      "originalName": "field_H",
+      "to": "avatarCryBeginFrames",
+      "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): vf.field_H = wj.a(\"cry_begin\", \"\", ll.field_f, 0); vf.field_H = wj.a(\"cry_begin\", \"halloween\", ll.field_f, 0);"
     },
     {
       "symbol": "F:vf.field_L:Ldm;",
@@ -2249,10 +2579,28 @@
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'pleasewait_dotdotdot' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
     },
     {
+      "symbol": "F:vg.field_f:[Ldm;",
+      "originalName": "field_f",
+      "to": "silverStarShockFrames",
+      "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): vg.field_f = wj.a(\"silver_shock\", \"\", ll.field_f, 0);"
+    },
+    {
       "symbol": "F:vh.field_E:Ljava/lang/String;",
       "to": "tutorialRotationMessage",
       "evidence": "English initializer welcomes the player and explains rotating the play area with the left/right arrow keys; uk.a returns it for tutorial step zero.",
       "originalName": "field_E"
+    },
+    {
+      "symbol": "F:vh.field_G:Ldm;",
+      "originalName": "field_G",
+      "to": "largeBoxSprite",
+      "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): vh.field_G = ug.a(\"box_lgr\", ll.field_f, (byte) -78, \"\");"
+    },
+    {
+      "symbol": "F:vh.field_H:[Ldm;",
+      "originalName": "field_H",
+      "to": "avatarMouthFrames",
+      "evidence": "Geoblox.o(I)Z loads player_mouth into var6, optionally from halloween, then renders each source into this padded Sprite array."
     },
     {
       "symbol": "F:vi.field_F:Ljava/lang/String;",
@@ -2265,6 +2613,12 @@
       "to": "createNewsOptInTooltipText",
       "originalName": "field_G",
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_optin_news_tooltip' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:vj.field_a:[Ldm;",
+      "originalName": "field_a",
+      "to": "bangFrames",
+      "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): vj.field_a = wj.a(\"bang\", \"\", ll.field_f, 0);"
     },
     {
       "symbol": "F:w.field_a:Ljava/lang/String;",
@@ -2487,6 +2841,114 @@
       "originalName": "var2",
       "to": "screenIndex",
       "evidence": "Loop index 0..8 creates and stores matching c screen instance."
+    },
+    {
+      "symbol": "L:Geoblox.o(I)Z#0",
+      "originalName": "var2",
+      "to": "uiPaletteSize",
+      "evidence": "Palette zero length before allocating and copying palette one."
+    },
+    {
+      "symbol": "L:Geoblox.o(I)Z#1",
+      "originalName": "array$0",
+      "to": "alternateUiPalette",
+      "evidence": "New array installed as palette one before sf.a copies palette zero."
+    },
+    {
+      "symbol": "L:Geoblox.o(I)Z#10",
+      "originalName": "var13",
+      "to": "keyboardWidthAlias",
+      "evidence": "Intermediate alias of var14 retained before filling alias var8."
+    },
+    {
+      "symbol": "L:Geoblox.o(I)Z#11",
+      "originalName": "var8",
+      "to": "keyboardWidthsForFill",
+      "evidence": "Alias through var13 of keyboard advances filled by var11."
+    },
+    {
+      "symbol": "L:Geoblox.o(I)Z#12",
+      "originalName": "var11",
+      "to": "keyboardIconIndex",
+      "evidence": "Iterates keyboard sprites while filling width-minus-three advances."
+    },
+    {
+      "symbol": "L:Geoblox.o(I)Z#13",
+      "originalName": "var5_int",
+      "to": "geometryFrameThenVariantIndex",
+      "evidence": "Traverses all geoms frames, then indexes palette variants during amorphic tinting."
+    },
+    {
+      "symbol": "L:Geoblox.o(I)Z#14",
+      "originalName": "var6_int",
+      "to": "categoryThenAnimationFrameIndex",
+      "evidence": "Geometry frame modulo seven, then amorphic animation frame index, then avatar eye frame index."
+    },
+    {
+      "symbol": "L:Geoblox.o(I)Z#15",
+      "originalName": "var7_int",
+      "to": "geometryWidthThenFrameIndex",
+      "evidence": "Source geometry pixel width, then mouth frame index, then sparkle frame index."
+    },
+    {
+      "symbol": "L:Geoblox.o(I)Z#16",
+      "originalName": "var9",
+      "to": "paletteVariantThenKeyboardIndex",
+      "evidence": "Indexes geometry tint variants, then receives the initial keyboard index alias before the width loop."
+    },
+    {
+      "symbol": "L:Geoblox.o(I)Z#17",
+      "originalName": "var10",
+      "to": "clientFlagSnapshot",
+      "evidence": "Copies Geoblox.field_C at entry. Its undocumented semantics are not inferred; the unused original store is retained."
+    },
+    {
+      "symbol": "L:Geoblox.o(I)Z#2",
+      "originalName": "var12",
+      "to": "geometrySourceFrames",
+      "evidence": "geoms source frames for original and tinted theme/category sprites."
+    },
+    {
+      "symbol": "L:Geoblox.o(I)Z#3",
+      "originalName": "var3",
+      "to": "geometryAliasThenAmorphousFrames",
+      "evidence": "First aliases var12; later replaced by amorphic resource frames. Both roles of this reused slot are retained."
+    },
+    {
+      "symbol": "L:Geoblox.o(I)Z#4",
+      "originalName": "var4",
+      "to": "themeIndex",
+      "evidence": "Increments once per seven geoms, then reused for the outer theme loop of amorphic tinting."
+    },
+    {
+      "symbol": "L:Geoblox.o(I)Z#5",
+      "originalName": "var8_int",
+      "to": "geometryFrameHeight",
+      "evidence": "Current source Sprite field_o row count used to allocate tinted geometry sprites."
+    },
+    {
+      "symbol": "L:Geoblox.o(I)Z#6",
+      "originalName": "var5",
+      "to": "avatarEyeSourceFrames",
+      "evidence": "player_eyes source frames from normal or halloween group before padded rendering."
+    },
+    {
+      "symbol": "L:Geoblox.o(I)Z#7",
+      "originalName": "var6",
+      "to": "avatarMouthSourceFrames",
+      "evidence": "player_mouth source frames from normal or halloween group before padded rendering."
+    },
+    {
+      "symbol": "L:Geoblox.o(I)Z#8",
+      "originalName": "var7",
+      "to": "keyboardIconSprites",
+      "evidence": "Eight indexed keyboard_left/right/enter/space/esc/backspace/down/i sprites."
+    },
+    {
+      "symbol": "L:Geoblox.o(I)Z#9",
+      "originalName": "var14",
+      "to": "keyboardIconAdvanceWidths",
+      "evidence": "One width-minus-three entry per keyboard icon, passed with sprites to the small font."
     },
     {
       "symbol": "L:bc.a(I[BII)Ljava/lang/String;#0",
@@ -3443,6 +3905,18 @@
       "originalName": "var8"
     },
     {
+      "symbol": "L:gi.a(Lrh;ILrh;Ljava/lang/String;Ljava/lang/String;)Lbg;#0",
+      "originalName": "var5_int",
+      "to": "archiveGroupId",
+      "evidence": "Resolved numeric group identity from group-name then resource-name lookup, passed to the original loading decoder."
+    },
+    {
+      "symbol": "L:gi.a(Lrh;ILrh;Ljava/lang/String;Ljava/lang/String;)Lbg;#2",
+      "originalName": "var6",
+      "to": "archiveFileId",
+      "evidence": "Resolved numeric file identity from group-name then resource-name lookup, passed to the original loading decoder."
+    },
+    {
       "symbol": "L:i.a(B)Lja;#0",
       "to": "maxDistanceSquared",
       "originalName": "var1_float",
@@ -3843,6 +4317,18 @@
       "originalName": "var3",
       "to": "unusedClientControlSnapshot",
       "evidence": "Retained read of Geoblox.field_C at entry; this local is unused by the recovered feedback body."
+    },
+    {
+      "symbol": "L:jg.a(Lrh;ILjava/lang/String;Ljava/lang/String;)Lna;#0",
+      "originalName": "var4_int",
+      "to": "archiveGroupId",
+      "evidence": "Resolved numeric group identity from group-name then resource-name lookup, passed to the original loading decoder."
+    },
+    {
+      "symbol": "L:jg.a(Lrh;ILjava/lang/String;Ljava/lang/String;)Lna;#2",
+      "originalName": "var5",
+      "to": "archiveFileId",
+      "evidence": "Resolved numeric file identity from group-name then resource-name lookup, passed to the original loading decoder."
     },
     {
       "symbol": "L:ka.a(I)V#1",
@@ -4613,6 +5099,18 @@
       "evidence": "The factory reuses a pooled ScorePopup and fills its instance fields before inserting it into the active queue."
     },
     {
+      "symbol": "L:ug.a(Ljava/lang/String;Lrh;BLjava/lang/String;)Ldm;#0",
+      "originalName": "var4_int",
+      "to": "archiveGroupId",
+      "evidence": "Resolved numeric group identity from group-name then resource-name lookup, passed to the original loading decoder."
+    },
+    {
+      "symbol": "L:ug.a(Ljava/lang/String;Lrh;BLjava/lang/String;)Ldm;#2",
+      "originalName": "var5",
+      "to": "archiveFileId",
+      "evidence": "Resolved numeric file identity from group-name then resource-name lookup, passed to the original loading decoder."
+    },
+    {
       "symbol": "L:ul.b(I)V#0",
       "to": "firstNeighborIndex",
       "originalName": "var6",
@@ -4715,6 +5213,18 @@
       "evidence": "Second Math.random() draw after the probability gate; thresholds 0.13, 0.25 and 0.65 select kind IDs 3, 4, 1 and 2. The draw and its order are retained."
     },
     {
+      "symbol": "L:w.a(Ljava/lang/String;Lrh;Lrh;ZLjava/lang/String;)Lnc;#0",
+      "originalName": "var5_int",
+      "to": "archiveGroupId",
+      "evidence": "Resolved numeric group identity from group-name then resource-name lookup, passed to the original loading decoder."
+    },
+    {
+      "symbol": "L:w.a(Ljava/lang/String;Lrh;Lrh;ZLjava/lang/String;)Lnc;#2",
+      "originalName": "var6",
+      "to": "archiveFileId",
+      "evidence": "Resolved numeric file identity from group-name then resource-name lookup, passed to the original loading decoder."
+    },
+    {
       "symbol": "L:wa.a(I)I#0",
       "to": "unfinishedPoints",
       "originalName": "var1_int",
@@ -4785,6 +5295,18 @@
       "to": "textLoader",
       "originalName": "decompiledBody",
       "evidence": "Instance of the source-generated shared carrier that runs the three bounded interface-text helper parts."
+    },
+    {
+      "symbol": "L:wj.a(Ljava/lang/String;Ljava/lang/String;Lrh;I)[Ldm;#0",
+      "originalName": "var4_int",
+      "to": "archiveGroupId",
+      "evidence": "Resolved numeric group identity from group-name then resource-name lookup, passed to the original loading decoder."
+    },
+    {
+      "symbol": "L:wj.a(Ljava/lang/String;Ljava/lang/String;Lrh;I)[Ldm;#2",
+      "originalName": "var5",
+      "to": "archiveFileId",
+      "evidence": "Resolved numeric file identity from group-name then resource-name lookup, passed to the original loading decoder."
     },
     {
       "symbol": "M:Geoblox.a(I)V",
@@ -5009,6 +5531,12 @@
       "originalName": "h"
     },
     {
+      "symbol": "M:cd.a(B)V",
+      "originalName": "a",
+      "to": "selectThemeRenderAssets",
+      "evidence": "Selects ec.field_c and mf.field_a from matching foreground/background pairs for selectedThemeId 0 through 6. Guard <=75 still clears cd.field_m before selection."
+    },
+    {
       "symbol": "M:cf.a(ILjava/lang/String;)Llh;",
       "to": "validationStateForText",
       "originalName": "a",
@@ -5225,6 +5753,12 @@
       "evidence": "Resets the session phase/result fields, selects the next theme ID and requests its assets/music."
     },
     {
+      "symbol": "M:gi.a(Lrh;ILrh;Ljava/lang/String;Ljava/lang/String;)Lbg;",
+      "originalName": "a",
+      "to": "loadBitmapFont",
+      "evidence": "Resolves glyph group/file and passes graphics and metric archives to rb.a, returning bg bitmap glyph font. Original guard and failure context remain."
+    },
+    {
       "symbol": "M:gj.f(B)V",
       "to": "drawSpecialAttachedEntities",
       "originalName": "f",
@@ -5409,6 +5943,12 @@
       "originalName": "a",
       "to": "requestAvatarFeedback",
       "evidence": "Requests an avatar feedback mode while retaining hold, frame, sprite-guard and sound behavior. Native matrix verifies 3024 combinations with table-based state and actual PCM sample identity/count oracles."
+    },
+    {
+      "symbol": "M:jg.a(Lrh;ILjava/lang/String;Ljava/lang/String;)Lna;",
+      "originalName": "a",
+      "to": "loadIndexedSprite",
+      "evidence": "Resolves group then resource name and returns vh.a as a na indexed sprite; guard side effects remain."
     },
     {
       "symbol": "M:ka.a(BI)V",
@@ -5771,6 +6311,12 @@
       "evidence": "Takes a popup from the pool, initializes its points, chain and origin, and inserts it into the active queue. If the pool is empty it credits points directly."
     },
     {
+      "symbol": "M:ug.a(Ljava/lang/String;Lrh;BLjava/lang/String;)Ldm;",
+      "originalName": "a",
+      "to": "loadSprite",
+      "evidence": "Resolves group then resource name and returns qc.a as one dm Sprite; guard -78 remains."
+    },
+    {
       "symbol": "M:uk.a(II)Ljava/lang/String;",
       "to": "tutorialMessageForStep",
       "evidence": "Maps step IDs 0,1,2,3,5 to the five explicit tutorial strings; other IDs return null.",
@@ -5799,6 +6345,12 @@
       "originalName": "a",
       "to": "chooseSpawnSpriteKind",
       "evidence": "Guard 741924304 first gates on sa.field_c, then maps a fresh Math.random roll through 0.13/0.25/0.65 thresholds to kinds 3/4/1/2. Other guards return 104. Native checks cover closed probability gates and invalid guards, not live Math.random distribution."
+    },
+    {
+      "symbol": "M:w.a(Ljava/lang/String;Lrh;Lrh;ZLjava/lang/String;)Lnc;",
+      "originalName": "a",
+      "to": "loadPaletteFont",
+      "evidence": "Resolves glyph group/file and passes glyph and metric archives to pi.a. Result nc has indexed glyph bytes and mutable RGB palettes; Boolean guard effects remain."
     },
     {
       "symbol": "M:wa.a(I)I",
@@ -5871,6 +6423,18 @@
       "to": "loadInterfaceText",
       "originalName": "a",
       "evidence": "wf calls this after the text archive reports ready. It binds bf.field_i, reads named interface resources, decodes and assigns their strings, then releases the archive. It preserves the shared control flag, runtime catch and guard recursion."
+    },
+    {
+      "symbol": "M:wj.a(Ljava/lang/String;Ljava/lang/String;Lrh;I)[Ldm;",
+      "originalName": "a",
+      "to": "loadSpriteFrames",
+      "evidence": "Resolves group then resource name and returns ll.a as dm[] frames; nonzero guard side effects remain."
+    },
+    {
+      "symbol": "P:Geoblox.o(I)Z#0",
+      "originalName": "param0",
+      "to": "methodGuard",
+      "evidence": "Normal preparation guard is 25869. Its arithmetic in progress/resource calls and reconnectMessages cleanup for other values remain unchanged."
     },
     {
       "symbol": "P:ab.a(IF)V#1",
@@ -6063,6 +6627,12 @@
       "to": "itemCount",
       "evidence": "Copied into inherited item count.",
       "originalName": "param1"
+    },
+    {
+      "symbol": "P:cd.a(B)V#0",
+      "originalName": "param0",
+      "to": "methodGuard",
+      "evidence": "Guard <=75 clears cd.field_m before theme selection. Normal call sites pass 79, 104 or 116; no theme-ID interpretation is imposed."
     },
     {
       "symbol": "P:cf.a(ILjava/lang/String;)Llh;#0",
@@ -6335,6 +6905,36 @@
       "evidence": "Normal updateSession calls with 10. This parameter contributes the boundary-loss guard, xor-10 music guard, unlock guard and final !=10 cleanup branch; none is simplified away."
     },
     {
+      "symbol": "P:gi.a(Lrh;ILrh;Ljava/lang/String;Ljava/lang/String;)Lbg;#0",
+      "originalName": "param0",
+      "to": "fontMetricsArchive",
+      "evidence": "Resolves glyph group/file and passes graphics and metric archives to rb.a, returning bg bitmap glyph font. Original guard and failure context remain. Parameter 0 has this lookup/call-site role; descriptor and argument order remain fixed."
+    },
+    {
+      "symbol": "P:gi.a(Lrh;ILrh;Ljava/lang/String;Ljava/lang/String;)Lbg;#1",
+      "originalName": "param1",
+      "to": "methodGuard",
+      "evidence": "Resolves glyph group/file and passes graphics and metric archives to rb.a, returning bg bitmap glyph font. Original guard and failure context remain. Parameter 1 has this lookup/call-site role; descriptor and argument order remain fixed."
+    },
+    {
+      "symbol": "P:gi.a(Lrh;ILrh;Ljava/lang/String;Ljava/lang/String;)Lbg;#2",
+      "originalName": "param2",
+      "to": "glyphGraphicsArchive",
+      "evidence": "Resolves glyph group/file and passes graphics and metric archives to rb.a, returning bg bitmap glyph font. Original guard and failure context remain. Parameter 2 has this lookup/call-site role; descriptor and argument order remain fixed."
+    },
+    {
+      "symbol": "P:gi.a(Lrh;ILrh;Ljava/lang/String;Ljava/lang/String;)Lbg;#3",
+      "originalName": "param3",
+      "to": "resourceName",
+      "evidence": "Resolves glyph group/file and passes graphics and metric archives to rb.a, returning bg bitmap glyph font. Original guard and failure context remain. Parameter 3 has this lookup/call-site role; descriptor and argument order remain fixed."
+    },
+    {
+      "symbol": "P:gi.a(Lrh;ILrh;Ljava/lang/String;Ljava/lang/String;)Lbg;#4",
+      "originalName": "param4",
+      "to": "groupName",
+      "evidence": "Resolves glyph group/file and passes graphics and metric archives to rb.a, returning bg bitmap glyph font. Original guard and failure context remain. Parameter 4 has this lookup/call-site role; descriptor and argument order remain fixed."
+    },
+    {
       "symbol": "P:i.a(B)Lja;#0",
       "to": "methodGuard",
       "originalName": "param0",
@@ -6495,6 +7095,30 @@
       "originalName": "param1",
       "to": "clearSpriteGuard",
       "evidence": "Clears jc.field_a only when the feedback hold is not positive; normal gameplay passes false. Native matrix checks both values and an actual sprite identity."
+    },
+    {
+      "symbol": "P:jg.a(Lrh;ILjava/lang/String;Ljava/lang/String;)Lna;#0",
+      "originalName": "param0",
+      "to": "graphicsArchive",
+      "evidence": "Resolves group then resource name and returns vh.a as a na indexed sprite; guard side effects remain. Parameter 0 has this lookup/call-site role; descriptor and argument order remain fixed."
+    },
+    {
+      "symbol": "P:jg.a(Lrh;ILjava/lang/String;Ljava/lang/String;)Lna;#1",
+      "originalName": "param1",
+      "to": "methodGuard",
+      "evidence": "Resolves group then resource name and returns vh.a as a na indexed sprite; guard side effects remain. Parameter 1 has this lookup/call-site role; descriptor and argument order remain fixed."
+    },
+    {
+      "symbol": "P:jg.a(Lrh;ILjava/lang/String;Ljava/lang/String;)Lna;#2",
+      "originalName": "param2",
+      "to": "groupName",
+      "evidence": "Resolves group then resource name and returns vh.a as a na indexed sprite; guard side effects remain. Parameter 2 has this lookup/call-site role; descriptor and argument order remain fixed."
+    },
+    {
+      "symbol": "P:jg.a(Lrh;ILjava/lang/String;Ljava/lang/String;)Lna;#3",
+      "originalName": "param3",
+      "to": "resourceName",
+      "evidence": "Resolves group then resource name and returns vh.a as a na indexed sprite; guard side effects remain. Parameter 3 has this lookup/call-site role; descriptor and argument order remain fixed."
     },
     {
       "symbol": "P:ka.a(BI)V#1",
@@ -7049,6 +7673,30 @@
       "evidence": "Stored as popup originX."
     },
     {
+      "symbol": "P:ug.a(Ljava/lang/String;Lrh;BLjava/lang/String;)Ldm;#0",
+      "originalName": "param0",
+      "to": "resourceName",
+      "evidence": "Resolves group then resource name and returns qc.a as one dm Sprite; guard -78 remains. Parameter 0 has this lookup/call-site role; descriptor and argument order remain fixed."
+    },
+    {
+      "symbol": "P:ug.a(Ljava/lang/String;Lrh;BLjava/lang/String;)Ldm;#1",
+      "originalName": "param1",
+      "to": "graphicsArchive",
+      "evidence": "Resolves group then resource name and returns qc.a as one dm Sprite; guard -78 remains. Parameter 1 has this lookup/call-site role; descriptor and argument order remain fixed."
+    },
+    {
+      "symbol": "P:ug.a(Ljava/lang/String;Lrh;BLjava/lang/String;)Ldm;#2",
+      "originalName": "param2",
+      "to": "methodGuard",
+      "evidence": "Resolves group then resource name and returns qc.a as one dm Sprite; guard -78 remains. Parameter 2 has this lookup/call-site role; descriptor and argument order remain fixed."
+    },
+    {
+      "symbol": "P:ug.a(Ljava/lang/String;Lrh;BLjava/lang/String;)Ldm;#3",
+      "originalName": "param3",
+      "to": "groupName",
+      "evidence": "Resolves group then resource name and returns qc.a as one dm Sprite; guard -78 remains. Parameter 3 has this lookup/call-site role; descriptor and argument order remain fixed."
+    },
+    {
       "symbol": "P:uk.a(II)Ljava/lang/String;#0",
       "to": "tutorialStepId",
       "evidence": "Switch-like dispatch selects the message for this tutorial step.",
@@ -7089,6 +7737,36 @@
       "originalName": "param0",
       "to": "methodGuard",
       "evidence": "Retains the original compatibility guard and its side effects. Dedicated difficulty/reset/selection fixtures verify normal and boundary guards against native bytecode; original sentinel values are unchanged."
+    },
+    {
+      "symbol": "P:w.a(Ljava/lang/String;Lrh;Lrh;ZLjava/lang/String;)Lnc;#0",
+      "originalName": "param0",
+      "to": "groupName",
+      "evidence": "Resolves glyph group/file and passes glyph and metric archives to pi.a. Result nc has indexed glyph bytes and mutable RGB palettes; Boolean guard effects remain. Parameter 0 has this lookup/call-site role; descriptor and argument order remain fixed."
+    },
+    {
+      "symbol": "P:w.a(Ljava/lang/String;Lrh;Lrh;ZLjava/lang/String;)Lnc;#1",
+      "originalName": "param1",
+      "to": "glyphGraphicsArchive",
+      "evidence": "Resolves glyph group/file and passes glyph and metric archives to pi.a. Result nc has indexed glyph bytes and mutable RGB palettes; Boolean guard effects remain. Parameter 1 has this lookup/call-site role; descriptor and argument order remain fixed."
+    },
+    {
+      "symbol": "P:w.a(Ljava/lang/String;Lrh;Lrh;ZLjava/lang/String;)Lnc;#2",
+      "originalName": "param2",
+      "to": "fontMetricsArchive",
+      "evidence": "Resolves glyph group/file and passes glyph and metric archives to pi.a. Result nc has indexed glyph bytes and mutable RGB palettes; Boolean guard effects remain. Parameter 2 has this lookup/call-site role; descriptor and argument order remain fixed."
+    },
+    {
+      "symbol": "P:w.a(Ljava/lang/String;Lrh;Lrh;ZLjava/lang/String;)Lnc;#3",
+      "originalName": "param3",
+      "to": "methodGuard",
+      "evidence": "Resolves glyph group/file and passes glyph and metric archives to pi.a. Result nc has indexed glyph bytes and mutable RGB palettes; Boolean guard effects remain. Parameter 3 has this lookup/call-site role; descriptor and argument order remain fixed."
+    },
+    {
+      "symbol": "P:w.a(Ljava/lang/String;Lrh;Lrh;ZLjava/lang/String;)Lnc;#4",
+      "originalName": "param4",
+      "to": "resourceName",
+      "evidence": "Resolves glyph group/file and passes glyph and metric archives to pi.a. Result nc has indexed glyph bytes and mutable RGB palettes; Boolean guard effects remain. Parameter 4 has this lookup/call-site role; descriptor and argument order remain fixed."
     },
     {
       "symbol": "P:wc.a(FB)V#0",
@@ -7173,10 +7851,34 @@
       "to": "textArchive",
       "originalName": "param1",
       "evidence": "Argument role follows the corresponding reviewed text loader, resource reader or whole-array decoder; guard arithmetic and side effects remain unchanged."
+    },
+    {
+      "symbol": "P:wj.a(Ljava/lang/String;Ljava/lang/String;Lrh;I)[Ldm;#0",
+      "originalName": "param0",
+      "to": "resourceName",
+      "evidence": "Resolves group then resource name and returns ll.a as dm[] frames; nonzero guard side effects remain. Parameter 0 has this lookup/call-site role; descriptor and argument order remain fixed."
+    },
+    {
+      "symbol": "P:wj.a(Ljava/lang/String;Ljava/lang/String;Lrh;I)[Ldm;#1",
+      "originalName": "param1",
+      "to": "groupName",
+      "evidence": "Resolves group then resource name and returns ll.a as dm[] frames; nonzero guard side effects remain. Parameter 1 has this lookup/call-site role; descriptor and argument order remain fixed."
+    },
+    {
+      "symbol": "P:wj.a(Ljava/lang/String;Ljava/lang/String;Lrh;I)[Ldm;#2",
+      "originalName": "param2",
+      "to": "graphicsArchive",
+      "evidence": "Resolves group then resource name and returns ll.a as dm[] frames; nonzero guard side effects remain. Parameter 2 has this lookup/call-site role; descriptor and argument order remain fixed."
+    },
+    {
+      "symbol": "P:wj.a(Ljava/lang/String;Ljava/lang/String;Lrh;I)[Ldm;#3",
+      "originalName": "param3",
+      "to": "methodGuard",
+      "evidence": "Resolves group then resource name and returns ll.a as dm[] frames; nonzero guard side effects remain. Parameter 3 has this lookup/call-site role; descriptor and argument order remain fixed."
     }
   ],
   "revision": 4,
-  "version": 37,
+  "version": 38,
   "generators": {
     "dekoblokoWork": {
       "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
@@ -7196,13 +7898,1188 @@
   "publication": {
     "format": 1,
     "previousRules": {
-      "commit": "2960d48860b6824c26f9541f60c33cdd74f7b90c",
+      "commit": "a285e7b2fecdf2f956703148de9504aaec7b8dcc",
       "path": "readable/geoblox-rules.json",
-      "sha256": "d062b3ea1a7042984065b47a71bbdffa62974559a4f8da60bc8607d6d350eb9c"
+      "sha256": "0d4e0db8e446d087c4442ba45d8e66780c3ee5cd07250647ce226102f8a7f287"
     },
-    "ruleChanges": [],
+    "ruleChanges": [
+      {
+        "symbol": "F:am.field_b:Ldm;",
+        "before": null,
+        "after": {
+          "symbol": "F:am.field_b:Ldm;",
+          "originalName": "field_b",
+          "to": "unachievedSprite",
+          "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): am.field_b = ug.a(\"unachieved\", ki.field_b, (byte) -78, \"basic\");"
+        }
+      },
+      {
+        "symbol": "F:bj.field_r:Lna;",
+        "before": null,
+        "after": {
+          "symbol": "F:bj.field_r:Lna;",
+          "originalName": "field_r",
+          "to": "jewelsBackgroundSprite",
+          "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): bj.field_r = jg.a(ll.field_f, 1, \"jewels\", \"jewls_background\");"
+        }
+      },
+      {
+        "symbol": "F:ca.field_g:Lna;",
+        "before": null,
+        "after": {
+          "symbol": "F:ca.field_g:Lna;",
+          "originalName": "field_g",
+          "to": "bakingBackgroundSprite",
+          "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): ca.field_g = jg.a(ll.field_f, param0 - 1, \"baking\", \"baking_background\");"
+        }
+      },
+      {
+        "symbol": "F:dd.field_G:Lnc;",
+        "before": null,
+        "after": {
+          "symbol": "F:dd.field_G:Lnc;",
+          "originalName": "field_G",
+          "to": "uiPaletteFont",
+          "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): dd.field_G = w.a(\"\", ll.field_f, ii.field_k, true, \"font\");"
+        }
+      },
+      {
+        "symbol": "F:df.field_a:Lna;",
+        "before": null,
+        "after": {
+          "symbol": "F:df.field_a:Lna;",
+          "originalName": "field_a",
+          "to": "spaceBackgroundSprite",
+          "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): df.field_a = jg.a(ll.field_f, 1, \"space\", \"space_background\");"
+        }
+      },
+      {
+        "symbol": "F:eb.field_g:[Ldm;",
+        "before": null,
+        "after": {
+          "symbol": "F:eb.field_g:[Ldm;",
+          "originalName": "field_g",
+          "to": "mouseBoxFrames",
+          "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): eb.field_g = wj.a(\"box_mouse\", \"\", ll.field_f, 0);"
+        }
+      },
+      {
+        "symbol": "F:ec.field_c:Ldm;",
+        "before": null,
+        "after": {
+          "symbol": "F:ec.field_c:Ldm;",
+          "originalName": "field_c",
+          "to": "selectedThemeForeground",
+          "evidence": "cd.a(B)V selects this from foregrounds for the seven selectedThemeId values. gh.renderSession rotates it into jf.field_a for playfield rendering."
+        }
+      },
+      {
+        "symbol": "F:ee.field_A:Ldm;",
+        "before": null,
+        "after": {
+          "symbol": "F:ee.field_A:Ldm;",
+          "originalName": "field_A",
+          "to": "menuBackgroundSprite",
+          "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): ee.field_A = ug.a(\"menu_background\", ll.field_f, (byte) -78, \"\");"
+        }
+      },
+      {
+        "symbol": "F:eg.field_q:[Ldm;",
+        "before": null,
+        "after": {
+          "symbol": "F:eg.field_q:[Ldm;",
+          "originalName": "field_q",
+          "to": "pointsPanelGlowFrames",
+          "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): eg.field_q = wj.a(\"bonus_glow\", \"\", ll.field_f, 0); gh renderSession indexes bonus_glow by pointsPanelFrameIndex at pointsPanelX."
+        }
+      },
+      {
+        "symbol": "F:ej.field_a:[Ldm;",
+        "before": null,
+        "after": {
+          "symbol": "F:ej.field_a:[Ldm;",
+          "originalName": "field_a",
+          "to": "amorphousCrackFrames",
+          "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): ej.field_a = wj.a(\"amorph_crack\", \"\", ll.field_f, 0);"
+        }
+      },
+      {
+        "symbol": "F:fc.field_b:[Ldm;",
+        "before": null,
+        "after": {
+          "symbol": "F:fc.field_b:[Ldm;",
+          "originalName": "field_b",
+          "to": "avatarEyeFrames",
+          "evidence": "Geoblox.o(I)Z loads player_eyes into var5, optionally from halloween, then renders each source into this padded Sprite array. This names the asset identity, not an inferred emotion."
+        }
+      },
+      {
+        "symbol": "F:fc.field_g:[Ldm;",
+        "before": null,
+        "after": {
+          "symbol": "F:fc.field_g:[Ldm;",
+          "originalName": "field_g",
+          "to": "blackOrbFrames",
+          "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): fc.field_g = wj.a(\"black\", \"\", ll.field_f, 0);"
+        }
+      },
+      {
+        "symbol": "F:fe.field_j:Lna;",
+        "before": null,
+        "after": {
+          "symbol": "F:fe.field_j:Lna;",
+          "originalName": "field_j",
+          "to": "sunBackgroundSprite",
+          "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): fe.field_j = jg.a(ll.field_f, 1, \"sun\", \"sky_background\");"
+        }
+      },
+      {
+        "symbol": "F:fi.field_d:Lbg;",
+        "before": null,
+        "after": {
+          "symbol": "F:fi.field_d:Lbg;",
+          "originalName": "field_d",
+          "to": "smallFont",
+          "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): fi.field_d = gi.a(ii.field_k, 1, ll.field_f, \"small_font\", \"\");"
+        }
+      },
+      {
+        "symbol": "F:fl.field_a:Ldm;",
+        "before": null,
+        "after": {
+          "symbol": "F:fl.field_a:Ldm;",
+          "originalName": "field_a",
+          "to": "spaceForegroundSprite",
+          "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): fl.field_a = ug.a(\"space_foreground\", ll.field_f, (byte) -78, \"space\");"
+        }
+      },
+      {
+        "symbol": "F:g.field_i:Ldm;",
+        "before": null,
+        "after": {
+          "symbol": "F:g.field_i:Ldm;",
+          "originalName": "field_i",
+          "to": "countBoxSprite",
+          "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): g.field_i = ug.a(\"box_count\", ll.field_f, (byte) -78, \"\");"
+        }
+      },
+      {
+        "symbol": "F:gh.field_L:Z",
+        "before": null,
+        "after": {
+          "symbol": "F:gh.field_L:Z",
+          "originalName": "field_L",
+          "to": "showGameOverOverlay",
+          "evidence": "gh.startSessionEndSequence sets this flag for non-tutorial ending. renderSession uses it to move the score box and draw kh.field_h[6], loaded from gameover_title. The constructor resets it false; it is distinct from sessionEnding."
+        }
+      },
+      {
+        "symbol": "F:hb.field_d:[Ldm;",
+        "before": null,
+        "after": {
+          "symbol": "F:hb.field_d:[Ldm;",
+          "originalName": "field_d",
+          "to": "silverStarFrames",
+          "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): hb.field_d = wj.a(\"silver\", \"\", ll.field_f, 0);"
+        }
+      },
+      {
+        "symbol": "F:hd.field_H:Ldm;",
+        "before": null,
+        "after": {
+          "symbol": "F:hd.field_H:Ldm;",
+          "originalName": "field_H",
+          "to": "sportsForegroundSprite",
+          "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): hd.field_H = ug.a(\"sports_foreground\", ll.field_f, (byte) -78, \"sports\");"
+        }
+      },
+      {
+        "symbol": "F:hg.field_b:[Ldm;",
+        "before": null,
+        "after": {
+          "symbol": "F:hg.field_b:[Ldm;",
+          "originalName": "field_b",
+          "to": "blackOrbImplosionFrames",
+          "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): hg.field_b = wj.a(\"black_implode\", \"\", ll.field_f, 0);"
+        }
+      },
+      {
+        "symbol": "F:hi.field_F:Ldm;",
+        "before": null,
+        "after": {
+          "symbol": "F:hi.field_F:Ldm;",
+          "originalName": "field_F",
+          "to": "bakingForegroundSprite",
+          "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): hi.field_F = ug.a(\"baking_foreground\", ll.field_f, (byte) -78, \"baking\");"
+        }
+      },
+      {
+        "symbol": "F:ii.field_k:Lrh;",
+        "before": null,
+        "after": {
+          "symbol": "F:ii.field_k:Lrh;",
+          "originalName": "field_k",
+          "to": "fontMetricsArchive",
+          "evidence": "Geoblox requestGameArchives assigns archive 6 here. prepareGameAssets passes it as the metric byte-source archive to w.a and gi.a, separate from the glyph graphics archive, before releasing it."
+        }
+      },
+      {
+        "symbol": "F:jf.field_a:Ldm;",
+        "before": null,
+        "after": {
+          "symbol": "F:jf.field_a:Ldm;",
+          "originalName": "field_a",
+          "to": "rotatedThemeForegroundRaster",
+          "evidence": "gh constructor sizes this Sprite from ec.field_c. renderSession sets it as raster target, rotates selected foreground pixels into it using boardAngleRadians, and draws it centred."
+        }
+      },
+      {
+        "symbol": "F:jg.field_f:[[I",
+        "before": null,
+        "after": {
+          "symbol": "F:jg.field_f:[[I",
+          "originalName": "field_f",
+          "to": "themeSpriteColors",
+          "evidence": "Geoblox.o(I)Z uses this seven-by-seven RGB table to tint geometry and amorphic sprites by theme/variant. jg static initialization retains the literal palette values."
+        }
+      },
+      {
+        "symbol": "F:jg.field_h:[[I",
+        "before": null,
+        "after": {
+          "symbol": "F:jg.field_h:[[I",
+          "originalName": "field_h",
+          "to": "themeCycleColors",
+          "evidence": "jg static initialization copies theme palettes from field_f and orders the copied colors using the retained derived RGB key. ja updatePaletteChannelDeltas and animateEntity read cyclic current/next frame colors here."
+        }
+      },
+      {
+        "symbol": "F:k.field_a:Ldm;",
+        "before": null,
+        "after": {
+          "symbol": "F:k.field_a:Ldm;",
+          "originalName": "field_a",
+          "to": "popSprite",
+          "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): k.field_a = ug.a(\"pop\", ll.field_f, (byte) -78, \"\");"
+        }
+      },
+      {
+        "symbol": "F:ka.field_m:[[[Ldm;",
+        "before": null,
+        "after": {
+          "symbol": "F:ka.field_m:[[[Ldm;",
+          "originalName": "field_m",
+          "to": "amorphousFramesByThemeAndVariant",
+          "evidence": "Geoblox.o(I)Z renders amorphic frames with jg.field_f[theme][variant]. ja.selectEntitySprite and animateEntity read [selectedThemeId][spriteVariantIndex][animationFrame] for kind 2."
+        }
+      },
+      {
+        "symbol": "F:ke.field_a:[[[Ldm;",
+        "before": null,
+        "after": {
+          "symbol": "F:ke.field_a:[[[Ldm;",
+          "originalName": "field_a",
+          "to": "entitySpritesByThemeCategoryAndVariant",
+          "evidence": "Geoblox.o(I)Z builds tinted geoms sprites by theme/category/palette variant. ja.selectEntitySprite reads [selectedThemeId][entityCategoryKey][spriteVariantIndex] for kind 0."
+        }
+      },
+      {
+        "symbol": "F:kh.field_h:[Ldm;",
+        "before": null,
+        "after": {
+          "symbol": "F:kh.field_h:[Ldm;",
+          "originalName": "field_h",
+          "to": "screenTitleSprites",
+          "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): kh.field_h[0] = ug.a(\"main_title\", ll.field_f, (byte) -78, \"\"); kh.field_h[2] = ug.a(\"bestscoreseach_title\", ll.field_f, (byte) -78, \"\"); kh.field_h[3] = ug.a(\"myscores_title\", ll.field_f, (byte) -78, \"\"); kh.field_h[1] = ug.a(\"allscores_title\", ll.field_f, (byte) -78, \"\"); kh.field_h[6] = ug.a(\"gameover_title\", ll.field_f, (byte) -78, \"\"); kh.field_h[4] = ug.a(\"achievements_title\", ll.field_f, (byte) -78, \"\"); kh.field_h[5] = ug.a(\"instructions_title\", ll.field_f, (byte) -78, \"\"); kh.field_h[7] = ug.a(\"achievements_tg_title\", ll.field_f, (byte) -78, \"\"); kh.field_h[8] = ug.a(\"login_title\", ll.field_f, (byte) -78, \"\"); The original nine numeric screen indexes remain, including gameover_title at index 6."
+        }
+      },
+      {
+        "symbol": "F:ki.field_b:Lrh;",
+        "before": null,
+        "after": {
+          "symbol": "F:ki.field_b:Lrh;",
+          "originalName": "field_b",
+          "to": "basicUiGraphicsArchive",
+          "evidence": "wf archive initialization aliases l.field_h here. Geoblox.o(I)Z loads unachieved and orbcoin from its basic group before clearing the field."
+        }
+      },
+      {
+        "symbol": "F:kj.field_E:Ldm;",
+        "before": null,
+        "after": {
+          "symbol": "F:kj.field_E:Ldm;",
+          "originalName": "field_E",
+          "to": "jewelsForegroundSprite",
+          "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): kj.field_E = ug.a(\"jewls_foreground\", ll.field_f, (byte) -78, \"jewels\");"
+        }
+      },
+      {
+        "symbol": "F:lb.field_d:Ldm;",
+        "before": null,
+        "after": {
+          "symbol": "F:lb.field_d:Ldm;",
+          "originalName": "field_d",
+          "to": "sweetsForegroundSprite",
+          "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): lb.field_d = ug.a(\"sweets_foreground\", ll.field_f, (byte) -78, \"sweets\");"
+        }
+      },
+      {
+        "symbol": "F:ld.field_b:[Ldm;",
+        "before": null,
+        "after": {
+          "symbol": "F:ld.field_b:[Ldm;",
+          "originalName": "field_b",
+          "to": "avatarCryEndFrames",
+          "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): ld.field_b = wj.a(\"cry_end\", \"\", ll.field_f, 0); ld.field_b = wj.a(\"cry_end\", \"halloween\", ll.field_f, 0);"
+        }
+      },
+      {
+        "symbol": "F:lj.field_d:Ldm;",
+        "before": null,
+        "after": {
+          "symbol": "F:lj.field_d:Ldm;",
+          "originalName": "field_d",
+          "to": "smallBoxSprite",
+          "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): lj.field_d = ug.a(\"box_sml\", ll.field_f, (byte) -78, \"\");"
+        }
+      },
+      {
+        "symbol": "F:ll.field_f:Lrh;",
+        "before": null,
+        "after": {
+          "symbol": "F:ll.field_f:Lrh;",
+          "originalName": "field_f",
+          "to": "gameGraphicsArchive",
+          "evidence": "Geoblox requestGameArchives assigns archive 1 here; asset preparation and theme loaders read font glyphs, game sprites and named theme groups from it."
+        }
+      },
+      {
+        "symbol": "F:ll.field_h:[Ldm;",
+        "before": null,
+        "after": {
+          "symbol": "F:ll.field_h:[Ldm;",
+          "originalName": "field_h",
+          "to": "frameNineSliceSprites",
+          "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): ll.field_h[0] = ug.a(\"frame_topleft\", ll.field_f, (byte) -78, \"\"); ll.field_h[1] = ug.a(\"frame_top\", ll.field_f, (byte) -78, \"\"); ll.field_h[2] = ug.a(\"frame_topright\", ll.field_f, (byte) -78, \"\"); ll.field_h[3] = ug.a(\"frame_left\", ll.field_f, (byte) -78, \"\"); ll.field_h[4] = ug.a(\"frame_centre\", ll.field_f, (byte) -78, \"\"); ll.field_h[5] = ug.a(\"frame_right\", ll.field_f, (byte) -78, \"\"); ll.field_h[6] = ug.a(\"frame_bottomleft\", ll.field_f, (byte) -78, \"\"); ll.field_h[7] = ug.a(\"frame_bottom\", ll.field_f, (byte) -78, \"\"); ll.field_h[8] = ug.a(\"frame_bottomright\", ll.field_f, (byte) -78, \"\"); The original nine frame-part indexes remain."
+        }
+      },
+      {
+        "symbol": "F:mf.field_a:Lna;",
+        "before": null,
+        "after": {
+          "symbol": "F:mf.field_a:Lna;",
+          "originalName": "field_a",
+          "to": "selectedThemeBackground",
+          "evidence": "cd.a(B)V selects this indexed background alongside ec.field_c for the seven selectedThemeId values; gh.renderSession draws it at (0,0)."
+        }
+      },
+      {
+        "symbol": "F:mi.field_B:[Ldm;",
+        "before": null,
+        "after": {
+          "symbol": "F:mi.field_B:[Ldm;",
+          "originalName": "field_B",
+          "to": "sparkleFrames",
+          "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): mi.field_B = wj.a(\"sparkle\", \"\", ll.field_f, 0);"
+        }
+      },
+      {
+        "symbol": "F:nc.field_K:[[I",
+        "before": null,
+        "after": {
+          "symbol": "F:nc.field_K:[[I",
+          "originalName": "field_K",
+          "to": "colorPalettes",
+          "evidence": "nc constructor installs the decoded palette at field_K[0]; glyph rasterizers map indexed bytes through selected palettes. Geoblox.o(I)Z copies palette zero into palette one before adjusting the original highlight entries."
+        }
+      },
+      {
+        "symbol": "F:ne.field_b:Ldm;",
+        "before": null,
+        "after": {
+          "symbol": "F:ne.field_b:Ldm;",
+          "originalName": "field_b",
+          "to": "sunForegroundSprite",
+          "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): ne.field_b = ug.a(\"sky_foreground\", ll.field_f, (byte) -78, \"sun\");"
+        }
+      },
+      {
+        "symbol": "F:ok.field_a:[Ldm;",
+        "before": null,
+        "after": {
+          "symbol": "F:ok.field_a:[Ldm;",
+          "originalName": "field_a",
+          "to": "avatarCryMiddleFrames",
+          "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): ok.field_a = wj.a(\"cry_middle\", \"\", ll.field_f, 0); ok.field_a = wj.a(\"cry_middle\", \"halloween\", ll.field_f, 0);"
+        }
+      },
+      {
+        "symbol": "F:pi.field_O:Lna;",
+        "before": null,
+        "after": {
+          "symbol": "F:pi.field_O:Lna;",
+          "originalName": "field_O",
+          "to": "sweetsBackgroundSprite",
+          "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): pi.field_O = jg.a(ll.field_f, 1, \"sweets\", \"sweets_background\");"
+        }
+      },
+      {
+        "symbol": "F:pk.field_k:Ldm;",
+        "before": null,
+        "after": {
+          "symbol": "F:pk.field_k:Ldm;",
+          "originalName": "field_k",
+          "to": "resultBubbleSprite",
+          "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): pk.field_k = ug.a(\"bubble\", ll.field_f, (byte) -78, \"\"); gh renderResultSequence rotates this bubble around the playfield centre."
+        }
+      },
+      {
+        "symbol": "F:qh.field_O:[Ldm;",
+        "before": null,
+        "after": {
+          "symbol": "F:qh.field_O:[Ldm;",
+          "originalName": "field_O",
+          "to": "introGeometryFrames",
+          "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): qh.field_O = wj.a(\"intro_geoms\", \"\", ll.field_f, 0);"
+        }
+      },
+      {
+        "symbol": "F:re.field_h:Ldm;",
+        "before": null,
+        "after": {
+          "symbol": "F:re.field_h:Ldm;",
+          "originalName": "field_h",
+          "to": "widgetSprite",
+          "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): re.field_h = ug.a(\"widget\", ll.field_f, (byte) -78, \"\");"
+        }
+      },
+      {
+        "symbol": "F:s.field_G:[[Ldm;",
+        "before": null,
+        "after": {
+          "symbol": "F:s.field_G:[[Ldm;",
+          "originalName": "field_G",
+          "to": "geometrySpritesByThemeAndCategory",
+          "evidence": "Geoblox.o(I)Z groups geoms frames by seven and stores the original sprites here. ja.selectEntitySprite reads [selectedThemeId][entityCategoryKey] for kind 1."
+        }
+      },
+      {
+        "symbol": "F:sd.field_y:Ldm;",
+        "before": null,
+        "after": {
+          "symbol": "F:sd.field_y:Ldm;",
+          "originalName": "field_y",
+          "to": "barSprite",
+          "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): sd.field_y = ug.a(\"bar\", ll.field_f, (byte) -78, \"\");"
+        }
+      },
+      {
+        "symbol": "F:sg.field_e:Lna;",
+        "before": null,
+        "after": {
+          "symbol": "F:sg.field_e:Lna;",
+          "originalName": "field_e",
+          "to": "germsBackgroundSprite",
+          "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): sg.field_e = jg.a(ll.field_f, 1, \"germs\", \"germs_background\");"
+        }
+      },
+      {
+        "symbol": "F:sl.field_c:Ldm;",
+        "before": null,
+        "after": {
+          "symbol": "F:sl.field_c:Ldm;",
+          "originalName": "field_c",
+          "to": "germsForegroundSprite",
+          "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): sl.field_c = ug.a(\"germs_foreground\", ll.field_f, (byte) -78, \"germs\");"
+        }
+      },
+      {
+        "symbol": "F:sl.field_f:[Ldm;",
+        "before": null,
+        "after": {
+          "symbol": "F:sl.field_f:[Ldm;",
+          "originalName": "field_f",
+          "to": "achievementSprites",
+          "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): sl.field_f = wj.a(\"achievements\", \"\", ll.field_f, 0);"
+        }
+      },
+      {
+        "symbol": "F:th.field_f:Lna;",
+        "before": null,
+        "after": {
+          "symbol": "F:th.field_f:Lna;",
+          "originalName": "field_f",
+          "to": "sportsBackgroundSprite",
+          "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): th.field_f = jg.a(ll.field_f, 1, \"sports\", \"sports_background\");"
+        }
+      },
+      {
+        "symbol": "F:tl.field_r:[Ldm;",
+        "before": null,
+        "after": {
+          "symbol": "F:tl.field_r:[Ldm;",
+          "originalName": "field_r",
+          "to": "introFaceFrames",
+          "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): tl.field_r = wj.a(\"intro_faces\", \"\", ll.field_f, 0); tl.field_r = wj.a(\"intro_faces\", \"halloween\", ll.field_f, 0);"
+        }
+      },
+      {
+        "symbol": "F:uk.field_m:Ldm;",
+        "before": null,
+        "after": {
+          "symbol": "F:uk.field_m:Ldm;",
+          "originalName": "field_m",
+          "to": "orbCoinSprite",
+          "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): uk.field_m = ug.a(\"orbcoin\", ki.field_b, (byte) -78, \"basic\");"
+        }
+      },
+      {
+        "symbol": "F:vc.field_j:Ldm;",
+        "before": null,
+        "after": {
+          "symbol": "F:vc.field_j:Ldm;",
+          "originalName": "field_j",
+          "to": "menuForegroundSprite",
+          "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): vc.field_j = ug.a(\"menu_foreground\", ll.field_f, (byte) -78, \"\");"
+        }
+      },
+      {
+        "symbol": "F:vf.field_H:[Ldm;",
+        "before": null,
+        "after": {
+          "symbol": "F:vf.field_H:[Ldm;",
+          "originalName": "field_H",
+          "to": "avatarCryBeginFrames",
+          "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): vf.field_H = wj.a(\"cry_begin\", \"\", ll.field_f, 0); vf.field_H = wj.a(\"cry_begin\", \"halloween\", ll.field_f, 0);"
+        }
+      },
+      {
+        "symbol": "F:vg.field_f:[Ldm;",
+        "before": null,
+        "after": {
+          "symbol": "F:vg.field_f:[Ldm;",
+          "originalName": "field_f",
+          "to": "silverStarShockFrames",
+          "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): vg.field_f = wj.a(\"silver_shock\", \"\", ll.field_f, 0);"
+        }
+      },
+      {
+        "symbol": "F:vh.field_G:Ldm;",
+        "before": null,
+        "after": {
+          "symbol": "F:vh.field_G:Ldm;",
+          "originalName": "field_G",
+          "to": "largeBoxSprite",
+          "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): vh.field_G = ug.a(\"box_lgr\", ll.field_f, (byte) -78, \"\");"
+        }
+      },
+      {
+        "symbol": "F:vh.field_H:[Ldm;",
+        "before": null,
+        "after": {
+          "symbol": "F:vh.field_H:[Ldm;",
+          "originalName": "field_H",
+          "to": "avatarMouthFrames",
+          "evidence": "Geoblox.o(I)Z loads player_mouth into var6, optionally from halloween, then renders each source into this padded Sprite array."
+        }
+      },
+      {
+        "symbol": "F:vj.field_a:[Ldm;",
+        "before": null,
+        "after": {
+          "symbol": "F:vj.field_a:[Ldm;",
+          "originalName": "field_a",
+          "to": "bangFrames",
+          "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): vj.field_a = wj.a(\"bang\", \"\", ll.field_f, 0);"
+        }
+      },
+      {
+        "symbol": "L:Geoblox.o(I)Z#0",
+        "before": null,
+        "after": {
+          "symbol": "L:Geoblox.o(I)Z#0",
+          "originalName": "var2",
+          "to": "uiPaletteSize",
+          "evidence": "Palette zero length before allocating and copying palette one."
+        }
+      },
+      {
+        "symbol": "L:Geoblox.o(I)Z#1",
+        "before": null,
+        "after": {
+          "symbol": "L:Geoblox.o(I)Z#1",
+          "originalName": "array$0",
+          "to": "alternateUiPalette",
+          "evidence": "New array installed as palette one before sf.a copies palette zero."
+        }
+      },
+      {
+        "symbol": "L:Geoblox.o(I)Z#10",
+        "before": null,
+        "after": {
+          "symbol": "L:Geoblox.o(I)Z#10",
+          "originalName": "var13",
+          "to": "keyboardWidthAlias",
+          "evidence": "Intermediate alias of var14 retained before filling alias var8."
+        }
+      },
+      {
+        "symbol": "L:Geoblox.o(I)Z#11",
+        "before": null,
+        "after": {
+          "symbol": "L:Geoblox.o(I)Z#11",
+          "originalName": "var8",
+          "to": "keyboardWidthsForFill",
+          "evidence": "Alias through var13 of keyboard advances filled by var11."
+        }
+      },
+      {
+        "symbol": "L:Geoblox.o(I)Z#12",
+        "before": null,
+        "after": {
+          "symbol": "L:Geoblox.o(I)Z#12",
+          "originalName": "var11",
+          "to": "keyboardIconIndex",
+          "evidence": "Iterates keyboard sprites while filling width-minus-three advances."
+        }
+      },
+      {
+        "symbol": "L:Geoblox.o(I)Z#13",
+        "before": null,
+        "after": {
+          "symbol": "L:Geoblox.o(I)Z#13",
+          "originalName": "var5_int",
+          "to": "geometryFrameThenVariantIndex",
+          "evidence": "Traverses all geoms frames, then indexes palette variants during amorphic tinting."
+        }
+      },
+      {
+        "symbol": "L:Geoblox.o(I)Z#14",
+        "before": null,
+        "after": {
+          "symbol": "L:Geoblox.o(I)Z#14",
+          "originalName": "var6_int",
+          "to": "categoryThenAnimationFrameIndex",
+          "evidence": "Geometry frame modulo seven, then amorphic animation frame index, then avatar eye frame index."
+        }
+      },
+      {
+        "symbol": "L:Geoblox.o(I)Z#15",
+        "before": null,
+        "after": {
+          "symbol": "L:Geoblox.o(I)Z#15",
+          "originalName": "var7_int",
+          "to": "geometryWidthThenFrameIndex",
+          "evidence": "Source geometry pixel width, then mouth frame index, then sparkle frame index."
+        }
+      },
+      {
+        "symbol": "L:Geoblox.o(I)Z#16",
+        "before": null,
+        "after": {
+          "symbol": "L:Geoblox.o(I)Z#16",
+          "originalName": "var9",
+          "to": "paletteVariantThenKeyboardIndex",
+          "evidence": "Indexes geometry tint variants, then receives the initial keyboard index alias before the width loop."
+        }
+      },
+      {
+        "symbol": "L:Geoblox.o(I)Z#17",
+        "before": null,
+        "after": {
+          "symbol": "L:Geoblox.o(I)Z#17",
+          "originalName": "var10",
+          "to": "clientFlagSnapshot",
+          "evidence": "Copies Geoblox.field_C at entry. Its undocumented semantics are not inferred; the unused original store is retained."
+        }
+      },
+      {
+        "symbol": "L:Geoblox.o(I)Z#2",
+        "before": null,
+        "after": {
+          "symbol": "L:Geoblox.o(I)Z#2",
+          "originalName": "var12",
+          "to": "geometrySourceFrames",
+          "evidence": "geoms source frames for original and tinted theme/category sprites."
+        }
+      },
+      {
+        "symbol": "L:Geoblox.o(I)Z#3",
+        "before": null,
+        "after": {
+          "symbol": "L:Geoblox.o(I)Z#3",
+          "originalName": "var3",
+          "to": "geometryAliasThenAmorphousFrames",
+          "evidence": "First aliases var12; later replaced by amorphic resource frames. Both roles of this reused slot are retained."
+        }
+      },
+      {
+        "symbol": "L:Geoblox.o(I)Z#4",
+        "before": null,
+        "after": {
+          "symbol": "L:Geoblox.o(I)Z#4",
+          "originalName": "var4",
+          "to": "themeIndex",
+          "evidence": "Increments once per seven geoms, then reused for the outer theme loop of amorphic tinting."
+        }
+      },
+      {
+        "symbol": "L:Geoblox.o(I)Z#5",
+        "before": null,
+        "after": {
+          "symbol": "L:Geoblox.o(I)Z#5",
+          "originalName": "var8_int",
+          "to": "geometryFrameHeight",
+          "evidence": "Current source Sprite field_o row count used to allocate tinted geometry sprites."
+        }
+      },
+      {
+        "symbol": "L:Geoblox.o(I)Z#6",
+        "before": null,
+        "after": {
+          "symbol": "L:Geoblox.o(I)Z#6",
+          "originalName": "var5",
+          "to": "avatarEyeSourceFrames",
+          "evidence": "player_eyes source frames from normal or halloween group before padded rendering."
+        }
+      },
+      {
+        "symbol": "L:Geoblox.o(I)Z#7",
+        "before": null,
+        "after": {
+          "symbol": "L:Geoblox.o(I)Z#7",
+          "originalName": "var6",
+          "to": "avatarMouthSourceFrames",
+          "evidence": "player_mouth source frames from normal or halloween group before padded rendering."
+        }
+      },
+      {
+        "symbol": "L:Geoblox.o(I)Z#8",
+        "before": null,
+        "after": {
+          "symbol": "L:Geoblox.o(I)Z#8",
+          "originalName": "var7",
+          "to": "keyboardIconSprites",
+          "evidence": "Eight indexed keyboard_left/right/enter/space/esc/backspace/down/i sprites."
+        }
+      },
+      {
+        "symbol": "L:Geoblox.o(I)Z#9",
+        "before": null,
+        "after": {
+          "symbol": "L:Geoblox.o(I)Z#9",
+          "originalName": "var14",
+          "to": "keyboardIconAdvanceWidths",
+          "evidence": "One width-minus-three entry per keyboard icon, passed with sprites to the small font."
+        }
+      },
+      {
+        "symbol": "L:gi.a(Lrh;ILrh;Ljava/lang/String;Ljava/lang/String;)Lbg;#0",
+        "before": null,
+        "after": {
+          "symbol": "L:gi.a(Lrh;ILrh;Ljava/lang/String;Ljava/lang/String;)Lbg;#0",
+          "originalName": "var5_int",
+          "to": "archiveGroupId",
+          "evidence": "Resolved numeric group identity from group-name then resource-name lookup, passed to the original loading decoder."
+        }
+      },
+      {
+        "symbol": "L:gi.a(Lrh;ILrh;Ljava/lang/String;Ljava/lang/String;)Lbg;#2",
+        "before": null,
+        "after": {
+          "symbol": "L:gi.a(Lrh;ILrh;Ljava/lang/String;Ljava/lang/String;)Lbg;#2",
+          "originalName": "var6",
+          "to": "archiveFileId",
+          "evidence": "Resolved numeric file identity from group-name then resource-name lookup, passed to the original loading decoder."
+        }
+      },
+      {
+        "symbol": "L:jg.a(Lrh;ILjava/lang/String;Ljava/lang/String;)Lna;#0",
+        "before": null,
+        "after": {
+          "symbol": "L:jg.a(Lrh;ILjava/lang/String;Ljava/lang/String;)Lna;#0",
+          "originalName": "var4_int",
+          "to": "archiveGroupId",
+          "evidence": "Resolved numeric group identity from group-name then resource-name lookup, passed to the original loading decoder."
+        }
+      },
+      {
+        "symbol": "L:jg.a(Lrh;ILjava/lang/String;Ljava/lang/String;)Lna;#2",
+        "before": null,
+        "after": {
+          "symbol": "L:jg.a(Lrh;ILjava/lang/String;Ljava/lang/String;)Lna;#2",
+          "originalName": "var5",
+          "to": "archiveFileId",
+          "evidence": "Resolved numeric file identity from group-name then resource-name lookup, passed to the original loading decoder."
+        }
+      },
+      {
+        "symbol": "L:ug.a(Ljava/lang/String;Lrh;BLjava/lang/String;)Ldm;#0",
+        "before": null,
+        "after": {
+          "symbol": "L:ug.a(Ljava/lang/String;Lrh;BLjava/lang/String;)Ldm;#0",
+          "originalName": "var4_int",
+          "to": "archiveGroupId",
+          "evidence": "Resolved numeric group identity from group-name then resource-name lookup, passed to the original loading decoder."
+        }
+      },
+      {
+        "symbol": "L:ug.a(Ljava/lang/String;Lrh;BLjava/lang/String;)Ldm;#2",
+        "before": null,
+        "after": {
+          "symbol": "L:ug.a(Ljava/lang/String;Lrh;BLjava/lang/String;)Ldm;#2",
+          "originalName": "var5",
+          "to": "archiveFileId",
+          "evidence": "Resolved numeric file identity from group-name then resource-name lookup, passed to the original loading decoder."
+        }
+      },
+      {
+        "symbol": "L:w.a(Ljava/lang/String;Lrh;Lrh;ZLjava/lang/String;)Lnc;#0",
+        "before": null,
+        "after": {
+          "symbol": "L:w.a(Ljava/lang/String;Lrh;Lrh;ZLjava/lang/String;)Lnc;#0",
+          "originalName": "var5_int",
+          "to": "archiveGroupId",
+          "evidence": "Resolved numeric group identity from group-name then resource-name lookup, passed to the original loading decoder."
+        }
+      },
+      {
+        "symbol": "L:w.a(Ljava/lang/String;Lrh;Lrh;ZLjava/lang/String;)Lnc;#2",
+        "before": null,
+        "after": {
+          "symbol": "L:w.a(Ljava/lang/String;Lrh;Lrh;ZLjava/lang/String;)Lnc;#2",
+          "originalName": "var6",
+          "to": "archiveFileId",
+          "evidence": "Resolved numeric file identity from group-name then resource-name lookup, passed to the original loading decoder."
+        }
+      },
+      {
+        "symbol": "L:wj.a(Ljava/lang/String;Ljava/lang/String;Lrh;I)[Ldm;#0",
+        "before": null,
+        "after": {
+          "symbol": "L:wj.a(Ljava/lang/String;Ljava/lang/String;Lrh;I)[Ldm;#0",
+          "originalName": "var4_int",
+          "to": "archiveGroupId",
+          "evidence": "Resolved numeric group identity from group-name then resource-name lookup, passed to the original loading decoder."
+        }
+      },
+      {
+        "symbol": "L:wj.a(Ljava/lang/String;Ljava/lang/String;Lrh;I)[Ldm;#2",
+        "before": null,
+        "after": {
+          "symbol": "L:wj.a(Ljava/lang/String;Ljava/lang/String;Lrh;I)[Ldm;#2",
+          "originalName": "var5",
+          "to": "archiveFileId",
+          "evidence": "Resolved numeric file identity from group-name then resource-name lookup, passed to the original loading decoder."
+        }
+      },
+      {
+        "symbol": "M:cd.a(B)V",
+        "before": null,
+        "after": {
+          "symbol": "M:cd.a(B)V",
+          "originalName": "a",
+          "to": "selectThemeRenderAssets",
+          "evidence": "Selects ec.field_c and mf.field_a from matching foreground/background pairs for selectedThemeId 0 through 6. Guard <=75 still clears cd.field_m before selection."
+        }
+      },
+      {
+        "symbol": "M:gi.a(Lrh;ILrh;Ljava/lang/String;Ljava/lang/String;)Lbg;",
+        "before": null,
+        "after": {
+          "symbol": "M:gi.a(Lrh;ILrh;Ljava/lang/String;Ljava/lang/String;)Lbg;",
+          "originalName": "a",
+          "to": "loadBitmapFont",
+          "evidence": "Resolves glyph group/file and passes graphics and metric archives to rb.a, returning bg bitmap glyph font. Original guard and failure context remain."
+        }
+      },
+      {
+        "symbol": "M:jg.a(Lrh;ILjava/lang/String;Ljava/lang/String;)Lna;",
+        "before": null,
+        "after": {
+          "symbol": "M:jg.a(Lrh;ILjava/lang/String;Ljava/lang/String;)Lna;",
+          "originalName": "a",
+          "to": "loadIndexedSprite",
+          "evidence": "Resolves group then resource name and returns vh.a as a na indexed sprite; guard side effects remain."
+        }
+      },
+      {
+        "symbol": "M:ug.a(Ljava/lang/String;Lrh;BLjava/lang/String;)Ldm;",
+        "before": null,
+        "after": {
+          "symbol": "M:ug.a(Ljava/lang/String;Lrh;BLjava/lang/String;)Ldm;",
+          "originalName": "a",
+          "to": "loadSprite",
+          "evidence": "Resolves group then resource name and returns qc.a as one dm Sprite; guard -78 remains."
+        }
+      },
+      {
+        "symbol": "M:w.a(Ljava/lang/String;Lrh;Lrh;ZLjava/lang/String;)Lnc;",
+        "before": null,
+        "after": {
+          "symbol": "M:w.a(Ljava/lang/String;Lrh;Lrh;ZLjava/lang/String;)Lnc;",
+          "originalName": "a",
+          "to": "loadPaletteFont",
+          "evidence": "Resolves glyph group/file and passes glyph and metric archives to pi.a. Result nc has indexed glyph bytes and mutable RGB palettes; Boolean guard effects remain."
+        }
+      },
+      {
+        "symbol": "M:wj.a(Ljava/lang/String;Ljava/lang/String;Lrh;I)[Ldm;",
+        "before": null,
+        "after": {
+          "symbol": "M:wj.a(Ljava/lang/String;Ljava/lang/String;Lrh;I)[Ldm;",
+          "originalName": "a",
+          "to": "loadSpriteFrames",
+          "evidence": "Resolves group then resource name and returns ll.a as dm[] frames; nonzero guard side effects remain."
+        }
+      },
+      {
+        "symbol": "P:Geoblox.o(I)Z#0",
+        "before": null,
+        "after": {
+          "symbol": "P:Geoblox.o(I)Z#0",
+          "originalName": "param0",
+          "to": "methodGuard",
+          "evidence": "Normal preparation guard is 25869. Its arithmetic in progress/resource calls and reconnectMessages cleanup for other values remain unchanged."
+        }
+      },
+      {
+        "symbol": "P:cd.a(B)V#0",
+        "before": null,
+        "after": {
+          "symbol": "P:cd.a(B)V#0",
+          "originalName": "param0",
+          "to": "methodGuard",
+          "evidence": "Guard <=75 clears cd.field_m before theme selection. Normal call sites pass 79, 104 or 116; no theme-ID interpretation is imposed."
+        }
+      },
+      {
+        "symbol": "P:gi.a(Lrh;ILrh;Ljava/lang/String;Ljava/lang/String;)Lbg;#0",
+        "before": null,
+        "after": {
+          "symbol": "P:gi.a(Lrh;ILrh;Ljava/lang/String;Ljava/lang/String;)Lbg;#0",
+          "originalName": "param0",
+          "to": "fontMetricsArchive",
+          "evidence": "Resolves glyph group/file and passes graphics and metric archives to rb.a, returning bg bitmap glyph font. Original guard and failure context remain. Parameter 0 has this lookup/call-site role; descriptor and argument order remain fixed."
+        }
+      },
+      {
+        "symbol": "P:gi.a(Lrh;ILrh;Ljava/lang/String;Ljava/lang/String;)Lbg;#1",
+        "before": null,
+        "after": {
+          "symbol": "P:gi.a(Lrh;ILrh;Ljava/lang/String;Ljava/lang/String;)Lbg;#1",
+          "originalName": "param1",
+          "to": "methodGuard",
+          "evidence": "Resolves glyph group/file and passes graphics and metric archives to rb.a, returning bg bitmap glyph font. Original guard and failure context remain. Parameter 1 has this lookup/call-site role; descriptor and argument order remain fixed."
+        }
+      },
+      {
+        "symbol": "P:gi.a(Lrh;ILrh;Ljava/lang/String;Ljava/lang/String;)Lbg;#2",
+        "before": null,
+        "after": {
+          "symbol": "P:gi.a(Lrh;ILrh;Ljava/lang/String;Ljava/lang/String;)Lbg;#2",
+          "originalName": "param2",
+          "to": "glyphGraphicsArchive",
+          "evidence": "Resolves glyph group/file and passes graphics and metric archives to rb.a, returning bg bitmap glyph font. Original guard and failure context remain. Parameter 2 has this lookup/call-site role; descriptor and argument order remain fixed."
+        }
+      },
+      {
+        "symbol": "P:gi.a(Lrh;ILrh;Ljava/lang/String;Ljava/lang/String;)Lbg;#3",
+        "before": null,
+        "after": {
+          "symbol": "P:gi.a(Lrh;ILrh;Ljava/lang/String;Ljava/lang/String;)Lbg;#3",
+          "originalName": "param3",
+          "to": "resourceName",
+          "evidence": "Resolves glyph group/file and passes graphics and metric archives to rb.a, returning bg bitmap glyph font. Original guard and failure context remain. Parameter 3 has this lookup/call-site role; descriptor and argument order remain fixed."
+        }
+      },
+      {
+        "symbol": "P:gi.a(Lrh;ILrh;Ljava/lang/String;Ljava/lang/String;)Lbg;#4",
+        "before": null,
+        "after": {
+          "symbol": "P:gi.a(Lrh;ILrh;Ljava/lang/String;Ljava/lang/String;)Lbg;#4",
+          "originalName": "param4",
+          "to": "groupName",
+          "evidence": "Resolves glyph group/file and passes graphics and metric archives to rb.a, returning bg bitmap glyph font. Original guard and failure context remain. Parameter 4 has this lookup/call-site role; descriptor and argument order remain fixed."
+        }
+      },
+      {
+        "symbol": "P:jg.a(Lrh;ILjava/lang/String;Ljava/lang/String;)Lna;#0",
+        "before": null,
+        "after": {
+          "symbol": "P:jg.a(Lrh;ILjava/lang/String;Ljava/lang/String;)Lna;#0",
+          "originalName": "param0",
+          "to": "graphicsArchive",
+          "evidence": "Resolves group then resource name and returns vh.a as a na indexed sprite; guard side effects remain. Parameter 0 has this lookup/call-site role; descriptor and argument order remain fixed."
+        }
+      },
+      {
+        "symbol": "P:jg.a(Lrh;ILjava/lang/String;Ljava/lang/String;)Lna;#1",
+        "before": null,
+        "after": {
+          "symbol": "P:jg.a(Lrh;ILjava/lang/String;Ljava/lang/String;)Lna;#1",
+          "originalName": "param1",
+          "to": "methodGuard",
+          "evidence": "Resolves group then resource name and returns vh.a as a na indexed sprite; guard side effects remain. Parameter 1 has this lookup/call-site role; descriptor and argument order remain fixed."
+        }
+      },
+      {
+        "symbol": "P:jg.a(Lrh;ILjava/lang/String;Ljava/lang/String;)Lna;#2",
+        "before": null,
+        "after": {
+          "symbol": "P:jg.a(Lrh;ILjava/lang/String;Ljava/lang/String;)Lna;#2",
+          "originalName": "param2",
+          "to": "groupName",
+          "evidence": "Resolves group then resource name and returns vh.a as a na indexed sprite; guard side effects remain. Parameter 2 has this lookup/call-site role; descriptor and argument order remain fixed."
+        }
+      },
+      {
+        "symbol": "P:jg.a(Lrh;ILjava/lang/String;Ljava/lang/String;)Lna;#3",
+        "before": null,
+        "after": {
+          "symbol": "P:jg.a(Lrh;ILjava/lang/String;Ljava/lang/String;)Lna;#3",
+          "originalName": "param3",
+          "to": "resourceName",
+          "evidence": "Resolves group then resource name and returns vh.a as a na indexed sprite; guard side effects remain. Parameter 3 has this lookup/call-site role; descriptor and argument order remain fixed."
+        }
+      },
+      {
+        "symbol": "P:ug.a(Ljava/lang/String;Lrh;BLjava/lang/String;)Ldm;#0",
+        "before": null,
+        "after": {
+          "symbol": "P:ug.a(Ljava/lang/String;Lrh;BLjava/lang/String;)Ldm;#0",
+          "originalName": "param0",
+          "to": "resourceName",
+          "evidence": "Resolves group then resource name and returns qc.a as one dm Sprite; guard -78 remains. Parameter 0 has this lookup/call-site role; descriptor and argument order remain fixed."
+        }
+      },
+      {
+        "symbol": "P:ug.a(Ljava/lang/String;Lrh;BLjava/lang/String;)Ldm;#1",
+        "before": null,
+        "after": {
+          "symbol": "P:ug.a(Ljava/lang/String;Lrh;BLjava/lang/String;)Ldm;#1",
+          "originalName": "param1",
+          "to": "graphicsArchive",
+          "evidence": "Resolves group then resource name and returns qc.a as one dm Sprite; guard -78 remains. Parameter 1 has this lookup/call-site role; descriptor and argument order remain fixed."
+        }
+      },
+      {
+        "symbol": "P:ug.a(Ljava/lang/String;Lrh;BLjava/lang/String;)Ldm;#2",
+        "before": null,
+        "after": {
+          "symbol": "P:ug.a(Ljava/lang/String;Lrh;BLjava/lang/String;)Ldm;#2",
+          "originalName": "param2",
+          "to": "methodGuard",
+          "evidence": "Resolves group then resource name and returns qc.a as one dm Sprite; guard -78 remains. Parameter 2 has this lookup/call-site role; descriptor and argument order remain fixed."
+        }
+      },
+      {
+        "symbol": "P:ug.a(Ljava/lang/String;Lrh;BLjava/lang/String;)Ldm;#3",
+        "before": null,
+        "after": {
+          "symbol": "P:ug.a(Ljava/lang/String;Lrh;BLjava/lang/String;)Ldm;#3",
+          "originalName": "param3",
+          "to": "groupName",
+          "evidence": "Resolves group then resource name and returns qc.a as one dm Sprite; guard -78 remains. Parameter 3 has this lookup/call-site role; descriptor and argument order remain fixed."
+        }
+      },
+      {
+        "symbol": "P:w.a(Ljava/lang/String;Lrh;Lrh;ZLjava/lang/String;)Lnc;#0",
+        "before": null,
+        "after": {
+          "symbol": "P:w.a(Ljava/lang/String;Lrh;Lrh;ZLjava/lang/String;)Lnc;#0",
+          "originalName": "param0",
+          "to": "groupName",
+          "evidence": "Resolves glyph group/file and passes glyph and metric archives to pi.a. Result nc has indexed glyph bytes and mutable RGB palettes; Boolean guard effects remain. Parameter 0 has this lookup/call-site role; descriptor and argument order remain fixed."
+        }
+      },
+      {
+        "symbol": "P:w.a(Ljava/lang/String;Lrh;Lrh;ZLjava/lang/String;)Lnc;#1",
+        "before": null,
+        "after": {
+          "symbol": "P:w.a(Ljava/lang/String;Lrh;Lrh;ZLjava/lang/String;)Lnc;#1",
+          "originalName": "param1",
+          "to": "glyphGraphicsArchive",
+          "evidence": "Resolves glyph group/file and passes glyph and metric archives to pi.a. Result nc has indexed glyph bytes and mutable RGB palettes; Boolean guard effects remain. Parameter 1 has this lookup/call-site role; descriptor and argument order remain fixed."
+        }
+      },
+      {
+        "symbol": "P:w.a(Ljava/lang/String;Lrh;Lrh;ZLjava/lang/String;)Lnc;#2",
+        "before": null,
+        "after": {
+          "symbol": "P:w.a(Ljava/lang/String;Lrh;Lrh;ZLjava/lang/String;)Lnc;#2",
+          "originalName": "param2",
+          "to": "fontMetricsArchive",
+          "evidence": "Resolves glyph group/file and passes glyph and metric archives to pi.a. Result nc has indexed glyph bytes and mutable RGB palettes; Boolean guard effects remain. Parameter 2 has this lookup/call-site role; descriptor and argument order remain fixed."
+        }
+      },
+      {
+        "symbol": "P:w.a(Ljava/lang/String;Lrh;Lrh;ZLjava/lang/String;)Lnc;#3",
+        "before": null,
+        "after": {
+          "symbol": "P:w.a(Ljava/lang/String;Lrh;Lrh;ZLjava/lang/String;)Lnc;#3",
+          "originalName": "param3",
+          "to": "methodGuard",
+          "evidence": "Resolves glyph group/file and passes glyph and metric archives to pi.a. Result nc has indexed glyph bytes and mutable RGB palettes; Boolean guard effects remain. Parameter 3 has this lookup/call-site role; descriptor and argument order remain fixed."
+        }
+      },
+      {
+        "symbol": "P:w.a(Ljava/lang/String;Lrh;Lrh;ZLjava/lang/String;)Lnc;#4",
+        "before": null,
+        "after": {
+          "symbol": "P:w.a(Ljava/lang/String;Lrh;Lrh;ZLjava/lang/String;)Lnc;#4",
+          "originalName": "param4",
+          "to": "resourceName",
+          "evidence": "Resolves glyph group/file and passes glyph and metric archives to pi.a. Result nc has indexed glyph bytes and mutable RGB palettes; Boolean guard effects remain. Parameter 4 has this lookup/call-site role; descriptor and argument order remain fixed."
+        }
+      },
+      {
+        "symbol": "P:wj.a(Ljava/lang/String;Ljava/lang/String;Lrh;I)[Ldm;#0",
+        "before": null,
+        "after": {
+          "symbol": "P:wj.a(Ljava/lang/String;Ljava/lang/String;Lrh;I)[Ldm;#0",
+          "originalName": "param0",
+          "to": "resourceName",
+          "evidence": "Resolves group then resource name and returns ll.a as dm[] frames; nonzero guard side effects remain. Parameter 0 has this lookup/call-site role; descriptor and argument order remain fixed."
+        }
+      },
+      {
+        "symbol": "P:wj.a(Ljava/lang/String;Ljava/lang/String;Lrh;I)[Ldm;#1",
+        "before": null,
+        "after": {
+          "symbol": "P:wj.a(Ljava/lang/String;Ljava/lang/String;Lrh;I)[Ldm;#1",
+          "originalName": "param1",
+          "to": "groupName",
+          "evidence": "Resolves group then resource name and returns ll.a as dm[] frames; nonzero guard side effects remain. Parameter 1 has this lookup/call-site role; descriptor and argument order remain fixed."
+        }
+      },
+      {
+        "symbol": "P:wj.a(Ljava/lang/String;Ljava/lang/String;Lrh;I)[Ldm;#2",
+        "before": null,
+        "after": {
+          "symbol": "P:wj.a(Ljava/lang/String;Ljava/lang/String;Lrh;I)[Ldm;#2",
+          "originalName": "param2",
+          "to": "graphicsArchive",
+          "evidence": "Resolves group then resource name and returns ll.a as dm[] frames; nonzero guard side effects remain. Parameter 2 has this lookup/call-site role; descriptor and argument order remain fixed."
+        }
+      },
+      {
+        "symbol": "P:wj.a(Ljava/lang/String;Ljava/lang/String;Lrh;I)[Ldm;#3",
+        "before": null,
+        "after": {
+          "symbol": "P:wj.a(Ljava/lang/String;Ljava/lang/String;Lrh;I)[Ldm;#3",
+          "originalName": "param3",
+          "to": "methodGuard",
+          "evidence": "Resolves group then resource name and returns ll.a as dm[] frames; nonzero guard side effects remain. Parameter 3 has this lookup/call-site role; descriptor and argument order remain fixed."
+        }
+      }
+    ],
     "stubJarSha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2",
     "sourceEvidence": [
+      {
+        "file": "Geoblox.java",
+        "sha256": "2cd53bfca73177fad3e4789d2c16e62fa16fd3156d2e3adef835f833b0b9efdc"
+      },
       {
         "file": "ab.java",
         "sha256": "6e2480d81f3e43519346bf10c8f8af8ec62ada8d94cf1e9bf4048caef0c9c6bb"
@@ -7216,12 +9093,32 @@
         "sha256": "1564ffa14191072983fe1a7f94502569a5d4729d3a4636e0bc3d63948f67ebb2"
       },
       {
+        "file": "am.java",
+        "sha256": "f7ce486409e5497d533f546e1e7c0971183a236a67a4241e26c92ed80700967c"
+      },
+      {
+        "file": "bg.java",
+        "sha256": "de1a57a52485aff7b25dbd183606d7787a86c44fd9b55a3a18b2c3b0051c6cab"
+      },
+      {
         "file": "bh.java",
         "sha256": "42c650cd7f3607fd6adacebc845caa07bcd8645d7e870a2549ad30b294f0a92c"
       },
       {
+        "file": "bj.java",
+        "sha256": "70753d062fa522aa56e5171753ee7e7819d9221c2d39acb6b096b8d4fd9af770"
+      },
+      {
         "file": "c.java",
         "sha256": "aef74535c5f3b4b82d959cd12a89d7ed6c46dddf07c7af1b0d3c7c563cc8e36f"
+      },
+      {
+        "file": "ca.java",
+        "sha256": "e147ef5732e6d890e451f8050fc00e6ba92df2d52c64419874f239b339a34a50"
+      },
+      {
+        "file": "cd.java",
+        "sha256": "a64c39f4a2cd8b730e64af7c2ad10a5d7c22866873763ad1b04cc08204301074"
       },
       {
         "file": "cf.java",
@@ -7232,16 +9129,56 @@
         "sha256": "314e2e78a5c095b3112cb9a3651c44a9a627f83d57a2249481bf7b6b9084d5df"
       },
       {
+        "file": "dd.java",
+        "sha256": "58529c032f826b51ed6a5f99698cecfeb4c8e608a1136a17494cc3ab14e3633e"
+      },
+      {
+        "file": "df.java",
+        "sha256": "9dc190bc0ad242589d96c76fda0394f4508af01307bdb43e96bd6fac24ebb7da"
+      },
+      {
+        "file": "eb.java",
+        "sha256": "790845a7a339852a71292d19a99314cb84c27edc3fb00812b3482c7ebe2bc532"
+      },
+      {
         "file": "ec.java",
         "sha256": "1d1da60a4aed67e9ab68d0788b8fe1083e47187b4f1f67ec323d8facd3882b7a"
+      },
+      {
+        "file": "ee.java",
+        "sha256": "eb086f2c23f75c4b0fa40d1b27a4afc6e1fa4e29e1b6f816eb1aca6999583815"
+      },
+      {
+        "file": "eg.java",
+        "sha256": "a9ddb5cd05d453bca412b954a6bb863cf130ed8ca1bd63838596149083c90764"
+      },
+      {
+        "file": "ej.java",
+        "sha256": "58ee0f07b5c9ef36c7fe9460815ded3282baae37baf29e94c14fe373bf6182dd"
       },
       {
         "file": "f.java",
         "sha256": "b1188236cad68ebedb61e60c0e480078c1493eba4fbe3e1674c418798daf7693"
       },
       {
+        "file": "fc.java",
+        "sha256": "82053942e8320b7bf92bb13d79721f14d4c71b99c7a135482f605d80f48e81b6"
+      },
+      {
         "file": "fe.java",
         "sha256": "2e32ff8ed71a80c606c9535db544a2285e6d3789e2143d2c3f0167462a9ed9bc"
+      },
+      {
+        "file": "fi.java",
+        "sha256": "413576eca6c622bb39e7fe82e73b64d608f207d9e4fe7bc418fe8cb96611019b"
+      },
+      {
+        "file": "fl.java",
+        "sha256": "608c21d44fdb72a21fad9e36265adc7348ea58d075ddfdbadd65511e3ef4ccd7"
+      },
+      {
+        "file": "g.java",
+        "sha256": "3f662eb7138da80d2ceee8339e9cad021f67c82871c88dbd3a177fab96fa6ac3"
       },
       {
         "file": "gd.java",
@@ -7264,6 +9201,22 @@
         "sha256": "879aa216f6a083fbfebb6552e651595fe94809ce822e151604d5d5e81afcec08"
       },
       {
+        "file": "hb.java",
+        "sha256": "fdb9822ffee0e6cd7764cac1b9927d5bec55e576fa6124b2a3fb2a3b79327801"
+      },
+      {
+        "file": "hd.java",
+        "sha256": "3d1d4dd0c0149796780b706a717bbceb77d02d68ea7afadb2377e05bd7864a14"
+      },
+      {
+        "file": "hg.java",
+        "sha256": "af2ef3feebb55fcafba56b8507f02e9e8c3e800d99e993a4606d7bdbfd67507a"
+      },
+      {
+        "file": "hi.java",
+        "sha256": "95d3af40303bd90be1cb4e3da441fd74a33bfa89300e4fb1db7439bb56aee31b"
+      },
+      {
         "file": "hl.java",
         "sha256": "dd632cda1867f507ea82caab3351d57df9ddaa53ff2f7a47c1c98ba8a13acf02"
       },
@@ -7274,6 +9227,10 @@
       {
         "file": "ih.java",
         "sha256": "6a065aa97f02f890e76b9025b292659cf5d0c936a33ab4df9a4aee513d1f9146"
+      },
+      {
+        "file": "ii.java",
+        "sha256": "34876f4fd6b07dbac5880e13dfcbd121909a3b6ec5072711a575a17c7bc363e6"
       },
       {
         "file": "ij.java",
@@ -7308,6 +9265,14 @@
         "sha256": "03d7ef09781ab75b225f2d6007dd3af8f6e6ec9ab250cff286c45c34a102a579"
       },
       {
+        "file": "k.java",
+        "sha256": "957222b276e1aa00dced5a05c2a1d3d20c34c985f6c485a81641d0c4cc7bbc39"
+      },
+      {
+        "file": "ka.java",
+        "sha256": "86cb69d2c6f4d75d17de9eda902d8336c39c2582be24b44bd95ad033eff6a073"
+      },
+      {
         "file": "kb.java",
         "sha256": "d4dc9047d0fc5b827dc5078f278639b8f91c4bb245d98f7cfee26e62a9009628"
       },
@@ -7320,8 +9285,28 @@
         "sha256": "a77df37993cdddd4a595783551fd510c5d8f08ce62c43a4f1a489046de15684b"
       },
       {
+        "file": "ke.java",
+        "sha256": "887721c12bcb57f6ae3accfdf7e0b4764f109afb018567829829bab2b8227337"
+      },
+      {
+        "file": "kh.java",
+        "sha256": "bc0a9a83c152331cc2ac8f1a987021ad6e61877bb71f28c8119c3605e5140604"
+      },
+      {
+        "file": "ki.java",
+        "sha256": "8f8f414314e2cfbf087bf9537504bb5c63134f0935cf57967d50d4663c72079c"
+      },
+      {
+        "file": "kj.java",
+        "sha256": "2a78d50fa37d63f1f7f6b2f27269f7682621893019981712edc24cb3088d006b"
+      },
+      {
         "file": "kl.java",
         "sha256": "151e073d3a21fd74b83a6f9eee68bbb02306073a288934a8f5b9300423a6c7f9"
+      },
+      {
+        "file": "lb.java",
+        "sha256": "b9b8fe802a0e4ee7640b93dcf830d43dda555d4a86ce5304b4730c0f8e68b916"
       },
       {
         "file": "lc.java",
@@ -7336,12 +9321,36 @@
         "sha256": "81b6271630f20f9c8b49768999751b44e266eb59cdd9f2a5002c4ad7a5d62aea"
       },
       {
+        "file": "lj.java",
+        "sha256": "c6c6e40517e4324fca7a9c1b6c894deb76f021637347d09d01909ca17c53a3a0"
+      },
+      {
+        "file": "ll.java",
+        "sha256": "9e25b4b8e675c049bc42f1ded9961d30523edca45d352d598e9c3d4e4713d6ed"
+      },
+      {
         "file": "md.java",
         "sha256": "57bd9d85d3b0038fcd48d8f8e68ae71f2b52c69bc2f08b3966457f2d0d49d697"
       },
       {
         "file": "me.java",
         "sha256": "5402ee171eed55e106f78bbb7c7773b563ad07f256b786f7ed9ea6b69cea3432"
+      },
+      {
+        "file": "mf.java",
+        "sha256": "d6152921aacb18db08221bb5b03ac53660158d8ff5e049e8198c03e9295e3748"
+      },
+      {
+        "file": "mi.java",
+        "sha256": "097a1a35b3b21e21ab0eb77a372d221f1dcb633ba7af73c03777a96c1c6b11b1"
+      },
+      {
+        "file": "nc.java",
+        "sha256": "c0e327065d12ab98e0b53480649c533280b1ed4c108582f7c7fc8abe6e800b73"
+      },
+      {
+        "file": "ne.java",
+        "sha256": "2563b8860f2e5c8fa74f308fd9e835edf5428ade865b71bb0d8560e223f7d880"
       },
       {
         "file": "nf.java",
@@ -7352,8 +9361,20 @@
         "sha256": "aacf4c3882497080bf7f7e894e7cad6d3117625b01045cde06a39796a6973f2d"
       },
       {
+        "file": "ok.java",
+        "sha256": "78830ba6d078a4ad5580fbbd1ac85ac282a4725dacd2300632bd9160d578f74a"
+      },
+      {
         "file": "pg.java",
         "sha256": "6c6e4e27dfba1a43ab68b4f819008fe9411a6794645fc744094bb6eb212d6d70"
+      },
+      {
+        "file": "pi.java",
+        "sha256": "dc2e31bba729defaeacdd343bc14c184170f21a9fe26b6d5d71019d9e1df4bf5"
+      },
+      {
+        "file": "pk.java",
+        "sha256": "087cc40888403e58edfdfc8368ed21775c6cb5d951fe7710c9092b4df7a8e87e"
       },
       {
         "file": "qa.java",
@@ -7372,6 +9393,10 @@
         "sha256": "6cc4eaae4426642ef29c0fd4675475f50a097ac322872f5e41a0a8384cb8eba0"
       },
       {
+        "file": "qh.java",
+        "sha256": "0a13d27a06381c61f1be3b8bf9999203f0d27dfef8b1390a734c7fd47a48e1f5"
+      },
+      {
         "file": "qi.java",
         "sha256": "acb0e101791cd3f7fdf65fb4a8c713e1bc091d4cae086c3c1764554d7eb15e0b"
       },
@@ -7388,8 +9413,16 @@
         "sha256": "f5b2f5ccdb45bb52c06e6e4e0fe86c135e059824769a24aba2260f5d27eff198"
       },
       {
+        "file": "rb.java",
+        "sha256": "eec14cea6c82f38f138eca753544abbf3f9642c0190a4f61b8f673c8de9bec26"
+      },
+      {
         "file": "rc.java",
         "sha256": "068ca3af5ddcd427b4d83d73a3b613d0f47724a511e1b57b9547b55b94bf9167"
+      },
+      {
+        "file": "re.java",
+        "sha256": "6d4e4d693c6f084d0f71fa421a499e1fc10ae16903ad5282aab1177be1ba59e0"
       },
       {
         "file": "rh.java",
@@ -7404,6 +9437,10 @@
         "sha256": "5869e010e740d261ddb014341d0125056f09fd76715b84d5716f58651c636c9c"
       },
       {
+        "file": "s.java",
+        "sha256": "c7b4f263a6b38c004e305a25c2eb3cc81c43721bef496a739244e7c834859de6"
+      },
+      {
         "file": "sa.java",
         "sha256": "4e1c5e7c10aee4e01cfb88252b763fa4b42a9ae1f2eb344321b53fa7faef7f28"
       },
@@ -7412,8 +9449,28 @@
         "sha256": "7b0a9b28745eca179630262b2d1292428c27963049f41b277f078d71539e10ff"
       },
       {
+        "file": "sd.java",
+        "sha256": "587956e775160310e7c00f0bced060c097f3801fbc3fe0382db778ebed6043ec"
+      },
+      {
+        "file": "sg.java",
+        "sha256": "8c8ee0834f6418495c95da369506e0afbb2f22b737a0b6800fa670d4a8fd1985"
+      },
+      {
+        "file": "sl.java",
+        "sha256": "32523c6aff801f21983488d71eb231c4b1d6275c8afd64b139e323082370fec2"
+      },
+      {
         "file": "td.java",
         "sha256": "d71b34bf4176d1a22bddeeefc79b4ca3a277fe343e227b7e83019aeb6335b6e1"
+      },
+      {
+        "file": "th.java",
+        "sha256": "3001702b130decb49c44ab271d9a7fef3bc216b0afb421c7a151579fe6110c89"
+      },
+      {
+        "file": "tl.java",
+        "sha256": "5ada93c34736912e5e2f830665f801bd41f95cc1668b600388f7849d990f44f4"
       },
       {
         "file": "ue.java",
@@ -7436,8 +9493,28 @@
         "sha256": "febed41373244449a3fad6c87c6870041d7daf7126605a6bed2c8d3281e1a15b"
       },
       {
+        "file": "vc.java",
+        "sha256": "6eab6ca947fa9771ff4eafd4f67a2922a0b53b96de9b86e84ec61b71ab18badb"
+      },
+      {
         "file": "vd.java",
         "sha256": "4330d3f11d5e75485b4fef7cdad42e7fd8525a946e3ea42d3193f7cb070cd85c"
+      },
+      {
+        "file": "vf.java",
+        "sha256": "d63748771e355658489957989cca8e017375f1d8a21990ef4e18127b25aaf6dc"
+      },
+      {
+        "file": "vg.java",
+        "sha256": "999ddb2e5733f2e881e77eeab171e88d68891772e3239301fbc09f8d8ddc4055"
+      },
+      {
+        "file": "vh.java",
+        "sha256": "a09e34931de7d7dd8c8fd00733053b3dcf04747d60b854f16d07328cbcf10f2b"
+      },
+      {
+        "file": "vj.java",
+        "sha256": "d7985bd26394dfeb49398da9c35baedea9c9fe66af23ab97d3983c111e12b50e"
       },
       {
         "file": "w.java",
@@ -7456,8 +9533,16 @@
         "sha256": "3d4d38f9b951d6416f8e1d351d185738a3bcdbaffff271e30f7d777d04583f68"
       },
       {
+        "file": "wf.java",
+        "sha256": "959da38804a4ca3a6a95121296131ddb3c12c4c8da5fda11ee884a4319be8cee"
+      },
+      {
         "file": "wi.java",
         "sha256": "637816c5343427a2d3e8de137df68c68f42c4a7cefef29d5a015d84da3c82e74"
+      },
+      {
+        "file": "wj.java",
+        "sha256": "15b681dcde45ba47715a89c8a4b3deeff433c05645cc116a9cda10aae42649ba"
       }
     ],
     "nativeEvidence": [
@@ -9684,7 +11769,7 @@
       "sourceDeclarations": 20710,
       "bindingsCompared": 150801,
       "overrideRelationships": 388,
-      "identifierEdits": 18611,
+      "identifierEdits": 19829,
       "dictionaryRestorationFiles": 303,
       "wholeGameEquivalenceVerified": false,
       "nativeMatchingScenarios": 708,
@@ -9702,7 +11787,8 @@
         "Boolean carrier cleanup keeps effectful/nullable conditions as snapshots. Unknown syntax, shadowing, numeric uses and ambiguous offsets refuse the conversion. Opaque names and other shared joins remain.",
         "Identical branch tails are factored after Boolean-carrier cleanup only within the same emitted block scope. Nested try, monitor, loop and labeled bodies stay whole. Other shared joins and unknown names remain.",
         "Nested terminal continuations cross only proven declaration-free if/block scopes. Straight factoring refuses repeated statements or identifier occurrences; exact return/throw clones can use deterministic plain-block breaks. Nested loop/switch/old-label completion is deliberately not assumed. GeoBlox needs no generated block labels in this pass; its difficulty tails are now coalesced, while other joins remain.",
-        "Relational inversions use exact cached JVM integral-predicate spellings only when all matching occurrences have integral evidence. Unknown, floating and conflicting predicates keep logical negation; cached operands are never rendered again. This validates the recorded native fixture scopes, not whole-game equivalence."
+        "Relational inversions use exact cached JVM integral-predicate spellings only when all matching occurrences have integral evidence. Unknown, floating and conflicting predicates keep logical negation; cached operands are never rendered again. This validates the recorded native fixture scopes, not whole-game equivalence.",
+        "Visual asset names use fixed resource keys, loader assignments and actual selectors. Complete successful archive loading and real-asset rendering remain outside the native fixtures. Keyboard/screen/theme indexes, misspelled resource keys and guard side effects are unchanged."
       ],
       "checks": {
         "ruleBuilderTests": 9,
@@ -9738,13 +11824,13 @@
         641
       ],
       "nativeBoundaryIndependentOracle": true,
-      "guardedNamingRules": 1194,
-      "namedLocalDeclarations": 385,
+      "guardedNamingRules": 1311,
+      "namedLocalDeclarations": 413,
       "nonselectorDeclarationsPreserved": 20699,
       "generatedSelectorsBefore": 265,
       "generatedSelectorsAfter": 11,
       "generatedSelectorsRemoved": 254,
-      "rawSourceLinesRemoved": 18,
+      "rawSourceLinesRemoved": 0,
       "returnReconstructionChangedJavaFiles": 181,
       "localOrdinalMigrations": 0,
       "obsoleteNamedSelectorsRemoved": 1,
@@ -9759,7 +11845,7 @@
       "elseWrappersRemoved": 2128,
       "genericEarlyExitTestGroups": 11,
       "nativeEmitterComparisons": 40129,
-      "sourceReferenceOccurrencesRemoved": 26,
+      "sourceReferenceOccurrencesRemoved": 0,
       "sourceReferenceOccurrencesAdded": 0,
       "nativeDifficultyFlagCases": 82944,
       "nativeDifficultyBoundsCases": 56,
@@ -9777,7 +11863,7 @@
       "typedAssignmentElseWrappersRemoved": 77,
       "nativeComparatorCases": 32768,
       "nativeComparatorTraceSha256": "9be228f7421970f2214c74e8890327f8592f706dc90ccd0d0933e6f2fbe0a604",
-      "referenceRemovalAttribution": "Two category-update clones and two recursive-advance clones removed in ld.b(Z)V. Every declaration key/spelling and override relationship is unchanged; other changed predicates alter operators only.",
+      "referenceRemovalAttribution": "Naming-only pass: raw source and all declaration/reference identities are unchanged. The 117 new guarded rules add 1218 identifier edits without changing program control flow.",
       "genericBooleanCarrierTestGroups": 3,
       "localBooleanCarriersEliminated": 221,
       "localBooleanSnapshotsRetyped": 70,
@@ -9790,10 +11876,10 @@
       "genericSharedTailTestGroups": 2,
       "nativeSharedTailComparisons": 819,
       "sharedTailChangedJavaFiles": 16,
-      "difficultyMethodLinesBefore": 56,
+      "difficultyMethodLinesBefore": 38,
       "difficultyMethodLinesAfter": 38,
-      "allGuardedNamesUnchanged": true,
-      "ruleChangesInCurrentPass": 0,
+      "allGuardedNamesUnchanged": false,
+      "ruleChangesInCurrentPass": 117,
       "genericNestedContinuationTestGroups": 2,
       "nativeNestedContinuationComparisons": 2520,
       "nestedContinuationChangedJavaFiles": 7,
@@ -9806,55 +11892,16 @@
       "allDeclarationIdentitiesAndSpellingsUnchanged": true,
       "cachedJvmOperandsNotReevaluated": true,
       "ambiguousPredicateComplementsRefused": true,
-      "difficultyCategoryAndRecursiveAdvanceClonesEliminated": true
-    },
-    "sourceChange": {
-      "before": {
-        "source": {
-          "repository": "Kreijstal/funorb-decompiled",
-          "commit": "eae5126229130771e056e45992d5315b100babc3",
-          "subdirectory": "games/geoblox"
-        },
-        "generators": {
-          "dekoblokoWork": {
-            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
-            "trackedClean": true
-          },
-          "javaTools": {
-            "commit": "fb6ea7871e4f1657f678211830229997b4785e33",
-            "trackedClean": true,
-            "sourceArchive": {
-              "sha256": "5ad4b8f16b9b82c1a427d69119b4b673ba8bbf1987c85b5f1463f583ef0231c2",
-              "reproduce": "git archive --format=tar fb6ea7871e4f1657f678211830229997b4785e33 | sha256sum",
-              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
-            }
-          }
-        },
-        "inputTreeSha256": "c1f3218a7a4e1ac693bea85f5c5806eb16859e8f6f99368a4c00b498cee74057"
-      },
-      "after": {
-        "source": {
-          "repository": "Kreijstal/funorb-decompiled",
-          "commit": "dcd9609f476b0225c9e29821bec50439bb8a2be3",
-          "subdirectory": "games/geoblox"
-        },
-        "generators": {
-          "dekoblokoWork": {
-            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
-            "trackedClean": true
-          },
-          "javaTools": {
-            "commit": "1fa1f5ca8db58810744ef29e04bcf31c74e81805",
-            "trackedClean": true,
-            "sourceArchive": {
-              "sha256": "80101c5837724ddef2f706256e25320fdf76a57642d7c9b9de64fcf131f229c4",
-              "reproduce": "git archive --format=tar 1fa1f5ca8db58810744ef29e04bcf31c74e81805 | sha256sum",
-              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
-            }
-          }
-        },
-        "inputTreeSha256": "cf0cbc50ff6b23458db1a7beb4edb6829ab61e7e6ea3dc7d7d47f03e2492095d"
-      }
+      "difficultyCategoryAndRecursiveAdvanceClonesEliminated": true,
+      "allPriorGuardedNamesPreserved": true,
+      "namingRulesAddedInCurrentPass": 117,
+      "sourceInputChangedInCurrentPass": false,
+      "namedVisualAssetFieldsAdded": 59,
+      "namedAssetLoadingMethodsAdded": 6,
+      "namedAssetLoadingParametersAdded": 24,
+      "namedAssetPreparationAndLookupLocalsAdded": 28,
+      "identifierEditsAddedInCurrentPass": 1218,
+      "lastStructuralPassVersion": 37
     }
   }
 }

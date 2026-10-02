@@ -5,7 +5,7 @@ final class tl extends IntrusiveNode {
     static String previousText;
     int field_k;
     static long[] field_l;
-    static Sprite[] field_r;
+    static Sprite[] introFaceFrames;
     static String[] field_f;
     int[] field_q;
     int field_m;
@@ -72,7 +72,7 @@ final class tl extends IntrusiveNode {
             entitiesById = null;
             field_l = null;
             field_f = null;
-            field_r = null;
+            introFaceFrames = null;
             return;
         }
         tl.b(-67);
@@ -80,7 +80,7 @@ final class tl extends IntrusiveNode {
         entitiesById = null;
         field_l = null;
         field_f = null;
-        field_r = null;
+        introFaceFrames = null;
     }
 
     tl() {

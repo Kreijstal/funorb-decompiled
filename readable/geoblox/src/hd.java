@@ -5,7 +5,7 @@ final class hd extends sh {
     private int field_K;
     private m field_F;
     private String field_J;
-    static Sprite field_H;
+    static Sprite sportsForegroundSprite;
     static int[] field_I;
     private boolean field_B;
     private int field_C;
@@ -25,7 +25,7 @@ final class hd extends sh {
     }
 
     public static void f(byte param0) {
-        field_H = null;
+        sportsForegroundSprite = null;
         if (param0 != -52) {
             return;
         }

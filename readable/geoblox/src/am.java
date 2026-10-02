@@ -4,13 +4,13 @@
 import java.io.*;
 
 final class am {
-    static Sprite field_b;
+    static Sprite unachievedSprite;
     static ck field_d;
     private int[] field_c;
     static int[] field_a;
 
     public static void a(byte param0) {
-        field_b = null;
+        unachievedSprite = null;
         field_d = null;
         if (param0 != 49) {
             am.a((byte) 72);
@@ -23,7 +23,7 @@ final class am {
         int var4;
         int var5;
         if (!param0) {
-          field_b = (Sprite) null;
+          unachievedSprite = (Sprite) null;
         }
         var3 = (this.field_c.length >> 1) - 1;
         var4 = var3 & param1;

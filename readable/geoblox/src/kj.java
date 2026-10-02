@@ -8,7 +8,7 @@ final class kj extends ia {
     private int[] field_z;
     int[] field_u;
     static boolean[] field_o;
-    static Sprite field_E;
+    static Sprite jewelsForegroundSprite;
     private int field_T;
     private int[] field_r;
     private fi field_q;
@@ -1084,7 +1084,7 @@ final class kj extends ia {
     }
 
     public static void b(boolean param0) {
-        field_E = null;
+        jewelsForegroundSprite = null;
         field_O = null;
         field_o = null;
         field_G = null;

@@ -419,7 +419,7 @@ abstract class wf extends ch {
           l.field_h = rj.a(ib.field_c, (byte) -18, true, false, 1);
           dc.field_c = rj.a(pb.field_r, (byte) -124, true, false, 1);
           hb.field_n = rj.a(sb.field_d, (byte) -41, true, false, 1);
-          ki.field_b = l.field_h;
+          ki.basicUiGraphicsArchive = l.field_h;
           mi.field_C = 2;
           re.field_i = dc.field_c;
         }

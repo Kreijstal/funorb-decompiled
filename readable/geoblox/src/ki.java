@@ -3,7 +3,7 @@
  */
 final class ki {
     static Sprite field_c;
-    static rh field_b;
+    static rh basicUiGraphicsArchive;
     static int field_d;
     static String fullscreenNonmemberText;
     static String js5ConnectErrorText;
@@ -86,7 +86,7 @@ final class ki {
         js5ConnectErrorText = null;
         field_c = null;
         fullscreenNonmemberText = null;
-        field_b = null;
+        basicUiGraphicsArchive = null;
         if (param0 != -64) {
             vd var2 = (vd) null;
             ki.a((vd) null, -13);

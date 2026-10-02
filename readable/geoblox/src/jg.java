@@ -8,8 +8,8 @@ abstract class jg {
     String field_e;
     static int field_a;
     static int field_g;
-    static int[][] field_f;
-    static int[][] field_h;
+    static int[][] themeSpriteColors;
+    static int[][] themeCycleColors;
     int field_b;
     static String field_d;
 
@@ -98,10 +98,10 @@ abstract class jg {
         }
     }
 
-    final static IndexedSprite a(rh param0, int param1, String param2, String param3) {
-        int var4_int = 0;
+    final static IndexedSprite loadIndexedSprite(rh graphicsArchive, int methodGuard, String groupName, String resourceName) {
+        int archiveGroupId = 0;
         RuntimeException var4 = null;
-        int var5 = 0;
+        int archiveFileId = 0;
         IndexedSprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -116,12 +116,12 @@ abstract class jg {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param0.a((byte) 127, param2);
-          if (param1 != 1) {
+          archiveGroupId = graphicsArchive.a((byte) 127, groupName);
+          if (methodGuard != 1) {
             field_a = 100;
           }
-          var5 = param0.a(param3, -110, var4_int);
-          stackIn_3_0 = vh.a(var5, param0, var4_int, true);
+          archiveFileId = graphicsArchive.a(resourceName, -110, archiveGroupId);
+          stackIn_3_0 = vh.a(archiveFileId, graphicsArchive, archiveGroupId, true);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -130,7 +130,7 @@ abstract class jg {
 
           stackIn_6_1 = new StringBuilder().append("jg.C(");
 
-          if (param0 == null) {
+          if (graphicsArchive == null) {
             stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
             stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
             stackIn_7_2 = "null";
@@ -141,9 +141,9 @@ abstract class jg {
           }
 
 
-          stackIn_9_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(param1).append(',');
+          stackIn_9_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(methodGuard).append(',');
 
-          if (param2 == null) {
+          if (groupName == null) {
             stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
             stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
             stackIn_10_2 = "null";
@@ -156,7 +156,7 @@ abstract class jg {
 
           stackIn_12_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',');
 
-          if (param3 == null) {
+          if (resourceName == null) {
             stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
             stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
             stackIn_13_2 = "null";
@@ -175,8 +175,8 @@ abstract class jg {
         if (param0 != 16712207) {
             jg.d(56);
         }
-        field_f = (int[][]) null;
-        field_h = (int[][]) null;
+        themeSpriteColors = (int[][]) null;
+        themeCycleColors = (int[][]) null;
     }
 
     final static void a(rh param0, byte param1, rh param2, rh param3, rh param4) {
@@ -327,10 +327,10 @@ abstract class jg {
         field_a = 9;
         loginGameUpdatedText = "This game has been updated! Please reload this page.";
         field_g = 35;
-        field_h = new int[7][7];
-        field_f = new int[][]{new int[]{16646130, 4383370, 7784169, 16732531, 16569656, 16756645, 14022770}, new int[]{16099865, 16720435, 16770049, 42709, 16733161, 11078398, 3658269}, new int[]{16229425, 5957352, 16122070, 15595784, 10216240, 2706395, 11226077}, new int[]{52224, 39372, 16751631, 16751052, 16777011, 16724736, 10040217}, new int[]{16507819, 14654025, 14129125, 13953361, 14512505, 12506866, 12632256}, new int[]{15815889, 1289446, 16363563, 16116238, 9126089, 16730432, 5088306}, new int[]{16716239, 22986, 7461652, 16514820, 16712207, 16744452, 6438761}};
+        themeCycleColors = new int[7][7];
+        themeSpriteColors = new int[][]{new int[]{16646130, 4383370, 7784169, 16732531, 16569656, 16756645, 14022770}, new int[]{16099865, 16720435, 16770049, 42709, 16733161, 11078398, 3658269}, new int[]{16229425, 5957352, 16122070, 15595784, 10216240, 2706395, 11226077}, new int[]{52224, 39372, 16751631, 16751052, 16777011, 16724736, 10040217}, new int[]{16507819, 14654025, 14129125, 13953361, 14512505, 12506866, 12632256}, new int[]{15815889, 1289446, 16363563, 16116238, 9126089, 16730432, 5088306}, new int[]{16716239, 22986, 7461652, 16514820, 16712207, 16744452, 6438761}};
         for (var0_int = 0; var0_int < 7; var0_int++) {
-          sf.a(field_f[var0_int], 0, field_h[var0_int], 0, 7);
+          sf.a(themeSpriteColors[var0_int], 0, themeCycleColors[var0_int], 0, 7);
         }
         var18 = new int[7];
         var17 = var18;
@@ -338,9 +338,9 @@ abstract class jg {
         for (var1 = 0; var1 < 7; var1++) {
           for (var2 = 0; 7 > var2; var2++) {
             L6: {
-              var3_float = (float)((field_f[var1][var2] & 16776188) >> 16) / 255.0f;
-              var4_float = (float)((field_f[var1][var2] & 65454) >> 8) / 255.0f;
-              var5_float = (float)(255 & field_f[var1][var2]) / 255.0f;
+              var3_float = (float)((themeSpriteColors[var1][var2] & 16776188) >> 16) / 255.0f;
+              var4_float = (float)((themeSpriteColors[var1][var2] & 65454) >> 8) / 255.0f;
+              var5_float = (float)(255 & themeSpriteColors[var1][var2]) / 255.0f;
               var9 = 0;
               if (var3_float > var4_float) {
                 if (var3_float > var5_float) {
@@ -405,18 +405,18 @@ abstract class jg {
           for (var2 = 1; 7 > var2; var2++) {
             var3 = -1 + var2;
             var4 = var18[var2];
-            var5 = field_h[var1][var2];
+            var5 = themeCycleColors[var1][var2];
             L4: while (var3 >= 0) {
               if (var18[var3] > var4) {
                 var0[var3 + 1] = var18[var3];
-                field_h[var1][1 + var3] = field_h[var1][var3];
+                themeCycleColors[var1][1 + var3] = themeCycleColors[var1][var3];
                 var3--;
                 continue L4;
               }
               break;
             }
             var0[var3 + 1] = var4;
-            field_h[var1][var3 + 1] = var5;
+            themeCycleColors[var1][var3 + 1] = var5;
           }
         }
     }

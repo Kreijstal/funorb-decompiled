@@ -9,7 +9,7 @@ final class vc extends dk {
     private m field_p;
     private int field_k;
     static String field_g;
-    static Sprite field_j;
+    static Sprite menuForegroundSprite;
     private int field_e;
     private boolean field_d;
     static int field_h;
@@ -156,7 +156,7 @@ final class vc extends dk {
             return;
         }
         if (param3 > -89) {
-            field_j = (Sprite) null;
+            menuForegroundSprite = (Sprite) null;
         }
         if (this.field_p == param4 && this.field_d && 0 == this.field_k && this.field_n != null) {
             if (!(!this.field_n.equals(param2))) {
@@ -352,9 +352,9 @@ final class vc extends dk {
         PendingActionMarker var1 = var3;
         if (var1 != null) {
             var2 = eh.field_c;
-            ma.a(var2, 10, tl.field_h, (byte) -92, jf.field_c, ll.field_h);
-            sl.field_f[var3.actionId].f(25, var2 + (-32 + (tl.field_h - 15)) / 2);
-            dd.field_G.a(pg.field_a[var3.actionId], 67, 15 + var2, jf.field_c - 42 - 30, tl.field_h - 30, 0, -1, 1, 1, 30);
+            ma.a(var2, 10, tl.field_h, (byte) -92, jf.field_c, ll.frameNineSliceSprites);
+            sl.achievementSprites[var3.actionId].f(25, var2 + (-32 + (tl.field_h - 15)) / 2);
+            dd.uiPaletteFont.a(pg.field_a[var3.actionId], 67, 15 + var2, jf.field_c - 42 - 30, tl.field_h - 30, 0, -1, 1, 1, 30);
         }
     }
 
@@ -418,7 +418,7 @@ final class vc extends dk {
 
     public static void b(byte param0) {
         field_g = null;
-        field_j = null;
+        menuForegroundSprite = null;
         field_f = null;
         int var1 = 78 % ((-20 - param0) / 33);
     }

@@ -4,9 +4,9 @@
 final class fc {
     static String musicLabelText;
     static qc field_d;
-    static Sprite[] field_g;
+    static Sprite[] blackOrbFrames;
     static double field_a;
-    static Sprite[] field_b;
+    static Sprite[] avatarEyeFrames;
     static volatile boolean field_f;
     static int field_c;
 
@@ -73,8 +73,8 @@ final class fc {
     }
 
     public static void a(byte param0) {
-        field_b = null;
-        field_g = null;
+        avatarEyeFrames = null;
+        blackOrbFrames = null;
         if (param0 < -79) {
             field_d = null;
             musicLabelText = null;

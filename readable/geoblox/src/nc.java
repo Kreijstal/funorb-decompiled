@@ -3,14 +3,14 @@
  */
 final class nc extends m {
     private byte[][] field_L;
-    int[][] field_K;
+    int[][] colorPalettes;
 
     nc(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4, int[] param5, byte[][] param6) {
         super(param0, param1, param2, param3, param4);
         this.field_L = new byte[256][];
         this.field_L = param6;
-        this.field_K = new int[4][];
-        this.field_K[0] = param5;
+        this.colorPalettes = new int[4][];
+        this.colorPalettes[0] = param5;
     }
 
     private final static void a(int param0, int[] param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
@@ -98,7 +98,7 @@ final class nc extends m {
         if (param3 > 0) {
           if (param4 > 0) {
             if (!param6) {
-              nc.a(0, SoftwareRasterizer.framebuffer, this.field_L[param0], this.field_K[param5], var11, var8, param3, param4, var9, var10);
+              nc.a(0, SoftwareRasterizer.framebuffer, this.field_L[param0], this.colorPalettes[param5], var11, var8, param3, param4, var9, var10);
             } else {
               bg.a(SoftwareRasterizer.framebuffer, this.field_L[param0], param5, var11, var8, param3, param4, var9, var10);
             }
@@ -145,7 +145,7 @@ final class nc extends m {
         if (param3 > 0) {
           if (param4 > 0) {
             if (!param7) {
-              nc.a(0, SoftwareRasterizer.framebuffer, this.field_L[param0], this.field_K[param5], var12, var9, param3, param4, var10, var11, param6);
+              nc.a(0, SoftwareRasterizer.framebuffer, this.field_L[param0], this.colorPalettes[param5], var12, var9, param3, param4, var10, var11, param6);
             } else {
               bg.a(SoftwareRasterizer.framebuffer, this.field_L[param0], param5, var12, var9, param3, param4, var10, var11, param6);
             }
@@ -181,7 +181,7 @@ final class nc extends m {
     }
 
     final int e(int param0) {
-        return nc.a(this.field_K[0], param0);
+        return nc.a(this.colorPalettes[0], param0);
     }
 
     private final static void a(int param0, int[] param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9) {

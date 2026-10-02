@@ -10,10 +10,10 @@ final class sl {
     int field_j;
     static String createInvalidAgeAlertText;
     static String orbPointsText;
-    static Sprite[] field_f;
+    static Sprite[] achievementSprites;
     static String loginEmailText;
     static rh field_l;
-    static Sprite field_c;
+    static Sprite germsForegroundSprite;
 
     final static void a(java.awt.Canvas param0, int param1) {
         RuntimeException var2 = null;
@@ -134,13 +134,13 @@ final class sl {
 
     public static void a(int param0) {
         createInvalidAgeAlertText = null;
-        field_c = null;
+        germsForegroundSprite = null;
         field_l = null;
         field_k = null;
         int var1 = -39 % ((48 - param0) / 43);
         loginEmailText = null;
         orbPointsText = null;
-        field_f = null;
+        achievementSprites = null;
     }
 
     sl(boolean param0) {

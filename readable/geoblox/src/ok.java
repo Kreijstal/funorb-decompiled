@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ok {
-    static Sprite[] field_a;
+    static Sprite[] avatarCryMiddleFrames;
     static String createEmailConfirmationTooltipText;
     static int field_f;
     static String justPlayText;
@@ -14,7 +14,7 @@ final class ok {
     private static String field_z;
 
     public static void a(boolean param0) {
-        field_a = null;
+        avatarCryMiddleFrames = null;
         createEmailConfirmationTooltipText = null;
         justPlayText = null;
         field_h = null;

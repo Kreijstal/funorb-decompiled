@@ -12,7 +12,7 @@ final class bj extends nh {
     private uf field_i;
     private int field_m;
     private jh field_y;
-    static IndexedSprite field_r;
+    static IndexedSprite jewelsBackgroundSprite;
     private byte[] field_k;
     private byte[] field_x;
     private bm field_u;
@@ -388,7 +388,7 @@ final class bj extends nh {
         if (!param0) {
             return;
         }
-        field_r = null;
+        jewelsBackgroundSprite = null;
         field_j = null;
     }
 

@@ -5,7 +5,7 @@ final class ca extends IntrusiveNode {
     static String unpackingMusicText;
     static mg field_f;
     static int field_i;
-    static IndexedSprite field_g;
+    static IndexedSprite bakingBackgroundSprite;
 
     final static nd a(String param0, int param1) {
         int var2_int = 0;
@@ -67,9 +67,9 @@ final class ca extends IntrusiveNode {
     public static void b(boolean param0) {
         unpackingMusicText = null;
         field_f = null;
-        field_g = null;
+        bakingBackgroundSprite = null;
         if (param0) {
-            field_g = (IndexedSprite) null;
+            bakingBackgroundSprite = (IndexedSprite) null;
         }
     }
 

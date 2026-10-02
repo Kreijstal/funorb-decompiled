@@ -8,7 +8,7 @@ final class s extends ee implements pe, pl {
     private r field_C;
     static int field_H;
     static volatile int field_I;
-    static Sprite[][] field_G;
+    static Sprite[][] geometrySpritesByThemeAndCategory;
     static String field_F;
 
     final static void g(int param0) {
@@ -235,13 +235,13 @@ final class s extends ee implements pe, pl {
 
     public static void b(boolean param0) {
         if (!param0) {
-            field_G = (Sprite[][]) null;
+            geometrySpritesByThemeAndCategory = (Sprite[][]) null;
             field_E = null;
             field_F = null;
             return;
         }
         field_I = 58;
-        field_G = (Sprite[][]) null;
+        geometrySpritesByThemeAndCategory = (Sprite[][]) null;
         field_E = null;
         field_F = null;
     }
@@ -369,7 +369,7 @@ final class s extends ee implements pe, pl {
 
     static {
         field_E = new ck(7, 0, 1, 1);
-        field_G = new Sprite[7][7];
+        geometrySpritesByThemeAndCategory = new Sprite[7][7];
         field_I = 0;
         field_F = "Growing Pumpkin";
     }

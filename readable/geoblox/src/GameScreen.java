@@ -296,14 +296,14 @@ final class GameScreen extends MenuScreen {
           if (param0) {
             this.field_F = 124;
           }
-          this.field_W = this.field_W % ee.field_A.field_s;
-          this.field_O = this.field_O % ee.field_A.field_o;
-          var2_int = -ee.field_A.field_s + this.field_W;
+          this.field_W = this.field_W % ee.menuBackgroundSprite.field_s;
+          this.field_O = this.field_O % ee.menuBackgroundSprite.field_o;
+          var2_int = -ee.menuBackgroundSprite.field_s + this.field_W;
           L1: while (true) {
             L2: {
               L3: {
                 if (640 > var2_int) {
-                  stackIn_16_0 = ee.field_A.field_o + this.field_O + 480;
+                  stackIn_16_0 = ee.menuBackgroundSprite.field_o + this.field_O + 480;
 
                   if (var4 != 0) {
                     break L2;
@@ -312,9 +312,9 @@ final class GameScreen extends MenuScreen {
                     var3 = stackIn_16_0;
                     L4: while (true) {
                       L5: {
-                        if (~-ee.field_A.field_o >= ~var3) {
-                          ee.field_A.c(var2_int, var3);
-                          var3 = var3 - ee.field_A.field_o;
+                        if (~-ee.menuBackgroundSprite.field_o >= ~var3) {
+                          ee.menuBackgroundSprite.c(var2_int, var3);
+                          var3 = var3 - ee.menuBackgroundSprite.field_o;
                           if (var4 != 0) {
                             break L5;
                           }
@@ -322,7 +322,7 @@ final class GameScreen extends MenuScreen {
                             continue L4;
                           }
                         }
-                        var2_int = var2_int + ee.field_A.field_s;
+                        var2_int = var2_int + ee.menuBackgroundSprite.field_s;
                       }
                       if (var4 == 0) {
                         continue L1;
@@ -332,24 +332,24 @@ final class GameScreen extends MenuScreen {
                   }
                 }
               }
-              this.field_I = this.field_I % vc.field_j.field_o;
-              this.field_u = this.field_u % vc.field_j.field_s;
-              stackIn_16_0 = this.field_u + (vc.field_j.field_s + 640);
+              this.field_I = this.field_I % vc.menuForegroundSprite.field_o;
+              this.field_u = this.field_u % vc.menuForegroundSprite.field_s;
+              stackIn_16_0 = this.field_u + (vc.menuForegroundSprite.field_s + 640);
             }
             var2_int = stackIn_16_0;
             L7: while (true) {
               L8: {
                 L9: {
-                  if (~-vc.field_j.field_s >= ~var2_int) {
+                  if (~-vc.menuForegroundSprite.field_s >= ~var2_int) {
                     if (var4 != 0) {
                       break L8;
                     }
-                    var3 = this.field_I + vc.field_j.field_o + 480;
+                    var3 = this.field_I + vc.menuForegroundSprite.field_o + 480;
                     L10: while (true) {
                       L11: {
-                        if (~var3 <= ~-vc.field_j.field_o) {
-                          vc.field_j.b(var2_int, var3);
-                          var3 = var3 - vc.field_j.field_o;
+                        if (~var3 <= ~-vc.menuForegroundSprite.field_o) {
+                          vc.menuForegroundSprite.b(var2_int, var3);
+                          var3 = var3 - vc.menuForegroundSprite.field_o;
                           if (var4 != 0) {
                             break L11;
                           }
@@ -357,7 +357,7 @@ final class GameScreen extends MenuScreen {
                             continue L10;
                           }
                         }
-                        var2_int = var2_int - vc.field_j.field_s;
+                        var2_int = var2_int - vc.menuForegroundSprite.field_s;
                       }
                       if (var4 == 0) {
                         continue L7;
@@ -470,7 +470,7 @@ final class GameScreen extends MenuScreen {
                     var4 += 20;
                     var5 -= 10;
                   }
-                  ma.a(var3, var5, var2_int, (byte) -92, var4, ll.field_h);
+                  ma.a(var3, var5, var2_int, (byte) -92, var4, ll.frameNineSliceSprites);
                 }
               }
             }
@@ -486,7 +486,7 @@ final class GameScreen extends MenuScreen {
                         break L9;
                       }
                     }
-                    kh.field_h[4].b(0, 20);
+                    kh.screenTitleSprites[4].b(0, 20);
                     ac.a(false, false, (byte) -93);
                     if (var12 == 0) {
                       break L7;
@@ -494,20 +494,20 @@ final class GameScreen extends MenuScreen {
                   }
                   if (this.screenId != 6) {
                     if (this.screenId == 4) {
-                      kh.field_h[8].b(0, 20);
-                      ma.a(var3 + 10, 120, 100, (byte) -92, var4, ll.field_h);
+                      kh.screenTitleSprites[8].b(0, 20);
+                      ma.a(var3 + 10, 120, 100, (byte) -92, var4, ll.frameNineSliceSprites);
                       var5 = 184;
-                      dd.field_G.b(Geoblox.loginMessage, 320, var5, 0, -1);
+                      dd.uiPaletteFont.b(Geoblox.loginMessage, 320, var5, 0, -1);
                       var5 = 185;
-                      fi.field_d.a(r.field_sb, 130, var5, 380, 300, 0, -1, 1, 0, 14);
-                      ma.a(320, 120, 60, (byte) -92, var4, ll.field_h);
-                      fi.field_d.a(bd.field_b, 130, 330, 380, 300, 0, -1, 1, 0, 14);
+                      fi.smallFont.a(r.field_sb, 130, var5, 380, 300, 0, -1, 1, 0, 14);
+                      ma.a(320, 120, 60, (byte) -92, var4, ll.frameNineSliceSprites);
+                      fi.smallFont.a(bd.field_b, 130, 330, 380, 300, 0, -1, 1, 0, 14);
                       if (var12 == 0) {
                         break L7;
                       }
                     }
                     if (this.screenId != 3) {
-                      kh.field_h[0].b(0, 20);
+                      kh.screenTitleSprites[0].b(0, 20);
                       if (this.screenId != 0) {
                         if (this.screenId != 1) {
                           break L7;
@@ -525,14 +525,14 @@ final class GameScreen extends MenuScreen {
                         L17: {
                           var5 = stackIn_73_0;
                           SoftwareRasterizer.b(0, 0, 640, 480, 0, var5);
-                          ma.a(160, 150, 80, (byte) -92, 340, ll.field_h);
+                          ma.a(160, 150, 80, (byte) -92, 340, ll.frameNineSliceSprites);
                           var6 = 170;
-                          fi.field_d.a(ki.fullscreenNonmemberText, 160, var6, 320, 300, 0, -1, 1, 0, 16);
+                          fi.smallFont.a(ki.fullscreenNonmemberText, 160, var6, 320, 300, 0, -1, 1, 0, 16);
                           var7 = 100;
                           var8 = -(20 + var7 >> 1) + 410;
                           var6 = 265;
                           var9 = var8 - (-(var7 >> 1) - 10);
-                          ma.a(var6, var8, 36, (byte) -92, 20 + var7, eb.field_g);
+                          ma.a(var6, var8, 36, (byte) -92, 20 + var7, eb.mouseBoxFrames);
                           if (1 != this.field_o) {
                             if (this.field_o >= 0) {
                               break L17;
@@ -550,15 +550,15 @@ final class GameScreen extends MenuScreen {
                               break L17;
                             }
                           }
-                          dd.field_G.field_K[0][wf.field_p] = 15488514;
+                          dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
                         }
                         L19: {
-                          dd.field_G.b(hh.fullscreenCloseButtonText, var9, 30 + var6, 0, -1);
+                          dd.uiPaletteFont.b(hh.fullscreenCloseButtonText, var9, 30 + var6, 0, -1);
                           var8 = 320 - (20 + var7 >> 1) - 90;
-                          dd.field_G.field_K[0][wf.field_p] = 16689938;
+                          dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
                           var6 = 265;
                           var9 = 10 + (var7 >> 1) + var8;
-                          ma.a(var6, var8, 36, (byte) -92, var7 + 20, eb.field_g);
+                          ma.a(var6, var8, 36, (byte) -92, var7 + 20, eb.mouseBoxFrames);
                           if (this.field_o != 0) {
                             if (0 <= this.field_o) {
                               break L19;
@@ -576,10 +576,10 @@ final class GameScreen extends MenuScreen {
                               break L19;
                             }
                           }
-                          dd.field_G.field_K[0][wf.field_p] = 15488514;
+                          dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
                         }
-                        dd.field_G.b(qb.fullscreenMembersButtonText, var9, 30 + var6, 0, -1);
-                        dd.field_G.field_K[0][wf.field_p] = 16689938;
+                        dd.uiPaletteFont.b(qb.fullscreenMembersButtonText, var9, 30 + var6, 0, -1);
+                        dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
                         if (var12 == 0) {
                           break L7;
                         }
@@ -594,14 +594,14 @@ final class GameScreen extends MenuScreen {
                           L24: {
                             var5 = stackIn_122_0;
                             SoftwareRasterizer.b(0, 0, 640, 480, 0, var5);
-                            ma.a(160, 160, 95, (byte) -92, 320, ll.field_h);
+                            ma.a(160, 160, 95, (byte) -92, 320, ll.frameNineSliceSprites);
                             var6 = 170;
-                            var6 = var6 + 16 * fi.field_d.a(sj.fullscreenUnavailableText, 170, var6, 300, 300, 0, -1, 1, 0, 16);
+                            var6 = var6 + 16 * fi.smallFont.a(sj.fullscreenUnavailableText, 170, var6, 300, 300, 0, -1, 1, 0, 16);
                             var6 += 40;
                             var7 = 100;
                             var8 = 320 - (var7 + 20 >> 1);
                             var9 = (var7 >> 1) + (var8 + 10);
-                            ma.a(var6, var8, 36, (byte) -92, 20 + var7, eb.field_g);
+                            ma.a(var6, var8, 36, (byte) -92, 20 + var7, eb.mouseBoxFrames);
                             if (0 != this.field_o) {
                               if (260 >= qa.field_a) {
                                 break L24;
@@ -616,10 +616,10 @@ final class GameScreen extends MenuScreen {
                                 break L24;
                               }
                             }
-                            dd.field_G.field_K[0][wf.field_p] = 15488514;
+                            dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
                           }
-                          dd.field_G.b(hh.fullscreenCloseButtonText, var9, 30 + var6, 0, -1);
-                          dd.field_G.field_K[0][wf.field_p] = 16689938;
+                          dd.uiPaletteFont.b(hh.fullscreenCloseButtonText, var9, 30 + var6, 0, -1);
+                          dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
                           if (var12 == 0) {
                             break L7;
                           }
@@ -632,25 +632,25 @@ final class GameScreen extends MenuScreen {
                         L27: {
                           var5 = stackIn_144_0;
                           SoftwareRasterizer.b(0, 0, 640, 480, 0, var5);
-                          ma.a(160, 160, 140, (byte) -92, 320, ll.field_h);
+                          ma.a(160, 160, 140, (byte) -92, 320, ll.frameNineSliceSprites);
                           var6 = 170;
                           var7_ref_String = ue.fullscreenBeforeAcceptText + " " + pb.fullscreenAcceptButtonText + " " + wj.fullscreenAfterAcceptText + " " + rb.fullscreenCancelButtonText + " " + uj.fullscreenAfterCancelText;
-                          var6 = var6 + 16 * fi.field_d.a(var7_ref_String, 170, var6, 300, 300, 0, -1, 1, 0, 16);
+                          var6 = var6 + 16 * fi.smallFont.a(var7_ref_String, 170, var6, 300, 300, 0, -1, 1, 0, 16);
                           var6 += 10;
                           var8_ref_String = Integer.toString((1500 - this.activeTicks) / 150 + 1);
                           if ((1500 - this.activeTicks) / 150 <= 0) {
-                            var6 = var6 + fi.field_d.a(wj.a(mj.fullscreenAcceptCountdownSingularText, new String[]{var8_ref_String}, (byte) -51), 170, var6, 300, 300, 0, -1, 1, 0, 16) * 16;
+                            var6 = var6 + fi.smallFont.a(wj.a(mj.fullscreenAcceptCountdownSingularText, new String[]{var8_ref_String}, (byte) -51), 170, var6, 300, 300, 0, -1, 1, 0, 16) * 16;
                             if (var12 == 0) {
                               break L27;
                             }
                           }
-                          var6 = var6 + fi.field_d.a(wj.a(jk.fullscreenAcceptCountdownPluralText, new String[]{var8_ref_String}, (byte) -45), 170, var6, 300, 300, 0, -1, 1, 0, 16) * 16;
+                          var6 = var6 + fi.smallFont.a(wj.a(jk.fullscreenAcceptCountdownPluralText, new String[]{var8_ref_String}, (byte) -45), 170, var6, 300, 300, 0, -1, 1, 0, 16) * 16;
                         }
                         L29: {
                           var6 += 40;
                           var9 = 100;
                           var10 = -(20 + var9 >> 1) + 320 + 90;
-                          ma.a(var6, var10, 36, (byte) -92, var9 + 20, eb.field_g);
+                          ma.a(var6, var10, 36, (byte) -92, var9 + 20, eb.mouseBoxFrames);
                           var11 = 10 + ((var9 >> 1) + var10);
                           if (this.field_o != 1) {
                             if (0 <= this.field_o) {
@@ -669,14 +669,14 @@ final class GameScreen extends MenuScreen {
                               break L29;
                             }
                           }
-                          dd.field_G.field_K[0][wf.field_p] = 15488514;
+                          dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
                         }
                         L31: {
-                          dd.field_G.b(rb.fullscreenCancelButtonText, var11, 30 + var6, 0, -1);
-                          dd.field_G.field_K[0][wf.field_p] = 16689938;
+                          dd.uiPaletteFont.b(rb.fullscreenCancelButtonText, var11, 30 + var6, 0, -1);
+                          dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
                           var10 = 320 - (20 + var9 >> 1) - 90;
                           var11 = 10 + (var9 >> 1) + var10;
-                          ma.a(var6, var10, 36, (byte) -92, 20 + var9, eb.field_g);
+                          ma.a(var6, var10, 36, (byte) -92, 20 + var9, eb.mouseBoxFrames);
                           if (this.field_o != 0) {
                             if (this.field_o >= 0) {
                               break L31;
@@ -694,10 +694,10 @@ final class GameScreen extends MenuScreen {
                               break L31;
                             }
                           }
-                          dd.field_G.field_K[0][wf.field_p] = 15488514;
+                          dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
                         }
-                        dd.field_G.b(pb.fullscreenAcceptButtonText, var11, 30 + var6, 0, -1);
-                        dd.field_G.field_K[0][wf.field_p] = 16689938;
+                        dd.uiPaletteFont.b(pb.fullscreenAcceptButtonText, var11, 30 + var6, 0, -1);
+                        dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
                         if (var12 == 0) {
                           break L7;
                         }
@@ -710,14 +710,14 @@ final class GameScreen extends MenuScreen {
                       L34: {
                         var5 = stackIn_191_0;
                         SoftwareRasterizer.b(0, 0, 640, 480, 0, var5);
-                        ma.a(170, 160, 80, (byte) -92, 320, ll.field_h);
+                        ma.a(170, 160, 80, (byte) -92, 320, ll.frameNineSliceSprites);
                         var6 = 180;
-                        fi.field_d.a(ki.fullscreenNonmemberText, 170, var6, 300, 300, 0, -1, 1, 0, 16);
+                        fi.smallFont.a(ki.fullscreenNonmemberText, 170, var6, 300, 300, 0, -1, 1, 0, 16);
                         var7 = 242;
                         var8 = 320 - (var7 + 20 >> 1);
                         var9 = 10 + (var8 + (var7 >> 1));
                         var6 = 265;
-                        ma.a(var6, var8, 36, (byte) -92, var7 + 20, eb.field_g);
+                        ma.a(var6, var8, 36, (byte) -92, var7 + 20, eb.mouseBoxFrames);
                         if (this.field_o != 0) {
                           if (qa.field_a <= 190) {
                             break L34;
@@ -732,15 +732,15 @@ final class GameScreen extends MenuScreen {
                             break L34;
                           }
                         }
-                        dd.field_G.field_K[0][wf.field_p] = 15488514;
+                        dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
                       }
-                      dd.field_G.b(hh.fullscreenCloseButtonText, var9, 30 + var6, 0, -1);
-                      dd.field_G.field_K[0][wf.field_p] = 16689938;
+                      dd.uiPaletteFont.b(hh.fullscreenCloseButtonText, var9, 30 + var6, 0, -1);
+                      dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
                       if (var12 == 0) {
                         break L7;
                       }
                     }
-                    kh.field_h[5].b(0, 20);
+                    kh.screenTitleSprites[5].b(0, 20);
                     if (!this.field_E) {
                       this.b(-97, this.field_q);
                       if (var12 == 0) {
@@ -780,7 +780,7 @@ final class GameScreen extends MenuScreen {
                       break L7;
                     }
                   }
-                  kh.field_h[7].b(0, 20);
+                  kh.screenTitleSprites[7].b(0, 20);
                   ac.a(false, true, (byte) -122);
                   if (var12 == 0) {
                     break L7;
@@ -1151,17 +1151,17 @@ final class GameScreen extends MenuScreen {
                 if (da.field_c != 1) {
                   break L1;
                 }
-                kh.field_h[3].b(0, 20);
+                kh.screenTitleSprites[3].b(0, 20);
                 if (var10 == 0) {
                   break L1;
                 }
               }
-              kh.field_h[2].b(0, 20);
+              kh.screenTitleSprites[2].b(0, 20);
               if (var10 == 0) {
                 break L1;
               }
             }
-            kh.field_h[1].b(0, 20);
+            kh.screenTitleSprites[1].b(0, 20);
           }
           if (param0 != 30) {
             this.updateTransition(-78);
@@ -1171,8 +1171,8 @@ final class GameScreen extends MenuScreen {
               if (null != ca.field_f.field_k) {
                 if (!ca.field_f.field_j) {
                   var2 = eb.field_f;
-                  var3 = 76 + (150 + dd.field_G.field_o);
-                  dd.field_G.b(var2, 322, var3, 0, -1);
+                  var3 = 76 + (150 + dd.uiPaletteFont.field_o);
+                  dd.uiPaletteFont.b(var2, 322, var3, 0, -1);
                   if (var10 == 0) {
                     break L5;
                   }
@@ -1180,7 +1180,7 @@ final class GameScreen extends MenuScreen {
                 L8: {
                   var2_int = 0;
                   var3_ref_String__ = ca.field_f.field_k[da.field_c];
-                  var4 = fi.field_d;
+                  var4 = fi.smallFont;
                   if (var3_ref_String__ != null) {
                     var5 = ca.field_f.field_h[da.field_c];
                     var6 = var4.field_o + 150;
@@ -1249,8 +1249,8 @@ final class GameScreen extends MenuScreen {
                 }
                 if (var2_int == 0) {
                   var5_ref = sb.noHighscoresText;
-                  var6 = 76 + dd.field_G.field_o + 150;
-                  dd.field_G.b(var5_ref, 322, var6, 0, -1);
+                  var6 = 76 + dd.uiPaletteFont.field_o + 150;
+                  dd.uiPaletteFont.b(var5_ref, 322, var6, 0, -1);
                 }
                 if (var10 == 0) {
                   break L5;
@@ -1266,15 +1266,15 @@ final class GameScreen extends MenuScreen {
               }
               var2 = sb.noHighscoresText;
             }
-            var3 = 150 - (-dd.field_G.field_o - 76);
-            dd.field_G.b(var2, 322, var3, 0, -1);
+            var3 = 150 - (-dd.uiPaletteFont.field_o - 76);
+            dd.uiPaletteFont.b(var2, 322, var3, 0, -1);
             if (fh.c(param0 - 147)) {
-              dd.field_G.a(ni.createToUseText, 125, 350, 395, 100, 0, -1, 1, 0, 26);
+              dd.uiPaletteFont.a(ni.createToUseText, 125, 350, 395, 100, 0, -1, 1, 0, 26);
             }
           }
           if (!fh.c(param0 ^ -109)) {
             var2 = ue.highscoreFriendTipText;
-            fi.field_d.a(var2, 140, 325, 360, 300, 0, -1, 1, 0, 16);
+            fi.smallFont.a(var2, 140, 325, 360, 300, 0, -1, 1, 0, 16);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1397,13 +1397,13 @@ final class GameScreen extends MenuScreen {
                   }
                 }
                 var2_float = 0.019999999552965164f * (float)(this.animationTick % 50);
-                this.field_N = ((int)(var2_float * (float)this.field_t) << 8) + (jg.field_h[selectedThemeId][this.field_B] + ((int)(var2_float * (float)this.field_V) << 16) + (int)((float)this.field_M * var2_float));
+                this.field_N = ((int)(var2_float * (float)this.field_t) << 8) + (jg.themeCycleColors[selectedThemeId][this.field_B] + ((int)(var2_float * (float)this.field_V) << 16) + (int)((float)this.field_M * var2_float));
                 if (this.animationTick % 50 == 49) {
                   this.field_B = this.field_B + 1;
                   this.field_B = this.field_B % 7;
-                  this.field_V = -((16751678 & jg.field_h[selectedThemeId][this.field_B]) >> 16) + ((jg.field_h[selectedThemeId][(1 + this.field_B) % 7] & 16754682) >> 16);
-                  this.field_t = (255 & jg.field_h[selectedThemeId][(this.field_B + 1) % 7] >> 8) - ((jg.field_h[selectedThemeId][this.field_B] & 65438) >> 8);
-                  this.field_M = (255 & jg.field_h[selectedThemeId][(1 + this.field_B) % 7]) - (255 & jg.field_h[selectedThemeId][this.field_B]);
+                  this.field_V = -((16751678 & jg.themeCycleColors[selectedThemeId][this.field_B]) >> 16) + ((jg.themeCycleColors[selectedThemeId][(1 + this.field_B) % 7] & 16754682) >> 16);
+                  this.field_t = (255 & jg.themeCycleColors[selectedThemeId][(this.field_B + 1) % 7] >> 8) - ((jg.themeCycleColors[selectedThemeId][this.field_B] & 65438) >> 8);
+                  this.field_M = (255 & jg.themeCycleColors[selectedThemeId][(1 + this.field_B) % 7]) - (255 & jg.themeCycleColors[selectedThemeId][this.field_B]);
                 }
               }
               qa.advanceMenuAvatarAnimation((byte) 127);
@@ -1667,8 +1667,8 @@ final class GameScreen extends MenuScreen {
             if (param1 != 0) {
               if (1 != param1) {
                 if (param1 != 2) {
-                  ma.a(140, 30, 80, (byte) -92, 80, ll.field_h);
-                  ma.a(242, 30, 80, (byte) -92, 80, ll.field_h);
+                  ma.a(140, 30, 80, (byte) -92, 80, ll.frameNineSliceSprites);
+                  ma.a(242, 30, 80, (byte) -92, 80, ll.frameNineSliceSprites);
                   if (var11 == 0) {
                     break L0;
                   }
@@ -1676,13 +1676,13 @@ final class GameScreen extends MenuScreen {
               }
             }
             L2: {
-              ma.a(140, 30, 80, (byte) -92, 80, ll.field_h);
-              ma.a(242, 30, 80, (byte) -92, 80, ll.field_h);
-              ma.a(345, 30, 80, (byte) -92, 80, ll.field_h);
+              ma.a(140, 30, 80, (byte) -92, 80, ll.frameNineSliceSprites);
+              ma.a(242, 30, 80, (byte) -92, 80, ll.frameNineSliceSprites);
+              ma.a(345, 30, 80, (byte) -92, 80, ll.frameNineSliceSprites);
               ri.a(70, 180, 29497);
               vf.spriteScratchRaster.e();
               SoftwareRasterizer.c();
-              ke.field_a[1][this.field_X][this.field_L].b((vf.spriteScratchRaster.field_s >> 1) - (ke.field_a[1][this.field_X][this.field_L].field_s >> 1), (vf.spriteScratchRaster.field_o >> 1) - (ke.field_a[1][this.field_X][this.field_L].field_o >> 1));
+              ke.entitySpritesByThemeCategoryAndVariant[1][this.field_X][this.field_L].b((vf.spriteScratchRaster.field_s >> 1) - (ke.entitySpritesByThemeCategoryAndVariant[1][this.field_X][this.field_L].field_s >> 1), (vf.spriteScratchRaster.field_o >> 1) - (ke.entitySpritesByThemeCategoryAndVariant[1][this.field_X][this.field_L].field_o >> 1));
               sh.field_y.a(255);
               SoftwareRasterizer.b(this.field_P);
               SoftwareRasterizer.b(50, 250, 90, 310);
@@ -1699,7 +1699,7 @@ final class GameScreen extends MenuScreen {
               if (this.field_Z != 15) {
                 vf.spriteScratchRaster.e();
                 SoftwareRasterizer.c();
-                ke.field_a[1][this.field_X][this.field_L].b(vf.spriteScratchRaster.field_s >> 1, vf.spriteScratchRaster.field_o >> 1, var8, 3072);
+                ke.entitySpritesByThemeCategoryAndVariant[1][this.field_X][this.field_L].b(vf.spriteScratchRaster.field_s >> 1, vf.spriteScratchRaster.field_o >> 1, var8, 3072);
                 sh.field_y.a(255);
                 SoftwareRasterizer.b(this.field_P);
                 SoftwareRasterizer.b(40, 355, 103, 415);
@@ -1710,7 +1710,7 @@ final class GameScreen extends MenuScreen {
                 var7 = (int)(0.5 + Math.cos(this.field_A + var9) * (double)this.field_Z) + var5;
                 vf.spriteScratchRaster.e();
                 SoftwareRasterizer.c();
-                ke.field_a[1][this.field_X][this.field_L].b(vf.spriteScratchRaster.field_s >> 1, vf.spriteScratchRaster.field_o >> 1, var8, 3072);
+                ke.entitySpritesByThemeCategoryAndVariant[1][this.field_X][this.field_L].b(vf.spriteScratchRaster.field_s >> 1, vf.spriteScratchRaster.field_o >> 1, var8, 3072);
                 sh.field_y.a(255);
                 SoftwareRasterizer.b(this.field_P);
                 SoftwareRasterizer.b(40, 355, 103, 415);
@@ -1722,7 +1722,7 @@ final class GameScreen extends MenuScreen {
                 var7 = var5 + (int)(Math.cos(var9 + this.field_A) * (double)this.field_Z + 0.5);
                 vf.spriteScratchRaster.e();
                 SoftwareRasterizer.c();
-                ke.field_a[1][this.field_X][this.field_L].b(vf.spriteScratchRaster.field_s >> 1, vf.spriteScratchRaster.field_o >> 1, var8, 3072);
+                ke.entitySpritesByThemeCategoryAndVariant[1][this.field_X][this.field_L].b(vf.spriteScratchRaster.field_s >> 1, vf.spriteScratchRaster.field_o >> 1, var8, 3072);
                 sh.field_y.a(255);
                 SoftwareRasterizer.b(this.field_P);
                 SoftwareRasterizer.b(40, 355, 103, 415);
@@ -1734,7 +1734,7 @@ final class GameScreen extends MenuScreen {
               }
               wl.field_a.e();
               SoftwareRasterizer.c();
-              mi.field_B[this.field_w].a(-10 + (wl.field_a.field_s >> 1), (wl.field_a.field_o >> 1) - 10, 20, 20);
+              mi.sparkleFrames[this.field_w].a(-10 + (wl.field_a.field_s >> 1), (wl.field_a.field_o >> 1) - 10, 20, 20);
               sh.field_y.a(255);
               SoftwareRasterizer.b(this.field_P);
               SoftwareRasterizer.b(40, 355, 103, 415);
@@ -1744,7 +1744,7 @@ final class GameScreen extends MenuScreen {
               var7 = var5 + (int)(0.5 + Math.cos(var9 + this.field_A) * (double)this.field_Z);
               wl.field_a.e();
               SoftwareRasterizer.c();
-              mi.field_B[this.field_w].a((wl.field_a.field_s >> 1) - 10, (wl.field_a.field_o >> 1) - 10, 20, 20);
+              mi.sparkleFrames[this.field_w].a((wl.field_a.field_s >> 1) - 10, (wl.field_a.field_o >> 1) - 10, 20, 20);
               sh.field_y.a(255);
               SoftwareRasterizer.b(this.field_P);
               SoftwareRasterizer.b(40, 355, 103, 415);
@@ -1755,7 +1755,7 @@ final class GameScreen extends MenuScreen {
               var7 = var5 + (int)(Math.cos(this.field_A + var9) * (double)this.field_Z + 0.5);
               wl.field_a.e();
               SoftwareRasterizer.c();
-              mi.field_B[this.field_w].a((wl.field_a.field_s >> 1) - 10, -10 + (wl.field_a.field_o >> 1), 20, 20);
+              mi.sparkleFrames[this.field_w].a((wl.field_a.field_s >> 1) - 10, -10 + (wl.field_a.field_o >> 1), 20, 20);
               sh.field_y.a(255);
               SoftwareRasterizer.b(this.field_P);
               SoftwareRasterizer.b(40, 355, 103, 415);
@@ -1764,48 +1764,48 @@ final class GameScreen extends MenuScreen {
             SoftwareRasterizer.b(this.field_P);
           }
           L4: {
-            ma.a(140, 550, 40, (byte) -92, 60, ll.field_h);
-            dd.field_G.b(param1 + 1 + "/5", 580, 170, 0, -1);
+            ma.a(140, 550, 40, (byte) -92, 60, ll.frameNineSliceSprites);
+            dd.uiPaletteFont.b(param1 + 1 + "/5", 580, 170, 0, -1);
             var4 = null;
             var5 = 155;
             var6 = param1;
             if (var6 == 0) {
-              dd.field_G.a(a.field_a[0], var5, var3_int, 0, -1);
+              dd.uiPaletteFont.a(a.field_a[0], var5, var3_int, 0, -1);
               var4 = ec.field_e[0];
-              dd.field_G.a(a.field_a[1], var5, var3_int + 110, 0, -1);
+              dd.uiPaletteFont.a(a.field_a[1], var5, var3_int + 110, 0, -1);
             } else {
               if (1 == var6) {
                 if (var11 == 0) {
-                  dd.field_G.a(a.field_a[2], var5, var3_int, 0, -1);
+                  dd.uiPaletteFont.a(a.field_a[2], var5, var3_int, 0, -1);
                   var4 = ec.field_e[1];
                   break L4;
                 }
               }
               if (var6 == 2) {
-                dd.field_G.a(a.field_a[3], var5, var3_int, 0, -1);
+                dd.uiPaletteFont.a(a.field_a[3], var5, var3_int, 0, -1);
                 var4 = ec.field_e[2];
               } else {
                 if (var6 == 3) {
                   vf.spriteScratchRaster.e();
                   SoftwareRasterizer.c();
-                  MenuScreen.field_m[1][this.field_L][this.field_w].b(-(MenuScreen.field_m[1][this.field_L][this.field_w].field_s >> 1) + (vf.spriteScratchRaster.field_s >> 1), (vf.spriteScratchRaster.field_o >> 1) - (MenuScreen.field_m[1][this.field_L][this.field_w].field_o >> 1));
+                  MenuScreen.amorphousFramesByThemeAndVariant[1][this.field_L][this.field_w].b(-(MenuScreen.amorphousFramesByThemeAndVariant[1][this.field_L][this.field_w].field_s >> 1) + (vf.spriteScratchRaster.field_s >> 1), (vf.spriteScratchRaster.field_o >> 1) - (MenuScreen.amorphousFramesByThemeAndVariant[1][this.field_L][this.field_w].field_o >> 1));
                   sh.field_y.a(255);
                   SoftwareRasterizer.b(this.field_P);
                   vf.spriteScratchRaster.b(70 - (vf.spriteScratchRaster.field_s >> 1), -(vf.spriteScratchRaster.field_o >> 1) + 180);
                   vf.spriteScratchRaster.e();
                   SoftwareRasterizer.c();
-                  s.field_G[1][this.field_X].b((vf.spriteScratchRaster.field_s >> 1) - (s.field_G[1][this.field_X].field_s >> 1), (vf.spriteScratchRaster.field_o >> 1) - (s.field_G[1][this.field_X].field_o >> 1), this.field_N);
+                  s.geometrySpritesByThemeAndCategory[1][this.field_X].b((vf.spriteScratchRaster.field_s >> 1) - (s.geometrySpritesByThemeAndCategory[1][this.field_X].field_s >> 1), (vf.spriteScratchRaster.field_o >> 1) - (s.geometrySpritesByThemeAndCategory[1][this.field_X].field_o >> 1), this.field_N);
                   sh.field_y.a(255);
                   SoftwareRasterizer.b(this.field_P);
                   vf.spriteScratchRaster.g(1);
                   vf.spriteScratchRaster.b(70 - (vf.spriteScratchRaster.field_s >> 1), 282 - (vf.spriteScratchRaster.field_o >> 1));
-                  dd.field_G.a(a.field_a[4], var5, var3_int, 0, -1);
+                  dd.uiPaletteFont.a(a.field_a[4], var5, var3_int, 0, -1);
                   var4 = ec.field_e[3];
                 } else {
                   if (4 == var6) {
                     vf.spriteScratchRaster.e();
                     SoftwareRasterizer.c();
-                    fc.field_g[this.field_w].b(-(fc.field_g[this.field_w].field_s >> 1) + (vf.spriteScratchRaster.field_s >> 1), -(fc.field_g[this.field_w].field_o >> 1) + (vf.spriteScratchRaster.field_o >> 1));
+                    fc.blackOrbFrames[this.field_w].b(-(fc.blackOrbFrames[this.field_w].field_s >> 1) + (vf.spriteScratchRaster.field_s >> 1), -(fc.blackOrbFrames[this.field_w].field_o >> 1) + (vf.spriteScratchRaster.field_o >> 1));
                     k.a(0, 0, vf.spriteScratchRaster.field_s, -27085, vf.spriteScratchRaster.field_o);
                     sh.field_y.a(255);
                     SoftwareRasterizer.b(this.field_P);
@@ -1815,24 +1815,24 @@ final class GameScreen extends MenuScreen {
                     if (this.field_B >= 4) {
                       this.field_B = 0;
                     }
-                    hb.field_d[this.field_B].b(-(hb.field_d[this.field_B].field_s >> 1) + (vf.spriteScratchRaster.field_s >> 1), (vf.spriteScratchRaster.field_o >> 1) - (hb.field_d[this.field_B].field_o >> 1));
+                    hb.silverStarFrames[this.field_B].b(-(hb.silverStarFrames[this.field_B].field_s >> 1) + (vf.spriteScratchRaster.field_s >> 1), (vf.spriteScratchRaster.field_o >> 1) - (hb.silverStarFrames[this.field_B].field_o >> 1));
                     k.a(0, 0, vf.spriteScratchRaster.field_s, -27085, vf.spriteScratchRaster.field_o);
                     sh.field_y.a(255);
                     SoftwareRasterizer.b(this.field_P);
                     vf.spriteScratchRaster.b(70 - (vf.spriteScratchRaster.field_s >> 1), -(vf.spriteScratchRaster.field_o >> 1) + 282);
-                    dd.field_G.a(a.field_a[5], var5, var3_int, 0, -1);
+                    dd.uiPaletteFont.a(a.field_a[5], var5, var3_int, 0, -1);
                     var4 = ec.field_e[4];
                   }
                 }
               }
             }
           }
-          var6 = fi.field_d.field_o + fi.field_d.field_q;
+          var6 = fi.smallFont.field_o + fi.smallFont.field_q;
           if (param0 > -14) {
             this.handleMenuPointer(-3, -61, false, -67, true, 116);
           }
           var7 = 355;
-          var3_int = var3_int + fi.field_d.a((String) (var4), var5, var3_int, var7, 300, 0, -1, 0, 0, 16) * var6;
+          var3_int = var3_int + fi.smallFont.a((String) (var4), var5, var3_int, var7, 300, 0, -1, 0, 0, 16) * var6;
           SoftwareRasterizer.b(this.field_P);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1861,8 +1861,8 @@ final class GameScreen extends MenuScreen {
                 L4: {
                   pointerX -= 280;
                   if (pointerX > 0) {
-                    if (pointerX < sd.field_y.field_s) {
-                      j.field_gb = 80 * pointerX / sd.field_y.field_s;
+                    if (pointerX < sd.barSprite.field_s) {
+                      j.field_gb = 80 * pointerX / sd.barSprite.field_s;
                       if (var9 == 0) {
                         break L4;
                       }
@@ -1890,8 +1890,8 @@ final class GameScreen extends MenuScreen {
                   break L1;
                 }
               }
-              if (~sd.field_y.field_s < ~pointerX) {
-                wg.a(-15346, 80 * pointerX / sd.field_y.field_s);
+              if (~sd.barSprite.field_s < ~pointerX) {
+                wg.a(-15346, 80 * pointerX / sd.barSprite.field_s);
                 if (var9 == 0) {
                   break L1;
                 }
@@ -2664,7 +2664,7 @@ final class GameScreen extends MenuScreen {
           }
           L11: {
             L12: {
-              var8 = dd.field_G;
+              var8 = dd.uiPaletteFont;
               var9 = 320;
               var10 = 160;
               if (0 != this.screenId) {
@@ -2705,7 +2705,7 @@ final class GameScreen extends MenuScreen {
                           stackIn_99_1 = stackIn_98_1;
                           stackIn_99_2 = this.field_T;
                         }
-                        ma.a(stackIn_99_0, stackIn_99_1 + stackIn_99_2, 36, (byte) -92, var11 + 20, eb.field_g);
+                        ma.a(stackIn_99_0, stackIn_99_1 + stackIn_99_2, 36, (byte) -92, var11 + 20, eb.mouseBoxFrames);
                         if (var14 == 0) {
                           break L14;
                         }
@@ -2727,7 +2727,7 @@ final class GameScreen extends MenuScreen {
                         rowY = rowY - this.field_T;
                         var9 = var9 + this.field_T;
                       }
-                      ma.a(rowY, var10, 36, (byte) -92, 20 + var11, eb.field_g);
+                      ma.a(rowY, var10, 36, (byte) -92, 20 + var11, eb.mouseBoxFrames);
                       if (var14 == 0) {
                         break L14;
                       }
@@ -2750,7 +2750,7 @@ final class GameScreen extends MenuScreen {
                     rowY = rowY - this.field_T;
                     var10 = var10 + this.field_T;
                   }
-                  ma.a(rowY, var10, 36, (byte) -92, var11 + 20, eb.field_g);
+                  ma.a(rowY, var10, 36, (byte) -92, var11 + 20, eb.mouseBoxFrames);
                   if (var14 == 0) {
                     break L14;
                   }
@@ -2802,7 +2802,7 @@ final class GameScreen extends MenuScreen {
             }
             L31: {
               if (!selected) {
-                ma.a(rowY, var10, 40, (byte) -92, var11, eb.field_g);
+                ma.a(rowY, var10, 40, (byte) -92, var11, eb.mouseBoxFrames);
                 if (var14 == 0) {
                   break L31;
                 }
@@ -2810,13 +2810,13 @@ final class GameScreen extends MenuScreen {
               var9 = var9 + this.field_T;
               var10 = var10 + this.field_T;
               rowY = rowY - this.field_T;
-              ma.a(rowY, var10, 40, (byte) -92, var11, eb.field_g);
+              ma.a(rowY, var10, 40, (byte) -92, var11, eb.mouseBoxFrames);
             }
             rowY += 2;
           }
           L33: {
             if (selected) {
-              dd.field_G.field_K[0][wf.field_p] = 15488514;
+              dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
               var12 = this.field_T;
               if (var14 == 0) {
                 break L33;
@@ -2832,22 +2832,22 @@ final class GameScreen extends MenuScreen {
                 }
               }
               var8.c(var7, 285 + var12, 30 + rowY, 0, -1);
-              sd.field_y.b(var12 + 280, rowY + 15);
+              sd.barSprite.b(var12 + 280, rowY + 15);
               if (actionId == 8) {
                 stackIn_153_0 = j.field_gb;
               } else {
                 stackIn_153_0 = oc.field_c;
               }
               var13 = stackIn_153_0;
-              var13 = var13 * (-4 + sd.field_y.field_s) / 80;
-              re.field_h.b(280 + var13 - 1 + var12, 9 + rowY);
+              var13 = var13 * (-4 + sd.barSprite.field_s) / 80;
+              re.widgetSprite.b(280 + var13 - 1 + var12, 9 + rowY);
               if (var14 == 0) {
                 break L35;
               }
             }
             var8.b(var7, var9, rowY + 30, 0, -1);
           }
-          dd.field_G.field_K[0][wf.field_p] = 16689938;
+          dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

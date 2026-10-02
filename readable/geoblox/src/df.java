@@ -3,7 +3,7 @@
  */
 abstract class df {
     static String endGameText;
-    static IndexedSprite field_a;
+    static IndexedSprite spaceBackgroundSprite;
 
     abstract qg a(byte param0);
 
@@ -14,7 +14,7 @@ abstract class df {
             param1.removeMouseListener(pg.field_c);
             param1.removeMouseMotionListener(pg.field_c);
             if (param0) {
-                field_a = (IndexedSprite) null;
+                spaceBackgroundSprite = (IndexedSprite) null;
             }
             param1.removeFocusListener(pg.field_c);
             s.field_I = 0;
@@ -34,11 +34,11 @@ abstract class df {
     public static void a(int param0) {
         if (param0 != 0) {
             endGameText = (String) null;
-            field_a = null;
+            spaceBackgroundSprite = null;
             endGameText = null;
             return;
         }
-        field_a = null;
+        spaceBackgroundSprite = null;
         endGameText = null;
     }
 

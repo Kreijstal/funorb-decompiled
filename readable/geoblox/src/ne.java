@@ -10,7 +10,7 @@ final class ne {
     private int[] field_a;
     private int field_g;
     private int field_i;
-    static Sprite field_b;
+    static Sprite sunForegroundSprite;
 
     private final void a(boolean param0) {
         int var2 = 0;
@@ -199,7 +199,7 @@ final class ne {
     }
 
     public static void b(byte param0) {
-        field_b = null;
+        sunForegroundSprite = null;
         if (param0 > -92) {
             ticketingGoToWebsiteText = (String) null;
             field_c = null;

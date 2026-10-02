@@ -7,7 +7,7 @@ class vf extends hk {
     static qc field_I;
     private fb field_G;
     private String[] field_J;
-    static Sprite[] field_H;
+    static Sprite[] avatarCryBeginFrames;
     static boolean field_K;
     private IntrusiveDeque field_F;
 
@@ -89,7 +89,7 @@ class vf extends hk {
         }
         spriteScratchRaster = null;
         field_I = null;
-        field_H = null;
+        avatarCryBeginFrames = null;
         field_E = (byte[][]) null;
     }
 

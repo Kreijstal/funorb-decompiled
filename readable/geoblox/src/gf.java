@@ -18,8 +18,8 @@ final class gf {
         }
         eh.field_c = 480;
         kj.field_J = 0;
-        jf.field_c = 72 + dd.field_G.c(pg.field_a[var4.actionId], 100);
-        tl.field_h = 30 * dd.field_G.b(pg.field_a[var4.actionId], 100) + 30;
+        jf.field_c = 72 + dd.uiPaletteFont.c(pg.field_a[var4.actionId], 100);
+        tl.field_h = 30 * dd.uiPaletteFont.b(pg.field_a[var4.actionId], 100) + 30;
         if (62 > tl.field_h) {
             tl.field_h = 62;
             return;

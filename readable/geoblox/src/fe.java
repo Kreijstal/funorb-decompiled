@@ -9,7 +9,7 @@ final class fe {
     static int field_k;
     private static ck field_h;
     static rf field_e;
-    static IndexedSprite field_j;
+    static IndexedSprite sunBackgroundSprite;
     static int field_f;
     private java.util.zip.Inflater field_i;
     static boolean field_b;
@@ -19,7 +19,7 @@ final class fe {
     public static void c(int param0) {
         field_h = null;
         int var1 = 122 % ((param0 + 22) / 63);
-        field_j = null;
+        sunBackgroundSprite = null;
         field_e = null;
         field_a = null;
     }

@@ -8,7 +8,7 @@ final class pk extends qc {
     private int field_s;
     static gk field_l;
     static String field_q;
-    static Sprite field_k;
+    static Sprite resultBubbleSprite;
     static boolean[] connectivityVisitedByEntityId;
     static int field_m;
 
@@ -139,7 +139,7 @@ final class pk extends qc {
 
     public static void j(int param0) {
         connectivityVisitedByEntityId = null;
-        field_k = null;
+        resultBubbleSprite = null;
         if (param0 != 0) {
             field_r = (String) null;
         }

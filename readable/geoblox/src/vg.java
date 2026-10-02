@@ -11,7 +11,7 @@ final class vg {
     static boolean[] field_j;
     private DualLinkNode[] field_g;
     private DualLinkNode field_c;
-    static Sprite[] field_f;
+    static Sprite[] silverStarShockFrames;
 
     final void a(long param0, int param1, DualLinkNode param2) {
         DualLinkNode var5 = null;
@@ -99,7 +99,7 @@ final class vg {
         if (!param0) {
             return;
         }
-        field_f = null;
+        silverStarShockFrames = null;
         pleaseWaitText = null;
         field_j = null;
         field_b = null;

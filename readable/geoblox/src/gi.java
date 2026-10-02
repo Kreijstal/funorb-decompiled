@@ -62,10 +62,10 @@ final class gi implements Iterable {
         }
     }
 
-    final static bg a(rh param0, int param1, rh param2, String param3, String param4) {
-        int var5_int = 0;
+    final static bg loadBitmapFont(rh fontMetricsArchive, int methodGuard, rh glyphGraphicsArchive, String resourceName, String groupName) {
+        int archiveGroupId = 0;
         RuntimeException var5 = null;
-        int var6 = 0;
+        int archiveFileId = 0;
         bg stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -83,12 +83,12 @@ final class gi implements Iterable {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param2.a((byte) 126, param4);
-          if (param1 != 1) {
+          archiveGroupId = glyphGraphicsArchive.a((byte) 126, groupName);
+          if (methodGuard != 1) {
             field_b = (int[]) null;
           }
-          var6 = param2.a(param3, param1 ^ -82, var5_int);
-          stackIn_3_0 = rb.a(var6, 0, param2, var5_int, param0);
+          archiveFileId = glyphGraphicsArchive.a(resourceName, methodGuard ^ -82, archiveGroupId);
+          stackIn_3_0 = rb.a(archiveFileId, 0, glyphGraphicsArchive, archiveGroupId, fontMetricsArchive);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -97,7 +97,7 @@ final class gi implements Iterable {
 
           stackIn_6_1 = new StringBuilder().append("gi.E(");
 
-          if (param0 == null) {
+          if (fontMetricsArchive == null) {
             stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
             stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
             stackIn_7_2 = "null";
@@ -108,9 +108,9 @@ final class gi implements Iterable {
           }
 
 
-          stackIn_9_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(param1).append(',');
+          stackIn_9_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(methodGuard).append(',');
 
-          if (param2 == null) {
+          if (glyphGraphicsArchive == null) {
             stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
             stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
             stackIn_10_2 = "null";
@@ -123,7 +123,7 @@ final class gi implements Iterable {
 
           stackIn_12_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',');
 
-          if (param3 == null) {
+          if (resourceName == null) {
             stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
             stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
             stackIn_13_2 = "null";
@@ -136,7 +136,7 @@ final class gi implements Iterable {
 
           stackIn_15_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',');
 
-          if (param4 == null) {
+          if (groupName == null) {
             stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
             stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
             stackIn_16_2 = "null";

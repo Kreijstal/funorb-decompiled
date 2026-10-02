@@ -15,7 +15,7 @@ final class hb implements dh {
     private int field_f;
     private int field_k;
     static wa field_j;
-    static Sprite[] field_d;
+    static Sprite[] silverStarFrames;
 
     public final void a(int param0, int param1, int param2, boolean param3, el param4) {
         int var13 = 0;
@@ -59,13 +59,13 @@ final class hb implements dh {
         if (param0 == 0) {
             field_l = null;
             field_j = null;
-            field_d = null;
+            silverStarFrames = null;
             return;
         }
         playFreeVersionText = (String) null;
         field_l = null;
         field_j = null;
-        field_d = null;
+        silverStarFrames = null;
     }
 
     hb(m param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {

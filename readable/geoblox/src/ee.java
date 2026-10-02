@@ -5,7 +5,7 @@ import java.util.*;
 
 class ee extends el implements ql {
     static String toServerListText;
-    static Sprite field_A;
+    static Sprite menuBackgroundSprite;
     IntrusiveDeque field_z;
     static String[] mustLogin2Texts;
     static int[] field_B;
@@ -274,7 +274,7 @@ class ee extends el implements ql {
         mustLogin2Texts = null;
         toServerListText = null;
         field_B = null;
-        field_A = null;
+        menuBackgroundSprite = null;
     }
 
     final String c(byte param0) {
@@ -283,7 +283,7 @@ class ee extends el implements ql {
         String var4;
         var2 = new gb(this.field_z);
         if (param0 != 69) {
-          field_A = (Sprite) null;
+          menuBackgroundSprite = (Sprite) null;
         }
         var3 = (el) ((Object) var2.c((byte) 88));
         L1: while (var3 != null) {
@@ -644,7 +644,7 @@ class ee extends el implements ql {
         try {
             this.field_z.addLast(-113, param1);
             if (param0 >= -60) {
-                field_A = (Sprite) null;
+                menuBackgroundSprite = (Sprite) null;
             }
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "ee.OA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

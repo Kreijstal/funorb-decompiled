@@ -5,13 +5,13 @@ final class sg {
     static boolean field_d;
     static IntrusiveDeque field_b;
     static java.awt.Frame field_a;
-    static IndexedSprite field_e;
+    static IndexedSprite germsBackgroundSprite;
     static byte[][][] field_c;
     static String field_f;
     private static String field_z;
 
     public static void a(int param0) {
-        field_e = null;
+        germsBackgroundSprite = null;
         if (param0 == -13575) {
             field_f = null;
             field_a = null;

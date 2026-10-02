@@ -14,7 +14,7 @@ final class k implements Iterator {
     static String loginText;
     static String fullscreenFocusText;
     static rf field_f;
-    static Sprite field_a;
+    static Sprite popSprite;
 
     public final void remove() {
         if (null == this.field_c) {
@@ -92,7 +92,7 @@ final class k implements Iterator {
         if (param0 != 0) {
             return;
         }
-        field_a = null;
+        popSprite = null;
         field_f = null;
         field_i = null;
         loginText = null;

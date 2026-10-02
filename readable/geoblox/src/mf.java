@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mf {
-    static IndexedSprite field_a;
+    static IndexedSprite selectedThemeBackground;
 
     final static void b(boolean param0) {
         if (!el.gameplaySession.tutorialMode) {
@@ -21,11 +21,11 @@ final class mf {
 
     public static void a(boolean param0) {
         if (param0) {
-            field_a = (IndexedSprite) null;
-            field_a = null;
+            selectedThemeBackground = (IndexedSprite) null;
+            selectedThemeBackground = null;
             return;
         }
-        field_a = null;
+        selectedThemeBackground = null;
     }
 
     final static boolean a(int param0, int param1, int param2, rh param3) {

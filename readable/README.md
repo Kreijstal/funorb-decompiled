@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 1,194 guarded naming rules: 22 classes, 389 fields,
-181 methods, 217 parameters and 385 local declarations. Both 303-file corpora
+The current export has 1,311 guarded naming rules: 22 classes, 448 fields,
+187 methods, 241 parameters and 413 local declarations. Both 303-file corpora
 compile, preserving 150,801 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -36,6 +36,16 @@ git archive --format=tar 1fa1f5ca8db58810744ef29e04bcf31c74e81805 | sha256sum
 
 This identifies tracked decompiler source and its Git archive metadata. It is
 separate from a game JAR or the Java source-tree hashes below.
+
+The current naming pass adds 117 guarded identities: 59 fields, six methods,
+24 parameters and 28 locals. It names gameplay sprite tables, avatar/effect
+frames, HUD graphics, seven theme foreground/background pairs, font and sprite
+loaders, archive lookup arguments and preparation locals. Raw source, decompiler
+pins and all 1,194 prior rules remain unchanged. The mirror applies 19,829
+identifier edits while preserving all 150,801 bindings and 388 override edges.
+Keyboard/screen/theme indexes, original resource keys and guard effects remain.
+The complete archive-loading path and rendering with real assets are not
+established by the existing native fixtures.
 
 ## Reproduce and check
 
@@ -268,7 +278,7 @@ multiple enclosing exits, skipped effects, partial writes, nullable conditions,
 signed zero/NaNs, sentinel throwable identity and label collision avoidance.
 All six game probes retain their native traces within their recorded scopes.
 
-The current pass uses integral-predicate evidence from the already-rendered
+The previous structural pass uses integral-predicate evidence from the already-rendered
 JVM operand cache. An exact source spelling is usable only when all matching
 predicates and their complements have integral evidence; conflicting or unknown
 evidence invalidates both sides. No block is rendered again. Floating and
@@ -281,8 +291,8 @@ clones. The category flag table is still re-read after recursion. Every one of
 20,710 declaration keys and original spellings, all 388 override rows and all
 1,194 guarded rules are unchanged. No ordinal migrations occur. Exactly 26
 reference occurrences disappear and none are added: two category-update clones
-and two recursive-advance clones. The current mirror checks 150,801 bindings and
-makes 18,611 identifier edits. The emitter passes 23 groups and 40,129 native
+and two recursive-advance clones. That mirror checked 150,801 bindings and
+made 18,611 identifier edits. The emitter passes 23 groups and 40,129 native
 comparisons, including 35,280 new checks of all integral relational complements,
 signed long/int boundaries, throwing operands and effect order, plus unknown
 floating and nullable comparisons. Cache immutability and conflicting evidence
@@ -319,8 +329,10 @@ byte-for-byte. Previous integral-sign and literal-shift cleanup remains, with
 its historical proof recorded in the raw provenance. Current source/decompiler
 identity and naming migrations live in the single manifest. `ruleChanges`
 records naming changes; `sourceChange` is recorded when input identity changes.
-This structural pass changes the input with an explicit source migration and
-zero naming changes. All six native probe sources and their traces are pinned in
+The last structural pass changed the input with an explicit source migration
+and zero naming changes. This naming pass retains that input, preserves every
+prior rule and records its 117 additions as exact before-null/after identities.
+All six native probe sources and their traces are pinned in
 the same manifest; no JSON snapshots are added.
 
 ## Update this export
@@ -342,6 +354,6 @@ the same manifest; no JSON snapshots are added.
 | Java source tree | SHA-256 |
 | --- | --- |
 | Raw | `cf0cbc50ff6b23458db1a7beb4edb6829ab61e7e6ea3dc7d7d47f03e2492095d` |
-| Readable | `5016f53e48632db33bc17a3dcb650ea43e1ce3493a179d993341ed228b0a1f8a` |
+| Readable | `cea37354add0674d6afbd99d18bdc3e950c0238d8dc69ba67974467c0ada155b` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

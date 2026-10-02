@@ -5,19 +5,19 @@ final class lj {
     static volatile int field_b;
     static ck field_e;
     static int field_a;
-    static Sprite field_d;
+    static Sprite smallBoxSprite;
     static IndexedSprite[] field_c;
     private static String field_z;
 
     public static void a(int param0) {
         if (param0 == -1) {
-            field_d = null;
+            smallBoxSprite = null;
             field_e = null;
             field_c = null;
             return;
         }
         field_b = -112;
-        field_d = null;
+        smallBoxSprite = null;
         field_e = null;
         field_c = null;
     }

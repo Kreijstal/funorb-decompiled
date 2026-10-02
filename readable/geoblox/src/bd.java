@@ -25,12 +25,12 @@ final class bd extends IOException {
           L0: while (popup != null) {
             if (popup.chainMultiplier != 1) {
               chainAndPointsText = "X" + popup.chainMultiplier + " - " + popup.pointsText;
-              var3 = dd.field_G.field_K[0][wf.field_p];
-              dd.field_G.field_K[0][wf.field_p] = 15488514;
-              dd.field_G.b(chainAndPointsText, (int)(popup.progress * ((float)(80 + el.gameplaySession.pointsPanelX) - popup.originX) + popup.originX), (int)(popup.progress * (34.0f - popup.originY) + popup.originY), 0, -1);
-              dd.field_G.field_K[0][wf.field_p] = var3;
+              var3 = dd.uiPaletteFont.colorPalettes[0][wf.field_p];
+              dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
+              dd.uiPaletteFont.b(chainAndPointsText, (int)(popup.progress * ((float)(80 + el.gameplaySession.pointsPanelX) - popup.originX) + popup.originX), (int)(popup.progress * (34.0f - popup.originY) + popup.originY), 0, -1);
+              dd.uiPaletteFont.colorPalettes[0][wf.field_p] = var3;
             } else {
-              dd.field_G.b(popup.pointsText, (int)(popup.progress * (-popup.originX + 144.0f) + popup.originX), (int)((-popup.originY + 34.0f) * popup.progress + popup.originY), 0, -1);
+              dd.uiPaletteFont.b(popup.pointsText, (int)(popup.progress * (-popup.originX + 144.0f) + popup.originX), (int)((-popup.originY + 34.0f) * popup.progress + popup.originY), 0, -1);
             }
             popup = (ScorePopup) ((Object) md.activeScorePopups.nextForIteration(1));
           }

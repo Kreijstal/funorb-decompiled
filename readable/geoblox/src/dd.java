@@ -4,7 +4,7 @@
 abstract class dd extends ee {
     private ng field_K;
     boolean field_I;
-    static nc field_G;
+    static nc uiPaletteFont;
     static int variantMatchCandidateCount;
     static rh field_J;
     private int field_H;
@@ -25,7 +25,7 @@ abstract class dd extends ee {
             this.a(param0, param2, (byte) -87, -param0 + fa.field_i >> 1, kb.field_b - param2 >> 1);
             return;
         }
-        field_G = (nc) null;
+        uiPaletteFont = (nc) null;
         this.a(param0, param2, (byte) -87, -param0 + fa.field_i >> 1, kb.field_b - param2 >> 1);
     }
 
@@ -160,14 +160,14 @@ abstract class dd extends ee {
         if (param0 == 256) {
             field_J = null;
             loadingMusicText = null;
-            field_G = null;
+            uiPaletteFont = null;
             field_E = null;
             return;
         }
         dd.a((byte) -87);
         field_J = null;
         loadingMusicText = null;
-        field_G = null;
+        uiPaletteFont = null;
         field_E = null;
     }
 
