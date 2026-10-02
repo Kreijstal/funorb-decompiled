@@ -1,4 +1,4 @@
-# Reading GeoBlox pass 23
+# Reading GeoBlox pass 24
 
 The readable tree uses semantic names without opaque suffixes. The symbol map
 keeps the original spelling and JVM identity of every declaration, so
@@ -241,21 +241,48 @@ inserted into `a.attachedEntities`. Their queue marker is cleared and the board
 raster is marked dirty.
 
 When connectivity is dirty, an attached-entity walk uses
-`pk.connectivityVisitedByEntityId` and two temporary `SecondaryDeque` collections to follow
-related entities. A group touching the avatar is treated differently from a
-detachable group. Detachment marks each group entity as moving, removes related
-links, clears category/variant counters and marks the session flags. The
-collections remain `var11` and `var13`; their instance API is now named in
-`SecondaryDeque`, while their reconciliation roles still need native review.
-`entityIndexThenGroupCount` retains its two observed counter roles.
+`pk.connectivityVisitedByEntityId`, `pendingConnectivityEntities` and
+`visitedNonAvatarEntities` to follow related entities. `currentConnectivityEntity`
+is the popped entity; `currentConnectivityEntityAlias` refers to the same object
+and implies no parent/child relationship. `componentCanDetach` starts at one
+and becomes zero when the search reaches a direct avatar contact. That root
+stops the search before insertion into `visitedNonAvatarEntities`, so an
+anchored search can leave only a partial group in that collection.
 
-The next attached-entity walk routes queued entities. For moving entities,
+An unanchored group moves to `ji.movingEntities`, loses its reciprocal contacts
+and resets category/variant counters. Anchored components remain attached with
+their neighbor order and counts. The graph probe verifies both outcomes against
+independent connectivity and queue-partition oracles. A completed rebuild clears
+visited entries 0 through 999; clean connectivity leaves the array alone.
+`componentNeighborIndex` walks neighbors during discovery and reciprocal removal.
+`visitedResetIndexThenKindFourCount` first clears the visited range, then counts
+kind-four entities routed to the transient list and changed to kind seven; it
+does not count connected components.
+
+The next attached-entity walk uses `routedAttachedEntity` to route queue markers.
+For moving entities,
 `radialOffsetX`, `radialOffsetY` and `radialVelocityScale` normalize a vector
 toward `(320,240)` using `og.entityMotionSpeed`, then update velocity and remove
 related links. Other paths move entities through the existing transient list,
 update lifetime/animation state, and keep the original numeric sprite/action
 choices. The final transient-list walk can return entities to
 `ra.availableEntities`, then updates the session's raster-dirty flag.
+
+Several slots span these phases: `connectivityAliasThenDetachingEntity`
+starts as a popped-entity alias and later holds the group member being detached;
+`neighborThenCountResetEntity` starts as a candidate neighbor and later aliases
+an entity for count cleanup. `componentSearchThenVariantResetEntity` scans the
+worklists before its later reset role. The carrier pairs
+`comparedThenUnlinkTarget`/`neighborThenUnlinkArgument` similarly serve identity
+checks before reciprocal unlink calls. Their names preserve those distinct
+uses rather than inventing a permanent entity relationship.
+
+`rasterDirtyDecision` combines the old raster flag, contact dirtiness and avatar
+shock state. The native reconciliation fixture checks connectivity and contact
+flags, including centre-position NaN velocities. It exercises the normal method
+guard -90 from `GameplaySession.updateSession` and compares both retained client
+control values. Attachment drawing, shock/transient routing and pool-return
+branches still have source evidence without native coverage in this probe.
 
 This is a reading map of the recovered source, not a whole-game behavioral
 proof. Several guards, scratch carriers and shared helper names remain opaque.

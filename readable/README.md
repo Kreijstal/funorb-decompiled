@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 1,074 guarded naming rules: 22 classes, 362 fields,
-171 methods, 201 parameters and 318 local declarations. Both 303-file corpora
+The current export has 1,097 guarded naming rules: 22 classes, 362 fields,
+171 methods, 202 parameters and 340 local declarations. Both 303-file corpora
 compile, preserving 154,117 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -91,6 +91,15 @@ link independence have separate oracles. The 472 direct mixed-flag failures
 preserve native exception context and partial mutations. The contact caller
 uses mutually exclusive conversion flags. These controlled fixtures do not
 simulate collision-mask production or real asset loading.
+
+Board reconciliation adds 16,384 cases across all four-entity graphs, all
+avatar-contact masks, centred/radial positions, connectivity/contact dirty
+flags and client guards zero/one. The normal guard path has independent
+connected-component, queue-order, neighbor-count, velocity, flag and visited
+range oracles. The alternate client guard is checked against its native trace.
+Real entity constructors and contact linking run; a constructor-free session
+holder and blank rasters isolate reconciliation. Moving-to-attached drawing,
+shock/transient routing and pool returns remain outside this probe.
 Contact-physics producers, actual asset loading, new unlock delivery, device
 audio and whole-game equivalence remain unverified. Text-writer guards <=23
 retain a PCM side effect outside the direct writer probe. These source checks
@@ -115,6 +124,6 @@ do not establish FPS, heap or phone acceptance.
 | Java source tree | SHA-256 |
 | --- | --- |
 | Raw | `07610c2d655bf96e59584f07be867c62e47cf3b3c484063504d9958443e89da2` |
-| Readable | `653d787433a937cc0935a90df18c80d19f7262f6ce175a1671d58665a63b8966` |
+| Readable | `3f8187f6da58bcfa78c8d468ae9122490c8d18e7aab995733c6ff33395c53aa5` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

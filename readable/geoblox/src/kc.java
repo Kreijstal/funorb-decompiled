@@ -73,15 +73,15 @@ final class kc {
         }
     }
 
-    final static void reconcileBoardEntities(int param0) {
-        IntrusiveDeque stackIn_12_0 = null;
-        boolean stackIn_15_0 = false;
-        GameplayEntity stackIn_20_0 = null;
-        boolean stackIn_22_0 = false;
-        int stackIn_44_0 = 0;
-        GameplayEntity stackIn_51_0 = null;
-        GameplayEntity stackIn_51_1 = null;
-        int stackIn_56_0 = 0;
+    final static void reconcileBoardEntities(int methodGuard) {
+        IntrusiveDeque entityQueueThenAttachedQueue = null;
+        boolean alreadyVisited = false;
+        GameplayEntity poppedEntityOrSearchStart = null;
+        boolean poppedEntityTouchesAvatar = false;
+        int avatarContactThenDetachDecision = 0;
+        GameplayEntity comparedThenUnlinkTarget = null;
+        GameplayEntity neighborThenUnlinkArgument = null;
+        int visitedFlagThenResetIndex = 0;
         int stackIn_88_0 = 0;
         int stackIn_88_1 = 0;
         int stackIn_88_2 = 0;
@@ -89,36 +89,36 @@ final class kc {
         int stackIn_90_1;
         int stackIn_90_2;
         int stackIn_90_3;
-        GameplaySession stackIn_110_0 = null;
-        GameplaySession stackIn_112_0 = null;
-        int stackIn_112_1 = 0;
+        GameplaySession sessionForRasterRead = null;
+        GameplaySession sessionForRasterWrite = null;
+        int rasterDirtyDecision = 0;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_14_0;
-        boolean stackOut_21_0;
+        boolean visitedByEntityIdValue;
+        boolean directAvatarContactValue;
         GameplayEntity activeEntity = null;
-        int entityIndexThenGroupCount = 0;
+        int visitedResetIndexThenKindFourCount = 0;
         RuntimeException var1_ref = null;
-        GameplayEntity candidateEntity = null;
-        int var2 = 0;
+        GameplayEntity routedAttachedEntity = null;
+        int methodGuardResidue = 0;
         float radialOffsetX = 0.0f;
-        int var3_int = 0;
-        GameplayEntity queuedEntity = null;
-        int var4_int = 0;
+        int transientNeighborIndex = 0;
+        GameplayEntity categoryResetThenTransientEntity = null;
+        int componentCanDetach = 0;
         float radialOffsetY = 0.0f;
-        GameplayEntity var4 = null;
-        GameplayEntity groupEntity = null;
+        GameplayEntity entityForTransientVariantReset = null;
+        GameplayEntity connectivityAliasThenDetachingEntity = null;
         double radialVelocityScale = 0.0;
-        int childEntityIndex = 0;
-        GameplayEntity var6 = null;
-        GameplayEntity var7 = null;
+        int componentNeighborIndex = 0;
+        GameplayEntity entityForComponentCategoryReset = null;
+        GameplayEntity neighborThenCountResetEntity = null;
         int relatedEntityIndex = 0;
-        GameplayEntity relatedEntityCandidate = null;
-        int var9 = 0;
-        GameplayEntity entityCandidate = null;
-        SecondaryDeque var11 = null;
-        GameplayEntity parentEntity = null;
-        SecondaryDeque var13 = null;
-        var9 = Geoblox.field_C;
+        GameplayEntity componentSearchThenVariantResetEntity = null;
+        int clientControlSnapshot = 0;
+        GameplayEntity currentConnectivityEntity = null;
+        SecondaryDeque pendingConnectivityEntities = null;
+        GameplayEntity currentConnectivityEntityAlias = null;
+        SecondaryDeque visitedNonAvatarEntities = null;
+        clientControlSnapshot = Geoblox.field_C;
         try {
           L0: {
             fa.entitiesDetachedThisTick = false;
@@ -128,16 +128,16 @@ final class kc {
                 L3: {
                   L4: {
                     if (activeEntity != null) {
-                      stackIn_12_0 = activeEntity.entityQueue;
+                      entityQueueThenAttachedQueue = activeEntity.entityQueue;
 
-                      if (var9 != 0) {
+                      if (clientControlSnapshot != 0) {
                         break L4;
                       } else {
                         L6: {
-                          if (stackIn_12_0 != a.attachedEntities) {
+                          if (entityQueueThenAttachedQueue != a.attachedEntities) {
                             if (activeEntity.detachedFromBoard) {
                               fa.entitiesDetachedThisTick = true;
-                              if (var9 == 0) {
+                              if (clientControlSnapshot == 0) {
                                 break L6;
                               }
                             } else {
@@ -153,7 +153,7 @@ final class kc {
                         }
                         activeEntity.entityQueue = null;
                         activeEntity = (GameplayEntity) ((Object) ji.movingEntities.nextForIteration(1));
-                        if (var9 == 0) {
+                        if (clientControlSnapshot == 0) {
                           continue L1;
                         }
                       }
@@ -161,135 +161,135 @@ final class kc {
                     if (!re.connectivityDirty) {
                       break L3;
                     } else {
-                      stackIn_12_0 = a.attachedEntities;
+                      entityQueueThenAttachedQueue = a.attachedEntities;
                     }
                   }
-                  activeEntity = (GameplayEntity) ((Object) ((IntrusiveDeque) (Object) stackIn_12_0).firstForIteration(0));
+                  activeEntity = (GameplayEntity) ((Object) ((IntrusiveDeque) (Object) entityQueueThenAttachedQueue).firstForIteration(0));
                   L8: while (true) {
                     L9: {
                       if (activeEntity != null) {
-                        stackOut_14_0 = pk.connectivityVisitedByEntityId[activeEntity.entityId];
-                        stackIn_56_0 = stackOut_14_0 ? 1 : 0;
-                        stackIn_15_0 = stackOut_14_0;
-                        if (var9 != 0) {
+                        visitedByEntityIdValue = pk.connectivityVisitedByEntityId[activeEntity.entityId];
+                        visitedFlagThenResetIndex = visitedByEntityIdValue ? 1 : 0;
+                        alreadyVisited = visitedByEntityIdValue;
+                        if (clientControlSnapshot != 0) {
                           break L9;
                         } else {
                           L11: {
-                            if (stackIn_15_0) {
-                              if (var9 == 0) {
+                            if (alreadyVisited) {
+                              if (clientControlSnapshot == 0) {
                                 break L11;
                               }
                             }
-                            var11 = new SecondaryDeque();
-                            var13 = new SecondaryDeque();
-                            var11.addFirst(activeEntity, false);
-                            var4_int = 1;
+                            pendingConnectivityEntities = new SecondaryDeque();
+                            visitedNonAvatarEntities = new SecondaryDeque();
+                            pendingConnectivityEntities.addFirst(activeEntity, false);
+                            componentCanDetach = 1;
                             L13: while (true) {
-                              stackIn_20_0 = (GameplayEntity) ((Object) var11.removeFirst(true));
+                              poppedEntityOrSearchStart = (GameplayEntity) ((Object) pendingConnectivityEntities.removeFirst(true));
                               L14: while (true) {
                                 L15: {
                                   L16: {
-                                    entityCandidate = stackIn_20_0;
-                                    parentEntity = entityCandidate;
-                                    groupEntity = parentEntity;
-                                    if (parentEntity != null) {
-                                      pk.connectivityVisitedByEntityId[entityCandidate.entityId] = true;
-                                      stackOut_21_0 = parentEntity.touchesAvatar;
-                                      stackIn_44_0 = stackOut_21_0 ? 1 : 0;
-                                      stackIn_22_0 = stackOut_21_0;
-                                      if (var9 != 0) {
+                                    currentConnectivityEntity = poppedEntityOrSearchStart;
+                                    currentConnectivityEntityAlias = currentConnectivityEntity;
+                                    connectivityAliasThenDetachingEntity = currentConnectivityEntityAlias;
+                                    if (currentConnectivityEntityAlias != null) {
+                                      pk.connectivityVisitedByEntityId[currentConnectivityEntity.entityId] = true;
+                                      directAvatarContactValue = currentConnectivityEntityAlias.touchesAvatar;
+                                      avatarContactThenDetachDecision = directAvatarContactValue ? 1 : 0;
+                                      poppedEntityTouchesAvatar = directAvatarContactValue;
+                                      if (clientControlSnapshot != 0) {
                                         break L15;
                                       } else {
-                                        if (stackIn_22_0) {
-                                          var4_int = 0;
-                                          if (var9 == 0) {
+                                        if (poppedEntityTouchesAvatar) {
+                                          componentCanDetach = 0;
+                                          if (clientControlSnapshot == 0) {
                                             break L16;
                                           }
                                         }
-                                        var13.addFirst(parentEntity, false);
-                                        childEntityIndex = 0;
+                                        visitedNonAvatarEntities.addFirst(currentConnectivityEntityAlias, false);
+                                        componentNeighborIndex = 0;
                                         L18: while (true) {
                                           L19: {
-                                            if (childEntityIndex < parentEntity.relatedEntityCount) {
-                                              var7 = entityCandidate.relatedEntities[childEntityIndex];
-                                              stackIn_20_0 = (GameplayEntity) ((Object) var13.firstForIteration((byte) 121));
+                                            if (componentNeighborIndex < currentConnectivityEntityAlias.relatedEntityCount) {
+                                              neighborThenCountResetEntity = currentConnectivityEntity.relatedEntities[componentNeighborIndex];
+                                              poppedEntityOrSearchStart = (GameplayEntity) ((Object) visitedNonAvatarEntities.firstForIteration((byte) 121));
 
-                                              if (var9 != 0) {
+                                              if (clientControlSnapshot != 0) {
                                                 continue L14;
                                               } else {
-                                                relatedEntityCandidate = stackIn_20_0;
+                                                componentSearchThenVariantResetEntity = poppedEntityOrSearchStart;
                                                 L20: while (true) {
                                                   L21: {
                                                     L22: {
-                                                      if (relatedEntityCandidate != null) {
-                                                        stackIn_51_0 = (GameplayEntity) (relatedEntityCandidate);
+                                                      if (componentSearchThenVariantResetEntity != null) {
+                                                        comparedThenUnlinkTarget = (GameplayEntity) (componentSearchThenVariantResetEntity);
 
-                                                        stackIn_51_1 = (GameplayEntity) (var7);
+                                                        neighborThenUnlinkArgument = (GameplayEntity) (neighborThenCountResetEntity);
 
-                                                        if (var9 != 0) {
+                                                        if (clientControlSnapshot != 0) {
                                                           break L22;
                                                         } else {
-                                                          if (stackIn_51_0 == stackIn_51_1) {
-                                                            if (var9 == 0) {
+                                                          if (comparedThenUnlinkTarget == neighborThenUnlinkArgument) {
+                                                            if (clientControlSnapshot == 0) {
                                                               break L21;
                                                             }
                                                           }
-                                                          relatedEntityCandidate = (GameplayEntity) ((Object) var13.nextForIteration(-45));
-                                                          if (var9 == 0) {
+                                                          componentSearchThenVariantResetEntity = (GameplayEntity) ((Object) visitedNonAvatarEntities.nextForIteration(-45));
+                                                          if (clientControlSnapshot == 0) {
                                                             continue L20;
                                                           }
                                                         }
                                                       }
-                                                      relatedEntityCandidate = (GameplayEntity) ((Object) var11.firstForIteration((byte) 121));
-                                                      L25: while (relatedEntityCandidate != null) {
-                                                        stackIn_51_0 = (GameplayEntity) (relatedEntityCandidate);
+                                                      componentSearchThenVariantResetEntity = (GameplayEntity) ((Object) pendingConnectivityEntities.firstForIteration((byte) 121));
+                                                      L25: while (componentSearchThenVariantResetEntity != null) {
+                                                        comparedThenUnlinkTarget = (GameplayEntity) (componentSearchThenVariantResetEntity);
 
-                                                        stackIn_51_1 = (GameplayEntity) (var7);
+                                                        neighborThenUnlinkArgument = (GameplayEntity) (neighborThenCountResetEntity);
 
-                                                        if (var9 != 0) {
+                                                        if (clientControlSnapshot != 0) {
                                                           break L22;
                                                         } else {
-                                                          if (stackIn_51_0 == stackIn_51_1) {
+                                                          if (comparedThenUnlinkTarget == neighborThenUnlinkArgument) {
                                                             break L21;
                                                           } else {
-                                                            relatedEntityCandidate = (GameplayEntity) ((Object) var11.nextForIteration(54));
-                                                            if (var9 == 0) {
+                                                            componentSearchThenVariantResetEntity = (GameplayEntity) ((Object) pendingConnectivityEntities.nextForIteration(54));
+                                                            if (clientControlSnapshot == 0) {
                                                               continue L25;
                                                             }
                                                           }
                                                         }
                                                         break;
                                                       }
-                                                      var11.addFirst(var7, false);
+                                                      pendingConnectivityEntities.addFirst(neighborThenCountResetEntity, false);
                                                       break L21;
                                                     }
                                                     L27: while (true) {
                                                       L28: {
-                                                        ((GameplayEntity) (Object) stackIn_51_0).removeRelatedEntity(stackIn_51_1, 0);
-                                                        childEntityIndex++;
-                                                        if (var9 != 0) {
+                                                        ((GameplayEntity) (Object) comparedThenUnlinkTarget).removeRelatedEntity(neighborThenUnlinkArgument, 0);
+                                                        componentNeighborIndex++;
+                                                        if (clientControlSnapshot != 0) {
                                                           L29: while (true) {
-                                                            if (groupEntity == null) {
+                                                            if (connectivityAliasThenDetachingEntity == null) {
                                                               break L11;
                                                             } else {
-                                                              groupEntity.entityQueue = ji.movingEntities;
-                                                              groupEntity.touchesAvatar = false;
-                                                              groupEntity.detachedFromBoard = true;
+                                                              connectivityAliasThenDetachingEntity.entityQueue = ji.movingEntities;
+                                                              connectivityAliasThenDetachingEntity.touchesAvatar = false;
+                                                              connectivityAliasThenDetachingEntity.detachedFromBoard = true;
                                                               fa.entitiesDetachedThisTick = true;
-                                                              stackIn_56_0 = 0;
+                                                              visitedFlagThenResetIndex = 0;
 
-                                                              if (var9 != 0) {
+                                                              if (clientControlSnapshot != 0) {
                                                                 break L9;
                                                               } else {
-                                                                childEntityIndex = stackIn_56_0;
-                                                                if (childEntityIndex >= groupEntity.relatedEntityCount) {
-                                                                  var6 = groupEntity;
-                                                                  var7 = groupEntity;
-                                                                  groupEntity.relatedEntityCount = 0;
-                                                                  var6.sameCategoryEntityCount = 0;
-                                                                  var7.sameVariantEntityCount = 0;
-                                                                  groupEntity = (GameplayEntity) ((Object) var13.removeFirst(true));
-                                                                  if (var9 == 0) {
+                                                                componentNeighborIndex = visitedFlagThenResetIndex;
+                                                                if (componentNeighborIndex >= connectivityAliasThenDetachingEntity.relatedEntityCount) {
+                                                                  entityForComponentCategoryReset = connectivityAliasThenDetachingEntity;
+                                                                  neighborThenCountResetEntity = connectivityAliasThenDetachingEntity;
+                                                                  connectivityAliasThenDetachingEntity.relatedEntityCount = 0;
+                                                                  entityForComponentCategoryReset.sameCategoryEntityCount = 0;
+                                                                  neighborThenCountResetEntity.sameVariantEntityCount = 0;
+                                                                  connectivityAliasThenDetachingEntity = (GameplayEntity) ((Object) visitedNonAvatarEntities.removeFirst(true));
+                                                                  if (clientControlSnapshot == 0) {
                                                                     continue L29;
                                                                   } else {
                                                                     break L11;
@@ -301,29 +301,29 @@ final class kc {
                                                             }
                                                           }
                                                         } else {
-                                                          if (var9 == 0) {
+                                                          if (clientControlSnapshot == 0) {
                                                             L30: while (true) {
-                                                              if (childEntityIndex >= groupEntity.relatedEntityCount) {
-                                                                var6 = groupEntity;
-                                                                var7 = groupEntity;
-                                                                groupEntity.relatedEntityCount = 0;
-                                                                var6.sameCategoryEntityCount = 0;
-                                                                var7.sameVariantEntityCount = 0;
-                                                                groupEntity = (GameplayEntity) ((Object) var13.removeFirst(true));
-                                                                if (var9 == 0) {
-                                                                  if (groupEntity == null) {
+                                                              if (componentNeighborIndex >= connectivityAliasThenDetachingEntity.relatedEntityCount) {
+                                                                entityForComponentCategoryReset = connectivityAliasThenDetachingEntity;
+                                                                neighborThenCountResetEntity = connectivityAliasThenDetachingEntity;
+                                                                connectivityAliasThenDetachingEntity.relatedEntityCount = 0;
+                                                                entityForComponentCategoryReset.sameCategoryEntityCount = 0;
+                                                                neighborThenCountResetEntity.sameVariantEntityCount = 0;
+                                                                connectivityAliasThenDetachingEntity = (GameplayEntity) ((Object) visitedNonAvatarEntities.removeFirst(true));
+                                                                if (clientControlSnapshot == 0) {
+                                                                  if (connectivityAliasThenDetachingEntity == null) {
                                                                     break L11;
                                                                   } else {
-                                                                    groupEntity.entityQueue = ji.movingEntities;
-                                                                    groupEntity.touchesAvatar = false;
-                                                                    groupEntity.detachedFromBoard = true;
+                                                                    connectivityAliasThenDetachingEntity.entityQueue = ji.movingEntities;
+                                                                    connectivityAliasThenDetachingEntity.touchesAvatar = false;
+                                                                    connectivityAliasThenDetachingEntity.detachedFromBoard = true;
                                                                     fa.entitiesDetachedThisTick = true;
-                                                                    stackIn_56_0 = 0;
+                                                                    visitedFlagThenResetIndex = 0;
 
-                                                                    if (var9 != 0) {
+                                                                    if (clientControlSnapshot != 0) {
                                                                       break L9;
                                                                     } else {
-                                                                      childEntityIndex = stackIn_56_0;
+                                                                      componentNeighborIndex = visitedFlagThenResetIndex;
                                                                       continue L30;
                                                                     }
                                                                   }
@@ -336,27 +336,27 @@ final class kc {
                                                             }
                                                           } else {
                                                             L31: while (true) {
-                                                              var6 = groupEntity;
-                                                              var7 = groupEntity;
-                                                              groupEntity.relatedEntityCount = 0;
-                                                              var6.sameCategoryEntityCount = 0;
-                                                              var7.sameVariantEntityCount = 0;
-                                                              groupEntity = (GameplayEntity) ((Object) var13.removeFirst(true));
-                                                              if (var9 == 0) {
-                                                                if (groupEntity == null) {
+                                                              entityForComponentCategoryReset = connectivityAliasThenDetachingEntity;
+                                                              neighborThenCountResetEntity = connectivityAliasThenDetachingEntity;
+                                                              connectivityAliasThenDetachingEntity.relatedEntityCount = 0;
+                                                              entityForComponentCategoryReset.sameCategoryEntityCount = 0;
+                                                              neighborThenCountResetEntity.sameVariantEntityCount = 0;
+                                                              connectivityAliasThenDetachingEntity = (GameplayEntity) ((Object) visitedNonAvatarEntities.removeFirst(true));
+                                                              if (clientControlSnapshot == 0) {
+                                                                if (connectivityAliasThenDetachingEntity == null) {
                                                                   break L11;
                                                                 } else {
-                                                                  groupEntity.entityQueue = ji.movingEntities;
-                                                                  groupEntity.touchesAvatar = false;
-                                                                  groupEntity.detachedFromBoard = true;
+                                                                  connectivityAliasThenDetachingEntity.entityQueue = ji.movingEntities;
+                                                                  connectivityAliasThenDetachingEntity.touchesAvatar = false;
+                                                                  connectivityAliasThenDetachingEntity.detachedFromBoard = true;
                                                                   fa.entitiesDetachedThisTick = true;
-                                                                  stackIn_56_0 = 0;
+                                                                  visitedFlagThenResetIndex = 0;
 
-                                                                  if (var9 != 0) {
+                                                                  if (clientControlSnapshot != 0) {
                                                                     break L9;
                                                                   } else {
-                                                                    childEntityIndex = stackIn_56_0;
-                                                                    if (childEntityIndex >= groupEntity.relatedEntityCount) {
+                                                                    componentNeighborIndex = visitedFlagThenResetIndex;
+                                                                    if (componentNeighborIndex >= connectivityAliasThenDetachingEntity.relatedEntityCount) {
                                                                       continue L31;
                                                                     } else {
                                                                       break L28;
@@ -370,13 +370,13 @@ final class kc {
                                                           }
                                                         }
                                                       }
-                                                      stackIn_51_0 = groupEntity.relatedEntities[childEntityIndex];
-                                                      stackIn_51_1 = (GameplayEntity) (groupEntity);
+                                                      comparedThenUnlinkTarget = connectivityAliasThenDetachingEntity.relatedEntities[componentNeighborIndex];
+                                                      neighborThenUnlinkArgument = (GameplayEntity) (connectivityAliasThenDetachingEntity);
                                                       continue L27;
                                                     }
                                                   }
-                                                  childEntityIndex++;
-                                                  if (var9 == 0) {
+                                                  componentNeighborIndex++;
+                                                  if (clientControlSnapshot == 0) {
                                                     continue L18;
                                                   } else {
                                                     break L19;
@@ -385,7 +385,7 @@ final class kc {
                                               }
                                             }
                                           }
-                                          if (var9 == 0) {
+                                          if (clientControlSnapshot == 0) {
                                             continue L13;
                                           } else {
                                             break L16;
@@ -394,47 +394,47 @@ final class kc {
                                       }
                                     }
                                   }
-                                  stackIn_44_0 = var4_int;
+                                  avatarContactThenDetachDecision = componentCanDetach;
                                 }
-                                if (stackIn_44_0 == 0) {
+                                if (avatarContactThenDetachDecision == 0) {
                                   break L11;
                                 } else {
-                                  groupEntity = (GameplayEntity) ((Object) var13.removeFirst(true));
+                                  connectivityAliasThenDetachingEntity = (GameplayEntity) ((Object) visitedNonAvatarEntities.removeFirst(true));
                                   L32: while (true) {
-                                    if (groupEntity == null) {
+                                    if (connectivityAliasThenDetachingEntity == null) {
                                       break L11;
                                     } else {
-                                      groupEntity.entityQueue = ji.movingEntities;
-                                      groupEntity.touchesAvatar = false;
-                                      groupEntity.detachedFromBoard = true;
+                                      connectivityAliasThenDetachingEntity.entityQueue = ji.movingEntities;
+                                      connectivityAliasThenDetachingEntity.touchesAvatar = false;
+                                      connectivityAliasThenDetachingEntity.detachedFromBoard = true;
                                       fa.entitiesDetachedThisTick = true;
-                                      stackIn_56_0 = 0;
+                                      visitedFlagThenResetIndex = 0;
 
-                                      if (var9 != 0) {
+                                      if (clientControlSnapshot != 0) {
                                         break L9;
                                       } else {
-                                        childEntityIndex = stackIn_56_0;
-                                        L33: while (childEntityIndex < groupEntity.relatedEntityCount) {
-                                          stackIn_51_0 = groupEntity.relatedEntities[childEntityIndex];
-                                          stackIn_51_1 = (GameplayEntity) (groupEntity);
-                                          ((GameplayEntity) (Object) stackIn_51_0).removeRelatedEntity(stackIn_51_1, 0);
-                                          childEntityIndex++;
-                                          if (var9 != 0) {
+                                        componentNeighborIndex = visitedFlagThenResetIndex;
+                                        L33: while (componentNeighborIndex < connectivityAliasThenDetachingEntity.relatedEntityCount) {
+                                          comparedThenUnlinkTarget = connectivityAliasThenDetachingEntity.relatedEntities[componentNeighborIndex];
+                                          neighborThenUnlinkArgument = (GameplayEntity) (connectivityAliasThenDetachingEntity);
+                                          ((GameplayEntity) (Object) comparedThenUnlinkTarget).removeRelatedEntity(neighborThenUnlinkArgument, 0);
+                                          componentNeighborIndex++;
+                                          if (clientControlSnapshot != 0) {
                                             continue L32;
                                           } else {
-                                            if (var9 == 0) {
+                                            if (clientControlSnapshot == 0) {
                                               continue L33;
                                             }
                                           }
                                           break;
                                         }
-                                        var6 = groupEntity;
-                                        var7 = groupEntity;
-                                        groupEntity.relatedEntityCount = 0;
-                                        var6.sameCategoryEntityCount = 0;
-                                        var7.sameVariantEntityCount = 0;
-                                        groupEntity = (GameplayEntity) ((Object) var13.removeFirst(true));
-                                        if (var9 == 0) {
+                                        entityForComponentCategoryReset = connectivityAliasThenDetachingEntity;
+                                        neighborThenCountResetEntity = connectivityAliasThenDetachingEntity;
+                                        connectivityAliasThenDetachingEntity.relatedEntityCount = 0;
+                                        entityForComponentCategoryReset.sameCategoryEntityCount = 0;
+                                        neighborThenCountResetEntity.sameVariantEntityCount = 0;
+                                        connectivityAliasThenDetachingEntity = (GameplayEntity) ((Object) visitedNonAvatarEntities.removeFirst(true));
+                                        if (clientControlSnapshot == 0) {
                                           continue L32;
                                         } else {
                                           break L11;
@@ -447,26 +447,26 @@ final class kc {
                             }
                           }
                           activeEntity = (GameplayEntity) ((Object) a.attachedEntities.nextForIteration(1));
-                          if (var9 == 0) {
+                          if (clientControlSnapshot == 0) {
                             continue L8;
                           }
                         }
                       }
                       re.connectivityDirty = false;
                       el.gameplaySession.connectivityRebuiltThisTick = true;
-                      stackIn_56_0 = 0;
+                      visitedFlagThenResetIndex = 0;
                     }
-                    entityIndexThenGroupCount = stackIn_56_0;
+                    visitedResetIndexThenKindFourCount = visitedFlagThenResetIndex;
                     L35: while (true) {
-                      if (1000 <= entityIndexThenGroupCount) {
+                      if (1000 <= visitedResetIndexThenKindFourCount) {
                         break L3;
                       } else {
-                        pk.connectivityVisitedByEntityId[entityIndexThenGroupCount] = false;
-                        entityIndexThenGroupCount++;
-                        if (var9 != 0) {
+                        pk.connectivityVisitedByEntityId[visitedResetIndexThenKindFourCount] = false;
+                        visitedResetIndexThenKindFourCount++;
+                        if (clientControlSnapshot != 0) {
                           break L2;
                         } else {
-                          if (var9 == 0) {
+                          if (clientControlSnapshot == 0) {
                             continue L35;
                           } else {
                             break L3;
@@ -476,16 +476,16 @@ final class kc {
                     }
                   }
                 }
-                entityIndexThenGroupCount = 0;
+                visitedResetIndexThenKindFourCount = 0;
               }
-              candidateEntity = (GameplayEntity) ((Object) a.attachedEntities.firstForIteration(0));
-              L36: while (candidateEntity != null) {
+              routedAttachedEntity = (GameplayEntity) ((Object) a.attachedEntities.firstForIteration(0));
+              L36: while (routedAttachedEntity != null) {
                 L38: {
-                  if (null == candidateEntity.entityQueue) {
+                  if (null == routedAttachedEntity.entityQueue) {
                     if (!w.avatarShockPending) {
                       break L38;
                     } else {
-                      if (!candidateEntity.touchesAvatar) {
+                      if (!routedAttachedEntity.touchesAvatar) {
                         break L38;
                       }
                     }
@@ -494,89 +494,89 @@ final class kc {
                     L41: {
                       L42: {
                         re.connectivityDirty = true;
-                        candidateEntity.unlinkNode(false);
-                        candidateEntity.unlinkSecondaryNode((byte) 100);
+                        routedAttachedEntity.unlinkNode(false);
+                        routedAttachedEntity.unlinkSecondaryNode((byte) 100);
                         el.gameplaySession.boardRasterDirty = true;
-                        candidateEntity.eraseEntityPixels(92);
-                        if (ji.movingEntities == candidateEntity.entityQueue) {
-                          candidateEntity.rotateEntityAroundBoard(-el.gameplaySession.boardAngleRadians, -117);
-                          radialOffsetX = -candidateEntity.positionX + 320.0f;
-                          radialOffsetY = -candidateEntity.positionY + 240.0f;
+                        routedAttachedEntity.eraseEntityPixels(92);
+                        if (ji.movingEntities == routedAttachedEntity.entityQueue) {
+                          routedAttachedEntity.rotateEntityAroundBoard(-el.gameplaySession.boardAngleRadians, -117);
+                          radialOffsetX = -routedAttachedEntity.positionX + 320.0f;
+                          radialOffsetY = -routedAttachedEntity.positionY + 240.0f;
                           radialVelocityScale = (double)og.entityMotionSpeed / Math.sqrt((double)(radialOffsetY * radialOffsetY + radialOffsetX * radialOffsetX));
                           radialOffsetX = (float)((double)radialOffsetX * radialVelocityScale);
                           radialOffsetY = (float)((double)radialOffsetY * radialVelocityScale);
-                          candidateEntity.velocityY = radialOffsetY;
-                          candidateEntity.velocityX = radialOffsetX;
+                          routedAttachedEntity.velocityY = radialOffsetY;
+                          routedAttachedEntity.velocityX = radialOffsetX;
                           relatedEntityIndex = 0;
-                          L43: while (candidateEntity.relatedEntityCount > relatedEntityIndex) {
-                            candidateEntity.relatedEntities[relatedEntityIndex].removeRelatedEntity(candidateEntity, 0);
+                          L43: while (routedAttachedEntity.relatedEntityCount > relatedEntityIndex) {
+                            routedAttachedEntity.relatedEntities[relatedEntityIndex].removeRelatedEntity(routedAttachedEntity, 0);
                             relatedEntityIndex++;
-                            if (var9 != 0) {
+                            if (clientControlSnapshot != 0) {
                               break L40;
                             } else {
-                              if (var9 == 0) {
+                              if (clientControlSnapshot == 0) {
                                 continue L43;
                               }
                             }
                             break;
                           }
-                          var7 = candidateEntity;
-                          relatedEntityCandidate = candidateEntity;
-                          candidateEntity.relatedEntityCount = 0;
-                          var7.sameCategoryEntityCount = 0;
-                          relatedEntityCandidate.sameVariantEntityCount = 0;
-                          ji.movingEntities.addLast(-36, candidateEntity);
-                          if (var9 == 0) {
+                          neighborThenCountResetEntity = routedAttachedEntity;
+                          componentSearchThenVariantResetEntity = routedAttachedEntity;
+                          routedAttachedEntity.relatedEntityCount = 0;
+                          neighborThenCountResetEntity.sameCategoryEntityCount = 0;
+                          componentSearchThenVariantResetEntity.sameVariantEntityCount = 0;
+                          ji.movingEntities.addLast(-36, routedAttachedEntity);
+                          if (clientControlSnapshot == 0) {
                             break L41;
                           } else {
                             break L42;
                           }
                         }
                       }
-                      if (candidateEntity.entityQueue != bh.field_c) {
+                      if (routedAttachedEntity.entityQueue != bh.field_c) {
                         if (!w.avatarShockPending) {
                           break L41;
                         }
                       }
-                      var3_int = 0;
-                      L46: while (var3_int < candidateEntity.relatedEntityCount) {
-                        candidateEntity.relatedEntities[var3_int].removeRelatedEntity(candidateEntity, 0);
-                        candidateEntity.relatedEntities[var3_int].drawEntityIdOnBoardMask(2);
-                        var3_int++;
-                        if (var9 != 0) {
+                      transientNeighborIndex = 0;
+                      L46: while (transientNeighborIndex < routedAttachedEntity.relatedEntityCount) {
+                        routedAttachedEntity.relatedEntities[transientNeighborIndex].removeRelatedEntity(routedAttachedEntity, 0);
+                        routedAttachedEntity.relatedEntities[transientNeighborIndex].drawEntityIdOnBoardMask(2);
+                        transientNeighborIndex++;
+                        if (clientControlSnapshot != 0) {
                           break L40;
                         } else {
-                          if (var9 == 0) {
+                          if (clientControlSnapshot == 0) {
                             continue L46;
                           }
                         }
                         break;
                       }
-                      queuedEntity = candidateEntity;
-                      candidateEntity.relatedEntityCount = 0;
-                      var4 = candidateEntity;
-                      queuedEntity.sameCategoryEntityCount = 0;
-                      var4.sameVariantEntityCount = 0;
-                      candidateEntity.remainingLifetimeTicks = 50;
-                      bh.field_c.addLast(-100, candidateEntity);
-                      candidateEntity.animationFrameIndex = 0;
-                      if (candidateEntity.touchesAvatar) {
+                      categoryResetThenTransientEntity = routedAttachedEntity;
+                      routedAttachedEntity.relatedEntityCount = 0;
+                      entityForTransientVariantReset = routedAttachedEntity;
+                      categoryResetThenTransientEntity.sameCategoryEntityCount = 0;
+                      entityForTransientVariantReset.sameVariantEntityCount = 0;
+                      routedAttachedEntity.remainingLifetimeTicks = 50;
+                      bh.field_c.addLast(-100, routedAttachedEntity);
+                      routedAttachedEntity.animationFrameIndex = 0;
+                      if (routedAttachedEntity.touchesAvatar) {
                         if (w.avatarShockPending) {
                           L49: {
-                            stackIn_88_0 = (int)candidateEntity.positionY;
+                            stackIn_88_0 = (int)routedAttachedEntity.positionY;
 
-                            stackIn_88_1 = (int)candidateEntity.positionX;
+                            stackIn_88_1 = (int)routedAttachedEntity.positionX;
 
                             stackIn_88_2 = 117;
 
-                            if (candidateEntity.entitySpriteKindId != 4) {
+                            if (routedAttachedEntity.entitySpriteKindId != 4) {
 
 
 
 
 
 
-                              if (candidateEntity.entitySpriteKindId != 3) {
+                              if (routedAttachedEntity.entitySpriteKindId != 3) {
                                 stackIn_90_0 = stackIn_88_0;
                                 stackIn_90_1 = stackIn_88_1;
                                 stackIn_90_2 = stackIn_88_2;
@@ -596,43 +596,43 @@ final class kc {
                           ld.spawnPointsPopup(stackIn_90_0, stackIn_90_1, stackIn_90_2, stackIn_90_3);
                         }
                       }
-                      if (4 != candidateEntity.entitySpriteKindId) {
-                        candidateEntity.configureEntitySprite(320, candidateEntity.entityCategoryKey, candidateEntity.spriteVariantIndex, 5);
-                        if (var9 == 0) {
+                      if (4 != routedAttachedEntity.entitySpriteKindId) {
+                        routedAttachedEntity.configureEntitySprite(320, routedAttachedEntity.entityCategoryKey, routedAttachedEntity.spriteVariantIndex, 5);
+                        if (clientControlSnapshot == 0) {
                           break L41;
                         }
                       }
-                      candidateEntity.configureEntitySprite(320, candidateEntity.entityCategoryKey, candidateEntity.spriteVariantIndex, 7);
-                      entityIndexThenGroupCount++;
+                      routedAttachedEntity.configureEntitySprite(320, routedAttachedEntity.entityCategoryKey, routedAttachedEntity.spriteVariantIndex, 7);
+                      visitedResetIndexThenKindFourCount++;
                       rb.field_b = rb.field_b + 1;
                       break L41;
                     }
-                    candidateEntity.entityQueue = null;
+                    routedAttachedEntity.entityQueue = null;
                   }
                   el.gameplaySession.boardRasterDirty = true;
                 }
-                candidateEntity = (GameplayEntity) ((Object) a.attachedEntities.nextForIteration(1));
-                if (var9 == 0) {
+                routedAttachedEntity = (GameplayEntity) ((Object) a.attachedEntities.nextForIteration(1));
+                if (clientControlSnapshot == 0) {
                   continue L36;
                 }
                 break;
               }
-              var2 = -23 / ((param0 - 69) / 46);
-              queuedEntity = (GameplayEntity) ((Object) bh.field_c.firstForIteration(0));
+              methodGuardResidue = -23 / ((methodGuard - 69) / 46);
+              categoryResetThenTransientEntity = (GameplayEntity) ((Object) bh.field_c.firstForIteration(0));
               L52: while (true) {
                 L53: {
-                  if (queuedEntity != null) {
-                    if (var9 != 0) {
+                  if (categoryResetThenTransientEntity != null) {
+                    if (clientControlSnapshot != 0) {
                       break L53;
                     } else {
-                      if (ra.availableEntities == queuedEntity.entityQueue) {
-                        queuedEntity.unlinkNode(false);
-                        queuedEntity.unlinkSecondaryNode((byte) 51);
-                        ra.availableEntities.addLast(-44, queuedEntity);
-                        queuedEntity.entityQueue = null;
+                      if (ra.availableEntities == categoryResetThenTransientEntity.entityQueue) {
+                        categoryResetThenTransientEntity.unlinkNode(false);
+                        categoryResetThenTransientEntity.unlinkSecondaryNode((byte) 51);
+                        ra.availableEntities.addLast(-44, categoryResetThenTransientEntity);
+                        categoryResetThenTransientEntity.entityQueue = null;
                       }
-                      queuedEntity = (GameplayEntity) ((Object) bh.field_c.nextForIteration(1));
-                      if (var9 == 0) {
+                      categoryResetThenTransientEntity = (GameplayEntity) ((Object) bh.field_c.nextForIteration(1));
+                      if (clientControlSnapshot == 0) {
                         continue L52;
                       }
                     }
@@ -643,29 +643,29 @@ final class kc {
                   }
                 }
                 L56: {
-                  stackIn_110_0 = el.gameplaySession;
+                  sessionForRasterRead = el.gameplaySession;
 
                   if (!el.gameplaySession.boardRasterDirty) {
-                    stackIn_110_0 = (GameplaySession) ((Object) stackIn_110_0);
+                    sessionForRasterRead = (GameplaySession) ((Object) sessionForRasterRead);
 
                     if (!ab.boardContactStateDirty) {
 
 
                       if (!w.avatarShockPending) {
-                        stackIn_112_0 = (GameplaySession) ((Object) stackIn_110_0);
-                        stackIn_112_1 = 0;
+                        sessionForRasterWrite = (GameplaySession) ((Object) sessionForRasterRead);
+                        rasterDirtyDecision = 0;
                         break L56;
                       } else {
-                        stackIn_110_0 = (GameplaySession) ((Object) stackIn_110_0);
+                        sessionForRasterRead = (GameplaySession) ((Object) sessionForRasterRead);
                       }
                     }
                   }
-                  stackIn_112_0 = (GameplaySession) ((Object) stackIn_110_0);
-                  stackIn_112_1 = 1;
+                  sessionForRasterWrite = (GameplaySession) ((Object) sessionForRasterRead);
+                  rasterDirtyDecision = 1;
                 }
-                stackIn_112_0.boardRasterDirty = stackIn_112_1 != 0;
+                sessionForRasterWrite.boardRasterDirty = rasterDirtyDecision != 0;
                 w.avatarShockPending = false;
-                if (entityIndexThenGroupCount >= 3) {
+                if (visitedResetIndexThenKindFourCount >= 3) {
                   ra.a(255 ^ fe.field_f, -88, fe.field_f);
                 }
                 if (rb.field_b >= 5) {
@@ -678,7 +678,7 @@ final class kc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1_ref), "kc.C(" + param0 + ')');
+          throw t.a((Throwable) ((Object) var1_ref), "kc.C(" + methodGuard + ')');
         }
     }
 

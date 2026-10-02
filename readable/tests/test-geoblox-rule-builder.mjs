@@ -31,7 +31,7 @@ function fixture(change, check = true) {
 }
 
 test('one current manifest reproduces all guarded rules using Git history', () => {
-  assert.equal(JSON.parse(fixture().stdout).rules, 1074);
+  assert.equal(JSON.parse(fixture().stdout).rules, 1097);
 });
 test('previous Git objects and their hash cannot change silently', () => {
   for (const change of [
@@ -46,16 +46,22 @@ test('retained names, evidence and original spelling need explicit changes', () 
     assert.throws(() => fixture(data => { data.renames[0][key] = 'Different'; }), /without an explicit naming change/);
   assert.throws(() => fixture(data => { data.renames.pop(); }), /without an explicit naming change/);
 });
-test('explicit additions are checked against their complete previous identity', () => {
+test('explicit additions and replacements check their complete previous identity', () => {
   const add = data => {
     const rule = {symbol: 'L:ul.b(I)V#21', originalName: 'var1', to: 'caughtRuntimeException', evidence: 'Fixture addition'};
     data.renames.push(rule); data.publication.ruleChanges.push({symbol: rule.symbol, before: null, after: rule});
   };
-  assert.equal(JSON.parse(fixture(add, false).stdout).rules, 1075);
+  assert.equal(JSON.parse(fixture(add, false).stdout).rules, 1098);
   assert.throws(() => fixture(data => { add(data); data.publication.ruleChanges[0].before = {}; }),
     /differs from the previous guarded identity/);
   assert.throws(() => fixture(data => { add(data); data.publication.ruleChanges.push(data.publication.ruleChanges[0]); }),
     /Invalid explicit naming changes/);
+  for (const originalName of ['wrong', null])
+    assert.throws(() => fixture(data => {
+      const change=data.publication.ruleChanges.find(item=>item.before!==null);
+      if(originalName===null)change.before=null;
+      else change.before.originalName=originalName;
+    }), /differs from the previous guarded identity/);
 });
 test('spelling guards, unique symbols and deterministic order remain mandatory', () => {
   assert.throws(() => fixture(data => { delete data.renames[0].originalName; }), /Incomplete guarded naming rule/);

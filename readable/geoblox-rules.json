@@ -3677,6 +3677,54 @@
       "evidence": "Result of menu hit test, used for selection and pointer dispatch."
     },
     {
+      "symbol": "L:kc.b(I)V#0",
+      "originalName": "stackIn_12_0",
+      "to": "entityQueueThenAttachedQueue",
+      "evidence": "Initially carries the moving entity queue marker; before rebuilding connectivity it is reused for the attached-entity deque."
+    },
+    {
+      "symbol": "L:kc.b(I)V#1",
+      "originalName": "stackIn_15_0",
+      "to": "alreadyVisited",
+      "evidence": "Boolean carrier of connectivityVisitedByEntityId for the current attached entity."
+    },
+    {
+      "symbol": "L:kc.b(I)V#15",
+      "originalName": "stackIn_110_0",
+      "to": "sessionForRasterRead",
+      "evidence": "Carries the gameplay session while combining its existing boardRasterDirty state with contact and shock flags."
+    },
+    {
+      "symbol": "L:kc.b(I)V#16",
+      "originalName": "stackIn_112_0",
+      "to": "sessionForRasterWrite",
+      "evidence": "Carries the gameplay session receiving the final raster-dirty decision."
+    },
+    {
+      "symbol": "L:kc.b(I)V#17",
+      "originalName": "stackIn_112_1",
+      "to": "rasterDirtyDecision",
+      "evidence": "Integer Boolean carrier for old boardRasterDirty OR boardContactStateDirty OR avatarShockPending; native reconciliation probes independently check the first two gates."
+    },
+    {
+      "symbol": "L:kc.b(I)V#19",
+      "originalName": "stackOut_14_0",
+      "to": "visitedByEntityIdValue",
+      "evidence": "Boolean transport of the current entity visited-array entry into the retained source branch carriers."
+    },
+    {
+      "symbol": "L:kc.b(I)V#2",
+      "originalName": "stackIn_20_0",
+      "to": "poppedEntityOrSearchStart",
+      "evidence": "Carries a pending connectivity pop, then a first entity from visitedNonAvatarEntities while searching for an existing neighbor."
+    },
+    {
+      "symbol": "L:kc.b(I)V#20",
+      "originalName": "stackOut_21_0",
+      "to": "directAvatarContactValue",
+      "evidence": "Boolean transport of the popped entity touchesAvatar flag; a true root stops the normal component search."
+    },
+    {
       "symbol": "L:kc.b(I)V#21",
       "originalName": "var1",
       "to": "activeEntity",
@@ -3685,14 +3733,20 @@
     {
       "symbol": "L:kc.b(I)V#22",
       "originalName": "var1_int",
-      "to": "entityIndexThenGroupCount",
-      "evidence": "kc.java first uses var1_int to clear pk.field_o entries across the 1000 entity slots, then resets it and counts processed entity groups."
+      "to": "visitedResetIndexThenKindFourCount",
+      "evidence": "First clears visited-array entries 0 through 999. Later resets to zero and counts transient/shock-routed kind-four entities changed to kind seven; it does not count connected components."
     },
     {
       "symbol": "L:kc.b(I)V#24",
       "originalName": "var2_ref_ja",
-      "to": "candidateEntity",
-      "evidence": "kc.java traverses a.field_d for this ja entity, rotates it against el.field_o.field_J, detaches related children and routes it to a processing list."
+      "to": "routedAttachedEntity",
+      "evidence": "Walks the attached deque to process queue-marker or shock routing, including transfer into moving entities after component detachment. Native component fixtures verify this moving route."
+    },
+    {
+      "symbol": "L:kc.b(I)V#25",
+      "originalName": "var2",
+      "to": "methodGuardResidue",
+      "evidence": "Retains the unused integer division derived from the method guard before the transient queue pass; normal caller supplies -90."
     },
     {
       "symbol": "L:kc.b(I)V#26",
@@ -3701,10 +3755,28 @@
       "evidence": "kc.java computes 320-var2_ref_ja.field_o and normalizes it by the radius together with var4_float before assigning field_w."
     },
     {
+      "symbol": "L:kc.b(I)V#27",
+      "originalName": "var3_int",
+      "to": "transientNeighborIndex",
+      "evidence": "Walks related entities while clearing a transient/shock entity reciprocal contacts and refreshing neighbor ownership-mask pixels. This routing branch is source-backed; graph fixtures leave shock/transient requests off."
+    },
+    {
       "symbol": "L:kc.b(I)V#28",
       "originalName": "var3",
-      "to": "queuedEntity",
-      "evidence": "kc.java iterates bh.field_c through ja elements, removes each from that list and may reinsert it into ra.field_a."
+      "to": "categoryResetThenTransientEntity",
+      "evidence": "Aliases the routed entity while resetting its same-category count, then walks the transient queue to return queued objects to the available pool. These routing roles are source-backed."
+    },
+    {
+      "symbol": "L:kc.b(I)V#29",
+      "originalName": "var4_int",
+      "to": "componentCanDetach",
+      "evidence": "Starts true for each unvisited attached root and becomes false when the search reaches direct avatar contact; independent native graph/anchor oracles verify component retention."
+    },
+    {
+      "symbol": "L:kc.b(I)V#3",
+      "originalName": "stackIn_22_0",
+      "to": "poppedEntityTouchesAvatar",
+      "evidence": "Boolean carrier of direct avatar contact for the popped connectivity entity."
     },
     {
       "symbol": "L:kc.b(I)V#30",
@@ -3713,10 +3785,16 @@
       "evidence": "kc.java computes 240-var2_ref_ja.field_v and normalizes it with var3_float before assigning field_F."
     },
     {
+      "symbol": "L:kc.b(I)V#31",
+      "originalName": "var4",
+      "to": "entityForTransientVariantReset",
+      "evidence": "Alias used only to zero the transient/shock entity same-variant count after removing its related contacts; source-backed transient branch."
+    },
+    {
       "symbol": "L:kc.b(I)V#32",
       "originalName": "var5_ref_ja",
-      "to": "groupEntity",
-      "evidence": "kc.java obtains this ja from the temporary var13 list, iterates/removes its children and resets its child counters before continuing the outer entity-group walk."
+      "to": "connectivityAliasThenDetachingEntity",
+      "evidence": "Initially aliases the popped connectivity entity; later receives entities removed from visitedNonAvatarEntities for reciprocal unlinking and count resets."
     },
     {
       "symbol": "L:kc.b(I)V#33",
@@ -3727,8 +3805,20 @@
     {
       "symbol": "L:kc.b(I)V#34",
       "originalName": "var6_int",
-      "to": "childEntityIndex",
-      "evidence": "kc.java initializes var6_int to zero and increments it while iterating var12.field_n up to var12.field_L."
+      "to": "componentNeighborIndex",
+      "evidence": "Walks related entities during connectivity discovery and reciprocal removal during group detachment. The contact graph is undirected, so this is a neighbor index rather than a child relationship."
+    },
+    {
+      "symbol": "L:kc.b(I)V#35",
+      "originalName": "var6",
+      "to": "entityForComponentCategoryReset",
+      "evidence": "Alias of the detaching visited entity used to reset its same-category neighbor count."
+    },
+    {
+      "symbol": "L:kc.b(I)V#36",
+      "originalName": "var7",
+      "to": "neighborThenCountResetEntity",
+      "evidence": "Initially the candidate neighbor for worklist duplicate checks; later aliases a detaching entity while resetting variant or category counts in different phases."
     },
     {
       "symbol": "L:kc.b(I)V#37",
@@ -3739,20 +3829,62 @@
     {
       "symbol": "L:kc.b(I)V#38",
       "originalName": "var8",
-      "to": "relatedEntityCandidate",
-      "evidence": "kc.java obtains var8 from the temporary ja collection and compares it by identity against each parent child before list removal."
+      "to": "componentSearchThenVariantResetEntity",
+      "evidence": "Scans both visited and pending secondary deques for the current neighbor; later aliases the routed moving entity for same-variant count reset."
+    },
+    {
+      "symbol": "L:kc.b(I)V#39",
+      "originalName": "var9",
+      "to": "clientControlSnapshot",
+      "evidence": "Snapshot of Geoblox.field_C controlling the retained alternate branches; native traces compare values zero and one, with independent component oracles for zero."
+    },
+    {
+      "symbol": "L:kc.b(I)V#4",
+      "originalName": "stackIn_44_0",
+      "to": "avatarContactThenDetachDecision",
+      "evidence": "Initially carries direct avatar contact as an integer Boolean; the shared exit replaces it with componentCanDetach on the normal path."
     },
     {
       "symbol": "L:kc.b(I)V#40",
       "originalName": "var10",
-      "to": "entityCandidate",
-      "evidence": "kc.java assigns the ja returned by var11.a(true), tests its category slot and field_t flag, and processes it in the nested-group pass."
+      "to": "currentConnectivityEntity",
+      "evidence": "Entity popped from pendingConnectivityEntities, used to mark its ID visited and read its neighbor array; does not designate a proposed parent."
+    },
+    {
+      "symbol": "L:kc.b(I)V#41",
+      "originalName": "var11",
+      "to": "pendingConnectivityEntities",
+      "evidence": "Secondary deque of entities awaiting connectivity traversal, checked for duplicate neighbor membership before insertion."
     },
     {
       "symbol": "L:kc.b(I)V#42",
       "originalName": "var12",
-      "to": "parentEntity",
-      "evidence": "kc.java traverses the children of var12.field_L, removes its related entities and resets its category counts before relinking it."
+      "to": "currentConnectivityEntityAlias",
+      "evidence": "Alias of currentConnectivityEntity used to inspect avatar contact and related count, then inserted into visitedNonAvatarEntities. No parent/child graph relationship is implied."
+    },
+    {
+      "symbol": "L:kc.b(I)V#43",
+      "originalName": "var13",
+      "to": "visitedNonAvatarEntities",
+      "evidence": "Secondary deque collecting popped non-avatar entities. An avatar root stops the traversal before insertion, so this collection can be only a prefix of an anchored component."
+    },
+    {
+      "symbol": "L:kc.b(I)V#5",
+      "originalName": "stackIn_51_0",
+      "to": "comparedThenUnlinkTarget",
+      "evidence": "Carries the entity compared during worklist duplicate checks; reused as the neighbor whose reciprocal contact is removed during detachment."
+    },
+    {
+      "symbol": "L:kc.b(I)V#6",
+      "originalName": "stackIn_51_1",
+      "to": "neighborThenUnlinkArgument",
+      "evidence": "Carries the neighbor identity for duplicate checks; reused as the detaching entity passed to removeRelatedEntity."
+    },
+    {
+      "symbol": "L:kc.b(I)V#7",
+      "originalName": "stackIn_56_0",
+      "to": "visitedFlagThenResetIndex",
+      "evidence": "Initially carries the visited flag as an integer; reset to zero for neighbor cleanup or the visited-array reset index."
     },
     {
       "symbol": "L:ld.a(I)Z#21",
@@ -5939,6 +6071,12 @@
       "originalName": "param0"
     },
     {
+      "symbol": "P:kc.b(I)V#0",
+      "originalName": "param0",
+      "to": "methodGuard",
+      "evidence": "Retained guard used in the arithmetic residue and exception context. The normal GameplaySession caller passes -90; native graph probe uses that same value."
+    },
+    {
       "symbol": "P:kl.a(Lgd;II)Lkl;#0",
       "to": "sample",
       "originalName": "param0",
@@ -6456,7 +6594,7 @@
     }
   ],
   "revision": 4,
-  "version": 23,
+  "version": 24,
   "generators": {
     "dekoblokoWork": {
       "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
@@ -6476,429 +6614,359 @@
   "publication": {
     "format": 1,
     "previousRules": {
-      "commit": "8310d16b73022fc3542bd8ae9df88bdb287559d2",
+      "commit": "39ab1b60fcaa3a70e15401d1333d07f2bc2c35d5",
       "path": "readable/geoblox-rules.json",
-      "sha256": "5ecd55f2867f628f41188c9639f8f72f78f029fe65c1dcafd3e95c039b4eafee"
+      "sha256": "bd536278bd84875314a2cd1681cf300367c732c6f0f16893c2bcfabacfc243e0"
     },
     "ruleChanges": [
       {
-        "symbol": "C:wd",
+        "symbol": "L:kc.b(I)V#0",
         "before": null,
         "after": {
-          "symbol": "C:wd",
-          "originalName": "wd",
-          "to": "SecondaryDeque",
-          "evidence": "Instance API is a circular intrusive deque using rc secondary links; native model-based operations preserve the independent primary links. Unrelated static helpers remain on the same class."
+          "symbol": "L:kc.b(I)V#0",
+          "originalName": "stackIn_12_0",
+          "to": "entityQueueThenAttachedQueue",
+          "evidence": "Initially carries the moving entity queue marker; before rebuilding connectivity it is reused for the attached-entity deque."
         }
       },
       {
-        "symbol": "F:wd.field_c:Lrc;",
+        "symbol": "L:kc.b(I)V#1",
         "before": null,
         "after": {
-          "symbol": "F:wd.field_c:Lrc;",
-          "originalName": "field_c",
-          "to": "iterationCursor",
-          "evidence": "First iteration saves the following secondary node; next iteration returns this cursor and advances it to the next secondary link."
+          "symbol": "L:kc.b(I)V#1",
+          "originalName": "stackIn_15_0",
+          "to": "alreadyVisited",
+          "evidence": "Boolean carrier of connectivityVisitedByEntityId for the current attached entity."
         }
       },
       {
-        "symbol": "F:wd.field_g:Lrc;",
+        "symbol": "L:kc.b(I)V#15",
         "before": null,
         "after": {
-          "symbol": "F:wd.field_g:Lrc;",
-          "originalName": "field_g",
-          "to": "sentinel",
-          "evidence": "Constructor self-links this secondary-node sentinel; traversal and removal compare against its identity."
+          "symbol": "L:kc.b(I)V#15",
+          "originalName": "stackIn_110_0",
+          "to": "sessionForRasterRead",
+          "evidence": "Carries the gameplay session while combining its existing boardRasterDirty state with contact and shock flags."
         }
       },
       {
-        "symbol": "L:bh.a(ZLja;ILja;Z)V#0",
+        "symbol": "L:kc.b(I)V#16",
         "before": null,
         "after": {
-          "symbol": "L:bh.a(ZLja;ILja;Z)V#0",
-          "originalName": "dupTemp$0",
-          "to": "poppedEntity",
-          "evidence": "Carrier of the pending deque removeFirst result assigned to currentEntity."
+          "symbol": "L:kc.b(I)V#16",
+          "originalName": "stackIn_112_0",
+          "to": "sessionForRasterWrite",
+          "evidence": "Carries the gameplay session receiving the final raster-dirty decision."
         }
       },
       {
-        "symbol": "L:bh.a(ZLja;ILja;Z)V#1",
+        "symbol": "L:kc.b(I)V#17",
         "before": null,
         "after": {
-          "symbol": "L:bh.a(ZLja;ILja;Z)V#1",
-          "originalName": "dupTemp$1",
-          "to": "neighborForVariantIncrement",
-          "evidence": "Related entity alias used to increment its same-variant count."
+          "symbol": "L:kc.b(I)V#17",
+          "originalName": "stackIn_112_1",
+          "to": "rasterDirtyDecision",
+          "evidence": "Integer Boolean carrier for old boardRasterDirty OR boardContactStateDirty OR avatarShockPending; native reconciliation probes independently check the first two gates."
         }
       },
       {
-        "symbol": "L:bh.a(ZLja;ILja;Z)V#15",
+        "symbol": "L:kc.b(I)V#19",
         "before": null,
         "after": {
-          "symbol": "L:bh.a(ZLja;ILja;Z)V#15",
-          "originalName": "var6",
-          "to": "processedEntities",
-          "evidence": "Secondary deque holding processed entities; the comparison scans for currentEntity, not the neighbor."
+          "symbol": "L:kc.b(I)V#19",
+          "originalName": "stackOut_14_0",
+          "to": "visitedByEntityIdValue",
+          "evidence": "Boolean transport of the current entity visited-array entry into the retained source branch carriers."
         }
       },
       {
-        "symbol": "L:bh.a(ZLja;ILja;Z)V#16",
+        "symbol": "L:kc.b(I)V#2",
         "before": null,
         "after": {
-          "symbol": "L:bh.a(ZLja;ILja;Z)V#16",
-          "originalName": "var7",
-          "to": "templateVariantIndex",
-          "evidence": "Snapshot of the template variant before the pending traversal begins."
+          "symbol": "L:kc.b(I)V#2",
+          "originalName": "stackIn_20_0",
+          "to": "poppedEntityOrSearchStart",
+          "evidence": "Carries a pending connectivity pop, then a first entity from visitedNonAvatarEntities while searching for an existing neighbor."
         }
       },
       {
-        "symbol": "L:bh.a(ZLja;ILja;Z)V#17",
+        "symbol": "L:kc.b(I)V#20",
         "before": null,
         "after": {
-          "symbol": "L:bh.a(ZLja;ILja;Z)V#17",
-          "originalName": "var8",
-          "to": "templateSpriteKindId",
-          "evidence": "Snapshot of the template sprite kind before the pending traversal begins."
+          "symbol": "L:kc.b(I)V#20",
+          "originalName": "stackOut_21_0",
+          "to": "directAvatarContactValue",
+          "evidence": "Boolean transport of the popped entity touchesAvatar flag; a true root stops the normal component search."
         }
       },
       {
-        "symbol": "L:bh.a(ZLja;ILja;Z)V#18",
-        "before": null,
+        "symbol": "L:kc.b(I)V#22",
+        "before": {
+          "symbol": "L:kc.b(I)V#22",
+          "originalName": "var1_int",
+          "to": "entityIndexThenGroupCount",
+          "evidence": "kc.java first uses var1_int to clear pk.field_o entries across the 1000 entity slots, then resets it and counts processed entity groups."
+        },
         "after": {
-          "symbol": "L:bh.a(ZLja;ILja;Z)V#18",
-          "originalName": "var9",
-          "to": "templateCategoryKey",
-          "evidence": "Snapshot of the template category before the pending traversal begins."
+          "symbol": "L:kc.b(I)V#22",
+          "originalName": "var1_int",
+          "to": "visitedResetIndexThenKindFourCount",
+          "evidence": "First clears visited-array entries 0 through 999. Later resets to zero and counts transient/shock-routed kind-four entities changed to kind seven; it does not count connected components."
         }
       },
       {
-        "symbol": "L:bh.a(ZLja;ILja;Z)V#19",
-        "before": null,
+        "symbol": "L:kc.b(I)V#24",
+        "before": {
+          "symbol": "L:kc.b(I)V#24",
+          "originalName": "var2_ref_ja",
+          "to": "candidateEntity",
+          "evidence": "kc.java traverses a.field_d for this ja entity, rotates it against el.field_o.field_J, detaches related children and routes it to a processing list."
+        },
         "after": {
-          "symbol": "L:bh.a(ZLja;ILja;Z)V#19",
-          "originalName": "var10",
-          "to": "currentEntity",
-          "evidence": "Entity popped from the pending secondary deque, converted and then inserted into processedEntities."
+          "symbol": "L:kc.b(I)V#24",
+          "originalName": "var2_ref_ja",
+          "to": "routedAttachedEntity",
+          "evidence": "Walks the attached deque to process queue-marker or shock routing, including transfer into moving entities after component detachment. Native component fixtures verify this moving route."
         }
       },
       {
-        "symbol": "L:bh.a(ZLja;ILja;Z)V#2",
+        "symbol": "L:kc.b(I)V#25",
         "before": null,
         "after": {
-          "symbol": "L:bh.a(ZLja;ILja;Z)V#2",
-          "originalName": "dupTemp$2",
-          "to": "neighborForCategoryIncrement",
-          "evidence": "Related entity alias used to increment its same-category count."
-        }
-      },
-      {
-        "symbol": "L:bh.a(ZLja;ILja;Z)V#20",
-        "before": null,
-        "after": {
-          "symbol": "L:bh.a(ZLja;ILja;Z)V#20",
-          "originalName": "var11",
-          "to": "neighborIndex",
-          "evidence": "Walks currentEntity related entities and schedules eligible kinds for conversion."
-        }
-      },
-      {
-        "symbol": "L:bh.a(ZLja;ILja;Z)V#21",
-        "before": null,
-        "after": {
-          "symbol": "L:bh.a(ZLja;ILja;Z)V#21",
-          "originalName": "var12",
-          "to": "processedEntityToCompare",
-          "evidence": "Scans processedEntities comparing currentEntity identity; does not identify a visited neighbor."
-        }
-      },
-      {
-        "symbol": "L:bh.a(ZLja;ILja;Z)V#23",
-        "before": null,
-        "after": {
-          "symbol": "L:bh.a(ZLja;ILja;Z)V#23",
-          "originalName": "var14",
-          "to": "pendingEntities",
-          "evidence": "Secondary deque receiving eligible neighbors at the front, with automatic removal of their previous secondary membership."
-        }
-      },
-      {
-        "symbol": "L:bh.a(ZLja;ILja;Z)V#24",
-        "before": null,
-        "after": {
-          "symbol": "L:bh.a(ZLja;ILja;Z)V#24",
-          "originalName": "var15",
-          "to": "pendingEntitiesForRemoval",
-          "evidence": "Alias of pendingEntities used to remove the first entity on each traversal iteration."
-        }
-      },
-      {
-        "symbol": "L:bh.a(ZLja;ILja;Z)V#3",
-        "before": null,
-        "after": {
-          "symbol": "L:bh.a(ZLja;ILja;Z)V#3",
-          "originalName": "stackIn_31_0",
-          "to": "neighborVariantWriteTarget",
-          "evidence": "Carrier for the neighbor receiving the variant-count increment."
-        }
-      },
-      {
-        "symbol": "L:bh.a(ZLja;ILja;Z)V#4",
-        "before": null,
-        "after": {
-          "symbol": "L:bh.a(ZLja;ILja;Z)V#4",
-          "originalName": "stackIn_31_1",
-          "to": "neighborVariantReadSource",
-          "evidence": "Carrier for the same neighbor supplying the previous variant count."
-        }
-      },
-      {
-        "symbol": "L:wd.a(I)Lrc;#1",
-        "before": null,
-        "after": {
-          "symbol": "L:wd.a(I)Lrc;#1",
+          "symbol": "L:kc.b(I)V#25",
           "originalName": "var2",
-          "to": "iterationNode",
-          "evidence": "Secondary deque traversal/removal role supported by sentinel/link inspection and native model-based identity/order/count checks."
+          "to": "methodGuardResidue",
+          "evidence": "Retains the unused integer division derived from the method guard before the transient queue pass; normal caller supplies -90."
         }
       },
       {
-        "symbol": "L:wd.a(Z)Lrc;#0",
+        "symbol": "L:kc.b(I)V#27",
         "before": null,
         "after": {
-          "symbol": "L:wd.a(Z)Lrc;#0",
-          "originalName": "var2",
-          "to": "firstNode",
-          "evidence": "Secondary deque traversal/removal role supported by sentinel/link inspection and native model-based identity/order/count checks."
+          "symbol": "L:kc.b(I)V#27",
+          "originalName": "var3_int",
+          "to": "transientNeighborIndex",
+          "evidence": "Walks related entities while clearing a transient/shock entity reciprocal contacts and refreshing neighbor ownership-mask pixels. This routing branch is source-backed; graph fixtures leave shock/transient requests off."
         }
       },
       {
-        "symbol": "L:wd.b(B)I#0",
-        "before": null,
-        "after": {
-          "symbol": "L:wd.b(B)I#0",
+        "symbol": "L:kc.b(I)V#28",
+        "before": {
+          "symbol": "L:kc.b(I)V#28",
           "originalName": "var3",
-          "to": "nodeToCount",
-          "evidence": "Secondary deque traversal/removal role supported by sentinel/link inspection and native model-based identity/order/count checks."
+          "to": "queuedEntity",
+          "evidence": "kc.java iterates bh.field_c through ja elements, removes each from that list and may reinsert it into ra.field_a."
+        },
+        "after": {
+          "symbol": "L:kc.b(I)V#28",
+          "originalName": "var3",
+          "to": "categoryResetThenTransientEntity",
+          "evidence": "Aliases the routed entity while resetting its same-category count, then walks the transient queue to return queued objects to the available pool. These routing roles are source-backed."
         }
       },
       {
-        "symbol": "L:wd.b(B)I#2",
+        "symbol": "L:kc.b(I)V#29",
         "before": null,
         "after": {
-          "symbol": "L:wd.b(B)I#2",
-          "originalName": "var2",
-          "to": "nodeCount",
-          "evidence": "Secondary deque traversal/removal role supported by sentinel/link inspection and native model-based identity/order/count checks."
+          "symbol": "L:kc.b(I)V#29",
+          "originalName": "var4_int",
+          "to": "componentCanDetach",
+          "evidence": "Starts true for each unvisited attached root and becomes false when the search reaches direct avatar contact; independent native graph/anchor oracles verify component retention."
         }
       },
       {
-        "symbol": "L:wd.c(B)Lrc;#0",
+        "symbol": "L:kc.b(I)V#3",
         "before": null,
         "after": {
-          "symbol": "L:wd.c(B)Lrc;#0",
-          "originalName": "var2",
-          "to": "firstNode",
-          "evidence": "Secondary deque traversal/removal role supported by sentinel/link inspection and native model-based identity/order/count checks."
+          "symbol": "L:kc.b(I)V#3",
+          "originalName": "stackIn_22_0",
+          "to": "poppedEntityTouchesAvatar",
+          "evidence": "Boolean carrier of direct avatar contact for the popped connectivity entity."
         }
       },
       {
-        "symbol": "M:bh.a(ZLja;ILja;Z)V",
+        "symbol": "L:kc.b(I)V#31",
         "before": null,
         "after": {
-          "symbol": "M:bh.a(ZLja;ILja;Z)V",
-          "originalName": "a",
-          "to": "propagateContactConversion",
-          "evidence": "Copies template variant and/or category/kind through eligible related entities using pending and processed secondary deques. Native checks cover all 64 undirected four-entity graphs with both roots, keys and client guards, including wrapped partial-write failures."
+          "symbol": "L:kc.b(I)V#31",
+          "originalName": "var4",
+          "to": "entityForTransientVariantReset",
+          "evidence": "Alias used only to zero the transient/shock entity same-variant count after removing its related contacts; source-backed transient branch."
         }
       },
       {
-        "symbol": "M:wd.a(I)Lrc;",
-        "before": null,
+        "symbol": "L:kc.b(I)V#32",
+        "before": {
+          "symbol": "L:kc.b(I)V#32",
+          "originalName": "var5_ref_ja",
+          "to": "groupEntity",
+          "evidence": "kc.java obtains this ja from the temporary var13 list, iterates/removes its children and resets its child counters before continuing the outer entity-group walk."
+        },
         "after": {
-          "symbol": "M:wd.a(I)Lrc;",
-          "originalName": "a",
-          "to": "nextForIteration",
-          "evidence": "Returns and advances the cursor until reaching the sentinel; guard -59 used by conversion. Native model checks identity, order, reciprocity, transfers and primary-link independence."
+          "symbol": "L:kc.b(I)V#32",
+          "originalName": "var5_ref_ja",
+          "to": "connectivityAliasThenDetachingEntity",
+          "evidence": "Initially aliases the popped connectivity entity; later receives entities removed from visitedNonAvatarEntities for reciprocal unlinking and count resets."
         }
       },
       {
-        "symbol": "M:wd.a(ILrc;)V",
-        "before": null,
+        "symbol": "L:kc.b(I)V#34",
+        "before": {
+          "symbol": "L:kc.b(I)V#34",
+          "originalName": "var6_int",
+          "to": "childEntityIndex",
+          "evidence": "kc.java initializes var6_int to zero and increments it while iterating var12.field_n up to var12.field_L."
+        },
         "after": {
-          "symbol": "M:wd.a(ILrc;)V",
-          "originalName": "a",
-          "to": "addLast",
-          "evidence": "Unlinks existing secondary membership, then inserts between the final node and the sentinel; normal guard -45. Native model checks identity, order, reciprocity, transfers and primary-link independence."
+          "symbol": "L:kc.b(I)V#34",
+          "originalName": "var6_int",
+          "to": "componentNeighborIndex",
+          "evidence": "Walks related entities during connectivity discovery and reciprocal removal during group detachment. The contact graph is undirected, so this is a neighbor index rather than a child relationship."
         }
       },
       {
-        "symbol": "M:wd.a(Lrc;Z)V",
+        "symbol": "L:kc.b(I)V#35",
         "before": null,
         "after": {
-          "symbol": "M:wd.a(Lrc;Z)V",
-          "originalName": "a",
-          "to": "addFirst",
-          "evidence": "Unlinks existing secondary membership, then inserts between the sentinel and its first secondary node with guard false. Native model checks identity, order, reciprocity, transfers and primary-link independence."
+          "symbol": "L:kc.b(I)V#35",
+          "originalName": "var6",
+          "to": "entityForComponentCategoryReset",
+          "evidence": "Alias of the detaching visited entity used to reset its same-category neighbor count."
         }
       },
       {
-        "symbol": "M:wd.a(Z)Lrc;",
+        "symbol": "L:kc.b(I)V#36",
         "before": null,
         "after": {
-          "symbol": "M:wd.a(Z)Lrc;",
-          "originalName": "a",
-          "to": "removeFirst",
-          "evidence": "Unlinks and returns the first secondary node, or null at the sentinel; normal guard true. Native model checks identity, order, reciprocity, transfers and primary-link independence."
+          "symbol": "L:kc.b(I)V#36",
+          "originalName": "var7",
+          "to": "neighborThenCountResetEntity",
+          "evidence": "Initially the candidate neighbor for worklist duplicate checks; later aliases a detaching entity while resetting variant or category counts in different phases."
         }
       },
       {
-        "symbol": "M:wd.b(B)I",
-        "before": null,
+        "symbol": "L:kc.b(I)V#38",
+        "before": {
+          "symbol": "L:kc.b(I)V#38",
+          "originalName": "var8",
+          "to": "relatedEntityCandidate",
+          "evidence": "kc.java obtains var8 from the temporary ja collection and compares it by identity against each parent child before list removal."
+        },
         "after": {
-          "symbol": "M:wd.b(B)I",
-          "originalName": "b",
-          "to": "countNodes",
-          "evidence": "Walks the secondary-next links to the sentinel and counts nodes; normal guard 67. Native model checks identity, order, reciprocity, transfers and primary-link independence."
+          "symbol": "L:kc.b(I)V#38",
+          "originalName": "var8",
+          "to": "componentSearchThenVariantResetEntity",
+          "evidence": "Scans both visited and pending secondary deques for the current neighbor; later aliases the routed moving entity for same-variant count reset."
         }
       },
       {
-        "symbol": "M:wd.c(B)Lrc;",
+        "symbol": "L:kc.b(I)V#39",
         "before": null,
         "after": {
-          "symbol": "M:wd.c(B)Lrc;",
-          "originalName": "c",
-          "to": "firstForIteration",
-          "evidence": "Returns the first secondary node and initializes the cursor, or returns null and clears the cursor; normal guard 121. Native model checks identity, order, reciprocity, transfers and primary-link independence."
+          "symbol": "L:kc.b(I)V#39",
+          "originalName": "var9",
+          "to": "clientControlSnapshot",
+          "evidence": "Snapshot of Geoblox.field_C controlling the retained alternate branches; native traces compare values zero and one, with independent component oracles for zero."
         }
       },
       {
-        "symbol": "P:bh.a(ZLja;ILja;Z)V#0",
+        "symbol": "L:kc.b(I)V#4",
         "before": null,
         "after": {
-          "symbol": "P:bh.a(ZLja;ILja;Z)V#0",
-          "originalName": "param0",
-          "to": "propagateCategoryAndKind",
-          "evidence": "Selects category/kind copies, kind-two detachment before that copy, category-count increments and angle copies while scheduling neighbors."
+          "symbol": "L:kc.b(I)V#4",
+          "originalName": "stackIn_44_0",
+          "to": "avatarContactThenDetachDecision",
+          "evidence": "Initially carries direct avatar contact as an integer Boolean; the shared exit replaces it with componentCanDetach on the normal path."
         }
       },
       {
-        "symbol": "P:bh.a(ZLja;ILja;Z)V#1",
-        "before": null,
+        "symbol": "L:kc.b(I)V#40",
+        "before": {
+          "symbol": "L:kc.b(I)V#40",
+          "originalName": "var10",
+          "to": "entityCandidate",
+          "evidence": "kc.java assigns the ja returned by var11.a(true), tests its category slot and field_t flag, and processes it in the nested-group pass."
+        },
         "after": {
-          "symbol": "P:bh.a(ZLja;ILja;Z)V#1",
-          "originalName": "param1",
-          "to": "templateEntity",
-          "evidence": "Source of copied variant, sprite kind, category and conditional angle."
+          "symbol": "L:kc.b(I)V#40",
+          "originalName": "var10",
+          "to": "currentConnectivityEntity",
+          "evidence": "Entity popped from pendingConnectivityEntities, used to mark its ID visited and read its neighbor array; does not designate a proposed parent."
         }
       },
       {
-        "symbol": "P:bh.a(ZLja;ILja;Z)V#2",
+        "symbol": "L:kc.b(I)V#41",
         "before": null,
         "after": {
-          "symbol": "P:bh.a(ZLja;ILja;Z)V#2",
-          "originalName": "param2",
-          "to": "methodGuard",
-          "evidence": "Normal value 1 supplies configureEntitySprite guard 320 and processed-list iteration guard -59; alternate cleanup branches remain intact."
+          "symbol": "L:kc.b(I)V#41",
+          "originalName": "var11",
+          "to": "pendingConnectivityEntities",
+          "evidence": "Secondary deque of entities awaiting connectivity traversal, checked for duplicate neighbor membership before insertion."
         }
       },
       {
-        "symbol": "P:bh.a(ZLja;ILja;Z)V#3",
-        "before": null,
+        "symbol": "L:kc.b(I)V#42",
+        "before": {
+          "symbol": "L:kc.b(I)V#42",
+          "originalName": "var12",
+          "to": "parentEntity",
+          "evidence": "kc.java traverses the children of var12.field_L, removes its related entities and resets its category counts before relinking it."
+        },
         "after": {
-          "symbol": "P:bh.a(ZLja;ILja;Z)V#3",
-          "originalName": "param3",
-          "to": "startingEntity",
-          "evidence": "Inserted into the pending secondary deque before traversing eligible related entities."
+          "symbol": "L:kc.b(I)V#42",
+          "originalName": "var12",
+          "to": "currentConnectivityEntityAlias",
+          "evidence": "Alias of currentConnectivityEntity used to inspect avatar contact and related count, then inserted into visitedNonAvatarEntities. No parent/child graph relationship is implied."
         }
       },
       {
-        "symbol": "P:bh.a(ZLja;ILja;Z)V#4",
+        "symbol": "L:kc.b(I)V#43",
         "before": null,
         "after": {
-          "symbol": "P:bh.a(ZLja;ILja;Z)V#4",
-          "originalName": "param4",
-          "to": "propagateVariant",
-          "evidence": "Selects variant copy with sprite kind zero, variant-count increments and kind-one neighbor traversal."
+          "symbol": "L:kc.b(I)V#43",
+          "originalName": "var13",
+          "to": "visitedNonAvatarEntities",
+          "evidence": "Secondary deque collecting popped non-avatar entities. An avatar root stops the traversal before insertion, so this collection can be only a prefix of an anchored component."
         }
       },
       {
-        "symbol": "P:wd.a(I)Lrc;#0",
+        "symbol": "L:kc.b(I)V#5",
         "before": null,
         "after": {
-          "symbol": "P:wd.a(I)Lrc;#0",
-          "originalName": "param0",
-          "to": "methodGuard",
-          "evidence": "Retained original method guard; native deque probe uses the normal value and preserves alternate source branches."
+          "symbol": "L:kc.b(I)V#5",
+          "originalName": "stackIn_51_0",
+          "to": "comparedThenUnlinkTarget",
+          "evidence": "Carries the entity compared during worklist duplicate checks; reused as the neighbor whose reciprocal contact is removed during detachment."
         }
       },
       {
-        "symbol": "P:wd.a(ILrc;)V#0",
+        "symbol": "L:kc.b(I)V#6",
         "before": null,
         "after": {
-          "symbol": "P:wd.a(ILrc;)V#0",
-          "originalName": "param0",
-          "to": "methodGuard",
-          "evidence": "Retained original method guard; native deque probe uses the normal value and preserves alternate source branches."
+          "symbol": "L:kc.b(I)V#6",
+          "originalName": "stackIn_51_1",
+          "to": "neighborThenUnlinkArgument",
+          "evidence": "Carries the neighbor identity for duplicate checks; reused as the detaching entity passed to removeRelatedEntity."
         }
       },
       {
-        "symbol": "P:wd.a(ILrc;)V#1",
+        "symbol": "L:kc.b(I)V#7",
         "before": null,
         "after": {
-          "symbol": "P:wd.a(ILrc;)V#1",
-          "originalName": "param1",
-          "to": "node",
-          "evidence": "Inserted secondary node, transferred safely from previous secondary membership."
+          "symbol": "L:kc.b(I)V#7",
+          "originalName": "stackIn_56_0",
+          "to": "visitedFlagThenResetIndex",
+          "evidence": "Initially carries the visited flag as an integer; reset to zero for neighbor cleanup or the visited-array reset index."
         }
       },
       {
-        "symbol": "P:wd.a(Lrc;Z)V#0",
+        "symbol": "P:kc.b(I)V#0",
         "before": null,
         "after": {
-          "symbol": "P:wd.a(Lrc;Z)V#0",
-          "originalName": "param0",
-          "to": "node",
-          "evidence": "Inserted secondary node, transferred safely from previous secondary membership."
-        }
-      },
-      {
-        "symbol": "P:wd.a(Lrc;Z)V#1",
-        "before": null,
-        "after": {
-          "symbol": "P:wd.a(Lrc;Z)V#1",
-          "originalName": "param1",
-          "to": "methodGuard",
-          "evidence": "Retained original method guard; native deque probe uses the normal value and preserves alternate source branches."
-        }
-      },
-      {
-        "symbol": "P:wd.a(Z)Lrc;#0",
-        "before": null,
-        "after": {
-          "symbol": "P:wd.a(Z)Lrc;#0",
-          "originalName": "param0",
-          "to": "methodGuard",
-          "evidence": "Retained original method guard; native deque probe uses the normal value and preserves alternate source branches."
-        }
-      },
-      {
-        "symbol": "P:wd.b(B)I#0",
-        "before": null,
-        "after": {
-          "symbol": "P:wd.b(B)I#0",
-          "originalName": "param0",
-          "to": "methodGuard",
-          "evidence": "Retained original method guard; native deque probe uses the normal value and preserves alternate source branches."
-        }
-      },
-      {
-        "symbol": "P:wd.c(B)Lrc;#0",
-        "before": null,
-        "after": {
-          "symbol": "P:wd.c(B)Lrc;#0",
+          "symbol": "P:kc.b(I)V#0",
           "originalName": "param0",
           "to": "methodGuard",
-          "evidence": "Retained original method guard; native deque probe uses the normal value and preserves alternate source branches."
+          "evidence": "Retained guard used in the arithmetic residue and exception context. The normal GameplaySession caller passes -90; native graph probe uses that same value."
         }
       }
     ],
@@ -7049,9 +7117,9 @@
       },
       {
         "file": "tests/test-geoblox-gameplay.mjs",
-        "sha256": "5479f6078d99f167dc71d0a45c1cfa2e78f4c8784cafcea53d487be9a3691b65",
-        "nativeOutputSha256": "c21730704dc4cdff3cb74f1f5fba326b3a059df680fecf6bbb1d080f6932eda0",
-        "scenarios": 2547
+        "sha256": "15febb0c5841f891e27f099faaef8d40c3467c8105dd3782859da5fddab941e7",
+        "nativeOutputSha256": "e248b99cbb3c6a1e71d1873abc8cc1c2f7bb5c38ba560e0f14fe47f237c040db",
+        "scenarios": 18931
       }
     ],
     "textResources": {
@@ -9223,7 +9291,7 @@
       "sourceDeclarations": 21185,
       "bindingsCompared": 154117,
       "overrideRelationships": 388,
-      "identifierEdits": 17248,
+      "identifierEdits": 17422,
       "dictionaryRestorationFiles": 303,
       "wholeGameEquivalenceVerified": false,
       "nativeMatchingScenarios": 708,
@@ -9234,6 +9302,7 @@
         "Attachment and shock producers are supported by source inspection; native scoring fixtures control their gates directly.",
         "Text-writer PCM side effects for guard <=23 are not tested.",
         "Contact/conversion probes use one-pixel sprites and controlled palettes for kinds 0, 1 and 2. Conversion graphs control adjacency and initial counters; mask collision producers, real asset loading and full gameplay remain unverified.",
+        "Reconciliation fixtures use real ordinary-entity contact linking and blank rasters with a constructor-free session holder. Moving-to-attached rendering, shock/transient routing and pool returns remain source-backed, without native coverage in this probe.",
         "Whole-game equivalence and FPS, heap and phone targets are not established."
       ],
       "checks": {
@@ -9244,13 +9313,15 @@
         "fullReproductionCheck": true,
         "dictionaryReversalByteExact": true
       },
-      "nativeGameplayScenarios": 2547,
+      "nativeGameplayScenarios": 18931,
       "nativeContactScenarios": 144,
       "nativeNeighborRemovalScenarios": 32,
       "nativeForcedNeighborhoodDetachScenarios": 2,
       "nativeSecondaryDequeOperations": 320,
       "nativeConversionScenarios": 2048,
-      "nativeConversionFailureScenarios": 472
+      "nativeConversionFailureScenarios": 472,
+      "nativeReconciliationScenarios": 16384,
+      "nativeReconciliationOracleScenarios": 8192
     }
   }
 }

@@ -615,19 +615,41 @@ Generated from explicit rules; original names remain lookup identities.
 | `L:ka.a(I)V#1` | `itemIndex` | Rendering row loop index bounded by item count. |
 | `L:ka.a(I)V#2` | `rowY` | Starts at first-item Y and advances by row spacing. |
 | `L:ka.a(Z)V#0` | `hitItemIndex` | Result of menu hit test, used for selection and pointer dispatch. |
+| `L:kc.b(I)V#0` | `entityQueueThenAttachedQueue` | Initially carries the moving entity queue marker; before rebuilding connectivity it is reused for the attached-entity deque. |
+| `L:kc.b(I)V#1` | `alreadyVisited` | Boolean carrier of connectivityVisitedByEntityId for the current attached entity. |
+| `L:kc.b(I)V#15` | `sessionForRasterRead` | Carries the gameplay session while combining its existing boardRasterDirty state with contact and shock flags. |
+| `L:kc.b(I)V#16` | `sessionForRasterWrite` | Carries the gameplay session receiving the final raster-dirty decision. |
+| `L:kc.b(I)V#17` | `rasterDirtyDecision` | Integer Boolean carrier for old boardRasterDirty OR boardContactStateDirty OR avatarShockPending; native reconciliation probes independently check the first two gates. |
+| `L:kc.b(I)V#19` | `visitedByEntityIdValue` | Boolean transport of the current entity visited-array entry into the retained source branch carriers. |
+| `L:kc.b(I)V#2` | `poppedEntityOrSearchStart` | Carries a pending connectivity pop, then a first entity from visitedNonAvatarEntities while searching for an existing neighbor. |
+| `L:kc.b(I)V#20` | `directAvatarContactValue` | Boolean transport of the popped entity touchesAvatar flag; a true root stops the normal component search. |
 | `L:kc.b(I)V#21` | `activeEntity` | kc.java obtains var1 from ji.field_r.g(0), processes its queue/special-state membership, then advances with ji.field_r.d(1). |
-| `L:kc.b(I)V#22` | `entityIndexThenGroupCount` | kc.java first uses var1_int to clear pk.field_o entries across the 1000 entity slots, then resets it and counts processed entity groups. |
-| `L:kc.b(I)V#24` | `candidateEntity` | kc.java traverses a.field_d for this ja entity, rotates it against el.field_o.field_J, detaches related children and routes it to a processing list. |
+| `L:kc.b(I)V#22` | `visitedResetIndexThenKindFourCount` | First clears visited-array entries 0 through 999. Later resets to zero and counts transient/shock-routed kind-four entities changed to kind seven; it does not count connected components. |
+| `L:kc.b(I)V#24` | `routedAttachedEntity` | Walks the attached deque to process queue-marker or shock routing, including transfer into moving entities after component detachment. Native component fixtures verify this moving route. |
+| `L:kc.b(I)V#25` | `methodGuardResidue` | Retains the unused integer division derived from the method guard before the transient queue pass; normal caller supplies -90. |
 | `L:kc.b(I)V#26` | `radialOffsetX` | kc.java computes 320-var2_ref_ja.field_o and normalizes it by the radius together with var4_float before assigning field_w. |
-| `L:kc.b(I)V#28` | `queuedEntity` | kc.java iterates bh.field_c through ja elements, removes each from that list and may reinsert it into ra.field_a. |
+| `L:kc.b(I)V#27` | `transientNeighborIndex` | Walks related entities while clearing a transient/shock entity reciprocal contacts and refreshing neighbor ownership-mask pixels. This routing branch is source-backed; graph fixtures leave shock/transient requests off. |
+| `L:kc.b(I)V#28` | `categoryResetThenTransientEntity` | Aliases the routed entity while resetting its same-category count, then walks the transient queue to return queued objects to the available pool. These routing roles are source-backed. |
+| `L:kc.b(I)V#29` | `componentCanDetach` | Starts true for each unvisited attached root and becomes false when the search reaches direct avatar contact; independent native graph/anchor oracles verify component retention. |
+| `L:kc.b(I)V#3` | `poppedEntityTouchesAvatar` | Boolean carrier of direct avatar contact for the popped connectivity entity. |
 | `L:kc.b(I)V#30` | `radialOffsetY` | kc.java computes 240-var2_ref_ja.field_v and normalizes it with var3_float before assigning field_F. |
-| `L:kc.b(I)V#32` | `groupEntity` | kc.java obtains this ja from the temporary var13 list, iterates/removes its children and resets its child counters before continuing the outer entity-group walk. |
+| `L:kc.b(I)V#31` | `entityForTransientVariantReset` | Alias used only to zero the transient/shock entity same-variant count after removing its related contacts; source-backed transient branch. |
+| `L:kc.b(I)V#32` | `connectivityAliasThenDetachingEntity` | Initially aliases the popped connectivity entity; later receives entities removed from visitedNonAvatarEntities for reciprocal unlinking and count resets. |
 | `L:kc.b(I)V#33` | `radialVelocityScale` | kc.java assigns og.field_r/sqrt(var4_float^2+var3_float^2) to var5 and multiplies both radial offset components by it. |
-| `L:kc.b(I)V#34` | `childEntityIndex` | kc.java initializes var6_int to zero and increments it while iterating var12.field_n up to var12.field_L. |
+| `L:kc.b(I)V#34` | `componentNeighborIndex` | Walks related entities during connectivity discovery and reciprocal removal during group detachment. The contact graph is undirected, so this is a neighbor index rather than a child relationship. |
+| `L:kc.b(I)V#35` | `entityForComponentCategoryReset` | Alias of the detaching visited entity used to reset its same-category neighbor count. |
+| `L:kc.b(I)V#36` | `neighborThenCountResetEntity` | Initially the candidate neighbor for worklist duplicate checks; later aliases a detaching entity while resetting variant or category counts in different phases. |
 | `L:kc.b(I)V#37` | `relatedEntityIndex` | kc.java loops var7_int from zero to var2_ref_ja.field_L and removes each field_n child from its parent. |
-| `L:kc.b(I)V#38` | `relatedEntityCandidate` | kc.java obtains var8 from the temporary ja collection and compares it by identity against each parent child before list removal. |
-| `L:kc.b(I)V#40` | `entityCandidate` | kc.java assigns the ja returned by var11.a(true), tests its category slot and field_t flag, and processes it in the nested-group pass. |
-| `L:kc.b(I)V#42` | `parentEntity` | kc.java traverses the children of var12.field_L, removes its related entities and resets its category counts before relinking it. |
+| `L:kc.b(I)V#38` | `componentSearchThenVariantResetEntity` | Scans both visited and pending secondary deques for the current neighbor; later aliases the routed moving entity for same-variant count reset. |
+| `L:kc.b(I)V#39` | `clientControlSnapshot` | Snapshot of Geoblox.field_C controlling the retained alternate branches; native traces compare values zero and one, with independent component oracles for zero. |
+| `L:kc.b(I)V#4` | `avatarContactThenDetachDecision` | Initially carries direct avatar contact as an integer Boolean; the shared exit replaces it with componentCanDetach on the normal path. |
+| `L:kc.b(I)V#40` | `currentConnectivityEntity` | Entity popped from pendingConnectivityEntities, used to mark its ID visited and read its neighbor array; does not designate a proposed parent. |
+| `L:kc.b(I)V#41` | `pendingConnectivityEntities` | Secondary deque of entities awaiting connectivity traversal, checked for duplicate neighbor membership before insertion. |
+| `L:kc.b(I)V#42` | `currentConnectivityEntityAlias` | Alias of currentConnectivityEntity used to inspect avatar contact and related count, then inserted into visitedNonAvatarEntities. No parent/child graph relationship is implied. |
+| `L:kc.b(I)V#43` | `visitedNonAvatarEntities` | Secondary deque collecting popped non-avatar entities. An avatar root stops the traversal before insertion, so this collection can be only a prefix of an anchored component. |
+| `L:kc.b(I)V#5` | `comparedThenUnlinkTarget` | Carries the entity compared during worklist duplicate checks; reused as the neighbor whose reciprocal contact is removed during detachment. |
+| `L:kc.b(I)V#6` | `neighborThenUnlinkArgument` | Carries the neighbor identity for duplicate checks; reused as the detaching entity passed to removeRelatedEntity. |
+| `L:kc.b(I)V#7` | `visitedFlagThenResetIndex` | Initially carries the visited flag as an integer; reset to zero for neighbor cleanup or the visited-array reset index. |
 | `L:ld.a(I)Z#21` | `circleHorizontalOffset` | The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions. |
 | `L:ld.a(I)Z#22` | `circleVerticalOffset` | The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions. |
 | `L:ld.a(I)Z#23` | `playfieldRadiusSquared` | The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions. |
@@ -992,6 +1014,7 @@ Generated from explicit rules; original names remain lookup identities.
 | `P:ka.a(ZBII)V#2` | `itemIndex` | Row index supplied by render loop. |
 | `P:ka.a(ZBII)V#3` | `rowY` | Row Y supplied by render loop and used in text/slider drawing. |
 | `P:ka.b(IB)V#0` | `itemIndex` | Indexes action IDs for activation. |
+| `P:kc.b(I)V#0` | `methodGuard` | Retained guard used in the arithmetic residue and exception context. The normal GameplaySession caller passes -90; native graph probe uses that same value. |
 | `P:kl.a(Lgd;II)Lkl;#0` | `sample` | PCM factory inputs: sample supplies bytes and source frequency, ratePercent scales signed Q8 sample step, volume is shifted left six before construction. |
 | `P:kl.a(Lgd;II)Lkl;#1` | `ratePercent` | PCM factory inputs: sample supplies bytes and source frequency, ratePercent scales signed Q8 sample step, volume is shifted left six before construction. |
 | `P:kl.a(Lgd;II)Lkl;#2` | `volume` | PCM factory inputs: sample supplies bytes and source frequency, ratePercent scales signed Q8 sample step, volume is shifted left six before construction. |

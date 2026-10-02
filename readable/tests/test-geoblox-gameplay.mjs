@@ -10,7 +10,7 @@ import {captureProcess} from '../tools/lib/capture-process.mjs';
 const root = fileURLToPath(new URL('../', import.meta.url));
 const nativeInput = process.argv[2] && path.resolve(process.argv[2]);
 if (!nativeInput) throw new Error('Usage: node readable/tests/test-geoblox-gameplay.mjs NATIVE_CLASSES');
-const expectedNativeSha256 = 'c21730704dc4cdff3cb74f1f5fba326b3a059df680fecf6bbb1d080f6932eda0';
+const expectedNativeSha256 = 'e248b99cbb3c6a1e71d1873abc8cc1c2f7bb5c38ba560e0f14fe47f237c040db';
 const rules = JSON.parse(fs.readFileSync(path.join(root, 'geoblox-rules.json')));
 const aliases = new Map(rules.renames.map(rule => [rule.symbol, rule.to]));
 const temporary = fs.mkdtempSync(path.join(os.tmpdir(), 'geoblox-gameplay-'));
@@ -273,7 +273,101 @@ try {
           System.out.println("conversion:"+guard+":"+mode+":"+root+":"+key+":"+mask+":"+outcome+":"+trace);cases++;
         }
       }
-      public static void main(String[] args) {
+      static ${type('gh')} session() throws Exception {
+        Class<?> unsafe=Class.forName("sun.misc.Unsafe");
+        java.lang.reflect.Field field=unsafe.getDeclaredField("theUnsafe");field.setAccessible(true);
+        return (${type('gh')})unsafe.getMethod("allocateInstance",Class.class).invoke(field.get(null),${type('gh')}.class);
+      }
+      static String queueState(${deque} queue) {
+        StringBuilder result=new StringBuilder();
+        ${entity} node=(${entity})queue.${method('tf','g(I)Lhf;')}(0);
+        int count=0;
+        while(node!=null){result.append(node.${field('ja','field_H','I')}).append(',');
+          check(++count<10,"queue cycle");node=(${entity})queue.${method('tf','d(I)Lhf;')}(1);}
+        return result.toString();
+      }
+      static void reconciliation() throws Exception {
+        int[][] pairs={{0,1},{0,2},{0,3},{1,2},{1,3},{2,3}};
+        ${global('vf','field_L','Ldm;')}=new ${raster}(1,1);
+        ${global('bk','field_a','Ldm;')}=new ${raster}(640,480);
+        for(int guard=0;guard<2;guard++)for(int geometry=0;geometry<2;geometry++)
+        for(boolean rebuild:new boolean[]{false,true})for(boolean contactDirty:new boolean[]{false,true})
+        for(int mask=0;mask<64;mask++)for(int anchors=0;anchors<16;anchors++) {
+          ${global('Geoblox','field_C','I')}=guard;
+          ${global('el','field_o','Lgh;')}=session();
+          ${global('a','field_d','Ltf;')}=new ${deque}();${moving}=new ${deque}();${transient}=new ${deque}();
+          ${global('ra','field_a','Ltf;')}=new ${deque}();
+          ${global('pk','field_o','[Z')}=new boolean[1002];${global('pk','field_o','[Z')}[998]=true;${global('pk','field_o','[Z')}[1001]=true;
+          ${global('re','field_j','Z')}=rebuild;${global('w','field_f','Z')}=false;
+          ${global('ab','field_f','Z')}=contactDirty;${global('fa','field_a','Z')}=true;
+          ${global('rb','field_b','I')}=0;${global('og','field_r','F')}=2.5f;
+          ${entity}[] nodes=new ${entity}[4];
+          for(int i=0;i<4;i++) {
+            nodes[i]=entity(i,i%2,i/2,0);
+            nodes[i].${field('ja','field_o','F')}=geometry==0?340+i*10:320;
+            nodes[i].${field('ja','field_v','F')}=geometry==0?245+i*5:240;
+            nodes[i].${field('ja','field_t','Z')}=(anchors&(1<<i))!=0;
+            ${attached}.${addLast}(-35,nodes[i]);
+          }
+          // Real contact linking supplies neighbor order and matching counts.
+          for(int edge=0;edge<6;edge++)if((mask&(1<<edge))!=0)link(nodes[pairs[edge][0]],nodes[pairs[edge][1]],false);
+          boolean[] anchored=new boolean[4];
+          for(int i=0;i<4;i++)anchored[i]=(anchors&(1<<i))!=0;
+          for(int pass=0;pass<4;pass++)for(int edge=0;edge<6;edge++)if((mask&(1<<edge))!=0) {
+            int a=pairs[edge][0],b=pairs[edge][1];if(anchored[a]||anchored[b])anchored[a]=anchored[b]=true;
+          }
+          String outcome="ok";
+          try { ${call('kc','b(I)V')}(-90); }
+          catch(${type('sa')} error) {
+            outcome=error.${field('sa','field_a','Ljava/lang/Throwable;')}.getClass().getSimpleName()+":"+error.${field('sa','field_d','Ljava/lang/String;')};
+            if(guard==0)throw new AssertionError("normal reconciliation failure: "+outcome);
+          }
+          StringBuilder attachedOrder=new StringBuilder(),movingOrder=new StringBuilder(),trace=new StringBuilder();
+          boolean detached=false;
+          for(int i=0;i<4;i++) {
+            ${entity} node=nodes[i];
+            if(guard==0) {
+              boolean retained=!rebuild||anchored[i];detached|=!retained;
+              check(node.${field('ja','field_B','Z')}==!retained,"anchored component or clean connectivity retained");
+              check(node.${field('ja','field_K','Ltf;')}==null,"reconciliation clears queue marker");
+              check(node.${field('ja','field_t','Z')}==((anchors&(1<<i))!=0),"avatar root preserved");
+              if(retained) {
+                attachedOrder.append(i).append(',');
+                java.util.ArrayList<${entity}> wanted=new java.util.ArrayList<${entity}>();
+                for(int edge=0;edge<6;edge++)if((mask&(1<<edge))!=0) {
+                  int a=pairs[edge][0],b=pairs[edge][1];if(a==i)wanted.add(nodes[b]);else if(b==i)wanted.add(nodes[a]);
+                }
+                ordinaryOracle(node,wanted.toArray(new ${entity}[0]));
+              } else {
+                movingOrder.append(i).append(',');ordinaryOracle(node,new ${entity}[0]);
+                if(geometry==1)check(Float.isNaN(node.${field('ja','field_w','F')})&&Float.isNaN(node.${field('ja','field_F','F')}),"center normalization preserves NaN");
+                else {
+                  float dx=320-node.${field('ja','field_o','F')},dy=240-node.${field('ja','field_v','F')};
+                  double magnitude=Math.sqrt(dx*dx+dy*dy);
+                  check(Float.floatToIntBits(node.${field('ja','field_w','F')})==Float.floatToIntBits((float)(dx*2.5/magnitude)),"radial x velocity");
+                  check(Float.floatToIntBits(node.${field('ja','field_F','F')})==Float.floatToIntBits((float)(dy*2.5/magnitude)),"radial y velocity");
+                }
+              }
+            }
+            trace.append(state(node)).append(':').append(Float.floatToIntBits(node.${field('ja','field_w','F')}))
+              .append(':').append(Float.floatToIntBits(node.${field('ja','field_F','F')})).append('/');
+          }
+          String actualAttached=queueState(${attached}),actualMoving=queueState(${moving});
+          int visits=0;for(int i=0;i<1000;i++)if(${global('pk','field_o','[Z')}[i])visits++;
+          if(guard==0) {
+            check(actualAttached.equals(attachedOrder.toString())&&actualMoving.equals(movingOrder.toString()),"reconciliation queue partition/order");
+            check(${global('re','field_j','Z')}==detached,"transferred entities dirty connectivity again");
+            check(${global('el','field_o','Lgh;')}.${field('gh','field_B','Z')}==rebuild,"connectivity rebuild reported");
+            check(${global('el','field_o','Lgh;')}.${field('gh','field_F','Z')}==(detached||contactDirty),"raster dirtiness gates");
+            check(visits==(rebuild?0:1)&&${global('pk','field_o','[Z')}[1001],"exact visited range reset only on rebuild");
+            check(${global('fa','field_a','Z')}==detached,"unanchored component detach reported");
+          }
+          System.out.println("reconcile:"+guard+":"+geometry+":"+rebuild+":"+contactDirty+":"+mask+":"+anchors+":"+outcome+":"+trace+":"+actualAttached+":"+actualMoving
+            +":"+${global('re','field_j','Z')}+":"+${global('el','field_o','Lgh;')}.${field('gh','field_B','Z')}+":"+${global('el','field_o','Lgh;')}.${field('gh','field_F','Z')}
+            +":"+${global('fa','field_a','Z')}+":"+visits+":"+${global('pk','field_o','[Z')}[1001]);cases++;
+        }
+      }
+      public static void main(String[] args) throws Exception {
         Thread watchdog=new Thread(()->{try{Thread.sleep(45000);}catch(InterruptedException error){}System.exit(124);});
         watchdog.setDaemon(true);watchdog.start();
         ${global('Geoblox', 'field_C', 'I')} = 0;
@@ -361,6 +455,7 @@ try {
         contacts();
         secondaryQueues();
         conversions();
+        reconciliation();
         System.out.println("complete:"+cases+":conversion-failures:"+conversionFailures);
       }
     }`;
