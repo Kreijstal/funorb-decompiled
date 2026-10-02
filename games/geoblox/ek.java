@@ -17,7 +17,6 @@ final class ek {
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_27_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
         RuntimeException var6 = null;
@@ -81,9 +80,9 @@ final class ek {
               param4 = param4 - var16;
             }
             lc.a(var8, param0, vb.field_c, var12, var13, var6_int, var9, var15, var14, param4, (byte) -104, param2.field_v, 0);
-            decompiledRegionSelector0 = 1;
+            return;
           } else {
-            decompiledRegionSelector0 = 0;
+            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -102,11 +101,6 @@ final class ek {
             stackIn_27_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_27_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 

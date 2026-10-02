@@ -166,75 +166,56 @@ final class gh {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_26_2 = null;
-        int decompiledRegionSelector0 = 0;
-        int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
         var4 = Geoblox.field_C;
         try {
           try {
-            L1: {
-              if (d.field_b.startsWith("win")) {
-                if (!param1) {
-                  if (!param0.startsWith("http://")) {
-                    if (!param0.startsWith("https://")) {
-                      return false;
-                    }
+            if (d.field_b.startsWith("win")) {
+              if (!param1) {
+                if (!param0.startsWith("http://")) {
+                  if (!param0.startsWith("https://")) {
+                    return false;
                   }
-                  var2 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
-                  var3 = 0;
-                  L3: while (true) {
-                    L4: {
-                      if (param0.length() > var3) {
-                        stackIn_20_0 = var2.indexOf((int) param0.charAt(var3));
+                }
+                var2 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
+                var3 = 0;
+                L1: while (true) {
+                  L2: {
+                    if (param0.length() > var3) {
+                      stackIn_20_0 = var2.indexOf((int) param0.charAt(var3));
 
-                        if (var4 != 0) {
-                          break L4;
-                        } else {
-                          if (stackIn_20_0 != -1) {
-                            var3++;
-                            if (var4 == 0) {
-                              continue L3;
-                            }
-                          } else {
-                            stackIn_17_0 = 0;
-                            decompiledRegionSelector0 = 3;
-                            break L1;
+                      if (var4 != 0) {
+                        break L2;
+                      } else {
+                        if (stackIn_20_0 != -1) {
+                          var3++;
+                          if (var4 == 0) {
+                            continue L1;
                           }
+                        } else {
+                          stackIn_17_0 = 0;
+                          return stackIn_17_0 != 0;
                         }
                       }
-                      Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param0 + "\"");
-                      stackIn_20_0 = 1;
                     }
-                    decompiledRegionSelector0 = 2;
-                    break L1;
+                    Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param0 + "\"");
+                    stackIn_20_0 = 1;
                   }
-                } else {
-                  stackIn_6_0 = 1;
-                  decompiledRegionSelector0 = 1;
+                  return stackIn_20_0 != 0;
                 }
               } else {
-                stackIn_3_0 = 0;
-                decompiledRegionSelector0 = 0;
+                stackIn_6_0 = 1;
+                return stackIn_6_0 != 0;
               }
+            } else {
+              stackIn_3_0 = 0;
+              return stackIn_3_0 != 0;
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2_ref = (Exception) (Object) decompiledCaughtException;
             stackIn_22_0 = 0;
             return stackIn_22_0 != 0;
-          }
-          if (decompiledRegionSelector0 == 0) {
-            decompiledRegionSelector1 = 0;
-          } else {
-            if (decompiledRegionSelector0 == 1) {
-              decompiledRegionSelector1 = 1;
-            } else {
-              if (decompiledRegionSelector0 == 2) {
-                decompiledRegionSelector1 = 2;
-              } else {
-                decompiledRegionSelector1 = 3;
-              }
-            }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
@@ -253,19 +234,6 @@ final class gh {
             stackIn_26_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
-        }
-        if (decompiledRegionSelector1 == 0) {
-          return stackIn_3_0 != 0;
-        } else {
-          if (decompiledRegionSelector1 == 1) {
-            return stackIn_6_0 != 0;
-          } else {
-            if (decompiledRegionSelector1 == 2) {
-              return stackIn_20_0 != 0;
-            } else {
-              return stackIn_17_0 != 0;
-            }
-          }
         }
     }
 
@@ -2268,6 +2236,7 @@ final class gh {
           sc.field_f = 3382;
           gb.field_g = 5997;
           this.field_e = 0;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;

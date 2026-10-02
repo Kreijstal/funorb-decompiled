@@ -94,11 +94,11 @@ final class fh implements dh {
         int var11 = 0;
         var11 = Geoblox.field_C;
         try {
-          L1: {
+          L0: {
             if (!param4.field_l) {
               if (!param4.e((byte) 54)) {
                 stackIn_5_0 = 2188450;
-                break L1;
+                break L0;
               }
             }
             stackIn_5_0 = 3249872;
@@ -128,6 +128,7 @@ final class fh implements dh {
               }
             }
             bf.a(var10 + 2, 4 + var7, 14164, var8, -2 + var9);
+            return;
           } else {
             return;
           }

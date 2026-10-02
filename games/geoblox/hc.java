@@ -45,6 +45,7 @@ final class hc extends dj implements nl {
             field_R = -109;
           }
           stackIn_3_0 = bi.a(false, param1, (byte) -121);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -63,7 +64,6 @@ final class hc extends dj implements nl {
           }
           throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     final void a(boolean param0, int param1, el param2, int param3) {

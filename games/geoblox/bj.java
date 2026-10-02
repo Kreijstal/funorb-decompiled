@@ -264,56 +264,54 @@ final class bj extends nh {
               return (pb) (var4);
             } else {
               try {
-                L11: {
-                  if (var5 != null) {
-                    if (var18.length > 2) {
-                      ge.field_f.reset();
-                      ge.field_f.update(var5, 0, var18.length - 2);
-                      var6_int = (int)ge.field_f.getValue();
-                      if (var6_int == this.field_u.field_q[param2]) {
-                        L13: {
-                          if (this.field_u.field_r != null) {
-                            if (null != this.field_u.field_r[param2]) {
-                              var27 = this.field_u.field_r[param2];
-                              var28 = wh.a(-2 + var18.length, 0, var18, 8);
-                              var9 = 0;
-                              L14: while (true) {
-                                if (var9 >= 64) {
-                                  break L13;
+                if (var5 != null) {
+                  if (var18.length > 2) {
+                    ge.field_f.reset();
+                    ge.field_f.update(var5, 0, var18.length - 2);
+                    var6_int = (int)ge.field_f.getValue();
+                    if (var6_int == this.field_u.field_q[param2]) {
+                      L12: {
+                        if (this.field_u.field_r != null) {
+                          if (null != this.field_u.field_r[param2]) {
+                            var27 = this.field_u.field_r[param2];
+                            var28 = wh.a(-2 + var18.length, 0, var18, 8);
+                            var9 = 0;
+                            L13: while (true) {
+                              if (var9 >= 64) {
+                                break L12;
+                              } else {
+                                if (~var27[var9] == ~var28[var9]) {
+                                  var9++;
+                                  continue L13;
                                 } else {
-                                  if (~var27[var9] == ~var28[var9]) {
-                                    var9++;
-                                    continue L14;
-                                  } else {
-                                    throw new RuntimeException();
-                                  }
+                                  throw new RuntimeException();
                                 }
                               }
                             }
                           }
                         }
-                        var7 = (var5[-2 + var18.length] << 8 & 65280) + (var5[var18.length - 1] & 255);
-                        if ((65535 & this.field_u.field_t[param2]) != var7) {
-                          throw new RuntimeException();
-                        } else {
-                          if (this.field_k[param2] != 1) {
-                            if (this.field_k[param2] != 0) {
-                            }
-                            this.field_k[param2] = (byte) 1;
-                          }
-                          if (!((pb) (var4)).field_q) {
-                            ((pb) (var4)).a(false);
-                          }
-                          stackIn_55_0 = var4;
-                          break L11;
-                        }
-                      } else {
-                        throw new RuntimeException();
                       }
+                      var7 = (var5[-2 + var18.length] << 8 & 65280) + (var5[var18.length - 1] & 255);
+                      if ((65535 & this.field_u.field_t[param2]) != var7) {
+                        throw new RuntimeException();
+                      } else {
+                        if (this.field_k[param2] != 1) {
+                          if (this.field_k[param2] != 0) {
+                          }
+                          this.field_k[param2] = (byte) 1;
+                        }
+                        if (!((pb) (var4)).field_q) {
+                          ((pb) (var4)).a(false);
+                        }
+                        stackIn_55_0 = var4;
+                        return (pb) ((Object) stackIn_55_0);
+                      }
+                    } else {
+                      throw new RuntimeException();
                     }
                   }
-                  throw new RuntimeException();
                 }
+                throw new RuntimeException();
               } catch (java.lang.Exception decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 var6_ref = (Exception) (Object) decompiledCaughtException;
@@ -331,7 +329,6 @@ final class bj extends nh {
                   return null;
                 }
               }
-              return (pb) ((Object) stackIn_55_0);
             }
           } else {
             return (pb) null;
@@ -357,19 +354,17 @@ final class bj extends nh {
         RuntimeException decompiledCaughtException = null;
         var5 = Geoblox.field_C;
         try {
-          L0: {
-            var2_int = param1.length();
-            var3 = new char[var2_int];
-            for (var4 = 0; var4 < var2_int; var4++) {
-              var3[-var4 + (-1 + var2_int)] = param1.charAt(var4);
-            }
-            if (param0 < 26) {
-              var6 = (String) null;
-              bj.a(68, (String) null);
-            }
-            stackIn_7_0 = new String(var3);
-            break L0;
+          var2_int = param1.length();
+          var3 = new char[var2_int];
+          for (var4 = 0; var4 < var2_int; var4++) {
+            var3[-var4 + (-1 + var2_int)] = param1.charAt(var4);
           }
+          if (param0 < 26) {
+            var6 = (String) null;
+            bj.a(68, (String) null);
+          }
+          stackIn_7_0 = new String(var3);
+          return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -388,7 +383,6 @@ final class bj extends nh {
           }
           throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(')').toString());
         }
-        return stackIn_7_0;
     }
 
     final byte[] b(int param0, int param1) {
@@ -712,6 +706,7 @@ final class bj extends nh {
           if (this.field_y != null) {
             this.field_l = (pb) ((Object) this.field_i.a(this.field_y, this.field_p, 15079962));
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var10 = decompiledCaughtException;

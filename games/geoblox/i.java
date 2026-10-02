@@ -26,34 +26,31 @@ final class i {
         RuntimeException decompiledCaughtException = null;
         var5 = Geoblox.field_C;
         try {
-          L0: {
-            var1_float = 1.401298464324817e-45f;
-            var2 = null;
-            var3 = (ja) ((Object) a.field_d.a(false));
-            if (param0 >= -127) {
-              i.a(false);
-            }
-            L2: while (null != var3) {
-              var4 = (-240.0f + var3.field_v) * (-240.0f + var3.field_v) + (-320.0f + var3.field_o) * (var3.field_o - 320.0f);
-              if (var1_float < var4) {
-                var1_float = var4;
-                var2 = var3;
-              }
-              var3 = (ja) ((Object) a.field_d.b(0));
-              if (var5 == 0) {
-                continue L2;
-              }
-              break;
-            }
-            stackIn_11_0 = var2;
-            break L0;
+          var1_float = 1.401298464324817e-45f;
+          var2 = null;
+          var3 = (ja) ((Object) a.field_d.a(false));
+          if (param0 >= -127) {
+            i.a(false);
           }
+          L1: while (null != var3) {
+            var4 = (-240.0f + var3.field_v) * (-240.0f + var3.field_v) + (-320.0f + var3.field_o) * (var3.field_o - 320.0f);
+            if (var1_float < var4) {
+              var1_float = var4;
+              var2 = var3;
+            }
+            var3 = (ja) ((Object) a.field_d.b(0));
+            if (var5 == 0) {
+              continue L1;
+            }
+            break;
+          }
+          stackIn_11_0 = var2;
+          return (ja) ((Object) stackIn_11_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var1), "i.D(" + param0 + ')');
         }
-        return (ja) ((Object) stackIn_11_0);
     }
 
     final static void a(int param0, byte param1, java.awt.Canvas param2, int param3) {
@@ -78,6 +75,7 @@ final class i {
             var4_ref = (Exception) (Object) decompiledCaughtException;
             param2.repaint();
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
@@ -129,143 +127,141 @@ final class i {
         int var19 = 0;
         var19 = Geoblox.field_C;
         try {
-          L0: {
-            var5_int = hj.a((byte) 58, (param3 - param0) * 3);
-            var6 = param0 * 3;
-            var7 = var5_int - 10;
-            oe.l(0);
-            if (param2.field_v > 0) {
-              if (null != param2.field_n) {
-                ma.a((byte) -35);
-              }
+          var5_int = hj.a((byte) 58, (param3 - param0) * 3);
+          var6 = param0 * 3;
+          var7 = var5_int - 10;
+          oe.l(0);
+          if (param2.field_v > 0) {
+            if (null != param2.field_n) {
+              ma.a((byte) -35);
             }
-            ch.field_b = 0;
-            var8 = 0;
-            L2: while (true) {
-              L3: {
-                if (var8 < param2.field_f) {
-                  var9 = param2.field_r[var8];
-                  var10 = param2.field_B[var8];
-                  var11 = param2.field_c[var8];
-                  stackOut_10_0 = param4;
-                  stackIn_49_0 = stackOut_10_0 ? 1 : 0;
-                  stackIn_11_0 = stackOut_10_0;
-                  if (var19 != 0) {
-                    break L3;
-                  } else {
-                    L5: {
-                      if (stackIn_11_0) {
-                        var12 = sh.field_x[var9];
-                        var13 = dj.field_N[var9];
-                        var14 = sh.field_x[var10] - var12;
-                        var15 = sh.field_x[var11] - var12;
-                        var16 = dj.field_N[var10] - var13;
-                        var17 = -var13 + dj.field_N[var11];
-                        if (-(var16 * var15) + var14 * var17 >= 0) {
-                          break L5;
-                        }
+          }
+          ch.field_b = 0;
+          var8 = 0;
+          L1: while (true) {
+            L2: {
+              if (var8 < param2.field_f) {
+                var9 = param2.field_r[var8];
+                var10 = param2.field_B[var8];
+                var11 = param2.field_c[var8];
+                stackOut_10_0 = param4;
+                stackIn_49_0 = stackOut_10_0 ? 1 : 0;
+                stackIn_11_0 = stackOut_10_0;
+                if (var19 != 0) {
+                  break L2;
+                } else {
+                  L4: {
+                    if (stackIn_11_0) {
+                      var12 = sh.field_x[var9];
+                      var13 = dj.field_N[var9];
+                      var14 = sh.field_x[var10] - var12;
+                      var15 = sh.field_x[var11] - var12;
+                      var16 = dj.field_N[var10] - var13;
+                      var17 = -var13 + dj.field_N[var11];
+                      if (-(var16 * var15) + var14 * var17 >= 0) {
+                        break L4;
                       }
-                      var12 = bj.field_j[var9];
-                      if (-2147483648 == var12) {
-                        if (var19 == 0) {
-                          break L5;
-                        }
+                    }
+                    var12 = bj.field_j[var9];
+                    if (-2147483648 == var12) {
+                      if (var19 == 0) {
+                        break L4;
                       }
-                      var13 = bj.field_j[var10];
-                      if (-2147483648 == var13) {
-                        if (var19 == 0) {
-                          break L5;
-                        }
+                    }
+                    var13 = bj.field_j[var10];
+                    if (-2147483648 == var13) {
+                      if (var19 == 0) {
+                        break L4;
                       }
-                      var14 = bj.field_j[var11];
-                      if (var14 != -2147483648) {
-                        var15 = var13 + (var12 + var14 - var6);
-                        if (var7 < 0) {
-                          stackIn_28_0 = var15 << -var7;
-                        } else {
-                          stackIn_28_0 = var15 >> var7;
-                        }
-                        var16 = -stackIn_28_0 + (-1 + ch.field_d.length);
-                        var17 = ch.field_d[var16];
-                        L10: while (true) {
-                          L11: {
-                            if (var17 >> 4 != 0) {
-                              var16--;
-                              stackIn_39_0 = var16;
+                    }
+                    var14 = bj.field_j[var11];
+                    if (var14 != -2147483648) {
+                      var15 = var13 + (var12 + var14 - var6);
+                      if (var7 < 0) {
+                        stackIn_28_0 = var15 << -var7;
+                      } else {
+                        stackIn_28_0 = var15 >> var7;
+                      }
+                      var16 = -stackIn_28_0 + (-1 + ch.field_d.length);
+                      var17 = ch.field_d[var16];
+                      L9: while (true) {
+                        L10: {
+                          if (var17 >> 4 != 0) {
+                            var16--;
+                            stackIn_39_0 = var16;
 
-                              if (var19 != 0) {
-                                break L11;
-                              } else {
-                                if (stackIn_39_0 < 0) {
-                                  System.err.println("Out of range!");
-                                  if (var19 == 0) {
-                                    break L5;
-                                  }
-                                }
-                                var17 = ch.field_d[var16];
+                            if (var19 != 0) {
+                              break L10;
+                            } else {
+                              if (stackIn_39_0 < 0) {
+                                System.err.println("Out of range!");
                                 if (var19 == 0) {
-                                  continue L10;
+                                  break L4;
                                 }
                               }
-                            }
-                            stackIn_39_0 = (var16 << 4) + var17;
-                          }
-                          var18 = stackIn_39_0;
-                          pj.field_i[var18] = var8;
-                          ch.field_d[var16] = 1 + var17;
-                          if (0 < param2.field_v) {
-                            if (null != param2.field_n) {
-                              dupTemp$0 = param2.field_n[var8];
-                              uh.field_x[dupTemp$0] = uh.field_x[dupTemp$0] + 1;
+                              var17 = ch.field_d[var16];
+                              if (var19 == 0) {
+                                continue L9;
+                              }
                             }
                           }
-                          ch.field_b = ch.field_b + 1;
-                          break L5;
+                          stackIn_39_0 = (var16 << 4) + var17;
                         }
-                      }
-                    }
-                    var8++;
-                    if (var19 == 0) {
-                      continue L2;
-                    }
-                  }
-                }
-                stackIn_49_0 = -1;
-              }
-              L15: {
-                L16: {
-                  if (stackIn_49_0 > ~param2.field_v) {
-                    if (null != param2.field_n) {
-                      var8 = 0;
-                      var9 = 0;
-                      L17: while (true) {
-                        if (uh.field_x.length <= var9) {
-                          break L16;
-                        } else {
-                          var10 = uh.field_x[var9];
-                          uh.field_x[var9] = var8;
-                          var8 = var8 + var10;
-                          var9++;
-                          if (var19 != 0) {
-                            break L15;
-                          } else {
-                            if (var19 == 0) {
-                              continue L17;
-                            } else {
-                              break L16;
-                            }
+                        var18 = stackIn_39_0;
+                        pj.field_i[var18] = var8;
+                        ch.field_d[var16] = 1 + var17;
+                        if (0 < param2.field_v) {
+                          if (null != param2.field_n) {
+                            dupTemp$0 = param2.field_n[var8];
+                            uh.field_x[dupTemp$0] = uh.field_x[dupTemp$0] + 1;
                           }
                         }
+                        ch.field_b = ch.field_b + 1;
+                        break L4;
                       }
                     }
                   }
-                }
-                if (param1 != 22) {
-                  field_a = (dm) null;
+                  var8++;
+                  if (var19 == 0) {
+                    continue L1;
+                  }
                 }
               }
-              break L0;
+              stackIn_49_0 = -1;
             }
+            L14: {
+              L15: {
+                if (stackIn_49_0 > ~param2.field_v) {
+                  if (null != param2.field_n) {
+                    var8 = 0;
+                    var9 = 0;
+                    L16: while (true) {
+                      if (uh.field_x.length <= var9) {
+                        break L15;
+                      } else {
+                        var10 = uh.field_x[var9];
+                        uh.field_x[var9] = var8;
+                        var8 = var8 + var10;
+                        var9++;
+                        if (var19 != 0) {
+                          break L14;
+                        } else {
+                          if (var19 == 0) {
+                            continue L16;
+                          } else {
+                            break L15;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              if (param1 != 22) {
+                field_a = (dm) null;
+              }
+            }
+            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -60,6 +60,7 @@ final class ol extends hk {
             field_I = (String) null;
           }
           stackIn_3_0 = eg.a(param1, (byte) 39, 10, true);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -78,7 +79,6 @@ final class ol extends hk {
           }
           throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, el param6) {
@@ -90,7 +90,6 @@ final class ol extends hk {
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_27_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
         RuntimeException var8 = null;
@@ -105,7 +104,7 @@ final class ol extends hk {
           var8_int = -89 % ((-3 - param1) / 38);
           if (!super.a(param0, 93, param2, param3, param4, param5, param6)) {
             stackIn_23_0 = 0;
-            decompiledRegionSelector0 = 1;
+            return stackIn_23_0 != 0;
           } else {
             var9 = -param2 + param4 - this.field_H;
             var10 = this.field_r - 2 * this.field_H;
@@ -115,7 +114,7 @@ final class ol extends hk {
             if (0 > var9) {
               var9 = 0;
             }
-            L3: {
+            L2: {
               var9 = this.field_E * var9 / var10;
               if (param3 != 1) {
                 if (param3 == 2) {
@@ -130,10 +129,10 @@ final class ol extends hk {
                     }
                   }
                   if (0 > var12) {
-                    break L3;
+                    break L2;
                   } else {
                     this.field_F.a(0, var12);
-                    break L3;
+                    break L2;
                   }
                 }
               } else {
@@ -141,7 +140,7 @@ final class ol extends hk {
               }
             }
             stackIn_21_0 = 1;
-            decompiledRegionSelector0 = 0;
+            return stackIn_21_0 != 0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -160,11 +159,6 @@ final class ol extends hk {
             stackIn_27_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_27_2).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_21_0 != 0;
-        } else {
-          return stackIn_23_0 != 0;
         }
     }
 

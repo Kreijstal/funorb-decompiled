@@ -253,6 +253,7 @@ final class tf {
           if (param1 != 2541) {
             this.e(-82);
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;

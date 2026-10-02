@@ -20,7 +20,6 @@ final class vh extends ee implements pl {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (mf.a(param0, param2, 123, param1)) {
@@ -29,10 +28,10 @@ final class vh extends ee implements pl {
               vh.a(110, (rh) null, -39, true);
             }
             stackIn_6_0 = ab.a(104);
-            decompiledRegionSelector0 = 1;
+            return stackIn_6_0;
           } else {
             stackIn_2_0 = null;
-            decompiledRegionSelector0 = 0;
+            return (na) ((Object) stackIn_2_0);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -51,11 +50,6 @@ final class vh extends ee implements pl {
             stackIn_10_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return (na) ((Object) stackIn_2_0);
-        } else {
-          return stackIn_6_0;
         }
     }
 
@@ -134,7 +128,6 @@ final class vh extends ee implements pl {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 13) {
@@ -142,19 +135,19 @@ final class vh extends ee implements pl {
           }
           if (super.a(param0, param1 + 0, param2, param3)) {
             stackIn_5_0 = 1;
-            decompiledRegionSelector0 = 0;
+            return stackIn_5_0 != 0;
           } else {
             if (param0 != 98) {
               if (99 != param0) {
                 stackIn_13_0 = 0;
-                decompiledRegionSelector0 = 3;
+                return stackIn_13_0 != 0;
               } else {
                 stackIn_11_0 = this.a(param3, -110);
-                decompiledRegionSelector0 = 2;
+                return stackIn_11_0;
               }
             } else {
               stackIn_8_0 = this.a(7305, param3);
-              decompiledRegionSelector0 = 1;
+              return stackIn_8_0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -175,19 +168,6 @@ final class vh extends ee implements pl {
           }
           throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(')').toString());
         }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_5_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_8_0;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return stackIn_11_0;
-            } else {
-              return stackIn_13_0 != 0;
-            }
-          }
-        }
     }
 
     public final void a(int param0, byte param1, int param2, int param3, hk param4) {
@@ -198,26 +178,22 @@ final class vh extends ee implements pl {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         var7 = Geoblox.field_C;
         try {
-          L0: {
-            if (param1 == -20) {
-              for (var6_int = 0; this.field_C.length > var6_int; var6_int++) {
-                if (this.field_I[var6_int] == param4) {
-                  this.field_J.a(this.field_C[var6_int], 20);
-                }
+          if (param1 == -20) {
+            for (var6_int = 0; this.field_C.length > var6_int; var6_int++) {
+              if (this.field_I[var6_int] == param4) {
+                this.field_J.a(this.field_C[var6_int], 20);
               }
-              if (this.field_I[this.field_C.length] == param4) {
-                this.field_J.a((byte) 83);
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
             }
+            if (this.field_I[this.field_C.length] == param4) {
+              this.field_J.a((byte) 83);
+            }
+            return;
+          } else {
+            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -237,11 +213,6 @@ final class vh extends ee implements pl {
           }
           throw t.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(')').toString());
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
-        }
     }
 
     final void a(byte param0, String[] param1) {
@@ -252,7 +223,6 @@ final class vh extends ee implements pl {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -260,38 +230,35 @@ final class vh extends ee implements pl {
         int var6 = 0;
         var6 = Geoblox.field_C;
         try {
-          L0: {
-            this.field_z.c((byte) -98);
-            if (param0 == 126) {
-              if (param1 != null) {
-                if (param1.length != 0) {
-                  var3_int = param1.length;
-                  this.field_C = new String[var3_int];
-                  for (var4_int = 0; var3_int > var4_int; var4_int++) {
-                    this.field_C[var4_int] = p.a((CharSequence) ((Object) param1[var4_int]), param0 - 123).replace(' ', ' ');
-                  }
-                  var4 = new fh(ng.field_F, 0, 1);
-                  this.field_I = new hk[var3_int + 1];
-                  for (var5 = 0; var5 < var3_int; var5++) {
-                    this.field_I[var5] = new hk(this.field_C[var5], (bb) (this));
-                    this.field_I[var5].field_q = (dh) ((Object) var4);
-                    this.field_I[var5].field_j = ml.field_u;
-                    this.field_I[var5].a(15, 80, (byte) -14, var5 * 16 + 20, 0);
-                    this.b((byte) -126, this.field_I[var5]);
-                  }
-                  this.field_I[var3_int] = new hk(ll.field_a, (bb) (this));
-                  this.field_I[var3_int].field_q = (dh) ((Object) var4);
-                  this.field_I[var3_int].a(15, 100, (byte) -59, 16 + (var3_int * 16 + 20), 0);
-                  this.b((byte) -122, this.field_I[var3_int]);
-                  decompiledRegionSelector0 = 2;
-                  break L0;
+          this.field_z.c((byte) -98);
+          if (param0 == 126) {
+            if (param1 != null) {
+              if (param1.length != 0) {
+                var3_int = param1.length;
+                this.field_C = new String[var3_int];
+                for (var4_int = 0; var3_int > var4_int; var4_int++) {
+                  this.field_C[var4_int] = p.a((CharSequence) ((Object) param1[var4_int]), param0 - 123).replace(' ', ' ');
                 }
+                var4 = new fh(ng.field_F, 0, 1);
+                this.field_I = new hk[var3_int + 1];
+                for (var5 = 0; var5 < var3_int; var5++) {
+                  this.field_I[var5] = new hk(this.field_C[var5], (bb) (this));
+                  this.field_I[var5].field_q = (dh) ((Object) var4);
+                  this.field_I[var5].field_j = ml.field_u;
+                  this.field_I[var5].a(15, 80, (byte) -14, var5 * 16 + 20, 0);
+                  this.b((byte) -126, this.field_I[var5]);
+                }
+                this.field_I[var3_int] = new hk(ll.field_a, (bb) (this));
+                this.field_I[var3_int].field_q = (dh) ((Object) var4);
+                this.field_I[var3_int].a(15, 100, (byte) -59, 16 + (var3_int * 16 + 20), 0);
+                this.b((byte) -122, this.field_I[var3_int]);
+                return;
               }
-              this.field_C = null;
-              decompiledRegionSelector0 = 1;
-            } else {
-              decompiledRegionSelector0 = 0;
             }
+            this.field_C = null;
+            return;
+          } else {
+            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -310,15 +277,6 @@ final class vh extends ee implements pl {
             stackIn_19_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return;
-          } else {
-            return;
-          }
         }
     }
 

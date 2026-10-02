@@ -43,6 +43,7 @@ class qc extends hf {
               field_i = -57;
             }
             stackIn_6_0 = sc.a((byte) -60);
+            return stackIn_6_0;
           } else {
             return null;
           }
@@ -64,7 +65,6 @@ class qc extends hf {
           }
           throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(')').toString());
         }
-        return stackIn_6_0;
     }
 
     final boolean h(byte param0) {
@@ -96,53 +96,51 @@ class qc extends hf {
         int var10 = 0;
         var10 = Geoblox.field_C;
         try {
-          L0: {
-            var3_long = 0L;
-            if (param1) {
-              this.field_f = -109;
-            }
-            var5 = 0L;
-            var7 = param0.length();
-            L2: for (var8 = 19; var8 >= 0; var8--) {
-              var3_long = var3_long * 38L;
-              if (var7 > var8) {
-                L4: {
-                  var9 = param0.charAt(var8);
-                  if (var9 >= 65) {
-                    if (90 >= var9) {
-                      var3_long = var3_long + (long)(-63 + var9);
-                      break L4;
-                    }
-                  }
-                  if (var9 >= 97) {
-                    if (var9 <= 122) {
-                      var3_long = var3_long + (long)(-97 + (2 + var9));
-                      break L4;
-                    }
-                  }
-                  if (var9 >= 48) {
-                    if (var9 <= 57) {
-                      var3_long = var3_long + (long)(-48 + var9 + 28);
-                      break L4;
-                    }
-                  }
-                  var3_long = var3_long + 1L;
-                }
-                if (var8 != 10) {
-                  continue L2;
-                }
-              } else {
-                if (var8 != 10) {
-                  continue L2;
-                }
-              }
-              var5 = var3_long;
-              var3_long = 0L;
-            }
-            this.a(-109, var3_long);
-            this.a(-47, var5);
-            break L0;
+          var3_long = 0L;
+          if (param1) {
+            this.field_f = -109;
           }
+          var5 = 0L;
+          var7 = param0.length();
+          L1: for (var8 = 19; var8 >= 0; var8--) {
+            var3_long = var3_long * 38L;
+            if (var7 > var8) {
+              L3: {
+                var9 = param0.charAt(var8);
+                if (var9 >= 65) {
+                  if (90 >= var9) {
+                    var3_long = var3_long + (long)(-63 + var9);
+                    break L3;
+                  }
+                }
+                if (var9 >= 97) {
+                  if (var9 <= 122) {
+                    var3_long = var3_long + (long)(-97 + (2 + var9));
+                    break L3;
+                  }
+                }
+                if (var9 >= 48) {
+                  if (var9 <= 57) {
+                    var3_long = var3_long + (long)(-48 + var9 + 28);
+                    break L3;
+                  }
+                }
+                var3_long = var3_long + 1L;
+              }
+              if (var8 != 10) {
+                continue L1;
+              }
+            } else {
+              if (var8 != 10) {
+                continue L1;
+              }
+            }
+            var5 = var3_long;
+            var3_long = 0L;
+          }
+          this.a(-109, var3_long);
+          this.a(-47, var5);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -336,17 +334,15 @@ class qc extends hf {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          L0: {
-            var3 = (ph) ((Object) el.field_p.g(0));
-            L1: while (var3 != null) {
-              rl.a(param1, 534, var3);
-              var3 = (ph) ((Object) el.field_p.d(1));
-            }
-            if (!param0) {
-              field_i = -54;
-            }
-            break L0;
+          var3 = (ph) ((Object) el.field_p.g(0));
+          L0: while (var3 != null) {
+            rl.a(param1, 534, var3);
+            var3 = (ph) ((Object) el.field_p.d(1));
           }
+          if (!param0) {
+            field_i = -54;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -366,20 +362,18 @@ class qc extends hf {
         RuntimeException var5 = null;
         String var6 = null;
         try {
-          L0: {
-            var5_int = param3;
-            if (param1 != -97) {
-              var6 = (String) null;
-              this.a((String) null, 75);
-            }
-            L2: while (var5_int < param3 + param0) {
-              fieldTemp$0 = this.field_f;
-              this.field_f = this.field_f + 1;
-              this.field_j[fieldTemp$0] = param2[var5_int];
-              var5_int++;
-            }
-            break L0;
+          var5_int = param3;
+          if (param1 != -97) {
+            var6 = (String) null;
+            this.a((String) null, 75);
           }
+          L1: while (var5_int < param3 + param0) {
+            fieldTemp$0 = this.field_f;
+            this.field_f = this.field_f + 1;
+            this.field_j[fieldTemp$0] = param2[var5_int];
+            var5_int++;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -582,20 +576,18 @@ class qc extends hf {
         RuntimeException var5 = null;
         mb var6 = null;
         try {
-          L0: {
-            var5_int = param3;
-            if (param0 != 29915) {
-              var6 = (mb) null;
-              qc.a((mb) null, (mb) null, 35);
-            }
-            L2: while (param3 + param1 > var5_int) {
-              fieldTemp$0 = this.field_f;
-              this.field_f = this.field_f + 1;
-              param2[var5_int] = this.field_j[fieldTemp$0];
-              var5_int++;
-            }
-            break L0;
+          var5_int = param3;
+          if (param0 != 29915) {
+            var6 = (mb) null;
+            qc.a((mb) null, (mb) null, 35);
           }
+          L1: while (param3 + param1 > var5_int) {
+            fieldTemp$0 = this.field_f;
+            this.field_f = this.field_f + 1;
+            param2[var5_int] = this.field_j[fieldTemp$0];
+            var5_int++;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -641,38 +633,36 @@ class qc extends hf {
         int var9 = 0;
         mb var10 = null;
         try {
-          L0: {
-            var3_int = this.field_f / 8;
-            this.field_f = 0;
-            if (param1 != -33) {
-              var10 = (mb) null;
-              qc.a((mb) null, (mb) null, 109);
-            }
-            var4 = 0;
-            L2: while (true) {
-              if (var3_int <= var4) {
-                break L0;
-              } else {
-                var5 = this.a((byte) -69);
-                var6 = this.a((byte) -34);
-                var7 = 0;
-                var8 = -1640531527;
-                var9 = 32;
-                L3: while (true) {
-                  incrementValue$0 = var9;
-                  var9--;
-                  if (0 >= incrementValue$0) {
-                    this.field_f = this.field_f - 8;
-                    this.c((byte) 95, var5);
-                    this.c((byte) 95, var6);
-                    var4++;
-                    continue L2;
-                  } else {
-                    var5 = var5 + ((var6 >>> 5 ^ var6 << 4) + var6 ^ var7 + param0[3 & var7]);
-                    var7 = var7 + var8;
-                    var6 = var6 + (var5 + (var5 << 4 ^ var5 >>> 5) ^ var7 + param0[(var7 & 7480) >>> 11]);
-                    continue L3;
-                  }
+          var3_int = this.field_f / 8;
+          this.field_f = 0;
+          if (param1 != -33) {
+            var10 = (mb) null;
+            qc.a((mb) null, (mb) null, 109);
+          }
+          var4 = 0;
+          L1: while (true) {
+            if (var3_int <= var4) {
+              return;
+            } else {
+              var5 = this.a((byte) -69);
+              var6 = this.a((byte) -34);
+              var7 = 0;
+              var8 = -1640531527;
+              var9 = 32;
+              L2: while (true) {
+                incrementValue$0 = var9;
+                var9--;
+                if (0 >= incrementValue$0) {
+                  this.field_f = this.field_f - 8;
+                  this.c((byte) 95, var5);
+                  this.c((byte) 95, var6);
+                  var4++;
+                  continue L1;
+                } else {
+                  var5 = var5 + ((var6 >>> 5 ^ var6 << 4) + var6 ^ var7 + param0[3 & var7]);
+                  var7 = var7 + var8;
+                  var6 = var6 + (var5 + (var5 << 4 ^ var5 >>> 5) ^ var7 + param0[(var7 & 7480) >>> 11]);
+                  continue L2;
                 }
               }
             }
@@ -733,39 +723,37 @@ class qc extends hf {
         int var11 = 0;
         int var12 = 0;
         try {
-          L0: {
-            var5_int = this.field_f;
-            if (param0 > -63) {
-              this.e(3);
-            }
-            this.field_f = param2;
-            var6 = (-param2 + param3) / 8;
-            var7 = 0;
-            L2: while (true) {
-              if (var7 >= var6) {
-                this.field_f = var5_int;
-                break L0;
-              } else {
-                var8 = this.a((byte) -36);
-                var9 = this.a((byte) -103);
-                var10 = -957401312;
-                var11 = -1640531527;
-                var12 = 32;
-                L3: while (true) {
-                  incrementValue$0 = var12;
-                  var12--;
-                  if (incrementValue$0 <= 0) {
-                    this.field_f = this.field_f - 8;
-                    this.c((byte) 95, var8);
-                    this.c((byte) 95, var9);
-                    var7++;
-                    continue L2;
-                  } else {
-                    var9 = var9 - (var10 + param1[(7701 & var10) >>> 11] ^ var8 + (var8 << 4 ^ var8 >>> 5));
-                    var10 = var10 - var11;
-                    var8 = var8 - (var10 + param1[var10 & 3] ^ (var9 >>> 5 ^ var9 << 4) + var9);
-                    continue L3;
-                  }
+          var5_int = this.field_f;
+          if (param0 > -63) {
+            this.e(3);
+          }
+          this.field_f = param2;
+          var6 = (-param2 + param3) / 8;
+          var7 = 0;
+          L1: while (true) {
+            if (var7 >= var6) {
+              this.field_f = var5_int;
+              return;
+            } else {
+              var8 = this.a((byte) -36);
+              var9 = this.a((byte) -103);
+              var10 = -957401312;
+              var11 = -1640531527;
+              var12 = 32;
+              L2: while (true) {
+                incrementValue$0 = var12;
+                var12--;
+                if (incrementValue$0 <= 0) {
+                  this.field_f = this.field_f - 8;
+                  this.c((byte) 95, var8);
+                  this.c((byte) 95, var9);
+                  var7++;
+                  continue L1;
+                } else {
+                  var9 = var9 - (var10 + param1[(7701 & var10) >>> 11] ^ var8 + (var8 << 4 ^ var8 >>> 5));
+                  var10 = var10 - var11;
+                  var8 = var8 - (var10 + param1[var10 & 3] ^ (var9 >>> 5 ^ var9 << 4) + var9);
+                  continue L2;
                 }
               }
             }
@@ -1034,6 +1022,7 @@ class qc extends hf {
           var3_int = 2 / ((param2 + 41) / 54);
           var4 = (String) null;
           stackIn_1_0 = pf.a(0, 0, param0, param1, (String) null, false, 94);
+          return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -1065,7 +1054,6 @@ class qc extends hf {
           }
           throw t.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
-        return stackIn_1_0;
     }
 
     final int c(int param0) {

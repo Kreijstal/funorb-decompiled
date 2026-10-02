@@ -72,7 +72,7 @@ final class og extends rc {
         qc var10 = null;
         var9 = Geoblox.field_C;
         try {
-          L1: {
+          L0: {
             if (1 == param0) {
               this.field_p = uj.a('<', true, param1.e((byte) 116));
             } else {
@@ -85,7 +85,7 @@ final class og extends rc {
                   this.field_s = new int[var4_int][];
                   this.field_o = new int[var4_int];
                   for (var5 = 0; var4_int > var5; var5++) {
-                    L3: {
+                    L2: {
                       var6 = param1.b(true);
                       var7 = b.a(false, var6);
                       if (var7 != null) {
@@ -95,11 +95,11 @@ final class og extends rc {
                         for (var8 = 0; var7.field_a > var8; var8++) {
                           this.field_s[var5][var8] = param1.b(true);
                         }
-                        break L3;
+                        break L2;
                       }
                     }
                   }
-                  break L1;
+                  break L0;
                 }
               } else {
                 var4_int = param1.c((byte) 34);
@@ -107,7 +107,7 @@ final class og extends rc {
                 for (var5 = 0; var5 < var4_int; var5++) {
                   this.field_m[var5] = param1.b(true);
                 }
-                break L1;
+                break L0;
               }
             }
           }
@@ -115,6 +115,7 @@ final class og extends rc {
             var10 = (qc) null;
             this.a(-112, (qc) null);
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -202,26 +203,22 @@ final class og extends rc {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         var4 = Geoblox.field_C;
         try {
-          L0: {
-            if (param0 == 0) {
-              L1: while (true) {
-                var3_int = param1.c((byte) 34);
-                if (0 != var3_int) {
-                  this.a(var3_int, param1, -26093);
-                  continue L1;
-                } else {
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                }
+          if (param0 == 0) {
+            L0: while (true) {
+              var3_int = param1.c((byte) 34);
+              if (0 != var3_int) {
+                this.a(var3_int, param1, -26093);
+                continue L0;
+              } else {
+                return;
               }
-            } else {
-              decompiledRegionSelector0 = 0;
             }
+          } else {
+            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -240,11 +237,6 @@ final class og extends rc {
             stackIn_10_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 

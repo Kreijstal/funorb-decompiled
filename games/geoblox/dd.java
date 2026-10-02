@@ -89,16 +89,15 @@ abstract class dd extends ee {
         StringBuilder stackIn_32_1 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_33_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (ak.a(param0, (byte) -67)) {
             stackIn_3_0 = 0;
-            decompiledRegionSelector0 = 0;
+            return stackIn_3_0 != 0;
           } else {
             if (ra.a(18725, param0)) {
               stackIn_7_0 = 0;
-              decompiledRegionSelector0 = 1;
+              return stackIn_7_0 != 0;
             } else {
               if (!em.a(param0, param2 + 25409)) {
                 if (param1.length() != 0) {
@@ -108,26 +107,26 @@ abstract class dd extends ee {
                     }
                     if (uk.a(8, param1, param0)) {
                       stackIn_22_0 = 0;
-                      decompiledRegionSelector0 = 5;
+                      return stackIn_22_0 != 0;
                     } else {
                       if (wc.a(param0, param1, (byte) -107)) {
                         stackIn_26_0 = 0;
-                        decompiledRegionSelector0 = 6;
+                        return stackIn_26_0 != 0;
                       } else {
                         return true;
                       }
                     }
                   } else {
                     stackIn_16_0 = 0;
-                    decompiledRegionSelector0 = 4;
+                    return stackIn_16_0 != 0;
                   }
                 } else {
                   stackIn_13_0 = 1;
-                  decompiledRegionSelector0 = 3;
+                  return stackIn_13_0 != 0;
                 }
               } else {
                 stackIn_10_0 = 0;
-                decompiledRegionSelector0 = 2;
+                return stackIn_10_0 != 0;
               }
             }
           }
@@ -161,31 +160,6 @@ abstract class dd extends ee {
             stackIn_33_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_33_2).append(',').append(param2).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_7_0 != 0;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return stackIn_10_0 != 0;
-            } else {
-              if (decompiledRegionSelector0 == 3) {
-                return stackIn_13_0 != 0;
-              } else {
-                if (decompiledRegionSelector0 == 4) {
-                  return stackIn_16_0 != 0;
-                } else {
-                  if (decompiledRegionSelector0 == 5) {
-                    return stackIn_22_0 != 0;
-                  } else {
-                    return stackIn_26_0 != 0;
-                  }
-                }
-              }
-            }
-          }
         }
     }
 

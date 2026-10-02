@@ -39,6 +39,7 @@ class f extends qf implements pl {
             pc.a(3, false);
             this.h((byte) -104);
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
@@ -146,16 +147,15 @@ class f extends qf implements pl {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != param1) {
             stackIn_4_0 = super.a(param0, param1 + 0, param2, param3);
-            decompiledRegionSelector0 = 1;
+            return stackIn_4_0;
           } else {
             this.h((byte) -104);
             stackIn_2_0 = 1;
-            decompiledRegionSelector0 = 0;
+            return stackIn_2_0 != 0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -174,11 +174,6 @@ class f extends qf implements pl {
             stackIn_8_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0 != 0;
-        } else {
-          return stackIn_4_0;
         }
     }
 
@@ -701,7 +696,6 @@ class f extends qf implements pl {
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         String stackIn_31_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -709,7 +703,7 @@ class f extends qf implements pl {
         var5 = Geoblox.field_C;
         try {
           if (this.field_rb) {
-            decompiledRegionSelector0 = 0;
+            return;
           } else {
             if (param1 == 19810) {
               stackIn_8_0 = this;
@@ -763,9 +757,9 @@ class f extends qf implements pl {
                 }
               }
               this.b(var6, param1 ^ -19736);
-              decompiledRegionSelector0 = 2;
+              return;
             } else {
-              decompiledRegionSelector0 = 1;
+              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -786,15 +780,6 @@ class f extends qf implements pl {
           }
           throw t.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_31_2).append(')').toString());
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return;
-          } else {
-            return;
-          }
-        }
     }
 
     final static boolean b(byte param0, CharSequence param1) {
@@ -811,6 +796,7 @@ class f extends qf implements pl {
             field_lb = (String[]) null;
           }
           stackIn_3_0 = pa.a(param1, true, 10, 87);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -829,7 +815,6 @@ class f extends qf implements pl {
           }
           throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     final void c(boolean param0) {

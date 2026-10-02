@@ -86,22 +86,20 @@ final class oi {
         RuntimeException var2 = null;
         var3 = Geoblox.field_C;
         try {
-          L0: {
-            var4 = (se) ((Object) sj.field_g.g(0));
-            L1: while (var4 != null) {
-              tj.a(param0, 86, var4);
-              var4 = (se) ((Object) sj.field_g.d(1));
-            }
-            if (param1 < 115) {
-              field_b = (dm) null;
-            }
-            var5 = (ea) ((Object) ea.field_g.g(0));
-            L3: while (var5 != null) {
-              gj.a((byte) -88, param0, var5);
-              var5 = (ea) ((Object) ea.field_g.d(1));
-            }
-            break L0;
+          var4 = (se) ((Object) sj.field_g.g(0));
+          L0: while (var4 != null) {
+            tj.a(param0, 86, var4);
+            var4 = (se) ((Object) sj.field_g.d(1));
           }
+          if (param1 < 115) {
+            field_b = (dm) null;
+          }
+          var5 = (ea) ((Object) ea.field_g.g(0));
+          L2: while (var5 != null) {
+            gj.a((byte) -88, param0, var5);
+            var5 = (ea) ((Object) ea.field_g.d(1));
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -132,6 +130,7 @@ final class oi {
           var4_int = param3.a((byte) 127, param2);
           var6 = param3.a(param1, -101, var4_int);
           stackIn_1_0 = rd.a(var4_int, -122, var6, param3);
+          return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -176,7 +175,6 @@ final class oi {
           }
           throw t.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(')').toString());
         }
-        return stackIn_1_0;
     }
 
     public static void a(byte param0) {

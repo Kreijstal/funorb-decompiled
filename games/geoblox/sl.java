@@ -22,7 +22,6 @@ final class sl {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           hj.a((byte) -85, (java.awt.Component) ((Object) param0));
@@ -30,12 +29,12 @@ final class sl {
             fk.a((java.awt.Component) ((Object) param0), param1 - 56);
             if (null != vc.field_f) {
               vc.field_f.a(124, (java.awt.Component) ((Object) param0));
-              decompiledRegionSelector0 = 1;
+              return;
             } else {
               return;
             }
           } else {
-            decompiledRegionSelector0 = 0;
+            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -54,11 +53,6 @@ final class sl {
             stackIn_9_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 
@@ -79,49 +73,47 @@ final class sl {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          L0: {
-            var2_int = param0.length();
-            if (20 < var2_int) {
-              var2_int = 20;
-            }
-            var8 = new char[var2_int];
-            var7 = var8;
-            var3 = var7;
-            var4 = 0;
-            if (param1 != 48) {
-              var6 = (java.awt.Canvas) null;
-              sl.a((java.awt.Canvas) null, 58);
-            }
-            L3: while (var2_int > var4) {
-              L4: {
-                var5 = param0.charAt(var4);
-                if (var5 >= 65) {
-                  if (var5 <= 90) {
-                    var3[var4] = (char)(-65 + (var5 + 97));
-                    break L4;
-                  }
-                }
-                L6: {
-                  if (var5 >= 97) {
-                    if (var5 <= 122) {
-                      break L6;
-                    }
-                  }
-                  if (var5 >= 48) {
-                    if (var5 <= 57) {
-                      break L6;
-                    }
-                  }
-                  var3[var4] = (char)95;
-                  break L4;
-                }
-                var3[var4] = (char)var5;
-              }
-              var4++;
-            }
-            stackIn_20_0 = new String(var8);
-            break L0;
+          var2_int = param0.length();
+          if (20 < var2_int) {
+            var2_int = 20;
           }
+          var8 = new char[var2_int];
+          var7 = var8;
+          var3 = var7;
+          var4 = 0;
+          if (param1 != 48) {
+            var6 = (java.awt.Canvas) null;
+            sl.a((java.awt.Canvas) null, 58);
+          }
+          L2: while (var2_int > var4) {
+            L3: {
+              var5 = param0.charAt(var4);
+              if (var5 >= 65) {
+                if (var5 <= 90) {
+                  var3[var4] = (char)(-65 + (var5 + 97));
+                  break L3;
+                }
+              }
+              L5: {
+                if (var5 >= 97) {
+                  if (var5 <= 122) {
+                    break L5;
+                  }
+                }
+                if (var5 >= 48) {
+                  if (var5 <= 57) {
+                    break L5;
+                  }
+                }
+                var3[var4] = (char)95;
+                break L3;
+              }
+              var3[var4] = (char)var5;
+            }
+            var4++;
+          }
+          stackIn_20_0 = new String(var8);
+          return stackIn_20_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -140,7 +132,6 @@ final class sl {
           }
           throw t.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_20_0;
     }
 
     public static void a(int param0) {
@@ -172,6 +163,7 @@ final class sl {
             field_l = (rh) null;
           }
           stackIn_3_0 = param1.a(param0, -17978);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -190,7 +182,6 @@ final class sl {
           }
           throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     static {

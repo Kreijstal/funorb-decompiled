@@ -33,7 +33,6 @@ final class ld {
         int stackIn_41_0 = 0;
         int stackIn_45_0 = 0;
         int stackIn_47_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
         RuntimeException var1 = null;
@@ -48,158 +47,98 @@ final class ld {
         int var10 = 0;
         var10 = Geoblox.field_C;
         try {
-          L0: {
-            var1_int = 240 * vb.field_f + 320;
-            var2 = var1_int;
-            var3 = -(230 * vb.field_f) + var1_int;
-            var4 = 230 * vb.field_f + var1_int;
-            var5 = 230;
-            var6 = 0;
-            var7 = 52900;
-            var8 = 64 / ((param0 - 32) / 34);
-            var9 = var7 - var5;
-            if (vb.field_c[-var5 + var1_int] != 0) {
-              stackIn_4_0 = 1;
-              decompiledRegionSelector0 = 0;
-            } else {
-              if (0 == vb.field_c[var1_int + var5]) {
-                if (vb.field_c[var3] != 0) {
-                  stackIn_11_0 = 1;
-                  decompiledRegionSelector0 = 2;
+          var1_int = 240 * vb.field_f + 320;
+          var2 = var1_int;
+          var3 = -(230 * vb.field_f) + var1_int;
+          var4 = 230 * vb.field_f + var1_int;
+          var5 = 230;
+          var6 = 0;
+          var7 = 52900;
+          var8 = 64 / ((param0 - 32) / 34);
+          var9 = var7 - var5;
+          if (vb.field_c[-var5 + var1_int] != 0) {
+            stackIn_4_0 = 1;
+            return stackIn_4_0 != 0;
+          } else {
+            if (0 == vb.field_c[var1_int + var5]) {
+              if (vb.field_c[var3] != 0) {
+                stackIn_11_0 = 1;
+                return stackIn_11_0 != 0;
+              } else {
+                if (vb.field_c[var4] != 0) {
+                  stackIn_15_0 = 1;
+                  return stackIn_15_0 != 0;
                 } else {
-                  if (vb.field_c[var4] != 0) {
-                    stackIn_15_0 = 1;
-                    decompiledRegionSelector0 = 3;
-                  } else {
-                    L1: while (true) {
-                      incrementValue$0 = var6;
-                      var6++;
-                      var9 = var9 + (incrementValue$0 + var6);
-                      var2 = var2 + vb.field_f;
-                      var1_int = var1_int - vb.field_f;
-                      if (var7 < var9) {
-                        var3 = var3 + vb.field_f;
-                        var4 = var4 - vb.field_f;
-                        var5--;
-                        var9 = var9 - (var5 + var5);
-                      }
-                      if (var6 > var5) {
-                        stackIn_47_0 = 0;
-                        decompiledRegionSelector0 = 12;
-                        break L0;
-                      } else {
-                        if (0 == vb.field_c[-var6 + var3]) {
-                          if (vb.field_c[var3 + var6] == 0) {
-                            if (vb.field_c[-var5 + var1_int] == 0) {
-                              if (vb.field_c[var5 + var1_int] == 0) {
-                                if (vb.field_c[var2 - var5] != 0) {
-                                  stackIn_34_0 = 1;
-                                  decompiledRegionSelector0 = 8;
-                                  break L0;
-                                } else {
-                                  if (vb.field_c[var5 + var2] == 0) {
-                                    if (vb.field_c[var4 - var6] != 0) {
-                                      stackIn_41_0 = 1;
-                                      decompiledRegionSelector0 = 10;
-                                      break L0;
-                                    } else {
-                                      if (vb.field_c[var4 + var6] != 0) {
-                                        stackIn_45_0 = 1;
-                                        decompiledRegionSelector0 = 11;
-                                        break L0;
-                                      } else {
-                                        continue L1;
-                                      }
-                                    }
-                                  } else {
-                                    stackIn_37_0 = 1;
-                                    decompiledRegionSelector0 = 9;
-                                    break L0;
-                                  }
-                                }
+                  L0: while (true) {
+                    incrementValue$0 = var6;
+                    var6++;
+                    var9 = var9 + (incrementValue$0 + var6);
+                    var2 = var2 + vb.field_f;
+                    var1_int = var1_int - vb.field_f;
+                    if (var7 < var9) {
+                      var3 = var3 + vb.field_f;
+                      var4 = var4 - vb.field_f;
+                      var5--;
+                      var9 = var9 - (var5 + var5);
+                    }
+                    if (var6 > var5) {
+                      stackIn_47_0 = 0;
+                      return stackIn_47_0 != 0;
+                    } else {
+                      if (0 == vb.field_c[-var6 + var3]) {
+                        if (vb.field_c[var3 + var6] == 0) {
+                          if (vb.field_c[-var5 + var1_int] == 0) {
+                            if (vb.field_c[var5 + var1_int] == 0) {
+                              if (vb.field_c[var2 - var5] != 0) {
+                                stackIn_34_0 = 1;
+                                return stackIn_34_0 != 0;
                               } else {
-                                stackIn_30_0 = 1;
-                                decompiledRegionSelector0 = 7;
-                                break L0;
+                                if (vb.field_c[var5 + var2] == 0) {
+                                  if (vb.field_c[var4 - var6] != 0) {
+                                    stackIn_41_0 = 1;
+                                    return stackIn_41_0 != 0;
+                                  } else {
+                                    if (vb.field_c[var4 + var6] != 0) {
+                                      stackIn_45_0 = 1;
+                                      return stackIn_45_0 != 0;
+                                    } else {
+                                      continue L0;
+                                    }
+                                  }
+                                } else {
+                                  stackIn_37_0 = 1;
+                                  return stackIn_37_0 != 0;
+                                }
                               }
                             } else {
-                              stackIn_27_0 = 1;
-                              decompiledRegionSelector0 = 6;
-                              break L0;
+                              stackIn_30_0 = 1;
+                              return stackIn_30_0 != 0;
                             }
                           } else {
-                            stackIn_24_0 = 1;
-                            decompiledRegionSelector0 = 5;
-                            break L0;
+                            stackIn_27_0 = 1;
+                            return stackIn_27_0 != 0;
                           }
                         } else {
-                          stackIn_21_0 = 1;
-                          decompiledRegionSelector0 = 4;
-                          break L0;
+                          stackIn_24_0 = 1;
+                          return stackIn_24_0 != 0;
                         }
+                      } else {
+                        stackIn_21_0 = 1;
+                        return stackIn_21_0 != 0;
                       }
                     }
                   }
                 }
-              } else {
-                stackIn_7_0 = 1;
-                decompiledRegionSelector0 = 1;
               }
+            } else {
+              stackIn_7_0 = 1;
+              return stackIn_7_0 != 0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var1), "ld.B(" + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_4_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_7_0 != 0;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return stackIn_11_0 != 0;
-            } else {
-              if (decompiledRegionSelector0 == 3) {
-                return stackIn_15_0 != 0;
-              } else {
-                if (decompiledRegionSelector0 == 4) {
-                  return stackIn_21_0 != 0;
-                } else {
-                  if (decompiledRegionSelector0 == 5) {
-                    return stackIn_24_0 != 0;
-                  } else {
-                    if (decompiledRegionSelector0 == 6) {
-                      return stackIn_27_0 != 0;
-                    } else {
-                      if (decompiledRegionSelector0 == 7) {
-                        return stackIn_30_0 != 0;
-                      } else {
-                        if (decompiledRegionSelector0 == 8) {
-                          return stackIn_34_0 != 0;
-                        } else {
-                          if (decompiledRegionSelector0 == 9) {
-                            return stackIn_37_0 != 0;
-                          } else {
-                            if (decompiledRegionSelector0 == 10) {
-                              return stackIn_41_0 != 0;
-                            } else {
-                              if (decompiledRegionSelector0 == 11) {
-                                return stackIn_45_0 != 0;
-                              } else {
-                                return stackIn_47_0 != 0;
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
         }
     }
 

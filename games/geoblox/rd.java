@@ -35,21 +35,19 @@ final class rd extends ff {
         RuntimeException var3_ref = null;
         var6 = Geoblox.field_C;
         try {
-          L0: {
-            if (param0 != 124) {
-              var7 = (el) null;
-              this.a(-125, -66, 53, true, (el) null);
-            }
-            var8 = this.field_x;
-            var3 = var8;
-            for (var4 = 0; var8.length > var4; var4++) {
-              var5 = var8[var4];
-              if (var5 != null) {
-                var5.field_a = param1;
-              }
-            }
-            break L0;
+          if (param0 != 124) {
+            var7 = (el) null;
+            this.a(-125, -66, 53, true, (el) null);
           }
+          var8 = this.field_x;
+          var3 = var8;
+          for (var4 = 0; var8.length > var4; var4++) {
+            var5 = var8[var4];
+            if (var5 != null) {
+              var5.field_a = param1;
+            }
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -90,7 +88,7 @@ final class rd extends ff {
         int var7 = 0;
         var7 = Geoblox.field_C;
         try {
-          L1: {
+          L0: {
             super.a(param1, param0);
             if (param2) {
               for (var4_int = 0; 6 > var4_int; var4_int++) {
@@ -117,11 +115,12 @@ final class rd extends ff {
                   ((si) (Object) stackIn_9_0).a(stackIn_9_1, stackIn_9_2);
                 }
               }
-              break L1;
+              break L0;
             } else {
               sf.a(this.field_x, 0, param1.field_x, 0, 6);
             }
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -157,17 +156,15 @@ final class rd extends ff {
         RuntimeException var3_ref = null;
         var6 = Geoblox.field_C;
         try {
-          L0: {
-            var7 = this.field_x;
-            var3 = var7;
-            for (var4 = param0; var4 < var7.length; var4++) {
-              var5 = var7[var4];
-              if (var5 != null) {
-                var5.field_l = param1;
-              }
+          var7 = this.field_x;
+          var3 = var7;
+          for (var4 = param0; var4 < var7.length; var4++) {
+            var5 = var7[var4];
+            if (var5 != null) {
+              var5.field_l = param1;
             }
-            break L0;
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -249,6 +246,7 @@ final class rd extends ff {
           if (param2 <= 38) {
             field_r = (di) null;
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -300,7 +298,7 @@ final class rd extends ff {
           if (param1 >= -5) {
             field_s = (byte[][]) null;
           }
-          L4: {
+          L3: {
             this.field_t.a((byte) -28);
             var7.a(param0, param2, this.field_t, (rd) (this), -16566, param4);
             if (var10 != null) {
@@ -315,7 +313,7 @@ final class rd extends ff {
                 if (var10.field_f != 0) {
                   if (var12 != null) {
                     var12.a(param0, param2, this.field_t, (rd) (this), -16566, param4);
-                    break L4;
+                    break L3;
                   }
                 }
                 var9 = this.field_x[2];
@@ -339,6 +337,7 @@ final class rd extends ff {
           }
           this.field_t.a((rd) (this), param0, param2, param4, 0);
           id.a(true);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;

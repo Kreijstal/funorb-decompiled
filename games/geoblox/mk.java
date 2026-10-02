@@ -40,32 +40,28 @@ final class mk extends q {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (this.field_m.a(param0, param1) != si.field_m) {
-              if (!param1.equals(this.field_j)) {
-                var3 = ci.a(-1, param1);
-                if (!var3.a(-76)) {
-                  stackIn_8_0 = si.field_n;
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  this.field_j = param1;
-                  this.field_i = var3.a((byte) -52);
-                }
-              }
-              if (!this.field_i) {
-                stackIn_13_0 = si.field_m;
+          if (this.field_m.a(param0, param1) != si.field_m) {
+            if (!param1.equals(this.field_j)) {
+              var3 = ci.a(-1, param1);
+              if (!var3.a(-76)) {
+                stackIn_8_0 = si.field_n;
+                return stackIn_8_0;
               } else {
-                stackIn_13_0 = kk.field_w;
+                this.field_j = param1;
+                this.field_i = var3.a((byte) -52);
               }
-              decompiledRegionSelector0 = 2;
-            } else {
-              stackIn_2_0 = si.field_m;
-              decompiledRegionSelector0 = 0;
             }
+            if (!this.field_i) {
+              stackIn_13_0 = si.field_m;
+            } else {
+              stackIn_13_0 = kk.field_w;
+            }
+            return stackIn_13_0;
+          } else {
+            stackIn_2_0 = si.field_m;
+            return stackIn_2_0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -85,15 +81,6 @@ final class mk extends q {
           }
           throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(')').toString());
         }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_8_0;
-          } else {
-            return stackIn_13_0;
-          }
-        }
     }
 
     final String b(int param0, String param1) {
@@ -105,7 +92,6 @@ final class mk extends q {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 422) {
@@ -113,11 +99,11 @@ final class mk extends q {
           }
           if (this.field_m.a(-257, param1) == si.field_m) {
             stackIn_5_0 = this.field_m.b(422, param1);
-            decompiledRegionSelector0 = 0;
+            return stackIn_5_0;
           } else {
             if (this.a(-257, param1) == si.field_m) {
               stackIn_9_0 = g.field_m;
-              decompiledRegionSelector0 = 1;
+              return stackIn_9_0;
             } else {
               return da.field_e;
             }
@@ -139,11 +125,6 @@ final class mk extends q {
             stackIn_13_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_5_0;
-        } else {
-          return stackIn_9_0;
         }
     }
 
@@ -172,6 +153,7 @@ final class mk extends q {
           ((jg) ((Object) var4)).field_b = param2;
           ((jg) ((Object) var4)).field_e = param1;
           stackIn_1_0 = (cd) (var4);
+          return (jg) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -190,7 +172,6 @@ final class mk extends q {
           }
           throw t.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',').append(param2).append(')').toString());
         }
-        return (jg) ((Object) stackIn_1_0);
     }
 
     static {

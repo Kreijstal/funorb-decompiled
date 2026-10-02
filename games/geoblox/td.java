@@ -167,41 +167,36 @@ final class td extends hk {
         StringBuilder stackIn_23_1 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_24_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var8 = Geoblox.field_C;
         try {
-          L0: {
-            if (param3 <= 23) {
-              var9 = (gd) null;
-              td.a(-80, (gd) null);
-            }
-            var4_int = param1.length();
-            if (param2 >= 0) {
-              if (var4_int >= param2) {
-                var5 = param0.length();
-                if (var5 != 0) {
-                  var6 = param2 + var5;
-                  if (var4_int < var6) {
-                    param1.setLength(var6);
-                  }
-                  for (var7 = 0; var7 < var5; var7++) {
-                    incrementValue$1 = param2;
-                    param2++;
-                    param1.setCharAt(incrementValue$1, param0.charAt(var7));
-                  }
-                  stackIn_17_0 = (StringBuilder) (param1);
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  stackIn_9_0 = (StringBuilder) (param1);
-                  decompiledRegionSelector0 = 0;
-                  break L0;
+          if (param3 <= 23) {
+            var9 = (gd) null;
+            td.a(-80, (gd) null);
+          }
+          var4_int = param1.length();
+          if (param2 >= 0) {
+            if (var4_int >= param2) {
+              var5 = param0.length();
+              if (var5 != 0) {
+                var6 = param2 + var5;
+                if (var4_int < var6) {
+                  param1.setLength(var6);
                 }
+                for (var7 = 0; var7 < var5; var7++) {
+                  incrementValue$1 = param2;
+                  param2++;
+                  param1.setCharAt(incrementValue$1, param0.charAt(var7));
+                }
+                stackIn_17_0 = (StringBuilder) (param1);
+                return stackIn_17_0;
+              } else {
+                stackIn_9_0 = (StringBuilder) (param1);
+                return stackIn_9_0;
               }
             }
-            throw new StringIndexOutOfBoundsException("length=" + var4_int + " startPos=" + param2);
           }
+          throw new StringIndexOutOfBoundsException("length=" + var4_int + " startPos=" + param2);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -232,11 +227,6 @@ final class td extends hk {
             stackIn_24_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_24_2).append(',').append(param2).append(',').append(param3).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_9_0;
-        } else {
-          return stackIn_17_0;
         }
     }
 
@@ -270,6 +260,7 @@ final class td extends hk {
             this.a(89, -88, (byte) -40, -90);
           }
           stackIn_3_0 = 0;
+          return stackIn_3_0 != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -288,7 +279,6 @@ final class td extends hk {
           }
           throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(')').toString());
         }
-        return stackIn_3_0 != 0;
     }
 
     final static void a(byte param0) {

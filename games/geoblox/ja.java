@@ -454,33 +454,31 @@ final class ja extends rc {
         RuntimeException decompiledCaughtException = null;
         var4 = Geoblox.field_C;
         try {
-          L0: {
-            L1: for (var3_int = param1; var3_int < this.field_L; var3_int++) {
-              if (this.field_n[var3_int] == param0) {
-                this.field_n[var3_int] = null;
-                if (this.field_M == param0.field_M) {
-                  this.field_m = this.field_m - 1;
-                }
-                this.field_L = this.field_L - 1;
-                if (param0.field_C == this.field_C) {
-                  this.field_N = this.field_N - 1;
-                }
-                if (5 > var3_int) {
-                  sf.a(this.field_n, 1 + var3_int, this.field_n, var3_int, this.field_L - var3_int);
-                }
-                this.field_n[this.field_L] = null;
-              } else {
-                continue L1;
+          L0: for (var3_int = param1; var3_int < this.field_L; var3_int++) {
+            if (this.field_n[var3_int] == param0) {
+              this.field_n[var3_int] = null;
+              if (this.field_M == param0.field_M) {
+                this.field_m = this.field_m - 1;
               }
-              break;
-            }
-            if (this.field_m <= this.field_L) {
-              if (this.field_L >= this.field_N) {
-                break L0;
+              this.field_L = this.field_L - 1;
+              if (param0.field_C == this.field_C) {
+                this.field_N = this.field_N - 1;
               }
+              if (5 > var3_int) {
+                sf.a(this.field_n, 1 + var3_int, this.field_n, var3_int, this.field_L - var3_int);
+              }
+              this.field_n[this.field_L] = null;
+            } else {
+              continue L0;
             }
-            throw new IllegalStateException("");
+            break;
           }
+          if (this.field_m <= this.field_L) {
+            if (this.field_L >= this.field_N) {
+              return;
+            }
+          }
+          throw new IllegalStateException("");
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;

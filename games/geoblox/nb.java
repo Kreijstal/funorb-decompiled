@@ -18,7 +18,9 @@ final class nb {
           if (param0 != -2) {
             field_a = (String) null;
           }
-          if (null != vc.field_f) {
+          if (null == vc.field_f) {
+            return;
+          } else {
             vc.field_f.a((java.awt.Component) ((Object) param1), (byte) 83);
             return;
           }

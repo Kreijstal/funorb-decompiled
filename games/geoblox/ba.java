@@ -114,34 +114,30 @@ final class ba implements Runnable {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          L0: {
-            if (param1 == -97) {
-              if (!this.field_f) {
-                L1: while (true) {
-                  if (param3 <= 0) {
-                    decompiledRegionSelector0 = 2;
-                    break L0;
+          if (param1 == -97) {
+            if (!this.field_f) {
+              L0: while (true) {
+                if (param3 <= 0) {
+                  return;
+                } else {
+                  var5_int = this.field_g.read(param0, param2, param3);
+                  if (0 >= var5_int) {
+                    throw new EOFException();
                   } else {
-                    var5_int = this.field_g.read(param0, param2, param3);
-                    if (0 >= var5_int) {
-                      throw new EOFException();
-                    } else {
-                      param3 = param3 - var5_int;
-                      param2 = param2 + var5_int;
-                      continue L1;
-                    }
+                    param3 = param3 - var5_int;
+                    param2 = param2 + var5_int;
+                    continue L0;
                   }
                 }
-              } else {
-                decompiledRegionSelector0 = 1;
               }
             } else {
-              decompiledRegionSelector0 = 0;
+              return;
             }
+          } else {
+            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -161,15 +157,6 @@ final class ba implements Runnable {
           }
           throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return;
-          } else {
-            return;
-          }
-        }
     }
 
     final void a(int param0, int param1, int param2, byte[] param3) throws IOException {
@@ -183,7 +170,9 @@ final class ba implements Runnable {
         RuntimeException var5_ref = null;
         int var6 = 0;
         try {
-          if (!this.field_f) {
+          if (this.field_f) {
+            return;
+          } else {
             if (this.field_i) {
               this.field_i = false;
               throw new IOException();
@@ -193,9 +182,9 @@ final class ba implements Runnable {
               }
               var5 = this;
               synchronized (var5) {
-                L2: {
+                L1: {
                   var6 = 0;
-                  L3: while (true) {
+                  L2: while (true) {
                     if (param2 <= var6) {
                       if (param0 != 100) {
                         this.field_a = (OutputStream) null;
@@ -204,7 +193,7 @@ final class ba implements Runnable {
                         this.field_m = this.field_l.a((Runnable) (this), 0, 3);
                       }
                       this.notifyAll();
-                      break L2;
+                      break L1;
                     } else {
                       this.field_d[this.field_e] = param3[param1 + var6];
                       this.field_e = (this.field_e + 1) % this.field_b;
@@ -212,7 +201,7 @@ final class ba implements Runnable {
                         throw new IOException();
                       } else {
                         var6++;
-                        continue L3;
+                        continue L2;
                       }
                     }
                   }

@@ -88,42 +88,37 @@ abstract class dk {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var11 = Geoblox.field_C;
         try {
-          L0: {
-            var5_int = 0;
-            var6 = 0;
-            var7 = param3.length();
-            var8 = 20 / ((-30 - param0) / 56);
-            for (var9 = 0; var9 < var7; var9++) {
-              var10 = param3.charAt(var9);
-              if (var10 != 60) {
-                if (var10 != 62) {
-                  if (var6 == 0) {
-                    if (32 == var10) {
-                      var5_int++;
-                    }
+          var5_int = 0;
+          var6 = 0;
+          var7 = param3.length();
+          var8 = 20 / ((-30 - param0) / 56);
+          for (var9 = 0; var9 < var7; var9++) {
+            var10 = param3.charAt(var9);
+            if (var10 != 60) {
+              if (var10 != 62) {
+                if (var6 == 0) {
+                  if (32 == var10) {
+                    var5_int++;
                   }
-                } else {
-                  var6 = 0;
                 }
               } else {
-                var6 = 1;
+                var6 = 0;
               }
-            }
-            if (var5_int <= 0) {
-              stackIn_16_0 = 0;
-              decompiledRegionSelector0 = 1;
-              break L0;
             } else {
-              stackIn_13_0 = param2 - param1 << 8;
-              stackIn_13_1 = var5_int;
-              stackIn_14_0 = stackIn_13_0 / stackIn_13_1;
-              decompiledRegionSelector0 = 0;
-              break L0;
+              var6 = 1;
             }
+          }
+          if (var5_int <= 0) {
+            stackIn_16_0 = 0;
+            return stackIn_16_0;
+          } else {
+            stackIn_13_0 = param2 - param1 << 8;
+            stackIn_13_1 = var5_int;
+            stackIn_14_0 = stackIn_13_0 / stackIn_13_1;
+            return stackIn_14_0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -142,11 +137,6 @@ abstract class dk {
             stackIn_20_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_14_0;
-        } else {
-          return stackIn_16_0;
         }
     }
 
@@ -177,12 +167,12 @@ abstract class dk {
                   iOException = (IOException) (Object) decompiledCaughtException;
                 }
               }
-              L7: {
+              L6: {
                 if (null != je.field_h) {
                   var1_int = 0;
-                  L8: while (true) {
+                  L7: while (true) {
                     if (je.field_h.length <= var1_int) {
-                      break L7;
+                      break L6;
                     } else {
                       if (null != je.field_h[var1_int]) {
                         try {
@@ -192,15 +182,16 @@ abstract class dk {
                           var2 = (IOException) (Object) decompiledCaughtException;
                         }
                         var1_int++;
-                        continue L8;
+                        continue L7;
                       } else {
                         var1_int++;
-                        continue L8;
+                        continue L7;
                       }
                     }
                   }
                 }
               }
+              return;
             } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var1 = (RuntimeException) (Object) decompiledCaughtException;

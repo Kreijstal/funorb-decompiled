@@ -100,6 +100,7 @@ final class gi implements Iterable {
           }
           var6 = param2.a(param3, param1 ^ -82, var5_int);
           stackIn_3_0 = rb.a(var6, 0, param2, var5_int, param0);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -157,7 +158,6 @@ final class gi implements Iterable {
           }
           throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
@@ -237,7 +237,6 @@ final class gi implements Iterable {
             java.net.URL stackIn_14_4;
             StringBuilder stackIn_14_5;
             String stackIn_14_6;
-            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             String var3 = null;
             Exception var3_ref = null;
@@ -265,7 +264,7 @@ final class gi implements Iterable {
                 var8 = og.a(var7, "%26", true, "&");
                 var9 = og.a(var8, "%23", true, "#");
                 if (null == c.field_x) {
-                  decompiledRegionSelector0 = 0;
+                  return;
                 } else {
                   stackIn_13_0 = ml.field_s;
 
@@ -305,24 +304,18 @@ final class gi implements Iterable {
                     var5.read();
                     var5.close();
                   }
-                  decompiledRegionSelector0 = 1;
                   break L0;
                 }
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3_ref = (Exception) (Object) decompiledCaughtException;
-              decompiledRegionSelector0 = 1;
             }
-            if (decompiledRegionSelector0 == 0) {
+            if (param2 != 125) {
+              gi.a(-109);
               return;
             } else {
-              if (param2 != 125) {
-                gi.a(-109);
-                return;
-              } else {
-                return;
-              }
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -337,38 +330,28 @@ final class gi implements Iterable {
         int var4 = 0;
         int stackIn_8_0 = 0;
         int stackIn_10_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var3_int = 1;
-            L1: while (param0 > 1) {
-              if (0 != (param0 & 1)) {
-                var3_int = var3_int * param2;
-              }
-              param0 = param0 >> 1;
-              param2 = param2 * param2;
+          var3_int = 1;
+          L0: while (param0 > 1) {
+            if (0 != (param0 & 1)) {
+              var3_int = var3_int * param2;
             }
-            var4 = 28 % ((-75 - param1) / 49);
-            if (param0 != 1) {
-              stackIn_10_0 = var3_int;
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_8_0 = param2 * var3_int;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+            param0 = param0 >> 1;
+            param2 = param2 * param2;
+          }
+          var4 = 28 % ((-75 - param1) / 49);
+          if (param0 != 1) {
+            stackIn_10_0 = var3_int;
+            return stackIn_10_0;
+          } else {
+            stackIn_8_0 = param2 * var3_int;
+            return stackIn_8_0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var3), "gi.A(" + param0 + ',' + param1 + ',' + param2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_8_0;
-        } else {
-          return stackIn_10_0;
         }
     }
 

@@ -22,36 +22,30 @@ final class ca extends hf {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param0 != null) {
-              if (0 != param0.length()) {
-                var2_int = param0.indexOf('@');
-                if (var2_int != -1) {
-                  var3 = param0.substring(0, var2_int);
-                  var4 = param0.substring(param1 + var2_int);
-                  var5 = r.a(var3, true);
-                  if (var5 == null) {
-                    stackIn_12_0 = fe.a(var4, false);
-                    decompiledRegionSelector0 = 3;
-                    break L0;
-                  } else {
-                    stackIn_10_0 = (nd) (var5);
-                    decompiledRegionSelector0 = 2;
-                    break L0;
-                  }
+          if (param0 != null) {
+            if (0 != param0.length()) {
+              var2_int = param0.indexOf('@');
+              if (var2_int != -1) {
+                var3 = param0.substring(0, var2_int);
+                var4 = param0.substring(param1 + var2_int);
+                var5 = r.a(var3, true);
+                if (var5 == null) {
+                  stackIn_12_0 = fe.a(var4, false);
+                  return stackIn_12_0;
                 } else {
-                  stackIn_7_0 = pj.field_f;
-                  decompiledRegionSelector0 = 1;
-                  break L0;
+                  stackIn_10_0 = (nd) (var5);
+                  return stackIn_10_0;
                 }
+              } else {
+                stackIn_7_0 = pj.field_f;
+                return stackIn_7_0;
               }
             }
-            stackIn_4_0 = fb.field_j;
-            decompiledRegionSelector0 = 0;
           }
+          stackIn_4_0 = fb.field_j;
+          return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -69,19 +63,6 @@ final class ca extends hf {
             stackIn_16_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_4_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_7_0;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return stackIn_10_0;
-            } else {
-              return stackIn_12_0;
-            }
-          }
         }
     }
 

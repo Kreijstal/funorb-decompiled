@@ -75,25 +75,21 @@ final class fi {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param0 != 0) {
-              field_h = (String) null;
-            }
-            if (param1 != null) {
-              if (param1 != fe.field_e) {
-                uh.field_y.d(-9268);
-                fj.field_p.a();
-                fe.field_e = param1;
-                uh.field_y.a(true, fe.field_e, -1706);
-                decompiledRegionSelector0 = 1;
-                break L0;
-              }
-            }
-            decompiledRegionSelector0 = 0;
+          if (param0 != 0) {
+            field_h = (String) null;
           }
+          if (param1 != null) {
+            if (param1 != fe.field_e) {
+              uh.field_y.d(-9268);
+              fj.field_p.a();
+              fe.field_e = param1;
+              uh.field_y.a(true, fe.field_e, -1706);
+              return;
+            }
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
@@ -111,11 +107,6 @@ final class fi {
             stackIn_11_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 

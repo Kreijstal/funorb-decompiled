@@ -42,31 +42,31 @@ final class re extends hf {
             if (!param0) {
               field_f = (String) null;
             }
-            L3: {
+            L2: {
               vd.field_n = pc.field_p;
               nk.field_e = nk.field_e + 1;
               if (ii.field_c < 0) {
                 var5 = 0;
                 var2 = var5;
-                L4: while (var5 < 112) {
+                L3: while (var5 < 112) {
                   kj.field_o[var5] = false;
                   var5++;
                 }
                 ii.field_c = gk.field_b;
-                break L3;
+                break L2;
               } else {
-                L5: while (true) {
+                L4: while (true) {
                   if (gk.field_b == ii.field_c) {
-                    break L3;
+                    break L2;
                   } else {
                     var2 = gf.field_c[gk.field_b];
                     gk.field_b = 1 + gk.field_b & 127;
                     if (var2 < 0) {
                       kj.field_o[~var2] = false;
-                      continue L5;
+                      continue L4;
                     } else {
                       kj.field_o[var2] = true;
-                      continue L5;
+                      continue L4;
                     }
                   }
                 }
@@ -74,6 +74,7 @@ final class re extends hf {
             }
             pc.field_p = ba.field_c;
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;

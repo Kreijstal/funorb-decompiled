@@ -42,19 +42,18 @@ final class vd {
         StringBuilder stackIn_16_1 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param4.a(0)) {
             stackIn_3_0 = (String) (param1);
-            decompiledRegionSelector0 = 0;
+            return stackIn_3_0;
           } else {
             if (param3) {
               var6 = (rh) null;
               vd.a((String) null, (String) null, 53, false, (rh) null);
             }
             stackIn_7_0 = param0 + " - " + param4.b((byte) 42, param2) + "%";
-            decompiledRegionSelector0 = 1;
+            return stackIn_7_0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -99,11 +98,6 @@ final class vd {
             stackIn_17_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0;
-        } else {
-          return stackIn_7_0;
         }
     }
 

@@ -30,38 +30,33 @@ final class bi implements dh {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = Geoblox.field_C;
         try {
-          L0: {
-            if (kk.a(param0, param1, (byte) 118)) {
-              if (param2 < -32) {
-                var3_int = 0;
-                L1: while (true) {
-                  if (param1.length() <= var3_int) {
-                    stackIn_14_0 = 1;
-                    decompiledRegionSelector0 = 3;
-                    break L0;
+          if (kk.a(param0, param1, (byte) 118)) {
+            if (param2 < -32) {
+              var3_int = 0;
+              L0: while (true) {
+                if (param1.length() <= var3_int) {
+                  stackIn_14_0 = 1;
+                  return stackIn_14_0 != 0;
+                } else {
+                  if (q.a(param1.charAt(var3_int), (byte) 118)) {
+                    var3_int++;
+                    continue L0;
                   } else {
-                    if (q.a(param1.charAt(var3_int), (byte) 118)) {
-                      var3_int++;
-                      continue L1;
-                    } else {
-                      stackIn_11_0 = 0;
-                      decompiledRegionSelector0 = 2;
-                      break L0;
-                    }
+                    stackIn_11_0 = 0;
+                    return stackIn_11_0 != 0;
                   }
                 }
-              } else {
-                stackIn_6_0 = 1;
-                decompiledRegionSelector0 = 1;
               }
             } else {
-              stackIn_3_0 = 0;
-              decompiledRegionSelector0 = 0;
+              stackIn_6_0 = 1;
+              return stackIn_6_0 != 0;
             }
+          } else {
+            stackIn_3_0 = 0;
+            return stackIn_3_0 != 0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -80,19 +75,6 @@ final class bi implements dh {
             stackIn_18_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_6_0 != 0;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return stackIn_11_0 != 0;
-            } else {
-              return stackIn_14_0 != 0;
-            }
-          }
         }
     }
 
@@ -140,6 +122,7 @@ final class bi implements dh {
             var10 = this.field_m + this.field_n + this.field_k;
             this.field_b.a(param4.field_s, var10 + param4.field_v + param0, param4.field_m + param2 + this.field_i, param4.field_r + (-this.field_m - var10), -(this.field_m << 1) + param4.field_h, this.field_e, this.field_f, this.field_a, this.field_l, 0);
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;

@@ -43,6 +43,7 @@ final class ei extends qf {
             var5 = (java.awt.Canvas) null;
             ei.a(true, -122, (java.awt.Canvas) null);
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -75,37 +76,33 @@ final class ei extends qf {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         var5 = Geoblox.field_C;
         try {
-          L0: {
-            var3 = ab.a(param0, 2, param2);
-            if (var3 != null) {
-              stackIn_4_0 = (String) (var3);
-              decompiledRegionSelector0 = 0;
-            } else {
-              if (!param1) {
-                var4 = 0;
-                L1: while (true) {
-                  if (var4 < param2.length()) {
-                    if (q.a(param2.charAt(var4), (byte) 97)) {
-                      var4++;
-                      continue L1;
-                    } else {
-                      stackIn_13_0 = kc.field_b;
-                      decompiledRegionSelector0 = 2;
-                      break L0;
-                    }
+          var3 = ab.a(param0, 2, param2);
+          if (var3 != null) {
+            stackIn_4_0 = (String) (var3);
+            return stackIn_4_0;
+          } else {
+            if (!param1) {
+              var4 = 0;
+              L0: while (true) {
+                if (var4 < param2.length()) {
+                  if (q.a(param2.charAt(var4), (byte) 97)) {
+                    var4++;
+                    continue L0;
                   } else {
-                    return null;
+                    stackIn_13_0 = kc.field_b;
+                    return stackIn_13_0;
                   }
+                } else {
+                  return null;
                 }
-              } else {
-                stackIn_7_0 = (String) null;
-                decompiledRegionSelector0 = 1;
               }
+            } else {
+              stackIn_7_0 = (String) null;
+              return stackIn_7_0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -125,15 +122,6 @@ final class ei extends qf {
             stackIn_19_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_4_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_7_0;
-          } else {
-            return stackIn_13_0;
-          }
         }
     }
 

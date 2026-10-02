@@ -48,43 +48,39 @@ final class s extends ee implements pe, pl {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var4 = Geoblox.field_C;
         try {
-          L0: {
-            if (param1 == 0) {
-              if (null != param0.field_k) {
-                L1: {
-                  if (param0.field_o == 0) {
-                    if (0 == param0.field_d) {
-                      break L1;
-                    }
+          if (param1 == 0) {
+            if (null != param0.field_k) {
+              L0: {
+                if (param0.field_o == 0) {
+                  if (0 == param0.field_d) {
+                    break L0;
                   }
-                  for (var2_int = 0; oj.field_b > var2_int; var2_int++) {
-                    var3 = n.field_k[var2_int];
-                    if (2 == var3.field_f) {
-                      if (param0.field_o == var3.field_o) {
-                        if (param0.field_d == var3.field_d) {
-                          decompiledRegionSelector0 = 2;
-                          break L0;
-                        }
+                }
+                for (var2_int = 0; oj.field_b > var2_int; var2_int++) {
+                  var3 = n.field_k[var2_int];
+                  if (2 == var3.field_f) {
+                    if (param0.field_o == var3.field_o) {
+                      if (param0.field_d == var3.field_d) {
+                        return;
                       }
                     }
                   }
-                  break L1;
                 }
-                if (null == param0.field_g) {
-                }
-                ki.a(param0, 31274);
-                decompiledRegionSelector0 = 3;
-              } else {
-                decompiledRegionSelector0 = 1;
+                break L0;
               }
+              if (null == param0.field_g) {
+              }
+              ki.a(param0, 31274);
+              return;
             } else {
-              decompiledRegionSelector0 = 0;
+              return;
             }
+          } else {
+            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -103,19 +99,6 @@ final class s extends ee implements pe, pl {
             stackIn_22_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return;
-            } else {
-              return;
-            }
-          }
         }
     }
 
@@ -175,7 +158,9 @@ final class s extends ee implements pe, pl {
               uk.a(false, "privacy.ws");
             }
           }
-          if (param2 != 2) {
+          if (param2 == 2) {
+            return;
+          } else {
             this.field_C = (r) null;
             return;
           }
@@ -218,23 +203,22 @@ final class s extends ee implements pe, pl {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (super.a(param0, param1, param2, param3)) {
             stackIn_3_0 = 1;
-            decompiledRegionSelector0 = 0;
+            return stackIn_3_0 != 0;
           } else {
             if (param0 != 98) {
               if (param0 == 99) {
                 stackIn_10_0 = this.a(param3, -104);
-                decompiledRegionSelector0 = 2;
+                return stackIn_10_0;
               } else {
                 return false;
               }
             } else {
               stackIn_6_0 = this.a(7305, param3);
-              decompiledRegionSelector0 = 1;
+              return stackIn_6_0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -254,15 +238,6 @@ final class s extends ee implements pe, pl {
             stackIn_14_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_6_0;
-          } else {
-            return stackIn_10_0;
-          }
         }
     }
 
@@ -300,7 +275,9 @@ final class s extends ee implements pe, pl {
             ki.a(77);
             this.field_C.h((byte) -104);
           }
-          if (param1 != -20) {
+          if (param1 == -20) {
+            return;
+          } else {
             this.field_C = (r) null;
             return;
           }
@@ -340,14 +317,12 @@ final class s extends ee implements pe, pl {
             RuntimeException stackIn_19_0 = null;
             StringBuilder stackIn_19_1 = null;
             String stackIn_19_2 = null;
-            int decompiledRegionSelector0 = 0;
-            int decompiledRegionSelector1 = 0;
             Throwable decompiledCaughtException = null;
             Throwable var2 = null;
             RuntimeException var2_ref = null;
             try {
               try {
-                L1: {
+                L0: {
                   var8 = param1.getParameter("cookieprefix");
                   var3 = var8 + "settings";
                   var4 = (String) (wk.a((byte) -6, param1, "getcookies"));
@@ -357,32 +332,25 @@ final class s extends ee implements pe, pl {
                     if (var7 >= 0) {
                       if (var5[var6].substring(0, var7).trim().equals(var3)) {
                         stackIn_5_0 = var5[var6].substring(var7 + 1).trim();
-                        decompiledRegionSelector0 = 1;
-                        break L1;
+                        return stackIn_5_0;
                       }
                     }
                   }
-                  decompiledRegionSelector0 = 0;
-                  break L1;
+                  break L0;
                 }
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var2 = decompiledCaughtException;
-                decompiledRegionSelector0 = 0;
               }
-              if (decompiledRegionSelector0 == 0) {
-                if (param0 != -1) {
-                  s.g(14);
-                }
-                if (null == sd.field_z) {
-                  stackIn_15_0 = param1.getParameter("settings");
-                  decompiledRegionSelector1 = 1;
-                } else {
-                  stackIn_13_0 = sd.field_z;
-                  decompiledRegionSelector1 = 0;
-                }
+              if (param0 != -1) {
+                s.g(14);
+              }
+              if (null == sd.field_z) {
+                stackIn_15_0 = param1.getParameter("settings");
+                return stackIn_15_0;
               } else {
-                decompiledRegionSelector1 = 2;
+                stackIn_13_0 = sd.field_z;
+                return stackIn_13_0;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
@@ -401,15 +369,6 @@ final class s extends ee implements pe, pl {
                 stackIn_19_2 = "{...}";
               }
               throw t.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(')').toString());
-            }
-            if (decompiledRegionSelector1 == 0) {
-              return stackIn_13_0;
-            } else {
-              if (decompiledRegionSelector1 == 1) {
-                return stackIn_15_0;
-              } else {
-                return stackIn_5_0;
-              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

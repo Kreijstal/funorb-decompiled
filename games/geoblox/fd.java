@@ -14,21 +14,17 @@ final class fd {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var2_int = 126 % ((-26 - param1) / 49);
-            var3 = param0.getParameter("username");
-            if (var3 != null) {
-              var4 = (CharSequence) ((Object) var3);
-              if (0L != rh.a(var4, -48)) {
-                decompiledRegionSelector0 = 1;
-                break L0;
-              }
+          var2_int = 126 % ((-26 - param1) / 49);
+          var3 = param0.getParameter("username");
+          if (var3 != null) {
+            var4 = (CharSequence) ((Object) var3);
+            if (0L != rh.a(var4, -48)) {
+              return;
             }
-            decompiledRegionSelector0 = 0;
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -46,11 +42,6 @@ final class fd {
             stackIn_7_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 

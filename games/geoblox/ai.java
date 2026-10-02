@@ -77,97 +77,95 @@ final class ai extends hf {
             Exception var8 = null;
             java.net.URL var9 = null;
             try {
-              L0: {
-                var5 = param2.getFile();
-                var6 = 0;
-                L1: while (true) {
-                  L2: {
-                    if (var5.regionMatches(var6, "/l=", 0, 3)) {
-                      var7_int = var5.indexOf('/', var6 + 1);
-                      if (var7_int >= 0) {
-                        if (param3 < 0) {
-                          break L2;
-                        } else {
-                          var5 = var5.substring(0, var6) + var5.substring(var7_int);
-                          continue L1;
-                        }
+              var5 = param2.getFile();
+              var6 = 0;
+              L0: while (true) {
+                L1: {
+                  if (var5.regionMatches(var6, "/l=", 0, 3)) {
+                    var7_int = var5.indexOf('/', var6 + 1);
+                    if (var7_int >= 0) {
+                      if (param3 < 0) {
+                        break L1;
+                      } else {
+                        var5 = var5.substring(0, var6) + var5.substring(var7_int);
+                        continue L0;
                       }
                     }
-                    if (var5.regionMatches(var6, "/a=", 0, 3)) {
-                      var7_int = var5.indexOf('/', 1 + var6);
-                      if (var7_int >= 0) {
-                        break L2;
-                      }
-                    }
-                    if (var5.regionMatches(var6, "/p=", 0, 3)) {
-                      var7_int = var5.indexOf('/', 1 + var6);
-                      if (var7_int >= 0) {
-                        if (param1 == null) {
-                          break L2;
-                        } else {
-                          var5 = var5.substring(0, var6) + var5.substring(var7_int);
-                          continue L1;
-                        }
-                      }
-                    }
-                    L6: {
-                      if (!var5.regionMatches(var6, "/s=", 0, 3)) {
-                        if (!var5.regionMatches(var6, "/c=", 0, 3)) {
-                          break L6;
-                        }
-                      }
-                      var7_int = var5.indexOf('/', var6 + 1);
-                      if (0 <= var7_int) {
-                        if (param0 != null) {
-                          var5 = var5.substring(0, var6) + var5.substring(var7_int);
-                          continue L1;
-                        } else {
-                          var6 = var7_int;
-                          continue L1;
-                        }
-                      }
-                    }
-                    if (!param4) {
-                      var9 = (java.net.URL) null;
-                      ai.a((String) null, (String) null, (java.net.URL) null, 80, true);
-                    }
-                    var7 = new StringBuilder(var6);
-                    discarded$0 = var7.append(var5.substring(0, var6));
-                    if (param3 > 0) {
-                      discarded$1 = var7.append("/l=");
-                      discarded$2 = var7.append(Integer.toString(param3));
-                    }
-                    if (param1 != null) {
-                      if (param1.length() > 0) {
-                        discarded$3 = var7.append("/p=");
-                        discarded$4 = var7.append(param1);
-                      }
-                    }
-                    if (param0 != null) {
-                      if (param0.length() > 0) {
-                        discarded$5 = var7.append("/s=");
-                        discarded$6 = var7.append(param0);
-                      }
-                    }
-                    if (var5.length() <= var6) {
-                      discarded$7 = var7.append('/');
-                    } else {
-                      discarded$8 = var7.append(var5.substring(var6, var5.length()));
-                    }
-                    try {
-                      stackIn_41_0 = new java.net.URL(param2, var7.toString());
-                    } catch (java.lang.Exception decompiledCaughtParameter0) {
-                      decompiledCaughtException = decompiledCaughtParameter0;
-                      var8 = (Exception) (Object) decompiledCaughtException;
-                      var8.printStackTrace();
-                      stackIn_43_0 = (java.net.URL) (param2);
-                      return stackIn_43_0;
-                    }
-                    break L0;
                   }
-                  var6 = var7_int;
-                  continue L1;
+                  if (var5.regionMatches(var6, "/a=", 0, 3)) {
+                    var7_int = var5.indexOf('/', 1 + var6);
+                    if (var7_int >= 0) {
+                      break L1;
+                    }
+                  }
+                  if (var5.regionMatches(var6, "/p=", 0, 3)) {
+                    var7_int = var5.indexOf('/', 1 + var6);
+                    if (var7_int >= 0) {
+                      if (param1 == null) {
+                        break L1;
+                      } else {
+                        var5 = var5.substring(0, var6) + var5.substring(var7_int);
+                        continue L0;
+                      }
+                    }
+                  }
+                  L5: {
+                    if (!var5.regionMatches(var6, "/s=", 0, 3)) {
+                      if (!var5.regionMatches(var6, "/c=", 0, 3)) {
+                        break L5;
+                      }
+                    }
+                    var7_int = var5.indexOf('/', var6 + 1);
+                    if (0 <= var7_int) {
+                      if (param0 != null) {
+                        var5 = var5.substring(0, var6) + var5.substring(var7_int);
+                        continue L0;
+                      } else {
+                        var6 = var7_int;
+                        continue L0;
+                      }
+                    }
+                  }
+                  if (!param4) {
+                    var9 = (java.net.URL) null;
+                    ai.a((String) null, (String) null, (java.net.URL) null, 80, true);
+                  }
+                  var7 = new StringBuilder(var6);
+                  discarded$0 = var7.append(var5.substring(0, var6));
+                  if (param3 > 0) {
+                    discarded$1 = var7.append("/l=");
+                    discarded$2 = var7.append(Integer.toString(param3));
+                  }
+                  if (param1 != null) {
+                    if (param1.length() > 0) {
+                      discarded$3 = var7.append("/p=");
+                      discarded$4 = var7.append(param1);
+                    }
+                  }
+                  if (param0 != null) {
+                    if (param0.length() > 0) {
+                      discarded$5 = var7.append("/s=");
+                      discarded$6 = var7.append(param0);
+                    }
+                  }
+                  if (var5.length() <= var6) {
+                    discarded$7 = var7.append('/');
+                  } else {
+                    discarded$8 = var7.append(var5.substring(var6, var5.length()));
+                  }
+                  try {
+                    stackIn_41_0 = new java.net.URL(param2, var7.toString());
+                    return stackIn_41_0;
+                  } catch (java.lang.Exception decompiledCaughtParameter0) {
+                    decompiledCaughtException = decompiledCaughtParameter0;
+                    var8 = (Exception) (Object) decompiledCaughtException;
+                    var8.printStackTrace();
+                    stackIn_43_0 = (java.net.URL) (param2);
+                    return stackIn_43_0;
+                  }
                 }
+                var6 = var7_int;
+                continue L0;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
@@ -213,7 +211,6 @@ final class ai extends hf {
               }
               throw t.a((Throwable) ((Object) stackIn_47_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_53_2).append(',').append(param3).append(',').append(param4).append(')').toString());
             }
-            return stackIn_41_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

@@ -171,6 +171,7 @@ class mi extends kg {
           if (param0 != -2147483648) {
             field_B = (dm[]) null;
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -235,6 +236,7 @@ class mi extends kg {
           if (param6 != null) {
             this.field_X = param6;
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;

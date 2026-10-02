@@ -254,43 +254,39 @@ final class jc {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var7 = Geoblox.field_C;
         try {
-          L0: {
-            var2_int = param0.e((byte) -17, 8);
-            if (param1) {
-              if (0 >= var2_int) {
-                var3 = param0.e((byte) -17, 12);
-                var4 = new fd[var3];
-                for (var5 = 0; var3 > var5; var5++) {
-                  if (!ac.a((byte) 71, param0)) {
-                    var6 = param0.e((byte) -17, td.a(var5 - 1, (byte) 66));
-                    var4[var5] = var4[var6];
-                  } else {
-                    var6_ref_fd = new fd();
-                    param0.e((byte) -17, 24);
-                    param0.e((byte) -17, 24);
-                    var6_ref_fd.field_a = param0.e((byte) -17, 24);
-                    param0.e((byte) -17, 9);
-                    param0.e((byte) -17, 12);
-                    param0.e((byte) -17, 12);
-                    param0.e((byte) -17, 12);
-                    var4[var5] = var6_ref_fd;
-                  }
+          var2_int = param0.e((byte) -17, 8);
+          if (param1) {
+            if (0 >= var2_int) {
+              var3 = param0.e((byte) -17, 12);
+              var4 = new fd[var3];
+              for (var5 = 0; var3 > var5; var5++) {
+                if (!ac.a((byte) 71, param0)) {
+                  var6 = param0.e((byte) -17, td.a(var5 - 1, (byte) 66));
+                  var4[var5] = var4[var6];
+                } else {
+                  var6_ref_fd = new fd();
+                  param0.e((byte) -17, 24);
+                  param0.e((byte) -17, 24);
+                  var6_ref_fd.field_a = param0.e((byte) -17, 24);
+                  param0.e((byte) -17, 9);
+                  param0.e((byte) -17, 12);
+                  param0.e((byte) -17, 12);
+                  param0.e((byte) -17, 12);
+                  var4[var5] = var6_ref_fd;
                 }
-                stackIn_14_0 = (fd[]) (var4);
-                decompiledRegionSelector0 = 2;
-                break L0;
-              } else {
-                stackIn_6_0 = null;
-                decompiledRegionSelector0 = 1;
               }
+              stackIn_14_0 = (fd[]) (var4);
+              return stackIn_14_0;
             } else {
-              stackIn_3_0 = (fd[]) null;
-              decompiledRegionSelector0 = 0;
+              stackIn_6_0 = null;
+              return (fd[]) ((Object) stackIn_6_0);
             }
+          } else {
+            stackIn_3_0 = (fd[]) null;
+            return stackIn_3_0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -309,15 +305,6 @@ final class jc {
             stackIn_18_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return (fd[]) ((Object) stackIn_6_0);
-          } else {
-            return stackIn_14_0;
-          }
         }
     }
 

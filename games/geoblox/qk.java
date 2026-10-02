@@ -84,12 +84,12 @@ class qk {
                       }
                     }
                     stackIn_21_0 = (ce) (var4);
+                    return (qk) ((Object) stackIn_21_0);
                   } catch (java.lang.Throwable decompiledCaughtParameter0) {
                     decompiledCaughtException = decompiledCaughtParameter0;
                     var4_ref = decompiledCaughtException;
                     return new qk();
                   }
-                  return (qk) ((Object) stackIn_21_0);
                 }
               }
               throw new IllegalArgumentException();
@@ -196,7 +196,6 @@ class qk {
 
     final synchronized void b() {
         try {
-            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             long var1 = 0L;
             Exception var3 = null;
@@ -230,8 +229,7 @@ class qk {
                         this.field_m = 0L;
                         this.field_o = true;
                       } else {
-                        decompiledRegionSelector0 = 0;
-                        break L4;
+                        return;
                       }
                     }
                     var3_int = this.g();
@@ -269,8 +267,7 @@ class qk {
                           if (this.field_f == 0) {
                             this.f();
                             this.field_m = var1 + 2000L;
-                            decompiledRegionSelector0 = 1;
-                            break L4;
+                            return;
                           }
                         }
                         this.field_p = Math.min(this.field_f, this.field_s);
@@ -280,7 +277,6 @@ class qk {
                       this.field_e = var1 + 2000L;
                     }
                     this.field_t = var3_int;
-                    decompiledRegionSelector0 = 2;
                     break L4;
                   }
                 } catch (java.lang.Exception decompiledCaughtParameter1) {
@@ -288,17 +284,8 @@ class qk {
                   var3 = (Exception) (Object) decompiledCaughtException;
                   this.f();
                   this.field_m = var1 + 2000L;
-                  decompiledRegionSelector0 = 2;
                 }
-                if (decompiledRegionSelector0 == 0) {
-                  return;
-                } else {
-                  if (decompiledRegionSelector0 == 1) {
-                    return;
-                  } else {
-                    return;
-                  }
-                }
+                return;
               } else {
                 return;
               }

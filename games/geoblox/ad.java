@@ -33,36 +33,34 @@ final class ad extends ia {
         int var5 = 0;
         pc var6 = null;
         try {
-          L0: {
-            this.field_m.a(param0, param1, param2);
-            var6 = (pc) ((Object) this.field_l.g(0));
-            L1: while (var6 != null) {
-              L2: {
-                if (!this.field_k.b(var6, -1)) {
-                  var4_int = param1;
-                  var5 = param2;
-                  L3: while (true) {
-                    if (var5 <= var6.field_g) {
-                      this.a(var5, (byte) -69, var5 + var4_int, param0, var6, var4_int);
-                      var6.field_g = var6.field_g - var5;
-                      break L2;
+          this.field_m.a(param0, param1, param2);
+          var6 = (pc) ((Object) this.field_l.g(0));
+          L0: while (var6 != null) {
+            L1: {
+              if (!this.field_k.b(var6, -1)) {
+                var4_int = param1;
+                var5 = param2;
+                L2: while (true) {
+                  if (var5 <= var6.field_g) {
+                    this.a(var5, (byte) -69, var5 + var4_int, param0, var6, var4_int);
+                    var6.field_g = var6.field_g - var5;
+                    break L1;
+                  } else {
+                    this.a(var6.field_g, (byte) -37, var4_int + var5, param0, var6, var4_int);
+                    var5 = var5 - var6.field_g;
+                    var4_int = var4_int + var6.field_g;
+                    if (!this.field_k.a(var5, var4_int, param0, var6, false)) {
+                      continue L2;
                     } else {
-                      this.a(var6.field_g, (byte) -37, var4_int + var5, param0, var6, var4_int);
-                      var5 = var5 - var6.field_g;
-                      var4_int = var4_int + var6.field_g;
-                      if (!this.field_k.a(var5, var4_int, param0, var6, false)) {
-                        continue L3;
-                      } else {
-                        break L2;
-                      }
+                      break L1;
                     }
                   }
                 }
               }
-              var6 = (pc) ((Object) this.field_l.d(1));
             }
-            break L0;
+            var6 = (pc) ((Object) this.field_l.d(1));
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -96,7 +94,6 @@ final class ad extends ia {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -140,9 +137,9 @@ final class ad extends ia {
           }
           if (param0 == -1) {
             param1.field_u.b(param2);
-            decompiledRegionSelector0 = 1;
+            return;
           } else {
-            decompiledRegionSelector0 = 0;
+            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -161,11 +158,6 @@ final class ad extends ia {
             stackIn_19_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(',').append(param2).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 
@@ -272,7 +264,6 @@ final class ad extends ia {
         StringBuilder stackIn_29_1 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_30_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
         RuntimeException var7 = null;
@@ -281,11 +272,11 @@ final class ad extends ia {
         int var10 = 0;
         kl var11 = null;
         try {
-          L1: {
+          L0: {
             if ((4 & this.field_k.field_m[param4.field_t]) != 0) {
               if (param4.field_y < 0) {
                 var7_int = this.field_k.field_n[param4.field_t] / qk.field_j;
-                L2: while (true) {
+                L1: while (true) {
                   var8 = (-param4.field_B + (var7_int + 1048575)) / var7_int;
                   if (param0 >= var8) {
                     param4.field_u.a(param3, param5, var8);
@@ -328,14 +319,14 @@ final class ad extends ia {
                     var11.c(var9);
                     var11.a(param3, param5, param2 - param5);
                     if (!var11.g()) {
-                      continue L2;
+                      continue L1;
                     } else {
                       this.field_m.a(var11);
-                      continue L2;
+                      continue L1;
                     }
                   } else {
                     param4.field_B = param4.field_B + param0 * var7_int;
-                    break L1;
+                    break L0;
                   }
                 }
               }
@@ -343,9 +334,9 @@ final class ad extends ia {
           }
           if (param1 < -26) {
             param4.field_u.a(param3, param5, param0);
-            decompiledRegionSelector0 = 1;
+            return;
           } else {
-            decompiledRegionSelector0 = 0;
+            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -377,11 +368,6 @@ final class ad extends ia {
             stackIn_30_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_30_2).append(',').append(param5).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 

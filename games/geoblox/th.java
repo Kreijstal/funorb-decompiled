@@ -25,39 +25,34 @@ final class th extends lf {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var6 = Geoblox.field_C;
         try {
-          L0: {
-            if (param1 != 200) {
-              th.d((byte) 21);
-            }
-            var2 = qi.a("jagex-last-login-method", param0, -114);
-            if (var2 != null) {
-              var3 = ak.a(false);
-              var4 = 0;
-              L2: while (true) {
-                if (var3.length <= var4) {
-                  stackIn_14_0 = td.field_I;
-                  decompiledRegionSelector0 = 2;
-                  break L0;
+          if (param1 != 200) {
+            th.d((byte) 21);
+          }
+          var2 = qi.a("jagex-last-login-method", param0, -114);
+          if (var2 != null) {
+            var3 = ak.a(false);
+            var4 = 0;
+            L1: while (true) {
+              if (var3.length <= var4) {
+                stackIn_14_0 = td.field_I;
+                return stackIn_14_0;
+              } else {
+                var5 = var3[var4];
+                if (var5.a(115, var2)) {
+                  stackIn_11_0 = (od) (var5);
+                  return stackIn_11_0;
                 } else {
-                  var5 = var3[var4];
-                  if (var5.a(115, var2)) {
-                    stackIn_11_0 = (od) (var5);
-                    decompiledRegionSelector0 = 1;
-                    break L0;
-                  } else {
-                    var4++;
-                    continue L2;
-                  }
+                  var4++;
+                  continue L1;
                 }
               }
-            } else {
-              stackIn_5_0 = td.field_I;
-              decompiledRegionSelector0 = 0;
             }
+          } else {
+            stackIn_5_0 = td.field_I;
+            return stackIn_5_0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -76,15 +71,6 @@ final class th extends lf {
             stackIn_18_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_5_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_11_0;
-          } else {
-            return stackIn_14_0;
-          }
         }
     }
 

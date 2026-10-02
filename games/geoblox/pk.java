@@ -26,15 +26,13 @@ final class pk extends qc {
         int var7 = 0;
         var7 = Geoblox.field_C;
         try {
-          L0: {
-            var5_int = 31 % ((param0 + 36) / 37);
-            for (var6 = 0; var6 < param3; var6++) {
-              fieldTemp$0 = this.field_f;
-              this.field_f = this.field_f + 1;
-              param2[var6 + param1] = (byte)(this.field_j[fieldTemp$0] - this.field_p.b(0));
-            }
-            break L0;
+          var5_int = 31 % ((param0 + 36) / 37);
+          for (var6 = 0; var6 < param3; var6++) {
+            fieldTemp$0 = this.field_f;
+            this.field_f = this.field_f + 1;
+            param2[var6 + param1] = (byte)(this.field_j[fieldTemp$0] - this.field_p.b(0));
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -91,74 +89,60 @@ final class pk extends qc {
 
     final static void h(int param0, int param1) {
         int var2_int = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         gd var3 = null;
         int var4 = 0;
         try {
-          L0: {
-            var2_int = 0;
-            if (param0 < -117) {
-              L1: while (true) {
-                if (33 <= var2_int) {
-                  var4 = 0;
-                  var2_int = var4;
-                  L2: while (true) {
-                    if (var4 >= 33) {
-                      p.field_i = null;
-                      decompiledRegionSelector0 = 2;
-                      break L0;
-                    } else {
-                      if (!vg.field_j[var4]) {
-                        decompiledRegionSelector0 = 1;
-                        break L0;
-                      } else {
-                        var4++;
-                        continue L2;
-                      }
-                    }
-                  }
-                } else {
-                  if (param1 == ck.field_c[var2_int]) {
-                    if (!vg.field_j[var2_int]) {
-                      L4: {
-                        if (10 <= var2_int) {
-                          if (26 >= var2_int) {
-                            var3 = te.field_c.c(-1879044097, w.field_b[var2_int]);
-                            break L4;
-                          }
-                        }
-                        var3 = te.field_c.b(1, w.field_b[var2_int]);
-                      }
-                      fl.field_c[var2_int] = var3.a(p.field_i);
-                      vg.field_j[var2_int] = true;
-                    }
-                    var2_int++;
-                    continue L1;
+          var2_int = 0;
+          if (param0 < -117) {
+            L0: while (true) {
+              if (33 <= var2_int) {
+                var4 = 0;
+                var2_int = var4;
+                L1: while (true) {
+                  if (var4 >= 33) {
+                    p.field_i = null;
+                    return;
                   } else {
-                    var2_int++;
-                    continue L1;
+                    if (!vg.field_j[var4]) {
+                      return;
+                    } else {
+                      var4++;
+                      continue L1;
+                    }
                   }
                 }
+              } else {
+                if (param1 == ck.field_c[var2_int]) {
+                  if (!vg.field_j[var2_int]) {
+                    L3: {
+                      if (10 <= var2_int) {
+                        if (26 >= var2_int) {
+                          var3 = te.field_c.c(-1879044097, w.field_b[var2_int]);
+                          break L3;
+                        }
+                      }
+                      var3 = te.field_c.b(1, w.field_b[var2_int]);
+                    }
+                    fl.field_c[var2_int] = var3.a(p.field_i);
+                    vg.field_j[var2_int] = true;
+                  }
+                  var2_int++;
+                  continue L0;
+                } else {
+                  var2_int++;
+                  continue L0;
+                }
               }
-            } else {
-              decompiledRegionSelector0 = 0;
             }
+          } else {
+            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var2), "pk.IB(" + param0 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return;
-          } else {
-            return;
-          }
         }
     }
 

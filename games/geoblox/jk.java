@@ -51,23 +51,21 @@ final class jk {
         RuntimeException var1 = null;
         var5 = Geoblox.field_C;
         try {
-          L0: {
-            mh.b();
-            ok.field_g = 11;
-            jf.field_b = new int[260];
-            var1_int = -29 / ((param0 + 40) / 45);
-            for (var2 = 0; 256 > var2; var2++) {
-              var3 = 15.0;
-              jf.field_b[var2] = (int)(255.0 * Math.pow((double)((float)var2 / 256.0f), var3));
-            }
-            var6 = 256;
-            var1_int = var6;
-            L2: while (jf.field_b.length > var6) {
-              jf.field_b[var6] = 255;
-              var6++;
-            }
-            break L0;
+          mh.b();
+          ok.field_g = 11;
+          jf.field_b = new int[260];
+          var1_int = -29 / ((param0 + 40) / 45);
+          for (var2 = 0; 256 > var2; var2++) {
+            var3 = 15.0;
+            jf.field_b[var2] = (int)(255.0 * Math.pow((double)((float)var2 / 256.0f), var3));
           }
+          var6 = 256;
+          var1_int = var6;
+          L1: while (jf.field_b.length > var6) {
+            jf.field_b[var6] = 255;
+            var6++;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
@@ -97,48 +95,43 @@ final class jk {
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_27_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var5 = Geoblox.field_C;
         try {
-          L0: {
-            var2_int = param1.length();
-            if (param0 != 255) {
-              jk.a(118);
-            }
-            if (0 != var2_int) {
-              if (var2_int > 63) {
-                stackIn_9_0 = hk.field_x;
-                decompiledRegionSelector0 = 1;
-              } else {
-                for (var3 = 0; var2_int > var3; var3++) {
-                  L3: {
-                    var4 = param1.charAt(var3);
-                    if (45 != var4) {
-                      if (pk.field_q.indexOf(var4) == -1) {
-                        stackIn_21_0 = ii.field_h;
-                        decompiledRegionSelector0 = 3;
-                        break L0;
-                      }
-                    } else {
-                      if (var3 != 0) {
-                        if (var3 != -1 + var2_int) {
-                          break L3;
-                        }
-                      }
-                      stackIn_18_0 = ii.field_h;
-                      decompiledRegionSelector0 = 2;
-                      break L0;
+          var2_int = param1.length();
+          if (param0 != 255) {
+            jk.a(118);
+          }
+          if (0 != var2_int) {
+            if (var2_int > 63) {
+              stackIn_9_0 = hk.field_x;
+              return stackIn_9_0;
+            } else {
+              for (var3 = 0; var2_int > var3; var3++) {
+                L2: {
+                  var4 = param1.charAt(var3);
+                  if (45 != var4) {
+                    if (pk.field_q.indexOf(var4) == -1) {
+                      stackIn_21_0 = ii.field_h;
+                      return stackIn_21_0;
                     }
+                  } else {
+                    if (var3 != 0) {
+                      if (var3 != -1 + var2_int) {
+                        break L2;
+                      }
+                    }
+                    stackIn_18_0 = ii.field_h;
+                    return stackIn_18_0;
                   }
                 }
-                return null;
               }
-            } else {
-              stackIn_5_0 = pj.field_f;
-              decompiledRegionSelector0 = 0;
+              return null;
             }
+          } else {
+            stackIn_5_0 = pj.field_f;
+            return stackIn_5_0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -158,19 +151,6 @@ final class jk {
           }
           throw t.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_27_2).append(')').toString());
         }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_5_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_9_0;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return stackIn_18_0;
-            } else {
-              return stackIn_21_0;
-            }
-          }
-        }
     }
 
     final static void a(java.awt.Frame param0, int param1, d param2) {
@@ -188,23 +168,21 @@ final class jk {
         RuntimeException var3_ref = null;
         var4 = Geoblox.field_C;
         try {
-          L0: {
-            L1: while (true) {
-              var3 = param2.a(param0, 0);
-              L2: while (var3.field_a == 0) {
-                bc.a(0, 10L);
+          L0: while (true) {
+            var3 = param2.a(param0, 0);
+            L1: while (var3.field_a == 0) {
+              bc.a(0, 10L);
+            }
+            if (var3.field_a != 1) {
+              bc.a(0, 100L);
+              continue L0;
+            } else {
+              param0.setVisible(false);
+              if (param1 != 10) {
+                field_b = (String) null;
               }
-              if (var3.field_a != 1) {
-                bc.a(0, 100L);
-                continue L1;
-              } else {
-                param0.setVisible(false);
-                if (param1 != 10) {
-                  field_b = (String) null;
-                }
-                param0.dispose();
-                break L0;
-              }
+              param0.dispose();
+              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

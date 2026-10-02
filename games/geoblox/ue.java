@@ -133,7 +133,7 @@ final class ue {
         int[] var16 = null;
         int[] var18 = null;
         try {
-          L1: {
+          L0: {
             var3_int = -6 / ((param0 + 18) / 49);
             if (this.field_a != null) {
               var4 = (int)((long)param1.length * (long)this.field_h / (long)this.field_i) + 14;
@@ -156,7 +156,7 @@ final class ue {
               param1 = new byte[var4];
               var12 = 0;
               var8 = var12;
-              L3: while (var12 < var4) {
+              L2: while (var12 < var4) {
                 var9 = var16[var12] + 32768 >> 16;
                 if (-128 > var9) {
                   param1[var12] = (byte)-128;
@@ -169,10 +169,11 @@ final class ue {
                 }
                 var12++;
               }
-              break L1;
+              break L0;
             }
           }
           stackIn_16_0 = (byte[]) (param1);
+          return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -191,7 +192,6 @@ final class ue {
           }
           throw t.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(')').toString());
         }
-        return stackIn_16_0;
     }
 
     static {

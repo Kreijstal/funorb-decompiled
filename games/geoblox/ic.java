@@ -15,29 +15,26 @@ final class ic {
         RuntimeException decompiledCaughtException = null;
         var4 = Geoblox.field_C;
         try {
-          L0: {
-            if (param1 > param0) {
-              var3_int = param0;
-              param0 = param1;
-              param1 = var3_int;
-            }
-            L2: while (param1 != 0) {
-              var3_int = param0 % param1;
-              param0 = param1;
-              param1 = var3_int;
-            }
-            if (param2 > -120) {
-              ic.a(6);
-            }
-            stackIn_8_0 = param0;
-            break L0;
+          if (param1 > param0) {
+            var3_int = param0;
+            param0 = param1;
+            param1 = var3_int;
           }
+          L1: while (param1 != 0) {
+            var3_int = param0 % param1;
+            param0 = param1;
+            param1 = var3_int;
+          }
+          if (param2 > -120) {
+            ic.a(6);
+          }
+          stackIn_8_0 = param0;
+          return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var3), "ic.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
-        return stackIn_8_0;
     }
 
     public static void a(int param0) {
@@ -96,7 +93,9 @@ final class ic {
                   throw new RuntimeException(var15.toString());
                 }
               }
-              if (param12 != 64) {
+              if (param12 == 64) {
+                return;
+              } else {
                 field_b = (String) null;
                 return;
               }

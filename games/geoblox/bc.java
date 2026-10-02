@@ -35,35 +35,33 @@ final class bc {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4_ref = null;
         try {
-          L0: {
-            var11 = new char[param3];
-            var10 = var11;
-            var9 = var10;
-            var4 = var9;
-            if (param0 > 0) {
-              field_a = 49;
-            }
-            var5 = 0;
-            for (var6 = 0; param3 > var6; var6++) {
-              var7 = param1[param2 + var6] & 255;
-              if (var7 != 0) {
-                if (var7 >= 128) {
-                  if (var7 < 160) {
-                    var8 = lf.field_e[-128 + var7];
-                    if (var8 == 0) {
-                      var8 = 63;
-                    }
-                    var7 = var8;
-                  }
-                }
-                incrementValue$1 = var5;
-                var5++;
-                var9[incrementValue$1] = (char)var7;
-              }
-            }
-            stackIn_14_0 = new String(var11, 0, var5);
-            break L0;
+          var11 = new char[param3];
+          var10 = var11;
+          var9 = var10;
+          var4 = var9;
+          if (param0 > 0) {
+            field_a = 49;
           }
+          var5 = 0;
+          for (var6 = 0; param3 > var6; var6++) {
+            var7 = param1[param2 + var6] & 255;
+            if (var7 != 0) {
+              if (var7 >= 128) {
+                if (var7 < 160) {
+                  var8 = lf.field_e[-128 + var7];
+                  if (var8 == 0) {
+                    var8 = 63;
+                  }
+                  var7 = var8;
+                }
+              }
+              incrementValue$1 = var5;
+              var5++;
+              var9[incrementValue$1] = (char)var7;
+            }
+          }
+          stackIn_14_0 = new String(var11, 0, var5);
+          return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
@@ -82,7 +80,6 @@ final class bc {
           }
           throw t.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
-        return stackIn_14_0;
     }
 
     static {

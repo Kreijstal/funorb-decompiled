@@ -36,6 +36,7 @@ final class ij extends oe implements pl {
           this.b((byte) -70, var4);
           this.c(param1 - 198);
           stackIn_3_0 = (hk) (var4);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
@@ -67,7 +68,6 @@ final class ij extends oe implements pl {
           }
           throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     public static void i(byte param0) {
@@ -128,6 +128,7 @@ final class ij extends oe implements pl {
           var4.field_q = (dh) ((Object) new ff(hh.field_d, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.b((byte) -91, var4);
           this.field_bb = this.a(hh.field_b, (byte) 87, (bb) (this));
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -181,7 +182,9 @@ final class ij extends oe implements pl {
           if (param4 == this.field_bb) {
             this.j((byte) 122);
           }
-          if (param1 != -20) {
+          if (param1 == -20) {
+            return;
+          } else {
             field_W = -95;
             return;
           }

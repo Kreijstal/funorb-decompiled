@@ -30,16 +30,15 @@ final class pi extends vf {
         StringBuilder stackIn_10_1 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           var5_int = -107 % ((-62 - param2) / 58);
           if (mf.a(param4, param1, 116, param3)) {
             stackIn_4_0 = ni.a(param0.a(param1, -28153, param4), -108);
-            decompiledRegionSelector0 = 1;
+            return stackIn_4_0;
           } else {
             stackIn_2_0 = null;
-            decompiledRegionSelector0 = 0;
+            return (nc) ((Object) stackIn_2_0);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -71,11 +70,6 @@ final class pi extends vf {
             stackIn_11_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return (nc) ((Object) stackIn_2_0);
-        } else {
-          return stackIn_4_0;
         }
     }
 
@@ -124,6 +118,7 @@ final class pi extends vf {
         try {
           if (param0 <= -30) {
             stackIn_3_0 = 0;
+            return stackIn_3_0 != 0;
           } else {
             this.field_P = 97;
             return false;
@@ -146,7 +141,6 @@ final class pi extends vf {
           }
           throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(')').toString());
         }
-        return stackIn_3_0 != 0;
     }
 
     final void a(int param0, int param1, byte param2, int param3) {

@@ -26,9 +26,6 @@ abstract class pb extends rc {
         StringBuilder stackIn_24_1 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_25_2 = null;
-        int decompiledRegionSelector0 = 0;
-        int decompiledRegionSelector1 = 0;
-        int decompiledRegionSelector2 = 0;
         Throwable decompiledCaughtException = null;
         Exception var6 = null;
         int var7 = 0;
@@ -62,9 +59,8 @@ abstract class pb extends rc {
                 var10.setColor(java.awt.Color.white);
                 var10.drawString(param4, (-(6 * param4.length()) + 304) / 2, 22);
                 var9.drawImage(ff.field_a, kh.field_d / 2 - 152, ok.field_c / 2 - 18, (java.awt.image.ImageObserver) null);
-                decompiledRegionSelector0 = 1;
               } else {
-                decompiledRegionSelector0 = 0;
+                return;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -80,30 +76,20 @@ abstract class pb extends rc {
               var9.setFont(hh.field_a);
               var9.setColor(java.awt.Color.white);
               var9.drawString(param4, (-(6 * param4.length()) + 304) / 2 + var7, 22 + var8);
-              decompiledRegionSelector0 = 1;
             }
-            if (decompiledRegionSelector0 == 0) {
-              decompiledRegionSelector1 = 1;
+            if (wh.field_q == null) {
+              return;
             } else {
-              if (wh.field_q == null) {
-                decompiledRegionSelector1 = 0;
-              } else {
-                var9.setFont(hh.field_a);
-                var9.setColor(java.awt.Color.white);
-                var9.drawString(wh.field_q, kh.field_d / 2 - 6 * wh.field_q.length() / 2, -26 + ok.field_c / 2);
-                return;
-              }
+              var9.setFont(hh.field_a);
+              var9.setColor(java.awt.Color.white);
+              var9.drawString(wh.field_q, kh.field_d / 2 - 6 * wh.field_q.length() / 2, -26 + ok.field_c / 2);
+              return;
             }
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var5 = (Exception) (Object) decompiledCaughtException;
             f.field_kb.repaint();
             return;
-          }
-          if (decompiledRegionSelector1 == 0) {
-            decompiledRegionSelector2 = 0;
-          } else {
-            decompiledRegionSelector2 = 1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
           decompiledCaughtException = decompiledCaughtParameter2;
@@ -135,11 +121,6 @@ abstract class pb extends rc {
             stackIn_25_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(')').toString());
-        }
-        if (decompiledRegionSelector2 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 

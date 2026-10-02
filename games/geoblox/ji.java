@@ -25,7 +25,6 @@ abstract class ji {
 
     final static void f(int param0) {
         int fieldTemp$0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         pk var1 = null;
         RuntimeException var1_ref = null;
@@ -33,32 +32,24 @@ abstract class ji {
         int var3 = 0;
         var3 = Geoblox.field_C;
         try {
-          L0: {
-            if (param0 <= -99) {
-              var1 = fj.field_q;
-              L1: while (cf.c((byte) -114)) {
-                var1.a(8, (byte) -71);
-                fieldTemp$0 = var1.field_f + 1;
-                var1.field_f = var1.field_f + 1;
-                var2 = fieldTemp$0;
-                pf.a(46, var1);
-                fj.field_q.f(11700, var1.field_f - var2);
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
+          if (param0 <= -99) {
+            var1 = fj.field_q;
+            L0: while (cf.c((byte) -114)) {
+              var1.a(8, (byte) -71);
+              fieldTemp$0 = var1.field_f + 1;
+              var1.field_f = var1.field_f + 1;
+              var2 = fieldTemp$0;
+              pf.a(46, var1);
+              fj.field_q.f(11700, var1.field_f - var2);
             }
+            return;
+          } else {
+            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var1_ref), "ji.B(" + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 
@@ -156,30 +147,31 @@ abstract class ji {
         try {
           var4_int = param3.e((byte) -17, param1);
           if (var4_int != param2) {
-            L1: {
+            L0: {
               if (param0 != null) {
                 if (var4_int == param0.length) {
-                  break L1;
+                  break L0;
                 }
               }
               param0 = new short[var4_int];
             }
-            L3: {
+            L2: {
               var5 = param3.e((byte) -17, 4);
               var6 = (short)param3.e((byte) -17, 16);
               if (var5 <= 0) {
                 for (var7 = 0; var4_int > var7; var7++) {
                   param0[var7] = (short)var6;
                 }
-                break L3;
+                break L2;
               } else {
                 for (var7 = 0; var4_int > var7; var7++) {
                   param0[var7] = (short)(var6 + param3.e((byte) -17, var5));
                 }
-                break L3;
+                break L2;
               }
             }
             stackIn_16_0 = (short[]) (param0);
+            return stackIn_16_0;
           } else {
             return null;
           }
@@ -214,7 +206,6 @@ abstract class ji {
           }
           throw t.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(')').toString());
         }
-        return stackIn_16_0;
     }
 
     abstract boolean a(byte param0);

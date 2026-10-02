@@ -52,12 +52,12 @@ final class ea extends hf {
                   var7 = var10 + "; Expires=" + md.a((byte) -79, 1000L * param1 + oa.a(-12520)) + "; Max-Age=" + param1;
                 }
                 wk.a(param2, "document.cookie=\"" + var7 + "\"", (byte) -10);
+                return;
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var6 = decompiledCaughtException;
                 return;
               }
-              return;
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var6_ref = (RuntimeException) (Object) decompiledCaughtException;
@@ -126,6 +126,7 @@ final class ea extends hf {
           if (mf.a(param3, param4, 117, param0)) {
             var5_int = 8 % ((-50 - param1) / 51);
             stackIn_4_0 = qa.a(param2.a(param4, -28153, param3), false);
+            return stackIn_4_0;
           } else {
             return null;
           }
@@ -160,7 +161,6 @@ final class ea extends hf {
           }
           throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
-        return stackIn_4_0;
     }
 
     static {

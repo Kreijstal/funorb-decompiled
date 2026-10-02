@@ -62,8 +62,6 @@ final class qi extends hf {
             StringBuilder stackIn_18_1 = null;
             StringBuilder stackIn_19_1 = null;
             String stackIn_19_2 = null;
-            int decompiledRegionSelector0 = 0;
-            int decompiledRegionSelector1 = 0;
             Throwable decompiledCaughtException = null;
             RuntimeException var3 = null;
             Throwable var4_ref = null;
@@ -71,7 +69,7 @@ final class qi extends hf {
             try {
               var3_int = -105 / ((param2 + 33) / 57);
               try {
-                L1: {
+                L0: {
                   var4 = (String) (wk.a((byte) -6, param1, "getcookies"));
                   var5 = uj.a(';', true, var4);
                   for (var6 = 0; var6 < var5.length; var6++) {
@@ -79,25 +77,18 @@ final class qi extends hf {
                     if (var7 >= 0) {
                       if (var5[var6].substring(0, var7).trim().equals(param0)) {
                         stackIn_7_0 = var5[var6].substring(1 + var7).trim();
-                        decompiledRegionSelector0 = 1;
-                        break L1;
+                        return stackIn_7_0;
                       }
                     }
                   }
-                  decompiledRegionSelector0 = 0;
-                  break L1;
+                  break L0;
                 }
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var4_ref = decompiledCaughtException;
-                decompiledRegionSelector0 = 0;
               }
-              if (decompiledRegionSelector0 == 0) {
-                stackIn_12_0 = null;
-                decompiledRegionSelector1 = 0;
-              } else {
-                decompiledRegionSelector1 = 1;
-              }
+              stackIn_12_0 = null;
+              return (String) ((Object) stackIn_12_0);
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var3 = (RuntimeException) (Object) decompiledCaughtException;
@@ -128,11 +119,6 @@ final class qi extends hf {
                 stackIn_19_2 = "{...}";
               }
               throw t.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(',').append(param2).append(')').toString());
-            }
-            if (decompiledRegionSelector1 == 0) {
-              return (String) ((Object) stackIn_12_0);
-            } else {
-              return stackIn_7_0;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

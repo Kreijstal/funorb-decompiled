@@ -18,40 +18,38 @@ final class fc {
         int var3 = 0;
         var3 = Geoblox.field_C;
         try {
-          L0: {
-            pf.field_D = true;
-            var1 = (ja) ((Object) a.field_d.g(0));
-            L1: while (var1 != null) {
-              var1.b(true);
-              if (6 == var1.field_z) {
-                pf.field_D = false;
-                if (var1.field_G >= 3) {
-                  ra.field_a.a(-67, var1);
-                }
+          pf.field_D = true;
+          var1 = (ja) ((Object) a.field_d.g(0));
+          L0: while (var1 != null) {
+            var1.b(true);
+            if (6 == var1.field_z) {
+              pf.field_D = false;
+              if (var1.field_G >= 3) {
+                ra.field_a.a(-67, var1);
               }
-              var1 = (ja) ((Object) a.field_d.d(1));
             }
-            var2 = 12 % ((-69 - param0) / 38);
-            var1 = (ja) ((Object) bh.field_c.g(0));
-            L2: while (var1 != null) {
-              L3: {
-                var1.b(true);
-                if (5 != var1.field_z) {
-                  if (var1.field_z != 7) {
-                    if (var1.field_z != 8) {
-                      break L3;
-                    }
+            var1 = (ja) ((Object) a.field_d.d(1));
+          }
+          var2 = 12 % ((-69 - param0) / 38);
+          var1 = (ja) ((Object) bh.field_c.g(0));
+          L1: while (var1 != null) {
+            L2: {
+              var1.b(true);
+              if (5 != var1.field_z) {
+                if (var1.field_z != 7) {
+                  if (var1.field_z != 8) {
+                    break L2;
                   }
                 }
-                pf.field_D = false;
-                if (var1.field_G >= 3) {
-                  ra.field_a.a(-115, var1);
-                }
               }
-              var1 = (ja) ((Object) bh.field_c.d(1));
+              pf.field_D = false;
+              if (var1.field_G >= 3) {
+                ra.field_a.a(-115, var1);
+              }
             }
-            break L0;
+            var1 = (ja) ((Object) bh.field_c.d(1));
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;

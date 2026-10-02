@@ -60,6 +60,7 @@ final class jl {
           }
           var3 = stackIn_5_0;
           stackIn_6_0 = var3;
+          return stackIn_6_0 != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -78,7 +79,6 @@ final class jl {
           }
           throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_6_0 != 0;
     }
 
     final static void a(byte param0) {

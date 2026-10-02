@@ -102,6 +102,7 @@ abstract class wf extends ch {
             }
           }
           stackIn_9_0 = ai.a((String) (var5), (String) (var3), param0, -1, true);
+          return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -133,7 +134,6 @@ abstract class wf extends ch {
           }
           throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(')').toString());
         }
-        return stackIn_9_0;
     }
 
     final void a(byte param0, int param1, int param2, int param3, int param4, boolean param5, int param6, int param7) {
@@ -782,8 +782,6 @@ abstract class wf extends ch {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_24_2 = null;
-        int decompiledRegionSelector0 = 0;
-        int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
         String var6 = null;
         Exception var6_ref = null;
@@ -795,7 +793,7 @@ abstract class wf extends ch {
         try {
           try {
             if (this.a(false)) {
-              L2: {
+              L1: {
                 this.field_n = this.getCodeBase().getHost();
                 var6 = this.field_n.toLowerCase();
                 stackIn_5_0 = this;
@@ -806,7 +804,7 @@ abstract class wf extends ch {
                   if (!var6.endsWith(".jagex.com")) {
                     stackIn_7_0 = this;
                     stackIn_7_1 = 0;
-                    break L2;
+                    break L1;
                   } else {
                     stackIn_5_0 = this;
                   }
@@ -840,9 +838,8 @@ abstract class wf extends ch {
               if (param3 != 81) {
                 this.a((byte) -103, -111, -55, -20, 80, false, -81, 86);
               }
-              decompiledRegionSelector0 = 1;
             } else {
-              decompiledRegionSelector0 = 0;
+              return;
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -850,13 +847,8 @@ abstract class wf extends ch {
             var10 = (String) null;
             gi.a((Throwable) ((Object) var6_ref), (String) null, (byte) 125);
             this.a((byte) 79, "crash");
-            decompiledRegionSelector0 = 1;
           }
-          if (decompiledRegionSelector0 == 0) {
-            decompiledRegionSelector1 = 0;
-          } else {
-            decompiledRegionSelector1 = 1;
-          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var6_ref2 = (RuntimeException) (Object) decompiledCaughtException;
@@ -874,11 +866,6 @@ abstract class wf extends ch {
             stackIn_24_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_24_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
-        }
-        if (decompiledRegionSelector1 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 

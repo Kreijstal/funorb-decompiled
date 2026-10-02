@@ -19,7 +19,6 @@ final class ki {
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_27_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -27,44 +26,40 @@ final class ki {
         int var5 = 0;
         var5 = Geoblox.field_C;
         try {
-          L0: {
-            for (var2_int = 0; var2_int < 3; var2_int++) {
-              p.field_o[var2_int] = 0;
+          for (var2_int = 0; var2_int < 3; var2_int++) {
+            p.field_o[var2_int] = 0;
+          }
+          for (var2_int = 0; var2_int < oj.field_b; var2_int++) {
+            if (n.field_k[var2_int].field_f == param0.field_f) {
+              dupTemp$3 = n.field_k[var2_int].c(124);
+              p.field_o[dupTemp$3] = p.field_o[dupTemp$3] + 1;
             }
-            for (var2_int = 0; var2_int < oj.field_b; var2_int++) {
-              if (n.field_k[var2_int].field_f == param0.field_f) {
-                dupTemp$3 = n.field_k[var2_int].c(124);
-                p.field_o[dupTemp$3] = p.field_o[dupTemp$3] + 1;
-              }
-            }
-            if (param1 == 31274) {
-              dupTemp$0 = param0.c(125);
-              p.field_o[dupTemp$0] = p.field_o[dupTemp$0] + 1;
-              var2_int = 0;
-              for (var3 = 0; oj.field_b > var3; var3++) {
-                L4: {
-                  if (param0.field_f == n.field_k[var3].field_f) {
-                    var4 = n.field_k[var3].c(124);
-                    if (p.field_o[var4] > pc.field_v) {
-                      p.field_o[var4] = p.field_o[var4] - 1;
-                      break L4;
-                    }
+          }
+          if (param1 == 31274) {
+            dupTemp$0 = param0.c(125);
+            p.field_o[dupTemp$0] = p.field_o[dupTemp$0] + 1;
+            var2_int = 0;
+            for (var3 = 0; oj.field_b > var3; var3++) {
+              L3: {
+                if (param0.field_f == n.field_k[var3].field_f) {
+                  var4 = n.field_k[var3].c(124);
+                  if (p.field_o[var4] > pc.field_v) {
+                    p.field_o[var4] = p.field_o[var4] - 1;
+                    break L3;
                   }
-                  incrementValue$2 = var2_int;
-                  var2_int++;
-                  n.field_k[incrementValue$2] = n.field_k[var3];
                 }
+                incrementValue$2 = var2_int;
+                var2_int++;
+                n.field_k[incrementValue$2] = n.field_k[var3];
               }
-              oj.field_b = var2_int;
-              fieldTemp$1 = oj.field_b;
-              oj.field_b = oj.field_b + 1;
-              n.field_k[fieldTemp$1] = param0;
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
             }
+            oj.field_b = var2_int;
+            fieldTemp$1 = oj.field_b;
+            oj.field_b = oj.field_b + 1;
+            n.field_k[fieldTemp$1] = param0;
+            return;
+          } else {
+            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -83,11 +78,6 @@ final class ki {
             stackIn_27_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 

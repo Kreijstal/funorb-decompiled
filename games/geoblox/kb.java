@@ -23,7 +23,6 @@ final class kb {
         StringBuilder stackIn_19_1 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var5 = Geoblox.field_C;
         try {
@@ -42,7 +41,7 @@ final class kb {
               me.field_g = hh.a(stackIn_12_0, stackIn_12_1 != 0);
               var6 = (String[]) null;
               ci.a((String[]) null, 416577356);
-              decompiledRegionSelector0 = 1;
+              return;
             } else {
               if (param0 < 100) {
                 me.field_g = ig.a(param3, param0, false);
@@ -60,7 +59,7 @@ final class kb {
               }
             }
           } else {
-            decompiledRegionSelector0 = 0;
+            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -92,11 +91,6 @@ final class kb {
             stackIn_20_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 

@@ -49,7 +49,6 @@ final class vi extends hk {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int[] var3 = null;
@@ -61,40 +60,36 @@ final class vi extends hk {
         int[] var10 = null;
         var7 = Geoblox.field_C;
         try {
-          L0: {
-            if (param1.b(-26098)) {
-              var8 = param1.a(34);
-              L1: while (var8.field_a == 0) {
-                bc.a(0, 10L);
-              }
-              if (var8.field_a != 2) {
-                var10 = (int[]) (var8.field_b);
-                var9 = var10;
-                var3 = var9;
-                var4 = new rj[var10.length >> 2];
-                if (param0 <= 61) {
-                  field_H = 120L;
-                }
-                for (var5 = 0; var5 < var4.length; var5++) {
-                  var6 = new rj();
-                  var4[var5] = var6;
-                  var6.field_d = var3[var5 << 2];
-                  var6.field_f = var3[1 + (var5 << 2)];
-                  var6.field_h = var3[2 + (var5 << 2)];
-                  var6.field_a = var3[(var5 << 2) + 3];
-                }
-                stackIn_16_0 = (rj[]) (var4);
-                decompiledRegionSelector0 = 2;
-                break L0;
-              } else {
-                stackIn_9_0 = new rj[]{};
-                decompiledRegionSelector0 = 1;
-                break L0;
-              }
-            } else {
-              stackIn_3_0 = new rj[]{};
-              decompiledRegionSelector0 = 0;
+          if (param1.b(-26098)) {
+            var8 = param1.a(34);
+            L0: while (var8.field_a == 0) {
+              bc.a(0, 10L);
             }
+            if (var8.field_a != 2) {
+              var10 = (int[]) (var8.field_b);
+              var9 = var10;
+              var3 = var9;
+              var4 = new rj[var10.length >> 2];
+              if (param0 <= 61) {
+                field_H = 120L;
+              }
+              for (var5 = 0; var5 < var4.length; var5++) {
+                var6 = new rj();
+                var4[var5] = var6;
+                var6.field_d = var3[var5 << 2];
+                var6.field_f = var3[1 + (var5 << 2)];
+                var6.field_h = var3[2 + (var5 << 2)];
+                var6.field_a = var3[(var5 << 2) + 3];
+              }
+              stackIn_16_0 = (rj[]) (var4);
+              return stackIn_16_0;
+            } else {
+              stackIn_9_0 = new rj[]{};
+              return stackIn_9_0;
+            }
+          } else {
+            stackIn_3_0 = new rj[]{};
+            return stackIn_3_0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -113,15 +108,6 @@ final class vi extends hk {
             stackIn_20_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_9_0;
-          } else {
-            return stackIn_16_0;
-          }
         }
     }
 

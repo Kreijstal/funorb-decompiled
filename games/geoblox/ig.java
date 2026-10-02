@@ -92,6 +92,7 @@ final class ig {
           var3.field_j = param1;
           var3.field_e = param0;
           stackIn_1_0 = (sl) (var3);
+          return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -110,7 +111,6 @@ final class ig {
           }
           throw t.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
-        return stackIn_1_0;
     }
 
     static {

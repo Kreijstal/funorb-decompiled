@@ -8,7 +8,6 @@ final class al {
         wc var4_ref_wc = null;
         int var6 = 0;
         pk var9 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var4 = 0;
@@ -17,85 +16,63 @@ final class al {
         byte[] var13 = null;
         var6 = Geoblox.field_C;
         try {
-          L0: {
-            if (param0 == 26146) {
-              L1: {
-                var9 = eh.field_d;
-                var2 = var9.c((byte) 34);
-                if (var2 == 0) {
-                  var8 = (ca) ((Object) qa.field_e.g(0));
-                  if (var8 != null) {
-                    var4 = var9.c((byte) 34);
-                    if (0 != var4) {
-                      var13 = new byte[var4];
-                      var9.b(29915, var4, var13, 0);
-                    } else {
-                      var5 = null;
-                    }
-                    var9.field_f = var9.field_f + 4;
-                    if (var9.h((byte) 20)) {
-                      var8.a(false);
-                    } else {
-                      jl.a((byte) -121);
-                      decompiledRegionSelector0 = 4;
-                      break L0;
-                    }
+          if (param0 == 26146) {
+            L0: {
+              var9 = eh.field_d;
+              var2 = var9.c((byte) 34);
+              if (var2 == 0) {
+                var8 = (ca) ((Object) qa.field_e.g(0));
+                if (var8 != null) {
+                  var4 = var9.c((byte) 34);
+                  if (0 != var4) {
+                    var13 = new byte[var4];
+                    var9.b(29915, var4, var13, 0);
                   } else {
-                    jl.a((byte) -124);
-                    decompiledRegionSelector0 = 3;
-                    break L0;
+                    var5 = null;
+                  }
+                  var9.field_f = var9.field_f + 4;
+                  if (var9.h((byte) 20)) {
+                    var8.a(false);
+                  } else {
+                    jl.a((byte) -121);
+                    return;
                   }
                 } else {
-                  if (1 == var2) {
-                    var3 = var9.a((byte) -101);
-                    var4_ref_wc = (wc) ((Object) l.field_g.g(0));
-                    L3: while (var4_ref_wc != null) {
-                      if (var3 != var4_ref_wc.field_h) {
-                        var4_ref_wc = (wc) ((Object) l.field_g.d(1));
-                        continue L3;
-                      }
-                      break;
+                  jl.a((byte) -124);
+                  return;
+                }
+              } else {
+                if (1 == var2) {
+                  var3 = var9.a((byte) -101);
+                  var4_ref_wc = (wc) ((Object) l.field_g.g(0));
+                  L2: while (var4_ref_wc != null) {
+                    if (var3 != var4_ref_wc.field_h) {
+                      var4_ref_wc = (wc) ((Object) l.field_g.d(1));
+                      continue L2;
                     }
-                    if (var4_ref_wc != null) {
-                      var4_ref_wc.a(false);
-                      break L1;
-                    } else {
-                      jl.a((byte) -124);
-                      decompiledRegionSelector0 = 2;
-                      break L0;
-                    }
-                  } else {
-                    gi.a((Throwable) null, "A1: " + og.e(55), (byte) 125);
-                    jl.a((byte) -120);
+                    break;
                   }
+                  if (var4_ref_wc != null) {
+                    var4_ref_wc.a(false);
+                    break L0;
+                  } else {
+                    jl.a((byte) -124);
+                    return;
+                  }
+                } else {
+                  gi.a((Throwable) null, "A1: " + og.e(55), (byte) 125);
+                  jl.a((byte) -120);
                 }
               }
-              decompiledRegionSelector0 = 1;
-            } else {
-              decompiledRegionSelector0 = 0;
             }
+            return;
+          } else {
+            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var1), "al.B(" + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return;
-            } else {
-              if (decompiledRegionSelector0 == 3) {
-                return;
-              } else {
-                return;
-              }
-            }
-          }
         }
     }
 
@@ -157,18 +134,16 @@ final class al {
             RuntimeException stackIn_25_0 = null;
             StringBuilder stackIn_25_1 = null;
             String stackIn_25_2 = null;
-            int decompiledRegionSelector0 = 0;
-            int decompiledRegionSelector1 = 0;
             Throwable decompiledCaughtException = null;
             Throwable var2_ref = null;
             var7 = Geoblox.field_C;
             try {
               if (td.field_H) {
                 stackIn_4_0 = 1;
-                decompiledRegionSelector1 = 0;
+                return stackIn_4_0 != 0;
               } else {
                 try {
-                  L1: {
+                  L0: {
                     var8 = "tuhstatbut";
                     var3 = (String) (wk.a((byte) -6, param1, "getcookies"));
                     var4 = uj.a(';', true, var3);
@@ -177,32 +152,25 @@ final class al {
                       if (var6 >= 0) {
                         if (var4[var5].substring(0, var6).trim().equals(var8)) {
                           stackIn_12_0 = 1;
-                          decompiledRegionSelector0 = 0;
-                          break L1;
+                          return stackIn_12_0 != 0;
                         }
                       }
                     }
                     if (param0 != -109) {
                       al.a(114, -32);
                     }
-                    decompiledRegionSelector0 = 1;
-                    break L1;
+                    break L0;
                   }
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2_ref = decompiledCaughtException;
-                  decompiledRegionSelector0 = 1;
                 }
-                if (decompiledRegionSelector0 == 0) {
-                  decompiledRegionSelector1 = 2;
+                if (null == param1.getParameter("tuhstatbut")) {
+                  stackIn_21_0 = 0;
                 } else {
-                  if (null == param1.getParameter("tuhstatbut")) {
-                    stackIn_21_0 = 0;
-                  } else {
-                    stackIn_21_0 = 1;
-                  }
-                  decompiledRegionSelector1 = 1;
+                  stackIn_21_0 = 1;
                 }
+                return stackIn_21_0 != 0;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
@@ -221,15 +189,6 @@ final class al {
                 stackIn_25_2 = "{...}";
               }
               throw t.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(')').toString());
-            }
-            if (decompiledRegionSelector1 == 0) {
-              return stackIn_4_0 != 0;
-            } else {
-              if (decompiledRegionSelector1 == 1) {
-                return stackIn_21_0 != 0;
-              } else {
-                return stackIn_12_0 != 0;
-              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

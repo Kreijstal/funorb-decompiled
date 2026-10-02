@@ -47,6 +47,7 @@ final class rj {
         try {
           var2_int = 12 % ((-57 - param0) / 57);
           stackIn_1_0 = param1.b(true);
+          return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -65,7 +66,6 @@ final class rj {
           }
           throw t.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(')').toString());
         }
-        return stackIn_1_0;
     }
 
     static {

@@ -35,17 +35,21 @@ prior snapshots in Git.
 
 ## GeoBlox source refresh
 
-The latest owned decompiler removes 745 integral sign nodes across 132 GeoBlox
-Java files: `x + (-y)` becomes `x - y`, and `x - (-y)` becomes `x + y`.
-Opcode width, narrowing boundaries, operand order, floating arithmetic and
-string operations are preserved. Six focused test groups include 20,350 native
-signed-term comparisons and 24,324 retained shift comparisons. A complete typed
-Java-tree audit matches all 303 previous and current files modulo these integral
-sign rewrites and parentheses; all 21,185 declaration identities are unchanged.
-The prior shift cleanup remains: `<< -449443480` becomes `<< 8`, using five bits
-for int shifts and six for long shifts. Exception-priority tests also pass,
-covering 7,200 native loop-exit comparisons. Original transformed classes are
-unchanged.
+The latest owned decompiler reconstructs forward, nonthrowing terminal returns
+inside their original try paths. This removes 254 generated selectors and
+3,125 Java source lines across 181 GeoBlox files, including the boundary scan's
+13-arm post-try ladder. Shared joins, throwing continuations, handler entries,
+retreating edges and synchronized-region boundaries retain their existing routing.
+All original flow and exception-binding contracts remain checked.
+
+All 303 sources compile. The fresh source audit matches 20,920 nonselector
+declarations, 152,549 nonselector declaration/reference occurrences and all 388
+override edges; remaining selectors account for the rest of the current 20,931
+declarations and 152,600 bindings. Generic tests pass 36 flow-contract groups,
+1,560 native return-tail comparisons in normal/forced output, 15 native lock-exit
+cases in normal reconstruction, and the retained 7,200 loop-exit comparisons.
+The forced dispatcher continues to refuse explicit monitors. Earlier integral
+sign and literal-shift normalization remains; transformed class inputs are unchanged.
 
 A clean decompiler Git source archive reproduces all 303 Java files and current
 diagnostics byte-for-byte. Every source compiles and the export has no hard
