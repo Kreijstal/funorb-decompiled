@@ -1130,3 +1130,43 @@ migrate without changing semantic names. Native fixtures and reproducible source
 checks cover their stated scopes; full URL-launch services, successful archive
 loading, live contact production, full gameplay and device performance remain
 unverified.
+
+## Raster targets and nine-slice panels (pass 53)
+
+`AwtRasterBuffer` owns `width`, `height`, `pixels` and the AWT `image` presented
+to the canvas. `setAsRasterTarget` reinstalls that pixel array and dimensions in
+`SoftwareRasterizer`. Game rendering temporarily targets scratch sprites,
+board masks and scene rasters, then calls
+`sh.mainRasterBuffer.setAsRasterTarget(...)` to resume canvas rendering.
+
+`fk.createCanvasRasterBuffer` reflectively constructs the BufferedImage-backed
+implementation `ve`, calling `initialize(height, component, width, guard)`.
+It shares its integer pixels through `pixelDataBuffer`, `rgbColorModel` and
+`imageRaster`, and keeps the component as `imageObserverComponent`. The factory
+catches failure to construct it and creates `ImageProducerRasterBuffer` instead.
+The latter sends pixels to its consumer under synchronization before `drawImage`.
+The reflective name `ve` is deliberately preserved; API callback names and all
+original guard, exception, preparation and publication ordering remain.
+
+`ma.drawNineSlicePanel(panelTop, panelLeft, panelHeight, guard, panelWidth,
+nineSliceSprites)` draws row-major slots:
+
+| Slot | Region |
+| --- | --- |
+| 0 / 1 / 2 | Top-left corner / top edge / top-right corner |
+| 3 / 4 / 5 | Left edge / center / right edge |
+| 6 / 7 / 8 | Bottom-left corner / bottom edge / bottom-right corner |
+
+`centerTileLeft/Right/Top/Bottom` retain the original edge offsets used to place
+tiles. `centerClipLeft/Right/Top/Bottom` can meet at a proportional split when
+opposing borders exceed the panel size. These are distinct: clipping is adjusted
+while tile placement retains its raw bounds. `edgeTileCoordinateOrCenterY` is
+reused for horizontal edges, vertical edges and center rows; `centerTileX`
+steps through center columns. `hd.nineSliceSavedClip` saves the shared clip
+before each nonempty region and restores it after that region draws normally.
+There is no invented finally cleanup on failure.
+
+The existing nine-slice native fixture checks construction of the nine sprites;
+it does not execute this panel renderer or AWT presentation. The new names are
+supported by source and complete resolved-binding checks. Live assets, actual
+presentation, full gameplay and phone performance remain unverified.

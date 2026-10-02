@@ -85,7 +85,7 @@ abstract class ib implements dg {
             if (~(350L + this.field_b) >= ~oa.a(-12520)) {
                 return this.currentValidationState(32);
             }
-            return bf.field_g;
+            return ImageProducerRasterBuffer.field_g;
         }
         if (this.a(param0 ^ 26579)) {
             return oj.field_d;
@@ -93,7 +93,7 @@ abstract class ib implements dg {
         if (~(350L + this.field_b) >= ~oa.a(-12520)) {
             return this.currentValidationState(32);
         }
-        return bf.field_g;
+        return ImageProducerRasterBuffer.field_g;
     }
 
     final static void d(int param0) {

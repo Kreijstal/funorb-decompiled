@@ -4,7 +4,7 @@
 import java.util.*;
 
 abstract class sh extends el implements ql {
-    static sc field_y;
+    static AwtRasterBuffer mainRasterBuffer;
     static int[] field_x;
     static String field_z;
     el field_A;
@@ -270,7 +270,7 @@ abstract class sh extends el implements ql {
             this.b(param3, param1, param2, 0);
           }
           if (param0 != 0) {
-            field_y = (sc) null;
+            mainRasterBuffer = (AwtRasterBuffer) null;
           }
           stackIn_5_0 = (StringBuilder) (param1);
           return stackIn_5_0;
@@ -444,7 +444,7 @@ abstract class sh extends el implements ql {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > -30) {
-            field_y = (sc) null;
+            mainRasterBuffer = (AwtRasterBuffer) null;
           }
           L1: {
             if (null != this.field_A) {
@@ -537,7 +537,7 @@ abstract class sh extends el implements ql {
         if (param0 != -3) {
             return;
         }
-        field_y = null;
+        mainRasterBuffer = null;
         field_z = null;
         field_x = null;
     }
@@ -570,7 +570,7 @@ abstract class sh extends el implements ql {
             }
           }
           if (param1 != 13) {
-            field_y = (sc) null;
+            mainRasterBuffer = (AwtRasterBuffer) null;
           }
           var5_int = param0;
           if (var5_int != 80) {

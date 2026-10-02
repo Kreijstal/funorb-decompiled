@@ -101,7 +101,7 @@ final class GameplaySession {
           promptTop = 270;
         }
         L3: {
-          ma.a(promptTop, 70, 10 + promptHeight, (byte) -92, 500, ll.frameNineSliceSprites);
+          ma.drawNineSlicePanel(promptTop, 70, 10 + promptHeight, (byte) -92, 500, ll.frameNineSliceSprites);
           fi.smallFont.a(promptText, 95, 15 + promptTop, promptWidthThenButtonX, 300, 1, -1, 0, 0, lineSpacing);
           if (this.tutorialStepId == 5) {
             if (qa.pointerXSnapshot > 100) {
@@ -113,10 +113,10 @@ final class GameplaySession {
                 }
               }
             }
-            ma.a(440, 100, 36, (byte) -92, 240, eb.mouseBoxFrames);
+            ma.drawNineSlicePanel(440, 100, 36, (byte) -92, 240, eb.mouseBoxFrames);
             dd.uiPaletteFont.b(cf.field_j, 220, 468, 0, -1);
             dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
-            ma.a(440, 380, 36, (byte) -92, 160, eb.mouseBoxFrames);
+            ma.drawNineSlicePanel(440, 380, 36, (byte) -92, 160, eb.mouseBoxFrames);
             if (380 < qa.pointerXSnapshot) {
               if (540 > qa.pointerXSnapshot) {
                 if (ue.pointerYSnapshot > 440) {
@@ -132,7 +132,7 @@ final class GameplaySession {
               break L3;
             }
           }
-          ma.a(440, 240, 36, (byte) -92, 160, eb.mouseBoxFrames);
+          ma.drawNineSlicePanel(440, 240, 36, (byte) -92, 160, eb.mouseBoxFrames);
           if (250 < qa.pointerXSnapshot) {
             if (qa.pointerXSnapshot < 389) {
               if (ue.pointerYSnapshot > 440) {
@@ -312,7 +312,7 @@ final class GameplaySession {
           }
           var3_ref_String = gf.a(ff.waitingForGraphicsText, ll.gameGraphicsArchive, var2_ref_String, AccountWelcomePanel.loadingGraphicsText, true);
           var4 = 30 + dd.uiPaletteFont.a(var3_ref_String);
-          ma.a(215, 320 - var4 / 2, 50, (byte) -92, var4, ll.frameNineSliceSprites);
+          ma.drawNineSlicePanel(215, 320 - var4 / 2, 50, (byte) -92, var4, ll.frameNineSliceSprites);
           dd.uiPaletteFont.b(var3_ref_String, 320, 250, 0, -1);
           return;
         }
@@ -349,7 +349,7 @@ final class GameplaySession {
             this.boardRasterDirty = false;
           }
         }
-        sh.field_y.a(255);
+        sh.mainRasterBuffer.setAsRasterTarget(255);
         mf.selectedThemeBackground.drawRunEncoded(0, 0);
         var3 = 4;
         var4 = 4;
@@ -381,7 +381,7 @@ final class GameplaySession {
             var6 = -fi.smallFont.field_q + fi.smallFont.field_o;
             var7_int = fi.smallFont.c(v.field_n, 640) + 40;
             var8 = fi.smallFont.b(v.field_n, 640) * var6 + 10;
-            ma.a(var5, -(var7_int / 2) + 320, 20 + var8, (byte) -92, var7_int, ll.frameNineSliceSprites);
+            ma.drawNineSlicePanel(var5, -(var7_int / 2) + 320, 20 + var8, (byte) -92, var7_int, ll.frameNineSliceSprites);
             fi.smallFont.b(v.field_n, 320, var5 + 28, 1, -1);
             fi.smallFont.b(v.field_n, 319, 28 + var5, 1, -1);
             if (var14 == 0) {
@@ -432,7 +432,7 @@ final class GameplaySession {
         jf.rotatedThemeForegroundRaster.setAsRasterTarget();
         SoftwareRasterizer.clearFramebuffer();
         ec.selectedThemeForeground.rotateNearest(ec.selectedThemeForeground.fullWidth << 3, ec.selectedThemeForeground.fullHeight << 3, jf.rotatedThemeForegroundRaster.fullWidth << 3, jf.rotatedThemeForegroundRaster.fullHeight << 3, (int)(65535.0 * ((double)(-this.boardAngleRadians) / 6.283185307179586)), 4096);
-        sh.field_y.a(255);
+        sh.mainRasterBuffer.setAsRasterTarget(255);
         w.a(jf.rotatedThemeForegroundRaster, -(jf.rotatedThemeForegroundRaster.fullWidth >> 1) + 320, -(jf.rotatedThemeForegroundRaster.fullHeight >> 1) + 240);
         if (!this.debugReducedRendering) {
           uh.d(4740);
@@ -546,7 +546,7 @@ final class GameplaySession {
                       }
                       SoftwareRasterizer.fillCircle(160, 120, 21, 16777215);
                       SoftwareRasterizer.e(2, 2, 0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight);
-                      sh.field_y.a(255);
+                      sh.mainRasterBuffer.setAsRasterTarget(255);
                       stackIn_168_0 = SoftwareRasterizer.framebufferHeight;
                       stackIn_168_1 = 1;
                       break L32;
@@ -603,7 +603,7 @@ final class GameplaySession {
                     break L55;
                   }
                   var5 = 35 + (6 * this.sceneAnimationTick - 480);
-                  sh.field_y.a(255);
+                  sh.mainRasterBuffer.setAsRasterTarget(255);
                   SoftwareRasterizer.setClip(0, var5, 640, 480);
                   oc.boardSceneRaster.draw(0, 0);
                   SoftwareRasterizer.setClip(0, 0, 640, 480);
@@ -813,7 +813,7 @@ final class GameplaySession {
                 if (inputDerivedModuloIndex != 1) {
                   if (inputDerivedModuloIndex != 2) {
                     if (3 == inputDerivedModuloIndex) {
-                      sc.field_f = sc.field_f + 1;
+                      AwtRasterBuffer.field_f = AwtRasterBuffer.field_f + 1;
                       el.field_g = el.field_g + lb.field_b;
                       if (clientControlFlowGuard == 0) {
                         break L25;
@@ -822,19 +822,19 @@ final class GameplaySession {
                     if (inputDerivedModuloIndex != 4) {
                       break L25;
                     }
-                    sc.field_f = sc.field_f - 1;
+                    AwtRasterBuffer.field_f = AwtRasterBuffer.field_f - 1;
                     el.field_g = el.field_g - lb.field_b;
                     if (clientControlFlowGuard == 0) {
                       break L25;
                     }
                   }
                   lb.field_b = lb.field_b - 1;
-                  el.field_g = el.field_g - sc.field_f;
+                  el.field_g = el.field_g - AwtRasterBuffer.field_f;
                   if (clientControlFlowGuard == 0) {
                     break L25;
                   }
                 }
-                el.field_g = el.field_g + sc.field_f;
+                el.field_g = el.field_g + AwtRasterBuffer.field_f;
                 lb.field_b = lb.field_b + 1;
               }
               if (this.tutorialStepId == 0) {
@@ -910,7 +910,7 @@ final class GameplaySession {
                   if (1 != inputDerivedModuloIndex) {
                     if (2 != inputDerivedModuloIndex) {
                       if (inputDerivedModuloIndex == 3) {
-                        sc.field_f = sc.field_f + 1;
+                        AwtRasterBuffer.field_f = AwtRasterBuffer.field_f + 1;
                         el.field_g = el.field_g + lb.field_b;
                         if (clientControlFlowGuard == 0) {
                           break L30;
@@ -920,19 +920,19 @@ final class GameplaySession {
                         break L30;
                       }
                       el.field_g = el.field_g - lb.field_b;
-                      sc.field_f = sc.field_f - 1;
+                      AwtRasterBuffer.field_f = AwtRasterBuffer.field_f - 1;
                       if (clientControlFlowGuard == 0) {
                         break L30;
                       }
                     }
                     lb.field_b = lb.field_b - 1;
-                    el.field_g = el.field_g - sc.field_f;
+                    el.field_g = el.field_g - AwtRasterBuffer.field_f;
                     if (clientControlFlowGuard == 0) {
                       break L30;
                     }
                   }
                   lb.field_b = lb.field_b + 1;
-                  el.field_g = el.field_g + sc.field_f;
+                  el.field_g = el.field_g + AwtRasterBuffer.field_f;
                   if (clientControlFlowGuard == 0) {
                     break L30;
                   }
@@ -1495,12 +1495,12 @@ final class GameplaySession {
             this.prepareNextTheme(867);
           }
           this.sceneTransitionInProgress = true;
-          sf.a(sh.field_y.field_d, 0, oc.boardSceneRaster.pixels, 0, sh.field_y.field_d.length);
+          sf.a(sh.mainRasterBuffer.pixels, 0, oc.boardSceneRaster.pixels, 0, sh.mainRasterBuffer.pixels.length);
           PointerInputListener.a((byte) -39);
           bk.boardOwnershipRaster.setAsRasterTarget();
           SoftwareRasterizer.clearFramebuffer();
           i.avatarMaskRaster.drawSilhouette(this.boardMaskOffsetX + 320, this.boardMaskOffsetY + 240, 16777215);
-          sh.field_y.a(255);
+          sh.mainRasterBuffer.setAsRasterTarget(255);
         }
         int nextSceneAnimationTick = this.sceneAnimationTick + 1;
         this.sceneAnimationTick = this.sceneAnimationTick + 1;
@@ -1719,7 +1719,7 @@ final class GameplaySession {
               vf.spriteScratchRaster.setAsRasterTarget();
               SoftwareRasterizer.clearFramebuffer();
               endingEntity.entitySprite.rotateSmooth(endingEntity.entitySprite.fullWidth << 3, endingEntity.entitySprite.fullHeight << 3, vf.spriteScratchRaster.fullWidth << 3, vf.spriteScratchRaster.fullHeight << 3, (int)(65535.0 * ((double)endingEntity.spriteAngleRadians / 6.283185307179586)), 4096);
-              sh.field_y.a(255);
+              sh.mainRasterBuffer.setAsRasterTarget(255);
               maxRadiusSquared = 0;
               spriteOffsetFromCenterX = (int)(endingEntity.positionX + 0.5f) + (-(vf.spriteScratchRaster.width >> 1) - 320);
               spriteOffsetFromCenterY = -240 + ((int)(endingEntity.positionY + 0.5f) - (vf.spriteScratchRaster.height >> 1));
@@ -1961,7 +1961,7 @@ final class GameplaySession {
     private final void resetScoreState(int methodGuard) {
         this.score = 0;
         this.pendingPopupPoints = 0;
-        sc.field_f = 3382;
+        AwtRasterBuffer.field_f = 3382;
         el.field_g = 8801;
         ml.field_r = 1385;
         dc.field_a = 0;
@@ -2070,7 +2070,7 @@ final class GameplaySession {
           i.avatarMaskRaster.drawSilhouette(320 + this.boardMaskOffsetX, this.boardMaskOffsetY + 240, 16777215);
           oc.boardSceneRaster.setAsRasterTarget();
           SoftwareRasterizer.clearFramebuffer();
-          sh.field_y.a(255);
+          sh.mainRasterBuffer.setAsRasterTarget(255);
           this.sceneTransitionRequested = false;
           this.sceneAnimationTick = 0;
           this.boardRasterDirty = true;
@@ -2099,7 +2099,7 @@ final class GameplaySession {
           dc.field_a = 0;
           ml.field_r = 1385;
           el.field_g = 8801;
-          sc.field_f = 3382;
+          AwtRasterBuffer.field_f = 3382;
           gb.field_g = 5997;
           this.newActionCount = 0;
           return;

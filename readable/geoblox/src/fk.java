@@ -14,7 +14,7 @@ final class fk extends sh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (readGuard == 2229) {
-            stackIn_4_0 = bf.activeTextArchive.a(0, resourceKey, "");
+            stackIn_4_0 = ImageProducerRasterBuffer.activeTextArchive.a(0, resourceKey, "");
             return stackIn_4_0;
           }
           stackIn_2_0 = (byte[]) null;
@@ -84,55 +84,55 @@ final class fk extends sh {
         }
     }
 
-    final static sc a(boolean param0, java.awt.Component param1, int param2, int param3) {
+    final static AwtRasterBuffer createCanvasRasterBuffer(boolean returnNullGuard, java.awt.Component component, int height, int width) {
         try {
-            Class var4 = null;
-            Throwable var4_ref = null;
-            RuntimeException var4_ref2 = null;
-            sc var5 = null;
-            bf var5_ref = null;
-            sc stackIn_2_0 = null;
-            sc stackIn_4_0 = null;
-            bf stackIn_6_0 = null;
-            RuntimeException stackIn_9_0 = null;
-            StringBuilder stackIn_9_1 = null;
-            String stackIn_10_2 = null;
-            Throwable decompiledCaughtException = null;
+            Class bufferImplementationClass = null;
+            Throwable preferredImplementationFailure = null;
+            RuntimeException bufferFactoryFailure = null;
+            AwtRasterBuffer preferredRasterBuffer = null;
+            ImageProducerRasterBuffer fallbackRasterBuffer = null;
+            AwtRasterBuffer nullBufferForGuard = null;
+            AwtRasterBuffer initializedPreferredBuffer = null;
+            ImageProducerRasterBuffer initializedFallbackBuffer = null;
+            RuntimeException factoryFailureBeforeComponentDescription = null;
+            StringBuilder factoryMessagePrefix = null;
+            String componentArgumentDescription = null;
+            Throwable caughtFactoryThrowable = null;
             try {
               try {
-                var4 = Class.forName("ve");
-                if (param0) {
-                  stackIn_2_0 = (sc) null;
-                  return stackIn_2_0;
+                bufferImplementationClass = Class.forName("ve");
+                if (returnNullGuard) {
+                  nullBufferForGuard = (AwtRasterBuffer) null;
+                  return nullBufferForGuard;
                 }
-                var5 = (sc) (var4.newInstance());
-                var5.a(param2, param1, param3, (byte) 127);
-                stackIn_4_0 = (sc) (var5);
-                return stackIn_4_0;
-              } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var4_ref = decompiledCaughtException;
-                var5_ref = new bf();
-                ((sc) ((Object) var5_ref)).a(param2, param1, param3, (byte) 117);
-                stackIn_6_0 = (bf) (var5_ref);
-                return (sc) ((Object) stackIn_6_0);
+                preferredRasterBuffer = (AwtRasterBuffer) (bufferImplementationClass.newInstance());
+                preferredRasterBuffer.initialize(height, component, width, (byte) 127);
+                initializedPreferredBuffer = (AwtRasterBuffer) (preferredRasterBuffer);
+                return initializedPreferredBuffer;
+              } catch (java.lang.Throwable preferredImplementationThrowable) {
+                caughtFactoryThrowable = preferredImplementationThrowable;
+                preferredImplementationFailure = caughtFactoryThrowable;
+                fallbackRasterBuffer = new ImageProducerRasterBuffer();
+                ((AwtRasterBuffer) ((Object) fallbackRasterBuffer)).initialize(height, component, width, (byte) 117);
+                initializedFallbackBuffer = (ImageProducerRasterBuffer) (fallbackRasterBuffer);
+                return (AwtRasterBuffer) ((Object) initializedFallbackBuffer);
               }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-              stackIn_9_0 = (RuntimeException) (var4_ref2);
-              stackIn_9_1 = new StringBuilder().append("fk.E(").append(param0).append(',');
-              if (param1 == null) {
-                stackIn_10_2 = "null";
+            } catch (java.lang.RuntimeException caughtBufferFactoryFailure) {
+              caughtFactoryThrowable = caughtBufferFactoryFailure;
+              bufferFactoryFailure = (RuntimeException) (Object) caughtFactoryThrowable;
+              factoryFailureBeforeComponentDescription = (RuntimeException) (bufferFactoryFailure);
+              factoryMessagePrefix = new StringBuilder().append("fk.E(").append(returnNullGuard).append(',');
+              if (component == null) {
+                componentArgumentDescription = "null";
               } else {
-                stackIn_10_2 = "{...}";
+                componentArgumentDescription = "{...}";
               }
-              throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+              throw t.a((Throwable) ((Object) factoryFailureBeforeComponentDescription), ((StringBuilder) (Object) factoryMessagePrefix).append(componentArgumentDescription).append(',').append(height).append(',').append(width).append(')').toString());
             }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+        } catch (RuntimeException | Error uncheckedFactoryFailure) {
+            throw uncheckedFactoryFailure;
+        } catch (Throwable unexpectedCheckedFactoryFailure) {
+            throw new RuntimeException(unexpectedCheckedFactoryFailure);
         }
     }
 

@@ -173,7 +173,7 @@ final class AccountWelcomePanel extends ee implements pl {
                 this.sharedFlowFlag = 0;
             }
             void loadInterfaceTextPart1() throws java.lang.RuntimeException {
-                bf.activeTextArchive = textArchive;
+                ImageProducerRasterBuffer.activeTextArchive = textArchive;
                 textResourceBytes = fk.readTextResourceBytes(2229, "loginm3");
                 if (textResourceBytes != null) {
                   IntrusiveNode.loginMessage3Text = ag.decodeTextBytes(1, textResourceBytes);
@@ -3157,7 +3157,7 @@ final class AccountWelcomePanel extends ee implements pl {
                 if (null != textResourceBytes) {
                   ag.decodeTextBytes(1, textResourceBytes);
                 }
-                bf.activeTextArchive = null;
+                ImageProducerRasterBuffer.activeTextArchive = null;
             }
             void run() {
                 sharedFlowFlag = Geoblox.field_C;

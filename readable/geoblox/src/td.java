@@ -93,7 +93,7 @@ final class td extends hk {
           var7 = -74 % ((param2 - 1) / 43);
           var6 = param1 - (-this.field_m - (this.field_h >> 1));
           var9 = this.field_F.a((byte) -105);
-          if (var9 != bf.field_g) {
+          if (var9 != ImageProducerRasterBuffer.field_g) {
             if (si.field_n != var9) {
               if (si.field_m == var9) {
                 var14 = oa.field_e[2];

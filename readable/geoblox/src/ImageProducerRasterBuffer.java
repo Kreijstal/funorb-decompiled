@@ -3,10 +3,10 @@
  */
 import java.util.*;
 
-final class bf extends sc implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
-    private java.awt.image.ColorModel field_j;
+final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
+    private java.awt.image.ColorModel colorModel;
     static lh field_g;
-    private java.awt.image.ImageConsumer field_h;
+    private java.awt.image.ImageConsumer imageConsumer;
     static rh activeTextArchive;
 
     final static h a(byte param0, String param1) {
@@ -36,60 +36,60 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    private final synchronized void a(boolean param0) {
-        if (null == this.field_h) {
+    private final synchronized void publishPixelsToConsumer(boolean methodGuard) {
+        if (null == this.imageConsumer) {
             return;
         }
-        this.field_h.setPixels(0, 0, this.field_a, this.field_c, this.field_j, this.field_d, 0, this.field_a);
-        if (param0) {
-            this.field_h.imageComplete(2);
+        this.imageConsumer.setPixels(0, 0, this.width, this.height, this.colorModel, this.pixels, 0, this.width);
+        if (methodGuard) {
+            this.imageConsumer.imageComplete(2);
             return;
         }
         activeTextArchive = (rh) null;
-        this.field_h.imageComplete(2);
+        this.imageConsumer.imageComplete(2);
     }
 
-    public final void requestTopDownLeftRightResend(java.awt.image.ImageConsumer param0) {
+    public final void requestTopDownLeftRightResend(java.awt.image.ImageConsumer consumer) {
     }
 
-    final void a(int param0, java.awt.Graphics param1, int param2, int param3) {
+    final void drawImage(int drawY, java.awt.Graphics graphics, int drawX, int methodGuard) {
         try {
-            if (param3 != 0) {
-                java.awt.Image var6 = (java.awt.Image) null;
+            if (methodGuard != 0) {
+                java.awt.Image nullImageForInvalidGuard = (java.awt.Image) null;
                 this.imageUpdate((java.awt.Image) null, 94, -33, 114, 59, 88);
             }
-            this.a(true);
-            param1.drawImage(this.field_e, param2, param0, (java.awt.image.ImageObserver) (this));
-        } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "bf.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+            this.publishPixelsToConsumer(true);
+            graphics.drawImage(this.image, drawX, drawY, (java.awt.image.ImageObserver) (this));
+        } catch (RuntimeException imageDrawFailure) {
+            throw t.a((Throwable) ((Object) imageDrawFailure), "bf.D(" + drawY + ',' + (graphics != null ? "{...}" : "null") + ',' + drawX + ',' + methodGuard + ')');
         }
     }
 
-    public final synchronized boolean isConsumer(java.awt.image.ImageConsumer param0) {
-        return this.field_h == param0;
+    public final synchronized boolean isConsumer(java.awt.image.ImageConsumer consumer) {
+        return this.imageConsumer == consumer;
     }
 
-    public final void startProduction(java.awt.image.ImageConsumer param0) {
+    public final void startProduction(java.awt.image.ImageConsumer consumer) {
         try {
-            this.addConsumer(param0);
+            this.addConsumer(consumer);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "bf.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "bf.startProduction(" + (consumer != null ? "{...}" : "null") + ')');
         }
     }
 
-    public final synchronized void addConsumer(java.awt.image.ImageConsumer param0) {
+    public final synchronized void addConsumer(java.awt.image.ImageConsumer consumer) {
         try {
-            this.field_h = param0;
-            param0.setDimensions(this.field_a, this.field_c);
-            param0.setProperties((Hashtable) null);
-            param0.setColorModel(this.field_j);
-            param0.setHints(14);
+            this.imageConsumer = consumer;
+            consumer.setDimensions(this.width, this.height);
+            consumer.setProperties((Hashtable) null);
+            consumer.setColorModel(this.colorModel);
+            consumer.setHints(14);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "bf.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "bf.addConsumer(" + (consumer != null ? "{...}" : "null") + ')');
         }
     }
 
-    public final boolean imageUpdate(java.awt.Image param0, int param1, int param2, int param3, int param4, int param5) {
+    public final boolean imageUpdate(java.awt.Image observedImage, int infoFlags, int updateX, int updateY, int updateWidth, int updateHeight) {
         RuntimeException var7 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -102,34 +102,34 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
           var7 = decompiledCaughtException;
           stackIn_4_0 = (RuntimeException) (var7);
           stackIn_4_1 = new StringBuilder().append("bf.imageUpdate(");
-          if (param0 == null) {
+          if (observedImage == null) {
             stackIn_5_2 = "null";
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(infoFlags).append(',').append(updateX).append(',').append(updateY).append(',').append(updateWidth).append(',').append(updateHeight).append(')').toString());
         }
     }
 
-    final void a(int param0, java.awt.Component param1, int param2, byte param3) {
+    final void initialize(int height, java.awt.Component component, int width, byte methodGuard) {
         try {
-            this.field_c = param0;
-            this.field_a = param2;
-            this.field_d = new int[param0 * param2 + 1];
-            this.field_j = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
-            this.field_e = param1.createImage((java.awt.image.ImageProducer) (this));
-            this.a(true);
-            param1.prepareImage(this.field_e, (java.awt.image.ImageObserver) (this));
-            this.a(true);
-            param1.prepareImage(this.field_e, (java.awt.image.ImageObserver) (this));
-            this.a(true);
-            param1.prepareImage(this.field_e, (java.awt.image.ImageObserver) (this));
-            this.a(255);
-            if (param3 <= 116) {
-                this.field_j = (java.awt.image.ColorModel) null;
+            this.height = height;
+            this.width = width;
+            this.pixels = new int[height * width + 1];
+            this.colorModel = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
+            this.image = component.createImage((java.awt.image.ImageProducer) (this));
+            this.publishPixelsToConsumer(true);
+            component.prepareImage(this.image, (java.awt.image.ImageObserver) (this));
+            this.publishPixelsToConsumer(true);
+            component.prepareImage(this.image, (java.awt.image.ImageObserver) (this));
+            this.publishPixelsToConsumer(true);
+            component.prepareImage(this.image, (java.awt.image.ImageObserver) (this));
+            this.setAsRasterTarget(255);
+            if (methodGuard <= 116) {
+                this.colorModel = (java.awt.image.ColorModel) null;
             }
-        } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "bf.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+        } catch (RuntimeException initializationFailure) {
+            throw t.a((Throwable) ((Object) initializationFailure), "bf.C(" + height + ',' + (component != null ? "{...}" : "null") + ',' + width + ',' + methodGuard + ')');
         }
     }
 
@@ -256,17 +256,17 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    public final synchronized void removeConsumer(java.awt.image.ImageConsumer param0) {
+    public final synchronized void removeConsumer(java.awt.image.ImageConsumer consumer) {
         try {
-            if (param0 == this.field_h) {
-                this.field_h = null;
+            if (consumer == this.imageConsumer) {
+                this.imageConsumer = null;
             }
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "bf.removeConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "bf.removeConsumer(" + (consumer != null ? "{...}" : "null") + ')');
         }
     }
 
-    bf() {
+    ImageProducerRasterBuffer() {
     }
 
     public static void c(byte param0) {

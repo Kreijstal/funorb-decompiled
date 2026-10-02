@@ -113,7 +113,7 @@ final class ra implements Iterable {
               gf.a((byte) -122);
             }
             if (!el.gameplaySession.submissionBlocked) {
-              GameplayEntity.field_A.addLast(-44, new p(param2, param0, dc.field_a, el.field_g, sc.field_f, lb.field_b));
+              GameplayEntity.field_A.addLast(-44, new p(param2, param0, dc.field_a, el.field_g, AwtRasterBuffer.field_f, lb.field_b));
             }
             return;
           }

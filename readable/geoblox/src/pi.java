@@ -133,7 +133,7 @@ final class pi extends vf {
         L0: {
           var14 = Geoblox.field_C;
           var6 = this.field_M.a((byte) -105);
-          if (var6 != bf.field_g) {
+          if (var6 != ImageProducerRasterBuffer.field_g) {
             if (var6 != si.field_n) {
               var5 = this.field_M.c(-21666);
               if (var5 != null) {
@@ -155,7 +155,7 @@ final class pi extends vf {
         var9 = this.field_v + param0;
         var10 = var8.a(param1, -2, (el) (this)) + (var8.a((byte) 125, (el) (this)).b(-3111) >> 1);
         var11 = 7 % ((param2 - 1) / 43);
-        if (bf.field_g == var6) {
+        if (ImageProducerRasterBuffer.field_g == var6) {
           var19 = oa.field_e[0];
           var12 = var19.fullWidth << 1;
           var13 = var19.fullHeight << 1;

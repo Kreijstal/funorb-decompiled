@@ -112,7 +112,7 @@ public final class Geoblox extends wf {
                     }
                 }
             }
-            sh.field_y.a(255);
+            sh.mainRasterBuffer.setAsRasterTarget(255);
             fi.smallFont = gi.loadBitmapFont(ii.fontMetricsArchive, 1, ll.gameGraphicsArchive, "small_font", "");
             fc.blackOrbFrames = wj.loadSpriteFrames("black", "", ll.gameGraphicsArchive, 0);
             hg.blackOrbImplosionFrames = wj.loadSpriteFrames("black_implode", "", ll.gameGraphicsArchive, 0);
@@ -143,7 +143,7 @@ public final class Geoblox extends wf {
                 k.a(2 + avatarMouthSourceFrames[geometryCanvasWidthThenFrameIndex].trimY, 0, vh.avatarMouthFrames[geometryCanvasWidthThenFrameIndex].fullWidth, -27085, avatarMouthSourceFrames[geometryCanvasWidthThenFrameIndex].height);
                 vh.avatarMouthFrames[geometryCanvasWidthThenFrameIndex].trimTransparentBorders();
             }
-            sh.field_y.a(255);
+            sh.mainRasterBuffer.setAsRasterTarget(255);
             fe.sunBackgroundSprite = jg.loadIndexedSprite(ll.gameGraphicsArchive, 1, "sun", "sky_background");
             ne.sunForegroundSprite = ug.loadSprite("sky_foreground", ll.gameGraphicsArchive, (byte) -78, "sun");
             ll.themesLoaded[1] = true;
@@ -187,7 +187,7 @@ public final class Geoblox extends wf {
                 keyboardIconIndex++;
             }
             fi.smallFont.a(keyboardIconSprites, keyboardIconAdvanceWidths);
-            sh.field_y.a(255);
+            sh.mainRasterBuffer.setAsRasterTarget(255);
             kh.screenTitleSprites[0] = ug.loadSprite("main_title", ll.gameGraphicsArchive, (byte) -78, "");
             kh.screenTitleSprites[2] = ug.loadSprite("bestscoreseach_title", ll.gameGraphicsArchive, (byte) -78, "");
             kh.screenTitleSprites[3] = ug.loadSprite("myscores_title", ll.gameGraphicsArchive, (byte) -78, "");
@@ -366,7 +366,7 @@ public final class Geoblox extends wf {
         cl.a(-9474);
         i.a(false);
         cj.b(param0 ^ 78);
-        sc.b((byte) 58);
+        AwtRasterBuffer.b((byte) 58);
         eb.a((byte) -127);
         he.a(param0 + 64);
         v.a(true);
@@ -490,7 +490,7 @@ public final class Geoblox extends wf {
         jg.c(16712207);
         bd.b(-20152);
         cm.a(false);
-        bf.c((byte) -117);
+        ImageProducerRasterBuffer.c((byte) -117);
         rj.a(param0 ^ -33);
         id.b(true);
         md.a((byte) 40);
@@ -866,7 +866,7 @@ public final class Geoblox extends wf {
           return;
         }
         L1: {
-          sh.field_y.a(param0 - 25598);
+          sh.mainRasterBuffer.setAsRasterTarget(param0 - 25598);
           SoftwareRasterizer.clearFramebuffer();
           if (tc.currentScreenId == ai.requestedScreenId) {
             if (el.gameplayReturnScreenId == -1) {
@@ -1079,7 +1079,7 @@ public final class Geoblox extends wf {
         lb.field_b = 935;
         dc.field_a = 0;
         el.field_g = 8801;
-        sc.field_f = 3382;
+        AwtRasterBuffer.field_f = 3382;
         if (param0 <= 68) {
             this.loadJewelsTheme(true);
         }

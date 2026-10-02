@@ -48,7 +48,7 @@ abstract class fj extends DualLinkNode {
 
     final static void a(byte param0, rh param1, boolean param2, rh param3, rh param4) {
         try {
-            ih.field_c = bf.a((byte) 86, "");
+            ih.field_c = ImageProducerRasterBuffer.a((byte) 86, "");
             int var5_int = 103 / ((param0 - 70) / 34);
             ih.field_c.a((byte) -126, false);
             IndexedSpriteState.a((byte) 103, param1, param4, param3);

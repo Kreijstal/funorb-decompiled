@@ -364,7 +364,7 @@ final class qh extends ee implements pe, pl, ta {
             var5 = (nl) null;
             discarded$1 = this.a((byte) 82, (nl) null);
           }
-          if (bf.field_g == var4) {
+          if (ImageProducerRasterBuffer.field_g == var4) {
             return false;
           }
           if (var4 != oj.field_d) {

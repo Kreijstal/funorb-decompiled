@@ -194,7 +194,7 @@ final class ab {
         try {
           boardContactStateDirty = false;
           wb.newAttachmentCount = 0;
-          sh.field_y.a(255);
+          sh.mainRasterBuffer.setAsRasterTarget(255);
           movingEntity = (GameplayEntity) ((Object) ji.movingEntities.firstForIteration(0));
           L0: while (movingEntity != null) {
             L2: {

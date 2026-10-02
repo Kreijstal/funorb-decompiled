@@ -455,12 +455,12 @@ final class sk {
           }
           bk.boardOwnershipRaster.setAsRasterTarget();
           if (!ld.hasPixelsAtPlayfieldBoundary(-61)) {
-            sh.field_y.a(255);
+            sh.mainRasterBuffer.setAsRasterTarget(255);
             return false;
           }
           {
             el.gameplaySession.startSessionEndSequence((byte) 116);
-            sh.field_y.a(255);
+            sh.mainRasterBuffer.setAsRasterTarget(255);
             seedEntity = (GameplayEntity) ((Object) a.attachedEntities.lastForIteration(false));
             farthestEntity = seedEntity;
             farthestRadiusSquared = (-320.0f + seedEntity.positionX) * (-320.0f + seedEntity.positionX) + (seedEntity.positionY - 240.0f) * (seedEntity.positionY - 240.0f);

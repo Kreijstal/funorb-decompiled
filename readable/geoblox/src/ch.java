@@ -403,7 +403,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                   }
                   oc.a(75);
                   this.b(true);
-                  sh.field_y = fk.a(false, (java.awt.Component) ((Object) f.field_kb), ok.field_c, kh.field_d);
+                  sh.mainRasterBuffer = fk.createCanvasRasterBuffer(false, (java.awt.Component) ((Object) f.field_kb), ok.field_c, kh.field_d);
                   this.initializeGame(117);
                   eg.field_p = BufferedSocket.createFrameClock(5000);
                   L17: while (true) {

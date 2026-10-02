@@ -3,17 +3,17 @@
  */
 import java.util.*;
 
-abstract class sc {
-    int field_a;
-    int[] field_d;
-    int field_c;
+abstract class AwtRasterBuffer {
+    int width;
+    int[] pixels;
+    int height;
     static int field_f;
-    java.awt.Image field_e;
+    java.awt.Image image;
     static fe field_b;
 
-    abstract void a(int param0, java.awt.Graphics param1, int param2, int param3);
+    abstract void drawImage(int drawY, java.awt.Graphics graphics, int drawX, int methodGuard);
 
-    abstract void a(int param0, java.awt.Component param1, int param2, byte param3);
+    abstract void initialize(int height, java.awt.Component component, int width, byte methodGuard);
 
     final static Sprite a(byte param0) {
         int var4_int = 0;
@@ -22,7 +22,7 @@ abstract class sc {
         int[] var3 = new int[var1];
         if (param0 != -60) {
             Random var5 = (Random) null;
-            sc.a((byte) 50, (Random) null, 37);
+            AwtRasterBuffer.a((byte) 50, (Random) null, 37);
         }
         for (var4_int = 0; var4_int < var1; var4_int++) {
             var3[var4_int] = cm.field_j[cd.a(255, (int) var2[var4_int])];
@@ -36,7 +36,7 @@ abstract class sc {
         field_b = null;
         if (param0 != 58) {
             Random var2 = (Random) null;
-            sc.a((byte) 47, (Random) null, -73);
+            AwtRasterBuffer.a((byte) 47, (Random) null, -73);
         }
     }
 
@@ -86,11 +86,11 @@ abstract class sc {
         }
     }
 
-    final void a(int param0) {
-        SoftwareRasterizer.setRasterTarget(this.field_d, this.field_a, this.field_c);
-        if (param0 != 255) {
-            Random var3 = (Random) null;
-            sc.a((byte) -94, (Random) null, 54);
+    final void setAsRasterTarget(int methodGuard) {
+        SoftwareRasterizer.setRasterTarget(this.pixels, this.width, this.height);
+        if (methodGuard != 255) {
+            Random nullRandomForInvalidGuard = (Random) null;
+            AwtRasterBuffer.a((byte) -94, (Random) null, 54);
         }
     }
 

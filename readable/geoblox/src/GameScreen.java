@@ -469,7 +469,7 @@ final class GameScreen extends MenuScreen {
                     var4 += 20;
                     var5 -= 10;
                   }
-                  ma.a(var3, var5, var2_int, (byte) -92, var4, ll.frameNineSliceSprites);
+                  ma.drawNineSlicePanel(var3, var5, var2_int, (byte) -92, var4, ll.frameNineSliceSprites);
                 }
               }
             }
@@ -494,12 +494,12 @@ final class GameScreen extends MenuScreen {
                   if (this.screenId != 6) {
                     if (this.screenId == 4) {
                       kh.screenTitleSprites[8].draw(0, 20);
-                      ma.a(var3 + 10, 120, 100, (byte) -92, var4, ll.frameNineSliceSprites);
+                      ma.drawNineSlicePanel(var3 + 10, 120, 100, (byte) -92, var4, ll.frameNineSliceSprites);
                       var5 = 184;
                       dd.uiPaletteFont.b(Geoblox.loginMessage, 320, var5, 0, -1);
                       var5 = 185;
                       fi.smallFont.a(r.field_sb, 130, var5, 380, 300, 0, -1, 1, 0, 14);
-                      ma.a(320, 120, 60, (byte) -92, var4, ll.frameNineSliceSprites);
+                      ma.drawNineSlicePanel(320, 120, 60, (byte) -92, var4, ll.frameNineSliceSprites);
                       fi.smallFont.a(bd.field_b, 130, 330, 380, 300, 0, -1, 1, 0, 14);
                       if (var12 == 0) {
                         break L7;
@@ -524,14 +524,14 @@ final class GameScreen extends MenuScreen {
                         L17: {
                           var5 = stackIn_73_0;
                           SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, var5);
-                          ma.a(160, 150, 80, (byte) -92, 340, ll.frameNineSliceSprites);
+                          ma.drawNineSlicePanel(160, 150, 80, (byte) -92, 340, ll.frameNineSliceSprites);
                           var6 = 170;
                           fi.smallFont.a(ki.fullscreenNonmemberText, 160, var6, 320, 300, 0, -1, 1, 0, 16);
                           var7 = 100;
                           var8 = -(20 + var7 >> 1) + 410;
                           var6 = 265;
                           var9 = var8 - (-(var7 >> 1) - 10);
-                          ma.a(var6, var8, 36, (byte) -92, 20 + var7, eb.mouseBoxFrames);
+                          ma.drawNineSlicePanel(var6, var8, 36, (byte) -92, 20 + var7, eb.mouseBoxFrames);
                           if (1 != this.field_o) {
                             if (this.field_o >= 0) {
                               break L17;
@@ -557,7 +557,7 @@ final class GameScreen extends MenuScreen {
                           dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
                           var6 = 265;
                           var9 = 10 + (var7 >> 1) + var8;
-                          ma.a(var6, var8, 36, (byte) -92, var7 + 20, eb.mouseBoxFrames);
+                          ma.drawNineSlicePanel(var6, var8, 36, (byte) -92, var7 + 20, eb.mouseBoxFrames);
                           if (this.field_o != 0) {
                             if (0 <= this.field_o) {
                               break L19;
@@ -593,14 +593,14 @@ final class GameScreen extends MenuScreen {
                           L24: {
                             var5 = stackIn_122_0;
                             SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, var5);
-                            ma.a(160, 160, 95, (byte) -92, 320, ll.frameNineSliceSprites);
+                            ma.drawNineSlicePanel(160, 160, 95, (byte) -92, 320, ll.frameNineSliceSprites);
                             var6 = 170;
                             var6 = var6 + 16 * fi.smallFont.a(sj.fullscreenUnavailableText, 170, var6, 300, 300, 0, -1, 1, 0, 16);
                             var6 += 40;
                             var7 = 100;
                             var8 = 320 - (var7 + 20 >> 1);
                             var9 = (var7 >> 1) + (var8 + 10);
-                            ma.a(var6, var8, 36, (byte) -92, 20 + var7, eb.mouseBoxFrames);
+                            ma.drawNineSlicePanel(var6, var8, 36, (byte) -92, 20 + var7, eb.mouseBoxFrames);
                             if (0 != this.field_o) {
                               if (260 >= qa.pointerXSnapshot) {
                                 break L24;
@@ -631,7 +631,7 @@ final class GameScreen extends MenuScreen {
                         L27: {
                           var5 = stackIn_144_0;
                           SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, var5);
-                          ma.a(160, 160, 140, (byte) -92, 320, ll.frameNineSliceSprites);
+                          ma.drawNineSlicePanel(160, 160, 140, (byte) -92, 320, ll.frameNineSliceSprites);
                           var6 = 170;
                           var7_ref_String = ue.fullscreenBeforeAcceptText + " " + pb.fullscreenAcceptButtonText + " " + wj.fullscreenAfterAcceptText + " " + rb.fullscreenCancelButtonText + " " + uj.fullscreenAfterCancelText;
                           var6 = var6 + 16 * fi.smallFont.a(var7_ref_String, 170, var6, 300, 300, 0, -1, 1, 0, 16);
@@ -649,7 +649,7 @@ final class GameScreen extends MenuScreen {
                           var6 += 40;
                           var9 = 100;
                           var10 = -(20 + var9 >> 1) + 320 + 90;
-                          ma.a(var6, var10, 36, (byte) -92, var9 + 20, eb.mouseBoxFrames);
+                          ma.drawNineSlicePanel(var6, var10, 36, (byte) -92, var9 + 20, eb.mouseBoxFrames);
                           var11 = 10 + ((var9 >> 1) + var10);
                           if (this.field_o != 1) {
                             if (0 <= this.field_o) {
@@ -675,7 +675,7 @@ final class GameScreen extends MenuScreen {
                           dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
                           var10 = 320 - (20 + var9 >> 1) - 90;
                           var11 = 10 + (var9 >> 1) + var10;
-                          ma.a(var6, var10, 36, (byte) -92, 20 + var9, eb.mouseBoxFrames);
+                          ma.drawNineSlicePanel(var6, var10, 36, (byte) -92, 20 + var9, eb.mouseBoxFrames);
                           if (this.field_o != 0) {
                             if (this.field_o >= 0) {
                               break L31;
@@ -709,14 +709,14 @@ final class GameScreen extends MenuScreen {
                       L34: {
                         var5 = stackIn_191_0;
                         SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, var5);
-                        ma.a(170, 160, 80, (byte) -92, 320, ll.frameNineSliceSprites);
+                        ma.drawNineSlicePanel(170, 160, 80, (byte) -92, 320, ll.frameNineSliceSprites);
                         var6 = 180;
                         fi.smallFont.a(ki.fullscreenNonmemberText, 170, var6, 300, 300, 0, -1, 1, 0, 16);
                         var7 = 242;
                         var8 = 320 - (var7 + 20 >> 1);
                         var9 = 10 + (var8 + (var7 >> 1));
                         var6 = 265;
-                        ma.a(var6, var8, 36, (byte) -92, var7 + 20, eb.mouseBoxFrames);
+                        ma.drawNineSlicePanel(var6, var8, 36, (byte) -92, var7 + 20, eb.mouseBoxFrames);
                         if (this.field_o != 0) {
                           if (qa.pointerXSnapshot <= 190) {
                             break L34;
@@ -1605,14 +1605,14 @@ final class GameScreen extends MenuScreen {
                 if (0 != var2_int) {
                   if (var2_int != 1) {
                     if (var2_int == 2) {
-                      el.field_g = el.field_g - sc.field_f;
+                      el.field_g = el.field_g - AwtRasterBuffer.field_f;
                       lb.field_b = lb.field_b - 1;
                       if (var3 == 0) {
                         break L38;
                       }
                     }
                     if (var2_int == 3) {
-                      sc.field_f = sc.field_f + 1;
+                      AwtRasterBuffer.field_f = AwtRasterBuffer.field_f + 1;
                       el.field_g = el.field_g + lb.field_b;
                       if (var3 == 0) {
                         break L38;
@@ -1622,12 +1622,12 @@ final class GameScreen extends MenuScreen {
                       break L38;
                     }
                     el.field_g = el.field_g - lb.field_b;
-                    sc.field_f = sc.field_f - 1;
+                    AwtRasterBuffer.field_f = AwtRasterBuffer.field_f - 1;
                     if (var3 == 0) {
                       break L38;
                     }
                   }
-                  el.field_g = el.field_g + sc.field_f;
+                  el.field_g = el.field_g + AwtRasterBuffer.field_f;
                   lb.field_b = lb.field_b + 1;
                   if (var3 == 0) {
                     break L38;
@@ -1665,8 +1665,8 @@ final class GameScreen extends MenuScreen {
             if (param1 != 0) {
               if (1 != param1) {
                 if (param1 != 2) {
-                  ma.a(140, 30, 80, (byte) -92, 80, ll.frameNineSliceSprites);
-                  ma.a(242, 30, 80, (byte) -92, 80, ll.frameNineSliceSprites);
+                  ma.drawNineSlicePanel(140, 30, 80, (byte) -92, 80, ll.frameNineSliceSprites);
+                  ma.drawNineSlicePanel(242, 30, 80, (byte) -92, 80, ll.frameNineSliceSprites);
                   if (var11 == 0) {
                     break L0;
                   }
@@ -1674,14 +1674,14 @@ final class GameScreen extends MenuScreen {
               }
             }
             L2: {
-              ma.a(140, 30, 80, (byte) -92, 80, ll.frameNineSliceSprites);
-              ma.a(242, 30, 80, (byte) -92, 80, ll.frameNineSliceSprites);
-              ma.a(345, 30, 80, (byte) -92, 80, ll.frameNineSliceSprites);
+              ma.drawNineSlicePanel(140, 30, 80, (byte) -92, 80, ll.frameNineSliceSprites);
+              ma.drawNineSlicePanel(242, 30, 80, (byte) -92, 80, ll.frameNineSliceSprites);
+              ma.drawNineSlicePanel(345, 30, 80, (byte) -92, 80, ll.frameNineSliceSprites);
               ri.a(70, 180, 29497);
               vf.spriteScratchRaster.setAsRasterTarget();
               SoftwareRasterizer.clearFramebuffer();
               ke.entitySpritesByThemeCategoryAndVariant[1][this.field_X][this.field_L].draw((vf.spriteScratchRaster.fullWidth >> 1) - (ke.entitySpritesByThemeCategoryAndVariant[1][this.field_X][this.field_L].fullWidth >> 1), (vf.spriteScratchRaster.fullHeight >> 1) - (ke.entitySpritesByThemeCategoryAndVariant[1][this.field_X][this.field_L].fullHeight >> 1));
-              sh.field_y.a(255);
+              sh.mainRasterBuffer.setAsRasterTarget(255);
               SoftwareRasterizer.restoreClip(this.field_P);
               SoftwareRasterizer.intersectClip(50, 250, 90, 310);
               vf.spriteScratchRaster.addOutline(1);
@@ -1698,7 +1698,7 @@ final class GameScreen extends MenuScreen {
                 vf.spriteScratchRaster.setAsRasterTarget();
                 SoftwareRasterizer.clearFramebuffer();
                 ke.entitySpritesByThemeCategoryAndVariant[1][this.field_X][this.field_L].drawRotatedCentered(vf.spriteScratchRaster.fullWidth >> 1, vf.spriteScratchRaster.fullHeight >> 1, var8, 3072);
-                sh.field_y.a(255);
+                sh.mainRasterBuffer.setAsRasterTarget(255);
                 SoftwareRasterizer.restoreClip(this.field_P);
                 SoftwareRasterizer.intersectClip(40, 355, 103, 415);
                 vf.spriteScratchRaster.addOutline(1);
@@ -1709,7 +1709,7 @@ final class GameScreen extends MenuScreen {
                 vf.spriteScratchRaster.setAsRasterTarget();
                 SoftwareRasterizer.clearFramebuffer();
                 ke.entitySpritesByThemeCategoryAndVariant[1][this.field_X][this.field_L].drawRotatedCentered(vf.spriteScratchRaster.fullWidth >> 1, vf.spriteScratchRaster.fullHeight >> 1, var8, 3072);
-                sh.field_y.a(255);
+                sh.mainRasterBuffer.setAsRasterTarget(255);
                 SoftwareRasterizer.restoreClip(this.field_P);
                 SoftwareRasterizer.intersectClip(40, 355, 103, 415);
                 vf.spriteScratchRaster.addOutline(1);
@@ -1721,7 +1721,7 @@ final class GameScreen extends MenuScreen {
                 vf.spriteScratchRaster.setAsRasterTarget();
                 SoftwareRasterizer.clearFramebuffer();
                 ke.entitySpritesByThemeCategoryAndVariant[1][this.field_X][this.field_L].drawRotatedCentered(vf.spriteScratchRaster.fullWidth >> 1, vf.spriteScratchRaster.fullHeight >> 1, var8, 3072);
-                sh.field_y.a(255);
+                sh.mainRasterBuffer.setAsRasterTarget(255);
                 SoftwareRasterizer.restoreClip(this.field_P);
                 SoftwareRasterizer.intersectClip(40, 355, 103, 415);
                 vf.spriteScratchRaster.addOutline(1);
@@ -1733,7 +1733,7 @@ final class GameScreen extends MenuScreen {
               KeyboardInputListener.field_a.setAsRasterTarget();
               SoftwareRasterizer.clearFramebuffer();
               mi.sparkleFrames[this.field_w].drawScaled(-10 + (KeyboardInputListener.field_a.fullWidth >> 1), (KeyboardInputListener.field_a.fullHeight >> 1) - 10, 20, 20);
-              sh.field_y.a(255);
+              sh.mainRasterBuffer.setAsRasterTarget(255);
               SoftwareRasterizer.restoreClip(this.field_P);
               SoftwareRasterizer.intersectClip(40, 355, 103, 415);
               KeyboardInputListener.field_a.draw(var6 - (KeyboardInputListener.field_a.fullWidth >> 1), var7 - (KeyboardInputListener.field_a.fullWidth >> 1));
@@ -1743,7 +1743,7 @@ final class GameScreen extends MenuScreen {
               KeyboardInputListener.field_a.setAsRasterTarget();
               SoftwareRasterizer.clearFramebuffer();
               mi.sparkleFrames[this.field_w].drawScaled((KeyboardInputListener.field_a.fullWidth >> 1) - 10, (KeyboardInputListener.field_a.fullHeight >> 1) - 10, 20, 20);
-              sh.field_y.a(255);
+              sh.mainRasterBuffer.setAsRasterTarget(255);
               SoftwareRasterizer.restoreClip(this.field_P);
               SoftwareRasterizer.intersectClip(40, 355, 103, 415);
               KeyboardInputListener.field_a.draw(var6 - (KeyboardInputListener.field_a.fullWidth >> 1), -(KeyboardInputListener.field_a.fullWidth >> 1) + var7);
@@ -1754,7 +1754,7 @@ final class GameScreen extends MenuScreen {
               KeyboardInputListener.field_a.setAsRasterTarget();
               SoftwareRasterizer.clearFramebuffer();
               mi.sparkleFrames[this.field_w].drawScaled((KeyboardInputListener.field_a.fullWidth >> 1) - 10, -10 + (KeyboardInputListener.field_a.fullHeight >> 1), 20, 20);
-              sh.field_y.a(255);
+              sh.mainRasterBuffer.setAsRasterTarget(255);
               SoftwareRasterizer.restoreClip(this.field_P);
               SoftwareRasterizer.intersectClip(40, 355, 103, 415);
               KeyboardInputListener.field_a.draw(var6 - (KeyboardInputListener.field_a.fullWidth >> 1), var7 - (KeyboardInputListener.field_a.fullWidth >> 1));
@@ -1762,7 +1762,7 @@ final class GameScreen extends MenuScreen {
             SoftwareRasterizer.restoreClip(this.field_P);
           }
           L4: {
-            ma.a(140, 550, 40, (byte) -92, 60, ll.frameNineSliceSprites);
+            ma.drawNineSlicePanel(140, 550, 40, (byte) -92, 60, ll.frameNineSliceSprites);
             dd.uiPaletteFont.b(param1 + 1 + "/5", 580, 170, 0, -1);
             var4 = null;
             var5 = 155;
@@ -1787,13 +1787,13 @@ final class GameScreen extends MenuScreen {
                   vf.spriteScratchRaster.setAsRasterTarget();
                   SoftwareRasterizer.clearFramebuffer();
                   MenuScreen.amorphousFramesByThemeAndVariant[1][this.field_L][this.field_w].draw(-(MenuScreen.amorphousFramesByThemeAndVariant[1][this.field_L][this.field_w].fullWidth >> 1) + (vf.spriteScratchRaster.fullWidth >> 1), (vf.spriteScratchRaster.fullHeight >> 1) - (MenuScreen.amorphousFramesByThemeAndVariant[1][this.field_L][this.field_w].fullHeight >> 1));
-                  sh.field_y.a(255);
+                  sh.mainRasterBuffer.setAsRasterTarget(255);
                   SoftwareRasterizer.restoreClip(this.field_P);
                   vf.spriteScratchRaster.draw(70 - (vf.spriteScratchRaster.fullWidth >> 1), -(vf.spriteScratchRaster.fullHeight >> 1) + 180);
                   vf.spriteScratchRaster.setAsRasterTarget();
                   SoftwareRasterizer.clearFramebuffer();
                   s.geometrySpritesByThemeAndCategory[1][this.field_X].drawGrayModulated((vf.spriteScratchRaster.fullWidth >> 1) - (s.geometrySpritesByThemeAndCategory[1][this.field_X].fullWidth >> 1), (vf.spriteScratchRaster.fullHeight >> 1) - (s.geometrySpritesByThemeAndCategory[1][this.field_X].fullHeight >> 1), this.field_N);
-                  sh.field_y.a(255);
+                  sh.mainRasterBuffer.setAsRasterTarget(255);
                   SoftwareRasterizer.restoreClip(this.field_P);
                   vf.spriteScratchRaster.addOutline(1);
                   vf.spriteScratchRaster.draw(70 - (vf.spriteScratchRaster.fullWidth >> 1), 282 - (vf.spriteScratchRaster.fullHeight >> 1));
@@ -1805,7 +1805,7 @@ final class GameScreen extends MenuScreen {
                     SoftwareRasterizer.clearFramebuffer();
                     fc.blackOrbFrames[this.field_w].draw(-(fc.blackOrbFrames[this.field_w].fullWidth >> 1) + (vf.spriteScratchRaster.fullWidth >> 1), -(fc.blackOrbFrames[this.field_w].fullHeight >> 1) + (vf.spriteScratchRaster.fullHeight >> 1));
                     k.a(0, 0, vf.spriteScratchRaster.fullWidth, -27085, vf.spriteScratchRaster.fullHeight);
-                    sh.field_y.a(255);
+                    sh.mainRasterBuffer.setAsRasterTarget(255);
                     SoftwareRasterizer.restoreClip(this.field_P);
                     vf.spriteScratchRaster.draw(70 - (vf.spriteScratchRaster.fullWidth >> 1), 180 - (vf.spriteScratchRaster.fullHeight >> 1));
                     vf.spriteScratchRaster.setAsRasterTarget();
@@ -1815,7 +1815,7 @@ final class GameScreen extends MenuScreen {
                     }
                     hb.silverStarFrames[this.field_B].draw(-(hb.silverStarFrames[this.field_B].fullWidth >> 1) + (vf.spriteScratchRaster.fullWidth >> 1), (vf.spriteScratchRaster.fullHeight >> 1) - (hb.silverStarFrames[this.field_B].fullHeight >> 1));
                     k.a(0, 0, vf.spriteScratchRaster.fullWidth, -27085, vf.spriteScratchRaster.fullHeight);
-                    sh.field_y.a(255);
+                    sh.mainRasterBuffer.setAsRasterTarget(255);
                     SoftwareRasterizer.restoreClip(this.field_P);
                     vf.spriteScratchRaster.draw(70 - (vf.spriteScratchRaster.fullWidth >> 1), -(vf.spriteScratchRaster.fullHeight >> 1) + 282);
                     dd.uiPaletteFont.a(a.field_a[5], var5, var3_int, 0, -1);
@@ -2687,7 +2687,7 @@ final class GameScreen extends MenuScreen {
                         } else {
                           stackIn_99_2 = this.field_T;
                         }
-                        ma.a(stackIn_98_0, stackIn_98_1 + stackIn_99_2, 36, (byte) -92, var11 + 20, eb.mouseBoxFrames);
+                        ma.drawNineSlicePanel(stackIn_98_0, stackIn_98_1 + stackIn_99_2, 36, (byte) -92, var11 + 20, eb.mouseBoxFrames);
                         if (var14 == 0) {
                           break L14;
                         }
@@ -2709,7 +2709,7 @@ final class GameScreen extends MenuScreen {
                         rowY = rowY - this.field_T;
                         var9 = var9 + this.field_T;
                       }
-                      ma.a(rowY, var10, 36, (byte) -92, 20 + var11, eb.mouseBoxFrames);
+                      ma.drawNineSlicePanel(rowY, var10, 36, (byte) -92, 20 + var11, eb.mouseBoxFrames);
                       if (var14 == 0) {
                         break L14;
                       }
@@ -2732,7 +2732,7 @@ final class GameScreen extends MenuScreen {
                     rowY = rowY - this.field_T;
                     var10 = var10 + this.field_T;
                   }
-                  ma.a(rowY, var10, 36, (byte) -92, var11 + 20, eb.mouseBoxFrames);
+                  ma.drawNineSlicePanel(rowY, var10, 36, (byte) -92, var11 + 20, eb.mouseBoxFrames);
                   if (var14 == 0) {
                     break L14;
                   }
@@ -2784,7 +2784,7 @@ final class GameScreen extends MenuScreen {
             }
             L31: {
               if (!selected) {
-                ma.a(rowY, var10, 40, (byte) -92, var11, eb.mouseBoxFrames);
+                ma.drawNineSlicePanel(rowY, var10, 40, (byte) -92, var11, eb.mouseBoxFrames);
                 if (var14 == 0) {
                   break L31;
                 }
@@ -2792,7 +2792,7 @@ final class GameScreen extends MenuScreen {
               var9 = var9 + this.field_T;
               var10 = var10 + this.field_T;
               rowY = rowY - this.field_T;
-              ma.a(rowY, var10, 40, (byte) -92, var11, eb.mouseBoxFrames);
+              ma.drawNineSlicePanel(rowY, var10, 40, (byte) -92, var11, eb.mouseBoxFrames);
             }
             rowY += 2;
           }

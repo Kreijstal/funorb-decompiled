@@ -152,7 +152,7 @@ class vf extends hk {
             var8 = var6.a(param0, (el) (this), (byte) 46);
             var9 = var6.a(param1, -2, (el) (this));
             do {
-                bf.a(-2 + var9 + var7.field_i, 2 + var7.field_f, 14164, 2 + var7.field_n, var7.field_k + (var8 - 2));
+                ImageProducerRasterBuffer.a(-2 + var9 + var7.field_i, 2 + var7.field_f, 14164, 2 + var7.field_n, var7.field_k + (var8 - 2));
                 var7 = var7.field_h;
             } while (var7 != null);
         }

@@ -102,9 +102,9 @@ final class v {
                   if (var3 == 1) {
                     tb.a(var13, var5, param0, var4, 9);
                   } else {
-                    var7 = sc.field_b;
+                    var7 = AwtRasterBuffer.field_b;
                     synchronized (var7) {
-                      sc.field_b.a(param1 + 0, var9, var13);
+                      AwtRasterBuffer.field_b.a(param1 + 0, var9, var13);
                     }
                   }
                   stackIn_21_0 = (byte[]) (var6);

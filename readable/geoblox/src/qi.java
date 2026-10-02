@@ -115,7 +115,7 @@ final class qi extends IntrusiveNode {
         if (param1 != 1) {
             return 99;
         }
-        return sc.a((byte) -75, gk.field_d, param0);
+        return AwtRasterBuffer.a((byte) -75, gk.field_d, param0);
     }
 
     static {

@@ -19,11 +19,26 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and retain all 138,558 remaining bindings
 and 388 override relationships.
 
-The current structural pass simplifies 12 primitive value selections and an
+The current naming pass adds 118 guarded identities for raster presentation and
+nine-slice panels. `AwtRasterBuffer` and `ImageProducerRasterBuffer` describe the
+pixel/image ownership; the three-class `initialize`/`drawImage` virtual family
+keeps matching contracts. Gameplay now restores
+`sh.mainRasterBuffer.setAsRasterTarget(...)`. Tutorial prompts and overlays call
+`ma.drawNineSlicePanel` with named clipping, border and tile coordinates.
+
+All 2,994 previous complete rules and raw source/generator pins are unchanged.
+The current 3,112 rules apply 30,922 edits. All 303 sources compile, preserving
+138,558 bindings and 388 override relationships. The factory's reflective
+`Class.forName("ve")` and `ve` class spelling stay unchanged; its methods and
+parameters are named. Existing native probes cover their documented scopes;
+real AWT presentation, panel drawing and full-game/device behavior remain
+unverified. One manifest holds current rules and evidence, with Git for history.
+
+The previous structural pass simplifies 12 primitive value selections and an
 existing URL-validation loop, removing 50 lines across eight files. Pointer
 spawning now selects its variant in one conditional assignment. All 19,558
 declarations and 388 overrides remain; 14 guarded local ordinals migrate in the
-dispatcher. The 2,994 naming rules apply 30,216 edits without changing any
+dispatcher. That pass used 2,994 naming rules and 30,216 edits without changing any
 surviving semantic name, spelling or evidence.
 
 The decompiler also fixes demonstrated diagnostic-string corruption during

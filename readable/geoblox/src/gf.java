@@ -55,7 +55,7 @@ final class gf {
             vf.spriteScratchRaster.setAsRasterTarget();
             SoftwareRasterizer.clearFramebuffer();
             entity.entitySprite.rotateNearest(entity.entitySprite.fullWidth << 3, entity.entitySprite.fullHeight << 3, vf.spriteScratchRaster.fullWidth << 3, vf.spriteScratchRaster.fullHeight << 3, (int)(65535.0 * ((double)(-boardAngleRadians + entity.spriteAngleRadians) / 6.283185307179586)), 4096);
-            sh.field_y.a(255);
+            sh.mainRasterBuffer.setAsRasterTarget(255);
         } catch (RuntimeException collisionSpriteRenderFailure) {
             throw t.a((Throwable) ((Object) collisionSpriteRenderFailure), "gf.F(" + (entity != null ? "{...}" : "null") + ',' + methodGuard + ',' + boardAngleRadians + ')');
         }

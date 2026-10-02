@@ -23,6 +23,12 @@
       "evidence": "Owns a Socket, synchronous InputStream reads and a lazily allocated ring buffer drained to OutputStream by Runnable.run. Close waits for its platform writer task; 84 shutdown and 308 controlled stream/ring cases independently verify state and effects."
     },
     {
+      "symbol": "C:bf",
+      "originalName": "bf",
+      "to": "ImageProducerRasterBuffer",
+      "evidence": "sc owns width, height, integer pixels and a java.awt.Image. a(I)V installs those exact pixels/dimensions in SoftwareRasterizer; ve shares them with a DataBufferInt/BufferedImage, and bf publishes them through ImageProducer. Static unrelated helpers retain their owner. Original sentinel effects, image-observer arguments and allocation order remain. AWT device presentation is source-audited, not newly executed by native fixtures."
+    },
+    {
       "symbol": "C:c",
       "to": "GameScreen",
       "evidence": "Nine instances constructed by Geoblox.m, selected by current/requested screen IDs; implements menu rendering, input and per-screen update.",
@@ -141,6 +147,12 @@
       "to": "DualLinkNode",
       "evidence": "rc extends hf and adds field_k/field_l as an independent reciprocal link pair; rc.a(byte) unlinks only that second pair. GameplayEntity_ja inherits both link sets.",
       "originalName": "rc"
+    },
+    {
+      "symbol": "C:sc",
+      "originalName": "sc",
+      "to": "AwtRasterBuffer",
+      "evidence": "sc owns width, height, integer pixels and a java.awt.Image. a(I)V installs those exact pixels/dimensions in SoftwareRasterizer; ve shares them with a DataBufferInt/BufferedImage, and bf publishes them through ImageProducer. Static unrelated helpers retain their owner. Original sentinel effects, image-observer arguments and allocation order remain. AWT device presentation is source-audited, not newly executed by native fixtures."
     },
     {
       "symbol": "C:tf",
@@ -377,10 +389,22 @@
       "evidence": "Lazily assigned by dispatcher thread-start request with this Runnable and priority 3; close waits for task status and joins its Thread result before releasing the reference."
     },
     {
+      "symbol": "F:bf.field_h:Ljava/awt/image/ImageConsumer;",
+      "originalName": "field_h",
+      "to": "imageConsumer",
+      "evidence": "sc owns width, height, integer pixels and a java.awt.Image. a(I)V installs those exact pixels/dimensions in SoftwareRasterizer; ve shares them with a DataBufferInt/BufferedImage, and bf publishes them through ImageProducer. Static unrelated helpers retain their owner. Original sentinel effects, image-observer arguments and allocation order remain. AWT device presentation is source-audited, not newly executed by native fixtures."
+    },
+    {
       "symbol": "F:bf.field_i:Lrh;",
       "to": "activeTextArchive",
       "originalName": "field_i",
       "evidence": "wi.a(BLrh;)V sets this to its archive argument before reading text resources, and clears it after the final read; fk.a(ILjava/lang/String;)[B reads from it. Other guard paths can also clear it."
+    },
+    {
+      "symbol": "F:bf.field_j:Ljava/awt/image/ColorModel;",
+      "originalName": "field_j",
+      "to": "colorModel",
+      "evidence": "sc owns width, height, integer pixels and a java.awt.Image. a(I)V installs those exact pixels/dimensions in SoftwareRasterizer; ve shares them with a DataBufferInt/BufferedImage, and bf publishes them through ImageProducer. Static unrelated helpers retain their owner. Original sentinel effects, image-observer arguments and allocation order remain. AWT device presentation is source-audited, not newly executed by native fixtures."
     },
     {
       "symbol": "F:bi.field_c:[Ljava/lang/String;",
@@ -1443,6 +1467,12 @@
       "originalName": "field_H",
       "to": "sportsForegroundSprite",
       "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): hd.field_H = ug.a(\"sports_foreground\", ll.field_f, (byte) -78, \"sports\");"
+    },
+    {
+      "symbol": "F:hd.field_I:[I",
+      "originalName": "field_I",
+      "to": "nineSliceSavedClip",
+      "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
     },
     {
       "symbol": "F:he.field_d:I",
@@ -2711,6 +2741,30 @@
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'no_highscores' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
     },
     {
+      "symbol": "F:sc.field_a:I",
+      "originalName": "field_a",
+      "to": "width",
+      "evidence": "sc owns width, height, integer pixels and a java.awt.Image. a(I)V installs those exact pixels/dimensions in SoftwareRasterizer; ve shares them with a DataBufferInt/BufferedImage, and bf publishes them through ImageProducer. Static unrelated helpers retain their owner. Original sentinel effects, image-observer arguments and allocation order remain. AWT device presentation is source-audited, not newly executed by native fixtures."
+    },
+    {
+      "symbol": "F:sc.field_c:I",
+      "originalName": "field_c",
+      "to": "height",
+      "evidence": "sc owns width, height, integer pixels and a java.awt.Image. a(I)V installs those exact pixels/dimensions in SoftwareRasterizer; ve shares them with a DataBufferInt/BufferedImage, and bf publishes them through ImageProducer. Static unrelated helpers retain their owner. Original sentinel effects, image-observer arguments and allocation order remain. AWT device presentation is source-audited, not newly executed by native fixtures."
+    },
+    {
+      "symbol": "F:sc.field_d:[I",
+      "originalName": "field_d",
+      "to": "pixels",
+      "evidence": "sc owns width, height, integer pixels and a java.awt.Image. a(I)V installs those exact pixels/dimensions in SoftwareRasterizer; ve shares them with a DataBufferInt/BufferedImage, and bf publishes them through ImageProducer. Static unrelated helpers retain their owner. Original sentinel effects, image-observer arguments and allocation order remain. AWT device presentation is source-audited, not newly executed by native fixtures."
+    },
+    {
+      "symbol": "F:sc.field_e:Ljava/awt/Image;",
+      "originalName": "field_e",
+      "to": "image",
+      "evidence": "sc owns width, height, integer pixels and a java.awt.Image. a(I)V installs those exact pixels/dimensions in SoftwareRasterizer; ve shares them with a DataBufferInt/BufferedImage, and bf publishes them through ImageProducer. Static unrelated helpers retain their owner. Original sentinel effects, image-observer arguments and allocation order remain. AWT device presentation is source-audited, not newly executed by native fixtures."
+    },
+    {
       "symbol": "F:sd.field_y:Ldm;",
       "originalName": "field_y",
       "to": "barSprite",
@@ -2733,6 +2787,12 @@
       "originalName": "field_e",
       "to": "germsBackgroundSprite",
       "evidence": "Geoblox.java directly assigns this field from the recorded resource loader call(s): sg.field_e = jg.a(ll.field_f, 1, \"germs\", \"germs_background\");"
+    },
+    {
+      "symbol": "F:sh.field_y:Lsc;",
+      "originalName": "field_y",
+      "to": "mainRasterBuffer",
+      "evidence": "sc owns width, height, integer pixels and a java.awt.Image. a(I)V installs those exact pixels/dimensions in SoftwareRasterizer; ve shares them with a DataBufferInt/BufferedImage, and bf publishes them through ImageProducer. Static unrelated helpers retain their owner. Original sentinel effects, image-observer arguments and allocation order remain. AWT device presentation is source-audited, not newly executed by native fixtures."
     },
     {
       "symbol": "F:sj.field_b:Ljava/lang/String;",
@@ -3111,6 +3171,12 @@
       "originalName": "field_n",
       "to": "keyboardEventReadIndex",
       "evidence": "Input source audit: wl queues translated key presses/typed characters and encoded releases; re.b(Z)V replays held-key changes and snapshots the keyboard-event frame end; hh.a(I)Z polls that frame. le AWT mouse/focus callbacks update live pointer state; mc.a(B)V copies it under the listener monitor and consumes pending presses/activity. Numeric internal codes,128-slot queues,112 held-key flags,guards,handlers and original diagnostic strings remain. The2184-case native matrix checks controlled-event/queue scopes; real concurrent AWT delivery and complete gameplay remain unverified."
+    },
+    {
+      "symbol": "F:ve.field_g:Ljava/awt/Component;",
+      "originalName": "field_g",
+      "to": "imageObserverComponent",
+      "evidence": "sc owns width, height, integer pixels and a java.awt.Image. a(I)V installs those exact pixels/dimensions in SoftwareRasterizer; ve shares them with a DataBufferInt/BufferedImage, and bf publishes them through ImageProducer. Static unrelated helpers retain their owner. Original sentinel effects, image-observer arguments and allocation order remain. AWT device presentation is source-audited, not newly executed by native fixtures."
     },
     {
       "symbol": "F:vf.field_H:[Ldm;",
@@ -4077,6 +4143,24 @@
       "to": "chainAndPointsText",
       "originalName": "var2",
       "evidence": "Render iteration uses the popup and builds the X multiplier plus points text for chain multipliers other than one."
+    },
+    {
+      "symbol": "L:bf.a(ILjava/awt/Component;IB)V#0",
+      "originalName": "runtimeException",
+      "to": "initializationFailure",
+      "evidence": "sc/ve/bf a(ILjava/awt/Component;IB)V takes height, component, width and a byte guard. ve creates a BufferedImage sharing the integer pixel array; bf asks the component for an ImageProducer image, publishes/prepares it three times, then installs the target. Width/height order, extra pixel allocation, guard effects and exceptions are unchanged."
+    },
+    {
+      "symbol": "L:bf.a(ILjava/awt/Graphics;II)V#0",
+      "originalName": "var6",
+      "to": "nullImageForInvalidGuard",
+      "evidence": "sc/ve/bf a(ILjava/awt/Graphics;II)V draws the owned image at x=param2, y=param0 using the supplied Graphics. bf first publishes pixels and uses itself as image observer; ve uses its component and clears it for a nonzero guard. Both overrides keep one virtual contract."
+    },
+    {
+      "symbol": "L:bf.a(ILjava/awt/Graphics;II)V#1",
+      "originalName": "runtimeException",
+      "to": "imageDrawFailure",
+      "evidence": "sc/ve/bf a(ILjava/awt/Graphics;II)V draws the owned image at x=param2, y=param0 using the supplied Graphics. bf first publishes pixels and uses itself as image observer; ve uses its component and clears it for a nonzero guard. Both overrides keep one virtual contract."
     },
     {
       "symbol": "L:bh.a(ZLja;ILja;Z)V#0",
@@ -6825,6 +6909,102 @@
       "originalName": "fieldTemp$23",
       "to": "frameStepTicksBeforeDecrement",
       "evidence": "Old frame-step timer; a negative value resets it to 20 and selects a directional step. Native cases verify the exact decrement boundary."
+    },
+    {
+      "symbol": "L:fk.a(ZLjava/awt/Component;II)Lsc;#0",
+      "originalName": "var4",
+      "to": "bufferImplementationClass",
+      "evidence": "fk.a(ZLjava/awt/Component;II)Lsc; reflectively instantiates literal class ve, initializes height/component/width, and catches Throwable to initialize a bf fallback. A true guard returns null after class lookup. The ve class spelling and reflective string are deliberately unchanged; failure wrappers and original diagnostic strings remain."
+    },
+    {
+      "symbol": "L:fk.a(ZLjava/awt/Component;II)Lsc;#1",
+      "originalName": "var4_ref",
+      "to": "preferredImplementationFailure",
+      "evidence": "fk.a(ZLjava/awt/Component;II)Lsc; reflectively instantiates literal class ve, initializes height/component/width, and catches Throwable to initialize a bf fallback. A true guard returns null after class lookup. The ve class spelling and reflective string are deliberately unchanged; failure wrappers and original diagnostic strings remain."
+    },
+    {
+      "symbol": "L:fk.a(ZLjava/awt/Component;II)Lsc;#10",
+      "originalName": "stackIn_10_2",
+      "to": "componentArgumentDescription",
+      "evidence": "fk.a(ZLjava/awt/Component;II)Lsc; reflectively instantiates literal class ve, initializes height/component/width, and catches Throwable to initialize a bf fallback. A true guard returns null after class lookup. The ve class spelling and reflective string are deliberately unchanged; failure wrappers and original diagnostic strings remain."
+    },
+    {
+      "symbol": "L:fk.a(ZLjava/awt/Component;II)Lsc;#11",
+      "originalName": "decompiledCaughtException",
+      "to": "caughtFactoryThrowable",
+      "evidence": "fk.a(ZLjava/awt/Component;II)Lsc; reflectively instantiates literal class ve, initializes height/component/width, and catches Throwable to initialize a bf fallback. A true guard returns null after class lookup. The ve class spelling and reflective string are deliberately unchanged; failure wrappers and original diagnostic strings remain."
+    },
+    {
+      "symbol": "L:fk.a(ZLjava/awt/Component;II)Lsc;#12",
+      "originalName": "decompiledCaughtParameter0",
+      "to": "preferredImplementationThrowable",
+      "evidence": "fk.a(ZLjava/awt/Component;II)Lsc; reflectively instantiates literal class ve, initializes height/component/width, and catches Throwable to initialize a bf fallback. A true guard returns null after class lookup. The ve class spelling and reflective string are deliberately unchanged; failure wrappers and original diagnostic strings remain."
+    },
+    {
+      "symbol": "L:fk.a(ZLjava/awt/Component;II)Lsc;#13",
+      "originalName": "decompiledCaughtParameter1",
+      "to": "caughtBufferFactoryFailure",
+      "evidence": "fk.a(ZLjava/awt/Component;II)Lsc; reflectively instantiates literal class ve, initializes height/component/width, and catches Throwable to initialize a bf fallback. A true guard returns null after class lookup. The ve class spelling and reflective string are deliberately unchanged; failure wrappers and original diagnostic strings remain."
+    },
+    {
+      "symbol": "L:fk.a(ZLjava/awt/Component;II)Lsc;#14",
+      "originalName": "decompiledUncheckedException",
+      "to": "uncheckedFactoryFailure",
+      "evidence": "fk.a(ZLjava/awt/Component;II)Lsc; reflectively instantiates literal class ve, initializes height/component/width, and catches Throwable to initialize a bf fallback. A true guard returns null after class lookup. The ve class spelling and reflective string are deliberately unchanged; failure wrappers and original diagnostic strings remain."
+    },
+    {
+      "symbol": "L:fk.a(ZLjava/awt/Component;II)Lsc;#15",
+      "originalName": "decompiledCheckedException",
+      "to": "unexpectedCheckedFactoryFailure",
+      "evidence": "fk.a(ZLjava/awt/Component;II)Lsc; reflectively instantiates literal class ve, initializes height/component/width, and catches Throwable to initialize a bf fallback. A true guard returns null after class lookup. The ve class spelling and reflective string are deliberately unchanged; failure wrappers and original diagnostic strings remain."
+    },
+    {
+      "symbol": "L:fk.a(ZLjava/awt/Component;II)Lsc;#2",
+      "originalName": "var4_ref2",
+      "to": "bufferFactoryFailure",
+      "evidence": "fk.a(ZLjava/awt/Component;II)Lsc; reflectively instantiates literal class ve, initializes height/component/width, and catches Throwable to initialize a bf fallback. A true guard returns null after class lookup. The ve class spelling and reflective string are deliberately unchanged; failure wrappers and original diagnostic strings remain."
+    },
+    {
+      "symbol": "L:fk.a(ZLjava/awt/Component;II)Lsc;#3",
+      "originalName": "var5",
+      "to": "preferredRasterBuffer",
+      "evidence": "fk.a(ZLjava/awt/Component;II)Lsc; reflectively instantiates literal class ve, initializes height/component/width, and catches Throwable to initialize a bf fallback. A true guard returns null after class lookup. The ve class spelling and reflective string are deliberately unchanged; failure wrappers and original diagnostic strings remain."
+    },
+    {
+      "symbol": "L:fk.a(ZLjava/awt/Component;II)Lsc;#4",
+      "originalName": "var5_ref",
+      "to": "fallbackRasterBuffer",
+      "evidence": "fk.a(ZLjava/awt/Component;II)Lsc; reflectively instantiates literal class ve, initializes height/component/width, and catches Throwable to initialize a bf fallback. A true guard returns null after class lookup. The ve class spelling and reflective string are deliberately unchanged; failure wrappers and original diagnostic strings remain."
+    },
+    {
+      "symbol": "L:fk.a(ZLjava/awt/Component;II)Lsc;#5",
+      "originalName": "stackIn_2_0",
+      "to": "nullBufferForGuard",
+      "evidence": "fk.a(ZLjava/awt/Component;II)Lsc; reflectively instantiates literal class ve, initializes height/component/width, and catches Throwable to initialize a bf fallback. A true guard returns null after class lookup. The ve class spelling and reflective string are deliberately unchanged; failure wrappers and original diagnostic strings remain."
+    },
+    {
+      "symbol": "L:fk.a(ZLjava/awt/Component;II)Lsc;#6",
+      "originalName": "stackIn_4_0",
+      "to": "initializedPreferredBuffer",
+      "evidence": "fk.a(ZLjava/awt/Component;II)Lsc; reflectively instantiates literal class ve, initializes height/component/width, and catches Throwable to initialize a bf fallback. A true guard returns null after class lookup. The ve class spelling and reflective string are deliberately unchanged; failure wrappers and original diagnostic strings remain."
+    },
+    {
+      "symbol": "L:fk.a(ZLjava/awt/Component;II)Lsc;#7",
+      "originalName": "stackIn_6_0",
+      "to": "initializedFallbackBuffer",
+      "evidence": "fk.a(ZLjava/awt/Component;II)Lsc; reflectively instantiates literal class ve, initializes height/component/width, and catches Throwable to initialize a bf fallback. A true guard returns null after class lookup. The ve class spelling and reflective string are deliberately unchanged; failure wrappers and original diagnostic strings remain."
+    },
+    {
+      "symbol": "L:fk.a(ZLjava/awt/Component;II)Lsc;#8",
+      "originalName": "stackIn_9_0",
+      "to": "factoryFailureBeforeComponentDescription",
+      "evidence": "fk.a(ZLjava/awt/Component;II)Lsc; reflectively instantiates literal class ve, initializes height/component/width, and catches Throwable to initialize a bf fallback. A true guard returns null after class lookup. The ve class spelling and reflective string are deliberately unchanged; failure wrappers and original diagnostic strings remain."
+    },
+    {
+      "symbol": "L:fk.a(ZLjava/awt/Component;II)Lsc;#9",
+      "originalName": "stackIn_9_1",
+      "to": "factoryMessagePrefix",
+      "evidence": "fk.a(ZLjava/awt/Component;II)Lsc; reflectively instantiates literal class ve, initializes height/component/width, and catches Throwable to initialize a bf fallback. A true guard returns null after class lookup. The ve class spelling and reflective string are deliberately unchanged; failure wrappers and original diagnostic strings remain."
     },
     {
       "symbol": "L:gf.a(Lja;IF)V#0",
@@ -9773,6 +9953,168 @@
       "evidence": "Input source audit: wl queues translated key presses/typed characters and encoded releases; re.b(Z)V replays held-key changes and snapshots the keyboard-event frame end; hh.a(I)Z polls that frame. le AWT mouse/focus callbacks update live pointer state; mc.a(B)V copies it under the listener monitor and consumes pending presses/activity. Numeric internal codes,128-slot queues,112 held-key flags,guards,handlers and original diagnostic strings remain. The2184-case native matrix checks controlled-event/queue scopes; real concurrent AWT delivery and complete gameplay remain unverified. Local roles follow unchanged callback assignments; unused carriers stay explicit."
     },
     {
+      "symbol": "L:ma.a(IIIBI[Ldm;)V#0",
+      "originalName": "var21",
+      "to": "centerTileX",
+      "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+    },
+    {
+      "symbol": "L:ma.a(IIIBI[Ldm;)V#1",
+      "originalName": "stackIn_10_0",
+      "to": "selectedLeftBorderWidth",
+      "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+    },
+    {
+      "symbol": "L:ma.a(IIIBI[Ldm;)V#10",
+      "originalName": "var6",
+      "to": "panelFailureForContext",
+      "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+    },
+    {
+      "symbol": "L:ma.a(IIIBI[Ldm;)V#11",
+      "originalName": "var7",
+      "to": "rightBorderWidth",
+      "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+    },
+    {
+      "symbol": "L:ma.a(IIIBI[Ldm;)V#12",
+      "originalName": "var8",
+      "to": "topBorderHeight",
+      "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+    },
+    {
+      "symbol": "L:ma.a(IIIBI[Ldm;)V#13",
+      "originalName": "var9",
+      "to": "bottomBorderHeight",
+      "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+    },
+    {
+      "symbol": "L:ma.a(IIIBI[Ldm;)V#14",
+      "originalName": "var10",
+      "to": "panelRight",
+      "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+    },
+    {
+      "symbol": "L:ma.a(IIIBI[Ldm;)V#15",
+      "originalName": "var11",
+      "to": "panelBottom",
+      "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+    },
+    {
+      "symbol": "L:ma.a(IIIBI[Ldm;)V#16",
+      "originalName": "var12",
+      "to": "centerTileLeft",
+      "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+    },
+    {
+      "symbol": "L:ma.a(IIIBI[Ldm;)V#17",
+      "originalName": "var13",
+      "to": "centerTileRight",
+      "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+    },
+    {
+      "symbol": "L:ma.a(IIIBI[Ldm;)V#18",
+      "originalName": "var14",
+      "to": "centerTileTop",
+      "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+    },
+    {
+      "symbol": "L:ma.a(IIIBI[Ldm;)V#19",
+      "originalName": "var15",
+      "to": "centerTileBottom",
+      "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+    },
+    {
+      "symbol": "L:ma.a(IIIBI[Ldm;)V#2",
+      "originalName": "stackIn_13_0",
+      "to": "selectedRightBorderWidth",
+      "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+    },
+    {
+      "symbol": "L:ma.a(IIIBI[Ldm;)V#20",
+      "originalName": "var16",
+      "to": "centerClipLeft",
+      "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+    },
+    {
+      "symbol": "L:ma.a(IIIBI[Ldm;)V#21",
+      "originalName": "var17",
+      "to": "centerClipRight",
+      "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+    },
+    {
+      "symbol": "L:ma.a(IIIBI[Ldm;)V#22",
+      "originalName": "var18",
+      "to": "centerClipTop",
+      "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+    },
+    {
+      "symbol": "L:ma.a(IIIBI[Ldm;)V#23",
+      "originalName": "var19",
+      "to": "centerClipBottom",
+      "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+    },
+    {
+      "symbol": "L:ma.a(IIIBI[Ldm;)V#24",
+      "originalName": "var20",
+      "to": "edgeTileCoordinateOrCenterY",
+      "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+    },
+    {
+      "symbol": "L:ma.a(IIIBI[Ldm;)V#25",
+      "originalName": "var22",
+      "to": "clientControlFlowGuardSnapshot",
+      "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+    },
+    {
+      "symbol": "L:ma.a(IIIBI[Ldm;)V#26",
+      "originalName": "decompiledCaughtParameter0",
+      "to": "panelDrawingFailure",
+      "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+    },
+    {
+      "symbol": "L:ma.a(IIIBI[Ldm;)V#3",
+      "originalName": "stackIn_18_0",
+      "to": "selectedTopBorderHeight",
+      "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+    },
+    {
+      "symbol": "L:ma.a(IIIBI[Ldm;)V#4",
+      "originalName": "stackIn_21_0",
+      "to": "selectedBottomBorderHeight",
+      "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+    },
+    {
+      "symbol": "L:ma.a(IIIBI[Ldm;)V#5",
+      "originalName": "stackIn_77_0",
+      "to": "panelFailureBeforeSpriteDescription",
+      "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+    },
+    {
+      "symbol": "L:ma.a(IIIBI[Ldm;)V#6",
+      "originalName": "stackIn_77_1",
+      "to": "panelMessagePrefix",
+      "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+    },
+    {
+      "symbol": "L:ma.a(IIIBI[Ldm;)V#7",
+      "originalName": "stackIn_78_2",
+      "to": "spriteArrayArgumentDescription",
+      "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+    },
+    {
+      "symbol": "L:ma.a(IIIBI[Ldm;)V#8",
+      "originalName": "decompiledCaughtException",
+      "to": "caughtPanelFailure",
+      "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+    },
+    {
+      "symbol": "L:ma.a(IIIBI[Ldm;)V#9",
+      "originalName": "var6_int",
+      "to": "leftBorderWidth",
+      "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+    },
+    {
       "symbol": "L:ma.a(ZFLja;)Z#0",
       "originalName": "var3",
       "to": "contactOverlapFailureForContext",
@@ -10385,6 +10727,12 @@
       "evidence": "Rounded inverse-speed spawn interval assigned immediately to kb.field_c before the preserveReleaseQuota branch."
     },
     {
+      "symbol": "L:sc.a(I)V#0",
+      "originalName": "var3",
+      "to": "nullRandomForInvalidGuard",
+      "evidence": "sc owns width, height, integer pixels and a java.awt.Image. a(I)V installs those exact pixels/dimensions in SoftwareRasterizer; ve shares them with a DataBufferInt/BufferedImage, and bf publishes them through ImageProducer. Static unrelated helpers retain their owner. Original sentinel effects, image-observer arguments and allocation order remain. AWT device presentation is source-audited, not newly executed by native fixtures."
+    },
+    {
       "symbol": "L:sk.a(I)Z#1",
       "to": "farthestEntity",
       "originalName": "var1",
@@ -10773,6 +11121,24 @@
       "originalName": "var1",
       "to": "specialKindRoll",
       "evidence": "Second Math.random() draw after the probability gate; thresholds 0.13, 0.25 and 0.65 select kind IDs 3, 4, 1 and 2. The draw and its order are retained."
+    },
+    {
+      "symbol": "L:ve.a(ILjava/awt/Component;IB)V#0",
+      "originalName": "var5",
+      "to": "pixelDataBuffer",
+      "evidence": "sc/ve/bf a(ILjava/awt/Component;IB)V takes height, component, width and a byte guard. ve creates a BufferedImage sharing the integer pixel array; bf asks the component for an ImageProducer image, publishes/prepares it three times, then installs the target. Width/height order, extra pixel allocation, guard effects and exceptions are unchanged."
+    },
+    {
+      "symbol": "L:ve.a(ILjava/awt/Component;IB)V#1",
+      "originalName": "var6",
+      "to": "rgbColorModel",
+      "evidence": "sc/ve/bf a(ILjava/awt/Component;IB)V takes height, component, width and a byte guard. ve creates a BufferedImage sharing the integer pixel array; bf asks the component for an ImageProducer image, publishes/prepares it three times, then installs the target. Width/height order, extra pixel allocation, guard effects and exceptions are unchanged."
+    },
+    {
+      "symbol": "L:ve.a(ILjava/awt/Component;IB)V#2",
+      "originalName": "var7",
+      "to": "imageRaster",
+      "evidence": "sc/ve/bf a(ILjava/awt/Component;IB)V takes height, component, width and a byte guard. ve creates a BufferedImage sharing the integer pixel array; bf asks the component for an ImageProducer image, publishes/prepares it three times, then installs the target. Width/height order, extra pixel allocation, guard effects and exceptions are unchanged."
     },
     {
       "symbol": "L:w.a(Ljava/lang/String;Lrh;Lrh;ZLjava/lang/String;)Lnc;#0",
@@ -11211,6 +11577,24 @@
       "to": "drawScorePopups",
       "originalName": "a",
       "evidence": "Interpolates active popup position toward the points panel and renders either plain points or chain multiplier plus points."
+    },
+    {
+      "symbol": "M:bf.a(ILjava/awt/Component;IB)V",
+      "originalName": "a",
+      "to": "initialize",
+      "evidence": "sc/ve/bf a(ILjava/awt/Component;IB)V takes height, component, width and a byte guard. ve creates a BufferedImage sharing the integer pixel array; bf asks the component for an ImageProducer image, publishes/prepares it three times, then installs the target. Width/height order, extra pixel allocation, guard effects and exceptions are unchanged."
+    },
+    {
+      "symbol": "M:bf.a(ILjava/awt/Graphics;II)V",
+      "originalName": "a",
+      "to": "drawImage",
+      "evidence": "sc/ve/bf a(ILjava/awt/Graphics;II)V draws the owned image at x=param2, y=param0 using the supplied Graphics. bf first publishes pixels and uses itself as image observer; ve uses its component and clears it for a nonzero guard. Both overrides keep one virtual contract."
+    },
+    {
+      "symbol": "M:bf.a(Z)V",
+      "originalName": "a",
+      "to": "publishPixelsToConsumer",
+      "evidence": "Synchronized instance method returns for a missing consumer, sends the complete integer raster with width as scanline stride, then imageComplete(2). A false guard clears the unrelated active text archive before completion."
     },
     {
       "symbol": "M:bh.a(ZLja;ILja;Z)V",
@@ -11673,6 +12057,12 @@
       "to": "readTextResourceBytes",
       "originalName": "a",
       "evidence": "With guard 2229 this calls bf.field_i.a(0, resourceKey, \"\") and returns raw bytes. Other guards return null; runtime failures retain their original context."
+    },
+    {
+      "symbol": "M:fk.a(ZLjava/awt/Component;II)Lsc;",
+      "originalName": "a",
+      "to": "createCanvasRasterBuffer",
+      "evidence": "fk.a(ZLjava/awt/Component;II)Lsc; reflectively instantiates literal class ve, initializes height/component/width, and catches Throwable to initialize a bf fallback. A true guard returns null after class lookup. The ve class spelling and reflective string are deliberately unchanged; failure wrappers and original diagnostic strings remain."
     },
     {
       "symbol": "M:g.a(ILjava/lang/String;)Llh;",
@@ -12227,6 +12617,12 @@
       "evidence": "Increments the difficulty step and loads its existing motion, angular-speed and release-threshold tables."
     },
     {
+      "symbol": "M:ma.a(IIIBI[Ldm;)V",
+      "originalName": "a",
+      "to": "drawNineSlicePanel",
+      "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+    },
+    {
       "symbol": "M:ma.a(ZFLja;)Z",
       "originalName": "a",
       "to": "contactProbeOverlapsScratchSprite",
@@ -12399,6 +12795,24 @@
       "originalName": "b",
       "to": "recomputeSpawnReleaseInterval",
       "evidence": "Computes and stores int(201.0f / og.field_r * ij.field_ab + 0.5f) before optionally setting sa.field_b to -10. Native fixtures verify 112 floating-point/cast/Boolean cases including NaNs, signed zero and infinities."
+    },
+    {
+      "symbol": "M:sc.a(I)V",
+      "originalName": "a",
+      "to": "setAsRasterTarget",
+      "evidence": "sc owns width, height, integer pixels and a java.awt.Image. a(I)V installs those exact pixels/dimensions in SoftwareRasterizer; ve shares them with a DataBufferInt/BufferedImage, and bf publishes them through ImageProducer. Static unrelated helpers retain their owner. Original sentinel effects, image-observer arguments and allocation order remain. AWT device presentation is source-audited, not newly executed by native fixtures."
+    },
+    {
+      "symbol": "M:sc.a(ILjava/awt/Component;IB)V",
+      "originalName": "a",
+      "to": "initialize",
+      "evidence": "sc/ve/bf a(ILjava/awt/Component;IB)V takes height, component, width and a byte guard. ve creates a BufferedImage sharing the integer pixel array; bf asks the component for an ImageProducer image, publishes/prepares it three times, then installs the target. Width/height order, extra pixel allocation, guard effects and exceptions are unchanged."
+    },
+    {
+      "symbol": "M:sc.a(ILjava/awt/Graphics;II)V",
+      "originalName": "a",
+      "to": "drawImage",
+      "evidence": "sc/ve/bf a(ILjava/awt/Graphics;II)V draws the owned image at x=param2, y=param0 using the supplied Graphics. bf first publishes pixels and uses itself as image observer; ve uses its component and clears it for a nonzero guard. Both overrides keep one virtual contract."
     },
     {
       "symbol": "M:sk.a(I)Z",
@@ -12743,6 +13157,18 @@
       "evidence": "Guard 741924304 first gates on sa.field_c, then maps a fresh Math.random roll through 0.13/0.25/0.65 thresholds to kinds 3/4/1/2. Other guards return 104. Native checks cover closed probability gates and invalid guards, not live Math.random distribution."
     },
     {
+      "symbol": "M:ve.a(ILjava/awt/Component;IB)V",
+      "originalName": "a",
+      "to": "initialize",
+      "evidence": "sc/ve/bf a(ILjava/awt/Component;IB)V takes height, component, width and a byte guard. ve creates a BufferedImage sharing the integer pixel array; bf asks the component for an ImageProducer image, publishes/prepares it three times, then installs the target. Width/height order, extra pixel allocation, guard effects and exceptions are unchanged."
+    },
+    {
+      "symbol": "M:ve.a(ILjava/awt/Graphics;II)V",
+      "originalName": "a",
+      "to": "drawImage",
+      "evidence": "sc/ve/bf a(ILjava/awt/Graphics;II)V draws the owned image at x=param2, y=param0 using the supplied Graphics. bf first publishes pixels and uses itself as image observer; ve uses its component and clears it for a nonzero guard. Both overrides keep one virtual contract."
+    },
+    {
       "symbol": "M:w.a(Ljava/lang/String;Lrh;Lrh;ZLjava/lang/String;)Lnc;",
       "originalName": "a",
       "to": "loadPaletteFont",
@@ -13071,6 +13497,126 @@
       "to": "length",
       "originalName": "param3",
       "evidence": "Argument role is explicit in allocation of char[length], access to textBytes[offset + byteIndex], loop bound length and the guard side effect."
+    },
+    {
+      "symbol": "P:bf.a(ILjava/awt/Component;IB)V#0",
+      "originalName": "param0",
+      "to": "height",
+      "evidence": "sc/ve/bf a(ILjava/awt/Component;IB)V takes height, component, width and a byte guard. ve creates a BufferedImage sharing the integer pixel array; bf asks the component for an ImageProducer image, publishes/prepares it three times, then installs the target. Width/height order, extra pixel allocation, guard effects and exceptions are unchanged."
+    },
+    {
+      "symbol": "P:bf.a(ILjava/awt/Component;IB)V#1",
+      "originalName": "param1",
+      "to": "component",
+      "evidence": "sc/ve/bf a(ILjava/awt/Component;IB)V takes height, component, width and a byte guard. ve creates a BufferedImage sharing the integer pixel array; bf asks the component for an ImageProducer image, publishes/prepares it three times, then installs the target. Width/height order, extra pixel allocation, guard effects and exceptions are unchanged."
+    },
+    {
+      "symbol": "P:bf.a(ILjava/awt/Component;IB)V#2",
+      "originalName": "param2",
+      "to": "width",
+      "evidence": "sc/ve/bf a(ILjava/awt/Component;IB)V takes height, component, width and a byte guard. ve creates a BufferedImage sharing the integer pixel array; bf asks the component for an ImageProducer image, publishes/prepares it three times, then installs the target. Width/height order, extra pixel allocation, guard effects and exceptions are unchanged."
+    },
+    {
+      "symbol": "P:bf.a(ILjava/awt/Component;IB)V#3",
+      "originalName": "param3",
+      "to": "methodGuard",
+      "evidence": "sc/ve/bf a(ILjava/awt/Component;IB)V takes height, component, width and a byte guard. ve creates a BufferedImage sharing the integer pixel array; bf asks the component for an ImageProducer image, publishes/prepares it three times, then installs the target. Width/height order, extra pixel allocation, guard effects and exceptions are unchanged."
+    },
+    {
+      "symbol": "P:bf.a(ILjava/awt/Graphics;II)V#0",
+      "originalName": "param0",
+      "to": "drawY",
+      "evidence": "sc/ve/bf a(ILjava/awt/Graphics;II)V draws the owned image at x=param2, y=param0 using the supplied Graphics. bf first publishes pixels and uses itself as image observer; ve uses its component and clears it for a nonzero guard. Both overrides keep one virtual contract."
+    },
+    {
+      "symbol": "P:bf.a(ILjava/awt/Graphics;II)V#1",
+      "originalName": "param1",
+      "to": "graphics",
+      "evidence": "sc/ve/bf a(ILjava/awt/Graphics;II)V draws the owned image at x=param2, y=param0 using the supplied Graphics. bf first publishes pixels and uses itself as image observer; ve uses its component and clears it for a nonzero guard. Both overrides keep one virtual contract."
+    },
+    {
+      "symbol": "P:bf.a(ILjava/awt/Graphics;II)V#2",
+      "originalName": "param2",
+      "to": "drawX",
+      "evidence": "sc/ve/bf a(ILjava/awt/Graphics;II)V draws the owned image at x=param2, y=param0 using the supplied Graphics. bf first publishes pixels and uses itself as image observer; ve uses its component and clears it for a nonzero guard. Both overrides keep one virtual contract."
+    },
+    {
+      "symbol": "P:bf.a(ILjava/awt/Graphics;II)V#3",
+      "originalName": "param3",
+      "to": "methodGuard",
+      "evidence": "sc/ve/bf a(ILjava/awt/Graphics;II)V draws the owned image at x=param2, y=param0 using the supplied Graphics. bf first publishes pixels and uses itself as image observer; ve uses its component and clears it for a nonzero guard. Both overrides keep one virtual contract."
+    },
+    {
+      "symbol": "P:bf.a(Z)V#0",
+      "originalName": "param0",
+      "to": "methodGuard",
+      "evidence": "Synchronized instance method returns for a missing consumer, sends the complete integer raster with width as scanline stride, then imageComplete(2). A false guard clears the unrelated active text archive before completion."
+    },
+    {
+      "symbol": "P:bf.addConsumer(Ljava/awt/image/ImageConsumer;)V#0",
+      "originalName": "param0",
+      "to": "consumer",
+      "evidence": "sc owns width, height, integer pixels and a java.awt.Image. a(I)V installs those exact pixels/dimensions in SoftwareRasterizer; ve shares them with a DataBufferInt/BufferedImage, and bf publishes them through ImageProducer. Static unrelated helpers retain their owner. Original sentinel effects, image-observer arguments and allocation order remain. AWT device presentation is source-audited, not newly executed by native fixtures."
+    },
+    {
+      "symbol": "P:bf.imageUpdate(Ljava/awt/Image;IIIII)Z#0",
+      "originalName": "param0",
+      "to": "observedImage",
+      "evidence": "sc owns width, height, integer pixels and a java.awt.Image. a(I)V installs those exact pixels/dimensions in SoftwareRasterizer; ve shares them with a DataBufferInt/BufferedImage, and bf publishes them through ImageProducer. Static unrelated helpers retain their owner. Original sentinel effects, image-observer arguments and allocation order remain. AWT device presentation is source-audited, not newly executed by native fixtures."
+    },
+    {
+      "symbol": "P:bf.imageUpdate(Ljava/awt/Image;IIIII)Z#1",
+      "originalName": "param1",
+      "to": "infoFlags",
+      "evidence": "sc owns width, height, integer pixels and a java.awt.Image. a(I)V installs those exact pixels/dimensions in SoftwareRasterizer; ve shares them with a DataBufferInt/BufferedImage, and bf publishes them through ImageProducer. Static unrelated helpers retain their owner. Original sentinel effects, image-observer arguments and allocation order remain. AWT device presentation is source-audited, not newly executed by native fixtures."
+    },
+    {
+      "symbol": "P:bf.imageUpdate(Ljava/awt/Image;IIIII)Z#2",
+      "originalName": "param2",
+      "to": "updateX",
+      "evidence": "sc owns width, height, integer pixels and a java.awt.Image. a(I)V installs those exact pixels/dimensions in SoftwareRasterizer; ve shares them with a DataBufferInt/BufferedImage, and bf publishes them through ImageProducer. Static unrelated helpers retain their owner. Original sentinel effects, image-observer arguments and allocation order remain. AWT device presentation is source-audited, not newly executed by native fixtures."
+    },
+    {
+      "symbol": "P:bf.imageUpdate(Ljava/awt/Image;IIIII)Z#3",
+      "originalName": "param3",
+      "to": "updateY",
+      "evidence": "sc owns width, height, integer pixels and a java.awt.Image. a(I)V installs those exact pixels/dimensions in SoftwareRasterizer; ve shares them with a DataBufferInt/BufferedImage, and bf publishes them through ImageProducer. Static unrelated helpers retain their owner. Original sentinel effects, image-observer arguments and allocation order remain. AWT device presentation is source-audited, not newly executed by native fixtures."
+    },
+    {
+      "symbol": "P:bf.imageUpdate(Ljava/awt/Image;IIIII)Z#4",
+      "originalName": "param4",
+      "to": "updateWidth",
+      "evidence": "sc owns width, height, integer pixels and a java.awt.Image. a(I)V installs those exact pixels/dimensions in SoftwareRasterizer; ve shares them with a DataBufferInt/BufferedImage, and bf publishes them through ImageProducer. Static unrelated helpers retain their owner. Original sentinel effects, image-observer arguments and allocation order remain. AWT device presentation is source-audited, not newly executed by native fixtures."
+    },
+    {
+      "symbol": "P:bf.imageUpdate(Ljava/awt/Image;IIIII)Z#5",
+      "originalName": "param5",
+      "to": "updateHeight",
+      "evidence": "sc owns width, height, integer pixels and a java.awt.Image. a(I)V installs those exact pixels/dimensions in SoftwareRasterizer; ve shares them with a DataBufferInt/BufferedImage, and bf publishes them through ImageProducer. Static unrelated helpers retain their owner. Original sentinel effects, image-observer arguments and allocation order remain. AWT device presentation is source-audited, not newly executed by native fixtures."
+    },
+    {
+      "symbol": "P:bf.isConsumer(Ljava/awt/image/ImageConsumer;)Z#0",
+      "originalName": "param0",
+      "to": "consumer",
+      "evidence": "sc owns width, height, integer pixels and a java.awt.Image. a(I)V installs those exact pixels/dimensions in SoftwareRasterizer; ve shares them with a DataBufferInt/BufferedImage, and bf publishes them through ImageProducer. Static unrelated helpers retain their owner. Original sentinel effects, image-observer arguments and allocation order remain. AWT device presentation is source-audited, not newly executed by native fixtures."
+    },
+    {
+      "symbol": "P:bf.removeConsumer(Ljava/awt/image/ImageConsumer;)V#0",
+      "originalName": "param0",
+      "to": "consumer",
+      "evidence": "sc owns width, height, integer pixels and a java.awt.Image. a(I)V installs those exact pixels/dimensions in SoftwareRasterizer; ve shares them with a DataBufferInt/BufferedImage, and bf publishes them through ImageProducer. Static unrelated helpers retain their owner. Original sentinel effects, image-observer arguments and allocation order remain. AWT device presentation is source-audited, not newly executed by native fixtures."
+    },
+    {
+      "symbol": "P:bf.requestTopDownLeftRightResend(Ljava/awt/image/ImageConsumer;)V#0",
+      "originalName": "param0",
+      "to": "consumer",
+      "evidence": "sc owns width, height, integer pixels and a java.awt.Image. a(I)V installs those exact pixels/dimensions in SoftwareRasterizer; ve shares them with a DataBufferInt/BufferedImage, and bf publishes them through ImageProducer. Static unrelated helpers retain their owner. Original sentinel effects, image-observer arguments and allocation order remain. AWT device presentation is source-audited, not newly executed by native fixtures."
+    },
+    {
+      "symbol": "P:bf.startProduction(Ljava/awt/image/ImageConsumer;)V#0",
+      "originalName": "param0",
+      "to": "consumer",
+      "evidence": "sc owns width, height, integer pixels and a java.awt.Image. a(I)V installs those exact pixels/dimensions in SoftwareRasterizer; ve shares them with a DataBufferInt/BufferedImage, and bf publishes them through ImageProducer. Static unrelated helpers retain their owner. Original sentinel effects, image-observer arguments and allocation order remain. AWT device presentation is source-audited, not newly executed by native fixtures."
     },
     {
       "symbol": "P:bh.a(ZLja;ILja;Z)V#0",
@@ -14789,6 +15335,30 @@
       "evidence": "Argument role follows the corresponding reviewed text loader, resource reader or whole-array decoder; guard arithmetic and side effects remain unchanged."
     },
     {
+      "symbol": "P:fk.a(ZLjava/awt/Component;II)Lsc;#0",
+      "originalName": "param0",
+      "to": "returnNullGuard",
+      "evidence": "fk.a(ZLjava/awt/Component;II)Lsc; reflectively instantiates literal class ve, initializes height/component/width, and catches Throwable to initialize a bf fallback. A true guard returns null after class lookup. The ve class spelling and reflective string are deliberately unchanged; failure wrappers and original diagnostic strings remain."
+    },
+    {
+      "symbol": "P:fk.a(ZLjava/awt/Component;II)Lsc;#1",
+      "originalName": "param1",
+      "to": "component",
+      "evidence": "fk.a(ZLjava/awt/Component;II)Lsc; reflectively instantiates literal class ve, initializes height/component/width, and catches Throwable to initialize a bf fallback. A true guard returns null after class lookup. The ve class spelling and reflective string are deliberately unchanged; failure wrappers and original diagnostic strings remain."
+    },
+    {
+      "symbol": "P:fk.a(ZLjava/awt/Component;II)Lsc;#2",
+      "originalName": "param2",
+      "to": "height",
+      "evidence": "fk.a(ZLjava/awt/Component;II)Lsc; reflectively instantiates literal class ve, initializes height/component/width, and catches Throwable to initialize a bf fallback. A true guard returns null after class lookup. The ve class spelling and reflective string are deliberately unchanged; failure wrappers and original diagnostic strings remain."
+    },
+    {
+      "symbol": "P:fk.a(ZLjava/awt/Component;II)Lsc;#3",
+      "originalName": "param3",
+      "to": "width",
+      "evidence": "fk.a(ZLjava/awt/Component;II)Lsc; reflectively instantiates literal class ve, initializes height/component/width, and catches Throwable to initialize a bf fallback. A true guard returns null after class lookup. The ve class spelling and reflective string are deliberately unchanged; failure wrappers and original diagnostic strings remain."
+    },
+    {
       "symbol": "P:g.a(ILjava/lang/String;)Llh;#0",
       "to": "guard",
       "originalName": "param0",
@@ -16403,6 +16973,42 @@
       "evidence": "Input source audit: wl queues translated key presses/typed characters and encoded releases; re.b(Z)V replays held-key changes and snapshots the keyboard-event frame end; hh.a(I)Z polls that frame. le AWT mouse/focus callbacks update live pointer state; mc.a(B)V copies it under the listener monitor and consumes pending presses/activity. Numeric internal codes,128-slot queues,112 held-key flags,guards,handlers and original diagnostic strings remain. The2184-case native matrix checks controlled-event/queue scopes; real concurrent AWT delivery and complete gameplay remain unverified."
     },
     {
+      "symbol": "P:ma.a(IIIBI[Ldm;)V#0",
+      "originalName": "param0",
+      "to": "panelTop",
+      "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+    },
+    {
+      "symbol": "P:ma.a(IIIBI[Ldm;)V#1",
+      "originalName": "param1",
+      "to": "panelLeft",
+      "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+    },
+    {
+      "symbol": "P:ma.a(IIIBI[Ldm;)V#2",
+      "originalName": "param2",
+      "to": "panelHeight",
+      "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+    },
+    {
+      "symbol": "P:ma.a(IIIBI[Ldm;)V#3",
+      "originalName": "param3",
+      "to": "methodGuard",
+      "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+    },
+    {
+      "symbol": "P:ma.a(IIIBI[Ldm;)V#4",
+      "originalName": "param4",
+      "to": "panelWidth",
+      "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+    },
+    {
+      "symbol": "P:ma.a(IIIBI[Ldm;)V#5",
+      "originalName": "param5",
+      "to": "nineSliceSprites",
+      "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+    },
+    {
       "symbol": "P:ma.a(ZFLja;)Z#0",
       "originalName": "param0",
       "to": "methodGuard",
@@ -16983,6 +17589,60 @@
       "originalName": "param0",
       "to": "preserveReleaseQuota",
       "evidence": "True leaves sa.field_b unchanged after recomputing kb.field_c; false stores -10. Both paths and floating-point narrowing behavior are verified independently against native bytecode."
+    },
+    {
+      "symbol": "P:sc.a(I)V#0",
+      "originalName": "param0",
+      "to": "methodGuard",
+      "evidence": "sc owns width, height, integer pixels and a java.awt.Image. a(I)V installs those exact pixels/dimensions in SoftwareRasterizer; ve shares them with a DataBufferInt/BufferedImage, and bf publishes them through ImageProducer. Static unrelated helpers retain their owner. Original sentinel effects, image-observer arguments and allocation order remain. AWT device presentation is source-audited, not newly executed by native fixtures."
+    },
+    {
+      "symbol": "P:sc.a(ILjava/awt/Component;IB)V#0",
+      "originalName": "param0",
+      "to": "height",
+      "evidence": "sc/ve/bf a(ILjava/awt/Component;IB)V takes height, component, width and a byte guard. ve creates a BufferedImage sharing the integer pixel array; bf asks the component for an ImageProducer image, publishes/prepares it three times, then installs the target. Width/height order, extra pixel allocation, guard effects and exceptions are unchanged."
+    },
+    {
+      "symbol": "P:sc.a(ILjava/awt/Component;IB)V#1",
+      "originalName": "param1",
+      "to": "component",
+      "evidence": "sc/ve/bf a(ILjava/awt/Component;IB)V takes height, component, width and a byte guard. ve creates a BufferedImage sharing the integer pixel array; bf asks the component for an ImageProducer image, publishes/prepares it three times, then installs the target. Width/height order, extra pixel allocation, guard effects and exceptions are unchanged."
+    },
+    {
+      "symbol": "P:sc.a(ILjava/awt/Component;IB)V#2",
+      "originalName": "param2",
+      "to": "width",
+      "evidence": "sc/ve/bf a(ILjava/awt/Component;IB)V takes height, component, width and a byte guard. ve creates a BufferedImage sharing the integer pixel array; bf asks the component for an ImageProducer image, publishes/prepares it three times, then installs the target. Width/height order, extra pixel allocation, guard effects and exceptions are unchanged."
+    },
+    {
+      "symbol": "P:sc.a(ILjava/awt/Component;IB)V#3",
+      "originalName": "param3",
+      "to": "methodGuard",
+      "evidence": "sc/ve/bf a(ILjava/awt/Component;IB)V takes height, component, width and a byte guard. ve creates a BufferedImage sharing the integer pixel array; bf asks the component for an ImageProducer image, publishes/prepares it three times, then installs the target. Width/height order, extra pixel allocation, guard effects and exceptions are unchanged."
+    },
+    {
+      "symbol": "P:sc.a(ILjava/awt/Graphics;II)V#0",
+      "originalName": "param0",
+      "to": "drawY",
+      "evidence": "sc/ve/bf a(ILjava/awt/Graphics;II)V draws the owned image at x=param2, y=param0 using the supplied Graphics. bf first publishes pixels and uses itself as image observer; ve uses its component and clears it for a nonzero guard. Both overrides keep one virtual contract."
+    },
+    {
+      "symbol": "P:sc.a(ILjava/awt/Graphics;II)V#1",
+      "originalName": "param1",
+      "to": "graphics",
+      "evidence": "sc/ve/bf a(ILjava/awt/Graphics;II)V draws the owned image at x=param2, y=param0 using the supplied Graphics. bf first publishes pixels and uses itself as image observer; ve uses its component and clears it for a nonzero guard. Both overrides keep one virtual contract."
+    },
+    {
+      "symbol": "P:sc.a(ILjava/awt/Graphics;II)V#2",
+      "originalName": "param2",
+      "to": "drawX",
+      "evidence": "sc/ve/bf a(ILjava/awt/Graphics;II)V draws the owned image at x=param2, y=param0 using the supplied Graphics. bf first publishes pixels and uses itself as image observer; ve uses its component and clears it for a nonzero guard. Both overrides keep one virtual contract."
+    },
+    {
+      "symbol": "P:sc.a(ILjava/awt/Graphics;II)V#3",
+      "originalName": "param3",
+      "to": "methodGuard",
+      "evidence": "sc/ve/bf a(ILjava/awt/Graphics;II)V draws the owned image at x=param2, y=param0 using the supplied Graphics. bf first publishes pixels and uses itself as image observer; ve uses its component and clears it for a nonzero guard. Both overrides keep one virtual contract."
     },
     {
       "symbol": "P:td.a(ILgd;)V#0",
@@ -17801,6 +18461,54 @@
       "evidence": "Retains the original compatibility guard and its side effects. Dedicated difficulty/reset/selection fixtures verify normal and boundary guards against native bytecode; original sentinel values are unchanged."
     },
     {
+      "symbol": "P:ve.a(ILjava/awt/Component;IB)V#0",
+      "originalName": "param0",
+      "to": "height",
+      "evidence": "sc/ve/bf a(ILjava/awt/Component;IB)V takes height, component, width and a byte guard. ve creates a BufferedImage sharing the integer pixel array; bf asks the component for an ImageProducer image, publishes/prepares it three times, then installs the target. Width/height order, extra pixel allocation, guard effects and exceptions are unchanged."
+    },
+    {
+      "symbol": "P:ve.a(ILjava/awt/Component;IB)V#1",
+      "originalName": "param1",
+      "to": "component",
+      "evidence": "sc/ve/bf a(ILjava/awt/Component;IB)V takes height, component, width and a byte guard. ve creates a BufferedImage sharing the integer pixel array; bf asks the component for an ImageProducer image, publishes/prepares it three times, then installs the target. Width/height order, extra pixel allocation, guard effects and exceptions are unchanged."
+    },
+    {
+      "symbol": "P:ve.a(ILjava/awt/Component;IB)V#2",
+      "originalName": "param2",
+      "to": "width",
+      "evidence": "sc/ve/bf a(ILjava/awt/Component;IB)V takes height, component, width and a byte guard. ve creates a BufferedImage sharing the integer pixel array; bf asks the component for an ImageProducer image, publishes/prepares it three times, then installs the target. Width/height order, extra pixel allocation, guard effects and exceptions are unchanged."
+    },
+    {
+      "symbol": "P:ve.a(ILjava/awt/Component;IB)V#3",
+      "originalName": "param3",
+      "to": "methodGuard",
+      "evidence": "sc/ve/bf a(ILjava/awt/Component;IB)V takes height, component, width and a byte guard. ve creates a BufferedImage sharing the integer pixel array; bf asks the component for an ImageProducer image, publishes/prepares it three times, then installs the target. Width/height order, extra pixel allocation, guard effects and exceptions are unchanged."
+    },
+    {
+      "symbol": "P:ve.a(ILjava/awt/Graphics;II)V#0",
+      "originalName": "param0",
+      "to": "drawY",
+      "evidence": "sc/ve/bf a(ILjava/awt/Graphics;II)V draws the owned image at x=param2, y=param0 using the supplied Graphics. bf first publishes pixels and uses itself as image observer; ve uses its component and clears it for a nonzero guard. Both overrides keep one virtual contract."
+    },
+    {
+      "symbol": "P:ve.a(ILjava/awt/Graphics;II)V#1",
+      "originalName": "param1",
+      "to": "graphics",
+      "evidence": "sc/ve/bf a(ILjava/awt/Graphics;II)V draws the owned image at x=param2, y=param0 using the supplied Graphics. bf first publishes pixels and uses itself as image observer; ve uses its component and clears it for a nonzero guard. Both overrides keep one virtual contract."
+    },
+    {
+      "symbol": "P:ve.a(ILjava/awt/Graphics;II)V#2",
+      "originalName": "param2",
+      "to": "drawX",
+      "evidence": "sc/ve/bf a(ILjava/awt/Graphics;II)V draws the owned image at x=param2, y=param0 using the supplied Graphics. bf first publishes pixels and uses itself as image observer; ve uses its component and clears it for a nonzero guard. Both overrides keep one virtual contract."
+    },
+    {
+      "symbol": "P:ve.a(ILjava/awt/Graphics;II)V#3",
+      "originalName": "param3",
+      "to": "methodGuard",
+      "evidence": "sc/ve/bf a(ILjava/awt/Graphics;II)V draws the owned image at x=param2, y=param0 using the supplied Graphics. bf first publishes pixels and uses itself as image observer; ve uses its component and clears it for a nonzero guard. Both overrides keep one virtual contract."
+    },
+    {
       "symbol": "P:w.a(Ljava/lang/String;Lrh;Lrh;ZLjava/lang/String;)Lnc;#0",
       "originalName": "param0",
       "to": "groupName",
@@ -17976,7 +18684,7 @@
     }
   ],
   "revision": 4,
-  "version": 52,
+  "version": 53,
   "generators": {
     "dekoblokoWork": {
       "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
@@ -17996,219 +18704,1189 @@
   "publication": {
     "format": 1,
     "previousRules": {
-      "commit": "12774a464ef4606d7b3c6fdad9cb078d8a4271a4",
+      "commit": "b37954dbc4daf388a80e6b97e01ef16f3875d6bf",
       "path": "readable/geoblox-rules.json",
-      "sha256": "95241d7a1108c3255cd0b21808893b16b91268b7195433a2b62cc4813b68d7de"
+      "sha256": "93d513765756e0acc8212abae7e9debc6d74c45a57af35c5a0252eb0c0b7a7aa"
     },
     "ruleChanges": [
       {
-        "symbol": "L:d.run()V#0",
-        "before": {
-          "symbol": "L:d.run()V#0",
-          "originalName": "stackIn_76_0",
-          "to": "cursorVisibleInt",
-          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
-        },
+        "symbol": "C:bf",
+        "before": null,
         "after": {
-          "symbol": "L:d.run()V#0",
-          "originalName": "var5",
-          "to": "urlCharacterIndex",
-          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+          "symbol": "C:bf",
+          "originalName": "bf",
+          "to": "ImageProducerRasterBuffer",
+          "evidence": "sc owns width, height, integer pixels and a java.awt.Image. a(I)V installs those exact pixels/dimensions in SoftwareRasterizer; ve shares them with a DataBufferInt/BufferedImage, and bf publishes them through ImageProducer. Static unrelated helpers retain their owner. Original sentinel effects, image-observer arguments and allocation order remain. AWT device presentation is source-audited, not newly executed by native fixtures."
         }
       },
       {
-        "symbol": "L:d.run()V#1",
-        "before": {
-          "symbol": "L:d.run()V#1",
-          "originalName": "decompiledCaughtException",
-          "to": "caughtTaskThrowable",
-          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
-        },
+        "symbol": "C:sc",
+        "before": null,
         "after": {
-          "symbol": "L:d.run()V#1",
-          "originalName": "stackIn_76_0",
-          "to": "cursorVisibleInt",
-          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+          "symbol": "C:sc",
+          "originalName": "sc",
+          "to": "AwtRasterBuffer",
+          "evidence": "sc owns width, height, integer pixels and a java.awt.Image. a(I)V installs those exact pixels/dimensions in SoftwareRasterizer; ve shares them with a DataBufferInt/BufferedImage, and bf publishes them through ImageProducer. Static unrelated helpers retain their owner. Original sentinel effects, image-observer arguments and allocation order remain. AWT device presentation is source-audited, not newly executed by native fixtures."
         }
       },
       {
-        "symbol": "L:d.run()V#10",
-        "before": {
-          "symbol": "L:d.run()V#10",
-          "originalName": "var3_ref3",
-          "to": "proxyConnectionFailure",
-          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
-        },
+        "symbol": "F:bf.field_h:Ljava/awt/image/ImageConsumer;",
+        "before": null,
         "after": {
-          "symbol": "L:d.run()V#10",
-          "originalName": "var3_ref2",
-          "to": "urlLaunchFailure",
-          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+          "symbol": "F:bf.field_h:Ljava/awt/image/ImageConsumer;",
+          "originalName": "field_h",
+          "to": "imageConsumer",
+          "evidence": "sc owns width, height, integer pixels and a java.awt.Image. a(I)V installs those exact pixels/dimensions in SoftwareRasterizer; ve shares them with a DataBufferInt/BufferedImage, and bf publishes them through ImageProducer. Static unrelated helpers retain their owner. Original sentinel effects, image-observer arguments and allocation order remain. AWT device presentation is source-audited, not newly executed by native fixtures."
         }
       },
       {
-        "symbol": "L:d.run()V#11",
-        "before": {
-          "symbol": "L:d.run()V#11",
-          "originalName": "var4_int",
-          "to": "cursorY",
-          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
-        },
+        "symbol": "F:bf.field_j:Ljava/awt/image/ColorModel;",
+        "before": null,
         "after": {
-          "symbol": "L:d.run()V#11",
-          "originalName": "var3_ref3",
-          "to": "proxyConnectionFailure",
-          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+          "symbol": "F:bf.field_j:Ljava/awt/image/ColorModel;",
+          "originalName": "field_j",
+          "to": "colorModel",
+          "evidence": "sc owns width, height, integer pixels and a java.awt.Image. a(I)V installs those exact pixels/dimensions in SoftwareRasterizer; ve shares them with a DataBufferInt/BufferedImage, and bf publishes them through ImageProducer. Static unrelated helpers retain their owner. Original sentinel effects, image-observer arguments and allocation order remain. AWT device presentation is source-audited, not newly executed by native fixtures."
         }
       },
       {
-        "symbol": "L:d.run()V#12",
-        "before": {
-          "symbol": "L:d.run()V#12",
+        "symbol": "F:hd.field_I:[I",
+        "before": null,
+        "after": {
+          "symbol": "F:hd.field_I:[I",
+          "originalName": "field_I",
+          "to": "nineSliceSavedClip",
+          "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+        }
+      },
+      {
+        "symbol": "F:sc.field_a:I",
+        "before": null,
+        "after": {
+          "symbol": "F:sc.field_a:I",
+          "originalName": "field_a",
+          "to": "width",
+          "evidence": "sc owns width, height, integer pixels and a java.awt.Image. a(I)V installs those exact pixels/dimensions in SoftwareRasterizer; ve shares them with a DataBufferInt/BufferedImage, and bf publishes them through ImageProducer. Static unrelated helpers retain their owner. Original sentinel effects, image-observer arguments and allocation order remain. AWT device presentation is source-audited, not newly executed by native fixtures."
+        }
+      },
+      {
+        "symbol": "F:sc.field_c:I",
+        "before": null,
+        "after": {
+          "symbol": "F:sc.field_c:I",
+          "originalName": "field_c",
+          "to": "height",
+          "evidence": "sc owns width, height, integer pixels and a java.awt.Image. a(I)V installs those exact pixels/dimensions in SoftwareRasterizer; ve shares them with a DataBufferInt/BufferedImage, and bf publishes them through ImageProducer. Static unrelated helpers retain their owner. Original sentinel effects, image-observer arguments and allocation order remain. AWT device presentation is source-audited, not newly executed by native fixtures."
+        }
+      },
+      {
+        "symbol": "F:sc.field_d:[I",
+        "before": null,
+        "after": {
+          "symbol": "F:sc.field_d:[I",
+          "originalName": "field_d",
+          "to": "pixels",
+          "evidence": "sc owns width, height, integer pixels and a java.awt.Image. a(I)V installs those exact pixels/dimensions in SoftwareRasterizer; ve shares them with a DataBufferInt/BufferedImage, and bf publishes them through ImageProducer. Static unrelated helpers retain their owner. Original sentinel effects, image-observer arguments and allocation order remain. AWT device presentation is source-audited, not newly executed by native fixtures."
+        }
+      },
+      {
+        "symbol": "F:sc.field_e:Ljava/awt/Image;",
+        "before": null,
+        "after": {
+          "symbol": "F:sc.field_e:Ljava/awt/Image;",
+          "originalName": "field_e",
+          "to": "image",
+          "evidence": "sc owns width, height, integer pixels and a java.awt.Image. a(I)V installs those exact pixels/dimensions in SoftwareRasterizer; ve shares them with a DataBufferInt/BufferedImage, and bf publishes them through ImageProducer. Static unrelated helpers retain their owner. Original sentinel effects, image-observer arguments and allocation order remain. AWT device presentation is source-audited, not newly executed by native fixtures."
+        }
+      },
+      {
+        "symbol": "F:sh.field_y:Lsc;",
+        "before": null,
+        "after": {
+          "symbol": "F:sh.field_y:Lsc;",
+          "originalName": "field_y",
+          "to": "mainRasterBuffer",
+          "evidence": "sc owns width, height, integer pixels and a java.awt.Image. a(I)V installs those exact pixels/dimensions in SoftwareRasterizer; ve shares them with a DataBufferInt/BufferedImage, and bf publishes them through ImageProducer. Static unrelated helpers retain their owner. Original sentinel effects, image-observer arguments and allocation order remain. AWT device presentation is source-audited, not newly executed by native fixtures."
+        }
+      },
+      {
+        "symbol": "F:ve.field_g:Ljava/awt/Component;",
+        "before": null,
+        "after": {
+          "symbol": "F:ve.field_g:Ljava/awt/Component;",
+          "originalName": "field_g",
+          "to": "imageObserverComponent",
+          "evidence": "sc owns width, height, integer pixels and a java.awt.Image. a(I)V installs those exact pixels/dimensions in SoftwareRasterizer; ve shares them with a DataBufferInt/BufferedImage, and bf publishes them through ImageProducer. Static unrelated helpers retain their owner. Original sentinel effects, image-observer arguments and allocation order remain. AWT device presentation is source-audited, not newly executed by native fixtures."
+        }
+      },
+      {
+        "symbol": "L:bf.a(ILjava/awt/Component;IB)V#0",
+        "before": null,
+        "after": {
+          "symbol": "L:bf.a(ILjava/awt/Component;IB)V#0",
+          "originalName": "runtimeException",
+          "to": "initializationFailure",
+          "evidence": "sc/ve/bf a(ILjava/awt/Component;IB)V takes height, component, width and a byte guard. ve creates a BufferedImage sharing the integer pixel array; bf asks the component for an ImageProducer image, publishes/prepares it three times, then installs the target. Width/height order, extra pixel allocation, guard effects and exceptions are unchanged."
+        }
+      },
+      {
+        "symbol": "L:bf.a(ILjava/awt/Graphics;II)V#0",
+        "before": null,
+        "after": {
+          "symbol": "L:bf.a(ILjava/awt/Graphics;II)V#0",
+          "originalName": "var6",
+          "to": "nullImageForInvalidGuard",
+          "evidence": "sc/ve/bf a(ILjava/awt/Graphics;II)V draws the owned image at x=param2, y=param0 using the supplied Graphics. bf first publishes pixels and uses itself as image observer; ve uses its component and clears it for a nonzero guard. Both overrides keep one virtual contract."
+        }
+      },
+      {
+        "symbol": "L:bf.a(ILjava/awt/Graphics;II)V#1",
+        "before": null,
+        "after": {
+          "symbol": "L:bf.a(ILjava/awt/Graphics;II)V#1",
+          "originalName": "runtimeException",
+          "to": "imageDrawFailure",
+          "evidence": "sc/ve/bf a(ILjava/awt/Graphics;II)V draws the owned image at x=param2, y=param0 using the supplied Graphics. bf first publishes pixels and uses itself as image observer; ve uses its component and clears it for a nonzero guard. Both overrides keep one virtual contract."
+        }
+      },
+      {
+        "symbol": "L:fk.a(ZLjava/awt/Component;II)Lsc;#0",
+        "before": null,
+        "after": {
+          "symbol": "L:fk.a(ZLjava/awt/Component;II)Lsc;#0",
           "originalName": "var4",
-          "to": "allowedUrlCharacters",
-          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
-        },
-        "after": {
-          "symbol": "L:d.run()V#12",
-          "originalName": "var4_int",
-          "to": "cursorY",
-          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+          "to": "bufferImplementationClass",
+          "evidence": "fk.a(ZLjava/awt/Component;II)Lsc; reflectively instantiates literal class ve, initializes height/component/width, and catches Throwable to initialize a bf fallback. A true guard returns null after class lookup. The ve class spelling and reflective string are deliberately unchanged; failure wrappers and original diagnostic strings remain."
         }
       },
       {
-        "symbol": "L:d.run()V#13",
-        "before": {
-          "symbol": "L:d.run()V#13",
-          "originalName": "var5",
-          "to": "urlCharacterIndex",
-          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
-        },
+        "symbol": "L:fk.a(ZLjava/awt/Component;II)Lsc;#1",
+        "before": null,
         "after": {
-          "symbol": "L:d.run()V#13",
-          "originalName": "var4",
-          "to": "allowedUrlCharacters",
-          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+          "symbol": "L:fk.a(ZLjava/awt/Component;II)Lsc;#1",
+          "originalName": "var4_ref",
+          "to": "preferredImplementationFailure",
+          "evidence": "fk.a(ZLjava/awt/Component;II)Lsc; reflectively instantiates literal class ve, initializes height/component/width, and catches Throwable to initialize a bf fallback. A true guard returns null after class lookup. The ve class spelling and reflective string are deliberately unchanged; failure wrappers and original diagnostic strings remain."
         }
       },
       {
-        "symbol": "L:d.run()V#2",
-        "before": {
-          "symbol": "L:d.run()V#2",
-          "originalName": "var2",
-          "to": "dispatcherOrTaskMonitor",
-          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage. This reused Object locks both the dispatcher and the completed task."
-        },
+        "symbol": "L:fk.a(ZLjava/awt/Component;II)Lsc;#10",
+        "before": null,
         "after": {
-          "symbol": "L:d.run()V#2",
+          "symbol": "L:fk.a(ZLjava/awt/Component;II)Lsc;#10",
+          "originalName": "stackIn_10_2",
+          "to": "componentArgumentDescription",
+          "evidence": "fk.a(ZLjava/awt/Component;II)Lsc; reflectively instantiates literal class ve, initializes height/component/width, and catches Throwable to initialize a bf fallback. A true guard returns null after class lookup. The ve class spelling and reflective string are deliberately unchanged; failure wrappers and original diagnostic strings remain."
+        }
+      },
+      {
+        "symbol": "L:fk.a(ZLjava/awt/Component;II)Lsc;#11",
+        "before": null,
+        "after": {
+          "symbol": "L:fk.a(ZLjava/awt/Component;II)Lsc;#11",
           "originalName": "decompiledCaughtException",
-          "to": "caughtTaskThrowable",
-          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+          "to": "caughtFactoryThrowable",
+          "evidence": "fk.a(ZLjava/awt/Component;II)Lsc; reflectively instantiates literal class ve, initializes height/component/width, and catches Throwable to initialize a bf fallback. A true guard returns null after class lookup. The ve class spelling and reflective string are deliberately unchanged; failure wrappers and original diagnostic strings remain."
         }
       },
       {
-        "symbol": "L:d.run()V#3",
-        "before": {
-          "symbol": "L:d.run()V#3",
-          "originalName": "var2_int",
-          "to": "taskType",
-          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
-        },
+        "symbol": "L:fk.a(ZLjava/awt/Component;II)Lsc;#12",
+        "before": null,
         "after": {
-          "symbol": "L:d.run()V#3",
-          "originalName": "var2",
-          "to": "dispatcherOrTaskMonitor",
-          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage. This reused Object locks both the dispatcher and the completed task."
+          "symbol": "L:fk.a(ZLjava/awt/Component;II)Lsc;#12",
+          "originalName": "decompiledCaughtParameter0",
+          "to": "preferredImplementationThrowable",
+          "evidence": "fk.a(ZLjava/awt/Component;II)Lsc; reflectively instantiates literal class ve, initializes height/component/width, and catches Throwable to initialize a bf fallback. A true guard returns null after class lookup. The ve class spelling and reflective string are deliberately unchanged; failure wrappers and original diagnostic strings remain."
         }
       },
       {
-        "symbol": "L:d.run()V#4",
-        "before": {
-          "symbol": "L:d.run()V#4",
-          "originalName": "var2_ref",
-          "to": "fatalThreadDeath",
-          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
-        },
+        "symbol": "L:fk.a(ZLjava/awt/Component;II)Lsc;#13",
+        "before": null,
         "after": {
-          "symbol": "L:d.run()V#4",
-          "originalName": "var2_int",
-          "to": "taskType",
-          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+          "symbol": "L:fk.a(ZLjava/awt/Component;II)Lsc;#13",
+          "originalName": "decompiledCaughtParameter1",
+          "to": "caughtBufferFactoryFailure",
+          "evidence": "fk.a(ZLjava/awt/Component;II)Lsc; reflectively instantiates literal class ve, initializes height/component/width, and catches Throwable to initialize a bf fallback. A true guard returns null after class lookup. The ve class spelling and reflective string are deliberately unchanged; failure wrappers and original diagnostic strings remain."
         }
       },
       {
-        "symbol": "L:d.run()V#5",
-        "before": {
-          "symbol": "L:d.run()V#5",
-          "originalName": "var2_ref2",
-          "to": "ignoredTaskFailure",
-          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
-        },
+        "symbol": "L:fk.a(ZLjava/awt/Component;II)Lsc;#14",
+        "before": null,
         "after": {
-          "symbol": "L:d.run()V#5",
-          "originalName": "var2_ref",
-          "to": "fatalThreadDeath",
-          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+          "symbol": "L:fk.a(ZLjava/awt/Component;II)Lsc;#14",
+          "originalName": "decompiledUncheckedException",
+          "to": "uncheckedFactoryFailure",
+          "evidence": "fk.a(ZLjava/awt/Component;II)Lsc; reflectively instantiates literal class ve, initializes height/component/width, and catches Throwable to initialize a bf fallback. A true guard returns null after class lookup. The ve class spelling and reflective string are deliberately unchanged; failure wrappers and original diagnostic strings remain."
         }
       },
       {
-        "symbol": "L:d.run()V#6",
-        "before": {
-          "symbol": "L:d.run()V#6",
+        "symbol": "L:fk.a(ZLjava/awt/Component;II)Lsc;#15",
+        "before": null,
+        "after": {
+          "symbol": "L:fk.a(ZLjava/awt/Component;II)Lsc;#15",
+          "originalName": "decompiledCheckedException",
+          "to": "unexpectedCheckedFactoryFailure",
+          "evidence": "fk.a(ZLjava/awt/Component;II)Lsc; reflectively instantiates literal class ve, initializes height/component/width, and catches Throwable to initialize a bf fallback. A true guard returns null after class lookup. The ve class spelling and reflective string are deliberately unchanged; failure wrappers and original diagnostic strings remain."
+        }
+      },
+      {
+        "symbol": "L:fk.a(ZLjava/awt/Component;II)Lsc;#2",
+        "before": null,
+        "after": {
+          "symbol": "L:fk.a(ZLjava/awt/Component;II)Lsc;#2",
+          "originalName": "var4_ref2",
+          "to": "bufferFactoryFailure",
+          "evidence": "fk.a(ZLjava/awt/Component;II)Lsc; reflectively instantiates literal class ve, initializes height/component/width, and catches Throwable to initialize a bf fallback. A true guard returns null after class lookup. The ve class spelling and reflective string are deliberately unchanged; failure wrappers and original diagnostic strings remain."
+        }
+      },
+      {
+        "symbol": "L:fk.a(ZLjava/awt/Component;II)Lsc;#3",
+        "before": null,
+        "after": {
+          "symbol": "L:fk.a(ZLjava/awt/Component;II)Lsc;#3",
+          "originalName": "var5",
+          "to": "preferredRasterBuffer",
+          "evidence": "fk.a(ZLjava/awt/Component;II)Lsc; reflectively instantiates literal class ve, initializes height/component/width, and catches Throwable to initialize a bf fallback. A true guard returns null after class lookup. The ve class spelling and reflective string are deliberately unchanged; failure wrappers and original diagnostic strings remain."
+        }
+      },
+      {
+        "symbol": "L:fk.a(ZLjava/awt/Component;II)Lsc;#4",
+        "before": null,
+        "after": {
+          "symbol": "L:fk.a(ZLjava/awt/Component;II)Lsc;#4",
+          "originalName": "var5_ref",
+          "to": "fallbackRasterBuffer",
+          "evidence": "fk.a(ZLjava/awt/Component;II)Lsc; reflectively instantiates literal class ve, initializes height/component/width, and catches Throwable to initialize a bf fallback. A true guard returns null after class lookup. The ve class spelling and reflective string are deliberately unchanged; failure wrappers and original diagnostic strings remain."
+        }
+      },
+      {
+        "symbol": "L:fk.a(ZLjava/awt/Component;II)Lsc;#5",
+        "before": null,
+        "after": {
+          "symbol": "L:fk.a(ZLjava/awt/Component;II)Lsc;#5",
+          "originalName": "stackIn_2_0",
+          "to": "nullBufferForGuard",
+          "evidence": "fk.a(ZLjava/awt/Component;II)Lsc; reflectively instantiates literal class ve, initializes height/component/width, and catches Throwable to initialize a bf fallback. A true guard returns null after class lookup. The ve class spelling and reflective string are deliberately unchanged; failure wrappers and original diagnostic strings remain."
+        }
+      },
+      {
+        "symbol": "L:fk.a(ZLjava/awt/Component;II)Lsc;#6",
+        "before": null,
+        "after": {
+          "symbol": "L:fk.a(ZLjava/awt/Component;II)Lsc;#6",
+          "originalName": "stackIn_4_0",
+          "to": "initializedPreferredBuffer",
+          "evidence": "fk.a(ZLjava/awt/Component;II)Lsc; reflectively instantiates literal class ve, initializes height/component/width, and catches Throwable to initialize a bf fallback. A true guard returns null after class lookup. The ve class spelling and reflective string are deliberately unchanged; failure wrappers and original diagnostic strings remain."
+        }
+      },
+      {
+        "symbol": "L:fk.a(ZLjava/awt/Component;II)Lsc;#7",
+        "before": null,
+        "after": {
+          "symbol": "L:fk.a(ZLjava/awt/Component;II)Lsc;#7",
+          "originalName": "stackIn_6_0",
+          "to": "initializedFallbackBuffer",
+          "evidence": "fk.a(ZLjava/awt/Component;II)Lsc; reflectively instantiates literal class ve, initializes height/component/width, and catches Throwable to initialize a bf fallback. A true guard returns null after class lookup. The ve class spelling and reflective string are deliberately unchanged; failure wrappers and original diagnostic strings remain."
+        }
+      },
+      {
+        "symbol": "L:fk.a(ZLjava/awt/Component;II)Lsc;#8",
+        "before": null,
+        "after": {
+          "symbol": "L:fk.a(ZLjava/awt/Component;II)Lsc;#8",
+          "originalName": "stackIn_9_0",
+          "to": "factoryFailureBeforeComponentDescription",
+          "evidence": "fk.a(ZLjava/awt/Component;II)Lsc; reflectively instantiates literal class ve, initializes height/component/width, and catches Throwable to initialize a bf fallback. A true guard returns null after class lookup. The ve class spelling and reflective string are deliberately unchanged; failure wrappers and original diagnostic strings remain."
+        }
+      },
+      {
+        "symbol": "L:fk.a(ZLjava/awt/Component;II)Lsc;#9",
+        "before": null,
+        "after": {
+          "symbol": "L:fk.a(ZLjava/awt/Component;II)Lsc;#9",
+          "originalName": "stackIn_9_1",
+          "to": "factoryMessagePrefix",
+          "evidence": "fk.a(ZLjava/awt/Component;II)Lsc; reflectively instantiates literal class ve, initializes height/component/width, and catches Throwable to initialize a bf fallback. A true guard returns null after class lookup. The ve class spelling and reflective string are deliberately unchanged; failure wrappers and original diagnostic strings remain."
+        }
+      },
+      {
+        "symbol": "L:ma.a(IIIBI[Ldm;)V#0",
+        "before": null,
+        "after": {
+          "symbol": "L:ma.a(IIIBI[Ldm;)V#0",
+          "originalName": "var21",
+          "to": "centerTileX",
+          "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+        }
+      },
+      {
+        "symbol": "L:ma.a(IIIBI[Ldm;)V#1",
+        "before": null,
+        "after": {
+          "symbol": "L:ma.a(IIIBI[Ldm;)V#1",
+          "originalName": "stackIn_10_0",
+          "to": "selectedLeftBorderWidth",
+          "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+        }
+      },
+      {
+        "symbol": "L:ma.a(IIIBI[Ldm;)V#10",
+        "before": null,
+        "after": {
+          "symbol": "L:ma.a(IIIBI[Ldm;)V#10",
+          "originalName": "var6",
+          "to": "panelFailureForContext",
+          "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+        }
+      },
+      {
+        "symbol": "L:ma.a(IIIBI[Ldm;)V#11",
+        "before": null,
+        "after": {
+          "symbol": "L:ma.a(IIIBI[Ldm;)V#11",
+          "originalName": "var7",
+          "to": "rightBorderWidth",
+          "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+        }
+      },
+      {
+        "symbol": "L:ma.a(IIIBI[Ldm;)V#12",
+        "before": null,
+        "after": {
+          "symbol": "L:ma.a(IIIBI[Ldm;)V#12",
+          "originalName": "var8",
+          "to": "topBorderHeight",
+          "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+        }
+      },
+      {
+        "symbol": "L:ma.a(IIIBI[Ldm;)V#13",
+        "before": null,
+        "after": {
+          "symbol": "L:ma.a(IIIBI[Ldm;)V#13",
+          "originalName": "var9",
+          "to": "bottomBorderHeight",
+          "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+        }
+      },
+      {
+        "symbol": "L:ma.a(IIIBI[Ldm;)V#14",
+        "before": null,
+        "after": {
+          "symbol": "L:ma.a(IIIBI[Ldm;)V#14",
+          "originalName": "var10",
+          "to": "panelRight",
+          "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+        }
+      },
+      {
+        "symbol": "L:ma.a(IIIBI[Ldm;)V#15",
+        "before": null,
+        "after": {
+          "symbol": "L:ma.a(IIIBI[Ldm;)V#15",
+          "originalName": "var11",
+          "to": "panelBottom",
+          "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+        }
+      },
+      {
+        "symbol": "L:ma.a(IIIBI[Ldm;)V#16",
+        "before": null,
+        "after": {
+          "symbol": "L:ma.a(IIIBI[Ldm;)V#16",
+          "originalName": "var12",
+          "to": "centerTileLeft",
+          "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+        }
+      },
+      {
+        "symbol": "L:ma.a(IIIBI[Ldm;)V#17",
+        "before": null,
+        "after": {
+          "symbol": "L:ma.a(IIIBI[Ldm;)V#17",
+          "originalName": "var13",
+          "to": "centerTileRight",
+          "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+        }
+      },
+      {
+        "symbol": "L:ma.a(IIIBI[Ldm;)V#18",
+        "before": null,
+        "after": {
+          "symbol": "L:ma.a(IIIBI[Ldm;)V#18",
+          "originalName": "var14",
+          "to": "centerTileTop",
+          "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+        }
+      },
+      {
+        "symbol": "L:ma.a(IIIBI[Ldm;)V#19",
+        "before": null,
+        "after": {
+          "symbol": "L:ma.a(IIIBI[Ldm;)V#19",
+          "originalName": "var15",
+          "to": "centerTileBottom",
+          "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+        }
+      },
+      {
+        "symbol": "L:ma.a(IIIBI[Ldm;)V#2",
+        "before": null,
+        "after": {
+          "symbol": "L:ma.a(IIIBI[Ldm;)V#2",
+          "originalName": "stackIn_13_0",
+          "to": "selectedRightBorderWidth",
+          "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+        }
+      },
+      {
+        "symbol": "L:ma.a(IIIBI[Ldm;)V#20",
+        "before": null,
+        "after": {
+          "symbol": "L:ma.a(IIIBI[Ldm;)V#20",
+          "originalName": "var16",
+          "to": "centerClipLeft",
+          "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+        }
+      },
+      {
+        "symbol": "L:ma.a(IIIBI[Ldm;)V#21",
+        "before": null,
+        "after": {
+          "symbol": "L:ma.a(IIIBI[Ldm;)V#21",
+          "originalName": "var17",
+          "to": "centerClipRight",
+          "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+        }
+      },
+      {
+        "symbol": "L:ma.a(IIIBI[Ldm;)V#22",
+        "before": null,
+        "after": {
+          "symbol": "L:ma.a(IIIBI[Ldm;)V#22",
+          "originalName": "var18",
+          "to": "centerClipTop",
+          "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+        }
+      },
+      {
+        "symbol": "L:ma.a(IIIBI[Ldm;)V#23",
+        "before": null,
+        "after": {
+          "symbol": "L:ma.a(IIIBI[Ldm;)V#23",
+          "originalName": "var19",
+          "to": "centerClipBottom",
+          "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+        }
+      },
+      {
+        "symbol": "L:ma.a(IIIBI[Ldm;)V#24",
+        "before": null,
+        "after": {
+          "symbol": "L:ma.a(IIIBI[Ldm;)V#24",
+          "originalName": "var20",
+          "to": "edgeTileCoordinateOrCenterY",
+          "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+        }
+      },
+      {
+        "symbol": "L:ma.a(IIIBI[Ldm;)V#25",
+        "before": null,
+        "after": {
+          "symbol": "L:ma.a(IIIBI[Ldm;)V#25",
+          "originalName": "var22",
+          "to": "clientControlFlowGuardSnapshot",
+          "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+        }
+      },
+      {
+        "symbol": "L:ma.a(IIIBI[Ldm;)V#26",
+        "before": null,
+        "after": {
+          "symbol": "L:ma.a(IIIBI[Ldm;)V#26",
+          "originalName": "decompiledCaughtParameter0",
+          "to": "panelDrawingFailure",
+          "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+        }
+      },
+      {
+        "symbol": "L:ma.a(IIIBI[Ldm;)V#3",
+        "before": null,
+        "after": {
+          "symbol": "L:ma.a(IIIBI[Ldm;)V#3",
+          "originalName": "stackIn_18_0",
+          "to": "selectedTopBorderHeight",
+          "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+        }
+      },
+      {
+        "symbol": "L:ma.a(IIIBI[Ldm;)V#4",
+        "before": null,
+        "after": {
+          "symbol": "L:ma.a(IIIBI[Ldm;)V#4",
+          "originalName": "stackIn_21_0",
+          "to": "selectedBottomBorderHeight",
+          "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+        }
+      },
+      {
+        "symbol": "L:ma.a(IIIBI[Ldm;)V#5",
+        "before": null,
+        "after": {
+          "symbol": "L:ma.a(IIIBI[Ldm;)V#5",
+          "originalName": "stackIn_77_0",
+          "to": "panelFailureBeforeSpriteDescription",
+          "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+        }
+      },
+      {
+        "symbol": "L:ma.a(IIIBI[Ldm;)V#6",
+        "before": null,
+        "after": {
+          "symbol": "L:ma.a(IIIBI[Ldm;)V#6",
+          "originalName": "stackIn_77_1",
+          "to": "panelMessagePrefix",
+          "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+        }
+      },
+      {
+        "symbol": "L:ma.a(IIIBI[Ldm;)V#7",
+        "before": null,
+        "after": {
+          "symbol": "L:ma.a(IIIBI[Ldm;)V#7",
+          "originalName": "stackIn_78_2",
+          "to": "spriteArrayArgumentDescription",
+          "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+        }
+      },
+      {
+        "symbol": "L:ma.a(IIIBI[Ldm;)V#8",
+        "before": null,
+        "after": {
+          "symbol": "L:ma.a(IIIBI[Ldm;)V#8",
+          "originalName": "decompiledCaughtException",
+          "to": "caughtPanelFailure",
+          "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+        }
+      },
+      {
+        "symbol": "L:ma.a(IIIBI[Ldm;)V#9",
+        "before": null,
+        "after": {
+          "symbol": "L:ma.a(IIIBI[Ldm;)V#9",
+          "originalName": "var6_int",
+          "to": "leftBorderWidth",
+          "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+        }
+      },
+      {
+        "symbol": "L:sc.a(I)V#0",
+        "before": null,
+        "after": {
+          "symbol": "L:sc.a(I)V#0",
           "originalName": "var3",
-          "to": "ignoredWaitInterruption",
-          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
-        },
-        "after": {
-          "symbol": "L:d.run()V#6",
-          "originalName": "var2_ref2",
-          "to": "ignoredTaskFailure",
-          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+          "to": "nullRandomForInvalidGuard",
+          "evidence": "sc owns width, height, integer pixels and a java.awt.Image. a(I)V installs those exact pixels/dimensions in SoftwareRasterizer; ve shares them with a DataBufferInt/BufferedImage, and bf publishes them through ImageProducer. Static unrelated helpers retain their owner. Original sentinel effects, image-observer arguments and allocation order remain. AWT device presentation is source-audited, not newly executed by native fixtures."
         }
       },
       {
-        "symbol": "L:d.run()V#7",
-        "before": {
-          "symbol": "L:d.run()V#7",
-          "originalName": "var3_ref",
-          "to": "openedPreferencesFile",
-          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
-        },
+        "symbol": "L:ve.a(ILjava/awt/Component;IB)V#0",
+        "before": null,
         "after": {
-          "symbol": "L:d.run()V#7",
-          "originalName": "var3",
-          "to": "ignoredWaitInterruption",
-          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+          "symbol": "L:ve.a(ILjava/awt/Component;IB)V#0",
+          "originalName": "var5",
+          "to": "pixelDataBuffer",
+          "evidence": "sc/ve/bf a(ILjava/awt/Component;IB)V takes height, component, width and a byte guard. ve creates a BufferedImage sharing the integer pixel array; bf asks the component for an ImageProducer image, publishes/prepares it three times, then installs the target. Width/height order, extra pixel allocation, guard effects and exceptions are unchanged."
         }
       },
       {
-        "symbol": "L:d.run()V#8",
-        "before": {
-          "symbol": "L:d.run()V#8",
-          "originalName": "var3_int",
-          "to": "cursorXOrVisibleFlag",
-          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage. This reused integer stores cursor X for task14 and a 0/1 visibility flag for task15."
-        },
+        "symbol": "L:ve.a(ILjava/awt/Component;IB)V#1",
+        "before": null,
         "after": {
-          "symbol": "L:d.run()V#8",
-          "originalName": "var3_ref",
-          "to": "openedPreferencesFile",
-          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+          "symbol": "L:ve.a(ILjava/awt/Component;IB)V#1",
+          "originalName": "var6",
+          "to": "rgbColorModel",
+          "evidence": "sc/ve/bf a(ILjava/awt/Component;IB)V takes height, component, width and a byte guard. ve creates a BufferedImage sharing the integer pixel array; bf asks the component for an ImageProducer image, publishes/prepares it three times, then installs the target. Width/height order, extra pixel allocation, guard effects and exceptions are unchanged."
         }
       },
       {
-        "symbol": "L:d.run()V#9",
-        "before": {
-          "symbol": "L:d.run()V#9",
-          "originalName": "var3_ref2",
-          "to": "urlLaunchFailure",
-          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
-        },
+        "symbol": "L:ve.a(ILjava/awt/Component;IB)V#2",
+        "before": null,
         "after": {
-          "symbol": "L:d.run()V#9",
-          "originalName": "var3_int",
-          "to": "cursorXOrVisibleFlag",
-          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage. This reused integer stores cursor X for task14 and a 0/1 visibility flag for task15."
+          "symbol": "L:ve.a(ILjava/awt/Component;IB)V#2",
+          "originalName": "var7",
+          "to": "imageRaster",
+          "evidence": "sc/ve/bf a(ILjava/awt/Component;IB)V takes height, component, width and a byte guard. ve creates a BufferedImage sharing the integer pixel array; bf asks the component for an ImageProducer image, publishes/prepares it three times, then installs the target. Width/height order, extra pixel allocation, guard effects and exceptions are unchanged."
+        }
+      },
+      {
+        "symbol": "M:bf.a(ILjava/awt/Component;IB)V",
+        "before": null,
+        "after": {
+          "symbol": "M:bf.a(ILjava/awt/Component;IB)V",
+          "originalName": "a",
+          "to": "initialize",
+          "evidence": "sc/ve/bf a(ILjava/awt/Component;IB)V takes height, component, width and a byte guard. ve creates a BufferedImage sharing the integer pixel array; bf asks the component for an ImageProducer image, publishes/prepares it three times, then installs the target. Width/height order, extra pixel allocation, guard effects and exceptions are unchanged."
+        }
+      },
+      {
+        "symbol": "M:bf.a(ILjava/awt/Graphics;II)V",
+        "before": null,
+        "after": {
+          "symbol": "M:bf.a(ILjava/awt/Graphics;II)V",
+          "originalName": "a",
+          "to": "drawImage",
+          "evidence": "sc/ve/bf a(ILjava/awt/Graphics;II)V draws the owned image at x=param2, y=param0 using the supplied Graphics. bf first publishes pixels and uses itself as image observer; ve uses its component and clears it for a nonzero guard. Both overrides keep one virtual contract."
+        }
+      },
+      {
+        "symbol": "M:bf.a(Z)V",
+        "before": null,
+        "after": {
+          "symbol": "M:bf.a(Z)V",
+          "originalName": "a",
+          "to": "publishPixelsToConsumer",
+          "evidence": "Synchronized instance method returns for a missing consumer, sends the complete integer raster with width as scanline stride, then imageComplete(2). A false guard clears the unrelated active text archive before completion."
+        }
+      },
+      {
+        "symbol": "M:fk.a(ZLjava/awt/Component;II)Lsc;",
+        "before": null,
+        "after": {
+          "symbol": "M:fk.a(ZLjava/awt/Component;II)Lsc;",
+          "originalName": "a",
+          "to": "createCanvasRasterBuffer",
+          "evidence": "fk.a(ZLjava/awt/Component;II)Lsc; reflectively instantiates literal class ve, initializes height/component/width, and catches Throwable to initialize a bf fallback. A true guard returns null after class lookup. The ve class spelling and reflective string are deliberately unchanged; failure wrappers and original diagnostic strings remain."
+        }
+      },
+      {
+        "symbol": "M:ma.a(IIIBI[Ldm;)V",
+        "before": null,
+        "after": {
+          "symbol": "M:ma.a(IIIBI[Ldm;)V",
+          "originalName": "a",
+          "to": "drawNineSlicePanel",
+          "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+        }
+      },
+      {
+        "symbol": "M:sc.a(I)V",
+        "before": null,
+        "after": {
+          "symbol": "M:sc.a(I)V",
+          "originalName": "a",
+          "to": "setAsRasterTarget",
+          "evidence": "sc owns width, height, integer pixels and a java.awt.Image. a(I)V installs those exact pixels/dimensions in SoftwareRasterizer; ve shares them with a DataBufferInt/BufferedImage, and bf publishes them through ImageProducer. Static unrelated helpers retain their owner. Original sentinel effects, image-observer arguments and allocation order remain. AWT device presentation is source-audited, not newly executed by native fixtures."
+        }
+      },
+      {
+        "symbol": "M:sc.a(ILjava/awt/Component;IB)V",
+        "before": null,
+        "after": {
+          "symbol": "M:sc.a(ILjava/awt/Component;IB)V",
+          "originalName": "a",
+          "to": "initialize",
+          "evidence": "sc/ve/bf a(ILjava/awt/Component;IB)V takes height, component, width and a byte guard. ve creates a BufferedImage sharing the integer pixel array; bf asks the component for an ImageProducer image, publishes/prepares it three times, then installs the target. Width/height order, extra pixel allocation, guard effects and exceptions are unchanged."
+        }
+      },
+      {
+        "symbol": "M:sc.a(ILjava/awt/Graphics;II)V",
+        "before": null,
+        "after": {
+          "symbol": "M:sc.a(ILjava/awt/Graphics;II)V",
+          "originalName": "a",
+          "to": "drawImage",
+          "evidence": "sc/ve/bf a(ILjava/awt/Graphics;II)V draws the owned image at x=param2, y=param0 using the supplied Graphics. bf first publishes pixels and uses itself as image observer; ve uses its component and clears it for a nonzero guard. Both overrides keep one virtual contract."
+        }
+      },
+      {
+        "symbol": "M:ve.a(ILjava/awt/Component;IB)V",
+        "before": null,
+        "after": {
+          "symbol": "M:ve.a(ILjava/awt/Component;IB)V",
+          "originalName": "a",
+          "to": "initialize",
+          "evidence": "sc/ve/bf a(ILjava/awt/Component;IB)V takes height, component, width and a byte guard. ve creates a BufferedImage sharing the integer pixel array; bf asks the component for an ImageProducer image, publishes/prepares it three times, then installs the target. Width/height order, extra pixel allocation, guard effects and exceptions are unchanged."
+        }
+      },
+      {
+        "symbol": "M:ve.a(ILjava/awt/Graphics;II)V",
+        "before": null,
+        "after": {
+          "symbol": "M:ve.a(ILjava/awt/Graphics;II)V",
+          "originalName": "a",
+          "to": "drawImage",
+          "evidence": "sc/ve/bf a(ILjava/awt/Graphics;II)V draws the owned image at x=param2, y=param0 using the supplied Graphics. bf first publishes pixels and uses itself as image observer; ve uses its component and clears it for a nonzero guard. Both overrides keep one virtual contract."
+        }
+      },
+      {
+        "symbol": "P:bf.a(ILjava/awt/Component;IB)V#0",
+        "before": null,
+        "after": {
+          "symbol": "P:bf.a(ILjava/awt/Component;IB)V#0",
+          "originalName": "param0",
+          "to": "height",
+          "evidence": "sc/ve/bf a(ILjava/awt/Component;IB)V takes height, component, width and a byte guard. ve creates a BufferedImage sharing the integer pixel array; bf asks the component for an ImageProducer image, publishes/prepares it three times, then installs the target. Width/height order, extra pixel allocation, guard effects and exceptions are unchanged."
+        }
+      },
+      {
+        "symbol": "P:bf.a(ILjava/awt/Component;IB)V#1",
+        "before": null,
+        "after": {
+          "symbol": "P:bf.a(ILjava/awt/Component;IB)V#1",
+          "originalName": "param1",
+          "to": "component",
+          "evidence": "sc/ve/bf a(ILjava/awt/Component;IB)V takes height, component, width and a byte guard. ve creates a BufferedImage sharing the integer pixel array; bf asks the component for an ImageProducer image, publishes/prepares it three times, then installs the target. Width/height order, extra pixel allocation, guard effects and exceptions are unchanged."
+        }
+      },
+      {
+        "symbol": "P:bf.a(ILjava/awt/Component;IB)V#2",
+        "before": null,
+        "after": {
+          "symbol": "P:bf.a(ILjava/awt/Component;IB)V#2",
+          "originalName": "param2",
+          "to": "width",
+          "evidence": "sc/ve/bf a(ILjava/awt/Component;IB)V takes height, component, width and a byte guard. ve creates a BufferedImage sharing the integer pixel array; bf asks the component for an ImageProducer image, publishes/prepares it three times, then installs the target. Width/height order, extra pixel allocation, guard effects and exceptions are unchanged."
+        }
+      },
+      {
+        "symbol": "P:bf.a(ILjava/awt/Component;IB)V#3",
+        "before": null,
+        "after": {
+          "symbol": "P:bf.a(ILjava/awt/Component;IB)V#3",
+          "originalName": "param3",
+          "to": "methodGuard",
+          "evidence": "sc/ve/bf a(ILjava/awt/Component;IB)V takes height, component, width and a byte guard. ve creates a BufferedImage sharing the integer pixel array; bf asks the component for an ImageProducer image, publishes/prepares it three times, then installs the target. Width/height order, extra pixel allocation, guard effects and exceptions are unchanged."
+        }
+      },
+      {
+        "symbol": "P:bf.a(ILjava/awt/Graphics;II)V#0",
+        "before": null,
+        "after": {
+          "symbol": "P:bf.a(ILjava/awt/Graphics;II)V#0",
+          "originalName": "param0",
+          "to": "drawY",
+          "evidence": "sc/ve/bf a(ILjava/awt/Graphics;II)V draws the owned image at x=param2, y=param0 using the supplied Graphics. bf first publishes pixels and uses itself as image observer; ve uses its component and clears it for a nonzero guard. Both overrides keep one virtual contract."
+        }
+      },
+      {
+        "symbol": "P:bf.a(ILjava/awt/Graphics;II)V#1",
+        "before": null,
+        "after": {
+          "symbol": "P:bf.a(ILjava/awt/Graphics;II)V#1",
+          "originalName": "param1",
+          "to": "graphics",
+          "evidence": "sc/ve/bf a(ILjava/awt/Graphics;II)V draws the owned image at x=param2, y=param0 using the supplied Graphics. bf first publishes pixels and uses itself as image observer; ve uses its component and clears it for a nonzero guard. Both overrides keep one virtual contract."
+        }
+      },
+      {
+        "symbol": "P:bf.a(ILjava/awt/Graphics;II)V#2",
+        "before": null,
+        "after": {
+          "symbol": "P:bf.a(ILjava/awt/Graphics;II)V#2",
+          "originalName": "param2",
+          "to": "drawX",
+          "evidence": "sc/ve/bf a(ILjava/awt/Graphics;II)V draws the owned image at x=param2, y=param0 using the supplied Graphics. bf first publishes pixels and uses itself as image observer; ve uses its component and clears it for a nonzero guard. Both overrides keep one virtual contract."
+        }
+      },
+      {
+        "symbol": "P:bf.a(ILjava/awt/Graphics;II)V#3",
+        "before": null,
+        "after": {
+          "symbol": "P:bf.a(ILjava/awt/Graphics;II)V#3",
+          "originalName": "param3",
+          "to": "methodGuard",
+          "evidence": "sc/ve/bf a(ILjava/awt/Graphics;II)V draws the owned image at x=param2, y=param0 using the supplied Graphics. bf first publishes pixels and uses itself as image observer; ve uses its component and clears it for a nonzero guard. Both overrides keep one virtual contract."
+        }
+      },
+      {
+        "symbol": "P:bf.a(Z)V#0",
+        "before": null,
+        "after": {
+          "symbol": "P:bf.a(Z)V#0",
+          "originalName": "param0",
+          "to": "methodGuard",
+          "evidence": "Synchronized instance method returns for a missing consumer, sends the complete integer raster with width as scanline stride, then imageComplete(2). A false guard clears the unrelated active text archive before completion."
+        }
+      },
+      {
+        "symbol": "P:bf.addConsumer(Ljava/awt/image/ImageConsumer;)V#0",
+        "before": null,
+        "after": {
+          "symbol": "P:bf.addConsumer(Ljava/awt/image/ImageConsumer;)V#0",
+          "originalName": "param0",
+          "to": "consumer",
+          "evidence": "sc owns width, height, integer pixels and a java.awt.Image. a(I)V installs those exact pixels/dimensions in SoftwareRasterizer; ve shares them with a DataBufferInt/BufferedImage, and bf publishes them through ImageProducer. Static unrelated helpers retain their owner. Original sentinel effects, image-observer arguments and allocation order remain. AWT device presentation is source-audited, not newly executed by native fixtures."
+        }
+      },
+      {
+        "symbol": "P:bf.imageUpdate(Ljava/awt/Image;IIIII)Z#0",
+        "before": null,
+        "after": {
+          "symbol": "P:bf.imageUpdate(Ljava/awt/Image;IIIII)Z#0",
+          "originalName": "param0",
+          "to": "observedImage",
+          "evidence": "sc owns width, height, integer pixels and a java.awt.Image. a(I)V installs those exact pixels/dimensions in SoftwareRasterizer; ve shares them with a DataBufferInt/BufferedImage, and bf publishes them through ImageProducer. Static unrelated helpers retain their owner. Original sentinel effects, image-observer arguments and allocation order remain. AWT device presentation is source-audited, not newly executed by native fixtures."
+        }
+      },
+      {
+        "symbol": "P:bf.imageUpdate(Ljava/awt/Image;IIIII)Z#1",
+        "before": null,
+        "after": {
+          "symbol": "P:bf.imageUpdate(Ljava/awt/Image;IIIII)Z#1",
+          "originalName": "param1",
+          "to": "infoFlags",
+          "evidence": "sc owns width, height, integer pixels and a java.awt.Image. a(I)V installs those exact pixels/dimensions in SoftwareRasterizer; ve shares them with a DataBufferInt/BufferedImage, and bf publishes them through ImageProducer. Static unrelated helpers retain their owner. Original sentinel effects, image-observer arguments and allocation order remain. AWT device presentation is source-audited, not newly executed by native fixtures."
+        }
+      },
+      {
+        "symbol": "P:bf.imageUpdate(Ljava/awt/Image;IIIII)Z#2",
+        "before": null,
+        "after": {
+          "symbol": "P:bf.imageUpdate(Ljava/awt/Image;IIIII)Z#2",
+          "originalName": "param2",
+          "to": "updateX",
+          "evidence": "sc owns width, height, integer pixels and a java.awt.Image. a(I)V installs those exact pixels/dimensions in SoftwareRasterizer; ve shares them with a DataBufferInt/BufferedImage, and bf publishes them through ImageProducer. Static unrelated helpers retain their owner. Original sentinel effects, image-observer arguments and allocation order remain. AWT device presentation is source-audited, not newly executed by native fixtures."
+        }
+      },
+      {
+        "symbol": "P:bf.imageUpdate(Ljava/awt/Image;IIIII)Z#3",
+        "before": null,
+        "after": {
+          "symbol": "P:bf.imageUpdate(Ljava/awt/Image;IIIII)Z#3",
+          "originalName": "param3",
+          "to": "updateY",
+          "evidence": "sc owns width, height, integer pixels and a java.awt.Image. a(I)V installs those exact pixels/dimensions in SoftwareRasterizer; ve shares them with a DataBufferInt/BufferedImage, and bf publishes them through ImageProducer. Static unrelated helpers retain their owner. Original sentinel effects, image-observer arguments and allocation order remain. AWT device presentation is source-audited, not newly executed by native fixtures."
+        }
+      },
+      {
+        "symbol": "P:bf.imageUpdate(Ljava/awt/Image;IIIII)Z#4",
+        "before": null,
+        "after": {
+          "symbol": "P:bf.imageUpdate(Ljava/awt/Image;IIIII)Z#4",
+          "originalName": "param4",
+          "to": "updateWidth",
+          "evidence": "sc owns width, height, integer pixels and a java.awt.Image. a(I)V installs those exact pixels/dimensions in SoftwareRasterizer; ve shares them with a DataBufferInt/BufferedImage, and bf publishes them through ImageProducer. Static unrelated helpers retain their owner. Original sentinel effects, image-observer arguments and allocation order remain. AWT device presentation is source-audited, not newly executed by native fixtures."
+        }
+      },
+      {
+        "symbol": "P:bf.imageUpdate(Ljava/awt/Image;IIIII)Z#5",
+        "before": null,
+        "after": {
+          "symbol": "P:bf.imageUpdate(Ljava/awt/Image;IIIII)Z#5",
+          "originalName": "param5",
+          "to": "updateHeight",
+          "evidence": "sc owns width, height, integer pixels and a java.awt.Image. a(I)V installs those exact pixels/dimensions in SoftwareRasterizer; ve shares them with a DataBufferInt/BufferedImage, and bf publishes them through ImageProducer. Static unrelated helpers retain their owner. Original sentinel effects, image-observer arguments and allocation order remain. AWT device presentation is source-audited, not newly executed by native fixtures."
+        }
+      },
+      {
+        "symbol": "P:bf.isConsumer(Ljava/awt/image/ImageConsumer;)Z#0",
+        "before": null,
+        "after": {
+          "symbol": "P:bf.isConsumer(Ljava/awt/image/ImageConsumer;)Z#0",
+          "originalName": "param0",
+          "to": "consumer",
+          "evidence": "sc owns width, height, integer pixels and a java.awt.Image. a(I)V installs those exact pixels/dimensions in SoftwareRasterizer; ve shares them with a DataBufferInt/BufferedImage, and bf publishes them through ImageProducer. Static unrelated helpers retain their owner. Original sentinel effects, image-observer arguments and allocation order remain. AWT device presentation is source-audited, not newly executed by native fixtures."
+        }
+      },
+      {
+        "symbol": "P:bf.removeConsumer(Ljava/awt/image/ImageConsumer;)V#0",
+        "before": null,
+        "after": {
+          "symbol": "P:bf.removeConsumer(Ljava/awt/image/ImageConsumer;)V#0",
+          "originalName": "param0",
+          "to": "consumer",
+          "evidence": "sc owns width, height, integer pixels and a java.awt.Image. a(I)V installs those exact pixels/dimensions in SoftwareRasterizer; ve shares them with a DataBufferInt/BufferedImage, and bf publishes them through ImageProducer. Static unrelated helpers retain their owner. Original sentinel effects, image-observer arguments and allocation order remain. AWT device presentation is source-audited, not newly executed by native fixtures."
+        }
+      },
+      {
+        "symbol": "P:bf.requestTopDownLeftRightResend(Ljava/awt/image/ImageConsumer;)V#0",
+        "before": null,
+        "after": {
+          "symbol": "P:bf.requestTopDownLeftRightResend(Ljava/awt/image/ImageConsumer;)V#0",
+          "originalName": "param0",
+          "to": "consumer",
+          "evidence": "sc owns width, height, integer pixels and a java.awt.Image. a(I)V installs those exact pixels/dimensions in SoftwareRasterizer; ve shares them with a DataBufferInt/BufferedImage, and bf publishes them through ImageProducer. Static unrelated helpers retain their owner. Original sentinel effects, image-observer arguments and allocation order remain. AWT device presentation is source-audited, not newly executed by native fixtures."
+        }
+      },
+      {
+        "symbol": "P:bf.startProduction(Ljava/awt/image/ImageConsumer;)V#0",
+        "before": null,
+        "after": {
+          "symbol": "P:bf.startProduction(Ljava/awt/image/ImageConsumer;)V#0",
+          "originalName": "param0",
+          "to": "consumer",
+          "evidence": "sc owns width, height, integer pixels and a java.awt.Image. a(I)V installs those exact pixels/dimensions in SoftwareRasterizer; ve shares them with a DataBufferInt/BufferedImage, and bf publishes them through ImageProducer. Static unrelated helpers retain their owner. Original sentinel effects, image-observer arguments and allocation order remain. AWT device presentation is source-audited, not newly executed by native fixtures."
+        }
+      },
+      {
+        "symbol": "P:fk.a(ZLjava/awt/Component;II)Lsc;#0",
+        "before": null,
+        "after": {
+          "symbol": "P:fk.a(ZLjava/awt/Component;II)Lsc;#0",
+          "originalName": "param0",
+          "to": "returnNullGuard",
+          "evidence": "fk.a(ZLjava/awt/Component;II)Lsc; reflectively instantiates literal class ve, initializes height/component/width, and catches Throwable to initialize a bf fallback. A true guard returns null after class lookup. The ve class spelling and reflective string are deliberately unchanged; failure wrappers and original diagnostic strings remain."
+        }
+      },
+      {
+        "symbol": "P:fk.a(ZLjava/awt/Component;II)Lsc;#1",
+        "before": null,
+        "after": {
+          "symbol": "P:fk.a(ZLjava/awt/Component;II)Lsc;#1",
+          "originalName": "param1",
+          "to": "component",
+          "evidence": "fk.a(ZLjava/awt/Component;II)Lsc; reflectively instantiates literal class ve, initializes height/component/width, and catches Throwable to initialize a bf fallback. A true guard returns null after class lookup. The ve class spelling and reflective string are deliberately unchanged; failure wrappers and original diagnostic strings remain."
+        }
+      },
+      {
+        "symbol": "P:fk.a(ZLjava/awt/Component;II)Lsc;#2",
+        "before": null,
+        "after": {
+          "symbol": "P:fk.a(ZLjava/awt/Component;II)Lsc;#2",
+          "originalName": "param2",
+          "to": "height",
+          "evidence": "fk.a(ZLjava/awt/Component;II)Lsc; reflectively instantiates literal class ve, initializes height/component/width, and catches Throwable to initialize a bf fallback. A true guard returns null after class lookup. The ve class spelling and reflective string are deliberately unchanged; failure wrappers and original diagnostic strings remain."
+        }
+      },
+      {
+        "symbol": "P:fk.a(ZLjava/awt/Component;II)Lsc;#3",
+        "before": null,
+        "after": {
+          "symbol": "P:fk.a(ZLjava/awt/Component;II)Lsc;#3",
+          "originalName": "param3",
+          "to": "width",
+          "evidence": "fk.a(ZLjava/awt/Component;II)Lsc; reflectively instantiates literal class ve, initializes height/component/width, and catches Throwable to initialize a bf fallback. A true guard returns null after class lookup. The ve class spelling and reflective string are deliberately unchanged; failure wrappers and original diagnostic strings remain."
+        }
+      },
+      {
+        "symbol": "P:ma.a(IIIBI[Ldm;)V#0",
+        "before": null,
+        "after": {
+          "symbol": "P:ma.a(IIIBI[Ldm;)V#0",
+          "originalName": "param0",
+          "to": "panelTop",
+          "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+        }
+      },
+      {
+        "symbol": "P:ma.a(IIIBI[Ldm;)V#1",
+        "before": null,
+        "after": {
+          "symbol": "P:ma.a(IIIBI[Ldm;)V#1",
+          "originalName": "param1",
+          "to": "panelLeft",
+          "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+        }
+      },
+      {
+        "symbol": "P:ma.a(IIIBI[Ldm;)V#2",
+        "before": null,
+        "after": {
+          "symbol": "P:ma.a(IIIBI[Ldm;)V#2",
+          "originalName": "param2",
+          "to": "panelHeight",
+          "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+        }
+      },
+      {
+        "symbol": "P:ma.a(IIIBI[Ldm;)V#3",
+        "before": null,
+        "after": {
+          "symbol": "P:ma.a(IIIBI[Ldm;)V#3",
+          "originalName": "param3",
+          "to": "methodGuard",
+          "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+        }
+      },
+      {
+        "symbol": "P:ma.a(IIIBI[Ldm;)V#4",
+        "before": null,
+        "after": {
+          "symbol": "P:ma.a(IIIBI[Ldm;)V#4",
+          "originalName": "param4",
+          "to": "panelWidth",
+          "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+        }
+      },
+      {
+        "symbol": "P:ma.a(IIIBI[Ldm;)V#5",
+        "before": null,
+        "after": {
+          "symbol": "P:ma.a(IIIBI[Ldm;)V#5",
+          "originalName": "param5",
+          "to": "nineSliceSprites",
+          "evidence": "ma.a(IIIBI[Ldm;)V draws a row-major 3x3 sprite panel: top,left,height,byte guard,width,sprites. Side fullWidth and top/bottom fullHeight define borders; overlapping borders share a proportionally computed clip split. Corners draw once; edges and center tile with original raw extents under adjusted clipping. Null/zero-size branches, guard order, integer arithmetic, shared scratch clip, exceptions and diagnostic strings remain. The existing 2592-case nine-slice trace verifies sprite construction, not this panel drawing routine."
+        }
+      },
+      {
+        "symbol": "P:sc.a(I)V#0",
+        "before": null,
+        "after": {
+          "symbol": "P:sc.a(I)V#0",
+          "originalName": "param0",
+          "to": "methodGuard",
+          "evidence": "sc owns width, height, integer pixels and a java.awt.Image. a(I)V installs those exact pixels/dimensions in SoftwareRasterizer; ve shares them with a DataBufferInt/BufferedImage, and bf publishes them through ImageProducer. Static unrelated helpers retain their owner. Original sentinel effects, image-observer arguments and allocation order remain. AWT device presentation is source-audited, not newly executed by native fixtures."
+        }
+      },
+      {
+        "symbol": "P:sc.a(ILjava/awt/Component;IB)V#0",
+        "before": null,
+        "after": {
+          "symbol": "P:sc.a(ILjava/awt/Component;IB)V#0",
+          "originalName": "param0",
+          "to": "height",
+          "evidence": "sc/ve/bf a(ILjava/awt/Component;IB)V takes height, component, width and a byte guard. ve creates a BufferedImage sharing the integer pixel array; bf asks the component for an ImageProducer image, publishes/prepares it three times, then installs the target. Width/height order, extra pixel allocation, guard effects and exceptions are unchanged."
+        }
+      },
+      {
+        "symbol": "P:sc.a(ILjava/awt/Component;IB)V#1",
+        "before": null,
+        "after": {
+          "symbol": "P:sc.a(ILjava/awt/Component;IB)V#1",
+          "originalName": "param1",
+          "to": "component",
+          "evidence": "sc/ve/bf a(ILjava/awt/Component;IB)V takes height, component, width and a byte guard. ve creates a BufferedImage sharing the integer pixel array; bf asks the component for an ImageProducer image, publishes/prepares it three times, then installs the target. Width/height order, extra pixel allocation, guard effects and exceptions are unchanged."
+        }
+      },
+      {
+        "symbol": "P:sc.a(ILjava/awt/Component;IB)V#2",
+        "before": null,
+        "after": {
+          "symbol": "P:sc.a(ILjava/awt/Component;IB)V#2",
+          "originalName": "param2",
+          "to": "width",
+          "evidence": "sc/ve/bf a(ILjava/awt/Component;IB)V takes height, component, width and a byte guard. ve creates a BufferedImage sharing the integer pixel array; bf asks the component for an ImageProducer image, publishes/prepares it three times, then installs the target. Width/height order, extra pixel allocation, guard effects and exceptions are unchanged."
+        }
+      },
+      {
+        "symbol": "P:sc.a(ILjava/awt/Component;IB)V#3",
+        "before": null,
+        "after": {
+          "symbol": "P:sc.a(ILjava/awt/Component;IB)V#3",
+          "originalName": "param3",
+          "to": "methodGuard",
+          "evidence": "sc/ve/bf a(ILjava/awt/Component;IB)V takes height, component, width and a byte guard. ve creates a BufferedImage sharing the integer pixel array; bf asks the component for an ImageProducer image, publishes/prepares it three times, then installs the target. Width/height order, extra pixel allocation, guard effects and exceptions are unchanged."
+        }
+      },
+      {
+        "symbol": "P:sc.a(ILjava/awt/Graphics;II)V#0",
+        "before": null,
+        "after": {
+          "symbol": "P:sc.a(ILjava/awt/Graphics;II)V#0",
+          "originalName": "param0",
+          "to": "drawY",
+          "evidence": "sc/ve/bf a(ILjava/awt/Graphics;II)V draws the owned image at x=param2, y=param0 using the supplied Graphics. bf first publishes pixels and uses itself as image observer; ve uses its component and clears it for a nonzero guard. Both overrides keep one virtual contract."
+        }
+      },
+      {
+        "symbol": "P:sc.a(ILjava/awt/Graphics;II)V#1",
+        "before": null,
+        "after": {
+          "symbol": "P:sc.a(ILjava/awt/Graphics;II)V#1",
+          "originalName": "param1",
+          "to": "graphics",
+          "evidence": "sc/ve/bf a(ILjava/awt/Graphics;II)V draws the owned image at x=param2, y=param0 using the supplied Graphics. bf first publishes pixels and uses itself as image observer; ve uses its component and clears it for a nonzero guard. Both overrides keep one virtual contract."
+        }
+      },
+      {
+        "symbol": "P:sc.a(ILjava/awt/Graphics;II)V#2",
+        "before": null,
+        "after": {
+          "symbol": "P:sc.a(ILjava/awt/Graphics;II)V#2",
+          "originalName": "param2",
+          "to": "drawX",
+          "evidence": "sc/ve/bf a(ILjava/awt/Graphics;II)V draws the owned image at x=param2, y=param0 using the supplied Graphics. bf first publishes pixels and uses itself as image observer; ve uses its component and clears it for a nonzero guard. Both overrides keep one virtual contract."
+        }
+      },
+      {
+        "symbol": "P:sc.a(ILjava/awt/Graphics;II)V#3",
+        "before": null,
+        "after": {
+          "symbol": "P:sc.a(ILjava/awt/Graphics;II)V#3",
+          "originalName": "param3",
+          "to": "methodGuard",
+          "evidence": "sc/ve/bf a(ILjava/awt/Graphics;II)V draws the owned image at x=param2, y=param0 using the supplied Graphics. bf first publishes pixels and uses itself as image observer; ve uses its component and clears it for a nonzero guard. Both overrides keep one virtual contract."
+        }
+      },
+      {
+        "symbol": "P:ve.a(ILjava/awt/Component;IB)V#0",
+        "before": null,
+        "after": {
+          "symbol": "P:ve.a(ILjava/awt/Component;IB)V#0",
+          "originalName": "param0",
+          "to": "height",
+          "evidence": "sc/ve/bf a(ILjava/awt/Component;IB)V takes height, component, width and a byte guard. ve creates a BufferedImage sharing the integer pixel array; bf asks the component for an ImageProducer image, publishes/prepares it three times, then installs the target. Width/height order, extra pixel allocation, guard effects and exceptions are unchanged."
+        }
+      },
+      {
+        "symbol": "P:ve.a(ILjava/awt/Component;IB)V#1",
+        "before": null,
+        "after": {
+          "symbol": "P:ve.a(ILjava/awt/Component;IB)V#1",
+          "originalName": "param1",
+          "to": "component",
+          "evidence": "sc/ve/bf a(ILjava/awt/Component;IB)V takes height, component, width and a byte guard. ve creates a BufferedImage sharing the integer pixel array; bf asks the component for an ImageProducer image, publishes/prepares it three times, then installs the target. Width/height order, extra pixel allocation, guard effects and exceptions are unchanged."
+        }
+      },
+      {
+        "symbol": "P:ve.a(ILjava/awt/Component;IB)V#2",
+        "before": null,
+        "after": {
+          "symbol": "P:ve.a(ILjava/awt/Component;IB)V#2",
+          "originalName": "param2",
+          "to": "width",
+          "evidence": "sc/ve/bf a(ILjava/awt/Component;IB)V takes height, component, width and a byte guard. ve creates a BufferedImage sharing the integer pixel array; bf asks the component for an ImageProducer image, publishes/prepares it three times, then installs the target. Width/height order, extra pixel allocation, guard effects and exceptions are unchanged."
+        }
+      },
+      {
+        "symbol": "P:ve.a(ILjava/awt/Component;IB)V#3",
+        "before": null,
+        "after": {
+          "symbol": "P:ve.a(ILjava/awt/Component;IB)V#3",
+          "originalName": "param3",
+          "to": "methodGuard",
+          "evidence": "sc/ve/bf a(ILjava/awt/Component;IB)V takes height, component, width and a byte guard. ve creates a BufferedImage sharing the integer pixel array; bf asks the component for an ImageProducer image, publishes/prepares it three times, then installs the target. Width/height order, extra pixel allocation, guard effects and exceptions are unchanged."
+        }
+      },
+      {
+        "symbol": "P:ve.a(ILjava/awt/Graphics;II)V#0",
+        "before": null,
+        "after": {
+          "symbol": "P:ve.a(ILjava/awt/Graphics;II)V#0",
+          "originalName": "param0",
+          "to": "drawY",
+          "evidence": "sc/ve/bf a(ILjava/awt/Graphics;II)V draws the owned image at x=param2, y=param0 using the supplied Graphics. bf first publishes pixels and uses itself as image observer; ve uses its component and clears it for a nonzero guard. Both overrides keep one virtual contract."
+        }
+      },
+      {
+        "symbol": "P:ve.a(ILjava/awt/Graphics;II)V#1",
+        "before": null,
+        "after": {
+          "symbol": "P:ve.a(ILjava/awt/Graphics;II)V#1",
+          "originalName": "param1",
+          "to": "graphics",
+          "evidence": "sc/ve/bf a(ILjava/awt/Graphics;II)V draws the owned image at x=param2, y=param0 using the supplied Graphics. bf first publishes pixels and uses itself as image observer; ve uses its component and clears it for a nonzero guard. Both overrides keep one virtual contract."
+        }
+      },
+      {
+        "symbol": "P:ve.a(ILjava/awt/Graphics;II)V#2",
+        "before": null,
+        "after": {
+          "symbol": "P:ve.a(ILjava/awt/Graphics;II)V#2",
+          "originalName": "param2",
+          "to": "drawX",
+          "evidence": "sc/ve/bf a(ILjava/awt/Graphics;II)V draws the owned image at x=param2, y=param0 using the supplied Graphics. bf first publishes pixels and uses itself as image observer; ve uses its component and clears it for a nonzero guard. Both overrides keep one virtual contract."
+        }
+      },
+      {
+        "symbol": "P:ve.a(ILjava/awt/Graphics;II)V#3",
+        "before": null,
+        "after": {
+          "symbol": "P:ve.a(ILjava/awt/Graphics;II)V#3",
+          "originalName": "param3",
+          "to": "methodGuard",
+          "evidence": "sc/ve/bf a(ILjava/awt/Graphics;II)V draws the owned image at x=param2, y=param0 using the supplied Graphics. bf first publishes pixels and uses itself as image observer; ve uses its component and clears it for a nonzero guard. Both overrides keep one virtual contract."
         }
       }
     ],
@@ -18253,6 +19931,10 @@
       {
         "file": "ba.java",
         "sha256": "0dcb84088a1d87b3c6738a1eed50fad23ce514dc7be905608823dbe1e50f7c7b"
+      },
+      {
+        "file": "bf.java",
+        "sha256": "4ffa8ce69dfcc6abbd0deb58b31e52e96b41702bd9b44a6c1cc305f4b0ea6d1a"
       },
       {
         "file": "bg.java",
@@ -18357,6 +20039,10 @@
       {
         "file": "fi.java",
         "sha256": "21962d86d7ebac395b55887bfb2e1a4ec109e6bd28ad193fbd8c86cfd38421e3"
+      },
+      {
+        "file": "fk.java",
+        "sha256": "fb27302800a2cf04bc0b8cc4984f061058e4338bf1e68bd323f34aef805d5694"
       },
       {
         "file": "fl.java",
@@ -18735,6 +20421,10 @@
         "sha256": "8c8ee0834f6418495c95da369506e0afbb2f22b737a0b6800fa670d4a8fd1985"
       },
       {
+        "file": "sh.java",
+        "sha256": "f1c4ab359c5f1ad898becfcfb6ca29793b441f2a46756ba48e77d69ef9a12d83"
+      },
+      {
         "file": "sl.java",
         "sha256": "cdd052d1df9a290683615097017632d4de1ed93f395e7a19dbdcaeb80ff4f4b0"
       },
@@ -18813,6 +20503,10 @@
       {
         "file": "vd.java",
         "sha256": "8d9e5762964ed9d745284c0a315ecc3e161b1fa332a2fbb147c24440dba72a3c"
+      },
+      {
+        "file": "ve.java",
+        "sha256": "1cfc104bd63705d270fc78986d550e98db4d4e26d1d2bb00b3e5238816234b28"
       },
       {
         "file": "vf.java",
@@ -21143,7 +22837,7 @@
       "sourceDeclarations": 19558,
       "bindingsCompared": 138558,
       "overrideRelationships": 388,
-      "identifierEdits": 30216,
+      "identifierEdits": 30922,
       "dictionaryRestorationFiles": 303,
       "wholeGameEquivalenceVerified": false,
       "nativeMatchingScenarios": 708,
@@ -21174,7 +22868,8 @@
         "Input naming follows actual AWT callbacks, separate state/event queues, frame snapshots and consumers. The2184-case native input matrix checks controlled key-map translations, queue wrap/full/reset behavior, typed-character payloads, focus loss, pointer callbacks and snapshot consumption. Constructor-rejected character sentinels are injected via setKeyChar; callbacks run sequentially on a headless Canvas. Real concurrent AWT delivery, browser key mappings, device timing and full session input/rendering remain unverified.",
         "The11227-case collision/spawn matrix independently checks6000 cropped/nonzero overlap layouts,300 board wrapper checks,100 contact wrapper checks,4800 pointer spawns and27 steering cases. Normal raster buffers and moderate integer origins are used; malformed buffers and integer-coordinate overflow remain unverified. Pointer spawns use finite integer positions and ordinary/quarter/arbitrary/NaN board angles, controlled sprite arrays, constructor-free sessions and pool sizes0/1/2. Runtime graphics loading, gf collision rendering, whole moving-contact production, extreme quota loops and full gameplay remain unverified. Generated argument carriers and shared joins remain explicit.",
         "Pass51 resolves complete incoming copies to a fixed point only when all sources become one same-type allocator carrier. Effects,incomplete edges,conflicting values,self references and cycles retain copies. Blank-line cleanup runs after partitioning/recovery and preserves literal/comment bytes. Packing accounts for rewritten return stores. No new live-game or phone coverage is claimed.",
-        "Pass52 fixes demonstrated diagnostic-string corruption using complete lexical/scope checks and identifier-token-only aliases. Qualified generic calls are explicit; invalid or unsupported syntax retains carriers. Primitive joins require identical proven types, final Boolean-promoted declarations and no inline shadowing. Floating negations, effects and exception/monitor scopes remain. Full URL services, assets, gameplay and browser/phone performance remain unverified."
+        "Pass52 fixes demonstrated diagnostic-string corruption using complete lexical/scope checks and identifier-token-only aliases. Qualified generic calls are explicit; invalid or unsupported syntax retains carriers. Primitive joins require identical proven types, final Boolean-promoted declarations and no inline shadowing. Floating negations, effects and exception/monitor scopes remain. Full URL services, assets, gameplay and browser/phone performance remain unverified.",
+        "Pass53 names the AWT raster-buffer hierarchy, virtual initialize/drawImage family, raster factory and all nine-slice panel parameters/locals. Literal Class.forName(\"ve\") and its class spelling remain unchanged. Java API callback method spellings and all previous complete rules/pins remain. Existing nine-slice native2592 cases cover sprite construction; panel drawing, real AWT presentation and full game/device performance are source-audited rather than newly executed."
       ],
       "checks": {
         "ruleBuilderTests": 9,
@@ -21210,15 +22905,15 @@
         641
       ],
       "nativeBoundaryIndependentOracle": true,
-      "guardedNamingRules": 2994,
-      "namedLocalDeclarations": 1271,
+      "guardedNamingRules": 3112,
+      "namedLocalDeclarations": 1321,
       "nonselectorDeclarationsPreserved": 19549,
       "generatedSelectorsBefore": 265,
       "generatedSelectorsAfter": 9,
       "generatedSelectorsRemoved": 256,
-      "rawSourceLinesRemoved": 50,
+      "rawSourceLinesRemoved": 0,
       "returnReconstructionChangedJavaFiles": 181,
-      "localOrdinalMigrations": 14,
+      "localOrdinalMigrations": 0,
       "obsoleteNamedSelectorsRemoved": 1,
       "genericRegionContractTestGroups": 36,
       "genericExceptionExitTestGroups": 8,
@@ -21231,7 +22926,7 @@
       "elseWrappersRemoved": 2128,
       "genericEarlyExitTestGroups": 11,
       "nativeEmitterComparisons": 54549,
-      "sourceReferenceOccurrencesRemoved": 12,
+      "sourceReferenceOccurrencesRemoved": 0,
       "sourceReferenceOccurrencesAdded": 0,
       "nativeDifficultyFlagCases": 82944,
       "nativeDifficultyBoundsCases": 56,
@@ -21249,7 +22944,7 @@
       "typedAssignmentElseWrappersRemoved": 77,
       "nativeComparatorCases": 32768,
       "nativeComparatorTraceSha256": "9be228f7421970f2214c74e8890327f8592f706dc90ccd0d0933e6f2fbe0a604",
-      "referenceRemovalAttribution": "Pass52 folds12 same-primitive-type local/literal selections, removing12 destination-write references and adding none. All19558 declarations/spellings remain after14 guarded local ordinal migrations in d.run()V; all388 override rows remain. Twelve branches and a generic-call URL-validation loop remove50 source lines across8 files. Counts and native traces do not establish whole-game equivalence.",
+      "referenceRemovalAttribution": "Pass53 adds118 guarded semantic names, retaining raw source, generator pins, all19558 declarations, all138558 bindings and all388 override relationships. No source declaration/reference or local ordinal changes. Every previous2994 complete rule is unchanged. The ve binary name and Class.forName(\"ve\") literal remain unchanged; presentation methods and fields use named hierarchy contracts.",
       "genericBooleanCarrierTestGroups": 3,
       "localBooleanCarriersEliminated": 221,
       "localBooleanSnapshotsRetyped": 70,
@@ -21265,28 +22960,28 @@
       "difficultyMethodLinesBefore": 38,
       "difficultyMethodLinesAfter": 38,
       "allGuardedNamesUnchanged": false,
-      "ruleChangesInCurrentPass": 14,
+      "ruleChangesInCurrentPass": 118,
       "genericNestedContinuationTestGroups": 2,
       "nativeNestedContinuationComparisons": 2520,
       "nestedContinuationChangedJavaFiles": 7,
-      "generatedLocalOrdinalsReordered": 14,
+      "generatedLocalOrdinalsReordered": 0,
       "allDeclarationsPreservedAfterOriginalSpellingNormalization": true,
       "generatedBlockLabelsInGeoblox": 0,
       "genericIntegralTailGuardTestGroups": 2,
       "nativeIntegralTailGuardComparisons": 35280,
       "integralTailGuardChangedJavaFiles": 4,
-      "allDeclarationIdentitiesAndSpellingsUnchanged": false,
+      "allDeclarationIdentitiesAndSpellingsUnchanged": true,
       "cachedJvmOperandsNotReevaluated": true,
       "ambiguousPredicateComplementsRefused": true,
       "difficultyCategoryAndRecursiveAdvanceClonesEliminated": true,
       "allPriorGuardedNamesPreserved": true,
-      "namingRulesAddedInCurrentPass": 0,
-      "sourceInputChangedInCurrentPass": true,
+      "namingRulesAddedInCurrentPass": 118,
+      "sourceInputChangedInCurrentPass": false,
       "namedVisualAssetFieldsAdded": 59,
       "namedAssetLoadingMethodsAdded": 6,
       "namedAssetLoadingParametersAdded": 24,
       "namedAssetPreparationAndLookupLocalsAdded": 28,
-      "identifierEditsAddedInCurrentPass": 0,
+      "identifierEditsAddedInCurrentPass": 706,
       "lastStructuralPassVersion": 52,
       "namingRulesRefinedInCurrentPass": 0,
       "allUnaffectedPriorRulesPreserved": true,
@@ -21320,85 +23015,14 @@
       "nativeCacheWriteTraceSha256": "e5d3ac6ab42a61da22e44337bc05b64e89e0360d4d51a94256fff69d3a37081d",
       "protectedTerminalArmNativeComparisons": 2240,
       "protectedTerminalArmTestGroups": 3,
-      "sourceDeclarationOrdinalMigrations": [
-        {
-          "before": "L:d.run()V#0",
-          "after": "L:d.run()V#1",
-          "originalName": "stackIn_76_0"
-        },
-        {
-          "before": "L:d.run()V#1",
-          "after": "L:d.run()V#2",
-          "originalName": "decompiledCaughtException"
-        },
-        {
-          "before": "L:d.run()V#10",
-          "after": "L:d.run()V#11",
-          "originalName": "var3_ref3"
-        },
-        {
-          "before": "L:d.run()V#11",
-          "after": "L:d.run()V#12",
-          "originalName": "var4_int"
-        },
-        {
-          "before": "L:d.run()V#12",
-          "after": "L:d.run()V#13",
-          "originalName": "var4"
-        },
-        {
-          "before": "L:d.run()V#13",
-          "after": "L:d.run()V#0",
-          "originalName": "var5"
-        },
-        {
-          "before": "L:d.run()V#2",
-          "after": "L:d.run()V#3",
-          "originalName": "var2"
-        },
-        {
-          "before": "L:d.run()V#3",
-          "after": "L:d.run()V#4",
-          "originalName": "var2_int"
-        },
-        {
-          "before": "L:d.run()V#4",
-          "after": "L:d.run()V#5",
-          "originalName": "var2_ref"
-        },
-        {
-          "before": "L:d.run()V#5",
-          "after": "L:d.run()V#6",
-          "originalName": "var2_ref2"
-        },
-        {
-          "before": "L:d.run()V#6",
-          "after": "L:d.run()V#7",
-          "originalName": "var3"
-        },
-        {
-          "before": "L:d.run()V#7",
-          "after": "L:d.run()V#8",
-          "originalName": "var3_ref"
-        },
-        {
-          "before": "L:d.run()V#8",
-          "after": "L:d.run()V#9",
-          "originalName": "var3_int"
-        },
-        {
-          "before": "L:d.run()V#9",
-          "after": "L:d.run()V#10",
-          "originalName": "var3_ref2"
-        }
-      ],
+      "sourceDeclarationOrdinalMigrations": [],
       "nativeShutdownCases": 84,
       "nativeShutdownTraceSha256": "2fec6ee86681993c79d39ef1e57026f31fd9b0a87b7d7f94a5bddf5af83d6335",
       "genericPlainBlockTailTestGroups": 2,
       "nativePlainBlockTailComparisons": 432,
       "plainBlockTailChangedJavaFiles": 7,
       "retainedNewTailLabelPrefixTokenBudget": 512,
-      "identifierEditsRemovedInCurrentPass": 3,
+      "identifierEditsRemovedInCurrentPass": 0,
       "namedSocketAndTaskRulesAdded": {
         "C": 3,
         "F": 24,
@@ -21445,7 +23069,7 @@
       "allEntityConstructorAndMotionInitializationParametersAndLocalsNamed": true,
       "namingRulesRemovedInCurrentPass": 0,
       "allSurvivingGuardedNamesPreserved": true,
-      "guardedLocalOrdinalMigrations": 14,
+      "guardedLocalOrdinalMigrations": 0,
       "receiverLocalsRemoved": 75,
       "receiverStoreReferencesRemoved": 113,
       "receiverDeclarationTypeReferencesRemoved": 75,
@@ -21499,55 +23123,18 @@
       "primitiveValueJoinChangedJavaFiles": 8,
       "equivalentStackJoinHistoricalPassVersion": 51,
       "literalNamespaceCorruptionFixed": true,
-      "genericInvocationTypeArgumentsPreserved": true
-    },
-    "sourceChange": {
-      "before": {
-        "source": {
-          "repository": "Kreijstal/funorb-decompiled",
-          "commit": "c7f41a649e135a12a85ac26c7aa4bc83a46b4372",
-          "subdirectory": "games/geoblox"
-        },
-        "generators": {
-          "dekoblokoWork": {
-            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
-            "trackedClean": true
-          },
-          "javaTools": {
-            "commit": "66a3906a001061462f5bc154fc3fd119f2dcb60c",
-            "trackedClean": true,
-            "sourceArchive": {
-              "sha256": "c75448fa88956a0653c2120eaebc737cbbfd2168656b13a1620ff238d290b6ca",
-              "reproduce": "git archive --format=tar 66a3906a001061462f5bc154fc3fd119f2dcb60c | sha256sum",
-              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
-            }
-          }
-        },
-        "inputTreeSha256": "c8eb52af8caa07a9151dfca4c412f4b2fac7ef15e6e260c9413bc0708d83775a"
+      "genericInvocationTypeArgumentsPreserved": true,
+      "primitiveValueJoinHistoricalPassVersion": 52,
+      "namedRasterPresentationRulesAdded": {
+        "C": 2,
+        "F": 9,
+        "M": 10,
+        "P": 47,
+        "L": 50
       },
-      "after": {
-        "source": {
-          "repository": "Kreijstal/funorb-decompiled",
-          "commit": "2fc0a44e10f161f82554e2652b0f4e025c997c34",
-          "subdirectory": "games/geoblox"
-        },
-        "generators": {
-          "dekoblokoWork": {
-            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
-            "trackedClean": true
-          },
-          "javaTools": {
-            "commit": "57969c34c9be16cd7dfaaa691774b95dbeaa2c5b",
-            "trackedClean": true,
-            "sourceArchive": {
-              "sha256": "8c17ad8f1c1eedc51941af4d35064fed2c7b1f8bb73a8c4909a2744fb923e1ce",
-              "reproduce": "git archive --format=tar 57969c34c9be16cd7dfaaa691774b95dbeaa2c5b | sha256sum",
-              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
-            }
-          }
-        },
-        "inputTreeSha256": "39be3539b43d7acc9540acca49e7b6378cdb233908092706646df4c2cdc6a8fe"
-      }
+      "allNineSlicePanelParametersAndLocalsNamed": true,
+      "allRasterInitializationAndDrawParametersAndLocalsNamed": true,
+      "reflectivelyLoadedRasterImplementationNamePreserved": true
     }
   }
 }

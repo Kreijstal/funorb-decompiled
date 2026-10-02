@@ -3,43 +3,43 @@
  */
 import java.util.*;
 
-final class ve extends sc {
-    private java.awt.Component field_g;
+final class ve extends AwtRasterBuffer {
+    private java.awt.Component imageObserverComponent;
 
-    final void a(int param0, java.awt.Component param1, int param2, byte param3) {
-        java.awt.image.DataBufferInt var5 = null;
-        java.awt.image.DirectColorModel var6 = null;
-        java.awt.image.WritableRaster var7 = null;
-        this.field_a = param2;
-        if (param3 > 116) {
-            this.field_c = param0;
-            this.field_d = new int[1 + param2 * param0];
-            var5 = new java.awt.image.DataBufferInt(this.field_d, this.field_d.length);
-            var6 = new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
-            var7 = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) ((Object) var6)).createCompatibleSampleModel(this.field_a, this.field_c), (java.awt.image.DataBuffer) ((Object) var5), (java.awt.Point) null);
-            this.field_e = (java.awt.Image) ((Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) ((Object) var6), var7, false, new Hashtable()));
-            this.field_g = param1;
-            this.a(255);
+    final void initialize(int height, java.awt.Component component, int width, byte methodGuard) {
+        java.awt.image.DataBufferInt pixelDataBuffer = null;
+        java.awt.image.DirectColorModel rgbColorModel = null;
+        java.awt.image.WritableRaster imageRaster = null;
+        this.width = width;
+        if (methodGuard > 116) {
+            this.height = height;
+            this.pixels = new int[1 + width * height];
+            pixelDataBuffer = new java.awt.image.DataBufferInt(this.pixels, this.pixels.length);
+            rgbColorModel = new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
+            imageRaster = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) ((Object) rgbColorModel)).createCompatibleSampleModel(this.width, this.height), (java.awt.image.DataBuffer) ((Object) pixelDataBuffer), (java.awt.Point) null);
+            this.image = (java.awt.Image) ((Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) ((Object) rgbColorModel), imageRaster, false, new Hashtable()));
+            this.imageObserverComponent = component;
+            this.setAsRasterTarget(255);
             return;
         }
-        this.field_g = (java.awt.Component) null;
-        this.field_c = param0;
-        this.field_d = new int[1 + param2 * param0];
-        var5 = new java.awt.image.DataBufferInt(this.field_d, this.field_d.length);
-        var6 = new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
-        var7 = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) ((Object) var6)).createCompatibleSampleModel(this.field_a, this.field_c), (java.awt.image.DataBuffer) ((Object) var5), (java.awt.Point) null);
-        this.field_e = (java.awt.Image) ((Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) ((Object) var6), var7, false, new Hashtable()));
-        this.field_g = param1;
-        this.a(255);
+        this.imageObserverComponent = (java.awt.Component) null;
+        this.height = height;
+        this.pixels = new int[1 + width * height];
+        pixelDataBuffer = new java.awt.image.DataBufferInt(this.pixels, this.pixels.length);
+        rgbColorModel = new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
+        imageRaster = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) ((Object) rgbColorModel)).createCompatibleSampleModel(this.width, this.height), (java.awt.image.DataBuffer) ((Object) pixelDataBuffer), (java.awt.Point) null);
+        this.image = (java.awt.Image) ((Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) ((Object) rgbColorModel), imageRaster, false, new Hashtable()));
+        this.imageObserverComponent = component;
+        this.setAsRasterTarget(255);
     }
 
-    final void a(int param0, java.awt.Graphics param1, int param2, int param3) {
-        if (param3 == 0) {
-            param1.drawImage(this.field_e, param2, param0, (java.awt.image.ImageObserver) ((Object) this.field_g));
+    final void drawImage(int drawY, java.awt.Graphics graphics, int drawX, int methodGuard) {
+        if (methodGuard == 0) {
+            graphics.drawImage(this.image, drawX, drawY, (java.awt.image.ImageObserver) ((Object) this.imageObserverComponent));
             return;
         }
-        this.field_g = (java.awt.Component) null;
-        param1.drawImage(this.field_e, param2, param0, (java.awt.image.ImageObserver) ((Object) this.field_g));
+        this.imageObserverComponent = (java.awt.Component) null;
+        graphics.drawImage(this.image, drawX, drawY, (java.awt.image.ImageObserver) ((Object) this.imageObserverComponent));
     }
 
     public ve() {

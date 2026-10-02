@@ -65,7 +65,7 @@ final class i {
         try {
           try {
             var4 = param2.getGraphics();
-            sh.field_y.a(param3, var4, param0, 0);
+            sh.mainRasterBuffer.drawImage(param3, var4, param0, 0);
             var5 = 56 % ((-32 - param1) / 59);
             var4.dispose();
           } catch (java.lang.Exception decompiledCaughtParameter0) {

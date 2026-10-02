@@ -108,166 +108,166 @@ final class ma extends IntrusiveNode {
         return fa.releasesPerTheme > fj.field_m ? true : false;
     }
 
-    final static void a(int param0, int param1, int param2, byte param3, int param4, Sprite[] param5) {
-        int var21 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_13_0 = 0;
-        int stackIn_18_0 = 0;
-        int stackIn_21_0 = 0;
-        RuntimeException stackIn_77_0 = null;
-        StringBuilder stackIn_77_1 = null;
-        String stackIn_78_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var6_int = 0;
-        RuntimeException var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var22 = 0;
-        var22 = Geoblox.field_C;
+    final static void drawNineSlicePanel(int panelTop, int panelLeft, int panelHeight, byte methodGuard, int panelWidth, Sprite[] nineSliceSprites) {
+        int centerTileX = 0;
+        int selectedLeftBorderWidth = 0;
+        int selectedRightBorderWidth = 0;
+        int selectedTopBorderHeight = 0;
+        int selectedBottomBorderHeight = 0;
+        RuntimeException panelFailureBeforeSpriteDescription = null;
+        StringBuilder panelMessagePrefix = null;
+        String spriteArrayArgumentDescription = null;
+        RuntimeException caughtPanelFailure = null;
+        int leftBorderWidth = 0;
+        RuntimeException panelFailureForContext = null;
+        int rightBorderWidth = 0;
+        int topBorderHeight = 0;
+        int bottomBorderHeight = 0;
+        int panelRight = 0;
+        int panelBottom = 0;
+        int centerTileLeft = 0;
+        int centerTileRight = 0;
+        int centerTileTop = 0;
+        int centerTileBottom = 0;
+        int centerClipLeft = 0;
+        int centerClipRight = 0;
+        int centerClipTop = 0;
+        int centerClipBottom = 0;
+        int edgeTileCoordinateOrCenterY = 0;
+        int clientControlFlowGuardSnapshot = 0;
+        clientControlFlowGuardSnapshot = Geoblox.field_C;
         try {
-          if (param5 == null) {
+          if (nineSliceSprites == null) {
             return;
           }
-          if (param4 > 0) {
-            if (0 < param2) {
-              if (param5[3] == null) {
-                stackIn_10_0 = 0;
+          if (panelWidth > 0) {
+            if (0 < panelHeight) {
+              if (nineSliceSprites[3] == null) {
+                selectedLeftBorderWidth = 0;
               } else {
-                stackIn_10_0 = param5[3].fullWidth;
+                selectedLeftBorderWidth = nineSliceSprites[3].fullWidth;
               }
-              var6_int = stackIn_10_0;
-              if (null == param5[5]) {
-                stackIn_13_0 = 0;
+              leftBorderWidth = selectedLeftBorderWidth;
+              if (null == nineSliceSprites[5]) {
+                selectedRightBorderWidth = 0;
               } else {
-                stackIn_13_0 = param5[5].fullWidth;
+                selectedRightBorderWidth = nineSliceSprites[5].fullWidth;
               }
-              var7 = stackIn_13_0;
-              if (param3 != -92) {
+              rightBorderWidth = selectedRightBorderWidth;
+              if (methodGuard != -92) {
                 return;
               }
               {
-                if (null != param5[1]) {
-                  stackIn_18_0 = param5[1].fullHeight;
+                if (null != nineSliceSprites[1]) {
+                  selectedTopBorderHeight = nineSliceSprites[1].fullHeight;
                 } else {
-                  stackIn_18_0 = 0;
+                  selectedTopBorderHeight = 0;
                 }
-                var8 = stackIn_18_0;
-                if (null != param5[7]) {
-                  stackIn_21_0 = param5[7].fullHeight;
+                topBorderHeight = selectedTopBorderHeight;
+                if (null != nineSliceSprites[7]) {
+                  selectedBottomBorderHeight = nineSliceSprites[7].fullHeight;
                 } else {
-                  stackIn_21_0 = 0;
+                  selectedBottomBorderHeight = 0;
                 }
-                var9 = stackIn_21_0;
-                var10 = param4 + param1;
-                var11 = param0 + param2;
-                var12 = param1 + var6_int;
-                var13 = var10 - var7;
-                var14 = param0 + var8;
-                var15 = -var9 + var11;
-                var16 = var12;
-                var17 = var13;
-                if (var16 > var17) {
-                  var17 = var6_int * param4 / (var6_int + var7) + param1;
-                  var16 = var6_int * param4 / (var6_int + var7) + param1;
+                bottomBorderHeight = selectedBottomBorderHeight;
+                panelRight = panelWidth + panelLeft;
+                panelBottom = panelTop + panelHeight;
+                centerTileLeft = panelLeft + leftBorderWidth;
+                centerTileRight = panelRight - rightBorderWidth;
+                centerTileTop = panelTop + topBorderHeight;
+                centerTileBottom = -bottomBorderHeight + panelBottom;
+                centerClipLeft = centerTileLeft;
+                centerClipRight = centerTileRight;
+                if (centerClipLeft > centerClipRight) {
+                  centerClipRight = leftBorderWidth * panelWidth / (leftBorderWidth + rightBorderWidth) + panelLeft;
+                  centerClipLeft = leftBorderWidth * panelWidth / (leftBorderWidth + rightBorderWidth) + panelLeft;
                 }
-                var18 = var14;
-                var19 = var15;
-                SoftwareRasterizer.saveClip(hd.field_I);
-                if (var19 < var18) {
-                  var19 = param2 * var8 / (var8 + var9) + param0;
-                  var18 = param2 * var8 / (var8 + var9) + param0;
+                centerClipTop = centerTileTop;
+                centerClipBottom = centerTileBottom;
+                SoftwareRasterizer.saveClip(hd.nineSliceSavedClip);
+                if (centerClipBottom < centerClipTop) {
+                  centerClipBottom = panelHeight * topBorderHeight / (topBorderHeight + bottomBorderHeight) + panelTop;
+                  centerClipTop = panelHeight * topBorderHeight / (topBorderHeight + bottomBorderHeight) + panelTop;
                 }
-                if (null != param5[0]) {
-                  SoftwareRasterizer.intersectClip(param1, param0, var16, var18);
-                  param5[0].draw(param1, param0);
-                  SoftwareRasterizer.restoreClip(hd.field_I);
+                if (null != nineSliceSprites[0]) {
+                  SoftwareRasterizer.intersectClip(panelLeft, panelTop, centerClipLeft, centerClipTop);
+                  nineSliceSprites[0].draw(panelLeft, panelTop);
+                  SoftwareRasterizer.restoreClip(hd.nineSliceSavedClip);
                 }
-                if (param5[2] != null) {
-                  SoftwareRasterizer.intersectClip(var17, param0, var10, var18);
-                  param5[2].draw(var13, param0);
-                  SoftwareRasterizer.restoreClip(hd.field_I);
+                if (nineSliceSprites[2] != null) {
+                  SoftwareRasterizer.intersectClip(centerClipRight, panelTop, panelRight, centerClipTop);
+                  nineSliceSprites[2].draw(centerTileRight, panelTop);
+                  SoftwareRasterizer.restoreClip(hd.nineSliceSavedClip);
                 }
-                if (null != param5[6]) {
-                  SoftwareRasterizer.intersectClip(param1, var19, var16, var11);
-                  param5[6].draw(param1, var15);
-                  SoftwareRasterizer.restoreClip(hd.field_I);
+                if (null != nineSliceSprites[6]) {
+                  SoftwareRasterizer.intersectClip(panelLeft, centerClipBottom, centerClipLeft, panelBottom);
+                  nineSliceSprites[6].draw(panelLeft, centerTileBottom);
+                  SoftwareRasterizer.restoreClip(hd.nineSliceSavedClip);
                 }
-                if (null != param5[8]) {
-                  SoftwareRasterizer.intersectClip(var17, var19, var10, var11);
-                  param5[8].draw(var13, var15);
-                  SoftwareRasterizer.restoreClip(hd.field_I);
+                if (null != nineSliceSprites[8]) {
+                  SoftwareRasterizer.intersectClip(centerClipRight, centerClipBottom, panelRight, panelBottom);
+                  nineSliceSprites[8].draw(centerTileRight, centerTileBottom);
+                  SoftwareRasterizer.restoreClip(hd.nineSliceSavedClip);
                 }
                 L11: {
-                  if (null != param5[1]) {
-                    if (param5[1].fullWidth != 0) {
-                      SoftwareRasterizer.intersectClip(var16, param0, var17, var18);
-                      for (var20 = var12; var13 > var20; var20 = var20 + param5[1].fullWidth) {
-                        param5[1].draw(var20, param0);
+                  if (null != nineSliceSprites[1]) {
+                    if (nineSliceSprites[1].fullWidth != 0) {
+                      SoftwareRasterizer.intersectClip(centerClipLeft, panelTop, centerClipRight, centerClipTop);
+                      for (edgeTileCoordinateOrCenterY = centerTileLeft; centerTileRight > edgeTileCoordinateOrCenterY; edgeTileCoordinateOrCenterY = edgeTileCoordinateOrCenterY + nineSliceSprites[1].fullWidth) {
+                        nineSliceSprites[1].draw(edgeTileCoordinateOrCenterY, panelTop);
                       }
-                      SoftwareRasterizer.restoreClip(hd.field_I);
+                      SoftwareRasterizer.restoreClip(hd.nineSliceSavedClip);
                       break L11;
                     }
                   }
                 }
                 L13: {
-                  if (param5[7] != null) {
-                    if (0 != param5[7].fullWidth) {
-                      SoftwareRasterizer.intersectClip(var16, var19, var17, var11);
-                      for (var20 = var12; var20 < var13; var20 = var20 + param5[7].fullWidth) {
-                        param5[7].draw(var20, var15);
+                  if (nineSliceSprites[7] != null) {
+                    if (0 != nineSliceSprites[7].fullWidth) {
+                      SoftwareRasterizer.intersectClip(centerClipLeft, centerClipBottom, centerClipRight, panelBottom);
+                      for (edgeTileCoordinateOrCenterY = centerTileLeft; edgeTileCoordinateOrCenterY < centerTileRight; edgeTileCoordinateOrCenterY = edgeTileCoordinateOrCenterY + nineSliceSprites[7].fullWidth) {
+                        nineSliceSprites[7].draw(edgeTileCoordinateOrCenterY, centerTileBottom);
                       }
-                      SoftwareRasterizer.restoreClip(hd.field_I);
+                      SoftwareRasterizer.restoreClip(hd.nineSliceSavedClip);
                       break L13;
                     }
                   }
                 }
                 L15: {
-                  if (param5[3] != null) {
-                    if (0 != param5[3].fullHeight) {
-                      SoftwareRasterizer.intersectClip(param1, var18, var16, var19);
-                      for (var20 = var14; var15 > var20; var20 = var20 + param5[3].fullHeight) {
-                        param5[3].draw(param1, var20);
+                  if (nineSliceSprites[3] != null) {
+                    if (0 != nineSliceSprites[3].fullHeight) {
+                      SoftwareRasterizer.intersectClip(panelLeft, centerClipTop, centerClipLeft, centerClipBottom);
+                      for (edgeTileCoordinateOrCenterY = centerTileTop; centerTileBottom > edgeTileCoordinateOrCenterY; edgeTileCoordinateOrCenterY = edgeTileCoordinateOrCenterY + nineSliceSprites[3].fullHeight) {
+                        nineSliceSprites[3].draw(panelLeft, edgeTileCoordinateOrCenterY);
                       }
-                      SoftwareRasterizer.restoreClip(hd.field_I);
+                      SoftwareRasterizer.restoreClip(hd.nineSliceSavedClip);
                       break L15;
                     }
                   }
                 }
                 L17: {
-                  if (param5[5] != null) {
-                    if (param5[5].fullHeight != 0) {
-                      SoftwareRasterizer.intersectClip(var17, var18, var10, var19);
-                      for (var20 = var14; var20 < var15; var20 = var20 + param5[5].fullHeight) {
-                        param5[5].draw(var13, var20);
+                  if (nineSliceSprites[5] != null) {
+                    if (nineSliceSprites[5].fullHeight != 0) {
+                      SoftwareRasterizer.intersectClip(centerClipRight, centerClipTop, panelRight, centerClipBottom);
+                      for (edgeTileCoordinateOrCenterY = centerTileTop; edgeTileCoordinateOrCenterY < centerTileBottom; edgeTileCoordinateOrCenterY = edgeTileCoordinateOrCenterY + nineSliceSprites[5].fullHeight) {
+                        nineSliceSprites[5].draw(centerTileRight, edgeTileCoordinateOrCenterY);
                       }
-                      SoftwareRasterizer.restoreClip(hd.field_I);
+                      SoftwareRasterizer.restoreClip(hd.nineSliceSavedClip);
                       break L17;
                     }
                   }
                 }
                 L19: {
-                  if (param5[4] != null) {
-                    if (param5[4].fullWidth != 0) {
-                      if (0 != param5[4].fullHeight) {
-                        SoftwareRasterizer.intersectClip(var16, var18, var17, var19);
-                        for (var20 = var14; var15 > var20; var20 = var20 + param5[4].fullHeight) {
-                          for (var21 = var12; var21 < var13; var21 = var21 + param5[4].fullWidth) {
-                            param5[4].draw(var21, var20);
+                  if (nineSliceSprites[4] != null) {
+                    if (nineSliceSprites[4].fullWidth != 0) {
+                      if (0 != nineSliceSprites[4].fullHeight) {
+                        SoftwareRasterizer.intersectClip(centerClipLeft, centerClipTop, centerClipRight, centerClipBottom);
+                        for (edgeTileCoordinateOrCenterY = centerTileTop; centerTileBottom > edgeTileCoordinateOrCenterY; edgeTileCoordinateOrCenterY = edgeTileCoordinateOrCenterY + nineSliceSprites[4].fullHeight) {
+                          for (centerTileX = centerTileLeft; centerTileX < centerTileRight; centerTileX = centerTileX + nineSliceSprites[4].fullWidth) {
+                            nineSliceSprites[4].draw(centerTileX, edgeTileCoordinateOrCenterY);
                           }
                         }
-                        SoftwareRasterizer.restoreClip(hd.field_I);
+                        SoftwareRasterizer.restoreClip(hd.nineSliceSavedClip);
                         break L19;
                       }
                     }
@@ -278,17 +278,17 @@ final class ma extends IntrusiveNode {
             }
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_77_0 = (RuntimeException) (var6);
-          stackIn_77_1 = new StringBuilder().append("ma.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-          if (param5 == null) {
-            stackIn_78_2 = "null";
+        } catch (java.lang.RuntimeException panelDrawingFailure) {
+          caughtPanelFailure = panelDrawingFailure;
+          panelFailureForContext = caughtPanelFailure;
+          panelFailureBeforeSpriteDescription = (RuntimeException) (panelFailureForContext);
+          panelMessagePrefix = new StringBuilder().append("ma.B(").append(panelTop).append(',').append(panelLeft).append(',').append(panelHeight).append(',').append(methodGuard).append(',').append(panelWidth).append(',');
+          if (nineSliceSprites == null) {
+            spriteArrayArgumentDescription = "null";
           } else {
-            stackIn_78_2 = "{...}";
+            spriteArrayArgumentDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(')').toString());
+          throw t.a((Throwable) ((Object) panelFailureBeforeSpriteDescription), ((StringBuilder) (Object) panelMessagePrefix).append(spriteArrayArgumentDescription).append(')').toString());
         }
     }
 

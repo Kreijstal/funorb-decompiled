@@ -17,7 +17,7 @@ final class bd extends IOException {
         RuntimeException var1_ref = null;
         var4 = Geoblox.field_C;
         try {
-          sh.field_y.a(255);
+          sh.mainRasterBuffer.setAsRasterTarget(255);
           popup = (ScorePopup) ((Object) md.activeScorePopups.firstForIteration(0));
           if (param0 > -112) {
             return;

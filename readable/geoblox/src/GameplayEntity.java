@@ -52,7 +52,7 @@ final class GameplayEntity extends DualLinkNode {
               SoftwareRasterizer.clearFramebuffer();
               this.entitySprite.drawUnmasked(-this.entitySprite.fullWidth + vf.spriteScratchRaster.fullWidth >> 1, vf.spriteScratchRaster.fullHeight - this.entitySprite.fullHeight >> 1);
               k.a(0, 0, vf.spriteScratchRaster.fullWidth, -27085, vf.spriteScratchRaster.fullHeight);
-              sh.field_y.a(methodGuard + 16351);
+              sh.mainRasterBuffer.setAsRasterTarget(methodGuard + 16351);
               vf.spriteScratchRaster.rotateSmooth(vf.spriteScratchRaster.fullWidth << 3, vf.spriteScratchRaster.fullHeight << 3, rotatedEntityX << 4, rotatedEntityY << 4, (int)(65535.0 * ((double)(-el.gameplaySession.boardAngleRadians + this.spriteAngleRadians) / 6.283185307179586)), 4096);
               break L0;
             }
@@ -62,7 +62,7 @@ final class GameplayEntity extends DualLinkNode {
             SoftwareRasterizer.clearFramebuffer();
             this.entitySprite.drawGrayModulated(-this.entitySprite.fullWidth + vf.spriteScratchRaster.fullWidth >> 1, vf.spriteScratchRaster.fullHeight - this.entitySprite.fullHeight >> 1, this.interpolatedPaletteColor);
             k.a(0, 0, vf.spriteScratchRaster.fullWidth, -27085, vf.spriteScratchRaster.fullHeight);
-            sh.field_y.a(methodGuard + 16351);
+            sh.mainRasterBuffer.setAsRasterTarget(methodGuard + 16351);
             vf.spriteScratchRaster.rotateSmooth(vf.spriteScratchRaster.fullWidth << 3, vf.spriteScratchRaster.fullHeight << 3, rotatedEntityX << 4, rotatedEntityY << 4, (int)(65535.0 * ((double)(-el.gameplaySession.boardAngleRadians + this.spriteAngleRadians) / 6.283185307179586)), 4096);
           } else {
             this.entitySprite.draw(-(this.entitySprite.fullWidth >> 1) + rotatedEntityX, rotatedEntityY - (this.entitySprite.fullHeight >> 1));
@@ -76,10 +76,10 @@ final class GameplayEntity extends DualLinkNode {
         this.entitySprite.rotateSmooth(this.entitySprite.fullWidth << 3, this.entitySprite.fullHeight << 3, vf.spriteScratchRaster.fullWidth << 3, vf.spriteScratchRaster.fullHeight << 3, (int)(65535.0 * ((double)this.spriteAngleRadians / 6.283185307179586)), 4096);
         bk.boardOwnershipRaster.setAsRasterTarget();
         vf.spriteScratchRaster.drawSilhouette(-(vf.spriteScratchRaster.fullWidth / 2) + (int)this.positionX, (int)this.positionY - vf.spriteScratchRaster.fullHeight / verticalDivisor, this.entityId + 1);
-        sh.field_y.a(255);
+        sh.mainRasterBuffer.setAsRasterTarget(255);
         bk.boardOwnershipRaster.setAsRasterTarget();
         i.avatarMaskRaster.drawSilhouette(320 + el.gameplaySession.boardMaskOffsetX, 240 + el.gameplaySession.boardMaskOffsetY, 16777215);
-        sh.field_y.a(verticalDivisor + 253);
+        sh.mainRasterBuffer.setAsRasterTarget(verticalDivisor + 253);
     }
 
     final void drawFadingEntity(int methodGuard) {
@@ -122,7 +122,7 @@ final class GameplayEntity extends DualLinkNode {
           }
         }
         sentinelDivisionGuard = 2 % ((-23 - methodGuard) / 60);
-        sh.field_y.a(255);
+        sh.mainRasterBuffer.setAsRasterTarget(255);
         entityDrawX = rotatedEntityX - (vf.spriteScratchRaster.fullWidth >> 1);
         entityDrawY = rotatedEntityY - (vf.spriteScratchRaster.fullHeight >> 1);
         fadeOpacity = (int)(0.5 + Math.sin((double)(this.remainingLifetimeTicks - this.initialLifetimeTicks + this.initialLifetimeTicks >> 4)) * (double)(100 * (this.initialLifetimeTicks - this.remainingLifetimeTicks)) / (double)this.initialLifetimeTicks) - (-(100 * (this.initialLifetimeTicks - this.remainingLifetimeTicks) / this.initialLifetimeTicks) - 56);
@@ -295,7 +295,7 @@ final class GameplayEntity extends DualLinkNode {
         vf.spriteScratchRaster.addOutline(this.entityId + 1);
         SecondaryDeque.contactProbeRaster.setAsRasterTarget();
         vf.spriteScratchRaster.drawSilhouette(-SecondaryDeque.contactProbeOffsetX - (vf.spriteScratchRaster.fullWidth >> 1) + ng.rotatedEntityScreenX, -(vf.spriteScratchRaster.fullHeight >> 1) + (td.rotatedEntityScreenY - SecondaryDeque.contactProbeOffsetY), 1 + this.entityId);
-        sh.field_y.a(255);
+        sh.mainRasterBuffer.setAsRasterTarget(255);
     }
 
     final void integrateEntityVelocity(byte methodGuard) {

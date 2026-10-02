@@ -180,7 +180,7 @@ final class ci {
         try {
           if (ih.field_c.a(-87)) {
             if (!param1.equals(ih.field_c.b(19491))) {
-              ih.field_c = bf.a((byte) 86, param1);
+              ih.field_c = ImageProducerRasterBuffer.a((byte) 86, param1);
             }
           }
           if (param0 != -1) {

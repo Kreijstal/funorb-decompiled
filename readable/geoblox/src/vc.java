@@ -310,7 +310,7 @@ final class vc extends dk {
         PendingActionMarker var1 = var3;
         if (var1 != null) {
             var2 = eh.field_c;
-            ma.a(var2, 10, tl.field_h, (byte) -92, jf.field_c, ll.frameNineSliceSprites);
+            ma.drawNineSlicePanel(var2, 10, tl.field_h, (byte) -92, jf.field_c, ll.frameNineSliceSprites);
             sl.achievementSprites[var3.actionId].drawQuarterSize(25, var2 + (-32 + (tl.field_h - 15)) / 2);
             dd.uiPaletteFont.a(pg.field_a[var3.actionId], 67, 15 + var2, jf.field_c - 42 - 30, tl.field_h - 30, 0, -1, 1, 1, 30);
         }

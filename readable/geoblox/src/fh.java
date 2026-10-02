@@ -128,7 +128,7 @@ final class fh implements dh {
                 var10 = var10 + (param4.field_h - var8 >> 1);
               }
             }
-            bf.a(var10 + 2, 4 + var7, 14164, var8, -2 + var9);
+            ImageProducerRasterBuffer.a(var10 + 2, 4 + var7, 14164, var8, -2 + var9);
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

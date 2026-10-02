@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 2,994 guarded naming rules: 30 classes, 533 fields,
-303 methods, 857 parameters and 1,271 local declarations. Both 303-file corpora
+The current export has 3,112 guarded naming rules: 32 classes, 542 fields,
+313 methods, 904 parameters and 1,321 local declarations. Both 303-file corpora
 compile, preserving 138,558 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -54,7 +54,42 @@ smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
 
-## Current primitive-value reconstruction and alias safety
+## Current raster presentation and panel naming
+
+Pass 53 adds 118 guarded identities: two classes, nine fields, ten methods,
+47 parameters and 50 locals. All previous 2,994 complete rules and the raw
+source/decompiler pins remain unchanged. Both 303-file corpora compile,
+preserving all 138,558 bindings and 388 override relationships. The current
+3,112 rules apply 30,922 edits.
+
+`AwtRasterBuffer` names the pixel/image owner, and `ImageProducerRasterBuffer`
+names its consumer-backed implementation. The three-class virtual family now
+reads `initialize` and `drawImage`; every parameter/local in those methods has
+a guarded role. Width, height, pixels, image, color model, image consumer and
+image observer are explicit. Gameplay switches back to
+`sh.mainRasterBuffer.setAsRasterTarget(...)` after drawing into scratch sprites.
+Unrelated static utilities retain their original owners.
+
+`fk.createCanvasRasterBuffer` names preferred/fallback implementation paths and
+exception transport. Its literal `Class.forName("ve")` and the `ve` class spelling
+stay unchanged, preserving reflection. Inherited methods and parameters in `ve`
+are named. Original diagnostic strings, API callback names, sentinel effects,
+monitors and allocation/publication order remain.
+
+`ma.drawNineSlicePanel` names every parameter/local, including raw tile extents,
+adjusted center clipping, border widths/heights and shared tile coordinates.
+Tutorial prompts, buttons and session overlays now call the named renderer.
+`hd.nineSliceSavedClip` describes its shared scratch clip. Border overlap uses
+original proportional splits; corners draw once while edges and center tile.
+No expressions, guards, exceptional cleanup or source bodies are edited by hand.
+
+The existing six native probes keep their documented scopes and pinned traces.
+Their 2,592-case nine-slice matrix covers sprite construction, not panel drawing.
+Actual AWT presentation, panel rendering and full-game/device behavior remain
+source-audited rather than newly executed. Deterministic regeneration, complete
+binding checks and byte-exact dictionary reversal are required for this export.
+
+## Previous primitive-value reconstruction and alias safety
 
 Pass 52 simplifies 12 same-type primitive local/literal selections. Pointer
 spawning now reads `selectedVariantId = (spriteKindId != 2) ? -1 : variantId;`;
@@ -683,6 +718,6 @@ the same manifest; no JSON snapshots are added.
 | Java source tree | SHA-256 |
 | --- | --- |
 | Raw | `39be3539b43d7acc9540acca49e7b6378cdb233908092706646df4c2cdc6a8fe` |
-| Readable | `40d111d929a3712a6bad691381f73341fe4f796495d119e7fcd2f1007a04f21d` |
+| Readable | `6c056c36db71476ccb4acc185e37126672967c4a7be61126023f4f8136926540` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

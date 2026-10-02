@@ -103,7 +103,7 @@ final class oc implements dh {
             }
           }
           if (param4.e((byte) 54)) {
-            bf.a(var7 + 2, -4 + param4.field_r, 14164, -4 + param4.field_h, var6_int + 2);
+            ImageProducerRasterBuffer.a(var7 + 2, -4 + param4.field_r, 14164, -4 + param4.field_h, var6_int + 2);
           }
           if (param1 < -5) {
             return;
