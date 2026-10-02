@@ -11,13 +11,13 @@ over the obfuscated gamepacks by the pipeline in
 
 ## Readable GeoBlox export
 
-[`readable/geoblox/src`](readable/geoblox/src) contains GeoBlox pass 18 with
+[`readable/geoblox/src`](readable/geoblox/src) contains GeoBlox pass 19 with
 972 reviewed naming rules for gameplay, tutorial flow, interface text,
 resource decoding, text validation, nine-slice sprite construction, result
 selection and PCM samples.
 Confirmed names omit opaque suffixes; the dictionary
 preserves original identities. Both 303-file Java corpora compile and preserve
-all 154,109 recorded bindings and 388 override relationships. The raw
+all 154,113 recorded bindings and 388 override relationships. The raw
 decompilation remains under `games/`.
 
 The [reproduction and update procedure](readable/README.md),
@@ -32,6 +32,8 @@ The [border and validation report](readable/BORDER-VALIDATION-READABILITY.md)
 records pass 16 naming evidence. The [result-helper report](readable/RESULT-HELPER-READABILITY.md)
 records pass 18 names and native selector/PCM checks. The [numeric-negation report](readable/NUMERIC-NEGATION-READABILITY.md)
 records the corrected sprite pivots and native result-sequence comparison.
+The [exception-continuation report](readable/EXCEPTION-CONTINUATION-READABILITY.md)
+records pass 19's handler boundaries and reviewed generated-local changes.
 Typed complement comparisons show direct conditions;
 see the [comparison report](readable/COMPARISON-READABILITY.md). Unknown
 identifiers and shared joins remain; the [state-machine report](readable/STATE-MACHINE-READABILITY.md)
@@ -43,10 +45,12 @@ GeoBlox has a newer 303-file source export from a pinned owned-decompiler
 revision. It reuses the unchanged transformed bytecode whose previous fresh ASM
 check covered 2,427 methods with zero failures. All regenerated sources compile.
 The other 43 games retain the previous full-catalog export.
-The latest renderer corrects six nested-negation expressions in `dm.java` and
-`il.java`: `-(-value)` no longer becomes Java pre-decrement `--value`.
-Its 274 native numeric comparisons cover evaluation and boundary values.
-All 21,181 declaration identities and 926 reviewed spelling guards remain unchanged.
+The latest renderer preserves enclosing exception coverage when carving handler
+continuations. Only `oc.java` changes: its post-failure arithmetic guard remains
+outside the enclosing catch. All 972 reviewed names and 255 named local identities
+remain unchanged; one generated selector and five unnamed ordinal shifts are
+recorded in the migration. The generic loop-exit probes cover 3,216 native
+comparisons. The earlier sprite-negation correction remains in this export.
 
 [GeoBlox provenance](decompilation/geoblox-provenance.json) records the exact
 Deko and java-tools Git commits, input identities, reused pipeline proof and

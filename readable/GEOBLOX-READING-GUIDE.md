@@ -1,4 +1,4 @@
-# Reading GeoBlox pass 18
+# Reading GeoBlox pass 19
 
 The readable tree uses semantic names without opaque suffixes. The symbol map
 keeps the original spelling and JVM identity of every declaration, so

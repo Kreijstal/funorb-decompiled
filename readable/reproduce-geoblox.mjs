@@ -39,6 +39,35 @@ try {
   captureProcess('git', ['-C', repository, 'archive', '--format=tar', '--output=' + archive,
     sourcePin.commit, sourcePin.subdirectory]);
   captureProcess('tar', ['-xf', archive, '-C', temporary]);
+  if (sourcePin.namingMigration) {
+    const migrationBytes = fs.readFileSync(path.join(root, sourcePin.namingMigration));
+    if (digest(migrationBytes) !== rules.namingMigrationSha256)
+      throw new Error('Reviewed naming migration differs from the rules');
+    const migration = JSON.parse(migrationBytes);
+    let previous;
+    if (migration.previousRulesFile) {
+      if (!/^rules\/geoblox-v\d+\.json$/.test(migration.previousRulesFile))
+        throw new Error('Invalid previous naming manifest path');
+      const previousBytes = fs.readFileSync(path.join(root, migration.previousRulesFile));
+      if (digest(previousBytes) !== migration.previousRulesSha256)
+        throw new Error('Previous naming manifest differs from the migration');
+      previous = JSON.parse(previousBytes);
+      if (!/^[a-f0-9]{40}$/.test(previous.source.commit) ||
+          previous.source.subdirectory !== sourcePin.subdirectory)
+        throw new Error('Invalid previous publication source pin');
+    }
+    for (const item of migration.sourceEvidence || []) {
+      if (!/^[A-Za-z_$][A-Za-z0-9_$]*\.java$/.test(item.file) ||
+          digest(fs.readFileSync(path.join(temporary, sourcePin.subdirectory, item.file))) !== item.sha256)
+        throw new Error(`Reviewed migration source differs: ${item.file}`);
+      if (previous && item.previousSha256) {
+        const before = captureProcess('git', ['-C', repository, 'show',
+          `${previous.source.commit}:${previous.source.subdirectory}/${item.file}`]).stdout;
+        if (digest(before) !== item.previousSha256)
+          throw new Error(`Previous migration source differs: ${item.file}`);
+      }
+    }
+  }
   if (sourcePin.namingAdditions) {
     const additionsBytes = fs.readFileSync(path.join(root, sourcePin.namingAdditions));
     if (digest(additionsBytes) !== rules.namingAdditionsSha256)

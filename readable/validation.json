@@ -1,16 +1,16 @@
 {
   "schema": 1,
-  "version": 18,
+  "version": 19,
   "rules": 972,
   "files": 303,
-  "sourceCommit": "b140d3584574ef276694b8ad453cd05303b82c5d",
-  "inputTreeSha256": "21fdcc2b2150a6a7ce1bc46a14baaa3ecc2c15580495f5f0f1ec620be5de4d2e",
-  "outputTreeSha256": "5fbe5208c2513b8a3923c9949d8e6d660c0736373d577203885a8f8c07f39524",
+  "sourceCommit": "3bb6b88261536a18275d003c19c6cdbdbb25996e",
+  "inputTreeSha256": "150473b4ea210996502edd77710c501590753e2b4a563df34cbea6f772a522f7",
+  "outputTreeSha256": "a97ba213dbba4cf4f603a1b8869abb4c0e3479c6e6f71c7d90d4eb76fb23d578",
   "runtimeEquivalenceVerified": false,
   "previousValidation": {
-    "commit": "dfde37c43a8a8ca2f4813d7a48e0f4941331bc88",
+    "commit": "eed179f088bf4c2710048f3c6275f9b5b792854d",
     "path": "readable/validation.json",
-    "scope": "Immutable pass-17 raw export, numeric-negation regression and helper validation. Generic decompiler tests and unrelated historical probes are not claimed freshly rerun in this naming pass."
+    "scope": "Immutable pass-18 naming and helper validation; unrelated historical probes are not claimed freshly rerun."
   },
   "commands": [
     {
@@ -21,7 +21,15 @@
     {
       "command": "node readable/tests/test-geoblox-rule-builder.mjs",
       "result": "pass",
-      "tests": 30
+      "tests": 33
+    },
+    {
+      "command": "node readable/tests/test-geoblox-migration-source.mjs",
+      "result": "pass",
+      "tests": 4,
+      "refusalScenarios": 7,
+      "isolatedLocalGitClones": true,
+      "partialExportsProduced": false
     },
     {
       "command": "node readable/tests/test-geoblox-text-rules.mjs",
@@ -34,38 +42,22 @@
     {
       "command": "node readable/reproduce-geoblox.mjs --check",
       "result": "pass",
-      "bindingsCompared": 154109,
+      "bindingsCompared": 154113,
       "overrideRelationships": 388,
       "identifierEdits": 16605,
       "originalAndRenamedFullCompilation": true,
-      "reviewedSourceHashesChecked": 10
+      "resultEvidenceSourceHashesChecked": 10,
+      "migrationSourceHashesChecked": 2
     },
     {
-      "command": "node readable/tools/restore-original.mjs readable/geoblox ../geoblox-results-v18/restored",
+      "command": "node readable/tools/restore-original.mjs readable/geoblox /home/kreijstal/git/blank-github-cloner/.work/geoblox-exits-v19/restored",
       "result": "pass",
       "restoredFiles": 303,
       "originalBytesRecovered": true,
       "originalSourceRequired": false
     },
     {
-      "command": "JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-deque.mjs",
-      "result": "pass",
-      "variants": [
-        "original",
-        "renamed"
-      ]
-    },
-    {
-      "command": "JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-gameplay.mjs",
-      "result": "pass",
-      "variants": [
-        "original",
-        "renamed"
-      ],
-      "scope": "Boundary pixel probes, popup initialization/progress/drain, cooldown deferral and queue settling; not whole-game equivalence."
-    },
-    {
-      "command": "GEOBLOX_RESULT_PROBE_DIAGNOSTICS=/home/kreijstal/git/blank-github-cloner/.work/geoblox-result-v17/fixed JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-result-sequence.mjs /home/kreijstal/git/dekobloko-decompiled-pass/.work/games/geoblox/decompile-owned/out",
+      "command": "JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-result-sequence.mjs /home/kreijstal/git/dekobloko-decompiled-pass/.work/games/geoblox/decompile-owned/out",
       "result": "pass",
       "variants": [
         "native",
@@ -86,51 +78,50 @@
         "original",
         "renamed"
       ],
-      "nativeInputPinVerified": true,
       "selectorCasesPerVariant": 120,
       "factoryCasesPerVariant": 4801,
       "positionChecksPerVariant": 9000,
       "musicEarlyReturnCasesPerVariant": 6,
+      "nativeInputPinVerified": true,
       "outputSha256": "ec3c627a2eec22d24549607b97ae8c3b6d735e24217b26c61e8a5e510872ace6",
       "scope": "Actual selector identities/guards/queue and coordinate preservation; PCM factory metadata, byte identity, bounds and exceptions; music null/current-track early returns. Entity and music asset constructors bypassed. No stream advancement, new MIDI activation or audio device playback."
     }
   ],
-  "stateMachineReadability": {
-    "javaToolsCommit": "c739b6ca232040f7a7970b704214adbed573d10c",
-    "decompilerSourceArchiveSha256": "34f9012d4ba040344178d1a249469d9f5f8e25b015153f12335529b1feddfec5",
-    "dispatcherCases": 0,
-    "dispatcherMethods": 0,
-    "rawSourceTreeUnchanged": true,
-    "scope": "Naming-only pass on the pinned corrected pass-17 raw input; zero dispatchers. No source-body edits or declaration migrations. Whole-game equivalence remains unverified."
+  "genericDecompilerValidation": {
+    "commit": "38a83d19e58776bbc4dd1b794811aa1a5963996a",
+    "sourceArchiveSha256": "f3b5719d7471940e6a586228fa8b59161cfd64ab14ca1786a3f8f4470ec11304",
+    "verifiedPriorGoalTurn": true,
+    "structuralChecks": 31,
+    "nativeLoopExitComparisons": 3216,
+    "finallyScenariosPerVariant": 924,
+    "cleanSourceArchiveReproducesRawSources": true,
+    "changedJavaFiles": [
+      "oc.java"
+    ],
+    "diagnosticsUnchanged": true,
+    "hardFailures": 0,
+    "dispatchers": 0,
+    "scope": "Generic try/catch/finally fixtures verify transfer destinations, cleanup effects and throwable identity; actual GeoBlox reflection failures are not injected."
   },
-  "namingReview": {
-    "spellingGuardsMatched": 972,
-    "retainedRules": 926,
-    "addedRules": 46,
-    "classRules": 21,
-    "fieldRules": 358,
-    "methodRules": 163,
-    "parameterRules": 175,
-    "localRules": 255,
-    "previousNamedLocalIdentitiesUnchanged": 248,
-    "addedNamedLocals": 7,
-    "namedLocalOrdinalMigrations": 0,
-    "previousPass15SnapshotFrozen": true,
-    "rawSourceTreeUnchanged": true,
-    "completeValidationOverrideFamilies": 4,
-    "bindingComparisonCount": 154109,
+  "namingVerification": {
+    "historicalPass18Frozen": true,
+    "retainedRules": 972,
+    "rulesAdded": 0,
+    "allSpellingGuardsUnchanged": true,
+    "namedLocalsRetained": 255,
+    "namedLocalIdentitiesMoved": 0,
+    "rawDeclarationsBefore": 21181,
+    "rawDeclarationsAfter": 21182,
+    "rawDeclarationIdentitiesAndSpellingsUnchanged": 21176,
+    "generatedSelectorsAdded": 1,
+    "unnamedLocalOrdinalsShifted": 5,
+    "classFieldMethodParameterIdentitiesUnchanged": true,
+    "bindingComparisonCount": 154113,
     "overrideRelationships": 388,
     "identifierEdits": 16605,
-    "resourceFieldsRetained": 152,
-    "resourceEvidenceTests": 8,
-    "ruleBuilderTests": 30,
-    "namingToolCommit": "a0bc835957148b9b1e1f8221c59b79d899d22738",
-    "namingToolSourceArchiveSha256": "cb10756aa3ecb28159c9b81f2fb78bf559b4111d9ad203819458b30d0d84cf8c",
-    "previousPass16SnapshotFrozen": true,
-    "declarationIdentitiesUnchanged": 21181,
     "sourceBodyEditedByHand": false,
-    "previousPass17SnapshotFrozen": true,
-    "reviewedSourceFiles": 10
+    "namingToolCommit": "a0bc835957148b9b1e1f8221c59b79d899d22738",
+    "namingToolSourceArchiveSha256": "cb10756aa3ecb28159c9b81f2fb78bf559b4111d9ad203819458b30d0d84cf8c"
   },
   "controlledResultSequence": {
     "method": "gh.f(I)V",
@@ -173,6 +164,7 @@
     "Unknown names, guard arguments and shared joins remain",
     "Matching validator behavior is not covered by the static nine-slice native probe",
     "Controlled result-sequence proof excludes real asset construction, boundary loss, new action delivery, nonzero client flags and audible/advanced PCM playback",
-    "Result helper proof excludes actual new MIDI track activation, PCM advancement and device audio; audio position/rate metadata is tested separately from playback."
+    "Result helper proof excludes actual new MIDI track activation, PCM advancement and device audio; audio position/rate metadata is tested separately from playback.",
+    "Generic cleanup regressions do not establish all GeoBlox exception paths; oc.a(I)V reflection-failure injection remains unverified."
   ]
 }

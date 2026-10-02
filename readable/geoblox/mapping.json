@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "inputTreeSha256": "21fdcc2b2150a6a7ce1bc46a14baaa3ecc2c15580495f5f0f1ec620be5de4d2e",
+  "inputTreeSha256": "150473b4ea210996502edd77710c501590753e2b4a563df34cbea6f772a522f7",
   "positionUnits": "UTF-16 code units in original source",
   "rules": [
     {
@@ -108001,23 +108001,34 @@
     {
       "symbol": "L:oc.a(I)V#10",
       "renamedSymbol": "L:oc.a(I)V#10",
-      "originalName": "decompiledUncheckedException",
-      "renamedName": "decompiledUncheckedException",
+      "originalName": "decompiledCaughtParameter1",
+      "renamedName": "decompiledCaughtParameter1",
       "declaration": {
         "file": "oc.java",
-        "start": 8860,
-        "end": 8888
+        "start": 8690,
+        "end": 8716
       }
     },
     {
       "symbol": "L:oc.a(I)V#11",
       "renamedSymbol": "L:oc.a(I)V#11",
+      "originalName": "decompiledUncheckedException",
+      "renamedName": "decompiledUncheckedException",
+      "declaration": {
+        "file": "oc.java",
+        "start": 9049,
+        "end": 9077
+      }
+    },
+    {
+      "symbol": "L:oc.a(I)V#12",
+      "renamedSymbol": "L:oc.a(I)V#12",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
         "file": "oc.java",
-        "start": 8967,
-        "end": 8993
+        "start": 9156,
+        "end": 9182
       }
     },
     {
@@ -108078,34 +108089,34 @@
     {
       "symbol": "L:oc.a(I)V#7",
       "renamedSymbol": "L:oc.a(I)V#7",
-      "originalName": "decompiledCaughtException",
-      "renamedName": "decompiledCaughtException",
+      "originalName": "decompiledRegionSelector0",
+      "renamedName": "decompiledRegionSelector0",
       "declaration": {
         "file": "oc.java",
-        "start": 7504,
-        "end": 7529
+        "start": 7498,
+        "end": 7523
       }
     },
     {
       "symbol": "L:oc.a(I)V#8",
       "renamedSymbol": "L:oc.a(I)V#8",
-      "originalName": "decompiledCaughtParameter0",
-      "renamedName": "decompiledCaughtParameter0",
+      "originalName": "decompiledCaughtException",
+      "renamedName": "decompiledCaughtException",
       "declaration": {
         "file": "oc.java",
-        "start": 8059,
-        "end": 8085
+        "start": 7551,
+        "end": 7576
       }
     },
     {
       "symbol": "L:oc.a(I)V#9",
       "renamedSymbol": "L:oc.a(I)V#9",
-      "originalName": "decompiledCaughtParameter1",
-      "renamedName": "decompiledCaughtParameter1",
+      "originalName": "decompiledCaughtParameter0",
+      "renamedName": "decompiledCaughtParameter0",
       "declaration": {
         "file": "oc.java",
-        "start": 8549,
-        "end": 8575
+        "start": 8155,
+        "end": 8181
       }
     },
     {
@@ -310651,8 +310662,8 @@
     {
       "original": "oc.java",
       "renamed": "oc.java",
-      "inputSha256": "a4ecb5beecbbfad0bae85d0421fb05946a165fa086d5af28d10f96c81bea7a9c",
-      "outputSha256": "c5c91408de73eecf9c81dd68ffe08c33cd363517aa57433ffa0464a579f33e42",
+      "inputSha256": "d15ec0465ce5dd2f261dfe3aa258f851aa8c9d3668af3d96f2345b220ad1f392",
+      "outputSha256": "290a6b20a487629816f9084645ce5b3f4f0ff027f525be3d1dd07d60e45012b8",
       "edits": [
         {
           "start": 80,
@@ -310851,15 +310862,15 @@
           "renamed": "addLast"
         },
         {
-          "start": 9125,
-          "end": 9132,
+          "start": 9314,
+          "end": 9321,
           "symbol": "F:oc.field_d:Ldm;",
           "original": "field_d",
           "renamed": "boardSceneRaster"
         },
         {
-          "start": 9139,
-          "end": 9141,
+          "start": 9328,
+          "end": 9330,
           "symbol": "C:dm",
           "original": "dm",
           "renamed": "Sprite"

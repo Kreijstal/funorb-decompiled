@@ -1,6 +1,6 @@
 # Readable source exports
 
-GeoBlox pass 18 has 972 reviewed naming rules: 21 classes, 358 fields,
+GeoBlox pass 19 retains 972 reviewed naming rules: 21 classes, 358 fields,
 163 methods, 175 parameters and 255 guarded local declarations. It preserves strings and numeric IDs; typed XOR-minus-one expressions and
 comparisons now use equivalent signed integer/long conditions. The new decompiler renders proven
 single-entry branches as ordinary Java bodies and keeps verified exception-region
@@ -12,7 +12,8 @@ sharing mutable locals and preserving catch scopes. Builder chains with unknown
 receiver contents retain their operations and failure context. The reverse map
 keeps original JVM identities and exact edit information.
 
-See [result-helper readability](RESULT-HELPER-READABILITY.md) for the latest
+See [exception-continuation readability](EXCEPTION-CONTINUATION-READABILITY.md)
+for the latest source correction and reviewed declaration audit. See [result-helper readability](RESULT-HELPER-READABILITY.md) for the latest
 selector, popup, music and PCM names with native verification. See
 [parallel-loop readability](PARALLEL-LOOP-READABILITY.md) for the last two
 dispatchers, source-edge checks and native verification. The
@@ -35,13 +36,14 @@ dispatchers, source-edge checks and native verification. The
   dependency and output hashes, JDK identity and binding checks.
 - [geoblox-source-pin.json](geoblox-source-pin.json): the exact source commit
   and dependency pin. The input is `games/geoblox` at commit
-  `b140d3584574ef276694b8ad453cd05303b82c5d`.
+  `3bb6b88261536a18275d003c19c6cdbdbb25996e`.
 - [tools/PIN.json](tools/PIN.json): exact bundled naming-tool file digests.
 - [rules](rules): the retained 491-rule manifest, 151 gameplay additions,
-  complete pass-6 through pass-17 manifests, reviewed input migrations,
+  complete pass-6 through pass-18 manifests, reviewed input migrations,
   pass-13 text additions, the pass-14 comparison migration and the pass-15
   local-identity migration, pass-16 border/validation additions and pass-17
-  numeric-negation input migration and pass-18 result-helper additions.
+  numeric-negation input migration, pass-18 result-helper additions and pass-19
+  exception-continuation input migration.
   Every previous manifest and the changed input are guarded by SHA-256.
 - `funorb-stubs.jar`: the frozen compilation dependency, included byte for byte.
 
@@ -50,22 +52,22 @@ The decompilation's tool revisions are separate from game-source hashes:
 | Tool | Git commit |
 | --- | --- |
 | Deko | `a572c4dd0f0174bfcd7777be53d7ceba2f970f18` |
-| java-tools | `c739b6ca232040f7a7970b704214adbed573d10c` |
+| java-tools | `38a83d19e58776bbc4dd1b794811aa1a5963996a` |
 | Upstream naming tool in Deko | `d41315508e071f6bd672d65eb2f5a8d428648d6f` |
 | Adapted naming tool | `a0bc835957148b9b1e1f8221c59b79d899d22738` in `geoblox-readable-text-tools.bundle` |
 
 The decompiler repository source archive has SHA-256
-`34f9012d4ba040344178d1a249469d9f5f8e25b015153f12335529b1feddfec5`.
+`f3b5719d7471940e6a586228fa8b59161cfd64ab14ca1786a3f8f4470ec11304`.
 Recreate that identity in the java-tools checkout with:
 
 ```sh
-git archive --format=tar c739b6ca232040f7a7970b704214adbed573d10c | sha256sum
+git archive --format=tar 38a83d19e58776bbc4dd1b794811aa1a5963996a | sha256sum
 ```
 
 This hashes the tracked **decompiler repository source**, including its commit
 archive metadata. The game-source tree hashes at the end of this document are
 separate identities. The local revision is available in
-`java-tools-geoblox-v17.bundle` pending remote publication.
+`java-tools-safe-exception-cleanup.bundle` pending remote publication.
 
 The generic naming tool belongs to Deko. `tools/` is a frozen publication copy,
 so this checkout can reproduce the export without depending on a mutable sibling
@@ -77,7 +79,7 @@ JavaScript validator; constructor method names still require a class rule. The
 Java resolver and binding/override checks are unchanged. The wrapper checks all
 three frozen tool digests before use.
 
-The pinned raw input was freshly decompiled in pass 17 from the unchanged
+The pinned raw input was freshly decompiled in pass 19 from the unchanged
 verified transformed bytecode: 303 sources, zero hard failures and zero dispatchers.
 Pass 15 changes ten source files through parallel operand-copy fixes and loop
 reconstruction, retaining all 841 reviewed names. Ten result-sequence local
@@ -96,6 +98,11 @@ No raw source or declaration identity changes. The wrapper also verifies the
 ten reviewed source-file hashes against the extracted input; the new helper
 probe matches native selection, sample metadata, position bounds and music
 early-return behavior. See [the result-helper report](RESULT-HELPER-READABILITY.md).
+Pass 19 integrates the exception-continuation correction in `oc.java`, retaining
+every pass-18 name. One generated selector is added and five unnamed local
+ordinals shift; all named local identities remain unchanged. The migration and
+wrapper guard both before/after source hashes. See
+[the exception-continuation report](EXCEPTION-CONTINUATION-READABILITY.md).
 The complete pass-14 rules remain frozen, and pass 15 binds the new source and
 decompiler identities. The previous ASM check covered
 2,427 methods with zero failures; those bytes have not changed. See
@@ -111,6 +118,7 @@ From a full Git checkout of this repository, using Node.js and a JDK with javac:
 ```sh
 node readable/build-geoblox-rules.mjs --check
 node readable/tests/test-geoblox-rule-builder.mjs
+node readable/tests/test-geoblox-migration-source.mjs
 node readable/tests/test-geoblox-text-rules.mjs
 node readable/reproduce-geoblox.mjs --check
 node readable/tools/test-readable-java.mjs
@@ -191,6 +199,11 @@ It does not read `games/geoblox` or extract an original input commit.
    Pass 18 retains all 926 names and adds 46 guarded rules on that same input,
    including constructor parameters. Its additions manifest binds the frozen
    pass-17 rules, generators, text evidence and reviewed source-file hashes.
+   Pass 19 freezes the complete pass-18 manifest and reviews the single source
+   correction, new selector and five unnamed ordinal shifts. All 972 names and
+   255 named local identities remain unchanged. Its migration and wrapper check
+   both source versions; the decompiler source SHA-256 identifies the generator
+   repository, separately from the game-source input and output tree digests.
 4. Pin the new source commit in `geoblox-source-pin.json`, retain the reviewed
    rule lineage and rebuild `geoblox-rules.json`. If updating the naming tool,
    import the reviewed tool and update `tools/PIN.json` deliberately.
@@ -206,7 +219,7 @@ unknown symbols are never renamed by guessing during reproduction.
 
 ## Checks and limits
 
-Both complete 303-file corpora compile. All 154,109 bindings and 388 override
+Both complete 303-file corpora compile. All 154,113 bindings and 388 override
 relationships are preserved; generation applies 16,605 identifier edits.
 Rebuilding the rules and regenerating the export is byte-identical, and
 map-only reversal recovers all 303 original files byte for byte.
@@ -247,8 +260,8 @@ before treating the renamed export as a runnable replacement.
 
 | Java source tree | SHA-256 |
 | --- | --- |
-| Original GeoBlox | `21fdcc2b2150a6a7ce1bc46a14baaa3ecc2c15580495f5f0f1ec620be5de4d2e` |
-| Readable GeoBlox | `5fbe5208c2513b8a3923c9949d8e6d660c0736373d577203885a8f8c07f39524` |
+| Original GeoBlox | `150473b4ea210996502edd77710c501590753e2b4a563df34cbea6f772a522f7` |
+| Readable GeoBlox | `a97ba213dbba4cf4f603a1b8869abb4c0e3479c6e6f71c7d90d4eb76fb23d578` |
 
 These tree digests use `sourceIdentity(sourceInventory(root))` from the naming
 tool. They identify source bytes; the decompiler Git commits are listed above.
