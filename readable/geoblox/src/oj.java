@@ -33,12 +33,12 @@ abstract class oj {
                 wk.a(param1 - 20014882, new Object[]{"options", var3 + "options.ws"}, param0, "updatelinks");
                 wk.a(-14882, new Object[]{"terms", var3 + "terms.ws"}, param0, "updatelinks");
                 wk.a(-14882, new Object[]{"privacy", var3 + "privacy.ws"}, param0, "updatelinks");
+                return;
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var2 = decompiledCaughtException;
                 return;
               }
-              return;
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref = (RuntimeException) (Object) decompiledCaughtException;

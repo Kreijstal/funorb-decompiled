@@ -40,6 +40,7 @@ final class le implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         try {
           if (param0.isPopupTrigger()) {
             param0.consume();
+            return;
           } else {
             return;
           }
@@ -118,7 +119,9 @@ final class le implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             if (0 == (8 & var2_int)) {
             }
           }
-          if (param0.isPopupTrigger()) {
+          if (!param0.isPopupTrigger()) {
+            return;
+          } else {
             param0.consume();
             return;
           }
@@ -176,6 +179,7 @@ final class le implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             lj.field_b = -1;
             eg.field_h = -1;
             fc.field_f = true;
+            return;
           } else {
             return;
           }
@@ -232,6 +236,7 @@ final class le implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           }
           if (param0.isPopupTrigger()) {
             param0.consume();
+            return;
           } else {
             return;
           }
@@ -266,6 +271,7 @@ final class le implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         try {
           if (null != pg.field_c) {
             s.field_I = 0;
+            return;
           } else {
             return;
           }
@@ -303,6 +309,7 @@ final class le implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             lj.field_b = param0.getX();
             eg.field_h = param0.getY();
             fc.field_f = true;
+            return;
           } else {
             return;
           }

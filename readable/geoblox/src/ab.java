@@ -25,6 +25,7 @@ final class ab {
           if (param0 < 29) {
             boardContactStateDirty = true;
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
@@ -58,7 +59,6 @@ final class ab {
         RuntimeException stackIn_40_0 = null;
         StringBuilder stackIn_40_1 = null;
         String stackIn_40_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -68,60 +68,54 @@ final class ab {
         int var8 = 0;
         var8 = Geoblox.field_C;
         try {
-          L0: {
-            if (param2 == null) {
-              stackIn_4_0 = gg.createNameLengthAlertText;
-              decompiledRegionSelector0 = 0;
-            } else {
-              var3_int = param2.length();
-              if (var3_int >= 1) {
-                if (var3_int <= 12) {
-                  var4 = oe.a(param2, 12);
-                  if (param1 != 2) {
-                    ab.a((byte) 112);
-                  }
-                  if (var4 != null) {
-                    if (var4.length() >= 1) {
-                      if (!gg.a((byte) -32, var4.charAt(0))) {
-                        if (!gg.a((byte) -75, var4.charAt(-1 + var4.length()))) {
-                          var5 = 0;
-                          for (var6 = 0; var6 < param2.length(); var6++) {
-                            var7 = param2.charAt(var6);
-                            if (gg.a((byte) -96, (char) var7)) {
-                              var5++;
-                            } else {
-                              var5 = 0;
-                            }
-                            if (2 <= var5) {
-                              if (!param0) {
-                                stackIn_31_0 = fa.createDoubleSpaceAlertText;
-                                decompiledRegionSelector0 = 4;
-                                break L0;
-                              }
-                            }
-                          }
-                          if (var5 > 0) {
-                            stackIn_36_0 = GameScreen.createNameLeadingSpaceAlertText;
-                            decompiledRegionSelector0 = 5;
-                            break L0;
+          if (param2 == null) {
+            stackIn_4_0 = gg.createNameLengthAlertText;
+            return stackIn_4_0;
+          } else {
+            var3_int = param2.length();
+            if (var3_int >= 1) {
+              if (var3_int <= 12) {
+                var4 = oe.a(param2, 12);
+                if (param1 != 2) {
+                  ab.a((byte) 112);
+                }
+                if (var4 != null) {
+                  if (var4.length() >= 1) {
+                    if (!gg.a((byte) -32, var4.charAt(0))) {
+                      if (!gg.a((byte) -75, var4.charAt(-1 + var4.length()))) {
+                        var5 = 0;
+                        for (var6 = 0; var6 < param2.length(); var6++) {
+                          var7 = param2.charAt(var6);
+                          if (gg.a((byte) -96, (char) var7)) {
+                            var5++;
                           } else {
-                            return null;
+                            var5 = 0;
+                          }
+                          if (2 <= var5) {
+                            if (!param0) {
+                              stackIn_31_0 = fa.createDoubleSpaceAlertText;
+                              return stackIn_31_0;
+                            }
                           }
                         }
+                        if (var5 > 0) {
+                          stackIn_36_0 = GameScreen.createNameLeadingSpaceAlertText;
+                          return stackIn_36_0;
+                        } else {
+                          return null;
+                        }
                       }
-                      stackIn_21_0 = GameScreen.createNameLeadingSpaceAlertText;
-                      decompiledRegionSelector0 = 3;
-                      break L0;
                     }
+                    stackIn_21_0 = GameScreen.createNameLeadingSpaceAlertText;
+                    return stackIn_21_0;
                   }
-                  stackIn_16_0 = gg.createNameLengthAlertText;
-                  decompiledRegionSelector0 = 2;
-                  break L0;
                 }
+                stackIn_16_0 = gg.createNameLengthAlertText;
+                return stackIn_16_0;
               }
-              stackIn_9_0 = gg.createNameLengthAlertText;
-              decompiledRegionSelector0 = 1;
             }
+            stackIn_9_0 = gg.createNameLengthAlertText;
+            return stackIn_9_0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -140,27 +134,6 @@ final class ab {
             stackIn_40_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_40_2).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_4_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_9_0;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return stackIn_16_0;
-            } else {
-              if (decompiledRegionSelector0 == 3) {
-                return stackIn_21_0;
-              } else {
-                if (decompiledRegionSelector0 == 4) {
-                  return stackIn_31_0;
-                } else {
-                  return stackIn_36_0;
-                }
-              }
-            }
-          }
         }
     }
 
@@ -185,19 +158,17 @@ final class ab {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var2_int = param1.length();
-            var3 = 0;
-            if (param0 <= 42) {
-              var5 = (CharSequence) null;
-              ab.a(-120, (CharSequence) null);
-            }
-            for (var4 = 0; var4 < var2_int; var4++) {
-              var3 = -var3 + (var3 << 5) + qc.a(param1.charAt(var4), true);
-            }
-            stackIn_6_0 = var3;
-            break L0;
+          var2_int = param1.length();
+          var3 = 0;
+          if (param0 <= 42) {
+            var5 = (CharSequence) null;
+            ab.a(-120, (CharSequence) null);
           }
+          for (var4 = 0; var4 < var2_int; var4++) {
+            var3 = -var3 + (var3 << 5) + qc.a(param1.charAt(var4), true);
+          }
+          stackIn_6_0 = var3;
+          return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -216,7 +187,6 @@ final class ab {
           }
           throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(')').toString());
         }
-        return stackIn_6_0;
     }
 
     final static void moveEntitiesAndCollectContacts(int param0, float boardAngleRadians) {
@@ -246,139 +216,137 @@ final class ab {
         var16 = null;
         var15 = Geoblox.field_C;
         try {
-          L0: {
-            boardContactStateDirty = false;
-            wb.newAttachmentCount = 0;
-            sh.field_y.a(255);
-            var2 = (GameplayEntity) ((Object) ji.movingEntities.firstForIteration(0));
-            L1: while (var2 != null) {
-              L3: {
-                if (a.attachedEntities != var2.entityQueue) {
-                  if (!el.gameplaySession.tutorialPromptActive) {
-                    var2.integrateEntityVelocity((byte) -59);
-                    var2.advanceEntityAnimation(true);
-                  }
-                  gf.a(var2, -1232328029, boardAngleRadians);
-                  if (!uj.a(var2, boardAngleRadians, 0)) {
-                    if (ma.a(true, boardAngleRadians, var2)) {
-                      var3 = SecondaryDeque.contactProbeRaster.pixels[aa.field_a + SecondaryDeque.contactProbeRaster.field_s * aa.field_b] - 1;
-                      var4 = tl.entitiesById[var3];
-                      if (a.attachedEntities != var4.entityQueue) {
-                        var5 = 0.5f * (var4.velocityX + var2.velocityX);
-                        var6 = (var4.velocityY + var2.velocityY) * 0.5f;
-                        var7 = var6 * var6 + var5 * var5;
-                        var7 = og.entityMotionSpeed / (float)Math.sqrt((double)var7);
-                        var6 = var6 * var7;
-                        var5 = var5 * var7;
-                        var8 = -var4.positionX + 320.0f;
-                        var9 = 240.0f - var4.positionY;
-                        var10 = -var5 - var4.positionX + 320.0f;
-                        var11 = 240.0f - (var4.positionY + var6);
-                        var10 = var10 * var10;
-                        var11 = var11 * var11;
-                        if (!(var10 + var11 > var9 * var9 + var8 * var8)) {
-                          stackIn_36_0 = 0;
-                        } else {
-                          stackIn_36_0 = 1;
-                        }
-                        var12 = stackIn_36_0;
-                        var8 = 320.0f - var2.positionX;
-                        var11 = 240.0f - (var6 + var2.positionY);
-                        var10 = -var2.positionX - var5 + 320.0f;
-                        var9 = -var2.positionY + 240.0f;
-                        var10 = var10 * var10;
-                        var11 = var11 * var11;
-                        if (!(var9 * var9 + var8 * var8 < var11 + var10)) {
-                          stackIn_39_0 = 0;
-                        } else {
-                          stackIn_39_0 = 1;
-                        }
-                        var13 = stackIn_39_0;
-                        if (var12 != 0) {
-                          if (var13 != 0) {
-                            var8 = -((var2.positionX + var4.positionX) * 0.5f) + 320.0f;
-                            var9 = 240.0f - 0.5f * (var4.positionY + var2.positionY);
-                            var14 = og.entityMotionSpeed / (float)Math.sqrt((double)(var8 * var8 + var9 * var9));
-                            var5 = var8 * var14;
-                            var6 = var14 * var9;
-                          }
-                        }
-                        var2.velocityY = var2.velocityY * -1.0f;
-                        var2.velocityX = var2.velocityX * -1.0f;
-                        var2.integrateEntityVelocity((byte) -59);
-                        var4.velocityX = var5;
-                        var2.velocityX = var5;
-                        var4.velocityY = var6;
-                        var2.velocityY = var6;
+          boardContactStateDirty = false;
+          wb.newAttachmentCount = 0;
+          sh.field_y.a(255);
+          var2 = (GameplayEntity) ((Object) ji.movingEntities.firstForIteration(0));
+          L0: while (var2 != null) {
+            L2: {
+              if (a.attachedEntities != var2.entityQueue) {
+                if (!el.gameplaySession.tutorialPromptActive) {
+                  var2.integrateEntityVelocity((byte) -59);
+                  var2.advanceEntityAnimation(true);
+                }
+                gf.a(var2, -1232328029, boardAngleRadians);
+                if (!uj.a(var2, boardAngleRadians, 0)) {
+                  if (ma.a(true, boardAngleRadians, var2)) {
+                    var3 = SecondaryDeque.contactProbeRaster.pixels[aa.field_a + SecondaryDeque.contactProbeRaster.field_s * aa.field_b] - 1;
+                    var4 = tl.entitiesById[var3];
+                    if (a.attachedEntities != var4.entityQueue) {
+                      var5 = 0.5f * (var4.velocityX + var2.velocityX);
+                      var6 = (var4.velocityY + var2.velocityY) * 0.5f;
+                      var7 = var6 * var6 + var5 * var5;
+                      var7 = og.entityMotionSpeed / (float)Math.sqrt((double)var7);
+                      var6 = var6 * var7;
+                      var5 = var5 * var7;
+                      var8 = -var4.positionX + 320.0f;
+                      var9 = 240.0f - var4.positionY;
+                      var10 = -var5 - var4.positionX + 320.0f;
+                      var11 = 240.0f - (var4.positionY + var6);
+                      var10 = var10 * var10;
+                      var11 = var11 * var11;
+                      if (!(var10 + var11 > var9 * var9 + var8 * var8)) {
+                        stackIn_36_0 = 0;
                       } else {
-                        break L3;
+                        stackIn_36_0 = 1;
                       }
-                    } else {
-                      var3_float = 320.0f - var2.positionX;
-                      var4_float = 240.0f - var2.positionY;
-                      var5 = -(var4_float * var2.positionX) + var2.positionY * var3_float;
-                      if (var2.relatedEntityCount == 0) {
-                        if (var5 * var5 > 0.30000001192092896f) {
-                          var2.velocityX = var3_float;
-                          var2.velocityY = var4_float;
-                          var6 = og.entityMotionSpeed / (float)Math.sqrt((double)(var2.velocityX * var2.velocityX + var2.velocityY * var2.velocityY));
-                          var2.velocityX = var2.velocityX * var6;
-                          var2.velocityY = var2.velocityY * var6;
+                      var12 = stackIn_36_0;
+                      var8 = 320.0f - var2.positionX;
+                      var11 = 240.0f - (var6 + var2.positionY);
+                      var10 = -var2.positionX - var5 + 320.0f;
+                      var9 = -var2.positionY + 240.0f;
+                      var10 = var10 * var10;
+                      var11 = var11 * var11;
+                      if (!(var9 * var9 + var8 * var8 < var11 + var10)) {
+                        stackIn_39_0 = 0;
+                      } else {
+                        stackIn_39_0 = 1;
+                      }
+                      var13 = stackIn_39_0;
+                      if (var12 != 0) {
+                        if (var13 != 0) {
+                          var8 = -((var2.positionX + var4.positionX) * 0.5f) + 320.0f;
+                          var9 = 240.0f - 0.5f * (var4.positionY + var2.positionY);
+                          var14 = og.entityMotionSpeed / (float)Math.sqrt((double)(var8 * var8 + var9 * var9));
+                          var5 = var8 * var14;
+                          var6 = var14 * var9;
                         }
                       }
+                      var2.velocityY = var2.velocityY * -1.0f;
+                      var2.velocityX = var2.velocityX * -1.0f;
+                      var2.integrateEntityVelocity((byte) -59);
+                      var4.velocityX = var5;
+                      var2.velocityX = var5;
+                      var4.velocityY = var6;
+                      var2.velocityY = var6;
+                    } else {
+                      break L2;
                     }
-                    var2.drawEntityIdOnPointerMask((byte) 51);
                   } else {
-                    vf.spriteScratchRaster.g(1);
-                    if (var2.matchCooldownTicks <= 0) {
-                      al.a(9666, GameScreen.selectedThemeId);
-                    }
-                    boardContactStateDirty = true;
-                    var2.entityQueue = null;
-                    for (var3 = 0; var3 < var2.relatedEntityCount; var3++) {
-                      var2.relatedEntities[var3].removeRelatedEntity(var2, 0);
-                    }
-                    var2.relatedEntityCount = 0;
-                    if (var2.entitySpriteKindId != 2) {
-                      stackIn_17_0 = 0;
-                    } else {
-                      stackIn_17_0 = 1;
-                    }
-                    L12: {
-                      var3 = stackIn_17_0;
-                      ih.linkEntityAtMaskContacts(-1, td.field_E, var2, ng.field_G);
-                      if (var3 != 0) {
-                        if (var2.entitySpriteKindId != 2) {
-                          break L12;
-                        }
+                    var3_float = 320.0f - var2.positionX;
+                    var4_float = 240.0f - var2.positionY;
+                    var5 = -(var4_float * var2.positionX) + var2.positionY * var3_float;
+                    if (var2.relatedEntityCount == 0) {
+                      if (var5 * var5 > 0.30000001192092896f) {
+                        var2.velocityX = var3_float;
+                        var2.velocityY = var4_float;
+                        var6 = og.entityMotionSpeed / (float)Math.sqrt((double)(var2.velocityX * var2.velocityX + var2.velocityY * var2.velocityY));
+                        var2.velocityX = var2.velocityX * var6;
+                        var2.velocityY = var2.velocityY * var6;
                       }
+                    }
+                  }
+                  var2.drawEntityIdOnPointerMask((byte) 51);
+                } else {
+                  vf.spriteScratchRaster.g(1);
+                  if (var2.matchCooldownTicks <= 0) {
+                    al.a(9666, GameScreen.selectedThemeId);
+                  }
+                  boardContactStateDirty = true;
+                  var2.entityQueue = null;
+                  for (var3 = 0; var3 < var2.relatedEntityCount; var3++) {
+                    var2.relatedEntities[var3].removeRelatedEntity(var2, 0);
+                  }
+                  var2.relatedEntityCount = 0;
+                  if (var2.entitySpriteKindId != 2) {
+                    stackIn_17_0 = 0;
+                  } else {
+                    stackIn_17_0 = 1;
+                  }
+                  L11: {
+                    var3 = stackIn_17_0;
+                    ih.linkEntityAtMaskContacts(-1, td.field_E, var2, ng.field_G);
+                    if (var3 != 0) {
                       if (var2.entitySpriteKindId != 2) {
-                        var2.spriteAngleRadians = var2.spriteAngleRadians - boardAngleRadians;
+                        break L11;
                       }
-                      var2.positionY = (float)td.field_E;
-                      var2.entityQueue = a.attachedEntities;
-                      var2.positionX = (float)ng.field_G;
                     }
-                    if (!var2.detachedFromBoard) {
-                      wb.newAttachmentCount = wb.newAttachmentCount + 1;
-                      break L3;
-                    } else {
-                      var2 = (GameplayEntity) ((Object) ji.movingEntities.nextForIteration(1));
-                      continue L1;
+                    if (var2.entitySpriteKindId != 2) {
+                      var2.spriteAngleRadians = var2.spriteAngleRadians - boardAngleRadians;
                     }
+                    var2.positionY = (float)td.field_E;
+                    var2.entityQueue = a.attachedEntities;
+                    var2.positionX = (float)ng.field_G;
+                  }
+                  if (!var2.detachedFromBoard) {
+                    wb.newAttachmentCount = wb.newAttachmentCount + 1;
+                    break L2;
+                  } else {
+                    var2 = (GameplayEntity) ((Object) ji.movingEntities.nextForIteration(1));
+                    continue L0;
                   }
                 }
               }
-              var2 = (GameplayEntity) ((Object) ji.movingEntities.nextForIteration(1));
             }
-            var3 = -125 % ((param0 - 35) / 49);
-            var17 = (GameplayEntity) ((Object) ji.movingEntities.firstForIteration(0));
-            L2: while (var17 != null) {
-              var17.eraseEntityTrail(30383);
-              var17 = (GameplayEntity) ((Object) ji.movingEntities.nextForIteration(1));
-            }
-            break L0;
+            var2 = (GameplayEntity) ((Object) ji.movingEntities.nextForIteration(1));
           }
+          var3 = -125 % ((param0 - 35) / 49);
+          var17 = (GameplayEntity) ((Object) ji.movingEntities.firstForIteration(0));
+          L1: while (var17 != null) {
+            var17.eraseEntityTrail(30383);
+            var17 = (GameplayEntity) ((Object) ji.movingEntities.nextForIteration(1));
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;

@@ -4,10 +4,10 @@
   "purpose": "Offline readable source mirror; not a runtime patch",
   "source": {
     "repository": "Kreijstal/funorb-decompiled",
-    "commit": "588ff14becf7fd429d53e929e85e073814c20259",
+    "commit": "a298f846c1824a1e88dd6c63674bbe81e67152e1",
     "subdirectory": "games/geoblox"
   },
-  "inputTreeSha256": "cdf74421a73a784554ef7946c2647fa0380f8a458a21e30e96ba951f4e650a97",
+  "inputTreeSha256": "0ce7d77ce24b5c74be0439d9d363ac7fb407bf949c9385ecc5f7e4cbcfe48f0f",
   "namingPolicy": "Confirmed semantic names without opaque suffixes; unknown symbols stay unchanged. Original spellings and JVM identities remain in the reverse symbol map. Every rule guards the original spelling. Local identities also use declaration ordinals; reused variables retain all supported roles. Numeric screen/action IDs and decompiler state remain unchanged.",
   "renames": [
     {
@@ -2621,13 +2621,13 @@
       "evidence": "Value read from per-screen action ID array using item index; drives action-specific branches."
     },
     {
-      "symbol": "L:c.a(ZBII)V#11",
+      "symbol": "L:c.a(ZBII)V#10",
       "originalName": "var6",
       "to": "actionId",
       "evidence": "Value read from per-screen action ID array using item index; drives action-specific branches."
     },
     {
-      "symbol": "L:c.b(IB)V#6",
+      "symbol": "L:c.b(IB)V#5",
       "originalName": "var5",
       "to": "actionId",
       "evidence": "Value read from per-screen action ID array using item index; drives action-specific branches."
@@ -3072,86 +3072,86 @@
     },
     {
       "symbol": "L:ec.b(I)Z#10",
-      "to": "firstMatchedEntity",
-      "originalName": "var5",
-      "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
-    },
-    {
-      "symbol": "L:ec.b(I)Z#11",
       "to": "secondMatchedEntity",
       "originalName": "var6",
       "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
     },
     {
-      "symbol": "L:ec.b(I)Z#12",
+      "symbol": "L:ec.b(I)Z#11",
       "to": "thirdMatchedEntity",
       "originalName": "var7",
       "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
     },
     {
-      "symbol": "L:ec.b(I)Z#13",
+      "symbol": "L:ec.b(I)Z#12",
       "to": "awardedPoints",
       "originalName": "var8",
       "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
     },
     {
-      "symbol": "L:ec.b(I)Z#14",
+      "symbol": "L:ec.b(I)Z#13",
       "to": "firstBlockedEntity",
       "originalName": "var8_ref_ja",
       "evidence": "Alias of firstMatchedEntity on the cooldown-blocked path, immediately before its entityQueue marker is cleared."
     },
     {
-      "symbol": "L:ec.b(I)Z#15",
+      "symbol": "L:ec.b(I)Z#14",
       "to": "popupX",
       "originalName": "var9",
       "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
     },
     {
-      "symbol": "L:ec.b(I)Z#16",
+      "symbol": "L:ec.b(I)Z#15",
       "to": "secondBlockedEntity",
       "originalName": "var9_ref_ja",
       "evidence": "Alias of secondMatchedEntity on the cooldown-blocked path, immediately before its entityQueue marker is cleared."
     },
     {
-      "symbol": "L:ec.b(I)Z#17",
+      "symbol": "L:ec.b(I)Z#16",
       "to": "popupY",
       "originalName": "var10",
       "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
     },
     {
-      "symbol": "L:ec.b(I)Z#18",
+      "symbol": "L:ec.b(I)Z#17",
       "to": "controlFlowGuard",
       "originalName": "var11",
       "evidence": "Retained entry snapshot of Geoblox.field_C; unused in the generated processMatchCandidates body."
     },
     {
-      "symbol": "L:ec.b(I)Z#19",
+      "symbol": "L:ec.b(I)Z#18",
       "to": "candidateIndex",
       "originalName": "var12",
       "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
     },
     {
-      "symbol": "L:ec.b(I)Z#5",
+      "symbol": "L:ec.b(I)Z#4",
       "to": "sortInsertionIndex",
       "originalName": "var1_int",
       "evidence": "Outer insertion-sort cursor starting at one. Later receives candidateIndex zero before candidate traversal; it is not the traversal cursor."
     },
     {
-      "symbol": "L:ec.b(I)Z#7",
+      "symbol": "L:ec.b(I)Z#6",
       "to": "sortCursorThenFirstEntityId",
       "originalName": "var2",
       "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
     },
     {
-      "symbol": "L:ec.b(I)Z#8",
+      "symbol": "L:ec.b(I)Z#7",
       "to": "packedCandidateThenSecondEntityId",
       "originalName": "var3",
       "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
     },
     {
-      "symbol": "L:ec.b(I)Z#9",
+      "symbol": "L:ec.b(I)Z#8",
       "to": "thirdEntityId",
       "originalName": "var4",
+      "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
+    },
+    {
+      "symbol": "L:ec.b(I)Z#9",
+      "to": "firstMatchedEntity",
+      "originalName": "var5",
       "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
     },
     {
@@ -3443,22 +3443,28 @@
       "evidence": "Captures the first entity neighbor count before increment, then indexes the reciprocal append."
     },
     {
-      "symbol": "L:ik.a(Lja;Lja;Z)Z#16",
+      "symbol": "L:ik.a(Lja;Lja;Z)Z#15",
       "originalName": "var3_int",
       "to": "neighborIndexThenDetachSecond",
       "evidence": "First searches the second neighbor list; after no duplicate exists, becomes its Boolean detach flag and final return value. Both roles are retained."
     },
     {
-      "symbol": "L:ik.a(Lja;Lja;Z)Z#18",
+      "symbol": "L:ik.a(Lja;Lja;Z)Z#17",
       "originalName": "var4",
       "to": "detachFirst",
       "evidence": "Flags first-entity reciprocal unlink, count reset, avatar-contact clearing and transfer marker to moving entities."
     },
     {
-      "symbol": "L:ik.a(Lja;Lja;Z)Z#19",
+      "symbol": "L:ik.a(Lja;Lja;Z)Z#18",
       "originalName": "var5_int",
       "to": "variantPropagationThenNeighborIndex",
       "evidence": "Initially selects variant propagation through bh.a; later reuses the slot to walk neighbors while detaching either entity."
+    },
+    {
+      "symbol": "L:ik.a(Lja;Lja;Z)Z#19",
+      "originalName": "var5",
+      "to": "entityForNeighborCountReset",
+      "evidence": "Aliases either detaching entity while zeroing its related-entity count; does not permanently identify first or second."
     },
     {
       "symbol": "L:ik.a(Lja;Lja;Z)Z#2",
@@ -3468,18 +3474,12 @@
     },
     {
       "symbol": "L:ik.a(Lja;Lja;Z)Z#20",
-      "originalName": "var5",
-      "to": "entityForNeighborCountReset",
-      "evidence": "Aliases either detaching entity while zeroing its related-entity count; does not permanently identify first or second."
-    },
-    {
-      "symbol": "L:ik.a(Lja;Lja;Z)Z#21",
       "originalName": "var6_int",
       "to": "propagateCategory",
       "evidence": "Selects the category/kind propagation flag passed as bh.a first argument after special-kind contacts."
     },
     {
-      "symbol": "L:ik.a(Lja;Lja;Z)Z#22",
+      "symbol": "L:ik.a(Lja;Lja;Z)Z#21",
       "originalName": "var6",
       "to": "entityForVariantCountReset",
       "evidence": "Aliases either detaching entity while zeroing its same-variant neighbor count; does not permanently identify first or second."
@@ -4088,118 +4088,112 @@
       "symbol": "L:ld.a(I)Z#1",
       "to": "leftCardinalHit",
       "originalName": "stackIn_4_0",
-      "evidence": "Carries integer true from the first nonzero pixel at (90,240) to result arm zero."
+      "evidence": "Carries integer true from the first nonzero pixel at (90,240) to the immediate return on this path inside the try."
     },
     {
       "symbol": "L:ld.a(I)Z#10",
       "to": "lowerNearRightHit",
       "originalName": "stackIn_37_0",
-      "evidence": "Carries integer true from lowerNearRowCenterIndex plus circleHorizontalOffset to result arm nine."
+      "evidence": "Carries integer true from lowerNearRowCenterIndex plus circleHorizontalOffset to the immediate return on this path inside the try."
     },
     {
       "symbol": "L:ld.a(I)Z#11",
       "to": "lowerFarLeftHit",
       "originalName": "stackIn_41_0",
-      "evidence": "Carries integer true from lowerFarRowCenterIndex minus circleVerticalOffset to result arm ten."
+      "evidence": "Carries integer true from lowerFarRowCenterIndex minus circleVerticalOffset to the immediate return on this path inside the try."
     },
     {
       "symbol": "L:ld.a(I)Z#12",
       "to": "lowerFarRightHit",
       "originalName": "stackIn_45_0",
-      "evidence": "Carries integer true from lowerFarRowCenterIndex plus circleVerticalOffset to result arm eleven."
+      "evidence": "Carries integer true from lowerFarRowCenterIndex plus circleVerticalOffset to the immediate return on this path inside the try."
     },
     {
       "symbol": "L:ld.a(I)Z#13",
       "to": "boundaryScanMissResult",
       "originalName": "stackIn_47_0",
-      "evidence": "Carries integer false when the vertical octant offset passes the horizontal offset; result arm twelve returns it. It is not a flag set true on a miss."
+      "evidence": "Carries integer false when the vertical octant offset passes the horizontal offset; the immediate return ends the scan. It is not a flag set true on a miss."
     },
     {
       "symbol": "L:ld.a(I)Z#14",
-      "to": "boundaryResultArmId",
-      "originalName": "decompiledRegionSelector0",
-      "evidence": "Selects the retained post-try result arm, zero through twelve; the twelve hit arms return integer true and the final miss arm returns false. No dispatch loop or enum is introduced."
-    },
-    {
-      "symbol": "L:ld.a(I)Z#15",
       "to": "caughtBoundaryScanFailure",
       "originalName": "decompiledCaughtException",
       "evidence": "Stores the caught RuntimeException before passing it through the retained alias to t.a."
     },
     {
-      "symbol": "L:ld.a(I)Z#16",
+      "symbol": "L:ld.a(I)Z#15",
       "to": "upperNearRowCenterIndex",
       "originalName": "var1_int",
       "evidence": "Starts at (320,240) and subtracts one framebuffer stride each vertical step, representing the center-column address on row 240-circleVerticalOffset."
     },
     {
-      "symbol": "L:ld.a(I)Z#17",
+      "symbol": "L:ld.a(I)Z#16",
       "to": "boundaryScanFailureForContext",
       "originalName": "var1",
       "evidence": "Aliases caughtBoundaryScanFailure for the retained ld.B exception-context wrapper."
     },
     {
-      "symbol": "L:ld.a(I)Z#18",
+      "symbol": "L:ld.a(I)Z#17",
       "to": "lowerNearRowCenterIndex",
       "originalName": "var2",
       "evidence": "Starts at (320,240) and adds one stride each vertical step, representing row 240+circleVerticalOffset at column 320."
     },
     {
-      "symbol": "L:ld.a(I)Z#19",
+      "symbol": "L:ld.a(I)Z#18",
       "to": "upperFarRowCenterIndex",
       "originalName": "var3",
       "evidence": "Starts at (320,10) and adds a stride when circleHorizontalOffset decreases, representing row 240-circleHorizontalOffset at column 320."
     },
     {
-      "symbol": "L:ld.a(I)Z#2",
-      "to": "rightCardinalHit",
-      "originalName": "stackIn_7_0",
-      "evidence": "Carries integer true from the nonzero pixel at (550,240) to result arm one."
-    },
-    {
-      "symbol": "L:ld.a(I)Z#20",
+      "symbol": "L:ld.a(I)Z#19",
       "to": "lowerFarRowCenterIndex",
       "originalName": "var4",
       "evidence": "Starts at (320,470) and subtracts a stride when circleHorizontalOffset decreases, representing row 240+circleHorizontalOffset at column 320."
     },
     {
-      "symbol": "L:ld.a(I)Z#21",
+      "symbol": "L:ld.a(I)Z#2",
+      "to": "rightCardinalHit",
+      "originalName": "stackIn_7_0",
+      "evidence": "Carries integer true from the nonzero pixel at (550,240) to the immediate return on this path inside the try."
+    },
+    {
+      "symbol": "L:ld.a(I)Z#20",
       "to": "circleHorizontalOffset",
       "originalName": "var5",
       "evidence": "The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions."
     },
     {
-      "symbol": "L:ld.a(I)Z#22",
+      "symbol": "L:ld.a(I)Z#21",
       "to": "circleVerticalOffset",
       "originalName": "var6",
       "evidence": "The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions."
     },
     {
-      "symbol": "L:ld.a(I)Z#23",
+      "symbol": "L:ld.a(I)Z#22",
       "to": "playfieldRadiusSquared",
       "originalName": "var7",
       "evidence": "The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions."
     },
     {
-      "symbol": "L:ld.a(I)Z#24",
+      "symbol": "L:ld.a(I)Z#23",
       "to": "guardDivisionResult",
       "originalName": "var8",
       "evidence": "Retains the otherwise unused 64/((methodGuard-32)/34) computation before any framebuffer read. Native guard cases verify ArithmeticException precedence and context."
     },
     {
-      "symbol": "L:ld.a(I)Z#25",
+      "symbol": "L:ld.a(I)Z#24",
       "to": "circleError",
       "originalName": "var9",
       "evidence": "The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions."
     },
     {
-      "symbol": "L:ld.a(I)Z#26",
+      "symbol": "L:ld.a(I)Z#25",
       "to": "clientControlFlowGuard",
       "originalName": "var10",
       "evidence": "Retains the initial Geoblox.field_C read; its stored value is unused in this method. Matrix checks run with zero and one without removing the read."
     },
     {
-      "symbol": "L:ld.a(I)Z#27",
+      "symbol": "L:ld.a(I)Z#26",
       "to": "boundaryScanFailure",
       "originalName": "decompiledCaughtParameter0",
       "evidence": "Catch parameter for RuntimeException from guard arithmetic or framebuffer reads; transferred through two retained aliases before wrapping."
@@ -4208,43 +4202,43 @@
       "symbol": "L:ld.a(I)Z#3",
       "to": "topCardinalHit",
       "originalName": "stackIn_11_0",
-      "evidence": "Carries integer true from the nonzero pixel at (320,10) to result arm two."
+      "evidence": "Carries integer true from the nonzero pixel at (320,10) to the immediate return on this path inside the try."
     },
     {
       "symbol": "L:ld.a(I)Z#4",
       "to": "bottomCardinalHit",
       "originalName": "stackIn_15_0",
-      "evidence": "Carries integer true from the nonzero pixel at (320,470) to result arm three."
+      "evidence": "Carries integer true from the nonzero pixel at (320,470) to the immediate return on this path inside the try."
     },
     {
       "symbol": "L:ld.a(I)Z#5",
       "to": "upperFarLeftHit",
       "originalName": "stackIn_21_0",
-      "evidence": "Carries integer true from upperFarRowCenterIndex minus circleVerticalOffset to result arm four."
+      "evidence": "Carries integer true from upperFarRowCenterIndex minus circleVerticalOffset to the immediate return on this path inside the try."
     },
     {
       "symbol": "L:ld.a(I)Z#6",
       "to": "upperFarRightHit",
       "originalName": "stackIn_24_0",
-      "evidence": "Carries integer true from upperFarRowCenterIndex plus circleVerticalOffset to result arm five."
+      "evidence": "Carries integer true from upperFarRowCenterIndex plus circleVerticalOffset to the immediate return on this path inside the try."
     },
     {
       "symbol": "L:ld.a(I)Z#7",
       "to": "upperNearLeftHit",
       "originalName": "stackIn_27_0",
-      "evidence": "Carries integer true from upperNearRowCenterIndex minus circleHorizontalOffset to result arm six."
+      "evidence": "Carries integer true from upperNearRowCenterIndex minus circleHorizontalOffset to the immediate return on this path inside the try."
     },
     {
       "symbol": "L:ld.a(I)Z#8",
       "to": "upperNearRightHit",
       "originalName": "stackIn_30_0",
-      "evidence": "Carries integer true from upperNearRowCenterIndex plus circleHorizontalOffset to result arm seven."
+      "evidence": "Carries integer true from upperNearRowCenterIndex plus circleHorizontalOffset to the immediate return on this path inside the try."
     },
     {
       "symbol": "L:ld.a(I)Z#9",
       "to": "lowerNearLeftHit",
       "originalName": "stackIn_34_0",
-      "evidence": "Carries integer true from lowerNearRowCenterIndex minus circleHorizontalOffset to result arm eight."
+      "evidence": "Carries integer true from lowerNearRowCenterIndex minus circleHorizontalOffset to the immediate return on this path inside the try."
     },
     {
       "symbol": "L:n.a(IIIIBIIII)[Ldm;#10",
@@ -4332,68 +4326,68 @@
     },
     {
       "symbol": "L:sk.a(I)Z#10",
-      "to": "staggeredLifetime",
-      "originalName": "var5",
-      "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
-    },
-    {
-      "symbol": "L:sk.a(I)Z#11",
       "to": "cascadeEntity",
       "originalName": "var6",
       "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
     },
     {
-      "symbol": "L:sk.a(I)Z#12",
+      "symbol": "L:sk.a(I)Z#11",
       "to": "neighborIndex",
       "originalName": "var7",
       "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
     },
     {
-      "symbol": "L:sk.a(I)Z#13",
+      "symbol": "L:sk.a(I)Z#12",
       "to": "neighborEntity",
       "originalName": "var8",
       "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
     },
     {
-      "symbol": "L:sk.a(I)Z#14",
+      "symbol": "L:sk.a(I)Z#13",
       "to": "searchedEntity",
       "originalName": "var9",
       "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
     },
     {
-      "symbol": "L:sk.a(I)Z#16",
+      "symbol": "L:sk.a(I)Z#15",
       "to": "seedEntity",
       "originalName": "var11",
       "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
     },
     {
-      "symbol": "L:sk.a(I)Z#17",
+      "symbol": "L:sk.a(I)Z#16",
       "to": "cascadeFrontier",
       "originalName": "var12",
       "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
     },
     {
-      "symbol": "L:sk.a(I)Z#5",
+      "symbol": "L:sk.a(I)Z#4",
       "to": "farthestEntity",
       "originalName": "var1",
       "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
     },
     {
-      "symbol": "L:sk.a(I)Z#7",
+      "symbol": "L:sk.a(I)Z#6",
       "to": "farthestRadiusSquared",
       "originalName": "var2",
       "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
     },
     {
-      "symbol": "L:sk.a(I)Z#8",
+      "symbol": "L:sk.a(I)Z#7",
       "to": "candidateEntity",
       "originalName": "var3",
       "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
     },
     {
-      "symbol": "L:sk.a(I)Z#9",
+      "symbol": "L:sk.a(I)Z#8",
       "to": "visitedCascadeEntities",
       "originalName": "var4",
+      "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
+    },
+    {
+      "symbol": "L:sk.a(I)Z#9",
+      "to": "staggeredLifetime",
+      "originalName": "var5",
       "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
     },
     {
@@ -7038,18 +7032,18 @@
     }
   ],
   "revision": 4,
-  "version": 29,
+  "version": 30,
   "generators": {
     "dekoblokoWork": {
       "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "67f22895e4161b3e81a7ceb93273b6680be7d2f0",
+      "commit": "2f75cefb09f32e164f77b7f4adc6fd011d922f43",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "ac8734ac19b0447c2aad49c20af07562f4e9d22c862c97c465b465b6e858a86f",
-        "reproduce": "git archive --format=tar 67f22895e4161b3e81a7ceb93273b6680be7d2f0 | sha256sum",
+        "sha256": "8e6ff3d4a6c5439128cbbad964491358c73c92c2e6e0a0ff82edadda478a612e",
+        "reproduce": "git archive --format=tar 2f75cefb09f32e164f77b7f4adc6fd011d922f43 | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
@@ -7058,259 +7052,949 @@
   "publication": {
     "format": 1,
     "previousRules": {
-      "commit": "87b6fdf86add66e9991e00dd400cdef5c396c58f",
+      "commit": "e6f3bda07aba672669d4281953824f5e37f7af88",
       "path": "readable/geoblox-rules.json",
-      "sha256": "8554cf52c3de3d91499bfcc7229887c715278a1d2aa68022acab260bb8725b4e"
+      "sha256": "b6c312be17b74553051633fa94547a7b2dac97d92e97fd3e47904b218b20c60b"
     },
     "ruleChanges": [
       {
-        "symbol": "L:ld.a(I)Z#0",
+        "symbol": "L:c.a(ZBII)V#10",
         "before": null,
         "after": {
-          "symbol": "L:ld.a(I)Z#0",
-          "to": "previousCircleVerticalOffset",
-          "originalName": "incrementValue$0",
-          "evidence": "Preserves circleVerticalOffset before increment so the error recurrence adds old plus new vertical offsets."
+          "symbol": "L:c.a(ZBII)V#10",
+          "originalName": "var6",
+          "to": "actionId",
+          "evidence": "Value read from per-screen action ID array using item index; drives action-specific branches."
         }
       },
       {
-        "symbol": "L:ld.a(I)Z#1",
+        "symbol": "L:c.a(ZBII)V#11",
+        "before": {
+          "symbol": "L:c.a(ZBII)V#11",
+          "originalName": "var6",
+          "to": "actionId",
+          "evidence": "Value read from per-screen action ID array using item index; drives action-specific branches."
+        },
+        "after": null
+      },
+      {
+        "symbol": "L:c.b(IB)V#5",
         "before": null,
         "after": {
+          "symbol": "L:c.b(IB)V#5",
+          "originalName": "var5",
+          "to": "actionId",
+          "evidence": "Value read from per-screen action ID array using item index; drives action-specific branches."
+        }
+      },
+      {
+        "symbol": "L:c.b(IB)V#6",
+        "before": {
+          "symbol": "L:c.b(IB)V#6",
+          "originalName": "var5",
+          "to": "actionId",
+          "evidence": "Value read from per-screen action ID array using item index; drives action-specific branches."
+        },
+        "after": null
+      },
+      {
+        "symbol": "L:ec.b(I)Z#10",
+        "before": {
+          "symbol": "L:ec.b(I)Z#10",
+          "to": "firstMatchedEntity",
+          "originalName": "var5",
+          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
+        },
+        "after": {
+          "symbol": "L:ec.b(I)Z#10",
+          "to": "secondMatchedEntity",
+          "originalName": "var6",
+          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
+        }
+      },
+      {
+        "symbol": "L:ec.b(I)Z#11",
+        "before": {
+          "symbol": "L:ec.b(I)Z#11",
+          "to": "secondMatchedEntity",
+          "originalName": "var6",
+          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
+        },
+        "after": {
+          "symbol": "L:ec.b(I)Z#11",
+          "to": "thirdMatchedEntity",
+          "originalName": "var7",
+          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
+        }
+      },
+      {
+        "symbol": "L:ec.b(I)Z#12",
+        "before": {
+          "symbol": "L:ec.b(I)Z#12",
+          "to": "thirdMatchedEntity",
+          "originalName": "var7",
+          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
+        },
+        "after": {
+          "symbol": "L:ec.b(I)Z#12",
+          "to": "awardedPoints",
+          "originalName": "var8",
+          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
+        }
+      },
+      {
+        "symbol": "L:ec.b(I)Z#13",
+        "before": {
+          "symbol": "L:ec.b(I)Z#13",
+          "to": "awardedPoints",
+          "originalName": "var8",
+          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
+        },
+        "after": {
+          "symbol": "L:ec.b(I)Z#13",
+          "to": "firstBlockedEntity",
+          "originalName": "var8_ref_ja",
+          "evidence": "Alias of firstMatchedEntity on the cooldown-blocked path, immediately before its entityQueue marker is cleared."
+        }
+      },
+      {
+        "symbol": "L:ec.b(I)Z#14",
+        "before": {
+          "symbol": "L:ec.b(I)Z#14",
+          "to": "firstBlockedEntity",
+          "originalName": "var8_ref_ja",
+          "evidence": "Alias of firstMatchedEntity on the cooldown-blocked path, immediately before its entityQueue marker is cleared."
+        },
+        "after": {
+          "symbol": "L:ec.b(I)Z#14",
+          "to": "popupX",
+          "originalName": "var9",
+          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
+        }
+      },
+      {
+        "symbol": "L:ec.b(I)Z#15",
+        "before": {
+          "symbol": "L:ec.b(I)Z#15",
+          "to": "popupX",
+          "originalName": "var9",
+          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
+        },
+        "after": {
+          "symbol": "L:ec.b(I)Z#15",
+          "to": "secondBlockedEntity",
+          "originalName": "var9_ref_ja",
+          "evidence": "Alias of secondMatchedEntity on the cooldown-blocked path, immediately before its entityQueue marker is cleared."
+        }
+      },
+      {
+        "symbol": "L:ec.b(I)Z#16",
+        "before": {
+          "symbol": "L:ec.b(I)Z#16",
+          "to": "secondBlockedEntity",
+          "originalName": "var9_ref_ja",
+          "evidence": "Alias of secondMatchedEntity on the cooldown-blocked path, immediately before its entityQueue marker is cleared."
+        },
+        "after": {
+          "symbol": "L:ec.b(I)Z#16",
+          "to": "popupY",
+          "originalName": "var10",
+          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
+        }
+      },
+      {
+        "symbol": "L:ec.b(I)Z#17",
+        "before": {
+          "symbol": "L:ec.b(I)Z#17",
+          "to": "popupY",
+          "originalName": "var10",
+          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
+        },
+        "after": {
+          "symbol": "L:ec.b(I)Z#17",
+          "to": "controlFlowGuard",
+          "originalName": "var11",
+          "evidence": "Retained entry snapshot of Geoblox.field_C; unused in the generated processMatchCandidates body."
+        }
+      },
+      {
+        "symbol": "L:ec.b(I)Z#18",
+        "before": {
+          "symbol": "L:ec.b(I)Z#18",
+          "to": "controlFlowGuard",
+          "originalName": "var11",
+          "evidence": "Retained entry snapshot of Geoblox.field_C; unused in the generated processMatchCandidates body."
+        },
+        "after": {
+          "symbol": "L:ec.b(I)Z#18",
+          "to": "candidateIndex",
+          "originalName": "var12",
+          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
+        }
+      },
+      {
+        "symbol": "L:ec.b(I)Z#19",
+        "before": {
+          "symbol": "L:ec.b(I)Z#19",
+          "to": "candidateIndex",
+          "originalName": "var12",
+          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
+        },
+        "after": null
+      },
+      {
+        "symbol": "L:ec.b(I)Z#4",
+        "before": null,
+        "after": {
+          "symbol": "L:ec.b(I)Z#4",
+          "to": "sortInsertionIndex",
+          "originalName": "var1_int",
+          "evidence": "Outer insertion-sort cursor starting at one. Later receives candidateIndex zero before candidate traversal; it is not the traversal cursor."
+        }
+      },
+      {
+        "symbol": "L:ec.b(I)Z#5",
+        "before": {
+          "symbol": "L:ec.b(I)Z#5",
+          "to": "sortInsertionIndex",
+          "originalName": "var1_int",
+          "evidence": "Outer insertion-sort cursor starting at one. Later receives candidateIndex zero before candidate traversal; it is not the traversal cursor."
+        },
+        "after": null
+      },
+      {
+        "symbol": "L:ec.b(I)Z#6",
+        "before": null,
+        "after": {
+          "symbol": "L:ec.b(I)Z#6",
+          "to": "sortCursorThenFirstEntityId",
+          "originalName": "var2",
+          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
+        }
+      },
+      {
+        "symbol": "L:ec.b(I)Z#7",
+        "before": {
+          "symbol": "L:ec.b(I)Z#7",
+          "to": "sortCursorThenFirstEntityId",
+          "originalName": "var2",
+          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
+        },
+        "after": {
+          "symbol": "L:ec.b(I)Z#7",
+          "to": "packedCandidateThenSecondEntityId",
+          "originalName": "var3",
+          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
+        }
+      },
+      {
+        "symbol": "L:ec.b(I)Z#8",
+        "before": {
+          "symbol": "L:ec.b(I)Z#8",
+          "to": "packedCandidateThenSecondEntityId",
+          "originalName": "var3",
+          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
+        },
+        "after": {
+          "symbol": "L:ec.b(I)Z#8",
+          "to": "thirdEntityId",
+          "originalName": "var4",
+          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
+        }
+      },
+      {
+        "symbol": "L:ec.b(I)Z#9",
+        "before": {
+          "symbol": "L:ec.b(I)Z#9",
+          "to": "thirdEntityId",
+          "originalName": "var4",
+          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
+        },
+        "after": {
+          "symbol": "L:ec.b(I)Z#9",
+          "to": "firstMatchedEntity",
+          "originalName": "var5",
+          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
+        }
+      },
+      {
+        "symbol": "L:ik.a(Lja;Lja;Z)Z#15",
+        "before": null,
+        "after": {
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#15",
+          "originalName": "var3_int",
+          "to": "neighborIndexThenDetachSecond",
+          "evidence": "First searches the second neighbor list; after no duplicate exists, becomes its Boolean detach flag and final return value. Both roles are retained."
+        }
+      },
+      {
+        "symbol": "L:ik.a(Lja;Lja;Z)Z#16",
+        "before": {
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#16",
+          "originalName": "var3_int",
+          "to": "neighborIndexThenDetachSecond",
+          "evidence": "First searches the second neighbor list; after no duplicate exists, becomes its Boolean detach flag and final return value. Both roles are retained."
+        },
+        "after": null
+      },
+      {
+        "symbol": "L:ik.a(Lja;Lja;Z)Z#17",
+        "before": null,
+        "after": {
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#17",
+          "originalName": "var4",
+          "to": "detachFirst",
+          "evidence": "Flags first-entity reciprocal unlink, count reset, avatar-contact clearing and transfer marker to moving entities."
+        }
+      },
+      {
+        "symbol": "L:ik.a(Lja;Lja;Z)Z#18",
+        "before": {
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#18",
+          "originalName": "var4",
+          "to": "detachFirst",
+          "evidence": "Flags first-entity reciprocal unlink, count reset, avatar-contact clearing and transfer marker to moving entities."
+        },
+        "after": {
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#18",
+          "originalName": "var5_int",
+          "to": "variantPropagationThenNeighborIndex",
+          "evidence": "Initially selects variant propagation through bh.a; later reuses the slot to walk neighbors while detaching either entity."
+        }
+      },
+      {
+        "symbol": "L:ik.a(Lja;Lja;Z)Z#19",
+        "before": {
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#19",
+          "originalName": "var5_int",
+          "to": "variantPropagationThenNeighborIndex",
+          "evidence": "Initially selects variant propagation through bh.a; later reuses the slot to walk neighbors while detaching either entity."
+        },
+        "after": {
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#19",
+          "originalName": "var5",
+          "to": "entityForNeighborCountReset",
+          "evidence": "Aliases either detaching entity while zeroing its related-entity count; does not permanently identify first or second."
+        }
+      },
+      {
+        "symbol": "L:ik.a(Lja;Lja;Z)Z#20",
+        "before": {
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#20",
+          "originalName": "var5",
+          "to": "entityForNeighborCountReset",
+          "evidence": "Aliases either detaching entity while zeroing its related-entity count; does not permanently identify first or second."
+        },
+        "after": {
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#20",
+          "originalName": "var6_int",
+          "to": "propagateCategory",
+          "evidence": "Selects the category/kind propagation flag passed as bh.a first argument after special-kind contacts."
+        }
+      },
+      {
+        "symbol": "L:ik.a(Lja;Lja;Z)Z#21",
+        "before": {
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#21",
+          "originalName": "var6_int",
+          "to": "propagateCategory",
+          "evidence": "Selects the category/kind propagation flag passed as bh.a first argument after special-kind contacts."
+        },
+        "after": {
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#21",
+          "originalName": "var6",
+          "to": "entityForVariantCountReset",
+          "evidence": "Aliases either detaching entity while zeroing its same-variant neighbor count; does not permanently identify first or second."
+        }
+      },
+      {
+        "symbol": "L:ik.a(Lja;Lja;Z)Z#22",
+        "before": {
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#22",
+          "originalName": "var6",
+          "to": "entityForVariantCountReset",
+          "evidence": "Aliases either detaching entity while zeroing its same-variant neighbor count; does not permanently identify first or second."
+        },
+        "after": null
+      },
+      {
+        "symbol": "L:ld.a(I)Z#1",
+        "before": {
           "symbol": "L:ld.a(I)Z#1",
           "to": "leftCardinalHit",
           "originalName": "stackIn_4_0",
           "evidence": "Carries integer true from the first nonzero pixel at (90,240) to result arm zero."
+        },
+        "after": {
+          "symbol": "L:ld.a(I)Z#1",
+          "to": "leftCardinalHit",
+          "originalName": "stackIn_4_0",
+          "evidence": "Carries integer true from the first nonzero pixel at (90,240) to the immediate return on this path inside the try."
         }
       },
       {
         "symbol": "L:ld.a(I)Z#10",
-        "before": null,
-        "after": {
+        "before": {
           "symbol": "L:ld.a(I)Z#10",
           "to": "lowerNearRightHit",
           "originalName": "stackIn_37_0",
           "evidence": "Carries integer true from lowerNearRowCenterIndex plus circleHorizontalOffset to result arm nine."
+        },
+        "after": {
+          "symbol": "L:ld.a(I)Z#10",
+          "to": "lowerNearRightHit",
+          "originalName": "stackIn_37_0",
+          "evidence": "Carries integer true from lowerNearRowCenterIndex plus circleHorizontalOffset to the immediate return on this path inside the try."
         }
       },
       {
         "symbol": "L:ld.a(I)Z#11",
-        "before": null,
-        "after": {
+        "before": {
           "symbol": "L:ld.a(I)Z#11",
           "to": "lowerFarLeftHit",
           "originalName": "stackIn_41_0",
           "evidence": "Carries integer true from lowerFarRowCenterIndex minus circleVerticalOffset to result arm ten."
+        },
+        "after": {
+          "symbol": "L:ld.a(I)Z#11",
+          "to": "lowerFarLeftHit",
+          "originalName": "stackIn_41_0",
+          "evidence": "Carries integer true from lowerFarRowCenterIndex minus circleVerticalOffset to the immediate return on this path inside the try."
         }
       },
       {
         "symbol": "L:ld.a(I)Z#12",
-        "before": null,
-        "after": {
+        "before": {
           "symbol": "L:ld.a(I)Z#12",
           "to": "lowerFarRightHit",
           "originalName": "stackIn_45_0",
           "evidence": "Carries integer true from lowerFarRowCenterIndex plus circleVerticalOffset to result arm eleven."
+        },
+        "after": {
+          "symbol": "L:ld.a(I)Z#12",
+          "to": "lowerFarRightHit",
+          "originalName": "stackIn_45_0",
+          "evidence": "Carries integer true from lowerFarRowCenterIndex plus circleVerticalOffset to the immediate return on this path inside the try."
         }
       },
       {
         "symbol": "L:ld.a(I)Z#13",
-        "before": null,
-        "after": {
+        "before": {
           "symbol": "L:ld.a(I)Z#13",
           "to": "boundaryScanMissResult",
           "originalName": "stackIn_47_0",
           "evidence": "Carries integer false when the vertical octant offset passes the horizontal offset; result arm twelve returns it. It is not a flag set true on a miss."
+        },
+        "after": {
+          "symbol": "L:ld.a(I)Z#13",
+          "to": "boundaryScanMissResult",
+          "originalName": "stackIn_47_0",
+          "evidence": "Carries integer false when the vertical octant offset passes the horizontal offset; the immediate return ends the scan. It is not a flag set true on a miss."
         }
       },
       {
         "symbol": "L:ld.a(I)Z#14",
-        "before": null,
-        "after": {
+        "before": {
           "symbol": "L:ld.a(I)Z#14",
           "to": "boundaryResultArmId",
           "originalName": "decompiledRegionSelector0",
           "evidence": "Selects the retained post-try result arm, zero through twelve; the twelve hit arms return integer true and the final miss arm returns false. No dispatch loop or enum is introduced."
-        }
-      },
-      {
-        "symbol": "L:ld.a(I)Z#15",
-        "before": null,
+        },
         "after": {
-          "symbol": "L:ld.a(I)Z#15",
+          "symbol": "L:ld.a(I)Z#14",
           "to": "caughtBoundaryScanFailure",
           "originalName": "decompiledCaughtException",
           "evidence": "Stores the caught RuntimeException before passing it through the retained alias to t.a."
         }
       },
       {
-        "symbol": "L:ld.a(I)Z#16",
-        "before": null,
+        "symbol": "L:ld.a(I)Z#15",
+        "before": {
+          "symbol": "L:ld.a(I)Z#15",
+          "to": "caughtBoundaryScanFailure",
+          "originalName": "decompiledCaughtException",
+          "evidence": "Stores the caught RuntimeException before passing it through the retained alias to t.a."
+        },
         "after": {
-          "symbol": "L:ld.a(I)Z#16",
+          "symbol": "L:ld.a(I)Z#15",
           "to": "upperNearRowCenterIndex",
           "originalName": "var1_int",
           "evidence": "Starts at (320,240) and subtracts one framebuffer stride each vertical step, representing the center-column address on row 240-circleVerticalOffset."
         }
       },
       {
-        "symbol": "L:ld.a(I)Z#17",
-        "before": null,
+        "symbol": "L:ld.a(I)Z#16",
+        "before": {
+          "symbol": "L:ld.a(I)Z#16",
+          "to": "upperNearRowCenterIndex",
+          "originalName": "var1_int",
+          "evidence": "Starts at (320,240) and subtracts one framebuffer stride each vertical step, representing the center-column address on row 240-circleVerticalOffset."
+        },
         "after": {
-          "symbol": "L:ld.a(I)Z#17",
+          "symbol": "L:ld.a(I)Z#16",
           "to": "boundaryScanFailureForContext",
           "originalName": "var1",
           "evidence": "Aliases caughtBoundaryScanFailure for the retained ld.B exception-context wrapper."
         }
       },
       {
-        "symbol": "L:ld.a(I)Z#18",
-        "before": null,
+        "symbol": "L:ld.a(I)Z#17",
+        "before": {
+          "symbol": "L:ld.a(I)Z#17",
+          "to": "boundaryScanFailureForContext",
+          "originalName": "var1",
+          "evidence": "Aliases caughtBoundaryScanFailure for the retained ld.B exception-context wrapper."
+        },
         "after": {
-          "symbol": "L:ld.a(I)Z#18",
+          "symbol": "L:ld.a(I)Z#17",
           "to": "lowerNearRowCenterIndex",
           "originalName": "var2",
           "evidence": "Starts at (320,240) and adds one stride each vertical step, representing row 240+circleVerticalOffset at column 320."
         }
       },
       {
-        "symbol": "L:ld.a(I)Z#19",
-        "before": null,
+        "symbol": "L:ld.a(I)Z#18",
+        "before": {
+          "symbol": "L:ld.a(I)Z#18",
+          "to": "lowerNearRowCenterIndex",
+          "originalName": "var2",
+          "evidence": "Starts at (320,240) and adds one stride each vertical step, representing row 240+circleVerticalOffset at column 320."
+        },
         "after": {
-          "symbol": "L:ld.a(I)Z#19",
+          "symbol": "L:ld.a(I)Z#18",
           "to": "upperFarRowCenterIndex",
           "originalName": "var3",
           "evidence": "Starts at (320,10) and adds a stride when circleHorizontalOffset decreases, representing row 240-circleHorizontalOffset at column 320."
         }
       },
       {
-        "symbol": "L:ld.a(I)Z#2",
-        "before": null,
+        "symbol": "L:ld.a(I)Z#19",
+        "before": {
+          "symbol": "L:ld.a(I)Z#19",
+          "to": "upperFarRowCenterIndex",
+          "originalName": "var3",
+          "evidence": "Starts at (320,10) and adds a stride when circleHorizontalOffset decreases, representing row 240-circleHorizontalOffset at column 320."
+        },
         "after": {
-          "symbol": "L:ld.a(I)Z#2",
-          "to": "rightCardinalHit",
-          "originalName": "stackIn_7_0",
-          "evidence": "Carries integer true from the nonzero pixel at (550,240) to result arm one."
-        }
-      },
-      {
-        "symbol": "L:ld.a(I)Z#20",
-        "before": null,
-        "after": {
-          "symbol": "L:ld.a(I)Z#20",
+          "symbol": "L:ld.a(I)Z#19",
           "to": "lowerFarRowCenterIndex",
           "originalName": "var4",
           "evidence": "Starts at (320,470) and subtracts a stride when circleHorizontalOffset decreases, representing row 240+circleHorizontalOffset at column 320."
         }
       },
       {
-        "symbol": "L:ld.a(I)Z#24",
-        "before": null,
+        "symbol": "L:ld.a(I)Z#2",
+        "before": {
+          "symbol": "L:ld.a(I)Z#2",
+          "to": "rightCardinalHit",
+          "originalName": "stackIn_7_0",
+          "evidence": "Carries integer true from the nonzero pixel at (550,240) to result arm one."
+        },
         "after": {
-          "symbol": "L:ld.a(I)Z#24",
+          "symbol": "L:ld.a(I)Z#2",
+          "to": "rightCardinalHit",
+          "originalName": "stackIn_7_0",
+          "evidence": "Carries integer true from the nonzero pixel at (550,240) to the immediate return on this path inside the try."
+        }
+      },
+      {
+        "symbol": "L:ld.a(I)Z#20",
+        "before": {
+          "symbol": "L:ld.a(I)Z#20",
+          "to": "lowerFarRowCenterIndex",
+          "originalName": "var4",
+          "evidence": "Starts at (320,470) and subtracts a stride when circleHorizontalOffset decreases, representing row 240+circleHorizontalOffset at column 320."
+        },
+        "after": {
+          "symbol": "L:ld.a(I)Z#20",
+          "to": "circleHorizontalOffset",
+          "originalName": "var5",
+          "evidence": "The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions."
+        }
+      },
+      {
+        "symbol": "L:ld.a(I)Z#21",
+        "before": {
+          "symbol": "L:ld.a(I)Z#21",
+          "to": "circleHorizontalOffset",
+          "originalName": "var5",
+          "evidence": "The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions."
+        },
+        "after": {
+          "symbol": "L:ld.a(I)Z#21",
+          "to": "circleVerticalOffset",
+          "originalName": "var6",
+          "evidence": "The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions."
+        }
+      },
+      {
+        "symbol": "L:ld.a(I)Z#22",
+        "before": {
+          "symbol": "L:ld.a(I)Z#22",
+          "to": "circleVerticalOffset",
+          "originalName": "var6",
+          "evidence": "The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions."
+        },
+        "after": {
+          "symbol": "L:ld.a(I)Z#22",
+          "to": "playfieldRadiusSquared",
+          "originalName": "var7",
+          "evidence": "The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions."
+        }
+      },
+      {
+        "symbol": "L:ld.a(I)Z#23",
+        "before": {
+          "symbol": "L:ld.a(I)Z#23",
+          "to": "playfieldRadiusSquared",
+          "originalName": "var7",
+          "evidence": "The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions."
+        },
+        "after": {
+          "symbol": "L:ld.a(I)Z#23",
           "to": "guardDivisionResult",
           "originalName": "var8",
           "evidence": "Retains the otherwise unused 64/((methodGuard-32)/34) computation before any framebuffer read. Native guard cases verify ArithmeticException precedence and context."
         }
       },
       {
-        "symbol": "L:ld.a(I)Z#26",
-        "before": null,
+        "symbol": "L:ld.a(I)Z#24",
+        "before": {
+          "symbol": "L:ld.a(I)Z#24",
+          "to": "guardDivisionResult",
+          "originalName": "var8",
+          "evidence": "Retains the otherwise unused 64/((methodGuard-32)/34) computation before any framebuffer read. Native guard cases verify ArithmeticException precedence and context."
+        },
         "after": {
-          "symbol": "L:ld.a(I)Z#26",
+          "symbol": "L:ld.a(I)Z#24",
+          "to": "circleError",
+          "originalName": "var9",
+          "evidence": "The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions."
+        }
+      },
+      {
+        "symbol": "L:ld.a(I)Z#25",
+        "before": {
+          "symbol": "L:ld.a(I)Z#25",
+          "to": "circleError",
+          "originalName": "var9",
+          "evidence": "The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions."
+        },
+        "after": {
+          "symbol": "L:ld.a(I)Z#25",
           "to": "clientControlFlowGuard",
           "originalName": "var10",
           "evidence": "Retains the initial Geoblox.field_C read; its stored value is unused in this method. Matrix checks run with zero and one without removing the read."
         }
       },
       {
-        "symbol": "L:ld.a(I)Z#27",
-        "before": null,
+        "symbol": "L:ld.a(I)Z#26",
+        "before": {
+          "symbol": "L:ld.a(I)Z#26",
+          "to": "clientControlFlowGuard",
+          "originalName": "var10",
+          "evidence": "Retains the initial Geoblox.field_C read; its stored value is unused in this method. Matrix checks run with zero and one without removing the read."
+        },
         "after": {
-          "symbol": "L:ld.a(I)Z#27",
+          "symbol": "L:ld.a(I)Z#26",
           "to": "boundaryScanFailure",
           "originalName": "decompiledCaughtParameter0",
           "evidence": "Catch parameter for RuntimeException from guard arithmetic or framebuffer reads; transferred through two retained aliases before wrapping."
         }
       },
       {
+        "symbol": "L:ld.a(I)Z#27",
+        "before": {
+          "symbol": "L:ld.a(I)Z#27",
+          "to": "boundaryScanFailure",
+          "originalName": "decompiledCaughtParameter0",
+          "evidence": "Catch parameter for RuntimeException from guard arithmetic or framebuffer reads; transferred through two retained aliases before wrapping."
+        },
+        "after": null
+      },
+      {
         "symbol": "L:ld.a(I)Z#3",
-        "before": null,
-        "after": {
+        "before": {
           "symbol": "L:ld.a(I)Z#3",
           "to": "topCardinalHit",
           "originalName": "stackIn_11_0",
           "evidence": "Carries integer true from the nonzero pixel at (320,10) to result arm two."
+        },
+        "after": {
+          "symbol": "L:ld.a(I)Z#3",
+          "to": "topCardinalHit",
+          "originalName": "stackIn_11_0",
+          "evidence": "Carries integer true from the nonzero pixel at (320,10) to the immediate return on this path inside the try."
         }
       },
       {
         "symbol": "L:ld.a(I)Z#4",
-        "before": null,
-        "after": {
+        "before": {
           "symbol": "L:ld.a(I)Z#4",
           "to": "bottomCardinalHit",
           "originalName": "stackIn_15_0",
           "evidence": "Carries integer true from the nonzero pixel at (320,470) to result arm three."
+        },
+        "after": {
+          "symbol": "L:ld.a(I)Z#4",
+          "to": "bottomCardinalHit",
+          "originalName": "stackIn_15_0",
+          "evidence": "Carries integer true from the nonzero pixel at (320,470) to the immediate return on this path inside the try."
         }
       },
       {
         "symbol": "L:ld.a(I)Z#5",
-        "before": null,
-        "after": {
+        "before": {
           "symbol": "L:ld.a(I)Z#5",
           "to": "upperFarLeftHit",
           "originalName": "stackIn_21_0",
           "evidence": "Carries integer true from upperFarRowCenterIndex minus circleVerticalOffset to result arm four."
+        },
+        "after": {
+          "symbol": "L:ld.a(I)Z#5",
+          "to": "upperFarLeftHit",
+          "originalName": "stackIn_21_0",
+          "evidence": "Carries integer true from upperFarRowCenterIndex minus circleVerticalOffset to the immediate return on this path inside the try."
         }
       },
       {
         "symbol": "L:ld.a(I)Z#6",
-        "before": null,
-        "after": {
+        "before": {
           "symbol": "L:ld.a(I)Z#6",
           "to": "upperFarRightHit",
           "originalName": "stackIn_24_0",
           "evidence": "Carries integer true from upperFarRowCenterIndex plus circleVerticalOffset to result arm five."
+        },
+        "after": {
+          "symbol": "L:ld.a(I)Z#6",
+          "to": "upperFarRightHit",
+          "originalName": "stackIn_24_0",
+          "evidence": "Carries integer true from upperFarRowCenterIndex plus circleVerticalOffset to the immediate return on this path inside the try."
         }
       },
       {
         "symbol": "L:ld.a(I)Z#7",
-        "before": null,
-        "after": {
+        "before": {
           "symbol": "L:ld.a(I)Z#7",
           "to": "upperNearLeftHit",
           "originalName": "stackIn_27_0",
           "evidence": "Carries integer true from upperNearRowCenterIndex minus circleHorizontalOffset to result arm six."
+        },
+        "after": {
+          "symbol": "L:ld.a(I)Z#7",
+          "to": "upperNearLeftHit",
+          "originalName": "stackIn_27_0",
+          "evidence": "Carries integer true from upperNearRowCenterIndex minus circleHorizontalOffset to the immediate return on this path inside the try."
         }
       },
       {
         "symbol": "L:ld.a(I)Z#8",
-        "before": null,
-        "after": {
+        "before": {
           "symbol": "L:ld.a(I)Z#8",
           "to": "upperNearRightHit",
           "originalName": "stackIn_30_0",
           "evidence": "Carries integer true from upperNearRowCenterIndex plus circleHorizontalOffset to result arm seven."
+        },
+        "after": {
+          "symbol": "L:ld.a(I)Z#8",
+          "to": "upperNearRightHit",
+          "originalName": "stackIn_30_0",
+          "evidence": "Carries integer true from upperNearRowCenterIndex plus circleHorizontalOffset to the immediate return on this path inside the try."
         }
       },
       {
         "symbol": "L:ld.a(I)Z#9",
-        "before": null,
-        "after": {
+        "before": {
           "symbol": "L:ld.a(I)Z#9",
           "to": "lowerNearLeftHit",
           "originalName": "stackIn_34_0",
           "evidence": "Carries integer true from lowerNearRowCenterIndex minus circleHorizontalOffset to result arm eight."
+        },
+        "after": {
+          "symbol": "L:ld.a(I)Z#9",
+          "to": "lowerNearLeftHit",
+          "originalName": "stackIn_34_0",
+          "evidence": "Carries integer true from lowerNearRowCenterIndex minus circleHorizontalOffset to the immediate return on this path inside the try."
         }
       },
       {
-        "symbol": "P:ld.a(I)Z#0",
+        "symbol": "L:sk.a(I)Z#10",
+        "before": {
+          "symbol": "L:sk.a(I)Z#10",
+          "to": "staggeredLifetime",
+          "originalName": "var5",
+          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
+        },
+        "after": {
+          "symbol": "L:sk.a(I)Z#10",
+          "to": "cascadeEntity",
+          "originalName": "var6",
+          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
+        }
+      },
+      {
+        "symbol": "L:sk.a(I)Z#11",
+        "before": {
+          "symbol": "L:sk.a(I)Z#11",
+          "to": "cascadeEntity",
+          "originalName": "var6",
+          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
+        },
+        "after": {
+          "symbol": "L:sk.a(I)Z#11",
+          "to": "neighborIndex",
+          "originalName": "var7",
+          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
+        }
+      },
+      {
+        "symbol": "L:sk.a(I)Z#12",
+        "before": {
+          "symbol": "L:sk.a(I)Z#12",
+          "to": "neighborIndex",
+          "originalName": "var7",
+          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
+        },
+        "after": {
+          "symbol": "L:sk.a(I)Z#12",
+          "to": "neighborEntity",
+          "originalName": "var8",
+          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
+        }
+      },
+      {
+        "symbol": "L:sk.a(I)Z#13",
+        "before": {
+          "symbol": "L:sk.a(I)Z#13",
+          "to": "neighborEntity",
+          "originalName": "var8",
+          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
+        },
+        "after": {
+          "symbol": "L:sk.a(I)Z#13",
+          "to": "searchedEntity",
+          "originalName": "var9",
+          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
+        }
+      },
+      {
+        "symbol": "L:sk.a(I)Z#14",
+        "before": {
+          "symbol": "L:sk.a(I)Z#14",
+          "to": "searchedEntity",
+          "originalName": "var9",
+          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
+        },
+        "after": null
+      },
+      {
+        "symbol": "L:sk.a(I)Z#15",
         "before": null,
         "after": {
-          "symbol": "P:ld.a(I)Z#0",
-          "to": "methodGuard",
-          "originalName": "param0",
-          "evidence": "Actual boundary callers pass -61. The retained integer division can throw before even an occupied first cardinal pixel; native cases cover zero denominators, truncation boundaries and int subtraction overflow."
+          "symbol": "L:sk.a(I)Z#15",
+          "to": "seedEntity",
+          "originalName": "var11",
+          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
+        }
+      },
+      {
+        "symbol": "L:sk.a(I)Z#16",
+        "before": {
+          "symbol": "L:sk.a(I)Z#16",
+          "to": "seedEntity",
+          "originalName": "var11",
+          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
+        },
+        "after": {
+          "symbol": "L:sk.a(I)Z#16",
+          "to": "cascadeFrontier",
+          "originalName": "var12",
+          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
+        }
+      },
+      {
+        "symbol": "L:sk.a(I)Z#17",
+        "before": {
+          "symbol": "L:sk.a(I)Z#17",
+          "to": "cascadeFrontier",
+          "originalName": "var12",
+          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
+        },
+        "after": null
+      },
+      {
+        "symbol": "L:sk.a(I)Z#4",
+        "before": null,
+        "after": {
+          "symbol": "L:sk.a(I)Z#4",
+          "to": "farthestEntity",
+          "originalName": "var1",
+          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
+        }
+      },
+      {
+        "symbol": "L:sk.a(I)Z#5",
+        "before": {
+          "symbol": "L:sk.a(I)Z#5",
+          "to": "farthestEntity",
+          "originalName": "var1",
+          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
+        },
+        "after": null
+      },
+      {
+        "symbol": "L:sk.a(I)Z#6",
+        "before": null,
+        "after": {
+          "symbol": "L:sk.a(I)Z#6",
+          "to": "farthestRadiusSquared",
+          "originalName": "var2",
+          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
+        }
+      },
+      {
+        "symbol": "L:sk.a(I)Z#7",
+        "before": {
+          "symbol": "L:sk.a(I)Z#7",
+          "to": "farthestRadiusSquared",
+          "originalName": "var2",
+          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
+        },
+        "after": {
+          "symbol": "L:sk.a(I)Z#7",
+          "to": "candidateEntity",
+          "originalName": "var3",
+          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
+        }
+      },
+      {
+        "symbol": "L:sk.a(I)Z#8",
+        "before": {
+          "symbol": "L:sk.a(I)Z#8",
+          "to": "candidateEntity",
+          "originalName": "var3",
+          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
+        },
+        "after": {
+          "symbol": "L:sk.a(I)Z#8",
+          "to": "visitedCascadeEntities",
+          "originalName": "var4",
+          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
+        }
+      },
+      {
+        "symbol": "L:sk.a(I)Z#9",
+        "before": {
+          "symbol": "L:sk.a(I)Z#9",
+          "to": "visitedCascadeEntities",
+          "originalName": "var4",
+          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
+        },
+        "after": {
+          "symbol": "L:sk.a(I)Z#9",
+          "to": "staggeredLifetime",
+          "originalName": "var5",
+          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
         }
       }
     ],
@@ -7318,7 +8002,7 @@
     "sourceEvidence": [
       {
         "file": "ab.java",
-        "sha256": "9b3010e941a19c4f5832107b06d589dcb04c1d12fc367ac08920eb54f5cf26b0"
+        "sha256": "f7f077a93141d144ce5348b82e5d618765bc132c2059b813973cd1e1b952448a"
       },
       {
         "file": "af.java",
@@ -7326,31 +8010,31 @@
       },
       {
         "file": "bh.java",
-        "sha256": "3a33e645c31f5fcb43e8f2b60b8d4faaeef64bcfe128aaf19a5c5ca3a536a2dc"
+        "sha256": "6ff01864a302ed3ca10f9eb0356569f159a66eaa26832687bd26d33fd16209fb"
       },
       {
         "file": "c.java",
-        "sha256": "3d8b41ea1ad6a23103108b3eeb02b17ad9f809d3acd05919031eacc025bff5ab"
+        "sha256": "64e1d18a6d71b8af8aa5b85ed9a7c1be6b29230d7511589448053efd5e4d5328"
       },
       {
         "file": "cf.java",
-        "sha256": "6bea34d6fb1e51f5fbf7b8960507fff21b6b33994dfd2d070903b0231b65d83c"
+        "sha256": "240b7794220ba2278fbd2196c0c0cc2d6ed63a4e39f66c3e0b1da284be96e689"
       },
       {
         "file": "ch.java",
-        "sha256": "24e910653b1ac835cbf7f08ee8568d510dc70a242e9850260a8c8d64adb9f4db"
+        "sha256": "598da1e4863090b7c37cef646701841f5c9066c25c1d0c9d9c7eea93c895f9cb"
       },
       {
         "file": "ec.java",
-        "sha256": "c517a25ba302ac5e43a374f553d15b353ae96163d86ca548541dd73884d12c11"
+        "sha256": "c64d6655c9c8d0b3d5abd411002317b13ffde4ae7e984bfc5e187bb8fa044ab5"
       },
       {
         "file": "f.java",
-        "sha256": "e1b529c07cddc10be79d900e085e30a8747615c7af48bf693d8f3d5d84ab4a71"
+        "sha256": "7e943083cb56e22a424a2ff1161ed0c4d5a58d38c87cfe4d918dd4c7ea9d005e"
       },
       {
         "file": "fe.java",
-        "sha256": "0d1fd678f8fa0a775490a64b63d9eb25641c85b3bc0d22603e2194b861251e5a"
+        "sha256": "1a8f587f63ace4d2c6fecf34fe2839c4488f392f6c7ece4a4dda9518c1c78b21"
       },
       {
         "file": "gd.java",
@@ -7358,63 +8042,63 @@
       },
       {
         "file": "gh.java",
-        "sha256": "16f2e4c7be5f8323868af58211e7a46c1962a3e40c7e356a6ba7c91fd5a4fbc0"
+        "sha256": "58fc27ad0d8a541cd13615e3b804fe78b922e3a68e495747f711a6bfd3adf13f"
       },
       {
         "file": "gi.java",
-        "sha256": "eade1c2a94fab22dfc844e54baab814c8237816ce44182f1e027794aae9c64c1"
+        "sha256": "c0b6ca5abad976379cb4176b5f2423e136bdabd69b4b08d0a4ed896f81d11b25"
       },
       {
         "file": "ha.java",
-        "sha256": "0fc715231101c183b4aaab275f2d3db7b1f5a740afd7e09eda9d7aca240eec57"
+        "sha256": "eba0eeb9b75cc17396773f5a72233548109967d2aaa3c1b6572db94014b065cf"
       },
       {
         "file": "hl.java",
-        "sha256": "5cb073071a259b90fffa66a5a363a6a495c1ef4504e10cdb6df4e86b27fa257e"
+        "sha256": "dd632cda1867f507ea82caab3351d57df9ddaa53ff2f7a47c1c98ba8a13acf02"
       },
       {
         "file": "i.java",
-        "sha256": "4916debeccb2c5417949c8a27aa0456a21c68fc49a093d85ebb133e90c86c5a9"
+        "sha256": "30c75d628e07f3a8b5351e99d1ea70e3cd90e03e8c8b131c6094be7143daed47"
       },
       {
         "file": "ih.java",
-        "sha256": "68cc6cadadfbc8b1ba454f81541f8cb7bd03c262be02e5cb4a11a31c209d1686"
+        "sha256": "4c6eaab60be488fefc40d77e44a251e38470672af1a8ee80643d4a16f75fcf8d"
       },
       {
         "file": "ij.java",
-        "sha256": "da09ea8efc3ae1e47b63e3f2272ded9180eeb76c1d7a96ce3c237e6e60313354"
+        "sha256": "f662d69b6c2446e7f2918a9f830f0dc8132d84196e73080cbc3f9231c81d0336"
       },
       {
         "file": "ik.java",
-        "sha256": "26edd2a18749e73e3d3449b0cd60620f6cd06a2106ff8450ba66941b69b39d16"
+        "sha256": "761f67253e043c44a9ae3f4883e25e6637b435fa162178bdf8f9683dec71a75c"
       },
       {
         "file": "ja.java",
-        "sha256": "4e40f4ccd7bef3226fe165032b679e832718ff8323d41e4387de4245ddf0e81b"
+        "sha256": "115cc3327cdcfdb65c4f9c45a9e96a5f01bc7b66f74d762d80d2998033a13118"
       },
       {
         "file": "jc.java",
-        "sha256": "08644d98b34637b9f0ca14d4b3433d6c14fcfedc1775330fb3b0526e3121d74d"
+        "sha256": "3a399644cb30bb386dad19157b24865098ad2b09e621fab0758d247dc8bf5b68"
       },
       {
         "file": "jf.java",
-        "sha256": "4ba158bcd3607c7f8dadf8d857affe0fe47ea9df81edddc75827dbe761c3350a"
+        "sha256": "da5d8af9baa87c4b17bdc390e67f6076eb5e6b7f11e9ec647a06698eb38534ae"
       },
       {
         "file": "jg.java",
-        "sha256": "59f88813344c564cf73bbbee925fbb3aef1b03d92b7d7e6c0847206825d3d091"
+        "sha256": "d49cc25d3a579b40db9d4bd4da8115a3dc01daec4860b310260cdc5deb4401a5"
       },
       {
         "file": "jj.java",
-        "sha256": "4a548c4d7ccde3108d806a4abaf5b106ee10d4be43dad8d1600714de8c557be3"
+        "sha256": "a18f2a4e4679c15e734dc00653eeaa47521fef5cf3c40a0d78d9098015895994"
       },
       {
         "file": "jk.java",
-        "sha256": "7f256f3f6fcda28ffbbd5fa6c8f11e05b79a4b1cd087a7d26254c6a5507d117c"
+        "sha256": "de55810e00cda9af953e0f2f7e68580c7f5a3f765620e5e2fa879157fe059610"
       },
       {
         "file": "kc.java",
-        "sha256": "6643cfea950828860302ba608f248bbe5cd561e4bac86a05e7406383a4ef9afe"
+        "sha256": "9abe9ef2ce1fb40c302bdfcd0faecc487d53dbdfc2668634d22e99cbc7d6e393"
       },
       {
         "file": "kl.java",
@@ -7422,11 +8106,11 @@
       },
       {
         "file": "ld.java",
-        "sha256": "2713d19cfb619664041358e0e7cecce0b184a50246d1f2b018258dbc3c203245"
+        "sha256": "3201417ff17809f8f9603f2e1276abddff434c8239a2e6c66b39589625097d92"
       },
       {
         "file": "le.java",
-        "sha256": "188c241f0cdacc051c8da5406c43b482c7059e8448ae2504831d0735a27d2eec"
+        "sha256": "7c17fab8de47cce7e763dfb50fef622eb2de48f89a1d53987b181dbc08f3b011"
       },
       {
         "file": "md.java",
@@ -7438,31 +8122,31 @@
       },
       {
         "file": "oc.java",
-        "sha256": "26272817de0baa23027f716f1da97e11d94ae3daf0985191d062156ea91ffa09"
+        "sha256": "1104bb3c18c94b11a9e64b0d363d79b680edbd7f42172600f2dd38a1904fd695"
       },
       {
         "file": "qa.java",
-        "sha256": "ecd7954b47d463c57dc8b7c32c5dadc9ac42ef8ae223fe86166ed59852dc9d43"
+        "sha256": "78ea21ae695f607ff26ca14eea21a987946c681bb46f2c106122a526f63ed6e7"
       },
       {
         "file": "qb.java",
-        "sha256": "a2122338379e21ec1d7898d39374b80a8c67b75cf4cbf238ab54a183323716ad"
+        "sha256": "113889d2ab6a1f363abe49bf0a664926543c65542fbfaf3077057434b8259e51"
       },
       {
         "file": "qf.java",
-        "sha256": "a51c22ff46eb47adbc6fdf9b53c25ebcff8b3ac5e4b46900f4aeeb2cd03df9bc"
+        "sha256": "b4c4db144addfc6db34e095f4d7cfed7cf3cd3bd1ca159c4f19f8c9e115312b6"
       },
       {
         "file": "qk.java",
-        "sha256": "6c4587a7139f95211230b9b290d075505964173bfec0bd8e5611b1bd7192abb5"
+        "sha256": "bec392e7a9a33894ba05fdfa2c861d5746b3f032ce860ff8ea8e3daf16e65106"
       },
       {
         "file": "r.java",
-        "sha256": "8a36402cce6837e79448e270c22ab8b92bf082edd1113e563a643bf45392e7a9"
+        "sha256": "f28c48508b8bab54fe920f5049741304695d73c1a2a0fe1cf4059e807f232fcd"
       },
       {
         "file": "ra.java",
-        "sha256": "05ba852d4358c07df61605550da0547eee2ff607a026f5ffbde3f66cc4c48fc2"
+        "sha256": "8dfe964cba4e047d37a4e5928c60b640f959b131662f84d9b6043c9e93c19c10"
       },
       {
         "file": "rc.java",
@@ -7470,47 +8154,47 @@
       },
       {
         "file": "rh.java",
-        "sha256": "bc4a5c1904df7f9e3654988389e3c276103ec198f7722f8457b076b0f6536b9d"
+        "sha256": "2262a0da31d83d18d58efcc112ac8108600a0dae77d7985ae81e66e664595318"
       },
       {
         "file": "ri.java",
-        "sha256": "c3b9db55235facd162ba611b3e494c806752cfcdaca15dfc13923ecba53a6d05"
+        "sha256": "929085eb06b32f785add998d564fb251e13b8dd752a4339a3eebe8ae4ca0fec2"
       },
       {
         "file": "rj.java",
-        "sha256": "81e1ebf869d4ef8ade2e6597f4e06ee56f9a3863f319ee0cd56733cd9348ec21"
+        "sha256": "5869e010e740d261ddb014341d0125056f09fd76715b84d5716f58651c636c9c"
       },
       {
         "file": "td.java",
-        "sha256": "86a698cbd5b06fc98f5384c3e6d9d60ed4bd92692ec79b5cb497abf83e466683"
+        "sha256": "9062853015ace0e4f13287c4884d8f7bde34f7ceca4b9a4976fca84e93b7ef31"
       },
       {
         "file": "ue.java",
-        "sha256": "5a2c215462ba91f6e325840522c5692bee42a232f9616200bbd1a733198178b1"
+        "sha256": "6f5794dd4973794961896c1306a3a5c16ef8e28be0f46ec2fc91da9ed5c9d5bc"
       },
       {
         "file": "uf.java",
-        "sha256": "f3ef04d1626117df773dec44b48be150b9d0d6e58eccc66152df22f840f4273a"
+        "sha256": "2f6d1ec66f1dc1486990f7252d16fb8b02ad0a8b2d0060130df52bd7e542c8bd"
       },
       {
         "file": "ug.java",
-        "sha256": "50bf02ecfe05bb94c8d242d9f14c33fc473913a26e67ab69158c31c703f67ac5"
+        "sha256": "faad60133463222a7b6e2d13425705e4486d293cdbb7363086c81a7b848aff13"
       },
       {
         "file": "uk.java",
-        "sha256": "b574dc08a850634abd98c40b9b3a4e70a4bdd86aa95434036d558c94825dd0a1"
+        "sha256": "d5898592627895d1bc2e4a436dfa7fc05b60a618eb768a06bc376ec09933cb61"
       },
       {
         "file": "ul.java",
-        "sha256": "9716af525a148dd9296891c7fc360dc122a98446562d26b7a2a27fa1830a38ed"
+        "sha256": "5d01f9a7cb10d212591b32a8770f86135153e900d7ff9453500e869d9a081661"
       },
       {
         "file": "vd.java",
-        "sha256": "ded72ee97771cc037b9231d91d5de9d423b3f5e3685f143378df86e436a33607"
+        "sha256": "9e0a973ddcef92c1567e355da64f2f762c352606fbb4cca2414de1ed733e4b1d"
       },
       {
         "file": "w.java",
-        "sha256": "a62ececbc89806cc78050d122a8748413bfbaf45d8b2bf6cca7d79e676be0a28"
+        "sha256": "ae0eaab1bfeb6b06cb3b360afb76c7da75470824df0b70a13ca031fe5af43ad5"
       },
       {
         "file": "wb.java",
@@ -7518,15 +8202,15 @@
       },
       {
         "file": "wc.java",
-        "sha256": "4cb1dcf801bd0d2babc1f59758a1c643fc43febe824ecb3925f5ce8f77c4e4c0"
+        "sha256": "b4fdc871d5551ef6771c2aa8ef5b02d214b7df7e3bfc95da30f393614711dc35"
       },
       {
         "file": "wd.java",
-        "sha256": "1cd9e974500cd9ce4664849f4359bd7fc563b53a66cee2cf0c65bd7f0fcb4ba8"
+        "sha256": "ca934aa558cb4d977ea00614c55a20f80b65f2133c3a029206562292f798a2b8"
       },
       {
         "file": "wi.java",
-        "sha256": "41290058c9b92191d8715b257e79f87ddad12ae4454e75415b42ac530c11f247"
+        "sha256": "011e8d19e6ed0a55d0f9e3ac1c6f53017f96510eda7b04331371713b49d456ed"
       }
     ],
     "nativeEvidence": [
@@ -7551,7 +8235,7 @@
       }
     ],
     "textResources": {
-      "loaderSourceSha256": "41290058c9b92191d8715b257e79f87ddad12ae4454e75415b42ac530c11f247",
+      "loaderSourceSha256": "011e8d19e6ed0a55d0f9e3ac1c6f53017f96510eda7b04331371713b49d456ed",
       "review": {
         "allResourceReads": 744,
         "storedResourceReads": 218,
@@ -7565,22 +8249,22 @@
             {
               "key": "reconnect_lost_seq,0",
               "index": 0,
-              "line": 2760
+              "line": 2747
             },
             {
               "key": "reconnect_lost_seq,1",
               "index": 1,
-              "line": 2764
+              "line": 2751
             },
             {
               "key": "reconnect_lost_seq,2",
               "index": 2,
-              "line": 2768
+              "line": 2755
             },
             {
               "key": "reconnect_lost_seq,3",
               "index": 3,
-              "line": 2772
+              "line": 2759
             }
           ],
           "to": "reconnectMessages"
@@ -7592,7 +8276,7 @@
             {
               "key": "retry",
               "index": null,
-              "line": 1303
+              "line": 1290
             }
           ],
           "to": "retryText"
@@ -7604,7 +8288,7 @@
             {
               "key": "create_suggestions",
               "index": null,
-              "line": 1623
+              "line": 1610
             }
           ],
           "to": "createSuggestionsText"
@@ -7616,37 +8300,37 @@
             {
               "key": "mustlogin_alternate,1",
               "index": 1,
-              "line": 3116
+              "line": 3103
             },
             {
               "key": "mustlogin_alternate,2",
               "index": 2,
-              "line": 3120
+              "line": 3107
             },
             {
               "key": "mustlogin_alternate,3",
               "index": 3,
-              "line": 3124
+              "line": 3111
             },
             {
               "key": "mustlogin_alternate,4",
               "index": 4,
-              "line": 3128
+              "line": 3115
             },
             {
               "key": "mustlogin_alternate,5",
               "index": 5,
-              "line": 3132
+              "line": 3119
             },
             {
               "key": "mustlogin_alternate,6",
               "index": 6,
-              "line": 3136
+              "line": 3123
             },
             {
               "key": "mustlogin_alternate,7",
               "index": 7,
-              "line": 3140
+              "line": 3127
             }
           ],
           "to": "mustLoginAlternateTexts"
@@ -7658,7 +8342,7 @@
             {
               "key": "fs_focus_or_resolution",
               "index": null,
-              "line": 2876
+              "line": 2863
             }
           ],
           "to": "fullscreenFocusOrResolutionText"
@@ -7670,7 +8354,7 @@
             {
               "key": "connectionlost_reconnecting",
               "index": null,
-              "line": 1285
+              "line": 1272
             }
           ],
           "to": "connectionLostReconnectingText"
@@ -7682,7 +8366,7 @@
             {
               "key": "create_alert_passchars",
               "index": null,
-              "line": 1779
+              "line": 1766
             }
           ],
           "to": "createPasswordCharacterAlertText"
@@ -7694,37 +8378,37 @@
             {
               "key": "mustlogin3,1",
               "index": 1,
-              "line": 3052
+              "line": 3039
             },
             {
               "key": "mustlogin3,2",
               "index": 2,
-              "line": 3056
+              "line": 3043
             },
             {
               "key": "mustlogin3,3",
               "index": 3,
-              "line": 3060
+              "line": 3047
             },
             {
               "key": "mustlogin3,4",
               "index": 4,
-              "line": 3064
+              "line": 3051
             },
             {
               "key": "mustlogin3,5",
               "index": 5,
-              "line": 3068
+              "line": 3055
             },
             {
               "key": "mustlogin3,6",
               "index": 6,
-              "line": 3072
+              "line": 3059
             },
             {
               "key": "mustlogin3,7",
               "index": 7,
-              "line": 3076
+              "line": 3063
             }
           ],
           "to": "mustLogin3Texts"
@@ -7736,7 +8420,7 @@
             {
               "key": "login_username",
               "index": null,
-              "line": 1651
+              "line": 1638
             }
           ],
           "to": "loginUsernameText"
@@ -7748,7 +8432,7 @@
             {
               "key": "achievements",
               "index": null,
-              "line": 2094
+              "line": 2081
             }
           ],
           "to": "achievementsText"
@@ -7760,7 +8444,7 @@
             {
               "key": "create_agreeterms",
               "index": null,
-              "line": 1639
+              "line": 1626
             }
           ],
           "to": "createAgreeTermsText"
@@ -7772,32 +8456,32 @@
             {
               "key": "quickchat_shortcut_help,0",
               "index": 0,
-              "line": 2652
+              "line": 2639
             },
             {
               "key": "quickchat_shortcut_help,1",
               "index": 1,
-              "line": 2656
+              "line": 2643
             },
             {
               "key": "quickchat_shortcut_help,2",
               "index": 2,
-              "line": 2660
+              "line": 2647
             },
             {
               "key": "quickchat_shortcut_help,3",
               "index": 3,
-              "line": 2664
+              "line": 2651
             },
             {
               "key": "quickchat_shortcut_help,4",
               "index": 4,
-              "line": 2668
+              "line": 2655
             },
             {
               "key": "quickchat_shortcut_help,5",
               "index": 5,
-              "line": 2672
+              "line": 2659
             }
           ],
           "to": "quickChatShortcutHelpTexts"
@@ -7809,7 +8493,7 @@
             {
               "key": "create_alert_nameleadingspace",
               "index": null,
-              "line": 1771
+              "line": 1758
             }
           ],
           "to": "createNameLeadingSpaceAlertText"
@@ -7821,7 +8505,7 @@
             {
               "key": "unpacking_music",
               "index": null,
-              "line": 2038
+              "line": 2025
             }
           ],
           "to": "unpackingMusicText"
@@ -7833,7 +8517,7 @@
             {
               "key": "cancel",
               "index": null,
-              "line": 1181
+              "line": 1168
             }
           ],
           "to": "cancelText"
@@ -7845,7 +8529,7 @@
             {
               "key": "cont",
               "index": null,
-              "line": 2270
+              "line": 2257
             }
           ],
           "to": "continueText"
@@ -7857,7 +8541,7 @@
             {
               "key": "checking",
               "index": null,
-              "line": 1411
+              "line": 1398
             }
           ],
           "to": "checkingText"
@@ -7869,7 +8553,7 @@
             {
               "key": "create_emailvalid",
               "index": null,
-              "line": 1835
+              "line": 1822
             }
           ],
           "to": "createEmailValidText"
@@ -7881,7 +8565,7 @@
             {
               "key": "loading_music",
               "index": null,
-              "line": 1995
+              "line": 1982
             }
           ],
           "to": "loadingMusicText"
@@ -7893,7 +8577,7 @@
             {
               "key": "endgame",
               "index": null,
-              "line": 2194
+              "line": 2181
             }
           ],
           "to": "endGameText"
@@ -7905,7 +8589,7 @@
             {
               "key": "create",
               "index": null,
-              "line": 1467
+              "line": 1454
             }
           ],
           "to": "createText"
@@ -7917,7 +8601,7 @@
             {
               "key": "ok",
               "index": null,
-              "line": 2202
+              "line": 2189
             }
           ],
           "to": "okText"
@@ -7929,37 +8613,37 @@
             {
               "key": "mustlogin2,1",
               "index": 1,
-              "line": 3024
+              "line": 3011
             },
             {
               "key": "mustlogin2,2",
               "index": 2,
-              "line": 3028
+              "line": 3015
             },
             {
               "key": "mustlogin2,3",
               "index": 3,
-              "line": 3032
+              "line": 3019
             },
             {
               "key": "mustlogin2,4",
               "index": 4,
-              "line": 3036
+              "line": 3023
             },
             {
               "key": "mustlogin2,5",
               "index": 5,
-              "line": 3040
+              "line": 3027
             },
             {
               "key": "mustlogin2,6",
               "index": 6,
-              "line": 3044
+              "line": 3031
             },
             {
               "key": "mustlogin2,7",
               "index": 7,
-              "line": 3048
+              "line": 3035
             }
           ],
           "to": "mustLogin2Texts"
@@ -7971,7 +8655,7 @@
             {
               "key": "toserverlist",
               "index": null,
-              "line": 1217
+              "line": 1204
             }
           ],
           "to": "toServerListText"
@@ -7983,7 +8667,7 @@
             {
               "key": "instructions",
               "index": null,
-              "line": 2058
+              "line": 2045
             }
           ],
           "to": "instructionsText"
@@ -7995,7 +8679,7 @@
             {
               "key": "openinpopupwindow",
               "index": null,
-              "line": 1463
+              "line": 1450
             }
           ],
           "to": "openInPopupWindowText"
@@ -8007,7 +8691,7 @@
             {
               "key": "fs_unavailable_try_signed_applet",
               "index": null,
-              "line": 2868
+              "line": 2855
             }
           ],
           "to": "fullscreenUnavailableTrySignedAppletText"
@@ -8019,12 +8703,12 @@
             {
               "key": "rating_mode_name,0",
               "index": 0,
-              "line": 2948
+              "line": 2935
             },
             {
               "key": "rating_mode_name,1",
               "index": 1,
-              "line": 2952
+              "line": 2939
             }
           ],
           "to": "ratingModeNames"
@@ -8036,32 +8720,32 @@
             {
               "key": "quickchat_shortcut_keys,0",
               "index": 0,
-              "line": 2676
+              "line": 2663
             },
             {
               "key": "quickchat_shortcut_keys,1",
               "index": 1,
-              "line": 2680
+              "line": 2667
             },
             {
               "key": "quickchat_shortcut_keys,2",
               "index": 2,
-              "line": 2684
+              "line": 2671
             },
             {
               "key": "quickchat_shortcut_keys,3",
               "index": 3,
-              "line": 2688
+              "line": 2675
             },
             {
               "key": "quickchat_shortcut_keys,4",
               "index": 4,
-              "line": 2692
+              "line": 2679
             },
             {
               "key": "quickchat_shortcut_keys,5",
               "index": 5,
-              "line": 2696
+              "line": 2683
             }
           ],
           "to": "quickChatShortcutKeys"
@@ -8073,7 +8757,7 @@
             {
               "key": "fs_timeout",
               "index": null,
-              "line": 2880
+              "line": 2867
             }
           ],
           "to": "fullscreenTimeoutText"
@@ -8085,7 +8769,7 @@
             {
               "key": "idlemessage20min",
               "index": null,
-              "line": 229
+              "line": 216
             }
           ],
           "to": "idleMessage20MinText"
@@ -8097,17 +8781,17 @@
             {
               "key": "members_expansion_benefits,0",
               "index": 0,
-              "line": 2740
+              "line": 2727
             },
             {
               "key": "members_expansion_benefits,1",
               "index": 1,
-              "line": 2744
+              "line": 2731
             },
             {
               "key": "members_expansion_benefits,2",
               "index": 2,
-              "line": 2748
+              "line": 2735
             }
           ],
           "to": "membersExpansionBenefitTexts"
@@ -8119,7 +8803,7 @@
             {
               "key": "create_alert_doublespace",
               "index": null,
-              "line": 1775
+              "line": 1762
             }
           ],
           "to": "createDoubleSpaceAlertText"
@@ -8131,7 +8815,7 @@
             {
               "key": "music_colon",
               "index": null,
-              "line": 2074
+              "line": 2061
             }
           ],
           "to": "musicLabelText"
@@ -8143,7 +8827,7 @@
             {
               "key": "waitingfor_graphics",
               "index": null,
-              "line": 1935
+              "line": 1922
             }
           ],
           "to": "waitingForGraphicsText"
@@ -8155,7 +8839,7 @@
             {
               "key": "changedisplayname",
               "index": null,
-              "line": 1225
+              "line": 1212
             }
           ],
           "to": "changeDisplayNameText"
@@ -8167,7 +8851,7 @@
             {
               "key": "serviceunavailable",
               "index": null,
-              "line": 3000
+              "line": 2987
             }
           ],
           "to": "serviceUnavailableText"
@@ -8179,7 +8863,7 @@
             {
               "key": "create_alert_email_unavailable",
               "index": null,
-              "line": 1811
+              "line": 1798
             }
           ],
           "to": "createEmailUnavailableAlertText"
@@ -8191,7 +8875,7 @@
             {
               "key": "create_alert_passcontainsname",
               "index": null,
-              "line": 1791
+              "line": 1778
             }
           ],
           "to": "createPasswordContainsNameAlertText"
@@ -8203,7 +8887,7 @@
             {
               "key": "create_alert_passrepeated",
               "index": null,
-              "line": 1783
+              "line": 1770
             }
           ],
           "to": "createRepeatedPasswordAlertText"
@@ -8215,7 +8899,7 @@
             {
               "key": "create_alert_passcontainsname_partial",
               "index": null,
-              "line": 1799
+              "line": 1786
             }
           ],
           "to": "createPasswordContainsPartialNameAlertText"
@@ -8227,7 +8911,7 @@
             {
               "key": "create_alert_namelength",
               "index": null,
-              "line": 1763
+              "line": 1750
             }
           ],
           "to": "createNameLengthAlertText"
@@ -8239,7 +8923,7 @@
             {
               "key": "create_displayname_hint",
               "index": null,
-              "line": 1699
+              "line": 1686
             }
           ],
           "to": "createDisplayNameHintText"
@@ -8251,7 +8935,7 @@
             {
               "key": "playfreeversion",
               "index": null,
-              "line": 1209
+              "line": 1196
             }
           ],
           "to": "playFreeVersionText"
@@ -8263,7 +8947,7 @@
             {
               "key": "goback",
               "index": null,
-              "line": 1245
+              "line": 1232
             }
           ],
           "to": "goBackText"
@@ -8275,7 +8959,7 @@
             {
               "key": "loginm3",
               "index": null,
-              "line": 217
+              "line": 204
             }
           ],
           "to": "loginMessage3Text"
@@ -8287,7 +8971,7 @@
             {
               "key": "fs_button_close",
               "index": null,
-              "line": 2856
+              "line": 2843
             }
           ],
           "to": "fullscreenCloseButtonText"
@@ -8299,7 +8983,7 @@
             {
               "key": "create_ineligible",
               "index": null,
-              "line": 257
+              "line": 244
             }
           ],
           "to": "createIneligibleText"
@@ -8311,7 +8995,7 @@
             {
               "key": "login_create_tooltip",
               "index": null,
-              "line": 1671
+              "line": 1658
             }
           ],
           "to": "loginCreateTooltipText"
@@ -8323,7 +9007,7 @@
             {
               "key": "resumegame",
               "index": null,
-              "line": 2166
+              "line": 2153
             }
           ],
           "to": "resumeGameText"
@@ -8335,7 +9019,7 @@
             {
               "key": "ticketing_oneunread",
               "index": null,
-              "line": 281
+              "line": 268
             }
           ],
           "to": "ticketingOneUnreadText"
@@ -8347,7 +9031,7 @@
             {
               "key": "highscores",
               "index": null,
-              "line": 2086
+              "line": 2073
             }
           ],
           "to": "highscoresText"
@@ -8359,7 +9043,7 @@
             {
               "key": "create_passwordvalid",
               "index": null,
-              "line": 1831
+              "line": 1818
             }
           ],
           "to": "createPasswordValidText"
@@ -8371,7 +9055,7 @@
             {
               "key": "create_password_tooltip",
               "index": null,
-              "line": 1703
+              "line": 1690
             }
           ],
           "to": "createPasswordTooltipText"
@@ -8383,7 +9067,7 @@
             {
               "key": "menu",
               "index": null,
-              "line": 2146
+              "line": 2133
             }
           ],
           "to": "menuText"
@@ -8395,7 +9079,7 @@
             {
               "key": "waitingfor_fonts",
               "index": null,
-              "line": 1943
+              "line": 1930
             }
           ],
           "to": "waitingForFontsText"
@@ -8407,7 +9091,7 @@
             {
               "key": "warning_ifyouquit",
               "index": null,
-              "line": 1323
+              "line": 1310
             }
           ],
           "to": "quitWarningText"
@@ -8419,7 +9103,7 @@
             {
               "key": "tocustomersupport",
               "index": null,
-              "line": 1221
+              "line": 1208
             }
           ],
           "to": "toCustomerSupportText"
@@ -8431,7 +9115,7 @@
             {
               "key": "login_gameupdated",
               "index": null,
-              "line": 249
+              "line": 236
             }
           ],
           "to": "loginGameUpdatedText"
@@ -8443,7 +9127,7 @@
             {
               "key": "create_alert_passlength",
               "index": null,
-              "line": 1787
+              "line": 1774
             }
           ],
           "to": "createPasswordLengthAlertText"
@@ -8455,7 +9139,7 @@
             {
               "key": "create_welcome",
               "index": null,
-              "line": 1559
+              "line": 1546
             }
           ],
           "to": "createWelcomeText"
@@ -8467,7 +9151,7 @@
             {
               "key": "waitingfor_music",
               "index": null,
-              "line": 1951
+              "line": 1938
             }
           ],
           "to": "waitingForMusicText"
@@ -8479,12 +9163,12 @@
             {
               "key": "rating_mode_long_name,0",
               "index": 0,
-              "line": 2956
+              "line": 2943
             },
             {
               "key": "rating_mode_long_name,1",
               "index": 1,
-              "line": 2960
+              "line": 2947
             }
           ],
           "to": "ratingModeLongNames"
@@ -8496,7 +9180,7 @@
             {
               "key": "login_username_email",
               "index": null,
-              "line": 1647
+              "line": 1634
             }
           ],
           "to": "loginUsernameEmailText"
@@ -8508,7 +9192,7 @@
             {
               "key": "fs_accept_countdown_pl",
               "index": null,
-              "line": 2848
+              "line": 2835
             }
           ],
           "to": "fullscreenAcceptCountdownPluralText"
@@ -8520,7 +9204,7 @@
             {
               "key": "returntogame",
               "index": null,
-              "line": 2242
+              "line": 2229
             }
           ],
           "to": "returnToGameText"
@@ -8532,7 +9216,7 @@
             {
               "key": "fs_focus",
               "index": null,
-              "line": 2872
+              "line": 2859
             }
           ],
           "to": "fullscreenFocusText"
@@ -8544,7 +9228,7 @@
             {
               "key": "login",
               "index": null,
-              "line": 1241
+              "line": 1228
             }
           ],
           "to": "loginText"
@@ -8556,7 +9240,7 @@
             {
               "key": "create_alert_namechars",
               "index": null,
-              "line": 1767
+              "line": 1754
             }
           ],
           "to": "createNameCharacterAlertText"
@@ -8568,7 +9252,7 @@
             {
               "key": "achieved",
               "index": null,
-              "line": 2444
+              "line": 2431
             }
           ],
           "to": "achievedText"
@@ -8580,7 +9264,7 @@
             {
               "key": "pleasetryagain",
               "index": null,
-              "line": 1201
+              "line": 1188
             }
           ],
           "to": "pleaseTryAgainText"
@@ -8592,7 +9276,7 @@
             {
               "key": "fs_nonmember",
               "index": null,
-              "line": 2852
+              "line": 2839
             }
           ],
           "to": "fullscreenNonmemberText"
@@ -8604,7 +9288,7 @@
             {
               "key": "error_js5connect",
               "index": null,
-              "line": 245
+              "line": 232
             }
           ],
           "to": "js5ConnectErrorText"
@@ -8616,7 +9300,7 @@
             {
               "key": "login_username_tooltip",
               "index": null,
-              "line": 1659
+              "line": 1646
             }
           ],
           "to": "loginUsernameTooltipText"
@@ -8628,7 +9312,7 @@
             {
               "key": "next",
               "index": null,
-              "line": 2222
+              "line": 2209
             }
           ],
           "to": "nextText"
@@ -8640,7 +9324,7 @@
             {
               "key": "create_account_success",
               "index": null,
-              "line": 1839
+              "line": 1826
             }
           ],
           "to": "createAccountSuccessText"
@@ -8652,7 +9336,7 @@
             {
               "key": "create_more_suggestions",
               "index": null,
-              "line": 1627
+              "line": 1614
             }
           ],
           "to": "createMoreSuggestionsText"
@@ -8664,7 +9348,7 @@
             {
               "key": "back",
               "index": null,
-              "line": 1307
+              "line": 1294
             }
           ],
           "to": "backText"
@@ -8676,7 +9360,7 @@
             {
               "key": "create_email_tooltip",
               "index": null,
-              "line": 1715
+              "line": 1702
             }
           ],
           "to": "createEmailTooltipText"
@@ -8688,37 +9372,37 @@
             {
               "key": "mustlogin4,1",
               "index": 1,
-              "line": 3084
+              "line": 3071
             },
             {
               "key": "mustlogin4,2",
               "index": 2,
-              "line": 3088
+              "line": 3075
             },
             {
               "key": "mustlogin4,3",
               "index": 3,
-              "line": 3092
+              "line": 3079
             },
             {
               "key": "mustlogin4,4",
               "index": 4,
-              "line": 3096
+              "line": 3083
             },
             {
               "key": "mustlogin4,5",
               "index": 5,
-              "line": 3100
+              "line": 3087
             },
             {
               "key": "mustlogin4,6",
               "index": 6,
-              "line": 3104
+              "line": 3091
             },
             {
               "key": "mustlogin4,7",
               "index": 7,
-              "line": 3108
+              "line": 3095
             }
           ],
           "to": "mustLogin4Texts"
@@ -8730,7 +9414,7 @@
             {
               "key": "invaliduserorpass",
               "index": null,
-              "line": 1197
+              "line": 1184
             }
           ],
           "to": "invalidUserOrPasswordText"
@@ -8742,7 +9426,7 @@
             {
               "key": "connectionlost_withreason",
               "index": null,
-              "line": 1289
+              "line": 1276
             }
           ],
           "to": "connectionLostWithReasonText"
@@ -8754,7 +9438,7 @@
             {
               "key": "fs_accept_countdown_sing",
               "index": null,
-              "line": 2844
+              "line": 2831
             }
           ],
           "to": "fullscreenAcceptCountdownSingularText"
@@ -8766,7 +9450,7 @@
             {
               "key": "create_select_alternative",
               "index": null,
-              "line": 1631
+              "line": 1618
             }
           ],
           "to": "createSelectAlternativeText"
@@ -8778,7 +9462,7 @@
             {
               "key": "loading_fonts",
               "index": null,
-              "line": 1987
+              "line": 1974
             }
           ],
           "to": "loadingFontsText"
@@ -8790,7 +9474,7 @@
             {
               "key": "ticketing_gotowebsite",
               "index": null,
-              "line": 289
+              "line": 276
             }
           ],
           "to": "ticketingGoToWebsiteText"
@@ -8802,7 +9486,7 @@
             {
               "key": "reloadgame",
               "index": null,
-              "line": 1213
+              "line": 1200
             }
           ],
           "to": "reloadGameText"
@@ -8814,7 +9498,7 @@
             {
               "key": "loading",
               "index": null,
-              "line": 845
+              "line": 832
             }
           ],
           "to": "loadingText"
@@ -8826,7 +9510,7 @@
             {
               "key": "createtouse",
               "index": null,
-              "line": 3004
+              "line": 2991
             }
           ],
           "to": "createToUseText"
@@ -8838,7 +9522,7 @@
             {
               "key": "startgame",
               "index": null,
-              "line": 2158
+              "line": 2145
             }
           ],
           "to": "startGameText"
@@ -8850,7 +9534,7 @@
             {
               "key": "create_u13terms",
               "index": null,
-              "line": 1643
+              "line": 1630
             }
           ],
           "to": "createUnder13TermsText"
@@ -8862,67 +9546,67 @@
             {
               "key": "subscription_cost_monthly,0",
               "index": 0,
-              "line": 3144
+              "line": 3131
             },
             {
               "key": "subscription_cost_monthly,1",
               "index": 1,
-              "line": 3148
+              "line": 3135
             },
             {
               "key": "subscription_cost_monthly,2",
               "index": 2,
-              "line": 3152
+              "line": 3139
             },
             {
               "key": "subscription_cost_monthly,3",
               "index": 3,
-              "line": 3156
+              "line": 3143
             },
             {
               "key": "subscription_cost_monthly,4",
               "index": 4,
-              "line": 3160
+              "line": 3147
             },
             {
               "key": "subscription_cost_monthly,5",
               "index": 5,
-              "line": 3164
+              "line": 3151
             },
             {
               "key": "subscription_cost_monthly,6",
               "index": 6,
-              "line": 3168
+              "line": 3155
             },
             {
               "key": "subscription_cost_monthly,7",
               "index": 7,
-              "line": 3172
+              "line": 3159
             },
             {
               "key": "subscription_cost_monthly,8",
               "index": 8,
-              "line": 3176
+              "line": 3163
             },
             {
               "key": "subscription_cost_monthly,9",
               "index": 9,
-              "line": 3180
+              "line": 3167
             },
             {
               "key": "subscription_cost_monthly,10",
               "index": 10,
-              "line": 3184
+              "line": 3171
             },
             {
               "key": "subscription_cost_monthly,11",
               "index": 11,
-              "line": 3188
+              "line": 3175
             },
             {
               "key": "subscription_cost_monthly,12",
               "index": 12,
-              "line": 3192
+              "line": 3179
             }
           ],
           "to": "subscriptionMonthlyCostTexts"
@@ -8934,7 +9618,7 @@
             {
               "key": "connectionrestored",
               "index": null,
-              "line": 1319
+              "line": 1306
             }
           ],
           "to": "connectionRestoredText"
@@ -8946,7 +9630,7 @@
             {
               "key": "unpacking_graphics",
               "index": null,
-              "line": 2026
+              "line": 2013
             }
           ],
           "to": "unpackingGraphicsText"
@@ -8958,7 +9642,7 @@
             {
               "key": "create_password_confirm_tooltip",
               "index": null,
-              "line": 1711
+              "line": 1698
             }
           ],
           "to": "createPasswordConfirmationTooltipText"
@@ -8970,7 +9654,7 @@
             {
               "key": "loading_extradata",
               "index": null,
-              "line": 2010
+              "line": 1997
             }
           ],
           "to": "loadingExtraDataText"
@@ -8982,7 +9666,7 @@
             {
               "key": "justplay",
               "index": null,
-              "line": 1233
+              "line": 1220
             }
           ],
           "to": "justPlayText"
@@ -8994,7 +9678,7 @@
             {
               "key": "create_email_confirm",
               "index": null,
-              "line": 1591
+              "line": 1578
             }
           ],
           "to": "createEmailConfirmationText"
@@ -9006,7 +9690,7 @@
             {
               "key": "create_email_confirm_tooltip",
               "index": null,
-              "line": 1719
+              "line": 1706
             }
           ],
           "to": "createEmailConfirmationTooltipText"
@@ -9018,7 +9702,7 @@
             {
               "key": "waitingfor_soundeffects",
               "index": null,
-              "line": 1947
+              "line": 1934
             }
           ],
           "to": "waitingForSoundEffectsText"
@@ -9030,7 +9714,7 @@
             {
               "key": "create_age_tooltip",
               "index": null,
-              "line": 1723
+              "line": 1710
             }
           ],
           "to": "createAgeTooltipText"
@@ -9042,7 +9726,7 @@
             {
               "key": "fs_button_accept",
               "index": null,
-              "line": 2828
+              "line": 2815
             }
           ],
           "to": "fullscreenAcceptButtonText"
@@ -9054,7 +9738,7 @@
             {
               "key": "error_js5crc",
               "index": null,
-              "line": 233
+              "line": 220
             }
           ],
           "to": "js5CrcErrorText"
@@ -9066,7 +9750,7 @@
             {
               "key": "waitingfor_extradata",
               "index": null,
-              "line": 1963
+              "line": 1950
             }
           ],
           "to": "waitingForExtraDataText"
@@ -9078,7 +9762,7 @@
             {
               "key": "create_username_available",
               "index": null,
-              "line": 1759
+              "line": 1746
             }
           ],
           "to": "createUsernameAvailableText"
@@ -9090,7 +9774,7 @@
             {
               "key": "create_unable",
               "index": null,
-              "line": 253
+              "line": 240
             }
           ],
           "to": "createUnableText"
@@ -9102,7 +9786,7 @@
             {
               "key": "error_js5io",
               "index": null,
-              "line": 237
+              "line": 224
             }
           ],
           "to": "js5IoErrorText"
@@ -9114,7 +9798,7 @@
             {
               "key": "fs_button_members",
               "index": null,
-              "line": 2860
+              "line": 2847
             }
           ],
           "to": "fullscreenMembersButtonText"
@@ -9126,7 +9810,7 @@
             {
               "key": "create_password",
               "index": null,
-              "line": 1579
+              "line": 1566
             }
           ],
           "to": "createPasswordText"
@@ -9138,7 +9822,7 @@
             {
               "key": "create_password_hint",
               "index": null,
-              "line": 1707
+              "line": 1694
             }
           ],
           "to": "createPasswordHintText"
@@ -9150,7 +9834,7 @@
             {
               "key": "ticketing_xunread",
               "index": null,
-              "line": 285
+              "line": 272
             }
           ],
           "to": "ticketingUnreadCountText"
@@ -9162,7 +9846,7 @@
             {
               "key": "fs_button_cancel",
               "index": null,
-              "line": 2836
+              "line": 2823
             }
           ],
           "to": "fullscreenCancelButtonText"
@@ -9174,7 +9858,7 @@
             {
               "key": "invalidpass",
               "index": null,
-              "line": 1299
+              "line": 1286
             }
           ],
           "to": "invalidPasswordText"
@@ -9186,7 +9870,7 @@
             {
               "key": "error_js5connect_full",
               "index": null,
-              "line": 241
+              "line": 228
             }
           ],
           "to": "js5ConnectFullErrorText"
@@ -9198,7 +9882,7 @@
             {
               "key": "create_username_unavailable",
               "index": null,
-              "line": 1755
+              "line": 1742
             }
           ],
           "to": "createUsernameUnavailableText"
@@ -9210,7 +9894,7 @@
             {
               "key": "quittowebsite",
               "index": null,
-              "line": 1315
+              "line": 1302
             }
           ],
           "to": "quitToWebsiteText"
@@ -9222,7 +9906,7 @@
             {
               "key": "logging_in",
               "index": null,
-              "line": 1265
+              "line": 1252
             }
           ],
           "to": "loggingInText"
@@ -9234,7 +9918,7 @@
             {
               "key": "login_no_displayname",
               "index": null,
-              "line": 1683
+              "line": 1670
             }
           ],
           "to": "loginNoDisplayNameText"
@@ -9246,7 +9930,7 @@
             {
               "key": "no_highscores",
               "index": null,
-              "line": 2472
+              "line": 2459
             }
           ],
           "to": "noHighscoresText"
@@ -9258,7 +9942,7 @@
             {
               "key": "creatingyouraccount",
               "index": null,
-              "line": 1483
+              "line": 1470
             }
           ],
           "to": "creatingYourAccountText"
@@ -9270,7 +9954,7 @@
             {
               "key": "create_createanaccount",
               "index": null,
-              "line": 1567
+              "line": 1554
             }
           ],
           "to": "createAnAccountText"
@@ -9282,7 +9966,7 @@
             {
               "key": "create_alert_mismatch",
               "index": null,
-              "line": 1827
+              "line": 1814
             }
           ],
           "to": "createMismatchAlertText"
@@ -9294,7 +9978,7 @@
             {
               "key": "fs_unavailable",
               "index": null,
-              "line": 2864
+              "line": 2851
             }
           ],
           "to": "fullscreenUnavailableText"
@@ -9306,7 +9990,7 @@
             {
               "key": "login_email",
               "index": null,
-              "line": 1655
+              "line": 1642
             }
           ],
           "to": "loginEmailText"
@@ -9318,7 +10002,7 @@
             {
               "key": "orbpoints",
               "index": null,
-              "line": 2448
+              "line": 2435
             }
           ],
           "to": "orbPointsText"
@@ -9330,7 +10014,7 @@
             {
               "key": "create_alert_invalidage",
               "index": null,
-              "line": 1819
+              "line": 1806
             }
           ],
           "to": "createInvalidAgeAlertText"
@@ -9342,7 +10026,7 @@
             {
               "key": "quit",
               "index": null,
-              "line": 2110
+              "line": 2097
             }
           ],
           "to": "quitText"
@@ -9354,7 +10038,7 @@
             {
               "key": "DEFAULT_PLAYER_NAME",
               "index": null,
-              "line": 3016
+              "line": 3003
             }
           ],
           "to": "defaultPlayerNameText"
@@ -9366,7 +10050,7 @@
             {
               "key": "prev",
               "index": null,
-              "line": 2218
+              "line": 2205
             }
           ],
           "to": "previousText"
@@ -9378,7 +10062,7 @@
             {
               "key": "create_displayname_tooltip",
               "index": null,
-              "line": 1695
+              "line": 1682
             }
           ],
           "to": "createDisplayNameTooltipText"
@@ -9390,7 +10074,7 @@
             {
               "key": "loading_soundeffects",
               "index": null,
-              "line": 1991
+              "line": 1978
             }
           ],
           "to": "loadingSoundEffectsText"
@@ -9402,7 +10086,7 @@
             {
               "key": "hs_friend_tip",
               "index": null,
-              "line": 2928
+              "line": 2915
             }
           ],
           "to": "highscoreFriendTipText"
@@ -9414,7 +10098,7 @@
             {
               "key": "fs_accept_beforeaccept",
               "index": null,
-              "line": 2824
+              "line": 2811
             }
           ],
           "to": "fullscreenBeforeAcceptText"
@@ -9426,7 +10110,7 @@
             {
               "key": "create_optin_news",
               "index": null,
-              "line": 1635
+              "line": 1622
             }
           ],
           "to": "createNewsOptInText"
@@ -9438,7 +10122,7 @@
             {
               "key": "create_age",
               "index": null,
-              "line": 1595
+              "line": 1582
             }
           ],
           "to": "createAgeText"
@@ -9450,7 +10134,7 @@
             {
               "key": "create_alert_passcontainsemail",
               "index": null,
-              "line": 1795
+              "line": 1782
             }
           ],
           "to": "createPasswordContainsEmailAlertText"
@@ -9462,7 +10146,7 @@
             {
               "key": "create_email",
               "index": null,
-              "line": 1587
+              "line": 1574
             }
           ],
           "to": "createEmailText"
@@ -9474,7 +10158,7 @@
             {
               "key": "fs_accept_aftercancel",
               "index": null,
-              "line": 2840
+              "line": 2827
             }
           ],
           "to": "fullscreenAfterCancelText"
@@ -9486,7 +10170,7 @@
             {
               "key": "loginm2",
               "index": null,
-              "line": 221
+              "line": 208
             }
           ],
           "to": "loginMessage2Text"
@@ -9498,62 +10182,62 @@
             {
               "key": "monthnames,0",
               "index": 0,
-              "line": 1511
+              "line": 1498
             },
             {
               "key": "monthnames,1",
               "index": 1,
-              "line": 1515
+              "line": 1502
             },
             {
               "key": "monthnames,2",
               "index": 2,
-              "line": 1519
+              "line": 1506
             },
             {
               "key": "monthnames,3",
               "index": 3,
-              "line": 1523
+              "line": 1510
             },
             {
               "key": "monthnames,4",
               "index": 4,
-              "line": 1527
+              "line": 1514
             },
             {
               "key": "monthnames,5",
               "index": 5,
-              "line": 1531
+              "line": 1518
             },
             {
               "key": "monthnames,6",
               "index": 6,
-              "line": 1535
+              "line": 1522
             },
             {
               "key": "monthnames,7",
               "index": 7,
-              "line": 1539
+              "line": 1526
             },
             {
               "key": "monthnames,8",
               "index": 8,
-              "line": 1543
+              "line": 1530
             },
             {
               "key": "monthnames,9",
               "index": 9,
-              "line": 1547
+              "line": 1534
             },
             {
               "key": "monthnames,10",
               "index": 10,
-              "line": 1551
+              "line": 1538
             },
             {
               "key": "monthnames,11",
               "index": 11,
-              "line": 1555
+              "line": 1542
             }
           ],
           "to": "monthNames"
@@ -9565,7 +10249,7 @@
             {
               "key": "create_password_confirm",
               "index": null,
-              "line": 1583
+              "line": 1570
             }
           ],
           "to": "createPasswordConfirmationText"
@@ -9577,17 +10261,17 @@
             {
               "key": "hs_mode_name,0",
               "index": 0,
-              "line": 2936
+              "line": 2923
             },
             {
               "key": "hs_mode_name,1",
               "index": 1,
-              "line": 2940
+              "line": 2927
             },
             {
               "key": "hs_mode_name,2",
               "index": 2,
-              "line": 2944
+              "line": 2931
             }
           ],
           "to": "highscoreModeNames"
@@ -9599,7 +10283,7 @@
             {
               "key": "pleasewait_dotdotdot",
               "index": null,
-              "line": 2996
+              "line": 2983
             }
           ],
           "to": "pleaseWaitText"
@@ -9611,7 +10295,7 @@
             {
               "key": "login_justplay_tooltip",
               "index": null,
-              "line": 1675
+              "line": 1662
             }
           ],
           "to": "loginJustPlayTooltipText"
@@ -9623,7 +10307,7 @@
             {
               "key": "create_optin_news_tooltip",
               "index": null,
-              "line": 1727
+              "line": 1714
             }
           ],
           "to": "createNewsOptInTooltipText"
@@ -9635,7 +10319,7 @@
             {
               "key": "mouseoveranicon",
               "index": null,
-              "line": 2436
+              "line": 2423
             }
           ],
           "to": "mouseOverIconText"
@@ -9647,7 +10331,7 @@
             {
               "key": "sound_colon",
               "index": null,
-              "line": 2070
+              "line": 2057
             }
           ],
           "to": "soundLabelText"
@@ -9659,7 +10343,7 @@
             {
               "key": "fullscreen",
               "index": null,
-              "line": 2078
+              "line": 2065
             }
           ],
           "to": "fullscreenText"
@@ -9671,7 +10355,7 @@
             {
               "key": "loading_graphics",
               "index": null,
-              "line": 1979
+              "line": 1966
             }
           ],
           "to": "loadingGraphicsText"
@@ -9683,7 +10367,7 @@
             {
               "key": "create_alert_invalidemail",
               "index": null,
-              "line": 1807
+              "line": 1794
             }
           ],
           "to": "createInvalidEmailAlertText"
@@ -9695,7 +10379,7 @@
             {
               "key": "fs_accept_afteraccept",
               "index": null,
-              "line": 2832
+              "line": 2819
             }
           ],
           "to": "fullscreenAfterAcceptText"
@@ -9707,7 +10391,7 @@
             {
               "key": "create_displayname",
               "index": null,
-              "line": 1575
+              "line": 1562
             }
           ],
           "to": "createDisplayNameText"
@@ -9715,10 +10399,10 @@
       ]
     },
     "verification": {
-      "sourceDeclarations": 21185,
-      "bindingsCompared": 154117,
+      "sourceDeclarations": 20931,
+      "bindingsCompared": 152600,
       "overrideRelationships": 388,
-      "identifierEdits": 18740,
+      "identifierEdits": 18714,
       "dictionaryRestorationFiles": 303,
       "wholeGameEquivalenceVerified": false,
       "nativeMatchingScenarios": 708,
@@ -9758,17 +10442,6 @@
       "nativeAvatarAnimationSequenceTicks": 4320,
       "nativeAvatarTintRequestScenarios": 324,
       "rawSourceBodyEditedByHand": false,
-      "normalizedLiteralShiftCounts": 972,
-      "shiftNormalizationChangedJavaFiles": 90,
-      "nativeShiftComparisons": 24324,
-      "sourceDeclarationIdentitiesUnchanged": 21185,
-      "namingGuardsUnchanged": 1146,
-      "namedLocalIdentitiesUnchanged": 359,
-      "normalizedIntegralSignNodes": 745,
-      "integralSignChangedJavaFiles": 132,
-      "nativeIntegralSignComparisons": 20350,
-      "attributedJavaTreesMatched": 303,
-      "integralSignAuditFixtures": 8,
       "nativeBoundaryPixelChecks": 425042,
       "nativeBoundaryPerimeterPixels": 1300,
       "nativeBoundaryGuardChecks": 18,
@@ -9778,8 +10451,72 @@
         641
       ],
       "nativeBoundaryIndependentOracle": true,
-      "guardedNamingRules": 1171,
-      "namedLocalDeclarations": 383
+      "guardedNamingRules": 1170,
+      "namedLocalDeclarations": 382,
+      "nonselectorDeclarationsPreserved": 20920,
+      "nonselectorBindingsPreserved": 152549,
+      "generatedSelectorsBefore": 265,
+      "generatedSelectorsAfter": 11,
+      "generatedSelectorsRemoved": 254,
+      "rawSourceLinesRemoved": 3125,
+      "returnReconstructionChangedJavaFiles": 181,
+      "localOrdinalMigrations": 46,
+      "obsoleteNamedSelectorsRemoved": 1,
+      "genericRegionContractTestGroups": 36,
+      "genericExceptionExitTestGroups": 6,
+      "nativeReturnTailComparisons": 1560,
+      "nativeSynchronizedReturnCases": 15,
+      "nativeExistingLoopExitComparisons": 7200,
+      "forcedExplicitMonitorsRefused": true,
+      "cleanDecompilerArchiveReproduction": true
+    },
+    "sourceChange": {
+      "before": {
+        "source": {
+          "repository": "Kreijstal/funorb-decompiled",
+          "commit": "588ff14becf7fd429d53e929e85e073814c20259",
+          "subdirectory": "games/geoblox"
+        },
+        "generators": {
+          "dekoblokoWork": {
+            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
+            "trackedClean": true
+          },
+          "javaTools": {
+            "commit": "67f22895e4161b3e81a7ceb93273b6680be7d2f0",
+            "trackedClean": true,
+            "sourceArchive": {
+              "sha256": "ac8734ac19b0447c2aad49c20af07562f4e9d22c862c97c465b465b6e858a86f",
+              "reproduce": "git archive --format=tar 67f22895e4161b3e81a7ceb93273b6680be7d2f0 | sha256sum",
+              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
+            }
+          }
+        },
+        "inputTreeSha256": "cdf74421a73a784554ef7946c2647fa0380f8a458a21e30e96ba951f4e650a97"
+      },
+      "after": {
+        "source": {
+          "repository": "Kreijstal/funorb-decompiled",
+          "commit": "a298f846c1824a1e88dd6c63674bbe81e67152e1",
+          "subdirectory": "games/geoblox"
+        },
+        "generators": {
+          "dekoblokoWork": {
+            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
+            "trackedClean": true
+          },
+          "javaTools": {
+            "commit": "2f75cefb09f32e164f77b7f4adc6fd011d922f43",
+            "trackedClean": true,
+            "sourceArchive": {
+              "sha256": "8e6ff3d4a6c5439128cbbad964491358c73c92c2e6e0a0ff82edadda478a612e",
+              "reproduce": "git archive --format=tar 2f75cefb09f32e164f77b7f4adc6fd011d922f43 | sha256sum",
+              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
+            }
+          }
+        },
+        "inputTreeSha256": "0ce7d77ce24b5c74be0439d9d363ac7fb407bf949c9385ecc5f7e4cbcfe48f0f"
+      }
     }
   }
 }

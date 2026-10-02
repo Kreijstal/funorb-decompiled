@@ -37,7 +37,6 @@ abstract class nh {
         StringBuilder stackIn_32_1 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_33_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
         RuntimeException var7 = null;
@@ -47,56 +46,52 @@ abstract class nh {
         int[] var11 = null;
         int[] var12 = null;
         try {
-          L0: {
-            var7_int = GameplayEntity.alignBitOffset(1221916132, param5);
-            if (cl.field_e == null) {
-              cl.field_e = new java.security.SecureRandom();
-            }
-            var12 = new int[4];
-            var11 = var12;
-            var8 = var11;
-            for (var9 = 0; var9 < 4; var9++) {
-              var8[var9] = cl.field_e.nextInt();
-            }
-            L3: {
-              if (null != fa.field_c) {
-                if (fa.field_c.field_j.length >= var7_int) {
-                  break L3;
-                }
+          var7_int = GameplayEntity.alignBitOffset(1221916132, param5);
+          if (cl.field_e == null) {
+            cl.field_e = new java.security.SecureRandom();
+          }
+          var12 = new int[4];
+          var11 = var12;
+          var8 = var11;
+          for (var9 = 0; var9 < 4; var9++) {
+            var8[var9] = cl.field_e.nextInt();
+          }
+          L2: {
+            if (null != fa.field_c) {
+              if (fa.field_c.field_j.length >= var7_int) {
+                break L2;
               }
-              fa.field_c = new qc(var7_int);
             }
-            L5: {
-              fa.field_c.field_f = 0;
-              fa.field_c.a(param5, -97, param4, param2);
-              fa.field_c.a((byte) -84, var7_int);
-              fa.field_c.a(var12, (byte) -33);
-              if (vf.field_I != null) {
-                if (vf.field_I.field_j.length >= 100) {
-                  break L5;
-                }
+            fa.field_c = new qc(var7_int);
+          }
+          L4: {
+            fa.field_c.field_f = 0;
+            fa.field_c.a(param5, -97, param4, param2);
+            fa.field_c.a((byte) -84, var7_int);
+            fa.field_c.a(var12, (byte) -33);
+            if (vf.field_I != null) {
+              if (vf.field_I.field_j.length >= 100) {
+                break L4;
               }
-              vf.field_I = new qc(100);
             }
-            vf.field_I.field_f = 0;
-            vf.field_I.d((byte) -69, 10);
-            var10 = 0;
-            var9 = var10;
-            L7: while (var10 < 4) {
-              vf.field_I.c((byte) 95, var12[var10]);
-              var10++;
-            }
-            if (param6) {
-              vf.field_I.e(param5, 28695);
-              vf.field_I.a(0, param0, param1);
-              param3.a(vf.field_I.field_f, -97, vf.field_I.field_j, 0);
-              param3.a(fa.field_c.field_f, -97, fa.field_c.field_j, 0);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+            vf.field_I = new qc(100);
+          }
+          vf.field_I.field_f = 0;
+          vf.field_I.d((byte) -69, 10);
+          var10 = 0;
+          var9 = var10;
+          L6: while (var10 < 4) {
+            vf.field_I.c((byte) 95, var12[var10]);
+            var10++;
+          }
+          if (param6) {
+            vf.field_I.e(param5, 28695);
+            vf.field_I.a(0, param0, param1);
+            param3.a(vf.field_I.field_f, -97, vf.field_I.field_j, 0);
+            param3.a(fa.field_c.field_f, -97, fa.field_c.field_j, 0);
+            return;
+          } else {
+            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -154,11 +149,6 @@ abstract class nh {
             stackIn_33_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_33_2).append(',').append(param5).append(',').append(param6).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 

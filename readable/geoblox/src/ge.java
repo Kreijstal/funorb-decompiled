@@ -104,64 +104,62 @@ final class ge {
         int var13 = 0;
         var13 = Geoblox.field_C;
         try {
-          L0: {
-            var5_int = 0;
-            var6 = 7 & 8 - (7 & (int)param1);
-            var7 = 7 & this.field_h;
-            var9 = param1;
-            var11 = 31;
-            var12 = param2;
-            L1: while (var11 >= 0) {
-              var12 = var12 + ((255 & (int)var9) + (this.field_j[var11] & 255));
-              this.field_j[var11] = (byte)var12;
-              var12 = var12 >>> 8;
-              var9 = var9 >>> 8;
-              var11--;
-            }
-            L2: while (true) {
-              if (8L >= param1) {
-                if (param1 <= 0L) {
-                  var8 = 0;
-                } else {
-                  var8 = param0[var5_int] << var6 & 255;
-                  this.field_i[this.field_e] = (byte)lb.a((int) this.field_i[this.field_e], var8 >>> var7);
-                }
-                if (8L > param1 + (long)var7) {
-                  this.field_h = (int)((long)this.field_h + param1);
-                } else {
-                  param1 = param1 - (long)(8 - var7);
-                  this.field_e = this.field_e + 1;
-                  this.field_h = this.field_h + (-var7 + 8);
-                  if (this.field_h == 512) {
-                    this.c(118);
-                    this.field_h = 0;
-                    this.field_e = 0;
-                  }
-                  this.field_i[this.field_e] = (byte)cd.a(var8 << -var7 + 8, 255);
-                  this.field_h = this.field_h + (int)param1;
-                }
-                break L0;
+          var5_int = 0;
+          var6 = 7 & 8 - (7 & (int)param1);
+          var7 = 7 & this.field_h;
+          var9 = param1;
+          var11 = 31;
+          var12 = param2;
+          L0: while (var11 >= 0) {
+            var12 = var12 + ((255 & (int)var9) + (this.field_j[var11] & 255));
+            this.field_j[var11] = (byte)var12;
+            var12 = var12 >>> 8;
+            var9 = var9 >>> 8;
+            var11--;
+          }
+          L1: while (true) {
+            if (8L >= param1) {
+              if (param1 <= 0L) {
+                var8 = 0;
               } else {
-                var8 = 255 & param0[var5_int] << var6 | (param0[var5_int + 1] & 255) >>> -var6 + 8;
-                if (var8 >= 0) {
-                  if (256 > var8) {
-                    this.field_i[this.field_e] = (byte)lb.a((int) this.field_i[this.field_e], var8 >>> var7);
-                    this.field_h = this.field_h + (-var7 + 8);
-                    this.field_e = this.field_e + 1;
-                    if (512 == this.field_h) {
-                      this.c(param2 ^ 111);
-                      this.field_e = 0;
-                      this.field_h = 0;
-                    }
-                    this.field_i[this.field_e] = (byte)cd.a(255, var8 << -var7 + 8);
-                    param1 = param1 - 8L;
-                    this.field_h = this.field_h + var7;
-                    var5_int++;
-                    continue L2;
-                  }
-                }
-                throw new RuntimeException("LOGIC ERROR");
+                var8 = param0[var5_int] << var6 & 255;
+                this.field_i[this.field_e] = (byte)lb.a((int) this.field_i[this.field_e], var8 >>> var7);
               }
+              if (8L > param1 + (long)var7) {
+                this.field_h = (int)((long)this.field_h + param1);
+              } else {
+                param1 = param1 - (long)(8 - var7);
+                this.field_e = this.field_e + 1;
+                this.field_h = this.field_h + (-var7 + 8);
+                if (this.field_h == 512) {
+                  this.c(118);
+                  this.field_h = 0;
+                  this.field_e = 0;
+                }
+                this.field_i[this.field_e] = (byte)cd.a(var8 << -var7 + 8, 255);
+                this.field_h = this.field_h + (int)param1;
+              }
+              return;
+            } else {
+              var8 = 255 & param0[var5_int] << var6 | (param0[var5_int + 1] & 255) >>> -var6 + 8;
+              if (var8 >= 0) {
+                if (256 > var8) {
+                  this.field_i[this.field_e] = (byte)lb.a((int) this.field_i[this.field_e], var8 >>> var7);
+                  this.field_h = this.field_h + (-var7 + 8);
+                  this.field_e = this.field_e + 1;
+                  if (512 == this.field_h) {
+                    this.c(param2 ^ 111);
+                    this.field_e = 0;
+                    this.field_h = 0;
+                  }
+                  this.field_i[this.field_e] = (byte)cd.a(255, var8 << -var7 + 8);
+                  param1 = param1 - 8L;
+                  this.field_h = this.field_h + var7;
+                  var5_int++;
+                  continue L1;
+                }
+              }
+              throw new RuntimeException("LOGIC ERROR");
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -200,6 +198,7 @@ final class ge {
           }
           var3 = (CharSequence) ((Object) param0);
           stackIn_3_0 = vg.field_b.equals(oe.a(var3, 12));
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -218,7 +217,6 @@ final class ge {
           }
           throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     final void a(byte[] param0, int param1, boolean param2) {
@@ -238,47 +236,45 @@ final class ge {
         var8 = Geoblox.field_C;
         try {
           L0: {
-            L1: {
-              this.field_i[this.field_e] = (byte)lb.a((int) this.field_i[this.field_e], 128 >>> cd.a(this.field_h, 7));
-              this.field_e = this.field_e + 1;
-              if (this.field_e > 32) {
-                L2: while (this.field_e < 64) {
-                  fieldTemp$0 = this.field_e;
-                  this.field_e = this.field_e + 1;
-                  this.field_i[fieldTemp$0] = (byte) 0;
-                }
-                this.c(116);
-                this.field_e = 0;
-                break L1;
+            this.field_i[this.field_e] = (byte)lb.a((int) this.field_i[this.field_e], 128 >>> cd.a(this.field_h, 7));
+            this.field_e = this.field_e + 1;
+            if (this.field_e > 32) {
+              L1: while (this.field_e < 64) {
+                fieldTemp$0 = this.field_e;
+                this.field_e = this.field_e + 1;
+                this.field_i[fieldTemp$0] = (byte) 0;
               }
+              this.c(116);
+              this.field_e = 0;
+              break L0;
             }
-            if (!param2) {
-              this.a(-38);
-            }
-            L4: while (this.field_e < 32) {
-              fieldTemp$1 = this.field_e;
-              this.field_e = this.field_e + 1;
-              this.field_i[fieldTemp$1] = (byte) 0;
-            }
-            sf.a(this.field_j, 0, this.field_i, 32, 32);
-            this.c(117);
-            var4_int = 0;
-            var5 = param1;
-            L5: while (var4_int < 8) {
-              var6 = this.field_c[var4_int];
-              param0[var5] = (byte)(int)(var6 >>> 56);
-              param0[1 + var5] = (byte)(int)(var6 >>> 48);
-              param0[2 + var5] = (byte)(int)(var6 >>> 40);
-              param0[var5 + 3] = (byte)(int)(var6 >>> 32);
-              param0[var5 + 4] = (byte)(int)(var6 >>> 24);
-              param0[var5 + 5] = (byte)(int)(var6 >>> 16);
-              param0[6 + var5] = (byte)(int)(var6 >>> 8);
-              param0[var5 + 7] = (byte)(int)var6;
-              var4_int++;
-              var5 += 8;
-            }
-            break L0;
           }
+          if (!param2) {
+            this.a(-38);
+          }
+          L3: while (this.field_e < 32) {
+            fieldTemp$1 = this.field_e;
+            this.field_e = this.field_e + 1;
+            this.field_i[fieldTemp$1] = (byte) 0;
+          }
+          sf.a(this.field_j, 0, this.field_i, 32, 32);
+          this.c(117);
+          var4_int = 0;
+          var5 = param1;
+          L4: while (var4_int < 8) {
+            var6 = this.field_c[var4_int];
+            param0[var5] = (byte)(int)(var6 >>> 56);
+            param0[1 + var5] = (byte)(int)(var6 >>> 48);
+            param0[2 + var5] = (byte)(int)(var6 >>> 40);
+            param0[var5 + 3] = (byte)(int)(var6 >>> 32);
+            param0[var5 + 4] = (byte)(int)(var6 >>> 24);
+            param0[var5 + 5] = (byte)(int)(var6 >>> 16);
+            param0[6 + var5] = (byte)(int)(var6 >>> 8);
+            param0[var5 + 7] = (byte)(int)var6;
+            var4_int++;
+            var5 += 8;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -305,7 +301,6 @@ final class ge {
             int stackIn_24_0 = 0;
             int stackIn_27_0 = 0;
             int stackIn_32_0 = 0;
-            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             int var1_int = 0;
             IOException var1 = null;
@@ -313,82 +308,64 @@ final class ge {
             qc var3 = null;
             if (wg.field_i.field_b < 4) {
               try {
-                L0: {
-                  if (qh.field_J == 0) {
-                    gj.field_s = ph.field_i.a(vg.field_a, GameplaySession.field_z, false);
-                    qh.field_J = qh.field_J + 1;
-                  }
-                  if (qh.field_J == 1) {
-                    if (gj.field_s.field_a == 2) {
-                      stackIn_12_0 = eb.a(-1, 28625);
-                      decompiledRegionSelector0 = 0;
-                      break L0;
-                    } else {
-                      if (1 == gj.field_s.field_a) {
-                        qh.field_J = qh.field_J + 1;
-                      }
-                    }
-                  }
-                  if (param0 != -74) {
-                    var2 = (String) null;
-                    ge.a((String) null, (byte) -15);
-                  }
-                  if (2 == qh.field_J) {
-                    li.field_a = new ba((java.net.Socket) (gj.field_s.field_b), ph.field_i);
-                    var3 = new qc(13);
-                    ke.a(pc.field_C, true, hc.field_T, bm.field_u, var3);
-                    var3.d((byte) -54, 15);
-                    var3.c((byte) 95, ag.field_l);
-                    li.field_a.a(100, 0, 13, var3.field_j);
-                    qh.field_J = qh.field_J + 1;
-                    eb.field_b = 30000L + oa.a(param0 - 12446);
-                  }
-                  if (qh.field_J == 3) {
-                    if (0 < li.field_a.a((byte) 78)) {
-                      var1_int = li.field_a.c(-17422);
-                      if (var1_int == 0) {
-                        qh.field_J = qh.field_J + 1;
-                      } else {
-                        stackIn_27_0 = eb.a(var1_int, 28625);
-                        decompiledRegionSelector0 = 2;
-                        break L0;
-                      }
-                    } else {
-                      if (oa.a(-12520) > eb.field_b) {
-                        stackIn_24_0 = eb.a(-2, param0 ^ -28569);
-                        decompiledRegionSelector0 = 1;
-                        break L0;
-                      }
-                    }
-                  }
-                  if (4 == qh.field_J) {
-                    wg.field_i.a(li.field_a, false, si.field_c);
-                    gj.field_s = null;
-                    qh.field_J = 0;
-                    li.field_a = null;
-                    stackIn_32_0 = 0;
-                    decompiledRegionSelector0 = 3;
+                if (qh.field_J == 0) {
+                  gj.field_s = ph.field_i.a(vg.field_a, GameplaySession.field_z, false);
+                  qh.field_J = qh.field_J + 1;
+                }
+                if (qh.field_J == 1) {
+                  if (gj.field_s.field_a == 2) {
+                    stackIn_12_0 = eb.a(-1, 28625);
+                    return stackIn_12_0;
                   } else {
-                    return -1;
+                    if (1 == gj.field_s.field_a) {
+                      qh.field_J = qh.field_J + 1;
+                    }
                   }
+                }
+                if (param0 != -74) {
+                  var2 = (String) null;
+                  ge.a((String) null, (byte) -15);
+                }
+                if (2 == qh.field_J) {
+                  li.field_a = new ba((java.net.Socket) (gj.field_s.field_b), ph.field_i);
+                  var3 = new qc(13);
+                  ke.a(pc.field_C, true, hc.field_T, bm.field_u, var3);
+                  var3.d((byte) -54, 15);
+                  var3.c((byte) 95, ag.field_l);
+                  li.field_a.a(100, 0, 13, var3.field_j);
+                  qh.field_J = qh.field_J + 1;
+                  eb.field_b = 30000L + oa.a(param0 - 12446);
+                }
+                if (qh.field_J == 3) {
+                  if (0 < li.field_a.a((byte) 78)) {
+                    var1_int = li.field_a.c(-17422);
+                    if (var1_int == 0) {
+                      qh.field_J = qh.field_J + 1;
+                    } else {
+                      stackIn_27_0 = eb.a(var1_int, 28625);
+                      return stackIn_27_0;
+                    }
+                  } else {
+                    if (oa.a(-12520) > eb.field_b) {
+                      stackIn_24_0 = eb.a(-2, param0 ^ -28569);
+                      return stackIn_24_0;
+                    }
+                  }
+                }
+                if (4 == qh.field_J) {
+                  wg.field_i.a(li.field_a, false, si.field_c);
+                  gj.field_s = null;
+                  qh.field_J = 0;
+                  li.field_a = null;
+                  stackIn_32_0 = 0;
+                  return stackIn_32_0;
+                } else {
+                  return -1;
                 }
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var1 = (IOException) (Object) decompiledCaughtException;
                 return eb.a(-3, 28625);
-              }
-              if (decompiledRegionSelector0 == 0) {
-                return stackIn_12_0;
-              } else {
-                if (decompiledRegionSelector0 == 1) {
-                  return stackIn_24_0;
-                } else {
-                  if (decompiledRegionSelector0 == 2) {
-                    return stackIn_27_0;
-                  } else {
-                    return stackIn_32_0;
-                  }
-                }
               }
             } else {
               if (wg.field_i.field_q != -1) {

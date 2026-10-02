@@ -196,6 +196,7 @@ final class hd extends sh {
           }
           var14 = stackIn_10_0;
           this.field_A.a(-(2 * this.field_C) + param3, param2 - this.field_K - this.field_C * 3, (byte) -105, (-param3 + var13 >> 1) + this.field_C, var14);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var12 = decompiledCaughtException;

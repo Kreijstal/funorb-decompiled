@@ -124,18 +124,16 @@ final class SecondaryDeque {
         RuntimeException decompiledCaughtException = null;
         var3 = Geoblox.field_C;
         try {
-          L0: {
-            var4 = (re) ((Object) PendingActionMarker.field_f.firstForIteration(0));
-            L1: while (var4 != null) {
-              ik.a(var4, param1, (byte) 107);
-              var4 = (re) ((Object) PendingActionMarker.field_f.nextForIteration(1));
-            }
-            if (param0) {
-              break L0;
-            } else {
-              contactProbeOffsetX = -80;
-              return;
-            }
+          var4 = (re) ((Object) PendingActionMarker.field_f.firstForIteration(0));
+          L0: while (var4 != null) {
+            ik.a(var4, param1, (byte) 107);
+            var4 = (re) ((Object) PendingActionMarker.field_f.nextForIteration(1));
+          }
+          if (param0) {
+            return;
+          } else {
+            contactProbeOffsetX = -80;
+            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -173,27 +171,23 @@ final class SecondaryDeque {
         StringBuilder stackIn_17_1 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (!param0) {
-              field_f = (String) null;
+          if (!param0) {
+            field_f = (String) null;
+          }
+          if (param1 == 0L) {
+            if (param2 != null) {
+              stackIn_9_0 = new nk(param2, param3);
+              return (df) ((Object) stackIn_9_0);
             }
-            if (param1 == 0L) {
-              if (param2 != null) {
-                stackIn_9_0 = new nk(param2, param3);
-                decompiledRegionSelector0 = 1;
-                break L0;
-              }
-            }
-            if (!param4) {
-              stackIn_11_0 = new lf(param1, param3);
-              decompiledRegionSelector0 = 2;
-            } else {
-              stackIn_7_0 = new th(param1, param3);
-              decompiledRegionSelector0 = 0;
-            }
+          }
+          if (!param4) {
+            stackIn_11_0 = new lf(param1, param3);
+            return (df) ((Object) stackIn_11_0);
+          } else {
+            stackIn_7_0 = new th(param1, param3);
+            return (df) ((Object) stackIn_7_0);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -225,15 +219,6 @@ final class SecondaryDeque {
             stackIn_18_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',').append(param4).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return (df) ((Object) stackIn_7_0);
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return (df) ((Object) stackIn_9_0);
-          } else {
-            return (df) ((Object) stackIn_11_0);
-          }
         }
     }
 

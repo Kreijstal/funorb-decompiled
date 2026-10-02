@@ -56,203 +56,201 @@ final class ul {
         int controlFlowGuard = 0;
         controlFlowGuard = Geoblox.field_C;
         try {
-          L0: {
-            h.matchCandidateCount = 0;
-            eligibleNeighborhoodVisited = 0;
-            dualMatchFound = 0;
-            centralEntity = (GameplayEntity) ((Object) a.attachedEntities.firstForIteration(0));
-            if (methodGuard != -2) {
-              field_a = (Sprite) null;
-            }
-            L2: while (centralEntity != null) {
-              L4: {
-                if (centralEntity.sameVariantEntityCount <= 1) {
-                  if (centralEntity.sameCategoryEntityCount <= 1) {
-                    break L4;
-                  }
-                }
-                centralEntity.entityQueue = bh.field_c;
-                if (centralEntity.sameVariantEntityCount <= 1) {
-                  stackIn_10_0 = 0;
-                } else {
-                  stackIn_10_0 = 1;
-                }
-                variantMatchingAllowed = stackIn_10_0;
+          h.matchCandidateCount = 0;
+          eligibleNeighborhoodVisited = 0;
+          dualMatchFound = 0;
+          centralEntity = (GameplayEntity) ((Object) a.attachedEntities.firstForIteration(0));
+          if (methodGuard != -2) {
+            field_a = (Sprite) null;
+          }
+          L1: while (centralEntity != null) {
+            L3: {
+              if (centralEntity.sameVariantEntityCount <= 1) {
                 if (centralEntity.sameCategoryEntityCount <= 1) {
-                  stackIn_13_0 = 0;
-                } else {
-                  stackIn_13_0 = 1;
+                  break L3;
                 }
-                categoryMatchingAllowed = stackIn_13_0;
-                for (firstNeighborIndex = 0; firstNeighborIndex < centralEntity.relatedEntityCount; firstNeighborIndex++) {
-                  eligibleNeighborhoodVisited = 1;
-                  if (variantMatchingAllowed != 0) {
-                    if (centralEntity.spriteVariantIndex == centralEntity.relatedEntities[firstNeighborIndex].spriteVariantIndex) {
-                      stackIn_21_0 = 1;
-                    } else {
-                      stackIn_21_0 = 0;
-                    }
+              }
+              centralEntity.entityQueue = bh.field_c;
+              if (centralEntity.sameVariantEntityCount <= 1) {
+                stackIn_10_0 = 0;
+              } else {
+                stackIn_10_0 = 1;
+              }
+              variantMatchingAllowed = stackIn_10_0;
+              if (centralEntity.sameCategoryEntityCount <= 1) {
+                stackIn_13_0 = 0;
+              } else {
+                stackIn_13_0 = 1;
+              }
+              categoryMatchingAllowed = stackIn_13_0;
+              for (firstNeighborIndex = 0; firstNeighborIndex < centralEntity.relatedEntityCount; firstNeighborIndex++) {
+                eligibleNeighborhoodVisited = 1;
+                if (variantMatchingAllowed != 0) {
+                  if (centralEntity.spriteVariantIndex == centralEntity.relatedEntities[firstNeighborIndex].spriteVariantIndex) {
+                    stackIn_21_0 = 1;
                   } else {
                     stackIn_21_0 = 0;
                   }
-                  firstNeighborSharesVariant = stackIn_21_0;
-                  if (categoryMatchingAllowed != 0) {
-                    if (centralEntity.entityCategoryKey == centralEntity.relatedEntities[firstNeighborIndex].entityCategoryKey) {
-                      stackIn_27_0 = 1;
-                    } else {
-                      stackIn_27_0 = 0;
-                    }
+                } else {
+                  stackIn_21_0 = 0;
+                }
+                firstNeighborSharesVariant = stackIn_21_0;
+                if (categoryMatchingAllowed != 0) {
+                  if (centralEntity.entityCategoryKey == centralEntity.relatedEntities[firstNeighborIndex].entityCategoryKey) {
+                    stackIn_27_0 = 1;
                   } else {
                     stackIn_27_0 = 0;
                   }
-                  L11: {
-                    firstNeighborSharesCategory = stackIn_27_0;
-                    if (firstNeighborSharesVariant == 0) {
-                      if (firstNeighborSharesCategory == 0) {
-                        break L11;
-                      }
+                } else {
+                  stackIn_27_0 = 0;
+                }
+                L10: {
+                  firstNeighborSharesCategory = stackIn_27_0;
+                  if (firstNeighborSharesVariant == 0) {
+                    if (firstNeighborSharesCategory == 0) {
+                      break L10;
                     }
-                    secondNeighborIndex = firstNeighborIndex + 1;
-                    L13: while (true) {
-                      if (secondNeighborIndex >= centralEntity.relatedEntityCount) {
-                        break L11;
-                      } else {
-                        if (firstNeighborSharesCategory != 0) {
-                          if (centralEntity.relatedEntities[secondNeighborIndex].entityCategoryKey == centralEntity.entityCategoryKey) {
-                            stackIn_38_0 = 1;
-                          } else {
-                            stackIn_38_0 = 0;
-                          }
+                  }
+                  secondNeighborIndex = firstNeighborIndex + 1;
+                  L12: while (true) {
+                    if (secondNeighborIndex >= centralEntity.relatedEntityCount) {
+                      break L10;
+                    } else {
+                      if (firstNeighborSharesCategory != 0) {
+                        if (centralEntity.relatedEntities[secondNeighborIndex].entityCategoryKey == centralEntity.entityCategoryKey) {
+                          stackIn_38_0 = 1;
                         } else {
                           stackIn_38_0 = 0;
                         }
-                        tripleSharesCategory = stackIn_38_0;
-                        if (firstNeighborSharesVariant != 0) {
-                          if (centralEntity.spriteVariantIndex == centralEntity.relatedEntities[secondNeighborIndex].spriteVariantIndex) {
-                            stackIn_44_0 = 1;
-                          } else {
-                            stackIn_44_0 = 0;
-                          }
+                      } else {
+                        stackIn_38_0 = 0;
+                      }
+                      tripleSharesCategory = stackIn_38_0;
+                      if (firstNeighborSharesVariant != 0) {
+                        if (centralEntity.spriteVariantIndex == centralEntity.relatedEntities[secondNeighborIndex].spriteVariantIndex) {
+                          stackIn_44_0 = 1;
                         } else {
                           stackIn_44_0 = 0;
                         }
-                        L16: {
-                          tripleSharesVariant = stackIn_44_0;
-                          if (tripleSharesCategory == 0) {
-                            if (tripleSharesVariant == 0) {
-                              break L16;
-                            }
-                          }
-                          centralEntity.relatedEntities[firstNeighborIndex].entityQueue = bh.field_c;
-                          centralEntity.relatedEntities[secondNeighborIndex].entityQueue = bh.field_c;
-                          middlePackedEntityId = centralEntity.relatedEntities[firstNeighborIndex].entityId;
-                          largestPackedEntityId = centralEntity.entityId;
-                          smallestPackedEntityId = centralEntity.relatedEntities[secondNeighborIndex].entityId;
-                          if (middlePackedEntityId < smallestPackedEntityId) {
-                            swappedEntityId = middlePackedEntityId;
-                            middlePackedEntityId = smallestPackedEntityId;
-                            smallestPackedEntityId = swappedEntityId;
-                          }
-                          if (tripleSharesVariant != 0) {
-                            dd.variantMatchCandidateCount = dd.variantMatchCandidateCount + 1;
-                          }
-                          if (tripleSharesVariant != 0) {
-                            if (tripleSharesCategory != 0) {
-                            }
-                          }
-                          if (tripleSharesCategory != 0) {
-                            dk.categoryMatchCandidateCount = dk.categoryMatchCandidateCount + 1;
-                          }
-                          if (largestPackedEntityId >= smallestPackedEntityId) {
-                            if (middlePackedEntityId > largestPackedEntityId) {
-                              swappedEntityId = largestPackedEntityId;
-                              largestPackedEntityId = middlePackedEntityId;
-                              middlePackedEntityId = swappedEntityId;
-                            }
-                          } else {
-                            swappedEntityId = middlePackedEntityId;
-                            middlePackedEntityId = smallestPackedEntityId;
-                            smallestPackedEntityId = largestPackedEntityId;
-                            largestPackedEntityId = swappedEntityId;
-                          }
-                          stackIn_64_0 = nk.packedMatchCandidates;
-
-                          stackIn_64_1 = h.matchCandidateCount;
-
-                          stackIn_64_2 = nk.packedMatchCandidates[h.matchCandidateCount];
-
-                          stackIn_64_3 = smallestPackedEntityId;
-
-                          if (tripleSharesCategory == 0) {
-                            stackIn_65_0 = (int[]) ((Object) stackIn_64_0);
-                            stackIn_65_1 = stackIn_64_1;
-                            stackIn_65_2 = stackIn_64_2;
-                            stackIn_65_3 = stackIn_64_3;
-                            stackIn_65_4 = 0;
-                          } else {
-                            stackIn_65_0 = (int[]) ((Object) stackIn_64_0);
-                            stackIn_65_1 = stackIn_64_1;
-                            stackIn_65_2 = stackIn_64_2;
-                            stackIn_65_3 = stackIn_64_3;
-                            stackIn_65_4 = -2147483648;
-                          }
-
-
-
-
-
-
-
-
-
-
+                      } else {
+                        stackIn_44_0 = 0;
+                      }
+                      L15: {
+                        tripleSharesVariant = stackIn_44_0;
+                        if (tripleSharesCategory == 0) {
                           if (tripleSharesVariant == 0) {
-                            stackIn_65_0 = (int[]) ((Object) stackIn_65_0);
-
-
-
-
-                            stackIn_68_5 = 0;
-                          } else {
-                            stackIn_65_0 = (int[]) ((Object) stackIn_65_0);
-
-
-
-
-                            stackIn_68_5 = 1073741824;
+                            break L15;
                           }
-                          stackIn_65_0[stackIn_65_1] = lb.a(stackIn_65_2, lb.a(stackIn_65_3, lb.a(lb.a(lb.a(stackIn_65_4, stackIn_68_5), largestPackedEntityId << 20), middlePackedEntityId << 10)));
-                          h.matchCandidateCount = h.matchCandidateCount + 1;
+                        }
+                        centralEntity.relatedEntities[firstNeighborIndex].entityQueue = bh.field_c;
+                        centralEntity.relatedEntities[secondNeighborIndex].entityQueue = bh.field_c;
+                        middlePackedEntityId = centralEntity.relatedEntities[firstNeighborIndex].entityId;
+                        largestPackedEntityId = centralEntity.entityId;
+                        smallestPackedEntityId = centralEntity.relatedEntities[secondNeighborIndex].entityId;
+                        if (middlePackedEntityId < smallestPackedEntityId) {
+                          swappedEntityId = middlePackedEntityId;
+                          middlePackedEntityId = smallestPackedEntityId;
+                          smallestPackedEntityId = swappedEntityId;
+                        }
+                        if (tripleSharesVariant != 0) {
+                          dd.variantMatchCandidateCount = dd.variantMatchCandidateCount + 1;
+                        }
+                        if (tripleSharesVariant != 0) {
+                          if (tripleSharesCategory != 0) {
+                          }
                         }
                         if (tripleSharesCategory != 0) {
-                          if (tripleSharesVariant != 0) {
-                            dualMatchFound = 1;
-                          }
-                          secondNeighborIndex++;
-                          continue L13;
-                        } else {
-                          secondNeighborIndex++;
-                          continue L13;
+                          dk.categoryMatchCandidateCount = dk.categoryMatchCandidateCount + 1;
                         }
+                        if (largestPackedEntityId >= smallestPackedEntityId) {
+                          if (middlePackedEntityId > largestPackedEntityId) {
+                            swappedEntityId = largestPackedEntityId;
+                            largestPackedEntityId = middlePackedEntityId;
+                            middlePackedEntityId = swappedEntityId;
+                          }
+                        } else {
+                          swappedEntityId = middlePackedEntityId;
+                          middlePackedEntityId = smallestPackedEntityId;
+                          smallestPackedEntityId = largestPackedEntityId;
+                          largestPackedEntityId = swappedEntityId;
+                        }
+                        stackIn_64_0 = nk.packedMatchCandidates;
+
+                        stackIn_64_1 = h.matchCandidateCount;
+
+                        stackIn_64_2 = nk.packedMatchCandidates[h.matchCandidateCount];
+
+                        stackIn_64_3 = smallestPackedEntityId;
+
+                        if (tripleSharesCategory == 0) {
+                          stackIn_65_0 = (int[]) ((Object) stackIn_64_0);
+                          stackIn_65_1 = stackIn_64_1;
+                          stackIn_65_2 = stackIn_64_2;
+                          stackIn_65_3 = stackIn_64_3;
+                          stackIn_65_4 = 0;
+                        } else {
+                          stackIn_65_0 = (int[]) ((Object) stackIn_64_0);
+                          stackIn_65_1 = stackIn_64_1;
+                          stackIn_65_2 = stackIn_64_2;
+                          stackIn_65_3 = stackIn_64_3;
+                          stackIn_65_4 = -2147483648;
+                        }
+
+
+
+
+
+
+
+
+
+
+                        if (tripleSharesVariant == 0) {
+                          stackIn_65_0 = (int[]) ((Object) stackIn_65_0);
+
+
+
+
+                          stackIn_68_5 = 0;
+                        } else {
+                          stackIn_65_0 = (int[]) ((Object) stackIn_65_0);
+
+
+
+
+                          stackIn_68_5 = 1073741824;
+                        }
+                        stackIn_65_0[stackIn_65_1] = lb.a(stackIn_65_2, lb.a(stackIn_65_3, lb.a(lb.a(lb.a(stackIn_65_4, stackIn_68_5), largestPackedEntityId << 20), middlePackedEntityId << 10)));
+                        h.matchCandidateCount = h.matchCandidateCount + 1;
+                      }
+                      if (tripleSharesCategory != 0) {
+                        if (tripleSharesVariant != 0) {
+                          dualMatchFound = 1;
+                        }
+                        secondNeighborIndex++;
+                        continue L12;
+                      } else {
+                        secondNeighborIndex++;
+                        continue L12;
                       }
                     }
                   }
                 }
-                break L4;
               }
-              centralEntity = (GameplayEntity) ((Object) a.attachedEntities.nextForIteration(1));
+              break L3;
             }
-            if (eligibleNeighborhoodVisited != 0) {
-              if (dualMatchFound == 0) {
-                stackIn_82_0 = 4;
-                stackIn_82_1 = 0;
-                jc.requestAvatarFeedback(stackIn_82_0, stackIn_82_1 != 0);
-              } else {
-                jc.requestAvatarFeedback(5, false);
-              }
-            }
-            break L0;
+            centralEntity = (GameplayEntity) ((Object) a.attachedEntities.nextForIteration(1));
           }
+          if (eligibleNeighborhoodVisited != 0) {
+            if (dualMatchFound == 0) {
+              stackIn_82_0 = 4;
+              stackIn_82_1 = 0;
+              jc.requestAvatarFeedback(stackIn_82_0, stackIn_82_1 != 0);
+            } else {
+              jc.requestAvatarFeedback(5, false);
+            }
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
@@ -274,7 +272,6 @@ final class ul {
         StringBuilder stackIn_21_1 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = Geoblox.field_C;
         try {
@@ -299,10 +296,10 @@ final class ul {
             } else {
               stackIn_15_0 = 1;
             }
-            decompiledRegionSelector0 = 1;
+            return stackIn_15_0 != 0;
           } else {
             stackIn_3_0 = 0;
-            decompiledRegionSelector0 = 0;
+            return stackIn_3_0 != 0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -334,11 +331,6 @@ final class ul {
             stackIn_22_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0 != 0;
-        } else {
-          return stackIn_15_0 != 0;
         }
     }
 

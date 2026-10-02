@@ -34,7 +34,6 @@ final class h {
             RuntimeException stackIn_12_0 = null;
             StringBuilder stackIn_12_1 = null;
             String stackIn_12_2 = null;
-            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             try {
               try {
@@ -47,18 +46,14 @@ final class h {
                   }
                   var5 = new java.net.URL(param0.getCodeBase(), var4);
                   param0.getAppletContext().showDocument(wf.a(var5, 58, param0), "_self");
-                  decompiledRegionSelector0 = 1;
+                  return;
                 } else {
-                  decompiledRegionSelector0 = 0;
+                  return;
                 }
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var2_ref = (Exception) (Object) decompiledCaughtException;
                 var2_ref.printStackTrace();
-                return;
-              }
-              if (decompiledRegionSelector0 == 0) {
-              } else {
                 return;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -101,18 +96,16 @@ final class h {
         RuntimeException decompiledCaughtException = null;
         var2 = Geoblox.field_C;
         try {
-          L0: {
-            var3 = (GameplayEntity) ((Object) ji.movingEntities.firstForIteration(0));
-            L1: while (var3 != null) {
-              var3.drawBoardRotatedEntity(-16096);
-              var3 = (GameplayEntity) ((Object) ji.movingEntities.nextForIteration(1));
-            }
-            if (param0 == -1) {
-              break L0;
-            } else {
-              h.c(116);
-              return;
-            }
+          var3 = (GameplayEntity) ((Object) ji.movingEntities.firstForIteration(0));
+          L0: while (var3 != null) {
+            var3.drawBoardRotatedEntity(-16096);
+            var3 = (GameplayEntity) ((Object) ji.movingEntities.nextForIteration(1));
+          }
+          if (param0 == -1) {
+            return;
+          } else {
+            h.c(116);
+            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

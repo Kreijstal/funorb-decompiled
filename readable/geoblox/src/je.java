@@ -64,6 +64,7 @@ final class je extends IntrusiveNode {
                 var2_ref.printStackTrace();
               }
               var2_int = 91 % ((50 - param0) / 49);
+              return;
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;

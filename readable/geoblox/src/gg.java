@@ -40,6 +40,7 @@ final class gg {
             gg.a((byte[]) null, -123, -57);
           }
           stackIn_3_0 = oe.a(param2, param0, -40, 0);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -58,7 +59,6 @@ final class gg {
           }
           throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     public static void a(int param0) {
@@ -84,15 +84,14 @@ final class gg {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == -11455) {
             stackIn_4_0 = mj.a(0, param1.length, param1, (byte) 96);
-            decompiledRegionSelector0 = 1;
+            return stackIn_4_0;
           } else {
             stackIn_2_0 = (String) null;
-            decompiledRegionSelector0 = 0;
+            return stackIn_2_0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -111,11 +110,6 @@ final class gg {
             stackIn_8_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_4_0;
         }
     }
 

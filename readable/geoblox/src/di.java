@@ -47,19 +47,17 @@ final class di {
         RuntimeException var2_ref = null;
         var3 = Geoblox.field_C;
         try {
-          L0: {
-            var4 = (wc) ((Object) l.field_g.firstForIteration(param1 ^ param1));
-            L1: while (var4 != null) {
-              o.a(param0, var4, param1 - 21718);
-              var4 = (wc) ((Object) l.field_g.nextForIteration(1));
-            }
-            var2 = qa.field_e.firstForIteration(0);
-            L2: while (var2 != null) {
-              gf.a(param0, 125);
-              var2 = qa.field_e.nextForIteration(1);
-            }
-            break L0;
+          var4 = (wc) ((Object) l.field_g.firstForIteration(param1 ^ param1));
+          L0: while (var4 != null) {
+            o.a(param0, var4, param1 - 21718);
+            var4 = (wc) ((Object) l.field_g.nextForIteration(1));
           }
+          var2 = qa.field_e.firstForIteration(0);
+          L1: while (var2 != null) {
+            gf.a(param0, 125);
+            var2 = qa.field_e.nextForIteration(1);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;

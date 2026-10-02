@@ -20,18 +20,16 @@ final class dc {
         RuntimeException decompiledCaughtException = null;
         var2 = Geoblox.field_C;
         try {
-          L0: {
-            var3 = (GameplayEntity) ((Object) a.attachedEntities.firstForIteration(0));
-            L1: while (var3 != null) {
-              var3.drawEntityAtPosition(1643839728);
-              var3 = (GameplayEntity) ((Object) a.attachedEntities.nextForIteration(1));
-            }
-            if (param0 == 7838) {
-              break L0;
-            } else {
-              dc.b(-80);
-              return;
-            }
+          var3 = (GameplayEntity) ((Object) a.attachedEntities.firstForIteration(0));
+          L0: while (var3 != null) {
+            var3.drawEntityAtPosition(1643839728);
+            var3 = (GameplayEntity) ((Object) a.attachedEntities.nextForIteration(1));
+          }
+          if (param0 == 7838) {
+            return;
+          } else {
+            dc.b(-80);
+            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

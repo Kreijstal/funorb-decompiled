@@ -49,6 +49,7 @@ class vf extends hk {
             var4_long = rh.a(var7, -48);
           }
           stackIn_6_0 = SecondaryDeque.a(true, var4_long, (String) (var6), param1, param0);
+          return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -80,7 +81,6 @@ class vf extends hk {
           }
           throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
-        return stackIn_6_0;
     }
 
     public static void h(int param0) {
@@ -140,6 +140,7 @@ class vf extends hk {
           if (param0) {
             spriteScratchRaster = (Sprite) null;
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -192,33 +193,24 @@ class vf extends hk {
         int var1_int = 0;
         GameplayEntity var2 = null;
         int var3 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         var3 = Geoblox.field_C;
         try {
-          L0: {
-            if (param0 == 0) {
-              for (var1_int = 0; 1000 > var1_int; var1_int++) {
-                var2 = new GameplayEntity(0, 0, 0, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, var1_int);
-                ra.availableEntities.addLast(-117, var2);
-                tl.entitiesById[var1_int] = var2;
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
+          if (param0 == 0) {
+            for (var1_int = 0; 1000 > var1_int; var1_int++) {
+              var2 = new GameplayEntity(0, 0, 0, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, var1_int);
+              ra.availableEntities.addLast(-117, var2);
+              tl.entitiesById[var1_int] = var2;
             }
+            return;
+          } else {
+            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var1), "vf.G(" + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 
@@ -236,6 +228,7 @@ class vf extends hk {
             this.a(-15, -109, 48, 91);
           }
           stackIn_3_0 = 0;
+          return stackIn_3_0 != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -254,7 +247,6 @@ class vf extends hk {
           }
           throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(')').toString());
         }
-        return stackIn_3_0 != 0;
     }
 
     final static String i(int param0) {
@@ -346,25 +338,26 @@ class vf extends hk {
         RuntimeException decompiledCaughtException = null;
         var7 = Geoblox.field_C;
         try {
-          L1: {
+          L0: {
             var4_int = 122 % ((41 - param1) / 55);
             if (null != this.field_J) {
               if (param0 < this.field_J.length) {
-                break L1;
+                break L0;
               }
             }
-            L3: {
+            L2: {
               var5 = new String[param0 + 1];
               if (null != this.field_J) {
                 for (var6 = 0; var6 < this.field_J.length; var6++) {
                   var5[var6] = this.field_J[var6];
                 }
-                break L3;
+                break L2;
               }
             }
             this.field_J = var5;
           }
           this.field_J[param0] = param2;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;

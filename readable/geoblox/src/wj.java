@@ -46,7 +46,6 @@ final class wj extends sh {
         StringBuilder stackIn_31_1 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_32_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -60,79 +59,75 @@ final class wj extends sh {
         String var9 = null;
         int var10 = 0;
         try {
-          L0: {
-            var3_int = param0.length();
-            var4 = var3_int;
-            var5 = 0;
-            L1: while (true) {
-              var6_int = param0.indexOf("<%", var5);
-              if (0 > var6_int) {
-                var6 = new StringBuilder(var4);
-                var7 = 0;
-                var5 = 0;
-                if (param2 < -12) {
-                  L2: while (true) {
-                    var8 = param0.indexOf("<%", var5);
-                    if (0 <= var8) {
-                      L3: for (var5 = var8 + 2; var5 < var3_int; var5++) {
-                        if (DualLinkNode.a(-58, param0.charAt(var5))) {
-                          continue L3;
-                        }
-                        break;
-                      }
-                      var9 = param0.substring(2 + var8, var5);
-                      if (f.b((byte) -125, (CharSequence) ((Object) var9))) {
-                        if (var3_int <= var5) {
-                          continue L2;
-                        } else {
-                          if (param0.charAt(var5) != 62) {
-                            continue L2;
-                          } else {
-                            var5++;
-                            var10 = ol.a(false, (CharSequence) ((Object) var9));
-                            discarded$0 = var6.append(param0.substring(var7, var8));
-                            var7 = var5;
-                            discarded$1 = var6.append(param1[var10]);
-                            continue L2;
-                          }
-                        }
-                      } else {
+          var3_int = param0.length();
+          var4 = var3_int;
+          var5 = 0;
+          L0: while (true) {
+            var6_int = param0.indexOf("<%", var5);
+            if (0 > var6_int) {
+              var6 = new StringBuilder(var4);
+              var7 = 0;
+              var5 = 0;
+              if (param2 < -12) {
+                L1: while (true) {
+                  var8 = param0.indexOf("<%", var5);
+                  if (0 <= var8) {
+                    L2: for (var5 = var8 + 2; var5 < var3_int; var5++) {
+                      if (DualLinkNode.a(-58, param0.charAt(var5))) {
                         continue L2;
                       }
-                    } else {
-                      discarded$2 = var6.append(param0.substring(var7));
-                      stackIn_25_0 = var6.toString();
-                      decompiledRegionSelector0 = 1;
-                      break L0;
+                      break;
                     }
+                    var9 = param0.substring(2 + var8, var5);
+                    if (f.b((byte) -125, (CharSequence) ((Object) var9))) {
+                      if (var3_int <= var5) {
+                        continue L1;
+                      } else {
+                        if (param0.charAt(var5) != 62) {
+                          continue L1;
+                        } else {
+                          var5++;
+                          var10 = ol.a(false, (CharSequence) ((Object) var9));
+                          discarded$0 = var6.append(param0.substring(var7, var8));
+                          var7 = var5;
+                          discarded$1 = var6.append(param1[var10]);
+                          continue L1;
+                        }
+                      }
+                    } else {
+                      continue L1;
+                    }
+                  } else {
+                    discarded$2 = var6.append(param0.substring(var7));
+                    stackIn_25_0 = var6.toString();
+                    return stackIn_25_0;
                   }
-                } else {
-                  stackIn_12_0 = (String) null;
-                  decompiledRegionSelector0 = 0;
-                  break L0;
                 }
               } else {
-                L5: for (var5 = var6_int + 2; var3_int > var5; var5++) {
-                  if (DualLinkNode.a(-58, param0.charAt(var5))) {
-                    continue L5;
-                  }
-                  break;
+                stackIn_12_0 = (String) null;
+                return stackIn_12_0;
+              }
+            } else {
+              L4: for (var5 = var6_int + 2; var3_int > var5; var5++) {
+                if (DualLinkNode.a(-58, param0.charAt(var5))) {
+                  continue L4;
                 }
-                var7_ref_String = param0.substring(var6_int + 2, var5);
-                if (!f.b((byte) -123, (CharSequence) ((Object) var7_ref_String))) {
-                  continue L1;
+                break;
+              }
+              var7_ref_String = param0.substring(var6_int + 2, var5);
+              if (!f.b((byte) -123, (CharSequence) ((Object) var7_ref_String))) {
+                continue L0;
+              } else {
+                if (var5 >= var3_int) {
+                  continue L0;
                 } else {
-                  if (var5 >= var3_int) {
-                    continue L1;
+                  if (param0.charAt(var5) != 62) {
+                    continue L0;
                   } else {
-                    if (param0.charAt(var5) != 62) {
-                      continue L1;
-                    } else {
-                      var5++;
-                      var8 = ol.a(false, (CharSequence) ((Object) var7_ref_String));
-                      var4 = var4 + (-var5 + (var6_int + param1[var8].length()));
-                      continue L1;
-                    }
+                    var5++;
+                    var8 = ol.a(false, (CharSequence) ((Object) var7_ref_String));
+                    var4 = var4 + (-var5 + (var6_int + param1[var8].length()));
+                    continue L0;
                   }
                 }
               }
@@ -168,11 +163,6 @@ final class wj extends sh {
             stackIn_32_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_32_2).append(',').append(param2).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_12_0;
-        } else {
-          return stackIn_25_0;
         }
     }
 
@@ -219,7 +209,6 @@ final class wj extends sh {
         StringBuilder stackIn_20_1 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
-        int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -227,29 +216,26 @@ final class wj extends sh {
         int var5 = 0;
         var5 = Geoblox.field_C;
         try {
-          L0: {
-            if (param0.field_q == null) {
-              decompiledRegionSelector0 = 0;
-            } else {
-              L1: for (var3_int = 0; var3_int < 50; var3_int++) {
-                if (null != param0.field_q.peekEvent()) {
-                  bc.a(0, 1L);
-                  continue L1;
-                }
-                break;
+          if (param0.field_q == null) {
+            return;
+          } else {
+            L0: for (var3_int = 0; var3_int < 50; var3_int++) {
+              if (null != param0.field_q.peekEvent()) {
+                bc.a(0, 1L);
+                continue L0;
               }
-              var4 = 11 / ((param1 - 2) / 48);
-              try {
-                if (param2 != null) {
-                  param0.field_q.postEvent((java.awt.AWTEvent) ((Object) new java.awt.event.ActionEvent(param2, 1001, "dummy")));
-                }
-              } catch (java.lang.Exception decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var3 = (Exception) (Object) decompiledCaughtException;
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
+              break;
             }
+            var4 = 11 / ((param1 - 2) / 48);
+            try {
+              if (param2 != null) {
+                param0.field_q.postEvent((java.awt.AWTEvent) ((Object) new java.awt.event.ActionEvent(param2, 1001, "dummy")));
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var3 = (Exception) (Object) decompiledCaughtException;
+            }
+            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
@@ -282,11 +268,6 @@ final class wj extends sh {
           }
           throw t.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(')').toString());
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
-        }
     }
 
     final static Sprite[] a(String param0, String param1, rh param2, int param3) {
@@ -313,6 +294,7 @@ final class wj extends sh {
             field_G = (boolean[]) null;
           }
           stackIn_3_0 = ll.a(var4_int, (byte) -81, var5, param2);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -357,7 +339,6 @@ final class wj extends sh {
           }
           throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     static {

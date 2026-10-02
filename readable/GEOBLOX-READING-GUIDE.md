@@ -1,4 +1,4 @@
-# Reading GeoBlox pass 29
+# Reading GeoBlox pass 30
 
 The readable tree uses semantic names without opaque suffixes. The symbol map
 keeps the original spelling and JVM identity of every declaration, so
@@ -162,12 +162,14 @@ A left cardinal hit returns before later pixels are read, so it can succeed with
 a raster too short for the right cardinal address. Null buffers, short buffers,
 negative nonzero pixels and signed guard overflow retain their native behavior.
 
-The exception-region reconstruction retains thirteen integer result carriers
-and `boundaryResultArmId`. `leftCardinalHit`, `upperNearLeftHit` and the other
-hit carriers hold integer true; `boundaryScanMissResult` holds integer false.
-These names describe their roles without removing the retained aliases or
-factoring the post-try return tree. This method has no remaining opaque local
-or parameter names, but its generated control-flow shape can still be improved.
+The exception-region reconstruction now returns on each original nonthrowing
+path inside the try. Its 13-arm post-try ladder and `boundaryResultArmId` are
+removed by the generic decompiler; shared joins and throwing continuations in
+other methods retain external routing. Thirteen integer result carriers remain.
+`leftCardinalHit`, `upperNearLeftHit` and the other hit carriers hold integer
+true; `boundaryScanMissResult` holds integer false. All 27 remaining locals and
+the method guard have semantic names. The original exception aliases and the
+nested probe conditions remain; no framebuffer reads are reordered.
 
 ## Score popups and text writes
 
@@ -489,30 +491,23 @@ the array indices, evidence, override families and remaining shared carriers.
 
 ## Remaining limitations
 
-There are 972 explicit rules: 21 classes, 358 fields, 163 method declarations,
-175 parameters and 255 guarded local declarations. This is not full
-deobfuscation. Unknown flags, guard arguments and opaque shared helpers still
-need investigation. Pass 15 removes the last two dispatchers while preserving
-the reviewed names; ten result-sequence local ordinals move without changing
-their spelling, type or evidence. All 642 names from pass 6
-remain. Pass 10 migrates thirteen board-reconciliation local ordinals after
-dispatcher-only carriers disappear, retaining their types, spelling guards and
-semantic evidence. Pass 11 removes six unused exception locals without changing
-any named identity or semantic rule. Pass 12 also retains all named identities
-while replacing the oversized text initializer with three structured helpers.
-Pass 13 adds 199 names without changing the raw Java tree; all previous rules
-remain. Pass 16 adds 85 names for border geometry and text validation on the unchanged
-raw source. All previous rules and local identities remain. The earlier
-migrations remain frozen.
+There are 1,170 explicit guarded rules: 22 classes, 382 fields, 175 method
+declarations, 209 parameters and 382 locals. This is not full deobfuscation.
+Unknown flags, guard arguments and opaque shared helpers still need
+investigation. Current names and source identities live in the single manifest;
+previous naming and structural passes remain in Git. The latest source migration
+moves 46 named local ordinals by unique method/original-spelling identity and
+removes only the vanished boundary selector. Every remaining semantic name is
+retained.
 
 The decompiler now checks explicit exception-region exit contracts, preserves
 ordinary empty branches as no-ops, requires explicit loop exit targets and
 retains the exception table in large-method fallbacks. It refuses internal catch continuations that
 would restart setup. Gameplay update, rendering, scene transition and screen
 update use labeled loops; board reconciliation now does too, with its runtime
-catch intact. Total
-cases drop from 3,051 to zero. Result-sequence update and nine-slice sprite
-construction now use labeled loops too; shared joins remain. The initializer
+catch intact. Generated dispatcher methods and dispatcher cases remain at zero.
+Result-sequence update and nine-slice sprite construction use labeled loops too;
+shared joins remain. The initializer
 preserves its runtime catch and original resource order through shared helper fields. Unknown builder
 prefixes across joins no longer disappear from diagnostic contexts. See [the investigation](STATE-MACHINE-READABILITY.md)
 for refusal reasons, verification and the next structural steps.

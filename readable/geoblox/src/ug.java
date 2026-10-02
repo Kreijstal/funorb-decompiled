@@ -21,19 +21,17 @@ final class ug {
         RuntimeException decompiledCaughtException = null;
         var6 = Geoblox.field_C;
         try {
-          L0: {
-            if (param1 >= -125) {
-              var7 = (String) null;
-              ug.a((String) null, (rh) null, (byte) 14, (String) null);
-            }
-            var4_int = param0.length();
-            param0.setLength(param3);
-            for (var5 = var4_int; param3 > var5; var5++) {
-              param0.setCharAt(var5, param2);
-            }
-            stackIn_7_0 = (StringBuilder) (param0);
-            break L0;
+          if (param1 >= -125) {
+            var7 = (String) null;
+            ug.a((String) null, (rh) null, (byte) 14, (String) null);
           }
+          var4_int = param0.length();
+          param0.setLength(param3);
+          for (var5 = var4_int; param3 > var5; var5++) {
+            param0.setCharAt(var5, param2);
+          }
+          stackIn_7_0 = (StringBuilder) (param0);
+          return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -52,7 +50,6 @@ final class ug {
           }
           throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
-        return stackIn_7_0;
     }
 
     final static void spawnScorePopup(int points, boolean methodGuard, int originY, int chainMultiplier, int originX) {
@@ -93,17 +90,16 @@ final class ug {
         StringBuilder stackIn_13_1 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           var4_int = param1.a((byte) 127, param3);
           var5 = param1.a(param0, -57, var4_int);
           if (param2 == -78) {
             stackIn_4_0 = qc.a(var4_int, param2 ^ -95, var5, param1);
-            decompiledRegionSelector0 = 1;
+            return stackIn_4_0;
           } else {
             stackIn_2_0 = (Sprite) null;
-            decompiledRegionSelector0 = 0;
+            return stackIn_2_0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -148,11 +144,6 @@ final class ug {
             stackIn_14_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_4_0;
         }
     }
 

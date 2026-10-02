@@ -17,20 +17,18 @@ final class ec {
         RuntimeException var2 = null;
         var4 = Geoblox.field_C;
         try {
-          L0: {
-            var3 = 57 % ((param0 - 57) / 46);
-            var5 = (ai) ((Object) nf.field_j.firstForIteration(0));
-            L1: while (var5 != null) {
-              bm.a(var5, param1, -127);
-              var5 = (ai) ((Object) nf.field_j.nextForIteration(1));
-            }
-            var6 = (mg) ((Object) rh.field_d.firstForIteration(0));
-            L2: while (var6 != null) {
-              ib.a(param1, 5, var6);
-              var6 = (mg) ((Object) rh.field_d.nextForIteration(1));
-            }
-            break L0;
+          var3 = 57 % ((param0 - 57) / 46);
+          var5 = (ai) ((Object) nf.field_j.firstForIteration(0));
+          L0: while (var5 != null) {
+            bm.a(var5, param1, -127);
+            var5 = (ai) ((Object) nf.field_j.nextForIteration(1));
           }
+          var6 = (mg) ((Object) rh.field_d.firstForIteration(0));
+          L1: while (var6 != null) {
+            ib.a(param1, 5, var6);
+            var6 = (mg) ((Object) rh.field_d.nextForIteration(1));
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -42,7 +40,6 @@ final class ec {
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_49_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int sortInsertionIndex = 0;
         RuntimeException var1 = null;
@@ -61,120 +58,107 @@ final class ec {
         int candidateIndex = 0;
         controlFlowGuard = Geoblox.field_C;
         try {
-          L0: {
-            if (0 == h.matchCandidateCount) {
-              if (0 < wb.newAttachmentCount) {
-                if (!w.avatarShockPending) {
-                  gf.matchChainLength = 0;
-                  if (el.gameplaySession.pointsPanelX == 463) {
-                    el.gameplaySession.pointsPanelSlideDirection = 1;
-                    el.gameplaySession.emitPointsPopup(false);
-                  }
-                  stackIn_9_0 = 0;
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                } else {
-                  return false;
+          if (0 == h.matchCandidateCount) {
+            if (0 < wb.newAttachmentCount) {
+              if (!w.avatarShockPending) {
+                gf.matchChainLength = 0;
+                if (el.gameplaySession.pointsPanelX == 463) {
+                  el.gameplaySession.pointsPanelSlideDirection = 1;
+                  el.gameplaySession.emitPointsPopup(false);
                 }
+                stackIn_9_0 = 0;
+                return stackIn_9_0 != 0;
+              } else {
+                return false;
               }
             }
-            if (h.matchCandidateCount != 0) {
-              if (gf.matchChainLength >= 5) {
-                ra.a(jf.field_g ^ 255, -99, jf.field_g);
-              }
-              if (gf.matchChainLength >= 6) {
-                ra.a(qg.field_d ^ 255, -57, qg.field_d);
-              }
-              if (gf.matchChainLength >= 7) {
-                ra.a(255 ^ IntrusiveDeque.field_f, -97, IntrusiveDeque.field_f);
-              }
-              for (sortInsertionIndex = 1; sortInsertionIndex < h.matchCandidateCount; sortInsertionIndex++) {
-                sortCursorThenFirstEntityId = sortInsertionIndex - 1;
-                packedCandidateThenSecondEntityId = nk.packedMatchCandidates[sortInsertionIndex];
-                L14: while (sortCursorThenFirstEntityId >= 0) {
-                  if (~nk.packedMatchCandidates[sortCursorThenFirstEntityId] < ~packedCandidateThenSecondEntityId) {
-                    nk.packedMatchCandidates[1 + sortCursorThenFirstEntityId] = nk.packedMatchCandidates[sortCursorThenFirstEntityId];
-                    sortCursorThenFirstEntityId--;
-                    continue L14;
-                  }
-                  break;
+          }
+          if (h.matchCandidateCount != 0) {
+            if (gf.matchChainLength >= 5) {
+              ra.a(jf.field_g ^ 255, -99, jf.field_g);
+            }
+            if (gf.matchChainLength >= 6) {
+              ra.a(qg.field_d ^ 255, -57, qg.field_d);
+            }
+            if (gf.matchChainLength >= 7) {
+              ra.a(255 ^ IntrusiveDeque.field_f, -97, IntrusiveDeque.field_f);
+            }
+            for (sortInsertionIndex = 1; sortInsertionIndex < h.matchCandidateCount; sortInsertionIndex++) {
+              sortCursorThenFirstEntityId = sortInsertionIndex - 1;
+              packedCandidateThenSecondEntityId = nk.packedMatchCandidates[sortInsertionIndex];
+              L13: while (sortCursorThenFirstEntityId >= 0) {
+                if (~nk.packedMatchCandidates[sortCursorThenFirstEntityId] < ~packedCandidateThenSecondEntityId) {
+                  nk.packedMatchCandidates[1 + sortCursorThenFirstEntityId] = nk.packedMatchCandidates[sortCursorThenFirstEntityId];
+                  sortCursorThenFirstEntityId--;
+                  continue L13;
                 }
-                nk.packedMatchCandidates[1 + sortCursorThenFirstEntityId] = packedCandidateThenSecondEntityId;
+                break;
               }
-              if (methodGuard != -18913) {
-                ec.processMatchCandidates(-33);
-              }
-              candidateIndex = 0;
-              sortInsertionIndex = candidateIndex;
-              L8: while (candidateIndex < h.matchCandidateCount) {
-                L9: {
-                  if (-1 + h.matchCandidateCount > candidateIndex) {
-                    if (nk.packedMatchCandidates[candidateIndex] == nk.packedMatchCandidates[candidateIndex + 1]) {
-                      nk.packedMatchCandidates[candidateIndex] = 0;
-                      break L9;
-                    }
+              nk.packedMatchCandidates[1 + sortCursorThenFirstEntityId] = packedCandidateThenSecondEntityId;
+            }
+            if (methodGuard != -18913) {
+              ec.processMatchCandidates(-33);
+            }
+            candidateIndex = 0;
+            sortInsertionIndex = candidateIndex;
+            L7: while (candidateIndex < h.matchCandidateCount) {
+              L8: {
+                if (-1 + h.matchCandidateCount > candidateIndex) {
+                  if (nk.packedMatchCandidates[candidateIndex] == nk.packedMatchCandidates[candidateIndex + 1]) {
+                    nk.packedMatchCandidates[candidateIndex] = 0;
+                    break L8;
                   }
-                  sortCursorThenFirstEntityId = (nk.packedMatchCandidates[candidateIndex] & 1072693248) >> 20;
-                  packedCandidateThenSecondEntityId = nk.packedMatchCandidates[candidateIndex] >> 10 & 1023;
-                  thirdEntityId = 1023 & nk.packedMatchCandidates[candidateIndex];
-                  firstMatchedEntity = tl.entitiesById[sortCursorThenFirstEntityId];
-                  secondMatchedEntity = tl.entitiesById[packedCandidateThenSecondEntityId];
-                  thirdMatchedEntity = tl.entitiesById[thirdEntityId];
-                  if (firstMatchedEntity.matchCooldownTicks <= 0) {
-                    if (secondMatchedEntity.matchCooldownTicks <= 0) {
-                      if (thirdMatchedEntity.matchCooldownTicks <= 0) {
-                        td.playPcmSample(-348, fl.field_c[31]);
-                        gf.matchChainLength = gf.matchChainLength + 1;
-                        if (gf.matchChainLength > 1) {
-                          el.gameplaySession.pointsPanelSlideDirection = -1;
-                        }
-                        if (-1073741824 == (-1073741824 & nk.packedMatchCandidates[candidateIndex])) {
-                          awardedPoints = 90 * gf.matchChainLength;
-                          ra.a(fa.field_e ^ 255, -100, fa.field_e);
-                        } else {
-                          awardedPoints = 30 * gf.matchChainLength;
-                        }
-                        popupX = 0;
-                        popupX = (int)firstMatchedEntity.positionX;
-                        popupY = 0;
-                        popupY = (int)firstMatchedEntity.positionY;
-                        ug.spawnScorePopup(awardedPoints, true, popupY, gf.matchChainLength, popupX);
-                        nk.packedMatchCandidates[candidateIndex] = 0;
-                        break L9;
+                }
+                sortCursorThenFirstEntityId = (nk.packedMatchCandidates[candidateIndex] & 1072693248) >> 20;
+                packedCandidateThenSecondEntityId = nk.packedMatchCandidates[candidateIndex] >> 10 & 1023;
+                thirdEntityId = 1023 & nk.packedMatchCandidates[candidateIndex];
+                firstMatchedEntity = tl.entitiesById[sortCursorThenFirstEntityId];
+                secondMatchedEntity = tl.entitiesById[packedCandidateThenSecondEntityId];
+                thirdMatchedEntity = tl.entitiesById[thirdEntityId];
+                if (firstMatchedEntity.matchCooldownTicks <= 0) {
+                  if (secondMatchedEntity.matchCooldownTicks <= 0) {
+                    if (thirdMatchedEntity.matchCooldownTicks <= 0) {
+                      td.playPcmSample(-348, fl.field_c[31]);
+                      gf.matchChainLength = gf.matchChainLength + 1;
+                      if (gf.matchChainLength > 1) {
+                        el.gameplaySession.pointsPanelSlideDirection = -1;
                       }
+                      if (-1073741824 == (-1073741824 & nk.packedMatchCandidates[candidateIndex])) {
+                        awardedPoints = 90 * gf.matchChainLength;
+                        ra.a(fa.field_e ^ 255, -100, fa.field_e);
+                      } else {
+                        awardedPoints = 30 * gf.matchChainLength;
+                      }
+                      popupX = 0;
+                      popupX = (int)firstMatchedEntity.positionX;
+                      popupY = 0;
+                      popupY = (int)firstMatchedEntity.positionY;
+                      ug.spawnScorePopup(awardedPoints, true, popupY, gf.matchChainLength, popupX);
+                      nk.packedMatchCandidates[candidateIndex] = 0;
+                      break L8;
                     }
                   }
-                  firstBlockedEntity = firstMatchedEntity;
-                  secondBlockedEntity = secondMatchedEntity;
-                  thirdMatchedEntity.entityQueue = null;
-                  secondBlockedEntity.entityQueue = null;
-                  firstBlockedEntity.entityQueue = null;
-                  nk.packedMatchCandidates[candidateIndex] = 0;
                 }
-                candidateIndex++;
+                firstBlockedEntity = firstMatchedEntity;
+                secondBlockedEntity = secondMatchedEntity;
+                thirdMatchedEntity.entityQueue = null;
+                secondBlockedEntity.entityQueue = null;
+                firstBlockedEntity.entityQueue = null;
+                nk.packedMatchCandidates[candidateIndex] = 0;
               }
-              h.matchCandidateCount = 0;
-              stackIn_49_0 = 1;
-              decompiledRegionSelector0 = 2;
-              break L0;
-            } else {
-              stackIn_12_0 = 0;
-              decompiledRegionSelector0 = 1;
+              candidateIndex++;
             }
+            h.matchCandidateCount = 0;
+            stackIn_49_0 = 1;
+            return stackIn_49_0 != 0;
+          } else {
+            stackIn_12_0 = 0;
+            return stackIn_12_0 != 0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var1), "ec.A(" + methodGuard + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_9_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_12_0 != 0;
-          } else {
-            return stackIn_49_0 != 0;
-          }
         }
     }
 

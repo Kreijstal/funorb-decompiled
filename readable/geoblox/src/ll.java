@@ -29,20 +29,19 @@ final class ll {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (mf.a(param2, param0, 117, param3)) {
             if (param1 == -81) {
               stackIn_7_0 = nf.b(255);
-              decompiledRegionSelector0 = 2;
+              return stackIn_7_0;
             } else {
               stackIn_5_0 = (Sprite[]) null;
-              decompiledRegionSelector0 = 1;
+              return stackIn_5_0;
             }
           } else {
             stackIn_2_0 = null;
-            decompiledRegionSelector0 = 0;
+            return (Sprite[]) ((Object) stackIn_2_0);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -61,15 +60,6 @@ final class ll {
             stackIn_11_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return (Sprite[]) ((Object) stackIn_2_0);
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_5_0;
-          } else {
-            return stackIn_7_0;
-          }
         }
     }
 

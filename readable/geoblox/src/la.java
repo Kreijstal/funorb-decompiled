@@ -45,11 +45,11 @@ final class la extends sh {
         RuntimeException var5 = null;
         int var6 = 0;
         try {
-          L1: {
-            L2: {
+          L0: {
+            L1: {
               if (this.field_A instanceof hk) {
                 if (!((hk) ((Object) this.field_A)).field_D) {
-                  break L2;
+                  break L1;
                 }
               }
               if (this.field_f == 1) {
@@ -57,16 +57,16 @@ final class la extends sh {
                 var6 = -this.field_H + (ue.field_e - param1);
                 if (this.field_v == var5_int) {
                   if (var6 == this.field_m) {
-                    break L1;
+                    break L0;
                   }
                 }
                 this.field_m = var6;
                 this.field_v = var5_int;
                 if (!(this.field_u instanceof de)) {
-                  break L1;
+                  break L0;
                 } else {
                   ((de) ((Object) this.field_u)).a(param3, -20951, (la) (this), param1);
-                  break L1;
+                  break L0;
                 }
               }
             }
@@ -124,7 +124,9 @@ final class la extends sh {
             }
           }
           super.a(param0, param1, param2, param3);
-          if (param0) {
+          if (!param0) {
+            return;
+          } else {
             this.field_G = 54;
             return;
           }
@@ -190,6 +192,7 @@ final class la extends sh {
             field_E = (hh) null;
           }
           stackIn_8_0 = (StringBuilder) (param1);
+          return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -221,7 +224,6 @@ final class la extends sh {
           }
           throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
         }
-        return stackIn_8_0;
     }
 
     final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, el param6) {
@@ -236,33 +238,29 @@ final class la extends sh {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var8_int = super.a(param0, 53, param2, param3, param4, param5, param6) ? 1 : 0;
-            var9 = 5 % ((-3 - param1) / 38);
-            if (var8_int != 0) {
-              if (this.field_F) {
-                stackIn_3_0 = 1;
-                decompiledRegionSelector0 = 0;
-                break L0;
-              }
+          var8_int = super.a(param0, 53, param2, param3, param4, param5, param6) ? 1 : 0;
+          var9 = 5 % ((-3 - param1) / 38);
+          if (var8_int != 0) {
+            if (this.field_F) {
+              stackIn_3_0 = 1;
+              return stackIn_3_0 != 0;
             }
-            if (!this.a(param4, -1, param5, param0, param2)) {
-              stackIn_10_0 = var8_int;
-              decompiledRegionSelector0 = 2;
+          }
+          if (!this.a(param4, -1, param5, param0, param2)) {
+            stackIn_10_0 = var8_int;
+            return stackIn_10_0 != 0;
+          } else {
+            this.field_f = param3;
+            if (param3 != 1) {
+              stackIn_8_0 = 1;
+              return stackIn_8_0 != 0;
             } else {
-              this.field_f = param3;
-              if (param3 != 1) {
-                stackIn_8_0 = 1;
-                decompiledRegionSelector0 = 1;
-              } else {
-                this.field_H = -param0 + param5 - this.field_m;
-                this.field_D = -param2 + (param4 - this.field_v);
-                lh.field_b = (la) (this);
-                return true;
-              }
+              this.field_H = -param0 + param5 - this.field_m;
+              this.field_D = -param2 + (param4 - this.field_v);
+              lh.field_b = (la) (this);
+              return true;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -282,15 +280,6 @@ final class la extends sh {
             stackIn_14_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_8_0 != 0;
-          } else {
-            return stackIn_10_0 != 0;
-          }
         }
     }
 

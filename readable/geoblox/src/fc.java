@@ -18,40 +18,38 @@ final class fc {
         int var3 = 0;
         var3 = Geoblox.field_C;
         try {
-          L0: {
-            pf.field_D = true;
-            var1 = (GameplayEntity) ((Object) a.attachedEntities.firstForIteration(0));
-            L1: while (var1 != null) {
-              var1.advanceEntityAnimation(true);
-              if (6 == var1.entitySpriteKindId) {
-                pf.field_D = false;
-                if (var1.animationFrameIndex >= 3) {
-                  ra.availableEntities.addLast(-67, var1);
-                }
+          pf.field_D = true;
+          var1 = (GameplayEntity) ((Object) a.attachedEntities.firstForIteration(0));
+          L0: while (var1 != null) {
+            var1.advanceEntityAnimation(true);
+            if (6 == var1.entitySpriteKindId) {
+              pf.field_D = false;
+              if (var1.animationFrameIndex >= 3) {
+                ra.availableEntities.addLast(-67, var1);
               }
-              var1 = (GameplayEntity) ((Object) a.attachedEntities.nextForIteration(1));
             }
-            var2 = 12 % ((-69 - param0) / 38);
-            var1 = (GameplayEntity) ((Object) bh.field_c.firstForIteration(0));
-            L2: while (var1 != null) {
-              L3: {
-                var1.advanceEntityAnimation(true);
-                if (5 != var1.entitySpriteKindId) {
-                  if (var1.entitySpriteKindId != 7) {
-                    if (var1.entitySpriteKindId != 8) {
-                      break L3;
-                    }
+            var1 = (GameplayEntity) ((Object) a.attachedEntities.nextForIteration(1));
+          }
+          var2 = 12 % ((-69 - param0) / 38);
+          var1 = (GameplayEntity) ((Object) bh.field_c.firstForIteration(0));
+          L1: while (var1 != null) {
+            L2: {
+              var1.advanceEntityAnimation(true);
+              if (5 != var1.entitySpriteKindId) {
+                if (var1.entitySpriteKindId != 7) {
+                  if (var1.entitySpriteKindId != 8) {
+                    break L2;
                   }
                 }
-                pf.field_D = false;
-                if (var1.animationFrameIndex >= 3) {
-                  ra.availableEntities.addLast(-115, var1);
-                }
               }
-              var1 = (GameplayEntity) ((Object) bh.field_c.nextForIteration(1));
+              pf.field_D = false;
+              if (var1.animationFrameIndex >= 3) {
+                ra.availableEntities.addLast(-115, var1);
+              }
             }
-            break L0;
+            var1 = (GameplayEntity) ((Object) bh.field_c.nextForIteration(1));
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;

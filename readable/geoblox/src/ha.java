@@ -27,7 +27,6 @@ abstract class ha {
         StringBuilder stackIn_10_1 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = new IndexedSprite(0, 0, 0);
@@ -41,10 +40,10 @@ abstract class ha {
             var3.field_f = param2.field_f;
             var3.field_b = param2.field_b;
             stackIn_4_0 = (IndexedSprite) (var3);
-            decompiledRegionSelector0 = 1;
+            return stackIn_4_0;
           } else {
             stackIn_2_0 = (IndexedSprite) null;
-            decompiledRegionSelector0 = 0;
+            return stackIn_2_0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -76,11 +75,6 @@ abstract class ha {
             stackIn_11_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_4_0;
         }
     }
 

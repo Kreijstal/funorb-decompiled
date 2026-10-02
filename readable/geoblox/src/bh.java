@@ -36,7 +36,6 @@ final class bh extends java.awt.Canvas {
     }
 
     final static void a(int param0) {
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -55,107 +54,94 @@ final class bh extends java.awt.Canvas {
         int[][] var18 = null;
         var12 = Geoblox.field_C;
         try {
-          L0: {
-            var14 = eh.field_d;
-            if (param0 == 2) {
-              var2 = var14.c((byte) 34);
-              var3 = (re) ((Object) PendingActionMarker.field_f.firstForIteration(0));
-              L1: while (var3 != null) {
-                if (var2 != var3.field_k) {
-                  var3 = (re) ((Object) PendingActionMarker.field_f.nextForIteration(1));
-                  continue L1;
-                }
-                break;
+          var14 = eh.field_d;
+          if (param0 == 2) {
+            var2 = var14.c((byte) 34);
+            var3 = (re) ((Object) PendingActionMarker.field_f.firstForIteration(0));
+            L0: while (var3 != null) {
+              if (var2 != var3.field_k) {
+                var3 = (re) ((Object) PendingActionMarker.field_f.nextForIteration(1));
+                continue L0;
               }
-              if (var3 == null) {
-                jl.a((byte) -122);
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                L3: {
-                  var4 = var14.c((byte) 34);
-                  if (var4 != 0) {
-                    oi.field_a[0] = SecondaryDeque.field_f;
-                    var5 = var3.field_g;
-                    for (var6_int = 1; var4 > var6_int; var6_int++) {
-                      oi.field_a[var6_int] = var14.e((byte) 120);
-                    }
-                    nf.a(2147483647, var5, var4);
-                    for (var6_int = 0; var4 > var6_int; var6_int++) {
-                      ScorePopup.a(116, var14);
-                      if (var6_int != 0) {
-                        nd.a(fe.field_g, var6_int, (byte) 123, rd.field_v, h.field_b, lc.field_b);
-                      } else {
-                        nd.a(fe.field_g, var6_int, (byte) -97, rd.field_v, h.field_b, lc.field_b);
-                      }
-                    }
-                    kc.a(var5, (byte) -98);
-                    var6 = new String[2][var5];
-                    var18 = new int[2][4 * var5];
-                    var8 = md.field_c;
-                    var9 = 0;
-                    var10 = 0;
-                    L6: while (var9 < var8) {
-                      var11 = qi.field_i[var9];
-                      var6[0][var10] = oi.field_a[var11];
-                      var18[0][4 * var10] = hg.field_a[var11];
-                      var18[0][4 * var10 + 1] = fb.field_m[var11];
-                      var18[0][4 * var10 + 2] = k.field_i[var11];
-                      var18[0][4 * var10 + 3] = cj.field_b[var11];
-                      if (ge.a(oi.field_a[var11], (byte) 12)) {
-                        if (cj.field_b[var11] + (fb.field_m[var11] + k.field_i[var11]) == 0) {
-                          var6[0][var10] = null;
-                          var10--;
-                        }
-                      }
-                      var9++;
-                      var10++;
-                    }
-                    var9 = 0;
-                    var13 = 0;
-                    var10 = var13;
-                    L7: while (var9 < var8) {
-                      var11 = qi.field_i[var9 + var5];
-                      var6[1][var13] = oi.field_a[var11];
-                      var18[1][4 * var13] = hg.field_a[var11];
-                      var18[1][1 + 4 * var13] = fb.field_m[var11];
-                      var18[1][var13 * 4 + 2] = k.field_i[var11];
-                      var18[1][var13 * 4 + 3] = cj.field_b[var11];
-                      if (ge.a(oi.field_a[var11], (byte) 12)) {
-                        if (cj.field_b[var11] + k.field_i[var11] + fb.field_m[var11] == 0) {
-                          var6[1][var13] = null;
-                          var13--;
-                        }
-                      }
-                      var13++;
-                      var9++;
-                    }
-                    var3.unlinkNode(false);
-                    break L3;
-                  } else {
-                    var3.unlinkNode(false);
-                  }
-                }
-                decompiledRegionSelector0 = 2;
-                break L0;
-              }
-            } else {
-              decompiledRegionSelector0 = 0;
+              break;
             }
+            if (var3 == null) {
+              jl.a((byte) -122);
+              return;
+            } else {
+              L2: {
+                var4 = var14.c((byte) 34);
+                if (var4 != 0) {
+                  oi.field_a[0] = SecondaryDeque.field_f;
+                  var5 = var3.field_g;
+                  for (var6_int = 1; var4 > var6_int; var6_int++) {
+                    oi.field_a[var6_int] = var14.e((byte) 120);
+                  }
+                  nf.a(2147483647, var5, var4);
+                  for (var6_int = 0; var4 > var6_int; var6_int++) {
+                    ScorePopup.a(116, var14);
+                    if (var6_int != 0) {
+                      nd.a(fe.field_g, var6_int, (byte) 123, rd.field_v, h.field_b, lc.field_b);
+                    } else {
+                      nd.a(fe.field_g, var6_int, (byte) -97, rd.field_v, h.field_b, lc.field_b);
+                    }
+                  }
+                  kc.a(var5, (byte) -98);
+                  var6 = new String[2][var5];
+                  var18 = new int[2][4 * var5];
+                  var8 = md.field_c;
+                  var9 = 0;
+                  var10 = 0;
+                  L5: while (var9 < var8) {
+                    var11 = qi.field_i[var9];
+                    var6[0][var10] = oi.field_a[var11];
+                    var18[0][4 * var10] = hg.field_a[var11];
+                    var18[0][4 * var10 + 1] = fb.field_m[var11];
+                    var18[0][4 * var10 + 2] = k.field_i[var11];
+                    var18[0][4 * var10 + 3] = cj.field_b[var11];
+                    if (ge.a(oi.field_a[var11], (byte) 12)) {
+                      if (cj.field_b[var11] + (fb.field_m[var11] + k.field_i[var11]) == 0) {
+                        var6[0][var10] = null;
+                        var10--;
+                      }
+                    }
+                    var9++;
+                    var10++;
+                  }
+                  var9 = 0;
+                  var13 = 0;
+                  var10 = var13;
+                  L6: while (var9 < var8) {
+                    var11 = qi.field_i[var9 + var5];
+                    var6[1][var13] = oi.field_a[var11];
+                    var18[1][4 * var13] = hg.field_a[var11];
+                    var18[1][1 + 4 * var13] = fb.field_m[var11];
+                    var18[1][var13 * 4 + 2] = k.field_i[var11];
+                    var18[1][var13 * 4 + 3] = cj.field_b[var11];
+                    if (ge.a(oi.field_a[var11], (byte) 12)) {
+                      if (cj.field_b[var11] + k.field_i[var11] + fb.field_m[var11] == 0) {
+                        var6[1][var13] = null;
+                        var13--;
+                      }
+                    }
+                    var13++;
+                    var9++;
+                  }
+                  var3.unlinkNode(false);
+                  break L2;
+                } else {
+                  var3.unlinkNode(false);
+                }
+              }
+              return;
+            }
+          } else {
+            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var1), "bh.B(" + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return;
-          } else {
-            return;
-          }
         }
     }
 
@@ -195,82 +181,80 @@ final class bh extends java.awt.Canvas {
         SecondaryDeque pendingEntitiesForRemoval = null;
         var13 = Geoblox.field_C;
         try {
-          L0: {
-            pendingEntities = new SecondaryDeque();
-            pendingEntitiesForRemoval = pendingEntities;
-            processedEntities = new SecondaryDeque();
-            pendingEntitiesForRemoval.addLast(-45, startingEntity);
-            templateVariantIndex = templateEntity.spriteVariantIndex;
-            templateSpriteKindId = templateEntity.entitySpriteKindId;
-            templateCategoryKey = templateEntity.entityCategoryKey;
-            L1: while (true) {
-              poppedEntity = (GameplayEntity) ((Object) pendingEntitiesForRemoval.removeFirst(true));
-              currentEntity = poppedEntity;
-              if (null == poppedEntity) {
-                if (methodGuard != 1) {
-                  bh.a((byte) -40);
+          pendingEntities = new SecondaryDeque();
+          pendingEntitiesForRemoval = pendingEntities;
+          processedEntities = new SecondaryDeque();
+          pendingEntitiesForRemoval.addLast(-45, startingEntity);
+          templateVariantIndex = templateEntity.spriteVariantIndex;
+          templateSpriteKindId = templateEntity.entitySpriteKindId;
+          templateCategoryKey = templateEntity.entityCategoryKey;
+          L0: while (true) {
+            poppedEntity = (GameplayEntity) ((Object) pendingEntitiesForRemoval.removeFirst(true));
+            currentEntity = poppedEntity;
+            if (null == poppedEntity) {
+              if (methodGuard != 1) {
+                bh.a((byte) -40);
+              }
+              return;
+            } else {
+              if (propagateVariant) {
+                currentEntity.configureEntitySprite(methodGuard + 319, currentEntity.entityCategoryKey, templateVariantIndex, 0);
+              }
+              if (propagateCategoryAndKind) {
+                if (currentEntity.entitySpriteKindId == 2) {
+                  currentEntity.detachedFromBoard = true;
+                  currentEntity.entityQueue = ji.movingEntities;
                 }
-                break L0;
-              } else {
-                if (propagateVariant) {
-                  currentEntity.configureEntitySprite(methodGuard + 319, currentEntity.entityCategoryKey, templateVariantIndex, 0);
-                }
-                if (propagateCategoryAndKind) {
-                  if (currentEntity.entitySpriteKindId == 2) {
-                    currentEntity.detachedFromBoard = true;
-                    currentEntity.entityQueue = ji.movingEntities;
-                  }
-                  currentEntity.configureEntitySprite(320, templateCategoryKey, currentEntity.spriteVariantIndex, templateSpriteKindId);
-                }
-                neighborIndex = 0;
-                L6: while (true) {
-                  if (neighborIndex >= currentEntity.relatedEntityCount) {
-                    processedEntities.addFirst(currentEntity, false);
-                    continue L1;
-                  } else {
-                    L7: {
-                      if (currentEntity.relatedEntities[neighborIndex].entitySpriteKindId == 1) {
-                        if (propagateVariant) {
-                          break L7;
-                        }
-                      }
-                      if (2 == currentEntity.relatedEntities[neighborIndex].entitySpriteKindId) {
-                        if (!propagateCategoryAndKind) {
-                          neighborIndex++;
-                          continue L6;
-                        }
-                      } else {
-                        neighborIndex++;
-                        continue L6;
+                currentEntity.configureEntitySprite(320, templateCategoryKey, currentEntity.spriteVariantIndex, templateSpriteKindId);
+              }
+              neighborIndex = 0;
+              L5: while (true) {
+                if (neighborIndex >= currentEntity.relatedEntityCount) {
+                  processedEntities.addFirst(currentEntity, false);
+                  continue L0;
+                } else {
+                  L6: {
+                    if (currentEntity.relatedEntities[neighborIndex].entitySpriteKindId == 1) {
+                      if (propagateVariant) {
+                        break L6;
                       }
                     }
-                    processedEntityToCompare = (GameplayEntity) ((Object) processedEntities.firstForIteration((byte) 121));
-                    L9: while (true) {
-                      if (processedEntityToCompare == null) {
-                        if (propagateVariant) {
-                          currentEntity.sameVariantEntityCount = currentEntity.sameVariantEntityCount + 1;
-                          neighborForVariantIncrement = currentEntity.relatedEntities[neighborIndex];
-                          neighborVariantWriteTarget = (GameplayEntity) (neighborForVariantIncrement);
-                          neighborVariantReadSource = (GameplayEntity) (neighborForVariantIncrement);
-                          neighborVariantWriteTarget.sameVariantEntityCount = neighborVariantReadSource.sameVariantEntityCount + 1;
-                        }
-                        if (propagateCategoryAndKind) {
-                          currentEntity.spriteAngleRadians = templateEntity.spriteAngleRadians;
-                          currentEntity.sameCategoryEntityCount = currentEntity.sameCategoryEntityCount + 1;
-                          neighborForCategoryIncrement = currentEntity.relatedEntities[neighborIndex];
-                          neighborForCategoryIncrement.sameCategoryEntityCount = neighborForCategoryIncrement.sameCategoryEntityCount + 1;
-                        }
-                        pendingEntities.addFirst(currentEntity.relatedEntities[neighborIndex], false);
+                    if (2 == currentEntity.relatedEntities[neighborIndex].entitySpriteKindId) {
+                      if (!propagateCategoryAndKind) {
                         neighborIndex++;
-                        continue L6;
+                        continue L5;
+                      }
+                    } else {
+                      neighborIndex++;
+                      continue L5;
+                    }
+                  }
+                  processedEntityToCompare = (GameplayEntity) ((Object) processedEntities.firstForIteration((byte) 121));
+                  L8: while (true) {
+                    if (processedEntityToCompare == null) {
+                      if (propagateVariant) {
+                        currentEntity.sameVariantEntityCount = currentEntity.sameVariantEntityCount + 1;
+                        neighborForVariantIncrement = currentEntity.relatedEntities[neighborIndex];
+                        neighborVariantWriteTarget = (GameplayEntity) (neighborForVariantIncrement);
+                        neighborVariantReadSource = (GameplayEntity) (neighborForVariantIncrement);
+                        neighborVariantWriteTarget.sameVariantEntityCount = neighborVariantReadSource.sameVariantEntityCount + 1;
+                      }
+                      if (propagateCategoryAndKind) {
+                        currentEntity.spriteAngleRadians = templateEntity.spriteAngleRadians;
+                        currentEntity.sameCategoryEntityCount = currentEntity.sameCategoryEntityCount + 1;
+                        neighborForCategoryIncrement = currentEntity.relatedEntities[neighborIndex];
+                        neighborForCategoryIncrement.sameCategoryEntityCount = neighborForCategoryIncrement.sameCategoryEntityCount + 1;
+                      }
+                      pendingEntities.addFirst(currentEntity.relatedEntities[neighborIndex], false);
+                      neighborIndex++;
+                      continue L5;
+                    } else {
+                      if (currentEntity != processedEntityToCompare) {
+                        processedEntityToCompare = (GameplayEntity) ((Object) processedEntities.nextForIteration(methodGuard - 60));
+                        continue L8;
                       } else {
-                        if (currentEntity != processedEntityToCompare) {
-                          processedEntityToCompare = (GameplayEntity) ((Object) processedEntities.nextForIteration(methodGuard - 60));
-                          continue L9;
-                        } else {
-                          neighborIndex++;
-                          continue L6;
-                        }
+                        neighborIndex++;
+                        continue L5;
                       }
                     }
                   }

@@ -49,7 +49,6 @@ final class am {
             bj var8 = null;
             rh stackIn_2_0 = null;
             rh stackIn_15_0 = null;
-            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             try {
               if (param0 <= -49) {
@@ -75,20 +74,15 @@ final class am {
                   var8.b(92);
                 }
                 stackIn_15_0 = new rh(var8, param4, param3);
-                decompiledRegionSelector0 = 1;
+                return stackIn_15_0;
               } else {
                 stackIn_2_0 = (rh) null;
-                decompiledRegionSelector0 = 0;
+                return stackIn_2_0;
               }
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (IOException) (Object) decompiledCaughtException;
               throw new RuntimeException(((IOException) (var6)).toString());
-            }
-            if (decompiledRegionSelector0 == 0) {
-              return stackIn_2_0;
-            } else {
-              return stackIn_15_0;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -109,23 +103,21 @@ final class am {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          L0: {
-            var2_int = 1;
-            L1: while (param0.length + (param0.length >> 1) >= var2_int) {
-              var2_int = var2_int << 1;
-            }
-            this.field_c = new int[var2_int + var2_int];
-            for (var3 = 0; var3 < var2_int + var2_int; var3++) {
-              this.field_c[var3] = -1;
-            }
-            for (var3 = 0; var3 < param0.length; var3++) {
-              for (var4 = param0[var3] & var2_int - 1; this.field_c[var4 + var4 + 1] != -1; var4 = var4 + 1 & -1 + var2_int) {
-              }
-              this.field_c[var4 + var4] = param0[var3];
-              this.field_c[1 + var4 + var4] = var3;
-            }
-            break L0;
+          var2_int = 1;
+          L0: while (param0.length + (param0.length >> 1) >= var2_int) {
+            var2_int = var2_int << 1;
           }
+          this.field_c = new int[var2_int + var2_int];
+          for (var3 = 0; var3 < var2_int + var2_int; var3++) {
+            this.field_c[var3] = -1;
+          }
+          for (var3 = 0; var3 < param0.length; var3++) {
+            for (var4 = param0[var3] & var2_int - 1; this.field_c[var4 + var4 + 1] != -1; var4 = var4 + 1 & -1 + var2_int) {
+            }
+            this.field_c[var4 + var4] = param0[var3];
+            this.field_c[1 + var4 + var4] = var3;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

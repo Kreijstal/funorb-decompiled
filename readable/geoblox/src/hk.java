@@ -22,30 +22,26 @@ class hk extends el {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (this.field_D) {
-              if (this.a(param4, -1, param5, param0, param2)) {
-                this.a((byte) -116, param6);
-                this.field_f = param3;
-                if (null != this.field_u) {
-                  if (this.field_u instanceof ti) {
-                    ((ti) ((Object) this.field_u)).a(param0, -30896, param2, param4, (hk) (this), param3, param5);
-                  } else {
-                    return true;
-                  }
+          if (this.field_D) {
+            if (this.a(param4, -1, param5, param0, param2)) {
+              this.a((byte) -116, param6);
+              this.field_f = param3;
+              if (null != this.field_u) {
+                if (this.field_u instanceof ti) {
+                  ((ti) ((Object) this.field_u)).a(param0, -30896, param2, param4, (hk) (this), param3, param5);
+                } else {
+                  return true;
                 }
-                stackIn_8_0 = 1;
-                decompiledRegionSelector0 = 0;
-                break L0;
               }
+              stackIn_8_0 = 1;
+              return stackIn_8_0 != 0;
             }
-            var8_int = 4 / ((param1 + 3) / 38);
-            stackIn_10_0 = 0;
-            decompiledRegionSelector0 = 1;
           }
+          var8_int = 4 / ((param1 + 3) / 38);
+          stackIn_10_0 = 0;
+          return stackIn_10_0 != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
@@ -63,11 +59,6 @@ class hk extends el {
             stackIn_14_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_8_0 != 0;
-        } else {
-          return stackIn_10_0 != 0;
         }
     }
 
@@ -133,30 +124,26 @@ class hk extends el {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            L1: {
-              if (this.e((byte) 54)) {
-                if (param0 != 84) {
-                  if (param0 != 83) {
-                    break L1;
-                  }
+            if (this.e((byte) 54)) {
+              if (param0 != 84) {
+                if (param0 != 83) {
+                  break L0;
                 }
-                this.a(-1, -28922, -1, 1);
-                stackIn_5_0 = 1;
-                decompiledRegionSelector0 = 0;
-                break L0;
               }
+              this.a(-1, -28922, -1, 1);
+              stackIn_5_0 = 1;
+              return stackIn_5_0 != 0;
             }
-            if (param1 == 13) {
-              stackIn_9_0 = 0;
-              decompiledRegionSelector0 = 1;
-            } else {
-              this.field_y = true;
-              return false;
-            }
+          }
+          if (param1 == 13) {
+            stackIn_9_0 = 0;
+            return stackIn_9_0 != 0;
+          } else {
+            this.field_y = true;
+            return false;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -175,11 +162,6 @@ class hk extends el {
             stackIn_13_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_5_0 != 0;
-        } else {
-          return stackIn_9_0 != 0;
         }
     }
 
@@ -237,32 +219,28 @@ class hk extends el {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (this.field_D) {
-              if (this.field_z) {
-                param1.d(-128);
-                this.field_A = true;
-                if (null != this.field_u) {
-                  if (this.field_u instanceof rk) {
-                    ((rk) ((Object) this.field_u)).a(3520, (el) (this), this.field_A);
-                  }
-                }
-                if (param0 <= -30) {
-                  stackIn_12_0 = 1;
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  this.field_A = true;
-                  return true;
+          if (this.field_D) {
+            if (this.field_z) {
+              param1.d(-128);
+              this.field_A = true;
+              if (null != this.field_u) {
+                if (this.field_u instanceof rk) {
+                  ((rk) ((Object) this.field_u)).a(3520, (el) (this), this.field_A);
                 }
               }
+              if (param0 <= -30) {
+                stackIn_12_0 = 1;
+                return stackIn_12_0 != 0;
+              } else {
+                this.field_A = true;
+                return true;
+              }
             }
-            stackIn_4_0 = 0;
-            decompiledRegionSelector0 = 0;
           }
+          stackIn_4_0 = 0;
+          return stackIn_4_0 != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -280,11 +258,6 @@ class hk extends el {
             stackIn_16_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_4_0 != 0;
-        } else {
-          return stackIn_12_0 != 0;
         }
     }
 
@@ -316,6 +289,7 @@ class hk extends el {
             }
           }
           stackIn_10_0 = (StringBuilder) (param1);
+          return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -347,7 +321,6 @@ class hk extends el {
           }
           throw t.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
         }
-        return stackIn_10_0;
     }
 
     final void a(int param0, int param1, boolean param2, el param3, int param4, int param5) {

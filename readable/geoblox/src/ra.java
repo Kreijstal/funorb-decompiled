@@ -25,7 +25,9 @@ final class ra implements Iterable {
           param1.nextSecondaryNode = this.field_c;
           param1.previousSecondaryNode.nextSecondaryNode = param1;
           param1.nextSecondaryNode.previousSecondaryNode = param1;
-          if (param0 != -1) {
+          if (param0 == -1) {
+            return;
+          } else {
             this.iterator();
             return;
           }
@@ -182,31 +184,26 @@ final class ra implements Iterable {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = Geoblox.field_C;
         try {
-          L0: {
-            var2_int = param1.charAt(0);
-            if (param0 != 18725) {
-              var5 = (String) null;
-              ra.a(20, (String) null);
-            }
-            var3 = 1;
-            L2: while (true) {
-              if (param1.length() <= var3) {
-                stackIn_10_0 = 1;
-                decompiledRegionSelector0 = 1;
-                break L0;
+          var2_int = param1.charAt(0);
+          if (param0 != 18725) {
+            var5 = (String) null;
+            ra.a(20, (String) null);
+          }
+          var3 = 1;
+          L1: while (true) {
+            if (param1.length() <= var3) {
+              stackIn_10_0 = 1;
+              return stackIn_10_0 != 0;
+            } else {
+              if (var2_int == param1.charAt(var3)) {
+                var3++;
+                continue L1;
               } else {
-                if (var2_int == param1.charAt(var3)) {
-                  var3++;
-                  continue L2;
-                } else {
-                  stackIn_7_0 = 0;
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                }
+                stackIn_7_0 = 0;
+                return stackIn_7_0 != 0;
               }
             }
           }
@@ -227,11 +224,6 @@ final class ra implements Iterable {
             stackIn_14_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_7_0 != 0;
-        } else {
-          return stackIn_10_0 != 0;
         }
     }
 

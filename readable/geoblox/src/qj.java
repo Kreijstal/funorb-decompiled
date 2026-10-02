@@ -48,43 +48,41 @@ final class qj {
         int var10 = 0;
         var11 = Geoblox.field_C;
         try {
-          L0: {
-            var4_int = param0.length();
-            var5 = param1.length();
-            if (param3 < 79) {
-              clearGameplayDuringTransition = false;
-            }
-            L2: {
-              var6 = var4_int;
-              var7 = var5 - 1;
-              if (0 != var7) {
-                var8_int = 0;
-                L3: while (true) {
-                  var8_int = param0.indexOf((int) param2, var8_int);
-                  if (var8_int >= 0) {
-                    var6 = var6 + var7;
-                    var8_int++;
-                    continue L3;
-                  } else {
-                    break L2;
-                  }
+          var4_int = param0.length();
+          var5 = param1.length();
+          if (param3 < 79) {
+            clearGameplayDuringTransition = false;
+          }
+          L1: {
+            var6 = var4_int;
+            var7 = var5 - 1;
+            if (0 != var7) {
+              var8_int = 0;
+              L2: while (true) {
+                var8_int = param0.indexOf((int) param2, var8_int);
+                if (var8_int >= 0) {
+                  var6 = var6 + var7;
+                  var8_int++;
+                  continue L2;
+                } else {
+                  break L1;
                 }
               }
             }
-            var8 = new StringBuilder(var6);
-            var9 = 0;
-            L4: while (true) {
-              var10 = param0.indexOf((int) param2, var9);
-              if (var10 >= 0) {
-                discarded$0 = var8.append(param0.substring(var9, var10));
-                var9 = 1 + var10;
-                discarded$1 = var8.append(param1);
-                continue L4;
-              } else {
-                discarded$2 = var8.append(param0.substring(var9));
-                stackIn_13_0 = var8.toString();
-                break L0;
-              }
+          }
+          var8 = new StringBuilder(var6);
+          var9 = 0;
+          L3: while (true) {
+            var10 = param0.indexOf((int) param2, var9);
+            if (var10 >= 0) {
+              discarded$0 = var8.append(param0.substring(var9, var10));
+              var9 = 1 + var10;
+              discarded$1 = var8.append(param1);
+              continue L3;
+            } else {
+              discarded$2 = var8.append(param0.substring(var9));
+              stackIn_13_0 = var8.toString();
+              return stackIn_13_0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -118,7 +116,6 @@ final class qj {
           }
           throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
-        return stackIn_13_0;
     }
 
     static {

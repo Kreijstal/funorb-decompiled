@@ -167,41 +167,36 @@ final class td extends hk {
         StringBuilder stackIn_23_1 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_24_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         controlFlowGuard = Geoblox.field_C;
         try {
-          L0: {
-            if (methodGuard <= 23) {
-              var9 = (PcmSample) null;
-              td.playPcmSample(-80, (PcmSample) null);
-            }
-            originalLength = destination.length();
-            if (writeOffset >= 0) {
-              if (originalLength >= writeOffset) {
-                sourceLength = sourceText.length();
-                if (sourceLength != 0) {
-                  writeEndOffset = writeOffset + sourceLength;
-                  if (originalLength < writeEndOffset) {
-                    destination.setLength(writeEndOffset);
-                  }
-                  for (sourceCharacterIndex = 0; sourceCharacterIndex < sourceLength; sourceCharacterIndex++) {
-                    characterWriteOffset = writeOffset;
-                    writeOffset++;
-                    destination.setCharAt(characterWriteOffset, sourceText.charAt(sourceCharacterIndex));
-                  }
-                  stackIn_17_0 = (StringBuilder) (destination);
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  stackIn_9_0 = (StringBuilder) (destination);
-                  decompiledRegionSelector0 = 0;
-                  break L0;
+          if (methodGuard <= 23) {
+            var9 = (PcmSample) null;
+            td.playPcmSample(-80, (PcmSample) null);
+          }
+          originalLength = destination.length();
+          if (writeOffset >= 0) {
+            if (originalLength >= writeOffset) {
+              sourceLength = sourceText.length();
+              if (sourceLength != 0) {
+                writeEndOffset = writeOffset + sourceLength;
+                if (originalLength < writeEndOffset) {
+                  destination.setLength(writeEndOffset);
                 }
+                for (sourceCharacterIndex = 0; sourceCharacterIndex < sourceLength; sourceCharacterIndex++) {
+                  characterWriteOffset = writeOffset;
+                  writeOffset++;
+                  destination.setCharAt(characterWriteOffset, sourceText.charAt(sourceCharacterIndex));
+                }
+                stackIn_17_0 = (StringBuilder) (destination);
+                return stackIn_17_0;
+              } else {
+                stackIn_9_0 = (StringBuilder) (destination);
+                return stackIn_9_0;
               }
             }
-            throw new StringIndexOutOfBoundsException("length=" + originalLength + " startPos=" + writeOffset);
           }
+          throw new StringIndexOutOfBoundsException("length=" + originalLength + " startPos=" + writeOffset);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -232,11 +227,6 @@ final class td extends hk {
             stackIn_24_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_24_2).append(',').append(writeOffset).append(',').append(methodGuard).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_9_0;
-        } else {
-          return stackIn_17_0;
         }
     }
 
@@ -270,6 +260,7 @@ final class td extends hk {
             this.a(89, -88, (byte) -40, -90);
           }
           stackIn_3_0 = 0;
+          return stackIn_3_0 != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -288,7 +279,6 @@ final class td extends hk {
           }
           throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(')').toString());
         }
-        return stackIn_3_0 != 0;
     }
 
     final static void a(byte param0) {

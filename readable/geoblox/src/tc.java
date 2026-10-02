@@ -16,66 +16,52 @@ final class tc {
         int stackIn_8_0 = 0;
         int stackIn_18_0 = 0;
         int stackIn_21_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var5 = Geoblox.field_C;
         try {
           L0: {
-            L1: {
-              if (0 < param1) {
-                if (128 > param1) {
-                  break L1;
-                }
-              }
-              if (param1 >= 160) {
-                if (255 >= param1) {
-                  break L1;
-                }
-              }
-              if (param0 != -112) {
-                quitText = (String) null;
-              }
-              if (param1 != 0) {
-                var6 = lf.extendedTextCharacters;
-                var2 = var6;
-                var3 = 0;
-                L5: while (true) {
-                  if (var6.length <= var3) {
-                    stackIn_21_0 = 0;
-                    decompiledRegionSelector0 = 2;
-                    break L0;
-                  } else {
-                    var4 = var6[var3];
-                    if (var4 == param1) {
-                      stackIn_18_0 = 1;
-                      decompiledRegionSelector0 = 1;
-                      break L0;
-                    } else {
-                      var3++;
-                      continue L5;
-                    }
-                  }
-                }
-              } else {
-                return false;
+            if (0 < param1) {
+              if (128 > param1) {
+                break L0;
               }
             }
-            stackIn_8_0 = 1;
-            decompiledRegionSelector0 = 0;
+            if (param1 >= 160) {
+              if (255 >= param1) {
+                break L0;
+              }
+            }
+            if (param0 != -112) {
+              quitText = (String) null;
+            }
+            if (param1 != 0) {
+              var6 = lf.extendedTextCharacters;
+              var2 = var6;
+              var3 = 0;
+              L4: while (true) {
+                if (var6.length <= var3) {
+                  stackIn_21_0 = 0;
+                  return stackIn_21_0 != 0;
+                } else {
+                  var4 = var6[var3];
+                  if (var4 == param1) {
+                    stackIn_18_0 = 1;
+                    return stackIn_18_0 != 0;
+                  } else {
+                    var3++;
+                    continue L4;
+                  }
+                }
+              }
+            } else {
+              return false;
+            }
           }
+          stackIn_8_0 = 1;
+          return stackIn_8_0 != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var2_ref), "tc.A(" + param0 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_8_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_18_0 != 0;
-          } else {
-            return stackIn_21_0 != 0;
-          }
         }
     }
 

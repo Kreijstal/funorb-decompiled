@@ -107,12 +107,11 @@ abstract class qf extends oe {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (super.a(param0, param1, param2, param3)) {
             stackIn_3_0 = 1;
-            decompiledRegionSelector0 = 0;
+            return stackIn_3_0 != 0;
           } else {
             if (this.field_W != null) {
               if (param0 == 98) {
@@ -124,7 +123,7 @@ abstract class qf extends oe {
               }
             }
             stackIn_10_0 = 0;
-            decompiledRegionSelector0 = 1;
+            return stackIn_10_0 != 0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -143,11 +142,6 @@ abstract class qf extends oe {
             stackIn_14_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0 != 0;
-        } else {
-          return stackIn_10_0 != 0;
         }
     }
 
@@ -172,7 +166,9 @@ abstract class qf extends oe {
           }
           this.b((byte) -123, (el) (this.field_W));
           this.field_eb = null;
-          if (param0 != -21102) {
+          if (param0 == -21102) {
+            return;
+          } else {
             var4 = (el) null;
             this.a(-67, -54, 'ﾽ', (el) null);
             return;
@@ -207,7 +203,6 @@ abstract class qf extends oe {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           var9 = new ai(param1, param6, param0, param5, param2, param8, param4);
@@ -215,10 +210,10 @@ abstract class qf extends oe {
           bm.a(var9, param7, param3 ^ -25169);
           if (param3 == 25134) {
             stackIn_4_0 = (ai) (var9);
-            decompiledRegionSelector0 = 1;
+            return stackIn_4_0;
           } else {
             stackIn_2_0 = (ai) null;
-            decompiledRegionSelector0 = 0;
+            return stackIn_2_0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -237,11 +232,6 @@ abstract class qf extends oe {
             stackIn_8_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_4_0;
         }
     }
 
@@ -264,7 +254,9 @@ abstract class qf extends oe {
             this.a(this.field_ab + (12 + this.field_eb.field_h), this.field_eb.field_r + 12, -5269, this.field_db);
             this.field_X = 0;
           }
-          if (param1 >= -10) {
+          if (param1 < -10) {
+            return;
+          } else {
             this.field_W = (wj) null;
             return;
           }

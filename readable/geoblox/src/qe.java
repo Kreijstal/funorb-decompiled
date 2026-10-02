@@ -15,7 +15,6 @@ final class qe {
         RuntimeException stackIn_41_0 = null;
         StringBuilder stackIn_41_1 = null;
         String stackIn_41_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         rj[] var6 = null;
         RuntimeException var6_ref = null;
@@ -27,77 +26,72 @@ final class qe {
         cb var11 = null;
         var9 = Geoblox.field_C;
         try {
-          L0: {
-            if (param4.b(-26098)) {
-              L1: {
-                if (param1 == ~param0) {
-                  var10 = vi.a(param1 ^ -112, param4);
-                  var6 = var10;
-                  if (var6 != null) {
-                    var7_int = 0;
-                    var8 = 0;
-                    L2: while (true) {
-                      if (var8 >= var10.length) {
-                        if (var7_int != 0) {
-                          break L1;
-                        } else {
-                          return null;
-                        }
+          if (param4.b(-26098)) {
+            L0: {
+              if (param1 == ~param0) {
+                var10 = vi.a(param1 ^ -112, param4);
+                var6 = var10;
+                if (var6 != null) {
+                  var7_int = 0;
+                  var8 = 0;
+                  L1: while (true) {
+                    if (var8 >= var10.length) {
+                      if (var7_int != 0) {
+                        break L0;
                       } else {
-                        if (param3 == var10[var8].field_d) {
-                          if (var10[var8].field_f == param2) {
-                            if (param5 != 0) {
-                              if (param5 != var10[var8].field_a) {
-                                var8++;
-                                continue L2;
-                              }
+                        return null;
+                      }
+                    } else {
+                      if (param3 == var10[var8].field_d) {
+                        if (var10[var8].field_f == param2) {
+                          if (param5 != 0) {
+                            if (param5 != var10[var8].field_a) {
+                              var8++;
+                              continue L1;
                             }
-                            if (var7_int != 0) {
-                              if (param0 >= var10[var8].field_h) {
-                                var8++;
-                                continue L2;
-                              }
-                            }
-                            var7_int = 1;
-                            param0 = var10[var8].field_h;
                           }
-                          var8++;
-                          continue L2;
-                        } else {
-                          var8++;
-                          continue L2;
+                          if (var7_int != 0) {
+                            if (param0 >= var10[var8].field_h) {
+                              var8++;
+                              continue L1;
+                            }
+                          }
+                          var7_int = 1;
+                          param0 = var10[var8].field_h;
                         }
+                        var8++;
+                        continue L1;
+                      } else {
+                        var8++;
+                        continue L1;
                       }
                     }
-                  } else {
-                    stackIn_7_0 = null;
-                    decompiledRegionSelector0 = 0;
-                    break L0;
                   }
-                }
-              }
-              var11 = param4.a(param2, param1 ^ 1743550127, param5, param0, param3);
-              L6: while (var11.field_a == 0) {
-                bc.a(0, 10L);
-              }
-              var7 = (java.awt.Frame) (var11.field_b);
-              if (var7 != null) {
-                if (var11.field_a != 2) {
-                  stackIn_37_0 = (java.awt.Frame) (var7);
-                  decompiledRegionSelector0 = 2;
-                  break L0;
                 } else {
-                  jk.a(var7, 10, param4);
-                  stackIn_35_0 = null;
-                  decompiledRegionSelector0 = 1;
-                  break L0;
+                  stackIn_7_0 = null;
+                  return (java.awt.Frame) ((Object) stackIn_7_0);
                 }
+              }
+            }
+            var11 = param4.a(param2, param1 ^ 1743550127, param5, param0, param3);
+            L5: while (var11.field_a == 0) {
+              bc.a(0, 10L);
+            }
+            var7 = (java.awt.Frame) (var11.field_b);
+            if (var7 != null) {
+              if (var11.field_a != 2) {
+                stackIn_37_0 = (java.awt.Frame) (var7);
+                return stackIn_37_0;
               } else {
-                return null;
+                jk.a(var7, 10, param4);
+                stackIn_35_0 = null;
+                return (java.awt.Frame) ((Object) stackIn_35_0);
               }
             } else {
               return null;
             }
+          } else {
+            return null;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -117,15 +111,6 @@ final class qe {
           }
           throw t.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_41_2).append(',').append(param5).append(')').toString());
         }
-        if (decompiledRegionSelector0 == 0) {
-          return (java.awt.Frame) ((Object) stackIn_7_0);
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return (java.awt.Frame) ((Object) stackIn_35_0);
-          } else {
-            return stackIn_37_0;
-          }
-        }
     }
 
     public static void a(int param0) {
@@ -141,19 +126,17 @@ final class qe {
         RuntimeException var1 = null;
         var2 = Geoblox.field_C;
         try {
-          L0: {
-            if (ji.difficultyStep != 0) {
-              if (ji.difficultyStep < 21) {
-                fa.releasesPerTheme = fa.releasesPerTheme + 10;
-              }
+          if (ji.difficultyStep != 0) {
+            if (ji.difficultyStep < 21) {
+              fa.releasesPerTheme = fa.releasesPerTheme + 10;
             }
-            fa.releasesPerTheme = fa.releasesPerTheme + param0;
-            sa.releasesPerDifficultyStep = fa.releasesPerTheme / 3;
-            L2: while (fa.releasesPerTheme > 3 * sa.releasesPerDifficultyStep) {
-              sa.releasesPerDifficultyStep = sa.releasesPerDifficultyStep + 1;
-            }
-            break L0;
           }
+          fa.releasesPerTheme = fa.releasesPerTheme + param0;
+          sa.releasesPerDifficultyStep = fa.releasesPerTheme / 3;
+          L1: while (fa.releasesPerTheme > 3 * sa.releasesPerDifficultyStep) {
+            sa.releasesPerDifficultyStep = sa.releasesPerDifficultyStep + 1;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;

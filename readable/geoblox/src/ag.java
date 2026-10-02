@@ -17,7 +17,6 @@ final class ag extends TextInputValidator {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (guard != 422) {
@@ -25,10 +24,10 @@ final class ag extends TextInputValidator {
           }
           if (this.validationStateForText(-257, candidateText) != si.field_m) {
             stackIn_6_0 = da.createEmailValidText;
-            decompiledRegionSelector0 = 1;
+            return stackIn_6_0;
           } else {
             stackIn_4_0 = wj.createInvalidEmailAlertText;
-            decompiledRegionSelector0 = 0;
+            return stackIn_4_0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -48,11 +47,6 @@ final class ag extends TextInputValidator {
           }
           throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(')').toString());
         }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_4_0;
-        } else {
-          return stackIn_6_0;
-        }
     }
 
     final static Class a(String param0, boolean param1) throws ClassNotFoundException {
@@ -71,53 +65,52 @@ final class ag extends TextInputValidator {
         RuntimeException stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
         String stackIn_35_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param0.equals("B")) {
             if (param0.equals("I")) {
               stackIn_6_0 = Integer.TYPE;
-              decompiledRegionSelector0 = 1;
+              return stackIn_6_0;
             } else {
               if (!param0.equals("S")) {
                 if (!param0.equals("J")) {
                   if (!param0.equals("Z")) {
                     if (param0.equals("F")) {
                       stackIn_19_0 = Float.TYPE;
-                      decompiledRegionSelector0 = 5;
+                      return stackIn_19_0;
                     } else {
                       if (param0.equals("D")) {
                         stackIn_23_0 = Double.TYPE;
-                        decompiledRegionSelector0 = 6;
+                        return stackIn_23_0;
                       } else {
                         if (param0.equals("C")) {
                           stackIn_27_0 = Character.TYPE;
-                          decompiledRegionSelector0 = 7;
+                          return stackIn_27_0;
                         } else {
                           if (param1) {
                             ag.g(26);
                           }
                           stackIn_31_0 = Class.forName(param0);
-                          decompiledRegionSelector0 = 8;
+                          return stackIn_31_0;
                         }
                       }
                     }
                   } else {
                     stackIn_15_0 = Boolean.TYPE;
-                    decompiledRegionSelector0 = 4;
+                    return stackIn_15_0;
                   }
                 } else {
                   stackIn_12_0 = Long.TYPE;
-                  decompiledRegionSelector0 = 3;
+                  return stackIn_12_0;
                 }
               } else {
                 stackIn_9_0 = Short.TYPE;
-                decompiledRegionSelector0 = 2;
+                return stackIn_9_0;
               }
             }
           } else {
             stackIn_2_0 = Byte.TYPE;
-            decompiledRegionSelector0 = 0;
+            return stackIn_2_0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -137,39 +130,6 @@ final class ag extends TextInputValidator {
           }
           throw t.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_35_2).append(',').append(param1).append(')').toString());
         }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_6_0;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return stackIn_9_0;
-            } else {
-              if (decompiledRegionSelector0 == 3) {
-                return stackIn_12_0;
-              } else {
-                if (decompiledRegionSelector0 == 4) {
-                  return stackIn_15_0;
-                } else {
-                  if (decompiledRegionSelector0 == 5) {
-                    return stackIn_19_0;
-                  } else {
-                    if (decompiledRegionSelector0 == 6) {
-                      return stackIn_23_0;
-                    } else {
-                      if (decompiledRegionSelector0 == 7) {
-                        return stackIn_27_0;
-                      } else {
-                        return stackIn_31_0;
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
     }
 
     final static String decodeTextBytes(int decodeGuard, byte[] textBytes) {
@@ -186,6 +146,7 @@ final class ag extends TextInputValidator {
             field_j = (boolean[]) null;
           }
           stackIn_3_0 = bc.decodeTextSlice(-8, textBytes, 0, textBytes.length);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -204,7 +165,6 @@ final class ag extends TextInputValidator {
           }
           throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     final lh validationStateForText(int guard, String candidateText) {
@@ -219,7 +179,6 @@ final class ag extends TextInputValidator {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (null != ca.a(candidateText, 1)) {
@@ -234,10 +193,10 @@ final class ag extends TextInputValidator {
               this.validationMessageForText(97, (String) null);
             }
             stackIn_9_0 = kk.field_w;
-            decompiledRegionSelector0 = 1;
+            return stackIn_9_0;
           } else {
             stackIn_5_0 = si.field_m;
-            decompiledRegionSelector0 = 0;
+            return stackIn_5_0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -257,48 +216,34 @@ final class ag extends TextInputValidator {
           }
           throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(')').toString());
         }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_5_0;
-        } else {
-          return stackIn_9_0;
-        }
     }
 
     final static void a(int param0, byte param1) {
         je var2 = null;
         int var3 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         var3 = Geoblox.field_C;
         try {
-          L0: {
-            j.field_gb = param0;
-            var2 = (je) ((Object) qa.field_f.firstForIteration(0));
-            if (param1 == -67) {
-              L1: while (var2 != null) {
-                if (!var2.field_f.a(126)) {
-                  var2.unlinkNode(false);
-                } else {
-                  var2.field_g.f((int)((float)(j.field_gb * var2.field_i / 80) * 1.399999976158142f));
-                }
-                var2 = (je) ((Object) qa.field_f.nextForIteration(1));
+          j.field_gb = param0;
+          var2 = (je) ((Object) qa.field_f.firstForIteration(0));
+          if (param1 == -67) {
+            L0: while (var2 != null) {
+              if (!var2.field_f.a(126)) {
+                var2.unlinkNode(false);
+              } else {
+                var2.field_g.f((int)((float)(j.field_gb * var2.field_i / 80) * 1.399999976158142f));
               }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
+              var2 = (je) ((Object) qa.field_f.nextForIteration(1));
             }
+            return;
+          } else {
+            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var2_ref), "ag.F(" + param0 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 

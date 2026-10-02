@@ -76,33 +76,31 @@ final class va {
         int var7 = 0;
         var7 = Geoblox.field_C;
         try {
-          L0: {
-            var5_int = 0;
-            L1: while (true) {
-              if (var5_int >= ch.field_d.length) {
-                if (param4 != -85) {
-                  va.a(80, (byte) 55);
-                }
-                break L0;
-              } else {
-                param2 = ch.field_d[var5_int];
-                var6 = var5_int << 4;
-                L3: while (true) {
-                  incrementValue$0 = param2;
-                  param2--;
-                  if (0 == incrementValue$0) {
-                    var5_int++;
-                    continue L1;
-                  } else {
-                    incrementValue$1 = var6;
-                    var6++;
-                    param0 = pj.field_i[incrementValue$1];
-                    dupTemp$2 = param1[param0];
-                    dupTemp$3 = param3[dupTemp$2];
-                    param3[dupTemp$2] = dupTemp$3 + 1;
-                    pj.field_i[dupTemp$3] = param0;
-                    continue L3;
-                  }
+          var5_int = 0;
+          L0: while (true) {
+            if (var5_int >= ch.field_d.length) {
+              if (param4 != -85) {
+                va.a(80, (byte) 55);
+              }
+              return;
+            } else {
+              param2 = ch.field_d[var5_int];
+              var6 = var5_int << 4;
+              L2: while (true) {
+                incrementValue$0 = param2;
+                param2--;
+                if (0 == incrementValue$0) {
+                  var5_int++;
+                  continue L0;
+                } else {
+                  incrementValue$1 = var6;
+                  var6++;
+                  param0 = pj.field_i[incrementValue$1];
+                  dupTemp$2 = param1[param0];
+                  dupTemp$3 = param3[dupTemp$2];
+                  param3[dupTemp$2] = dupTemp$3 + 1;
+                  pj.field_i[dupTemp$3] = param0;
+                  continue L2;
                 }
               }
             }

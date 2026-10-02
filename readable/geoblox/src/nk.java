@@ -39,6 +39,7 @@ final class nk extends df {
           var3 = new byte[var2_int];
           sf.a(param0, 0, var3, param1, var2_int);
           stackIn_1_0 = (byte[]) (var3);
+          return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -57,7 +58,6 @@ final class nk extends df {
           }
           throw t.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_1_0;
     }
 
     public static void b(int param0) {

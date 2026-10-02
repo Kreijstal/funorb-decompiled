@@ -454,33 +454,31 @@ final class GameplayEntity extends DualLinkNode {
         RuntimeException decompiledCaughtException = null;
         var4 = Geoblox.field_C;
         try {
-          L0: {
-            L1: for (relatedEntitySearchIndex = startingChildIndex; relatedEntitySearchIndex < this.relatedEntityCount; relatedEntitySearchIndex++) {
-              if (this.relatedEntities[relatedEntitySearchIndex] == relatedEntity) {
-                this.relatedEntities[relatedEntitySearchIndex] = null;
-                if (this.spriteVariantIndex == relatedEntity.spriteVariantIndex) {
-                  this.sameVariantEntityCount = this.sameVariantEntityCount - 1;
-                }
-                this.relatedEntityCount = this.relatedEntityCount - 1;
-                if (relatedEntity.entityCategoryKey == this.entityCategoryKey) {
-                  this.sameCategoryEntityCount = this.sameCategoryEntityCount - 1;
-                }
-                if (5 > relatedEntitySearchIndex) {
-                  sf.a(this.relatedEntities, 1 + relatedEntitySearchIndex, this.relatedEntities, relatedEntitySearchIndex, this.relatedEntityCount - relatedEntitySearchIndex);
-                }
-                this.relatedEntities[this.relatedEntityCount] = null;
-              } else {
-                continue L1;
+          L0: for (relatedEntitySearchIndex = startingChildIndex; relatedEntitySearchIndex < this.relatedEntityCount; relatedEntitySearchIndex++) {
+            if (this.relatedEntities[relatedEntitySearchIndex] == relatedEntity) {
+              this.relatedEntities[relatedEntitySearchIndex] = null;
+              if (this.spriteVariantIndex == relatedEntity.spriteVariantIndex) {
+                this.sameVariantEntityCount = this.sameVariantEntityCount - 1;
               }
-              break;
-            }
-            if (this.sameVariantEntityCount <= this.relatedEntityCount) {
-              if (this.relatedEntityCount >= this.sameCategoryEntityCount) {
-                break L0;
+              this.relatedEntityCount = this.relatedEntityCount - 1;
+              if (relatedEntity.entityCategoryKey == this.entityCategoryKey) {
+                this.sameCategoryEntityCount = this.sameCategoryEntityCount - 1;
               }
+              if (5 > relatedEntitySearchIndex) {
+                sf.a(this.relatedEntities, 1 + relatedEntitySearchIndex, this.relatedEntities, relatedEntitySearchIndex, this.relatedEntityCount - relatedEntitySearchIndex);
+              }
+              this.relatedEntities[this.relatedEntityCount] = null;
+            } else {
+              continue L0;
             }
-            throw new IllegalStateException("");
+            break;
           }
+          if (this.sameVariantEntityCount <= this.relatedEntityCount) {
+            if (this.relatedEntityCount >= this.sameCategoryEntityCount) {
+              return;
+            }
+          }
+          throw new IllegalStateException("");
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;

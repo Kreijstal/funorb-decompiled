@@ -50,31 +50,29 @@ final class ni extends ee implements pl {
         RuntimeException var2 = null;
         var7 = Geoblox.field_C;
         try {
-          L0: {
-            var8 = new pk(param0.a(param1 + param1, "", "logo.fo3d"));
-            var10 = var8;
-            var3 = var10.c((byte) 34);
-            var10.k(param1 + 8);
-            l.field_i = jc.a(var10, true);
-            bm.field_l = new nf[var3];
-            pi.field_R = new int[var3][];
-            for (var4 = 0; var4 < var3; var4++) {
-              bm.field_l[var4] = uh.a(var8, (byte) 113);
-            }
-            var10.i(-16989);
-            var9 = 0;
-            var4 = var9;
-            L2: while (var3 > var9) {
-              var5 = bm.field_l[var9];
-              var5.a(6, 1, (byte) 89, 6, 6);
-              var5.a((byte) -99);
-              var6 = new int[]{var5.field_Q + var5.field_I >> 1, var5.field_H + var5.field_s >> 1, var5.field_N + var5.field_F >> 1};
-              pi.field_R[var9] = var6;
-              var5.a(-var6[0], -var6[1], -9121, -var6[2]);
-              var9++;
-            }
-            break L0;
+          var8 = new pk(param0.a(param1 + param1, "", "logo.fo3d"));
+          var10 = var8;
+          var3 = var10.c((byte) 34);
+          var10.k(param1 + 8);
+          l.field_i = jc.a(var10, true);
+          bm.field_l = new nf[var3];
+          pi.field_R = new int[var3][];
+          for (var4 = 0; var4 < var3; var4++) {
+            bm.field_l[var4] = uh.a(var8, (byte) 113);
           }
+          var10.i(-16989);
+          var9 = 0;
+          var4 = var9;
+          L1: while (var3 > var9) {
+            var5 = bm.field_l[var9];
+            var5.a(6, 1, (byte) 89, 6, 6);
+            var5.a((byte) -99);
+            var6 = new int[]{var5.field_Q + var5.field_I >> 1, var5.field_H + var5.field_s >> 1, var5.field_N + var5.field_F >> 1};
+            pi.field_R[var9] = var6;
+            var5.a(-var6[0], -var6[1], -9121, -var6[2]);
+            var9++;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -117,6 +115,7 @@ final class ni extends ee implements pl {
           var4.a(30, this.field_r - 14, (byte) -33, var5, 7);
           this.b((byte) -73, var4);
           stackIn_1_0 = (hk) (var4);
+          return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
@@ -148,7 +147,6 @@ final class ni extends ee implements pl {
           }
           throw t.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(')').toString());
         }
-        return stackIn_1_0;
     }
 
     ni(f param0, m param1, String param2) {
@@ -173,17 +171,15 @@ final class ni extends ee implements pl {
         RuntimeException var1 = null;
         var2 = Geoblox.field_C;
         try {
-          L0: {
-            if (param0 != 484842465) {
-              ni.f(15);
-            }
-            var3 = (GameplayEntity) ((Object) bh.field_c.firstForIteration(0));
-            L2: while (var3 != null) {
-              var3.drawRotatedEntityOnCurrentRaster(1915952803);
-              var3 = (GameplayEntity) ((Object) bh.field_c.nextForIteration(1));
-            }
-            break L0;
+          if (param0 != 484842465) {
+            ni.f(15);
           }
+          var3 = (GameplayEntity) ((Object) bh.field_c.firstForIteration(0));
+          L1: while (var3 != null) {
+            var3.drawRotatedEntityOnCurrentRaster(1915952803);
+            var3 = (GameplayEntity) ((Object) bh.field_c.nextForIteration(1));
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
@@ -210,25 +206,23 @@ final class ni extends ee implements pl {
         RuntimeException var6 = null;
         var8 = Geoblox.field_C;
         try {
-          L0: {
-            L1: for (var6_int = 0; var6_int < this.field_D; var6_int++) {
-              if (param4 == this.field_F[var6_int]) {
-                var7 = this.field_H[var6_int];
-                if (var7 != -1) {
-                  pc.a(this.field_H[var6_int], false);
-                } else {
-                  this.field_J.h((byte) -104);
-                }
+          L0: for (var6_int = 0; var6_int < this.field_D; var6_int++) {
+            if (param4 == this.field_F[var6_int]) {
+              var7 = this.field_H[var6_int];
+              if (var7 != -1) {
+                pc.a(this.field_H[var6_int], false);
               } else {
-                continue L1;
+                this.field_J.h((byte) -104);
               }
-              break;
+            } else {
+              continue L0;
             }
-            if (param1 != -20) {
-              ni.a((byte) 87);
-            }
-            break L0;
+            break;
           }
+          if (param1 != -20) {
+            ni.a((byte) 87);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
@@ -286,6 +280,7 @@ final class ni extends ee implements pl {
               createToUseText = (String) null;
             }
             stackIn_6_0 = (nc) (var2);
+            return stackIn_6_0;
           } else {
             return null;
           }
@@ -307,7 +302,6 @@ final class ni extends ee implements pl {
           }
           throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_6_0;
     }
 
     static {

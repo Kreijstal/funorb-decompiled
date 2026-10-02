@@ -77,12 +77,12 @@ final class nd {
             }
             try {
               stackIn_3_0 = (vk) (Class.forName("gl").newInstance());
+              return stackIn_3_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = decompiledCaughtException;
               return null;
             }
-            return stackIn_3_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -100,22 +100,19 @@ final class nd {
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var3_int = param1;
-            L1: while (param2 > 0) {
-              var3_int = var3_int << 1 | param0 & 1;
-              param2--;
-              param0 = param0 >>> 1;
-            }
-            stackIn_4_0 = var3_int;
-            break L0;
+          var3_int = param1;
+          L0: while (param2 > 0) {
+            var3_int = var3_int << 1 | param0 & 1;
+            param2--;
+            param0 = param0 >>> 1;
           }
+          stackIn_4_0 = var3_int;
+          return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var3), "nd.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
-        return stackIn_4_0;
     }
 
     static {

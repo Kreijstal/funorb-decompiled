@@ -32,6 +32,7 @@ final class uh extends ac {
             this.c(-111, (el) null);
           }
           stackIn_3_0 = ah.a(0, '*', param1.field_s.length());
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -50,7 +51,6 @@ final class uh extends ac {
           }
           throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     uh(int param0) {
@@ -134,7 +134,7 @@ final class uh extends ac {
             if (ac.a((byte) 102, param0)) {
               var5.field_G = ji.a(var5.field_G, 16, 0, param0);
             }
-            L5: {
+            L4: {
               if (ac.a((byte) 37, param0)) {
                 var5.field_n = vk.a(var5.field_n, param0, 16, 8);
                 var6 = 0;
@@ -145,14 +145,15 @@ final class uh extends ac {
                 }
                 if (var6 != 0) {
                   var5.field_v = (byte)(1 + var6);
-                  break L5;
+                  break L4;
                 } else {
                   var5.field_n = null;
-                  break L5;
+                  break L4;
                 }
               }
             }
             stackIn_28_0 = (nf) (var5);
+            return stackIn_28_0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -172,7 +173,6 @@ final class uh extends ac {
           }
           throw t.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_32_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_28_0;
     }
 
     final static void d(int param0) {
@@ -189,54 +189,45 @@ final class uh extends ac {
         int var12 = 0;
         GameplayEntity var13 = null;
         GameplayEntity var14 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         var12 = Geoblox.field_C;
         try {
-          L0: {
-            if (param0 == 4740) {
-              var14 = (GameplayEntity) ((Object) SecondaryDeque.spawnQueue.firstForIteration(0));
-              if (var14 != null) {
-                var2 = -320.0f + var14.positionX;
-                var3 = -240.0f + var14.positionY;
-                var4 = (int)((double)var2 * Math.cos((double)el.gameplaySession.boardAngleRadians) - Math.sin((double)el.gameplaySession.boardAngleRadians) * (double)var3 + 320.0);
-                var5 = (int)((double)var2 * Math.sin((double)el.gameplaySession.boardAngleRadians) + (double)var3 * Math.cos((double)el.gameplaySession.boardAngleRadians) + 240.0);
-                var6 = 0.01666666753590107f;
-                var7 = 16764416;
-                var8 = (float)el.gameplaySession.updateTick * 0.03999999910593033f;
-                SoftwareRasterizer.e(var4, var5, 16, 16777215, 100);
-                SoftwareRasterizer.f(var4, var5, 16, 0);
-                for (var9 = var8 + 3.1415927410125732f; var8 < var9; var9 = var9 - var6) {
-                  var10 = (int)((double)var4 + 16.0 * Math.cos((double)var9));
-                  var11 = (int)((double)var5 + Math.sin((double)var9) * 16.0);
-                  SoftwareRasterizer.d(var10, var11, 2, var7);
-                  var6 = var6 + var6 * 0.25f;
-                  var7 += 778;
-                }
-                var13 = (GameplayEntity) ((Object) SecondaryDeque.spawnQueue.firstForIteration(0));
-                L2: while (var13 != null) {
-                  var13.drawFadingEntity(param0 - 4830);
-                  var13 = (GameplayEntity) ((Object) SecondaryDeque.spawnQueue.nextForIteration(1));
-                }
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                return;
+          if (param0 == 4740) {
+            var14 = (GameplayEntity) ((Object) SecondaryDeque.spawnQueue.firstForIteration(0));
+            if (var14 != null) {
+              var2 = -320.0f + var14.positionX;
+              var3 = -240.0f + var14.positionY;
+              var4 = (int)((double)var2 * Math.cos((double)el.gameplaySession.boardAngleRadians) - Math.sin((double)el.gameplaySession.boardAngleRadians) * (double)var3 + 320.0);
+              var5 = (int)((double)var2 * Math.sin((double)el.gameplaySession.boardAngleRadians) + (double)var3 * Math.cos((double)el.gameplaySession.boardAngleRadians) + 240.0);
+              var6 = 0.01666666753590107f;
+              var7 = 16764416;
+              var8 = (float)el.gameplaySession.updateTick * 0.03999999910593033f;
+              SoftwareRasterizer.e(var4, var5, 16, 16777215, 100);
+              SoftwareRasterizer.f(var4, var5, 16, 0);
+              for (var9 = var8 + 3.1415927410125732f; var8 < var9; var9 = var9 - var6) {
+                var10 = (int)((double)var4 + 16.0 * Math.cos((double)var9));
+                var11 = (int)((double)var5 + Math.sin((double)var9) * 16.0);
+                SoftwareRasterizer.d(var10, var11, 2, var7);
+                var6 = var6 + var6 * 0.25f;
+                var7 += 778;
               }
+              var13 = (GameplayEntity) ((Object) SecondaryDeque.spawnQueue.firstForIteration(0));
+              L1: while (var13 != null) {
+                var13.drawFadingEntity(param0 - 4830);
+                var13 = (GameplayEntity) ((Object) SecondaryDeque.spawnQueue.nextForIteration(1));
+              }
+              return;
             } else {
-              decompiledRegionSelector0 = 0;
+              return;
             }
+          } else {
+            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var1), "uh.DA(" + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 

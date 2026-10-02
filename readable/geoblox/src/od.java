@@ -34,15 +34,14 @@ final class od {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > 107) {
             stackIn_4_0 = this.field_a.equals(param1);
-            decompiledRegionSelector0 = 1;
+            return stackIn_4_0;
           } else {
             stackIn_2_0 = 0;
-            decompiledRegionSelector0 = 0;
+            return stackIn_2_0 != 0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -61,11 +60,6 @@ final class od {
             stackIn_8_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0 != 0;
-        } else {
-          return stackIn_4_0;
         }
     }
 
@@ -114,6 +108,7 @@ final class od {
             var7.addFocusListener(var7);
             var7.requestFocus();
             stackIn_6_0 = (he) (var7);
+            return stackIn_6_0;
           } else {
             return null;
           }
@@ -135,7 +130,6 @@ final class od {
           }
           throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',').append(param5).append(')').toString());
         }
-        return stackIn_6_0;
     }
 
     public final String toString() {
@@ -146,49 +140,40 @@ final class od {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var2 = Geoblox.field_C;
         try {
           L0: {
-            L1: {
-              if (null != te.field_c) {
-                var1_int = 0;
-                L2: while (true) {
-                  if (var1_int >= 7) {
-                    kf.field_c = null;
-                    sl.field_l = null;
-                    uh.field_y.c((byte) 83);
-                    te.field_c = null;
-                    break L1;
+            if (null != te.field_c) {
+              var1_int = 0;
+              L1: while (true) {
+                if (var1_int >= 7) {
+                  kf.field_c = null;
+                  sl.field_l = null;
+                  uh.field_y.c((byte) 83);
+                  te.field_c = null;
+                  break L0;
+                } else {
+                  if (!ag.field_j[var1_int]) {
+                    return;
                   } else {
-                    if (!ag.field_j[var1_int]) {
-                      decompiledRegionSelector0 = 0;
-                      break L0;
-                    } else {
-                      var1_int++;
-                      continue L2;
-                    }
+                    var1_int++;
+                    continue L1;
                   }
                 }
               }
             }
-            if (param0 == -24) {
-              decompiledRegionSelector0 = 1;
-            } else {
-              od.b((byte) -35);
-              return;
-            }
+          }
+          if (param0 == -24) {
+            return;
+          } else {
+            od.b((byte) -35);
+            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var1), "od.B(" + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 

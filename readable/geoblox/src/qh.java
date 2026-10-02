@@ -33,17 +33,16 @@ final class qh extends ee implements pe, pl, ta {
         StringBuilder stackIn_10_1 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 == 5) {
             var6 = new hd(20, param0, 120 + param2, 25, param3, false, 120, 3, ng.field_F, 16777215, param1);
             this.b((byte) -114, var6);
             stackIn_4_0 = var6.field_h;
-            decompiledRegionSelector0 = 1;
+            return stackIn_4_0;
           } else {
             stackIn_2_0 = 0;
-            decompiledRegionSelector0 = 0;
+            return stackIn_2_0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -76,11 +75,6 @@ final class qh extends ee implements pe, pl, ta {
           }
           throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
         }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_4_0;
-        }
     }
 
     private final int a(el param0, int param1, String param2, int param3, String param4, int param5, byte param6) {
@@ -109,6 +103,7 @@ final class qh extends ee implements pe, pl, ta {
           this.b((byte) -127, var9);
           var10 = 38 / ((-14 - param6) / 46);
           stackIn_1_0 = var9.field_h + var11.field_h;
+          return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
@@ -153,7 +148,6 @@ final class qh extends ee implements pe, pl, ta {
           }
           throw t.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
-        return stackIn_1_0;
     }
 
     public qh() {
@@ -282,6 +276,7 @@ final class qh extends ee implements pe, pl, ta {
           }
           var7.a(15, 15, (byte) -22, var8.field_m + (-15 + var8.field_h >> 1), 3 + var8.field_r + var8.field_v);
           stackIn_3_0 = var8.field_h;
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
@@ -313,7 +308,6 @@ final class qh extends ee implements pe, pl, ta {
           }
           throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',').append(param4).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     public final void a(vf param0, int param1, int param2, int param3) {
@@ -338,7 +332,9 @@ final class qh extends ee implements pe, pl, ta {
           } else {
             uk.a(false, "terms.ws");
           }
-          if (param2 != 2) {
+          if (param2 == 2) {
+            return;
+          } else {
             this.field_N = (hc) null;
             return;
           }
@@ -394,7 +390,9 @@ final class qh extends ee implements pe, pl, ta {
               discarded$1 = this.g(-21440);
             }
           }
-          if (param1 != -20) {
+          if (param1 == -20) {
+            return;
+          } else {
             field_O = (Sprite[]) null;
             return;
           }
@@ -434,18 +432,17 @@ final class qh extends ee implements pe, pl, ta {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = param1.a((byte) -106);
           if (var3 == null) {
             stackIn_3_0 = 1;
-            decompiledRegionSelector0 = 0;
+            return stackIn_3_0 != 0;
           } else {
             var4 = var3.a((byte) -105);
             if (si.field_m == var4) {
               stackIn_7_0 = 0;
-              decompiledRegionSelector0 = 1;
+              return stackIn_7_0 != 0;
             } else {
               if (param0 >= -73) {
                 var5 = (nl) null;
@@ -453,14 +450,14 @@ final class qh extends ee implements pe, pl, ta {
               }
               if (bf.field_g == var4) {
                 stackIn_13_0 = 0;
-                decompiledRegionSelector0 = 2;
+                return stackIn_13_0 != 0;
               } else {
                 if (var4 != oj.field_d) {
                   stackIn_18_0 = 1;
-                  decompiledRegionSelector0 = 4;
+                  return stackIn_18_0 != 0;
                 } else {
                   stackIn_16_0 = 0;
-                  decompiledRegionSelector0 = 3;
+                  return stackIn_16_0 != 0;
                 }
               }
             }
@@ -482,23 +479,6 @@ final class qh extends ee implements pe, pl, ta {
             stackIn_22_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_7_0 != 0;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return stackIn_13_0 != 0;
-            } else {
-              if (decompiledRegionSelector0 == 3) {
-                return stackIn_16_0 != 0;
-              } else {
-                return stackIn_18_0 != 0;
-              }
-            }
-          }
         }
     }
 
@@ -572,23 +552,22 @@ final class qh extends ee implements pe, pl, ta {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (super.a(param0, param1 ^ 0, param2, param3)) {
             stackIn_3_0 = 1;
-            decompiledRegionSelector0 = 0;
+            return stackIn_3_0 != 0;
           } else {
             if (98 == param0) {
               stackIn_7_0 = this.a(7305, param3);
-              decompiledRegionSelector0 = 1;
+              return stackIn_7_0;
             } else {
               if (param1 != 13) {
                 createPasswordHintText = (String) null;
               }
               if (99 == param0) {
                 stackIn_13_0 = this.a(param3, -125);
-                decompiledRegionSelector0 = 2;
+                return stackIn_13_0;
               } else {
                 return false;
               }
@@ -612,15 +591,6 @@ final class qh extends ee implements pe, pl, ta {
           }
           throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(')').toString());
         }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_7_0;
-          } else {
-            return stackIn_13_0;
-          }
-        }
     }
 
     private final int a(int param0, el param1, String param2, int param3, int param4, String param5) {
@@ -638,15 +608,14 @@ final class qh extends ee implements pe, pl, ta {
         StringBuilder stackIn_13_1 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= -66) {
             stackIn_4_0 = this.a(param1, param4, param2, 35, param5, param3, (byte) -121);
-            decompiledRegionSelector0 = 1;
+            return stackIn_4_0;
           } else {
             stackIn_2_0 = -10;
-            decompiledRegionSelector0 = 0;
+            return stackIn_2_0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -691,11 +660,6 @@ final class qh extends ee implements pe, pl, ta {
             stackIn_14_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_4_0;
         }
     }
 

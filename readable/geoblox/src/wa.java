@@ -50,6 +50,7 @@ final class wa {
           }
           SoftwareRasterizer.a(1 + var7, var8 + 1, var5_int + 4, 4 + var6, this.field_f);
           this.field_m.a(param2, 3 + var7, this.field_m.field_y + 3 + var8, this.field_k, -1);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -170,7 +171,6 @@ final class wa {
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_29_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
         RuntimeException var5 = null;
@@ -193,14 +193,14 @@ final class wa {
             if (-1 == var7) {
               var7 = this.field_m.field_q + this.field_m.field_o;
             }
-            L2: {
+            L1: {
               var8 = SoftwareRasterizer.stride >> 2;
               var9 = this.field_m.a(param1);
               var10 = this.field_m.field_q + this.field_m.field_o;
               var11 = 1;
               if (var8 >= var9) {
                 if (-1 == param1.indexOf("<br>")) {
-                  break L2;
+                  break L1;
                 }
               }
               if (dd.field_E == null) {
@@ -216,18 +216,18 @@ final class wa {
               var9 = 0;
               var10 = var10 + (var11 - 1) * var7;
               var13 = 0;
-              L6: while (true) {
+              L5: while (true) {
                 if (var13 >= var11) {
-                  break L2;
+                  break L1;
                 } else {
                   var14 = this.field_m.a(dd.field_E[var13]);
                   if (var14 > var9) {
                     var9 = var14;
                     var13++;
-                    continue L6;
+                    continue L5;
                   } else {
                     var13++;
-                    continue L6;
+                    continue L5;
                   }
                 }
               }
@@ -243,9 +243,9 @@ final class wa {
             SoftwareRasterizer.d(var12, var13, var5_int + var9, var10 + var6, this.field_n);
             SoftwareRasterizer.a(1 + var12, 1 + var13, var9 + (var5_int - 2), -2 + (var10 + var6), this.field_f);
             this.field_m.a(param1, this.field_d + var12, this.field_i + var13, var9, var10, this.field_k, -1, 0, 0, var7);
-            decompiledRegionSelector0 = 1;
+            return;
           } else {
-            decompiledRegionSelector0 = 0;
+            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -264,11 +264,6 @@ final class wa {
             stackIn_29_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_29_2).append(',').append(param2).append(',').append(param3).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 
@@ -289,6 +284,7 @@ final class wa {
           if (!param1) {
             this.field_c = (dh) null;
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -343,25 +339,22 @@ final class wa {
         RuntimeException decompiledCaughtException = null;
         var3 = Geoblox.field_C;
         try {
-          L0: {
-            unfinishedPoints = 0;
-            if (param0 != -25866) {
-              wa.a(53, -56, 122, 126);
-            }
-            popup = (ScorePopup) ((Object) md.activeScorePopups.removeFirst((byte) -121));
-            L2: while (popup != null) {
-              unfinishedPoints = unfinishedPoints + popup.points;
-              popup = (ScorePopup) ((Object) md.activeScorePopups.removeFirst((byte) -99));
-            }
-            stackIn_7_0 = unfinishedPoints;
-            break L0;
+          unfinishedPoints = 0;
+          if (param0 != -25866) {
+            wa.a(53, -56, 122, 126);
           }
+          popup = (ScorePopup) ((Object) md.activeScorePopups.removeFirst((byte) -121));
+          L1: while (popup != null) {
+            unfinishedPoints = unfinishedPoints + popup.points;
+            popup = (ScorePopup) ((Object) md.activeScorePopups.removeFirst((byte) -99));
+          }
+          stackIn_7_0 = unfinishedPoints;
+          return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var1), "wa.H(" + param0 + ')');
         }
-        return stackIn_7_0;
     }
 
     static {

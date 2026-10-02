@@ -13,15 +13,14 @@ final class fk extends sh {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (readGuard == 2229) {
             stackIn_4_0 = bf.activeTextArchive.a(0, resourceKey, "");
-            decompiledRegionSelector0 = 1;
+            return stackIn_4_0;
           } else {
             stackIn_2_0 = (byte[]) null;
-            decompiledRegionSelector0 = 0;
+            return stackIn_2_0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -40,11 +39,6 @@ final class fk extends sh {
             stackIn_8_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_4_0;
         }
     }
 
@@ -114,8 +108,6 @@ final class fk extends sh {
             RuntimeException stackIn_10_0 = null;
             StringBuilder stackIn_10_1 = null;
             String stackIn_10_2 = null;
-            int decompiledRegionSelector0 = 0;
-            int decompiledRegionSelector1 = 0;
             Throwable decompiledCaughtException = null;
             try {
               try {
@@ -124,10 +116,10 @@ final class fk extends sh {
                   var5 = (sc) (var4.newInstance());
                   var5.a(param2, param1, param3, (byte) 127);
                   stackIn_4_0 = (sc) (var5);
-                  decompiledRegionSelector0 = 1;
+                  return stackIn_4_0;
                 } else {
                   stackIn_2_0 = (sc) null;
-                  decompiledRegionSelector0 = 0;
+                  return stackIn_2_0;
                 }
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -136,11 +128,6 @@ final class fk extends sh {
                 ((sc) ((Object) var5_ref)).a(param2, param1, param3, (byte) 117);
                 stackIn_6_0 = (bf) (var5_ref);
                 return (sc) ((Object) stackIn_6_0);
-              }
-              if (decompiledRegionSelector0 == 0) {
-                decompiledRegionSelector1 = 0;
-              } else {
-                decompiledRegionSelector1 = 1;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
@@ -159,11 +146,6 @@ final class fk extends sh {
                 stackIn_10_2 = "{...}";
               }
               throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
-            }
-            if (decompiledRegionSelector1 == 0) {
-              return stackIn_2_0;
-            } else {
-              return stackIn_4_0;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

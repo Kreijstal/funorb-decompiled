@@ -56,15 +56,14 @@ abstract class oe extends dd {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 44) {
             stackIn_4_0 = ei.a(false, false, param1);
-            decompiledRegionSelector0 = 1;
+            return stackIn_4_0;
           } else {
             stackIn_2_0 = (String) null;
-            decompiledRegionSelector0 = 0;
+            return stackIn_2_0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -83,11 +82,6 @@ abstract class oe extends dd {
             stackIn_8_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_4_0;
         }
     }
 
@@ -121,39 +115,37 @@ abstract class oe extends dd {
         RuntimeException var1_ref = null;
         var4 = Geoblox.field_C;
         try {
-          L0: {
-            var5 = ch.field_d;
-            var1 = var5;
-            var2 = param0;
-            var3 = var5.length;
-            L1: while (var2 < var3) {
-              incrementValue$16 = var2;
-              var2++;
-              var5[incrementValue$16] = 0;
-              incrementValue$17 = var2;
-              var2++;
-              var5[incrementValue$17] = 0;
-              incrementValue$18 = var2;
-              var2++;
-              var5[incrementValue$18] = 0;
-              incrementValue$19 = var2;
-              var2++;
-              var5[incrementValue$19] = 0;
-              incrementValue$20 = var2;
-              var2++;
-              var5[incrementValue$20] = 0;
-              incrementValue$21 = var2;
-              var2++;
-              var5[incrementValue$21] = 0;
-              incrementValue$22 = var2;
-              var2++;
-              var5[incrementValue$22] = 0;
-              incrementValue$23 = var2;
-              var2++;
-              var5[incrementValue$23] = 0;
-            }
-            break L0;
+          var5 = ch.field_d;
+          var1 = var5;
+          var2 = param0;
+          var3 = var5.length;
+          L0: while (var2 < var3) {
+            incrementValue$16 = var2;
+            var2++;
+            var5[incrementValue$16] = 0;
+            incrementValue$17 = var2;
+            var2++;
+            var5[incrementValue$17] = 0;
+            incrementValue$18 = var2;
+            var2++;
+            var5[incrementValue$18] = 0;
+            incrementValue$19 = var2;
+            var2++;
+            var5[incrementValue$19] = 0;
+            incrementValue$20 = var2;
+            var2++;
+            var5[incrementValue$20] = 0;
+            incrementValue$21 = var2;
+            var2++;
+            var5[incrementValue$21] = 0;
+            incrementValue$22 = var2;
+            var2++;
+            var5[incrementValue$22] = 0;
+            incrementValue$23 = var2;
+            var2++;
+            var5[incrementValue$23] = 0;
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
@@ -186,19 +178,17 @@ abstract class oe extends dd {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param2 > -27) {
-              var6 = (CharSequence) null;
-              oe.a((CharSequence) null, -115);
-            }
-            var4_int = -1;
-            for (var5 = param3; var5 < param0; var5++) {
-              var4_int = sb.field_b[(var4_int ^ param1[var5]) & 255] ^ var4_int >>> 8;
-            }
-            var4_int = ~var4_int;
-            stackIn_6_0 = var4_int;
-            break L0;
+          if (param2 > -27) {
+            var6 = (CharSequence) null;
+            oe.a((CharSequence) null, -115);
           }
+          var4_int = -1;
+          for (var5 = param3; var5 < param0; var5++) {
+            var4_int = sb.field_b[(var4_int ^ param1[var5]) & 255] ^ var4_int >>> 8;
+          }
+          var4_int = ~var4_int;
+          stackIn_6_0 = var4_int;
+          return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -217,7 +207,6 @@ abstract class oe extends dd {
           }
           throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
-        return stackIn_6_0;
     }
 
     boolean f(int param0) {
@@ -263,7 +252,6 @@ abstract class oe extends dd {
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_32_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -273,51 +261,45 @@ abstract class oe extends dd {
         int var7 = 0;
         int var8 = 0;
         try {
-          L0: {
-            if (param0 != null) {
-              var2_int = 0;
-              var3 = param0.length();
-              L1: while (var3 > var2_int) {
-                if (gg.a((byte) 125, param0.charAt(var2_int))) {
-                  var2_int++;
-                  continue L1;
-                }
-                break;
+          if (param0 != null) {
+            var2_int = 0;
+            var3 = param0.length();
+            L0: while (var3 > var2_int) {
+              if (gg.a((byte) 125, param0.charAt(var2_int))) {
+                var2_int++;
+                continue L0;
               }
-              L3: while (var2_int < var3) {
-                if (gg.a((byte) -47, param0.charAt(var3 - 1))) {
-                  var3--;
-                  continue L3;
-                }
-                break;
+              break;
+            }
+            L2: while (var2_int < var3) {
+              if (gg.a((byte) -47, param0.charAt(var3 - 1))) {
+                var3--;
+                continue L2;
               }
-              var4 = -var2_int + var3;
-              if (1 <= var4) {
-                if (12 >= var4) {
-                  if (param1 != 12) {
-                    connectionRestoredText = (String) null;
-                  }
-                  var5 = new StringBuilder(var4);
-                  for (var6 = var2_int; var6 < var3; var6++) {
-                    var7 = param0.charAt(var6);
-                    if (fb.a((char) var7, -47)) {
-                      var8 = hc.a((char) var7, param1 - 239);
-                      if (var8 != 0) {
-                        discarded$0 = var5.append((char) var8);
-                      }
+              break;
+            }
+            var4 = -var2_int + var3;
+            if (1 <= var4) {
+              if (12 >= var4) {
+                if (param1 != 12) {
+                  connectionRestoredText = (String) null;
+                }
+                var5 = new StringBuilder(var4);
+                for (var6 = var2_int; var6 < var3; var6++) {
+                  var7 = param0.charAt(var6);
+                  if (fb.a((char) var7, -47)) {
+                    var8 = hc.a((char) var7, param1 - 239);
+                    if (var8 != 0) {
+                      discarded$0 = var5.append((char) var8);
                     }
                   }
-                  if (var5.length() != 0) {
-                    stackIn_28_0 = var5.toString();
-                    decompiledRegionSelector0 = 1;
-                    break L0;
-                  } else {
-                    stackIn_26_0 = null;
-                    decompiledRegionSelector0 = 0;
-                    break L0;
-                  }
+                }
+                if (var5.length() != 0) {
+                  stackIn_28_0 = var5.toString();
+                  return stackIn_28_0;
                 } else {
-                  return null;
+                  stackIn_26_0 = null;
+                  return (String) ((Object) stackIn_26_0);
                 }
               } else {
                 return null;
@@ -325,6 +307,8 @@ abstract class oe extends dd {
             } else {
               return null;
             }
+          } else {
+            return null;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -344,18 +328,12 @@ abstract class oe extends dd {
           }
           throw t.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_32_2).append(',').append(param1).append(')').toString());
         }
-        if (decompiledRegionSelector0 == 0) {
-          return (String) ((Object) stackIn_26_0);
-        } else {
-          return stackIn_28_0;
-        }
     }
 
     final static void a(boolean param0, boolean param1, int param2) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int stackIn_7_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -381,8 +359,8 @@ abstract class oe extends dd {
           var5 = stackIn_7_0;
           var6 = 0;
           if (param2 == 160) {
-            L3: {
-              L4: {
+            L2: {
+              L3: {
                 var7 = 0;
                 var8 = 0;
                 if (param0) {
@@ -396,16 +374,16 @@ abstract class oe extends dd {
                     var3_int = var3_int + (-160 + var7);
                   }
                   for (var9 = 0; pg.field_a.length > var9; var9++) {
-                    L8: {
+                    L7: {
                       if ((1 << var9 & var5) == 0) {
                         if (param0) {
-                          break L8;
+                          break L7;
                         }
                       }
                       if (!da.a(0, 88)) {
                         if (var9 == 16) {
                           if (!qi.d(109)) {
-                            break L8;
+                            break L7;
                           }
                         }
                       }
@@ -415,10 +393,10 @@ abstract class oe extends dd {
                             if (he.field_d <= var4 + 32) {
                               if (a.field_e == var9) {
                                 a.field_e = -1;
-                                break L3;
+                                break L2;
                               } else {
                                 a.field_e = var9;
-                                break L3;
+                                break L2;
                               }
                             }
                           }
@@ -442,22 +420,22 @@ abstract class oe extends dd {
                       }
                     }
                   }
-                  break L4;
+                  break L3;
                 } else {
                   if (var8 >= 8) {
                     var3_int = var3_int + (-160 + var7);
                   }
                   for (var9 = 0; pg.field_a.length > var9; var9++) {
-                    L16: {
+                    L15: {
                       if ((1 << var9 & var5) == 0) {
                         if (param0) {
-                          break L16;
+                          break L15;
                         }
                       }
                       if (!da.a(0, 88)) {
                         if (var9 == 16) {
                           if (!qi.d(109)) {
-                            break L16;
+                            break L15;
                           }
                         }
                       }
@@ -467,10 +445,10 @@ abstract class oe extends dd {
                             if (he.field_d <= var4 + 32) {
                               if (a.field_e == var9) {
                                 a.field_e = -1;
-                                break L3;
+                                break L2;
                               } else {
                                 a.field_e = var9;
-                                break L3;
+                                break L2;
                               }
                             }
                           }
@@ -494,23 +472,18 @@ abstract class oe extends dd {
                       }
                     }
                   }
-                  break L4;
+                  break L3;
                 }
               }
             }
-            decompiledRegionSelector0 = 1;
+            return;
           } else {
-            decompiledRegionSelector0 = 0;
+            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var3), "oe.R(" + param0 + ',' + param1 + ',' + param2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 

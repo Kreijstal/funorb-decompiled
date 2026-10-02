@@ -25,6 +25,7 @@ final class rb {
           }
           if (mf.a(param0, param3, 107, param2)) {
             stackIn_6_0 = lc.a(4520, param4.a(param3, -28153, param0));
+            return stackIn_6_0;
           } else {
             return null;
           }
@@ -59,7 +60,6 @@ final class rb {
           }
           throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(')').toString());
         }
-        return stackIn_6_0;
     }
 
     public static void a(byte param0) {

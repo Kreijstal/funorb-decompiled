@@ -122,6 +122,7 @@ final class w {
           var5_int = param1.a((byte) 127, param0);
           var6 = param1.a(param4, -107, var5_int);
           stackIn_3_0 = pi.a(param2, var5_int, -128, param1, var6);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -179,7 +180,6 @@ final class w {
           }
           throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     final static boolean a(boolean param0, int param1) {

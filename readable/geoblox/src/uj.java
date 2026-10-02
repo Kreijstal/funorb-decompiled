@@ -24,15 +24,14 @@ final class uj {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 == 0) {
             stackIn_4_0 = aa.a(vf.spriteScratchRaster, -(vf.spriteScratchRaster.field_s >> 1) + ng.field_G, -(vf.spriteScratchRaster.field_o >> 1) + td.field_E, bk.boardOwnershipRaster, 0, 0);
-            decompiledRegionSelector0 = 1;
+            return stackIn_4_0;
           } else {
             stackIn_2_0 = 0;
-            decompiledRegionSelector0 = 0;
+            return stackIn_2_0 != 0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -51,11 +50,6 @@ final class uj {
             stackIn_8_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0 != 0;
-        } else {
-          return stackIn_4_0;
         }
     }
 
@@ -87,24 +81,22 @@ final class uj {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var9 = (CharSequence) ((Object) param2);
-            var3_int = cg.a(var9, param1, param0);
-            var4 = new String[1 + var3_int];
-            var5 = 0;
-            var6 = 0;
-            for (var7 = 0; var3_int > var7; var7++) {
-              for (var8 = var6; param2.charAt(var8) != param0; var8++) {
-              }
-              incrementValue$1 = var5;
-              var5++;
-              var4[incrementValue$1] = param2.substring(var6, var8);
-              var6 = var8 + 1;
+          var9 = (CharSequence) ((Object) param2);
+          var3_int = cg.a(var9, param1, param0);
+          var4 = new String[1 + var3_int];
+          var5 = 0;
+          var6 = 0;
+          for (var7 = 0; var3_int > var7; var7++) {
+            for (var8 = var6; param2.charAt(var8) != param0; var8++) {
             }
-            var4[var3_int] = param2.substring(var6);
-            stackIn_7_0 = (String[]) (var4);
-            break L0;
+            incrementValue$1 = var5;
+            var5++;
+            var4[incrementValue$1] = param2.substring(var6, var8);
+            var6 = var8 + 1;
           }
+          var4[var3_int] = param2.substring(var6);
+          stackIn_7_0 = (String[]) (var4);
+          return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -123,7 +115,6 @@ final class uj {
           }
           throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(')').toString());
         }
-        return stackIn_7_0;
     }
 
     public final String toString() {

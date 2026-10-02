@@ -66,6 +66,8 @@ final class gj extends fj {
               dl.field_a = hh.a(stackIn_7_0, stackIn_7_1 != 0);
               return;
             }
+          } else {
+            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

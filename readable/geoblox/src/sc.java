@@ -52,35 +52,31 @@ abstract class sc {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param0 == -75) {
-              if (param2 > 0) {
-                if (!uj.a(true, param2)) {
-                  var3_int = -(int)(4294967296L % (long)param2) + -2147483648;
-                  L1: while (true) {
-                    var4 = param1.nextInt();
-                    if (var3_int > var4) {
-                      stackIn_12_0 = jc.a(var4, param2, param0 ^ 121);
-                      decompiledRegionSelector0 = 2;
-                      break L0;
-                    } else {
-                      continue L1;
-                    }
+          if (param0 == -75) {
+            if (param2 > 0) {
+              if (!uj.a(true, param2)) {
+                var3_int = -(int)(4294967296L % (long)param2) + -2147483648;
+                L0: while (true) {
+                  var4 = param1.nextInt();
+                  if (var3_int > var4) {
+                    stackIn_12_0 = jc.a(var4, param2, param0 ^ 121);
+                    return stackIn_12_0;
+                  } else {
+                    continue L0;
                   }
-                } else {
-                  stackIn_7_0 = (int)((4294967295L & (long)param1.nextInt()) * (long)param2 >> 32);
-                  decompiledRegionSelector0 = 1;
                 }
               } else {
-                throw new IllegalArgumentException();
+                stackIn_7_0 = (int)((4294967295L & (long)param1.nextInt()) * (long)param2 >> 32);
+                return stackIn_7_0;
               }
             } else {
-              stackIn_2_0 = 102;
-              decompiledRegionSelector0 = 0;
+              throw new IllegalArgumentException();
             }
+          } else {
+            stackIn_2_0 = 102;
+            return stackIn_2_0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -99,15 +95,6 @@ abstract class sc {
             stackIn_16_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_7_0;
-          } else {
-            return stackIn_12_0;
-          }
         }
     }
 

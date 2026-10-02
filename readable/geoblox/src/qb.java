@@ -50,7 +50,6 @@ final class qb extends hk {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
         RuntimeException var8 = null;
@@ -62,9 +61,9 @@ final class qb extends hk {
           if (!super.a(param0, -52, param2, param3, param4, param5, param6)) {
             var8_int = 35 % ((-3 - param1) / 38);
             stackIn_16_0 = 0;
-            decompiledRegionSelector0 = 1;
+            return stackIn_16_0 != 0;
           } else {
-            L1: {
+            L0: {
               var8_int = -this.field_E - (this.field_v + (param2 - param4));
               var9 = param5 - (this.field_m + param0 + this.field_O);
               if (var8_int * var8_int + var9 * var9 < this.field_K * this.field_K) {
@@ -77,17 +76,17 @@ final class qb extends hk {
                   var10 = var10 - 3.141592653589793 / (double)this.field_H;
                 }
                 this.field_I = (int)(var10 * (double)this.field_H / 6.283185307179586);
-                L3: while (this.field_I >= this.field_H) {
+                L2: while (this.field_I >= this.field_H) {
                   this.field_I = this.field_I - this.field_H;
                 }
-                L4: while (this.field_I < 0) {
+                L3: while (this.field_I < 0) {
                   this.field_I = this.field_I + this.field_H;
                 }
-                break L1;
+                break L0;
               }
             }
             stackIn_14_0 = 1;
-            decompiledRegionSelector0 = 0;
+            return stackIn_14_0 != 0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -106,11 +105,6 @@ final class qb extends hk {
             stackIn_20_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_14_0 != 0;
-        } else {
-          return stackIn_16_0 != 0;
         }
     }
 
@@ -136,38 +130,36 @@ final class qb extends hk {
         m var10 = null;
         var9 = Geoblox.field_C;
         try {
-          L0: {
-            var5_int = 0;
-            if (param3 != 60) {
-              var10 = (m) null;
-              qb.a(-58, (lk) null, (String) null, -15, (m) null);
-            }
-            var6 = -1;
-            var7 = 1;
-            L2: while (true) {
-              if (var7 >= param2.length()) {
-                break L0;
+          var5_int = 0;
+          if (param3 != 60) {
+            var10 = (m) null;
+            qb.a(-58, (lk) null, (String) null, -15, (m) null);
+          }
+          var6 = -1;
+          var7 = 1;
+          L1: while (true) {
+            if (var7 >= param2.length()) {
+              return;
+            } else {
+              var8 = param2.charAt(var7);
+              if (60 == var8) {
+                var6 = param1.field_c[0] + (var5_int >> 8) + param4.a(param2.substring(0, var7));
+              }
+              if (var6 == -1) {
+                if (var8 == 32) {
+                  var5_int = var5_int + param0;
+                }
+                param1.field_c[var7] = param1.field_c[0] + (var5_int >> 8) + param4.a(param2.substring(0, 1 + var7)) - param4.a((char) var8);
               } else {
-                var8 = param2.charAt(var7);
-                if (60 == var8) {
-                  var6 = param1.field_c[0] + (var5_int >> 8) + param4.a(param2.substring(0, var7));
-                }
-                if (var6 == -1) {
-                  if (var8 == 32) {
-                    var5_int = var5_int + param0;
-                  }
-                  param1.field_c[var7] = param1.field_c[0] + (var5_int >> 8) + param4.a(param2.substring(0, 1 + var7)) - param4.a((char) var8);
-                } else {
-                  param1.field_c[var7] = var6;
-                }
-                if (var8 == 62) {
-                  var6 = -1;
-                  var7++;
-                  continue L2;
-                } else {
-                  var7++;
-                  continue L2;
-                }
+                param1.field_c[var7] = var6;
+              }
+              if (var8 == 62) {
+                var6 = -1;
+                var7++;
+                continue L1;
+              } else {
+                var7++;
+                continue L1;
               }
             }
           }

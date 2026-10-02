@@ -20,58 +20,49 @@ final class ma extends IntrusiveNode {
         int var3 = 0;
         int var4 = 0;
         int[] var5 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
         var4 = Geoblox.field_C;
         try {
-          L0: {
-            var5 = uh.field_x;
-            var1 = var5;
-            var2 = 0;
-            var3 = var5.length;
-            if (param0 == -35) {
-              L1: while (var2 < var3) {
-                incrementValue$16 = var2;
-                var2++;
-                var5[incrementValue$16] = 0;
-                incrementValue$17 = var2;
-                var2++;
-                var5[incrementValue$17] = 0;
-                incrementValue$18 = var2;
-                var2++;
-                var5[incrementValue$18] = 0;
-                incrementValue$19 = var2;
-                var2++;
-                var5[incrementValue$19] = 0;
-                incrementValue$20 = var2;
-                var2++;
-                var5[incrementValue$20] = 0;
-                incrementValue$21 = var2;
-                var2++;
-                var5[incrementValue$21] = 0;
-                incrementValue$22 = var2;
-                var2++;
-                var5[incrementValue$22] = 0;
-                incrementValue$23 = var2;
-                var2++;
-                var5[incrementValue$23] = 0;
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
+          var5 = uh.field_x;
+          var1 = var5;
+          var2 = 0;
+          var3 = var5.length;
+          if (param0 == -35) {
+            L0: while (var2 < var3) {
+              incrementValue$16 = var2;
+              var2++;
+              var5[incrementValue$16] = 0;
+              incrementValue$17 = var2;
+              var2++;
+              var5[incrementValue$17] = 0;
+              incrementValue$18 = var2;
+              var2++;
+              var5[incrementValue$18] = 0;
+              incrementValue$19 = var2;
+              var2++;
+              var5[incrementValue$19] = 0;
+              incrementValue$20 = var2;
+              var2++;
+              var5[incrementValue$20] = 0;
+              incrementValue$21 = var2;
+              var2++;
+              var5[incrementValue$21] = 0;
+              incrementValue$22 = var2;
+              var2++;
+              var5[incrementValue$22] = 0;
+              incrementValue$23 = var2;
+              var2++;
+              var5[incrementValue$23] = 0;
             }
+            return;
+          } else {
+            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var1_ref), "ma.E(" + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 
@@ -89,6 +80,7 @@ final class ma extends IntrusiveNode {
             ma.b(-91);
           }
           stackIn_3_0 = aa.a(SecondaryDeque.contactProbeRaster, 0, 0, vf.spriteScratchRaster, -SecondaryDeque.contactProbeOffsetX + ng.field_G - (vf.spriteScratchRaster.field_s >> 1), -SecondaryDeque.contactProbeOffsetY - (vf.spriteScratchRaster.field_o >> 1) + td.field_E);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -107,7 +99,6 @@ final class ma extends IntrusiveNode {
           }
           throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     final static int b(int param0) {
@@ -137,7 +128,6 @@ final class ma extends IntrusiveNode {
         RuntimeException stackIn_78_0 = null;
         StringBuilder stackIn_78_1 = null;
         String stackIn_78_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
         RuntimeException var6 = null;
@@ -158,150 +148,146 @@ final class ma extends IntrusiveNode {
         int var22 = 0;
         var22 = Geoblox.field_C;
         try {
-          L0: {
-            if (param5 != null) {
-              if (param4 > 0) {
-                if (0 < param2) {
-                  if (param5[3] == null) {
-                    stackIn_10_0 = 0;
+          if (param5 != null) {
+            if (param4 > 0) {
+              if (0 < param2) {
+                if (param5[3] == null) {
+                  stackIn_10_0 = 0;
+                } else {
+                  stackIn_10_0 = param5[3].field_s;
+                }
+                var6_int = stackIn_10_0;
+                if (null == param5[5]) {
+                  stackIn_13_0 = 0;
+                } else {
+                  stackIn_13_0 = param5[5].field_s;
+                }
+                var7 = stackIn_13_0;
+                if (param3 == -92) {
+                  if (null != param5[1]) {
+                    stackIn_18_0 = param5[1].field_o;
                   } else {
-                    stackIn_10_0 = param5[3].field_s;
+                    stackIn_18_0 = 0;
                   }
-                  var6_int = stackIn_10_0;
-                  if (null == param5[5]) {
-                    stackIn_13_0 = 0;
+                  var8 = stackIn_18_0;
+                  if (null != param5[7]) {
+                    stackIn_21_0 = param5[7].field_o;
                   } else {
-                    stackIn_13_0 = param5[5].field_s;
+                    stackIn_21_0 = 0;
                   }
-                  var7 = stackIn_13_0;
-                  if (param3 == -92) {
+                  var9 = stackIn_21_0;
+                  var10 = param4 + param1;
+                  var11 = param0 + param2;
+                  var12 = param1 + var6_int;
+                  var13 = var10 - var7;
+                  var14 = param0 + var8;
+                  var15 = -var9 + var11;
+                  var16 = var12;
+                  var17 = var13;
+                  if (var16 > var17) {
+                    var17 = var6_int * param4 / (var6_int + var7) + param1;
+                    var16 = var6_int * param4 / (var6_int + var7) + param1;
+                  }
+                  var18 = var14;
+                  var19 = var15;
+                  SoftwareRasterizer.a(hd.field_I);
+                  if (var19 < var18) {
+                    var19 = param2 * var8 / (var8 + var9) + param0;
+                    var18 = param2 * var8 / (var8 + var9) + param0;
+                  }
+                  if (null != param5[0]) {
+                    SoftwareRasterizer.b(param1, param0, var16, var18);
+                    param5[0].b(param1, param0);
+                    SoftwareRasterizer.b(hd.field_I);
+                  }
+                  if (param5[2] != null) {
+                    SoftwareRasterizer.b(var17, param0, var10, var18);
+                    param5[2].b(var13, param0);
+                    SoftwareRasterizer.b(hd.field_I);
+                  }
+                  if (null != param5[6]) {
+                    SoftwareRasterizer.b(param1, var19, var16, var11);
+                    param5[6].b(param1, var15);
+                    SoftwareRasterizer.b(hd.field_I);
+                  }
+                  if (null != param5[8]) {
+                    SoftwareRasterizer.b(var17, var19, var10, var11);
+                    param5[8].b(var13, var15);
+                    SoftwareRasterizer.b(hd.field_I);
+                  }
+                  L11: {
                     if (null != param5[1]) {
-                      stackIn_18_0 = param5[1].field_o;
-                    } else {
-                      stackIn_18_0 = 0;
-                    }
-                    var8 = stackIn_18_0;
-                    if (null != param5[7]) {
-                      stackIn_21_0 = param5[7].field_o;
-                    } else {
-                      stackIn_21_0 = 0;
-                    }
-                    var9 = stackIn_21_0;
-                    var10 = param4 + param1;
-                    var11 = param0 + param2;
-                    var12 = param1 + var6_int;
-                    var13 = var10 - var7;
-                    var14 = param0 + var8;
-                    var15 = -var9 + var11;
-                    var16 = var12;
-                    var17 = var13;
-                    if (var16 > var17) {
-                      var17 = var6_int * param4 / (var6_int + var7) + param1;
-                      var16 = var6_int * param4 / (var6_int + var7) + param1;
-                    }
-                    var18 = var14;
-                    var19 = var15;
-                    SoftwareRasterizer.a(hd.field_I);
-                    if (var19 < var18) {
-                      var19 = param2 * var8 / (var8 + var9) + param0;
-                      var18 = param2 * var8 / (var8 + var9) + param0;
-                    }
-                    if (null != param5[0]) {
-                      SoftwareRasterizer.b(param1, param0, var16, var18);
-                      param5[0].b(param1, param0);
-                      SoftwareRasterizer.b(hd.field_I);
-                    }
-                    if (param5[2] != null) {
-                      SoftwareRasterizer.b(var17, param0, var10, var18);
-                      param5[2].b(var13, param0);
-                      SoftwareRasterizer.b(hd.field_I);
-                    }
-                    if (null != param5[6]) {
-                      SoftwareRasterizer.b(param1, var19, var16, var11);
-                      param5[6].b(param1, var15);
-                      SoftwareRasterizer.b(hd.field_I);
-                    }
-                    if (null != param5[8]) {
-                      SoftwareRasterizer.b(var17, var19, var10, var11);
-                      param5[8].b(var13, var15);
-                      SoftwareRasterizer.b(hd.field_I);
-                    }
-                    L12: {
-                      if (null != param5[1]) {
-                        if (param5[1].field_s != 0) {
-                          SoftwareRasterizer.b(var16, param0, var17, var18);
-                          for (var20 = var12; var13 > var20; var20 = var20 + param5[1].field_s) {
-                            param5[1].b(var20, param0);
-                          }
-                          SoftwareRasterizer.b(hd.field_I);
-                          break L12;
+                      if (param5[1].field_s != 0) {
+                        SoftwareRasterizer.b(var16, param0, var17, var18);
+                        for (var20 = var12; var13 > var20; var20 = var20 + param5[1].field_s) {
+                          param5[1].b(var20, param0);
                         }
+                        SoftwareRasterizer.b(hd.field_I);
+                        break L11;
                       }
                     }
-                    L14: {
-                      if (param5[7] != null) {
-                        if (0 != param5[7].field_s) {
-                          SoftwareRasterizer.b(var16, var19, var17, var11);
-                          for (var20 = var12; var20 < var13; var20 = var20 + param5[7].field_s) {
-                            param5[7].b(var20, var15);
-                          }
-                          SoftwareRasterizer.b(hd.field_I);
-                          break L14;
-                        }
-                      }
-                    }
-                    L16: {
-                      if (param5[3] != null) {
-                        if (0 != param5[3].field_o) {
-                          SoftwareRasterizer.b(param1, var18, var16, var19);
-                          for (var20 = var14; var15 > var20; var20 = var20 + param5[3].field_o) {
-                            param5[3].b(param1, var20);
-                          }
-                          SoftwareRasterizer.b(hd.field_I);
-                          break L16;
-                        }
-                      }
-                    }
-                    L18: {
-                      if (param5[5] != null) {
-                        if (param5[5].field_o != 0) {
-                          SoftwareRasterizer.b(var17, var18, var10, var19);
-                          for (var20 = var14; var20 < var15; var20 = var20 + param5[5].field_o) {
-                            param5[5].b(var13, var20);
-                          }
-                          SoftwareRasterizer.b(hd.field_I);
-                          break L18;
-                        }
-                      }
-                    }
-                    L20: {
-                      if (param5[4] != null) {
-                        if (param5[4].field_s != 0) {
-                          if (0 != param5[4].field_o) {
-                            SoftwareRasterizer.b(var16, var18, var17, var19);
-                            for (var20 = var14; var15 > var20; var20 = var20 + param5[4].field_o) {
-                              for (var21 = var12; var21 < var13; var21 = var21 + param5[4].field_s) {
-                                param5[4].b(var21, var20);
-                              }
-                            }
-                            SoftwareRasterizer.b(hd.field_I);
-                            break L20;
-                          }
-                        }
-                      }
-                    }
-                    decompiledRegionSelector0 = 3;
-                    break L0;
-                  } else {
-                    decompiledRegionSelector0 = 2;
-                    break L0;
                   }
+                  L13: {
+                    if (param5[7] != null) {
+                      if (0 != param5[7].field_s) {
+                        SoftwareRasterizer.b(var16, var19, var17, var11);
+                        for (var20 = var12; var20 < var13; var20 = var20 + param5[7].field_s) {
+                          param5[7].b(var20, var15);
+                        }
+                        SoftwareRasterizer.b(hd.field_I);
+                        break L13;
+                      }
+                    }
+                  }
+                  L15: {
+                    if (param5[3] != null) {
+                      if (0 != param5[3].field_o) {
+                        SoftwareRasterizer.b(param1, var18, var16, var19);
+                        for (var20 = var14; var15 > var20; var20 = var20 + param5[3].field_o) {
+                          param5[3].b(param1, var20);
+                        }
+                        SoftwareRasterizer.b(hd.field_I);
+                        break L15;
+                      }
+                    }
+                  }
+                  L17: {
+                    if (param5[5] != null) {
+                      if (param5[5].field_o != 0) {
+                        SoftwareRasterizer.b(var17, var18, var10, var19);
+                        for (var20 = var14; var20 < var15; var20 = var20 + param5[5].field_o) {
+                          param5[5].b(var13, var20);
+                        }
+                        SoftwareRasterizer.b(hd.field_I);
+                        break L17;
+                      }
+                    }
+                  }
+                  L19: {
+                    if (param5[4] != null) {
+                      if (param5[4].field_s != 0) {
+                        if (0 != param5[4].field_o) {
+                          SoftwareRasterizer.b(var16, var18, var17, var19);
+                          for (var20 = var14; var15 > var20; var20 = var20 + param5[4].field_o) {
+                            for (var21 = var12; var21 < var13; var21 = var21 + param5[4].field_s) {
+                              param5[4].b(var21, var20);
+                            }
+                          }
+                          SoftwareRasterizer.b(hd.field_I);
+                          break L19;
+                        }
+                      }
+                    }
+                  }
+                  return;
+                } else {
+                  return;
                 }
               }
-              decompiledRegionSelector0 = 1;
-            } else {
-              decompiledRegionSelector0 = 0;
             }
+            return;
+          } else {
+            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -320,19 +306,6 @@ final class ma extends IntrusiveNode {
             stackIn_78_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_78_2).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return;
-            } else {
-              return;
-            }
-          }
         }
     }
 
@@ -353,38 +326,32 @@ final class ma extends IntrusiveNode {
         StringBuilder stackIn_26_1 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_27_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param2.a(0)) {
-              if (param2.a("commonui", (byte) -127)) {
-                if (param1.a(param3 + 11652)) {
-                  if (param1.a("commonui", (byte) -124)) {
-                    if (param3 == -11652) {
-                      if (param0.a(0)) {
-                        if (param0.a("button.gif", (byte) -125)) {
-                          return true;
-                        }
+          if (param2.a(0)) {
+            if (param2.a("commonui", (byte) -127)) {
+              if (param1.a(param3 + 11652)) {
+                if (param1.a("commonui", (byte) -124)) {
+                  if (param3 == -11652) {
+                    if (param0.a(0)) {
+                      if (param0.a("button.gif", (byte) -125)) {
+                        return true;
                       }
-                      stackIn_17_0 = 0;
-                      decompiledRegionSelector0 = 3;
-                      break L0;
-                    } else {
-                      stackIn_12_0 = 0;
-                      decompiledRegionSelector0 = 2;
-                      break L0;
                     }
+                    stackIn_17_0 = 0;
+                    return stackIn_17_0 != 0;
+                  } else {
+                    stackIn_12_0 = 0;
+                    return stackIn_12_0 != 0;
                   }
                 }
-                stackIn_9_0 = 0;
-                decompiledRegionSelector0 = 1;
-                break L0;
               }
+              stackIn_9_0 = 0;
+              return stackIn_9_0 != 0;
             }
-            stackIn_4_0 = 0;
-            decompiledRegionSelector0 = 0;
           }
+          stackIn_4_0 = 0;
+          return stackIn_4_0 != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -428,19 +395,6 @@ final class ma extends IntrusiveNode {
             stackIn_27_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_27_2).append(',').append(param3).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_4_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_9_0 != 0;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return stackIn_12_0 != 0;
-            } else {
-              return stackIn_17_0 != 0;
-            }
-          }
         }
     }
 

@@ -33,7 +33,6 @@ final class ld {
         int lowerFarLeftHit = 0;
         int lowerFarRightHit = 0;
         int boundaryScanMissResult = 0;
-        int boundaryResultArmId = 0;
         RuntimeException caughtBoundaryScanFailure = null;
         int upperNearRowCenterIndex = 0;
         RuntimeException boundaryScanFailureForContext = null;
@@ -48,158 +47,98 @@ final class ld {
         int clientControlFlowGuard = 0;
         clientControlFlowGuard = Geoblox.field_C;
         try {
-          L0: {
-            upperNearRowCenterIndex = 240 * SoftwareRasterizer.stride + 320;
-            lowerNearRowCenterIndex = upperNearRowCenterIndex;
-            upperFarRowCenterIndex = -(230 * SoftwareRasterizer.stride) + upperNearRowCenterIndex;
-            lowerFarRowCenterIndex = 230 * SoftwareRasterizer.stride + upperNearRowCenterIndex;
-            circleHorizontalOffset = 230;
-            circleVerticalOffset = 0;
-            playfieldRadiusSquared = 52900;
-            guardDivisionResult = 64 / ((methodGuard - 32) / 34);
-            circleError = playfieldRadiusSquared - circleHorizontalOffset;
-            if (SoftwareRasterizer.framebuffer[-circleHorizontalOffset + upperNearRowCenterIndex] != 0) {
-              leftCardinalHit = 1;
-              boundaryResultArmId = 0;
-            } else {
-              if (0 == SoftwareRasterizer.framebuffer[upperNearRowCenterIndex + circleHorizontalOffset]) {
-                if (SoftwareRasterizer.framebuffer[upperFarRowCenterIndex] != 0) {
-                  topCardinalHit = 1;
-                  boundaryResultArmId = 2;
+          upperNearRowCenterIndex = 240 * SoftwareRasterizer.stride + 320;
+          lowerNearRowCenterIndex = upperNearRowCenterIndex;
+          upperFarRowCenterIndex = -(230 * SoftwareRasterizer.stride) + upperNearRowCenterIndex;
+          lowerFarRowCenterIndex = 230 * SoftwareRasterizer.stride + upperNearRowCenterIndex;
+          circleHorizontalOffset = 230;
+          circleVerticalOffset = 0;
+          playfieldRadiusSquared = 52900;
+          guardDivisionResult = 64 / ((methodGuard - 32) / 34);
+          circleError = playfieldRadiusSquared - circleHorizontalOffset;
+          if (SoftwareRasterizer.framebuffer[-circleHorizontalOffset + upperNearRowCenterIndex] != 0) {
+            leftCardinalHit = 1;
+            return leftCardinalHit != 0;
+          } else {
+            if (0 == SoftwareRasterizer.framebuffer[upperNearRowCenterIndex + circleHorizontalOffset]) {
+              if (SoftwareRasterizer.framebuffer[upperFarRowCenterIndex] != 0) {
+                topCardinalHit = 1;
+                return topCardinalHit != 0;
+              } else {
+                if (SoftwareRasterizer.framebuffer[lowerFarRowCenterIndex] != 0) {
+                  bottomCardinalHit = 1;
+                  return bottomCardinalHit != 0;
                 } else {
-                  if (SoftwareRasterizer.framebuffer[lowerFarRowCenterIndex] != 0) {
-                    bottomCardinalHit = 1;
-                    boundaryResultArmId = 3;
-                  } else {
-                    L1: while (true) {
-                      previousCircleVerticalOffset = circleVerticalOffset;
-                      circleVerticalOffset++;
-                      circleError = circleError + (previousCircleVerticalOffset + circleVerticalOffset);
-                      lowerNearRowCenterIndex = lowerNearRowCenterIndex + SoftwareRasterizer.stride;
-                      upperNearRowCenterIndex = upperNearRowCenterIndex - SoftwareRasterizer.stride;
-                      if (playfieldRadiusSquared < circleError) {
-                        upperFarRowCenterIndex = upperFarRowCenterIndex + SoftwareRasterizer.stride;
-                        lowerFarRowCenterIndex = lowerFarRowCenterIndex - SoftwareRasterizer.stride;
-                        circleHorizontalOffset--;
-                        circleError = circleError - (circleHorizontalOffset + circleHorizontalOffset);
-                      }
-                      if (circleVerticalOffset > circleHorizontalOffset) {
-                        boundaryScanMissResult = 0;
-                        boundaryResultArmId = 12;
-                        break L0;
-                      } else {
-                        if (0 == SoftwareRasterizer.framebuffer[-circleVerticalOffset + upperFarRowCenterIndex]) {
-                          if (SoftwareRasterizer.framebuffer[upperFarRowCenterIndex + circleVerticalOffset] == 0) {
-                            if (SoftwareRasterizer.framebuffer[-circleHorizontalOffset + upperNearRowCenterIndex] == 0) {
-                              if (SoftwareRasterizer.framebuffer[circleHorizontalOffset + upperNearRowCenterIndex] == 0) {
-                                if (SoftwareRasterizer.framebuffer[lowerNearRowCenterIndex - circleHorizontalOffset] != 0) {
-                                  lowerNearLeftHit = 1;
-                                  boundaryResultArmId = 8;
-                                  break L0;
-                                } else {
-                                  if (SoftwareRasterizer.framebuffer[circleHorizontalOffset + lowerNearRowCenterIndex] == 0) {
-                                    if (SoftwareRasterizer.framebuffer[lowerFarRowCenterIndex - circleVerticalOffset] != 0) {
-                                      lowerFarLeftHit = 1;
-                                      boundaryResultArmId = 10;
-                                      break L0;
-                                    } else {
-                                      if (SoftwareRasterizer.framebuffer[lowerFarRowCenterIndex + circleVerticalOffset] != 0) {
-                                        lowerFarRightHit = 1;
-                                        boundaryResultArmId = 11;
-                                        break L0;
-                                      } else {
-                                        continue L1;
-                                      }
-                                    }
-                                  } else {
-                                    lowerNearRightHit = 1;
-                                    boundaryResultArmId = 9;
-                                    break L0;
-                                  }
-                                }
+                  L0: while (true) {
+                    previousCircleVerticalOffset = circleVerticalOffset;
+                    circleVerticalOffset++;
+                    circleError = circleError + (previousCircleVerticalOffset + circleVerticalOffset);
+                    lowerNearRowCenterIndex = lowerNearRowCenterIndex + SoftwareRasterizer.stride;
+                    upperNearRowCenterIndex = upperNearRowCenterIndex - SoftwareRasterizer.stride;
+                    if (playfieldRadiusSquared < circleError) {
+                      upperFarRowCenterIndex = upperFarRowCenterIndex + SoftwareRasterizer.stride;
+                      lowerFarRowCenterIndex = lowerFarRowCenterIndex - SoftwareRasterizer.stride;
+                      circleHorizontalOffset--;
+                      circleError = circleError - (circleHorizontalOffset + circleHorizontalOffset);
+                    }
+                    if (circleVerticalOffset > circleHorizontalOffset) {
+                      boundaryScanMissResult = 0;
+                      return boundaryScanMissResult != 0;
+                    } else {
+                      if (0 == SoftwareRasterizer.framebuffer[-circleVerticalOffset + upperFarRowCenterIndex]) {
+                        if (SoftwareRasterizer.framebuffer[upperFarRowCenterIndex + circleVerticalOffset] == 0) {
+                          if (SoftwareRasterizer.framebuffer[-circleHorizontalOffset + upperNearRowCenterIndex] == 0) {
+                            if (SoftwareRasterizer.framebuffer[circleHorizontalOffset + upperNearRowCenterIndex] == 0) {
+                              if (SoftwareRasterizer.framebuffer[lowerNearRowCenterIndex - circleHorizontalOffset] != 0) {
+                                lowerNearLeftHit = 1;
+                                return lowerNearLeftHit != 0;
                               } else {
-                                upperNearRightHit = 1;
-                                boundaryResultArmId = 7;
-                                break L0;
+                                if (SoftwareRasterizer.framebuffer[circleHorizontalOffset + lowerNearRowCenterIndex] == 0) {
+                                  if (SoftwareRasterizer.framebuffer[lowerFarRowCenterIndex - circleVerticalOffset] != 0) {
+                                    lowerFarLeftHit = 1;
+                                    return lowerFarLeftHit != 0;
+                                  } else {
+                                    if (SoftwareRasterizer.framebuffer[lowerFarRowCenterIndex + circleVerticalOffset] != 0) {
+                                      lowerFarRightHit = 1;
+                                      return lowerFarRightHit != 0;
+                                    } else {
+                                      continue L0;
+                                    }
+                                  }
+                                } else {
+                                  lowerNearRightHit = 1;
+                                  return lowerNearRightHit != 0;
+                                }
                               }
                             } else {
-                              upperNearLeftHit = 1;
-                              boundaryResultArmId = 6;
-                              break L0;
+                              upperNearRightHit = 1;
+                              return upperNearRightHit != 0;
                             }
                           } else {
-                            upperFarRightHit = 1;
-                            boundaryResultArmId = 5;
-                            break L0;
+                            upperNearLeftHit = 1;
+                            return upperNearLeftHit != 0;
                           }
                         } else {
-                          upperFarLeftHit = 1;
-                          boundaryResultArmId = 4;
-                          break L0;
+                          upperFarRightHit = 1;
+                          return upperFarRightHit != 0;
                         }
+                      } else {
+                        upperFarLeftHit = 1;
+                        return upperFarLeftHit != 0;
                       }
                     }
                   }
                 }
-              } else {
-                rightCardinalHit = 1;
-                boundaryResultArmId = 1;
               }
+            } else {
+              rightCardinalHit = 1;
+              return rightCardinalHit != 0;
             }
           }
         } catch (java.lang.RuntimeException boundaryScanFailure) {
           caughtBoundaryScanFailure = boundaryScanFailure;
           boundaryScanFailureForContext = caughtBoundaryScanFailure;
           throw t.a((Throwable) ((Object) boundaryScanFailureForContext), "ld.B(" + methodGuard + ')');
-        }
-        if (boundaryResultArmId == 0) {
-          return leftCardinalHit != 0;
-        } else {
-          if (boundaryResultArmId == 1) {
-            return rightCardinalHit != 0;
-          } else {
-            if (boundaryResultArmId == 2) {
-              return topCardinalHit != 0;
-            } else {
-              if (boundaryResultArmId == 3) {
-                return bottomCardinalHit != 0;
-              } else {
-                if (boundaryResultArmId == 4) {
-                  return upperFarLeftHit != 0;
-                } else {
-                  if (boundaryResultArmId == 5) {
-                    return upperFarRightHit != 0;
-                  } else {
-                    if (boundaryResultArmId == 6) {
-                      return upperNearLeftHit != 0;
-                    } else {
-                      if (boundaryResultArmId == 7) {
-                        return upperNearRightHit != 0;
-                      } else {
-                        if (boundaryResultArmId == 8) {
-                          return lowerNearLeftHit != 0;
-                        } else {
-                          if (boundaryResultArmId == 9) {
-                            return lowerNearRightHit != 0;
-                          } else {
-                            if (boundaryResultArmId == 10) {
-                              return lowerFarLeftHit != 0;
-                            } else {
-                              if (boundaryResultArmId == 11) {
-                                return lowerFarRightHit != 0;
-                              } else {
-                                return boundaryScanMissResult != 0;
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
         }
     }
 

@@ -21,7 +21,6 @@ final class cm extends cj {
         int incrementValue$2 = 0;
         int incrementValue$3 = 0;
         int incrementValue$4 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -51,167 +50,154 @@ final class cm extends cj {
         long[][] var31 = null;
         var26 = Geoblox.field_C;
         try {
-          L0: {
-            if (param0 != -24839) {
-              cm.a(false);
-            }
-            L2: {
-              var27 = eh.field_d;
-              var2 = var27.c((byte) 34);
-              if (var2 == 0) {
+          if (param0 != -24839) {
+            cm.a(false);
+          }
+          L1: {
+            var27 = eh.field_d;
+            var2 = var27.c((byte) 34);
+            if (var2 == 0) {
+              var3 = var27.b(true);
+              var4 = (mg) ((Object) rh.field_d.firstForIteration(0));
+              L2: while (var4 != null) {
+                if (var4.field_i != var3) {
+                  var4 = (mg) ((Object) rh.field_d.nextForIteration(1));
+                  continue L2;
+                }
+                break;
+              }
+              if (var4 != null) {
+                L4: {
+                  var5 = var27.c((byte) 34);
+                  if (var5 != 0) {
+                    var6 = var4.field_f;
+                    var7 = var4.field_l;
+                    id.field_b[0].field_c = false;
+                    id.field_b[0].field_d = SecondaryDeque.field_f;
+                    id.field_b[0].field_a = null;
+                    for (var8_int = 1; var5 > var8_int; var8_int++) {
+                      id.field_b[var8_int].field_d = var27.e((byte) 104);
+                      id.field_b[var8_int].field_c = false;
+                      if (var27.c((byte) 34) == 1) {
+                        id.field_b[var8_int].field_a = var27.e((byte) 122);
+                      } else {
+                        id.field_b[var8_int].field_a = null;
+                      }
+                    }
+                    dupTemp$0 = new String[3][var6];
+                    var4.field_k = dupTemp$0;
+                    var8 = dupTemp$0;
+                    var9 = new String[3][var6];
+                    var31 = new long[3][var6];
+                    dupTemp$1 = new int[3][var6 * var7];
+                    var4.field_h = dupTemp$1;
+                    var11 = dupTemp$1;
+                    var12 = 0;
+                    var13 = 0;
+                    var14 = 0;
+                    var15 = 0;
+                    var16 = 0;
+                    var17 = 0;
+                    var18 = var27.c((byte) 34);
+                    if (0 >= var18) {
+                      break L4;
+                    } else {
+                      for (var19 = 0; var19 < var18; var19++) {
+                        L7: {
+                          var20 = var27.c((byte) 34);
+                          var21 = id.field_b[var20].field_d;
+                          var22 = var27.b(2901);
+                          var24 = var27.field_f;
+                          if (var6 > var19) {
+                            var8[0][var12] = var21;
+                            var9[0][var12] = id.field_b[var20].field_a;
+                            var31[0][var12] = var22;
+                            for (var25 = 0; var25 < var7; var25++) {
+                              incrementValue$2 = var15;
+                              var15++;
+                              var11[0][incrementValue$2] = var27.a((byte) -76);
+                            }
+                            var12++;
+                            break L7;
+                          }
+                        }
+                        L9: {
+                          if (var21 != null) {
+                            if (ge.a(var21, (byte) 12)) {
+                              var8[1][var13] = SecondaryDeque.field_f;
+                              var9[1][var13] = null;
+                              var31[1][var13] = var22;
+                              var13++;
+                              var27.field_f = var24;
+                              for (var25 = 0; var25 < var7; var25++) {
+                                incrementValue$3 = var16;
+                                var16++;
+                                var11[1][incrementValue$3] = var27.a((byte) -122);
+                              }
+                              break L9;
+                            }
+                          }
+                        }
+                        L11: {
+                          if (var14 < var6) {
+                            if (!id.field_b[var20].field_c) {
+                              id.field_b[var20].field_c = true;
+                              var8[2][var14] = var21;
+                              var9[2][var14] = id.field_b[var20].field_a;
+                              var31[2][var14] = var22;
+                              var14++;
+                              var27.field_f = var24;
+                              for (var25 = 0; var7 > var25; var25++) {
+                                incrementValue$4 = var17;
+                                var17++;
+                                var11[2][incrementValue$4] = var27.a((byte) -101);
+                              }
+                              break L11;
+                            }
+                          }
+                        }
+                      }
+                      break L4;
+                    }
+                  }
+                }
+                var4.field_j = true;
+                var4.unlinkNode(false);
+                break L1;
+              } else {
+                jl.a((byte) -115);
+                return;
+              }
+            } else {
+              if (1 == var2) {
                 var3 = var27.b(true);
-                var4 = (mg) ((Object) rh.field_d.firstForIteration(0));
-                L3: while (var4 != null) {
-                  if (var4.field_i != var3) {
-                    var4 = (mg) ((Object) rh.field_d.nextForIteration(1));
-                    continue L3;
+                var27.b(param0 + 27740);
+                var4_ref = (ai) ((Object) nf.field_j.firstForIteration(0));
+                L14: while (var4_ref != null) {
+                  if (var3 != var4_ref.field_q) {
+                    var4_ref = (ai) ((Object) nf.field_j.nextForIteration(1));
+                    continue L14;
                   }
                   break;
                 }
-                if (var4 != null) {
-                  L5: {
-                    var5 = var27.c((byte) 34);
-                    if (var5 != 0) {
-                      var6 = var4.field_f;
-                      var7 = var4.field_l;
-                      id.field_b[0].field_c = false;
-                      id.field_b[0].field_d = SecondaryDeque.field_f;
-                      id.field_b[0].field_a = null;
-                      for (var8_int = 1; var5 > var8_int; var8_int++) {
-                        id.field_b[var8_int].field_d = var27.e((byte) 104);
-                        id.field_b[var8_int].field_c = false;
-                        if (var27.c((byte) 34) == 1) {
-                          id.field_b[var8_int].field_a = var27.e((byte) 122);
-                        } else {
-                          id.field_b[var8_int].field_a = null;
-                        }
-                      }
-                      dupTemp$0 = new String[3][var6];
-                      var4.field_k = dupTemp$0;
-                      var8 = dupTemp$0;
-                      var9 = new String[3][var6];
-                      var31 = new long[3][var6];
-                      dupTemp$1 = new int[3][var6 * var7];
-                      var4.field_h = dupTemp$1;
-                      var11 = dupTemp$1;
-                      var12 = 0;
-                      var13 = 0;
-                      var14 = 0;
-                      var15 = 0;
-                      var16 = 0;
-                      var17 = 0;
-                      var18 = var27.c((byte) 34);
-                      if (0 >= var18) {
-                        break L5;
-                      } else {
-                        for (var19 = 0; var19 < var18; var19++) {
-                          L8: {
-                            var20 = var27.c((byte) 34);
-                            var21 = id.field_b[var20].field_d;
-                            var22 = var27.b(2901);
-                            var24 = var27.field_f;
-                            if (var6 > var19) {
-                              var8[0][var12] = var21;
-                              var9[0][var12] = id.field_b[var20].field_a;
-                              var31[0][var12] = var22;
-                              for (var25 = 0; var25 < var7; var25++) {
-                                incrementValue$2 = var15;
-                                var15++;
-                                var11[0][incrementValue$2] = var27.a((byte) -76);
-                              }
-                              var12++;
-                              break L8;
-                            }
-                          }
-                          L10: {
-                            if (var21 != null) {
-                              if (ge.a(var21, (byte) 12)) {
-                                var8[1][var13] = SecondaryDeque.field_f;
-                                var9[1][var13] = null;
-                                var31[1][var13] = var22;
-                                var13++;
-                                var27.field_f = var24;
-                                for (var25 = 0; var25 < var7; var25++) {
-                                  incrementValue$3 = var16;
-                                  var16++;
-                                  var11[1][incrementValue$3] = var27.a((byte) -122);
-                                }
-                                break L10;
-                              }
-                            }
-                          }
-                          L12: {
-                            if (var14 < var6) {
-                              if (!id.field_b[var20].field_c) {
-                                id.field_b[var20].field_c = true;
-                                var8[2][var14] = var21;
-                                var9[2][var14] = id.field_b[var20].field_a;
-                                var31[2][var14] = var22;
-                                var14++;
-                                var27.field_f = var24;
-                                for (var25 = 0; var7 > var25; var25++) {
-                                  incrementValue$4 = var17;
-                                  var17++;
-                                  var11[2][incrementValue$4] = var27.a((byte) -101);
-                                }
-                                break L12;
-                              }
-                            }
-                          }
-                        }
-                        break L5;
-                      }
-                    }
-                  }
-                  var4.field_j = true;
-                  var4.unlinkNode(false);
-                  break L2;
+                if (var4_ref != null) {
+                  var4_ref.unlinkNode(false);
+                  break L1;
                 } else {
-                  jl.a((byte) -115);
-                  decompiledRegionSelector0 = 2;
-                  break L0;
+                  jl.a((byte) -117);
+                  return;
                 }
               } else {
-                if (1 == var2) {
-                  var3 = var27.b(true);
-                  var27.b(param0 + 27740);
-                  var4_ref = (ai) ((Object) nf.field_j.firstForIteration(0));
-                  L15: while (var4_ref != null) {
-                    if (var3 != var4_ref.field_q) {
-                      var4_ref = (ai) ((Object) nf.field_j.nextForIteration(1));
-                      continue L15;
-                    }
-                    break;
-                  }
-                  if (var4_ref != null) {
-                    var4_ref.unlinkNode(false);
-                    break L2;
-                  } else {
-                    jl.a((byte) -117);
-                    decompiledRegionSelector0 = 1;
-                    break L0;
-                  }
-                } else {
-                  gi.a((Throwable) null, "HS1: " + og.e(param0 + 24894), (byte) 125);
-                  jl.a((byte) -117);
-                }
+                gi.a((Throwable) null, "HS1: " + og.e(param0 + 24894), (byte) 125);
+                jl.a((byte) -117);
               }
             }
-            decompiledRegionSelector0 = 0;
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var1), "cm.F(" + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return;
-          } else {
-            return;
-          }
         }
     }
 

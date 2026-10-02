@@ -26,15 +26,15 @@ final class sa extends RuntimeException {
               gb.field_e = ue.field_e;
             }
           }
-          L2: {
+          L1: {
             oe.field_V = oe.field_V + 1;
             if (param0 != null) {
               if (param0.equals(tc.field_a)) {
-                break L2;
+                break L1;
               }
             } else {
               if (null != tc.field_a) {
-                break L2;
+                break L1;
               }
             }
             if (!vl.field_q) {
@@ -92,7 +92,9 @@ final class sa extends RuntimeException {
           }
           gb.field_e = -1;
           k.field_g = -1;
-          if (param1 < 69) {
+          if (param1 >= 69) {
+            return;
+          } else {
             sa.a(false);
             return;
           }
@@ -149,6 +151,7 @@ final class sa extends RuntimeException {
             field_c = -0.44199917757712387;
           }
           stackIn_3_0 = param0.b(param1 - 26135);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -167,7 +170,6 @@ final class sa extends RuntimeException {
           }
           throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     sa(Throwable param0, String param1) {

@@ -45,7 +45,6 @@ final class uf implements Runnable {
         StringBuilder stackIn_10_1 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = new o();
@@ -57,10 +56,10 @@ final class uf implements Runnable {
           if (param0 > 41) {
             this.a(var5, 15079962);
             stackIn_4_0 = (o) (var5);
-            decompiledRegionSelector0 = 1;
+            return stackIn_4_0;
           } else {
             stackIn_2_0 = (o) null;
-            decompiledRegionSelector0 = 0;
+            return stackIn_2_0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -93,11 +92,6 @@ final class uf implements Runnable {
           }
           throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(')').toString());
         }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_4_0;
-        }
     }
 
     final o a(jh param0, int param1, int param2) {
@@ -123,9 +117,9 @@ final class uf implements Runnable {
           var4.field_x = 1;
           var5 = this.field_k;
           synchronized (var5) {
-            L2: {
+            L1: {
               var6 = (o) ((Object) this.field_k.firstForIteration((byte) 121));
-              L3: while (var6 != null) {
+              L2: while (var6 != null) {
                 if ((long)param1 == var6.field_i) {
                   if (var6.field_w == param0) {
                     if (2 == var6.field_x) {
@@ -138,13 +132,14 @@ final class uf implements Runnable {
                 }
                 var6 = (o) ((Object) this.field_k.nextForIteration(-20));
               }
-              break L2;
+              break L1;
             }
           }
           var4.field_y = param0.a(param1, (byte) -78);
           var4.field_q = true;
           var4.field_u = false;
           stackIn_18_0 = (o) (var4);
+          return stackIn_18_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = (RuntimeException) (Object) decompiledCaughtException;
@@ -163,7 +158,6 @@ final class uf implements Runnable {
           }
           throw t.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
-        return stackIn_18_0;
     }
 
     private final void a(o param0, int param1) {
@@ -231,6 +225,7 @@ final class uf implements Runnable {
             field_e = (ob) null;
           }
           stackIn_3_0 = pf.a(param3, param2, var7, var8, param1, param6, 100);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7_ref = decompiledCaughtException;
@@ -275,7 +270,6 @@ final class uf implements Runnable {
           }
           throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',').append(param6).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     final static void a(int param0, int param1) {
@@ -327,6 +321,7 @@ final class uf implements Runnable {
           }
           this.a(var4, 15079962);
           stackIn_3_0 = (o) (var4);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
@@ -345,7 +340,6 @@ final class uf implements Runnable {
           }
           throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     public final void run() {

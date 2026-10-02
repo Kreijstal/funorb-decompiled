@@ -64,6 +64,7 @@ final class ml extends ff {
           }
           var8 = stackIn_19_0;
           this.field_n.a(param4.field_s, param4.field_v + param0, -2 + param2 + param4.field_m, param4.field_r, param4.field_h, var8, -1, 1, 1, this.field_n.field_o);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;

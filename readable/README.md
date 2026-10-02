@@ -1,8 +1,8 @@
 # Readable GeoBlox
 
-The current export has 1,171 guarded naming rules: 22 classes, 382 fields,
-175 methods, 209 parameters and 383 local declarations. Both 303-file corpora
-compile, preserving 154,117 bindings and 388 override relationships. Unknown
+The current export has 1,170 guarded naming rules: 22 classes, 382 fields,
+175 methods, 209 parameters and 382 local declarations. Both 303-file corpora
+compile, preserving 152,600 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
 ## One current manifest
@@ -21,17 +21,17 @@ tool bytes; `funorb-stubs.jar` is the frozen compilation dependency. The
 [reading guide](GEOBLOX-READING-GUIDE.md) explains the named gameplay flow.
 
 The raw input is `games/geoblox` at
-`588ff14becf7fd429d53e929e85e073814c20259`. It comes from java-tools
-`67f22895e4161b3e81a7ceb93273b6680be7d2f0` and Deko
+`a298f846c1824a1e88dd6c63674bbe81e67152e1`. It comes from java-tools
+`2f75cefb09f32e164f77b7f4adc6fd011d922f43` and Deko
 `a572c4dd0f0174bfcd7777be53d7ceba2f970f18`. The adapted naming tool is
 `a0bc835957148b9b1e1f8221c59b79d899d22738`; its source archive SHA-256 is
 `cb10756aa3ecb28159c9b81f2fb78bf559b4111d9ad203819458b30d0d84cf8c`.
 
 The **decompiler repository source** SHA-256 is
-`ac8734ac19b0447c2aad49c20af07562f4e9d22c862c97c465b465b6e858a86f`:
+`8e6ff3d4a6c5439128cbbad964491358c73c92c2e6e0a0ff82edadda478a612e`:
 
 ```sh
-git archive --format=tar 67f22895e4161b3e81a7ceb93273b6680be7d2f0 | sha256sum
+git archive --format=tar 2f75cefb09f32e164f77b7f4adc6fd011d922f43 | sha256sum
 ```
 
 This identifies tracked decompiler source and its Git archive metadata. It is
@@ -117,8 +117,10 @@ check both menu and gameplay updates with ending messages disabled. Another
 invalid indices and division-guard partial writes. The combined gameplay probe
 now covers 52,164 cases per variant. Ending-message selection remains outside
 these animation checks.
-The boundary scan now names all 28 local declarations and its method guard,
-including the four row-center cursors and thirteen retained result carriers.
+The boundary scan names all 27 remaining local declarations and its method
+guard, including four row-center cursors and thirteen retained result carriers.
+Its obsolete selector is removed; the result carriers now return on their
+original paths inside the try. The 13-arm post-try ladder is gone.
 An independent closed-form lattice oracle checks every pixel in the 461-by-461
 bounding square at strides 640 and 641: 425,042 pixel checks and all 1,300
 perimeter pixels per variant. Negative nonzero pixels, read-only buffer behavior,
@@ -132,37 +134,43 @@ audio and whole-game equivalence remain unverified. Text-writer guards <=23
 retain a PCM side effect outside the direct writer probe. These source checks
 do not establish FPS, heap or phone acceptance.
 
-The pinned generic decompiler removes 745 integral sign nodes across 132
-files: `x + (-y)` becomes `x - y`, and `x - (-y)` becomes `x + y`.
-Opcode width, narrowing boundaries, operand order, floating arithmetic and
-string operations remain intact. A complete attributed Java-tree audit matches
-all 303 files modulo only integral right-hand sign normalization and redundant
-parentheses. All 21,185 declarations, 1,146 naming guards, 359 named local
-identities and 388 override edges are unchanged. The source/decompiler identity
-is recorded by `publication.sourceChange` in the same current manifest.
-The prior cleanup of 972 literal shift counts remains, using five bits for int
-and six for long; dynamic distances retain their computations.
+The pinned generic decompiler reconstructs forward, nonthrowing terminal
+returns inside the try when every normal predecessor belongs to that body.
+Shared joins, throwing continuations, handler entries, retreating edges and
+synchronized-region boundaries retain their external routing. This removes
+254 generated selectors (265 to 11) and 3,125 raw source lines across 181 files.
+All original CFG flow and exception-binding contracts remain checked.
 
-In the pinned java-tools checkout, the focused regression command is:
+The fresh javac inventory preserves all 20,920 nonselector declarations,
+152,549 nonselector declaration/reference occurrences and 388 override edges.
+Changed files have unique method/original-spelling local identities; duplicate
+names only occur in the byte-identical `wg.finalize`, which retains exact keys.
+The readable update explicitly migrates 46 local ordinals and removes only the
+obsolete `boundaryResultArmId` rule. All remaining semantic names are retained.
+This source inventory audit does not establish whole-program equivalence.
 
-```sh
-node test/cfrNumericNegation.test.js
-```
-
-Its six groups include 20,350 native signed-term comparisons, 24,324 native
-shift comparisons and eight AST-audit acceptance/refusal fixtures. Normal and
-forced-dispatcher output cover boundaries, narrowing, side effects and failures.
-The source audit can be reproduced with the maintained helper:
+In the pinned java-tools checkout, run the focused checks:
 
 ```sh
-javac -d /tmp/geoblox-audit test/helpers/IntegralTermAudit.java
-java -cp /tmp/geoblox-audit IntegralTermAudit PREVIOUS_RAW CURRENT_RAW FROZEN_STUBS_JAR
+node test/exceptionStructurer.test.js
+node test/cfrExceptionLoopExits.test.js
+node test/cfrCatchSemanticsRegressions.test.js
 ```
 
-Complement checks and the 7,200 native exception-loop comparisons also pass.
+These pass 36 region-contract groups, six native exit groups and 18 catch
+regression assertions. Return-tail fixtures compare 1,560 int/long/float/double/
+reference/void cases across normal and forced output, including boundaries,
+NaN payloads, identity, effects, shared joins and outside failures. Another
+15 cases verify normal synchronized reconstruction, lock state and release.
+The forced dispatcher still refuses explicit monitors. A pre-existing default
+return bug after an all-paths-return synchronized body is also fixed.
+The retained loop-exit fixtures cover 7,200 native comparisons.
+
 A clean Git source archive regenerates all 303 raw files and current diagnostics
-byte-for-byte. These checks establish the numeric rewrite's scope; they do not
-prove whole-game behavior.
+byte-for-byte. Previous integral-sign and literal-shift cleanup remains, with
+its historical proof recorded in the raw provenance. Current source/decompiler
+identity and naming migrations live in the same `publication.sourceChange` and
+`ruleChanges` records; no JSON snapshots are added.
 
 ## Update this export
 
@@ -182,7 +190,7 @@ prove whole-game behavior.
 
 | Java source tree | SHA-256 |
 | --- | --- |
-| Raw | `cdf74421a73a784554ef7946c2647fa0380f8a458a21e30e96ba951f4e650a97` |
-| Readable | `a789fcff0c510fc45783c494a8bbe91eefa56b3789bd9d00bf10bbbe2a908eef` |
+| Raw | `0ce7d77ce24b5c74be0439d9d363ac7fb407bf949c9385ecc5f7e4cbcfe48f0f` |
+| Readable | `80ca753ee13941a47819f1178975f880e33f48ba1d0a6891bf6b58c3cf1d0874` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

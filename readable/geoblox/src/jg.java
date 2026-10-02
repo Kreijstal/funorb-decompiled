@@ -44,46 +44,40 @@ abstract class jg {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_26_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         var5 = Geoblox.field_C;
         try {
-          L0: {
-            if (nh.field_a != null) {
-              if (param1 != null) {
-                if (param1.length() != 0) {
-                  if (param0 == -62) {
-                    var6 = (CharSequence) ((Object) param1);
-                    var2 = oe.a(var6, 12);
-                    if (var2 != null) {
-                      var3 = (j) ((Object) nh.field_a.a((long)var2.hashCode(), -1));
-                      L1: while (true) {
-                        if (var3 != null) {
-                          var7 = (CharSequence) ((Object) var3.field_hb);
-                          var4 = oe.a(var7, 12);
-                          if (var4.equals(var2)) {
-                            stackIn_20_0 = (j) (var3);
-                            decompiledRegionSelector0 = 2;
-                            break L0;
-                          } else {
-                            var3 = (j) ((Object) nh.field_a.a(-29925));
-                            continue L1;
-                          }
+          if (nh.field_a != null) {
+            if (param1 != null) {
+              if (param1.length() != 0) {
+                if (param0 == -62) {
+                  var6 = (CharSequence) ((Object) param1);
+                  var2 = oe.a(var6, 12);
+                  if (var2 != null) {
+                    var3 = (j) ((Object) nh.field_a.a((long)var2.hashCode(), -1));
+                    L0: while (true) {
+                      if (var3 != null) {
+                        var7 = (CharSequence) ((Object) var3.field_hb);
+                        var4 = oe.a(var7, 12);
+                        if (var4.equals(var2)) {
+                          stackIn_20_0 = (j) (var3);
+                          return stackIn_20_0;
                         } else {
-                          return null;
+                          var3 = (j) ((Object) nh.field_a.a(-29925));
+                          continue L0;
                         }
+                      } else {
+                        return null;
                       }
-                    } else {
-                      stackIn_13_0 = null;
-                      decompiledRegionSelector0 = 1;
                     }
                   } else {
-                    stackIn_10_0 = (j) null;
-                    decompiledRegionSelector0 = 0;
+                    stackIn_13_0 = null;
+                    return (j) ((Object) stackIn_13_0);
                   }
                 } else {
-                  return null;
+                  stackIn_10_0 = (j) null;
+                  return stackIn_10_0;
                 }
               } else {
                 return null;
@@ -91,6 +85,8 @@ abstract class jg {
             } else {
               return null;
             }
+          } else {
+            return null;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -109,15 +105,6 @@ abstract class jg {
             stackIn_26_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_26_2).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_10_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return (j) ((Object) stackIn_13_0);
-          } else {
-            return stackIn_20_0;
-          }
         }
     }
 
@@ -145,6 +132,7 @@ abstract class jg {
           }
           var5 = param0.a(param3, -110, var4_int);
           stackIn_3_0 = vh.a(var5, param0, var4_int, true);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -189,7 +177,6 @@ abstract class jg {
           }
           throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     public static void c(int param0) {
@@ -225,47 +212,45 @@ abstract class jg {
         String var8 = null;
         var7 = Geoblox.field_C;
         try {
-          L0: {
-            kf.field_c = param3;
-            sl.field_l = param4;
-            p.field_i = new ue(22050, AudioOutput.sampleRateHz);
-            ll.field_d = rf.a(kf.field_c, "", "title_music_loop");
-            pi.field_S = rf.a(kf.field_c, "", "game_over");
-            IntrusiveNode.field_d = rf.a(kf.field_c, "", "sun");
-            qf.resultMusicTrack = rf.a(kf.field_c, "", "bonus_bubble_jingle");
-            te.field_c = new ci(param0, param2);
-            uh.field_y.a(te.field_c, 0, -1, IntrusiveNode.field_d, sl.field_l);
-            ag.field_j[1] = true;
-            uh.field_y.a(te.field_c, 0, -1, qf.resultMusicTrack, sl.field_l);
-            uh.field_y.a(te.field_c, 0, -1, pi.field_S, sl.field_l);
-            uh.field_y.a(te.field_c, 0, -1, ll.field_d, sl.field_l);
-            var5_int = 0;
-            if (param1 < 69) {
-              var8 = (String) null;
-              jg.a((byte) 74, (String) null);
-            }
-            L2: while (var5_int < 33) {
-              if (ck.field_c[var5_int] > 0) {
-                if (ck.field_c[var5_int] != 1) {
-                  var5_int++;
-                  continue L2;
-                }
-              }
-              L4: {
-                if (var5_int >= 10) {
-                  if (26 >= var5_int) {
-                    var6 = te.field_c.c(-1879044097, w.field_b[var5_int]);
-                    break L4;
-                  }
-                }
-                var6 = te.field_c.b(1, w.field_b[var5_int]);
-              }
-              fl.field_c[var5_int] = var6.a(p.field_i);
-              vg.field_j[var5_int] = true;
-              var5_int++;
-            }
-            break L0;
+          kf.field_c = param3;
+          sl.field_l = param4;
+          p.field_i = new ue(22050, AudioOutput.sampleRateHz);
+          ll.field_d = rf.a(kf.field_c, "", "title_music_loop");
+          pi.field_S = rf.a(kf.field_c, "", "game_over");
+          IntrusiveNode.field_d = rf.a(kf.field_c, "", "sun");
+          qf.resultMusicTrack = rf.a(kf.field_c, "", "bonus_bubble_jingle");
+          te.field_c = new ci(param0, param2);
+          uh.field_y.a(te.field_c, 0, -1, IntrusiveNode.field_d, sl.field_l);
+          ag.field_j[1] = true;
+          uh.field_y.a(te.field_c, 0, -1, qf.resultMusicTrack, sl.field_l);
+          uh.field_y.a(te.field_c, 0, -1, pi.field_S, sl.field_l);
+          uh.field_y.a(te.field_c, 0, -1, ll.field_d, sl.field_l);
+          var5_int = 0;
+          if (param1 < 69) {
+            var8 = (String) null;
+            jg.a((byte) 74, (String) null);
           }
+          L1: while (var5_int < 33) {
+            if (ck.field_c[var5_int] > 0) {
+              if (ck.field_c[var5_int] != 1) {
+                var5_int++;
+                continue L1;
+              }
+            }
+            L3: {
+              if (var5_int >= 10) {
+                if (26 >= var5_int) {
+                  var6 = te.field_c.c(-1879044097, w.field_b[var5_int]);
+                  break L3;
+                }
+              }
+              var6 = te.field_c.b(1, w.field_b[var5_int]);
+            }
+            fl.field_c[var5_int] = var6.a(p.field_i);
+            vg.field_j[var5_int] = true;
+            var5_int++;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;

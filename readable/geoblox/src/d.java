@@ -362,12 +362,11 @@ final class d implements Runnable {
 
     private final static pa a(byte param0, int param1, String param2, String param3) {
         try {
+            int var6 = 0;
             pa stackIn_13_0 = null;
-            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             String var4 = null;
             String[] var5 = null;
-            int var6 = 0;
             int var7 = 0;
             String var8 = null;
             pa var9 = null;
@@ -383,35 +382,24 @@ final class d implements Runnable {
             }
             var5 = new String[]{"c:/rscache/", "/rscache/", field_x, "c:/windows/", "c:/winnt/", "c:/", "/tmp/", ""};
             var7 = -95 % ((-46 - param0) / 35);
-            var6 = 0;
-            L1: while (true) {
-              if (var6 < var5.length) {
-                var8 = var5[var6];
-                if (0 < var8.length()) {
-                  if (!new File(var8).exists()) {
-                    var6++;
-                    continue L1;
-                  }
-                }
-                try {
-                  var9 = new pa(new File(var8, var4), "rw", 10000L);
-                  stackIn_13_0 = (pa) (var9);
-                  decompiledRegionSelector0 = 0;
-                } catch (java.lang.Exception decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  var9_ref = (Exception) (Object) decompiledCaughtException;
-                  var6++;
-                  decompiledRegionSelector0 = 1;
-                }
-                if (decompiledRegionSelector0 == 0) {
-                  return stackIn_13_0;
-                } else {
+            L1: for (var6 = 0; var6 < var5.length; var6++) {
+              var8 = var5[var6];
+              if (0 < var8.length()) {
+                if (!new File(var8).exists()) {
                   continue L1;
                 }
-              } else {
-                return null;
+              }
+              try {
+                var9 = new pa(new File(var8, var4), "rw", 10000L);
+                stackIn_13_0 = (pa) (var9);
+                return stackIn_13_0;
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var9_ref = (Exception) (Object) decompiledCaughtException;
+                var6++;
               }
             }
+            return null;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

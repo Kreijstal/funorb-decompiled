@@ -92,6 +92,7 @@ class el extends IntrusiveNode {
         try {
           if (param1 == 13) {
             stackIn_3_0 = 0;
+            return stackIn_3_0 != 0;
           } else {
             this.field_u = (bb) null;
             return false;
@@ -114,7 +115,6 @@ class el extends IntrusiveNode {
           }
           throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(')').toString());
         }
-        return stackIn_3_0 != 0;
     }
 
     void a(boolean param0, int param1, el param2, int param3) {
@@ -130,7 +130,6 @@ class el extends IntrusiveNode {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
@@ -145,7 +144,7 @@ class el extends IntrusiveNode {
               stackIn_5_0 = stackIn_4_0;
               stackIn_5_1 = 1;
             }
-            L2: {
+            L1: {
               if (stackIn_5_0 == stackIn_5_1) {
                 stackIn_9_0 = this;
 
@@ -161,14 +160,14 @@ class el extends IntrusiveNode {
                   if (this.field_u instanceof lg) {
                     ((lg) ((Object) this.field_u)).a(53, (el) (this), var5_int != 0);
                   } else {
-                    break L2;
+                    break L1;
                   }
                 }
               }
             }
-            decompiledRegionSelector0 = 1;
+            return;
           } else {
-            decompiledRegionSelector0 = 0;
+            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -187,11 +186,6 @@ class el extends IntrusiveNode {
             stackIn_18_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 
@@ -230,6 +224,7 @@ class el extends IntrusiveNode {
         try {
           if (param0 <= -30) {
             stackIn_3_0 = 0;
+            return stackIn_3_0 != 0;
           } else {
             this.a(-77, -17, -47, -88, 79, (el) null, 49);
             return false;
@@ -252,7 +247,6 @@ class el extends IntrusiveNode {
           }
           throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(')').toString());
         }
-        return stackIn_3_0 != 0;
     }
 
     final boolean a(boolean param0, int param1, int param2, int param3) {
@@ -642,7 +636,6 @@ class el extends IntrusiveNode {
         StringBuilder stackIn_12_1 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.a(param1, param3, 10095, param2)) {
@@ -650,10 +643,10 @@ class el extends IntrusiveNode {
           }
           if (param0 == 0) {
             stackIn_6_0 = (StringBuilder) (param1);
-            decompiledRegionSelector0 = 1;
+            return stackIn_6_0;
           } else {
             stackIn_4_0 = (StringBuilder) null;
-            decompiledRegionSelector0 = 0;
+            return stackIn_4_0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -685,11 +678,6 @@ class el extends IntrusiveNode {
             stackIn_13_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_4_0;
-        } else {
-          return stackIn_6_0;
         }
     }
 
@@ -743,6 +731,7 @@ class el extends IntrusiveNode {
           if (this.a(param4, -1, param5, param0, param2)) {
             this.field_f = param3;
             stackIn_3_0 = 0;
+            return stackIn_3_0 != 0;
           } else {
             return false;
           }
@@ -764,7 +753,6 @@ class el extends IntrusiveNode {
           }
           throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(')').toString());
         }
-        return stackIn_3_0 != 0;
     }
 
     boolean a(int param0, int param1, int param2, int param3, int param4, el param5, int param6) {
@@ -781,6 +769,7 @@ class el extends IntrusiveNode {
             this.a(false, 57, (el) null, -122);
           }
           stackIn_3_0 = 0;
+          return stackIn_3_0 != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
@@ -799,7 +788,6 @@ class el extends IntrusiveNode {
           }
           throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(param6).append(')').toString());
         }
-        return stackIn_3_0 != 0;
     }
 
     String c(byte param0) {
@@ -845,30 +833,31 @@ class el extends IntrusiveNode {
           if (this.e((byte) 54)) {
             discarded$3 = param3.append(" focused");
           }
-          L5: {
+          L4: {
             if (null != this.field_q) {
               discarded$4 = param3.append(" renderer=");
               if (this.field_q instanceof el) {
                 param3 = this.a(0, param3, param1, 1 + param0);
                 if (var6 == 0) {
-                  break L5;
+                  break L4;
                 }
               }
               discarded$5 = param3.append(this.field_q);
             }
           }
           if (null != this.field_u) {
-            L8: {
+            L7: {
               discarded$6 = param3.append(" listener=");
               if (!(this.field_u instanceof el)) {
                 discarded$7 = param3.append(this.field_u);
                 if (var6 == 0) {
-                  break L8;
+                  break L7;
                 }
               }
               param3 = this.a(0, param3, param1, 1 + param0);
             }
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -913,7 +902,6 @@ class el extends IntrusiveNode {
             int var2_int = 0;
             int stackIn_14_0 = 0;
             int stackIn_16_0 = 0;
-            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             IOException var2 = null;
             if (eh.field_d.field_f >= param1) {
@@ -923,59 +911,42 @@ class el extends IntrusiveNode {
                 return false;
               } else {
                 try {
-                  L0: {
-                    if (param0 != 30000) {
-                      el.b(-45, -75);
-                    }
-                    var2_int = oc.field_e.a((byte) 110);
-                    if (var2_int <= 0) {
-                      if (var2_int < 0) {
-                        jl.a((byte) -127);
-                      } else {
-                        if (ll.a((byte) 12) <= 30000L) {
-                          decompiledRegionSelector0 = 2;
-                          break L0;
-                        } else {
-                          jl.a((byte) -127);
-                        }
-                      }
-                      decompiledRegionSelector0 = 3;
+                  if (param0 != 30000) {
+                    el.b(-45, -75);
+                  }
+                  var2_int = oc.field_e.a((byte) 110);
+                  if (var2_int <= 0) {
+                    if (var2_int < 0) {
+                      jl.a((byte) -127);
                     } else {
-                      if (-eh.field_d.field_f + param1 < var2_int) {
-                        var2_int = param1 - eh.field_d.field_f;
-                      }
-                      oc.field_e.a(eh.field_d.field_j, (byte) -97, eh.field_d.field_f, var2_int);
-                      kh.field_e = oa.a(-12520);
-                      eh.field_d.field_f = eh.field_d.field_f + var2_int;
-                      if (param1 > eh.field_d.field_f) {
-                        stackIn_14_0 = 0;
-                        decompiledRegionSelector0 = 0;
+                      if (ll.a((byte) 12) <= 30000L) {
+                        return false;
                       } else {
-                        eh.field_d.field_f = 0;
-                        stackIn_16_0 = 1;
-                        decompiledRegionSelector0 = 1;
+                        jl.a((byte) -127);
                       }
+                    }
+                  } else {
+                    if (-eh.field_d.field_f + param1 < var2_int) {
+                      var2_int = param1 - eh.field_d.field_f;
+                    }
+                    oc.field_e.a(eh.field_d.field_j, (byte) -97, eh.field_d.field_f, var2_int);
+                    kh.field_e = oa.a(-12520);
+                    eh.field_d.field_f = eh.field_d.field_f + var2_int;
+                    if (param1 > eh.field_d.field_f) {
+                      stackIn_14_0 = 0;
+                      return stackIn_14_0 != 0;
+                    } else {
+                      eh.field_d.field_f = 0;
+                      stackIn_16_0 = 1;
+                      return stackIn_16_0 != 0;
                     }
                   }
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = (IOException) (Object) decompiledCaughtException;
                   jl.a((byte) -120);
-                  decompiledRegionSelector0 = 3;
                 }
-                if (decompiledRegionSelector0 == 0) {
-                  return stackIn_14_0 != 0;
-                } else {
-                  if (decompiledRegionSelector0 == 1) {
-                    return stackIn_16_0 != 0;
-                  } else {
-                    if (decompiledRegionSelector0 == 2) {
-                      return false;
-                    } else {
-                      return false;
-                    }
-                  }
-                }
+                return false;
               }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -1017,7 +988,6 @@ class el extends IntrusiveNode {
         StringBuilder stackIn_12_1 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 10095) {
@@ -1026,11 +996,11 @@ class el extends IntrusiveNode {
           if (param3.containsKey(this)) {
             discarded$1 = param0.append("<circular [0x").append(Integer.toHexString(this.hashCode())).append("]>");
             stackIn_6_0 = 0;
-            decompiledRegionSelector0 = 1;
+            return stackIn_6_0 != 0;
           } else {
             param3.put(this, this);
             stackIn_4_0 = 1;
-            decompiledRegionSelector0 = 0;
+            return stackIn_4_0 != 0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1062,11 +1032,6 @@ class el extends IntrusiveNode {
             stackIn_13_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_4_0 != 0;
-        } else {
-          return stackIn_6_0 != 0;
         }
     }
 

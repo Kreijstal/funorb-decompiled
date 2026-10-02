@@ -26,7 +26,6 @@ final class mc {
         StringBuilder stackIn_24_1 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_25_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (kd.field_b == uf.field_l) {
@@ -37,7 +36,7 @@ final class mc {
               if (kf.a(122)) {
                 var8.q(12086);
                 stackIn_12_0 = 1;
-                decompiledRegionSelector0 = 2;
+                return stackIn_12_0 != 0;
               } else {
                 if (!param5) {
                   stackIn_10_0 = 0;
@@ -55,11 +54,11 @@ final class mc {
               }
             } else {
               stackIn_5_0 = 0;
-              decompiledRegionSelector0 = 1;
+              return stackIn_5_0 != 0;
             }
           } else {
             stackIn_2_0 = 0;
-            decompiledRegionSelector0 = 0;
+            return stackIn_2_0 != 0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -117,15 +116,6 @@ final class mc {
             stackIn_25_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_5_0 != 0;
-          } else {
-            return stackIn_12_0 != 0;
-          }
         }
     }
 

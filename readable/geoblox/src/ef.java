@@ -41,28 +41,26 @@ final class ef implements Iterator {
         RuntimeException decompiledCaughtException = null;
         var3 = Geoblox.field_C;
         try {
-          L0: {
-            var1_float = el.gameplaySession.boardAngleRadians;
-            ab.moveEntitiesAndCollectContacts(param0 - 22, var1_float);
-            rh.updateAttachedEntities((byte) 123);
-            if (param0 != -15) {
-              ef.a((byte) -11);
+          var1_float = el.gameplaySession.boardAngleRadians;
+          ab.moveEntitiesAndCollectContacts(param0 - 22, var1_float);
+          rh.updateAttachedEntities((byte) 123);
+          if (param0 != -15) {
+            ef.a((byte) -11);
+          }
+          var2 = (GameplayEntity) ((Object) bh.field_c.firstForIteration(0));
+          L1: while (var2 != null) {
+            var2.advanceEntityAnimation(true);
+            if (var2.animationFrameIndex >= 3) {
+              var2.entityQueue = ra.availableEntities;
+              var2.animationFrameIndex = 0;
             }
-            var2 = (GameplayEntity) ((Object) bh.field_c.firstForIteration(0));
-            L2: while (var2 != null) {
-              var2.advanceEntityAnimation(true);
-              if (var2.animationFrameIndex >= 3) {
-                var2.entityQueue = ra.availableEntities;
-                var2.animationFrameIndex = 0;
-              }
-              var2 = (GameplayEntity) ((Object) bh.field_c.nextForIteration(1));
-            }
-            if (el.gameplaySession.tutorialPromptActive) {
-              break L0;
-            } else {
-              lc.updateSpawnQueue(255);
-              return;
-            }
+            var2 = (GameplayEntity) ((Object) bh.field_c.nextForIteration(1));
+          }
+          if (el.gameplaySession.tutorialPromptActive) {
+            return;
+          } else {
+            lc.updateSpawnQueue(255);
+            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

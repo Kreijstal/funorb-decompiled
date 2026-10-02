@@ -439,8 +439,8 @@ Generated from explicit rules; original names remain lookup identities.
 | `L:c.a(IB)V#2` | `actionId` | Value read from per-screen action ID array using item index; drives action-specific branches. |
 | `L:c.a(II)V#1` | `actionId` | Value read from per-screen action ID array using item index; drives action-specific branches. |
 | `L:c.a(IIZIZI)V#1` | `actionId` | Value read from per-screen action ID array using item index; drives action-specific branches. |
-| `L:c.a(ZBII)V#11` | `actionId` | Value read from per-screen action ID array using item index; drives action-specific branches. |
-| `L:c.b(IB)V#6` | `actionId` | Value read from per-screen action ID array using item index; drives action-specific branches. |
+| `L:c.a(ZBII)V#10` | `actionId` | Value read from per-screen action ID array using item index; drives action-specific branches. |
+| `L:c.b(IB)V#5` | `actionId` | Value read from per-screen action ID array using item index; drives action-specific branches. |
 | `L:cf.d(B)V#0` | `popup` | The active popup iteration updates progress and routes completed points before returning the object to its pool. |
 | `L:cf.d(B)V#1` | `controlFlowGuard` | Retained entry snapshot of Geoblox.field_C; popup advancement still uses the exact floating comparison, including NaN behavior. |
 | `L:dm.a(IIIIII)V#0` | `angleRadians` | Masked 16-bit angle multiplied by 2*pi/65536 before sin/cos. |
@@ -514,20 +514,20 @@ Generated from explicit rules; original names remain lookup identities.
 | `L:dm.b(IIIIII)V#7` | `writeIndexFixedXReverseY` | Captured old destination index before increment, used for the corresponding framebuffer write. This branch has fixed source-x stepping (var27) and reverse source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches. |
 | `L:dm.b(IIIIII)V#8` | `writeIndexFixedXFixedY` | Captured old destination index before increment, used for the corresponding framebuffer write. This branch has fixed source-x stepping (var27) and fixed source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches. |
 | `L:dm.b(IIIIII)V#9` | `angleRadians` | Masked 16-bit angle multiplied by 2*pi/65536 before sin/cos. |
-| `L:ec.b(I)Z#10` | `firstMatchedEntity` | Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles. |
-| `L:ec.b(I)Z#11` | `secondMatchedEntity` | Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles. |
-| `L:ec.b(I)Z#12` | `thirdMatchedEntity` | Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles. |
-| `L:ec.b(I)Z#13` | `awardedPoints` | Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles. |
-| `L:ec.b(I)Z#14` | `firstBlockedEntity` | Alias of firstMatchedEntity on the cooldown-blocked path, immediately before its entityQueue marker is cleared. |
-| `L:ec.b(I)Z#15` | `popupX` | Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles. |
-| `L:ec.b(I)Z#16` | `secondBlockedEntity` | Alias of secondMatchedEntity on the cooldown-blocked path, immediately before its entityQueue marker is cleared. |
-| `L:ec.b(I)Z#17` | `popupY` | Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles. |
-| `L:ec.b(I)Z#18` | `controlFlowGuard` | Retained entry snapshot of Geoblox.field_C; unused in the generated processMatchCandidates body. |
-| `L:ec.b(I)Z#19` | `candidateIndex` | Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles. |
-| `L:ec.b(I)Z#5` | `sortInsertionIndex` | Outer insertion-sort cursor starting at one. Later receives candidateIndex zero before candidate traversal; it is not the traversal cursor. |
-| `L:ec.b(I)Z#7` | `sortCursorThenFirstEntityId` | Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles. |
-| `L:ec.b(I)Z#8` | `packedCandidateThenSecondEntityId` | Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles. |
-| `L:ec.b(I)Z#9` | `thirdEntityId` | Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles. |
+| `L:ec.b(I)Z#10` | `secondMatchedEntity` | Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles. |
+| `L:ec.b(I)Z#11` | `thirdMatchedEntity` | Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles. |
+| `L:ec.b(I)Z#12` | `awardedPoints` | Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles. |
+| `L:ec.b(I)Z#13` | `firstBlockedEntity` | Alias of firstMatchedEntity on the cooldown-blocked path, immediately before its entityQueue marker is cleared. |
+| `L:ec.b(I)Z#14` | `popupX` | Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles. |
+| `L:ec.b(I)Z#15` | `secondBlockedEntity` | Alias of secondMatchedEntity on the cooldown-blocked path, immediately before its entityQueue marker is cleared. |
+| `L:ec.b(I)Z#16` | `popupY` | Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles. |
+| `L:ec.b(I)Z#17` | `controlFlowGuard` | Retained entry snapshot of Geoblox.field_C; unused in the generated processMatchCandidates body. |
+| `L:ec.b(I)Z#18` | `candidateIndex` | Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles. |
+| `L:ec.b(I)Z#4` | `sortInsertionIndex` | Outer insertion-sort cursor starting at one. Later receives candidateIndex zero before candidate traversal; it is not the traversal cursor. |
+| `L:ec.b(I)Z#6` | `sortCursorThenFirstEntityId` | Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles. |
+| `L:ec.b(I)Z#7` | `packedCandidateThenSecondEntityId` | Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles. |
+| `L:ec.b(I)Z#8` | `thirdEntityId` | Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles. |
+| `L:ec.b(I)Z#9` | `firstMatchedEntity` | Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles. |
 | `L:f.o(I)V#38` | `avatarTintFadeFactor` | Gameplay counterpart of the menu float tint factor; native menu/gameplay traces and independent packed color oracles agree during held and expired fades. |
 | `L:f.o(I)V#39` | `avatarFrameOffsetInSegment` | Gameplay feedback frame minus its six-frame base; the normal direction/step matrix checks the resulting frame. |
 | `L:f.o(I)V#40` | `unusedClientControlSnapshot` | Retained Geoblox.field_C entry read; the recovered gameplay avatar update does not use this local. |
@@ -576,13 +576,13 @@ Generated from explicit rules; original names remain lookup identities.
 | `L:i.a(B)Lja;#5` | `controlFlowGuard` | Snapshot of Geoblox.field_C; nonzero terminates the walk after its first candidate. |
 | `L:ik.a(Lja;Lja;Z)Z#0` | `secondNeighborInsertionIndex` | Captures the second entity neighbor count before increment, then indexes the reciprocal append. |
 | `L:ik.a(Lja;Lja;Z)Z#1` | `firstNeighborInsertionIndex` | Captures the first entity neighbor count before increment, then indexes the reciprocal append. |
-| `L:ik.a(Lja;Lja;Z)Z#16` | `neighborIndexThenDetachSecond` | First searches the second neighbor list; after no duplicate exists, becomes its Boolean detach flag and final return value. Both roles are retained. |
-| `L:ik.a(Lja;Lja;Z)Z#18` | `detachFirst` | Flags first-entity reciprocal unlink, count reset, avatar-contact clearing and transfer marker to moving entities. |
-| `L:ik.a(Lja;Lja;Z)Z#19` | `variantPropagationThenNeighborIndex` | Initially selects variant propagation through bh.a; later reuses the slot to walk neighbors while detaching either entity. |
+| `L:ik.a(Lja;Lja;Z)Z#15` | `neighborIndexThenDetachSecond` | First searches the second neighbor list; after no duplicate exists, becomes its Boolean detach flag and final return value. Both roles are retained. |
+| `L:ik.a(Lja;Lja;Z)Z#17` | `detachFirst` | Flags first-entity reciprocal unlink, count reset, avatar-contact clearing and transfer marker to moving entities. |
+| `L:ik.a(Lja;Lja;Z)Z#18` | `variantPropagationThenNeighborIndex` | Initially selects variant propagation through bh.a; later reuses the slot to walk neighbors while detaching either entity. |
+| `L:ik.a(Lja;Lja;Z)Z#19` | `entityForNeighborCountReset` | Aliases either detaching entity while zeroing its related-entity count; does not permanently identify first or second. |
 | `L:ik.a(Lja;Lja;Z)Z#2` | `duplicateContactReturnValue` | Zero-valued return carrier on an existing reciprocal contact; duplicate native cases verify no mutation even with forced detachment. |
-| `L:ik.a(Lja;Lja;Z)Z#20` | `entityForNeighborCountReset` | Aliases either detaching entity while zeroing its related-entity count; does not permanently identify first or second. |
-| `L:ik.a(Lja;Lja;Z)Z#21` | `propagateCategory` | Selects the category/kind propagation flag passed as bh.a first argument after special-kind contacts. |
-| `L:ik.a(Lja;Lja;Z)Z#22` | `entityForVariantCountReset` | Aliases either detaching entity while zeroing its same-variant neighbor count; does not permanently identify first or second. |
+| `L:ik.a(Lja;Lja;Z)Z#20` | `propagateCategory` | Selects the category/kind propagation flag passed as bh.a first argument after special-kind contacts. |
+| `L:ik.a(Lja;Lja;Z)Z#21` | `entityForVariantCountReset` | Aliases either detaching entity while zeroing its same-variant neighbor count; does not permanently identify first or second. |
 | `L:ik.a(Lja;Lja;Z)Z#3` | `secondIsKindOne` | Integer Boolean carrier for second.entitySpriteKindId == 1, XORed with the first entity kind check. |
 | `L:ik.a(Lja;Lja;Z)Z#4` | `firstIsKindOne` | Integer Boolean carrier for first.entitySpriteKindId == 1, XORed with the second entity kind check. |
 | `L:ik.a(Lja;Lja;Z)Z#5` | `secondDetachmentReturnValue` | Final return carrier copied from the second-entity detach flag; native kind/force matrix verifies the returned outcome. |
@@ -683,33 +683,32 @@ Generated from explicit rules; original names remain lookup identities.
 | `L:kc.b(I)V#8` | `popupOriginYInput` | Integer narrowing of the shocked entity Y position before selecting popup points; native routing checks original coordinates independently. |
 | `L:kc.b(I)V#9` | `popupOriginXInput` | Integer narrowing of the shocked entity X position before selecting popup points; native routing checks original coordinates independently. |
 | `L:ld.a(I)Z#0` | `previousCircleVerticalOffset` | Preserves circleVerticalOffset before increment so the error recurrence adds old plus new vertical offsets. |
-| `L:ld.a(I)Z#1` | `leftCardinalHit` | Carries integer true from the first nonzero pixel at (90,240) to result arm zero. |
-| `L:ld.a(I)Z#10` | `lowerNearRightHit` | Carries integer true from lowerNearRowCenterIndex plus circleHorizontalOffset to result arm nine. |
-| `L:ld.a(I)Z#11` | `lowerFarLeftHit` | Carries integer true from lowerFarRowCenterIndex minus circleVerticalOffset to result arm ten. |
-| `L:ld.a(I)Z#12` | `lowerFarRightHit` | Carries integer true from lowerFarRowCenterIndex plus circleVerticalOffset to result arm eleven. |
-| `L:ld.a(I)Z#13` | `boundaryScanMissResult` | Carries integer false when the vertical octant offset passes the horizontal offset; result arm twelve returns it. It is not a flag set true on a miss. |
-| `L:ld.a(I)Z#14` | `boundaryResultArmId` | Selects the retained post-try result arm, zero through twelve; the twelve hit arms return integer true and the final miss arm returns false. No dispatch loop or enum is introduced. |
-| `L:ld.a(I)Z#15` | `caughtBoundaryScanFailure` | Stores the caught RuntimeException before passing it through the retained alias to t.a. |
-| `L:ld.a(I)Z#16` | `upperNearRowCenterIndex` | Starts at (320,240) and subtracts one framebuffer stride each vertical step, representing the center-column address on row 240-circleVerticalOffset. |
-| `L:ld.a(I)Z#17` | `boundaryScanFailureForContext` | Aliases caughtBoundaryScanFailure for the retained ld.B exception-context wrapper. |
-| `L:ld.a(I)Z#18` | `lowerNearRowCenterIndex` | Starts at (320,240) and adds one stride each vertical step, representing row 240+circleVerticalOffset at column 320. |
-| `L:ld.a(I)Z#19` | `upperFarRowCenterIndex` | Starts at (320,10) and adds a stride when circleHorizontalOffset decreases, representing row 240-circleHorizontalOffset at column 320. |
-| `L:ld.a(I)Z#2` | `rightCardinalHit` | Carries integer true from the nonzero pixel at (550,240) to result arm one. |
-| `L:ld.a(I)Z#20` | `lowerFarRowCenterIndex` | Starts at (320,470) and subtracts a stride when circleHorizontalOffset decreases, representing row 240+circleHorizontalOffset at column 320. |
-| `L:ld.a(I)Z#21` | `circleHorizontalOffset` | The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions. |
-| `L:ld.a(I)Z#22` | `circleVerticalOffset` | The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions. |
-| `L:ld.a(I)Z#23` | `playfieldRadiusSquared` | The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions. |
-| `L:ld.a(I)Z#24` | `guardDivisionResult` | Retains the otherwise unused 64/((methodGuard-32)/34) computation before any framebuffer read. Native guard cases verify ArithmeticException precedence and context. |
-| `L:ld.a(I)Z#25` | `circleError` | The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions. |
-| `L:ld.a(I)Z#26` | `clientControlFlowGuard` | Retains the initial Geoblox.field_C read; its stored value is unused in this method. Matrix checks run with zero and one without removing the read. |
-| `L:ld.a(I)Z#27` | `boundaryScanFailure` | Catch parameter for RuntimeException from guard arithmetic or framebuffer reads; transferred through two retained aliases before wrapping. |
-| `L:ld.a(I)Z#3` | `topCardinalHit` | Carries integer true from the nonzero pixel at (320,10) to result arm two. |
-| `L:ld.a(I)Z#4` | `bottomCardinalHit` | Carries integer true from the nonzero pixel at (320,470) to result arm three. |
-| `L:ld.a(I)Z#5` | `upperFarLeftHit` | Carries integer true from upperFarRowCenterIndex minus circleVerticalOffset to result arm four. |
-| `L:ld.a(I)Z#6` | `upperFarRightHit` | Carries integer true from upperFarRowCenterIndex plus circleVerticalOffset to result arm five. |
-| `L:ld.a(I)Z#7` | `upperNearLeftHit` | Carries integer true from upperNearRowCenterIndex minus circleHorizontalOffset to result arm six. |
-| `L:ld.a(I)Z#8` | `upperNearRightHit` | Carries integer true from upperNearRowCenterIndex plus circleHorizontalOffset to result arm seven. |
-| `L:ld.a(I)Z#9` | `lowerNearLeftHit` | Carries integer true from lowerNearRowCenterIndex minus circleHorizontalOffset to result arm eight. |
+| `L:ld.a(I)Z#1` | `leftCardinalHit` | Carries integer true from the first nonzero pixel at (90,240) to the immediate return on this path inside the try. |
+| `L:ld.a(I)Z#10` | `lowerNearRightHit` | Carries integer true from lowerNearRowCenterIndex plus circleHorizontalOffset to the immediate return on this path inside the try. |
+| `L:ld.a(I)Z#11` | `lowerFarLeftHit` | Carries integer true from lowerFarRowCenterIndex minus circleVerticalOffset to the immediate return on this path inside the try. |
+| `L:ld.a(I)Z#12` | `lowerFarRightHit` | Carries integer true from lowerFarRowCenterIndex plus circleVerticalOffset to the immediate return on this path inside the try. |
+| `L:ld.a(I)Z#13` | `boundaryScanMissResult` | Carries integer false when the vertical octant offset passes the horizontal offset; the immediate return ends the scan. It is not a flag set true on a miss. |
+| `L:ld.a(I)Z#14` | `caughtBoundaryScanFailure` | Stores the caught RuntimeException before passing it through the retained alias to t.a. |
+| `L:ld.a(I)Z#15` | `upperNearRowCenterIndex` | Starts at (320,240) and subtracts one framebuffer stride each vertical step, representing the center-column address on row 240-circleVerticalOffset. |
+| `L:ld.a(I)Z#16` | `boundaryScanFailureForContext` | Aliases caughtBoundaryScanFailure for the retained ld.B exception-context wrapper. |
+| `L:ld.a(I)Z#17` | `lowerNearRowCenterIndex` | Starts at (320,240) and adds one stride each vertical step, representing row 240+circleVerticalOffset at column 320. |
+| `L:ld.a(I)Z#18` | `upperFarRowCenterIndex` | Starts at (320,10) and adds a stride when circleHorizontalOffset decreases, representing row 240-circleHorizontalOffset at column 320. |
+| `L:ld.a(I)Z#19` | `lowerFarRowCenterIndex` | Starts at (320,470) and subtracts a stride when circleHorizontalOffset decreases, representing row 240+circleHorizontalOffset at column 320. |
+| `L:ld.a(I)Z#2` | `rightCardinalHit` | Carries integer true from the nonzero pixel at (550,240) to the immediate return on this path inside the try. |
+| `L:ld.a(I)Z#20` | `circleHorizontalOffset` | The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions. |
+| `L:ld.a(I)Z#21` | `circleVerticalOffset` | The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions. |
+| `L:ld.a(I)Z#22` | `playfieldRadiusSquared` | The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions. |
+| `L:ld.a(I)Z#23` | `guardDivisionResult` | Retains the otherwise unused 64/((methodGuard-32)/34) computation before any framebuffer read. Native guard cases verify ArithmeticException precedence and context. |
+| `L:ld.a(I)Z#24` | `circleError` | The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions. |
+| `L:ld.a(I)Z#25` | `clientControlFlowGuard` | Retains the initial Geoblox.field_C read; its stored value is unused in this method. Matrix checks run with zero and one without removing the read. |
+| `L:ld.a(I)Z#26` | `boundaryScanFailure` | Catch parameter for RuntimeException from guard arithmetic or framebuffer reads; transferred through two retained aliases before wrapping. |
+| `L:ld.a(I)Z#3` | `topCardinalHit` | Carries integer true from the nonzero pixel at (320,10) to the immediate return on this path inside the try. |
+| `L:ld.a(I)Z#4` | `bottomCardinalHit` | Carries integer true from the nonzero pixel at (320,470) to the immediate return on this path inside the try. |
+| `L:ld.a(I)Z#5` | `upperFarLeftHit` | Carries integer true from upperFarRowCenterIndex minus circleVerticalOffset to the immediate return on this path inside the try. |
+| `L:ld.a(I)Z#6` | `upperFarRightHit` | Carries integer true from upperFarRowCenterIndex plus circleVerticalOffset to the immediate return on this path inside the try. |
+| `L:ld.a(I)Z#7` | `upperNearLeftHit` | Carries integer true from upperNearRowCenterIndex minus circleHorizontalOffset to the immediate return on this path inside the try. |
+| `L:ld.a(I)Z#8` | `upperNearRightHit` | Carries integer true from upperNearRowCenterIndex plus circleHorizontalOffset to the immediate return on this path inside the try. |
+| `L:ld.a(I)Z#9` | `lowerNearLeftHit` | Carries integer true from lowerNearRowCenterIndex minus circleHorizontalOffset to the immediate return on this path inside the try. |
 | `L:n.a(IIIIBIIII)[Ldm;#10` | `borderIndex` | Reused outer loop index for corner border layers and positions along edge strips; role is deliberately broad across those separate loops. |
 | `L:n.a(IIIIBIIII)[Ldm;#11` | `scanIndex` | Reused for the initial slice-array traversal, square-corner scan positions and edge-band offsets; not named as one fixed x/y coordinate. |
 | `L:n.a(IIIIBIIII)[Ldm;#12` | `sliceToFill` | Current sprite selected from slicesToFill before its complete pixel array is initialized. |
@@ -724,17 +723,17 @@ Generated from explicit rules; original names remain lookup identities.
 | `L:qa.b(B)V#30` | `avatarTintFadeFactor` | Float (50-old tint timer) multiplied by the original float literal 0.0066999997943639755 before channel narrowing. Native tint fixtures preserve this exact arithmetic. |
 | `L:qa.b(B)V#31` | `avatarFrameOffsetInSegment` | Current feedback frame minus the selected six-frame base; steering uses offsets 1, 3 and 5 as directional targets. |
 | `L:qa.b(B)V#32` | `unusedClientControlSnapshot` | Retained Geoblox.field_C entry read; the recovered menu animation body does not use this local. |
-| `L:sk.a(I)Z#10` | `staggeredLifetime` | Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity. |
-| `L:sk.a(I)Z#11` | `cascadeEntity` | Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity. |
-| `L:sk.a(I)Z#12` | `neighborIndex` | Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity. |
-| `L:sk.a(I)Z#13` | `neighborEntity` | Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity. |
-| `L:sk.a(I)Z#14` | `searchedEntity` | Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity. |
-| `L:sk.a(I)Z#16` | `seedEntity` | Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity. |
-| `L:sk.a(I)Z#17` | `cascadeFrontier` | Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity. |
-| `L:sk.a(I)Z#5` | `farthestEntity` | Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity. |
-| `L:sk.a(I)Z#7` | `farthestRadiusSquared` | Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity. |
-| `L:sk.a(I)Z#8` | `candidateEntity` | Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity. |
-| `L:sk.a(I)Z#9` | `visitedCascadeEntities` | Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity. |
+| `L:sk.a(I)Z#10` | `cascadeEntity` | Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity. |
+| `L:sk.a(I)Z#11` | `neighborIndex` | Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity. |
+| `L:sk.a(I)Z#12` | `neighborEntity` | Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity. |
+| `L:sk.a(I)Z#13` | `searchedEntity` | Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity. |
+| `L:sk.a(I)Z#15` | `seedEntity` | Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity. |
+| `L:sk.a(I)Z#16` | `cascadeFrontier` | Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity. |
+| `L:sk.a(I)Z#4` | `farthestEntity` | Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity. |
+| `L:sk.a(I)Z#6` | `farthestRadiusSquared` | Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity. |
+| `L:sk.a(I)Z#7` | `candidateEntity` | Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity. |
+| `L:sk.a(I)Z#8` | `visitedCascadeEntities` | Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity. |
+| `L:sk.a(I)Z#9` | `staggeredLifetime` | Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity. |
 | `L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#0` | `sourceCharacterIndex` | Loop index from zero to sourceLength minus one, supplied to sourceText.charAt. |
 | `L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#1` | `characterWriteOffset` | Saved destination offset before writeOffset increments, supplied to destination.setCharAt. |
 | `L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#2` | `originalLength` | Destination length before any growth, used to validate the initial offset and decide whether setLength is needed. |

@@ -25,7 +25,6 @@ final class ri {
             StringBuilder stackIn_108_1 = null;
             StringBuilder stackIn_109_1 = null;
             String stackIn_109_2 = null;
-            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             int var6_int = 0;
             String var6 = null;
@@ -39,209 +38,201 @@ final class ri {
             CharSequence var12 = null;
             var9 = Geoblox.field_C;
             try {
-              L0: {
-                if (null == oc.field_e) {
-                  if (!w.a(param0, 52)) {
-                    stackIn_5_0 = -1;
-                    decompiledRegionSelector0 = 0;
-                    break L0;
-                  }
+              if (null == oc.field_e) {
+                if (!w.a(param0, 52)) {
+                  stackIn_5_0 = -1;
+                  return stackIn_5_0;
                 }
-                if (pk.field_l == gi.field_d) {
-                  if (!param0) {
-                    ih.field_a = vf.a(false, param1, param4, false);
+              }
+              if (pk.field_l == gi.field_d) {
+                if (!param0) {
+                  ih.field_a = vf.a(false, param1, param4, false);
+                } else {
+                  var11 = (String) null;
+                  ih.field_a = SecondaryDeque.a(true, oa.field_c, (String) null, param1, false);
+                }
+                fj.field_q.field_f = 0;
+                fj.field_q.d((byte) -102, 14);
+                fj.field_q.d((byte) -78, ih.field_a.a((byte) -32).field_c);
+                cm.a(-1, -1);
+                pk.field_l = oe.field_T;
+              }
+              if (oe.field_T == pk.field_l) {
+                if (el.b(30000, 1)) {
+                  var6_int = eh.field_d.c((byte) 34);
+                  eh.field_d.field_f = 0;
+                  if (var6_int != 0) {
+                    p.field_k = -1;
+                    pk.field_l = ac.field_v;
+                    ScorePopup.field_l = var6_int;
                   } else {
-                    var11 = (String) null;
-                    ih.field_a = SecondaryDeque.a(true, oa.field_c, (String) null, param1, false);
+                    pk.field_l = f.field_hb;
                   }
-                  fj.field_q.field_f = 0;
-                  fj.field_q.d((byte) -102, 14);
-                  fj.field_q.d((byte) -78, ih.field_a.a((byte) -32).field_c);
-                  cm.a(-1, -1);
-                  pk.field_l = oe.field_T;
                 }
-                if (oe.field_T == pk.field_l) {
+              }
+              if (f.field_hb == pk.field_l) {
+                if (el.b(30000, 8)) {
+                  ak.field_a = eh.field_d.b(2901);
+                  eh.field_d.field_f = 0;
+                  uk.a(26, param2, param0, ih.field_a, param3);
+                  pk.field_l = da.field_g;
+                }
+              }
+              if (param5 != 0) {
+                var10 = (String) null;
+                ri.a(false, (String) null, 95, false, (String) null, 13);
+              }
+              L6: {
+                if (da.field_g == pk.field_l) {
                   if (el.b(30000, 1)) {
                     var6_int = eh.field_d.c((byte) 34);
                     eh.field_d.field_f = 0;
+                    fl.field_b = null;
+                    ScorePopup.field_l = var6_int;
                     if (var6_int != 0) {
-                      p.field_k = -1;
-                      pk.field_l = ac.field_v;
-                      ScorePopup.field_l = var6_int;
-                    } else {
-                      pk.field_l = f.field_hb;
-                    }
-                  }
-                }
-                if (f.field_hb == pk.field_l) {
-                  if (el.b(30000, 8)) {
-                    ak.field_a = eh.field_d.b(2901);
-                    eh.field_d.field_f = 0;
-                    uk.a(26, param2, param0, ih.field_a, param3);
-                    pk.field_l = da.field_g;
-                  }
-                }
-                if (param5 != 0) {
-                  var10 = (String) null;
-                  ri.a(false, (String) null, 95, false, (String) null, 13);
-                }
-                L7: {
-                  if (da.field_g == pk.field_l) {
-                    if (el.b(30000, 1)) {
-                      var6_int = eh.field_d.c((byte) 34);
-                      eh.field_d.field_f = 0;
-                      fl.field_b = null;
-                      ScorePopup.field_l = var6_int;
-                      if (var6_int != 0) {
-                        if (var6_int != 1) {
-                          if (var6_int != 8) {
-                            pk.field_l = ac.field_v;
-                            p.field_k = -1;
-                            break L7;
-                          } else {
-                            jl.a((byte) -116);
-                            ck.field_e = false;
-                            stackIn_33_0 = var6_int;
-                            decompiledRegionSelector0 = 1;
-                            break L0;
-                          }
+                      if (var6_int != 1) {
+                        if (var6_int != 8) {
+                          pk.field_l = ac.field_v;
+                          p.field_k = -1;
+                          break L6;
+                        } else {
+                          jl.a((byte) -116);
+                          ck.field_e = false;
+                          stackIn_33_0 = var6_int;
+                          return stackIn_33_0;
                         }
                       }
-                      p.field_k = -1;
-                      pk.field_l = da.field_f;
                     }
+                    p.field_k = -1;
+                    pk.field_l = da.field_f;
                   }
                 }
-                if (da.field_f == pk.field_l) {
-                  if (nf.a(false)) {
-                    oa.field_c = eh.field_d.b(2901);
-                    oc.field_f = eh.field_d.c((byte) 34);
-                    eh.field_d.c((byte) 34);
-                    og.field_n = eh.field_d.b(true);
-                    var6 = eh.field_d.i((byte) 53);
-                    var7 = eh.field_d.c((byte) 34);
-                    if ((1 & var7) != 0) {
-                      ic.a((byte) 65);
-                    }
-                    if (!param0) {
-                      if ((var7 & 4) == 0) {
-                        stackIn_45_0 = 0;
-                      } else {
-                        stackIn_45_0 = 1;
-                      }
-                      fe.field_b = stackIn_45_0 != 0;
-                      if ((var7 & 8) == 0) {
-                        stackIn_48_0 = 0;
-                      } else {
-                        stackIn_48_0 = 1;
-                      }
-                      fb.field_l = stackIn_48_0 != 0;
-                      if (!fb.field_l) {
-                      }
-                    }
-                    L14: {
-                      if (ll.field_e) {
-                        eh.field_d.c((byte) 34);
-                        eh.field_d.c((byte) 34);
-                        eh.field_d.a((byte) -48);
-                        pk.field_n = eh.field_d.b(true);
-                        hc.field_K = new byte[pk.field_n];
-                        for (var8 = 0; pk.field_n > var8; var8++) {
-                          hc.field_K[var8] = eh.field_d.f((byte) 72);
-                        }
-                        break L14;
-                      }
-                    }
-                    SecondaryDeque.field_f = eh.field_d.e((byte) 105);
-                    var12 = (CharSequence) ((Object) SecondaryDeque.field_f);
-                    vg.field_b = oe.a(var12, 12);
-                    ik.field_a = eh.field_d.c((byte) 34);
-                    pk.field_l = eh.field_b;
-                    if (ih.field_a.a((byte) -32) != ej.field_b) {
-                      if (ih.field_a.a((byte) -32) == Geoblox.field_B) {
-                        rl.field_W.a(k.c(108), 0);
-                      }
-                    } else {
-                      mb.field_b.a(k.c(122), 0);
-                    }
-                    ck.field_e = false;
-                    if (var6 != null) {
-                      tc.a(100, var6, k.c(112));
-                    }
-                    L18: {
-                      if (og.field_n <= 0) {
-                        if (!fe.field_b) {
-                          try {
-                            wk.a((byte) -6, k.c(107), "unzap");
-                          } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                            decompiledCaughtException = decompiledCaughtParameter0;
-                            var8_ref_Throwable = decompiledCaughtException;
-                          }
-                          break L18;
-                        }
-                      }
-                      try {
-                        wk.a(-14882, new Object[]{fh.a(oa.field_c, param5 + 97)}, k.c(param5 + 119), "zap");
-                      } catch (java.lang.Throwable decompiledCaughtParameter1) {
-                        decompiledCaughtException = decompiledCaughtParameter1;
-                        var8_ref_Throwable = decompiledCaughtException;
-                      }
-                    }
-                    if (og.field_n > 0) {
-                      rb.field_c = true;
-                    }
-                    fj.field_q.a(hl.field_D, false);
-                    for (var8 = 0; var8 < 4; var8++) {
-                      hl.field_D[var8] = hl.field_D[var8] + 50;
-                    }
-                    eh.field_d.a(hl.field_D, false);
-                    stackIn_78_0 = ScorePopup.field_l;
-                    decompiledRegionSelector0 = 2;
-                    break L0;
-                  }
-                }
-                if (pk.field_l == ac.field_v) {
-                  if (nf.a(false)) {
-                    jl.a((byte) -118);
-                    if (ScorePopup.field_l == 7) {
-                      if (!ck.field_e) {
-                        ck.field_e = true;
-                        stackIn_86_0 = -1;
-                        decompiledRegionSelector0 = 3;
-                        break L0;
-                      }
-                    }
-                    if (ScorePopup.field_l == 7) {
-                      ScorePopup.field_l = 3;
-                    }
-                    kh.field_a = eh.field_d.e((byte) 101);
-                    ck.field_e = false;
-                    stackIn_91_0 = ScorePopup.field_l;
-                    decompiledRegionSelector0 = 4;
-                    break L0;
-                  }
-                }
-                if (null == oc.field_e) {
-                  if (!ck.field_e) {
-                    var6_int = sd.field_x;
-                    sd.field_x = ac.field_s;
-                    ac.field_s = var6_int;
-                    ck.field_e = true;
-                  } else {
-                    if (30000L >= ll.a((byte) 12)) {
-                      kh.field_a = uj.loginMessage2Text;
-                    } else {
-                      kh.field_a = IntrusiveNode.loginMessage3Text;
-                    }
-                    ck.field_e = false;
-                    stackIn_99_0 = 3;
-                    decompiledRegionSelector0 = 5;
-                    break L0;
-                  }
-                }
-                stackIn_102_0 = -1;
-                decompiledRegionSelector0 = 6;
               }
+              if (da.field_f == pk.field_l) {
+                if (nf.a(false)) {
+                  oa.field_c = eh.field_d.b(2901);
+                  oc.field_f = eh.field_d.c((byte) 34);
+                  eh.field_d.c((byte) 34);
+                  og.field_n = eh.field_d.b(true);
+                  var6 = eh.field_d.i((byte) 53);
+                  var7 = eh.field_d.c((byte) 34);
+                  if ((1 & var7) != 0) {
+                    ic.a((byte) 65);
+                  }
+                  if (!param0) {
+                    if ((var7 & 4) == 0) {
+                      stackIn_45_0 = 0;
+                    } else {
+                      stackIn_45_0 = 1;
+                    }
+                    fe.field_b = stackIn_45_0 != 0;
+                    if ((var7 & 8) == 0) {
+                      stackIn_48_0 = 0;
+                    } else {
+                      stackIn_48_0 = 1;
+                    }
+                    fb.field_l = stackIn_48_0 != 0;
+                    if (!fb.field_l) {
+                    }
+                  }
+                  L13: {
+                    if (ll.field_e) {
+                      eh.field_d.c((byte) 34);
+                      eh.field_d.c((byte) 34);
+                      eh.field_d.a((byte) -48);
+                      pk.field_n = eh.field_d.b(true);
+                      hc.field_K = new byte[pk.field_n];
+                      for (var8 = 0; pk.field_n > var8; var8++) {
+                        hc.field_K[var8] = eh.field_d.f((byte) 72);
+                      }
+                      break L13;
+                    }
+                  }
+                  SecondaryDeque.field_f = eh.field_d.e((byte) 105);
+                  var12 = (CharSequence) ((Object) SecondaryDeque.field_f);
+                  vg.field_b = oe.a(var12, 12);
+                  ik.field_a = eh.field_d.c((byte) 34);
+                  pk.field_l = eh.field_b;
+                  if (ih.field_a.a((byte) -32) != ej.field_b) {
+                    if (ih.field_a.a((byte) -32) == Geoblox.field_B) {
+                      rl.field_W.a(k.c(108), 0);
+                    }
+                  } else {
+                    mb.field_b.a(k.c(122), 0);
+                  }
+                  ck.field_e = false;
+                  if (var6 != null) {
+                    tc.a(100, var6, k.c(112));
+                  }
+                  L17: {
+                    if (og.field_n <= 0) {
+                      if (!fe.field_b) {
+                        try {
+                          wk.a((byte) -6, k.c(107), "unzap");
+                        } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                          decompiledCaughtException = decompiledCaughtParameter0;
+                          var8_ref_Throwable = decompiledCaughtException;
+                        }
+                        break L17;
+                      }
+                    }
+                    try {
+                      wk.a(-14882, new Object[]{fh.a(oa.field_c, param5 + 97)}, k.c(param5 + 119), "zap");
+                    } catch (java.lang.Throwable decompiledCaughtParameter1) {
+                      decompiledCaughtException = decompiledCaughtParameter1;
+                      var8_ref_Throwable = decompiledCaughtException;
+                    }
+                  }
+                  if (og.field_n > 0) {
+                    rb.field_c = true;
+                  }
+                  fj.field_q.a(hl.field_D, false);
+                  for (var8 = 0; var8 < 4; var8++) {
+                    hl.field_D[var8] = hl.field_D[var8] + 50;
+                  }
+                  eh.field_d.a(hl.field_D, false);
+                  stackIn_78_0 = ScorePopup.field_l;
+                  return stackIn_78_0;
+                }
+              }
+              if (pk.field_l == ac.field_v) {
+                if (nf.a(false)) {
+                  jl.a((byte) -118);
+                  if (ScorePopup.field_l == 7) {
+                    if (!ck.field_e) {
+                      ck.field_e = true;
+                      stackIn_86_0 = -1;
+                      return stackIn_86_0;
+                    }
+                  }
+                  if (ScorePopup.field_l == 7) {
+                    ScorePopup.field_l = 3;
+                  }
+                  kh.field_a = eh.field_d.e((byte) 101);
+                  ck.field_e = false;
+                  stackIn_91_0 = ScorePopup.field_l;
+                  return stackIn_91_0;
+                }
+              }
+              if (null == oc.field_e) {
+                if (!ck.field_e) {
+                  var6_int = sd.field_x;
+                  sd.field_x = ac.field_s;
+                  ac.field_s = var6_int;
+                  ck.field_e = true;
+                } else {
+                  if (30000L >= ll.a((byte) 12)) {
+                    kh.field_a = uj.loginMessage2Text;
+                  } else {
+                    kh.field_a = IntrusiveNode.loginMessage3Text;
+                  }
+                  ck.field_e = false;
+                  stackIn_99_0 = 3;
+                  return stackIn_99_0;
+                }
+              }
+              stackIn_102_0 = -1;
+              return stackIn_102_0;
             } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var6_ref = (RuntimeException) (Object) decompiledCaughtException;
@@ -272,31 +263,6 @@ final class ri {
                 stackIn_109_2 = "{...}";
               }
               throw t.a((Throwable) ((Object) stackIn_106_0), ((StringBuilder) (Object) stackIn_109_1).append(stackIn_109_2).append(',').append(param5).append(')').toString());
-            }
-            if (decompiledRegionSelector0 == 0) {
-              return stackIn_5_0;
-            } else {
-              if (decompiledRegionSelector0 == 1) {
-                return stackIn_33_0;
-              } else {
-                if (decompiledRegionSelector0 == 2) {
-                  return stackIn_78_0;
-                } else {
-                  if (decompiledRegionSelector0 == 3) {
-                    return stackIn_86_0;
-                  } else {
-                    if (decompiledRegionSelector0 == 4) {
-                      return stackIn_91_0;
-                    } else {
-                      if (decompiledRegionSelector0 == 5) {
-                        return stackIn_99_0;
-                      } else {
-                        return stackIn_102_0;
-                      }
-                    }
-                  }
-                }
-              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

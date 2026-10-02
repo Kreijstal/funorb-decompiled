@@ -35,35 +35,33 @@ final class bc {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4_ref = null;
         try {
-          L0: {
-            decodedBuffer = new char[length];
-            sharedBuffer = decodedBuffer;
-            writeBuffer = sharedBuffer;
-            decodedCharacters = writeBuffer;
-            if (decodeGuard > 0) {
-              field_a = 49;
-            }
-            decodedLength = 0;
-            for (byteIndex = 0; length > byteIndex; byteIndex++) {
-              characterCode = textBytes[offset + byteIndex] & 255;
-              if (characterCode != 0) {
-                if (characterCode >= 128) {
-                  if (characterCode < 160) {
-                    mappedCharacterCode = lf.extendedTextCharacters[-128 + characterCode];
-                    if (mappedCharacterCode == 0) {
-                      mappedCharacterCode = 63;
-                    }
-                    characterCode = mappedCharacterCode;
-                  }
-                }
-                outputIndex = decodedLength;
-                decodedLength++;
-                writeBuffer[outputIndex] = (char)characterCode;
-              }
-            }
-            stackIn_14_0 = new String(decodedBuffer, 0, decodedLength);
-            break L0;
+          decodedBuffer = new char[length];
+          sharedBuffer = decodedBuffer;
+          writeBuffer = sharedBuffer;
+          decodedCharacters = writeBuffer;
+          if (decodeGuard > 0) {
+            field_a = 49;
           }
+          decodedLength = 0;
+          for (byteIndex = 0; length > byteIndex; byteIndex++) {
+            characterCode = textBytes[offset + byteIndex] & 255;
+            if (characterCode != 0) {
+              if (characterCode >= 128) {
+                if (characterCode < 160) {
+                  mappedCharacterCode = lf.extendedTextCharacters[-128 + characterCode];
+                  if (mappedCharacterCode == 0) {
+                    mappedCharacterCode = 63;
+                  }
+                  characterCode = mappedCharacterCode;
+                }
+              }
+              outputIndex = decodedLength;
+              decodedLength++;
+              writeBuffer[outputIndex] = (char)characterCode;
+            }
+          }
+          stackIn_14_0 = new String(decodedBuffer, 0, decodedLength);
+          return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
@@ -82,7 +80,6 @@ final class bc {
           }
           throw t.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',').append(offset).append(',').append(length).append(')').toString());
         }
-        return stackIn_14_0;
     }
 
     static {

@@ -103,39 +103,37 @@ final class hl extends el {
         int var8 = 0;
         var8 = Geoblox.field_C;
         try {
-          L0: {
-            var5_int = param2 + this.field_r;
-            uh.a(param1, this.field_M.width + param2, param3 ^ 6447, this.field_h + param1, var5_int - this.field_M.width);
-            for (var6 = param2 - this.field_I; var6 < var5_int; var6 = var6 + param0.width) {
-              param0.b(var6, param1);
-            }
-            if (param3 != -12276) {
-              discarded$0 = this.g(1);
-            }
-            id.a(true);
-            if (this.field_M.width + param2 >= SoftwareRasterizer.clipLeft) {
-              Geoblox.setRasterTarget(1, this.field_z);
-              param0.b(-this.field_I, 0);
-              param0.b(2 * this.field_H - this.field_I, 0);
-              this.field_y.e(0, 0);
-              id.a(true);
-              this.field_z.b(param2, param1);
-            }
-            L4: {
-              if (SoftwareRasterizer.clipRight >= var5_int - this.field_M.width) {
-                Geoblox.setRasterTarget(param3 ^ -12275, this.field_z);
-                for (var7 = this.field_I + (this.field_r - this.field_M.width); var7 > 2 * this.field_H; var7 = var7 - 2 * this.field_H) {
-                }
-                param0.b(-var7, 0);
-                param0.b(-var7 + this.field_H * 2, 0);
-                this.field_M.e(0, 0);
-                id.a(true);
-                this.field_z.b(-this.field_M.width + var5_int, param1);
-                break L4;
-              }
-            }
-            break L0;
+          var5_int = param2 + this.field_r;
+          uh.a(param1, this.field_M.width + param2, param3 ^ 6447, this.field_h + param1, var5_int - this.field_M.width);
+          for (var6 = param2 - this.field_I; var6 < var5_int; var6 = var6 + param0.width) {
+            param0.b(var6, param1);
           }
+          if (param3 != -12276) {
+            discarded$0 = this.g(1);
+          }
+          id.a(true);
+          if (this.field_M.width + param2 >= SoftwareRasterizer.clipLeft) {
+            Geoblox.setRasterTarget(1, this.field_z);
+            param0.b(-this.field_I, 0);
+            param0.b(2 * this.field_H - this.field_I, 0);
+            this.field_y.e(0, 0);
+            id.a(true);
+            this.field_z.b(param2, param1);
+          }
+          L3: {
+            if (SoftwareRasterizer.clipRight >= var5_int - this.field_M.width) {
+              Geoblox.setRasterTarget(param3 ^ -12275, this.field_z);
+              for (var7 = this.field_I + (this.field_r - this.field_M.width); var7 > 2 * this.field_H; var7 = var7 - 2 * this.field_H) {
+              }
+              param0.b(-var7, 0);
+              param0.b(-var7 + this.field_H * 2, 0);
+              this.field_M.e(0, 0);
+              id.a(true);
+              this.field_z.b(-this.field_M.width + var5_int, param1);
+              break L3;
+            }
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -230,6 +228,7 @@ final class hl extends el {
           if (param0) {
             field_G = false;
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;

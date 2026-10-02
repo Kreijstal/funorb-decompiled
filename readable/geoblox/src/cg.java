@@ -19,20 +19,18 @@ final class cg extends ia {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var3_int = 0;
-            if (!param1) {
-              cg.b(false);
-            }
-            var4 = param0.length();
-            for (var5 = 0; var5 < var4; var5++) {
-              if (param0.charAt(var5) == param2) {
-                var3_int++;
-              }
-            }
-            stackIn_9_0 = var3_int;
-            break L0;
+          var3_int = 0;
+          if (!param1) {
+            cg.b(false);
           }
+          var4 = param0.length();
+          for (var5 = 0; var5 < var4; var5++) {
+            if (param0.charAt(var5) == param2) {
+              var3_int++;
+            }
+          }
+          stackIn_9_0 = var3_int;
+          return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -51,7 +49,6 @@ final class cg extends ia {
           }
           throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
-        return stackIn_9_0;
     }
 
     final int d() {
@@ -114,13 +111,12 @@ final class cg extends ia {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
           if (this.field_j > param2) {
             this.field_j = this.field_j - param2;
-            decompiledRegionSelector0 = 0;
+            return;
           } else {
             param1 = param1 + this.field_j;
             param2 = param2 - this.field_j;
@@ -134,7 +130,7 @@ final class cg extends ia {
             if (param2 > 0) {
               this.field_l.a(param0, param1, param2);
             }
-            decompiledRegionSelector0 = 1;
+            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -153,11 +149,6 @@ final class cg extends ia {
             stackIn_10_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 

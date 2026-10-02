@@ -58,7 +58,6 @@ final class v {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_25_2 = null;
-        int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -74,55 +73,51 @@ final class v {
         byte[] var13 = null;
         try {
           L0: {
-            L1: {
-              var9 = new qc(param0);
-              var3 = var9.c((byte) 34);
-              var4 = var9.a((byte) -97);
-              if (var4 >= 0) {
-                if (uj.field_b != 0) {
-                  if (var4 > uj.field_b) {
-                    break L1;
-                  }
-                }
-                if (param1 != ~var3) {
-                  L3: {
-                    var5 = var9.a((byte) -49);
-                    if (var5 >= 0) {
-                      if (uj.field_b != 0) {
-                        if (uj.field_b < var5) {
-                          break L3;
-                        }
-                      }
-                      var13 = new byte[var5];
-                      var11 = var13;
-                      var6 = var11;
-                      if (var3 == 1) {
-                        tb.a(var13, var5, param0, var4, 9);
-                      } else {
-                        var7 = sc.field_b;
-                        synchronized (var7) {
-                          sc.field_b.a(param1 + 0, var9, var13);
-                        }
-                      }
-                      stackIn_21_0 = (byte[]) (var6);
-                      decompiledRegionSelector0 = 1;
-                      break L0;
-                    }
-                  }
-                  throw new RuntimeException();
-                } else {
-                  var12 = new byte[var4];
-                  var10 = var12;
-                  var5_ref_byte__ = var10;
-                  var9.b(29915, var4, var12, 0);
-                  stackIn_7_0 = (byte[]) (var5_ref_byte__);
-                  decompiledRegionSelector0 = 0;
+            var9 = new qc(param0);
+            var3 = var9.c((byte) 34);
+            var4 = var9.a((byte) -97);
+            if (var4 >= 0) {
+              if (uj.field_b != 0) {
+                if (var4 > uj.field_b) {
                   break L0;
                 }
               }
+              if (param1 != ~var3) {
+                L2: {
+                  var5 = var9.a((byte) -49);
+                  if (var5 >= 0) {
+                    if (uj.field_b != 0) {
+                      if (uj.field_b < var5) {
+                        break L2;
+                      }
+                    }
+                    var13 = new byte[var5];
+                    var11 = var13;
+                    var6 = var11;
+                    if (var3 == 1) {
+                      tb.a(var13, var5, param0, var4, 9);
+                    } else {
+                      var7 = sc.field_b;
+                      synchronized (var7) {
+                        sc.field_b.a(param1 + 0, var9, var13);
+                      }
+                    }
+                    stackIn_21_0 = (byte[]) (var6);
+                    return stackIn_21_0;
+                  }
+                }
+                throw new RuntimeException();
+              } else {
+                var12 = new byte[var4];
+                var10 = var12;
+                var5_ref_byte__ = var10;
+                var9.b(29915, var4, var12, 0);
+                stackIn_7_0 = (byte[]) (var5_ref_byte__);
+                return stackIn_7_0;
+              }
             }
-            throw new RuntimeException();
           }
+          throw new RuntimeException();
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (RuntimeException) (Object) decompiledCaughtException;
@@ -140,11 +135,6 @@ final class v {
             stackIn_25_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_7_0;
-        } else {
-          return stackIn_21_0;
         }
     }
 
@@ -610,6 +600,7 @@ final class v {
           } else {
             stackIn_5_0 = 1;
           }
+          return stackIn_5_0 != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -628,7 +619,6 @@ final class v {
           }
           throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_5_0 != 0;
     }
 
     static {

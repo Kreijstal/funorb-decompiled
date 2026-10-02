@@ -255,13 +255,13 @@ final class eb {
                 var3 = new java.net.URL(param0.getCodeBase(), param2);
                 var3 = wf.a(var3, 59, param0);
                 pa.a(var3.toString(), (byte) 64, true, param0);
+                return;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var3_ref = (Exception) (Object) decompiledCaughtException;
                 var3_ref.printStackTrace();
                 return;
               }
-              return;
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var3_ref2 = (RuntimeException) (Object) decompiledCaughtException;

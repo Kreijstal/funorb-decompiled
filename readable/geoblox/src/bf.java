@@ -23,6 +23,7 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
             activeTextArchive = (rh) null;
           }
           stackIn_3_0 = new h(param1);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -41,7 +42,6 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
           }
           throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     private final synchronized void a(boolean param0) {
@@ -108,6 +108,7 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
         RuntimeException decompiledCaughtException = null;
         try {
           stackIn_1_0 = 1;
+          return stackIn_1_0 != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
@@ -126,7 +127,6 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
           }
           throw t.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
-        return stackIn_1_0 != 0;
     }
 
     final void a(int param0, java.awt.Component param1, int param2, byte param3) {
@@ -156,7 +156,6 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
         RuntimeException var5 = null;
@@ -197,91 +196,86 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
           }
           var10 = stackIn_13_0;
           if (param2 == 14164) {
-            L5: {
+            L4: {
               if (param4 >= SoftwareRasterizer.clipLeft) {
                 if (param4 < SoftwareRasterizer.clipRight) {
                   var11 = param4 + var8 * SoftwareRasterizer.stride;
                   var12 = var10 + 1 - var8 >> 1;
-                  L6: while (true) {
+                  L5: while (true) {
                     var12--;
                     if (0 > var12) {
-                      break L5;
+                      break L4;
                     } else {
                       SoftwareRasterizer.framebuffer[var11] = 16777215;
                       var11 = var11 + SoftwareRasterizer.stride * 2;
-                      continue L6;
+                      continue L5;
                     }
                   }
                 }
               }
             }
-            L7: {
+            L6: {
               if (param0 >= SoftwareRasterizer.clipTop) {
                 if (SoftwareRasterizer.clipBottom > var6) {
                   var11 = var7 + SoftwareRasterizer.stride * param0;
                   var12 = -var7 + 1 + var9 >> 1;
-                  L8: while (true) {
+                  L7: while (true) {
                     var12--;
                     if (var12 < 0) {
-                      break L7;
+                      break L6;
                     } else {
                       SoftwareRasterizer.framebuffer[var11] = 16777215;
                       var11 += 2;
-                      continue L8;
+                      continue L7;
                     }
                   }
                 }
               }
             }
-            L9: {
+            L8: {
               if (var5_int >= SoftwareRasterizer.clipLeft) {
                 if (SoftwareRasterizer.clipRight > var5_int) {
                   var11 = var5_int + ((1 & -param4 + var5_int) + var8) * SoftwareRasterizer.stride;
                   var12 = -var8 + 1 + var10 >> 1;
-                  L10: while (true) {
+                  L9: while (true) {
                     var12--;
                     if (0 > var12) {
-                      break L9;
+                      break L8;
                     } else {
                       SoftwareRasterizer.framebuffer[var11] = 16777215;
                       var11 = var11 + 2 * SoftwareRasterizer.stride;
-                      continue L10;
+                      continue L9;
                     }
                   }
                 }
               }
             }
-            L11: {
+            L10: {
               if (SoftwareRasterizer.clipTop <= param0) {
                 if (SoftwareRasterizer.clipBottom > var6) {
                   var11 = SoftwareRasterizer.stride * var6 + (var7 + (1 & -param0 + var6));
                   var12 = 1 - (-var9 + var7) >> 1;
-                  L12: while (true) {
+                  L11: while (true) {
                     var12--;
                     if (var12 < 0) {
-                      break L11;
+                      break L10;
                     } else {
                       SoftwareRasterizer.framebuffer[var11] = 16777215;
                       var11 += 2;
-                      continue L12;
+                      continue L11;
                     }
                   }
                 }
               }
             }
-            decompiledRegionSelector0 = 1;
+            return;
           } else {
-            decompiledRegionSelector0 = 0;
+            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var5), "bf.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 

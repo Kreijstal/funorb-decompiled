@@ -51,7 +51,6 @@ final class AccountWelcomePanel extends ee implements pl {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (!super.a(param0, param1 + 0, param2, param3)) {
@@ -61,18 +60,18 @@ final class AccountWelcomePanel extends ee implements pl {
             if (param0 != 98) {
               if (99 == param0) {
                 stackIn_13_0 = this.a(param3, -119);
-                decompiledRegionSelector0 = 2;
+                return stackIn_13_0;
               } else {
                 stackIn_15_0 = 0;
-                decompiledRegionSelector0 = 3;
+                return stackIn_15_0 != 0;
               }
             } else {
               stackIn_8_0 = this.a(7305, param3);
-              decompiledRegionSelector0 = 1;
+              return stackIn_8_0;
             }
           } else {
             stackIn_2_0 = 1;
-            decompiledRegionSelector0 = 0;
+            return stackIn_2_0 != 0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -91,19 +90,6 @@ final class AccountWelcomePanel extends ee implements pl {
             stackIn_20_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_8_0;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return stackIn_13_0;
-            } else {
-              return stackIn_15_0 != 0;
-            }
-          }
         }
     }
 
@@ -135,23 +121,24 @@ final class AccountWelcomePanel extends ee implements pl {
           if (param1 != -20) {
             this.justPlayButton = (hk) null;
           }
-          L2: {
+          L1: {
             if (this.goBackButton == param4) {
               ib.d(param1 ^ -24121);
               if (var7 == 0) {
-                break L2;
+                break L1;
               }
             }
             if (this.createAccountButton == param4) {
               jf.a((byte) 101);
               if (var7 == 0) {
-                break L2;
+                break L1;
               }
             }
             if (this.justPlayButton == param4) {
               hk.e(param1 + 103);
             }
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;

@@ -30,41 +30,40 @@ abstract class vk {
         StringBuilder stackIn_22_1 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_23_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         var8 = Geoblox.field_C;
         try {
           var4_int = param1.e((byte) -17, param2);
           if (var4_int != 0) {
-            L1: {
+            L0: {
               if (param0 != null) {
                 if (param0.length == var4_int) {
-                  break L1;
+                  break L0;
                 }
               }
               param0 = new byte[var4_int];
             }
-            L3: {
+            L2: {
               var5 = param1.e((byte) -17, 3);
               var6 = (byte)param1.e((byte) -17, param3);
               if (0 >= var5) {
                 for (var7 = 0; var4_int > var7; var7++) {
                   param0[var7] = (byte)var6;
                 }
-                break L3;
+                break L2;
               } else {
                 for (var7 = 0; var4_int > var7; var7++) {
                   param0[var7] = (byte)(param1.e((byte) -17, var5) + var6);
                 }
-                break L3;
+                break L2;
               }
             }
             stackIn_16_0 = (byte[]) (param0);
-            decompiledRegionSelector0 = 1;
+            return stackIn_16_0;
           } else {
             stackIn_3_0 = null;
-            decompiledRegionSelector0 = 0;
+            return (byte[]) ((Object) stackIn_3_0);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -96,11 +95,6 @@ abstract class vk {
             stackIn_23_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(')').toString());
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return (byte[]) ((Object) stackIn_3_0);
-        } else {
-          return stackIn_16_0;
         }
     }
 

@@ -17,17 +17,17 @@ final class wl implements java.awt.event.KeyListener, java.awt.event.FocusListen
         RuntimeException decompiledCaughtException = null;
         try {
           if (je.field_j != null) {
-            L1: {
+            L0: {
               nk.field_e = 0;
               var2_int = param0.getKeyCode();
               if (var2_int >= 0) {
                 if (oe.field_P.length > var2_int) {
                   var2_int = oe.field_P[var2_int];
                   if ((var2_int & 128) == 0) {
-                    break L1;
+                    break L0;
                   } else {
                     var2_int = -1;
-                    break L1;
+                    break L0;
                   }
                 }
               }
@@ -59,6 +59,7 @@ final class wl implements java.awt.event.KeyListener, java.awt.event.FocusListen
               }
             }
             param0.consume();
+            return;
           } else {
             return;
           }
@@ -125,13 +126,13 @@ final class wl implements java.awt.event.KeyListener, java.awt.event.FocusListen
         RuntimeException decompiledCaughtException = null;
         try {
           if (je.field_j != null) {
-            L2: {
+            L1: {
               nk.field_e = 0;
               var2_int = param0.getKeyCode();
               if (var2_int >= 0) {
                 if (oe.field_P.length > var2_int) {
                   var2_int = oe.field_P[var2_int] & -129;
-                  break L2;
+                  break L1;
                 }
               }
               var2_int = -1;
@@ -147,6 +148,7 @@ final class wl implements java.awt.event.KeyListener, java.awt.event.FocusListen
             }
           }
           param0.consume();
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
@@ -186,6 +188,7 @@ final class wl implements java.awt.event.KeyListener, java.awt.event.FocusListen
         try {
           if (null != je.field_j) {
             ii.field_c = -1;
+            return;
           } else {
             return;
           }

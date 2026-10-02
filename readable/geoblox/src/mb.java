@@ -47,6 +47,7 @@ final class mb {
           ((mb) (this)).field_c = stackIn_6_1 != 0;
           if (this.field_d.length() == 0) {
             this.field_c = false;
+            return;
           } else {
             return;
           }

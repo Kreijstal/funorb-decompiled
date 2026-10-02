@@ -42,6 +42,7 @@ final class rl extends oe {
             rl.n(-33);
           }
           stackIn_3_0 = new cg(param1, param0 * AudioOutput.sampleRateHz / 1000);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -60,7 +61,6 @@ final class rl extends oe {
           }
           throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     final static boolean n(int param0) {
@@ -93,7 +93,9 @@ final class rl extends oe {
           var3.a(param0, (byte) -85);
           var3.d((byte) 123, param2.field_f);
           var3.e(param2.field_h, param1 + 28161);
-          if (param1 != 534) {
+          if (param1 == 534) {
+            return;
+          } else {
             field_W = (od) null;
             return;
           }
@@ -174,6 +176,7 @@ final class rl extends oe {
             }
             this.field_X = param1;
             this.field_bb.field_x = (int)(65536.0f * (param3 / 100.0f));
+            return;
           } else {
             this.field_X = param1;
             this.field_bb.field_x = (int)(65536.0f * (param3 / 100.0f));
