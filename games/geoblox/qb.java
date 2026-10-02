@@ -69,7 +69,7 @@ final class qb extends hk {
               var9 = param5 - (this.field_m + param0 + this.field_O);
               if (var8_int * var8_int + var9 * var9 < this.field_K * this.field_K) {
                 var10 = Math.atan2((double)var9, (double)var8_int) - q.field_f;
-                if (var10 >= 0.0) {
+                if (!(var10 < 0.0)) {
                   if (0.0 < var10) {
                     var10 = var10 + 3.141592653589793 / (double)this.field_H;
                   }

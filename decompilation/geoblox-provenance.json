@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "38a83d19e58776bbc4dd1b794811aa1a5963996a",
+      "commit": "e6dd72c89fa7f51cc34cd78d08cf5c6227799126",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "f3b5719d7471940e6a586228fa8b59161cfd64ab14ca1786a3f8f4470ec11304",
-        "reproduce": "git archive --format=tar 38a83d19e58776bbc4dd1b794811aa1a5963996a | sha256sum",
+        "sha256": "6337fa96b5d83ef24ee2bf20c7e48ea5e0844482f6262e774d73fba6101d4912",
+        "reproduce": "git archive --format=tar e6dd72c89fa7f51cc34cd78d08cf5c6227799126 | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
@@ -93,9 +93,9 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "150473b4ea210996502edd77710c501590753e2b4a563df34cbea6f772a522f7",
-  "previousSourceTreeSha256": "21fdcc2b2150a6a7ce1bc46a14baaa3ecc2c15580495f5f0f1ec620be5de4d2e",
-  "changedJavaFiles": 1,
+  "sourceTreeSha256": "07610c2d655bf96e59584f07be867c62e47cf3b3c484063504d9958443e89da2",
+  "previousSourceTreeSha256": "150473b4ea210996502edd77710c501590753e2b4a563df34cbea6f772a522f7",
+  "changedJavaFiles": 10,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
@@ -152,10 +152,10 @@
       "catchReentryDifferentialVariants": 4,
       "regressionBeforeFix": "Original 1,1; large rebuilt automatic and forced dispatcher NullPointerException,1",
       "bytecodeChanged": false,
-      "sourceDiff": "Only oc.a(I)V changes: handler continuation after a swallowed maxMemory reflection failure exits before the unprotected arithmetic guard.",
+      "sourceDiff": "Earlier oc.a(I)V coverage correction is retained; the new shadowed-sibling guard preserves exact exception-table routing without changing GeoBlox structure.",
       "sinkDestinationBindingsVerified": true,
       "shadowedLoopLabelsRefused": true,
-      "nativeLoopExitComparisons": 3216,
+      "nativeLoopExitComparisons": 6816,
       "sourceControlFlowEdgesVerified": true,
       "conditionalPolarityVerified": true,
       "switchFallthroughVerified": true,
@@ -167,7 +167,9 @@
       "originalThrowingInstructionPcsRetained": true,
       "handlerContinuationsBoundedByEnclosingCoverage": true,
       "nonthrowingGlueMayBeWidened": true,
-      "incompatibleCoverageRefused": true
+      "incompatibleCoverageRefused": true,
+      "shadowedSiblingCatchWideningRefused": true,
+      "sourceDiffPreviousPass": "Only oc.a(I)V changed in pass 19."
     },
     "structuredInitializer": {
       "method": "wi.a(BLrh;)V",
@@ -300,5 +302,30 @@
     "diagnosticsUnchanged": true,
     "sourceBodyEditedByHand": false,
     "scope": "Generic fixtures verify try/catch/finally effects and throwable identity; GeoBlox result-sequence checks compile all sources but do not inject reflection failures into oc.a(I)V. Whole-game equivalence is not established."
+  },
+  "floatingComparisons": {
+    "exactOpcodeRetained": true,
+    "NaNBranchSemanticsPreserved": true,
+    "storedOperandsEvaluatedOnceInOrder": true,
+    "nativeComparisons": 75000,
+    "nativeScoringScenarios": 708,
+    "nativeScoringTicks": 55728,
+    "nativeScoringTraceSha256": "222f18c6366fdab862f1d5d70980cb0a6f32b3adb6eba308c08846a473bac16a",
+    "changedJavaFiles": [
+      "ab.java",
+      "cf.java",
+      "ch.java",
+      "hl.java",
+      "jg.java",
+      "oc.java",
+      "qb.java",
+      "rh.java",
+      "ue.java",
+      "vd.java"
+    ],
+    "sourceBodyEditedByHand": false,
+    "bytecodeChanged": false,
+    "cleanSourceArchiveByteExact": true,
+    "scope": "Generic comparison fixtures and controlled matching/scoring probes; whole-game equivalence remains unverified."
   }
 }

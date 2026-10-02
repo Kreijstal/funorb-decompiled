@@ -476,7 +476,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                   L18: while (true) {
                     L19: {
                       if (0L != ka.field_a) {
-                        stackIn_99_0 = (~ka.field_a < ~oa.a(-12520) ? -1 : (~ka.field_a == ~oa.a(-12520) ? 0 : 1));
+                        stackIn_99_0 = $cfr$lcmp(~ka.field_a, ~oa.a(-12520));
 
                         if (var5 != 0) {
                           break L19;
@@ -1169,5 +1169,9 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
     static {
         field_b = 0;
         field_d = new int[1024];
+    }
+
+    private static int $cfr$lcmp(long left, long right) {
+        return left < right ? -1 : (left == right ? 0 : 1);
     }
 }

@@ -370,7 +370,7 @@ abstract class jg {
               if (var3_float > var4_float) {
                 if (var3_float > var5_float) {
                   var7 = var3_float;
-                  if (var4_float <= var5_float) {
+                  if (!(var4_float > var5_float)) {
                     var6 = var4_float;
                     break L6;
                   } else {
@@ -381,7 +381,7 @@ abstract class jg {
               }
               if (var4_float > var3_float) {
                 if (var4_float > var5_float) {
-                  if (var3_float <= var5_float) {
+                  if (!(var3_float > var5_float)) {
                     var6 = var3_float;
                   } else {
                     var6 = var5_float;
@@ -393,7 +393,7 @@ abstract class jg {
               }
               var7 = var5_float;
               var9 = 2;
-              if (var4_float >= var3_float) {
+              if (!(var4_float < var3_float)) {
                 var6 = var3_float;
               } else {
                 var6 = var4_float;
@@ -401,7 +401,7 @@ abstract class jg {
             }
             var8 = var7 - var6;
             var10 = (var7 + var6) / 2.0f;
-            if (var10 >= 0.5f) {
+            if (!(var10 < 0.5f)) {
               var11 = var8 / (-var6 + (-var7 + 2.0f));
             } else {
               var11 = var8 / (var7 + var6);
@@ -419,7 +419,7 @@ abstract class jg {
                 var12 = -var14 + (0.6666666865348816f + var15);
               }
             }
-            if (var12 >= 0.0f) {
+            if (!(var12 < 0.0f)) {
               if (var12 > 1.0f) {
                 var12 = var12 - 1.0f;
               }

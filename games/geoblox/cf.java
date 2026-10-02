@@ -156,7 +156,7 @@ final class cf extends q {
             }
             var1 = (me) ((Object) md.field_a.g(0));
             L2: while (var1 != null) {
-              if (var1.field_k < 1.0f) {
+              if (!(var1.field_k >= 1.0f)) {
                 var1.field_k = var1.field_k + (0.03999999910593033f * var1.field_k + 0.00004999999873689376f);
               } else {
                 if (var1.field_h != 1) {

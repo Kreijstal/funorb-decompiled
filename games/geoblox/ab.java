@@ -276,7 +276,7 @@ final class ab {
                         var11 = 240.0f - (var4.field_v + var6);
                         var10 = var10 * var10;
                         var11 = var11 * var11;
-                        if (var10 + var11 <= var9 * var9 + var8 * var8) {
+                        if (!(var10 + var11 > var9 * var9 + var8 * var8)) {
                           stackIn_36_0 = 0;
                         } else {
                           stackIn_36_0 = 1;
@@ -288,7 +288,7 @@ final class ab {
                         var9 = -var2.field_v + 240.0f;
                         var10 = var10 * var10;
                         var11 = var11 * var11;
-                        if (var9 * var9 + var8 * var8 >= var11 + var10) {
+                        if (!(var9 * var9 + var8 * var8 < var11 + var10)) {
                           stackIn_39_0 = 0;
                         } else {
                           stackIn_39_0 = 1;
