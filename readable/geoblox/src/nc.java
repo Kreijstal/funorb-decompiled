@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nc extends m {
+final class nc extends BitmapFont {
     private byte[][] field_L;
     int[][] colorPalettes;
 
@@ -60,94 +60,94 @@ final class nc extends m {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
-        int var8;
-        int var9;
-        int var10;
-        int var11;
-        int var12;
-        var8 = param1 + param2 * SoftwareRasterizer.stride;
-        var9 = SoftwareRasterizer.stride - param3;
-        var10 = 0;
-        var11 = 0;
-        if (param2 < SoftwareRasterizer.clipTop) {
-          var12 = SoftwareRasterizer.clipTop - param2;
-          param4 = param4 - var12;
-          param2 = SoftwareRasterizer.clipTop;
-          var11 = var11 + var12 * param3;
-          var8 = var8 + var12 * SoftwareRasterizer.stride;
+    final void drawGlyph(int glyphIndex, int x, int y, int width, int height, int color, boolean shadowPass) {
+        int destinationIndex;
+        int destinationRowSkip;
+        int sourceRowSkip;
+        int sourceIndex;
+        int clippedPixels;
+        destinationIndex = x + y * SoftwareRasterizer.stride;
+        destinationRowSkip = SoftwareRasterizer.stride - width;
+        sourceRowSkip = 0;
+        sourceIndex = 0;
+        if (y < SoftwareRasterizer.clipTop) {
+          clippedPixels = SoftwareRasterizer.clipTop - y;
+          height = height - clippedPixels;
+          y = SoftwareRasterizer.clipTop;
+          sourceIndex = sourceIndex + clippedPixels * width;
+          destinationIndex = destinationIndex + clippedPixels * SoftwareRasterizer.stride;
         }
-        if (param2 + param4 > SoftwareRasterizer.clipBottom) {
-          param4 = param4 - (param2 + param4 - SoftwareRasterizer.clipBottom);
+        if (y + height > SoftwareRasterizer.clipBottom) {
+          height = height - (y + height - SoftwareRasterizer.clipBottom);
         }
-        if (param1 < SoftwareRasterizer.clipLeft) {
-          var12 = SoftwareRasterizer.clipLeft - param1;
-          param3 = param3 - var12;
-          param1 = SoftwareRasterizer.clipLeft;
-          var11 = var11 + var12;
-          var8 = var8 + var12;
-          var10 = var10 + var12;
-          var9 = var9 + var12;
+        if (x < SoftwareRasterizer.clipLeft) {
+          clippedPixels = SoftwareRasterizer.clipLeft - x;
+          width = width - clippedPixels;
+          x = SoftwareRasterizer.clipLeft;
+          sourceIndex = sourceIndex + clippedPixels;
+          destinationIndex = destinationIndex + clippedPixels;
+          sourceRowSkip = sourceRowSkip + clippedPixels;
+          destinationRowSkip = destinationRowSkip + clippedPixels;
         }
-        if (param1 + param3 > SoftwareRasterizer.clipRight) {
-          var12 = param1 + param3 - SoftwareRasterizer.clipRight;
-          param3 = param3 - var12;
-          var10 = var10 + var12;
-          var9 = var9 + var12;
+        if (x + width > SoftwareRasterizer.clipRight) {
+          clippedPixels = x + width - SoftwareRasterizer.clipRight;
+          width = width - clippedPixels;
+          sourceRowSkip = sourceRowSkip + clippedPixels;
+          destinationRowSkip = destinationRowSkip + clippedPixels;
         }
-        if (param3 > 0) {
-          if (param4 > 0) {
-            if (!param6) {
-              nc.a(0, SoftwareRasterizer.framebuffer, this.field_L[param0], this.colorPalettes[param5], var11, var8, param3, param4, var9, var10);
+        if (width > 0) {
+          if (height > 0) {
+            if (!shadowPass) {
+              nc.a(0, SoftwareRasterizer.framebuffer, this.field_L[glyphIndex], this.colorPalettes[color], sourceIndex, destinationIndex, width, height, destinationRowSkip, sourceRowSkip);
             } else {
-              bg.a(SoftwareRasterizer.framebuffer, this.field_L[param0], param5, var11, var8, param3, param4, var9, var10);
+              MonochromeBitmapFont.blitGlyphMask(SoftwareRasterizer.framebuffer, this.field_L[glyphIndex], color, sourceIndex, destinationIndex, width, height, destinationRowSkip, sourceRowSkip);
             }
             return;
           }
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
-        int var9;
-        int var10;
-        int var11;
-        int var12;
-        int var13;
-        var9 = param1 + param2 * SoftwareRasterizer.stride;
-        var10 = SoftwareRasterizer.stride - param3;
-        var11 = 0;
-        var12 = 0;
-        if (param2 < SoftwareRasterizer.clipTop) {
-          var13 = SoftwareRasterizer.clipTop - param2;
-          param4 = param4 - var13;
-          param2 = SoftwareRasterizer.clipTop;
-          var12 = var12 + var13 * param3;
-          var9 = var9 + var13 * SoftwareRasterizer.stride;
+    final void drawGlyphAlpha(int glyphIndex, int x, int y, int width, int height, int color, int alpha256, boolean shadowPass) {
+        int destinationIndex;
+        int destinationRowSkip;
+        int sourceRowSkip;
+        int sourceIndex;
+        int clippedPixels;
+        destinationIndex = x + y * SoftwareRasterizer.stride;
+        destinationRowSkip = SoftwareRasterizer.stride - width;
+        sourceRowSkip = 0;
+        sourceIndex = 0;
+        if (y < SoftwareRasterizer.clipTop) {
+          clippedPixels = SoftwareRasterizer.clipTop - y;
+          height = height - clippedPixels;
+          y = SoftwareRasterizer.clipTop;
+          sourceIndex = sourceIndex + clippedPixels * width;
+          destinationIndex = destinationIndex + clippedPixels * SoftwareRasterizer.stride;
         }
-        if (param2 + param4 > SoftwareRasterizer.clipBottom) {
-          param4 = param4 - (param2 + param4 - SoftwareRasterizer.clipBottom);
+        if (y + height > SoftwareRasterizer.clipBottom) {
+          height = height - (y + height - SoftwareRasterizer.clipBottom);
         }
-        if (param1 < SoftwareRasterizer.clipLeft) {
-          var13 = SoftwareRasterizer.clipLeft - param1;
-          param3 = param3 - var13;
-          param1 = SoftwareRasterizer.clipLeft;
-          var12 = var12 + var13;
-          var9 = var9 + var13;
-          var11 = var11 + var13;
-          var10 = var10 + var13;
+        if (x < SoftwareRasterizer.clipLeft) {
+          clippedPixels = SoftwareRasterizer.clipLeft - x;
+          width = width - clippedPixels;
+          x = SoftwareRasterizer.clipLeft;
+          sourceIndex = sourceIndex + clippedPixels;
+          destinationIndex = destinationIndex + clippedPixels;
+          sourceRowSkip = sourceRowSkip + clippedPixels;
+          destinationRowSkip = destinationRowSkip + clippedPixels;
         }
-        if (param1 + param3 > SoftwareRasterizer.clipRight) {
-          var13 = param1 + param3 - SoftwareRasterizer.clipRight;
-          param3 = param3 - var13;
-          var11 = var11 + var13;
-          var10 = var10 + var13;
+        if (x + width > SoftwareRasterizer.clipRight) {
+          clippedPixels = x + width - SoftwareRasterizer.clipRight;
+          width = width - clippedPixels;
+          sourceRowSkip = sourceRowSkip + clippedPixels;
+          destinationRowSkip = destinationRowSkip + clippedPixels;
         }
-        if (param3 > 0) {
-          if (param4 > 0) {
-            if (!param7) {
-              nc.a(0, SoftwareRasterizer.framebuffer, this.field_L[param0], this.colorPalettes[param5], var12, var9, param3, param4, var10, var11, param6);
+        if (width > 0) {
+          if (height > 0) {
+            if (!shadowPass) {
+              nc.a(0, SoftwareRasterizer.framebuffer, this.field_L[glyphIndex], this.colorPalettes[color], sourceIndex, destinationIndex, width, height, destinationRowSkip, sourceRowSkip, alpha256);
             } else {
-              bg.a(SoftwareRasterizer.framebuffer, this.field_L[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+              MonochromeBitmapFont.blitGlyphMaskAlpha(SoftwareRasterizer.framebuffer, this.field_L[glyphIndex], color, sourceIndex, destinationIndex, width, height, destinationRowSkip, sourceRowSkip, alpha256);
             }
             return;
           }

@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 3,539 guarded naming rules: 32 classes, 555 fields,
-325 methods, 957 parameters and 1,670 local declarations. Both 303-file corpora
+The current export has 3,947 guarded naming rules: 34 classes, 580 fields,
+356 methods, 1,129 parameters and 1,848 local declarations. Both 303-file corpora
 compile, preserving 138,558 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -54,7 +54,32 @@ smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
 
-## Current raster drawing names
+## Current font layout and glyph names
+
+Pass 57 adds 408 guarded identities: two classes, 25 fields, 31 methods,
+172 parameters and 178 locals. Every field, method, parameter and local in
+`BitmapFont` and `MonochromeBitmapFont` has a guarded semantic name. The abstract
+`drawGlyph` and `drawGlyphAlpha` family has matching method/parameter contracts
+in all three renderers, and their clipping locals are named. The other palette
+and coverage renderer internals still retain opaque identifiers.
+
+Font metrics expose advances, offsets, sizes, ascent/descent, signed edge
+profiles and pair kerning. Text width, wrapping, paragraph alignment,
+justification, markup styling and inline images have descriptive APIs. Mutable
+shared style fields, temporary aliases, unused arguments and caught exceptions
+remain explicit. The masked monochrome kernel retains its global-framebuffer
+writes even though a destination array is passed. Original tags, character
+mapping, the wrap-specific euro previous-character value, arithmetic, clipping
+and control flow are unchanged.
+
+All 3,539 previous complete rules, raw source and generator pins remain unchanged.
+The 3,947 rules apply 36,205 edits; all 303 raw/readable sources compile,
+preserving 138,558 bindings and 388 override relationships. Source/binding and
+byte-exact reversal checks support these names. Existing native probes retain
+their documented scopes and do not newly exercise fonts. Actual font/image
+resources, full rendering/gameplay and phone/FPS/heap behavior remain unverified.
+
+## Previous raster drawing names
 
 Pass 56 adds 170 guarded identities: two scanline-mask fields and all 168
 remaining raster drawing locals. Every field, method, parameter and local in
@@ -775,7 +800,7 @@ its historical proof recorded in the raw provenance. Current source/decompiler
 identity and naming migrations live in the single manifest. `ruleChanges`
 records naming changes; `sourceChange` is recorded when input identity changes.
 The latest structural pass records its source migration in Git. The current
-naming-only pass retains those source pins and records its 170 additions in
+naming-only pass retains those source pins and records its 408 additions in
 `ruleChanges`; every prior guarded rule is retained.
 All six native probe sources and their traces are pinned in
 the same manifest; no JSON snapshots are added.
@@ -800,6 +825,6 @@ the same manifest; no JSON snapshots are added.
 | Java source tree | SHA-256 |
 | --- | --- |
 | Raw | `39be3539b43d7acc9540acca49e7b6378cdb233908092706646df4c2cdc6a8fe` |
-| Readable | `d11fce4c3749656ee4147bf6b5b269e693493a88f161e2a3e9dc7babe003411d` |
+| Readable | `8082612a7462e478ab52230b8175f8e639d17955eb3f1cae9758a02188abb7a0` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

@@ -157,7 +157,7 @@ final class qh extends ee implements pe, pl, ta {
         hd var4 = new hd(46, var3, this.field_r - 90, 25, this.field_P, true, this.field_r - 120, 5, hh.field_d, 11579568, ue.createNewsOptInText);
         this.b((byte) -106, var4);
         var3 = var3 + var4.field_h;
-        ff var5 = new ff(ng.field_F, 0, 0, 0, 0, 16777215, -1, 0, 0, ng.field_F.field_o, -1, 2147483647, true);
+        ff var5 = new ff(ng.field_F, 0, 0, 0, 0, 16777215, -1, 0, 0, ng.field_F.maxAscent, -1, 2147483647, true);
         this.field_E = new vf(var2, var5);
         this.field_E.field_j = "";
         this.field_E.a(0, -42, eh.openInPopupWindowText);

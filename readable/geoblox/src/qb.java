@@ -95,7 +95,7 @@ final class qb extends hk {
         }
     }
 
-    final static void a(int param0, lk param1, String param2, int param3, m param4) {
+    final static void a(int param0, lk param1, String param2, int param3, BitmapFont param4) {
         int var7 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -110,25 +110,25 @@ final class qb extends hk {
         int var6 = 0;
         int var8 = 0;
         int var9 = 0;
-        m var10 = null;
+        BitmapFont var10 = null;
         var9 = Geoblox.field_C;
         try {
           var5_int = 0;
           if (param3 != 60) {
-            var10 = (m) null;
-            qb.a(-58, (lk) null, (String) null, -15, (m) null);
+            var10 = (BitmapFont) null;
+            qb.a(-58, (lk) null, (String) null, -15, (BitmapFont) null);
           }
           var6 = -1;
           L1: for (var7 = 1; var7 < param2.length(); var7++) {
             var8 = param2.charAt(var7);
             if (60 == var8) {
-              var6 = param1.field_c[0] + (var5_int >> 8) + param4.a(param2.substring(0, var7));
+              var6 = param1.field_c[0] + (var5_int >> 8) + param4.measureTextWidth(param2.substring(0, var7));
             }
             if (var6 == -1) {
               if (var8 == 32) {
                 var5_int = var5_int + param0;
               }
-              param1.field_c[var7] = param1.field_c[0] + (var5_int >> 8) + param4.a(param2.substring(0, 1 + var7)) - param4.a((char) var8);
+              param1.field_c[var7] = param1.field_c[0] + (var5_int >> 8) + param4.measureTextWidth(param2.substring(0, 1 + var7)) - param4.measureCharacterAdvance((char) var8);
             } else {
               param1.field_c[var7] = var6;
             }

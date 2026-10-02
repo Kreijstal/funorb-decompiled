@@ -4,7 +4,7 @@
 final class wa {
     private boolean field_o;
     int field_f;
-    m field_m;
+    BitmapFont field_m;
     dh field_j;
     int field_h;
     int field_p;
@@ -31,13 +31,13 @@ final class wa {
         int var8 = 0;
         String var9 = null;
         try {
-          var5_int = this.field_m.a(param2);
-          var6 = this.field_m.field_q + this.field_m.field_y;
+          var5_int = this.field_m.measureTextWidth(param2);
+          var6 = this.field_m.maxDescent + this.field_m.capitalXAscent;
           var7 = param1;
           if (SoftwareRasterizer.stride < 6 + var7 + var5_int) {
             var7 = -6 + SoftwareRasterizer.stride - var5_int;
           }
-          var8 = -this.field_m.field_y + (param3 + 32);
+          var8 = -this.field_m.capitalXAscent + (param3 + 32);
           if (SoftwareRasterizer.framebufferHeight < 6 + (var8 + var6)) {
             var8 = SoftwareRasterizer.framebufferHeight - var6 - 6;
           }
@@ -47,7 +47,7 @@ final class wa {
             this.a(-83, false, 61, (String) null);
           }
           SoftwareRasterizer.fillRectangle(1 + var7, var8 + 1, var5_int + 4, 4 + var6, this.field_f);
-          this.field_m.a(param2, 3 + var7, this.field_m.field_y + 3 + var8, this.field_k, -1);
+          this.field_m.drawText(param2, 3 + var7, this.field_m.capitalXAscent + 3 + var8, this.field_k, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -63,7 +63,7 @@ final class wa {
         }
     }
 
-    final void a(int param0, m param1) {
+    final void a(int param0, BitmapFont param1) {
         ff var17 = null;
         rd var4 = null;
         Sprite[] var5 = null;
@@ -85,7 +85,7 @@ final class wa {
         rd var19 = null;
         int var15 = Geoblox.field_C;
         try {
-            var17 = new ff(param1, 2, 2, 2236962, 1, 1, 1, 2 + (param1.field_o + param1.field_q));
+            var17 = new ff(param1, 2, 2, 2236962, 1, 1, 1, 2 + (param1.maxAscent + param1.maxDescent));
             this.field_b = (dh) ((Object) var17);
             var17.field_o = 16777215;
             var4 = new rd();
@@ -183,12 +183,12 @@ final class wa {
             return;
           }
           if (-1 == var7) {
-            var7 = this.field_m.field_q + this.field_m.field_o;
+            var7 = this.field_m.maxDescent + this.field_m.maxAscent;
           }
           L1: {
             var8 = SoftwareRasterizer.stride >> 2;
-            var9 = this.field_m.a(param1);
-            var10 = this.field_m.field_q + this.field_m.field_o;
+            var9 = this.field_m.measureTextWidth(param1);
+            var10 = this.field_m.maxDescent + this.field_m.maxAscent;
             var11 = 1;
             if (var8 >= var9) {
               if (-1 == param1.indexOf("<br>")) {
@@ -204,11 +204,11 @@ final class wa {
               var13 = var9 / var8;
               var12 = (var9 % var8 + var13 - 1) / var13 * 2 + var8;
             }
-            var11 = this.field_m.a(param1, new int[]{var12}, dd.field_E);
+            var11 = this.field_m.wrapText(param1, new int[]{var12}, dd.field_E);
             var9 = 0;
             var10 = var10 + (var11 - 1) * var7;
             L5: for (var13 = 0; var13 < var11; var13++) {
-              var14 = this.field_m.a(dd.field_E[var13]);
+              var14 = this.field_m.measureTextWidth(dd.field_E[var13]);
               if (var14 <= var9) {
                 continue L5;
               }
@@ -220,13 +220,13 @@ final class wa {
           if (var5_int + var9 + var12 > SoftwareRasterizer.stride) {
             var12 = -var5_int + (SoftwareRasterizer.stride - var9);
           }
-          var13 = 32 + (-this.field_m.field_y + param0);
+          var13 = 32 + (-this.field_m.capitalXAscent + param0);
           if (SoftwareRasterizer.framebufferHeight < var10 + (var13 + var6)) {
             var13 = param0 - var10 - var6;
           }
           SoftwareRasterizer.drawRectangle(var12, var13, var5_int + var9, var10 + var6, this.field_n);
           SoftwareRasterizer.fillRectangle(1 + var12, 1 + var13, var9 + (var5_int - 2), -2 + (var10 + var6), this.field_f);
-          this.field_m.a(param1, this.field_d + var12, this.field_i + var13, var9, var10, this.field_k, -1, 0, 0, var7);
+          this.field_m.drawParagraph(param1, this.field_d + var12, this.field_i + var13, var9, var10, this.field_k, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

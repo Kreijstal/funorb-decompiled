@@ -3,7 +3,7 @@
  */
 final class hd extends sh {
     private int field_K;
-    private m field_F;
+    private BitmapFont field_F;
     private String field_J;
     static Sprite sportsForegroundSprite;
     static int[] nineSliceSavedClip;
@@ -21,7 +21,7 @@ final class hd extends sh {
             return;
         }
         int var8 = !this.field_B ? 0 : -this.field_K + (this.field_r - this.field_C * 2);
-        this.field_F.a(this.field_J, this.field_C + (var8 + var5), this.field_C + var6, -this.field_C + this.field_K, -(this.field_C * 2) + this.field_h, this.field_G, -1, !this.field_B ? 2 : 0, 1, this.field_F.field_o);
+        this.field_F.drawParagraph(this.field_J, this.field_C + (var8 + var5), this.field_C + var6, -this.field_C + this.field_K, -(this.field_C * 2) + this.field_h, this.field_G, -1, !this.field_B ? 2 : 0, 1, this.field_F.maxAscent);
     }
 
     public static void f(byte param0) {
@@ -70,7 +70,7 @@ final class hd extends sh {
         return var3;
     }
 
-    hd(int param0, int param1, int param2, int param3, el param4, boolean param5, int param6, int param7, m param8, int param9, String param10) {
+    hd(int param0, int param1, int param2, int param3, el param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
         super(param0, param1, param2, param3, (dh) null, (bb) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
@@ -100,7 +100,7 @@ final class hd extends sh {
           this.field_K = param6;
           this.field_J = param10;
           var12_int = this.field_K - this.field_C;
-          var13 = this.field_F.b(param10, var12_int, this.field_F.field_o) + 2 * this.field_C;
+          var13 = this.field_F.measureWrappedHeight(param10, var12_int, this.field_F.maxAscent) + 2 * this.field_C;
           if (var13 <= param3) {
             var13 = param3;
           } else {

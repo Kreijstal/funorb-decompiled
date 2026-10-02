@@ -92,10 +92,10 @@ final class vh extends ee implements pl {
         if (!(param3 == 0)) {
             return;
         }
-        m var5 = ng.field_F;
+        BitmapFont var5 = ng.field_F;
         int var6 = -69 / ((1 - param2) / 43);
         if (!(this.field_C == null)) {
-            var5.a(ab.createSuggestionsText, this.field_v + param0, param1 + this.field_m, this.field_r, 20, 16777215, -1, 0, 0, var5.field_q + var5.field_o);
+            var5.drawParagraph(ab.createSuggestionsText, this.field_v + param0, param1 + this.field_m, this.field_r, 20, 16777215, -1, 0, 0, var5.maxDescent + var5.maxAscent);
         }
     }
 

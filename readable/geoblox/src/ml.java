@@ -53,7 +53,7 @@ final class ml extends ff {
           jf.a(this.field_y, var7, param0 + param4.field_v, param4.field_r, (-this.field_y[0].fullHeight + param4.field_h >> 1) + (param2 + param4.field_m), -17154);
           stackIn_19_0 = (param3) ? 16777215 : 7105644;
           var8 = stackIn_19_0;
-          this.field_n.a(param4.field_s, param4.field_v + param0, -2 + param2 + param4.field_m, param4.field_r, param4.field_h, var8, -1, 1, 1, this.field_n.field_o);
+          this.field_n.drawParagraph(param4.field_s, param4.field_v + param0, -2 + param2 + param4.field_m, param4.field_r, param4.field_h, var8, -1, 1, 1, this.field_n.maxAscent);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

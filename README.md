@@ -19,21 +19,26 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and retain all 138,558 remaining bindings
 and 388 override relationships.
 
-The current naming pass adds 170 guarded identities for raster drawing:
-168 locals and the two scanline-mask arrays. Every field, method, parameter and
-local in `SoftwareRasterizer` now has a guarded semantic name. Circle and rounded
-corner geometry, clipped spans, alpha weights, gradient interpolation, line
-stepping and unrolled clearing have explicit roles. Shared slots retain their
-multiple uses, including span-X/row-skip and exclusive/inclusive endpoints.
+The current naming pass adds 408 guarded identities for font layout and glyph
+rendering. `BitmapFont` and `MonochromeBitmapFont` have named fields, methods,
+parameters and locals. Metrics, kerning, markup wrapping, paragraph alignment,
+shared text style, inline images and mask/alpha blitting have explicit roles.
+The shared `drawGlyph`/`drawGlyphAlpha` contracts match all three renderers.
 
-The 3,539 rules apply 33,770 edits. All 303 raw/readable sources compile,
-preserving 138,558 bindings and 388 overrides. All 3,369 previous complete
-rules and raw source/decompiler pins are unchanged. Large labeled bodies,
-original clip conditions, arithmetic and ordering remain. This names the class;
-full raster/game/device execution remains unverified. The one manifest and
+The 3,947 rules apply 36,205 edits. All 303 raw/readable sources compile,
+preserving 138,558 bindings and 388 overrides. All 3,539 previous complete
+rules and raw source/decompiler pins are unchanged. Captured aliases, shared
+style state, original tag quirks, clip conditions and arithmetic remain. Existing
+native probes retain their original scopes and do not newly execute fonts.
+Full rendering/game/device execution remains unverified. The one manifest and
 dictionary preserve reproducibility and reversal.
 
-The previous pass named 61 blur-kernel locals and three reusable channel-sum
+Pass 56 named 168 raster drawing locals and two scanline-mask arrays. Every
+field, method, parameter and local in `SoftwareRasterizer` has a guarded name.
+Circle geometry, clipped spans, alpha weights, gradients, line stepping and
+unrolled clearing have explicit roles; large labeled bodies remain.
+
+Pass 55 named 61 blur-kernel locals and three reusable channel-sum
 caches. Growing, full and shrinking windows, Q14 reciprocal scaling, edge sample
 counts, captured indices and shared cache aliases are explicit. Reads and writes
 still share the original pixels. Existing native probes do not execute blur.

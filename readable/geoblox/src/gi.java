@@ -62,11 +62,11 @@ final class gi implements Iterable {
         }
     }
 
-    final static bg loadBitmapFont(rh fontMetricsArchive, int methodGuard, rh glyphGraphicsArchive, String resourceName, String groupName) {
+    final static MonochromeBitmapFont loadBitmapFont(rh fontMetricsArchive, int methodGuard, rh glyphGraphicsArchive, String resourceName, String groupName) {
         int archiveGroupId = 0;
         RuntimeException var5 = null;
         int archiveFileId = 0;
-        bg stackIn_3_0 = null;
+        MonochromeBitmapFont stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

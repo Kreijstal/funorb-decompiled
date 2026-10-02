@@ -28,7 +28,7 @@ class mi extends kg {
     private int field_O;
     private int field_V;
     private Sprite field_F;
-    private m field_Q;
+    private BitmapFont field_Q;
     private Sprite[] field_s;
     private int field_db;
     private int field_x;

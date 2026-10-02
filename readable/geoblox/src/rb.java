@@ -7,9 +7,9 @@ final class rb {
     static int kindFourRemovalCount;
     static v field_d;
 
-    final static bg a(int param0, int param1, rh param2, int param3, rh param4) {
+    final static MonochromeBitmapFont a(int param0, int param1, rh param2, int param3, rh param4) {
         RuntimeException var5 = null;
-        bg stackIn_6_0 = null;
+        MonochromeBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;

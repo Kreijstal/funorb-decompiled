@@ -8,7 +8,7 @@ final class bi implements dh {
     private int field_l;
     private int field_m;
     private int field_d;
-    private m field_b;
+    private BitmapFont field_b;
     private int field_e;
     private int field_j;
     private int field_n;
@@ -98,7 +98,7 @@ final class bi implements dh {
           }
           if (null != this.field_b) {
             var10 = this.field_m + this.field_n + this.field_k;
-            this.field_b.a(param4.field_s, var10 + param4.field_v + param0, param4.field_m + param2 + this.field_i, param4.field_r + (-this.field_m - var10), -(this.field_m << 1) + param4.field_h, this.field_e, this.field_f, this.field_a, this.field_l, 0);
+            this.field_b.drawParagraph(param4.field_s, var10 + param4.field_v + param0, param4.field_m + param2 + this.field_i, param4.field_r + (-this.field_m - var10), -(this.field_m << 1) + param4.field_h, this.field_e, this.field_f, this.field_a, this.field_l, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -122,7 +122,7 @@ final class bi implements dh {
         mustLogin3Texts = null;
     }
 
-    bi(m param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    bi(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         this.field_a = 1;
         this.field_l = 1;
         try {

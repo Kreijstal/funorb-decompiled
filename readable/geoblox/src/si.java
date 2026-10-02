@@ -88,7 +88,7 @@ final class si {
     }
 
     final void a(rd param0, int param1, int param2, el param3, int param4) {
-        m stackIn_20_0 = null;
+        BitmapFont stackIn_20_0 = null;
         String stackIn_20_1 = null;
         int stackIn_21_2 = 0;
         int stackIn_23_2;
@@ -164,7 +164,7 @@ final class si {
               } else {
                 stackIn_27_8 = 256;
               }
-              ((m) (Object) stackIn_20_0).a(stackIn_20_1, stackIn_23_2, stackIn_26_3, stackIn_26_4, stackIn_26_5, stackIn_26_6, stackIn_26_7, stackIn_27_8, param0.field_g, param0.field_i, param0.field_f);
+              ((BitmapFont) (Object) stackIn_20_0).drawParagraphAlpha(stackIn_20_1, stackIn_23_2, stackIn_26_3, stackIn_26_4, stackIn_26_5, stackIn_26_6, stackIn_26_7, stackIn_27_8, param0.field_g, param0.field_i, param0.field_f);
             }
           }
           return;

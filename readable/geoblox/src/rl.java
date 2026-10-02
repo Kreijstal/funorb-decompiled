@@ -15,7 +15,7 @@ final class rl extends oe {
         try {
             this.field_Y = param1;
             if (this.field_Y != null) {
-                var3_int = hh.field_c.b(this.field_Y, 260, hh.field_c.field_o);
+                var3_int = hh.field_c.measureWrappedHeight(this.field_Y, 260, hh.field_c.maxAscent);
                 this.c(var3_int + 150, 103, 300);
             }
             this.field_bb = new hl(13, 50, 274, 30, 15, 2113632, 4210752);
@@ -168,10 +168,10 @@ final class rl extends oe {
 
     final void b(int param0, int param1, int param2) {
         super.b(param0, param1, param2);
-        hh.field_c.b(this.field_X, (this.field_r >> 1) + param0, param2 + 103, 16777215, -1);
+        hh.field_c.drawCenteredText(this.field_X, (this.field_r >> 1) + param0, param2 + 103, 16777215, -1);
         if (this.field_Y != null) {
             SoftwareRasterizer.drawHorizontalLine(20 + param0, -7 + param2 + 120, 260, 8421504);
-            hh.field_c.a(this.field_Y, param0 + 20, 8 + (120 + param2), 260, 100, 16777215, -1, 1, 0, hh.field_c.field_o);
+            hh.field_c.drawParagraph(this.field_Y, param0 + 20, 8 + (120 + param2), 260, 100, 16777215, -1, 1, 0, hh.field_c.maxAscent);
         }
     }
 

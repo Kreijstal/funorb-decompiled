@@ -496,11 +496,11 @@ final class GameScreen extends MenuScreen {
                       kh.screenTitleSprites[8].draw(0, 20);
                       ma.drawNineSlicePanel(var3 + 10, 120, 100, (byte) -92, var4, ll.frameNineSliceSprites);
                       var5 = 184;
-                      dd.uiPaletteFont.b(Geoblox.loginMessage, 320, var5, 0, -1);
+                      dd.uiPaletteFont.drawCenteredText(Geoblox.loginMessage, 320, var5, 0, -1);
                       var5 = 185;
-                      fi.smallFont.a(r.field_sb, 130, var5, 380, 300, 0, -1, 1, 0, 14);
+                      fi.smallFont.drawParagraph(r.field_sb, 130, var5, 380, 300, 0, -1, 1, 0, 14);
                       ma.drawNineSlicePanel(320, 120, 60, (byte) -92, var4, ll.frameNineSliceSprites);
-                      fi.smallFont.a(bd.field_b, 130, 330, 380, 300, 0, -1, 1, 0, 14);
+                      fi.smallFont.drawParagraph(bd.field_b, 130, 330, 380, 300, 0, -1, 1, 0, 14);
                       if (var12 == 0) {
                         break L7;
                       }
@@ -526,7 +526,7 @@ final class GameScreen extends MenuScreen {
                           SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, var5);
                           ma.drawNineSlicePanel(160, 150, 80, (byte) -92, 340, ll.frameNineSliceSprites);
                           var6 = 170;
-                          fi.smallFont.a(ki.fullscreenNonmemberText, 160, var6, 320, 300, 0, -1, 1, 0, 16);
+                          fi.smallFont.drawParagraph(ki.fullscreenNonmemberText, 160, var6, 320, 300, 0, -1, 1, 0, 16);
                           var7 = 100;
                           var8 = -(20 + var7 >> 1) + 410;
                           var6 = 265;
@@ -552,7 +552,7 @@ final class GameScreen extends MenuScreen {
                           dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
                         }
                         L19: {
-                          dd.uiPaletteFont.b(hh.fullscreenCloseButtonText, var9, 30 + var6, 0, -1);
+                          dd.uiPaletteFont.drawCenteredText(hh.fullscreenCloseButtonText, var9, 30 + var6, 0, -1);
                           var8 = 320 - (20 + var7 >> 1) - 90;
                           dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
                           var6 = 265;
@@ -577,7 +577,7 @@ final class GameScreen extends MenuScreen {
                           }
                           dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
                         }
-                        dd.uiPaletteFont.b(qb.fullscreenMembersButtonText, var9, 30 + var6, 0, -1);
+                        dd.uiPaletteFont.drawCenteredText(qb.fullscreenMembersButtonText, var9, 30 + var6, 0, -1);
                         dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
                         if (var12 == 0) {
                           break L7;
@@ -595,7 +595,7 @@ final class GameScreen extends MenuScreen {
                             SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, var5);
                             ma.drawNineSlicePanel(160, 160, 95, (byte) -92, 320, ll.frameNineSliceSprites);
                             var6 = 170;
-                            var6 = var6 + 16 * fi.smallFont.a(sj.fullscreenUnavailableText, 170, var6, 300, 300, 0, -1, 1, 0, 16);
+                            var6 = var6 + 16 * fi.smallFont.drawParagraph(sj.fullscreenUnavailableText, 170, var6, 300, 300, 0, -1, 1, 0, 16);
                             var6 += 40;
                             var7 = 100;
                             var8 = 320 - (var7 + 20 >> 1);
@@ -617,7 +617,7 @@ final class GameScreen extends MenuScreen {
                             }
                             dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
                           }
-                          dd.uiPaletteFont.b(hh.fullscreenCloseButtonText, var9, 30 + var6, 0, -1);
+                          dd.uiPaletteFont.drawCenteredText(hh.fullscreenCloseButtonText, var9, 30 + var6, 0, -1);
                           dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
                           if (var12 == 0) {
                             break L7;
@@ -634,16 +634,16 @@ final class GameScreen extends MenuScreen {
                           ma.drawNineSlicePanel(160, 160, 140, (byte) -92, 320, ll.frameNineSliceSprites);
                           var6 = 170;
                           var7_ref_String = ue.fullscreenBeforeAcceptText + " " + pb.fullscreenAcceptButtonText + " " + wj.fullscreenAfterAcceptText + " " + rb.fullscreenCancelButtonText + " " + uj.fullscreenAfterCancelText;
-                          var6 = var6 + 16 * fi.smallFont.a(var7_ref_String, 170, var6, 300, 300, 0, -1, 1, 0, 16);
+                          var6 = var6 + 16 * fi.smallFont.drawParagraph(var7_ref_String, 170, var6, 300, 300, 0, -1, 1, 0, 16);
                           var6 += 10;
                           var8_ref_String = Integer.toString((1500 - this.activeTicks) / 150 + 1);
                           if ((1500 - this.activeTicks) / 150 <= 0) {
-                            var6 = var6 + fi.smallFont.a(wj.a(mj.fullscreenAcceptCountdownSingularText, new String[]{var8_ref_String}, (byte) -51), 170, var6, 300, 300, 0, -1, 1, 0, 16) * 16;
+                            var6 = var6 + fi.smallFont.drawParagraph(wj.a(mj.fullscreenAcceptCountdownSingularText, new String[]{var8_ref_String}, (byte) -51), 170, var6, 300, 300, 0, -1, 1, 0, 16) * 16;
                             if (var12 == 0) {
                               break L27;
                             }
                           }
-                          var6 = var6 + fi.smallFont.a(wj.a(jk.fullscreenAcceptCountdownPluralText, new String[]{var8_ref_String}, (byte) -45), 170, var6, 300, 300, 0, -1, 1, 0, 16) * 16;
+                          var6 = var6 + fi.smallFont.drawParagraph(wj.a(jk.fullscreenAcceptCountdownPluralText, new String[]{var8_ref_String}, (byte) -45), 170, var6, 300, 300, 0, -1, 1, 0, 16) * 16;
                         }
                         L29: {
                           var6 += 40;
@@ -671,7 +671,7 @@ final class GameScreen extends MenuScreen {
                           dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
                         }
                         L31: {
-                          dd.uiPaletteFont.b(rb.fullscreenCancelButtonText, var11, 30 + var6, 0, -1);
+                          dd.uiPaletteFont.drawCenteredText(rb.fullscreenCancelButtonText, var11, 30 + var6, 0, -1);
                           dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
                           var10 = 320 - (20 + var9 >> 1) - 90;
                           var11 = 10 + (var9 >> 1) + var10;
@@ -695,7 +695,7 @@ final class GameScreen extends MenuScreen {
                           }
                           dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
                         }
-                        dd.uiPaletteFont.b(pb.fullscreenAcceptButtonText, var11, 30 + var6, 0, -1);
+                        dd.uiPaletteFont.drawCenteredText(pb.fullscreenAcceptButtonText, var11, 30 + var6, 0, -1);
                         dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
                         if (var12 == 0) {
                           break L7;
@@ -711,7 +711,7 @@ final class GameScreen extends MenuScreen {
                         SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, var5);
                         ma.drawNineSlicePanel(170, 160, 80, (byte) -92, 320, ll.frameNineSliceSprites);
                         var6 = 180;
-                        fi.smallFont.a(ki.fullscreenNonmemberText, 170, var6, 300, 300, 0, -1, 1, 0, 16);
+                        fi.smallFont.drawParagraph(ki.fullscreenNonmemberText, 170, var6, 300, 300, 0, -1, 1, 0, 16);
                         var7 = 242;
                         var8 = 320 - (var7 + 20 >> 1);
                         var9 = 10 + (var8 + (var7 >> 1));
@@ -733,7 +733,7 @@ final class GameScreen extends MenuScreen {
                         }
                         dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
                       }
-                      dd.uiPaletteFont.b(hh.fullscreenCloseButtonText, var9, 30 + var6, 0, -1);
+                      dd.uiPaletteFont.drawCenteredText(hh.fullscreenCloseButtonText, var9, 30 + var6, 0, -1);
                       dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
                       if (var12 == 0) {
                         break L7;
@@ -1128,7 +1128,7 @@ final class GameScreen extends MenuScreen {
         RuntimeException var2_ref = null;
         int var3 = 0;
         String[] var3_ref_String__ = null;
-        bg var4 = null;
+        MonochromeBitmapFont var4 = null;
         int[] var5 = null;
         String var5_ref = null;
         int var6 = 0;
@@ -1170,8 +1170,8 @@ final class GameScreen extends MenuScreen {
               if (null != ca.field_f.field_k) {
                 if (!ca.field_f.field_j) {
                   var2 = eb.field_f;
-                  var3 = 76 + (150 + dd.uiPaletteFont.field_o);
-                  dd.uiPaletteFont.b(var2, 322, var3, 0, -1);
+                  var3 = 76 + (150 + dd.uiPaletteFont.maxAscent);
+                  dd.uiPaletteFont.drawCenteredText(var2, 322, var3, 0, -1);
                   if (var10 == 0) {
                     break L5;
                   }
@@ -1182,7 +1182,7 @@ final class GameScreen extends MenuScreen {
                   var4 = fi.smallFont;
                   if (var3_ref_String__ != null) {
                     var5 = ca.field_f.field_h[da.field_c];
-                    var6 = var4.field_o + 150;
+                    var6 = var4.maxAscent + 150;
                     var7 = 0;
                     var8_int = 0;
                     L9: while (true) {
@@ -1201,9 +1201,9 @@ final class GameScreen extends MenuScreen {
                                   if (var5[var8_int] == Math.abs(el.gameplaySession.score)) {
                                     if (ge.a(var9, (byte) 12)) {
                                       var7 = 1;
-                                      var4.c(1 + var8_int + ". ", 165, var6, 16610816, -1);
-                                      var4.a(var9, 165, var6, 16610816, -1);
-                                      var4.c(Integer.toString(var5[var8_int]), 500, var6, 16610816, -1);
+                                      var4.drawRightAlignedText(1 + var8_int + ". ", 165, var6, 16610816, -1);
+                                      var4.drawText(var9, 165, var6, 16610816, -1);
+                                      var4.drawRightAlignedText(Integer.toString(var5[var8_int]), 500, var6, 16610816, -1);
                                       if (var10 == 0) {
                                         break L12;
                                       }
@@ -1211,9 +1211,9 @@ final class GameScreen extends MenuScreen {
                                   }
                                 }
                               }
-                              var4.c(1 + var8_int + ". ", 165, var6, 1, -1);
-                              var4.a(var9, 165, var6, 1, -1);
-                              var4.c(Integer.toString(var5[var8_int]), 500, var6, 1, -1);
+                              var4.drawRightAlignedText(1 + var8_int + ". ", 165, var6, 1, -1);
+                              var4.drawText(var9, 165, var6, 1, -1);
+                              var4.drawRightAlignedText(Integer.toString(var5[var8_int]), 500, var6, 1, -1);
                             }
                           }
                           var6 += 15;
@@ -1238,8 +1238,8 @@ final class GameScreen extends MenuScreen {
                       }
                       {
                         var8 = SecondaryDeque.field_f;
-                        var4.a(var8, 165, var6, 16724225, -1);
-                        var4.c(Integer.toString(Math.abs(el.gameplaySession.score)), 500, var6, 16724225, -1);
+                        var4.drawText(var8, 165, var6, 16724225, -1);
+                        var4.drawRightAlignedText(Integer.toString(Math.abs(el.gameplaySession.score)), 500, var6, 16724225, -1);
                         break L8;
                       }
                     }
@@ -1247,8 +1247,8 @@ final class GameScreen extends MenuScreen {
                 }
                 if (var2_int == 0) {
                   var5_ref = sb.noHighscoresText;
-                  var6 = 76 + dd.uiPaletteFont.field_o + 150;
-                  dd.uiPaletteFont.b(var5_ref, 322, var6, 0, -1);
+                  var6 = 76 + dd.uiPaletteFont.maxAscent + 150;
+                  dd.uiPaletteFont.drawCenteredText(var5_ref, 322, var6, 0, -1);
                 }
                 if (var10 == 0) {
                   break L5;
@@ -1264,15 +1264,15 @@ final class GameScreen extends MenuScreen {
               }
               var2 = sb.noHighscoresText;
             }
-            var3 = 150 - (-dd.uiPaletteFont.field_o - 76);
-            dd.uiPaletteFont.b(var2, 322, var3, 0, -1);
+            var3 = 150 - (-dd.uiPaletteFont.maxAscent - 76);
+            dd.uiPaletteFont.drawCenteredText(var2, 322, var3, 0, -1);
             if (fh.c(param0 - 147)) {
-              dd.uiPaletteFont.a(ni.createToUseText, 125, 350, 395, 100, 0, -1, 1, 0, 26);
+              dd.uiPaletteFont.drawParagraph(ni.createToUseText, 125, 350, 395, 100, 0, -1, 1, 0, 26);
             }
           }
           if (!fh.c(param0 ^ -109)) {
             var2 = ue.highscoreFriendTipText;
-            fi.smallFont.a(var2, 140, 325, 360, 300, 0, -1, 1, 0, 16);
+            fi.smallFont.drawParagraph(var2, 140, 325, 360, 300, 0, -1, 1, 0, 16);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1763,24 +1763,24 @@ final class GameScreen extends MenuScreen {
           }
           L4: {
             ma.drawNineSlicePanel(140, 550, 40, (byte) -92, 60, ll.frameNineSliceSprites);
-            dd.uiPaletteFont.b(param1 + 1 + "/5", 580, 170, 0, -1);
+            dd.uiPaletteFont.drawCenteredText(param1 + 1 + "/5", 580, 170, 0, -1);
             var4 = null;
             var5 = 155;
             var6 = param1;
             if (var6 == 0) {
-              dd.uiPaletteFont.a(a.field_a[0], var5, var3_int, 0, -1);
+              dd.uiPaletteFont.drawText(a.field_a[0], var5, var3_int, 0, -1);
               var4 = ec.field_e[0];
-              dd.uiPaletteFont.a(a.field_a[1], var5, var3_int + 110, 0, -1);
+              dd.uiPaletteFont.drawText(a.field_a[1], var5, var3_int + 110, 0, -1);
             } else {
               if (1 == var6) {
                 if (var11 == 0) {
-                  dd.uiPaletteFont.a(a.field_a[2], var5, var3_int, 0, -1);
+                  dd.uiPaletteFont.drawText(a.field_a[2], var5, var3_int, 0, -1);
                   var4 = ec.field_e[1];
                   break L4;
                 }
               }
               if (var6 == 2) {
-                dd.uiPaletteFont.a(a.field_a[3], var5, var3_int, 0, -1);
+                dd.uiPaletteFont.drawText(a.field_a[3], var5, var3_int, 0, -1);
                 var4 = ec.field_e[2];
               } else {
                 if (var6 == 3) {
@@ -1797,7 +1797,7 @@ final class GameScreen extends MenuScreen {
                   SoftwareRasterizer.restoreClip(this.field_P);
                   vf.spriteScratchRaster.addOutline(1);
                   vf.spriteScratchRaster.draw(70 - (vf.spriteScratchRaster.fullWidth >> 1), 282 - (vf.spriteScratchRaster.fullHeight >> 1));
-                  dd.uiPaletteFont.a(a.field_a[4], var5, var3_int, 0, -1);
+                  dd.uiPaletteFont.drawText(a.field_a[4], var5, var3_int, 0, -1);
                   var4 = ec.field_e[3];
                 } else {
                   if (4 == var6) {
@@ -1818,19 +1818,19 @@ final class GameScreen extends MenuScreen {
                     sh.mainRasterBuffer.setAsRasterTarget(255);
                     SoftwareRasterizer.restoreClip(this.field_P);
                     vf.spriteScratchRaster.draw(70 - (vf.spriteScratchRaster.fullWidth >> 1), -(vf.spriteScratchRaster.fullHeight >> 1) + 282);
-                    dd.uiPaletteFont.a(a.field_a[5], var5, var3_int, 0, -1);
+                    dd.uiPaletteFont.drawText(a.field_a[5], var5, var3_int, 0, -1);
                     var4 = ec.field_e[4];
                   }
                 }
               }
             }
           }
-          var6 = fi.smallFont.field_o + fi.smallFont.field_q;
+          var6 = fi.smallFont.maxAscent + fi.smallFont.maxDescent;
           if (param0 > -14) {
             this.handleMenuPointer(-3, -61, false, -67, true, 116);
           }
           var7 = 355;
-          var3_int = var3_int + fi.smallFont.a((String) (var4), var5, var3_int, var7, 300, 0, -1, 0, 0, 16) * var6;
+          var3_int = var3_int + fi.smallFont.drawParagraph((String) (var4), var5, var3_int, var7, 300, 0, -1, 0, 0, 16) * var6;
           SoftwareRasterizer.restoreClip(this.field_P);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2665,7 +2665,7 @@ final class GameScreen extends MenuScreen {
                 break L11;
               }
             }
-            var11 = var8.c(var7, 400);
+            var11 = var8.measureMaximumWrappedWidth(var7, 400);
           }
           L14: {
             if (this.screenId != 3) {
@@ -2813,7 +2813,7 @@ final class GameScreen extends MenuScreen {
                   break L36;
                 }
               }
-              var8.c(var7, 285 + var12, 30 + rowY, 0, -1);
+              var8.drawRightAlignedText(var7, 285 + var12, 30 + rowY, 0, -1);
               sd.barSprite.draw(var12 + 280, rowY + 15);
               if (actionId == 8) {
                 stackIn_153_0 = j.field_gb;
@@ -2827,7 +2827,7 @@ final class GameScreen extends MenuScreen {
                 break L35;
               }
             }
-            var8.b(var7, var9, rowY + 30, 0, -1);
+            var8.drawCenteredText(var7, var9, rowY + 30, 0, -1);
           }
           dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
           return;

@@ -4,7 +4,7 @@
 final class fh implements dh {
     private int field_a;
     private int field_b;
-    private m field_d;
+    private BitmapFont field_d;
     static int field_c;
     static Sprite[] field_e;
 
@@ -102,7 +102,7 @@ final class fh implements dh {
             stackIn_5_0 = 3249872;
           }
           var6_int = stackIn_5_0;
-          this.field_d.a("<u=" + Integer.toString(var6_int, 16) + ">" + param4.field_s + "</u>", param4.field_v + param0, param2 + param4.field_m, param4.field_r, param4.field_h, var6_int, -1, this.field_b, this.field_a, this.field_d.field_o + this.field_d.field_q);
+          this.field_d.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param4.field_s + "</u>", param4.field_v + param0, param2 + param4.field_m, param4.field_r, param4.field_h, var6_int, -1, this.field_b, this.field_a, this.field_d.maxAscent + this.field_d.maxDescent);
           if (param1 > -5) {
             fh.a(53L, -116);
           }
@@ -110,8 +110,8 @@ final class fh implements dh {
             return;
           }
           {
-            var7 = this.field_d.a(param4.field_s);
-            var8 = this.field_d.field_q + this.field_d.field_o;
+            var7 = this.field_d.measureTextWidth(param4.field_s);
+            var8 = this.field_d.maxDescent + this.field_d.maxAscent;
             var9 = param4.field_v + param0;
             if (this.field_b == 2) {
               var9 = var9 + (-var7 + param4.field_r);
@@ -151,7 +151,7 @@ final class fh implements dh {
         this.field_d = ng.field_F;
     }
 
-    fh(m param0, int param1, int param2) {
+    fh(BitmapFont param0, int param1, int param2) {
         try {
             this.field_a = param2;
             this.field_b = param1;

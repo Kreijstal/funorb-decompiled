@@ -18,8 +18,8 @@ final class gf {
         }
         eh.pendingActionPanelTop = 480;
         kj.field_J = 0;
-        jf.pendingActionPanelWidth = 72 + dd.uiPaletteFont.c(pg.achievementTitles[pendingActionMarker.actionId], 100);
-        tl.pendingActionPanelHeight = 30 * dd.uiPaletteFont.b(pg.achievementTitles[pendingActionMarker.actionId], 100) + 30;
+        jf.pendingActionPanelWidth = 72 + dd.uiPaletteFont.measureMaximumWrappedWidth(pg.achievementTitles[pendingActionMarker.actionId], 100);
+        tl.pendingActionPanelHeight = 30 * dd.uiPaletteFont.countWrappedLines(pg.achievementTitles[pendingActionMarker.actionId], 100) + 30;
         if (62 > tl.pendingActionPanelHeight) {
             tl.pendingActionPanelHeight = 62;
             return;

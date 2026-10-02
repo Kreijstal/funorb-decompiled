@@ -105,7 +105,7 @@ final class s extends ee implements pe, pl {
             this.field_K.field_q = (dh) ((Object) new ml());
             var7 = wj.a(nk.createUnder13TermsText, new String[]{this.f(11501), this.c(false)}, (byte) -114);
             var3 = 20;
-            var4 = new ff(ng.field_F, 0, 0, 0, 0, 16777215, -1, 3, 0, ng.field_F.field_o, -1, 2147483647, true);
+            var4 = new ff(ng.field_F, 0, 0, 0, 0, 16777215, -1, 3, 0, ng.field_F.maxAscent, -1, 2147483647, true);
             this.field_J = new vf(var7, var4);
             this.field_J.field_j = "";
             this.field_J.a(0, -47, eh.openInPopupWindowText);

@@ -9,7 +9,7 @@ final class fi {
     private int field_c;
     private int field_f;
     private IntrusiveNode field_g;
-    static bg smallFont;
+    static MonochromeBitmapFont smallFont;
 
     final IntrusiveNode a(long param0, byte param1) {
         IntrusiveNode var5 = null;
@@ -60,7 +60,7 @@ final class fi {
             param1.previousNode.nextNode = param1;
             param1.field_a = param2;
             if (param0 != 102) {
-                smallFont = (bg) null;
+                smallFont = (MonochromeBitmapFont) null;
             }
             param1.nextNode.previousNode = param1;
         } catch (RuntimeException runtimeException) {

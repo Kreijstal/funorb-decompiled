@@ -6,7 +6,7 @@ final class ni extends ee implements pl {
     private f field_J;
     private hk[] field_F;
     private int[] field_H;
-    private m field_G;
+    private BitmapFont field_G;
     private int field_D;
     static String createToUseText;
     static int field_I;
@@ -28,7 +28,7 @@ final class ni extends ee implements pl {
         this.field_H = var4;
         this.field_D = param1;
         if (param0 != -11272) {
-            this.field_G = (m) null;
+            this.field_G = (BitmapFont) null;
         }
     }
 
@@ -125,7 +125,7 @@ final class ni extends ee implements pl {
         }
     }
 
-    ni(f param0, m param1, String param2) {
+    ni(f param0, BitmapFont param1, String param2) {
         super(0, 0, 288, 0, (dh) null);
         int var4_int = 0;
         this.field_D = 0;
@@ -133,7 +133,7 @@ final class ni extends ee implements pl {
             this.field_G = param1;
             this.field_J = param0;
             this.field_K = param2;
-            var4_int = null == this.field_K ? 0 : this.field_G.b(this.field_K, 260, this.field_G.field_o);
+            var4_int = null == this.field_K ? 0 : this.field_G.measureWrappedHeight(this.field_K, 260, this.field_G.maxAscent);
             this.a(var4_int + 22, 288, (byte) -119, 0, 0);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "ni.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -165,7 +165,7 @@ final class ni extends ee implements pl {
 
     final void a(int param0, int param1, byte param2, int param3) {
         super.a(param0, param1, (byte) 54, param3);
-        this.field_G.a(this.field_K, this.field_v + (param0 + 14), 10 + param1 + this.field_m, this.field_r - 28, this.field_h, 16777215, -1, 0, 0, this.field_G.field_o);
+        this.field_G.drawParagraph(this.field_K, this.field_v + (param0 + 14), 10 + param1 + this.field_m, this.field_r - 28, this.field_h, 16777215, -1, 0, 0, this.field_G.maxAscent);
         int var5 = 35 / ((param2 - 1) / 43);
     }
 

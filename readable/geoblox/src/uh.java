@@ -57,7 +57,7 @@ final class uh extends ac {
         return ee.field_B[el.field_t % ee.field_B.length];
     }
 
-    private uh(m param0, int param1) {
+    private uh(BitmapFont param0, int param1) {
         super(param0, param1);
     }
 

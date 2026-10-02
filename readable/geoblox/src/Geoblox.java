@@ -186,7 +186,7 @@ public final class Geoblox extends wf {
                 keyboardWidthsForFill[keyboardIconIndex] = keyboardIconSprites[keyboardIconIndex].fullHeight - 3;
                 keyboardIconIndex++;
             }
-            fi.smallFont.a(keyboardIconSprites, keyboardIconAdvanceWidths);
+            fi.smallFont.setInlineImages(keyboardIconSprites, keyboardIconAdvanceWidths);
             sh.mainRasterBuffer.setAsRasterTarget(255);
             kh.screenTitleSprites[0] = ug.loadSprite("main_title", ll.gameGraphicsArchive, (byte) -78, "");
             kh.screenTitleSprites[2] = ug.loadSprite("bestscoreseach_title", ll.gameGraphicsArchive, (byte) -78, "");
@@ -407,7 +407,7 @@ public final class Geoblox extends wf {
         ue.a(true);
         w.a((byte) 102);
         bl.a(param0 ^ 9769);
-        m.a();
+        BitmapFont.releaseTextScratchStorage();
         DualLinkNode.c((byte) -110);
         SpriteState.f(param0 ^ -5558);
         PendingActionMarker.c((byte) 45);
@@ -818,7 +818,7 @@ public final class Geoblox extends wf {
               if (var2 != 2) {
                 break L5;
               }
-              oh.a(320, 240, fi.smallFont, fi.smallFont.field_o * 3 >> 1, -128, fi.smallFont.field_o);
+              oh.a(320, 240, fi.smallFont, fi.smallFont.maxAscent * 3 >> 1, -128, fi.smallFont.maxAscent);
             }
           } else {
             if (kg.field_o) {

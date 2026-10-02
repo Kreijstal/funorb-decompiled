@@ -85,7 +85,7 @@ final class AccountWelcomePanel extends ee implements pl {
             int var5_int = 90 % ((1 - param2) / 43);
             var6 = param0 + this.field_v;
             var7 = param1 + this.field_m;
-            ng.field_F.a(ji.createWelcomeText, var6 + 20, 20 + var7, -40 + this.field_r, this.field_h - 50, 16777215, -1, 1, 0, ng.field_F.field_o);
+            ng.field_F.drawParagraph(ji.createWelcomeText, var6 + 20, 20 + var7, -40 + this.field_r, this.field_h - 50, 16777215, -1, 1, 0, ng.field_F.maxAscent);
             super.a(param0, param1, (byte) 63, param3);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "wi.FA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');

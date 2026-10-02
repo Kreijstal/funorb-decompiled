@@ -8,7 +8,7 @@ final class hb implements dh {
     private int field_m;
     static String playFreeVersionText;
     private int field_e;
-    private m field_a;
+    private BitmapFont field_a;
     private int field_i;
     private int field_g;
     private int field_c;
@@ -46,7 +46,7 @@ final class hb implements dh {
             SoftwareRasterizer.drawLine(var7, var8, var11 + var7, var12 + var8, 1);
             if (this.field_a != null) {
                 var13 = this.field_c + (var14.field_E + var14.field_K);
-                this.field_a.a(param4.field_s, var13 + (param0 + param4.field_v), param2 + param4.field_m + this.field_i, param4.field_r - (this.field_c + var13), -(this.field_c << 1) + param4.field_h, this.field_m, this.field_k, 1, 1, 0);
+                this.field_a.drawParagraph(param4.field_s, var13 + (param0 + param4.field_v), param2 + param4.field_m + this.field_i, param4.field_r - (this.field_c + var13), -(this.field_c << 1) + param4.field_h, this.field_m, this.field_k, 1, 1, 0);
             }
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "hb.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
@@ -68,7 +68,7 @@ final class hb implements dh {
         silverStarFrames = null;
     }
 
-    hb(m param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    hb(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
             this.field_e = param5;
             this.field_f = param7;

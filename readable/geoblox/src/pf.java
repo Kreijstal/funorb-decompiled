@@ -187,7 +187,7 @@ final class pf extends ee implements ga, pl {
 
     final void a(int param0, int param1, byte param2, int param3) {
         if (!(this.field_L == null)) {
-            ng.field_F.a(this.field_L, this.field_v + param0 + 20, 15 + this.field_m + param1, -40 + this.field_r, this.field_h, 16777215, -1, 1, 0, ng.field_F.field_o);
+            ng.field_F.drawParagraph(this.field_L, this.field_v + param0 + 20, 15 + this.field_m + param1, -40 + this.field_r, this.field_h, 16777215, -1, 1, 0, ng.field_F.maxAscent);
         }
         if (null != this.field_M) {
             SoftwareRasterizer.drawHorizontalLine(10 + param0, 134 + param1, -20 + this.field_r, 4210752);
@@ -749,7 +749,7 @@ final class pf extends ee implements ga, pl {
         RuntimeException decompiledCaughtException = null;
         ml var6 = null;
         RuntimeException var6_ref = null;
-        m var7 = null;
+        BitmapFont var7 = null;
         String var8 = null;
         od var9 = null;
         hd var12 = null;
@@ -835,7 +835,7 @@ final class pf extends ee implements ga, pl {
           this.field_m = 15;
           var7 = ng.field_F;
           if (this.field_L != null) {
-            this.field_m = this.field_m + (var7.b(this.field_L, this.field_r - 40, var7.field_o) + 5);
+            this.field_m = this.field_m + (var7.measureWrappedHeight(this.field_L, this.field_r - 40, var7.maxAscent) + 5);
           }
           var8 = jj.loginUsernameEmailText;
           var9 = th.a(k.c(120), 200);

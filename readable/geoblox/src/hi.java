@@ -25,7 +25,7 @@ final class hi extends ee implements ta, pl {
     public hi() {
         super(0, 0, 496, 0, (dh) null);
         this.field_E = new hc("", (bb) null, 12);
-        ff var1 = new ff(hh.field_d, 0, 0, 0, 0, 16777215, -1, 3, 0, ng.field_F.field_o, -1, 2147483647, true);
+        ff var1 = new ff(hh.field_d, 0, 0, 0, 0, 16777215, -1, 3, 0, ng.field_F.maxAscent, -1, 2147483647, true);
         el var2 = new el(sb.loginNoDisplayNameText, var1, (bb) null);
         this.field_H = new hk(ec.okText, (bb) null);
         this.field_J = new hk(ck.cancelText, (bb) null);

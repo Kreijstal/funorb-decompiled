@@ -10,7 +10,7 @@ final class jf implements dh {
     static int avatarTintFadeTicks;
     static Sprite rotatedThemeForegroundRaster;
     private int field_h;
-    private m field_f;
+    private BitmapFont field_f;
     private int field_k;
     private int field_l;
     static int pendingActionPanelWidth;
@@ -63,7 +63,7 @@ final class jf implements dh {
             if (null == this.field_f) {
               return;
             }
-            this.field_f.b(var12.field_s, var8 + var7 / 2, this.field_f.field_p + var9 + var12.field_G, this.field_k, this.field_l);
+            this.field_f.drawCenteredText(var12.field_s, var8 + var7 / 2, this.field_f.lineAdvance + var9 + var12.field_G, this.field_k, this.field_l);
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -370,7 +370,7 @@ final class jf implements dh {
         }
     }
 
-    jf(m param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    jf(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
             this.field_d = param3;
             this.field_h = param4;

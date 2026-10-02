@@ -11,7 +11,7 @@ class f extends qf implements pl {
     static java.awt.Canvas field_kb;
     static String fullscreenTimeoutText;
     private boolean field_ob;
-    private m field_jb;
+    private BitmapFont field_jb;
     static String[] quickChatShortcutKeys;
     private hl field_pb;
 
@@ -67,7 +67,7 @@ class f extends qf implements pl {
         }
     }
 
-    f(ng param0, m param1, String param2, boolean param3, boolean param4) {
+    f(ng param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new ni((f) null, param1, param2), 77, 10, 10);
         try {
             this.field_gb = param4 ? true : false;

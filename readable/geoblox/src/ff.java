@@ -4,7 +4,7 @@
 class ff implements dh, cc {
     int field_g;
     private boolean field_q;
-    m field_n;
+    BitmapFont field_n;
     static java.awt.Image field_a;
     static String waitingForGraphicsText;
     int field_e;
@@ -75,30 +75,30 @@ class ff implements dh, cc {
                     if (var12 != 1) {
                     }
                   }
-                  var11 = (-this.field_n.field_o + (var10 - this.field_n.field_q) >> 1) + this.field_n.field_o;
+                  var11 = (-this.field_n.maxAscent + (var10 - this.field_n.maxDescent) >> 1) + this.field_n.maxAscent;
                 } else {
-                  var11 = var10 - this.field_n.field_q;
+                  var11 = var10 - this.field_n.maxDescent;
                 }
               } else {
-                var11 = this.field_n.field_o;
+                var11 = this.field_n.maxAscent;
               }
               var12 = this.field_g;
               if (var12 != 0) {
                 if (var12 != 3) {
                   if (var12 == 1) {
-                    this.field_n.b(this.c(125, param2), this.a(param2, param7, 11875, param6) + (var9_int >> 1), this.b(param2, param0, 1674, param4) + var11, param5, param1);
+                    this.field_n.drawCenteredText(this.c(125, param2), this.a(param2, param7, 11875, param6) + (var9_int >> 1), this.b(param2, param0, 1674, param4) + var11, param5, param1);
                     break L0;
                   }
                   if (var12 != 2) {
                     break L0;
                   }
-                  this.field_n.c(this.c(112, param2), var9_int + this.a(param2, param7, param3 + 11875, param6), var11 + this.b(param2, param0, 1674, param4), param5, param1);
+                  this.field_n.drawRightAlignedText(this.c(112, param2), var9_int + this.a(param2, param7, param3 + 11875, param6), var11 + this.b(param2, param0, 1674, param4), param5, param1);
                   break L0;
                 }
               }
-              this.field_n.a(this.c(121, param2), this.a(param2, param7, 11875, param6), this.b(param2, param0, 1674, param4) + var11, param5, param1);
+              this.field_n.drawText(this.c(121, param2), this.a(param2, param7, 11875, param6), this.b(param2, param0, 1674, param4) + var11, param5, param1);
             } else {
-              this.field_n.a(this.c(113, param2), this.a(param2, param7, 11875, param6), this.b(param2, param0, 1674, param4), var9_int, var10, param5, param1, this.field_g, this.field_i, this.field_f);
+              this.field_n.drawParagraph(this.c(113, param2), this.a(param2, param7, 11875, param6), this.b(param2, param0, 1674, param4), var9_int, var10, param5, param1, this.field_g, this.field_i, this.field_f);
             }
           }
           if (param3 != 0) {
@@ -161,12 +161,12 @@ class ff implements dh, cc {
                   if (var6 == 1) {
                   }
                 }
-                var5 = (var4 - (this.field_n.field_o + this.field_n.field_q) >> 1) + this.field_n.field_o;
+                var5 = (var4 - (this.field_n.maxAscent + this.field_n.maxDescent) >> 1) + this.field_n.maxAscent;
               } else {
-                var5 = var4 - this.field_n.field_q;
+                var5 = var4 - this.field_n.maxDescent;
               }
             } else {
-              var5 = this.field_n.field_o;
+              var5 = this.field_n.maxAscent;
             }
             L3: {
               L4: {
@@ -249,7 +249,7 @@ class ff implements dh, cc {
         }
     }
 
-    ff(m param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    ff(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
@@ -500,7 +500,7 @@ class ff implements dh, cc {
             el var3 = (el) null;
             this.a(79, -83, (el) null, -31, 118, 54, 3, -68);
         }
-        return this.field_n.field_o + this.field_n.field_q;
+        return this.field_n.maxAscent + this.field_n.maxDescent;
     }
 
     private final int b(int param0, el param1) {
@@ -706,7 +706,7 @@ class ff implements dh, cc {
     protected ff() {
     }
 
-    ff(m param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    ff(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         try {
             this.field_i = param8;
             this.field_q = param12 ? true : false;

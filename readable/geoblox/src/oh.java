@@ -6,7 +6,7 @@ final class oh {
     static String unpackingGraphicsText;
     static ng field_b;
 
-    final static void a(int param0, int param1, m param2, int param3, int param4, int param5) {
+    final static void a(int param0, int param1, BitmapFont param2, int param3, int param4, int param5) {
         try {
             kd.b((byte) 107);
             int var6_int = 72 % ((param4 + 78) / 44);

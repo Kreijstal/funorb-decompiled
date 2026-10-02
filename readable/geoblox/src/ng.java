@@ -5,7 +5,7 @@ final class ng extends sh {
     static boolean[] field_E;
     private IntrusiveDeque field_C;
     static int rotatedEntityScreenX;
-    static m field_F;
+    static BitmapFont field_F;
 
     final void f(int param0) {
         int var4 = Geoblox.field_C;
@@ -114,7 +114,7 @@ final class ng extends sh {
         }
         this.field_A = (el) ((Object) this.j(100));
         if (param0 >= -14) {
-            field_F = (m) null;
+            field_F = (BitmapFont) null;
         }
     }
 

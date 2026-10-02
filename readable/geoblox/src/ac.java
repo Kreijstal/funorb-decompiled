@@ -9,8 +9,8 @@ class ac extends ff {
     static int[] field_w;
     static int field_u;
 
-    ac(m param0, int param1) {
-        super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_o, -1, 2147483647, false);
+    ac(BitmapFont param0, int param1) {
+        super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.maxAscent, -1, 2147483647, false);
     }
 
     ac(int param0) {
@@ -214,32 +214,32 @@ class ac extends ff {
           L9: {
             var10 = stackIn_59_0 + stackIn_60_1;
             if (var7 != -1) {
-              fi.smallFont.b(pg.achievementTitles[var7], 315, var10, 0, -1);
-              var11 = -fi.smallFont.field_q + fi.smallFont.field_o;
+              fi.smallFont.drawCenteredText(pg.achievementTitles[var7], 315, var10, 0, -1);
+              var11 = -fi.smallFont.maxDescent + fi.smallFont.maxAscent;
               var12 = 280;
               if (0 != (1 << var7 & var5)) {
                 sl.achievementSprites[var7].draw(160, var12);
                 var12 += 30;
-                dd.uiPaletteFont.a(kd.achievedText, 318, var12, 0, -1);
+                dd.uiPaletteFont.drawText(kd.achievedText, 318, var12, 0, -1);
               } else {
                 am.unachievedSprite.draw(160, var12);
                 var12 += 30;
                 dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
-                dd.uiPaletteFont.a(ib.field_d, 318, var12, 0, -1);
+                dd.uiPaletteFont.drawText(ib.field_d, 318, var12, 0, -1);
                 dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
               }
-              var12 = var12 + (fi.smallFont.a(ri.field_b[var7], 318, var12, 190, 200, 0, -1, 0, 0, 16) * var11 + var11);
+              var12 = var12 + (fi.smallFont.drawParagraph(ri.field_b[var7], 318, var12, 190, 200, 0, -1, 0, 0, 16) * var11 + var11);
               var12 += 10;
-              fi.smallFont.a(wj.a(sl.orbPointsText, new String[]{Integer.toString(th.field_h[var7])}, (byte) -50), 318, 360, 0, -1);
+              fi.smallFont.drawText(wj.a(sl.orbPointsText, new String[]{Integer.toString(th.field_h[var7])}, (byte) -50), 318, 360, 0, -1);
               for (var13 = 0; var13 < kk.field_s[var7]; var13++) {
                 uk.orbCoinSprite.drawQuarterSize(318 + 10 * var13, 370);
               }
               var12 = var12 + var11;
               break L9;
             }
-            fi.smallFont.b(w.mouseOverIconText, 315, var10, 0, -1);
+            fi.smallFont.drawCenteredText(w.mouseOverIconText, 315, var10, 0, -1);
             if (fh.c(-94)) {
-              dd.uiPaletteFont.a(ni.createToUseText, 125, 350, 395, 100, 0, -1, 1, 0, 26);
+              dd.uiPaletteFont.drawParagraph(ni.createToUseText, 125, 350, 395, 100, 0, -1, 1, 0, 26);
             }
           }
           if (param2 > -61) {

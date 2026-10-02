@@ -27,7 +27,7 @@ final class ah {
 
     final static ff a(byte param0) {
         if (ac.field_t == null) {
-            ac.field_t = new ff(hh.field_d, 20, 0, 0, 0, 11579568, -1, 0, 0, hh.field_d.field_o, -1, 2147483647, true);
+            ac.field_t = new ff(hh.field_d, 20, 0, 0, 0, 11579568, -1, 0, 0, hh.field_d.maxAscent, -1, 2147483647, true);
         }
         if (param0 >= -39) {
             ah.a(-8);

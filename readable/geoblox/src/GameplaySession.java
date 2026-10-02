@@ -79,9 +79,9 @@ final class GameplaySession {
         }
         L0: {
           promptText = uk.tutorialMessageForStep(this.tutorialStepId, 24146);
-          lineSpacing = fi.smallFont.field_o - fi.smallFont.field_q + lineSpacingOffset;
+          lineSpacing = fi.smallFont.maxAscent - fi.smallFont.maxDescent + lineSpacingOffset;
           promptWidthThenButtonX = 460;
-          promptHeight = 30 + fi.smallFont.b(promptText, promptWidthThenButtonX) * lineSpacing;
+          promptHeight = 30 + fi.smallFont.countWrappedLines(promptText, promptWidthThenButtonX) * lineSpacing;
           promptTop = 300;
           if (this.tutorialStepId == 0) {
             promptTop = 232;
@@ -102,7 +102,7 @@ final class GameplaySession {
         }
         L3: {
           ma.drawNineSlicePanel(promptTop, 70, 10 + promptHeight, (byte) -92, 500, ll.frameNineSliceSprites);
-          fi.smallFont.a(promptText, 95, 15 + promptTop, promptWidthThenButtonX, 300, 1, -1, 0, 0, lineSpacing);
+          fi.smallFont.drawParagraph(promptText, 95, 15 + promptTop, promptWidthThenButtonX, 300, 1, -1, 0, 0, lineSpacing);
           if (this.tutorialStepId == 5) {
             if (qa.pointerXSnapshot > 100) {
               if (qa.pointerXSnapshot < 340) {
@@ -114,7 +114,7 @@ final class GameplaySession {
               }
             }
             ma.drawNineSlicePanel(440, 100, 36, (byte) -92, 240, eb.mouseBoxFrames);
-            dd.uiPaletteFont.b(cf.field_j, 220, 468, 0, -1);
+            dd.uiPaletteFont.drawCenteredText(cf.field_j, 220, 468, 0, -1);
             dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
             ma.drawNineSlicePanel(440, 380, 36, (byte) -92, 160, eb.mouseBoxFrames);
             if (380 < qa.pointerXSnapshot) {
@@ -126,7 +126,7 @@ final class GameplaySession {
                 }
               }
             }
-            dd.uiPaletteFont.b(nk.startGameText, promptWidthThenButtonX, 468, 0, -1);
+            dd.uiPaletteFont.drawCenteredText(nk.startGameText, promptWidthThenButtonX, 468, 0, -1);
             dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
             if (clientControlFlowGuard == 0) {
               break L3;
@@ -142,7 +142,7 @@ final class GameplaySession {
               }
             }
           }
-          dd.uiPaletteFont.b(mi.field_y, 320, 468, 0, -1);
+          dd.uiPaletteFont.drawCenteredText(mi.field_y, 320, 468, 0, -1);
           dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
         }
     }
@@ -311,9 +311,9 @@ final class GameplaySession {
             themeResourceGroup = "";
           }
           graphicsLoadingMessage = gf.formatArchiveGroupProgress(ff.waitingForGraphicsText, ll.gameGraphicsArchive, themeResourceGroup, AccountWelcomePanel.loadingGraphicsText, true);
-          loadingPanelWidthOrScoreBoxY = 30 + dd.uiPaletteFont.a(graphicsLoadingMessage);
+          loadingPanelWidthOrScoreBoxY = 30 + dd.uiPaletteFont.measureTextWidth(graphicsLoadingMessage);
           ma.drawNineSlicePanel(215, 320 - loadingPanelWidthOrScoreBoxY / 2, 50, (byte) -92, loadingPanelWidthOrScoreBoxY, ll.frameNineSliceSprites);
-          dd.uiPaletteFont.b(graphicsLoadingMessage, 320, 250, 0, -1);
+          dd.uiPaletteFont.drawCenteredText(graphicsLoadingMessage, 320, 250, 0, -1);
           return;
         }
         L11: {
@@ -378,12 +378,12 @@ final class GameplaySession {
             if (10 > tutorialTopOrDebugColorOrTransitionClipTop) {
               tutorialTopOrDebugColorOrTransitionClipTop = 10;
             }
-            tutorialLineHeightOrDebugEntityRadius = -fi.smallFont.field_q + fi.smallFont.field_o;
-            tutorialPanelWidth = fi.smallFont.c(v.tutorialSkipMessage, 640) + 40;
-            tutorialTextHeightOrDebugPanelTop = fi.smallFont.b(v.tutorialSkipMessage, 640) * tutorialLineHeightOrDebugEntityRadius + 10;
+            tutorialLineHeightOrDebugEntityRadius = -fi.smallFont.maxDescent + fi.smallFont.maxAscent;
+            tutorialPanelWidth = fi.smallFont.measureMaximumWrappedWidth(v.tutorialSkipMessage, 640) + 40;
+            tutorialTextHeightOrDebugPanelTop = fi.smallFont.countWrappedLines(v.tutorialSkipMessage, 640) * tutorialLineHeightOrDebugEntityRadius + 10;
             ma.drawNineSlicePanel(tutorialTopOrDebugColorOrTransitionClipTop, -(tutorialPanelWidth / 2) + 320, 20 + tutorialTextHeightOrDebugPanelTop, (byte) -92, tutorialPanelWidth, ll.frameNineSliceSprites);
-            fi.smallFont.b(v.tutorialSkipMessage, 320, tutorialTopOrDebugColorOrTransitionClipTop + 28, 1, -1);
-            fi.smallFont.b(v.tutorialSkipMessage, 319, 28 + tutorialTopOrDebugColorOrTransitionClipTop, 1, -1);
+            fi.smallFont.drawCenteredText(v.tutorialSkipMessage, 320, tutorialTopOrDebugColorOrTransitionClipTop + 28, 1, -1);
+            fi.smallFont.drawCenteredText(v.tutorialSkipMessage, 319, 28 + tutorialTopOrDebugColorOrTransitionClipTop, 1, -1);
             if (clientControlFlowGuard == 0) {
               break L19;
             }
@@ -526,9 +526,9 @@ final class GameplaySession {
                             if (tutorialTextHeightOrDebugPanelTop < 10) {
                               tutorialTextHeightOrDebugPanelTop = 10;
                             }
-                            debugTutorialLineHeight = fi.smallFont.field_o - fi.smallFont.field_q;
-                            debugTutorialPanelWidth = fi.smallFont.c(v.tutorialSkipMessage, 640) + 40;
-                            debugEntityXOrTutorialTextHeight = fi.smallFont.b(v.tutorialSkipMessage, 640) * debugTutorialLineHeight + 10;
+                            debugTutorialLineHeight = fi.smallFont.maxAscent - fi.smallFont.maxDescent;
+                            debugTutorialPanelWidth = fi.smallFont.measureMaximumWrappedWidth(v.tutorialSkipMessage, 640) + 40;
+                            debugEntityXOrTutorialTextHeight = fi.smallFont.countWrappedLines(v.tutorialSkipMessage, 640) * debugTutorialLineHeight + 10;
                             SoftwareRasterizer.fillRectangle((320 - debugTutorialPanelWidth / 2) / 2, tutorialTextHeightOrDebugPanelTop / 2, debugTutorialPanelWidth / 2, (20 + debugEntityXOrTutorialTextHeight) / 2, tutorialTopOrDebugColorOrTransitionClipTop);
                             break L43;
                           }
@@ -563,17 +563,17 @@ final class GameplaySession {
           if (!this.tutorialMode) {
             if (this.delayedActionCountdown > 0) {
               lj.smallBoxSprite.draw(-(lj.smallBoxSprite.fullWidth >> 1) + 320, 60 - (lj.smallBoxSprite.fullHeight >> 1) + 240);
-              dd.uiPaletteFont.b(KeyboardInputListener.field_b, 320, 310, 0, -1);
+              dd.uiPaletteFont.drawCenteredText(KeyboardInputListener.field_b, 320, 310, 0, -1);
             }
             eg.pointsPanelGlowFrames[this.pointsPanelFrameIndex].draw(this.pointsPanelX, 4);
             if (640 > this.pointsPanelX) {
               if (0 < this.pendingPopupPoints) {
-                dd.uiPaletteFont.a(wj.a(ic.field_a, new String[]{this.popupPointsText.toString()}, (byte) -79), this.pointsPanelX + 20, 34, 0, -1);
+                dd.uiPaletteFont.drawText(wj.a(ic.field_a, new String[]{this.popupPointsText.toString()}, (byte) -79), this.pointsPanelX + 20, 34, 0, -1);
               }
             }
             if (this.showSessionCounters) {
-              dd.uiPaletteFont.a(wj.a(sh.field_z, new String[]{Integer.toString(ec.field_b)}, (byte) -26), 400, 50, 0, -1);
-              dd.uiPaletteFont.a(wj.a(qg.field_e, new String[]{Integer.toString(ji.difficultyStep)}, (byte) -71), 400, 80, 0, -1);
+              dd.uiPaletteFont.drawText(wj.a(sh.field_z, new String[]{Integer.toString(ec.field_b)}, (byte) -26), 400, 50, 0, -1);
+              dd.uiPaletteFont.drawText(wj.a(qg.field_e, new String[]{Integer.toString(ji.difficultyStep)}, (byte) -71), 400, 80, 0, -1);
             }
             L53: {
               bd.drawScorePopups(-117);
@@ -591,7 +591,7 @@ final class GameplaySession {
               }
             }
             L55: {
-              dd.uiPaletteFont.a(wj.a(pa.field_a, new String[]{this.scoreText.toString()}, (byte) -53), 15 + selectedThemeIdOrScoreBoxX, 30 + loadingPanelWidthOrScoreBoxY, 0, -1);
+              dd.uiPaletteFont.drawText(wj.a(pa.field_a, new String[]{this.scoreText.toString()}, (byte) -53), 15 + selectedThemeIdOrScoreBoxX, 30 + loadingPanelWidthOrScoreBoxY, 0, -1);
               if (ih.areEntityQueuesSettled(0)) {
                 L56: {
                   if (0 != this.sessionPhase) {
@@ -1652,7 +1652,7 @@ final class GameplaySession {
           if (2 == this.sessionPhase) {
             pk.resultBubbleSprite.drawScaledAlpha(320 - (this.sceneAnimationTick >> 1), 240 - (this.sceneAnimationTick >> 1), this.sceneAnimationTick, this.sceneAnimationTick, 150);
             lj.smallBoxSprite.draw(this.resultPanelX, -(lj.smallBoxSprite.fullHeight >> 1) + 240 + 60);
-            dd.uiPaletteFont.a(sg.field_f, 15 + this.resultPanelX, 312, 0, -1);
+            dd.uiPaletteFont.drawText(sg.field_f, 15 + this.resultPanelX, 312, 0, -1);
             if (clientControlFlowGuard == 0) {
               break L1;
             }
@@ -1662,9 +1662,9 @@ final class GameplaySession {
             pk.resultBubbleSprite.drawScaledAlpha(-(shrinkingDiameter >> 1) + 320, 240 - (shrinkingDiameter >> 1), shrinkingDiameter, shrinkingDiameter, 150);
             lj.smallBoxSprite.draw(-(lj.smallBoxSprite.fullWidth >> 1) + 320, -(lj.smallBoxSprite.fullHeight >> 1) + 240 + 60);
             shrinkingBonusText = Integer.toString(this.resultBonusPoints);
-            dd.uiPaletteFont.b(shrinkingBonusText, 320, 312, 0, -1);
+            dd.uiPaletteFont.drawCenteredText(shrinkingBonusText, 320, 312, 0, -1);
             if (this.boardEmptyAtResultStart) {
-              dd.uiPaletteFont.b(ld.field_a, 320, 352, 0, -1);
+              dd.uiPaletteFont.drawCenteredText(ld.field_a, 320, 352, 0, -1);
             }
             if (clientControlFlowGuard == 0) {
               break L1;
@@ -1673,12 +1673,12 @@ final class GameplaySession {
           k.popSprite.drawAlpha(-(k.popSprite.fullWidth >> 1) + 320, 240 - (k.popSprite.fullHeight >> 1), this.resultSequenceCountdown - 150 + 150);
           lj.smallBoxSprite.draw(-(lj.smallBoxSprite.fullWidth >> 1) + 320, 300 - (lj.smallBoxSprite.fullHeight >> 1));
           countdownBonusText = Integer.toString(this.resultBonusPoints);
-          dd.uiPaletteFont.b(countdownBonusText, 320, 312, 0, -1);
+          dd.uiPaletteFont.drawCenteredText(countdownBonusText, 320, 312, 0, -1);
           if (this.boardEmptyAtResultStart) {
-            dd.uiPaletteFont.b(ld.field_a, 320, 352, 0, -1);
+            dd.uiPaletteFont.drawCenteredText(ld.field_a, 320, 352, 0, -1);
           }
         }
-        dd.uiPaletteFont.a(kd.field_d, 426, 404, 200, 100, 0, -1, 2, 0, 30);
+        dd.uiPaletteFont.drawParagraph(kd.field_d, 426, 404, 200, 100, 0, -1, 2, 0, 30);
     }
 
     private final void updateResultSequence(int methodGuard) {
@@ -1886,31 +1886,31 @@ final class GameplaySession {
         }
         L0: {
           if (this.sessionPhase != 0) {
-            dd.uiPaletteFont.a(tj.field_a, 426, 404, 200, 100, 0, -1, 2, 0, 30);
+            dd.uiPaletteFont.drawParagraph(tj.field_a, 426, 404, 200, 100, 0, -1, 2, 0, 30);
             if (clientControlFlowGuard == 0) {
               break L0;
             }
           }
           remainingThemeReleases = -ul.releasedInCurrentTheme + fa.releasesPerTheme;
           dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
-          dd.uiPaletteFont.c(w.field_e, 621, 441, 0, -1);
+          dd.uiPaletteFont.drawRightAlignedText(w.field_e, 621, 441, 0, -1);
           dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
-          dd.uiPaletteFont.c(od.field_b, 621, 468, 0, -1);
+          dd.uiPaletteFont.drawRightAlignedText(od.field_b, 621, 468, 0, -1);
           if (remainingThemeReleases <= 10) {
             dd.uiPaletteFont.colorPalettes[0][wf.field_p] = mk.field_k[remainingThemeReleases % 5];
-            dd.uiPaletteFont.c(Integer.toString(remainingThemeReleases), 515, 468, 0, -1);
+            dd.uiPaletteFont.drawRightAlignedText(Integer.toString(remainingThemeReleases), 515, 468, 0, -1);
             dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
             if (clientControlFlowGuard == 0) {
               break L0;
             }
           }
           if (remainingThemeReleases <= 99999) {
-            dd.uiPaletteFont.c(Integer.toString(remainingThemeReleases), 515, 468, 0, -1);
+            dd.uiPaletteFont.drawRightAlignedText(Integer.toString(remainingThemeReleases), 515, 468, 0, -1);
             if (clientControlFlowGuard == 0) {
               break L0;
             }
           }
-          dd.uiPaletteFont.c(Integer.toString(99999), 515, 468, 0, -1);
+          dd.uiPaletteFont.drawRightAlignedText(Integer.toString(99999), 515, 468, 0, -1);
         }
         if (methodGuard >= -39) {
           this.resultBonusPoints = 7;

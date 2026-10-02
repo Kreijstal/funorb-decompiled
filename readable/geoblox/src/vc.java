@@ -6,7 +6,7 @@ final class vc extends dk {
     private int field_o;
     private String field_n;
     private int field_m;
-    private m field_p;
+    private BitmapFont field_p;
     private int field_k;
     static String field_g;
     static Sprite menuForegroundSprite;
@@ -42,7 +42,7 @@ final class vc extends dk {
         }
     }
 
-    final void a(int param0, int param1, byte param2, m param3, String param4) {
+    final void a(int param0, int param1, byte param2, BitmapFont param3, String param4) {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -50,7 +50,7 @@ final class vc extends dk {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
-        m var7 = null;
+        BitmapFont var7 = null;
         lk var9 = null;
         lk var10 = null;
         try {
@@ -76,12 +76,12 @@ final class vc extends dk {
             this.field_k = 2;
             var9 = this.a(-1, param1, param3, param4);
             var10 = var9;
-            var10.field_c[0] = param0 - param3.a(param4);
+            var10.field_c[0] = param0 - param3.measureTextWidth(param4);
             var10.field_c[param4.length()] = param0;
             qb.a(0, var10, param4, 60, param3);
             if (param2 >= -12) {
-              var7 = (m) null;
-              this.a(98, 34, (String) null, 56, (m) null, 65, 122, -79);
+              var7 = (BitmapFont) null;
+              this.a(98, 34, (String) null, 56, (BitmapFont) null, 65, 122, -79);
             }
             return;
           }
@@ -105,7 +105,7 @@ final class vc extends dk {
         }
     }
 
-    final void a(String param0, int param1, int param2, byte param3, m param4) {
+    final void a(String param0, int param1, int param2, byte param3, BitmapFont param4) {
         lk var8 = null;
         int var7 = 0;
         if (param0 == null) {
@@ -123,7 +123,7 @@ final class vc extends dk {
             this.field_d = true;
             this.field_p = param4;
             var8 = this.a(-1, param1, param4, param0);
-            var7 = param4.a(param0);
+            var7 = param4.measureTextWidth(param0);
             var8.field_c[0] = param2 - (var7 >> 1);
             var8.field_c[param0.length()] = (var7 >> 1) + param2;
             qb.a(0, var8, param0, 60, param4);
@@ -132,7 +132,7 @@ final class vc extends dk {
         }
     }
 
-    final void a(int param0, int param1, String param2, int param3, m param4) {
+    final void a(int param0, int param1, String param2, int param3, BitmapFont param4) {
         lk var7 = null;
         lk var8 = null;
         if (param2 == null) {
@@ -155,14 +155,14 @@ final class vc extends dk {
             var7 = this.a(-1, param0, param4, param2);
             var8 = var7;
             var7.field_c[0] = param1;
-            var8.field_c[param2.length()] = param4.a(param2) + param1;
+            var8.field_c[param2.length()] = param4.measureTextWidth(param2) + param1;
             qb.a(0, var8, param2, 60, param4);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "vc.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, int param1, String param2, int param3, m param4, int param5, int param6, int param7) {
+    final void a(int param0, int param1, String param2, int param3, BitmapFont param4, int param5, int param6, int param7) {
         lk stackIn_35_0;
         lk stackIn_35_1;
         int stackIn_35_2;
@@ -189,7 +189,7 @@ final class vc extends dk {
         var15 = Geoblox.field_C;
         try {
           if (param3 == 0) {
-            param3 = param4.field_p;
+            param3 = param4.lineAdvance;
           }
           if (param2 == null) {
             this.field_a = null;
@@ -223,9 +223,9 @@ final class vc extends dk {
             this.field_n = param2;
             this.field_d = false;
             this.field_p = param4;
-            var16 = new String[param1 + param4.b(param2, param5)];
+            var16 = new String[param1 + param4.countWrappedLines(param2, param5)];
             var17 = var16;
-            var10 = Math.max(1, param4.a(param2, new int[]{param5}, var17));
+            var10 = Math.max(1, param4.wrapText(param2, new int[]{param5}, var17));
             if (this.field_m == 3) {
               if (var10 == 1) {
                 this.field_m = 1;
@@ -235,27 +235,27 @@ final class vc extends dk {
             if (this.field_m != 0) {
               if (this.field_m != 1) {
                 if (this.field_m == 2) {
-                  var11 = -param4.field_q + this.field_o - var10 * this.field_e;
+                  var11 = -param4.maxDescent + this.field_o - var10 * this.field_e;
                 } else {
                   var12 = (-(this.field_e * var10) + this.field_o) / (var10 + 1);
                   if (var12 < 0) {
                     var12 = 0;
                   }
                   this.field_e = this.field_e + var12;
-                  var11 = param4.field_o + var12;
+                  var11 = param4.maxAscent + var12;
                 }
               } else {
-                var11 = param4.field_o + (this.field_o - this.field_e * var10 >> 1);
+                var11 = param4.maxAscent + (this.field_o - this.field_e * var10 >> 1);
               }
             } else {
-              var11 = param4.field_o;
+              var11 = param4.maxAscent;
             }
             for (var12 = 0; var12 < var10; var12++) {
               var13 = var16[var12];
               stackIn_35_0 = null;
               stackIn_35_1 = null;
-              stackIn_35_2 = -param4.field_o + var11;
-              stackIn_35_3 = var11 + param4.field_q;
+              stackIn_35_2 = -param4.maxAscent + var11;
+              stackIn_35_3 = var11 + param4.maxDescent;
               if (var13 == null) {
                 stackIn_36_0 = null;
                 stackIn_36_1 = null;
@@ -268,11 +268,11 @@ final class vc extends dk {
               var14 = new lk(stackIn_35_2, stackIn_35_3, stackIn_36_4);
               var14.field_c[0] = 0;
               if (var13 != null) {
-                var14.field_c[var13.length()] = param4.a(var13);
+                var14.field_c[var13.length()] = param4.measureTextWidth(var13);
                 if (param6 != 3) {
                   stackIn_40_0 = 0;
                 } else {
-                  stackIn_40_0 = this.a(-116, param4.a(var13), param5, var13);
+                  stackIn_40_0 = this.a(-116, param4.measureTextWidth(var13), param5, var13);
                 }
                 qb.a(stackIn_40_0, var14, var13, 60, param4);
               }
@@ -312,14 +312,14 @@ final class vc extends dk {
             pendingActionDrawTop = eh.pendingActionPanelTop;
             ma.drawNineSlicePanel(pendingActionDrawTop, 10, tl.pendingActionPanelHeight, (byte) -92, jf.pendingActionPanelWidth, ll.frameNineSliceSprites);
             sl.achievementSprites[pendingActionMarkerForDrawing.actionId].drawQuarterSize(25, pendingActionDrawTop + (-32 + (tl.pendingActionPanelHeight - 15)) / 2);
-            dd.uiPaletteFont.a(pg.achievementTitles[pendingActionMarkerForDrawing.actionId], 67, 15 + pendingActionDrawTop, jf.pendingActionPanelWidth - 42 - 30, tl.pendingActionPanelHeight - 30, 0, -1, 1, 1, 30);
+            dd.uiPaletteFont.drawParagraph(pg.achievementTitles[pendingActionMarkerForDrawing.actionId], 67, 15 + pendingActionDrawTop, jf.pendingActionPanelWidth - 42 - 30, tl.pendingActionPanelHeight - 30, 0, -1, 1, 1, 30);
         }
     }
 
-    private final lk a(int param0, int param1, m param2, String param3) {
+    private final lk a(int param0, int param1, BitmapFont param2, String param3) {
         lk var5 = null;
         RuntimeException var5_ref = null;
-        m var6 = null;
+        BitmapFont var6 = null;
         lk var7 = null;
         lk stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -329,11 +329,11 @@ final class vc extends dk {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var7 = new lk(param1 - param2.field_o, param1 + param2.field_q, param3.length());
+          var7 = new lk(param1 - param2.maxAscent, param1 + param2.maxDescent, param3.length());
           var5 = var7;
           if (param0 != -1) {
-            var6 = (m) null;
-            this.a(-65, -103, (String) null, -76, (m) null, -99, 20, -32);
+            var6 = (BitmapFont) null;
+            this.a(-65, -103, (String) null, -76, (BitmapFont) null, -99, 20, -32);
           }
           this.field_a = new lk[]{var7};
           stackIn_3_0 = (lk) (var5);

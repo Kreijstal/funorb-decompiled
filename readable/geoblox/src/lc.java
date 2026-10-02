@@ -262,11 +262,11 @@ final class lc {
         }
     }
 
-    final static bg a(int param0, byte[] param1) {
-        bg var2 = null;
+    final static MonochromeBitmapFont a(int param0, byte[] param1) {
+        MonochromeBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_4_0 = null;
-        bg stackIn_9_0 = null;
+        MonochromeBitmapFont stackIn_9_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -274,14 +274,14 @@ final class lc {
         try {
           if (null == param1) {
             stackIn_4_0 = null;
-            return (bg) ((Object) stackIn_4_0);
+            return (MonochromeBitmapFont) ((Object) stackIn_4_0);
           }
           if (param0 != 4520) {
             lc.blendScaledDebugOverviewPixels(-56, -44, (int[]) null, 118, 4, -55, 25, -98, -82, -78, (byte) -35, (int[]) null, -116);
           }
-          var2 = new bg(param1, GameplaySession.field_m, md.field_e, DualLinkNode.field_j, hl.field_K, mj.field_a);
+          var2 = new MonochromeBitmapFont(param1, GameplaySession.field_m, md.field_e, DualLinkNode.field_j, hl.field_K, mj.field_a);
           kj.c(true);
-          stackIn_9_0 = (bg) (var2);
+          stackIn_9_0 = (MonochromeBitmapFont) (var2);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

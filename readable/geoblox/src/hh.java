@@ -3,9 +3,9 @@
  */
 final class hh {
     static String fullscreenCloseButtonText;
-    static m field_d;
+    static BitmapFont field_d;
     static java.awt.Font field_a;
-    static m field_c;
+    static BitmapFont field_c;
 
     final static sl a(int param0, boolean param1) {
         sl var2 = new sl(true);

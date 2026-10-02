@@ -1320,3 +1320,59 @@ external mask population and actual masked glyph rendering remain unverified.
 Source inspection and complete binding/reversal checks support these names.
 Existing native probes retain their original scopes; no full raster, real-asset,
 whole-game or device-performance claim is added.
+
+## Font layout and glyph rendering (pass 57)
+
+`BitmapFont` is the shared font layout/style base. `MonochromeBitmapFont`
+implements binary mask glyph drawing: a nonzero byte draws the supplied color,
+while zero advances without writing. The other two renderers retain their
+original palette/coverage internals, but their `drawGlyph`/`drawGlyphAlpha`
+method and parameter contracts now match the base. `shadowPass` stays in the
+contract, including implementations that do not read it.
+
+| API or data | Role |
+| --- | --- |
+| `glyphAdvances`, X/Y offsets, widths/heights | Advance the pen and position each glyph mask |
+| `lineAdvance`, `maxAscent`, `maxDescent`, `capitalXAscent` | Baseline spacing, glyph vertical bounds and baseline-to-capital-X-top distance |
+| `decodeFontMetrics` | Read compact advances or extended signed cumulative edge profiles |
+| `computePairKerning`, `pairKerning` | Find the minimum overlapping trailing/leading profile gap and store its negation for each glyph pair |
+| `measureTextWidth`, `measureCharacterAdvance` | Measure encoded glyph advances and relevant inline-image/kerning contributions |
+| `wrapText`, `countWrappedLines`, `measureMaximumWrappedWidth`, `measureWrappedHeight` | Split at explicit breaks or supported space/hyphen opportunities and derive wrapped dimensions |
+| `drawText`, `drawCenteredText`, `drawRightAlignedText` | Reset opaque text style and place one styled line |
+| `drawParagraph`, `drawParagraphAlpha` | Wrap and align lines within the supplied rectangle |
+| `setInlineImages` | Supply images and optional baseline offsets for img tags |
+
+The compact metric form has257 bytes:256 glyph advances and one line advance.
+Extended metrics read profile lengths/offsets, then leading and trailing edge
+profiles accumulated through signed bytes. Allocated, forwarded and update
+aliases remain separate declarations. Kerning omits space32 and nonbreaking
+space160 pairs; the space profile supplies line advance. Constructors derive
+vertical extents from glyph offsets/heights. Overflow and empty/malformed input
+behavior remain as in the original source.
+
+Text style is static shared state across font instances. Named fields distinguish
+default/current color, shadow and alpha; underline/strikethrough colors use-1
+for disabled decoration. `applyStyleTag` handles the original col/trans/str/u/shad
+and closing tags; br resets style. `prepareJustification` counts spaces outside
+tags and uses Q8 expansion/remainder. Paragraph vertical alignment retains its
+extra-gap/line-index shared slot. The text drawing baseline parameter becomes
+the line-top coordinate before glyph offsets are applied.
+
+Inline images contribute full width and draw relative to their chosen baseline
+offset. Caught image/tag errors retain their carriers and original handling.
+`wrapText` preserves lowercased tag spelling, br placement, space/hyphen trim
+rules and the original euro previous-character assignment8364. These names do
+not normalize parser quirks or fix potentially malformed-input behavior.
+
+`MonochromeBitmapFont` clips glyph rectangles with independent source and
+destination offsets/row skips. `blitGlyphMask` writes in groups of four and a
+tail; its width parameter becomes a negative tail count. `blitGlyphMaskAlpha`
+weights the source packed RGB, then reuses alpha as the destination weight.
+`blitGlyphThroughScanlineMask` clips against the clip-relative starts/widths;
+its `unusedDestinationPixels` argument remains unused and writes target
+`SoftwareRasterizer.framebuffer`. Captured read/write indices and all branches
+remain. Every declaration in the font base and monochrome renderer is named,
+but large labeled tag bodies and other renderer internals remain. Complete
+binding/reversal checks support the naming pass; existing native probes do not
+newly exercise fonts. Actual font/image assets, whole-game rendering and phone
+performance remain unverified.
