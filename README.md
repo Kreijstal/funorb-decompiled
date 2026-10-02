@@ -19,6 +19,12 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and retain all 154,117 bindings
 and 388 override relationships.
 
+The boundary scan now has guarded semantic names for every local and parameter.
+An independent geometric oracle verifies 425,042 pixel cases at two framebuffer
+strides, plus guard arithmetic and invalid-raster read ordering, against native
+bytecode and both source mirrors. Its retained result arms are explained in the
+reading guide; other opaque names and shared control-flow joins remain.
+
 `node readable/reproduce-geoblox.mjs --check` verifies deterministic regeneration
 from the pinned input and bundled naming tool. All original dispatcher methods
 use structured control flow, but opaque names, generated carriers and shared

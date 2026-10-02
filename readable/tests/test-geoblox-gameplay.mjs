@@ -644,6 +644,68 @@ try {
             +":"+points+":"+popups+":"+popupTrace+":"+${global('rb','field_b','I')}+":"+soundSample()+":"+java.util.Arrays.hashCode(${global('bk','field_a','Ldm;')}.${field('dm','field_v','[I')}));cases++;
         }
       }
+      static void boundaryMatrix() {
+        // A closed-form lattice boundary, independent of the scan's error
+        // recurrence: x is the largest integer with x*(x-1)+y*y <= r*r.
+        boolean[][] expectedPixels=new boolean[461][461];int perimeterPixels=0;
+        for(int y=0;y<=230;y++) {
+          int x=(int)Math.floor(0.5+Math.sqrt(52900-y*y+0.25));
+          if(y>x)break;
+          check(x*(x-1)+y*y<=52900&&x*(x+1)+y*y>52900,"circle root bounds");
+          int[][] symmetric={{x,y},{x,-y},{-x,y},{-x,-y},{y,x},{-y,x},{y,-x},{-y,-x}};
+          for(int[] point:symmetric)if(!expectedPixels[point[1]+230][point[0]+230]) {
+            expectedPixels[point[1]+230][point[0]+230]=true;perimeterPixels++;
+          }
+        }
+        check(perimeterPixels==1300,"complete discrete perimeter");int pixelCases=0,guardCases=0,rasterCases=0;
+        for(int stride:new int[]{640,641}) {
+          ${global('vb','field_f','I')}=stride;
+          ${global('Geoblox','field_C','I')}=stride-640;
+          int[] pixels=new int[stride*480];${framebuffer}=pixels;
+          for(int y=10;y<=470;y++)for(int x=90;x<=550;x++) {
+            int index=y*stride+x,value=((x+y)%3==0?Integer.MIN_VALUE:(x+y)%3==1?-1:7);
+            pixels[index]=value;boolean actual=boundary();
+            check(actual==expectedPixels[y-10][x-90],"boundary pixel "+stride+":"+x+":"+y);
+            check(pixels[index]==value,"boundary scan is read-only");pixels[index]=0;pixelCases++;
+          }
+          check(!boundary(),"scan empty after all pixels");
+          for(int pixel:pixels)check(pixel==0,"no other framebuffer writes");
+        }
+        ${global('Geoblox','field_C','I')}=0;${global('vb','field_f','I')}=640;
+        ${framebuffer}=new int[640*480];
+        for(int methodGuard:new int[]{Integer.MIN_VALUE,-61,-2,-1,0,32,65,66,Integer.MAX_VALUE})
+          for(boolean occupied:new boolean[]{false,true}) {
+            ${framebuffer}[240*640+90]=occupied?1:0;boolean dividesByZero=(methodGuard-32)/34==0,failed=false;
+            try {
+              boolean actual=${call('ld','a(I)Z')}(methodGuard);
+              check(!dividesByZero&&actual==occupied,"guard cannot bypass arithmetic");
+            } catch(${type('sa')} error) {
+              check(dividesByZero,"unexpected guard exception");failed=true;
+              check(error.${field('sa','field_a','Ljava/lang/Throwable;')} instanceof ArithmeticException,"guard cause");
+              check(error.${field('sa','field_d','Ljava/lang/String;')}.equals("ld.B("+methodGuard+")"),"guard context");
+            }
+            check(failed==dividesByZero,"guard failure prediction");guardCases++;
+          }
+        for(int mode=0;mode<5;mode++) {
+          int methodGuard=mode==1?0:-61;
+          int[] pixels=mode<2?null:new int[240*640+91];${framebuffer}=pixels;
+          if(mode==3)pixels[240*640+90]=-1;
+          if(mode==4)pixels[240*640+90]=Integer.MIN_VALUE;
+          boolean failed=false;
+          try { check(boundaryWithGuard(methodGuard)&&mode>=3,"left cardinal hit must precede invalid right index"); }
+          catch(${type('sa')} error) {
+            failed=true;Throwable cause=error.${field('sa','field_a','Ljava/lang/Throwable;')};
+            check(mode==0?cause instanceof NullPointerException:mode==1?cause instanceof ArithmeticException:
+              mode==2&&cause instanceof ArrayIndexOutOfBoundsException,"raster failure priority");
+            check(error.${field('sa','field_d','Ljava/lang/String;')}.equals("ld.B("+methodGuard+")"),"raster context");
+          }
+          check(failed==(mode<3),"raster outcome");rasterCases++;
+        }
+        ${framebuffer}=new int[640*480];
+        check(pixelCases==425042&&guardCases==18&&rasterCases==5,"boundary matrix coverage");
+        System.err.println("boundary-matrix:"+pixelCases+":"+perimeterPixels+":"+guardCases+":"+rasterCases);
+      }
+      static boolean boundaryWithGuard(int guard) { return ${call('ld','a(I)Z')}(guard); }
       public static void main(String[] args) throws Exception {
         Thread watchdog=new Thread(()->{try{Thread.sleep(45000);}catch(InterruptedException error){}System.exit(124);});
         watchdog.setDaemon(true);watchdog.start();
@@ -665,6 +727,7 @@ try {
           check(boundary(), "circle contact at " + point[0] + "," + point[1]);
           ${framebuffer}[point[0] + point[1] * 640] = 0;
         }
+        boundaryMatrix();
 
         ${active} = new ${deque}();
         ${available} = new ${deque}();
@@ -753,7 +816,10 @@ try {
     captureProcess(process.env.JAVAC ?? 'javac', ['--release', '8', '-proc:none', '-encoding', 'UTF-8', '-classpath', classpath, '-d', classes, '@' + files]);
     const output = captureProcess(process.env.JAVA ?? 'java', ['-Djava.awt.headless=true', '-cp', classes + path.delimiter + classpath, 'GameplayBehavior']);
     const sha256 = crypto.createHash('sha256').update(output.stdout).digest('hex');
-    console.log(JSON.stringify({variant,sha256,completion:output.stdout.toString().trim().split('\n').at(-1)}));
+    assert.match(output.stderr.toString(), /(?:^|\n)boundary-matrix:425042:1300:18:5(?:\n|$)/,
+      'complete boundary matrix must run independently in every variant');
+    console.log(JSON.stringify({variant,sha256,completion:output.stdout.toString().trim().split('\n').at(-1),
+      boundaryPixelChecks:425042,boundaryPerimeterPixels:1300,boundaryGuardChecks:18,boundaryRasterChecks:5}));
     assert.equal(sha256,expectedNativeSha256,variant);
     if(expected===undefined)expected=output.stdout;
     else assert.equal(Buffer.compare(output.stdout,expected),0,variant);

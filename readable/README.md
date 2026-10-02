@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 1,146 guarded naming rules: 22 classes, 382 fields,
-175 methods, 208 parameters and 359 local declarations. Both 303-file corpora
+The current export has 1,171 guarded naming rules: 22 classes, 382 fields,
+175 methods, 209 parameters and 383 local declarations. Both 303-file corpora
 compile, preserving 154,117 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -117,12 +117,22 @@ check both menu and gameplay updates with ending messages disabled. Another
 invalid indices and division-guard partial writes. The combined gameplay probe
 now covers 52,164 cases per variant. Ending-message selection remains outside
 these animation checks.
+The boundary scan now names all 28 local declarations and its method guard,
+including the four row-center cursors and thirteen retained result carriers.
+An independent closed-form lattice oracle checks every pixel in the 461-by-461
+bounding square at strides 640 and 641: 425,042 pixel checks and all 1,300
+perimeter pixels per variant. Negative nonzero pixels, read-only buffer behavior,
+18 guard cases and five invalid/short-raster cases are verified. Guard division
+still precedes framebuffer access, and an occupied left cardinal pixel can
+return before an invalid right pixel index. The prior 52,164 gameplay trace
+remains byte-identical; boundary matrix counts are verified separately.
+
 Contact-physics producers, actual asset loading, new unlock delivery, device
 audio and whole-game equivalence remain unverified. Text-writer guards <=23
 retain a PCM side effect outside the direct writer probe. These source checks
 do not establish FPS, heap or phone acceptance.
 
-The current generic decompiler removes 745 integral sign nodes across 132
+The pinned generic decompiler removes 745 integral sign nodes across 132
 files: `x + (-y)` becomes `x - y`, and `x - (-y)` becomes `x + y`.
 Opcode width, narrowing boundaries, operand order, floating arithmetic and
 string operations remain intact. A complete attributed Java-tree audit matches
@@ -173,6 +183,6 @@ prove whole-game behavior.
 | Java source tree | SHA-256 |
 | --- | --- |
 | Raw | `cdf74421a73a784554ef7946c2647fa0380f8a458a21e30e96ba951f4e650a97` |
-| Readable | `03470bae645cb1b9006d1d1bc6e395c20102677e5287184fb7639a4fae9a1974` |
+| Readable | `a789fcff0c510fc45783c494a8bbe91eefa56b3789bd9d00bf10bbbe2a908eef` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

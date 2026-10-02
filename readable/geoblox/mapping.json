@@ -4750,6 +4750,104 @@
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#9"
     },
     {
+      "symbol": "L:ld.a(I)Z#0",
+      "to": "previousCircleVerticalOffset",
+      "originalName": "incrementValue$0",
+      "evidence": "Preserves circleVerticalOffset before increment so the error recurrence adds old plus new vertical offsets.",
+      "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#0"
+    },
+    {
+      "symbol": "L:ld.a(I)Z#1",
+      "to": "leftCardinalHit",
+      "originalName": "stackIn_4_0",
+      "evidence": "Carries integer true from the first nonzero pixel at (90,240) to result arm zero.",
+      "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#1"
+    },
+    {
+      "symbol": "L:ld.a(I)Z#10",
+      "to": "lowerNearRightHit",
+      "originalName": "stackIn_37_0",
+      "evidence": "Carries integer true from lowerNearRowCenterIndex plus circleHorizontalOffset to result arm nine.",
+      "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#10"
+    },
+    {
+      "symbol": "L:ld.a(I)Z#11",
+      "to": "lowerFarLeftHit",
+      "originalName": "stackIn_41_0",
+      "evidence": "Carries integer true from lowerFarRowCenterIndex minus circleVerticalOffset to result arm ten.",
+      "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#11"
+    },
+    {
+      "symbol": "L:ld.a(I)Z#12",
+      "to": "lowerFarRightHit",
+      "originalName": "stackIn_45_0",
+      "evidence": "Carries integer true from lowerFarRowCenterIndex plus circleVerticalOffset to result arm eleven.",
+      "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#12"
+    },
+    {
+      "symbol": "L:ld.a(I)Z#13",
+      "to": "boundaryScanMissResult",
+      "originalName": "stackIn_47_0",
+      "evidence": "Carries integer false when the vertical octant offset passes the horizontal offset; result arm twelve returns it. It is not a flag set true on a miss.",
+      "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#13"
+    },
+    {
+      "symbol": "L:ld.a(I)Z#14",
+      "to": "boundaryResultArmId",
+      "originalName": "decompiledRegionSelector0",
+      "evidence": "Selects the retained post-try result arm, zero through twelve; the twelve hit arms return integer true and the final miss arm returns false. No dispatch loop or enum is introduced.",
+      "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#14"
+    },
+    {
+      "symbol": "L:ld.a(I)Z#15",
+      "to": "caughtBoundaryScanFailure",
+      "originalName": "decompiledCaughtException",
+      "evidence": "Stores the caught RuntimeException before passing it through the retained alias to t.a.",
+      "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#15"
+    },
+    {
+      "symbol": "L:ld.a(I)Z#16",
+      "to": "upperNearRowCenterIndex",
+      "originalName": "var1_int",
+      "evidence": "Starts at (320,240) and subtracts one framebuffer stride each vertical step, representing the center-column address on row 240-circleVerticalOffset.",
+      "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#16"
+    },
+    {
+      "symbol": "L:ld.a(I)Z#17",
+      "to": "boundaryScanFailureForContext",
+      "originalName": "var1",
+      "evidence": "Aliases caughtBoundaryScanFailure for the retained ld.B exception-context wrapper.",
+      "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#17"
+    },
+    {
+      "symbol": "L:ld.a(I)Z#18",
+      "to": "lowerNearRowCenterIndex",
+      "originalName": "var2",
+      "evidence": "Starts at (320,240) and adds one stride each vertical step, representing row 240+circleVerticalOffset at column 320.",
+      "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#18"
+    },
+    {
+      "symbol": "L:ld.a(I)Z#19",
+      "to": "upperFarRowCenterIndex",
+      "originalName": "var3",
+      "evidence": "Starts at (320,10) and adds a stride when circleHorizontalOffset decreases, representing row 240-circleHorizontalOffset at column 320.",
+      "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#19"
+    },
+    {
+      "symbol": "L:ld.a(I)Z#2",
+      "to": "rightCardinalHit",
+      "originalName": "stackIn_7_0",
+      "evidence": "Carries integer true from the nonzero pixel at (550,240) to result arm one.",
+      "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#2"
+    },
+    {
+      "symbol": "L:ld.a(I)Z#20",
+      "to": "lowerFarRowCenterIndex",
+      "originalName": "var4",
+      "evidence": "Starts at (320,470) and subtracts a stride when circleHorizontalOffset decreases, representing row 240+circleHorizontalOffset at column 320.",
+      "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#20"
+    },
+    {
       "symbol": "L:ld.a(I)Z#21",
       "to": "circleHorizontalOffset",
       "originalName": "var5",
@@ -4771,11 +4869,81 @@
       "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#23"
     },
     {
+      "symbol": "L:ld.a(I)Z#24",
+      "to": "guardDivisionResult",
+      "originalName": "var8",
+      "evidence": "Retains the otherwise unused 64/((methodGuard-32)/34) computation before any framebuffer read. Native guard cases verify ArithmeticException precedence and context.",
+      "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#24"
+    },
+    {
       "symbol": "L:ld.a(I)Z#25",
       "to": "circleError",
       "originalName": "var9",
       "evidence": "The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions.",
       "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#25"
+    },
+    {
+      "symbol": "L:ld.a(I)Z#26",
+      "to": "clientControlFlowGuard",
+      "originalName": "var10",
+      "evidence": "Retains the initial Geoblox.field_C read; its stored value is unused in this method. Matrix checks run with zero and one without removing the read.",
+      "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#26"
+    },
+    {
+      "symbol": "L:ld.a(I)Z#27",
+      "to": "boundaryScanFailure",
+      "originalName": "decompiledCaughtParameter0",
+      "evidence": "Catch parameter for RuntimeException from guard arithmetic or framebuffer reads; transferred through two retained aliases before wrapping.",
+      "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#27"
+    },
+    {
+      "symbol": "L:ld.a(I)Z#3",
+      "to": "topCardinalHit",
+      "originalName": "stackIn_11_0",
+      "evidence": "Carries integer true from the nonzero pixel at (320,10) to result arm two.",
+      "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#3"
+    },
+    {
+      "symbol": "L:ld.a(I)Z#4",
+      "to": "bottomCardinalHit",
+      "originalName": "stackIn_15_0",
+      "evidence": "Carries integer true from the nonzero pixel at (320,470) to result arm three.",
+      "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#4"
+    },
+    {
+      "symbol": "L:ld.a(I)Z#5",
+      "to": "upperFarLeftHit",
+      "originalName": "stackIn_21_0",
+      "evidence": "Carries integer true from upperFarRowCenterIndex minus circleVerticalOffset to result arm four.",
+      "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#5"
+    },
+    {
+      "symbol": "L:ld.a(I)Z#6",
+      "to": "upperFarRightHit",
+      "originalName": "stackIn_24_0",
+      "evidence": "Carries integer true from upperFarRowCenterIndex plus circleVerticalOffset to result arm five.",
+      "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#6"
+    },
+    {
+      "symbol": "L:ld.a(I)Z#7",
+      "to": "upperNearLeftHit",
+      "originalName": "stackIn_27_0",
+      "evidence": "Carries integer true from upperNearRowCenterIndex minus circleHorizontalOffset to result arm six.",
+      "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#7"
+    },
+    {
+      "symbol": "L:ld.a(I)Z#8",
+      "to": "upperNearRightHit",
+      "originalName": "stackIn_30_0",
+      "evidence": "Carries integer true from upperNearRowCenterIndex plus circleHorizontalOffset to result arm seven.",
+      "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#8"
+    },
+    {
+      "symbol": "L:ld.a(I)Z#9",
+      "to": "lowerNearLeftHit",
+      "originalName": "stackIn_34_0",
+      "evidence": "Carries integer true from lowerNearRowCenterIndex minus circleHorizontalOffset to result arm eight.",
+      "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#9"
     },
     {
       "symbol": "L:n.a(IIIIBIIII)[Ldm;#10",
@@ -7422,6 +7590,13 @@
       "originalName": "param2",
       "evidence": "PCM factory inputs: sample supplies bytes and source frequency, ratePercent scales signed Q8 sample step, volume is shifted left six before construction.",
       "renamedSymbol": "P:PcmSampleStream.createForPlaybackRate(LPcmSample;II)LPcmSampleStream;#2"
+    },
+    {
+      "symbol": "P:ld.a(I)Z#0",
+      "to": "methodGuard",
+      "originalName": "param0",
+      "evidence": "Actual boundary callers pass -61. The retained integer division can throw before even an occupied first cardinal pixel; native cases cover zero denominators, truncation boundaries and int subtraction overflow.",
+      "renamedSymbol": "P:ld.hasPixelsAtPlayfieldBoundary(I)Z#0"
     },
     {
       "symbol": "P:ld.a(IIII)V#0",
@@ -99540,7 +99715,7 @@
       "symbol": "L:ld.a(I)Z#0",
       "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#0",
       "originalName": "incrementValue$0",
-      "renamedName": "incrementValue$0",
+      "renamedName": "previousCircleVerticalOffset",
       "declaration": {
         "file": "ld.java",
         "start": 468,
@@ -99551,7 +99726,7 @@
       "symbol": "L:ld.a(I)Z#1",
       "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#1",
       "originalName": "stackIn_4_0",
-      "renamedName": "stackIn_4_0",
+      "renamedName": "leftCardinalHit",
       "declaration": {
         "file": "ld.java",
         "start": 502,
@@ -99562,7 +99737,7 @@
       "symbol": "L:ld.a(I)Z#10",
       "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#10",
       "originalName": "stackIn_37_0",
-      "renamedName": "stackIn_37_0",
+      "renamedName": "lowerNearRightHit",
       "declaration": {
         "file": "ld.java",
         "start": 770,
@@ -99573,7 +99748,7 @@
       "symbol": "L:ld.a(I)Z#11",
       "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#11",
       "originalName": "stackIn_41_0",
-      "renamedName": "stackIn_41_0",
+      "renamedName": "lowerFarLeftHit",
       "declaration": {
         "file": "ld.java",
         "start": 800,
@@ -99584,7 +99759,7 @@
       "symbol": "L:ld.a(I)Z#12",
       "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#12",
       "originalName": "stackIn_45_0",
-      "renamedName": "stackIn_45_0",
+      "renamedName": "lowerFarRightHit",
       "declaration": {
         "file": "ld.java",
         "start": 830,
@@ -99595,7 +99770,7 @@
       "symbol": "L:ld.a(I)Z#13",
       "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#13",
       "originalName": "stackIn_47_0",
-      "renamedName": "stackIn_47_0",
+      "renamedName": "boundaryScanMissResult",
       "declaration": {
         "file": "ld.java",
         "start": 860,
@@ -99606,7 +99781,7 @@
       "symbol": "L:ld.a(I)Z#14",
       "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#14",
       "originalName": "decompiledRegionSelector0",
-      "renamedName": "decompiledRegionSelector0",
+      "renamedName": "boundaryResultArmId",
       "declaration": {
         "file": "ld.java",
         "start": 890,
@@ -99617,7 +99792,7 @@
       "symbol": "L:ld.a(I)Z#15",
       "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#15",
       "originalName": "decompiledCaughtException",
-      "renamedName": "decompiledCaughtException",
+      "renamedName": "caughtBoundaryScanFailure",
       "declaration": {
         "file": "ld.java",
         "start": 946,
@@ -99628,7 +99803,7 @@
       "symbol": "L:ld.a(I)Z#16",
       "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#16",
       "originalName": "var1_int",
-      "renamedName": "var1_int",
+      "renamedName": "upperNearRowCenterIndex",
       "declaration": {
         "file": "ld.java",
         "start": 992,
@@ -99639,7 +99814,7 @@
       "symbol": "L:ld.a(I)Z#17",
       "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#17",
       "originalName": "var1",
-      "renamedName": "var1",
+      "renamedName": "boundaryScanFailureForContext",
       "declaration": {
         "file": "ld.java",
         "start": 1031,
@@ -99650,7 +99825,7 @@
       "symbol": "L:ld.a(I)Z#18",
       "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#18",
       "originalName": "var2",
-      "renamedName": "var2",
+      "renamedName": "lowerNearRowCenterIndex",
       "declaration": {
         "file": "ld.java",
         "start": 1056,
@@ -99661,7 +99836,7 @@
       "symbol": "L:ld.a(I)Z#19",
       "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#19",
       "originalName": "var3",
-      "renamedName": "var3",
+      "renamedName": "upperFarRowCenterIndex",
       "declaration": {
         "file": "ld.java",
         "start": 1078,
@@ -99672,7 +99847,7 @@
       "symbol": "L:ld.a(I)Z#2",
       "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#2",
       "originalName": "stackIn_7_0",
-      "renamedName": "stackIn_7_0",
+      "renamedName": "rightCardinalHit",
       "declaration": {
         "file": "ld.java",
         "start": 531,
@@ -99683,7 +99858,7 @@
       "symbol": "L:ld.a(I)Z#20",
       "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#20",
       "originalName": "var4",
-      "renamedName": "var4",
+      "renamedName": "lowerFarRowCenterIndex",
       "declaration": {
         "file": "ld.java",
         "start": 1100,
@@ -99727,7 +99902,7 @@
       "symbol": "L:ld.a(I)Z#24",
       "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#24",
       "originalName": "var8",
-      "renamedName": "var8",
+      "renamedName": "guardDivisionResult",
       "declaration": {
         "file": "ld.java",
         "start": 1188,
@@ -99749,7 +99924,7 @@
       "symbol": "L:ld.a(I)Z#26",
       "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#26",
       "originalName": "var10",
-      "renamedName": "var10",
+      "renamedName": "clientControlFlowGuard",
       "declaration": {
         "file": "ld.java",
         "start": 1232,
@@ -99760,7 +99935,7 @@
       "symbol": "L:ld.a(I)Z#27",
       "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#27",
       "originalName": "decompiledCaughtParameter0",
-      "renamedName": "decompiledCaughtParameter0",
+      "renamedName": "boundaryScanFailure",
       "declaration": {
         "file": "ld.java",
         "start": 5612,
@@ -99771,7 +99946,7 @@
       "symbol": "L:ld.a(I)Z#3",
       "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#3",
       "originalName": "stackIn_11_0",
-      "renamedName": "stackIn_11_0",
+      "renamedName": "topCardinalHit",
       "declaration": {
         "file": "ld.java",
         "start": 560,
@@ -99782,7 +99957,7 @@
       "symbol": "L:ld.a(I)Z#4",
       "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#4",
       "originalName": "stackIn_15_0",
-      "renamedName": "stackIn_15_0",
+      "renamedName": "bottomCardinalHit",
       "declaration": {
         "file": "ld.java",
         "start": 590,
@@ -99793,7 +99968,7 @@
       "symbol": "L:ld.a(I)Z#5",
       "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#5",
       "originalName": "stackIn_21_0",
-      "renamedName": "stackIn_21_0",
+      "renamedName": "upperFarLeftHit",
       "declaration": {
         "file": "ld.java",
         "start": 620,
@@ -99804,7 +99979,7 @@
       "symbol": "L:ld.a(I)Z#6",
       "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#6",
       "originalName": "stackIn_24_0",
-      "renamedName": "stackIn_24_0",
+      "renamedName": "upperFarRightHit",
       "declaration": {
         "file": "ld.java",
         "start": 650,
@@ -99815,7 +99990,7 @@
       "symbol": "L:ld.a(I)Z#7",
       "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#7",
       "originalName": "stackIn_27_0",
-      "renamedName": "stackIn_27_0",
+      "renamedName": "upperNearLeftHit",
       "declaration": {
         "file": "ld.java",
         "start": 680,
@@ -99826,7 +100001,7 @@
       "symbol": "L:ld.a(I)Z#8",
       "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#8",
       "originalName": "stackIn_30_0",
-      "renamedName": "stackIn_30_0",
+      "renamedName": "upperNearRightHit",
       "declaration": {
         "file": "ld.java",
         "start": 710,
@@ -99837,7 +100012,7 @@
       "symbol": "L:ld.a(I)Z#9",
       "renamedSymbol": "L:ld.hasPixelsAtPlayfieldBoundary(I)Z#9",
       "originalName": "stackIn_34_0",
-      "renamedName": "stackIn_34_0",
+      "renamedName": "lowerNearLeftHit",
       "declaration": {
         "file": "ld.java",
         "start": 740,
@@ -215447,7 +215622,7 @@
       "symbol": "P:ld.a(I)Z#0",
       "renamedSymbol": "P:ld.hasPixelsAtPlayfieldBoundary(I)Z#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "methodGuard",
       "declaration": {
         "file": "ld.java",
         "start": 446,
@@ -312982,7 +313157,7 @@
       "original": "ld.java",
       "renamed": "ld.java",
       "inputSha256": "2713d19cfb619664041358e0e7cecce0b184a50246d1f2b018258dbc3c203245",
-      "outputSha256": "cab9f575b7ca4359c46c21fd1c56ba3b413b9c97c932062322322983f0612937",
+      "outputSha256": "b5c652521855ecc0ca1986cdf337d19984aa3ba0fb6871845c3af7b7d5e46783",
       "edits": [
         {
           "start": 66,
@@ -313006,6 +313181,160 @@
           "renamed": "hasPixelsAtPlayfieldBoundary"
         },
         {
+          "start": 446,
+          "end": 452,
+          "symbol": "P:ld.a(I)Z#0",
+          "original": "param0",
+          "renamed": "methodGuard"
+        },
+        {
+          "start": 468,
+          "end": 484,
+          "symbol": "L:ld.a(I)Z#0",
+          "original": "incrementValue$0",
+          "renamed": "previousCircleVerticalOffset"
+        },
+        {
+          "start": 502,
+          "end": 513,
+          "symbol": "L:ld.a(I)Z#1",
+          "original": "stackIn_4_0",
+          "renamed": "leftCardinalHit"
+        },
+        {
+          "start": 531,
+          "end": 542,
+          "symbol": "L:ld.a(I)Z#2",
+          "original": "stackIn_7_0",
+          "renamed": "rightCardinalHit"
+        },
+        {
+          "start": 560,
+          "end": 572,
+          "symbol": "L:ld.a(I)Z#3",
+          "original": "stackIn_11_0",
+          "renamed": "topCardinalHit"
+        },
+        {
+          "start": 590,
+          "end": 602,
+          "symbol": "L:ld.a(I)Z#4",
+          "original": "stackIn_15_0",
+          "renamed": "bottomCardinalHit"
+        },
+        {
+          "start": 620,
+          "end": 632,
+          "symbol": "L:ld.a(I)Z#5",
+          "original": "stackIn_21_0",
+          "renamed": "upperFarLeftHit"
+        },
+        {
+          "start": 650,
+          "end": 662,
+          "symbol": "L:ld.a(I)Z#6",
+          "original": "stackIn_24_0",
+          "renamed": "upperFarRightHit"
+        },
+        {
+          "start": 680,
+          "end": 692,
+          "symbol": "L:ld.a(I)Z#7",
+          "original": "stackIn_27_0",
+          "renamed": "upperNearLeftHit"
+        },
+        {
+          "start": 710,
+          "end": 722,
+          "symbol": "L:ld.a(I)Z#8",
+          "original": "stackIn_30_0",
+          "renamed": "upperNearRightHit"
+        },
+        {
+          "start": 740,
+          "end": 752,
+          "symbol": "L:ld.a(I)Z#9",
+          "original": "stackIn_34_0",
+          "renamed": "lowerNearLeftHit"
+        },
+        {
+          "start": 770,
+          "end": 782,
+          "symbol": "L:ld.a(I)Z#10",
+          "original": "stackIn_37_0",
+          "renamed": "lowerNearRightHit"
+        },
+        {
+          "start": 800,
+          "end": 812,
+          "symbol": "L:ld.a(I)Z#11",
+          "original": "stackIn_41_0",
+          "renamed": "lowerFarLeftHit"
+        },
+        {
+          "start": 830,
+          "end": 842,
+          "symbol": "L:ld.a(I)Z#12",
+          "original": "stackIn_45_0",
+          "renamed": "lowerFarRightHit"
+        },
+        {
+          "start": 860,
+          "end": 872,
+          "symbol": "L:ld.a(I)Z#13",
+          "original": "stackIn_47_0",
+          "renamed": "boundaryScanMissResult"
+        },
+        {
+          "start": 890,
+          "end": 915,
+          "symbol": "L:ld.a(I)Z#14",
+          "original": "decompiledRegionSelector0",
+          "renamed": "boundaryResultArmId"
+        },
+        {
+          "start": 946,
+          "end": 971,
+          "symbol": "L:ld.a(I)Z#15",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtBoundaryScanFailure"
+        },
+        {
+          "start": 992,
+          "end": 1000,
+          "symbol": "L:ld.a(I)Z#16",
+          "original": "var1_int",
+          "renamed": "upperNearRowCenterIndex"
+        },
+        {
+          "start": 1031,
+          "end": 1035,
+          "symbol": "L:ld.a(I)Z#17",
+          "original": "var1",
+          "renamed": "boundaryScanFailureForContext"
+        },
+        {
+          "start": 1056,
+          "end": 1060,
+          "symbol": "L:ld.a(I)Z#18",
+          "original": "var2",
+          "renamed": "lowerNearRowCenterIndex"
+        },
+        {
+          "start": 1078,
+          "end": 1082,
+          "symbol": "L:ld.a(I)Z#19",
+          "original": "var3",
+          "renamed": "upperFarRowCenterIndex"
+        },
+        {
+          "start": 1100,
+          "end": 1104,
+          "symbol": "L:ld.a(I)Z#20",
+          "original": "var4",
+          "renamed": "lowerFarRowCenterIndex"
+        },
+        {
           "start": 1122,
           "end": 1126,
           "symbol": "L:ld.a(I)Z#21",
@@ -313027,11 +313356,39 @@
           "renamed": "playfieldRadiusSquared"
         },
         {
+          "start": 1188,
+          "end": 1192,
+          "symbol": "L:ld.a(I)Z#24",
+          "original": "var8",
+          "renamed": "guardDivisionResult"
+        },
+        {
           "start": 1210,
           "end": 1214,
           "symbol": "L:ld.a(I)Z#25",
           "original": "var9",
           "renamed": "circleError"
+        },
+        {
+          "start": 1232,
+          "end": 1237,
+          "symbol": "L:ld.a(I)Z#26",
+          "original": "var10",
+          "renamed": "clientControlFlowGuard"
+        },
+        {
+          "start": 1251,
+          "end": 1256,
+          "symbol": "L:ld.a(I)Z#26",
+          "original": "var10",
+          "renamed": "clientControlFlowGuard"
+        },
+        {
+          "start": 1318,
+          "end": 1326,
+          "symbol": "L:ld.a(I)Z#16",
+          "original": "var1_int",
+          "renamed": "upperNearRowCenterIndex"
         },
         {
           "start": 1335,
@@ -313048,6 +313405,27 @@
           "renamed": "stride"
         },
         {
+          "start": 1365,
+          "end": 1369,
+          "symbol": "L:ld.a(I)Z#18",
+          "original": "var2",
+          "renamed": "lowerNearRowCenterIndex"
+        },
+        {
+          "start": 1372,
+          "end": 1380,
+          "symbol": "L:ld.a(I)Z#16",
+          "original": "var1_int",
+          "renamed": "upperNearRowCenterIndex"
+        },
+        {
+          "start": 1394,
+          "end": 1398,
+          "symbol": "L:ld.a(I)Z#19",
+          "original": "var3",
+          "renamed": "upperFarRowCenterIndex"
+        },
+        {
           "start": 1409,
           "end": 1411,
           "symbol": "C:vb",
@@ -313062,6 +313440,20 @@
           "renamed": "stride"
         },
         {
+          "start": 1423,
+          "end": 1431,
+          "symbol": "L:ld.a(I)Z#16",
+          "original": "var1_int",
+          "renamed": "upperNearRowCenterIndex"
+        },
+        {
+          "start": 1445,
+          "end": 1449,
+          "symbol": "L:ld.a(I)Z#20",
+          "original": "var4",
+          "renamed": "lowerFarRowCenterIndex"
+        },
+        {
           "start": 1458,
           "end": 1460,
           "symbol": "C:vb",
@@ -313074,6 +313466,13 @@
           "symbol": "F:vb.field_f:I",
           "original": "field_f",
           "renamed": "stride"
+        },
+        {
+          "start": 1471,
+          "end": 1479,
+          "symbol": "L:ld.a(I)Z#16",
+          "original": "var1_int",
+          "renamed": "upperNearRowCenterIndex"
         },
         {
           "start": 1493,
@@ -313095,6 +313494,20 @@
           "symbol": "L:ld.a(I)Z#23",
           "original": "var7",
           "renamed": "playfieldRadiusSquared"
+        },
+        {
+          "start": 1565,
+          "end": 1569,
+          "symbol": "L:ld.a(I)Z#24",
+          "original": "var8",
+          "renamed": "guardDivisionResult"
+        },
+        {
+          "start": 1579,
+          "end": 1585,
+          "symbol": "P:ld.a(I)Z#0",
+          "original": "param0",
+          "renamed": "methodGuard"
         },
         {
           "start": 1611,
@@ -313139,6 +313552,27 @@
           "renamed": "circleHorizontalOffset"
         },
         {
+          "start": 1666,
+          "end": 1674,
+          "symbol": "L:ld.a(I)Z#16",
+          "original": "var1_int",
+          "renamed": "upperNearRowCenterIndex"
+        },
+        {
+          "start": 1698,
+          "end": 1709,
+          "symbol": "L:ld.a(I)Z#1",
+          "original": "stackIn_4_0",
+          "renamed": "leftCardinalHit"
+        },
+        {
+          "start": 1729,
+          "end": 1754,
+          "symbol": "L:ld.a(I)Z#14",
+          "original": "decompiledRegionSelector0",
+          "renamed": "boundaryResultArmId"
+        },
+        {
           "start": 1804,
           "end": 1806,
           "symbol": "C:vb",
@@ -313151,6 +313585,13 @@
           "symbol": "F:vb.field_c:[I",
           "original": "field_c",
           "renamed": "framebuffer"
+        },
+        {
+          "start": 1815,
+          "end": 1823,
+          "symbol": "L:ld.a(I)Z#16",
+          "original": "var1_int",
+          "renamed": "upperNearRowCenterIndex"
         },
         {
           "start": 1826,
@@ -313174,6 +313615,27 @@
           "renamed": "framebuffer"
         },
         {
+          "start": 1866,
+          "end": 1870,
+          "symbol": "L:ld.a(I)Z#19",
+          "original": "var3",
+          "renamed": "upperFarRowCenterIndex"
+        },
+        {
+          "start": 1898,
+          "end": 1910,
+          "symbol": "L:ld.a(I)Z#3",
+          "original": "stackIn_11_0",
+          "renamed": "topCardinalHit"
+        },
+        {
+          "start": 1934,
+          "end": 1959,
+          "symbol": "L:ld.a(I)Z#14",
+          "original": "decompiledRegionSelector0",
+          "renamed": "boundaryResultArmId"
+        },
+        {
           "start": 2012,
           "end": 2014,
           "symbol": "C:vb",
@@ -313186,6 +313648,34 @@
           "symbol": "F:vb.field_c:[I",
           "original": "field_c",
           "renamed": "framebuffer"
+        },
+        {
+          "start": 2023,
+          "end": 2027,
+          "symbol": "L:ld.a(I)Z#20",
+          "original": "var4",
+          "renamed": "lowerFarRowCenterIndex"
+        },
+        {
+          "start": 2057,
+          "end": 2069,
+          "symbol": "L:ld.a(I)Z#4",
+          "original": "stackIn_15_0",
+          "renamed": "bottomCardinalHit"
+        },
+        {
+          "start": 2095,
+          "end": 2120,
+          "symbol": "L:ld.a(I)Z#14",
+          "original": "decompiledRegionSelector0",
+          "renamed": "boundaryResultArmId"
+        },
+        {
+          "start": 2214,
+          "end": 2230,
+          "symbol": "L:ld.a(I)Z#0",
+          "original": "incrementValue$0",
+          "renamed": "previousCircleVerticalOffset"
         },
         {
           "start": 2233,
@@ -313216,11 +313706,32 @@
           "renamed": "circleError"
         },
         {
+          "start": 2306,
+          "end": 2322,
+          "symbol": "L:ld.a(I)Z#0",
+          "original": "incrementValue$0",
+          "renamed": "previousCircleVerticalOffset"
+        },
+        {
           "start": 2325,
           "end": 2329,
           "symbol": "L:ld.a(I)Z#22",
           "original": "var6",
           "renamed": "circleVerticalOffset"
+        },
+        {
+          "start": 2354,
+          "end": 2358,
+          "symbol": "L:ld.a(I)Z#18",
+          "original": "var2",
+          "renamed": "lowerNearRowCenterIndex"
+        },
+        {
+          "start": 2361,
+          "end": 2365,
+          "symbol": "L:ld.a(I)Z#18",
+          "original": "var2",
+          "renamed": "lowerNearRowCenterIndex"
         },
         {
           "start": 2368,
@@ -313235,6 +313746,20 @@
           "symbol": "F:vb.field_f:I",
           "original": "field_f",
           "renamed": "stride"
+        },
+        {
+          "start": 2402,
+          "end": 2410,
+          "symbol": "L:ld.a(I)Z#16",
+          "original": "var1_int",
+          "renamed": "upperNearRowCenterIndex"
+        },
+        {
+          "start": 2413,
+          "end": 2421,
+          "symbol": "L:ld.a(I)Z#16",
+          "original": "var1_int",
+          "renamed": "upperNearRowCenterIndex"
         },
         {
           "start": 2424,
@@ -313265,6 +313790,20 @@
           "renamed": "circleError"
         },
         {
+          "start": 2501,
+          "end": 2505,
+          "symbol": "L:ld.a(I)Z#19",
+          "original": "var3",
+          "renamed": "upperFarRowCenterIndex"
+        },
+        {
+          "start": 2508,
+          "end": 2512,
+          "symbol": "L:ld.a(I)Z#19",
+          "original": "var3",
+          "renamed": "upperFarRowCenterIndex"
+        },
+        {
           "start": 2515,
           "end": 2517,
           "symbol": "C:vb",
@@ -313277,6 +313816,20 @@
           "symbol": "F:vb.field_f:I",
           "original": "field_f",
           "renamed": "stride"
+        },
+        {
+          "start": 2551,
+          "end": 2555,
+          "symbol": "L:ld.a(I)Z#20",
+          "original": "var4",
+          "renamed": "lowerFarRowCenterIndex"
+        },
+        {
+          "start": 2558,
+          "end": 2562,
+          "symbol": "L:ld.a(I)Z#20",
+          "original": "var4",
+          "renamed": "lowerFarRowCenterIndex"
         },
         {
           "start": 2565,
@@ -313342,6 +313895,20 @@
           "renamed": "circleHorizontalOffset"
         },
         {
+          "start": 2751,
+          "end": 2763,
+          "symbol": "L:ld.a(I)Z#13",
+          "original": "stackIn_47_0",
+          "renamed": "boundaryScanMissResult"
+        },
+        {
+          "start": 2793,
+          "end": 2818,
+          "symbol": "L:ld.a(I)Z#14",
+          "original": "decompiledRegionSelector0",
+          "renamed": "boundaryResultArmId"
+        },
+        {
           "start": 2923,
           "end": 2925,
           "symbol": "C:vb",
@@ -313363,6 +313930,13 @@
           "renamed": "circleVerticalOffset"
         },
         {
+          "start": 2942,
+          "end": 2946,
+          "symbol": "L:ld.a(I)Z#19",
+          "original": "var3",
+          "renamed": "upperFarRowCenterIndex"
+        },
+        {
           "start": 2981,
           "end": 2983,
           "symbol": "C:vb",
@@ -313375,6 +313949,13 @@
           "symbol": "F:vb.field_c:[I",
           "original": "field_c",
           "renamed": "framebuffer"
+        },
+        {
+          "start": 2992,
+          "end": 2996,
+          "symbol": "L:ld.a(I)Z#19",
+          "original": "var3",
+          "renamed": "upperFarRowCenterIndex"
         },
         {
           "start": 2999,
@@ -313405,6 +313986,13 @@
           "renamed": "circleHorizontalOffset"
         },
         {
+          "start": 3064,
+          "end": 3072,
+          "symbol": "L:ld.a(I)Z#16",
+          "original": "var1_int",
+          "renamed": "upperNearRowCenterIndex"
+        },
+        {
           "start": 3116,
           "end": 3118,
           "symbol": "C:vb",
@@ -313426,6 +314014,13 @@
           "renamed": "circleHorizontalOffset"
         },
         {
+          "start": 3134,
+          "end": 3142,
+          "symbol": "L:ld.a(I)Z#16",
+          "original": "var1_int",
+          "renamed": "upperNearRowCenterIndex"
+        },
+        {
           "start": 3188,
           "end": 3190,
           "symbol": "C:vb",
@@ -313440,11 +314035,32 @@
           "renamed": "framebuffer"
         },
         {
+          "start": 3199,
+          "end": 3203,
+          "symbol": "L:ld.a(I)Z#18",
+          "original": "var2",
+          "renamed": "lowerNearRowCenterIndex"
+        },
+        {
           "start": 3206,
           "end": 3210,
           "symbol": "L:ld.a(I)Z#21",
           "original": "var5",
           "renamed": "circleHorizontalOffset"
+        },
+        {
+          "start": 3254,
+          "end": 3266,
+          "symbol": "L:ld.a(I)Z#9",
+          "original": "stackIn_34_0",
+          "renamed": "lowerNearLeftHit"
+        },
+        {
+          "start": 3306,
+          "end": 3331,
+          "symbol": "L:ld.a(I)Z#14",
+          "original": "decompiledRegionSelector0",
+          "renamed": "boundaryResultArmId"
         },
         {
           "start": 3460,
@@ -313468,6 +314084,13 @@
           "renamed": "circleHorizontalOffset"
         },
         {
+          "start": 3478,
+          "end": 3482,
+          "symbol": "L:ld.a(I)Z#18",
+          "original": "var2",
+          "renamed": "lowerNearRowCenterIndex"
+        },
+        {
           "start": 3532,
           "end": 3534,
           "symbol": "C:vb",
@@ -313482,11 +314105,32 @@
           "renamed": "framebuffer"
         },
         {
+          "start": 3543,
+          "end": 3547,
+          "symbol": "L:ld.a(I)Z#20",
+          "original": "var4",
+          "renamed": "lowerFarRowCenterIndex"
+        },
+        {
           "start": 3550,
           "end": 3554,
           "symbol": "L:ld.a(I)Z#22",
           "original": "var6",
           "renamed": "circleVerticalOffset"
+        },
+        {
+          "start": 3602,
+          "end": 3614,
+          "symbol": "L:ld.a(I)Z#11",
+          "original": "stackIn_41_0",
+          "renamed": "lowerFarLeftHit"
+        },
+        {
+          "start": 3658,
+          "end": 3683,
+          "symbol": "L:ld.a(I)Z#14",
+          "original": "decompiledRegionSelector0",
+          "renamed": "boundaryResultArmId"
         },
         {
           "start": 3825,
@@ -313503,11 +314147,340 @@
           "renamed": "framebuffer"
         },
         {
+          "start": 3836,
+          "end": 3840,
+          "symbol": "L:ld.a(I)Z#20",
+          "original": "var4",
+          "renamed": "lowerFarRowCenterIndex"
+        },
+        {
           "start": 3843,
           "end": 3847,
           "symbol": "L:ld.a(I)Z#22",
           "original": "var6",
           "renamed": "circleVerticalOffset"
+        },
+        {
+          "start": 3897,
+          "end": 3909,
+          "symbol": "L:ld.a(I)Z#12",
+          "original": "stackIn_45_0",
+          "renamed": "lowerFarRightHit"
+        },
+        {
+          "start": 3955,
+          "end": 3980,
+          "symbol": "L:ld.a(I)Z#14",
+          "original": "decompiledRegionSelector0",
+          "renamed": "boundaryResultArmId"
+        },
+        {
+          "start": 4294,
+          "end": 4306,
+          "symbol": "L:ld.a(I)Z#10",
+          "original": "stackIn_37_0",
+          "renamed": "lowerNearRightHit"
+        },
+        {
+          "start": 4348,
+          "end": 4373,
+          "symbol": "L:ld.a(I)Z#14",
+          "original": "decompiledRegionSelector0",
+          "renamed": "boundaryResultArmId"
+        },
+        {
+          "start": 4566,
+          "end": 4578,
+          "symbol": "L:ld.a(I)Z#8",
+          "original": "stackIn_30_0",
+          "renamed": "upperNearRightHit"
+        },
+        {
+          "start": 4616,
+          "end": 4641,
+          "symbol": "L:ld.a(I)Z#14",
+          "original": "decompiledRegionSelector0",
+          "renamed": "boundaryResultArmId"
+        },
+        {
+          "start": 4788,
+          "end": 4800,
+          "symbol": "L:ld.a(I)Z#7",
+          "original": "stackIn_27_0",
+          "renamed": "upperNearLeftHit"
+        },
+        {
+          "start": 4836,
+          "end": 4861,
+          "symbol": "L:ld.a(I)Z#14",
+          "original": "decompiledRegionSelector0",
+          "renamed": "boundaryResultArmId"
+        },
+        {
+          "start": 5000,
+          "end": 5012,
+          "symbol": "L:ld.a(I)Z#6",
+          "original": "stackIn_24_0",
+          "renamed": "upperFarRightHit"
+        },
+        {
+          "start": 5046,
+          "end": 5071,
+          "symbol": "L:ld.a(I)Z#14",
+          "original": "decompiledRegionSelector0",
+          "renamed": "boundaryResultArmId"
+        },
+        {
+          "start": 5202,
+          "end": 5214,
+          "symbol": "L:ld.a(I)Z#5",
+          "original": "stackIn_21_0",
+          "renamed": "upperFarLeftHit"
+        },
+        {
+          "start": 5246,
+          "end": 5271,
+          "symbol": "L:ld.a(I)Z#14",
+          "original": "decompiledRegionSelector0",
+          "renamed": "boundaryResultArmId"
+        },
+        {
+          "start": 5462,
+          "end": 5473,
+          "symbol": "L:ld.a(I)Z#2",
+          "original": "stackIn_7_0",
+          "renamed": "rightCardinalHit"
+        },
+        {
+          "start": 5495,
+          "end": 5520,
+          "symbol": "L:ld.a(I)Z#14",
+          "original": "decompiledRegionSelector0",
+          "renamed": "boundaryResultArmId"
+        },
+        {
+          "start": 5612,
+          "end": 5638,
+          "symbol": "L:ld.a(I)Z#27",
+          "original": "decompiledCaughtParameter0",
+          "renamed": "boundaryScanFailure"
+        },
+        {
+          "start": 5652,
+          "end": 5677,
+          "symbol": "L:ld.a(I)Z#15",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtBoundaryScanFailure"
+        },
+        {
+          "start": 5680,
+          "end": 5706,
+          "symbol": "L:ld.a(I)Z#27",
+          "original": "decompiledCaughtParameter0",
+          "renamed": "boundaryScanFailure"
+        },
+        {
+          "start": 5718,
+          "end": 5722,
+          "symbol": "L:ld.a(I)Z#17",
+          "original": "var1",
+          "renamed": "boundaryScanFailureForContext"
+        },
+        {
+          "start": 5725,
+          "end": 5750,
+          "symbol": "L:ld.a(I)Z#15",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtBoundaryScanFailure"
+        },
+        {
+          "start": 5794,
+          "end": 5798,
+          "symbol": "L:ld.a(I)Z#17",
+          "original": "var1",
+          "renamed": "boundaryScanFailureForContext"
+        },
+        {
+          "start": 5811,
+          "end": 5817,
+          "symbol": "P:ld.a(I)Z#0",
+          "original": "param0",
+          "renamed": "methodGuard"
+        },
+        {
+          "start": 5848,
+          "end": 5873,
+          "symbol": "L:ld.a(I)Z#14",
+          "original": "decompiledRegionSelector0",
+          "renamed": "boundaryResultArmId"
+        },
+        {
+          "start": 5899,
+          "end": 5910,
+          "symbol": "L:ld.a(I)Z#1",
+          "original": "stackIn_4_0",
+          "renamed": "leftCardinalHit"
+        },
+        {
+          "start": 5948,
+          "end": 5973,
+          "symbol": "L:ld.a(I)Z#14",
+          "original": "decompiledRegionSelector0",
+          "renamed": "boundaryResultArmId"
+        },
+        {
+          "start": 6001,
+          "end": 6012,
+          "symbol": "L:ld.a(I)Z#2",
+          "original": "stackIn_7_0",
+          "renamed": "rightCardinalHit"
+        },
+        {
+          "start": 6054,
+          "end": 6079,
+          "symbol": "L:ld.a(I)Z#14",
+          "original": "decompiledRegionSelector0",
+          "renamed": "boundaryResultArmId"
+        },
+        {
+          "start": 6109,
+          "end": 6121,
+          "symbol": "L:ld.a(I)Z#3",
+          "original": "stackIn_11_0",
+          "renamed": "topCardinalHit"
+        },
+        {
+          "start": 6167,
+          "end": 6192,
+          "symbol": "L:ld.a(I)Z#14",
+          "original": "decompiledRegionSelector0",
+          "renamed": "boundaryResultArmId"
+        },
+        {
+          "start": 6224,
+          "end": 6236,
+          "symbol": "L:ld.a(I)Z#4",
+          "original": "stackIn_15_0",
+          "renamed": "bottomCardinalHit"
+        },
+        {
+          "start": 6286,
+          "end": 6311,
+          "symbol": "L:ld.a(I)Z#14",
+          "original": "decompiledRegionSelector0",
+          "renamed": "boundaryResultArmId"
+        },
+        {
+          "start": 6345,
+          "end": 6357,
+          "symbol": "L:ld.a(I)Z#5",
+          "original": "stackIn_21_0",
+          "renamed": "upperFarLeftHit"
+        },
+        {
+          "start": 6411,
+          "end": 6436,
+          "symbol": "L:ld.a(I)Z#14",
+          "original": "decompiledRegionSelector0",
+          "renamed": "boundaryResultArmId"
+        },
+        {
+          "start": 6472,
+          "end": 6484,
+          "symbol": "L:ld.a(I)Z#6",
+          "original": "stackIn_24_0",
+          "renamed": "upperFarRightHit"
+        },
+        {
+          "start": 6542,
+          "end": 6567,
+          "symbol": "L:ld.a(I)Z#14",
+          "original": "decompiledRegionSelector0",
+          "renamed": "boundaryResultArmId"
+        },
+        {
+          "start": 6605,
+          "end": 6617,
+          "symbol": "L:ld.a(I)Z#7",
+          "original": "stackIn_27_0",
+          "renamed": "upperNearLeftHit"
+        },
+        {
+          "start": 6679,
+          "end": 6704,
+          "symbol": "L:ld.a(I)Z#14",
+          "original": "decompiledRegionSelector0",
+          "renamed": "boundaryResultArmId"
+        },
+        {
+          "start": 6744,
+          "end": 6756,
+          "symbol": "L:ld.a(I)Z#8",
+          "original": "stackIn_30_0",
+          "renamed": "upperNearRightHit"
+        },
+        {
+          "start": 6822,
+          "end": 6847,
+          "symbol": "L:ld.a(I)Z#14",
+          "original": "decompiledRegionSelector0",
+          "renamed": "boundaryResultArmId"
+        },
+        {
+          "start": 6889,
+          "end": 6901,
+          "symbol": "L:ld.a(I)Z#9",
+          "original": "stackIn_34_0",
+          "renamed": "lowerNearLeftHit"
+        },
+        {
+          "start": 6971,
+          "end": 6996,
+          "symbol": "L:ld.a(I)Z#14",
+          "original": "decompiledRegionSelector0",
+          "renamed": "boundaryResultArmId"
+        },
+        {
+          "start": 7040,
+          "end": 7052,
+          "symbol": "L:ld.a(I)Z#10",
+          "original": "stackIn_37_0",
+          "renamed": "lowerNearRightHit"
+        },
+        {
+          "start": 7126,
+          "end": 7151,
+          "symbol": "L:ld.a(I)Z#14",
+          "original": "decompiledRegionSelector0",
+          "renamed": "boundaryResultArmId"
+        },
+        {
+          "start": 7198,
+          "end": 7210,
+          "symbol": "L:ld.a(I)Z#11",
+          "original": "stackIn_41_0",
+          "renamed": "lowerFarLeftHit"
+        },
+        {
+          "start": 7288,
+          "end": 7313,
+          "symbol": "L:ld.a(I)Z#14",
+          "original": "decompiledRegionSelector0",
+          "renamed": "boundaryResultArmId"
+        },
+        {
+          "start": 7362,
+          "end": 7374,
+          "symbol": "L:ld.a(I)Z#12",
+          "original": "stackIn_45_0",
+          "renamed": "lowerFarRightHit"
+        },
+        {
+          "start": 7459,
+          "end": 7471,
+          "symbol": "L:ld.a(I)Z#13",
+          "original": "stackIn_47_0",
+          "renamed": "boundaryScanMissResult"
         },
         {
           "start": 7759,

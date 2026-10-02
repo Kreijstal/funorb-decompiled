@@ -4079,6 +4079,90 @@
       "evidence": "Integer narrowing of the shocked entity X position before selecting popup points; native routing checks original coordinates independently."
     },
     {
+      "symbol": "L:ld.a(I)Z#0",
+      "to": "previousCircleVerticalOffset",
+      "originalName": "incrementValue$0",
+      "evidence": "Preserves circleVerticalOffset before increment so the error recurrence adds old plus new vertical offsets."
+    },
+    {
+      "symbol": "L:ld.a(I)Z#1",
+      "to": "leftCardinalHit",
+      "originalName": "stackIn_4_0",
+      "evidence": "Carries integer true from the first nonzero pixel at (90,240) to result arm zero."
+    },
+    {
+      "symbol": "L:ld.a(I)Z#10",
+      "to": "lowerNearRightHit",
+      "originalName": "stackIn_37_0",
+      "evidence": "Carries integer true from lowerNearRowCenterIndex plus circleHorizontalOffset to result arm nine."
+    },
+    {
+      "symbol": "L:ld.a(I)Z#11",
+      "to": "lowerFarLeftHit",
+      "originalName": "stackIn_41_0",
+      "evidence": "Carries integer true from lowerFarRowCenterIndex minus circleVerticalOffset to result arm ten."
+    },
+    {
+      "symbol": "L:ld.a(I)Z#12",
+      "to": "lowerFarRightHit",
+      "originalName": "stackIn_45_0",
+      "evidence": "Carries integer true from lowerFarRowCenterIndex plus circleVerticalOffset to result arm eleven."
+    },
+    {
+      "symbol": "L:ld.a(I)Z#13",
+      "to": "boundaryScanMissResult",
+      "originalName": "stackIn_47_0",
+      "evidence": "Carries integer false when the vertical octant offset passes the horizontal offset; result arm twelve returns it. It is not a flag set true on a miss."
+    },
+    {
+      "symbol": "L:ld.a(I)Z#14",
+      "to": "boundaryResultArmId",
+      "originalName": "decompiledRegionSelector0",
+      "evidence": "Selects the retained post-try result arm, zero through twelve; the twelve hit arms return integer true and the final miss arm returns false. No dispatch loop or enum is introduced."
+    },
+    {
+      "symbol": "L:ld.a(I)Z#15",
+      "to": "caughtBoundaryScanFailure",
+      "originalName": "decompiledCaughtException",
+      "evidence": "Stores the caught RuntimeException before passing it through the retained alias to t.a."
+    },
+    {
+      "symbol": "L:ld.a(I)Z#16",
+      "to": "upperNearRowCenterIndex",
+      "originalName": "var1_int",
+      "evidence": "Starts at (320,240) and subtracts one framebuffer stride each vertical step, representing the center-column address on row 240-circleVerticalOffset."
+    },
+    {
+      "symbol": "L:ld.a(I)Z#17",
+      "to": "boundaryScanFailureForContext",
+      "originalName": "var1",
+      "evidence": "Aliases caughtBoundaryScanFailure for the retained ld.B exception-context wrapper."
+    },
+    {
+      "symbol": "L:ld.a(I)Z#18",
+      "to": "lowerNearRowCenterIndex",
+      "originalName": "var2",
+      "evidence": "Starts at (320,240) and adds one stride each vertical step, representing row 240+circleVerticalOffset at column 320."
+    },
+    {
+      "symbol": "L:ld.a(I)Z#19",
+      "to": "upperFarRowCenterIndex",
+      "originalName": "var3",
+      "evidence": "Starts at (320,10) and adds a stride when circleHorizontalOffset decreases, representing row 240-circleHorizontalOffset at column 320."
+    },
+    {
+      "symbol": "L:ld.a(I)Z#2",
+      "to": "rightCardinalHit",
+      "originalName": "stackIn_7_0",
+      "evidence": "Carries integer true from the nonzero pixel at (550,240) to result arm one."
+    },
+    {
+      "symbol": "L:ld.a(I)Z#20",
+      "to": "lowerFarRowCenterIndex",
+      "originalName": "var4",
+      "evidence": "Starts at (320,470) and subtracts a stride when circleHorizontalOffset decreases, representing row 240+circleHorizontalOffset at column 320."
+    },
+    {
       "symbol": "L:ld.a(I)Z#21",
       "to": "circleHorizontalOffset",
       "originalName": "var5",
@@ -4097,10 +4181,70 @@
       "evidence": "The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions."
     },
     {
+      "symbol": "L:ld.a(I)Z#24",
+      "to": "guardDivisionResult",
+      "originalName": "var8",
+      "evidence": "Retains the otherwise unused 64/((methodGuard-32)/34) computation before any framebuffer read. Native guard cases verify ArithmeticException precedence and context."
+    },
+    {
       "symbol": "L:ld.a(I)Z#25",
       "to": "circleError",
       "originalName": "var9",
       "evidence": "The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions."
+    },
+    {
+      "symbol": "L:ld.a(I)Z#26",
+      "to": "clientControlFlowGuard",
+      "originalName": "var10",
+      "evidence": "Retains the initial Geoblox.field_C read; its stored value is unused in this method. Matrix checks run with zero and one without removing the read."
+    },
+    {
+      "symbol": "L:ld.a(I)Z#27",
+      "to": "boundaryScanFailure",
+      "originalName": "decompiledCaughtParameter0",
+      "evidence": "Catch parameter for RuntimeException from guard arithmetic or framebuffer reads; transferred through two retained aliases before wrapping."
+    },
+    {
+      "symbol": "L:ld.a(I)Z#3",
+      "to": "topCardinalHit",
+      "originalName": "stackIn_11_0",
+      "evidence": "Carries integer true from the nonzero pixel at (320,10) to result arm two."
+    },
+    {
+      "symbol": "L:ld.a(I)Z#4",
+      "to": "bottomCardinalHit",
+      "originalName": "stackIn_15_0",
+      "evidence": "Carries integer true from the nonzero pixel at (320,470) to result arm three."
+    },
+    {
+      "symbol": "L:ld.a(I)Z#5",
+      "to": "upperFarLeftHit",
+      "originalName": "stackIn_21_0",
+      "evidence": "Carries integer true from upperFarRowCenterIndex minus circleVerticalOffset to result arm four."
+    },
+    {
+      "symbol": "L:ld.a(I)Z#6",
+      "to": "upperFarRightHit",
+      "originalName": "stackIn_24_0",
+      "evidence": "Carries integer true from upperFarRowCenterIndex plus circleVerticalOffset to result arm five."
+    },
+    {
+      "symbol": "L:ld.a(I)Z#7",
+      "to": "upperNearLeftHit",
+      "originalName": "stackIn_27_0",
+      "evidence": "Carries integer true from upperNearRowCenterIndex minus circleHorizontalOffset to result arm six."
+    },
+    {
+      "symbol": "L:ld.a(I)Z#8",
+      "to": "upperNearRightHit",
+      "originalName": "stackIn_30_0",
+      "evidence": "Carries integer true from upperNearRowCenterIndex plus circleHorizontalOffset to result arm seven."
+    },
+    {
+      "symbol": "L:ld.a(I)Z#9",
+      "to": "lowerNearLeftHit",
+      "originalName": "stackIn_34_0",
+      "evidence": "Carries integer true from lowerNearRowCenterIndex minus circleHorizontalOffset to result arm eight."
     },
     {
       "symbol": "L:n.a(IIIIBIIII)[Ldm;#10",
@@ -6371,6 +6515,12 @@
       "evidence": "PCM factory inputs: sample supplies bytes and source frequency, ratePercent scales signed Q8 sample step, volume is shifted left six before construction."
     },
     {
+      "symbol": "P:ld.a(I)Z#0",
+      "to": "methodGuard",
+      "originalName": "param0",
+      "evidence": "Actual boundary callers pass -61. The retained integer division can throw before even an occupied first cardinal pixel; native cases cover zero denominators, truncation boundaries and int subtraction overflow."
+    },
+    {
       "symbol": "P:ld.a(IIII)V#0",
       "to": "originY",
       "originalName": "param0",
@@ -6888,7 +7038,7 @@
     }
   ],
   "revision": 4,
-  "version": 28,
+  "version": 29,
   "generators": {
     "dekoblokoWork": {
       "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
@@ -6908,11 +7058,262 @@
   "publication": {
     "format": 1,
     "previousRules": {
-      "commit": "5a920280c91052e7d48bb10f23941cad31a82a8e",
+      "commit": "87b6fdf86add66e9991e00dd400cdef5c396c58f",
       "path": "readable/geoblox-rules.json",
-      "sha256": "a9fb194027bd9ab8321dbdfb98a3cc5e67b6d8007c8aeeb5437432a0fe836bfd"
+      "sha256": "8554cf52c3de3d91499bfcc7229887c715278a1d2aa68022acab260bb8725b4e"
     },
-    "ruleChanges": [],
+    "ruleChanges": [
+      {
+        "symbol": "L:ld.a(I)Z#0",
+        "before": null,
+        "after": {
+          "symbol": "L:ld.a(I)Z#0",
+          "to": "previousCircleVerticalOffset",
+          "originalName": "incrementValue$0",
+          "evidence": "Preserves circleVerticalOffset before increment so the error recurrence adds old plus new vertical offsets."
+        }
+      },
+      {
+        "symbol": "L:ld.a(I)Z#1",
+        "before": null,
+        "after": {
+          "symbol": "L:ld.a(I)Z#1",
+          "to": "leftCardinalHit",
+          "originalName": "stackIn_4_0",
+          "evidence": "Carries integer true from the first nonzero pixel at (90,240) to result arm zero."
+        }
+      },
+      {
+        "symbol": "L:ld.a(I)Z#10",
+        "before": null,
+        "after": {
+          "symbol": "L:ld.a(I)Z#10",
+          "to": "lowerNearRightHit",
+          "originalName": "stackIn_37_0",
+          "evidence": "Carries integer true from lowerNearRowCenterIndex plus circleHorizontalOffset to result arm nine."
+        }
+      },
+      {
+        "symbol": "L:ld.a(I)Z#11",
+        "before": null,
+        "after": {
+          "symbol": "L:ld.a(I)Z#11",
+          "to": "lowerFarLeftHit",
+          "originalName": "stackIn_41_0",
+          "evidence": "Carries integer true from lowerFarRowCenterIndex minus circleVerticalOffset to result arm ten."
+        }
+      },
+      {
+        "symbol": "L:ld.a(I)Z#12",
+        "before": null,
+        "after": {
+          "symbol": "L:ld.a(I)Z#12",
+          "to": "lowerFarRightHit",
+          "originalName": "stackIn_45_0",
+          "evidence": "Carries integer true from lowerFarRowCenterIndex plus circleVerticalOffset to result arm eleven."
+        }
+      },
+      {
+        "symbol": "L:ld.a(I)Z#13",
+        "before": null,
+        "after": {
+          "symbol": "L:ld.a(I)Z#13",
+          "to": "boundaryScanMissResult",
+          "originalName": "stackIn_47_0",
+          "evidence": "Carries integer false when the vertical octant offset passes the horizontal offset; result arm twelve returns it. It is not a flag set true on a miss."
+        }
+      },
+      {
+        "symbol": "L:ld.a(I)Z#14",
+        "before": null,
+        "after": {
+          "symbol": "L:ld.a(I)Z#14",
+          "to": "boundaryResultArmId",
+          "originalName": "decompiledRegionSelector0",
+          "evidence": "Selects the retained post-try result arm, zero through twelve; the twelve hit arms return integer true and the final miss arm returns false. No dispatch loop or enum is introduced."
+        }
+      },
+      {
+        "symbol": "L:ld.a(I)Z#15",
+        "before": null,
+        "after": {
+          "symbol": "L:ld.a(I)Z#15",
+          "to": "caughtBoundaryScanFailure",
+          "originalName": "decompiledCaughtException",
+          "evidence": "Stores the caught RuntimeException before passing it through the retained alias to t.a."
+        }
+      },
+      {
+        "symbol": "L:ld.a(I)Z#16",
+        "before": null,
+        "after": {
+          "symbol": "L:ld.a(I)Z#16",
+          "to": "upperNearRowCenterIndex",
+          "originalName": "var1_int",
+          "evidence": "Starts at (320,240) and subtracts one framebuffer stride each vertical step, representing the center-column address on row 240-circleVerticalOffset."
+        }
+      },
+      {
+        "symbol": "L:ld.a(I)Z#17",
+        "before": null,
+        "after": {
+          "symbol": "L:ld.a(I)Z#17",
+          "to": "boundaryScanFailureForContext",
+          "originalName": "var1",
+          "evidence": "Aliases caughtBoundaryScanFailure for the retained ld.B exception-context wrapper."
+        }
+      },
+      {
+        "symbol": "L:ld.a(I)Z#18",
+        "before": null,
+        "after": {
+          "symbol": "L:ld.a(I)Z#18",
+          "to": "lowerNearRowCenterIndex",
+          "originalName": "var2",
+          "evidence": "Starts at (320,240) and adds one stride each vertical step, representing row 240+circleVerticalOffset at column 320."
+        }
+      },
+      {
+        "symbol": "L:ld.a(I)Z#19",
+        "before": null,
+        "after": {
+          "symbol": "L:ld.a(I)Z#19",
+          "to": "upperFarRowCenterIndex",
+          "originalName": "var3",
+          "evidence": "Starts at (320,10) and adds a stride when circleHorizontalOffset decreases, representing row 240-circleHorizontalOffset at column 320."
+        }
+      },
+      {
+        "symbol": "L:ld.a(I)Z#2",
+        "before": null,
+        "after": {
+          "symbol": "L:ld.a(I)Z#2",
+          "to": "rightCardinalHit",
+          "originalName": "stackIn_7_0",
+          "evidence": "Carries integer true from the nonzero pixel at (550,240) to result arm one."
+        }
+      },
+      {
+        "symbol": "L:ld.a(I)Z#20",
+        "before": null,
+        "after": {
+          "symbol": "L:ld.a(I)Z#20",
+          "to": "lowerFarRowCenterIndex",
+          "originalName": "var4",
+          "evidence": "Starts at (320,470) and subtracts a stride when circleHorizontalOffset decreases, representing row 240+circleHorizontalOffset at column 320."
+        }
+      },
+      {
+        "symbol": "L:ld.a(I)Z#24",
+        "before": null,
+        "after": {
+          "symbol": "L:ld.a(I)Z#24",
+          "to": "guardDivisionResult",
+          "originalName": "var8",
+          "evidence": "Retains the otherwise unused 64/((methodGuard-32)/34) computation before any framebuffer read. Native guard cases verify ArithmeticException precedence and context."
+        }
+      },
+      {
+        "symbol": "L:ld.a(I)Z#26",
+        "before": null,
+        "after": {
+          "symbol": "L:ld.a(I)Z#26",
+          "to": "clientControlFlowGuard",
+          "originalName": "var10",
+          "evidence": "Retains the initial Geoblox.field_C read; its stored value is unused in this method. Matrix checks run with zero and one without removing the read."
+        }
+      },
+      {
+        "symbol": "L:ld.a(I)Z#27",
+        "before": null,
+        "after": {
+          "symbol": "L:ld.a(I)Z#27",
+          "to": "boundaryScanFailure",
+          "originalName": "decompiledCaughtParameter0",
+          "evidence": "Catch parameter for RuntimeException from guard arithmetic or framebuffer reads; transferred through two retained aliases before wrapping."
+        }
+      },
+      {
+        "symbol": "L:ld.a(I)Z#3",
+        "before": null,
+        "after": {
+          "symbol": "L:ld.a(I)Z#3",
+          "to": "topCardinalHit",
+          "originalName": "stackIn_11_0",
+          "evidence": "Carries integer true from the nonzero pixel at (320,10) to result arm two."
+        }
+      },
+      {
+        "symbol": "L:ld.a(I)Z#4",
+        "before": null,
+        "after": {
+          "symbol": "L:ld.a(I)Z#4",
+          "to": "bottomCardinalHit",
+          "originalName": "stackIn_15_0",
+          "evidence": "Carries integer true from the nonzero pixel at (320,470) to result arm three."
+        }
+      },
+      {
+        "symbol": "L:ld.a(I)Z#5",
+        "before": null,
+        "after": {
+          "symbol": "L:ld.a(I)Z#5",
+          "to": "upperFarLeftHit",
+          "originalName": "stackIn_21_0",
+          "evidence": "Carries integer true from upperFarRowCenterIndex minus circleVerticalOffset to result arm four."
+        }
+      },
+      {
+        "symbol": "L:ld.a(I)Z#6",
+        "before": null,
+        "after": {
+          "symbol": "L:ld.a(I)Z#6",
+          "to": "upperFarRightHit",
+          "originalName": "stackIn_24_0",
+          "evidence": "Carries integer true from upperFarRowCenterIndex plus circleVerticalOffset to result arm five."
+        }
+      },
+      {
+        "symbol": "L:ld.a(I)Z#7",
+        "before": null,
+        "after": {
+          "symbol": "L:ld.a(I)Z#7",
+          "to": "upperNearLeftHit",
+          "originalName": "stackIn_27_0",
+          "evidence": "Carries integer true from upperNearRowCenterIndex minus circleHorizontalOffset to result arm six."
+        }
+      },
+      {
+        "symbol": "L:ld.a(I)Z#8",
+        "before": null,
+        "after": {
+          "symbol": "L:ld.a(I)Z#8",
+          "to": "upperNearRightHit",
+          "originalName": "stackIn_30_0",
+          "evidence": "Carries integer true from upperNearRowCenterIndex plus circleHorizontalOffset to result arm seven."
+        }
+      },
+      {
+        "symbol": "L:ld.a(I)Z#9",
+        "before": null,
+        "after": {
+          "symbol": "L:ld.a(I)Z#9",
+          "to": "lowerNearLeftHit",
+          "originalName": "stackIn_34_0",
+          "evidence": "Carries integer true from lowerNearRowCenterIndex minus circleHorizontalOffset to result arm eight."
+        }
+      },
+      {
+        "symbol": "P:ld.a(I)Z#0",
+        "before": null,
+        "after": {
+          "symbol": "P:ld.a(I)Z#0",
+          "to": "methodGuard",
+          "originalName": "param0",
+          "evidence": "Actual boundary callers pass -61. The retained integer division can throw before even an occupied first cardinal pixel; native cases cover zero denominators, truncation boundaries and int subtraction overflow."
+        }
+      }
+    ],
     "stubJarSha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2",
     "sourceEvidence": [
       {
@@ -7144,7 +7545,7 @@
       },
       {
         "file": "tests/test-geoblox-gameplay.mjs",
-        "sha256": "340d1aada6cc6f95c564830bbe4ced27eefd0bd224f1356fa757e2e25e4c05bc",
+        "sha256": "ddcb89ae7f5845f0a7fa1c99167985090ed2f72669563e52b29b45e230d5e96f",
         "nativeOutputSha256": "42be694a3c2f9a7a80ec7e0ec910bd312bdba5bc38f30293eb00faddcb17ac79",
         "scenarios": 52164
       }
@@ -9317,7 +9718,7 @@
       "sourceDeclarations": 21185,
       "bindingsCompared": 154117,
       "overrideRelationships": 388,
-      "identifierEdits": 18626,
+      "identifierEdits": 18740,
       "dictionaryRestorationFiles": 303,
       "wholeGameEquivalenceVerified": false,
       "nativeMatchingScenarios": 708,
@@ -9367,55 +9768,18 @@
       "integralSignChangedJavaFiles": 132,
       "nativeIntegralSignComparisons": 20350,
       "attributedJavaTreesMatched": 303,
-      "integralSignAuditFixtures": 8
-    },
-    "sourceChange": {
-      "before": {
-        "source": {
-          "repository": "Kreijstal/funorb-decompiled",
-          "commit": "5123c321465e71a2b785cfeda64269ea11a376c6",
-          "subdirectory": "games/geoblox"
-        },
-        "generators": {
-          "dekoblokoWork": {
-            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
-            "trackedClean": true
-          },
-          "javaTools": {
-            "commit": "d60879b1d9a3286dd2102782e13dffb0ae5c0c5e",
-            "trackedClean": true,
-            "sourceArchive": {
-              "sha256": "5234c2b6ae7447c2bbdae83f46f0b689fd5cfe9b199ebd77dafdd0f3cf0bfd1e",
-              "reproduce": "git archive --format=tar d60879b1d9a3286dd2102782e13dffb0ae5c0c5e | sha256sum",
-              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
-            }
-          }
-        },
-        "inputTreeSha256": "a9aaa3dfa046673a2b4e87a360d714692e53c393ca7263efd4a630c6f2e16a8e"
-      },
-      "after": {
-        "source": {
-          "repository": "Kreijstal/funorb-decompiled",
-          "commit": "588ff14becf7fd429d53e929e85e073814c20259",
-          "subdirectory": "games/geoblox"
-        },
-        "generators": {
-          "dekoblokoWork": {
-            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
-            "trackedClean": true
-          },
-          "javaTools": {
-            "commit": "67f22895e4161b3e81a7ceb93273b6680be7d2f0",
-            "trackedClean": true,
-            "sourceArchive": {
-              "sha256": "ac8734ac19b0447c2aad49c20af07562f4e9d22c862c97c465b465b6e858a86f",
-              "reproduce": "git archive --format=tar 67f22895e4161b3e81a7ceb93273b6680be7d2f0 | sha256sum",
-              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
-            }
-          }
-        },
-        "inputTreeSha256": "cdf74421a73a784554ef7946c2647fa0380f8a458a21e30e96ba951f4e650a97"
-      }
+      "integralSignAuditFixtures": 8,
+      "nativeBoundaryPixelChecks": 425042,
+      "nativeBoundaryPerimeterPixels": 1300,
+      "nativeBoundaryGuardChecks": 18,
+      "nativeBoundaryRasterChecks": 5,
+      "nativeBoundaryFramebufferStrides": [
+        640,
+        641
+      ],
+      "nativeBoundaryIndependentOracle": true,
+      "guardedNamingRules": 1171,
+      "namedLocalDeclarations": 383
     }
   }
 }

@@ -1,4 +1,4 @@
-# Reading GeoBlox pass 28
+# Reading GeoBlox pass 29
 
 The readable tree uses semantic names without opaque suffixes. The symbol map
 keeps the original spelling and JVM identity of every declaration, so
@@ -136,6 +136,38 @@ variant conversion temporarily selects kind zero while its category is still
 -1, causing a sprite-array bounds failure. The wrapper retains the partial
 field writes and original exception context. The contact caller never requests
 both flags together. The probe preserves that behavior rather than rewriting it.
+
+## Playfield boundary scan
+
+`ld.hasPixelsAtPlayfieldBoundary` tests the discrete radius-230 perimeter around
+(320,240), using any nonzero framebuffer pixel as a hit. It does not test every
+pixel outside the circle or decide a game-ending policy by itself.
+`upperNearRowCenterIndex` and `lowerNearRowCenterIndex` address column 320 at
+rows `240 - circleVerticalOffset` and `240 + circleVerticalOffset`.
+`upperFarRowCenterIndex` and `lowerFarRowCenterIndex` use the horizontal offset
+for their rows. Near-row probes use the horizontal offset for their columns;
+far-row probes use the vertical offset. Together they cover eight symmetries.
+
+The retained integer `circleError` equals
+`circleHorizontalOffset * (circleHorizontalOffset - 1) + circleVerticalOffset²`
+at the loop's probe stage. The independent oracle solves that inequality using
+a square root, yielding 1,300 unique pixels. It checks every pixel in the full
+bounding square, including near misses, at two strides. The scan leaves the
+framebuffer unchanged. Client control-flow guard values zero and one are tested.
+
+`methodGuard` normally receives -61. The otherwise unused `guardDivisionResult`
+still performs integer division before the first pixel read; zero denominators
+throw with the original `ld.B(...)` context even if the first pixel is occupied.
+A left cardinal hit returns before later pixels are read, so it can succeed with
+a raster too short for the right cardinal address. Null buffers, short buffers,
+negative nonzero pixels and signed guard overflow retain their native behavior.
+
+The exception-region reconstruction retains thirteen integer result carriers
+and `boundaryResultArmId`. `leftCardinalHit`, `upperNearLeftHit` and the other
+hit carriers hold integer true; `boundaryScanMissResult` holds integer false.
+These names describe their roles without removing the retained aliases or
+factoring the post-try return tree. This method has no remaining opaque local
+or parameter names, but its generated control-flow shape can still be improved.
 
 ## Score popups and text writes
 

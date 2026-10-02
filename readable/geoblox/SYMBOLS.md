@@ -682,10 +682,34 @@ Generated from explicit rules; original names remain lookup identities.
 | `L:kc.b(I)V#7` | `visitedFlagThenResetIndex` | Initially carries the visited flag as an integer; reset to zero for neighbor cleanup or the visited-array reset index. |
 | `L:kc.b(I)V#8` | `popupOriginYInput` | Integer narrowing of the shocked entity Y position before selecting popup points; native routing checks original coordinates independently. |
 | `L:kc.b(I)V#9` | `popupOriginXInput` | Integer narrowing of the shocked entity X position before selecting popup points; native routing checks original coordinates independently. |
+| `L:ld.a(I)Z#0` | `previousCircleVerticalOffset` | Preserves circleVerticalOffset before increment so the error recurrence adds old plus new vertical offsets. |
+| `L:ld.a(I)Z#1` | `leftCardinalHit` | Carries integer true from the first nonzero pixel at (90,240) to result arm zero. |
+| `L:ld.a(I)Z#10` | `lowerNearRightHit` | Carries integer true from lowerNearRowCenterIndex plus circleHorizontalOffset to result arm nine. |
+| `L:ld.a(I)Z#11` | `lowerFarLeftHit` | Carries integer true from lowerFarRowCenterIndex minus circleVerticalOffset to result arm ten. |
+| `L:ld.a(I)Z#12` | `lowerFarRightHit` | Carries integer true from lowerFarRowCenterIndex plus circleVerticalOffset to result arm eleven. |
+| `L:ld.a(I)Z#13` | `boundaryScanMissResult` | Carries integer false when the vertical octant offset passes the horizontal offset; result arm twelve returns it. It is not a flag set true on a miss. |
+| `L:ld.a(I)Z#14` | `boundaryResultArmId` | Selects the retained post-try result arm, zero through twelve; the twelve hit arms return integer true and the final miss arm returns false. No dispatch loop or enum is introduced. |
+| `L:ld.a(I)Z#15` | `caughtBoundaryScanFailure` | Stores the caught RuntimeException before passing it through the retained alias to t.a. |
+| `L:ld.a(I)Z#16` | `upperNearRowCenterIndex` | Starts at (320,240) and subtracts one framebuffer stride each vertical step, representing the center-column address on row 240-circleVerticalOffset. |
+| `L:ld.a(I)Z#17` | `boundaryScanFailureForContext` | Aliases caughtBoundaryScanFailure for the retained ld.B exception-context wrapper. |
+| `L:ld.a(I)Z#18` | `lowerNearRowCenterIndex` | Starts at (320,240) and adds one stride each vertical step, representing row 240+circleVerticalOffset at column 320. |
+| `L:ld.a(I)Z#19` | `upperFarRowCenterIndex` | Starts at (320,10) and adds a stride when circleHorizontalOffset decreases, representing row 240-circleHorizontalOffset at column 320. |
+| `L:ld.a(I)Z#2` | `rightCardinalHit` | Carries integer true from the nonzero pixel at (550,240) to result arm one. |
+| `L:ld.a(I)Z#20` | `lowerFarRowCenterIndex` | Starts at (320,470) and subtracts a stride when circleHorizontalOffset decreases, representing row 240+circleHorizontalOffset at column 320. |
 | `L:ld.a(I)Z#21` | `circleHorizontalOffset` | The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions. |
 | `L:ld.a(I)Z#22` | `circleVerticalOffset` | The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions. |
 | `L:ld.a(I)Z#23` | `playfieldRadiusSquared` | The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions. |
+| `L:ld.a(I)Z#24` | `guardDivisionResult` | Retains the otherwise unused 64/((methodGuard-32)/34) computation before any framebuffer read. Native guard cases verify ArithmeticException precedence and context. |
 | `L:ld.a(I)Z#25` | `circleError` | The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions. |
+| `L:ld.a(I)Z#26` | `clientControlFlowGuard` | Retains the initial Geoblox.field_C read; its stored value is unused in this method. Matrix checks run with zero and one without removing the read. |
+| `L:ld.a(I)Z#27` | `boundaryScanFailure` | Catch parameter for RuntimeException from guard arithmetic or framebuffer reads; transferred through two retained aliases before wrapping. |
+| `L:ld.a(I)Z#3` | `topCardinalHit` | Carries integer true from the nonzero pixel at (320,10) to result arm two. |
+| `L:ld.a(I)Z#4` | `bottomCardinalHit` | Carries integer true from the nonzero pixel at (320,470) to result arm three. |
+| `L:ld.a(I)Z#5` | `upperFarLeftHit` | Carries integer true from upperFarRowCenterIndex minus circleVerticalOffset to result arm four. |
+| `L:ld.a(I)Z#6` | `upperFarRightHit` | Carries integer true from upperFarRowCenterIndex plus circleVerticalOffset to result arm five. |
+| `L:ld.a(I)Z#7` | `upperNearLeftHit` | Carries integer true from upperNearRowCenterIndex minus circleHorizontalOffset to result arm six. |
+| `L:ld.a(I)Z#8` | `upperNearRightHit` | Carries integer true from upperNearRowCenterIndex plus circleHorizontalOffset to result arm seven. |
+| `L:ld.a(I)Z#9` | `lowerNearLeftHit` | Carries integer true from lowerNearRowCenterIndex minus circleHorizontalOffset to result arm eight. |
 | `L:n.a(IIIIBIIII)[Ldm;#10` | `borderIndex` | Reused outer loop index for corner border layers and positions along edge strips; role is deliberately broad across those separate loops. |
 | `L:n.a(IIIIBIIII)[Ldm;#11` | `scanIndex` | Reused for the initial slice-array traversal, square-corner scan positions and edge-band offsets; not named as one fixed x/y coordinate. |
 | `L:n.a(IIIIBIIII)[Ldm;#12` | `sliceToFill` | Current sprite selected from slicesToFill before its complete pixel array is initialized. |
@@ -1064,6 +1088,7 @@ Generated from explicit rules; original names remain lookup identities.
 | `P:kl.a(Lgd;II)Lkl;#0` | `sample` | PCM factory inputs: sample supplies bytes and source frequency, ratePercent scales signed Q8 sample step, volume is shifted left six before construction. |
 | `P:kl.a(Lgd;II)Lkl;#1` | `ratePercent` | PCM factory inputs: sample supplies bytes and source frequency, ratePercent scales signed Q8 sample step, volume is shifted left six before construction. |
 | `P:kl.a(Lgd;II)Lkl;#2` | `volume` | PCM factory inputs: sample supplies bytes and source frequency, ratePercent scales signed Q8 sample step, volume is shifted left six before construction. |
+| `P:ld.a(I)Z#0` | `methodGuard` | Actual boundary callers pass -61. The retained integer division can throw before even an occupied first cardinal pixel; native cases cover zero denominators, truncation boundaries and int subtraction overflow. |
 | `P:ld.a(IIII)V#0` | `originY` | Argument position in ug.spawnScorePopup(points, true, originY, 1, originX); parameter 2 retains its <=39 boundary-probe side effect. |
 | `P:ld.a(IIII)V#1` | `originX` | Argument position in ug.spawnScorePopup(points, true, originY, 1, originX); parameter 2 retains its <=39 boundary-probe side effect. |
 | `P:ld.a(IIII)V#2` | `methodGuard` | Argument position in ug.spawnScorePopup(points, true, originY, 1, originX); parameter 2 retains its <=39 boundary-probe side effect. |

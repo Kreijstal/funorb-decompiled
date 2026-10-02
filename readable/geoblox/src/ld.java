@@ -18,123 +18,123 @@ final class ld {
         field_b = null;
     }
 
-    final static boolean hasPixelsAtPlayfieldBoundary(int param0) {
-        int incrementValue$0 = 0;
-        int stackIn_4_0 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_11_0 = 0;
-        int stackIn_15_0 = 0;
-        int stackIn_21_0 = 0;
-        int stackIn_24_0 = 0;
-        int stackIn_27_0 = 0;
-        int stackIn_30_0 = 0;
-        int stackIn_34_0 = 0;
-        int stackIn_37_0 = 0;
-        int stackIn_41_0 = 0;
-        int stackIn_45_0 = 0;
-        int stackIn_47_0 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int var1_int = 0;
-        RuntimeException var1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+    final static boolean hasPixelsAtPlayfieldBoundary(int methodGuard) {
+        int previousCircleVerticalOffset = 0;
+        int leftCardinalHit = 0;
+        int rightCardinalHit = 0;
+        int topCardinalHit = 0;
+        int bottomCardinalHit = 0;
+        int upperFarLeftHit = 0;
+        int upperFarRightHit = 0;
+        int upperNearLeftHit = 0;
+        int upperNearRightHit = 0;
+        int lowerNearLeftHit = 0;
+        int lowerNearRightHit = 0;
+        int lowerFarLeftHit = 0;
+        int lowerFarRightHit = 0;
+        int boundaryScanMissResult = 0;
+        int boundaryResultArmId = 0;
+        RuntimeException caughtBoundaryScanFailure = null;
+        int upperNearRowCenterIndex = 0;
+        RuntimeException boundaryScanFailureForContext = null;
+        int lowerNearRowCenterIndex = 0;
+        int upperFarRowCenterIndex = 0;
+        int lowerFarRowCenterIndex = 0;
         int circleHorizontalOffset = 0;
         int circleVerticalOffset = 0;
         int playfieldRadiusSquared = 0;
-        int var8 = 0;
+        int guardDivisionResult = 0;
         int circleError = 0;
-        int var10 = 0;
-        var10 = Geoblox.field_C;
+        int clientControlFlowGuard = 0;
+        clientControlFlowGuard = Geoblox.field_C;
         try {
           L0: {
-            var1_int = 240 * SoftwareRasterizer.stride + 320;
-            var2 = var1_int;
-            var3 = -(230 * SoftwareRasterizer.stride) + var1_int;
-            var4 = 230 * SoftwareRasterizer.stride + var1_int;
+            upperNearRowCenterIndex = 240 * SoftwareRasterizer.stride + 320;
+            lowerNearRowCenterIndex = upperNearRowCenterIndex;
+            upperFarRowCenterIndex = -(230 * SoftwareRasterizer.stride) + upperNearRowCenterIndex;
+            lowerFarRowCenterIndex = 230 * SoftwareRasterizer.stride + upperNearRowCenterIndex;
             circleHorizontalOffset = 230;
             circleVerticalOffset = 0;
             playfieldRadiusSquared = 52900;
-            var8 = 64 / ((param0 - 32) / 34);
+            guardDivisionResult = 64 / ((methodGuard - 32) / 34);
             circleError = playfieldRadiusSquared - circleHorizontalOffset;
-            if (SoftwareRasterizer.framebuffer[-circleHorizontalOffset + var1_int] != 0) {
-              stackIn_4_0 = 1;
-              decompiledRegionSelector0 = 0;
+            if (SoftwareRasterizer.framebuffer[-circleHorizontalOffset + upperNearRowCenterIndex] != 0) {
+              leftCardinalHit = 1;
+              boundaryResultArmId = 0;
             } else {
-              if (0 == SoftwareRasterizer.framebuffer[var1_int + circleHorizontalOffset]) {
-                if (SoftwareRasterizer.framebuffer[var3] != 0) {
-                  stackIn_11_0 = 1;
-                  decompiledRegionSelector0 = 2;
+              if (0 == SoftwareRasterizer.framebuffer[upperNearRowCenterIndex + circleHorizontalOffset]) {
+                if (SoftwareRasterizer.framebuffer[upperFarRowCenterIndex] != 0) {
+                  topCardinalHit = 1;
+                  boundaryResultArmId = 2;
                 } else {
-                  if (SoftwareRasterizer.framebuffer[var4] != 0) {
-                    stackIn_15_0 = 1;
-                    decompiledRegionSelector0 = 3;
+                  if (SoftwareRasterizer.framebuffer[lowerFarRowCenterIndex] != 0) {
+                    bottomCardinalHit = 1;
+                    boundaryResultArmId = 3;
                   } else {
                     L1: while (true) {
-                      incrementValue$0 = circleVerticalOffset;
+                      previousCircleVerticalOffset = circleVerticalOffset;
                       circleVerticalOffset++;
-                      circleError = circleError + (incrementValue$0 + circleVerticalOffset);
-                      var2 = var2 + SoftwareRasterizer.stride;
-                      var1_int = var1_int - SoftwareRasterizer.stride;
+                      circleError = circleError + (previousCircleVerticalOffset + circleVerticalOffset);
+                      lowerNearRowCenterIndex = lowerNearRowCenterIndex + SoftwareRasterizer.stride;
+                      upperNearRowCenterIndex = upperNearRowCenterIndex - SoftwareRasterizer.stride;
                       if (playfieldRadiusSquared < circleError) {
-                        var3 = var3 + SoftwareRasterizer.stride;
-                        var4 = var4 - SoftwareRasterizer.stride;
+                        upperFarRowCenterIndex = upperFarRowCenterIndex + SoftwareRasterizer.stride;
+                        lowerFarRowCenterIndex = lowerFarRowCenterIndex - SoftwareRasterizer.stride;
                         circleHorizontalOffset--;
                         circleError = circleError - (circleHorizontalOffset + circleHorizontalOffset);
                       }
                       if (circleVerticalOffset > circleHorizontalOffset) {
-                        stackIn_47_0 = 0;
-                        decompiledRegionSelector0 = 12;
+                        boundaryScanMissResult = 0;
+                        boundaryResultArmId = 12;
                         break L0;
                       } else {
-                        if (0 == SoftwareRasterizer.framebuffer[-circleVerticalOffset + var3]) {
-                          if (SoftwareRasterizer.framebuffer[var3 + circleVerticalOffset] == 0) {
-                            if (SoftwareRasterizer.framebuffer[-circleHorizontalOffset + var1_int] == 0) {
-                              if (SoftwareRasterizer.framebuffer[circleHorizontalOffset + var1_int] == 0) {
-                                if (SoftwareRasterizer.framebuffer[var2 - circleHorizontalOffset] != 0) {
-                                  stackIn_34_0 = 1;
-                                  decompiledRegionSelector0 = 8;
+                        if (0 == SoftwareRasterizer.framebuffer[-circleVerticalOffset + upperFarRowCenterIndex]) {
+                          if (SoftwareRasterizer.framebuffer[upperFarRowCenterIndex + circleVerticalOffset] == 0) {
+                            if (SoftwareRasterizer.framebuffer[-circleHorizontalOffset + upperNearRowCenterIndex] == 0) {
+                              if (SoftwareRasterizer.framebuffer[circleHorizontalOffset + upperNearRowCenterIndex] == 0) {
+                                if (SoftwareRasterizer.framebuffer[lowerNearRowCenterIndex - circleHorizontalOffset] != 0) {
+                                  lowerNearLeftHit = 1;
+                                  boundaryResultArmId = 8;
                                   break L0;
                                 } else {
-                                  if (SoftwareRasterizer.framebuffer[circleHorizontalOffset + var2] == 0) {
-                                    if (SoftwareRasterizer.framebuffer[var4 - circleVerticalOffset] != 0) {
-                                      stackIn_41_0 = 1;
-                                      decompiledRegionSelector0 = 10;
+                                  if (SoftwareRasterizer.framebuffer[circleHorizontalOffset + lowerNearRowCenterIndex] == 0) {
+                                    if (SoftwareRasterizer.framebuffer[lowerFarRowCenterIndex - circleVerticalOffset] != 0) {
+                                      lowerFarLeftHit = 1;
+                                      boundaryResultArmId = 10;
                                       break L0;
                                     } else {
-                                      if (SoftwareRasterizer.framebuffer[var4 + circleVerticalOffset] != 0) {
-                                        stackIn_45_0 = 1;
-                                        decompiledRegionSelector0 = 11;
+                                      if (SoftwareRasterizer.framebuffer[lowerFarRowCenterIndex + circleVerticalOffset] != 0) {
+                                        lowerFarRightHit = 1;
+                                        boundaryResultArmId = 11;
                                         break L0;
                                       } else {
                                         continue L1;
                                       }
                                     }
                                   } else {
-                                    stackIn_37_0 = 1;
-                                    decompiledRegionSelector0 = 9;
+                                    lowerNearRightHit = 1;
+                                    boundaryResultArmId = 9;
                                     break L0;
                                   }
                                 }
                               } else {
-                                stackIn_30_0 = 1;
-                                decompiledRegionSelector0 = 7;
+                                upperNearRightHit = 1;
+                                boundaryResultArmId = 7;
                                 break L0;
                               }
                             } else {
-                              stackIn_27_0 = 1;
-                              decompiledRegionSelector0 = 6;
+                              upperNearLeftHit = 1;
+                              boundaryResultArmId = 6;
                               break L0;
                             }
                           } else {
-                            stackIn_24_0 = 1;
-                            decompiledRegionSelector0 = 5;
+                            upperFarRightHit = 1;
+                            boundaryResultArmId = 5;
                             break L0;
                           }
                         } else {
-                          stackIn_21_0 = 1;
-                          decompiledRegionSelector0 = 4;
+                          upperFarLeftHit = 1;
+                          boundaryResultArmId = 4;
                           break L0;
                         }
                       }
@@ -142,53 +142,53 @@ final class ld {
                   }
                 }
               } else {
-                stackIn_7_0 = 1;
-                decompiledRegionSelector0 = 1;
+                rightCardinalHit = 1;
+                boundaryResultArmId = 1;
               }
             }
           }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1), "ld.B(" + param0 + ')');
+        } catch (java.lang.RuntimeException boundaryScanFailure) {
+          caughtBoundaryScanFailure = boundaryScanFailure;
+          boundaryScanFailureForContext = caughtBoundaryScanFailure;
+          throw t.a((Throwable) ((Object) boundaryScanFailureForContext), "ld.B(" + methodGuard + ')');
         }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_4_0 != 0;
+        if (boundaryResultArmId == 0) {
+          return leftCardinalHit != 0;
         } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_7_0 != 0;
+          if (boundaryResultArmId == 1) {
+            return rightCardinalHit != 0;
           } else {
-            if (decompiledRegionSelector0 == 2) {
-              return stackIn_11_0 != 0;
+            if (boundaryResultArmId == 2) {
+              return topCardinalHit != 0;
             } else {
-              if (decompiledRegionSelector0 == 3) {
-                return stackIn_15_0 != 0;
+              if (boundaryResultArmId == 3) {
+                return bottomCardinalHit != 0;
               } else {
-                if (decompiledRegionSelector0 == 4) {
-                  return stackIn_21_0 != 0;
+                if (boundaryResultArmId == 4) {
+                  return upperFarLeftHit != 0;
                 } else {
-                  if (decompiledRegionSelector0 == 5) {
-                    return stackIn_24_0 != 0;
+                  if (boundaryResultArmId == 5) {
+                    return upperFarRightHit != 0;
                   } else {
-                    if (decompiledRegionSelector0 == 6) {
-                      return stackIn_27_0 != 0;
+                    if (boundaryResultArmId == 6) {
+                      return upperNearLeftHit != 0;
                     } else {
-                      if (decompiledRegionSelector0 == 7) {
-                        return stackIn_30_0 != 0;
+                      if (boundaryResultArmId == 7) {
+                        return upperNearRightHit != 0;
                       } else {
-                        if (decompiledRegionSelector0 == 8) {
-                          return stackIn_34_0 != 0;
+                        if (boundaryResultArmId == 8) {
+                          return lowerNearLeftHit != 0;
                         } else {
-                          if (decompiledRegionSelector0 == 9) {
-                            return stackIn_37_0 != 0;
+                          if (boundaryResultArmId == 9) {
+                            return lowerNearRightHit != 0;
                           } else {
-                            if (decompiledRegionSelector0 == 10) {
-                              return stackIn_41_0 != 0;
+                            if (boundaryResultArmId == 10) {
+                              return lowerFarLeftHit != 0;
                             } else {
-                              if (decompiledRegionSelector0 == 11) {
-                                return stackIn_45_0 != 0;
+                              if (boundaryResultArmId == 11) {
+                                return lowerFarRightHit != 0;
                               } else {
-                                return stackIn_47_0 != 0;
+                                return boundaryScanMissResult != 0;
                               }
                             }
                           }
