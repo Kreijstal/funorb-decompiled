@@ -13,8 +13,6 @@ final class qe {
         java.awt.Frame stackIn_37_0 = null;
         RuntimeException stackIn_40_0 = null;
         StringBuilder stackIn_40_1 = null;
-        RuntimeException stackIn_41_0 = null;
-        StringBuilder stackIn_41_1 = null;
         String stackIn_41_2 = null;
         RuntimeException decompiledCaughtException = null;
         rj[] var6 = null;
@@ -86,19 +84,13 @@ final class qe {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6_ref = decompiledCaughtException;
           stackIn_40_0 = (RuntimeException) (var6_ref);
-
           stackIn_40_1 = new StringBuilder().append("qe.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-
           if (param4 == null) {
-            stackIn_41_0 = (RuntimeException) ((Object) stackIn_40_0);
-            stackIn_41_1 = (StringBuilder) ((Object) stackIn_40_1);
             stackIn_41_2 = "null";
           } else {
-            stackIn_41_0 = (RuntimeException) ((Object) stackIn_40_0);
-            stackIn_41_1 = (StringBuilder) ((Object) stackIn_40_1);
             stackIn_41_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_41_2).append(',').append(param5).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param5).append(')').toString());
         }
     }
 

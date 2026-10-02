@@ -95,8 +95,6 @@ final class sk {
         int stackIn_32_1 = 0;
         RuntimeException stackIn_64_0 = null;
         StringBuilder stackIn_64_1 = null;
-        RuntimeException stackIn_65_0 = null;
-        StringBuilder stackIn_65_1 = null;
         String stackIn_65_2 = null;
         Throwable decompiledCaughtException = null;
         long var5_long = 0L;
@@ -246,32 +244,22 @@ final class sk {
           decompiledCaughtException = decompiledCaughtParameter1;
           var5_ref = (RuntimeException) (Object) decompiledCaughtException;
           stackIn_64_0 = (RuntimeException) (var5_ref);
-
           stackIn_64_1 = new StringBuilder().append("sk.B(");
-
           if (param0 == null) {
-            stackIn_65_0 = (RuntimeException) ((Object) stackIn_64_0);
-            stackIn_65_1 = (StringBuilder) ((Object) stackIn_64_1);
             stackIn_65_2 = "null";
           } else {
-            stackIn_65_0 = (RuntimeException) ((Object) stackIn_64_0);
-            stackIn_65_1 = (StringBuilder) ((Object) stackIn_64_1);
             stackIn_65_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_65_0), ((StringBuilder) (Object) stackIn_65_1).append(stackIn_65_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_64_0), ((StringBuilder) (Object) stackIn_64_1).append(stackIn_65_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     final void a(int param0, int param1, byte[] param2, boolean param3) throws IOException {
         pa stackIn_19_0 = null;
         long stackIn_19_1 = 0L;
-        pa stackIn_20_0 = null;
-        long stackIn_20_1 = 0L;
         boolean stackIn_20_2 = false;
         RuntimeException stackIn_54_0 = null;
         StringBuilder stackIn_54_1 = null;
-        RuntimeException stackIn_55_0 = null;
-        StringBuilder stackIn_55_1 = null;
         String stackIn_55_2 = null;
         Throwable decompiledCaughtException = null;
         int var5_int = 0;
@@ -326,19 +314,13 @@ final class sk {
             }
             if (this.field_f != this.field_b) {
               stackIn_19_0 = this.field_a;
-
               stackIn_19_1 = this.field_f;
-
               if (param3) {
-                stackIn_20_0 = (pa) ((Object) stackIn_19_0);
-                stackIn_20_1 = stackIn_19_1;
                 stackIn_20_2 = false;
               } else {
-                stackIn_20_0 = (pa) ((Object) stackIn_19_0);
-                stackIn_20_1 = stackIn_19_1;
                 stackIn_20_2 = true;
               }
-              ((pa) (Object) stackIn_20_0).a(stackIn_20_1, stackIn_20_2);
+              ((pa) (Object) stackIn_19_0).a(stackIn_19_1, stackIn_20_2);
               this.field_b = this.field_f;
             }
             this.field_a.a(param2, param1, 90, param0);
@@ -392,19 +374,13 @@ final class sk {
           decompiledCaughtException = decompiledCaughtParameter1;
           var5_ref = (RuntimeException) (Object) decompiledCaughtException;
           stackIn_54_0 = (RuntimeException) (var5_ref);
-
           stackIn_54_1 = new StringBuilder().append("sk.C(").append(param0).append(',').append(param1).append(',');
-
           if (param2 == null) {
-            stackIn_55_0 = (RuntimeException) ((Object) stackIn_54_0);
-            stackIn_55_1 = (StringBuilder) ((Object) stackIn_54_1);
             stackIn_55_2 = "null";
           } else {
-            stackIn_55_0 = (RuntimeException) ((Object) stackIn_54_0);
-            stackIn_55_1 = (StringBuilder) ((Object) stackIn_54_1);
             stackIn_55_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_55_2).append(',').append(param3).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param3).append(')').toString());
         }
     }
 

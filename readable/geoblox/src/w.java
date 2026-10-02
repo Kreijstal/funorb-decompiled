@@ -87,17 +87,12 @@ final class w {
         nc stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         StringBuilder stackIn_9_1 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         StringBuilder stackIn_12_1 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         StringBuilder stackIn_15_1 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -112,58 +107,31 @@ final class w {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_6_0 = (RuntimeException) (var5);
-
           stackIn_6_1 = new StringBuilder().append("w.A(");
-
           if (groupName == null) {
-            stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-            stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
             stackIn_7_2 = "null";
           } else {
-            stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-            stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
             stackIn_7_2 = "{...}";
           }
-
-
-          stackIn_9_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
-
+          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
           if (glyphGraphicsArchive == null) {
-            stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-            stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
             stackIn_10_2 = "null";
           } else {
-            stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-            stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
             stackIn_10_2 = "{...}";
           }
-
-
-          stackIn_12_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',');
-
+          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
           if (fontMetricsArchive == null) {
-            stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-            stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
             stackIn_13_2 = "null";
           } else {
-            stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-            stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
             stackIn_13_2 = "{...}";
           }
-
-
-          stackIn_15_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',').append(methodGuard).append(',');
-
+          stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(methodGuard).append(',');
           if (resourceName == null) {
-            stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-            stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
             stackIn_16_2 = "null";
           } else {
-            stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-            stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
             stackIn_16_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

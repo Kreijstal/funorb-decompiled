@@ -8,8 +8,6 @@ final class nb {
         RuntimeException var2 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -27,19 +25,13 @@ final class nb {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_7_0 = (RuntimeException) (var2);
-
           stackIn_7_1 = new StringBuilder().append("nb.B(").append(param0).append(',');
-
           if (param1 == null) {
-            stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-            stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
             stackIn_8_2 = "null";
           } else {
-            stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-            stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
             stackIn_8_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -54,26 +46,11 @@ final class nb {
         float boardXBeforeVariantSelection;
         int kindBeforeVariantSelection;
         float inwardVelocityXBeforeVariantSelection;
-        GameplayEntity entityForCategorySelection = null;
-        int motionGuardForCategorySelection = 0;
-        float boardXForCategorySelection = 0.0f;
-        int kindForCategorySelection = 0;
-        float inwardVelocityXForCategorySelection = 0.0f;
         int selectedVariantId = 0;
         int zeroLifetimeTicks;
         float unusedMotionFloat;
         float boardYForCategorySelection;
         float inwardVelocityYForCategorySelection;
-        GameplayEntity entityToInitialize = null;
-        int initializationGuard = 0;
-        float initializationX = 0.0f;
-        int initializationKind = 0;
-        float initializationVelocityX = 0.0f;
-        int initializationVariant = 0;
-        int initializationLifetimeTicks = 0;
-        float unusedInitializationFloat = 0.0f;
-        float initializationY = 0.0f;
-        float initializationVelocityY = 0.0f;
         int initializationCategory = 0;
         if (methodGuard != -28195) {
           return;
@@ -109,90 +86,24 @@ final class nb {
           kindBeforeVariantSelection = spriteKindId;
           inwardVelocityXBeforeVariantSelection = (float)(320 - pointerX);
           if (spriteKindId != 2) {
-            entityForCategorySelection = (GameplayEntity) ((Object) entityBeforeVariantSelection);
-            motionGuardForCategorySelection = motionGuardBeforeVariantSelection;
-            boardXForCategorySelection = boardXBeforeVariantSelection;
-            kindForCategorySelection = kindBeforeVariantSelection;
-            inwardVelocityXForCategorySelection = inwardVelocityXBeforeVariantSelection;
             selectedVariantId = -1;
           } else {
-            entityForCategorySelection = (GameplayEntity) ((Object) entityBeforeVariantSelection);
-            motionGuardForCategorySelection = motionGuardBeforeVariantSelection;
-            boardXForCategorySelection = boardXBeforeVariantSelection;
-            kindForCategorySelection = kindBeforeVariantSelection;
-            inwardVelocityXForCategorySelection = inwardVelocityXBeforeVariantSelection;
             selectedVariantId = variantId;
           }
           L5: {
-            entityForCategorySelection = (GameplayEntity) ((Object) entityForCategorySelection);
-
             zeroLifetimeTicks = 0;
-
             unusedMotionFloat = 0.0f;
-
             boardYForCategorySelection = (float)pointerY;
-
             inwardVelocityYForCategorySelection = (float)(-pointerY + 240);
-
             if (spriteKindId != 2) {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
               if (1 != spriteKindId) {
-                entityToInitialize = (GameplayEntity) ((Object) entityForCategorySelection);
-                initializationGuard = motionGuardForCategorySelection;
-                initializationX = boardXForCategorySelection;
-                initializationKind = kindForCategorySelection;
-                initializationVelocityX = inwardVelocityXForCategorySelection;
-                initializationVariant = selectedVariantId;
-                initializationLifetimeTicks = zeroLifetimeTicks;
-                unusedInitializationFloat = unusedMotionFloat;
-                initializationY = boardYForCategorySelection;
-                initializationVelocityY = inwardVelocityYForCategorySelection;
                 initializationCategory = -1;
                 break L5;
               }
-              entityForCategorySelection = (GameplayEntity) ((Object) entityForCategorySelection);
-
-
-
-
-
-
-
-
-
             }
-            entityToInitialize = (GameplayEntity) ((Object) entityForCategorySelection);
-            initializationGuard = motionGuardForCategorySelection;
-            initializationX = boardXForCategorySelection;
-            initializationKind = kindForCategorySelection;
-            initializationVelocityX = inwardVelocityXForCategorySelection;
-            initializationVariant = selectedVariantId;
-            initializationLifetimeTicks = zeroLifetimeTicks;
-            unusedInitializationFloat = unusedMotionFloat;
-            initializationY = boardYForCategorySelection;
-            initializationVelocityY = inwardVelocityYForCategorySelection;
             initializationCategory = categoryId;
           }
-          ((GameplayEntity) (Object) entityToInitialize).initializeEntityMotion(initializationGuard, initializationX, initializationKind, initializationVelocityX, initializationVariant, initializationLifetimeTicks, unusedInitializationFloat, initializationY, initializationVelocityY, initializationCategory, 0.0f);
+          ((GameplayEntity) (Object) entityBeforeVariantSelection).initializeEntityMotion(motionGuardBeforeVariantSelection, boardXBeforeVariantSelection, kindBeforeVariantSelection, inwardVelocityXBeforeVariantSelection, selectedVariantId, zeroLifetimeTicks, unusedMotionFloat, boardYForCategorySelection, inwardVelocityYForCategorySelection, initializationCategory, 0.0f);
         }
         pooledEntity.entityQueue = null;
         ji.movingEntities.addLast(methodGuard ^ 28286, pooledEntity);

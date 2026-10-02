@@ -72,8 +72,6 @@ final class fi {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -94,19 +92,13 @@ final class fi {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
           stackIn_10_0 = (RuntimeException) (runtimeException);
-
           stackIn_10_1 = new StringBuilder().append("fi.D(").append(param0).append(',');
-
           if (param1 == null) {
-            stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-            stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
             stackIn_11_2 = "null";
           } else {
-            stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-            stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
             stackIn_11_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

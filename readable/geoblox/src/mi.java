@@ -49,8 +49,6 @@ class mi extends kg {
     private final void a(int param0, mi param1) {
         RuntimeException stackIn_100_0 = null;
         StringBuilder stackIn_100_1 = null;
-        RuntimeException stackIn_101_0 = null;
-        StringBuilder stackIn_101_1 = null;
         String stackIn_101_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
@@ -176,19 +174,13 @@ class mi extends kg {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_100_0 = (RuntimeException) (var3);
-
           stackIn_100_1 = new StringBuilder().append("mi.B(").append(param0).append(',');
-
           if (param1 == null) {
-            stackIn_101_0 = (RuntimeException) ((Object) stackIn_100_0);
-            stackIn_101_1 = (StringBuilder) ((Object) stackIn_100_1);
             stackIn_101_2 = "null";
           } else {
-            stackIn_101_0 = (RuntimeException) ((Object) stackIn_100_0);
-            stackIn_101_1 = (StringBuilder) ((Object) stackIn_100_1);
             stackIn_101_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_101_0), ((StringBuilder) (Object) stackIn_101_1).append(stackIn_101_2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_100_0), ((StringBuilder) (Object) stackIn_100_1).append(stackIn_101_2).append(')').toString());
         }
     }
 
@@ -210,11 +202,8 @@ class mi extends kg {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         StringBuilder stackIn_9_1 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         this.field_bb = -1;
@@ -241,32 +230,19 @@ class mi extends kg {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
           stackIn_6_0 = (RuntimeException) (runtimeException);
-
           stackIn_6_1 = new StringBuilder().append("mi.<init>(").append(param0).append(',');
-
           if (param1 == null) {
-            stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-            stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
             stackIn_7_2 = "null";
           } else {
-            stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-            stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
             stackIn_7_2 = "{...}";
           }
-
-
-          stackIn_9_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
-
+          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
           if (param6 == null) {
-            stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-            stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
             stackIn_10_2 = "null";
           } else {
-            stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-            stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
             stackIn_10_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

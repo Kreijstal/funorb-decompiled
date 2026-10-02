@@ -59,14 +59,10 @@ final class ai extends IntrusiveNode {
             java.net.URL stackIn_43_0 = null;
             RuntimeException stackIn_46_0 = null;
             StringBuilder stackIn_46_1 = null;
-            RuntimeException stackIn_47_0 = null;
-            StringBuilder stackIn_47_1 = null;
             String stackIn_47_2 = null;
             StringBuilder stackIn_49_1 = null;
-            StringBuilder stackIn_50_1 = null;
             String stackIn_50_2 = null;
             StringBuilder stackIn_52_1 = null;
-            StringBuilder stackIn_53_1 = null;
             String stackIn_53_2 = null;
             Throwable decompiledCaughtException = null;
             String var5 = null;
@@ -168,45 +164,25 @@ final class ai extends IntrusiveNode {
               decompiledCaughtException = decompiledCaughtParameter1;
               var5_ref = (RuntimeException) (Object) decompiledCaughtException;
               stackIn_46_0 = (RuntimeException) (var5_ref);
-
               stackIn_46_1 = new StringBuilder().append("ai.B(");
-
               if (param0 == null) {
-                stackIn_47_0 = (RuntimeException) ((Object) stackIn_46_0);
-                stackIn_47_1 = (StringBuilder) ((Object) stackIn_46_1);
                 stackIn_47_2 = "null";
               } else {
-                stackIn_47_0 = (RuntimeException) ((Object) stackIn_46_0);
-                stackIn_47_1 = (StringBuilder) ((Object) stackIn_46_1);
                 stackIn_47_2 = "{...}";
               }
-
-
-              stackIn_49_1 = ((StringBuilder) (Object) stackIn_47_1).append(stackIn_47_2).append(',');
-
+              stackIn_49_1 = ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',');
               if (param1 == null) {
-                stackIn_47_0 = (RuntimeException) ((Object) stackIn_47_0);
-                stackIn_50_1 = (StringBuilder) ((Object) stackIn_49_1);
                 stackIn_50_2 = "null";
               } else {
-                stackIn_47_0 = (RuntimeException) ((Object) stackIn_47_0);
-                stackIn_50_1 = (StringBuilder) ((Object) stackIn_49_1);
                 stackIn_50_2 = "{...}";
               }
-
-
-              stackIn_52_1 = ((StringBuilder) (Object) stackIn_50_1).append(stackIn_50_2).append(',');
-
+              stackIn_52_1 = ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(',');
               if (param2 == null) {
-                stackIn_47_0 = (RuntimeException) ((Object) stackIn_47_0);
-                stackIn_53_1 = (StringBuilder) ((Object) stackIn_52_1);
                 stackIn_53_2 = "null";
               } else {
-                stackIn_47_0 = (RuntimeException) ((Object) stackIn_47_0);
-                stackIn_53_1 = (StringBuilder) ((Object) stackIn_52_1);
                 stackIn_53_2 = "{...}";
               }
-              throw t.a((Throwable) ((Object) stackIn_47_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_53_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+              throw t.a((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(param3).append(',').append(param4).append(')').toString());
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

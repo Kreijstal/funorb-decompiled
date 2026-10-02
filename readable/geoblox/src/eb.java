@@ -235,11 +235,8 @@ final class eb {
             RuntimeException var3_ref2 = null;
             RuntimeException stackIn_8_0 = null;
             StringBuilder stackIn_8_1 = null;
-            RuntimeException stackIn_9_0 = null;
-            StringBuilder stackIn_9_1 = null;
             String stackIn_9_2 = null;
             StringBuilder stackIn_11_1 = null;
-            StringBuilder stackIn_12_1 = null;
             String stackIn_12_2 = null;
             Throwable decompiledCaughtException = null;
             try {
@@ -261,32 +258,19 @@ final class eb {
               decompiledCaughtException = decompiledCaughtParameter1;
               var3_ref2 = (RuntimeException) (Object) decompiledCaughtException;
               stackIn_8_0 = (RuntimeException) (var3_ref2);
-
               stackIn_8_1 = new StringBuilder().append("eb.C(");
-
               if (param0 == null) {
-                stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-                stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
                 stackIn_9_2 = "null";
               } else {
-                stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-                stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
                 stackIn_9_2 = "{...}";
               }
-
-
-              stackIn_11_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',').append(param1).append(',');
-
+              stackIn_11_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',');
               if (param2 == null) {
-                stackIn_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-                stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
                 stackIn_12_2 = "null";
               } else {
-                stackIn_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-                stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
                 stackIn_12_2 = "{...}";
               }
-              throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(')').toString());
+              throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

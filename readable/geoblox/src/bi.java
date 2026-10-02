@@ -23,8 +23,6 @@ final class bi implements dh {
         int var4 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         var4 = Geoblox.field_C;
@@ -50,19 +48,13 @@ final class bi implements dh {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_17_0 = (RuntimeException) (var3);
-
           stackIn_17_1 = new StringBuilder().append("bi.B(").append(param0).append(',');
-
           if (param1 == null) {
-            stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-            stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
             stackIn_18_2 = "null";
           } else {
-            stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-            stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
             stackIn_18_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -70,8 +62,6 @@ final class bi implements dh {
         el stackIn_3_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
@@ -115,19 +105,13 @@ final class bi implements dh {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_17_0 = (RuntimeException) (var6);
-
           stackIn_17_1 = new StringBuilder().append("bi.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-
           if (param4 == null) {
-            stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-            stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
             stackIn_18_2 = "null";
           } else {
-            stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-            stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
             stackIn_18_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 

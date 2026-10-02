@@ -45,8 +45,6 @@ final class qb extends hk {
     final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, el param6) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
@@ -87,19 +85,13 @@ final class qb extends hk {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
           stackIn_19_0 = (RuntimeException) (var8);
-
           stackIn_19_1 = new StringBuilder().append("qb.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
-
           if (param6 == null) {
-            stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-            stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
             stackIn_20_2 = "null";
           } else {
-            stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-            stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
             stackIn_20_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -107,14 +99,10 @@ final class qb extends hk {
         int var7 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
         StringBuilder stackIn_22_1 = null;
-        StringBuilder stackIn_23_1 = null;
         String stackIn_23_2 = null;
         StringBuilder stackIn_25_1 = null;
-        StringBuilder stackIn_26_1 = null;
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
@@ -154,45 +142,25 @@ final class qb extends hk {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_19_0 = (RuntimeException) (var5);
-
           stackIn_19_1 = new StringBuilder().append("qb.C(").append(param0).append(',');
-
           if (param1 == null) {
-            stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-            stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
             stackIn_20_2 = "null";
           } else {
-            stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-            stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
             stackIn_20_2 = "{...}";
           }
-
-
-          stackIn_22_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(',');
-
+          stackIn_22_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',');
           if (param2 == null) {
-            stackIn_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-            stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
             stackIn_23_2 = "null";
           } else {
-            stackIn_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-            stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
             stackIn_23_2 = "{...}";
           }
-
-
-          stackIn_25_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(',').append(param3).append(',');
-
+          stackIn_25_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(',');
           if (param4 == null) {
-            stackIn_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-            stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
             stackIn_26_2 = "null";
           } else {
-            stackIn_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-            stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
             stackIn_26_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_26_2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 

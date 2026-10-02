@@ -905,8 +905,6 @@ final class ArgbSprite extends Sprite {
         int lastBlockSourceYCandidate = 0;
         int[] samplePixelBuffer = null;
         int sampleBaseIndex = 0;
-        int[] samplePixelBufferAlias = null;
-        int sampleBaseIndexAlias = 0;
         int sampleRowOffset = 0;
         int reducedWidth;
         int reducedHeight;
@@ -978,19 +976,13 @@ final class ArgbSprite extends Sprite {
                 alphaSum = 0;
                 for (sampleIndexThenAverageAlpha = 0; sampleIndexThenAverageAlpha < 4; sampleIndexThenAverageAlpha++) {
                   samplePixelBuffer = this.pixels;
-
                   sampleBaseIndex = sourceIndex + (sampleIndexThenAverageAlpha & 1);
-
                   if ((sampleIndexThenAverageAlpha & 2) != 0) {
-                    samplePixelBufferAlias = (int[]) ((Object) samplePixelBuffer);
-                    sampleBaseIndexAlias = sampleBaseIndex;
                     sampleRowOffset = 0;
                   } else {
-                    samplePixelBufferAlias = (int[]) ((Object) samplePixelBuffer);
-                    sampleBaseIndexAlias = sampleBaseIndex;
                     sampleRowOffset = this.width;
                   }
-                  samplePixel = samplePixelBufferAlias[sampleBaseIndexAlias + sampleRowOffset];
+                  samplePixel = samplePixelBuffer[sampleBaseIndex + sampleRowOffset];
                   sampleAlpha = samplePixel >>> 24;
                   alphaSum = alphaSum + sampleAlpha;
                   weightedRedThenRedBlue = weightedRedThenRedBlue + sampleAlpha * (samplePixel >> 16 & 255);

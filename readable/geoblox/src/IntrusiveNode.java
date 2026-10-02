@@ -58,8 +58,6 @@ class IntrusiveNode {
         byte[] stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -87,19 +85,13 @@ class IntrusiveNode {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_16_0 = (RuntimeException) (var3_ref);
-
           stackIn_16_1 = new StringBuilder().append("hf.BA(").append(param0).append(',');
-
           if (param1 == null) {
-            stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-            stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
             stackIn_17_2 = "null";
           } else {
-            stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-            stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
             stackIn_17_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -120,15 +112,11 @@ class IntrusiveNode {
         byte dupTemp$1 = 0;
         byte dupTemp$0 = 0;
         int stackIn_28_0 = 0;
-        int stackIn_29_0 = 0;
         int stackIn_29_1 = 0;
         int stackIn_44_0 = 0;
-        int stackIn_45_0 = 0;
         int stackIn_45_1 = 0;
         RuntimeException stackIn_51_0 = null;
         StringBuilder stackIn_51_1 = null;
-        RuntimeException stackIn_52_0 = null;
-        StringBuilder stackIn_52_1 = null;
         String stackIn_52_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -214,15 +202,12 @@ class IntrusiveNode {
                   var9[var12] = dupTemp$1;
                   var13 = dupTemp$1;
                   stackIn_28_0 = var10;
-
                   if (var13 == -1) {
-                    stackIn_29_0 = stackIn_28_0;
                     stackIn_29_1 = 0;
                   } else {
-                    stackIn_29_0 = stackIn_28_0;
                     stackIn_29_1 = 1;
                   }
-                  var10 = stackIn_29_0 | stackIn_29_1;
+                  var10 = stackIn_28_0 | stackIn_29_1;
                 }
                 break L6;
               }
@@ -241,15 +226,12 @@ class IntrusiveNode {
                     var9[var12 + var5 * var13] = dupTemp$0;
                     var14 = dupTemp$0;
                     stackIn_44_0 = var10;
-
                     if (var14 == -1) {
-                      stackIn_45_0 = stackIn_44_0;
                       stackIn_45_1 = 0;
                     } else {
-                      stackIn_45_0 = stackIn_44_0;
                       stackIn_45_1 = 1;
                     }
-                    var10 = stackIn_45_0 | stackIn_45_1;
+                    var10 = stackIn_44_0 | stackIn_45_1;
                   }
                 }
                 break L6;
@@ -262,19 +244,13 @@ class IntrusiveNode {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_51_0 = (RuntimeException) (var2);
-
           stackIn_51_1 = new StringBuilder().append("hf.W(").append(param0).append(',');
-
           if (param1 == null) {
-            stackIn_52_0 = (RuntimeException) ((Object) stackIn_51_0);
-            stackIn_52_1 = (StringBuilder) ((Object) stackIn_51_1);
             stackIn_52_2 = "null";
           } else {
-            stackIn_52_0 = (RuntimeException) ((Object) stackIn_51_0);
-            stackIn_52_1 = (StringBuilder) ((Object) stackIn_51_1);
             stackIn_52_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_52_2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(')').toString());
         }
     }
 

@@ -1,8 +1,8 @@
 # Readable GeoBlox
 
-The current export has 3,047 guarded naming rules: 30 classes, 535 fields,
-303 methods, 857 parameters and 1,322 local declarations. Both 303-file corpora
-compile, preserving 150,124 bindings and 388 override relationships. Unknown
+The current export has 2,994 guarded naming rules: 30 classes, 533 fields,
+303 methods, 857 parameters and 1,271 local declarations. Both 303-file corpora
+compile, preserving 138,570 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
 ## One current manifest
@@ -21,17 +21,17 @@ tool bytes; `funorb-stubs.jar` is the frozen compilation dependency. The
 [reading guide](GEOBLOX-READING-GUIDE.md) explains the named gameplay flow.
 
 The raw input is `games/geoblox` at
-`69542d632410cae4013a331e9a940ced1d7bd1bd`. It comes from java-tools
-`049d323ff4d63b141315dba1fbf573abd4f5f735` and Deko
+`c7f41a649e135a12a85ac26c7aa4bc83a46b4372`. It comes from java-tools
+`66a3906a001061462f5bc154fc3fd119f2dcb60c` and Deko
 `a572c4dd0f0174bfcd7777be53d7ceba2f970f18`. The adapted naming tool is
 `a0bc835957148b9b1e1f8221c59b79d899d22738`; its source archive SHA-256 is
 `cb10756aa3ecb28159c9b81f2fb78bf559b4111d9ad203819458b30d0d84cf8c`.
 
 The **decompiler repository source** SHA-256 is
-`6d0fdd923685d9ede67052a8a1c826a5082ef6c7a961d9ce1cd727a805a2bc2e`:
+`c75448fa88956a0653c2120eaebc737cbbfd2168656b13a1620ff238d290b6ca`:
 
 ```sh
-git archive --format=tar 049d323ff4d63b141315dba1fbf573abd4f5f735 | sha256sum
+git archive --format=tar 66a3906a001061462f5bc154fc3fd119f2dcb60c | sha256sum
 ```
 
 This identifies tracked decompiler source and its Git archive metadata. It is
@@ -54,11 +54,46 @@ smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
 
-## Current contact-mask and pointer-spawn naming
+## Current equivalent stack-join reconstruction
+
+The pinned owned decompiler resolves complete same-type incoming carrier proofs
+to a fixed point. Different carrier names can now share one value after earlier
+aliases resolve. Incomplete/effectful edges, conflicting values, self references
+and cycles retain explicit copies. Conditions, snapshots, handlers and monitors
+retain their execution points. A lexical presentation pass removes blank lines
+left by deleted stores after partitioning and loop recovery, preserving comment
+and literal contents and refusing Unicode/lexing uncertainty.
+
+The raw export removes 1,075 generated declarations: 1,073 locals and two shared
+partition fields. No declaration is added. Source lines fall from 85,591 to
+80,520 across 176 files, and all 388 override rows remain. Pointer spawning loses
+15 intermediate locals. The initializer still has three helpers, now with eight
+shared locals instead of ten. Its complete successful asset loading is unverified.
+
+All surviving rule spellings, names and evidence are preserved. 132 named local
+ordinals migrate and 53 rules for deleted carriers retire. The current 2,994
+rules apply 30,219 identifier edits and compare 138,570 bindings. Resource keys,
+indexes and guarded text fields are unchanged; their source line evidence is
+updated. Full regeneration and dictionary restoration remain required.
+
+The generic join suite passes 16 groups and 8,090 native comparisons, including
+1,440 new protected/unprotected typed-join comparisons in structured and forced
+modes. Reference identity and pre-mutation values survive parameter reassignment;
+null/empty strings and caught/uncaught failures retain their traces. All six
+partition groups pass after fixing a pre-existing budget failure reproduced at
+049d323: packing now includes expanded completion-flag stores before accepting a
+helper. Budgets and expected structured/fallback modes stay unchanged.
+
+The existing six GeoBlox native probes retain their recorded scopes and traces.
+Remaining opaque names, argument joins, complete gameplay, asset loading and
+browser/phone performance still need work. The clean tracked source archive
+reproduces all 303 raw sources and diagnostics byte-exact.
+
+## Previous contact-mask and pointer-spawn naming
 
 This naming pass adds 104 guarded identities: one class, four fields, seven
 methods, 19 parameters and 73 locals. All 2,943 previous complete rules and raw
-source/generator pins are unchanged. The current 3,047 rules apply 30,510 edits,
+source/generator pins are unchanged. That export had 3,047 rules and applied 30,510 edits,
 preserving all 150,124 bindings and 388 override relationships.
 
 `PixelOverlapProbe` replaces aa. Every parameter/local in its nonzero-pixel
@@ -446,8 +481,8 @@ and synchronized bodies retain their destinations and scopes.
 The previous early-exit pass removed 2,128 generated else wrappers (3,481 to 1,353) and 2,213 raw source
 lines across 208 files. That pass preserved all 20,931
 declaration identities and 388 override edges. The only duplicate-name method,
-`wg.finalize`, is byte-identical. Current raw/readable comparison checks 150,124
-bindings. The structural update migrated 35 named local ordinals. The following
+`wg.finalize`, is byte-identical. The pass50 raw/readable comparison checked
+150,124 bindings. The structural update migrated 35 named local ordinals. The following
 naming pass added 38 guarded identities with the raw input unchanged, retaining all
 1,170 prior semantic names. Reference inventory changes comprise 86 merged
 unit increments, one assignment moved into an initializer and one unreachable
@@ -613,7 +648,7 @@ the same manifest; no JSON snapshots are added.
 
 | Java source tree | SHA-256 |
 | --- | --- |
-| Raw | `b18afdee6bf7d59ae30800e398696f8f0319943a75296c5608fe7708968c7bf1` |
-| Readable | `d2d176e7758b7aa556d78ad997c2d007b98a972f96a51ea0318e558be224bb2f` |
+| Raw | `c8eb52af8caa07a9151dfca4c412f4b2fac7ef15e6e260c9413bc0708d83775a` |
+| Readable | `e8906bf13fc6dd45f3654ec7da8f22d84372d780bba3fac0ecb7485d49dd902c` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

@@ -74,12 +74,8 @@ final class kc {
         int popupOriginYInput = 0;
         int popupOriginXInput = 0;
         int popupGuardInput = 0;
-        int popupOriginY;
-        int popupOriginX;
-        int popupMethodGuard;
         int popupPoints;
         GameplaySession sessionForRasterRead = null;
-        GameplaySession sessionForRasterWrite = null;
         boolean rasterDirtyDecision = false;
         RuntimeException decompiledCaughtException = null;
         boolean visitedByEntityIdValue;
@@ -117,7 +113,6 @@ final class kc {
                 L3: {
                   if (activeEntity != null) {
                     entityQueueThenAttachedQueue = activeEntity.entityQueue;
-
                     if (clientControlSnapshot != 0) {
                       break L3;
                     }
@@ -199,7 +194,6 @@ final class kc {
                                         if (componentNeighborIndex < currentConnectivityEntityAlias.relatedEntityCount) {
                                           neighborThenCountResetEntity = currentConnectivityEntity.relatedEntities[componentNeighborIndex];
                                           poppedEntityOrSearchStart = (GameplayEntity) ((Object) visitedNonAvatarEntities.firstForIteration((byte) 121));
-
                                           if (clientControlSnapshot != 0) {
                                             continue L13;
                                           }
@@ -210,9 +204,7 @@ final class kc {
                                                 L21: {
                                                   if (componentSearchThenVariantResetEntity != null) {
                                                     comparedThenUnlinkTarget = (GameplayEntity) (componentSearchThenVariantResetEntity);
-
                                                     neighborThenUnlinkArgument = (GameplayEntity) (neighborThenCountResetEntity);
-
                                                     if (clientControlSnapshot != 0) {
                                                       break L21;
                                                     }
@@ -229,9 +221,7 @@ final class kc {
                                                   componentSearchThenVariantResetEntity = (GameplayEntity) ((Object) pendingConnectivityEntities.firstForIteration((byte) 121));
                                                   L24: while (componentSearchThenVariantResetEntity != null) {
                                                     comparedThenUnlinkTarget = (GameplayEntity) (componentSearchThenVariantResetEntity);
-
                                                     neighborThenUnlinkArgument = (GameplayEntity) (neighborThenCountResetEntity);
-
                                                     if (clientControlSnapshot != 0) {
                                                       break L21;
                                                     }
@@ -261,7 +251,6 @@ final class kc {
                                                         connectivityAliasThenDetachingEntity.detachedFromBoard = true;
                                                         fa.entitiesDetachedThisTick = true;
                                                         visitedFlagThenResetIndex = 0;
-
                                                         if (clientControlSnapshot != 0) {
                                                           break L8;
                                                         }
@@ -302,7 +291,6 @@ final class kc {
                                                         connectivityAliasThenDetachingEntity.detachedFromBoard = true;
                                                         fa.entitiesDetachedThisTick = true;
                                                         visitedFlagThenResetIndex = 0;
-
                                                         if (clientControlSnapshot != 0) {
                                                           break L8;
                                                         }
@@ -328,7 +316,6 @@ final class kc {
                                                       connectivityAliasThenDetachingEntity.detachedFromBoard = true;
                                                       fa.entitiesDetachedThisTick = true;
                                                       visitedFlagThenResetIndex = 0;
-
                                                       if (clientControlSnapshot != 0) {
                                                         break L8;
                                                       }
@@ -376,7 +363,6 @@ final class kc {
                               connectivityAliasThenDetachingEntity.detachedFromBoard = true;
                               fa.entitiesDetachedThisTick = true;
                               visitedFlagThenResetIndex = 0;
-
                               if (clientControlSnapshot != 0) {
                                 break L8;
                               }
@@ -520,35 +506,17 @@ final class kc {
                       if (w.avatarShockPending) {
                         L48: {
                           popupOriginYInput = (int)routedAttachedEntity.positionY;
-
                           popupOriginXInput = (int)routedAttachedEntity.positionX;
-
                           popupGuardInput = 117;
-
                           if (routedAttachedEntity.entitySpriteKindId != 4) {
-
-
-
-
-
-
                             if (routedAttachedEntity.entitySpriteKindId != 3) {
-                              popupOriginY = popupOriginYInput;
-                              popupOriginX = popupOriginXInput;
-                              popupMethodGuard = popupGuardInput;
                               popupPoints = 10;
                               break L48;
                             }
-
-
-
                           }
-                          popupOriginY = popupOriginYInput;
-                          popupOriginX = popupOriginXInput;
-                          popupMethodGuard = popupGuardInput;
                           popupPoints = 100;
                         }
-                        ld.spawnPointsPopup(popupOriginY, popupOriginX, popupMethodGuard, popupPoints);
+                        ld.spawnPointsPopup(popupOriginYInput, popupOriginXInput, popupGuardInput, popupPoints);
                       }
                     }
                     if (4 != routedAttachedEntity.entitySpriteKindId) {
@@ -598,25 +566,17 @@ final class kc {
               }
               L55: {
                 sessionForRasterRead = el.gameplaySession;
-
                 if (!el.gameplaySession.boardRasterDirty) {
-                  sessionForRasterRead = (GameplaySession) ((Object) sessionForRasterRead);
-
                   if (!ab.boardContactStateDirty) {
-
-
                     if (!w.avatarShockPending) {
-                      sessionForRasterWrite = (GameplaySession) ((Object) sessionForRasterRead);
                       rasterDirtyDecision = false;
                       break L55;
                     }
-                    sessionForRasterRead = (GameplaySession) ((Object) sessionForRasterRead);
                   }
                 }
-                sessionForRasterWrite = (GameplaySession) ((Object) sessionForRasterRead);
                 rasterDirtyDecision = true;
               }
-              sessionForRasterWrite.boardRasterDirty = rasterDirtyDecision;
+              sessionForRasterRead.boardRasterDirty = rasterDirtyDecision;
               w.avatarShockPending = false;
               if (visitedResetIndexThenKindFourCount >= 3) {
                 ra.a(255 ^ fe.field_f, -88, fe.field_f);

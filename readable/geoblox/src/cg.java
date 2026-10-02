@@ -14,8 +14,6 @@ final class cg extends ia {
         int stackIn_9_0 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -35,19 +33,13 @@ final class cg extends ia {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_12_0 = (RuntimeException) (var3);
-
           stackIn_12_1 = new StringBuilder().append("cg.K(");
-
           if (param0 == null) {
-            stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-            stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
             stackIn_13_2 = "null";
           } else {
-            stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-            stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
             stackIn_13_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -108,8 +100,6 @@ final class cg extends ia {
     final void a(int[] param0, int param1, int param2) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
@@ -135,19 +125,13 @@ final class cg extends ia {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_9_0 = (RuntimeException) (var4);
-
           stackIn_9_1 = new StringBuilder().append("cg.C(");
-
           if (param0 == null) {
-            stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-            stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
             stackIn_10_2 = "null";
           } else {
-            stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-            stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
             stackIn_10_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

@@ -102,8 +102,6 @@ final class BufferedSocket implements Runnable {
         int bytesRead = 0;
         RuntimeException readFailureForMessage = null;
         StringBuilder readMessagePrefix = null;
-        RuntimeException readFailureAtJoin = null;
-        StringBuilder readMessageAtJoin = null;
         String destinationDescription = null;
         RuntimeException caughtReadFailure = null;
         RuntimeException readFailure = null;
@@ -127,19 +125,13 @@ final class BufferedSocket implements Runnable {
           caughtReadFailure = readRuntimeFailure;
           readFailure = caughtReadFailure;
           readFailureForMessage = (RuntimeException) (readFailure);
-
           readMessagePrefix = new StringBuilder().append("ba.B(");
-
           if (destination == null) {
-            readFailureAtJoin = (RuntimeException) ((Object) readFailureForMessage);
-            readMessageAtJoin = (StringBuilder) ((Object) readMessagePrefix);
             destinationDescription = "null";
           } else {
-            readFailureAtJoin = (RuntimeException) ((Object) readFailureForMessage);
-            readMessageAtJoin = (StringBuilder) ((Object) readMessagePrefix);
             destinationDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) readFailureAtJoin), ((StringBuilder) (Object) readMessageAtJoin).append(destinationDescription).append(',').append(guard).append(',').append(destinationOffset).append(',').append(remainingLength).append(')').toString());
+          throw t.a((Throwable) ((Object) readFailureForMessage), ((StringBuilder) (Object) readMessagePrefix).append(destinationDescription).append(',').append(guard).append(',').append(destinationOffset).append(',').append(remainingLength).append(')').toString());
         }
     }
 
@@ -147,8 +139,6 @@ final class BufferedSocket implements Runnable {
         int sourceIndex = 0;
         RuntimeException enqueueFailureForMessage = null;
         StringBuilder enqueueMessagePrefix = null;
-        RuntimeException enqueueFailureAtJoin = null;
-        StringBuilder enqueueMessageAtJoin = null;
         String sourceDescription = null;
         Throwable caughtEnqueueFailure = null;
         Object enqueueMonitor = null;
@@ -191,19 +181,13 @@ final class BufferedSocket implements Runnable {
           caughtEnqueueFailure = enqueueRuntimeFailure;
           enqueueFailure = (RuntimeException) (Object) caughtEnqueueFailure;
           enqueueFailureForMessage = (RuntimeException) (enqueueFailure);
-
           enqueueMessagePrefix = new StringBuilder().append("ba.G(").append(guard).append(',').append(sourceOffset).append(',').append(length).append(',');
-
           if (source == null) {
-            enqueueFailureAtJoin = (RuntimeException) ((Object) enqueueFailureForMessage);
-            enqueueMessageAtJoin = (StringBuilder) ((Object) enqueueMessagePrefix);
             sourceDescription = "null";
           } else {
-            enqueueFailureAtJoin = (RuntimeException) ((Object) enqueueFailureForMessage);
-            enqueueMessageAtJoin = (StringBuilder) ((Object) enqueueMessagePrefix);
             sourceDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) enqueueFailureAtJoin), ((StringBuilder) (Object) enqueueMessageAtJoin).append(sourceDescription).append(')').toString());
+          throw t.a((Throwable) ((Object) enqueueFailureForMessage), ((StringBuilder) (Object) enqueueMessagePrefix).append(sourceDescription).append(')').toString());
         }
     }
 

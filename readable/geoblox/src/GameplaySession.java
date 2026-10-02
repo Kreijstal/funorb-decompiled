@@ -156,8 +156,6 @@ final class GameplaySession {
         int stackIn_20_0 = 0;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
         String stackIn_26_2 = null;
         Throwable decompiledCaughtException = null;
         var4 = Geoblox.field_C;
@@ -180,7 +178,6 @@ final class GameplaySession {
               L2: {
                 if (param0.length() > var3) {
                   stackIn_20_0 = var2.indexOf((int) param0.charAt(var3));
-
                   if (var4 != 0) {
                     break L2;
                   }
@@ -206,19 +203,13 @@ final class GameplaySession {
           decompiledCaughtException = decompiledCaughtParameter1;
           var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
           stackIn_25_0 = (RuntimeException) (var2_ref2);
-
           stackIn_25_1 = new StringBuilder().append("gh.U(");
-
           if (param0 == null) {
-            stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
-            stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
             stackIn_26_2 = "null";
           } else {
-            stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
-            stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
             stackIn_26_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -464,9 +455,7 @@ final class GameplaySession {
                   renderedEntityY = (int)(240.0 + ((double)entityOffsetX * Math.sin((double)el.gameplaySession.boardAngleRadians) + (double)entityOffsetY * Math.cos((double)el.gameplaySession.boardAngleRadians)));
                   entityOpacity = 255 - renderedEntity.remainingLifetimeTicks * 255 / renderedEntity.initialLifetimeTicks;
                   stackIn_168_0 = 11;
-
                   stackIn_168_1 = entityOpacity;
-
                   if (var14 != 0) {
                     break L32;
                   }
@@ -961,7 +950,6 @@ final class GameplaySession {
                         break L45;
                       }
                       detachedEntityOrPositiveRotationKeySnapshot = fastForwardEntity.detachedFromBoard;
-
                       if (clientControlFlowGuard != 0) {
                         break L44;
                       }
@@ -993,11 +981,8 @@ final class GameplaySession {
               ld.spawnPointsPopup(310, 320, 123, 100 + 100 * ji.difficultyStep);
             }
             L50: {
-
               if (!fa.entitiesDetachedThisTick) {
-
                 if (a.attachedEntities.isEmpty(13519)) {
-
                   if (0 < ul.releasedInCurrentTheme) {
                     nextBoardClearBonusEligible = true;
                     break L50;
@@ -1065,7 +1050,6 @@ final class GameplaySession {
               if (te.currentKeyboardEventCharacter > 0) {
                 pk.field_r = pk.field_r.substring(1) + te.currentKeyboardEventCharacter;
                 if (pk.field_r.equalsIgnoreCase("fog")) {
-
                   if (this.showDebugOverview) {
                     toggledDebugOverview = false;
                   } else {
@@ -1129,7 +1113,6 @@ final class GameplaySession {
                 }
               }
               if (jg.swapRotationControlsKeyCode == ki.currentKeyboardEventCode) {
-
                 if (this.rotationControlsSwapped) {
                   toggledRotationControlsSwapped = false;
                 } else {
@@ -1142,9 +1125,7 @@ final class GameplaySession {
                 continue L60;
               }
               debugKeyCodeOrPointerEventComplement = ki.currentKeyboardEventCode;
-
               debugKeySentinelOrPointerEventSentinel = 48;
-
               if (clientControlFlowGuard != 0) {
                 break L61;
               }
@@ -1167,7 +1148,6 @@ final class GameplaySession {
                 }
               }
               if (32 == ki.currentKeyboardEventCode) {
-
                 if (this.debugSpawnSpecialKinds) {
                   toggledSpecialKindSpawn = false;
                 } else {
@@ -1190,7 +1170,6 @@ final class GameplaySession {
               }
               if (ki.currentKeyboardEventCode == 1) {
                 this.submissionBlocked = true;
-
                 if (this.debugPointerSpawnEnabled) {
                   toggledDebugPointerSpawn = false;
                 } else {
@@ -1199,7 +1178,6 @@ final class GameplaySession {
                 ((GameplaySession) (this)).debugPointerSpawnEnabled = toggledDebugPointerSpawn;
               }
               if (2 == ki.currentKeyboardEventCode) {
-
                 if (this.spawnReleaseDisabled) {
                   toggledSpawnReleaseDisabled = false;
                 } else {
@@ -1252,7 +1230,6 @@ final class GameplaySession {
                 cd.selectThemeRenderAssets((byte) 82);
               }
               if (ki.currentKeyboardEventCode == 12) {
-
                 if (this.debugReducedRendering) {
                   toggledReducedRendering = false;
                 } else {
@@ -1537,9 +1514,7 @@ final class GameplaySession {
                   L7: {
                     if (7 > themeIndexThenId) {
                       selectedThemeComplementOrThemeSentinel = ~GameScreen.selectedThemeId;
-
                       themeEntryComplementOrThemeId = ~ee.field_B[themeIndexThenId];
-
                       if (clientControlFlowGuard != 0) {
                         break L6;
                       }
@@ -1756,7 +1731,6 @@ final class GameplaySession {
                   L6: {
                     if (stackIn_11_0 < stackIn_11_1) {
                       stackIn_23_0 = 0;
-
                       if (controlFlowGuard != 0) {
                         break L1;
                       }
@@ -1764,9 +1738,7 @@ final class GameplaySession {
                         spriteRow = stackIn_23_0;
                         L7: while (vf.spriteScratchRaster.height > spriteRow) {
                           stackIn_11_0 = 0;
-
                           stackIn_11_1 = vf.spriteScratchRaster.pixels[vf.spriteScratchRaster.width * spriteRow + spriteColumn];
-
                           if (controlFlowGuard != 0) {
                             continue L5;
                           }
@@ -2046,8 +2018,6 @@ final class GameplaySession {
     GameplaySession(Geoblox ownerApplet, boolean enableTutorial) {
         RuntimeException constructorFailureForContext = null;
         StringBuilder constructorMessagePrefix = null;
-        RuntimeException constructorFailureAtAppletArgument = null;
-        StringBuilder constructorMessageAtAppletArgument = null;
         String appletArgumentDescription = null;
         RuntimeException caughtConstructorFailure = null;
         RuntimeException constructorFailure = null;
@@ -2137,19 +2107,13 @@ final class GameplaySession {
           caughtConstructorFailure = sessionConstructorException;
           constructorFailure = caughtConstructorFailure;
           constructorFailureForContext = (RuntimeException) (constructorFailure);
-
           constructorMessagePrefix = new StringBuilder().append("gh.<init>(");
-
           if (ownerApplet == null) {
-            constructorFailureAtAppletArgument = (RuntimeException) ((Object) constructorFailureForContext);
-            constructorMessageAtAppletArgument = (StringBuilder) ((Object) constructorMessagePrefix);
             appletArgumentDescription = "null";
           } else {
-            constructorFailureAtAppletArgument = (RuntimeException) ((Object) constructorFailureForContext);
-            constructorMessageAtAppletArgument = (StringBuilder) ((Object) constructorMessagePrefix);
             appletArgumentDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) constructorFailureAtAppletArgument), ((StringBuilder) (Object) constructorMessageAtAppletArgument).append(appletArgumentDescription).append(',').append(enableTutorial).append(')').toString());
+          throw t.a((Throwable) ((Object) constructorFailureForContext), ((StringBuilder) (Object) constructorMessagePrefix).append(appletArgumentDescription).append(',').append(enableTutorial).append(')').toString());
         }
     }
 

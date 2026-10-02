@@ -124,8 +124,6 @@ final class al {
             boolean stackIn_21_0 = false;
             RuntimeException stackIn_24_0 = null;
             StringBuilder stackIn_24_1 = null;
-            RuntimeException stackIn_25_0 = null;
-            StringBuilder stackIn_25_1 = null;
             String stackIn_25_2 = null;
             Throwable decompiledCaughtException = null;
             Throwable var2_ref = null;
@@ -162,19 +160,13 @@ final class al {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2 = (RuntimeException) (Object) decompiledCaughtException;
               stackIn_24_0 = (RuntimeException) (var2);
-
               stackIn_24_1 = new StringBuilder().append("al.A(").append(param0).append(',');
-
               if (param1 == null) {
-                stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
-                stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
                 stackIn_25_2 = "null";
               } else {
-                stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
-                stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
                 stackIn_25_2 = "{...}";
               }
-              throw t.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(')').toString());
+              throw t.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

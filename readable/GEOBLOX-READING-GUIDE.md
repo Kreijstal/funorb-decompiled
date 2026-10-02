@@ -1077,8 +1077,9 @@ the integer pointer about (320,240), truncates both coordinates and initializes
 velocity toward the center. Ordinary mode uses kind0 with the supplied category
 and variant. Special mode maps `(categoryId + variantId) % 4` to kinds2/4/3/1;
 kind2 retains its variant, kind1 retains its category, and the existing sprite
-selector clears the other keys to -1. Generated argument carriers preserve
-selection/evaluation order and remain explicit. The spawned entity's queue flag
+selector clears the other keys to -1. Equivalent argument joins now share the
+original captured values, removing 15 intermediate locals. The remaining
+variant/category joins preserve selection and evaluation order. The spawned entity's queue flag
 is cleared before appending it to `ji.movingEntities`. Center spawning retains
 the original NaN velocity behavior.
 
@@ -1089,3 +1090,20 @@ remain. The new native matrix independently checks 11,227 raster, wrapper,
 controlled pool/spawn and steering cases, alongside unchanged earlier traces.
 It does not establish full moving-contact production, live assets, malformed
 buffer/overflow behavior or whole-game equivalence.
+
+
+## Equivalent joins and the remaining control flow
+
+The current generic reconstruction resolves aliases before checking later joins.
+A value copied through two earlier carriers can therefore remain one captured
+value when those paths meet. `nb.spawnEntityAtPointer` retains its argument
+snapshots before variant/category selection, but no longer repeats them through
+15 additional declarations. The selected variant/category still differ by path
+and remain explicit. Other methods benefit from the same proof, including
+caught-failure diagnostic builders. Original diagnostic strings stay unchanged.
+
+This removes 1,075 generated declarations and 5,071 lines across 176 raw files;
+53 obsolete naming rules retire and 132 guarded local ordinals migrate. The
+reverse dictionary records every surviving original identity. Unknown names,
+shared joins with different values and large structured methods remain. The
+native matrices cover their controlled scopes, not complete gameplay/assets.

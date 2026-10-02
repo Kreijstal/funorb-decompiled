@@ -23,8 +23,6 @@ final class cf extends TextInputValidator {
         lh stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -50,19 +48,13 @@ final class cf extends TextInputValidator {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_14_0 = (RuntimeException) (var3);
-
           stackIn_14_1 = new StringBuilder().append("cf.D(").append(guard).append(',');
-
           if (candidateText == null) {
-            stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-            stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
             stackIn_15_2 = "null";
           } else {
-            stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-            stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
             stackIn_15_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -79,8 +71,6 @@ final class cf extends TextInputValidator {
         String stackIn_6_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -97,19 +87,13 @@ final class cf extends TextInputValidator {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_10_0 = (RuntimeException) (var3);
-
           stackIn_10_1 = new StringBuilder().append("cf.A(").append(guard).append(',');
-
           if (candidateText == null) {
-            stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-            stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
             stackIn_11_2 = "null";
           } else {
-            stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-            stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
             stackIn_11_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

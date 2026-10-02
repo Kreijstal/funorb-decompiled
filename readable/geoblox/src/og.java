@@ -58,8 +58,6 @@ final class og extends DualLinkNode {
         int var8 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
@@ -117,19 +115,13 @@ final class og extends DualLinkNode {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_23_0 = (RuntimeException) (var4);
-
           stackIn_23_1 = new StringBuilder().append("og.H(").append(param0).append(',');
-
           if (param1 == null) {
-            stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-            stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
             stackIn_24_2 = "null";
           } else {
-            stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-            stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
             stackIn_24_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_24_2).append(',').append(param2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -197,8 +189,6 @@ final class og extends DualLinkNode {
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
@@ -219,19 +209,13 @@ final class og extends DualLinkNode {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_9_0 = (RuntimeException) (var3);
-
           stackIn_9_1 = new StringBuilder().append("og.B(").append(param0).append(',');
-
           if (param1 == null) {
-            stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-            stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
             stackIn_10_2 = "null";
           } else {
-            stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-            stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
             stackIn_10_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

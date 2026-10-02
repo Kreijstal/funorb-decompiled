@@ -239,25 +239,16 @@ public final class Geoblox extends wf {
 
     private final boolean pollArchiveLoading(boolean param0) {
         rh stackIn_10_0 = null;
-        rh stackIn_11_0 = null;
         boolean stackIn_11_1 = false;
         String stackIn_27_0;
         rh stackIn_27_1;
         String stackIn_27_2;
         String stackIn_27_3;
-        String stackIn_28_0 = null;
-        rh stackIn_28_1 = null;
-        String stackIn_28_2 = null;
-        String stackIn_28_3 = null;
         boolean stackIn_28_4 = false;
         String stackIn_47_0;
         rh stackIn_47_1;
         String stackIn_47_2;
         String stackIn_47_3;
-        String stackIn_48_0 = null;
-        rh stackIn_48_1 = null;
-        String stackIn_48_2 = null;
-        String stackIn_48_3 = null;
         boolean stackIn_48_4 = false;
         if (ef.field_e) {
           return true;
@@ -267,15 +258,12 @@ public final class Geoblox extends wf {
           if (wj.field_F.b(true)) {
             if (ah.field_c.a(0)) {
               stackIn_10_0 = ah.field_c;
-
               if (param0) {
-                stackIn_11_0 = (rh) ((Object) stackIn_10_0);
                 stackIn_11_1 = false;
               } else {
-                stackIn_11_0 = (rh) ((Object) stackIn_10_0);
                 stackIn_11_1 = true;
               }
-              if (((rh) (Object) stackIn_11_0).b(stackIn_11_1)) {
+              if (((rh) (Object) stackIn_10_0).b(stackIn_11_1)) {
                 if (fe.field_a.a(0)) {
                   if (fe.field_a.b(true)) {
                     if (cd.field_m.a(0)) {
@@ -310,27 +298,15 @@ public final class Geoblox extends wf {
                                       }
                                     }
                                     stackIn_47_0 = ff.waitingForGraphicsText;
-
                                     stackIn_47_1 = ki.basicUiGraphicsArchive;
-
                                     stackIn_47_2 = "basic";
-
                                     stackIn_47_3 = AccountWelcomePanel.loadingGraphicsText;
-
                                     if (param0) {
-                                      stackIn_48_0 = (String) ((Object) stackIn_47_0);
-                                      stackIn_48_1 = (rh) ((Object) stackIn_47_1);
-                                      stackIn_48_2 = (String) ((Object) stackIn_47_2);
-                                      stackIn_48_3 = (String) ((Object) stackIn_47_3);
                                       stackIn_48_4 = false;
                                     } else {
-                                      stackIn_48_0 = (String) ((Object) stackIn_47_0);
-                                      stackIn_48_1 = (rh) ((Object) stackIn_47_1);
-                                      stackIn_48_2 = (String) ((Object) stackIn_47_2);
-                                      stackIn_48_3 = (String) ((Object) stackIn_47_3);
                                       stackIn_48_4 = true;
                                     }
-                                    lc.a(gf.a(stackIn_48_0, stackIn_48_1, stackIn_48_2, stackIn_48_3, stackIn_48_4), -2, 50.0f);
+                                    lc.a(gf.a(stackIn_47_0, stackIn_47_1, stackIn_47_2, stackIn_47_3, stackIn_48_4), -2, 50.0f);
                                     return false;
                                   }
                                 }
@@ -343,27 +319,15 @@ public final class Geoblox extends wf {
                           }
                         }
                         stackIn_27_0 = ik.waitingForFontsText;
-
                         stackIn_27_1 = ii.fontMetricsArchive;
-
                         stackIn_27_2 = "";
-
                         stackIn_27_3 = nb.loadingFontsText;
-
                         if (param0) {
-                          stackIn_28_0 = (String) ((Object) stackIn_27_0);
-                          stackIn_28_1 = (rh) ((Object) stackIn_27_1);
-                          stackIn_28_2 = (String) ((Object) stackIn_27_2);
-                          stackIn_28_3 = (String) ((Object) stackIn_27_3);
                           stackIn_28_4 = false;
                         } else {
-                          stackIn_28_0 = (String) ((Object) stackIn_27_0);
-                          stackIn_28_1 = (rh) ((Object) stackIn_27_1);
-                          stackIn_28_2 = (String) ((Object) stackIn_27_2);
-                          stackIn_28_3 = (String) ((Object) stackIn_27_3);
                           stackIn_28_4 = true;
                         }
-                        lc.a(gf.a(stackIn_28_0, stackIn_28_1, stackIn_28_2, stackIn_28_3, stackIn_28_4), -2, 35.0f);
+                        lc.a(gf.a(stackIn_27_0, stackIn_27_1, stackIn_27_2, stackIn_27_3, stackIn_28_4), -2, 35.0f);
                         return false;
                       }
                     }
@@ -680,7 +644,6 @@ public final class Geoblox extends wf {
             vl.field_n = null;
           }
         }
-
         if (null == vl.field_n) {
           stackIn_9_1 = false;
         } else {
@@ -688,7 +651,6 @@ public final class Geoblox extends wf {
         }
         this.b(stackIn_9_1, 19660);
         if (cf.field_k) {
-
           if (param0) {
             stackIn_14_1 = false;
           } else {

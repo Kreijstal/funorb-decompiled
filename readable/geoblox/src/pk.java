@@ -17,8 +17,6 @@ final class pk extends qc {
         int fieldTemp$0 = 0;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
@@ -37,19 +35,13 @@ final class pk extends qc {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_7_0 = (RuntimeException) (var5);
-
           stackIn_7_1 = new StringBuilder().append("pk.FB(").append(param0).append(',').append(param1).append(',');
-
           if (param2 == null) {
-            stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-            stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
             stackIn_8_2 = "null";
           } else {
-            stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-            stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
             stackIn_8_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
         }
     }
 

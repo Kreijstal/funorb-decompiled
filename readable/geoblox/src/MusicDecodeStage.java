@@ -108,13 +108,9 @@ final class MusicDecodeStage {
         int stackIn_5_0 = 0;
         int[] stackIn_9_0 = null;
         int stackIn_9_1 = 0;
-        int[] stackIn_10_0 = null;
-        int stackIn_10_1 = 0;
         int stackIn_10_2 = 0;
         int[] stackIn_13_0 = null;
         int stackIn_13_1 = 0;
-        int[] stackIn_14_0 = null;
-        int stackIn_14_1 = 0;
         int stackIn_14_2 = 0;
         int var3;
         int var4;
@@ -197,36 +193,24 @@ final class MusicDecodeStage {
               field_e[var6] = true;
               if (var10 < var13) {
                 stackIn_13_0 = (int[]) (field_g);
-
                 stackIn_13_1 = var6;
-
                 if ((var10 & 1) == 0) {
-                  stackIn_14_0 = (int[]) ((Object) stackIn_13_0);
-                  stackIn_14_1 = stackIn_13_1;
                   stackIn_14_2 = var9 + var10 / 2;
                 } else {
-                  stackIn_14_0 = (int[]) ((Object) stackIn_13_0);
-                  stackIn_14_1 = stackIn_13_1;
                   stackIn_14_2 = var9 - (var10 + 1) / 2;
                 }
-                stackIn_14_0[stackIn_14_1] = stackIn_14_2;
+                stackIn_13_0[stackIn_13_1] = stackIn_14_2;
                 var6++;
                 continue L0;
               }
               stackIn_9_0 = (int[]) (field_g);
-
               stackIn_9_1 = var6;
-
               if (var11 <= var12) {
-                stackIn_10_0 = (int[]) ((Object) stackIn_9_0);
-                stackIn_10_1 = stackIn_9_1;
                 stackIn_10_2 = var9 - var10 + var11 - 1;
               } else {
-                stackIn_10_0 = (int[]) ((Object) stackIn_9_0);
-                stackIn_10_1 = stackIn_9_1;
                 stackIn_10_2 = var10 - var12 + var9;
               }
-              stackIn_10_0[stackIn_10_1] = stackIn_10_2;
+              stackIn_9_0[stackIn_9_1] = stackIn_10_2;
               var6++;
               continue L0;
             }
@@ -241,8 +225,6 @@ final class MusicDecodeStage {
         int stackIn_3_0 = 0;
         int[] stackIn_13_0 = null;
         int stackIn_13_1 = 0;
-        int[] stackIn_14_0 = null;
-        int stackIn_14_1 = 0;
         int stackIn_14_2 = 0;
         int var1;
         int var2;
@@ -283,19 +265,13 @@ final class MusicDecodeStage {
               incrementValue$0 = var5;
               var5++;
               stackIn_13_0 = (int[]) (field_g);
-
               stackIn_13_1 = incrementValue$0;
-
               if (var13 < 0) {
-                stackIn_14_0 = (int[]) ((Object) stackIn_13_0);
-                stackIn_14_1 = stackIn_13_1;
                 stackIn_14_2 = 0;
               } else {
-                stackIn_14_0 = (int[]) ((Object) stackIn_13_0);
-                stackIn_14_1 = stackIn_13_1;
                 stackIn_14_2 = MusicDecoder.field_u[var13].b();
               }
-              stackIn_14_0[stackIn_14_1] = stackIn_14_2;
+              stackIn_13_0[stackIn_13_1] = stackIn_14_2;
             }
           }
           return true;

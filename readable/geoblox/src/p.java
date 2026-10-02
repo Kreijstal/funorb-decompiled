@@ -18,14 +18,10 @@ final class p extends IntrusiveNode {
         int stackIn_66_1 = 0;
         RuntimeException stackIn_71_0 = null;
         StringBuilder stackIn_71_1 = null;
-        RuntimeException stackIn_72_0 = null;
-        StringBuilder stackIn_72_1 = null;
         String stackIn_72_2 = null;
         StringBuilder stackIn_75_1 = null;
-        StringBuilder stackIn_76_1 = null;
         String stackIn_76_2 = null;
         StringBuilder stackIn_79_1 = null;
-        StringBuilder stackIn_80_1 = null;
         String stackIn_80_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
@@ -98,9 +94,7 @@ final class p extends IntrusiveNode {
                   var28 = var10 + (var13 * var24 + var25 * var16 + var26 * var19 >> 16 - ok.field_g);
                   var29 = var11 + (var26 * var20 + var14 * var24 + var17 * var25 >> 16);
                   stackIn_66_0 = -51;
-
                   stackIn_66_1 = ~var29;
-
                   if (var30 != 0) {
                     break L3;
                   }
@@ -200,9 +194,7 @@ final class p extends IntrusiveNode {
                         break L12;
                       }
                       stackIn_66_0 = ok.field_h.length;
-
                       stackIn_66_1 = var18;
-
                       if (var30 != 0) {
                         break L3;
                       }
@@ -234,45 +226,25 @@ final class p extends IntrusiveNode {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
           stackIn_71_0 = (RuntimeException) (var7);
-
           stackIn_71_1 = new StringBuilder().append("p.B(");
-
           if (param0 == null) {
-            stackIn_72_0 = (RuntimeException) ((Object) stackIn_71_0);
-            stackIn_72_1 = (StringBuilder) ((Object) stackIn_71_1);
             stackIn_72_2 = "null";
           } else {
-            stackIn_72_0 = (RuntimeException) ((Object) stackIn_71_0);
-            stackIn_72_1 = (StringBuilder) ((Object) stackIn_71_1);
             stackIn_72_2 = "{...}";
           }
-
-
-          stackIn_75_1 = ((StringBuilder) (Object) stackIn_72_1).append(stackIn_72_2).append(',');
-
+          stackIn_75_1 = ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(',');
           if (param1 == null) {
-            stackIn_72_0 = (RuntimeException) ((Object) stackIn_72_0);
-            stackIn_76_1 = (StringBuilder) ((Object) stackIn_75_1);
             stackIn_76_2 = "null";
           } else {
-            stackIn_72_0 = (RuntimeException) ((Object) stackIn_72_0);
-            stackIn_76_1 = (StringBuilder) ((Object) stackIn_75_1);
             stackIn_76_2 = "{...}";
           }
-
-
-          stackIn_79_1 = ((StringBuilder) (Object) stackIn_76_1).append(stackIn_76_2).append(',');
-
+          stackIn_79_1 = ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',');
           if (param2 == null) {
-            stackIn_72_0 = (RuntimeException) ((Object) stackIn_72_0);
-            stackIn_80_1 = (StringBuilder) ((Object) stackIn_79_1);
             stackIn_80_2 = "null";
           } else {
-            stackIn_72_0 = (RuntimeException) ((Object) stackIn_72_0);
-            stackIn_80_1 = (StringBuilder) ((Object) stackIn_79_1);
             stackIn_80_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_80_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_79_1).append(stackIn_80_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -312,8 +284,6 @@ final class p extends IntrusiveNode {
         String stackIn_6_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -330,19 +300,13 @@ final class p extends IntrusiveNode {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
           stackIn_10_0 = (RuntimeException) (var2_ref);
-
           stackIn_10_1 = new StringBuilder().append("p.C(");
-
           if (param0 == null) {
-            stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-            stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
             stackIn_11_2 = "null";
           } else {
-            stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-            stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
             stackIn_11_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 

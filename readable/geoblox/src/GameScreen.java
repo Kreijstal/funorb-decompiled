@@ -304,7 +304,6 @@ final class GameScreen extends MenuScreen {
               L3: {
                 if (640 > var2_int) {
                   stackIn_16_0 = ee.menuBackgroundSprite.fullHeight + this.field_O + 480;
-
                   if (var4 != 0) {
                     break L2;
                   }
@@ -1190,7 +1189,6 @@ final class GameScreen extends MenuScreen {
                       L10: {
                         if (var8_int < 10) {
                           stackIn_59_0 = null;
-
                           if (var10 != 0) {
                             break L10;
                           }
@@ -2049,8 +2047,6 @@ final class GameScreen extends MenuScreen {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         this.field_S = false;
@@ -2076,19 +2072,13 @@ final class GameScreen extends MenuScreen {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
           stackIn_6_0 = (RuntimeException) (runtimeException);
-
           stackIn_6_1 = new StringBuilder().append("c.<init>(");
-
           if (param0 == null) {
-            stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-            stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
             stackIn_7_2 = "null";
           } else {
-            stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-            stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
             stackIn_7_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -2569,8 +2559,6 @@ final class GameScreen extends MenuScreen {
         int stackIn_7_0 = 0;
         int stackIn_98_0 = 0;
         int stackIn_98_1 = 0;
-        int stackIn_99_0 = 0;
-        int stackIn_99_1 = 0;
         int stackIn_99_2 = 0;
         int stackIn_153_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -2693,19 +2681,13 @@ final class GameScreen extends MenuScreen {
                         }
                         var10 = 320 - (var11 + 20 >> 1);
                         stackIn_98_0 = rowY;
-
                         stackIn_98_1 = var10;
-
                         if (!selected) {
-                          stackIn_99_0 = stackIn_98_0;
-                          stackIn_99_1 = stackIn_98_1;
                           stackIn_99_2 = 0;
                         } else {
-                          stackIn_99_0 = stackIn_98_0;
-                          stackIn_99_1 = stackIn_98_1;
                           stackIn_99_2 = this.field_T;
                         }
-                        ma.a(stackIn_99_0, stackIn_99_1 + stackIn_99_2, 36, (byte) -92, var11 + 20, eb.mouseBoxFrames);
+                        ma.a(stackIn_98_0, stackIn_98_1 + stackIn_99_2, 36, (byte) -92, var11 + 20, eb.mouseBoxFrames);
                         if (var14 == 0) {
                           break L14;
                         }

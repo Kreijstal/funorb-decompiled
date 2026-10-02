@@ -22,8 +22,6 @@ final class th extends lf {
         od stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         var6 = Geoblox.field_C;
@@ -50,19 +48,13 @@ final class th extends lf {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
           stackIn_17_0 = (RuntimeException) (var2_ref);
-
           stackIn_17_1 = new StringBuilder().append("th.H(");
-
           if (param0 == null) {
-            stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-            stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
             stackIn_18_2 = "null";
           } else {
-            stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-            stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
             stackIn_18_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 

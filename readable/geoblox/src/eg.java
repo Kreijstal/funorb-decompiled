@@ -32,8 +32,6 @@ final class eg extends IntrusiveNode {
         int stackIn_41_0 = 0;
         RuntimeException stackIn_44_0 = null;
         StringBuilder stackIn_44_1 = null;
-        RuntimeException stackIn_45_0 = null;
-        StringBuilder stackIn_45_1 = null;
         String stackIn_45_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
@@ -118,19 +116,13 @@ final class eg extends IntrusiveNode {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_44_0 = (RuntimeException) (var4);
-
           stackIn_44_1 = new StringBuilder().append("eg.B(");
-
           if (param0 == null) {
-            stackIn_45_0 = (RuntimeException) ((Object) stackIn_44_0);
-            stackIn_45_1 = (StringBuilder) ((Object) stackIn_44_1);
             stackIn_45_2 = "null";
           } else {
-            stackIn_45_0 = (RuntimeException) ((Object) stackIn_44_0);
-            stackIn_45_1 = (StringBuilder) ((Object) stackIn_44_1);
             stackIn_45_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_45_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

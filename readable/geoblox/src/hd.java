@@ -76,14 +76,10 @@ final class hd extends sh {
         int stackIn_10_0 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
         StringBuilder stackIn_17_1 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
         StringBuilder stackIn_20_1 = null;
-        StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var12_int = 0;
@@ -95,7 +91,6 @@ final class hd extends sh {
           this.field_A = param4;
           this.field_C = param7;
           this.field_F = param8;
-
           if (!param5) {
             stackIn_4_1 = false;
           } else {
@@ -123,45 +118,25 @@ final class hd extends sh {
           decompiledCaughtException = decompiledCaughtParameter0;
           var12 = decompiledCaughtException;
           stackIn_14_0 = (RuntimeException) (var12);
-
           stackIn_14_1 = new StringBuilder().append("hd.<init>(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-
           if (param4 == null) {
-            stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-            stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
             stackIn_15_2 = "null";
           } else {
-            stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-            stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
             stackIn_15_2 = "{...}";
           }
-
-
-          stackIn_17_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',');
-
+          stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',');
           if (param8 == null) {
-            stackIn_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-            stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
             stackIn_18_2 = "null";
           } else {
-            stackIn_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-            stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
             stackIn_18_2 = "{...}";
           }
-
-
-          stackIn_20_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',').append(param9).append(',');
-
+          stackIn_20_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param9).append(',');
           if (param10 == null) {
-            stackIn_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-            stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
             stackIn_21_2 = "null";
           } else {
-            stackIn_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-            stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
             stackIn_21_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 

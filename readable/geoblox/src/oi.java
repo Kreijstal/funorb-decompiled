@@ -113,14 +113,10 @@ final class oi {
         Sprite[] stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
         StringBuilder stackIn_7_1 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         StringBuilder stackIn_10_1 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -133,45 +129,25 @@ final class oi {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_4_0 = (RuntimeException) (var4);
-
           stackIn_4_1 = new StringBuilder().append("oi.C(").append(param0).append(',');
-
           if (param1 == null) {
-            stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-            stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
             stackIn_5_2 = "null";
           } else {
-            stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-            stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
             stackIn_5_2 = "{...}";
           }
-
-
-          stackIn_7_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',');
-
+          stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',');
           if (param2 == null) {
-            stackIn_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-            stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
             stackIn_8_2 = "null";
           } else {
-            stackIn_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-            stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
             stackIn_8_2 = "{...}";
           }
-
-
-          stackIn_10_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',');
-
+          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',');
           if (param3 == null) {
-            stackIn_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-            stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
             stackIn_11_2 = "null";
           } else {
-            stackIn_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-            stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
             stackIn_11_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

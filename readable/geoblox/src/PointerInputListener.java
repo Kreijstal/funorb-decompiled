@@ -33,8 +33,6 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
         RuntimeException callbackFailureForContext = null;
         RuntimeException callbackFailureBeforeEventDescription = null;
         StringBuilder callbackMessagePrefix = null;
-        RuntimeException callbackFailureAtEventDescription = null;
-        StringBuilder callbackMessageAtEventDescription = null;
         String eventArgumentDescription = null;
         RuntimeException caughtCallbackFailure = null;
         try {
@@ -47,19 +45,13 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
           caughtCallbackFailure = callbackFailure;
           callbackFailureForContext = caughtCallbackFailure;
           callbackFailureBeforeEventDescription = (RuntimeException) (callbackFailureForContext);
-
           callbackMessagePrefix = new StringBuilder().append("le.mouseClicked(");
-
           if (event == null) {
-            callbackFailureAtEventDescription = (RuntimeException) ((Object) callbackFailureBeforeEventDescription);
-            callbackMessageAtEventDescription = (StringBuilder) ((Object) callbackMessagePrefix);
             eventArgumentDescription = "null";
           } else {
-            callbackFailureAtEventDescription = (RuntimeException) ((Object) callbackFailureBeforeEventDescription);
-            callbackMessageAtEventDescription = (StringBuilder) ((Object) callbackMessagePrefix);
             eventArgumentDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) callbackFailureAtEventDescription), ((StringBuilder) (Object) callbackMessageAtEventDescription).append(eventArgumentDescription).append(')').toString());
+          throw t.a((Throwable) ((Object) callbackFailureBeforeEventDescription), ((StringBuilder) (Object) callbackMessagePrefix).append(eventArgumentDescription).append(')').toString());
         }
     }
 
@@ -101,8 +93,6 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
         RuntimeException callbackFailureForContext = null;
         RuntimeException callbackFailureBeforeEventDescription = null;
         StringBuilder callbackMessagePrefix = null;
-        RuntimeException callbackFailureAtEventDescription = null;
-        StringBuilder callbackMessageAtEventDescription = null;
         String eventArgumentDescription = null;
         RuntimeException caughtCallbackFailure = null;
         try {
@@ -127,19 +117,13 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
           caughtCallbackFailure = callbackFailure;
           callbackFailureForContext = caughtCallbackFailure;
           callbackFailureBeforeEventDescription = (RuntimeException) (callbackFailureForContext);
-
           callbackMessagePrefix = new StringBuilder().append("le.mouseReleased(");
-
           if (event == null) {
-            callbackFailureAtEventDescription = (RuntimeException) ((Object) callbackFailureBeforeEventDescription);
-            callbackMessageAtEventDescription = (StringBuilder) ((Object) callbackMessagePrefix);
             eventArgumentDescription = "null";
           } else {
-            callbackFailureAtEventDescription = (RuntimeException) ((Object) callbackFailureBeforeEventDescription);
-            callbackMessageAtEventDescription = (StringBuilder) ((Object) callbackMessagePrefix);
             eventArgumentDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) callbackFailureAtEventDescription), ((StringBuilder) (Object) callbackMessageAtEventDescription).append(eventArgumentDescription).append(')').toString());
+          throw t.a((Throwable) ((Object) callbackFailureBeforeEventDescription), ((StringBuilder) (Object) callbackMessagePrefix).append(eventArgumentDescription).append(')').toString());
         }
     }
 
@@ -167,8 +151,6 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
         RuntimeException callbackFailureForContext = null;
         RuntimeException callbackFailureBeforeEventDescription = null;
         StringBuilder callbackMessagePrefix = null;
-        RuntimeException callbackFailureAtEventDescription = null;
-        StringBuilder callbackMessageAtEventDescription = null;
         String eventArgumentDescription = null;
         RuntimeException caughtCallbackFailure = null;
         try {
@@ -184,19 +166,13 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
           caughtCallbackFailure = callbackFailure;
           callbackFailureForContext = caughtCallbackFailure;
           callbackFailureBeforeEventDescription = (RuntimeException) (callbackFailureForContext);
-
           callbackMessagePrefix = new StringBuilder().append("le.mouseExited(");
-
           if (event == null) {
-            callbackFailureAtEventDescription = (RuntimeException) ((Object) callbackFailureBeforeEventDescription);
-            callbackMessageAtEventDescription = (StringBuilder) ((Object) callbackMessagePrefix);
             eventArgumentDescription = "null";
           } else {
-            callbackFailureAtEventDescription = (RuntimeException) ((Object) callbackFailureBeforeEventDescription);
-            callbackMessageAtEventDescription = (StringBuilder) ((Object) callbackMessagePrefix);
             eventArgumentDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) callbackFailureAtEventDescription), ((StringBuilder) (Object) callbackMessageAtEventDescription).append(eventArgumentDescription).append(')').toString());
+          throw t.a((Throwable) ((Object) callbackFailureBeforeEventDescription), ((StringBuilder) (Object) callbackMessagePrefix).append(eventArgumentDescription).append(')').toString());
         }
     }
 
@@ -205,8 +181,6 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
         RuntimeException callbackFailureForContext = null;
         RuntimeException callbackFailureBeforeEventDescription = null;
         StringBuilder callbackMessagePrefix = null;
-        RuntimeException callbackFailureAtEventDescription = null;
-        StringBuilder callbackMessageAtEventDescription = null;
         String eventArgumentDescription = null;
         RuntimeException caughtCallbackFailure = null;
         try {
@@ -240,19 +214,13 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
           caughtCallbackFailure = callbackFailure;
           callbackFailureForContext = caughtCallbackFailure;
           callbackFailureBeforeEventDescription = (RuntimeException) (callbackFailureForContext);
-
           callbackMessagePrefix = new StringBuilder().append("le.mousePressed(");
-
           if (event == null) {
-            callbackFailureAtEventDescription = (RuntimeException) ((Object) callbackFailureBeforeEventDescription);
-            callbackMessageAtEventDescription = (StringBuilder) ((Object) callbackMessagePrefix);
             eventArgumentDescription = "null";
           } else {
-            callbackFailureAtEventDescription = (RuntimeException) ((Object) callbackFailureBeforeEventDescription);
-            callbackMessageAtEventDescription = (StringBuilder) ((Object) callbackMessagePrefix);
             eventArgumentDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) callbackFailureAtEventDescription), ((StringBuilder) (Object) callbackMessageAtEventDescription).append(eventArgumentDescription).append(')').toString());
+          throw t.a((Throwable) ((Object) callbackFailureBeforeEventDescription), ((StringBuilder) (Object) callbackMessagePrefix).append(eventArgumentDescription).append(')').toString());
         }
     }
 
@@ -260,8 +228,6 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
         RuntimeException callbackFailureForContext = null;
         RuntimeException callbackFailureBeforeEventDescription = null;
         StringBuilder callbackMessagePrefix = null;
-        RuntimeException callbackFailureAtEventDescription = null;
-        StringBuilder callbackMessageAtEventDescription = null;
         String eventArgumentDescription = null;
         RuntimeException caughtCallbackFailure = null;
         try {
@@ -274,19 +240,13 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
           caughtCallbackFailure = callbackFailure;
           callbackFailureForContext = caughtCallbackFailure;
           callbackFailureBeforeEventDescription = (RuntimeException) (callbackFailureForContext);
-
           callbackMessagePrefix = new StringBuilder().append("le.focusLost(");
-
           if (event == null) {
-            callbackFailureAtEventDescription = (RuntimeException) ((Object) callbackFailureBeforeEventDescription);
-            callbackMessageAtEventDescription = (StringBuilder) ((Object) callbackMessagePrefix);
             eventArgumentDescription = "null";
           } else {
-            callbackFailureAtEventDescription = (RuntimeException) ((Object) callbackFailureBeforeEventDescription);
-            callbackMessageAtEventDescription = (StringBuilder) ((Object) callbackMessagePrefix);
             eventArgumentDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) callbackFailureAtEventDescription), ((StringBuilder) (Object) callbackMessageAtEventDescription).append(eventArgumentDescription).append(')').toString());
+          throw t.a((Throwable) ((Object) callbackFailureBeforeEventDescription), ((StringBuilder) (Object) callbackMessagePrefix).append(eventArgumentDescription).append(')').toString());
         }
     }
 
@@ -294,8 +254,6 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
         RuntimeException callbackFailureForContext = null;
         RuntimeException callbackFailureBeforeEventDescription = null;
         StringBuilder callbackMessagePrefix = null;
-        RuntimeException callbackFailureAtEventDescription = null;
-        StringBuilder callbackMessageAtEventDescription = null;
         String eventArgumentDescription = null;
         RuntimeException caughtCallbackFailure = null;
         try {
@@ -311,19 +269,13 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
           caughtCallbackFailure = callbackFailure;
           callbackFailureForContext = caughtCallbackFailure;
           callbackFailureBeforeEventDescription = (RuntimeException) (callbackFailureForContext);
-
           callbackMessagePrefix = new StringBuilder().append("le.mouseMoved(");
-
           if (event == null) {
-            callbackFailureAtEventDescription = (RuntimeException) ((Object) callbackFailureBeforeEventDescription);
-            callbackMessageAtEventDescription = (StringBuilder) ((Object) callbackMessagePrefix);
             eventArgumentDescription = "null";
           } else {
-            callbackFailureAtEventDescription = (RuntimeException) ((Object) callbackFailureBeforeEventDescription);
-            callbackMessageAtEventDescription = (StringBuilder) ((Object) callbackMessagePrefix);
             eventArgumentDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) callbackFailureAtEventDescription), ((StringBuilder) (Object) callbackMessageAtEventDescription).append(eventArgumentDescription).append(')').toString());
+          throw t.a((Throwable) ((Object) callbackFailureBeforeEventDescription), ((StringBuilder) (Object) callbackMessagePrefix).append(eventArgumentDescription).append(')').toString());
         }
     }
 

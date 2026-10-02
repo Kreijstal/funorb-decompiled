@@ -157,11 +157,8 @@ final class td extends hk {
         StringBuilder stackIn_17_0 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
         StringBuilder stackIn_23_1 = null;
-        StringBuilder stackIn_24_1 = null;
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
         controlFlowGuard = Geoblox.field_C;
@@ -196,32 +193,19 @@ final class td extends hk {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_20_0 = (RuntimeException) (var4);
-
           stackIn_20_1 = new StringBuilder().append("td.J(");
-
           if (sourceText == null) {
-            stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
-            stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
             stackIn_21_2 = "null";
           } else {
-            stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
-            stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
             stackIn_21_2 = "{...}";
           }
-
-
-          stackIn_23_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(',');
-
+          stackIn_23_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',');
           if (destination == null) {
-            stackIn_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-            stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
             stackIn_24_2 = "null";
           } else {
-            stackIn_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-            stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
             stackIn_24_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_24_2).append(',').append(writeOffset).append(',').append(methodGuard).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(writeOffset).append(',').append(methodGuard).append(')').toString());
         }
     }
 
@@ -245,8 +229,6 @@ final class td extends hk {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -258,19 +240,13 @@ final class td extends hk {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_6_0 = (RuntimeException) (var3);
-
           stackIn_6_1 = new StringBuilder().append("td.UA(").append(param0).append(',');
-
           if (param1 == null) {
-            stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-            stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
             stackIn_7_2 = "null";
           } else {
-            stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-            stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
             stackIn_7_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

@@ -49,8 +49,6 @@ abstract class sc {
         int stackIn_12_0 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -78,19 +76,13 @@ abstract class sc {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_15_0 = (RuntimeException) (var3);
-
           stackIn_15_1 = new StringBuilder().append("sc.J(").append(param0).append(',');
-
           if (param1 == null) {
-            stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-            stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
             stackIn_16_2 = "null";
           } else {
-            stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-            stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
             stackIn_16_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
         }
     }
 

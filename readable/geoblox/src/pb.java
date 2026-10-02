@@ -20,11 +20,8 @@ abstract class pb extends DualLinkNode {
         java.awt.Graphics var10 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
         StringBuilder stackIn_24_1 = null;
-        StringBuilder stackIn_25_1 = null;
         String stackIn_25_2 = null;
         Throwable decompiledCaughtException = null;
         Exception var6 = null;
@@ -93,32 +90,19 @@ abstract class pb extends DualLinkNode {
           decompiledCaughtException = decompiledCaughtParameter2;
           var5_ref = (RuntimeException) (Object) decompiledCaughtException;
           stackIn_21_0 = (RuntimeException) (var5_ref);
-
           stackIn_21_1 = new StringBuilder().append("pb.B(").append(param0).append(',');
-
           if (param1 == null) {
-            stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
-            stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
             stackIn_22_2 = "null";
           } else {
-            stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
-            stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
             stackIn_22_2 = "{...}";
           }
-
-
-          stackIn_24_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',').append(param2).append(',').append(param3).append(',');
-
+          stackIn_24_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(',').append(param3).append(',');
           if (param4 == null) {
-            stackIn_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-            stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
             stackIn_25_2 = "null";
           } else {
-            stackIn_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-            stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
             stackIn_25_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 

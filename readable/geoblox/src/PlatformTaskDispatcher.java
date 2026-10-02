@@ -544,7 +544,6 @@ final class PlatformTaskDispatcher implements Runnable {
         this.privilegedServicesEnabled = false;
         this.shutdownRequested = false;
         gameCacheName = gameName;
-
         if (!privilegedServicesEnabled) {
           privilegedServicesFlag = false;
         } else {

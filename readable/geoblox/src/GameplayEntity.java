@@ -440,8 +440,6 @@ final class GameplayEntity extends DualLinkNode {
         int clientControlFlowGuard = 0;
         RuntimeException neighborRemovalFailureForContext = null;
         StringBuilder neighborRemovalMessagePrefix = null;
-        RuntimeException neighborRemovalFailureAtArgument = null;
-        StringBuilder neighborRemovalMessageAtArgument = null;
         String relatedEntityArgumentDescription = null;
         RuntimeException caughtNeighborRemovalException = null;
         clientControlFlowGuard = Geoblox.field_C;
@@ -474,19 +472,13 @@ final class GameplayEntity extends DualLinkNode {
           caughtNeighborRemovalException = neighborRemovalException;
           caughtNeighborRemovalFailure = caughtNeighborRemovalException;
           neighborRemovalFailureForContext = (RuntimeException) (caughtNeighborRemovalFailure);
-
           neighborRemovalMessagePrefix = new StringBuilder().append("ja.HA(");
-
           if (relatedEntity == null) {
-            neighborRemovalFailureAtArgument = (RuntimeException) ((Object) neighborRemovalFailureForContext);
-            neighborRemovalMessageAtArgument = (StringBuilder) ((Object) neighborRemovalMessagePrefix);
             relatedEntityArgumentDescription = "null";
           } else {
-            neighborRemovalFailureAtArgument = (RuntimeException) ((Object) neighborRemovalFailureForContext);
-            neighborRemovalMessageAtArgument = (StringBuilder) ((Object) neighborRemovalMessagePrefix);
             relatedEntityArgumentDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) neighborRemovalFailureAtArgument), ((StringBuilder) (Object) neighborRemovalMessageAtArgument).append(relatedEntityArgumentDescription).append(',').append(startingChildIndex).append(')').toString());
+          throw t.a((Throwable) ((Object) neighborRemovalFailureForContext), ((StringBuilder) (Object) neighborRemovalMessagePrefix).append(relatedEntityArgumentDescription).append(',').append(startingChildIndex).append(')').toString());
         }
     }
 

@@ -16,15 +16,21 @@ mirror. The current [manifest](readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
-identities. Both 303-file Java corpora compile and retain all 150,124 remaining bindings
+identities. Both 303-file Java corpora compile and retain all 138,570 remaining bindings
 and 388 override relationships.
 
-The current pass names `PixelOverlapProbe`, contact-mask coordinate handling,
-collision-sprite rendering, pointer-spawn variables and avatar steering helpers.
-It adds 104 guarded names and 11,227 native collision/spawn/steering cases.
-All previous rules and source/decompiler pins are unchanged. Current 3,047
-rules apply 30,510 identifier edits. Earlier input naming and its 2,184 native
-cases remain unchanged. Full-game and real-device behavior remain unverified.
+The current structural pass resolves equivalent operand-stack joins in the
+owned decompiler. It removes 1,075 generated carriers and 5,071 raw source lines
+across 176 files. Pointer spawning loses 15 intermediate locals. Different
+variant/category values, snapshots and exception/monitor boundaries remain
+explicit. Helper packing now budgets expanded return stores, fixing a reproduced
+pre-existing dispatcher fallback in the generic partition regression.
+
+The current 2,994 rules apply 30,219 edits. All surviving names/evidence are
+preserved through 132 guarded ordinal migrations; 53 rules for deleted carriers
+are retired. The previous collision/spawn/steering and input native traces remain
+pinned. The decompiler revision and its tracked-source archive SHA-256 are in the
+single current manifest. Full-game and real-device behavior remain unverified.
 One current manifest and generated export are maintained, with Git history
 for previous passes.
 

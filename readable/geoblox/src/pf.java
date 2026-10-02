@@ -141,8 +141,6 @@ final class pf extends ee implements ga, pl {
     public final void a(dj param0, int param1) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
@@ -161,19 +159,13 @@ final class pf extends ee implements ga, pl {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_10_0 = (RuntimeException) (var3);
-
           stackIn_10_1 = new StringBuilder().append("pf.S(");
-
           if (param0 == null) {
-            stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-            stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
             stackIn_11_2 = "null";
           } else {
-            stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-            stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
             stackIn_11_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -220,8 +212,6 @@ final class pf extends ee implements ga, pl {
         boolean stackIn_9_0 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -241,19 +231,13 @@ final class pf extends ee implements ga, pl {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_12_0 = (RuntimeException) (var5);
-
           stackIn_12_1 = new StringBuilder().append("pf.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
           if (param3 == null) {
-            stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-            stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
             stackIn_13_2 = "null";
           } else {
-            stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-            stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
             stackIn_13_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -272,10 +256,8 @@ final class pf extends ee implements ga, pl {
         int var12 = 0;
         int stackIn_4_0 = 0;
         qc stackIn_9_0 = null;
-        qc stackIn_10_0 = null;
         String stackIn_10_1 = null;
         qc stackIn_12_0 = null;
-        qc stackIn_13_0 = null;
         String stackIn_13_1 = null;
         int stackIn_31_0 = 0;
         int stackIn_45_0 = 0;
@@ -284,14 +266,10 @@ final class pf extends ee implements ga, pl {
         int stackIn_66_0 = 0;
         RuntimeException stackIn_69_0 = null;
         StringBuilder stackIn_69_1 = null;
-        RuntimeException stackIn_70_0 = null;
-        StringBuilder stackIn_70_1 = null;
         String stackIn_70_2 = null;
         StringBuilder stackIn_72_1 = null;
-        StringBuilder stackIn_73_1 = null;
         String stackIn_73_2 = null;
         StringBuilder stackIn_75_1 = null;
-        StringBuilder stackIn_76_1 = null;
         String stackIn_76_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
@@ -345,25 +323,19 @@ final class pf extends ee implements ga, pl {
               fc.field_d.c((byte) 95, bh.field_d.nextInt());
               fc.field_d.c((byte) 95, bh.field_d.nextInt());
               stackIn_9_0 = fc.field_d;
-
               if (!param2.a((byte) 97)) {
-                stackIn_10_0 = (qc) ((Object) stackIn_9_0);
                 stackIn_10_1 = "";
               } else {
-                stackIn_10_0 = (qc) ((Object) stackIn_9_0);
                 stackIn_10_1 = (String) (var13);
               }
-              ((qc) (Object) stackIn_10_0).a(stackIn_10_1, (byte) -126);
+              ((qc) (Object) stackIn_9_0).a(stackIn_10_1, (byte) -126);
               stackIn_12_0 = fc.field_d;
-
               if (!param3.a((byte) 126)) {
-                stackIn_13_0 = (qc) ((Object) stackIn_12_0);
                 stackIn_13_1 = "";
               } else {
-                stackIn_13_0 = (qc) ((Object) stackIn_12_0);
                 stackIn_13_1 = (String) (var8);
               }
-              ((qc) (Object) stackIn_13_0).a(stackIn_13_1, (byte) -126);
+              ((qc) (Object) stackIn_12_0).a(stackIn_13_1, (byte) -126);
               fj.field_q.d((byte) 124, 16);
               fj.field_q.field_f = fj.field_q.field_f + 1;
               var9 = fj.field_q.field_f;
@@ -463,45 +435,25 @@ final class pf extends ee implements ga, pl {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
           stackIn_69_0 = (RuntimeException) (var7);
-
           stackIn_69_1 = new StringBuilder().append("pf.N(").append(param0).append(',').append(param1).append(',');
-
           if (param2 == null) {
-            stackIn_70_0 = (RuntimeException) ((Object) stackIn_69_0);
-            stackIn_70_1 = (StringBuilder) ((Object) stackIn_69_1);
             stackIn_70_2 = "null";
           } else {
-            stackIn_70_0 = (RuntimeException) ((Object) stackIn_69_0);
-            stackIn_70_1 = (StringBuilder) ((Object) stackIn_69_1);
             stackIn_70_2 = "{...}";
           }
-
-
-          stackIn_72_1 = ((StringBuilder) (Object) stackIn_70_1).append(stackIn_70_2).append(',');
-
+          stackIn_72_1 = ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',');
           if (param3 == null) {
-            stackIn_70_0 = (RuntimeException) ((Object) stackIn_70_0);
-            stackIn_73_1 = (StringBuilder) ((Object) stackIn_72_1);
             stackIn_73_2 = "null";
           } else {
-            stackIn_70_0 = (RuntimeException) ((Object) stackIn_70_0);
-            stackIn_73_1 = (StringBuilder) ((Object) stackIn_72_1);
             stackIn_73_2 = "{...}";
           }
-
-
-          stackIn_75_1 = ((StringBuilder) (Object) stackIn_73_1).append(stackIn_73_2).append(',');
-
+          stackIn_75_1 = ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',');
           if (param4 == null) {
-            stackIn_70_0 = (RuntimeException) ((Object) stackIn_70_0);
-            stackIn_76_1 = (StringBuilder) ((Object) stackIn_75_1);
             stackIn_76_2 = "null";
           } else {
-            stackIn_70_0 = (RuntimeException) ((Object) stackIn_70_0);
-            stackIn_76_1 = (StringBuilder) ((Object) stackIn_75_1);
             stackIn_76_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_76_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -509,8 +461,6 @@ final class pf extends ee implements ga, pl {
         int var7 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
@@ -543,19 +493,13 @@ final class pf extends ee implements ga, pl {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_17_0 = (RuntimeException) (var6);
-
           stackIn_17_1 = new StringBuilder().append("pf.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-
           if (param4 == null) {
-            stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-            stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
             stackIn_18_2 = "null";
           } else {
-            stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-            stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
             stackIn_18_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -565,8 +509,6 @@ final class pf extends ee implements ga, pl {
             int var11_int = 0;
             RuntimeException stackIn_67_0 = null;
             StringBuilder stackIn_67_1 = null;
-            RuntimeException stackIn_68_0 = null;
-            StringBuilder stackIn_68_1 = null;
             String stackIn_68_2 = null;
             Throwable decompiledCaughtException = null;
             RuntimeException var2 = null;
@@ -758,19 +700,13 @@ final class pf extends ee implements ga, pl {
               decompiledCaughtException = decompiledCaughtParameter12;
               var2 = (RuntimeException) (Object) decompiledCaughtException;
               stackIn_67_0 = (RuntimeException) (var2);
-
               stackIn_67_1 = new StringBuilder().append("pf.M(").append(param0).append(',');
-
               if (param1 == null) {
-                stackIn_68_0 = (RuntimeException) ((Object) stackIn_67_0);
-                stackIn_68_1 = (StringBuilder) ((Object) stackIn_67_1);
                 stackIn_68_2 = "null";
               } else {
-                stackIn_68_0 = (RuntimeException) ((Object) stackIn_67_0);
-                stackIn_68_1 = (StringBuilder) ((Object) stackIn_67_1);
                 stackIn_68_2 = "{...}";
               }
-              throw t.a((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_68_2).append(')').toString());
+              throw t.a((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(')').toString());
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -807,11 +743,8 @@ final class pf extends ee implements ga, pl {
         String stackIn_19_3 = null;
         RuntimeException stackIn_59_0 = null;
         StringBuilder stackIn_59_1 = null;
-        RuntimeException stackIn_60_0 = null;
-        StringBuilder stackIn_60_1 = null;
         String stackIn_60_2 = null;
         StringBuilder stackIn_62_1 = null;
-        StringBuilder stackIn_63_1 = null;
         String stackIn_63_2 = null;
         RuntimeException decompiledCaughtException = null;
         ml var6 = null;
@@ -822,7 +755,6 @@ final class pf extends ee implements ga, pl {
         hd var12 = null;
         hd var13 = null;
         try {
-
           if (!param3) {
             stackIn_4_1 = false;
           } else {
@@ -830,14 +762,12 @@ final class pf extends ee implements ga, pl {
           }
           ((pf) (this)).field_C = stackIn_4_1;
           this.field_L = param1;
-
           if (!param2) {
             stackIn_7_1 = false;
           } else {
             stackIn_7_1 = true;
           }
           ((pf) (this)).field_N = stackIn_7_1;
-
           if (!param4) {
             stackIn_10_1 = false;
           } else {
@@ -858,11 +788,8 @@ final class pf extends ee implements ga, pl {
           this.field_P = (dj) ((Object) new hc("", (bb) (this), 20));
           if (!this.field_N) {
             this.field_E = new hk(k.loginText, (bb) null);
-
             stackIn_18_1 = null;
-
             stackIn_18_2 = null;
-
             if (this.field_I) {
               stackIn_19_1 = null;
               stackIn_19_2 = null;
@@ -971,32 +898,19 @@ final class pf extends ee implements ga, pl {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6_ref = decompiledCaughtException;
           stackIn_59_0 = (RuntimeException) (var6_ref);
-
           stackIn_59_1 = new StringBuilder().append("pf.<init>(");
-
           if (param0 == null) {
-            stackIn_60_0 = (RuntimeException) ((Object) stackIn_59_0);
-            stackIn_60_1 = (StringBuilder) ((Object) stackIn_59_1);
             stackIn_60_2 = "null";
           } else {
-            stackIn_60_0 = (RuntimeException) ((Object) stackIn_59_0);
-            stackIn_60_1 = (StringBuilder) ((Object) stackIn_59_1);
             stackIn_60_2 = "{...}";
           }
-
-
-          stackIn_62_1 = ((StringBuilder) (Object) stackIn_60_1).append(stackIn_60_2).append(',');
-
+          stackIn_62_1 = ((StringBuilder) (Object) stackIn_59_1).append(stackIn_60_2).append(',');
           if (param1 == null) {
-            stackIn_60_0 = (RuntimeException) ((Object) stackIn_60_0);
-            stackIn_63_1 = (StringBuilder) ((Object) stackIn_62_1);
             stackIn_63_2 = "null";
           } else {
-            stackIn_60_0 = (RuntimeException) ((Object) stackIn_60_0);
-            stackIn_63_1 = (StringBuilder) ((Object) stackIn_62_1);
             stackIn_63_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_60_0), ((StringBuilder) (Object) stackIn_63_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

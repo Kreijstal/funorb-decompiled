@@ -53,8 +53,6 @@ final class bm {
         int stackIn_14_0 = 0;
         RuntimeException stackIn_97_0 = null;
         StringBuilder stackIn_97_1 = null;
-        RuntimeException stackIn_98_0 = null;
-        StringBuilder stackIn_98_1 = null;
         String stackIn_98_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
@@ -254,19 +252,13 @@ final class bm {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_97_0 = (RuntimeException) (var3);
-
           stackIn_97_1 = new StringBuilder().append("bm.A(").append(param0).append(',');
-
           if (param1 == null) {
-            stackIn_98_0 = (RuntimeException) ((Object) stackIn_97_0);
-            stackIn_98_1 = (StringBuilder) ((Object) stackIn_97_1);
             stackIn_98_2 = "null";
           } else {
-            stackIn_98_0 = (RuntimeException) ((Object) stackIn_97_0);
-            stackIn_98_1 = (StringBuilder) ((Object) stackIn_97_1);
             stackIn_98_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_98_0), ((StringBuilder) (Object) stackIn_98_1).append(stackIn_98_2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_97_0), ((StringBuilder) (Object) stackIn_97_1).append(stackIn_98_2).append(')').toString());
         }
     }
 

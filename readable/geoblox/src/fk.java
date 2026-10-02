@@ -10,8 +10,6 @@ final class fk extends sh {
         byte[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -25,19 +23,13 @@ final class fk extends sh {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_7_0 = (RuntimeException) (var2);
-
           stackIn_7_1 = new StringBuilder().append("fk.F(").append(readGuard).append(',');
-
           if (resourceKey == null) {
-            stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-            stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
             stackIn_8_2 = "null";
           } else {
-            stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-            stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
             stackIn_8_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -104,8 +96,6 @@ final class fk extends sh {
             bf stackIn_6_0 = null;
             RuntimeException stackIn_9_0 = null;
             StringBuilder stackIn_9_1 = null;
-            RuntimeException stackIn_10_0 = null;
-            StringBuilder stackIn_10_1 = null;
             String stackIn_10_2 = null;
             Throwable decompiledCaughtException = null;
             try {
@@ -131,19 +121,13 @@ final class fk extends sh {
               decompiledCaughtException = decompiledCaughtParameter1;
               var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
               stackIn_9_0 = (RuntimeException) (var4_ref2);
-
               stackIn_9_1 = new StringBuilder().append("fk.E(").append(param0).append(',');
-
               if (param1 == null) {
-                stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-                stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
                 stackIn_10_2 = "null";
               } else {
-                stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-                stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
                 stackIn_10_2 = "{...}";
               }
-              throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+              throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

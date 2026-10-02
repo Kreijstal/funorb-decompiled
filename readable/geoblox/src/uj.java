@@ -20,8 +20,6 @@ final class uj {
         boolean overlapFound = false;
         RuntimeException boardOverlapFailureBeforeEntityDescription = null;
         StringBuilder boardOverlapMessagePrefix = null;
-        RuntimeException boardOverlapFailureAtEntityDescription = null;
-        StringBuilder boardOverlapMessageAtEntityDescription = null;
         String entityArgumentDescription = null;
         RuntimeException caughtBoardOverlapFailure = null;
         try {
@@ -34,19 +32,13 @@ final class uj {
           caughtBoardOverlapFailure = boardOverlapFailure;
           boardOverlapFailureForContext = caughtBoardOverlapFailure;
           boardOverlapFailureBeforeEntityDescription = (RuntimeException) (boardOverlapFailureForContext);
-
           boardOverlapMessagePrefix = new StringBuilder().append("uj.C(");
-
           if (diagnosticEntity == null) {
-            boardOverlapFailureAtEntityDescription = (RuntimeException) ((Object) boardOverlapFailureBeforeEntityDescription);
-            boardOverlapMessageAtEntityDescription = (StringBuilder) ((Object) boardOverlapMessagePrefix);
             entityArgumentDescription = "null";
           } else {
-            boardOverlapFailureAtEntityDescription = (RuntimeException) ((Object) boardOverlapFailureBeforeEntityDescription);
-            boardOverlapMessageAtEntityDescription = (StringBuilder) ((Object) boardOverlapMessagePrefix);
             entityArgumentDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) boardOverlapFailureAtEntityDescription), ((StringBuilder) (Object) boardOverlapMessageAtEntityDescription).append(entityArgumentDescription).append(',').append(diagnosticBoardAngleRadians).append(',').append(methodGuard).append(')').toString());
+          throw t.a((Throwable) ((Object) boardOverlapFailureBeforeEntityDescription), ((StringBuilder) (Object) boardOverlapMessagePrefix).append(entityArgumentDescription).append(',').append(diagnosticBoardAngleRadians).append(',').append(methodGuard).append(')').toString());
         }
     }
 
@@ -73,8 +65,6 @@ final class uj {
         String[] stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -98,19 +88,13 @@ final class uj {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_10_0 = (RuntimeException) (var3);
-
           stackIn_10_1 = new StringBuilder().append("uj.D(").append(param0).append(',').append(param1).append(',');
-
           if (param2 == null) {
-            stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-            stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
             stackIn_11_2 = "null";
           } else {
-            stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-            stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
             stackIn_11_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

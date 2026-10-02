@@ -55,8 +55,6 @@ final class v {
         byte[] stackIn_21_0 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
         String stackIn_25_2 = null;
         Throwable decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -121,19 +119,13 @@ final class v {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (RuntimeException) (Object) decompiledCaughtException;
           stackIn_24_0 = (RuntimeException) (var2);
-
           stackIn_24_1 = new StringBuilder().append("v.C(");
-
           if (param0 == null) {
-            stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
-            stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
             stackIn_25_2 = "null";
           } else {
-            stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
-            stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
             stackIn_25_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -442,8 +434,6 @@ final class v {
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -456,19 +446,13 @@ final class v {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_8_0 = (RuntimeException) (var2);
-
           stackIn_8_1 = new StringBuilder().append("v.B(");
-
           if (param0 == null) {
-            stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-            stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
             stackIn_9_2 = "null";
           } else {
-            stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-            stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
             stackIn_9_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 

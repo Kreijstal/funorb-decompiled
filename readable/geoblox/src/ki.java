@@ -16,8 +16,6 @@ final class ki {
         int fieldTemp$1 = 0;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
         String stackIn_27_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
@@ -66,19 +64,13 @@ final class ki {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_26_0 = (RuntimeException) (var2);
-
           stackIn_26_1 = new StringBuilder().append("ki.B(");
-
           if (param0 == null) {
-            stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
-            stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
             stackIn_27_2 = "null";
           } else {
-            stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
-            stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
             stackIn_27_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
         }
     }
 

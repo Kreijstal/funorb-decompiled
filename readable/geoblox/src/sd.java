@@ -40,8 +40,6 @@ final class sd extends pb {
         IndexedSprite[] stackIn_2_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -57,27 +55,19 @@ final class sd extends pb {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_9_0 = (RuntimeException) (var4);
-
           stackIn_9_1 = new StringBuilder().append("sd.H(").append(param0).append(',');
-
           if (param1 == null) {
-            stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-            stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
             stackIn_10_2 = "null";
           } else {
-            stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-            stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
             stackIn_10_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6, int param7, int param8) {
         RuntimeException stackIn_74_0 = null;
         StringBuilder stackIn_74_1 = null;
-        RuntimeException stackIn_75_0 = null;
-        StringBuilder stackIn_75_1 = null;
         String stackIn_75_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var9_int = 0;
@@ -258,19 +248,13 @@ final class sd extends pb {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9 = decompiledCaughtException;
           stackIn_74_0 = (RuntimeException) (var9);
-
           stackIn_74_1 = new StringBuilder().append("sd.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-
           if (param4 == null) {
-            stackIn_75_0 = (RuntimeException) ((Object) stackIn_74_0);
-            stackIn_75_1 = (StringBuilder) ((Object) stackIn_74_1);
             stackIn_75_2 = "null";
           } else {
-            stackIn_75_0 = (RuntimeException) ((Object) stackIn_74_0);
-            stackIn_75_1 = (StringBuilder) ((Object) stackIn_74_1);
             stackIn_75_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_75_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_75_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_74_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 

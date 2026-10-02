@@ -40,11 +40,8 @@ final class wj extends sh {
         String stackIn_25_0 = null;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
         String stackIn_29_2 = null;
         StringBuilder stackIn_31_1 = null;
-        StringBuilder stackIn_32_1 = null;
         String stackIn_32_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
@@ -134,32 +131,19 @@ final class wj extends sh {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_28_0 = (RuntimeException) (var3);
-
           stackIn_28_1 = new StringBuilder().append("wj.E(");
-
           if (param0 == null) {
-            stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
-            stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
             stackIn_29_2 = "null";
           } else {
-            stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
-            stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
             stackIn_29_2 = "{...}";
           }
-
-
-          stackIn_31_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_29_2).append(',');
-
+          stackIn_31_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',');
           if (param1 == null) {
-            stackIn_29_0 = (RuntimeException) ((Object) stackIn_29_0);
-            stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
             stackIn_32_2 = "null";
           } else {
-            stackIn_29_0 = (RuntimeException) ((Object) stackIn_29_0);
-            stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
             stackIn_32_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_32_2).append(',').append(param2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -200,11 +184,8 @@ final class wj extends sh {
         int var3_int = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
         StringBuilder stackIn_20_1 = null;
-        StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
         Throwable decompiledCaughtException = null;
         Exception var3 = null;
@@ -239,32 +220,19 @@ final class wj extends sh {
           decompiledCaughtException = decompiledCaughtParameter1;
           var3_ref = (RuntimeException) (Object) decompiledCaughtException;
           stackIn_17_0 = (RuntimeException) (var3_ref);
-
           stackIn_17_1 = new StringBuilder().append("wj.G(");
-
           if (param0 == null) {
-            stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-            stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
             stackIn_18_2 = "null";
           } else {
-            stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-            stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
             stackIn_18_2 = "{...}";
           }
-
-
-          stackIn_20_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',').append(param1).append(',');
-
+          stackIn_20_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',');
           if (param2 == null) {
-            stackIn_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-            stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
             stackIn_21_2 = "null";
           } else {
-            stackIn_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-            stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
             stackIn_21_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -275,14 +243,10 @@ final class wj extends sh {
         Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         StringBuilder stackIn_9_1 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         StringBuilder stackIn_12_1 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -297,45 +261,25 @@ final class wj extends sh {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_6_0 = (RuntimeException) (var4);
-
           stackIn_6_1 = new StringBuilder().append("wj.C(");
-
           if (resourceName == null) {
-            stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-            stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
             stackIn_7_2 = "null";
           } else {
-            stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-            stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
             stackIn_7_2 = "{...}";
           }
-
-
-          stackIn_9_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
-
+          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
           if (groupName == null) {
-            stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-            stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
             stackIn_10_2 = "null";
           } else {
-            stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-            stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
             stackIn_10_2 = "{...}";
           }
-
-
-          stackIn_12_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',');
-
+          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
           if (graphicsArchive == null) {
-            stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-            stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
             stackIn_13_2 = "null";
           } else {
-            stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-            stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
             stackIn_13_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',').append(methodGuard).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(methodGuard).append(')').toString());
         }
     }
 

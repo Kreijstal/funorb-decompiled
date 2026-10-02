@@ -70,8 +70,6 @@ final class ma extends IntrusiveNode {
         boolean overlapFound = false;
         RuntimeException contactOverlapFailureBeforeEntityDescription = null;
         StringBuilder contactOverlapMessagePrefix = null;
-        RuntimeException contactOverlapFailureAtEntityDescription = null;
-        StringBuilder contactOverlapMessageAtEntityDescription = null;
         String entityArgumentDescription = null;
         RuntimeException caughtContactOverlapFailure = null;
         try {
@@ -84,19 +82,13 @@ final class ma extends IntrusiveNode {
           caughtContactOverlapFailure = contactOverlapFailure;
           contactOverlapFailureForContext = caughtContactOverlapFailure;
           contactOverlapFailureBeforeEntityDescription = (RuntimeException) (contactOverlapFailureForContext);
-
           contactOverlapMessagePrefix = new StringBuilder().append("ma.A(").append(methodGuard).append(',').append(diagnosticBoardAngleRadians).append(',');
-
           if (diagnosticEntity == null) {
-            contactOverlapFailureAtEntityDescription = (RuntimeException) ((Object) contactOverlapFailureBeforeEntityDescription);
-            contactOverlapMessageAtEntityDescription = (StringBuilder) ((Object) contactOverlapMessagePrefix);
             entityArgumentDescription = "null";
           } else {
-            contactOverlapFailureAtEntityDescription = (RuntimeException) ((Object) contactOverlapFailureBeforeEntityDescription);
-            contactOverlapMessageAtEntityDescription = (StringBuilder) ((Object) contactOverlapMessagePrefix);
             entityArgumentDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) contactOverlapFailureAtEntityDescription), ((StringBuilder) (Object) contactOverlapMessageAtEntityDescription).append(entityArgumentDescription).append(')').toString());
+          throw t.a((Throwable) ((Object) contactOverlapFailureBeforeEntityDescription), ((StringBuilder) (Object) contactOverlapMessagePrefix).append(entityArgumentDescription).append(')').toString());
         }
     }
 
@@ -124,8 +116,6 @@ final class ma extends IntrusiveNode {
         int stackIn_21_0 = 0;
         RuntimeException stackIn_77_0 = null;
         StringBuilder stackIn_77_1 = null;
-        RuntimeException stackIn_78_0 = null;
-        StringBuilder stackIn_78_1 = null;
         String stackIn_78_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
@@ -292,19 +282,13 @@ final class ma extends IntrusiveNode {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_77_0 = (RuntimeException) (var6);
-
           stackIn_77_1 = new StringBuilder().append("ma.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-
           if (param5 == null) {
-            stackIn_78_0 = (RuntimeException) ((Object) stackIn_77_0);
-            stackIn_78_1 = (StringBuilder) ((Object) stackIn_77_1);
             stackIn_78_2 = "null";
           } else {
-            stackIn_78_0 = (RuntimeException) ((Object) stackIn_77_0);
-            stackIn_78_1 = (StringBuilder) ((Object) stackIn_77_1);
             stackIn_78_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_78_2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(')').toString());
         }
     }
 
@@ -312,14 +296,10 @@ final class ma extends IntrusiveNode {
         RuntimeException var4 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
         StringBuilder stackIn_23_1 = null;
-        StringBuilder stackIn_24_1 = null;
         String stackIn_24_2 = null;
         StringBuilder stackIn_26_1 = null;
-        StringBuilder stackIn_27_1 = null;
         String stackIn_27_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -346,45 +326,25 @@ final class ma extends IntrusiveNode {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_20_0 = (RuntimeException) (var4);
-
           stackIn_20_1 = new StringBuilder().append("ma.D(");
-
           if (param0 == null) {
-            stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
-            stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
             stackIn_21_2 = "null";
           } else {
-            stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
-            stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
             stackIn_21_2 = "{...}";
           }
-
-
-          stackIn_23_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(',');
-
+          stackIn_23_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',');
           if (param1 == null) {
-            stackIn_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-            stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
             stackIn_24_2 = "null";
           } else {
-            stackIn_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-            stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
             stackIn_24_2 = "{...}";
           }
-
-
-          stackIn_26_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_24_2).append(',');
-
+          stackIn_26_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',');
           if (param2 == null) {
-            stackIn_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-            stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
             stackIn_27_2 = "null";
           } else {
-            stackIn_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-            stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
             stackIn_27_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_27_2).append(',').append(param3).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param3).append(')').toString());
         }
     }
 
