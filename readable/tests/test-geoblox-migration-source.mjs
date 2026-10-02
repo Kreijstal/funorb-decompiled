@@ -79,8 +79,12 @@ test('current output survives rejected evidence and stale symbol spelling during
   rejection(data => { data.publication.sourceEvidence[0].sha256 = '0'.repeat(64); },
     /Reviewed source differs/, true);
   rejection(data => {
-    const change = data.publication.ruleChanges.find(item => !item.before && item.after);
-    const rule = data.renames.find(item => item.symbol === change.symbol);
+    const rule = data.renames.find(item => item.symbol.startsWith('L:'));
+    let change = data.publication.ruleChanges.find(item => item.symbol === rule.symbol);
+    if (!change) {
+      change = {symbol: rule.symbol, before: {...rule}, after: {...rule}};
+      data.publication.ruleChanges.push(change);
+    }
     rule.originalName = 'incorrectOriginalSpelling';
     change.after = {...rule};
   }, /Original name mismatch/, true);

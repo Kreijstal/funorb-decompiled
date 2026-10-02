@@ -638,30 +638,12 @@ final class GameplaySession {
     final void updateSession(int methodGuard) {
         int pointsPanelTickBeforeIncrement = 0;
         boolean detachedEntityOrPositiveRotationKeySnapshot = false;
-        Object unusedBoardEmptySessionSnapshot = null;
-        Object unusedBoardReleaseSessionSnapshot = null;
-        Object unusedBoardClearBonusOwnerSnapshot = null;
-        Object unusedBoardClearBonusTargetSnapshot = null;
         boolean nextBoardClearBonusEligible = false;
-        Object unusedDebugOverviewOwnerSnapshot = null;
-        Object unusedDebugOverviewTargetSnapshot = null;
         boolean toggledDebugOverview = false;
-        Object unusedRotationSwapOwnerOnEnableSnapshot = null;
-        Object unusedRotationSwapOwnerSnapshot = null;
-        Object unusedRotationSwapTargetSnapshot = null;
         boolean toggledRotationControlsSwapped = false;
-        Object unusedSpecialKindSpawnOwnerSnapshot = null;
-        Object unusedSpecialKindSpawnTargetSnapshot = null;
         boolean toggledSpecialKindSpawn = false;
-        Object unusedPointerSpawnOwnerSnapshot = null;
-        Object unusedPointerSpawnTargetSnapshot = null;
         boolean toggledDebugPointerSpawn = false;
-        Object unusedSpawnReleaseOwnerOnDisableSnapshot = null;
-        Object unusedSpawnReleaseOwnerSnapshot = null;
-        Object unusedSpawnReleaseTargetSnapshot = null;
         boolean toggledSpawnReleaseDisabled = false;
-        Object unusedReducedRenderingOwnerSnapshot = null;
-        Object unusedReducedRenderingTargetSnapshot = null;
         boolean toggledReducedRendering = false;
         int debugKeyCodeOrPointerEventComplement = 0;
         int debugKeySentinelOrPointerEventSentinel = 0;
@@ -1011,24 +993,17 @@ final class GameplaySession {
               ld.spawnPointsPopup(310, 320, 123, 100 + 100 * ji.difficultyStep);
             }
             L50: {
-              unusedBoardClearBonusOwnerSnapshot = this;
 
               if (!fa.entitiesDetachedThisTick) {
-                unusedBoardClearBonusOwnerSnapshot = this;
 
                 if (a.attachedEntities.isEmpty(13519)) {
-                  unusedBoardEmptySessionSnapshot = this;
-                  unusedBoardClearBonusOwnerSnapshot = this;
 
                   if (0 < ul.releasedInCurrentTheme) {
-                    unusedBoardReleaseSessionSnapshot = this;
-                    unusedBoardClearBonusTargetSnapshot = this;
                     nextBoardClearBonusEligible = true;
                     break L50;
                   }
                 }
               }
-              unusedBoardClearBonusTargetSnapshot = this;
               nextBoardClearBonusEligible = false;
             }
             L52: {
@@ -1090,13 +1065,10 @@ final class GameplaySession {
               if (te.field_a > 0) {
                 pk.field_r = pk.field_r.substring(1) + te.field_a;
                 if (pk.field_r.equalsIgnoreCase("fog")) {
-                  unusedDebugOverviewOwnerSnapshot = this;
 
                   if (this.showDebugOverview) {
-                    unusedDebugOverviewTargetSnapshot = this;
                     toggledDebugOverview = false;
                   } else {
-                    unusedDebugOverviewTargetSnapshot = this;
                     toggledDebugOverview = true;
                   }
                   ((GameplaySession) (this)).showDebugOverview = toggledDebugOverview;
@@ -1157,14 +1129,10 @@ final class GameplaySession {
                 }
               }
               if (jg.field_g == ki.field_d) {
-                unusedRotationSwapOwnerSnapshot = this;
 
                 if (this.rotationControlsSwapped) {
-                  unusedRotationSwapTargetSnapshot = this;
                   toggledRotationControlsSwapped = false;
                 } else {
-                  unusedRotationSwapOwnerOnEnableSnapshot = this;
-                  unusedRotationSwapTargetSnapshot = this;
                   toggledRotationControlsSwapped = true;
                 }
                 ((GameplaySession) (this)).rotationControlsSwapped = toggledRotationControlsSwapped;
@@ -1199,13 +1167,10 @@ final class GameplaySession {
                 }
               }
               if (32 == ki.field_d) {
-                unusedSpecialKindSpawnOwnerSnapshot = this;
 
                 if (this.debugSpawnSpecialKinds) {
-                  unusedSpecialKindSpawnTargetSnapshot = this;
                   toggledSpecialKindSpawn = false;
                 } else {
-                  unusedSpecialKindSpawnTargetSnapshot = this;
                   toggledSpecialKindSpawn = true;
                 }
                 ((GameplaySession) (this)).debugSpawnSpecialKinds = toggledSpecialKindSpawn;
@@ -1225,26 +1190,19 @@ final class GameplaySession {
               }
               if (ki.field_d == 1) {
                 this.submissionBlocked = true;
-                unusedPointerSpawnOwnerSnapshot = this;
 
                 if (this.debugPointerSpawnEnabled) {
-                  unusedPointerSpawnTargetSnapshot = this;
                   toggledDebugPointerSpawn = false;
                 } else {
-                  unusedPointerSpawnTargetSnapshot = this;
                   toggledDebugPointerSpawn = true;
                 }
                 ((GameplaySession) (this)).debugPointerSpawnEnabled = toggledDebugPointerSpawn;
               }
               if (2 == ki.field_d) {
-                unusedSpawnReleaseOwnerSnapshot = this;
 
                 if (this.spawnReleaseDisabled) {
-                  unusedSpawnReleaseTargetSnapshot = this;
                   toggledSpawnReleaseDisabled = false;
                 } else {
-                  unusedSpawnReleaseOwnerOnDisableSnapshot = this;
-                  unusedSpawnReleaseTargetSnapshot = this;
                   toggledSpawnReleaseDisabled = true;
                 }
                 ((GameplaySession) (this)).spawnReleaseDisabled = toggledSpawnReleaseDisabled;
@@ -1294,13 +1252,10 @@ final class GameplaySession {
                 cd.selectThemeRenderAssets((byte) 82);
               }
               if (ki.field_d == 12) {
-                unusedReducedRenderingOwnerSnapshot = this;
 
                 if (this.debugReducedRendering) {
-                  unusedReducedRenderingTargetSnapshot = this;
                   toggledReducedRendering = false;
                 } else {
-                  unusedReducedRenderingTargetSnapshot = this;
                   toggledReducedRendering = true;
                 }
                 ((GameplaySession) (this)).debugReducedRendering = toggledReducedRendering;

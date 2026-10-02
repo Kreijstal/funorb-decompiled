@@ -1,8 +1,8 @@
 # Readable GeoBlox
 
-The current export has 2,815 guarded naming rules: 27 classes, 501 fields,
-293 methods, 821 parameters and 1,173 local declarations. Both 303-file corpora
-compile, preserving 150,387 bindings and 388 override relationships. Unknown
+The current export has 2,795 guarded naming rules: 27 classes, 501 fields,
+293 methods, 821 parameters and 1,153 local declarations. Both 303-file corpora
+compile, preserving 150,124 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
 ## One current manifest
@@ -21,17 +21,17 @@ tool bytes; `funorb-stubs.jar` is the frozen compilation dependency. The
 [reading guide](GEOBLOX-READING-GUIDE.md) explains the named gameplay flow.
 
 The raw input is `games/geoblox` at
-`f1fc0338feac7c9140bbdab315b770c17478d822`. It comes from java-tools
-`f9f0838416053d3f6189ae5990365d73b7be6596` and Deko
+`69542d632410cae4013a331e9a940ced1d7bd1bd`. It comes from java-tools
+`049d323ff4d63b141315dba1fbf573abd4f5f735` and Deko
 `a572c4dd0f0174bfcd7777be53d7ceba2f970f18`. The adapted naming tool is
 `a0bc835957148b9b1e1f8221c59b79d899d22738`; its source archive SHA-256 is
 `cb10756aa3ecb28159c9b81f2fb78bf559b4111d9ad203819458b30d0d84cf8c`.
 
 The **decompiler repository source** SHA-256 is
-`4812cac052bc37ad4cf1a36f907bff3dce8a86535f2379f7d7cf2b60bb9f1053`:
+`6d0fdd923685d9ede67052a8a1c826a5082ef6c7a961d9ce1cd727a805a2bc2e`:
 
 ```sh
-git archive --format=tar f9f0838416053d3f6189ae5990365d73b7be6596 | sha256sum
+git archive --format=tar 049d323ff4d63b141315dba1fbf573abd4f5f735 | sha256sum
 ```
 
 This identifies tracked decompiler source and its Git archive metadata. It is
@@ -54,7 +54,33 @@ smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
 
-## Current gameplay tick and motion naming
+## Current unread receiver cleanup
+
+The generic decompiler now removes allocator-owned Object slots whose only
+stores are `this` or `null` and whose complete parsed body contains no reads.
+Calls, casts, field access, shadowing, Unicode escapes and unsupported syntax
+refuse removal. Exception handlers, finally blocks, monitors and live Boolean
+snapshots retain their scopes and behavior. The fixed transformed bytecode
+and the frozen naming tool are unchanged; no raw source body is edited by hand.
+
+This removes 75 locals and 188 lines across 19 raw/readable files, including
+45 lines in `GameplaySession`. The binding audit attributes 113 removed local
+store references and 75 Object declaration-type references. After 293 explicit
+local ordinal migrations, every surviving binding and all 388 override rows
+match. Twenty guarded names disappear with their dead declarations; 28 surviving
+named locals change ordinal, preserving their original spellings, names and
+evidence. The current 2,795 rules apply 29,076 identifier edits.
+
+The generic emitter suite passes 33 groups, including 96 new native comparisons
+for effects, exceptions, finally priority and lock release. The exception-loop
+suite passes eight groups and the additional-feature checks pass 77 assertions.
+A clean archive of the pinned decompiler reproduces all 303 raw files and the
+diagnostics byte for byte. The six existing game probes compare fixed native
+bytecode with raw and readable Java; their trace hashes remain unchanged.
+These checks cover the documented fixture scopes, not full-session execution
+or whole-game equivalence. Other opaque names and shared joins remain.
+
+## Previous gameplay tick and motion naming
 
 This pass adds 152 guarded identities: one method, 47 parameters and 104 locals.
 It preserves all 2,663 previous complete rules and the existing raw/generator
@@ -76,7 +102,7 @@ The original gameplay, boundary, difficulty and comparator traces remain pinned.
 Moving/attached contact producers, the full session tick, recursive invalid
 rotation guards, live assets and whole-game behavior remain unverified.
 
-## Previous dispatcher naming and current export refresh
+## Previous dispatcher naming and export refresh workflow
 
 This naming pass adds 104 guarded identities: 13 fields, nine service methods,
 29 parameters and 53 locals. Every previous rule remains unchanged, as do the
@@ -205,9 +231,10 @@ node readable/tools/restore-original.mjs readable/geoblox /tmp/geoblox-restored
 The wrapper extracts the pinned input from Git, verifies source/probe/dependency
 bytes and the actual text-resource assignments, then compiles and rebinds both
 corpora. The dictionary reverses all identifier edits without requiring the
-original source. Generate a replacement in a fresh output directory with
-`node readable/reproduce-geoblox.mjs OUTPUT`; review it before copying its
-completed outputs into `readable/geoblox`. Generated Java is never edited by hand.
+original source. Refresh the current export with
+`node readable/reproduce-geoblox.mjs --update`; it validates the staged output
+before replacing `readable/geoblox`. Review the resulting Git diff. Generated
+Java is never edited by hand.
 
 For native behavior checks, supply the verified 303-class directory recorded in
 `decompilation/geoblox-provenance.json`:
@@ -358,7 +385,7 @@ and synchronized bodies retain their destinations and scopes.
 The previous early-exit pass removed 2,128 generated else wrappers (3,481 to 1,353) and 2,213 raw source
 lines across 208 files. That pass preserved all 20,931
 declaration identities and 388 override edges. The only duplicate-name method,
-`wg.finalize`, is byte-identical. Current raw/readable comparison checks 150,387
+`wg.finalize`, is byte-identical. Current raw/readable comparison checks 150,124
 bindings. The structural update migrated 35 named local ordinals. The following
 naming pass added 38 guarded identities with the raw input unchanged, retaining all
 1,170 prior semantic names. Reference inventory changes comprise 86 merged
@@ -525,7 +552,7 @@ the same manifest; no JSON snapshots are added.
 
 | Java source tree | SHA-256 |
 | --- | --- |
-| Raw | `e9497d12a451095457234cd1abee1018e845505bf5901b14c7f0eb36988c6c49` |
-| Readable | `04c6e2059710a1ae01af8edbfeed4f48ef90051c9154bd1d394d70cf63098a3e` |
+| Raw | `b18afdee6bf7d59ae30800e398696f8f0319943a75296c5608fe7708968c7bf1` |
+| Readable | `e6094e53b4baf24e17942cde8ea05d4d109af8f4b777e6cffdd9a20244f569c3` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

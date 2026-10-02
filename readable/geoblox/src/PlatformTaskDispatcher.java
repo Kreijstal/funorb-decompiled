@@ -532,8 +532,6 @@ final class PlatformTaskDispatcher implements Runnable {
         int cacheIndex = 0;
         Exception ignoredSetupException = null;
         Throwable ignoredSetupThrowable = null;
-        Object unusedDispatcherSnapshot = null;
-        Object unusedServiceOwnerSnapshot = null;
         boolean privilegedServicesFlag = false;
         Throwable caughtSetupThrowable = null;
         ie createdMicrosoftFullscreenBackend = null;
@@ -546,13 +544,10 @@ final class PlatformTaskDispatcher implements Runnable {
         this.privilegedServicesEnabled = false;
         this.shutdownRequested = false;
         gameCacheName = gameName;
-        unusedDispatcherSnapshot = this;
 
         if (!privilegedServicesEnabled) {
-          unusedServiceOwnerSnapshot = this;
           privilegedServicesFlag = false;
         } else {
-          unusedServiceOwnerSnapshot = this;
           privilegedServicesFlag = true;
         }
         ((PlatformTaskDispatcher) (this)).privilegedServicesEnabled = privilegedServicesFlag;

@@ -133,8 +133,6 @@ final class rl extends oe {
         boolean stackIn_2_0 = false;
         boolean stackIn_3_0 = false;
         int stackIn_3_1 = 0;
-        Object stackIn_7_0 = null;
-        Object stackIn_8_0 = null;
         boolean stackIn_8_1 = false;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -158,13 +156,10 @@ final class rl extends oe {
             this.field_bb.field_x = (int)(65536.0f * (param3 / 100.0f));
             return;
           }
-          stackIn_7_0 = this;
 
           if (!param0) {
-            stackIn_8_0 = this;
             stackIn_8_1 = false;
           } else {
-            stackIn_8_0 = this;
             stackIn_8_1 = true;
           }
           ((rl) (this)).field_Z = stackIn_8_1;

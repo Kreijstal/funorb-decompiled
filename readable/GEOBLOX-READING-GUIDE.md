@@ -963,8 +963,9 @@ other classes and shared joins remain partly opaque.
 ## Gameplay tick and motion variables
 
 `updateSession(methodGuard)` now names its preincrement panel tick and negative/
-positive rotation key codes. Debug toggles name the Boolean value to be stored;
-unused owner/target snapshots remain as explicit generated declarations. One
+positive rotation key codes. Debug toggles name the Boolean value to be stored. The reproducible decompiler
+cleanup removes 19 unread owner/target snapshots and their pure this/null stores
+from this method; the live Boolean values and handler boundaries remain. One
 Boolean still carries detached-entity state before the positive-rotation key
 state. The final integer comparison carriers still switch from debug key values
 to pointer-event complement/sentinel values. `inputDerivedModuloIndex` describes

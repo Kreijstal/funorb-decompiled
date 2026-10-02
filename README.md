@@ -16,20 +16,18 @@ mirror. The current [manifest](readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
-identities. Both 303-file Java corpora compile and retain all 150,387 bindings
+identities. Both 303-file Java corpora compile and retain all 150,124 remaining bindings
 and 388 override relationships.
 
-The current refresh fixes a decompiler loop-update bug: exported dispatcher
-shutdown skipped alternating cache entries while native bytecode visited every
-entry. For recovery now proves one update per backedge and keeps uncertain
-protected bodies as explicit while loops. The existing probe adds 96 native
-null-entry/close-failure cases; the generic suite adds 1,200 counter comparisons.
-The two-file raw refresh preserves all declarations/references after normalizing
-24 unguarded local-order changes. This pass adds 41 shutdown/preferences names,
-retains all 2,518 prior spellings/names and corrects one task-type evidence note.
-Current 2,559 rules apply 27,995 edits. Native counter/closure checks establish
-these scopes; whole-game and real-device behavior remain unverified. No new
-JSON snapshots are created.
+The current refresh removes 75 proven unread receiver locals and 188 lines
+across 19 files through the generic decompiler. All surviving bindings and
+388 override relationships remain after explicit local-ordinal migration.
+The 2,795 guarded rules preserve every surviving semantic name and apply
+29,076 identifier edits. The decompiler's 96 new native cleanup comparisons
+check effects, exceptions, finally behavior and monitor release; the existing
+game probes retain their native traces. Full-game and real-device behavior
+remain unverified. One current manifest and generated export are maintained,
+with Git history for previous passes.
 
 The previous naming pass added 114 rules for `BufferedSocket`, `PlatformTask`
 and `PlatformTaskDispatcher`, including every socket parameter/nonselector

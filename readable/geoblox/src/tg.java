@@ -14,11 +14,7 @@ final class tg extends com.ms.dll.Callback {
         Throwable var8 = null;
         com.ms.awt.WComponentPeer var9 = null;
         int stackIn_6_0 = 0;
-        Object stackIn_21_0 = null;
-        Object stackIn_22_0 = null;
         boolean stackIn_22_1 = false;
-        Object stackIn_27_0 = null;
-        Object stackIn_28_0 = null;
         boolean stackIn_28_1 = false;
         Throwable decompiledCaughtException = null;
         if (param0 != 12758) {
@@ -38,12 +34,9 @@ final class tg extends com.ms.dll.Callback {
           this.field_d = true;
         }
         if (var5 == this.field_b) {
-          stackIn_27_0 = this;
           if (!param1) {
-            stackIn_28_0 = this;
             stackIn_28_1 = false;
           } else {
-            stackIn_28_0 = this;
             stackIn_28_1 = true;
           }
           ((tg) (this)).field_e = stackIn_28_1;
@@ -61,12 +54,9 @@ final class tg extends com.ms.dll.Callback {
             this.field_b = var5;
             this.field_c = com.ms.win32.User32.SetWindowLong(this.field_b, -4, this);
           }
-          stackIn_21_0 = this;
           if (!param1) {
-            stackIn_22_0 = this;
             stackIn_22_1 = false;
           } else {
-            stackIn_22_0 = this;
             stackIn_22_1 = true;
           }
           ((tg) (this)).field_e = stackIn_22_1;

@@ -172,7 +172,6 @@ abstract class MenuScreen {
     final void updatePointer(boolean param0) {
         int hitItemIndex;
         int var3;
-        Object stackIn_16_0 = null;
         int stackIn_16_1 = 0;
         int stackIn_16_2 = 0;
         Object stackIn_17_0;
@@ -186,7 +185,6 @@ abstract class MenuScreen {
             this.selectedItemIndex = hitItemIndex;
             if (hitItemIndex != -1) {
               this.pointerInteractionActive = true;
-              stackIn_16_0 = this;
 
               stackIn_16_1 = hitItemIndex;
 

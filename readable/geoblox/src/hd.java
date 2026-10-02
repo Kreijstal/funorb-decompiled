@@ -72,8 +72,6 @@ final class hd extends sh {
 
     hd(int param0, int param1, int param2, int param3, el param4, boolean param5, int param6, int param7, m param8, int param9, String param10) {
         super(param0, param1, param2, param3, (dh) null, (bb) null);
-        Object stackIn_3_0 = null;
-        Object stackIn_4_0 = null;
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -97,13 +95,10 @@ final class hd extends sh {
           this.field_A = param4;
           this.field_C = param7;
           this.field_F = param8;
-          stackIn_3_0 = this;
 
           if (!param5) {
-            stackIn_4_0 = this;
             stackIn_4_1 = false;
           } else {
-            stackIn_4_0 = this;
             stackIn_4_1 = true;
           }
           ((hd) (this)).field_B = stackIn_4_1;

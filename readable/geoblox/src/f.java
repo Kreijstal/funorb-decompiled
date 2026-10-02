@@ -677,8 +677,6 @@ class f extends qf implements pl {
     }
 
     final void a(int param0, int param1, String param2) {
-        Object stackIn_8_0 = null;
-        Object stackIn_9_0 = null;
         boolean stackIn_9_1 = false;
         ni stackIn_14_0 = null;
         ni stackIn_15_0 = null;
@@ -701,13 +699,10 @@ class f extends qf implements pl {
             return;
           }
           {
-            stackIn_8_0 = this;
 
             if (256 != param0) {
-              stackIn_9_0 = this;
               stackIn_9_1 = false;
             } else {
-              stackIn_9_0 = this;
               stackIn_9_1 = true;
             }
             ((f) (this)).field_ob = stackIn_9_1;

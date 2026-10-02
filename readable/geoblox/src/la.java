@@ -23,16 +23,10 @@ final class la extends sh {
     }
 
     final void a(boolean param0, int param1, el param2, int param3) {
-        Object stackIn_16_0 = null;
-        Object stackIn_17_0 = null;
         int stackIn_17_1 = 0;
-        Object stackIn_18_0 = null;
         int stackIn_18_1 = 0;
         int stackIn_18_2 = 0;
-        Object stackIn_23_0 = null;
         int stackIn_23_1 = 0;
-        Object stackIn_25_0 = null;
-        Object stackIn_26_0 = null;
         int stackIn_26_1 = 0;
         int stackIn_26_2 = 0;
         RuntimeException stackIn_32_0 = null;
@@ -72,23 +66,18 @@ final class la extends sh {
             if (this.field_C) {
               if (this.field_B != this.field_v) {
                 var5_int = this.field_B - this.field_v;
-                stackIn_17_0 = this;
 
                 stackIn_17_1 = this.field_v;
 
                 if (Math.abs(var5_int) > 2) {
-                  stackIn_18_0 = this;
                   stackIn_18_1 = stackIn_17_1;
                   stackIn_18_2 = var5_int >> 1;
                 } else {
-                  stackIn_16_0 = this;
 
                   if (0 >= var5_int) {
-                    stackIn_18_0 = this;
                     stackIn_18_1 = stackIn_17_1;
                     stackIn_18_2 = -1;
                   } else {
-                    stackIn_18_0 = this;
                     stackIn_18_1 = stackIn_17_1;
                     stackIn_18_2 = 1;
                   }
@@ -97,24 +86,19 @@ final class la extends sh {
               }
               if (this.field_m != this.field_G) {
                 var5_int = this.field_G - this.field_m;
-                stackIn_23_0 = this;
 
                 stackIn_23_1 = this.field_m;
 
                 if (Math.abs(var5_int) <= 2) {
-                  stackIn_25_0 = this;
 
                   if (var5_int > 0) {
-                    stackIn_26_0 = this;
                     stackIn_26_1 = stackIn_23_1;
                     stackIn_26_2 = 1;
                   } else {
-                    stackIn_26_0 = this;
                     stackIn_26_1 = stackIn_23_1;
                     stackIn_26_2 = -1;
                   }
                 } else {
-                  stackIn_26_0 = this;
                   stackIn_26_1 = stackIn_23_1;
                   stackIn_26_2 = var5_int >> 1;
                 }
