@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "3564f5d1f8ec3e288a80decab1b1815cc675c3fa",
+      "commit": "f9f0838416053d3f6189ae5990365d73b7be6596",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "93e62046b7f1e880f3f7c28449d89b90e64b92c34d7dcdbb8dade76e9e86913f",
-        "reproduce": "git archive --format=tar 3564f5d1f8ec3e288a80decab1b1815cc675c3fa | sha256sum",
+        "sha256": "4812cac052bc37ad4cf1a36f907bff3dce8a86535f2379f7d7cf2b60bb9f1053",
+        "reproduce": "git archive --format=tar f9f0838416053d3f6189ae5990365d73b7be6596 | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
@@ -93,9 +93,9 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "084346454dabfd60bbdcd5e9edfa05ac3786798eee83a6ce673176cfca80e8af",
-  "previousSourceTreeSha256": "97e83f6dc8cd521730af2d3f19096f4a24fb00d4c6ea45ba341caf11ed6ab2b0",
-  "changedJavaFiles": 7,
+  "sourceTreeSha256": "e9497d12a451095457234cd1abee1018e845505bf5901b14c7f0eb36988c6c49",
+  "previousSourceTreeSha256": "084346454dabfd60bbdcd5e9edfa05ac3786798eee83a6ce673176cfca80e8af",
+  "changedJavaFiles": 2,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
@@ -1443,5 +1443,41 @@
     "cleanSourceArchiveByteExact": true,
     "diagnosticsUnchanged": true,
     "scope": "Generic native fixtures cover all integral relational complements with signed long/int boundaries, operand failures and evaluation order; untyped floating/nullable predicates preserve NaNs, signed zero and unboxing failure. Already-rendered cache operands remain unchanged; ambiguous evidence invalidates both complements. The six game probe scopes and naming mirror are in the single current readable manifest. Other joins, opaque names and whole-game equivalence remain unverified."
+  },
+  "loopUpdateRecovery": {
+    "javaToolsCommit": "f9f0838416053d3f6189ae5990365d73b7be6596",
+    "sourceArchiveSha256": "4812cac052bc37ad4cf1a36f907bff3dce8a86535f2379f7d7cf2b60bb9f1053",
+    "defaultEnabled": true,
+    "bytecodeChanged": false,
+    "sourceBodyEditedByHand": false,
+    "everyBackedgeNeedsExactlyOneLiftedUpdate": true,
+    "everyOtherExitNeedsZeroLiftedUpdates": true,
+    "otherCounterWritesAndShadowingRefused": true,
+    "updatesCannotCrossHandlersMonitorsOrNestedLoops": true,
+    "unsupportedSyntaxAndUnicodeEscapesRetainWhile": true,
+    "baselineRegression": "Native shutdown closes data,master,index0,index1,index2,index3,index4,seed; prior exported for closes data,master,index0,index2,index4,seed. Success/catch increments remained beside the lifted for update.",
+    "changedJavaFiles": [
+      "d.java",
+      "qc.java"
+    ],
+    "sourceLinesBefore": 85771,
+    "sourceLinesAfter": 85779,
+    "sourceDeclarationsBefore": 20708,
+    "sourceDeclarationsAfter": 20708,
+    "sourceReferenceOccurrencesBefore": 129679,
+    "sourceReferenceOccurrencesAfter": 129679,
+    "sourceDeclarationOrdinalsReordered": 24,
+    "namedLocalOrdinalMigrations": 0,
+    "overrideRelationshipsPreserved": 388,
+    "genericExceptionExitTestGroups": 8,
+    "genericAdditionalFeatureAssertions": 77,
+    "genericNestedCycleGroups": 3,
+    "nativeProtectedCounterCases": 600,
+    "nativeProtectedCounterComparisons": 1200,
+    "nativeDispatcherShutdownCases": 96,
+    "nativeDispatcherShutdownTraceSha256": "86554dba87ac6740912bf88fcd328c871758629250b6277e4223e4955bfcfb29",
+    "cleanSourceArchiveByteExact": true,
+    "diagnosticsUnchanged": true,
+    "scope": "Original fixed transformed bytecode is unchanged. Complete parse/path proof gates both while-to-for renderers; protected backedges remain explicit. Native counters verify independent visitation, caught/uncaught failures and throwable identity; actual game fixtures verify all cache entries including null/failed-close handles. Preferences filesystem search, Windows URL launch and real-device behavior remain outside the probes; whole-game equivalence remains unverified."
   }
 }

@@ -59,7 +59,6 @@ final class d implements Runnable {
 
     public final void run() {
         try {
-            int var5 = 0;
             int stackIn_76_0 = 0;
             Throwable decompiledCaughtException = null;
             Object var2 = null;
@@ -73,6 +72,7 @@ final class d implements Runnable {
             bd var3_ref3 = null;
             int var4_int = 0;
             String var4 = null;
+            int var5 = 0;
             java.awt.datatransfer.Transferable var7 = null;
             String var8 = null;
             cb var9 = null;
@@ -239,10 +239,12 @@ final class d implements Runnable {
                                                         }
                                                       }
                                                       var4 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
-                                                      for (var5 = 0; var5 < var8.length(); var5++) {
+                                                      var5 = 0;
+                                                      L16: while (var5 < var8.length()) {
                                                         if (-1 == var4.indexOf((int) var8.charAt(var5))) {
                                                           throw d.<RuntimeException>$cfr$sneakyThrow(new Exception());
                                                         }
+                                                        var5++;
                                                       }
                                                       Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var8 + "\"");
                                                       var9.field_b = null;
@@ -340,11 +342,11 @@ final class d implements Runnable {
 
     private final static pa a(byte param0, int param1, String param2, String param3) {
         try {
-            int var6 = 0;
             pa stackIn_13_0 = null;
             Throwable decompiledCaughtException = null;
             String var4 = null;
             String[] var5 = null;
+            int var6 = 0;
             int var7 = 0;
             String var8 = null;
             pa var9 = null;
@@ -360,10 +362,12 @@ final class d implements Runnable {
             }
             var5 = new String[]{"c:/rscache/", "/rscache/", field_x, "c:/windows/", "c:/winnt/", "c:/", "/tmp/", ""};
             var7 = -95 % ((-46 - param0) / 35);
-            L1: for (var6 = 0; var6 < var5.length; var6++) {
+            var6 = 0;
+            L1: while (var6 < var5.length) {
               var8 = var5[var6];
               if (0 < var8.length()) {
                 if (!new File(var8).exists()) {
+                  var6++;
                   continue L1;
                 }
               }
@@ -388,11 +392,11 @@ final class d implements Runnable {
     final void a(byte param0) {
         try {
             cb discarded$0 = null;
-            int var2_int = 0;
             Throwable decompiledCaughtException = null;
             Object var2 = null;
             InterruptedException var2_ref = null;
             IOException var2_ref2 = null;
+            int var2_int = 0;
             IOException var3 = null;
             String var4 = null;
             var2 = this;
@@ -428,8 +432,10 @@ final class d implements Runnable {
             }
             L10: {
               if (null != this.field_r) {
-                L11: for (var2_int = 0; var2_int < this.field_r.length; var2_int++) {
+                var2_int = 0;
+                L11: while (var2_int < this.field_r.length) {
                   if (this.field_r[var2_int] == null) {
+                    var2_int++;
                     continue L11;
                   }
                   try {
