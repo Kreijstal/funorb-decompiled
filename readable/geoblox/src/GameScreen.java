@@ -2566,7 +2566,7 @@ final class GameScreen extends MenuScreen {
         RuntimeException var5 = null;
         int actionId = 0;
         String var7 = null;
-        nc var8 = null;
+        PaletteBitmapFont var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;

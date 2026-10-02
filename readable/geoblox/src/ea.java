@@ -85,10 +85,10 @@ final class ea extends IntrusiveNode {
         }
     }
 
-    final static qd a(rh param0, byte param1, rh param2, int param3, int param4) {
+    final static CoverageBitmapFont a(rh param0, byte param1, rh param2, int param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
-        qd stackIn_4_0 = null;
+        CoverageBitmapFont stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;

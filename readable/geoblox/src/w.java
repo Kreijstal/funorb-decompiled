@@ -80,11 +80,11 @@ final class w {
         field_b = null;
     }
 
-    final static nc loadPaletteFont(String groupName, rh glyphGraphicsArchive, rh fontMetricsArchive, boolean methodGuard, String resourceName) {
+    final static PaletteBitmapFont loadPaletteFont(String groupName, rh glyphGraphicsArchive, rh fontMetricsArchive, boolean methodGuard, String resourceName) {
         int archiveGroupId = 0;
         RuntimeException var5 = null;
         int archiveFileId = 0;
-        nc stackIn_3_0 = null;
+        PaletteBitmapFont stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

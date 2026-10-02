@@ -4,7 +4,7 @@
 abstract class dd extends ee {
     private ng field_K;
     boolean field_I;
-    static nc uiPaletteFont;
+    static PaletteBitmapFont uiPaletteFont;
     static int variantMatchCandidateCount;
     static rh field_J;
     private int field_H;
@@ -25,7 +25,7 @@ abstract class dd extends ee {
             this.a(param0, param2, (byte) -87, -param0 + fa.field_i >> 1, kb.field_b - param2 >> 1);
             return;
         }
-        uiPaletteFont = (nc) null;
+        uiPaletteFont = (PaletteBitmapFont) null;
         this.a(param0, param2, (byte) -87, -param0 + fa.field_i >> 1, kb.field_b - param2 >> 1);
     }
 

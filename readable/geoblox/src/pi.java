@@ -17,11 +17,11 @@ final class pi extends vf {
         return (String) null;
     }
 
-    final static nc a(rh param0, int param1, int param2, rh param3, int param4) {
+    final static PaletteBitmapFont a(rh param0, int param1, int param2, rh param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
-        nc stackIn_4_0 = null;
+        PaletteBitmapFont stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -35,7 +35,7 @@ final class pi extends vf {
             return stackIn_4_0;
           }
           stackIn_2_0 = null;
-          return (nc) ((Object) stackIn_2_0);
+          return (PaletteBitmapFont) ((Object) stackIn_2_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;

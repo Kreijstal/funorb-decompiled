@@ -229,10 +229,10 @@ final class ni extends ee implements pl {
         }
     }
 
-    final static nc a(byte[] param0, int param1) {
-        nc var2 = null;
+    final static PaletteBitmapFont a(byte[] param0, int param1) {
+        PaletteBitmapFont var2 = null;
         RuntimeException var2_ref = null;
-        nc stackIn_6_0 = null;
+        PaletteBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -241,12 +241,12 @@ final class ni extends ee implements pl {
           if (param0 == null) {
             return null;
           }
-          var2 = new nc(param0, GameplaySession.field_m, md.field_e, DualLinkNode.field_j, hl.field_K, cm.field_j, mj.field_a);
+          var2 = new PaletteBitmapFont(param0, GameplaySession.field_m, md.field_e, DualLinkNode.field_j, hl.field_K, cm.field_j, mj.field_a);
           kj.c(true);
           if (param1 >= -107) {
             createToUseText = (String) null;
           }
-          stackIn_6_0 = (nc) (var2);
+          stackIn_6_0 = (PaletteBitmapFont) (var2);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

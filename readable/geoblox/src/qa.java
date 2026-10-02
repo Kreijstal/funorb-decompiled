@@ -52,11 +52,11 @@ final class qa {
         }
     }
 
-    final static qd a(byte[] param0, boolean param1) {
-        qd var2 = null;
+    final static CoverageBitmapFont a(byte[] param0, boolean param1) {
+        CoverageBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         byte[] var3 = null;
-        qd stackIn_6_0 = null;
+        CoverageBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -69,9 +69,9 @@ final class qa {
           if (param0 == null) {
             return null;
           }
-          var2 = new qd(param0, GameplaySession.field_m, md.field_e, DualLinkNode.field_j, hl.field_K, cm.field_j, mj.field_a);
+          var2 = new CoverageBitmapFont(param0, GameplaySession.field_m, md.field_e, DualLinkNode.field_j, hl.field_K, cm.field_j, mj.field_a);
           kj.c(true);
-          stackIn_6_0 = (qd) (var2);
+          stackIn_6_0 = (CoverageBitmapFont) (var2);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

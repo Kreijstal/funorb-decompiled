@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 3,947 guarded naming rules: 34 classes, 580 fields,
-356 methods, 1,129 parameters and 1,848 local declarations. Both 303-file corpora
+The current export has 4,072 guarded naming rules: 36 classes, 582 fields,
+363 methods, 1,188 parameters and 1,903 local declarations. Both 303-file corpora
 compile, preserving 138,558 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -54,7 +54,30 @@ smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
 
-## Current font layout and glyph names
+## Current palette and coverage font names
+
+Pass 58 adds 125 guarded identities: two classes, two fields, seven methods,
+59 parameters and 55 locals. Every field, method, parameter and local in the
+four-class font hierarchy now has a guarded semantic name. `PaletteBitmapFont`
+selects one of its `colorPalettes` for normal glyphs and uses monochrome shadow
+blitting. `CoverageBitmapFont` converts palette colors/glyph bytes to grayscale
+coverage in place, then weights RGB by that coverage; shadows use binary masks.
+
+`findNearestPaletteIndex` skips palette index0 and retains earliest ties, signed
+red extraction and overflow. Palette drawing masks signed glyph bytes with255;
+coverage constructor conversion directly uses signed indices. Coverage blends
+reuse their effective-alpha local as the destination weight. All masks, clips,
+mutations, captured indices, unused scratch inputs and operation order remain.
+
+All 3,947 previous complete rules, raw source and generator pins remain unchanged.
+The 4,072 rules apply 36,705 edits; all 303 raw/readable sources compile,
+preserving 138,558 bindings and 388 override relationships. Source/binding and
+byte-exact reversal checks support the naming pass. Existing native fixtures
+retain their original scopes and do not newly exercise fonts. Large labeled
+text bodies, actual font/image resources, full rendering/gameplay and
+phone/FPS/heap behavior remain unverified.
+
+## Previous font layout and glyph names
 
 Pass 57 adds 408 guarded identities: two classes, 25 fields, 31 methods,
 172 parameters and 178 locals. Every field, method, parameter and local in
@@ -800,7 +823,7 @@ its historical proof recorded in the raw provenance. Current source/decompiler
 identity and naming migrations live in the single manifest. `ruleChanges`
 records naming changes; `sourceChange` is recorded when input identity changes.
 The latest structural pass records its source migration in Git. The current
-naming-only pass retains those source pins and records its 408 additions in
+naming-only pass retains those source pins and records its 125 additions in
 `ruleChanges`; every prior guarded rule is retained.
 All six native probe sources and their traces are pinned in
 the same manifest; no JSON snapshots are added.
@@ -825,6 +848,6 @@ the same manifest; no JSON snapshots are added.
 | Java source tree | SHA-256 |
 | --- | --- |
 | Raw | `39be3539b43d7acc9540acca49e7b6378cdb233908092706646df4c2cdc6a8fe` |
-| Readable | `8082612a7462e478ab52230b8175f8e639d17955eb3f1cae9758a02188abb7a0` |
+| Readable | `6df95c7c28a45f0b2be73cde5a987051bdc5ebcc03b4e3d0c61168069eb7abc1` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

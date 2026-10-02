@@ -73,9 +73,9 @@ public final class Geoblox extends wf {
             lc.a(oh.unpackingGraphicsText, methodGuard - 25871, 80.0f);
             this.renderFrame(25853);
             dd.uiPaletteFont = w.loadPaletteFont("", ll.gameGraphicsArchive, ii.fontMetricsArchive, true, "font");
-            wf.field_p = dd.uiPaletteFont.e(1);
+            wf.field_p = dd.uiPaletteFont.findNearestBasePaletteIndex(1);
             dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
-            dd.uiPaletteFont.colorPalettes[0][dd.uiPaletteFont.e(16777215)] = 1;
+            dd.uiPaletteFont.colorPalettes[0][dd.uiPaletteFont.findNearestBasePaletteIndex(16777215)] = 1;
             uiPaletteSize = dd.uiPaletteFont.colorPalettes[0].length;
             alternateUiPalette = new int[uiPaletteSize];
             dd.uiPaletteFont.colorPalettes[1] = alternateUiPalette;

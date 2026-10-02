@@ -1376,3 +1376,48 @@ but large labeled tag bodies and other renderer internals remain. Complete
 binding/reversal checks support the naming pass; existing native probes do not
 newly exercise fonts. Actual font/image assets, whole-game rendering and phone
 performance remain unverified.
+
+## Palette and coverage font details (pass 58)
+
+The remaining renderers now read `PaletteBitmapFont` and `CoverageBitmapFont`.
+Every field, method, parameter and local in these classes, `BitmapFont` and
+`MonochromeBitmapFont` has a guarded semantic name. The palette/coverage
+internals described as opaque in pass57 are now named; large labeled text
+methods and other support code still remain.
+
+`PaletteBitmapFont` stores `glyphPaletteIndices` and four `colorPalettes` slots,
+initially installing the supplied palette only at slot0. In a normal glyph,
+`color` selects the palette slot. In a shadow pass it is an RGB color passed to
+the monochrome mask kernel. `blitPaletteGlyph` draws groups of four and a tail;
+`blitPaletteGlyphAlpha` weights the selected palette color against the existing
+pixel. Both preserve the signed byte snapshots and mask indices with255 at
+lookup, with byte0 transparent.
+
+`findNearestBasePaletteIndex` searches palette0 through `findNearestPaletteIndex`.
+The search begins at index1, keeps the earliest strictly better candidate and
+returns0 when none replaces the initial result. Its red difference uses
+`(candidateColor >> 16) - (targetColor >> 16)` without masking; green and blue
+are masked to eight bits. Squared distances retain their original overflow.
+These names do not assume alpha-packed colors are normalized.
+
+`CoverageBitmapFont` calls `convertPaletteGlyphsToCoverageInPlace` after the
+base metrics constructor. It replaces each supplied palette entry with
+`((2*red+blue)/3+green)>>1`, then rewrites nonzero glyph bytes through that palette.
+The constructor conversion directly indexes by a signed byte; it does not add
+an unsigned mask. It mutates and returns the original glyph arrays and also
+mutates the supplied palette. `paletteColorOrGlyphIndex` exposes the original
+shared slot between those loops. Existing signed-index failures and aliasing
+are preserved.
+
+`blitCoverageGlyph` reads each byte unsigned, uses it as the source weight and
+then reuses the local for256-coverage. `blitCoverageGlyphAlpha` first computes
+`(coverage*alpha256)>>8`; zero effective alpha skips the write. Its local then
+becomes the destination weight. Coverage255 remains a255/256 blend in the
+ordinary kernel. Source and destination packed channels keep separate masked
+shifts and additions; no full-coverage shortcut, clamping or rounding change
+is introduced. Shadow paths still delegate to monochrome mask blitting.
+
+Source inspection, complete binding checks and byte-exact dictionary reversal
+support this naming pass. Existing native probes retain their original scopes
+and do not newly execute the fonts. Actual palette/font assets, image tags,
+whole-game rendering and device performance remain unverified.
