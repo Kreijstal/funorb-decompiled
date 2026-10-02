@@ -268,7 +268,7 @@ final class vh extends ee implements pl {
                   var3_int = param1.length;
                   this.field_C = new String[var3_int];
                   for (var4_int = 0; var3_int > var4_int; var4_int++) {
-                    this.field_C[var4_int] = p.a((CharSequence) ((Object) param1[var4_int]), param0 + -123).replace(' ', ' ');
+                    this.field_C[var4_int] = p.a((CharSequence) ((Object) param1[var4_int]), param0 - 123).replace(' ', ' ');
                   }
                   var4 = new fh(ng.field_F, 0, 1);
                   this.field_I = new hk[var3_int + 1];

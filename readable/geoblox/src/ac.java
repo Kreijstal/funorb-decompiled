@@ -206,7 +206,7 @@ class ac extends ff {
               }
               if (var10 == a.field_e) {
                 SoftwareRasterizer.c(var3_int, var4, 32, 32, 2, 15488514);
-                SoftwareRasterizer.a(var3_int - -2, var4 - -2, 28, 28, 2, 16777215);
+                SoftwareRasterizer.a(var3_int + 2, var4 + 2, 28, 28, 2, 16777215);
               }
               if ((var5 & 1 << var10) == 0) {
                 if (!param1) {

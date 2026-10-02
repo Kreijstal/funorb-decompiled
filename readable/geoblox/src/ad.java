@@ -326,7 +326,7 @@ final class ad extends ia {
                       param4.field_u.g(-1);
                     }
                     var11.c(var9);
-                    var11.a(param3, param5, param2 + -param5);
+                    var11.a(param3, param5, param2 - param5);
                     if (!var11.g()) {
                       continue L2;
                     } else {

@@ -89,7 +89,7 @@ final class ec {
                 ra.a(255 ^ IntrusiveDeque.field_f, -97, IntrusiveDeque.field_f);
               }
               for (sortInsertionIndex = 1; sortInsertionIndex < h.matchCandidateCount; sortInsertionIndex++) {
-                sortCursorThenFirstEntityId = sortInsertionIndex + -1;
+                sortCursorThenFirstEntityId = sortInsertionIndex - 1;
                 packedCandidateThenSecondEntityId = nk.packedMatchCandidates[sortInsertionIndex];
                 L14: while (sortCursorThenFirstEntityId >= 0) {
                   if (~nk.packedMatchCandidates[sortCursorThenFirstEntityId] < ~packedCandidateThenSecondEntityId) {
@@ -109,7 +109,7 @@ final class ec {
               L8: while (candidateIndex < h.matchCandidateCount) {
                 L9: {
                   if (-1 + h.matchCandidateCount > candidateIndex) {
-                    if (nk.packedMatchCandidates[candidateIndex] == nk.packedMatchCandidates[candidateIndex - -1]) {
+                    if (nk.packedMatchCandidates[candidateIndex] == nk.packedMatchCandidates[candidateIndex + 1]) {
                       nk.packedMatchCandidates[candidateIndex] = 0;
                       break L9;
                     }

@@ -31,7 +31,7 @@ final class ik {
         var10 = Geoblox.field_C;
         try {
           L0: {
-            SoftwareRasterizer.c(param0, param2, param3 - -1, 10000536);
+            SoftwareRasterizer.c(param0, param2, param3 + 1, 10000536);
             SoftwareRasterizer.c(param0, param2 + param1, param3 + 1, 12105912);
             var5_int = 1;
             if (SoftwareRasterizer.clipTop > param2 + var5_int) {
@@ -46,7 +46,7 @@ final class ik {
               waitingForFontsText = (String) null;
             }
             L4: while (var7 < var6) {
-              var8 = 152 - -(48 * var7 / param1);
+              var8 = 152 + 48 * var7 / param1;
               var9 = var8 << 8 | var8 << 16 | var8;
               SoftwareRasterizer.framebuffer[param0 + SoftwareRasterizer.stride * (var7 + param2)] = var9;
               SoftwareRasterizer.framebuffer[param3 + (param2 + var7) * SoftwareRasterizer.stride + param0] = var9;

@@ -181,7 +181,7 @@ final class td extends hk {
               if (originalLength >= writeOffset) {
                 sourceLength = sourceText.length();
                 if (sourceLength != 0) {
-                  writeEndOffset = writeOffset - -sourceLength;
+                  writeEndOffset = writeOffset + sourceLength;
                   if (originalLength < writeEndOffset) {
                     destination.setLength(writeEndOffset);
                   }

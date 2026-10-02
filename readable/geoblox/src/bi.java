@@ -124,7 +124,7 @@ final class bi implements dh {
             this.field_a = -3;
           }
           var7 = 5592405;
-          SoftwareRasterizer.a(param4.field_v + param0, param2 - -param4.field_m, param4.field_r, param4.field_h, this.field_d);
+          SoftwareRasterizer.a(param4.field_v + param0, param2 + param4.field_m, param4.field_r, param4.field_h, this.field_d);
           if (param3) {
             var7 = 16777215;
           }
@@ -138,7 +138,7 @@ final class bi implements dh {
           }
           if (null != this.field_b) {
             var10 = this.field_m + this.field_n + this.field_k;
-            this.field_b.a(param4.field_s, var10 + param4.field_v + param0, param4.field_m + param2 - -this.field_i, param4.field_r + (-this.field_m + -var10), -(this.field_m << 1) + param4.field_h, this.field_e, this.field_f, this.field_a, this.field_l, 0);
+            this.field_b.a(param4.field_s, var10 + param4.field_v + param0, param4.field_m + param2 + this.field_i, param4.field_r + (-this.field_m - var10), -(this.field_m << 1) + param4.field_h, this.field_e, this.field_f, this.field_a, this.field_l, 0);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

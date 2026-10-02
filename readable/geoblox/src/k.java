@@ -44,7 +44,7 @@ final class k implements Iterator {
             param4 -= 4;
             param2 -= 4;
             var5 = param1 + param0 * SoftwareRasterizer.stride;
-            var6 = SoftwareRasterizer.stride + -param2;
+            var6 = SoftwareRasterizer.stride - param2;
             w.a(SoftwareRasterizer.framebuffer, var5, 0, 0, 0, 0, param2, param4, var6);
             return;
         }
@@ -52,7 +52,7 @@ final class k implements Iterator {
         param4 -= 4;
         param2 -= 4;
         var5 = param1 + param0 * SoftwareRasterizer.stride;
-        var6 = SoftwareRasterizer.stride + -param2;
+        var6 = SoftwareRasterizer.stride - param2;
         w.a(SoftwareRasterizer.framebuffer, var5, 0, 0, 0, 0, param2, param4, var6);
     }
 
@@ -62,7 +62,7 @@ final class k implements Iterator {
         IntrusiveNode var3;
         IntrusiveNode var4;
         var2 = Geoblox.field_C;
-        if (this.field_d.field_a[this.field_j + -1] == this.field_h) {
+        if (this.field_d.field_a[this.field_j - 1] == this.field_h) {
           L0: while (true) {
             if (this.field_j < this.field_d.field_c) {
               fieldTemp$0 = this.field_j;

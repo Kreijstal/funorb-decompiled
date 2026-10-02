@@ -50,7 +50,7 @@ final class di {
           L0: {
             var4 = (wc) ((Object) l.field_g.firstForIteration(param1 ^ param1));
             L1: while (var4 != null) {
-              o.a(param0, var4, param1 + -21718);
+              o.a(param0, var4, param1 - 21718);
               var4 = (wc) ((Object) l.field_g.nextForIteration(1));
             }
             var2 = qa.field_e.firstForIteration(0);

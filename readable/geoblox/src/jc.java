@@ -30,17 +30,17 @@ final class jc {
                         nd.avatarFeedbackModeId = 5;
                         MenuScreen.avatarFeedbackFrameBase = 30;
                         td.playPcmSample(-348, fl.field_c[24]);
-                        uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
+                        uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
                         return;
                       } else {
-                        uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
+                        uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
                         return;
                       }
                     } else {
                       pa.avatarFeedbackHoldTicks = 110;
                       MenuScreen.avatarFeedbackFrameBase = 24;
                       nd.avatarFeedbackModeId = 4;
-                      uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
+                      uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
                       return;
                     }
                   } else {
@@ -49,7 +49,7 @@ final class jc {
                     pa.avatarFeedbackHoldTicks = 110;
                     nd.avatarFeedbackModeId = 3;
                     td.playPcmSample(-348, fl.field_c[27]);
-                    uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
+                    uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
                     return;
                   }
                 } else {
@@ -60,37 +60,37 @@ final class jc {
                           td.playPcmSample(-348, fl.field_c[26]);
                           nd.avatarFeedbackModeId = 2;
                           MenuScreen.avatarFeedbackFrameBase = 12;
-                          uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
+                          uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
                           return;
                         } else {
                           nd.avatarFeedbackModeId = 2;
                           MenuScreen.avatarFeedbackFrameBase = 12;
-                          uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
+                          uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
                           return;
                         }
                       } else {
                         nd.avatarFeedbackModeId = 2;
                         MenuScreen.avatarFeedbackFrameBase = 12;
-                        uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
+                        uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
                         return;
                       }
                     } else {
                       nd.avatarFeedbackModeId = 2;
                       MenuScreen.avatarFeedbackFrameBase = 12;
-                      uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
+                      uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
                       return;
                     }
                   } else {
                     nd.avatarFeedbackModeId = 2;
                     MenuScreen.avatarFeedbackFrameBase = 12;
-                    uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
+                    uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
                     return;
                   }
                 }
               } else {
                 nd.avatarFeedbackModeId = 1;
                 MenuScreen.avatarFeedbackFrameBase = 6;
-                uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
+                uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
                 return;
               }
             } else {
@@ -101,30 +101,30 @@ final class jc {
                       td.playPcmSample(-348, fl.field_c[25]);
                       MenuScreen.avatarFeedbackFrameBase = 0;
                       nd.avatarFeedbackModeId = 0;
-                      uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
+                      uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
                       return;
                     } else {
                       MenuScreen.avatarFeedbackFrameBase = 0;
                       nd.avatarFeedbackModeId = 0;
-                      uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
+                      uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
                       return;
                     }
                   } else {
                     MenuScreen.avatarFeedbackFrameBase = 0;
                     nd.avatarFeedbackModeId = 0;
-                    uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
+                    uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
                     return;
                   }
                 } else {
                   MenuScreen.avatarFeedbackFrameBase = 0;
                   nd.avatarFeedbackModeId = 0;
-                  uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
+                  uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
                   return;
                 }
               } else {
                 MenuScreen.avatarFeedbackFrameBase = 0;
                 nd.avatarFeedbackModeId = 0;
-                uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
+                uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
                 return;
               }
             }
@@ -135,21 +135,21 @@ final class jc {
                   if (3 != feedbackRequestId) {
                     if (feedbackRequestId != 4) {
                       if (feedbackRequestId != 5) {
-                        uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
+                        uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
                         return;
                       } else {
                         pa.avatarFeedbackHoldTicks = 110;
                         nd.avatarFeedbackModeId = 5;
                         MenuScreen.avatarFeedbackFrameBase = 30;
                         td.playPcmSample(-348, fl.field_c[24]);
-                        uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
+                        uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
                         return;
                       }
                     } else {
                       pa.avatarFeedbackHoldTicks = 110;
                       MenuScreen.avatarFeedbackFrameBase = 24;
                       nd.avatarFeedbackModeId = 4;
-                      uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
+                      uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
                       return;
                     }
                   } else {
@@ -158,7 +158,7 @@ final class jc {
                     pa.avatarFeedbackHoldTicks = 110;
                     nd.avatarFeedbackModeId = 3;
                     td.playPcmSample(-348, fl.field_c[27]);
-                    uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
+                    uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
                     return;
                   }
                 } else {
@@ -172,24 +172,24 @@ final class jc {
                           td.playPcmSample(-348, fl.field_c[26]);
                           nd.avatarFeedbackModeId = 2;
                           MenuScreen.avatarFeedbackFrameBase = 12;
-                          uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
+                          uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
                           return;
                         } else {
                           nd.avatarFeedbackModeId = 2;
                           MenuScreen.avatarFeedbackFrameBase = 12;
-                          uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
+                          uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
                           return;
                         }
                       } else {
                         nd.avatarFeedbackModeId = 2;
                         MenuScreen.avatarFeedbackFrameBase = 12;
-                        uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
+                        uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
                         return;
                       }
                     } else {
                       nd.avatarFeedbackModeId = 2;
                       MenuScreen.avatarFeedbackFrameBase = 12;
-                      uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
+                      uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
                       return;
                     }
                   }
@@ -197,7 +197,7 @@ final class jc {
               } else {
                 nd.avatarFeedbackModeId = 1;
                 MenuScreen.avatarFeedbackFrameBase = 6;
-                uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
+                uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
                 return;
               }
             } else {
@@ -225,7 +225,7 @@ final class jc {
                 nd.avatarFeedbackModeId = 0;
               }
             }
-            uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
+            uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
             return;
           }
         } else {
@@ -266,7 +266,7 @@ final class jc {
                 var4 = new fd[var3];
                 for (var5 = 0; var3 > var5; var5++) {
                   if (!ac.a((byte) 71, param0)) {
-                    var6 = param0.e((byte) -17, td.a(var5 + -1, (byte) 66));
+                    var6 = param0.e((byte) -17, td.a(var5 - 1, (byte) 66));
                     var4[var5] = var4[var6];
                   } else {
                     var6_ref_fd = new fd();

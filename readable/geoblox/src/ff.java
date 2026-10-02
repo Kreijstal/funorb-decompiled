@@ -36,7 +36,7 @@ class ff implements dh, cc {
             var6 = (el) null;
             discarded$1 = this.b((el) null, 96, -93, -23);
           }
-          stackIn_3_0 = this.field_e + param0.field_v + param1 + (param0.field_k - -param3);
+          stackIn_3_0 = this.field_e + param0.field_v + param1 + (param0.field_k + param3);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -74,8 +74,8 @@ class ff implements dh, cc {
         var13 = Geoblox.field_C;
         try {
           L1: {
-            uh.a(param0 - -param2.field_m, param2.field_v + param7, param3 + -14045, param2.field_m + (param0 + param2.field_h), param2.field_r + (param7 - -param2.field_v));
-            var9_int = this.a(param2, param3 + -1);
+            uh.a(param0 + param2.field_m, param2.field_v + param7, param3 - 14045, param2.field_m + (param0 + param2.field_h), param2.field_r + (param7 + param2.field_v));
+            var9_int = this.a(param2, param3 - 1);
             var10 = this.b(289769985, param2);
             if (!this.field_q) {
               var12 = this.field_i;
@@ -103,7 +103,7 @@ class ff implements dh, cc {
                       break L1;
                     }
                   } else {
-                    this.field_n.b(this.c(125, param2), this.a(param2, param7, 11875, param6) + (var9_int >> 1), this.b(param2, param0, 1674, param4) - -var11, param5, param1);
+                    this.field_n.b(this.c(125, param2), this.a(param2, param7, 11875, param6) + (var9_int >> 1), this.b(param2, param0, 1674, param4) + var11, param5, param1);
                     break L1;
                   }
                 }
@@ -180,7 +180,7 @@ class ff implements dh, cc {
                 }
                 var5 = (var4 - (this.field_n.field_o + this.field_n.field_q) >> 1) + this.field_n.field_o;
               } else {
-                var5 = var4 + -this.field_n.field_q;
+                var5 = var4 - this.field_n.field_q;
               }
             } else {
               var5 = this.field_n.field_o;
@@ -353,7 +353,7 @@ class ff implements dh, cc {
         try {
           this.a((byte) 126, param0);
           var3_int = 24 / ((param1 - 30) / 57);
-          stackIn_1_0 = param0.field_w.a(90) - (-this.field_e + -this.field_j);
+          stackIn_1_0 = param0.field_w.a(90) - (-this.field_e - this.field_j);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -386,9 +386,9 @@ class ff implements dh, cc {
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3_int = 46 / ((param0 - -58) / 61);
+          var3_int = 46 / ((param0 + 58) / 61);
           this.a((byte) 127, param1);
-          stackIn_1_0 = param1.field_w.b(-3111) + this.field_m - -this.field_b;
+          stackIn_1_0 = param1.field_w.b(-3111) + this.field_m + this.field_b;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -628,7 +628,7 @@ class ff implements dh, cc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 289769985) {
-            stackIn_4_0 = -this.field_m + param1.field_h + -this.field_b;
+            stackIn_4_0 = -this.field_m + param1.field_h - this.field_b;
             decompiledRegionSelector0 = 1;
           } else {
             stackIn_2_0 = 90;
@@ -698,7 +698,7 @@ class ff implements dh, cc {
 
             stackIn_4_2 = var8.field_a;
 
-            if (var7 - -1 >= var15.field_a.length) {
+            if (var7 + 1 >= var15.field_a.length) {
               stackIn_5_0 = stackIn_4_0;
               stackIn_5_1 = stackIn_4_1;
               stackIn_5_2 = stackIn_4_2;
@@ -710,7 +710,7 @@ class ff implements dh, cc {
               stackIn_5_3 = var14.field_a[var7 + 1].field_d;
             }
             var12 = stackIn_5_0 + Math.min(stackIn_5_1, Math.min(stackIn_5_2, stackIn_5_3));
-            uh.a(param4 - -param3.field_m, param0 - -param3.field_v, -14045, param4 + param3.field_m - -param3.field_h, param3.field_r + param0 + param3.field_v);
+            uh.a(param4 + param3.field_m, param0 + param3.field_v, -14045, param4 + param3.field_m + param3.field_h, param3.field_r + param0 + param3.field_v);
             hb.field_j.a(var12, var10, this.field_c, var11, var10, 8947848);
             id.a(true);
           }
@@ -753,7 +753,7 @@ class ff implements dh, cc {
             var4 = (el) null;
             this.a(106, 101, 118, (el) null, -6);
           }
-          stackIn_3_0 = -this.field_j + -this.field_e + param0.field_r;
+          stackIn_3_0 = -this.field_j - this.field_e + param0.field_r;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -818,7 +818,7 @@ class ff implements dh, cc {
                 }
                 var10 = var19.a((byte) 24, var8);
                 var11 = var19.a((byte) 24, var9);
-                uh.a(param2 - -param5.field_m, param3 + param5.field_v, -14045, param5.field_h + (param5.field_m + param2), param5.field_r + (param3 + param5.field_v));
+                uh.a(param2 + param5.field_m, param3 + param5.field_v, -14045, param5.field_h + (param5.field_m + param2), param5.field_r + (param3 + param5.field_v));
                 for (var12 = var10; var12 <= var11; var12++) {
                   var13 = var18.field_a[var12];
                   if (var10 != var12) {
@@ -837,7 +837,7 @@ class ff implements dh, cc {
                     stackIn_20_0 = var19.a(var9, 124);
                   }
                   var15 = stackIn_20_0;
-                  hb.field_j.a(var13.field_d + (param2 + param5.field_m - -this.field_m - -param5.field_n), var13.field_a, -var14 + var15, this.field_h >>> 24, param1 ^ 15658734, this.field_h, this.a(param5, param3, 11875, var14));
+                  hb.field_j.a(var13.field_d + (param2 + param5.field_m + this.field_m + param5.field_n), var13.field_a, -var14 + var15, this.field_h >>> 24, param1 ^ 15658734, this.field_h, this.a(param5, param3, 11875, var14));
                 }
                 id.a(true);
                 break L2;

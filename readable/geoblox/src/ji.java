@@ -42,7 +42,7 @@ abstract class ji {
                 var1.field_f = var1.field_f + 1;
                 var2 = fieldTemp$0;
                 pf.a(46, var1);
-                fj.field_q.f(11700, var1.field_f + -var2);
+                fj.field_q.f(11700, var1.field_f - var2);
               }
               decompiledRegionSelector0 = 1;
               break L0;
@@ -65,7 +65,7 @@ abstract class ji {
     abstract void a(Object param0, boolean param1, boolean param2);
 
     final sd a(byte param0, int param1, int param2, int param3, boolean param4) {
-        long var6 = ((long)param1 << 32) - -(long)param3;
+        long var6 = ((long)param1 << 32) + (long)param3;
         sd var8 = new sd();
         var8.field_i = var6;
         var8.field_q = param4 ? true : false;

@@ -68,7 +68,7 @@ final class ni extends ee implements pl {
               var5 = bm.field_l[var9];
               var5.a(6, 1, (byte) 89, 6, 6);
               var5.a((byte) -99);
-              var6 = new int[]{var5.field_Q - -var5.field_I >> 1, var5.field_H + var5.field_s >> 1, var5.field_N + var5.field_F >> 1};
+              var6 = new int[]{var5.field_Q + var5.field_I >> 1, var5.field_H + var5.field_s >> 1, var5.field_N + var5.field_F >> 1};
               pi.field_R[var9] = var6;
               var5.a(-var6[0], -var6[1], -9121, -var6[2]);
               var9++;
@@ -193,7 +193,7 @@ final class ni extends ee implements pl {
 
     final void a(int param0, int param1, byte param2, int param3) {
         super.a(param0, param1, (byte) 54, param3);
-        this.field_G.a(this.field_K, this.field_v + (param0 - -14), 10 + param1 - -this.field_m, this.field_r - 28, this.field_h, 16777215, -1, 0, 0, this.field_G.field_o);
+        this.field_G.a(this.field_K, this.field_v + (param0 + 14), 10 + param1 + this.field_m, this.field_r - 28, this.field_h, 16777215, -1, 0, 0, this.field_G.field_o);
         int var5 = 35 / ((param2 - 1) / 43);
     }
 

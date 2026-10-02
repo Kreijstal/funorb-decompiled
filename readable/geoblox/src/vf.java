@@ -133,8 +133,8 @@ class vf extends hk {
           super.a(param0, param1, param2, param3);
           this.field_G = null;
           if (this.field_l) {
-            var5_int = -this.field_v + qa.field_a + -param3;
-            var6 = -this.field_m + -param1 + ue.field_e;
+            var5_int = -this.field_v + qa.field_a - param3;
+            var6 = -this.field_m - param1 + ue.field_e;
             this.field_G = this.a((byte) 72, var6, var5_int);
           }
           if (param0) {
@@ -175,7 +175,7 @@ class vf extends hk {
             var8 = var6.a(param0, (el) (this), (byte) 46);
             var9 = var6.a(param1, -2, (el) (this));
             do {
-                bf.a(-2 + var9 - -var7.field_i, 2 + var7.field_f, 14164, 2 + var7.field_n, var7.field_k + (var8 - 2));
+                bf.a(-2 + var9 + var7.field_i, 2 + var7.field_f, 14164, 2 + var7.field_n, var7.field_k + (var8 - 2));
                 var7 = var7.field_h;
             } while (var7 != null);
         }
@@ -296,7 +296,7 @@ class vf extends hk {
             return;
           } else {
             var8 = this.field_s.indexOf(">", var6);
-            var7 = this.field_s.substring(var6 - -9, var8);
+            var7 = this.field_s.substring(var6 + 9, var8);
             var8 = Integer.parseInt(var7);
             var3 = this.field_s.indexOf("</hotspot>", var6);
             var9 = var5.a((byte) 24, var6);
@@ -406,7 +406,7 @@ class vf extends hk {
         fb var6;
         int var7;
         var7 = Geoblox.field_C;
-        var5 = 3 / ((param0 - -46) / 58);
+        var5 = 3 / ((param0 + 46) / 58);
         var4 = (fb) ((Object) this.field_F.firstForIteration(0));
         L0: while (var4 != null) {
           var6 = var4;
@@ -429,6 +429,6 @@ class vf extends hk {
 
     static {
         field_K = false;
-        spriteScratchRaster = new Sprite((int)(0.5 + Math.sqrt(2592.0)) - -2, 2 + (int)(Math.sqrt(2592.0) + 0.5));
+        spriteScratchRaster = new Sprite((int)(0.5 + Math.sqrt(2592.0)) + 2, 2 + (int)(Math.sqrt(2592.0) + 0.5));
     }
 }

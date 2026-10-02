@@ -331,7 +331,7 @@ final class w {
     }
 
     final static void a(int param0) {
-        int var1 = -58 % ((param0 - -28) / 50);
+        int var1 = -58 % ((param0 + 28) / 50);
     }
 
     static {

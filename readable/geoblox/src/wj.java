@@ -74,7 +74,7 @@ final class wj extends sh {
                   L2: while (true) {
                     var8 = param0.indexOf("<%", var5);
                     if (0 <= var8) {
-                      L3: for (var5 = var8 - -2; var5 < var3_int; var5++) {
+                      L3: for (var5 = var8 + 2; var5 < var3_int; var5++) {
                         if (DualLinkNode.a(-58, param0.charAt(var5))) {
                           continue L3;
                         }
@@ -188,7 +188,7 @@ final class wj extends sh {
             return;
         }
         if (this.field_D == 256) {
-            this.field_A.a(param0 - -this.field_v, param1 - -this.field_m, (byte) 83, param3);
+            this.field_A.a(param0 + this.field_v, param1 + this.field_m, (byte) 83, param3);
             return;
         }
         Sprite var6 = new Sprite(this.field_A.field_r, this.field_A.field_h);

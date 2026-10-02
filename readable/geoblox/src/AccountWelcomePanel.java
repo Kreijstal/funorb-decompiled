@@ -24,9 +24,9 @@ final class AccountWelcomePanel extends ee implements pl {
             var2 = 4;
             var3 = 326;
             var4 = var3 - var2 >> 1;
-            this.goBackButton.a(30, var4, (byte) -38, -48 + (this.field_h + -var2), this.field_r + -var3 >> 1);
-            this.justPlayButton.a(30, var4, (byte) -77, -var2 + -48 + this.field_h, var2 + ((-var3 + this.field_r >> 1) - -var4));
-            this.createAccountButton.a(30, var3, (byte) -73, this.field_h - (78 - -(2 * var2)), -var3 + this.field_r >> 1);
+            this.goBackButton.a(30, var4, (byte) -38, -48 + (this.field_h - var2), this.field_r - var3 >> 1);
+            this.justPlayButton.a(30, var4, (byte) -77, -var2 - 48 + this.field_h, var2 + ((-var3 + this.field_r >> 1) + var4));
+            this.createAccountButton.a(30, var3, (byte) -73, this.field_h - (78 + 2 * var2), -var3 + this.field_r >> 1);
             this.goBackButton.field_u = (bb) (this);
             this.createAccountButton.field_u = (bb) (this);
             this.createAccountButton.field_j = ic.loginCreateTooltipText;
@@ -114,7 +114,7 @@ final class AccountWelcomePanel extends ee implements pl {
             int var5_int = 90 % ((1 - param2) / 43);
             var6 = param0 + this.field_v;
             var7 = param1 + this.field_m;
-            ng.field_F.a(ji.createWelcomeText, var6 - -20, 20 + var7, -40 + this.field_r, this.field_h - 50, 16777215, -1, 1, 0, ng.field_F.field_o);
+            ng.field_F.a(ji.createWelcomeText, var6 + 20, 20 + var7, -40 + this.field_r, this.field_h - 50, 16777215, -1, 1, 0, ng.field_F.field_o);
             super.a(param0, param1, (byte) 63, param3);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "wi.FA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');

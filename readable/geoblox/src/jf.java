@@ -65,7 +65,7 @@ final class jf implements dh {
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
-                this.field_f.b(var12.field_s, var8 - -(var7 / 2), this.field_f.field_p + var9 + var12.field_G, this.field_k, this.field_l);
+                this.field_f.b(var12.field_s, var8 + var7 / 2, this.field_f.field_p + var9 + var12.field_G, this.field_k, this.field_l);
                 return;
               }
             } else {
@@ -204,10 +204,10 @@ final class jf implements dh {
                 var7 = param0[2].field_s;
                 var8 = param0[1].field_s;
                 param0[0].e(param2, param4, param1);
-                param0[2].e(-var7 + (param2 - -param3), param4, param1);
+                param0[2].e(-var7 + (param2 + param3), param4, param1);
                 SoftwareRasterizer.a(da.field_d);
-                SoftwareRasterizer.b(var6_int + param2, param4, -var7 + param3 + param2, param4 - -param0[1].field_o);
-                var9 = param2 - -var6_int;
+                SoftwareRasterizer.b(var6_int + param2, param4, -var7 + param3 + param2, param4 + param0[1].field_o);
+                var9 = param2 + var6_int;
                 var10 = -var7 + (param2 + param3);
                 for (param2 = var9; param2 < var10; param2 = param2 + var8) {
                   param0[1].e(param2, param4, param1);

@@ -106,7 +106,7 @@ final class hl extends el {
           L0: {
             var5_int = param2 + this.field_r;
             uh.a(param1, this.field_M.width + param2, param3 ^ 6447, this.field_h + param1, var5_int - this.field_M.width);
-            for (var6 = param2 + -this.field_I; var6 < var5_int; var6 = var6 + param0.width) {
+            for (var6 = param2 - this.field_I; var6 < var5_int; var6 = var6 + param0.width) {
               param0.b(var6, param1);
             }
             if (param3 != -12276) {
@@ -161,11 +161,11 @@ final class hl extends el {
         if (!(param3 == 0)) {
             return;
         }
-        int var6 = param0 - -this.field_v;
-        int var7 = param1 - -this.field_m;
+        int var6 = param0 + this.field_v;
+        int var7 = param1 + this.field_m;
         this.a(this.field_F[0], var7, var6, -12276);
         if (this.field_x < 65536) {
-            uh.a(var7, var6 - -(this.field_r * this.field_x >> 16), -14045, var7 + this.field_h, this.field_r + var6);
+            uh.a(var7, var6 + (this.field_r * this.field_x >> 16), -14045, var7 + this.field_h, this.field_r + var6);
             this.a(this.field_F[1], var7, var6, -12276);
             id.a(true);
         }

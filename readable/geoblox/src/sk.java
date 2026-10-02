@@ -42,27 +42,27 @@ final class sk {
               }
             }
             if (this.field_c <= this.field_g) {
-              if (~this.field_g > ~(this.field_c - -(long)this.field_d)) {
+              if (~this.field_g > ~(this.field_c + (long)this.field_d)) {
                 var2 = this.field_g;
               }
             }
           }
           L5: {
             if (~this.field_g > ~(this.field_c + (long)this.field_d)) {
-              if (this.field_g - -(long)this.field_i >= (long)this.field_d + this.field_c) {
+              if (this.field_g + (long)this.field_i >= (long)this.field_d + this.field_c) {
                 var4 = (long)this.field_d + this.field_c;
                 break L5;
               }
             }
             if (~((long)this.field_i + this.field_g) < ~this.field_c) {
               if (~(this.field_c + (long)this.field_d) <= ~((long)this.field_i + this.field_g)) {
-                var4 = this.field_g - -(long)this.field_i;
+                var4 = this.field_g + (long)this.field_i;
               }
             }
           }
           if (var2 > -1L) {
             if (var4 > var2) {
-              var6 = (int)(var4 + -var2);
+              var6 = (int)(var4 - var2);
               sf.a(this.field_j, (int)(-this.field_c + var2), this.field_h, (int)(-this.field_g + var2), var6);
             }
           }
@@ -136,7 +136,7 @@ final class sk {
                 }
                 if (~this.field_f <= ~this.field_g) {
                   if (~((long)this.field_i + this.field_g) < ~this.field_f) {
-                    var9_int = (int)((long)this.field_i - this.field_f - -this.field_g);
+                    var9_int = (int)((long)this.field_i - this.field_f + this.field_g);
                     if (param1 < var9_int) {
                       var9_int = param1;
                     }
@@ -210,7 +210,7 @@ final class sk {
                       }
                     }
                     if (~this.field_c >= ~var5_long) {
-                      if (var5_long < this.field_c - -(long)this.field_d) {
+                      if (var5_long < this.field_c + (long)this.field_d) {
                         var9 = var5_long;
                       }
                     }
@@ -223,8 +223,8 @@ final class sk {
                         break L15;
                       }
                     }
-                    if (this.field_c < var5_long - -(long)var8) {
-                      if (~(var5_long + (long)var8) >= ~(this.field_c - -(long)this.field_d)) {
+                    if (this.field_c < var5_long + (long)var8) {
+                      if (~(var5_long + (long)var8) >= ~(this.field_c + (long)this.field_d)) {
                         var11 = (long)var8 + var5_long;
                       }
                     }
@@ -312,7 +312,7 @@ final class sk {
             }
             if (-1L != this.field_c) {
               if (~this.field_c >= ~this.field_f) {
-                if (~this.field_f < ~(this.field_c - -(long)this.field_d)) {
+                if (~this.field_f < ~(this.field_c + (long)this.field_d)) {
                   this.b((byte) 99);
                 }
               } else {
@@ -321,7 +321,7 @@ final class sk {
             }
             if (-1L != this.field_c) {
               if ((long)param0 + this.field_f > (long)this.field_j.length + this.field_c) {
-                var5_int = (int)((long)this.field_j.length + this.field_c + -this.field_f);
+                var5_int = (int)((long)this.field_j.length + this.field_c - this.field_f);
                 sf.a(param2, param1, this.field_j, (int)(-this.field_c + this.field_f), var5_int);
                 this.field_f = this.field_f + (long)var5_int;
                 param1 = param1 + var5_int;
@@ -358,13 +358,13 @@ final class sk {
                   var5_long = -1L;
                   var7 = -1L;
                   if (~this.field_g >= ~this.field_f) {
-                    if (~this.field_f > ~(this.field_g - -(long)this.field_i)) {
+                    if (~this.field_f > ~(this.field_g + (long)this.field_i)) {
                       var5_long = this.field_f;
                       break L8;
                     }
                   }
                   if (~this.field_g <= ~this.field_f) {
-                    if (~this.field_g > ~(this.field_f - -(long)param0)) {
+                    if (~this.field_g > ~(this.field_f + (long)param0)) {
                       var5_long = this.field_g;
                     }
                   }
@@ -372,12 +372,12 @@ final class sk {
                 L10: {
                   if (~this.field_g > ~((long)param0 + this.field_f)) {
                     if (~((long)this.field_i + this.field_g) <= ~(this.field_f + (long)param0)) {
-                      var7 = this.field_f - -(long)param0;
+                      var7 = this.field_f + (long)param0;
                       break L10;
                     }
                   }
-                  if (this.field_f < this.field_g - -(long)this.field_i) {
-                    if (~(this.field_g + (long)this.field_i) >= ~(this.field_f - -(long)param0)) {
+                  if (this.field_f < this.field_g + (long)this.field_i) {
+                    if (~(this.field_g + (long)this.field_i) >= ~(this.field_f + (long)param0)) {
                       var7 = (long)this.field_i + this.field_g;
                     }
                   }
@@ -385,7 +385,7 @@ final class sk {
                 if (var5_long > -1L) {
                   if (~var5_long > ~var7) {
                     var9 = (int)(-var5_long + var7);
-                    sf.a(param2, (int)(var5_long + ((long)param1 + -this.field_f)), this.field_h, (int)(var5_long + -this.field_g), var9);
+                    sf.a(param2, (int)(var5_long + ((long)param1 - this.field_f)), this.field_h, (int)(var5_long - this.field_g), var9);
                   }
                 }
                 this.field_f = this.field_f + (long)param0;
@@ -400,7 +400,7 @@ final class sk {
                   sf.a(param2, param1, this.field_j, (int)(-this.field_c + this.field_f), param0);
                   this.field_f = this.field_f + (long)param0;
                   if (~(long)this.field_d > ~(-this.field_c + this.field_f)) {
-                    this.field_d = (int)(this.field_f + -this.field_c);
+                    this.field_d = (int)(this.field_f - this.field_c);
                   }
                   decompiledRegionSelector0 = 3;
                 }
@@ -463,7 +463,7 @@ final class sk {
     final void a(byte param0, byte[] param1) throws IOException {
         try {
             this.a(param1, param1.length, 0, 9868);
-            int var3_int = -83 / ((param0 - -9) / 39);
+            int var3_int = -83 / ((param0 + 9) / 39);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "sk.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

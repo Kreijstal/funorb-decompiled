@@ -4,10 +4,10 @@
   "purpose": "Offline readable source mirror; not a runtime patch",
   "source": {
     "repository": "Kreijstal/funorb-decompiled",
-    "commit": "5123c321465e71a2b785cfeda64269ea11a376c6",
+    "commit": "588ff14becf7fd429d53e929e85e073814c20259",
     "subdirectory": "games/geoblox"
   },
-  "inputTreeSha256": "a9aaa3dfa046673a2b4e87a360d714692e53c393ca7263efd4a630c6f2e16a8e",
+  "inputTreeSha256": "cdf74421a73a784554ef7946c2647fa0380f8a458a21e30e96ba951f4e650a97",
   "namingPolicy": "Confirmed semantic names without opaque suffixes; unknown symbols stay unchanged. Original spellings and JVM identities remain in the reverse symbol map. Every rule guards the original spelling. Local identities also use declaration ordinals; reused variables retain all supported roles. Numeric screen/action IDs and decompiler state remain unchanged.",
   "renames": [
     {
@@ -6888,18 +6888,18 @@
     }
   ],
   "revision": 4,
-  "version": 27,
+  "version": 28,
   "generators": {
     "dekoblokoWork": {
       "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "d60879b1d9a3286dd2102782e13dffb0ae5c0c5e",
+      "commit": "67f22895e4161b3e81a7ceb93273b6680be7d2f0",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "5234c2b6ae7447c2bbdae83f46f0b689fd5cfe9b199ebd77dafdd0f3cf0bfd1e",
-        "reproduce": "git archive --format=tar d60879b1d9a3286dd2102782e13dffb0ae5c0c5e | sha256sum",
+        "sha256": "ac8734ac19b0447c2aad49c20af07562f4e9d22c862c97c465b465b6e858a86f",
+        "reproduce": "git archive --format=tar 67f22895e4161b3e81a7ceb93273b6680be7d2f0 | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
@@ -6908,16 +6908,16 @@
   "publication": {
     "format": 1,
     "previousRules": {
-      "commit": "80ed445be97b553df79efb04d773a7ed7c7a4b02",
+      "commit": "5a920280c91052e7d48bb10f23941cad31a82a8e",
       "path": "readable/geoblox-rules.json",
-      "sha256": "288d4cbd90442c4e330754cf8f3341e0e5044e4accdc70eff6b7bb0e3159653b"
+      "sha256": "a9fb194027bd9ab8321dbdfb98a3cc5e67b6d8007c8aeeb5437432a0fe836bfd"
     },
     "ruleChanges": [],
     "stubJarSha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2",
     "sourceEvidence": [
       {
         "file": "ab.java",
-        "sha256": "d33040417a7d8e7f1729dc671f2dbb93a0dbbab0e55fde0320603f65646701c5"
+        "sha256": "9b3010e941a19c4f5832107b06d589dcb04c1d12fc367ac08920eb54f5cf26b0"
       },
       {
         "file": "af.java",
@@ -6925,11 +6925,11 @@
       },
       {
         "file": "bh.java",
-        "sha256": "b3332586ea45bbf96a0154ab01c1a9685c938817a81f9f71b285f1b9bd4d6e5c"
+        "sha256": "3a33e645c31f5fcb43e8f2b60b8d4faaeef64bcfe128aaf19a5c5ca3a536a2dc"
       },
       {
         "file": "c.java",
-        "sha256": "c1e394673d7665686337c0fb2418a1bc07ec364cf32360ce2328160d338c51fa"
+        "sha256": "3d8b41ea1ad6a23103108b3eeb02b17ad9f809d3acd05919031eacc025bff5ab"
       },
       {
         "file": "cf.java",
@@ -6937,19 +6937,19 @@
       },
       {
         "file": "ch.java",
-        "sha256": "a4221235be53e110c83e472d1fd30d3420e42251e0190233ee70ad45cffc89b8"
+        "sha256": "24e910653b1ac835cbf7f08ee8568d510dc70a242e9850260a8c8d64adb9f4db"
       },
       {
         "file": "ec.java",
-        "sha256": "fa5999e55b78e207b56ff62cb72a04942f936df1331e4daaeae066dd9e2e9e1a"
+        "sha256": "c517a25ba302ac5e43a374f553d15b353ae96163d86ca548541dd73884d12c11"
       },
       {
         "file": "f.java",
-        "sha256": "876304cd5b815772fce7938f231b2042babbd6ef69204773cad0c54054be5b45"
+        "sha256": "e1b529c07cddc10be79d900e085e30a8747615c7af48bf693d8f3d5d84ab4a71"
       },
       {
         "file": "fe.java",
-        "sha256": "f5a1b68fadbd043c4b9c2aaeee2a9db3ae738f1eb936486a2f48469ac0bd2b4e"
+        "sha256": "0d1fd678f8fa0a775490a64b63d9eb25641c85b3bc0d22603e2194b861251e5a"
       },
       {
         "file": "gd.java",
@@ -6957,63 +6957,63 @@
       },
       {
         "file": "gh.java",
-        "sha256": "c5a461f48c3a30238f18444afd8936ea3ce1645653c6cb975c295444c6953a8c"
+        "sha256": "16f2e4c7be5f8323868af58211e7a46c1962a3e40c7e356a6ba7c91fd5a4fbc0"
       },
       {
         "file": "gi.java",
-        "sha256": "7a9474e0f8a969b5a7c625b7a11668ce1ca0103510dc10c8c162e014dbb54d66"
+        "sha256": "eade1c2a94fab22dfc844e54baab814c8237816ce44182f1e027794aae9c64c1"
       },
       {
         "file": "ha.java",
-        "sha256": "031b78b9a760f0b9d220a4a61df94fb3882feada792a1f97fa5fa3c6af137de8"
+        "sha256": "0fc715231101c183b4aaab275f2d3db7b1f5a740afd7e09eda9d7aca240eec57"
       },
       {
         "file": "hl.java",
-        "sha256": "bcfbd3e7539649fb6f74a447df5148ba659ddd241c623ab56b99b1fd124eb79f"
+        "sha256": "5cb073071a259b90fffa66a5a363a6a495c1ef4504e10cdb6df4e86b27fa257e"
       },
       {
         "file": "i.java",
-        "sha256": "b3416f3945d30b814a7a3f079a2f98afa2db487ede8436ac21dc5d2b09e89e5f"
+        "sha256": "4916debeccb2c5417949c8a27aa0456a21c68fc49a093d85ebb133e90c86c5a9"
       },
       {
         "file": "ih.java",
-        "sha256": "2593deffa871df4a77b45e67239108807c74556e21f86574096bc86a11c72fdc"
+        "sha256": "68cc6cadadfbc8b1ba454f81541f8cb7bd03c262be02e5cb4a11a31c209d1686"
       },
       {
         "file": "ij.java",
-        "sha256": "be62fb7e09933ac835888eba9e5f8672ef7b4a4afc2df13cb80389c032b24882"
+        "sha256": "da09ea8efc3ae1e47b63e3f2272ded9180eeb76c1d7a96ce3c237e6e60313354"
       },
       {
         "file": "ik.java",
-        "sha256": "14d5f0fd1d233c4aeb78cc13ed6662a88c265a9bc458afc9d1d985e87a89e8e9"
+        "sha256": "26edd2a18749e73e3d3449b0cd60620f6cd06a2106ff8450ba66941b69b39d16"
       },
       {
         "file": "ja.java",
-        "sha256": "434e2821995978a69dc77e52de1708730a15b04edc6edc1c8a944e379b94d4a0"
+        "sha256": "4e40f4ccd7bef3226fe165032b679e832718ff8323d41e4387de4245ddf0e81b"
       },
       {
         "file": "jc.java",
-        "sha256": "81b33187c33397f62bbeb9872816a2f96772e6dcc1f2dc875011d245d1473b23"
+        "sha256": "08644d98b34637b9f0ca14d4b3433d6c14fcfedc1775330fb3b0526e3121d74d"
       },
       {
         "file": "jf.java",
-        "sha256": "ccc306e2c33989062419e7ec178deadc60a0a9c8f8f33e7cff7e96d11b0d8e48"
+        "sha256": "4ba158bcd3607c7f8dadf8d857affe0fe47ea9df81edddc75827dbe761c3350a"
       },
       {
         "file": "jg.java",
-        "sha256": "e80471670dafdab690cb9fcce6fe9c2dcedcb3050a46ba01eb7d7f3238bf45a5"
+        "sha256": "59f88813344c564cf73bbbee925fbb3aef1b03d92b7d7e6c0847206825d3d091"
       },
       {
         "file": "jj.java",
-        "sha256": "cc71ca362e3682ca6d45c884150ff490b2f1cd6005e1558ba2e9b3b5d46c6976"
+        "sha256": "4a548c4d7ccde3108d806a4abaf5b106ee10d4be43dad8d1600714de8c557be3"
       },
       {
         "file": "jk.java",
-        "sha256": "47c1616d37f716d582a5610b6c37f12b6c51198d9ffcbc5f183801c9ba04e46e"
+        "sha256": "7f256f3f6fcda28ffbbd5fa6c8f11e05b79a4b1cd087a7d26254c6a5507d117c"
       },
       {
         "file": "kc.java",
-        "sha256": "54b618bab0d64b0e087a54c524ee0dfd2ca5b88a78223e1bd679b987ec79fab2"
+        "sha256": "6643cfea950828860302ba608f248bbe5cd561e4bac86a05e7406383a4ef9afe"
       },
       {
         "file": "kl.java",
@@ -7021,7 +7021,7 @@
       },
       {
         "file": "ld.java",
-        "sha256": "3cdb3bcd8b193683a9c00274b5366bef6b68fc58e4a56d2d8c6882f49bcca59f"
+        "sha256": "2713d19cfb619664041358e0e7cecce0b184a50246d1f2b018258dbc3c203245"
       },
       {
         "file": "le.java",
@@ -7037,19 +7037,19 @@
       },
       {
         "file": "oc.java",
-        "sha256": "7edea3a8ebac2f2a32f056139fa1b29db31e1d27d961cdceb081f03692d34e0e"
+        "sha256": "26272817de0baa23027f716f1da97e11d94ae3daf0985191d062156ea91ffa09"
       },
       {
         "file": "qa.java",
-        "sha256": "cb598bb99633a4d68cb339bf0b748fd1a241f87c2d025c83fd3c9ca63a0f10df"
+        "sha256": "ecd7954b47d463c57dc8b7c32c5dadc9ac42ef8ae223fe86166ed59852dc9d43"
       },
       {
         "file": "qb.java",
-        "sha256": "87d1bb694cc861b9e6895bbe08a29f2b44f0f0b2c3156013d3f684245e0cf354"
+        "sha256": "a2122338379e21ec1d7898d39374b80a8c67b75cf4cbf238ab54a183323716ad"
       },
       {
         "file": "qf.java",
-        "sha256": "22d0102c00a0e084153258010aa0982b3f19a101d67c41968590e6440e481f42"
+        "sha256": "a51c22ff46eb47adbc6fdf9b53c25ebcff8b3ac5e4b46900f4aeeb2cd03df9bc"
       },
       {
         "file": "qk.java",
@@ -7057,7 +7057,7 @@
       },
       {
         "file": "r.java",
-        "sha256": "64d4ff7aba9dcd43fc3ba28d0abe0d70e587919533872eda4cba5437099224ed"
+        "sha256": "8a36402cce6837e79448e270c22ab8b92bf082edd1113e563a643bf45392e7a9"
       },
       {
         "file": "ra.java",
@@ -7065,15 +7065,15 @@
       },
       {
         "file": "rc.java",
-        "sha256": "9939a5b978ffbdf4ccd47ab58ea6f9f016414f8cca4610cb7f712ea368441302"
+        "sha256": "068ca3af5ddcd427b4d83d73a3b613d0f47724a511e1b57b9547b55b94bf9167"
       },
       {
         "file": "rh.java",
-        "sha256": "145ea45adf9bb63403fe149ced81f949af6490abc4b71d619db144f41680fdb7"
+        "sha256": "bc4a5c1904df7f9e3654988389e3c276103ec198f7722f8457b076b0f6536b9d"
       },
       {
         "file": "ri.java",
-        "sha256": "4614cf1488ba8e4438331b82007ba7f6b453f6db66f130fd99e791b5cc583728"
+        "sha256": "c3b9db55235facd162ba611b3e494c806752cfcdaca15dfc13923ecba53a6d05"
       },
       {
         "file": "rj.java",
@@ -7081,11 +7081,11 @@
       },
       {
         "file": "td.java",
-        "sha256": "bd1635bc796ebf0ca0f442b0c3640058b1a803067e98959c0446a4981684ed1c"
+        "sha256": "86a698cbd5b06fc98f5384c3e6d9d60ed4bd92692ec79b5cb497abf83e466683"
       },
       {
         "file": "ue.java",
-        "sha256": "3b3e34a3a8c6246d79599375f7754a5525e4b7992dfbd78e5d14613dc9c60677"
+        "sha256": "5a2c215462ba91f6e325840522c5692bee42a232f9616200bbd1a733198178b1"
       },
       {
         "file": "uf.java",
@@ -7101,15 +7101,15 @@
       },
       {
         "file": "ul.java",
-        "sha256": "b8ea7f17d8af0a1032c3bb440fe39dc392456cade9f40c6cd61de5495b5d0d96"
+        "sha256": "9716af525a148dd9296891c7fc360dc122a98446562d26b7a2a27fa1830a38ed"
       },
       {
         "file": "vd.java",
-        "sha256": "dba78fb646ad7b50e470ef42238eecf18395ebe308784e91ed968a247fd0546c"
+        "sha256": "ded72ee97771cc037b9231d91d5de9d423b3f5e3685f143378df86e436a33607"
       },
       {
         "file": "w.java",
-        "sha256": "a97ae4e9f87e1f25c7d2e6c47720c1213d601aad44848383980dd592ce52f21d"
+        "sha256": "a62ececbc89806cc78050d122a8748413bfbaf45d8b2bf6cca7d79e676be0a28"
       },
       {
         "file": "wb.java",
@@ -7117,15 +7117,15 @@
       },
       {
         "file": "wc.java",
-        "sha256": "fb708006b65bb7a6739aa9396b6058c81763cecdee2b897c2b71963e495fda68"
+        "sha256": "4cb1dcf801bd0d2babc1f59758a1c643fc43febe824ecb3925f5ce8f77c4e4c0"
       },
       {
         "file": "wd.java",
-        "sha256": "c6c3a8582b0294b054c27dd1ad9fb68ae3ba8a621542efd11e9e2f1c13da5a57"
+        "sha256": "1cd9e974500cd9ce4664849f4359bd7fc563b53a66cee2cf0c65bd7f0fcb4ba8"
       },
       {
         "file": "wi.java",
-        "sha256": "5be0cd3e12d4c1d585f284a848158f972f348f58da9897735973f39b8e7c7061"
+        "sha256": "41290058c9b92191d8715b257e79f87ddad12ae4454e75415b42ac530c11f247"
       }
     ],
     "nativeEvidence": [
@@ -7150,7 +7150,7 @@
       }
     ],
     "textResources": {
-      "loaderSourceSha256": "5be0cd3e12d4c1d585f284a848158f972f348f58da9897735973f39b8e7c7061",
+      "loaderSourceSha256": "41290058c9b92191d8715b257e79f87ddad12ae4454e75415b42ac530c11f247",
       "review": {
         "allResourceReads": 744,
         "storedResourceReads": 218,
@@ -9359,37 +9359,18 @@
       "rawSourceBodyEditedByHand": false,
       "normalizedLiteralShiftCounts": 972,
       "shiftNormalizationChangedJavaFiles": 90,
-      "otherSourceTokenChanges": 0,
       "nativeShiftComparisons": 24324,
       "sourceDeclarationIdentitiesUnchanged": 21185,
       "namingGuardsUnchanged": 1146,
-      "namedLocalIdentitiesUnchanged": 359
+      "namedLocalIdentitiesUnchanged": 359,
+      "normalizedIntegralSignNodes": 745,
+      "integralSignChangedJavaFiles": 132,
+      "nativeIntegralSignComparisons": 20350,
+      "attributedJavaTreesMatched": 303,
+      "integralSignAuditFixtures": 8
     },
     "sourceChange": {
       "before": {
-        "source": {
-          "repository": "Kreijstal/funorb-decompiled",
-          "commit": "7d0e06122fc537ee96a9f56e633ac5356ba325d8",
-          "subdirectory": "games/geoblox"
-        },
-        "generators": {
-          "dekoblokoWork": {
-            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
-            "trackedClean": true
-          },
-          "javaTools": {
-            "commit": "e6dd72c89fa7f51cc34cd78d08cf5c6227799126",
-            "trackedClean": true,
-            "sourceArchive": {
-              "sha256": "6337fa96b5d83ef24ee2bf20c7e48ea5e0844482f6262e774d73fba6101d4912",
-              "reproduce": "git archive --format=tar e6dd72c89fa7f51cc34cd78d08cf5c6227799126 | sha256sum",
-              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
-            }
-          }
-        },
-        "inputTreeSha256": "07610c2d655bf96e59584f07be867c62e47cf3b3c484063504d9958443e89da2"
-      },
-      "after": {
         "source": {
           "repository": "Kreijstal/funorb-decompiled",
           "commit": "5123c321465e71a2b785cfeda64269ea11a376c6",
@@ -9411,6 +9392,29 @@
           }
         },
         "inputTreeSha256": "a9aaa3dfa046673a2b4e87a360d714692e53c393ca7263efd4a630c6f2e16a8e"
+      },
+      "after": {
+        "source": {
+          "repository": "Kreijstal/funorb-decompiled",
+          "commit": "588ff14becf7fd429d53e929e85e073814c20259",
+          "subdirectory": "games/geoblox"
+        },
+        "generators": {
+          "dekoblokoWork": {
+            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
+            "trackedClean": true
+          },
+          "javaTools": {
+            "commit": "67f22895e4161b3e81a7ceb93273b6680be7d2f0",
+            "trackedClean": true,
+            "sourceArchive": {
+              "sha256": "ac8734ac19b0447c2aad49c20af07562f4e9d22c862c97c465b465b6e858a86f",
+              "reproduce": "git archive --format=tar 67f22895e4161b3e81a7ceb93273b6680be7d2f0 | sha256sum",
+              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
+            }
+          }
+        },
+        "inputTreeSha256": "cdf74421a73a784554ef7946c2647fa0380f8a458a21e30e96ba951f4e650a97"
       }
     }
   }

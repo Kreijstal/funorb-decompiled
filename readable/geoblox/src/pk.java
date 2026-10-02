@@ -27,11 +27,11 @@ final class pk extends qc {
         var7 = Geoblox.field_C;
         try {
           L0: {
-            var5_int = 31 % ((param0 - -36) / 37);
+            var5_int = 31 % ((param0 + 36) / 37);
             for (var6 = 0; var6 < param3; var6++) {
               fieldTemp$0 = this.field_f;
               this.field_f = this.field_f + 1;
-              param2[var6 + param1] = (byte)(this.field_j[fieldTemp$0] + -this.field_p.b(0));
+              param2[var6 + param1] = (byte)(this.field_j[fieldTemp$0] - this.field_p.b(0));
             }
             break L0;
           }
@@ -180,7 +180,7 @@ final class pk extends qc {
         if (param0 != -17) {
             return -69;
         }
-        int var4 = 8 + -(7 & this.field_s);
+        int var4 = 8 - (7 & this.field_s);
         int var5 = 0;
         this.field_s = this.field_s + param1;
         while (var4 < param1) {
@@ -220,7 +220,7 @@ final class pk extends qc {
         }
         int fieldTemp$0 = this.field_f;
         this.field_f = this.field_f + 1;
-        return 255 & this.field_j[fieldTemp$0] + -this.field_p.b(0);
+        return 255 & this.field_j[fieldTemp$0] - this.field_p.b(0);
     }
 
     pk(int param0) {

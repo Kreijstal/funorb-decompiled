@@ -309,7 +309,7 @@ class ee extends el implements ql {
         gb var5 = new gb(this.field_z);
         el var7 = (el) ((Object) var5.d(1));
         while (var7 != null) {
-            var7.a(this.field_v + param0, param1 - -this.field_m, (byte) 93, param3);
+            var7.a(this.field_v + param0, param1 + this.field_m, (byte) 93, param3);
             var7 = (el) ((Object) var5.c(26));
         }
     }
@@ -567,7 +567,7 @@ class ee extends el implements ql {
             var8 = (el) ((Object) var7.c((byte) 88));
             L1: while (var8 != null) {
               if (var8.a(122)) {
-                var8.a(param0 - -this.field_v, param1, true, param3, this.field_m + param4, param5);
+                var8.a(param0 + this.field_v, param1, true, param3, this.field_m + param4, param5);
                 var8 = (el) ((Object) var7.a((byte) 109));
                 continue L1;
               }

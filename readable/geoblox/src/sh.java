@@ -70,7 +70,7 @@ abstract class sh extends el implements ql {
           L0: {
             if (param1 > param0) {
               if (param5 > param0 + 1) {
-                if (param0 - -5 < param5) {
+                if (param0 + 5 < param5) {
                   if (param3 != param2) {
                     var7_int = (1 & (param3 & param2)) + (param2 >> 1) + (param3 >> 1);
                     var8 = param0;
@@ -416,7 +416,7 @@ abstract class sh extends el implements ql {
         }
         int var5 = 85 % ((param2 - 1) / 43);
         if (this.field_A != null) {
-            this.field_A.a(this.field_v + param0, param1 - -this.field_m, (byte) -74, param3);
+            this.field_A.a(this.field_v + param0, param1 + this.field_m, (byte) -74, param3);
         }
     }
 
@@ -465,7 +465,7 @@ abstract class sh extends el implements ql {
               discarded$12 = param1.append(' ');
             }
             if (this.field_A != null) {
-              this.field_A.a(0, param1, param2, param0 - -1);
+              this.field_A.a(0, param1, param2, param0 + 1);
             } else {
               discarded$11 = param1.append("null");
             }
@@ -528,7 +528,7 @@ abstract class sh extends el implements ql {
         RuntimeException decompiledCaughtException = null;
         try {
           L1: {
-            var3_int = -11 % ((param1 - -73) / 40);
+            var3_int = -11 % ((param1 + 73) / 40);
             if (null != this.field_A) {
               if (!this.field_A.e((byte) 54)) {
                 if (this.field_A.a((byte) -85, param0)) {

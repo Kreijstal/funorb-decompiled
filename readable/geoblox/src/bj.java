@@ -200,7 +200,7 @@ final class bj extends nh {
                   if (var5 != null) {
                     if (var18.length > 2) {
                       ge.field_f.reset();
-                      ge.field_f.update(var5, 0, var18.length + -2);
+                      ge.field_f.update(var5, 0, var18.length - 2);
                       var6_int = (int)ge.field_f.getValue();
                       if (var6_int == this.field_u.field_q[param2]) {
                         L6: {
@@ -268,7 +268,7 @@ final class bj extends nh {
                   if (var5 != null) {
                     if (var18.length > 2) {
                       ge.field_f.reset();
-                      ge.field_f.update(var5, 0, var18.length + -2);
+                      ge.field_f.update(var5, 0, var18.length - 2);
                       var6_int = (int)ge.field_f.getValue();
                       if (var6_int == this.field_u.field_q[param2]) {
                         L13: {
@@ -652,7 +652,7 @@ final class bj extends nh {
                 }
               }
             }
-            this.field_n = 1000L + oa.a(param0 + -12482);
+            this.field_n = 1000L + oa.a(param0 - 12482);
           }
         }
     }

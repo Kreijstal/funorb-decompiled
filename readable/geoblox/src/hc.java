@@ -16,7 +16,7 @@ final class hc extends dj implements nl {
                 return null;
             }
             if (null != this.field_j) {
-                oe.a(ue.field_e, (byte) -84, qa.field_a - -this.field_r - this.field_S);
+                oe.a(ue.field_e, (byte) -84, qa.field_a + this.field_r - this.field_S);
                 return this.field_j;
             }
             return null;
@@ -25,7 +25,7 @@ final class hc extends dj implements nl {
             return null;
         }
         if (null != this.field_j) {
-            oe.a(ue.field_e, (byte) -84, qa.field_a - -this.field_r - this.field_S);
+            oe.a(ue.field_e, (byte) -84, qa.field_a + this.field_r - this.field_S);
             return this.field_j;
         }
         return null;

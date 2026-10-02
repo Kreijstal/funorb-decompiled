@@ -14,7 +14,7 @@ final class pa {
 
     final void a(byte[] param0, int param1, int param2, int param3) throws IOException {
         try {
-            if (this.field_f < (long)param3 - -this.field_c) {
+            if (this.field_f < (long)param3 + this.field_c) {
                 this.field_d.seek(this.field_f);
                 this.field_d.write(1);
                 throw new EOFException();
@@ -162,7 +162,7 @@ final class pa {
                       if (var4_int != 0) {
                         var9 = -var9;
                       }
-                      var10 = var6 * param2 - -var9;
+                      var10 = var6 * param2 + var9;
                       if (var6 != var10 / param2) {
                         stackIn_37_0 = 0;
                         decompiledRegionSelector0 = 2;
@@ -245,7 +245,7 @@ final class pa {
                   }
                 }
                 try {
-                  var4_int = -83 / ((param1 - -55) / 62);
+                  var4_int = -83 / ((param1 + 55) / 62);
                   param3.getAppletContext().showDocument(new java.net.URL(param0), "_blank");
                 } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;

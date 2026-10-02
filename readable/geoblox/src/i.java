@@ -130,9 +130,9 @@ final class i {
         var19 = Geoblox.field_C;
         try {
           L0: {
-            var5_int = hj.a((byte) 58, (param3 + -param0) * 3);
+            var5_int = hj.a((byte) 58, (param3 - param0) * 3);
             var6 = param0 * 3;
-            var7 = var5_int + -10;
+            var7 = var5_int - 10;
             oe.l(0);
             if (param2.field_v > 0) {
               if (null != param2.field_n) {
@@ -157,9 +157,9 @@ final class i {
                       if (stackIn_11_0) {
                         var12 = sh.field_x[var9];
                         var13 = dj.field_N[var9];
-                        var14 = sh.field_x[var10] + -var12;
+                        var14 = sh.field_x[var10] - var12;
                         var15 = sh.field_x[var11] - var12;
-                        var16 = dj.field_N[var10] + -var13;
+                        var16 = dj.field_N[var10] - var13;
                         var17 = -var13 + dj.field_N[var11];
                         if (-(var16 * var15) + var14 * var17 >= 0) {
                           break L5;
@@ -179,7 +179,7 @@ final class i {
                       }
                       var14 = bj.field_j[var11];
                       if (var14 != -2147483648) {
-                        var15 = var13 + (var12 - -var14 + -var6);
+                        var15 = var13 + (var12 + var14 - var6);
                         if (var7 < 0) {
                           stackIn_28_0 = var15 << -var7;
                         } else {

@@ -36,19 +36,19 @@ final class wa {
           var5_int = this.field_m.a(param2);
           var6 = this.field_m.field_q + this.field_m.field_y;
           var7 = param1;
-          if (SoftwareRasterizer.stride < 6 + var7 - -var5_int) {
+          if (SoftwareRasterizer.stride < 6 + var7 + var5_int) {
             var7 = -6 + SoftwareRasterizer.stride - var5_int;
           }
           var8 = -this.field_m.field_y + (param3 + 32);
-          if (SoftwareRasterizer.field_b < 6 + (var8 - -var6)) {
-            var8 = SoftwareRasterizer.field_b - var6 + -6;
+          if (SoftwareRasterizer.field_b < 6 + (var8 + var6)) {
+            var8 = SoftwareRasterizer.field_b - var6 - 6;
           }
-          SoftwareRasterizer.d(var7, var8, 6 + var5_int, var6 - -6, this.field_k);
+          SoftwareRasterizer.d(var7, var8, 6 + var5_int, var6 + 6, this.field_k);
           if (param0 != 69) {
             var9 = (String) null;
             this.a(-83, false, 61, (String) null);
           }
-          SoftwareRasterizer.a(1 + var7, var8 - -1, var5_int - -4, 4 + var6, this.field_f);
+          SoftwareRasterizer.a(1 + var7, var8 + 1, var5_int + 4, 4 + var6, this.field_f);
           this.field_m.a(param2, 3 + var7, this.field_m.field_y + 3 + var8, this.field_k, -1);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -108,9 +108,9 @@ final class wa {
             this.field_d = 3;
             this.field_i = 3;
             this.field_m = param1;
-            var4.a(param0 + -126, 0).b(256, 15658734).a(wa.a(10066329, 8947848, 7829367, 1), true);
+            var4.a(param0 - 126, 0).b(256, 15658734).a(wa.a(10066329, 8947848, 7829367, 1), true);
             var4.a(-106, 1).a(wa.a(10066329, 11184810, 13421772, 1), true);
-            var4.a(param0 ^ -100, 3).a(wa.a(7829367, 8947848, 10066329, param0 + -8), true).b((byte) -53, 1).a(param0 + -9, 1);
+            var4.a(param0 ^ -100, 3).a(wa.a(7829367, 8947848, 10066329, param0 - 8), true).b((byte) -53, 1).a(param0 - 9, 1);
             var5 = new Sprite[9];
             var16 = new il(32, 32);
             var18 = var16;
@@ -210,11 +210,11 @@ final class wa {
                 var12 = var8;
               } else {
                 var13 = var9 / var8;
-                var12 = (var9 % var8 - -var13 - 1) / var13 * 2 + var8;
+                var12 = (var9 % var8 + var13 - 1) / var13 * 2 + var8;
               }
               var11 = this.field_m.a(param1, new int[]{var12}, dd.field_E);
               var9 = 0;
-              var10 = var10 + (var11 + -1) * var7;
+              var10 = var10 + (var11 - 1) * var7;
               var13 = 0;
               L6: while (true) {
                 if (var13 >= var11) {
@@ -234,10 +234,10 @@ final class wa {
             }
             var12 = param2;
             if (var5_int + var9 + var12 > SoftwareRasterizer.stride) {
-              var12 = -var5_int + (SoftwareRasterizer.stride + -var9);
+              var12 = -var5_int + (SoftwareRasterizer.stride - var9);
             }
             var13 = 32 + (-this.field_m.field_y + param0);
-            if (SoftwareRasterizer.field_b < var10 + (var13 - -var6)) {
+            if (SoftwareRasterizer.field_b < var10 + (var13 + var6)) {
               var13 = param0 - var10 - var6;
             }
             SoftwareRasterizer.d(var12, var13, var5_int + var9, var10 + var6, this.field_n);

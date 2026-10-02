@@ -31,7 +31,7 @@ final class da {
             param1 = param1 | param1 >>> 4;
             param1 = param1 | param1 >>> 8;
             param1 = param1 | param1 >>> 16;
-            return param1 - -1;
+            return param1 + 1;
         }
         return -15;
     }

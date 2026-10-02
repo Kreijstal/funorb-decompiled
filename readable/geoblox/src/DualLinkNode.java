@@ -17,7 +17,7 @@ class DualLinkNode extends IntrusiveNode {
     public static void c(byte param0) {
         invalidPasswordText = null;
         field_j = null;
-        int var1 = -128 / ((param0 - -33) / 50);
+        int var1 = -128 / ((param0 + 33) / 50);
         js5ConnectFullErrorText = null;
     }
 

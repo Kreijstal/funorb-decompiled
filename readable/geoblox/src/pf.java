@@ -210,7 +210,7 @@ final class pf extends ee implements ga, pl {
 
     final void a(int param0, int param1, byte param2, int param3) {
         if (!(this.field_L == null)) {
-            ng.field_F.a(this.field_L, this.field_v + param0 - -20, 15 + this.field_m + param1, -40 + this.field_r, this.field_h, 16777215, -1, 1, 0, ng.field_F.field_o);
+            ng.field_F.a(this.field_L, this.field_v + param0 + 20, 15 + this.field_m + param1, -40 + this.field_r, this.field_h, 16777215, -1, 1, 0, ng.field_F.field_o);
         }
         if (null != this.field_M) {
             SoftwareRasterizer.c(10 + param0, 134 + param1, -20 + this.field_r, 4210752);
@@ -589,7 +589,7 @@ final class pf extends ee implements ga, pl {
               if (this.field_G == param4) {
                 if (!this.field_N) {
                   if (!this.field_I) {
-                    hg.b(param1 + -23718);
+                    hg.b(param1 - 23718);
                   } else {
                     qc.g(0);
                   }
@@ -673,7 +673,7 @@ final class pf extends ee implements ga, pl {
                 if (var17 == null) {
                   decompiledRegionSelector0 = 0;
                 } else {
-                  var4 = 2 % ((param0 - -26) / 62);
+                  var4 = 2 % ((param0 + 26) / 62);
                   var3 = 0;
                   for (var5 = 0; var5 < var17.field_f; var5++) {
                     if (var13.field_n[var5] != null) {
@@ -1005,7 +1005,7 @@ final class pf extends ee implements ga, pl {
           this.field_m = 15;
           var7 = ng.field_F;
           if (this.field_L != null) {
-            this.field_m = this.field_m + (var7.b(this.field_L, this.field_r + -40, var7.field_o) + 5);
+            this.field_m = this.field_m + (var7.b(this.field_L, this.field_r - 40, var7.field_o) + 5);
           }
           var8 = jj.loginUsernameEmailText;
           var9 = th.a(k.c(120), 200);
@@ -1019,12 +1019,12 @@ final class pf extends ee implements ga, pl {
           dupTemp$0 = new hd(10, this.field_m, -20 + this.field_r, 25, this.field_J, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
           this.b((byte) -110, dupTemp$0);
-          this.field_m = this.field_m + (((el) ((Object) var12)).field_h - -5);
-          dupTemp$1 = new hd(10, this.field_m, this.field_r + -20, 25, this.field_P, false, 80, 3, var7, 16777215, qg.createPasswordText);
+          this.field_m = this.field_m + (((el) ((Object) var12)).field_h + 5);
+          dupTemp$1 = new hd(10, this.field_m, this.field_r - 20, 25, this.field_P, false, 80, 3, var7, 16777215, qg.createPasswordText);
           var13 = dupTemp$1;
           this.b((byte) -120, dupTemp$1);
           this.field_E.field_u = (bb) (this);
-          this.field_m = this.field_m + (((el) ((Object) var13)).field_h - -5);
+          this.field_m = this.field_m + (((el) ((Object) var13)).field_h + 5);
           if (this.field_M != null) {
             this.field_M.field_u = (bb) (this);
           }
@@ -1035,7 +1035,7 @@ final class pf extends ee implements ga, pl {
             this.field_E.a(30, this.field_r - 95, (byte) -92, this.field_m, 85);
             this.field_m = this.field_m + 60;
           } else {
-            this.field_E.a(30, -10 + this.field_r + -6, (byte) -33, this.field_m, 8);
+            this.field_E.a(30, -10 + this.field_r - 6, (byte) -33, this.field_m, 8);
             this.field_m = this.field_m + 35;
           }
           if (this.field_M != null) {

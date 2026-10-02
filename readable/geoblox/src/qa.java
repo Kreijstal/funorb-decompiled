@@ -253,7 +253,7 @@ final class qa {
                     if (param5 > param3) {
                       var7_int = 0;
                     } else {
-                      return var9 - -1 + -param1;
+                      return var9 + 1 - param1;
                     }
                   }
                   if ((var10 & 2) != 0) {
@@ -294,7 +294,7 @@ final class qa {
                     continue L1;
                   }
                 }
-                stackIn_66_0 = var9 - -1 + -param1;
+                stackIn_66_0 = var9 + 1 - param1;
                 decompiledRegionSelector0 = 1;
                 break L0;
               }
@@ -388,7 +388,7 @@ final class qa {
           frameStepTicksBeforeDecrement = af.avatarFrameStepTicks;
           af.avatarFrameStepTicks = af.avatarFrameStepTicks - 1;
           if (0 > frameStepTicksBeforeDecrement) {
-            if (uf.avatarFeedbackFrameIndex == 0 - -MenuScreen.avatarFeedbackFrameBase) {
+            if (uf.avatarFeedbackFrameIndex == 0 + MenuScreen.avatarFeedbackFrameBase) {
               uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 3;
               af.avatarFrameStepTicks = 20;
               pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
@@ -403,7 +403,7 @@ final class qa {
                 fieldTemp$2 = jf.avatarTintFadeTicks;
                 jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
                 if (fieldTemp$2 > 0) {
-                  rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) - -(int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
+                  rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
                   return;
                 } else {
                   return;
@@ -415,12 +415,12 @@ final class qa {
                 if (fieldTemp$3 <= 0) {
                   return;
                 } else {
-                  rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) - -(int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
+                  rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
                   return;
                 }
               }
             } else {
-              avatarFrameOffsetInSegment = uf.avatarFeedbackFrameIndex + -MenuScreen.avatarFeedbackFrameBase;
+              avatarFrameOffsetInSegment = uf.avatarFeedbackFrameIndex - MenuScreen.avatarFeedbackFrameBase;
               if (jk.avatarSteeringDirectionId == 1) {
                 if (avatarFrameOffsetInSegment > 1) {
                   uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex - 1;
@@ -437,7 +437,7 @@ final class qa {
                     fieldTemp$5 = jf.avatarTintFadeTicks;
                     jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
                     if (fieldTemp$5 > 0) {
-                      rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) - -(int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
+                      rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
                       return;
                     } else {
                       return;
@@ -447,7 +447,7 @@ final class qa {
                     fieldTemp$6 = jf.avatarTintFadeTicks;
                     jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
                     if (fieldTemp$6 > 0) {
-                      rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) - -(int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
+                      rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
                     }
                     return;
                   }
@@ -470,7 +470,7 @@ final class qa {
                       fieldTemp$8 = jf.avatarTintFadeTicks;
                       jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
                       if (fieldTemp$8 > 0) {
-                        rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) - -(int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
+                        rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
                       }
                       return;
                     }
@@ -493,7 +493,7 @@ final class qa {
                       fieldTemp$10 = jf.avatarTintFadeTicks;
                       jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
                       if (fieldTemp$10 > 0) {
-                        rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) - -(int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
+                        rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
                       }
                       return;
                     }
@@ -515,7 +515,7 @@ final class qa {
                       fieldTemp$12 = jf.avatarTintFadeTicks;
                       jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
                       if (fieldTemp$12 > 0) {
-                        rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) - -(int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
+                        rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
                       }
                       return;
                     } else {
@@ -535,7 +535,7 @@ final class qa {
                       fieldTemp$14 = jf.avatarTintFadeTicks;
                       jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
                       if (fieldTemp$14 > 0) {
-                        rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) - -(int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
+                        rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
                       }
                       return;
                     }
@@ -555,7 +555,7 @@ final class qa {
                     fieldTemp$16 = jf.avatarTintFadeTicks;
                     jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
                     if (fieldTemp$16 > 0) {
-                      rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) - -(int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
+                      rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
                     }
                     return;
                   }
@@ -579,7 +579,7 @@ final class qa {
                     fieldTemp$18 = jf.avatarTintFadeTicks;
                     jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
                     if (fieldTemp$18 > 0) {
-                      rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) - -(int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
+                      rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
                     }
                     return;
                   }
@@ -602,7 +602,7 @@ final class qa {
                     fieldTemp$20 = jf.avatarTintFadeTicks;
                     jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
                     if (fieldTemp$20 > 0) {
-                      rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) - -(int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
+                      rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
                     }
                     return;
                   }
@@ -624,7 +624,7 @@ final class qa {
                     fieldTemp$22 = jf.avatarTintFadeTicks;
                     jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
                     if (fieldTemp$22 > 0) {
-                      rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) - -(int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
+                      rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
                     }
                     return;
                   } else {
@@ -644,7 +644,7 @@ final class qa {
                     fieldTemp$24 = jf.avatarTintFadeTicks;
                     jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
                     if (fieldTemp$24 > 0) {
-                      rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) - -(int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
+                      rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
                     }
                     return;
                   }
@@ -664,7 +664,7 @@ final class qa {
                   fieldTemp$26 = jf.avatarTintFadeTicks;
                   jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
                   if (fieldTemp$26 > 0) {
-                    rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) - -(int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
+                    rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
                   }
                   return;
                 }
@@ -685,7 +685,7 @@ final class qa {
               if (fieldTemp$28 <= 0) {
                 return;
               } else {
-                rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) - -(int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
+                rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
                 return;
               }
             } else {
@@ -693,7 +693,7 @@ final class qa {
               fieldTemp$29 = jf.avatarTintFadeTicks;
               jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
               if (fieldTemp$29 > 0) {
-                rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) - -(int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
+                rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
                 return;
               } else {
                 return;

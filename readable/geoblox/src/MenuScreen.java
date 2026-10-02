@@ -161,7 +161,7 @@ abstract class MenuScreen {
           if (pointerX < this.hitRightX) {
             if (this.firstItemY <= pointerY) {
               if (param2 >= 20) {
-                var4 = (pointerY + -this.firstItemY) / this.itemSpacing;
+                var4 = (pointerY - this.firstItemY) / this.itemSpacing;
                 if (this.itemCount > var4) {
                   return var4;
                 } else {
@@ -212,7 +212,7 @@ abstract class MenuScreen {
                 stackIn_17_2 = stackIn_16_2;
                 stackIn_17_3 = 1;
               }
-              this.handleMenuPointer(stackIn_17_1, stackIn_17_2, stackIn_17_3 != 0, -(hitItemIndex * this.itemSpacing) + -this.firstItemY + he.field_d, false, bi.field_g);
+              this.handleMenuPointer(stackIn_17_1, stackIn_17_2, stackIn_17_3 != 0, -(hitItemIndex * this.itemSpacing) - this.firstItemY + he.field_d, false, bi.field_g);
             } else {
               this.pointerInteractionActive = false;
             }

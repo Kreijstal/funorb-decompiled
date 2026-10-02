@@ -62,7 +62,7 @@ final class ld {
               stackIn_4_0 = 1;
               decompiledRegionSelector0 = 0;
             } else {
-              if (0 == SoftwareRasterizer.framebuffer[var1_int - -circleHorizontalOffset]) {
+              if (0 == SoftwareRasterizer.framebuffer[var1_int + circleHorizontalOffset]) {
                 if (SoftwareRasterizer.framebuffer[var3] != 0) {
                   stackIn_11_0 = 1;
                   decompiledRegionSelector0 = 2;
@@ -74,7 +74,7 @@ final class ld {
                     L1: while (true) {
                       incrementValue$0 = circleVerticalOffset;
                       circleVerticalOffset++;
-                      circleError = circleError + (incrementValue$0 - -circleVerticalOffset);
+                      circleError = circleError + (incrementValue$0 + circleVerticalOffset);
                       var2 = var2 + SoftwareRasterizer.stride;
                       var1_int = var1_int - SoftwareRasterizer.stride;
                       if (playfieldRadiusSquared < circleError) {
@@ -103,7 +103,7 @@ final class ld {
                                       decompiledRegionSelector0 = 10;
                                       break L0;
                                     } else {
-                                      if (SoftwareRasterizer.framebuffer[var4 - -circleVerticalOffset] != 0) {
+                                      if (SoftwareRasterizer.framebuffer[var4 + circleVerticalOffset] != 0) {
                                         stackIn_45_0 = 1;
                                         decompiledRegionSelector0 = 11;
                                         break L0;

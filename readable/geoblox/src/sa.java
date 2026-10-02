@@ -148,7 +148,7 @@ final class sa extends RuntimeException {
           if (param1 != 37) {
             field_c = -0.44199917757712387;
           }
-          stackIn_3_0 = param0.b(param1 + -26135);
+          stackIn_3_0 = param0.b(param1 - 26135);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

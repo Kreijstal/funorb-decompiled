@@ -21,17 +21,17 @@ tool bytes; `funorb-stubs.jar` is the frozen compilation dependency. The
 [reading guide](GEOBLOX-READING-GUIDE.md) explains the named gameplay flow.
 
 The raw input is `games/geoblox` at
-`5123c321465e71a2b785cfeda64269ea11a376c6`. It comes from java-tools
-`d60879b1d9a3286dd2102782e13dffb0ae5c0c5e` and Deko
+`588ff14becf7fd429d53e929e85e073814c20259`. It comes from java-tools
+`67f22895e4161b3e81a7ceb93273b6680be7d2f0` and Deko
 `a572c4dd0f0174bfcd7777be53d7ceba2f970f18`. The adapted naming tool is
 `a0bc835957148b9b1e1f8221c59b79d899d22738`; its source archive SHA-256 is
 `cb10756aa3ecb28159c9b81f2fb78bf559b4111d9ad203819458b30d0d84cf8c`.
 
 The **decompiler repository source** SHA-256 is
-`5234c2b6ae7447c2bbdae83f46f0b689fd5cfe9b199ebd77dafdd0f3cf0bfd1e`:
+`ac8734ac19b0447c2aad49c20af07562f4e9d22c862c97c465b465b6e858a86f`:
 
 ```sh
-git archive --format=tar d60879b1d9a3286dd2102782e13dffb0ae5c0c5e | sha256sum
+git archive --format=tar 67f22895e4161b3e81a7ceb93273b6680be7d2f0 | sha256sum
 ```
 
 This identifies tracked decompiler source and its Git archive metadata. It is
@@ -122,12 +122,16 @@ audio and whole-game equivalence remain unverified. Text-writer guards <=23
 retain a PCM side effect outside the direct writer probe. These source checks
 do not establish FPS, heap or phone acceptance.
 
-The current generic decompiler normalizes 972 literal shift counts across
-90 files. For example, `<< -449443480` becomes `<< 8`. The opcode determines
-the width: int counts use five bits, long counts six. Every other Java token,
-all 21,185 declarations, 1,146 naming guards, 359 named local identities and
-388 override edges are unchanged. The new source/decompiler identity is an
-explicit `publication.sourceChange` in the same current manifest.
+The current generic decompiler removes 745 integral sign nodes across 132
+files: `x + (-y)` becomes `x - y`, and `x - (-y)` becomes `x + y`.
+Opcode width, narrowing boundaries, operand order, floating arithmetic and
+string operations remain intact. A complete attributed Java-tree audit matches
+all 303 files modulo only integral right-hand sign normalization and redundant
+parentheses. All 21,185 declarations, 1,146 naming guards, 359 named local
+identities and 388 override edges are unchanged. The source/decompiler identity
+is recorded by `publication.sourceChange` in the same current manifest.
+The prior cleanup of 972 literal shift counts remains, using five bits for int
+and six for long; dynamic distances retain their computations.
 
 In the pinned java-tools checkout, the focused regression command is:
 
@@ -135,12 +139,20 @@ In the pinned java-tools checkout, the focused regression command is:
 node test/cfrNumericNegation.test.js
 ```
 
-Its three groups include 24,324 native shift comparisons across normal and
-forced-dispatcher output, with literal boundaries, dynamic operands, side
-effects and failures. Complement checks and the 7,200 native exception-loop
-comparisons also pass. A clean Git source archive regenerates all 303 raw
-files and current diagnostics byte-for-byte. These checks establish the
-numeric rewrite's scope; they do not prove whole-game behavior.
+Its six groups include 20,350 native signed-term comparisons, 24,324 native
+shift comparisons and eight AST-audit acceptance/refusal fixtures. Normal and
+forced-dispatcher output cover boundaries, narrowing, side effects and failures.
+The source audit can be reproduced with the maintained helper:
+
+```sh
+javac -d /tmp/geoblox-audit test/helpers/IntegralTermAudit.java
+java -cp /tmp/geoblox-audit IntegralTermAudit PREVIOUS_RAW CURRENT_RAW FROZEN_STUBS_JAR
+```
+
+Complement checks and the 7,200 native exception-loop comparisons also pass.
+A clean Git source archive regenerates all 303 raw files and current diagnostics
+byte-for-byte. These checks establish the numeric rewrite's scope; they do not
+prove whole-game behavior.
 
 ## Update this export
 
@@ -160,7 +172,7 @@ numeric rewrite's scope; they do not prove whole-game behavior.
 
 | Java source tree | SHA-256 |
 | --- | --- |
-| Raw | `a9aaa3dfa046673a2b4e87a360d714692e53c393ca7263efd4a630c6f2e16a8e` |
-| Readable | `e5efdf6c00dbea2012f6eb4356749dad7d90e35848973f9a06a43a867c792c9a` |
+| Raw | `cdf74421a73a784554ef7946c2647fa0380f8a458a21e30e96ba951f4e650a97` |
+| Readable | `03470bae645cb1b9006d1d1bc6e395c20102677e5287184fb7639a4fae9a1974` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

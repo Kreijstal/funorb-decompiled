@@ -18,7 +18,7 @@ final class fe {
 
     public static void c(int param0) {
         field_h = null;
-        int var1 = 122 % ((param0 - -22) / 63);
+        int var1 = 122 % ((param0 + 22) / 63);
         field_j = null;
         field_e = null;
         field_a = null;
@@ -45,7 +45,7 @@ final class fe {
                       this.field_i = new java.util.zip.Inflater(true);
                     }
                     try {
-                      this.field_i.setInput(param1.field_j, param1.field_f - -10, param1.field_j.length - 8 - (param1.field_f + 10));
+                      this.field_i.setInput(param1.field_j, param1.field_f + 10, param1.field_j.length - 8 - (param1.field_f + 10));
                       if (param0 != -1) {
                         fe.a(76);
                       }

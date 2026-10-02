@@ -40,7 +40,7 @@ abstract class dd extends ee {
         int var2 = this.g(-75);
         int var3 = -this.field_H + var2;
         if (!(~var3 >= param0)) {
-            this.field_H = this.field_H + (var3 + 8 + -1) / 8;
+            this.field_H = this.field_H + (var3 + 8 - 1) / 8;
         }
         if (var3 < 0) {
             this.field_H = this.field_H + (-16 + (var3 + 1)) / 16;
@@ -190,7 +190,7 @@ abstract class dd extends ee {
     }
 
     boolean h(int param0) {
-        this.field_H = this.g(param0 + -297);
+        this.field_H = this.g(param0 - 297);
         if (param0 != 229) {
             return true;
         }

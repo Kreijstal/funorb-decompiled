@@ -221,7 +221,7 @@ abstract class dk {
         L1: {
           if (null != this.field_a) {
             if (this.field_a.length > 0) {
-              stackIn_7_0 = this.field_a[this.field_a.length - 1].field_a + -this.field_a[0].field_d;
+              stackIn_7_0 = this.field_a[this.field_a.length - 1].field_a - this.field_a[0].field_d;
               break L1;
             }
           }

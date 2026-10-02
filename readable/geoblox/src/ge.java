@@ -37,7 +37,7 @@ final class ge {
           var2 = 0;
           var3 = 0;
           L0: while (var2 < 8) {
-            this.field_g[var2] = f.a(cj.a((long)this.field_i[7 + var3], 255L), f.a(f.a(f.a(f.a(cj.a(1095216660480L, (long)this.field_i[var3 - -3] << 32), f.a(cj.a(255L, (long)this.field_i[var3 - -2]) << 40, f.a(cj.a((long)this.field_i[var3 + 1] << 48, 71776119061217280L), (long)this.field_i[var3] << 56))), cj.a((long)this.field_i[4 + var3] << 24, 4278190080L)), cj.a(16711680L, (long)this.field_i[var3 + 5] << 16)), cj.a((long)this.field_i[var3 - -6] << 8, 65280L)));
+            this.field_g[var2] = f.a(cj.a((long)this.field_i[7 + var3], 255L), f.a(f.a(f.a(f.a(cj.a(1095216660480L, (long)this.field_i[var3 + 3] << 32), f.a(cj.a(255L, (long)this.field_i[var3 + 2]) << 40, f.a(cj.a((long)this.field_i[var3 + 1] << 48, 71776119061217280L), (long)this.field_i[var3] << 56))), cj.a((long)this.field_i[4 + var3] << 24, 4278190080L)), cj.a(16711680L, (long)this.field_i[var3 + 5] << 16)), cj.a((long)this.field_i[var3 + 6] << 8, 65280L)));
             var3 += 8;
             var2++;
           }
@@ -53,7 +53,7 @@ final class ge {
               var4 = 0;
               var5 = 56;
               L9: while (var4 < 8) {
-                this.field_k[var3] = f.a(this.field_k[var3], qc.field_g[var4][cd.a(255, (int)(this.field_a[cd.a(7, var3 + -var4)] >>> var5))]);
+                this.field_k[var3] = f.a(this.field_k[var3], qc.field_g[var4][cd.a(255, (int)(this.field_a[cd.a(7, var3 - var4)] >>> var5))]);
                 var5 -= 8;
                 var4++;
               }
@@ -129,7 +129,7 @@ final class ge {
                 if (8L > param1 + (long)var7) {
                   this.field_h = (int)((long)this.field_h + param1);
                 } else {
-                  param1 = param1 - (long)(8 + -var7);
+                  param1 = param1 - (long)(8 - var7);
                   this.field_e = this.field_e + 1;
                   this.field_h = this.field_h + (-var7 + 8);
                   if (this.field_h == 512) {
@@ -270,10 +270,10 @@ final class ge {
               param0[1 + var5] = (byte)(int)(var6 >>> 48);
               param0[2 + var5] = (byte)(int)(var6 >>> 40);
               param0[var5 + 3] = (byte)(int)(var6 >>> 32);
-              param0[var5 - -4] = (byte)(int)(var6 >>> 24);
-              param0[var5 - -5] = (byte)(int)(var6 >>> 16);
+              param0[var5 + 4] = (byte)(int)(var6 >>> 24);
+              param0[var5 + 5] = (byte)(int)(var6 >>> 16);
               param0[6 + var5] = (byte)(int)(var6 >>> 8);
-              param0[var5 - -7] = (byte)(int)var6;
+              param0[var5 + 7] = (byte)(int)var6;
               var4_int++;
               var5 += 8;
             }
@@ -341,7 +341,7 @@ final class ge {
                     var3.c((byte) 95, ag.field_l);
                     li.field_a.a(100, 0, 13, var3.field_j);
                     qh.field_J = qh.field_J + 1;
-                    eb.field_b = 30000L + oa.a(param0 + -12446);
+                    eb.field_b = 30000L + oa.a(param0 - 12446);
                   }
                   if (qh.field_J == 3) {
                     if (0 < li.field_a.a((byte) 78)) {

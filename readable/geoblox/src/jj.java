@@ -12,7 +12,7 @@ final class jj {
 
     private final void a(long param0, int param1) {
         fj var4 = (fj) ((Object) this.field_f.a(param0, (byte) -72));
-        this.a(param1 + -117, var4);
+        this.a(param1 - 117, var4);
         if (param1 == 0) {
             return;
         }

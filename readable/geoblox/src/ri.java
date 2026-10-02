@@ -310,8 +310,8 @@ final class ri {
         if (param2 != 29497) {
             return;
         }
-        int var4 = (i.avatarMaskRaster.field_o >> 1) - -2;
-        fc.field_b[uf.avatarFeedbackFrameIndex].b(param0 + -var3, param1 + -var4, rj.avatarTintColor);
+        int var4 = (i.avatarMaskRaster.field_o >> 1) + 2;
+        fc.field_b[uf.avatarFeedbackFrameIndex].b(param0 - var3, param1 - var4, rj.avatarTintColor);
         vh.field_H[nd.avatarFeedbackModeId].b(-var3 + param0, -var4 + param1, rj.avatarTintColor);
     }
 

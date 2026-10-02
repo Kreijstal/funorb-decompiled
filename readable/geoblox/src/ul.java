@@ -354,7 +354,7 @@ final class ul {
             bk.field_b = new Sprite(var3, 3 * var4 / 4);
             bk.field_b.e();
             var2.c(0, 0);
-            cl.field_b = new Sprite(var3, var4 + -bk.field_b.height);
+            cl.field_b = new Sprite(var3, var4 - bk.field_b.height);
             cl.field_b.e();
             if (param0 != -21541) {
                 field_a = (Sprite) null;

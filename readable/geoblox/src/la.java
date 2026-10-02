@@ -53,7 +53,7 @@ final class la extends sh {
                 }
               }
               if (this.field_f == 1) {
-                var5_int = qa.field_a - this.field_D + -param3;
+                var5_int = qa.field_a - this.field_D - param3;
                 var6 = -this.field_H + (ue.field_e - param1);
                 if (this.field_v == var5_int) {
                   if (var6 == this.field_m) {
@@ -97,7 +97,7 @@ final class la extends sh {
                 ((la) (this)).field_v = stackIn_18_1 + stackIn_18_2;
               }
               if (this.field_m != this.field_G) {
-                var5_int = this.field_G + -this.field_m;
+                var5_int = this.field_G - this.field_m;
                 stackIn_23_0 = this;
 
                 stackIn_23_1 = this.field_m;
@@ -258,7 +258,7 @@ final class la extends sh {
                 stackIn_8_0 = 1;
                 decompiledRegionSelector0 = 1;
               } else {
-                this.field_H = -param0 + param5 + -this.field_m;
+                this.field_H = -param0 + param5 - this.field_m;
                 this.field_D = -param2 + (param4 - this.field_v);
                 lh.field_b = (la) (this);
                 return true;
@@ -319,7 +319,7 @@ final class la extends sh {
     }
 
     public static void g(byte param0) {
-        int var1 = 47 % ((param0 - -51) / 55);
+        int var1 = 47 % ((param0 + 51) / 55);
         field_E = null;
         field_I = null;
     }

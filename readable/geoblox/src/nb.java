@@ -82,7 +82,7 @@ final class nb {
             pointerX = (int)(320.0 + (var7 * Math.cos((double)(-el.gameplaySession.boardAngleRadians)) - var9 * Math.sin((double)(-el.gameplaySession.boardAngleRadians))));
             pointerY = (int)(Math.sin((double)(-el.gameplaySession.boardAngleRadians)) * var7 + Math.cos((double)(-el.gameplaySession.boardAngleRadians)) * var9 + 240.0);
             if (specialKinds) {
-              var11 = (variantId - -categoryId) % 4;
+              var11 = (variantId + categoryId) % 4;
               var12 = 0;
               if (var11 == 0) {
                 var12 = 2;

@@ -48,7 +48,7 @@ final class GameplayEntity extends DualLinkNode {
               if (1 != this.entitySpriteKindId) {
                 vf.spriteScratchRaster.e();
                 SoftwareRasterizer.c();
-                this.entitySprite.c(-this.entitySprite.field_s + vf.spriteScratchRaster.field_s >> 1, vf.spriteScratchRaster.field_o + -this.entitySprite.field_o >> 1);
+                this.entitySprite.c(-this.entitySprite.field_s + vf.spriteScratchRaster.field_s >> 1, vf.spriteScratchRaster.field_o - this.entitySprite.field_o >> 1);
                 k.a(0, 0, vf.spriteScratchRaster.field_s, -27085, vf.spriteScratchRaster.field_o);
                 sh.field_y.a(param0 + 16351);
                 vf.spriteScratchRaster.rotateSmooth(vf.spriteScratchRaster.field_s << 3, vf.spriteScratchRaster.field_o << 3, rotatedEntityX << 4, rotatedEntityY << 4, (int)(65535.0 * ((double)(-el.gameplaySession.boardAngleRadians + this.spriteAngleRadians) / 6.283185307179586)), 4096);
@@ -63,7 +63,7 @@ final class GameplayEntity extends DualLinkNode {
               sh.field_y.a(param0 + 16351);
               vf.spriteScratchRaster.rotateSmooth(vf.spriteScratchRaster.field_s << 3, vf.spriteScratchRaster.field_o << 3, rotatedEntityX << 4, rotatedEntityY << 4, (int)(65535.0 * ((double)(-el.gameplaySession.boardAngleRadians + this.spriteAngleRadians) / 6.283185307179586)), 4096);
             } else {
-              this.entitySprite.b(-(this.entitySprite.field_s >> 1) + rotatedEntityX, rotatedEntityY + -(this.entitySprite.field_o >> 1));
+              this.entitySprite.b(-(this.entitySprite.field_s >> 1) + rotatedEntityX, rotatedEntityY - (this.entitySprite.field_o >> 1));
             }
           }
           return;
@@ -77,10 +77,10 @@ final class GameplayEntity extends DualLinkNode {
         SoftwareRasterizer.c();
         this.entitySprite.rotateSmooth(this.entitySprite.field_s << 3, this.entitySprite.field_o << 3, vf.spriteScratchRaster.field_s << 3, vf.spriteScratchRaster.field_o << 3, (int)(65535.0 * ((double)this.spriteAngleRadians / 6.283185307179586)), 4096);
         bk.boardOwnershipRaster.e();
-        vf.spriteScratchRaster.a(-(vf.spriteScratchRaster.field_s / 2) + (int)this.positionX, (int)this.positionY + -(vf.spriteScratchRaster.field_o / param0), this.entityId - -1);
+        vf.spriteScratchRaster.a(-(vf.spriteScratchRaster.field_s / 2) + (int)this.positionX, (int)this.positionY - vf.spriteScratchRaster.field_o / param0, this.entityId + 1);
         sh.field_y.a(255);
         bk.boardOwnershipRaster.e();
-        i.avatarMaskRaster.a(320 + el.gameplaySession.boardMaskOffsetX, 240 - -el.gameplaySession.boardMaskOffsetY, 16777215);
+        i.avatarMaskRaster.a(320 + el.gameplaySession.boardMaskOffsetX, 240 + el.gameplaySession.boardMaskOffsetY, 16777215);
         sh.field_y.a(param0 + 253);
     }
 
@@ -125,9 +125,9 @@ final class GameplayEntity extends DualLinkNode {
         }
         sentinelDivisionGuard = 2 % ((-23 - param0) / 60);
         sh.field_y.a(255);
-        entityDrawX = rotatedEntityX + -(vf.spriteScratchRaster.field_s >> 1);
+        entityDrawX = rotatedEntityX - (vf.spriteScratchRaster.field_s >> 1);
         entityDrawY = rotatedEntityY - (vf.spriteScratchRaster.field_o >> 1);
-        fadeOpacity = (int)(0.5 + Math.sin((double)(this.remainingLifetimeTicks + -this.initialLifetimeTicks + this.initialLifetimeTicks >> 4)) * (double)(100 * (this.initialLifetimeTicks - this.remainingLifetimeTicks)) / (double)this.initialLifetimeTicks) - (-(100 * (this.initialLifetimeTicks - this.remainingLifetimeTicks) / this.initialLifetimeTicks) - 56);
+        fadeOpacity = (int)(0.5 + Math.sin((double)(this.remainingLifetimeTicks - this.initialLifetimeTicks + this.initialLifetimeTicks >> 4)) * (double)(100 * (this.initialLifetimeTicks - this.remainingLifetimeTicks)) / (double)this.initialLifetimeTicks) - (-(100 * (this.initialLifetimeTicks - this.remainingLifetimeTicks) / this.initialLifetimeTicks) - 56);
         if (fadeOpacity > 256) {
           fadeOpacity = 256;
         } else {
@@ -179,8 +179,8 @@ final class GameplayEntity extends DualLinkNode {
         int controlFlowGuard;
         int[] framebufferPixels;
         controlFlowGuard = Geoblox.field_C;
-        clipLeftX = (int)this.positionX - ((vf.spriteScratchRaster.field_s >> 1) - -4);
-        clipTopY = -4 + -(vf.spriteScratchRaster.field_o >> 1) + (int)this.positionY;
+        clipLeftX = (int)this.positionX - ((vf.spriteScratchRaster.field_s >> 1) + 4);
+        clipTopY = -4 - (vf.spriteScratchRaster.field_o >> 1) + (int)this.positionY;
         clippedWidth = 8 + vf.spriteScratchRaster.field_s;
         clippedHeight = 8 + vf.spriteScratchRaster.field_o;
         if (clipLeftX < 0) {
@@ -213,7 +213,7 @@ final class GameplayEntity extends DualLinkNode {
                   framebufferIndex = framebufferIndex + rowSkip;
                   continue L4;
                 } else {
-                  if (~framebufferPixels[framebufferIndex] == ~(this.entityId - -1)) {
+                  if (~framebufferPixels[framebufferIndex] == ~(this.entityId + 1)) {
                     framebufferPixels[framebufferIndex] = 0;
                     framebufferIndex++;
                     negativeColumnCounter++;
@@ -300,9 +300,9 @@ final class GameplayEntity extends DualLinkNode {
         if (param0 <= 46) {
             this.paletteBlueDelta = 17;
         }
-        vf.spriteScratchRaster.g(this.entityId - -1);
+        vf.spriteScratchRaster.g(this.entityId + 1);
         SecondaryDeque.contactProbeRaster.e();
-        vf.spriteScratchRaster.a(-SecondaryDeque.contactProbeOffsetX + -(vf.spriteScratchRaster.field_s >> 1) + ng.field_G, -(vf.spriteScratchRaster.field_o >> 1) + (td.field_E + -SecondaryDeque.contactProbeOffsetY), 1 + this.entityId);
+        vf.spriteScratchRaster.a(-SecondaryDeque.contactProbeOffsetX - (vf.spriteScratchRaster.field_s >> 1) + ng.field_G, -(vf.spriteScratchRaster.field_o >> 1) + (td.field_E - SecondaryDeque.contactProbeOffsetY), 1 + this.entityId);
         sh.field_y.a(255);
     }
 
@@ -466,7 +466,7 @@ final class GameplayEntity extends DualLinkNode {
                   this.sameCategoryEntityCount = this.sameCategoryEntityCount - 1;
                 }
                 if (5 > relatedEntitySearchIndex) {
-                  sf.a(this.relatedEntities, 1 + relatedEntitySearchIndex, this.relatedEntities, relatedEntitySearchIndex, this.relatedEntityCount + -relatedEntitySearchIndex);
+                  sf.a(this.relatedEntities, 1 + relatedEntitySearchIndex, this.relatedEntities, relatedEntitySearchIndex, this.relatedEntityCount - relatedEntitySearchIndex);
                 }
                 this.relatedEntities[this.relatedEntityCount] = null;
               } else {
@@ -521,9 +521,9 @@ final class GameplayEntity extends DualLinkNode {
         entityOffsetY = -240.0f + this.positionY;
         rotatedEntityX = (int)(Math.cos((double)el.gameplaySession.boardAngleRadians) * (double)entityOffsetX - (double)entityOffsetY * Math.sin((double)el.gameplaySession.boardAngleRadians) + 320.0);
         rotatedEntityY = (int)((double)entityOffsetX * Math.sin((double)el.gameplaySession.boardAngleRadians) + Math.cos((double)el.gameplaySession.boardAngleRadians) * (double)entityOffsetY + 240.0);
-        clipLeftX = -(vf.spriteScratchRaster.field_s / 2) + (rotatedEntityX - 4 + -SecondaryDeque.contactProbeOffsetX);
-        clipTopY = -SecondaryDeque.contactProbeOffsetY + -4 + (rotatedEntityY - vf.spriteScratchRaster.field_o / 2);
-        clippedSpriteWidth = vf.spriteScratchRaster.field_s - -8;
+        clipLeftX = -(vf.spriteScratchRaster.field_s / 2) + (rotatedEntityX - 4 - SecondaryDeque.contactProbeOffsetX);
+        clipTopY = -SecondaryDeque.contactProbeOffsetY - 4 + (rotatedEntityY - vf.spriteScratchRaster.field_o / 2);
+        clippedSpriteWidth = vf.spriteScratchRaster.field_s + 8;
         if (clipLeftX < 0) {
           clippedSpriteWidth = clippedSpriteWidth + clipLeftX;
           clipLeftX = 0;
@@ -557,7 +557,7 @@ final class GameplayEntity extends DualLinkNode {
                 framebufferIndex = framebufferIndex + framebufferRowSkip;
                 continue L5;
               } else {
-                if (~(this.entityId - -1) == ~backgroundPixels[framebufferIndex]) {
+                if (~(this.entityId + 1) == ~backgroundPixels[framebufferIndex]) {
                   backgroundPixels[framebufferIndex] = 0;
                   framebufferIndex++;
                   negativeColumnCounter++;
@@ -599,7 +599,7 @@ final class GameplayEntity extends DualLinkNode {
         double velocityNormalizationScale = (double)og.entityMotionSpeed / Math.sqrt((double)(velocityX * velocityX + velocityY * velocityY));
         this.velocityX = (float)((double)this.velocityX * velocityNormalizationScale);
         this.velocityY = (float)((double)this.velocityY * velocityNormalizationScale);
-        int var14 = -96 / ((param0 - -19) / 53);
+        int var14 = -96 / ((param0 + 19) / 53);
         this.spriteAngleRadians = 0.0f;
         this.sameCategoryEntityCount = 0;
         this.sameVariantEntityCount = 0;
@@ -627,7 +627,7 @@ final class GameplayEntity extends DualLinkNode {
         if (this.entitySpriteKindId == 1) {
             vf.spriteScratchRaster.e();
             SoftwareRasterizer.c();
-            this.entitySprite.b(vf.spriteScratchRaster.field_s + -this.entitySprite.field_s >> 1, -this.entitySprite.field_o + vf.spriteScratchRaster.field_o >> 1, this.interpolatedPaletteColor);
+            this.entitySprite.b(vf.spriteScratchRaster.field_s - this.entitySprite.field_s >> 1, -this.entitySprite.field_o + vf.spriteScratchRaster.field_o >> 1, this.interpolatedPaletteColor);
             oc.boardSceneRaster.e();
             vf.spriteScratchRaster.rotateSmooth(vf.spriteScratchRaster.field_s << 3, vf.spriteScratchRaster.field_o << 3, (int)this.positionX << 4, (int)this.positionY << 4, (int)((double)this.spriteAngleRadians / 6.283185307179586 * 65535.0), 4096);
         } else {

@@ -42,7 +42,7 @@ final class ek {
             var12 = (var10 << 16) / param4;
             var13 = (var11 << 16) / param0;
             if (param2.trimX > 0) {
-              var14 = ((param2.trimX << 16) + (var12 + -1)) / var12;
+              var14 = ((param2.trimX << 16) + (var12 - 1)) / var12;
               var8 = var8 + (-(param2.trimX << 16) + var12 * var14);
               param5 = param5 + var14;
             }
@@ -57,9 +57,9 @@ final class ek {
             if (var11 > var7) {
               param0 = (var13 + (-var9 + (var7 << 16)) - 1) / var13;
             }
-            var14 = param5 - -(SoftwareRasterizer.stride * param3);
+            var14 = param5 + SoftwareRasterizer.stride * param3;
             var15 = SoftwareRasterizer.stride - param4;
-            if (SoftwareRasterizer.clipBottom < param3 - -param0) {
+            if (SoftwareRasterizer.clipBottom < param3 + param0) {
               param0 = param0 - (-SoftwareRasterizer.clipBottom + param3 + param0);
             }
             if (SoftwareRasterizer.clipTop > param3) {
@@ -74,7 +74,7 @@ final class ek {
               param4 = param4 - var16;
             }
             if (param5 < SoftwareRasterizer.clipLeft) {
-              var16 = SoftwareRasterizer.clipLeft + -param5;
+              var16 = SoftwareRasterizer.clipLeft - param5;
               var14 = var14 + var16;
               var15 = var15 + var16;
               var8 = var8 + var16 * var12;

@@ -28,7 +28,7 @@ class el extends IntrusiveNode {
         int var4 = 0;
         int var5 = 0;
         if (!this.e((byte) 54)) {
-            var4 = 71 / ((param0 - -40) / 63);
+            var4 = 71 / ((param0 + 40) / 63);
             var5 = param2;
             if (var5 != 80) {
                 return false;
@@ -38,7 +38,7 @@ class el extends IntrusiveNode {
         if (this.a(param2, 13, param1, (el) (this))) {
             return true;
         }
-        var4 = 71 / ((param0 - -40) / 63);
+        var4 = 71 / ((param0 + 40) / 63);
         var5 = param2;
         if (var5 != 80) {
             return false;
@@ -205,7 +205,7 @@ class el extends IntrusiveNode {
         if (param2 < this.field_m + param3) {
             return false;
         }
-        if (param0 >= param4 + this.field_v - -this.field_r) {
+        if (param0 >= param4 + this.field_v + this.field_r) {
             return false;
         }
         if (this.field_h + (this.field_m + param3) > param2) {

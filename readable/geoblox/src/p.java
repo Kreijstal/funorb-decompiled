@@ -71,17 +71,17 @@ final class p extends IntrusiveNode {
             var12 = param1[3] * var21 + var22 * param1[4] + var23 * param1[5] >> 14;
             var18 = param1[11] * var23 + (param1[10] * var22 + param1[9] * var21) >> 14;
             var15 = param1[6] * var21 - (-(param1[7] * var22) - param1[8] * var23) >> 14;
-            var16 = var25 * param1[7] + (var24 * param1[6] - -(var26 * param1[8])) >> 14;
-            var14 = var29 * param1[5] + param1[3] * var27 - -(param1[4] * var28) >> 14;
-            var19 = param1[10] * var25 + var24 * param1[9] - -(param1[11] * var26) >> 14;
+            var16 = var25 * param1[7] + (var24 * param1[6] + var26 * param1[8]) >> 14;
+            var14 = var29 * param1[5] + param1[3] * var27 + param1[4] * var28 >> 14;
+            var19 = param1[10] * var25 + var24 * param1[9] + param1[11] * var26 >> 14;
             var20 = var27 * param1[9] + var28 * param1[10] + param1[11] * var29 >> 14;
             var17 = param1[8] * var29 + param1[6] * var27 + var28 * param1[7] >> 14;
             var21 = param1[0] - param0[0];
             var22 = -param0[1] + param1[1];
-            var23 = param1[2] + -param0[2];
+            var23 = param1[2] - param0[2];
             var9 = param0[3] * var21 - (-(var22 * param0[4]) - param0[5] * var23) >> -ok.field_g + 16;
             var10 = var23 * param0[8] + (var21 * param0[6] + var22 * param0[7]) >> 16 - ok.field_g;
-            var11 = param0[11] * var23 + var21 * param0[9] - -(var22 * param0[10]) >> 16;
+            var11 = param0[11] * var23 + var21 * param0[9] + var22 * param0[10] >> 16;
             if (!param3) {
               p.b(-2);
             }
@@ -95,7 +95,7 @@ final class p extends IntrusiveNode {
                     var24 = param2.field_O[var23];
                     var25 = param2.field_q[var23];
                     var26 = param2.field_K[var23];
-                    var27 = (var24 * var12 + var25 * var15 - -(var18 * var26) >> -ok.field_g + 16) + var9;
+                    var27 = (var24 * var12 + var25 * var15 + var18 * var26 >> -ok.field_g + 16) + var9;
                     var28 = var10 + (var13 * var24 + var25 * var16 + var26 * var19 >> 16 - ok.field_g);
                     var29 = var11 + (var26 * var20 + var14 * var24 + var17 * var25 >> 16);
                     stackIn_66_0 = -51;
@@ -108,7 +108,7 @@ final class p extends IntrusiveNode {
                       L6: {
                         if (stackIn_66_0 >= stackIn_66_1) {
                           sh.field_x[var23] = var27 / var29 + var21;
-                          dj.field_N[var23] = var22 - -(var28 / var29);
+                          dj.field_N[var23] = var22 + var28 / var29;
                           if (~var29 > ~var7_int) {
                             var7_int = var29;
                           }
@@ -152,7 +152,7 @@ final class p extends IntrusiveNode {
                                           var25 = param2.field_d[var23];
                                           var26 = param2.field_C[var23];
                                           ii.field_d[var23] = (var12 * var24 - (-(var15 * var25) - var18 * var26) >> 16) + var9;
-                                          pg.field_d[var23] = var10 - -(var26 * var19 + var16 * var25 + var24 * var13 >> 16);
+                                          pg.field_d[var23] = var10 + (var26 * var19 + var16 * var25 + var24 * var13 >> 16);
                                           kf.field_a[var23] = (var26 * var20 + (var17 * var25 + var14 * var24) >> 16) + var11;
                                           var24 = param2.field_x[var23];
                                           var25 = param2.field_a[var23];
@@ -164,7 +164,7 @@ final class p extends IntrusiveNode {
                                           var25 = param2.field_p[var23];
                                           var26 = param2.field_b[var23];
                                           qe.field_c[var23] = (var25 * var15 + (var12 * var24 + var26 * var18) >> 16) + var9;
-                                          ba.field_h[var23] = var10 - -(var24 * var13 + (var16 * var25 + var19 * var26) >> 16);
+                                          ba.field_h[var23] = var10 + (var24 * var13 + (var16 * var25 + var19 * var26) >> 16);
                                           hg.field_c[var23] = var11 + (var26 * var20 + var25 * var17 + var14 * var24 >> 16);
                                           var23++;
                                           if (var30 != 0) {
@@ -218,7 +218,7 @@ final class p extends IntrusiveNode {
                               var20 = param2.field_t[var18];
                               var21 = param2.field_i[var18];
                               ok.field_h[var18] = var21 * var15 + (var12 * var20 + var19 * var9) >> 16;
-                              oa.field_f[var18] = var16 * var21 + (var19 * var10 - -(var20 * var13)) >> 16;
+                              oa.field_f[var18] = var16 * var21 + (var19 * var10 + var20 * var13) >> 16;
                               gi.field_b[var18] = var14 * var20 + (var11 * var19 + var17 * var21) >> 16;
                               var18++;
                               if (var30 == 0) {

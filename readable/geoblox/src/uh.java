@@ -216,7 +216,7 @@ final class uh extends ac {
                 }
                 var13 = (GameplayEntity) ((Object) SecondaryDeque.spawnQueue.firstForIteration(0));
                 L2: while (var13 != null) {
-                  var13.drawFadingEntity(param0 + -4830);
+                  var13.drawFadingEntity(param0 - 4830);
                   var13 = (GameplayEntity) ((Object) SecondaryDeque.spawnQueue.nextForIteration(1));
                 }
                 decompiledRegionSelector0 = 1;

@@ -198,7 +198,7 @@ final class r extends f implements pl {
                     return null;
                   }
                 } else {
-                  if (param0.charAt(var2_int + -1) != 34) {
+                  if (param0.charAt(var2_int - 1) != 34) {
                     stackIn_13_0 = ii.field_h;
                     decompiledRegionSelector0 = 2;
                   } else {

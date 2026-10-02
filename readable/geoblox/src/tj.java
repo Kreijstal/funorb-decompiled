@@ -19,7 +19,7 @@ final class tj {
             var4 = var6.field_f;
             var6.d((byte) 127, 1);
             var6.d((byte) 124, param2.field_g);
-            var6.c(param2.field_j, param1 + -6048);
+            var6.c(param2.field_j, param1 - 6048);
             var6.c((byte) 95, param2.field_k);
             var6.c((byte) 95, param2.field_h);
             var6.c((byte) 95, param2.field_l);
@@ -83,7 +83,7 @@ final class tj {
 
     final static void c(byte param0) {
         ff.field_a = null;
-        int var1 = 59 % ((param0 - -30) / 37);
+        int var1 = 59 % ((param0 + 30) / 37);
         hh.field_a = null;
     }
 
@@ -111,7 +111,7 @@ final class tj {
                           if (!dc.field_c.a("commonui", (byte) -128)) {
                             return 80;
                           } else {
-                            if (hb.field_n.a(param0 + -73)) {
+                            if (hb.field_n.a(param0 - 73)) {
                               if (!hb.field_n.b(true)) {
                                 return 86;
                               } else {
@@ -144,7 +144,7 @@ final class tj {
                     if (!dc.field_c.a("commonui", (byte) -128)) {
                       return 80;
                     } else {
-                      if (hb.field_n.a(param0 + -73)) {
+                      if (hb.field_n.a(param0 - 73)) {
                         if (!hb.field_n.b(true)) {
                           return 86;
                         } else {

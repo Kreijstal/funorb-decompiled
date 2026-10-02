@@ -223,7 +223,7 @@ final class em {
                 var10.field_f = 5;
                 var3 = var10.c((byte) 34);
                 var10.field_f = var10.field_f + var3 * 72;
-                var13 = new byte[var10.field_j.length + -var10.field_f];
+                var13 = new byte[var10.field_j.length - var10.field_f];
                 var11 = var13;
                 var4 = var11;
                 var10.b(29915, var13.length, var13, 0);

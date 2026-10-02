@@ -106,7 +106,7 @@ final class tc {
                     var5 = var8;
                     var5 = var8;
                     if (param1.length() != 0) {
-                        var5 = var8 + "; Expires=" + md.a((byte) -58, oa.a(-12520) - -94608000000L) + "; Max-Age=" + 94608000L;
+                        var5 = var8 + "; Expires=" + md.a((byte) -58, oa.a(-12520) + 94608000000L) + "; Max-Age=" + 94608000L;
                     } else {
                         var5 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
                     }

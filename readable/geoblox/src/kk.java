@@ -110,7 +110,7 @@ final class kk extends ji {
                             var4 = 10;
                           }
                           if (0 >= var4) {
-                            var5 = this.field_f.field_A.field_j.length + -this.field_f.field_E;
+                            var5 = this.field_f.field_A.field_j.length - this.field_f.field_E;
                             var6 = 512 - this.field_f.field_D;
                             if (-this.field_f.field_A.field_f + var5 < var6) {
                               var6 = -this.field_f.field_A.field_f + var5;
@@ -124,7 +124,7 @@ final class kk extends ji {
                                 var17 = 0;
                                 var7 = var17;
                                 L14: while (var6 > var17) {
-                                  this.field_f.field_A.field_j[this.field_f.field_A.field_f - -var17] = (byte)h.a((int) this.field_f.field_A.field_j[this.field_f.field_A.field_f + var17], (int) this.field_i);
+                                  this.field_f.field_A.field_j[this.field_f.field_A.field_f + var17] = (byte)h.a((int) this.field_f.field_A.field_j[this.field_f.field_A.field_f + var17], (int) this.field_i);
                                   var17++;
                                 }
                                 break L13;
@@ -256,7 +256,7 @@ final class kk extends ji {
                 this.field_b = this.field_b + 1;
                 this.field_q = -2;
                 this.field_u = null;
-                if (0 == this.a(param0 + -216)) {
+                if (0 == this.a(param0 - 216)) {
                   if (this.a(false) == 0) {
                     return true;
                   }
@@ -413,7 +413,7 @@ final class kk extends ji {
         if (param1 != -62) {
             kk.i(118);
         }
-        return am.a(param1 + -10, param0, false, 1, true, false);
+        return am.a(param1 - 10, param0, false, 1, true, false);
     }
 
     public kk() {

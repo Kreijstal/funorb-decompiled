@@ -57,7 +57,7 @@ abstract class pb extends DualLinkNode {
               var10.setColor(java.awt.Color.black);
               if (!param3) {
                 var10.drawRect(1, 1, 301, 31);
-                var10.fillRect(3 * param0 + 2, 2, 300 + -(3 * param0), 30);
+                var10.fillRect(3 * param0 + 2, 2, 300 - 3 * param0, 30);
                 var10.setFont(hh.field_a);
                 var10.setColor(java.awt.Color.white);
                 var10.drawString(param4, (-(6 * param4.length()) + 304) / 2, 22);
@@ -69,8 +69,8 @@ abstract class pb extends DualLinkNode {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;
-              var7 = kh.field_d / 2 + -152;
-              var8 = ok.field_c / 2 + -18;
+              var7 = kh.field_d / 2 - 152;
+              var8 = ok.field_c / 2 - 18;
               var9.setColor(param1);
               var9.drawRect(var7, var8, 303, 33);
               var9.fillRect(var7 + 2, 2 + var8, 3 * param0, 30);
@@ -90,7 +90,7 @@ abstract class pb extends DualLinkNode {
               } else {
                 var9.setFont(hh.field_a);
                 var9.setColor(java.awt.Color.white);
-                var9.drawString(SpriteState.field_q, kh.field_d / 2 + -(6 * SpriteState.field_q.length() / 2), -26 + ok.field_c / 2);
+                var9.drawString(SpriteState.field_q, kh.field_d / 2 - 6 * SpriteState.field_q.length() / 2, -26 + ok.field_c / 2);
                 return;
               }
             }

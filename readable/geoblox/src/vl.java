@@ -213,9 +213,9 @@ final class vl extends IntrusiveNode {
                 var6 = param0[2].field_s;
                 var7 = param0[1].field_s;
                 param0[0].b(param3, param2);
-                param0[2].b(param3 + param1 + -var6, param2);
+                param0[2].b(param3 + param1 - var6, param2);
                 SoftwareRasterizer.a(da.field_d);
-                SoftwareRasterizer.b(param3 + var5_int, param2, param3 - -param1 - var6, param2 - -param0[1].field_o);
+                SoftwareRasterizer.b(param3 + var5_int, param2, param3 + param1 - var6, param2 + param0[1].field_o);
                 var8 = var5_int + param3;
                 var9 = param1 + (param3 - var6);
                 for (param3 = var8; param3 < var9; param3 = param3 + var7) {
@@ -634,9 +634,9 @@ final class vl extends IntrusiveNode {
                 for (var29 = 2; var46.length > var29; var29 += 2) {
                   var30 = var46[var29];
                   var31 = var15[1 + var29];
-                  var32 = var28 * (var30 - var27) - -((-var27 + var30) / 2);
+                  var32 = var28 * (var30 - var27) + (-var27 + var30) / 2;
                   for (var33 = var27; var30 > var33; var33++) {
-                    var34 = pk.a(var30 + -var27, (byte) -6, var32);
+                    var34 = pk.a(var30 - var27, (byte) -6, var32);
                     this.field_o[var33] = (byte)(32 + this.field_o[var33] * var34 >> 6);
                     var32 = var32 + (var31 - var28);
                   }
@@ -661,7 +661,7 @@ final class vl extends IntrusiveNode {
                 var27 = var47[0];
                 var28 = var47[1] << 1;
                 for (var29 = 0; var27 > var29; var29++) {
-                  var30 = (255 & this.field_m[var29]) - -var28;
+                  var30 = (255 & this.field_m[var29]) + var28;
                   if (var30 < 0) {
                     var30 = 0;
                   }
@@ -673,13 +673,13 @@ final class vl extends IntrusiveNode {
                 var29 = 2;
                 L39: while (var29 < var47.length) {
                   var30 = var47[var29];
-                  var31 = var16[var29 - -1] << 1;
+                  var31 = var16[var29 + 1] << 1;
                   var32 = (var30 - var27) * var28 + (-var27 + var30) / 2;
                   var37 = var27;
                   var33 = var37;
                   L43: while (var30 > var37) {
-                    var34 = pk.a(var30 + -var27, (byte) -6, var32);
-                    var35 = (this.field_m[var37] & 255) - -var34;
+                    var34 = pk.a(var30 - var27, (byte) -6, var32);
+                    var35 = (this.field_m[var37] & 255) + var34;
                     if (var35 < 0) {
                       var35 = 0;
                     }
@@ -695,7 +695,7 @@ final class vl extends IntrusiveNode {
                   var27 = var30;
                 }
                 for (var30 = var27; var30 < 128; var30++) {
-                  var31 = (this.field_m[var30] & 255) - -var28;
+                  var31 = (this.field_m[var30] & 255) + var28;
                   if (var31 < 0) {
                     var31 = 0;
                   }

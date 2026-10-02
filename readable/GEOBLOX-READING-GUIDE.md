@@ -1,4 +1,4 @@
-# Reading GeoBlox pass 27
+# Reading GeoBlox pass 28
 
 The readable tree uses semantic names without opaque suffixes. The symbol map
 keeps the original spelling and JVM identity of every declaration, so
@@ -343,9 +343,17 @@ covered by these added fixtures.
 The generic decompiler now spells literal shift distances using their JVM
 width. The tint channels above use `<< 16` and `<< 8`; sprite and board-center
 calculations use readable right-shift distances. Int shifts mask with 31 and
-long shifts with 63. This changes 972 constants across 90 files and preserves
-every other Java token, declaration identity and naming rule. Dynamic distances
+long shifts with 63. The prior pass changed 972 constants across 90 files
+while preserving every other Java token, declaration identity and naming rule. Dynamic distances
 and computations that can throw retain their expressions and evaluation order.
+
+Integral right-hand signs are now canonical. For example,
+`avatarFeedbackFrameIndex + -frameBase` becomes
+`avatarFeedbackFrameIndex - frameBase`, and negative literal subtraction
+becomes addition. This removes 745 sign nodes across
+132 files. Cast boundaries and floating expressions are preserved; the typed
+source audit allows only these integral rewrites and parentheses. No branches
+are factored or operands reordered by this pass.
 
 This is a reading map of the recovered source, not a whole-game behavioral
 proof. Several guards, scratch carriers and shared helper names remain opaque.

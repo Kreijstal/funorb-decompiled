@@ -133,7 +133,7 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
         try {
             this.field_c = param0;
             this.field_a = param2;
-            this.field_d = new int[param0 * param2 - -1];
+            this.field_d = new int[param0 * param2 + 1];
             this.field_j = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
             this.field_e = param1.createImage((java.awt.image.ImageProducer) (this));
             this.a(true);
@@ -171,7 +171,7 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
         var13 = Geoblox.field_C;
         try {
           var5_int = param1 + param4;
-          var6 = param0 - -param3;
+          var6 = param0 + param3;
           if (param4 <= SoftwareRasterizer.clipLeft) {
             stackIn_4_0 = SoftwareRasterizer.clipLeft;
           } else {
@@ -201,7 +201,7 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
               if (param4 >= SoftwareRasterizer.clipLeft) {
                 if (param4 < SoftwareRasterizer.clipRight) {
                   var11 = param4 + var8 * SoftwareRasterizer.stride;
-                  var12 = var10 + 1 + -var8 >> 1;
+                  var12 = var10 + 1 - var8 >> 1;
                   L6: while (true) {
                     var12--;
                     if (0 > var12) {
@@ -254,7 +254,7 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
             L11: {
               if (SoftwareRasterizer.clipTop <= param0) {
                 if (SoftwareRasterizer.clipBottom > var6) {
-                  var11 = SoftwareRasterizer.stride * var6 + (var7 - -(1 & -param0 + var6));
+                  var11 = SoftwareRasterizer.stride * var6 + (var7 + (1 & -param0 + var6));
                   var12 = 1 - (-var9 + var7) >> 1;
                   L12: while (true) {
                     var12--;

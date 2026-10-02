@@ -104,7 +104,7 @@ final class fh implements dh {
             stackIn_5_0 = 3249872;
           }
           var6_int = stackIn_5_0;
-          this.field_d.a("<u=" + Integer.toString(var6_int, 16) + ">" + param4.field_s + "</u>", param4.field_v + param0, param2 - -param4.field_m, param4.field_r, param4.field_h, var6_int, -1, this.field_b, this.field_a, this.field_d.field_o - -this.field_d.field_q);
+          this.field_d.a("<u=" + Integer.toString(var6_int, 16) + ">" + param4.field_s + "</u>", param4.field_v + param0, param2 + param4.field_m, param4.field_r, param4.field_h, var6_int, -1, this.field_b, this.field_a, this.field_d.field_o + this.field_d.field_q);
           if (param1 > -5) {
             fh.a(53L, -116);
           }
@@ -119,7 +119,7 @@ final class fh implements dh {
                 var9 = var9 + (-var7 + param4.field_r >> 1);
               }
             }
-            var10 = param2 - -param4.field_m;
+            var10 = param2 + param4.field_m;
             if (this.field_a == 2) {
               var10 = var10 + (param4.field_h - var8);
             } else {
@@ -127,7 +127,7 @@ final class fh implements dh {
                 var10 = var10 + (param4.field_h - var8 >> 1);
               }
             }
-            bf.a(var10 - -2, 4 + var7, 14164, var8, -2 + var9);
+            bf.a(var10 + 2, 4 + var7, 14164, var8, -2 + var9);
           } else {
             return;
           }

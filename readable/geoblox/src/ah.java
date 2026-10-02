@@ -10,7 +10,7 @@ final class ah {
 
     public static void a(int param0) {
         field_c = null;
-        int var1 = -79 % ((param0 - -15) / 50);
+        int var1 = -79 % ((param0 + 15) / 50);
         connectionLostReconnectingText = null;
     }
 
