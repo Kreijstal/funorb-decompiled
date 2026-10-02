@@ -301,18 +301,18 @@ final class vc extends dk {
         }
     }
 
-    final static void c(int param0) {
-        int var2 = 0;
-        if (param0 != -1) {
+    final static void drawPendingActionPanel(int methodGuard) {
+        int pendingActionDrawTop = 0;
+        if (methodGuard != -1) {
             field_h = 119;
         }
-        PendingActionMarker var3 = (PendingActionMarker) ((Object) pb.pendingActionMarkers.firstForIteration(0));
-        PendingActionMarker var1 = var3;
-        if (var1 != null) {
-            var2 = eh.field_c;
-            ma.drawNineSlicePanel(var2, 10, tl.field_h, (byte) -92, jf.field_c, ll.frameNineSliceSprites);
-            sl.achievementSprites[var3.actionId].drawQuarterSize(25, var2 + (-32 + (tl.field_h - 15)) / 2);
-            dd.uiPaletteFont.a(pg.field_a[var3.actionId], 67, 15 + var2, jf.field_c - 42 - 30, tl.field_h - 30, 0, -1, 1, 1, 30);
+        PendingActionMarker pendingActionMarkerForDrawing = (PendingActionMarker) ((Object) pb.pendingActionMarkers.firstForIteration(0));
+        PendingActionMarker pendingActionMarkerBeforeNullCheck = pendingActionMarkerForDrawing;
+        if (pendingActionMarkerBeforeNullCheck != null) {
+            pendingActionDrawTop = eh.pendingActionPanelTop;
+            ma.drawNineSlicePanel(pendingActionDrawTop, 10, tl.pendingActionPanelHeight, (byte) -92, jf.pendingActionPanelWidth, ll.frameNineSliceSprites);
+            sl.achievementSprites[pendingActionMarkerForDrawing.actionId].drawQuarterSize(25, pendingActionDrawTop + (-32 + (tl.pendingActionPanelHeight - 15)) / 2);
+            dd.uiPaletteFont.a(pg.achievementTitles[pendingActionMarkerForDrawing.actionId], 67, 15 + pendingActionDrawTop, jf.pendingActionPanelWidth - 42 - 30, tl.pendingActionPanelHeight - 30, 0, -1, 1, 1, 30);
         }
     }
 

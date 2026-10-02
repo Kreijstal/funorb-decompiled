@@ -19,8 +19,8 @@ final class lh {
           if (null != pb.pendingActionMarkers.firstForIteration(0)) {
             var1 = kj.field_J;
             if (var1 == 0) {
-              eh.field_c = eh.field_c - 1;
-              if (eh.field_c <= -10 - (tl.field_h - 480)) {
+              eh.pendingActionPanelTop = eh.pendingActionPanelTop - 1;
+              if (eh.pendingActionPanelTop <= -10 - (tl.pendingActionPanelHeight - 480)) {
                 h.field_d = 0;
                 kj.field_J = 1;
                 return;
@@ -36,11 +36,11 @@ final class lh {
                 return;
               }
               if (var1 == 2) {
-                fieldTemp$5 = eh.field_c;
-                eh.field_c = eh.field_c + 1;
+                fieldTemp$5 = eh.pendingActionPanelTop;
+                eh.pendingActionPanelTop = eh.pendingActionPanelTop + 1;
                 if (fieldTemp$5 > 480) {
                   pb.pendingActionMarkers.removeFirst((byte) -118);
-                  gf.a((byte) -12);
+                  gf.preparePendingActionPanel((byte) -12);
                   return;
                 }
               }
@@ -54,8 +54,8 @@ final class lh {
         }
         var1 = kj.field_J;
         if (var1 == 0) {
-          eh.field_c = eh.field_c - 1;
-          if (eh.field_c > -10 - (tl.field_h - 480)) {
+          eh.pendingActionPanelTop = eh.pendingActionPanelTop - 1;
+          if (eh.pendingActionPanelTop > -10 - (tl.pendingActionPanelHeight - 480)) {
             return;
           }
           h.field_d = 0;
@@ -75,13 +75,13 @@ final class lh {
           return;
         }
         {
-          fieldTemp$7 = eh.field_c;
-          eh.field_c = eh.field_c + 1;
+          fieldTemp$7 = eh.pendingActionPanelTop;
+          eh.pendingActionPanelTop = eh.pendingActionPanelTop + 1;
           if (fieldTemp$7 <= 480) {
             return;
           }
           pb.pendingActionMarkers.removeFirst((byte) -118);
-          gf.a((byte) -12);
+          gf.preparePendingActionPanel((byte) -12);
           return;
         }
     }

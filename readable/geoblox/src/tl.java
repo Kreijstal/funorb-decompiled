@@ -9,7 +9,7 @@ final class tl extends IntrusiveNode {
     static String[] field_f;
     int[] field_q;
     int field_m;
-    static int field_h;
+    static int pendingActionPanelHeight;
     int field_n;
     static GameplayEntity[] entitiesById;
     int field_p;

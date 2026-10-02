@@ -33,7 +33,7 @@ final class ih {
         L0: {
           if (ji.movingEntities.isEmpty(13519)) {
             if (SecondaryDeque.spawnQueue.isEmpty(13519)) {
-              if (bh.field_c.isEmpty(param0 + 13519)) {
+              if (bh.transientEntities.isEmpty(param0 + 13519)) {
                 if (!jl.avatarShockContactPending) {
                   stackIn_8_0 = true;
                   break L0;
@@ -160,7 +160,7 @@ final class ih {
                           }
                           var26_ref.initializeEntityMotion(-121, var24.positionX, 8, var24.velocityX, var24.spriteVariantIndex, 0, var24.spriteAngleRadians, var24.positionY, var24.velocityY, var24.entityCategoryKey, 0.0f);
                         }
-                        bh.field_c.addLast(-42, var26_ref);
+                        bh.transientEntities.addLast(-42, var26_ref);
                       }
                     }
                     if (ik.linkTouchingEntities(var24, entity, false)) {

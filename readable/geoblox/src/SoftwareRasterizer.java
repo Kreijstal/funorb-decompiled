@@ -336,7 +336,7 @@ final class SoftwareRasterizer {
         }
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final static void blurRowsInPlace(int[] pixels, int scratchPixel, int destinationIndex, int radius, int regionLeft, int regionWidth, int rowSkip, int regionHeight) {
         int var13 = 0;
         int incrementValue$0 = 0;
         int incrementValue$5 = 0;
@@ -359,28 +359,28 @@ final class SoftwareRasterizer {
         int var21;
         int var22;
         int var23;
-        var8 = 16384 / (2 * param3 + 1);
-        var9 = 1 + param3 - param5 - param4;
+        var8 = 16384 / (2 * radius + 1);
+        var9 = 1 + radius - regionWidth - regionLeft;
         if (0 < var9) {
           var9 = 0;
         }
-        var10 = stride - param4 - param5 - param3;
+        var10 = stride - regionLeft - regionWidth - radius;
         if (0 < var10) {
           var10 = 0;
         }
         var11 = 0;
-        var12 = param4 + param3 + 1;
+        var12 = regionLeft + radius + 1;
         if (stride < var12) {
           var11 = var12 - stride;
           var12 = stride;
         }
-        for (var13 = -param7; var13 < 0; var13++) {
+        for (var13 = -regionHeight; var13 < 0; var13++) {
           var14 = 0;
           var15 = 0;
           var16 = 0;
-          var17 = param2 - param3;
-          var18 = var17 - (param3 << 1) - 1;
-          var19 = param4 - param3;
+          var17 = destinationIndex - radius;
+          var18 = var17 - (radius << 1) - 1;
+          var19 = regionLeft - radius;
           if (var19 < 0) {
             var17 = var17 - var19;
             var18 = var18 - var19;
@@ -388,56 +388,56 @@ final class SoftwareRasterizer {
           }
           var20 = var12 - var19;
           L5: while (var19 < var12) {
-            param1 = param0[var17];
-            var14 = var14 + (param1 >> 16 & 255);
-            var15 = var15 + (param1 >> 8 & 255);
-            var16 = var16 + (param1 & 255);
+            scratchPixel = pixels[var17];
+            var14 = var14 + (scratchPixel >> 16 & 255);
+            var15 = var15 + (scratchPixel >> 8 & 255);
+            var16 = var16 + (scratchPixel & 255);
             var17++;
             var18++;
             var19++;
           }
           var18 = var18 + var11;
-          incrementValue$0 = param2;
-          param2++;
-          param0[incrementValue$0] = (var14 / var20 << 16) + (var15 / var20 << 8) + var16 / var20;
-          for (var19 = 1 - param5; var19 < var9; var19++) {
+          incrementValue$0 = destinationIndex;
+          destinationIndex++;
+          pixels[incrementValue$0] = (var14 / var20 << 16) + (var15 / var20 << 8) + var16 / var20;
+          for (var19 = 1 - regionWidth; var19 < var9; var19++) {
             var18++;
-            if (param4 + param5 + var19 + param3 < clipRight) {
-              param1 = param0[var17];
+            if (regionLeft + regionWidth + var19 + radius < clipRight) {
+              scratchPixel = pixels[var17];
               var17++;
-              var14 = var14 + (param1 >> 16 & 255);
-              var15 = var15 + (param1 >> 8 & 255);
-              var16 = var16 + (param1 & 255);
+              var14 = var14 + (scratchPixel >> 16 & 255);
+              var15 = var15 + (scratchPixel >> 8 & 255);
+              var16 = var16 + (scratchPixel & 255);
               var20++;
             }
             var21 = var14 / var20;
             var22 = var15 / var20;
             var23 = var16 / var20;
-            incrementValue$5 = param2;
-            param2++;
-            param0[incrementValue$5] = (var21 << 16) + (var22 << 8) + var23;
+            incrementValue$5 = destinationIndex;
+            destinationIndex++;
+            pixels[incrementValue$5] = (var21 << 16) + (var22 << 8) + var23;
           }
           L7: while (var19 < var10) {
             incrementValue$3 = var18;
             var18++;
-            param1 = param0[incrementValue$3];
-            var14 = var14 - (param1 >> 16 & 255);
+            scratchPixel = pixels[incrementValue$3];
+            var14 = var14 - (scratchPixel >> 16 & 255);
             if (var14 < 0) {
               var14 = 0;
             }
-            var15 = var15 - (param1 >> 8 & 255);
+            var15 = var15 - (scratchPixel >> 8 & 255);
             if (var15 < 0) {
               var15 = 0;
             }
-            var16 = var16 - (param1 & 255);
+            var16 = var16 - (scratchPixel & 255);
             if (var16 < 0) {
               var16 = 0;
             }
-            param1 = param0[var17];
+            scratchPixel = pixels[var17];
             var17++;
-            var14 = var14 + (param1 >> 16 & 255);
-            var15 = var15 + (param1 >> 8 & 255);
-            var16 = var16 + (param1 & 255);
+            var14 = var14 + (scratchPixel >> 16 & 255);
+            var15 = var15 + (scratchPixel >> 8 & 255);
+            var16 = var16 + (scratchPixel & 255);
             var21 = var14 * var8 >> 14;
             var22 = var15 * var8 >> 14;
             var23 = var16 * var8 >> 14;
@@ -450,18 +450,18 @@ final class SoftwareRasterizer {
             if (var23 > 255) {
               var23 = 255;
             }
-            incrementValue$4 = param2;
-            param2++;
-            param0[incrementValue$4] = (var21 << 16) + (var22 << 8) + var23;
+            incrementValue$4 = destinationIndex;
+            destinationIndex++;
+            pixels[incrementValue$4] = (var21 << 16) + (var22 << 8) + var23;
             var19++;
           }
           L8: while (var19 < 0) {
             incrementValue$1 = var18;
             var18++;
-            param1 = param0[incrementValue$1];
-            var14 = var14 - (param1 >> 16 & 255);
-            var15 = var15 - (param1 >> 8 & 255);
-            var16 = var16 - (param1 & 255);
+            scratchPixel = pixels[incrementValue$1];
+            var14 = var14 - (scratchPixel >> 16 & 255);
+            var15 = var15 - (scratchPixel >> 8 & 255);
+            var16 = var16 - (scratchPixel & 255);
             var20--;
             var21 = var14 / var20;
             var22 = var15 / var20;
@@ -487,12 +487,12 @@ final class SoftwareRasterizer {
             } else {
               var23 = 0;
             }
-            incrementValue$2 = param2;
-            param2++;
-            param0[incrementValue$2] = (var21 << 16) + (var22 << 8) + var23;
+            incrementValue$2 = destinationIndex;
+            destinationIndex++;
+            pixels[incrementValue$2] = (var21 << 16) + (var22 << 8) + var23;
             var19++;
           }
-          param2 = param2 + param6;
+          destinationIndex = destinationIndex + rowSkip;
         }
     }
 
@@ -595,9 +595,9 @@ final class SoftwareRasterizer {
         }
     }
 
-    final static void e(int param0, int param1, int param2, int param3, int param4, int param5) {
-        SoftwareRasterizer.a(framebuffer, 0, param2 + param3 * stride, param0, param2, param4, stride - param4, param5);
-        SoftwareRasterizer.a(framebuffer, 0, param2 + param3 * stride, param1, param3, param5, stride - param4, param2, param4);
+    final static void blurRasterRegion(int horizontalRadius, int verticalRadius, int regionLeft, int regionTop, int regionWidth, int regionHeight) {
+        SoftwareRasterizer.blurRowsInPlace(framebuffer, 0, regionLeft + regionTop * stride, horizontalRadius, regionLeft, regionWidth, stride - regionWidth, regionHeight);
+        SoftwareRasterizer.blurColumnsInPlace(framebuffer, 0, regionLeft + regionTop * stride, verticalRadius, regionTop, regionHeight, stride - regionWidth, regionLeft, regionWidth);
     }
 
     private final static void clearScanlineMasks() {
@@ -1471,7 +1471,7 @@ final class SoftwareRasterizer {
         SoftwareRasterizer.clearScanlineMasks();
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blurColumnsInPlace(int[] pixels, int scratchPixel, int destinationIndex, int radius, int regionTop, int regionHeight, int rowSkip, int regionLeft, int regionWidth) {
         int incrementValue$8 = 0;
         int incrementValue$7 = 0;
         int incrementValue$5 = 0;
@@ -1513,13 +1513,13 @@ final class SoftwareRasterizer {
         int[] var29;
         L0: {
           if (field_g != null) {
-            if (field_g.length >= param8) {
+            if (field_g.length >= regionWidth) {
               break L0;
             }
           }
-          field_g = new int[param8];
-          field_h = new int[param8];
-          field_j = new int[param8];
+          field_g = new int[regionWidth];
+          field_h = new int[regionWidth];
+          field_j = new int[regionWidth];
         }
         var27 = field_g;
         var24 = var27;
@@ -1530,16 +1530,16 @@ final class SoftwareRasterizer {
         var29 = field_j;
         var26 = var29;
         var11 = var26;
-        sf.a(var27, 0, param8);
-        sf.a(var28, 0, param8);
-        sf.a(var29, 0, param8);
-        var12 = 16384 / (2 * param3 + 1);
-        var13 = param4 - param3;
+        sf.a(var27, 0, regionWidth);
+        sf.a(var28, 0, regionWidth);
+        sf.a(var29, 0, regionWidth);
+        var12 = 16384 / (2 * radius + 1);
+        var13 = regionTop - radius;
         if (var13 < 0) {
           var13 = 0;
         }
-        var14 = param7 + var13 * stride;
-        var15 = param4 + param3;
+        var14 = regionLeft + var13 * stride;
+        var15 = regionTop + radius;
         var16 = 0;
         if (var15 >= framebufferHeight) {
           var16 = var15 - framebufferHeight + 1;
@@ -1547,71 +1547,71 @@ final class SoftwareRasterizer {
         }
         var17 = var15 - var13 + 1;
         L4: while (var13 <= var15) {
-          for (var18 = 0; var18 < param8; var18++) {
+          for (var18 = 0; var18 < regionWidth; var18++) {
             incrementValue$8 = var14;
             var14++;
-            param1 = param0[incrementValue$8];
-            var9[var18] = var9[var18] + (param1 >> 16 & 255);
-            var10[var18] = var10[var18] + (param1 >> 8 & 255);
-            var11[var18] = var11[var18] + (param1 & 255);
+            scratchPixel = pixels[incrementValue$8];
+            var9[var18] = var9[var18] + (scratchPixel >> 16 & 255);
+            var10[var18] = var10[var18] + (scratchPixel >> 8 & 255);
+            var11[var18] = var11[var18] + (scratchPixel & 255);
           }
-          var14 = var14 + param6;
+          var14 = var14 + rowSkip;
           var13++;
         }
         var14 = var14 + var16 * stride;
-        for (var18 = 0; var18 < param8; var18++) {
-          incrementValue$7 = param2;
-          param2++;
-          param0[incrementValue$7] = (var27[var18] / var17 << 16) + (var28[var18] / var17 << 8) + var29[var18] / var17;
+        for (var18 = 0; var18 < regionWidth; var18++) {
+          incrementValue$7 = destinationIndex;
+          destinationIndex++;
+          pixels[incrementValue$7] = (var27[var18] / var17 << 16) + (var28[var18] / var17 << 8) + var29[var18] / var17;
         }
-        param2 = param2 + param6;
-        var13 = 1 - param5;
-        var18 = 1 + param3 - param5 - param4;
+        destinationIndex = destinationIndex + rowSkip;
+        var13 = 1 - regionHeight;
+        var18 = 1 + radius - regionHeight - regionTop;
         if (0 < var18) {
           var18 = 0;
         }
-        var19 = param7 + (param4 - param3) * stride;
+        var19 = regionLeft + (regionTop - radius) * stride;
         if (var13 < var18) {
           var19 = var19 + (var18 - var13) * stride;
         }
         L8: while (var13 < var18) {
           L26: {
-            if (var13 + param4 + param5 + param3 < clipBottom) {
-              for (var20 = 0; var20 < param8; var20++) {
+            if (var13 + regionTop + regionHeight + radius < clipBottom) {
+              for (var20 = 0; var20 < regionWidth; var20++) {
                 incrementValue$5 = var14;
                 var14++;
-                param1 = param0[incrementValue$5];
-                var9[var20] = var9[var20] + (param1 >> 16 & 255);
-                var10[var20] = var10[var20] + (param1 >> 8 & 255);
-                var11[var20] = var11[var20] + (param1 & 255);
+                scratchPixel = pixels[incrementValue$5];
+                var9[var20] = var9[var20] + (scratchPixel >> 16 & 255);
+                var10[var20] = var10[var20] + (scratchPixel >> 8 & 255);
+                var11[var20] = var11[var20] + (scratchPixel & 255);
               }
-              var14 = var14 + param6;
+              var14 = var14 + rowSkip;
               var17++;
               break L26;
             }
             var14 = var14 + stride;
           }
-          for (var20 = 0; var20 < param8; var20++) {
+          for (var20 = 0; var20 < regionWidth; var20++) {
             var21 = var27[var20] / var17;
             var22 = var28[var20] / var17;
             var23 = var29[var20] / var17;
-            incrementValue$6 = param2;
-            param2++;
-            param0[incrementValue$6] = (var21 << 16) + (var22 << 8) + var23;
+            incrementValue$6 = destinationIndex;
+            destinationIndex++;
+            pixels[incrementValue$6] = (var21 << 16) + (var22 << 8) + var23;
           }
-          param2 = param2 + param6;
+          destinationIndex = destinationIndex + rowSkip;
           var13++;
         }
-        var18 = framebufferHeight - param4 - param5 - param3;
+        var18 = framebufferHeight - regionTop - regionHeight - radius;
         if (0 < var18) {
           var18 = 0;
         }
         L10: while (var13 < var18) {
-          for (var20 = 0; var20 < param8; var20++) {
+          for (var20 = 0; var20 < regionWidth; var20++) {
             incrementValue$4 = var19;
             var19++;
-            param1 = param0[incrementValue$4];
-            var21 = var27[var20] - (param1 >> 16 & 255);
+            scratchPixel = pixels[incrementValue$4];
+            var21 = var27[var20] - (scratchPixel >> 16 & 255);
             stackIn_38_0 = (int[]) (var9);
             stackIn_38_1 = var20;
             if (var21 >= 0) {
@@ -1620,7 +1620,7 @@ final class SoftwareRasterizer {
               stackIn_39_2 = 0;
             }
             stackIn_38_0[stackIn_38_1] = stackIn_39_2;
-            var21 = var28[var20] - (param1 >> 8 & 255);
+            var21 = var28[var20] - (scratchPixel >> 8 & 255);
             stackIn_41_0 = (int[]) (var10);
             stackIn_41_1 = var20;
             if (var21 >= 0) {
@@ -1629,7 +1629,7 @@ final class SoftwareRasterizer {
               stackIn_42_2 = 0;
             }
             stackIn_41_0[stackIn_41_1] = stackIn_42_2;
-            var21 = var29[var20] - (param1 & 255);
+            var21 = var29[var20] - (scratchPixel & 255);
             stackIn_44_0 = (int[]) (var11);
             stackIn_44_1 = var20;
             if (var21 >= 0) {
@@ -1639,17 +1639,17 @@ final class SoftwareRasterizer {
             }
             stackIn_44_0[stackIn_44_1] = stackIn_45_2;
           }
-          var19 = var19 + param6;
-          for (var20 = 0; var20 < param8; var20++) {
+          var19 = var19 + rowSkip;
+          for (var20 = 0; var20 < regionWidth; var20++) {
             incrementValue$3 = var14;
             var14++;
-            param1 = param0[incrementValue$3];
-            var9[var20] = var9[var20] + (param1 >> 16 & 255);
-            var10[var20] = var10[var20] + (param1 >> 8 & 255);
-            var11[var20] = var11[var20] + (param1 & 255);
+            scratchPixel = pixels[incrementValue$3];
+            var9[var20] = var9[var20] + (scratchPixel >> 16 & 255);
+            var10[var20] = var10[var20] + (scratchPixel >> 8 & 255);
+            var11[var20] = var11[var20] + (scratchPixel & 255);
           }
-          var14 = var14 + param6;
-          for (var20 = 0; var20 < param8; var20++) {
+          var14 = var14 + rowSkip;
+          for (var20 = 0; var20 < regionWidth; var20++) {
             var21 = var27[var20] * var12 >> 14;
             var22 = var28[var20] * var12 >> 14;
             var23 = var29[var20] * var12 >> 14;
@@ -1662,25 +1662,25 @@ final class SoftwareRasterizer {
             if (var23 > 255) {
               var23 = 255;
             }
-            incrementValue$2 = param2;
-            param2++;
-            param0[incrementValue$2] = (var21 << 16) + (var22 << 8) + var23;
+            incrementValue$2 = destinationIndex;
+            destinationIndex++;
+            pixels[incrementValue$2] = (var21 << 16) + (var22 << 8) + var23;
           }
-          param2 = param2 + param6;
+          destinationIndex = destinationIndex + rowSkip;
           var13++;
         }
         L11: while (var13 < 0) {
-          for (var20 = 0; var20 < param8; var20++) {
+          for (var20 = 0; var20 < regionWidth; var20++) {
             incrementValue$1 = var19;
             var19++;
-            param1 = param0[incrementValue$1];
-            var9[var20] = var9[var20] - (param1 >> 16 & 255);
-            var10[var20] = var10[var20] - (param1 >> 8 & 255);
-            var11[var20] = var11[var20] - (param1 & 255);
+            scratchPixel = pixels[incrementValue$1];
+            var9[var20] = var9[var20] - (scratchPixel >> 16 & 255);
+            var10[var20] = var10[var20] - (scratchPixel >> 8 & 255);
+            var11[var20] = var11[var20] - (scratchPixel & 255);
           }
-          var19 = var19 + param6;
+          var19 = var19 + rowSkip;
           var17--;
-          for (var20 = 0; var20 < param8; var20++) {
+          for (var20 = 0; var20 < regionWidth; var20++) {
             var21 = var27[var20] / var17;
             var22 = var28[var20] / var17;
             var23 = var29[var20] / var17;
@@ -1705,11 +1705,11 @@ final class SoftwareRasterizer {
             } else {
               var23 = 0;
             }
-            incrementValue$0 = param2;
-            param2++;
-            param0[incrementValue$0] = (var21 << 16) + (var22 << 8) + var23;
+            incrementValue$0 = destinationIndex;
+            destinationIndex++;
+            pixels[incrementValue$0] = (var21 << 16) + (var22 << 8) + var23;
           }
-          param2 = param2 + param6;
+          destinationIndex = destinationIndex + rowSkip;
           var13++;
         }
     }

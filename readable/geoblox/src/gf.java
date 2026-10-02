@@ -9,19 +9,19 @@ final class gf {
     static qh field_d;
     static String createPasswordContainsNameAlertText;
 
-    final static void a(byte param0) {
-        int var2 = 78 % ((-69 - param0) / 46);
-        PendingActionMarker var4 = (PendingActionMarker) ((Object) pb.pendingActionMarkers.firstForIteration(0));
-        var4 = var4;
-        if (var4 == null) {
+    final static void preparePendingActionPanel(byte methodGuard) {
+        int sentinelDivisionGuard = 78 % ((-69 - methodGuard) / 46);
+        PendingActionMarker pendingActionMarker = (PendingActionMarker) ((Object) pb.pendingActionMarkers.firstForIteration(0));
+        pendingActionMarker = pendingActionMarker;
+        if (pendingActionMarker == null) {
             return;
         }
-        eh.field_c = 480;
+        eh.pendingActionPanelTop = 480;
         kj.field_J = 0;
-        jf.field_c = 72 + dd.uiPaletteFont.c(pg.field_a[var4.actionId], 100);
-        tl.field_h = 30 * dd.uiPaletteFont.b(pg.field_a[var4.actionId], 100) + 30;
-        if (62 > tl.field_h) {
-            tl.field_h = 62;
+        jf.pendingActionPanelWidth = 72 + dd.uiPaletteFont.c(pg.achievementTitles[pendingActionMarker.actionId], 100);
+        tl.pendingActionPanelHeight = 30 * dd.uiPaletteFont.b(pg.achievementTitles[pendingActionMarker.actionId], 100) + 30;
+        if (62 > tl.pendingActionPanelHeight) {
+            tl.pendingActionPanelHeight = 62;
             return;
         }
     }
@@ -35,7 +35,7 @@ final class gf {
             return;
         }
         String var2 = (String) null;
-        gf.a((String) null, (rh) null, (String) null, (String) null, true);
+        gf.formatArchiveGroupProgress((String) null, (rh) null, (String) null, (String) null, true);
         queuedKeyStateChanges = null;
         createPasswordContainsNameAlertText = null;
     }
@@ -119,59 +119,59 @@ final class gf {
         var2.d((byte) -20, 0);
     }
 
-    final static String a(String param0, rh param1, String param2, String param3, boolean param4) {
-        RuntimeException var5 = null;
-        String stackIn_5_0 = null;
-        String stackIn_7_0 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_11_2 = null;
-        StringBuilder stackIn_13_1 = null;
-        String stackIn_14_2 = null;
-        StringBuilder stackIn_16_1 = null;
-        String stackIn_17_2 = null;
-        StringBuilder stackIn_19_1 = null;
-        String stackIn_20_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static String formatArchiveGroupProgress(String fallbackMessage, rh archive, String groupName, String progressLabel, boolean methodGuard) {
+        RuntimeException progressFailureForContext = null;
+        String fallbackBeforeReturn = null;
+        String formattedProgressMessage = null;
+        RuntimeException progressFailureBeforeArgumentDescriptions = null;
+        StringBuilder progressMessagePrefix = null;
+        String fallbackArgumentDescription = null;
+        StringBuilder progressMessageBeforeArchiveDescription = null;
+        String archiveArgumentDescription = null;
+        StringBuilder progressMessageBeforeGroupDescription = null;
+        String groupArgumentDescription = null;
+        StringBuilder progressMessageBeforeLabelDescription = null;
+        String labelArgumentDescription = null;
+        RuntimeException caughtProgressFailure = null;
         try {
-          if (!param4) {
+          if (!methodGuard) {
             field_b = (int[]) null;
           }
-          if (!param1.a(0)) {
-            stackIn_5_0 = (String) (param0);
-            return stackIn_5_0;
+          if (!archive.a(0)) {
+            fallbackBeforeReturn = (String) (fallbackMessage);
+            return fallbackBeforeReturn;
           }
-          stackIn_7_0 = param3 + " - " + param1.a(0, param2) + "%";
-          return stackIn_7_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_10_0 = (RuntimeException) (var5);
-          stackIn_10_1 = new StringBuilder().append("gf.E(");
-          if (param0 == null) {
-            stackIn_11_2 = "null";
+          formattedProgressMessage = progressLabel + " - " + archive.a(0, groupName) + "%";
+          return formattedProgressMessage;
+        } catch (java.lang.RuntimeException archiveProgressFailure) {
+          caughtProgressFailure = archiveProgressFailure;
+          progressFailureForContext = caughtProgressFailure;
+          progressFailureBeforeArgumentDescriptions = (RuntimeException) (progressFailureForContext);
+          progressMessagePrefix = new StringBuilder().append("gf.E(");
+          if (fallbackMessage == null) {
+            fallbackArgumentDescription = "null";
           } else {
-            stackIn_11_2 = "{...}";
+            fallbackArgumentDescription = "{...}";
           }
-          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
-          if (param1 == null) {
-            stackIn_14_2 = "null";
+          progressMessageBeforeArchiveDescription = ((StringBuilder) (Object) progressMessagePrefix).append(fallbackArgumentDescription).append(',');
+          if (archive == null) {
+            archiveArgumentDescription = "null";
           } else {
-            stackIn_14_2 = "{...}";
+            archiveArgumentDescription = "{...}";
           }
-          stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
-          if (param2 == null) {
-            stackIn_17_2 = "null";
+          progressMessageBeforeGroupDescription = ((StringBuilder) (Object) progressMessageBeforeArchiveDescription).append(archiveArgumentDescription).append(',');
+          if (groupName == null) {
+            groupArgumentDescription = "null";
           } else {
-            stackIn_17_2 = "{...}";
+            groupArgumentDescription = "{...}";
           }
-          stackIn_19_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',');
-          if (param3 == null) {
-            stackIn_20_2 = "null";
+          progressMessageBeforeLabelDescription = ((StringBuilder) (Object) progressMessageBeforeGroupDescription).append(groupArgumentDescription).append(',');
+          if (progressLabel == null) {
+            labelArgumentDescription = "null";
           } else {
-            stackIn_20_2 = "{...}";
+            labelArgumentDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param4).append(')').toString());
+          throw t.a((Throwable) ((Object) progressFailureBeforeArgumentDescriptions), ((StringBuilder) (Object) progressMessageBeforeLabelDescription).append(labelArgumentDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 

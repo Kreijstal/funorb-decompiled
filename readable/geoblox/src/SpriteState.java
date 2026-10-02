@@ -27,71 +27,71 @@ abstract class SpriteState extends DualLinkNode {
           pf.field_O = param1;
           var2 = ih.a(122, "achievement_names,0");
           if (null != var2) {
-            pg.field_a[0] = ag.decodeTextBytes(1, var2);
+            pg.achievementTitles[0] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(122, "achievement_names,1");
           if (var2 != null) {
-            pg.field_a[1] = ag.decodeTextBytes(1, var2);
+            pg.achievementTitles[1] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(126, "achievement_names,2");
           if (var2 != null) {
-            pg.field_a[2] = ag.decodeTextBytes(1, var2);
+            pg.achievementTitles[2] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(125, "achievement_names,3");
           if (null != var2) {
-            pg.field_a[3] = ag.decodeTextBytes(1, var2);
+            pg.achievementTitles[3] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(121, "achievement_names,4");
           if (null != var2) {
-            pg.field_a[4] = ag.decodeTextBytes(1, var2);
+            pg.achievementTitles[4] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(126, "achievement_names,5");
           if (var2 != null) {
-            pg.field_a[5] = ag.decodeTextBytes(1, var2);
+            pg.achievementTitles[5] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(125, "achievement_names,6");
           if (var2 != null) {
-            pg.field_a[6] = ag.decodeTextBytes(1, var2);
+            pg.achievementTitles[6] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(125, "achievement_names,7");
           if (null != var2) {
-            pg.field_a[7] = ag.decodeTextBytes(1, var2);
+            pg.achievementTitles[7] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(127, "achievement_names,8");
           if (null != var2) {
-            pg.field_a[8] = ag.decodeTextBytes(1, var2);
+            pg.achievementTitles[8] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(122, "achievement_names,9");
           if (var2 != null) {
-            pg.field_a[9] = ag.decodeTextBytes(1, var2);
+            pg.achievementTitles[9] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(122, "achievement_names,10");
           if (null != var2) {
-            pg.field_a[10] = ag.decodeTextBytes(1, var2);
+            pg.achievementTitles[10] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(126, "achievement_names,11");
           if (null != var2) {
-            pg.field_a[11] = ag.decodeTextBytes(1, var2);
+            pg.achievementTitles[11] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(122, "achievement_names,12");
           if (var2 != null) {
-            pg.field_a[12] = ag.decodeTextBytes(1, var2);
+            pg.achievementTitles[12] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(125, "achievement_names,13");
           if (null != var2) {
-            pg.field_a[13] = ag.decodeTextBytes(1, var2);
+            pg.achievementTitles[13] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(120, "achievement_names,14");
           if (var2 != null) {
-            pg.field_a[14] = ag.decodeTextBytes(1, var2);
+            pg.achievementTitles[14] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(123, "achievement_names,15");
           if (null != var2) {
-            pg.field_a[15] = ag.decodeTextBytes(1, var2);
+            pg.achievementTitles[15] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(121, "achievement_names,16");
           if (var2 != null) {
-            pg.field_a[16] = ag.decodeTextBytes(1, var2);
+            pg.achievementTitles[16] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(122, "achievement_criteria,0");
           if (null != var2) {
@@ -250,7 +250,7 @@ abstract class SpriteState extends DualLinkNode {
           }
           var2 = ih.a(125, "skipText");
           if (var2 != null) {
-            v.field_n = ag.decodeTextBytes(1, var2);
+            v.tutorialSkipMessage = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(126, "tutorial1");
           if (null != var2) {

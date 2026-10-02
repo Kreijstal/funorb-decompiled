@@ -1170,3 +1170,67 @@ The existing nine-slice native fixture checks construction of the nine sprites;
 it does not execute this panel renderer or AWT presentation. The new names are
 supported by source and complete resolved-binding checks. Live assets, actual
 presentation, full gameplay and phone performance remain unverified.
+
+## Session rendering stages (pass 54)
+
+`GameplaySession.renderSession` preserves its existing control flow. On ordinary
+zero-client-guard paths, its rendering stages are:
+
+| Stage | Named work |
+| --- | --- |
+| Unloaded theme | Select `themeResourceGroup`, format archive progress and draw the loading panel, then return |
+| Board cache | Redraw attached entities when `boardRasterDirty`; settled/requested/in-progress state supplies `sceneTransitionFlag` |
+| Main target | Restore `mainRasterBuffer`, draw the selected background and tutorial/score panels |
+| Gameplay layers | Draw progress HUD, moving entities, cached board, avatar face/cry frame and transient entities under their original gates |
+| Theme foreground | Rotate the foreground into its scratch raster and draw it around the board center |
+| Spawn queue | Draw the queued-entity highlight and each fading queued entity |
+| Optional debug overview | Draw half-size queue/layout silhouettes into `debugOverviewRaster`, blur them, then scale/composite onto the main raster |
+| Overlays | Draw points, counters, score popups, game-over/transition/result overlays and pending-action panel; tutorial mode instead draws its prompt |
+
+This describes the readable normal path; original nonzero client-control guards
+and their nested labeled routing remain present. The result transition can
+reveal the board behind the curtain using `sceneTransitionFlag`, and the score
+box follows its original quadratic path during the game-over animation.
+
+Some locals have several roles. `selectedThemeIdOrScoreBoxX` first selects a
+loading-resource group, then carries the score-box X position.
+`loadingPanelWidthOrScoreBoxY` similarly carries a loading-panel width and a
+score-box Y position. `tutorialTopOrDebugColorOrTransitionClipTop` describes
+three actual uses of one integer slot. `debugEntityXOrTutorialTextHeight`
+retains the debug-circle X coordinate and later tutorial text-height use.
+No split variables or inferred lifetime changes are introduced.
+
+`spawnEntityGrayLevel` is repeated in RGB channels for a solid debug circle;
+it is not an alpha parameter. Its normal path clamps to11..255 after the
+lifetime calculation. The shared join slots then change roles from gray-level
+comparison operands to composite height/enabled operands; those explicit stores
+remain, including the nonzero client-guard paths.
+
+`h.drawMovingEntities` traverses `movingEntities` and calls the entity's board
+rotation renderer. `ni.drawTransientEntities` traverses `bh.transientEntities`
+and draws on the current raster. Matching routes temporary kinds into that
+queue; their existing animation/recycling logic remains.
+`ij.drawAvatarFaceOrCryFrame` draws the shock star, tinted eyes/mouth or selected
+`currentAvatarCryFrame`. `uh.drawSpawnQueueAndHighlight` rotates the first queued
+entity's position, draws a circular/spiral highlight, then draws the whole queue.
+
+`gf.preparePendingActionPanel` sizes the panel from `achievementTitles`, resets
+its top position and retains the original minimum height. `vc.drawPendingActionPanel`
+uses the same geometry and action ID for the title and quarter-size icon.
+`gf.formatArchiveGroupProgress` returns the original fallback when the archive
+query is false, otherwise formats the label, group percentage and percent sign.
+It makes no new assumption about actual archive completion.
+
+The debug overview is a distinct composite, not an ordinary sprite copy.
+`SoftwareRasterizer.blurRasterRegion` applies row then column box averaging.
+`ek.compositeScaledDebugOverview` retains Q16 scale/trim/clip calculations.
+`lc.blendScaledDebugOverviewPixels` skips zero source or destination pixels,
+then mixes a0x112233 tint with per-channel products using source mean gray as
+weights. Its destination gray starts as `((2*red + blue)/3 + green) >> 1`.
+Packed masks, shifts, overflow and shared row-reset slots remain literal.
+The blur kernels' large local bodies still contain opaque names.
+
+These roles are supported by source and complete resolved-binding checks.
+Existing native fixtures retain their documented scopes; full renderSession,
+debug blending/blur, live panels/assets, AWT presentation, sustained gameplay
+and phone performance remain unverified.

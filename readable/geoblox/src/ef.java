@@ -47,14 +47,14 @@ final class ef implements Iterator {
           if (param0 != -15) {
             ef.a((byte) -11);
           }
-          var2 = (GameplayEntity) ((Object) bh.field_c.firstForIteration(0));
+          var2 = (GameplayEntity) ((Object) bh.transientEntities.firstForIteration(0));
           L1: while (var2 != null) {
             var2.advanceEntityAnimation(true);
             if (var2.animationFrameIndex >= 3) {
               var2.entityQueue = ra.availableEntities;
               var2.animationFrameIndex = 0;
             }
-            var2 = (GameplayEntity) ((Object) bh.field_c.nextForIteration(1));
+            var2 = (GameplayEntity) ((Object) bh.transientEntities.nextForIteration(1));
           }
           if (el.gameplaySession.tutorialPromptActive) {
             return;

@@ -277,7 +277,7 @@ public final class Geoblox extends wf {
                                             break L8;
                                           }
                                         }
-                                        lc.a(gf.a(s.field_F, ll.gameGraphicsArchive, "halloween", uj.field_c, true), -2, 45.0f);
+                                        lc.a(gf.formatArchiveGroupProgress(s.field_F, ll.gameGraphicsArchive, "halloween", uj.field_c, true), -2, 45.0f);
                                         return false;
                                       }
                                     }
@@ -298,15 +298,15 @@ public final class Geoblox extends wf {
                                     stackIn_47_2 = "basic";
                                     stackIn_47_3 = AccountWelcomePanel.loadingGraphicsText;
                                     stackIn_48_4 = (param0) ? false : true;
-                                    lc.a(gf.a(stackIn_47_0, stackIn_47_1, stackIn_47_2, stackIn_47_3, stackIn_48_4), -2, 50.0f);
+                                    lc.a(gf.formatArchiveGroupProgress(stackIn_47_0, stackIn_47_1, stackIn_47_2, stackIn_47_3, stackIn_48_4), -2, 50.0f);
                                     return false;
                                   }
                                 }
-                                lc.a(gf.a(ff.waitingForGraphicsText, ll.gameGraphicsArchive, "sun", AccountWelcomePanel.loadingGraphicsText, true), -2, 45.0f);
+                                lc.a(gf.formatArchiveGroupProgress(ff.waitingForGraphicsText, ll.gameGraphicsArchive, "sun", AccountWelcomePanel.loadingGraphicsText, true), -2, 45.0f);
                                 return false;
                               }
                             }
-                            lc.a(gf.a(ff.waitingForGraphicsText, ll.gameGraphicsArchive, "", AccountWelcomePanel.loadingGraphicsText, true), -2, 45.0f);
+                            lc.a(gf.formatArchiveGroupProgress(ff.waitingForGraphicsText, ll.gameGraphicsArchive, "", AccountWelcomePanel.loadingGraphicsText, true), -2, 45.0f);
                             return false;
                           }
                         }
@@ -315,7 +315,7 @@ public final class Geoblox extends wf {
                         stackIn_27_2 = "";
                         stackIn_27_3 = nb.loadingFontsText;
                         stackIn_28_4 = (param0) ? false : true;
-                        lc.a(gf.a(stackIn_27_0, stackIn_27_1, stackIn_27_2, stackIn_27_3, stackIn_28_4), -2, 35.0f);
+                        lc.a(gf.formatArchiveGroupProgress(stackIn_27_0, stackIn_27_1, stackIn_27_2, stackIn_27_3, stackIn_28_4), -2, 35.0f);
                         return false;
                       }
                     }
@@ -323,15 +323,15 @@ public final class Geoblox extends wf {
                     return false;
                   }
                 }
-                lc.a(gf.a(ji.waitingForMusicText, fe.field_a, "", dd.loadingMusicText, true), -2, 15.0f);
+                lc.a(gf.formatArchiveGroupProgress(ji.waitingForMusicText, fe.field_a, "", dd.loadingMusicText, true), -2, 15.0f);
                 return false;
               }
             }
-            lc.a(gf.a(pa.waitingForSoundEffectsText, ah.field_c, "", ud.loadingSoundEffectsText, true), -2, 10.0f);
+            lc.a(gf.formatArchiveGroupProgress(pa.waitingForSoundEffectsText, ah.field_c, "", ud.loadingSoundEffectsText, true), -2, 10.0f);
             return false;
           }
         }
-        lc.a(gf.a(pa.waitingForSoundEffectsText, wj.field_F, "", ud.loadingSoundEffectsText, true), -2, 5.0f);
+        lc.a(gf.formatArchiveGroupProgress(pa.waitingForSoundEffectsText, wj.field_F, "", ud.loadingSoundEffectsText, true), -2, 5.0f);
         return false;
     }
 

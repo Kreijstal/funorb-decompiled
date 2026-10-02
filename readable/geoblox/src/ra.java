@@ -110,7 +110,7 @@ final class ra implements Iterable {
             }
             pb.pendingActionMarkers.addLast(-35, new PendingActionMarker(param2));
             if (var4 != 0) {
-              gf.a((byte) -122);
+              gf.preparePendingActionPanel((byte) -122);
             }
             if (!el.gameplaySession.submissionBlocked) {
               GameplayEntity.field_A.addLast(-44, new p(param2, param0, dc.field_a, el.field_g, AwtRasterBuffer.field_f, lb.field_b));

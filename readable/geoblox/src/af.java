@@ -3,13 +3,13 @@
  */
 final class af {
     static sk field_b;
-    static Sprite field_a;
+    static Sprite debugOverviewRaster;
     static sk field_d;
     static int avatarFrameStepTicks;
     private static String field_z;
 
     public static void a(byte param0) {
-        field_a = null;
+        debugOverviewRaster = null;
         field_b = null;
         field_d = null;
         if (param0 > -86) {
@@ -20,6 +20,6 @@ final class af {
     static {
         field_z = "af.A(";
         avatarFrameStepTicks = 0;
-        field_a = new Sprite(320, 240);
+        debugOverviewRaster = new Sprite(320, 240);
     }
 }

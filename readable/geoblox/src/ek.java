@@ -11,89 +11,89 @@ final class ek {
         field_a = null;
     }
 
-    final static void a(int param0, boolean param1, Sprite param2, int param3, int param4, int param5) {
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
-        String stackIn_27_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var6_int = 0;
-        RuntimeException var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
+    final static void compositeScaledDebugOverview(int destinationHeight, boolean enabled, Sprite overviewSprite, int destinationTop, int destinationWidth, int destinationLeft) {
+        RuntimeException compositeFailureBeforeSpriteDescription = null;
+        StringBuilder compositeMessagePrefix = null;
+        String overviewSpriteArgumentDescription = null;
+        RuntimeException caughtCompositeFailure = null;
+        int sourceCropWidth = 0;
+        RuntimeException compositeFailureForContext = null;
+        int sourceCropHeight = 0;
+        int sampleXQ16 = 0;
+        int sampleYQ16 = 0;
+        int sourceCanvasWidth = 0;
+        int sourceCanvasHeight = 0;
+        int sampleXStepQ16 = 0;
+        int sampleYStepQ16 = 0;
+        int trimSkipOrDestinationIndex = 0;
+        int destinationRowSkip = 0;
+        int clippedPixelCount = 0;
         try {
-          var6_int = param2.width;
-          var7 = param2.height;
-          var8 = 0;
-          var9 = 0;
-          if (!param1) {
+          sourceCropWidth = overviewSprite.width;
+          sourceCropHeight = overviewSprite.height;
+          sampleXQ16 = 0;
+          sampleYQ16 = 0;
+          if (!enabled) {
             return;
           }
           {
-            var10 = param2.fullWidth;
-            var11 = param2.fullHeight;
-            var12 = (var10 << 16) / param4;
-            var13 = (var11 << 16) / param0;
-            if (param2.trimX > 0) {
-              var14 = ((param2.trimX << 16) + (var12 - 1)) / var12;
-              var8 = var8 + (-(param2.trimX << 16) + var12 * var14);
-              param5 = param5 + var14;
+            sourceCanvasWidth = overviewSprite.fullWidth;
+            sourceCanvasHeight = overviewSprite.fullHeight;
+            sampleXStepQ16 = (sourceCanvasWidth << 16) / destinationWidth;
+            sampleYStepQ16 = (sourceCanvasHeight << 16) / destinationHeight;
+            if (overviewSprite.trimX > 0) {
+              trimSkipOrDestinationIndex = ((overviewSprite.trimX << 16) + (sampleXStepQ16 - 1)) / sampleXStepQ16;
+              sampleXQ16 = sampleXQ16 + (-(overviewSprite.trimX << 16) + sampleXStepQ16 * trimSkipOrDestinationIndex);
+              destinationLeft = destinationLeft + trimSkipOrDestinationIndex;
             }
-            if (var6_int < var10) {
-              param4 = (var12 + ((var6_int << 16) + (-var8 - 1))) / var12;
+            if (sourceCropWidth < sourceCanvasWidth) {
+              destinationWidth = (sampleXStepQ16 + ((sourceCropWidth << 16) + (-sampleXQ16 - 1))) / sampleXStepQ16;
             }
-            if (param2.trimY > 0) {
-              var14 = ((param2.trimY << 16) + var13 - 1) / var13;
-              var9 = var9 + (var14 * var13 - (param2.trimY << 16));
-              param3 = param3 + var14;
+            if (overviewSprite.trimY > 0) {
+              trimSkipOrDestinationIndex = ((overviewSprite.trimY << 16) + sampleYStepQ16 - 1) / sampleYStepQ16;
+              sampleYQ16 = sampleYQ16 + (trimSkipOrDestinationIndex * sampleYStepQ16 - (overviewSprite.trimY << 16));
+              destinationTop = destinationTop + trimSkipOrDestinationIndex;
             }
-            if (var11 > var7) {
-              param0 = (var13 + (-var9 + (var7 << 16)) - 1) / var13;
+            if (sourceCanvasHeight > sourceCropHeight) {
+              destinationHeight = (sampleYStepQ16 + (-sampleYQ16 + (sourceCropHeight << 16)) - 1) / sampleYStepQ16;
             }
-            var14 = param5 + SoftwareRasterizer.stride * param3;
-            var15 = SoftwareRasterizer.stride - param4;
-            if (SoftwareRasterizer.clipBottom < param3 + param0) {
-              param0 = param0 - (-SoftwareRasterizer.clipBottom + param3 + param0);
+            trimSkipOrDestinationIndex = destinationLeft + SoftwareRasterizer.stride * destinationTop;
+            destinationRowSkip = SoftwareRasterizer.stride - destinationWidth;
+            if (SoftwareRasterizer.clipBottom < destinationTop + destinationHeight) {
+              destinationHeight = destinationHeight - (-SoftwareRasterizer.clipBottom + destinationTop + destinationHeight);
             }
-            if (SoftwareRasterizer.clipTop > param3) {
-              var16 = SoftwareRasterizer.clipTop - param3;
-              var9 = var9 + var13 * var16;
-              param0 = param0 - var16;
-              var14 = var14 + SoftwareRasterizer.stride * var16;
+            if (SoftwareRasterizer.clipTop > destinationTop) {
+              clippedPixelCount = SoftwareRasterizer.clipTop - destinationTop;
+              sampleYQ16 = sampleYQ16 + sampleYStepQ16 * clippedPixelCount;
+              destinationHeight = destinationHeight - clippedPixelCount;
+              trimSkipOrDestinationIndex = trimSkipOrDestinationIndex + SoftwareRasterizer.stride * clippedPixelCount;
             }
-            if (param4 + param5 > SoftwareRasterizer.clipRight) {
-              var16 = param5 + (param4 - SoftwareRasterizer.clipRight);
-              var15 = var15 + var16;
-              param4 = param4 - var16;
+            if (destinationWidth + destinationLeft > SoftwareRasterizer.clipRight) {
+              clippedPixelCount = destinationLeft + (destinationWidth - SoftwareRasterizer.clipRight);
+              destinationRowSkip = destinationRowSkip + clippedPixelCount;
+              destinationWidth = destinationWidth - clippedPixelCount;
             }
-            if (param5 < SoftwareRasterizer.clipLeft) {
-              var16 = SoftwareRasterizer.clipLeft - param5;
-              var14 = var14 + var16;
-              var15 = var15 + var16;
-              var8 = var8 + var16 * var12;
-              param4 = param4 - var16;
+            if (destinationLeft < SoftwareRasterizer.clipLeft) {
+              clippedPixelCount = SoftwareRasterizer.clipLeft - destinationLeft;
+              trimSkipOrDestinationIndex = trimSkipOrDestinationIndex + clippedPixelCount;
+              destinationRowSkip = destinationRowSkip + clippedPixelCount;
+              sampleXQ16 = sampleXQ16 + clippedPixelCount * sampleXStepQ16;
+              destinationWidth = destinationWidth - clippedPixelCount;
             }
-            lc.a(var8, param0, SoftwareRasterizer.framebuffer, var12, var13, var6_int, var9, var15, var14, param4, (byte) -104, param2.pixels, 0);
+            lc.blendScaledDebugOverviewPixels(sampleXQ16, destinationHeight, SoftwareRasterizer.framebuffer, sampleXStepQ16, sampleYStepQ16, sourceCropWidth, sampleYQ16, destinationRowSkip, trimSkipOrDestinationIndex, destinationWidth, (byte) -104, overviewSprite.pixels, 0);
             return;
           }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_26_0 = (RuntimeException) (var6);
-          stackIn_26_1 = new StringBuilder().append("ek.A(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
-            stackIn_27_2 = "null";
+        } catch (java.lang.RuntimeException scaledOverviewFailure) {
+          caughtCompositeFailure = scaledOverviewFailure;
+          compositeFailureForContext = caughtCompositeFailure;
+          compositeFailureBeforeSpriteDescription = (RuntimeException) (compositeFailureForContext);
+          compositeMessagePrefix = new StringBuilder().append("ek.A(").append(destinationHeight).append(',').append(enabled).append(',');
+          if (overviewSprite == null) {
+            overviewSpriteArgumentDescription = "null";
           } else {
-            stackIn_27_2 = "{...}";
+            overviewSpriteArgumentDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw t.a((Throwable) ((Object) compositeFailureBeforeSpriteDescription), ((StringBuilder) (Object) compositeMessagePrefix).append(overviewSpriteArgumentDescription).append(',').append(destinationTop).append(',').append(destinationWidth).append(',').append(destinationLeft).append(')').toString());
         }
     }
 

@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class bh extends java.awt.Canvas {
-    static IntrusiveDeque field_c;
+    static IntrusiveDeque transientEntities;
     static Random field_d;
     private java.awt.Component field_b;
     static ob field_a;
@@ -22,7 +22,7 @@ final class bh extends java.awt.Canvas {
 
     public static void a(byte param0) {
         field_d = null;
-        field_c = null;
+        transientEntities = null;
         field_a = null;
         int var1 = -120 % ((-5 - param0) / 51);
     }
@@ -286,7 +286,7 @@ final class bh extends java.awt.Canvas {
     }
 
     static {
-        field_c = new IntrusiveDeque();
+        transientEntities = new IntrusiveDeque();
         field_d = new Random();
     }
 }

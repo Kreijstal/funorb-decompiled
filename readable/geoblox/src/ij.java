@@ -167,39 +167,39 @@ final class ij extends oe implements pl {
         }
     }
 
-    final static void h(byte param0) {
-        int var1 = 0;
-        int var2 = 0;
+    final static void drawAvatarFaceOrCryFrame(byte methodGuard) {
+        int avatarEyeMouthOffsetX = 0;
+        int avatarEyeMouthOffsetY = 0;
         if (!el.gameplaySession.sessionEnding) {
-            var1 = el.gameplaySession.boardMaskOffsetX - 2;
-            var2 = el.gameplaySession.boardMaskOffsetY - 2;
+            avatarEyeMouthOffsetX = el.gameplaySession.boardMaskOffsetX - 2;
+            avatarEyeMouthOffsetY = el.gameplaySession.boardMaskOffsetY - 2;
             if (!(wa.avatarShockEffectTicks <= 0)) {
                 vg.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].draw(320 - (vg.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].fullWidth >> 1), -(vg.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].fullHeight >> 1) + 240);
             }
-            fc.avatarEyeFrames[uf.avatarFeedbackFrameIndex].drawGrayModulated(var1 + 320, 240 + var2, rj.avatarTintColor);
-            vh.avatarMouthFrames[nd.avatarFeedbackModeId].drawGrayModulated(320 + var1, 240 + var2, rj.avatarTintColor);
-            if (param0 >= 3) {
+            fc.avatarEyeFrames[uf.avatarFeedbackFrameIndex].drawGrayModulated(avatarEyeMouthOffsetX + 320, 240 + avatarEyeMouthOffsetY, rj.avatarTintColor);
+            vh.avatarMouthFrames[nd.avatarFeedbackModeId].drawGrayModulated(320 + avatarEyeMouthOffsetX, 240 + avatarEyeMouthOffsetY, rj.avatarTintColor);
+            if (methodGuard >= 3) {
                 return;
             }
             menuText = (String) null;
             return;
         }
-        if (null == ul.field_a) {
-            var1 = el.gameplaySession.boardMaskOffsetX - 2;
-            var2 = el.gameplaySession.boardMaskOffsetY - 2;
+        if (null == ul.currentAvatarCryFrame) {
+            avatarEyeMouthOffsetX = el.gameplaySession.boardMaskOffsetX - 2;
+            avatarEyeMouthOffsetY = el.gameplaySession.boardMaskOffsetY - 2;
             if (!(wa.avatarShockEffectTicks <= 0)) {
                 vg.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].draw(320 - (vg.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].fullWidth >> 1), -(vg.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].fullHeight >> 1) + 240);
             }
-            fc.avatarEyeFrames[uf.avatarFeedbackFrameIndex].drawGrayModulated(var1 + 320, 240 + var2, rj.avatarTintColor);
-            vh.avatarMouthFrames[nd.avatarFeedbackModeId].drawGrayModulated(320 + var1, 240 + var2, rj.avatarTintColor);
-            if (param0 >= 3) {
+            fc.avatarEyeFrames[uf.avatarFeedbackFrameIndex].drawGrayModulated(avatarEyeMouthOffsetX + 320, 240 + avatarEyeMouthOffsetY, rj.avatarTintColor);
+            vh.avatarMouthFrames[nd.avatarFeedbackModeId].drawGrayModulated(320 + avatarEyeMouthOffsetX, 240 + avatarEyeMouthOffsetY, rj.avatarTintColor);
+            if (methodGuard >= 3) {
                 return;
             }
             menuText = (String) null;
             return;
         }
-        ul.field_a.draw(-(ul.field_a.fullWidth >> 1) + 319, -(ul.field_a.fullHeight >> 1) + 240);
-        if (param0 >= 3) {
+        ul.currentAvatarCryFrame.draw(-(ul.currentAvatarCryFrame.fullWidth >> 1) + 319, -(ul.currentAvatarCryFrame.fullHeight >> 1) + 240);
+        if (methodGuard >= 3) {
             return;
         }
         menuText = (String) null;

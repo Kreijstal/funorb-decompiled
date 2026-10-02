@@ -13,7 +13,7 @@ final class jf implements dh {
     private m field_f;
     private int field_k;
     private int field_l;
-    static int field_c;
+    static int pendingActionPanelWidth;
 
     final static void a(byte param0) {
         gf.field_d = new qh();
@@ -85,7 +85,7 @@ final class jf implements dh {
             return (java.awt.Container) ((Object) sg.field_a);
         }
         if (!param0) {
-            field_c = 78;
+            pendingActionPanelWidth = 78;
             return (java.awt.Container) ((Object) k.c(122));
         }
         return (java.awt.Container) ((Object) k.c(122));
@@ -113,7 +113,7 @@ final class jf implements dh {
               if (param2 == 33423689) {
                 return;
               }
-              field_c = -7;
+              pendingActionPanelWidth = -7;
               return;
             }
             var17 = param9;

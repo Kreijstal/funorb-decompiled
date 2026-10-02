@@ -138,7 +138,7 @@ final class GameplayEntity extends DualLinkNode {
 
     final static void resetAvatarFeedbackState(int initialFrameIndex) {
         af.avatarFrameStepTicks = 0;
-        ul.field_a = null;
+        ul.currentAvatarCryFrame = null;
         gg.field_b = 0;
         g.field_j = 0;
         pa.avatarFeedbackHoldTicks = 0;

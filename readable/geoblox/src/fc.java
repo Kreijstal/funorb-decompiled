@@ -31,7 +31,7 @@ final class fc {
             var1 = (GameplayEntity) ((Object) a.attachedEntities.nextForIteration(1));
           }
           var2 = 12 % ((-69 - param0) / 38);
-          var1 = (GameplayEntity) ((Object) bh.field_c.firstForIteration(0));
+          var1 = (GameplayEntity) ((Object) bh.transientEntities.firstForIteration(0));
           L1: while (var1 != null) {
             L2: {
               var1.advanceEntityAnimation(true);
@@ -47,7 +47,7 @@ final class fc {
                 ra.availableEntities.addLast(-115, var1);
               }
             }
-            var1 = (GameplayEntity) ((Object) bh.field_c.nextForIteration(1));
+            var1 = (GameplayEntity) ((Object) bh.transientEntities.nextForIteration(1));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

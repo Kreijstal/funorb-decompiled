@@ -20,13 +20,13 @@ final class v {
     static String field_e;
     private db field_u;
     private int field_s;
-    static String field_n;
+    static String tutorialSkipMessage;
     private boolean field_t;
     static gk field_l;
     static long field_r;
 
     public static void a(boolean param0) {
-        field_n = null;
+        tutorialSkipMessage = null;
         createPasswordConfirmationText = null;
         field_l = null;
         if (param0) {
@@ -459,7 +459,7 @@ final class v {
     static {
         createPasswordConfirmationText = "Confirm Password: ";
         field_e = null;
-        field_n = "To skip this tutorial, press <img=3> at any point.";
+        tutorialSkipMessage = "To skip this tutorial, press <img=3> at any point.";
         field_q = new java.awt.Color(10040319);
         field_l = new gk();
     }

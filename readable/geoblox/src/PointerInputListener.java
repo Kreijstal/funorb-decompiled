@@ -9,7 +9,7 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
         ji.movingEntities.moveAllTo(ra.availableEntities, (byte) -70);
         a.attachedEntities.moveAllTo(ra.availableEntities, (byte) -70);
         SecondaryDeque.spawnQueue.moveAllTo(ra.availableEntities, (byte) -70);
-        bh.field_c.moveAllTo(ra.availableEntities, (byte) -70);
+        bh.transientEntities.moveAllTo(ra.availableEntities, (byte) -70);
         kc.ticksSinceLastEntityRelease = 0;
         vf.spriteScratchRaster.setAsRasterTarget();
         SoftwareRasterizer.clearFramebuffer();

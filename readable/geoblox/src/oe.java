@@ -344,7 +344,7 @@ abstract class oe extends dd {
                 if (var8 >= 8) {
                   var3_int = var3_int + (-160 + var7);
                 }
-                for (var9 = 0; pg.field_a.length > var9; var9++) {
+                for (var9 = 0; pg.achievementTitles.length > var9; var9++) {
                   L15: {
                     if ((1 << var9 & var5) == 0) {
                       if (param0) {
@@ -402,7 +402,7 @@ abstract class oe extends dd {
                 if (var8 >= 8) {
                   var3_int = var3_int + (-160 + var7);
                 }
-                for (var9 = 0; pg.field_a.length > var9; var9++) {
+                for (var9 = 0; pg.achievementTitles.length > var9; var9++) {
                   L7: {
                     if ((1 << var9 & var5) == 0) {
                       if (param0) {

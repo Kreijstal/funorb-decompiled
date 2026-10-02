@@ -222,7 +222,7 @@ class f extends qf implements pl {
               if (gg.field_b == 0) {
                 if (!pf.field_D) {
                   g.field_j = g.field_j % 4;
-                  ul.field_a = vf.avatarCryBeginFrames[g.field_j];
+                  ul.currentAvatarCryFrame = vf.avatarCryBeginFrames[g.field_j];
                   g.field_j = g.field_j + 1;
                   avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
                   fieldTemp$53 = wa.avatarShockEffectTicks;
@@ -258,7 +258,7 @@ class f extends qf implements pl {
               }
               if (gg.field_b == 1) {
                 if (ok.avatarCryMiddleFrames.length > g.field_j) {
-                  ul.field_a = ok.avatarCryMiddleFrames[g.field_j];
+                  ul.currentAvatarCryFrame = ok.avatarCryMiddleFrames[g.field_j];
                   g.field_j = g.field_j + 1;
                   avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
                   fieldTemp$55 = wa.avatarShockEffectTicks;
@@ -292,7 +292,7 @@ class f extends qf implements pl {
                 }
               }
               g.field_j = g.field_j % 4;
-              ul.field_a = ld.avatarCryEndFrames[g.field_j];
+              ul.currentAvatarCryFrame = ld.avatarCryEndFrames[g.field_j];
               g.field_j = g.field_j + 1;
             }
           }
@@ -360,7 +360,7 @@ class f extends qf implements pl {
                   if (gg.field_b == 0) {
                     if (!pf.field_D) {
                       g.field_j = g.field_j % 4;
-                      ul.field_a = vf.avatarCryBeginFrames[g.field_j];
+                      ul.currentAvatarCryFrame = vf.avatarCryBeginFrames[g.field_j];
                       g.field_j = g.field_j + 1;
                       avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
                       fieldTemp$26 = wa.avatarShockEffectTicks;
@@ -396,7 +396,7 @@ class f extends qf implements pl {
                   }
                   if (gg.field_b == 1) {
                     if (ok.avatarCryMiddleFrames.length > g.field_j) {
-                      ul.field_a = ok.avatarCryMiddleFrames[g.field_j];
+                      ul.currentAvatarCryFrame = ok.avatarCryMiddleFrames[g.field_j];
                       g.field_j = g.field_j + 1;
                       avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
                       fieldTemp$28 = wa.avatarShockEffectTicks;
@@ -430,7 +430,7 @@ class f extends qf implements pl {
                     }
                   }
                   g.field_j = g.field_j % 4;
-                  ul.field_a = ld.avatarCryEndFrames[g.field_j];
+                  ul.currentAvatarCryFrame = ld.avatarCryEndFrames[g.field_j];
                   g.field_j = g.field_j + 1;
                 }
               }
@@ -519,7 +519,7 @@ class f extends qf implements pl {
             if (gg.field_b == 0) {
               if (!pf.field_D) {
                 g.field_j = g.field_j % 4;
-                ul.field_a = vf.avatarCryBeginFrames[g.field_j];
+                ul.currentAvatarCryFrame = vf.avatarCryBeginFrames[g.field_j];
                 g.field_j = g.field_j + 1;
                 avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
                 fieldTemp$35 = wa.avatarShockEffectTicks;
@@ -574,7 +574,7 @@ class f extends qf implements pl {
             }
             if (gg.field_b == 1) {
               if (ok.avatarCryMiddleFrames.length > g.field_j) {
-                ul.field_a = ok.avatarCryMiddleFrames[g.field_j];
+                ul.currentAvatarCryFrame = ok.avatarCryMiddleFrames[g.field_j];
                 g.field_j = g.field_j + 1;
                 avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
                 fieldTemp$43 = wa.avatarShockEffectTicks;
@@ -609,7 +609,7 @@ class f extends qf implements pl {
               }
             }
             g.field_j = g.field_j % 4;
-            ul.field_a = ld.avatarCryEndFrames[g.field_j];
+            ul.currentAvatarCryFrame = ld.avatarCryEndFrames[g.field_j];
             g.field_j = g.field_j + 1;
           }
           avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;

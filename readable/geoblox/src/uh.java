@@ -159,57 +159,57 @@ final class uh extends ac {
         }
     }
 
-    final static void d(int param0) {
-        float var9 = 0.0f;
-        float var2 = 0.0f;
-        float var3 = 0.0f;
-        int var4 = 0;
-        int var5 = 0;
-        float var6 = 0.0f;
-        int var7 = 0;
-        float var8 = 0.0f;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        GameplayEntity var13 = null;
-        GameplayEntity var14 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1 = null;
-        var12 = Geoblox.field_C;
+    final static void drawSpawnQueueAndHighlight(int methodGuard) {
+        float highlightAngleRadians = 0.0f;
+        float spawnCenterOffsetX = 0.0f;
+        float spawnCenterOffsetY = 0.0f;
+        int highlightCenterX = 0;
+        int highlightCenterY = 0;
+        float highlightAngleStep = 0.0f;
+        int highlightRgb = 0;
+        float highlightPhaseRadians = 0.0f;
+        int highlightDotX = 0;
+        int highlightDotY = 0;
+        int clientControlFlowGuardSnapshot = 0;
+        GameplayEntity spawnEntityToDraw = null;
+        GameplayEntity spawnQueueHead = null;
+        RuntimeException caughtSpawnDrawFailure = null;
+        RuntimeException spawnDrawFailureForContext = null;
+        clientControlFlowGuardSnapshot = Geoblox.field_C;
         try {
-          if (param0 != 4740) {
+          if (methodGuard != 4740) {
             return;
           }
-          var14 = (GameplayEntity) ((Object) SecondaryDeque.spawnQueue.firstForIteration(0));
-          if (var14 == null) {
+          spawnQueueHead = (GameplayEntity) ((Object) SecondaryDeque.spawnQueue.firstForIteration(0));
+          if (spawnQueueHead == null) {
             return;
           }
-          var2 = -320.0f + var14.positionX;
-          var3 = -240.0f + var14.positionY;
-          var4 = (int)((double)var2 * Math.cos((double)el.gameplaySession.boardAngleRadians) - Math.sin((double)el.gameplaySession.boardAngleRadians) * (double)var3 + 320.0);
-          var5 = (int)((double)var2 * Math.sin((double)el.gameplaySession.boardAngleRadians) + (double)var3 * Math.cos((double)el.gameplaySession.boardAngleRadians) + 240.0);
-          var6 = 0.01666666753590107f;
-          var7 = 16764416;
-          var8 = (float)el.gameplaySession.updateTick * 0.03999999910593033f;
-          SoftwareRasterizer.fillCircleAlpha(var4, var5, 16, 16777215, 100);
-          SoftwareRasterizer.drawCircle(var4, var5, 16, 0);
-          for (var9 = var8 + 3.1415927410125732f; var8 < var9; var9 = var9 - var6) {
-            var10 = (int)((double)var4 + 16.0 * Math.cos((double)var9));
-            var11 = (int)((double)var5 + Math.sin((double)var9) * 16.0);
-            SoftwareRasterizer.fillCircle(var10, var11, 2, var7);
-            var6 = var6 + var6 * 0.25f;
-            var7 += 778;
+          spawnCenterOffsetX = -320.0f + spawnQueueHead.positionX;
+          spawnCenterOffsetY = -240.0f + spawnQueueHead.positionY;
+          highlightCenterX = (int)((double)spawnCenterOffsetX * Math.cos((double)el.gameplaySession.boardAngleRadians) - Math.sin((double)el.gameplaySession.boardAngleRadians) * (double)spawnCenterOffsetY + 320.0);
+          highlightCenterY = (int)((double)spawnCenterOffsetX * Math.sin((double)el.gameplaySession.boardAngleRadians) + (double)spawnCenterOffsetY * Math.cos((double)el.gameplaySession.boardAngleRadians) + 240.0);
+          highlightAngleStep = 0.01666666753590107f;
+          highlightRgb = 16764416;
+          highlightPhaseRadians = (float)el.gameplaySession.updateTick * 0.03999999910593033f;
+          SoftwareRasterizer.fillCircleAlpha(highlightCenterX, highlightCenterY, 16, 16777215, 100);
+          SoftwareRasterizer.drawCircle(highlightCenterX, highlightCenterY, 16, 0);
+          for (highlightAngleRadians = highlightPhaseRadians + 3.1415927410125732f; highlightPhaseRadians < highlightAngleRadians; highlightAngleRadians = highlightAngleRadians - highlightAngleStep) {
+            highlightDotX = (int)((double)highlightCenterX + 16.0 * Math.cos((double)highlightAngleRadians));
+            highlightDotY = (int)((double)highlightCenterY + Math.sin((double)highlightAngleRadians) * 16.0);
+            SoftwareRasterizer.fillCircle(highlightDotX, highlightDotY, 2, highlightRgb);
+            highlightAngleStep = highlightAngleStep + highlightAngleStep * 0.25f;
+            highlightRgb += 778;
           }
-          var13 = (GameplayEntity) ((Object) SecondaryDeque.spawnQueue.firstForIteration(0));
-          L1: while (var13 != null) {
-            var13.drawFadingEntity(param0 - 4830);
-            var13 = (GameplayEntity) ((Object) SecondaryDeque.spawnQueue.nextForIteration(1));
+          spawnEntityToDraw = (GameplayEntity) ((Object) SecondaryDeque.spawnQueue.firstForIteration(0));
+          L1: while (spawnEntityToDraw != null) {
+            spawnEntityToDraw.drawFadingEntity(methodGuard - 4830);
+            spawnEntityToDraw = (GameplayEntity) ((Object) SecondaryDeque.spawnQueue.nextForIteration(1));
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1), "uh.DA(" + param0 + ')');
+        } catch (java.lang.RuntimeException spawnQueueDrawFailure) {
+          caughtSpawnDrawFailure = spawnQueueDrawFailure;
+          spawnDrawFailureForContext = caughtSpawnDrawFailure;
+          throw t.a((Throwable) ((Object) spawnDrawFailureForContext), "uh.DA(" + methodGuard + ')');
         }
     }
 

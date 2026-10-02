@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 3,112 guarded naming rules: 32 classes, 542 fields,
-313 methods, 904 parameters and 1,321 local declarations. Both 303-file corpora
+The current export has 3,305 guarded naming rules: 32 classes, 550 fields,
+325 methods, 957 parameters and 1,441 local declarations. Both 303-file corpora
 compile, preserving 138,558 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -54,7 +54,45 @@ smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
 
-## Current raster presentation and panel naming
+## Current session renderer and draw pipeline
+
+Pass 54 adds 193 guarded identities: eight fields, 12 methods, 53 parameters
+and 120 locals. Two earlier renderer-local rules are corrected: a rotated X
+coordinate is later reused for tutorial text height, and a fading debug circle
+uses an RGB gray level rather than an alpha argument. Every other 3,110 previous
+complete rule stays unchanged, along with raw source and generator pins.
+The 3,305 rules apply 31,988 edits; all 303 raw/readable sources compile,
+preserving 138,558 bindings and 388 override relationships.
+
+Every `GameplaySession.renderSession` parameter/local now has a guarded role.
+Theme resource selection and graphics-loading text, transition flags,
+score-box animation, tutorial layout, debug entity queues and reused join
+values are explicit. Multi-role locals keep their supported uses; no variables
+are split, no shared joins are collapsed, and nonzero client-guard paths remain.
+
+The rendering helpers now read `drawMovingEntities`, `drawTransientEntities`,
+`drawAvatarFaceOrCryFrame`, `drawSpawnQueueAndHighlight` and
+`drawPendingActionPanel`. Their parameters/locals are named. Shared state reads
+`debugOverviewRaster`, `transientEntities`, `currentAvatarCryFrame`,
+`tutorialSkipMessage`, `achievementTitles` and the pending-action panel geometry.
+`formatArchiveGroupProgress` describes the original fallback-versus-percentage
+formatting; `preparePendingActionPanel` measures its title and resets its layout.
+
+The debug path names `blurRasterRegion`, its row/column contracts,
+`compositeScaledDebugOverview` and `blendScaledDebugOverviewPixels`. The scale
+wrapper and blend have named parameters/locals, including Q16 coordinates,
+crop/canvas sizes, clipping, gray weights and reused RGB/row-start slots.
+Original masks, shifts, overflow, guard effects, diagnostics, queue order,
+exception scopes and source bodies remain.
+
+Existing native probes preserve their recorded scopes and traces. They do not
+newly execute the whole session renderer, debug composite/blur, live archive
+completion or pending-action panels. Those names are source-audited with complete
+binding checks. Actual assets, gameplay, AWT/phone presentation and numerical
+memory/FPS targets remain unverified. Deterministic regeneration and byte-exact
+dictionary restoration remain required.
+
+## Previous raster presentation and panel naming
 
 Pass 53 adds 118 guarded identities: two classes, nine fields, ten methods,
 47 parameters and 50 locals. All previous 2,994 complete rules and the raw
@@ -718,6 +756,6 @@ the same manifest; no JSON snapshots are added.
 | Java source tree | SHA-256 |
 | --- | --- |
 | Raw | `39be3539b43d7acc9540acca49e7b6378cdb233908092706646df4c2cdc6a8fe` |
-| Readable | `6c056c36db71476ccb4acc185e37126672967c4a7be61126023f4f8136926540` |
+| Readable | `a1026ae777346471e155fa04f6ab4b3f30d6477d98809b4b5ce462d23b983898` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

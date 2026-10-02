@@ -118,120 +118,120 @@ final class lc {
         }
     }
 
-    final static void a(int param0, int param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, byte param10, int[] param11, int param12) {
-        int incrementValue$0 = 0;
-        int stackIn_23_0 = 0;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
-        String stackIn_29_2 = null;
-        StringBuilder stackIn_32_1 = null;
-        String stackIn_33_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var13_int = 0;
-        RuntimeException var13 = null;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        int var25 = 0;
-        int var26 = 0;
-        int var27 = 0;
-        int var28 = 0;
-        int var29 = 0;
-        int var30 = 0;
-        int var31 = 0;
-        int var32 = 0;
-        int var33 = 0;
-        int var34 = 0;
-        int var35 = 0;
-        int var36 = 0;
-        int var37 = 0;
-        var37 = Geoblox.field_C;
+    final static void blendScaledDebugOverviewPixels(int sampleXQ16, int destinationHeight, int[] destinationPixels, int sampleXStepQ16, int sampleYStepQ16, int sourceStride, int sampleYQ16, int destinationRowSkip, int destinationIndex, int destinationWidth, byte methodGuard, int[] overviewPixels, int sampleColor) {
+        int destinationIndexBeforeIncrement = 0;
+        int sampleColorOrRowStartXQ16 = 0;
+        RuntimeException blendFailureBeforeArrayDescriptions = null;
+        StringBuilder blendMessagePrefix = null;
+        String destinationArrayArgumentDescription = null;
+        StringBuilder blendMessageBeforeSourceDescription = null;
+        String sourceArrayArgumentDescription = null;
+        RuntimeException caughtBlendFailure = null;
+        int rowStartXQ16 = 0;
+        RuntimeException blendFailureForContext = null;
+        int debugTintRgb = 0;
+        int debugTintRed = 0;
+        int debugTintGreenPacked = 0;
+        int debugTintBlue = 0;
+        int negativeRowCounter = 0;
+        int sourceRowOffset = 0;
+        int negativeColumnCounter = 0;
+        int destinationRgb = 0;
+        int doubledDestinationRed = 0;
+        int destinationGreen = 0;
+        int destinationBlue = 0;
+        int weightedDestinationGrayOrTintedRgb = 0;
+        int inverseSourceGrayWeight = 0;
+        int tintedRed = 0;
+        int tintedGreen = 0;
+        int tintedBlue = 0;
+        int weightedTintRed = 0;
+        int weightedTintGreen = 0;
+        int weightedTintBlue = 0;
+        int modulatedRedThenWeighted = 0;
+        int modulatedGreenThenWeighted = 0;
+        int modulatedBlueThenWeighted = 0;
+        int sourceGrayWeight = 0;
+        int clientControlFlowGuard = 0;
+        clientControlFlowGuard = Geoblox.field_C;
         try {
-          if (param10 > -74) {
+          if (methodGuard > -74) {
             field_b = 78;
           }
-          var13_int = param0;
-          var14 = 1122867;
-          var15 = (var14 & 16711680) >>> 16;
-          var16 = var14 & 65280;
-          var17 = var14 & 255;
-          var18 = -param1;
+          rowStartXQ16 = sampleXQ16;
+          debugTintRgb = 1122867;
+          debugTintRed = (debugTintRgb & 16711680) >>> 16;
+          debugTintGreenPacked = debugTintRgb & 65280;
+          debugTintBlue = debugTintRgb & 255;
+          negativeRowCounter = -destinationHeight;
           L1: while (true) {
             L2: {
               L3: {
-                if (var18 < 0) {
-                  var19 = param5 * (param6 >> 16);
-                  if (var37 != 0) {
+                if (negativeRowCounter < 0) {
+                  sourceRowOffset = sourceStride * (sampleYQ16 >> 16);
+                  if (clientControlFlowGuard != 0) {
                     break L2;
                   }
                   {
-                    var20 = -param9;
+                    negativeColumnCounter = -destinationWidth;
                     L4: while (true) {
                       L5: {
-                        if (var20 < 0) {
-                          param12 = param11[var19 + (param0 >> 16)];
-                          param0 = param0 + param3;
-                          stackIn_23_0 = param12;
-                          if (var37 != 0) {
+                        if (negativeColumnCounter < 0) {
+                          sampleColor = overviewPixels[sourceRowOffset + (sampleXQ16 >> 16)];
+                          sampleXQ16 = sampleXQ16 + sampleXStepQ16;
+                          sampleColorOrRowStartXQ16 = sampleColor;
+                          if (clientControlFlowGuard != 0) {
                             break L5;
                           }
                           L7: {
-                            if (stackIn_23_0 == 0) {
-                              param8++;
-                              if (var37 == 0) {
+                            if (sampleColorOrRowStartXQ16 == 0) {
+                              destinationIndex++;
+                              if (clientControlFlowGuard == 0) {
                                 break L7;
                               }
                             }
-                            var21 = param2[param8];
-                            if (var21 == 0) {
-                              param8++;
-                              if (var37 == 0) {
+                            destinationRgb = destinationPixels[destinationIndex];
+                            if (destinationRgb == 0) {
+                              destinationIndex++;
+                              if (clientControlFlowGuard == 0) {
                                 break L7;
                               }
                             }
-                            var22 = 510 & var21 >> 15;
-                            var23 = (var21 & 65429) >> 8;
-                            var24 = 255 & var21;
-                            var25 = (var24 + var22) / 3 + var23 >> 1;
-                            var26 = -(((255 & param12) + (param12 >> 8 & 255) + (param12 >> 16 & 255)) / 3) + 256;
-                            var27 = var15 * (var25 << 16 >>> 16) >>> 8;
-                            var28 = (var25 << 8) * var16 >>> 24;
-                            var29 = var17 * var25 >>> 8;
-                            var25 = (var28 << 8) + (var27 << 16) + var29;
-                            var30 = var26 * ((16711680 & var25) >> 16);
-                            var31 = (255 & var25 >> 8) * var26;
-                            var32 = (var25 & 255) * var26;
-                            var33 = ((16711680 & var21) >>> 16) * ((param12 & 16711680) >>> 16) >>> 8;
-                            var34 = (var21 & 65280) * (param12 & 65280) >>> 24;
-                            var35 = (255 & var21) * (255 & param12) >>> 8;
-                            var36 = 256 - var26;
-                            var33 = var33 * var36;
-                            var34 = var34 * var36;
-                            var35 = var35 * var36;
-                            incrementValue$0 = param8;
-                            param8++;
-                            param2[incrementValue$0] = (var32 + var35 >> 8) + ((var34 + var31 >> 8 << 8) + (var30 + var33 >> 8 << 16));
+                            doubledDestinationRed = 510 & destinationRgb >> 15;
+                            destinationGreen = (destinationRgb & 65429) >> 8;
+                            destinationBlue = 255 & destinationRgb;
+                            weightedDestinationGrayOrTintedRgb = (destinationBlue + doubledDestinationRed) / 3 + destinationGreen >> 1;
+                            inverseSourceGrayWeight = -(((255 & sampleColor) + (sampleColor >> 8 & 255) + (sampleColor >> 16 & 255)) / 3) + 256;
+                            tintedRed = debugTintRed * (weightedDestinationGrayOrTintedRgb << 16 >>> 16) >>> 8;
+                            tintedGreen = (weightedDestinationGrayOrTintedRgb << 8) * debugTintGreenPacked >>> 24;
+                            tintedBlue = debugTintBlue * weightedDestinationGrayOrTintedRgb >>> 8;
+                            weightedDestinationGrayOrTintedRgb = (tintedGreen << 8) + (tintedRed << 16) + tintedBlue;
+                            weightedTintRed = inverseSourceGrayWeight * ((16711680 & weightedDestinationGrayOrTintedRgb) >> 16);
+                            weightedTintGreen = (255 & weightedDestinationGrayOrTintedRgb >> 8) * inverseSourceGrayWeight;
+                            weightedTintBlue = (weightedDestinationGrayOrTintedRgb & 255) * inverseSourceGrayWeight;
+                            modulatedRedThenWeighted = ((16711680 & destinationRgb) >>> 16) * ((sampleColor & 16711680) >>> 16) >>> 8;
+                            modulatedGreenThenWeighted = (destinationRgb & 65280) * (sampleColor & 65280) >>> 24;
+                            modulatedBlueThenWeighted = (255 & destinationRgb) * (255 & sampleColor) >>> 8;
+                            sourceGrayWeight = 256 - inverseSourceGrayWeight;
+                            modulatedRedThenWeighted = modulatedRedThenWeighted * sourceGrayWeight;
+                            modulatedGreenThenWeighted = modulatedGreenThenWeighted * sourceGrayWeight;
+                            modulatedBlueThenWeighted = modulatedBlueThenWeighted * sourceGrayWeight;
+                            destinationIndexBeforeIncrement = destinationIndex;
+                            destinationIndex++;
+                            destinationPixels[destinationIndexBeforeIncrement] = (weightedTintBlue + modulatedBlueThenWeighted >> 8) + ((modulatedGreenThenWeighted + weightedTintGreen >> 8 << 8) + (weightedTintRed + modulatedRedThenWeighted >> 8 << 16));
                           }
-                          var20++;
-                          if (var37 == 0) {
+                          negativeColumnCounter++;
+                          if (clientControlFlowGuard == 0) {
                             continue L4;
                           }
                         }
-                        param6 = param6 + param4;
-                        param8 = param8 + param7;
-                        stackIn_23_0 = var13_int;
+                        sampleYQ16 = sampleYQ16 + sampleYStepQ16;
+                        destinationIndex = destinationIndex + destinationRowSkip;
+                        sampleColorOrRowStartXQ16 = rowStartXQ16;
                       }
-                      param0 = stackIn_23_0;
-                      var18++;
-                      if (var37 == 0) {
+                      sampleXQ16 = sampleColorOrRowStartXQ16;
+                      negativeRowCounter++;
+                      if (clientControlFlowGuard == 0) {
                         continue L1;
                       }
                       break L3;
@@ -242,23 +242,23 @@ final class lc {
             }
             return;
           }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var13 = decompiledCaughtException;
-          stackIn_28_0 = (RuntimeException) (var13);
-          stackIn_28_1 = new StringBuilder().append("lc.C(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
-            stackIn_29_2 = "null";
+        } catch (java.lang.RuntimeException debugOverviewBlendFailure) {
+          caughtBlendFailure = debugOverviewBlendFailure;
+          blendFailureForContext = caughtBlendFailure;
+          blendFailureBeforeArrayDescriptions = (RuntimeException) (blendFailureForContext);
+          blendMessagePrefix = new StringBuilder().append("lc.C(").append(sampleXQ16).append(',').append(destinationHeight).append(',');
+          if (destinationPixels == null) {
+            destinationArrayArgumentDescription = "null";
           } else {
-            stackIn_29_2 = "{...}";
+            destinationArrayArgumentDescription = "{...}";
           }
-          stackIn_32_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',');
-          if (param11 == null) {
-            stackIn_33_2 = "null";
+          blendMessageBeforeSourceDescription = ((StringBuilder) (Object) blendMessagePrefix).append(destinationArrayArgumentDescription).append(',').append(sampleXStepQ16).append(',').append(sampleYStepQ16).append(',').append(sourceStride).append(',').append(sampleYQ16).append(',').append(destinationRowSkip).append(',').append(destinationIndex).append(',').append(destinationWidth).append(',').append(methodGuard).append(',');
+          if (overviewPixels == null) {
+            sourceArrayArgumentDescription = "null";
           } else {
-            stackIn_33_2 = "{...}";
+            sourceArrayArgumentDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param12).append(')').toString());
+          throw t.a((Throwable) ((Object) blendFailureBeforeArrayDescriptions), ((StringBuilder) (Object) blendMessageBeforeSourceDescription).append(sourceArrayArgumentDescription).append(',').append(sampleColor).append(')').toString());
         }
     }
 
@@ -277,7 +277,7 @@ final class lc {
             return (bg) ((Object) stackIn_4_0);
           }
           if (param0 != 4520) {
-            lc.a(-56, -44, (int[]) null, 118, 4, -55, 25, -98, -82, -78, (byte) -35, (int[]) null, -116);
+            lc.blendScaledDebugOverviewPixels(-56, -44, (int[]) null, 118, 4, -55, 25, -98, -82, -78, (byte) -35, (int[]) null, -116);
           }
           var2 = new bg(param1, GameplaySession.field_m, md.field_e, DualLinkNode.field_j, hl.field_K, mj.field_a);
           kj.c(true);

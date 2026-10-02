@@ -214,34 +214,34 @@ final class GameplaySession {
     }
 
     final void renderSession(byte methodGuard) {
-        int stackIn_49_0 = 0;
-        int stackIn_168_0 = 0;
-        int stackIn_168_1 = 0;
-        String var2_ref_String = null;
-        int var2 = 0;
-        int var3 = 0;
-        String var3_ref_String = null;
-        int var4 = 0;
-        float var5_float = 0.0f;
-        int var5 = 0;
-        float var6_float = 0.0f;
-        int var6 = 0;
-        float var7_float = 0.0f;
-        int var7_int = 0;
-        IntrusiveDeque var7 = null;
-        int var8 = 0;
+        int selectedSceneTransitionFlag = 0;
+        int minimumGrayLevelOrCompositeHeight = 0;
+        int grayLevelForComparisonOrCompositeEnabled = 0;
+        String themeResourceGroup = null;
+        int sceneTransitionFlag = 0;
+        int selectedThemeIdOrScoreBoxX = 0;
+        String graphicsLoadingMessage = null;
+        int loadingPanelWidthOrScoreBoxY = 0;
+        float gameOverAnimationProgress = 0.0f;
+        int tutorialTopOrDebugColorOrTransitionClipTop = 0;
+        float gameOverAnimationRemainder = 0.0f;
+        int tutorialLineHeightOrDebugEntityRadius = 0;
+        float gameOverAnimationRemainderSquared = 0.0f;
+        int tutorialPanelWidth = 0;
+        IntrusiveDeque debugEntityQueue = null;
+        int tutorialTextHeightOrDebugPanelTop = 0;
         GameplayEntity renderedEntity = null;
         float entityOffsetX = 0.0f;
-        int var9 = 0;
+        int debugTutorialLineHeight = 0;
         float entityOffsetY = 0.0f;
-        int var10 = 0;
-        int renderedEntityX = 0;
+        int debugTutorialPanelWidth = 0;
+        int debugEntityXOrTutorialTextHeight = 0;
         int renderedEntityY = 0;
-        int entityOpacity = 0;
-        int var14 = 0;
-        IntrusiveDeque var15 = null;
-        IntrusiveDeque var16 = null;
-        var14 = Geoblox.field_C;
+        int spawnEntityGrayLevel = 0;
+        int clientControlFlowGuard = 0;
+        IntrusiveDeque debugSpawnQueueSnapshot = null;
+        IntrusiveDeque debugMovingQueueSnapshot = null;
+        clientControlFlowGuard = Geoblox.field_C;
         if (!ll.themesLoaded[GameScreen.selectedThemeId]) {
           L0: {
             L1: {
@@ -250,93 +250,93 @@ final class GameplaySession {
                   L4: {
                     L5: {
                       L6: {
-                        var3 = GameScreen.selectedThemeId;
-                        if (var3 == 4) {
-                          if (var14 == 0) {
-                            var2_ref_String = "baking";
-                            if (var14 == 0) {
+                        selectedThemeIdOrScoreBoxX = GameScreen.selectedThemeId;
+                        if (selectedThemeIdOrScoreBoxX == 4) {
+                          if (clientControlFlowGuard == 0) {
+                            themeResourceGroup = "baking";
+                            if (clientControlFlowGuard == 0) {
                               break L0;
                             }
                             break L6;
                           }
                         }
-                        if (var3 == 6) {
-                          if (var14 == 0) {
+                        if (selectedThemeIdOrScoreBoxX == 6) {
+                          if (clientControlFlowGuard == 0) {
                             break L6;
                           }
                         }
-                        if (var3 == 5) {
-                          if (var14 == 0) {
+                        if (selectedThemeIdOrScoreBoxX == 5) {
+                          if (clientControlFlowGuard == 0) {
                             break L5;
                           }
                         }
-                        if (var3 == 0) {
+                        if (selectedThemeIdOrScoreBoxX == 0) {
                           break L4;
                         }
-                        if (3 == var3) {
-                          if (var14 == 0) {
+                        if (3 == selectedThemeIdOrScoreBoxX) {
+                          if (clientControlFlowGuard == 0) {
                             break L3;
                           }
                         }
-                        if (var3 == 2) {
+                        if (selectedThemeIdOrScoreBoxX == 2) {
                           break L2;
                         }
                         break L1;
                       }
-                      var2_ref_String = "space";
-                      if (var14 == 0) {
+                      themeResourceGroup = "space";
+                      if (clientControlFlowGuard == 0) {
                         break L0;
                       }
                     }
-                    var2_ref_String = "sports";
-                    if (var14 == 0) {
+                    themeResourceGroup = "sports";
+                    if (clientControlFlowGuard == 0) {
                       break L0;
                     }
                   }
-                  var2_ref_String = "jewels";
-                  if (var14 == 0) {
+                  themeResourceGroup = "jewels";
+                  if (clientControlFlowGuard == 0) {
                     break L0;
                   }
                 }
-                var2_ref_String = "germs";
-                if (var14 == 0) {
+                themeResourceGroup = "germs";
+                if (clientControlFlowGuard == 0) {
                   break L0;
                 }
               }
-              var2_ref_String = "sweets";
-              if (var14 == 0) {
+              themeResourceGroup = "sweets";
+              if (clientControlFlowGuard == 0) {
                 break L0;
               }
             }
-            var2_ref_String = "";
+            themeResourceGroup = "";
           }
-          var3_ref_String = gf.a(ff.waitingForGraphicsText, ll.gameGraphicsArchive, var2_ref_String, AccountWelcomePanel.loadingGraphicsText, true);
-          var4 = 30 + dd.uiPaletteFont.a(var3_ref_String);
-          ma.drawNineSlicePanel(215, 320 - var4 / 2, 50, (byte) -92, var4, ll.frameNineSliceSprites);
-          dd.uiPaletteFont.b(var3_ref_String, 320, 250, 0, -1);
+          graphicsLoadingMessage = gf.formatArchiveGroupProgress(ff.waitingForGraphicsText, ll.gameGraphicsArchive, themeResourceGroup, AccountWelcomePanel.loadingGraphicsText, true);
+          loadingPanelWidthOrScoreBoxY = 30 + dd.uiPaletteFont.a(graphicsLoadingMessage);
+          ma.drawNineSlicePanel(215, 320 - loadingPanelWidthOrScoreBoxY / 2, 50, (byte) -92, loadingPanelWidthOrScoreBoxY, ll.frameNineSliceSprites);
+          dd.uiPaletteFont.b(graphicsLoadingMessage, 320, 250, 0, -1);
           return;
         }
         L11: {
           if (ih.areEntityQueuesSettled(0)) {
             if (this.sceneTransitionRequested) {
               if (this.sceneTransitionInProgress) {
-                stackIn_49_0 = 1;
+                selectedSceneTransitionFlag = 1;
                 break L11;
               }
             }
           }
-          stackIn_49_0 = 0;
+          selectedSceneTransitionFlag = 0;
         }
         L13: {
-          var2 = stackIn_49_0;
-          if (var2 == 0) {
+          sceneTransitionFlag = selectedSceneTransitionFlag;
+          if (sceneTransitionFlag == 0) {
             if (!this.boardRasterDirty) {
               oc.boardSceneRaster.setAsRasterTarget();
               if (this.debugReducedRendering) {
                 break L13;
               }
               gj.drawSpecialAttachedEntities((byte) -63);
-              if (var14 == 0) {
+              if (clientControlFlowGuard == 0) {
                 break L13;
               }
             }
@@ -351,52 +351,52 @@ final class GameplaySession {
         }
         sh.mainRasterBuffer.setAsRasterTarget(255);
         mf.selectedThemeBackground.drawRunEncoded(0, 0);
-        var3 = 4;
-        var4 = 4;
+        selectedThemeIdOrScoreBoxX = 4;
+        loadingPanelWidthOrScoreBoxY = 4;
         if (methodGuard >= -28) {
           this.updateSession(-63);
         }
         L17: {
           if (this.showGameOverOverlay) {
             if (this.sceneAnimationTick <= 266) {
-              var5_float = (float)this.sceneAnimationTick / 266.0f;
-              var6_float = -var5_float + 1.0f;
-              var7_float = var6_float * var6_float;
-              var3 = (int)(0.5f + (70.0f * (2.0f * var5_float * var6_float) + 10.0f * var7_float + 220.0f * (var5_float * var5_float)));
-              var4 = (int)(170.0f * (var5_float * var5_float) + (var7_float * 10.0f + 140.0f * (var5_float * 2.0f * var6_float)) + 0.5f);
-              if (var14 == 0) {
+              gameOverAnimationProgress = (float)this.sceneAnimationTick / 266.0f;
+              gameOverAnimationRemainder = -gameOverAnimationProgress + 1.0f;
+              gameOverAnimationRemainderSquared = gameOverAnimationRemainder * gameOverAnimationRemainder;
+              selectedThemeIdOrScoreBoxX = (int)(0.5f + (70.0f * (2.0f * gameOverAnimationProgress * gameOverAnimationRemainder) + 10.0f * gameOverAnimationRemainderSquared + 220.0f * (gameOverAnimationProgress * gameOverAnimationProgress)));
+              loadingPanelWidthOrScoreBoxY = (int)(170.0f * (gameOverAnimationProgress * gameOverAnimationProgress) + (gameOverAnimationRemainderSquared * 10.0f + 140.0f * (gameOverAnimationProgress * 2.0f * gameOverAnimationRemainder)) + 0.5f);
+              if (clientControlFlowGuard == 0) {
                 break L17;
               }
             }
-            var3 = 220;
-            var4 = 170;
+            selectedThemeIdOrScoreBoxX = 220;
+            loadingPanelWidthOrScoreBoxY = 170;
           }
         }
         L19: {
           if (this.tutorialMode) {
-            var5 = 176 - this.updateTick / 2;
-            if (10 > var5) {
-              var5 = 10;
+            tutorialTopOrDebugColorOrTransitionClipTop = 176 - this.updateTick / 2;
+            if (10 > tutorialTopOrDebugColorOrTransitionClipTop) {
+              tutorialTopOrDebugColorOrTransitionClipTop = 10;
             }
-            var6 = -fi.smallFont.field_q + fi.smallFont.field_o;
-            var7_int = fi.smallFont.c(v.field_n, 640) + 40;
-            var8 = fi.smallFont.b(v.field_n, 640) * var6 + 10;
-            ma.drawNineSlicePanel(var5, -(var7_int / 2) + 320, 20 + var8, (byte) -92, var7_int, ll.frameNineSliceSprites);
-            fi.smallFont.b(v.field_n, 320, var5 + 28, 1, -1);
-            fi.smallFont.b(v.field_n, 319, 28 + var5, 1, -1);
-            if (var14 == 0) {
+            tutorialLineHeightOrDebugEntityRadius = -fi.smallFont.field_q + fi.smallFont.field_o;
+            tutorialPanelWidth = fi.smallFont.c(v.tutorialSkipMessage, 640) + 40;
+            tutorialTextHeightOrDebugPanelTop = fi.smallFont.b(v.tutorialSkipMessage, 640) * tutorialLineHeightOrDebugEntityRadius + 10;
+            ma.drawNineSlicePanel(tutorialTopOrDebugColorOrTransitionClipTop, -(tutorialPanelWidth / 2) + 320, 20 + tutorialTextHeightOrDebugPanelTop, (byte) -92, tutorialPanelWidth, ll.frameNineSliceSprites);
+            fi.smallFont.b(v.tutorialSkipMessage, 320, tutorialTopOrDebugColorOrTransitionClipTop + 28, 1, -1);
+            fi.smallFont.b(v.tutorialSkipMessage, 319, 28 + tutorialTopOrDebugColorOrTransitionClipTop, 1, -1);
+            if (clientControlFlowGuard == 0) {
               break L19;
             }
           }
           L22: {
-            lj.smallBoxSprite.draw(var3, var4);
+            lj.smallBoxSprite.draw(selectedThemeIdOrScoreBoxX, loadingPanelWidthOrScoreBoxY);
             if (0 == this.sessionPhase) {
               if (!ih.areEntityQueuesSettled(0)) {
                 break L22;
               }
             }
             vh.largeBoxSprite.draw(446, 410);
-            if (var14 == 0) {
+            if (clientControlFlowGuard == 0) {
               break L19;
             }
           }
@@ -405,7 +405,7 @@ final class GameplaySession {
         L24: {
           if (!this.tutorialMode) {
             if (ih.areEntityQueuesSettled(0)) {
-              if (var2 == 0) {
+              if (sceneTransitionFlag == 0) {
                 break L24;
               }
               if (0 != this.sessionPhase) {
@@ -418,16 +418,16 @@ final class GameplaySession {
           }
         }
         if (!this.debugReducedRendering) {
-          h.c(-1);
+          h.drawMovingEntities(-1);
         }
         if (!this.debugReducedRendering) {
-          if (var2 == 0) {
+          if (sceneTransitionFlag == 0) {
             oc.boardSceneRaster.draw(0, 0);
           }
         }
-        ij.h((byte) 18);
+        ij.drawAvatarFaceOrCryFrame((byte) 18);
         if (!this.debugReducedRendering) {
-          ni.f(484842465);
+          ni.drawTransientEntities(484842465);
         }
         jf.rotatedThemeForegroundRaster.setAsRasterTarget();
         SoftwareRasterizer.clearFramebuffer();
@@ -435,126 +435,126 @@ final class GameplaySession {
         sh.mainRasterBuffer.setAsRasterTarget(255);
         w.a(jf.rotatedThemeForegroundRaster, -(jf.rotatedThemeForegroundRaster.fullWidth >> 1) + 320, -(jf.rotatedThemeForegroundRaster.fullHeight >> 1) + 240);
         if (!this.debugReducedRendering) {
-          uh.d(4740);
+          uh.drawSpawnQueueAndHighlight(4740);
         }
         L30: {
           if (this.showDebugOverview) {
-            af.field_a.setAsRasterTarget();
+            af.debugOverviewRaster.setAsRasterTarget();
             SoftwareRasterizer.fillRectangle(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight, 1118481);
-            var5 = 16777215;
+            tutorialTopOrDebugColorOrTransitionClipTop = 16777215;
             SoftwareRasterizer.drawCircle(160, 120, 115, 16711680);
-            var6 = 20;
-            var15 = SecondaryDeque.spawnQueue;
-            renderedEntity = (GameplayEntity) ((Object) var15.lastForIteration(false));
+            tutorialLineHeightOrDebugEntityRadius = 20;
+            debugSpawnQueueSnapshot = SecondaryDeque.spawnQueue;
+            renderedEntity = (GameplayEntity) ((Object) debugSpawnQueueSnapshot.lastForIteration(false));
             L31: while (true) {
               L32: {
                 if (renderedEntity != null) {
                   entityOffsetX = -320.0f + renderedEntity.positionX;
                   entityOffsetY = -240.0f + renderedEntity.positionY;
-                  renderedEntityX = (int)(320.0 + (Math.cos((double)el.gameplaySession.boardAngleRadians) * (double)entityOffsetX - Math.sin((double)el.gameplaySession.boardAngleRadians) * (double)entityOffsetY));
+                  debugEntityXOrTutorialTextHeight = (int)(320.0 + (Math.cos((double)el.gameplaySession.boardAngleRadians) * (double)entityOffsetX - Math.sin((double)el.gameplaySession.boardAngleRadians) * (double)entityOffsetY));
                   renderedEntityY = (int)(240.0 + ((double)entityOffsetX * Math.sin((double)el.gameplaySession.boardAngleRadians) + (double)entityOffsetY * Math.cos((double)el.gameplaySession.boardAngleRadians)));
-                  entityOpacity = 255 - renderedEntity.remainingLifetimeTicks * 255 / renderedEntity.initialLifetimeTicks;
-                  stackIn_168_0 = 11;
-                  stackIn_168_1 = entityOpacity;
-                  if (var14 != 0) {
+                  spawnEntityGrayLevel = 255 - renderedEntity.remainingLifetimeTicks * 255 / renderedEntity.initialLifetimeTicks;
+                  minimumGrayLevelOrCompositeHeight = 11;
+                  grayLevelForComparisonOrCompositeEnabled = spawnEntityGrayLevel;
+                  if (clientControlFlowGuard != 0) {
                     break L32;
                   }
-                  if (stackIn_168_0 > stackIn_168_1) {
-                    entityOpacity = 11;
+                  if (minimumGrayLevelOrCompositeHeight > grayLevelForComparisonOrCompositeEnabled) {
+                    spawnEntityGrayLevel = 11;
                   }
-                  if (entityOpacity > 255) {
-                    entityOpacity = 255;
+                  if (spawnEntityGrayLevel > 255) {
+                    spawnEntityGrayLevel = 255;
                   }
-                  SoftwareRasterizer.fillCircle(renderedEntityX / 2, renderedEntityY / 2, var6, entityOpacity << 8 | entityOpacity << 16 | entityOpacity);
-                  renderedEntity = (GameplayEntity) ((Object) var15.previousForIteration(0));
-                  if (var14 == 0) {
+                  SoftwareRasterizer.fillCircle(debugEntityXOrTutorialTextHeight / 2, renderedEntityY / 2, tutorialLineHeightOrDebugEntityRadius, spawnEntityGrayLevel << 8 | spawnEntityGrayLevel << 16 | spawnEntityGrayLevel);
+                  renderedEntity = (GameplayEntity) ((Object) debugSpawnQueueSnapshot.previousForIteration(0));
+                  if (clientControlFlowGuard == 0) {
                     continue L31;
                   }
                 }
-                var16 = ji.movingEntities;
-                var7 = var16;
-                renderedEntity = (GameplayEntity) ((Object) var16.firstForIteration(0));
+                debugMovingQueueSnapshot = ji.movingEntities;
+                debugEntityQueue = debugMovingQueueSnapshot;
+                renderedEntity = (GameplayEntity) ((Object) debugMovingQueueSnapshot.firstForIteration(0));
                 L36: while (true) {
                   L37: {
                     if (null != renderedEntity) {
                       entityOffsetX = -320.0f + renderedEntity.positionX;
                       entityOffsetY = -240.0f + renderedEntity.positionY;
-                      renderedEntityX = (int)(Math.cos((double)el.gameplaySession.boardAngleRadians) * (double)entityOffsetX - Math.sin((double)el.gameplaySession.boardAngleRadians) * (double)entityOffsetY + 320.0);
+                      debugEntityXOrTutorialTextHeight = (int)(Math.cos((double)el.gameplaySession.boardAngleRadians) * (double)entityOffsetX - Math.sin((double)el.gameplaySession.boardAngleRadians) * (double)entityOffsetY + 320.0);
                       renderedEntityY = (int)(240.0 + ((double)entityOffsetX * Math.sin((double)el.gameplaySession.boardAngleRadians) + (double)entityOffsetY * Math.cos((double)el.gameplaySession.boardAngleRadians)));
-                      SoftwareRasterizer.fillCircle(renderedEntityX / 2, renderedEntityY / 2, var6, var5);
-                      renderedEntity = (GameplayEntity) ((Object) var16.nextForIteration(1));
-                      if (var14 != 0) {
+                      SoftwareRasterizer.fillCircle(debugEntityXOrTutorialTextHeight / 2, renderedEntityY / 2, tutorialLineHeightOrDebugEntityRadius, tutorialTopOrDebugColorOrTransitionClipTop);
+                      renderedEntity = (GameplayEntity) ((Object) debugMovingQueueSnapshot.nextForIteration(1));
+                      if (clientControlFlowGuard != 0) {
                         break L37;
                       }
-                      if (var14 == 0) {
+                      if (clientControlFlowGuard == 0) {
                         continue L36;
                       }
                     }
-                    var7 = a.attachedEntities;
+                    debugEntityQueue = a.attachedEntities;
                   }
-                  renderedEntity = (GameplayEntity) ((Object) var7.firstForIteration(0));
+                  renderedEntity = (GameplayEntity) ((Object) debugEntityQueue.firstForIteration(0));
                   L39: while (true) {
                     L40: {
                       if (renderedEntity != null) {
-                        SoftwareRasterizer.fillCircle((int)(renderedEntity.positionX / 2.0f), (int)(renderedEntity.positionY / 2.0f), var6, var5);
-                        renderedEntity = (GameplayEntity) ((Object) var7.nextForIteration(1));
-                        if (var14 != 0) {
+                        SoftwareRasterizer.fillCircle((int)(renderedEntity.positionX / 2.0f), (int)(renderedEntity.positionY / 2.0f), tutorialLineHeightOrDebugEntityRadius, tutorialTopOrDebugColorOrTransitionClipTop);
+                        renderedEntity = (GameplayEntity) ((Object) debugEntityQueue.nextForIteration(1));
+                        if (clientControlFlowGuard != 0) {
                           break L40;
                         }
-                        if (var14 == 0) {
+                        if (clientControlFlowGuard == 0) {
                           continue L39;
                         }
                       }
-                      var7 = bh.field_c;
+                      debugEntityQueue = bh.transientEntities;
                     }
-                    renderedEntity = (GameplayEntity) ((Object) var7.firstForIteration(0));
+                    renderedEntity = (GameplayEntity) ((Object) debugEntityQueue.firstForIteration(0));
                     L42: while (true) {
                       L43: {
                         L44: {
                           if (renderedEntity != null) {
-                            SoftwareRasterizer.fillCircle((int)(renderedEntity.positionX / 2.0f), (int)(renderedEntity.positionY / 2.0f), var6, var5);
-                            renderedEntity = (GameplayEntity) ((Object) var7.nextForIteration(1));
-                            if (var14 != 0) {
+                            SoftwareRasterizer.fillCircle((int)(renderedEntity.positionX / 2.0f), (int)(renderedEntity.positionY / 2.0f), tutorialLineHeightOrDebugEntityRadius, tutorialTopOrDebugColorOrTransitionClipTop);
+                            renderedEntity = (GameplayEntity) ((Object) debugEntityQueue.nextForIteration(1));
+                            if (clientControlFlowGuard != 0) {
                               break L44;
                             }
-                            if (var14 == 0) {
+                            if (clientControlFlowGuard == 0) {
                               continue L42;
                             }
                           }
                           if (this.tutorialMode) {
-                            var8 = -(this.updateTick / 2) + 176;
-                            if (var8 < 10) {
-                              var8 = 10;
+                            tutorialTextHeightOrDebugPanelTop = -(this.updateTick / 2) + 176;
+                            if (tutorialTextHeightOrDebugPanelTop < 10) {
+                              tutorialTextHeightOrDebugPanelTop = 10;
                             }
-                            var9 = fi.smallFont.field_o - fi.smallFont.field_q;
-                            var10 = fi.smallFont.c(v.field_n, 640) + 40;
-                            renderedEntityX = fi.smallFont.b(v.field_n, 640) * var9 + 10;
-                            SoftwareRasterizer.fillRectangle((320 - var10 / 2) / 2, var8 / 2, var10 / 2, (20 + renderedEntityX) / 2, var5);
+                            debugTutorialLineHeight = fi.smallFont.field_o - fi.smallFont.field_q;
+                            debugTutorialPanelWidth = fi.smallFont.c(v.tutorialSkipMessage, 640) + 40;
+                            debugEntityXOrTutorialTextHeight = fi.smallFont.b(v.tutorialSkipMessage, 640) * debugTutorialLineHeight + 10;
+                            SoftwareRasterizer.fillRectangle((320 - debugTutorialPanelWidth / 2) / 2, tutorialTextHeightOrDebugPanelTop / 2, debugTutorialPanelWidth / 2, (20 + debugEntityXOrTutorialTextHeight) / 2, tutorialTopOrDebugColorOrTransitionClipTop);
                             break L43;
                           }
-                          lj.smallBoxSprite.drawScaledSilhouette(var3 / 2, var4 / 2, lj.smallBoxSprite.fullWidth / 2, lj.smallBoxSprite.fullHeight / 2, var5);
+                          lj.smallBoxSprite.drawScaledSilhouette(selectedThemeIdOrScoreBoxX / 2, loadingPanelWidthOrScoreBoxY / 2, lj.smallBoxSprite.fullWidth / 2, lj.smallBoxSprite.fullHeight / 2, tutorialTopOrDebugColorOrTransitionClipTop);
                         }
                         if (this.sessionPhase == 0) {
                           if (!ih.areEntityQueuesSettled(0)) {
-                            g.countBoxSprite.drawScaledSilhouette(234, 205, g.countBoxSprite.fullWidth / 2, g.countBoxSprite.fullHeight / 2, var5);
-                            if (var14 == 0) {
+                            g.countBoxSprite.drawScaledSilhouette(234, 205, g.countBoxSprite.fullWidth / 2, g.countBoxSprite.fullHeight / 2, tutorialTopOrDebugColorOrTransitionClipTop);
+                            if (clientControlFlowGuard == 0) {
                               break L43;
                             }
                           }
                         }
-                        vh.largeBoxSprite.drawScaledSilhouette(223, 205, vh.largeBoxSprite.fullWidth / 2, vh.largeBoxSprite.fullHeight / 2, var5);
+                        vh.largeBoxSprite.drawScaledSilhouette(223, 205, vh.largeBoxSprite.fullWidth / 2, vh.largeBoxSprite.fullHeight / 2, tutorialTopOrDebugColorOrTransitionClipTop);
                       }
                       SoftwareRasterizer.fillCircle(160, 120, 21, 16777215);
-                      SoftwareRasterizer.e(2, 2, 0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight);
+                      SoftwareRasterizer.blurRasterRegion(2, 2, 0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight);
                       sh.mainRasterBuffer.setAsRasterTarget(255);
-                      stackIn_168_0 = SoftwareRasterizer.framebufferHeight;
-                      stackIn_168_1 = 1;
+                      minimumGrayLevelOrCompositeHeight = SoftwareRasterizer.framebufferHeight;
+                      grayLevelForComparisonOrCompositeEnabled = 1;
                       break L32;
                     }
                   }
                 }
               }
-              ek.a(stackIn_168_0, stackIn_168_1 != 0, af.field_a, 0, SoftwareRasterizer.stride, 0);
+              ek.compositeScaledDebugOverview(minimumGrayLevelOrCompositeHeight, grayLevelForComparisonOrCompositeEnabled != 0, af.debugOverviewRaster, 0, SoftwareRasterizer.stride, 0);
               break L30;
             }
           }
@@ -579,10 +579,10 @@ final class GameplaySession {
               bd.drawScorePopups(-117);
               this.c((byte) 64);
               if (this.showGameOverOverlay) {
-                lj.smallBoxSprite.draw(var3, var4);
+                lj.smallBoxSprite.draw(selectedThemeIdOrScoreBoxX, loadingPanelWidthOrScoreBoxY);
                 if (this.sceneAnimationTick < 266) {
                   kh.screenTitleSprites[6].draw(0, (this.sceneAnimationTick >> 1) - 113);
-                  if (var14 == 0) {
+                  if (clientControlFlowGuard == 0) {
                     break L53;
                   }
                 }
@@ -591,7 +591,7 @@ final class GameplaySession {
               }
             }
             L55: {
-              dd.uiPaletteFont.a(wj.a(pa.field_a, new String[]{this.scoreText.toString()}, (byte) -53), 15 + var3, 30 + var4, 0, -1);
+              dd.uiPaletteFont.a(wj.a(pa.field_a, new String[]{this.scoreText.toString()}, (byte) -53), 15 + selectedThemeIdOrScoreBoxX, 30 + loadingPanelWidthOrScoreBoxY, 0, -1);
               if (ih.areEntityQueuesSettled(0)) {
                 L56: {
                   if (0 != this.sessionPhase) {
@@ -599,24 +599,24 @@ final class GameplaySession {
                       break L56;
                     }
                   }
-                  if (var2 == 0) {
+                  if (sceneTransitionFlag == 0) {
                     break L55;
                   }
-                  var5 = 35 + (6 * this.sceneAnimationTick - 480);
+                  tutorialTopOrDebugColorOrTransitionClipTop = 35 + (6 * this.sceneAnimationTick - 480);
                   sh.mainRasterBuffer.setAsRasterTarget(255);
-                  SoftwareRasterizer.setClip(0, var5, 640, 480);
+                  SoftwareRasterizer.setClip(0, tutorialTopOrDebugColorOrTransitionClipTop, 640, 480);
                   oc.boardSceneRaster.draw(0, 0);
                   SoftwareRasterizer.setClip(0, 0, 640, 480);
                   qj.transitionCurtain.draw(0, -480 + 6 * this.sceneAnimationTick);
-                  if (var14 == 0) {
+                  if (clientControlFlowGuard == 0) {
                     break L55;
                   }
                 }
                 this.renderResultSequence(false);
               }
             }
-            vc.c(-1);
-            if (var14 == 0) {
+            vc.drawPendingActionPanel(-1);
+            if (clientControlFlowGuard == 0) {
               break L48;
             }
           }

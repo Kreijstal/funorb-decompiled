@@ -140,26 +140,26 @@ final class ni extends ee implements pl {
         }
     }
 
-    final static void f(int param0) {
-        int var2 = 0;
-        GameplayEntity var3 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1 = null;
-        var2 = Geoblox.field_C;
+    final static void drawTransientEntities(int methodGuard) {
+        int clientControlFlowGuardSnapshot = 0;
+        GameplayEntity transientEntityToDraw = null;
+        RuntimeException caughtTransientDrawFailure = null;
+        RuntimeException transientDrawFailureForContext = null;
+        clientControlFlowGuardSnapshot = Geoblox.field_C;
         try {
-          if (param0 != 484842465) {
-            ni.f(15);
+          if (methodGuard != 484842465) {
+            ni.drawTransientEntities(15);
           }
-          var3 = (GameplayEntity) ((Object) bh.field_c.firstForIteration(0));
-          L1: while (var3 != null) {
-            var3.drawRotatedEntityOnCurrentRaster(1915952803);
-            var3 = (GameplayEntity) ((Object) bh.field_c.nextForIteration(1));
+          transientEntityToDraw = (GameplayEntity) ((Object) bh.transientEntities.firstForIteration(0));
+          L1: while (transientEntityToDraw != null) {
+            transientEntityToDraw.drawRotatedEntityOnCurrentRaster(1915952803);
+            transientEntityToDraw = (GameplayEntity) ((Object) bh.transientEntities.nextForIteration(1));
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1), "ni.JA(" + param0 + ')');
+        } catch (java.lang.RuntimeException transientDrawFailure) {
+          caughtTransientDrawFailure = transientDrawFailure;
+          transientDrawFailureForContext = caughtTransientDrawFailure;
+          throw t.a((Throwable) ((Object) transientDrawFailureForContext), "ni.JA(" + methodGuard + ')');
         }
     }
 

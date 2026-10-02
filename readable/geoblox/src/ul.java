@@ -6,11 +6,11 @@ import java.util.*;
 final class ul {
     static Calendar field_c;
     static int releasedInCurrentTheme;
-    static Sprite field_a;
+    static Sprite currentAvatarCryFrame;
 
     public static void a(int param0) {
         field_c = null;
-        field_a = null;
+        currentAvatarCryFrame = null;
         if (param0 > -58) {
             j var2 = (j) null;
             ul.a((j) null, (j) null, (byte) -96);
@@ -56,7 +56,7 @@ final class ul {
           dualMatchFound = 0;
           centralEntity = (GameplayEntity) ((Object) a.attachedEntities.firstForIteration(0));
           if (methodGuard != -2) {
-            field_a = (Sprite) null;
+            currentAvatarCryFrame = (Sprite) null;
           }
           L1: while (centralEntity != null) {
             L3: {
@@ -65,7 +65,7 @@ final class ul {
                   break L3;
                 }
               }
-              centralEntity.entityQueue = bh.field_c;
+              centralEntity.entityQueue = bh.transientEntities;
               stackIn_10_0 = (centralEntity.sameVariantEntityCount <= 1) ? 0 : 1;
               variantMatchingAllowed = stackIn_10_0;
               stackIn_13_0 = (centralEntity.sameCategoryEntityCount <= 1) ? 0 : 1;
@@ -109,8 +109,8 @@ final class ul {
                           break L15;
                         }
                       }
-                      centralEntity.relatedEntities[firstNeighborIndex].entityQueue = bh.field_c;
-                      centralEntity.relatedEntities[secondNeighborIndex].entityQueue = bh.field_c;
+                      centralEntity.relatedEntities[firstNeighborIndex].entityQueue = bh.transientEntities;
+                      centralEntity.relatedEntities[secondNeighborIndex].entityQueue = bh.transientEntities;
                       middlePackedEntityId = centralEntity.relatedEntities[firstNeighborIndex].entityId;
                       largestPackedEntityId = centralEntity.entityId;
                       smallestPackedEntityId = centralEntity.relatedEntities[secondNeighborIndex].entityId;
@@ -254,7 +254,7 @@ final class ul {
             cl.field_b = new Sprite(var3, var4 - bk.field_b.height);
             cl.field_b.setAsRasterTarget();
             if (param0 != -21541) {
-                field_a = (Sprite) null;
+                currentAvatarCryFrame = (Sprite) null;
             }
             var2.drawUnmasked(0, -bk.field_b.height);
             cl.field_b.trimY = bk.field_b.height;

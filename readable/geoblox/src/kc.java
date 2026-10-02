@@ -476,7 +476,7 @@ final class kc {
                         break L41;
                       }
                     }
-                    if (routedAttachedEntity.entityQueue != bh.field_c) {
+                    if (routedAttachedEntity.entityQueue != bh.transientEntities) {
                       if (!w.avatarShockPending) {
                         break L40;
                       }
@@ -500,7 +500,7 @@ final class kc {
                     categoryResetThenTransientEntity.sameCategoryEntityCount = 0;
                     entityForTransientVariantReset.sameVariantEntityCount = 0;
                     routedAttachedEntity.remainingLifetimeTicks = 50;
-                    bh.field_c.addLast(-100, routedAttachedEntity);
+                    bh.transientEntities.addLast(-100, routedAttachedEntity);
                     routedAttachedEntity.animationFrameIndex = 0;
                     if (routedAttachedEntity.touchesAvatar) {
                       if (w.avatarShockPending) {
@@ -541,7 +541,7 @@ final class kc {
               break;
             }
             methodGuardResidue = -23 / ((methodGuard - 69) / 46);
-            categoryResetThenTransientEntity = (GameplayEntity) ((Object) bh.field_c.firstForIteration(0));
+            categoryResetThenTransientEntity = (GameplayEntity) ((Object) bh.transientEntities.firstForIteration(0));
             L51: while (true) {
               L52: {
                 if (categoryResetThenTransientEntity != null) {
@@ -554,7 +554,7 @@ final class kc {
                     ra.availableEntities.addLast(-44, categoryResetThenTransientEntity);
                     categoryResetThenTransientEntity.entityQueue = null;
                   }
-                  categoryResetThenTransientEntity = (GameplayEntity) ((Object) bh.field_c.nextForIteration(1));
+                  categoryResetThenTransientEntity = (GameplayEntity) ((Object) bh.transientEntities.nextForIteration(1));
                   if (clientControlSnapshot == 0) {
                     continue L51;
                   }

@@ -80,27 +80,27 @@ final class h {
         return this.field_f;
     }
 
-    final static void c(int param0) {
-        RuntimeException var1 = null;
-        int var2 = 0;
-        GameplayEntity var3 = null;
-        RuntimeException decompiledCaughtException = null;
-        var2 = Geoblox.field_C;
+    final static void drawMovingEntities(int methodGuard) {
+        RuntimeException movingDrawFailureForContext = null;
+        int clientControlFlowGuardSnapshot = 0;
+        GameplayEntity movingEntityToDraw = null;
+        RuntimeException caughtMovingDrawFailure = null;
+        clientControlFlowGuardSnapshot = Geoblox.field_C;
         try {
-          var3 = (GameplayEntity) ((Object) ji.movingEntities.firstForIteration(0));
-          L0: while (var3 != null) {
-            var3.drawBoardRotatedEntity(-16096);
-            var3 = (GameplayEntity) ((Object) ji.movingEntities.nextForIteration(1));
+          movingEntityToDraw = (GameplayEntity) ((Object) ji.movingEntities.firstForIteration(0));
+          L0: while (movingEntityToDraw != null) {
+            movingEntityToDraw.drawBoardRotatedEntity(-16096);
+            movingEntityToDraw = (GameplayEntity) ((Object) ji.movingEntities.nextForIteration(1));
           }
-          if (param0 == -1) {
+          if (methodGuard == -1) {
             return;
           }
-          h.c(116);
+          h.drawMovingEntities(116);
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1), "h.B(" + param0 + ')');
+        } catch (java.lang.RuntimeException movingDrawFailure) {
+          caughtMovingDrawFailure = movingDrawFailure;
+          movingDrawFailureForContext = caughtMovingDrawFailure;
+          throw t.a((Throwable) ((Object) movingDrawFailureForContext), "h.B(" + methodGuard + ')');
         }
     }
 

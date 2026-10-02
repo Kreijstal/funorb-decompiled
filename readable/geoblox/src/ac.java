@@ -147,7 +147,7 @@ class ac extends ff {
           if (8 <= var9) {
             var3_int = var3_int + (-160 + var8);
           }
-          L7: for (var10 = 0; var10 < pg.field_a.length; var10++) {
+          L7: for (var10 = 0; var10 < pg.achievementTitles.length; var10++) {
             if (!da.a(0, -119)) {
               if (var10 == 16) {
                 if (!qi.d(105)) {
@@ -214,7 +214,7 @@ class ac extends ff {
           L9: {
             var10 = stackIn_59_0 + stackIn_60_1;
             if (var7 != -1) {
-              fi.smallFont.b(pg.field_a[var7], 315, var10, 0, -1);
+              fi.smallFont.b(pg.achievementTitles[var7], 315, var10, 0, -1);
               var11 = -fi.smallFont.field_q + fi.smallFont.field_o;
               var12 = 280;
               if (0 != (1 << var7 & var5)) {

@@ -19,7 +19,21 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and retain all 138,558 remaining bindings
 and 388 override relationships.
 
-The current naming pass adds 118 guarded identities for raster presentation and
+The current naming pass adds 193 guarded identities for the main session
+renderer and its draw pipeline. Every `renderSession` local now has a role.
+Moving/transient entities, avatar faces, the spawn highlight, pending-action
+panels, archive-progress formatting and debug blur/compositing have named
+contracts. Two older names are corrected for a reused tutorial-height local
+and an RGB gray level that was previously described as alpha.
+
+The 3,305 rules apply 31,988 edits. All 303 raw/readable sources compile,
+preserving 138,558 bindings and 388 overrides. The remaining 3,110 prior
+complete rules and raw source/decompiler pins are unchanged. Shared joins,
+nonzero guard paths, original strings and arithmetic remain. Existing native
+probes preserve their stated scopes; full renderer/game/device execution remains
+unverified. The one manifest and dictionary preserve reproducibility and reversal.
+
+The preceding naming pass added 118 guarded identities for raster presentation and
 nine-slice panels. `AwtRasterBuffer` and `ImageProducerRasterBuffer` describe the
 pixel/image ownership; the three-class `initialize`/`drawImage` virtual family
 keeps matching contracts. Gameplay now restores
@@ -27,7 +41,7 @@ keeps matching contracts. Gameplay now restores
 `ma.drawNineSlicePanel` with named clipping, border and tile coordinates.
 
 All 2,994 previous complete rules and raw source/generator pins are unchanged.
-The current 3,112 rules apply 30,922 edits. All 303 sources compile, preserving
+That pass used 3,112 rules and 30,922 edits. All 303 sources compile, preserving
 138,558 bindings and 388 override relationships. The factory's reflective
 `Class.forName("ve")` and `ve` class spelling stay unchanged; its methods and
 parameters are named. Existing native probes cover their documented scopes;

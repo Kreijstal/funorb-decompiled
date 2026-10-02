@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class eh {
-    static int field_c;
+    static int pendingActionPanelTop;
     static String openInPopupWindowText;
     static gk field_b;
     static pk field_d;
@@ -204,7 +204,7 @@ final class eh {
         field_d = null;
         field_b = null;
         if (param0 != -6910) {
-            field_c = -22;
+            pendingActionPanelTop = -22;
         }
     }
 
