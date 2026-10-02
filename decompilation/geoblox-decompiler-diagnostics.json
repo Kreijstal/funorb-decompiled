@@ -2,52 +2,15 @@
   "version": "CFR-JS 0.4.0",
   "generatedFiles": 303,
   "hardFailures": 0,
-  "validFallbacks": 2,
+  "validFallbacks": 0,
   "panics": [],
   "totals": {
     "stackUnderflow": 0,
     "rawControlFlow": 0,
     "placeholders": 0,
-    "stateMachineFallback": 2
+    "stateMachineFallback": 0
   },
-  "files": [
-    {
-      "name": "gh.java",
-      "stackUnderflow": 0,
-      "rawControlFlow": 0,
-      "placeholders": 0,
-      "stateMachineFallback": 1,
-      "fallbacks": [
-        {
-          "kind": "stateMachineFallback",
-          "className": "gh",
-          "methodName": "f",
-          "descriptor": "(I)V",
-          "reason": "multi-value operand stack carried across a CFG backedge",
-          "dispatchStatesBefore": 43,
-          "dispatchStatesAfter": 27
-        }
-      ]
-    },
-    {
-      "name": "n.java",
-      "stackUnderflow": 0,
-      "rawControlFlow": 0,
-      "placeholders": 0,
-      "stateMachineFallback": 1,
-      "fallbacks": [
-        {
-          "kind": "stateMachineFallback",
-          "className": "n",
-          "methodName": "a",
-          "descriptor": "(IIIIBIIII)[Ldm;",
-          "reason": "multi-value operand stack carried across a CFG backedge",
-          "dispatchStatesBefore": 55,
-          "dispatchStatesAfter": 34
-        }
-      ]
-    }
-  ],
+  "files": [],
   "obfuscationGuards": [],
   "structuredPartitions": [
     {

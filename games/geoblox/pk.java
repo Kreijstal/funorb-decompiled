@@ -14,24 +14,24 @@ final class pk extends qc {
 
     final void c(int param0, int param1, byte[] param2, int param3) {
         int var6 = 0;
-        int fieldTemp$2 = 0;
-        int var5_int = 0;
-        int var7 = 0;
+        int fieldTemp$0 = 0;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
+        int var5_int = 0;
         RuntimeException var5 = null;
+        int var7 = 0;
         var7 = Geoblox.field_C;
         try {
           L0: {
             var5_int = 31 % ((param0 - -36) / 37);
             for (var6 = 0; var6 < param3; var6++) {
-              fieldTemp$2 = this.field_f;
+              fieldTemp$0 = this.field_f;
               this.field_f = this.field_f + 1;
-              param2[var6 + param1] = (byte)(this.field_j[fieldTemp$2] + -this.field_p.b(0));
+              param2[var6 + param1] = (byte)(this.field_j[fieldTemp$0] + -this.field_p.b(0));
             }
             break L0;
           }

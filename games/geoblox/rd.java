@@ -72,10 +72,7 @@ final class rd extends ff {
 
     private final void a(boolean param0, rd param1, boolean param2) {
         int var4_int = 0;
-        si dupTemp$2 = null;
-        si var5 = null;
-        si var6 = null;
-        int var7 = 0;
+        si dupTemp$0 = null;
         si stackIn_8_0 = null;
         int stackIn_8_1 = 0;
         si stackIn_9_0 = null;
@@ -88,6 +85,9 @@ final class rd extends ff {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
+        si var5 = null;
+        si var6 = null;
+        int var7 = 0;
         var7 = Geoblox.field_C;
         try {
           L1: {
@@ -104,11 +104,11 @@ final class rd extends ff {
                   stackIn_8_1 = 2;
 
                   if (var6 == null) {
-                    dupTemp$2 = new si();
-                    param1.field_x[var4_int] = dupTemp$2;
+                    dupTemp$0 = new si();
+                    param1.field_x[var4_int] = dupTemp$0;
                     stackIn_9_0 = (si) ((Object) stackIn_8_0);
                     stackIn_9_1 = stackIn_8_1;
-                    stackIn_9_2 = (si) (dupTemp$2);
+                    stackIn_9_2 = (si) (dupTemp$0);
                   } else {
                     stackIn_9_0 = (si) ((Object) stackIn_8_0);
                     stackIn_9_1 = stackIn_8_1;

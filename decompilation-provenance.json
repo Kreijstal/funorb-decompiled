@@ -82,18 +82,18 @@
     "gameOverrides": {
       "geoblox": {
         "provenance": "decompilation/geoblox-provenance.json",
-        "sourceTreeSha256": "8d838235da30d2e3ab0bfd2e79bf11900ff49f7fa0008b3c81d4554fac3bd168",
+        "sourceTreeSha256": "6b638e579bfeb73adbb6583b0581f4d6df93c9ca5930816ea81bf1a48aa3f015",
         "generators": {
           "dekoblokoWork": {
             "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
             "trackedClean": true
           },
           "javaTools": {
-            "commit": "cee965649f1f2afaf1c7a3efd1fdb826231f3d30",
+            "commit": "e3268884ffc81e43bc60694439a297603b68a2e4",
             "trackedClean": true,
             "sourceArchive": {
-              "sha256": "6b29811f82c01f461281f30e92945601f5056632fa8338afdd2106ad6f840bc7",
-              "reproduce": "git archive --format=tar cee965649f1f2afaf1c7a3efd1fdb826231f3d30 | sha256sum",
+              "sha256": "98369c043d012743adb1924409bb754781722f4c2d6c7c7ab082cce5a82aeb20",
+              "reproduce": "git archive --format=tar e3268884ffc81e43bc60694439a297603b68a2e4 | sha256sum",
               "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
             }
           }

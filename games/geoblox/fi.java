@@ -155,10 +155,10 @@ final class fi {
     }
 
     final hf b(int param0) {
-        int fieldTemp$3 = 0;
-        int fieldTemp$4 = 0;
-        hf var3;
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
         int var2;
+        hf var3;
         hf var4;
         hf var7;
         if (this.field_f > 0) {
@@ -172,9 +172,9 @@ final class fi {
                 var2 = 47 % ((param0 - 28) / 38);
                 return null;
               } else {
-                fieldTemp$3 = this.field_f;
+                fieldTemp$0 = this.field_f;
                 this.field_f = this.field_f + 1;
-                var4 = this.field_e[fieldTemp$3].field_b;
+                var4 = this.field_e[fieldTemp$0].field_b;
                 if (this.field_e[-1 + this.field_f] != var4) {
                   this.field_a = var4.field_b;
                   return var4;
@@ -190,9 +190,9 @@ final class fi {
               var2 = 47 % ((param0 - 28) / 38);
               return null;
             } else {
-              fieldTemp$4 = this.field_f;
+              fieldTemp$1 = this.field_f;
               this.field_f = this.field_f + 1;
-              var3 = this.field_e[fieldTemp$4].field_b;
+              var3 = this.field_e[fieldTemp$1].field_b;
               if (this.field_e[-1 + this.field_f] != var3) {
                 this.field_a = var3.field_b;
                 return var3;

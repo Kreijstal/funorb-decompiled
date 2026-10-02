@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "cee965649f1f2afaf1c7a3efd1fdb826231f3d30",
+      "commit": "e3268884ffc81e43bc60694439a297603b68a2e4",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "6b29811f82c01f461281f30e92945601f5056632fa8338afdd2106ad6f840bc7",
-        "reproduce": "git archive --format=tar cee965649f1f2afaf1c7a3efd1fdb826231f3d30 | sha256sum",
+        "sha256": "98369c043d012743adb1924409bb754781722f4c2d6c7c7ab082cce5a82aeb20",
+        "reproduce": "git archive --format=tar e3268884ffc81e43bc60694439a297603b68a2e4 | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
@@ -69,7 +69,8 @@
     "sources": 303,
     "hardFailures": 0,
     "diagnostics": "geoblox-decompiler-diagnostics.json",
-    "validFallbackMethods": 2
+    "validFallbackMethods": 0,
+    "cleanSourceArchiveReproducesSourcesAndDiagnostics": true
   },
   "freshVerification": {
     "tool": "dekobloko-work/scripts/Verify.java",
@@ -93,26 +94,26 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "8d838235da30d2e3ab0bfd2e79bf11900ff49f7fa0008b3c81d4554fac3bd168",
-  "previousSourceTreeSha256": "2b5e8eca76820cb18760a231fc0825aded6e26972d646bfc3476d4f88d77147b",
-  "changedJavaFiles": 156,
+  "sourceTreeSha256": "6b638e579bfeb73adbb6583b0581f4d6df93c9ca5930816ea81bf1a48aa3f015",
+  "previousSourceTreeSha256": "8d838235da30d2e3ab0bfd2e79bf11900ff49f7fa0008b3c81d4554fac3bd168",
+  "changedJavaFiles": 10,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
   },
   "runtimeEquivalenceVerified": false,
   "stateMachineReadability": {
-    "originalFallbackMethods": 2,
+    "originalFallbackMethods": 0,
     "emittedDispatchCasesBefore": 3051,
-    "emittedDispatchCasesAfter": 61,
+    "emittedDispatchCasesAfter": 0,
     "generatedDispatcherMethodsBefore": 41,
-    "generatedDispatcherMethodsAfter": 2,
+    "generatedDispatcherMethodsAfter": 0,
     "largeInitializerHelpersBefore": 23,
     "largeInitializerHelpersAfter": 3,
     "bytecodeChanged": false,
     "wholeGameEquivalenceVerified": false,
-    "previousPassFallbackMethods": 3,
-    "previousPassDispatchCases": 817,
+    "previousPassFallbackMethods": 2,
+    "previousPassDispatchCases": 61,
     "largeOriginalMethodsAfter": 0,
     "handlerFreeFanoutMethodsRecovered": [
       "gh.a(I)V",
@@ -152,10 +153,15 @@
       "catchReentryDifferentialVariants": 4,
       "regressionBeforeFix": "Original 1,1; large rebuilt automatic and forced dispatcher NullPointerException,1",
       "bytecodeChanged": false,
-      "sourceDiff": "Pass-11 safeguards retained and rerun; pass 12 also preserves StringBuilder receiver state across branch/exception joins.",
+      "sourceDiff": "Source-edge safety checks retained from 574eb48; parallel operand copies and post-copy forwarding fixed before removing the blanket multi-value backedge safeguard.",
       "sinkDestinationBindingsVerified": true,
       "shadowedLoopLabelsRefused": true,
-      "nativeLoopExitComparisons": 504
+      "nativeLoopExitComparisons": 504,
+      "sourceControlFlowEdgesVerified": true,
+      "conditionalPolarityVerified": true,
+      "switchFallthroughVerified": true,
+      "everyControlledCopyVerified": true,
+      "collapsedRegionRoutingVerified": true
     },
     "structuredInitializer": {
       "method": "wi.a(BLrh;)V",
@@ -173,7 +179,7 @@
       "nativeDifferentialTests": 6,
       "nativeDifferentialComparisons": 270,
       "scope": "Synthetic fixtures cover promoted locals, mutable parameters, early returns, checked catches, repeated loop execution and budget refusal. GeoBlox probe covers decoding and early failure context, not complete successful archive loading.",
-      "methodSizeMeasurement": "Fresh pass-14 javac class-file Code attribute lengths"
+      "methodSizeMeasurement": "Retained pass-14 javac Code lengths; wi.java is byte-identical in pass 15."
     },
     "stringBuilderJoins": {
       "nativeTests": 2,
@@ -185,7 +191,7 @@
       "decoderInputs": 4,
       "scope": "Native probe matches unchanged transformed bytecode; does not establish whole-game equivalence."
     },
-    "javaToolsCommit": "cee965649f1f2afaf1c7a3efd1fdb826231f3d30",
+    "javaToolsCommit": "e3268884ffc81e43bc60694439a297603b68a2e4",
     "typedComplementComparisons": {
       "defaultEnabled": true,
       "experimentalDceEnabled": false,
@@ -194,7 +200,35 @@
       "nativeComparisons": 7040,
       "xorMinusOneTextOccurrencesBefore": 1429,
       "xorMinusOneTextOccurrencesAfter": 0,
-      "scope": "Focused int/long fixtures, narrowing and effects; GeoBlox scoped native probes recorded separately. No whole-game equivalence claim."
+      "scope": "7,040 native comparisons freshly rerun at this decompiler commit; game bytecode is unchanged. No whole-game equivalence claim."
+    },
+    "parallelOperandLoops": {
+      "methodsRecovered": [
+        "gh.f(I)V",
+        "n.a(IIIIBIIII)[Ldm;"
+      ],
+      "nativeTests": 12,
+      "nativeComparisons": 6650,
+      "sourceLines": {
+        "gh.f(I)V": {
+          "before": 364,
+          "after": 167
+        },
+        "n.a(IIIIBIIII)[Ldm;": {
+          "before": 441,
+          "after": 235
+        }
+      },
+      "parallelCopySnapshots": true,
+      "postCopyForwarding": true,
+      "selfForwardingRefused": true,
+      "cyclicAliasesRetained": true,
+      "switchOnlyBackedgeSelection": true,
+      "blanketMultiValueFallbackRemoved": true,
+      "otherSafetyGatesRetained": true,
+      "nineSliceNativeCases": 2592,
+      "nineSliceOutputSha256": "16c92de1c3230786836344a4848c7046488b9cfa4a48078ca34024fdcbdc7be9",
+      "scope": "Six permutation and six comparison fixtures plus actual n.a sprite pixels/dimensions/cleanup against verified native bytecode. Does not verify full gh.f result-sequence execution or whole-game runtime equivalence."
     }
   }
 }
