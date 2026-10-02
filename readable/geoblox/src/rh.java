@@ -59,7 +59,7 @@ final class rh {
               }
               var2 = (GameplayEntity) ((Object) a.attachedEntities.nextForIteration(1));
             }
-            wc.a(var1_float, (byte) 14);
+            wc.requestAvatarTintForRadius(var1_float, (byte) 14);
             if (10000.0f > var1_float) {
               stackIn_22_0 = 0;
               stackIn_22_1 = 0;

@@ -7,7 +7,7 @@ final class jf implements dh {
     private int field_d;
     static int[] field_b;
     private int field_e;
-    static int field_j;
+    static int avatarTintFadeTicks;
     static Sprite field_a;
     private int field_h;
     private m field_f;
@@ -468,7 +468,7 @@ final class jf implements dh {
     }
 
     static {
-        field_j = 0;
+        avatarTintFadeTicks = 0;
         field_g = 3;
     }
 }

@@ -340,7 +340,7 @@ final class qa {
 
     public static void a(byte param0) {
         if (param0 > -1) {
-            qa.b((byte) -72);
+            qa.advanceMenuAvatarAnimation((byte) -72);
             field_e = null;
             field_f = null;
             return;
@@ -349,8 +349,8 @@ final class qa {
         field_f = null;
     }
 
-    final static void b(byte param0) {
-        int fieldTemp$0 = 0;
+    final static void advanceMenuAvatarAnimation(byte methodGuard) {
+        int frameStepTicksBeforeDecrement = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
@@ -380,291 +380,291 @@ final class qa {
         int fieldTemp$27 = 0;
         int fieldTemp$28 = 0;
         int fieldTemp$29 = 0;
-        float var1;
-        int var1_int;
-        int var2;
-        var2 = Geoblox.field_C;
-        if (param0 >= 72) {
-          fieldTemp$0 = af.field_c;
-          af.field_c = af.field_c - 1;
-          if (0 > fieldTemp$0) {
+        float avatarTintFadeFactor;
+        int avatarFrameOffsetInSegment;
+        int unusedClientControlSnapshot;
+        unusedClientControlSnapshot = Geoblox.field_C;
+        if (methodGuard >= 72) {
+          frameStepTicksBeforeDecrement = af.avatarFrameStepTicks;
+          af.avatarFrameStepTicks = af.avatarFrameStepTicks - 1;
+          if (0 > frameStepTicksBeforeDecrement) {
             if (uf.avatarFeedbackFrameIndex == 0 - -MenuScreen.avatarFeedbackFrameBase) {
               uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 3;
-              af.field_c = 20;
+              af.avatarFrameStepTicks = 20;
               pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
-              gi.field_e = gi.field_e + 1;
-              if (gi.field_e % 600 < 30) {
+              gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
+              if (gi.avatarBlinkClockTicks % 600 < 30) {
                 uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
               }
-              var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+              avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
               fieldTemp$1 = wa.avatarShockEffectTicks;
               wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
               if (fieldTemp$1 <= 0) {
-                fieldTemp$2 = jf.field_j;
-                jf.field_j = jf.field_j - 1;
+                fieldTemp$2 = jf.avatarTintFadeTicks;
+                jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
                 if (fieldTemp$2 > 0) {
-                  rj.field_c = ((int)(fe.field_c * var1) << -449443480) + (r.field_ub + ((int)(var1 * md.field_b) << -1230457200) - -(int)(var1 * uk.field_j));
+                  rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << -449443480) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << -1230457200) - -(int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
                   return;
                 } else {
                   return;
                 }
               } else {
-                ha.field_g = wa.avatarShockEffectTicks % 15 % 2;
-                fieldTemp$3 = jf.field_j;
-                jf.field_j = jf.field_j - 1;
+                ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+                fieldTemp$3 = jf.avatarTintFadeTicks;
+                jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
                 if (fieldTemp$3 <= 0) {
                   return;
                 } else {
-                  rj.field_c = ((int)(fe.field_c * var1) << -449443480) + (r.field_ub + ((int)(var1 * md.field_b) << -1230457200) - -(int)(var1 * uk.field_j));
+                  rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << -449443480) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << -1230457200) - -(int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
                   return;
                 }
               }
             } else {
-              var1_int = uf.avatarFeedbackFrameIndex + -MenuScreen.avatarFeedbackFrameBase;
-              if (jk.field_d == 1) {
-                if (var1_int > 1) {
+              avatarFrameOffsetInSegment = uf.avatarFeedbackFrameIndex + -MenuScreen.avatarFeedbackFrameBase;
+              if (jk.avatarSteeringDirectionId == 1) {
+                if (avatarFrameOffsetInSegment > 1) {
                   uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex - 1;
-                  af.field_c = 20;
+                  af.avatarFrameStepTicks = 20;
                   pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
-                  gi.field_e = gi.field_e + 1;
-                  if (gi.field_e % 600 < 30) {
+                  gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
+                  if (gi.avatarBlinkClockTicks % 600 < 30) {
                     uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
                   }
-                  var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+                  avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
                   fieldTemp$4 = wa.avatarShockEffectTicks;
                   wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                   if (fieldTemp$4 <= 0) {
-                    fieldTemp$5 = jf.field_j;
-                    jf.field_j = jf.field_j - 1;
+                    fieldTemp$5 = jf.avatarTintFadeTicks;
+                    jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
                     if (fieldTemp$5 > 0) {
-                      rj.field_c = ((int)(fe.field_c * var1) << -449443480) + (r.field_ub + ((int)(var1 * md.field_b) << -1230457200) - -(int)(var1 * uk.field_j));
+                      rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << -449443480) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << -1230457200) - -(int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
                       return;
                     } else {
                       return;
                     }
                   } else {
-                    ha.field_g = wa.avatarShockEffectTicks % 15 % 2;
-                    fieldTemp$6 = jf.field_j;
-                    jf.field_j = jf.field_j - 1;
+                    ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+                    fieldTemp$6 = jf.avatarTintFadeTicks;
+                    jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
                     if (fieldTemp$6 > 0) {
-                      rj.field_c = ((int)(fe.field_c * var1) << -449443480) + (r.field_ub + ((int)(var1 * md.field_b) << -1230457200) - -(int)(var1 * uk.field_j));
+                      rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << -449443480) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << -1230457200) - -(int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
                     }
                     return;
                   }
                 } else {
-                  if (jk.field_d == 2) {
-                    if (var1_int < 5) {
+                  if (jk.avatarSteeringDirectionId == 2) {
+                    if (avatarFrameOffsetInSegment < 5) {
                       uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex + 1;
-                      af.field_c = 20;
+                      af.avatarFrameStepTicks = 20;
                       pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
-                      gi.field_e = gi.field_e + 1;
-                      if (gi.field_e % 600 < 30) {
+                      gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
+                      if (gi.avatarBlinkClockTicks % 600 < 30) {
                         uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
                       }
-                      var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+                      avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
                       fieldTemp$7 = wa.avatarShockEffectTicks;
                       wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                       if (fieldTemp$7 > 0) {
-                        ha.field_g = wa.avatarShockEffectTicks % 15 % 2;
+                        ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                       }
-                      fieldTemp$8 = jf.field_j;
-                      jf.field_j = jf.field_j - 1;
+                      fieldTemp$8 = jf.avatarTintFadeTicks;
+                      jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
                       if (fieldTemp$8 > 0) {
-                        rj.field_c = ((int)(fe.field_c * var1) << -449443480) + (r.field_ub + ((int)(var1 * md.field_b) << -1230457200) - -(int)(var1 * uk.field_j));
+                        rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << -449443480) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << -1230457200) - -(int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
                       }
                       return;
                     }
                   }
-                  if (jk.field_d == 0) {
-                    if (var1_int < 3) {
+                  if (jk.avatarSteeringDirectionId == 0) {
+                    if (avatarFrameOffsetInSegment < 3) {
                       uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex + 1;
-                      af.field_c = 20;
+                      af.avatarFrameStepTicks = 20;
                       pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
-                      gi.field_e = gi.field_e + 1;
-                      if (gi.field_e % 600 < 30) {
+                      gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
+                      if (gi.avatarBlinkClockTicks % 600 < 30) {
                         uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
                       }
-                      var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+                      avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
                       fieldTemp$9 = wa.avatarShockEffectTicks;
                       wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                       if (fieldTemp$9 > 0) {
-                        ha.field_g = wa.avatarShockEffectTicks % 15 % 2;
+                        ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                       }
-                      fieldTemp$10 = jf.field_j;
-                      jf.field_j = jf.field_j - 1;
+                      fieldTemp$10 = jf.avatarTintFadeTicks;
+                      jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
                       if (fieldTemp$10 > 0) {
-                        rj.field_c = ((int)(fe.field_c * var1) << -449443480) + (r.field_ub + ((int)(var1 * md.field_b) << -1230457200) - -(int)(var1 * uk.field_j));
+                        rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << -449443480) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << -1230457200) - -(int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
                       }
                       return;
                     }
                   }
-                  if (jk.field_d == 0) {
-                    if (var1_int <= 3) {
-                      af.field_c = 20;
+                  if (jk.avatarSteeringDirectionId == 0) {
+                    if (avatarFrameOffsetInSegment <= 3) {
+                      af.avatarFrameStepTicks = 20;
                       pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
-                      gi.field_e = gi.field_e + 1;
-                      if (gi.field_e % 600 < 30) {
+                      gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
+                      if (gi.avatarBlinkClockTicks % 600 < 30) {
                         uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
                       }
-                      var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+                      avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
                       fieldTemp$11 = wa.avatarShockEffectTicks;
                       wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                       if (fieldTemp$11 > 0) {
-                        ha.field_g = wa.avatarShockEffectTicks % 15 % 2;
+                        ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                       }
-                      fieldTemp$12 = jf.field_j;
-                      jf.field_j = jf.field_j - 1;
+                      fieldTemp$12 = jf.avatarTintFadeTicks;
+                      jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
                       if (fieldTemp$12 > 0) {
-                        rj.field_c = ((int)(fe.field_c * var1) << -449443480) + (r.field_ub + ((int)(var1 * md.field_b) << -1230457200) - -(int)(var1 * uk.field_j));
+                        rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << -449443480) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << -1230457200) - -(int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
                       }
                       return;
                     } else {
                       uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex - 1;
-                      af.field_c = 20;
+                      af.avatarFrameStepTicks = 20;
                       pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
-                      gi.field_e = gi.field_e + 1;
-                      if (gi.field_e % 600 < 30) {
+                      gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
+                      if (gi.avatarBlinkClockTicks % 600 < 30) {
                         uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
                       }
-                      var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+                      avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
                       fieldTemp$13 = wa.avatarShockEffectTicks;
                       wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                       if (fieldTemp$13 > 0) {
-                        ha.field_g = wa.avatarShockEffectTicks % 15 % 2;
+                        ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                       }
-                      fieldTemp$14 = jf.field_j;
-                      jf.field_j = jf.field_j - 1;
+                      fieldTemp$14 = jf.avatarTintFadeTicks;
+                      jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
                       if (fieldTemp$14 > 0) {
-                        rj.field_c = ((int)(fe.field_c * var1) << -449443480) + (r.field_ub + ((int)(var1 * md.field_b) << -1230457200) - -(int)(var1 * uk.field_j));
+                        rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << -449443480) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << -1230457200) - -(int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
                       }
                       return;
                     }
                   } else {
-                    af.field_c = 20;
+                    af.avatarFrameStepTicks = 20;
                     pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
-                    gi.field_e = gi.field_e + 1;
-                    if (gi.field_e % 600 < 30) {
+                    gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
+                    if (gi.avatarBlinkClockTicks % 600 < 30) {
                       uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
                     }
-                    var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+                    avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
                     fieldTemp$15 = wa.avatarShockEffectTicks;
                     wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                     if (fieldTemp$15 > 0) {
-                      ha.field_g = wa.avatarShockEffectTicks % 15 % 2;
+                      ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                     }
-                    fieldTemp$16 = jf.field_j;
-                    jf.field_j = jf.field_j - 1;
+                    fieldTemp$16 = jf.avatarTintFadeTicks;
+                    jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
                     if (fieldTemp$16 > 0) {
-                      rj.field_c = ((int)(fe.field_c * var1) << -449443480) + (r.field_ub + ((int)(var1 * md.field_b) << -1230457200) - -(int)(var1 * uk.field_j));
+                      rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << -449443480) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << -1230457200) - -(int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
                     }
                     return;
                   }
                 }
               } else {
-                if (jk.field_d == 2) {
-                  if (var1_int < 5) {
+                if (jk.avatarSteeringDirectionId == 2) {
+                  if (avatarFrameOffsetInSegment < 5) {
                     uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex + 1;
-                    af.field_c = 20;
+                    af.avatarFrameStepTicks = 20;
                     pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
-                    gi.field_e = gi.field_e + 1;
-                    if (gi.field_e % 600 < 30) {
+                    gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
+                    if (gi.avatarBlinkClockTicks % 600 < 30) {
                       uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
                     }
-                    var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+                    avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
                     fieldTemp$17 = wa.avatarShockEffectTicks;
                     wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                     if (fieldTemp$17 > 0) {
-                      ha.field_g = wa.avatarShockEffectTicks % 15 % 2;
+                      ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                     }
-                    fieldTemp$18 = jf.field_j;
-                    jf.field_j = jf.field_j - 1;
+                    fieldTemp$18 = jf.avatarTintFadeTicks;
+                    jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
                     if (fieldTemp$18 > 0) {
-                      rj.field_c = ((int)(fe.field_c * var1) << -449443480) + (r.field_ub + ((int)(var1 * md.field_b) << -1230457200) - -(int)(var1 * uk.field_j));
+                      rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << -449443480) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << -1230457200) - -(int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
                     }
                     return;
                   }
                 }
-                if (jk.field_d == 0) {
-                  if (var1_int < 3) {
+                if (jk.avatarSteeringDirectionId == 0) {
+                  if (avatarFrameOffsetInSegment < 3) {
                     uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex + 1;
-                    af.field_c = 20;
+                    af.avatarFrameStepTicks = 20;
                     pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
-                    gi.field_e = gi.field_e + 1;
-                    if (gi.field_e % 600 < 30) {
+                    gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
+                    if (gi.avatarBlinkClockTicks % 600 < 30) {
                       uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
                     }
-                    var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+                    avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
                     fieldTemp$19 = wa.avatarShockEffectTicks;
                     wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                     if (fieldTemp$19 > 0) {
-                      ha.field_g = wa.avatarShockEffectTicks % 15 % 2;
+                      ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                     }
-                    fieldTemp$20 = jf.field_j;
-                    jf.field_j = jf.field_j - 1;
+                    fieldTemp$20 = jf.avatarTintFadeTicks;
+                    jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
                     if (fieldTemp$20 > 0) {
-                      rj.field_c = ((int)(fe.field_c * var1) << -449443480) + (r.field_ub + ((int)(var1 * md.field_b) << -1230457200) - -(int)(var1 * uk.field_j));
+                      rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << -449443480) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << -1230457200) - -(int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
                     }
                     return;
                   }
                 }
-                if (jk.field_d == 0) {
-                  if (var1_int <= 3) {
-                    af.field_c = 20;
+                if (jk.avatarSteeringDirectionId == 0) {
+                  if (avatarFrameOffsetInSegment <= 3) {
+                    af.avatarFrameStepTicks = 20;
                     pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
-                    gi.field_e = gi.field_e + 1;
-                    if (gi.field_e % 600 < 30) {
+                    gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
+                    if (gi.avatarBlinkClockTicks % 600 < 30) {
                       uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
                     }
-                    var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+                    avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
                     fieldTemp$21 = wa.avatarShockEffectTicks;
                     wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                     if (fieldTemp$21 > 0) {
-                      ha.field_g = wa.avatarShockEffectTicks % 15 % 2;
+                      ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                     }
-                    fieldTemp$22 = jf.field_j;
-                    jf.field_j = jf.field_j - 1;
+                    fieldTemp$22 = jf.avatarTintFadeTicks;
+                    jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
                     if (fieldTemp$22 > 0) {
-                      rj.field_c = ((int)(fe.field_c * var1) << -449443480) + (r.field_ub + ((int)(var1 * md.field_b) << -1230457200) - -(int)(var1 * uk.field_j));
+                      rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << -449443480) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << -1230457200) - -(int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
                     }
                     return;
                   } else {
                     uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex - 1;
-                    af.field_c = 20;
+                    af.avatarFrameStepTicks = 20;
                     pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
-                    gi.field_e = gi.field_e + 1;
-                    if (gi.field_e % 600 < 30) {
+                    gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
+                    if (gi.avatarBlinkClockTicks % 600 < 30) {
                       uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
                     }
-                    var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+                    avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
                     fieldTemp$23 = wa.avatarShockEffectTicks;
                     wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                     if (fieldTemp$23 > 0) {
-                      ha.field_g = wa.avatarShockEffectTicks % 15 % 2;
+                      ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                     }
-                    fieldTemp$24 = jf.field_j;
-                    jf.field_j = jf.field_j - 1;
+                    fieldTemp$24 = jf.avatarTintFadeTicks;
+                    jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
                     if (fieldTemp$24 > 0) {
-                      rj.field_c = ((int)(fe.field_c * var1) << -449443480) + (r.field_ub + ((int)(var1 * md.field_b) << -1230457200) - -(int)(var1 * uk.field_j));
+                      rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << -449443480) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << -1230457200) - -(int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
                     }
                     return;
                   }
                 } else {
-                  af.field_c = 20;
+                  af.avatarFrameStepTicks = 20;
                   pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
-                  gi.field_e = gi.field_e + 1;
-                  if (gi.field_e % 600 < 30) {
+                  gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
+                  if (gi.avatarBlinkClockTicks % 600 < 30) {
                     uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
                   }
-                  var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+                  avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
                   fieldTemp$25 = wa.avatarShockEffectTicks;
                   wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                   if (fieldTemp$25 > 0) {
-                    ha.field_g = wa.avatarShockEffectTicks % 15 % 2;
+                    ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                   }
-                  fieldTemp$26 = jf.field_j;
-                  jf.field_j = jf.field_j - 1;
+                  fieldTemp$26 = jf.avatarTintFadeTicks;
+                  jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
                   if (fieldTemp$26 > 0) {
-                    rj.field_c = ((int)(fe.field_c * var1) << -449443480) + (r.field_ub + ((int)(var1 * md.field_b) << -1230457200) - -(int)(var1 * uk.field_j));
+                    rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << -449443480) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << -1230457200) - -(int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
                   }
                   return;
                 }
@@ -672,28 +672,28 @@ final class qa {
             }
           } else {
             pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
-            gi.field_e = gi.field_e + 1;
-            if (gi.field_e % 600 < 30) {
+            gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
+            if (gi.avatarBlinkClockTicks % 600 < 30) {
               uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
             }
-            var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+            avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
             fieldTemp$27 = wa.avatarShockEffectTicks;
             wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
             if (fieldTemp$27 <= 0) {
-              fieldTemp$28 = jf.field_j;
-              jf.field_j = jf.field_j - 1;
+              fieldTemp$28 = jf.avatarTintFadeTicks;
+              jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
               if (fieldTemp$28 <= 0) {
                 return;
               } else {
-                rj.field_c = ((int)(fe.field_c * var1) << -449443480) + (r.field_ub + ((int)(var1 * md.field_b) << -1230457200) - -(int)(var1 * uk.field_j));
+                rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << -449443480) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << -1230457200) - -(int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
                 return;
               }
             } else {
-              ha.field_g = wa.avatarShockEffectTicks % 15 % 2;
-              fieldTemp$29 = jf.field_j;
-              jf.field_j = jf.field_j - 1;
+              ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+              fieldTemp$29 = jf.avatarTintFadeTicks;
+              jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
               if (fieldTemp$29 > 0) {
-                rj.field_c = ((int)(fe.field_c * var1) << -449443480) + (r.field_ub + ((int)(var1 * md.field_b) << -1230457200) - -(int)(var1 * uk.field_j));
+                rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << -449443480) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << -1230457200) - -(int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
                 return;
               } else {
                 return;

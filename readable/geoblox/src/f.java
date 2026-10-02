@@ -190,7 +190,7 @@ class f extends qf implements pl {
         quickChatShortcutKeys = null;
     }
 
-    final static void o(int param0) {
+    final static void advanceGameplayAvatarAnimation(int blinkPeriodTicks) {
         int fieldTemp$24 = 0;
         int fieldTemp$25 = 0;
         int fieldTemp$26 = 0;
@@ -229,40 +229,40 @@ class f extends qf implements pl {
         int fieldTemp$59 = 0;
         int fieldTemp$60 = 0;
         int fieldTemp$61 = 0;
-        float var1;
-        int var1_int;
-        int var2;
-        var2 = Geoblox.field_C;
-        int fieldTemp$23 = af.field_c;
-        af.field_c = af.field_c - 1;
-        if (0 > fieldTemp$23) {
+        float avatarTintFadeFactor;
+        int avatarFrameOffsetInSegment;
+        int unusedClientControlSnapshot;
+        unusedClientControlSnapshot = Geoblox.field_C;
+        int frameStepTicksBeforeDecrement = af.avatarFrameStepTicks;
+        af.avatarFrameStepTicks = af.avatarFrameStepTicks - 1;
+        if (0 > frameStepTicksBeforeDecrement) {
           L0: {
-            af.field_c = 20;
+            af.avatarFrameStepTicks = 20;
             if (uf.avatarFeedbackFrameIndex == MenuScreen.avatarFeedbackFrameBase + 0) {
               uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 3;
             } else {
-              var1_int = -MenuScreen.avatarFeedbackFrameBase + uf.avatarFeedbackFrameIndex;
-              if (1 == jk.field_d) {
-                if (var1_int <= 1) {
-                  if (2 == jk.field_d) {
-                    if (5 > var1_int) {
+              avatarFrameOffsetInSegment = -MenuScreen.avatarFeedbackFrameBase + uf.avatarFeedbackFrameIndex;
+              if (1 == jk.avatarSteeringDirectionId) {
+                if (avatarFrameOffsetInSegment <= 1) {
+                  if (2 == jk.avatarSteeringDirectionId) {
+                    if (5 > avatarFrameOffsetInSegment) {
                       uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex + 1;
                       break L0;
                     }
                   }
-                  if (0 == jk.field_d) {
-                    if (var1_int < 3) {
+                  if (0 == jk.avatarSteeringDirectionId) {
+                    if (avatarFrameOffsetInSegment < 3) {
                       uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex + 1;
                     } else {
-                      if (0 == jk.field_d) {
-                        if (3 < var1_int) {
+                      if (0 == jk.avatarSteeringDirectionId) {
+                        if (3 < avatarFrameOffsetInSegment) {
                           uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex - 1;
                         }
                       }
                     }
                   } else {
-                    if (0 == jk.field_d) {
-                      if (3 < var1_int) {
+                    if (0 == jk.avatarSteeringDirectionId) {
+                      if (3 < avatarFrameOffsetInSegment) {
                         uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex - 1;
                       }
                     }
@@ -272,69 +272,69 @@ class f extends qf implements pl {
                 }
               } else {
                 L2: {
-                  if (2 == jk.field_d) {
-                    if (5 > var1_int) {
+                  if (2 == jk.avatarSteeringDirectionId) {
+                    if (5 > avatarFrameOffsetInSegment) {
                       uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex + 1;
                       break L2;
                     }
                   }
-                  if (0 == jk.field_d) {
-                    if (var1_int < 3) {
+                  if (0 == jk.avatarSteeringDirectionId) {
+                    if (avatarFrameOffsetInSegment < 3) {
                       uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex + 1;
                     } else {
-                      if (0 == jk.field_d) {
-                        if (3 < var1_int) {
+                      if (0 == jk.avatarSteeringDirectionId) {
+                        if (3 < avatarFrameOffsetInSegment) {
                           uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex - 1;
                         }
                       }
                     }
                   } else {
-                    if (0 == jk.field_d) {
-                      if (3 < var1_int) {
+                    if (0 == jk.avatarSteeringDirectionId) {
+                      if (3 < avatarFrameOffsetInSegment) {
                         uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex - 1;
                       }
                     }
                   }
                 }
                 pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
-                gi.field_e = gi.field_e + 1;
-                if (30 > gi.field_e % param0) {
+                gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
+                if (30 > gi.avatarBlinkClockTicks % blinkPeriodTicks) {
                   uf.avatarFeedbackFrameIndex = 0 + MenuScreen.avatarFeedbackFrameBase;
                 }
                 if (el.gameplaySession.sessionEnding) {
-                  if (gi.field_e % 18 == 0) {
+                  if (gi.avatarBlinkClockTicks % 18 == 0) {
                     if (gg.field_b == 0) {
                       if (pf.field_D) {
                         gg.field_b = gg.field_b + 1;
                         g.field_j = 0;
                         fd.a(300, fl.field_c[22], false, j.field_gb);
                         g.field_j = g.field_j + 1;
-                        var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+                        avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
                         fieldTemp$24 = wa.avatarShockEffectTicks;
                         wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                         if (fieldTemp$24 > 0) {
-                          ha.field_g = wa.avatarShockEffectTicks % 15 % 2;
+                          ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                         }
-                        fieldTemp$25 = jf.field_j;
-                        jf.field_j = jf.field_j - 1;
+                        fieldTemp$25 = jf.avatarTintFadeTicks;
+                        jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
                         if (fieldTemp$25 > 0) {
-                          rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
+                          rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << -1388546160) + (r.avatarTintStartColor - -((int)(avatarTintFadeFactor * fe.avatarTintGreenDelta) << 1841154216) - -(int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
                         }
                         return;
                       } else {
                         g.field_j = g.field_j % 4;
                         ul.field_a = vf.field_H[g.field_j];
                         g.field_j = g.field_j + 1;
-                        var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+                        avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
                         fieldTemp$26 = wa.avatarShockEffectTicks;
                         wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                         if (fieldTemp$26 > 0) {
-                          ha.field_g = wa.avatarShockEffectTicks % 15 % 2;
+                          ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                         }
-                        fieldTemp$27 = jf.field_j;
-                        jf.field_j = jf.field_j - 1;
+                        fieldTemp$27 = jf.avatarTintFadeTicks;
+                        jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
                         if (fieldTemp$27 > 0) {
-                          rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
+                          rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << -1388546160) + (r.avatarTintStartColor - -((int)(avatarTintFadeFactor * fe.avatarTintGreenDelta) << 1841154216) - -(int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
                         }
                         return;
                       }
@@ -343,32 +343,32 @@ class f extends qf implements pl {
                         if (ok.field_a.length > g.field_j) {
                           ul.field_a = ok.field_a[g.field_j];
                           g.field_j = g.field_j + 1;
-                          var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+                          avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
                           fieldTemp$28 = wa.avatarShockEffectTicks;
                           wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                           if (fieldTemp$28 > 0) {
-                            ha.field_g = wa.avatarShockEffectTicks % 15 % 2;
+                            ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                           }
-                          fieldTemp$29 = jf.field_j;
-                          jf.field_j = jf.field_j - 1;
+                          fieldTemp$29 = jf.avatarTintFadeTicks;
+                          jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
                           if (fieldTemp$29 > 0) {
-                            rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
+                            rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << -1388546160) + (r.avatarTintStartColor - -((int)(avatarTintFadeFactor * fe.avatarTintGreenDelta) << 1841154216) - -(int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
                           }
                           return;
                         } else {
                           gg.field_b = gg.field_b + 1;
                           pa.avatarFeedbackHoldTicks = 200;
                           g.field_j = g.field_j + 1;
-                          var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+                          avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
                           fieldTemp$30 = wa.avatarShockEffectTicks;
                           wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                           if (fieldTemp$30 > 0) {
-                            ha.field_g = wa.avatarShockEffectTicks % 15 % 2;
+                            ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                           }
-                          fieldTemp$31 = jf.field_j;
-                          jf.field_j = jf.field_j - 1;
+                          fieldTemp$31 = jf.avatarTintFadeTicks;
+                          jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
                           if (fieldTemp$31 > 0) {
-                            rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
+                            rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << -1388546160) + (r.avatarTintStartColor - -((int)(avatarTintFadeFactor * fe.avatarTintGreenDelta) << 1841154216) - -(int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
                           }
                           return;
                         }
@@ -380,24 +380,24 @@ class f extends qf implements pl {
                     }
                   }
                 }
-                var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+                avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
                 fieldTemp$32 = wa.avatarShockEffectTicks;
                 wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                 if (fieldTemp$32 <= 0) {
-                  fieldTemp$33 = jf.field_j;
-                  jf.field_j = jf.field_j - 1;
+                  fieldTemp$33 = jf.avatarTintFadeTicks;
+                  jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
                   if (fieldTemp$33 > 0) {
-                    rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
+                    rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << -1388546160) + (r.avatarTintStartColor - -((int)(avatarTintFadeFactor * fe.avatarTintGreenDelta) << 1841154216) - -(int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
                     return;
                   } else {
                     return;
                   }
                 } else {
-                  ha.field_g = wa.avatarShockEffectTicks % 15 % 2;
-                  fieldTemp$34 = jf.field_j;
-                  jf.field_j = jf.field_j - 1;
+                  ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+                  fieldTemp$34 = jf.avatarTintFadeTicks;
+                  jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
                   if (fieldTemp$34 > 0) {
-                    rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
+                    rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << -1388546160) + (r.avatarTintStartColor - -((int)(avatarTintFadeFactor * fe.avatarTintGreenDelta) << 1841154216) - -(int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
                   }
                   return;
                 }
@@ -405,37 +405,37 @@ class f extends qf implements pl {
             }
           }
           pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
-          gi.field_e = gi.field_e + 1;
-          if (30 > gi.field_e % param0) {
+          gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
+          if (30 > gi.avatarBlinkClockTicks % blinkPeriodTicks) {
             uf.avatarFeedbackFrameIndex = 0 + MenuScreen.avatarFeedbackFrameBase;
           }
           if (el.gameplaySession.sessionEnding) {
-            if (gi.field_e % 18 == 0) {
+            if (gi.avatarBlinkClockTicks % 18 == 0) {
               if (gg.field_b == 0) {
                 if (!pf.field_D) {
                   g.field_j = g.field_j % 4;
                   ul.field_a = vf.field_H[g.field_j];
                   g.field_j = g.field_j + 1;
-                  var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+                  avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
                   fieldTemp$35 = wa.avatarShockEffectTicks;
                   wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                   if (fieldTemp$35 <= 0) {
-                    fieldTemp$36 = jf.field_j;
-                    jf.field_j = jf.field_j - 1;
+                    fieldTemp$36 = jf.avatarTintFadeTicks;
+                    jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
                     if (fieldTemp$36 <= 0) {
                       return;
                     } else {
-                      rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
+                      rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << -1388546160) + (r.avatarTintStartColor - -((int)(avatarTintFadeFactor * fe.avatarTintGreenDelta) << 1841154216) - -(int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
                       return;
                     }
                   } else {
-                    ha.field_g = wa.avatarShockEffectTicks % 15 % 2;
-                    fieldTemp$37 = jf.field_j;
-                    jf.field_j = jf.field_j - 1;
+                    ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+                    fieldTemp$37 = jf.avatarTintFadeTicks;
+                    jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
                     if (fieldTemp$37 <= 0) {
                       return;
                     } else {
-                      rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
+                      rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << -1388546160) + (r.avatarTintStartColor - -((int)(avatarTintFadeFactor * fe.avatarTintGreenDelta) << 1841154216) - -(int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
                       return;
                     }
                   }
@@ -444,24 +444,24 @@ class f extends qf implements pl {
                   g.field_j = 0;
                   fd.a(300, fl.field_c[22], false, j.field_gb);
                   g.field_j = g.field_j + 1;
-                  var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+                  avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
                   fieldTemp$38 = wa.avatarShockEffectTicks;
                   wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                   if (fieldTemp$38 <= 0) {
-                    fieldTemp$39 = jf.field_j;
-                    jf.field_j = jf.field_j - 1;
+                    fieldTemp$39 = jf.avatarTintFadeTicks;
+                    jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
                     if (fieldTemp$39 <= 0) {
                       return;
                     } else {
-                      rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
+                      rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << -1388546160) + (r.avatarTintStartColor - -((int)(avatarTintFadeFactor * fe.avatarTintGreenDelta) << 1841154216) - -(int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
                       return;
                     }
                   } else {
-                    ha.field_g = wa.avatarShockEffectTicks % 15 % 2;
-                    fieldTemp$40 = jf.field_j;
-                    jf.field_j = jf.field_j - 1;
+                    ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+                    fieldTemp$40 = jf.avatarTintFadeTicks;
+                    jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
                     if (fieldTemp$40 > 0) {
-                      rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
+                      rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << -1388546160) + (r.avatarTintStartColor - -((int)(avatarTintFadeFactor * fe.avatarTintGreenDelta) << 1841154216) - -(int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
                     }
                     return;
                   }
@@ -472,33 +472,33 @@ class f extends qf implements pl {
                     gg.field_b = gg.field_b + 1;
                     pa.avatarFeedbackHoldTicks = 200;
                     g.field_j = g.field_j + 1;
-                    var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+                    avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
                     fieldTemp$41 = wa.avatarShockEffectTicks;
                     wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                     if (fieldTemp$41 > 0) {
-                      ha.field_g = wa.avatarShockEffectTicks % 15 % 2;
+                      ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                     }
-                    fieldTemp$42 = jf.field_j;
-                    jf.field_j = jf.field_j - 1;
+                    fieldTemp$42 = jf.avatarTintFadeTicks;
+                    jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
                     if (fieldTemp$42 <= 0) {
                       return;
                     } else {
-                      rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
+                      rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << -1388546160) + (r.avatarTintStartColor - -((int)(avatarTintFadeFactor * fe.avatarTintGreenDelta) << 1841154216) - -(int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
                       return;
                     }
                   } else {
                     ul.field_a = ok.field_a[g.field_j];
                     g.field_j = g.field_j + 1;
-                    var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+                    avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
                     fieldTemp$43 = wa.avatarShockEffectTicks;
                     wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                     if (fieldTemp$43 > 0) {
-                      ha.field_g = wa.avatarShockEffectTicks % 15 % 2;
+                      ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                     }
-                    fieldTemp$44 = jf.field_j;
-                    jf.field_j = jf.field_j - 1;
+                    fieldTemp$44 = jf.avatarTintFadeTicks;
+                    jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
                     if (fieldTemp$44 > 0) {
-                      rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
+                      rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << -1388546160) + (r.avatarTintStartColor - -((int)(avatarTintFadeFactor * fe.avatarTintGreenDelta) << 1841154216) - -(int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
                     }
                     return;
                   }
@@ -509,48 +509,48 @@ class f extends qf implements pl {
                 }
               }
             }
-            var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+            avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
             fieldTemp$45 = wa.avatarShockEffectTicks;
             wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
             if (fieldTemp$45 <= 0) {
-              fieldTemp$46 = jf.field_j;
-              jf.field_j = jf.field_j - 1;
+              fieldTemp$46 = jf.avatarTintFadeTicks;
+              jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
               if (fieldTemp$46 <= 0) {
                 return;
               } else {
-                rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
+                rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << -1388546160) + (r.avatarTintStartColor - -((int)(avatarTintFadeFactor * fe.avatarTintGreenDelta) << 1841154216) - -(int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
                 return;
               }
             } else {
-              ha.field_g = wa.avatarShockEffectTicks % 15 % 2;
-              fieldTemp$47 = jf.field_j;
-              jf.field_j = jf.field_j - 1;
+              ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+              fieldTemp$47 = jf.avatarTintFadeTicks;
+              jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
               if (fieldTemp$47 <= 0) {
                 return;
               } else {
-                rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
+                rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << -1388546160) + (r.avatarTintStartColor - -((int)(avatarTintFadeFactor * fe.avatarTintGreenDelta) << 1841154216) - -(int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
                 return;
               }
             }
           } else {
-            var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+            avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
             fieldTemp$48 = wa.avatarShockEffectTicks;
             wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
             if (fieldTemp$48 <= 0) {
-              fieldTemp$49 = jf.field_j;
-              jf.field_j = jf.field_j - 1;
+              fieldTemp$49 = jf.avatarTintFadeTicks;
+              jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
               if (fieldTemp$49 > 0) {
-                rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
+                rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << -1388546160) + (r.avatarTintStartColor - -((int)(avatarTintFadeFactor * fe.avatarTintGreenDelta) << 1841154216) - -(int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
                 return;
               } else {
                 return;
               }
             } else {
-              ha.field_g = wa.avatarShockEffectTicks % 15 % 2;
-              fieldTemp$50 = jf.field_j;
-              jf.field_j = jf.field_j - 1;
+              ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+              fieldTemp$50 = jf.avatarTintFadeTicks;
+              jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
               if (fieldTemp$50 > 0) {
-                rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
+                rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << -1388546160) + (r.avatarTintStartColor - -((int)(avatarTintFadeFactor * fe.avatarTintGreenDelta) << 1841154216) - -(int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
                 return;
               } else {
                 return;
@@ -559,44 +559,44 @@ class f extends qf implements pl {
           }
         } else {
           pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
-          gi.field_e = gi.field_e + 1;
-          if (30 > gi.field_e % param0) {
+          gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
+          if (30 > gi.avatarBlinkClockTicks % blinkPeriodTicks) {
             uf.avatarFeedbackFrameIndex = 0 + MenuScreen.avatarFeedbackFrameBase;
           }
           if (el.gameplaySession.sessionEnding) {
-            if (gi.field_e % 18 == 0) {
+            if (gi.avatarBlinkClockTicks % 18 == 0) {
               if (gg.field_b == 0) {
                 if (pf.field_D) {
                   gg.field_b = gg.field_b + 1;
                   g.field_j = 0;
                   fd.a(300, fl.field_c[22], false, j.field_gb);
                   g.field_j = g.field_j + 1;
-                  var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+                  avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
                   fieldTemp$51 = wa.avatarShockEffectTicks;
                   wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                   if (fieldTemp$51 > 0) {
-                    ha.field_g = wa.avatarShockEffectTicks % 15 % 2;
+                    ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                   }
-                  fieldTemp$52 = jf.field_j;
-                  jf.field_j = jf.field_j - 1;
+                  fieldTemp$52 = jf.avatarTintFadeTicks;
+                  jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
                   if (fieldTemp$52 > 0) {
-                    rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
+                    rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << -1388546160) + (r.avatarTintStartColor - -((int)(avatarTintFadeFactor * fe.avatarTintGreenDelta) << 1841154216) - -(int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
                   }
                   return;
                 } else {
                   g.field_j = g.field_j % 4;
                   ul.field_a = vf.field_H[g.field_j];
                   g.field_j = g.field_j + 1;
-                  var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+                  avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
                   fieldTemp$53 = wa.avatarShockEffectTicks;
                   wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                   if (fieldTemp$53 > 0) {
-                    ha.field_g = wa.avatarShockEffectTicks % 15 % 2;
+                    ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                   }
-                  fieldTemp$54 = jf.field_j;
-                  jf.field_j = jf.field_j - 1;
+                  fieldTemp$54 = jf.avatarTintFadeTicks;
+                  jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
                   if (fieldTemp$54 > 0) {
-                    rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
+                    rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << -1388546160) + (r.avatarTintStartColor - -((int)(avatarTintFadeFactor * fe.avatarTintGreenDelta) << 1841154216) - -(int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
                   }
                   return;
                 }
@@ -605,32 +605,32 @@ class f extends qf implements pl {
                   if (ok.field_a.length > g.field_j) {
                     ul.field_a = ok.field_a[g.field_j];
                     g.field_j = g.field_j + 1;
-                    var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+                    avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
                     fieldTemp$55 = wa.avatarShockEffectTicks;
                     wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                     if (fieldTemp$55 > 0) {
-                      ha.field_g = wa.avatarShockEffectTicks % 15 % 2;
+                      ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                     }
-                    fieldTemp$56 = jf.field_j;
-                    jf.field_j = jf.field_j - 1;
+                    fieldTemp$56 = jf.avatarTintFadeTicks;
+                    jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
                     if (fieldTemp$56 > 0) {
-                      rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
+                      rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << -1388546160) + (r.avatarTintStartColor - -((int)(avatarTintFadeFactor * fe.avatarTintGreenDelta) << 1841154216) - -(int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
                     }
                     return;
                   } else {
                     gg.field_b = gg.field_b + 1;
                     pa.avatarFeedbackHoldTicks = 200;
                     g.field_j = g.field_j + 1;
-                    var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+                    avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
                     fieldTemp$57 = wa.avatarShockEffectTicks;
                     wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                     if (fieldTemp$57 > 0) {
-                      ha.field_g = wa.avatarShockEffectTicks % 15 % 2;
+                      ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                     }
-                    fieldTemp$58 = jf.field_j;
-                    jf.field_j = jf.field_j - 1;
+                    fieldTemp$58 = jf.avatarTintFadeTicks;
+                    jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
                     if (fieldTemp$58 > 0) {
-                      rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
+                      rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << -1388546160) + (r.avatarTintStartColor - -((int)(avatarTintFadeFactor * fe.avatarTintGreenDelta) << 1841154216) - -(int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
                     }
                     return;
                   }
@@ -642,24 +642,24 @@ class f extends qf implements pl {
               }
             }
           }
-          var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+          avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
           fieldTemp$59 = wa.avatarShockEffectTicks;
           wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
           if (fieldTemp$59 <= 0) {
-            fieldTemp$60 = jf.field_j;
-            jf.field_j = jf.field_j - 1;
+            fieldTemp$60 = jf.avatarTintFadeTicks;
+            jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
             if (fieldTemp$60 > 0) {
-              rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
+              rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << -1388546160) + (r.avatarTintStartColor - -((int)(avatarTintFadeFactor * fe.avatarTintGreenDelta) << 1841154216) - -(int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
               return;
             } else {
               return;
             }
           } else {
-            ha.field_g = wa.avatarShockEffectTicks % 15 % 2;
-            fieldTemp$61 = jf.field_j;
-            jf.field_j = jf.field_j - 1;
+            ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+            fieldTemp$61 = jf.avatarTintFadeTicks;
+            jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
             if (fieldTemp$61 > 0) {
-              rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
+              rj.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << -1388546160) + (r.avatarTintStartColor - -((int)(avatarTintFadeFactor * fe.avatarTintGreenDelta) << 1841154216) - -(int)(uk.avatarTintBlueDelta * avatarTintFadeFactor));
             }
             return;
           }

@@ -1,4 +1,4 @@
-# Reading GeoBlox pass 25
+# Reading GeoBlox pass 26
 
 The readable tree uses semantic names without opaque suffixes. The symbol map
 keeps the original spelling and JVM identity of every declaration, so
@@ -308,6 +308,37 @@ retains Java's negative frame remainder rather than clamping it.
 `SecondaryDeque.contactProbeOffsetX` and `contactProbeOffsetY` place the contact
 raster within the 640 by 480 viewport. Their normal values are 90 and 10 for a
 460 by 460 raster. Entity trail and contact drawing subtract these offsets.
+
+`qa.advanceMenuAvatarAnimation` and `f.advanceGameplayAvatarAnimation` update
+the shared avatar feedback state. `avatarFrameStepTicks` is tested before its
+decrement: an old negative value resets it to 20 and steps the frame. An offset
+of zero first jumps to three. Otherwise `avatarSteeringDirectionId` zero moves
+toward offset three, one decrements offsets above one, and two increments
+offsets below five. Other direction IDs preserve the frame. The entry guard
+for the menu update must be at least 72; the actual caller passes 127.
+
+Every enabled update decrements `avatarFeedbackHoldTicks` and increments
+`avatarBlinkClockTicks`. Remainders below 30 force the base frame, using a fixed
+600-tick menu cycle and `blinkPeriodTicks` in gameplay (normally 600).
+`avatarShockFrameIndex` changes only if the old `avatarShockEffectTicks` was
+positive; it uses the decremented value modulo 15 and then modulo two. These
+counters continue below zero, and the native fixtures retain Java remainders.
+
+`wc.requestAvatarTintForRadius` receives the maximum attached squared distance
+from the board center. When `avatarTintFadeTicks` is nonpositive, it copies
+`avatarTintColor` into `avatarTintStartColor`, selects `avatarTintPalette` and
+sets `avatarTintRedDelta`, `avatarTintGreenDelta` and `avatarTintBlueDelta`.
+The index rounds four times the squared radius divided by 52900; it is not
+clamped. The division guard and bad index can throw after the starting-color
+copy. A positive fade bypasses the whole request, including those failures.
+
+Both animation paths compute `avatarTintFadeFactor` from the old fade timer
+and the retained float constant, narrow each scaled channel to int, and add
+the packed deltas to the starting color. Only a positive old fade timer writes
+the color; the timer still decrements after expiration. The independent native
+matrix checks those boundaries, signed/fractional channel values and multiple
+blink cycles. Gameplay ending-message updates share this method but are not
+covered by these added fixtures.
 
 This is a reading map of the recovered source, not a whole-game behavioral
 proof. Several guards, scratch carriers and shared helper names remain opaque.

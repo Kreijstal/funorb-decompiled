@@ -14,7 +14,7 @@ final class fe {
     private java.util.zip.Inflater field_i;
     static boolean field_b;
     static int field_g;
-    static float field_c;
+    static float avatarTintGreenDelta;
 
     public static void c(int param0) {
         field_h = null;
@@ -111,7 +111,7 @@ final class fe {
         if (param0 == -1) {
             return new ck[]{pj.field_g, w.field_d, ab.field_c, wg.field_d, lj.field_e, s.field_E, cd.field_i, SpriteState.field_t, qj.field_a, fk.field_B, am.field_d, bd.field_c, va.field_f, field_h};
         }
-        field_c = -1.1302366256713867f;
+        avatarTintGreenDelta = -1.1302366256713867f;
         return new ck[]{pj.field_g, w.field_d, ab.field_c, wg.field_d, lj.field_e, s.field_E, cd.field_i, SpriteState.field_t, qj.field_a, fk.field_B, am.field_d, bd.field_c, va.field_f, field_h};
     }
 

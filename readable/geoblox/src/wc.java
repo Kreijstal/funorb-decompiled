@@ -68,18 +68,18 @@ final class wc extends IntrusiveNode {
         return stackIn_7_0 != 0;
     }
 
-    final static void a(float param0, byte param1) {
-        if (!(jf.field_j <= 0)) {
+    final static void requestAvatarTintForRadius(float maxAttachedRadiusSquared, byte methodGuard) {
+        if (!(jf.avatarTintFadeTicks <= 0)) {
             return;
         }
-        r.field_ub = rj.field_c;
-        int var3 = -71 / ((-59 - param1) / 47);
-        float var2 = param0 / 52900.0f;
-        int var4 = (int)(0.5f + 4.0f * var2);
-        md.field_b = (float)(-(rj.field_c >> 1885504112 & 255) + ((uf.field_h[var4] & 16722826) >> -1433217648));
-        fe.field_c = (float)((uf.field_h[var4] >> -1928984216 & 255) + -(rj.field_c >> -846446392 & 255));
-        uk.field_j = (float)(-(255 & rj.field_c) + (255 & uf.field_h[var4]));
-        jf.field_j = 50;
+        r.avatarTintStartColor = rj.avatarTintColor;
+        int sentinelDivisionGuard = -71 / ((-59 - methodGuard) / 47);
+        float normalizedRadiusSquared = maxAttachedRadiusSquared / 52900.0f;
+        int tintPaletteIndex = (int)(0.5f + 4.0f * normalizedRadiusSquared);
+        md.avatarTintRedDelta = (float)(-(rj.avatarTintColor >> 1885504112 & 255) + ((uf.avatarTintPalette[tintPaletteIndex] & 16722826) >> -1433217648));
+        fe.avatarTintGreenDelta = (float)((uf.avatarTintPalette[tintPaletteIndex] >> -1928984216 & 255) + -(rj.avatarTintColor >> -846446392 & 255));
+        uk.avatarTintBlueDelta = (float)(-(255 & rj.avatarTintColor) + (255 & uf.avatarTintPalette[tintPaletteIndex]));
+        jf.avatarTintFadeTicks = 50;
     }
 
     private wc() throws Throwable {

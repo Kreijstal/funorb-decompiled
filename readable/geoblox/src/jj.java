@@ -86,10 +86,10 @@ final class jj {
     final static void b(int param0) {
         if (param0 > -96) {
             loginUsernameEmailText = (String) null;
-            jk.field_d = 0;
+            jk.avatarSteeringDirectionId = 0;
             return;
         }
-        jk.field_d = 0;
+        jk.avatarSteeringDirectionId = 0;
     }
 
     private final void a(int param0, fj param1) {

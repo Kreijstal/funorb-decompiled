@@ -1581,7 +1581,7 @@ final class GameScreen extends MenuScreen {
                       this.field_M = (255 & jg.field_h[selectedThemeId][(1 + this.field_B) % 7]) + -(255 & jg.field_h[selectedThemeId][this.field_B]);
                     }
                   }
-                  qa.b((byte) 127);
+                  qa.advanceMenuAvatarAnimation((byte) 127);
                 }
                 L16: {
                   fieldTemp$1 = di.field_a;

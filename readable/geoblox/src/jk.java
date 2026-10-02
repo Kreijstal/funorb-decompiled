@@ -3,7 +3,7 @@
  */
 final class jk {
     static boolean field_a;
-    static int field_d;
+    static int avatarSteeringDirectionId;
     static String fullscreenAcceptCountdownPluralText;
     static String returnToGameText;
 
@@ -241,7 +241,7 @@ final class jk {
     }
 
     static {
-        field_d = 0;
+        avatarSteeringDirectionId = 0;
         field_a = false;
         fullscreenAcceptCountdownPluralText = "If you do nothing the game will revert to normal view in <%0> seconds.";
         returnToGameText = "Return to game";

@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 1,117 guarded naming rules: 22 classes, 371 fields,
-172 methods, 204 parameters and 348 local declarations. Both 303-file corpora
+The current export has 1,146 guarded naming rules: 22 classes, 382 fields,
+175 methods, 208 parameters and 359 local declarations. Both 303-file corpora
 compile, preserving 154,117 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -109,6 +109,14 @@ The 3,024 avatar-feedback cases independently check hold timers, frame bases,
 Java remainders, mode/effect fields, sprite guards and actual sound-sample
 identity. Sound-device playback and new unlock delivery remain unverified;
 routing fixtures set existing unlock bits rather than deliver new unlocks.
+
+Avatar animation adds 21,600 frame/timer cases, 2,880 shock/tint cases, five
+menu guard boundaries and six 720-tick sequences. Independent state oracles
+check both menu and gameplay updates with ending messages disabled. Another
+324 tint requests verify palette channels, active-fade bypass, NaN narrowing,
+invalid indices and division-guard partial writes. The combined gameplay probe
+now covers 52,164 cases per variant. Ending-message selection remains outside
+these animation checks.
 Contact-physics producers, actual asset loading, new unlock delivery, device
 audio and whole-game equivalence remain unverified. Text-writer guards <=23
 retain a PCM side effect outside the direct writer probe. These source checks
@@ -133,6 +141,6 @@ do not establish FPS, heap or phone acceptance.
 | Java source tree | SHA-256 |
 | --- | --- |
 | Raw | `07610c2d655bf96e59584f07be867c62e47cf3b3c484063504d9958443e89da2` |
-| Readable | `a2b364fe5513ed4835e955ba3f7e3e177789769e559dea95d5f00600272a8688` |
+| Readable | `52e30fafb723267cc5c83ad7514342079c254f84360781265521a20c696f5f60` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

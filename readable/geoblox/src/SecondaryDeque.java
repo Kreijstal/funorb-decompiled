@@ -111,7 +111,7 @@ final class SecondaryDeque {
     }
 
     final static void a(byte param0) {
-        jk.field_d = 2;
+        jk.avatarSteeringDirectionId = 2;
         if (param0 < 45) {
             SecondaryDeque.a(true, -75);
         }

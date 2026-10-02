@@ -5,7 +5,7 @@ final class rj {
     static int field_i;
     static String quitToWebsiteText;
     int field_f;
-    static int field_c;
+    static int avatarTintColor;
     static long field_b;
     int field_d;
     static String loggingInText;
@@ -69,7 +69,7 @@ final class rj {
     }
 
     static {
-        field_c = 5167632;
+        avatarTintColor = 5167632;
         field_i = 500;
         quitToWebsiteText = "Quit to website";
         loggingInText = "Logging in...";

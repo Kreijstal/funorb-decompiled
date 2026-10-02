@@ -191,6 +191,12 @@
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'fs_focus_or_resolution' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
     },
     {
+      "symbol": "F:af.field_c:I",
+      "originalName": "field_c",
+      "to": "avatarFrameStepTicks",
+      "evidence": "Post-decremented each avatar update; a negative old value steps the frame and resets this to 20. Native menu/gameplay frame matrix covers -2, -1, 0, 1 and 20."
+    },
+    {
       "symbol": "F:ah.field_b:Ljava/lang/String;",
       "to": "connectionLostReconnectingText",
       "originalName": "field_b",
@@ -477,6 +483,12 @@
       "to": "musicLabelText",
       "originalName": "field_e",
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'music_colon' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:fe.field_c:F",
+      "originalName": "field_c",
+      "to": "avatarTintGreenDelta",
+      "evidence": "Difference between target palette and current tint green channels; avatar updates multiply it by the float fade factor, narrow to int and shift by 8. Native tests retain fractional and negative channel arithmetic."
     },
     {
       "symbol": "F:ff.field_l:Ljava/lang/String;",
@@ -857,6 +869,12 @@
       "originalName": "field_y"
     },
     {
+      "symbol": "F:gi.field_e:I",
+      "originalName": "field_e",
+      "to": "avatarBlinkClockTicks",
+      "evidence": "Incremented each avatar update; Java remainder below 30 resets the feedback frame to its base. Menu period is 600; gameplay receives 600 from gh. Native boundary and 720-tick sequence oracles verify the blink window."
+    },
+    {
       "symbol": "F:gk.field_c:Ljava/lang/String;",
       "to": "createDisplayNameHintText",
       "originalName": "field_c",
@@ -867,6 +885,12 @@
       "to": "matchCandidateCount",
       "originalName": "field_a",
       "evidence": "ul fills the packed candidate array and increments this count; ec sorts and consumes that many candidates."
+    },
+    {
+      "symbol": "F:ha.field_g:I",
+      "originalName": "field_g",
+      "to": "avatarShockFrameIndex",
+      "evidence": "Indexes vg.field_f in ij avatar drawing. A positive old shock timer updates this from the decremented timer modulo 15 then modulo 2; expiration preserves the prior index."
     },
     {
       "symbol": "F:hb.field_h:Ljava/lang/String;",
@@ -1139,6 +1163,12 @@
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'tocustomersupport' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
     },
     {
+      "symbol": "F:jf.field_j:I",
+      "originalName": "field_j",
+      "to": "avatarTintFadeTicks",
+      "evidence": "A nonpositive value permits wc.a(FB)V to start a 50-tick tint fade. Both avatar updates always decrement it, but calculate tint only when the old value was positive; native request and expiration matrices verify this."
+    },
+    {
       "symbol": "F:jg.field_c:Ljava/lang/String;",
       "to": "loginGameUpdatedText",
       "originalName": "field_c",
@@ -1197,6 +1227,12 @@
       "to": "returnToGameText",
       "originalName": "field_c",
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'returntogame' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:jk.field_d:I",
+      "originalName": "field_d",
+      "to": "avatarSteeringDirectionId",
+      "evidence": "Value 0 approaches frame offset 3, 1 approaches 1 from above, and 2 approaches 5 from below. jj selects neutral, me.a(B)V selects 1 and wd.a(B)V selects 2. Native frame matrix also preserves behavior for other direction IDs."
     },
     {
       "symbol": "F:jl.field_t:Z",
@@ -1371,6 +1407,12 @@
       "to": "activeScorePopups",
       "originalName": "field_a",
       "evidence": "ug inserts initialized ScorePopup objects here; cf advances them, bd renders them and wa drains unfinished points."
+    },
+    {
+      "symbol": "F:md.field_b:F",
+      "originalName": "field_b",
+      "to": "avatarTintRedDelta",
+      "evidence": "Difference between target palette and current tint red channels, computed by wc.a(FB)V; avatar updates multiply it by the fade factor and shift the truncated value by 16. Native request and tint arithmetic oracles verify it."
     },
     {
       "symbol": "F:md.field_d:[Ljava/lang/String;",
@@ -1727,6 +1769,12 @@
       "evidence": "Audio output configuration validates frequency between 8000 and 48000 and stores it here. Scheduling uses 256000/rate, while PCM factory converts source sample frequency by this output frequency."
     },
     {
+      "symbol": "F:r.field_ub:I",
+      "originalName": "field_ub",
+      "to": "avatarTintStartColor",
+      "evidence": "wc.a(FB)V copies the current avatar tint before its division guard and palette lookup. Native failure fixtures preserve this partial write; the animation fade adds channel deltas to this packed color."
+    },
+    {
       "symbol": "F:ra.field_a:Ltf;",
       "to": "availableEntities",
       "originalName": "field_a",
@@ -1791,6 +1839,12 @@
       "to": "createUsernameUnavailableText",
       "originalName": "field_j",
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_username_unavailable' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:rj.field_c:I",
+      "originalName": "field_c",
+      "to": "avatarTintColor",
+      "evidence": "Packed color passed to both fc avatar frames and vh feedback overlays in ij and ri. Native animation oracles verify it stays unchanged after fade expiration and retains original int narrowing and addition."
     },
     {
       "symbol": "F:rj.field_e:Ljava/lang/String;",
@@ -2039,6 +2093,12 @@
       "evidence": "Indexes fc.field_b avatar frames. Accepted ordinary feedback keeps its Java remainder modulo six, then adds the selected frame base; native matrix covers negative, low and high frame values."
     },
     {
+      "symbol": "F:uf.field_h:[I",
+      "originalName": "field_h",
+      "to": "avatarTintPalette",
+      "evidence": "Five packed tint targets selected by rounded maximum attached squared radius divided by 52900. Native request fixtures verify target channel differences, held-request bypass and out-of-range failures without clamping."
+    },
+    {
       "symbol": "F:uf.field_i:Ljava/lang/String;",
       "to": "createPasswordContainsEmailAlertText",
       "originalName": "field_i",
@@ -2061,6 +2121,12 @@
       "to": "loginMessage2Text",
       "originalName": "field_e",
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'loginm2' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:uk.field_j:F",
+      "originalName": "field_j",
+      "to": "avatarTintBlueDelta",
+      "evidence": "Difference between target palette and current tint blue channels; added without a shift after float multiplication and int narrowing. Native request and tint update oracles verify it."
     },
     {
       "symbol": "F:uk.field_l:[Ljava/lang/String;",
@@ -3089,6 +3155,30 @@
       "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
     },
     {
+      "symbol": "L:f.o(I)V#38",
+      "originalName": "var1",
+      "to": "avatarTintFadeFactor",
+      "evidence": "Gameplay counterpart of the menu float tint factor; native menu/gameplay traces and independent packed color oracles agree during held and expired fades."
+    },
+    {
+      "symbol": "L:f.o(I)V#39",
+      "originalName": "var1_int",
+      "to": "avatarFrameOffsetInSegment",
+      "evidence": "Gameplay feedback frame minus its six-frame base; the normal direction/step matrix checks the resulting frame."
+    },
+    {
+      "symbol": "L:f.o(I)V#40",
+      "originalName": "var2",
+      "to": "unusedClientControlSnapshot",
+      "evidence": "Retained Geoblox.field_C entry read; the recovered gameplay avatar update does not use this local."
+    },
+    {
+      "symbol": "L:f.o(I)V#41",
+      "originalName": "fieldTemp$23",
+      "to": "frameStepTicksBeforeDecrement",
+      "evidence": "Old frame-step timer; a negative value resets it to 20 and selects a directional step. Native cases verify the exact decrement boundary."
+    },
+    {
       "symbol": "L:gh.a(B)V#16",
       "originalName": "var8_ref_ja",
       "to": "renderedEntity",
@@ -4073,6 +4163,30 @@
       "evidence": "Existing dg validation object obtained when referenceInput is nl; its status/message is checked before reporting a matching candidate as valid."
     },
     {
+      "symbol": "L:qa.b(B)V#0",
+      "originalName": "fieldTemp$0",
+      "to": "frameStepTicksBeforeDecrement",
+      "evidence": "Snapshot of af.field_c before decrement; frame movement checks old value <0, not the new timer. Native matrix separates old -1, 0 and 1."
+    },
+    {
+      "symbol": "L:qa.b(B)V#30",
+      "originalName": "var1",
+      "to": "avatarTintFadeFactor",
+      "evidence": "Float (50-old tint timer) multiplied by the original float literal 0.0066999997943639755 before channel narrowing. Native tint fixtures preserve this exact arithmetic."
+    },
+    {
+      "symbol": "L:qa.b(B)V#31",
+      "originalName": "var1_int",
+      "to": "avatarFrameOffsetInSegment",
+      "evidence": "Current feedback frame minus the selected six-frame base; steering uses offsets 1, 3 and 5 as directional targets."
+    },
+    {
+      "symbol": "L:qa.b(B)V#32",
+      "originalName": "var2",
+      "to": "unusedClientControlSnapshot",
+      "evidence": "Retained Geoblox.field_C entry read; the recovered menu animation body does not use this local."
+    },
+    {
       "symbol": "L:sk.a(I)Z#10",
       "to": "staggeredLifetime",
       "originalName": "var5",
@@ -4413,6 +4527,24 @@
       "to": "popup",
       "originalName": "var2",
       "evidence": "Drains active popups with removeFirst and accumulates their points into the returned integer."
+    },
+    {
+      "symbol": "L:wc.a(FB)V#0",
+      "originalName": "var3",
+      "to": "sentinelDivisionGuard",
+      "evidence": "Retained division guard evaluated after copying the starting tint and before computing the palette index. Native invalid-guard fixtures preserve its exception and partial state."
+    },
+    {
+      "symbol": "L:wc.a(FB)V#1",
+      "originalName": "var2",
+      "to": "normalizedRadiusSquared",
+      "evidence": "Maximum attached squared radius divided by 52900.0f before four-step tint palette rounding; source preserves float arithmetic."
+    },
+    {
+      "symbol": "L:wc.a(FB)V#2",
+      "originalName": "var4",
+      "to": "tintPaletteIndex",
+      "evidence": "Integer narrowing of 0.5f+4.0f*normalizedRadiusSquared; native expected-index table covers all five targets, NaN and out-of-range failures."
     },
     {
       "symbol": "L:wd.a(I)Lrc;#1",
@@ -4761,6 +4893,12 @@
       "to": "advanceActiveEntityAnimations",
       "evidence": "ef.java takes el.field_o.field_J as the current board angle, traverses bh.field_c ja entities and calls ja.b(true); entities reaching the frame threshold are attached to ra.field_a for follow-up processing.",
       "originalName": "b"
+    },
+    {
+      "symbol": "M:f.o(I)V",
+      "originalName": "o",
+      "to": "advanceGameplayAvatarAnimation",
+      "evidence": "GameplaySession invokes this with blink period 600. Updates the same avatar frame/effect/tint state and also advances ending text when sessionEnding is true. Native animation fixtures verify sessionEnding=false; ending-message behavior is retained but outside the added probe."
     },
     {
       "symbol": "M:fk.a(ILjava/lang/String;)[B",
@@ -5231,6 +5369,12 @@
       "evidence": "With guard 32, calls the abstract state query using the validated input's current text. The complete override family includes the abstract ib declaration, renamed in the same manifest."
     },
     {
+      "symbol": "M:qa.b(B)V",
+      "originalName": "b",
+      "to": "advanceMenuAvatarAnimation",
+      "evidence": "GameScreen invokes this with guard 127. Steps feedback frames, decrements hold/effect/fade timers and advances the fixed 600-tick blink clock; independent native state and sequence oracles cover these operations."
+    },
+    {
       "symbol": "M:ra.a(ILrf;)V",
       "to": "selectBackgroundMusic",
       "originalName": "a",
@@ -5427,6 +5571,12 @@
       "to": "collectUnfinishedPopupPoints",
       "originalName": "a",
       "evidence": "Removes every active popup and returns the sum of its uncredited points without multiplying them again."
+    },
+    {
+      "symbol": "M:wc.a(FB)V",
+      "originalName": "a",
+      "to": "requestAvatarTintForRadius",
+      "evidence": "rh passes the maximum attached squared distance from board center. When no tint fade is held, snapshots the current color, computes palette channel deltas and starts 50 ticks. Native fixtures verify normal, held, NaN and failure/partial-write cases."
     },
     {
       "symbol": "M:wd.a(I)Lrc;",
@@ -5817,6 +5967,12 @@
       "to": "methodGuard",
       "originalName": "param0",
       "evidence": "Normal callers pass -18913. Other values retain the recursive ec.b(-33) branch before candidate processing."
+    },
+    {
+      "symbol": "P:f.o(I)V#0",
+      "originalName": "param0",
+      "to": "blinkPeriodTicks",
+      "evidence": "Divisor of the incremented avatar blink clock; GameplaySession passes 600. It is a cycle period, not a method guard."
     },
     {
       "symbol": "P:fk.a(ILjava/lang/String;)[B#0",
@@ -6431,6 +6587,12 @@
       "evidence": "Only value 32 delegates to the current input validation query; other values return null. The numeric sentinel is preserved."
     },
     {
+      "symbol": "P:qa.b(B)V#0",
+      "originalName": "param0",
+      "to": "methodGuard",
+      "evidence": "Values below 72 leave animation state unchanged; actual menu caller passes 127. Native boundary fixtures check -128, 0, 71, 72 and 127."
+    },
+    {
       "symbol": "P:ra.a(ILrf;)V#0",
       "to": "methodGuard",
       "originalName": "param0",
@@ -6641,6 +6803,18 @@
       "evidence": "Normal callers pass -2. Other values clear ul.field_a; match enumeration and RuntimeException context remain intact."
     },
     {
+      "symbol": "P:wc.a(FB)V#0",
+      "originalName": "param0",
+      "to": "maxAttachedRadiusSquared",
+      "evidence": "Maximum attached squared distance from center (320,240) in rh; determines the tint palette position. Native requests use a fixed expected index table including NaN and invalid extremes."
+    },
+    {
+      "symbol": "P:wc.a(FB)V#1",
+      "originalName": "param1",
+      "to": "methodGuard",
+      "evidence": "Retains -71 / ((-59-guard)/47); normal attachment caller passes 14. Native cases cover 14, 0 and division by zero at -59 with the original partial tint snapshot."
+    },
+    {
       "symbol": "P:wd.a(I)Lrc;#0",
       "originalName": "param0",
       "to": "methodGuard",
@@ -6714,7 +6888,7 @@
     }
   ],
   "revision": 4,
-  "version": 25,
+  "version": 26,
   "generators": {
     "dekoblokoWork": {
       "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
@@ -6734,209 +6908,299 @@
   "publication": {
     "format": 1,
     "previousRules": {
-      "commit": "fcc47df013a1d918b2a1e00ab05dd3471e202864",
+      "commit": "3dde34df66ac340aec004a75ebc691129f39bdf9",
       "path": "readable/geoblox-rules.json",
-      "sha256": "ae9f11cf37149c4dd661aa9879c358d622efc0ddb10db6bf17bc1277e29bf248"
+      "sha256": "5e9ca8ebeb936cfa0f1538cd513bc7a6cdc31701d3575c34f9ae468061674c5c"
     },
     "ruleChanges": [
       {
-        "symbol": "F:jl.field_t:Z",
+        "symbol": "F:af.field_c:I",
         "before": null,
         "after": {
-          "symbol": "F:jl.field_t:Z",
-          "originalName": "field_t",
-          "to": "avatarShockContactPending",
-          "evidence": "Set by kind-three avatar mask contact, blocks queue-settling checks and is cleared when reconciliation consumes avatarShockPending. Native routing verifies the reset independently."
+          "symbol": "F:af.field_c:I",
+          "originalName": "field_c",
+          "to": "avatarFrameStepTicks",
+          "evidence": "Post-decremented each avatar update; a negative old value steps the frame and resets this to 20. Native menu/gameplay frame matrix covers -2, -1, 0, 1 and 20."
         }
       },
       {
-        "symbol": "F:ka.field_h:I",
+        "symbol": "F:fe.field_c:F",
         "before": null,
         "after": {
-          "symbol": "F:ka.field_h:I",
-          "originalName": "field_h",
-          "to": "avatarFeedbackFrameBase",
-          "evidence": "Base of a six-frame avatar feedback segment: 0, 6, 12, 18, 24, 30 or 36. Native request matrix checks base and selected sound independently; qa advances frames and ij/ri render fc.field_b by uf frame index."
+          "symbol": "F:fe.field_c:F",
+          "originalName": "field_c",
+          "to": "avatarTintGreenDelta",
+          "evidence": "Difference between target palette and current tint green channels; avatar updates multiply it by the float fade factor, narrow to int and shift by 8. Native tests retain fractional and negative channel arithmetic."
         }
       },
       {
-        "symbol": "F:nd.field_a:I",
+        "symbol": "F:gi.field_e:I",
         "before": null,
         "after": {
-          "symbol": "F:nd.field_a:I",
-          "originalName": "field_a",
-          "to": "avatarFeedbackModeId",
-          "evidence": "Selects the vh.field_H avatar overlay and feedback state. Requests 0 through 5 set matching IDs; a new request 7 sets ID 6."
+          "symbol": "F:gi.field_e:I",
+          "originalName": "field_e",
+          "to": "avatarBlinkClockTicks",
+          "evidence": "Incremented each avatar update; Java remainder below 30 resets the feedback frame to its base. Menu period is 600; gameplay receives 600 from gh. Native boundary and 720-tick sequence oracles verify the blink window."
         }
       },
       {
-        "symbol": "F:pa.field_g:I",
+        "symbol": "F:ha.field_g:I",
         "before": null,
         "after": {
-          "symbol": "F:pa.field_g:I",
+          "symbol": "F:ha.field_g:I",
           "originalName": "field_g",
-          "to": "avatarFeedbackHoldTicks",
-          "evidence": "A positive hold defers ordinary feedback changes; modes 3, 4, 5 and a new mode-7 request set 110. Native request matrix verifies held and expired cases."
+          "to": "avatarShockFrameIndex",
+          "evidence": "Indexes vg.field_f in ij avatar drawing. A positive old shock timer updates this from the decremented timer modulo 15 then modulo 2; expiration preserves the prior index."
         }
       },
       {
-        "symbol": "F:rb.field_b:I",
+        "symbol": "F:jf.field_j:I",
         "before": null,
         "after": {
-          "symbol": "F:rb.field_b:I",
-          "originalName": "field_b",
-          "to": "kindFourRemovalCount",
-          "evidence": "Counts original kind-four entities routed to kind seven in the transient list, reset by le session setup; at five it requests the existing unlock action. Native routing checks counters, with unlock delivery suppressed by pre-existing action bits."
+          "symbol": "F:jf.field_j:I",
+          "originalName": "field_j",
+          "to": "avatarTintFadeTicks",
+          "evidence": "A nonpositive value permits wc.a(FB)V to start a 50-tick tint fade. Both avatar updates always decrement it, but calculate tint only when the old value was positive; native request and expiration matrices verify this."
         }
       },
       {
-        "symbol": "F:uf.field_b:I",
+        "symbol": "F:jk.field_d:I",
         "before": null,
         "after": {
-          "symbol": "F:uf.field_b:I",
-          "originalName": "field_b",
-          "to": "avatarFeedbackFrameIndex",
-          "evidence": "Indexes fc.field_b avatar frames. Accepted ordinary feedback keeps its Java remainder modulo six, then adds the selected frame base; native matrix covers negative, low and high frame values."
-        }
-      },
-      {
-        "symbol": "F:wa.field_a:I",
-        "before": null,
-        "after": {
-          "symbol": "F:wa.field_a:I",
-          "originalName": "field_a",
-          "to": "avatarShockEffectTicks",
-          "evidence": "Request 3 starts a 50-tick effect even during a feedback hold. qa decrements this counter and ij draws the vg.field_f effect while it is positive."
-        }
-      },
-      {
-        "symbol": "F:wd.field_a:I",
-        "before": null,
-        "after": {
-          "symbol": "F:wd.field_a:I",
-          "originalName": "field_a",
-          "to": "contactProbeOffsetX",
-          "evidence": "Horizontal offset of the 460-wide contact raster: (640 - raster canvas width)/2. Entity trail erasure and contact drawing subtract it; native attachment fixtures use the normal 90 offset."
-        }
-      },
-      {
-        "symbol": "F:wd.field_d:I",
-        "before": null,
-        "after": {
-          "symbol": "F:wd.field_d:I",
+          "symbol": "F:jk.field_d:I",
           "originalName": "field_d",
-          "to": "contactProbeOffsetY",
-          "evidence": "Vertical offset of the 460-high contact raster: (480 - raster canvas height)/2. Entity trail erasure and contact drawing subtract it; native attachment fixtures use the normal 10 offset."
+          "to": "avatarSteeringDirectionId",
+          "evidence": "Value 0 approaches frame offset 3, 1 approaches 1 from above, and 2 approaches 5 from below. jj selects neutral, me.a(B)V selects 1 and wd.a(B)V selects 2. Native frame matrix also preserves behavior for other direction IDs."
         }
       },
       {
-        "symbol": "L:jc.a(IZ)V#0",
+        "symbol": "F:md.field_b:F",
         "before": null,
         "after": {
-          "symbol": "L:jc.a(IZ)V#0",
-          "originalName": "var3",
+          "symbol": "F:md.field_b:F",
+          "originalName": "field_b",
+          "to": "avatarTintRedDelta",
+          "evidence": "Difference between target palette and current tint red channels, computed by wc.a(FB)V; avatar updates multiply it by the fade factor and shift the truncated value by 16. Native request and tint arithmetic oracles verify it."
+        }
+      },
+      {
+        "symbol": "F:r.field_ub:I",
+        "before": null,
+        "after": {
+          "symbol": "F:r.field_ub:I",
+          "originalName": "field_ub",
+          "to": "avatarTintStartColor",
+          "evidence": "wc.a(FB)V copies the current avatar tint before its division guard and palette lookup. Native failure fixtures preserve this partial write; the animation fade adds channel deltas to this packed color."
+        }
+      },
+      {
+        "symbol": "F:rj.field_c:I",
+        "before": null,
+        "after": {
+          "symbol": "F:rj.field_c:I",
+          "originalName": "field_c",
+          "to": "avatarTintColor",
+          "evidence": "Packed color passed to both fc avatar frames and vh feedback overlays in ij and ri. Native animation oracles verify it stays unchanged after fade expiration and retains original int narrowing and addition."
+        }
+      },
+      {
+        "symbol": "F:uf.field_h:[I",
+        "before": null,
+        "after": {
+          "symbol": "F:uf.field_h:[I",
+          "originalName": "field_h",
+          "to": "avatarTintPalette",
+          "evidence": "Five packed tint targets selected by rounded maximum attached squared radius divided by 52900. Native request fixtures verify target channel differences, held-request bypass and out-of-range failures without clamping."
+        }
+      },
+      {
+        "symbol": "F:uk.field_j:F",
+        "before": null,
+        "after": {
+          "symbol": "F:uk.field_j:F",
+          "originalName": "field_j",
+          "to": "avatarTintBlueDelta",
+          "evidence": "Difference between target palette and current tint blue channels; added without a shift after float multiplication and int narrowing. Native request and tint update oracles verify it."
+        }
+      },
+      {
+        "symbol": "L:f.o(I)V#38",
+        "before": null,
+        "after": {
+          "symbol": "L:f.o(I)V#38",
+          "originalName": "var1",
+          "to": "avatarTintFadeFactor",
+          "evidence": "Gameplay counterpart of the menu float tint factor; native menu/gameplay traces and independent packed color oracles agree during held and expired fades."
+        }
+      },
+      {
+        "symbol": "L:f.o(I)V#39",
+        "before": null,
+        "after": {
+          "symbol": "L:f.o(I)V#39",
+          "originalName": "var1_int",
+          "to": "avatarFrameOffsetInSegment",
+          "evidence": "Gameplay feedback frame minus its six-frame base; the normal direction/step matrix checks the resulting frame."
+        }
+      },
+      {
+        "symbol": "L:f.o(I)V#40",
+        "before": null,
+        "after": {
+          "symbol": "L:f.o(I)V#40",
+          "originalName": "var2",
           "to": "unusedClientControlSnapshot",
-          "evidence": "Retained read of Geoblox.field_C at entry; this local is unused by the recovered feedback body."
+          "evidence": "Retained Geoblox.field_C entry read; the recovered gameplay avatar update does not use this local."
         }
       },
       {
-        "symbol": "L:kc.b(I)V#10",
+        "symbol": "L:f.o(I)V#41",
         "before": null,
         "after": {
-          "symbol": "L:kc.b(I)V#10",
-          "originalName": "stackIn_88_2",
-          "to": "popupGuardInput",
-          "evidence": "Carries the normal popup-helper guard 117 into the merged point-selection branch."
+          "symbol": "L:f.o(I)V#41",
+          "originalName": "fieldTemp$23",
+          "to": "frameStepTicksBeforeDecrement",
+          "evidence": "Old frame-step timer; a negative value resets it to 20 and selects a directional step. Native cases verify the exact decrement boundary."
         }
       },
       {
-        "symbol": "L:kc.b(I)V#11",
+        "symbol": "L:qa.b(B)V#0",
         "before": null,
         "after": {
-          "symbol": "L:kc.b(I)V#11",
-          "originalName": "stackIn_90_0",
-          "to": "popupOriginY",
-          "evidence": "Final Y argument to spawnPointsPopup after the kind-three/kind-four branch merges."
+          "symbol": "L:qa.b(B)V#0",
+          "originalName": "fieldTemp$0",
+          "to": "frameStepTicksBeforeDecrement",
+          "evidence": "Snapshot of af.field_c before decrement; frame movement checks old value <0, not the new timer. Native matrix separates old -1, 0 and 1."
         }
       },
       {
-        "symbol": "L:kc.b(I)V#12",
+        "symbol": "L:qa.b(B)V#30",
         "before": null,
         "after": {
-          "symbol": "L:kc.b(I)V#12",
-          "originalName": "stackIn_90_1",
-          "to": "popupOriginX",
-          "evidence": "Final X argument to spawnPointsPopup after the kind-three/kind-four branch merges."
+          "symbol": "L:qa.b(B)V#30",
+          "originalName": "var1",
+          "to": "avatarTintFadeFactor",
+          "evidence": "Float (50-old tint timer) multiplied by the original float literal 0.0066999997943639755 before channel narrowing. Native tint fixtures preserve this exact arithmetic."
         }
       },
       {
-        "symbol": "L:kc.b(I)V#13",
+        "symbol": "L:qa.b(B)V#31",
         "before": null,
         "after": {
-          "symbol": "L:kc.b(I)V#13",
-          "originalName": "stackIn_90_2",
-          "to": "popupMethodGuard",
-          "evidence": "Final normal guard 117 supplied to spawnPointsPopup, preserving its retained alternate branch."
+          "symbol": "L:qa.b(B)V#31",
+          "originalName": "var1_int",
+          "to": "avatarFrameOffsetInSegment",
+          "evidence": "Current feedback frame minus the selected six-frame base; steering uses offsets 1, 3 and 5 as directional targets."
         }
       },
       {
-        "symbol": "L:kc.b(I)V#14",
+        "symbol": "L:qa.b(B)V#32",
         "before": null,
         "after": {
-          "symbol": "L:kc.b(I)V#14",
-          "originalName": "stackIn_90_3",
-          "to": "popupPoints",
-          "evidence": "Selects 100 for original kind three or four and 10 for the other kinds when an avatar contact is shocked; native routing oracles verify amount, multiplier and coordinates."
+          "symbol": "L:qa.b(B)V#32",
+          "originalName": "var2",
+          "to": "unusedClientControlSnapshot",
+          "evidence": "Retained Geoblox.field_C entry read; the recovered menu animation body does not use this local."
         }
       },
       {
-        "symbol": "L:kc.b(I)V#8",
+        "symbol": "L:wc.a(FB)V#0",
         "before": null,
         "after": {
-          "symbol": "L:kc.b(I)V#8",
-          "originalName": "stackIn_88_0",
-          "to": "popupOriginYInput",
-          "evidence": "Integer narrowing of the shocked entity Y position before selecting popup points; native routing checks original coordinates independently."
+          "symbol": "L:wc.a(FB)V#0",
+          "originalName": "var3",
+          "to": "sentinelDivisionGuard",
+          "evidence": "Retained division guard evaluated after copying the starting tint and before computing the palette index. Native invalid-guard fixtures preserve its exception and partial state."
         }
       },
       {
-        "symbol": "L:kc.b(I)V#9",
+        "symbol": "L:wc.a(FB)V#1",
         "before": null,
         "after": {
-          "symbol": "L:kc.b(I)V#9",
-          "originalName": "stackIn_88_1",
-          "to": "popupOriginXInput",
-          "evidence": "Integer narrowing of the shocked entity X position before selecting popup points; native routing checks original coordinates independently."
+          "symbol": "L:wc.a(FB)V#1",
+          "originalName": "var2",
+          "to": "normalizedRadiusSquared",
+          "evidence": "Maximum attached squared radius divided by 52900.0f before four-step tint palette rounding; source preserves float arithmetic."
         }
       },
       {
-        "symbol": "M:jc.a(IZ)V",
+        "symbol": "L:wc.a(FB)V#2",
         "before": null,
         "after": {
-          "symbol": "M:jc.a(IZ)V",
+          "symbol": "L:wc.a(FB)V#2",
+          "originalName": "var4",
+          "to": "tintPaletteIndex",
+          "evidence": "Integer narrowing of 0.5f+4.0f*normalizedRadiusSquared; native expected-index table covers all five targets, NaN and out-of-range failures."
+        }
+      },
+      {
+        "symbol": "M:f.o(I)V",
+        "before": null,
+        "after": {
+          "symbol": "M:f.o(I)V",
+          "originalName": "o",
+          "to": "advanceGameplayAvatarAnimation",
+          "evidence": "GameplaySession invokes this with blink period 600. Updates the same avatar frame/effect/tint state and also advances ending text when sessionEnding is true. Native animation fixtures verify sessionEnding=false; ending-message behavior is retained but outside the added probe."
+        }
+      },
+      {
+        "symbol": "M:qa.b(B)V",
+        "before": null,
+        "after": {
+          "symbol": "M:qa.b(B)V",
+          "originalName": "b",
+          "to": "advanceMenuAvatarAnimation",
+          "evidence": "GameScreen invokes this with guard 127. Steps feedback frames, decrements hold/effect/fade timers and advances the fixed 600-tick blink clock; independent native state and sequence oracles cover these operations."
+        }
+      },
+      {
+        "symbol": "M:wc.a(FB)V",
+        "before": null,
+        "after": {
+          "symbol": "M:wc.a(FB)V",
           "originalName": "a",
-          "to": "requestAvatarFeedback",
-          "evidence": "Requests an avatar feedback mode while retaining hold, frame, sprite-guard and sound behavior. Native matrix verifies 3024 combinations with table-based state and actual PCM sample identity/count oracles."
+          "to": "requestAvatarTintForRadius",
+          "evidence": "rh passes the maximum attached squared distance from board center. When no tint fade is held, snapshots the current color, computes palette channel deltas and starts 50 ticks. Native fixtures verify normal, held, NaN and failure/partial-write cases."
         }
       },
       {
-        "symbol": "P:jc.a(IZ)V#0",
+        "symbol": "P:f.o(I)V#0",
         "before": null,
         "after": {
-          "symbol": "P:jc.a(IZ)V#0",
+          "symbol": "P:f.o(I)V#0",
           "originalName": "param0",
-          "to": "feedbackRequestId",
-          "evidence": "Requests 0 through 5, or request 7 for mode six; native matrix includes -1 and 6 no-op requests."
+          "to": "blinkPeriodTicks",
+          "evidence": "Divisor of the incremented avatar blink clock; GameplaySession passes 600. It is a cycle period, not a method guard."
         }
       },
       {
-        "symbol": "P:jc.a(IZ)V#1",
+        "symbol": "P:qa.b(B)V#0",
         "before": null,
         "after": {
-          "symbol": "P:jc.a(IZ)V#1",
+          "symbol": "P:qa.b(B)V#0",
+          "originalName": "param0",
+          "to": "methodGuard",
+          "evidence": "Values below 72 leave animation state unchanged; actual menu caller passes 127. Native boundary fixtures check -128, 0, 71, 72 and 127."
+        }
+      },
+      {
+        "symbol": "P:wc.a(FB)V#0",
+        "before": null,
+        "after": {
+          "symbol": "P:wc.a(FB)V#0",
+          "originalName": "param0",
+          "to": "maxAttachedRadiusSquared",
+          "evidence": "Maximum attached squared distance from center (320,240) in rh; determines the tint palette position. Native requests use a fixed expected index table including NaN and invalid extremes."
+        }
+      },
+      {
+        "symbol": "P:wc.a(FB)V#1",
+        "before": null,
+        "after": {
+          "symbol": "P:wc.a(FB)V#1",
           "originalName": "param1",
-          "to": "clearSpriteGuard",
-          "evidence": "Clears jc.field_a only when the feedback hold is not positive; normal gameplay passes false. Native matrix checks both values and an actual sprite identity."
+          "to": "methodGuard",
+          "evidence": "Retains -71 / ((-59-guard)/47); normal attachment caller passes 14. Native cases cover 14, 0 and division by zero at -59 with the original partial tint snapshot."
         }
       }
     ],
@@ -6947,8 +7211,16 @@
         "sha256": "b2329f260c1d16820fd0e7ec027269d13b2c37c72d101930590d7f79e1583f54"
       },
       {
+        "file": "af.java",
+        "sha256": "35ce09ec25e4b7a8f45a7a2a99038d3afa596a1c28e1a979ebc0a14621cff82f"
+      },
+      {
         "file": "bh.java",
         "sha256": "b3332586ea45bbf96a0154ab01c1a9685c938817a81f9f71b285f1b9bd4d6e5c"
+      },
+      {
+        "file": "c.java",
+        "sha256": "a463bb63dacb34c9d81bde50758a1057ec66224ffb239e29ab8bca45be9b8b7b"
       },
       {
         "file": "cf.java",
@@ -6963,12 +7235,28 @@
         "sha256": "9680ab252d00cf9b5e5064f2f182765e8cbc9ef529f6c7ac68fa6ccd577f9b53"
       },
       {
+        "file": "f.java",
+        "sha256": "1ff720094c702eb71b475cdd1932fae938cfe91a915f1869f71da1cc18ae37bb"
+      },
+      {
+        "file": "fe.java",
+        "sha256": "f5a1b68fadbd043c4b9c2aaeee2a9db3ae738f1eb936486a2f48469ac0bd2b4e"
+      },
+      {
         "file": "gd.java",
         "sha256": "eaf8acd0eea5310d19313db8f09715dbed98804c415ad7a0cddae3042753bda8"
       },
       {
         "file": "gh.java",
         "sha256": "6e39ba682f51bb6e758c1e9cb4277a95a1fdedf007a1b8be571b618a04eb6b4d"
+      },
+      {
+        "file": "gi.java",
+        "sha256": "7a9474e0f8a969b5a7c625b7a11668ce1ca0103510dc10c8c162e014dbb54d66"
+      },
+      {
+        "file": "ha.java",
+        "sha256": "031b78b9a760f0b9d220a4a61df94fb3882feada792a1f97fa5fa3c6af137de8"
       },
       {
         "file": "hl.java",
@@ -6999,8 +7287,20 @@
         "sha256": "7a924a8135544204091692bc0f3758b8859fe62aca15c0d7408e2a6594d6853b"
       },
       {
+        "file": "jf.java",
+        "sha256": "84d3586fed7c25a3675ae56c0e6ca3628be88c65f483264b01607169d9cd9c32"
+      },
+      {
         "file": "jg.java",
         "sha256": "3afa07c1514b08078c516729b845c95a9953218e1a2af052c2545953a6b73de9"
+      },
+      {
+        "file": "jj.java",
+        "sha256": "cc71ca362e3682ca6d45c884150ff490b2f1cd6005e1558ba2e9b3b5d46c6976"
+      },
+      {
+        "file": "jk.java",
+        "sha256": "47c1616d37f716d582a5610b6c37f12b6c51198d9ffcbc5f183801c9ba04e46e"
       },
       {
         "file": "kc.java",
@@ -7017,6 +7317,14 @@
       {
         "file": "le.java",
         "sha256": "188c241f0cdacc051c8da5406c43b482c7059e8448ae2504831d0735a27d2eec"
+      },
+      {
+        "file": "md.java",
+        "sha256": "57bd9d85d3b0038fcd48d8f8e68ae71f2b52c69bc2f08b3966457f2d0d49d697"
+      },
+      {
+        "file": "me.java",
+        "sha256": "0c6399d8e4a15004d2086e668d83fcee38e53c20c0c711c3181c310bd983a6b3"
       },
       {
         "file": "oc.java",
@@ -7039,6 +7347,10 @@
         "sha256": "6c4587a7139f95211230b9b290d075505964173bfec0bd8e5611b1bd7192abb5"
       },
       {
+        "file": "r.java",
+        "sha256": "64d4ff7aba9dcd43fc3ba28d0abe0d70e587919533872eda4cba5437099224ed"
+      },
+      {
         "file": "ra.java",
         "sha256": "05ba852d4358c07df61605550da0547eee2ff607a026f5ffbde3f66cc4c48fc2"
       },
@@ -7055,6 +7367,10 @@
         "sha256": "d02dbb0752b0e04a34daf65cf4bacb0f9c851351774b2e34a10f986b4137e102"
       },
       {
+        "file": "rj.java",
+        "sha256": "81e1ebf869d4ef8ade2e6597f4e06ee56f9a3863f319ee0cd56733cd9348ec21"
+      },
+      {
         "file": "td.java",
         "sha256": "62ff2d322af3b014b52b9d86ccb89ac7bb503a35ff74b2ab83ae5a9bacdce71c"
       },
@@ -7063,8 +7379,16 @@
         "sha256": "2181bbdaa65e02e0a1ac9431706b8bc855ce22f85a3a18a4ab3c34f1d0308342"
       },
       {
+        "file": "uf.java",
+        "sha256": "f3ef04d1626117df773dec44b48be150b9d0d6e58eccc66152df22f840f4273a"
+      },
+      {
         "file": "ug.java",
         "sha256": "50bf02ecfe05bb94c8d242d9f14c33fc473913a26e67ab69158c31c703f67ac5"
+      },
+      {
+        "file": "uk.java",
+        "sha256": "ed8a49eb24279a989733d98c9f10206995b6a18a34f14c632f5e705063d34297"
       },
       {
         "file": "ul.java",
@@ -7081,6 +7405,10 @@
       {
         "file": "wb.java",
         "sha256": "21b1afcf5ea02debe36803cbde0f2b6642142818654e6830f7d3c98fe1e979d9"
+      },
+      {
+        "file": "wc.java",
+        "sha256": "9bc40be0b886a925739db64c4d25a09dad793b8f18966f198fed5574a8f391cd"
       },
       {
         "file": "wd.java",
@@ -7107,9 +7435,9 @@
       },
       {
         "file": "tests/test-geoblox-gameplay.mjs",
-        "sha256": "184b7a4e19fc389a1db5f63a65704d93dabef4fce0a5e88b0032fecfd0394eb2",
-        "nativeOutputSha256": "2ec59542cf3499de3d410ce1da73111ccb743d77fde48ca8c6bf316caed9a627",
-        "scenarios": 23035
+        "sha256": "340d1aada6cc6f95c564830bbe4ced27eefd0bd224f1356fa757e2e25e4c05bc",
+        "nativeOutputSha256": "42be694a3c2f9a7a80ec7e0ec910bd312bdba5bc38f30293eb00faddcb17ac79",
+        "scenarios": 52164
       }
     ],
     "textResources": {
@@ -9281,7 +9609,7 @@
       "sourceDeclarations": 21185,
       "bindingsCompared": 154117,
       "overrideRelationships": 388,
-      "identifierEdits": 17916,
+      "identifierEdits": 18626,
       "dictionaryRestorationFiles": 303,
       "wholeGameEquivalenceVerified": false,
       "nativeMatchingScenarios": 708,
@@ -9293,6 +9621,7 @@
         "Text-writer PCM side effects for guard <=23 are not tested.",
         "Contact/conversion probes use one-pixel sprites and controlled palettes for kinds 0, 1 and 2. Conversion graphs control adjacency and initial counters; mask collision producers, real asset loading and full gameplay remain unverified.",
         "Reconciliation/routing fixtures use real minimal sprites, controlled display/audio buffers and constructor-free holders. Routing checks use isolated entities or one controlled reciprocal edge. Real asset loading, sound-device playback and new unlock delivery remain unverified.",
+        "Avatar animation fixtures independently verify menu and gameplay timer/frame/tint state with sessionEnding=false. Gameplay ending-message selection, rendering with real assets and device audio remain outside the added animation checks.",
         "Whole-game equivalence and FPS, heap and phone targets are not established."
       ],
       "checks": {
@@ -9303,7 +9632,7 @@
         "fullReproductionCheck": true,
         "dictionaryReversalByteExact": true
       },
-      "nativeGameplayScenarios": 23035,
+      "nativeGameplayScenarios": 52164,
       "nativeContactScenarios": 144,
       "nativeNeighborRemovalScenarios": 32,
       "nativeForcedNeighborhoodDetachScenarios": 2,
@@ -9314,7 +9643,11 @@
       "nativeReconciliationOracleScenarios": 8192,
       "nativeAvatarFeedbackScenarios": 3024,
       "nativeEntityRoutingScenarios": 1080,
-      "nativeEntityRoutingOracleScenarios": 540
+      "nativeEntityRoutingOracleScenarios": 540,
+      "nativeAvatarAnimationScenarios": 28805,
+      "nativeAvatarAnimationSequences": 6,
+      "nativeAvatarAnimationSequenceTicks": 4320,
+      "nativeAvatarTintRequestScenarios": 324
     }
   }
 }

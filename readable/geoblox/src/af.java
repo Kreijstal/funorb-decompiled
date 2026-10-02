@@ -5,7 +5,7 @@ final class af {
     static sk field_b;
     static Sprite field_a;
     static sk field_d;
-    static int field_c;
+    static int avatarFrameStepTicks;
     private static String field_z;
 
     public static void a(byte param0) {
@@ -19,7 +19,7 @@ final class af {
 
     static {
         field_z = "af.A(";
-        field_c = 0;
+        avatarFrameStepTicks = 0;
         field_a = new Sprite(320, 240);
     }
 }

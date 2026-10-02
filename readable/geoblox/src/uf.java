@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class uf implements Runnable {
-    static int[] field_h;
+    static int[] avatarTintPalette;
     private SecondaryDeque field_k;
     static int field_a;
     static al field_l;
@@ -18,7 +18,7 @@ final class uf implements Runnable {
     public static void a(int param0) {
         if (param0 < -35) {
             field_e = null;
-            field_h = null;
+            avatarTintPalette = null;
             field_f = null;
             createPasswordContainsEmailAlertText = null;
             field_l = null;
@@ -26,7 +26,7 @@ final class uf implements Runnable {
         }
         field_e = (ob) null;
         field_e = null;
-        field_h = null;
+        avatarTintPalette = null;
         field_f = null;
         createPasswordContainsEmailAlertText = null;
         field_l = null;
@@ -442,7 +442,7 @@ final class uf implements Runnable {
     }
 
     static {
-        field_h = new int[]{5167632, 12183066, 16031008, 15087386, 15079962};
+        avatarTintPalette = new int[]{5167632, 12183066, 16031008, 15087386, 15079962};
         createPasswordContainsEmailAlertText = "This password contains your email address, and would be easy to guess";
         avatarFeedbackFrameIndex = 0;
         field_l = new al();

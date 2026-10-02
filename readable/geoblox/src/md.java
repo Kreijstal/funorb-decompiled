@@ -7,7 +7,7 @@ final class md {
     static String[] mustLogin4Texts;
     static int[] field_e;
     static IntrusiveDeque activeScorePopups;
-    static float field_b;
+    static float avatarTintRedDelta;
     static int field_c;
 
     final static String a(byte param0, long param1) {

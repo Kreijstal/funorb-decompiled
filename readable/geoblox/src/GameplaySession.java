@@ -1128,7 +1128,7 @@ final class GameplaySession {
                 sk.checkBoundaryLossAndStartCascade(param0 ^ 1578896190);
               }
               cf.advanceScorePopups((byte) 27);
-              f.o(600);
+              f.advanceGameplayAvatarAnimation(600);
               if (this.tutorialMode) {
                 this.advanceTutorialStep(109);
               }
@@ -1149,7 +1149,7 @@ final class GameplaySession {
           }
           fc.a(19);
           cf.advanceScorePopups((byte) 24);
-          f.o(600);
+          f.advanceGameplayAvatarAnimation(600);
           this.sceneAnimationTick = this.sceneAnimationTick + 1;
           this.boardRasterDirty = true;
         }
@@ -1997,7 +1997,7 @@ final class GameplaySession {
           ld.spawnPointsPopup(310, 320, 90, this.resultBonusPoints);
         }
         cf.advanceScorePopups((byte) 33);
-        f.o(600);
+        f.advanceGameplayAvatarAnimation(600);
         if (methodGuard != 10) {
           GameplaySession.i(-70);
         }
@@ -2244,8 +2244,8 @@ final class GameplaySession {
           this.sessionEnding = false;
           this.addScore((byte) 127, 0);
           if (da.a(0, 111)) {
-            uf.field_h[0] = 14788623;
-            uf.field_h[1] = 15439657;
+            uf.avatarTintPalette[0] = 14788623;
+            uf.avatarTintPalette[1] = 15439657;
           }
           td.a((byte) -93);
           GameplayEntity.h(0);

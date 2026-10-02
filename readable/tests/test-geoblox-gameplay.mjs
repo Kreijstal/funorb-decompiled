@@ -10,7 +10,7 @@ import {captureProcess} from '../tools/lib/capture-process.mjs';
 const root = fileURLToPath(new URL('../', import.meta.url));
 const nativeInput = process.argv[2] && path.resolve(process.argv[2]);
 if (!nativeInput) throw new Error('Usage: node readable/tests/test-geoblox-gameplay.mjs NATIVE_CLASSES');
-const expectedNativeSha256 = '2ec59542cf3499de3d410ce1da73111ccb743d77fde48ca8c6bf316caed9a627';
+const expectedNativeSha256 = '42be694a3c2f9a7a80ec7e0ec910bd312bdba5bc38f30293eb00faddcb17ac79';
 const rules = JSON.parse(fs.readFileSync(path.join(root, 'geoblox-rules.json')));
 const aliases = new Map(rules.renames.map(rule => [rule.symbol, rule.to]));
 const temporary = fs.mkdtempSync(path.join(os.tmpdir(), 'geoblox-gameplay-'));
@@ -414,6 +414,143 @@ try {
           System.out.println("feedback:"+guard+":"+base+":"+request+":"+hold+":"+clear+":"+frame+":"+wantedBase+":"+wantedHold+":"+wantedMode+":"+wantedEffect+":"+wantedFrame+":"+wantedSound);cases++;
         }
       }
+      // Compact state model, independent of the recovered duplicated branches.
+      // frame, step timer, hold, blink clock, shock timer/frame, tint timer/color.
+      static int[] animationState() {
+        return new int[]{${global('uf','field_b','I')},${global('af','field_c','I')},
+          ${global('pa','field_g','I')},${global('gi','field_e','I')},${global('wa','field_a','I')},
+          ${global('ha','field_g','I')},${global('jf','field_j','I')},${global('rj','field_c','I')}};
+      }
+      static void animationState(int[] state) {
+        ${global('uf','field_b','I')}=state[0];${global('af','field_c','I')}=state[1];
+        ${global('pa','field_g','I')}=state[2];${global('gi','field_e','I')}=state[3];
+        ${global('wa','field_a','I')}=state[4];${global('ha','field_g','I')}=state[5];
+        ${global('jf','field_j','I')}=state[6];${global('rj','field_c','I')}=state[7];
+      }
+      static int[] animationOracle(int[] old,int base,int direction,boolean enabled,int period,
+          int color,float red,float green,float blue) {
+        int[] next=old.clone();if(!enabled)return next;
+        next[1]--;
+        if(old[1]<0) {
+          next[1]=20;
+          int offset=old[0]-base;
+          if(offset==0)next[0]=base+3;
+          else if(direction==0)next[0]+=Integer.compare(3,offset);
+          else if(direction==1&&offset>1)next[0]--;
+          else if(direction==2&&offset<5)next[0]++;
+        }
+        next[2]--;next[3]++;
+        if(next[3]%period<30)next[0]=base;
+        next[4]--;if(old[4]>0)next[5]=next[4]%15%2;
+        next[6]--;
+        if(old[6]>0) {
+          float factor=(float)(50-old[6])*0.0066999997943639755f;
+          next[7]=color+((int)(red*factor)<<16)+((int)(green*factor)<<8)+(int)(blue*factor);
+        }
+        return next;
+      }
+      static void advanceAnimation(boolean gameplay,byte guard,int period) {
+        if(gameplay)${call('f','o(I)V')}(period);
+        else ${call('qa','b(B)V')}(guard);
+      }
+      static void animation() throws Exception {
+        ${global('el','field_o','Lgh;')}=session();
+        ${global('el','field_o','Lgh;')}.${field('gh','field_x','Z')}=false;
+        int matrix=0;
+        for(boolean gameplay:new boolean[]{false,true})for(int guard=0;guard<2;guard++)
+        for(int base:new int[]{0,18,36})for(int direction:new int[]{-1,0,1,2,3})
+        for(int offset:new int[]{-1,0,1,2,3,4,5,6,8})for(int delay:new int[]{-2,-1,0,1,20})
+        for(int clock:new int[]{-1,0,28,29,30,598,599,600}) {
+          ${global('Geoblox','field_C','I')}=guard;${global('ka','field_h','I')}=base;
+          ${global('jk','field_d','I')}=direction;
+          int[] initial={base+offset,delay,1,clock,2,7,25,0x123456};animationState(initial);
+          ${global('r','field_ub','I')}=0x654321;${global('md','field_b','F')}=-91.75f;
+          ${global('fe','field_c','F')}=110.5f;${global('uk','field_j','F')}=-0.75f;
+          advanceAnimation(gameplay,(byte)127,600);
+          int[] wanted=animationOracle(initial,base,direction,true,600,0x654321,-91.75f,110.5f,-0.75f);
+          check(java.util.Arrays.equals(animationState(),wanted),"animation frame/direction/timer oracle");
+          System.out.println("animate:"+gameplay+":"+guard+":"+base+":"+direction+":"+offset+":"+delay+":"+clock+":"+java.util.Arrays.toString(animationState()));
+          cases++;matrix++;
+        }
+        check(matrix==21600,"animation matrix count");
+        int effects=0;
+        for(boolean gameplay:new boolean[]{false,true})for(int guard=0;guard<2;guard++)
+        for(int hold:new int[]{-1,0,1,50,110})for(int shock:new int[]{-1,0,1,2,15,50})
+        for(int tint:new int[]{-1,0,1,2,49,50})for(int colors=0;colors<4;colors++) {
+          ${global('Geoblox','field_C','I')}=guard;${global('ka','field_h','I')}=18;
+          ${global('jk','field_d','I')}=2;
+          float red=colors==0?0:colors==1?255:colors==2?-255:128.75f;
+          float green=colors==0?0:colors==1?-128:colors==2?128:-255.5f;
+          float blue=colors==0?0:colors==1?32:colors==2?-32:0.75f;
+          int[] initial={22,-1,hold,50,shock,9,tint,0x13579b};animationState(initial);
+          ${global('r','field_ub','I')}=0xabcdef;${global('md','field_b','F')}=red;
+          ${global('fe','field_c','F')}=green;${global('uk','field_j','F')}=blue;
+          advanceAnimation(gameplay,(byte)72,600);
+          check(java.util.Arrays.equals(animationState(),animationOracle(initial,18,2,true,600,0xabcdef,red,green,blue)),"animation effects/tint oracle");
+          System.out.println("animate-effects:"+gameplay+":"+guard+":"+hold+":"+shock+":"+tint+":"+colors+":"+java.util.Arrays.toString(animationState()));
+          cases++;effects++;
+        }
+        check(effects==2880,"animation effects count");
+        for(byte methodGuard:new byte[]{-128,0,71,72,127}) {
+          ${global('ka','field_h','I')}=6;${global('jk','field_d','I')}=1;
+          int[] initial={11,-1,5,599,1,8,1,0};animationState(initial);
+          ${global('r','field_ub','I')}=0xabcdef;${global('md','field_b','F')}=1;
+          ${global('fe','field_c','F')}=2;${global('uk','field_j','F')}=3;
+          advanceAnimation(false,methodGuard,600);
+          check(java.util.Arrays.equals(animationState(),animationOracle(initial,6,1,methodGuard>=72,600,0xabcdef,1,2,3)),"menu animation guard oracle");
+          System.out.println("animate-guard:"+methodGuard+":"+java.util.Arrays.toString(animationState()));cases++;
+        }
+        // Exercise expiration and multiple blink/frame cycles, not only isolated calls.
+        for(boolean gameplay:new boolean[]{false,true})for(int direction=0;direction<3;direction++) {
+          ${global('ka','field_h','I')}=12;${global('jk','field_d','I')}=direction;
+          ${global('r','field_ub','I')}=0x789abc;${global('md','field_b','F')}=-32;
+          ${global('fe','field_c','F')}=75;${global('uk','field_j','F')}=-110;
+          int[] wanted={12,0,110,550,50,0,50,0x789abc};animationState(wanted);
+          for(int tick=0;tick<720;tick++) {
+            wanted=animationOracle(wanted,12,direction,true,600,0x789abc,-32,75,-110);
+            advanceAnimation(gameplay,(byte)127,600);
+            check(java.util.Arrays.equals(animationState(),wanted),"animation sequence tick oracle");
+            System.out.println("animate-sequence:"+gameplay+":"+direction+":"+tick+":"+java.util.Arrays.toString(animationState()));cases++;
+          }
+        }
+      }
+      static int[] tintState() {
+        return new int[]{${global('r','field_ub','I')},${global('jf','field_j','I')},
+          Float.floatToIntBits(${global('md','field_b','F')}),Float.floatToIntBits(${global('fe','field_c','F')}),
+          Float.floatToIntBits(${global('uk','field_j','F')})};
+      }
+      static void tintRequests() {
+        int[] palette={0x123456,0xabcdef,0x020304,0xfefdfc,0x654321};
+        ${global('uf','field_h','[I')}=palette;
+        float[] radii={0,13225,26450,39675,52900,60000,-100000,Float.NaN,Float.POSITIVE_INFINITY};
+        int[] indices={0,1,2,3,4,5,-7,0,Integer.MAX_VALUE};
+        int count=0;
+        for(int color:new int[]{0x123456,0xffffff,0x80000000})for(int remaining:new int[]{-1,0,1,50})
+        for(int radius=0;radius<radii.length;radius++)for(byte guard:new byte[]{14,0,-59}) {
+          ${global('rj','field_c','I')}=color;${global('r','field_ub','I')}=-22;
+          ${global('jf','field_j','I')}=remaining;${global('md','field_b','F')}=1.5f;
+          ${global('fe','field_c','F')}=-2.5f;${global('uk','field_j','F')}=3.5f;
+          int[] wanted=tintState();String outcome="ok",expectedOutcome="ok";
+          if(remaining<=0) {
+            wanted[0]=color;
+            int index=indices[radius];
+            if(guard==-59)expectedOutcome="ArithmeticException";
+            else if(index<0||index>=palette.length)expectedOutcome="ArrayIndexOutOfBoundsException";
+            else {
+              wanted[1]=50;
+              wanted[2]=Float.floatToIntBits((float)((palette[index]>>>16)-(color>>>16&255)));
+              wanted[3]=Float.floatToIntBits((float)((palette[index]>>>8&255)-(color>>>8&255)));
+              wanted[4]=Float.floatToIntBits((float)((palette[index]&255)-(color&255)));
+            }
+          }
+          try{${call('wc','a(FB)V')}(radii[radius],guard);}catch(RuntimeException failure){outcome=failure.getClass().getSimpleName();}
+          check(outcome.equals(expectedOutcome),"tint request failure/bypass oracle");
+          check(java.util.Arrays.equals(tintState(),wanted),"tint request delta/partial-write oracle");
+          check(${global('rj','field_c','I')}==color,"tint request preserves current color");
+          System.out.println("tint-request:"+color+":"+remaining+":"+radius+":"+guard+":"+outcome+":"+java.util.Arrays.toString(tintState()));cases++;count++;
+        }
+        check(count==324,"tint request matrix count");
+      }
       static void routing() throws Exception {
         ${raster} sprite=new ${raster}(1,1);sprite.${field('dm','field_v','[I')}[0]=0x123456;
         for(int c=0;c<2;c++)for(int v=0;v<2;v++)${global('ke','field_a','[[[Ldm;')}[0][c][v]=sprite;
@@ -597,6 +734,8 @@ try {
         conversions();
         reconciliation();
         feedback();
+        animation();
+        tintRequests();
         routing();
         System.out.println("complete:"+cases+":conversion-failures:"+conversionFailures);
       }

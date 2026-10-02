@@ -6,7 +6,7 @@ import java.util.*;
 
 final class gi implements Iterable {
     IntrusiveNode[] field_a;
-    static int field_e;
+    static int avatarBlinkClockTicks;
     static gk field_d;
     private IntrusiveNode field_f;
     int field_c;
@@ -411,7 +411,7 @@ final class gi implements Iterable {
     }
 
     static {
-        field_e = 0;
+        avatarBlinkClockTicks = 0;
         field_d = new gk();
         field_b = new int[8192];
     }

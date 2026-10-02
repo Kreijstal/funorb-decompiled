@@ -6,7 +6,7 @@ final class r extends f implements pl {
     private boolean field_vb;
     static String field_sb;
     private boolean field_wb;
-    static int field_ub;
+    static int avatarTintStartColor;
 
     public static void r(int param0) {
         int var1 = -70 / ((param0 - 27) / 48);

@@ -37,7 +37,7 @@ final class ScorePopup extends IntrusiveNode {
     }
 
     final static void a(byte param0) {
-        jk.field_d = 1;
+        jk.avatarSteeringDirectionId = 1;
         if (param0 != 38) {
             ScorePopup.c((byte) -26);
         }

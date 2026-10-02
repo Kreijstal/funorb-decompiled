@@ -4,7 +4,7 @@
 final class uk extends TextInputValidator {
     static int[] field_i;
     private boolean field_n;
-    static float field_j;
+    static float avatarTintBlueDelta;
     static int field_o;
     static String field_p;
     static Sprite field_m;
@@ -14,7 +14,7 @@ final class uk extends TextInputValidator {
     final void c(byte param0) {
         this.field_k = null;
         if (param0 > -78) {
-            field_j = -0.8683637976646423f;
+            avatarTintBlueDelta = -0.8683637976646423f;
         }
     }
 
@@ -323,7 +323,7 @@ final class uk extends TextInputValidator {
                 }
               }
               if (guard != 422) {
-                field_j = -0.46423107385635376f;
+                avatarTintBlueDelta = -0.46423107385635376f;
               }
               if (this.field_n) {
                 stackIn_16_0 = ph.createUsernameAvailableText;

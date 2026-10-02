@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class ha {
-    static int field_g;
+    static int avatarShockFrameIndex;
     int field_e;
     int field_b;
     int field_a;
@@ -165,6 +165,6 @@ abstract class ha {
     }
 
     static {
-        field_g = 0;
+        avatarShockFrameIndex = 0;
     }
 }

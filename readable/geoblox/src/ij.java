@@ -212,10 +212,10 @@ final class ij extends oe implements pl {
             var1 = el.gameplaySession.boardMaskOffsetX - 2;
             var2 = el.gameplaySession.boardMaskOffsetY - 2;
             if (!(wa.avatarShockEffectTicks <= 0)) {
-                vg.field_f[ha.field_g].b(320 - (vg.field_f[ha.field_g].field_s >> -1387017855), -(vg.field_f[ha.field_g].field_o >> 10164129) + 240);
+                vg.field_f[ha.avatarShockFrameIndex].b(320 - (vg.field_f[ha.avatarShockFrameIndex].field_s >> -1387017855), -(vg.field_f[ha.avatarShockFrameIndex].field_o >> 10164129) + 240);
             }
-            fc.field_b[uf.avatarFeedbackFrameIndex].b(var1 + 320, 240 + var2, rj.field_c);
-            vh.field_H[nd.avatarFeedbackModeId].b(320 + var1, 240 + var2, rj.field_c);
+            fc.field_b[uf.avatarFeedbackFrameIndex].b(var1 + 320, 240 + var2, rj.avatarTintColor);
+            vh.field_H[nd.avatarFeedbackModeId].b(320 + var1, 240 + var2, rj.avatarTintColor);
             if (param0 >= 3) {
                 return;
             }
@@ -226,10 +226,10 @@ final class ij extends oe implements pl {
             var1 = el.gameplaySession.boardMaskOffsetX - 2;
             var2 = el.gameplaySession.boardMaskOffsetY - 2;
             if (!(wa.avatarShockEffectTicks <= 0)) {
-                vg.field_f[ha.field_g].b(320 - (vg.field_f[ha.field_g].field_s >> -1387017855), -(vg.field_f[ha.field_g].field_o >> 10164129) + 240);
+                vg.field_f[ha.avatarShockFrameIndex].b(320 - (vg.field_f[ha.avatarShockFrameIndex].field_s >> -1387017855), -(vg.field_f[ha.avatarShockFrameIndex].field_o >> 10164129) + 240);
             }
-            fc.field_b[uf.avatarFeedbackFrameIndex].b(var1 + 320, 240 + var2, rj.field_c);
-            vh.field_H[nd.avatarFeedbackModeId].b(320 + var1, 240 + var2, rj.field_c);
+            fc.field_b[uf.avatarFeedbackFrameIndex].b(var1 + 320, 240 + var2, rj.avatarTintColor);
+            vh.field_H[nd.avatarFeedbackModeId].b(320 + var1, 240 + var2, rj.avatarTintColor);
             if (param0 >= 3) {
                 return;
             }
