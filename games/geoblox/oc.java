@@ -150,6 +150,7 @@ final class oc implements dh {
             Throwable var2_ref = null;
             Long var3 = null;
             Object[] var4 = null;
+            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             try {
               var1_ref_java_lang_reflect_Method = Runtime.class.getMethod("maxMemory", new Class[]{});
@@ -159,14 +160,16 @@ final class oc implements dh {
                   var4 = (Object[]) null;
                   var3 = (Long) (var1_ref_java_lang_reflect_Method.invoke((Object) (var2), (Object[]) null));
                   li.field_c = 1 + (int)(var3.longValue() / 1048576L);
+                  decompiledRegionSelector0 = 0;
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2_ref = decompiledCaughtException;
+                  decompiledRegionSelector0 = 1;
+                }
+                if (decompiledRegionSelector0 == 0) {
                   var1 = -93 / ((-13 - param0) / 47);
                   return;
                 }
-                var1 = -93 / ((-13 - param0) / 47);
-                return;
               } else {
                 var1 = -93 / ((-13 - param0) / 47);
                 return;
@@ -177,6 +180,7 @@ final class oc implements dh {
               var1 = -93 / ((-13 - param0) / 47);
               return;
             }
+            var1 = -93 / ((-13 - param0) / 47);
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
