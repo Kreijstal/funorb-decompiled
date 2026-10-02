@@ -39,11 +39,12 @@ try {
   captureProcess('git', ['-C', repository, 'archive', '--format=tar', '--output=' + archive,
     sourcePin.commit, sourcePin.subdirectory]);
   captureProcess('tar', ['-xf', archive, '-C', temporary]);
+  let migration;
   if (sourcePin.namingMigration) {
     const migrationBytes = fs.readFileSync(path.join(root, sourcePin.namingMigration));
     if (digest(migrationBytes) !== rules.namingMigrationSha256)
       throw new Error('Reviewed naming migration differs from the rules');
-    const migration = JSON.parse(migrationBytes);
+    migration = JSON.parse(migrationBytes);
     let previous;
     if (migration.previousRulesFile) {
       if (!/^rules\/geoblox-v\d+\.json$/.test(migration.previousRulesFile))
@@ -73,9 +74,20 @@ try {
     if (digest(additionsBytes) !== rules.namingAdditionsSha256)
       throw new Error('Reviewed naming additions differ from the rules');
     const additions = JSON.parse(additionsBytes);
+    const updates = migration?.resultEvidenceUpdates ?? [];
+    if (!Array.isArray(updates) || new Set(updates.map(item => item.file)).size !== updates.length)
+      throw new Error('Invalid reviewed result evidence updates');
+    for (const update of updates) {
+      const original = additions.sourceEvidence?.find(item => item.file === update.file);
+      const changed = migration.sourceEvidence?.find(item => item.file === update.file);
+      if (!original || !changed || update.previousSha256 !== original.sha256 ||
+          update.previousSha256 !== changed.previousSha256 || update.sha256 !== changed.sha256)
+        throw new Error('Invalid reviewed result evidence update');
+    }
     for (const item of additions.sourceEvidence || []) {
+      const expectedSha256 = updates.find(update => update.file === item.file)?.sha256 ?? item.sha256;
       if (!/^[A-Za-z_$][A-Za-z0-9_$]*\.java$/.test(item.file) ||
-          digest(fs.readFileSync(path.join(temporary, sourcePin.subdirectory, item.file))) !== item.sha256)
+          digest(fs.readFileSync(path.join(temporary, sourcePin.subdirectory, item.file))) !== expectedSha256)
         throw new Error(`Reviewed result-helper source differs: ${item.file}`);
     }
   }

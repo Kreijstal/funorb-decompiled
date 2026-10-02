@@ -1,0 +1,121 @@
+{
+  "schema": 1,
+  "version": 20,
+  "previousRulesFile": "rules/geoblox-v19.json",
+  "previousRulesSha256": "f04e2745fb33603bd9501cddeb829eb863da244c6233f86ba780569eb91df37b",
+  "previousInputTreeSha256": "150473b4ea210996502edd77710c501590753e2b4a563df34cbea6f772a522f7",
+  "inputTreeSha256": "07610c2d655bf96e59584f07be867c62e47cf3b3c484063504d9958443e89da2",
+  "sourceCommit": "7d0e06122fc537ee96a9f56e633ac5356ba325d8",
+  "javaToolsCommit": "e6dd72c89fa7f51cc34cd78d08cf5c6227799126",
+  "decompilerSourceArchiveSha256": "6337fa96b5d83ef24ee2bf20c7e48ea5e0844482f6262e774d73fba6101d4912",
+  "identityChanges": [],
+  "textEvidenceMigration": "rules/geoblox-v15-migration.json",
+  "textEvidenceMigrationSha256": "135141cf27a4787b6ee7489a77948a4c6b72af10e7e8f325b728eb5bcf1b6b8e",
+  "resultEvidenceManifest": "rules/geoblox-v18-results.json",
+  "resultEvidenceManifestSha256": "eeba987f6bb595d5a85fe68e80228b3c67fabf49ae7b1f36a5946878cb0edd7b",
+  "sourceEvidence": [
+    {
+      "file": "ab.java",
+      "previousSha256": "0f0494535841a620576167e3fcee995ad6eaf3353671cd5c9833e08e6733e996",
+      "sha256": "b2329f260c1d16820fd0e7ec027269d13b2c37c72d101930590d7f79e1583f54"
+    },
+    {
+      "file": "cf.java",
+      "previousSha256": "e18d973bcdccdb7b4dfdfe87434e0b760b945a6a4a5b95eea4e6d7c3d021d13e",
+      "sha256": "6bea34d6fb1e51f5fbf7b8960507fff21b6b33994dfd2d070903b0231b65d83c"
+    },
+    {
+      "file": "ch.java",
+      "previousSha256": "ed7a0495399ab4f7ee06cdf315c79b651b1a86fe97f4bdc254e6376927fcb8ed",
+      "sha256": "606e7d77f1f9056d35c7b41d4671c902d872c23e6def8f2674fd9e60c5b52094"
+    },
+    {
+      "file": "hl.java",
+      "previousSha256": "ee8ae8c428ca370f5897c8d7ed0720195daa957b58d3f1f321f55eed23cfc4ec",
+      "sha256": "8db72d4e73bc86e77c883f5cd0960088f194b102b152e24760135ba0fe9dcc03"
+    },
+    {
+      "file": "jg.java",
+      "previousSha256": "d61b8562d085fd05395e7bbc55a684fd702da589c554cbc9861a93a83f1705d7",
+      "sha256": "3afa07c1514b08078c516729b845c95a9953218e1a2af052c2545953a6b73de9"
+    },
+    {
+      "file": "oc.java",
+      "previousSha256": "d15ec0465ce5dd2f261dfe3aa258f851aa8c9d3668af3d96f2345b220ad1f392",
+      "sha256": "6a2ab46b92a7db587c9baa7e1770a8e921e20580d1d1d1949169a9512a61adde"
+    },
+    {
+      "file": "qb.java",
+      "previousSha256": "fcaf6b040be41b3e5c48d3756c321e3e300b2b134121cdc30d488b6d1fc7ecea",
+      "sha256": "14f5e289c3b6b857a3a2259553ac9bfb539645f7bb1a14349af2f97e3dbe6615"
+    },
+    {
+      "file": "rh.java",
+      "previousSha256": "cda3bf42090139497a83f7018b7e0ac288bea9ded667a209e432c1d68dca85b2",
+      "sha256": "145ea45adf9bb63403fe149ced81f949af6490abc4b71d619db144f41680fdb7"
+    },
+    {
+      "file": "ue.java",
+      "previousSha256": "bd3d8bc69f32b2dcfdb4f110d540ffb02f4520857ce519eebf324df2ed0d391c",
+      "sha256": "2181bbdaa65e02e0a1ac9431706b8bc855ce22f85a3a18a4ab3c34f1d0308342"
+    },
+    {
+      "file": "vd.java",
+      "previousSha256": "0ecd2a66f94e39b92f255dee8aa3b4442bb37cb9ad33db229b3b0cea5f302f5b",
+      "sha256": "69a56721c468e33c72114c8ad46b83a84ce456f90d59d06c6d31ae18a9f46c8a"
+    }
+  ],
+  "resultEvidenceUpdates": [
+    {
+      "file": "jg.java",
+      "previousSha256": "d61b8562d085fd05395e7bbc55a684fd702da589c554cbc9861a93a83f1705d7",
+      "sha256": "3afa07c1514b08078c516729b845c95a9953218e1a2af052c2545953a6b73de9"
+    }
+  ],
+  "declarationAudits": {
+    "previousSha256": "0c2d6371f276ad172b7d18b1113ce4a23cc28c7221deeddd9ed65a903ed9f926",
+    "currentSha256": "0a93d7cd27c972d5d701394b8e9072e76aaf4b14f7356547bef2de6af44caabf",
+    "tool": "readable/tools/lib/ReadableJava.java"
+  },
+  "addedDeclarations": [
+    {
+      "symbol": "M:ch.$cfr$lcmp(JJ)I",
+      "originalName": "$cfr$lcmp"
+    },
+    {
+      "symbol": "P:ch.$cfr$lcmp(JJ)I#0",
+      "originalName": "left"
+    },
+    {
+      "symbol": "P:ch.$cfr$lcmp(JJ)I#1",
+      "originalName": "right"
+    }
+  ],
+  "review": {
+    "rulesRetained": 972,
+    "originalSpellingGuardsMatched": 972,
+    "namedLocals": 255,
+    "namedLocalDeclarationIdentitiesUnchanged": 255,
+    "namedLocalDeclarationIdentitiesMoved": 0,
+    "sourceDeclarationsBefore": 21182,
+    "sourceDeclarationsAfter": 21185,
+    "sourceDeclarationIdentitiesUnchanged": 21182,
+    "overrideRelationshipsUnchanged": 388,
+    "bindingComparisons": 154117,
+    "changedJavaFiles": [
+      "ab.java",
+      "cf.java",
+      "ch.java",
+      "hl.java",
+      "jg.java",
+      "oc.java",
+      "qb.java",
+      "rh.java",
+      "ue.java",
+      "vd.java"
+    ],
+    "sourceBodyEditedByHand": false,
+    "bytecodeUnchanged": true,
+    "evidence": "Ten files change through exact floating comparison/negation emission and one single-evaluation long comparison helper. All old declarations and names retain their identity and spelling; only the helper and its two parameters are added. All overrides are unchanged. Result evidence is migrated only for jg.java; its reviewed selector declarations retain their identities. Text evidence is unchanged."
+  }
+}

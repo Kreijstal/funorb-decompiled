@@ -77,7 +77,7 @@ final class hl extends el {
             for (var5 = 0; var5 < var2; var5++) {
                 var6 = (double)var5 * (double)var5 / (double)(var4 * (-var4 + this.field_h));
                 var8 = 1;
-                if (!(var6 >= 1.0)) {
+                if (!(!(var6 < 1.0))) {
                     var6 = Math.sqrt(1.0 - var6);
                     var8 = var6 >= 1.0 ? 255 : (int)(var6 * 255.0);
                 }

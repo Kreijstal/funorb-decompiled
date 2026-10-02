@@ -18,14 +18,14 @@ function rejection(mutate, message, refreshMigrationHash = false) {
   try {
     captureProcess('git', ['clone', '--shared', '--no-checkout', '--quiet', repository, temporary]);
     for (const file of ['reproduce-geoblox.mjs', 'geoblox-rules.json', 'geoblox-source-pin.json',
-      'rules/geoblox-v18.json', 'rules/geoblox-v18-results.json', 'rules/geoblox-v19-migration.json',
+      'rules/geoblox-v19.json', 'rules/geoblox-v18-results.json', 'rules/geoblox-v20-migration.json',
       'funorb-stubs.jar', 'tools/PIN.json', 'tools/readable-java.mjs',
       'tools/lib/ReadableJava.java', 'tools/lib/capture-process.mjs']) {
       const destination = path.join(temporary, 'readable', file);
       fs.mkdirSync(path.dirname(destination), {recursive: true});
       fs.copyFileSync(path.join(root, file), destination);
     }
-    const migrationFile = path.join(temporary, 'readable/rules/geoblox-v19-migration.json');
+    const migrationFile = path.join(temporary, 'readable/rules/geoblox-v20-migration.json');
     const migration = JSON.parse(fs.readFileSync(migrationFile));
     mutate(migration, temporary);
     fs.writeFileSync(migrationFile, JSON.stringify(migration, null, 2) + '\n');
@@ -50,28 +50,37 @@ test('wrapper rejects a changed reviewed migration before generation', () => {
 
 test('wrapper checks current and previous source bytes despite self-consistent manifest hashes', () => {
   rejection(data => { data.sourceEvidence[0].sha256 = '0'.repeat(64); },
-    /Reviewed migration source differs: oc.java/, true);
+    /Reviewed migration source differs: ab.java/, true);
   rejection(data => { data.sourceEvidence[0].previousSha256 = '0'.repeat(64); },
-    /Previous migration source differs: oc.java/, true);
+    /Previous migration source differs: ab.java/, true);
 });
 
 test('wrapper rejects traversal in current source and previous manifest paths', () => {
-  rejection(data => { data.sourceEvidence[0].file = '../oc.java'; },
+  rejection(data => { data.sourceEvidence[0].file = '../ab.java'; },
     /Reviewed migration source differs/, true);
-  rejection(data => { data.previousRulesFile = '../geoblox-v18.json'; },
+  rejection(data => { data.previousRulesFile = '../geoblox-v19.json'; },
     /Invalid previous naming manifest path/, true);
 });
 
 test('wrapper checks the previous manifest bytes and its publication source pin', () => {
   rejection((_data, temporary) => {
-    const file = path.join(temporary, 'readable/rules/geoblox-v18.json');
+    const file = path.join(temporary, 'readable/rules/geoblox-v19.json');
     fs.appendFileSync(file, ' ');
   }, /Previous naming manifest differs from the migration/);
   rejection((data, temporary) => {
-    const file = path.join(temporary, 'readable/rules/geoblox-v18.json');
+    const file = path.join(temporary, 'readable/rules/geoblox-v19.json');
     const previous = JSON.parse(fs.readFileSync(file));
     previous.source.commit = 'different';
     fs.writeFileSync(file, JSON.stringify(previous, null, 2) + '\n');
     data.previousRulesSha256 = hash(fs.readFileSync(file));
   }, /Invalid previous publication source pin/, true);
+});
+
+test('changed result evidence must link the old reviewed hash and current migration source', () => {
+  for (const change of [
+    data => { data.resultEvidenceUpdates[0].sha256 = '0'.repeat(64); },
+    data => { data.resultEvidenceUpdates[0].previousSha256 = '0'.repeat(64); },
+    data => { data.resultEvidenceUpdates[0].file = 'gh.java'; },
+    data => { data.resultEvidenceUpdates.push({...data.resultEvidenceUpdates[0]}); },
+  ]) rejection(change, /Invalid reviewed result evidence update/, true);
 });

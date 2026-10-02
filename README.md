@@ -11,7 +11,7 @@ over the obfuscated gamepacks by the pipeline in
 
 ## Readable GeoBlox export
 
-[`readable/geoblox/src`](readable/geoblox/src) contains GeoBlox pass 19 with
+[`readable/geoblox/src`](readable/geoblox/src) contains GeoBlox pass 20 with
 972 reviewed naming rules for gameplay, tutorial flow, interface text,
 resource decoding, text validation, nine-slice sprite construction, result
 selection and PCM samples.
@@ -33,7 +33,7 @@ records pass 16 naming evidence. The [result-helper report](readable/RESULT-HELP
 records pass 18 names and native selector/PCM checks. The [numeric-negation report](readable/NUMERIC-NEGATION-READABILITY.md)
 records the corrected sprite pivots and native result-sequence comparison.
 The [exception-continuation report](readable/EXCEPTION-CONTINUATION-READABILITY.md)
-records pass 19's handler boundaries and reviewed generated-local changes.
+records pass 19's handler boundaries and reviewed generated-local changes. [Floating comparison verification](readable/FLOAT-COMPARISON-READABILITY.md) records pass 20's native scoring proof and guarded source migration.
 Typed complement comparisons show direct conditions;
 see the [comparison report](readable/COMPARISON-READABILITY.md). Unknown
 identifiers and shared joins remain; the [state-machine report](readable/STATE-MACHINE-READABILITY.md)
@@ -45,12 +45,13 @@ GeoBlox has a newer 303-file source export from a pinned owned-decompiler
 revision. It reuses the unchanged transformed bytecode whose previous fresh ASM
 check covered 2,427 methods with zero failures. All regenerated sources compile.
 The other 43 games retain the previous full-catalog export.
-The latest renderer preserves enclosing exception coverage when carving handler
-continuations. Only `oc.java` changes: its post-failure arithmetic guard remains
-outside the enclosing catch. All 972 reviewed names and 255 named local identities
-remain unchanged; one generated selector and five unnamed ordinal shifts are
-recorded in the migration. The generic loop-exit probes cover 3,216 native
-comparisons. The earlier sprite-negation correction remains in this export.
+The latest renderer preserves exact floating-comparison behavior and evaluates
+stored comparison operands once. Ten files change; all 972 reviewed names and
+255 named local identities remain unchanged. One comparison helper and its two
+parameters are added. The new matching/scoring probe matches native bytecode
+across 708 controlled scenarios and 55,728 ticks, including NaN popup progress.
+The prior exception-boundary and sprite-negation corrections remain in this
+export. Generic comparison fixtures add 75,000 native comparisons.
 
 [GeoBlox provenance](decompilation/geoblox-provenance.json) records the exact
 Deko and java-tools Git commits, input identities, reused pipeline proof and

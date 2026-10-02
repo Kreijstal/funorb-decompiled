@@ -65,7 +65,7 @@ final class rh {
               stackIn_22_1 = 0;
               jc.a(stackIn_22_0, stackIn_22_1 != 0);
             } else {
-              if (25600.0f <= var1_float) {
+              if (!(25600.0f > var1_float)) {
                 jc.a(2, false);
               } else {
                 jc.a(1, false);

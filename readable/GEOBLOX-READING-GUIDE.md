@@ -1,4 +1,4 @@
-# Reading GeoBlox pass 19
+# Reading GeoBlox pass 20
 
 The readable tree uses semantic names without opaque suffixes. The symbol map
 keeps the original spelling and JVM identity of every declaration, so
@@ -350,3 +350,13 @@ and native comparisons. The raw source and all 926 previous names remain
 unchanged. New probes cover selector edge cases, PCM factory metadata and
 position bounds, and music early returns. Actual MIDI activation, PCM advancement
 and whole-game behavior still need verification.
+
+## Native matching and score verification
+
+[Pass 20's comparison report](FLOAT-COMPARISON-READABILITY.md) records the native
+matching/scoring probe and its independent oracle. The score-popup animation
+branch includes unordered progress: `!(progress >= 1.0f)` retains a NaN popup
+without crediting it. The old relational spelling changed that behavior.
+The raw and renamed code now match native traces for 708 controlled scenarios,
+including successful matches, pool overflow, cooldowns, duplicates and tutorial
+scoring. Full contact physics and asset-dependent transitions remain unverified.

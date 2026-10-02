@@ -24,7 +24,8 @@ function fixture(change) {
       'rules/geoblox-v16-border.json', 'rules/geoblox-v16.json',
       'rules/geoblox-v17-migration.json', 'rules/geoblox-v17.json',
       'rules/geoblox-v18-results.json', 'rules/geoblox-v18.json',
-      'rules/geoblox-v19-migration.json', 'tools/PIN.json']) {
+      'rules/geoblox-v19-migration.json', 'rules/geoblox-v19.json',
+      'rules/geoblox-v20-migration.json', 'tools/PIN.json']) {
       fs.mkdirSync(path.dirname(path.join(temporary, file)), {recursive: true});
       fs.copyFileSync(path.join(root, file), path.join(temporary, file));
     }
@@ -45,6 +46,48 @@ function fixture(change) {
 
 test('reviewed lineage reproduces all 972 guarded rules', () => {
   assert.equal(JSON.parse(fixture().stdout).rules, 972);
+});
+
+test('pass 20 retains the frozen pass 19 manifest and exact input/tool identities', () => {
+  assert.throws(() => fixture(edit => edit('rules/geoblox-v19.json', data => {
+    data.renames[0].to = 'DifferentRetainedName';
+  })), /Retained pass 19.*reviewed rule lineage/);
+  for (const field of ['previousRulesFile', 'previousRulesSha256', 'previousInputTreeSha256',
+    'inputTreeSha256', 'sourceCommit', 'javaToolsCommit', 'decompilerSourceArchiveSha256',
+    'textEvidenceMigration', 'textEvidenceMigrationSha256', 'resultEvidenceManifest', 'resultEvidenceManifestSha256'])
+    assert.throws(() => fixture(edit => edit('rules/geoblox-v20-migration.json', data => {
+      data[field] = 'different';
+    })), /reviewed pass-20 migration/);
+});
+
+test('pass 20 adds only the comparison helper and retains all existing identities', () => {
+  for (const change of [
+    data => { data.addedDeclarations[0].symbol = 'M:ch.unknown(JJ)I'; },
+    data => { data.addedDeclarations.pop(); },
+    data => { data.identityChanges.push({from: 'L:gh.f(I)V#0', to: 'L:gh.f(I)V#1'}); },
+    data => { data.review.sourceDeclarationIdentitiesUnchanged--; },
+    data => { data.review.namedLocalDeclarationIdentitiesUnchanged--; },
+    data => { data.review.sourceDeclarationsAfter--; },
+    data => { data.review.bindingComparisons--; },
+    data => { data.review.overrideRelationshipsUnchanged--; },
+    data => { data.review.sourceBodyEditedByHand = true; },
+    data => { data.review.bytecodeUnchanged = false; },
+    data => { data.sourceEvidence.pop(); },
+    data => { data.sourceEvidence[0].file = '../ab.java'; },
+    data => { data.sourceEvidence[0].previousSha256 = 'different'; },
+    data => { data.declarationAudits.currentSha256 = 'different'; },
+  ]) assert.throws(() => fixture(edit => edit('rules/geoblox-v20-migration.json', change)),
+    /reviewed pass-20 migration/);
+});
+
+test('pass 20 cannot borrow or omit the changed result source evidence', () => {
+  for (const change of [
+    data => { data.resultEvidenceUpdates = []; },
+    data => { data.resultEvidenceUpdates[0].previousSha256 = '0'.repeat(64); },
+    data => { data.resultEvidenceUpdates[0].sha256 = '0'.repeat(64); },
+    data => { data.resultEvidenceUpdates[0].file = 'gh.java'; },
+  ]) assert.throws(() => fixture(edit => edit('rules/geoblox-v20-migration.json', change)),
+    /Result evidence.*reviewed pass-20 migration/);
 });
 
 test('result additions cannot replace retained names, duplicate identities or lose spelling guards', () => {
@@ -92,12 +135,12 @@ test('result additions require unchanged source identities, complete counts and 
 test('a replacement input digest alone cannot migrate the export', () => {
   assert.throws(() => fixture(edit => edit('geoblox-source-pin.json', data => {
     data.inputTreeSha256 = '0'.repeat(64);
-  })), /reviewed pass-19 migration/);
+  })), /reviewed pass-20 migration/);
 });
 test('a different decompiler revision requires a new reviewed migration', () => {
   assert.throws(() => fixture(edit => edit('geoblox-source-pin.json', data => {
     data.generators.javaTools.commit = '0'.repeat(40);
-  })), /reviewed pass-19 migration/);
+  })), /reviewed pass-20 migration/);
 });
 test('previous names and migration identities cannot change silently', () => {
   assert.throws(() => fixture(edit => edit('rules/geoblox-v6.json', data => {
@@ -258,7 +301,7 @@ test('pass 15 cannot change the retained loader source or resource evidence', ()
 test('pass 16 additions retain their source and every pass-15 name', () => {
   assert.throws(() => fixture(edit => edit('geoblox-source-pin.json', data => {
     data.commit = '0'.repeat(40);
-  })), /reviewed pass-19 migration/);
+  })), /reviewed pass-20 migration/);
   assert.throws(() => fixture(edit => edit('rules/geoblox-v15.json', data => {
     data.renames[0].to = 'ChangedHistoricalName';
   })), /reviewed rule lineage/);

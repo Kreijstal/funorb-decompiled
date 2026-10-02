@@ -156,7 +156,7 @@ final class cf extends TextInputValidator {
             }
             popup = (ScorePopup) ((Object) md.activeScorePopups.firstForIteration(0));
             L2: while (popup != null) {
-              if (popup.progress < 1.0f) {
+              if (!(popup.progress >= 1.0f)) {
                 popup.progress = popup.progress + (0.03999999910593033f * popup.progress + 0.00004999999873689376f);
               } else {
                 if (popup.chainMultiplier != 1) {

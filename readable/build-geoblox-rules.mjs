@@ -49,7 +49,7 @@ const rebuiltPassSeven = {...passSix, version: 7, previousRulesSha256: sha256(pa
   source: passSeven.source, generators: passSeven.generators, renames};
 if (passSevenBytes.toString() !== JSON.stringify(rebuiltPassSeven, null, 2) + '\n')
   throw new Error('Retained pass 7 does not match its reviewed rule lineage');
-if (pin.namingMigration !== 'rules/geoblox-v19-migration.json')
+if (pin.namingMigration !== 'rules/geoblox-v20-migration.json')
   throw new Error('Changed input requires reviewed naming-rule migration');
 const passEightBytes = read('rules/geoblox-v8.json');
 const passEight = JSON.parse(passEightBytes);
@@ -430,16 +430,18 @@ const passEighteenBytes = read('rules/geoblox-v18.json');
 const passEighteen = JSON.parse(passEighteenBytes);
 if (passEighteenBytes.toString() !== JSON.stringify(rebuiltPassEighteen, null, 2) + '\n')
   throw new Error('Retained pass 18 does not match its reviewed rule lineage');
-const continuationBytes = read(pin.namingMigration);
+const passNineteenBytes = read('rules/geoblox-v19.json');
+const passNineteen = JSON.parse(passNineteenBytes);
+const continuationBytes = read('rules/geoblox-v19-migration.json');
 const continuation = JSON.parse(continuationBytes);
 if (continuation.schema !== 1 || continuation.version !== 19 ||
     continuation.previousRulesFile !== 'rules/geoblox-v18.json' ||
     continuation.previousRulesSha256 !== sha256(passEighteenBytes) ||
     continuation.previousInputTreeSha256 !== passEighteen.inputTreeSha256 ||
-    continuation.inputTreeSha256 !== pin.inputTreeSha256 || continuation.sourceCommit !== pin.commit ||
-    continuation.javaToolsCommit !== pin.generators.javaTools.commit ||
-    continuation.decompilerSourceArchiveSha256 !== pin.generators.javaTools.sourceArchive.sha256 ||
-    JSON.stringify(pin.generators.dekoblokoWork) !== JSON.stringify(passEighteen.generators.dekoblokoWork) ||
+    continuation.inputTreeSha256 !== passNineteen.inputTreeSha256 || continuation.sourceCommit !== passNineteen.source.commit ||
+    continuation.javaToolsCommit !== passNineteen.generators.javaTools.commit ||
+    continuation.decompilerSourceArchiveSha256 !== passNineteen.generators.javaTools.sourceArchive.sha256 ||
+    JSON.stringify(passNineteen.generators.dekoblokoWork) !== JSON.stringify(passEighteen.generators.dekoblokoWork) ||
     continuation.textEvidenceMigration !== 'rules/geoblox-v15-migration.json' ||
     continuation.textEvidenceMigrationSha256 !== sha256(loopBytes) ||
     continuation.resultEvidenceManifest !== pin.namingAdditions ||
@@ -474,8 +476,53 @@ const expectedGeneratedChanges = {
 };
 if (JSON.stringify(continuation.generatedLocalChanges) !== JSON.stringify(expectedGeneratedChanges))
   throw new Error('Generated local changes differ from the reviewed pass-19 migration');
-const rules = {...passEighteen, version: 19, previousRulesSha256: sha256(passEighteenBytes),
-  namingMigrationSha256: sha256(continuationBytes), inputTreeSha256: pin.inputTreeSha256,
+const rebuiltPassNineteen = {...passEighteen, version: 19, previousRulesSha256: sha256(passEighteenBytes),
+  namingMigrationSha256: sha256(continuationBytes), inputTreeSha256: passNineteen.inputTreeSha256,
+  source: passNineteen.source, generators: passNineteen.generators, renames: resultRenames};
+if (passNineteenBytes.toString() !== JSON.stringify(rebuiltPassNineteen, null, 2) + '\n')
+  throw new Error('Retained pass 19 does not match its reviewed rule lineage');
+const floatingBytes = read(pin.namingMigration);
+const floating = JSON.parse(floatingBytes);
+const changedFloatingFiles = ['ab', 'cf', 'ch', 'hl', 'jg', 'oc', 'qb', 'rh', 'ue', 'vd'].map(name => name + '.java');
+const expectedAddedDeclarations = [
+  {symbol: 'M:ch.$cfr$lcmp(JJ)I', originalName: '$cfr$lcmp'},
+  {symbol: 'P:ch.$cfr$lcmp(JJ)I#0', originalName: 'left'},
+  {symbol: 'P:ch.$cfr$lcmp(JJ)I#1', originalName: 'right'},
+];
+if (floating.schema !== 1 || floating.version !== 20 ||
+    floating.previousRulesFile !== 'rules/geoblox-v19.json' ||
+    floating.previousRulesSha256 !== sha256(passNineteenBytes) ||
+    floating.previousInputTreeSha256 !== passNineteen.inputTreeSha256 ||
+    floating.inputTreeSha256 !== pin.inputTreeSha256 || floating.sourceCommit !== pin.commit ||
+    floating.javaToolsCommit !== pin.generators.javaTools.commit ||
+    floating.decompilerSourceArchiveSha256 !== pin.generators.javaTools.sourceArchive.sha256 ||
+    JSON.stringify(pin.generators.dekoblokoWork) !== JSON.stringify(passNineteen.generators.dekoblokoWork) ||
+    floating.textEvidenceMigration !== 'rules/geoblox-v15-migration.json' ||
+    floating.textEvidenceMigrationSha256 !== sha256(loopBytes) ||
+    floating.resultEvidenceManifest !== pin.namingAdditions ||
+    floating.resultEvidenceManifestSha256 !== sha256(resultBytes) ||
+    !Array.isArray(floating.identityChanges) || floating.identityChanges.length !== 0 ||
+    floating.review.rulesRetained !== 972 || floating.review.originalSpellingGuardsMatched !== 972 ||
+    floating.review.namedLocals !== 255 || floating.review.namedLocalDeclarationIdentitiesUnchanged !== 255 ||
+    floating.review.namedLocalDeclarationIdentitiesMoved !== 0 ||
+    floating.review.sourceDeclarationsBefore !== 21182 || floating.review.sourceDeclarationsAfter !== 21185 ||
+    floating.review.sourceDeclarationIdentitiesUnchanged !== 21182 ||
+    floating.review.overrideRelationshipsUnchanged !== 388 || floating.review.bindingComparisons !== 154117 ||
+    JSON.stringify(floating.review.changedJavaFiles) !== JSON.stringify(changedFloatingFiles) ||
+    floating.review.sourceBodyEditedByHand !== false || floating.review.bytecodeUnchanged !== true ||
+    JSON.stringify(floating.addedDeclarations) !== JSON.stringify(expectedAddedDeclarations) ||
+    JSON.stringify(floating.sourceEvidence?.map(item => item.file)) !== JSON.stringify(changedFloatingFiles) ||
+    floating.sourceEvidence.some(item => !/^[a-f0-9]{64}$/.test(item.sha256) || !/^[a-f0-9]{64}$/.test(item.previousSha256)) ||
+    floating.declarationAudits?.tool !== 'readable/tools/lib/ReadableJava.java' ||
+    !/^[a-f0-9]{64}$/.test(floating.declarationAudits.previousSha256) ||
+    !/^[a-f0-9]{64}$/.test(floating.declarationAudits.currentSha256))
+  throw new Error('Input or declaration identities differ from the reviewed pass-20 migration');
+const resultUpdate = floating.sourceEvidence.find(item => item.file === 'jg.java');
+if (JSON.stringify(floating.resultEvidenceUpdates) !== JSON.stringify([resultUpdate]) ||
+    result.sourceEvidence.find(item => item.file === 'jg.java').sha256 !== resultUpdate.previousSha256)
+  throw new Error('Result evidence differs from the reviewed pass-20 migration');
+const rules = {...passNineteen, version: 20, previousRulesSha256: sha256(passNineteenBytes),
+  namingMigrationSha256: sha256(floatingBytes), inputTreeSha256: pin.inputTreeSha256,
   source: {repository: pin.sourceRepository, commit: pin.commit, subdirectory: pin.subdirectory},
   generators: pin.generators, renames: resultRenames};
 const output = JSON.stringify(rules, null, 2) + '\n';

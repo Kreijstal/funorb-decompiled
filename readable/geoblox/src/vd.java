@@ -111,7 +111,7 @@ final class vd {
         if (param0 != 741924304) {
             return 104;
         }
-        if (Math.random() >= sa.field_c) {
+        if (!(Math.random() < sa.field_c)) {
             return 0;
         }
         double var1 = Math.random();
@@ -121,7 +121,7 @@ final class vd {
         if (var1 < 0.25) {
             return 4;
         }
-        if (var1 >= 0.65) {
+        if (!(var1 < 0.65)) {
             return 2;
         }
         return 1;
