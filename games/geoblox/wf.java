@@ -32,7 +32,7 @@ abstract class wf extends ch {
               } else {
                 if (var2 != 0) {
                   if (var2 == 1) {
-                    if (-12 == (hj.field_a ^ -1)) {
+                    if (hj.field_a == 11) {
                       if (ib.field_e == 0) {
                         gi.b(param0 + -12617);
                       } else {
@@ -52,7 +52,7 @@ abstract class wf extends ch {
                     return var2;
                   }
                 } else {
-                  if (-12 == (hj.field_a ^ -1)) {
+                  if (hj.field_a == 11) {
                     if (ib.field_e == 0) {
                       gi.b(param0 + -12617);
                     } else {
@@ -204,7 +204,7 @@ abstract class wf extends ch {
         }
         L1: {
           var2 = this.k(-1);
-          if (-1 != (var2 ^ -1)) {
+          if (var2 != 0) {
             if (1 != var2) {
               break L1;
             }
@@ -303,7 +303,7 @@ abstract class wf extends ch {
           if (t.b(param1 ^ 19649)) {
             var3 = 1200 * sb.a(true);
             if (!this.field_t) {
-              if ((var3 ^ -1) <= (ha.a(-76) ^ -1)) {
+              if (~var3 <= ~ha.a(-76)) {
                 break L4;
               } else {
                 if (var3 >= jk.a(false)) {
@@ -321,8 +321,8 @@ abstract class wf extends ch {
           }
         }
         L6: {
-          if ((ib.field_e ^ -1) != 0) {
-            if ((ib.field_e ^ -1) != -1) {
+          if (ib.field_e != -1) {
+            if (ib.field_e != 0) {
               break L6;
             }
           }
@@ -334,7 +334,7 @@ abstract class wf extends ch {
           var3 = stackIn_24_0;
           ib.field_e = ma.b(15869);
           if (var3 != 0) {
-            if ((ib.field_e ^ -1) == -1) {
+            if (ib.field_e == 0) {
               if (11 == hj.field_a) {
                 if (!sb.a(73)) {
                   gi.b(-12618);
@@ -343,17 +343,17 @@ abstract class wf extends ch {
             }
           }
           if (-1 != ib.field_e) {
-            if ((ib.field_e ^ -1) != -1) {
+            if (ib.field_e != 0) {
               hi.field_G = 15000L + oa.a(-12520);
             }
           }
         }
         if (ib.field_e != -1) {
-          if ((ib.field_e ^ -1) != -1) {
+          if (ib.field_e != 0) {
             if (mi.field_C >= 10) {
               if (hj.field_a >= 10) {
                 kd.b((byte) 114);
-                if (-4 != (ib.field_e ^ -1)) {
+                if (ib.field_e != 3) {
                   if (4 != ib.field_e) {
                     if (2 == ib.field_e) {
                       q.a((byte) 124, 256, rc.field_g);
@@ -373,12 +373,12 @@ abstract class wf extends ch {
                 ii.field_e = true;
               }
             } else {
-              if ((ib.field_e ^ -1) != -4) {
+              if (ib.field_e != 3) {
                 if (ib.field_e != 4) {
                   if (2 == ib.field_e) {
                     this.a((byte) 79, "js5connect_full");
                   } else {
-                    if (-6 != (ib.field_e ^ -1)) {
+                    if (ib.field_e != 5) {
                       this.a((byte) 79, "js5connect");
                     } else {
                       this.a((byte) 79, "outofdate");
@@ -404,7 +404,7 @@ abstract class wf extends ch {
               break L12;
             }
           }
-          if ((hi.field_G ^ -1L) >= (oa.a(param1 + -32180) ^ -1L)) {
+          if (~hi.field_G >= ~oa.a(param1 + -32180)) {
             ii.field_e = false;
             if (-1 != ib.field_e) {
               if (ib.field_e != 0) {
@@ -414,12 +414,12 @@ abstract class wf extends ch {
             }
           }
         }
-        if ((ib.field_e ^ -1) == -1) {
+        if (ib.field_e == 0) {
           if (!sb.a(93)) {
             lb.field_a = false;
           }
         }
-        if (-1 == (mi.field_C ^ -1)) {
+        if (mi.field_C == 0) {
           if (qi.b(108)) {
             mi.field_C = 1;
           }
@@ -435,7 +435,7 @@ abstract class wf extends ch {
           mi.field_C = 2;
           re.field_i = dc.field_c;
         }
-        if ((mi.field_C ^ -1) == -3) {
+        if (mi.field_C == 2) {
           if (dd.field_J != null) {
             if (dd.field_J.a(0)) {
               if (!dd.field_J.b((byte) -116, "")) {
@@ -523,7 +523,7 @@ abstract class wf extends ch {
           mi.field_C = 11;
         }
         L30: {
-          if ((mi.field_C ^ -1) == -12) {
+          if (mi.field_C == 11) {
             L31: {
               if (null != ak.field_b) {
                 if (ak.field_b.a(0)) {
@@ -540,7 +540,7 @@ abstract class wf extends ch {
           }
         }
         if (param1 == 19660) {
-          if (-13 == (mi.field_C ^ -1)) {
+          if (mi.field_C == 12) {
             if (!cf.field_k) {
               mi.field_C = 13;
             }
@@ -587,11 +587,11 @@ abstract class wf extends ch {
         int stackIn_4_2 = 0;
         var3 = Geoblox.field_C;
         if (!fj.f(-31456)) {
-          if (-11 >= (mi.field_C ^ -1)) {
+          if (mi.field_C >= 10) {
             if (!wj.f(7426)) {
               td.g((byte) 88);
             } else {
-              if (-1 != (hj.field_a ^ -1)) {
+              if (hj.field_a != 0) {
                 oj.a(vc.field_i, (byte) -96);
               } else {
                 discarded$55 = this.a(false, false, -1);
@@ -641,10 +641,10 @@ abstract class wf extends ch {
             qc var12 = null;
             var8 = Geoblox.field_C;
             var4 = gk.a(va.field_a, vc.field_i, param1, (byte) -117);
-            if (param2 == (var4 ^ -1)) {
+            if (param2 == ~var4) {
               throw new IllegalStateException();
             } else {
-              if ((var4 ^ -1) == -2) {
+              if (var4 == 1) {
                 var5_int = qc.a(qh.i(param2 ^ -26), pf.h((byte) -42), -121);
                 if (var5_int != -1) {
                   kb.a(var5_int, 6568, si.field_i, kh.field_a);
@@ -658,7 +658,7 @@ abstract class wf extends ch {
               }
               if (var4 == 2) {
                 var5_int = uf.a((byte) -94, sa.a(true), qj.b((byte) 81), this.field_r, vh.f(100), al.b(0), cg.a((byte) 27));
-                if ((var5_int ^ -1) != 0) {
+                if (var5_int != -1) {
                   gj.a(kh.field_a, var5_int, (byte) 30, si.field_i);
                   kh.field_a = null;
                   si.field_i = null;
@@ -666,14 +666,14 @@ abstract class wf extends ch {
               }
               if (var4 == 3) {
                 if (-1 != ib.field_e) {
-                  if (-1 != (ib.field_e ^ -1)) {
+                  if (ib.field_e != 0) {
                     ib.field_e = -1;
                     j.e(-21754);
                   }
                 }
                 if (!param0) {
-                  var5_int = ri.a(false, sa.a(true), this.field_r, this.field_v, al.b(param2 ^ -1), param2 ^ -1);
-                  if ((var5_int ^ -1) != 0) {
+                  var5_int = ri.a(false, sa.a(true), this.field_r, this.field_v, al.b(~param2), ~param2);
+                  if (var5_int != -1) {
                     if (var5_int == 0) {
                       vi.field_H = oa.field_c;
                       gi.b(-12618);
@@ -688,7 +688,7 @@ abstract class wf extends ch {
                   ii.field_e = false;
                 }
               }
-              if ((var4 ^ -1) == -5) {
+              if (var4 == 4) {
                 if (!rb.field_c) {
                   hl.field_G = true;
                   hj.field_a = 10;
@@ -699,30 +699,30 @@ abstract class wf extends ch {
               if (5 == var4) {
                 gf.a(k.c(120), 62);
               }
-              if (-7 == (var4 ^ -1)) {
+              if (var4 == 6) {
                 if (kf.field_e) {
                   hj.field_a = 10;
                 }
               }
-              if ((var4 ^ -1) == -8) {
+              if (var4 == 7) {
                 je.a((byte) 114, k.c(107));
               }
-              if (-9 == (var4 ^ -1)) {
+              if (var4 == 8) {
                 ba.a((byte) 116, k.c(119));
               }
               if (9 == var4) {
                 tl.a(k.c(115), (byte) -91);
               }
-              if ((var4 ^ -1) == -11) {
+              if (var4 == 10) {
                 fj.field_q.a(17, (byte) -21);
               }
-              if (-12 == (var4 ^ -1)) {
+              if (var4 == 11) {
                 h.a(k.c(110), false);
               }
               if (var4 == 12) {
                 eb.a(k.c(121), (byte) 117, gf.a(param2 ^ -241));
               }
-              if (-14 == (var4 ^ -1)) {
+              if (var4 == 13) {
                 try {
                   if (null == mk.field_n) {
                     mk.field_n = new wg(ka.field_i, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
@@ -828,7 +828,7 @@ abstract class wf extends ch {
               if (var8 != null) {
                 this.field_u = Integer.parseInt(var8);
               }
-              if (-6 >= (this.field_u ^ -1)) {
+              if (this.field_u >= 5) {
                 this.field_u = 0;
               }
               var9 = this.getParameter("affid");
@@ -905,7 +905,7 @@ abstract class wf extends ch {
               return;
             } else {
               L2: {
-                if ((var2 ^ -1) == -2) {
+                if (var2 == 1) {
                   ec.a(-1073741824);
                 } else {
                   if (var2 == 2) {
@@ -914,23 +914,23 @@ abstract class wf extends ch {
                     if (3 == var2) {
                       ud.b(119);
                     } else {
-                      if ((var2 ^ -1) != -5) {
+                      if (var2 != 4) {
                         if (5 == var2) {
                           al.a(26146);
                         } else {
-                          if ((var2 ^ -1) == -7) {
+                          if (var2 == 6) {
                             bh.a(2);
                           } else {
                             if (var2 != 7) {
                               if (8 == var2) {
                                 pg.a(-4, ka.field_i, p.field_k, eh.field_d);
                               } else {
-                                if ((var2 ^ -1) == -17) {
+                                if (var2 == 16) {
                                   rc.b(1);
                                 } else {
                                   if (11 != var2) {
                                     if (12 != var2) {
-                                      if (-14 != (var2 ^ -1)) {
+                                      if (var2 != 13) {
                                         if (17 == var2) {
                                           this.g((byte) 12);
                                           break L2;
@@ -950,7 +950,7 @@ abstract class wf extends ch {
                                       }
                                     }
                                   }
-                                  if (-13 != (var2 ^ -1)) {
+                                  if (var2 != 12) {
                                     stackIn_30_0 = 0;
                                   } else {
                                     stackIn_30_0 = 1;

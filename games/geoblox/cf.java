@@ -37,7 +37,7 @@ final class cf extends q {
             if (f.b((byte) -123, var4)) {
               var5 = (CharSequence) ((Object) param1);
               var3_int = ol.a(false, var5);
-              if (-1 > (var3_int ^ -1)) {
+              if (var3_int > 0) {
                 if (130 >= var3_int) {
                   stackIn_11_0 = kk.field_w;
                   decompiledRegionSelector0 = 2;
@@ -159,7 +159,7 @@ final class cf extends q {
               if (var1.field_k < 1.0f) {
                 var1.field_k = var1.field_k + (0.03999999910593033f * var1.field_k + 0.00004999999873689376f);
               } else {
-                if ((var1.field_h ^ -1) != -2) {
+                if (var1.field_h != 1) {
                   el.field_o.a(var1.field_f, -73);
                   ue.field_f.a(-35, var1);
                 } else {

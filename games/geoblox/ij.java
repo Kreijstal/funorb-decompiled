@@ -211,7 +211,7 @@ final class ij extends oe implements pl {
         if (!el.field_o.field_x) {
             var1 = el.field_o.field_w - 2;
             var2 = el.field_o.field_u - 2;
-            if (!(-1 <= (wa.field_a ^ -1))) {
+            if (!(wa.field_a <= 0)) {
                 vg.field_f[ha.field_g].b(320 - (vg.field_f[ha.field_g].field_s >> -1387017855), -(vg.field_f[ha.field_g].field_o >> 10164129) + 240);
             }
             fc.field_b[uf.field_b].b(var1 + 320, 240 + var2, rj.field_c);
@@ -225,7 +225,7 @@ final class ij extends oe implements pl {
         if (null == ul.field_a) {
             var1 = el.field_o.field_w - 2;
             var2 = el.field_o.field_u - 2;
-            if (!(-1 <= (wa.field_a ^ -1))) {
+            if (!(wa.field_a <= 0)) {
                 vg.field_f[ha.field_g].b(320 - (vg.field_f[ha.field_g].field_s >> -1387017855), -(vg.field_f[ha.field_g].field_o >> 10164129) + 240);
             }
             fc.field_b[uf.field_b].b(var1 + 320, 240 + var2, rj.field_c);

@@ -62,7 +62,7 @@ final class re extends hf {
                     var2 = gf.field_c[gk.field_b];
                     gk.field_b = 1 + gk.field_b & 127;
                     if (var2 < 0) {
-                      kj.field_o[var2 ^ -1] = false;
+                      kj.field_o[~var2] = false;
                       continue L5;
                     } else {
                       kj.field_o[var2] = true;

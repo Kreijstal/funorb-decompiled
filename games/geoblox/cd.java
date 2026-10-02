@@ -17,7 +17,7 @@ final class cd extends jg {
         if (param0 <= 75) {
           field_m = (rh) null;
         }
-        if ((c.field_ab ^ -1) == -5) {
+        if (c.field_ab == 4) {
           ec.field_c = hi.field_F;
           mf.field_a = ca.field_g;
         } else {
@@ -209,7 +209,7 @@ final class cd extends jg {
         if (!Boolean.parseBoolean(System.getProperty("java.net.useSystemProxies"))) {
           System.setProperty("java.net.useSystemProxies", "true");
         }
-        if (-444 != (this.field_b ^ -1)) {
+        if (this.field_b != 443) {
           stackIn_5_0 = 0;
         } else {
           stackIn_5_0 = 1;
@@ -364,7 +364,7 @@ final class cd extends jg {
                     var8 = var11;
                     var8 = var7.readLine();
                     L5: while (var8 != null) {
-                      if (-51 < (var10 ^ -1)) {
+                      if (var10 < 50) {
                         if (!var8.toLowerCase().startsWith(var11)) {
                           var8 = var7.readLine();
                           var10++;
@@ -375,7 +375,7 @@ final class cd extends jg {
                           var8 = var15;
                           var8 = var15;
                           var12 = var15.indexOf(' ');
-                          if (0 != (var12 ^ -1)) {
+                          if (var12 != -1) {
                             var8 = var15.substring(0, var12);
                           }
                           throw new bd(var8);

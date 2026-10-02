@@ -18,7 +18,7 @@ final class lh {
         if (param0 <= -78) {
           if (null != pb.field_t.g(0)) {
             var1 = kj.field_J;
-            if (-1 == (var1 ^ -1)) {
+            if (var1 == 0) {
               eh.field_c = eh.field_c - 1;
               if (eh.field_c <= -10 - (tl.field_h - 480)) {
                 h.field_d = 0;
@@ -26,20 +26,20 @@ final class lh {
                 return;
               }
             } else {
-              if ((var1 ^ -1) == -2) {
+              if (var1 == 1) {
                 fieldTemp$4 = h.field_d;
                 h.field_d = h.field_d + 1;
-                if (-451 > (fieldTemp$4 ^ -1)) {
+                if (fieldTemp$4 > 450) {
                   kj.field_J = 2;
                   return;
                 } else {
                   return;
                 }
               } else {
-                if ((var1 ^ -1) == -3) {
+                if (var1 == 2) {
                   fieldTemp$5 = eh.field_c;
                   eh.field_c = eh.field_c + 1;
-                  if ((fieldTemp$5 ^ -1) < -481) {
+                  if (fieldTemp$5 > 480) {
                     pb.field_t.b((byte) -118);
                     gf.a((byte) -12);
                     return;
@@ -53,7 +53,7 @@ final class lh {
           lh.b(-5);
           if (null != pb.field_t.g(0)) {
             var1 = kj.field_J;
-            if (-1 == (var1 ^ -1)) {
+            if (var1 == 0) {
               eh.field_c = eh.field_c - 1;
               if (eh.field_c > -10 - (tl.field_h - 480)) {
                 return;
@@ -63,20 +63,20 @@ final class lh {
                 return;
               }
             } else {
-              if ((var1 ^ -1) == -2) {
+              if (var1 == 1) {
                 fieldTemp$6 = h.field_d;
                 h.field_d = h.field_d + 1;
-                if (-451 <= (fieldTemp$6 ^ -1)) {
+                if (fieldTemp$6 <= 450) {
                   return;
                 } else {
                   kj.field_J = 2;
                   return;
                 }
               } else {
-                if ((var1 ^ -1) == -3) {
+                if (var1 == 2) {
                   fieldTemp$7 = eh.field_c;
                   eh.field_c = eh.field_c + 1;
-                  if ((fieldTemp$7 ^ -1) < -481) {
+                  if (fieldTemp$7 > 480) {
                     pb.field_t.b((byte) -118);
                     gf.a((byte) -12);
                     return;

@@ -8,18 +8,18 @@ final class od {
     final static boolean a(int param0) {
         if (param0 != -3) {
             field_b = (String) null;
-            if (-3 != (gg.field_b ^ -1)) {
+            if (gg.field_b != 2) {
                 return false;
             }
-            if ((pa.field_g ^ -1) > -1) {
+            if (pa.field_g < 0) {
                 return true;
             }
             return false;
         }
-        if (-3 != (gg.field_b ^ -1)) {
+        if (gg.field_b != 2) {
             return false;
         }
-        if ((pa.field_g ^ -1) > -1) {
+        if (pa.field_g < 0) {
             return true;
         }
         return false;
@@ -155,7 +155,7 @@ final class od {
               if (null != te.field_c) {
                 var1_int = 0;
                 L2: while (true) {
-                  if (-8 >= (var1_int ^ -1)) {
+                  if (var1_int >= 7) {
                     kf.field_c = null;
                     sl.field_l = null;
                     uh.field_y.c((byte) 83);

@@ -34,11 +34,11 @@ final class mj {
         var9 = Geoblox.field_C;
         try {
           L0: {
-            if (-1 == (param1 ^ -1)) {
+            if (param1 == 0) {
               stackIn_4_0 = "";
               decompiledRegionSelector0 = 0;
             } else {
-              if ((param1 ^ -1) == -2) {
+              if (param1 == 1) {
                 var10 = param2[param0];
                 var4 = var10;
                 if (var4 != null) {

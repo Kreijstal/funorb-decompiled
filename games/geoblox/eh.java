@@ -15,33 +15,33 @@ final class eh {
         int var7;
         int var8;
         var8 = Geoblox.field_C;
-        if (-1 >= (gb.field_f ^ -1)) {
+        if (gb.field_f >= 0) {
           var3 = -135 + param1;
           var4 = param0 - 35;
           var5 = 256;
           if (75 > gb.field_f) {
             var5 = (gb.field_f << -886977592) / 75;
           }
-          if (-201 > (gb.field_f ^ -1)) {
+          if (gb.field_f > 200) {
             var5 = (250 + -gb.field_f << 897136616) / 50;
           }
           Geoblox.a(1, ki.field_c);
           mh.b();
           vb.c();
           ck.a((byte) 123);
-          if ((var5 ^ -1) <= -257) {
+          if (var5 >= 256) {
             id.a(true);
-            if (-151 >= (gb.field_f ^ -1)) {
+            if (gb.field_f >= 150) {
               bk.field_b.d(15 + var3, var4 + 10, var5);
               var6 = -125 + gb.field_f;
               if (param2 == -51) {
                 if (var6 > 0) {
-                  if (-51 < (var6 ^ -1)) {
+                  if (var6 < 50) {
                     if (var6 >= 20) {
                       if (var6 < 30) {
                         cd.field_l.c(var3, var4, 256);
                         var6 = gb.field_f - 140;
-                        if ((var6 ^ -1) < -1) {
+                        if (var6 > 0) {
                           var7 = 256;
                           if (var6 < 20) {
                             var7 = var6 * 256 / 20;
@@ -53,7 +53,7 @@ final class eh {
                         var7 = 256 * (-var6 + 50) / 20;
                         cd.field_l.c(var3, var4, var7);
                         var6 = gb.field_f - 140;
-                        if ((var6 ^ -1) < -1) {
+                        if (var6 > 0) {
                           var7 = 256;
                           if (var6 < 20) {
                             var7 = var6 * 256 / 20;
@@ -66,7 +66,7 @@ final class eh {
                       var7 = var6 * 256 / 20;
                       cd.field_l.c(var3, var4, var7);
                       var6 = gb.field_f - 140;
-                      if ((var6 ^ -1) < -1) {
+                      if (var6 > 0) {
                         var7 = 256;
                         if (var6 < 20) {
                           var7 = var6 * 256 / 20;
@@ -77,7 +77,7 @@ final class eh {
                     }
                   } else {
                     var6 = gb.field_f - 140;
-                    if ((var6 ^ -1) < -1) {
+                    if (var6 > 0) {
                       var7 = 256;
                       if (var6 < 20) {
                         var7 = var6 * 256 / 20;
@@ -88,7 +88,7 @@ final class eh {
                   }
                 } else {
                   var6 = gb.field_f - 140;
-                  if ((var6 ^ -1) < -1) {
+                  if (var6 > 0) {
                     var7 = 256;
                     if (var6 < 20) {
                       var7 = var6 * 256 / 20;
@@ -100,7 +100,7 @@ final class eh {
               } else {
                 field_a = (String) null;
                 if (var6 > 0) {
-                  if (-51 < (var6 ^ -1)) {
+                  if (var6 < 50) {
                     if (var6 >= 20) {
                       if (var6 >= 30) {
                         var7 = 256 * (-var6 + 50) / 20;
@@ -115,7 +115,7 @@ final class eh {
                   }
                 }
                 var6 = gb.field_f - 140;
-                if ((var6 ^ -1) < -1) {
+                if (var6 > 0) {
                   var7 = 256;
                   if (var6 < 20) {
                     var7 = var6 * 256 / 20;
@@ -129,12 +129,12 @@ final class eh {
               var6 = -125 + gb.field_f;
               if (param2 == -51) {
                 if (var6 > 0) {
-                  if (-51 < (var6 ^ -1)) {
+                  if (var6 < 50) {
                     if (var6 >= 20) {
                       if (var6 < 30) {
                         cd.field_l.c(var3, var4, 256);
                         var6 = gb.field_f - 140;
-                        if ((var6 ^ -1) < -1) {
+                        if (var6 > 0) {
                           var7 = 256;
                           if (var6 < 20) {
                             var7 = var6 * 256 / 20;
@@ -146,7 +146,7 @@ final class eh {
                         var7 = 256 * (-var6 + 50) / 20;
                         cd.field_l.c(var3, var4, var7);
                         var6 = gb.field_f - 140;
-                        if ((var6 ^ -1) < -1) {
+                        if (var6 > 0) {
                           var7 = 256;
                           if (var6 < 20) {
                             var7 = var6 * 256 / 20;
@@ -159,7 +159,7 @@ final class eh {
                       var7 = var6 * 256 / 20;
                       cd.field_l.c(var3, var4, var7);
                       var6 = gb.field_f - 140;
-                      if ((var6 ^ -1) < -1) {
+                      if (var6 > 0) {
                         var7 = 256;
                         if (var6 < 20) {
                           var7 = var6 * 256 / 20;
@@ -170,7 +170,7 @@ final class eh {
                     }
                   } else {
                     var6 = gb.field_f - 140;
-                    if ((var6 ^ -1) < -1) {
+                    if (var6 > 0) {
                       var7 = 256;
                       if (var6 < 20) {
                         var7 = var6 * 256 / 20;
@@ -181,7 +181,7 @@ final class eh {
                   }
                 } else {
                   var6 = gb.field_f - 140;
-                  if ((var6 ^ -1) < -1) {
+                  if (var6 > 0) {
                     var7 = 256;
                     if (var6 < 20) {
                       var7 = var6 * 256 / 20;
@@ -193,7 +193,7 @@ final class eh {
               } else {
                 field_a = (String) null;
                 if (var6 > 0) {
-                  if (-51 < (var6 ^ -1)) {
+                  if (var6 < 50) {
                     if (var6 >= 20) {
                       if (var6 >= 30) {
                         var7 = 256 * (-var6 + 50) / 20;
@@ -208,7 +208,7 @@ final class eh {
                   }
                 }
                 var6 = gb.field_f - 140;
-                if ((var6 ^ -1) < -1) {
+                if (var6 > 0) {
                   var7 = 256;
                   if (var6 < 20) {
                     var7 = var6 * 256 / 20;
@@ -221,7 +221,7 @@ final class eh {
           } else {
             vb.b(0, 0, vb.field_f, vb.field_b, 0, -var5 + 256);
             id.a(true);
-            if (-151 >= (gb.field_f ^ -1)) {
+            if (gb.field_f >= 150) {
               bk.field_b.d(15 + var3, var4 + 10, var5);
             } else {
               ki.field_c.d(var3, var4);
@@ -231,7 +231,7 @@ final class eh {
               field_a = (String) null;
               if (var6 <= 0) {
                 var6 = gb.field_f - 140;
-                if ((var6 ^ -1) < -1) {
+                if (var6 > 0) {
                   var7 = 256;
                   if (var6 < 20) {
                     var7 = var6 * 256 / 20;
@@ -240,7 +240,7 @@ final class eh {
                 }
                 return;
               } else {
-                if (-51 < (var6 ^ -1)) {
+                if (var6 < 50) {
                   if (var6 >= 20) {
                     if (var6 >= 30) {
                       var7 = 256 * (-var6 + 50) / 20;
@@ -254,7 +254,7 @@ final class eh {
                   }
                 }
                 var6 = gb.field_f - 140;
-                if ((var6 ^ -1) < -1) {
+                if (var6 > 0) {
                   var7 = 256;
                   if (var6 < 20) {
                     var7 = var6 * 256 / 20;
@@ -265,7 +265,7 @@ final class eh {
               }
             } else {
               if (var6 > 0) {
-                if (-51 < (var6 ^ -1)) {
+                if (var6 < 50) {
                   if (var6 >= 20) {
                     if (var6 >= 30) {
                       var7 = 256 * (-var6 + 50) / 20;
@@ -280,7 +280,7 @@ final class eh {
                 }
               }
               var6 = gb.field_f - 140;
-              if ((var6 ^ -1) < -1) {
+              if (var6 > 0) {
                 var7 = 256;
                 if (var6 < 20) {
                   var7 = var6 * 256 / 20;

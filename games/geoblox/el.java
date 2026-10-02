@@ -56,7 +56,7 @@ class el extends hf {
 
     void a(int param0, int param1, byte param2, int param3) {
         int var5 = 0;
-        if (-1 != (param3 ^ -1)) {
+        if (param3 != 0) {
             var5 = 35 % ((1 - param2) / 43);
             return;
         }
@@ -274,7 +274,7 @@ class el extends hf {
           var5 = this.e((byte) 54) ? 1 : 0;
           if (!param0) {
             if (var5 != 0) {
-              if (-1 == (bi.field_g ^ -1)) {
+              if (bi.field_g == 0) {
                 ij.field_X = gf.field_a;
                 sa.a(this.c((byte) 69), (byte) 72);
                 return param0;
@@ -315,7 +315,7 @@ class el extends hf {
                             }
                             if (var7 != 0) {
                               if (var5 != 0) {
-                                if (-1 != (bi.field_g ^ -1)) {
+                                if (bi.field_g != 0) {
                                   this.d(-126);
                                 }
                               }
@@ -342,7 +342,7 @@ class el extends hf {
                       }
                       if (var7 != 0) {
                         if (var5 != 0) {
-                          if (-1 == (bi.field_g ^ -1)) {
+                          if (bi.field_g == 0) {
                             ij.field_X = gf.field_a;
                             sa.a(this.c((byte) 69), (byte) 72);
                             return param0;
@@ -386,7 +386,7 @@ class el extends hf {
                       }
                       if (var7 != 0) {
                         if (var5 != 0) {
-                          if (-1 != (bi.field_g ^ -1)) {
+                          if (bi.field_g != 0) {
                             this.d(-126);
                           }
                         }
@@ -420,7 +420,7 @@ class el extends hf {
                             }
                             if (var7 != 0) {
                               if (var5 != 0) {
-                                if (-1 != (bi.field_g ^ -1)) {
+                                if (bi.field_g != 0) {
                                   this.d(-126);
                                   ij.field_X = gf.field_a;
                                   sa.a(this.c((byte) 69), (byte) 72);
@@ -466,7 +466,7 @@ class el extends hf {
                       }
                       if (var7 != 0) {
                         if (var5 != 0) {
-                          if (-1 != (bi.field_g ^ -1)) {
+                          if (bi.field_g != 0) {
                             this.d(-126);
                             ij.field_X = gf.field_a;
                             sa.a(this.c((byte) 69), (byte) 72);
@@ -509,7 +509,7 @@ class el extends hf {
                       }
                       if (var7 != 0) {
                         if (var5 != 0) {
-                          if (-1 != (bi.field_g ^ -1)) {
+                          if (bi.field_g != 0) {
                             this.d(-126);
                           }
                         }
@@ -543,7 +543,7 @@ class el extends hf {
                           }
                           if (var7 != 0) {
                             if (var5 != 0) {
-                              if (-1 != (bi.field_g ^ -1)) {
+                              if (bi.field_g != 0) {
                                 this.d(-126);
                               }
                             }
@@ -569,7 +569,7 @@ class el extends hf {
                     }
                     if (var7 != 0) {
                       if (var5 != 0) {
-                        if (-1 == (bi.field_g ^ -1)) {
+                        if (bi.field_g == 0) {
                           ij.field_X = gf.field_a;
                           sa.a(this.c((byte) 69), (byte) 72);
                           return param0;
@@ -612,7 +612,7 @@ class el extends hf {
                     }
                     if (var7 != 0) {
                       if (var5 != 0) {
-                        if (-1 != (bi.field_g ^ -1)) {
+                        if (bi.field_g != 0) {
                           this.d(-126);
                         }
                       }
@@ -928,8 +928,8 @@ class el extends hf {
                       el.b(-45, -75);
                     }
                     var2_int = oc.field_e.a((byte) 110);
-                    if ((var2_int ^ -1) >= -1) {
-                      if (-1 < (var2_int ^ -1)) {
+                    if (var2_int <= 0) {
+                      if (var2_int < 0) {
                         jl.a((byte) -127);
                       } else {
                         if (ll.a((byte) 12) <= 30000L) {

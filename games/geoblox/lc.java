@@ -46,8 +46,8 @@ final class lc {
                       break L5;
                     }
                   }
-                  if ((kb.field_c ^ -1) <= (kc.field_a ^ -1)) {
-                    if (-1 != (ul.field_b ^ -1)) {
+                  if (~kb.field_c <= ~kc.field_a) {
+                    if (ul.field_b != 0) {
                       break L4;
                     } else {
                       if (el.field_o.field_Y) {
@@ -182,7 +182,7 @@ final class lc {
             L2: while (true) {
               L3: {
                 L4: {
-                  if ((var18 ^ -1) > -1) {
+                  if (var18 < 0) {
                     var19 = param5 * (param6 >> -1886768304);
                     if (var37 != 0) {
                       break L3;
@@ -190,7 +190,7 @@ final class lc {
                       var20 = -param9;
                       L5: while (true) {
                         L6: {
-                          if ((var20 ^ -1) > -1) {
+                          if (var20 < 0) {
                             param12 = param11[var19 + (param0 >> -81490640)];
                             param0 = param0 + param3;
                             stackIn_23_0 = param12;
@@ -206,7 +206,7 @@ final class lc {
                                   }
                                 }
                                 var21 = param2[param8];
-                                if ((var21 ^ -1) == -1) {
+                                if (var21 == 0) {
                                   param8++;
                                   if (var37 == 0) {
                                     break L8;
@@ -372,12 +372,12 @@ final class lc {
             }
             var1 = eh.field_d;
             var2 = var1.c((byte) 34);
-            if (-1 == (var2 ^ -1)) {
+            if (var2 == 0) {
               if (ug.field_a == null) {
                 ug.field_a = new vg(128);
                 ca.field_i = 0;
               }
-              if (-2 != (var1.c((byte) 34) ^ -1)) {
+              if (var1.c((byte) 34) != 1) {
                 stackIn_15_0 = 0;
               } else {
                 stackIn_15_0 = 1;
@@ -412,13 +412,13 @@ final class lc {
             } else {
               if (var2 != 1) {
                 if (var2 != 2) {
-                  if (-4 == (var2 ^ -1)) {
-                    if (-3 == (vk.field_a ^ -1)) {
+                  if (var2 == 3) {
+                    if (vk.field_a == 2) {
                       vk.field_a = 1;
                     }
                     decompiledRegionSelector0 = 3;
                   } else {
-                    if (-5 == (var2 ^ -1)) {
+                    if (var2 == 4) {
                       vk.field_a = 1;
                       var3 = var1.e((byte) 122);
                       eg.field_l = ((String) (var3)).intern();

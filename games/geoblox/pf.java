@@ -244,7 +244,7 @@ final class pf extends ee implements ga, pl {
         try {
           if (!super.a(param0, param1, param2, param3)) {
             if (98 != param0) {
-              if (-100 == (param0 ^ -1)) {
+              if (param0 == 99) {
                 stackIn_9_0 = this.a(param3, -109);
                 decompiledRegionSelector0 = 2;
               } else {
@@ -411,14 +411,14 @@ final class pf extends ee implements ga, pl {
                 if (el.b(30000, 1)) {
                   var9 = eh.field_d.c((byte) 34);
                   eh.field_d.field_f = 0;
-                  if (-101 >= (var9 ^ -1)) {
-                    if ((var9 ^ -1) >= -106) {
+                  if (var9 >= 100) {
+                    if (var9 <= 105) {
                       pk.field_l = v.field_l;
                       si.field_i = new String[var9 - 100];
                       break L8;
                     }
                   }
-                  if (-249 != (var9 ^ -1)) {
+                  if (var9 != 248) {
                     if (99 != var9) {
                       pk.field_l = qh.field_F;
                       p.field_k = -1;
@@ -460,7 +460,7 @@ final class pf extends ee implements ga, pl {
             }
             if (pk.field_l == qh.field_F) {
               if (nf.a(false)) {
-                if ((me.field_l ^ -1) != -256) {
+                if (me.field_l != 255) {
                   kh.field_a = eh.field_d.e((byte) 98);
                 } else {
                   var9_ref_String = eh.field_d.i((byte) 53);
@@ -485,7 +485,7 @@ final class pf extends ee implements ga, pl {
                 ck.field_e = true;
                 ac.field_s = var9;
               } else {
-                if ((ll.a((byte) 12) ^ -1L) >= -30001L) {
+                if (ll.a((byte) 12) <= 30000L) {
                   kh.field_a = uj.field_e;
                 } else {
                   kh.field_a = hf.field_e;
@@ -677,7 +677,7 @@ final class pf extends ee implements ga, pl {
                   var3 = 0;
                   for (var5 = 0; var5 < var17.field_f; var5++) {
                     if (var13.field_n[var5] != null) {
-                      if (-3 == (var13.field_n[var5].field_a ^ -1)) {
+                      if (var13.field_n[var5].field_a == 2) {
                         var13.field_j[var5] = -5;
                       }
                       if (var13.field_n[var5].field_a == 0) {
@@ -705,13 +705,13 @@ final class pf extends ee implements ga, pl {
                       } else {
                         try {
                           var7_int = var13.field_k[var6];
-                          if (-1 == (var7_int ^ -1)) {
+                          if (var7_int == 0) {
                             var15 = (java.lang.reflect.Field) (var13.field_n[var6].field_b);
                             var9 = var15.getInt((Object) null);
                             param1.d((byte) 3, 0);
                             param1.c((byte) 95, var9);
                           } else {
-                            if ((var7_int ^ -1) == -2) {
+                            if (var7_int == 1) {
                               var14 = (java.lang.reflect.Field) (var13.field_n[var6].field_b);
                               var8 = var14;
                               var14.setInt((Object) null, var13.field_g[var6]);
@@ -726,7 +726,7 @@ final class pf extends ee implements ga, pl {
                             }
                           }
                           L6: {
-                            if ((var7_int ^ -1) == -4) {
+                            if (var7_int == 3) {
                               var27 = (java.lang.reflect.Method) (var13.field_i[var6].field_b);
                               var24 = var13.field_o[var6];
                               var10 = new Object[var24.length];
@@ -755,7 +755,7 @@ final class pf extends ee implements ga, pl {
                                 break L6;
                               }
                             } else {
-                              if ((var7_int ^ -1) == -5) {
+                              if (var7_int == 4) {
                                 var26 = (java.lang.reflect.Method) (var13.field_i[var6].field_b);
                                 var9 = var26.getModifiers();
                                 param1.d((byte) 123, 0);

@@ -85,7 +85,7 @@ final class ue {
               var8 = 0;
             }
             var9 = (int)Math.ceil(var6 + 7.0);
-            if ((var9 ^ -1) < -15) {
+            if (var9 > 14) {
               var9 = 14;
             }
             var10 = (double)param1 / (double)param0;
@@ -145,7 +145,7 @@ final class ue {
               for (var8 = 0; param1.length > var8; var8++) {
                 var9 = param1[var8];
                 var18 = this.field_a[var7];
-                for (var11 = 0; -15 < (var11 ^ -1); var11++) {
+                for (var11 = 0; var11 < 14; var11++) {
                   var5[var6 + var11] = var5[var6 + var11] + var9 * var18[var11];
                 }
                 var7 = var7 + this.field_h;
@@ -161,7 +161,7 @@ final class ue {
                 if (-128 > var9) {
                   param1[var12] = (byte)-128;
                 } else {
-                  if (-128 <= (var9 ^ -1)) {
+                  if (var9 <= 127) {
                     param1[var12] = (byte)var9;
                   } else {
                     param1[var12] = (byte)127;

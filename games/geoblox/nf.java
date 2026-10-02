@@ -128,7 +128,7 @@ final class nf {
             } else {
               var9 = this.field_O[var8];
               var10 = this.field_q[var8];
-              if ((var10 ^ -1) > (var3 ^ -1)) {
+              if (~var10 > ~var3) {
                 var3 = var10;
               }
               if (var6 < var10) {
@@ -256,14 +256,14 @@ final class nf {
         if (param0) {
             return false;
         }
-        if (!(0 != (p.field_k ^ -1))) {
+        if (!(p.field_k != -1)) {
             if (!el.b(30000, 1)) {
                 return false;
             }
             p.field_k = eh.field_d.c((byte) 34);
             eh.field_d.field_f = 0;
         }
-        if ((p.field_k ^ -1) == 1) {
+        if (p.field_k == -2) {
             if (!(el.b(30000, 2))) {
                 return false;
             }

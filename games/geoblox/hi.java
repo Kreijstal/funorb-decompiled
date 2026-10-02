@@ -190,7 +190,7 @@ final class hi extends ee implements ta, pl {
             L1: {
               var44 = param5;
               if (null != var44.field_n) {
-                if ((var44.field_v ^ -1) < -2) {
+                if (var44.field_v > 1) {
                   var60 = var44.field_n;
                   va.a(0, var60, 0, uh.field_x, (byte) -85);
                   break L1;
@@ -212,7 +212,7 @@ final class hi extends ee implements ta, pl {
                 if (0 > var14) {
                   var14 = -var14;
                 }
-                if ((var14 ^ -1) <= -1) {
+                if (var14 >= 0) {
                   if (128 <= var14) {
                     stackIn_18_0 = 256;
                   } else {
@@ -264,7 +264,7 @@ final class hi extends ee implements ta, pl {
                   if (l.field_i != null) {
                     if (param5.field_G != null) {
                       if (param5.field_G.length > var14) {
-                        if (0 != (param5.field_G[var14] ^ -1)) {
+                        if (param5.field_G[var14] != -1) {
                           if (l.field_i.length > param5.field_G[var14]) {
                             stackIn_40_0 = l.field_i[param5.field_G[var14]];
                             break L8;
@@ -725,7 +725,7 @@ final class hi extends ee implements ta, pl {
           }
           if (!super.a(param0, param1 + 0, param2, param3)) {
             if (98 != param0) {
-              if ((param0 ^ -1) != -100) {
+              if (param0 != 99) {
                 stackIn_12_0 = 0;
                 decompiledRegionSelector0 = 3;
               } else {

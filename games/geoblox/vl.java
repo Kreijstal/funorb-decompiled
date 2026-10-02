@@ -42,7 +42,7 @@ final class vl extends hf {
             var5_int = 1;
             var6 = 0;
             var7 = null;
-            for (var8 = 0; (var8 ^ -1) > -129; var8++) {
+            for (var8 = 0; var8 < 128; var8++) {
               L3: {
                 if (param1 != null) {
                   if (param1[var8] == 0) {
@@ -50,11 +50,11 @@ final class vl extends hf {
                   }
                 }
                 var9 = this.field_h[var8];
-                if (-1 != (var9 ^ -1)) {
+                if (var9 != 0) {
                   if (var9 != var6) {
                     var6 = var9;
                     var9--;
-                    if (-1 != (var9 & 1 ^ -1)) {
+                    if ((var9 & 1) != 0) {
                       var7 = param3.a(var9 >> 2021757378, 1, param0);
                     } else {
                       var7 = param3.a(var9 >> 583212258, param0, false);
@@ -345,7 +345,7 @@ final class vl extends hf {
             this.field_i = new byte[128];
             this.field_o = new byte[128];
             var38 = new qc(param0);
-            for (var3 = 0; -1 != (var38.field_j[var3 + var38.field_f] ^ -1); var3++) {
+            for (var3 = 0; var38.field_j[var3 + var38.field_f] != 0; var3++) {
             }
             var55 = new byte[var3];
             var42 = var55;
@@ -423,7 +423,7 @@ final class vl extends hf {
               }
             }
             var14 = var38.c((byte) 34);
-            if (-1 <= (var14 ^ -1)) {
+            if (var14 <= 0) {
               stackIn_39_0 = null;
             } else {
               stackIn_39_0 = new byte[var14 * 2];
@@ -438,7 +438,7 @@ final class vl extends hf {
             }
             var47 = stackIn_42_0;
             var16 = var47;
-            for (var17 = 0; -1 != (var38.field_j[var17 + var38.field_f] ^ -1); var17++) {
+            for (var17 = 0; var38.field_j[var17 + var38.field_f] != 0; var17++) {
             }
             var54 = new byte[var17];
             var41 = var54;
@@ -454,7 +454,7 @@ final class vl extends hf {
               this.field_j[var20] = (short)var19;
             }
             var19 = 0;
-            for (var20 = 0; (var20 ^ -1) > -129; var20++) {
+            for (var20 = 0; var20 < 128; var20++) {
               var19 = var19 + var38.c((byte) 34);
               this.field_j[var20] = (short)(this.field_j[var20] + (var19 << 878219688));
             }
@@ -462,7 +462,7 @@ final class vl extends hf {
             var21 = 0;
             var22 = 0;
             for (var23 = 0; var23 < 128; var23++) {
-              if (-1 == (var20 ^ -1)) {
+              if (var20 == 0) {
                 if (var54.length > var21) {
                   incrementValue$7 = var21;
                   var21++;
@@ -481,7 +481,7 @@ final class vl extends hf {
             var23 = 0;
             for (var24 = 0; var24 < 128; var24++) {
               if (this.field_h[var24] != 0) {
-                if (-1 == (var20 ^ -1)) {
+                if (var20 == 0) {
                   incrementValue$5 = var5;
                   var5++;
                   var23 = -1 + var38.field_j[incrementValue$5];
@@ -500,7 +500,7 @@ final class vl extends hf {
             var21 = 0;
             var20 = 0;
             var24 = 0;
-            for (var25_int = 0; (var25_int ^ -1) > -129; var25_int++) {
+            for (var25_int = 0; var25_int < 128; var25_int++) {
               if (0 != this.field_h[var25_int]) {
                 if (var20 == 0) {
                   incrementValue$3 = var8;
@@ -643,7 +643,7 @@ final class vl extends hf {
                   var27 = var30;
                   var28 = var31;
                 }
-                for (var30 = var27; -129 < (var30 ^ -1); var30++) {
+                for (var30 = var27; var30 < 128; var30++) {
                   this.field_o[var30] = (byte)(32 + this.field_o[var30] * var28 >> 494611078);
                 }
                 var15 = null;
@@ -665,7 +665,7 @@ final class vl extends hf {
                   if (var30 < 0) {
                     var30 = 0;
                   }
-                  if ((var30 ^ -1) < -129) {
+                  if (var30 > 128) {
                     var30 = 128;
                   }
                   this.field_m[var29] = (byte)var30;
@@ -680,7 +680,7 @@ final class vl extends hf {
                   L43: while (var30 > var37) {
                     var34 = pk.a(var30 + -var27, (byte) -6, var32);
                     var35 = (this.field_m[var37] & 255) - -var34;
-                    if ((var35 ^ -1) > -1) {
+                    if (var35 < 0) {
                       var35 = 0;
                     }
                     if (var35 > 128) {
@@ -694,12 +694,12 @@ final class vl extends hf {
                   var28 = var31;
                   var27 = var30;
                 }
-                for (var30 = var27; (var30 ^ -1) > -129; var30++) {
+                for (var30 = var27; var30 < 128; var30++) {
                   var31 = (this.field_m[var30] & 255) - -var28;
-                  if (-1 < (var31 ^ -1)) {
+                  if (var31 < 0) {
                     var31 = 0;
                   }
-                  if (-129 > (var31 ^ -1)) {
+                  if (var31 > 128) {
                     var31 = 128;
                   }
                   this.field_m[var30] = (byte)var31;
@@ -719,7 +719,7 @@ final class vl extends hf {
               if (var50.field_e != null) {
                 var50.field_a = var38.c((byte) 34);
               }
-              if (-1 > (var50.field_c ^ -1)) {
+              if (var50.field_c > 0) {
                 var50.field_h = var38.c((byte) 34);
               }
             }

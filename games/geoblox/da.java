@@ -16,7 +16,7 @@ final class da {
     }
 
     final static boolean a(int param0, int param1) {
-        if (0 != (param0 ^ -1)) {
+        if (param0 != -1) {
             int var2 = 43 / ((24 - param1) / 50);
             return (field_a & 1 << param0) != 0 ? true : false;
         }

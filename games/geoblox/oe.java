@@ -92,7 +92,7 @@ abstract class oe extends dd {
     }
 
     void b(boolean param0) {
-        if ((this.field_U ^ -1) >= -1) {
+        if (this.field_U <= 0) {
             return;
         }
         if (!param0) {
@@ -195,7 +195,7 @@ abstract class oe extends dd {
             for (var5 = param3; var5 < param0; var5++) {
               var4_int = sb.field_b[(var4_int ^ param1[var5]) & 255] ^ var4_int >>> 1495180680;
             }
-            var4_int = var4_int ^ -1;
+            var4_int = ~var4_int;
             stackIn_6_0 = var4_int;
             break L0;
           }
@@ -226,7 +226,7 @@ abstract class oe extends dd {
         int fieldTemp$0 = 0;
         int var5 = 0;
         int var4 = 0;
-        if ((this.field_U ^ -1) < param0) {
+        if (~this.field_U < param0) {
             var2 = this.field_N;
             var3 = this.field_M;
             fieldTemp$0 = this.field_Q + 1;
@@ -386,18 +386,18 @@ abstract class oe extends dd {
                 var7 = 0;
                 var8 = 0;
                 if (param0) {
-                  for (var9 = 15; -1 >= (var9 ^ -1); var9--) {
-                    if ((var5 & 1 << var9 ^ -1) == -1) {
+                  for (var9 = 15; var9 >= 0; var9--) {
+                    if ((var5 & 1 << var9) == 0) {
                       var7 += 20;
                       var8++;
                     }
                   }
-                  if ((var8 ^ -1) <= -9) {
+                  if (var8 >= 8) {
                     var3_int = var3_int + (-160 + var7);
                   }
                   for (var9 = 0; pg.field_a.length > var9; var9++) {
                     L8: {
-                      if (-1 == (1 << var9 & var5 ^ -1)) {
+                      if ((1 << var9 & var5) == 0) {
                         if (param0) {
                           break L8;
                         }
@@ -435,7 +435,7 @@ abstract class oe extends dd {
                           var4 += 5;
                         }
                         if (param0) {
-                          if ((var8 ^ -1) > -9) {
+                          if (var8 < 8) {
                             var3_int = var3_int + var7;
                           }
                         }
@@ -444,12 +444,12 @@ abstract class oe extends dd {
                   }
                   break L4;
                 } else {
-                  if ((var8 ^ -1) <= -9) {
+                  if (var8 >= 8) {
                     var3_int = var3_int + (-160 + var7);
                   }
                   for (var9 = 0; pg.field_a.length > var9; var9++) {
                     L16: {
-                      if (-1 == (1 << var9 & var5 ^ -1)) {
+                      if ((1 << var9 & var5) == 0) {
                         if (param0) {
                           break L16;
                         }
@@ -487,7 +487,7 @@ abstract class oe extends dd {
                           var4 += 5;
                         }
                         if (param0) {
-                          if ((var8 ^ -1) > -9) {
+                          if (var8 < 8) {
                             var3_int = var3_int + var7;
                           }
                         }
@@ -571,7 +571,7 @@ abstract class oe extends dd {
             }
             return;
           } else {
-            if ((var8 ^ -1) <= (vb.field_i ^ -1)) {
+            if (~var8 <= ~vb.field_i) {
               if (vb.field_d > var8) {
                 L4: {
                   var9 = (-var5 + var6) * var7 / var4 + var5;
@@ -583,8 +583,8 @@ abstract class oe extends dd {
                         break L4;
                       } else {
                         var12 = (-var7 + 20) * (-var7 + 20) - -((-var10 + 20) * (20 - var10));
-                        if ((var12 ^ -1) >= -463) {
-                          if (-421 < (var12 ^ -1)) {
+                        if (var12 <= 462) {
+                          if (var12 < 420) {
                             break L4;
                           } else {
                             var13 = (-var12 + 462) * var9 / 42;
@@ -605,10 +605,10 @@ abstract class oe extends dd {
                   if (20 >= var7) {
                     var12 = var11;
                     var11 -= 21;
-                    L7: for (var13 = 0; -21 <= (var13 ^ -1); var13++) {
+                    L7: for (var13 = 0; var13 <= 20; var13++) {
                       var14 = (-var7 + 20) * (-var7 + 20) - -(var13 * var13);
                       if (var14 <= 462) {
-                        if (-421 < (var14 ^ -1)) {
+                        if (var14 < 420) {
                           var12 = var11 + 1;
                           var11++;
                           continue L7;

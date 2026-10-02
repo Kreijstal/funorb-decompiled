@@ -108,7 +108,7 @@ final class jk {
               jk.a(118);
             }
             if (0 != var2_int) {
-              if (-64 > (var2_int ^ -1)) {
+              if (var2_int > 63) {
                 stackIn_9_0 = hk.field_x;
                 decompiledRegionSelector0 = 1;
               } else {
@@ -116,13 +116,13 @@ final class jk {
                   L3: {
                     var4 = param1.charAt(var3);
                     if (45 != var4) {
-                      if ((pk.field_q.indexOf(var4) ^ -1) == 0) {
+                      if (pk.field_q.indexOf(var4) == -1) {
                         stackIn_21_0 = ii.field_h;
                         decompiledRegionSelector0 = 3;
                         break L0;
                       }
                     } else {
-                      if (-1 != (var3 ^ -1)) {
+                      if (var3 != 0) {
                         if (var3 != -1 + var2_int) {
                           break L3;
                         }
@@ -194,7 +194,7 @@ final class jk {
               L2: while (var3.field_a == 0) {
                 bc.a(0, 10L);
               }
-              if ((var3.field_a ^ -1) != -2) {
+              if (var3.field_a != 1) {
                 bc.a(0, 100L);
                 continue L1;
               } else {

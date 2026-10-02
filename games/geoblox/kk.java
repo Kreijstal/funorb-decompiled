@@ -51,7 +51,7 @@ final class kk extends ji {
             if (this.field_u != null) {
               var2_long = oa.a(-12520);
               var4 = (int)(-this.field_k + var2_long);
-              if (-201 > (var4 ^ -1)) {
+              if (var4 > 200) {
                 var4 = 200;
               }
               this.field_k = var2_long;
@@ -98,7 +98,7 @@ final class kk extends ji {
                       break L4;
                     } else {
                       var3_int = this.field_u.a((byte) 82);
-                      if (-1 >= (var3_int ^ -1)) {
+                      if (var3_int >= 0) {
                         if (var3_int != 0) {
                           this.field_o = 0;
                           var4 = 0;
@@ -137,7 +137,7 @@ final class kk extends ji {
                               this.field_f.field_u = false;
                               this.field_f = null;
                             } else {
-                              if ((this.field_f.field_D ^ -1) == -513) {
+                              if (this.field_f.field_D == 512) {
                                 this.field_f.field_D = 0;
                               }
                             }
@@ -193,7 +193,7 @@ final class kk extends ji {
                                       if (var14_ref == null) {
                                         break L19;
                                       } else {
-                                        if ((var12 ^ -1L) != (var14_ref.field_i ^ -1L)) {
+                                        if (~var12 != ~var14_ref.field_i) {
                                           var14_ref = (sd) ((Object) this.field_e.a(72));
                                           continue L21;
                                         } else {
@@ -257,7 +257,7 @@ final class kk extends ji {
                 this.field_q = -2;
                 this.field_u = null;
                 if (0 == this.a(param0 + -216)) {
-                  if (-1 == (this.a(false) ^ -1)) {
+                  if (this.a(false) == 0) {
                     return true;
                   }
                 }
@@ -309,7 +309,7 @@ final class kk extends ji {
               decompiledRegionSelector0 = 0;
             } else {
               var3_int = param1.length();
-              if (-2 >= (var3_int ^ -1)) {
+              if (var3_int >= 1) {
                 if (12 >= var3_int) {
                   var4 = oe.a(param1, param2 ^ 122);
                   if (var4 == null) {
@@ -337,7 +337,7 @@ final class kk extends ji {
                             }
                           }
                           if (param2 == 118) {
-                            if ((var5 ^ -1) < -1) {
+                            if (var5 > 0) {
                               stackIn_36_0 = 0;
                               decompiledRegionSelector0 = 6;
                               break L0;
@@ -462,7 +462,7 @@ final class kk extends ji {
                         this.field_p.a(116, var4_ref);
                         continue L6;
                       } else {
-                        if (-1 != (this.field_i ^ -1)) {
+                        if (this.field_i != 0) {
                           try {
                             this.field_m.field_f = 0;
                             this.field_m.d((byte) -62, 4);

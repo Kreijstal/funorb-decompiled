@@ -42,7 +42,7 @@ class vf extends hk {
           if (param3) {
             field_I = (qc) null;
           }
-          if (0 != (param2.indexOf('@') ^ -1)) {
+          if (param2.indexOf('@') != -1) {
             var6 = param2;
           } else {
             var7 = (CharSequence) ((Object) param2);

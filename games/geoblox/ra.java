@@ -83,7 +83,7 @@ final class ra implements Iterable {
             ug.field_c = ug.field_c | var3;
             el.field_o.field_e = el.field_o.field_e + 1;
             var4 = param2;
-            if (-1 == (1 << var4 & dc.field_a ^ -1)) {
+            if ((1 << var4 & dc.field_a) == 0) {
               stackIn_8_0 = 0;
             } else {
               stackIn_8_0 = 1;

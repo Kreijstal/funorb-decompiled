@@ -32,7 +32,7 @@ final class sb {
           field_a = -60;
         }
         L1: {
-          if (-11 >= (hj.field_a ^ -1)) {
+          if (hj.field_a >= 10) {
             if (!hl.field_G) {
               if (!t.b(13)) {
                 stackIn_7_0 = 1;

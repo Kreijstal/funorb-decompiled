@@ -370,7 +370,7 @@ class qk {
                     L5: while (var9 != 0) {
                       L6: {
                         if ((var9 & 1) != 0) {
-                          var5 = var5 & (1 << var7_int ^ -1);
+                          var5 = var5 & ~(1 << var7_int);
                           var10 = null;
                           var11 = this.field_a[var7_int];
                           var14 = var11;

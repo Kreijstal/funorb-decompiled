@@ -67,7 +67,7 @@ final class ld {
                   stackIn_11_0 = 1;
                   decompiledRegionSelector0 = 2;
                 } else {
-                  if (-1 != (vb.field_c[var4] ^ -1)) {
+                  if (vb.field_c[var4] != 0) {
                     stackIn_15_0 = 1;
                     decompiledRegionSelector0 = 3;
                   } else {
@@ -235,8 +235,8 @@ final class ld {
           if ((kd.field_f[ji.field_h] & 1) != 0) {
             if (ag.field_k >= 7) {
               if (!param0) {
-                if (-1 != (kd.field_f[ji.field_h] & 2 ^ -1)) {
-                  if ((f.field_qb ^ -1) > -8) {
+                if ((kd.field_f[ji.field_h] & 2) != 0) {
+                  if (f.field_qb < 7) {
                     f.field_qb = f.field_qb + 1;
                   } else {
                     if (0 == (kd.field_f[ji.field_h] & 16)) {
@@ -363,8 +363,8 @@ final class ld {
                 }
               } else {
                 ld.b(true);
-                if (-1 != (kd.field_f[ji.field_h] & 2 ^ -1)) {
-                  if ((f.field_qb ^ -1) > -8) {
+                if ((kd.field_f[ji.field_h] & 2) != 0) {
+                  if (f.field_qb < 7) {
                     f.field_qb = f.field_qb + 1;
                   } else {
                     if (0 != (kd.field_f[ji.field_h] & 16)) {
@@ -440,8 +440,8 @@ final class ld {
               if (param0) {
                 ld.b(true);
               }
-              if (-1 != (kd.field_f[ji.field_h] & 2 ^ -1)) {
-                if ((f.field_qb ^ -1) > -8) {
+              if ((kd.field_f[ji.field_h] & 2) != 0) {
+                if (f.field_qb < 7) {
                   f.field_qb = f.field_qb + 1;
                 }
               }
@@ -467,7 +467,7 @@ final class ld {
           } else {
             if (param0) {
               ld.b(true);
-              if (-1 == (kd.field_f[ji.field_h] & 2 ^ -1)) {
+              if ((kd.field_f[ji.field_h] & 2) == 0) {
                 if (0 != (kd.field_f[ji.field_h] & 16)) {
                   sa.field_c = sa.field_c + 0.05;
                 }
@@ -487,7 +487,7 @@ final class ld {
                 }
                 return;
               } else {
-                if ((f.field_qb ^ -1) > -8) {
+                if (f.field_qb < 7) {
                   f.field_qb = f.field_qb + 1;
                 }
                 if (0 != (kd.field_f[ji.field_h] & 16)) {
@@ -510,8 +510,8 @@ final class ld {
                 return;
               }
             } else {
-              if (-1 != (kd.field_f[ji.field_h] & 2 ^ -1)) {
-                if ((f.field_qb ^ -1) > -8) {
+              if ((kd.field_f[ji.field_h] & 2) != 0) {
+                if (f.field_qb < 7) {
                   f.field_qb = f.field_qb + 1;
                 }
               }

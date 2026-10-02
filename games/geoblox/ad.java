@@ -298,7 +298,7 @@ final class ad extends ia {
                       var9 = var10;
                     }
                     var11 = param4.field_u;
-                    if (-1 == (this.field_k.field_u[param4.field_t] ^ -1)) {
+                    if (this.field_k.field_u[param4.field_t] == 0) {
                       param4.field_u = kl.a(param4.field_i, var11.h(), var11.i(), var11.k());
                     } else {
                       param4.field_u = kl.a(param4.field_i, var11.h(), 0, var11.k());
@@ -308,7 +308,7 @@ final class ad extends ia {
 
                       stackIn_11_2 = -70;
 
-                      if (-1 >= (param4.field_z.field_j[param4.field_D] ^ -1)) {
+                      if (param4.field_z.field_j[param4.field_D] >= 0) {
                         stackIn_12_0 = (kj) ((Object) stackIn_11_0);
                         stackIn_12_1 = (pc) ((Object) stackIn_11_1);
                         stackIn_12_2 = stackIn_11_2;
@@ -322,7 +322,7 @@ final class ad extends ia {
                       ((kj) (Object) stackIn_12_0).a(stackIn_12_1, (byte) stackIn_12_2, stackIn_12_3 != 0);
                       param4.field_u.c(var9, var11.i());
                     }
-                    if (-1 < (param4.field_z.field_j[param4.field_D] ^ -1)) {
+                    if (param4.field_z.field_j[param4.field_D] < 0) {
                       param4.field_u.g(-1);
                     }
                     var11.c(var9);

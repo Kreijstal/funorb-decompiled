@@ -16,7 +16,7 @@ abstract class dk {
         lk[] var3 = var7;
         for (var4 = 0; var7.length > var4; var4++) {
             var5 = var7[var4];
-            if ((var5.field_c.length ^ -1) < (param0 ^ -1)) {
+            if (~var5.field_c.length < ~param0) {
                 return var5.field_c[param0];
             }
             param0 = param0 - (var5.field_c.length - 1);
@@ -99,7 +99,7 @@ abstract class dk {
             var8 = 20 / ((-30 - param0) / 56);
             for (var9 = 0; var9 < var7; var9++) {
               var10 = param3.charAt(var9);
-              if ((var10 ^ -1) != -61) {
+              if (var10 != 60) {
                 if (var10 != 62) {
                   if (var6 == 0) {
                     if (32 == var10) {
@@ -220,7 +220,7 @@ abstract class dk {
         }
         L1: {
           if (null != this.field_a) {
-            if (-1 > (this.field_a.length ^ -1)) {
+            if (this.field_a.length > 0) {
               stackIn_7_0 = this.field_a[this.field_a.length - 1].field_a + -this.field_a[0].field_d;
               break L1;
             }
@@ -261,7 +261,7 @@ abstract class dk {
               if (this.field_a[-1 + this.field_a.length].field_a < param2) {
                 return -1;
               } else {
-                if (-2 != (this.field_a.length ^ -1)) {
+                if (this.field_a.length != 1) {
                   var4 = 0;
                   var5 = -2 % ((15 - param1) / 32);
                   for (var6 = 0; var6 < this.field_a.length; var6++) {

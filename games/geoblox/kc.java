@@ -569,14 +569,14 @@ final class kc {
 
                             stackIn_88_2 = 117;
 
-                            if ((var2_ref_ja.field_z ^ -1) != -5) {
+                            if (var2_ref_ja.field_z != 4) {
 
 
 
 
 
 
-                              if ((var2_ref_ja.field_z ^ -1) != -4) {
+                              if (var2_ref_ja.field_z != 3) {
                                 stackIn_90_0 = stackIn_88_0;
                                 stackIn_90_1 = stackIn_88_1;
                                 stackIn_90_2 = stackIn_88_2;
@@ -665,7 +665,7 @@ final class kc {
                 }
                 stackIn_112_0.field_F = stackIn_112_1 != 0;
                 w.field_f = false;
-                if (-4 >= (var1_int ^ -1)) {
+                if (var1_int >= 3) {
                   ra.a(255 ^ fe.field_f, -88, fe.field_f);
                 }
                 if (rb.field_b >= 5) {

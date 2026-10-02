@@ -18,7 +18,7 @@ final class ei extends qf {
         java.awt.Canvas var5 = null;
         var4 = Geoblox.field_C;
         try {
-          if (-11 < (mi.field_C ^ -1)) {
+          if (mi.field_C < 10) {
             var3_int = 0;
             if (dl.field_c) {
               var3_int = 1;

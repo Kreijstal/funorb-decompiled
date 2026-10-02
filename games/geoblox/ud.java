@@ -153,7 +153,7 @@ final class ud {
                     var11.a(false);
                   }
                 } else {
-                  if ((var2 ^ -1) == -3) {
+                  if (var2 == 2) {
                     var15 = (qi) ((Object) k.field_e.g(0));
                     if (var15 == null) {
                       jl.a((byte) -115);

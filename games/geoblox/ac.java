@@ -164,7 +164,7 @@ class ac extends ff {
                         break L5;
                       }
                     }
-                    if (-1 == (1 << var10 & var5 ^ -1)) {
+                    if ((1 << var10 & var5) == 0) {
                       var9++;
                       var8 += 20;
                     }
@@ -178,7 +178,7 @@ class ac extends ff {
             }
             L8: for (var10 = 0; var10 < pg.field_a.length; var10++) {
               if (!da.a(0, -119)) {
-                if (-17 == (var10 ^ -1)) {
+                if (var10 == 16) {
                   if (!qi.d(105)) {
                     continue L8;
                   }
@@ -195,7 +195,7 @@ class ac extends ff {
                     if (var4 <= ue.field_e) {
                       if (32 + var4 >= ue.field_e) {
                         vb.c(var3_int, var4, 32, 32, 2, 16689938);
-                        if (-1 < (var7 ^ -1)) {
+                        if (var7 < 0) {
                           var7 = var10;
                         }
                         vb.a(2 + var3_int, var4 + 2, 28, 28, 2, 16777215);
@@ -219,14 +219,14 @@ class ac extends ff {
               }
               incrementValue$0 = var6;
               var6++;
-              if ((incrementValue$0 ^ -1) == -8) {
+              if (incrementValue$0 == 7) {
                 var4 += 40;
                 var3_int = 160;
                 if (!param0) {
                   var4 += 5;
                 }
                 if (param1) {
-                  if ((var9 ^ -1) > -9) {
+                  if (var9 < 8) {
                     var3_int = var3_int + var8;
                   }
                 } else {
@@ -247,7 +247,7 @@ class ac extends ff {
             }
             L10: {
               var10 = stackIn_60_0 + stackIn_60_1;
-              if ((var7 ^ -1) == 0) {
+              if (var7 == -1) {
                 fi.field_d.b(w.field_a, 315, var10, 0, -1);
                 if (fh.c(-94)) {
                   dd.field_G.a(ni.field_C, 125, 350, 395, 100, 0, -1, 1, 0, 26);

@@ -269,18 +269,18 @@ final class vc extends dk {
               var17 = var16;
               var10 = Math.max(1, param4.a(param2, new int[]{param5}, var17));
               if (this.field_m == 3) {
-                if (-2 == (var10 ^ -1)) {
+                if (var10 == 1) {
                   this.field_m = 1;
                 }
               }
               this.field_a = new lk[var10];
-              if (-1 != (this.field_m ^ -1)) {
-                if (-2 != (this.field_m ^ -1)) {
+              if (this.field_m != 0) {
+                if (this.field_m != 1) {
                   if (this.field_m == 2) {
                     var11 = -param4.field_q + this.field_o - var10 * this.field_e;
                   } else {
                     var12 = (-(this.field_e * var10) + this.field_o) / (var10 - -1);
-                    if ((var12 ^ -1) > -1) {
+                    if (var12 < 0) {
                       var12 = 0;
                     }
                     this.field_e = this.field_e + var12;

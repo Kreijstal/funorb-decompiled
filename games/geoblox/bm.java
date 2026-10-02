@@ -80,8 +80,8 @@ final class bm {
             var18 = new qc(v.a(param1, -1));
             var4 = var18.c((byte) 34);
             if (5 <= var4) {
-              if ((var4 ^ -1) >= -8) {
-                if (-7 < (var4 ^ -1)) {
+              if (var4 <= 7) {
+                if (var4 < 6) {
                   this.field_g = 0;
                 } else {
                   this.field_g = var18.a((byte) -121);
@@ -99,7 +99,7 @@ final class bm {
                   stackIn_14_0 = 1;
                 }
                 var7 = stackIn_14_0;
-                if (-8 >= (var4 ^ -1)) {
+                if (var4 >= 7) {
                   this.field_h = var18.d((byte) -27);
                 } else {
                   this.field_h = var18.b(true);
@@ -192,7 +192,7 @@ final class bm {
                         dupTemp$4 = this.field_o[var11];
                         dupTemp$4[var14] = dupTemp$3;
                         var15 = dupTemp$3;
-                        if ((var13 ^ -1) > (var15 ^ -1)) {
+                        if (~var13 > ~var15) {
                           var13 = var15;
                         }
                       }
@@ -232,7 +232,7 @@ final class bm {
                             dupTemp$7 = this.field_o[var11];
                             dupTemp$7[var14] = dupTemp$6;
                             var15 = dupTemp$6;
-                            if ((var13 ^ -1) > (var15 ^ -1)) {
+                            if (~var13 > ~var15) {
                               var13 = var15;
                               var14++;
                               continue L28;
@@ -344,7 +344,7 @@ final class bm {
                 throw new RuntimeException();
             }
             if (param2 != null) {
-                if ((param2.length ^ -1) != -65) {
+                if (param2.length != 64) {
                     throw new RuntimeException();
                 }
                 this.field_c = wh.a(param0.length, 0, param0, 8);

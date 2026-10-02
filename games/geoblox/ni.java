@@ -214,7 +214,7 @@ final class ni extends ee implements pl {
             L1: for (var6_int = 0; var6_int < this.field_D; var6_int++) {
               if (param4 == this.field_F[var6_int]) {
                 var7 = this.field_H[var6_int];
-                if ((var7 ^ -1) != 0) {
+                if (var7 != -1) {
                   pc.a(this.field_H[var6_int], false);
                 } else {
                   this.field_J.h((byte) -104);

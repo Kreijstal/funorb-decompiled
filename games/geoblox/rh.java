@@ -41,7 +41,7 @@ final class rh {
             var2 = (ja) ((Object) a.field_d.g(0));
             L2: while (var2 != null) {
               var2.field_E = var2.field_E - 1;
-              if (-1 == (var2.field_E ^ -1)) {
+              if (var2.field_E == 0) {
                 ab.field_f = true;
               }
               if (null == var2.field_K) {
@@ -129,7 +129,7 @@ final class rh {
               param1 = param1.toLowerCase();
               var4 = (CharSequence) ((Object) param1);
               var3_int = this.field_c.field_n.a(true, ab.a(94, var4));
-              if ((var3_int ^ -1) > -1) {
+              if (var3_int < 0) {
                 stackIn_9_0 = 0;
                 decompiledRegionSelector0 = 2;
               } else {
@@ -214,7 +214,7 @@ final class rh {
         if (!(this.a(0))) {
             return false;
         }
-        if (0 > param2 || (param0 ^ -1) > -1 || this.field_c.field_k.length <= param2 || this.field_c.field_k[param2] <= param0) {
+        if (0 > param2 || param0 < 0 || this.field_c.field_k.length <= param2 || this.field_c.field_k[param2] <= param0) {
             if (!vf.field_K) {
                 return false;
             }
@@ -357,7 +357,7 @@ final class rh {
         if (param1 != 3) {
             field_j = (String) null;
         }
-        if ((param0 ^ -1) <= -1 && param0 < this.field_c.field_k.length && this.field_c.field_k[param0] != 0) {
+        if (param0 >= 0 && param0 < this.field_c.field_k.length && this.field_c.field_k[param0] != 0) {
             return true;
         }
         if (vf.field_K) {
@@ -380,7 +380,7 @@ final class rh {
         if (!this.a(0)) {
             return null;
         }
-        if (!(-2 != (this.field_c.field_k.length ^ -1))) {
+        if (!(this.field_c.field_k.length != 1)) {
             return this.a(0, param0 + -56472, param1);
         }
         if (param0 != 28319) {
@@ -507,8 +507,8 @@ final class rh {
                   L5: {
                     L6: {
                       if (param2 != null) {
-                        if (-1 == (param2[0] ^ -1)) {
-                          if (-1 == (param2[1] ^ -1)) {
+                        if (param2[0] == 0) {
+                          if (param2[1] == 0) {
                             if (param2[2] == 0) {
                               if (0 == param2[3]) {
                                 break L6;
@@ -554,19 +554,19 @@ final class rh {
                       this.field_f[param3] = null;
                     }
                     L11: {
-                      if (-2 <= (var5_int ^ -1)) {
+                      if (var5_int <= 1) {
                         if (var6 != null) {
                           var11 = var33[0];
                         } else {
                           var11 = 0;
                         }
-                        if (-1 != (this.field_b ^ -1)) {
+                        if (this.field_b != 0) {
                           var7[var11] = var35;
                         } else {
                           var7[var11] = hf.a(-113, var35, false);
                         }
                       } else {
-                        if (-3 == (this.field_b ^ -1)) {
+                        if (this.field_b == 2) {
                           var11 = var35.length;
                           var11--;
                           var12 = 255 & var22[var11];
@@ -793,13 +793,13 @@ final class rh {
                   }
                 }
                 if (var5 != null) {
-                  if (-2 == (this.field_b ^ -1)) {
+                  if (this.field_b == 1) {
                     this.field_e[param0][param3] = null;
-                    if (-2 == (this.field_c.field_k[param0] ^ -1)) {
+                    if (this.field_c.field_k[param0] == 1) {
                       this.field_e[param0] = null;
                     }
                   } else {
-                    if (-3 == (this.field_b ^ -1)) {
+                    if (this.field_b == 2) {
                       this.field_e[param0] = null;
                     }
                   }
@@ -979,7 +979,7 @@ final class rh {
                   return 100;
                 }
               } else {
-                if (-1 > (this.field_c.field_a[var4] ^ -1)) {
+                if (this.field_c.field_a[var4] > 0) {
                   var3 = var3 + this.b((byte) 59, var4);
                   var2 += 100;
                   var4++;
@@ -1239,8 +1239,8 @@ final class rh {
               }
               break;
             }
-            L7: while ((var2_long % 37L ^ -1L) == -1L) {
-              if (-1L != (var2_long ^ -1L)) {
+            L7: while (var2_long % 37L == 0L) {
+              if (var2_long != 0L) {
                 var2_long = var2_long / 37L;
                 continue L7;
               }

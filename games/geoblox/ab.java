@@ -74,14 +74,14 @@ final class ab {
               decompiledRegionSelector0 = 0;
             } else {
               var3_int = param2.length();
-              if ((var3_int ^ -1) <= -2) {
-                if ((var3_int ^ -1) >= -13) {
+              if (var3_int >= 1) {
+                if (var3_int <= 12) {
                   var4 = oe.a(param2, 12);
                   if (param1 != 2) {
                     ab.a((byte) 112);
                   }
                   if (var4 != null) {
-                    if ((var4.length() ^ -1) <= -2) {
+                    if (var4.length() >= 1) {
                       if (!gg.a((byte) -32, var4.charAt(0))) {
                         if (!gg.a((byte) -75, var4.charAt(-1 + var4.length()))) {
                           var5 = 0;
@@ -100,7 +100,7 @@ final class ab {
                               }
                             }
                           }
-                          if (-1 > (var5 ^ -1)) {
+                          if (var5 > 0) {
                             stackIn_36_0 = c.field_r;
                             decompiledRegionSelector0 = 5;
                             break L0;
@@ -317,7 +317,7 @@ final class ab {
                       var3_float = 320.0f - var2.field_o;
                       var4_float = 240.0f - var2.field_v;
                       var5 = -(var4_float * var2.field_o) + var2.field_v * var3_float;
-                      if (-1 == (var2.field_L ^ -1)) {
+                      if (var2.field_L == 0) {
                         if (var5 * var5 > 0.30000001192092896f) {
                           var2.field_w = var3_float;
                           var2.field_F = var4_float;
@@ -339,7 +339,7 @@ final class ab {
                       var2.field_n[var3].a(var2, 0);
                     }
                     var2.field_L = 0;
-                    if ((var2.field_z ^ -1) != -3) {
+                    if (var2.field_z != 2) {
                       stackIn_17_0 = 0;
                     } else {
                       stackIn_17_0 = 1;
@@ -352,7 +352,7 @@ final class ab {
                           break L12;
                         }
                       }
-                      if ((var2.field_z ^ -1) != -3) {
+                      if (var2.field_z != 2) {
                         var2.field_u = var2.field_u - param1;
                       }
                       var2.field_v = (float)td.field_E;

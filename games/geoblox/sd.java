@@ -98,11 +98,11 @@ final class sd extends pb {
         var19 = Geoblox.field_C;
         try {
           L0: {
-            if (-1 >= (param5 ^ -1)) {
+            if (param5 >= 0) {
               if (param8 < mh.field_h) {
                 if (0 > param1) {
-                  if ((param0 ^ -1) > -1) {
-                    if ((param6 ^ -1) > -1) {
+                  if (param0 < 0) {
+                    if (param6 < 0) {
                       decompiledRegionSelector0 = 1;
                       break L0;
                     }
@@ -138,7 +138,7 @@ final class sd extends pb {
                     var12 = 0;
                   }
                   var13 = 0;
-                  if ((param8 ^ -1) > -1) {
+                  if (param8 < 0) {
                     param8 = Math.min(-param8, -param8 + param7);
                     var10 = var10 + var12 * param8;
                     var9_int = var9_int + param8 * var11;
@@ -181,7 +181,7 @@ final class sd extends pb {
                         var17 = var9_int >> 1475495536;
                         if (mh.field_c > var17) {
                           var18 = (var10 >> 1486250608) - (var9_int >> -1222284624);
-                          if (-1 != (var18 ^ -1)) {
+                          if (var18 != 0) {
                             if (var17 - -var18 >= mh.field_c) {
                               var18 = -1 + (-var17 + mh.field_c);
                             }
@@ -191,7 +191,7 @@ final class sd extends pb {
                               ib.a(57, param4, var16, param2, var17 + var18);
                             }
                           } else {
-                            if (-1 >= (var17 ^ -1)) {
+                            if (var17 >= 0) {
                               if (mh.field_c > var17) {
                                 ib.a(-61, param4, var17 + var16, param2, var18);
                               }
@@ -212,7 +212,7 @@ final class sd extends pb {
                     }
                   }
                   var16 = -param7 + param5;
-                  if (-1 == (var16 ^ -1)) {
+                  if (var16 == 0) {
                     var12 = 0;
                     var11 = 0;
                   } else {
@@ -243,7 +243,7 @@ final class sd extends pb {
                     if (mh.field_c > var17) {
                       var18 = (var10 >> -963505040) + -(var9_int >> -130429392);
                       if (var18 == 0) {
-                        if ((var17 ^ -1) <= -1) {
+                        if (var17 >= 0) {
                           if (mh.field_c > var17) {
                             ib.a(-67, param4, var17 - -var15, param2, var18);
                           }

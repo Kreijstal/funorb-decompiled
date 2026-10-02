@@ -25,7 +25,7 @@ final class ak {
           L0: {
             if (param2 <= -67) {
               var3 = bj.a(32, param1);
-              if ((param0.indexOf(param1) ^ -1) == 0) {
+              if (param0.indexOf(param1) == -1) {
                 if (-1 == param0.indexOf(var3)) {
                   L2: {
                     if (!param0.startsWith(param1)) {

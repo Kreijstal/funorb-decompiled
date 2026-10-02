@@ -43,7 +43,7 @@ class dj extends hk {
         try {
           super.a(param0, param1, param2, param3);
           this.j(-115);
-          if (-2 == (this.field_f ^ -1)) {
+          if (this.field_f == 1) {
             if (this.field_q instanceof cc) {
               var7 = (cc) ((Object) this.field_q);
               var6 = var7.a((el) (this), qa.field_a, -15539, param1, ue.field_e, param3);
@@ -177,7 +177,7 @@ class dj extends hk {
             var3_int = -6 / ((param1 - 63) / 50);
             if (this.field_M != -1) {
               var4 = this.field_M + -this.field_s.length();
-              if (-1 < (var4 ^ -1)) {
+              if (var4 < 0) {
                 param0 = param0.substring(0, var4);
               } else {
                 decompiledRegionSelector0 = 0;
@@ -264,7 +264,7 @@ class dj extends hk {
                 var8_int = ((cc) ((Object) this.field_q)).a((el) (this), qa.field_a, -15539, param0, ue.field_e, param2);
                 stackIn_4_0 = this;
 
-                if ((var8_int ^ -1) != 0) {
+                if (var8_int != -1) {
                   stackIn_5_0 = this;
                   stackIn_5_1 = var8_int;
                 } else {
@@ -275,7 +275,7 @@ class dj extends hk {
                 var8_long = oa.a(-12520);
                 stackIn_7_0 = this;
 
-                if (-251L >= (var8_long - this.field_P ^ -1L)) {
+                if (var8_long - this.field_P >= 250L) {
                   stackIn_8_0 = this;
                   stackIn_8_1 = 0;
                 } else {
@@ -287,7 +287,7 @@ class dj extends hk {
                   this.field_L = this.j((byte) 77);
                   this.field_H = this.h((byte) -57);
                   if (0 < this.field_H) {
-                    if (-33 == (this.field_s.charAt(this.field_H + -1) ^ -1)) {
+                    if (this.field_s.charAt(this.field_H + -1) == 32) {
                       this.field_H = this.field_H - 1;
                     }
                   }
@@ -363,7 +363,7 @@ class dj extends hk {
                   var6.a(this.field_L, 0, param1, param0, this.field_H, (el) (this));
                 }
                 var7 = oa.a(-12520);
-                if (((-this.field_O + var7) % 1000L ^ -1L) > -501L) {
+                if ((-this.field_O + var7) % 1000L < 500L) {
                   var6.a(param0, this.field_H, -2, (el) (this), param1);
                   break L0;
                 }
@@ -388,7 +388,7 @@ class dj extends hk {
         var3 = Geoblox.field_C;
         if (0 != this.field_H) {
           if (param0 == 77) {
-            L0: for (var2 = this.field_H + -1; -1 > (var2 ^ -1); var2--) {
+            L0: for (var2 = this.field_H + -1; var2 > 0; var2--) {
               if (this.field_s.charAt(var2 - 1) != 32) {
                 continue L0;
               }
@@ -408,7 +408,7 @@ class dj extends hk {
             return;
         }
         String var2 = this.k((byte) -128);
-        if ((var2.length() ^ -1) < -1) {
+        if (var2.length() > 0) {
             java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) ((Object) new java.awt.datatransfer.StringSelection(this.k((byte) -117))), (java.awt.datatransfer.ClipboardOwner) null);
         }
     }
@@ -493,7 +493,7 @@ class dj extends hk {
                       break L0;
                     }
                   }
-                  if ((param0 ^ -1) == -86) {
+                  if (param0 == 85) {
                     if (this.field_H == this.field_L) {
                       if (0 < this.field_H) {
                         this.field_L = this.field_H + -1;
@@ -516,7 +516,7 @@ class dj extends hk {
                         decompiledRegionSelector0 = 12;
                         break L0;
                       } else {
-                        if (-97 == (param0 ^ -1)) {
+                        if (param0 == 96) {
                           if (0 < this.field_H) {
                             stackIn_54_0 = this;
 
@@ -533,7 +533,7 @@ class dj extends hk {
                             break L0;
                           }
                         } else {
-                          if (-98 == (param0 ^ -1)) {
+                          if (param0 == 97) {
                             if (this.field_H < this.field_s.length()) {
                               stackIn_47_0 = this;
 
@@ -557,7 +557,7 @@ class dj extends hk {
                                 decompiledRegionSelector0 = 9;
                                 break L0;
                               } else {
-                                if (-85 != (param0 ^ -1)) {
+                                if (param0 != 84) {
                                   if (kj.field_o[82]) {
                                     if (param0 == 65) {
                                       this.h(112);
@@ -567,7 +567,7 @@ class dj extends hk {
                                     }
                                   }
                                   if (kj.field_o[82]) {
-                                    if (-67 == (param0 ^ -1)) {
+                                    if (param0 == 66) {
                                       this.i(-23161);
                                       stackIn_36_0 = 1;
                                       decompiledRegionSelector0 = 7;
@@ -743,7 +743,7 @@ class dj extends hk {
                     this.field_k = this.field_k - (-var6 + var7);
                   }
                 }
-                if ((this.field_k ^ -1) >= -1) {
+                if (this.field_k <= 0) {
                   if (var6 + -var5 > this.field_k) {
                     this.field_k = var6 + -var5;
                   }
@@ -781,7 +781,7 @@ class dj extends hk {
           }
           this.field_s = param1;
           var5 = param1.length();
-          if (0 != (this.field_M ^ -1)) {
+          if (this.field_M != -1) {
             if (this.field_M < var5) {
               this.field_s = this.field_s.substring(0, this.field_M);
             }

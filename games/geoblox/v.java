@@ -79,15 +79,15 @@ final class v {
               var3 = var9.c((byte) 34);
               var4 = var9.a((byte) -97);
               if (var4 >= 0) {
-                if (-1 != (uj.field_b ^ -1)) {
+                if (uj.field_b != 0) {
                   if (var4 > uj.field_b) {
                     break L1;
                   }
                 }
-                if (param1 != (var3 ^ -1)) {
+                if (param1 != ~var3) {
                   L3: {
                     var5 = var9.a((byte) -49);
-                    if ((var5 ^ -1) <= -1) {
+                    if (var5 >= 0) {
                       if (uj.field_b != 0) {
                         if (uj.field_b < var5) {
                           break L3;
@@ -96,7 +96,7 @@ final class v {
                       var13 = new byte[var5];
                       var11 = var13;
                       var6 = var11;
-                      if (-2 == (var3 ^ -1)) {
+                      if (var3 == 1) {
                         tb.a(var13, var5, param0, var4, 9);
                       } else {
                         var7 = sc.field_b;
@@ -164,7 +164,7 @@ final class v {
           return;
         } else {
           if (param0 < -108) {
-            if ((og.field_n ^ -1) < -1) {
+            if (og.field_n > 0) {
               if (this.field_t) {
                 fieldTemp$0 = this.field_c - 1;
                 this.field_c = this.field_c - 1;
@@ -263,7 +263,7 @@ final class v {
             }
           } else {
             this.field_a = -79;
-            if ((og.field_n ^ -1) >= -1) {
+            if (og.field_n <= 0) {
               this.field_t = false;
               if (this.field_t) {
                 fieldTemp$2 = this.field_c - 1;

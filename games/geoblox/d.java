@@ -117,8 +117,8 @@ final class d implements Runnable {
                 L7: {
                   var2_int = var9.field_d;
                   if (1 != var2_int) {
-                    if (-23 != (var2_int ^ -1)) {
-                      if ((var2_int ^ -1) != -3) {
+                    if (var2_int != 22) {
+                      if (var2_int != 2) {
                         if (4 == var2_int) {
                           if (oa.a(-12520) < field_m) {
                             throw new IOException();
@@ -126,7 +126,7 @@ final class d implements Runnable {
                             var9.field_b = new DataInputStream(((java.net.URL) (var9.field_f)).openStream());
                           }
                         } else {
-                          if ((var2_int ^ -1) == -9) {
+                          if (var2_int == 8) {
                             var18 = (Object[]) (var9.field_f);
                             if (this.field_h) {
                               if (((Class) (var18[0])).getClassLoader() == null) {
@@ -135,7 +135,7 @@ final class d implements Runnable {
                             }
                             var9.field_b = ((Class) (var18[0])).getDeclaredMethod((String) (var18[1]), (Class[]) (var18[2]));
                           } else {
-                            if ((var2_int ^ -1) == -10) {
+                            if (var2_int == 9) {
                               var17 = (Object[]) (var9.field_f);
                               if (this.field_h) {
                                 if (null == ((Class) (var17[0])).getClassLoader()) {
@@ -156,16 +156,16 @@ final class d implements Runnable {
                                   if (!this.field_h) {
                                     throw d.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
                                   } else {
-                                    if (-4 == (var2_int ^ -1)) {
-                                      if ((oa.a(-12520) ^ -1L) > (field_m ^ -1L)) {
+                                    if (var2_int == 3) {
+                                      if (~oa.a(-12520) > ~field_m) {
                                         throw new IOException();
                                       } else {
                                         var14 = (255 & var9.field_c >> -411661352) + "." + ((var9.field_c & 16718053) >> -1690845136) + "." + (var9.field_c >> -2059917432 & 255) + "." + (255 & var9.field_c);
                                         var9.field_b = java.net.InetAddress.getByName(var14).getHostName();
                                       }
                                     } else {
-                                      if (-22 == (var2_int ^ -1)) {
-                                        if ((oa.a(-12520) ^ -1L) <= (field_m ^ -1L)) {
+                                      if (var2_int == 21) {
+                                        if (~oa.a(-12520) <= ~field_m) {
                                           var9.field_b = java.net.InetAddress.getByName((String) (var9.field_f)).getAddress();
                                         } else {
                                           throw new IOException();
@@ -182,7 +182,7 @@ final class d implements Runnable {
                                               Class.forName("pd").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.field_e, new Object[]{var13, new Integer(var9.field_c >>> 711185008), new Integer(var9.field_c & 65535), new Integer(var9.field_g >> 2054285520), new Integer(var9.field_g & 65535)});
                                             }
                                           } else {
-                                            if ((var2_int ^ -1) == -8) {
+                                            if (var2_int == 7) {
                                               if (this.field_l) {
                                                 this.field_w.a(111, (java.awt.Frame) (var9.field_f));
                                               } else {
@@ -193,7 +193,7 @@ final class d implements Runnable {
                                                 var3_ref = d.a((byte) -103, field_f, field_p, (String) (var9.field_f));
                                                 var9.field_b = var3_ref;
                                               } else {
-                                                if ((var2_int ^ -1) == -14) {
+                                                if (var2_int == 13) {
                                                   var3_ref = d.a((byte) 19, field_f, "", (String) (var9.field_f));
                                                   var9.field_b = var3_ref;
                                                 } else {
@@ -212,7 +212,7 @@ final class d implements Runnable {
                                                   }
                                                   if (this.field_h) {
                                                     if (var2_int == 15) {
-                                                      if (-1 == (var9.field_c ^ -1)) {
+                                                      if (var9.field_c == 0) {
                                                         stackIn_76_0 = 0;
                                                       } else {
                                                         stackIn_76_0 = 1;
@@ -229,13 +229,13 @@ final class d implements Runnable {
                                                     }
                                                   }
                                                   if (!this.field_l) {
-                                                    if (-18 == (var2_int ^ -1)) {
+                                                    if (var2_int == 17) {
                                                       var11 = (Object[]) (var9.field_f);
                                                       Class.forName("tk").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_u, new Object[]{var11[0], var11[1], new Integer(var9.field_c), new Integer(var9.field_g), var11[2]});
                                                       break L7;
                                                     }
                                                   }
-                                                  if ((var2_int ^ -1) != -17) {
+                                                  if (var2_int != 16) {
                                                     throw d.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
                                                   } else {
                                                     try {
@@ -316,7 +316,7 @@ final class d implements Runnable {
                       }
                     }
                   } else {
-                    if ((oa.a(-12520) ^ -1L) > (field_m ^ -1L)) {
+                    if (~oa.a(-12520) > ~field_m) {
                       throw new IOException();
                     } else {
                       var9.field_b = new java.net.Socket(java.net.InetAddress.getByName((String) (var9.field_f)), var9.field_c);

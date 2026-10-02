@@ -178,7 +178,7 @@ final class i {
                         }
                       }
                       var14 = bj.field_j[var11];
-                      if (2147483647 != (var14 ^ -1)) {
+                      if (var14 != -2147483648) {
                         var15 = var13 + (var12 - -var14 + -var6);
                         if (var7 < 0) {
                           stackIn_28_0 = var15 << -var7;
@@ -234,7 +234,7 @@ final class i {
               }
               L15: {
                 L16: {
-                  if (stackIn_49_0 > (param2.field_v ^ -1)) {
+                  if (stackIn_49_0 > ~param2.field_v) {
                     if (null != param2.field_n) {
                       var8 = 0;
                       var9 = 0;

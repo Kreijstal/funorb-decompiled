@@ -5,7 +5,7 @@ final class bc {
     static int field_a;
 
     final static void a(int param0, long param1) {
-        if (!(-1L > (param1 ^ -1L))) {
+        if (!(param1 > 0L)) {
             return;
         }
         if (param1 % 10L == (long)param0) {
@@ -46,9 +46,9 @@ final class bc {
             var5 = 0;
             for (var6 = 0; param3 > var6; var6++) {
               var7 = param1[param2 + var6] & 255;
-              if (-1 != (var7 ^ -1)) {
-                if ((var7 ^ -1) <= -129) {
-                  if ((var7 ^ -1) > -161) {
+              if (var7 != 0) {
+                if (var7 >= 128) {
+                  if (var7 < 160) {
                     var8 = lf.field_e[-128 + var7];
                     if (var8 == 0) {
                       var8 = 63;

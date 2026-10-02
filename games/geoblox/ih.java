@@ -120,13 +120,13 @@ final class ih {
               stackIn_7_0 = bk.field_a.field_m;
             }
             var11 = stackIn_7_0;
-            if ((var6 ^ -1) >= param0) {
+            if (~var6 >= param0) {
               stackIn_10_0 = 0;
             } else {
               stackIn_10_0 = var6;
             }
             var12 = stackIn_10_0;
-            if (-1 > (var7 ^ -1)) {
+            if (var7 > 0) {
               stackIn_13_0 = var7;
             } else {
               stackIn_13_0 = 0;
@@ -149,19 +149,19 @@ final class ih {
             var34 = vf.field_L.field_v;
             var35 = bk.field_a.field_v;
             for (var22 = var15; 0 < var22; var22--) {
-              for (var23 = var14; (var23 ^ -1) < -1; var23--) {
-                if ((var34[var16] ^ -1) != -1) {
-                  if (-16777216 != (var35[var18] ^ -1)) {
+              for (var23 = var14; var23 > 0; var23--) {
+                if (var34[var16] != 0) {
+                  if (var35[var18] != 16777215) {
                     if (var35[var18] != 0) {
                       var24 = tl.field_g[-1 + var35[var18]];
-                      if (-3 != (var24.field_z ^ -1)) {
+                      if (var24.field_z != 2) {
                         stackIn_35_0 = 0;
                       } else {
                         stackIn_35_0 = 1;
                       }
 
 
-                      if (-3 != (param2.field_z ^ -1)) {
+                      if (param2.field_z != 2) {
 
                         stackIn_38_1 = 0;
                       } else {
@@ -173,7 +173,7 @@ final class ih {
                         var26_ref = (ja) ((Object) ra.field_a.e(1));
                         if (var26_ref != null) {
                           L13: {
-                            if ((param2.field_z ^ -1) == -3) {
+                            if (param2.field_z == 2) {
                               if (var25 != 0) {
                                 var26_ref.a(param0 ^ -97, (float)param3, 8, param2.field_w, param2.field_M, 0, param2.field_u, (float)param1, param2.field_F, param2.field_C, 0.0f);
                                 break L13;

@@ -38,8 +38,8 @@ final class uk extends q {
             field_i = (int[]) null;
           }
           L2: {
-            if (0 == (param1.indexOf(param2) ^ -1)) {
-              if (0 == (param1.indexOf(var3) ^ -1)) {
+            if (param1.indexOf(param2) == -1) {
+              if (param1.indexOf(var3) == -1) {
                 stackIn_7_0 = 0;
                 break L2;
               }
@@ -86,13 +86,13 @@ final class uk extends q {
         if (param1 != 24146) {
             field_m = (dm) null;
             var2 = param0;
-            if (-1 == (var2 ^ -1)) {
+            if (var2 == 0) {
                 return vh.field_E;
             }
             if (var2 == 1) {
                 return oi.field_d;
             }
-            if (!(-3 == (var2 ^ -1))) {
+            if (!(var2 == 2)) {
                 if (var2 == 3) {
                     return li.field_b;
                 }
@@ -104,13 +104,13 @@ final class uk extends q {
             return vd.field_e;
         }
         var2 = param0;
-        if (-1 == (var2 ^ -1)) {
+        if (var2 == 0) {
             return vh.field_E;
         }
         if (var2 == 1) {
             return oi.field_d;
         }
-        if (!(-3 == (var2 ^ -1))) {
+        if (!(var2 == 2)) {
             if (var2 == 3) {
                 return li.field_b;
             }

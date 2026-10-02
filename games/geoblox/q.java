@@ -156,7 +156,7 @@ abstract class q extends ib implements ga {
                 ml.field_t.a(b.field_a, 0);
               }
               var3_int = 1;
-              if ((param1 ^ -1) == -11) {
+              if (param1 == 10) {
                 n.c((byte) -4);
                 var3_int = 0;
               }
@@ -169,8 +169,8 @@ abstract class q extends ib implements ga {
                 }
                 Geoblox.field_y.a(param1, param0 + 19686, param2);
               }
-              if ((param1 ^ -1) != -257) {
-                if ((param1 ^ -1) != -11) {
+              if (param1 != 256) {
+                if (param1 != 10) {
                   if (!cf.field_i) {
                     ml.field_t.i(-119);
                   }

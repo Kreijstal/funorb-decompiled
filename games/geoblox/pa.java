@@ -41,7 +41,7 @@ final class pa {
         RuntimeException decompiledCaughtException = null;
         try {
           var5_int = this.field_d.read(param1, param2, param0);
-          if ((var5_int ^ -1) < -1) {
+          if (var5_int > 0) {
             this.field_c = this.field_c + (long)var5_int;
           }
           if (param3) {
@@ -108,7 +108,7 @@ final class pa {
         try {
           L0: {
             if (2 <= param2) {
-              if ((param2 ^ -1) >= -37) {
+              if (param2 <= 36) {
                 var4_int = 0;
                 var5 = 0;
                 var6 = 0;
@@ -119,7 +119,7 @@ final class pa {
                 for (var8 = 0; var8 < var7; var8++) {
                   L4: {
                     var9 = param0.charAt(var8);
-                    if (-1 == (var8 ^ -1)) {
+                    if (var8 == 0) {
                       if (45 != var9) {
                         if (var9 == 43) {
                           if (param1) {
@@ -303,14 +303,14 @@ final class pa {
             if (param2 == -1L) {
                 param2 = 9223372036854775807L;
             }
-            if ((param2 ^ -1L) > (param0.length() ^ -1L)) {
+            if (~param2 > ~param0.length()) {
                 param0.delete();
             }
             this.field_d = new RandomAccessFile(param0, param1);
             this.field_f = param2;
             this.field_c = 0L;
             var5_int = this.field_d.read();
-            if (0 != (var5_int ^ -1) && !param1.equals("r")) {
+            if (var5_int != -1 && !param1.equals("r")) {
                 this.field_d.seek(0L);
                 this.field_d.write(var5_int);
             }

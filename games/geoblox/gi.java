@@ -25,7 +25,7 @@ final class gi implements Iterable {
           ff.field_d = null;
           if (!cf.field_i) {
             var1 = ik.field_a;
-            if ((var1 ^ -1) < -1) {
+            if (var1 > 0) {
               if (1 == var1) {
                 ff.field_d = ih.field_b;
                 ff.field_d = gg.a(-11455, new CharSequence[]{(CharSequence) ((Object) ff.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) ne.field_d)});
@@ -300,7 +300,7 @@ final class gi implements Iterable {
                   L5: while (var4.field_a == 0) {
                     bc.a(param2 + -125, 1L);
                   }
-                  if (-2 == (var4.field_a ^ -1)) {
+                  if (var4.field_a == 1) {
                     var5 = (DataInputStream) (var4.field_b);
                     var5.read();
                     var5.close();
@@ -342,7 +342,7 @@ final class gi implements Iterable {
         try {
           L0: {
             var3_int = 1;
-            L1: while (-2 > (param0 ^ -1)) {
+            L1: while (param0 > 1) {
               if (0 != (param0 & 1)) {
                 var3_int = var3_int * param2;
               }
@@ -350,7 +350,7 @@ final class gi implements Iterable {
               param2 = param2 * param2;
             }
             var4 = 28 % ((-75 - param1) / 49);
-            if ((param0 ^ -1) != -2) {
+            if (param0 != 1) {
               stackIn_10_0 = var3_int;
               decompiledRegionSelector0 = 1;
               break L0;
@@ -395,7 +395,7 @@ final class gi implements Iterable {
         this.field_f = var5.field_b;
         L0: while (true) {
           if (this.field_f != var5) {
-            if ((this.field_f.field_a ^ -1L) != (param0 ^ -1L)) {
+            if (~this.field_f.field_a != ~param0) {
               this.field_f = this.field_f.field_b;
               continue L0;
             } else {

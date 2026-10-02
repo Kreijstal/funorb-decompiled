@@ -106,7 +106,7 @@ class hk extends el {
                     return;
                 }
                 if (this.a(qa.field_a, -1, ue.field_e, param1, param3)) {
-                    if (!(-1 != (gf.field_a ^ -1))) {
+                    if (!(gf.field_a != 0)) {
                         this.a(ue.field_e - param1, -28922, qa.field_a + -param3, this.field_f);
                     }
                 }
@@ -139,7 +139,7 @@ class hk extends el {
           L0: {
             L1: {
               if (this.e((byte) 54)) {
-                if ((param0 ^ -1) != -85) {
+                if (param0 != 84) {
                   if (param0 != 83) {
                     break L1;
                   }

@@ -59,7 +59,7 @@ class mi extends kg {
             if (param1.field_K != -2147483648) {
               this.field_K = param1.field_K;
             }
-            if (-1 != (param1.field_x ^ -1)) {
+            if (param1.field_x != 0) {
               this.field_x = param1.field_x;
             }
             if (null != param1.field_F) {
@@ -92,7 +92,7 @@ class mi extends kg {
             if (-2147483648 != param1.field_T) {
               this.field_T = param1.field_T;
             }
-            if ((param1.field_w ^ -1) != 2147483647) {
+            if (param1.field_w != -2147483648) {
               this.field_w = param1.field_w;
             }
             if (param1.field_N) {
@@ -101,7 +101,7 @@ class mi extends kg {
             if (param1.field_p != null) {
               this.field_p = param1.field_p;
             }
-            if (-257 != (param1.field_t ^ -1)) {
+            if (param1.field_t != 256) {
               this.field_t = param1.field_t;
             }
             if (param1.field_cb >= 0) {
@@ -137,7 +137,7 @@ class mi extends kg {
             if (param1.field_eb != null) {
               this.field_eb = param1.field_eb;
             }
-            if (-1 >= (param1.field_G ^ -1)) {
+            if (param1.field_G >= 0) {
               this.field_G = param1.field_G;
             }
             if (param1.field_L) {

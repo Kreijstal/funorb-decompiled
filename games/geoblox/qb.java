@@ -18,7 +18,7 @@ final class qb extends hk {
         int var6 = Geoblox.field_C;
         mg var5 = (mg) ((Object) rh.field_d.g(param2 ^ param2));
         while (var5 != null) {
-            if ((var5.field_i ^ -1) == (param0 ^ -1)) {
+            if (~var5.field_i == ~param0) {
                 return var5;
             }
             var5 = (mg) ((Object) rh.field_d.d(1));
@@ -80,7 +80,7 @@ final class qb extends hk {
                 L3: while (this.field_I >= this.field_H) {
                   this.field_I = this.field_I - this.field_H;
                 }
-                L4: while (-1 < (this.field_I ^ -1)) {
+                L4: while (this.field_I < 0) {
                   this.field_I = this.field_I + this.field_H;
                 }
                 break L1;
@@ -152,7 +152,7 @@ final class qb extends hk {
                 if (60 == var8) {
                   var6 = param1.field_c[0] + (var5_int >> -979414712) - -param4.a(param2.substring(0, var7));
                 }
-                if (0 == (var6 ^ -1)) {
+                if (var6 == -1) {
                   if (var8 == 32) {
                     var5_int = var5_int + param0;
                   }

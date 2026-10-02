@@ -37,7 +37,7 @@ final class hl extends el {
             var9 = 65280 & param2;
             var10 = -var5 + var6;
             var11 = (int)(128.0 * (Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5)) + 128;
-            var12 = -257 >= (var11 ^ -1) ? var9 | var8 : (-16711936 & var11 * var8 | 16711680 & var11 * var9) >>> -259500472;
+            var12 = var11 >= 256 ? var9 | var8 : (-16711936 & var11 * var8 | 16711680 & var11 * var9) >>> -259500472;
             vb.c(var7, var6, this.field_H, var12);
             vb.c(-(2 * this.field_H) + var7, var6, this.field_H, var12);
             var9 = param0 & 65280;
@@ -158,13 +158,13 @@ final class hl extends el {
 
     final void a(int param0, int param1, byte param2, int param3) {
         int var5 = -76 % ((param2 - 1) / 43);
-        if (!(-1 == (param3 ^ -1))) {
+        if (!(param3 == 0)) {
             return;
         }
         int var6 = param0 - -this.field_v;
         int var7 = param1 - -this.field_m;
         this.a(this.field_F[0], var7, var6, -12276);
-        if (-65537 < (this.field_x ^ -1)) {
+        if (this.field_x < 65536) {
             uh.a(var7, var6 - -(this.field_r * this.field_x >> 1475207664), -14045, var7 + this.field_h, this.field_r + var6);
             this.a(this.field_F[1], var7, var6, -12276);
             id.a(true);

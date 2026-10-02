@@ -43,7 +43,7 @@ final class g extends q {
         try {
           var6 = this.field_k.field_s.toLowerCase();
           var4 = param1.toLowerCase();
-          if (-1 != (var4.length() ^ -1)) {
+          if (var4.length() != 0) {
             var5 = var4;
             if (em.a(var5, param0 + -344)) {
               stackIn_6_0 = ji.field_d;
@@ -168,14 +168,14 @@ final class g extends q {
             var3 = this.field_n.field_s.toLowerCase();
             var4 = param0.toLowerCase();
             if (0 < var3.length()) {
-              if (-1 > (var4.length() ^ -1)) {
+              if (var4.length() > 0) {
                 var5 = var3.lastIndexOf("@");
                 if (0 <= var5) {
                   if (var3.length() + -1 > var5) {
                     var6 = var3.substring(0, var5);
                     var7 = var3.substring(var5 + 1);
-                    if (-1 < (var4.indexOf(var6) ^ -1)) {
-                      if (-1 >= (var4.indexOf(var7) ^ -1)) {
+                    if (var4.indexOf(var6) < 0) {
+                      if (var4.indexOf(var7) >= 0) {
                         stackIn_9_0 = 1;
                         decompiledRegionSelector0 = 1;
                         break L0;
@@ -247,7 +247,7 @@ final class g extends q {
           }
           var3 = this.field_k.field_s.toLowerCase();
           var4 = param1.toLowerCase();
-          if (-1 == (var4.length() ^ -1)) {
+          if (var4.length() == 0) {
             stackIn_5_0 = si.field_m;
             decompiledRegionSelector0 = 0;
           } else {

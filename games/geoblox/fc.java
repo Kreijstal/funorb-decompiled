@@ -37,8 +37,8 @@ final class fc {
               L3: {
                 var1.b(true);
                 if (5 != var1.field_z) {
-                  if ((var1.field_z ^ -1) != -8) {
-                    if ((var1.field_z ^ -1) != -9) {
+                  if (var1.field_z != 7) {
+                    if (var1.field_z != 8) {
                       break L3;
                     }
                   }
@@ -60,7 +60,7 @@ final class fc {
     }
 
     final static void a(boolean param0, java.awt.Canvas param1) {
-        if (!((hj.field_a ^ -1) != -12)) {
+        if (!(hj.field_a != 11)) {
             w.a(31);
         }
         if (!param0) {

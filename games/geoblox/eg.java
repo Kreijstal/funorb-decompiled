@@ -47,7 +47,7 @@ final class eg extends hf {
         try {
           L0: {
             if (2 <= param2) {
-              if (-37 <= (param2 ^ -1)) {
+              if (param2 <= 36) {
                 var4_int = 0;
                 var5 = 0;
                 var6 = 0;

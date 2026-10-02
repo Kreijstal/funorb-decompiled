@@ -147,19 +147,19 @@ final class bj extends nh {
         }
         if (var4 == null) {
           L2: {
-            if (-1 != (param1 ^ -1)) {
-              if ((param1 ^ -1) == -2) {
+            if (param1 != 0) {
+              if (param1 == 1) {
                 if (null != this.field_e) {
                   var4 = this.field_i.a(param0 + 131, this.field_e, param2);
                 } else {
                   throw new RuntimeException();
                 }
               } else {
-                if ((param1 ^ -1) != -3) {
+                if (param1 != 2) {
                   throw new RuntimeException();
                 } else {
                   if (null != this.field_e) {
-                    if ((this.field_k[param2] ^ -1) == 0) {
+                    if (this.field_k[param2] == -1) {
                       if (!this.field_f.b(-21)) {
                         var4 = this.field_f.a((byte) 2, this.field_p, param0 + 50, param2, false);
                       } else {
@@ -198,7 +198,7 @@ final class bj extends nh {
               try {
                 L4: {
                   if (var5 != null) {
-                    if ((var18.length ^ -1) < -3) {
+                    if (var18.length > 2) {
                       ge.field_f.reset();
                       ge.field_f.update(var5, 0, var18.length + -2);
                       var6_int = (int)ge.field_f.getValue();
@@ -211,10 +211,10 @@ final class bj extends nh {
                               var11 = 0;
                               var9 = var11;
                               L7: while (true) {
-                                if ((var11 ^ -1) <= -65) {
+                                if (var11 >= 64) {
                                   break L6;
                                 } else {
-                                  if ((var29[var11] ^ -1) == (var30[var11] ^ -1)) {
+                                  if (~var29[var11] == ~var30[var11]) {
                                     var11++;
                                     continue L7;
                                   } else {
@@ -252,7 +252,7 @@ final class bj extends nh {
               var5[-1 + var18.length] = (byte)this.field_u.field_t[param2];
               if (null != this.field_e) {
                 this.field_i.a((byte) 66, param2, this.field_e, var18);
-                stackIn_85_0 = this.field_k[param2] ^ -1;
+                stackIn_85_0 = ~this.field_k[param2];
                 stackIn_85_1 = -2;
                 if (stackIn_85_0 != stackIn_85_1) {
                   this.field_k[param2] = (byte) 1;
@@ -266,7 +266,7 @@ final class bj extends nh {
               try {
                 L11: {
                   if (var5 != null) {
-                    if ((var18.length ^ -1) < -3) {
+                    if (var18.length > 2) {
                       ge.field_f.reset();
                       ge.field_f.update(var5, 0, var18.length + -2);
                       var6_int = (int)ge.field_f.getValue();
@@ -278,10 +278,10 @@ final class bj extends nh {
                               var28 = wh.a(-2 + var18.length, 0, var18, 8);
                               var9 = 0;
                               L14: while (true) {
-                                if (-65 >= (var9 ^ -1)) {
+                                if (var9 >= 64) {
                                   break L13;
                                 } else {
-                                  if ((var27[var9] ^ -1) == (var28[var9] ^ -1)) {
+                                  if (~var27[var9] == ~var28[var9]) {
                                     var9++;
                                     continue L14;
                                   } else {
@@ -296,7 +296,7 @@ final class bj extends nh {
                         if ((65535 & this.field_u.field_t[param2]) != var7) {
                           throw new RuntimeException();
                         } else {
-                          if ((this.field_k[param2] ^ -1) != -2) {
+                          if (this.field_k[param2] != 1) {
                             if (this.field_k[param2] != 0) {
                             }
                             this.field_k[param2] = (byte) 1;
@@ -453,7 +453,7 @@ final class bj extends nh {
         hf var2 = this.field_t.g(0);
         while (var2 != null) {
             var3 = (int)var2.field_a;
-            if ((var3 ^ -1) > -1) {
+            if (var3 < 0) {
                 var2.a(false);
             } else {
                 if (var3 >= this.field_u.field_b) {
@@ -468,7 +468,7 @@ final class bj extends nh {
                         if (-1 == this.field_k[var3]) {
                             discarded$1 = this.a((byte) -71, 2, var3);
                         }
-                        if (!((this.field_k[var3] ^ -1) != -2)) {
+                        if (!(this.field_k[var3] != 1)) {
                             var2.a(false);
                         }
                     }
@@ -514,10 +514,10 @@ final class bj extends nh {
                       }
                       L5: while (this.field_o < this.field_u.field_a.length) {
                         if (0 != this.field_u.field_a[this.field_o]) {
-                          if ((this.field_i.field_d ^ -1) <= -251) {
+                          if (this.field_i.field_d >= 250) {
                             var2_int = 0;
                           } else {
-                            if (-1 == (this.field_k[this.field_o] ^ -1)) {
+                            if (this.field_k[this.field_o] == 0) {
                               discarded$0 = this.a((byte) -71, 1, this.field_o);
                             }
                             if (0 == this.field_k[this.field_o]) {
@@ -548,7 +548,7 @@ final class bj extends nh {
                         var3 = this.field_d.g(0);
                         L11: while (var3 != null) {
                           var4 = (int)var3.field_a;
-                          if ((this.field_k[var4] ^ -1) != -2) {
+                          if (this.field_k[var4] != 1) {
                             discarded$3 = this.a((byte) -71, 2, var4);
                           }
                           if (this.field_k[var4] != 1) {
@@ -561,15 +561,15 @@ final class bj extends nh {
                         L12: while (true) {
                           L13: {
                             if (this.field_o < this.field_u.field_a.length) {
-                              if (-1 != (this.field_u.field_a[this.field_o] ^ -1)) {
+                              if (this.field_u.field_a[this.field_o] != 0) {
                                 if (this.field_f.b(-21)) {
                                   var2_int = 0;
                                   break L13;
                                 } else {
-                                  if (-2 != (this.field_k[this.field_o] ^ -1)) {
+                                  if (this.field_k[this.field_o] != 1) {
                                     discarded$2 = this.a((byte) -71, 2, this.field_o);
                                   }
-                                  if (-2 != (this.field_k[this.field_o] ^ -1)) {
+                                  if (this.field_k[this.field_o] != 1) {
                                     var6 = new hf();
                                     var6.field_a = (long)this.field_o;
                                     var2_int = 0;
@@ -592,7 +592,7 @@ final class bj extends nh {
                             if (!this.field_w) {
                               break L0;
                             } else {
-                              if ((oa.a(-12520) ^ -1L) > (this.field_n ^ -1L)) {
+                              if (~oa.a(-12520) > ~this.field_n) {
                                 break L1;
                               } else {
                                 var2 = (pb) ((Object) this.field_g.a((byte) 125));
@@ -630,7 +630,7 @@ final class bj extends nh {
               if (!this.field_w) {
                 break L0;
               } else {
-                if ((oa.a(-12520) ^ -1L) > (this.field_n ^ -1L)) {
+                if (~oa.a(-12520) > ~this.field_n) {
                   break L1;
                 } else {
                   var2 = (pb) ((Object) this.field_g.a((byte) 125));

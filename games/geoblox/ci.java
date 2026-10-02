@@ -155,7 +155,7 @@ final class ci {
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (-2 == (this.field_c.a(param2) ^ -1)) {
+          if (this.field_c.a(param2) == 1) {
             stackIn_3_0 = this.a(param1, 97, 0, param0);
             decompiledRegionSelector0 = 0;
           } else {
@@ -322,7 +322,7 @@ final class ci {
               this.field_c = (rh) null;
             }
             var6 = this.field_c.a(param1, -98, var5_int);
-            if (-1 >= (var6 ^ -1)) {
+            if (var6 >= 0) {
               stackIn_9_0 = this.a(param0, 98, var5_int, var6);
               decompiledRegionSelector0 = 1;
             } else {
@@ -412,7 +412,7 @@ final class ci {
             decompiledRegionSelector0 = 0;
           } else {
             if (param0 != null) {
-              if (-1 <= (param0[0] ^ -1)) {
+              if (param0[0] <= 0) {
                 return null;
               }
             }
@@ -486,7 +486,7 @@ final class ci {
                 decompiledRegionSelector0 = 1;
               } else {
                 if (param0 != null) {
-                  if (-1 <= (param0[0] ^ -1)) {
+                  if (param0[0] <= 0) {
                     stackIn_10_0 = null;
                     decompiledRegionSelector0 = 2;
                     break L0;
@@ -697,7 +697,7 @@ final class ci {
           if (0 <= var5_int) {
             if (param2 == 12628) {
               var6 = this.field_d.a(param0, -89, var5_int);
-              if (-1 >= (var6 ^ -1)) {
+              if (var6 >= 0) {
                 stackIn_10_0 = this.a(param1, var5_int, var6, (byte) 14);
                 decompiledRegionSelector0 = 3;
               } else {

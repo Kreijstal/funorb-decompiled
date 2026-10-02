@@ -102,7 +102,7 @@ final class ja extends rc {
           var4 = el.field_o.field_J;
           var5 = (int)(320.0 + ((double)var2 * Math.cos((double)var4) - Math.sin((double)var4) * (double)var3));
           var6 = (int)(240.0 + ((double)var2 * Math.sin((double)var4) + Math.cos((double)var4) * (double)var3));
-          if (-2 != (this.field_z ^ -1)) {
+          if (this.field_z != 1) {
             if (2 != this.field_z) {
               vf.field_L.e();
               vb.c();
@@ -128,7 +128,7 @@ final class ja extends rc {
         var8 = var5 + -(vf.field_L.field_s >> -2050048063);
         var9 = var6 - (vf.field_L.field_o >> -2142432031);
         var10 = (int)(0.5 + Math.sin((double)(this.field_r + -this.field_p + this.field_p >> 1305235300)) * (double)(100 * (this.field_p - this.field_r)) / (double)this.field_p) - (-(100 * (this.field_p - this.field_r) / this.field_p) - 56);
-        if (-257 > (var10 ^ -1)) {
+        if (var10 > 256) {
           var10 = 256;
         } else {
           if (var10 < 0) {
@@ -183,11 +183,11 @@ final class ja extends rc {
         var3 = -4 + -(vf.field_L.field_o >> -1594034399) + (int)this.field_v;
         var4 = 8 + vf.field_L.field_s;
         var5 = 8 + vf.field_L.field_o;
-        if (-1 < (var2 ^ -1)) {
+        if (var2 < 0) {
           var4 = var4 + var2;
           var2 = 0;
         }
-        if ((var3 ^ -1) > -1) {
+        if (var3 < 0) {
           var5 = var5 + var3;
           var3 = 0;
         }
@@ -204,16 +204,16 @@ final class ja extends rc {
           L4: while (true) {
             incrementValue$0 = var5;
             var5--;
-            if (-1 <= (incrementValue$0 ^ -1)) {
+            if (incrementValue$0 <= 0) {
               return;
             } else {
               var9 = -var4;
               L5: while (true) {
-                if ((var9 ^ -1) <= -1) {
+                if (var9 >= 0) {
                   var6 = var6 + var7;
                   continue L4;
                 } else {
-                  if ((var14[var6] ^ -1) == (this.field_H - -1 ^ -1)) {
+                  if (~var14[var6] == ~(this.field_H - -1)) {
                     var14[var6] = 0;
                     var6++;
                     var9++;
@@ -248,7 +248,7 @@ final class ja extends rc {
             this.field_w = (float)((double)this.field_w * var5);
             this.field_F = (float)((double)this.field_F * var5);
         }
-        if (!((this.field_z ^ -1) == -3)) {
+        if (!(this.field_z == 2)) {
             this.field_u = this.field_u - param0;
         }
     }
@@ -262,7 +262,7 @@ final class ja extends rc {
         if (0 == this.field_z) {
           this.field_J = ke.field_a[c.field_ab][this.field_C][this.field_M];
         } else {
-          if (-5 == (this.field_z ^ -1)) {
+          if (this.field_z == 4) {
             this.field_M = -1;
             this.field_J = fc.field_g[0];
             this.field_C = -1;
@@ -353,7 +353,7 @@ final class ja extends rc {
         if (!param0) {
           this.field_v = -0.09870309382677078f;
         }
-        if ((this.field_z ^ -1) != -6) {
+        if (this.field_z != 5) {
           if (this.field_z != 1) {
             if (this.field_z == 2) {
               if (this.field_I % 24 == 0) {
@@ -375,7 +375,7 @@ final class ja extends rc {
           } else {
             var2 = 0.019999999552965164f * (float)(this.field_I % 50);
             this.field_q = (int)((float)this.field_y * var2) + jg.field_h[c.field_ab][this.field_G] + (((int)(var2 * (float)this.field_s) << 1248854992) + ((int)((float)this.field_x * var2) << 461902984));
-            if (-50 == (this.field_I % 50 ^ -1)) {
+            if (this.field_I % 50 == 49) {
               this.field_G = this.field_G + 1;
               this.field_G = this.field_G % 7;
               this.m(-107);
@@ -389,13 +389,13 @@ final class ja extends rc {
             this.field_G = this.field_G % 4;
           }
         }
-        if ((this.field_z ^ -1) != -5) {
+        if (this.field_z != 4) {
           if (7 != this.field_z) {
-            if ((this.field_z ^ -1) != -4) {
-              if (-7 == (this.field_z ^ -1)) {
+            if (this.field_z != 3) {
+              if (this.field_z == 6) {
                 this.field_r = this.field_r - 1;
-                if ((this.field_r ^ -1) > -1) {
-                  if (-1 == (this.field_I % 24 ^ -1)) {
+                if (this.field_r < 0) {
+                  if (this.field_I % 24 == 0) {
                     if (4 > this.field_G) {
                       fieldTemp$3 = this.field_G;
                       this.field_G = this.field_G + 1;
@@ -405,14 +405,14 @@ final class ja extends rc {
                 }
               }
             } else {
-              if ((this.field_I & 255 ^ -1) <= -50) {
+              if ((this.field_I & 255) >= 49) {
                 this.field_G = 0;
               } else {
                 if ((this.field_I & 15) == 0) {
                   fieldTemp$4 = this.field_G;
                   this.field_G = this.field_G + 1;
                   this.field_J = hb.field_d[fieldTemp$4];
-                  if (-5 == (this.field_G ^ -1)) {
+                  if (this.field_G == 4) {
                     this.field_G = 0;
                   }
                 }
@@ -432,7 +432,7 @@ final class ja extends rc {
               fieldTemp$6 = this.field_G;
               this.field_G = this.field_G + 1;
               this.field_J = fc.field_g[fieldTemp$6];
-              if ((this.field_G ^ -1) == -5) {
+              if (this.field_G == 4) {
                 this.field_G = 0;
               }
             }
@@ -557,7 +557,7 @@ final class ja extends rc {
                 var10 = var10 + var11;
                 continue L5;
               } else {
-                if ((this.field_H - -1 ^ -1) == (var18[var10] ^ -1)) {
+                if (~(this.field_H - -1) == ~var18[var10]) {
                   var18[var10] = 0;
                   var10++;
                   var13++;
@@ -577,7 +577,7 @@ final class ja extends rc {
         if (param0 != 320) {
             this.field_u = -1.9950387477874756f;
         }
-        if (!((this.field_z ^ -1) != -3)) {
+        if (!(this.field_z != 2)) {
             this.field_E = 60;
         }
         this.field_M = param2;

@@ -71,12 +71,12 @@ abstract class ji {
         var8.field_q = param4 ? true : false;
         var8.field_E = param0;
         if (!param4) {
-            if (-21 >= (this.a(false) ^ -1)) {
+            if (this.a(false) >= 20) {
                 throw new RuntimeException();
             }
             this.field_p.a(8, var8);
         } else {
-            if ((this.a(param2 ^ 108) ^ -1) <= -21) {
+            if (this.a(param2 ^ 108) >= 20) {
                 throw new RuntimeException();
             }
             this.field_g.a(param2 ^ -123, var8);
@@ -167,7 +167,7 @@ abstract class ji {
             L3: {
               var5 = param3.e((byte) -17, 4);
               var6 = (short)param3.e((byte) -17, 16);
-              if ((var5 ^ -1) >= -1) {
+              if (var5 <= 0) {
                 for (var7 = 0; var4_int > var7; var7++) {
                   param0[var7] = (short)var6;
                 }
@@ -221,10 +221,10 @@ abstract class ji {
 
     final boolean b(int param0) {
         if (param0 == -21) {
-            return (this.a(false) ^ -1) <= -21 ? true : false;
+            return this.a(false) >= 20 ? true : false;
         }
         this.a((byte) 74);
-        return (this.a(false) ^ -1) <= -21 ? true : false;
+        return this.a(false) >= 20 ? true : false;
     }
 
     final static na[] c(int param0) {

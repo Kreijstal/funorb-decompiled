@@ -97,7 +97,7 @@ final class pg {
                           if (0 != var6_int) {
                             if (1 != var6_int) {
                               if (var6_int != 2) {
-                                if ((var6_int ^ -1) != -4) {
+                                if (var6_int != 3) {
                                   if (var6_int != 4) {
                                     var5++;
                                     decompiledRegionSelector0 = 1;
@@ -115,7 +115,7 @@ final class pg {
                                   var22 = new byte[var9][];
                                   var20 = var22;
                                   var11 = var20;
-                                  if ((var6_int ^ -1) == -4) {
+                                  if (var6_int == 3) {
                                     for (var12_int = 0; var12_int < var9; var12_int++) {
                                       var13 = param3.a((byte) -70);
                                       array$0 = new byte[var13];
@@ -144,7 +144,7 @@ final class pg {
                           var17 = param3.e((byte) 125);
                           var8 = var17;
                           var9 = 0;
-                          if (-2 == (var6_int ^ -1)) {
+                          if (var6_int == 1) {
                             var9 = param3.a((byte) -123);
                           }
                           var19.field_k[var5] = var6_int;

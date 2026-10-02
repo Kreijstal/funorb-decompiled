@@ -41,7 +41,7 @@ final class ek {
             var11 = param2.field_o;
             var12 = (var10 << 1780073008) / param4;
             var13 = (var11 << -1191763856) / param0;
-            if ((param2.field_u ^ -1) < -1) {
+            if (param2.field_u > 0) {
               var14 = ((param2.field_u << 536850224) + (var12 + -1)) / var12;
               var8 = var8 + (-(param2.field_u << -815064720) + var12 * var14);
               param5 = param5 + var14;
@@ -49,7 +49,7 @@ final class ek {
             if (var6_int < var10) {
               param4 = (var12 + ((var6_int << 1238097680) + (-var8 - 1))) / var12;
             }
-            if ((param2.field_p ^ -1) < -1) {
+            if (param2.field_p > 0) {
               var14 = ((param2.field_p << -93118640) + var13 - 1) / var13;
               var9 = var9 + (var14 * var13 - (param2.field_p << -1049630416));
               param3 = param3 + var14;

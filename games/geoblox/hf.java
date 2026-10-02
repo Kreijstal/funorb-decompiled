@@ -20,14 +20,14 @@ class hf {
         }
         var2 = param1;
         if (var2 != 4) {
-          if ((var2 ^ -1) != -4) {
-            if ((var2 ^ -1) != -2) {
+          if (var2 != 3) {
+            if (var2 != 1) {
               if (var2 != 0) {
                 if (6 != var2) {
-                  if (-6 == (var2 ^ -1)) {
+                  if (var2 == 5) {
                     fi.a(0, k.field_f);
                   } else {
-                    if ((var2 ^ -1) == -3) {
+                    if (var2 == 2) {
                       fi.a(0, j.field_ib);
                     }
                   }
@@ -66,7 +66,7 @@ class hf {
         try {
           if (param0 <= -102) {
             if (param1 != null) {
-              if (-137 <= (param1.length ^ -1)) {
+              if (param1.length <= 136) {
                 if (param2) {
                   stackIn_13_0 = nk.a(param1, 0);
                   decompiledRegionSelector0 = 4;
@@ -239,7 +239,7 @@ class hf {
                         var14 = dupTemp$0;
                         stackIn_44_0 = var10;
 
-                        if ((var14 ^ -1) == 0) {
+                        if (var14 == -1) {
                           stackIn_45_0 = stackIn_44_0;
                           stackIn_45_1 = 0;
                         } else {
@@ -266,7 +266,7 @@ class hf {
                       var13 = dupTemp$1;
                       stackIn_28_0 = var10;
 
-                      if ((var13 ^ -1) == 0) {
+                      if (var13 == -1) {
                         stackIn_29_0 = stackIn_28_0;
                         stackIn_29_1 = 0;
                       } else {

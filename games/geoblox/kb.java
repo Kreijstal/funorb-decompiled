@@ -29,10 +29,10 @@ final class kb {
         try {
           if (param1 == 6568) {
             si.field_g = va.field_e;
-            if ((param0 ^ -1) == -256) {
+            if (param0 == 255) {
               stackIn_11_0 = param1 ^ 6648;
 
-              if ((rd.field_u ^ -1) <= -14) {
+              if (rd.field_u >= 13) {
                 stackIn_12_0 = stackIn_11_0;
                 stackIn_12_1 = 0;
               } else {
@@ -44,7 +44,7 @@ final class kb {
               ci.a((String[]) null, 416577356);
               decompiledRegionSelector0 = 1;
             } else {
-              if (-101 < (param0 ^ -1)) {
+              if (param0 < 100) {
                 me.field_g = ig.a(param3, param0, false);
                 return;
               } else {

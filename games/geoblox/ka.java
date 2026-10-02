@@ -105,12 +105,12 @@ abstract class ka {
           this.field_j = 8;
         }
         L1: {
-          if (-97 != (ki.field_d ^ -1)) {
-            if (-98 == (ki.field_d ^ -1)) {
+          if (ki.field_d != 96) {
+            if (ki.field_d == 97) {
               this.a((byte) 90, param0);
             } else {
               if (ki.field_d != 84) {
-                if ((ki.field_d ^ -1) != -84) {
+                if (ki.field_d != 83) {
                   break L1;
                 }
               }
@@ -134,7 +134,7 @@ abstract class ka {
         } else {
             s.field_H = s.field_H - 1;
             if (s.field_H <= 0) {
-                if (-2 == (param5 ^ -1)) {
+                if (param5 == 1) {
                     this.b(param0, (byte) -2);
                 } else {
                     this.a(param0, (byte) 6);

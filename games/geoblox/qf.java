@@ -115,10 +115,10 @@ abstract class qf extends oe {
             decompiledRegionSelector0 = 0;
           } else {
             if (this.field_W != null) {
-              if ((param0 ^ -1) == -99) {
+              if (param0 == 98) {
                 this.field_W.a((byte) -92, param3);
               }
-              if (-100 == (param0 ^ -1)) {
+              if (param0 == 99) {
                 this.field_W.a((byte) -99, param3);
                 return false;
               }

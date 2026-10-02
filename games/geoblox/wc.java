@@ -69,7 +69,7 @@ final class wc extends hf {
     }
 
     final static void a(float param0, byte param1) {
-        if (!((jf.field_j ^ -1) >= -1)) {
+        if (!(jf.field_j <= 0)) {
             return;
         }
         r.field_ub = rj.field_c;

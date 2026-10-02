@@ -84,8 +84,8 @@ final class ai extends hf {
                   L2: {
                     if (var5.regionMatches(var6, "/l=", 0, 3)) {
                       var7_int = var5.indexOf('/', var6 - -1);
-                      if (-1 >= (var7_int ^ -1)) {
-                        if ((param3 ^ -1) > -1) {
+                      if (var7_int >= 0) {
+                        if (param3 < 0) {
                           break L2;
                         } else {
                           var5 = var5.substring(0, var6) + var5.substring(var7_int);
@@ -101,7 +101,7 @@ final class ai extends hf {
                     }
                     if (var5.regionMatches(var6, "/p=", 0, 3)) {
                       var7_int = var5.indexOf('/', 1 + var6);
-                      if (-1 >= (var7_int ^ -1)) {
+                      if (var7_int >= 0) {
                         if (param1 == null) {
                           break L2;
                         } else {
@@ -138,13 +138,13 @@ final class ai extends hf {
                       discarded$2 = var7.append(Integer.toString(param3));
                     }
                     if (param1 != null) {
-                      if (-1 > (param1.length() ^ -1)) {
+                      if (param1.length() > 0) {
                         discarded$3 = var7.append("/p=");
                         discarded$4 = var7.append(param1);
                       }
                     }
                     if (param0 != null) {
-                      if (-1 > (param0.length() ^ -1)) {
+                      if (param0.length() > 0) {
                         discarded$5 = var7.append("/s=");
                         discarded$6 = var7.append(param0);
                       }

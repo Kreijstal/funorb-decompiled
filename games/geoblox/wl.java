@@ -20,10 +20,10 @@ final class wl implements java.awt.event.KeyListener, java.awt.event.FocusListen
             L1: {
               nk.field_e = 0;
               var2_int = param0.getKeyCode();
-              if ((var2_int ^ -1) <= -1) {
+              if (var2_int >= 0) {
                 if (oe.field_P.length > var2_int) {
                   var2_int = oe.field_P[var2_int];
-                  if (-1 == (var2_int & 128 ^ -1)) {
+                  if ((var2_int & 128) == 0) {
                     break L1;
                   } else {
                     var2_int = -1;
@@ -33,7 +33,7 @@ final class wl implements java.awt.event.KeyListener, java.awt.event.FocusListen
               }
               var2_int = -1;
             }
-            if (-1 >= (ii.field_c ^ -1)) {
+            if (ii.field_c >= 0) {
               if (var2_int >= 0) {
                 gf.field_c[ii.field_c] = var2_int;
                 ii.field_c = 127 & 1 + ii.field_c;
@@ -53,7 +53,7 @@ final class wl implements java.awt.event.KeyListener, java.awt.event.FocusListen
             var3 = param0.getModifiers();
             if ((var3 & 10) == 0) {
               if (85 != var2_int) {
-                if (-11 != (var2_int ^ -1)) {
+                if (var2_int != 10) {
                   return;
                 }
               }
@@ -128,7 +128,7 @@ final class wl implements java.awt.event.KeyListener, java.awt.event.FocusListen
             L2: {
               nk.field_e = 0;
               var2_int = param0.getKeyCode();
-              if ((var2_int ^ -1) <= -1) {
+              if (var2_int >= 0) {
                 if (oe.field_P.length > var2_int) {
                   var2_int = oe.field_P[var2_int] & -129;
                   break L2;
@@ -136,9 +136,9 @@ final class wl implements java.awt.event.KeyListener, java.awt.event.FocusListen
               }
               var2_int = -1;
             }
-            if (-1 >= (ii.field_c ^ -1)) {
+            if (ii.field_c >= 0) {
               if (0 <= var2_int) {
-                gf.field_c[ii.field_c] = var2_int ^ -1;
+                gf.field_c[ii.field_c] = ~var2_int;
                 ii.field_c = 1 + ii.field_c & 127;
                 if (gk.field_b == ii.field_c) {
                   ii.field_c = -1;

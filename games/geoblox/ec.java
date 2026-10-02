@@ -78,11 +78,11 @@ final class ec {
                 }
               }
             }
-            if (-1 != (h.field_a ^ -1)) {
-              if (-6 >= (gf.field_f ^ -1)) {
+            if (h.field_a != 0) {
+              if (gf.field_f >= 5) {
                 ra.a(jf.field_g ^ 255, -99, jf.field_g);
               }
-              if ((gf.field_f ^ -1) <= -7) {
+              if (gf.field_f >= 6) {
                 ra.a(qg.field_d ^ 255, -57, qg.field_d);
               }
               if (gf.field_f >= 7) {
@@ -91,8 +91,8 @@ final class ec {
               for (var1_int = 1; var1_int < h.field_a; var1_int++) {
                 var2 = var1_int + -1;
                 var3 = nk.field_f[var1_int];
-                L14: while (-1 >= (var2 ^ -1)) {
-                  if ((nk.field_f[var2] ^ -1) < (var3 ^ -1)) {
+                L14: while (var2 >= 0) {
+                  if (~nk.field_f[var2] < ~var3) {
                     nk.field_f[1 + var2] = nk.field_f[var2];
                     var2--;
                     continue L14;
@@ -120,12 +120,12 @@ final class ec {
                   var5 = tl.field_g[var2];
                   var6 = tl.field_g[var3];
                   var7 = tl.field_g[var4];
-                  if ((var5.field_E ^ -1) >= -1) {
-                    if (-1 <= (var6.field_E ^ -1)) {
-                      if (-1 <= (var7.field_E ^ -1)) {
+                  if (var5.field_E <= 0) {
+                    if (var6.field_E <= 0) {
+                      if (var7.field_E <= 0) {
                         td.a(-348, fl.field_c[31]);
                         gf.field_f = gf.field_f + 1;
-                        if (-2 > (gf.field_f ^ -1)) {
+                        if (gf.field_f > 1) {
                           el.field_o.field_y = -1;
                         }
                         if (-1073741824 == (-1073741824 & nk.field_f[var12])) {

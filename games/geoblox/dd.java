@@ -39,10 +39,10 @@ abstract class dd extends ee {
     boolean f(int param0) {
         int var2 = this.g(-75);
         int var3 = -this.field_H + var2;
-        if (!((var3 ^ -1) >= param0)) {
+        if (!(~var3 >= param0)) {
             this.field_H = this.field_H + (var3 + 8 + -1) / 8;
         }
-        if (-1 < (var3 ^ -1)) {
+        if (var3 < 0) {
             this.field_H = this.field_H + (-16 + (var3 + 1)) / 16;
             if (this.field_H != 0) {
                 return false;

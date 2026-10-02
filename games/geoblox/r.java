@@ -82,7 +82,7 @@ final class r extends f implements pl {
               } else {
                 var5.a(-2, cl.field_d, (bb) (this));
               }
-              if (-4 == (param1.field_j ^ -1)) {
+              if (param1.field_j == 3) {
                 var5.a(ee.field_y, 1, 7);
               } else {
                 if (6 == param1.field_j) {
@@ -153,11 +153,11 @@ final class r extends f implements pl {
         try {
           L0: {
             var2_int = param0.length();
-            if (-1 == (var2_int ^ -1)) {
+            if (var2_int == 0) {
               stackIn_4_0 = pj.field_f;
               decompiledRegionSelector0 = 0;
             } else {
-              if (-65 > (var2_int ^ -1)) {
+              if (var2_int > 64) {
                 stackIn_8_0 = hk.field_x;
                 decompiledRegionSelector0 = 1;
               } else {
@@ -179,7 +179,7 @@ final class r extends f implements pl {
                         decompiledRegionSelector0 = 4;
                         break L0;
                       } else {
-                        if (0 == (rd.field_w.indexOf(var5) ^ -1)) {
+                        if (rd.field_w.indexOf(var5) == -1) {
                           stackIn_46_0 = ii.field_h;
                           decompiledRegionSelector0 = 5;
                           break L0;
@@ -198,7 +198,7 @@ final class r extends f implements pl {
                     return null;
                   }
                 } else {
-                  if (-35 != (param0.charAt(var2_int + -1) ^ -1)) {
+                  if (param0.charAt(var2_int + -1) != 34) {
                     stackIn_13_0 = ii.field_h;
                     decompiledRegionSelector0 = 2;
                   } else {

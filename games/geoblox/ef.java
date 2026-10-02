@@ -51,7 +51,7 @@ final class ef implements Iterator {
             var2 = (ja) ((Object) bh.field_c.g(0));
             L2: while (var2 != null) {
               var2.b(true);
-              if ((var2.field_G ^ -1) <= -4) {
+              if (var2.field_G >= 3) {
                 var2.field_K = ra.field_a;
                 var2.field_G = 0;
               }

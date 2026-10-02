@@ -52,7 +52,7 @@ final class la extends sh {
                   break L2;
                 }
               }
-              if (-2 == (this.field_f ^ -1)) {
+              if (this.field_f == 1) {
                 var5_int = qa.field_a - this.field_D + -param3;
                 var6 = -this.field_H + (ue.field_e - param1);
                 if (this.field_v == var5_int) {
@@ -77,7 +77,7 @@ final class la extends sh {
 
                 stackIn_17_1 = this.field_v;
 
-                if ((Math.abs(var5_int) ^ -1) < -3) {
+                if (Math.abs(var5_int) > 2) {
                   stackIn_18_0 = this;
                   stackIn_18_1 = stackIn_17_1;
                   stackIn_18_2 = var5_int >> -218590175;
@@ -102,10 +102,10 @@ final class la extends sh {
 
                 stackIn_23_1 = this.field_m;
 
-                if ((Math.abs(var5_int) ^ -1) >= -3) {
+                if (Math.abs(var5_int) <= 2) {
                   stackIn_25_0 = this;
 
-                  if ((var5_int ^ -1) < -1) {
+                  if (var5_int > 0) {
                     stackIn_26_0 = this;
                     stackIn_26_1 = stackIn_23_1;
                     stackIn_26_2 = 1;
@@ -180,7 +180,7 @@ final class la extends sh {
             this.a(param3, param2, 34, param1);
             this.b(param3, param1, param2, param0 + 0);
             discarded$70 = param1.append(" revert=").append(this.field_C);
-            if ((this.field_B ^ -1) != -2147483648) {
+            if (this.field_B != 2147483647) {
               if (this.field_G != 2147483647) {
                 discarded$71 = param1.append(" to ").append(this.field_B).append(',').append(this.field_G);
               }

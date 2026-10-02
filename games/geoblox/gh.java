@@ -83,7 +83,7 @@ final class gh {
             var4 = 460;
             var5 = 30 + fi.field_d.b(var8, var4) * var3;
             var6 = 300;
-            if ((this.field_p ^ -1) == -1) {
+            if (this.field_p == 0) {
               var6 = 232;
               if (var7 == 0) {
                 break L0;
@@ -104,10 +104,10 @@ final class gh {
           L3: {
             ma.a(var6, 70, 10 + var5, (byte) -92, 500, ll.field_h);
             fi.field_d.a(var8, 95, 15 + var6, var4, 300, 1, -1, 0, 0, var3);
-            if (-6 == (this.field_p ^ -1)) {
-              if (-101 > (qa.field_a ^ -1)) {
-                if (-341 < (qa.field_a ^ -1)) {
-                  if (-441 > (ue.field_e ^ -1)) {
+            if (this.field_p == 5) {
+              if (qa.field_a > 100) {
+                if (qa.field_a < 340) {
+                  if (ue.field_e > 440) {
                     if (ue.field_e < 476) {
                       dd.field_G.field_K[0][wf.field_p] = 15488514;
                     }
@@ -135,8 +135,8 @@ final class gh {
             }
             ma.a(440, 240, 36, (byte) -92, 160, eb.field_g);
             if (250 < qa.field_a) {
-              if (-390 < (qa.field_a ^ -1)) {
-                if ((ue.field_e ^ -1) < -441) {
+              if (qa.field_a < 389) {
+                if (ue.field_e > 440) {
                   if (476 > ue.field_e) {
                     dd.field_G.field_K[0][wf.field_p] = 15488514;
                   }
@@ -307,7 +307,7 @@ final class gh {
                     L5: {
                       L6: {
                         var3 = c.field_ab;
-                        if ((var3 ^ -1) == -5) {
+                        if (var3 == 4) {
                           if (var14 == 0) {
                             var2_ref_String = "baking";
                             if (var14 == 0) {
@@ -317,7 +317,7 @@ final class gh {
                             }
                           }
                         }
-                        if (-7 == (var3 ^ -1)) {
+                        if (var3 == 6) {
                           if (var14 == 0) {
                             break L6;
                           }
@@ -327,7 +327,7 @@ final class gh {
                             break L5;
                           }
                         }
-                        if (-1 == (var3 ^ -1)) {
+                        if (var3 == 0) {
                           break L4;
                         } else {
                           if (3 == var3) {
@@ -335,7 +335,7 @@ final class gh {
                               break L3;
                             }
                           }
-                          if (-3 == (var3 ^ -1)) {
+                          if (var3 == 2) {
                             break L2;
                           } else {
                             break L1;
@@ -469,7 +469,7 @@ final class gh {
                   break L24;
                 } else {
                   if (0 != this.field_bb) {
-                    if (-2 != (this.field_bb ^ -1)) {
+                    if (this.field_bb != 1) {
                       break L24;
                     }
                   }
@@ -525,7 +525,7 @@ final class gh {
                       if (stackIn_168_0 > stackIn_168_1) {
                         var13 = 11;
                       }
-                      if (-256 > (var13 ^ -1)) {
+                      if (var13 > 255) {
                         var13 = 255;
                       }
                       vb.d(var11 / 2, var12 / 2, var6, var13 << 269082696 | var13 << -327781456 | var13);
@@ -592,7 +592,7 @@ final class gh {
                               lj.field_d.a(var3 / 2, var4 / 2, lj.field_d.field_s / 2, lj.field_d.field_o / 2, var5);
                             } else {
                               var8 = -(this.field_v / 2) + 176;
-                              if ((var8 ^ -1) > -11) {
+                              if (var8 < 10) {
                                 var8 = 10;
                               }
                               var9 = fi.field_d.field_o + -fi.field_d.field_q;
@@ -629,7 +629,7 @@ final class gh {
           }
           L48: {
             if (!this.field_Y) {
-              if ((this.field_a ^ -1) < -1) {
+              if (this.field_a > 0) {
                 lj.field_d.b(-(lj.field_d.field_s >> -1133369407) + 320, 60 + -(lj.field_d.field_o >> -2072717343) + 240);
                 dd.field_G.b(wl.field_b, 320, 310, 0, -1);
               }
@@ -738,7 +738,7 @@ final class gh {
           if ((fieldTemp$0 & 15) == 0) {
             this.field_l = this.field_l + this.field_k;
             if (7 != this.field_l) {
-              if (-1 == (this.field_l ^ -1)) {
+              if (this.field_l == 0) {
                 this.field_k = 1;
                 if (var5 == 0) {
                   break L0;
@@ -759,15 +759,15 @@ final class gh {
                 }
               }
               L5: {
-                if ((this.field_y ^ -1) == -2) {
+                if (this.field_y == 1) {
                   if (this.field_T < 640) {
                     break L5;
                   }
                 }
-                if (-464 != (this.field_T ^ -1)) {
+                if (this.field_T != 463) {
                   break L2;
                 } else {
-                  if (-1 == (gf.field_f ^ -1)) {
+                  if (gf.field_f == 0) {
                     this.field_y = 1;
                     el.field_o.c(false);
                     if (var5 == 0) {
@@ -802,7 +802,7 @@ final class gh {
               if (this.b(true)) {
                 L12: {
                   if (0 != this.field_bb) {
-                    if (-6 != (this.field_bb ^ -1)) {
+                    if (this.field_bb != 5) {
                       break L12;
                     }
                   }
@@ -847,14 +847,14 @@ final class gh {
                       break L17;
                     }
                   }
-                  if (-2 == (var4_int ^ -1)) {
+                  if (var4_int == 1) {
                     oa.field_a = oa.field_a + gb.field_g;
                     kb.field_d = kb.field_d - 1;
                     if (var5 == 0) {
                       break L17;
                     }
                   }
-                  if ((var4_int ^ -1) != -3) {
+                  if (var4_int != 2) {
                     if (3 == var4_int) {
                       oa.field_a = oa.field_a - gb.field_g;
                       kb.field_d = kb.field_d + 1;
@@ -869,21 +869,21 @@ final class gh {
                         break L17;
                       }
                     }
-                    if ((var4_int ^ -1) == -6) {
+                    if (var4_int == 5) {
                       kb.field_d = kb.field_d + 1;
                       ml.field_r = ml.field_r + gb.field_g;
                       if (var5 == 0) {
                         break L17;
                       }
                     }
-                    if (-7 == (var4_int ^ -1)) {
+                    if (var4_int == 6) {
                       ml.field_r = ml.field_r - kb.field_d;
                       gb.field_g = gb.field_g - 1;
                       if (var5 == 0) {
                         break L17;
                       }
                     }
-                    if ((var4_int ^ -1) != -8) {
+                    if (var4_int != 7) {
                       break L17;
                     } else {
                       kb.field_d = kb.field_d - 1;
@@ -904,8 +904,8 @@ final class gh {
                       break L25;
                     }
                   }
-                  if ((var4_int ^ -1) != -2) {
-                    if (-3 != (var4_int ^ -1)) {
+                  if (var4_int != 1) {
+                    if (var4_int != 2) {
                       if (3 == var4_int) {
                         sc.field_f = sc.field_f + 1;
                         el.field_g = el.field_g + lb.field_b;
@@ -913,7 +913,7 @@ final class gh {
                           break L25;
                         }
                       }
-                      if ((var4_int ^ -1) != -5) {
+                      if (var4_int != 4) {
                         break L25;
                       } else {
                         sc.field_f = sc.field_f - 1;
@@ -932,7 +932,7 @@ final class gh {
                   el.field_g = el.field_g + sc.field_f;
                   lb.field_b = lb.field_b + 1;
                 }
-                if ((this.field_p ^ -1) == -1) {
+                if (this.field_p == 0) {
                   this.field_U = this.field_U + 1;
                 }
               }
@@ -940,14 +940,14 @@ final class gh {
                 if (kj.field_o[var3]) {
                   this.field_J = this.field_J + rc.field_h;
                   wd.a((byte) 74);
-                  if ((this.field_p ^ -1) == -1) {
+                  if (this.field_p == 0) {
                     this.field_U = this.field_U + 1;
                   }
                   L32: {
                     var4_int = (he.field_d + (qa.field_a - -kd.field_c) + ki.field_d) % 8;
-                    if ((var4_int ^ -1) != -1) {
+                    if (var4_int != 0) {
                       if (1 != var4_int) {
-                        if ((var4_int ^ -1) != -3) {
+                        if (var4_int != 2) {
                           if (var4_int == 3) {
                             kb.field_d = kb.field_d + 1;
                             oa.field_a = oa.field_a - gb.field_g;
@@ -1002,7 +1002,7 @@ final class gh {
                     oa.field_a = oa.field_a + kb.field_d;
                   }
                   var4_int = (kd.field_c + qa.field_a - -he.field_d + ki.field_d) % 5;
-                  if (-1 != (var4_int ^ -1)) {
+                  if (var4_int != 0) {
                     if (1 != var4_int) {
                       if (2 != var4_int) {
                         if (var4_int == 3) {
@@ -1078,7 +1078,7 @@ final class gh {
                 }
               }
               this.field_a = this.field_a - 1;
-              if ((this.field_a ^ -1) == -1) {
+              if (this.field_a == 0) {
                 ld.a(310, 320, 123, 100 + 100 * ji.field_h);
               }
               L50: {
@@ -1137,7 +1137,7 @@ final class gh {
               }
             }
           }
-          if (-1 == (this.field_D ^ -1)) {
+          if (this.field_D == 0) {
             fi.a(param0 ^ -1578896191, pi.field_S);
           }
           if (pf.field_D) {
@@ -1179,8 +1179,8 @@ final class gh {
                   }
                 }
               }
-              if ((ki.field_d ^ -1) != -14) {
-                if (-84 == (ki.field_d ^ -1)) {
+              if (ki.field_d != 13) {
+                if (ki.field_d == 83) {
                   if (this.field_Y) {
                     this.c(7000);
                   }
@@ -1190,9 +1190,9 @@ final class gh {
                     if (this.field_t == 0) {
                       this.field_t = 1;
                       this.field_C = false;
-                      if (-1 != (this.field_p ^ -1)) {
-                        if ((this.field_p ^ -1) != -2) {
-                          if (-3 == (this.field_p ^ -1)) {
+                      if (this.field_p != 0) {
+                        if (this.field_p != 1) {
+                          if (this.field_p == 2) {
                             this.field_U = dk.field_b;
                             if (var5 == 0) {
                               break L67;
@@ -1210,9 +1210,9 @@ final class gh {
                     }
                   }
                 }
-                if ((ki.field_d ^ -1) == -86) {
+                if (ki.field_d == 85) {
                   if (5 == this.field_p) {
-                    if (-1 == (this.field_t ^ -1)) {
+                    if (this.field_t == 0) {
                       this.c(param0 ^ -1578897511);
                       this.field_Y = true;
                       this.field_p = 0;
@@ -1246,19 +1246,19 @@ final class gh {
                   } else {
                     if (stackIn_464_0 == stackIn_464_1) {
                       this.field_r = this.field_r - 1;
-                      if ((this.field_r ^ -1) > -1) {
+                      if (this.field_r < 0) {
                         this.field_r = 6;
                       }
                     }
-                    if (-50 == (ki.field_d ^ -1)) {
+                    if (ki.field_d == 49) {
                       this.field_r = this.field_r + 1;
                       if (this.field_r == 7) {
                         this.field_r = 0;
                       }
                     }
-                    if (-65 == (ki.field_d ^ -1)) {
+                    if (ki.field_d == 64) {
                       this.field_G = this.field_G - 1;
-                      if (-1 < (this.field_G ^ -1)) {
+                      if (this.field_G < 0) {
                         this.field_G = 6;
                       }
                     }
@@ -1276,11 +1276,11 @@ final class gh {
                     }
                     if (ki.field_d == 65) {
                       this.field_G = this.field_G + 1;
-                      if ((this.field_G ^ -1) == -8) {
+                      if (this.field_G == 7) {
                         this.field_G = 0;
                       }
                     }
-                    if ((ki.field_d ^ -1) == -17) {
+                    if (ki.field_d == 16) {
                       this.field_d = true;
                     }
                     if (68 == ki.field_d) {
@@ -1314,20 +1314,20 @@ final class gh {
                       ((gh) (this)).field_N = stackIn_416_1 != 0;
                       this.field_K = true;
                     }
-                    if ((ki.field_d ^ -1) == -4) {
+                    if (ki.field_d == 3) {
                       ag.field_k = 7;
                       f.field_qb = 7;
                     }
-                    if ((ki.field_d ^ -1) == -5) {
+                    if (ki.field_d == 4) {
                       hd.f(2);
                       this.field_K = true;
                     }
-                    if ((ki.field_d ^ -1) == -6) {
+                    if (ki.field_d == 5) {
                       c.field_ab = 1;
                       hf.a(param0 ^ 1578896207, c.field_ab);
                       cd.a((byte) 110);
                     }
-                    if ((ki.field_d ^ -1) == -7) {
+                    if (ki.field_d == 6) {
                       c.field_ab = 0;
                       hf.a(-126, c.field_ab);
                       cd.a((byte) 126);
@@ -1342,7 +1342,7 @@ final class gh {
                       hf.a(-124, c.field_ab);
                       cd.a((byte) 115);
                     }
-                    if (-10 == (ki.field_d ^ -1)) {
+                    if (ki.field_d == 9) {
                       c.field_ab = 3;
                       hf.a(-98, c.field_ab);
                       cd.a((byte) 122);
@@ -1352,7 +1352,7 @@ final class gh {
                       hf.a(param0 ^ 1578896198, c.field_ab);
                       cd.a((byte) 101);
                     }
-                    if ((ki.field_d ^ -1) == -12) {
+                    if (ki.field_d == 11) {
                       c.field_ab = 2;
                       hf.a(-118, c.field_ab);
                       cd.a((byte) 82);
@@ -1374,7 +1374,7 @@ final class gh {
                       c.field_ab = c.field_ab % 7;
                       cd.a((byte) 108);
                     }
-                    if ((ki.field_d ^ -1) == -40) {
+                    if (ki.field_d == 39) {
                       this.field_h = true;
                       if (var5 == 0) {
                         continue L60;
@@ -1395,20 +1395,20 @@ final class gh {
                 return;
               }
             }
-            stackIn_464_0 = bi.field_g ^ -1;
+            stackIn_464_0 = ~bi.field_g;
             stackIn_464_1 = -1;
           }
           L98: {
             if (stackIn_464_0 != stackIn_464_1) {
               if (this.field_j) {
-                if ((oc.field_f ^ -1) <= -3) {
+                if (oc.field_f >= 2) {
                   nb.a(-28195, mc.field_a, this.field_G, he.field_d, this.field_r, this.field_Q);
                 }
               }
               L100: {
                 if (this.field_Y) {
-                  if ((this.field_t ^ -1) == -1) {
-                    if (-6 != (this.field_p ^ -1)) {
+                  if (this.field_t == 0) {
+                    if (this.field_p != 5) {
                       this.field_C = false;
                       this.field_t = 1;
                       if (this.field_p == 0) {
@@ -1417,13 +1417,13 @@ final class gh {
                           break L100;
                         }
                       }
-                      if ((this.field_p ^ -1) == -2) {
+                      if (this.field_p == 1) {
                         this.field_U = dd.field_D;
                         if (var5 == 0) {
                           break L100;
                         }
                       }
-                      if ((this.field_p ^ -1) == -3) {
+                      if (this.field_p == 2) {
                         this.field_U = dk.field_b;
                         if (var5 == 0) {
                           break L100;
@@ -1432,9 +1432,9 @@ final class gh {
                         break L98;
                       }
                     }
-                    if (-101 > (mc.field_a ^ -1)) {
+                    if (mc.field_a > 100) {
                       if (340 > mc.field_a) {
-                        if (-441 > (he.field_d ^ -1)) {
+                        if (he.field_d > 440) {
                           if (476 > he.field_d) {
                             this.c(param0 ^ -1578897511);
                             this.field_p = 0;
@@ -1447,7 +1447,7 @@ final class gh {
                     if (mc.field_a > 380) {
                       if (540 > mc.field_a) {
                         if (he.field_d > 440) {
-                          if ((he.field_d ^ -1) > -477) {
+                          if (he.field_d < 476) {
                             this.field_C = false;
                             this.field_t = 1;
                           } else {
@@ -1476,7 +1476,7 @@ final class gh {
         if (!this.field_Y) {
           L0: {
             this.field_o = this.field_o + param1;
-            if ((this.field_o ^ -1) < -10000000) {
+            if (this.field_o > 9999999) {
               var7 = (CharSequence) ((Object) Integer.toString(9999999));
               td.a(var7, this.field_X, 0, 47);
               if (var6 == 0) {
@@ -1492,7 +1492,7 @@ final class gh {
           }
           L3: {
             var4 = kd.field_c % 3;
-            if ((var4 ^ -1) != -1) {
+            if (var4 != 0) {
               if (var4 == 1) {
                 ml.field_r = ml.field_r - var3;
                 if (var6 == 0) {
@@ -1570,7 +1570,7 @@ final class gh {
         int var3;
         L0: {
           var3 = Geoblox.field_C;
-          if (-3 == (this.field_t ^ -1)) {
+          if (this.field_t == 2) {
             this.field_p = this.field_p + 1;
             this.field_C = true;
             this.field_t = 0;
@@ -1580,7 +1580,7 @@ final class gh {
           }
           if (1 == this.field_t) {
             L2: {
-              if ((this.field_p ^ -1) != -4) {
+              if (this.field_p != 3) {
                 if (this.field_p != 5) {
                   break L2;
                 }
@@ -1591,8 +1591,8 @@ final class gh {
               this.field_d = false;
               this.field_t = 2;
             }
-            if (-1 == (this.field_p ^ -1)) {
-              if (-451 > (this.field_U ^ -1)) {
+            if (this.field_p == 0) {
+              if (this.field_U > 450) {
                 this.field_t = 2;
                 if (var3 == 0) {
                   break L0;
@@ -1608,7 +1608,7 @@ final class gh {
               if (this.field_p != 2) {
                 break L0;
               } else {
-                if ((dk.field_b + -this.field_U ^ -1) >= -1) {
+                if (dk.field_b + -this.field_U <= 0) {
                   break L0;
                 } else {
                   this.field_t = 2;
@@ -1633,7 +1633,7 @@ final class gh {
         int var3 = 0;
         int var4 = 0;
         var4 = Geoblox.field_C;
-        if (-1 == (this.field_D ^ -1)) {
+        if (this.field_D == 0) {
           L1: {
             if (!this.field_f) {
               this.h(122);
@@ -1662,9 +1662,9 @@ final class gh {
                 L6: {
                   L7: {
                     if (7 > var3) {
-                      stackIn_27_0 = c.field_ab ^ -1;
+                      stackIn_27_0 = ~c.field_ab;
 
-                      stackIn_27_1 = ee.field_B[var3] ^ -1;
+                      stackIn_27_1 = ~ee.field_B[var3];
 
                       if (var4 != 0) {
                         break L6;
@@ -1705,22 +1705,22 @@ final class gh {
                                     break L17;
                                   }
                                 }
-                                if (-2 == (var3 ^ -1)) {
+                                if (var3 == 1) {
                                   if (var4 == 0) {
                                     break L16;
                                   }
                                 }
-                                if (-4 == (var3 ^ -1)) {
+                                if (var3 == 3) {
                                   if (var4 == 0) {
                                     break L15;
                                   }
                                 }
-                                if (-1 == (var3 ^ -1)) {
+                                if (var3 == 0) {
                                   if (var4 == 0) {
                                     break L14;
                                   }
                                 }
-                                if (-7 == (var3 ^ -1)) {
+                                if (var3 == 6) {
                                   break L13;
                                 } else {
                                   if (5 == var3) {
@@ -1783,7 +1783,7 @@ final class gh {
           this.field_f = true;
           this.field_H = false;
           this.field_D = 0;
-          if (-1 > (ji.field_h ^ -1)) {
+          if (ji.field_h > 0) {
             qe.b(10);
             ld.b(false);
           }
@@ -2046,7 +2046,7 @@ final class gh {
                     }
                 }
                 case 31: {
-                    if ((460 + -this.field_D + 460 ^ -1) <= (this.field_c * 2 ^ -1)) {
+                    if (~(460 + -this.field_D + 460) <= ~(this.field_c * 2)) {
                         statePc = 37;
                         continue stateLoop;
                     } else {
@@ -2085,13 +2085,13 @@ final class gh {
                     }
                 }
                 case 43: {
-                    if (-3 == (this.field_bb ^ -1)) {
+                    if (this.field_bb == 2) {
                         statePc = 52;
                         continue stateLoop;
                     } else {
                         /* Inlined CFG state: 46. */
                         {
-                            if ((this.field_S ^ -1) != -151) {
+                            if (this.field_S != 150) {
                                 statePc = 51;
                                 continue stateLoop;
                             } else {
@@ -2221,7 +2221,7 @@ final class gh {
         } else {
           L0: {
             this.field_A = this.field_A + param0;
-            if (-100000 > (this.field_A ^ -1)) {
+            if (this.field_A > 99999) {
               var4 = (CharSequence) ((Object) Integer.toString(99999));
               td.a(var4, this.field_g, 0, 26);
               if (Geoblox.field_C == 0) {
@@ -2244,7 +2244,7 @@ final class gh {
           return;
         } else {
           L0: {
-            if (-1 != (this.field_bb ^ -1)) {
+            if (this.field_bb != 0) {
               dd.field_G.a(tj.field_a, 426, 404, 200, 100, 0, -1, 2, 0, 30);
               if (var3 == 0) {
                 break L0;
@@ -2255,7 +2255,7 @@ final class gh {
             dd.field_G.c(w.field_e, 621, 441, 0, -1);
             dd.field_G.field_K[0][wf.field_p] = 16689938;
             dd.field_G.c(od.field_b, 621, 468, 0, -1);
-            if ((var2 ^ -1) >= -11) {
+            if (var2 <= 10) {
               dd.field_G.field_K[0][wf.field_p] = mk.field_k[var2 % 5];
               dd.field_G.c(Integer.toString(var2), 515, 468, 0, -1);
               dd.field_G.field_K[0][wf.field_p] = 16689938;
@@ -2305,7 +2305,7 @@ final class gh {
           }
           L5: {
             if (this.field_o <= 0) {
-              if ((this.field_e ^ -1) >= -1) {
+              if (this.field_e <= 0) {
                 break L5;
               }
             }
@@ -2365,7 +2365,7 @@ final class gh {
     }
 
     final void c(boolean param0) {
-        if ((this.field_A ^ -1) == -1) {
+        if (this.field_A == 0) {
             return;
         }
         if (param0) {

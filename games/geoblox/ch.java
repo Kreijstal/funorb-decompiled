@@ -343,7 +343,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                         if (d.field_o != null) {
                           var1 = d.field_o.toLowerCase();
                           if (-1 == ((String) (var1)).indexOf("sun")) {
-                            if ((((String) (var1)).indexOf("apple") ^ -1) == 0) {
+                            if (((String) (var1)).indexOf("apple") == -1) {
                               break L5;
                             }
                           }
@@ -423,7 +423,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                       var2_int = 0;
                       L11: while (true) {
                         L12: {
-                          if ((d.field_t.length() ^ -1) < (var1_int ^ -1)) {
+                          if (~d.field_t.length() < ~var1_int) {
                             var3 = d.field_t.charAt(var1_int);
                             stackIn_78_0 = var3;
 
@@ -433,7 +433,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                               break L12;
                             } else {
                               if (stackIn_78_0 >= stackIn_78_1) {
-                                if (-58 <= (var3 ^ -1)) {
+                                if (var3 <= 57) {
                                   var2_int = 10 * var2_int - 48 - -var3;
                                   var1_int++;
                                   if (var5 == 0) {
@@ -443,7 +443,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                               }
                             }
                           }
-                          stackIn_78_0 = var2_int ^ -1;
+                          stackIn_78_0 = ~var2_int;
                           stackIn_78_1 = -6;
                         }
                         if (stackIn_78_0 > stackIn_78_1) {
@@ -476,7 +476,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                   L18: while (true) {
                     L19: {
                       if (0L != ka.field_a) {
-                        stackIn_99_0 = ((ka.field_a ^ -1L) < (oa.a(-12520) ^ -1L) ? -1 : ((ka.field_a ^ -1L) == (oa.a(-12520) ^ -1L) ? 0 : 1));
+                        stackIn_99_0 = (~ka.field_a < ~oa.a(-12520) ? -1 : (~ka.field_a == ~oa.a(-12520) ? 0 : 1));
 
                         if (var5 != 0) {
                           break L19;
@@ -836,10 +836,10 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                 L2: {
                   dl.field_c = true;
                   if (oe.field_S) {
-                    if ((-Geoblox.field_D + oa.a(-12520) ^ -1L) < -1001L) {
+                    if (-Geoblox.field_D + oa.a(-12520) > 1000L) {
                       var2 = param0.getClipBounds();
                       if (null != var2) {
-                        if ((var2.width ^ -1) > (qb.field_G ^ -1)) {
+                        if (~var2.width > ~qb.field_G) {
                           break L2;
                         } else {
                           if (sd.field_w > var2.height) {
@@ -919,7 +919,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                 L1: {
                   if (qa.field_d != null) {
                     wg.field_j = wg.field_j + 1;
-                    if ((wg.field_j ^ -1) > -4) {
+                    if (wg.field_j < 3) {
                       this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
                       decompiledRegionSelector0 = 1;
                     } else {
@@ -943,7 +943,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                       var8 = ka.field_i.a((Runnable) (this), 0, 1);
                       L2: while (true) {
                         L3: {
-                          if (-1 == (var8.field_a ^ -1)) {
+                          if (var8.field_a == 0) {
                             bc.a(0, 10L);
                             if (var9 != 0) {
                               break L3;
@@ -1103,7 +1103,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
           L3: {
             fieldTemp$1 = rj.field_i;
             rj.field_i = rj.field_i + 1;
-            if ((fieldTemp$1 ^ -1) < -51) {
+            if (fieldTemp$1 > 50) {
               L4: {
                 rj.field_i = rj.field_i - 50;
                 dl.field_c = true;

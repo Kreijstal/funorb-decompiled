@@ -128,11 +128,11 @@ class qc extends hf {
                   }
                   var3_long = var3_long + 1L;
                 }
-                if (-11 != (var8 ^ -1)) {
+                if (var8 != 10) {
                   continue L2;
                 }
               } else {
-                if (-11 != (var8 ^ -1)) {
+                if (var8 != 10) {
                   continue L2;
                 }
               }
@@ -200,7 +200,7 @@ class qc extends hf {
         int fieldTemp$0 = this.field_f;
         this.field_f = this.field_f + 1;
         int var2 = this.field_j[fieldTemp$0];
-        if (!(-1 == (var2 ^ -1))) {
+        if (!(var2 == 0)) {
             throw new IllegalStateException("");
         }
         int var3 = this.field_f;
@@ -251,7 +251,7 @@ class qc extends hf {
         int fieldTemp$0 = 0;
         try {
             var3_int = param0.indexOf(' ');
-            if ((var3_int ^ -1) <= -1) {
+            if (var3_int >= 0) {
                 throw new IllegalArgumentException("");
             }
             var4 = (CharSequence) ((Object) param0);
@@ -884,7 +884,7 @@ class qc extends hf {
             return;
         }
         try {
-            if (!((var3_int ^ -1) > -1)) {
+            if (!(var3_int < 0)) {
                 throw new IllegalArgumentException("");
             }
             fieldTemp$0 = this.field_f;
@@ -913,12 +913,12 @@ class qc extends hf {
     }
 
     final void c(int param0, int param1) {
-        if (-65 < (param0 ^ -1) && 63 >= (param0 ^ -1)) {
+        if (param0 < 64 && param0 >= -64) {
             this.d((byte) 125, 64 + param0);
             return;
         }
         if (param0 < 16384) {
-            if (!(16383 < (param0 ^ -1))) {
+            if (!(param0 < -16384)) {
                 this.e(49152 + param0, 28695);
                 return;
             }
@@ -997,7 +997,7 @@ class qc extends hf {
     final int h(int param0) {
         int var3 = 57 % ((-26 - param0) / 54);
         int var2 = 255 & this.field_j[this.field_f];
-        if ((var2 ^ -1) > -129) {
+        if (var2 < 128) {
             return this.c((byte) 34) - 64;
         }
         return -49152 + this.b(true);
@@ -1115,7 +1115,7 @@ class qc extends hf {
         long var12;
         field_g = new long[8][256];
         field_h = new long[11];
-        for (var0 = 0; (var0 ^ -1) > -257; var0++) {
+        for (var0 = 0; var0 < 256; var0++) {
           var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
           if ((var0 & 1) != 0) {
             stackIn_5_0 = (long)(var1 & 255);
@@ -1133,7 +1133,7 @@ class qc extends hf {
           }
           var8 = var6 ^ var2;
           var10 = var6 << 15491329;
-          if ((var10 ^ -1L) <= -257L) {
+          if (var10 >= 256L) {
             var10 = var10 ^ 285L;
           }
           var12 = var2 ^ var10;
@@ -1143,7 +1143,7 @@ class qc extends hf {
           }
         }
         field_h[0] = 0L;
-        for (var0 = 1; -11 <= (var0 ^ -1); var0++) {
+        for (var0 = 1; var0 <= 10; var0++) {
           var1 = var0 * 8 - 8;
           field_h[var0] = f.a(f.a(f.a(cj.a(16711680L, field_g[5][5 + var1]), f.a(cj.a(4278190080L, field_g[4][var1 - -4]), f.a(f.a(f.a(cj.a(field_g[0][var1], -72057594037927936L), cj.a(field_g[1][1 + var1], 71776119061217280L)), cj.a(280375465082880L, field_g[2][2 + var1])), cj.a(field_g[3][var1 + 3], 1095216660480L)))), cj.a(field_g[6][var1 - -6], 65280L)), cj.a(255L, field_g[7][var1 - -7]));
         }
