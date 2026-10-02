@@ -169,23 +169,23 @@ final class uk extends TextInputValidator {
           hl.field_D[2] = (int)(ak.field_a >> 32);
           hl.field_D[3] = (int)ak.field_a;
           fc.field_d.position = 0;
-          fc.field_d.c((byte) 95, hl.field_D[0]);
-          fc.field_d.c((byte) 95, hl.field_D[1]);
-          fc.field_d.c((byte) 95, hl.field_D[2]);
-          fc.field_d.c((byte) 95, hl.field_D[3]);
+          fc.field_d.writeIntBE((byte) 95, hl.field_D[0]);
+          fc.field_d.writeIntBE((byte) 95, hl.field_D[1]);
+          fc.field_d.writeIntBE((byte) 95, hl.field_D[2]);
+          fc.field_d.writeIntBE((byte) 95, hl.field_D[3]);
           SpriteState.a(fc.field_d, true);
-          fc.field_d.e(param1, 28695);
+          fc.field_d.writeShortBE(param1, 28695);
           param3.a(124, fc.field_d);
           fj.field_q.position = 0;
           if (param2) {
-            fj.field_q.d((byte) 121, 18);
+            fj.field_q.writeByte((byte) 121, 18);
           } else {
-            fj.field_q.d((byte) -116, 16);
+            fj.field_q.writeByte((byte) -116, 16);
           }
           fj.field_q.position = fj.field_q.position + 2;
           var5_int = fj.field_q.position;
-          fj.field_q.c((byte) 95, f.field_ib);
-          fj.field_q.b((byte) 116, lb.field_c);
+          fj.field_q.writeIntBE((byte) 95, f.field_ib);
+          fj.field_q.writeLongBE((byte) 116, lb.field_c);
           var6 = 0;
           if (param0 <= 20) {
             return;
@@ -203,17 +203,17 @@ final class uk extends TextInputValidator {
             if (null != fl.field_b) {
               var6 = var6 | 16;
             }
-            fj.field_q.d((byte) 127, var6);
+            fj.field_q.writeByte((byte) 127, var6);
             var7 = s.a(-1, k.c(111));
             if (var7 == null) {
               var7 = "";
             }
-            fj.field_q.a(var7, 0);
+            fj.field_q.writeNullTerminatedText(var7, 0);
             if (null != fl.field_b) {
-              fj.field_q.a(fl.field_b, (byte) -126);
+              fj.field_q.writeZeroPrefixedNullTerminatedText(fl.field_b, (byte) -126);
             }
             el.a(false, fc.field_d, fj.field_q, ld.field_c, vl.field_l);
-            fj.field_q.a(-var5_int + fj.field_q.position, true);
+            fj.field_q.backpatchLengthShortBE(-var5_int + fj.field_q.position, true);
             cm.a(-1, -1);
             return;
           }

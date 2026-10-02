@@ -692,8 +692,8 @@ the array indices, evidence, override families and remaining shared carriers.
 
 ## Remaining limitations
 
-There are 4,358 explicit guarded rules: 37 classes, 595 fields, 391 method
-declarations, 1,241 parameters and 2,094 locals. This is not full deobfuscation.
+There are 4,516 explicit guarded rules: 37 classes, 596 fields, 412 method
+declarations, 1,288 parameters and 2,183 locals. This is not full deobfuscation.
 Unknown flags, guard arguments and opaque shared helpers still need
 investigation. Current names and source identities live in the single manifest;
 previous naming and structural passes remain in Git. The earlier early-exit migration
@@ -1534,4 +1534,70 @@ full binding checks, byte-exact reproduction and dictionary reversal support
 this pass. Existing native result-helper fixtures cover their original packet
 cursor/storage uses; they do not newly execute these thirteen readers. Other
 buffer writers/helpers, actual archives, complete gameplay and device
+performance remain unfinished or unverified.
+
+## Buffer writes, copies and checksums (pass 61)
+
+The ordinary buffer writes now expose their width and byte order. `writeByte`,
+`writeShortBE`, `writeMediumBE` and `writeIntBE` write the low8/16/24/32 bits.
+`writeLong40BE`, private `writeLong56BE` and `writeLongBE` write five, seven and
+eight bytes. Each per-byte store captures the old position and advances before
+access; a failing store can therefore leave an advanced cursor. Guard checks
+and sentinel division/remainder occur at their original points, including
+between stores and after partial or complete output.
+
+`writeVariableIntBE` emits up to five seven-bit groups, most-significant first,
+using the original unsigned shifts and masks. The expression
+`(value | 2097436) >>> 14` stays intact. Its final guard can append an extra
+medium. `writeSignedSmart` uses one byte for [-64,63], adding64, and two bytes
+for the rest of [-16384,16383], adding49152. Out-of-range input retains its
+optional guard read and original `IllegalArgumentException`.
+
+`writeBytes` copies from `sourceOffset` into the buffer; `readBytes` copies into
+`destinationOffset`. They remain sequential loops, preserving overlap behavior,
+endpoint overflow, per-iteration cursor changes, guard calls and diagnostic
+wrapping. `padZerosToPosition` writes until an absolute end position; its guard
+can read a medium afterward, even if no padding was required.
+
+`writeNullTerminatedText(text, characterStart)` rejects any zero in the supplied
+text and encodes the slice from characterStart to text.length(), then appends0.
+The second argument is the start character offset passed to the shared encoder.
+`writeZeroPrefixedNullTerminatedText` searches for a zero before its guard and
+outside its catch. Wrong guard returns after that search; valid guard rejects
+zero, writes a zero prefix, encodes all text and appends a terminator. The
+client mapping, partial-write behavior and null/failure scopes remain.
+
+`writeBase38Text` packs up to20 positions into two ten-character chunks. It
+visits positions19 down to0, assigning letters2..27 case-insensitively,
+digits28..37, other present characters1 and missing positions0. It writes
+positions0..9 first, then10..19, using two BE56 stores. The original true guard
+sets position=-109 before encoding; this unusual path remains explicit.
+
+| Backpatch | Expected guard behavior |
+| --- | --- |
+| `backpatchLengthByte` | Write one byte at position-length-1 |
+| `backpatchLengthShortBE` | Write BE16 at position-length-2 |
+| `backpatchLengthIntBE` | Write BE32 at position-length-4 |
+
+These expected paths leave position unchanged. False preserveHashTables clears
+field_g in the short backpatcher. A nonzero guard in the int backpatcher calls
+`appendCrc32(13,61)` after the high-byte store, so subsequent store indices use
+the changed position. All original index expressions and truncation remain.
+
+`oe.computeCrc32` initializes its accumulator to-1, processes
+bytes[startPosition,endPosition) with low-byte lookup and unsigned shift8, then
+complements it. `sb.crc32Table` is built using eight reflected0xedb88320 steps
+per entry. Guard>-27 retains the original null-text helper call before computing.
+`appendCrc32` returns -122 with no writes for guard<=4; otherwise it appends and
+returns the checksum. `verifyTrailingCrc32` first subtracts4 from position,
+computes over bytes[0,position), then reads the stored BE32. Its expected guard
+restores the initial position; other guards and failures retain their original
+cursor changes and helper calls.
+
+All selected writer/copy/checksum parameters and locals, the shared CRC helper
+and its lookup initializer have guarded names. Every prior complete naming rule
+and source/generator pin is unchanged. Compilation, binding checks, byte-exact
+reproduction and reversal support this pass; existing native fixtures retain
+their original scope without new writer/CRC execution coverage. Buffer crypto,
+unrelated static helpers, actual asset loading, full gameplay and device
 performance remain unfinished or unverified.

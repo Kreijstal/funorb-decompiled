@@ -3,7 +3,7 @@
  */
 final class sb {
     static String noHighscoresText;
-    static int[] field_b;
+    static int[] crc32Table;
     static int decodedSpriteCount;
     static String loginNoDisplayNameText;
     static IndexedSprite[] field_e;
@@ -15,7 +15,7 @@ final class sb {
         if (param0) {
             decodedSpriteCount = 105;
         }
-        field_b = null;
+        crc32Table = null;
         noHighscoresText = null;
     }
 
@@ -46,22 +46,22 @@ final class sb {
     }
 
     static {
-        int var1 = 0;
-        int var2 = 0;
-        int var0;
+        int crcTableIndex = 0;
+        int crcPolynomialBit = 0;
+        int crcTableEntry;
         noHighscoresText = "No highscores";
-        field_b = new int[256];
+        crc32Table = new int[256];
         loginNoDisplayNameText = "You need to choose a name before you can log in. This is the name that will be displayed to other players.";
-        for (var1 = 0; var1 < 256; var1++) {
-          var0 = var1;
-          L1: for (var2 = 0; 8 > var2; var2++) {
-            if (1 != (var0 & 1)) {
-              var0 = var0 >>> 1;
+        for (crcTableIndex = 0; crcTableIndex < 256; crcTableIndex++) {
+          crcTableEntry = crcTableIndex;
+          L1: for (crcPolynomialBit = 0; 8 > crcPolynomialBit; crcPolynomialBit++) {
+            if (1 != (crcTableEntry & 1)) {
+              crcTableEntry = crcTableEntry >>> 1;
               continue L1;
             }
-            var0 = -306674912 ^ var0 >>> 1;
+            crcTableEntry = -306674912 ^ crcTableEntry >>> 1;
           }
-          field_b[var1] = var0;
+          crc32Table[crcTableIndex] = crcTableEntry;
         }
     }
 }

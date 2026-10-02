@@ -78,8 +78,8 @@ final class kk extends ji {
               var2 = (sd) ((Object) this.field_g.firstForIteration((byte) 121));
               L4: while (var2 != null) {
                 this.field_m.position = 0;
-                this.field_m.d((byte) -54, 1);
-                this.field_m.a((byte) -127, var2.field_i);
+                this.field_m.writeByte((byte) -54, 1);
+                this.field_m.writeLong40BE((byte) -127, var2.field_i);
                 this.field_u.enqueueWrite(100, 0, this.field_m.bytes.length, this.field_m.bytes);
                 this.field_e.addLast(-93, var2);
                 var2 = (sd) ((Object) this.field_g.nextForIteration(param0 ^ 41));
@@ -90,8 +90,8 @@ final class kk extends ji {
               }
               L6: while (var2 != null) {
                 this.field_m.position = 0;
-                this.field_m.d((byte) 8, 0);
-                this.field_m.a((byte) -127, var2.field_i);
+                this.field_m.writeByte((byte) 8, 0);
+                this.field_m.writeLong40BE((byte) -127, var2.field_i);
                 this.field_u.enqueueWrite(100, 0, this.field_m.bytes.length, this.field_m.bytes);
                 this.field_c.addLast(112, var2);
                 var2 = (sd) ((Object) this.field_p.nextForIteration(54));
@@ -200,8 +200,8 @@ final class kk extends ji {
                         stackIn_66_0 = (0 != var10) ? 9 : 5;
                         var15 = stackIn_66_0;
                         this.field_f.field_A = new ByteArrayBuffer(var9 + var15 + this.field_f.field_E);
-                        this.field_f.field_A.d((byte) -26, var10);
-                        this.field_f.field_A.c((byte) 95, var9);
+                        this.field_f.field_A.writeByte((byte) -26, var10);
+                        this.field_f.field_A.writeIntBE((byte) 95, var9);
                         this.field_j.position = 0;
                         this.field_f.field_D = 10;
                       }
@@ -374,9 +374,9 @@ final class kk extends ji {
                   if (this.field_i != 0) {
                     try {
                       this.field_m.position = 0;
-                      this.field_m.d((byte) -62, 4);
-                      this.field_m.d((byte) 122, (int) this.field_i);
-                      this.field_m.c((byte) 95, 0);
+                      this.field_m.writeByte((byte) -62, 4);
+                      this.field_m.writeByte((byte) 122, (int) this.field_i);
+                      this.field_m.writeIntBE((byte) 95, 0);
                       this.field_u.enqueueWrite(100, 0, this.field_m.bytes.length, this.field_m.bytes);
                     } catch (java.io.IOException decompiledCaughtParameter1) {
                       decompiledCaughtException = decompiledCaughtParameter1;
@@ -435,9 +435,9 @@ final class kk extends ji {
             }
             try {
               this.field_m.position = 0;
-              this.field_m.d((byte) 126, 6);
-              this.field_m.b(-12, 3);
-              this.field_m.e(0, 28695);
+              this.field_m.writeByte((byte) 126, 6);
+              this.field_m.writeMediumBE(-12, 3);
+              this.field_m.writeShortBE(0, 28695);
               this.field_u.enqueueWrite(100, 0, this.field_m.bytes.length, this.field_m.bytes);
               if (param0 > -56) {
                 kk.a(-8, (byte) 62);
@@ -496,8 +496,8 @@ final class kk extends ji {
               } else {
                 stackIn_6_2 = 3;
               }
-              ((ByteArrayBuffer) (Object) stackIn_5_0).d((byte) stackIn_5_1, stackIn_6_2);
-              this.field_m.a((byte) -127, 0L);
+              ((ByteArrayBuffer) (Object) stackIn_5_0).writeByte((byte) stackIn_5_1, stackIn_6_2);
+              this.field_m.writeLong40BE((byte) -127, 0L);
               this.field_u.enqueueWrite(100, 0, this.field_m.bytes.length, this.field_m.bytes);
               if (param0) {
                 this.a(false, false);

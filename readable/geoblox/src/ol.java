@@ -13,19 +13,19 @@ final class ol extends hk {
         var5.a(param0, (byte) -88);
         var5.position = var5.position + 1;
         int var4 = var5.position;
-        var5.d((byte) -55, 1);
-        var5.d((byte) -31, param1.field_l);
-        var5.d((byte) -104, param1.field_h);
-        var5.c((byte) 95, param1.field_f);
-        var5.c((byte) 95, param1.field_g);
-        var5.c((byte) 95, param1.field_j);
-        var5.c((byte) 95, param1.field_n);
-        var5.d(127, var4);
+        var5.writeByte((byte) -55, 1);
+        var5.writeByte((byte) -31, param1.field_l);
+        var5.writeByte((byte) -104, param1.field_h);
+        var5.writeIntBE((byte) 95, param1.field_f);
+        var5.writeIntBE((byte) 95, param1.field_g);
+        var5.writeIntBE((byte) 95, param1.field_j);
+        var5.writeIntBE((byte) 95, param1.field_n);
+        var5.appendCrc32(127, var4);
         if (param2 != 30175) {
             return;
         }
         try {
-            var5.f(11700, -var4 + var5.position);
+            var5.backpatchLengthByte(11700, -var4 + var5.position);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "ol.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

@@ -66,11 +66,11 @@ abstract class ib implements dg {
         try {
             var3 = fj.field_q;
             var3.a(param0, (byte) -82);
-            var3.d((byte) 124, param1);
-            var3.d((byte) -66, 0);
-            var3.e(param2.field_i, 28695);
-            var3.d((byte) -84, param2.field_f);
-            var3.d((byte) 125, param2.field_l);
+            var3.writeByte((byte) 124, param1);
+            var3.writeByte((byte) -66, 0);
+            var3.writeShortBE(param2.field_i, 28695);
+            var3.writeByte((byte) -84, param2.field_f);
+            var3.writeByte((byte) 125, param2.field_l);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "ib.DA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

@@ -32,12 +32,12 @@ final class al {
                 var4 = var9.readUnsignedByte((byte) 34);
                 if (0 != var4) {
                   var13 = new byte[var4];
-                  var9.b(29915, var4, var13, 0);
+                  var9.readBytes(29915, var4, var13, 0);
                 } else {
                   var5 = null;
                 }
                 var9.position = var9.position + 4;
-                if (!var9.h((byte) 20)) {
+                if (!var9.verifyTrailingCrc32((byte) 20)) {
                   jl.a((byte) -121);
                   return;
                 }

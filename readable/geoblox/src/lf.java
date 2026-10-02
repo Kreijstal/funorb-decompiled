@@ -24,8 +24,8 @@ class lf extends df {
 
     final void a(int param0, ByteArrayBuffer param1) {
         try {
-            param1.b((byte) 59, this.field_c);
-            param1.a(this.field_d, false);
+            param1.writeLongBE((byte) 59, this.field_c);
+            param1.writeBase38Text(this.field_d, false);
             if (param0 < 107) {
                 extendedTextCharacters = (char[]) null;
             }

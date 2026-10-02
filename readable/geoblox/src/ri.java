@@ -49,8 +49,8 @@ final class ri {
                   ih.field_a = SecondaryDeque.a(true, oa.field_c, (String) null, param1, false);
                 }
                 fj.field_q.position = 0;
-                fj.field_q.d((byte) -102, 14);
-                fj.field_q.d((byte) -78, ih.field_a.a((byte) -32).field_c);
+                fj.field_q.writeByte((byte) -102, 14);
+                fj.field_q.writeByte((byte) -78, ih.field_a.a((byte) -32).field_c);
                 cm.a(-1, -1);
                 pk.field_l = oe.field_T;
               }

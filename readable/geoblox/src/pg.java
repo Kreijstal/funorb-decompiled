@@ -108,7 +108,7 @@ final class pg {
                                   var13 = param3.readIntBE((byte) -70);
                                   array$0 = new byte[var13];
                                   var11[var12_int] = array$0;
-                                  param3.b(29915, var13, var22[var12_int], 0);
+                                  param3.readBytes(29915, var13, var22[var12_int], 0);
                                 }
                                 break L7;
                               }

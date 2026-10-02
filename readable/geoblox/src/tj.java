@@ -17,15 +17,15 @@ final class tj {
                 tj.a(-12, 107, (se) null);
             }
             var4 = var6.position;
-            var6.d((byte) 127, 1);
-            var6.d((byte) 124, param2.field_g);
-            var6.c(param2.field_j, param1 - 6048);
-            var6.c((byte) 95, param2.field_k);
-            var6.c((byte) 95, param2.field_h);
-            var6.c((byte) 95, param2.field_l);
-            var6.c((byte) 95, param2.field_f);
-            var6.d(104, var4);
-            var6.f(11700, -var4 + var6.position);
+            var6.writeByte((byte) 127, 1);
+            var6.writeByte((byte) 124, param2.field_g);
+            var6.writeSignedSmart(param2.field_j, param1 - 6048);
+            var6.writeIntBE((byte) 95, param2.field_k);
+            var6.writeIntBE((byte) 95, param2.field_h);
+            var6.writeIntBE((byte) 95, param2.field_l);
+            var6.writeIntBE((byte) 95, param2.field_f);
+            var6.appendCrc32(104, var4);
+            var6.backpatchLengthByte(11700, -var4 + var6.position);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "tj.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

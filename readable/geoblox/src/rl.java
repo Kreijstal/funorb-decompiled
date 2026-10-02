@@ -81,8 +81,8 @@ final class rl extends oe {
         try {
           var3 = fj.field_q;
           var3.a(param0, (byte) -85);
-          var3.d((byte) 123, param2.field_f);
-          var3.e(param2.field_h, param1 + 28161);
+          var3.writeByte((byte) 123, param2.field_f);
+          var3.writeShortBE(param2.field_h, param1 + 28161);
           if (param1 == 534) {
             return;
           }

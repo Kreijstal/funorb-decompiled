@@ -299,48 +299,48 @@ final class pf extends ee implements ga, pl {
               if (param5) {
                 var9 = var9 | 1;
               }
-              fc.field_d.c((byte) 95, bh.field_d.nextInt());
-              fc.field_d.c((byte) 95, bh.field_d.nextInt());
-              fc.field_d.a(var13, (byte) -126);
-              fc.field_d.a(var8, (byte) -126);
+              fc.field_d.writeIntBE((byte) 95, bh.field_d.nextInt());
+              fc.field_d.writeIntBE((byte) 95, bh.field_d.nextInt());
+              fc.field_d.writeZeroPrefixedNullTerminatedText(var13, (byte) -126);
+              fc.field_d.writeZeroPrefixedNullTerminatedText(var8, (byte) -126);
               var14 = (CharSequence) ((Object) param4);
-              fc.field_d.a(sl.a(var14, 48), (byte) -126);
-              fc.field_d.e(param0, 28695);
-              fc.field_d.d((byte) -94, param1);
-              fc.field_d.d((byte) 123, var9);
-              fj.field_q.d((byte) 127, 18);
+              fc.field_d.writeZeroPrefixedNullTerminatedText(sl.a(var14, 48), (byte) -126);
+              fc.field_d.writeShortBE(param0, 28695);
+              fc.field_d.writeByte((byte) -94, param1);
+              fc.field_d.writeByte((byte) 123, var9);
+              fj.field_q.writeByte((byte) 127, 18);
               fj.field_q.position = fj.field_q.position + 2;
               var10 = fj.field_q.position;
               var11_ref_String = s.a(-1, k.c(105));
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
-              fj.field_q.a(var11_ref_String, 0);
+              fj.field_q.writeNullTerminatedText(var11_ref_String, 0);
               el.a(false, fc.field_d, fj.field_q, ld.field_c, vl.field_l);
-              fj.field_q.a(-var10 + fj.field_q.position, true);
+              fj.field_q.backpatchLengthShortBE(-var10 + fj.field_q.position, true);
             } else {
               fc.field_d.position = 0;
-              fc.field_d.c((byte) 95, bh.field_d.nextInt());
-              fc.field_d.c((byte) 95, bh.field_d.nextInt());
+              fc.field_d.writeIntBE((byte) 95, bh.field_d.nextInt());
+              fc.field_d.writeIntBE((byte) 95, bh.field_d.nextInt());
               stackIn_9_0 = fc.field_d;
               if (!param2.a((byte) 97)) {
                 stackIn_10_1 = "";
               } else {
                 stackIn_10_1 = (String) (var13);
               }
-              ((ByteArrayBuffer) (Object) stackIn_9_0).a(stackIn_10_1, (byte) -126);
+              ((ByteArrayBuffer) (Object) stackIn_9_0).writeZeroPrefixedNullTerminatedText(stackIn_10_1, (byte) -126);
               stackIn_12_0 = fc.field_d;
               if (!param3.a((byte) 126)) {
                 stackIn_13_1 = "";
               } else {
                 stackIn_13_1 = (String) (var8);
               }
-              ((ByteArrayBuffer) (Object) stackIn_12_0).a(stackIn_13_1, (byte) -126);
-              fj.field_q.d((byte) 124, 16);
+              ((ByteArrayBuffer) (Object) stackIn_12_0).writeZeroPrefixedNullTerminatedText(stackIn_13_1, (byte) -126);
+              fj.field_q.writeByte((byte) 124, 16);
               fj.field_q.position = fj.field_q.position + 1;
               var9 = fj.field_q.position;
               el.a(false, fc.field_d, fj.field_q, ld.field_c, vl.field_l);
-              fj.field_q.f(11700, fj.field_q.position - var9);
+              fj.field_q.backpatchLengthByte(11700, fj.field_q.position - var9);
             }
             cm.a(-1, -1);
             pk.field_l = field_K;
@@ -579,30 +579,30 @@ final class pf extends ee implements ga, pl {
                 }
                 {
                   var5 = param1.position;
-                  param1.c((byte) 95, var17.field_m);
+                  param1.writeIntBE((byte) 95, var17.field_m);
                   for (var6 = 0; var6 < var17.field_f; var6++) {
                     if (var13.field_j[var6] != 0) {
-                      param1.d((byte) 6, var13.field_j[var6]);
+                      param1.writeByte((byte) 6, var13.field_j[var6]);
                     } else {
                       try {
                         var7_int = var13.field_k[var6];
                         if (var7_int == 0) {
                           var15 = (java.lang.reflect.Field) (var13.field_n[var6].result);
                           var9 = var15.getInt((Object) null);
-                          param1.d((byte) 3, 0);
-                          param1.c((byte) 95, var9);
+                          param1.writeByte((byte) 3, 0);
+                          param1.writeIntBE((byte) 95, var9);
                         } else {
                           if (var7_int == 1) {
                             var14 = (java.lang.reflect.Field) (var13.field_n[var6].result);
                             var8 = var14;
                             var14.setInt((Object) null, var13.field_g[var6]);
-                            param1.d((byte) 124, 0);
+                            param1.writeByte((byte) 124, 0);
                           } else {
                             if (2 == var7_int) {
                               var25 = (java.lang.reflect.Field) (var13.field_n[var6].result);
                               var9 = var25.getModifiers();
-                              param1.d((byte) 126, 0);
-                              param1.c((byte) 95, var9);
+                              param1.writeByte((byte) 126, 0);
+                              param1.writeIntBE((byte) 95, var9);
                             }
                           }
                         }
@@ -617,81 +617,81 @@ final class pf extends ee implements ga, pl {
                             }
                             var11 = var27.invoke((Object) null, var10);
                             if (var11 == null) {
-                              param1.d((byte) -88, 0);
+                              param1.writeByte((byte) -88, 0);
                               break L5;
                             }
                             if (var11 instanceof Number) {
-                              param1.d((byte) 126, 1);
-                              param1.b((byte) 116, ((Number) (var11)).longValue());
+                              param1.writeByte((byte) 126, 1);
+                              param1.writeLongBE((byte) 116, ((Number) (var11)).longValue());
                               break L5;
                             }
                             if (!(var11 instanceof String)) {
-                              param1.d((byte) -86, 4);
+                              param1.writeByte((byte) -86, 4);
                               break L5;
                             }
-                            param1.d((byte) 121, 2);
-                            param1.a((String) (var11), 0);
+                            param1.writeByte((byte) 121, 2);
+                            param1.writeNullTerminatedText((String) (var11), 0);
                             break L5;
                           }
                           if (var7_int == 4) {
                             var26 = (java.lang.reflect.Method) (var13.field_i[var6].result);
                             var9 = var26.getModifiers();
-                            param1.d((byte) 123, 0);
-                            param1.c((byte) 95, var9);
+                            param1.writeByte((byte) 123, 0);
+                            param1.writeIntBE((byte) 95, var9);
                           }
                         }
                       } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                         decompiledCaughtException = decompiledCaughtParameter0;
                         var7 = (ClassNotFoundException) (Object) decompiledCaughtException;
-                        param1.d((byte) 122, -10);
+                        param1.writeByte((byte) 122, -10);
                       } catch (java.io.InvalidClassException decompiledCaughtParameter1) {
                         decompiledCaughtException = decompiledCaughtParameter1;
                         var7_ref = (InvalidClassException) (Object) decompiledCaughtException;
-                        param1.d((byte) -101, -11);
+                        param1.writeByte((byte) -101, -11);
                       } catch (java.io.StreamCorruptedException decompiledCaughtParameter2) {
                         decompiledCaughtException = decompiledCaughtParameter2;
                         var7_ref2 = (StreamCorruptedException) (Object) decompiledCaughtException;
-                        param1.d((byte) 124, -12);
+                        param1.writeByte((byte) 124, -12);
                       } catch (java.io.OptionalDataException decompiledCaughtParameter3) {
                         decompiledCaughtException = decompiledCaughtParameter3;
                         var7_ref3 = (OptionalDataException) (Object) decompiledCaughtException;
-                        param1.d((byte) -78, -13);
+                        param1.writeByte((byte) -78, -13);
                       } catch (java.lang.IllegalAccessException decompiledCaughtParameter4) {
                         decompiledCaughtException = decompiledCaughtParameter4;
                         var7_ref4 = (IllegalAccessException) (Object) decompiledCaughtException;
-                        param1.d((byte) 4, -14);
+                        param1.writeByte((byte) 4, -14);
                       } catch (java.lang.IllegalArgumentException decompiledCaughtParameter5) {
                         decompiledCaughtException = decompiledCaughtParameter5;
                         var7_ref5 = (IllegalArgumentException) (Object) decompiledCaughtException;
-                        param1.d((byte) 11, -15);
+                        param1.writeByte((byte) 11, -15);
                       } catch (java.lang.reflect.InvocationTargetException decompiledCaughtParameter6) {
                         decompiledCaughtException = decompiledCaughtParameter6;
                         var7_ref6 = (java.lang.reflect.InvocationTargetException) (Object) decompiledCaughtException;
-                        param1.d((byte) -127, -16);
+                        param1.writeByte((byte) -127, -16);
                       } catch (java.lang.SecurityException decompiledCaughtParameter7) {
                         decompiledCaughtException = decompiledCaughtParameter7;
                         var7_ref7 = (SecurityException) (Object) decompiledCaughtException;
-                        param1.d((byte) 126, -17);
+                        param1.writeByte((byte) 126, -17);
                       } catch (java.io.IOException decompiledCaughtParameter8) {
                         decompiledCaughtException = decompiledCaughtParameter8;
                         var7_ref8 = (IOException) (Object) decompiledCaughtException;
-                        param1.d((byte) 121, -18);
+                        param1.writeByte((byte) 121, -18);
                       } catch (java.lang.NullPointerException decompiledCaughtParameter9) {
                         decompiledCaughtException = decompiledCaughtParameter9;
                         var7_ref9 = (NullPointerException) (Object) decompiledCaughtException;
-                        param1.d((byte) -100, -19);
+                        param1.writeByte((byte) -100, -19);
                       } catch (java.lang.Exception decompiledCaughtParameter10) {
                         decompiledCaughtException = decompiledCaughtParameter10;
                         var7_ref10 = (Exception) (Object) decompiledCaughtException;
-                        param1.d((byte) -74, -20);
+                        param1.writeByte((byte) -74, -20);
                       } catch (java.lang.Throwable decompiledCaughtParameter11) {
                         decompiledCaughtException = decompiledCaughtParameter11;
                         var7_ref11 = decompiledCaughtException;
-                        param1.d((byte) -37, -21);
+                        param1.writeByte((byte) -37, -21);
                       }
                     }
                   }
-                  param1.d(8, var5);
+                  param1.appendCrc32(8, var5);
                   var17.unlinkNode(false);
                   return;
                 }

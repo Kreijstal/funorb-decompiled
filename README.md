@@ -19,19 +19,25 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and retain all 138,558 remaining bindings
 and 388 override relationships.
 
-The current naming pass adds 53 guarded identities for `ByteArrayBuffer`,
-its shared `bytes`/`position`, both constructors and thirteen byte, integer,
-smart and text readers. All selected reader parameters and locals have names.
-Sprite decoding and archive consumers now expose their shared cursor and reads.
+The current naming pass adds 158 guarded identities for buffer writes,
+bulk copies, length backpatches, padding, packed text and CRC32. Twenty buffer
+APIs, the shared checksum helper and its reflected lookup table/initializer now
+have named parameters and locals. Original partial writes and cursor effects
+remain explicit.
 
-The 4,358 rules apply 38,775 edits. All 303 raw/readable sources compile,
-preserving 138,558 bindings and 388 overrides. All 4,305 previous complete
-rules and raw source/decompiler pins are unchanged. Guards, advances before
-array access, overflow, custom text decoding and diagnostic strings remain.
-Source/binding and byte-exact reversal checks support the names; existing
-native result-helper fixtures cover their original inherited-buffer scope,
-not new reader execution. Real assets, full gameplay and device performance
-remain unverified. The one manifest and dictionary preserve reproduction.
+The 4,516 rules apply 39,453 edits. All 303 raw/readable sources compile,
+preserving 138,558 bindings and 388 overrides. All 4,358 previous complete
+rules and raw source/decompiler pins are unchanged. Byte order/truncation,
+seven-bit masks, base38 chunk order, text offsets, aliased copies, guards,
+diagnostic strings and exception scopes remain. Source/binding and byte-exact
+reversal checks support the names. Existing native probes retain their prior
+scopes without new writer/CRC execution coverage. Real assets, full gameplay
+and device performance remain unverified. One manifest holds current names
+and evidence, with Git for history.
+
+Pass 60 named `ByteArrayBuffer`, its shared `bytes`/`position`, both constructors
+and thirteen integer, smart and text readers. Consumers now expose the storage,
+mutable cursor and reads while retaining their original guard effects.
 
 Pass 59 named decoded sprite count, canvas, offsets, dimensions, palette,
 indices and alpha state, plus the sheet decoder, archive acquisition, partial

@@ -313,8 +313,8 @@ final class ge {
                 li.field_a = new BufferedSocket((java.net.Socket) (gj.field_s.result), ph.field_i);
                 var3 = new ByteArrayBuffer(13);
                 ke.a(pc.field_C, true, hc.field_T, bm.field_u, var3);
-                var3.d((byte) -54, 15);
-                var3.c((byte) 95, ag.field_l);
+                var3.writeByte((byte) -54, 15);
+                var3.writeIntBE((byte) 95, ag.field_l);
                 li.field_a.enqueueWrite(100, 0, 13, var3.bytes);
                 qh.field_J = qh.field_J + 1;
                 eb.field_b = 30000L + oa.a(param0 - 12446);

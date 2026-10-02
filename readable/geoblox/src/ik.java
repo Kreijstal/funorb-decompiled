@@ -8,12 +8,12 @@ final class ik {
     final static void a(re param0, int param1, byte param2) {
         pk var3 = fj.field_q;
         var3.a(param1, (byte) -77);
-        var3.d((byte) 123, param0.field_k);
+        var3.writeByte((byte) 123, param0.field_k);
         if (param2 < 80) {
             return;
         }
         try {
-            var3.d((byte) -49, param0.field_g);
+            var3.writeByte((byte) -49, param0.field_g);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "ik.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

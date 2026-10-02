@@ -16,8 +16,8 @@ final class nk extends df {
                 byte[] var4 = (byte[]) null;
                 nk.a((byte[]) null, -72);
             }
-            param1.a(this.field_d, (byte) -126);
-            param1.a(this.field_h, false);
+            param1.writeZeroPrefixedNullTerminatedText(this.field_d, (byte) -126);
+            param1.writeBase38Text(this.field_h, false);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "nk.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

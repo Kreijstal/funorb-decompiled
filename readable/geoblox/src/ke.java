@@ -6,14 +6,14 @@ final class ke {
 
     final static void a(int param0, boolean param1, int param2, int param3, ByteArrayBuffer param4) {
         try {
-            param4.d((byte) 126, 12);
-            param4.e(17, 28695);
-            param4.e(param2, 28695);
+            param4.writeByte((byte) 126, 12);
+            param4.writeShortBE(17, 28695);
+            param4.writeShortBE(param2, 28695);
             if (!param1) {
                 entitySpritesByThemeCategoryAndVariant = (Sprite[][][]) null;
             }
-            param4.e(param3, 28695);
-            param4.d((byte) 124, param0);
+            param4.writeShortBE(param3, 28695);
+            param4.writeByte((byte) 124, param0);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "ke.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

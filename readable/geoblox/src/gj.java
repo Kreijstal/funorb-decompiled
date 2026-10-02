@@ -13,9 +13,9 @@ final class gj extends fj {
             var3 = fj.field_q;
             var3.a(param1, (byte) -80);
             int var4 = 66 % ((param0 - 23) / 51);
-            var3.d((byte) 122, 2);
-            var3.d((byte) 125, 0);
-            var3.d((byte) -90, param2.field_f);
+            var3.writeByte((byte) 122, 2);
+            var3.writeByte((byte) 125, 0);
+            var3.writeByte((byte) -90, param2.field_f);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "gj.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

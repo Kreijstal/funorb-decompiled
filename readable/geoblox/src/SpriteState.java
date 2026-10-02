@@ -926,7 +926,7 @@ abstract class SpriteState extends DualLinkNode {
                     break L0;
                   }
                 }
-                param0.a(24, -97, var2, 0);
+                param0.writeBytes(24, -97, var2, 0);
               }
               if (!param1) {
                 field_t = (ck) null;

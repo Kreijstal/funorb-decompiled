@@ -413,17 +413,17 @@ final class rf extends IntrusiveNode {
             param0.position = param0.position + var5 * 3;
             this.field_f = new byte[var4];
             var51 = new ByteArrayBuffer(this.field_f);
-            var51.c((byte) 95, 1297377380);
-            var51.c((byte) 95, 6);
+            var51.writeIntBE((byte) 95, 1297377380);
+            var51.writeIntBE((byte) 95, 6);
             stackIn_66_0 = (ByteArrayBuffer) (var51);
             if (var2 <= 1) {
               stackIn_67_1 = 0;
             } else {
               stackIn_67_1 = 1;
             }
-            ((ByteArrayBuffer) (Object) stackIn_66_0).e(stackIn_67_1, 28695);
-            var51.e(var2, 28695);
-            var51.e(var3, 28695);
+            ((ByteArrayBuffer) (Object) stackIn_66_0).writeShortBE(stackIn_67_1, 28695);
+            var51.writeShortBE(var2, 28695);
+            var51.writeShortBE(var3, 28695);
             param0.position = var13;
             var52 = 0;
             var53 = 0;
@@ -440,13 +440,13 @@ final class rf extends IntrusiveNode {
                 return;
               }
               {
-                var51.c((byte) 95, 1297379947);
+                var51.writeIntBE((byte) 95, 1297379947);
                 var51.position = var51.position + 4;
                 var61 = var51.position;
                 var62 = -1;
                 L5: while (true) {
                   var63 = param0.readVariableIntBE((byte) -125);
-                  var51.b((byte) -118, var63);
+                  var51.writeVariableIntBE((byte) -118, var63);
                   incrementValue$0 = var29;
                   var29++;
                   var64 = param0.bytes[incrementValue$0] & 255;
@@ -455,35 +455,35 @@ final class rf extends IntrusiveNode {
                   var62 = var64 & 15;
                   if (var64 == 7) {
                     if (var65 != 0) {
-                      var51.d((byte) 123, 255);
+                      var51.writeByte((byte) 123, 255);
                     }
-                    var51.d((byte) 124, 47);
-                    var51.d((byte) 125, 0);
-                    var51.g(var51.position - var61, 0);
+                    var51.writeByte((byte) 124, 47);
+                    var51.writeByte((byte) 125, 0);
+                    var51.backpatchLengthIntBE(var51.position - var61, 0);
                     var60++;
                     continue L4;
                   }
                   if (var64 == 23) {
                     if (var65 != 0) {
-                      var51.d((byte) 126, 255);
+                      var51.writeByte((byte) 126, 255);
                     }
-                    var51.d((byte) -22, 81);
-                    var51.d((byte) 121, 3);
+                    var51.writeByte((byte) -22, 81);
+                    var51.writeByte((byte) 121, 3);
                     incrementValue$25 = var50;
                     var50++;
-                    var51.d((byte) -79, (int) param0.bytes[incrementValue$25]);
+                    var51.writeByte((byte) -79, (int) param0.bytes[incrementValue$25]);
                     incrementValue$26 = var50;
                     var50++;
-                    var51.d((byte) 125, (int) param0.bytes[incrementValue$26]);
+                    var51.writeByte((byte) 125, (int) param0.bytes[incrementValue$26]);
                     incrementValue$27 = var50;
                     var50++;
-                    var51.d((byte) -75, (int) param0.bytes[incrementValue$27]);
+                    var51.writeByte((byte) -75, (int) param0.bytes[incrementValue$27]);
                     continue L5;
                   }
                   var52 = var52 ^ var64 >> 4;
                   if (var62 == 0) {
                     if (var65 != 0) {
-                      var51.d((byte) -100, 144 + var52);
+                      var51.writeByte((byte) -100, 144 + var52);
                     }
                     incrementValue$23 = var37;
                     var37++;
@@ -491,13 +491,13 @@ final class rf extends IntrusiveNode {
                     incrementValue$24 = var38;
                     var38++;
                     var54 = var54 + param0.bytes[incrementValue$24];
-                    var51.d((byte) -97, var53 & 127);
-                    var51.d((byte) -56, var54 & 127);
+                    var51.writeByte((byte) -97, var53 & 127);
+                    var51.writeByte((byte) -56, var54 & 127);
                     continue L5;
                   }
                   if (var62 == 1) {
                     if (var65 != 0) {
-                      var51.d((byte) 124, 128 + var52);
+                      var51.writeByte((byte) 124, 128 + var52);
                     }
                     incrementValue$21 = var37;
                     var37++;
@@ -505,14 +505,14 @@ final class rf extends IntrusiveNode {
                     incrementValue$22 = var40;
                     var40++;
                     var55 = var55 + param0.bytes[incrementValue$22];
-                    var51.d((byte) -63, var53 & 127);
-                    var51.d((byte) 125, var55 & 127);
+                    var51.writeByte((byte) -63, var53 & 127);
+                    var51.writeByte((byte) 125, var55 & 127);
                     continue L5;
                   }
                   if (var62 != 2) {
                     if (var62 == 3) {
                       if (var65 != 0) {
-                        var51.d((byte) -8, 224 + var52);
+                        var51.writeByte((byte) -8, 224 + var52);
                       }
                       incrementValue$5 = var45;
                       var45++;
@@ -520,18 +520,18 @@ final class rf extends IntrusiveNode {
                       incrementValue$6 = var33;
                       var33++;
                       var56 = var56 + (param0.bytes[incrementValue$6] << 7);
-                      var51.d((byte) -62, var56 & 127);
-                      var51.d((byte) 122, var56 >> 7 & 127);
+                      var51.writeByte((byte) -62, var56 & 127);
+                      var51.writeByte((byte) 122, var56 >> 7 & 127);
                       continue L5;
                     }
                     if (var62 == 4) {
                       if (var65 != 0) {
-                        var51.d((byte) 7, 208 + var52);
+                        var51.writeByte((byte) 7, 208 + var52);
                       }
                       incrementValue$4 = var32;
                       var32++;
                       var57 = var57 + param0.bytes[incrementValue$4];
-                      var51.d((byte) -44, var57 & 127);
+                      var51.writeByte((byte) -44, var57 & 127);
                       continue L5;
                     }
                     if (var62 != 5) {
@@ -540,17 +540,17 @@ final class rf extends IntrusiveNode {
                       }
                       {
                         if (var65 != 0) {
-                          var51.d((byte) -54, 192 + var52);
+                          var51.writeByte((byte) -54, 192 + var52);
                         }
                         incrementValue$1 = var44;
                         var44++;
-                        var51.d((byte) 121, (int) param0.bytes[incrementValue$1]);
+                        var51.writeByte((byte) 121, (int) param0.bytes[incrementValue$1]);
                         continue L5;
                       }
                     }
                     {
                       if (var65 != 0) {
-                        var51.d((byte) 122, 160 + var52);
+                        var51.writeByte((byte) 122, 160 + var52);
                       }
                       incrementValue$2 = var37;
                       var37++;
@@ -558,19 +558,19 @@ final class rf extends IntrusiveNode {
                       incrementValue$3 = var31;
                       var31++;
                       var58 = var58 + param0.bytes[incrementValue$3];
-                      var51.d((byte) -18, var53 & 127);
-                      var51.d((byte) 124, var58 & 127);
+                      var51.writeByte((byte) -18, var53 & 127);
+                      var51.writeByte((byte) 124, var58 & 127);
                       continue L5;
                     }
                   }
                   if (var65 != 0) {
-                    var51.d((byte) -19, 176 + var52);
+                    var51.writeByte((byte) -19, 176 + var52);
                   }
                   L12: {
                     incrementValue$7 = var15;
                     var15++;
                     var28 = var28 + param0.bytes[incrementValue$7] & 127;
-                    var51.d((byte) 126, var28);
+                    var51.writeByte((byte) 126, var28);
                     if (var28 != 0) {
                       if (var28 != 32) {
                         if (var28 == 1) {
@@ -661,7 +661,7 @@ final class rf extends IntrusiveNode {
                   }
                   var66 = var66 + var70[var28];
                   var70[var28] = var66;
-                  var51.d((byte) -10, var66 & 127);
+                  var51.writeByte((byte) -10, var66 & 127);
                   continue L5;
                 }
               }

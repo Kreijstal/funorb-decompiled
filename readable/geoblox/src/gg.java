@@ -37,7 +37,7 @@ final class gg {
             var4 = (byte[]) null;
             gg.a((byte[]) null, -123, -57);
           }
-          stackIn_3_0 = oe.a(param2, param0, -40, 0);
+          stackIn_3_0 = oe.computeCrc32(param2, param0, -40, 0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

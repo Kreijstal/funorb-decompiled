@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 4,358 guarded naming rules: 37 classes, 595 fields,
-391 methods, 1,241 parameters and 2,094 local declarations. Both 303-file corpora
+The current export has 4,516 guarded naming rules: 37 classes, 596 fields,
+412 methods, 1,288 parameters and 2,183 local declarations. Both 303-file corpora
 compile, preserving 138,558 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -54,7 +54,32 @@ smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
 
-## Current byte-buffer reader names
+## Current buffer write, copy and checksum names
+
+Pass 61 adds 158 guarded identities: one field, 21 methods, 47 parameters and
+89 locals. Twenty `ByteArrayBuffer` write/copy/backpatch/checksum APIs and the
+shared `computeCrc32` helper have complete guarded parameter/local names.
+`crc32Table` and its three initializer locals expose the reflected polynomial.
+Integer writers retain byte truncation and BE order, including40/56-bit long
+variants, variable-length groups and signed smart values. Bulk copies expose
+source/destination offsets; padding uses an absolute end position.
+
+Text writes retain their custom character mapping, zero rejection, prefix and
+terminator order. `characterStart` is an encoding offset, not a guard. Packed
+base38 text keeps the original two ten-character chunks and case-insensitive
+letter/digit/fallback codes. Backpatches and CRC append/verification retain
+all guards and partial effects, including cursor advances before stores,
+aliased byte arrays and failures after already-written data.
+
+All 4,358 previous complete rules and source/generator pins stay unchanged.
+The 4,516 rules apply 39,453 edits; both 303-file corpora compile, preserving
+138,558 bindings and 388 overrides. Reproduction and dictionary reversal are
+byte-exact. Existing native result-helper fixtures retain their prior scopes
+without new writer/CRC execution coverage. Crypto/hash state, unrelated static
+helpers, full assets/gameplay and phone/FPS/heap behavior remain unfinished
+or unverified.
+
+## Previous byte-buffer reader names
 
 Pass 60 adds 53 guarded identities: one class, two fields, thirteen methods,
 fifteen parameters and 22 locals. `ByteArrayBuffer` owns `bytes` and `position`;
@@ -873,7 +898,7 @@ its historical proof recorded in the raw provenance. Current source/decompiler
 identity and naming migrations live in the single manifest. `ruleChanges`
 records naming changes; `sourceChange` is recorded when input identity changes.
 The latest structural pass records its source migration in Git. The current
-naming-only pass retains those source pins and records its 53 additions in
+naming-only pass retains those source pins and records its 158 additions in
 `ruleChanges`; every prior guarded rule is retained.
 All six native probe sources and their traces are pinned in
 the same manifest; no JSON snapshots are added.
@@ -898,6 +923,6 @@ the same manifest; no JSON snapshots are added.
 | Java source tree | SHA-256 |
 | --- | --- |
 | Raw | `39be3539b43d7acc9540acca49e7b6378cdb233908092706646df4c2cdc6a8fe` |
-| Readable | `9b013f906acbe0e29fc3b8793b0dc0c955d73d5f5ac1e6578af50053aba11abb` |
+| Readable | `b8cb6fe1dd67decf630620ea38017e8eb7d8ddc48a529fe3c86094bfd7314a47` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

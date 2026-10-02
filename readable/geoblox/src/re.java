@@ -21,8 +21,8 @@ final class re extends IntrusiveNode {
     final static void b(int param0, int param1) {
         pk var2 = fj.field_q;
         var2.a(param1, (byte) -66);
-        var2.d((byte) 124, 1);
-        var2.d((byte) 127, 2);
+        var2.writeByte((byte) 124, 1);
+        var2.writeByte((byte) 127, 2);
         if (param0 >= -65) {
             re.b(116, -127);
         }

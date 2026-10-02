@@ -92,7 +92,7 @@ final class em {
                 if (param1 != -9) {
                   this.field_h = (sd) null;
                 }
-                this.field_b.b(29915, 64, var13, 0);
+                this.field_b.readBytes(29915, 64, var13, 0);
                 var9 = new bj(param0, param4, param3, this.field_g, this.field_f, var6_int, var13, var7, param2);
                 this.field_d[param0] = var9;
                 stackIn_13_0 = (bj) (var9);
@@ -183,7 +183,7 @@ final class em {
           var13 = new byte[var10.bytes.length - var10.position];
           var11 = var13;
           var4 = var11;
-          var10.b(29915, var13.length, var13, 0);
+          var10.readBytes(29915, var13.length, var13, 0);
           if (this.field_c != null) {
             if (this.field_e != null) {
               var12 = new java.math.BigInteger(var13);

@@ -156,39 +156,39 @@ abstract class oe extends dd {
         }
     }
 
-    final static int a(int param0, byte[] param1, int param2, int param3) {
-        int var5 = 0;
-        int var4_int = 0;
-        RuntimeException var4 = null;
-        CharSequence var6 = null;
-        int stackIn_6_0 = 0;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static int computeCrc32(int endPosition, byte[] bytes, int methodGuard, int startPosition) {
+        int byteIndex = 0;
+        int crcAccumulator = 0;
+        RuntimeException checksumFailureForContext = null;
+        CharSequence unusedNullTextSnapshot = null;
+        int checksumBeforeReturn = 0;
+        RuntimeException checksumFailureBeforeDescription = null;
+        StringBuilder checksumMessagePrefix = null;
+        String bytesDescription = null;
+        RuntimeException caughtChecksumFailure = null;
         try {
-          if (param2 > -27) {
-            var6 = (CharSequence) null;
+          if (methodGuard > -27) {
+            unusedNullTextSnapshot = (CharSequence) null;
             oe.a((CharSequence) null, -115);
           }
-          var4_int = -1;
-          for (var5 = param3; var5 < param0; var5++) {
-            var4_int = sb.field_b[(var4_int ^ param1[var5]) & 255] ^ var4_int >>> 8;
+          crcAccumulator = -1;
+          for (byteIndex = startPosition; byteIndex < endPosition; byteIndex++) {
+            crcAccumulator = sb.crc32Table[(crcAccumulator ^ bytes[byteIndex]) & 255] ^ crcAccumulator >>> 8;
           }
-          var4_int = ~var4_int;
-          stackIn_6_0 = var4_int;
-          return stackIn_6_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_9_0 = (RuntimeException) (var4);
-          stackIn_9_1 = new StringBuilder().append("oe.P(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_10_2 = "null";
+          crcAccumulator = ~crcAccumulator;
+          checksumBeforeReturn = crcAccumulator;
+          return checksumBeforeReturn;
+        } catch (java.lang.RuntimeException checksumFailure) {
+          caughtChecksumFailure = checksumFailure;
+          checksumFailureForContext = caughtChecksumFailure;
+          checksumFailureBeforeDescription = (RuntimeException) (checksumFailureForContext);
+          checksumMessagePrefix = new StringBuilder().append("oe.P(").append(endPosition).append(',');
+          if (bytes == null) {
+            bytesDescription = "null";
           } else {
-            stackIn_10_2 = "{...}";
+            bytesDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw t.a((Throwable) ((Object) checksumFailureBeforeDescription), ((StringBuilder) (Object) checksumMessagePrefix).append(bytesDescription).append(',').append(methodGuard).append(',').append(startPosition).append(')').toString());
         }
     }
 

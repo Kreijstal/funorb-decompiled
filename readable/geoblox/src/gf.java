@@ -108,15 +108,15 @@ final class gf {
         if (param1 >= 28) {
             var2 = fj.field_q;
             var2.a(param0, (byte) -103);
-            var2.d((byte) 127, 1);
-            var2.d((byte) -20, 0);
+            var2.writeByte((byte) 127, 1);
+            var2.writeByte((byte) -20, 0);
             return;
         }
         createPasswordContainsNameAlertText = (String) null;
         var2 = fj.field_q;
         var2.a(param0, (byte) -103);
-        var2.d((byte) 127, 1);
-        var2.d((byte) -20, 0);
+        var2.writeByte((byte) 127, 1);
+        var2.writeByte((byte) -20, 0);
     }
 
     final static String formatArchiveGroupProgress(String fallbackMessage, rh archive, String groupName, String progressLabel, boolean methodGuard) {

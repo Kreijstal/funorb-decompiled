@@ -29,17 +29,17 @@ final class o extends pb {
             var5.a(param0, (byte) -107);
             var5.position = var5.position + 1;
             var4 = var5.position;
-            var5.d((byte) 127, 1);
+            var5.writeByte((byte) 127, 1);
             if (null != param1.field_f) {
-                var5.d((byte) -124, param1.field_f.length);
-                var5.a(param1.field_f.length, -97, param1.field_f, 0);
+                var5.writeByte((byte) -124, param1.field_f.length);
+                var5.writeBytes(param1.field_f.length, -97, param1.field_f, 0);
             } else {
-                var5.d((byte) 121, 0);
+                var5.writeByte((byte) 121, 0);
             }
-            var5.d(110, var4);
+            var5.appendCrc32(110, var4);
             var5.position = var5.position - param2;
             param1.field_h = var5.readIntBE((byte) -54);
-            var5.f(param2 ^ 11696, var5.position - var4);
+            var5.backpatchLengthByte(param2 ^ 11696, var5.position - var4);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "o.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

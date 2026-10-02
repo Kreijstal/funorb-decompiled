@@ -8,24 +8,24 @@ class ByteArrayBuffer extends IntrusiveNode {
     byte[] bytes;
     static int field_i;
 
-    final void b(int param0, int param1) {
-        int fieldTemp$0 = this.position;
+    final void writeMediumBE(int methodGuard, int value) {
+        int highByteIndex = this.position;
         this.position = this.position + 1;
-        this.bytes[fieldTemp$0] = (byte)(param1 >> 16);
-        int fieldTemp$1 = this.position;
+        this.bytes[highByteIndex] = (byte)(value >> 16);
+        int middleByteIndex = this.position;
         this.position = this.position + 1;
-        this.bytes[fieldTemp$1] = (byte)(param1 >> 8);
-        int fieldTemp$2 = this.position;
+        this.bytes[middleByteIndex] = (byte)(value >> 8);
+        int lowByteIndex = this.position;
         this.position = this.position + 1;
-        this.bytes[fieldTemp$2] = (byte)param1;
-        int var3 = -20 % ((param0 - 62) / 60);
+        this.bytes[lowByteIndex] = (byte)value;
+        int sentinelRemainder = -20 % ((methodGuard - 62) / 60);
     }
 
-    final void d(byte param0, int param1) {
-        int fieldTemp$0 = this.position;
+    final void writeByte(byte methodGuard, int value) {
+        int byteIndex = this.position;
         this.position = this.position + 1;
-        this.bytes[fieldTemp$0] = (byte)param1;
-        int var3 = 65 / ((param0 - 67) / 54);
+        this.bytes[byteIndex] = (byte)value;
+        int sentinelQuotient = 65 / ((methodGuard - 67) / 54);
     }
 
     final static Sprite a(int param0, int param1, int param2, rh param3) {
@@ -58,100 +58,100 @@ class ByteArrayBuffer extends IntrusiveNode {
         }
     }
 
-    final boolean h(byte param0) {
+    final boolean verifyTrailingCrc32(byte methodGuard) {
         this.position = this.position - 4;
-        if (param0 != 20) {
+        if (methodGuard != 20) {
             this.readZeroPrefixedNullTerminatedText(-46);
         }
-        int var2 = oe.a(this.position, this.bytes, param0 - 138, 0);
-        int var3 = this.readIntBE((byte) -85);
-        if (var2 == var3) {
+        int computedCrc32 = oe.computeCrc32(this.position, this.bytes, methodGuard - 138, 0);
+        int storedCrc32 = this.readIntBE((byte) -85);
+        if (computedCrc32 == storedCrc32) {
             return true;
         }
         return false;
     }
 
-    final void a(String param0, boolean param1) {
-        int var8 = 0;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
-        String stackIn_29_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        long var3_long = 0L;
-        RuntimeException var3 = null;
-        long var5 = 0L;
-        int var7 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        var10 = Geoblox.field_C;
+    final void writeBase38Text(String text, boolean resetPositionGuard) {
+        int characterIndex = 0;
+        RuntimeException textWriteFailureBeforeDescription = null;
+        StringBuilder textWriteMessagePrefix = null;
+        String textDescription = null;
+        RuntimeException caughtTextWriteFailure = null;
+        long accumulatedChunk = 0L;
+        RuntimeException textWriteFailureForContext = null;
+        long trailingTextChunk = 0L;
+        int textLength = 0;
+        int characterCode = 0;
+        int unusedClientGuardSnapshot = 0;
+        unusedClientGuardSnapshot = Geoblox.field_C;
         try {
-          var3_long = 0L;
-          if (param1) {
+          accumulatedChunk = 0L;
+          if (resetPositionGuard) {
             this.position = -109;
           }
-          var5 = 0L;
-          var7 = param0.length();
-          L1: for (var8 = 19; var8 >= 0; var8--) {
-            var3_long = var3_long * 38L;
-            if (var7 > var8) {
+          trailingTextChunk = 0L;
+          textLength = text.length();
+          L1: for (characterIndex = 19; characterIndex >= 0; characterIndex--) {
+            accumulatedChunk = accumulatedChunk * 38L;
+            if (textLength > characterIndex) {
               L3: {
-                var9 = param0.charAt(var8);
-                if (var9 >= 65) {
-                  if (90 >= var9) {
-                    var3_long = var3_long + (long)(-63 + var9);
+                characterCode = text.charAt(characterIndex);
+                if (characterCode >= 65) {
+                  if (90 >= characterCode) {
+                    accumulatedChunk = accumulatedChunk + (long)(-63 + characterCode);
                     break L3;
                   }
                 }
-                if (var9 >= 97) {
-                  if (var9 <= 122) {
-                    var3_long = var3_long + (long)(-97 + (2 + var9));
+                if (characterCode >= 97) {
+                  if (characterCode <= 122) {
+                    accumulatedChunk = accumulatedChunk + (long)(-97 + (2 + characterCode));
                     break L3;
                   }
                 }
-                if (var9 >= 48) {
-                  if (var9 <= 57) {
-                    var3_long = var3_long + (long)(-48 + var9 + 28);
+                if (characterCode >= 48) {
+                  if (characterCode <= 57) {
+                    accumulatedChunk = accumulatedChunk + (long)(-48 + characterCode + 28);
                     break L3;
                   }
                 }
-                var3_long = var3_long + 1L;
+                accumulatedChunk = accumulatedChunk + 1L;
               }
-              if (var8 != 10) {
+              if (characterIndex != 10) {
                 continue L1;
               }
             } else {
-              if (var8 != 10) {
+              if (characterIndex != 10) {
                 continue L1;
               }
             }
-            var5 = var3_long;
-            var3_long = 0L;
+            trailingTextChunk = accumulatedChunk;
+            accumulatedChunk = 0L;
           }
-          this.a(-109, var3_long);
-          this.a(-47, var5);
+          this.writeLong56BE(-109, accumulatedChunk);
+          this.writeLong56BE(-47, trailingTextChunk);
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_28_0 = (RuntimeException) (var3);
-          stackIn_28_1 = new StringBuilder().append("qc.IA(");
-          if (param0 == null) {
-            stackIn_29_2 = "null";
+        } catch (java.lang.RuntimeException textWriteFailure) {
+          caughtTextWriteFailure = textWriteFailure;
+          textWriteFailureForContext = caughtTextWriteFailure;
+          textWriteFailureBeforeDescription = (RuntimeException) (textWriteFailureForContext);
+          textWriteMessagePrefix = new StringBuilder().append("qc.IA(");
+          if (text == null) {
+            textDescription = "null";
           } else {
-            stackIn_29_2 = "{...}";
+            textDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) ((Object) textWriteFailureBeforeDescription), ((StringBuilder) (Object) textWriteMessagePrefix).append(textDescription).append(',').append(resetPositionGuard).append(')').toString());
         }
     }
 
-    final void g(int param0, int param1) {
-        this.bytes[-4 + (this.position - param0)] = (byte)(param0 >> 24);
-        if (param1 != 0) {
-            this.d(13, 61);
+    final void backpatchLengthIntBE(int length, int methodGuard) {
+        this.bytes[-4 + (this.position - length)] = (byte)(length >> 24);
+        if (methodGuard != 0) {
+            this.appendCrc32(13, 61);
         }
-        this.bytes[-param0 + (this.position - 3)] = (byte)(param0 >> 16);
-        this.bytes[this.position + (-param0 - 2)] = (byte)(param0 >> 8);
-        this.bytes[-param0 + (this.position - 1)] = (byte)param0;
+        this.bytes[-length + (this.position - 3)] = (byte)(length >> 16);
+        this.bytes[this.position + (-length - 2)] = (byte)(length >> 8);
+        this.bytes[-length + (this.position - 1)] = (byte)length;
     }
 
     final int readVariableIntBE(byte methodGuard) {
@@ -209,24 +209,24 @@ class ByteArrayBuffer extends IntrusiveNode {
         }
     }
 
-    final void a(int param0, boolean param1) {
-        if (!param1) {
+    final void backpatchLengthShortBE(int length, boolean preserveHashTables) {
+        if (!preserveHashTables) {
             field_g = (long[][]) null;
         }
-        this.bytes[this.position + (-param0 - 2)] = (byte)(param0 >> 8);
-        this.bytes[this.position + (-param0 - 1)] = (byte)param0;
+        this.bytes[this.position + (-length - 2)] = (byte)(length >> 8);
+        this.bytes[this.position + (-length - 1)] = (byte)length;
     }
 
-    final void e(int param0, int param1) {
-        int fieldTemp$0 = this.position;
+    final void writeShortBE(int value, int methodGuard) {
+        int highByteIndex = this.position;
         this.position = this.position + 1;
-        this.bytes[fieldTemp$0] = (byte)(param0 >> 8);
-        if (param1 != 28695) {
+        this.bytes[highByteIndex] = (byte)(value >> 8);
+        if (methodGuard != 28695) {
             ByteArrayBuffer.a(true, 22);
         }
-        int fieldTemp$1 = this.position;
+        int lowByteIndex = this.position;
         this.position = this.position + 1;
-        this.bytes[fieldTemp$1] = (byte)param0;
+        this.bytes[lowByteIndex] = (byte)value;
     }
 
     final static void g(int param0) {
@@ -236,22 +236,22 @@ class ByteArrayBuffer extends IntrusiveNode {
         hk.field_C.b(new AccountWelcomePanel(), param0 - 110);
     }
 
-    final void a(String param0, int param1) {
-        int var3_int = 0;
-        CharSequence var4 = null;
-        int fieldTemp$0 = 0;
+    final void writeNullTerminatedText(String text, int characterStart) {
+        int zeroCharacterIndex = 0;
+        CharSequence textForEncoding = null;
+        int terminatorByteIndex = 0;
         try {
-            var3_int = param0.indexOf(' ');
-            if (var3_int >= 0) {
+            zeroCharacterIndex = text.indexOf(' ');
+            if (zeroCharacterIndex >= 0) {
                 throw new IllegalArgumentException("");
             }
-            var4 = (CharSequence) ((Object) param0);
-            this.position = this.position + hi.a(var4, this.bytes, param1, param0.length(), this.position, 98);
-            fieldTemp$0 = this.position;
+            textForEncoding = (CharSequence) ((Object) text);
+            this.position = this.position + hi.a(textForEncoding, this.bytes, characterStart, text.length(), this.position, 98);
+            terminatorByteIndex = this.position;
             this.position = this.position + 1;
-            this.bytes[fieldTemp$0] = (byte) 0;
-        } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "qc.HA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            this.bytes[terminatorByteIndex] = (byte) 0;
+        } catch (RuntimeException textWriteFailure) {
+            throw t.a((Throwable) ((Object) textWriteFailure), "qc.HA(" + (text != null ? "{...}" : "null") + ',' + characterStart + ')');
         }
     }
 
@@ -261,7 +261,7 @@ class ByteArrayBuffer extends IntrusiveNode {
             return null;
         }
         if (methodGuard != 53) {
-            this.a((byte) 4, 25L);
+            this.writeLong40BE((byte) 4, 25L);
         }
         return this.readNullTerminatedText((byte) 125);
     }
@@ -292,23 +292,23 @@ class ByteArrayBuffer extends IntrusiveNode {
         return lowUnsignedWord + (highUnsignedWord << 32);
     }
 
-    final void a(byte param0, long param1) {
-        int fieldTemp$0 = this.position;
+    final void writeLong40BE(byte methodGuard, long value) {
+        int byte32Index = this.position;
         this.position = this.position + 1;
-        this.bytes[fieldTemp$0] = (byte)(int)(param1 >> 32);
-        int fieldTemp$1 = this.position;
+        this.bytes[byte32Index] = (byte)(int)(value >> 32);
+        int byte24Index = this.position;
         this.position = this.position + 1;
-        this.bytes[fieldTemp$1] = (byte)(int)(param1 >> 24);
-        int fieldTemp$2 = this.position;
+        this.bytes[byte24Index] = (byte)(int)(value >> 24);
+        int byte16Index = this.position;
         this.position = this.position + 1;
-        this.bytes[fieldTemp$2] = (byte)(int)(param1 >> 16);
-        int fieldTemp$3 = this.position;
+        this.bytes[byte16Index] = (byte)(int)(value >> 16);
+        int byte8Index = this.position;
         this.position = this.position + 1;
-        this.bytes[fieldTemp$3] = (byte)(int)(param1 >> 8);
-        int fieldTemp$4 = this.position;
+        this.bytes[byte8Index] = (byte)(int)(value >> 8);
+        int byte0Index = this.position;
         this.position = this.position + 1;
-        this.bytes[fieldTemp$4] = (byte)(int)param1;
-        if (param0 > -125) {
+        this.bytes[byte0Index] = (byte)(int)value;
+        if (methodGuard > -125) {
             this.bytes = (byte[]) null;
         }
     }
@@ -334,49 +334,49 @@ class ByteArrayBuffer extends IntrusiveNode {
         }
     }
 
-    final void a(int param0, int param1, byte[] param2, int param3) {
-        int fieldTemp$0 = 0;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        String var6 = null;
+    final void writeBytes(int length, int methodGuard, byte[] source, int sourceOffset) {
+        int bufferByteIndex = 0;
+        RuntimeException copyFailureBeforeDescription = null;
+        StringBuilder copyMessagePrefix = null;
+        String arrayDescription = null;
+        RuntimeException caughtCopyFailure = null;
+        int sourceIndex = 0;
+        RuntimeException copyFailureForContext = null;
+        String unusedNullTextSnapshot = null;
         try {
-          var5_int = param3;
-          if (param1 != -97) {
-            var6 = (String) null;
-            this.a((String) null, 75);
+          sourceIndex = sourceOffset;
+          if (methodGuard != -97) {
+            unusedNullTextSnapshot = (String) null;
+            this.writeNullTerminatedText((String) null, 75);
           }
-          L1: while (var5_int < param3 + param0) {
-            fieldTemp$0 = this.position;
+          L1: while (sourceIndex < sourceOffset + length) {
+            bufferByteIndex = this.position;
             this.position = this.position + 1;
-            this.bytes[fieldTemp$0] = param2[var5_int];
-            var5_int++;
+            this.bytes[bufferByteIndex] = source[sourceIndex];
+            sourceIndex++;
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_7_0 = (RuntimeException) (var5);
-          stackIn_7_1 = new StringBuilder().append("qc.JA(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
-            stackIn_8_2 = "null";
+        } catch (java.lang.RuntimeException copyFailure) {
+          caughtCopyFailure = copyFailure;
+          copyFailureForContext = caughtCopyFailure;
+          copyFailureBeforeDescription = (RuntimeException) (copyFailureForContext);
+          copyMessagePrefix = new StringBuilder().append("qc.JA(").append(length).append(',').append(methodGuard).append(',');
+          if (source == null) {
+            arrayDescription = "null";
           } else {
-            stackIn_8_2 = "{...}";
+            arrayDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
+          throw t.a((Throwable) ((Object) copyFailureBeforeDescription), ((StringBuilder) (Object) copyMessagePrefix).append(arrayDescription).append(',').append(sourceOffset).append(')').toString());
         }
     }
 
-    final int d(int param0, int param1) {
-        if (param0 <= 4) {
+    final int appendCrc32(int methodGuard, int startPosition) {
+        if (methodGuard <= 4) {
             return -122;
         }
-        int var3 = oe.a(this.position, this.bytes, -37, param1);
-        this.c((byte) 95, var3);
-        return var3;
+        int computedCrc32 = oe.computeCrc32(this.position, this.bytes, -37, startPosition);
+        this.writeIntBE((byte) 95, computedCrc32);
+        return computedCrc32;
     }
 
     final static byte a(char param0, boolean param1) {
@@ -512,45 +512,45 @@ class ByteArrayBuffer extends IntrusiveNode {
         return (byte) 50;
     }
 
-    final void b(int param0, int param1, byte[] param2, int param3) {
-        int fieldTemp$0 = 0;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        mb var6 = null;
+    final void readBytes(int methodGuard, int length, byte[] destination, int destinationOffset) {
+        int bufferByteIndex = 0;
+        RuntimeException copyFailureBeforeDescription = null;
+        StringBuilder copyMessagePrefix = null;
+        String arrayDescription = null;
+        RuntimeException caughtCopyFailure = null;
+        int destinationIndex = 0;
+        RuntimeException copyFailureForContext = null;
+        mb unusedNullTextInputSnapshot = null;
         try {
-          var5_int = param3;
-          if (param0 != 29915) {
-            var6 = (mb) null;
+          destinationIndex = destinationOffset;
+          if (methodGuard != 29915) {
+            unusedNullTextInputSnapshot = (mb) null;
             ByteArrayBuffer.a((mb) null, (mb) null, 35);
           }
-          L1: while (param3 + param1 > var5_int) {
-            fieldTemp$0 = this.position;
+          L1: while (destinationOffset + length > destinationIndex) {
+            bufferByteIndex = this.position;
             this.position = this.position + 1;
-            param2[var5_int] = this.bytes[fieldTemp$0];
-            var5_int++;
+            destination[destinationIndex] = this.bytes[bufferByteIndex];
+            destinationIndex++;
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_7_0 = (RuntimeException) (var5);
-          stackIn_7_1 = new StringBuilder().append("qc.LA(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
-            stackIn_8_2 = "null";
+        } catch (java.lang.RuntimeException copyFailure) {
+          caughtCopyFailure = copyFailure;
+          copyFailureForContext = caughtCopyFailure;
+          copyFailureBeforeDescription = (RuntimeException) (copyFailureForContext);
+          copyMessagePrefix = new StringBuilder().append("qc.LA(").append(methodGuard).append(',').append(length).append(',');
+          if (destination == null) {
+            arrayDescription = "null";
           } else {
-            stackIn_8_2 = "{...}";
+            arrayDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
+          throw t.a((Throwable) ((Object) copyFailureBeforeDescription), ((StringBuilder) (Object) copyMessagePrefix).append(arrayDescription).append(',').append(destinationOffset).append(')').toString());
         }
     }
 
-    final void f(int param0, int param1) {
-        this.bytes[-param1 + (this.position - 1)] = (byte)param1;
-        if (param0 != 11700) {
+    final void backpatchLengthByte(int methodGuard, int length) {
+        this.bytes[-length + (this.position - 1)] = (byte)length;
+        if (methodGuard != 11700) {
             ByteArrayBuffer.g(-24);
         }
     }
@@ -598,8 +598,8 @@ class ByteArrayBuffer extends IntrusiveNode {
                   continue L2;
                 }
                 this.position = this.position - 8;
-                this.c((byte) 95, var5);
-                this.c((byte) 95, var6);
+                this.writeIntBE((byte) 95, var5);
+                this.writeIntBE((byte) 95, var6);
                 var4++;
                 continue L1;
               }
@@ -681,8 +681,8 @@ class ByteArrayBuffer extends IntrusiveNode {
                   continue L2;
                 }
                 this.position = this.position - 8;
-                this.c((byte) 95, var8);
-                this.c((byte) 95, var9);
+                this.writeIntBE((byte) 95, var8);
+                this.writeIntBE((byte) 95, var9);
                 var7++;
                 continue L1;
               }
@@ -711,81 +711,81 @@ class ByteArrayBuffer extends IntrusiveNode {
         }
     }
 
-    final void b(byte param0, int param1) {
-        if (!((param1 & -128) == 0)) {
-            if ((-16384 & param1) != 0) {
-                if (0 != (param1 & -2097152)) {
-                    if (!((-268435456 & param1) == 0)) {
-                        this.d((byte) 126, param1 >>> 28 | 128);
+    final void writeVariableIntBE(byte methodGuard, int value) {
+        if (!((value & -128) == 0)) {
+            if ((-16384 & value) != 0) {
+                if (0 != (value & -2097152)) {
+                    if (!((-268435456 & value) == 0)) {
+                        this.writeByte((byte) 126, value >>> 28 | 128);
                     }
-                    this.d((byte) -96, 128 | param1 >>> 21);
+                    this.writeByte((byte) -96, 128 | value >>> 21);
                 }
-                this.d((byte) 127, (param1 | 2097436) >>> 14);
+                this.writeByte((byte) 127, (value | 2097436) >>> 14);
             }
-            this.d((byte) -121, param1 >>> 7 | 128);
+            this.writeByte((byte) -121, value >>> 7 | 128);
         }
-        this.d((byte) 124, 127 & param1);
-        if (param0 >= -95) {
-            this.b(-109, -43);
+        this.writeByte((byte) 124, 127 & value);
+        if (methodGuard >= -95) {
+            this.writeMediumBE(-109, -43);
         }
     }
 
-    private final void a(int param0, long param1) {
-        int fieldTemp$0 = this.position;
+    private final void writeLong56BE(int methodGuard, long value) {
+        int byte48Index = this.position;
         this.position = this.position + 1;
-        this.bytes[fieldTemp$0] = (byte)(int)(param1 >> 48);
-        int fieldTemp$1 = this.position;
+        this.bytes[byte48Index] = (byte)(int)(value >> 48);
+        int byte40Index = this.position;
         this.position = this.position + 1;
-        this.bytes[fieldTemp$1] = (byte)(int)(param1 >> 40);
-        int fieldTemp$2 = this.position;
+        this.bytes[byte40Index] = (byte)(int)(value >> 40);
+        int byte32Index = this.position;
         this.position = this.position + 1;
-        this.bytes[fieldTemp$2] = (byte)(int)(param1 >> 32);
-        int fieldTemp$3 = this.position;
+        this.bytes[byte32Index] = (byte)(int)(value >> 32);
+        int byte24Index = this.position;
         this.position = this.position + 1;
-        this.bytes[fieldTemp$3] = (byte)(int)(param1 >> 24);
-        int fieldTemp$4 = this.position;
+        this.bytes[byte24Index] = (byte)(int)(value >> 24);
+        int byte16Index = this.position;
         this.position = this.position + 1;
-        this.bytes[fieldTemp$4] = (byte)(int)(param1 >> 16);
-        int fieldTemp$5 = this.position;
+        this.bytes[byte16Index] = (byte)(int)(value >> 16);
+        int byte8Index = this.position;
         this.position = this.position + 1;
-        this.bytes[fieldTemp$5] = (byte)(int)(param1 >> 8);
-        if (param0 >= -41) {
+        this.bytes[byte8Index] = (byte)(int)(value >> 8);
+        if (methodGuard >= -41) {
             field_g = (long[][]) null;
         }
-        int fieldTemp$6 = this.position;
+        int byte0Index = this.position;
         this.position = this.position + 1;
-        this.bytes[fieldTemp$6] = (byte)(int)param1;
+        this.bytes[byte0Index] = (byte)(int)value;
     }
 
-    final void b(byte param0, long param1) {
-        int fieldTemp$0 = this.position;
+    final void writeLongBE(byte methodGuard, long value) {
+        int byte56Index = this.position;
         this.position = this.position + 1;
-        this.bytes[fieldTemp$0] = (byte)(int)(param1 >> 56);
-        int fieldTemp$1 = this.position;
+        this.bytes[byte56Index] = (byte)(int)(value >> 56);
+        int byte48Index = this.position;
         this.position = this.position + 1;
-        this.bytes[fieldTemp$1] = (byte)(int)(param1 >> 48);
-        int fieldTemp$2 = this.position;
+        this.bytes[byte48Index] = (byte)(int)(value >> 48);
+        int byte40Index = this.position;
         this.position = this.position + 1;
-        this.bytes[fieldTemp$2] = (byte)(int)(param1 >> 40);
-        int fieldTemp$3 = this.position;
+        this.bytes[byte40Index] = (byte)(int)(value >> 40);
+        int byte32Index = this.position;
         this.position = this.position + 1;
-        this.bytes[fieldTemp$3] = (byte)(int)(param1 >> 32);
-        int fieldTemp$4 = this.position;
+        this.bytes[byte32Index] = (byte)(int)(value >> 32);
+        int byte24Index = this.position;
         this.position = this.position + 1;
-        this.bytes[fieldTemp$4] = (byte)(int)(param1 >> 24);
-        int fieldTemp$5 = this.position;
+        this.bytes[byte24Index] = (byte)(int)(value >> 24);
+        int byte16Index = this.position;
         this.position = this.position + 1;
-        this.bytes[fieldTemp$5] = (byte)(int)(param1 >> 16);
-        if (param0 <= 57) {
-            java.math.BigInteger var5 = (java.math.BigInteger) null;
+        this.bytes[byte16Index] = (byte)(int)(value >> 16);
+        if (methodGuard <= 57) {
+            java.math.BigInteger unusedNullBigIntegerSnapshot = (java.math.BigInteger) null;
             this.a(91, (java.math.BigInteger) null, (java.math.BigInteger) null);
         }
-        int fieldTemp$6 = this.position;
+        int byte8Index = this.position;
         this.position = this.position + 1;
-        this.bytes[fieldTemp$6] = (byte)(int)(param1 >> 8);
-        int fieldTemp$7 = this.position;
+        this.bytes[byte8Index] = (byte)(int)(value >> 8);
+        int byte0Index = this.position;
         this.position = this.position + 1;
-        this.bytes[fieldTemp$7] = (byte)(int)param1;
+        this.bytes[byte0Index] = (byte)(int)value;
     }
 
     final int readUnsignedMediumBE(int methodGuard) {
@@ -796,55 +796,55 @@ class ByteArrayBuffer extends IntrusiveNode {
         return (this.bytes[-1 + this.position] & 255) + (((this.bytes[this.position - 2] & 255) << 8) + ((this.bytes[this.position - 3] & 255) << 16));
     }
 
-    final void a(String param0, byte param1) {
-        int fieldTemp$0 = 0;
-        CharSequence var4 = null;
-        int fieldTemp$1 = 0;
-        int var3_int = param0.indexOf(' ');
-        if (param1 != -126) {
+    final void writeZeroPrefixedNullTerminatedText(String text, byte methodGuard) {
+        int prefixByteIndex = 0;
+        CharSequence textForEncoding = null;
+        int terminatorByteIndex = 0;
+        int zeroCharacterIndex = text.indexOf(' ');
+        if (methodGuard != -126) {
             return;
         }
         try {
-            if (!(var3_int < 0)) {
+            if (!(zeroCharacterIndex < 0)) {
                 throw new IllegalArgumentException("");
             }
-            fieldTemp$0 = this.position;
+            prefixByteIndex = this.position;
             this.position = this.position + 1;
-            this.bytes[fieldTemp$0] = (byte) 0;
-            var4 = (CharSequence) ((Object) param0);
-            this.position = this.position + hi.a(var4, this.bytes, 0, param0.length(), this.position, 98);
-            fieldTemp$1 = this.position;
+            this.bytes[prefixByteIndex] = (byte) 0;
+            textForEncoding = (CharSequence) ((Object) text);
+            this.position = this.position + hi.a(textForEncoding, this.bytes, 0, text.length(), this.position, 98);
+            terminatorByteIndex = this.position;
             this.position = this.position + 1;
-            this.bytes[fieldTemp$1] = (byte) 0;
-        } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "qc.VA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            this.bytes[terminatorByteIndex] = (byte) 0;
+        } catch (RuntimeException textWriteFailure) {
+            throw t.a((Throwable) ((Object) textWriteFailure), "qc.VA(" + (text != null ? "{...}" : "null") + ',' + methodGuard + ')');
         }
     }
 
-    final void a(byte param0, int param1) {
-        int fieldTemp$0 = 0;
-        L0: while (this.position < param1) {
-          fieldTemp$0 = this.position;
+    final void padZerosToPosition(byte methodGuard, int endPosition) {
+        int paddingByteIndex = 0;
+        L0: while (this.position < endPosition) {
+          paddingByteIndex = this.position;
           this.position = this.position + 1;
-          this.bytes[fieldTemp$0] = (byte) 0;
+          this.bytes[paddingByteIndex] = (byte) 0;
         }
-        if (param0 > -45) {
+        if (methodGuard > -45) {
           this.readUnsignedMediumBE(93);
         }
     }
 
-    final void c(int param0, int param1) {
-        if (param0 < 64 && param0 >= -64) {
-            this.d((byte) 125, 64 + param0);
+    final void writeSignedSmart(int value, int methodGuard) {
+        if (value < 64 && value >= -64) {
+            this.writeByte((byte) 125, 64 + value);
             return;
         }
-        if (param0 < 16384) {
-            if (!(param0 < -16384)) {
-                this.e(49152 + param0, 28695);
+        if (value < 16384) {
+            if (!(value < -16384)) {
+                this.writeShortBE(49152 + value, 28695);
                 return;
             }
         }
-        if (param1 != -5962) {
+        if (methodGuard != -5962) {
             this.readUnsignedShortOrInt((byte) -105);
         }
         throw new IllegalArgumentException();
@@ -852,29 +852,29 @@ class ByteArrayBuffer extends IntrusiveNode {
 
     final byte readSignedByte(byte methodGuard) {
         if (methodGuard <= 71) {
-            this.f(105, -48);
+            this.backpatchLengthByte(105, -48);
         }
         int byteIndex = this.position;
         this.position = this.position + 1;
         return this.bytes[byteIndex];
     }
 
-    final void c(byte param0, int param1) {
-        int fieldTemp$0 = this.position;
+    final void writeIntBE(byte methodGuard, int value) {
+        int highestByteIndex = this.position;
         this.position = this.position + 1;
-        this.bytes[fieldTemp$0] = (byte)(param1 >> 24);
-        int fieldTemp$1 = this.position;
+        this.bytes[highestByteIndex] = (byte)(value >> 24);
+        int upperMiddleByteIndex = this.position;
         this.position = this.position + 1;
-        this.bytes[fieldTemp$1] = (byte)(param1 >> 16);
-        int fieldTemp$2 = this.position;
+        this.bytes[upperMiddleByteIndex] = (byte)(value >> 16);
+        int lowerMiddleByteIndex = this.position;
         this.position = this.position + 1;
-        this.bytes[fieldTemp$2] = (byte)(param1 >> 8);
-        if (param0 != 95) {
+        this.bytes[lowerMiddleByteIndex] = (byte)(value >> 8);
+        if (methodGuard != 95) {
             this.readSignedSmart(-7);
         }
-        int fieldTemp$3 = this.position;
+        int lowestByteIndex = this.position;
         this.position = this.position + 1;
-        this.bytes[fieldTemp$3] = (byte)param1;
+        this.bytes[lowestByteIndex] = (byte)value;
     }
 
     final int readIntBE(byte methodGuard) {
@@ -985,13 +985,13 @@ class ByteArrayBuffer extends IntrusiveNode {
             var4_int = this.position;
             this.position = 0;
             var5 = new byte[var4_int];
-            this.b(param0 ^ 29915, var4_int, var5, 0);
+            this.readBytes(param0 ^ 29915, var4_int, var5, 0);
             var6 = new java.math.BigInteger(var5);
             var7 = var6.modPow(param2, param1);
             var8 = var7.toByteArray();
             this.position = param0;
-            this.e(var8.length, 28695);
-            this.a(var8.length, -97, var8, 0);
+            this.writeShortBE(var8.length, 28695);
+            this.writeBytes(var8.length, -97, var8, 0);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "qc.CB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

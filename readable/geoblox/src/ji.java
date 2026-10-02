@@ -43,7 +43,7 @@ abstract class ji {
               var1.position = var1.position + 1;
               var2 = fieldTemp$0;
               pf.a(46, var1);
-              fj.field_q.f(11700, var1.position - var2);
+              fj.field_q.backpatchLengthByte(11700, var1.position - var2);
             }
             return;
           }

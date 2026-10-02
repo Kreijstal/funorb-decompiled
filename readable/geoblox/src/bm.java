@@ -147,7 +147,7 @@ final class bm {
                 if (var7 != 0) {
                   for (var10 = 0; this.field_h > var10; var10++) {
                     var22 = new byte[64];
-                    var18.b(29915, 64, var22, 0);
+                    var18.readBytes(29915, 64, var22, 0);
                     this.field_r[this.field_i[var10]] = var22;
                   }
                   break L15;
@@ -274,23 +274,23 @@ final class bm {
             var8.a(param1, (byte) -125);
             var8.position = var8.position + 1;
             var4 = var8.position;
-            var8.d((byte) 122, 1);
-            var8.e(param0.field_q, 28695);
-            var8.e(param0.field_f, 28695);
-            var8.e(param0.field_k, 28695);
-            var8.c((byte) 95, param0.field_m);
-            var8.c((byte) 95, param0.field_g);
-            var8.c((byte) 95, param0.field_j);
+            var8.writeByte((byte) 122, 1);
+            var8.writeShortBE(param0.field_q, 28695);
+            var8.writeShortBE(param0.field_f, 28695);
+            var8.writeShortBE(param0.field_k, 28695);
+            var8.writeIntBE((byte) 95, param0.field_m);
+            var8.writeIntBE((byte) 95, param0.field_g);
+            var8.writeIntBE((byte) 95, param0.field_j);
             if (param2 > -126) {
                 field_j = 61;
             }
-            var8.c((byte) 95, param0.field_i);
-            var8.d((byte) 126, param0.field_o.length);
+            var8.writeIntBE((byte) 95, param0.field_i);
+            var8.writeByte((byte) 126, param0.field_o.length);
             for (var5 = 0; var5 < param0.field_o.length; var5++) {
-                var7.c((byte) 95, param0.field_o[var5]);
+                var7.writeIntBE((byte) 95, param0.field_o[var5]);
             }
-            var8.d(78, var4);
-            var8.f(11700, -var4 + var8.position);
+            var8.appendCrc32(78, var4);
+            var8.backpatchLengthByte(11700, -var4 + var8.position);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "bm.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
