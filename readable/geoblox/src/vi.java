@@ -9,8 +9,8 @@ final class vi extends hk {
 
     public static void f(int param0) {
         if (param0 >= -65) {
-            d var2 = (d) null;
-            vi.a(98, (d) null);
+            PlatformTaskDispatcher var2 = (PlatformTaskDispatcher) null;
+            vi.a(98, (PlatformTaskDispatcher) null);
         }
         loginJustPlayTooltipText = null;
         createNewsOptInTooltipText = null;
@@ -39,7 +39,7 @@ final class vi extends hk {
         }
     }
 
-    final static rj[] a(int param0, d param1) {
+    final static rj[] a(int param0, PlatformTaskDispatcher param1) {
         int var5 = 0;
         rj[] stackIn_3_0 = null;
         rj[] stackIn_9_0 = null;
@@ -55,7 +55,7 @@ final class vi extends hk {
         rj[] var4 = null;
         rj var6 = null;
         int var7 = 0;
-        cb var8 = null;
+        PlatformTask var8 = null;
         int[] var9 = null;
         int[] var10 = null;
         var7 = Geoblox.field_C;
@@ -66,15 +66,15 @@ final class vi extends hk {
           }
           {
             var8 = param1.a(34);
-            L0: while (var8.field_a == 0) {
+            L0: while (var8.status == 0) {
               bc.a(0, 10L);
             }
-            if (var8.field_a == 2) {
+            if (var8.status == 2) {
               stackIn_9_0 = new rj[]{};
               return stackIn_9_0;
             }
             {
-              var10 = (int[]) (var8.field_b);
+              var10 = (int[]) (var8.result);
               var9 = var10;
               var3 = var9;
               var4 = new rj[var10.length >> 2];

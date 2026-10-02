@@ -79,7 +79,7 @@ final class od {
         }
     }
 
-    final static he a(int param0, int param1, int param2, int param3, d param4, int param5) {
+    final static he a(int param0, int param1, int param2, int param3, PlatformTaskDispatcher param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         he var7 = null;

@@ -14,6 +14,7 @@ const aliases = new Map(JSON.parse(fs.readFileSync(path.join(root, 'geoblox-rule
 const expectedNativeSha256 = 'ec3c627a2eec22d24549607b97ae8c3b6d735e24217b26c61e8a5e510872ace6';
 const expectedCacheWriteSha256 = 'e5d3ac6ab42a61da22e44337bc05b64e89e0360d4d51a94256fff69d3a37081d';
 const expectedShutdownSha256 = '2fec6ee86681993c79d39ef1e57026f31fd9b0a87b7d7f94a5bddf5af83d6335';
+const expectedSocketIoSha256 = 'ed8f7d5f5438f4fb39cb3bceca82a861d01f4e08502ca73ba7af8ca475b6292b';
 const temporary = fs.mkdtempSync(path.join(os.tmpdir(), 'geoblox-result-helpers-'));
 try {
   if (nativeInput) {
@@ -298,6 +299,152 @@ try {
           }
           check(cases==84,"shutdown case count");System.out.println("shutdown-complete:"+cases);
         }
+      }
+      class SocketIoBehavior extends ResultHelperBehavior {
+        static class Input extends java.io.InputStream {
+          byte[] bytes={11,22,33,44};int position,reads,closes,mode;boolean closeFailure;
+          final java.io.IOException failure=new java.io.IOException("input");
+          public int available(){return bytes.length-position;}
+          public int read() throws java.io.IOException {reads++;if(mode==2)throw failure;
+            return position==bytes.length?-1:bytes[position++]&255;}
+          public int read(byte[] target,int offset,int length) throws java.io.IOException {
+            reads++;if(mode==2)throw failure;if(mode==1)return 0;
+            if(position==bytes.length)return -1;int count=Math.min(2,Math.min(length,bytes.length-position));
+            System.arraycopy(bytes,position,target,offset,count);position+=count;return count;
+          }
+          public void close() throws java.io.IOException {closes++;if(closeFailure)throw failure;}
+        }
+        static class Output extends java.io.OutputStream {
+          final java.io.ByteArrayOutputStream bytes=new java.io.ByteArrayOutputStream();int writes,flushes,closes,mode;
+          public void write(int value){bytes.write(value);}
+          public void write(byte[] source,int offset,int length) throws java.io.IOException {
+            writes++;if(mode==1)throw new java.io.IOException("write");bytes.write(source,offset,length);
+          }
+          public void flush() throws java.io.IOException {flushes++;if(mode==2)throw new java.io.IOException("flush");}
+          public void close(){closes++;}
+        }
+        static class Socket extends java.net.Socket {
+          final Input input=new Input();final Output output=new Output();int timeout,closes;boolean noDelay;
+          public void setSoTimeout(int value){timeout=value;}public void setTcpNoDelay(boolean value){noDelay=value;}
+          public java.io.InputStream getInputStream(){return input;}public java.io.OutputStream getOutputStream(){return output;}
+          public synchronized void close(){closes++;}
+        }
+        static Throwable call(Method method,Object receiver,Object... arguments) throws Exception {
+          try{method.invoke(receiver,arguments);return null;}catch(InvocationTargetException error){return error.getCause();}
+        }
+        static Object holder(Socket fixture,int capacity,int start,boolean closed) throws Exception {
+          Object socket=allocate("${type('ba')}");
+          ${set('ba','field_j','Ljava/net/Socket;','socket','fixture')}
+          ${set('ba','field_g','Ljava/io/InputStream;','socket','fixture.input')}
+          ${set('ba','field_a','Ljava/io/OutputStream;','socket','fixture.output')}
+          ${set('ba','field_b','I','socket','capacity')}
+          ${set('ba','field_k','I','socket','start')}
+          ${set('ba','field_e','I','socket','start')}
+          ${set('ba','field_f','Z','socket','closed')}
+          ${set('ba','field_m','Lcb;','socket',`allocate("${type('cb')}")`)}
+          return socket;
+        }
+        public static void main(String[] args) throws Exception {
+          int cases=0;Class<?> dispatcher=Class.forName("${type('d')}");
+          for(int capacity:new int[]{5000,256}) {
+            Socket fixture=new Socket();Object tasks=allocate("${type('d')}");
+            Object socket=capacity==5000?construct("${type('ba')}",new Class<?>[]{java.net.Socket.class,dispatcher},fixture,tasks)
+              :construct("${type('ba')}",new Class<?>[]{java.net.Socket.class,dispatcher,int.class},fixture,tasks,capacity);
+            check(fixture.timeout==30000 && fixture.noDelay,"socket configuration");
+            check(${get('ba','field_j','Ljava/net/Socket;','socket')}==fixture &&
+              ${get('ba','field_g','Ljava/io/InputStream;','socket')}==fixture.input &&
+              ${get('ba','field_a','Ljava/io/OutputStream;','socket')}==fixture.output &&
+              ${get('ba','field_l','Ld;','socket')}==tasks,"constructor identities");
+            check((Integer)${get('ba','field_b','I','socket')}==capacity &&
+              !(Boolean)${get('ba','field_f','Z','socket')} && !(Boolean)${get('ba','field_i','Z','socket')} &&
+              (Integer)${get('ba','field_k','I','socket')}==0 && (Integer)${get('ba','field_e','I','socket')}==0 &&
+              ${get('ba','field_d','[B','socket')}==null && ${get('ba','field_m','Lcb;','socket')}==null,"constructor state");
+            ${set('ba','field_f','Z','socket','true')}
+            System.out.println("constructor:"+capacity+":"+fixture.timeout+":"+fixture.noDelay);cases++;
+          }
+          Method available=method("${type('ba')}","${method('ba','a(B)I')}",byte.class);
+          Method readByte=method("${type('ba')}","${method('ba','c(I)I')}",int.class);
+          Method readFully=method("${type('ba')}","${method('ba','a([BBII)V')}",byte[].class,byte.class,int.class,int.class);
+          Method checkError=method("${type('ba')}","${method('ba','d(I)V')}",int.class);
+          Method enqueue=method("${type('ba')}","${method('ba','a(III[B)V')}",int.class,int.class,int.class,byte[].class);
+          Method run=method("${type('ba')}","run");
+          for(boolean closed:new boolean[]{false,true})for(byte guard:new byte[]{-128,71,72,127}) {
+            Socket fixture=new Socket();Object socket=holder(fixture,256,0,closed);String completion="ok";int count=-1;
+            try{count=(Integer)available.invoke(socket,guard);}catch(InvocationTargetException error){
+              check(!closed && guard<=71 && error.getCause() instanceof NullPointerException,"available failure");completion="null";}
+            check(!completion.equals("ok") || count==(closed?0:4),"available count");
+            check((${get('ba','field_g','Ljava/io/InputStream;','socket')}==null)==(guard<=71),"available guard effect");
+            System.out.println("available:"+closed+":"+guard+":"+completion+":"+count);cases++;
+          }
+          for(boolean closed:new boolean[]{false,true})for(int guard:new int[]{-17422,0,Integer.MIN_VALUE}) {
+            Socket fixture=new Socket();Object socket=holder(fixture,256,0,closed);int value=(Integer)readByte.invoke(socket,guard);
+            check(value==(closed?0:guard==-17422?11:-104),"read byte result");
+            check(fixture.input.position==(!closed && guard==-17422?1:0),"read byte consumption");
+            System.out.println("byte:"+closed+":"+guard+":"+value+":"+fixture.input.position);cases++;
+          }
+          for(boolean closed:new boolean[]{false,true})for(byte guard:new byte[]{-97,0})
+          for(int mode=0;mode<3;mode++)for(int length:new int[]{0,1,4,8}) {
+            Socket fixture=new Socket();fixture.input.mode=mode;Object socket=holder(fixture,256,0,closed);
+            byte[] target=new byte[10],expected=new byte[10];Arrays.fill(target,(byte)99);Arrays.fill(expected,(byte)99);
+            boolean active=!closed && guard==-97 && length>0;int copied=active && mode==0?Math.min(length,4):0;
+            System.arraycopy(fixture.input.bytes,0,expected,1,copied);Throwable error=call(readFully,socket,target,guard,1,length);
+            boolean fails=active && (mode!=0 || length>4);check((error!=null)==fails,"readFully completion");
+            if(fails)check(mode==2?error==fixture.input.failure:error instanceof java.io.EOFException,"readFully throwable");
+            check(Arrays.equals(target,expected) && fixture.input.position==copied,"readFully partial bytes");
+            System.out.println("readFully:"+closed+":"+guard+":"+mode+":"+length+":"+(error==null?"ok":error.getClass().getName())+
+              ":"+Arrays.toString(target)+":"+fixture.input.reads);cases++;
+          }
+          for(boolean closed:new boolean[]{false,true})for(boolean pending:new boolean[]{false,true})
+          for(int guard:new int[]{-128,-79,0}) {
+            Socket fixture=new Socket();Object socket=holder(fixture,256,0,closed);
+            ${set('ba','field_i','Z','socket','pending')}
+            Throwable error=call(checkError,socket,guard);boolean fails=!closed && pending && guard<-79;
+            check((error!=null)==fails && (!fails || error instanceof java.io.IOException),"pending error completion");
+            boolean after=(Boolean)${get('ba','field_i','Z','socket')};check(after==(pending && !fails),"pending error consumption");
+            System.out.println("pending:"+closed+":"+pending+":"+guard+":"+fails+":"+after);cases++;
+          }
+          for(int capacity:new int[]{256,512})for(int start:new int[]{0,capacity-2})
+          for(int length:new int[]{0,1,5,capacity-101,capacity-100})for(boolean closed:new boolean[]{false,true})
+          for(boolean pending:new boolean[]{false,true})for(int guard:new int[]{100,0}) {
+            Socket fixture=new Socket();Object socket=holder(fixture,capacity,start,closed);
+            Object task=${get('ba','field_m','Lcb;','socket')};byte[] source=new byte[length+2];
+            for(int i=0;i<source.length;i++)source[i]=(byte)(i*17+3);
+            ${set('ba','field_i','Z','socket','pending')}
+            Throwable error=call(enqueue,socket,guard,1,length,source);
+            boolean overflow=!closed && !pending && length==capacity-100;
+            boolean fails=!closed && (pending || overflow);check((error!=null)==fails && (!fails || error instanceof java.io.IOException),"enqueue completion");
+            byte[] buffer=(byte[])${get('ba','field_d','[B','socket')};int copied=closed || pending?0:length;
+            check((buffer==null)==(closed || pending),"lazy buffer allocation");
+            if(buffer!=null){byte[] expected=new byte[capacity];for(int i=0;i<copied;i++)expected[(start+i)%capacity]=source[i+1];
+              check(Arrays.equals(buffer,expected),"ring bytes");}
+            int write=(Integer)${get('ba','field_e','I','socket')};check(write==(start+copied)%capacity,"ring write position");
+            check((Integer)${get('ba','field_k','I','socket')}==start && ${get('ba','field_m','Lcb;','socket')}==task,"ring read/task retention");
+            boolean after=(Boolean)${get('ba','field_i','Z','socket')};check(after==(closed && pending),"enqueue consumes pending failure");
+            check((${get('ba','field_a','Ljava/io/OutputStream;','socket')}==null)==(!closed && !pending && !overflow && guard!=100),"enqueue guard effect");
+            check(!Thread.holdsLock(socket),"enqueue monitor released");
+            System.out.println("enqueue:"+capacity+":"+start+":"+length+":"+closed+":"+pending+":"+guard+":"+fails+":"+write+":"+after);cases++;
+          }
+          for(int capacity:new int[]{256,512})for(int start:new int[]{0,capacity-2})for(int length:new int[]{0,1,5})
+          for(int mode=0;mode<3;mode++)for(boolean closeFailure:new boolean[]{false,true}) {
+            Socket fixture=new Socket();fixture.output.mode=mode;fixture.input.closeFailure=closeFailure;
+            Object socket=holder(fixture,capacity,start,true);byte[] buffer=new byte[capacity],expected=new byte[length];
+            for(int i=0;i<length;i++){expected[i]=(byte)(i*17+3);buffer[(start+i)%capacity]=expected[i];}
+            ${set('ba','field_d','[B','socket','buffer')}
+            ${set('ba','field_e','I','socket','(start+length)%capacity')}
+            check(call(run,socket)==null,"writer completion");
+            check(Arrays.equals(fixture.output.bytes.toByteArray(),mode==1?new byte[0]:expected),"writer bytes");
+            int chunks=length==0?0:start+length>capacity?2:1;
+            check(fixture.output.writes==chunks && fixture.output.flushes==(length==0?0:1),"writer split/flush");
+            check((Integer)${get('ba','field_k','I','socket')}==(start+length)%capacity &&
+              ${get('ba','field_d','[B','socket')}==null,"writer consumption/release");
+            check((Boolean)${get('ba','field_i','Z','socket')}==(length>0 && mode!=0),"writer failure flag");
+            check(fixture.input.closes==1 && fixture.output.closes==(closeFailure?0:1) && fixture.closes==(closeFailure?0:1),"close failure order");
+            check(!Thread.holdsLock(socket),"writer monitor released");
+            System.out.println("writer:"+capacity+":"+start+":"+length+":"+mode+":"+closeFailure+":"+
+              Arrays.toString(fixture.output.bytes.toByteArray())+":"+fixture.output.writes+":"+fixture.output.flushes+":"+fixture.output.closes+":"+fixture.closes);cases++;
+          }
+          check(cases==308,"socket I/O case count");System.out.println("socket-io-complete:"+cases);
+        }
       }`;
     const directory = path.join(temporary, variant), classes = path.join(directory, 'classes');
     fs.mkdirSync(classes, {recursive: true});
@@ -327,6 +474,11 @@ try {
     const shutdownSha256 = crypto.createHash('sha256').update(shutdownOutput).digest('hex');
     console.log(JSON.stringify({variant, shutdownSha256, completion: shutdownOutput.toString().trim().split('\n').at(-1)}));
     assert.equal(shutdownSha256, expectedShutdownSha256, variant);
+    const socketIoOutput = captureProcess('java', ['-Djava.awt.headless=true','-cp',classes + path.delimiter + cp,
+      'SocketIoBehavior']).stdout;
+    const socketIoSha256 = crypto.createHash('sha256').update(socketIoOutput).digest('hex');
+    console.log(JSON.stringify({variant, socketIoSha256, completion: socketIoOutput.toString().trim().split('\n').at(-1)}));
+    assert.equal(socketIoSha256, expectedSocketIoSha256, variant);
   }
 } catch (error) {
   if (error.stderr) process.stderr.write(error.stderr);

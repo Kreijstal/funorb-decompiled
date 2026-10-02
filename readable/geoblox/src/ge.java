@@ -321,11 +321,11 @@ final class ge {
                 qh.field_J = qh.field_J + 1;
               }
               if (qh.field_J == 1) {
-                if (gj.field_s.field_a == 2) {
+                if (gj.field_s.status == 2) {
                   stackIn_12_0 = eb.a(-1, 28625);
                   return stackIn_12_0;
                 }
-                if (1 == gj.field_s.field_a) {
+                if (1 == gj.field_s.status) {
                   qh.field_J = qh.field_J + 1;
                 }
               }
@@ -334,18 +334,18 @@ final class ge {
                 ge.a((String) null, (byte) -15);
               }
               if (2 == qh.field_J) {
-                li.field_a = new ba((java.net.Socket) (gj.field_s.field_b), ph.field_i);
+                li.field_a = new BufferedSocket((java.net.Socket) (gj.field_s.result), ph.field_i);
                 var3 = new qc(13);
                 ke.a(pc.field_C, true, hc.field_T, bm.field_u, var3);
                 var3.d((byte) -54, 15);
                 var3.c((byte) 95, ag.field_l);
-                li.field_a.a(100, 0, 13, var3.field_j);
+                li.field_a.enqueueWrite(100, 0, 13, var3.field_j);
                 qh.field_J = qh.field_J + 1;
                 eb.field_b = 30000L + oa.a(param0 - 12446);
               }
               if (qh.field_J == 3) {
-                if (0 < li.field_a.a((byte) 78)) {
-                  var1_int = li.field_a.c(-17422);
+                if (0 < li.field_a.available((byte) 78)) {
+                  var1_int = li.field_a.readByte(-17422);
                   if (var1_int != 0) {
                     stackIn_27_0 = eb.a(var1_int, 28625);
                     return stackIn_27_0;

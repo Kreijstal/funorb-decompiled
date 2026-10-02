@@ -224,7 +224,7 @@ final class cm extends cj {
                 }
                 if (param0 > ~fj.field_q.field_f) {
                   try {
-                    oc.field_e.a(100, 0, fj.field_q.field_f, fj.field_q.field_j);
+                    oc.field_e.enqueueWrite(100, 0, fj.field_q.field_f, fj.field_q.field_j);
                     v.field_r = oa.a(-12520);
                   } catch (java.io.IOException decompiledCaughtParameter0) {
                     decompiledCaughtException = decompiledCaughtParameter0;

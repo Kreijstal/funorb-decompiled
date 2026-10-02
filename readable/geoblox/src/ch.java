@@ -323,15 +323,15 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                   L2: {
                     L3: {
                       L4: {
-                        if (d.field_o != null) {
-                          var1 = d.field_o.toLowerCase();
+                        if (PlatformTaskDispatcher.field_o != null) {
+                          var1 = PlatformTaskDispatcher.field_o.toLowerCase();
                           if (-1 == ((String) (var1)).indexOf("sun")) {
                             if (((String) (var1)).indexOf("apple") == -1) {
                               break L4;
                             }
                           }
                           L6: {
-                            var2 = d.field_t;
+                            var2 = PlatformTaskDispatcher.field_t;
                             if (!var2.equals("1.1")) {
                               if (!var2.startsWith("1.1.")) {
                                 if (!var2.equals("1.2")) {
@@ -391,18 +391,18 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                           }
                         }
                       }
-                      if (d.field_t == null) {
+                      if (PlatformTaskDispatcher.field_t == null) {
                         break L2;
                       }
-                      stackIn_66_0 = d.field_t.startsWith("1.");
+                      stackIn_66_0 = PlatformTaskDispatcher.field_t.startsWith("1.");
                     }
                     if (stackIn_66_0) {
                       var1_int = 2;
                       var2_int = 0;
                       L10: while (true) {
                         L11: {
-                          if (~d.field_t.length() < ~var1_int) {
-                            var3 = d.field_t.charAt(var1_int);
+                          if (~PlatformTaskDispatcher.field_t.length() < ~var1_int) {
+                            var3 = PlatformTaskDispatcher.field_t.charAt(var1_int);
                             stackIn_78_0 = var3;
 
                             stackIn_78_1 = 48;
@@ -435,7 +435,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                   if (null != kg.field_m) {
                     var1 = kg.field_m;
                   }
-                  var2_ref = d.field_v;
+                  var2_ref = PlatformTaskDispatcher.field_v;
                   if (null != var2_ref) {
                     try {
                       var2_ref.invoke(var1, new Object[]{Boolean.TRUE});
@@ -448,7 +448,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                   this.b(true);
                   sh.field_y = fk.a(false, (java.awt.Component) ((Object) f.field_kb), ok.field_c, kh.field_d);
                   this.initializeGame(117);
-                  eg.field_p = ba.a(5000);
+                  eg.field_p = BufferedSocket.createFrameClock(5000);
                   L17: while (true) {
                     L18: {
                       if (0L != MenuScreen.field_a) {
@@ -844,14 +844,14 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
 
     final void a(int param0, int param1, int param2, int param3, int param4, String param5, int param6) {
         try {
-            d dupTemp$0 = null;
+            PlatformTaskDispatcher dupTemp$0 = null;
             RuntimeException stackIn_23_0 = null;
             StringBuilder stackIn_23_1 = null;
             RuntimeException stackIn_24_0 = null;
             StringBuilder stackIn_24_1 = null;
             String stackIn_24_2 = null;
             Throwable decompiledCaughtException = null;
-            cb var8 = null;
+            PlatformTask var8 = null;
             Throwable var8_ref = null;
             RuntimeException var8_ref2 = null;
             int var9 = 0;
@@ -881,13 +881,13 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                     return;
                   }
                   {
-                    dupTemp$0 = new d(param0, param5, param6, true);
+                    dupTemp$0 = new PlatformTaskDispatcher(param0, param5, param6, true);
                     MenuScreen.field_i = dupTemp$0;
                     ml.field_s = dupTemp$0;
-                    var8 = MenuScreen.field_i.a((Runnable) (this), 0, 1);
+                    var8 = MenuScreen.field_i.startThread((Runnable) (this), 0, 1);
                     L1: while (true) {
                       L2: {
-                        if (var8.field_a == 0) {
+                        if (var8.status == 0) {
                           bc.a(0, 10L);
                           if (var9 != 0) {
                             break L2;

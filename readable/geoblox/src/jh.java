@@ -30,7 +30,7 @@ final class jh {
                 if (param3 <= this.field_a) {
                   if (param1 != -53) {
                     var8 = (kj) null;
-                    jh.a((java.awt.Component) null, (d) null, false, (kj) null, false, -103);
+                    jh.a((java.awt.Component) null, (PlatformTaskDispatcher) null, false, (kj) null, false, -103);
                   }
                   var6 = this.a(255, param3, param2, param0, true) ? 1 : 0;
                   if (var6 == 0) {
@@ -419,7 +419,7 @@ final class jh {
         return "" + this.field_b;
     }
 
-    final static void a(java.awt.Component param0, d param1, boolean param2, kj param3, boolean param4, int param5) {
+    final static void a(java.awt.Component param0, PlatformTaskDispatcher param1, boolean param2, kj param3, boolean param4, int param5) {
         AudioOutput.a(param5, param4, 10);
         fj.field_p = AudioOutput.a(param1, param0, 0, 22050);
         if (param2) {

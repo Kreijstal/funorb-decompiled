@@ -181,13 +181,13 @@ final class gi implements Iterable {
 
     final static void a(Throwable param0, String param1, byte param2) {
         try {
-            d stackIn_13_0;
+            PlatformTaskDispatcher stackIn_13_0;
             int stackIn_13_1;
             java.net.URL stackIn_13_2;
             java.net.URL stackIn_13_3;
             java.net.URL stackIn_13_4;
             StringBuilder stackIn_13_5;
-            d stackIn_14_0;
+            PlatformTaskDispatcher stackIn_14_0;
             int stackIn_14_1;
             java.net.URL stackIn_14_2;
             java.net.URL stackIn_14_3;
@@ -197,7 +197,7 @@ final class gi implements Iterable {
             Throwable decompiledCaughtException = null;
             String var3 = null;
             Exception var3_ref = null;
-            cb var4 = null;
+            PlatformTask var4 = null;
             DataInputStream var5 = null;
             String var6 = null;
             String var7 = null;
@@ -237,7 +237,7 @@ final class gi implements Iterable {
                   stackIn_13_5 = new StringBuilder().append("clienterror.ws?c=").append(kk.field_t).append("&u=");
 
                   if (null == uk.field_p) {
-                    stackIn_14_0 = (d) ((Object) stackIn_13_0);
+                    stackIn_14_0 = (PlatformTaskDispatcher) ((Object) stackIn_13_0);
                     stackIn_14_1 = stackIn_13_1;
                     stackIn_14_2 = null;
                     stackIn_14_3 = null;
@@ -245,7 +245,7 @@ final class gi implements Iterable {
                     stackIn_14_5 = (StringBuilder) ((Object) stackIn_13_5);
                     stackIn_14_6 = "" + vi.field_H;
                   } else {
-                    stackIn_14_0 = (d) ((Object) stackIn_13_0);
+                    stackIn_14_0 = (PlatformTaskDispatcher) ((Object) stackIn_13_0);
                     stackIn_14_1 = stackIn_13_1;
                     stackIn_14_2 = null;
                     stackIn_14_3 = null;
@@ -253,12 +253,12 @@ final class gi implements Iterable {
                     stackIn_14_5 = (StringBuilder) ((Object) stackIn_13_5);
                     stackIn_14_6 = uk.field_p;
                   }
-                  var4 = ((d) (Object) stackIn_14_0).a(stackIn_14_1, new java.net.URL(stackIn_14_4, ((StringBuilder) (Object) stackIn_14_5).append(stackIn_14_6).append("&v1=").append(d.field_o).append("&v2=").append(d.field_t).append("&e=").append(var9).toString()));
-                  L5: while (var4.field_a == 0) {
+                  var4 = ((PlatformTaskDispatcher) (Object) stackIn_14_0).a(stackIn_14_1, new java.net.URL(stackIn_14_4, ((StringBuilder) (Object) stackIn_14_5).append(stackIn_14_6).append("&v1=").append(PlatformTaskDispatcher.field_o).append("&v2=").append(PlatformTaskDispatcher.field_t).append("&e=").append(var9).toString()));
+                  L5: while (var4.status == 0) {
                     bc.a(param2 - 125, 1L);
                   }
-                  if (var4.field_a == 1) {
-                    var5 = (DataInputStream) (var4.field_b);
+                  if (var4.status == 1) {
+                    var5 = (DataInputStream) (var4.result);
                     var5.read();
                     var5.close();
                   }

@@ -173,12 +173,12 @@ final class cf extends TextInputValidator {
           }
           for (var2 = 0; var1.field_f > var2; var2++) {
             if (null != var4.field_n[var2]) {
-              if (var4.field_n[var2].field_a == 0) {
+              if (var4.field_n[var2].status == 0) {
                 return false;
               }
             }
             if (var4.field_i[var2] != null) {
-              if (var4.field_i[var2].field_a == 0) {
+              if (var4.field_i[var2].status == 0) {
                 return false;
               }
             }

@@ -4,7 +4,7 @@
 final class gj extends fj {
     static int field_u;
     static String field_t;
-    static cb field_s;
+    static PlatformTask field_s;
     private Object field_r;
 
     final static void a(byte param0, int param1, ea param2) {

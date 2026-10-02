@@ -7,7 +7,7 @@ abstract class MenuScreen {
     int itemCount;
     static float field_c;
     int itemSpacing;
-    static d field_i;
+    static PlatformTaskDispatcher field_i;
     static int avatarFeedbackFrameBase;
     int selectedItemIndex;
     private int hitRightX;

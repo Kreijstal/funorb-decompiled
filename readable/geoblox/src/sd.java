@@ -3,7 +3,7 @@
  */
 final class sd extends pb {
     static int field_w;
-    static cb field_B;
+    static PlatformTask field_B;
     qc field_A;
     byte field_E;
     static byte[][] field_C;

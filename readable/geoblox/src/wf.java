@@ -667,7 +667,7 @@ abstract class wf extends ch {
                 hl.field_G = true;
                 hj.field_a = 10;
               } else {
-                ba.a((byte) 116, k.c(param2 ^ -122));
+                BufferedSocket.clearSessionAndReload((byte) 116, k.c(param2 ^ -122));
               }
             }
             if (5 == var4) {
@@ -682,7 +682,7 @@ abstract class wf extends ch {
               je.a((byte) 114, k.c(107));
             }
             if (var4 == 8) {
-              ba.a((byte) 116, k.c(119));
+              BufferedSocket.clearSessionAndReload((byte) 116, k.c(119));
             }
             if (9 == var4) {
               tl.a(k.c(115), (byte) -91);

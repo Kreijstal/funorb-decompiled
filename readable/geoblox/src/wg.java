@@ -6,7 +6,7 @@ import java.io.*;
 final class wg implements Runnable {
     private java.net.URL field_h;
     static int field_e;
-    private d field_b;
+    private PlatformTaskDispatcher field_b;
     private int field_l;
     static int field_j;
     private qc field_n;
@@ -14,9 +14,9 @@ final class wg implements Runnable {
     static int field_m;
     static ck field_d;
     private DataInputStream field_c;
-    private cb field_k;
-    private cb field_f;
-    private cb field_g;
+    private PlatformTask field_k;
+    private PlatformTask field_f;
+    private PlatformTask field_g;
     static int field_a;
 
     final qc b(byte param0) {
@@ -29,18 +29,18 @@ final class wg implements Runnable {
 
     protected final void finalize() {
         if (null != this.field_f) {
-            if (!(this.field_f.field_b == null)) {
+            if (!(this.field_f.result == null)) {
                 try {
-                    ((DataInputStream) (this.field_f.field_b)).close();
+                    ((DataInputStream) (this.field_f.result)).close();
                 } catch (Exception exception) {
                 }
             }
             this.field_f = null;
         }
         if (this.field_k != null) {
-            if (null != this.field_k.field_b) {
+            if (null != this.field_k.result) {
                 try {
-                    ((java.net.Socket) (this.field_k.field_b)).close();
+                    ((java.net.Socket) (this.field_k.result)).close();
                 } catch (Exception exception) {
                 }
             }
@@ -76,10 +76,10 @@ final class wg implements Runnable {
           if (null == this.field_f) {
             this.field_f = this.field_b.a(-14, this.field_h);
           }
-          if (0 == this.field_f.field_a) {
+          if (0 == this.field_f.status) {
             return false;
           }
-          if (1 != this.field_f.field_a) {
+          if (1 != this.field_f.status) {
             this.field_l = this.field_l + 1;
             this.field_f = null;
             return false;
@@ -89,10 +89,10 @@ final class wg implements Runnable {
           if (this.field_k == null) {
             this.field_k = this.field_b.a(443, this.field_h.getHost(), false);
           }
-          if (this.field_k.field_a == 0) {
+          if (this.field_k.status == 0) {
             return false;
           }
-          if (1 != this.field_k.field_a) {
+          if (1 != this.field_k.status) {
             this.field_k = null;
             this.field_l = this.field_l + 1;
             return false;
@@ -101,10 +101,10 @@ final class wg implements Runnable {
         if (null == this.field_c) {
           try {
             if (this.field_l == 0) {
-              this.field_c = (DataInputStream) (this.field_f.field_b);
+              this.field_c = (DataInputStream) (this.field_f.result);
             }
             if (this.field_l == 1) {
-              var4 = (java.net.Socket) (this.field_k.field_b);
+              var4 = (java.net.Socket) (this.field_k.result);
               var4.setSoTimeout(10000);
               var3 = var4.getOutputStream();
               var3.write(17);
@@ -123,15 +123,15 @@ final class wg implements Runnable {
           }
           if (decompiledRegionSelector0 == 0) {
             if (null == this.field_g) {
-              this.field_g = this.field_b.a((Runnable) (this), 0, 5);
+              this.field_g = this.field_b.startThread((Runnable) (this), 0, 5);
             }
-            if (0 == this.field_g.field_a) {
+            if (0 == this.field_g.status) {
               return false;
             }
             if (param0 != 45) {
               return false;
             }
-            if (this.field_g.field_a == 1) {
+            if (this.field_g.status == 1) {
               return false;
             }
             this.finalize();
@@ -140,15 +140,15 @@ final class wg implements Runnable {
           }
         }
         if (null == this.field_g) {
-          this.field_g = this.field_b.a((Runnable) (this), 0, 5);
+          this.field_g = this.field_b.startThread((Runnable) (this), 0, 5);
         }
-        if (0 == this.field_g.field_a) {
+        if (0 == this.field_g.status) {
           return false;
         }
         if (param0 != 45) {
           return false;
         }
-        if (this.field_g.field_a != 1) {
+        if (this.field_g.status != 1) {
           this.finalize();
           this.field_l = this.field_l + 1;
         }
@@ -207,7 +207,7 @@ final class wg implements Runnable {
         }
     }
 
-    wg(d param0, java.net.URL param1, int param2) {
+    wg(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
         try {
             this.field_b = param0;
             this.field_h = param1;

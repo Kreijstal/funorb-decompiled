@@ -132,7 +132,7 @@ final class sa extends RuntimeException {
         return hg.field_d;
     }
 
-    final static boolean a(d param0, byte param1) {
+    final static boolean a(PlatformTaskDispatcher param0, byte param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;

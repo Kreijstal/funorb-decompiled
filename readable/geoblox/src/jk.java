@@ -21,8 +21,8 @@ final class jk {
             f.field_kb.requestFocus();
             return;
         }
-        d var2 = (d) null;
-        jk.a((java.awt.Frame) null, 17, (d) null);
+        PlatformTaskDispatcher var2 = (PlatformTaskDispatcher) null;
+        jk.a((java.awt.Frame) null, 17, (PlatformTaskDispatcher) null);
         vl.field_n = null;
         if (!(null == rb.field_d)) {
             rb.field_d.b((byte) -101);
@@ -150,8 +150,8 @@ final class jk {
         }
     }
 
-    final static void a(java.awt.Frame param0, int param1, d param2) {
-        cb var3 = null;
+    final static void a(java.awt.Frame param0, int param1, PlatformTaskDispatcher param2) {
+        PlatformTask var3 = null;
         int var4 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -167,10 +167,10 @@ final class jk {
         try {
           L0: while (true) {
             var3 = param2.a(param0, 0);
-            L1: while (var3.field_a == 0) {
+            L1: while (var3.status == 0) {
               bc.a(0, 10L);
             }
-            if (var3.field_a != 1) {
+            if (var3.status != 1) {
               bc.a(0, 100L);
               continue L0;
             }

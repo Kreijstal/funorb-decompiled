@@ -29,7 +29,7 @@ final class pg {
         gb.field_c = 0;
     }
 
-    final static void a(int param0, d param1, int param2, qc param3) {
+    final static void a(int param0, PlatformTaskDispatcher param1, int param2, qc param3) {
         try {
             int var11_int = 0;
             int var12_int = 0;
@@ -74,9 +74,9 @@ final class pg {
               var19.field_f = param3.c((byte) 34);
               var19.field_m = param3.a((byte) -127);
               var19.field_j = new int[var19.field_f];
-              var19.field_i = new cb[var19.field_f];
+              var19.field_i = new PlatformTask[var19.field_f];
               var19.field_g = new int[var19.field_f];
-              var19.field_n = new cb[var19.field_f];
+              var19.field_n = new PlatformTask[var19.field_f];
               var19.field_k = new int[var19.field_f];
               var19.field_o = new byte[var19.field_f][][];
               var5 = 0;
@@ -177,7 +177,7 @@ final class pg {
               }
               if (param0 != -4) {
                 var15 = (qc) null;
-                pg.a(96, (d) null, -109, (qc) null);
+                pg.a(96, (PlatformTaskDispatcher) null, -109, (qc) null);
               }
               sl.field_k.addLast(-92, var19);
               return;

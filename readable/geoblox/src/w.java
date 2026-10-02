@@ -177,17 +177,17 @@ final class w {
             if (param1 != 52) {
                 field_d = (ck) null;
             }
-            if (!(sd.field_B.field_a != 0)) {
+            if (!(sd.field_B.status != 0)) {
                 return false;
             }
             long dupTemp$0 = oa.a(param1 ^ -12500);
             v.field_r = dupTemp$0;
             kh.field_e = dupTemp$0;
-            if (1 != sd.field_B.field_a) {
+            if (1 != sd.field_B.status) {
                 pk.field_l = qi.field_h;
             } else {
                 try {
-                    oc.field_e = new ba((java.net.Socket) (sd.field_B.field_b), GameplayEntity.field_D);
+                    oc.field_e = new BufferedSocket((java.net.Socket) (sd.field_B.result), GameplayEntity.field_D);
                     var4 = eh.field_d;
                     var5 = var4;
                     fj.field_q.field_f = 0;

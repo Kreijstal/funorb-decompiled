@@ -21,7 +21,7 @@ final class he extends java.awt.Canvas implements java.awt.event.FocusListener {
     public final void focusGained(java.awt.event.FocusEvent param0) {
     }
 
-    final void a(int param0, d param1) {
+    final void a(int param0, PlatformTaskDispatcher param1) {
         try {
             jk.a(this.field_b, 10, param1);
             if (param0 != 0) {

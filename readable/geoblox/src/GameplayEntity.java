@@ -27,7 +27,7 @@ final class GameplayEntity extends DualLinkNode {
     float velocityY;
     float positionY;
     private int paletteBlueDelta;
-    static d field_D;
+    static PlatformTaskDispatcher field_D;
     float velocityX;
     int sameCategoryEntityCount;
 

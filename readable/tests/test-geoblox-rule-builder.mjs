@@ -31,7 +31,7 @@ function fixture(change, check = true) {
 }
 
 test('one current manifest reproduces all guarded rules using Git history', () => {
-  assert.equal(JSON.parse(fixture().stdout).rules, 2404);
+  assert.equal(JSON.parse(fixture().stdout).rules, current.renames.length);
 });
 test('previous Git objects and their hash cannot change silently', () => {
   for (const change of [
@@ -51,7 +51,7 @@ test('explicit additions and replacements check their complete previous identity
     const rule = {symbol: 'L:ul.b(I)V#2', originalName: 'stackIn_10_0', to: 'fixtureResult', evidence: 'Fixture addition'};
     data.renames.push(rule); data.publication.ruleChanges.push({symbol: rule.symbol, before: null, after: rule});
   };
-  assert.equal(JSON.parse(fixture(add, false).stdout).rules, 2405);
+  assert.equal(JSON.parse(fixture(add, false).stdout).rules, current.renames.length + 1);
   assert.throws(() => fixture(data => { add(data); data.publication.ruleChanges[0].before = {}; }),
     /differs from the previous guarded identity/);
   assert.throws(() => fixture(data => { add(data); data.publication.ruleChanges.push(data.publication.ruleChanges[0]); }),
@@ -94,10 +94,10 @@ test('native evidence binds current probe bytes and its fixed native trace', () 
     }),
   ]) assert.throws(() => fixture(change), /Reviewed native probe differs/);
   const gameplay = data => data.publication.nativeEvidence.find(item => item.file === 'tests/test-geoblox-gameplay.mjs');
-  for (const trace of current.publication.nativeEvidence.find(item =>
-    item.file === 'tests/test-geoblox-gameplay.mjs').additionalTraces)
+  for (const probe of current.publication.nativeEvidence) for (const trace of probe.additionalTraces ?? [])
     assert.throws(() => fixture(data => {
-      gameplay(data).additionalTraces.find(item => item.constant === trace.constant).sha256 = '0'.repeat(64);
+      data.publication.nativeEvidence.find(item => item.file === probe.file)
+        .additionalTraces.find(item => item.constant === trace.constant).sha256 = '0'.repeat(64);
     }), /Reviewed additional native trace differs/);
   for (const change of [
     data => { gameplay(data).additionalTraces[0].constant = 'invalid-name'; },

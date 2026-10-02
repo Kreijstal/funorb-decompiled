@@ -7,7 +7,7 @@ final class ph extends IntrusiveNode {
     int field_h;
     static String createUnableText;
     int field_f;
-    static d field_i;
+    static PlatformTaskDispatcher field_i;
 
     public static void a(byte param0) {
         createUsernameAvailableText = null;

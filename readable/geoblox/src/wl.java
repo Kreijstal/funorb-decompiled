@@ -44,11 +44,11 @@ final class wl implements java.awt.event.KeyListener, java.awt.event.FocusListen
             }
           }
           if (var2_int >= 0) {
-            var3 = 127 & 1 + ba.field_c;
+            var3 = 127 & 1 + BufferedSocket.keyEventWriteIndex;
             if (var3 != vd.field_n) {
-              kj.field_O[ba.field_c] = var2_int;
-              ai.field_n[ba.field_c] = (char)0;
-              ba.field_c = var3;
+              kj.field_O[BufferedSocket.keyEventWriteIndex] = var2_int;
+              ai.field_n[BufferedSocket.keyEventWriteIndex] = (char)0;
+              BufferedSocket.keyEventWriteIndex = var3;
             }
           }
           var3 = param0.getModifiers();
@@ -99,11 +99,11 @@ final class wl implements java.awt.event.KeyListener, java.awt.event.FocusListen
             if (!(je.field_j == null)) {
                 var2_int = param0.getKeyChar();
                 if (var2_int != 0 && var2_int != 65535 && tc.a((byte) -112, (char) var2_int)) {
-                    var3 = 1 + ba.field_c & 127;
+                    var3 = 1 + BufferedSocket.keyEventWriteIndex & 127;
                     if (var3 != vd.field_n) {
-                        kj.field_O[ba.field_c] = -1;
-                        ai.field_n[ba.field_c] = (char)var2_int;
-                        ba.field_c = var3;
+                        kj.field_O[BufferedSocket.keyEventWriteIndex] = -1;
+                        ai.field_n[BufferedSocket.keyEventWriteIndex] = (char)var2_int;
+                        BufferedSocket.keyEventWriteIndex = var3;
                     }
                 }
             }

@@ -209,7 +209,7 @@ final class pa {
             java.net.MalformedURLException var4 = null;
             RuntimeException var4_ref = null;
             try {
-              if (d.field_b.startsWith("win")) {
+              if (PlatformTaskDispatcher.field_b.startsWith("win")) {
                 if (GameplaySession.a(param0, false)) {
                   return;
                 }

@@ -616,18 +616,18 @@ final class pf extends ee implements ga, pl {
                 var3 = 0;
                 for (var5 = 0; var5 < var17.field_f; var5++) {
                   if (var13.field_n[var5] != null) {
-                    if (var13.field_n[var5].field_a == 2) {
+                    if (var13.field_n[var5].status == 2) {
                       var13.field_j[var5] = -5;
                     }
-                    if (var13.field_n[var5].field_a == 0) {
+                    if (var13.field_n[var5].status == 0) {
                       var3 = 1;
                     }
                   }
                   if (var13.field_i[var5] != null) {
-                    if (2 == var13.field_i[var5].field_a) {
+                    if (2 == var13.field_i[var5].status) {
                       var13.field_j[var5] = -6;
                     }
-                    if (var13.field_i[var5].field_a == 0) {
+                    if (var13.field_i[var5].status == 0) {
                       var3 = 1;
                     }
                   }
@@ -645,19 +645,19 @@ final class pf extends ee implements ga, pl {
                       try {
                         var7_int = var13.field_k[var6];
                         if (var7_int == 0) {
-                          var15 = (java.lang.reflect.Field) (var13.field_n[var6].field_b);
+                          var15 = (java.lang.reflect.Field) (var13.field_n[var6].result);
                           var9 = var15.getInt((Object) null);
                           param1.d((byte) 3, 0);
                           param1.c((byte) 95, var9);
                         } else {
                           if (var7_int == 1) {
-                            var14 = (java.lang.reflect.Field) (var13.field_n[var6].field_b);
+                            var14 = (java.lang.reflect.Field) (var13.field_n[var6].result);
                             var8 = var14;
                             var14.setInt((Object) null, var13.field_g[var6]);
                             param1.d((byte) 124, 0);
                           } else {
                             if (2 == var7_int) {
-                              var25 = (java.lang.reflect.Field) (var13.field_n[var6].field_b);
+                              var25 = (java.lang.reflect.Field) (var13.field_n[var6].result);
                               var9 = var25.getModifiers();
                               param1.d((byte) 126, 0);
                               param1.c((byte) 95, var9);
@@ -666,7 +666,7 @@ final class pf extends ee implements ga, pl {
                         }
                         L5: {
                           if (var7_int == 3) {
-                            var27 = (java.lang.reflect.Method) (var13.field_i[var6].field_b);
+                            var27 = (java.lang.reflect.Method) (var13.field_i[var6].result);
                             var24 = var13.field_o[var6];
                             var10 = new Object[var24.length];
                             for (var11_int = 0; var11_int < var24.length; var11_int++) {
@@ -692,7 +692,7 @@ final class pf extends ee implements ga, pl {
                             break L5;
                           }
                           if (var7_int == 4) {
-                            var26 = (java.lang.reflect.Method) (var13.field_i[var6].field_b);
+                            var26 = (java.lang.reflect.Method) (var13.field_i[var6].result);
                             var9 = var26.getModifiers();
                             param1.d((byte) 123, 0);
                             param1.c((byte) 95, var9);

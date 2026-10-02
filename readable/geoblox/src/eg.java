@@ -8,10 +8,10 @@ final class eg extends IntrusiveNode {
     int[] field_g;
     int field_m;
     static Sprite[] pointsPanelGlowFrames;
-    cb[] field_i;
+    PlatformTask[] field_i;
     static volatile int field_h;
     byte[][][] field_o;
-    cb[] field_n;
+    PlatformTask[] field_n;
     int field_f;
     static String field_l;
 

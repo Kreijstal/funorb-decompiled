@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 2,404 guarded naming rules: 24 classes, 457 fields,
-270 methods, 711 parameters and 942 local declarations. Both 303-file corpora
+The current export has 2,518 guarded naming rules: 27 classes, 481 fields,
+281 methods, 740 parameters and 989 local declarations. Both 303-file corpora
 compile, preserving 150,387 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -43,7 +43,7 @@ parameters and 169 locals. Every parameter and local declaration in `Sprite`,
 the ARGB nearest-rotation geometry, bilinear weight/channel arithmetic,
 half/quarter reductions, copying, outlining, cropping and image-loading names.
 That naming pass preserved its raw source and generator pins along with all
-2,233 prior rules. The current structural refresh retains all 2,404 rules and
+2,233 prior rules. The previous structural refresh retained all 2,404 rules and
 27,172 identifier edits, comparing 150,387 bindings and 388 override edges.
 
 The existing drawing probe retains its previous nine-slice and pixel traces.
@@ -54,7 +54,32 @@ smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
 
-## Current scoped-tail cleanup
+## Current socket/task naming
+
+This naming pass adds 114 guarded identities: three classes, 24 fields,
+11 methods, 29 parameters and 47 locals. It preserves all 2,404 prior rules,
+the raw input and generator pins. The export applies 27,837 identifier edits
+and preserves all 150,387 bindings and 388 override relationships.
+
+`BufferedSocket` replaces `ba`, `PlatformTask` replaces `cb`, and
+`PlatformTaskDispatcher` replaces `d`. Socket reads, enqueue, shutdown and
+failure checks now have distinct API names; stream, ring, task and exception
+roles are named. Every BufferedSocket parameter and nonselector local is named.
+`Runnable.run`, `finalize`, numeric guards, the live routing selector and
+original diagnostic string literals retain their identities/behavior.
+
+The existing result-helper probe adds 308 cases with independent byte/state
+and effect checks: constructor configuration with fake sockets, synchronous
+reads and partial failures, pending write failure consumption, lazy buffer
+allocation, enqueue wrap/reserve limits, and deterministic writer drain with
+write/flush/close failures. Native bytecode, raw Java and readable Java match
+`ed8f7d5f5438f4fb39cb3bceca82a861d01f4e08502ca73ba7af8ca475b6292b`.
+The previous 84 shutdown, 140 cache and 13,927 helper cases remain unchanged.
+Dispatcher service execution, normal open-writer waiting/concurrency, browser
+navigation and actual network/device I/O remain unverified. Static helpers on
+this owner are named from source evidence separately from its socket role.
+
+## Previous scoped-tail cleanup
 
 The decompiler coalesces terminal work inside existing plain blocks, removing
 189 lines across seven files. Each block retains its braces and declaration
@@ -149,7 +174,7 @@ characters after shorter writes. Result probes cover 27 scenarios/26,043 ticks,
 120 selector cases, 4,801 PCM factory cases, 9,000 bounds checks and six music
 returns. The same result-helper probe also covers 140 cache-write cases with
 independent file-byte, offset and guard checks, plus 84 controlled shutdown
-cases. Native, raw and readable traces
+and 308 controlled socket I/O cases. Native, raw and readable traces
 match within those controlled scopes.
 The gameplay probe checks 144 contact cases across kinds 0/1/2, equality keys,
 force flags and client guards; 32 neighbor removals; two forced neighborhood
@@ -417,6 +442,6 @@ the same manifest; no JSON snapshots are added.
 | Java source tree | SHA-256 |
 | --- | --- |
 | Raw | `084346454dabfd60bbdcd5e9edfa05ac3786798eee83a6ce673176cfca80e8af` |
-| Readable | `72a371a2fb5f5f247432cbb6a57cdd51a0e3537b0b540ef6f9acef072e629b6b` |
+| Readable | `2ba5683f2e76d59cfc517bbe5e76764b9410de42e99b9de919f0d113c3057e3e` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

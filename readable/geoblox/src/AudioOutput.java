@@ -27,7 +27,7 @@ class AudioOutput {
     void e() throws Exception {
     }
 
-    final static AudioOutput a(d param0, java.awt.Component param1, int param2, int param3) {
+    final static AudioOutput a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
         try {
             ce var4 = null;
             Throwable var4_ref = null;
@@ -75,7 +75,7 @@ class AudioOutput {
                     if (field_r == null) {
                       field_r = new kh();
                       field_r.field_b = param0;
-                      param0.a((Runnable) ((Object) field_r), 0, field_d);
+                      param0.startThread((Runnable) ((Object) field_r), 0, field_d);
                     }
                   }
                   if (field_r != null) {

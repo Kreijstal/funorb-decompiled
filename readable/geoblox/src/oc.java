@@ -3,7 +3,7 @@
  */
 final class oc implements dh {
     static Sprite boardSceneRaster;
-    static ba field_e;
+    static BufferedSocket field_e;
     static int field_f;
     static String field_a;
     static int field_c;

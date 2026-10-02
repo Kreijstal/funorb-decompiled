@@ -406,20 +406,20 @@ final class uf implements Runnable {
         }
     }
 
-    uf(d param0) {
-        cb var2 = null;
+    uf(PlatformTaskDispatcher param0) {
+        PlatformTask var2 = null;
         this.field_k = new SecondaryDeque();
         this.field_d = 0;
         this.field_j = false;
         try {
-            var2 = param0.a((Runnable) (this), 0, 5);
-            while (var2.field_a == 0) {
+            var2 = param0.startThread((Runnable) (this), 0, 5);
+            while (var2.status == 0) {
                 bc.a(0, 10L);
             }
-            if (2 == var2.field_a) {
+            if (2 == var2.status) {
                 throw new RuntimeException();
             }
-            this.field_g = (Thread) (var2.field_b);
+            this.field_g = (Thread) (var2.result);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "uf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

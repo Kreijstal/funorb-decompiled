@@ -66,7 +66,7 @@ final class re extends IntrusiveNode {
               }
               break L2;
             }
-            pc.field_p = ba.field_c;
+            pc.field_p = BufferedSocket.keyEventWriteIndex;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

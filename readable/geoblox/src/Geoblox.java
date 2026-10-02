@@ -423,7 +423,7 @@ public final class Geoblox extends wf {
         ji.d(-50);
         uf.a(param0 ^ 74);
         em.a(86);
-        ba.e(21888);
+        BufferedSocket.releaseTransformedVertexScratch(21888);
         IntrusiveDeque.f(51);
         IntrusiveNode.b((byte) -128);
         fi.a(param0 - 63);

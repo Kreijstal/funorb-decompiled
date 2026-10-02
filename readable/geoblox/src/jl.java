@@ -80,14 +80,14 @@ final class jl {
     final static void a(byte param0) {
         if (param0 < -113) {
             if (!(oc.field_e == null)) {
-                oc.field_e.b(-122);
+                oc.field_e.close(-122);
                 oc.field_e = null;
             }
             return;
         }
         avatarShockContactPending = true;
         if (!(oc.field_e == null)) {
-            oc.field_e.b(-122);
+            oc.field_e.close(-122);
             oc.field_e = null;
         }
     }

@@ -5,7 +5,7 @@ import java.io.*;
 
 final class kk extends ji {
     static lh field_w;
-    private ba field_u;
+    private BufferedSocket field_u;
     static int field_t;
     static float field_x;
     static String loginUsernameTooltipText;
@@ -57,7 +57,7 @@ final class kk extends ji {
               this.field_o = this.field_o + var4;
               if (this.field_o > 30000) {
                 try {
-                  this.field_u.b(param0 ^ -43);
+                  this.field_u.close(param0 ^ -43);
                 } catch (java.lang.Exception decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var5_ref_Exception = (Exception) (Object) decompiledCaughtException;
@@ -74,13 +74,13 @@ final class kk extends ji {
               return false;
             }
             try {
-              this.field_u.d(-108);
+              this.field_u.checkWriteFailure(-108);
               var2 = (sd) ((Object) this.field_g.firstForIteration((byte) 121));
               L4: while (var2 != null) {
                 this.field_m.field_f = 0;
                 this.field_m.d((byte) -54, 1);
                 this.field_m.a((byte) -127, var2.field_i);
-                this.field_u.a(100, 0, this.field_m.field_j.length, this.field_m.field_j);
+                this.field_u.enqueueWrite(100, 0, this.field_m.field_j.length, this.field_m.field_j);
                 this.field_e.addLast(-93, var2);
                 var2 = (sd) ((Object) this.field_g.nextForIteration(param0 ^ 41));
               }
@@ -92,12 +92,12 @@ final class kk extends ji {
                 this.field_m.field_f = 0;
                 this.field_m.d((byte) 8, 0);
                 this.field_m.a((byte) -127, var2.field_i);
-                this.field_u.a(100, 0, this.field_m.field_j.length, this.field_m.field_j);
+                this.field_u.enqueueWrite(100, 0, this.field_m.field_j.length, this.field_m.field_j);
                 this.field_c.addLast(112, var2);
                 var2 = (sd) ((Object) this.field_p.nextForIteration(54));
               }
               for (var2_int = 0; var2_int < 100; var2_int++) {
-                var3_int = this.field_u.a((byte) 82);
+                var3_int = this.field_u.available((byte) 82);
                 if (var3_int < 0) {
                   throw new IOException();
                 }
@@ -123,7 +123,7 @@ final class kk extends ji {
                     var6 = var3_int;
                   }
                   L12: {
-                    this.field_u.a(this.field_f.field_A.field_j, (byte) -97, this.field_f.field_A.field_f, var6);
+                    this.field_u.readFully(this.field_f.field_A.field_j, (byte) -97, this.field_f.field_A.field_f, var6);
                     if (this.field_i != 0) {
                       var17 = 0;
                       var7 = var17;
@@ -151,7 +151,7 @@ final class kk extends ji {
                     var5 = var3_int;
                   }
                   L15: {
-                    this.field_u.a(this.field_j.field_j, (byte) -97, this.field_j.field_f, var5);
+                    this.field_u.readFully(this.field_j.field_j, (byte) -97, this.field_j.field_f, var5);
                     if (this.field_i != 0) {
                       for (var6 = 0; var6 < var5; var6++) {
                         this.field_j.field_j[this.field_j.field_f + var6] = (byte)h.a((int) this.field_j.field_j[this.field_j.field_f + var6], (int) this.field_i);
@@ -224,7 +224,7 @@ final class kk extends ji {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref = (IOException) (Object) decompiledCaughtException;
               try {
-                this.field_u.b(-122);
+                this.field_u.close(-122);
               } catch (java.lang.Exception decompiledCaughtParameter2) {
                 decompiledCaughtException = decompiledCaughtParameter2;
                 var3 = (Exception) (Object) decompiledCaughtException;
@@ -354,14 +354,14 @@ final class kk extends ji {
             try {
               if (null != this.field_u) {
                 try {
-                  this.field_u.b(-120);
+                  this.field_u.close(-120);
                 } catch (java.lang.Exception decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var4 = (Exception) (Object) decompiledCaughtException;
                 }
                 this.field_u = null;
               }
-              this.field_u = (ba) (param0);
+              this.field_u = (BufferedSocket) (param0);
               this.b((byte) -113);
               this.a(param1, param2);
               this.field_j.field_f = 0;
@@ -387,12 +387,12 @@ final class kk extends ji {
                       this.field_m.d((byte) -62, 4);
                       this.field_m.d((byte) 122, (int) this.field_i);
                       this.field_m.c((byte) 95, 0);
-                      this.field_u.a(100, 0, this.field_m.field_j.length, this.field_m.field_j);
+                      this.field_u.enqueueWrite(100, 0, this.field_m.field_j.length, this.field_m.field_j);
                     } catch (java.io.IOException decompiledCaughtParameter1) {
                       decompiledCaughtException = decompiledCaughtParameter1;
                       var4_ref2 = (IOException) (Object) decompiledCaughtException;
                       try {
-                        this.field_u.b(-126);
+                        this.field_u.close(-126);
                       } catch (java.lang.Exception decompiledCaughtParameter2) {
                         decompiledCaughtException = decompiledCaughtParameter2;
                         var5 = (Exception) (Object) decompiledCaughtException;
@@ -437,7 +437,7 @@ final class kk extends ji {
             field_w = (lh) null;
         }
         if (!(this.field_u == null)) {
-            this.field_u.b(-123);
+            this.field_u.close(-123);
         }
     }
 
@@ -454,7 +454,7 @@ final class kk extends ji {
               this.field_m.d((byte) 126, 6);
               this.field_m.b(-12, 3);
               this.field_m.e(0, 28695);
-              this.field_u.a(100, 0, this.field_m.field_j.length, this.field_m.field_j);
+              this.field_u.enqueueWrite(100, 0, this.field_m.field_j.length, this.field_m.field_j);
               if (param0 > -56) {
                 kk.a(-8, (byte) 62);
               }
@@ -462,7 +462,7 @@ final class kk extends ji {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = (IOException) (Object) decompiledCaughtException;
               try {
-                this.field_u.b(-121);
+                this.field_u.close(-121);
               } catch (java.lang.Exception decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 var3 = (Exception) (Object) decompiledCaughtException;
@@ -480,7 +480,7 @@ final class kk extends ji {
 
     final void e(int param0) {
         try {
-            this.field_u.b(param0 ^ -106);
+            this.field_u.close(param0 ^ -106);
         } catch (Exception exception) {
         }
         if (param0 != 20) {
@@ -522,7 +522,7 @@ final class kk extends ji {
               }
               ((qc) (Object) stackIn_6_0).d((byte) stackIn_6_1, stackIn_6_2);
               this.field_m.a((byte) -127, 0L);
-              this.field_u.a(100, 0, this.field_m.field_j.length, this.field_m.field_j);
+              this.field_u.enqueueWrite(100, 0, this.field_m.field_j.length, this.field_m.field_j);
               if (param0) {
                 this.a(false, false);
               }
@@ -530,7 +530,7 @@ final class kk extends ji {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = (IOException) (Object) decompiledCaughtException;
               try {
-                this.field_u.b(-126);
+                this.field_u.close(-126);
               } catch (java.lang.Exception decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 var4 = (Exception) (Object) decompiledCaughtException;

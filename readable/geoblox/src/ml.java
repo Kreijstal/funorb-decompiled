@@ -3,7 +3,7 @@
  */
 final class ml extends ff {
     static String createSelectAlternativeText;
-    static d field_s;
+    static PlatformTaskDispatcher field_s;
     static pf field_t;
     static int field_r;
     private int field_w;

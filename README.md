@@ -19,6 +19,15 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and retain all 150,387 bindings
 and 388 override relationships.
 
+The current naming pass adds 114 rules on unchanged raw sources and retains all
+2,404 prior names. `BufferedSocket`, `PlatformTask` and `PlatformTaskDispatcher`
+now describe the socket ring writer and asynchronous platform-task queue.
+Every socket parameter/nonselector local is named. The current 2,518 rules
+apply 27,837 identifier edits. An existing probe independently verifies 308
+constructor/read/ring/drain/failure cases against native, raw and readable Java,
+retaining the earlier shutdown/cache/helper traces. Actual network traffic and
+open-writer concurrency remain unverified; no new JSON snapshots are created.
+
 Difficulty and spawning now name the step flags, sprite-variant/category
 bounds, special-kind probability, release interval and queue geometry.
 The previous naming pass added 38 rules. The Boolean-carrier pass removed
@@ -28,8 +37,8 @@ The previous naming pass covered all 23 private static sprite kernels. The
 preceding naming pass added 171 rules and completed every parameter/local name in
 `Sprite`, `ArgbSprite` and `IndexedSprite`, including ARGB rotation, bilinear
 weights, reductions and sprite mutations. All 2,233 prior rules and the raw
-input remained unchanged in that naming pass. The current structural refresh
-preserves every one of the 2,404 rules, applying 27,172 identifier edits. An
+input remained unchanged in that naming pass. The preceding structural refresh
+preserved every one of the 2,404 rules, applying 27,172 identifier edits. An
 expanded existing native drawing probe adds 33,168 transform cases, including
 23,340 independent pixel/geometry oracles, while preserving its previous
 traces. Original shifts, transparency, inherited smooth rotation and RGB copy
@@ -55,7 +64,7 @@ prior snapshots in Git.
 
 ## GeoBlox source refresh
 
-The current refresh shares terminal work inside existing plain blocks, removing
+The preceding structural refresh shares terminal work inside existing plain blocks, removing
 189 lines across seven files. Shutdown in `ba.b(int)` now clears its task once
 after the status/join paths. The close/notification monitor, volatile task wait
 and interruption catch retain their scope; the redundant selector disappears.

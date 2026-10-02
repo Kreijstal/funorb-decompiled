@@ -820,27 +820,62 @@ their completion behavior. The nine remaining selectors route work or transfers
 and still need review. Concurrent cache use, real device behavior and whole-game
 behavior remain outside this probe.
 
-## Socket shutdown continuation
+## Buffered socket and platform tasks
 
-`ba.b(int)` sets `field_f` while holding its own monitor and calls `notifyAll`.
-It waits for a nonzero volatile task status when `field_m` exists, and joins the
-thread payload only for status 1. An InterruptedException from that join is
-swallowed; the interrupted flag is consumed by the live join. Null/wrong-type
-payload failures escape that inner catch and retain the task reference.
-An already-closed socket returns before the notification and task cleanup.
+`BufferedSocket` is the original `ba`; it owns synchronous input and a ring
+buffer drained by `Runnable.run` to its output stream. `PlatformTask` is `cb`,
+and `PlatformTaskDispatcher` is `d`. The dispatcher queues task records under
+its monitor, executes their numeric `taskType`, writes `result`, and publishes
+volatile `status`: 0 pending, 1 success, 2 failure. `next` links its FIFO;
+`input`, `firstIntArgument` and `secondIntArgument` retain their type-specific
+meanings. `startThread(runnable, guard, priority)` queues type 2; the socket
+requests this with guard 0 and priority 3. Other dispatcher bodies still have
+opaque names.
 
-The task reference is now cleared once after the normal/null/failed-status and
-interrupted-join paths. The old selector chose between identical cleanup tails;
-it and the empty test are gone. No join, throwing cast or monitor expression
-moves across a handler boundary. The original volatile wait label is retained.
+| Socket member | Behavior |
+| --- | --- |
+| `available(guard)` | Open input bytes available; zero once closing. Guard <=71 first nulls input. |
+| `readByte(guard)` | Input read for -17422; zero once closing, otherwise -104 for invalid guard. |
+| `readFully(destination, guard, destinationOffset, remainingLength)` | Repeated partial reads; EOFException on zero/negative read. Guard -97 required; closing returns without copying. |
+| `enqueueWrite(guard, sourceOffset, length, source)` | Copies into lazy ring, consumes pending IOException, starts writer task once and notifies. Guard !=100 nulls output after successful copying. |
+| `checkWriteFailure(guard)` | Valid guard <-79 consumes a pending writer IOException unless closing. |
+| `close(guard)` | Requests shutdown, notifies, waits for task status and joins successful writer task. Guards >=-117 first call run. |
 
-The existing result-helper probe checks 84 controlled cases with an independent
-state/interrupt/task oracle: absent and pending tasks, failed statuses,
-terminated and unstarted threads, interrupted live joins, invalid thread
-payloads, already-closed holders and three valid guards below -117. Worker and
-publisher threads are bounded and checked for termination. Constructors are
-bypassed; socket/stream I/O, normal blocking live joins and the guard-triggered
-`run()` path remain outside the probe. Nine other routing selectors remain.
+`writeInsertIndex` advances per copied byte; `writeReadIndex` advances per writer
+segment modulo `bufferCapacity` (default 5000). Enqueue throws when it reaches
+its 100-byte reserve boundary, after copying the boundary byte. Writer catches
+write/flush IOException and sets `writeFailurePending`; it still advances the
+read index after a failed write. A closing writer drains queued bytes before
+closing input, output and socket in that order. An input-close IOException
+skips both later closes but still releases `writeBuffer`. These are preserved
+original behaviors, not repaired transport guarantees.
+
+`closeRequested` is set under the socket holder monitor before `notifyAll`.
+Close waits for nonzero volatile task status, joining the thread result only
+for success. A join InterruptedException is swallowed. Null/wrong-type results
+escape that catch and retain the task; an already-closing holder returns before
+notification/task cleanup. Normal or interrupted completion clears `writerTask`
+once. No join/cast/monitor expression moves across a handler boundary. The
+original wait label and writer's live routing selector remain.
+
+Every socket parameter and nonselector local now has a guarded name, including
+contiguous write offset/length, monitor snapshots, ignored interruptions and
+diagnostic-message carriers. The original `ba.*` message strings are unchanged.
+Unrelated statics keep their owner: key-event queue write index, third auxiliary
+vertex transformed-Y scratch, frame-clock factory and session-clear/reload.
+These roles are supported by keyboard/rendering/timer/browser source evidence.
+
+The existing result-helper probe checks 84 controlled shutdown cases using
+independent state/interrupt/task/monitor oracles, plus 308 controlled socket I/O
+cases using independent byte/configuration/effect oracles. The latter cover two
+fake-socket constructor overloads, available/read-byte guards, partial/zero/
+failing reads, pending errors, lazy allocation, ring wrap/reserve failure and
+preclosed writer drain/write/flush/close failure order. Worker/publisher threads
+in shutdown fixtures are bounded and checked for termination. The writer-drain
+fixtures run synchronously without platform services. Native bytecode, raw and
+readable traces match. Normal open-writer blocking/concurrency, real sockets,
+dispatcher services, browser navigation, guard-triggered run and whole-game
+behavior remain unverified. Nine routing selectors remain across the game.
 
 ## Sequential early-exit guards
 

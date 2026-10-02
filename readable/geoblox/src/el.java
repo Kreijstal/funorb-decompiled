@@ -843,12 +843,12 @@ class el extends IntrusiveNode {
               if (param0 != 30000) {
                 el.b(-45, -75);
               }
-              var2_int = oc.field_e.a((byte) 110);
+              var2_int = oc.field_e.available((byte) 110);
               if (var2_int > 0) {
                 if (-eh.field_d.field_f + param1 < var2_int) {
                   var2_int = param1 - eh.field_d.field_f;
                 }
-                oc.field_e.a(eh.field_d.field_j, (byte) -97, eh.field_d.field_f, var2_int);
+                oc.field_e.readFully(eh.field_d.field_j, (byte) -97, eh.field_d.field_f, var2_int);
                 kh.field_e = oa.a(-12520);
                 eh.field_d.field_f = eh.field_d.field_f + var2_int;
                 if (param1 > eh.field_d.field_f) {

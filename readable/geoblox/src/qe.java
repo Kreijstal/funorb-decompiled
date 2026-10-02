@@ -6,7 +6,7 @@ final class qe {
     static int[] field_c;
     static int field_a;
 
-    final static java.awt.Frame a(int param0, int param1, int param2, int param3, d param4, int param5) {
+    final static java.awt.Frame a(int param0, int param1, int param2, int param3, PlatformTaskDispatcher param4, int param5) {
         int var8 = 0;
         Object stackIn_7_0 = null;
         Object stackIn_35_0 = null;
@@ -23,7 +23,7 @@ final class qe {
         java.awt.Frame var7 = null;
         int var9 = 0;
         rj[] var10 = null;
-        cb var11 = null;
+        PlatformTask var11 = null;
         var9 = Geoblox.field_C;
         try {
           if (!param4.b(-26098)) {
@@ -67,14 +67,14 @@ final class qe {
               }
             }
             var11 = param4.a(param2, param1 ^ 1743550127, param5, param0, param3);
-            L5: while (var11.field_a == 0) {
+            L5: while (var11.status == 0) {
               bc.a(0, 10L);
             }
-            var7 = (java.awt.Frame) (var11.field_b);
+            var7 = (java.awt.Frame) (var11.result);
             if (var7 == null) {
               return null;
             }
-            if (var11.field_a != 2) {
+            if (var11.status != 2) {
               stackIn_37_0 = (java.awt.Frame) (var7);
               return stackIn_37_0;
             }
@@ -136,8 +136,8 @@ final class qe {
     final static void a(rh param0, rh param1, int param2) {
         try {
             if (param2 > -66) {
-                d var4 = (d) null;
-                qe.a(91, -118, 58, -45, (d) null, -79);
+                PlatformTaskDispatcher var4 = (PlatformTaskDispatcher) null;
+                qe.a(91, -118, 58, -45, (PlatformTaskDispatcher) null, -79);
             }
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "qe.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

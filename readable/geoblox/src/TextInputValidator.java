@@ -75,7 +75,7 @@ abstract class TextInputValidator extends ib implements ga {
         return false;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, d param5, String param6, int param7, int param8) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, PlatformTaskDispatcher param5, String param6, int param7, int param8) {
         try {
             ag.field_l = param7;
             bm.field_u = param3;
@@ -183,7 +183,7 @@ abstract class TextInputValidator extends ib implements ga {
             return;
           }
           var4 = (String) null;
-          TextInputValidator.a(-94, -21, 56, -5, 62, (d) null, (String) null, -54, -101);
+          TextInputValidator.a(-94, -21, 56, -5, 62, (PlatformTaskDispatcher) null, (String) null, -54, -101);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

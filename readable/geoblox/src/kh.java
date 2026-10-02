@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kh implements Runnable {
-    d field_b;
+    PlatformTaskDispatcher field_b;
     static Sprite[] screenTitleSprites;
     volatile AudioOutput[] field_g;
     static String field_a;

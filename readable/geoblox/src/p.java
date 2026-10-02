@@ -162,7 +162,7 @@ final class p extends IntrusiveNode {
                                       var25 = param2.field_p[var23];
                                       var26 = param2.field_b[var23];
                                       qe.field_c[var23] = (var25 * var15 + (var12 * var24 + var26 * var18) >> 16) + var9;
-                                      ba.field_h[var23] = var10 + (var24 * var13 + (var16 * var25 + var19 * var26) >> 16);
+                                      BufferedSocket.thirdVertexTransformedY[var23] = var10 + (var24 * var13 + (var16 * var25 + var19 * var26) >> 16);
                                       hg.field_c[var23] = var11 + (var26 * var20 + var25 * var17 + var14 * var24 >> 16);
                                       var23++;
                                       if (var30 != 0) {
