@@ -39,7 +39,7 @@ final class je extends IntrusiveNode {
 
     final static ResourceArchive a(int param0, boolean param1, boolean param2, boolean param3, byte param4) {
         int var5 = 55 / ((param4 + 65) / 46);
-        return IntKeyLookup.a(-128, param0, param2, !param1 ? 0 : 1, param3, false);
+        return IntKeyLookup.createResourceArchive(-128, param0, param2, !param1 ? 0 : 1, param3, false);
     }
 
     final static void a(byte param0, java.applet.Applet param1) {

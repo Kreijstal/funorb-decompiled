@@ -45,7 +45,7 @@ final class g extends TextInputValidator {
             return (String) ((Object) stackIn_2_0);
           }
           var5 = var4;
-          if (em.a(var5, guard - 344)) {
+          if (ArchiveCatalog.a(var5, guard - 344)) {
             stackIn_6_0 = ArchiveNetworkClient.createPasswordLengthAlertText;
             return stackIn_6_0;
           }

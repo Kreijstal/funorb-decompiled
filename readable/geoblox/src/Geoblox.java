@@ -374,7 +374,7 @@ public final class Geoblox extends wf {
         GameplaySession.i(-17199);
         ArchiveNetworkClient.d(-50);
         DiskCacheWorker.a(param0 ^ 74);
-        em.a(86);
+        ArchiveCatalog.a(86);
         BufferedSocket.releaseTransformedVertexScratch(21888);
         IntrusiveDeque.f(51);
         IntrusiveNode.b((byte) -128);
@@ -979,11 +979,11 @@ public final class Geoblox extends wf {
             ih.b(-105);
         }
         ll.gameGraphicsArchive = je.a(1, true, param0, true, (byte) -111);
-        wj.field_F = SocketArchiveNetworkClient.a(2, (byte) -62);
-        ah.field_c = SocketArchiveNetworkClient.a(3, (byte) -62);
-        cd.field_m = SocketArchiveNetworkClient.a(4, (byte) -62);
-        fe.field_a = SocketArchiveNetworkClient.a(5, (byte) -62);
-        ii.fontMetricsArchive = SocketArchiveNetworkClient.a(6, (byte) -62);
+        wj.field_F = SocketArchiveNetworkClient.createResourceArchive(2, (byte) -62);
+        ah.field_c = SocketArchiveNetworkClient.createResourceArchive(3, (byte) -62);
+        cd.field_m = SocketArchiveNetworkClient.createResourceArchive(4, (byte) -62);
+        fe.field_a = SocketArchiveNetworkClient.createResourceArchive(5, (byte) -62);
+        ii.fontMetricsArchive = SocketArchiveNetworkClient.createResourceArchive(6, (byte) -62);
         qe.a(ki.basicUiGraphicsArchive, re.field_i, -84);
     }
 

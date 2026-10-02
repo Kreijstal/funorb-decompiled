@@ -7,7 +7,7 @@ final class ij extends oe implements pl {
     private hk field_bb;
     static String menuText;
     static int field_cb;
-    static int field_W;
+    static int alternateArchivePort;
     static String createPasswordTooltipText;
 
     private final hk a(String param0, byte param1, bb param2) {
@@ -151,7 +151,7 @@ final class ij extends oe implements pl {
           if (param1 == -20) {
             return;
           }
-          field_W = -95;
+          alternateArchivePort = -95;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

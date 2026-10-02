@@ -4,14 +4,14 @@
 final class cl {
     static java.security.SecureRandom field_e;
     static String continueText;
-    static DiskCacheWorker field_c;
+    static DiskCacheWorker archiveDiskWorker;
     static int field_a;
     static Sprite field_b;
 
     public static void a(int param0) {
         continueText = null;
         field_e = null;
-        field_c = null;
+        archiveDiskWorker = null;
         if (param0 != -9474) {
             cl.a(62);
             field_b = null;

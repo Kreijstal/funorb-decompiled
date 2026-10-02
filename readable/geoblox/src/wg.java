@@ -10,7 +10,7 @@ final class wg implements Runnable {
     private int field_l;
     static int field_j;
     private ByteArrayBuffer field_n;
-    static ArchiveNetworkClient field_i;
+    static ArchiveNetworkClient archiveNetworkClient;
     static int field_m;
     static ck field_d;
     private DataInputStream field_c;
@@ -58,7 +58,7 @@ final class wg implements Runnable {
 
     public static void c(byte param0) {
         int var1 = 26 / ((param0 - 45) / 32);
-        field_i = null;
+        archiveNetworkClient = null;
         field_d = null;
     }
 

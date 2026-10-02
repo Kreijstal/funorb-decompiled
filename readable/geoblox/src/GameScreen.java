@@ -184,7 +184,7 @@ final class GameScreen extends MenuScreen {
                       }
                     }
                     this.field_C = false;
-                    em.b(255);
+                    ArchiveCatalog.b(255);
                     this.pointerInteractionActive = true;
                     if (var4 == 0) {
                       break L0;
@@ -1313,7 +1313,7 @@ final class GameScreen extends MenuScreen {
           if (this.field_C) {
             if (vl.field_n != null) {
               if (this.activeTicks > 1500) {
-                em.b(255);
+                ArchiveCatalog.b(255);
                 this.field_C = false;
               }
             }
@@ -1512,7 +1512,7 @@ final class GameScreen extends MenuScreen {
                           }
                         }
                         this.field_C = false;
-                        em.b(255);
+                        ArchiveCatalog.b(255);
                         this.pointerInteractionActive = true;
                         if (var3 == 0) {
                           break L21;
@@ -2268,7 +2268,7 @@ final class GameScreen extends MenuScreen {
                                     if (vl.field_n == null) {
                                       this.field_C = true;
                                     }
-                                    if (!em.b(255)) {
+                                    if (!ArchiveCatalog.b(255)) {
                                       if (og.field_n > 0) {
                                         if (sa.a(MenuScreen.field_i, (byte) 37)) {
                                           f.i((byte) -128);

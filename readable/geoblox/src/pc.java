@@ -18,7 +18,7 @@ final class pc extends IntrusiveNode {
     int field_m;
     int field_t;
     int field_h;
-    static int field_C;
+    static int archiveLanguageId;
     int field_B;
     int field_r;
     int field_o;
@@ -59,7 +59,7 @@ final class pc extends IntrusiveNode {
 
     final static void a(int param0, boolean param1) {
         if (param1) {
-            field_C = 99;
+            archiveLanguageId = 99;
             fe.field_d = param0;
             return;
         }

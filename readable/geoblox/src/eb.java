@@ -9,7 +9,7 @@ final class eb {
     String field_e;
     static String field_f;
     private int field_d;
-    static long field_b;
+    static long archiveHandshakeDeadlineMillis;
     static int field_i;
     private int field_h;
 
@@ -38,7 +38,7 @@ final class eb {
         if (param0 <= -68) {
             return;
         }
-        eb.a(-101, -31);
+        eb.handleArchiveHandshakeFailure(-101, -31);
     }
 
     final boolean a(boolean param0) {
@@ -83,146 +83,146 @@ final class eb {
         return true;
     }
 
-    final static int a(int param0, int param1) {
-        int var3 = Geoblox.field_C;
-        gj.field_s = null;
-        qh.field_J = 0;
-        li.field_a = null;
-        int var2 = vg.field_a;
-        vg.field_a = ij.field_W;
-        ij.field_W = var2;
-        if (param0 == 51) {
-            wg.field_i.failureCode = 2;
-            wg.field_i.failureCount = wg.field_i.failureCount + 1;
-            if (wg.field_i.failureCount < 2) {
-                if (wg.field_i.failureCount >= 2 && 50 == param0) {
+    final static int handleArchiveHandshakeFailure(int replyCode, int methodGuard) {
+        int unusedClientGuardSnapshot = Geoblox.field_C;
+        gj.archiveConnectTask = null;
+        qh.archiveHandshakeStage = 0;
+        li.archiveHandshakeSocket = null;
+        int previousArchivePort = vg.archivePort;
+        vg.archivePort = ij.alternateArchivePort;
+        ij.alternateArchivePort = previousArchivePort;
+        if (replyCode == 51) {
+            wg.archiveNetworkClient.failureCode = 2;
+            wg.archiveNetworkClient.failureCount = wg.archiveNetworkClient.failureCount + 1;
+            if (wg.archiveNetworkClient.failureCount < 2) {
+                if (wg.archiveNetworkClient.failureCount >= 2 && 50 == replyCode) {
                     return 5;
                 }
-                if (param1 != 28625) {
+                if (methodGuard != 28625) {
                     field_i = -67;
-                    if (!(wg.field_i.failureCount < 4)) {
+                    if (!(wg.archiveNetworkClient.failureCount < 4)) {
                         return 1;
                     }
                     return -1;
                 }
-                if (!(wg.field_i.failureCount < 4)) {
+                if (!(wg.archiveNetworkClient.failureCount < 4)) {
                     return 1;
                 }
                 return -1;
             }
-            if (!(param0 != 51)) {
+            if (!(replyCode != 51)) {
                 return 2;
             }
-            if (wg.field_i.failureCount < 2) {
-                if (param1 != 28625) {
+            if (wg.archiveNetworkClient.failureCount < 2) {
+                if (methodGuard != 28625) {
                     field_i = -67;
-                    if (!(wg.field_i.failureCount < 4)) {
+                    if (!(wg.archiveNetworkClient.failureCount < 4)) {
                         return 1;
                     }
                     return -1;
                 }
-                if (!(wg.field_i.failureCount < 4)) {
+                if (!(wg.archiveNetworkClient.failureCount < 4)) {
                     return 1;
                 }
                 return -1;
             }
-            if (50 == param0) {
+            if (50 == replyCode) {
                 return 5;
             }
-            if (param1 != 28625) {
+            if (methodGuard != 28625) {
                 field_i = -67;
-                if (!(wg.field_i.failureCount < 4)) {
+                if (!(wg.archiveNetworkClient.failureCount < 4)) {
                     return 1;
                 }
                 return -1;
             }
-            if (!(wg.field_i.failureCount < 4)) {
+            if (!(wg.archiveNetworkClient.failureCount < 4)) {
                 return 1;
             }
             return -1;
         }
-        if (50 != param0) {
-            wg.field_i.failureCode = 1;
-            wg.field_i.failureCount = wg.field_i.failureCount + 1;
-            if (wg.field_i.failureCount >= 2) {
-                if (param0 == 51) {
+        if (50 != replyCode) {
+            wg.archiveNetworkClient.failureCode = 1;
+            wg.archiveNetworkClient.failureCount = wg.archiveNetworkClient.failureCount + 1;
+            if (wg.archiveNetworkClient.failureCount >= 2) {
+                if (replyCode == 51) {
                     return 2;
                 }
-                if (wg.field_i.failureCount >= 2 && 50 == param0) {
+                if (wg.archiveNetworkClient.failureCount >= 2 && 50 == replyCode) {
                     return 5;
                 }
-                if (param1 != 28625) {
+                if (methodGuard != 28625) {
                     field_i = -67;
-                    if (!(wg.field_i.failureCount < 4)) {
+                    if (!(wg.archiveNetworkClient.failureCount < 4)) {
                         return 1;
                     }
                     return -1;
                 }
-                if (!(wg.field_i.failureCount < 4)) {
+                if (!(wg.archiveNetworkClient.failureCount < 4)) {
                     return 1;
                 }
                 return -1;
             }
-            if (wg.field_i.failureCount >= 2 && 50 == param0) {
+            if (wg.archiveNetworkClient.failureCount >= 2 && 50 == replyCode) {
                 return 5;
             }
-            if (param1 != 28625) {
+            if (methodGuard != 28625) {
                 field_i = -67;
-                if (!(wg.field_i.failureCount < 4)) {
+                if (!(wg.archiveNetworkClient.failureCount < 4)) {
                     return 1;
                 }
                 return -1;
             }
-            if (!(wg.field_i.failureCount < 4)) {
+            if (!(wg.archiveNetworkClient.failureCount < 4)) {
                 return 1;
             }
             return -1;
         }
-        wg.field_i.failureCode = 5;
-        wg.field_i.failureCount = wg.field_i.failureCount + 1;
-        if (wg.field_i.failureCount >= 2) {
-            if (param0 == 51) {
+        wg.archiveNetworkClient.failureCode = 5;
+        wg.archiveNetworkClient.failureCount = wg.archiveNetworkClient.failureCount + 1;
+        if (wg.archiveNetworkClient.failureCount >= 2) {
+            if (replyCode == 51) {
                 return 2;
             }
-            if (wg.field_i.failureCount < 2) {
-                if (param1 != 28625) {
+            if (wg.archiveNetworkClient.failureCount < 2) {
+                if (methodGuard != 28625) {
                     field_i = -67;
-                    if (!(wg.field_i.failureCount < 4)) {
+                    if (!(wg.archiveNetworkClient.failureCount < 4)) {
                         return 1;
                     }
                     return -1;
                 }
-                if (!(wg.field_i.failureCount < 4)) {
+                if (!(wg.archiveNetworkClient.failureCount < 4)) {
                     return 1;
                 }
                 return -1;
             }
-            if (50 == param0) {
+            if (50 == replyCode) {
                 return 5;
             }
-            if (param1 != 28625) {
+            if (methodGuard != 28625) {
                 field_i = -67;
-                if (!(wg.field_i.failureCount < 4)) {
+                if (!(wg.archiveNetworkClient.failureCount < 4)) {
                     return 1;
                 }
                 return -1;
             }
-            if (!(wg.field_i.failureCount < 4)) {
+            if (!(wg.archiveNetworkClient.failureCount < 4)) {
                 return 1;
             }
             return -1;
         }
-        if (wg.field_i.failureCount >= 2 && 50 == param0) {
+        if (wg.archiveNetworkClient.failureCount >= 2 && 50 == replyCode) {
             return 5;
         }
-        if (param1 != 28625) {
+        if (methodGuard != 28625) {
             field_i = -67;
-            if (!(wg.field_i.failureCount < 4)) {
+            if (!(wg.archiveNetworkClient.failureCount < 4)) {
                 return 1;
             }
             return -1;
         }
-        if (!(wg.field_i.failureCount < 4)) {
+        if (!(wg.archiveNetworkClient.failureCount < 4)) {
             return 1;
         }
         return -1;

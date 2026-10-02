@@ -20,7 +20,7 @@ final class ArchiveIndex {
     private int[] groupNameHashes;
     IntKeyLookup groupNameLookup;
     static int field_s;
-    static int field_u;
+    static int archiveServerNumber;
     static nf[] field_l;
     int[] fileCounts;
 

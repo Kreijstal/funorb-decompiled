@@ -3,7 +3,7 @@
  */
 final class vg {
     static String field_b;
-    static int field_a;
+    static int archivePort;
     static rl field_i;
     private int field_h;
     static String pleaseWaitText;

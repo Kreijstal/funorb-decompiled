@@ -3,7 +3,7 @@
  */
 final class ag extends TextInputValidator {
     private static long[] field_m;
-    static int field_l;
+    static int archiveGameCrc;
     static boolean[] field_j;
     static int availableSpriteVariantCount;
     static int field_i;
@@ -18,7 +18,7 @@ final class ag extends TextInputValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           if (guard != 422) {
-            field_l = -21;
+            archiveGameCrc = -21;
           }
           if (this.validationStateForText(-257, candidateText) != si.field_m) {
             stackIn_6_0 = da.createEmailValidText;
@@ -219,7 +219,7 @@ final class ag extends TextInputValidator {
         try {
             rd.a(-119, param1);
             if (param0 != 12607) {
-                field_l = 32;
+                archiveGameCrc = 32;
             }
             fa.a(rj.loggingInText, 480, false);
         } catch (RuntimeException runtimeException) {

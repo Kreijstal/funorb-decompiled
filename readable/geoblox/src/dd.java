@@ -87,7 +87,7 @@ abstract class dd extends ee {
           if (ra.a(18725, param0)) {
             return false;
           }
-          if (em.a(param0, param2 + 25409)) {
+          if (ArchiveCatalog.a(param0, param2 + 25409)) {
             return false;
           }
           if (param1.length() == 0) {

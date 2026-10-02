@@ -10,7 +10,7 @@ final class qh extends ee implements pe, pl, ta {
     private hc field_H;
     private hc field_M;
     private hc field_I;
-    static int field_J;
+    static int archiveHandshakeStage;
     private vf field_E;
     static Sprite[] introGeometryFrames;
     private hk field_D;
@@ -203,7 +203,7 @@ final class qh extends ee implements pe, pl, ta {
             }
             return new mb(al.b(0), rl.n(-1071908447));
         }
-        field_J = 84;
+        archiveHandshakeStage = 84;
         if (var1 != null && var1.indexOf('@') >= 0) {
             var1 = "";
         }
@@ -301,7 +301,7 @@ final class qh extends ee implements pe, pl, ta {
 
     private final String c(boolean param0) {
         if (param0) {
-            field_J = 75;
+            archiveHandshakeStage = 75;
             return "</col></u>";
         }
         return "</col></u>";

@@ -6,7 +6,7 @@ abstract class ib implements dg {
     static String field_d;
     static boolean gameAssetsInitialized;
     static int field_c;
-    static int field_e;
+    static int archiveLoadStatus;
 
     final static void a(int param0, int[] param1, int param2, int param3, int param4) {
         int[] var9 = null;
@@ -57,7 +57,7 @@ abstract class ib implements dg {
     public final void b(int param0) {
         this.field_b = oa.a(param0 ^ 23811);
         if (param0 != -28133) {
-            field_e = 55;
+            archiveLoadStatus = 55;
         }
     }
 
@@ -78,7 +78,7 @@ abstract class ib implements dg {
 
     public final lh a(byte param0) {
         if (param0 != -105) {
-            field_e = -117;
+            archiveLoadStatus = -117;
             if (this.a(param0 ^ 26579)) {
                 return oj.field_d;
             }

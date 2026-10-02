@@ -271,87 +271,87 @@ final class WhirlpoolHash {
         }
     }
 
-    final static int a(byte param0) {
+    final static int advanceArchiveHandshake(byte methodGuard) {
         try {
-            int stackIn_12_0 = 0;
-            int stackIn_24_0 = 0;
-            int stackIn_27_0 = 0;
-            int stackIn_32_0 = 0;
-            Throwable decompiledCaughtException = null;
-            int var1_int = 0;
-            IOException var1 = null;
-            String var2 = null;
-            ByteArrayBuffer var3 = null;
-            if (wg.field_i.failureCount >= 4) {
-              if (wg.field_i.failureCode == -1) {
+            int connectFailureBeforeReturn = 0;
+            int timeoutStatusBeforeReturn = 0;
+            int replyFailureBeforeReturn = 0;
+            int successBeforeReturn = 0;
+            Throwable caughtHandshakeFailure = null;
+            int replyCode = 0;
+            IOException handshakeIoFailure = null;
+            String unusedGuardTextSnapshot = null;
+            ByteArrayBuffer handshakePacket = null;
+            if (wg.archiveNetworkClient.failureCount >= 4) {
+              if (wg.archiveNetworkClient.failureCode == -1) {
                 return 3;
               }
-              if (wg.field_i.failureCode != -2) {
+              if (wg.archiveNetworkClient.failureCode != -2) {
                 return 1;
               }
               return 4;
             }
             try {
-              if (qh.field_J == 0) {
-                gj.field_s = ph.field_i.requestSocket(vg.field_a, GameplaySession.field_z, false);
-                qh.field_J = qh.field_J + 1;
+              if (qh.archiveHandshakeStage == 0) {
+                gj.archiveConnectTask = ph.archiveTaskDispatcher.requestSocket(vg.archivePort, GameplaySession.archiveHost, false);
+                qh.archiveHandshakeStage = qh.archiveHandshakeStage + 1;
               }
-              if (qh.field_J == 1) {
-                if (gj.field_s.status == 2) {
-                  stackIn_12_0 = eb.a(-1, 28625);
-                  return stackIn_12_0;
+              if (qh.archiveHandshakeStage == 1) {
+                if (gj.archiveConnectTask.status == 2) {
+                  connectFailureBeforeReturn = eb.handleArchiveHandshakeFailure(-1, 28625);
+                  return connectFailureBeforeReturn;
                 }
-                if (1 == gj.field_s.status) {
-                  qh.field_J = qh.field_J + 1;
+                if (1 == gj.archiveConnectTask.status) {
+                  qh.archiveHandshakeStage = qh.archiveHandshakeStage + 1;
                 }
               }
-              if (param0 != -74) {
-                var2 = (String) null;
+              if (methodGuard != -74) {
+                unusedGuardTextSnapshot = (String) null;
                 WhirlpoolHash.a((String) null, (byte) -15);
               }
-              if (2 == qh.field_J) {
-                li.field_a = new BufferedSocket((java.net.Socket) (gj.field_s.result), ph.field_i);
-                var3 = new ByteArrayBuffer(13);
-                ke.a(pc.field_C, true, hc.field_T, ArchiveIndex.field_u, var3);
-                var3.writeByte((byte) -54, 15);
-                var3.writeIntBE((byte) 95, ag.field_l);
-                li.field_a.enqueueWrite(100, 0, 13, var3.bytes);
-                qh.field_J = qh.field_J + 1;
-                eb.field_b = 30000L + oa.a(param0 - 12446);
+              if (2 == qh.archiveHandshakeStage) {
+                li.archiveHandshakeSocket = new BufferedSocket((java.net.Socket) (gj.archiveConnectTask.result), ph.archiveTaskDispatcher);
+                handshakePacket = new ByteArrayBuffer(13);
+                ke.writeConnectionHeader(pc.archiveLanguageId, true, hc.archiveClientId, ArchiveIndex.archiveServerNumber, handshakePacket);
+                handshakePacket.writeByte((byte) -54, 15);
+                handshakePacket.writeIntBE((byte) 95, ag.archiveGameCrc);
+                li.archiveHandshakeSocket.enqueueWrite(100, 0, 13, handshakePacket.bytes);
+                qh.archiveHandshakeStage = qh.archiveHandshakeStage + 1;
+                eb.archiveHandshakeDeadlineMillis = 30000L + oa.a(methodGuard - 12446);
               }
-              if (qh.field_J == 3) {
-                if (0 < li.field_a.available((byte) 78)) {
-                  var1_int = li.field_a.readByte(-17422);
-                  if (var1_int != 0) {
-                    stackIn_27_0 = eb.a(var1_int, 28625);
-                    return stackIn_27_0;
+              if (qh.archiveHandshakeStage == 3) {
+                if (0 < li.archiveHandshakeSocket.available((byte) 78)) {
+                  replyCode = li.archiveHandshakeSocket.readByte(-17422);
+                  if (replyCode != 0) {
+                    replyFailureBeforeReturn = eb.handleArchiveHandshakeFailure(replyCode, 28625);
+                    return replyFailureBeforeReturn;
                   }
-                  qh.field_J = qh.field_J + 1;
+                  qh.archiveHandshakeStage = qh.archiveHandshakeStage + 1;
                 } else {
-                  if (oa.a(-12520) > eb.field_b) {
-                    stackIn_24_0 = eb.a(-2, param0 ^ -28569);
-                    return stackIn_24_0;
+                  if (oa.a(-12520) > eb.archiveHandshakeDeadlineMillis) {
+                    timeoutStatusBeforeReturn = eb.handleArchiveHandshakeFailure(-2, methodGuard ^ -28569);
+                    return timeoutStatusBeforeReturn;
                   }
                 }
               }
-              if (4 != qh.field_J) {
+              if (4 != qh.archiveHandshakeStage) {
                 return -1;
               }
-              wg.field_i.attachSocket(li.field_a, false, si.field_c);
-              gj.field_s = null;
-              qh.field_J = 0;
-              li.field_a = null;
-              stackIn_32_0 = 0;
-              return stackIn_32_0;
-            } catch (java.io.IOException decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var1 = (IOException) (Object) decompiledCaughtException;
-              return eb.a(-3, 28625);
+              wg.archiveNetworkClient.attachSocket(li.archiveHandshakeSocket, false, si.archiveUseControlOpcode2);
+              gj.archiveConnectTask = null;
+              qh.archiveHandshakeStage = 0;
+              li.archiveHandshakeSocket = null;
+              successBeforeReturn = 0;
+              return successBeforeReturn;
+            } catch (java.io.IOException handshakeIOException) {
+              caughtHandshakeFailure = handshakeIOException;
+              handshakeIoFailure = (IOException) (Object) caughtHandshakeFailure;
+              return eb.handleArchiveHandshakeFailure(-3, 28625);
             }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+        } catch (RuntimeException | Error uncheckedHandshakeFailure) {
+            throw uncheckedHandshakeFailure;
+        } catch (Throwable checkedHandshakeFailure) {
+            throw new RuntimeException(checkedHandshakeFailure);
         }
     }
 

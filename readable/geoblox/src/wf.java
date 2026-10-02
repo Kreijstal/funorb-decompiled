@@ -48,7 +48,7 @@ abstract class wf extends ch {
           if (hj.field_a != 11) {
             return var2;
           }
-          if (ib.field_e != 0) {
+          if (ib.archiveLoadStatus != 0) {
             return var2;
           }
           gi.b(param0 - 12617);
@@ -114,7 +114,7 @@ abstract class wf extends ch {
         da.a(true, va.field_a);
         if (param0 == -70) {
             ic.a(this.field_s, this.field_k, 5000, param7, this.field_m, param5, va.field_a, this.field_w, 5000, this.field_n, this.field_x, MenuScreen.field_i, 64, this.field_l);
-            TextInputValidator.a(param7, va.field_a, this.field_l, this.field_x, -23949, MenuScreen.field_i, this.field_n, this.field_s, this.field_w);
+            TextInputValidator.initializeArchiveServices(param7, va.field_a, this.field_l, this.field_x, -23949, MenuScreen.field_i, this.field_n, this.field_s, this.field_w);
             rd.b(28);
             vc.field_f = nd.a(param0 + 113);
             sl.a(f.field_kb, 57);
@@ -287,16 +287,16 @@ abstract class wf extends ch {
           }
         }
         L6: {
-          if (ib.field_e != -1) {
-            if (ib.field_e != 0) {
+          if (ib.archiveLoadStatus != -1) {
+            if (ib.archiveLoadStatus != 0) {
               break L6;
             }
           }
-          stackIn_24_0 = (-1 != ib.field_e) ? 0 : 1;
+          stackIn_24_0 = (-1 != ib.archiveLoadStatus) ? 0 : 1;
           var3 = stackIn_24_0;
-          ib.field_e = ma.b(15869);
+          ib.archiveLoadStatus = ma.tickArchiveLoading(15869);
           if (var3 != 0) {
-            if (ib.field_e == 0) {
+            if (ib.archiveLoadStatus == 0) {
               if (11 == hj.field_a) {
                 if (!sb.a(73)) {
                   gi.b(-12618);
@@ -304,23 +304,23 @@ abstract class wf extends ch {
               }
             }
           }
-          if (-1 != ib.field_e) {
-            if (ib.field_e != 0) {
+          if (-1 != ib.archiveLoadStatus) {
+            if (ib.archiveLoadStatus != 0) {
               hi.field_G = 15000L + oa.a(-12520);
             }
           }
         }
-        if (ib.field_e != -1) {
-          if (ib.field_e != 0) {
+        if (ib.archiveLoadStatus != -1) {
+          if (ib.archiveLoadStatus != 0) {
             if (mi.field_C >= 10) {
               if (hj.field_a >= 10) {
                 kd.b((byte) 114);
-                if (ib.field_e != 3) {
-                  if (4 != ib.field_e) {
-                    if (2 == ib.field_e) {
+                if (ib.archiveLoadStatus != 3) {
+                  if (4 != ib.archiveLoadStatus) {
+                    if (2 == ib.archiveLoadStatus) {
                       TextInputValidator.a((byte) 124, 256, DualLinkNode.js5ConnectFullErrorText);
                     } else {
-                      if (ib.field_e != 5) {
+                      if (ib.archiveLoadStatus != 5) {
                         TextInputValidator.a((byte) 124, 256, ki.js5ConnectErrorText);
                       } else {
                         TextInputValidator.a((byte) 124, 5, jg.loginGameUpdatedText);
@@ -335,12 +335,12 @@ abstract class wf extends ch {
                 ii.field_e = true;
               }
             } else {
-              if (ib.field_e != 3) {
-                if (ib.field_e != 4) {
-                  if (2 == ib.field_e) {
+              if (ib.archiveLoadStatus != 3) {
+                if (ib.archiveLoadStatus != 4) {
+                  if (2 == ib.archiveLoadStatus) {
                     this.a((byte) 79, "js5connect_full");
                   } else {
-                    if (ib.field_e != 5) {
+                    if (ib.archiveLoadStatus != 5) {
                       this.a((byte) 79, "js5connect");
                     } else {
                       this.a((byte) 79, "outofdate");
@@ -357,8 +357,8 @@ abstract class wf extends ch {
         }
         L12: {
           L13: {
-            if (ib.field_e != -1) {
-              if (ib.field_e != 0) {
+            if (ib.archiveLoadStatus != -1) {
+              if (ib.archiveLoadStatus != 0) {
                 break L13;
               }
             }
@@ -368,27 +368,27 @@ abstract class wf extends ch {
           }
           if (~hi.field_G >= ~oa.a(param1 - 32180)) {
             ii.field_e = false;
-            if (-1 != ib.field_e) {
-              if (ib.field_e != 0) {
-                ib.field_e = -1;
+            if (-1 != ib.archiveLoadStatus) {
+              if (ib.archiveLoadStatus != 0) {
+                ib.archiveLoadStatus = -1;
                 j.e(-21754);
               }
             }
           }
         }
-        if (ib.field_e == 0) {
+        if (ib.archiveLoadStatus == 0) {
           if (!sb.a(93)) {
             lb.field_a = false;
           }
         }
         if (mi.field_C == 0) {
-          if (qi.b(108)) {
+          if (qi.ensureArchiveCatalogLoaded(108)) {
             mi.field_C = 1;
           }
         }
         if (mi.field_C == 1) {
           if (va.field_a != 0) {
-            dd.field_J = SocketArchiveNetworkClient.a(lk.field_e, (byte) -62);
+            dd.field_J = SocketArchiveNetworkClient.createResourceArchive(lk.field_e, (byte) -62);
           }
           l.field_h = rj.a(ib.field_c, (byte) -18, true, false, 1);
           dc.field_c = rj.a(ArchiveRequest.field_r, (byte) -124, true, false, 1);
@@ -462,7 +462,7 @@ abstract class wf extends ch {
         }
         if (10 == mi.field_C) {
           if (va.field_a != 0) {
-            ak.field_b = SocketArchiveNetworkClient.a(ah.field_a, (byte) -62);
+            ak.field_b = SocketArchiveNetworkClient.createResourceArchive(ah.field_a, (byte) -62);
           }
           mi.field_C = 11;
         }
@@ -593,9 +593,9 @@ abstract class wf extends ch {
               }
             }
             if (var4 == 3) {
-              if (-1 != ib.field_e) {
-                if (ib.field_e != 0) {
-                  ib.field_e = -1;
+              if (-1 != ib.archiveLoadStatus) {
+                if (ib.archiveLoadStatus != 0) {
+                  ib.archiveLoadStatus = -1;
                   j.e(-21754);
                 }
               }

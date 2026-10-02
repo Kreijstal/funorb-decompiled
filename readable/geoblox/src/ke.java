@@ -4,18 +4,18 @@
 final class ke {
     static Sprite[][][] entitySpritesByThemeCategoryAndVariant;
 
-    final static void a(int param0, boolean param1, int param2, int param3, ByteArrayBuffer param4) {
+    final static void writeConnectionHeader(int languageId, boolean methodGuard, int clientId, int serverNumber, ByteArrayBuffer buffer) {
         try {
-            param4.writeByte((byte) 126, 12);
-            param4.writeShortBE(17, 28695);
-            param4.writeShortBE(param2, 28695);
-            if (!param1) {
+            buffer.writeByte((byte) 126, 12);
+            buffer.writeShortBE(17, 28695);
+            buffer.writeShortBE(clientId, 28695);
+            if (!methodGuard) {
                 entitySpritesByThemeCategoryAndVariant = (Sprite[][][]) null;
             }
-            param4.writeShortBE(param3, 28695);
-            param4.writeByte((byte) 124, param0);
-        } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "ke.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+            buffer.writeShortBE(serverNumber, 28695);
+            buffer.writeByte((byte) 124, languageId);
+        } catch (RuntimeException headerWriteFailure) {
+            throw t.a((Throwable) ((Object) headerWriteFailure), "ke.B(" + languageId + ',' + methodGuard + ',' + clientId + ',' + serverNumber + ',' + (buffer != null ? "{...}" : "null") + ')');
         }
     }
 

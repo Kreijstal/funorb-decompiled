@@ -40,51 +40,51 @@ final class IntKeyLookup {
         }
     }
 
-    final static ResourceArchive a(int param0, int param1, boolean param2, int param3, boolean param4, boolean param5) {
+    final static ResourceArchive createResourceArchive(int methodGuard, int archiveId, boolean downloadAllGroups, int fileRetentionPolicy, boolean discardPackedGroups, boolean sweepCompletedRequests) {
         try {
-            Object var6 = null;
-            Object var7 = null;
-            CachedArchiveSource var8 = null;
-            ResourceArchive stackIn_2_0 = null;
-            ResourceArchive stackIn_15_0 = null;
-            Throwable decompiledCaughtException = null;
+            Object indexDiskCacheOrIoFailure = null;
+            Object groupDiskCache = null;
+            CachedArchiveSource archiveSource = null;
+            ResourceArchive guardResultBeforeReturn = null;
+            ResourceArchive archiveBeforeReturn = null;
+            Throwable caughtFactoryFailure = null;
             try {
-              if (param0 > -49) {
-                stackIn_2_0 = (ResourceArchive) null;
-                return stackIn_2_0;
+              if (methodGuard > -49) {
+                guardResultBeforeReturn = (ResourceArchive) null;
+                return guardResultBeforeReturn;
               }
-              var6 = null;
-              if (ph.field_i.cacheDataFile != null) {
-                af.field_d = new sk(ph.field_i.cacheDataFile, 5200, 0);
-                ph.field_i.cacheDataFile = null;
-                var6 = new jh(255, af.field_d, new sk(ph.field_i.masterCacheIndexFile, 12000, 0), 2097152);
+              indexDiskCacheOrIoFailure = null;
+              if (ph.archiveTaskDispatcher.cacheDataFile != null) {
+                af.field_d = new sk(ph.archiveTaskDispatcher.cacheDataFile, 5200, 0);
+                ph.archiveTaskDispatcher.cacheDataFile = null;
+                indexDiskCacheOrIoFailure = new jh(255, af.field_d, new sk(ph.archiveTaskDispatcher.masterCacheIndexFile, 12000, 0), 2097152);
               }
-              var7 = null;
+              groupDiskCache = null;
               if (af.field_d != null) {
                 if (je.field_h == null) {
-                  je.field_h = new sk[ph.field_i.cacheIndexFiles.length];
+                  je.field_h = new sk[ph.archiveTaskDispatcher.cacheIndexFiles.length];
                 }
-                if (je.field_h[param1] == null) {
-                  je.field_h[param1] = new sk(ph.field_i.cacheIndexFiles[param1], 12000, 0);
-                  ph.field_i.cacheIndexFiles[param1] = null;
+                if (je.field_h[archiveId] == null) {
+                  je.field_h[archiveId] = new sk(ph.archiveTaskDispatcher.cacheIndexFiles[archiveId], 12000, 0);
+                  ph.archiveTaskDispatcher.cacheIndexFiles[archiveId] = null;
                 }
-                var7 = new jh(param1, af.field_d, je.field_h[param1], 2097152);
+                groupDiskCache = new jh(archiveId, af.field_d, je.field_h[archiveId], 2097152);
               }
-              var8 = gb.field_b.a(param1, (byte) -9, param5, (jh) (var6), (jh) (var7));
-              if (param2) {
-                var8.requestAllGroups(92);
+              archiveSource = gb.archiveCatalog.getArchiveSource(archiveId, (byte) -9, sweepCompletedRequests, (jh) (indexDiskCacheOrIoFailure), (jh) (groupDiskCache));
+              if (downloadAllGroups) {
+                archiveSource.requestAllGroups(92);
               }
-              stackIn_15_0 = new ResourceArchive(var8, param4, param3);
-              return stackIn_15_0;
-            } catch (java.io.IOException decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var6 = (IOException) (Object) decompiledCaughtException;
-              throw new RuntimeException(((IOException) (var6)).toString());
+              archiveBeforeReturn = new ResourceArchive(archiveSource, discardPackedGroups, fileRetentionPolicy);
+              return archiveBeforeReturn;
+            } catch (java.io.IOException factoryIOException) {
+              caughtFactoryFailure = factoryIOException;
+              indexDiskCacheOrIoFailure = (IOException) (Object) caughtFactoryFailure;
+              throw new RuntimeException(((IOException) (indexDiskCacheOrIoFailure)).toString());
             }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+        } catch (RuntimeException | Error uncheckedFactoryFailure) {
+            throw uncheckedFactoryFailure;
+        } catch (Throwable checkedFactoryFailure) {
+            throw new RuntimeException(checkedFactoryFailure);
         }
     }
 

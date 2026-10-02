@@ -27,7 +27,7 @@ final class s extends ee implements pe, pl {
             tl.field_f[param0] = fc.musicLabelText;
             tl.field_f[10] = bl.achievementsText;
             tl.field_f[11] = tl.previousText;
-            tl.field_f[15] = em.field_a;
+            tl.field_f[15] = ArchiveCatalog.field_a;
             tl.field_f[1] = id.resumeGameText;
             tl.field_f[13] = gj.field_t;
             tl.field_f[3] = ef.instructionsText;

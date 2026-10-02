@@ -74,7 +74,7 @@ final class ma extends IntrusiveNode {
         RuntimeException caughtContactOverlapFailure = null;
         try {
           if (!methodGuard) {
-            ma.b(-91);
+            ma.tickArchiveLoading(-91);
           }
           overlapFound = PixelOverlapProbe.findFirstNonzeroPixelOverlap(SecondaryDeque.contactProbeRaster, 0, 0, vf.spriteScratchRaster, -SecondaryDeque.contactProbeOffsetX + ng.rotatedEntityScreenX - (vf.spriteScratchRaster.fullWidth >> 1), -SecondaryDeque.contactProbeOffsetY - (vf.spriteScratchRaster.fullHeight >> 1) + td.rotatedEntityScreenY);
           return overlapFound;
@@ -92,13 +92,13 @@ final class ma extends IntrusiveNode {
         }
     }
 
-    final static int b(int param0) {
-        gb.field_b.a((byte) -65);
-        if (param0 != 15869) {
+    final static int tickArchiveLoading(int methodGuard) {
+        gb.archiveCatalog.advanceArchiveLoading((byte) -65);
+        if (methodGuard != 15869) {
             return 61;
         }
-        if (!wg.field_i.pollResponses((byte) 95)) {
-            return WhirlpoolHash.a((byte) -74);
+        if (!wg.archiveNetworkClient.pollResponses((byte) 95)) {
+            return WhirlpoolHash.advanceArchiveHandshake((byte) -74);
         }
         return 0;
     }

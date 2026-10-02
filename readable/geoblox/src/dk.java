@@ -139,14 +139,14 @@ abstract class dk {
             IOException var2 = null;
             var3 = Geoblox.field_C;
             try {
-              if (null != wg.field_i) {
-                wg.field_i.closeSocket(-70);
+              if (null != wg.archiveNetworkClient) {
+                wg.archiveNetworkClient.closeSocket(-70);
               }
               if (param0 >= -65) {
                 categoryMatchCandidateCount = 18;
               }
-              if (cl.field_c != null) {
-                cl.field_c.shutdown((byte) 51);
+              if (cl.archiveDiskWorker != null) {
+                cl.archiveDiskWorker.shutdown((byte) 51);
               }
               if (null != af.field_d) {
                 try {

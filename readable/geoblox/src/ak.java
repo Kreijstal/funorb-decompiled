@@ -79,7 +79,7 @@ final class ak {
         try {
           for (var2_int = 0; var2_int < param0.length(); var2_int++) {
             var3 = param0.charAt(var2_int);
-            if (!em.a((char) var3, 97)) {
+            if (!ArchiveCatalog.a((char) var3, 97)) {
               if (!DualLinkNode.a(-58, (char) var3)) {
                 return true;
               }

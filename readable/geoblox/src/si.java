@@ -12,7 +12,7 @@ final class si {
     static String[] field_i;
     Sprite field_l;
     private int field_b;
-    static boolean field_c;
+    static boolean archiveUseControlOpcode2;
     static lh field_m;
     static int field_j;
     static al field_g;
@@ -210,7 +210,7 @@ final class si {
         field_m = null;
         field_g = null;
         if (param0) {
-            field_c = true;
+            archiveUseControlOpcode2 = true;
             field_n = null;
             return;
         }

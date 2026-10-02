@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hc extends dj implements nl {
-    static int field_T;
+    static int archiveClientId;
     private int field_S;
     static int field_R;
     static String goBackText;
@@ -373,7 +373,7 @@ final class hc extends dj implements nl {
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
         if (!param0) {
-          field_T = -8;
+          archiveClientId = -8;
         }
         if (pg.pointerListener == null) {
           return;
@@ -413,7 +413,7 @@ final class hc extends dj implements nl {
         goBackText = null;
         field_K = null;
         if (param0 != -243) {
-            field_T = -90;
+            archiveClientId = -90;
         }
     }
 

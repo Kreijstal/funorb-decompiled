@@ -19,21 +19,27 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and retain all 138,558 remaining bindings
 and 388 override relationships.
 
-The current naming pass adds 134 guarded identities for `ArchiveNetworkClient`,
-`SocketArchiveNetworkClient`, the shared secondary key and direct XOR/sleep
-helpers. Every network-client instance field/API, constructor contract and local
-has a name. Pending/sent priority/background queues, response parsing,
-socket attachment, requeueing and failure state expose their roles while
-retaining the original byte protocol, partial effects and exception paths.
+The current naming pass adds 142 guarded identities for `ArchiveCatalog`,
+archive service initialization, connection headers, handshake stages/retries
+and archive creation. Every catalog instance declaration, constructor contract
+and local has a name. The 72-byte catalog records, digest validation, provider
+memoization, socket handoff and disk-file ownership expose their roles while
+retaining the original guards, partial effects and exception paths. The archive
+client identifier is supplied as 1; applet/cache initialization separately uses 11.
 
-The 5,556 rules apply 46,053 edits. All 303 raw/readable sources compile,
-preserving 138,558 bindings and 388 overrides. All 5,422 previous complete rules
+The 5,698 rules apply 46,692 edits. All 303 raw/readable sources compile,
+preserving 138,558 bindings and 388 overrides. All 5,556 previous complete rules
 and raw source/decompiler pins are unchanged. Binding checks, reproduction and
 byte-exact reversal support the names. Existing native helper/socket/cache/input
-fixtures retain their prior scope without new archive response/reconnect
-protocol coverage. Handshake/storage/compression helpers, static names,
+fixtures retain their prior scope without new catalog/handshake/archive-factory
+execution coverage. Storage/compression helpers, static names,
 large labeled bodies, full assets/gameplay and device performance remain
 unfinished or unverified. One manifest holds current evidence, with Git for history.
+
+Pass 70 named `ArchiveNetworkClient`, `SocketArchiveNetworkClient`, the shared
+secondary key and direct XOR/sleep helpers. Every network-client instance
+field/API, constructor contract and local has a name. Pending/sent queues,
+response parsing, attachment, requeueing and failure state expose their roles.
 
 Pass 69 named `DiskCacheWorker` and the remaining `SecondaryDeque` instance
 locals. Queue operations, synchronous queued-write reuse, thread startup,

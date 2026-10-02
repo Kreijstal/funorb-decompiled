@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 5,556 guarded naming rules: 52 classes, 687 fields,
-507 methods, 1,499 parameters and 2,811 local declarations. Both 303-file corpora
+The current export has 5,698 guarded naming rules: 53 classes, 711 fields,
+518 methods, 1,539 parameters and 2,877 local declarations. Both 303-file corpora
 compile, preserving 138,558 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -54,7 +54,43 @@ smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
 
-## Current archive network client names
+## Current archive catalog and handshake names
+
+Pass 71 adds 142 guarded identities: one class, 24 fields, eleven methods,
+forty parameters and 66 locals. `ArchiveCatalog` names every instance field/API,
+constructor contract and local. Selected initialization, handshake, retry,
+header and archive-factory helpers also have complete parameter/local names.
+Mixed-purpose static helpers retain their existing owners:
+`TextInputValidator.initializeArchiveServices`,
+`WhirlpoolHash.advanceArchiveHandshake` and `IntKeyLookup.createResourceArchive`.
+
+`ensureCatalogLoaded` exposes the count, 72-byte index records, verification
+suffix and Whirlpool comparison. It preserves the byte aliases, signed
+BigInteger path, unchecked first verification byte, cursor movement and
+publication before provider-array allocation. `getArchiveSource` memoizes
+providers by archive ID. `advanceArchiveLoading` retains two separate passes
+over providers, with the original guard effect between them.
+
+Shared handshake state now identifies the connect task, temporary socket,
+deadline, ports, host, client/language/server identifiers and game CRC.
+The fixed bootstrap supplies archiveClientId 1, separately from applet/cache
+initialization's 11. `writeConnectionHeader` names only proven wire operands;
+literal 12/17 and opcode 15 retain their original values without additional
+protocol-version claims. Stage transitions can cascade in one call; retry
+thresholds, port swaps, reference clearing without a new close and wrong-guard
+effects remain. Archive factories preserve cache-file ownership transfers and
+the original provider/cache argument ordering and retention choices.
+
+All 5,556 previous complete rules and source/generator pins stay unchanged.
+The 5,698 rules apply 46,692 identifier edits; both 303-file corpora compile,
+preserving 138,558 bindings and 388 overrides. Reproduction and dictionary
+reversal are byte-exact. Existing native helper/cache/shutdown/socket/dispatcher/
+input traces retain their prior scope; they do not newly execute the catalog,
+handshake or archive factories. Storage/compression, unknown static names,
+large labeled bodies, actual assets/server traffic, complete gameplay and
+phone/FPS/heap behavior remain unfinished or unverified.
+
+## Previous archive network client names
 
 Pass 70 adds 134 guarded identities: two classes, fourteen fields, eighteen
 methods, thirty parameters and seventy locals. `ArchiveNetworkClient` and
@@ -1161,7 +1197,7 @@ its historical proof recorded in the raw provenance. Current source/decompiler
 identity and naming migrations live in the single manifest. `ruleChanges`
 records naming changes; `sourceChange` is recorded when input identity changes.
 The latest structural pass records its source migration in Git. The current
-naming-only pass retains those source pins and records its 134 additions in
+naming-only pass retains those source pins and records its 142 additions in
 `ruleChanges`; every prior guarded rule is retained.
 All six native probe sources and their traces are pinned in
 the same manifest; no JSON snapshots are added.
@@ -1186,6 +1222,6 @@ the same manifest; no JSON snapshots are added.
 | Java source tree | SHA-256 |
 | --- | --- |
 | Raw | `39be3539b43d7acc9540acca49e7b6378cdb233908092706646df4c2cdc6a8fe` |
-| Readable | `c9275d48d911d19f9dcbf3b713b98219139b4a5101ea5866f5cdce67bbe2e632` |
+| Readable | `6a19f22884236a9a23f2ef5dcfbaa7343c8cc8cdbb80e7ad211861f78aa85480` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

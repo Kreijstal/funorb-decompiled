@@ -318,11 +318,11 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
         }
     }
 
-    final static ResourceArchive a(int param0, byte param1) {
-        if (param1 != -62) {
+    final static ResourceArchive createResourceArchive(int archiveId, byte methodGuard) {
+        if (methodGuard != -62) {
             SocketArchiveNetworkClient.i(118);
         }
-        return IntKeyLookup.a(param1 - 10, param0, false, 1, true, false);
+        return IntKeyLookup.createResourceArchive(methodGuard - 10, archiveId, false, 1, true, false);
     }
 
     public SocketArchiveNetworkClient() {
@@ -440,7 +440,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
               this.outboundPacketBuffer.writeShortBE(0, 28695);
               this.socket.enqueueWrite(100, 0, this.outboundPacketBuffer.bytes.length, this.outboundPacketBuffer.bytes);
               if (methodGuard > -56) {
-                SocketArchiveNetworkClient.a(-8, (byte) 62);
+                SocketArchiveNetworkClient.createResourceArchive(-8, (byte) 62);
               }
             } catch (java.io.IOException setupIOException) {
               caughtSetupFailure = setupIOException;

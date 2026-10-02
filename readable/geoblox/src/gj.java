@@ -4,7 +4,7 @@
 final class gj extends fj {
     static int field_u;
     static String field_t;
-    static PlatformTask field_s;
+    static PlatformTask archiveConnectTask;
     private Object field_r;
 
     final static void a(byte param0, int param1, ea param2) {
@@ -117,11 +117,11 @@ final class gj extends fj {
     public static void h(int param0) {
         if (param0 != -1) {
             gj.h(-23);
-            field_s = null;
+            archiveConnectTask = null;
             field_t = null;
             return;
         }
-        field_s = null;
+        archiveConnectTask = null;
         field_t = null;
     }
 

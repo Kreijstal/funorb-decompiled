@@ -692,8 +692,8 @@ the array indices, evidence, override families and remaining shared carriers.
 
 ## Remaining limitations
 
-There are 5,556 explicit guarded rules: 52 classes, 687 fields, 507 method
-declarations, 1,499 parameters and 2,811 locals. This is not full deobfuscation.
+There are 5,698 explicit guarded rules: 53 classes, 711 fields, 518 method
+declarations, 1,539 parameters and 2,877 locals. This is not full deobfuscation.
 Unknown flags, guard arguments and opaque shared helpers still need
 investigation. Current names and source identities live in the single manifest;
 previous naming and structural passes remain in Git. The earlier early-exit migration
@@ -2202,3 +2202,106 @@ their previous scopes; they do not newly validate archive response parsing,
 reconnect traffic or actual server/assets. Handshake/storage/compression,
 unknown static names, large labeled bodies, full gameplay and device/FPS/heap
 behavior remain unfinished or unverified.
+
+## Archive catalog, handshake and creation (pass 71)
+
+`ArchiveCatalog` names `em`. Every instance declaration, constructor contract
+and local is named; unrelated static UI/text helpers stay on this owner.
+The two-argument constructor delegates with null verification operands. The private
+constructor stores its client, worker and optional exponent/modulus, then queues
+priority archive/group 255/255 with zero reserved tail bytes unless capacity is
+full. The fixed source has no caller supplying nonnull verification operands.
+
+| Catalog member | Role |
+| --- | --- |
+| networkClient / diskWorker | Network and disk request services |
+| catalogRequest | Retained network request for the catalog |
+| verificationExponent / verificationModulus | Optional BigInteger transformation operands |
+| catalogBuffer | Verified response bytes and shared mutable cursor |
+| archiveSources | Memoized providers indexed by archive ID |
+
+`ensureCatalogLoaded` returns immediately for an installed catalog. Otherwise
+it queues the request when possible, then checks its guard and volatile pending
+flag. It wraps the completed bytes, sets the cursor to 5, reads an unsigned
+archive count and skips count times 72 bytes. Each record holds a big-endian
+index CRC, big-endian index revision and 64-byte Whirlpool digest.
+
+The remaining suffix is copied into one byte array with explicit aliases.
+When both verification operands exist, the signed BigInteger suffix is raised
+modulo the stored modulus and converted with `toByteArray`; otherwise the raw
+suffix is reused. The resulting array must contain 65 bytes. Bytes 1 through
+64 must match Whirlpool over the count and records starting at offset 5.
+Byte 0 is not checked. The method adds no decompression or header validation.
+It publishes catalogBuffer before allocating archiveSources and retains the
+catalog request and end-position cursor. Allocation failures keep the original
+partial state.
+
+`getArchiveSource` requires the catalog and a valid archive ID. A memoized
+provider returns before guard effects or new cache/options matter. Otherwise
+it seeks to `6 + 72 * archiveId`, reads the record and creates CachedArchiveSource
+with group cache before index cache, then memoizes it. A wrong guard clears
+catalogRequest after CRC/revision reads and before digest copying.
+`advanceArchiveLoading` first calls processRequestedGroups on all existing
+providers, applies its original guard effect, then calls advanceBackgroundLoading
+on all providers. The two loops remain separate.
+
+Shared state now exposes archiveNetworkClient, archiveDiskWorker, archiveCatalog,
+archiveTaskDispatcher, archiveConnectTask, archiveHandshakeSocket,
+archiveHandshakeStage, archiveHandshakeDeadlineMillis, archivePort,
+alternateArchivePort, archiveHost, archiveGameCrc, archiveClientId,
+archiveLanguageId, archiveServerNumber, archiveUseControlOpcode2 and
+archiveLoadStatus. The fixed GeoBlox bootstrap supplies clientId 1. Its
+applet/cache initialization separately uses 11; the wire identifier's name does
+not equate those values or invent a protocol version. The control flag records
+only its proven opcode 2/3 effect.
+
+`TextInputValidator.initializeArchiveServices` assigns CRC, server number, host,
+client/language IDs, active port and dispatcher, retains the guard side effect,
+assigns the alternate port and constructs network client, disk worker and
+catalog in that order. It adds no rollback or state reset.
+`ma.tickArchiveLoading` advances providers before checking its guard, polls
+responses and advances the handshake only when polling returns false.
+
+`WhirlpoolHash.advanceArchiveHandshake` retains these stages; several can
+advance during one call:
+
+| Stage | Action |
+| --- | --- |
+| 0 | Request a socket task for the active host/port; advance to 1 |
+| 1 | Wait for task completion; failure invokes retry handling, success advances to 2 |
+| 2 | Wrap the socket, send 13 bytes, set a 30-second reply deadline; advance to 3 |
+| 3 | Read a reply when available; zero advances to 4, nonzero invokes retry handling |
+| 4 | Attach the socket to the network client, clear temporary task/socket and reset stage |
+
+`ke.writeConnectionHeader` writes byte 12, big-endian short 17, client ID,
+server number and language byte. Its caller adds opcode 15 and the big-endian
+game CRC. The deadline is checked with strict greater-than only when no reply
+byte is available; there is no added connect-task timeout. IOException invokes
+failure handling with -3. Before stage processing, four accumulated failures
+map validation code -1 to status 3, I/O code -2 to status 4 and other codes to 1.
+
+`eb.handleArchiveHandshakeFailure` clears task/stage/socket references without
+adding a socket close, swaps the two ports, then records and increments failure
+state. Reply 51 records code 2 and returns status 2 after two failures; reply 50
+records code 5 and returns status 5 after two. Other failures record code 1,
+returning status 1 after four failures and -1 before the threshold. Original
+duplicated branches and wrong-guard side effects remain. The load-status values
+describe existing caller flow: -1 pending, 0 ready, 1 connection failure,
+2 server-full result, 3 validation failure, 4 I/O failure and 5 out-of-date result.
+
+`IntKeyLookup.createResourceArchive` transfers dispatcher cache-file references
+into buffered wrappers at their original points, builds optional disk caches,
+obtains the memoized provider, optionally requests all groups and constructs
+ResourceArchive with its retention flags. The master index-cache local is
+created only while the shared data file is first wrapped; subsequent calls keep
+the original null local behavior. Partial ownership transfers and checked/
+unchecked exception wrappers remain. `SocketArchiveNetworkClient.createResourceArchive`
+uses its fixed foreground/retention/discard/sweep arguments and original guard.
+
+All 5,556 previous complete rules and raw source/generator pins remain.
+Compilation, binding checks, byte-exact reproduction and reversal support these
+names. Existing native helper/cache/shutdown/socket/dispatcher/input fixtures do
+not newly execute the catalog, handshake or archive factories. Storage and
+compression code, unknown static helpers, large labeled bodies, real server/
+asset traffic, full gameplay and phone/FPS/heap behavior remain unfinished or
+unverified.

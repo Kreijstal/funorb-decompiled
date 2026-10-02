@@ -18,9 +18,9 @@ final class qi extends IntrusiveNode {
         field_i = null;
     }
 
-    final static boolean b(int param0) {
-        int var1 = -46 % ((param0 + 28) / 60);
-        return gb.field_b.b((byte) 126);
+    final static boolean ensureArchiveCatalogLoaded(int methodGuard) {
+        int unusedCatalogGuardRemainder = -46 % ((methodGuard + 28) / 60);
+        return gb.archiveCatalog.ensureCatalogLoaded((byte) 126);
     }
 
     final static boolean d(int param0) {

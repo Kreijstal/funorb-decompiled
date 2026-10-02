@@ -164,7 +164,7 @@ final class w {
                     dc.field_b = param0 ? -2 : -1;
                     kg.field_n = param0 ? -2 : -1;
                     PacketBuffer.field_l = gi.field_d;
-                    ke.a(qe.field_b, true, ok.field_f, mk.field_l, fj.field_q);
+                    ke.writeConnectionHeader(qe.field_b, true, ok.field_f, mk.field_l, fj.field_q);
                     cm.a(param1 ^ -53, -1);
                 } catch (IOException iOException) {
                     PacketBuffer.field_l = qi.field_h;

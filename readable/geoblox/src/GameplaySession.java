@@ -35,7 +35,7 @@ final class GameplaySession {
     static int[] decodedSpriteXOffsets;
     private Geoblox gameApplet;
     private int tutorialStepId;
-    static String field_z;
+    static String archiveHost;
     private boolean showSessionCounters;
     private boolean sceneTransitionInProgress;
     private int pointsPanelFrameIndex;
@@ -1375,7 +1375,7 @@ final class GameplaySession {
 
     public static void i(int param0) {
         decodedSpriteXOffsets = null;
-        field_z = null;
+        archiveHost = null;
         if (param0 != -17199) {
           pointerIdleTicks = 53;
         }

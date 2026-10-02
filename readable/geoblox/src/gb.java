@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gb {
-    static em field_b;
+    static ArchiveCatalog archiveCatalog;
     static int field_f;
     static int field_c;
     static int field_g;
@@ -203,7 +203,7 @@ final class gb {
 
     public static void b(byte param0) {
         int var1 = -66 / ((33 - param0) / 32);
-        field_b = null;
+        archiveCatalog = null;
     }
 
     final static void a(String param0, byte param1) {

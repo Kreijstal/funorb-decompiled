@@ -75,24 +75,24 @@ abstract class TextInputValidator extends ib implements ga {
         return false;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, PlatformTaskDispatcher param5, String param6, int param7, int param8) {
+    final static void initializeArchiveServices(int clientId, int languageId, int primaryPort, int serverNumber, int methodGuard, PlatformTaskDispatcher taskDispatcher, String archiveHost, int gameCrc, int alternatePort) {
         try {
-            ag.field_l = param7;
-            ArchiveIndex.field_u = param3;
-            GameplaySession.field_z = param6;
-            hc.field_T = param0;
-            pc.field_C = param1;
-            vg.field_a = param2;
-            ph.field_i = param5;
-            if (param4 != -23949) {
+            ag.archiveGameCrc = gameCrc;
+            ArchiveIndex.archiveServerNumber = serverNumber;
+            GameplaySession.archiveHost = archiveHost;
+            hc.archiveClientId = clientId;
+            pc.archiveLanguageId = languageId;
+            vg.archivePort = primaryPort;
+            ph.archiveTaskDispatcher = taskDispatcher;
+            if (methodGuard != -23949) {
                 field_f = -0.8279321027589008;
             }
-            ij.field_W = param8;
-            wg.field_i = (ArchiveNetworkClient) ((Object) new SocketArchiveNetworkClient());
-            cl.field_c = new DiskCacheWorker(param5);
-            gb.field_b = new em(wg.field_i, cl.field_c);
-        } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "q.N(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
+            ij.alternateArchivePort = alternatePort;
+            wg.archiveNetworkClient = (ArchiveNetworkClient) ((Object) new SocketArchiveNetworkClient());
+            cl.archiveDiskWorker = new DiskCacheWorker(taskDispatcher);
+            gb.archiveCatalog = new ArchiveCatalog(wg.archiveNetworkClient, cl.archiveDiskWorker);
+        } catch (RuntimeException initializationFailure) {
+            throw t.a((Throwable) ((Object) initializationFailure), "q.N(" + clientId + ',' + languageId + ',' + primaryPort + ',' + serverNumber + ',' + methodGuard + ',' + (taskDispatcher != null ? "{...}" : "null") + ',' + (archiveHost != null ? "{...}" : "null") + ',' + gameCrc + ',' + alternatePort + ')');
         }
     }
 
@@ -173,7 +173,7 @@ abstract class TextInputValidator extends ib implements ga {
             return;
           }
           var4 = (String) null;
-          TextInputValidator.a(-94, -21, 56, -5, 62, (PlatformTaskDispatcher) null, (String) null, -54, -101);
+          TextInputValidator.initializeArchiveServices(-94, -21, 56, -5, 62, (PlatformTaskDispatcher) null, (String) null, -54, -101);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
