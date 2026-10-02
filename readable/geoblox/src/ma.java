@@ -65,38 +65,38 @@ final class ma extends IntrusiveNode {
         }
     }
 
-    final static boolean a(boolean param0, float param1, GameplayEntity param2) {
-        RuntimeException var3 = null;
-        boolean stackIn_3_0 = false;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static boolean contactProbeOverlapsScratchSprite(boolean methodGuard, float diagnosticBoardAngleRadians, GameplayEntity diagnosticEntity) {
+        RuntimeException contactOverlapFailureForContext = null;
+        boolean overlapFound = false;
+        RuntimeException contactOverlapFailureBeforeEntityDescription = null;
+        StringBuilder contactOverlapMessagePrefix = null;
+        RuntimeException contactOverlapFailureAtEntityDescription = null;
+        StringBuilder contactOverlapMessageAtEntityDescription = null;
+        String entityArgumentDescription = null;
+        RuntimeException caughtContactOverlapFailure = null;
         try {
-          if (!param0) {
+          if (!methodGuard) {
             ma.b(-91);
           }
-          stackIn_3_0 = aa.a(SecondaryDeque.contactProbeRaster, 0, 0, vf.spriteScratchRaster, -SecondaryDeque.contactProbeOffsetX + ng.field_G - (vf.spriteScratchRaster.fullWidth >> 1), -SecondaryDeque.contactProbeOffsetY - (vf.spriteScratchRaster.fullHeight >> 1) + td.field_E);
-          return stackIn_3_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var3);
+          overlapFound = PixelOverlapProbe.findFirstNonzeroPixelOverlap(SecondaryDeque.contactProbeRaster, 0, 0, vf.spriteScratchRaster, -SecondaryDeque.contactProbeOffsetX + ng.rotatedEntityScreenX - (vf.spriteScratchRaster.fullWidth >> 1), -SecondaryDeque.contactProbeOffsetY - (vf.spriteScratchRaster.fullHeight >> 1) + td.rotatedEntityScreenY);
+          return overlapFound;
+        } catch (java.lang.RuntimeException contactOverlapFailure) {
+          caughtContactOverlapFailure = contactOverlapFailure;
+          contactOverlapFailureForContext = caughtContactOverlapFailure;
+          contactOverlapFailureBeforeEntityDescription = (RuntimeException) (contactOverlapFailureForContext);
 
-          stackIn_6_1 = new StringBuilder().append("ma.A(").append(param0).append(',').append(param1).append(',');
+          contactOverlapMessagePrefix = new StringBuilder().append("ma.A(").append(methodGuard).append(',').append(diagnosticBoardAngleRadians).append(',');
 
-          if (param2 == null) {
-            stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-            stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-            stackIn_7_2 = "null";
+          if (diagnosticEntity == null) {
+            contactOverlapFailureAtEntityDescription = (RuntimeException) ((Object) contactOverlapFailureBeforeEntityDescription);
+            contactOverlapMessageAtEntityDescription = (StringBuilder) ((Object) contactOverlapMessagePrefix);
+            entityArgumentDescription = "null";
           } else {
-            stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-            stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-            stackIn_7_2 = "{...}";
+            contactOverlapFailureAtEntityDescription = (RuntimeException) ((Object) contactOverlapFailureBeforeEntityDescription);
+            contactOverlapMessageAtEntityDescription = (StringBuilder) ((Object) contactOverlapMessagePrefix);
+            entityArgumentDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(')').toString());
+          throw t.a((Throwable) ((Object) contactOverlapFailureAtEntityDescription), ((StringBuilder) (Object) contactOverlapMessageAtEntityDescription).append(entityArgumentDescription).append(')').toString());
         }
     }
 

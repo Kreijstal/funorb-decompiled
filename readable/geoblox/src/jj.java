@@ -36,7 +36,7 @@ final class jj {
             var6_ref = new gj(param3, param1);
             this.field_f.a(param0, -99, var6_ref);
             if (param2) {
-                jj.b(-85);
+                jj.clearAvatarSteering(-85);
             }
             this.field_e.a(-1, var6_ref);
             ((fj) ((Object) var6_ref)).field_i = 0L;
@@ -83,8 +83,8 @@ final class jj {
         }
     }
 
-    final static void b(int param0) {
-        if (param0 > -96) {
+    final static void clearAvatarSteering(int methodGuard) {
+        if (methodGuard > -96) {
             loginUsernameEmailText = (String) null;
             jk.avatarSteeringDirectionId = 0;
             return;

@@ -4,7 +4,7 @@
 final class ng extends sh {
     static boolean[] field_E;
     private IntrusiveDeque field_C;
-    static int field_G;
+    static int rotatedEntityScreenX;
     static m field_F;
 
     final void f(int param0) {
@@ -61,7 +61,7 @@ final class ng extends sh {
         fj.field_p.b();
         oh.field_a.b();
         if (param0 <= 9) {
-            field_G = -2;
+            rotatedEntityScreenX = -2;
         }
     }
 
@@ -98,7 +98,7 @@ final class ng extends sh {
         if (param0 == -4863) {
             return null;
         }
-        field_G = 111;
+        rotatedEntityScreenX = 111;
         return null;
     }
 

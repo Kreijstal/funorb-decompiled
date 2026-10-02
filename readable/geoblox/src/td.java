@@ -6,7 +6,7 @@ final class td extends hk {
     static od field_I;
     private int field_G;
     static boolean field_H;
-    static int field_E;
+    static int rotatedEntityScreenY;
 
     final static int a(int param0, byte param1) {
         int var2;

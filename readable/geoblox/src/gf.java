@@ -40,24 +40,24 @@ final class gf {
         createPasswordContainsNameAlertText = null;
     }
 
-    final static void a(GameplayEntity param0, int param1, float param2) {
-        float var3_float = 0.0f;
-        float var4 = 0.0f;
+    final static void renderEntityCollisionSprite(GameplayEntity entity, int methodGuard, float boardAngleRadians) {
+        float boardCenterOffsetX = 0.0f;
+        float boardCenterOffsetY = 0.0f;
         try {
-            var3_float = -320.0f + param0.positionX;
-            var4 = param0.positionY - 240.0f;
-            ng.field_G = (int)(0.5 + (Math.cos((double)param2) * (double)var3_float - Math.sin((double)param2) * (double)var4 + 320.0));
-            if (param1 != -1232328029) {
-                java.applet.Applet var5 = (java.applet.Applet) null;
+            boardCenterOffsetX = -320.0f + entity.positionX;
+            boardCenterOffsetY = entity.positionY - 240.0f;
+            ng.rotatedEntityScreenX = (int)(0.5 + (Math.cos((double)boardAngleRadians) * (double)boardCenterOffsetX - Math.sin((double)boardAngleRadians) * (double)boardCenterOffsetY + 320.0));
+            if (methodGuard != -1232328029) {
+                java.applet.Applet nullAppletForInvalidGuard = (java.applet.Applet) null;
                 gf.a((java.applet.Applet) null, 60);
             }
-            td.field_E = (int)(240.0 + (Math.sin((double)param2) * (double)var3_float + (double)var4 * Math.cos((double)param2)) + 0.5);
+            td.rotatedEntityScreenY = (int)(240.0 + (Math.sin((double)boardAngleRadians) * (double)boardCenterOffsetX + (double)boardCenterOffsetY * Math.cos((double)boardAngleRadians)) + 0.5);
             vf.spriteScratchRaster.setAsRasterTarget();
             SoftwareRasterizer.clearFramebuffer();
-            param0.entitySprite.rotateNearest(param0.entitySprite.fullWidth << 3, param0.entitySprite.fullHeight << 3, vf.spriteScratchRaster.fullWidth << 3, vf.spriteScratchRaster.fullHeight << 3, (int)(65535.0 * ((double)(-param2 + param0.spriteAngleRadians) / 6.283185307179586)), 4096);
+            entity.entitySprite.rotateNearest(entity.entitySprite.fullWidth << 3, entity.entitySprite.fullHeight << 3, vf.spriteScratchRaster.fullWidth << 3, vf.spriteScratchRaster.fullHeight << 3, (int)(65535.0 * ((double)(-boardAngleRadians + entity.spriteAngleRadians) / 6.283185307179586)), 4096);
             sh.field_y.a(255);
-        } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "gf.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+        } catch (RuntimeException collisionSpriteRenderFailure) {
+            throw t.a((Throwable) ((Object) collisionSpriteRenderFailure), "gf.F(" + (entity != null ? "{...}" : "null") + ',' + methodGuard + ',' + boardAngleRadians + ')');
         }
     }
 

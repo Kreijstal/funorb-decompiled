@@ -294,7 +294,7 @@ final class GameplayEntity extends DualLinkNode {
         }
         vf.spriteScratchRaster.addOutline(this.entityId + 1);
         SecondaryDeque.contactProbeRaster.setAsRasterTarget();
-        vf.spriteScratchRaster.drawSilhouette(-SecondaryDeque.contactProbeOffsetX - (vf.spriteScratchRaster.fullWidth >> 1) + ng.field_G, -(vf.spriteScratchRaster.fullHeight >> 1) + (td.field_E - SecondaryDeque.contactProbeOffsetY), 1 + this.entityId);
+        vf.spriteScratchRaster.drawSilhouette(-SecondaryDeque.contactProbeOffsetX - (vf.spriteScratchRaster.fullWidth >> 1) + ng.rotatedEntityScreenX, -(vf.spriteScratchRaster.fullHeight >> 1) + (td.rotatedEntityScreenY - SecondaryDeque.contactProbeOffsetY), 1 + this.entityId);
         sh.field_y.a(255);
     }
 

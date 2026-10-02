@@ -43,100 +43,98 @@ final class nb {
         }
     }
 
-    final static void spawnEntityAtPointer(int param0, int pointerX, int categoryId, int pointerY, int variantId, boolean specialKinds) {
-        GameplayEntity var6;
-        double var7;
-        double var9;
-        int var11;
-        int var12;
-        GameplayEntity stackIn_17_0;
-        int stackIn_17_1;
-        float stackIn_17_2;
-        int stackIn_17_3;
-        float stackIn_17_4;
-        GameplayEntity stackIn_18_0 = null;
-        int stackIn_18_1 = 0;
-        float stackIn_18_2 = 0.0f;
-        int stackIn_18_3 = 0;
-        float stackIn_18_4 = 0.0f;
-        int stackIn_18_5 = 0;
-        int stackIn_21_6;
-        float stackIn_21_7;
-        float stackIn_21_8;
-        float stackIn_21_9;
-        GameplayEntity stackIn_23_0 = null;
-        int stackIn_23_1 = 0;
-        float stackIn_23_2 = 0.0f;
-        int stackIn_23_3 = 0;
-        float stackIn_23_4 = 0.0f;
-        int stackIn_23_5 = 0;
-        int stackIn_23_6 = 0;
-        float stackIn_23_7 = 0.0f;
-        float stackIn_23_8 = 0.0f;
-        float stackIn_23_9 = 0.0f;
-        int stackIn_23_10 = 0;
-        if (param0 != -28195) {
+    final static void spawnEntityAtPointer(int methodGuard, int pointerX, int categoryId, int pointerY, int variantId, boolean specialKinds) {
+        GameplayEntity pooledEntity;
+        double pointerCenterOffsetX;
+        double pointerCenterOffsetY;
+        int specialKindSelector;
+        int spriteKindId;
+        GameplayEntity entityBeforeVariantSelection;
+        int motionGuardBeforeVariantSelection;
+        float boardXBeforeVariantSelection;
+        int kindBeforeVariantSelection;
+        float inwardVelocityXBeforeVariantSelection;
+        GameplayEntity entityForCategorySelection = null;
+        int motionGuardForCategorySelection = 0;
+        float boardXForCategorySelection = 0.0f;
+        int kindForCategorySelection = 0;
+        float inwardVelocityXForCategorySelection = 0.0f;
+        int selectedVariantId = 0;
+        int zeroLifetimeTicks;
+        float unusedMotionFloat;
+        float boardYForCategorySelection;
+        float inwardVelocityYForCategorySelection;
+        GameplayEntity entityToInitialize = null;
+        int initializationGuard = 0;
+        float initializationX = 0.0f;
+        int initializationKind = 0;
+        float initializationVelocityX = 0.0f;
+        int initializationVariant = 0;
+        int initializationLifetimeTicks = 0;
+        float unusedInitializationFloat = 0.0f;
+        float initializationY = 0.0f;
+        float initializationVelocityY = 0.0f;
+        int initializationCategory = 0;
+        if (methodGuard != -28195) {
           return;
         }
-        var6 = (GameplayEntity) ((Object) ra.availableEntities.removeLast(1));
-        if (var6 == null) {
+        pooledEntity = (GameplayEntity) ((Object) ra.availableEntities.removeLast(1));
+        if (pooledEntity == null) {
           return;
         }
-        var7 = (double)(-320 + pointerX);
-        var9 = (double)(-240 + pointerY);
-        pointerX = (int)(320.0 + (var7 * Math.cos((double)(-el.gameplaySession.boardAngleRadians)) - var9 * Math.sin((double)(-el.gameplaySession.boardAngleRadians))));
-        pointerY = (int)(Math.sin((double)(-el.gameplaySession.boardAngleRadians)) * var7 + Math.cos((double)(-el.gameplaySession.boardAngleRadians)) * var9 + 240.0);
+        pointerCenterOffsetX = (double)(-320 + pointerX);
+        pointerCenterOffsetY = (double)(-240 + pointerY);
+        pointerX = (int)(320.0 + (pointerCenterOffsetX * Math.cos((double)(-el.gameplaySession.boardAngleRadians)) - pointerCenterOffsetY * Math.sin((double)(-el.gameplaySession.boardAngleRadians))));
+        pointerY = (int)(Math.sin((double)(-el.gameplaySession.boardAngleRadians)) * pointerCenterOffsetX + Math.cos((double)(-el.gameplaySession.boardAngleRadians)) * pointerCenterOffsetY + 240.0);
         if (!specialKinds) {
-          var6.initializeEntityMotion(-75, (float)pointerX, 0, (float)(-pointerX + 320), variantId, 0, 0.0f, (float)pointerY, (float)(-pointerY + 240), categoryId, 0.0f);
+          pooledEntity.initializeEntityMotion(-75, (float)pointerX, 0, (float)(-pointerX + 320), variantId, 0, 0.0f, (float)pointerY, (float)(-pointerY + 240), categoryId, 0.0f);
         } else {
-          var11 = (variantId + categoryId) % 4;
-          var12 = 0;
-          if (var11 == 0) {
-            var12 = 2;
+          specialKindSelector = (variantId + categoryId) % 4;
+          spriteKindId = 0;
+          if (specialKindSelector == 0) {
+            spriteKindId = 2;
           }
-          if (var11 == 1) {
-            var12 = 4;
+          if (specialKindSelector == 1) {
+            spriteKindId = 4;
           }
-          if (var11 == 2) {
-            var12 = 3;
+          if (specialKindSelector == 2) {
+            spriteKindId = 3;
           }
-          if (3 == var11) {
-            var12 = 1;
+          if (3 == specialKindSelector) {
+            spriteKindId = 1;
           }
-          stackIn_17_0 = (GameplayEntity) (var6);
-          stackIn_17_1 = param0 + 28113;
-          stackIn_17_2 = (float)pointerX;
-          stackIn_17_3 = var12;
-          stackIn_17_4 = (float)(320 - pointerX);
-          if (var12 != 2) {
-            stackIn_18_0 = (GameplayEntity) ((Object) stackIn_17_0);
-            stackIn_18_1 = stackIn_17_1;
-            stackIn_18_2 = stackIn_17_2;
-            stackIn_18_3 = stackIn_17_3;
-            stackIn_18_4 = stackIn_17_4;
-            stackIn_18_5 = -1;
+          entityBeforeVariantSelection = (GameplayEntity) (pooledEntity);
+          motionGuardBeforeVariantSelection = methodGuard + 28113;
+          boardXBeforeVariantSelection = (float)pointerX;
+          kindBeforeVariantSelection = spriteKindId;
+          inwardVelocityXBeforeVariantSelection = (float)(320 - pointerX);
+          if (spriteKindId != 2) {
+            entityForCategorySelection = (GameplayEntity) ((Object) entityBeforeVariantSelection);
+            motionGuardForCategorySelection = motionGuardBeforeVariantSelection;
+            boardXForCategorySelection = boardXBeforeVariantSelection;
+            kindForCategorySelection = kindBeforeVariantSelection;
+            inwardVelocityXForCategorySelection = inwardVelocityXBeforeVariantSelection;
+            selectedVariantId = -1;
           } else {
-            stackIn_18_0 = (GameplayEntity) ((Object) stackIn_17_0);
-            stackIn_18_1 = stackIn_17_1;
-            stackIn_18_2 = stackIn_17_2;
-            stackIn_18_3 = stackIn_17_3;
-            stackIn_18_4 = stackIn_17_4;
-            stackIn_18_5 = variantId;
+            entityForCategorySelection = (GameplayEntity) ((Object) entityBeforeVariantSelection);
+            motionGuardForCategorySelection = motionGuardBeforeVariantSelection;
+            boardXForCategorySelection = boardXBeforeVariantSelection;
+            kindForCategorySelection = kindBeforeVariantSelection;
+            inwardVelocityXForCategorySelection = inwardVelocityXBeforeVariantSelection;
+            selectedVariantId = variantId;
           }
           L5: {
-            stackIn_18_0 = (GameplayEntity) ((Object) stackIn_18_0);
+            entityForCategorySelection = (GameplayEntity) ((Object) entityForCategorySelection);
 
-            stackIn_21_6 = 0;
+            zeroLifetimeTicks = 0;
 
-            stackIn_21_7 = 0.0f;
+            unusedMotionFloat = 0.0f;
 
-            stackIn_21_8 = (float)pointerY;
+            boardYForCategorySelection = (float)pointerY;
 
-            stackIn_21_9 = (float)(-pointerY + 240);
+            inwardVelocityYForCategorySelection = (float)(-pointerY + 240);
 
-            if (var12 != 2) {
-
-
+            if (spriteKindId != 2) {
 
 
 
@@ -155,21 +153,23 @@ final class nb {
 
 
 
-              if (1 != var12) {
-                stackIn_23_0 = (GameplayEntity) ((Object) stackIn_18_0);
-                stackIn_23_1 = stackIn_18_1;
-                stackIn_23_2 = stackIn_18_2;
-                stackIn_23_3 = stackIn_18_3;
-                stackIn_23_4 = stackIn_18_4;
-                stackIn_23_5 = stackIn_18_5;
-                stackIn_23_6 = stackIn_21_6;
-                stackIn_23_7 = stackIn_21_7;
-                stackIn_23_8 = stackIn_21_8;
-                stackIn_23_9 = stackIn_21_9;
-                stackIn_23_10 = -1;
+
+
+              if (1 != spriteKindId) {
+                entityToInitialize = (GameplayEntity) ((Object) entityForCategorySelection);
+                initializationGuard = motionGuardForCategorySelection;
+                initializationX = boardXForCategorySelection;
+                initializationKind = kindForCategorySelection;
+                initializationVelocityX = inwardVelocityXForCategorySelection;
+                initializationVariant = selectedVariantId;
+                initializationLifetimeTicks = zeroLifetimeTicks;
+                unusedInitializationFloat = unusedMotionFloat;
+                initializationY = boardYForCategorySelection;
+                initializationVelocityY = inwardVelocityYForCategorySelection;
+                initializationCategory = -1;
                 break L5;
               }
-              stackIn_18_0 = (GameplayEntity) ((Object) stackIn_18_0);
+              entityForCategorySelection = (GameplayEntity) ((Object) entityForCategorySelection);
 
 
 
@@ -180,22 +180,22 @@ final class nb {
 
 
             }
-            stackIn_23_0 = (GameplayEntity) ((Object) stackIn_18_0);
-            stackIn_23_1 = stackIn_18_1;
-            stackIn_23_2 = stackIn_18_2;
-            stackIn_23_3 = stackIn_18_3;
-            stackIn_23_4 = stackIn_18_4;
-            stackIn_23_5 = stackIn_18_5;
-            stackIn_23_6 = stackIn_21_6;
-            stackIn_23_7 = stackIn_21_7;
-            stackIn_23_8 = stackIn_21_8;
-            stackIn_23_9 = stackIn_21_9;
-            stackIn_23_10 = categoryId;
+            entityToInitialize = (GameplayEntity) ((Object) entityForCategorySelection);
+            initializationGuard = motionGuardForCategorySelection;
+            initializationX = boardXForCategorySelection;
+            initializationKind = kindForCategorySelection;
+            initializationVelocityX = inwardVelocityXForCategorySelection;
+            initializationVariant = selectedVariantId;
+            initializationLifetimeTicks = zeroLifetimeTicks;
+            unusedInitializationFloat = unusedMotionFloat;
+            initializationY = boardYForCategorySelection;
+            initializationVelocityY = inwardVelocityYForCategorySelection;
+            initializationCategory = categoryId;
           }
-          ((GameplayEntity) (Object) stackIn_23_0).initializeEntityMotion(stackIn_23_1, stackIn_23_2, stackIn_23_3, stackIn_23_4, stackIn_23_5, stackIn_23_6, stackIn_23_7, stackIn_23_8, stackIn_23_9, stackIn_23_10, 0.0f);
+          ((GameplayEntity) (Object) entityToInitialize).initializeEntityMotion(initializationGuard, initializationX, initializationKind, initializationVelocityX, initializationVariant, initializationLifetimeTicks, unusedInitializationFloat, initializationY, initializationVelocityY, initializationCategory, 0.0f);
         }
-        var6.entityQueue = null;
-        ji.movingEntities.addLast(param0 ^ 28286, var6);
+        pooledEntity.entityQueue = null;
+        ji.movingEntities.addLast(methodGuard ^ 28286, pooledEntity);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {

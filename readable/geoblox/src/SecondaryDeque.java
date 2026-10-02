@@ -60,7 +60,7 @@ final class SecondaryDeque {
     final DualLinkNode removeFirst(boolean methodGuard) {
         DualLinkNode firstNode = this.sentinel.nextSecondaryNode;
         if (!methodGuard) {
-            SecondaryDeque.a((byte) -92);
+            SecondaryDeque.setAvatarPositiveRotationSteering((byte) -92);
             if (this.sentinel != firstNode) {
                 firstNode.unlinkSecondaryNode((byte) 65);
                 return firstNode;
@@ -110,9 +110,9 @@ final class SecondaryDeque {
         }
     }
 
-    final static void a(byte param0) {
+    final static void setAvatarPositiveRotationSteering(byte methodGuard) {
         jk.avatarSteeringDirectionId = 2;
-        if (param0 < 45) {
+        if (methodGuard < 45) {
             SecondaryDeque.a(true, -75);
         }
     }

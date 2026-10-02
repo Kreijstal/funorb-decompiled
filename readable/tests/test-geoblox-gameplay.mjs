@@ -16,6 +16,7 @@ const expectedNativeSha256 = '42be694a3c2f9a7a80ec7e0ec910bd312bdba5bc38f30293eb
 const expectedDifficultySha256 = '8c66899b5955eac3380cc3aefd3cbe17a5063cc68f98cd507ff406cea4ae587b';
 const expectedComparatorSha256 = '9be228f7421970f2214c74e8890327f8592f706dc90ccd0d0933e6f2fbe0a604';
 const expectedMotionSha256 = '002e562320b82c572202b5df57ea645a7f71630b6f78e379d60fac1a41de1dd4';
+const expectedCollisionSpawnSha256 = '4823d8fb380856fb2f1090c741d450b0e10e99919c94bbecaa10a39debecf9d8';
 const rules = JSON.parse(fs.readFileSync(path.join(root, 'geoblox-rules.json')));
 const aliases = new Map(rules.renames.map(rule => [rule.symbol, rule.to]));
 const temporary = fs.mkdtempSync(path.join(os.tmpdir(), 'geoblox-gameplay-'));
@@ -850,6 +851,118 @@ try {
         StringBuilder hash=new StringBuilder();for(byte value:digest.digest())hash.append(String.format("%02x",value&255));
         System.err.println("motion-matrix:"+constructors+":"+integrations+":"+rotations+":"+initializations+":"+hash);
       }
+      static ${raster} mask(int width,int height,int trimX,int trimY,int pattern) {
+        ${raster} out=new ${raster}(width,height);
+        out.${field('wh','field_u','I')}=trimX;out.${field('wh','field_p','I')}=trimY;
+        out.${field('wh','field_s','I')}=width+4;out.${field('wh','field_o','I')}=height+4;
+        int[] pixels=out.${field('dm','field_v','[I')};
+        for(int i=0;i<pixels.length;i++)pixels[i]=pattern==0?0:pattern==1?1:pattern==2?(i%2==0?0:-1):(i%3==0?0:i+2);
+        return out;
+      }
+      static int[] overlapOracle(${raster} first,int firstX,int firstY,${raster} second,int secondX,int secondY) {
+        int[] a=first.${field('dm','field_v','[I')},b=second.${field('dm','field_v','[I')};
+        int aw=first.${field('wh','field_r','I')},ah=first.${field('wh','field_m','I')},bw=second.${field('wh','field_r','I')},bh=second.${field('wh','field_m','I')};
+        int ax=firstX+first.${field('wh','field_u','I')},ay=firstY+first.${field('wh','field_p','I')},bx=secondX+second.${field('wh','field_u','I')},by=secondY+second.${field('wh','field_p','I')};
+        // Walk first-mask pixels in world row/column order and look up the
+        // corresponding second pixel; no shared clipping/index recurrence.
+        for(int y=0;y<ah;y++)for(int x=0;x<aw;x++) {
+          int sx=ax+x-bx,sy=ay+y-by;
+          if(a[y*aw+x]!=0 && sx>=0 && sx<bw && sy>=0 && sy<bh && b[sy*bw+sx]!=0)return new int[]{ax+x,ay+y};
+        }
+        return null;
+      }
+      static void collisionSpawnMatrix() throws Exception {
+        java.security.MessageDigest digest=java.security.MessageDigest.getInstance("SHA-256");
+        int overlaps=0,boardChecks=0,contactChecks=0,spawns=0,steering=0;
+        int[][] layouts={{1,1,0,0},{3,2,1,2},{2,3,-1,-2},{0,2,0,0},{2,0,0,0}};
+        for(int[] left:layouts)for(int[] right:layouts)for(int a=0;a<4;a++)for(int b=0;b<4;b++)
+        for(int[] origin:new int[][]{{0,0},{-2,3},{3,-2}})for(int[] other:new int[][]{{0,0},{1,1},{-1,-1},{4,-2},{-3,3}}) {
+          ${raster} first=mask(left[0],left[1],left[2],left[3],a),second=mask(right[0],right[1],right[2],right[3],b);
+          int[] beforeFirst=first.${field('dm','field_v','[I')}.clone(),beforeSecond=second.${field('dm','field_v','[I')}.clone();
+          int[] wanted=overlapOracle(first,origin[0],origin[1],second,other[0],other[1]);
+          ${global('aa','field_a','I')}=-701;${global('aa','field_b','I')}=-702;
+          boolean hit=${call('aa','a(Ldm;IILdm;II)Z')}(first,origin[0],origin[1],second,other[0],other[1]);
+          check(hit==(wanted!=null),"overlap presence");
+          check(${global('aa','field_a','I')}==(hit?wanted[0]:-701) && ${global('aa','field_b','I')}==(hit?wanted[1]:-702),"first overlap position or retained sentinel");
+          check(java.util.Arrays.equals(beforeFirst,first.${field('dm','field_v','[I')}) && java.util.Arrays.equals(beforeSecond,second.${field('dm','field_v','[I')}),"overlap preserves pixels");
+          digest.update(("overlap:"+overlaps+":"+hit+":"+${global('aa','field_a','I')}+":"+${global('aa','field_b','I')}+(char)10).getBytes(java.nio.charset.StandardCharsets.UTF_8));overlaps++;
+        }
+        ${global('Geoblox','field_C','I')}=0;
+        for(int x:new int[]{-1,0,3,5,10})for(int y:new int[]{-1,0,3,5,10})for(int pattern=0;pattern<4;pattern++) {
+          ${raster} scratch=mask(3,3,1,2,pattern),board=mask(5,5,0,0,3),probe=mask(5,5,-1,1,2);
+          ${global('vf','field_L','Ldm;')}=scratch;${global('bk','field_a','Ldm;')}=board;${global('wd','field_b','Ldm;')}=probe;
+          ${global('ng','field_G','I')}=x;${global('td','field_E','I')}=y;
+          ${global('wd','field_a','I')}=-2;${global('wd','field_d','I')}=1;
+          for(int guard:new int[]{0,1,-1}) {
+            ${global('aa','field_a','I')}=-701;${global('aa','field_b','I')}=-702;
+            int[] wanted=guard==0?overlapOracle(scratch,x-3,y-3,board,0,0):null;
+            boolean hit=${call('uj','a(Lja;FI)Z')}(null,Float.NaN,guard);
+            check(hit==(wanted!=null),"board wrapper hit/guard");
+            check(${global('aa','field_a','I')}==(hit?wanted[0]:-701) && ${global('aa','field_b','I')}==(hit?wanted[1]:-702),"board wrapper coordinates");
+            digest.update(("board:"+x+":"+y+":"+pattern+":"+guard+":"+hit+":"+${global('aa','field_a','I')}+":"+${global('aa','field_b','I')}+(char)10).getBytes(java.nio.charset.StandardCharsets.UTF_8));boardChecks++;
+          }
+          ${global('aa','field_a','I')}=-701;${global('aa','field_b','I')}=-702;
+          int[] wanted=overlapOracle(probe,0,0,scratch,x-3+2,y-3-1);
+          boolean hit=${call('ma','a(ZFLja;)Z')}(true,Float.POSITIVE_INFINITY,null);
+          check(hit==(wanted!=null),"contact wrapper hit");
+          check(${global('aa','field_a','I')}==(hit?wanted[0]:-701) && ${global('aa','field_b','I')}==(hit?wanted[1]:-702),"contact wrapper coordinates");
+          digest.update(("contact-mask:"+x+":"+y+":"+pattern+":"+hit+":"+${global('aa','field_a','I')}+":"+${global('aa','field_b','I')}+(char)10).getBytes(java.nio.charset.StandardCharsets.UTF_8));contactChecks++;
+        }
+        ${raster}[][][] ordinary=new ${raster}[1][4][4],amorphous=new ${raster}[1][4][4];${raster}[][] geometry=new ${raster}[1][4];
+        for(int c=0;c<4;c++)for(int v=0;v<4;v++){ordinary[0][c][v]=new ${raster}(1,1);amorphous[0][c][v]=new ${raster}(1,1);geometry[0][c]=new ${raster}(1,1);}
+        ${raster} black=new ${raster}(1,1),silver=new ${raster}(1,1);
+        ${global('ke','field_a','[[[Ldm;')}=ordinary;${global('ka','field_m','[[[Ldm;')}=amorphous;${global('s','field_G','[[Ldm;')}=geometry;
+        ${global('fc','field_g','[Ldm;')}=new ${raster}[]{black};${global('hb','field_d','[Ldm;')}=new ${raster}[]{silver};
+        ${global('jg','field_h','[[I')}=new int[][]{{0x123456,0x234567,0x345678,0x456789,0x56789a,0x6789ab,0x789abc}};
+        ${global('c','field_ab','I')}=0;${global('og','field_r','F')}=0.7f;${global('el','field_o','Lgh;')}=session();
+        int[][] positions={{320,240},{0,0},{321,239},{639,479},{-100,900}};
+        float[] angles={0,(float)(Math.PI/2),-(float)Math.PI,0.125f,Float.NaN};
+        for(int[] position:positions)for(float angle:angles)for(int category=0;category<4;category++)for(int variant=0;variant<4;variant++)
+        for(boolean special:new boolean[]{false,true})for(int poolSize=0;poolSize<3;poolSize++)for(int guard:new int[]{-28195,0}) {
+          ${global('ra','field_a','Ltf;')}=new ${deque}();${moving}=new ${deque}();
+          ${entity} first=entity(17,0,0,0),last=entity(19,0,0,0);
+          first.${field('ja','field_K','Ltf;')}=${moving};last.${field('ja','field_K','Ltf;')}=${moving};
+          if(poolSize>0)${global('ra','field_a','Ltf;')}.${addLast}(-35,first);
+          if(poolSize>1)${global('ra','field_a','Ltf;')}.${addLast}(-35,last);
+          ${global('el','field_o','Lgh;')}.${field('gh','field_J','F')}=angle;
+          ${call('nb','a(IIIIIZ)V')}(guard,position[0],category,position[1],variant,special);
+          boolean emitted=guard==-28195&&poolSize>0;
+          check(${global('ra','field_a','Ltf;')}.${method('tf','a(I)I')}(95)==poolSize-(emitted?1:0) && ${moving}.${method('tf','a(I)I')}(95)==(emitted?1:0),"spawn queue counts/guard");
+          if(emitted) {
+            ${entity} actual=(${entity})${moving}.${method('tf','g(I)Lhf;')}(0);
+            check(actual==(poolSize==2?last:first),"spawn removes pool tail");
+            double dx=(double)(position[0]-320),dy=(double)(position[1]-240),theta=-(double)angle;
+            int x=(int)(320.0+dx*Math.cos(theta)-dy*Math.sin(theta)),y=(int)(240.0+dx*Math.sin(theta)+dy*Math.cos(theta));
+            sameFloat(actual.${field('ja','field_o','F')},(float)x,"inverse rotation spawn X");sameFloat(actual.${field('ja','field_v','F')},(float)y,"inverse rotation spawn Y");
+            float vx=(float)(320-x),vy=(float)(240-y);double normalization=(double)0.7f/Math.sqrt((double)(vx*vx+vy*vy));
+            sameFloat(actual.${field('ja','field_w','F')},(float)((double)vx*normalization),"spawn inward X velocity");sameFloat(actual.${field('ja','field_F','F')},(float)((double)vy*normalization),"spawn inward Y velocity");
+            int kind=special?new int[]{2,4,3,1}[(category+variant)%4]:0;
+            check(actual.${field('ja','field_z','I')}==kind && actual.${field('ja','field_C','I')}==(kind==0||kind==1?category:-1) && actual.${field('ja','field_M','I')}==(kind==0||kind==2?variant:-1),"spawn category/variant/kind");
+            ${raster} selected=kind==0?ordinary[0][category][variant]:kind==1?geometry[0][category]:kind==2?amorphous[0][variant][0]:kind==3?silver:black;
+            check(actual.${field('ja','field_J','Ldm;')}==selected && actual.${field('ja','field_K','Ltf;')}==null && actual.${field('ja','field_r','I')}==0 && actual.${field('ja','field_p','I')}==0,"spawn resets/selects sprite");
+            digest.update(("spawn:"+spawns+":"+actual.${field('ja','field_H','I')}+":"+motionState(actual)+(char)10).getBytes(java.nio.charset.StandardCharsets.UTF_8));
+          } else {
+            check(first.${field('ja','field_K','Ltf;')}==${moving} && last.${field('ja','field_K','Ltf;')}==${moving},"ignored spawn retains entities");
+            digest.update(("spawn:"+spawns+":ignored"+(char)10).getBytes(java.nio.charset.StandardCharsets.UTF_8));
+          }
+          spawns++;
+        }
+        for(int state:new int[]{0,1,2})for(byte guard:new byte[]{45,74,127}) {
+          ${global('jk','field_d','I')}=state;${call('me','a(B)V')}((byte)38);check(${global('jk','field_d','I')}==1,"negative rotation steering");steering++;
+          ${global('jk','field_d','I')}=state;${call('wd','a(B)V')}(guard);check(${global('jk','field_d','I')}==2,"positive rotation steering");steering++;
+          digest.update(("steer:"+state+":"+guard+":1:2"+(char)10).getBytes(java.nio.charset.StandardCharsets.UTF_8));
+        }
+        for(int state:new int[]{0,1,2})for(int guard:new int[]{-106,-96,0}) {
+          ${global('jk','field_d','I')}=state;${global('jj','field_c','Ljava/lang/String;')}="retained";
+          ${call('jj','b(I)V')}(guard);
+          check(${global('jk','field_d','I')}==0,"neutral steering");
+          check(guard>-96?${global('jj','field_c','Ljava/lang/String;')}==null:"retained".equals(${global('jj','field_c','Ljava/lang/String;')}),"neutral steering guard effect");steering++;
+          digest.update(("neutral:"+state+":"+guard+":"+${global('jj','field_c','Ljava/lang/String;')}+(char)10).getBytes(java.nio.charset.StandardCharsets.UTF_8));
+        }
+        check(overlaps==6000 && boardChecks==300 && contactChecks==100 && spawns==4800 && steering==27,"collision/spawn coverage");
+        StringBuilder hash=new StringBuilder();for(byte value:digest.digest())hash.append(String.format("%02x",value&255));
+        System.err.println("collision-spawn-matrix:"+overlaps+":"+boardChecks+":"+contactChecks+":"+spawns+":"+steering+":"+hash);
+      }
       static final class DifficultyState {
         int step,variants,categories,interval,quota;
         float speed,rotation,scale;
@@ -1129,6 +1242,7 @@ try {
         difficultyMatrix();
         comparatorMatrix();
         motionMatrix();
+        collisionSpawnMatrix();
         System.out.println("complete:"+cases+":conversion-failures:"+conversionFailures);
       }
     }`;
@@ -1166,6 +1280,10 @@ try {
     assert.ok(motion,'complete independent motion matrix must run in every variant');
     console.log(JSON.stringify({variant,motionSha256:motion,motionCases:4500}));
     assert.equal(motion,expectedMotionSha256,variant);
+    const collisionSpawn=output.stderr.toString().match(/(?:^|\n)collision-spawn-matrix:6000:300:100:4800:27:([a-f0-9]{64})(?:\n|$)/)?.[1];
+    assert.ok(collisionSpawn,'complete collision/spawn matrix must run in every variant');
+    console.log(JSON.stringify({variant,collisionSpawnSha256:collisionSpawn,collisionSpawnCases:11227}));
+    assert.equal(collisionSpawn,expectedCollisionSpawnSha256,variant);
     assert.equal(sha256,expectedNativeSha256,variant);
     if(expected===undefined)expected=output.stdout;
     else assert.equal(Buffer.compare(output.stdout,expected),0,variant);

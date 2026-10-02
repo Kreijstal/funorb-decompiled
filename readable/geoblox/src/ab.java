@@ -227,8 +227,8 @@ final class ab {
                   movingEntity.integrateEntityVelocity((byte) -59);
                   movingEntity.advanceEntityAnimation(true);
                 }
-                gf.a(movingEntity, -1232328029, boardAngleRadians);
-                if (uj.a(movingEntity, boardAngleRadians, 0)) {
+                gf.renderEntityCollisionSprite(movingEntity, -1232328029, boardAngleRadians);
+                if (uj.scratchSpriteOverlapsBoard(movingEntity, boardAngleRadians, 0)) {
                   vf.spriteScratchRaster.addOutline(1);
                   if (movingEntity.matchCooldownTicks <= 0) {
                     al.a(9666, GameScreen.selectedThemeId);
@@ -242,7 +242,7 @@ final class ab {
                   wasKind2IntSnapshot = (movingEntity.entitySpriteKindId != 2) ? 0 : 1;
                   L11: {
                     neighborIndexOrKindFlagOrContactIdOrDivisionGuard = wasKind2IntSnapshot;
-                    ih.linkEntityAtMaskContacts(-1, td.field_E, movingEntity, ng.field_G);
+                    ih.linkEntityAtMaskContacts(-1, td.rotatedEntityScreenY, movingEntity, ng.rotatedEntityScreenX);
                     if (neighborIndexOrKindFlagOrContactIdOrDivisionGuard != 0) {
                       if (movingEntity.entitySpriteKindId != 2) {
                         break L11;
@@ -251,9 +251,9 @@ final class ab {
                     if (movingEntity.entitySpriteKindId != 2) {
                       movingEntity.spriteAngleRadians = movingEntity.spriteAngleRadians - boardAngleRadians;
                     }
-                    movingEntity.positionY = (float)td.field_E;
+                    movingEntity.positionY = (float)td.rotatedEntityScreenY;
                     movingEntity.entityQueue = a.attachedEntities;
-                    movingEntity.positionX = (float)ng.field_G;
+                    movingEntity.positionX = (float)ng.rotatedEntityScreenX;
                   }
                   if (!movingEntity.detachedFromBoard) {
                     wb.newAttachmentCount = wb.newAttachmentCount + 1;
@@ -262,8 +262,8 @@ final class ab {
                   movingEntity = (GameplayEntity) ((Object) ji.movingEntities.nextForIteration(1));
                   continue L0;
                 }
-                if (ma.a(true, boardAngleRadians, movingEntity)) {
-                  neighborIndexOrKindFlagOrContactIdOrDivisionGuard = SecondaryDeque.contactProbeRaster.pixels[aa.field_a + SecondaryDeque.contactProbeRaster.fullWidth * aa.field_b] - 1;
+                if (ma.contactProbeOverlapsScratchSprite(true, boardAngleRadians, movingEntity)) {
+                  neighborIndexOrKindFlagOrContactIdOrDivisionGuard = SecondaryDeque.contactProbeRaster.pixels[PixelOverlapProbe.firstOverlapX + SecondaryDeque.contactProbeRaster.fullWidth * PixelOverlapProbe.firstOverlapY] - 1;
                   contactedEntity = tl.entitiesById[neighborIndexOrKindFlagOrContactIdOrDivisionGuard];
                   if (a.attachedEntities == contactedEntity.entityQueue) {
                     break L2;

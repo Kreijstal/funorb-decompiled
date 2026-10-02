@@ -36,9 +36,9 @@ final class ScorePopup extends IntrusiveNode {
         field_j = null;
     }
 
-    final static void a(byte param0) {
+    final static void setAvatarNegativeRotationSteering(byte methodGuard) {
         jk.avatarSteeringDirectionId = 1;
-        if (param0 != 38) {
+        if (methodGuard != 38) {
             ScorePopup.c((byte) -26);
         }
     }
@@ -53,7 +53,7 @@ final class ScorePopup extends IntrusiveNode {
             h.field_b = h.field_b + (param1.b(true) << 2);
             var2_int = param1.c((byte) 34);
             if (param0 <= 105) {
-                ScorePopup.a((byte) 114);
+                ScorePopup.setAvatarNegativeRotationSteering((byte) 114);
             }
             fe.field_g = var2_int << 15 & 2064384;
             h.field_b = h.field_b + (var2_int >> 6);

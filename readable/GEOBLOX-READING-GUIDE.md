@@ -1048,3 +1048,44 @@ press snapshots; hovering and menu hit testing use position snapshots. The
 native input matrix checks 2,184 controlled callback/queue cases. Real concurrent
 AWT delivery, browser key mapping and full session execution remain unverified.
 The listener classes retain unrelated static helper methods.
+
+## Collision masks and pointer spawning
+
+`PixelOverlapProbe.findFirstNonzeroPixelOverlap` (`aa.a`) adds each sprite's
+crop trims to its origin, intersects cropped width/height bounds and scans
+shared rows left to right. Both pixel values must be nonzero, including negative
+values; no alpha/color interpretation is inferred. On the first hit it stores
+world coordinates in `firstOverlapX`/`firstOverlapY` and returns true. A miss
+returns false and retains the previous output coordinates. It never writes to
+the input buffers. `overlapRightThenWidth` and `overlapBottomThenHeight` retain
+their original reused roles instead of introducing new declarations.
+
+`gf.renderEntityCollisionSprite` (`gf.a(Lja;IF)V`) rotates the entity position
+around (320,240) into `ng.rotatedEntityScreenX`/`td.rotatedEntityScreenY`, renders
+the entity sprite into `vf.spriteScratchRaster` with nearest rotation, then
+restores the display raster. This renderer remains supported by source inspection.
+`uj.scratchSpriteOverlapsBoard` centers the scratch raster at those coordinates
+and compares it with `bk.boardOwnershipRaster`; a nonzero method guard returns
+false. Its entity/angle parameters are used only in diagnostic wrapping.
+`ma.contactProbeOverlapsScratchSprite` subtracts contact-probe offsets before
+comparing the probe against the scratch raster. The moving-contact producer
+uses the resulting probe coordinates to read the entity ID minus one.
+
+`nb.spawnEntityAtPointer` accepts guard -28195, then removes the available pool's
+last entity. Empty pools and other guards return immediately. It inverse-rotates
+the integer pointer about (320,240), truncates both coordinates and initializes
+velocity toward the center. Ordinary mode uses kind0 with the supplied category
+and variant. Special mode maps `(categoryId + variantId) % 4` to kinds2/4/3/1;
+kind2 retains its variant, kind1 retains its category, and the existing sprite
+selector clears the other keys to -1. Generated argument carriers preserve
+selection/evaluation order and remain explicit. The spawned entity's queue flag
+is cleared before appending it to `ji.movingEntities`. Center spawning retains
+the original NaN velocity behavior.
+
+`ScorePopup.setAvatarNegativeRotationSteering` stores direction1;
+`SecondaryDeque.setAvatarPositiveRotationSteering` stores direction2;
+`jj.clearAvatarSteering` stores direction0. Original invalid-guard side effects
+remain. The new native matrix independently checks 11,227 raster, wrapper,
+controlled pool/spawn and steering cases, alongside unchanged earlier traces.
+It does not establish full moving-contact production, live assets, malformed
+buffer/overflow behavior or whole-game equivalence.

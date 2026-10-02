@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 2,943 guarded naming rules: 29 classes, 531 fields,
-296 methods, 838 parameters and 1,249 local declarations. Both 303-file corpora
+The current export has 3,047 guarded naming rules: 30 classes, 535 fields,
+303 methods, 857 parameters and 1,322 local declarations. Both 303-file corpora
 compile, preserving 150,124 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -54,11 +54,40 @@ smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
 
-## Current keyboard and pointer naming
+## Current contact-mask and pointer-spawn naming
+
+This naming pass adds 104 guarded identities: one class, four fields, seven
+methods, 19 parameters and 73 locals. All 2,943 previous complete rules and raw
+source/generator pins are unchanged. The current 3,047 rules apply 30,510 edits,
+preserving all 150,124 bindings and 388 override relationships.
+
+`PixelOverlapProbe` replaces aa. Every parameter/local in its nonzero-pixel
+probe, the pointer-spawn method, collision-sprite renderer and board/contact
+wrappers has a guarded role name. The probe fields name the first overlap
+coordinate. Forward-rotated screen coordinates and negative/positive/neutral
+avatar steering helpers now describe their roles. Original diagnostic strings,
+numeric guards, shared joins, argument carriers and evaluation order remain.
+
+The existing gameplay probe adds an independent 11,227-case trace: 6,000 cropped
+raster overlap cases, 300 board-wrapper checks, 100 contact-mask checks, 4,800
+pointer spawns and 27 steering cases. It checks row-major first-hit coordinates,
+nonzero pixels including negative values, retained output on misses, unchanged
+pixel buffers, crop/placement offsets, empty/full pool gates, tail identity,
+inverse rotation/truncation, center/NaN velocity behavior, ordinary/special kind
+and sprite selection, queue/reset state and steering guard effects. Its trace is
+`4823d8fb380856fb2f1090c741d450b0e10e99919c94bbecaa10a39debecf9d8`.
+The previous gameplay, boundary, difficulty, comparator, motion and input traces
+remain unchanged. Moderate integer origins and valid buffers are used; malformed
+rasters and coordinate overflow remain unverified. Sprite arrays and constructor-
+free sessions are controlled fixtures. The collision-sprite renderer and moving-
+contact producer are supported by source inspection. Real assets and complete
+gameplay remain unverified.
+
+## Previous keyboard and pointer naming
 
 This naming pass adds 148 guarded identities: two classes, 30 fields, three
 methods, 17 parameters and 96 locals. All 2,795 previous complete rules, raw
-source and generator pins are unchanged. The current export applies 30,063
+source and generator pins are unchanged. That export applied 30,063
 identifier edits while preserving all 150,124 bindings and 388 override rows.
 Every parameter/local in the AWT keyboard/pointer callbacks, keyboard frame
 update, keyboard event poll and pointer snapshot now has a guarded role name.
@@ -585,6 +614,6 @@ the same manifest; no JSON snapshots are added.
 | Java source tree | SHA-256 |
 | --- | --- |
 | Raw | `b18afdee6bf7d59ae30800e398696f8f0319943a75296c5608fe7708968c7bf1` |
-| Readable | `5253289abba80804748fdac9ef7d0da8fc7a95d112c51f68101decfdf398364f` |
+| Readable | `d2d176e7758b7aa556d78ad997c2d007b98a972f96a51ea0318e558be224bb2f` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

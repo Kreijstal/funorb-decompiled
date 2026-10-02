@@ -15,38 +15,38 @@ final class uj {
         return true;
     }
 
-    final static boolean a(GameplayEntity param0, float param1, int param2) {
-        RuntimeException var3 = null;
-        boolean stackIn_4_0 = false;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static boolean scratchSpriteOverlapsBoard(GameplayEntity diagnosticEntity, float diagnosticBoardAngleRadians, int methodGuard) {
+        RuntimeException boardOverlapFailureForContext = null;
+        boolean overlapFound = false;
+        RuntimeException boardOverlapFailureBeforeEntityDescription = null;
+        StringBuilder boardOverlapMessagePrefix = null;
+        RuntimeException boardOverlapFailureAtEntityDescription = null;
+        StringBuilder boardOverlapMessageAtEntityDescription = null;
+        String entityArgumentDescription = null;
+        RuntimeException caughtBoardOverlapFailure = null;
         try {
-          if (param2 == 0) {
-            stackIn_4_0 = aa.a(vf.spriteScratchRaster, -(vf.spriteScratchRaster.fullWidth >> 1) + ng.field_G, -(vf.spriteScratchRaster.fullHeight >> 1) + td.field_E, bk.boardOwnershipRaster, 0, 0);
-            return stackIn_4_0;
+          if (methodGuard == 0) {
+            overlapFound = PixelOverlapProbe.findFirstNonzeroPixelOverlap(vf.spriteScratchRaster, -(vf.spriteScratchRaster.fullWidth >> 1) + ng.rotatedEntityScreenX, -(vf.spriteScratchRaster.fullHeight >> 1) + td.rotatedEntityScreenY, bk.boardOwnershipRaster, 0, 0);
+            return overlapFound;
           }
           return false;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_7_0 = (RuntimeException) (var3);
+        } catch (java.lang.RuntimeException boardOverlapFailure) {
+          caughtBoardOverlapFailure = boardOverlapFailure;
+          boardOverlapFailureForContext = caughtBoardOverlapFailure;
+          boardOverlapFailureBeforeEntityDescription = (RuntimeException) (boardOverlapFailureForContext);
 
-          stackIn_7_1 = new StringBuilder().append("uj.C(");
+          boardOverlapMessagePrefix = new StringBuilder().append("uj.C(");
 
-          if (param0 == null) {
-            stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-            stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-            stackIn_8_2 = "null";
+          if (diagnosticEntity == null) {
+            boardOverlapFailureAtEntityDescription = (RuntimeException) ((Object) boardOverlapFailureBeforeEntityDescription);
+            boardOverlapMessageAtEntityDescription = (StringBuilder) ((Object) boardOverlapMessagePrefix);
+            entityArgumentDescription = "null";
           } else {
-            stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-            stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-            stackIn_8_2 = "{...}";
+            boardOverlapFailureAtEntityDescription = (RuntimeException) ((Object) boardOverlapFailureBeforeEntityDescription);
+            boardOverlapMessageAtEntityDescription = (StringBuilder) ((Object) boardOverlapMessagePrefix);
+            entityArgumentDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw t.a((Throwable) ((Object) boardOverlapFailureAtEntityDescription), ((StringBuilder) (Object) boardOverlapMessageAtEntityDescription).append(entityArgumentDescription).append(',').append(diagnosticBoardAngleRadians).append(',').append(methodGuard).append(')').toString());
         }
     }
 

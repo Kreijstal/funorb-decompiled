@@ -756,7 +756,7 @@ final class GameplaySession {
             if (kj.heldInternalKeys[negativeRotationKeyCode]) {
               L17: {
                 this.boardAngleRadians = this.boardAngleRadians - DualLinkNode.rotationStepRadians;
-                ScorePopup.a((byte) 38);
+                ScorePopup.setAvatarNegativeRotationSteering((byte) 38);
                 inputDerivedModuloIndex = (ki.currentKeyboardEventCode + kd.field_c + qa.pointerXSnapshot + he.pointerPressYSnapshot) % 8;
                 if (inputDerivedModuloIndex == 0) {
                   oa.field_a = oa.field_a + kb.field_d;
@@ -855,7 +855,7 @@ final class GameplaySession {
             L30: {
               if (kj.heldInternalKeys[positiveRotationKeyCode]) {
                 this.boardAngleRadians = this.boardAngleRadians + DualLinkNode.rotationStepRadians;
-                SecondaryDeque.a((byte) 74);
+                SecondaryDeque.setAvatarPositiveRotationSteering((byte) 74);
                 if (this.tutorialStepId == 0) {
                   this.tutorialProgressMetric = this.tutorialProgressMetric + 1;
                 }
@@ -985,7 +985,7 @@ final class GameplaySession {
             }
             if (!detachedEntityOrPositiveRotationKeySnapshot) {
               if (!kj.heldInternalKeys[negativeRotationKeyCode]) {
-                jj.b(-106);
+                jj.clearAvatarSteering(-106);
               }
             }
             this.delayedActionCountdown = this.delayedActionCountdown - 1;
