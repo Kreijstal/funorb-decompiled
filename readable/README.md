@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 1,032 guarded naming rules: 21 classes, 360 fields,
-164 methods, 188 parameters and 299 local declarations. Both 303-file corpora
+The current export has 1,074 guarded naming rules: 22 classes, 362 fields,
+171 methods, 201 parameters and 318 local declarations. Both 303-file corpora
 compile, preserving 154,117 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -81,8 +81,16 @@ force flags and client guards; 32 neighbor removals; two forced neighborhood
 detachments; and the existing boundary, popup, cooldown and settling checks.
 Ordinary contacts use independent neighbor-order/count oracles. Duplicate
 contacts preserve state even when forced detachment is requested. One-pixel
-sprites and controlled palettes exercise actual constructors and conversions;
-multi-hop special conversion remains unverified.
+sprites and controlled palettes exercise actual constructors and conversions.
+
+The same probe now checks 320 secondary-deque operations against independent
+list models and 2,048 conversion cases covering every undirected graph of four
+entities, two roots, two template keys, four flag combinations and two client
+guards. Reachability, final properties, edge counters, cooldowns and primary
+link independence have separate oracles. The 472 direct mixed-flag failures
+preserve native exception context and partial mutations. The contact caller
+uses mutually exclusive conversion flags. These controlled fixtures do not
+simulate collision-mask production or real asset loading.
 Contact-physics producers, actual asset loading, new unlock delivery, device
 audio and whole-game equivalence remain unverified. Text-writer guards <=23
 retain a PCM side effect outside the direct writer probe. These source checks
@@ -107,6 +115,6 @@ do not establish FPS, heap or phone acceptance.
 | Java source tree | SHA-256 |
 | --- | --- |
 | Raw | `07610c2d655bf96e59584f07be867c62e47cf3b3c484063504d9958443e89da2` |
-| Readable | `0b2f7b4f7b945ffa0f0abfc0c9168e08f664798570001ff0c5622bb5065abd09` |
+| Readable | `653d787433a937cc0935a90df18c80d19f7262f6ce175a1671d58665a63b8966` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

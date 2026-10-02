@@ -505,7 +505,7 @@ final class GameplaySession {
               var5 = 16777215;
               SoftwareRasterizer.f(160, 120, 115, 16711680);
               var6 = 20;
-              var15 = wd.spawnQueue;
+              var15 = SecondaryDeque.spawnQueue;
               renderedEntity = (GameplayEntity) ((Object) var15.lastForIteration(false));
               L31: while (true) {
                 L32: {
@@ -939,7 +939,7 @@ final class GameplaySession {
               L30: {
                 if (kj.field_o[var3]) {
                   this.boardAngleRadians = this.boardAngleRadians + DualLinkNode.rotationStepRadians;
-                  wd.a((byte) 74);
+                  SecondaryDeque.a((byte) 74);
                   if (this.tutorialStepId == 0) {
                     this.tutorialProgressMetric = this.tutorialProgressMetric + 1;
                   }

@@ -1,4 +1,4 @@
-# Reading GeoBlox pass 22
+# Reading GeoBlox pass 23
 
 The readable tree uses semantic names without opaque suffixes. The symbol map
 keeps the original spelling and JVM identity of every declaration, so
@@ -114,6 +114,29 @@ the append positions before incrementing the counts. The native gameplay probe
 checks contact kinds 0/1/2, duplicate suppression, both force values, removal
 positions and detachment with existing neighbors using controlled sprites.
 
+`bh.propagateContactConversion` takes a `templateEntity`, a `startingEntity`
+and separate `propagateVariant` and `propagateCategoryAndKind` flags. It
+snapshots the template's category, variant and sprite kind before traversal.
+`pendingEntities` schedules eligible neighbors at the front and
+`pendingEntitiesForRemoval` aliases that same collection for removal.
+`processedEntities` collects each completed entity. Its scan compares
+`currentEntity` with `processedEntityToCompare`; it does not test a neighbor's
+visited identity. These details remain explicit in the generated source.
+
+Variant conversion selects kind zero before category/kind conversion runs.
+Category-only conversion marks an old kind-two entity as detached and moving;
+its configure call also starts the 60-tick cooldown. While scheduling neighbors,
+category propagation copies the template angle and increments category counts;
+variant propagation increments variant counts. A final entity with no eligible
+neighbor can retain its previous angle. The native graph probe records these
+angle outcomes and independently checks reachability and edge counters.
+
+Passing both flags directly can fail while converting a kind-two entity:
+variant conversion temporarily selects kind zero while its category is still
+-1, causing a sprite-array bounds failure. The wrapper retains the partial
+field writes and original exception context. The contact caller never requests
+both flags together. The probe preserves that behavior rather than rewriting it.
+
 ## Score popups and text writes
 
 `ug.spawnScorePopup` takes a popup from the pool. Pool exhaustion credits the
@@ -139,7 +162,7 @@ helper side effect; it is outside the direct text-writer probe.
 
 ## Releases, result sequence and scene transition
 
-`lc.updateSpawnQueue` advances `wd.spawnQueue` and releases ready members into
+`lc.updateSpawnQueue` advances `SecondaryDeque.spawnQueue` and releases ready members into
 `ji.movingEntities` unless `spawnReleaseDisabled` is set. `hd.recordEntityRelease`
 increments `ul.releasedInCurrentTheme` and `di.releasedInDifficultyStep` outside
 tutorial mode. The theme threshold is `fa.releasesPerTheme`; `qe.a` calculates
@@ -218,12 +241,13 @@ inserted into `a.attachedEntities`. Their queue marker is cleared and the board
 raster is marked dirty.
 
 When connectivity is dirty, an attached-entity walk uses
-`pk.connectivityVisitedByEntityId` and two temporary `wd` collections to follow
+`pk.connectivityVisitedByEntityId` and two temporary `SecondaryDeque` collections to follow
 related entities. A group touching the avatar is treated differently from a
 detachable group. Detachment marks each group entity as moving, removes related
 links, clears category/variant counters and marks the session flags. The
-collections remain `var11` and `var13`; their complete class API still needs
-review. `entityIndexThenGroupCount` retains its two observed counter roles.
+collections remain `var11` and `var13`; their instance API is now named in
+`SecondaryDeque`, while their reconciliation roles still need native review.
+`entityIndexThenGroupCount` retains its two observed counter roles.
 
 The next attached-entity walk routes queued entities. For moving entities,
 `radialOffsetX`, `radialOffsetY` and `radialVelocityScale` normalize a vector
@@ -273,6 +297,16 @@ instance API now reads as `addFirst`, `addLast`, `removeFirst`,
 splice. `pendingActionMarkers` holds the existing `PendingActionMarker`
 objects. Static theme helpers on these obfuscated classes remain separate and
 largely unnamed; class names describe their instance roles.
+
+`SecondaryDeque` is the original `wd` class. Its instance API uses
+`DualLinkNode.nextSecondaryNode` and `previousSecondaryNode`, with its own
+`sentinel` and `iterationCursor`. It provides `addFirst`, `addLast`,
+`removeFirst`, `firstForIteration`, `nextForIteration` and `countNodes`.
+Insertion removes the node from its previous secondary collection. The primary
+links stay intact, allowing conversion and connectivity worklists to coexist
+with gameplay queues. Native model checks cover transfers, reinsertion, removal,
+iteration order and reciprocal links. Normal guards remain part of the API;
+alternate guard side effects are retained in the source.
 
 ## Interface text and account entry
 

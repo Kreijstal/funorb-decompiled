@@ -2,16 +2,16 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class ji {
-    wd field_g;
+    SecondaryDeque field_g;
     static IntrusiveDeque movingEntities;
     static String createWelcomeText;
-    wd field_e;
+    SecondaryDeque field_e;
     static int difficultyStep;
-    wd field_p;
+    SecondaryDeque field_p;
     static String createPasswordLengthAlertText;
     static String[] field_a;
     static String waitingForMusicText;
-    wd field_c;
+    SecondaryDeque field_c;
     int field_o;
     long field_k;
     qc field_m;
@@ -74,26 +74,26 @@ abstract class ji {
             if (this.a(false) >= 20) {
                 throw new RuntimeException();
             }
-            this.field_p.a(8, var8);
+            this.field_p.addLast(8, var8);
         } else {
             if (this.a(param2 ^ 108) >= 20) {
                 throw new RuntimeException();
             }
-            this.field_g.a(param2 ^ -123, var8);
+            this.field_g.addLast(param2 ^ -123, var8);
         }
         if (param2 == -21) {
             return var8;
         }
-        this.field_g = (wd) null;
+        this.field_g = (SecondaryDeque) null;
         return var8;
     }
 
     final int a(int param0) {
         if (param0 < -39) {
-            return this.field_g.b((byte) 67) + this.field_e.b((byte) 67);
+            return this.field_g.countNodes((byte) 67) + this.field_e.countNodes((byte) 67);
         }
         ji.a(49L, (byte) 33);
-        return this.field_g.b((byte) 67) + this.field_e.b((byte) 67);
+        return this.field_g.countNodes((byte) 67) + this.field_e.countNodes((byte) 67);
     }
 
     final static void a(long param0, byte param1) {
@@ -129,10 +129,10 @@ abstract class ji {
 
     final int a(boolean param0) {
         if (!param0) {
-            return this.field_p.b((byte) 67) + this.field_c.b((byte) 67);
+            return this.field_p.countNodes((byte) 67) + this.field_c.countNodes((byte) 67);
         }
         this.field_o = -38;
-        return this.field_p.b((byte) 67) + this.field_c.b((byte) 67);
+        return this.field_p.countNodes((byte) 67) + this.field_c.countNodes((byte) 67);
     }
 
     final static short[] a(short[] param0, int param1, int param2, pk param3) {
@@ -248,10 +248,10 @@ abstract class ji {
     }
 
     ji() {
-        this.field_g = new wd();
-        this.field_e = new wd();
-        this.field_p = new wd();
-        this.field_c = new wd();
+        this.field_g = new SecondaryDeque();
+        this.field_e = new SecondaryDeque();
+        this.field_p = new SecondaryDeque();
+        this.field_c = new SecondaryDeque();
         this.field_m = new qc(6);
         this.field_b = 0;
         this.field_i = (byte) 0;

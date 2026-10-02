@@ -3,7 +3,7 @@
  */
 final class uf implements Runnable {
     static int[] field_h;
-    private wd field_k;
+    private SecondaryDeque field_k;
     static int field_a;
     static al field_l;
     static String createPasswordContainsEmailAlertText;
@@ -124,7 +124,7 @@ final class uf implements Runnable {
           var5 = this.field_k;
           synchronized (var5) {
             L2: {
-              var6 = (o) ((Object) this.field_k.c((byte) 121));
+              var6 = (o) ((Object) this.field_k.firstForIteration((byte) 121));
               L3: while (var6 != null) {
                 if ((long)param1 == var6.field_i) {
                   if (var6.field_w == param0) {
@@ -136,7 +136,7 @@ final class uf implements Runnable {
                     }
                   }
                 }
-                var6 = (o) ((Object) this.field_k.a(-20));
+                var6 = (o) ((Object) this.field_k.nextForIteration(-20));
               }
               break L2;
             }
@@ -178,7 +178,7 @@ final class uf implements Runnable {
         try {
           var3 = this.field_k;
           synchronized (var3) {
-            this.field_k.a(-128, param0);
+            this.field_k.addLast(-128, param0);
             if (param1 == 15079962) {
               this.field_d = this.field_d + 1;
               this.field_k.notifyAll();
@@ -366,7 +366,7 @@ final class uf implements Runnable {
               } else {
                 var2 = this.field_k;
                 synchronized (var2) {
-                  var7 = (o) ((Object) this.field_k.a(true));
+                  var7 = (o) ((Object) this.field_k.removeFirst(true));
                   if (var7 == null) {
                     try {
                       this.field_k.wait();
@@ -424,7 +424,7 @@ final class uf implements Runnable {
 
     uf(d param0) {
         cb var2 = null;
-        this.field_k = new wd();
+        this.field_k = new SecondaryDeque();
         this.field_d = 0;
         this.field_j = false;
         try {

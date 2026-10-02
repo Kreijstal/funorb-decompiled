@@ -300,7 +300,7 @@ public final class Geoblox extends wf {
                                       if (ki.field_b.a(0)) {
                                         if (ki.field_b.a("basic", (byte) -124)) {
                                           if (!param0) {
-                                            wd.c(480);
+                                            SecondaryDeque.c(480);
                                             lc.a(uj.field_a, -2, 50.0f);
                                             this.renderFrame(25853);
                                             ef.field_e = true;
@@ -471,7 +471,7 @@ public final class Geoblox extends wf {
         ki.a((byte) -64);
         MenuScreen.a((byte) 26);
         oh.a((byte) -88);
-        wd.b(-10943);
+        SecondaryDeque.b(-10943);
         GameplayEntity.e((byte) 104);
         kc.a(126);
         mf.a(false);

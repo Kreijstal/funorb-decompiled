@@ -23,6 +23,7 @@ Generated from explicit rules; original names remain lookup identities.
 | `C:u` | `MusicDecodeStage` | Prepared dependency of ua.c(I)[F; conservative stage name, no assumed codec algorithm. |
 | `C:ua` | `MusicDecoder` | Music-loading profiles and source show packet decoding and shared bit readers. |
 | `C:vb` | `SoftwareRasterizer` | Owns shared framebuffer, scanline stride and clipping bounds. |
+| `C:wd` | `SecondaryDeque` | Instance API is a circular intrusive deque using rc secondary links; native model-based operations preserve the independent primary links. Unrelated static helpers remain on the same class. |
 | `C:wh` | `SpriteState` | Declares sprite dimensions and trim offsets read by dm transforms; also contains unrelated static helpers. |
 | `C:wi` | `AccountWelcomePanel` | Its instance constructor builds create-account, go-back and just-play buttons and displays the create_welcome resource. The button callback dispatches these choices. Unrelated static text-loader helpers retain separate method identities. |
 | `F:Geoblox.field_A:Ljava/lang/String;` | `loginMessage` | Initialized to Please login and cleared during cleanup. |
@@ -360,7 +361,9 @@ Generated from explicit rules; original names remain lookup identities.
 | `F:wb.field_b:I` | `newAttachmentCount` | Reset at the start of ab.moveEntitiesAndCollectContacts and during le queue reset; incremented on a newly attached entity whose detachedFromBoard flag is false. The empty-candidate path in ec.processMatchCandidates uses a positive count to reset the chain unless avatarShockPending is set. Native scoring fixtures control this gate; they do not run contact physics. |
 | `F:wb.field_c:Ljava/lang/String;` | `soundLabelText` | wi.a(BLrh;)V reads the explicit resource key 'sound_colon' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:wd.field_b:Ldm;` | `contactProbeRaster` | The pixel contact probe uses this raster while resolving moving-entity contacts. |
+| `F:wd.field_c:Lrc;` | `iterationCursor` | First iteration saves the following secondary node; next iteration returns this cursor and advances it to the next secondary link. |
 | `F:wd.field_e:Ltf;` | `spawnQueue` | lc advances staged entities and releases ready members to ji.field_r. |
+| `F:wd.field_g:Lrc;` | `sentinel` | Constructor self-links this secondary-node sentinel; traversal and removal compare against its identity. |
 | `F:wf.field_q:Ljava/lang/String;` | `fullscreenText` | wi.a(BLrh;)V reads the explicit resource key 'fullscreen' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:wh.field_m:I` | `height` | Vertical source boundary in dm.c. |
 | `F:wh.field_p:I` | `trimY` | Subtracted from vertical transform pivot, shifted by four. |
@@ -398,6 +401,20 @@ Generated from explicit rules; original names remain lookup identities.
 | `L:bc.a(I[BII)Ljava/lang/String;#8` | `decodedBuffer` | Allocated char[length] buffer used to construct the final String. |
 | `L:bd.a(I)V#0` | `popup` | Render iteration uses the popup and builds the X multiplier plus points text for chain multipliers other than one. |
 | `L:bd.a(I)V#1` | `chainAndPointsText` | Render iteration uses the popup and builds the X multiplier plus points text for chain multipliers other than one. |
+| `L:bh.a(ZLja;ILja;Z)V#0` | `poppedEntity` | Carrier of the pending deque removeFirst result assigned to currentEntity. |
+| `L:bh.a(ZLja;ILja;Z)V#1` | `neighborForVariantIncrement` | Related entity alias used to increment its same-variant count. |
+| `L:bh.a(ZLja;ILja;Z)V#15` | `processedEntities` | Secondary deque holding processed entities; the comparison scans for currentEntity, not the neighbor. |
+| `L:bh.a(ZLja;ILja;Z)V#16` | `templateVariantIndex` | Snapshot of the template variant before the pending traversal begins. |
+| `L:bh.a(ZLja;ILja;Z)V#17` | `templateSpriteKindId` | Snapshot of the template sprite kind before the pending traversal begins. |
+| `L:bh.a(ZLja;ILja;Z)V#18` | `templateCategoryKey` | Snapshot of the template category before the pending traversal begins. |
+| `L:bh.a(ZLja;ILja;Z)V#19` | `currentEntity` | Entity popped from the pending secondary deque, converted and then inserted into processedEntities. |
+| `L:bh.a(ZLja;ILja;Z)V#2` | `neighborForCategoryIncrement` | Related entity alias used to increment its same-category count. |
+| `L:bh.a(ZLja;ILja;Z)V#20` | `neighborIndex` | Walks currentEntity related entities and schedules eligible kinds for conversion. |
+| `L:bh.a(ZLja;ILja;Z)V#21` | `processedEntityToCompare` | Scans processedEntities comparing currentEntity identity; does not identify a visited neighbor. |
+| `L:bh.a(ZLja;ILja;Z)V#23` | `pendingEntities` | Secondary deque receiving eligible neighbors at the front, with automatic removal of their previous secondary membership. |
+| `L:bh.a(ZLja;ILja;Z)V#24` | `pendingEntitiesForRemoval` | Alias of pendingEntities used to remove the first entity on each traversal iteration. |
+| `L:bh.a(ZLja;ILja;Z)V#3` | `neighborVariantWriteTarget` | Carrier for the neighbor receiving the variant-count increment. |
+| `L:bh.a(ZLja;ILja;Z)V#4` | `neighborVariantReadSource` | Carrier for the same neighbor supplying the previous variant count. |
 | `L:c.a(BI)V#1` | `actionId` | Value read from per-screen action ID array using item index; drives action-specific branches. |
 | `L:c.a(IB)V#2` | `actionId` | Value read from per-screen action ID array using item index; drives action-specific branches. |
 | `L:c.a(II)V#1` | `actionId` | Value read from per-screen action ID array using item index; drives action-specific branches. |
@@ -682,6 +699,11 @@ Generated from explicit rules; original names remain lookup identities.
 | `L:ul.b(I)V#35` | `controlFlowGuard` | Snapshot of Geoblox.field_C at entry. The generated body retains this read even though this snapshot is unused by the reconstructed traversal. |
 | `L:wa.a(I)I#0` | `unfinishedPoints` | Drains active popups with removeFirst and accumulates their points into the returned integer. |
 | `L:wa.a(I)I#2` | `popup` | Drains active popups with removeFirst and accumulates their points into the returned integer. |
+| `L:wd.a(I)Lrc;#1` | `iterationNode` | Secondary deque traversal/removal role supported by sentinel/link inspection and native model-based identity/order/count checks. |
+| `L:wd.a(Z)Lrc;#0` | `firstNode` | Secondary deque traversal/removal role supported by sentinel/link inspection and native model-based identity/order/count checks. |
+| `L:wd.b(B)I#0` | `nodeToCount` | Secondary deque traversal/removal role supported by sentinel/link inspection and native model-based identity/order/count checks. |
+| `L:wd.b(B)I#2` | `nodeCount` | Secondary deque traversal/removal role supported by sentinel/link inspection and native model-based identity/order/count checks. |
+| `L:wd.c(B)Lrc;#0` | `firstNode` | Secondary deque traversal/removal role supported by sentinel/link inspection and native model-based identity/order/count checks. |
 | `L:wi$1$CfrPartitionedBody.run()V#0` | `caughtFailure` | Source-generated catch parameter for the original wi.a(BLrh;)V runtime catch, copied into the shared loading-failure field. |
 | `L:wi.a(BLrh;)V#0` | `textLoader` | Instance of the source-generated shared carrier that runs the three bounded interface-text helper parts. |
 | `M:Geoblox.a(I)V` | `renderFrame` | ch draw turn invokes a(25853); GeoBlox draws loading/menu/game content and publishes Canvas. Rename abstract declaration and implementation as one virtual family. |
@@ -707,6 +729,7 @@ Generated from explicit rules; original names remain lookup identities.
 | `M:ag.b(ILjava/lang/String;)Ljava/lang/String;` | `validationMessageForText` | Complete q override family across ag, cf, g, mk, n, q and uk. The state query evaluates candidate text and returns a validation-state identity; the message query describes that candidate or returns null. q current-input wrappers call these methods with the current input text. Full JVM descriptor, guards and asynchronous/pending behavior remain unchanged. |
 | `M:bc.a(I[BII)Ljava/lang/String;` | `decodeTextSlice` | Decodes length bytes starting at offset, omits NUL bytes, uses lf.field_e for input values 128..159 with ? for zero mapping entries, and returns the filled prefix of its character buffer. Guard side effects are preserved. |
 | `M:bd.a(I)V` | `drawScorePopups` | Interpolates active popup position toward the points panel and renders either plain points or chain multiplier plus points. |
+| `M:bh.a(ZLja;ILja;Z)V` | `propagateContactConversion` | Copies template variant and/or category/kind through eligible related entities using pending and processed secondary deques. Native checks cover all 64 undirected four-entity graphs with both roots, keys and client guards, including wrapped partial-write failures. |
 | `M:c.a(BI)V` | `increaseMenuValue` | Concrete increases music/effect sliders by ten; base dispatches right-direction keys here. Both base and concrete declarations are renamed. |
 | `M:c.a(I)V` | `renderScreen` | Geoblox render calls c.a(-28750); base implementation renders item rows, concrete draws complete screen. Both base and concrete declarations are renamed. |
 | `M:c.a(IB)V` | `decreaseMenuValue` | Concrete decreases music/effect sliders by ten; base dispatches left-direction keys here. Both base and concrete declarations are renamed. |
@@ -844,6 +867,12 @@ Generated from explicit rules; original names remain lookup identities.
 | `M:uk.b(ILjava/lang/String;)Ljava/lang/String;` | `validationMessageForText` | Complete q override family across ag, cf, g, mk, n, q and uk. The state query evaluates candidate text and returns a validation-state identity; the message query describes that candidate or returns null. q current-input wrappers call these methods with the current input text. Full JVM descriptor, guards and asynchronous/pending behavior remain unchanged. |
 | `M:ul.b(I)V` | `collectMatchCandidates` | Collects triples of connected entities sharing variant or category, storing sorted entity IDs and equality flags in the packed candidate array. |
 | `M:wa.a(I)I` | `collectUnfinishedPopupPoints` | Removes every active popup and returns the sum of its uncredited points without multiplying them again. |
+| `M:wd.a(I)Lrc;` | `nextForIteration` | Returns and advances the cursor until reaching the sentinel; guard -59 used by conversion. Native model checks identity, order, reciprocity, transfers and primary-link independence. |
+| `M:wd.a(ILrc;)V` | `addLast` | Unlinks existing secondary membership, then inserts between the final node and the sentinel; normal guard -45. Native model checks identity, order, reciprocity, transfers and primary-link independence. |
+| `M:wd.a(Lrc;Z)V` | `addFirst` | Unlinks existing secondary membership, then inserts between the sentinel and its first secondary node with guard false. Native model checks identity, order, reciprocity, transfers and primary-link independence. |
+| `M:wd.a(Z)Lrc;` | `removeFirst` | Unlinks and returns the first secondary node, or null at the sentinel; normal guard true. Native model checks identity, order, reciprocity, transfers and primary-link independence. |
+| `M:wd.b(B)I` | `countNodes` | Walks the secondary-next links to the sentinel and counts nodes; normal guard 67. Native model checks identity, order, reciprocity, transfers and primary-link independence. |
+| `M:wd.c(B)Lrc;` | `firstForIteration` | Returns the first secondary node and initializes the cursor, or returns null and clears the cursor; normal guard 121. Native model checks identity, order, reciprocity, transfers and primary-link independence. |
 | `M:wi$1$CfrPartitionedBody.runChunk0()V` | `loadInterfaceTextPart1` | Source-generated bounded helper for original wi.a(BLrh;)V. The number preserves source order and denotes a size-budget partition, not a semantic loading phase. |
 | `M:wi$1$CfrPartitionedBody.runChunk1()V` | `loadInterfaceTextPart2` | Source-generated bounded helper for original wi.a(BLrh;)V. The number preserves source order and denotes a size-budget partition, not a semantic loading phase. |
 | `M:wi$1$CfrPartitionedBody.runChunk2()V` | `loadInterfaceTextPart3` | Source-generated bounded helper for original wi.a(BLrh;)V. The number preserves source order and denotes a size-budget partition, not a semantic loading phase. |
@@ -859,6 +888,11 @@ Generated from explicit rules; original names remain lookup identities.
 | `P:bc.a(I[BII)Ljava/lang/String;#1` | `textBytes` | Argument role is explicit in allocation of char[length], access to textBytes[offset + byteIndex], loop bound length and the guard side effect. |
 | `P:bc.a(I[BII)Ljava/lang/String;#2` | `offset` | Argument role is explicit in allocation of char[length], access to textBytes[offset + byteIndex], loop bound length and the guard side effect. |
 | `P:bc.a(I[BII)Ljava/lang/String;#3` | `length` | Argument role is explicit in allocation of char[length], access to textBytes[offset + byteIndex], loop bound length and the guard side effect. |
+| `P:bh.a(ZLja;ILja;Z)V#0` | `propagateCategoryAndKind` | Selects category/kind copies, kind-two detachment before that copy, category-count increments and angle copies while scheduling neighbors. |
+| `P:bh.a(ZLja;ILja;Z)V#1` | `templateEntity` | Source of copied variant, sprite kind, category and conditional angle. |
+| `P:bh.a(ZLja;ILja;Z)V#2` | `methodGuard` | Normal value 1 supplies configureEntitySprite guard 320 and processed-list iteration guard -59; alternate cleanup branches remain intact. |
+| `P:bh.a(ZLja;ILja;Z)V#3` | `startingEntity` | Inserted into the pending secondary deque before traversing eligible related entities. |
+| `P:bh.a(ZLja;ILja;Z)V#4` | `propagateVariant` | Selects variant copy with sprite kind zero, variant-count increments and kind-one neighbor traversal. |
 | `P:c.a(BI)V#1` | `itemIndex` | Indexes action IDs for increase operation. |
 | `P:c.a(IB)V#0` | `itemIndex` | Indexes action IDs for decrease operation. |
 | `P:c.a(II)V#0` | `itemIndex` | Selected row passed to key handling. |
@@ -1032,6 +1066,14 @@ Generated from explicit rules; original names remain lookup identities.
 | `P:uk.b(ILjava/lang/String;)Ljava/lang/String;#0` | `guard` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
 | `P:uk.b(ILjava/lang/String;)Ljava/lang/String;#1` | `candidateText` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
 | `P:ul.b(I)V#0` | `methodGuard` | Normal callers pass -2. Other values clear ul.field_a; match enumeration and RuntimeException context remain intact. |
+| `P:wd.a(I)Lrc;#0` | `methodGuard` | Retained original method guard; native deque probe uses the normal value and preserves alternate source branches. |
+| `P:wd.a(ILrc;)V#0` | `methodGuard` | Retained original method guard; native deque probe uses the normal value and preserves alternate source branches. |
+| `P:wd.a(ILrc;)V#1` | `node` | Inserted secondary node, transferred safely from previous secondary membership. |
+| `P:wd.a(Lrc;Z)V#0` | `node` | Inserted secondary node, transferred safely from previous secondary membership. |
+| `P:wd.a(Lrc;Z)V#1` | `methodGuard` | Retained original method guard; native deque probe uses the normal value and preserves alternate source branches. |
+| `P:wd.a(Z)Lrc;#0` | `methodGuard` | Retained original method guard; native deque probe uses the normal value and preserves alternate source branches. |
+| `P:wd.b(B)I#0` | `methodGuard` | Retained original method guard; native deque probe uses the normal value and preserves alternate source branches. |
+| `P:wd.c(B)Lrc;#0` | `methodGuard` | Retained original method guard; native deque probe uses the normal value and preserves alternate source branches. |
 | `P:wi$1$CfrPartitionedBody.<init>(BLrh;)V#0` | `initialLoadGuard` | Source-generated carrier constructor argument initializes the corresponding shared loader parameter field; this is not an original gamepack method. |
 | `P:wi$1$CfrPartitionedBody.<init>(BLrh;)V#1` | `initialTextArchive` | Source-generated carrier constructor argument initializes the corresponding shared loader parameter field; this is not an original gamepack method. |
 | `P:wi.a(BLrh;)V#0` | `loadGuard` | Argument role follows the corresponding reviewed text loader, resource reader or whole-array decoder; guard arithmetic and side effects remain unchanged. |

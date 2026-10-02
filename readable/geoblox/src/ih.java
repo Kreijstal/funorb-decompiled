@@ -30,7 +30,7 @@ final class ih {
         if (param0 == 0) {
           L0: {
             if (ji.movingEntities.isEmpty(13519)) {
-              if (wd.spawnQueue.isEmpty(13519)) {
+              if (SecondaryDeque.spawnQueue.isEmpty(13519)) {
                 if (bh.field_c.isEmpty(param0 + 13519)) {
                   if (!jl.field_t) {
                     stackIn_8_0 = 1;

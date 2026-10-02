@@ -225,7 +225,7 @@ abstract class wf extends ch {
             di.a(6, param0 + 21789);
           }
           if (wj.field_G[6]) {
-            wd.a(true, 7);
+            SecondaryDeque.a(true, 7);
           }
           if (wj.field_G[8]) {
             ng.g(-13912);
@@ -731,10 +731,10 @@ abstract class wf extends ch {
                     var12 = mk.field_n.b((byte) 91);
                     if (var12 == null) {
                       var9 = (String) null;
-                      wd.a((byte) 69, (String) null);
+                      SecondaryDeque.a((byte) 69, (String) null);
                     } else {
                       var7 = bc.decodeTextSlice(-46, var12.field_j, 0, var12.field_f);
-                      wd.a((byte) 69, var7);
+                      SecondaryDeque.a((byte) 69, var7);
                     }
                     mk.field_n = null;
                   }
@@ -743,7 +743,7 @@ abstract class wf extends ch {
                   var5 = (Exception) (Object) decompiledCaughtException;
                   gi.a((Throwable) ((Object) var5), "S1", (byte) 125);
                   var10 = (String) null;
-                  wd.a((byte) 69, (String) null);
+                  SecondaryDeque.a((byte) 69, (String) null);
                   mk.field_n = null;
                 }
               }

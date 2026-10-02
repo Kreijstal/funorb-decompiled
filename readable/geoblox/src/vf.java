@@ -48,7 +48,7 @@ class vf extends hk {
             var7 = (CharSequence) ((Object) param2);
             var4_long = rh.a(var7, -48);
           }
-          stackIn_6_0 = wd.a(true, var4_long, (String) (var6), param1, param0);
+          stackIn_6_0 = SecondaryDeque.a(true, var4_long, (String) (var6), param1, param0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;

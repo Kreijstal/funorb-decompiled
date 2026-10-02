@@ -137,6 +137,13 @@
       "renamedSymbol": "C:SoftwareRasterizer"
     },
     {
+      "symbol": "C:wd",
+      "originalName": "wd",
+      "to": "SecondaryDeque",
+      "evidence": "Instance API is a circular intrusive deque using rc secondary links; native model-based operations preserve the independent primary links. Unrelated static helpers remain on the same class.",
+      "renamedSymbol": "C:SecondaryDeque"
+    },
+    {
       "symbol": "C:wh",
       "to": "SpriteState",
       "evidence": "Declares sprite dimensions and trim offsets read by dm transforms; also contains unrelated static helpers.",
@@ -2493,14 +2500,28 @@
       "to": "contactProbeRaster",
       "originalName": "field_b",
       "evidence": "The pixel contact probe uses this raster while resolving moving-entity contacts.",
-      "renamedSymbol": "F:wd.contactProbeRaster:LSprite;"
+      "renamedSymbol": "F:SecondaryDeque.contactProbeRaster:LSprite;"
+    },
+    {
+      "symbol": "F:wd.field_c:Lrc;",
+      "originalName": "field_c",
+      "to": "iterationCursor",
+      "evidence": "First iteration saves the following secondary node; next iteration returns this cursor and advances it to the next secondary link.",
+      "renamedSymbol": "F:SecondaryDeque.iterationCursor:LDualLinkNode;"
     },
     {
       "symbol": "F:wd.field_e:Ltf;",
       "to": "spawnQueue",
       "originalName": "field_e",
       "evidence": "lc advances staged entities and releases ready members to ji.field_r.",
-      "renamedSymbol": "F:wd.spawnQueue:LIntrusiveDeque;"
+      "renamedSymbol": "F:SecondaryDeque.spawnQueue:LIntrusiveDeque;"
+    },
+    {
+      "symbol": "F:wd.field_g:Lrc;",
+      "originalName": "field_g",
+      "to": "sentinel",
+      "evidence": "Constructor self-links this secondary-node sentinel; traversal and removal compare against its identity.",
+      "renamedSymbol": "F:SecondaryDeque.sentinel:LDualLinkNode;"
     },
     {
       "symbol": "F:wf.field_q:Ljava/lang/String;",
@@ -2760,6 +2781,104 @@
       "originalName": "var2",
       "evidence": "Render iteration uses the popup and builds the X multiplier plus points text for chain multipliers other than one.",
       "renamedSymbol": "L:bd.drawScorePopups(I)V#1"
+    },
+    {
+      "symbol": "L:bh.a(ZLja;ILja;Z)V#0",
+      "originalName": "dupTemp$0",
+      "to": "poppedEntity",
+      "evidence": "Carrier of the pending deque removeFirst result assigned to currentEntity.",
+      "renamedSymbol": "L:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#0"
+    },
+    {
+      "symbol": "L:bh.a(ZLja;ILja;Z)V#1",
+      "originalName": "dupTemp$1",
+      "to": "neighborForVariantIncrement",
+      "evidence": "Related entity alias used to increment its same-variant count.",
+      "renamedSymbol": "L:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#1"
+    },
+    {
+      "symbol": "L:bh.a(ZLja;ILja;Z)V#15",
+      "originalName": "var6",
+      "to": "processedEntities",
+      "evidence": "Secondary deque holding processed entities; the comparison scans for currentEntity, not the neighbor.",
+      "renamedSymbol": "L:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#15"
+    },
+    {
+      "symbol": "L:bh.a(ZLja;ILja;Z)V#16",
+      "originalName": "var7",
+      "to": "templateVariantIndex",
+      "evidence": "Snapshot of the template variant before the pending traversal begins.",
+      "renamedSymbol": "L:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#16"
+    },
+    {
+      "symbol": "L:bh.a(ZLja;ILja;Z)V#17",
+      "originalName": "var8",
+      "to": "templateSpriteKindId",
+      "evidence": "Snapshot of the template sprite kind before the pending traversal begins.",
+      "renamedSymbol": "L:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#17"
+    },
+    {
+      "symbol": "L:bh.a(ZLja;ILja;Z)V#18",
+      "originalName": "var9",
+      "to": "templateCategoryKey",
+      "evidence": "Snapshot of the template category before the pending traversal begins.",
+      "renamedSymbol": "L:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#18"
+    },
+    {
+      "symbol": "L:bh.a(ZLja;ILja;Z)V#19",
+      "originalName": "var10",
+      "to": "currentEntity",
+      "evidence": "Entity popped from the pending secondary deque, converted and then inserted into processedEntities.",
+      "renamedSymbol": "L:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#19"
+    },
+    {
+      "symbol": "L:bh.a(ZLja;ILja;Z)V#2",
+      "originalName": "dupTemp$2",
+      "to": "neighborForCategoryIncrement",
+      "evidence": "Related entity alias used to increment its same-category count.",
+      "renamedSymbol": "L:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#2"
+    },
+    {
+      "symbol": "L:bh.a(ZLja;ILja;Z)V#20",
+      "originalName": "var11",
+      "to": "neighborIndex",
+      "evidence": "Walks currentEntity related entities and schedules eligible kinds for conversion.",
+      "renamedSymbol": "L:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#20"
+    },
+    {
+      "symbol": "L:bh.a(ZLja;ILja;Z)V#21",
+      "originalName": "var12",
+      "to": "processedEntityToCompare",
+      "evidence": "Scans processedEntities comparing currentEntity identity; does not identify a visited neighbor.",
+      "renamedSymbol": "L:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#21"
+    },
+    {
+      "symbol": "L:bh.a(ZLja;ILja;Z)V#23",
+      "originalName": "var14",
+      "to": "pendingEntities",
+      "evidence": "Secondary deque receiving eligible neighbors at the front, with automatic removal of their previous secondary membership.",
+      "renamedSymbol": "L:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#23"
+    },
+    {
+      "symbol": "L:bh.a(ZLja;ILja;Z)V#24",
+      "originalName": "var15",
+      "to": "pendingEntitiesForRemoval",
+      "evidence": "Alias of pendingEntities used to remove the first entity on each traversal iteration.",
+      "renamedSymbol": "L:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#24"
+    },
+    {
+      "symbol": "L:bh.a(ZLja;ILja;Z)V#3",
+      "originalName": "stackIn_31_0",
+      "to": "neighborVariantWriteTarget",
+      "evidence": "Carrier for the neighbor receiving the variant-count increment.",
+      "renamedSymbol": "L:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#3"
+    },
+    {
+      "symbol": "L:bh.a(ZLja;ILja;Z)V#4",
+      "originalName": "stackIn_31_1",
+      "to": "neighborVariantReadSource",
+      "evidence": "Carrier for the same neighbor supplying the previous variant count.",
+      "renamedSymbol": "L:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#4"
     },
     {
       "symbol": "L:c.a(BI)V#1",
@@ -4750,6 +4869,41 @@
       "renamedSymbol": "L:wa.collectUnfinishedPopupPoints(I)I#2"
     },
     {
+      "symbol": "L:wd.a(I)Lrc;#1",
+      "originalName": "var2",
+      "to": "iterationNode",
+      "evidence": "Secondary deque traversal/removal role supported by sentinel/link inspection and native model-based identity/order/count checks.",
+      "renamedSymbol": "L:SecondaryDeque.nextForIteration(I)LDualLinkNode;#1"
+    },
+    {
+      "symbol": "L:wd.a(Z)Lrc;#0",
+      "originalName": "var2",
+      "to": "firstNode",
+      "evidence": "Secondary deque traversal/removal role supported by sentinel/link inspection and native model-based identity/order/count checks.",
+      "renamedSymbol": "L:SecondaryDeque.removeFirst(Z)LDualLinkNode;#0"
+    },
+    {
+      "symbol": "L:wd.b(B)I#0",
+      "originalName": "var3",
+      "to": "nodeToCount",
+      "evidence": "Secondary deque traversal/removal role supported by sentinel/link inspection and native model-based identity/order/count checks.",
+      "renamedSymbol": "L:SecondaryDeque.countNodes(B)I#0"
+    },
+    {
+      "symbol": "L:wd.b(B)I#2",
+      "originalName": "var2",
+      "to": "nodeCount",
+      "evidence": "Secondary deque traversal/removal role supported by sentinel/link inspection and native model-based identity/order/count checks.",
+      "renamedSymbol": "L:SecondaryDeque.countNodes(B)I#2"
+    },
+    {
+      "symbol": "L:wd.c(B)Lrc;#0",
+      "originalName": "var2",
+      "to": "firstNode",
+      "evidence": "Secondary deque traversal/removal role supported by sentinel/link inspection and native model-based identity/order/count checks.",
+      "renamedSymbol": "L:SecondaryDeque.firstForIteration(B)LDualLinkNode;#0"
+    },
+    {
       "symbol": "L:wi$1$CfrPartitionedBody.run()V#0",
       "to": "caughtFailure",
       "originalName": "decompiledCaughtParameter0",
@@ -4923,6 +5077,13 @@
       "originalName": "a",
       "evidence": "Interpolates active popup position toward the points panel and renders either plain points or chain multiplier plus points.",
       "renamedSymbol": "M:bd.drawScorePopups(I)V"
+    },
+    {
+      "symbol": "M:bh.a(ZLja;ILja;Z)V",
+      "originalName": "a",
+      "to": "propagateContactConversion",
+      "evidence": "Copies template variant and/or category/kind through eligible related entities using pending and processed secondary deques. Native checks cover all 64 undirected four-entity graphs with both roots, keys and client guards, including wrapped partial-write failures.",
+      "renamedSymbol": "M:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V"
     },
     {
       "symbol": "M:c.a(BI)V",
@@ -5884,6 +6045,48 @@
       "renamedSymbol": "M:wa.collectUnfinishedPopupPoints(I)I"
     },
     {
+      "symbol": "M:wd.a(I)Lrc;",
+      "originalName": "a",
+      "to": "nextForIteration",
+      "evidence": "Returns and advances the cursor until reaching the sentinel; guard -59 used by conversion. Native model checks identity, order, reciprocity, transfers and primary-link independence.",
+      "renamedSymbol": "M:SecondaryDeque.nextForIteration(I)LDualLinkNode;"
+    },
+    {
+      "symbol": "M:wd.a(ILrc;)V",
+      "originalName": "a",
+      "to": "addLast",
+      "evidence": "Unlinks existing secondary membership, then inserts between the final node and the sentinel; normal guard -45. Native model checks identity, order, reciprocity, transfers and primary-link independence.",
+      "renamedSymbol": "M:SecondaryDeque.addLast(ILDualLinkNode;)V"
+    },
+    {
+      "symbol": "M:wd.a(Lrc;Z)V",
+      "originalName": "a",
+      "to": "addFirst",
+      "evidence": "Unlinks existing secondary membership, then inserts between the sentinel and its first secondary node with guard false. Native model checks identity, order, reciprocity, transfers and primary-link independence.",
+      "renamedSymbol": "M:SecondaryDeque.addFirst(LDualLinkNode;Z)V"
+    },
+    {
+      "symbol": "M:wd.a(Z)Lrc;",
+      "originalName": "a",
+      "to": "removeFirst",
+      "evidence": "Unlinks and returns the first secondary node, or null at the sentinel; normal guard true. Native model checks identity, order, reciprocity, transfers and primary-link independence.",
+      "renamedSymbol": "M:SecondaryDeque.removeFirst(Z)LDualLinkNode;"
+    },
+    {
+      "symbol": "M:wd.b(B)I",
+      "originalName": "b",
+      "to": "countNodes",
+      "evidence": "Walks the secondary-next links to the sentinel and counts nodes; normal guard 67. Native model checks identity, order, reciprocity, transfers and primary-link independence.",
+      "renamedSymbol": "M:SecondaryDeque.countNodes(B)I"
+    },
+    {
+      "symbol": "M:wd.c(B)Lrc;",
+      "originalName": "c",
+      "to": "firstForIteration",
+      "evidence": "Returns the first secondary node and initializes the cursor, or returns null and clears the cursor; normal guard 121. Native model checks identity, order, reciprocity, transfers and primary-link independence.",
+      "renamedSymbol": "M:SecondaryDeque.firstForIteration(B)LDualLinkNode;"
+    },
+    {
       "symbol": "M:wi$1$CfrPartitionedBody.runChunk0()V",
       "to": "loadInterfaceTextPart1",
       "originalName": "runChunk0",
@@ -5987,6 +6190,41 @@
       "originalName": "param3",
       "evidence": "Argument role is explicit in allocation of char[length], access to textBytes[offset + byteIndex], loop bound length and the guard side effect.",
       "renamedSymbol": "P:bc.decodeTextSlice(I[BII)Ljava/lang/String;#3"
+    },
+    {
+      "symbol": "P:bh.a(ZLja;ILja;Z)V#0",
+      "originalName": "param0",
+      "to": "propagateCategoryAndKind",
+      "evidence": "Selects category/kind copies, kind-two detachment before that copy, category-count increments and angle copies while scheduling neighbors.",
+      "renamedSymbol": "P:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#0"
+    },
+    {
+      "symbol": "P:bh.a(ZLja;ILja;Z)V#1",
+      "originalName": "param1",
+      "to": "templateEntity",
+      "evidence": "Source of copied variant, sprite kind, category and conditional angle.",
+      "renamedSymbol": "P:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#1"
+    },
+    {
+      "symbol": "P:bh.a(ZLja;ILja;Z)V#2",
+      "originalName": "param2",
+      "to": "methodGuard",
+      "evidence": "Normal value 1 supplies configureEntitySprite guard 320 and processed-list iteration guard -59; alternate cleanup branches remain intact.",
+      "renamedSymbol": "P:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#2"
+    },
+    {
+      "symbol": "P:bh.a(ZLja;ILja;Z)V#3",
+      "originalName": "param3",
+      "to": "startingEntity",
+      "evidence": "Inserted into the pending secondary deque before traversing eligible related entities.",
+      "renamedSymbol": "P:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#3"
+    },
+    {
+      "symbol": "P:bh.a(ZLja;ILja;Z)V#4",
+      "originalName": "param4",
+      "to": "propagateVariant",
+      "evidence": "Selects variant copy with sprite kind zero, variant-count increments and kind-one neighbor traversal.",
+      "renamedSymbol": "P:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#4"
     },
     {
       "symbol": "P:c.a(BI)V#1",
@@ -7198,6 +7436,62 @@
       "originalName": "param0",
       "evidence": "Normal callers pass -2. Other values clear ul.field_a; match enumeration and RuntimeException context remain intact.",
       "renamedSymbol": "P:ul.collectMatchCandidates(I)V#0"
+    },
+    {
+      "symbol": "P:wd.a(I)Lrc;#0",
+      "originalName": "param0",
+      "to": "methodGuard",
+      "evidence": "Retained original method guard; native deque probe uses the normal value and preserves alternate source branches.",
+      "renamedSymbol": "P:SecondaryDeque.nextForIteration(I)LDualLinkNode;#0"
+    },
+    {
+      "symbol": "P:wd.a(ILrc;)V#0",
+      "originalName": "param0",
+      "to": "methodGuard",
+      "evidence": "Retained original method guard; native deque probe uses the normal value and preserves alternate source branches.",
+      "renamedSymbol": "P:SecondaryDeque.addLast(ILDualLinkNode;)V#0"
+    },
+    {
+      "symbol": "P:wd.a(ILrc;)V#1",
+      "originalName": "param1",
+      "to": "node",
+      "evidence": "Inserted secondary node, transferred safely from previous secondary membership.",
+      "renamedSymbol": "P:SecondaryDeque.addLast(ILDualLinkNode;)V#1"
+    },
+    {
+      "symbol": "P:wd.a(Lrc;Z)V#0",
+      "originalName": "param0",
+      "to": "node",
+      "evidence": "Inserted secondary node, transferred safely from previous secondary membership.",
+      "renamedSymbol": "P:SecondaryDeque.addFirst(LDualLinkNode;Z)V#0"
+    },
+    {
+      "symbol": "P:wd.a(Lrc;Z)V#1",
+      "originalName": "param1",
+      "to": "methodGuard",
+      "evidence": "Retained original method guard; native deque probe uses the normal value and preserves alternate source branches.",
+      "renamedSymbol": "P:SecondaryDeque.addFirst(LDualLinkNode;Z)V#1"
+    },
+    {
+      "symbol": "P:wd.a(Z)Lrc;#0",
+      "originalName": "param0",
+      "to": "methodGuard",
+      "evidence": "Retained original method guard; native deque probe uses the normal value and preserves alternate source branches.",
+      "renamedSymbol": "P:SecondaryDeque.removeFirst(Z)LDualLinkNode;#0"
+    },
+    {
+      "symbol": "P:wd.b(B)I#0",
+      "originalName": "param0",
+      "to": "methodGuard",
+      "evidence": "Retained original method guard; native deque probe uses the normal value and preserves alternate source branches.",
+      "renamedSymbol": "P:SecondaryDeque.countNodes(B)I#0"
+    },
+    {
+      "symbol": "P:wd.c(B)Lrc;#0",
+      "originalName": "param0",
+      "to": "methodGuard",
+      "evidence": "Retained original method guard; native deque probe uses the normal value and preserves alternate source branches.",
+      "renamedSymbol": "P:SecondaryDeque.firstForIteration(B)LDualLinkNode;#0"
     },
     {
       "symbol": "P:wi$1$CfrPartitionedBody.<init>(BLrh;)V#0",
@@ -10465,9 +10759,9 @@
     },
     {
       "symbol": "C:wd",
-      "renamedSymbol": "C:wd",
+      "renamedSymbol": "C:SecondaryDeque",
       "originalName": "wd",
-      "renamedName": "wd",
+      "renamedName": "SecondaryDeque",
       "declaration": {
         "file": "wd.java",
         "start": 50,
@@ -19969,7 +20263,7 @@
     },
     {
       "symbol": "F:ji.field_c:Lwd;",
-      "renamedSymbol": "F:ji.field_c:Lwd;",
+      "renamedSymbol": "F:ji.field_c:LSecondaryDeque;",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -19991,7 +20285,7 @@
     },
     {
       "symbol": "F:ji.field_e:Lwd;",
-      "renamedSymbol": "F:ji.field_e:Lwd;",
+      "renamedSymbol": "F:ji.field_e:LSecondaryDeque;",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -20013,7 +20307,7 @@
     },
     {
       "symbol": "F:ji.field_g:Lwd;",
-      "renamedSymbol": "F:ji.field_g:Lwd;",
+      "renamedSymbol": "F:ji.field_g:LSecondaryDeque;",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -20112,7 +20406,7 @@
     },
     {
       "symbol": "F:ji.field_p:Lwd;",
-      "renamedSymbol": "F:ji.field_p:Lwd;",
+      "renamedSymbol": "F:ji.field_p:LSecondaryDeque;",
       "originalName": "field_p",
       "renamedName": "field_p",
       "declaration": {
@@ -30991,7 +31285,7 @@
     },
     {
       "symbol": "F:uf.field_k:Lwd;",
-      "renamedSymbol": "F:uf.field_k:Lwd;",
+      "renamedSymbol": "F:uf.field_k:LSecondaryDeque;",
       "originalName": "field_k",
       "renamedName": "field_k",
       "declaration": {
@@ -32960,7 +33254,7 @@
     },
     {
       "symbol": "F:wd.field_a:I",
-      "renamedSymbol": "F:wd.field_a:I",
+      "renamedSymbol": "F:SecondaryDeque.field_a:I",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -32971,7 +33265,7 @@
     },
     {
       "symbol": "F:wd.field_b:Ldm;",
-      "renamedSymbol": "F:wd.contactProbeRaster:LSprite;",
+      "renamedSymbol": "F:SecondaryDeque.contactProbeRaster:LSprite;",
       "originalName": "field_b",
       "renamedName": "contactProbeRaster",
       "declaration": {
@@ -32982,9 +33276,9 @@
     },
     {
       "symbol": "F:wd.field_c:Lrc;",
-      "renamedSymbol": "F:wd.field_c:LDualLinkNode;",
+      "renamedSymbol": "F:SecondaryDeque.iterationCursor:LDualLinkNode;",
       "originalName": "field_c",
-      "renamedName": "field_c",
+      "renamedName": "iterationCursor",
       "declaration": {
         "file": "wd.java",
         "start": 215,
@@ -32993,7 +33287,7 @@
     },
     {
       "symbol": "F:wd.field_d:I",
-      "renamedSymbol": "F:wd.field_d:I",
+      "renamedSymbol": "F:SecondaryDeque.field_d:I",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -33004,7 +33298,7 @@
     },
     {
       "symbol": "F:wd.field_e:Ltf;",
-      "renamedSymbol": "F:wd.spawnQueue:LIntrusiveDeque;",
+      "renamedSymbol": "F:SecondaryDeque.spawnQueue:LIntrusiveDeque;",
       "originalName": "field_e",
       "renamedName": "spawnQueue",
       "declaration": {
@@ -33015,7 +33309,7 @@
     },
     {
       "symbol": "F:wd.field_f:Ljava/lang/String;",
-      "renamedSymbol": "F:wd.field_f:Ljava/lang/String;",
+      "renamedSymbol": "F:SecondaryDeque.field_f:Ljava/lang/String;",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -33026,9 +33320,9 @@
     },
     {
       "symbol": "F:wd.field_g:Lrc;",
-      "renamedSymbol": "F:wd.field_g:LDualLinkNode;",
+      "renamedSymbol": "F:SecondaryDeque.sentinel:LDualLinkNode;",
       "originalName": "field_g",
-      "renamedName": "field_g",
+      "renamedName": "sentinel",
       "declaration": {
         "file": "wd.java",
         "start": 164,
@@ -41243,9 +41537,9 @@
     },
     {
       "symbol": "L:bh.a(ZLja;ILja;Z)V#0",
-      "renamedSymbol": "L:bh.a(ZLGameplayEntity;ILGameplayEntity;Z)V#0",
+      "renamedSymbol": "L:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#0",
       "originalName": "dupTemp$0",
-      "renamedName": "dupTemp$0",
+      "renamedName": "poppedEntity",
       "declaration": {
         "file": "bh.java",
         "start": 6173,
@@ -41254,9 +41548,9 @@
     },
     {
       "symbol": "L:bh.a(ZLja;ILja;Z)V#1",
-      "renamedSymbol": "L:bh.a(ZLGameplayEntity;ILGameplayEntity;Z)V#1",
+      "renamedSymbol": "L:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#1",
       "originalName": "dupTemp$1",
-      "renamedName": "dupTemp$1",
+      "renamedName": "neighborForVariantIncrement",
       "declaration": {
         "file": "bh.java",
         "start": 6202,
@@ -41265,7 +41559,7 @@
     },
     {
       "symbol": "L:bh.a(ZLja;ILja;Z)V#10",
-      "renamedSymbol": "L:bh.a(ZLGameplayEntity;ILGameplayEntity;Z)V#10",
+      "renamedSymbol": "L:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#10",
       "originalName": "stackIn_44_1",
       "renamedName": "stackIn_44_1",
       "declaration": {
@@ -41276,7 +41570,7 @@
     },
     {
       "symbol": "L:bh.a(ZLja;ILja;Z)V#11",
-      "renamedSymbol": "L:bh.a(ZLGameplayEntity;ILGameplayEntity;Z)V#11",
+      "renamedSymbol": "L:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#11",
       "originalName": "stackIn_45_1",
       "renamedName": "stackIn_45_1",
       "declaration": {
@@ -41287,7 +41581,7 @@
     },
     {
       "symbol": "L:bh.a(ZLja;ILja;Z)V#12",
-      "renamedSymbol": "L:bh.a(ZLGameplayEntity;ILGameplayEntity;Z)V#12",
+      "renamedSymbol": "L:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#12",
       "originalName": "stackIn_45_2",
       "renamedName": "stackIn_45_2",
       "declaration": {
@@ -41298,7 +41592,7 @@
     },
     {
       "symbol": "L:bh.a(ZLja;ILja;Z)V#13",
-      "renamedSymbol": "L:bh.a(ZLGameplayEntity;ILGameplayEntity;Z)V#13",
+      "renamedSymbol": "L:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#13",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -41309,7 +41603,7 @@
     },
     {
       "symbol": "L:bh.a(ZLja;ILja;Z)V#14",
-      "renamedSymbol": "L:bh.a(ZLGameplayEntity;ILGameplayEntity;Z)V#14",
+      "renamedSymbol": "L:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#14",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -41320,9 +41614,9 @@
     },
     {
       "symbol": "L:bh.a(ZLja;ILja;Z)V#15",
-      "renamedSymbol": "L:bh.a(ZLGameplayEntity;ILGameplayEntity;Z)V#15",
+      "renamedSymbol": "L:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#15",
       "originalName": "var6",
-      "renamedName": "var6",
+      "renamedName": "processedEntities",
       "declaration": {
         "file": "bh.java",
         "start": 6757,
@@ -41331,9 +41625,9 @@
     },
     {
       "symbol": "L:bh.a(ZLja;ILja;Z)V#16",
-      "renamedSymbol": "L:bh.a(ZLGameplayEntity;ILGameplayEntity;Z)V#16",
+      "renamedSymbol": "L:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#16",
       "originalName": "var7",
-      "renamedName": "var7",
+      "renamedName": "templateVariantIndex",
       "declaration": {
         "file": "bh.java",
         "start": 6782,
@@ -41342,9 +41636,9 @@
     },
     {
       "symbol": "L:bh.a(ZLja;ILja;Z)V#17",
-      "renamedSymbol": "L:bh.a(ZLGameplayEntity;ILGameplayEntity;Z)V#17",
+      "renamedSymbol": "L:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#17",
       "originalName": "var8",
-      "renamedName": "var8",
+      "renamedName": "templateSpriteKindId",
       "declaration": {
         "file": "bh.java",
         "start": 6804,
@@ -41353,9 +41647,9 @@
     },
     {
       "symbol": "L:bh.a(ZLja;ILja;Z)V#18",
-      "renamedSymbol": "L:bh.a(ZLGameplayEntity;ILGameplayEntity;Z)V#18",
+      "renamedSymbol": "L:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#18",
       "originalName": "var9",
-      "renamedName": "var9",
+      "renamedName": "templateCategoryKey",
       "declaration": {
         "file": "bh.java",
         "start": 6826,
@@ -41364,9 +41658,9 @@
     },
     {
       "symbol": "L:bh.a(ZLja;ILja;Z)V#19",
-      "renamedSymbol": "L:bh.a(ZLGameplayEntity;ILGameplayEntity;Z)V#19",
+      "renamedSymbol": "L:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#19",
       "originalName": "var10",
-      "renamedName": "var10",
+      "renamedName": "currentEntity",
       "declaration": {
         "file": "bh.java",
         "start": 6847,
@@ -41375,9 +41669,9 @@
     },
     {
       "symbol": "L:bh.a(ZLja;ILja;Z)V#2",
-      "renamedSymbol": "L:bh.a(ZLGameplayEntity;ILGameplayEntity;Z)V#2",
+      "renamedSymbol": "L:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#2",
       "originalName": "dupTemp$2",
-      "renamedName": "dupTemp$2",
+      "renamedName": "neighborForCategoryIncrement",
       "declaration": {
         "file": "bh.java",
         "start": 6231,
@@ -41386,9 +41680,9 @@
     },
     {
       "symbol": "L:bh.a(ZLja;ILja;Z)V#20",
-      "renamedSymbol": "L:bh.a(ZLGameplayEntity;ILGameplayEntity;Z)V#20",
+      "renamedSymbol": "L:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#20",
       "originalName": "var11",
-      "renamedName": "var11",
+      "renamedName": "neighborIndex",
       "declaration": {
         "file": "bh.java",
         "start": 6873,
@@ -41397,9 +41691,9 @@
     },
     {
       "symbol": "L:bh.a(ZLja;ILja;Z)V#21",
-      "renamedSymbol": "L:bh.a(ZLGameplayEntity;ILGameplayEntity;Z)V#21",
+      "renamedSymbol": "L:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#21",
       "originalName": "var12",
-      "renamedName": "var12",
+      "renamedName": "processedEntityToCompare",
       "declaration": {
         "file": "bh.java",
         "start": 6895,
@@ -41408,7 +41702,7 @@
     },
     {
       "symbol": "L:bh.a(ZLja;ILja;Z)V#22",
-      "renamedSymbol": "L:bh.a(ZLGameplayEntity;ILGameplayEntity;Z)V#22",
+      "renamedSymbol": "L:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#22",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -41419,9 +41713,9 @@
     },
     {
       "symbol": "L:bh.a(ZLja;ILja;Z)V#23",
-      "renamedSymbol": "L:bh.a(ZLGameplayEntity;ILGameplayEntity;Z)V#23",
+      "renamedSymbol": "L:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#23",
       "originalName": "var14",
-      "renamedName": "var14",
+      "renamedName": "pendingEntities",
       "declaration": {
         "file": "bh.java",
         "start": 6943,
@@ -41430,9 +41724,9 @@
     },
     {
       "symbol": "L:bh.a(ZLja;ILja;Z)V#24",
-      "renamedSymbol": "L:bh.a(ZLGameplayEntity;ILGameplayEntity;Z)V#24",
+      "renamedSymbol": "L:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#24",
       "originalName": "var15",
-      "renamedName": "var15",
+      "renamedName": "pendingEntitiesForRemoval",
       "declaration": {
         "file": "bh.java",
         "start": 6968,
@@ -41441,7 +41735,7 @@
     },
     {
       "symbol": "L:bh.a(ZLja;ILja;Z)V#25",
-      "renamedSymbol": "L:bh.a(ZLGameplayEntity;ILGameplayEntity;Z)V#25",
+      "renamedSymbol": "L:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#25",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -41452,9 +41746,9 @@
     },
     {
       "symbol": "L:bh.a(ZLja;ILja;Z)V#3",
-      "renamedSymbol": "L:bh.a(ZLGameplayEntity;ILGameplayEntity;Z)V#3",
+      "renamedSymbol": "L:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#3",
       "originalName": "stackIn_31_0",
-      "renamedName": "stackIn_31_0",
+      "renamedName": "neighborVariantWriteTarget",
       "declaration": {
         "file": "bh.java",
         "start": 6260,
@@ -41463,9 +41757,9 @@
     },
     {
       "symbol": "L:bh.a(ZLja;ILja;Z)V#4",
-      "renamedSymbol": "L:bh.a(ZLGameplayEntity;ILGameplayEntity;Z)V#4",
+      "renamedSymbol": "L:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#4",
       "originalName": "stackIn_31_1",
-      "renamedName": "stackIn_31_1",
+      "renamedName": "neighborVariantReadSource",
       "declaration": {
         "file": "bh.java",
         "start": 6292,
@@ -41474,7 +41768,7 @@
     },
     {
       "symbol": "L:bh.a(ZLja;ILja;Z)V#5",
-      "renamedSymbol": "L:bh.a(ZLGameplayEntity;ILGameplayEntity;Z)V#5",
+      "renamedSymbol": "L:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#5",
       "originalName": "stackIn_41_0",
       "renamedName": "stackIn_41_0",
       "declaration": {
@@ -41485,7 +41779,7 @@
     },
     {
       "symbol": "L:bh.a(ZLja;ILja;Z)V#6",
-      "renamedSymbol": "L:bh.a(ZLGameplayEntity;ILGameplayEntity;Z)V#6",
+      "renamedSymbol": "L:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#6",
       "originalName": "stackIn_41_1",
       "renamedName": "stackIn_41_1",
       "declaration": {
@@ -41496,7 +41790,7 @@
     },
     {
       "symbol": "L:bh.a(ZLja;ILja;Z)V#7",
-      "renamedSymbol": "L:bh.a(ZLGameplayEntity;ILGameplayEntity;Z)V#7",
+      "renamedSymbol": "L:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#7",
       "originalName": "stackIn_42_0",
       "renamedName": "stackIn_42_0",
       "declaration": {
@@ -41507,7 +41801,7 @@
     },
     {
       "symbol": "L:bh.a(ZLja;ILja;Z)V#8",
-      "renamedSymbol": "L:bh.a(ZLGameplayEntity;ILGameplayEntity;Z)V#8",
+      "renamedSymbol": "L:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#8",
       "originalName": "stackIn_42_1",
       "renamedName": "stackIn_42_1",
       "declaration": {
@@ -41518,7 +41812,7 @@
     },
     {
       "symbol": "L:bh.a(ZLja;ILja;Z)V#9",
-      "renamedSymbol": "L:bh.a(ZLGameplayEntity;ILGameplayEntity;Z)V#9",
+      "renamedSymbol": "L:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#9",
       "originalName": "stackIn_42_2",
       "renamedName": "stackIn_42_2",
       "declaration": {
@@ -157436,7 +157730,7 @@
     },
     {
       "symbol": "L:wd.a(BLjava/lang/String;)V#0",
-      "renamedSymbol": "L:wd.a(BLjava/lang/String;)V#0",
+      "renamedSymbol": "L:SecondaryDeque.a(BLjava/lang/String;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -157447,7 +157741,7 @@
     },
     {
       "symbol": "L:wd.a(I)Lrc;#0",
-      "renamedSymbol": "L:wd.a(I)LDualLinkNode;#0",
+      "renamedSymbol": "L:SecondaryDeque.nextForIteration(I)LDualLinkNode;#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -157458,9 +157752,9 @@
     },
     {
       "symbol": "L:wd.a(I)Lrc;#1",
-      "renamedSymbol": "L:wd.a(I)LDualLinkNode;#1",
+      "renamedSymbol": "L:SecondaryDeque.nextForIteration(I)LDualLinkNode;#1",
       "originalName": "var2",
-      "renamedName": "var2",
+      "renamedName": "iterationNode",
       "declaration": {
         "file": "wd.java",
         "start": 313,
@@ -157469,7 +157763,7 @@
     },
     {
       "symbol": "L:wd.a(ILrc;)V#0",
-      "renamedSymbol": "L:wd.a(ILDualLinkNode;)V#0",
+      "renamedSymbol": "L:SecondaryDeque.addLast(ILDualLinkNode;)V#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -157480,7 +157774,7 @@
     },
     {
       "symbol": "L:wd.a(ILrc;)V#1",
-      "renamedSymbol": "L:wd.a(ILDualLinkNode;)V#1",
+      "renamedSymbol": "L:SecondaryDeque.addLast(ILDualLinkNode;)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -157491,7 +157785,7 @@
     },
     {
       "symbol": "L:wd.a(Lrc;Z)V#0",
-      "renamedSymbol": "L:wd.a(LDualLinkNode;Z)V#0",
+      "renamedSymbol": "L:SecondaryDeque.addFirst(LDualLinkNode;Z)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -157502,9 +157796,9 @@
     },
     {
       "symbol": "L:wd.a(Z)Lrc;#0",
-      "renamedSymbol": "L:wd.a(Z)LDualLinkNode;#0",
+      "renamedSymbol": "L:SecondaryDeque.removeFirst(Z)LDualLinkNode;#0",
       "originalName": "var2",
-      "renamedName": "var2",
+      "renamedName": "firstNode",
       "declaration": {
         "file": "wd.java",
         "start": 1526,
@@ -157513,7 +157807,7 @@
     },
     {
       "symbol": "L:wd.a(ZI)V#0",
-      "renamedSymbol": "L:wd.a(ZI)V#0",
+      "renamedSymbol": "L:SecondaryDeque.a(ZI)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -157524,7 +157818,7 @@
     },
     {
       "symbol": "L:wd.a(ZI)V#1",
-      "renamedSymbol": "L:wd.a(ZI)V#1",
+      "renamedSymbol": "L:SecondaryDeque.a(ZI)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -157535,7 +157829,7 @@
     },
     {
       "symbol": "L:wd.a(ZI)V#2",
-      "renamedSymbol": "L:wd.a(ZI)V#2",
+      "renamedSymbol": "L:SecondaryDeque.a(ZI)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -157546,7 +157840,7 @@
     },
     {
       "symbol": "L:wd.a(ZI)V#3",
-      "renamedSymbol": "L:wd.a(ZI)V#3",
+      "renamedSymbol": "L:SecondaryDeque.a(ZI)V#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -157557,7 +157851,7 @@
     },
     {
       "symbol": "L:wd.a(ZI)V#4",
-      "renamedSymbol": "L:wd.a(ZI)V#4",
+      "renamedSymbol": "L:SecondaryDeque.a(ZI)V#4",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -157568,7 +157862,7 @@
     },
     {
       "symbol": "L:wd.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#0",
-      "renamedSymbol": "L:wd.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#0",
+      "renamedSymbol": "L:SecondaryDeque.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#0",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -157579,7 +157873,7 @@
     },
     {
       "symbol": "L:wd.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#1",
-      "renamedSymbol": "L:wd.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#1",
+      "renamedSymbol": "L:SecondaryDeque.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#1",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -157590,7 +157884,7 @@
     },
     {
       "symbol": "L:wd.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#10",
-      "renamedSymbol": "L:wd.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#10",
+      "renamedSymbol": "L:SecondaryDeque.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#10",
       "originalName": "stackIn_18_1",
       "renamedName": "stackIn_18_1",
       "declaration": {
@@ -157601,7 +157895,7 @@
     },
     {
       "symbol": "L:wd.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#11",
-      "renamedSymbol": "L:wd.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#11",
+      "renamedSymbol": "L:SecondaryDeque.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#11",
       "originalName": "stackIn_18_2",
       "renamedName": "stackIn_18_2",
       "declaration": {
@@ -157612,7 +157906,7 @@
     },
     {
       "symbol": "L:wd.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#12",
-      "renamedSymbol": "L:wd.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#12",
+      "renamedSymbol": "L:SecondaryDeque.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#12",
       "originalName": "decompiledRegionSelector0",
       "renamedName": "decompiledRegionSelector0",
       "declaration": {
@@ -157623,7 +157917,7 @@
     },
     {
       "symbol": "L:wd.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#13",
-      "renamedSymbol": "L:wd.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#13",
+      "renamedSymbol": "L:SecondaryDeque.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#13",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -157634,7 +157928,7 @@
     },
     {
       "symbol": "L:wd.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#14",
-      "renamedSymbol": "L:wd.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#14",
+      "renamedSymbol": "L:SecondaryDeque.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#14",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -157645,7 +157939,7 @@
     },
     {
       "symbol": "L:wd.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#2",
-      "renamedSymbol": "L:wd.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#2",
+      "renamedSymbol": "L:SecondaryDeque.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#2",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -157656,7 +157950,7 @@
     },
     {
       "symbol": "L:wd.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#3",
-      "renamedSymbol": "L:wd.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#3",
+      "renamedSymbol": "L:SecondaryDeque.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#3",
       "originalName": "stackIn_11_0",
       "renamedName": "stackIn_11_0",
       "declaration": {
@@ -157667,7 +157961,7 @@
     },
     {
       "symbol": "L:wd.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#4",
-      "renamedSymbol": "L:wd.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#4",
+      "renamedSymbol": "L:SecondaryDeque.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#4",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -157678,7 +157972,7 @@
     },
     {
       "symbol": "L:wd.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#5",
-      "renamedSymbol": "L:wd.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#5",
+      "renamedSymbol": "L:SecondaryDeque.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#5",
       "originalName": "stackIn_14_1",
       "renamedName": "stackIn_14_1",
       "declaration": {
@@ -157689,7 +157983,7 @@
     },
     {
       "symbol": "L:wd.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#6",
-      "renamedSymbol": "L:wd.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#6",
+      "renamedSymbol": "L:SecondaryDeque.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#6",
       "originalName": "stackIn_15_0",
       "renamedName": "stackIn_15_0",
       "declaration": {
@@ -157700,7 +157994,7 @@
     },
     {
       "symbol": "L:wd.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#7",
-      "renamedSymbol": "L:wd.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#7",
+      "renamedSymbol": "L:SecondaryDeque.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#7",
       "originalName": "stackIn_15_1",
       "renamedName": "stackIn_15_1",
       "declaration": {
@@ -157711,7 +158005,7 @@
     },
     {
       "symbol": "L:wd.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#8",
-      "renamedSymbol": "L:wd.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#8",
+      "renamedSymbol": "L:SecondaryDeque.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#8",
       "originalName": "stackIn_15_2",
       "renamedName": "stackIn_15_2",
       "declaration": {
@@ -157722,7 +158016,7 @@
     },
     {
       "symbol": "L:wd.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#9",
-      "renamedSymbol": "L:wd.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#9",
+      "renamedSymbol": "L:SecondaryDeque.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#9",
       "originalName": "stackIn_17_1",
       "renamedName": "stackIn_17_1",
       "declaration": {
@@ -157733,9 +158027,9 @@
     },
     {
       "symbol": "L:wd.b(B)I#0",
-      "renamedSymbol": "L:wd.b(B)I#0",
+      "renamedSymbol": "L:SecondaryDeque.countNodes(B)I#0",
       "originalName": "var3",
-      "renamedName": "var3",
+      "renamedName": "nodeToCount",
       "declaration": {
         "file": "wd.java",
         "start": 1933,
@@ -157744,7 +158038,7 @@
     },
     {
       "symbol": "L:wd.b(B)I#1",
-      "renamedSymbol": "L:wd.b(B)I#1",
+      "renamedSymbol": "L:SecondaryDeque.countNodes(B)I#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -157755,9 +158049,9 @@
     },
     {
       "symbol": "L:wd.b(B)I#2",
-      "renamedSymbol": "L:wd.b(B)I#2",
+      "renamedSymbol": "L:SecondaryDeque.countNodes(B)I#2",
       "originalName": "var2",
-      "renamedName": "var2",
+      "renamedName": "nodeCount",
       "declaration": {
         "file": "wd.java",
         "start": 1994,
@@ -157766,9 +158060,9 @@
     },
     {
       "symbol": "L:wd.c(B)Lrc;#0",
-      "renamedSymbol": "L:wd.c(B)LDualLinkNode;#0",
+      "renamedSymbol": "L:SecondaryDeque.firstForIteration(B)LDualLinkNode;#0",
       "originalName": "var2",
-      "renamedName": "var2",
+      "renamedName": "firstNode",
       "declaration": {
         "file": "wd.java",
         "start": 7625,
@@ -162760,9 +163054,9 @@
     },
     {
       "symbol": "M:bh.a(ZLja;ILja;Z)V",
-      "renamedSymbol": "M:bh.a(ZLGameplayEntity;ILGameplayEntity;Z)V",
+      "renamedSymbol": "M:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "propagateContactConversion",
       "declaration": {
         "file": "bh.java",
         "start": 6092,
@@ -184210,9 +184504,9 @@
     },
     {
       "symbol": "M:wd.<init>()V",
-      "renamedSymbol": "M:wd.<init>()V",
+      "renamedSymbol": "M:SecondaryDeque.<init>()V",
       "originalName": "wd",
-      "renamedName": "wd",
+      "renamedName": "SecondaryDeque",
       "declaration": {
         "file": "wd.java",
         "start": 4412,
@@ -184221,7 +184515,7 @@
     },
     {
       "symbol": "M:wd.a(B)V",
-      "renamedSymbol": "M:wd.a(B)V",
+      "renamedSymbol": "M:SecondaryDeque.a(B)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -184232,7 +184526,7 @@
     },
     {
       "symbol": "M:wd.a(BLjava/lang/String;)V",
-      "renamedSymbol": "M:wd.a(BLjava/lang/String;)V",
+      "renamedSymbol": "M:SecondaryDeque.a(BLjava/lang/String;)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -184243,9 +184537,9 @@
     },
     {
       "symbol": "M:wd.a(I)Lrc;",
-      "renamedSymbol": "M:wd.a(I)LDualLinkNode;",
+      "renamedSymbol": "M:SecondaryDeque.nextForIteration(I)LDualLinkNode;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "nextForIteration",
       "declaration": {
         "file": "wd.java",
         "start": 238,
@@ -184254,9 +184548,9 @@
     },
     {
       "symbol": "M:wd.a(ILrc;)V",
-      "renamedSymbol": "M:wd.a(ILDualLinkNode;)V",
+      "renamedSymbol": "M:SecondaryDeque.addLast(ILDualLinkNode;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "addLast",
       "declaration": {
         "file": "wd.java",
         "start": 2437,
@@ -184265,9 +184559,9 @@
     },
     {
       "symbol": "M:wd.a(Lrc;Z)V",
-      "renamedSymbol": "M:wd.a(LDualLinkNode;Z)V",
+      "renamedSymbol": "M:SecondaryDeque.addFirst(LDualLinkNode;Z)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "addFirst",
       "declaration": {
         "file": "wd.java",
         "start": 791,
@@ -184276,9 +184570,9 @@
     },
     {
       "symbol": "M:wd.a(Z)Lrc;",
-      "renamedSymbol": "M:wd.a(Z)LDualLinkNode;",
+      "renamedSymbol": "M:SecondaryDeque.removeFirst(Z)LDualLinkNode;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "removeFirst",
       "declaration": {
         "file": "wd.java",
         "start": 1495,
@@ -184287,7 +184581,7 @@
     },
     {
       "symbol": "M:wd.a(ZI)V",
-      "renamedSymbol": "M:wd.a(ZI)V",
+      "renamedSymbol": "M:SecondaryDeque.a(ZI)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -184298,7 +184592,7 @@
     },
     {
       "symbol": "M:wd.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;",
-      "renamedSymbol": "M:wd.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;",
+      "renamedSymbol": "M:SecondaryDeque.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -184309,9 +184603,9 @@
     },
     {
       "symbol": "M:wd.b(B)I",
-      "renamedSymbol": "M:wd.b(B)I",
+      "renamedSymbol": "M:SecondaryDeque.countNodes(B)I",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "countNodes",
       "declaration": {
         "file": "wd.java",
         "start": 1905,
@@ -184320,7 +184614,7 @@
     },
     {
       "symbol": "M:wd.b(I)V",
-      "renamedSymbol": "M:wd.b(I)V",
+      "renamedSymbol": "M:SecondaryDeque.b(I)V",
       "originalName": "b",
       "renamedName": "b",
       "declaration": {
@@ -184331,9 +184625,9 @@
     },
     {
       "symbol": "M:wd.c(B)Lrc;",
-      "renamedSymbol": "M:wd.c(B)LDualLinkNode;",
+      "renamedSymbol": "M:SecondaryDeque.firstForIteration(B)LDualLinkNode;",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "firstForIteration",
       "declaration": {
         "file": "wd.java",
         "start": 7597,
@@ -184342,7 +184636,7 @@
     },
     {
       "symbol": "M:wd.c(I)V",
-      "renamedSymbol": "M:wd.c(I)V",
+      "renamedSymbol": "M:SecondaryDeque.c(I)V",
       "originalName": "c",
       "renamedName": "c",
       "declaration": {
@@ -187961,9 +188255,9 @@
     },
     {
       "symbol": "P:bh.a(ZLja;ILja;Z)V#0",
-      "renamedSymbol": "P:bh.a(ZLGameplayEntity;ILGameplayEntity;Z)V#0",
+      "renamedSymbol": "P:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "propagateCategoryAndKind",
       "declaration": {
         "file": "bh.java",
         "start": 6102,
@@ -187972,9 +188266,9 @@
     },
     {
       "symbol": "P:bh.a(ZLja;ILja;Z)V#1",
-      "renamedSymbol": "P:bh.a(ZLGameplayEntity;ILGameplayEntity;Z)V#1",
+      "renamedSymbol": "P:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "templateEntity",
       "declaration": {
         "file": "bh.java",
         "start": 6113,
@@ -187983,9 +188277,9 @@
     },
     {
       "symbol": "P:bh.a(ZLja;ILja;Z)V#2",
-      "renamedSymbol": "P:bh.a(ZLGameplayEntity;ILGameplayEntity;Z)V#2",
+      "renamedSymbol": "P:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "methodGuard",
       "declaration": {
         "file": "bh.java",
         "start": 6125,
@@ -187994,9 +188288,9 @@
     },
     {
       "symbol": "P:bh.a(ZLja;ILja;Z)V#3",
-      "renamedSymbol": "P:bh.a(ZLGameplayEntity;ILGameplayEntity;Z)V#3",
+      "renamedSymbol": "P:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#3",
       "originalName": "param3",
-      "renamedName": "param3",
+      "renamedName": "startingEntity",
       "declaration": {
         "file": "bh.java",
         "start": 6136,
@@ -188005,9 +188299,9 @@
     },
     {
       "symbol": "P:bh.a(ZLja;ILja;Z)V#4",
-      "renamedSymbol": "P:bh.a(ZLGameplayEntity;ILGameplayEntity;Z)V#4",
+      "renamedSymbol": "P:bh.propagateContactConversion(ZLGameplayEntity;ILGameplayEntity;Z)V#4",
       "originalName": "param4",
-      "renamedName": "param4",
+      "renamedName": "propagateVariant",
       "declaration": {
         "file": "bh.java",
         "start": 6152,
@@ -238561,7 +238855,7 @@
     },
     {
       "symbol": "P:wd.a(B)V#0",
-      "renamedSymbol": "P:wd.a(B)V#0",
+      "renamedSymbol": "P:SecondaryDeque.a(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -238572,7 +238866,7 @@
     },
     {
       "symbol": "P:wd.a(BLjava/lang/String;)V#0",
-      "renamedSymbol": "P:wd.a(BLjava/lang/String;)V#0",
+      "renamedSymbol": "P:SecondaryDeque.a(BLjava/lang/String;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -238583,7 +238877,7 @@
     },
     {
       "symbol": "P:wd.a(BLjava/lang/String;)V#1",
-      "renamedSymbol": "P:wd.a(BLjava/lang/String;)V#1",
+      "renamedSymbol": "P:SecondaryDeque.a(BLjava/lang/String;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -238594,9 +238888,9 @@
     },
     {
       "symbol": "P:wd.a(I)Lrc;#0",
-      "renamedSymbol": "P:wd.a(I)LDualLinkNode;#0",
+      "renamedSymbol": "P:SecondaryDeque.nextForIteration(I)LDualLinkNode;#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "methodGuard",
       "declaration": {
         "file": "wd.java",
         "start": 244,
@@ -238605,9 +238899,9 @@
     },
     {
       "symbol": "P:wd.a(ILrc;)V#0",
-      "renamedSymbol": "P:wd.a(ILDualLinkNode;)V#0",
+      "renamedSymbol": "P:SecondaryDeque.addLast(ILDualLinkNode;)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "methodGuard",
       "declaration": {
         "file": "wd.java",
         "start": 2443,
@@ -238616,9 +238910,9 @@
     },
     {
       "symbol": "P:wd.a(ILrc;)V#1",
-      "renamedSymbol": "P:wd.a(ILDualLinkNode;)V#1",
+      "renamedSymbol": "P:SecondaryDeque.addLast(ILDualLinkNode;)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "node",
       "declaration": {
         "file": "wd.java",
         "start": 2454,
@@ -238627,9 +238921,9 @@
     },
     {
       "symbol": "P:wd.a(Lrc;Z)V#0",
-      "renamedSymbol": "P:wd.a(LDualLinkNode;Z)V#0",
+      "renamedSymbol": "P:SecondaryDeque.addFirst(LDualLinkNode;Z)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "node",
       "declaration": {
         "file": "wd.java",
         "start": 796,
@@ -238638,9 +238932,9 @@
     },
     {
       "symbol": "P:wd.a(Lrc;Z)V#1",
-      "renamedSymbol": "P:wd.a(LDualLinkNode;Z)V#1",
+      "renamedSymbol": "P:SecondaryDeque.addFirst(LDualLinkNode;Z)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "methodGuard",
       "declaration": {
         "file": "wd.java",
         "start": 812,
@@ -238649,9 +238943,9 @@
     },
     {
       "symbol": "P:wd.a(Z)Lrc;#0",
-      "renamedSymbol": "P:wd.a(Z)LDualLinkNode;#0",
+      "renamedSymbol": "P:SecondaryDeque.removeFirst(Z)LDualLinkNode;#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "methodGuard",
       "declaration": {
         "file": "wd.java",
         "start": 1505,
@@ -238660,7 +238954,7 @@
     },
     {
       "symbol": "P:wd.a(ZI)V#0",
-      "renamedSymbol": "P:wd.a(ZI)V#0",
+      "renamedSymbol": "P:SecondaryDeque.a(ZI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -238671,7 +238965,7 @@
     },
     {
       "symbol": "P:wd.a(ZI)V#1",
-      "renamedSymbol": "P:wd.a(ZI)V#1",
+      "renamedSymbol": "P:SecondaryDeque.a(ZI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -238682,7 +238976,7 @@
     },
     {
       "symbol": "P:wd.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#0",
-      "renamedSymbol": "P:wd.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#0",
+      "renamedSymbol": "P:SecondaryDeque.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -238693,7 +238987,7 @@
     },
     {
       "symbol": "P:wd.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#1",
-      "renamedSymbol": "P:wd.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#1",
+      "renamedSymbol": "P:SecondaryDeque.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -238704,7 +238998,7 @@
     },
     {
       "symbol": "P:wd.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#2",
-      "renamedSymbol": "P:wd.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#2",
+      "renamedSymbol": "P:SecondaryDeque.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -238715,7 +239009,7 @@
     },
     {
       "symbol": "P:wd.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#3",
-      "renamedSymbol": "P:wd.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#3",
+      "renamedSymbol": "P:SecondaryDeque.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -238726,7 +239020,7 @@
     },
     {
       "symbol": "P:wd.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#4",
-      "renamedSymbol": "P:wd.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#4",
+      "renamedSymbol": "P:SecondaryDeque.a(ZJLjava/lang/String;Ljava/lang/String;Z)Ldf;#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -238737,9 +239031,9 @@
     },
     {
       "symbol": "P:wd.b(B)I#0",
-      "renamedSymbol": "P:wd.b(B)I#0",
+      "renamedSymbol": "P:SecondaryDeque.countNodes(B)I#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "methodGuard",
       "declaration": {
         "file": "wd.java",
         "start": 1912,
@@ -238748,7 +239042,7 @@
     },
     {
       "symbol": "P:wd.b(I)V#0",
-      "renamedSymbol": "P:wd.b(I)V#0",
+      "renamedSymbol": "P:SecondaryDeque.b(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -238759,9 +239053,9 @@
     },
     {
       "symbol": "P:wd.c(B)Lrc;#0",
-      "renamedSymbol": "P:wd.c(B)LDualLinkNode;#0",
+      "renamedSymbol": "P:SecondaryDeque.firstForIteration(B)LDualLinkNode;#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "methodGuard",
       "declaration": {
         "file": "wd.java",
         "start": 7604,
@@ -238770,7 +239064,7 @@
     },
     {
       "symbol": "P:wd.c(I)V#0",
-      "renamedSymbol": "P:wd.c(I)V#0",
+      "renamedSymbol": "P:SecondaryDeque.c(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -240270,7 +240564,7 @@
       "original": "Geoblox.java",
       "renamed": "Geoblox.java",
       "inputSha256": "5ffcf53b2d198a12820ef7ad7801223fdede8ecf71ebf7980627758b630d2337",
-      "outputSha256": "2e04045968c71bbaf8b629caa791d712234b4cb395847ed13bc3de83c0a69eaf",
+      "outputSha256": "72f316316fca4ef845a8864d4493a7ec6d62b1d1333bfa2aebe2351ab82b1749",
       "edits": [
         {
           "start": 98,
@@ -240567,6 +240861,13 @@
           "renamed": "pollArchiveLoading"
         },
         {
+          "start": 13777,
+          "end": 13779,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
+        },
+        {
           "start": 13910,
           "end": 13911,
           "symbol": "M:Geoblox.a(I)V",
@@ -240796,6 +241097,13 @@
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 19917,
+          "end": 19919,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
         },
         {
           "start": 19939,
@@ -242247,7 +242555,7 @@
       "original": "ab.java",
       "renamed": "ab.java",
       "inputSha256": "b2329f260c1d16820fd0e7ec027269d13b2c37c72d101930590d7f79e1583f54",
-      "outputSha256": "53c3efd3fb32a8c2a3ccb73269ee8d05662ac86800fb5ed63cc015c64fa18158",
+      "outputSha256": "2f3d2b154aed6a74c3ec0e8134e72811ec94ef9db073944290de2c3708bb6adf",
       "edits": [
         {
           "start": 97,
@@ -242523,6 +242831,13 @@
           "renamed": "boardAngleRadians"
         },
         {
+          "start": 9770,
+          "end": 9772,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
+        },
+        {
           "start": 9773,
           "end": 9780,
           "symbol": "F:wd.field_b:Ldm;",
@@ -242535,6 +242850,13 @@
           "symbol": "F:dm.field_v:[I",
           "original": "field_v",
           "renamed": "pixels"
+        },
+        {
+          "start": 9802,
+          "end": 9804,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
         },
         {
           "start": 9805,
@@ -245818,7 +246140,7 @@
       "original": "bh.java",
       "renamed": "bh.java",
       "inputSha256": "b3332586ea45bbf96a0154ab01c1a9685c938817a81f9f71b285f1b9bd4d6e5c",
-      "outputSha256": "c09aa01849418bd4e814be5f93ec96ae8e8724245df24f17907c778df8c23935",
+      "outputSha256": "7cc704c6df5b53c2f69453e941e7b216da8c92017af2dab0cd1071254cf84138",
       "edits": [
         {
           "start": 111,
@@ -245856,6 +246178,13 @@
           "renamed": "nextForIteration"
         },
         {
+          "start": 2320,
+          "end": 2322,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
+        },
+        {
           "start": 2673,
           "end": 2675,
           "symbol": "C:me",
@@ -245877,11 +246206,39 @@
           "renamed": "unlinkNode"
         },
         {
+          "start": 6092,
+          "end": 6093,
+          "symbol": "M:bh.a(ZLja;ILja;Z)V",
+          "original": "a",
+          "renamed": "propagateContactConversion"
+        },
+        {
+          "start": 6102,
+          "end": 6108,
+          "symbol": "P:bh.a(ZLja;ILja;Z)V#0",
+          "original": "param0",
+          "renamed": "propagateCategoryAndKind"
+        },
+        {
           "start": 6110,
           "end": 6112,
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
+        },
+        {
+          "start": 6113,
+          "end": 6119,
+          "symbol": "P:bh.a(ZLja;ILja;Z)V#1",
+          "original": "param1",
+          "renamed": "templateEntity"
+        },
+        {
+          "start": 6125,
+          "end": 6131,
+          "symbol": "P:bh.a(ZLja;ILja;Z)V#2",
+          "original": "param2",
+          "renamed": "methodGuard"
         },
         {
           "start": 6133,
@@ -245891,11 +246248,32 @@
           "renamed": "GameplayEntity"
         },
         {
+          "start": 6136,
+          "end": 6142,
+          "symbol": "P:bh.a(ZLja;ILja;Z)V#3",
+          "original": "param3",
+          "renamed": "startingEntity"
+        },
+        {
+          "start": 6152,
+          "end": 6158,
+          "symbol": "P:bh.a(ZLja;ILja;Z)V#4",
+          "original": "param4",
+          "renamed": "propagateVariant"
+        },
+        {
           "start": 6170,
           "end": 6172,
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
+        },
+        {
+          "start": 6173,
+          "end": 6182,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#0",
+          "original": "dupTemp$0",
+          "renamed": "poppedEntity"
         },
         {
           "start": 6199,
@@ -245905,11 +246283,25 @@
           "renamed": "GameplayEntity"
         },
         {
+          "start": 6202,
+          "end": 6211,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#1",
+          "original": "dupTemp$1",
+          "renamed": "neighborForVariantIncrement"
+        },
+        {
           "start": 6228,
           "end": 6230,
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
+        },
+        {
+          "start": 6231,
+          "end": 6240,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#2",
+          "original": "dupTemp$2",
+          "renamed": "neighborForCategoryIncrement"
         },
         {
           "start": 6257,
@@ -245919,11 +246311,60 @@
           "renamed": "GameplayEntity"
         },
         {
+          "start": 6260,
+          "end": 6272,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#3",
+          "original": "stackIn_31_0",
+          "renamed": "neighborVariantWriteTarget"
+        },
+        {
           "start": 6289,
           "end": 6291,
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
+        },
+        {
+          "start": 6292,
+          "end": 6304,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#4",
+          "original": "stackIn_31_1",
+          "renamed": "neighborVariantReadSource"
+        },
+        {
+          "start": 6754,
+          "end": 6756,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
+        },
+        {
+          "start": 6757,
+          "end": 6761,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#15",
+          "original": "var6",
+          "renamed": "processedEntities"
+        },
+        {
+          "start": 6782,
+          "end": 6786,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#16",
+          "original": "var7",
+          "renamed": "templateVariantIndex"
+        },
+        {
+          "start": 6804,
+          "end": 6808,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#17",
+          "original": "var8",
+          "renamed": "templateSpriteKindId"
+        },
+        {
+          "start": 6826,
+          "end": 6830,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#18",
+          "original": "var9",
+          "renamed": "templateCategoryKey"
         },
         {
           "start": 6844,
@@ -245933,11 +246374,137 @@
           "renamed": "GameplayEntity"
         },
         {
+          "start": 6847,
+          "end": 6852,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#19",
+          "original": "var10",
+          "renamed": "currentEntity"
+        },
+        {
+          "start": 6873,
+          "end": 6878,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#20",
+          "original": "var11",
+          "renamed": "neighborIndex"
+        },
+        {
           "start": 6892,
           "end": 6894,
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
+        },
+        {
+          "start": 6895,
+          "end": 6900,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#21",
+          "original": "var12",
+          "renamed": "processedEntityToCompare"
+        },
+        {
+          "start": 6940,
+          "end": 6942,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
+        },
+        {
+          "start": 6943,
+          "end": 6948,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#23",
+          "original": "var14",
+          "renamed": "pendingEntities"
+        },
+        {
+          "start": 6965,
+          "end": 6967,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
+        },
+        {
+          "start": 6968,
+          "end": 6973,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#24",
+          "original": "var15",
+          "renamed": "pendingEntitiesForRemoval"
+        },
+        {
+          "start": 7057,
+          "end": 7062,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#23",
+          "original": "var14",
+          "renamed": "pendingEntities"
+        },
+        {
+          "start": 7069,
+          "end": 7071,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
+        },
+        {
+          "start": 7087,
+          "end": 7092,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#24",
+          "original": "var15",
+          "renamed": "pendingEntitiesForRemoval"
+        },
+        {
+          "start": 7095,
+          "end": 7100,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#23",
+          "original": "var14",
+          "renamed": "pendingEntities"
+        },
+        {
+          "start": 7114,
+          "end": 7118,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#15",
+          "original": "var6",
+          "renamed": "processedEntities"
+        },
+        {
+          "start": 7125,
+          "end": 7127,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
+        },
+        {
+          "start": 7143,
+          "end": 7148,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#24",
+          "original": "var15",
+          "renamed": "pendingEntitiesForRemoval"
+        },
+        {
+          "start": 7149,
+          "end": 7150,
+          "symbol": "M:wd.a(ILrc;)V",
+          "original": "a",
+          "renamed": "addLast"
+        },
+        {
+          "start": 7156,
+          "end": 7162,
+          "symbol": "P:bh.a(ZLja;ILja;Z)V#3",
+          "original": "param3",
+          "renamed": "startingEntity"
+        },
+        {
+          "start": 7177,
+          "end": 7181,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#16",
+          "original": "var7",
+          "renamed": "templateVariantIndex"
+        },
+        {
+          "start": 7184,
+          "end": 7190,
+          "symbol": "P:bh.a(ZLja;ILja;Z)V#1",
+          "original": "param1",
+          "renamed": "templateEntity"
         },
         {
           "start": 7191,
@@ -245947,11 +246514,39 @@
           "renamed": "spriteVariantIndex"
         },
         {
+          "start": 7212,
+          "end": 7216,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#17",
+          "original": "var8",
+          "renamed": "templateSpriteKindId"
+        },
+        {
+          "start": 7219,
+          "end": 7225,
+          "symbol": "P:bh.a(ZLja;ILja;Z)V#1",
+          "original": "param1",
+          "renamed": "templateEntity"
+        },
+        {
           "start": 7226,
           "end": 7233,
           "symbol": "F:ja.field_z:I",
           "original": "field_z",
           "renamed": "entitySpriteKindId"
+        },
+        {
+          "start": 7247,
+          "end": 7251,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#18",
+          "original": "var9",
+          "renamed": "templateCategoryKey"
+        },
+        {
+          "start": 7254,
+          "end": 7260,
+          "symbol": "P:bh.a(ZLja;ILja;Z)V#1",
+          "original": "param1",
+          "renamed": "templateEntity"
         },
         {
           "start": 7261,
@@ -245961,11 +246556,74 @@
           "renamed": "entityCategoryKey"
         },
         {
+          "start": 7315,
+          "end": 7324,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#0",
+          "original": "dupTemp$0",
+          "renamed": "poppedEntity"
+        },
+        {
           "start": 7328,
           "end": 7330,
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
+        },
+        {
+          "start": 7342,
+          "end": 7347,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#24",
+          "original": "var15",
+          "renamed": "pendingEntitiesForRemoval"
+        },
+        {
+          "start": 7348,
+          "end": 7349,
+          "symbol": "M:wd.a(Z)Lrc;",
+          "original": "a",
+          "renamed": "removeFirst"
+        },
+        {
+          "start": 7372,
+          "end": 7377,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#19",
+          "original": "var10",
+          "renamed": "currentEntity"
+        },
+        {
+          "start": 7380,
+          "end": 7389,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#0",
+          "original": "dupTemp$0",
+          "renamed": "poppedEntity"
+        },
+        {
+          "start": 7417,
+          "end": 7426,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#0",
+          "original": "dupTemp$0",
+          "renamed": "poppedEntity"
+        },
+        {
+          "start": 7450,
+          "end": 7456,
+          "symbol": "P:bh.a(ZLja;ILja;Z)V#2",
+          "original": "param2",
+          "renamed": "methodGuard"
+        },
+        {
+          "start": 7588,
+          "end": 7594,
+          "symbol": "P:bh.a(ZLja;ILja;Z)V#4",
+          "original": "param4",
+          "renamed": "propagateVariant"
+        },
+        {
+          "start": 7616,
+          "end": 7621,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#19",
+          "original": "var10",
+          "renamed": "currentEntity"
         },
         {
           "start": 7622,
@@ -245975,11 +246633,46 @@
           "renamed": "configureEntitySprite"
         },
         {
+          "start": 7624,
+          "end": 7630,
+          "symbol": "P:bh.a(ZLja;ILja;Z)V#2",
+          "original": "param2",
+          "renamed": "methodGuard"
+        },
+        {
+          "start": 7638,
+          "end": 7643,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#19",
+          "original": "var10",
+          "renamed": "currentEntity"
+        },
+        {
           "start": 7644,
           "end": 7651,
           "symbol": "F:ja.field_C:I",
           "original": "field_C",
           "renamed": "entityCategoryKey"
+        },
+        {
+          "start": 7653,
+          "end": 7657,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#16",
+          "original": "var7",
+          "renamed": "templateVariantIndex"
+        },
+        {
+          "start": 7701,
+          "end": 7707,
+          "symbol": "P:bh.a(ZLja;ILja;Z)V#0",
+          "original": "param0",
+          "renamed": "propagateCategoryAndKind"
+        },
+        {
+          "start": 7733,
+          "end": 7738,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#19",
+          "original": "var10",
+          "renamed": "currentEntity"
         },
         {
           "start": 7739,
@@ -245989,11 +246682,25 @@
           "renamed": "entitySpriteKindId"
         },
         {
+          "start": 7775,
+          "end": 7780,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#19",
+          "original": "var10",
+          "renamed": "currentEntity"
+        },
+        {
           "start": 7781,
           "end": 7788,
           "symbol": "F:ja.field_B:Z",
           "original": "field_B",
           "renamed": "detachedFromBoard"
+        },
+        {
+          "start": 7817,
+          "end": 7822,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#19",
+          "original": "var10",
+          "renamed": "currentEntity"
         },
         {
           "start": 7823,
@@ -246010,11 +246717,32 @@
           "renamed": "movingEntities"
         },
         {
+          "start": 7883,
+          "end": 7888,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#19",
+          "original": "var10",
+          "renamed": "currentEntity"
+        },
+        {
           "start": 7889,
           "end": 7890,
           "symbol": "M:ja.a(IIII)V",
           "original": "a",
           "renamed": "configureEntitySprite"
+        },
+        {
+          "start": 7896,
+          "end": 7900,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#18",
+          "original": "var9",
+          "renamed": "templateCategoryKey"
+        },
+        {
+          "start": 7902,
+          "end": 7907,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#19",
+          "original": "var10",
+          "renamed": "currentEntity"
         },
         {
           "start": 7908,
@@ -246024,11 +246752,67 @@
           "renamed": "spriteVariantIndex"
         },
         {
+          "start": 7917,
+          "end": 7921,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#17",
+          "original": "var8",
+          "renamed": "templateSpriteKindId"
+        },
+        {
+          "start": 7958,
+          "end": 7963,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#20",
+          "original": "var11",
+          "renamed": "neighborIndex"
+        },
+        {
+          "start": 8026,
+          "end": 8031,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#20",
+          "original": "var11",
+          "renamed": "neighborIndex"
+        },
+        {
+          "start": 8035,
+          "end": 8040,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#19",
+          "original": "var10",
+          "renamed": "currentEntity"
+        },
+        {
           "start": 8041,
           "end": 8048,
           "symbol": "F:ja.field_L:I",
           "original": "field_L",
           "renamed": "relatedEntityCount"
+        },
+        {
+          "start": 8072,
+          "end": 8076,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#15",
+          "original": "var6",
+          "renamed": "processedEntities"
+        },
+        {
+          "start": 8077,
+          "end": 8078,
+          "symbol": "M:wd.a(Lrc;Z)V",
+          "original": "a",
+          "renamed": "addFirst"
+        },
+        {
+          "start": 8079,
+          "end": 8084,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#19",
+          "original": "var10",
+          "renamed": "currentEntity"
+        },
+        {
+          "start": 8206,
+          "end": 8211,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#19",
+          "original": "var10",
+          "renamed": "currentEntity"
         },
         {
           "start": 8212,
@@ -246038,11 +246822,32 @@
           "renamed": "relatedEntities"
         },
         {
+          "start": 8220,
+          "end": 8225,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#20",
+          "original": "var11",
+          "renamed": "neighborIndex"
+        },
+        {
           "start": 8227,
           "end": 8234,
           "symbol": "F:ja.field_z:I",
           "original": "field_z",
           "renamed": "entitySpriteKindId"
+        },
+        {
+          "start": 8271,
+          "end": 8277,
+          "symbol": "P:bh.a(ZLja;ILja;Z)V#4",
+          "original": "param4",
+          "renamed": "propagateVariant"
+        },
+        {
+          "start": 8398,
+          "end": 8403,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#19",
+          "original": "var10",
+          "renamed": "currentEntity"
         },
         {
           "start": 8404,
@@ -246052,11 +246857,46 @@
           "renamed": "relatedEntities"
         },
         {
+          "start": 8412,
+          "end": 8417,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#20",
+          "original": "var11",
+          "renamed": "neighborIndex"
+        },
+        {
           "start": 8419,
           "end": 8426,
           "symbol": "F:ja.field_z:I",
           "original": "field_z",
           "renamed": "entitySpriteKindId"
+        },
+        {
+          "start": 8459,
+          "end": 8465,
+          "symbol": "P:bh.a(ZLja;ILja;Z)V#0",
+          "original": "param0",
+          "renamed": "propagateCategoryAndKind"
+        },
+        {
+          "start": 8495,
+          "end": 8500,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#20",
+          "original": "var11",
+          "renamed": "neighborIndex"
+        },
+        {
+          "start": 8624,
+          "end": 8629,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#20",
+          "original": "var11",
+          "renamed": "neighborIndex"
+        },
+        {
+          "start": 8736,
+          "end": 8741,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#21",
+          "original": "var12",
+          "renamed": "processedEntityToCompare"
         },
         {
           "start": 8745,
@@ -246066,11 +246906,53 @@
           "renamed": "GameplayEntity"
         },
         {
+          "start": 8759,
+          "end": 8763,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#15",
+          "original": "var6",
+          "renamed": "processedEntities"
+        },
+        {
+          "start": 8764,
+          "end": 8765,
+          "symbol": "M:wd.c(B)Lrc;",
+          "original": "c",
+          "renamed": "firstForIteration"
+        },
+        {
+          "start": 8845,
+          "end": 8850,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#21",
+          "original": "var12",
+          "renamed": "processedEntityToCompare"
+        },
+        {
+          "start": 8890,
+          "end": 8896,
+          "symbol": "P:bh.a(ZLja;ILja;Z)V#4",
+          "original": "param4",
+          "renamed": "propagateVariant"
+        },
+        {
+          "start": 8926,
+          "end": 8931,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#19",
+          "original": "var10",
+          "renamed": "currentEntity"
+        },
+        {
           "start": 8932,
           "end": 8939,
           "symbol": "F:ja.field_m:I",
           "original": "field_m",
           "renamed": "sameVariantEntityCount"
+        },
+        {
+          "start": 8942,
+          "end": 8947,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#19",
+          "original": "var10",
+          "renamed": "currentEntity"
         },
         {
           "start": 8948,
@@ -246080,11 +246962,39 @@
           "renamed": "sameVariantEntityCount"
         },
         {
+          "start": 8987,
+          "end": 8996,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#1",
+          "original": "dupTemp$1",
+          "renamed": "neighborForVariantIncrement"
+        },
+        {
+          "start": 8999,
+          "end": 9004,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#19",
+          "original": "var10",
+          "renamed": "currentEntity"
+        },
+        {
           "start": 9005,
           "end": 9012,
           "symbol": "F:ja.field_n:[Lja;",
           "original": "field_n",
           "renamed": "relatedEntities"
+        },
+        {
+          "start": 9013,
+          "end": 9018,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#20",
+          "original": "var11",
+          "renamed": "neighborIndex"
+        },
+        {
+          "start": 9047,
+          "end": 9059,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#3",
+          "original": "stackIn_31_0",
+          "renamed": "neighborVariantWriteTarget"
         },
         {
           "start": 9063,
@@ -246094,11 +247004,39 @@
           "renamed": "GameplayEntity"
         },
         {
+          "start": 9068,
+          "end": 9077,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#1",
+          "original": "dupTemp$1",
+          "renamed": "neighborForVariantIncrement"
+        },
+        {
+          "start": 9106,
+          "end": 9118,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#4",
+          "original": "stackIn_31_1",
+          "renamed": "neighborVariantReadSource"
+        },
+        {
           "start": 9122,
           "end": 9124,
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
+        },
+        {
+          "start": 9127,
+          "end": 9136,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#1",
+          "original": "dupTemp$1",
+          "renamed": "neighborForVariantIncrement"
+        },
+        {
+          "start": 9165,
+          "end": 9177,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#3",
+          "original": "stackIn_31_0",
+          "renamed": "neighborVariantWriteTarget"
         },
         {
           "start": 9178,
@@ -246108,11 +247046,32 @@
           "renamed": "sameVariantEntityCount"
         },
         {
+          "start": 9188,
+          "end": 9200,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#4",
+          "original": "stackIn_31_1",
+          "renamed": "neighborVariantReadSource"
+        },
+        {
           "start": 9201,
           "end": 9208,
           "symbol": "F:ja.field_m:I",
           "original": "field_m",
           "renamed": "sameVariantEntityCount"
+        },
+        {
+          "start": 9268,
+          "end": 9274,
+          "symbol": "P:bh.a(ZLja;ILja;Z)V#0",
+          "original": "param0",
+          "renamed": "propagateCategoryAndKind"
+        },
+        {
+          "start": 9304,
+          "end": 9309,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#19",
+          "original": "var10",
+          "renamed": "currentEntity"
         },
         {
           "start": 9310,
@@ -246122,11 +247081,25 @@
           "renamed": "spriteAngleRadians"
         },
         {
+          "start": 9320,
+          "end": 9326,
+          "symbol": "P:bh.a(ZLja;ILja;Z)V#1",
+          "original": "param1",
+          "renamed": "templateEntity"
+        },
+        {
           "start": 9327,
           "end": 9334,
           "symbol": "F:ja.field_u:F",
           "original": "field_u",
           "renamed": "spriteAngleRadians"
+        },
+        {
+          "start": 9362,
+          "end": 9367,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#19",
+          "original": "var10",
+          "renamed": "currentEntity"
         },
         {
           "start": 9368,
@@ -246136,11 +247109,32 @@
           "renamed": "sameCategoryEntityCount"
         },
         {
+          "start": 9378,
+          "end": 9383,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#19",
+          "original": "var10",
+          "renamed": "currentEntity"
+        },
+        {
           "start": 9384,
           "end": 9391,
           "symbol": "F:ja.field_N:I",
           "original": "field_N",
           "renamed": "sameCategoryEntityCount"
+        },
+        {
+          "start": 9423,
+          "end": 9432,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#2",
+          "original": "dupTemp$2",
+          "renamed": "neighborForCategoryIncrement"
+        },
+        {
+          "start": 9435,
+          "end": 9440,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#19",
+          "original": "var10",
+          "renamed": "currentEntity"
         },
         {
           "start": 9441,
@@ -246150,11 +247144,32 @@
           "renamed": "relatedEntities"
         },
         {
+          "start": 9449,
+          "end": 9454,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#20",
+          "original": "var11",
+          "renamed": "neighborIndex"
+        },
+        {
+          "start": 9483,
+          "end": 9492,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#2",
+          "original": "dupTemp$2",
+          "renamed": "neighborForCategoryIncrement"
+        },
+        {
           "start": 9493,
           "end": 9500,
           "symbol": "F:ja.field_N:I",
           "original": "field_N",
           "renamed": "sameCategoryEntityCount"
+        },
+        {
+          "start": 9503,
+          "end": 9512,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#2",
+          "original": "dupTemp$2",
+          "renamed": "neighborForCategoryIncrement"
         },
         {
           "start": 9513,
@@ -246164,6 +247179,27 @@
           "renamed": "sameCategoryEntityCount"
         },
         {
+          "start": 9576,
+          "end": 9581,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#23",
+          "original": "var14",
+          "renamed": "pendingEntities"
+        },
+        {
+          "start": 9582,
+          "end": 9583,
+          "symbol": "M:wd.a(Lrc;Z)V",
+          "original": "a",
+          "renamed": "addFirst"
+        },
+        {
+          "start": 9584,
+          "end": 9589,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#19",
+          "original": "var10",
+          "renamed": "currentEntity"
+        },
+        {
           "start": 9590,
           "end": 9597,
           "symbol": "F:ja.field_n:[Lja;",
@@ -246171,11 +247207,109 @@
           "renamed": "relatedEntities"
         },
         {
+          "start": 9598,
+          "end": 9603,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#20",
+          "original": "var11",
+          "renamed": "neighborIndex"
+        },
+        {
+          "start": 9638,
+          "end": 9643,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#20",
+          "original": "var11",
+          "renamed": "neighborIndex"
+        },
+        {
+          "start": 9743,
+          "end": 9748,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#19",
+          "original": "var10",
+          "renamed": "currentEntity"
+        },
+        {
+          "start": 9752,
+          "end": 9757,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#21",
+          "original": "var12",
+          "renamed": "processedEntityToCompare"
+        },
+        {
+          "start": 9787,
+          "end": 9792,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#21",
+          "original": "var12",
+          "renamed": "processedEntityToCompare"
+        },
+        {
           "start": 9796,
           "end": 9798,
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
+        },
+        {
+          "start": 9810,
+          "end": 9814,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#15",
+          "original": "var6",
+          "renamed": "processedEntities"
+        },
+        {
+          "start": 9815,
+          "end": 9816,
+          "symbol": "M:wd.a(I)Lrc;",
+          "original": "a",
+          "renamed": "nextForIteration"
+        },
+        {
+          "start": 9817,
+          "end": 9823,
+          "symbol": "P:bh.a(ZLja;ILja;Z)V#2",
+          "original": "param2",
+          "renamed": "methodGuard"
+        },
+        {
+          "start": 9931,
+          "end": 9936,
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#20",
+          "original": "var11",
+          "renamed": "neighborIndex"
+        },
+        {
+          "start": 10436,
+          "end": 10442,
+          "symbol": "P:bh.a(ZLja;ILja;Z)V#0",
+          "original": "param0",
+          "renamed": "propagateCategoryAndKind"
+        },
+        {
+          "start": 10472,
+          "end": 10478,
+          "symbol": "P:bh.a(ZLja;ILja;Z)V#1",
+          "original": "param1",
+          "renamed": "templateEntity"
+        },
+        {
+          "start": 10977,
+          "end": 10983,
+          "symbol": "P:bh.a(ZLja;ILja;Z)V#2",
+          "original": "param2",
+          "renamed": "methodGuard"
+        },
+        {
+          "start": 11013,
+          "end": 11019,
+          "symbol": "P:bh.a(ZLja;ILja;Z)V#3",
+          "original": "param3",
+          "renamed": "startingEntity"
+        },
+        {
+          "start": 11548,
+          "end": 11554,
+          "symbol": "P:bh.a(ZLja;ILja;Z)V#4",
+          "original": "param4",
+          "renamed": "propagateVariant"
         },
         {
           "start": 11911,
@@ -246542,7 +247676,7 @@
       "original": "bk.java",
       "renamed": "bk.java",
       "inputSha256": "d62eb37c1efdad4d9fc94d2b1220946ea98726e430cb5e14787d643782d38020",
-      "outputSha256": "cd2a9aec8a3d0fb38a523971a07620843a7c6d56e3ac3fcecdb6601f4b9a44ac",
+      "outputSha256": "f52e342f91e3d3bfb339e4c6352e530292a5a687419957b251b3c49d1c082aae",
       "edits": [
         {
           "start": 66,
@@ -246606,6 +247740,13 @@
           "symbol": "F:bk.field_a:Ldm;",
           "original": "field_a",
           "renamed": "boardOwnershipRaster"
+        },
+        {
+          "start": 2849,
+          "end": 2851,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
         },
         {
           "start": 3466,
@@ -246720,7 +247861,7 @@
       "original": "c.java",
       "renamed": "GameScreen.java",
       "inputSha256": "a463bb63dacb34c9d81bde50758a1057ec66224ffb239e29ab8bca45be9b8b7b",
-      "outputSha256": "432fa0ccd898f48e240dc56ab5505e1f95bcfacfc872b75dd17c0fc75fb0c5aa",
+      "outputSha256": "befa5d7efd53f03b7db56d96c9c952e35a4c46a485b668b79d6226998c0a84e0",
       "edits": [
         {
           "start": 50,
@@ -248205,6 +249346,13 @@
           "symbol": "F:gh.field_o:I",
           "original": "field_o",
           "renamed": "score"
+        },
+        {
+          "start": 55022,
+          "end": 55024,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
         },
         {
           "start": 55165,
@@ -253093,7 +254241,7 @@
       "original": "cm.java",
       "renamed": "cm.java",
       "inputSha256": "17e2aba7af04895b12f0fe7e84ae3f3cc85fe3dd3ee6bca05911b449dbe45b8b",
-      "outputSha256": "10ad4e659619f981be8bbbb27ddbb4076cfcd99230e4e9bb4adfa03e907ec120",
+      "outputSha256": "907addc9a09b6198263ff01b57f8f3e3a28a19016d64d07bd1a61544ecdb17d6",
       "edits": [
         {
           "start": 129,
@@ -253115,6 +254263,20 @@
           "symbol": "M:tf.d(I)Lhf;",
           "original": "d",
           "renamed": "nextForIteration"
+        },
+        {
+          "start": 2246,
+          "end": 2248,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
+        },
+        {
+          "start": 4704,
+          "end": 4706,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
         },
         {
           "start": 6464,
@@ -274554,7 +275716,7 @@
       "original": "gh.java",
       "renamed": "GameplaySession.java",
       "inputSha256": "6e39ba682f51bb6e758c1e9cb4277a95a1fdedf007a1b8be571b618a04eb6b4d",
-      "outputSha256": "4118b066c4cebf8b7bd0399910fc9b9a2e488e077915a77f587ecdcb55190bc9",
+      "outputSha256": "2e744dc6ecd9f0e39d47e83f70bc4e521acd691111c9b518031639ede5f88032",
       "edits": [
         {
           "start": 50,
@@ -275577,6 +276739,13 @@
           "symbol": "C:vb",
           "original": "vb",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 16494,
+          "end": 16496,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
         },
         {
           "start": 16497,
@@ -276921,6 +278090,13 @@
           "symbol": "F:rc.field_h:F",
           "original": "field_h",
           "renamed": "rotationStepRadians"
+        },
+        {
+          "start": 33203,
+          "end": 33205,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
         },
         {
           "start": 33247,
@@ -283975,7 +285151,7 @@
       "original": "ih.java",
       "renamed": "ih.java",
       "inputSha256": "2593deffa871df4a77b45e67239108807c74556e21f86574096bc86a11c72fdc",
-      "outputSha256": "46f2613e0764b498ccc9203966ec97b9b75046aefed20ab1f7d83df75ec91ac1",
+      "outputSha256": "9cc6e990c19fd24b01b39be0413d09a37b49f145d13d93f3e81ce0712537d9f4",
       "edits": [
         {
           "start": 73,
@@ -284004,6 +285180,13 @@
           "symbol": "M:tf.c(I)Z",
           "original": "c",
           "renamed": "isEmpty"
+        },
+        {
+          "start": 920,
+          "end": 922,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
         },
         {
           "start": 923,
@@ -284818,7 +286001,7 @@
       "original": "ik.java",
       "renamed": "ik.java",
       "inputSha256": "01701988f4028781e1919a8afc711b6bb30c9a2f82449fae2aec76ab9875d8d2",
-      "outputSha256": "3349ad4ac63689cbff6907f463408e68fa3fc9c81ad665e22b87048561d6add9",
+      "outputSha256": "9ccc2f580b651ed77c73dfefdc7180bd177bf5ecc90e215030fb3ac485c4b70d",
       "edits": [
         {
           "start": 97,
@@ -285939,6 +287122,13 @@
           "symbol": "L:ik.a(Lja;Lja;Z)Z#21",
           "original": "var6_int",
           "renamed": "propagateCategory"
+        },
+        {
+          "start": 6801,
+          "end": 6802,
+          "symbol": "M:bh.a(ZLja;ILja;Z)V",
+          "original": "a",
+          "renamed": "propagateContactConversion"
         },
         {
           "start": 6803,
@@ -290113,7 +291303,7 @@
       "original": "ja.java",
       "renamed": "GameplayEntity.java",
       "inputSha256": "963465f2c0be6200fb41f2c01bf08c33ee020986cbaf15ddde6ec081324545e2",
-      "outputSha256": "5142b6928a0ad87753966491c10c87f0e6027cd84189eed05458d4f694583154",
+      "outputSha256": "a63ce33cf45e9a2c1eec7e442f169091d17cd3f279c5ea690b6607a6a8f83407",
       "edits": [
         {
           "start": 50,
@@ -292958,6 +294148,13 @@
           "renamed": "entityId"
         },
         {
+          "start": 11449,
+          "end": 11451,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
+        },
+        {
           "start": 11452,
           "end": 11459,
           "symbol": "F:wd.field_b:Ldm;",
@@ -292972,6 +294169,13 @@
           "renamed": "spriteScratchRaster"
         },
         {
+          "start": 11487,
+          "end": 11489,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
+        },
+        {
           "start": 11505,
           "end": 11512,
           "symbol": "F:vf.field_L:Ldm;",
@@ -292984,6 +294188,13 @@
           "symbol": "F:vf.field_L:Ldm;",
           "original": "field_L",
           "renamed": "spriteScratchRaster"
+        },
+        {
+          "start": 11602,
+          "end": 11604,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
         },
         {
           "start": 11624,
@@ -294498,11 +295709,25 @@
           "renamed": "rotatedEntityX"
         },
         {
+          "start": 19287,
+          "end": 19289,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
+        },
+        {
           "start": 19308,
           "end": 19312,
           "symbol": "L:ja.j(I)V#6",
           "original": "var7",
           "renamed": "clipTopY"
+        },
+        {
+          "start": 19316,
+          "end": 19318,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
         },
         {
           "start": 19335,
@@ -294582,6 +295807,13 @@
           "renamed": "spriteScratchRaster"
         },
         {
+          "start": 19542,
+          "end": 19544,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
+        },
+        {
           "start": 19545,
           "end": 19552,
           "symbol": "F:wd.field_b:Ldm;",
@@ -294622,6 +295854,13 @@
           "symbol": "L:ja.j(I)V#5",
           "original": "var6",
           "renamed": "clipLeftX"
+        },
+        {
+          "start": 19603,
+          "end": 19605,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
         },
         {
           "start": 19606,
@@ -294687,6 +295926,13 @@
           "renamed": "clippedSpriteHeight"
         },
         {
+          "start": 19743,
+          "end": 19745,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
+        },
+        {
           "start": 19746,
           "end": 19753,
           "symbol": "F:wd.field_b:Ldm;",
@@ -294706,6 +295952,13 @@
           "symbol": "L:ja.j(I)V#8",
           "original": "var9",
           "renamed": "clippedSpriteHeight"
+        },
+        {
+          "start": 19782,
+          "end": 19784,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
         },
         {
           "start": 19785,
@@ -294734,6 +295987,13 @@
           "symbol": "L:ja.j(I)V#9",
           "original": "var10",
           "renamed": "framebufferIndex"
+        },
+        {
+          "start": 19835,
+          "end": 19837,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
         },
         {
           "start": 19838,
@@ -294785,6 +296045,13 @@
           "renamed": "clippedSpriteWidth"
         },
         {
+          "start": 19964,
+          "end": 19966,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
+        },
+        {
           "start": 19967,
           "end": 19974,
           "symbol": "F:wd.field_b:Ldm;",
@@ -294804,6 +296071,13 @@
           "symbol": "L:ja.j(I)V#13",
           "original": "var18",
           "renamed": "backgroundPixels"
+        },
+        {
+          "start": 20000,
+          "end": 20002,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
         },
         {
           "start": 20003,
@@ -296721,8 +297995,15 @@
       "original": "ji.java",
       "renamed": "ji.java",
       "inputSha256": "7b9b351f00dec5d3dfb5c183bbf2a05316562598ca02b3158058d522fe4c261b",
-      "outputSha256": "ace631b70cf91e078e636113b6beb3d3100f2fed5ccdcf265b9abfe2ff712e60",
+      "outputSha256": "33baa06ba97fd8937a144cded50bb492c5a796671ae4d0aae0e15844f2fec689",
       "edits": [
+        {
+          "start": 62,
+          "end": 64,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
+        },
         {
           "start": 85,
           "end": 87,
@@ -296745,11 +298026,25 @@
           "renamed": "createWelcomeText"
         },
         {
+          "start": 128,
+          "end": 130,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
+        },
+        {
           "start": 155,
           "end": 162,
           "symbol": "F:ji.field_h:I",
           "original": "field_h",
           "renamed": "difficultyStep"
+        },
+        {
+          "start": 168,
+          "end": 170,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
         },
         {
           "start": 198,
@@ -296766,11 +298061,95 @@
           "renamed": "waitingForMusicText"
         },
         {
+          "start": 267,
+          "end": 269,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
+        },
+        {
+          "start": 2250,
+          "end": 2251,
+          "symbol": "M:wd.a(ILrc;)V",
+          "original": "a",
+          "renamed": "addLast"
+        },
+        {
+          "start": 2410,
+          "end": 2411,
+          "symbol": "M:wd.a(ILrc;)V",
+          "original": "a",
+          "renamed": "addLast"
+        },
+        {
+          "start": 2532,
+          "end": 2534,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
+        },
+        {
+          "start": 2660,
+          "end": 2661,
+          "symbol": "M:wd.b(B)I",
+          "original": "b",
+          "renamed": "countNodes"
+        },
+        {
+          "start": 2688,
+          "end": 2689,
+          "symbol": "M:wd.b(B)I",
+          "original": "b",
+          "renamed": "countNodes"
+        },
+        {
+          "start": 2770,
+          "end": 2771,
+          "symbol": "M:wd.b(B)I",
+          "original": "b",
+          "renamed": "countNodes"
+        },
+        {
+          "start": 2798,
+          "end": 2799,
+          "symbol": "M:wd.b(B)I",
+          "original": "b",
+          "renamed": "countNodes"
+        },
+        {
           "start": 3803,
           "end": 3810,
           "symbol": "F:ji.field_l:Ljava/lang/String;",
           "original": "field_l",
           "renamed": "createWelcomeText"
+        },
+        {
+          "start": 4008,
+          "end": 4009,
+          "symbol": "M:wd.b(B)I",
+          "original": "b",
+          "renamed": "countNodes"
+        },
+        {
+          "start": 4036,
+          "end": 4037,
+          "symbol": "M:wd.b(B)I",
+          "original": "b",
+          "renamed": "countNodes"
+        },
+        {
+          "start": 4116,
+          "end": 4117,
+          "symbol": "M:wd.b(B)I",
+          "original": "b",
+          "renamed": "countNodes"
+        },
+        {
+          "start": 4144,
+          "end": 4145,
+          "symbol": "M:wd.b(B)I",
+          "original": "b",
+          "renamed": "countNodes"
         },
         {
           "start": 7554,
@@ -296841,6 +298220,34 @@
           "symbol": "F:ji.field_l:Ljava/lang/String;",
           "original": "field_l",
           "renamed": "createWelcomeText"
+        },
+        {
+          "start": 8197,
+          "end": 8199,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
+        },
+        {
+          "start": 8230,
+          "end": 8232,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
+        },
+        {
+          "start": 8263,
+          "end": 8265,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
+        },
+        {
+          "start": 8296,
+          "end": 8298,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
         },
         {
           "start": 8484,
@@ -298274,7 +299681,7 @@
       "original": "kc.java",
       "renamed": "kc.java",
       "inputSha256": "54b618bab0d64b0e087a54c524ee0dfd2ca5b88a78223e1bd679b987ec79fab2",
-      "outputSha256": "61249cc1416a0fca065bf787aa6dbe4ba064fa43a6d817083987894194c5ffcf",
+      "outputSha256": "c3b3c30794ebf5902f15336c70872178fdb7d87741c7be43f5f9e1f55ed877a8",
       "edits": [
         {
           "start": 97,
@@ -298487,6 +299894,13 @@
           "renamed": "entityCandidate"
         },
         {
+          "start": 3667,
+          "end": 3669,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
+        },
+        {
           "start": 3692,
           "end": 3694,
           "symbol": "C:ja",
@@ -298499,6 +299913,13 @@
           "symbol": "L:kc.b(I)V#42",
           "original": "var12",
           "renamed": "parentEntity"
+        },
+        {
+          "start": 3717,
+          "end": 3719,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
         },
         {
           "start": 3811,
@@ -298788,6 +300209,27 @@
           "renamed": "entityId"
         },
         {
+          "start": 6105,
+          "end": 6107,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
+        },
+        {
+          "start": 6151,
+          "end": 6153,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
+        },
+        {
+          "start": 6191,
+          "end": 6192,
+          "symbol": "M:wd.a(Lrc;Z)V",
+          "original": "a",
+          "renamed": "addFirst"
+        },
+        {
           "start": 6193,
           "end": 6197,
           "symbol": "L:kc.b(I)V#21",
@@ -298800,6 +300242,13 @@
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
+        },
+        {
+          "start": 6363,
+          "end": 6364,
+          "symbol": "M:wd.a(Z)Lrc;",
+          "original": "a",
+          "renamed": "removeFirst"
         },
         {
           "start": 6539,
@@ -298879,6 +300328,13 @@
           "renamed": "touchesAvatar"
         },
         {
+          "start": 7526,
+          "end": 7527,
+          "symbol": "M:wd.a(Lrc;Z)V",
+          "original": "a",
+          "renamed": "addFirst"
+        },
+        {
           "start": 7528,
           "end": 7533,
           "symbol": "L:kc.b(I)V#42",
@@ -298942,6 +300398,13 @@
           "renamed": "GameplayEntity"
         },
         {
+          "start": 7942,
+          "end": 7943,
+          "symbol": "M:wd.c(B)Lrc;",
+          "original": "c",
+          "renamed": "firstForIteration"
+        },
+        {
           "start": 8187,
           "end": 8191,
           "symbol": "L:kc.b(I)V#38",
@@ -298991,6 +300454,13 @@
           "renamed": "GameplayEntity"
         },
         {
+          "start": 9295,
+          "end": 9296,
+          "symbol": "M:wd.a(I)Lrc;",
+          "original": "a",
+          "renamed": "nextForIteration"
+        },
+        {
           "start": 9681,
           "end": 9685,
           "symbol": "L:kc.b(I)V#38",
@@ -299003,6 +300473,13 @@
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
+        },
+        {
+          "start": 9709,
+          "end": 9710,
+          "symbol": "M:wd.c(B)Lrc;",
+          "original": "c",
+          "renamed": "firstForIteration"
         },
         {
           "start": 9791,
@@ -299045,6 +300522,20 @@
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
+        },
+        {
+          "start": 10504,
+          "end": 10505,
+          "symbol": "M:wd.a(I)Lrc;",
+          "original": "a",
+          "renamed": "nextForIteration"
+        },
+        {
+          "start": 11024,
+          "end": 11025,
+          "symbol": "M:wd.a(Lrc;Z)V",
+          "original": "a",
+          "renamed": "addFirst"
         },
         {
           "start": 11350,
@@ -299215,6 +300706,13 @@
           "renamed": "GameplayEntity"
         },
         {
+          "start": 13232,
+          "end": 13233,
+          "symbol": "M:wd.a(Z)Lrc;",
+          "original": "a",
+          "renamed": "removeFirst"
+        },
+        {
           "start": 14317,
           "end": 14325,
           "symbol": "L:kc.b(I)V#34",
@@ -299290,6 +300788,13 @@
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
+        },
+        {
+          "start": 14872,
+          "end": 14873,
+          "symbol": "M:wd.a(Z)Lrc;",
+          "original": "a",
+          "renamed": "removeFirst"
         },
         {
           "start": 15033,
@@ -299416,6 +300921,13 @@
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
+        },
+        {
+          "start": 17381,
+          "end": 17382,
+          "symbol": "M:wd.a(Z)Lrc;",
+          "original": "a",
+          "renamed": "removeFirst"
         },
         {
           "start": 17538,
@@ -299563,6 +301075,13 @@
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
+        },
+        {
+          "start": 21146,
+          "end": 21147,
+          "symbol": "M:wd.a(Z)Lrc;",
+          "original": "a",
+          "renamed": "removeFirst"
         },
         {
           "start": 21250,
@@ -299766,6 +301285,13 @@
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
+        },
+        {
+          "start": 23145,
+          "end": 23146,
+          "symbol": "M:wd.a(Z)Lrc;",
+          "original": "a",
+          "renamed": "removeFirst"
         },
         {
           "start": 23676,
@@ -301628,7 +303154,7 @@
       "original": "kk.java",
       "renamed": "kk.java",
       "inputSha256": "92eea61eb37df261e5ab9f0815c27d048b4bb2a7330157041fb0838197ab5090",
-      "outputSha256": "908e9d186606d6df2b190fa2b2b0306ad07884c2dfa755a3dd6e1c2f37277dab",
+      "outputSha256": "1aaaf4dfd0a0c21cce4a33d62c82f37827a254ff75cfa6aa154de67f9beae45d",
       "edits": [
         {
           "start": 200,
@@ -301645,11 +303171,109 @@
           "renamed": "loginUsernameTooltipText"
         },
         {
+          "start": 2197,
+          "end": 2198,
+          "symbol": "M:wd.c(B)Lrc;",
+          "original": "c",
+          "renamed": "firstForIteration"
+        },
+        {
+          "start": 2546,
+          "end": 2547,
+          "symbol": "M:wd.a(ILrc;)V",
+          "original": "a",
+          "renamed": "addLast"
+        },
+        {
+          "start": 2615,
+          "end": 2616,
+          "symbol": "M:wd.a(I)Lrc;",
+          "original": "a",
+          "renamed": "nextForIteration"
+        },
+        {
+          "start": 2705,
+          "end": 2706,
+          "symbol": "M:wd.c(B)Lrc;",
+          "original": "c",
+          "renamed": "firstForIteration"
+        },
+        {
+          "start": 3143,
+          "end": 3144,
+          "symbol": "M:wd.a(ILrc;)V",
+          "original": "a",
+          "renamed": "addLast"
+        },
+        {
+          "start": 3212,
+          "end": 3213,
+          "symbol": "M:wd.a(I)Lrc;",
+          "original": "a",
+          "renamed": "nextForIteration"
+        },
+        {
           "start": 5527,
           "end": 5528,
           "symbol": "M:rc.a(B)V",
           "original": "a",
           "renamed": "unlinkSecondaryNode"
+        },
+        {
+          "start": 7851,
+          "end": 7852,
+          "symbol": "M:wd.c(B)Lrc;",
+          "original": "c",
+          "renamed": "firstForIteration"
+        },
+        {
+          "start": 8240,
+          "end": 8241,
+          "symbol": "M:wd.a(I)Lrc;",
+          "original": "a",
+          "renamed": "nextForIteration"
+        },
+        {
+          "start": 8646,
+          "end": 8647,
+          "symbol": "M:wd.c(B)Lrc;",
+          "original": "c",
+          "renamed": "firstForIteration"
+        },
+        {
+          "start": 9037,
+          "end": 9038,
+          "symbol": "M:wd.a(I)Lrc;",
+          "original": "a",
+          "renamed": "nextForIteration"
+        },
+        {
+          "start": 19209,
+          "end": 19210,
+          "symbol": "M:wd.a(Z)Lrc;",
+          "original": "a",
+          "renamed": "removeFirst"
+        },
+        {
+          "start": 19454,
+          "end": 19455,
+          "symbol": "M:wd.a(Z)Lrc;",
+          "original": "a",
+          "renamed": "removeFirst"
+        },
+        {
+          "start": 19547,
+          "end": 19548,
+          "symbol": "M:wd.a(ILrc;)V",
+          "original": "a",
+          "renamed": "addLast"
+        },
+        {
+          "start": 21143,
+          "end": 21144,
+          "symbol": "M:wd.a(ILrc;)V",
+          "original": "a",
+          "renamed": "addLast"
         },
         {
           "start": 26952,
@@ -304279,7 +305903,7 @@
       "original": "lc.java",
       "renamed": "lc.java",
       "inputSha256": "7b6215f5a816919f33a21cfa502db141b923b16639ae9b1175e4f2c3ef94e954",
-      "outputSha256": "67949b08f80abfa514245f42af70a72e3fc7c632add0de06454274ce438346e9",
+      "outputSha256": "2743ede952db1d8e9f384ce230aac89eac97a4d2fc18cfb3eaf9610fe2dd7b31",
       "edits": [
         {
           "start": 163,
@@ -304301,6 +305925,13 @@
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
+        },
+        {
+          "start": 586,
+          "end": 588,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
         },
         {
           "start": 589,
@@ -304329,6 +305960,13 @@
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
+        },
+        {
+          "start": 763,
+          "end": 765,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
         },
         {
           "start": 766,
@@ -304380,6 +306018,13 @@
           "renamed": "tutorialMode"
         },
         {
+          "start": 1660,
+          "end": 1662,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
+        },
+        {
           "start": 1663,
           "end": 1670,
           "symbol": "F:wd.field_e:Ltf;",
@@ -304422,6 +306067,13 @@
           "renamed": "addLast"
         },
         {
+          "start": 1774,
+          "end": 1776,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
+        },
+        {
           "start": 1777,
           "end": 1784,
           "symbol": "F:wd.field_e:Ltf;",
@@ -304441,6 +306093,13 @@
           "symbol": "M:hd.f(I)V",
           "original": "f",
           "renamed": "recordEntityRelease"
+        },
+        {
+          "start": 1982,
+          "end": 1984,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
         },
         {
           "start": 1985,
@@ -304506,6 +306165,13 @@
           "renamed": "entityMotionSpeed"
         },
         {
+          "start": 2845,
+          "end": 2847,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
+        },
+        {
           "start": 2848,
           "end": 2855,
           "symbol": "F:wd.field_e:Ltf;",
@@ -304525,6 +306191,13 @@
           "symbol": "F:og.field_r:F",
           "original": "field_r",
           "renamed": "entityMotionSpeed"
+        },
+        {
+          "start": 2945,
+          "end": 2947,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
         },
         {
           "start": 2948,
@@ -305877,7 +307550,7 @@
       "original": "le.java",
       "renamed": "le.java",
       "inputSha256": "188c241f0cdacc051c8da5406c43b482c7059e8448ae2504831d0735a27d2eec",
-      "outputSha256": "0a7b1de5b5e3db5ee8f1cff13b4958d95b7f6dc58f15db318f62318adc18bb2c",
+      "outputSha256": "533297222f50538730c950477d35cefde1858fe84fd06be2c9669b0accef0a78",
       "edits": [
         {
           "start": 265,
@@ -305920,6 +307593,13 @@
           "symbol": "F:ra.field_a:Ltf;",
           "original": "field_a",
           "renamed": "availableEntities"
+        },
+        {
+          "start": 353,
+          "end": 355,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
         },
         {
           "start": 356,
@@ -305969,6 +307649,13 @@
           "symbol": "C:vb",
           "original": "vb",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 509,
+          "end": 511,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
         },
         {
           "start": 512,
@@ -306556,7 +308243,7 @@
       "original": "ma.java",
       "renamed": "ma.java",
       "inputSha256": "490c9d77b263e1ec493c50ba69c01682a538bc787b0c7d25669e4c3e078666de",
-      "outputSha256": "ab3eec3e79ab60c8ba16c0887fb36d6e61ae78b98ef79a1f14858f525ae8baf0",
+      "outputSha256": "f2780d27a50a05869ba0423512670cde462d9682af425ba262e7f30a7608879d",
       "edits": [
         {
           "start": 61,
@@ -306573,6 +308260,13 @@
           "renamed": "GameplayEntity"
         },
         {
+          "start": 2923,
+          "end": 2925,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
+        },
+        {
           "start": 2926,
           "end": 2933,
           "symbol": "F:wd.field_b:Ldm;",
@@ -306587,11 +308281,25 @@
           "renamed": "spriteScratchRaster"
         },
         {
+          "start": 2954,
+          "end": 2956,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
+        },
+        {
           "start": 2985,
           "end": 2992,
           "symbol": "F:vf.field_L:Ldm;",
           "original": "field_L",
           "renamed": "spriteScratchRaster"
+        },
+        {
+          "start": 3018,
+          "end": 3020,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
         },
         {
           "start": 3036,
@@ -316076,7 +317784,7 @@
       "original": "rc.java",
       "renamed": "DualLinkNode.java",
       "inputSha256": "9939a5b978ffbdf4ccd47ab58ea6f9f016414f8cca4610cb7f712ea368441302",
-      "outputSha256": "a926dffe0059715861910fd1c16d3644da2ccc77beca1f45ee2bafddf618f1e8",
+      "outputSha256": "585cb1f71ae8c6b9b38f8c77d55799e8f43247eaff696e2ab2d463d8afab7062",
       "edits": [
         {
           "start": 44,
@@ -316154,6 +317862,34 @@
           "symbol": "F:rc.field_g:Ljava/lang/String;",
           "original": "field_g",
           "renamed": "js5ConnectFullErrorText"
+        },
+        {
+          "start": 613,
+          "end": 615,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
+        },
+        {
+          "start": 676,
+          "end": 678,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
+        },
+        {
+          "start": 741,
+          "end": 743,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
+        },
+        {
+          "start": 833,
+          "end": 835,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
         },
         {
           "start": 922,
@@ -316697,8 +318433,15 @@
       "original": "ri.java",
       "renamed": "ri.java",
       "inputSha256": "d02dbb0752b0e04a34daf65cf4bacb0f9c851351774b2e34a10f986b4137e102",
-      "outputSha256": "66cc2f9167b11332467f8a2c5e204a68a65301992f2fe76a50a6c3f01fcea294",
+      "outputSha256": "26cbca811d95bb8b2e05e9d2ddfe94c4e18095920049c224bae249c2fa7ed51b",
       "edits": [
+        {
+          "start": 1958,
+          "end": 1960,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
+        },
         {
           "start": 2630,
           "end": 2632,
@@ -316712,6 +318455,20 @@
           "symbol": "C:me",
           "original": "me",
           "renamed": "ScorePopup"
+        },
+        {
+          "start": 6066,
+          "end": 6068,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
+        },
+        {
+          "start": 6158,
+          "end": 6160,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
         },
         {
           "start": 8163,
@@ -317627,7 +319384,7 @@
       "original": "sk.java",
       "renamed": "sk.java",
       "inputSha256": "793edef1fa7dcddb4cfe26ac67a189434ce8749aa257751929c15ed657b40792",
-      "outputSha256": "0f574704905745e78b93dee149cd58525e5294e7fb7b5dbc993b8e005f23bb12",
+      "outputSha256": "77fc5ed5f2827d4b0936f9ef32818738410b9bda666a289be86fc085e7cc56e9",
       "edits": [
         {
           "start": 4418,
@@ -317677,6 +319434,13 @@
           "symbol": "L:sk.a(I)Z#8",
           "original": "var3",
           "renamed": "candidateEntity"
+        },
+        {
+          "start": 20080,
+          "end": 20082,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
         },
         {
           "start": 20083,
@@ -317754,6 +319518,13 @@
           "symbol": "L:sk.a(I)Z#16",
           "original": "var11",
           "renamed": "seedEntity"
+        },
+        {
+          "start": 20268,
+          "end": 20270,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
         },
         {
           "start": 20271,
@@ -318127,11 +319898,25 @@
           "renamed": "cascadeFrontier"
         },
         {
+          "start": 21343,
+          "end": 21345,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
+        },
+        {
           "start": 21365,
           "end": 21369,
           "symbol": "L:sk.a(I)Z#9",
           "original": "var4",
           "renamed": "visitedCascadeEntities"
+        },
+        {
+          "start": 21376,
+          "end": 21378,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
         },
         {
           "start": 21398,
@@ -318146,6 +319931,13 @@
           "symbol": "L:sk.a(I)Z#17",
           "original": "var12",
           "renamed": "cascadeFrontier"
+        },
+        {
+          "start": 21430,
+          "end": 21431,
+          "symbol": "M:wd.a(Lrc;Z)V",
+          "original": "a",
+          "renamed": "addFirst"
         },
         {
           "start": 21432,
@@ -318174,6 +319966,13 @@
           "symbol": "L:sk.a(I)Z#17",
           "original": "var12",
           "renamed": "cascadeFrontier"
+        },
+        {
+          "start": 21527,
+          "end": 21528,
+          "symbol": "M:wd.a(Z)Lrc;",
+          "original": "a",
+          "renamed": "removeFirst"
         },
         {
           "start": 21559,
@@ -318230,6 +320029,13 @@
           "symbol": "L:sk.a(I)Z#9",
           "original": "var4",
           "renamed": "visitedCascadeEntities"
+        },
+        {
+          "start": 21857,
+          "end": 21858,
+          "symbol": "M:wd.a(Lrc;Z)V",
+          "original": "a",
+          "renamed": "addFirst"
         },
         {
           "start": 21859,
@@ -318316,6 +320122,13 @@
           "renamed": "visitedCascadeEntities"
         },
         {
+          "start": 22162,
+          "end": 22163,
+          "symbol": "M:wd.c(B)Lrc;",
+          "original": "c",
+          "renamed": "firstForIteration"
+        },
+        {
           "start": 22285,
           "end": 22289,
           "symbol": "L:sk.a(I)Z#14",
@@ -318344,6 +320157,13 @@
           "renamed": "cascadeFrontier"
         },
         {
+          "start": 22359,
+          "end": 22360,
+          "symbol": "M:wd.c(B)Lrc;",
+          "original": "c",
+          "renamed": "firstForIteration"
+        },
+        {
           "start": 22460,
           "end": 22464,
           "symbol": "L:sk.a(I)Z#14",
@@ -318356,6 +320176,13 @@
           "symbol": "L:sk.a(I)Z#17",
           "original": "var12",
           "renamed": "cascadeFrontier"
+        },
+        {
+          "start": 22516,
+          "end": 22517,
+          "symbol": "M:wd.a(ILrc;)V",
+          "original": "a",
+          "renamed": "addLast"
         },
         {
           "start": 22523,
@@ -318400,6 +320227,13 @@
           "renamed": "cascadeFrontier"
         },
         {
+          "start": 22733,
+          "end": 22734,
+          "symbol": "M:wd.a(I)Lrc;",
+          "original": "a",
+          "renamed": "nextForIteration"
+        },
+        {
           "start": 23052,
           "end": 23056,
           "symbol": "L:sk.a(I)Z#14",
@@ -318433,6 +320267,13 @@
           "symbol": "L:sk.a(I)Z#9",
           "original": "var4",
           "renamed": "visitedCascadeEntities"
+        },
+        {
+          "start": 23127,
+          "end": 23128,
+          "symbol": "M:wd.a(I)Lrc;",
+          "original": "a",
+          "renamed": "nextForIteration"
         },
         {
           "start": 23305,
@@ -323526,8 +325367,15 @@
       "original": "uf.java",
       "renamed": "uf.java",
       "inputSha256": "f3ef04d1626117df773dec44b48be150b9d0d6e58eccc66152df22f840f4273a",
-      "outputSha256": "2de643d5ab96f99701a654c3085430db49f2905d076cd1c7ef99aacc7c3d9c59",
+      "outputSha256": "3301ad112f973730e45104a253c849b28226964ada7f718c589d13533e11f088",
       "edits": [
+        {
+          "start": 113,
+          "end": 115,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
+        },
         {
           "start": 190,
           "end": 197,
@@ -323548,6 +325396,41 @@
           "symbol": "F:uf.field_i:Ljava/lang/String;",
           "original": "field_i",
           "renamed": "createPasswordContainsEmailAlertText"
+        },
+        {
+          "start": 4232,
+          "end": 4233,
+          "symbol": "M:wd.c(B)Lrc;",
+          "original": "c",
+          "renamed": "firstForIteration"
+        },
+        {
+          "start": 4731,
+          "end": 4732,
+          "symbol": "M:wd.a(I)Lrc;",
+          "original": "a",
+          "renamed": "nextForIteration"
+        },
+        {
+          "start": 6408,
+          "end": 6409,
+          "symbol": "M:wd.a(ILrc;)V",
+          "original": "a",
+          "renamed": "addLast"
+        },
+        {
+          "start": 13749,
+          "end": 13750,
+          "symbol": "M:wd.a(Z)Lrc;",
+          "original": "a",
+          "renamed": "removeFirst"
+        },
+        {
+          "start": 16230,
+          "end": 16232,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
         },
         {
           "start": 16885,
@@ -323920,7 +325803,7 @@
       "original": "uh.java",
       "renamed": "uh.java",
       "inputSha256": "2f0bd65c2570d9564d508008115f2428069be73218ca859315da6bea7a39882b",
-      "outputSha256": "77331434cc17dd6dd4eec8ed03a5557033762ca99c6886ce5e37288953fd7962",
+      "outputSha256": "273b109c4350d97013d8f1a6891c40980ecd39c4dec475439f115e6272c19475",
       "edits": [
         {
           "start": 2354,
@@ -323949,6 +325832,13 @@
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
+        },
+        {
+          "start": 7193,
+          "end": 7195,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
         },
         {
           "start": 7196,
@@ -324077,6 +325967,13 @@
           "renamed": "GameplayEntity"
         },
         {
+          "start": 8307,
+          "end": 8309,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
+        },
+        {
           "start": 8310,
           "end": 8317,
           "symbol": "F:wd.field_e:Ltf;",
@@ -324103,6 +326000,13 @@
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
+        },
+        {
+          "start": 8453,
+          "end": 8455,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
         },
         {
           "start": 8456,
@@ -329369,7 +331273,7 @@
       "original": "vf.java",
       "renamed": "vf.java",
       "inputSha256": "d40f3f6c3f1f120e8f3aa2cd55231b0918617489fa60483e372deab23ea381b5",
-      "outputSha256": "8152508920551bc0cbe8e1c85f28d34c0fc84cfc1cb7b5938358d7f98d63356c",
+      "outputSha256": "2667853093afe638bef03682aaf96f7d2e826e7160b12c580a8ebca4f71aa6f7",
       "edits": [
         {
           "start": 100,
@@ -329398,6 +331302,13 @@
           "symbol": "C:tf",
           "original": "tf",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 1675,
+          "end": 1677,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
         },
         {
           "start": 3306,
@@ -330883,10 +332794,17 @@
     },
     {
       "original": "wd.java",
-      "renamed": "wd.java",
+      "renamed": "SecondaryDeque.java",
       "inputSha256": "c6c3a8582b0294b054c27dd1ad9fb68ae3ba8a621542efd11e9e2f1c13da5a57",
-      "outputSha256": "3f6cdbcf94a932d7ab40c5323152d535ade73898d6416fdf9afec01bc4eea29d",
+      "outputSha256": "f21d648f37957d8786f1b173bf50e97d59e29cfc4ebaff02621589b8de743b42",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
+        },
         {
           "start": 66,
           "end": 68,
@@ -330923,11 +332841,25 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 164,
+          "end": 171,
+          "symbol": "F:wd.field_g:Lrc;",
+          "original": "field_g",
+          "renamed": "sentinel"
+        },
+        {
           "start": 212,
           "end": 214,
           "symbol": "C:rc",
           "original": "rc",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 215,
+          "end": 222,
+          "symbol": "F:wd.field_c:Lrc;",
+          "original": "field_c",
+          "renamed": "iterationCursor"
         },
         {
           "start": 235,
@@ -330937,6 +332869,27 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 238,
+          "end": 239,
+          "symbol": "M:wd.a(I)Lrc;",
+          "original": "a",
+          "renamed": "nextForIteration"
+        },
+        {
+          "start": 244,
+          "end": 250,
+          "symbol": "P:wd.a(I)Lrc;#0",
+          "original": "param0",
+          "renamed": "methodGuard"
+        },
+        {
+          "start": 282,
+          "end": 288,
+          "symbol": "P:wd.a(I)Lrc;#0",
+          "original": "param0",
+          "renamed": "methodGuard"
+        },
+        {
           "start": 310,
           "end": 312,
           "symbol": "C:rc",
@@ -330944,11 +332897,67 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 313,
+          "end": 317,
+          "symbol": "L:wd.a(I)Lrc;#1",
+          "original": "var2",
+          "renamed": "iterationNode"
+        },
+        {
+          "start": 325,
+          "end": 332,
+          "symbol": "F:wd.field_c:Lrc;",
+          "original": "field_c",
+          "renamed": "iterationCursor"
+        },
+        {
+          "start": 351,
+          "end": 358,
+          "symbol": "F:wd.field_g:Lrc;",
+          "original": "field_g",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 362,
+          "end": 366,
+          "symbol": "L:wd.a(I)Lrc;#1",
+          "original": "var2",
+          "renamed": "iterationNode"
+        },
+        {
+          "start": 387,
+          "end": 394,
+          "symbol": "F:wd.field_c:Lrc;",
+          "original": "field_c",
+          "renamed": "iterationCursor"
+        },
+        {
+          "start": 397,
+          "end": 401,
+          "symbol": "L:wd.a(I)Lrc;#1",
+          "original": "var2",
+          "renamed": "iterationNode"
+        },
+        {
           "start": 402,
           "end": 409,
           "symbol": "F:rc.field_k:Lrc;",
           "original": "field_k",
           "renamed": "nextSecondaryNode"
+        },
+        {
+          "start": 430,
+          "end": 434,
+          "symbol": "L:wd.a(I)Lrc;#1",
+          "original": "var2",
+          "renamed": "iterationNode"
+        },
+        {
+          "start": 459,
+          "end": 466,
+          "symbol": "F:wd.field_c:Lrc;",
+          "original": "field_c",
+          "renamed": "iterationCursor"
         },
         {
           "start": 550,
@@ -330972,11 +332981,39 @@
           "renamed": "spawnQueue"
         },
         {
+          "start": 791,
+          "end": 792,
+          "symbol": "M:wd.a(Lrc;Z)V",
+          "original": "a",
+          "renamed": "addFirst"
+        },
+        {
           "start": 793,
           "end": 795,
           "symbol": "C:rc",
           "original": "rc",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 796,
+          "end": 802,
+          "symbol": "P:wd.a(Lrc;Z)V#0",
+          "original": "param0",
+          "renamed": "node"
+        },
+        {
+          "start": 812,
+          "end": 818,
+          "symbol": "P:wd.a(Lrc;Z)V#1",
+          "original": "param1",
+          "renamed": "methodGuard"
+        },
+        {
+          "start": 836,
+          "end": 842,
+          "symbol": "P:wd.a(Lrc;Z)V#0",
+          "original": "param0",
+          "renamed": "node"
         },
         {
           "start": 843,
@@ -330986,11 +333023,25 @@
           "renamed": "previousSecondaryNode"
         },
         {
+          "start": 875,
+          "end": 881,
+          "symbol": "P:wd.a(Lrc;Z)V#0",
+          "original": "param0",
+          "renamed": "node"
+        },
+        {
           "start": 882,
           "end": 883,
           "symbol": "M:rc.a(B)V",
           "original": "a",
           "renamed": "unlinkSecondaryNode"
+        },
+        {
+          "start": 914,
+          "end": 920,
+          "symbol": "P:wd.a(Lrc;Z)V#0",
+          "original": "param0",
+          "renamed": "node"
         },
         {
           "start": 921,
@@ -331000,6 +333051,13 @@
           "renamed": "nextSecondaryNode"
         },
         {
+          "start": 936,
+          "end": 943,
+          "symbol": "F:wd.field_g:Lrc;",
+          "original": "field_g",
+          "renamed": "sentinel"
+        },
+        {
           "start": 944,
           "end": 951,
           "symbol": "F:rc.field_k:Lrc;",
@@ -331007,11 +333065,39 @@
           "renamed": "nextSecondaryNode"
         },
         {
+          "start": 961,
+          "end": 967,
+          "symbol": "P:wd.a(Lrc;Z)V#0",
+          "original": "param0",
+          "renamed": "node"
+        },
+        {
           "start": 968,
           "end": 975,
           "symbol": "F:rc.field_l:Lrc;",
           "original": "field_l",
           "renamed": "previousSecondaryNode"
+        },
+        {
+          "start": 983,
+          "end": 990,
+          "symbol": "F:wd.field_g:Lrc;",
+          "original": "field_g",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 1004,
+          "end": 1010,
+          "symbol": "P:wd.a(Lrc;Z)V#1",
+          "original": "param1",
+          "renamed": "methodGuard"
+        },
+        {
+          "start": 1070,
+          "end": 1076,
+          "symbol": "P:wd.a(Lrc;Z)V#0",
+          "original": "param0",
+          "renamed": "node"
         },
         {
           "start": 1077,
@@ -331028,6 +333114,20 @@
           "renamed": "nextSecondaryNode"
         },
         {
+          "start": 1095,
+          "end": 1101,
+          "symbol": "P:wd.a(Lrc;Z)V#0",
+          "original": "param0",
+          "renamed": "node"
+        },
+        {
+          "start": 1115,
+          "end": 1121,
+          "symbol": "P:wd.a(Lrc;Z)V#0",
+          "original": "param0",
+          "renamed": "node"
+        },
+        {
           "start": 1122,
           "end": 1129,
           "symbol": "F:rc.field_k:Lrc;",
@@ -331042,11 +333142,46 @@
           "renamed": "previousSecondaryNode"
         },
         {
+          "start": 1140,
+          "end": 1146,
+          "symbol": "P:wd.a(Lrc;Z)V#0",
+          "original": "param0",
+          "renamed": "node"
+        },
+        {
+          "start": 1276,
+          "end": 1282,
+          "symbol": "P:wd.a(Lrc;Z)V#0",
+          "original": "param0",
+          "renamed": "node"
+        },
+        {
+          "start": 1319,
+          "end": 1325,
+          "symbol": "P:wd.a(Lrc;Z)V#1",
+          "original": "param1",
+          "renamed": "methodGuard"
+        },
+        {
           "start": 1492,
           "end": 1494,
           "symbol": "C:rc",
           "original": "rc",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 1495,
+          "end": 1496,
+          "symbol": "M:wd.a(Z)Lrc;",
+          "original": "a",
+          "renamed": "removeFirst"
+        },
+        {
+          "start": 1505,
+          "end": 1511,
+          "symbol": "P:wd.a(Z)Lrc;#0",
+          "original": "param0",
+          "renamed": "methodGuard"
         },
         {
           "start": 1523,
@@ -331056,11 +333191,60 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 1526,
+          "end": 1530,
+          "symbol": "L:wd.a(Z)Lrc;#0",
+          "original": "var2",
+          "renamed": "firstNode"
+        },
+        {
+          "start": 1538,
+          "end": 1545,
+          "symbol": "F:wd.field_g:Lrc;",
+          "original": "field_g",
+          "renamed": "sentinel"
+        },
+        {
           "start": 1546,
           "end": 1553,
           "symbol": "F:rc.field_k:Lrc;",
           "original": "field_k",
           "renamed": "nextSecondaryNode"
+        },
+        {
+          "start": 1568,
+          "end": 1574,
+          "symbol": "P:wd.a(Z)Lrc;#0",
+          "original": "param0",
+          "renamed": "methodGuard"
+        },
+        {
+          "start": 1590,
+          "end": 1592,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
+        },
+        {
+          "start": 1629,
+          "end": 1636,
+          "symbol": "F:wd.field_g:Lrc;",
+          "original": "field_g",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 1640,
+          "end": 1644,
+          "symbol": "L:wd.a(Z)Lrc;#0",
+          "original": "var2",
+          "renamed": "firstNode"
+        },
+        {
+          "start": 1664,
+          "end": 1668,
+          "symbol": "L:wd.a(Z)Lrc;#0",
+          "original": "var2",
+          "renamed": "firstNode"
         },
         {
           "start": 1669,
@@ -331070,11 +333254,60 @@
           "renamed": "unlinkSecondaryNode"
         },
         {
+          "start": 1706,
+          "end": 1710,
+          "symbol": "L:wd.a(Z)Lrc;#0",
+          "original": "var2",
+          "renamed": "firstNode"
+        },
+        {
+          "start": 1778,
+          "end": 1785,
+          "symbol": "F:wd.field_g:Lrc;",
+          "original": "field_g",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 1789,
+          "end": 1793,
+          "symbol": "L:wd.a(Z)Lrc;#0",
+          "original": "var2",
+          "renamed": "firstNode"
+        },
+        {
+          "start": 1809,
+          "end": 1813,
+          "symbol": "L:wd.a(Z)Lrc;#0",
+          "original": "var2",
+          "renamed": "firstNode"
+        },
+        {
           "start": 1814,
           "end": 1815,
           "symbol": "M:rc.a(B)V",
           "original": "a",
           "renamed": "unlinkSecondaryNode"
+        },
+        {
+          "start": 1847,
+          "end": 1851,
+          "symbol": "L:wd.a(Z)Lrc;#0",
+          "original": "var2",
+          "renamed": "firstNode"
+        },
+        {
+          "start": 1905,
+          "end": 1906,
+          "symbol": "M:wd.b(B)I",
+          "original": "b",
+          "renamed": "countNodes"
+        },
+        {
+          "start": 1912,
+          "end": 1918,
+          "symbol": "P:wd.b(B)I#0",
+          "original": "param0",
+          "renamed": "methodGuard"
         },
         {
           "start": 1930,
@@ -331084,6 +333317,41 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 1933,
+          "end": 1937,
+          "symbol": "L:wd.b(B)I#0",
+          "original": "var3",
+          "renamed": "nodeToCount"
+        },
+        {
+          "start": 1994,
+          "end": 1998,
+          "symbol": "L:wd.b(B)I#2",
+          "original": "var2",
+          "renamed": "nodeCount"
+        },
+        {
+          "start": 2016,
+          "end": 2022,
+          "symbol": "P:wd.b(B)I#0",
+          "original": "param0",
+          "renamed": "methodGuard"
+        },
+        {
+          "start": 2044,
+          "end": 2048,
+          "symbol": "L:wd.b(B)I#0",
+          "original": "var3",
+          "renamed": "nodeToCount"
+        },
+        {
+          "start": 2056,
+          "end": 2063,
+          "symbol": "F:wd.field_g:Lrc;",
+          "original": "field_g",
+          "renamed": "sentinel"
+        },
+        {
           "start": 2064,
           "end": 2071,
           "symbol": "F:rc.field_k:Lrc;",
@@ -331091,11 +333359,53 @@
           "renamed": "nextSecondaryNode"
         },
         {
+          "start": 2097,
+          "end": 2104,
+          "symbol": "F:wd.field_g:Lrc;",
+          "original": "field_g",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 2108,
+          "end": 2112,
+          "symbol": "L:wd.b(B)I#0",
+          "original": "var3",
+          "renamed": "nodeToCount"
+        },
+        {
+          "start": 2132,
+          "end": 2136,
+          "symbol": "L:wd.b(B)I#0",
+          "original": "var3",
+          "renamed": "nodeToCount"
+        },
+        {
+          "start": 2139,
+          "end": 2143,
+          "symbol": "L:wd.b(B)I#0",
+          "original": "var3",
+          "renamed": "nodeToCount"
+        },
+        {
           "start": 2144,
           "end": 2151,
           "symbol": "F:rc.field_k:Lrc;",
           "original": "field_k",
           "renamed": "nextSecondaryNode"
+        },
+        {
+          "start": 2169,
+          "end": 2173,
+          "symbol": "L:wd.b(B)I#2",
+          "original": "var2",
+          "renamed": "nodeCount"
+        },
+        {
+          "start": 2210,
+          "end": 2214,
+          "symbol": "L:wd.b(B)I#2",
+          "original": "var2",
+          "renamed": "nodeCount"
         },
         {
           "start": 2234,
@@ -331112,11 +333422,53 @@
           "renamed": "Sprite"
         },
         {
+          "start": 2263,
+          "end": 2267,
+          "symbol": "L:wd.b(B)I#0",
+          "original": "var3",
+          "renamed": "nodeToCount"
+        },
+        {
+          "start": 2275,
+          "end": 2282,
+          "symbol": "F:wd.field_g:Lrc;",
+          "original": "field_g",
+          "renamed": "sentinel"
+        },
+        {
           "start": 2283,
           "end": 2290,
           "symbol": "F:rc.field_k:Lrc;",
           "original": "field_k",
           "renamed": "nextSecondaryNode"
+        },
+        {
+          "start": 2312,
+          "end": 2319,
+          "symbol": "F:wd.field_g:Lrc;",
+          "original": "field_g",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 2323,
+          "end": 2327,
+          "symbol": "L:wd.b(B)I#0",
+          "original": "var3",
+          "renamed": "nodeToCount"
+        },
+        {
+          "start": 2343,
+          "end": 2347,
+          "symbol": "L:wd.b(B)I#0",
+          "original": "var3",
+          "renamed": "nodeToCount"
+        },
+        {
+          "start": 2350,
+          "end": 2354,
+          "symbol": "L:wd.b(B)I#0",
+          "original": "var3",
+          "renamed": "nodeToCount"
         },
         {
           "start": 2355,
@@ -331126,11 +333478,53 @@
           "renamed": "nextSecondaryNode"
         },
         {
+          "start": 2376,
+          "end": 2380,
+          "symbol": "L:wd.b(B)I#2",
+          "original": "var2",
+          "renamed": "nodeCount"
+        },
+        {
+          "start": 2409,
+          "end": 2413,
+          "symbol": "L:wd.b(B)I#2",
+          "original": "var2",
+          "renamed": "nodeCount"
+        },
+        {
+          "start": 2437,
+          "end": 2438,
+          "symbol": "M:wd.a(ILrc;)V",
+          "original": "a",
+          "renamed": "addLast"
+        },
+        {
+          "start": 2443,
+          "end": 2449,
+          "symbol": "P:wd.a(ILrc;)V#0",
+          "original": "param0",
+          "renamed": "methodGuard"
+        },
+        {
           "start": 2451,
           "end": 2453,
           "symbol": "C:rc",
           "original": "rc",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 2454,
+          "end": 2460,
+          "symbol": "P:wd.a(ILrc;)V#1",
+          "original": "param1",
+          "renamed": "node"
+        },
+        {
+          "start": 2496,
+          "end": 2502,
+          "symbol": "P:wd.a(ILrc;)V#1",
+          "original": "param1",
+          "renamed": "node"
         },
         {
           "start": 2503,
@@ -331140,11 +333534,32 @@
           "renamed": "previousSecondaryNode"
         },
         {
+          "start": 2539,
+          "end": 2545,
+          "symbol": "P:wd.a(ILrc;)V#1",
+          "original": "param1",
+          "renamed": "node"
+        },
+        {
           "start": 2546,
           "end": 2547,
           "symbol": "M:rc.a(B)V",
           "original": "a",
           "renamed": "unlinkSecondaryNode"
+        },
+        {
+          "start": 2609,
+          "end": 2615,
+          "symbol": "P:wd.a(ILrc;)V#0",
+          "original": "param0",
+          "renamed": "methodGuard"
+        },
+        {
+          "start": 2641,
+          "end": 2647,
+          "symbol": "P:wd.a(ILrc;)V#1",
+          "original": "param1",
+          "renamed": "node"
         },
         {
           "start": 2648,
@@ -331154,6 +333569,13 @@
           "renamed": "previousSecondaryNode"
         },
         {
+          "start": 2663,
+          "end": 2670,
+          "symbol": "F:wd.field_g:Lrc;",
+          "original": "field_g",
+          "renamed": "sentinel"
+        },
+        {
           "start": 2671,
           "end": 2678,
           "symbol": "F:rc.field_l:Lrc;",
@@ -331161,11 +333583,32 @@
           "renamed": "previousSecondaryNode"
         },
         {
+          "start": 2692,
+          "end": 2698,
+          "symbol": "P:wd.a(ILrc;)V#1",
+          "original": "param1",
+          "renamed": "node"
+        },
+        {
           "start": 2699,
           "end": 2706,
           "symbol": "F:rc.field_k:Lrc;",
           "original": "field_k",
           "renamed": "nextSecondaryNode"
+        },
+        {
+          "start": 2714,
+          "end": 2721,
+          "symbol": "F:wd.field_g:Lrc;",
+          "original": "field_g",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 2735,
+          "end": 2741,
+          "symbol": "P:wd.a(ILrc;)V#1",
+          "original": "param1",
+          "renamed": "node"
         },
         {
           "start": 2742,
@@ -331182,6 +333625,20 @@
           "renamed": "nextSecondaryNode"
         },
         {
+          "start": 2760,
+          "end": 2766,
+          "symbol": "P:wd.a(ILrc;)V#1",
+          "original": "param1",
+          "renamed": "node"
+        },
+        {
+          "start": 2780,
+          "end": 2786,
+          "symbol": "P:wd.a(ILrc;)V#1",
+          "original": "param1",
+          "renamed": "node"
+        },
+        {
           "start": 2787,
           "end": 2794,
           "symbol": "F:rc.field_k:Lrc;",
@@ -331194,6 +333651,34 @@
           "symbol": "F:rc.field_l:Lrc;",
           "original": "field_l",
           "renamed": "previousSecondaryNode"
+        },
+        {
+          "start": 2805,
+          "end": 2811,
+          "symbol": "P:wd.a(ILrc;)V#1",
+          "original": "param1",
+          "renamed": "node"
+        },
+        {
+          "start": 2940,
+          "end": 2946,
+          "symbol": "P:wd.a(ILrc;)V#0",
+          "original": "param0",
+          "renamed": "methodGuard"
+        },
+        {
+          "start": 2956,
+          "end": 2962,
+          "symbol": "P:wd.a(ILrc;)V#1",
+          "original": "param1",
+          "renamed": "node"
+        },
+        {
+          "start": 3118,
+          "end": 3120,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
         },
         {
           "start": 3445,
@@ -331224,11 +333709,32 @@
           "renamed": "nextForIteration"
         },
         {
+          "start": 4412,
+          "end": 4414,
+          "symbol": "M:wd.<init>()V",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
+        },
+        {
+          "start": 4432,
+          "end": 4439,
+          "symbol": "F:wd.field_g:Lrc;",
+          "original": "field_g",
+          "renamed": "sentinel"
+        },
+        {
           "start": 4446,
           "end": 4448,
           "symbol": "C:rc",
           "original": "rc",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 4465,
+          "end": 4472,
+          "symbol": "F:wd.field_g:Lrc;",
+          "original": "field_g",
+          "renamed": "sentinel"
         },
         {
           "start": 4473,
@@ -331238,11 +333744,32 @@
           "renamed": "nextSecondaryNode"
         },
         {
+          "start": 4488,
+          "end": 4495,
+          "symbol": "F:wd.field_g:Lrc;",
+          "original": "field_g",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 4510,
+          "end": 4517,
+          "symbol": "F:wd.field_g:Lrc;",
+          "original": "field_g",
+          "renamed": "sentinel"
+        },
+        {
           "start": 4518,
           "end": 4525,
           "symbol": "F:rc.field_l:Lrc;",
           "original": "field_l",
           "renamed": "previousSecondaryNode"
+        },
+        {
+          "start": 4533,
+          "end": 4540,
+          "symbol": "F:wd.field_g:Lrc;",
+          "original": "field_g",
+          "renamed": "sentinel"
         },
         {
           "start": 7594,
@@ -331252,11 +333779,39 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 7597,
+          "end": 7598,
+          "symbol": "M:wd.c(B)Lrc;",
+          "original": "c",
+          "renamed": "firstForIteration"
+        },
+        {
+          "start": 7604,
+          "end": 7610,
+          "symbol": "P:wd.c(B)Lrc;#0",
+          "original": "param0",
+          "renamed": "methodGuard"
+        },
+        {
           "start": 7622,
           "end": 7624,
           "symbol": "C:rc",
           "original": "rc",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 7625,
+          "end": 7629,
+          "symbol": "L:wd.c(B)Lrc;#0",
+          "original": "var2",
+          "renamed": "firstNode"
+        },
+        {
+          "start": 7637,
+          "end": 7644,
+          "symbol": "F:wd.field_g:Lrc;",
+          "original": "field_g",
+          "renamed": "sentinel"
         },
         {
           "start": 7645,
@@ -331266,11 +333821,74 @@
           "renamed": "nextSecondaryNode"
         },
         {
+          "start": 7666,
+          "end": 7670,
+          "symbol": "L:wd.c(B)Lrc;#0",
+          "original": "var2",
+          "renamed": "firstNode"
+        },
+        {
+          "start": 7679,
+          "end": 7686,
+          "symbol": "F:wd.field_g:Lrc;",
+          "original": "field_g",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 7707,
+          "end": 7714,
+          "symbol": "F:wd.field_c:Lrc;",
+          "original": "field_c",
+          "renamed": "iterationCursor"
+        },
+        {
+          "start": 7771,
+          "end": 7778,
+          "symbol": "F:wd.field_c:Lrc;",
+          "original": "field_c",
+          "renamed": "iterationCursor"
+        },
+        {
+          "start": 7781,
+          "end": 7785,
+          "symbol": "L:wd.c(B)Lrc;#0",
+          "original": "var2",
+          "renamed": "firstNode"
+        },
+        {
           "start": 7786,
           "end": 7793,
           "symbol": "F:rc.field_k:Lrc;",
           "original": "field_k",
           "renamed": "nextSecondaryNode"
+        },
+        {
+          "start": 7807,
+          "end": 7813,
+          "symbol": "P:wd.c(B)Lrc;#0",
+          "original": "param0",
+          "renamed": "methodGuard"
+        },
+        {
+          "start": 7843,
+          "end": 7847,
+          "symbol": "L:wd.c(B)Lrc;#0",
+          "original": "var2",
+          "renamed": "firstNode"
+        },
+        {
+          "start": 7867,
+          "end": 7869,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
+        },
+        {
+          "start": 7892,
+          "end": 7896,
+          "symbol": "L:wd.c(B)Lrc;#0",
+          "original": "var2",
+          "renamed": "firstNode"
         },
         {
           "start": 7926,
@@ -331468,7 +334086,7 @@
       "original": "wf.java",
       "renamed": "wf.java",
       "inputSha256": "4276999376dbb2020d51054fc13422acf7323afd6647baf4e784563198155520",
-      "outputSha256": "9cd1ab68e1f083ddec721a36a223498dfd9856c23839c3e4454fccd3ed3c6e72",
+      "outputSha256": "e398b00f2ee59767328b5789eb5da3bb7d1f2d4ebe875c21fc000e97f0d11100",
       "edits": [
         {
           "start": 318,
@@ -331525,6 +334143,13 @@
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 7269,
+          "end": 7271,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
         },
         {
           "start": 9666,
@@ -331660,11 +334285,32 @@
           "renamed": "MenuScreen"
         },
         {
+          "start": 22392,
+          "end": 22394,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
+        },
+        {
           "start": 22485,
           "end": 22486,
           "symbol": "M:bc.a(I[BII)Ljava/lang/String;",
           "original": "a",
           "renamed": "decodeTextSlice"
+        },
+        {
+          "start": 22548,
+          "end": 22550,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
+        },
+        {
+          "start": 23004,
+          "end": 23006,
+          "symbol": "C:wd",
+          "original": "wd",
+          "renamed": "SecondaryDeque"
         },
         {
           "start": 28777,

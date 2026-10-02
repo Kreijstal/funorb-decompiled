@@ -8,12 +8,12 @@ final class le implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     final static void a(byte param0) {
         ji.movingEntities.moveAllTo(ra.availableEntities, (byte) -70);
         a.attachedEntities.moveAllTo(ra.availableEntities, (byte) -70);
-        wd.spawnQueue.moveAllTo(ra.availableEntities, (byte) -70);
+        SecondaryDeque.spawnQueue.moveAllTo(ra.availableEntities, (byte) -70);
         bh.field_c.moveAllTo(ra.availableEntities, (byte) -70);
         kc.field_a = 0;
         vf.spriteScratchRaster.e();
         SoftwareRasterizer.c();
-        wd.contactProbeRaster.e();
+        SecondaryDeque.contactProbeRaster.e();
         SoftwareRasterizer.c();
         sh.field_y.a(255);
         jl.field_t = false;

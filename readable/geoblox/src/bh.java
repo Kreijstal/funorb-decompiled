@@ -75,7 +75,7 @@ final class bh extends java.awt.Canvas {
                 L3: {
                   var4 = var14.c((byte) 34);
                   if (var4 != 0) {
-                    oi.field_a[0] = wd.field_f;
+                    oi.field_a[0] = SecondaryDeque.field_f;
                     var5 = var3.field_g;
                     for (var6_int = 1; var4 > var6_int; var6_int++) {
                       oi.field_a[var6_int] = var14.e((byte) 120);
@@ -167,12 +167,12 @@ final class bh extends java.awt.Canvas {
         }
     }
 
-    final static void a(boolean param0, GameplayEntity param1, int param2, GameplayEntity param3, boolean param4) {
-        GameplayEntity dupTemp$0 = null;
-        GameplayEntity dupTemp$1 = null;
-        GameplayEntity dupTemp$2 = null;
-        GameplayEntity stackIn_31_0 = null;
-        GameplayEntity stackIn_31_1 = null;
+    final static void propagateContactConversion(boolean propagateCategoryAndKind, GameplayEntity templateEntity, int methodGuard, GameplayEntity startingEntity, boolean propagateVariant) {
+        GameplayEntity poppedEntity = null;
+        GameplayEntity neighborForVariantIncrement = null;
+        GameplayEntity neighborForCategoryIncrement = null;
+        GameplayEntity neighborVariantWriteTarget = null;
+        GameplayEntity neighborVariantReadSource = null;
         RuntimeException stackIn_41_0 = null;
         StringBuilder stackIn_41_1 = null;
         RuntimeException stackIn_42_0 = null;
@@ -183,92 +183,92 @@ final class bh extends java.awt.Canvas {
         String stackIn_45_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        wd var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        GameplayEntity var10 = null;
-        int var11 = 0;
-        GameplayEntity var12 = null;
+        SecondaryDeque processedEntities = null;
+        int templateVariantIndex = 0;
+        int templateSpriteKindId = 0;
+        int templateCategoryKey = 0;
+        GameplayEntity currentEntity = null;
+        int neighborIndex = 0;
+        GameplayEntity processedEntityToCompare = null;
         int var13 = 0;
-        wd var14 = null;
-        wd var15 = null;
+        SecondaryDeque pendingEntities = null;
+        SecondaryDeque pendingEntitiesForRemoval = null;
         var13 = Geoblox.field_C;
         try {
           L0: {
-            var14 = new wd();
-            var15 = var14;
-            var6 = new wd();
-            var15.a(-45, param3);
-            var7 = param1.spriteVariantIndex;
-            var8 = param1.entitySpriteKindId;
-            var9 = param1.entityCategoryKey;
+            pendingEntities = new SecondaryDeque();
+            pendingEntitiesForRemoval = pendingEntities;
+            processedEntities = new SecondaryDeque();
+            pendingEntitiesForRemoval.addLast(-45, startingEntity);
+            templateVariantIndex = templateEntity.spriteVariantIndex;
+            templateSpriteKindId = templateEntity.entitySpriteKindId;
+            templateCategoryKey = templateEntity.entityCategoryKey;
             L1: while (true) {
-              dupTemp$0 = (GameplayEntity) ((Object) var15.a(true));
-              var10 = dupTemp$0;
-              if (null == dupTemp$0) {
-                if (param2 != 1) {
+              poppedEntity = (GameplayEntity) ((Object) pendingEntitiesForRemoval.removeFirst(true));
+              currentEntity = poppedEntity;
+              if (null == poppedEntity) {
+                if (methodGuard != 1) {
                   bh.a((byte) -40);
                 }
                 break L0;
               } else {
-                if (param4) {
-                  var10.configureEntitySprite(param2 + 319, var10.entityCategoryKey, var7, 0);
+                if (propagateVariant) {
+                  currentEntity.configureEntitySprite(methodGuard + 319, currentEntity.entityCategoryKey, templateVariantIndex, 0);
                 }
-                if (param0) {
-                  if (var10.entitySpriteKindId == 2) {
-                    var10.detachedFromBoard = true;
-                    var10.entityQueue = ji.movingEntities;
+                if (propagateCategoryAndKind) {
+                  if (currentEntity.entitySpriteKindId == 2) {
+                    currentEntity.detachedFromBoard = true;
+                    currentEntity.entityQueue = ji.movingEntities;
                   }
-                  var10.configureEntitySprite(320, var9, var10.spriteVariantIndex, var8);
+                  currentEntity.configureEntitySprite(320, templateCategoryKey, currentEntity.spriteVariantIndex, templateSpriteKindId);
                 }
-                var11 = 0;
+                neighborIndex = 0;
                 L6: while (true) {
-                  if (var11 >= var10.relatedEntityCount) {
-                    var6.a(var10, false);
+                  if (neighborIndex >= currentEntity.relatedEntityCount) {
+                    processedEntities.addFirst(currentEntity, false);
                     continue L1;
                   } else {
                     L7: {
-                      if (var10.relatedEntities[var11].entitySpriteKindId == 1) {
-                        if (param4) {
+                      if (currentEntity.relatedEntities[neighborIndex].entitySpriteKindId == 1) {
+                        if (propagateVariant) {
                           break L7;
                         }
                       }
-                      if (2 == var10.relatedEntities[var11].entitySpriteKindId) {
-                        if (!param0) {
-                          var11++;
+                      if (2 == currentEntity.relatedEntities[neighborIndex].entitySpriteKindId) {
+                        if (!propagateCategoryAndKind) {
+                          neighborIndex++;
                           continue L6;
                         }
                       } else {
-                        var11++;
+                        neighborIndex++;
                         continue L6;
                       }
                     }
-                    var12 = (GameplayEntity) ((Object) var6.c((byte) 121));
+                    processedEntityToCompare = (GameplayEntity) ((Object) processedEntities.firstForIteration((byte) 121));
                     L9: while (true) {
-                      if (var12 == null) {
-                        if (param4) {
-                          var10.sameVariantEntityCount = var10.sameVariantEntityCount + 1;
-                          dupTemp$1 = var10.relatedEntities[var11];
-                          stackIn_31_0 = (GameplayEntity) (dupTemp$1);
-                          stackIn_31_1 = (GameplayEntity) (dupTemp$1);
-                          stackIn_31_0.sameVariantEntityCount = stackIn_31_1.sameVariantEntityCount + 1;
+                      if (processedEntityToCompare == null) {
+                        if (propagateVariant) {
+                          currentEntity.sameVariantEntityCount = currentEntity.sameVariantEntityCount + 1;
+                          neighborForVariantIncrement = currentEntity.relatedEntities[neighborIndex];
+                          neighborVariantWriteTarget = (GameplayEntity) (neighborForVariantIncrement);
+                          neighborVariantReadSource = (GameplayEntity) (neighborForVariantIncrement);
+                          neighborVariantWriteTarget.sameVariantEntityCount = neighborVariantReadSource.sameVariantEntityCount + 1;
                         }
-                        if (param0) {
-                          var10.spriteAngleRadians = param1.spriteAngleRadians;
-                          var10.sameCategoryEntityCount = var10.sameCategoryEntityCount + 1;
-                          dupTemp$2 = var10.relatedEntities[var11];
-                          dupTemp$2.sameCategoryEntityCount = dupTemp$2.sameCategoryEntityCount + 1;
+                        if (propagateCategoryAndKind) {
+                          currentEntity.spriteAngleRadians = templateEntity.spriteAngleRadians;
+                          currentEntity.sameCategoryEntityCount = currentEntity.sameCategoryEntityCount + 1;
+                          neighborForCategoryIncrement = currentEntity.relatedEntities[neighborIndex];
+                          neighborForCategoryIncrement.sameCategoryEntityCount = neighborForCategoryIncrement.sameCategoryEntityCount + 1;
                         }
-                        var14.a(var10.relatedEntities[var11], false);
-                        var11++;
+                        pendingEntities.addFirst(currentEntity.relatedEntities[neighborIndex], false);
+                        neighborIndex++;
                         continue L6;
                       } else {
-                        if (var10 != var12) {
-                          var12 = (GameplayEntity) ((Object) var6.a(param2 + -60));
+                        if (currentEntity != processedEntityToCompare) {
+                          processedEntityToCompare = (GameplayEntity) ((Object) processedEntities.nextForIteration(methodGuard + -60));
                           continue L9;
                         } else {
-                          var11++;
+                          neighborIndex++;
                           continue L6;
                         }
                       }
@@ -283,9 +283,9 @@ final class bh extends java.awt.Canvas {
           var5 = decompiledCaughtException;
           stackIn_41_0 = (RuntimeException) (var5);
 
-          stackIn_41_1 = new StringBuilder().append("bh.D(").append(param0).append(',');
+          stackIn_41_1 = new StringBuilder().append("bh.D(").append(propagateCategoryAndKind).append(',');
 
-          if (param1 == null) {
+          if (templateEntity == null) {
             stackIn_42_0 = (RuntimeException) ((Object) stackIn_41_0);
             stackIn_42_1 = (StringBuilder) ((Object) stackIn_41_1);
             stackIn_42_2 = "null";
@@ -296,9 +296,9 @@ final class bh extends java.awt.Canvas {
           }
 
 
-          stackIn_44_1 = ((StringBuilder) (Object) stackIn_42_1).append(stackIn_42_2).append(',').append(param2).append(',');
+          stackIn_44_1 = ((StringBuilder) (Object) stackIn_42_1).append(stackIn_42_2).append(',').append(methodGuard).append(',');
 
-          if (param3 == null) {
+          if (startingEntity == null) {
             stackIn_42_0 = (RuntimeException) ((Object) stackIn_42_0);
             stackIn_45_1 = (StringBuilder) ((Object) stackIn_44_1);
             stackIn_45_2 = "null";
@@ -307,7 +307,7 @@ final class bh extends java.awt.Canvas {
             stackIn_45_1 = (StringBuilder) ((Object) stackIn_44_1);
             stackIn_45_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_45_2).append(',').append(param4).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_45_2).append(',').append(propagateVariant).append(')').toString());
         }
     }
 

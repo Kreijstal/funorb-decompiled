@@ -1408,7 +1408,7 @@ final class GameScreen extends MenuScreen {
                           break L9;
                         } else {
                           if (el.gameplaySession.score != -2147483648) {
-                            var8 = wd.field_f;
+                            var8 = SecondaryDeque.field_f;
                             var4.a(var8, 165, var6, 16724225, -1);
                             var4.c(Integer.toString(Math.abs(el.gameplaySession.score)), 500, var6, 16724225, -1);
                             break L9;

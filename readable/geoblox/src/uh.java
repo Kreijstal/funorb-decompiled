@@ -196,7 +196,7 @@ final class uh extends ac {
         try {
           L0: {
             if (param0 == 4740) {
-              var14 = (GameplayEntity) ((Object) wd.spawnQueue.firstForIteration(0));
+              var14 = (GameplayEntity) ((Object) SecondaryDeque.spawnQueue.firstForIteration(0));
               if (var14 != null) {
                 var2 = -320.0f + var14.positionX;
                 var3 = -240.0f + var14.positionY;
@@ -214,10 +214,10 @@ final class uh extends ac {
                   var6 = var6 + var6 * 0.25f;
                   var7 += 778;
                 }
-                var13 = (GameplayEntity) ((Object) wd.spawnQueue.firstForIteration(0));
+                var13 = (GameplayEntity) ((Object) SecondaryDeque.spawnQueue.firstForIteration(0));
                 L2: while (var13 != null) {
                   var13.drawFadingEntity(param0 + -4830);
-                  var13 = (GameplayEntity) ((Object) wd.spawnQueue.nextForIteration(1));
+                  var13 = (GameplayEntity) ((Object) SecondaryDeque.spawnQueue.nextForIteration(1));
                 }
                 decompiledRegionSelector0 = 1;
                 break L0;

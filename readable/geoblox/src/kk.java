@@ -70,16 +70,16 @@ final class kk extends ji {
               try {
                 L4: {
                   this.field_u.d(-108);
-                  var2 = (sd) ((Object) this.field_g.c((byte) 121));
+                  var2 = (sd) ((Object) this.field_g.firstForIteration((byte) 121));
                   L5: while (var2 != null) {
                     this.field_m.field_f = 0;
                     this.field_m.d((byte) -54, 1);
                     this.field_m.a((byte) -127, var2.field_i);
                     this.field_u.a(100, 0, this.field_m.field_j.length, this.field_m.field_j);
-                    this.field_e.a(-93, var2);
-                    var2 = (sd) ((Object) this.field_g.a(param0 ^ 41));
+                    this.field_e.addLast(-93, var2);
+                    var2 = (sd) ((Object) this.field_g.nextForIteration(param0 ^ 41));
                   }
-                  var2 = (sd) ((Object) this.field_p.c((byte) 121));
+                  var2 = (sd) ((Object) this.field_p.firstForIteration((byte) 121));
                   if (param0 != 95) {
                     this.e(-90);
                   }
@@ -88,8 +88,8 @@ final class kk extends ji {
                     this.field_m.d((byte) 8, 0);
                     this.field_m.a((byte) -127, var2.field_i);
                     this.field_u.a(100, 0, this.field_m.field_j.length, this.field_m.field_j);
-                    this.field_c.a(112, var2);
-                    var2 = (sd) ((Object) this.field_p.a(54));
+                    this.field_c.addLast(112, var2);
+                    var2 = (sd) ((Object) this.field_p.nextForIteration(54));
                   }
                   var2_int = 0;
                   L8: while (true) {
@@ -174,13 +174,13 @@ final class kk extends ji {
                                   var12 = (long)var7 + ((long)var6 << -559325984);
                                   var14 = null;
                                   if (var11 != 0) {
-                                    var14_ref = (sd) ((Object) this.field_c.c((byte) 121));
+                                    var14_ref = (sd) ((Object) this.field_c.firstForIteration((byte) 121));
                                     L20: while (true) {
                                       if (var14_ref == null) {
                                         break L19;
                                       } else {
                                         if (var12 != var14_ref.field_i) {
-                                          var14_ref = (sd) ((Object) this.field_c.a(-30));
+                                          var14_ref = (sd) ((Object) this.field_c.nextForIteration(-30));
                                           continue L20;
                                         } else {
                                           break L19;
@@ -188,13 +188,13 @@ final class kk extends ji {
                                       }
                                     }
                                   } else {
-                                    var14_ref = (sd) ((Object) this.field_e.c((byte) 121));
+                                    var14_ref = (sd) ((Object) this.field_e.firstForIteration((byte) 121));
                                     L21: while (true) {
                                       if (var14_ref == null) {
                                         break L19;
                                       } else {
                                         if (~var12 != ~var14_ref.field_i) {
-                                          var14_ref = (sd) ((Object) this.field_e.a(72));
+                                          var14_ref = (sd) ((Object) this.field_e.nextForIteration(72));
                                           continue L21;
                                         } else {
                                           break L19;
@@ -451,15 +451,15 @@ final class kk extends ji {
                 this.field_j.field_f = 0;
                 this.field_f = null;
                 L4: while (true) {
-                  var4_ref = (sd) ((Object) this.field_e.a(true));
+                  var4_ref = (sd) ((Object) this.field_e.removeFirst(true));
                   if (var4_ref == null) {
                     if (param1) {
                       field_t = 110;
                     }
                     L6: while (true) {
-                      var4_ref = (sd) ((Object) this.field_c.a(true));
+                      var4_ref = (sd) ((Object) this.field_c.removeFirst(true));
                       if (var4_ref != null) {
-                        this.field_p.a(116, var4_ref);
+                        this.field_p.addLast(116, var4_ref);
                         continue L6;
                       } else {
                         if (this.field_i != 0) {
@@ -489,7 +489,7 @@ final class kk extends ji {
                       }
                     }
                   } else {
-                    this.field_g.a(-74, var4_ref);
+                    this.field_g.addLast(-74, var4_ref);
                     continue L4;
                   }
                 }

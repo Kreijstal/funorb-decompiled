@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wd {
+final class SecondaryDeque {
     static Sprite contactProbeRaster;
     static int field_d;
     static int field_a;
     static IntrusiveDeque spawnQueue;
-    private DualLinkNode field_g;
+    private DualLinkNode sentinel;
     static String field_f;
-    private DualLinkNode field_c;
+    private DualLinkNode iterationCursor;
 
-    final DualLinkNode a(int param0) {
-        int var3 = -123 % ((param0 - 21) / 32);
-        DualLinkNode var2 = this.field_c;
-        if (this.field_g != var2) {
-            this.field_c = var2.nextSecondaryNode;
-            return var2;
+    final DualLinkNode nextForIteration(int methodGuard) {
+        int var3 = -123 % ((methodGuard - 21) / 32);
+        DualLinkNode iterationNode = this.iterationCursor;
+        if (this.sentinel != iterationNode) {
+            this.iterationCursor = iterationNode.nextSecondaryNode;
+            return iterationNode;
         }
-        this.field_c = null;
+        this.iterationCursor = null;
         return null;
     }
 
@@ -33,20 +33,20 @@ final class wd {
         spawnQueue = null;
     }
 
-    final void a(DualLinkNode param0, boolean param1) {
-        if (!(param0.previousSecondaryNode == null)) {
-            param0.unlinkSecondaryNode((byte) 45);
+    final void addFirst(DualLinkNode node, boolean methodGuard) {
+        if (!(node.previousSecondaryNode == null)) {
+            node.unlinkSecondaryNode((byte) 45);
         }
-        param0.nextSecondaryNode = this.field_g.nextSecondaryNode;
-        param0.previousSecondaryNode = this.field_g;
-        if (param1) {
+        node.nextSecondaryNode = this.sentinel.nextSecondaryNode;
+        node.previousSecondaryNode = this.sentinel;
+        if (methodGuard) {
             return;
         }
         try {
-            param0.previousSecondaryNode.nextSecondaryNode = param0;
-            param0.nextSecondaryNode.previousSecondaryNode = param0;
+            node.previousSecondaryNode.nextSecondaryNode = node;
+            node.nextSecondaryNode.previousSecondaryNode = node;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "wd.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "wd.L(" + (node != null ? "{...}" : "null") + ',' + methodGuard + ')');
         }
     }
 
@@ -57,63 +57,63 @@ final class wd {
         }
     }
 
-    final DualLinkNode a(boolean param0) {
-        DualLinkNode var2 = this.field_g.nextSecondaryNode;
-        if (!param0) {
-            wd.a((byte) -92);
-            if (this.field_g != var2) {
-                var2.unlinkSecondaryNode((byte) 65);
-                return var2;
+    final DualLinkNode removeFirst(boolean methodGuard) {
+        DualLinkNode firstNode = this.sentinel.nextSecondaryNode;
+        if (!methodGuard) {
+            SecondaryDeque.a((byte) -92);
+            if (this.sentinel != firstNode) {
+                firstNode.unlinkSecondaryNode((byte) 65);
+                return firstNode;
             }
             return null;
         }
-        if (this.field_g != var2) {
-            var2.unlinkSecondaryNode((byte) 65);
-            return var2;
+        if (this.sentinel != firstNode) {
+            firstNode.unlinkSecondaryNode((byte) 65);
+            return firstNode;
         }
         return null;
     }
 
-    final int b(byte param0) {
-        DualLinkNode var3 = null;
+    final int countNodes(byte methodGuard) {
+        DualLinkNode nodeToCount = null;
         int var4 = Geoblox.field_C;
-        int var2 = 0;
-        if (param0 == 67) {
-            var3 = this.field_g.nextSecondaryNode;
-            while (this.field_g != var3) {
-                var3 = var3.nextSecondaryNode;
-                var2++;
+        int nodeCount = 0;
+        if (methodGuard == 67) {
+            nodeToCount = this.sentinel.nextSecondaryNode;
+            while (this.sentinel != nodeToCount) {
+                nodeToCount = nodeToCount.nextSecondaryNode;
+                nodeCount++;
             }
-            return var2;
+            return nodeCount;
         }
         contactProbeRaster = (Sprite) null;
-        var3 = this.field_g.nextSecondaryNode;
-        while (this.field_g != var3) {
-            var3 = var3.nextSecondaryNode;
-            var2++;
+        nodeToCount = this.sentinel.nextSecondaryNode;
+        while (this.sentinel != nodeToCount) {
+            nodeToCount = nodeToCount.nextSecondaryNode;
+            nodeCount++;
         }
-        return var2;
+        return nodeCount;
     }
 
-    final void a(int param0, DualLinkNode param1) {
+    final void addLast(int methodGuard, DualLinkNode node) {
         try {
-            if (!(param1.previousSecondaryNode == null)) {
-                param1.unlinkSecondaryNode((byte) 62);
+            if (!(node.previousSecondaryNode == null)) {
+                node.unlinkSecondaryNode((byte) 62);
             }
-            int var3_int = -75 % ((param0 - 62) / 46);
-            param1.previousSecondaryNode = this.field_g.previousSecondaryNode;
-            param1.nextSecondaryNode = this.field_g;
-            param1.previousSecondaryNode.nextSecondaryNode = param1;
-            param1.nextSecondaryNode.previousSecondaryNode = param1;
+            int var3_int = -75 % ((methodGuard - 62) / 46);
+            node.previousSecondaryNode = this.sentinel.previousSecondaryNode;
+            node.nextSecondaryNode = this.sentinel;
+            node.previousSecondaryNode.nextSecondaryNode = node;
+            node.nextSecondaryNode.previousSecondaryNode = node;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "wd.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "wd.I(" + methodGuard + ',' + (node != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(byte param0) {
         jk.field_d = 2;
         if (param0 < 45) {
-            wd.a(true, -75);
+            SecondaryDeque.a(true, -75);
         }
     }
 
@@ -154,10 +154,10 @@ final class wd {
         }
     }
 
-    public wd() {
-        this.field_g = new DualLinkNode();
-        this.field_g.nextSecondaryNode = this.field_g;
-        this.field_g.previousSecondaryNode = this.field_g;
+    public SecondaryDeque() {
+        this.sentinel = new DualLinkNode();
+        this.sentinel.nextSecondaryNode = this.sentinel;
+        this.sentinel.previousSecondaryNode = this.sentinel;
     }
 
     final static df a(boolean param0, long param1, String param2, String param3, boolean param4) {
@@ -237,18 +237,18 @@ final class wd {
         }
     }
 
-    final DualLinkNode c(byte param0) {
-        DualLinkNode var2 = this.field_g.nextSecondaryNode;
-        if (var2 == this.field_g) {
-            this.field_c = null;
+    final DualLinkNode firstForIteration(byte methodGuard) {
+        DualLinkNode firstNode = this.sentinel.nextSecondaryNode;
+        if (firstNode == this.sentinel) {
+            this.iterationCursor = null;
             return null;
         }
-        this.field_c = var2.nextSecondaryNode;
-        if (param0 == 121) {
-            return var2;
+        this.iterationCursor = firstNode.nextSecondaryNode;
+        if (methodGuard == 121) {
+            return firstNode;
         }
-        wd.b(67);
-        return var2;
+        SecondaryDeque.b(67);
+        return firstNode;
     }
 
     static {

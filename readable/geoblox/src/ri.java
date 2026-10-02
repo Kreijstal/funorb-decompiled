@@ -52,7 +52,7 @@ final class ri {
                     ih.field_a = vf.a(false, param1, param4, false);
                   } else {
                     var11 = (String) null;
-                    ih.field_a = wd.a(true, oa.field_c, (String) null, param1, false);
+                    ih.field_a = SecondaryDeque.a(true, oa.field_c, (String) null, param1, false);
                   }
                   fj.field_q.field_f = 0;
                   fj.field_q.d((byte) -102, 14);
@@ -152,8 +152,8 @@ final class ri {
                         break L14;
                       }
                     }
-                    wd.field_f = eh.field_d.e((byte) 105);
-                    var12 = (CharSequence) ((Object) wd.field_f);
+                    SecondaryDeque.field_f = eh.field_d.e((byte) 105);
+                    var12 = (CharSequence) ((Object) SecondaryDeque.field_f);
                     vg.field_b = oe.a(var12, 12);
                     ik.field_a = eh.field_d.c((byte) 34);
                     pk.field_l = eh.field_b;

@@ -115,9 +115,9 @@ final class kc {
         GameplayEntity relatedEntityCandidate = null;
         int var9 = 0;
         GameplayEntity entityCandidate = null;
-        wd var11 = null;
+        SecondaryDeque var11 = null;
         GameplayEntity parentEntity = null;
-        wd var13 = null;
+        SecondaryDeque var13 = null;
         var9 = Geoblox.field_C;
         try {
           L0: {
@@ -180,12 +180,12 @@ final class kc {
                                 break L11;
                               }
                             }
-                            var11 = new wd();
-                            var13 = new wd();
-                            var11.a(activeEntity, false);
+                            var11 = new SecondaryDeque();
+                            var13 = new SecondaryDeque();
+                            var11.addFirst(activeEntity, false);
                             var4_int = 1;
                             L13: while (true) {
-                              stackIn_20_0 = (GameplayEntity) ((Object) var11.a(true));
+                              stackIn_20_0 = (GameplayEntity) ((Object) var11.removeFirst(true));
                               L14: while (true) {
                                 L15: {
                                   L16: {
@@ -206,13 +206,13 @@ final class kc {
                                             break L16;
                                           }
                                         }
-                                        var13.a(parentEntity, false);
+                                        var13.addFirst(parentEntity, false);
                                         childEntityIndex = 0;
                                         L18: while (true) {
                                           L19: {
                                             if (childEntityIndex < parentEntity.relatedEntityCount) {
                                               var7 = entityCandidate.relatedEntities[childEntityIndex];
-                                              stackIn_20_0 = (GameplayEntity) ((Object) var13.c((byte) 121));
+                                              stackIn_20_0 = (GameplayEntity) ((Object) var13.firstForIteration((byte) 121));
 
                                               if (var9 != 0) {
                                                 continue L14;
@@ -234,13 +234,13 @@ final class kc {
                                                               break L21;
                                                             }
                                                           }
-                                                          relatedEntityCandidate = (GameplayEntity) ((Object) var13.a(-45));
+                                                          relatedEntityCandidate = (GameplayEntity) ((Object) var13.nextForIteration(-45));
                                                           if (var9 == 0) {
                                                             continue L20;
                                                           }
                                                         }
                                                       }
-                                                      relatedEntityCandidate = (GameplayEntity) ((Object) var11.c((byte) 121));
+                                                      relatedEntityCandidate = (GameplayEntity) ((Object) var11.firstForIteration((byte) 121));
                                                       L25: while (relatedEntityCandidate != null) {
                                                         stackIn_51_0 = (GameplayEntity) (relatedEntityCandidate);
 
@@ -252,7 +252,7 @@ final class kc {
                                                           if (stackIn_51_0 == stackIn_51_1) {
                                                             break L21;
                                                           } else {
-                                                            relatedEntityCandidate = (GameplayEntity) ((Object) var11.a(54));
+                                                            relatedEntityCandidate = (GameplayEntity) ((Object) var11.nextForIteration(54));
                                                             if (var9 == 0) {
                                                               continue L25;
                                                             }
@@ -260,7 +260,7 @@ final class kc {
                                                         }
                                                         break;
                                                       }
-                                                      var11.a(var7, false);
+                                                      var11.addFirst(var7, false);
                                                       break L21;
                                                     }
                                                     L27: while (true) {
@@ -288,7 +288,7 @@ final class kc {
                                                                   groupEntity.relatedEntityCount = 0;
                                                                   var6.sameCategoryEntityCount = 0;
                                                                   var7.sameVariantEntityCount = 0;
-                                                                  groupEntity = (GameplayEntity) ((Object) var13.a(true));
+                                                                  groupEntity = (GameplayEntity) ((Object) var13.removeFirst(true));
                                                                   if (var9 == 0) {
                                                                     continue L29;
                                                                   } else {
@@ -309,7 +309,7 @@ final class kc {
                                                                 groupEntity.relatedEntityCount = 0;
                                                                 var6.sameCategoryEntityCount = 0;
                                                                 var7.sameVariantEntityCount = 0;
-                                                                groupEntity = (GameplayEntity) ((Object) var13.a(true));
+                                                                groupEntity = (GameplayEntity) ((Object) var13.removeFirst(true));
                                                                 if (var9 == 0) {
                                                                   if (groupEntity == null) {
                                                                     break L11;
@@ -341,7 +341,7 @@ final class kc {
                                                               groupEntity.relatedEntityCount = 0;
                                                               var6.sameCategoryEntityCount = 0;
                                                               var7.sameVariantEntityCount = 0;
-                                                              groupEntity = (GameplayEntity) ((Object) var13.a(true));
+                                                              groupEntity = (GameplayEntity) ((Object) var13.removeFirst(true));
                                                               if (var9 == 0) {
                                                                 if (groupEntity == null) {
                                                                   break L11;
@@ -399,7 +399,7 @@ final class kc {
                                 if (stackIn_44_0 == 0) {
                                   break L11;
                                 } else {
-                                  groupEntity = (GameplayEntity) ((Object) var13.a(true));
+                                  groupEntity = (GameplayEntity) ((Object) var13.removeFirst(true));
                                   L32: while (true) {
                                     if (groupEntity == null) {
                                       break L11;
@@ -433,7 +433,7 @@ final class kc {
                                         groupEntity.relatedEntityCount = 0;
                                         var6.sameCategoryEntityCount = 0;
                                         var7.sameVariantEntityCount = 0;
-                                        groupEntity = (GameplayEntity) ((Object) var13.a(true));
+                                        groupEntity = (GameplayEntity) ((Object) var13.removeFirst(true));
                                         if (var9 == 0) {
                                           continue L32;
                                         } else {

@@ -21,12 +21,12 @@ final class lc {
         var10 = Geoblox.field_C;
         try {
           L0: {
-            var1 = (GameplayEntity) ((Object) wd.spawnQueue.firstForIteration(0));
+            var1 = (GameplayEntity) ((Object) SecondaryDeque.spawnQueue.firstForIteration(0));
             L1: while (true) {
               L2: {
                 if (var1 != null) {
                   var1.advanceEntityAnimation(true);
-                  var1 = (GameplayEntity) ((Object) wd.spawnQueue.nextForIteration(1));
+                  var1 = (GameplayEntity) ((Object) SecondaryDeque.spawnQueue.nextForIteration(1));
                   if (var10 != 0) {
                     break L2;
                   } else {
@@ -56,16 +56,16 @@ final class lc {
                     }
                   }
                 }
-                if (0 < wd.spawnQueue.countNodes(param0 ^ -170)) {
+                if (0 < SecondaryDeque.spawnQueue.countNodes(param0 ^ -170)) {
                   if (!el.gameplaySession.spawnReleaseDisabled) {
-                    ji.movingEntities.addLast(-48, wd.spawnQueue.removeFirst((byte) -124));
+                    ji.movingEntities.addLast(-48, SecondaryDeque.spawnQueue.removeFirst((byte) -124));
                     hd.recordEntityRelease(2);
                     kc.field_a = 0;
                   }
                 }
               }
               kc.field_a = kc.field_a + 1;
-              if (wd.spawnQueue.countNodes(param0 ^ 143) < 3) {
+              if (SecondaryDeque.spawnQueue.countNodes(param0 ^ 143) < 3) {
                 if (ma.c((byte) -53)) {
                   if (!el.gameplaySession.canAdvanceSession(true)) {
                     var1 = (GameplayEntity) ((Object) ra.availableEntities.removeFirst((byte) -101));
@@ -78,8 +78,8 @@ final class lc {
                       var8 = 1.0 / Math.sqrt((double)(var7 * var7 + var6 * var6));
                       var7 = (float)((double)var7 * var8);
                       var6 = (float)((double)var6 * var8);
-                      var1.initializeEntityMotion(101, var4, vd.a(param0 ^ 741924143), og.entityMotionSpeed * var6, nf.c((byte) -67), kc.field_a + kb.field_c * (1 + wd.spawnQueue.countNodes(111)), 0.0f, var5, var7 * og.entityMotionSpeed, ij.m(param0 ^ 131), 0.0f);
-                      wd.spawnQueue.addLast(-47, var1);
+                      var1.initializeEntityMotion(101, var4, vd.a(param0 ^ 741924143), og.entityMotionSpeed * var6, nf.c((byte) -67), kc.field_a + kb.field_c * (1 + SecondaryDeque.spawnQueue.countNodes(111)), 0.0f, var5, var7 * og.entityMotionSpeed, ij.m(param0 ^ 131), 0.0f);
+                      SecondaryDeque.spawnQueue.addLast(-47, var1);
                       mf.b(false);
                     }
                   }

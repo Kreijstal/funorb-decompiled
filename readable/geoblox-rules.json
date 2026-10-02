@@ -125,6 +125,12 @@
       "originalName": "vb"
     },
     {
+      "symbol": "C:wd",
+      "originalName": "wd",
+      "to": "SecondaryDeque",
+      "evidence": "Instance API is a circular intrusive deque using rc secondary links; native model-based operations preserve the independent primary links. Unrelated static helpers remain on the same class."
+    },
+    {
       "symbol": "C:wh",
       "to": "SpriteState",
       "evidence": "Declares sprite dimensions and trim offsets read by dm transforms; also contains unrelated static helpers.",
@@ -2147,10 +2153,22 @@
       "evidence": "The pixel contact probe uses this raster while resolving moving-entity contacts."
     },
     {
+      "symbol": "F:wd.field_c:Lrc;",
+      "originalName": "field_c",
+      "to": "iterationCursor",
+      "evidence": "First iteration saves the following secondary node; next iteration returns this cursor and advances it to the next secondary link."
+    },
+    {
       "symbol": "F:wd.field_e:Ltf;",
       "to": "spawnQueue",
       "originalName": "field_e",
       "evidence": "lc advances staged entities and releases ready members to ji.field_r."
+    },
+    {
+      "symbol": "F:wd.field_g:Lrc;",
+      "originalName": "field_g",
+      "to": "sentinel",
+      "evidence": "Constructor self-links this secondary-node sentinel; traversal and removal compare against its identity."
     },
     {
       "symbol": "F:wf.field_q:Ljava/lang/String;",
@@ -2373,6 +2391,90 @@
       "to": "chainAndPointsText",
       "originalName": "var2",
       "evidence": "Render iteration uses the popup and builds the X multiplier plus points text for chain multipliers other than one."
+    },
+    {
+      "symbol": "L:bh.a(ZLja;ILja;Z)V#0",
+      "originalName": "dupTemp$0",
+      "to": "poppedEntity",
+      "evidence": "Carrier of the pending deque removeFirst result assigned to currentEntity."
+    },
+    {
+      "symbol": "L:bh.a(ZLja;ILja;Z)V#1",
+      "originalName": "dupTemp$1",
+      "to": "neighborForVariantIncrement",
+      "evidence": "Related entity alias used to increment its same-variant count."
+    },
+    {
+      "symbol": "L:bh.a(ZLja;ILja;Z)V#15",
+      "originalName": "var6",
+      "to": "processedEntities",
+      "evidence": "Secondary deque holding processed entities; the comparison scans for currentEntity, not the neighbor."
+    },
+    {
+      "symbol": "L:bh.a(ZLja;ILja;Z)V#16",
+      "originalName": "var7",
+      "to": "templateVariantIndex",
+      "evidence": "Snapshot of the template variant before the pending traversal begins."
+    },
+    {
+      "symbol": "L:bh.a(ZLja;ILja;Z)V#17",
+      "originalName": "var8",
+      "to": "templateSpriteKindId",
+      "evidence": "Snapshot of the template sprite kind before the pending traversal begins."
+    },
+    {
+      "symbol": "L:bh.a(ZLja;ILja;Z)V#18",
+      "originalName": "var9",
+      "to": "templateCategoryKey",
+      "evidence": "Snapshot of the template category before the pending traversal begins."
+    },
+    {
+      "symbol": "L:bh.a(ZLja;ILja;Z)V#19",
+      "originalName": "var10",
+      "to": "currentEntity",
+      "evidence": "Entity popped from the pending secondary deque, converted and then inserted into processedEntities."
+    },
+    {
+      "symbol": "L:bh.a(ZLja;ILja;Z)V#2",
+      "originalName": "dupTemp$2",
+      "to": "neighborForCategoryIncrement",
+      "evidence": "Related entity alias used to increment its same-category count."
+    },
+    {
+      "symbol": "L:bh.a(ZLja;ILja;Z)V#20",
+      "originalName": "var11",
+      "to": "neighborIndex",
+      "evidence": "Walks currentEntity related entities and schedules eligible kinds for conversion."
+    },
+    {
+      "symbol": "L:bh.a(ZLja;ILja;Z)V#21",
+      "originalName": "var12",
+      "to": "processedEntityToCompare",
+      "evidence": "Scans processedEntities comparing currentEntity identity; does not identify a visited neighbor."
+    },
+    {
+      "symbol": "L:bh.a(ZLja;ILja;Z)V#23",
+      "originalName": "var14",
+      "to": "pendingEntities",
+      "evidence": "Secondary deque receiving eligible neighbors at the front, with automatic removal of their previous secondary membership."
+    },
+    {
+      "symbol": "L:bh.a(ZLja;ILja;Z)V#24",
+      "originalName": "var15",
+      "to": "pendingEntitiesForRemoval",
+      "evidence": "Alias of pendingEntities used to remove the first entity on each traversal iteration."
+    },
+    {
+      "symbol": "L:bh.a(ZLja;ILja;Z)V#3",
+      "originalName": "stackIn_31_0",
+      "to": "neighborVariantWriteTarget",
+      "evidence": "Carrier for the neighbor receiving the variant-count increment."
+    },
+    {
+      "symbol": "L:bh.a(ZLja;ILja;Z)V#4",
+      "originalName": "stackIn_31_1",
+      "to": "neighborVariantReadSource",
+      "evidence": "Carrier for the same neighbor supplying the previous variant count."
     },
     {
       "symbol": "L:c.a(BI)V#1",
@@ -4079,6 +4181,36 @@
       "evidence": "Drains active popups with removeFirst and accumulates their points into the returned integer."
     },
     {
+      "symbol": "L:wd.a(I)Lrc;#1",
+      "originalName": "var2",
+      "to": "iterationNode",
+      "evidence": "Secondary deque traversal/removal role supported by sentinel/link inspection and native model-based identity/order/count checks."
+    },
+    {
+      "symbol": "L:wd.a(Z)Lrc;#0",
+      "originalName": "var2",
+      "to": "firstNode",
+      "evidence": "Secondary deque traversal/removal role supported by sentinel/link inspection and native model-based identity/order/count checks."
+    },
+    {
+      "symbol": "L:wd.b(B)I#0",
+      "originalName": "var3",
+      "to": "nodeToCount",
+      "evidence": "Secondary deque traversal/removal role supported by sentinel/link inspection and native model-based identity/order/count checks."
+    },
+    {
+      "symbol": "L:wd.b(B)I#2",
+      "originalName": "var2",
+      "to": "nodeCount",
+      "evidence": "Secondary deque traversal/removal role supported by sentinel/link inspection and native model-based identity/order/count checks."
+    },
+    {
+      "symbol": "L:wd.c(B)Lrc;#0",
+      "originalName": "var2",
+      "to": "firstNode",
+      "evidence": "Secondary deque traversal/removal role supported by sentinel/link inspection and native model-based identity/order/count checks."
+    },
+    {
       "symbol": "L:wi$1$CfrPartitionedBody.run()V#0",
       "to": "caughtFailure",
       "originalName": "decompiledCaughtParameter0",
@@ -4227,6 +4359,12 @@
       "to": "drawScorePopups",
       "originalName": "a",
       "evidence": "Interpolates active popup position toward the points panel and renders either plain points or chain multiplier plus points."
+    },
+    {
+      "symbol": "M:bh.a(ZLja;ILja;Z)V",
+      "originalName": "a",
+      "to": "propagateContactConversion",
+      "evidence": "Copies template variant and/or category/kind through eligible related entities using pending and processed secondary deques. Native checks cover all 64 undirected four-entity graphs with both roots, keys and client guards, including wrapped partial-write failures."
     },
     {
       "symbol": "M:c.a(BI)V",
@@ -5051,6 +5189,42 @@
       "evidence": "Removes every active popup and returns the sum of its uncredited points without multiplying them again."
     },
     {
+      "symbol": "M:wd.a(I)Lrc;",
+      "originalName": "a",
+      "to": "nextForIteration",
+      "evidence": "Returns and advances the cursor until reaching the sentinel; guard -59 used by conversion. Native model checks identity, order, reciprocity, transfers and primary-link independence."
+    },
+    {
+      "symbol": "M:wd.a(ILrc;)V",
+      "originalName": "a",
+      "to": "addLast",
+      "evidence": "Unlinks existing secondary membership, then inserts between the final node and the sentinel; normal guard -45. Native model checks identity, order, reciprocity, transfers and primary-link independence."
+    },
+    {
+      "symbol": "M:wd.a(Lrc;Z)V",
+      "originalName": "a",
+      "to": "addFirst",
+      "evidence": "Unlinks existing secondary membership, then inserts between the sentinel and its first secondary node with guard false. Native model checks identity, order, reciprocity, transfers and primary-link independence."
+    },
+    {
+      "symbol": "M:wd.a(Z)Lrc;",
+      "originalName": "a",
+      "to": "removeFirst",
+      "evidence": "Unlinks and returns the first secondary node, or null at the sentinel; normal guard true. Native model checks identity, order, reciprocity, transfers and primary-link independence."
+    },
+    {
+      "symbol": "M:wd.b(B)I",
+      "originalName": "b",
+      "to": "countNodes",
+      "evidence": "Walks the secondary-next links to the sentinel and counts nodes; normal guard 67. Native model checks identity, order, reciprocity, transfers and primary-link independence."
+    },
+    {
+      "symbol": "M:wd.c(B)Lrc;",
+      "originalName": "c",
+      "to": "firstForIteration",
+      "evidence": "Returns the first secondary node and initializes the cursor, or returns null and clears the cursor; normal guard 121. Native model checks identity, order, reciprocity, transfers and primary-link independence."
+    },
+    {
       "symbol": "M:wi$1$CfrPartitionedBody.runChunk0()V",
       "to": "loadInterfaceTextPart1",
       "originalName": "runChunk0",
@@ -5139,6 +5313,36 @@
       "to": "length",
       "originalName": "param3",
       "evidence": "Argument role is explicit in allocation of char[length], access to textBytes[offset + byteIndex], loop bound length and the guard side effect."
+    },
+    {
+      "symbol": "P:bh.a(ZLja;ILja;Z)V#0",
+      "originalName": "param0",
+      "to": "propagateCategoryAndKind",
+      "evidence": "Selects category/kind copies, kind-two detachment before that copy, category-count increments and angle copies while scheduling neighbors."
+    },
+    {
+      "symbol": "P:bh.a(ZLja;ILja;Z)V#1",
+      "originalName": "param1",
+      "to": "templateEntity",
+      "evidence": "Source of copied variant, sprite kind, category and conditional angle."
+    },
+    {
+      "symbol": "P:bh.a(ZLja;ILja;Z)V#2",
+      "originalName": "param2",
+      "to": "methodGuard",
+      "evidence": "Normal value 1 supplies configureEntitySprite guard 320 and processed-list iteration guard -59; alternate cleanup branches remain intact."
+    },
+    {
+      "symbol": "P:bh.a(ZLja;ILja;Z)V#3",
+      "originalName": "param3",
+      "to": "startingEntity",
+      "evidence": "Inserted into the pending secondary deque before traversing eligible related entities."
+    },
+    {
+      "symbol": "P:bh.a(ZLja;ILja;Z)V#4",
+      "originalName": "param4",
+      "to": "propagateVariant",
+      "evidence": "Selects variant copy with sprite kind zero, variant-count increments and kind-one neighbor traversal."
     },
     {
       "symbol": "P:c.a(BI)V#1",
@@ -6179,6 +6383,54 @@
       "evidence": "Normal callers pass -2. Other values clear ul.field_a; match enumeration and RuntimeException context remain intact."
     },
     {
+      "symbol": "P:wd.a(I)Lrc;#0",
+      "originalName": "param0",
+      "to": "methodGuard",
+      "evidence": "Retained original method guard; native deque probe uses the normal value and preserves alternate source branches."
+    },
+    {
+      "symbol": "P:wd.a(ILrc;)V#0",
+      "originalName": "param0",
+      "to": "methodGuard",
+      "evidence": "Retained original method guard; native deque probe uses the normal value and preserves alternate source branches."
+    },
+    {
+      "symbol": "P:wd.a(ILrc;)V#1",
+      "originalName": "param1",
+      "to": "node",
+      "evidence": "Inserted secondary node, transferred safely from previous secondary membership."
+    },
+    {
+      "symbol": "P:wd.a(Lrc;Z)V#0",
+      "originalName": "param0",
+      "to": "node",
+      "evidence": "Inserted secondary node, transferred safely from previous secondary membership."
+    },
+    {
+      "symbol": "P:wd.a(Lrc;Z)V#1",
+      "originalName": "param1",
+      "to": "methodGuard",
+      "evidence": "Retained original method guard; native deque probe uses the normal value and preserves alternate source branches."
+    },
+    {
+      "symbol": "P:wd.a(Z)Lrc;#0",
+      "originalName": "param0",
+      "to": "methodGuard",
+      "evidence": "Retained original method guard; native deque probe uses the normal value and preserves alternate source branches."
+    },
+    {
+      "symbol": "P:wd.b(B)I#0",
+      "originalName": "param0",
+      "to": "methodGuard",
+      "evidence": "Retained original method guard; native deque probe uses the normal value and preserves alternate source branches."
+    },
+    {
+      "symbol": "P:wd.c(B)Lrc;#0",
+      "originalName": "param0",
+      "to": "methodGuard",
+      "evidence": "Retained original method guard; native deque probe uses the normal value and preserves alternate source branches."
+    },
+    {
       "symbol": "P:wi$1$CfrPartitionedBody.<init>(BLrh;)V#0",
       "to": "initialLoadGuard",
       "originalName": "initialParam0",
@@ -6204,7 +6456,7 @@
     }
   ],
   "revision": 4,
-  "version": 22,
+  "version": 23,
   "generators": {
     "dekoblokoWork": {
       "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
@@ -6224,159 +6476,429 @@
   "publication": {
     "format": 1,
     "previousRules": {
-      "commit": "64fda1c2261bb8ca03f2578e5a3fcb71e8bb12ac",
+      "commit": "8310d16b73022fc3542bd8ae9df88bdb287559d2",
       "path": "readable/geoblox-rules.json",
-      "sha256": "8c319c2566e20ecc35a4cc84ddf977c03fb1e5ebed5acb3206c52ca5c8b9754b"
+      "sha256": "5ecd55f2867f628f41188c9639f8f72f78f029fe65c1dcafd3e95c039b4eafee"
     },
     "ruleChanges": [
       {
-        "symbol": "L:ik.a(Lja;Lja;Z)Z#0",
+        "symbol": "C:wd",
         "before": null,
         "after": {
-          "symbol": "L:ik.a(Lja;Lja;Z)Z#0",
-          "originalName": "fieldTemp$0",
-          "to": "secondNeighborInsertionIndex",
-          "evidence": "Captures the second entity neighbor count before increment, then indexes the reciprocal append."
+          "symbol": "C:wd",
+          "originalName": "wd",
+          "to": "SecondaryDeque",
+          "evidence": "Instance API is a circular intrusive deque using rc secondary links; native model-based operations preserve the independent primary links. Unrelated static helpers remain on the same class."
         }
       },
       {
-        "symbol": "L:ik.a(Lja;Lja;Z)Z#1",
+        "symbol": "F:wd.field_c:Lrc;",
         "before": null,
         "after": {
-          "symbol": "L:ik.a(Lja;Lja;Z)Z#1",
-          "originalName": "fieldTemp$1",
-          "to": "firstNeighborInsertionIndex",
-          "evidence": "Captures the first entity neighbor count before increment, then indexes the reciprocal append."
+          "symbol": "F:wd.field_c:Lrc;",
+          "originalName": "field_c",
+          "to": "iterationCursor",
+          "evidence": "First iteration saves the following secondary node; next iteration returns this cursor and advances it to the next secondary link."
         }
       },
       {
-        "symbol": "L:ik.a(Lja;Lja;Z)Z#16",
+        "symbol": "F:wd.field_g:Lrc;",
         "before": null,
         "after": {
-          "symbol": "L:ik.a(Lja;Lja;Z)Z#16",
-          "originalName": "var3_int",
-          "to": "neighborIndexThenDetachSecond",
-          "evidence": "First searches the second neighbor list; after no duplicate exists, becomes its Boolean detach flag and final return value. Both roles are retained."
+          "symbol": "F:wd.field_g:Lrc;",
+          "originalName": "field_g",
+          "to": "sentinel",
+          "evidence": "Constructor self-links this secondary-node sentinel; traversal and removal compare against its identity."
         }
       },
       {
-        "symbol": "L:ik.a(Lja;Lja;Z)Z#18",
+        "symbol": "L:bh.a(ZLja;ILja;Z)V#0",
         "before": null,
         "after": {
-          "symbol": "L:ik.a(Lja;Lja;Z)Z#18",
-          "originalName": "var4",
-          "to": "detachFirst",
-          "evidence": "Flags first-entity reciprocal unlink, count reset, avatar-contact clearing and transfer marker to moving entities."
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#0",
+          "originalName": "dupTemp$0",
+          "to": "poppedEntity",
+          "evidence": "Carrier of the pending deque removeFirst result assigned to currentEntity."
         }
       },
       {
-        "symbol": "L:ik.a(Lja;Lja;Z)Z#19",
+        "symbol": "L:bh.a(ZLja;ILja;Z)V#1",
         "before": null,
         "after": {
-          "symbol": "L:ik.a(Lja;Lja;Z)Z#19",
-          "originalName": "var5_int",
-          "to": "variantPropagationThenNeighborIndex",
-          "evidence": "Initially selects variant propagation through bh.a; later reuses the slot to walk neighbors while detaching either entity."
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#1",
+          "originalName": "dupTemp$1",
+          "to": "neighborForVariantIncrement",
+          "evidence": "Related entity alias used to increment its same-variant count."
         }
       },
       {
-        "symbol": "L:ik.a(Lja;Lja;Z)Z#2",
+        "symbol": "L:bh.a(ZLja;ILja;Z)V#15",
         "before": null,
         "after": {
-          "symbol": "L:ik.a(Lja;Lja;Z)Z#2",
-          "originalName": "stackIn_6_0",
-          "to": "duplicateContactReturnValue",
-          "evidence": "Zero-valued return carrier on an existing reciprocal contact; duplicate native cases verify no mutation even with forced detachment."
-        }
-      },
-      {
-        "symbol": "L:ik.a(Lja;Lja;Z)Z#20",
-        "before": null,
-        "after": {
-          "symbol": "L:ik.a(Lja;Lja;Z)Z#20",
-          "originalName": "var5",
-          "to": "entityForNeighborCountReset",
-          "evidence": "Aliases either detaching entity while zeroing its related-entity count; does not permanently identify first or second."
-        }
-      },
-      {
-        "symbol": "L:ik.a(Lja;Lja;Z)Z#21",
-        "before": null,
-        "after": {
-          "symbol": "L:ik.a(Lja;Lja;Z)Z#21",
-          "originalName": "var6_int",
-          "to": "propagateCategory",
-          "evidence": "Selects the category/kind propagation flag passed as bh.a first argument after special-kind contacts."
-        }
-      },
-      {
-        "symbol": "L:ik.a(Lja;Lja;Z)Z#22",
-        "before": null,
-        "after": {
-          "symbol": "L:ik.a(Lja;Lja;Z)Z#22",
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#15",
           "originalName": "var6",
-          "to": "entityForVariantCountReset",
-          "evidence": "Aliases either detaching entity while zeroing its same-variant neighbor count; does not permanently identify first or second."
+          "to": "processedEntities",
+          "evidence": "Secondary deque holding processed entities; the comparison scans for currentEntity, not the neighbor."
         }
       },
       {
-        "symbol": "L:ik.a(Lja;Lja;Z)Z#3",
+        "symbol": "L:bh.a(ZLja;ILja;Z)V#16",
         "before": null,
         "after": {
-          "symbol": "L:ik.a(Lja;Lja;Z)Z#3",
-          "originalName": "stackIn_14_0",
-          "to": "secondIsKindOne",
-          "evidence": "Integer Boolean carrier for second.entitySpriteKindId == 1, XORed with the first entity kind check."
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#16",
+          "originalName": "var7",
+          "to": "templateVariantIndex",
+          "evidence": "Snapshot of the template variant before the pending traversal begins."
         }
       },
       {
-        "symbol": "L:ik.a(Lja;Lja;Z)Z#4",
+        "symbol": "L:bh.a(ZLja;ILja;Z)V#17",
         "before": null,
         "after": {
-          "symbol": "L:ik.a(Lja;Lja;Z)Z#4",
-          "originalName": "stackIn_17_1",
-          "to": "firstIsKindOne",
-          "evidence": "Integer Boolean carrier for first.entitySpriteKindId == 1, XORed with the second entity kind check."
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#17",
+          "originalName": "var8",
+          "to": "templateSpriteKindId",
+          "evidence": "Snapshot of the template sprite kind before the pending traversal begins."
         }
       },
       {
-        "symbol": "L:ik.a(Lja;Lja;Z)Z#5",
+        "symbol": "L:bh.a(ZLja;ILja;Z)V#18",
         "before": null,
         "after": {
-          "symbol": "L:ik.a(Lja;Lja;Z)Z#5",
-          "originalName": "stackIn_77_0",
-          "to": "secondDetachmentReturnValue",
-          "evidence": "Final return carrier copied from the second-entity detach flag; native kind/force matrix verifies the returned outcome."
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#18",
+          "originalName": "var9",
+          "to": "templateCategoryKey",
+          "evidence": "Snapshot of the template category before the pending traversal begins."
         }
       },
       {
-        "symbol": "P:ik.a(Lja;Lja;Z)Z#2",
+        "symbol": "L:bh.a(ZLja;ILja;Z)V#19",
         "before": null,
         "after": {
-          "symbol": "P:ik.a(Lja;Lja;Z)Z#2",
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#19",
+          "originalName": "var10",
+          "to": "currentEntity",
+          "evidence": "Entity popped from the pending secondary deque, converted and then inserted into processedEntities."
+        }
+      },
+      {
+        "symbol": "L:bh.a(ZLja;ILja;Z)V#2",
+        "before": null,
+        "after": {
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#2",
+          "originalName": "dupTemp$2",
+          "to": "neighborForCategoryIncrement",
+          "evidence": "Related entity alias used to increment its same-category count."
+        }
+      },
+      {
+        "symbol": "L:bh.a(ZLja;ILja;Z)V#20",
+        "before": null,
+        "after": {
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#20",
+          "originalName": "var11",
+          "to": "neighborIndex",
+          "evidence": "Walks currentEntity related entities and schedules eligible kinds for conversion."
+        }
+      },
+      {
+        "symbol": "L:bh.a(ZLja;ILja;Z)V#21",
+        "before": null,
+        "after": {
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#21",
+          "originalName": "var12",
+          "to": "processedEntityToCompare",
+          "evidence": "Scans processedEntities comparing currentEntity identity; does not identify a visited neighbor."
+        }
+      },
+      {
+        "symbol": "L:bh.a(ZLja;ILja;Z)V#23",
+        "before": null,
+        "after": {
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#23",
+          "originalName": "var14",
+          "to": "pendingEntities",
+          "evidence": "Secondary deque receiving eligible neighbors at the front, with automatic removal of their previous secondary membership."
+        }
+      },
+      {
+        "symbol": "L:bh.a(ZLja;ILja;Z)V#24",
+        "before": null,
+        "after": {
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#24",
+          "originalName": "var15",
+          "to": "pendingEntitiesForRemoval",
+          "evidence": "Alias of pendingEntities used to remove the first entity on each traversal iteration."
+        }
+      },
+      {
+        "symbol": "L:bh.a(ZLja;ILja;Z)V#3",
+        "before": null,
+        "after": {
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#3",
+          "originalName": "stackIn_31_0",
+          "to": "neighborVariantWriteTarget",
+          "evidence": "Carrier for the neighbor receiving the variant-count increment."
+        }
+      },
+      {
+        "symbol": "L:bh.a(ZLja;ILja;Z)V#4",
+        "before": null,
+        "after": {
+          "symbol": "L:bh.a(ZLja;ILja;Z)V#4",
+          "originalName": "stackIn_31_1",
+          "to": "neighborVariantReadSource",
+          "evidence": "Carrier for the same neighbor supplying the previous variant count."
+        }
+      },
+      {
+        "symbol": "L:wd.a(I)Lrc;#1",
+        "before": null,
+        "after": {
+          "symbol": "L:wd.a(I)Lrc;#1",
+          "originalName": "var2",
+          "to": "iterationNode",
+          "evidence": "Secondary deque traversal/removal role supported by sentinel/link inspection and native model-based identity/order/count checks."
+        }
+      },
+      {
+        "symbol": "L:wd.a(Z)Lrc;#0",
+        "before": null,
+        "after": {
+          "symbol": "L:wd.a(Z)Lrc;#0",
+          "originalName": "var2",
+          "to": "firstNode",
+          "evidence": "Secondary deque traversal/removal role supported by sentinel/link inspection and native model-based identity/order/count checks."
+        }
+      },
+      {
+        "symbol": "L:wd.b(B)I#0",
+        "before": null,
+        "after": {
+          "symbol": "L:wd.b(B)I#0",
+          "originalName": "var3",
+          "to": "nodeToCount",
+          "evidence": "Secondary deque traversal/removal role supported by sentinel/link inspection and native model-based identity/order/count checks."
+        }
+      },
+      {
+        "symbol": "L:wd.b(B)I#2",
+        "before": null,
+        "after": {
+          "symbol": "L:wd.b(B)I#2",
+          "originalName": "var2",
+          "to": "nodeCount",
+          "evidence": "Secondary deque traversal/removal role supported by sentinel/link inspection and native model-based identity/order/count checks."
+        }
+      },
+      {
+        "symbol": "L:wd.c(B)Lrc;#0",
+        "before": null,
+        "after": {
+          "symbol": "L:wd.c(B)Lrc;#0",
+          "originalName": "var2",
+          "to": "firstNode",
+          "evidence": "Secondary deque traversal/removal role supported by sentinel/link inspection and native model-based identity/order/count checks."
+        }
+      },
+      {
+        "symbol": "M:bh.a(ZLja;ILja;Z)V",
+        "before": null,
+        "after": {
+          "symbol": "M:bh.a(ZLja;ILja;Z)V",
+          "originalName": "a",
+          "to": "propagateContactConversion",
+          "evidence": "Copies template variant and/or category/kind through eligible related entities using pending and processed secondary deques. Native checks cover all 64 undirected four-entity graphs with both roots, keys and client guards, including wrapped partial-write failures."
+        }
+      },
+      {
+        "symbol": "M:wd.a(I)Lrc;",
+        "before": null,
+        "after": {
+          "symbol": "M:wd.a(I)Lrc;",
+          "originalName": "a",
+          "to": "nextForIteration",
+          "evidence": "Returns and advances the cursor until reaching the sentinel; guard -59 used by conversion. Native model checks identity, order, reciprocity, transfers and primary-link independence."
+        }
+      },
+      {
+        "symbol": "M:wd.a(ILrc;)V",
+        "before": null,
+        "after": {
+          "symbol": "M:wd.a(ILrc;)V",
+          "originalName": "a",
+          "to": "addLast",
+          "evidence": "Unlinks existing secondary membership, then inserts between the final node and the sentinel; normal guard -45. Native model checks identity, order, reciprocity, transfers and primary-link independence."
+        }
+      },
+      {
+        "symbol": "M:wd.a(Lrc;Z)V",
+        "before": null,
+        "after": {
+          "symbol": "M:wd.a(Lrc;Z)V",
+          "originalName": "a",
+          "to": "addFirst",
+          "evidence": "Unlinks existing secondary membership, then inserts between the sentinel and its first secondary node with guard false. Native model checks identity, order, reciprocity, transfers and primary-link independence."
+        }
+      },
+      {
+        "symbol": "M:wd.a(Z)Lrc;",
+        "before": null,
+        "after": {
+          "symbol": "M:wd.a(Z)Lrc;",
+          "originalName": "a",
+          "to": "removeFirst",
+          "evidence": "Unlinks and returns the first secondary node, or null at the sentinel; normal guard true. Native model checks identity, order, reciprocity, transfers and primary-link independence."
+        }
+      },
+      {
+        "symbol": "M:wd.b(B)I",
+        "before": null,
+        "after": {
+          "symbol": "M:wd.b(B)I",
+          "originalName": "b",
+          "to": "countNodes",
+          "evidence": "Walks the secondary-next links to the sentinel and counts nodes; normal guard 67. Native model checks identity, order, reciprocity, transfers and primary-link independence."
+        }
+      },
+      {
+        "symbol": "M:wd.c(B)Lrc;",
+        "before": null,
+        "after": {
+          "symbol": "M:wd.c(B)Lrc;",
+          "originalName": "c",
+          "to": "firstForIteration",
+          "evidence": "Returns the first secondary node and initializes the cursor, or returns null and clears the cursor; normal guard 121. Native model checks identity, order, reciprocity, transfers and primary-link independence."
+        }
+      },
+      {
+        "symbol": "P:bh.a(ZLja;ILja;Z)V#0",
+        "before": null,
+        "after": {
+          "symbol": "P:bh.a(ZLja;ILja;Z)V#0",
+          "originalName": "param0",
+          "to": "propagateCategoryAndKind",
+          "evidence": "Selects category/kind copies, kind-two detachment before that copy, category-count increments and angle copies while scheduling neighbors."
+        }
+      },
+      {
+        "symbol": "P:bh.a(ZLja;ILja;Z)V#1",
+        "before": null,
+        "after": {
+          "symbol": "P:bh.a(ZLja;ILja;Z)V#1",
+          "originalName": "param1",
+          "to": "templateEntity",
+          "evidence": "Source of copied variant, sprite kind, category and conditional angle."
+        }
+      },
+      {
+        "symbol": "P:bh.a(ZLja;ILja;Z)V#2",
+        "before": null,
+        "after": {
+          "symbol": "P:bh.a(ZLja;ILja;Z)V#2",
           "originalName": "param2",
-          "to": "forceDetachSecond",
-          "evidence": "The incoming flag initializes the second-entity detach outcome only after duplicate suppression; verified native contact matrix covers both values."
+          "to": "methodGuard",
+          "evidence": "Normal value 1 supplies configureEntitySprite guard 320 and processed-list iteration guard -59; alternate cleanup branches remain intact."
         }
       },
       {
-        "symbol": "P:ja.a(IIII)V#0",
+        "symbol": "P:bh.a(ZLja;ILja;Z)V#3",
         "before": null,
         "after": {
-          "symbol": "P:ja.a(IIII)V#0",
+          "symbol": "P:bh.a(ZLja;ILja;Z)V#3",
+          "originalName": "param3",
+          "to": "startingEntity",
+          "evidence": "Inserted into the pending secondary deque before traversing eligible related entities."
+        }
+      },
+      {
+        "symbol": "P:bh.a(ZLja;ILja;Z)V#4",
+        "before": null,
+        "after": {
+          "symbol": "P:bh.a(ZLja;ILja;Z)V#4",
+          "originalName": "param4",
+          "to": "propagateVariant",
+          "evidence": "Selects variant copy with sprite kind zero, variant-count increments and kind-one neighbor traversal."
+        }
+      },
+      {
+        "symbol": "P:wd.a(I)Lrc;#0",
+        "before": null,
+        "after": {
+          "symbol": "P:wd.a(I)Lrc;#0",
           "originalName": "param0",
           "to": "methodGuard",
-          "evidence": "Normal value 320 preserves angle while selecting the new entity category, variant and sprite kind."
+          "evidence": "Retained original method guard; native deque probe uses the normal value and preserves alternate source branches."
         }
       },
       {
-        "symbol": "P:ja.a(IIII)V#3",
+        "symbol": "P:wd.a(ILrc;)V#0",
         "before": null,
         "after": {
-          "symbol": "P:ja.a(IIII)V#3",
-          "originalName": "param3",
-          "to": "entitySpriteKindId",
-          "evidence": "Assigned to the entity sprite-kind field before selecting its sprite; native contact matrix exercises kinds 0, 1 and 2."
+          "symbol": "P:wd.a(ILrc;)V#0",
+          "originalName": "param0",
+          "to": "methodGuard",
+          "evidence": "Retained original method guard; native deque probe uses the normal value and preserves alternate source branches."
+        }
+      },
+      {
+        "symbol": "P:wd.a(ILrc;)V#1",
+        "before": null,
+        "after": {
+          "symbol": "P:wd.a(ILrc;)V#1",
+          "originalName": "param1",
+          "to": "node",
+          "evidence": "Inserted secondary node, transferred safely from previous secondary membership."
+        }
+      },
+      {
+        "symbol": "P:wd.a(Lrc;Z)V#0",
+        "before": null,
+        "after": {
+          "symbol": "P:wd.a(Lrc;Z)V#0",
+          "originalName": "param0",
+          "to": "node",
+          "evidence": "Inserted secondary node, transferred safely from previous secondary membership."
+        }
+      },
+      {
+        "symbol": "P:wd.a(Lrc;Z)V#1",
+        "before": null,
+        "after": {
+          "symbol": "P:wd.a(Lrc;Z)V#1",
+          "originalName": "param1",
+          "to": "methodGuard",
+          "evidence": "Retained original method guard; native deque probe uses the normal value and preserves alternate source branches."
+        }
+      },
+      {
+        "symbol": "P:wd.a(Z)Lrc;#0",
+        "before": null,
+        "after": {
+          "symbol": "P:wd.a(Z)Lrc;#0",
+          "originalName": "param0",
+          "to": "methodGuard",
+          "evidence": "Retained original method guard; native deque probe uses the normal value and preserves alternate source branches."
+        }
+      },
+      {
+        "symbol": "P:wd.b(B)I#0",
+        "before": null,
+        "after": {
+          "symbol": "P:wd.b(B)I#0",
+          "originalName": "param0",
+          "to": "methodGuard",
+          "evidence": "Retained original method guard; native deque probe uses the normal value and preserves alternate source branches."
+        }
+      },
+      {
+        "symbol": "P:wd.c(B)Lrc;#0",
+        "before": null,
+        "after": {
+          "symbol": "P:wd.c(B)Lrc;#0",
+          "originalName": "param0",
+          "to": "methodGuard",
+          "evidence": "Retained original method guard; native deque probe uses the normal value and preserves alternate source branches."
         }
       }
     ],
@@ -6467,6 +6989,10 @@
         "sha256": "05ba852d4358c07df61605550da0547eee2ff607a026f5ffbde3f66cc4c48fc2"
       },
       {
+        "file": "rc.java",
+        "sha256": "9939a5b978ffbdf4ccd47ab58ea6f9f016414f8cca4610cb7f712ea368441302"
+      },
+      {
         "file": "rh.java",
         "sha256": "145ea45adf9bb63403fe149ced81f949af6490abc4b71d619db144f41680fdb7"
       },
@@ -6499,6 +7025,10 @@
         "sha256": "21b1afcf5ea02debe36803cbde0f2b6642142818654e6830f7d3c98fe1e979d9"
       },
       {
+        "file": "wd.java",
+        "sha256": "c6c3a8582b0294b054c27dd1ad9fb68ae3ba8a621542efd11e9e2f1c13da5a57"
+      },
+      {
         "file": "wi.java",
         "sha256": "ea29d2d4e33fbc4afcb91cea0b33a3cfb9af58588c2811106c578f503f350407"
       }
@@ -6519,9 +7049,9 @@
       },
       {
         "file": "tests/test-geoblox-gameplay.mjs",
-        "sha256": "c4d966a3c89e8a9360d3c166edb2cb0a849f6ae51cbb9c28630173114b5d2561",
-        "nativeOutputSha256": "a8e61d1484fc78a02c67cc20a0832684c2c32fd7e474da7fd1f8cf42abc15d77",
-        "scenarios": 179
+        "sha256": "5479f6078d99f167dc71d0a45c1cfa2e78f4c8784cafcea53d487be9a3691b65",
+        "nativeOutputSha256": "c21730704dc4cdff3cb74f1f5fba326b3a059df680fecf6bbb1d080f6932eda0",
+        "scenarios": 2547
       }
     ],
     "textResources": {
@@ -8693,7 +9223,7 @@
       "sourceDeclarations": 21185,
       "bindingsCompared": 154117,
       "overrideRelationships": 388,
-      "identifierEdits": 16912,
+      "identifierEdits": 17248,
       "dictionaryRestorationFiles": 303,
       "wholeGameEquivalenceVerified": false,
       "nativeMatchingScenarios": 708,
@@ -8703,7 +9233,7 @@
         "Unknown names and shared joins remain.",
         "Attachment and shock producers are supported by source inspection; native scoring fixtures control their gates directly.",
         "Text-writer PCM side effects for guard <=23 are not tested.",
-        "Contact probe uses one-pixel sprites and controlled palettes for kinds 0, 1 and 2; mask collision producers and multi-hop special conversion remain unverified.",
+        "Contact/conversion probes use one-pixel sprites and controlled palettes for kinds 0, 1 and 2. Conversion graphs control adjacency and initial counters; mask collision producers, real asset loading and full gameplay remain unverified.",
         "Whole-game equivalence and FPS, heap and phone targets are not established."
       ],
       "checks": {
@@ -8714,10 +9244,13 @@
         "fullReproductionCheck": true,
         "dictionaryReversalByteExact": true
       },
-      "nativeGameplayScenarios": 179,
+      "nativeGameplayScenarios": 2547,
       "nativeContactScenarios": 144,
       "nativeNeighborRemovalScenarios": 32,
-      "nativeForcedNeighborhoodDetachScenarios": 2
+      "nativeForcedNeighborhoodDetachScenarios": 2,
+      "nativeSecondaryDequeOperations": 320,
+      "nativeConversionScenarios": 2048,
+      "nativeConversionFailureScenarios": 472
     }
   }
 }

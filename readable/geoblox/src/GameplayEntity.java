@@ -301,8 +301,8 @@ final class GameplayEntity extends DualLinkNode {
             this.paletteBlueDelta = 17;
         }
         vf.spriteScratchRaster.g(this.entityId - -1);
-        wd.contactProbeRaster.e();
-        vf.spriteScratchRaster.a(-wd.field_a + -(vf.spriteScratchRaster.field_s >> 811012289) + ng.field_G, -(vf.spriteScratchRaster.field_o >> 2111671105) + (td.field_E + -wd.field_d), 1 + this.entityId);
+        SecondaryDeque.contactProbeRaster.e();
+        vf.spriteScratchRaster.a(-SecondaryDeque.field_a + -(vf.spriteScratchRaster.field_s >> 811012289) + ng.field_G, -(vf.spriteScratchRaster.field_o >> 2111671105) + (td.field_E + -SecondaryDeque.field_d), 1 + this.entityId);
         sh.field_y.a(255);
     }
 
@@ -521,30 +521,30 @@ final class GameplayEntity extends DualLinkNode {
         entityOffsetY = -240.0f + this.positionY;
         rotatedEntityX = (int)(Math.cos((double)el.gameplaySession.boardAngleRadians) * (double)entityOffsetX - (double)entityOffsetY * Math.sin((double)el.gameplaySession.boardAngleRadians) + 320.0);
         rotatedEntityY = (int)((double)entityOffsetX * Math.sin((double)el.gameplaySession.boardAngleRadians) + Math.cos((double)el.gameplaySession.boardAngleRadians) * (double)entityOffsetY + 240.0);
-        clipLeftX = -(vf.spriteScratchRaster.field_s / 2) + (rotatedEntityX - 4 + -wd.field_a);
-        clipTopY = -wd.field_d + -4 + (rotatedEntityY - vf.spriteScratchRaster.field_o / 2);
+        clipLeftX = -(vf.spriteScratchRaster.field_s / 2) + (rotatedEntityX - 4 + -SecondaryDeque.field_a);
+        clipTopY = -SecondaryDeque.field_d + -4 + (rotatedEntityY - vf.spriteScratchRaster.field_o / 2);
         clippedSpriteWidth = vf.spriteScratchRaster.field_s - -8;
         if (clipLeftX < 0) {
           clippedSpriteWidth = clippedSpriteWidth + clipLeftX;
           clipLeftX = 0;
         }
         clippedSpriteHeight = 8 + vf.spriteScratchRaster.field_o;
-        if (wd.contactProbeRaster.width < clipLeftX + clippedSpriteWidth) {
-          clippedSpriteWidth = -clipLeftX + wd.contactProbeRaster.width;
+        if (SecondaryDeque.contactProbeRaster.width < clipLeftX + clippedSpriteWidth) {
+          clippedSpriteWidth = -clipLeftX + SecondaryDeque.contactProbeRaster.width;
         }
         if (clipTopY < 0) {
           clippedSpriteHeight = clippedSpriteHeight + clipTopY;
           clipTopY = 0;
         }
-        if (clipTopY + clippedSpriteHeight > wd.contactProbeRaster.height) {
-          clippedSpriteHeight = wd.contactProbeRaster.height - clipTopY;
+        if (clipTopY + clippedSpriteHeight > SecondaryDeque.contactProbeRaster.height) {
+          clippedSpriteHeight = SecondaryDeque.contactProbeRaster.height - clipTopY;
         }
-        framebufferIndex = wd.contactProbeRaster.width * clipTopY + clipLeftX;
+        framebufferIndex = SecondaryDeque.contactProbeRaster.width * clipTopY + clipLeftX;
         if (param0 != 30383) {
           this.entityCategoryKey = -47;
         }
-        framebufferRowSkip = -clippedSpriteWidth + wd.contactProbeRaster.width;
-        backgroundPixels = wd.contactProbeRaster.pixels;
+        framebufferRowSkip = -clippedSpriteWidth + SecondaryDeque.contactProbeRaster.width;
+        backgroundPixels = SecondaryDeque.contactProbeRaster.pixels;
         L5: while (true) {
           incrementValue$0 = clippedSpriteHeight;
           clippedSpriteHeight--;

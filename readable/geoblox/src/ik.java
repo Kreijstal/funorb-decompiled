@@ -188,7 +188,7 @@ final class ik {
                         break L12;
                       }
                     }
-                    bh.a(propagateCategory != 0, secondEntity, 1, firstEntity, variantPropagationThenNeighborIndex != 0);
+                    bh.propagateContactConversion(propagateCategory != 0, secondEntity, 1, firstEntity, variantPropagationThenNeighborIndex != 0);
                   }
                   if (secondEntity.entitySpriteKindId == 1) {
                     if (firstEntity.entitySpriteKindId == 1) {

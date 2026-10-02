@@ -518,7 +518,7 @@ final class sk {
         RuntimeException var1_ref = null;
         float farthestRadiusSquared = 0.0f;
         GameplayEntity candidateEntity = null;
-        wd visitedCascadeEntities = null;
+        SecondaryDeque visitedCascadeEntities = null;
         int staggeredLifetime = 0;
         GameplayEntity cascadeEntity = null;
         int neighborIndex = 0;
@@ -526,7 +526,7 @@ final class sk {
         GameplayEntity searchedEntity = null;
         int var10 = 0;
         GameplayEntity seedEntity = null;
-        wd cascadeFrontier = null;
+        SecondaryDeque cascadeFrontier = null;
         var10 = Geoblox.field_C;
         try {
           L0: {
@@ -549,12 +549,12 @@ final class sk {
                   }
                   candidateEntity = (GameplayEntity) ((Object) a.attachedEntities.previousForIteration(0));
                 }
-                cascadeFrontier = new wd();
-                visitedCascadeEntities = new wd();
+                cascadeFrontier = new SecondaryDeque();
+                visitedCascadeEntities = new SecondaryDeque();
                 staggeredLifetime = 0;
-                cascadeFrontier.a(farthestEntity, false);
+                cascadeFrontier.addFirst(farthestEntity, false);
                 L3: while (true) {
-                  cascadeEntity = (GameplayEntity) ((Object) cascadeFrontier.a(true));
+                  cascadeEntity = (GameplayEntity) ((Object) cascadeFrontier.removeFirst(true));
                   if (cascadeEntity == null) {
                     stackIn_31_0 = 1;
                     decompiledRegionSelector0 = 1;
@@ -563,25 +563,25 @@ final class sk {
                     cascadeEntity.entitySpriteKindId = 6;
                     cascadeEntity.remainingLifetimeTicks = staggeredLifetime;
                     staggeredLifetime += 50;
-                    visitedCascadeEntities.a(cascadeEntity, false);
+                    visitedCascadeEntities.addFirst(cascadeEntity, false);
                     neighborIndex = 0;
                     L4: while (true) {
                       if (neighborIndex >= cascadeEntity.relatedEntityCount) {
                         continue L3;
                       } else {
                         neighborEntity = cascadeEntity.relatedEntities[neighborIndex];
-                        searchedEntity = (GameplayEntity) ((Object) visitedCascadeEntities.c((byte) 121));
+                        searchedEntity = (GameplayEntity) ((Object) visitedCascadeEntities.firstForIteration((byte) 121));
                         L5: while (true) {
                           L6: {
                             if (searchedEntity == null) {
-                              searchedEntity = (GameplayEntity) ((Object) cascadeFrontier.c((byte) 121));
+                              searchedEntity = (GameplayEntity) ((Object) cascadeFrontier.firstForIteration((byte) 121));
                               L7: while (true) {
                                 if (searchedEntity == null) {
-                                  cascadeFrontier.a(-82, neighborEntity);
+                                  cascadeFrontier.addLast(-82, neighborEntity);
                                   break L6;
                                 } else {
                                   if (searchedEntity != neighborEntity) {
-                                    searchedEntity = (GameplayEntity) ((Object) cascadeFrontier.a(69));
+                                    searchedEntity = (GameplayEntity) ((Object) cascadeFrontier.nextForIteration(69));
                                     continue L7;
                                   } else {
                                     break L6;
@@ -590,7 +590,7 @@ final class sk {
                               }
                             } else {
                               if (searchedEntity != neighborEntity) {
-                                searchedEntity = (GameplayEntity) ((Object) visitedCascadeEntities.a(param0 ^ 24));
+                                searchedEntity = (GameplayEntity) ((Object) visitedCascadeEntities.nextForIteration(param0 ^ 24));
                                 continue L5;
                               }
                             }

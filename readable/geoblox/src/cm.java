@@ -75,7 +75,7 @@ final class cm extends cj {
                       var6 = var4.field_f;
                       var7 = var4.field_l;
                       id.field_b[0].field_c = false;
-                      id.field_b[0].field_d = wd.field_f;
+                      id.field_b[0].field_d = SecondaryDeque.field_f;
                       id.field_b[0].field_a = null;
                       for (var8_int = 1; var5 > var8_int; var8_int++) {
                         id.field_b[var8_int].field_d = var27.e((byte) 104);
@@ -126,7 +126,7 @@ final class cm extends cj {
                           L10: {
                             if (var21 != null) {
                               if (ge.a(var21, (byte) 12)) {
-                                var8[1][var13] = wd.field_f;
+                                var8[1][var13] = SecondaryDeque.field_f;
                                 var9[1][var13] = null;
                                 var31[1][var13] = var22;
                                 var13++;

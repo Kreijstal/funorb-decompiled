@@ -97,7 +97,7 @@ final class bk {
           try {
             var9 = rd.field_r.a((byte) -14, var5);
             re.field_f = var9.e((byte) -69);
-            if (!jc.field_b.equals(wd.field_f)) {
+            if (!jc.field_b.equals(SecondaryDeque.field_f)) {
               stackIn_22_0 = var9.field_m;
             } else {
               stackIn_22_0 = null;

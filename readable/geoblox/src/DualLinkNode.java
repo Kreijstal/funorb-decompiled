@@ -25,15 +25,15 @@ class DualLinkNode extends IntrusiveNode {
         if (param0 > -43) {
             return (String) null;
         }
-        if (!(null != wd.field_f)) {
+        if (!(null != SecondaryDeque.field_f)) {
             return "";
         }
-        return wd.field_f;
+        return SecondaryDeque.field_f;
     }
 
     final static void b(int param0) {
-        wd.field_f = eh.field_d.e((byte) 113);
-        CharSequence var2 = (CharSequence) ((Object) wd.field_f);
+        SecondaryDeque.field_f = eh.field_d.e((byte) 113);
+        CharSequence var2 = (CharSequence) ((Object) SecondaryDeque.field_f);
         vg.field_b = oe.a(var2, 12);
         if (param0 != 1) {
             DualLinkNode.b(83);

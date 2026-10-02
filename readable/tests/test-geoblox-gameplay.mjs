@@ -10,7 +10,7 @@ import {captureProcess} from '../tools/lib/capture-process.mjs';
 const root = fileURLToPath(new URL('../', import.meta.url));
 const nativeInput = process.argv[2] && path.resolve(process.argv[2]);
 if (!nativeInput) throw new Error('Usage: node readable/tests/test-geoblox-gameplay.mjs NATIVE_CLASSES');
-const expectedNativeSha256 = 'a8e61d1484fc78a02c67cc20a0832684c2c32fd7e474da7fd1f8cf42abc15d77';
+const expectedNativeSha256 = 'c21730704dc4cdff3cb74f1f5fba326b3a059df680fecf6bbb1d080f6932eda0';
 const rules = JSON.parse(fs.readFileSync(path.join(root, 'geoblox-rules.json')));
 const aliases = new Map(rules.renames.map(rule => [rule.symbol, rule.to]));
 const temporary = fs.mkdtempSync(path.join(os.tmpdir(), 'geoblox-gameplay-'));
@@ -57,7 +57,7 @@ try {
     const transient = global('bh', 'field_c', 'Ltf;');
     const attached = global('a', 'field_d', 'Ltf;');
     const harness = `public final class GameplayBehavior {
-      static int cases;
+      static int cases,conversionFailures;
       static void check(boolean value, String label) { if (!value) throw new AssertionError(label); }
       static boolean boundary() { return ${call('ld', 'a(I)Z')}(-61); }
       static ${entity} entity(int id,int category,int variant,int kind) {
@@ -151,6 +151,128 @@ try {
           System.out.println("unlink:"+guard+":"+state(a)+"/"+state(b)+"/"+state(c)+"/"+state(d));cases++;
         }
       }
+      static void secondaryQueues() {
+        for(int guard=0;guard<2;guard++) {
+          ${global('Geoblox','field_C','I')}=guard;
+          ${type('wd')}[] queues={new ${type('wd')}(),new ${type('wd')}()};
+          java.util.ArrayList<java.util.ArrayList<${entity}>> model=new java.util.ArrayList<java.util.ArrayList<${entity}>>();
+          model.add(new java.util.ArrayList<${entity}>());model.add(new java.util.ArrayList<${entity}>());
+          ${entity}[] nodes=new ${entity}[7];${deque} primary=new ${deque}();
+          ${type('hf')}[] next=new ${type('hf')}[7],previous=new ${type('hf')}[7];
+          for(int i=0;i<7;i++){nodes[i]=entity(i+40,0,0,0);primary.${addLast}(-35,nodes[i]);}
+          for(int i=0;i<7;i++){next[i]=nodes[i].${field('hf','field_b','Lhf;')};previous[i]=nodes[i].${field('hf','field_c','Lhf;')};}
+          java.util.Random random=new java.util.Random(17023);
+          for(int step=0;step<160;step++) {
+            int q=random.nextInt(2),index=random.nextInt(7),operation=random.nextInt(4);
+            ${entity} node=nodes[index];
+            if(operation<2) {
+              model.get(0).remove(node);model.get(1).remove(node);
+              if(operation==0){queues[q].${method('wd','a(Lrc;Z)V')}(node,false);model.get(q).add(0,node);}
+              else {queues[q].${method('wd','a(ILrc;)V')}(-45,node);model.get(q).add(node);}
+            } else if(operation==2) {
+              ${entity} wanted=model.get(q).isEmpty()?null:model.get(q).remove(0);
+              check(queues[q].${method('wd','a(Z)Lrc;')}(true)==wanted,"secondary pop identity");
+            } else {
+              node.${method('rc','a(B)V')}((byte)65);model.get(0).remove(node);model.get(1).remove(node);
+            }
+            StringBuilder trace=new StringBuilder();
+            for(int which=0;which<2;which++) {
+              check(queues[which].${method('wd','b(B)I')}((byte)67)==model.get(which).size(),"secondary count");
+              ${type('rc')} current=queues[which].${method('wd','c(B)Lrc;')}((byte)121);
+              for(${entity} wanted:model.get(which)) {
+                check(current==wanted,"secondary traversal order");
+                check(current.${field('rc','field_k','Lrc;')}.${field('rc','field_l','Lrc;')}==current,"secondary forward reciprocity");
+                check(current.${field('rc','field_l','Lrc;')}.${field('rc','field_k','Lrc;')}==current,"secondary backward reciprocity");
+                trace.append(wanted.${field('ja','field_H','I')}).append(',');
+                current=queues[which].${method('wd','a(I)Lrc;')}(-59);
+              }
+              check(current==null,"secondary traversal end");trace.append('/');
+            }
+            for(int i=0;i<7;i++) {
+              check(nodes[i].${field('hf','field_b','Lhf;')}==next[i]&&nodes[i].${field('hf','field_c','Lhf;')}==previous[i],"primary links independent");
+              if(!model.get(0).contains(nodes[i])&&!model.get(1).contains(nodes[i]))
+                check(nodes[i].${field('rc','field_k','Lrc;')}==null&&nodes[i].${field('rc','field_l','Lrc;')}==null,"secondary unlink clears both links");
+            }
+            System.out.println("secondary:"+guard+":"+step+":"+q+":"+index+":"+operation+":"+trace);cases++;
+          }
+        }
+      }
+      static void conversions() {
+        int[][] pairs={{0,1},{0,2},{0,3},{1,2},{1,3},{2,3}};
+        for(int guard=0;guard<2;guard++)for(int mode=0;mode<4;mode++)
+        for(int root:new int[]{0,3})for(int key=0;key<2;key++)for(int mask=0;mask<64;mask++) {
+          ${global('Geoblox','field_C','I')}=guard;
+          ${entity}[] nodes=new ${entity}[4];${entity} template=entity(99,key,key,0);
+          template.${field('ja','field_u','F')}=1.5f;
+          int[] oldKind=new int[4],oldCategory=new int[4],oldVariant=new int[4];
+          ${deque} primary=new ${deque}();${type('hf')}[] next=new ${type('hf')}[4],previous=new ${type('hf')}[4];
+          for(int i=0;i<4;i++) {
+            int kind=mode==1?1:mode==2?2:1+(i+key)%2;
+            nodes[i]=entity(i+60,i%2,i%2,kind);nodes[i].${field('ja','field_u','F')}=i+0.25f;
+            oldKind[i]=kind;oldCategory[i]=nodes[i].${field('ja','field_C','I')};oldVariant[i]=nodes[i].${field('ja','field_M','I')};
+            primary.${addLast}(-35,nodes[i]);
+          }
+          // Control graph adjacency directly: conversion is tested separately
+          // from the contact producer and starts with zero match counters.
+          for(int edge=0;edge<6;edge++)if((mask&(1<<edge))!=0) {
+            int a=pairs[edge][0],b=pairs[edge][1];
+            nodes[a].${field('ja','field_n','[Lja;')}[nodes[a].${field('ja','field_L','I')}++]=nodes[b];
+            nodes[b].${field('ja','field_n','[Lja;')}[nodes[b].${field('ja','field_L','I')}++]=nodes[a];
+          }
+          for(int i=0;i<4;i++){next[i]=nodes[i].${field('hf','field_b','Lhf;')};previous[i]=nodes[i].${field('hf','field_c','Lhf;')};}
+          boolean[] reached=new boolean[4];reached[root]=true;
+          if(mode!=0)for(int pass=0;pass<4;pass++)for(int edge=0;edge<6;edge++)if((mask&(1<<edge))!=0) {
+            int a=pairs[edge][0],b=pairs[edge][1];if(reached[a]||reached[b])reached[a]=reached[b]=true;
+          }
+          boolean category=mode==2||mode==3,variant=mode==1||mode==3;
+          boolean expectedFailure=false;
+          for(int i=0;i<4;i++)if(mode==3&&reached[i]&&oldKind[i]==2)expectedFailure=true;
+          String outcome="ok";
+          try { ${call('bh','a(ZLja;ILja;Z)V')}(category,template,1,nodes[root],variant); }
+          catch(${type('sa')} error) {
+            check(expectedFailure,"unexpected conversion exception");
+            check(error.${field('sa','field_a','Ljava/lang/Throwable;')} instanceof ArrayIndexOutOfBoundsException,"mixed-flag failure cause");
+            outcome=error.${field('sa','field_a','Ljava/lang/Throwable;')}.getClass().getSimpleName()+":"+error.${field('sa','field_d','Ljava/lang/String;')};
+            conversionFailures++;
+          }
+          check(outcome.equals("ok")!=expectedFailure,"predicted mixed-flag outcome");
+          StringBuilder trace=new StringBuilder();int failedKindTwo=0;
+          for(int i=0;i<4;i++) {
+            ${entity} node=nodes[i];boolean converted=reached[i]&&mode!=0;
+            int degree=node.${field('ja','field_L','I')};
+            if(!expectedFailure) {
+            check(node.${field('ja','field_z','I')}==(converted?0:oldKind[i]),"conversion reachability/kind");
+            check(node.${field('ja','field_C','I')}==(converted&&category?key:oldCategory[i]),"conversion category");
+            check(node.${field('ja','field_M','I')}==(converted&&variant?key:oldVariant[i]),"conversion variant");
+            check(node.${field('ja','field_N','I')}==(converted&&category?degree:0),"category edge increments");
+            check(node.${field('ja','field_m','I')}==(converted&&variant?degree:0),"variant edge increments");
+            check(node.${field('ja','field_E','I')}==(converted&&oldKind[i]==2?60:0),"old kind cooldown");
+            check(node.${field('ja','field_B','Z')}==(converted&&mode==2),"category-only detachment");
+            check((node.${field('ja','field_K','Ltf;')}==${moving})==(converted&&mode==2),"conversion moving marker");
+            } else {
+              int actualKind=node.${field('ja','field_z','I')};
+              if(actualKind==0) {
+                check(reached[i],"partial conversion stays in reachable component");
+                check(node.${field('ja','field_M','I')}==key,"partial variant write");
+                if(oldKind[i]==2) {
+                  check(node.${field('ja','field_C','I')}==-1&&node.${field('ja','field_E','I')}==60,"failed kind-two partial write");failedKindTwo++;
+                } else check(node.${field('ja','field_C','I')}==key&&node.${field('ja','field_E','I')}==0,"completed kind-one write");
+              } else {
+                check(actualKind==oldKind[i]&&node.${field('ja','field_C','I')}==oldCategory[i]
+                  &&node.${field('ja','field_M','I')}==oldVariant[i]&&node.${field('ja','field_E','I')}==0,"unprocessed entity unchanged");
+              }
+              check(node.${field('ja','field_N','I')}==node.${field('ja','field_m','I')}
+                &&node.${field('ja','field_N','I')}>=0&&node.${field('ja','field_N','I')}<=degree,"partial edge increments");
+              check(!node.${field('ja','field_B','Z')}&&node.${field('ja','field_K','Ltf;')}==null,"mixed flags do not detach");
+            }
+            check(node.${field('hf','field_b','Lhf;')}==next[i]&&node.${field('hf','field_c','Lhf;')}==previous[i],"conversion preserves primary links");
+            if(!category)check(node.${field('ja','field_u','F')}==i+0.25f,"variant preserves angle");
+            trace.append(state(node)).append(':').append(Float.floatToIntBits(node.${field('ja','field_u','F')})).append('/');
+          }
+          if(expectedFailure)check(failedKindTwo==1,"exactly one failing kind-two write");
+          System.out.println("conversion:"+guard+":"+mode+":"+root+":"+key+":"+mask+":"+outcome+":"+trace);cases++;
+        }
+      }
       public static void main(String[] args) {
         Thread watchdog=new Thread(()->{try{Thread.sleep(45000);}catch(InterruptedException error){}System.exit(124);});
         watchdog.setDaemon(true);watchdog.start();
@@ -237,7 +359,9 @@ try {
         check(!${call('ih', 'a(I)Z')}(0), "additional settling gate");
         System.out.println("gameplay behavior passed");cases++;
         contacts();
-        System.out.println("complete:"+cases);
+        secondaryQueues();
+        conversions();
+        System.out.println("complete:"+cases+":conversion-failures:"+conversionFailures);
       }
     }`;
     const directory = path.join(temporary, variant);
