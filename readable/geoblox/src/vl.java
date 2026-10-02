@@ -5,7 +5,7 @@ final class vl extends IntrusiveNode {
     byte[] field_m;
     private int[] field_h;
     byte[] field_o;
-    gd[] field_k;
+    PcmSample[] field_k;
     static boolean field_q;
     static java.math.BigInteger field_l;
     short[] field_j;
@@ -64,7 +64,7 @@ final class vl extends IntrusiveNode {
                     }
                   }
                   if (var7 != null) {
-                    this.field_k[var8] = (gd) (var7);
+                    this.field_k[var8] = (PcmSample) (var7);
                     this.field_h[var8] = 0;
                   }
                 }
@@ -339,7 +339,7 @@ final class vl extends IntrusiveNode {
           L0: {
             this.field_m = new byte[128];
             this.field_f = new t[128];
-            this.field_k = new gd[128];
+            this.field_k = new PcmSample[128];
             this.field_h = new int[128];
             this.field_j = new short[128];
             this.field_i = new byte[128];

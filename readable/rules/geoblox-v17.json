@@ -23,12 +23,6 @@
       "originalName": "dm"
     },
     {
-      "symbol": "C:gd",
-      "to": "PcmSample",
-      "originalName": "gd",
-      "evidence": "Byte-array PCM sample with source frequency, loop endpoints and ping-pong flag. Both PCM stream constructors consume these fields; ue resampling rewrites sample bytes, source rate and loop endpoints."
-    },
-    {
       "symbol": "C:gh",
       "to": "GameplaySession",
       "evidence": "Created when a menu starts play; Geoblox delegates gameplay update/render to it; owns board angle, score and session progression.",
@@ -497,36 +491,6 @@
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_alert_email_unavailable' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
     },
     {
-      "symbol": "F:gd.field_g:I",
-      "to": "loopStart",
-      "originalName": "field_g",
-      "evidence": "Constructor loop start copied to kl.field_q; looping routines shift it by eight for the lower boundary and resampling adjusts it."
-    },
-    {
-      "symbol": "F:gd.field_h:I",
-      "to": "sampleRateHz",
-      "originalName": "field_h",
-      "evidence": "Constructor stores source sampling frequency; rate-percent stream creation multiplies it by 256 and divides by the audio output frequency. ue resampling scales this frequency."
-    },
-    {
-      "symbol": "F:gd.field_i:Z",
-      "to": "pingPongLoop",
-      "originalName": "field_i",
-      "evidence": "Constructor flag copied to kl.field_r. True loop branches reflect the fixed-point position at boundaries and reverse the signed sample step, while false branches wrap."
-    },
-    {
-      "symbol": "F:gd.field_j:I",
-      "to": "loopEnd",
-      "originalName": "field_j",
-      "evidence": "Constructor exclusive loop end copied to kl.field_m; interpolation uses loopEnd-1 at the boundary and resampling adjusts it."
-    },
-    {
-      "symbol": "F:gd.field_k:[B",
-      "to": "samples",
-      "originalName": "field_k",
-      "evidence": "Decoded PCM byte samples passed into all stream interpolation/mixing routines; stream position bounds use its length shifted by eight."
-    },
-    {
       "symbol": "F:gf.field_e:Ljava/lang/String;",
       "to": "createPasswordContainsNameAlertText",
       "originalName": "field_e",
@@ -621,12 +585,6 @@
       "to": "submissionBlocked",
       "originalName": "field_K",
       "evidence": "Score/action submission checks this flag. Debug input and emitPointsPopup with the submission-blocking argument set it."
-    },
-    {
-      "symbol": "F:gh.field_M:Lkl;",
-      "to": "resultExpansionAudioStream",
-      "originalName": "field_M",
-      "evidence": "Referenced only by updateResultSequence phase 2: an absent or out-of-range stream is replaced with sample 28 at a progress-dependent rate and registered in the mixer."
     },
     {
       "symbol": "F:gh.field_N:Z",
@@ -1289,18 +1247,6 @@
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'login_username_tooltip' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
     },
     {
-      "symbol": "F:kl.field_p:I",
-      "to": "sampleStepFixed",
-      "originalName": "field_p",
-      "evidence": "Signed Q8 source-sample increment used to advance samplePositionFixed. Ping-pong boundaries negate it; the rate-percent factory converts source and output frequencies into this step."
-    },
-    {
-      "symbol": "F:kl.field_x:I",
-      "to": "samplePositionFixed",
-      "originalName": "field_x",
-      "evidence": "PCM interpolation indexes sample bytes with this value>>8 and its fractional part &255. Bounds are samples.length<<8; advancing and looping update this signed Q8 position."
-    },
-    {
       "symbol": "F:lf.field_e:[C",
       "to": "extendedTextCharacters",
       "originalName": "field_e",
@@ -1655,12 +1601,6 @@
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'fs_button_members' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
     },
     {
-      "symbol": "F:qf.field_bb:Lrf;",
-      "to": "resultMusicTrack",
-      "originalName": "field_bb",
-      "evidence": "jg loads the bonus_bubble_jingle track into this field and registers it with the MIDI resources. updateResultSequence passes it to selectBackgroundMusic; cleanup clears it."
-    },
-    {
       "symbol": "F:qg.field_b:Ljava/lang/String;",
       "to": "createPasswordText",
       "originalName": "field_b",
@@ -1689,12 +1629,6 @@
       "to": "transitionCurtain",
       "evidence": "Sprite drawn at y=6*transitionTick-480 after outgoing/incoming screen clipping.",
       "originalName": "field_c"
-    },
-    {
-      "symbol": "F:qk.field_j:I",
-      "to": "sampleRateHz",
-      "originalName": "field_j",
-      "evidence": "Audio output configuration validates frequency between 8000 and 48000 and stores it here. Scheduling uses 256000/rate, while PCM factory converts source sample frequency by this output frequency."
     },
     {
       "symbol": "F:ra.field_a:Ltf;",
@@ -2981,12 +2915,6 @@
       "evidence": "Normal HUD computes releasesPerTheme minus releasedInCurrentTheme."
     },
     {
-      "symbol": "L:gh.f(I)V#0",
-      "to": "nextSceneAnimationTick",
-      "originalName": "fieldTemp$0",
-      "evidence": "Temporary captures sceneAnimationTick+1 before the field increment and is compared with resultCompletionTickOffset+150. It is not a separate persistent tick counter."
-    },
-    {
       "symbol": "L:gh.f(I)V#10",
       "to": "pixelOffsetFromCenterX",
       "originalName": "var8",
@@ -3003,12 +2931,6 @@
       "to": "pixelRadiusSquared",
       "originalName": "var10",
       "evidence": "Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio."
-    },
-    {
-      "symbol": "L:gh.f(I)V#13",
-      "to": "controlFlowGuard",
-      "originalName": "var11",
-      "evidence": "Snapshot of Geoblox.field_C used by result initialization loops, phase routing, effect timing and panel updates; nonzero paths remain present."
     },
     {
       "symbol": "L:gh.f(I)V#14",
@@ -3081,36 +3003,6 @@
       "to": "promptText",
       "evidence": "Tutorial text selected by uk.a(tutorialStepId,24146) and passed to font measuring/rendering.",
       "originalName": "var8"
-    },
-    {
-      "symbol": "L:i.a(B)Lja;#0",
-      "to": "maxDistanceSquared",
-      "originalName": "var1_float",
-      "evidence": "Starts at Float.MIN_VALUE and changes only when candidateDistanceSquared is strictly greater."
-    },
-    {
-      "symbol": "L:i.a(B)Lja;#2",
-      "to": "farthestEntity",
-      "originalName": "var2",
-      "evidence": "Initially null, replaced by the current candidate only on a strictly greater squared distance, then returned through the Object carrier."
-    },
-    {
-      "symbol": "L:i.a(B)Lja;#3",
-      "to": "candidateEntity",
-      "originalName": "var3",
-      "evidence": "Entity obtained from the attached deque last/previous walk; its position supplies the radius comparison."
-    },
-    {
-      "symbol": "L:i.a(B)Lja;#4",
-      "to": "candidateDistanceSquared",
-      "originalName": "var4",
-      "evidence": "Sum of squared x-320 and y-240 coordinate offsets for the current candidate."
-    },
-    {
-      "symbol": "L:i.a(B)Lja;#5",
-      "to": "controlFlowGuard",
-      "originalName": "var5",
-      "evidence": "Snapshot of Geoblox.field_C; nonzero terminates the walk after its first candidate."
     },
     {
       "symbol": "L:ja.a(FI)V#0",
@@ -4259,12 +4151,6 @@
       "originalName": "a"
     },
     {
-      "symbol": "M:i.a(B)Lja;",
-      "to": "findOutermostAttachedEntity",
-      "originalName": "a",
-      "evidence": "Walks attachedEntities from last to previous and retains the entity with strictly greatest squared distance from (320,240). The Float.MIN_VALUE starting threshold excludes zero-distance and NaN candidates; ties retain the first encountered entity. Nonzero Geoblox.field_C stops after one candidate; guard >= -127 also clears the avatar mask."
-    },
-    {
       "symbol": "M:ib.b(B)Ljava/lang/String;",
       "to": "currentValidationMessage",
       "originalName": "b",
@@ -4475,18 +4361,6 @@
       "originalName": "b"
     },
     {
-      "symbol": "M:kl.a(Lgd;II)Lkl;",
-      "to": "createForPlaybackRate",
-      "originalName": "a",
-      "evidence": "Returns null for null or empty sample bytes; otherwise constructs a PCM stream with signed Q8 step sampleRateHz*256*ratePercent/(100*AudioOutput.sampleRateHz) and volume<<6. Preserves zero-rate, negative-rate, overflow and division behavior."
-    },
-    {
-      "symbol": "M:kl.l()Z",
-      "to": "isSamplePositionOutOfRange",
-      "originalName": "l",
-      "evidence": "Synchronized query returns samplePositionFixed<0 or samplePositionFixed>=sample.samples.length<<8. It tests position only, not playback completion, queue membership or looping state."
-    },
-    {
       "symbol": "M:lc.a(I)V",
       "to": "updateSpawnQueue",
       "originalName": "a",
@@ -4497,12 +4371,6 @@
       "to": "hasPixelsAtPlayfieldBoundary",
       "originalName": "a",
       "evidence": "Probes symmetric pixels around a radius-230 circle centered at (320,240) in the currently selected raster and returns on the first nonzero pixel."
-    },
-    {
-      "symbol": "M:ld.a(IIII)V",
-      "to": "spawnPointsPopup",
-      "originalName": "a",
-      "evidence": "Delegates points, true, originY, guard 1 and originX to ug.spawnScorePopup. Used for difficulty bonuses, result completion bonuses and the ordinary points panel; not specific to results. Its own guard <=39 subsequently invokes the boundary probe."
     },
     {
       "symbol": "M:ld.b(Z)V",
@@ -4577,12 +4445,6 @@
       "evidence": "With guard 32, calls the abstract state query using the validated input's current text. The complete override family includes the abstract ib declaration, renamed in the same manifest."
     },
     {
-      "symbol": "M:ra.a(ILrf;)V",
-      "to": "selectBackgroundMusic",
-      "originalName": "a",
-      "evidence": "Null or already-current track is a no-op. Otherwise stops the MIDI stream, resets its playback state, sets fe.field_e to the supplied track and starts it. A nonzero method guard writes ra.field_d; audio effects and exception wrapping remain intact."
-    },
-    {
       "symbol": "M:rc.a(B)V",
       "to": "unlinkSecondaryNode",
       "evidence": "Reconnects field_l/field_k neighbours and clears both second links without touching inherited hf links.",
@@ -4599,12 +4461,6 @@
       "to": "checkBoundaryLossAndStartCascade",
       "originalName": "a",
       "evidence": "Checks the ownership raster boundary outside scene transitions; on loss starts the end sequence and traverses contacts from the farthest entity to assign staggered ending lifetimes."
-    },
-    {
-      "symbol": "M:td.a(ILgd;)V",
-      "to": "playPcmSample",
-      "originalName": "a",
-      "evidence": "Creates a stream at ratePercent 100 and volume 96, then registers it through GameplayEntity.registerAudioStream. This schedules playback; it does not advance the stream or output a device buffer itself. Guard -348 avoids the retained bad-guard recursion."
     },
     {
       "symbol": "M:tf.a(I)I",
@@ -5117,60 +4973,6 @@
       "evidence": "Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message."
     },
     {
-      "symbol": "P:gd.<init>(I[BII)V#0",
-      "to": "sampleRateHz",
-      "originalName": "param0",
-      "evidence": "Constructor stores this argument into the corresponding PcmSample field; the four-argument constructor retains its default false ping-pong flag."
-    },
-    {
-      "symbol": "P:gd.<init>(I[BII)V#1",
-      "to": "samples",
-      "originalName": "param1",
-      "evidence": "Constructor stores this argument into the corresponding PcmSample field; the four-argument constructor retains its default false ping-pong flag."
-    },
-    {
-      "symbol": "P:gd.<init>(I[BII)V#2",
-      "to": "loopStart",
-      "originalName": "param2",
-      "evidence": "Constructor stores this argument into the corresponding PcmSample field; the four-argument constructor retains its default false ping-pong flag."
-    },
-    {
-      "symbol": "P:gd.<init>(I[BII)V#3",
-      "to": "loopEnd",
-      "originalName": "param3",
-      "evidence": "Constructor stores this argument into the corresponding PcmSample field; the four-argument constructor retains its default false ping-pong flag."
-    },
-    {
-      "symbol": "P:gd.<init>(I[BIIZ)V#0",
-      "to": "sampleRateHz",
-      "originalName": "param0",
-      "evidence": "Constructor stores this argument into the corresponding PcmSample field; the four-argument constructor retains its default false ping-pong flag."
-    },
-    {
-      "symbol": "P:gd.<init>(I[BIIZ)V#1",
-      "to": "samples",
-      "originalName": "param1",
-      "evidence": "Constructor stores this argument into the corresponding PcmSample field; the four-argument constructor retains its default false ping-pong flag."
-    },
-    {
-      "symbol": "P:gd.<init>(I[BIIZ)V#2",
-      "to": "loopStart",
-      "originalName": "param2",
-      "evidence": "Constructor stores this argument into the corresponding PcmSample field; the four-argument constructor retains its default false ping-pong flag."
-    },
-    {
-      "symbol": "P:gd.<init>(I[BIIZ)V#3",
-      "to": "loopEnd",
-      "originalName": "param3",
-      "evidence": "Constructor stores this argument into the corresponding PcmSample field; the four-argument constructor retains its default false ping-pong flag."
-    },
-    {
-      "symbol": "P:gd.<init>(I[BIIZ)V#4",
-      "to": "pingPongLoop",
-      "originalName": "param4",
-      "evidence": "Constructor stores this argument into the corresponding PcmSample field; the four-argument constructor retains its default false ping-pong flag."
-    },
-    {
       "symbol": "P:gh.a(BI)V#1",
       "to": "points",
       "evidence": "Value added to score.",
@@ -5187,18 +4989,6 @@
       "to": "markSubmissionBlocked",
       "evidence": "When true sets field_K, which blocks score submission.",
       "originalName": "param0"
-    },
-    {
-      "symbol": "P:gh.f(I)V#0",
-      "to": "methodGuard",
-      "originalName": "param0",
-      "evidence": "Normal updateSession calls with 10. This parameter contributes the boundary-loss guard, xor-10 music guard, unlock guard and final !=10 cleanup branch; none is simplified away."
-    },
-    {
-      "symbol": "P:i.a(B)Lja;#0",
-      "to": "methodGuard",
-      "originalName": "param0",
-      "evidence": "At values >= -127 calls i.a(false), which clears avatarMaskRaster. Normal result and boundary-loss callers pass -128; no guard is removed."
     },
     {
       "symbol": "P:ib.b(B)Ljava/lang/String;#0",
@@ -5411,48 +5201,6 @@
       "originalName": "param0"
     },
     {
-      "symbol": "P:kl.a(Lgd;II)Lkl;#0",
-      "to": "sample",
-      "originalName": "param0",
-      "evidence": "PCM factory inputs: sample supplies bytes and source frequency, ratePercent scales signed Q8 sample step, volume is shifted left six before construction."
-    },
-    {
-      "symbol": "P:kl.a(Lgd;II)Lkl;#1",
-      "to": "ratePercent",
-      "originalName": "param1",
-      "evidence": "PCM factory inputs: sample supplies bytes and source frequency, ratePercent scales signed Q8 sample step, volume is shifted left six before construction."
-    },
-    {
-      "symbol": "P:kl.a(Lgd;II)Lkl;#2",
-      "to": "volume",
-      "originalName": "param2",
-      "evidence": "PCM factory inputs: sample supplies bytes and source frequency, ratePercent scales signed Q8 sample step, volume is shifted left six before construction."
-    },
-    {
-      "symbol": "P:ld.a(IIII)V#0",
-      "to": "originY",
-      "originalName": "param0",
-      "evidence": "Argument position in ug.spawnScorePopup(points, true, originY, 1, originX); parameter 2 retains its <=39 boundary-probe side effect."
-    },
-    {
-      "symbol": "P:ld.a(IIII)V#1",
-      "to": "originX",
-      "originalName": "param1",
-      "evidence": "Argument position in ug.spawnScorePopup(points, true, originY, 1, originX); parameter 2 retains its <=39 boundary-probe side effect."
-    },
-    {
-      "symbol": "P:ld.a(IIII)V#2",
-      "to": "methodGuard",
-      "originalName": "param2",
-      "evidence": "Argument position in ug.spawnScorePopup(points, true, originY, 1, originX); parameter 2 retains its <=39 boundary-probe side effect."
-    },
-    {
-      "symbol": "P:ld.a(IIII)V#3",
-      "to": "points",
-      "originalName": "param3",
-      "evidence": "Argument position in ug.spawnScorePopup(points, true, originY, 1, originX); parameter 2 retains its <=39 boundary-probe side effect."
-    },
-    {
       "symbol": "P:mk.a(ILjava/lang/String;)Llh;#0",
       "to": "guard",
       "originalName": "param0",
@@ -5645,30 +5393,6 @@
       "evidence": "Only value 32 delegates to the current input validation query; other values return null. The numeric sentinel is preserved."
     },
     {
-      "symbol": "P:ra.a(ILrf;)V#0",
-      "to": "methodGuard",
-      "originalName": "param0",
-      "evidence": "Music-selection wrapper: parameter 1 is the rf track identity; parameter 0 retains the nonzero ra.field_d side effect after null/current-track early return."
-    },
-    {
-      "symbol": "P:ra.a(ILrf;)V#1",
-      "to": "track",
-      "originalName": "param1",
-      "evidence": "Music-selection wrapper: parameter 1 is the rf track identity; parameter 0 retains the nonzero ra.field_d side effect after null/current-track early return."
-    },
-    {
-      "symbol": "P:td.a(ILgd;)V#0",
-      "to": "methodGuard",
-      "originalName": "param0",
-      "evidence": "PCM registration wrapper: parameter 0 must be -348 for the ordinary path; parameter 1 is supplied to createForPlaybackRate(sample,100,96)."
-    },
-    {
-      "symbol": "P:td.a(ILgd;)V#1",
-      "to": "sample",
-      "originalName": "param1",
-      "evidence": "PCM registration wrapper: parameter 0 must be -348 for the ordinary path; parameter 1 is supplied to createForPlaybackRate(sample,100,96)."
-    },
-    {
       "symbol": "P:tf.a(IIIII)[Ldm;#0",
       "to": "bottomRightBorderColor",
       "originalName": "param0",
@@ -5844,8 +5568,8 @@
     }
   ],
   "revision": 4,
-  "previousRulesSha256": "923190df0b245f62d3c05244aa176a9fb6ea9e65ac591f17f1336bff39e76a71",
-  "version": 18,
+  "previousRulesSha256": "64b4672a5346645edee6f0380bd2ef1e764942cdcc103e4614113880fe65e940",
+  "version": 17,
   "generators": {
     "dekoblokoWork": {
       "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
@@ -5862,6 +5586,5 @@
     }
   },
   "upstreamNamingGeneratorCommit": "d41315508e071f6bd672d65eb2f5a8d428648d6f",
-  "namingMigrationSha256": "a03b33682b43a2455f4d217f25969acf965c2047a12ac2a713cec9573b0798c6",
-  "namingAdditionsSha256": "eeba987f6bb595d5a85fe68e80228b3c67fabf49ae7b1f36a5946878cb0edd7b"
+  "namingMigrationSha256": "a03b33682b43a2455f4d217f25969acf965c2047a12ac2a713cec9573b0798c6"
 }

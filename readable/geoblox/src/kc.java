@@ -593,7 +593,7 @@ final class kc {
                             stackIn_90_2 = stackIn_88_2;
                             stackIn_90_3 = 100;
                           }
-                          ld.a(stackIn_90_0, stackIn_90_1, stackIn_90_2, stackIn_90_3);
+                          ld.spawnPointsPopup(stackIn_90_0, stackIn_90_1, stackIn_90_2, stackIn_90_3);
                         }
                       }
                       if (4 != candidateEntity.entitySpriteKindId) {

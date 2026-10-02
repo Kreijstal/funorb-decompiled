@@ -3,7 +3,7 @@
  */
 final class fl {
     static String field_b;
-    static gd[] field_c;
+    static PcmSample[] field_c;
     static Sprite field_a;
     private static String field_z;
 
@@ -21,6 +21,6 @@ final class fl {
 
     static {
         field_z = "fl.A(";
-        field_c = new gd[33];
+        field_c = new PcmSample[33];
     }
 }

@@ -2303,13 +2303,13 @@ final class GameScreen extends MenuScreen {
           if (param0 == 0) {
             L1: {
               if (null != this.volumePreviewStream) {
-                if (!this.volumePreviewStream.l()) {
+                if (!this.volumePreviewStream.isSamplePositionOutOfRange()) {
                   if (50 >= this.volumePreviewTicks) {
                     break L1;
                   }
                 }
               }
-              this.volumePreviewStream = PcmSampleStream.a(fl.field_c[8], 100, j.field_gb);
+              this.volumePreviewStream = PcmSampleStream.createForPlaybackRate(fl.field_c[8], 100, j.field_gb);
               GameplayEntity.registerAudioStream(false, this.volumePreviewStream);
               this.volumePreviewTicks = 0;
             }
@@ -2369,7 +2369,7 @@ final class GameScreen extends MenuScreen {
         var7 = Geoblox.field_C;
         try {
           L0: {
-            td.a(-348, fl.field_c[29]);
+            td.playPcmSample(-348, fl.field_c[29]);
             var3_int = 0;
             var4 = 0;
             actionId = t.menuActionIds[this.screenId][itemIndex];

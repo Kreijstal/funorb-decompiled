@@ -53,7 +53,7 @@ final class kj extends ia {
         try {
           L1: {
             if (this.field_C.f()) {
-              var4_int = this.field_C.field_d * this.field_T / AudioOutput.field_j;
+              var4_int = this.field_C.field_d * this.field_T / AudioOutput.sampleRateHz;
               L2: while (true) {
                 var5 = (long)param2 * (long)var4_int + this.field_x;
                 if (this.field_A + -var5 < 0L) {
@@ -229,7 +229,7 @@ final class kj extends ia {
             }
           }
           if (param0 > 10) {
-            var5 = (int)((double)(256 * param1.field_i.field_h) * Math.pow(2.0, 0.0003255208333333333 * (double)var3_int) / (double)AudioOutput.field_j + 0.5);
+            var5 = (int)((double)(256 * param1.field_i.sampleRateHz) * Math.pow(2.0, 0.0003255208333333333 * (double)var3_int) / (double)AudioOutput.sampleRateHz + 0.5);
             if (var5 < 1) {
               stackIn_14_0 = 1;
             } else {
@@ -315,10 +315,10 @@ final class kj extends ia {
         try {
           L0: {
             L1: {
-              param3.field_g = AudioOutput.field_j / 100;
+              param3.field_g = AudioOutput.sampleRateHz / 100;
               if (param3.field_y >= 0) {
                 if (null != param3.field_u) {
-                  if (!param3.field_u.l()) {
+                  if (!param3.field_u.isSamplePositionOutOfRange()) {
                     break L1;
                   }
                 }
@@ -705,10 +705,10 @@ final class kj extends ia {
             field_o = (boolean[]) null;
           }
           L2: {
-            var4_int = param0.field_i.field_k.length;
+            var4_int = param0.field_i.samples.length;
             if (param2) {
-              if (param0.field_i.field_i) {
-                var6 = -param0.field_i.field_g + var4_int - -var4_int;
+              if (param0.field_i.pingPongLoop) {
+                var6 = -param0.field_i.loopStart + var4_int - -var4_int;
                 var4_int = var4_int << 8;
                 var5 = (int)((long)var6 * (long)this.field_u[param0.field_t] >> 323136070);
                 if (var4_int <= var5) {
@@ -1093,7 +1093,7 @@ final class kj extends ia {
               }
             }
             if (null != var3.field_u) {
-              var3.field_u.c(AudioOutput.field_j / 100);
+              var3.field_u.c(AudioOutput.sampleRateHz / 100);
               if (var3.field_u.g()) {
                 this.field_I.field_m.a(var3.field_u);
               }
@@ -1186,7 +1186,7 @@ final class kj extends ia {
         int var5;
         L0: {
           if (this.field_C.f()) {
-            var2 = this.field_T * this.field_C.field_d / AudioOutput.field_j;
+            var2 = this.field_T * this.field_C.field_d / AudioOutput.sampleRateHz;
             L1: while (true) {
               var3 = this.field_x - -((long)param0 * (long)var2);
               if (-var3 + this.field_A < 0L) {
@@ -1292,7 +1292,7 @@ final class kj extends ia {
         int stackIn_16_3;
         pc var5;
         int var6_int;
-        gd var6;
+        PcmSample var6;
         pc var7;
         pc var8;
         vl var9;

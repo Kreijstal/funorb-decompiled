@@ -1,4 +1,4 @@
-# Reading GeoBlox pass 17
+# Reading GeoBlox pass 18
 
 The readable tree uses semantic names without opaque suffixes. The symbol map
 keeps the original spelling and JVM identity of every declaration, so
@@ -102,7 +102,8 @@ bit flags to speed, rotation and entity selection parameters.
 | 5 | Result complete; scene transition requested |
 
 `updateResultSequence` initializes `resultBonusPoints` with an additional 179,
-computes `endingEntityRadius` from nontransparent sprite pixels, then advances
+uses `i.findOutermostAttachedEntity` to select an entity and computes
+`endingEntityRadius` from nontransparent sprite pixels, then advances
 the effect phases. Shrinking ticks add seven bonus points each. The completion
 tick uses `resultCompletionTickOffset + 150`. `boardEmptyAtResultStart` snapshots
 an empty attached queue and enables the extra 2000-point popup.
@@ -122,6 +123,9 @@ queues to be empty and `jl.field_t` to be clear; attached entities can remain.
 On loss it starts the session-ending path and traverses the contact graph from
 the farthest attached entity, assigning staggered lifetimes in increments of 50.
 The end path sets `sessionEnding`; it is distinct from the normal result phases.
+`findOutermostAttachedEntity` starts at `Float.MIN_VALUE`, so even a nonempty
+queue of centred or NaN positions can return null. It walks backwards, retains
+the first tied candidate, and stops after one candidate on nonzero client guards.
 
 ## Points panel and entity rendering
 
@@ -264,8 +268,8 @@ the array indices, evidence, override families and remaining shared carriers.
 
 ## Remaining limitations
 
-There are 926 explicit rules: 20 classes, 348 fields, 157 method declarations,
-153 parameters and 248 guarded local declarations. This is not full
+There are 972 explicit rules: 21 classes, 358 fields, 163 method declarations,
+175 parameters and 255 guarded local declarations. This is not full
 deobfuscation. Unknown flags, guard arguments and opaque shared helpers still
 need investigation. Pass 15 removes the last two dispatchers while preserving
 the reviewed names; ten result-sequence local ordinals move without changing
@@ -324,3 +328,25 @@ and result-sequence radius/timing even though the source compiled. The
 generic fix and 27 native result-sequence scenarios through completion. All
 926 naming rules and 248 local identities remain unchanged. Whole-game behavior
 and unknown names still need investigation.
+
+
+## Result audio and shared points helper
+
+Pass 18 names `resultExpansionAudioStream`, its progress-dependent
+`PcmSampleStream.createForPlaybackRate` factory and the position query
+`isSamplePositionOutOfRange`. `samplePositionFixed` and `sampleStepFixed` use
+256 units per sample. `PcmSample` stores source `sampleRateHz`, `samples`, loop
+endpoints and the ping-pong flag; `AudioOutput.sampleRateHz` is the distinct
+output frequency. `playPcmSample` registers a stream at rate 100 and volume 96.
+
+`qf.resultMusicTrack` is loaded from `bonus_bubble_jingle`.
+`ra.selectBackgroundMusic` retains null/current-track early returns and the
+original MIDI stop/reset/start path. `ld.spawnPointsPopup` names the shared
+wrapper used by difficulty, result and points-panel bonuses; its argument order
+is y, x, method guard, points.
+
+The [result-helper report](RESULT-HELPER-READABILITY.md) explains the 46 additions
+and native comparisons. The raw source and all 926 previous names remain
+unchanged. New probes cover selector edge cases, PCM factory metadata and
+position bounds, and music early returns. Actual MIDI activation, PCM advancement
+and whole-game behavior still need verification.

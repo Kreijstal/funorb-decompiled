@@ -6,6 +6,7 @@ Generated from explicit rules; original names remain lookup identities.
 | --- | --- | --- |
 | `C:c` | `GameScreen` | Nine instances constructed by Geoblox.m, selected by current/requested screen IDs; implements menu rendering, input and per-screen update. |
 | `C:dm` | `Sprite` | Owns int pixels and nearest/smooth sprite transforms; raster fixtures and rotation census. |
+| `C:gd` | `PcmSample` | Byte-array PCM sample with source frequency, loop endpoints and ping-pong flag. Both PCM stream constructors consume these fields; ue resampling rewrites sample bytes, source rate and loop endpoints. |
 | `C:gh` | `GameplaySession` | Created when a menu starts play; Geoblox delegates gameplay update/render to it; owns board angle, score and session progression. |
 | `C:hf` | `IntrusiveNode` | hf instance fields field_b/field_c form reciprocal links; tf constructs a circular hf sentinel and hf.a(boolean) detaches a node. Static helpers are unrelated to the instance role. |
 | `C:ja` | `GameplayEntity` | ja.java declares positioned, moving sprites (field_o/field_v, field_w/field_F, field_J); gh.java iterates ja instances from gameplay entity lists and transforms their coordinates around the board angle. |
@@ -84,6 +85,11 @@ Generated from explicit rules; original names remain lookup identities.
 | `F:fi.field_h:Ljava/lang/String;` | `changeDisplayNameText` | wi.a(BLrh;)V reads the explicit resource key 'changedisplayname' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:g.field_l:Ljava/lang/String;` | `serviceUnavailableText` | wi.a(BLrh;)V reads the explicit resource key 'serviceunavailable' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:g.field_m:Ljava/lang/String;` | `createEmailUnavailableAlertText` | wi.a(BLrh;)V reads the explicit resource key 'create_alert_email_unavailable' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
+| `F:gd.field_g:I` | `loopStart` | Constructor loop start copied to kl.field_q; looping routines shift it by eight for the lower boundary and resampling adjusts it. |
+| `F:gd.field_h:I` | `sampleRateHz` | Constructor stores source sampling frequency; rate-percent stream creation multiplies it by 256 and divides by the audio output frequency. ue resampling scales this frequency. |
+| `F:gd.field_i:Z` | `pingPongLoop` | Constructor flag copied to kl.field_r. True loop branches reflect the fixed-point position at boundaries and reverse the signed sample step, while false branches wrap. |
+| `F:gd.field_j:I` | `loopEnd` | Constructor exclusive loop end copied to kl.field_m; interpolation uses loopEnd-1 at the boundary and resampling adjusts it. |
+| `F:gd.field_k:[B` | `samples` | Decoded PCM byte samples passed into all stream interpolation/mixing routines; stream position bounds use its length shifted by eight. |
 | `F:gf.field_e:Ljava/lang/String;` | `createPasswordContainsNameAlertText` | wi.a(BLrh;)V reads the explicit resource key 'create_alert_passcontainsname' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:gf.field_f:I` | `matchChainLength` | ec increments this per eligible scored triple and uses it as the points multiplier; scene/result setup resets it. |
 | `F:gg.field_a:Ljava/lang/String;` | `createRepeatedPasswordAlertText` | wi.a(BLrh;)V reads the explicit resource key 'create_alert_passrepeated' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
@@ -100,6 +106,7 @@ Generated from explicit rules; original names remain lookup identities.
 | `F:gh.field_I:LGeoblox;` | `gameApplet` | Retains the owning Geoblox constructor argument. |
 | `F:gh.field_J:F` | `boardAngleRadians` | Changed by rotation input; sin/cos in render and radians-to-16-bit-angle conversion rotate board sprite. |
 | `F:gh.field_K:Z` | `submissionBlocked` | Score/action submission checks this flag. Debug input and emitPointsPopup with the submission-blocking argument set it. |
+| `F:gh.field_M:Lkl;` | `resultExpansionAudioStream` | Referenced only by updateResultSequence phase 2: an absent or out-of-range stream is replaced with sample 28 at a progress-dependent rate and registered in the mixer. |
 | `F:gh.field_N:Z` | `spawnReleaseDisabled` | lc skips transfer from the spawn queue into moving entities while this is set. Debug input toggles it; tutorial/end paths also set it. |
 | `F:gh.field_Q:Z` | `debugSpawnSpecialKinds` | Passed as nb.a parameter 5: true chooses special kinds 1/2/3/4 from category/variant; false selects ordinary kind zero. |
 | `F:gh.field_R:Z` | `boardEmptyAtResultStart` | Result initialization records a.field_d.isEmpty here. The result message and extra 2000-point popup use that snapshot. |
@@ -210,6 +217,8 @@ Generated from explicit rules; original names remain lookup identities.
 | `F:ki.field_a:Ljava/lang/String;` | `fullscreenNonmemberText` | wi.a(BLrh;)V reads the explicit resource key 'fs_nonmember' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:ki.field_e:Ljava/lang/String;` | `js5ConnectErrorText` | wi.a(BLrh;)V reads the explicit resource key 'error_js5connect' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:kk.field_v:Ljava/lang/String;` | `loginUsernameTooltipText` | wi.a(BLrh;)V reads the explicit resource key 'login_username_tooltip' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
+| `F:kl.field_p:I` | `sampleStepFixed` | Signed Q8 source-sample increment used to advance samplePositionFixed. Ping-pong boundaries negate it; the rate-percent factory converts source and output frequencies into this step. |
+| `F:kl.field_x:I` | `samplePositionFixed` | PCM interpolation indexes sample bytes with this value>>8 and its fractional part &255. Bounds are samples.length<<8; advancing and looping update this signed Q8 position. |
 | `F:lf.field_e:[C` | `extendedTextCharacters` | The 32-entry character table indexed by byteValue-128 in bc.a(I[BII)Ljava/lang/String;. Zero entries decode as question mark; table values are preserved byte for byte. |
 | `F:lh.field_a:Ljava/lang/String;` | `nextText` | wi.a(BLrh;)V reads the explicit resource key 'next' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:lh.field_c:Ljava/lang/String;` | `createAccountSuccessText` | wi.a(BLrh;)V reads the explicit resource key 'create_account_success' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
@@ -269,11 +278,13 @@ Generated from explicit rules; original names remain lookup identities.
 | `F:q.field_g:Ldj;` | `validatedInput` | Constructor captures the input whose current field_s is passed into the abstract validation methods by e(int) and b(byte). |
 | `F:qb.field_F:Ljava/lang/String;` | `js5IoErrorText` | wi.a(BLrh;)V reads the explicit resource key 'error_js5io' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:qb.field_L:Ljava/lang/String;` | `fullscreenMembersButtonText` | wi.a(BLrh;)V reads the explicit resource key 'fs_button_members' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
+| `F:qf.field_bb:Lrf;` | `resultMusicTrack` | jg loads the bonus_bubble_jingle track into this field and registers it with the MIDI resources. updateResultSequence passes it to selectBackgroundMusic; cleanup clears it. |
 | `F:qg.field_b:Ljava/lang/String;` | `createPasswordText` | wi.a(BLrh;)V reads the explicit resource key 'create_password' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:qh.field_Q:Ljava/lang/String;` | `createPasswordHintText` | wi.a(BLrh;)V reads the explicit resource key 'create_password_hint' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:qh.field_S:Ljava/lang/String;` | `tutorialFailedMessage` | English initializer explicitly says the tutorial failed, explains reaching the edge of the play area and offers replay or the proper game; uk.a returns it for step five. |
 | `F:qj.field_b:Z` | `clearGameplayDuringTransition` | Set when transition is triggered via pg.field_e, forces cleared background instead of drawing gameplay; cleared on transition completion. |
 | `F:qj.field_c:Ldm;` | `transitionCurtain` | Sprite drawn at y=6*transitionTick-480 after outgoing/incoming screen clipping. |
+| `F:qk.field_j:I` | `sampleRateHz` | Audio output configuration validates frequency between 8000 and 48000 and stores it here. Scheduling uses 256000/rate, while PCM factory converts source sample frequency by this output frequency. |
 | `F:ra.field_a:Ltf;` | `availableEntities` | Entity initialization removes a free entity from this queue; completed entity animations return their objects here. |
 | `F:ra.field_b:Ljava/lang/String;` | `ticketingUnreadCountText` | wi.a(BLrh;)V reads the explicit resource key 'ticketing_xunread' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:rb.field_a:Ljava/lang/String;` | `fullscreenCancelButtonText` | wi.a(BLrh;)V reads the explicit resource key 'fs_button_cancel' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
@@ -488,9 +499,11 @@ Generated from explicit rules; original names remain lookup identities.
 | `L:gh.b(B)V#2` | `precedingThemeId` | Scene transition searches the theme list, wraps to the preceding entry and uses that ID for the existing action dispatch. The reused index later holds the theme ID. |
 | `L:gh.b(B)V#3` | `themeIndexThenId` | Scene transition searches the theme list, wraps to the preceding entry and uses that ID for the existing action dispatch. The reused index later holds the theme ID. |
 | `L:gh.e(I)V#0` | `remainingThemeReleases` | Normal HUD computes releasesPerTheme minus releasedInCurrentTheme. |
+| `L:gh.f(I)V#0` | `nextSceneAnimationTick` | Temporary captures sceneAnimationTick+1 before the field increment and is compared with resultCompletionTickOffset+150. It is not a separate persistent tick counter. |
 | `L:gh.f(I)V#10` | `pixelOffsetFromCenterX` | Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio. |
 | `L:gh.f(I)V#11` | `pixelOffsetFromCenterY` | Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio. |
 | `L:gh.f(I)V#12` | `pixelRadiusSquared` | Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio. |
+| `L:gh.f(I)V#13` | `controlFlowGuard` | Snapshot of Geoblox.field_C used by result initialization loops, phase routing, effect timing and panel updates; nonzero paths remain present. |
 | `L:gh.f(I)V#14` | `endingEntity` | Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio. |
 | `L:gh.f(I)V#4` | `resultProgressPercent` | Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio. |
 | `L:gh.f(I)V#5` | `maxRadiusSquared` | Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio. |
@@ -503,6 +516,11 @@ Generated from explicit rules; original names remain lookup identities.
 | `L:gh.g(I)V#2` | `promptHeight` | Thirty pixels plus measured line count times line spacing; used for the background height with ten pixels padding. |
 | `L:gh.g(I)V#3` | `promptTop` | Step-dependent y origin (232/280/270/300) for tutorial background and text placement. |
 | `L:gh.g(I)V#5` | `promptText` | Tutorial text selected by uk.a(tutorialStepId,24146) and passed to font measuring/rendering. |
+| `L:i.a(B)Lja;#0` | `maxDistanceSquared` | Starts at Float.MIN_VALUE and changes only when candidateDistanceSquared is strictly greater. |
+| `L:i.a(B)Lja;#2` | `farthestEntity` | Initially null, replaced by the current candidate only on a strictly greater squared distance, then returned through the Object carrier. |
+| `L:i.a(B)Lja;#3` | `candidateEntity` | Entity obtained from the attached deque last/previous walk; its position supplies the radius comparison. |
+| `L:i.a(B)Lja;#4` | `candidateDistanceSquared` | Sum of squared x-320 and y-240 coordinate offsets for the current candidate. |
+| `L:i.a(B)Lja;#5` | `controlFlowGuard` | Snapshot of Geoblox.field_C; nonzero terminates the walk after its first candidate. |
 | `L:ja.a(FI)V#0` | `velocityNormalizationScale` | ja.java sets var5 to og.field_r divided by the magnitude of the rotated velocity vector and multiplies both velocity components by it. |
 | `L:ja.a(FI)V#1` | `positionOffsetX` | ja.java computes field_o-320 into var3 and uses it in the position rotation before restoring the center offset. |
 | `L:ja.a(FI)V#2` | `positionOffsetY` | ja.java computes field_v-240 into var4 and uses it in the position rotation before restoring the center offset. |
@@ -694,6 +712,7 @@ Generated from explicit rules; original names remain lookup identities.
 | `M:gj.f(B)V` | `drawSpecialAttachedEntities` | Draws attached entities whose sprite-kind ID is nonzero. |
 | `M:hd.f(I)V` | `recordEntityRelease` | Increments theme/difficulty release counts and requests a theme transition or advances difficulty at their thresholds. |
 | `M:hf.a(Z)V` | `unlinkNode` | When the false guard is supplied, reconnects previous/next neighbours and clears both links; tf removal and insertion call this method. |
+| `M:i.a(B)Lja;` | `findOutermostAttachedEntity` | Walks attachedEntities from last to previous and retains the entity with strictly greatest squared distance from (320,240). The Float.MIN_VALUE starting threshold excludes zero-distance and NaN candidates; ties retain the first encountered entity. Nonzero Geoblox.field_C stops after one candidate; guard >= -127 also clears the avatar mask. |
 | `M:ib.b(B)Ljava/lang/String;` | `currentValidationMessage` | Abstract declaration implemented by q; both identities receive the same reviewed name so callers and overrides remain consistent. |
 | `M:ib.e(I)Llh;` | `currentValidationState` | Abstract declaration implemented by q; both identities receive the same reviewed name so callers and overrides remain consistent. |
 | `M:ih.a(I)Z` | `areEntityQueuesSettled` | Returns true only when moving, spawn and transient animation queues are empty and the additional jl.field_t gate is clear. The attached queue may remain nonempty. |
@@ -729,8 +748,11 @@ Generated from explicit rules; original names remain lookup identities.
 | `M:ka.a(ZBII)V` | `renderMenuItem` | Base render loops call with selection flag, row index and row Y; concrete draws label/slider content. Both base and concrete declarations are renamed. |
 | `M:ka.b(IB)V` | `activateMenuItem` | Dispatches per-screen action ID, requests screens, resumes play or creates new gh gameplay session. Both base and concrete declarations are renamed. |
 | `M:kc.b(I)V` | `reconcileBoardEntities` | gh.java calls kc.b(...) from the gameplay update after ef.b(...). kc.java traverses ja lists, removes/relinks entities and related children, projects positions against the board radius, and sets el.field_o.field_F when entity state changes. |
+| `M:kl.a(Lgd;II)Lkl;` | `createForPlaybackRate` | Returns null for null or empty sample bytes; otherwise constructs a PCM stream with signed Q8 step sampleRateHz*256*ratePercent/(100*AudioOutput.sampleRateHz) and volume<<6. Preserves zero-rate, negative-rate, overflow and division behavior. |
+| `M:kl.l()Z` | `isSamplePositionOutOfRange` | Synchronized query returns samplePositionFixed<0 or samplePositionFixed>=sample.samples.length<<8. It tests position only, not playback completion, queue membership or looping state. |
 | `M:lc.a(I)V` | `updateSpawnQueue` | Updates staged entities and transfers ready members to moving entities unless spawnReleaseDisabled is set. |
 | `M:ld.a(I)Z` | `hasPixelsAtPlayfieldBoundary` | Probes symmetric pixels around a radius-230 circle centered at (320,240) in the currently selected raster and returns on the first nonzero pixel. |
+| `M:ld.a(IIII)V` | `spawnPointsPopup` | Delegates points, true, originY, guard 1 and originX to ug.spawnScorePopup. Used for difficulty bonuses, result completion bonuses and the ordinary points panel; not specific to results. Its own guard <=39 subsequently invokes the boundary probe. |
 | `M:ld.b(Z)V` | `advanceDifficulty` | Increments the difficulty step and loads its existing motion, angular-speed and release-threshold tables. |
 | `M:mk.a(ILjava/lang/String;)Llh;` | `validationStateForText` | Complete q override family across ag, cf, g, mk, n, q and uk. The state query evaluates candidate text and returns a validation-state identity; the message query describes that candidate or returns null. q current-input wrappers call these methods with the current input text. Full JVM descriptor, guards and asynchronous/pending behavior remain unchanged. |
 | `M:mk.b(ILjava/lang/String;)Ljava/lang/String;` | `validationMessageForText` | Complete q override family across ag, cf, g, mk, n, q and uk. The state query evaluates candidate text and returns a validation-state identity; the message query describes that candidate or returns null. q current-input wrappers call these methods with the current input text. Full JVM descriptor, guards and asynchronous/pending behavior remain unchanged. |
@@ -743,9 +765,11 @@ Generated from explicit rules; original names remain lookup identities.
 | `M:q.b(B)Ljava/lang/String;` | `currentValidationMessage` | With guard -103, calls b(422,current input text); other guards clear the input and retain the original failing path. The complete override family includes the abstract ib declaration, renamed in the same manifest. |
 | `M:q.b(ILjava/lang/String;)Ljava/lang/String;` | `validationMessageForText` | Complete q override family across ag, cf, g, mk, n, q and uk. The state query evaluates candidate text and returns a validation-state identity; the message query describes that candidate or returns null. q current-input wrappers call these methods with the current input text. Full JVM descriptor, guards and asynchronous/pending behavior remain unchanged. |
 | `M:q.e(I)Llh;` | `currentValidationState` | With guard 32, calls the abstract state query using the validated input's current text. The complete override family includes the abstract ib declaration, renamed in the same manifest. |
+| `M:ra.a(ILrf;)V` | `selectBackgroundMusic` | Null or already-current track is a no-op. Otherwise stops the MIDI stream, resets its playback state, sets fe.field_e to the supplied track and starts it. A nonzero method guard writes ra.field_d; audio effects and exception wrapping remain intact. |
 | `M:rc.a(B)V` | `unlinkSecondaryNode` | Reconnects field_l/field_k neighbours and clears both second links without touching inherited hf links. |
 | `M:rh.a(B)V` | `updateAttachedEntities` | Iterates the attached queue, decreases match cooldowns, updates the selected sprites, checks avatar-contact special effects and computes the maximum squared distance from the board center. |
 | `M:sk.a(I)Z` | `checkBoundaryLossAndStartCascade` | Checks the ownership raster boundary outside scene transitions; on loss starts the end sequence and traverses contacts from the farthest entity to assign staggered ending lifetimes. |
+| `M:td.a(ILgd;)V` | `playPcmSample` | Creates a stream at ratePercent 100 and volume 96, then registers it through GameplayEntity.registerAudioStream. This schedules playback; it does not advance the stream or output a device buffer itself. Guard -348 avoids the retained bad-guard recursion. |
 | `M:tf.a(I)I` | `countNodes` | Walks from sentinel.field_b until returning to the sentinel, counting each node. |
 | `M:tf.a(IIIII)[Ldm;` | `buildUnitBorderNineSliceSprites` | Delegates to n.a with inner accent width 1, border gap 1, outer border width 1, edge length 3 and retention guard 1. It preserves all four caller-supplied colours. |
 | `M:tf.a(ILhf;)V` | `addLast` | Unlinks the argument if already linked, then inserts it before the sentinel after the previous tail. |
@@ -831,9 +855,20 @@ Generated from explicit rules; original names remain lookup identities.
 | `P:g.a(ILjava/lang/String;)Llh;#1` | `candidateText` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
 | `P:g.b(ILjava/lang/String;)Ljava/lang/String;#0` | `guard` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
 | `P:g.b(ILjava/lang/String;)Ljava/lang/String;#1` | `candidateText` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
+| `P:gd.<init>(I[BII)V#0` | `sampleRateHz` | Constructor stores this argument into the corresponding PcmSample field; the four-argument constructor retains its default false ping-pong flag. |
+| `P:gd.<init>(I[BII)V#1` | `samples` | Constructor stores this argument into the corresponding PcmSample field; the four-argument constructor retains its default false ping-pong flag. |
+| `P:gd.<init>(I[BII)V#2` | `loopStart` | Constructor stores this argument into the corresponding PcmSample field; the four-argument constructor retains its default false ping-pong flag. |
+| `P:gd.<init>(I[BII)V#3` | `loopEnd` | Constructor stores this argument into the corresponding PcmSample field; the four-argument constructor retains its default false ping-pong flag. |
+| `P:gd.<init>(I[BIIZ)V#0` | `sampleRateHz` | Constructor stores this argument into the corresponding PcmSample field; the four-argument constructor retains its default false ping-pong flag. |
+| `P:gd.<init>(I[BIIZ)V#1` | `samples` | Constructor stores this argument into the corresponding PcmSample field; the four-argument constructor retains its default false ping-pong flag. |
+| `P:gd.<init>(I[BIIZ)V#2` | `loopStart` | Constructor stores this argument into the corresponding PcmSample field; the four-argument constructor retains its default false ping-pong flag. |
+| `P:gd.<init>(I[BIIZ)V#3` | `loopEnd` | Constructor stores this argument into the corresponding PcmSample field; the four-argument constructor retains its default false ping-pong flag. |
+| `P:gd.<init>(I[BIIZ)V#4` | `pingPongLoop` | Constructor stores this argument into the corresponding PcmSample field; the four-argument constructor retains its default false ping-pong flag. |
 | `P:gh.a(BI)V#1` | `points` | Value added to score. |
 | `P:gh.a(II)V#0` | `points` | Value added to popup points. |
 | `P:gh.c(Z)V#0` | `markSubmissionBlocked` | When true sets field_K, which blocks score submission. |
+| `P:gh.f(I)V#0` | `methodGuard` | Normal updateSession calls with 10. This parameter contributes the boundary-loss guard, xor-10 music guard, unlock guard and final !=10 cleanup branch; none is simplified away. |
+| `P:i.a(B)Lja;#0` | `methodGuard` | At values >= -127 calls i.a(false), which clears avatarMaskRaster. Normal result and boundary-loss callers pass -128; no guard is removed. |
 | `P:ib.b(B)Ljava/lang/String;#0` | `guard` | Guard argument passed to the q implementation; original numeric sentinel and descriptor remain unchanged. |
 | `P:ib.e(I)Llh;#0` | `guard` | Guard argument passed to the q implementation; original numeric sentinel and descriptor remain unchanged. |
 | `P:ih.a(IILja;I)V#1` | `contactY` | Y coordinate of the ownership-mask contact probe. |
@@ -869,6 +904,13 @@ Generated from explicit rules; original names remain lookup identities.
 | `P:ka.a(ZBII)V#2` | `itemIndex` | Row index supplied by render loop. |
 | `P:ka.a(ZBII)V#3` | `rowY` | Row Y supplied by render loop and used in text/slider drawing. |
 | `P:ka.b(IB)V#0` | `itemIndex` | Indexes action IDs for activation. |
+| `P:kl.a(Lgd;II)Lkl;#0` | `sample` | PCM factory inputs: sample supplies bytes and source frequency, ratePercent scales signed Q8 sample step, volume is shifted left six before construction. |
+| `P:kl.a(Lgd;II)Lkl;#1` | `ratePercent` | PCM factory inputs: sample supplies bytes and source frequency, ratePercent scales signed Q8 sample step, volume is shifted left six before construction. |
+| `P:kl.a(Lgd;II)Lkl;#2` | `volume` | PCM factory inputs: sample supplies bytes and source frequency, ratePercent scales signed Q8 sample step, volume is shifted left six before construction. |
+| `P:ld.a(IIII)V#0` | `originY` | Argument position in ug.spawnScorePopup(points, true, originY, 1, originX); parameter 2 retains its <=39 boundary-probe side effect. |
+| `P:ld.a(IIII)V#1` | `originX` | Argument position in ug.spawnScorePopup(points, true, originY, 1, originX); parameter 2 retains its <=39 boundary-probe side effect. |
+| `P:ld.a(IIII)V#2` | `methodGuard` | Argument position in ug.spawnScorePopup(points, true, originY, 1, originX); parameter 2 retains its <=39 boundary-probe side effect. |
+| `P:ld.a(IIII)V#3` | `points` | Argument position in ug.spawnScorePopup(points, true, originY, 1, originX); parameter 2 retains its <=39 boundary-probe side effect. |
 | `P:mk.a(ILjava/lang/String;)Llh;#0` | `guard` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
 | `P:mk.a(ILjava/lang/String;)Llh;#1` | `candidateText` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
 | `P:mk.b(ILjava/lang/String;)Ljava/lang/String;#0` | `guard` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
@@ -901,6 +943,10 @@ Generated from explicit rules; original names remain lookup identities.
 | `P:q.b(ILjava/lang/String;)Ljava/lang/String;#0` | `guard` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
 | `P:q.b(ILjava/lang/String;)Ljava/lang/String;#1` | `candidateText` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
 | `P:q.e(I)Llh;#0` | `guard` | Only value 32 delegates to the current input validation query; other values return null. The numeric sentinel is preserved. |
+| `P:ra.a(ILrf;)V#0` | `methodGuard` | Music-selection wrapper: parameter 1 is the rf track identity; parameter 0 retains the nonzero ra.field_d side effect after null/current-track early return. |
+| `P:ra.a(ILrf;)V#1` | `track` | Music-selection wrapper: parameter 1 is the rf track identity; parameter 0 retains the nonzero ra.field_d side effect after null/current-track early return. |
+| `P:td.a(ILgd;)V#0` | `methodGuard` | PCM registration wrapper: parameter 0 must be -348 for the ordinary path; parameter 1 is supplied to createForPlaybackRate(sample,100,96). |
+| `P:td.a(ILgd;)V#1` | `sample` | PCM registration wrapper: parameter 0 must be -348 for the ordinary path; parameter 1 is supplied to createForPlaybackRate(sample,100,96). |
 | `P:tf.a(IIIII)[Ldm;#0` | `bottomRightBorderColor` | Passed to n.a parameter 6, the bottom/right border colour. |
 | `P:tf.a(IIIII)[Ldm;#1` | `fillColor` | Passed to n.a parameter 5, the full-sprite initial fill colour. |
 | `P:tf.a(IIIII)[Ldm;#2` | `guard` | Values at most 90 clear tf.field_d before the unchanged delegation; this is a guard, not a colour. |

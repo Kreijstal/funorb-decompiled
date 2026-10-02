@@ -6,9 +6,9 @@ final class fg {
     private int field_b;
     private ed[] field_a;
 
-    final gd a() {
+    final PcmSample a() {
         byte[] var1 = this.b();
-        return new gd(22050, var1, 22050 * this.field_c / 1000, 22050 * this.field_b / 1000);
+        return new PcmSample(22050, var1, 22050 * this.field_c / 1000, 22050 * this.field_b / 1000);
     }
 
     private final byte[] b() {

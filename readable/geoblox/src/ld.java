@@ -543,9 +543,9 @@ final class ld {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
-        ug.spawnScorePopup(param3, true, param0, 1, param1);
-        if (param2 > 39) {
+    final static void spawnPointsPopup(int originY, int originX, int methodGuard, int points) {
+        ug.spawnScorePopup(points, true, originY, 1, originX);
+        if (methodGuard > 39) {
             return;
         }
         ld.hasPixelsAtPlayfieldBoundary(118);

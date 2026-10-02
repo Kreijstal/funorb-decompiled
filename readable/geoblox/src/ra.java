@@ -49,20 +49,20 @@ final class ra implements Iterable {
         }
     }
 
-    final static void a(int param0, rf param1) {
-        if (param1 == null || fe.field_e == param1) {
+    final static void selectBackgroundMusic(int methodGuard, rf track) {
+        if (track == null || fe.field_e == track) {
             return;
         }
         try {
-            if (param0 != 0) {
+            if (methodGuard != 0) {
                 field_d = -114;
             }
             uh.field_y.d(-9268);
             fj.field_p.a();
-            fe.field_e = param1;
+            fe.field_e = track;
             uh.field_y.a(false, fe.field_e, -1706);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "ra.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "ra.A(" + methodGuard + ',' + (track != null ? "{...}" : "null") + ')');
         }
     }
 

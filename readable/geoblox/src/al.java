@@ -109,30 +109,30 @@ final class al {
           var3 = param1;
           if (var3 != 4) {
             if (var3 == 3) {
-              td.a(-348, fl.field_c[var2 + 13]);
+              td.playPcmSample(-348, fl.field_c[var2 + 13]);
             } else {
               if (var3 != 1) {
                 if (var3 != 0) {
                   if (var3 == 6) {
-                    td.a(-348, fl.field_c[var2 + 4]);
+                    td.playPcmSample(-348, fl.field_c[var2 + 4]);
                   } else {
                     if (5 == var3) {
-                      td.a(-348, fl.field_c[16 + var2]);
+                      td.playPcmSample(-348, fl.field_c[16 + var2]);
                     } else {
                       if (var3 == 2) {
-                        td.a(-348, fl.field_c[var2 + 19]);
+                        td.playPcmSample(-348, fl.field_c[var2 + 19]);
                       }
                     }
                   }
                 } else {
-                  td.a(-348, fl.field_c[var2 + 1]);
+                  td.playPcmSample(-348, fl.field_c[var2 + 1]);
                 }
               } else {
-                td.a(-348, fl.field_c[7 - -var2]);
+                td.playPcmSample(-348, fl.field_c[7 - -var2]);
               }
             }
           } else {
-            td.a(-348, fl.field_c[10 + var2]);
+            td.playPcmSample(-348, fl.field_c[10 + var2]);
           }
           return;
         } else {

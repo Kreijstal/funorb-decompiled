@@ -14,7 +14,7 @@ final class jc {
             MenuScreen.field_h = 36;
             pa.field_g = 110;
             nd.field_a = 6;
-            td.a(-348, fl.field_c[23]);
+            td.playPcmSample(-348, fl.field_c[23]);
           }
         }
         if (pa.field_g <= 0) {
@@ -29,7 +29,7 @@ final class jc {
                         pa.field_g = 110;
                         nd.field_a = 5;
                         MenuScreen.field_h = 30;
-                        td.a(-348, fl.field_c[24]);
+                        td.playPcmSample(-348, fl.field_c[24]);
                         uf.field_b = uf.field_b % 6 - -MenuScreen.field_h;
                         return;
                       } else {
@@ -48,7 +48,7 @@ final class jc {
                     wa.field_a = 50;
                     pa.field_g = 110;
                     nd.field_a = 3;
-                    td.a(-348, fl.field_c[27]);
+                    td.playPcmSample(-348, fl.field_c[27]);
                     uf.field_b = uf.field_b % 6 - -MenuScreen.field_h;
                     return;
                   }
@@ -57,7 +57,7 @@ final class jc {
                     if (MenuScreen.field_h != 24) {
                       if (30 != MenuScreen.field_h) {
                         if (36 != MenuScreen.field_h) {
-                          td.a(-348, fl.field_c[26]);
+                          td.playPcmSample(-348, fl.field_c[26]);
                           nd.field_a = 2;
                           MenuScreen.field_h = 12;
                           uf.field_b = uf.field_b % 6 - -MenuScreen.field_h;
@@ -98,7 +98,7 @@ final class jc {
                 if (24 != MenuScreen.field_h) {
                   if (MenuScreen.field_h != 30) {
                     if (MenuScreen.field_h != 36) {
-                      td.a(-348, fl.field_c[25]);
+                      td.playPcmSample(-348, fl.field_c[25]);
                       MenuScreen.field_h = 0;
                       nd.field_a = 0;
                       uf.field_b = uf.field_b % 6 - -MenuScreen.field_h;
@@ -141,7 +141,7 @@ final class jc {
                         pa.field_g = 110;
                         nd.field_a = 5;
                         MenuScreen.field_h = 30;
-                        td.a(-348, fl.field_c[24]);
+                        td.playPcmSample(-348, fl.field_c[24]);
                         uf.field_b = uf.field_b % 6 - -MenuScreen.field_h;
                         return;
                       }
@@ -157,7 +157,7 @@ final class jc {
                     wa.field_a = 50;
                     pa.field_g = 110;
                     nd.field_a = 3;
-                    td.a(-348, fl.field_c[27]);
+                    td.playPcmSample(-348, fl.field_c[27]);
                     uf.field_b = uf.field_b % 6 - -MenuScreen.field_h;
                     return;
                   }
@@ -169,7 +169,7 @@ final class jc {
                     if (MenuScreen.field_h != 24) {
                       if (30 != MenuScreen.field_h) {
                         if (36 != MenuScreen.field_h) {
-                          td.a(-348, fl.field_c[26]);
+                          td.playPcmSample(-348, fl.field_c[26]);
                           nd.field_a = 2;
                           MenuScreen.field_h = 12;
                           uf.field_b = uf.field_b % 6 - -MenuScreen.field_h;
@@ -205,7 +205,7 @@ final class jc {
                 if (24 != MenuScreen.field_h) {
                   if (MenuScreen.field_h != 30) {
                     if (MenuScreen.field_h != 36) {
-                      td.a(-348, fl.field_c[25]);
+                      td.playPcmSample(-348, fl.field_c[25]);
                       MenuScreen.field_h = 0;
                       nd.field_a = 0;
                     } else {
@@ -231,7 +231,7 @@ final class jc {
         } else {
           if (param0 == 3) {
             wa.field_a = 50;
-            td.a(-348, fl.field_c[27]);
+            td.playPcmSample(-348, fl.field_c[27]);
           }
           return;
         }

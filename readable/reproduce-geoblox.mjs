@@ -39,6 +39,17 @@ try {
   captureProcess('git', ['-C', repository, 'archive', '--format=tar', '--output=' + archive,
     sourcePin.commit, sourcePin.subdirectory]);
   captureProcess('tar', ['-xf', archive, '-C', temporary]);
+  if (sourcePin.namingAdditions) {
+    const additionsBytes = fs.readFileSync(path.join(root, sourcePin.namingAdditions));
+    if (digest(additionsBytes) !== rules.namingAdditionsSha256)
+      throw new Error('Reviewed naming additions differ from the rules');
+    const additions = JSON.parse(additionsBytes);
+    for (const item of additions.sourceEvidence || []) {
+      if (!/^[A-Za-z_$][A-Za-z0-9_$]*\.java$/.test(item.file) ||
+          digest(fs.readFileSync(path.join(temporary, sourcePin.subdirectory, item.file))) !== item.sha256)
+        throw new Error(`Reviewed result-helper source differs: ${item.file}`);
+    }
+  }
   console.log(JSON.stringify(generateReadable({
     input: path.join(temporary, sourcePin.subdirectory), output, rulesFile, classpath, check,
   })));

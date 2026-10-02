@@ -833,7 +833,7 @@ public final class Geoblox extends wf {
                         }
                       }
                       if (nf.screenTransitionTick == 0) {
-                        td.a(-348, fl.field_c[30]);
+                        td.playPcmSample(-348, fl.field_c[30]);
                       }
                       fieldTemp$0 = nf.screenTransitionTick + 1;
                       nf.screenTransitionTick = nf.screenTransitionTick + 1;

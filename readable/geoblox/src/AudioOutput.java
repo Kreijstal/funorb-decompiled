@@ -10,7 +10,7 @@ class AudioOutput {
     int[] field_c;
     private static int field_d;
     private ia field_k;
-    static int field_j;
+    static int sampleRateHz;
     private ia[] field_a;
     private int field_g;
     private int field_f;
@@ -39,7 +39,7 @@ class AudioOutput {
             int stackIn_11_2 = 0;
             ce stackIn_21_0 = null;
             Throwable decompiledCaughtException = null;
-            if (field_j != 0) {
+            if (sampleRateHz != 0) {
               if (param2 >= 0) {
                 if (param2 < 2) {
                   if (param3 < 256) {
@@ -189,7 +189,7 @@ class AudioOutput {
         if (param0 < 8000 || param0 > 48000) {
             throw new IllegalArgumentException();
         }
-        field_j = param0;
+        sampleRateHz = param0;
         field_q = param1 ? true : false;
         field_d = param2;
     }
@@ -211,7 +211,7 @@ class AudioOutput {
                   }
                   L2: while (var1 > this.field_n + 5000L) {
                     this.b(256);
-                    this.field_n = this.field_n + (long)(256000 / field_j);
+                    this.field_n = this.field_n + (long)(256000 / sampleRateHz);
                     var1 = oa.a(-12520);
                   }
                   break L0;
@@ -350,7 +350,7 @@ class AudioOutput {
           this.field_u = this.field_u - param1;
           if (this.field_k != null) {
             if (this.field_u <= 0) {
-              this.field_u = this.field_u + (field_j >> 4);
+              this.field_u = this.field_u + (sampleRateHz >> 4);
               AudioOutput.a(this.field_k);
               this.a(this.field_k, this.field_k.a());
               var4 = 0;

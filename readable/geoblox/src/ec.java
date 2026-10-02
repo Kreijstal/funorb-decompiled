@@ -123,7 +123,7 @@ final class ec {
                   if (firstMatchedEntity.matchCooldownTicks <= 0) {
                     if (secondMatchedEntity.matchCooldownTicks <= 0) {
                       if (thirdMatchedEntity.matchCooldownTicks <= 0) {
-                        td.a(-348, fl.field_c[31]);
+                        td.playPcmSample(-348, fl.field_c[31]);
                         gf.matchChainLength = gf.matchChainLength + 1;
                         if (gf.matchChainLength > 1) {
                           el.gameplaySession.pointsPanelSlideDirection = -1;

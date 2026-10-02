@@ -49,7 +49,7 @@ final class GameplaySession {
     private boolean matchBatchProcessedThisTick;
     private boolean field_L;
     boolean boardRasterDirty;
-    private PcmSampleStream field_M;
+    private PcmSampleStream resultExpansionAudioStream;
     int newActionCount;
     private int resultSequenceCountdown;
     private boolean boundaryCheckRequested;
@@ -1079,7 +1079,7 @@ final class GameplaySession {
               }
               this.delayedActionCountdown = this.delayedActionCountdown - 1;
               if (this.delayedActionCountdown == 0) {
-                ld.a(310, 320, 123, 100 + 100 * ji.difficultyStep);
+                ld.spawnPointsPopup(310, 320, 123, 100 + 100 * ji.difficultyStep);
               }
               L50: {
                 stackIn_251_0 = this;
@@ -1835,8 +1835,8 @@ final class GameplaySession {
         dd.field_G.a(kd.field_d, 426, 404, 200, 100, 0, -1, 2, 0, 30);
     }
 
-    private final void updateResultSequence(int param0) {
-        int fieldTemp$0 = 0;
+    private final void updateResultSequence(int methodGuard) {
+        int nextSceneAnimationTick = 0;
         int stackIn_11_0 = 0;
         int stackIn_11_1 = 0;
         int stackIn_23_0 = 0;
@@ -1849,21 +1849,21 @@ final class GameplaySession {
         int pixelOffsetFromCenterX = 0;
         int pixelOffsetFromCenterY = 0;
         int pixelRadiusSquared = 0;
-        int var11 = 0;
+        int controlFlowGuard = 0;
         GameplayEntity endingEntity = null;
-        var11 = Geoblox.field_C;
+        controlFlowGuard = Geoblox.field_C;
         if (0 == this.sceneAnimationTick) {
           gf.matchChainLength = 0;
-          if (!sk.checkBoundaryLossAndStartCascade(param0 + -11)) {
+          if (!sk.checkBoundaryLossAndStartCascade(methodGuard + -11)) {
             L1: {
               L2: {
                 this.resultBonusPoints = this.resultBonusPoints + 179;
                 this.boardEmptyAtResultStart = a.attachedEntities.isEmpty(13519);
                 this.resultSequenceCountdown = 150;
-                endingEntity = i.a((byte) -128);
+                endingEntity = i.findOutermostAttachedEntity((byte) -128);
                 if (null == endingEntity) {
                   this.endingEntityRadius = 29;
-                  if (var11 == 0) {
+                  if (controlFlowGuard == 0) {
                     break L2;
                   }
                 }
@@ -1883,7 +1883,7 @@ final class GameplaySession {
                       if (stackIn_11_0 < stackIn_11_1) {
                         stackIn_23_0 = 0;
 
-                        if (var11 != 0) {
+                        if (controlFlowGuard != 0) {
                           break L1;
                         } else {
                           spriteRow = stackIn_23_0;
@@ -1892,7 +1892,7 @@ final class GameplaySession {
 
                             stackIn_11_1 = vf.spriteScratchRaster.pixels[vf.spriteScratchRaster.width * spriteRow + spriteColumn];
 
-                            if (var11 != 0) {
+                            if (controlFlowGuard != 0) {
                               continue L5;
                             } else {
                               if (stackIn_11_0 != stackIn_11_1) {
@@ -1904,14 +1904,14 @@ final class GameplaySession {
                                 }
                               }
                               spriteRow++;
-                              if (var11 == 0) {
+                              if (controlFlowGuard == 0) {
                                 continue L7;
                               }
                             }
                             break;
                           }
                           spriteColumn++;
-                          if (var11 == 0) {
+                          if (controlFlowGuard == 0) {
                             continue L4;
                           } else {
                             break L6;
@@ -1925,28 +1925,28 @@ final class GameplaySession {
                 }
               }
               this.resultCompletionTickOffset = 920 + (-(2 * this.endingEntityRadius) - 58 - 1);
-              stackIn_23_0 = param0 ^ 10;
+              stackIn_23_0 = methodGuard ^ 10;
             }
-            ra.a(stackIn_23_0, qf.field_bb);
+            ra.selectBackgroundMusic(stackIn_23_0, qf.resultMusicTrack);
           } else {
             this.pointsPanelSlideDirection = 0;
             return;
           }
         }
         L10: {
-          fieldTemp$0 = this.sceneAnimationTick + 1;
+          nextSceneAnimationTick = this.sceneAnimationTick + 1;
           this.sceneAnimationTick = this.sceneAnimationTick + 1;
-          if (fieldTemp$0 != 150 + this.resultCompletionTickOffset) {
+          if (nextSceneAnimationTick != 150 + this.resultCompletionTickOffset) {
             L12: {
               if (460 > this.sceneAnimationTick) {
                 this.sessionPhase = 2;
-                if (var11 == 0) {
+                if (controlFlowGuard == 0) {
                   break L12;
                 }
               }
               if (~(460 + -this.sceneAnimationTick + 460) > ~(this.endingEntityRadius * 2)) {
                 this.sessionPhase = 4;
-                if (var11 == 0) {
+                if (controlFlowGuard == 0) {
                   break L12;
                 }
               }
@@ -1954,34 +1954,34 @@ final class GameplaySession {
             }
             if (3 == this.sessionPhase) {
               this.resultBonusPoints = this.resultBonusPoints + 7;
-              if (var11 == 0) {
+              if (controlFlowGuard == 0) {
                 break L10;
               }
             }
             if (this.sessionPhase != 2) {
               if (this.resultSequenceCountdown == 150) {
-                td.a(-348, fl.field_c[28]);
+                td.playPcmSample(-348, fl.field_c[28]);
               }
               this.resultSequenceCountdown = this.resultSequenceCountdown - 1;
-              if (var11 == 0) {
+              if (controlFlowGuard == 0) {
                 break L10;
               }
             }
             L18: {
-              if (this.field_M != null) {
-                if (!this.field_M.l()) {
+              if (this.resultExpansionAudioStream != null) {
+                if (!this.resultExpansionAudioStream.isSamplePositionOutOfRange()) {
                   break L18;
                 }
               }
               resultProgressPercent = this.sceneAnimationTick * 100 / 460;
-              this.field_M = PcmSampleStream.a(fl.field_c[28], 2 * resultProgressPercent - -200, 45);
-              GameplayEntity.registerAudioStream(false, this.field_M);
+              this.resultExpansionAudioStream = PcmSampleStream.createForPlaybackRate(fl.field_c[28], 2 * resultProgressPercent - -200, 45);
+              GameplayEntity.registerAudioStream(false, this.resultExpansionAudioStream);
             }
             if (this.resultPanelX <= 320 + -(lj.field_d.field_s >> -1578896191)) {
               break L10;
             } else {
               this.resultPanelX = this.resultPanelX - 1;
-              if (var11 == 0) {
+              if (controlFlowGuard == 0) {
                 break L10;
               }
             }
@@ -1990,15 +1990,15 @@ final class GameplaySession {
           this.sceneAnimationTick = 0;
           this.sessionPhase = 5;
           if (this.boardEmptyAtResultStart) {
-            ld.a(350, 320, 66, 2000);
-            ra.a(eb.field_i ^ 255, param0 + -101, eb.field_i);
+            ld.spawnPointsPopup(350, 320, 66, 2000);
+            ra.a(eb.field_i ^ 255, methodGuard + -101, eb.field_i);
             this.connectivityRebuiltThisTick = false;
           }
-          ld.a(310, 320, 90, this.resultBonusPoints);
+          ld.spawnPointsPopup(310, 320, 90, this.resultBonusPoints);
         }
         cf.advanceScorePopups((byte) 33);
         f.o(600);
-        if (param0 != 10) {
+        if (methodGuard != 10) {
           GameplaySession.i(-70);
         }
     }
@@ -2174,8 +2174,8 @@ final class GameplaySession {
         if (markSubmissionBlocked) {
             this.submissionBlocked = true;
         }
-        ld.a(34, 20 + (this.pointsPanelX - -60), 79, this.pendingPopupPoints);
-        td.a(-348, fl.field_c[32]);
+        ld.spawnPointsPopup(34, 20 + (this.pointsPanelX - -60), 79, this.pendingPopupPoints);
+        td.playPcmSample(-348, fl.field_c[32]);
         this.pendingPopupPoints = 0;
     }
 

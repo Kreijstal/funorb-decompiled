@@ -41,7 +41,7 @@ final class rl extends oe {
           if (param2 != 1000) {
             rl.n(-33);
           }
-          stackIn_3_0 = new cg(param1, param0 * AudioOutput.field_j / 1000);
+          stackIn_3_0 = new cg(param1, param0 * AudioOutput.sampleRateHz / 1000);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;

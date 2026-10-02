@@ -104,7 +104,7 @@ final class ad extends ia {
         try {
           if ((this.field_k.field_m[param1.field_t] & 4) != 0) {
             if (param1.field_y < 0) {
-              var4_int = this.field_k.field_n[param1.field_t] / AudioOutput.field_j;
+              var4_int = this.field_k.field_n[param1.field_t] / AudioOutput.sampleRateHz;
               var5 = (-param1.field_B + (1048575 + var4_int)) / var4_int;
               param1.field_B = 1048575 & param1.field_B + param2 * var4_int;
               if (param2 >= var5) {
@@ -284,7 +284,7 @@ final class ad extends ia {
           L1: {
             if ((4 & this.field_k.field_m[param4.field_t]) != 0) {
               if (param4.field_y < 0) {
-                var7_int = this.field_k.field_n[param4.field_t] / AudioOutput.field_j;
+                var7_int = this.field_k.field_n[param4.field_t] / AudioOutput.sampleRateHz;
                 L2: while (true) {
                   var8 = (-param4.field_B + (var7_int + 1048575)) / var7_int;
                   if (param0 >= var8) {
@@ -292,7 +292,7 @@ final class ad extends ia {
                     param0 = param0 - var8;
                     param5 = param5 + var8;
                     param4.field_B = param4.field_B + (-1048576 + var7_int * var8);
-                    var9 = AudioOutput.field_j / 100;
+                    var9 = AudioOutput.sampleRateHz / 100;
                     var10 = 262144 / var7_int;
                     if (var10 < var9) {
                       var9 = var10;

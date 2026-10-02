@@ -9,7 +9,7 @@ abstract class qf extends oe {
     private int field_X;
     private hh field_Z;
     static int[] field_Y;
-    static rf field_bb;
+    static rf resultMusicTrack;
     private wj field_W;
     private int field_cb;
 
@@ -74,7 +74,7 @@ abstract class qf extends oe {
         if (param0 != 256) {
             return;
         }
-        field_bb = null;
+        resultMusicTrack = null;
         field_Y = null;
     }
 

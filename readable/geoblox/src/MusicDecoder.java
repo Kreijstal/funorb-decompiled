@@ -80,7 +80,7 @@ final class MusicDecoder extends IntrusiveNode {
         }
     }
 
-    final gd decodePcmBudgeted(int[] sampleBudget) {
+    final PcmSample decodePcmBudgeted(int[] sampleBudget) {
         int sampleIndex = 0;
         int incrementValue$0 = 0;
         int writePosition;
@@ -135,7 +135,7 @@ final class MusicDecoder extends IntrusiveNode {
         this.previousBlock = null;
         completedPcm = this.pcmBytes;
         this.pcmBytes = null;
-        return new gd(this.field_q, completedPcm, this.field_I, this.field_n, this.field_A);
+        return new PcmSample(this.field_q, completedPcm, this.field_I, this.field_n, this.field_A);
     }
 
     final static int readBit() {
@@ -224,7 +224,7 @@ final class MusicDecoder extends IntrusiveNode {
         }
     }
 
-    final gd decodePcm() {
+    final PcmSample decodePcm() {
         int var6 = 0;
         int incrementValue$0 = 0;
         byte[] var1;
@@ -241,7 +241,7 @@ final class MusicDecoder extends IntrusiveNode {
         L0: while (true) {
           if (var3 >= this.packets.length) {
             this.previousBlock = null;
-            return new gd(this.field_q, var1, this.field_I, this.field_n, this.field_A);
+            return new PcmSample(this.field_q, var1, this.field_I, this.field_n, this.field_A);
           } else {
             var4 = this.decodePacket(var3);
             if (var4 != null) {

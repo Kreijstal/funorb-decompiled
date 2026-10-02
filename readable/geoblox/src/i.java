@@ -15,43 +15,43 @@ final class i {
         }
     }
 
-    final static GameplayEntity a(byte param0) {
-        float var1_float = 0.0f;
+    final static GameplayEntity findOutermostAttachedEntity(byte methodGuard) {
+        float maxDistanceSquared = 0.0f;
         RuntimeException var1 = null;
-        Object var2 = null;
-        GameplayEntity var3 = null;
-        float var4 = 0.0f;
-        int var5 = 0;
+        Object farthestEntity = null;
+        GameplayEntity candidateEntity = null;
+        float candidateDistanceSquared = 0.0f;
+        int controlFlowGuard = 0;
         Object stackIn_11_0 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = Geoblox.field_C;
+        controlFlowGuard = Geoblox.field_C;
         try {
           L0: {
-            var1_float = 1.401298464324817e-45f;
-            var2 = null;
-            var3 = (GameplayEntity) ((Object) a.attachedEntities.lastForIteration(false));
-            if (param0 >= -127) {
+            maxDistanceSquared = 1.401298464324817e-45f;
+            farthestEntity = null;
+            candidateEntity = (GameplayEntity) ((Object) a.attachedEntities.lastForIteration(false));
+            if (methodGuard >= -127) {
               i.a(false);
             }
-            L2: while (null != var3) {
-              var4 = (-240.0f + var3.positionY) * (-240.0f + var3.positionY) + (-320.0f + var3.positionX) * (var3.positionX - 320.0f);
-              if (var1_float < var4) {
-                var1_float = var4;
-                var2 = var3;
+            L2: while (null != candidateEntity) {
+              candidateDistanceSquared = (-240.0f + candidateEntity.positionY) * (-240.0f + candidateEntity.positionY) + (-320.0f + candidateEntity.positionX) * (candidateEntity.positionX - 320.0f);
+              if (maxDistanceSquared < candidateDistanceSquared) {
+                maxDistanceSquared = candidateDistanceSquared;
+                farthestEntity = candidateEntity;
               }
-              var3 = (GameplayEntity) ((Object) a.attachedEntities.previousForIteration(0));
-              if (var5 == 0) {
+              candidateEntity = (GameplayEntity) ((Object) a.attachedEntities.previousForIteration(0));
+              if (controlFlowGuard == 0) {
                 continue L2;
               }
               break;
             }
-            stackIn_11_0 = var2;
+            stackIn_11_0 = farthestEntity;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1), "i.D(" + param0 + ')');
+          throw t.a((Throwable) ((Object) var1), "i.D(" + methodGuard + ')');
         }
         return (GameplayEntity) ((Object) stackIn_11_0);
     }

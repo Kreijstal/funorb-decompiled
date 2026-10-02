@@ -136,15 +136,15 @@ final class td extends hk {
         }
     }
 
-    final static void a(int param0, gd param1) {
+    final static void playPcmSample(int methodGuard, PcmSample sample) {
         try {
-            if (param0 != -348) {
-                gd var3 = (gd) null;
-                td.a(-67, (gd) null);
+            if (methodGuard != -348) {
+                PcmSample var3 = (PcmSample) null;
+                td.playPcmSample(-67, (PcmSample) null);
             }
-            GameplayEntity.registerAudioStream(false, PcmSampleStream.a(param1, 100, 96));
+            GameplayEntity.registerAudioStream(false, PcmSampleStream.createForPlaybackRate(sample, 100, 96));
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "td.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "td.G(" + methodGuard + ',' + (sample != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -156,7 +156,7 @@ final class td extends hk {
         int var5 = 0;
         int var6 = 0;
         int var8 = 0;
-        gd var9 = null;
+        PcmSample var9 = null;
         StringBuilder stackIn_9_0 = null;
         StringBuilder stackIn_17_0 = null;
         RuntimeException stackIn_20_0 = null;
@@ -173,8 +173,8 @@ final class td extends hk {
         try {
           L0: {
             if (param3 <= 23) {
-              var9 = (gd) null;
-              td.a(-80, (gd) null);
+              var9 = (PcmSample) null;
+              td.playPcmSample(-80, (PcmSample) null);
             }
             var4_int = param1.length();
             if (param2 >= 0) {

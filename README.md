@@ -11,9 +11,10 @@ over the obfuscated gamepacks by the pipeline in
 
 ## Readable GeoBlox export
 
-[`readable/geoblox/src`](readable/geoblox/src) contains GeoBlox pass 17 with
-926 reviewed naming rules for gameplay, tutorial flow, interface text,
-resource decoding, text validation and nine-slice sprite construction.
+[`readable/geoblox/src`](readable/geoblox/src) contains GeoBlox pass 18 with
+972 reviewed naming rules for gameplay, tutorial flow, interface text,
+resource decoding, text validation, nine-slice sprite construction, result
+selection and PCM samples.
 Confirmed names omit opaque suffixes; the dictionary
 preserves original identities. Both 303-file Java corpora compile and preserve
 all 154,109 recorded bindings and 388 override relationships. The raw
@@ -28,7 +29,8 @@ The [reproduction and update procedure](readable/README.md),
 from the pinned input and bundled tool. All original dispatcher methods now use
 structured control flow; see the [parallel-loop report](readable/PARALLEL-LOOP-READABILITY.md).
 The [border and validation report](readable/BORDER-VALIDATION-READABILITY.md)
-records the latest naming evidence. The [numeric-negation report](readable/NUMERIC-NEGATION-READABILITY.md)
+records pass 16 naming evidence. The [result-helper report](readable/RESULT-HELPER-READABILITY.md)
+records pass 18 names and native selector/PCM checks. The [numeric-negation report](readable/NUMERIC-NEGATION-READABILITY.md)
 records the corrected sprite pivots and native result-sequence comparison.
 Typed complement comparisons show direct conditions;
 see the [comparison report](readable/COMPARISON-READABILITY.md). Unknown

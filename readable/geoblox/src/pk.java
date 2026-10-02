@@ -94,7 +94,7 @@ final class pk extends qc {
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        gd var3 = null;
+        PcmSample var3 = null;
         int var4 = 0;
         try {
           L0: {

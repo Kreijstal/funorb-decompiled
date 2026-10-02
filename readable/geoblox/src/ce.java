@@ -103,7 +103,7 @@ final class ce extends AudioOutput {
 
         stackIn_12_2 = null;
 
-        stackIn_12_3 = (float)field_j;
+        stackIn_12_3 = (float)sampleRateHz;
 
         stackIn_12_4 = 16;
 
