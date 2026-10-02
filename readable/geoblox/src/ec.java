@@ -114,8 +114,8 @@ final class ec {
                       break L9;
                     }
                   }
-                  sortCursorThenFirstEntityId = (nk.packedMatchCandidates[candidateIndex] & 1072693248) >> -844054220;
-                  packedCandidateThenSecondEntityId = nk.packedMatchCandidates[candidateIndex] >> -1979164054 & 1023;
+                  sortCursorThenFirstEntityId = (nk.packedMatchCandidates[candidateIndex] & 1072693248) >> 20;
+                  packedCandidateThenSecondEntityId = nk.packedMatchCandidates[candidateIndex] >> 10 & 1023;
                   thirdEntityId = 1023 & nk.packedMatchCandidates[candidateIndex];
                   firstMatchedEntity = tl.entitiesById[sortCursorThenFirstEntityId];
                   secondMatchedEntity = tl.entitiesById[packedCandidateThenSecondEntityId];

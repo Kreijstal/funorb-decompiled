@@ -20,10 +20,10 @@ final class eh {
           var4 = param0 - 35;
           var5 = 256;
           if (75 > gb.field_f) {
-            var5 = (gb.field_f << -886977592) / 75;
+            var5 = (gb.field_f << 8) / 75;
           }
           if (gb.field_f > 200) {
-            var5 = (250 + -gb.field_f << 897136616) / 50;
+            var5 = (250 + -gb.field_f << 8) / 50;
           }
           Geoblox.setRasterTarget(1, ki.field_c);
           mh.b();
@@ -46,7 +46,7 @@ final class eh {
                           if (var6 < 20) {
                             var7 = var6 * 256 / 20;
                           }
-                          cl.field_b.d(15 + var3, var4 + 10, var5 * var7 >> -2101085112);
+                          cl.field_b.d(15 + var3, var4 + 10, var5 * var7 >> 8);
                         }
                         return;
                       } else {
@@ -58,7 +58,7 @@ final class eh {
                           if (var6 < 20) {
                             var7 = var6 * 256 / 20;
                           }
-                          cl.field_b.d(15 + var3, var4 + 10, var5 * var7 >> -2101085112);
+                          cl.field_b.d(15 + var3, var4 + 10, var5 * var7 >> 8);
                         }
                         return;
                       }
@@ -71,7 +71,7 @@ final class eh {
                         if (var6 < 20) {
                           var7 = var6 * 256 / 20;
                         }
-                        cl.field_b.d(15 + var3, var4 + 10, var5 * var7 >> -2101085112);
+                        cl.field_b.d(15 + var3, var4 + 10, var5 * var7 >> 8);
                       }
                       return;
                     }
@@ -82,7 +82,7 @@ final class eh {
                       if (var6 < 20) {
                         var7 = var6 * 256 / 20;
                       }
-                      cl.field_b.d(15 + var3, var4 + 10, var5 * var7 >> -2101085112);
+                      cl.field_b.d(15 + var3, var4 + 10, var5 * var7 >> 8);
                     }
                     return;
                   }
@@ -93,7 +93,7 @@ final class eh {
                     if (var6 < 20) {
                       var7 = var6 * 256 / 20;
                     }
-                    cl.field_b.d(15 + var3, var4 + 10, var5 * var7 >> -2101085112);
+                    cl.field_b.d(15 + var3, var4 + 10, var5 * var7 >> 8);
                   }
                   return;
                 }
@@ -120,7 +120,7 @@ final class eh {
                   if (var6 < 20) {
                     var7 = var6 * 256 / 20;
                   }
-                  cl.field_b.d(15 + var3, var4 + 10, var5 * var7 >> -2101085112);
+                  cl.field_b.d(15 + var3, var4 + 10, var5 * var7 >> 8);
                 }
                 return;
               }
@@ -139,7 +139,7 @@ final class eh {
                           if (var6 < 20) {
                             var7 = var6 * 256 / 20;
                           }
-                          cl.field_b.d(15 + var3, var4 + 10, var5 * var7 >> -2101085112);
+                          cl.field_b.d(15 + var3, var4 + 10, var5 * var7 >> 8);
                         }
                         return;
                       } else {
@@ -151,7 +151,7 @@ final class eh {
                           if (var6 < 20) {
                             var7 = var6 * 256 / 20;
                           }
-                          cl.field_b.d(15 + var3, var4 + 10, var5 * var7 >> -2101085112);
+                          cl.field_b.d(15 + var3, var4 + 10, var5 * var7 >> 8);
                         }
                         return;
                       }
@@ -164,7 +164,7 @@ final class eh {
                         if (var6 < 20) {
                           var7 = var6 * 256 / 20;
                         }
-                        cl.field_b.d(15 + var3, var4 + 10, var5 * var7 >> -2101085112);
+                        cl.field_b.d(15 + var3, var4 + 10, var5 * var7 >> 8);
                       }
                       return;
                     }
@@ -175,7 +175,7 @@ final class eh {
                       if (var6 < 20) {
                         var7 = var6 * 256 / 20;
                       }
-                      cl.field_b.d(15 + var3, var4 + 10, var5 * var7 >> -2101085112);
+                      cl.field_b.d(15 + var3, var4 + 10, var5 * var7 >> 8);
                     }
                     return;
                   }
@@ -186,7 +186,7 @@ final class eh {
                     if (var6 < 20) {
                       var7 = var6 * 256 / 20;
                     }
-                    cl.field_b.d(15 + var3, var4 + 10, var5 * var7 >> -2101085112);
+                    cl.field_b.d(15 + var3, var4 + 10, var5 * var7 >> 8);
                   }
                   return;
                 }
@@ -213,7 +213,7 @@ final class eh {
                   if (var6 < 20) {
                     var7 = var6 * 256 / 20;
                   }
-                  cl.field_b.d(15 + var3, var4 + 10, var5 * var7 >> -2101085112);
+                  cl.field_b.d(15 + var3, var4 + 10, var5 * var7 >> 8);
                 }
                 return;
               }
@@ -236,7 +236,7 @@ final class eh {
                   if (var6 < 20) {
                     var7 = var6 * 256 / 20;
                   }
-                  cl.field_b.d(15 + var3, var4 + 10, var5 * var7 >> -2101085112);
+                  cl.field_b.d(15 + var3, var4 + 10, var5 * var7 >> 8);
                 }
                 return;
               } else {
@@ -259,7 +259,7 @@ final class eh {
                   if (var6 < 20) {
                     var7 = var6 * 256 / 20;
                   }
-                  cl.field_b.d(15 + var3, var4 + 10, var5 * var7 >> -2101085112);
+                  cl.field_b.d(15 + var3, var4 + 10, var5 * var7 >> 8);
                 }
                 return;
               }
@@ -285,7 +285,7 @@ final class eh {
                 if (var6 < 20) {
                   var7 = var6 * 256 / 20;
                 }
-                cl.field_b.d(15 + var3, var4 + 10, var5 * var7 >> -2101085112);
+                cl.field_b.d(15 + var3, var4 + 10, var5 * var7 >> 8);
               }
               return;
             }

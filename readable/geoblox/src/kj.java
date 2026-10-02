@@ -132,12 +132,12 @@ final class kj extends ia {
           } else {
             var10 = param1.field_x;
             var11 = var10;
-            var4 = this.field_p[param1.field_t] * this.field_r[param1.field_t] - -4096 >> -695306195;
-            var4 = var4 * var4 + 16384 >> -130426065;
+            var4 = this.field_p[param1.field_t] * this.field_r[param1.field_t] - -4096 >> 13;
+            var4 = var4 * var4 + 16384 >> 15;
             var5 = -83 % ((param0 - 44) / 55);
-            var4 = 16384 + var4 * param1.field_w >> 441298735;
-            var4 = 128 + var4 * this.field_R >> -1986953208;
-            var4 = var4 * this.field_L[param1.field_t] - -128 >> -614748792;
+            var4 = 16384 + var4 * param1.field_w >> 15;
+            var4 = 128 + var4 * this.field_R >> 8;
+            var4 = var4 * this.field_L[param1.field_t] - -128 >> 8;
             if (var11.field_c > 0) {
               var4 = (int)(0.5 + Math.pow(0.5, 0.00001953125 * (double)param1.field_l * (double)var11.field_c) * (double)var4);
             }
@@ -145,22 +145,22 @@ final class kj extends ia {
               var6 = param1.field_o;
               var7 = var11.field_f[1 + param1.field_k];
               if (param1.field_k < var11.field_f.length + -2) {
-                var8 = (var10.field_f[param1.field_k] & 255) << 177519176;
-                var9 = (255 & var11.field_f[param1.field_k + 2]) << -2130725304;
+                var8 = (var10.field_f[param1.field_k] & 255) << 8;
+                var9 = (255 & var11.field_f[param1.field_k + 2]) << 8;
                 var7 = var7 + (var11.field_f[param1.field_k + 3] + -var7) * (-var8 + var6) / (var9 - var8);
               }
-              var4 = var4 * var7 + 32 >> -1943382906;
+              var4 = var4 * var7 + 32 >> 6;
             }
             if (param1.field_y > 0) {
               if (var11.field_e != null) {
                 var6 = param1.field_y;
                 var7 = var11.field_e[1 + param1.field_q];
                 if (-2 + var11.field_e.length > param1.field_q) {
-                  var8 = var10.field_e[param1.field_q] << 1159547464 & 65280;
-                  var9 = var11.field_e[param1.field_q - -2] << -1788850680 & 65280;
+                  var8 = var10.field_e[param1.field_q] << 8 & 65280;
+                  var9 = var11.field_e[param1.field_q - -2] << 8 & 65280;
                   var7 = var7 + (var11.field_e[param1.field_q - -3] - var7) * (-var8 + var6) / (-var8 + var9);
                 }
-                var4 = var7 * var4 - -32 >> 303901990;
+                var4 = var7 * var4 - -32 >> 6;
               }
             }
             stackIn_19_0 = var4;
@@ -209,8 +209,8 @@ final class kj extends ia {
         double var7 = 0.0;
         try {
           L1: {
-            var3_int = (param1.field_n * param1.field_s >> -477379188) + param1.field_E;
-            var3_int = var3_int + ((-8192 + this.field_y[param1.field_t]) * this.field_v[param1.field_t] >> -29494548);
+            var3_int = (param1.field_n * param1.field_s >> 12) + param1.field_E;
+            var3_int = var3_int + ((-8192 + this.field_y[param1.field_t]) * this.field_v[param1.field_t] >> 12);
             var4 = param1.field_x;
             if (0 < var4.field_d) {
               if (var4.field_b <= 0) {
@@ -218,12 +218,12 @@ final class kj extends ia {
                   break L1;
                 }
               }
-              var5 = var4.field_b << -992851838;
-              var6 = var4.field_j << 1077980513;
+              var5 = var4.field_b << 2;
+              var6 = var4.field_j << 1;
               if (var6 > param1.field_j) {
                 var5 = var5 * param1.field_j / var6;
               }
-              var5 = var5 + (this.field_s[param1.field_t] >> 853866887);
+              var5 = var5 + (this.field_s[param1.field_t] >> 7);
               var7 = Math.sin(0.01227184630308513 * (double)(param1.field_m & 511));
               var3_int = var3_int + (int)(var7 * (double)var5);
             }
@@ -348,7 +348,7 @@ final class kj extends ia {
             param3.field_m = param3.field_m + var7.field_d;
             param3.field_j = param3.field_j + 1;
             var8 = param4 ? 1 : 0;
-            var9 = 0.000005086263020833333 * (double)((-60 + param3.field_D << 1562719368) - -(param3.field_n * param3.field_s >> 2038513900));
+            var9 = 0.000005086263020833333 * (double)((-60 + param3.field_D << 8) - -(param3.field_n * param3.field_s >> 12));
             if (var7.field_c > 0) {
               if (var7.field_h > 0) {
                 param3.field_l = param3.field_l + (int)(128.0 * Math.pow(2.0, (double)var7.field_h * var9) + 0.5);
@@ -367,7 +367,7 @@ final class kj extends ia {
                   param3.field_o = param3.field_o + 128;
                 }
                 L10: while (param3.field_k < -2 + var7.field_f.length) {
-                  if ((65280 & var7.field_f[param3.field_k - -2] << -446732824) < param3.field_o) {
+                  if ((65280 & var7.field_f[param3.field_k - -2] << 8) < param3.field_o) {
                     param3.field_k = param3.field_k + 2;
                     continue L10;
                   }
@@ -400,7 +400,7 @@ final class kj extends ia {
                       param3.field_y = param3.field_y + 128;
                     }
                     L15: while (-2 + var7.field_e.length > param3.field_q) {
-                      if (param3.field_y > (var7.field_e[param3.field_q - -2] & 255) << -356282872) {
+                      if (param3.field_y > (var7.field_e[param3.field_q - -2] & 255) << 8) {
                         param3.field_q = param3.field_q + 2;
                         continue L15;
                       }
@@ -658,10 +658,10 @@ final class kj extends ia {
             discarded$1 = this.a((pc) null, 124);
           }
           if (var3_int < 8192) {
-            stackIn_6_0 = var3_int * param0.field_h + 32 >> 761736646;
+            stackIn_6_0 = var3_int * param0.field_h + 32 >> 6;
             decompiledRegionSelector0 = 1;
           } else {
-            stackIn_4_0 = 16384 - (32 + (128 + -param0.field_h) * (16384 - var3_int) >> -1408535450);
+            stackIn_4_0 = 16384 - (32 + (128 + -param0.field_h) * (16384 - var3_int) >> 6);
             decompiledRegionSelector0 = 0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -710,7 +710,7 @@ final class kj extends ia {
               if (param0.field_i.pingPongLoop) {
                 var6 = -param0.field_i.loopStart + var4_int - -var4_int;
                 var4_int = var4_int << 8;
-                var5 = (int)((long)var6 * (long)this.field_u[param0.field_t] >> 323136070);
+                var5 = (int)((long)var6 * (long)this.field_u[param0.field_t] >> 6);
                 if (var4_int <= var5) {
                   param0.field_u.b(true);
                   var5 = -var5 + (var4_int - -var4_int) + -1;
@@ -720,7 +720,7 @@ final class kj extends ia {
                 }
               }
             }
-            var5 = (int)((long)var4_int * (long)this.field_u[param0.field_t] >> -2116060090);
+            var5 = (int)((long)var4_int * (long)this.field_u[param0.field_t] >> 6);
           }
           param0.field_u.e(var5);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -770,55 +770,55 @@ final class kj extends ia {
           var3 = 240 & param0;
           if (var3 == 128) {
             var4 = param0 & 15;
-            var5 = (32542 & param0) >> 66514504;
-            var6 = (param0 & 8361066) >> 313387600;
+            var5 = (32542 & param0) >> 8;
+            var6 = (param0 & 8361066) >> 16;
             this.b(23327, var5, var6, var4);
             return;
           } else {
             if (var3 != 144) {
               if (var3 == 160) {
                 var4 = 15 & param0;
-                var5 = param0 >> -735367864 & 127;
-                var6 = (8370933 & param0) >> -1699537200;
+                var5 = param0 >> 8 & 127;
+                var6 = (8370933 & param0) >> 16;
                 this.a(-40, var6, var5, var4);
                 return;
               } else {
                 if (var3 == 176) {
                   var4 = 15 & param0;
-                  var5 = (param0 & 32577) >> -625065720;
-                  var6 = param0 >> 76053008 & 127;
+                  var5 = (param0 & 32577) >> 8;
+                  var6 = param0 >> 16 & 127;
                   if (0 == var5) {
-                    this.field_K[var4] = (var6 << -224081554) + cd.a(this.field_K[var4], -2080769);
+                    this.field_K[var4] = (var6 << 14) + cd.a(this.field_K[var4], -2080769);
                   }
                   if (var5 == 32) {
-                    this.field_K[var4] = (var6 << -1083731353) + cd.a(this.field_K[var4], -16257);
+                    this.field_K[var4] = (var6 << 7) + cd.a(this.field_K[var4], -16257);
                   }
                   if (var5 == 1) {
-                    this.field_s[var4] = (var6 << -906576345) + cd.a(this.field_s[var4], -16257);
+                    this.field_s[var4] = (var6 << 7) + cd.a(this.field_s[var4], -16257);
                   }
                   if (33 == var5) {
                     this.field_s[var4] = var6 + cd.a(-128, this.field_s[var4]);
                   }
                   if (var5 == 5) {
-                    this.field_M[var4] = cd.a(-16257, this.field_M[var4]) - -(var6 << -1537306265);
+                    this.field_M[var4] = cd.a(-16257, this.field_M[var4]) - -(var6 << 7);
                   }
                   if (var5 == 37) {
                     this.field_M[var4] = cd.a(-128, this.field_M[var4]) - -var6;
                   }
                   if (var5 == 7) {
-                    this.field_p[var4] = cd.a(this.field_p[var4], -16257) + (var6 << -1305516857);
+                    this.field_p[var4] = cd.a(this.field_p[var4], -16257) + (var6 << 7);
                   }
                   if (var5 == 39) {
                     this.field_p[var4] = cd.a(-128, this.field_p[var4]) + var6;
                   }
                   if (var5 == 10) {
-                    this.field_z[var4] = cd.a(-16257, this.field_z[var4]) - -(var6 << -1078103033);
+                    this.field_z[var4] = cd.a(-16257, this.field_z[var4]) - -(var6 << 7);
                   }
                   if (var5 == 42) {
                     this.field_z[var4] = var6 + cd.a(-128, this.field_z[var4]);
                   }
                   if (var5 == 11) {
-                    this.field_r[var4] = (var6 << -757285145) + cd.a(-16257, this.field_r[var4]);
+                    this.field_r[var4] = (var6 << 7) + cd.a(-16257, this.field_r[var4]);
                   }
                   if (var5 == 43) {
                     this.field_r[var4] = cd.a(-128, this.field_r[var4]) - -var6;
@@ -839,13 +839,13 @@ final class kj extends ia {
                     }
                   }
                   if (var5 == 99) {
-                    this.field_w[var4] = cd.a(this.field_w[var4], 127) - -(var6 << 183494855);
+                    this.field_w[var4] = cd.a(this.field_w[var4], 127) - -(var6 << 7);
                   }
                   if (var5 == 98) {
                     this.field_w[var4] = var6 + cd.a(16256, this.field_w[var4]);
                   }
                   if (101 == var5) {
-                    this.field_w[var4] = (var6 << 50131079) + (cd.a(this.field_w[var4], 127) + 16384);
+                    this.field_w[var4] = (var6 << 7) + (cd.a(this.field_w[var4], 127) + 16384);
                   }
                   if (var5 == 100) {
                     this.field_w[var4] = 16384 + (cd.a(16256, this.field_w[var4]) + var6);
@@ -862,7 +862,7 @@ final class kj extends ia {
                   if (var5 == 6) {
                     var7 = this.field_w[var4];
                     if (16384 == var7) {
-                      this.field_v[var4] = cd.a(this.field_v[var4], -16257) + (var6 << 256590087);
+                      this.field_v[var4] = cd.a(this.field_v[var4], -16257) + (var6 << 7);
                     }
                   }
                   if (var5 == 38) {
@@ -872,7 +872,7 @@ final class kj extends ia {
                     }
                   }
                   if (16 == var5) {
-                    this.field_u[var4] = cd.a(-16257, this.field_u[var4]) - -(var6 << 517249927);
+                    this.field_u[var4] = cd.a(-16257, this.field_u[var4]) - -(var6 << 7);
                   }
                   if (48 == var5) {
                     this.field_u[var4] = var6 + cd.a(this.field_u[var4], -128);
@@ -886,7 +886,7 @@ final class kj extends ia {
                     }
                   }
                   if (var5 == 17) {
-                    this.f(-118, (var6 << 446536935) + (this.field_Q[var4] & -16257), var4);
+                    this.f(-118, (var6 << 7) + (this.field_Q[var4] & -16257), var4);
                   }
                   if (var5 == 49) {
                     this.f(-102, (-128 & this.field_Q[var4]) + var6, var4);
@@ -895,14 +895,14 @@ final class kj extends ia {
                 } else {
                   if (192 == var3) {
                     var4 = param0 & 15;
-                    var5 = (32632 & param0) >> 798658216;
+                    var5 = (32632 & param0) >> 8;
                     this.b(var4, param1 + -167, var5 + this.field_K[var4]);
                     return;
                   } else {
                     if (var3 != 208) {
                       if (var3 == 224) {
                         var4 = param0 & 15;
-                        var5 = (param0 >> 1201189897 & 16256) - -((32673 & param0) >> -501468376);
+                        var5 = (param0 >> 9 & 16256) - -((32673 & param0) >> 8);
                         this.c(-108, var5, var4);
                         return;
                       } else {
@@ -916,7 +916,7 @@ final class kj extends ia {
                       }
                     } else {
                       var4 = param0 & 15;
-                      var5 = (32669 & param0) >> 1322657192;
+                      var5 = (32669 & param0) >> 8;
                       this.d(var5, param1 ^ -2858, var4);
                       return;
                     }
@@ -925,8 +925,8 @@ final class kj extends ia {
               }
             } else {
               var4 = param0 & 15;
-              var5 = (32525 & param0) >> -1496842808;
-              var6 = 127 & param0 >> -364929040;
+              var5 = (32525 & param0) >> 8;
+              var6 = 127 & param0 >> 16;
               if (var6 > 0) {
                 this.c(-1, var4, var6, var5);
               } else {
@@ -1306,8 +1306,8 @@ final class kj extends ia {
                 if (var5.field_y < 0) {
                   this.field_j[param1][var5.field_D] = null;
                   this.field_j[param1][param3] = var5;
-                  var6_int = (var5.field_n * var5.field_s >> 269293324) + var5.field_E;
-                  var5.field_E = var5.field_E + (param3 + -var5.field_D << 431120968);
+                  var6_int = (var5.field_n * var5.field_s >> 12) + var5.field_E;
+                  var5.field_E = var5.field_E + (param3 + -var5.field_D << 8);
                   var5.field_D = param3;
                   var5.field_n = var6_int + -var5.field_E;
                   var5.field_s = 4096;
@@ -1331,9 +1331,9 @@ final class kj extends ia {
             var7.field_x = var9.field_f[param3];
             var7.field_r = var9.field_i[param3];
             var7.field_D = param3;
-            var7.field_w = var9.field_o[param3] * var10.field_g * (param2 * param2) - -1024 >> 631565163;
+            var7.field_w = var9.field_o[param3] * var10.field_g * (param2 * param2) - -1024 >> 11;
             var7.field_h = 255 & var9.field_m[param3];
-            var7.field_E = (param3 << -298352696) - (var9.field_j[param3] & 32767);
+            var7.field_E = (param3 << 8) - (var9.field_j[param3] & 32767);
             var7.field_q = 0;
             var7.field_l = 0;
             var7.field_o = 0;

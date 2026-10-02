@@ -171,7 +171,7 @@ final class kk extends ji {
                                 }
                                 L19: {
                                   var11 = stackIn_49_0;
-                                  var12 = (long)var7 + ((long)var6 << -559325984);
+                                  var12 = (long)var7 + ((long)var6 << 32);
                                   var14 = null;
                                   if (var11 != 0) {
                                     var14_ref = (sd) ((Object) this.field_c.firstForIteration((byte) 121));

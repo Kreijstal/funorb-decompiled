@@ -23,7 +23,7 @@ abstract class ib implements dg {
                 int[] var5 = var9;
                 var6 = param2;
                 var7 = param3;
-                var9[var6] = var7 + cd.a(var9[var6] >> -453107103, 8355711);
+                var9[var6] = var7 + cd.a(var9[var6] >> 1, 8355711);
                 param2++;
             }
             int var5_int = -30 % ((-2 - param0) / 40);

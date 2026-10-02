@@ -53,7 +53,7 @@ abstract class qf extends oe {
                 this.field_W.field_D = 0;
                 return super.f(-1);
             }
-            this.field_W.field_D = 256 + -((this.field_X << 59778408) / this.field_fb);
+            this.field_W.field_D = 256 + -((this.field_X << 8) / this.field_fb);
             return super.f(-1);
         }
         if (qb.field_N != this.field_Z) {
@@ -66,7 +66,7 @@ abstract class qf extends oe {
             this.field_W.field_D = 256;
             return super.f(-1);
         }
-        this.field_W.field_D = (this.field_X << -681491416) / this.field_cb;
+        this.field_W.field_D = (this.field_X << 8) / this.field_cb;
         return super.f(-1);
     }
 

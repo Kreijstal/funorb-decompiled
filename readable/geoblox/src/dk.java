@@ -118,7 +118,7 @@ abstract class dk {
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackIn_13_0 = param2 - param1 << -125164472;
+              stackIn_13_0 = param2 - param1 << 8;
               stackIn_13_1 = var5_int;
               stackIn_14_0 = stackIn_13_0 / stackIn_13_1;
               decompiledRegionSelector0 = 0;

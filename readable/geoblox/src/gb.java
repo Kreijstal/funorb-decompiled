@@ -40,10 +40,10 @@ final class gb {
                 }
                 var1_float = -((480.0f - (float)MatchingTextValidator.field_j) / 480.0f) + 1.0f;
                 if (11 > vc.field_h) {
-                  si.field_j = ((int)(var1_float * MenuScreen.field_c) << -231506296) + (uf.avatarTintPalette[0] + ((int)(var1_float * lk.field_b) << -265857872)) - -(int)(kk.field_x * var1_float);
+                  si.field_j = ((int)(var1_float * MenuScreen.field_c) << 8) + (uf.avatarTintPalette[0] + ((int)(var1_float * lk.field_b) << 16)) - -(int)(kk.field_x * var1_float);
                 }
-                var2 = tl.field_r[vc.field_h].field_s >> -757524927;
-                var3 = MatchingTextValidator.field_j << -597797246;
+                var2 = tl.field_r[vc.field_h].field_s >> 1;
+                var3 = MatchingTextValidator.field_j << 2;
                 if (!sg.field_d) {
                   if (-var3 + 900 <= 320 + var2) {
                     td.playPcmSample(-348, fl.field_c[7]);

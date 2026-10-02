@@ -492,9 +492,9 @@ final class GameplaySession {
           }
           jf.field_a.e();
           SoftwareRasterizer.c();
-          ec.field_c.rotateNearest(ec.field_c.field_s << 1679206499, ec.field_c.field_o << 919227299, jf.field_a.field_s << -122785245, jf.field_a.field_o << 1137750627, (int)(65535.0 * ((double)(-this.boardAngleRadians) / 6.283185307179586)), 4096);
+          ec.field_c.rotateNearest(ec.field_c.field_s << 3, ec.field_c.field_o << 3, jf.field_a.field_s << 3, jf.field_a.field_o << 3, (int)(65535.0 * ((double)(-this.boardAngleRadians) / 6.283185307179586)), 4096);
           sh.field_y.a(255);
-          w.a(jf.field_a, -(jf.field_a.field_s >> -199505663) + 320, -(jf.field_a.field_o >> -1092517823) + 240);
+          w.a(jf.field_a, -(jf.field_a.field_s >> 1) + 320, -(jf.field_a.field_o >> 1) + 240);
           if (!this.debugReducedRendering) {
             uh.d(4740);
           }
@@ -528,7 +528,7 @@ final class GameplaySession {
                       if (entityOpacity > 255) {
                         entityOpacity = 255;
                       }
-                      SoftwareRasterizer.d(renderedEntityX / 2, renderedEntityY / 2, var6, entityOpacity << 269082696 | entityOpacity << -327781456 | entityOpacity);
+                      SoftwareRasterizer.d(renderedEntityX / 2, renderedEntityY / 2, var6, entityOpacity << 8 | entityOpacity << 16 | entityOpacity);
                       renderedEntity = (GameplayEntity) ((Object) var15.previousForIteration(0));
                       if (var14 == 0) {
                         continue L31;
@@ -630,7 +630,7 @@ final class GameplaySession {
           L48: {
             if (!this.tutorialMode) {
               if (this.delayedActionCountdown > 0) {
-                lj.field_d.b(-(lj.field_d.field_s >> -1133369407) + 320, 60 + -(lj.field_d.field_o >> -2072717343) + 240);
+                lj.field_d.b(-(lj.field_d.field_s >> 1) + 320, 60 + -(lj.field_d.field_o >> 1) + 240);
                 dd.field_G.b(wl.field_b, 320, 310, 0, -1);
               }
               eg.field_q[this.pointsPanelFrameIndex].b(this.pointsPanelX, 4);
@@ -649,7 +649,7 @@ final class GameplaySession {
                 if (this.field_L) {
                   lj.field_d.b(var3, var4);
                   if (this.sceneAnimationTick < 266) {
-                    kh.field_h[6].b(0, (this.sceneAnimationTick >> 1707498369) + -113);
+                    kh.field_h[6].b(0, (this.sceneAnimationTick >> 1) + -113);
                     if (var14 == 0) {
                       break L53;
                     }
@@ -899,7 +899,7 @@ final class GameplaySession {
                 L25: {
                   var4_int = (kd.field_c + he.field_d + qa.field_a - -ki.field_d) % 5;
                   if (0 == var4_int) {
-                    dc.field_a = dc.field_a | lb.field_b + el.field_g << -751962927;
+                    dc.field_a = dc.field_a | lb.field_b + el.field_g << 17;
                     if (var5 == 0) {
                       break L25;
                     }
@@ -1034,7 +1034,7 @@ final class GameplaySession {
                       break L30;
                     }
                   }
-                  dc.field_a = dc.field_a | el.field_g + lb.field_b << -982889103;
+                  dc.field_a = dc.field_a | el.field_g + lb.field_b << 17;
                 }
               }
               L44: {
@@ -1804,8 +1804,8 @@ final class GameplaySession {
         }
         L1: {
           if (2 == this.sessionPhase) {
-            pk.field_k.b(320 + -(this.sceneAnimationTick >> 883830849), 240 + -(this.sceneAnimationTick >> -1807064447), this.sceneAnimationTick, this.sceneAnimationTick, 150);
-            lj.field_d.b(this.resultPanelX, -(lj.field_d.field_o >> -129235807) + 240 - -60);
+            pk.field_k.b(320 + -(this.sceneAnimationTick >> 1), 240 + -(this.sceneAnimationTick >> 1), this.sceneAnimationTick, this.sceneAnimationTick, 150);
+            lj.field_d.b(this.resultPanelX, -(lj.field_d.field_o >> 1) + 240 - -60);
             dd.field_G.a(sg.field_f, 15 + this.resultPanelX, 312, 0, -1);
             if (var4 == 0) {
               break L1;
@@ -1813,8 +1813,8 @@ final class GameplaySession {
           }
           shrinkingDiameter = -this.sceneAnimationTick + 460 + 460;
           if (this.sessionPhase == 3) {
-            pk.field_k.b(-(shrinkingDiameter >> 1946680609) + 320, 240 - (shrinkingDiameter >> -835172863), shrinkingDiameter, shrinkingDiameter, 150);
-            lj.field_d.b(-(lj.field_d.field_s >> -1714325343) + 320, -(lj.field_d.field_o >> -174520511) + 240 + 60);
+            pk.field_k.b(-(shrinkingDiameter >> 1) + 320, 240 - (shrinkingDiameter >> 1), shrinkingDiameter, shrinkingDiameter, 150);
+            lj.field_d.b(-(lj.field_d.field_s >> 1) + 320, -(lj.field_d.field_o >> 1) + 240 + 60);
             shrinkingBonusText = Integer.toString(this.resultBonusPoints);
             dd.field_G.b(shrinkingBonusText, 320, 312, 0, -1);
             if (this.boardEmptyAtResultStart) {
@@ -1824,8 +1824,8 @@ final class GameplaySession {
               break L1;
             }
           }
-          k.field_a.d(-(k.field_a.field_s >> 2015782145) + 320, 240 - (k.field_a.field_o >> 738361857), this.resultSequenceCountdown - 150 + 150);
-          lj.field_d.b(-(lj.field_d.field_s >> 1731342273) + 320, 300 + -(lj.field_d.field_o >> -1256391423));
+          k.field_a.d(-(k.field_a.field_s >> 1) + 320, 240 - (k.field_a.field_o >> 1), this.resultSequenceCountdown - 150 + 150);
+          lj.field_d.b(-(lj.field_d.field_s >> 1) + 320, 300 + -(lj.field_d.field_o >> 1));
           countdownBonusText = Integer.toString(this.resultBonusPoints);
           dd.field_G.b(countdownBonusText, 320, 312, 0, -1);
           if (this.boardEmptyAtResultStart) {
@@ -1869,11 +1869,11 @@ final class GameplaySession {
                 }
                 vf.spriteScratchRaster.e();
                 SoftwareRasterizer.c();
-                endingEntity.entitySprite.rotateSmooth(endingEntity.entitySprite.field_s << -907967581, endingEntity.entitySprite.field_o << -2077405885, vf.spriteScratchRaster.field_s << -1078669405, vf.spriteScratchRaster.field_o << -1697489437, (int)(65535.0 * ((double)endingEntity.spriteAngleRadians / 6.283185307179586)), 4096);
+                endingEntity.entitySprite.rotateSmooth(endingEntity.entitySprite.field_s << 3, endingEntity.entitySprite.field_o << 3, vf.spriteScratchRaster.field_s << 3, vf.spriteScratchRaster.field_o << 3, (int)(65535.0 * ((double)endingEntity.spriteAngleRadians / 6.283185307179586)), 4096);
                 sh.field_y.a(255);
                 maxRadiusSquared = 0;
-                spriteOffsetFromCenterX = (int)(endingEntity.positionX + 0.5f) + (-(vf.spriteScratchRaster.width >> 585464481) + -320);
-                spriteOffsetFromCenterY = -240 + ((int)(endingEntity.positionY + 0.5f) + -(vf.spriteScratchRaster.height >> -846006463));
+                spriteOffsetFromCenterX = (int)(endingEntity.positionX + 0.5f) + (-(vf.spriteScratchRaster.width >> 1) + -320);
+                spriteOffsetFromCenterY = -240 + ((int)(endingEntity.positionY + 0.5f) + -(vf.spriteScratchRaster.height >> 1));
                 spriteColumn = 0;
                 L4: while (true) {
                   stackIn_11_0 = spriteColumn;
@@ -1977,7 +1977,7 @@ final class GameplaySession {
               this.resultExpansionAudioStream = PcmSampleStream.createForPlaybackRate(fl.field_c[28], 2 * resultProgressPercent - -200, 45);
               GameplayEntity.registerAudioStream(false, this.resultExpansionAudioStream);
             }
-            if (this.resultPanelX <= 320 + -(lj.field_d.field_s >> -1578896191)) {
+            if (this.resultPanelX <= 320 + -(lj.field_d.field_s >> 1)) {
               break L10;
             } else {
               this.resultPanelX = this.resultPanelX - 1;
@@ -2225,11 +2225,11 @@ final class GameplaySession {
           ug.field_c = 0;
           pb.pendingActionMarkers.clearNodes((byte) -126);
           this.pendingPopupPoints = 0;
-          this.boardMaskOffsetX = -(i.avatarMaskRaster.width >> -724246015);
+          this.boardMaskOffsetX = -(i.avatarMaskRaster.width >> 1);
           this.tutorialMode = param1;
           this.tutorialPromptActive = param1;
           this.score = 0;
-          this.boardMaskOffsetY = -(i.avatarMaskRaster.height >> 30070753);
+          this.boardMaskOffsetY = -(i.avatarMaskRaster.height >> 1);
           this.boardAngleRadians = 0.0f;
           bk.boardOwnershipRaster.e();
           SoftwareRasterizer.c();

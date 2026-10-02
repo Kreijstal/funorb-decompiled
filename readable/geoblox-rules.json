@@ -4,10 +4,10 @@
   "purpose": "Offline readable source mirror; not a runtime patch",
   "source": {
     "repository": "Kreijstal/funorb-decompiled",
-    "commit": "7d0e06122fc537ee96a9f56e633ac5356ba325d8",
+    "commit": "5123c321465e71a2b785cfeda64269ea11a376c6",
     "subdirectory": "games/geoblox"
   },
-  "inputTreeSha256": "07610c2d655bf96e59584f07be867c62e47cf3b3c484063504d9958443e89da2",
+  "inputTreeSha256": "a9aaa3dfa046673a2b4e87a360d714692e53c393ca7263efd4a630c6f2e16a8e",
   "namingPolicy": "Confirmed semantic names without opaque suffixes; unknown symbols stay unchanged. Original spellings and JVM identities remain in the reverse symbol map. Every rule guards the original spelling. Local identities also use declaration ordinals; reused variables retain all supported roles. Numeric screen/action IDs and decompiler state remain unchanged.",
   "renames": [
     {
@@ -6888,18 +6888,18 @@
     }
   ],
   "revision": 4,
-  "version": 26,
+  "version": 27,
   "generators": {
     "dekoblokoWork": {
       "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "e6dd72c89fa7f51cc34cd78d08cf5c6227799126",
+      "commit": "d60879b1d9a3286dd2102782e13dffb0ae5c0c5e",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "6337fa96b5d83ef24ee2bf20c7e48ea5e0844482f6262e774d73fba6101d4912",
-        "reproduce": "git archive --format=tar e6dd72c89fa7f51cc34cd78d08cf5c6227799126 | sha256sum",
+        "sha256": "5234c2b6ae7447c2bbdae83f46f0b689fd5cfe9b199ebd77dafdd0f3cf0bfd1e",
+        "reproduce": "git archive --format=tar d60879b1d9a3286dd2102782e13dffb0ae5c0c5e | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
@@ -6908,307 +6908,16 @@
   "publication": {
     "format": 1,
     "previousRules": {
-      "commit": "3dde34df66ac340aec004a75ebc691129f39bdf9",
+      "commit": "80ed445be97b553df79efb04d773a7ed7c7a4b02",
       "path": "readable/geoblox-rules.json",
-      "sha256": "5e9ca8ebeb936cfa0f1538cd513bc7a6cdc31701d3575c34f9ae468061674c5c"
+      "sha256": "288d4cbd90442c4e330754cf8f3341e0e5044e4accdc70eff6b7bb0e3159653b"
     },
-    "ruleChanges": [
-      {
-        "symbol": "F:af.field_c:I",
-        "before": null,
-        "after": {
-          "symbol": "F:af.field_c:I",
-          "originalName": "field_c",
-          "to": "avatarFrameStepTicks",
-          "evidence": "Post-decremented each avatar update; a negative old value steps the frame and resets this to 20. Native menu/gameplay frame matrix covers -2, -1, 0, 1 and 20."
-        }
-      },
-      {
-        "symbol": "F:fe.field_c:F",
-        "before": null,
-        "after": {
-          "symbol": "F:fe.field_c:F",
-          "originalName": "field_c",
-          "to": "avatarTintGreenDelta",
-          "evidence": "Difference between target palette and current tint green channels; avatar updates multiply it by the float fade factor, narrow to int and shift by 8. Native tests retain fractional and negative channel arithmetic."
-        }
-      },
-      {
-        "symbol": "F:gi.field_e:I",
-        "before": null,
-        "after": {
-          "symbol": "F:gi.field_e:I",
-          "originalName": "field_e",
-          "to": "avatarBlinkClockTicks",
-          "evidence": "Incremented each avatar update; Java remainder below 30 resets the feedback frame to its base. Menu period is 600; gameplay receives 600 from gh. Native boundary and 720-tick sequence oracles verify the blink window."
-        }
-      },
-      {
-        "symbol": "F:ha.field_g:I",
-        "before": null,
-        "after": {
-          "symbol": "F:ha.field_g:I",
-          "originalName": "field_g",
-          "to": "avatarShockFrameIndex",
-          "evidence": "Indexes vg.field_f in ij avatar drawing. A positive old shock timer updates this from the decremented timer modulo 15 then modulo 2; expiration preserves the prior index."
-        }
-      },
-      {
-        "symbol": "F:jf.field_j:I",
-        "before": null,
-        "after": {
-          "symbol": "F:jf.field_j:I",
-          "originalName": "field_j",
-          "to": "avatarTintFadeTicks",
-          "evidence": "A nonpositive value permits wc.a(FB)V to start a 50-tick tint fade. Both avatar updates always decrement it, but calculate tint only when the old value was positive; native request and expiration matrices verify this."
-        }
-      },
-      {
-        "symbol": "F:jk.field_d:I",
-        "before": null,
-        "after": {
-          "symbol": "F:jk.field_d:I",
-          "originalName": "field_d",
-          "to": "avatarSteeringDirectionId",
-          "evidence": "Value 0 approaches frame offset 3, 1 approaches 1 from above, and 2 approaches 5 from below. jj selects neutral, me.a(B)V selects 1 and wd.a(B)V selects 2. Native frame matrix also preserves behavior for other direction IDs."
-        }
-      },
-      {
-        "symbol": "F:md.field_b:F",
-        "before": null,
-        "after": {
-          "symbol": "F:md.field_b:F",
-          "originalName": "field_b",
-          "to": "avatarTintRedDelta",
-          "evidence": "Difference between target palette and current tint red channels, computed by wc.a(FB)V; avatar updates multiply it by the fade factor and shift the truncated value by 16. Native request and tint arithmetic oracles verify it."
-        }
-      },
-      {
-        "symbol": "F:r.field_ub:I",
-        "before": null,
-        "after": {
-          "symbol": "F:r.field_ub:I",
-          "originalName": "field_ub",
-          "to": "avatarTintStartColor",
-          "evidence": "wc.a(FB)V copies the current avatar tint before its division guard and palette lookup. Native failure fixtures preserve this partial write; the animation fade adds channel deltas to this packed color."
-        }
-      },
-      {
-        "symbol": "F:rj.field_c:I",
-        "before": null,
-        "after": {
-          "symbol": "F:rj.field_c:I",
-          "originalName": "field_c",
-          "to": "avatarTintColor",
-          "evidence": "Packed color passed to both fc avatar frames and vh feedback overlays in ij and ri. Native animation oracles verify it stays unchanged after fade expiration and retains original int narrowing and addition."
-        }
-      },
-      {
-        "symbol": "F:uf.field_h:[I",
-        "before": null,
-        "after": {
-          "symbol": "F:uf.field_h:[I",
-          "originalName": "field_h",
-          "to": "avatarTintPalette",
-          "evidence": "Five packed tint targets selected by rounded maximum attached squared radius divided by 52900. Native request fixtures verify target channel differences, held-request bypass and out-of-range failures without clamping."
-        }
-      },
-      {
-        "symbol": "F:uk.field_j:F",
-        "before": null,
-        "after": {
-          "symbol": "F:uk.field_j:F",
-          "originalName": "field_j",
-          "to": "avatarTintBlueDelta",
-          "evidence": "Difference between target palette and current tint blue channels; added without a shift after float multiplication and int narrowing. Native request and tint update oracles verify it."
-        }
-      },
-      {
-        "symbol": "L:f.o(I)V#38",
-        "before": null,
-        "after": {
-          "symbol": "L:f.o(I)V#38",
-          "originalName": "var1",
-          "to": "avatarTintFadeFactor",
-          "evidence": "Gameplay counterpart of the menu float tint factor; native menu/gameplay traces and independent packed color oracles agree during held and expired fades."
-        }
-      },
-      {
-        "symbol": "L:f.o(I)V#39",
-        "before": null,
-        "after": {
-          "symbol": "L:f.o(I)V#39",
-          "originalName": "var1_int",
-          "to": "avatarFrameOffsetInSegment",
-          "evidence": "Gameplay feedback frame minus its six-frame base; the normal direction/step matrix checks the resulting frame."
-        }
-      },
-      {
-        "symbol": "L:f.o(I)V#40",
-        "before": null,
-        "after": {
-          "symbol": "L:f.o(I)V#40",
-          "originalName": "var2",
-          "to": "unusedClientControlSnapshot",
-          "evidence": "Retained Geoblox.field_C entry read; the recovered gameplay avatar update does not use this local."
-        }
-      },
-      {
-        "symbol": "L:f.o(I)V#41",
-        "before": null,
-        "after": {
-          "symbol": "L:f.o(I)V#41",
-          "originalName": "fieldTemp$23",
-          "to": "frameStepTicksBeforeDecrement",
-          "evidence": "Old frame-step timer; a negative value resets it to 20 and selects a directional step. Native cases verify the exact decrement boundary."
-        }
-      },
-      {
-        "symbol": "L:qa.b(B)V#0",
-        "before": null,
-        "after": {
-          "symbol": "L:qa.b(B)V#0",
-          "originalName": "fieldTemp$0",
-          "to": "frameStepTicksBeforeDecrement",
-          "evidence": "Snapshot of af.field_c before decrement; frame movement checks old value <0, not the new timer. Native matrix separates old -1, 0 and 1."
-        }
-      },
-      {
-        "symbol": "L:qa.b(B)V#30",
-        "before": null,
-        "after": {
-          "symbol": "L:qa.b(B)V#30",
-          "originalName": "var1",
-          "to": "avatarTintFadeFactor",
-          "evidence": "Float (50-old tint timer) multiplied by the original float literal 0.0066999997943639755 before channel narrowing. Native tint fixtures preserve this exact arithmetic."
-        }
-      },
-      {
-        "symbol": "L:qa.b(B)V#31",
-        "before": null,
-        "after": {
-          "symbol": "L:qa.b(B)V#31",
-          "originalName": "var1_int",
-          "to": "avatarFrameOffsetInSegment",
-          "evidence": "Current feedback frame minus the selected six-frame base; steering uses offsets 1, 3 and 5 as directional targets."
-        }
-      },
-      {
-        "symbol": "L:qa.b(B)V#32",
-        "before": null,
-        "after": {
-          "symbol": "L:qa.b(B)V#32",
-          "originalName": "var2",
-          "to": "unusedClientControlSnapshot",
-          "evidence": "Retained Geoblox.field_C entry read; the recovered menu animation body does not use this local."
-        }
-      },
-      {
-        "symbol": "L:wc.a(FB)V#0",
-        "before": null,
-        "after": {
-          "symbol": "L:wc.a(FB)V#0",
-          "originalName": "var3",
-          "to": "sentinelDivisionGuard",
-          "evidence": "Retained division guard evaluated after copying the starting tint and before computing the palette index. Native invalid-guard fixtures preserve its exception and partial state."
-        }
-      },
-      {
-        "symbol": "L:wc.a(FB)V#1",
-        "before": null,
-        "after": {
-          "symbol": "L:wc.a(FB)V#1",
-          "originalName": "var2",
-          "to": "normalizedRadiusSquared",
-          "evidence": "Maximum attached squared radius divided by 52900.0f before four-step tint palette rounding; source preserves float arithmetic."
-        }
-      },
-      {
-        "symbol": "L:wc.a(FB)V#2",
-        "before": null,
-        "after": {
-          "symbol": "L:wc.a(FB)V#2",
-          "originalName": "var4",
-          "to": "tintPaletteIndex",
-          "evidence": "Integer narrowing of 0.5f+4.0f*normalizedRadiusSquared; native expected-index table covers all five targets, NaN and out-of-range failures."
-        }
-      },
-      {
-        "symbol": "M:f.o(I)V",
-        "before": null,
-        "after": {
-          "symbol": "M:f.o(I)V",
-          "originalName": "o",
-          "to": "advanceGameplayAvatarAnimation",
-          "evidence": "GameplaySession invokes this with blink period 600. Updates the same avatar frame/effect/tint state and also advances ending text when sessionEnding is true. Native animation fixtures verify sessionEnding=false; ending-message behavior is retained but outside the added probe."
-        }
-      },
-      {
-        "symbol": "M:qa.b(B)V",
-        "before": null,
-        "after": {
-          "symbol": "M:qa.b(B)V",
-          "originalName": "b",
-          "to": "advanceMenuAvatarAnimation",
-          "evidence": "GameScreen invokes this with guard 127. Steps feedback frames, decrements hold/effect/fade timers and advances the fixed 600-tick blink clock; independent native state and sequence oracles cover these operations."
-        }
-      },
-      {
-        "symbol": "M:wc.a(FB)V",
-        "before": null,
-        "after": {
-          "symbol": "M:wc.a(FB)V",
-          "originalName": "a",
-          "to": "requestAvatarTintForRadius",
-          "evidence": "rh passes the maximum attached squared distance from board center. When no tint fade is held, snapshots the current color, computes palette channel deltas and starts 50 ticks. Native fixtures verify normal, held, NaN and failure/partial-write cases."
-        }
-      },
-      {
-        "symbol": "P:f.o(I)V#0",
-        "before": null,
-        "after": {
-          "symbol": "P:f.o(I)V#0",
-          "originalName": "param0",
-          "to": "blinkPeriodTicks",
-          "evidence": "Divisor of the incremented avatar blink clock; GameplaySession passes 600. It is a cycle period, not a method guard."
-        }
-      },
-      {
-        "symbol": "P:qa.b(B)V#0",
-        "before": null,
-        "after": {
-          "symbol": "P:qa.b(B)V#0",
-          "originalName": "param0",
-          "to": "methodGuard",
-          "evidence": "Values below 72 leave animation state unchanged; actual menu caller passes 127. Native boundary fixtures check -128, 0, 71, 72 and 127."
-        }
-      },
-      {
-        "symbol": "P:wc.a(FB)V#0",
-        "before": null,
-        "after": {
-          "symbol": "P:wc.a(FB)V#0",
-          "originalName": "param0",
-          "to": "maxAttachedRadiusSquared",
-          "evidence": "Maximum attached squared distance from center (320,240) in rh; determines the tint palette position. Native requests use a fixed expected index table including NaN and invalid extremes."
-        }
-      },
-      {
-        "symbol": "P:wc.a(FB)V#1",
-        "before": null,
-        "after": {
-          "symbol": "P:wc.a(FB)V#1",
-          "originalName": "param1",
-          "to": "methodGuard",
-          "evidence": "Retains -71 / ((-59-guard)/47); normal attachment caller passes 14. Native cases cover 14, 0 and division by zero at -59 with the original partial tint snapshot."
-        }
-      }
-    ],
+    "ruleChanges": [],
     "stubJarSha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2",
     "sourceEvidence": [
       {
         "file": "ab.java",
-        "sha256": "b2329f260c1d16820fd0e7ec027269d13b2c37c72d101930590d7f79e1583f54"
+        "sha256": "d33040417a7d8e7f1729dc671f2dbb93a0dbbab0e55fde0320603f65646701c5"
       },
       {
         "file": "af.java",
@@ -7220,7 +6929,7 @@
       },
       {
         "file": "c.java",
-        "sha256": "a463bb63dacb34c9d81bde50758a1057ec66224ffb239e29ab8bca45be9b8b7b"
+        "sha256": "c1e394673d7665686337c0fb2418a1bc07ec364cf32360ce2328160d338c51fa"
       },
       {
         "file": "cf.java",
@@ -7228,15 +6937,15 @@
       },
       {
         "file": "ch.java",
-        "sha256": "606e7d77f1f9056d35c7b41d4671c902d872c23e6def8f2674fd9e60c5b52094"
+        "sha256": "a4221235be53e110c83e472d1fd30d3420e42251e0190233ee70ad45cffc89b8"
       },
       {
         "file": "ec.java",
-        "sha256": "9680ab252d00cf9b5e5064f2f182765e8cbc9ef529f6c7ac68fa6ccd577f9b53"
+        "sha256": "fa5999e55b78e207b56ff62cb72a04942f936df1331e4daaeae066dd9e2e9e1a"
       },
       {
         "file": "f.java",
-        "sha256": "1ff720094c702eb71b475cdd1932fae938cfe91a915f1869f71da1cc18ae37bb"
+        "sha256": "876304cd5b815772fce7938f231b2042babbd6ef69204773cad0c54054be5b45"
       },
       {
         "file": "fe.java",
@@ -7248,7 +6957,7 @@
       },
       {
         "file": "gh.java",
-        "sha256": "6e39ba682f51bb6e758c1e9cb4277a95a1fdedf007a1b8be571b618a04eb6b4d"
+        "sha256": "c5a461f48c3a30238f18444afd8936ea3ce1645653c6cb975c295444c6953a8c"
       },
       {
         "file": "gi.java",
@@ -7260,11 +6969,11 @@
       },
       {
         "file": "hl.java",
-        "sha256": "8db72d4e73bc86e77c883f5cd0960088f194b102b152e24760135ba0fe9dcc03"
+        "sha256": "bcfbd3e7539649fb6f74a447df5148ba659ddd241c623ab56b99b1fd124eb79f"
       },
       {
         "file": "i.java",
-        "sha256": "73730baf4bec64e8d1d0380bebfd0e944bbba163f87819453166b38db1d67817"
+        "sha256": "b3416f3945d30b814a7a3f079a2f98afa2db487ede8436ac21dc5d2b09e89e5f"
       },
       {
         "file": "ih.java",
@@ -7272,27 +6981,27 @@
       },
       {
         "file": "ij.java",
-        "sha256": "93772ce3162a4251d228478c6e82deaa09334aab1d9502ab72072aa7ec53b243"
+        "sha256": "be62fb7e09933ac835888eba9e5f8672ef7b4a4afc2df13cb80389c032b24882"
       },
       {
         "file": "ik.java",
-        "sha256": "01701988f4028781e1919a8afc711b6bb30c9a2f82449fae2aec76ab9875d8d2"
+        "sha256": "14d5f0fd1d233c4aeb78cc13ed6662a88c265a9bc458afc9d1d985e87a89e8e9"
       },
       {
         "file": "ja.java",
-        "sha256": "963465f2c0be6200fb41f2c01bf08c33ee020986cbaf15ddde6ec081324545e2"
+        "sha256": "434e2821995978a69dc77e52de1708730a15b04edc6edc1c8a944e379b94d4a0"
       },
       {
         "file": "jc.java",
-        "sha256": "7a924a8135544204091692bc0f3758b8859fe62aca15c0d7408e2a6594d6853b"
+        "sha256": "81b33187c33397f62bbeb9872816a2f96772e6dcc1f2dc875011d245d1473b23"
       },
       {
         "file": "jf.java",
-        "sha256": "84d3586fed7c25a3675ae56c0e6ca3628be88c65f483264b01607169d9cd9c32"
+        "sha256": "ccc306e2c33989062419e7ec178deadc60a0a9c8f8f33e7cff7e96d11b0d8e48"
       },
       {
         "file": "jg.java",
-        "sha256": "3afa07c1514b08078c516729b845c95a9953218e1a2af052c2545953a6b73de9"
+        "sha256": "e80471670dafdab690cb9fcce6fe9c2dcedcb3050a46ba01eb7d7f3238bf45a5"
       },
       {
         "file": "jj.java",
@@ -7324,23 +7033,23 @@
       },
       {
         "file": "me.java",
-        "sha256": "0c6399d8e4a15004d2086e668d83fcee38e53c20c0c711c3181c310bd983a6b3"
+        "sha256": "5402ee171eed55e106f78bbb7c7773b563ad07f256b786f7ed9ea6b69cea3432"
       },
       {
         "file": "oc.java",
-        "sha256": "6a2ab46b92a7db587c9baa7e1770a8e921e20580d1d1d1949169a9512a61adde"
+        "sha256": "7edea3a8ebac2f2a32f056139fa1b29db31e1d27d961cdceb081f03692d34e0e"
       },
       {
         "file": "qa.java",
-        "sha256": "5901960713804b9fc0799c66e40bacdd7370a3a44f4cb43856ce3bffc45fc29e"
+        "sha256": "cb598bb99633a4d68cb339bf0b748fd1a241f87c2d025c83fd3c9ca63a0f10df"
       },
       {
         "file": "qb.java",
-        "sha256": "14f5e289c3b6b857a3a2259553ac9bfb539645f7bb1a14349af2f97e3dbe6615"
+        "sha256": "87d1bb694cc861b9e6895bbe08a29f2b44f0f0b2c3156013d3f684245e0cf354"
       },
       {
         "file": "qf.java",
-        "sha256": "9b6c04dca2b8146eca0a3a066b24a3b1f4dde7c44c5e32ec6f62b6c2ea4472f2"
+        "sha256": "22d0102c00a0e084153258010aa0982b3f19a101d67c41968590e6440e481f42"
       },
       {
         "file": "qk.java",
@@ -7364,7 +7073,7 @@
       },
       {
         "file": "ri.java",
-        "sha256": "d02dbb0752b0e04a34daf65cf4bacb0f9c851351774b2e34a10f986b4137e102"
+        "sha256": "4614cf1488ba8e4438331b82007ba7f6b453f6db66f130fd99e791b5cc583728"
       },
       {
         "file": "rj.java",
@@ -7372,11 +7081,11 @@
       },
       {
         "file": "td.java",
-        "sha256": "62ff2d322af3b014b52b9d86ccb89ac7bb503a35ff74b2ab83ae5a9bacdce71c"
+        "sha256": "bd1635bc796ebf0ca0f442b0c3640058b1a803067e98959c0446a4981684ed1c"
       },
       {
         "file": "ue.java",
-        "sha256": "2181bbdaa65e02e0a1ac9431706b8bc855ce22f85a3a18a4ab3c34f1d0308342"
+        "sha256": "3b3e34a3a8c6246d79599375f7754a5525e4b7992dfbd78e5d14613dc9c60677"
       },
       {
         "file": "uf.java",
@@ -7388,15 +7097,15 @@
       },
       {
         "file": "uk.java",
-        "sha256": "ed8a49eb24279a989733d98c9f10206995b6a18a34f14c632f5e705063d34297"
+        "sha256": "b574dc08a850634abd98c40b9b3a4e70a4bdd86aa95434036d558c94825dd0a1"
       },
       {
         "file": "ul.java",
-        "sha256": "024b79f4a0317c0e8c058f19187000bf42dcdb08ed28874383c0eb42699378f8"
+        "sha256": "b8ea7f17d8af0a1032c3bb440fe39dc392456cade9f40c6cd61de5495b5d0d96"
       },
       {
         "file": "vd.java",
-        "sha256": "69a56721c468e33c72114c8ad46b83a84ce456f90d59d06c6d31ae18a9f46c8a"
+        "sha256": "dba78fb646ad7b50e470ef42238eecf18395ebe308784e91ed968a247fd0546c"
       },
       {
         "file": "w.java",
@@ -7408,7 +7117,7 @@
       },
       {
         "file": "wc.java",
-        "sha256": "9bc40be0b886a925739db64c4d25a09dad793b8f18966f198fed5574a8f391cd"
+        "sha256": "fb708006b65bb7a6739aa9396b6058c81763cecdee2b897c2b71963e495fda68"
       },
       {
         "file": "wd.java",
@@ -7416,7 +7125,7 @@
       },
       {
         "file": "wi.java",
-        "sha256": "ea29d2d4e33fbc4afcb91cea0b33a3cfb9af58588c2811106c578f503f350407"
+        "sha256": "5be0cd3e12d4c1d585f284a848158f972f348f58da9897735973f39b8e7c7061"
       }
     ],
     "nativeEvidence": [
@@ -7441,7 +7150,7 @@
       }
     ],
     "textResources": {
-      "loaderSourceSha256": "ea29d2d4e33fbc4afcb91cea0b33a3cfb9af58588c2811106c578f503f350407",
+      "loaderSourceSha256": "5be0cd3e12d4c1d585f284a848158f972f348f58da9897735973f39b8e7c7061",
       "review": {
         "allResourceReads": 744,
         "storedResourceReads": 218,
@@ -9605,7 +9314,6 @@
       ]
     },
     "verification": {
-      "rawSourceBodyEdited": false,
       "sourceDeclarations": 21185,
       "bindingsCompared": 154117,
       "overrideRelationships": 388,
@@ -9647,7 +9355,63 @@
       "nativeAvatarAnimationScenarios": 28805,
       "nativeAvatarAnimationSequences": 6,
       "nativeAvatarAnimationSequenceTicks": 4320,
-      "nativeAvatarTintRequestScenarios": 324
+      "nativeAvatarTintRequestScenarios": 324,
+      "rawSourceBodyEditedByHand": false,
+      "normalizedLiteralShiftCounts": 972,
+      "shiftNormalizationChangedJavaFiles": 90,
+      "otherSourceTokenChanges": 0,
+      "nativeShiftComparisons": 24324,
+      "sourceDeclarationIdentitiesUnchanged": 21185,
+      "namingGuardsUnchanged": 1146,
+      "namedLocalIdentitiesUnchanged": 359
+    },
+    "sourceChange": {
+      "before": {
+        "source": {
+          "repository": "Kreijstal/funorb-decompiled",
+          "commit": "7d0e06122fc537ee96a9f56e633ac5356ba325d8",
+          "subdirectory": "games/geoblox"
+        },
+        "generators": {
+          "dekoblokoWork": {
+            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
+            "trackedClean": true
+          },
+          "javaTools": {
+            "commit": "e6dd72c89fa7f51cc34cd78d08cf5c6227799126",
+            "trackedClean": true,
+            "sourceArchive": {
+              "sha256": "6337fa96b5d83ef24ee2bf20c7e48ea5e0844482f6262e774d73fba6101d4912",
+              "reproduce": "git archive --format=tar e6dd72c89fa7f51cc34cd78d08cf5c6227799126 | sha256sum",
+              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
+            }
+          }
+        },
+        "inputTreeSha256": "07610c2d655bf96e59584f07be867c62e47cf3b3c484063504d9958443e89da2"
+      },
+      "after": {
+        "source": {
+          "repository": "Kreijstal/funorb-decompiled",
+          "commit": "5123c321465e71a2b785cfeda64269ea11a376c6",
+          "subdirectory": "games/geoblox"
+        },
+        "generators": {
+          "dekoblokoWork": {
+            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
+            "trackedClean": true
+          },
+          "javaTools": {
+            "commit": "d60879b1d9a3286dd2102782e13dffb0ae5c0c5e",
+            "trackedClean": true,
+            "sourceArchive": {
+              "sha256": "5234c2b6ae7447c2bbdae83f46f0b689fd5cfe9b199ebd77dafdd0f3cf0bfd1e",
+              "reproduce": "git archive --format=tar d60879b1d9a3286dd2102782e13dffb0ae5c0c5e | sha256sum",
+              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
+            }
+          }
+        },
+        "inputTreeSha256": "a9aaa3dfa046673a2b4e87a360d714692e53c393ca7263efd4a630c6f2e16a8e"
+      }
     }
   }
 }

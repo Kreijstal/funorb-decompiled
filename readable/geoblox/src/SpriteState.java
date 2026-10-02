@@ -529,7 +529,7 @@ abstract class SpriteState extends DualLinkNode {
                       L6: {
                         if (~param4 == ~param8) {
                           var29 = param14;
-                          var17_int = param2 << 358182032;
+                          var17_int = param2 << 16;
                           var31 = 0;
                           var30 = param7;
                           var19 = 0;
@@ -542,7 +542,7 @@ abstract class SpriteState extends DualLinkNode {
                           var22 = param10;
                           var27 = 0;
                           var28 = 0;
-                          var18 = param9 << 1795594064;
+                          var18 = param9 << 16;
                           var25 = param12;
                           if (var42 == 0) {
                             break L6;
@@ -550,42 +550,42 @@ abstract class SpriteState extends DualLinkNode {
                         }
                         var35 = -param15 + param4;
                         if (param9 <= param2) {
-                          var27 = (param0 - param3 << -1074531760) / var35;
-                          var29 = param7 << -1947888496;
-                          var20 = (param13 - param2 << -364475504) / var34;
-                          var24 = (param6 - param1 << 1382202064) / var34;
-                          var17_int = param9 << -608899408;
-                          var23 = (-param10 + param6 << 1069954736) / var35;
-                          var18 = param2 << 910288432;
-                          var31 = (-param7 + param5 << 1801290704) / var35;
-                          var32 = (-param14 + param5 << 2044116112) / var34;
-                          var25 = param3 << 1939952240;
-                          var30 = param14 << 484143472;
-                          var28 = (-param12 + param0 << -828023600) / var34;
-                          var19 = (-param9 + param13 << -614106128) / var35;
-                          var21 = param10 << 753361392;
-                          var22 = param1 << 1855667952;
-                          var26 = param12 << -1097332720;
+                          var27 = (param0 - param3 << 16) / var35;
+                          var29 = param7 << 16;
+                          var20 = (param13 - param2 << 16) / var34;
+                          var24 = (param6 - param1 << 16) / var34;
+                          var17_int = param9 << 16;
+                          var23 = (-param10 + param6 << 16) / var35;
+                          var18 = param2 << 16;
+                          var31 = (-param7 + param5 << 16) / var35;
+                          var32 = (-param14 + param5 << 16) / var34;
+                          var25 = param3 << 16;
+                          var30 = param14 << 16;
+                          var28 = (-param12 + param0 << 16) / var34;
+                          var19 = (-param9 + param13 << 16) / var35;
+                          var21 = param10 << 16;
+                          var22 = param1 << 16;
+                          var26 = param12 << 16;
                           if (var42 == 0) {
                             break L6;
                           }
                         }
-                        var28 = (param0 + -param3 << -1838617200) / var35;
-                        var23 = (param6 + -param1 << -469259472) / var34;
-                        var19 = (param13 - param2 << 919315408) / var34;
-                        var25 = param12 << -1932867984;
-                        var22 = param10 << 1517688272;
-                        var32 = (param5 - param7 << 2139072240) / var35;
-                        var26 = param3 << -288466704;
-                        var17_int = param2 << -1488668400;
-                        var24 = (-param10 + param6 << -343657936) / var35;
-                        var21 = param1 << 1498191728;
-                        var30 = param7 << 1041192944;
-                        var18 = param9 << 170305712;
-                        var20 = (param13 - param9 << -2094236560) / var35;
-                        var31 = (param5 - param14 << -512329264) / var34;
-                        var27 = (param0 + -param12 << 2129025008) / var34;
-                        var29 = param14 << 192682064;
+                        var28 = (param0 + -param3 << 16) / var35;
+                        var23 = (param6 + -param1 << 16) / var34;
+                        var19 = (param13 - param2 << 16) / var34;
+                        var25 = param12 << 16;
+                        var22 = param10 << 16;
+                        var32 = (param5 - param7 << 16) / var35;
+                        var26 = param3 << 16;
+                        var17_int = param2 << 16;
+                        var24 = (-param10 + param6 << 16) / var35;
+                        var21 = param1 << 16;
+                        var30 = param7 << 16;
+                        var18 = param9 << 16;
+                        var20 = (param13 - param9 << 16) / var35;
+                        var31 = (param5 - param14 << 16) / var34;
+                        var27 = (param0 + -param12 << 16) / var34;
+                        var29 = param14 << 16;
                       }
                       var33 = 0;
                       if (0 <= param8) {
@@ -607,38 +607,38 @@ abstract class SpriteState extends DualLinkNode {
                       }
                     }
                     L9: {
-                      var18 = param2 << 778489424;
-                      var17_int = param2 << 778489424;
-                      var30 = param14 << 2118783760;
-                      var29 = param14 << 2118783760;
-                      var26 = param12 << -1801560272;
-                      var25 = param12 << -1801560272;
-                      var22 = param1 << 1903384240;
-                      var21 = param1 << 1903384240;
+                      var18 = param2 << 16;
+                      var17_int = param2 << 16;
+                      var30 = param14 << 16;
+                      var29 = param14 << 16;
+                      var26 = param12 << 16;
+                      var25 = param12 << 16;
+                      var22 = param1 << 16;
+                      var21 = param1 << 16;
                       var35 = param15 + -param8;
-                      var20 = (-param2 + param13 << 440131920) / var34;
-                      var19 = (param9 + -param2 << 1272988272) / var35;
+                      var20 = (-param2 + param13 << 16) / var34;
+                      var19 = (param9 + -param2 << 16) / var35;
                       if (var20 <= var19) {
-                        var23 = (-param1 + param6 << -2000993456) / var34;
-                        var27 = (-param12 + param0 << 1142761648) / var34;
-                        var31 = (-param14 + param5 << -1987100592) / var34;
+                        var23 = (-param1 + param6 << 16) / var34;
+                        var27 = (-param12 + param0 << 16) / var34;
+                        var31 = (-param14 + param5 << 16) / var34;
                         var36 = var19;
                         var19 = var20;
                         var20 = var36;
-                        var28 = (-param12 + param3 << 432415280) / var35;
+                        var28 = (-param12 + param3 << 16) / var35;
                         var33 = 1;
-                        var32 = (-param14 + param7 << 214314576) / var35;
-                        var24 = (-param1 + param10 << -1879453296) / var35;
+                        var32 = (-param14 + param7 << 16) / var35;
+                        var24 = (-param1 + param10 << 16) / var35;
                         if (var42 == 0) {
                           break L9;
                         }
                       }
-                      var32 = (-param14 + param5 << -2120283184) / var34;
-                      var28 = (param0 - param12 << 718199120) / var34;
-                      var23 = (param10 - param1 << -868271056) / var35;
-                      var24 = (-param1 + param6 << -2107665712) / var34;
-                      var31 = (param7 + -param14 << -1485610160) / var35;
-                      var27 = (-param12 + param3 << -1320681136) / var35;
+                      var32 = (-param14 + param5 << 16) / var34;
+                      var28 = (param0 - param12 << 16) / var34;
+                      var23 = (param10 - param1 << 16) / var35;
+                      var24 = (-param1 + param6 << 16) / var34;
+                      var31 = (param7 + -param14 << 16) / var35;
+                      var27 = (-param12 + param3 << 16) / var35;
                       var33 = 0;
                     }
                     L11: {
@@ -680,7 +680,7 @@ abstract class SpriteState extends DualLinkNode {
                           if (~param15 >= ~param8) {
                             break L12;
                           } else {
-                            var37 = var17_int >> 433424592;
+                            var37 = var17_int >> 16;
                             stackIn_73_0 = ~mh.field_c;
 
                             stackIn_73_1 = ~var37;
@@ -690,7 +690,7 @@ abstract class SpriteState extends DualLinkNode {
                             } else {
                               L16: {
                                 if (stackIn_73_0 < stackIn_73_1) {
-                                  var38 = (var18 >> 1802867664) - (var17_int >> 1124703984);
+                                  var38 = (var18 >> 16) - (var17_int >> 16);
                                   if (var38 != 0) {
                                     var39 = (var22 + -var21) / var38;
                                     var40 = (-var25 + var26) / var38;
@@ -760,23 +760,23 @@ abstract class SpriteState extends DualLinkNode {
                       }
                     }
                     L22: {
-                      var37 = param13 << 1962303440;
-                      var38 = param6 << 769735280;
-                      var39 = param0 << 1520988336;
-                      var40 = param5 << 742704;
+                      var37 = param13 << 16;
+                      var38 = param6 << 16;
+                      var39 = param0 << 16;
+                      var40 = param5 << 16;
                       if (var33 == 0) {
-                        var17_int = param9 << -2099010000;
-                        var29 = param7 << -1275583984;
-                        var21 = param10 << -1640258480;
-                        var25 = param3 << 780067984;
+                        var17_int = param9 << 16;
+                        var29 = param7 << 16;
+                        var21 = param10 << 16;
+                        var25 = param3 << 16;
                         if (var42 == 0) {
                           break L22;
                         }
                       }
-                      var22 = param10 << 16805488;
-                      var18 = param9 << 1905270256;
-                      var26 = param3 << 1281477616;
-                      var30 = param7 << -1931827536;
+                      var22 = param10 << 16;
+                      var18 = param9 << 16;
+                      var26 = param3 << 16;
+                      var30 = param7 << 16;
                     }
                     var28 = (var39 + -var26) / var36;
                     var31 = (-var29 + var40) / var36;
@@ -803,13 +803,13 @@ abstract class SpriteState extends DualLinkNode {
                   L25: while (true) {
                     L26: {
                       if (param4 > param8) {
-                        var36 = var17_int >> 2004845488;
+                        var36 = var17_int >> 16;
                         if (var42 != 0) {
                           break L26;
                         } else {
                           L28: {
                             if (var36 < mh.field_c) {
-                              var37 = -(var17_int >> -134889776) + (var18 >> 1844746576);
+                              var37 = -(var17_int >> 16) + (var18 >> 16);
                               if (var37 != 0) {
                                 var38 = (var22 + -var21) / var37;
                                 var39 = (var26 + -var25) / var37;

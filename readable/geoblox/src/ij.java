@@ -212,7 +212,7 @@ final class ij extends oe implements pl {
             var1 = el.gameplaySession.boardMaskOffsetX - 2;
             var2 = el.gameplaySession.boardMaskOffsetY - 2;
             if (!(wa.avatarShockEffectTicks <= 0)) {
-                vg.field_f[ha.avatarShockFrameIndex].b(320 - (vg.field_f[ha.avatarShockFrameIndex].field_s >> -1387017855), -(vg.field_f[ha.avatarShockFrameIndex].field_o >> 10164129) + 240);
+                vg.field_f[ha.avatarShockFrameIndex].b(320 - (vg.field_f[ha.avatarShockFrameIndex].field_s >> 1), -(vg.field_f[ha.avatarShockFrameIndex].field_o >> 1) + 240);
             }
             fc.field_b[uf.avatarFeedbackFrameIndex].b(var1 + 320, 240 + var2, rj.avatarTintColor);
             vh.field_H[nd.avatarFeedbackModeId].b(320 + var1, 240 + var2, rj.avatarTintColor);
@@ -226,7 +226,7 @@ final class ij extends oe implements pl {
             var1 = el.gameplaySession.boardMaskOffsetX - 2;
             var2 = el.gameplaySession.boardMaskOffsetY - 2;
             if (!(wa.avatarShockEffectTicks <= 0)) {
-                vg.field_f[ha.avatarShockFrameIndex].b(320 - (vg.field_f[ha.avatarShockFrameIndex].field_s >> -1387017855), -(vg.field_f[ha.avatarShockFrameIndex].field_o >> 10164129) + 240);
+                vg.field_f[ha.avatarShockFrameIndex].b(320 - (vg.field_f[ha.avatarShockFrameIndex].field_s >> 1), -(vg.field_f[ha.avatarShockFrameIndex].field_o >> 1) + 240);
             }
             fc.field_b[uf.avatarFeedbackFrameIndex].b(var1 + 320, 240 + var2, rj.avatarTintColor);
             vh.field_H[nd.avatarFeedbackModeId].b(320 + var1, 240 + var2, rj.avatarTintColor);
@@ -236,7 +236,7 @@ final class ij extends oe implements pl {
             menuText = (String) null;
             return;
         }
-        ul.field_a.b(-(ul.field_a.field_s >> -881621759) + 319, -(ul.field_a.field_o >> -1172163679) + 240);
+        ul.field_a.b(-(ul.field_a.field_s >> 1) + 319, -(ul.field_a.field_o >> 1) + 240);
         if (param0 >= 3) {
             return;
         }

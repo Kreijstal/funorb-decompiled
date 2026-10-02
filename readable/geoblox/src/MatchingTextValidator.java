@@ -212,7 +212,7 @@ final class MatchingTextValidator extends TextInputValidator {
                   L25: while (true) {
                     L26: {
                       L27: {
-                        if (borderIndex < edgeLength >> 362369793) {
+                        if (borderIndex < edgeLength >> 1) {
                           stackIn_56_0 = 0;
 
                           if (controlFlowGuard != 0) {

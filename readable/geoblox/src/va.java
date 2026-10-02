@@ -86,7 +86,7 @@ final class va {
                 break L0;
               } else {
                 param2 = ch.field_d[var5_int];
-                var6 = var5_int << -1588670812;
+                var6 = var5_int << 4;
                 L3: while (true) {
                   incrementValue$0 = param2;
                   param2--;

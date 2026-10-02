@@ -355,7 +355,7 @@ final class ag extends TextInputValidator {
                       var3++;
                       continue L1;
                     } else {
-                      var0 = -3932672073523589310L ^ var0 >>> 1169355905;
+                      var0 = -3932672073523589310L ^ var0 >>> 1;
                       var3++;
                       continue L1;
                     }

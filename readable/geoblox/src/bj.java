@@ -248,7 +248,7 @@ final class bj extends nh {
                 }
                 return null;
               }
-              var5[var18.length - 2] = (byte)(this.field_u.field_t[param2] >>> -52028856);
+              var5[var18.length - 2] = (byte)(this.field_u.field_t[param2] >>> 8);
               var5[-1 + var18.length] = (byte)this.field_u.field_t[param2];
               if (null != this.field_e) {
                 this.field_i.a((byte) 66, param2, this.field_e, var18);
@@ -292,7 +292,7 @@ final class bj extends nh {
                             }
                           }
                         }
-                        var7 = (var5[-2 + var18.length] << -2130145656 & 65280) + (var5[var18.length - 1] & 255);
+                        var7 = (var5[-2 + var18.length] << 8 & 65280) + (var5[var18.length - 1] & 255);
                         if ((65535 & this.field_u.field_t[param2]) != var7) {
                           throw new RuntimeException();
                         } else {

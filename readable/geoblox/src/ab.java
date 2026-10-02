@@ -193,7 +193,7 @@ final class ab {
               ab.a(-120, (CharSequence) null);
             }
             for (var4 = 0; var4 < var2_int; var4++) {
-              var3 = -var3 + (var3 << -357128155) + qc.a(param1.charAt(var4), true);
+              var3 = -var3 + (var3 << 5) + qc.a(param1.charAt(var4), true);
             }
             stackIn_6_0 = var3;
             break L0;

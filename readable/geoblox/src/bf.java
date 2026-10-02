@@ -201,7 +201,7 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
               if (param4 >= SoftwareRasterizer.clipLeft) {
                 if (param4 < SoftwareRasterizer.clipRight) {
                   var11 = param4 + var8 * SoftwareRasterizer.stride;
-                  var12 = var10 + 1 + -var8 >> 158912129;
+                  var12 = var10 + 1 + -var8 >> 1;
                   L6: while (true) {
                     var12--;
                     if (0 > var12) {
@@ -219,7 +219,7 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
               if (param0 >= SoftwareRasterizer.clipTop) {
                 if (SoftwareRasterizer.clipBottom > var6) {
                   var11 = var7 + SoftwareRasterizer.stride * param0;
-                  var12 = -var7 + 1 + var9 >> -2109860607;
+                  var12 = -var7 + 1 + var9 >> 1;
                   L8: while (true) {
                     var12--;
                     if (var12 < 0) {
@@ -237,7 +237,7 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
               if (var5_int >= SoftwareRasterizer.clipLeft) {
                 if (SoftwareRasterizer.clipRight > var5_int) {
                   var11 = var5_int + ((1 & -param4 + var5_int) + var8) * SoftwareRasterizer.stride;
-                  var12 = -var8 + 1 + var10 >> -161751903;
+                  var12 = -var8 + 1 + var10 >> 1;
                   L10: while (true) {
                     var12--;
                     if (0 > var12) {
@@ -255,7 +255,7 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
               if (SoftwareRasterizer.clipTop <= param0) {
                 if (SoftwareRasterizer.clipBottom > var6) {
                   var11 = SoftwareRasterizer.stride * var6 + (var7 - -(1 & -param0 + var6));
-                  var12 = 1 - (-var9 + var7) >> 880243777;
+                  var12 = 1 - (-var9 + var7) >> 1;
                   L12: while (true) {
                     var12--;
                     if (var12 < 0) {

@@ -47,7 +47,7 @@ final class ik {
             }
             L4: while (var7 < var6) {
               var8 = 152 - -(48 * var7 / param1);
-              var9 = var8 << -1623895256 | var8 << -1540604944 | var8;
+              var9 = var8 << 8 | var8 << 16 | var8;
               SoftwareRasterizer.framebuffer[param0 + SoftwareRasterizer.stride * (var7 + param2)] = var9;
               SoftwareRasterizer.framebuffer[param3 + (param2 + var7) * SoftwareRasterizer.stride + param0] = var9;
               var7++;

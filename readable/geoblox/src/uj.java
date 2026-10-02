@@ -28,7 +28,7 @@ final class uj {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 == 0) {
-            stackIn_4_0 = aa.a(vf.spriteScratchRaster, -(vf.spriteScratchRaster.field_s >> -280910815) + ng.field_G, -(vf.spriteScratchRaster.field_o >> 1703629537) + td.field_E, bk.boardOwnershipRaster, 0, 0);
+            stackIn_4_0 = aa.a(vf.spriteScratchRaster, -(vf.spriteScratchRaster.field_s >> 1) + ng.field_G, -(vf.spriteScratchRaster.field_o >> 1) + td.field_E, bk.boardOwnershipRaster, 0, 0);
             decompiledRegionSelector0 = 1;
           } else {
             stackIn_2_0 = 0;

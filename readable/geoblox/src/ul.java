@@ -221,7 +221,7 @@ final class ul {
 
                             stackIn_68_5 = 1073741824;
                           }
-                          stackIn_65_0[stackIn_65_1] = lb.a(stackIn_65_2, lb.a(stackIn_65_3, lb.a(lb.a(lb.a(stackIn_65_4, stackIn_68_5), largestPackedEntityId << -1372000780), middlePackedEntityId << 147551786)));
+                          stackIn_65_0[stackIn_65_1] = lb.a(stackIn_65_2, lb.a(stackIn_65_3, lb.a(lb.a(lb.a(stackIn_65_4, stackIn_68_5), largestPackedEntityId << 20), middlePackedEntityId << 10)));
                           h.matchCandidateCount = h.matchCandidateCount + 1;
                         }
                         if (tripleSharesCategory != 0) {

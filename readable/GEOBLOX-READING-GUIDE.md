@@ -1,4 +1,4 @@
-# Reading GeoBlox pass 26
+# Reading GeoBlox pass 27
 
 The readable tree uses semantic names without opaque suffixes. The symbol map
 keeps the original spelling and JVM identity of every declaration, so
@@ -339,6 +339,13 @@ the color; the timer still decrements after expiration. The independent native
 matrix checks those boundaries, signed/fractional channel values and multiple
 blink cycles. Gameplay ending-message updates share this method but are not
 covered by these added fixtures.
+
+The generic decompiler now spells literal shift distances using their JVM
+width. The tint channels above use `<< 16` and `<< 8`; sprite and board-center
+calculations use readable right-shift distances. Int shifts mask with 31 and
+long shifts with 63. This changes 972 constants across 90 files and preserves
+every other Java token, declaration identity and naming rule. Dynamic distances
+and computations that can throw retain their expressions and evaluation order.
 
 This is a reading map of the recovered source, not a whole-game behavioral
 proof. Several guards, scratch carriers and shared helper names remain opaque.

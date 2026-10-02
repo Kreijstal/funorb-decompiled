@@ -55,9 +55,9 @@ final class vl extends IntrusiveNode {
                     var6 = var9;
                     var9--;
                     if ((var9 & 1) != 0) {
-                      var7 = param3.a(var9 >> 2021757378, 1, param0);
+                      var7 = param3.a(var9 >> 2, 1, param0);
                     } else {
-                      var7 = param3.a(var9 >> 583212258, param0, false);
+                      var7 = param3.a(var9 >> 2, param0, false);
                     }
                     if (var7 == null) {
                       var5_int = 0;
@@ -456,7 +456,7 @@ final class vl extends IntrusiveNode {
             var19 = 0;
             for (var20 = 0; var20 < 128; var20++) {
               var19 = var19 + var38.c((byte) 34);
-              this.field_j[var20] = (short)(this.field_j[var20] + (var19 << 878219688));
+              this.field_j[var20] = (short)(this.field_j[var20] + (var19 << 8));
             }
             var20 = 0;
             var21 = 0;
@@ -472,7 +472,7 @@ final class vl extends IntrusiveNode {
                 }
                 var22 = var38.g((byte) -116);
               }
-              this.field_j[var23] = (short)(this.field_j[var23] + cd.a(-1 + var22 << 620173806, 32768));
+              this.field_j[var23] = (short)(this.field_j[var23] + cd.a(-1 + var22 << 14, 32768));
               this.field_h[var23] = var22;
               var20--;
             }
@@ -505,7 +505,7 @@ final class vl extends IntrusiveNode {
                 if (var20 == 0) {
                   incrementValue$3 = var8;
                   var8++;
-                  var24 = 16 + var38.field_j[incrementValue$3] << 1233128290;
+                  var24 = 16 + var38.field_j[incrementValue$3] << 2;
                   if (var56.length > var21) {
                     incrementValue$4 = var21;
                     var21++;
@@ -629,7 +629,7 @@ final class vl extends IntrusiveNode {
                 var27 = var46[0];
                 var28 = var46[1];
                 for (var29 = 0; var27 > var29; var29++) {
-                  this.field_o[var29] = (byte)(this.field_o[var29] * var28 + 32 >> -315387354);
+                  this.field_o[var29] = (byte)(this.field_o[var29] * var28 + 32 >> 6);
                 }
                 for (var29 = 2; var46.length > var29; var29 += 2) {
                   var30 = var46[var29];
@@ -637,14 +637,14 @@ final class vl extends IntrusiveNode {
                   var32 = var28 * (var30 - var27) - -((-var27 + var30) / 2);
                   for (var33 = var27; var30 > var33; var33++) {
                     var34 = pk.a(var30 + -var27, (byte) -6, var32);
-                    this.field_o[var33] = (byte)(32 + this.field_o[var33] * var34 >> -1179002010);
+                    this.field_o[var33] = (byte)(32 + this.field_o[var33] * var34 >> 6);
                     var32 = var32 + (var31 - var28);
                   }
                   var27 = var30;
                   var28 = var31;
                 }
                 for (var30 = var27; var30 < 128; var30++) {
-                  this.field_o[var30] = (byte)(32 + this.field_o[var30] * var28 >> 494611078);
+                  this.field_o[var30] = (byte)(32 + this.field_o[var30] * var28 >> 6);
                 }
                 var15 = null;
                 break L30;
@@ -659,7 +659,7 @@ final class vl extends IntrusiveNode {
                   var16[var27] = (byte)var19;
                 }
                 var27 = var47[0];
-                var28 = var47[1] << 1552264673;
+                var28 = var47[1] << 1;
                 for (var29 = 0; var27 > var29; var29++) {
                   var30 = (255 & this.field_m[var29]) - -var28;
                   if (var30 < 0) {
@@ -673,7 +673,7 @@ final class vl extends IntrusiveNode {
                 var29 = 2;
                 L39: while (var29 < var47.length) {
                   var30 = var47[var29];
-                  var31 = var16[var29 - -1] << 769647041;
+                  var31 = var16[var29 - -1] << 1;
                   var32 = (var30 - var27) * var28 + (-var27 + var30) / 2;
                   var37 = var27;
                   var33 = var37;

@@ -175,7 +175,7 @@ final class lc {
             }
             var13_int = param0;
             var14 = 1122867;
-            var15 = (var14 & 16711680) >>> -1079885168;
+            var15 = (var14 & 16711680) >>> 16;
             var16 = var14 & 65280;
             var17 = var14 & 255;
             var18 = -param1;
@@ -183,7 +183,7 @@ final class lc {
               L3: {
                 L4: {
                   if (var18 < 0) {
-                    var19 = param5 * (param6 >> -1886768304);
+                    var19 = param5 * (param6 >> 16);
                     if (var37 != 0) {
                       break L3;
                     } else {
@@ -191,7 +191,7 @@ final class lc {
                       L5: while (true) {
                         L6: {
                           if (var20 < 0) {
-                            param12 = param11[var19 + (param0 >> -81490640)];
+                            param12 = param11[var19 + (param0 >> 16)];
                             param0 = param0 + param3;
                             stackIn_23_0 = param12;
 
@@ -212,28 +212,28 @@ final class lc {
                                     break L8;
                                   }
                                 }
-                                var22 = 510 & var21 >> 1228331247;
-                                var23 = (var21 & 65429) >> -300055672;
+                                var22 = 510 & var21 >> 15;
+                                var23 = (var21 & 65429) >> 8;
                                 var24 = 255 & var21;
-                                var25 = (var24 + var22) / 3 - -var23 >> -1090345247;
-                                var26 = -(((255 & param12) + (param12 >> 1020607240 & 255) + (param12 >> -1338833040 & 255)) / 3) + 256;
-                                var27 = var15 * (var25 << -1187127344 >>> 543802160) >>> 1389020232;
-                                var28 = (var25 << 1167088136) * var16 >>> 2081269144;
-                                var29 = var17 * var25 >>> 2020048840;
-                                var25 = (var28 << -1742741880) + (var27 << -1929572144) - -var29;
-                                var30 = var26 * ((16711680 & var25) >> -2028626672);
-                                var31 = (255 & var25 >> 123665768) * var26;
+                                var25 = (var24 + var22) / 3 - -var23 >> 1;
+                                var26 = -(((255 & param12) + (param12 >> 8 & 255) + (param12 >> 16 & 255)) / 3) + 256;
+                                var27 = var15 * (var25 << 16 >>> 16) >>> 8;
+                                var28 = (var25 << 8) * var16 >>> 24;
+                                var29 = var17 * var25 >>> 8;
+                                var25 = (var28 << 8) + (var27 << 16) - -var29;
+                                var30 = var26 * ((16711680 & var25) >> 16);
+                                var31 = (255 & var25 >> 8) * var26;
                                 var32 = (var25 & 255) * var26;
-                                var33 = ((16711680 & var21) >>> -1099466064) * ((param12 & 16711680) >>> 878755504) >>> 766300104;
-                                var34 = (var21 & 65280) * (param12 & 65280) >>> -1130661960;
-                                var35 = (255 & var21) * (255 & param12) >>> 1483648232;
+                                var33 = ((16711680 & var21) >>> 16) * ((param12 & 16711680) >>> 16) >>> 8;
+                                var34 = (var21 & 65280) * (param12 & 65280) >>> 24;
+                                var35 = (255 & var21) * (255 & param12) >>> 8;
                                 var36 = 256 + -var26;
                                 var33 = var33 * var36;
                                 var34 = var34 * var36;
                                 var35 = var35 * var36;
                                 incrementValue$0 = param8;
                                 param8++;
-                                param2[incrementValue$0] = (var32 + var35 >> 464198152) + ((var34 + var31 >> 115744520 << 1806472904) + (var30 + var33 >> 1812821320 << 249524688));
+                                param2[incrementValue$0] = (var32 + var35 >> 8) + ((var34 + var31 >> 8 << 8) + (var30 + var33 >> 8 << 16));
                               }
                               var20++;
                               if (var37 == 0) {

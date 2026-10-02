@@ -89,31 +89,31 @@ final class td extends hk {
         super.a(param0, param1, (byte) -86, param3);
         if (0 == param3) {
           L0: {
-            var5 = (this.field_r >> -649339007) + (this.field_v + param0);
+            var5 = (this.field_r >> 1) + (this.field_v + param0);
             var7 = -74 % ((param2 - 1) / 43);
-            var6 = param1 - (-this.field_m - (this.field_h >> -471639295));
+            var6 = param1 - (-this.field_m - (this.field_h >> 1));
             var9 = this.field_F.a((byte) -105);
             if (var9 != bf.field_g) {
               if (si.field_n != var9) {
                 if (si.field_m != var9) {
                   if (var9 == kk.field_w) {
                     var15 = oa.field_e[1];
-                    var15.c(-(var15.width >> -1719863487) + var5, var6 - (var15.height >> 2009440097), 256);
+                    var15.c(-(var15.width >> 1) + var5, var6 - (var15.height >> 1), 256);
                     break L0;
                   } else {
                     break L0;
                   }
                 } else {
                   var14 = oa.field_e[2];
-                  var14.c(-(var14.width >> 1489383873) + var5, var6 - (var14.height >> -2129057855), 256);
+                  var14.c(-(var14.width >> 1) + var5, var6 - (var14.height >> 1), 256);
                   break L0;
                 }
               }
             }
             L2: {
               var13 = oa.field_e[0];
-              var10 = var13.field_s << 1539250049;
-              var11 = var13.field_o << 1598652321;
+              var10 = var13.field_s << 1;
+              var11 = var13.field_o << 1;
               if (null != da.field_b) {
                 if (var10 <= da.field_b.width) {
                   if (var11 <= da.field_b.height) {
@@ -126,7 +126,7 @@ final class td extends hk {
               da.field_b = new Sprite(var10, var11);
               Geoblox.setRasterTarget(1, da.field_b);
             }
-            var13.rotateSmooth(112, 144, var13.field_s << -972988668, var13.field_o << -1953583196, -this.field_G << -867460086, 4096);
+            var13.rotateSmooth(112, 144, var13.field_s << 4, var13.field_o << 4, -this.field_G << 10, 4096);
             id.a(true);
             da.field_b.c(-var13.field_s + var5, var6 - var13.field_o, 256);
           }

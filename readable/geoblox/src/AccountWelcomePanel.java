@@ -23,10 +23,10 @@ final class AccountWelcomePanel extends ee implements pl {
             this.justPlayButton.field_q = (dh) ((Object) var1);
             var2 = 4;
             var3 = 326;
-            var4 = var3 - var2 >> -1394788927;
-            this.goBackButton.a(30, var4, (byte) -38, -48 + (this.field_h + -var2), this.field_r + -var3 >> 600698529);
-            this.justPlayButton.a(30, var4, (byte) -77, -var2 + -48 + this.field_h, var2 + ((-var3 + this.field_r >> -1318908095) - -var4));
-            this.createAccountButton.a(30, var3, (byte) -73, this.field_h - (78 - -(2 * var2)), -var3 + this.field_r >> 569974529);
+            var4 = var3 - var2 >> 1;
+            this.goBackButton.a(30, var4, (byte) -38, -48 + (this.field_h + -var2), this.field_r + -var3 >> 1);
+            this.justPlayButton.a(30, var4, (byte) -77, -var2 + -48 + this.field_h, var2 + ((-var3 + this.field_r >> 1) - -var4));
+            this.createAccountButton.a(30, var3, (byte) -73, this.field_h - (78 - -(2 * var2)), -var3 + this.field_r >> 1);
             this.goBackButton.field_u = (bb) (this);
             this.createAccountButton.field_u = (bb) (this);
             this.createAccountButton.field_j = ic.loginCreateTooltipText;

@@ -101,8 +101,8 @@ final class jh {
                     }
                     this.field_c.a(-128, (long)(6 * param0));
                     this.field_c.a(dj.field_F, 6, 0, 9868);
-                    var4_int = (dj.field_F[2] & 255) + (((255 & dj.field_F[0]) << 381092272) + (dj.field_F[1] << -50660216 & 65280));
-                    var5 = (dj.field_F[3] << 1866970928 & 16711680) + (65280 & dj.field_F[4] << 1639129128) + (255 & dj.field_F[5]);
+                    var4_int = (dj.field_F[2] & 255) + (((255 & dj.field_F[0]) << 16) + (dj.field_F[1] << 8 & 65280));
+                    var5 = (dj.field_F[3] << 16 & 16711680) + (65280 & dj.field_F[4] << 8) + (255 & dj.field_F[5]);
                     if (var4_int >= 0) {
                       if (this.field_a >= var4_int) {
                         if (var5 > 0) {
@@ -126,20 +126,20 @@ final class jh {
                                     }
                                     var14 = 10;
                                     this.field_d.a(dj.field_F, var9 + var14, 0, 9868);
-                                    var10 = (255 & dj.field_F[3]) + ((65280 & dj.field_F[2] << -1174844312) + (-16777216 & dj.field_F[0] << 1123359992) - -(16711680 & dj.field_F[1] << -246972592));
-                                    var11 = (255 & dj.field_F[5]) + (65280 & dj.field_F[4] << -1686599576);
+                                    var10 = (255 & dj.field_F[3]) + ((65280 & dj.field_F[2] << 8) + (-16777216 & dj.field_F[0] << 24) - -(16711680 & dj.field_F[1] << 16));
+                                    var11 = (255 & dj.field_F[5]) + (65280 & dj.field_F[4] << 8);
                                     var13 = dj.field_F[9] & 255;
-                                    var12 = ((dj.field_F[7] & 255) << -1445223224) + ((16711680 & dj.field_F[6] << -963100496) - -(dj.field_F[8] & 255));
+                                    var12 = ((dj.field_F[7] & 255) << 8) + ((16711680 & dj.field_F[6] << 16) - -(dj.field_F[8] & 255));
                                   } else {
                                     var14 = 8;
                                     if (var9 > 512) {
                                       var9 = 512;
                                     }
                                     this.field_d.a(dj.field_F, var9 - -var14, 0, 9868);
-                                    var12 = (255 & dj.field_F[6]) + (((dj.field_F[4] & 255) << -518737456) - -((255 & dj.field_F[5]) << 864422408));
-                                    var11 = (255 & dj.field_F[3]) + (dj.field_F[2] << -1610561560 & 65280);
+                                    var12 = (255 & dj.field_F[6]) + (((dj.field_F[4] & 255) << 16) - -((255 & dj.field_F[5]) << 8));
+                                    var11 = (255 & dj.field_F[3]) + (dj.field_F[2] << 8 & 65280);
                                     var13 = 255 & dj.field_F[7];
-                                    var10 = (dj.field_F[1] & 255) + ((dj.field_F[0] & 255) << 1279629672);
+                                    var10 = (dj.field_F[1] & 255) + ((dj.field_F[0] & 255) << 8);
                                   }
                                   if (var10 == param0) {
                                     if (var11 == var8) {
@@ -275,7 +275,7 @@ final class jh {
                         } else {
                           this.field_c.a(param0 + -228, (long)(param2 * 6));
                           this.field_c.a(dj.field_F, 6, 0, 9868);
-                          var7_int = (dj.field_F[5] & 255) + (((255 & dj.field_F[4]) << 1610645000) + ((255 & dj.field_F[3]) << 413706224));
+                          var7_int = (dj.field_F[5] & 255) + (((255 & dj.field_F[4]) << 8) + ((255 & dj.field_F[3]) << 16));
                           if (var7_int > 0) {
                             if (this.field_d.a((byte) 46) / 520L >= (long)var7_int) {
                               break L1;
@@ -288,15 +288,15 @@ final class jh {
                         }
                       }
                     }
-                    dj.field_F[3] = (byte)(var7_int >> -1467494224);
+                    dj.field_F[3] = (byte)(var7_int >> 16);
                     dj.field_F[2] = (byte)param1;
-                    dj.field_F[1] = (byte)(param1 >> 1003176520);
+                    dj.field_F[1] = (byte)(param1 >> 8);
                     if (param0 != 255) {
                       this.field_c = (sk) null;
                     }
-                    dj.field_F[4] = (byte)(var7_int >> -743180568);
+                    dj.field_F[4] = (byte)(var7_int >> 8);
                     dj.field_F[5] = (byte)var7_int;
-                    dj.field_F[0] = (byte)(param1 >> -489692528);
+                    dj.field_F[0] = (byte)(param1 >> 16);
                     this.field_c.a(param0 + -380, (long)(param2 * 6));
                     this.field_c.a(6, 0, dj.field_F, false);
                     var8 = 0;
@@ -318,10 +318,10 @@ final class jh {
                                   decompiledRegionSelector0 = 1;
                                 }
                                 if (decompiledRegionSelector0 == 0) {
-                                  var11 = ((255 & dj.field_F[0]) << 1107016360) - -(255 & dj.field_F[1]);
-                                  var12 = (dj.field_F[3] & 255) + ((255 & dj.field_F[2]) << -183179928);
+                                  var11 = ((255 & dj.field_F[0]) << 8) - -(255 & dj.field_F[1]);
+                                  var12 = (dj.field_F[3] & 255) + ((255 & dj.field_F[2]) << 8);
                                   var13 = 255 & dj.field_F[7];
-                                  var10 = (dj.field_F[6] & 255) + ((65280 & dj.field_F[5] << -772216792) + (16711680 & dj.field_F[4] << -57769104));
+                                  var10 = (dj.field_F[6] & 255) + ((65280 & dj.field_F[5] << 8) + (16711680 & dj.field_F[4] << 16));
                                 } else {
                                   break L5;
                                 }
@@ -335,10 +335,10 @@ final class jh {
                                   decompiledRegionSelector1 = 1;
                                 }
                                 if (decompiledRegionSelector1 == 0) {
-                                  var11 = (65280 & dj.field_F[2] << 1899806600) + (((255 & dj.field_F[0]) << 1421127672) + (((dj.field_F[1] & 255) << -71073680) + (255 & dj.field_F[3])));
+                                  var11 = (65280 & dj.field_F[2] << 8) + (((255 & dj.field_F[0]) << 24) + (((dj.field_F[1] & 255) << 16) + (255 & dj.field_F[3])));
                                   var13 = dj.field_F[9] & 255;
-                                  var10 = (dj.field_F[8] & 255) + ((255 & dj.field_F[6]) << 934910480) - -(65280 & dj.field_F[7] << -133336408);
-                                  var12 = (dj.field_F[4] << 2024671784 & 65280) + (255 & dj.field_F[5]);
+                                  var10 = (dj.field_F[8] & 255) + ((255 & dj.field_F[6]) << 16) - -(65280 & dj.field_F[7] << 8);
+                                  var12 = (dj.field_F[4] << 8 & 65280) + (255 & dj.field_F[5]);
                                 } else {
                                   break L5;
                                 }
@@ -378,12 +378,12 @@ final class jh {
                             var10 = 0;
                           }
                           if (param2 <= 65535) {
-                            dj.field_F[4] = (byte)(var10 >> -1912263152);
-                            dj.field_F[2] = (byte)(var9 >> -1443172216);
-                            dj.field_F[0] = (byte)(param2 >> 1158595624);
+                            dj.field_F[4] = (byte)(var10 >> 16);
+                            dj.field_F[2] = (byte)(var9 >> 8);
+                            dj.field_F[0] = (byte)(param2 >> 8);
                             dj.field_F[7] = (byte)this.field_b;
                             dj.field_F[1] = (byte)param2;
-                            dj.field_F[5] = (byte)(var10 >> 918416584);
+                            dj.field_F[5] = (byte)(var10 >> 8);
                             dj.field_F[3] = (byte)var9;
                             dj.field_F[6] = (byte)var10;
                             this.field_d.a(-97, (long)(520 * var7_int));
@@ -395,16 +395,16 @@ final class jh {
                             this.field_d.a(var11, var8, param3, false);
                             var8 = var8 + var11;
                           } else {
-                            dj.field_F[6] = (byte)(var10 >> -530636144);
+                            dj.field_F[6] = (byte)(var10 >> 16);
                             dj.field_F[5] = (byte)var9;
-                            dj.field_F[2] = (byte)(param2 >> -1213437496);
+                            dj.field_F[2] = (byte)(param2 >> 8);
                             dj.field_F[9] = (byte)this.field_b;
-                            dj.field_F[4] = (byte)(var9 >> -1228123480);
-                            dj.field_F[1] = (byte)(param2 >> 1114296048);
-                            dj.field_F[7] = (byte)(var10 >> 1392408456);
+                            dj.field_F[4] = (byte)(var9 >> 8);
+                            dj.field_F[1] = (byte)(param2 >> 16);
+                            dj.field_F[7] = (byte)(var10 >> 8);
                             dj.field_F[8] = (byte)var10;
                             dj.field_F[3] = (byte)param2;
-                            dj.field_F[0] = (byte)(param2 >> 1933282872);
+                            dj.field_F[0] = (byte)(param2 >> 24);
                             this.field_d.a(73, (long)(var7_int * 520));
                             this.field_d.a(10, 0, dj.field_F, false);
                             var11 = param1 - var8;

@@ -25,7 +25,7 @@ final class am {
         if (!param0) {
           field_b = (Sprite) null;
         }
-        var3 = (this.field_c.length >> -1161198783) - 1;
+        var3 = (this.field_c.length >> 1) - 1;
         var4 = var3 & param1;
         L1: while (true) {
           var5 = this.field_c[1 + var4 + var4];
@@ -111,7 +111,7 @@ final class am {
         try {
           L0: {
             var2_int = 1;
-            L1: while (param0.length - -(param0.length >> -1603804415) >= var2_int) {
+            L1: while (param0.length - -(param0.length >> 1) >= var2_int) {
               var2_int = var2_int << 1;
             }
             this.field_c = new int[var2_int + var2_int];

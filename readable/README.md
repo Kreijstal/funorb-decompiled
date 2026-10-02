@@ -21,17 +21,17 @@ tool bytes; `funorb-stubs.jar` is the frozen compilation dependency. The
 [reading guide](GEOBLOX-READING-GUIDE.md) explains the named gameplay flow.
 
 The raw input is `games/geoblox` at
-`7d0e06122fc537ee96a9f56e633ac5356ba325d8`. It comes from java-tools
-`e6dd72c89fa7f51cc34cd78d08cf5c6227799126` and Deko
+`5123c321465e71a2b785cfeda64269ea11a376c6`. It comes from java-tools
+`d60879b1d9a3286dd2102782e13dffb0ae5c0c5e` and Deko
 `a572c4dd0f0174bfcd7777be53d7ceba2f970f18`. The adapted naming tool is
 `a0bc835957148b9b1e1f8221c59b79d899d22738`; its source archive SHA-256 is
 `cb10756aa3ecb28159c9b81f2fb78bf559b4111d9ad203819458b30d0d84cf8c`.
 
 The **decompiler repository source** SHA-256 is
-`6337fa96b5d83ef24ee2bf20c7e48ea5e0844482f6262e774d73fba6101d4912`:
+`5234c2b6ae7447c2bbdae83f46f0b689fd5cfe9b199ebd77dafdd0f3cf0bfd1e`:
 
 ```sh
-git archive --format=tar e6dd72c89fa7f51cc34cd78d08cf5c6227799126 | sha256sum
+git archive --format=tar d60879b1d9a3286dd2102782e13dffb0ae5c0c5e | sha256sum
 ```
 
 This identifies tracked decompiler source and its Git archive metadata. It is
@@ -122,6 +122,26 @@ audio and whole-game equivalence remain unverified. Text-writer guards <=23
 retain a PCM side effect outside the direct writer probe. These source checks
 do not establish FPS, heap or phone acceptance.
 
+The current generic decompiler normalizes 972 literal shift counts across
+90 files. For example, `<< -449443480` becomes `<< 8`. The opcode determines
+the width: int counts use five bits, long counts six. Every other Java token,
+all 21,185 declarations, 1,146 naming guards, 359 named local identities and
+388 override edges are unchanged. The new source/decompiler identity is an
+explicit `publication.sourceChange` in the same current manifest.
+
+In the pinned java-tools checkout, the focused regression command is:
+
+```sh
+node test/cfrNumericNegation.test.js
+```
+
+Its three groups include 24,324 native shift comparisons across normal and
+forced-dispatcher output, with literal boundaries, dynamic operands, side
+effects and failures. Complement checks and the 7,200 native exception-loop
+comparisons also pass. A clean Git source archive regenerates all 303 raw
+files and current diagnostics byte-for-byte. These checks establish the
+numeric rewrite's scope; they do not prove whole-game behavior.
+
 ## Update this export
 
 1. Commit and verify the new raw source when changing the decompiler. For a
@@ -140,7 +160,7 @@ do not establish FPS, heap or phone acceptance.
 
 | Java source tree | SHA-256 |
 | --- | --- |
-| Raw | `07610c2d655bf96e59584f07be867c62e47cf3b3c484063504d9958443e89da2` |
-| Readable | `52e30fafb723267cc5c83ad7514342079c254f84360781265521a20c696f5f60` |
+| Raw | `a9aaa3dfa046673a2b4e87a360d714692e53c393ca7263efd4a630c6f2e16a8e` |
+| Readable | `e5efdf6c00dbea2012f6eb4356749dad7d90e35848973f9a06a43a867c792c9a` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

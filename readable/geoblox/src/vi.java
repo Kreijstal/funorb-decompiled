@@ -71,17 +71,17 @@ final class vi extends hk {
                 var10 = (int[]) (var8.field_b);
                 var9 = var10;
                 var3 = var9;
-                var4 = new rj[var10.length >> 1614960386];
+                var4 = new rj[var10.length >> 2];
                 if (param0 <= 61) {
                   field_H = 120L;
                 }
                 for (var5 = 0; var5 < var4.length; var5++) {
                   var6 = new rj();
                   var4[var5] = var6;
-                  var6.field_d = var3[var5 << -876051902];
-                  var6.field_f = var3[1 + (var5 << 2035283458)];
-                  var6.field_h = var3[2 + (var5 << -585328574)];
-                  var6.field_a = var3[(var5 << -32412094) + 3];
+                  var6.field_d = var3[var5 << 2];
+                  var6.field_f = var3[1 + (var5 << 2)];
+                  var6.field_h = var3[2 + (var5 << 2)];
+                  var6.field_a = var3[(var5 << 2) + 3];
                 }
                 stackIn_16_0 = (rj[]) (var4);
                 decompiledRegionSelector0 = 2;

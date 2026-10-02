@@ -150,13 +150,13 @@ final class qb extends hk {
               } else {
                 var8 = param2.charAt(var7);
                 if (60 == var8) {
-                  var6 = param1.field_c[0] + (var5_int >> -979414712) - -param4.a(param2.substring(0, var7));
+                  var6 = param1.field_c[0] + (var5_int >> 8) - -param4.a(param2.substring(0, var7));
                 }
                 if (var6 == -1) {
                   if (var8 == 32) {
                     var5_int = var5_int + param0;
                   }
-                  param1.field_c[var7] = param1.field_c[0] + (var5_int >> 111500136) + param4.a(param2.substring(0, 1 + var7)) + -param4.a((char) var8);
+                  param1.field_c[var7] = param1.field_c[0] + (var5_int >> 8) + param4.a(param2.substring(0, 1 + var7)) + -param4.a((char) var8);
                 } else {
                   param1.field_c[var7] = var6;
                 }

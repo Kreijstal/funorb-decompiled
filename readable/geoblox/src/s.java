@@ -144,7 +144,7 @@ final class s extends ee implements pe, pl {
             this.b((byte) -108, this.field_J);
             var5 = 4;
             var6 = 200;
-            this.field_K.a(40, var6, (byte) -71, var3, -var6 + 300 >> 717385921);
+            this.field_K.a(40, var6, (byte) -71, var3, -var6 + 300 >> 1);
             this.field_K.field_u = (bb) (this);
             this.b((byte) -63, this.field_K);
             this.a(var3 + (55 + var5), 300, (byte) -104, 0, 0);

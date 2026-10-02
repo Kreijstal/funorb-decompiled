@@ -157,7 +157,7 @@ final class ue {
               var12 = 0;
               var8 = var12;
               L3: while (var12 < var4) {
-                var9 = var16[var12] - -32768 >> 1873540176;
+                var9 = var16[var12] - -32768 >> 16;
                 if (-128 > var9) {
                   param1[var12] = (byte)-128;
                 } else {

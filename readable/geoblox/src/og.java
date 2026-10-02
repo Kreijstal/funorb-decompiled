@@ -29,7 +29,7 @@ final class og extends DualLinkNode {
               var7 = var1 + ' ';
               var1 = var7;
               var3 = 255 & eh.field_d.field_j[var2];
-              var4 = var3 >> -88682940;
+              var4 = var3 >> 4;
               var3 = var3 & 15;
               if (var4 >= 10) {
                 var4 += 55;

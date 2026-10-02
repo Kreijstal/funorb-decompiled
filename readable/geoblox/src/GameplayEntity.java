@@ -48,22 +48,22 @@ final class GameplayEntity extends DualLinkNode {
               if (1 != this.entitySpriteKindId) {
                 vf.spriteScratchRaster.e();
                 SoftwareRasterizer.c();
-                this.entitySprite.c(-this.entitySprite.field_s + vf.spriteScratchRaster.field_s >> 215276737, vf.spriteScratchRaster.field_o + -this.entitySprite.field_o >> 930476833);
+                this.entitySprite.c(-this.entitySprite.field_s + vf.spriteScratchRaster.field_s >> 1, vf.spriteScratchRaster.field_o + -this.entitySprite.field_o >> 1);
                 k.a(0, 0, vf.spriteScratchRaster.field_s, -27085, vf.spriteScratchRaster.field_o);
                 sh.field_y.a(param0 + 16351);
-                vf.spriteScratchRaster.rotateSmooth(vf.spriteScratchRaster.field_s << -24802045, vf.spriteScratchRaster.field_o << 1089501283, rotatedEntityX << 1543501028, rotatedEntityY << -2087203164, (int)(65535.0 * ((double)(-el.gameplaySession.boardAngleRadians + this.spriteAngleRadians) / 6.283185307179586)), 4096);
+                vf.spriteScratchRaster.rotateSmooth(vf.spriteScratchRaster.field_s << 3, vf.spriteScratchRaster.field_o << 3, rotatedEntityX << 4, rotatedEntityY << 4, (int)(65535.0 * ((double)(-el.gameplaySession.boardAngleRadians + this.spriteAngleRadians) / 6.283185307179586)), 4096);
                 break L0;
               }
             }
             if (1 == this.entitySpriteKindId) {
               vf.spriteScratchRaster.e();
               SoftwareRasterizer.c();
-              this.entitySprite.b(-this.entitySprite.field_s + vf.spriteScratchRaster.field_s >> -1223154047, vf.spriteScratchRaster.field_o - this.entitySprite.field_o >> -1804143071, this.interpolatedPaletteColor);
+              this.entitySprite.b(-this.entitySprite.field_s + vf.spriteScratchRaster.field_s >> 1, vf.spriteScratchRaster.field_o - this.entitySprite.field_o >> 1, this.interpolatedPaletteColor);
               k.a(0, 0, vf.spriteScratchRaster.field_s, -27085, vf.spriteScratchRaster.field_o);
               sh.field_y.a(param0 + 16351);
-              vf.spriteScratchRaster.rotateSmooth(vf.spriteScratchRaster.field_s << -1881785341, vf.spriteScratchRaster.field_o << 794425251, rotatedEntityX << 1750603908, rotatedEntityY << -1690760316, (int)(65535.0 * ((double)(-el.gameplaySession.boardAngleRadians + this.spriteAngleRadians) / 6.283185307179586)), 4096);
+              vf.spriteScratchRaster.rotateSmooth(vf.spriteScratchRaster.field_s << 3, vf.spriteScratchRaster.field_o << 3, rotatedEntityX << 4, rotatedEntityY << 4, (int)(65535.0 * ((double)(-el.gameplaySession.boardAngleRadians + this.spriteAngleRadians) / 6.283185307179586)), 4096);
             } else {
-              this.entitySprite.b(-(this.entitySprite.field_s >> 2075460897) + rotatedEntityX, rotatedEntityY + -(this.entitySprite.field_o >> 2079278081));
+              this.entitySprite.b(-(this.entitySprite.field_s >> 1) + rotatedEntityX, rotatedEntityY + -(this.entitySprite.field_o >> 1));
             }
           }
           return;
@@ -75,7 +75,7 @@ final class GameplayEntity extends DualLinkNode {
     final void drawEntityIdOnBoardMask(int param0) {
         vf.spriteScratchRaster.e();
         SoftwareRasterizer.c();
-        this.entitySprite.rotateSmooth(this.entitySprite.field_s << 1057923171, this.entitySprite.field_o << -1595923197, vf.spriteScratchRaster.field_s << -694542845, vf.spriteScratchRaster.field_o << 1500789091, (int)(65535.0 * ((double)this.spriteAngleRadians / 6.283185307179586)), 4096);
+        this.entitySprite.rotateSmooth(this.entitySprite.field_s << 3, this.entitySprite.field_o << 3, vf.spriteScratchRaster.field_s << 3, vf.spriteScratchRaster.field_o << 3, (int)(65535.0 * ((double)this.spriteAngleRadians / 6.283185307179586)), 4096);
         bk.boardOwnershipRaster.e();
         vf.spriteScratchRaster.a(-(vf.spriteScratchRaster.field_s / 2) + (int)this.positionX, (int)this.positionY + -(vf.spriteScratchRaster.field_o / param0), this.entityId - -1);
         sh.field_y.a(255);
@@ -106,28 +106,28 @@ final class GameplayEntity extends DualLinkNode {
             if (2 != this.entitySpriteKindId) {
               vf.spriteScratchRaster.e();
               SoftwareRasterizer.c();
-              this.entitySprite.rotateSmooth(this.entitySprite.field_s << -575346205, this.entitySprite.field_o << 1794565923, vf.spriteScratchRaster.field_s << 776884707, vf.spriteScratchRaster.field_o << -188441693, (int)(((double)this.spriteAngleRadians - (double)boardAngle / 6.283185307179586) * 65535.0), 4096);
+              this.entitySprite.rotateSmooth(this.entitySprite.field_s << 3, this.entitySprite.field_o << 3, vf.spriteScratchRaster.field_s << 3, vf.spriteScratchRaster.field_o << 3, (int)(((double)this.spriteAngleRadians - (double)boardAngle / 6.283185307179586) * 65535.0), 4096);
               break L0;
             }
           }
           if (this.entitySpriteKindId != 1) {
             vf.spriteScratchRaster.e();
             SoftwareRasterizer.c();
-            this.entitySprite.b(-(this.entitySprite.field_s >> -1792337183) + (vf.spriteScratchRaster.field_s >> 339525793), (vf.spriteScratchRaster.field_o >> -1789028991) - (this.entitySprite.field_o >> -1848667231));
+            this.entitySprite.b(-(this.entitySprite.field_s >> 1) + (vf.spriteScratchRaster.field_s >> 1), (vf.spriteScratchRaster.field_o >> 1) - (this.entitySprite.field_o >> 1));
           } else {
             wl.field_a.e();
             SoftwareRasterizer.c();
-            this.entitySprite.b(-this.entitySprite.field_s + wl.field_a.field_s >> -1143695199, -this.entitySprite.field_o + wl.field_a.field_o >> -1986067391, this.interpolatedPaletteColor);
+            this.entitySprite.b(-this.entitySprite.field_s + wl.field_a.field_s >> 1, -this.entitySprite.field_o + wl.field_a.field_o >> 1, this.interpolatedPaletteColor);
             vf.spriteScratchRaster.e();
             SoftwareRasterizer.c();
-            wl.field_a.rotateSmooth(wl.field_a.field_s << 992968611, wl.field_a.field_o << 1388040003, vf.spriteScratchRaster.field_s << -967057565, vf.spriteScratchRaster.field_o << 1628733635, (int)(65535.0 * (-((double)boardAngle / 6.283185307179586) + (double)this.spriteAngleRadians)), 4096);
+            wl.field_a.rotateSmooth(wl.field_a.field_s << 3, wl.field_a.field_o << 3, vf.spriteScratchRaster.field_s << 3, vf.spriteScratchRaster.field_o << 3, (int)(65535.0 * (-((double)boardAngle / 6.283185307179586) + (double)this.spriteAngleRadians)), 4096);
           }
         }
         sentinelDivisionGuard = 2 % ((-23 - param0) / 60);
         sh.field_y.a(255);
-        entityDrawX = rotatedEntityX + -(vf.spriteScratchRaster.field_s >> -2050048063);
-        entityDrawY = rotatedEntityY - (vf.spriteScratchRaster.field_o >> -2142432031);
-        fadeOpacity = (int)(0.5 + Math.sin((double)(this.remainingLifetimeTicks + -this.initialLifetimeTicks + this.initialLifetimeTicks >> 1305235300)) * (double)(100 * (this.initialLifetimeTicks - this.remainingLifetimeTicks)) / (double)this.initialLifetimeTicks) - (-(100 * (this.initialLifetimeTicks - this.remainingLifetimeTicks) / this.initialLifetimeTicks) - 56);
+        entityDrawX = rotatedEntityX + -(vf.spriteScratchRaster.field_s >> 1);
+        entityDrawY = rotatedEntityY - (vf.spriteScratchRaster.field_o >> 1);
+        fadeOpacity = (int)(0.5 + Math.sin((double)(this.remainingLifetimeTicks + -this.initialLifetimeTicks + this.initialLifetimeTicks >> 4)) * (double)(100 * (this.initialLifetimeTicks - this.remainingLifetimeTicks)) / (double)this.initialLifetimeTicks) - (-(100 * (this.initialLifetimeTicks - this.remainingLifetimeTicks) / this.initialLifetimeTicks) - 56);
         if (fadeOpacity > 256) {
           fadeOpacity = 256;
         } else {
@@ -162,8 +162,8 @@ final class GameplayEntity extends DualLinkNode {
 
     private final void updatePaletteChannelDeltas(int param0) {
         int var2 = -121 % ((-63 - param0) / 39);
-        this.paletteRedDelta = -(jg.field_h[GameScreen.selectedThemeId][this.animationFrameIndex] >> 1643839728 & 255) + (255 & jg.field_h[GameScreen.selectedThemeId][(this.animationFrameIndex + 1) % 7] >> 2056894992);
-        this.paletteGreenDelta = -(jg.field_h[GameScreen.selectedThemeId][this.animationFrameIndex] >> -1693987608 & 255) + ((jg.field_h[GameScreen.selectedThemeId][(1 + this.animationFrameIndex) % 7] & 65448) >> -742490392);
+        this.paletteRedDelta = -(jg.field_h[GameScreen.selectedThemeId][this.animationFrameIndex] >> 16 & 255) + (255 & jg.field_h[GameScreen.selectedThemeId][(this.animationFrameIndex + 1) % 7] >> 16);
+        this.paletteGreenDelta = -(jg.field_h[GameScreen.selectedThemeId][this.animationFrameIndex] >> 8 & 255) + ((jg.field_h[GameScreen.selectedThemeId][(1 + this.animationFrameIndex) % 7] & 65448) >> 8);
         this.paletteBlueDelta = -(jg.field_h[GameScreen.selectedThemeId][this.animationFrameIndex] & 255) + (jg.field_h[GameScreen.selectedThemeId][(1 + this.animationFrameIndex) % 7] & 255);
     }
 
@@ -179,8 +179,8 @@ final class GameplayEntity extends DualLinkNode {
         int controlFlowGuard;
         int[] framebufferPixels;
         controlFlowGuard = Geoblox.field_C;
-        clipLeftX = (int)this.positionX - ((vf.spriteScratchRaster.field_s >> -659585983) - -4);
-        clipTopY = -4 + -(vf.spriteScratchRaster.field_o >> -1594034399) + (int)this.positionY;
+        clipLeftX = (int)this.positionX - ((vf.spriteScratchRaster.field_s >> 1) - -4);
+        clipTopY = -4 + -(vf.spriteScratchRaster.field_o >> 1) + (int)this.positionY;
         clippedWidth = 8 + vf.spriteScratchRaster.field_s;
         clippedHeight = 8 + vf.spriteScratchRaster.field_o;
         if (clipLeftX < 0) {
@@ -296,13 +296,13 @@ final class GameplayEntity extends DualLinkNode {
     final void drawEntityIdOnPointerMask(byte param0) {
         vf.spriteScratchRaster.e();
         SoftwareRasterizer.c();
-        this.entitySprite.rotateSmooth(this.entitySprite.field_s << 704850723, this.entitySprite.field_o << -2106424349, vf.spriteScratchRaster.field_s << -1535551901, vf.spriteScratchRaster.field_o << 2122077027, (int)((double)(this.spriteAngleRadians - el.gameplaySession.boardAngleRadians) / 6.283185307179586 * 65535.0), 4096);
+        this.entitySprite.rotateSmooth(this.entitySprite.field_s << 3, this.entitySprite.field_o << 3, vf.spriteScratchRaster.field_s << 3, vf.spriteScratchRaster.field_o << 3, (int)((double)(this.spriteAngleRadians - el.gameplaySession.boardAngleRadians) / 6.283185307179586 * 65535.0), 4096);
         if (param0 <= 46) {
             this.paletteBlueDelta = 17;
         }
         vf.spriteScratchRaster.g(this.entityId - -1);
         SecondaryDeque.contactProbeRaster.e();
-        vf.spriteScratchRaster.a(-SecondaryDeque.contactProbeOffsetX + -(vf.spriteScratchRaster.field_s >> 811012289) + ng.field_G, -(vf.spriteScratchRaster.field_o >> 2111671105) + (td.field_E + -SecondaryDeque.contactProbeOffsetY), 1 + this.entityId);
+        vf.spriteScratchRaster.a(-SecondaryDeque.contactProbeOffsetX + -(vf.spriteScratchRaster.field_s >> 1) + ng.field_G, -(vf.spriteScratchRaster.field_o >> 1) + (td.field_E + -SecondaryDeque.contactProbeOffsetY), 1 + this.entityId);
         sh.field_y.a(255);
     }
 
@@ -374,7 +374,7 @@ final class GameplayEntity extends DualLinkNode {
             }
           } else {
             paletteBlendFraction = 0.019999999552965164f * (float)(this.entityUpdateTick % 50);
-            this.interpolatedPaletteColor = (int)((float)this.paletteBlueDelta * paletteBlendFraction) + jg.field_h[GameScreen.selectedThemeId][this.animationFrameIndex] + (((int)(paletteBlendFraction * (float)this.paletteRedDelta) << 1248854992) + ((int)((float)this.paletteGreenDelta * paletteBlendFraction) << 461902984));
+            this.interpolatedPaletteColor = (int)((float)this.paletteBlueDelta * paletteBlendFraction) + jg.field_h[GameScreen.selectedThemeId][this.animationFrameIndex] + (((int)(paletteBlendFraction * (float)this.paletteRedDelta) << 16) + ((int)((float)this.paletteGreenDelta * paletteBlendFraction) << 8));
             if (this.entityUpdateTick % 50 == 49) {
               this.animationFrameIndex = this.animationFrameIndex + 1;
               this.animationFrameIndex = this.animationFrameIndex % 7;
@@ -627,12 +627,12 @@ final class GameplayEntity extends DualLinkNode {
         if (this.entitySpriteKindId == 1) {
             vf.spriteScratchRaster.e();
             SoftwareRasterizer.c();
-            this.entitySprite.b(vf.spriteScratchRaster.field_s + -this.entitySprite.field_s >> -936547679, -this.entitySprite.field_o + vf.spriteScratchRaster.field_o >> 1499284289, this.interpolatedPaletteColor);
+            this.entitySprite.b(vf.spriteScratchRaster.field_s + -this.entitySprite.field_s >> 1, -this.entitySprite.field_o + vf.spriteScratchRaster.field_o >> 1, this.interpolatedPaletteColor);
             oc.boardSceneRaster.e();
-            vf.spriteScratchRaster.rotateSmooth(vf.spriteScratchRaster.field_s << 286727555, vf.spriteScratchRaster.field_o << 1802933699, (int)this.positionX << 1890832772, (int)this.positionY << -1798453980, (int)((double)this.spriteAngleRadians / 6.283185307179586 * 65535.0), 4096);
+            vf.spriteScratchRaster.rotateSmooth(vf.spriteScratchRaster.field_s << 3, vf.spriteScratchRaster.field_o << 3, (int)this.positionX << 4, (int)this.positionY << 4, (int)((double)this.spriteAngleRadians / 6.283185307179586 * 65535.0), 4096);
         } else {
             oc.boardSceneRaster.e();
-            this.entitySprite.rotateSmooth(this.entitySprite.field_s << 110214051, this.entitySprite.field_o << 1713102179, (int)this.positionX << 1221916132, (int)this.positionY << 1904089668, (int)((double)this.spriteAngleRadians / 6.283185307179586 * 65535.0), 4096);
+            this.entitySprite.rotateSmooth(this.entitySprite.field_s << 3, this.entitySprite.field_o << 3, (int)this.positionX << 4, (int)this.positionY << 4, (int)((double)this.spriteAngleRadians / 6.283185307179586 * 65535.0), 4096);
         }
     }
 
@@ -641,7 +641,7 @@ final class GameplayEntity extends DualLinkNode {
             GameplayEntity var3 = (GameplayEntity) null;
             this.removeRelatedEntity((GameplayEntity) null, -128);
         }
-        this.entitySprite.rotateSmooth(this.entitySprite.field_s << 1915952803, this.entitySprite.field_o << -752445533, (int)this.positionX << -1251278300, (int)this.positionY << 67106404, (int)((double)this.spriteAngleRadians / 6.283185307179586 * 65535.0), 4096);
+        this.entitySprite.rotateSmooth(this.entitySprite.field_s << 3, this.entitySprite.field_o << 3, (int)this.positionX << 4, (int)this.positionY << 4, (int)((double)this.spriteAngleRadians / 6.283185307179586 * 65535.0), 4096);
     }
 
     GameplayEntity(int param0, int param1, int param2, float param3, float param4, float param5, float param6, float param7, float param8, int param9) {

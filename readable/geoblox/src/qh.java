@@ -215,7 +215,7 @@ final class qh extends ee implements pe, pl, ta {
         this.b((byte) -73, this.field_E);
         int var6 = 4;
         int var7 = 200;
-        this.field_D.a(40, var7, (byte) -53, var3, -var7 + 496 >> 1424677729);
+        this.field_D.a(40, var7, (byte) -53, var3, -var7 + 496 >> 1);
         this.field_L.a(40, 60, (byte) -118, var3 + 15, 3 + var6);
         this.field_L.field_u = (bb) (this);
         this.field_D.field_u = (bb) (this);
@@ -280,7 +280,7 @@ final class qh extends ee implements pe, pl, ta {
           if (param4 > -123) {
             discarded$1 = this.b(false);
           }
-          var7.a(15, 15, (byte) -22, var8.field_m + (-15 + var8.field_h >> 503004417), 3 + var8.field_r + var8.field_v);
+          var7.a(15, 15, (byte) -22, var8.field_m + (-15 + var8.field_h >> 1), 3 + var8.field_r + var8.field_v);
           stackIn_3_0 = var8.field_h;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

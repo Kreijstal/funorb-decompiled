@@ -95,7 +95,7 @@ final class hj {
               var13 = var17;
               var6_ref_int__ = var13;
               for (var7 = 0; var7 < var3; var7++) {
-                var6_ref_int__[var7] = lb.a(cd.a(var15[var7] << -1753349800, -16777216), cm.field_j[cd.a((int) var21[var7], 255)]);
+                var6_ref_int__[var7] = lb.a(cd.a(var15[var7] << 24, -16777216), cm.field_j[cd.a((int) var21[var7], 255)]);
               }
               var1[var2] = (Sprite) ((Object) new il(pg.field_b, dd.field_C, GameplaySession.field_m[var2], md.field_e[var2], DualLinkNode.field_j[var2], hl.field_K[var2], var17));
               var2++;

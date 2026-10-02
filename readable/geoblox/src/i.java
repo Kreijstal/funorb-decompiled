@@ -189,7 +189,7 @@ final class i {
                         var17 = ch.field_d[var16];
                         L10: while (true) {
                           L11: {
-                            if (var17 >> -961128636 != 0) {
+                            if (var17 >> 4 != 0) {
                               var16--;
                               stackIn_39_0 = var16;
 
@@ -208,7 +208,7 @@ final class i {
                                 }
                               }
                             }
-                            stackIn_39_0 = (var16 << 1208896516) + var17;
+                            stackIn_39_0 = (var16 << 4) + var17;
                           }
                           var18 = stackIn_39_0;
                           pj.field_i[var18] = var8;

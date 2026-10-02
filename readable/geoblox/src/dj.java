@@ -733,7 +733,7 @@ class dj extends hk {
               var3 = var9.a((byte) 119, (el) (this));
               var4 = var3.a(96);
               var5 = var9.a((el) (this), -1);
-              var6 = var9.a(1) >> -2144366815;
+              var6 = var9.a(1) >> 1;
               if (var4 >= var5 + -var6) {
                 var7 = this.field_k + var3.a(this.field_H, 120);
                 if (var7 > var5 - var6) {

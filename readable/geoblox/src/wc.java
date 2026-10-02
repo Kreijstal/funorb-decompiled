@@ -76,8 +76,8 @@ final class wc extends IntrusiveNode {
         int sentinelDivisionGuard = -71 / ((-59 - methodGuard) / 47);
         float normalizedRadiusSquared = maxAttachedRadiusSquared / 52900.0f;
         int tintPaletteIndex = (int)(0.5f + 4.0f * normalizedRadiusSquared);
-        md.avatarTintRedDelta = (float)(-(rj.avatarTintColor >> 1885504112 & 255) + ((uf.avatarTintPalette[tintPaletteIndex] & 16722826) >> -1433217648));
-        fe.avatarTintGreenDelta = (float)((uf.avatarTintPalette[tintPaletteIndex] >> -1928984216 & 255) + -(rj.avatarTintColor >> -846446392 & 255));
+        md.avatarTintRedDelta = (float)(-(rj.avatarTintColor >> 16 & 255) + ((uf.avatarTintPalette[tintPaletteIndex] & 16722826) >> 16));
+        fe.avatarTintGreenDelta = (float)((uf.avatarTintPalette[tintPaletteIndex] >> 8 & 255) + -(rj.avatarTintColor >> 8 & 255));
         uk.avatarTintBlueDelta = (float)(-(255 & rj.avatarTintColor) + (255 & uf.avatarTintPalette[tintPaletteIndex]));
         jf.avatarTintFadeTicks = 50;
     }

@@ -211,7 +211,7 @@ final class uk extends TextInputValidator {
         try {
           hl.field_D[0] = bh.field_d.nextInt();
           hl.field_D[1] = bh.field_d.nextInt();
-          hl.field_D[2] = (int)(ak.field_a >> -752938848);
+          hl.field_D[2] = (int)(ak.field_a >> 32);
           hl.field_D[3] = (int)ak.field_a;
           fc.field_d.field_f = 0;
           fc.field_d.c((byte) 95, hl.field_D[0]);
