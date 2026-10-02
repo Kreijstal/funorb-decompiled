@@ -663,11 +663,7 @@ public final class Geoblox extends wf {
     final void c(boolean param0) {
         int fieldTemp$0 = 0;
         boolean discarded$1 = false;
-        Object stackIn_8_0 = null;
-        Object stackIn_9_0 = null;
         boolean stackIn_9_1 = false;
-        Object stackIn_13_0 = null;
-        Object stackIn_14_0 = null;
         boolean stackIn_14_1 = false;
         boolean stackIn_63_0 = false;
         boolean stackIn_91_0 = false;
@@ -684,24 +680,18 @@ public final class Geoblox extends wf {
             vl.field_n = null;
           }
         }
-        stackIn_8_0 = this;
 
         if (null == vl.field_n) {
-          stackIn_9_0 = this;
           stackIn_9_1 = false;
         } else {
-          stackIn_9_0 = this;
           stackIn_9_1 = true;
         }
         this.b(stackIn_9_1, 19660);
         if (cf.field_k) {
-          stackIn_13_0 = this;
 
           if (param0) {
-            stackIn_14_0 = this;
             stackIn_14_1 = false;
           } else {
-            stackIn_14_0 = this;
             stackIn_14_1 = true;
           }
           this.f(stackIn_14_1);

@@ -532,8 +532,6 @@ final class d implements Runnable {
         int var5_int = 0;
         Exception exception = null;
         Throwable throwable = null;
-        Object stackIn_2_0 = null;
-        Object stackIn_3_0 = null;
         boolean stackIn_3_1 = false;
         Throwable decompiledCaughtException = null;
         ie var6 = null;
@@ -546,13 +544,10 @@ final class d implements Runnable {
         this.field_h = false;
         this.field_c = false;
         field_p = param1;
-        stackIn_2_0 = this;
 
         if (!param3) {
-          stackIn_3_0 = this;
           stackIn_3_1 = false;
         } else {
-          stackIn_3_0 = this;
           stackIn_3_1 = true;
         }
         ((d) (this)).field_h = stackIn_3_1;

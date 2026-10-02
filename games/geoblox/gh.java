@@ -638,30 +638,12 @@ final class gh {
     final void a(int param0) {
         int fieldTemp$0 = 0;
         boolean stackIn_233_0 = false;
-        Object stackIn_246_0 = null;
-        Object stackIn_249_0 = null;
-        Object stackIn_251_0 = null;
-        Object stackIn_252_0 = null;
         boolean stackIn_252_1 = false;
-        Object stackIn_303_0 = null;
-        Object stackIn_304_0 = null;
         boolean stackIn_304_1 = false;
-        Object stackIn_356_0 = null;
-        Object stackIn_358_0 = null;
-        Object stackIn_359_0 = null;
         boolean stackIn_359_1 = false;
-        Object stackIn_387_0 = null;
-        Object stackIn_388_0 = null;
         boolean stackIn_388_1 = false;
-        Object stackIn_407_0 = null;
-        Object stackIn_408_0 = null;
         boolean stackIn_408_1 = false;
-        Object stackIn_413_0 = null;
-        Object stackIn_415_0 = null;
-        Object stackIn_416_0 = null;
         boolean stackIn_416_1 = false;
-        Object stackIn_454_0 = null;
-        Object stackIn_455_0 = null;
         boolean stackIn_455_1 = false;
         int stackIn_464_0 = 0;
         int stackIn_464_1 = 0;
@@ -1011,24 +993,17 @@ final class gh {
               ld.a(310, 320, 123, 100 + 100 * ji.field_h);
             }
             L50: {
-              stackIn_251_0 = this;
 
               if (!fa.field_a) {
-                stackIn_251_0 = this;
 
                 if (a.field_d.c(13519)) {
-                  stackIn_246_0 = this;
-                  stackIn_251_0 = this;
 
                   if (0 < ul.field_b) {
-                    stackIn_249_0 = this;
-                    stackIn_252_0 = this;
                     stackIn_252_1 = true;
                     break L50;
                   }
                 }
               }
-              stackIn_252_0 = this;
               stackIn_252_1 = false;
             }
             L52: {
@@ -1090,13 +1065,10 @@ final class gh {
               if (te.field_a > 0) {
                 pk.field_r = pk.field_r.substring(1) + te.field_a;
                 if (pk.field_r.equalsIgnoreCase("fog")) {
-                  stackIn_303_0 = this;
 
                   if (this.field_s) {
-                    stackIn_304_0 = this;
                     stackIn_304_1 = false;
                   } else {
-                    stackIn_304_0 = this;
                     stackIn_304_1 = true;
                   }
                   ((gh) (this)).field_s = stackIn_304_1;
@@ -1157,14 +1129,10 @@ final class gh {
                 }
               }
               if (jg.field_g == ki.field_d) {
-                stackIn_358_0 = this;
 
                 if (this.field_E) {
-                  stackIn_359_0 = this;
                   stackIn_359_1 = false;
                 } else {
-                  stackIn_356_0 = this;
-                  stackIn_359_0 = this;
                   stackIn_359_1 = true;
                 }
                 ((gh) (this)).field_E = stackIn_359_1;
@@ -1199,13 +1167,10 @@ final class gh {
                 }
               }
               if (32 == ki.field_d) {
-                stackIn_387_0 = this;
 
                 if (this.field_Q) {
-                  stackIn_388_0 = this;
                   stackIn_388_1 = false;
                 } else {
-                  stackIn_388_0 = this;
                   stackIn_388_1 = true;
                 }
                 ((gh) (this)).field_Q = stackIn_388_1;
@@ -1225,26 +1190,19 @@ final class gh {
               }
               if (ki.field_d == 1) {
                 this.field_K = true;
-                stackIn_407_0 = this;
 
                 if (this.field_j) {
-                  stackIn_408_0 = this;
                   stackIn_408_1 = false;
                 } else {
-                  stackIn_408_0 = this;
                   stackIn_408_1 = true;
                 }
                 ((gh) (this)).field_j = stackIn_408_1;
               }
               if (2 == ki.field_d) {
-                stackIn_415_0 = this;
 
                 if (this.field_N) {
-                  stackIn_416_0 = this;
                   stackIn_416_1 = false;
                 } else {
-                  stackIn_413_0 = this;
-                  stackIn_416_0 = this;
                   stackIn_416_1 = true;
                 }
                 ((gh) (this)).field_N = stackIn_416_1;
@@ -1294,13 +1252,10 @@ final class gh {
                 cd.a((byte) 82);
               }
               if (ki.field_d == 12) {
-                stackIn_454_0 = this;
 
                 if (this.field_V) {
-                  stackIn_455_0 = this;
                   stackIn_455_1 = false;
                 } else {
-                  stackIn_455_0 = this;
                   stackIn_455_1 = true;
                 }
                 ((gh) (this)).field_V = stackIn_455_1;

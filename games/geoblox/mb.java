@@ -21,8 +21,6 @@ final class mb {
 
     mb(String param0, boolean param1) {
         RuntimeException var3 = null;
-        Object stackIn_5_0 = null;
-        Object stackIn_6_0 = null;
         boolean stackIn_6_1 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -35,13 +33,10 @@ final class mb {
           if (null == this.field_d) {
             this.field_d = "";
           }
-          stackIn_5_0 = this;
 
           if (!param1) {
-            stackIn_6_0 = this;
             stackIn_6_1 = false;
           } else {
-            stackIn_6_0 = this;
             stackIn_6_1 = true;
           }
           ((mb) (this)).field_c = stackIn_6_1;

@@ -1202,7 +1202,6 @@ final class kj extends ia {
     }
 
     private final void c(int param0, int param1, int param2, int param3) {
-        Object stackIn_15_0 = null;
         pc stackIn_15_1 = null;
         int stackIn_15_2 = 0;
         Object stackIn_16_0;
@@ -1268,7 +1267,6 @@ final class kj extends ia {
               var7.field_u = kl.a(var6, this.a(92, var7), this.a((byte) 117, var7), this.a(var7, 761736646));
             } else {
               var7.field_u = kl.a(var6, this.a(83, var7), 0, this.a(var7, 761736646));
-              stackIn_15_0 = this;
 
               stackIn_15_1 = (pc) (var7);
 

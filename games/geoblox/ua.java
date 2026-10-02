@@ -414,8 +414,6 @@ final class ua extends hf {
         float[] stackIn_43_0 = null;
         float[] stackIn_46_0 = null;
         int[] stackIn_49_0 = null;
-        Object stackIn_110_0 = null;
-        Object stackIn_111_0 = null;
         boolean stackIn_111_1 = false;
         int var2;
         int var3;
@@ -737,13 +735,10 @@ final class ua extends hf {
         field_B = var18;
         this.field_M = var4;
         this.field_m = var12 - (var4 >> 1);
-        stackIn_110_0 = this;
 
         if (var15 == 0) {
-          stackIn_111_0 = this;
           stackIn_111_1 = false;
         } else {
-          stackIn_111_0 = this;
           stackIn_111_1 = true;
         }
         ((ua) (this)).field_i = stackIn_111_1;

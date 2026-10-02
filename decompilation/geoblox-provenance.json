@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "f9f0838416053d3f6189ae5990365d73b7be6596",
+      "commit": "049d323ff4d63b141315dba1fbf573abd4f5f735",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "4812cac052bc37ad4cf1a36f907bff3dce8a86535f2379f7d7cf2b60bb9f1053",
-        "reproduce": "git archive --format=tar f9f0838416053d3f6189ae5990365d73b7be6596 | sha256sum",
+        "sha256": "6d0fdd923685d9ede67052a8a1c826a5082ef6c7a961d9ce1cd727a805a2bc2e",
+        "reproduce": "git archive --format=tar 049d323ff4d63b141315dba1fbf573abd4f5f735 | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
@@ -93,9 +93,9 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "e9497d12a451095457234cd1abee1018e845505bf5901b14c7f0eb36988c6c49",
-  "previousSourceTreeSha256": "084346454dabfd60bbdcd5e9edfa05ac3786798eee83a6ce673176cfca80e8af",
-  "changedJavaFiles": 2,
+  "sourceTreeSha256": "b18afdee6bf7d59ae30800e398696f8f0319943a75296c5608fe7708968c7bf1",
+  "previousSourceTreeSha256": "e9497d12a451095457234cd1abee1018e845505bf5901b14c7f0eb36988c6c49",
+  "changedJavaFiles": 19,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
@@ -1478,6 +1478,62 @@
     "nativeDispatcherShutdownTraceSha256": "86554dba87ac6740912bf88fcd328c871758629250b6277e4223e4955bfcfb29",
     "cleanSourceArchiveByteExact": true,
     "diagnosticsUnchanged": true,
-    "scope": "Original fixed transformed bytecode is unchanged. Complete parse/path proof gates both while-to-for renderers; protected backedges remain explicit. Native counters verify independent visitation, caught/uncaught failures and throwable identity; actual game fixtures verify all cache entries including null/failed-close handles. Preferences filesystem search, Windows URL launch and real-device behavior remain outside the probes; whole-game equivalence remains unverified."
+    "scope": "Original fixed transformed bytecode is unchanged. Complete parse/path proof gates both while-to-for renderers; protected backedges remain explicit. Native counters verify independent visitation, caught/uncaught failures and throwable identity; actual game fixtures verify all cache entries including null/failed-close handles. Preferences filesystem search, Windows URL launch and real-device behavior remain outside the probes; whole-game equivalence remains unverified.",
+    "historicalPassVersion": 45
+  },
+  "unreadReceiverSnapshots": {
+    "javaToolsCommit": "049d323ff4d63b141315dba1fbf573abd4f5f735",
+    "sourceArchiveSha256": "6d0fdd923685d9ede67052a8a1c826a5082ef6c7a961d9ce1cd727a805a2bc2e",
+    "defaultEnabled": true,
+    "bytecodeChanged": false,
+    "sourceBodyEditedByHand": false,
+    "allocatorIdentitiesRequired": true,
+    "onlyUnreadObjectThisOrNullStoresRemoved": true,
+    "allIdentifierTokensAccountedFor": true,
+    "readsCastsEffectsShadowingAndUnknownSyntaxRefused": true,
+    "handlerAndMonitorScopesUnchanged": true,
+    "changedJavaFiles": [
+      "Geoblox.java",
+      "bj.java",
+      "ce.java",
+      "d.java",
+      "dj.java",
+      "el.java",
+      "f.java",
+      "gh.java",
+      "hd.java",
+      "ka.java",
+      "kj.java",
+      "la.java",
+      "mb.java",
+      "pf.java",
+      "rl.java",
+      "si.java",
+      "tg.java",
+      "ua.java",
+      "wf.java"
+    ],
+    "sourceLinesBefore": 85779,
+    "sourceLinesAfter": 85591,
+    "sourceLinesRemoved": 188,
+    "sourceDeclarationsBefore": 20708,
+    "sourceDeclarationsAfter": 20633,
+    "receiverLocalsRemoved": 75,
+    "sourceReferenceOccurrencesBefore": 129679,
+    "sourceReferenceOccurrencesAfter": 129491,
+    "removedReceiverStoreReferences": 113,
+    "removedObjectTypeReferences": 75,
+    "sourceDeclarationOrdinalsMigrated": 293,
+    "allSurvivingBindingsPreservedAfterExplicitRemovalAttribution": true,
+    "duplicateLocalMethodWgFinalizeFileByteExact": true,
+    "overrideRelationshipsPreserved": 388,
+    "genericEmitterTestGroups": 33,
+    "nativeEmitterComparisons": 42993,
+    "nativeReceiverCleanupComparisons": 96,
+    "genericExceptionExitGroups": 8,
+    "genericAdditionalFeatureAssertions": 77,
+    "cleanSourceArchiveByteExact": true,
+    "diagnosticsUnchanged": true,
+    "scope": "Cleanup removes only unread allocator-owned Object slots whose sole stores are this/null. All75 Object declaration-type references and113 dead local stores are explicitly attributed; surviving bindings and override rows are unchanged after293 ordinal migrations. Generic native checks preserve effects, exceptions, finally priority and locks. Fixed303 transformed classes are unchanged; current readable/native game checks belong to the single readable manifest. Whole-game equivalence remains unverified."
   }
 }

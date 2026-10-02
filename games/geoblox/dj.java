@@ -229,11 +229,7 @@ class dj extends hk {
     }
 
     final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, el param6) {
-        Object stackIn_4_0 = null;
-        Object stackIn_5_0 = null;
         int stackIn_5_1 = 0;
-        Object stackIn_7_0 = null;
-        Object stackIn_8_0 = null;
         boolean stackIn_8_1 = false;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -248,24 +244,18 @@ class dj extends hk {
           if (super.a(param0, 104, param2, param3, param4, param5, param6)) {
             if (this.field_q instanceof cc) {
               var8_int = ((cc) ((Object) this.field_q)).a((el) (this), qa.field_a, -15539, param0, ue.field_e, param2);
-              stackIn_4_0 = this;
 
               if (var8_int != -1) {
-                stackIn_5_0 = this;
                 stackIn_5_1 = var8_int;
               } else {
-                stackIn_5_0 = this;
                 stackIn_5_1 = 0;
               }
               this.a(stackIn_5_1, (byte) -123);
               var8_long = oa.a(-12520);
-              stackIn_7_0 = this;
 
               if (var8_long - this.field_P >= 250L) {
-                stackIn_8_0 = this;
                 stackIn_8_1 = false;
               } else {
-                stackIn_8_0 = this;
                 stackIn_8_1 = true;
               }
               ((dj) (this)).field_G = stackIn_8_1;
@@ -400,11 +390,7 @@ class dj extends hk {
 
     final boolean a(int param0, int param1, char param2, el param3) {
         int dupTemp$0 = 0;
-        Object stackIn_47_0 = null;
-        Object stackIn_48_0 = null;
         int stackIn_48_1 = 0;
-        Object stackIn_54_0 = null;
-        Object stackIn_55_0 = null;
         int stackIn_55_1 = 0;
         RuntimeException stackIn_81_0 = null;
         StringBuilder stackIn_81_1 = null;
@@ -468,13 +454,10 @@ class dj extends hk {
               }
               if (param0 == 96) {
                 if (0 < this.field_H) {
-                  stackIn_54_0 = this;
 
                   if (!kj.field_o[82]) {
-                    stackIn_55_0 = this;
                     stackIn_55_1 = this.field_H - 1;
                   } else {
-                    stackIn_55_0 = this;
                     stackIn_55_1 = this.j((byte) 77);
                   }
                   this.a(stackIn_55_1, (byte) -126);
@@ -483,13 +466,10 @@ class dj extends hk {
               } else {
                 if (param0 == 97) {
                   if (this.field_H < this.field_s.length()) {
-                    stackIn_47_0 = this;
 
                     if (!kj.field_o[82]) {
-                      stackIn_48_0 = this;
                       stackIn_48_1 = this.field_H + 1;
                     } else {
-                      stackIn_48_0 = this;
                       stackIn_48_1 = this.h((byte) -57);
                     }
                     this.a(stackIn_48_1, (byte) -125);

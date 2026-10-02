@@ -172,7 +172,6 @@ abstract class ka {
     final void a(boolean param0) {
         int var2;
         int var3;
-        Object stackIn_16_0 = null;
         int stackIn_16_1 = 0;
         int stackIn_16_2 = 0;
         Object stackIn_17_0;
@@ -186,7 +185,6 @@ abstract class ka {
             this.field_b = var2;
             if (var2 != -1) {
               this.field_g = true;
-              stackIn_16_0 = this;
 
               stackIn_16_1 = var2;
 

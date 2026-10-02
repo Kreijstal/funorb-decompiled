@@ -797,19 +797,11 @@ final class pf extends ee implements ga, pl {
         super(0, 0, 310, 190, (dh) null);
         hd dupTemp$0 = null;
         hd dupTemp$1 = null;
-        Object stackIn_3_0 = null;
-        Object stackIn_4_0 = null;
         boolean stackIn_4_1 = false;
-        Object stackIn_6_0 = null;
-        Object stackIn_7_0 = null;
         boolean stackIn_7_1 = false;
-        Object stackIn_9_0 = null;
-        Object stackIn_10_0 = null;
         boolean stackIn_10_1 = false;
-        Object stackIn_18_0 = null;
         hk stackIn_18_1 = null;
         hk stackIn_18_2 = null;
-        Object stackIn_19_0 = null;
         hk stackIn_19_1 = null;
         hk stackIn_19_2 = null;
         String stackIn_19_3 = null;
@@ -830,34 +822,25 @@ final class pf extends ee implements ga, pl {
         hd var12 = null;
         hd var13 = null;
         try {
-          stackIn_3_0 = this;
 
           if (!param3) {
-            stackIn_4_0 = this;
             stackIn_4_1 = false;
           } else {
-            stackIn_4_0 = this;
             stackIn_4_1 = true;
           }
           ((pf) (this)).field_C = stackIn_4_1;
           this.field_L = param1;
-          stackIn_6_0 = this;
 
           if (!param2) {
-            stackIn_7_0 = this;
             stackIn_7_1 = false;
           } else {
-            stackIn_7_0 = this;
             stackIn_7_1 = true;
           }
           ((pf) (this)).field_N = stackIn_7_1;
-          stackIn_9_0 = this;
 
           if (!param4) {
-            stackIn_10_0 = this;
             stackIn_10_1 = false;
           } else {
-            stackIn_10_0 = this;
             stackIn_10_1 = true;
           }
           L3: {
@@ -875,19 +858,16 @@ final class pf extends ee implements ga, pl {
           this.field_P = (dj) ((Object) new hc("", (bb) (this), 20));
           if (!this.field_N) {
             this.field_E = new hk(k.field_k, (bb) null);
-            stackIn_18_0 = this;
 
             stackIn_18_1 = null;
 
             stackIn_18_2 = null;
 
             if (this.field_I) {
-              stackIn_19_0 = this;
               stackIn_19_1 = null;
               stackIn_19_2 = null;
               stackIn_19_3 = ok.field_d;
             } else {
-              stackIn_19_0 = this;
               stackIn_19_1 = null;
               stackIn_19_2 = null;
               stackIn_19_3 = ll.field_b;

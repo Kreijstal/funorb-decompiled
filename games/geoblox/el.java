@@ -119,8 +119,6 @@ class el extends hf {
         int stackIn_4_0 = 0;
         int stackIn_5_0 = 0;
         int stackIn_5_1 = 0;
-        Object stackIn_9_0 = null;
-        Object stackIn_10_0 = null;
         boolean stackIn_10_1 = false;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -145,13 +143,10 @@ class el extends hf {
           }
           L1: {
             if (stackIn_5_0 == stackIn_5_1) {
-              stackIn_9_0 = this;
 
               if (var5_int == 0) {
-                stackIn_10_0 = this;
                 stackIn_10_1 = false;
               } else {
-                stackIn_10_0 = this;
                 stackIn_10_1 = true;
               }
               ((el) (this)).field_l = stackIn_10_1;

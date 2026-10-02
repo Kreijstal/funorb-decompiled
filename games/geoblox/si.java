@@ -429,7 +429,6 @@ final class si {
 
     final si a(dm[] param0, boolean param1) {
         RuntimeException var3 = null;
-        Object stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
@@ -441,7 +440,6 @@ final class si {
             this.a((byte) 66, -18);
           }
           this.field_a = param0;
-          stackIn_3_0 = this;
           return (si) (this);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

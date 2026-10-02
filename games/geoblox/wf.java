@@ -554,9 +554,7 @@ abstract class wf extends ch {
         int discarded$55 = 0;
         int discarded$56 = 0;
         int var3;
-        Object stackIn_3_0 = null;
         int stackIn_3_1 = 0;
-        Object stackIn_4_0 = null;
         int stackIn_4_1 = 0;
         boolean stackIn_4_2 = false;
         var3 = Geoblox.field_C;
@@ -573,16 +571,13 @@ abstract class wf extends ch {
             }
           }
         } else {
-          stackIn_3_0 = this;
 
           stackIn_3_1 = 0;
 
           if (vl.field_n == null) {
-            stackIn_4_0 = this;
             stackIn_4_1 = stackIn_3_1;
             stackIn_4_2 = false;
           } else {
-            stackIn_4_0 = this;
             stackIn_4_1 = stackIn_3_1;
             stackIn_4_2 = true;
           }
@@ -744,9 +739,6 @@ abstract class wf extends ch {
     }
 
     private final void a(int param0, String param1, int param2, byte param3, int param4) {
-        Object stackIn_5_0 = null;
-        Object stackIn_6_0 = null;
-        Object stackIn_7_0 = null;
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -770,19 +762,14 @@ abstract class wf extends ch {
               L1: {
                 this.field_n = this.getCodeBase().getHost();
                 var6 = this.field_n.toLowerCase();
-                stackIn_5_0 = this;
 
                 if (!var6.equals("jagex.com")) {
-                  stackIn_6_0 = this;
 
                   if (!var6.endsWith(".jagex.com")) {
-                    stackIn_7_0 = this;
                     stackIn_7_1 = false;
                     break L1;
                   }
-                  stackIn_5_0 = this;
                 }
-                stackIn_7_0 = this;
                 stackIn_7_1 = true;
               }
               ((wf) (this)).field_v = stackIn_7_1;
