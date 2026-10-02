@@ -81,7 +81,7 @@ final class bk {
           }
         }
         if (!param0) {
-          re.field_f = qa.a(var8, 0, 80);
+          re.field_f = PrefixCodeDecoder.readCompressedText(var8, 0, 80);
           vj.field_c = null;
           return new vd(param0);
         }

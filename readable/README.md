@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 4,797 guarded naming rules: 40 classes, 616 fields,
-439 methods, 1,347 parameters and 2,355 local declarations. Both 303-file corpora
+The current export has 4,856 guarded naming rules: 41 classes, 618 fields,
+441 methods, 1,356 parameters and 2,400 local declarations. Both 303-file corpora
 compile, preserving 138,558 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -54,7 +54,38 @@ smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
 
-## Current text-byte encoding and name hashing
+## Current prefix-code text decoding names
+
+Pass 65 adds 59 guarded identities: one class, two fields, two methods,
+nine parameters and 45 locals. `PrefixCodeDecoder` names the instance role of
+`qa`; its unrelated static menu/font helpers remain on the same owner.
+`decodeTree`, `vj.compressedTextDecoder`, `readCompressedText` and
+`decodePrefixBytes` expose the byte decoding and buffer cursor contract.
+
+The packed tree uses incremented indices for zero bits, indexed edges for one
+bits, and complemented negative values for output bytes. Bits are consumed
+MSB-first. The decoder returns the number of source bytes touched, including
+a partially consumed final byte, and preserves destination increments before
+stores. The reader keeps smart-length/clamping order, a reused guard/destination
+offset, cursor update only after successful decoder return, and its inner
+Exception-to-`"Cabbage"` fallback. Guards, aliases, overflow, partial writes and
+literal qa.A/qa.E diagnostics remain.
+
+The fixed source has no decode-tree assignment or non-null shared-decoder
+initialization. Its private throwing constructor stays intact. Names describe
+this retained instance routine; they do not establish real table loading or
+live compressed-text support.
+
+All 4,797 previous complete rules and source/generator pins stay unchanged.
+The 4,856 rules apply 41,958 identifier edits; both 303-file corpora compile,
+preserving 138,558 bindings and 388 overrides. Reproduction and dictionary
+reversal are byte-exact. Existing native gameplay fixtures verify the renamed
+owner's menu-avatar and shared queue consumers within their recorded scope;
+they do not newly execute prefix decoding. Tree setup, other opaque support
+helpers, live packets/archives, complete gameplay and phone/FPS/heap behavior
+remain unfinished or unverified.
+
+## Previous text-byte encoding and name hashing
 
 Pass 64 adds 68 guarded identities: four methods, twelve parameters and
 52 locals. `encodeTextCharacter`, `encodeTextSlice`, `encodeTextBytes` and
@@ -977,7 +1008,7 @@ its historical proof recorded in the raw provenance. Current source/decompiler
 identity and naming migrations live in the single manifest. `ruleChanges`
 records naming changes; `sourceChange` is recorded when input identity changes.
 The latest structural pass records its source migration in Git. The current
-naming-only pass retains those source pins and records its 68 additions in
+naming-only pass retains those source pins and records its 59 additions in
 `ruleChanges`; every prior guarded rule is retained.
 All six native probe sources and their traces are pinned in
 the same manifest; no JSON snapshots are added.
@@ -1002,6 +1033,6 @@ the same manifest; no JSON snapshots are added.
 | Java source tree | SHA-256 |
 | --- | --- |
 | Raw | `39be3539b43d7acc9540acca49e7b6378cdb233908092706646df4c2cdc6a8fe` |
-| Readable | `bb0413c401980ef5b01ae21ed1f8472e7628ba36af5f3a79308e4ae02334e6a8` |
+| Readable | `c6cfa2a68344ca3ffd59da4f9685fe9770cd7446b1faaedef452434a7d40317d` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

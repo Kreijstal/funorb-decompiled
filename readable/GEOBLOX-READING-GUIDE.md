@@ -692,8 +692,8 @@ the array indices, evidence, override families and remaining shared carriers.
 
 ## Remaining limitations
 
-There are 4,797 explicit guarded rules: 40 classes, 616 fields, 439 method
-declarations, 1,347 parameters and 2,355 locals. This is not full deobfuscation.
+There are 4,856 explicit guarded rules: 41 classes, 618 fields, 441 method
+declarations, 1,356 parameters and 2,400 locals. This is not full deobfuscation.
 Unknown flags, guard arguments and opaque shared helpers still need
 investigation. Current names and source identities live in the single manifest;
 previous naming and structural passes remain in Git. The earlier early-exit migration
@@ -1778,3 +1778,44 @@ all-byte decoding, slice boundaries, guard effects and nested failure contexts;
 it does not newly execute encoding or name hashing. Compressed text, actual
 font/archive assets, complete gameplay and device performance remain unfinished
 or unverified.
+
+## Prefix-code compressed text (pass 65)
+
+`PrefixCodeDecoder` names `qa` for its instance decoding role. The existing
+static font, menu-avatar, queue and applet helpers remain on that owner; their
+identities and behavior are unchanged. `decodeTree` is its only instance field.
+`vj.compressedTextDecoder` is the shared reference used by the text reader.
+
+| Contract | Existing behavior |
+| --- | --- |
+| `readCompressedText(buffer, guardAndDestinationOffset, maximumDecodedLength)` | Read unsigned smart length with guard+1, clamp, allocate, decode, advance the buffer by the returned consumed-byte count, then decode text bytes |
+| `decodePrefixBytes(destination, sourceOffset, source, destinationPosition, methodGuard, outputLengthThenEnd)` | Walk packed tree bits, emit requested bytes, return touched source-byte count |
+
+The reader's second argument has three roles: smart-read guard selection,
+output start offset and text-decoding guard xor -103. Its observed `bk` caller
+passes 0 and a maximum decoded length of 80. The inner catch converts any
+Exception to literal `"Cabbage"`; Errors are not included. Smart reads can already
+have advanced the cursor when allocation or decoding fails. Compressed-byte
+cursor addition occurs only after successful decoder return. No rollback or
+additional bounds validation is introduced.
+
+Decoding captures the client guard before its catch. Zero output length returns
+0 before evaluating `121 / ((-63 - methodGuard) / 59)` or reading either array.
+Otherwise outputLengthThenEnd becomes the destination endpoint. Each source
+byte is traversed from bit 7 down to bit 0. A zero edge increments treeIndex;
+a one edge follows decodeTree[treeIndex]. A negative node emits byte(~nodeValue)
+and restarts at root 0. Each write snapshots then increments destinationPosition
+before the store. Reaching the output endpoint returns sourceIndex+1-sourceOffset,
+counting a partially consumed final byte. Aliases, signed source bytes,
+integer wraparound, partial output, malformed trees and literal qa.E context
+remain unchanged.
+
+The fixed source contains no decodeTree assignment or non-null assignment to
+the shared decoder, and its private constructor throws Error. This pass preserves
+that source; it does not reconstruct absent initialization or claim live
+compressed-text support. All selected parameters/locals now have guarded names,
+with every prior complete rule unchanged. Compilation, binding checks,
+reproduction and reversal support these identities. Native gameplay fixtures
+cover the renamed owner's existing avatar/queue consumers, without new prefix
+codec execution. Real table setup, actual packets/archives, opaque helpers,
+complete gameplay and device performance remain unfinished or unverified.

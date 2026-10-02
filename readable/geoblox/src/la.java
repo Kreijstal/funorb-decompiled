@@ -43,7 +43,7 @@ final class la extends sh {
                 }
               }
               if (this.field_f == 1) {
-                var5_int = qa.pointerXSnapshot - this.field_D - param3;
+                var5_int = PrefixCodeDecoder.pointerXSnapshot - this.field_D - param3;
                 var6 = -this.field_H + (ue.pointerYSnapshot - param1);
                 if (this.field_v == var5_int) {
                   if (var6 == this.field_m) {

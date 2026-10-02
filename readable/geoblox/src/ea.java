@@ -100,7 +100,7 @@ final class ea extends IntrusiveNode {
             return null;
           }
           sentinelRemainder = 8 % ((-50 - methodGuard) / 51);
-          fontBeforeReturn = qa.buildCoverageFontFromDecodedSprites(fontMetricsArchive.a(groupId, -28153, fileId), false);
+          fontBeforeReturn = PrefixCodeDecoder.buildCoverageFontFromDecodedSprites(fontMetricsArchive.a(groupId, -28153, fileId), false);
           return fontBeforeReturn;
         } catch (java.lang.RuntimeException fontFailure) {
           caughtFontFailure = fontFailure;

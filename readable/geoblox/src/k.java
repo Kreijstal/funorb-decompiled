@@ -30,9 +30,9 @@ final class k implements Iterator {
         }
         if (param0 <= 104) {
             k.a(83, 4, -82, 86, 115);
-            return (java.applet.Applet) ((Object) qa.field_d);
+            return (java.applet.Applet) ((Object) PrefixCodeDecoder.field_d);
         }
-        return (java.applet.Applet) ((Object) qa.field_d);
+        return (java.applet.Applet) ((Object) PrefixCodeDecoder.field_d);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {

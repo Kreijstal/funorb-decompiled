@@ -120,7 +120,7 @@ class el extends IntrusiveNode {
           if (param0) {
             return;
           }
-          var5_int = this.a(qa.pointerXSnapshot, -1, ue.pointerYSnapshot, param1, param3) ? 1 : 0;
+          var5_int = this.a(PrefixCodeDecoder.pointerXSnapshot, -1, ue.pointerYSnapshot, param1, param3) ? 1 : 0;
           stackIn_4_0 = var5_int;
           if (this.field_l) {
             stackIn_5_1 = 0;
@@ -241,7 +241,7 @@ class el extends IntrusiveNode {
             if (0 == bi.pointerPressButtonSnapshot) {
               if (gf.heldPointerButtonSnapshot == 0) {
                 if (0 != ij.field_X) {
-                  this.a(param2, qa.pointerXSnapshot, true, (el) (this), param3, ue.pointerYSnapshot);
+                  this.a(param2, PrefixCodeDecoder.pointerXSnapshot, true, (el) (this), param3, ue.pointerYSnapshot);
                   var8 = lh.field_b;
                   if (var8 != null) {
                     if (var8.field_u instanceof rg) {
@@ -267,7 +267,7 @@ class el extends IntrusiveNode {
                 if (var5 == 0) {
                   if (gf.heldPointerButtonSnapshot == 0) {
                     if (0 != ij.field_X) {
-                      this.a(param2, qa.pointerXSnapshot, true, (el) (this), param3, ue.pointerYSnapshot);
+                      this.a(param2, PrefixCodeDecoder.pointerXSnapshot, true, (el) (this), param3, ue.pointerYSnapshot);
                       var9 = lh.field_b;
                       if (var9 != null) {
                         if (var9.field_u instanceof rg) {
@@ -306,7 +306,7 @@ class el extends IntrusiveNode {
               return param0;
             }
             {
-              this.a(param2, qa.pointerXSnapshot, true, (el) (this), param3, ue.pointerYSnapshot);
+              this.a(param2, PrefixCodeDecoder.pointerXSnapshot, true, (el) (this), param3, ue.pointerYSnapshot);
               var10 = lh.field_b;
               if (var10 != null) {
                 if (var10.field_u instanceof rg) {
@@ -327,11 +327,11 @@ class el extends IntrusiveNode {
             }
           }
           if (var5 != 0) {
-            this.a(param3, vc.field_i, param2, -1, qa.pointerXSnapshot, (el) (this), ue.pointerYSnapshot);
+            this.a(param3, vc.field_i, param2, -1, PrefixCodeDecoder.pointerXSnapshot, (el) (this), ue.pointerYSnapshot);
             if (0 == bi.pointerPressButtonSnapshot) {
               if (gf.heldPointerButtonSnapshot == 0) {
                 if (0 != ij.field_X) {
-                  this.a(param2, qa.pointerXSnapshot, true, (el) (this), param3, ue.pointerYSnapshot);
+                  this.a(param2, PrefixCodeDecoder.pointerXSnapshot, true, (el) (this), param3, ue.pointerYSnapshot);
                   var15 = lh.field_b;
                   var6 = var15;
                   if (var15 != null) {
@@ -358,7 +358,7 @@ class el extends IntrusiveNode {
                 if (var5 == 0) {
                   if (gf.heldPointerButtonSnapshot == 0) {
                     if (0 != ij.field_X) {
-                      this.a(param2, qa.pointerXSnapshot, true, (el) (this), param3, ue.pointerYSnapshot);
+                      this.a(param2, PrefixCodeDecoder.pointerXSnapshot, true, (el) (this), param3, ue.pointerYSnapshot);
                       var16 = lh.field_b;
                       var6 = var16;
                       if (var16 != null) {
@@ -398,7 +398,7 @@ class el extends IntrusiveNode {
               return param0;
             }
             {
-              this.a(param2, qa.pointerXSnapshot, true, (el) (this), param3, ue.pointerYSnapshot);
+              this.a(param2, PrefixCodeDecoder.pointerXSnapshot, true, (el) (this), param3, ue.pointerYSnapshot);
               var17 = lh.field_b;
               var6 = var17;
               if (var17 != null) {
@@ -422,7 +422,7 @@ class el extends IntrusiveNode {
           if (0 == bi.pointerPressButtonSnapshot) {
             if (gf.heldPointerButtonSnapshot == 0) {
               if (0 != ij.field_X) {
-                this.a(param2, qa.pointerXSnapshot, true, (el) (this), param3, ue.pointerYSnapshot);
+                this.a(param2, PrefixCodeDecoder.pointerXSnapshot, true, (el) (this), param3, ue.pointerYSnapshot);
                 var11 = lh.field_b;
                 if (var11 != null) {
                   if (var11.field_u instanceof rg) {
@@ -457,7 +457,7 @@ class el extends IntrusiveNode {
                   return param0;
                 }
                 {
-                  this.a(param2, qa.pointerXSnapshot, true, (el) (this), param3, ue.pointerYSnapshot);
+                  this.a(param2, PrefixCodeDecoder.pointerXSnapshot, true, (el) (this), param3, ue.pointerYSnapshot);
                   var12 = lh.field_b;
                   var6 = var12;
                   if (var12 != null) {
@@ -505,7 +505,7 @@ class el extends IntrusiveNode {
             return param0;
           }
           {
-            this.a(param2, qa.pointerXSnapshot, true, (el) (this), param3, ue.pointerYSnapshot);
+            this.a(param2, PrefixCodeDecoder.pointerXSnapshot, true, (el) (this), param3, ue.pointerYSnapshot);
             var14 = lh.field_b;
             if (var14 != null) {
               if (var14.field_u instanceof rg) {

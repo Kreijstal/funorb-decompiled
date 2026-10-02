@@ -44,7 +44,7 @@ class dj extends hk {
           if (this.field_f == 1) {
             if (this.field_q instanceof cc) {
               var7 = (cc) ((Object) this.field_q);
-              var6 = var7.a((el) (this), qa.pointerXSnapshot, -15539, param1, ue.pointerYSnapshot, param3);
+              var6 = var7.a((el) (this), PrefixCodeDecoder.pointerXSnapshot, -15539, param1, ue.pointerYSnapshot, param3);
               if (-1 != var6) {
                 if (this.field_G) {
                   if (this.field_J > var6) {
@@ -225,7 +225,7 @@ class dj extends hk {
         try {
           if (super.a(param0, 104, param2, param3, param4, param5, param6)) {
             if (this.field_q instanceof cc) {
-              var8_int = ((cc) ((Object) this.field_q)).a((el) (this), qa.pointerXSnapshot, -15539, param0, ue.pointerYSnapshot, param2);
+              var8_int = ((cc) ((Object) this.field_q)).a((el) (this), PrefixCodeDecoder.pointerXSnapshot, -15539, param0, ue.pointerYSnapshot, param2);
               if (var8_int != -1) {
                 stackIn_5_1 = var8_int;
               } else {

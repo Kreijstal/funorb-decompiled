@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vj {
-    static qa field_b;
+    static PrefixCodeDecoder compressedTextDecoder;
     static int[] field_c;
     static Sprite[] bangFrames;
     private static String field_z;
@@ -11,7 +11,7 @@ final class vj {
         int var1 = 86 % ((51 - param0) / 45);
         field_c = null;
         bangFrames = null;
-        field_b = null;
+        compressedTextDecoder = null;
     }
 
     static {

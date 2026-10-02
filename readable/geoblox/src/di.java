@@ -52,10 +52,10 @@ final class di {
             o.a(param0, var4, param1 - 21718);
             var4 = (wc) ((Object) l.field_g.nextForIteration(1));
           }
-          var2 = qa.field_e.firstForIteration(0);
+          var2 = PrefixCodeDecoder.field_e.firstForIteration(0);
           L1: while (var2 != null) {
             gf.a(param0, 125);
-            var2 = qa.field_e.nextForIteration(1);
+            var2 = PrefixCodeDecoder.field_e.nextForIteration(1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

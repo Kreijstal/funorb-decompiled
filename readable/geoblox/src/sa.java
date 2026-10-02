@@ -20,7 +20,7 @@ final class sa extends RuntimeException {
         try {
           if (-1 == k.field_g) {
             if (gb.field_e == -1) {
-              k.field_g = qa.pointerXSnapshot;
+              k.field_g = PrefixCodeDecoder.pointerXSnapshot;
               gb.field_e = ue.pointerYSnapshot;
             }
           }

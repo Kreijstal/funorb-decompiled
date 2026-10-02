@@ -483,7 +483,7 @@ public final class Geoblox extends wf {
         di.a((byte) 107);
         jj.a(126);
         wb.a((byte) 95);
-        qa.a((byte) -30);
+        PrefixCodeDecoder.a((byte) -30);
         kg.e((byte) 77);
         sb.b(false);
         vj.a(-97);

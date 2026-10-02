@@ -82,7 +82,7 @@ final class mc {
           if (methodGuard >= -126) {
             pointerPressXSnapshot = -77;
           }
-          qa.pointerXSnapshot = lj.livePointerX;
+          PrefixCodeDecoder.pointerXSnapshot = lj.livePointerX;
           ue.pointerYSnapshot = eg.livePointerY;
           wb.pointerActivitySnapshot = fc.pointerActivityPending;
           fc.pointerActivityPending = false;

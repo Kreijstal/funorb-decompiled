@@ -83,12 +83,12 @@ class hk extends el {
                 if (gf.heldPointerButtonSnapshot == this.field_f) {
                     return;
                 }
-                if (this.a(qa.pointerXSnapshot, -1, ue.pointerYSnapshot, param1, param3)) {
+                if (this.a(PrefixCodeDecoder.pointerXSnapshot, -1, ue.pointerYSnapshot, param1, param3)) {
                     if (!(gf.heldPointerButtonSnapshot != 0)) {
-                        this.a(ue.pointerYSnapshot - param1, -28922, qa.pointerXSnapshot - param3, this.field_f);
+                        this.a(ue.pointerYSnapshot - param1, -28922, PrefixCodeDecoder.pointerXSnapshot - param3, this.field_f);
                     }
                 }
-                this.a(param3, qa.pointerXSnapshot, !param0 ? true : false, param2, param1, ue.pointerYSnapshot);
+                this.a(param3, PrefixCodeDecoder.pointerXSnapshot, !param0 ? true : false, param2, param1, ue.pointerYSnapshot);
             }
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "hk.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

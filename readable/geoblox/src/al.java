@@ -23,7 +23,7 @@ final class al {
             var9 = eh.field_d;
             var2 = var9.readUnsignedByte((byte) 34);
             if (var2 == 0) {
-              var8 = (ca) ((Object) qa.field_e.firstForIteration(0));
+              var8 = (ca) ((Object) PrefixCodeDecoder.field_e.firstForIteration(0));
               if (var8 == null) {
                 jl.a((byte) -124);
                 return;

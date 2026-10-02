@@ -72,9 +72,9 @@ final class ck {
           var7 = 0;
           var8 = bh.a((byte) 81, var6) >> 8;
           var9 = fi.a(var6, 2048) >> 8;
-          if (qa.pointerXSnapshot != -1) {
+          if (PrefixCodeDecoder.pointerXSnapshot != -1) {
             if (ue.pointerYSnapshot != -1) {
-              var7 = -320 + qa.pointerXSnapshot;
+              var7 = -320 + PrefixCodeDecoder.pointerXSnapshot;
               var9 = -128;
               var8 = -ue.pointerYSnapshot + 240;
             }

@@ -134,8 +134,8 @@ final class GameScreen extends MenuScreen {
                     if (this.field_o == 0) {
                       break L16;
                     }
-                    if (qa.pointerXSnapshot > 190) {
-                      if (qa.pointerXSnapshot < 449) {
+                    if (PrefixCodeDecoder.pointerXSnapshot > 190) {
+                      if (PrefixCodeDecoder.pointerXSnapshot < 449) {
                         if (265 < ue.pointerYSnapshot) {
                           if (ue.pointerYSnapshot < 299) {
                             break L16;
@@ -146,10 +146,10 @@ final class GameScreen extends MenuScreen {
                   }
                   if (vl.field_n == null) {
                     if (0 != this.field_o) {
-                      if (qa.pointerXSnapshot <= 260) {
+                      if (PrefixCodeDecoder.pointerXSnapshot <= 260) {
                         break L0;
                       }
-                      if (qa.pointerXSnapshot >= 380) {
+                      if (PrefixCodeDecoder.pointerXSnapshot >= 380) {
                         break L0;
                       }
                       if (ue.pointerYSnapshot <= 274) {
@@ -170,10 +170,10 @@ final class GameScreen extends MenuScreen {
                       if (this.field_o >= 0) {
                         break L20;
                       }
-                      if (qa.pointerXSnapshot <= 350) {
+                      if (PrefixCodeDecoder.pointerXSnapshot <= 350) {
                         break L20;
                       }
-                      if (qa.pointerXSnapshot >= 470) {
+                      if (PrefixCodeDecoder.pointerXSnapshot >= 470) {
                         break L20;
                       }
                       if (ue.pointerYSnapshot <= 327) {
@@ -194,10 +194,10 @@ final class GameScreen extends MenuScreen {
                     if (this.field_o >= 0) {
                       break L0;
                     }
-                    if (qa.pointerXSnapshot <= 170) {
+                    if (PrefixCodeDecoder.pointerXSnapshot <= 170) {
                       break L0;
                     }
-                    if (qa.pointerXSnapshot >= 290) {
+                    if (PrefixCodeDecoder.pointerXSnapshot >= 290) {
                       break L0;
                     }
                     if (ue.pointerYSnapshot <= 327) {
@@ -224,10 +224,10 @@ final class GameScreen extends MenuScreen {
                   if (this.field_o >= 0) {
                     break L23;
                   }
-                  if (qa.pointerXSnapshot <= 350) {
+                  if (PrefixCodeDecoder.pointerXSnapshot <= 350) {
                     break L23;
                   }
-                  if (470 <= qa.pointerXSnapshot) {
+                  if (470 <= PrefixCodeDecoder.pointerXSnapshot) {
                     break L23;
                   }
                   if (ue.pointerYSnapshot <= 265) {
@@ -247,10 +247,10 @@ final class GameScreen extends MenuScreen {
                 if (this.field_o >= 0) {
                   break L0;
                 }
-                if (qa.pointerXSnapshot <= 170) {
+                if (PrefixCodeDecoder.pointerXSnapshot <= 170) {
                   break L0;
                 }
-                if (qa.pointerXSnapshot >= 290) {
+                if (PrefixCodeDecoder.pointerXSnapshot >= 290) {
                   break L0;
                 }
                 if (ue.pointerYSnapshot <= 265) {
@@ -536,10 +536,10 @@ final class GameScreen extends MenuScreen {
                             if (this.field_o >= 0) {
                               break L17;
                             }
-                            if (350 >= qa.pointerXSnapshot) {
+                            if (350 >= PrefixCodeDecoder.pointerXSnapshot) {
                               break L17;
                             }
-                            if (qa.pointerXSnapshot >= 470) {
+                            if (PrefixCodeDecoder.pointerXSnapshot >= 470) {
                               break L17;
                             }
                             if (ue.pointerYSnapshot <= 265) {
@@ -562,10 +562,10 @@ final class GameScreen extends MenuScreen {
                             if (0 <= this.field_o) {
                               break L19;
                             }
-                            if (170 >= qa.pointerXSnapshot) {
+                            if (170 >= PrefixCodeDecoder.pointerXSnapshot) {
                               break L19;
                             }
-                            if (qa.pointerXSnapshot >= 290) {
+                            if (PrefixCodeDecoder.pointerXSnapshot >= 290) {
                               break L19;
                             }
                             if (ue.pointerYSnapshot <= 265) {
@@ -602,10 +602,10 @@ final class GameScreen extends MenuScreen {
                             var9 = (var7 >> 1) + (var8 + 10);
                             ma.drawNineSlicePanel(var6, var8, 36, (byte) -92, 20 + var7, eb.mouseBoxFrames);
                             if (0 != this.field_o) {
-                              if (260 >= qa.pointerXSnapshot) {
+                              if (260 >= PrefixCodeDecoder.pointerXSnapshot) {
                                 break L24;
                               }
-                              if (qa.pointerXSnapshot >= 380) {
+                              if (PrefixCodeDecoder.pointerXSnapshot >= 380) {
                                 break L24;
                               }
                               if (ue.pointerYSnapshot <= 274) {
@@ -655,10 +655,10 @@ final class GameScreen extends MenuScreen {
                             if (0 <= this.field_o) {
                               break L29;
                             }
-                            if (qa.pointerXSnapshot <= 350) {
+                            if (PrefixCodeDecoder.pointerXSnapshot <= 350) {
                               break L29;
                             }
-                            if (qa.pointerXSnapshot >= 470) {
+                            if (PrefixCodeDecoder.pointerXSnapshot >= 470) {
                               break L29;
                             }
                             if (ue.pointerYSnapshot <= 317) {
@@ -680,10 +680,10 @@ final class GameScreen extends MenuScreen {
                             if (this.field_o >= 0) {
                               break L31;
                             }
-                            if (qa.pointerXSnapshot <= 170) {
+                            if (PrefixCodeDecoder.pointerXSnapshot <= 170) {
                               break L31;
                             }
-                            if (qa.pointerXSnapshot >= 290) {
+                            if (PrefixCodeDecoder.pointerXSnapshot >= 290) {
                               break L31;
                             }
                             if (ue.pointerYSnapshot <= 317) {
@@ -718,10 +718,10 @@ final class GameScreen extends MenuScreen {
                         var6 = 265;
                         ma.drawNineSlicePanel(var6, var8, 36, (byte) -92, var7 + 20, eb.mouseBoxFrames);
                         if (this.field_o != 0) {
-                          if (qa.pointerXSnapshot <= 190) {
+                          if (PrefixCodeDecoder.pointerXSnapshot <= 190) {
                             break L34;
                           }
-                          if (qa.pointerXSnapshot >= 449) {
+                          if (PrefixCodeDecoder.pointerXSnapshot >= 449) {
                             break L34;
                           }
                           if (ue.pointerYSnapshot <= 265) {
@@ -1404,7 +1404,7 @@ final class GameScreen extends MenuScreen {
                   this.field_M = (255 & jg.themeCycleColors[selectedThemeId][(1 + this.field_B) % 7]) - (255 & jg.themeCycleColors[selectedThemeId][this.field_B]);
                 }
               }
-              qa.advanceMenuAvatarAnimation((byte) 127);
+              PrefixCodeDecoder.advanceMenuAvatarAnimation((byte) 127);
             }
             L15: {
               fieldTemp$1 = di.field_a;
@@ -1530,7 +1530,7 @@ final class GameScreen extends MenuScreen {
               }
             }
             L35: {
-              if (qa.pointerXSnapshot == this.field_s) {
+              if (PrefixCodeDecoder.pointerXSnapshot == this.field_s) {
                 if (~ue.pointerYSnapshot == ~this.field_Y) {
                   break L35;
                 }
@@ -1542,10 +1542,10 @@ final class GameScreen extends MenuScreen {
               this.handleMenuKey(11, 26);
             }
             L38: {
-              this.field_s = qa.pointerXSnapshot;
+              this.field_s = PrefixCodeDecoder.pointerXSnapshot;
               if (this.selectedItemIndex != 0) {
                 L39: {
-                  var2_int = (qa.pointerXSnapshot + he.pointerPressYSnapshot - (-kd.field_c - ki.currentKeyboardEventCode)) % 8;
+                  var2_int = (PrefixCodeDecoder.pointerXSnapshot + he.pointerPressYSnapshot - (-kd.field_c - ki.currentKeyboardEventCode)) % 8;
                   if (var2_int != 0) {
                     if (var2_int != 1) {
                       if (var2_int != 2) {
@@ -1601,7 +1601,7 @@ final class GameScreen extends MenuScreen {
                   oa.field_a = oa.field_a + kb.field_d;
                   gb.field_g = gb.field_g - 1;
                 }
-                var2_int = (ki.currentKeyboardEventCode + qa.pointerXSnapshot - (-he.pointerPressYSnapshot - kd.field_c)) % 5;
+                var2_int = (ki.currentKeyboardEventCode + PrefixCodeDecoder.pointerXSnapshot - (-he.pointerPressYSnapshot - kd.field_c)) % 5;
                 if (0 != var2_int) {
                   if (var2_int != 1) {
                     if (var2_int == 2) {
@@ -1979,7 +1979,7 @@ final class GameScreen extends MenuScreen {
                       break L2;
                     }
                   }
-                  this.selectedItemIndex = this.hitTestMenuItem(qa.pointerXSnapshot, ue.pointerYSnapshot, (byte) 54);
+                  this.selectedItemIndex = this.hitTestMenuItem(PrefixCodeDecoder.pointerXSnapshot, ue.pointerYSnapshot, (byte) 54);
                 }
               }
               this.field_F = this.field_F + 8;

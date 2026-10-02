@@ -1,54 +1,54 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qa {
+final class PrefixCodeDecoder {
     static int field_b;
-    private int[] field_c;
+    private int[] decodeTree;
     static IntrusiveDeque field_e;
     static IntrusiveDeque field_f;
     static int pointerXSnapshot;
     static ch field_d;
 
-    final static String a(ByteArrayBuffer param0, int param1, int param2) {
-        int var3_int = 0;
-        Exception var3 = null;
-        RuntimeException var3_ref = null;
-        byte[] var4 = null;
-        String var5 = null;
-        String stackIn_4_0 = null;
-        String stackIn_6_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_10_2 = null;
-        Throwable decompiledCaughtException = null;
+    final static String readCompressedText(ByteArrayBuffer buffer, int guardAndDestinationOffset, int maximumDecodedLength) {
+        int decodedLength = 0;
+        Exception suppressedDecodeFailure = null;
+        RuntimeException textFailureForContext = null;
+        byte[] decodedBytes = null;
+        String decodedText = null;
+        String decodedTextBeforeReturn = null;
+        String failureTextBeforeReturn = null;
+        RuntimeException textFailureBeforeDescription = null;
+        StringBuilder textMessagePrefix = null;
+        String bufferDescription = null;
+        Throwable caughtTextFailure = null;
         try {
           try {
-            var3_int = param0.readUnsignedSmart(param1 + 1);
-            if (var3_int > param2) {
-              var3_int = param2;
+            decodedLength = buffer.readUnsignedSmart(guardAndDestinationOffset + 1);
+            if (decodedLength > maximumDecodedLength) {
+              decodedLength = maximumDecodedLength;
             }
-            var4 = new byte[var3_int];
-            param0.position = param0.position + vj.field_b.a(var4, param0.position, param0.bytes, param1, -127, var3_int);
-            var5 = bc.decodeTextSlice(param1 ^ -103, var4, 0, var3_int);
-            stackIn_4_0 = (String) (var5);
-            return stackIn_4_0;
-          } catch (java.lang.Exception decompiledCaughtParameter0) {
-            decompiledCaughtException = decompiledCaughtParameter0;
-            var3 = (Exception) (Object) decompiledCaughtException;
-            stackIn_6_0 = "Cabbage";
-            return stackIn_6_0;
+            decodedBytes = new byte[decodedLength];
+            buffer.position = buffer.position + vj.compressedTextDecoder.decodePrefixBytes(decodedBytes, buffer.position, buffer.bytes, guardAndDestinationOffset, -127, decodedLength);
+            decodedText = bc.decodeTextSlice(guardAndDestinationOffset ^ -103, decodedBytes, 0, decodedLength);
+            decodedTextBeforeReturn = (String) (decodedText);
+            return decodedTextBeforeReturn;
+          } catch (java.lang.Exception decodeFailure) {
+            caughtTextFailure = decodeFailure;
+            suppressedDecodeFailure = (Exception) (Object) caughtTextFailure;
+            failureTextBeforeReturn = "Cabbage";
+            return failureTextBeforeReturn;
           }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-          decompiledCaughtException = decompiledCaughtParameter1;
-          var3_ref = (RuntimeException) (Object) decompiledCaughtException;
-          stackIn_9_0 = (RuntimeException) (var3_ref);
-          stackIn_9_1 = new StringBuilder().append("qa.A(");
-          if (param0 == null) {
-            stackIn_10_2 = "null";
+        } catch (java.lang.RuntimeException textFailure) {
+          caughtTextFailure = textFailure;
+          textFailureForContext = (RuntimeException) (Object) caughtTextFailure;
+          textFailureBeforeDescription = (RuntimeException) (textFailureForContext);
+          textMessagePrefix = new StringBuilder().append("qa.A(");
+          if (buffer == null) {
+            bufferDescription = "null";
           } else {
-            stackIn_10_2 = "{...}";
+            bufferDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw t.a((Throwable) ((Object) textFailureBeforeDescription), ((StringBuilder) (Object) textMessagePrefix).append(bufferDescription).append(',').append(guardAndDestinationOffset).append(',').append(maximumDecodedLength).append(')').toString());
         }
     }
 
@@ -64,7 +64,7 @@ final class qa {
         try {
           if (runNullMetricsGuardCall) {
             unusedNullMetricsSnapshot = (byte[]) null;
-            qa.buildCoverageFontFromDecodedSprites((byte[]) null, false);
+            PrefixCodeDecoder.buildCoverageFontFromDecodedSprites((byte[]) null, false);
           }
           if (metrics == null) {
             return null;
@@ -87,213 +87,213 @@ final class qa {
         }
     }
 
-    private final int a(byte[] param0, int param1, byte[] param2, int param3, int param4, int param5) {
-        int dupTemp$0 = 0;
-        int incrementValue$1 = 0;
-        int dupTemp$2 = 0;
-        int incrementValue$3 = 0;
-        int dupTemp$4 = 0;
-        int incrementValue$5 = 0;
-        int dupTemp$6 = 0;
-        int incrementValue$7 = 0;
-        int dupTemp$8 = 0;
-        int incrementValue$9 = 0;
-        int dupTemp$10 = 0;
-        int incrementValue$11 = 0;
-        int dupTemp$12 = 0;
-        int incrementValue$13 = 0;
-        int dupTemp$14 = 0;
-        int incrementValue$15 = 0;
-        int stackIn_4_0 = 0;
-        int stackIn_66_0 = 0;
-        RuntimeException stackIn_69_0 = null;
-        StringBuilder stackIn_69_1 = null;
-        String stackIn_70_2 = null;
-        StringBuilder stackIn_72_1 = null;
-        String stackIn_73_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var7_int = 0;
-        RuntimeException var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        var12 = Geoblox.field_C;
+    private final int decodePrefixBytes(byte[] destination, int sourceOffset, byte[] source, int destinationPosition, int methodGuard, int outputLengthThenEnd) {
+        int nodeAfterBit7 = 0;
+        int writeIndexAfterBit7 = 0;
+        int nodeAfterBit6 = 0;
+        int writeIndexAfterBit6 = 0;
+        int nodeAfterBit5 = 0;
+        int writeIndexAfterBit5 = 0;
+        int nodeAfterBit4 = 0;
+        int writeIndexAfterBit4 = 0;
+        int nodeAfterBit3 = 0;
+        int writeIndexAfterBit3 = 0;
+        int nodeAfterBit2 = 0;
+        int writeIndexAfterBit2 = 0;
+        int nodeAfterBit1 = 0;
+        int writeIndexAfterBit1 = 0;
+        int nodeAfterBit0 = 0;
+        int writeIndexAfterBit0 = 0;
+        int zeroConsumedBytesBeforeReturn = 0;
+        int consumedBytesBeforeReturn = 0;
+        RuntimeException decodingFailureBeforeDestination = null;
+        StringBuilder decodingMessagePrefix = null;
+        String destinationDescription = null;
+        StringBuilder decodingMessageBeforeSource = null;
+        String sourceDescription = null;
+        RuntimeException caughtDecodingFailure = null;
+        int treeIndex = 0;
+        RuntimeException decodingFailureForContext = null;
+        int unusedArithmeticGuardResult = 0;
+        int sourceIndex = 0;
+        int signedSourceByte = 0;
+        int nodeValue = 0;
+        int unusedClientGuardSnapshot = 0;
+        unusedClientGuardSnapshot = Geoblox.field_C;
         try {
-          if (0 == param5) {
-            stackIn_4_0 = 0;
-            return stackIn_4_0;
+          if (0 == outputLengthThenEnd) {
+            zeroConsumedBytesBeforeReturn = 0;
+            return zeroConsumedBytesBeforeReturn;
           }
           {
-            var8 = 121 / ((-63 - param4) / 59);
-            var7_int = 0;
-            param5 = param5 + param3;
-            var9 = param1;
+            unusedArithmeticGuardResult = 121 / ((-63 - methodGuard) / 59);
+            treeIndex = 0;
+            outputLengthThenEnd = outputLengthThenEnd + destinationPosition;
+            sourceIndex = sourceOffset;
             L0: while (true) {
-              var10 = param2[var9];
-              if (var10 < 0) {
-                var7_int = this.field_c[var7_int];
+              signedSourceByte = source[sourceIndex];
+              if (signedSourceByte < 0) {
+                treeIndex = this.decodeTree[treeIndex];
               } else {
-                var7_int++;
+                treeIndex++;
               }
               L2: {
-                dupTemp$0 = this.field_c[var7_int];
-                var11 = dupTemp$0;
-                if (dupTemp$0 < 0) {
-                  incrementValue$1 = param3;
-                  param3++;
-                  param0[incrementValue$1] = (byte)(~var11);
-                  if (param3 >= param5) {
+                nodeAfterBit7 = this.decodeTree[treeIndex];
+                nodeValue = nodeAfterBit7;
+                if (nodeAfterBit7 < 0) {
+                  writeIndexAfterBit7 = destinationPosition;
+                  destinationPosition++;
+                  destination[writeIndexAfterBit7] = (byte)(~nodeValue);
+                  if (destinationPosition >= outputLengthThenEnd) {
                     break L2;
                   }
-                  var7_int = 0;
+                  treeIndex = 0;
                 }
-                if (0 == (64 & var10)) {
-                  var7_int++;
+                if (0 == (64 & signedSourceByte)) {
+                  treeIndex++;
                 } else {
-                  var7_int = this.field_c[var7_int];
+                  treeIndex = this.decodeTree[treeIndex];
                 }
-                dupTemp$2 = this.field_c[var7_int];
-                var11 = dupTemp$2;
-                if (dupTemp$2 < 0) {
-                  incrementValue$3 = param3;
-                  param3++;
-                  param0[incrementValue$3] = (byte)(~var11);
-                  if (param3 >= param5) {
+                nodeAfterBit6 = this.decodeTree[treeIndex];
+                nodeValue = nodeAfterBit6;
+                if (nodeAfterBit6 < 0) {
+                  writeIndexAfterBit6 = destinationPosition;
+                  destinationPosition++;
+                  destination[writeIndexAfterBit6] = (byte)(~nodeValue);
+                  if (destinationPosition >= outputLengthThenEnd) {
                     break L2;
                   }
-                  var7_int = 0;
+                  treeIndex = 0;
                 }
-                if ((var10 & 32) != 0) {
-                  var7_int = this.field_c[var7_int];
+                if ((signedSourceByte & 32) != 0) {
+                  treeIndex = this.decodeTree[treeIndex];
                 } else {
-                  var7_int++;
+                  treeIndex++;
                 }
-                dupTemp$4 = this.field_c[var7_int];
-                var11 = dupTemp$4;
-                if (dupTemp$4 < 0) {
-                  incrementValue$5 = param3;
-                  param3++;
-                  param0[incrementValue$5] = (byte)(~var11);
-                  if (param5 <= param3) {
+                nodeAfterBit5 = this.decodeTree[treeIndex];
+                nodeValue = nodeAfterBit5;
+                if (nodeAfterBit5 < 0) {
+                  writeIndexAfterBit5 = destinationPosition;
+                  destinationPosition++;
+                  destination[writeIndexAfterBit5] = (byte)(~nodeValue);
+                  if (outputLengthThenEnd <= destinationPosition) {
                     break L2;
                   }
-                  var7_int = 0;
+                  treeIndex = 0;
                 }
-                if ((var10 & 16) == 0) {
-                  var7_int++;
+                if ((signedSourceByte & 16) == 0) {
+                  treeIndex++;
                 } else {
-                  var7_int = this.field_c[var7_int];
+                  treeIndex = this.decodeTree[treeIndex];
                 }
-                dupTemp$6 = this.field_c[var7_int];
-                var11 = dupTemp$6;
-                if (dupTemp$6 < 0) {
-                  incrementValue$7 = param3;
-                  param3++;
-                  param0[incrementValue$7] = (byte)(~var11);
-                  if (param5 <= param3) {
+                nodeAfterBit4 = this.decodeTree[treeIndex];
+                nodeValue = nodeAfterBit4;
+                if (nodeAfterBit4 < 0) {
+                  writeIndexAfterBit4 = destinationPosition;
+                  destinationPosition++;
+                  destination[writeIndexAfterBit4] = (byte)(~nodeValue);
+                  if (outputLengthThenEnd <= destinationPosition) {
                     break L2;
                   }
-                  var7_int = 0;
+                  treeIndex = 0;
                 }
-                if ((8 & var10) == 0) {
-                  var7_int++;
+                if ((8 & signedSourceByte) == 0) {
+                  treeIndex++;
                 } else {
-                  var7_int = this.field_c[var7_int];
+                  treeIndex = this.decodeTree[treeIndex];
                 }
-                dupTemp$8 = this.field_c[var7_int];
-                var11 = dupTemp$8;
-                if (dupTemp$8 < 0) {
-                  incrementValue$9 = param3;
-                  param3++;
-                  param0[incrementValue$9] = (byte)(~var11);
-                  if (param5 <= param3) {
+                nodeAfterBit3 = this.decodeTree[treeIndex];
+                nodeValue = nodeAfterBit3;
+                if (nodeAfterBit3 < 0) {
+                  writeIndexAfterBit3 = destinationPosition;
+                  destinationPosition++;
+                  destination[writeIndexAfterBit3] = (byte)(~nodeValue);
+                  if (outputLengthThenEnd <= destinationPosition) {
                     break L2;
                   }
-                  var7_int = 0;
+                  treeIndex = 0;
                 }
-                if ((var10 & 4) != 0) {
-                  var7_int = this.field_c[var7_int];
+                if ((signedSourceByte & 4) != 0) {
+                  treeIndex = this.decodeTree[treeIndex];
                 } else {
-                  var7_int++;
+                  treeIndex++;
                 }
-                dupTemp$10 = this.field_c[var7_int];
-                var11 = dupTemp$10;
-                if (dupTemp$10 < 0) {
-                  incrementValue$11 = param3;
-                  param3++;
-                  param0[incrementValue$11] = (byte)(~var11);
-                  if (param5 <= param3) {
-                    return var9 + 1 - param1;
+                nodeAfterBit2 = this.decodeTree[treeIndex];
+                nodeValue = nodeAfterBit2;
+                if (nodeAfterBit2 < 0) {
+                  writeIndexAfterBit2 = destinationPosition;
+                  destinationPosition++;
+                  destination[writeIndexAfterBit2] = (byte)(~nodeValue);
+                  if (outputLengthThenEnd <= destinationPosition) {
+                    return sourceIndex + 1 - sourceOffset;
                   }
-                  var7_int = 0;
+                  treeIndex = 0;
                 }
-                if ((var10 & 2) != 0) {
-                  var7_int = this.field_c[var7_int];
+                if ((signedSourceByte & 2) != 0) {
+                  treeIndex = this.decodeTree[treeIndex];
                 } else {
-                  var7_int++;
+                  treeIndex++;
                 }
-                dupTemp$12 = this.field_c[var7_int];
-                var11 = dupTemp$12;
-                if (dupTemp$12 < 0) {
-                  incrementValue$13 = param3;
-                  param3++;
-                  param0[incrementValue$13] = (byte)(~var11);
-                  if (param3 >= param5) {
+                nodeAfterBit1 = this.decodeTree[treeIndex];
+                nodeValue = nodeAfterBit1;
+                if (nodeAfterBit1 < 0) {
+                  writeIndexAfterBit1 = destinationPosition;
+                  destinationPosition++;
+                  destination[writeIndexAfterBit1] = (byte)(~nodeValue);
+                  if (destinationPosition >= outputLengthThenEnd) {
                     break L2;
                   }
-                  var7_int = 0;
+                  treeIndex = 0;
                 }
-                if (0 == (1 & var10)) {
-                  var7_int++;
+                if (0 == (1 & signedSourceByte)) {
+                  treeIndex++;
                 } else {
-                  var7_int = this.field_c[var7_int];
+                  treeIndex = this.decodeTree[treeIndex];
                 }
-                dupTemp$14 = this.field_c[var7_int];
-                var11 = dupTemp$14;
-                if (dupTemp$14 >= 0) {
-                  var9++;
+                nodeAfterBit0 = this.decodeTree[treeIndex];
+                nodeValue = nodeAfterBit0;
+                if (nodeAfterBit0 >= 0) {
+                  sourceIndex++;
                   continue L0;
                 }
                 {
-                  incrementValue$15 = param3;
-                  param3++;
-                  param0[incrementValue$15] = (byte)(~var11);
-                  if (param3 < param5) {
-                    var7_int = 0;
-                    var9++;
+                  writeIndexAfterBit0 = destinationPosition;
+                  destinationPosition++;
+                  destination[writeIndexAfterBit0] = (byte)(~nodeValue);
+                  if (destinationPosition < outputLengthThenEnd) {
+                    treeIndex = 0;
+                    sourceIndex++;
                     continue L0;
                   }
                 }
               }
-              stackIn_66_0 = var9 + 1 - param1;
-              return stackIn_66_0;
+              consumedBytesBeforeReturn = sourceIndex + 1 - sourceOffset;
+              return consumedBytesBeforeReturn;
             }
           }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var7 = decompiledCaughtException;
-          stackIn_69_0 = (RuntimeException) (var7);
-          stackIn_69_1 = new StringBuilder().append("qa.E(");
-          if (param0 == null) {
-            stackIn_70_2 = "null";
+        } catch (java.lang.RuntimeException decodingFailure) {
+          caughtDecodingFailure = decodingFailure;
+          decodingFailureForContext = caughtDecodingFailure;
+          decodingFailureBeforeDestination = (RuntimeException) (decodingFailureForContext);
+          decodingMessagePrefix = new StringBuilder().append("qa.E(");
+          if (destination == null) {
+            destinationDescription = "null";
           } else {
-            stackIn_70_2 = "{...}";
+            destinationDescription = "{...}";
           }
-          stackIn_72_1 = ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param1).append(',');
-          if (param2 == null) {
-            stackIn_73_2 = "null";
+          decodingMessageBeforeSource = ((StringBuilder) (Object) decodingMessagePrefix).append(destinationDescription).append(',').append(sourceOffset).append(',');
+          if (source == null) {
+            sourceDescription = "null";
           } else {
-            stackIn_73_2 = "{...}";
+            sourceDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw t.a((Throwable) ((Object) decodingFailureBeforeDestination), ((StringBuilder) (Object) decodingMessageBeforeSource).append(sourceDescription).append(',').append(destinationPosition).append(',').append(methodGuard).append(',').append(outputLengthThenEnd).append(')').toString());
         }
     }
 
     public static void a(byte param0) {
         if (param0 > -1) {
-            qa.advanceMenuAvatarAnimation((byte) -72);
+            PrefixCodeDecoder.advanceMenuAvatarAnimation((byte) -72);
             field_e = null;
             field_f = null;
             return;
@@ -655,7 +655,7 @@ final class qa {
         }
     }
 
-    private qa() throws Throwable {
+    private PrefixCodeDecoder() throws Throwable {
         throw new Error();
     }
 

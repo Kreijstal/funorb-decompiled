@@ -40,7 +40,7 @@ final class fd {
     final static void a(int param0, PcmSample param1, boolean param2, int param3) {
         PcmSampleStream var4 = PcmSampleStream.createForPlaybackRate(param1, 100, param3);
         cg var5 = rl.a(param0, var4, 1000);
-        qa.field_f.addLast(-103, new je(var4, var5));
+        PrefixCodeDecoder.field_f.addLast(-103, new je(var4, var5));
         if (param2) {
             return;
         }

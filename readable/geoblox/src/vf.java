@@ -115,7 +115,7 @@ class vf extends hk {
           super.a(param0, param1, param2, param3);
           this.field_G = null;
           if (this.field_l) {
-            var5_int = -this.field_v + qa.pointerXSnapshot - param3;
+            var5_int = -this.field_v + PrefixCodeDecoder.pointerXSnapshot - param3;
             var6 = -this.field_m - param1 + ue.pointerYSnapshot;
             this.field_G = this.a((byte) 72, var6, var5_int);
           }

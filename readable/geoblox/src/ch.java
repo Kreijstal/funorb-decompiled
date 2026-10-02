@@ -388,7 +388,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                       }
                     }
                   }
-                  var1 = qa.field_d;
+                  var1 = PrefixCodeDecoder.field_d;
                   if (null != kg.field_m) {
                     var1 = kg.field_m;
                   }
@@ -516,7 +516,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                     break L1;
                   }
                 }
-                var2 = qa.field_d;
+                var2 = PrefixCodeDecoder.field_d;
                 if (var4 == 0) {
                   break L1;
                 }
@@ -535,13 +535,13 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
             f.field_kb.setSize(kh.field_d, ok.field_c);
             f.field_kb.setVisible(param0);
             if (sg.field_a != var2) {
-              f.field_kb.setLocation(qa.field_b, hk.field_B);
+              f.field_kb.setLocation(PrefixCodeDecoder.field_b, hk.field_B);
               if (var4 == 0) {
                 break L5;
               }
             }
             var3 = sg.field_a.getInsets();
-            f.field_kb.setLocation(var3.left + qa.field_b, var3.top + hk.field_B);
+            f.field_kb.setLocation(var3.left + PrefixCodeDecoder.field_b, var3.top + hk.field_B);
           }
           f.field_kb.addFocusListener((java.awt.event.FocusListener) (this));
           f.field_kb.requestFocus();
@@ -562,7 +562,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
         RuntimeException runtimeException = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this == qa.field_d) {
+          if (this == PrefixCodeDecoder.field_d) {
             if (!ad.field_p) {
               MenuScreen.field_a = 0L;
               return;
@@ -729,7 +729,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         try {
-          if (qa.field_d == this) {
+          if (PrefixCodeDecoder.field_d == this) {
             if (!ad.field_p) {
               L1: {
                 dl.field_c = true;
@@ -767,7 +767,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
     }
 
     public final void destroy() {
-        if (qa.field_d != this || ad.field_p) {
+        if (PrefixCodeDecoder.field_d != this || ad.field_p) {
             return;
         }
         try {
@@ -797,7 +797,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
             try {
               try {
                 L0: {
-                  if (qa.field_d != null) {
+                  if (PrefixCodeDecoder.field_d != null) {
                     wg.field_j = wg.field_j + 1;
                     if (wg.field_j < 3) {
                       this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
@@ -809,11 +809,11 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                   kk.field_t = param2;
                   ok.field_c = param3;
                   sd.field_w = param3;
-                  qa.field_b = 0;
+                  PrefixCodeDecoder.field_b = 0;
                   hk.field_B = 0;
                   kh.field_d = param4;
                   qb.field_G = param4;
-                  qa.field_d = (ch) (this);
+                  PrefixCodeDecoder.field_d = (ch) (this);
                   GameScreen.field_x = k.c(107);
                   if (param1 != -14948) {
                     return;
@@ -937,13 +937,13 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                     break L3;
                   }
                 }
-                f.field_kb.setLocation(qa.field_b, hk.field_B);
+                f.field_kb.setLocation(PrefixCodeDecoder.field_b, hk.field_B);
                 if (Geoblox.field_C == 0) {
                   break L2;
                 }
               }
               var6 = sg.field_a.getInsets();
-              f.field_kb.setLocation(var6.left + qa.field_b, hk.field_B + var6.top);
+              f.field_kb.setLocation(var6.left + PrefixCodeDecoder.field_b, hk.field_B + var6.top);
             }
           }
           this.renderFrame(25853);
@@ -959,7 +959,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
         RuntimeException runtimeException = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this == qa.field_d) {
+          if (this == PrefixCodeDecoder.field_d) {
             if (!ad.field_p) {
               MenuScreen.field_a = 4000L + oa.a(-12520);
               return;

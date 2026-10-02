@@ -104,8 +104,8 @@ final class GameplaySession {
           ma.drawNineSlicePanel(promptTop, 70, 10 + promptHeight, (byte) -92, 500, ll.frameNineSliceSprites);
           fi.smallFont.drawParagraph(promptText, 95, 15 + promptTop, promptWidthThenButtonX, 300, 1, -1, 0, 0, lineSpacing);
           if (this.tutorialStepId == 5) {
-            if (qa.pointerXSnapshot > 100) {
-              if (qa.pointerXSnapshot < 340) {
+            if (PrefixCodeDecoder.pointerXSnapshot > 100) {
+              if (PrefixCodeDecoder.pointerXSnapshot < 340) {
                 if (ue.pointerYSnapshot > 440) {
                   if (ue.pointerYSnapshot < 476) {
                     dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
@@ -117,8 +117,8 @@ final class GameplaySession {
             dd.uiPaletteFont.drawCenteredText(cf.field_j, 220, 468, 0, -1);
             dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
             ma.drawNineSlicePanel(440, 380, 36, (byte) -92, 160, eb.mouseBoxFrames);
-            if (380 < qa.pointerXSnapshot) {
-              if (540 > qa.pointerXSnapshot) {
+            if (380 < PrefixCodeDecoder.pointerXSnapshot) {
+              if (540 > PrefixCodeDecoder.pointerXSnapshot) {
                 if (ue.pointerYSnapshot > 440) {
                   if (476 > ue.pointerYSnapshot) {
                     dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
@@ -133,8 +133,8 @@ final class GameplaySession {
             }
           }
           ma.drawNineSlicePanel(440, 240, 36, (byte) -92, 160, eb.mouseBoxFrames);
-          if (250 < qa.pointerXSnapshot) {
-            if (qa.pointerXSnapshot < 389) {
+          if (250 < PrefixCodeDecoder.pointerXSnapshot) {
+            if (PrefixCodeDecoder.pointerXSnapshot < 389) {
               if (ue.pointerYSnapshot > 440) {
                 if (476 > ue.pointerYSnapshot) {
                   dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
@@ -746,7 +746,7 @@ final class GameplaySession {
               L17: {
                 this.boardAngleRadians = this.boardAngleRadians - DualLinkNode.rotationStepRadians;
                 ScorePopup.setAvatarNegativeRotationSteering((byte) 38);
-                inputDerivedModuloIndex = (ki.currentKeyboardEventCode + kd.field_c + qa.pointerXSnapshot + he.pointerPressYSnapshot) % 8;
+                inputDerivedModuloIndex = (ki.currentKeyboardEventCode + kd.field_c + PrefixCodeDecoder.pointerXSnapshot + he.pointerPressYSnapshot) % 8;
                 if (inputDerivedModuloIndex == 0) {
                   oa.field_a = oa.field_a + kb.field_d;
                   gb.field_g = gb.field_g - 1;
@@ -803,7 +803,7 @@ final class GameplaySession {
                 oa.field_a = oa.field_a - kb.field_d;
               }
               L25: {
-                inputDerivedModuloIndex = (kd.field_c + he.pointerPressYSnapshot + qa.pointerXSnapshot + ki.currentKeyboardEventCode) % 5;
+                inputDerivedModuloIndex = (kd.field_c + he.pointerPressYSnapshot + PrefixCodeDecoder.pointerXSnapshot + ki.currentKeyboardEventCode) % 5;
                 if (0 == inputDerivedModuloIndex) {
                   dc.field_a = dc.field_a | lb.field_b + el.field_g << 17;
                   if (clientControlFlowGuard == 0) {
@@ -849,7 +849,7 @@ final class GameplaySession {
                   this.tutorialProgressMetric = this.tutorialProgressMetric + 1;
                 }
                 L32: {
-                  inputDerivedModuloIndex = (he.pointerPressYSnapshot + (qa.pointerXSnapshot + kd.field_c) + ki.currentKeyboardEventCode) % 8;
+                  inputDerivedModuloIndex = (he.pointerPressYSnapshot + (PrefixCodeDecoder.pointerXSnapshot + kd.field_c) + ki.currentKeyboardEventCode) % 8;
                   if (inputDerivedModuloIndex != 0) {
                     if (1 != inputDerivedModuloIndex) {
                       if (inputDerivedModuloIndex != 2) {
@@ -905,7 +905,7 @@ final class GameplaySession {
                   gb.field_g = gb.field_g - 1;
                   oa.field_a = oa.field_a + kb.field_d;
                 }
-                inputDerivedModuloIndex = (kd.field_c + qa.pointerXSnapshot + he.pointerPressYSnapshot + ki.currentKeyboardEventCode) % 5;
+                inputDerivedModuloIndex = (kd.field_c + PrefixCodeDecoder.pointerXSnapshot + he.pointerPressYSnapshot + ki.currentKeyboardEventCode) % 5;
                 if (inputDerivedModuloIndex != 0) {
                   if (1 != inputDerivedModuloIndex) {
                     if (2 != inputDerivedModuloIndex) {
