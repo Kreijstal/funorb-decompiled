@@ -39,63 +39,61 @@ class qk {
             int stackIn_11_2 = 0;
             ce stackIn_21_0 = null;
             Throwable decompiledCaughtException = null;
-            if (field_j != 0) {
-              if (param2 >= 0) {
-                if (param2 < 2) {
-                  if (param3 < 256) {
-                    param3 = 256;
-                  }
-                  try {
-                    var5 = new ce();
-                    var4 = var5;
-                    stackIn_10_0 = (ce) (var4);
-
-                    stackIn_10_1 = 256;
-
-                    if (!field_q) {
-                      stackIn_11_0 = (ce) ((Object) stackIn_10_0);
-                      stackIn_11_1 = stackIn_10_1;
-                      stackIn_11_2 = 1;
-                    } else {
-                      stackIn_11_0 = (ce) ((Object) stackIn_10_0);
-                      stackIn_11_1 = stackIn_10_1;
-                      stackIn_11_2 = 2;
-                    }
-                    ((qk) ((Object) stackIn_11_0)).field_c = new int[stackIn_11_1 * stackIn_11_2];
-                    ((qk) ((Object) var4)).field_i = param3;
-                    ((qk) ((Object) var4)).a(param1);
-                    ((qk) ((Object) var4)).field_g = (param3 & -1024) + 1024;
-                    if (((qk) ((Object) var4)).field_g > 16384) {
-                      ((qk) ((Object) var4)).field_g = 16384;
-                    }
-                    ((qk) ((Object) var4)).a(((qk) ((Object) var4)).field_g);
-                    if (field_d > 0) {
-                      if (field_r == null) {
-                        field_r = new kh();
-                        field_r.field_b = param0;
-                        param0.a((Runnable) ((Object) field_r), 0, field_d);
-                      }
-                    }
-                    if (field_r != null) {
-                      if (field_r.field_g[param2] == null) {
-                        field_r.field_g[param2] = (qk) ((Object) var5);
-                      } else {
-                        throw new IllegalArgumentException();
-                      }
-                    }
-                    stackIn_21_0 = (ce) (var4);
-                    return (qk) ((Object) stackIn_21_0);
-                  } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                    decompiledCaughtException = decompiledCaughtParameter0;
-                    var4_ref = decompiledCaughtException;
-                    return new qk();
-                  }
-                }
-              }
-              throw new IllegalArgumentException();
-            } else {
+            if (field_j == 0) {
               throw new IllegalStateException();
             }
+            if (param2 >= 0) {
+              if (param2 < 2) {
+                if (param3 < 256) {
+                  param3 = 256;
+                }
+                try {
+                  var5 = new ce();
+                  var4 = var5;
+                  stackIn_10_0 = (ce) (var4);
+
+                  stackIn_10_1 = 256;
+
+                  if (!field_q) {
+                    stackIn_11_0 = (ce) ((Object) stackIn_10_0);
+                    stackIn_11_1 = stackIn_10_1;
+                    stackIn_11_2 = 1;
+                  } else {
+                    stackIn_11_0 = (ce) ((Object) stackIn_10_0);
+                    stackIn_11_1 = stackIn_10_1;
+                    stackIn_11_2 = 2;
+                  }
+                  ((qk) ((Object) stackIn_11_0)).field_c = new int[stackIn_11_1 * stackIn_11_2];
+                  ((qk) ((Object) var4)).field_i = param3;
+                  ((qk) ((Object) var4)).a(param1);
+                  ((qk) ((Object) var4)).field_g = (param3 & -1024) + 1024;
+                  if (((qk) ((Object) var4)).field_g > 16384) {
+                    ((qk) ((Object) var4)).field_g = 16384;
+                  }
+                  ((qk) ((Object) var4)).a(((qk) ((Object) var4)).field_g);
+                  if (field_d > 0) {
+                    if (field_r == null) {
+                      field_r = new kh();
+                      field_r.field_b = param0;
+                      param0.a((Runnable) ((Object) field_r), 0, field_d);
+                    }
+                  }
+                  if (field_r != null) {
+                    if (field_r.field_g[param2] != null) {
+                      throw new IllegalArgumentException();
+                    }
+                    field_r.field_g[param2] = (qk) ((Object) var5);
+                  }
+                  stackIn_21_0 = (ce) (var4);
+                  return (qk) ((Object) stackIn_21_0);
+                } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  var4_ref = decompiledCaughtException;
+                  return new qk();
+                }
+              }
+            }
+            throw new IllegalArgumentException();
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -123,38 +121,29 @@ class qk {
     }
 
     final synchronized void c() {
+        int var2 = 0;
         int var1;
-        int var2;
         L0: {
           if (field_r != null) {
             var1 = 1;
-            var2 = 0;
-            L1: while (true) {
-              if (var2 >= 2) {
-                if (var1 == 0) {
-                  break L0;
-                } else {
-                  field_r.field_f = true;
-                  L2: while (field_r.field_c) {
-                    bc.a(0, 50L);
-                  }
-                  field_r = null;
-                  break L0;
-                }
-              } else {
-                if (field_r.field_g[var2] == this) {
-                  field_r.field_g[var2] = null;
-                }
-                if (field_r.field_g[var2] != null) {
-                  var1 = 0;
-                  var2++;
-                  continue L1;
-                } else {
-                  var2++;
-                  continue L1;
-                }
+            L1: for (var2 = 0; var2 < 2; var2++) {
+              if (field_r.field_g[var2] == this) {
+                field_r.field_g[var2] = null;
               }
+              if (field_r.field_g[var2] == null) {
+                continue L1;
+              }
+              var1 = 0;
             }
+            if (var1 == 0) {
+              break L0;
+            }
+            field_r.field_f = true;
+            L2: while (field_r.field_c) {
+              bc.a(0, 50L);
+            }
+            field_r = null;
+            break L0;
           }
         }
         this.f();
@@ -201,7 +190,10 @@ class qk {
             Exception var3 = null;
             int var3_int = 0;
             int var4 = 0;
-            if (!this.field_h) {
+            if (this.field_h) {
+              return;
+            }
+            {
               var1 = oa.a(-12520);
               try {
                 L0: {
@@ -220,76 +212,72 @@ class qk {
                 var3 = (Exception) (Object) decompiledCaughtException;
                 this.field_n = var1;
               }
-              if (this.field_c != null) {
-                try {
-                  L4: {
-                    if (this.field_m != 0L) {
-                      if (var1 >= this.field_m) {
-                        this.a(this.field_g);
-                        this.field_m = 0L;
-                        this.field_o = true;
-                      } else {
-                        return;
-                      }
-                    }
-                    var3_int = this.g();
-                    if (this.field_t - var3_int > this.field_s) {
-                      this.field_s = this.field_t - var3_int;
-                    }
-                    var4 = this.field_i + this.field_p;
-                    if (var4 + 256 > 16384) {
-                      var4 = 16128;
-                    }
-                    if (var4 + 256 > this.field_g) {
-                      this.field_g = this.field_g + 1024;
-                      if (this.field_g > 16384) {
-                        this.field_g = 16384;
-                      }
-                      this.f();
-                      this.a(this.field_g);
-                      var3_int = 0;
-                      this.field_o = true;
-                      if (var4 + 256 > this.field_g) {
-                        var4 = this.field_g - 256;
-                        this.field_p = var4 - this.field_i;
-                      }
-                    }
-                    L10: while (var3_int < var4) {
-                      this.a(this.field_c, 256);
-                      this.e();
-                      var3_int += 256;
-                    }
-                    if (var1 > this.field_e) {
-                      if (this.field_o) {
-                        this.field_o = false;
-                      } else {
-                        if (this.field_s == 0) {
-                          if (this.field_f == 0) {
-                            this.f();
-                            this.field_m = var1 + 2000L;
-                            return;
-                          }
-                        }
-                        this.field_p = Math.min(this.field_f, this.field_s);
-                        this.field_f = this.field_s;
-                      }
-                      this.field_s = 0;
-                      this.field_e = var1 + 2000L;
-                    }
-                    this.field_t = var3_int;
-                    break L4;
-                  }
-                } catch (java.lang.Exception decompiledCaughtParameter1) {
-                  decompiledCaughtException = decompiledCaughtParameter1;
-                  var3 = (Exception) (Object) decompiledCaughtException;
-                  this.f();
-                  this.field_m = var1 + 2000L;
-                }
-                return;
-              } else {
+              if (this.field_c == null) {
                 return;
               }
-            } else {
+              try {
+                L4: {
+                  if (this.field_m != 0L) {
+                    if (var1 < this.field_m) {
+                      return;
+                    }
+                    this.a(this.field_g);
+                    this.field_m = 0L;
+                    this.field_o = true;
+                  }
+                  var3_int = this.g();
+                  if (this.field_t - var3_int > this.field_s) {
+                    this.field_s = this.field_t - var3_int;
+                  }
+                  var4 = this.field_i + this.field_p;
+                  if (var4 + 256 > 16384) {
+                    var4 = 16128;
+                  }
+                  if (var4 + 256 > this.field_g) {
+                    this.field_g = this.field_g + 1024;
+                    if (this.field_g > 16384) {
+                      this.field_g = 16384;
+                    }
+                    this.f();
+                    this.a(this.field_g);
+                    var3_int = 0;
+                    this.field_o = true;
+                    if (var4 + 256 > this.field_g) {
+                      var4 = this.field_g - 256;
+                      this.field_p = var4 - this.field_i;
+                    }
+                  }
+                  L10: while (var3_int < var4) {
+                    this.a(this.field_c, 256);
+                    this.e();
+                    var3_int += 256;
+                  }
+                  if (var1 > this.field_e) {
+                    if (this.field_o) {
+                      this.field_o = false;
+                    } else {
+                      if (this.field_s == 0) {
+                        if (this.field_f == 0) {
+                          this.f();
+                          this.field_m = var1 + 2000L;
+                          return;
+                        }
+                      }
+                      this.field_p = Math.min(this.field_f, this.field_s);
+                      this.field_f = this.field_s;
+                    }
+                    this.field_s = 0;
+                    this.field_e = var1 + 2000L;
+                  }
+                  this.field_t = var3_int;
+                  break L4;
+                }
+              } catch (java.lang.Exception decompiledCaughtParameter1) {
+                decompiledCaughtException = decompiledCaughtParameter1;
+                var3 = (Exception) (Object) decompiledCaughtException;
+                this.f();
+                this.field_m = var1 + 2000L;
+              }
               return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -365,7 +353,8 @@ class qk {
                           L7: while (true) {
                             if (var11 == null) {
                               break L6;
-                            } else {
+                            }
+                            {
                               var12 = var11.field_g;
                               if (var12 != null) {
                                 if (var12.field_f > var8_int) {
@@ -381,7 +370,10 @@ class qk {
                               if (var12 != null) {
                                 var12.field_f = var12.field_f + var13;
                               }
-                              if (var4 < this.field_l) {
+                              if (var4 >= this.field_l) {
+                                break L3;
+                              }
+                              {
                                 L10: {
                                   var14 = var11.b();
                                   if (var14 != null) {
@@ -405,8 +397,6 @@ class qk {
                                 }
                                 var11 = var15;
                                 continue L7;
-                              } else {
-                                break L3;
                               }
                             }
                           }

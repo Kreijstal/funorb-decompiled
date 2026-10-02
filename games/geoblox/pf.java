@@ -71,37 +71,13 @@ final class pf extends ee implements ga, pl {
             var9 = eh.field_d;
             var2 = var9.c((byte) 34);
             var3 = var9.c((byte) 34);
-            if (0 != var2) {
-              if (var2 != 1) {
-                gi.a((Throwable) null, "LR1: " + og.e(55), (byte) 125);
-                jl.a((byte) -123);
-              } else {
-                var4 = var9.h(76);
-                var5 = (se) ((Object) sj.field_g.g(0));
-                L1: while (true) {
-                  L2: {
-                    if (var5 != null) {
-                      if (var5.field_g == var3) {
-                        if (var5.field_j == var4) {
-                          break L2;
-                        }
-                      }
-                      var5 = (se) ((Object) sj.field_g.d(1));
-                      continue L1;
-                    }
-                  }
-                  if (var5 != null) {
-                    var5.a(false);
-                    break L0;
-                  } else {
-                    jl.a((byte) -116);
-                    return;
-                  }
-                }
-              }
-            } else {
+            if (0 == var2) {
               var4_ref_ea = (ea) ((Object) ea.field_g.g(0));
-              if (var4_ref_ea != null) {
+              if (var4_ref_ea == null) {
+                jl.a((byte) -116);
+                return;
+              }
+              {
                 var5_int = -var9.field_f + p.field_k;
                 var11 = var4_ref_ea.field_h;
                 var10 = var11;
@@ -114,11 +90,33 @@ final class pf extends ee implements ga, pl {
                 }
                 var4_ref_ea.a(false);
                 break L0;
-              } else {
+              }
+            }
+            if (var2 == 1) {
+              var4 = var9.h(76);
+              var5 = (se) ((Object) sj.field_g.g(0));
+              L1: while (true) {
+                L2: {
+                  if (var5 != null) {
+                    if (var5.field_g == var3) {
+                      if (var5.field_j == var4) {
+                        break L2;
+                      }
+                    }
+                    var5 = (se) ((Object) sj.field_g.d(1));
+                    continue L1;
+                  }
+                }
+                if (var5 != null) {
+                  var5.a(false);
+                  break L0;
+                }
                 jl.a((byte) -116);
                 return;
               }
             }
+            gi.a((Throwable) null, "LR1: " + og.e(55), (byte) 125);
+            jl.a((byte) -123);
           }
           if (param0 >= -95) {
             field_O = (rh) null;
@@ -228,22 +226,19 @@ final class pf extends ee implements ga, pl {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!super.a(param0, param1, param2, param3)) {
-            if (98 != param0) {
-              if (param0 == 99) {
-                stackIn_9_0 = this.a(param3, -109);
-                return stackIn_9_0;
-              } else {
-                return false;
-              }
-            } else {
-              stackIn_5_0 = this.a(7305, param3);
-              return stackIn_5_0;
-            }
-          } else {
+          if (super.a(param0, param1, param2, param3)) {
             stackIn_2_0 = 1;
             return stackIn_2_0 != 0;
           }
+          if (98 == param0) {
+            stackIn_5_0 = this.a(7305, param3);
+            return stackIn_5_0;
+          }
+          if (param0 != 99) {
+            return false;
+          }
+          stackIn_9_0 = this.a(param3, -109);
+          return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -392,23 +387,22 @@ final class pf extends ee implements ga, pl {
                     break L7;
                   }
                 }
-                if (var9 != 248) {
-                  if (99 != var9) {
-                    pk.field_l = qh.field_F;
-                    p.field_k = -1;
-                    me.field_l = var9;
-                  } else {
-                    el.b(30000, rc.d(112));
-                    fi.field_b = new Boolean(jl.a(eh.field_d, 0));
-                    eh.field_d.field_f = 0;
-                  }
-                } else {
+                if (var9 == 248) {
                   sj.a(k.c(124), (byte) 123);
                   kh.field_a = ph.field_k;
                   jl.a((byte) -124);
                   ck.field_e = false;
                   stackIn_31_0 = var9;
                   return stackIn_31_0;
+                }
+                if (99 != var9) {
+                  pk.field_l = qh.field_F;
+                  p.field_k = -1;
+                  me.field_l = var9;
+                } else {
+                  el.b(30000, rc.d(112));
+                  fi.field_b = new Boolean(jl.a(eh.field_d, 0));
+                  eh.field_d.field_f = 0;
                 }
               }
             }
@@ -450,12 +444,7 @@ final class pf extends ee implements ga, pl {
             field_K = (gk) null;
           }
           if (oc.field_e == null) {
-            if (!ck.field_e) {
-              var9 = sd.field_x;
-              sd.field_x = ac.field_s;
-              ck.field_e = true;
-              ac.field_s = var9;
-            } else {
+            if (ck.field_e) {
               if (ll.a((byte) 12) <= 30000L) {
                 kh.field_a = uj.field_e;
               } else {
@@ -465,6 +454,10 @@ final class pf extends ee implements ga, pl {
               stackIn_63_0 = 249;
               return stackIn_63_0;
             }
+            var9 = sd.field_x;
+            sd.field_x = ac.field_s;
+            ck.field_e = true;
+            ac.field_s = var9;
           }
           stackIn_66_0 = -1;
           return stackIn_66_0;
@@ -619,7 +612,8 @@ final class pf extends ee implements ga, pl {
               var17 = var13;
               if (var17 == null) {
                 return;
-              } else {
+              }
+              {
                 var4 = 2 % ((param0 + 26) / 62);
                 var3 = 0;
                 for (var5 = 0; var5 < var17.field_f; var5++) {
@@ -642,7 +636,8 @@ final class pf extends ee implements ga, pl {
                 }
                 if (var3 != 0) {
                   return;
-                } else {
+                }
+                {
                   var5 = param1.field_f;
                   param1.c((byte) 95, var17.field_m);
                   for (var6 = 0; var6 < var17.field_f; var6++) {
@@ -681,32 +676,28 @@ final class pf extends ee implements ga, pl {
                               var10[var11_int] = var12.readObject();
                             }
                             var11 = var27.invoke((Object) null, var10);
-                            if (var11 != null) {
-                              if (!(var11 instanceof Number)) {
-                                if (var11 instanceof String) {
-                                  param1.d((byte) 121, 2);
-                                  param1.a((String) (var11), 0);
-                                  break L5;
-                                } else {
-                                  param1.d((byte) -86, 4);
-                                  break L5;
-                                }
-                              } else {
-                                param1.d((byte) 126, 1);
-                                param1.b((byte) 116, ((Number) (var11)).longValue());
-                                break L5;
-                              }
-                            } else {
+                            if (var11 == null) {
                               param1.d((byte) -88, 0);
                               break L5;
                             }
-                          } else {
-                            if (var7_int == 4) {
-                              var26 = (java.lang.reflect.Method) (var13.field_i[var6].field_b);
-                              var9 = var26.getModifiers();
-                              param1.d((byte) 123, 0);
-                              param1.c((byte) 95, var9);
+                            if (var11 instanceof Number) {
+                              param1.d((byte) 126, 1);
+                              param1.b((byte) 116, ((Number) (var11)).longValue());
+                              break L5;
                             }
+                            if (!(var11 instanceof String)) {
+                              param1.d((byte) -86, 4);
+                              break L5;
+                            }
+                            param1.d((byte) 121, 2);
+                            param1.a((String) (var11), 0);
+                            break L5;
+                          }
+                          if (var7_int == 4) {
+                            var26 = (java.lang.reflect.Method) (var13.field_i[var6].field_b);
+                            var9 = var26.getModifiers();
+                            param1.d((byte) 123, 0);
+                            param1.c((byte) 95, var9);
                           }
                         }
                       } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
@@ -795,10 +786,9 @@ final class pf extends ee implements ga, pl {
           if (!wh.e(param0)) {
             if (this.field_J.field_s.length() <= 0) {
               break L0;
-            } else {
-              if (0 >= this.field_P.field_s.length()) {
-                break L0;
-              }
+            }
+            if (0 >= this.field_P.field_s.length()) {
+              break L0;
             }
           }
           ef.a(this.field_P.field_s, (byte) 66, this.field_J.field_s);

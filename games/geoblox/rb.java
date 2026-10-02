@@ -23,12 +23,11 @@ final class rb {
           if (param1 != 0) {
             rb.a((byte) -35);
           }
-          if (mf.a(param0, param3, 107, param2)) {
-            stackIn_6_0 = lc.a(4520, param4.a(param3, -28153, param0));
-            return stackIn_6_0;
-          } else {
+          if (!mf.a(param0, param3, 107, param2)) {
             return null;
           }
+          stackIn_6_0 = lc.a(4520, param4.a(param3, -28153, param0));
+          return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;

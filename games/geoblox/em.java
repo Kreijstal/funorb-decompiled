@@ -80,30 +80,30 @@ final class em {
         try {
           if (this.field_b == null) {
             throw new RuntimeException();
-          } else {
-            if (param0 >= 0) {
-              if (this.field_d.length > param0) {
-                if (null == this.field_d[param0]) {
-                  this.field_b.field_f = 6 + 72 * param0;
-                  var6_int = this.field_b.a((byte) -108);
-                  var7 = this.field_b.a((byte) -55);
-                  var13 = new byte[64];
-                  if (param1 != -9) {
-                    this.field_h = (sd) null;
-                  }
-                  this.field_b.b(29915, 64, var13, 0);
-                  var9 = new bj(param0, param4, param3, this.field_g, this.field_f, var6_int, var13, var7, param2);
-                  this.field_d[param0] = var9;
-                  stackIn_13_0 = (bj) (var9);
-                  return stackIn_13_0;
-                } else {
-                  stackIn_9_0 = this.field_d[param0];
-                  return stackIn_9_0;
+          }
+          if (param0 >= 0) {
+            if (this.field_d.length > param0) {
+              if (null != this.field_d[param0]) {
+                stackIn_9_0 = this.field_d[param0];
+                return stackIn_9_0;
+              }
+              {
+                this.field_b.field_f = 6 + 72 * param0;
+                var6_int = this.field_b.a((byte) -108);
+                var7 = this.field_b.a((byte) -55);
+                var13 = new byte[64];
+                if (param1 != -9) {
+                  this.field_h = (sd) null;
                 }
+                this.field_b.b(29915, 64, var13, 0);
+                var9 = new bj(param0, param4, param3, this.field_g, this.field_f, var6_int, var13, var7, param2);
+                this.field_d[param0] = var9;
+                stackIn_13_0 = (bj) (var9);
+                return stackIn_13_0;
               }
             }
-            throw new RuntimeException();
           }
+          throw new RuntimeException();
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
@@ -144,49 +144,31 @@ final class em {
         var3 = Geoblox.field_C;
         if (null == this.field_d) {
           return;
-        } else {
-          var2 = 0;
-          L0: while (true) {
-            if (this.field_d.length <= var2) {
-              if (param0 != -65) {
-                em.a('', 15);
-              }
-              var2 = 0;
-              L2: while (true) {
-                if (var2 >= this.field_d.length) {
-                  return;
-                } else {
-                  if (null != this.field_d[var2]) {
-                    stackIn_16_0 = this.field_d[var2];
-                    ((bj) (Object) stackIn_16_0).b((byte) -38);
-                    var2++;
-                    continue L2;
-                  } else {
-                    var2++;
-                    continue L2;
-                  }
-                }
-              }
-            } else {
-              if (this.field_d[var2] != null) {
-                this.field_d[var2].a(6924);
-                var2++;
-                continue L0;
-              } else {
-                var2++;
-                continue L0;
-              }
-            }
+        }
+        L0: for (var2 = 0; this.field_d.length > var2; var2++) {
+          if (this.field_d[var2] == null) {
+            continue L0;
           }
+          this.field_d[var2].a(6924);
+        }
+        if (param0 != -65) {
+          em.a('', 15);
+        }
+        L2: for (var2 = 0; var2 < this.field_d.length; var2++) {
+          if (null == this.field_d[var2]) {
+            continue L2;
+          }
+          stackIn_16_0 = this.field_d[var2];
+          ((bj) (Object) stackIn_16_0).b((byte) -38);
         }
     }
 
     final boolean b(byte param0) {
+        int var7 = 0;
         int var3;
         byte[] var4;
         byte[] var5;
         java.math.BigInteger var7_ref_java_math_BigInteger;
-        int var7;
         int var8;
         qc var10;
         byte[] var11;
@@ -196,61 +178,51 @@ final class em {
         var8 = Geoblox.field_C;
         if (null != this.field_b) {
           return true;
-        } else {
-          if (this.field_h == null) {
-            if (this.field_g.g(20)) {
-              return false;
-            } else {
-              this.field_h = this.field_g.a((byte) 0, 255, -21, 255, true);
-            }
-          }
-          if (param0 > 121) {
-            if (this.field_h.field_u) {
-              return false;
-            } else {
-              L1: {
-                var10 = new qc(this.field_h.e(397));
-                var10.field_f = 5;
-                var3 = var10.c((byte) 34);
-                var10.field_f = var10.field_f + var3 * 72;
-                var13 = new byte[var10.field_j.length - var10.field_f];
-                var11 = var13;
-                var4 = var11;
-                var10.b(29915, var13.length, var13, 0);
-                if (this.field_c != null) {
-                  if (this.field_e != null) {
-                    var12 = new java.math.BigInteger(var13);
-                    var7_ref_java_math_BigInteger = var12.modPow(this.field_c, this.field_e);
-                    var5 = var7_ref_java_math_BigInteger.toByteArray();
-                    break L1;
-                  }
-                }
-                var5 = var4;
-              }
-              if (var5.length != 65) {
-                throw new RuntimeException();
-              } else {
-                var15 = wh.a(-var13.length + var10.field_f - 5, 5, var10.field_j, 8);
-                var7 = 0;
-                L3: while (true) {
-                  if (var7 >= 64) {
-                    this.field_b = var10;
-                    this.field_d = new bj[var3];
-                    return true;
-                  } else {
-                    if (var15[var7] != var5[1 + var7]) {
-                      throw new RuntimeException();
-                    } else {
-                      var7++;
-                      continue L3;
-                    }
-                  }
-                }
-              }
-            }
-          } else {
+        }
+        if (this.field_h == null) {
+          if (this.field_g.g(20)) {
             return false;
           }
+          this.field_h = this.field_g.a((byte) 0, 255, -21, 255, true);
+        }
+        if (param0 <= 121) {
+          return false;
+        }
+        if (this.field_h.field_u) {
+          return false;
+        }
+        L1: {
+          var10 = new qc(this.field_h.e(397));
+          var10.field_f = 5;
+          var3 = var10.c((byte) 34);
+          var10.field_f = var10.field_f + var3 * 72;
+          var13 = new byte[var10.field_j.length - var10.field_f];
+          var11 = var13;
+          var4 = var11;
+          var10.b(29915, var13.length, var13, 0);
+          if (this.field_c != null) {
+            if (this.field_e != null) {
+              var12 = new java.math.BigInteger(var13);
+              var7_ref_java_math_BigInteger = var12.modPow(this.field_c, this.field_e);
+              var5 = var7_ref_java_math_BigInteger.toByteArray();
+              break L1;
+            }
+          }
+          var5 = var4;
+        }
+        if (var5.length != 65) {
+          throw new RuntimeException();
+        }
+        {
+          var15 = wh.a(-var13.length + var10.field_f - 5, 5, var10.field_j, 8);
+          for (var7 = 0; var7 < 64; var7++) {
+            if (var15[var7] != var5[1 + var7]) {
+              throw new RuntimeException();
+            }
+          }
+          this.field_b = var10;
+          this.field_d = new bj[var3];
+          return true;
         }
     }
 
@@ -355,12 +327,11 @@ final class em {
           }
           if (param0 != null) {
             if (param0.length() >= wg.field_m) {
-              if (param0.length() <= bm.field_j) {
-                stackIn_9_0 = 0;
-                return stackIn_9_0 != 0;
-              } else {
+              if (param0.length() > bm.field_j) {
                 return true;
               }
+              stackIn_9_0 = 0;
+              return stackIn_9_0 != 0;
             }
           }
           stackIn_7_0 = 1;

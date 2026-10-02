@@ -90,13 +90,13 @@ final class nf {
     }
 
     final void a(byte param0) {
+        int var8 = 0;
         int var2;
         int var3;
         int var4;
         int var5;
         int var6;
         int var7;
-        int var8;
         int var9;
         int var10;
         int var11;
@@ -104,57 +104,47 @@ final class nf {
         var12 = Geoblox.field_C;
         if (this.field_D) {
           return;
-        } else {
-          this.field_D = true;
-          var2 = 32767;
-          var3 = 32767;
-          var4 = 32767;
-          var5 = -32768;
-          var6 = -32768;
-          var7 = -32768;
-          var8 = 0;
-          L0: while (true) {
-            if (this.field_o <= var8) {
-              this.field_H = var6;
-              this.field_s = var3;
-              this.field_F = var4;
-              this.field_I = var5;
-              if (param0 != -99) {
-                this.field_K = (short[]) null;
-              }
-              this.field_Q = var2;
-              this.field_N = var7;
-              return;
-            } else {
-              var9 = this.field_O[var8];
-              var10 = this.field_q[var8];
-              if (~var10 > ~var3) {
-                var3 = var10;
-              }
-              if (var6 < var10) {
-                var6 = var10;
-              }
-              var11 = this.field_K[var8];
-              if (var9 < var2) {
-                var2 = var9;
-              }
-              if (var9 > var5) {
-                var5 = var9;
-              }
-              if (var11 > var7) {
-                var7 = var11;
-              }
-              if (var4 > var11) {
-                var4 = var11;
-                var8++;
-                continue L0;
-              } else {
-                var8++;
-                continue L0;
-              }
-            }
-          }
         }
+        this.field_D = true;
+        var2 = 32767;
+        var3 = 32767;
+        var4 = 32767;
+        var5 = -32768;
+        var6 = -32768;
+        var7 = -32768;
+        L0: for (var8 = 0; this.field_o > var8; var8++) {
+          var9 = this.field_O[var8];
+          var10 = this.field_q[var8];
+          if (~var10 > ~var3) {
+            var3 = var10;
+          }
+          if (var6 < var10) {
+            var6 = var10;
+          }
+          var11 = this.field_K[var8];
+          if (var9 < var2) {
+            var2 = var9;
+          }
+          if (var9 > var5) {
+            var5 = var9;
+          }
+          if (var11 > var7) {
+            var7 = var11;
+          }
+          if (var4 <= var11) {
+            continue L0;
+          }
+          var4 = var11;
+        }
+        this.field_H = var6;
+        this.field_s = var3;
+        this.field_F = var4;
+        this.field_I = var5;
+        if (param0 != -99) {
+          this.field_K = (short[]) null;
+        }
+        this.field_Q = var2;
+        this.field_N = var7;
     }
 
     final static void a(int param0, int param1, int param2) {

@@ -74,7 +74,8 @@ final class hj {
           if (sb.field_a <= var2) {
             kj.c(true);
             return var1;
-          } else {
+          }
+          {
             var3 = hl.field_K[var2] * rc.field_j[var2];
             var21 = mj.field_a[var2];
             if (!ng.field_E[var2]) {
@@ -86,7 +87,8 @@ final class hj {
               var1[var2] = new dm(pg.field_b, dd.field_C, gh.field_m[var2], md.field_e[var2], rc.field_j[var2], hl.field_K[var2], var22);
               var2++;
               continue L1;
-            } else {
+            }
+            {
               var15 = vf.field_E[var2];
               var11 = var15;
               var9 = var11;

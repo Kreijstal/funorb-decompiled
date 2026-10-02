@@ -20,27 +20,22 @@ final class tk {
             }
             if (this.field_b == param0) {
               return;
-            } else {
-              if (this.field_b == null) {
-                if (param0 != null) {
-                  param0.setCursor(param0.getToolkit().createCustomCursor((java.awt.Image) ((Object) new java.awt.image.BufferedImage(1, 1, 2)), new java.awt.Point(0, 0), (String) null));
-                  this.field_b = param0;
-                  return;
-                } else {
-                  return;
-                }
-              } else {
-                this.field_b.setCursor((java.awt.Cursor) null);
-                this.field_b = null;
-                if (param0 == null) {
-                  return;
-                } else {
-                  param0.setCursor(param0.getToolkit().createCustomCursor((java.awt.Image) ((Object) new java.awt.image.BufferedImage(1, 1, 2)), new java.awt.Point(0, 0), (String) null));
-                  this.field_b = param0;
-                  return;
-                }
-              }
             }
+            if (this.field_b == null) {
+              if (param0 == null) {
+                return;
+              }
+              param0.setCursor(param0.getToolkit().createCustomCursor((java.awt.Image) ((Object) new java.awt.image.BufferedImage(1, 1, 2)), new java.awt.Point(0, 0), (String) null));
+              this.field_b = param0;
+              return;
+            }
+            this.field_b.setCursor((java.awt.Cursor) null);
+            this.field_b = null;
+            if (param0 == null) {
+              return;
+            }
+            param0.setCursor(param0.getToolkit().createCustomCursor((java.awt.Image) ((Object) new java.awt.image.BufferedImage(1, 1, 2)), new java.awt.Point(0, 0), (String) null));
+            this.field_b = param0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

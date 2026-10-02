@@ -195,83 +195,78 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
             stackIn_13_0 = var6;
           }
           var10 = stackIn_13_0;
-          if (param2 == 14164) {
-            L4: {
-              if (param4 >= vb.field_e) {
-                if (param4 < vb.field_k) {
-                  var11 = param4 + var8 * vb.field_f;
-                  var12 = var10 + 1 - var8 >> 1;
-                  L5: while (true) {
-                    var12--;
-                    if (0 > var12) {
-                      break L4;
-                    } else {
-                      vb.field_c[var11] = 16777215;
-                      var11 = var11 + vb.field_f * 2;
-                      continue L5;
-                    }
-                  }
-                }
-              }
-            }
-            L6: {
-              if (param0 >= vb.field_i) {
-                if (vb.field_d > var6) {
-                  var11 = var7 + vb.field_f * param0;
-                  var12 = -var7 + 1 + var9 >> 1;
-                  L7: while (true) {
-                    var12--;
-                    if (var12 < 0) {
-                      break L6;
-                    } else {
-                      vb.field_c[var11] = 16777215;
-                      var11 += 2;
-                      continue L7;
-                    }
-                  }
-                }
-              }
-            }
-            L8: {
-              if (var5_int >= vb.field_e) {
-                if (vb.field_k > var5_int) {
-                  var11 = var5_int + ((1 & -param4 + var5_int) + var8) * vb.field_f;
-                  var12 = -var8 + 1 + var10 >> 1;
-                  L9: while (true) {
-                    var12--;
-                    if (0 > var12) {
-                      break L8;
-                    } else {
-                      vb.field_c[var11] = 16777215;
-                      var11 = var11 + 2 * vb.field_f;
-                      continue L9;
-                    }
-                  }
-                }
-              }
-            }
-            L10: {
-              if (vb.field_i <= param0) {
-                if (vb.field_d > var6) {
-                  var11 = vb.field_f * var6 + (var7 + (1 & -param0 + var6));
-                  var12 = 1 - (-var9 + var7) >> 1;
-                  L11: while (true) {
-                    var12--;
-                    if (var12 < 0) {
-                      break L10;
-                    } else {
-                      vb.field_c[var11] = 16777215;
-                      var11 += 2;
-                      continue L11;
-                    }
-                  }
-                }
-              }
-            }
-            return;
-          } else {
+          if (param2 != 14164) {
             return;
           }
+          L4: {
+            if (param4 >= vb.field_e) {
+              if (param4 < vb.field_k) {
+                var11 = param4 + var8 * vb.field_f;
+                var12 = var10 + 1 - var8 >> 1;
+                L5: while (true) {
+                  var12--;
+                  if (0 > var12) {
+                    break L4;
+                  }
+                  vb.field_c[var11] = 16777215;
+                  var11 = var11 + vb.field_f * 2;
+                  continue L5;
+                }
+              }
+            }
+          }
+          L6: {
+            if (param0 >= vb.field_i) {
+              if (vb.field_d > var6) {
+                var11 = var7 + vb.field_f * param0;
+                var12 = -var7 + 1 + var9 >> 1;
+                L7: while (true) {
+                  var12--;
+                  if (var12 < 0) {
+                    break L6;
+                  }
+                  vb.field_c[var11] = 16777215;
+                  var11 += 2;
+                  continue L7;
+                }
+              }
+            }
+          }
+          L8: {
+            if (var5_int >= vb.field_e) {
+              if (vb.field_k > var5_int) {
+                var11 = var5_int + ((1 & -param4 + var5_int) + var8) * vb.field_f;
+                var12 = -var8 + 1 + var10 >> 1;
+                L9: while (true) {
+                  var12--;
+                  if (0 > var12) {
+                    break L8;
+                  }
+                  vb.field_c[var11] = 16777215;
+                  var11 = var11 + 2 * vb.field_f;
+                  continue L9;
+                }
+              }
+            }
+          }
+          L10: {
+            if (vb.field_i <= param0) {
+              if (vb.field_d > var6) {
+                var11 = vb.field_f * var6 + (var7 + (1 & -param0 + var6));
+                var12 = 1 - (-var9 + var7) >> 1;
+                L11: while (true) {
+                  var12--;
+                  if (var12 < 0) {
+                    break L10;
+                  }
+                  vb.field_c[var11] = 16777215;
+                  var11 += 2;
+                  continue L11;
+                }
+              }
+            }
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;

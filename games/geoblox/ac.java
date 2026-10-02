@@ -43,15 +43,14 @@ class ac extends ff {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 == 28) {
-            var2 = new sl(false);
-            var2.field_a = param1;
-            stackIn_4_0 = (sl) (var2);
-            return stackIn_4_0;
-          } else {
+          if (param0 != 28) {
             stackIn_2_0 = (sl) null;
             return stackIn_2_0;
           }
+          var2 = new sl(false);
+          var2.field_a = param1;
+          stackIn_4_0 = (sl) (var2);
+          return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
@@ -202,11 +201,10 @@ class ac extends ff {
               vb.a(var3_int + 2, var4 + 2, 28, 28, 2, 16777215);
             }
             if ((var5 & 1 << var10) == 0) {
-              if (!param1) {
-                am.field_b.f(var3_int, var4);
-              } else {
+              if (param1) {
                 continue L7;
               }
+              am.field_b.f(var3_int, var4);
             } else {
               sl.field_f[var10].f(var3_int, var4);
             }
@@ -218,12 +216,11 @@ class ac extends ff {
               if (!param0) {
                 var4 += 5;
               }
-              if (param1) {
-                if (var9 < 8) {
-                  var3_int = var3_int + var8;
-                }
-              } else {
+              if (!param1) {
                 continue L7;
+              }
+              if (var9 < 8) {
+                var3_int = var3_int + var8;
               }
             } else {
               var3_int += 40;
@@ -240,12 +237,7 @@ class ac extends ff {
           }
           L9: {
             var10 = stackIn_60_0 + stackIn_60_1;
-            if (var7 == -1) {
-              fi.field_d.b(w.field_a, 315, var10, 0, -1);
-              if (fh.c(-94)) {
-                dd.field_G.a(ni.field_C, 125, 350, 395, 100, 0, -1, 1, 0, 26);
-              }
-            } else {
+            if (var7 != -1) {
               fi.field_d.b(pg.field_a[var7], 315, var10, 0, -1);
               var11 = -fi.field_d.field_q + fi.field_d.field_o;
               var12 = 280;
@@ -268,6 +260,10 @@ class ac extends ff {
               }
               var12 = var12 + var11;
               break L9;
+            }
+            fi.field_d.b(w.field_a, 315, var10, 0, -1);
+            if (fh.c(-94)) {
+              dd.field_G.a(ni.field_C, 125, 350, 395, 100, 0, -1, 1, 0, 26);
             }
           }
           if (param2 > -61) {

@@ -29,11 +29,10 @@ class hk extends el {
               this.a((byte) -116, param6);
               this.field_f = param3;
               if (null != this.field_u) {
-                if (this.field_u instanceof ti) {
-                  ((ti) ((Object) this.field_u)).a(param0, -30896, param2, param4, (hk) (this), param3, param5);
-                } else {
+                if (!(this.field_u instanceof ti)) {
                   return true;
                 }
+                ((ti) ((Object) this.field_u)).a(param0, -30896, param2, param4, (hk) (this), param3, param5);
               }
               stackIn_8_0 = 1;
               return stackIn_8_0 != 0;
@@ -141,10 +140,9 @@ class hk extends el {
           if (param1 == 13) {
             stackIn_9_0 = 0;
             return stackIn_9_0 != 0;
-          } else {
-            this.field_y = true;
-            return false;
           }
+          this.field_y = true;
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -233,10 +231,9 @@ class hk extends el {
               if (param0 <= -30) {
                 stackIn_12_0 = 1;
                 return stackIn_12_0 != 0;
-              } else {
-                this.field_A = true;
-                return true;
               }
+              this.field_A = true;
+              return true;
             }
           }
           stackIn_4_0 = 0;

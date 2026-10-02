@@ -117,21 +117,20 @@ final class cg extends ia {
           if (this.field_j > param2) {
             this.field_j = this.field_j - param2;
             return;
-          } else {
-            param1 = param1 + this.field_j;
-            param2 = param2 - this.field_j;
-            this.field_j = 0;
-            this.field_l.field_b = this.field_b;
-            this.field_l.field_c = this.field_c;
-            this.field_c.field_b = (hf) ((Object) this.field_l);
-            this.field_b.field_c = (hf) ((Object) this.field_l);
-            this.field_c = null;
-            this.field_b = null;
-            if (param2 > 0) {
-              this.field_l.a(param0, param1, param2);
-            }
-            return;
           }
+          param1 = param1 + this.field_j;
+          param2 = param2 - this.field_j;
+          this.field_j = 0;
+          this.field_l.field_b = this.field_b;
+          this.field_l.field_c = this.field_c;
+          this.field_c.field_b = (hf) ((Object) this.field_l);
+          this.field_b.field_c = (hf) ((Object) this.field_l);
+          this.field_c = null;
+          this.field_b = null;
+          if (param2 > 0) {
+            this.field_l.a(param0, param1, param2);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;

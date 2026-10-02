@@ -29,68 +29,60 @@ final class lh {
               if (var1 == 1) {
                 fieldTemp$4 = h.field_d;
                 h.field_d = h.field_d + 1;
-                if (fieldTemp$4 > 450) {
-                  kj.field_J = 2;
-                  return;
-                } else {
+                if (fieldTemp$4 <= 450) {
                   return;
                 }
-              } else {
-                if (var1 == 2) {
-                  fieldTemp$5 = eh.field_c;
-                  eh.field_c = eh.field_c + 1;
-                  if (fieldTemp$5 > 480) {
-                    pb.field_t.b((byte) -118);
-                    gf.a((byte) -12);
-                    return;
-                  }
+                kj.field_J = 2;
+                return;
+              }
+              if (var1 == 2) {
+                fieldTemp$5 = eh.field_c;
+                eh.field_c = eh.field_c + 1;
+                if (fieldTemp$5 > 480) {
+                  pb.field_t.b((byte) -118);
+                  gf.a((byte) -12);
+                  return;
                 }
               }
             }
           }
           return;
-        } else {
-          lh.b(-5);
-          if (null != pb.field_t.g(0)) {
-            var1 = kj.field_J;
-            if (var1 == 0) {
-              eh.field_c = eh.field_c - 1;
-              if (eh.field_c > -10 - (tl.field_h - 480)) {
-                return;
-              } else {
-                h.field_d = 0;
-                kj.field_J = 1;
-                return;
-              }
-            } else {
-              if (var1 == 1) {
-                fieldTemp$6 = h.field_d;
-                h.field_d = h.field_d + 1;
-                if (fieldTemp$6 <= 450) {
-                  return;
-                } else {
-                  kj.field_J = 2;
-                  return;
-                }
-              } else {
-                if (var1 == 2) {
-                  fieldTemp$7 = eh.field_c;
-                  eh.field_c = eh.field_c + 1;
-                  if (fieldTemp$7 > 480) {
-                    pb.field_t.b((byte) -118);
-                    gf.a((byte) -12);
-                    return;
-                  } else {
-                    return;
-                  }
-                } else {
-                  return;
-                }
-              }
-            }
-          } else {
+        }
+        lh.b(-5);
+        if (null == pb.field_t.g(0)) {
+          return;
+        }
+        var1 = kj.field_J;
+        if (var1 == 0) {
+          eh.field_c = eh.field_c - 1;
+          if (eh.field_c > -10 - (tl.field_h - 480)) {
             return;
           }
+          h.field_d = 0;
+          kj.field_J = 1;
+          return;
+        }
+        if (var1 == 1) {
+          fieldTemp$6 = h.field_d;
+          h.field_d = h.field_d + 1;
+          if (fieldTemp$6 <= 450) {
+            return;
+          }
+          kj.field_J = 2;
+          return;
+        }
+        if (var1 != 2) {
+          return;
+        }
+        {
+          fieldTemp$7 = eh.field_c;
+          eh.field_c = eh.field_c + 1;
+          if (fieldTemp$7 <= 480) {
+            return;
+          }
+          pb.field_t.b((byte) -118);
+          gf.a((byte) -12);
+          return;
         }
     }
 

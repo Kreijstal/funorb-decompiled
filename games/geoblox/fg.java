@@ -22,81 +22,63 @@ final class fg {
         int var9;
         int[] var13;
         var1 = 0;
-        var2 = 0;
-        L0: while (true) {
-          if (var2 >= 10) {
-            if (var1 != 0) {
-              var2 = 22050 * var1 / 1000;
-              var3 = new byte[var2];
-              var4 = 0;
-              L1: while (true) {
-                if (var4 >= 10) {
-                  return var3;
-                } else {
-                  if (this.field_a[var4] != null) {
-                    var5 = this.field_a[var4].field_d * 22050 / 1000;
-                    var6 = this.field_a[var4].field_v * 22050 / 1000;
-                    var13 = this.field_a[var4].a(var5, this.field_a[var4].field_d);
-                    for (var8 = 0; var8 < var5; var8++) {
-                      var9 = var3[var8 + var6] + (var13[var8] >> 8);
-                      if ((var9 + 128 & -256) != 0) {
-                        var9 = var9 >> 31 ^ 127;
-                      }
-                      var3[var8 + var6] = (byte)var9;
-                    }
-                    var4++;
-                    continue L1;
-                  } else {
-                    var4++;
-                    continue L1;
-                  }
-                }
-              }
-            } else {
-              return new byte[]{};
+        L0: for (var2 = 0; var2 < 10; var2++) {
+          if (this.field_a[var2] == null) {
+            continue L0;
+          }
+          if (this.field_a[var2].field_d + this.field_a[var2].field_v <= var1) {
+            continue L0;
+          }
+          var1 = this.field_a[var2].field_d + this.field_a[var2].field_v;
+        }
+        if (var1 == 0) {
+          return new byte[]{};
+        }
+        {
+          var2 = 22050 * var1 / 1000;
+          var3 = new byte[var2];
+          var4 = 0;
+          L1: while (true) {
+            if (var4 >= 10) {
+              return var3;
             }
-          } else {
-            if (this.field_a[var2] != null) {
-              if (this.field_a[var2].field_d + this.field_a[var2].field_v > var1) {
-                var1 = this.field_a[var2].field_d + this.field_a[var2].field_v;
-                var2++;
-                continue L0;
-              } else {
-                var2++;
-                continue L0;
+            if (this.field_a[var4] == null) {
+              var4++;
+              continue L1;
+            }
+            {
+              var5 = this.field_a[var4].field_d * 22050 / 1000;
+              var6 = this.field_a[var4].field_v * 22050 / 1000;
+              var13 = this.field_a[var4].a(var5, this.field_a[var4].field_d);
+              for (var8 = 0; var8 < var5; var8++) {
+                var9 = var3[var8 + var6] + (var13[var8] >> 8);
+                if ((var9 + 128 & -256) != 0) {
+                  var9 = var9 >> 31 ^ 127;
+                }
+                var3[var8 + var6] = (byte)var9;
               }
-            } else {
-              var2++;
-              continue L0;
+              var4++;
+              continue L1;
             }
           }
         }
     }
 
     private fg(qc param0) {
-        int var2;
+        int var2 = 0;
         int var3;
         this.field_a = new ed[10];
-        var2 = 0;
-        L0: while (true) {
-          if (var2 >= 10) {
-            this.field_c = param0.b(true);
-            this.field_b = param0.b(true);
-            return;
-          } else {
-            var3 = param0.c((byte) 34);
-            if (var3 != 0) {
-              param0.field_f = param0.field_f - 1;
-              this.field_a[var2] = new ed();
-              this.field_a[var2].a(param0);
-              var2++;
-              continue L0;
-            } else {
-              var2++;
-              continue L0;
-            }
+        L0: for (var2 = 0; var2 < 10; var2++) {
+          var3 = param0.c((byte) 34);
+          if (var3 == 0) {
+            continue L0;
           }
+          param0.field_f = param0.field_f - 1;
+          this.field_a[var2] = new ed();
+          this.field_a[var2].a(param0);
         }
+        this.field_c = param0.b(true);
+        this.field_b = param0.b(true);
     }
 
     final static fg a(rh param0, int param1, int param2) {

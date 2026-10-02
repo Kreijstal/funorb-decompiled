@@ -52,16 +52,15 @@ abstract class pb extends rc {
               var10.drawRect(0, 0, 303, 33);
               var10.fillRect(2, 2, 3 * param0, 30);
               var10.setColor(java.awt.Color.black);
-              if (!param3) {
-                var10.drawRect(1, 1, 301, 31);
-                var10.fillRect(3 * param0 + 2, 2, 300 - 3 * param0, 30);
-                var10.setFont(hh.field_a);
-                var10.setColor(java.awt.Color.white);
-                var10.drawString(param4, (-(6 * param4.length()) + 304) / 2, 22);
-                var9.drawImage(ff.field_a, kh.field_d / 2 - 152, ok.field_c / 2 - 18, (java.awt.image.ImageObserver) null);
-              } else {
+              if (param3) {
                 return;
               }
+              var10.drawRect(1, 1, 301, 31);
+              var10.fillRect(3 * param0 + 2, 2, 300 - 3 * param0, 30);
+              var10.setFont(hh.field_a);
+              var10.setColor(java.awt.Color.white);
+              var10.drawString(param4, (-(6 * param4.length()) + 304) / 2, 22);
+              var9.drawImage(ff.field_a, kh.field_d / 2 - 152, ok.field_c / 2 - 18, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;
@@ -79,12 +78,11 @@ abstract class pb extends rc {
             }
             if (wh.field_q == null) {
               return;
-            } else {
-              var9.setFont(hh.field_a);
-              var9.setColor(java.awt.Color.white);
-              var9.drawString(wh.field_q, kh.field_d / 2 - 6 * wh.field_q.length() / 2, -26 + ok.field_c / 2);
-              return;
             }
+            var9.setFont(hh.field_a);
+            var9.setColor(java.awt.Color.white);
+            var9.drawString(wh.field_q, kh.field_d / 2 - 6 * wh.field_q.length() / 2, -26 + ok.field_c / 2);
+            return;
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var5 = (Exception) (Object) decompiledCaughtException;

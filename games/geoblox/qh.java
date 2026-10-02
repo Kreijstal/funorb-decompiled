@@ -35,15 +35,14 @@ final class qh extends ee implements pe, pl, ta {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param4 == 5) {
-            var6 = new hd(20, param0, 120 + param2, 25, param3, false, 120, 3, ng.field_F, 16777215, param1);
-            this.b((byte) -114, var6);
-            stackIn_4_0 = var6.field_h;
-            return stackIn_4_0;
-          } else {
+          if (param4 != 5) {
             stackIn_2_0 = 0;
             return stackIn_2_0;
           }
+          var6 = new hd(20, param0, 120 + param2, 25, param3, false, 120, 3, ng.field_F, 16777215, param1);
+          this.b((byte) -114, var6);
+          stackIn_4_0 = var6.field_h;
+          return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6_ref = decompiledCaughtException;
@@ -334,10 +333,9 @@ final class qh extends ee implements pe, pl, ta {
           }
           if (param2 == 2) {
             return;
-          } else {
-            this.field_N = (hc) null;
-            return;
           }
+          this.field_N = (hc) null;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -392,10 +390,9 @@ final class qh extends ee implements pe, pl, ta {
           }
           if (param1 == -20) {
             return;
-          } else {
-            field_O = (dm[]) null;
-            return;
           }
+          field_O = (dm[]) null;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
@@ -438,30 +435,26 @@ final class qh extends ee implements pe, pl, ta {
           if (var3 == null) {
             stackIn_3_0 = 1;
             return stackIn_3_0 != 0;
-          } else {
-            var4 = var3.a((byte) -105);
-            if (si.field_m == var4) {
-              stackIn_7_0 = 0;
-              return stackIn_7_0 != 0;
-            } else {
-              if (param0 >= -73) {
-                var5 = (nl) null;
-                discarded$1 = this.a((byte) 82, (nl) null);
-              }
-              if (bf.field_g == var4) {
-                stackIn_13_0 = 0;
-                return stackIn_13_0 != 0;
-              } else {
-                if (var4 != oj.field_d) {
-                  stackIn_18_0 = 1;
-                  return stackIn_18_0 != 0;
-                } else {
-                  stackIn_16_0 = 0;
-                  return stackIn_16_0 != 0;
-                }
-              }
-            }
           }
+          var4 = var3.a((byte) -105);
+          if (si.field_m == var4) {
+            stackIn_7_0 = 0;
+            return stackIn_7_0 != 0;
+          }
+          if (param0 >= -73) {
+            var5 = (nl) null;
+            discarded$1 = this.a((byte) 82, (nl) null);
+          }
+          if (bf.field_g == var4) {
+            stackIn_13_0 = 0;
+            return stackIn_13_0 != 0;
+          }
+          if (var4 != oj.field_d) {
+            stackIn_18_0 = 1;
+            return stackIn_18_0 != 0;
+          }
+          stackIn_16_0 = 0;
+          return stackIn_16_0 != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -557,22 +550,19 @@ final class qh extends ee implements pe, pl, ta {
           if (super.a(param0, param1 ^ 0, param2, param3)) {
             stackIn_3_0 = 1;
             return stackIn_3_0 != 0;
-          } else {
-            if (98 == param0) {
-              stackIn_7_0 = this.a(7305, param3);
-              return stackIn_7_0;
-            } else {
-              if (param1 != 13) {
-                field_Q = (String) null;
-              }
-              if (99 == param0) {
-                stackIn_13_0 = this.a(param3, -125);
-                return stackIn_13_0;
-              } else {
-                return false;
-              }
-            }
           }
+          if (98 == param0) {
+            stackIn_7_0 = this.a(7305, param3);
+            return stackIn_7_0;
+          }
+          if (param1 != 13) {
+            field_Q = (String) null;
+          }
+          if (99 != param0) {
+            return false;
+          }
+          stackIn_13_0 = this.a(param3, -125);
+          return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -613,10 +603,9 @@ final class qh extends ee implements pe, pl, ta {
           if (param0 <= -66) {
             stackIn_4_0 = this.a(param1, param4, param2, 35, param5, param3, (byte) -121);
             return stackIn_4_0;
-          } else {
-            stackIn_2_0 = -10;
-            return stackIn_2_0;
           }
+          stackIn_2_0 = -10;
+          return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;

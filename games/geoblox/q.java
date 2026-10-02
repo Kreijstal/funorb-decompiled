@@ -181,11 +181,10 @@ abstract class q extends ib implements ga {
           }
           if (param0 == 124) {
             return;
-          } else {
-            var4 = (String) null;
-            q.a(-94, -21, 56, -5, 62, (d) null, (String) null, -54, -101);
-            return;
           }
+          var4 = (String) null;
+          q.a(-94, -21, 56, -5, 62, (d) null, (String) null, -54, -101);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;

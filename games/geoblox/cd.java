@@ -87,14 +87,30 @@ final class cd extends jg {
         String var13 = null;
         Class var14 = null;
         try {
-          if (param0.type() != java.net.Proxy.Type.DIRECT) {
+          if (param0.type() == java.net.Proxy.Type.DIRECT) {
+            stackIn_2_0 = this.a(1);
+            return stackIn_2_0;
+          }
+          {
             var3 = param0.address();
             if (param1 != -18) {
               field_l = (dm) null;
             }
-            if ((Object) var3 instanceof java.net.InetSocketAddress) {
+            if (!((Object) var3 instanceof java.net.InetSocketAddress)) {
+              return null;
+            }
+            {
               var4 = (java.net.InetSocketAddress) ((Object) var3);
-              if (param0.type() == java.net.Proxy.Type.HTTP) {
+              if (param0.type() != java.net.Proxy.Type.HTTP) {
+                if (param0.type() != java.net.Proxy.Type.SOCKS) {
+                  return null;
+                }
+                var5 = new java.net.Socket(param0);
+                ((java.net.Socket) (var5)).connect((java.net.SocketAddress) ((Object) new java.net.InetSocketAddress(this.field_e, this.field_b)));
+                stackIn_12_0 = var5;
+                return (java.net.Socket) ((Object) stackIn_12_0);
+              }
+              {
                 var5 = null;
                 try {
                   var14 = Class.forName("sun.net.www.protocol.http.AuthenticationInfo");
@@ -121,22 +137,8 @@ final class cd extends jg {
                 }
                 stackIn_22_0 = this.a((byte) -60, (String) (var5), var4.getPort(), var4.getHostName());
                 return stackIn_22_0;
-              } else {
-                if (param0.type() == java.net.Proxy.Type.SOCKS) {
-                  var5 = new java.net.Socket(param0);
-                  ((java.net.Socket) (var5)).connect((java.net.SocketAddress) ((Object) new java.net.InetSocketAddress(this.field_e, this.field_b)));
-                  stackIn_12_0 = var5;
-                  return (java.net.Socket) ((Object) stackIn_12_0);
-                } else {
-                  return null;
-                }
               }
-            } else {
-              return null;
             }
-          } else {
-            stackIn_2_0 = this.a(1);
-            return stackIn_2_0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
@@ -263,13 +265,13 @@ final class cd extends jg {
           var10 = var8[var9];
           var11 = (java.net.Proxy) (var10);
           try {
+              if (false) throw (bd) null;
             var12 = this.a(var11, (byte) -18);
             if (var12 != null) {
               stackIn_21_0 = (java.net.Socket) (var12);
               return stackIn_21_0;
-            } else {
-              var9++;
             }
+            var9++;
           } catch (bd decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var12_ref = (bd) (Object) decompiledCaughtException;
@@ -283,9 +285,8 @@ final class cd extends jg {
         }
         if (var7 != null) {
           throw cd.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
-        } else {
-          return this.a(1);
         }
+        return this.a(1);
     }
 
     private final java.net.Socket a(byte param0, String param1, int param2, String param3) throws IOException {
@@ -345,7 +346,8 @@ final class cd extends jg {
                         var8 = var7.readLine();
                         var10++;
                         continue L4;
-                      } else {
+                      }
+                      {
                         var15 = var8.substring(var11.length()).trim();
                         var8 = var15;
                         var8 = var15;

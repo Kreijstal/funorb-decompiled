@@ -92,7 +92,8 @@ final class bk {
           re.field_f = qa.a(var8, 0, 80);
           vj.field_c = null;
           return new vd(param0);
-        } else {
+        }
+        {
           var5 = var8.b(true);
           try {
             var9 = rd.field_r.a((byte) -14, var5);

@@ -47,14 +47,13 @@ final class vd {
           if (!param4.a(0)) {
             stackIn_3_0 = (String) (param1);
             return stackIn_3_0;
-          } else {
-            if (param3) {
-              var6 = (rh) null;
-              vd.a((String) null, (String) null, 53, false, (rh) null);
-            }
-            stackIn_7_0 = param0 + " - " + param4.b((byte) 42, param2) + "%";
-            return stackIn_7_0;
           }
+          if (param3) {
+            var6 = (rh) null;
+            vd.a((String) null, (String) null, 53, false, (rh) null);
+          }
+          stackIn_7_0 = param0 + " - " + param4.b((byte) 42, param2) + "%";
+          return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -122,63 +121,50 @@ final class vd {
     }
 
     final int c(int param0) {
-        if (!this.field_j) {
-          if (this.field_f == 2) {
-            if (this.field_c <= 0) {
-              if (wh.field_n == this.field_h) {
-                return 1;
-              } else {
-                if (vk.field_a == 2) {
-                  if (!v.a(this.field_i, (byte) 89)) {
-                    if (param0 <= 113) {
-                      vd.a(-69);
-                      return 0;
-                    } else {
-                      return 0;
-                    }
-                  } else {
-                    return 1;
-                  }
-                } else {
-                  if (param0 <= 113) {
-                    vd.a(-69);
-                    return 0;
-                  } else {
-                    return 0;
-                  }
-                }
-              }
-            } else {
-              return 2;
-            }
-          } else {
-            if (wh.field_n == this.field_h) {
-              return 1;
-            } else {
-              if (vk.field_a == 2) {
-                if (!v.a(this.field_i, (byte) 89)) {
-                  if (param0 <= 113) {
-                    vd.a(-69);
-                    return 0;
-                  } else {
-                    return 0;
-                  }
-                } else {
-                  return 1;
-                }
-              } else {
-                if (param0 <= 113) {
-                  vd.a(-69);
-                  return 0;
-                } else {
-                  return 0;
-                }
-              }
-            }
-          }
-        } else {
+        if (this.field_j) {
           return 2;
         }
+        if (this.field_f != 2) {
+          if (wh.field_n == this.field_h) {
+            return 1;
+          }
+          if (vk.field_a != 2) {
+            if (param0 > 113) {
+              return 0;
+            }
+            vd.a(-69);
+            return 0;
+          }
+          if (v.a(this.field_i, (byte) 89)) {
+            return 1;
+          }
+          if (param0 > 113) {
+            return 0;
+          }
+          vd.a(-69);
+          return 0;
+        }
+        if (this.field_c > 0) {
+          return 2;
+        }
+        if (wh.field_n == this.field_h) {
+          return 1;
+        }
+        if (vk.field_a != 2) {
+          if (param0 > 113) {
+            return 0;
+          }
+          vd.a(-69);
+          return 0;
+        }
+        if (v.a(this.field_i, (byte) 89)) {
+          return 1;
+        }
+        if (param0 > 113) {
+          return 0;
+        }
+        vd.a(-69);
+        return 0;
     }
 
     vd(boolean param0) {
@@ -198,34 +184,23 @@ final class vd {
     }
 
     static {
-        $cfr$clinit: {
-            int var0;
-            field_b = new int[5];
-            field_n = 0;
-            field_a = 0;
-            field_m = new String[]{"All scores", "My scores", "Best each"};
-            field_p = 6;
-            var0 = 0;
-            L0: while (true) {
-              if (field_b.length <= var0) {
-                field_e = "Excellent! Now try connecting three of a kind by shape.<br>Press <img=2> to continue.";
-                break $cfr$clinit;
-              } else {
-                if (var0 != 0) {
-                  field_b[var0] = (1 + var0) * 51 << 16;
-                } else {
-                  field_b[var0] = (var0 + 1) * 20 << 16;
-                }
-                if (var0 > 2) {
-                  field_b[var0] = lb.a(field_b[var0], (var0 - 2) * 22 << 8);
-                  var0++;
-                  continue L0;
-                } else {
-                  var0++;
-                  continue L0;
-                }
-              }
-            }
+        int var0 = 0;
+        field_b = new int[5];
+        field_n = 0;
+        field_a = 0;
+        field_m = new String[]{"All scores", "My scores", "Best each"};
+        field_p = 6;
+        L0: for (var0 = 0; field_b.length > var0; var0++) {
+          if (var0 != 0) {
+            field_b[var0] = (1 + var0) * 51 << 16;
+          } else {
+            field_b[var0] = (var0 + 1) * 20 << 16;
+          }
+          if (var0 <= 2) {
+            continue L0;
+          }
+          field_b[var0] = lb.a(field_b[var0], (var0 - 2) * 22 << 8);
         }
+        field_e = "Excellent! Now try connecting three of a kind by shape.<br>Press <img=2> to continue.";
     }
 }

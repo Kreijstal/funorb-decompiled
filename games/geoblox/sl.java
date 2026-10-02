@@ -25,17 +25,15 @@ final class sl {
         RuntimeException decompiledCaughtException = null;
         try {
           hj.a((byte) -85, (java.awt.Component) ((Object) param0));
-          if (param1 == 57) {
-            fk.a((java.awt.Component) ((Object) param0), param1 - 56);
-            if (null != vc.field_f) {
-              vc.field_f.a(124, (java.awt.Component) ((Object) param0));
-              return;
-            } else {
-              return;
-            }
-          } else {
+          if (param1 != 57) {
             return;
           }
+          fk.a((java.awt.Component) ((Object) param0), param1 - 56);
+          if (null == vc.field_f) {
+            return;
+          }
+          vc.field_f.a(124, (java.awt.Component) ((Object) param0));
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

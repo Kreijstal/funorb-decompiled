@@ -27,21 +27,19 @@ final class ca extends hf {
           if (param0 != null) {
             if (0 != param0.length()) {
               var2_int = param0.indexOf('@');
-              if (var2_int != -1) {
-                var3 = param0.substring(0, var2_int);
-                var4 = param0.substring(param1 + var2_int);
-                var5 = r.a(var3, true);
-                if (var5 == null) {
-                  stackIn_12_0 = fe.a(var4, false);
-                  return stackIn_12_0;
-                } else {
-                  stackIn_10_0 = (nd) (var5);
-                  return stackIn_10_0;
-                }
-              } else {
+              if (var2_int == -1) {
                 stackIn_7_0 = pj.field_f;
                 return stackIn_7_0;
               }
+              var3 = param0.substring(0, var2_int);
+              var4 = param0.substring(param1 + var2_int);
+              var5 = r.a(var3, true);
+              if (var5 == null) {
+                stackIn_12_0 = fe.a(var4, false);
+                return stackIn_12_0;
+              }
+              stackIn_10_0 = (nd) (var5);
+              return stackIn_10_0;
             }
           }
           stackIn_4_0 = fb.field_j;

@@ -71,7 +71,8 @@ final class ab {
           if (param2 == null) {
             stackIn_4_0 = gg.field_d;
             return stackIn_4_0;
-          } else {
+          }
+          {
             var3_int = param2.length();
             if (var3_int >= 1) {
               if (var3_int <= 12) {
@@ -98,12 +99,11 @@ final class ab {
                             }
                           }
                         }
-                        if (var5 > 0) {
-                          stackIn_36_0 = c.field_r;
-                          return stackIn_36_0;
-                        } else {
+                        if (var5 <= 0) {
                           return null;
                         }
+                        stackIn_36_0 = c.field_r;
+                        return stackIn_36_0;
                       }
                     }
                     stackIn_21_0 = c.field_r;
@@ -228,76 +228,7 @@ final class ab {
                   var2.b(true);
                 }
                 gf.a(var2, -1232328029, param1);
-                if (!uj.a(var2, param1, 0)) {
-                  if (ma.a(true, param1, var2)) {
-                    var3 = wd.field_b.field_v[aa.field_a + wd.field_b.field_s * aa.field_b] - 1;
-                    var4 = tl.field_g[var3];
-                    if (a.field_d != var4.field_K) {
-                      var5 = 0.5f * (var4.field_w + var2.field_w);
-                      var6 = (var4.field_F + var2.field_F) * 0.5f;
-                      var7 = var6 * var6 + var5 * var5;
-                      var7 = og.field_r / (float)Math.sqrt((double)var7);
-                      var6 = var6 * var7;
-                      var5 = var5 * var7;
-                      var8 = -var4.field_o + 320.0f;
-                      var9 = 240.0f - var4.field_v;
-                      var10 = -var5 - var4.field_o + 320.0f;
-                      var11 = 240.0f - (var4.field_v + var6);
-                      var10 = var10 * var10;
-                      var11 = var11 * var11;
-                      if (!(var10 + var11 > var9 * var9 + var8 * var8)) {
-                        stackIn_36_0 = 0;
-                      } else {
-                        stackIn_36_0 = 1;
-                      }
-                      var12 = stackIn_36_0;
-                      var8 = 320.0f - var2.field_o;
-                      var11 = 240.0f - (var6 + var2.field_v);
-                      var10 = -var2.field_o - var5 + 320.0f;
-                      var9 = -var2.field_v + 240.0f;
-                      var10 = var10 * var10;
-                      var11 = var11 * var11;
-                      if (!(var9 * var9 + var8 * var8 < var11 + var10)) {
-                        stackIn_39_0 = 0;
-                      } else {
-                        stackIn_39_0 = 1;
-                      }
-                      var13 = stackIn_39_0;
-                      if (var12 != 0) {
-                        if (var13 != 0) {
-                          var8 = -((var2.field_o + var4.field_o) * 0.5f) + 320.0f;
-                          var9 = 240.0f - 0.5f * (var4.field_v + var2.field_v);
-                          var14 = og.field_r / (float)Math.sqrt((double)(var8 * var8 + var9 * var9));
-                          var5 = var8 * var14;
-                          var6 = var14 * var9;
-                        }
-                      }
-                      var2.field_F = var2.field_F * -1.0f;
-                      var2.field_w = var2.field_w * -1.0f;
-                      var2.f((byte) -59);
-                      var4.field_w = var5;
-                      var2.field_w = var5;
-                      var4.field_F = var6;
-                      var2.field_F = var6;
-                    } else {
-                      break L2;
-                    }
-                  } else {
-                    var3_float = 320.0f - var2.field_o;
-                    var4_float = 240.0f - var2.field_v;
-                    var5 = -(var4_float * var2.field_o) + var2.field_v * var3_float;
-                    if (var2.field_L == 0) {
-                      if (var5 * var5 > 0.30000001192092896f) {
-                        var2.field_w = var3_float;
-                        var2.field_F = var4_float;
-                        var6 = og.field_r / (float)Math.sqrt((double)(var2.field_w * var2.field_w + var2.field_F * var2.field_F));
-                        var2.field_w = var2.field_w * var6;
-                        var2.field_F = var2.field_F * var6;
-                      }
-                    }
-                  }
-                  var2.h((byte) 51);
-                } else {
+                if (uj.a(var2, param1, 0)) {
                   vf.field_L.g(1);
                   if (var2.field_E <= 0) {
                     al.a(9666, c.field_ab);
@@ -331,11 +262,79 @@ final class ab {
                   if (!var2.field_B) {
                     wb.field_b = wb.field_b + 1;
                     break L2;
-                  } else {
-                    var2 = (ja) ((Object) ji.field_r.d(1));
-                    continue L0;
+                  }
+                  var2 = (ja) ((Object) ji.field_r.d(1));
+                  continue L0;
+                }
+                if (ma.a(true, param1, var2)) {
+                  var3 = wd.field_b.field_v[aa.field_a + wd.field_b.field_s * aa.field_b] - 1;
+                  var4 = tl.field_g[var3];
+                  if (a.field_d == var4.field_K) {
+                    break L2;
+                  }
+                  {
+                    var5 = 0.5f * (var4.field_w + var2.field_w);
+                    var6 = (var4.field_F + var2.field_F) * 0.5f;
+                    var7 = var6 * var6 + var5 * var5;
+                    var7 = og.field_r / (float)Math.sqrt((double)var7);
+                    var6 = var6 * var7;
+                    var5 = var5 * var7;
+                    var8 = -var4.field_o + 320.0f;
+                    var9 = 240.0f - var4.field_v;
+                    var10 = -var5 - var4.field_o + 320.0f;
+                    var11 = 240.0f - (var4.field_v + var6);
+                    var10 = var10 * var10;
+                    var11 = var11 * var11;
+                    if (!(var10 + var11 > var9 * var9 + var8 * var8)) {
+                      stackIn_36_0 = 0;
+                    } else {
+                      stackIn_36_0 = 1;
+                    }
+                    var12 = stackIn_36_0;
+                    var8 = 320.0f - var2.field_o;
+                    var11 = 240.0f - (var6 + var2.field_v);
+                    var10 = -var2.field_o - var5 + 320.0f;
+                    var9 = -var2.field_v + 240.0f;
+                    var10 = var10 * var10;
+                    var11 = var11 * var11;
+                    if (!(var9 * var9 + var8 * var8 < var11 + var10)) {
+                      stackIn_39_0 = 0;
+                    } else {
+                      stackIn_39_0 = 1;
+                    }
+                    var13 = stackIn_39_0;
+                    if (var12 != 0) {
+                      if (var13 != 0) {
+                        var8 = -((var2.field_o + var4.field_o) * 0.5f) + 320.0f;
+                        var9 = 240.0f - 0.5f * (var4.field_v + var2.field_v);
+                        var14 = og.field_r / (float)Math.sqrt((double)(var8 * var8 + var9 * var9));
+                        var5 = var8 * var14;
+                        var6 = var14 * var9;
+                      }
+                    }
+                    var2.field_F = var2.field_F * -1.0f;
+                    var2.field_w = var2.field_w * -1.0f;
+                    var2.f((byte) -59);
+                    var4.field_w = var5;
+                    var2.field_w = var5;
+                    var4.field_F = var6;
+                    var2.field_F = var6;
+                  }
+                } else {
+                  var3_float = 320.0f - var2.field_o;
+                  var4_float = 240.0f - var2.field_v;
+                  var5 = -(var4_float * var2.field_o) + var2.field_v * var3_float;
+                  if (var2.field_L == 0) {
+                    if (var5 * var5 > 0.30000001192092896f) {
+                      var2.field_w = var3_float;
+                      var2.field_F = var4_float;
+                      var6 = og.field_r / (float)Math.sqrt((double)(var2.field_w * var2.field_w + var2.field_F * var2.field_F));
+                      var2.field_w = var2.field_w * var6;
+                      var2.field_F = var2.field_F * var6;
+                    }
                   }
                 }
+                var2.h((byte) 51);
               }
             }
             var2 = (ja) ((Object) ji.field_r.d(1));

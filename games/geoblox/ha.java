@@ -33,18 +33,17 @@ abstract class ha {
           var3.field_a = param2.field_a;
           var3.field_e = param2.field_e;
           var3.field_d = param2.field_d;
-          if (param0 < -62) {
-            var3.field_c = param2.field_c;
-            var3.field_h = param1;
-            var3.field_i = param2.field_i;
-            var3.field_f = param2.field_f;
-            var3.field_b = param2.field_b;
-            stackIn_4_0 = (na) (var3);
-            return stackIn_4_0;
-          } else {
+          if (param0 >= -62) {
             stackIn_2_0 = (na) null;
             return stackIn_2_0;
           }
+          var3.field_c = param2.field_c;
+          var3.field_h = param1;
+          var3.field_i = param2.field_i;
+          var3.field_f = param2.field_f;
+          var3.field_b = param2.field_b;
+          stackIn_4_0 = (na) (var3);
+          return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;

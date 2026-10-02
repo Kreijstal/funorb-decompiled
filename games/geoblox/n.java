@@ -54,7 +54,8 @@ final class n extends q {
 
                 if (var15 != 0) {
                   break L1;
-                } else {
+                }
+                {
                   var14 = stackIn_11_0;
                   L3: while (true) {
                     L4: {
@@ -63,19 +64,17 @@ final class n extends q {
                         var14++;
                         if (var15 != 0) {
                           break L4;
-                        } else {
-                          if (var15 == 0) {
-                            continue L3;
-                          }
+                        }
+                        if (var15 == 0) {
+                          continue L3;
                         }
                       }
                       var12++;
                     }
                     if (var15 == 0) {
                       continue L0;
-                    } else {
-                      break L2;
                     }
+                    break L2;
                   }
                 }
               }
@@ -91,32 +90,29 @@ final class n extends q {
 
                   if (var15 != 0) {
                     break L7;
-                  } else {
-                    var12 = stackIn_22_0;
-                    L9: while (true) {
-                      L10: {
-                        if (var9 > var12) {
-                          var10[6].field_v[var12 + (var9 - var11 - 1) * var9] = param6;
-                          var10[8].field_v[var12 + (-1 - var11 + var9) * var9] = param6;
-                          var10[2].field_v[var12 * var9 - var11 + var9 - 1] = param6;
-                          var10[8].field_v[-var11 - 1 - (-var9 - var9 * var12)] = param6;
-                          var12++;
-                          if (var15 != 0) {
-                            break L10;
-                          } else {
-                            if (var15 == 0) {
-                              continue L9;
-                            }
-                          }
+                  }
+                  var12 = stackIn_22_0;
+                  L9: while (true) {
+                    L10: {
+                      if (var9 > var12) {
+                        var10[6].field_v[var12 + (var9 - var11 - 1) * var9] = param6;
+                        var10[8].field_v[var12 + (-1 - var11 + var9) * var9] = param6;
+                        var10[2].field_v[var12 * var9 - var11 + var9 - 1] = param6;
+                        var10[8].field_v[-var11 - 1 - (-var9 - var9 * var12)] = param6;
+                        var12++;
+                        if (var15 != 0) {
+                          break L10;
                         }
-                        var11++;
+                        if (var15 == 0) {
+                          continue L9;
+                        }
                       }
-                      if (var15 == 0) {
-                        continue L6;
-                      } else {
-                        break L8;
-                      }
+                      var11++;
                     }
+                    if (var15 == 0) {
+                      continue L6;
+                    }
+                    break L8;
                   }
                 }
               }
@@ -134,36 +130,33 @@ final class n extends q {
 
                       if (var15 != 0) {
                         break L14;
-                      } else {
-                        var12 = stackIn_34_0;
-                        L16: while (var9 > var12) {
-                          var10[0].field_v[var12 + var11 * var9] = param2;
-                          var10[0].field_v[var11 + var12 * var9] = param2;
-                          stackIn_24_0 = ~(-var11 + var9);
-
-                          stackIn_24_1 = ~var12;
-
-                          if (var15 != 0) {
-                            continue L13;
-                          } else {
-                            if (stackIn_24_0 < stackIn_24_1) {
-                              var10[2].field_v[var9 * var11 + var12] = param2;
-                              var10[6].field_v[var11 + var12 * var9] = param2;
-                            }
-                            var12++;
-                            if (var15 == 0) {
-                              continue L16;
-                            }
-                          }
-                          break;
-                        }
-                        var11++;
-                        if (var15 == 0) {
-                          continue L12;
-                        } else {
-                          break L15;
-                        }
                       }
+                      var12 = stackIn_34_0;
+                      L16: while (var9 > var12) {
+                        var10[0].field_v[var12 + var11 * var9] = param2;
+                        var10[0].field_v[var11 + var12 * var9] = param2;
+                        stackIn_24_0 = ~(-var11 + var9);
+
+                        stackIn_24_1 = ~var12;
+
+                        if (var15 != 0) {
+                          continue L13;
+                        }
+                        if (stackIn_24_0 < stackIn_24_1) {
+                          var10[2].field_v[var9 * var11 + var12] = param2;
+                          var10[6].field_v[var11 + var12 * var9] = param2;
+                        }
+                        var12++;
+                        if (var15 == 0) {
+                          continue L16;
+                        }
+                        break;
+                      }
+                      var11++;
+                      if (var15 == 0) {
+                        continue L12;
+                      }
+                      break L15;
                     }
                   }
                   stackIn_34_0 = 0;
@@ -177,32 +170,29 @@ final class n extends q {
 
                         if (var15 != 0) {
                           break L20;
-                        } else {
-                          var12 = stackIn_45_0;
-                          L22: while (true) {
-                            L23: {
-                              if (param8 > var12) {
-                                var10[7].field_v[param3 * (var9 - var12 - 1) + var11] = param6;
-                                var10[5].field_v[-1 + (var9 - var12 + var11 * var9)] = param6;
-                                var10[1].field_v[param3 * var12 + var11] = param2;
-                                var10[3].field_v[var12 + var9 * var11] = param2;
-                                var12++;
-                                if (var15 != 0) {
-                                  break L23;
-                                } else {
-                                  if (var15 == 0) {
-                                    continue L22;
-                                  }
-                                }
+                        }
+                        var12 = stackIn_45_0;
+                        L22: while (true) {
+                          L23: {
+                            if (param8 > var12) {
+                              var10[7].field_v[param3 * (var9 - var12 - 1) + var11] = param6;
+                              var10[5].field_v[-1 + (var9 - var12 + var11 * var9)] = param6;
+                              var10[1].field_v[param3 * var12 + var11] = param2;
+                              var10[3].field_v[var12 + var9 * var11] = param2;
+                              var12++;
+                              if (var15 != 0) {
+                                break L23;
                               }
-                              var11++;
+                              if (var15 == 0) {
+                                continue L22;
+                              }
                             }
-                            if (var15 == 0) {
-                              continue L19;
-                            } else {
-                              break L21;
-                            }
+                            var11++;
                           }
+                          if (var15 == 0) {
+                            continue L19;
+                          }
+                          break L21;
                         }
                       }
                     }
@@ -217,32 +207,29 @@ final class n extends q {
 
                           if (var15 != 0) {
                             break L26;
-                          } else {
-                            var12 = stackIn_56_0;
-                            L28: while (true) {
-                              L29: {
-                                if (param1 > var12) {
-                                  var10[1].field_v[param3 * (-1 + (-var12 + var9)) + var11] = param0;
-                                  var10[3].field_v[-1 + var9 + (-var12 + var9 * var11)] = param0;
-                                  var10[7].field_v[var11 + param3 * var12] = param0;
-                                  var10[5].field_v[var9 * var11 + var12] = param0;
-                                  var12++;
-                                  if (var15 != 0) {
-                                    break L29;
-                                  } else {
-                                    if (var15 == 0) {
-                                      continue L28;
-                                    }
-                                  }
+                          }
+                          var12 = stackIn_56_0;
+                          L28: while (true) {
+                            L29: {
+                              if (param1 > var12) {
+                                var10[1].field_v[param3 * (-1 + (-var12 + var9)) + var11] = param0;
+                                var10[3].field_v[-1 + var9 + (-var12 + var9 * var11)] = param0;
+                                var10[7].field_v[var11 + param3 * var12] = param0;
+                                var10[5].field_v[var9 * var11 + var12] = param0;
+                                var12++;
+                                if (var15 != 0) {
+                                  break L29;
                                 }
-                                var11++;
+                                if (var15 == 0) {
+                                  continue L28;
+                                }
                               }
-                              if (var15 == 0) {
-                                continue L25;
-                              } else {
-                                break L27;
-                              }
+                              var11++;
                             }
+                            if (var15 == 0) {
+                              continue L25;
+                            }
+                            break L27;
                           }
                         }
                       }
@@ -282,26 +269,25 @@ final class n extends q {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 == -257) {
-            if (this.field_i instanceof nl) {
-              var3 = ((nl) ((Object) this.field_i)).a((byte) -106);
-              if (var3 != null) {
-                if (var3.a((byte) -105) != kk.field_w) {
-                  stackIn_9_0 = si.field_m;
-                  return stackIn_9_0;
-                }
-              }
-            }
-            if (!param1.equals(this.field_i.field_s)) {
-              stackIn_13_0 = si.field_m;
-            } else {
-              stackIn_13_0 = kk.field_w;
-            }
-            return stackIn_13_0;
-          } else {
+          if (param0 != -257) {
             stackIn_2_0 = (lh) null;
             return stackIn_2_0;
           }
+          if (this.field_i instanceof nl) {
+            var3 = ((nl) ((Object) this.field_i)).a((byte) -106);
+            if (var3 != null) {
+              if (var3.a((byte) -105) != kk.field_w) {
+                stackIn_9_0 = si.field_m;
+                return stackIn_9_0;
+              }
+            }
+          }
+          if (!param1.equals(this.field_i.field_s)) {
+            stackIn_13_0 = si.field_m;
+          } else {
+            stackIn_13_0 = kk.field_w;
+          }
+          return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -351,12 +337,11 @@ final class n extends q {
               return stackIn_10_0;
             }
           }
-          if (!param1.equals(this.field_i.field_s)) {
-            stackIn_14_0 = sj.field_b;
-            return stackIn_14_0;
-          } else {
+          if (param1.equals(this.field_i.field_s)) {
             return null;
           }
+          stackIn_14_0 = sj.field_b;
+          return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;

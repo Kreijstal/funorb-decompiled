@@ -207,15 +207,14 @@ final class ni extends ee implements pl {
         var8 = Geoblox.field_C;
         try {
           L0: for (var6_int = 0; var6_int < this.field_D; var6_int++) {
-            if (param4 == this.field_F[var6_int]) {
-              var7 = this.field_H[var6_int];
-              if (var7 != -1) {
-                pc.a(this.field_H[var6_int], false);
-              } else {
-                this.field_J.h((byte) -104);
-              }
-            } else {
+            if (param4 != this.field_F[var6_int]) {
               continue L0;
+            }
+            var7 = this.field_H[var6_int];
+            if (var7 != -1) {
+              pc.a(this.field_H[var6_int], false);
+            } else {
+              this.field_J.h((byte) -104);
             }
             break;
           }
@@ -273,17 +272,16 @@ final class ni extends ee implements pl {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != null) {
-            var2 = new nc(param0, gh.field_m, md.field_e, rc.field_j, hl.field_K, cm.field_j, mj.field_a);
-            kj.c(true);
-            if (param1 >= -107) {
-              field_C = (String) null;
-            }
-            stackIn_6_0 = (nc) (var2);
-            return stackIn_6_0;
-          } else {
+          if (param0 == null) {
             return null;
           }
+          var2 = new nc(param0, gh.field_m, md.field_e, rc.field_j, hl.field_K, cm.field_j, mj.field_a);
+          kj.c(true);
+          if (param1 >= -107) {
+            field_C = (String) null;
+          }
+          stackIn_6_0 = (nc) (var2);
+          return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;

@@ -16,113 +16,83 @@ final class u {
     private static int[] field_b;
 
     private final void a(int param0, int param1) {
+        int var7 = 0;
         int var3;
         int var4;
         int var5;
         int var6;
-        int var7;
         int var8;
-        if (param0 < param1) {
-          var3 = param0;
-          var4 = field_a[var3];
-          var5 = field_g[var3];
-          var6 = field_e[var3] ? 1 : 0;
-          var7 = param0 + 1;
-          L0: while (true) {
-            if (var7 > param1) {
-              field_a[var3] = var4;
-              field_g[var3] = var5;
-              field_e[var3] = var6 != 0;
-              this.a(param0, var3 - 1);
-              this.a(var3 + 1, param1);
-              return;
-            } else {
-              var8 = field_a[var7];
-              if (var8 < var4) {
-                field_a[var3] = var8;
-                field_g[var3] = field_g[var7];
-                field_e[var3] = field_e[var7];
-                var3++;
-                field_a[var7] = field_a[var3];
-                field_g[var7] = field_g[var3];
-                field_e[var7] = field_e[var3];
-                var7++;
-                continue L0;
-              } else {
-                var7++;
-                continue L0;
-              }
-            }
-          }
-        } else {
+        if (param0 >= param1) {
           return;
         }
+        var3 = param0;
+        var4 = field_a[var3];
+        var5 = field_g[var3];
+        var6 = field_e[var3] ? 1 : 0;
+        L0: for (var7 = param0 + 1; var7 <= param1; var7++) {
+          var8 = field_a[var7];
+          if (var8 >= var4) {
+            continue L0;
+          }
+          field_a[var3] = var8;
+          field_g[var3] = field_g[var7];
+          field_e[var3] = field_e[var7];
+          var3++;
+          field_a[var7] = field_a[var3];
+          field_g[var7] = field_g[var3];
+          field_e[var7] = field_e[var3];
+        }
+        field_a[var3] = var4;
+        field_g[var3] = var5;
+        field_e[var3] = var6 != 0;
+        this.a(param0, var3 - 1);
+        this.a(var3 + 1, param1);
     }
 
     private final static int a(int[] param0, int param1) {
+        int var5 = 0;
         int var2;
         int var3;
         int var4;
-        int var5;
         int var6;
         var2 = param0[param1];
         var3 = -1;
         var4 = -2147483648;
-        var5 = 0;
-        L0: while (true) {
-          if (var5 >= param1) {
-            return var3;
-          } else {
-            var6 = param0[var5];
-            if (var6 < var2) {
-              if (var6 > var4) {
-                var3 = var5;
-                var4 = var6;
-                var5++;
-                continue L0;
-              } else {
-                var5++;
-                continue L0;
-              }
-            } else {
-              var5++;
-              continue L0;
-            }
+        L0: for (var5 = 0; var5 < param1; var5++) {
+          var6 = param0[var5];
+          if (var6 >= var2) {
+            continue L0;
           }
+          if (var6 <= var4) {
+            continue L0;
+          }
+          var3 = var5;
+          var4 = var6;
         }
+        return var3;
     }
 
     private final static int b(int[] param0, int param1) {
+        int var5 = 0;
         int var2;
         int var3;
         int var4;
-        int var5;
         int var6;
         var2 = param0[param1];
         var3 = -1;
         var4 = 2147483647;
-        var5 = 0;
-        L0: while (true) {
-          if (var5 >= param1) {
-            return var3;
-          } else {
-            var6 = param0[var5];
-            if (var6 > var2) {
-              if (var6 < var4) {
-                var3 = var5;
-                var4 = var6;
-                var5++;
-                continue L0;
-              } else {
-                var5++;
-                continue L0;
-              }
-            } else {
-              var5++;
-              continue L0;
-            }
+        L0: for (var5 = 0; var5 < param1; var5++) {
+          var6 = param0[var5];
+          if (var6 <= var2) {
+            continue L0;
           }
+          if (var6 >= var4) {
+            continue L0;
+          }
+          var3 = var5;
+          var4 = var6;
         }
+        return var3;
     }
 
     private final int a(int param0, int param1, int param2, int param3, int param4) {
@@ -181,26 +151,26 @@ final class u {
                   param0[var9] = param0[var9] * var8;
                 }
                 return;
-              } else {
-                if (field_e[var16]) {
-                  var9 = field_a[var16];
-                  var10 = field_g[var16] * this.field_d;
-                  this.a(var6, var7, var9, var10, param0, param1);
-                  if (var9 < param1) {
-                    var6 = var9;
-                    var7 = var10;
-                    var16++;
-                    continue L1;
-                  } else {
-                    return;
-                  }
-                } else {
-                  var16++;
-                  continue L1;
+              }
+              if (!field_e[var16]) {
+                var16++;
+                continue L1;
+              }
+              {
+                var9 = field_a[var16];
+                var10 = field_g[var16] * this.field_d;
+                this.a(var6, var7, var9, var10, param0, param1);
+                if (var9 >= param1) {
+                  return;
                 }
+                var6 = var9;
+                var7 = var10;
+                var16++;
+                continue L1;
               }
             }
-          } else {
+          }
+          {
             var7 = u.a(field_a, var6);
             var8_int = u.b(field_a, var6);
             var9 = this.a(field_a[var7], field_g[var7], field_a[var8_int], field_g[var8_int], field_a[var6]);
@@ -218,7 +188,8 @@ final class u {
               field_g[var6] = var9;
               var6++;
               continue L0;
-            } else {
+            }
+            {
               var14 = field_e;
               var15 = var7;
               field_e[var8_int] = true;
@@ -241,24 +212,23 @@ final class u {
                 stackIn_14_0[stackIn_14_1] = stackIn_14_2;
                 var6++;
                 continue L0;
-              } else {
-                stackIn_9_0 = (int[]) (field_g);
-
-                stackIn_9_1 = var6;
-
-                if (var11 <= var12) {
-                  stackIn_10_0 = (int[]) ((Object) stackIn_9_0);
-                  stackIn_10_1 = stackIn_9_1;
-                  stackIn_10_2 = var9 - var10 + var11 - 1;
-                } else {
-                  stackIn_10_0 = (int[]) ((Object) stackIn_9_0);
-                  stackIn_10_1 = stackIn_9_1;
-                  stackIn_10_2 = var10 - var12 + var9;
-                }
-                stackIn_10_0[stackIn_10_1] = stackIn_10_2;
-                var6++;
-                continue L0;
               }
+              stackIn_9_0 = (int[]) (field_g);
+
+              stackIn_9_1 = var6;
+
+              if (var11 <= var12) {
+                stackIn_10_0 = (int[]) ((Object) stackIn_9_0);
+                stackIn_10_1 = stackIn_9_1;
+                stackIn_10_2 = var9 - var10 + var11 - 1;
+              } else {
+                stackIn_10_0 = (int[]) ((Object) stackIn_9_0);
+                stackIn_10_1 = stackIn_9_1;
+                stackIn_10_2 = var10 - var12 + var9;
+              }
+              stackIn_10_0[stackIn_10_1] = stackIn_10_2;
+              var6++;
+              continue L0;
             }
           }
         }
@@ -291,7 +261,10 @@ final class u {
           stackIn_3_0 = 1;
         }
         var1 = stackIn_3_0;
-        if (var1 != 0) {
+        if (var1 == 0) {
+          return false;
+        }
+        {
           var2 = this.field_c.length;
           System.arraycopy(this.field_c, 0, field_a, 0, var2);
           var3 = field_b[this.field_d - 1];
@@ -330,8 +303,6 @@ final class u {
             }
           }
           return true;
-        } else {
-          return false;
         }
     }
 
@@ -376,78 +347,71 @@ final class u {
         int[] var9;
         int[] var10;
         var1 = ua.b(16);
-        if (var1 == 1) {
+        if (var1 != 1) {
+          throw new RuntimeException();
+        }
+        {
           var2 = ua.b(5);
           var3 = 0;
           this.field_l = new int[var2];
-          var4 = 0;
-          L0: while (true) {
-            if (var4 >= var2) {
-              this.field_i = new int[var3];
-              this.field_h = new int[var3];
-              this.field_f = new int[var3];
-              this.field_j = new int[var3][];
-              for (var4 = 0; var4 < var3; var4++) {
-                this.field_i[var4] = ua.b(3) + 1;
-                dupTemp$1 = ua.b(2);
-                this.field_h[var4] = dupTemp$1;
-                var5 = dupTemp$1;
-                if (var5 != 0) {
-                  this.field_f[var4] = ua.b(8);
-                }
-                var5 = 1 << var5;
-                var10 = new int[var5];
-                var9 = var10;
-                var6_ref_int__ = var9;
-                this.field_j[var4] = var10;
-                for (var7 = 0; var7 < var5; var7++) {
-                  var6_ref_int__[var7] = ua.b(8) - 1;
-                }
-              }
-              this.field_d = ua.b(2) + 1;
-              var4 = ua.b(4);
-              var5 = 2;
-              for (var6 = 0; var6 < var2; var6++) {
-                var5 = var5 + this.field_i[this.field_l[var6]];
-              }
-              this.field_c = new int[var5];
-              this.field_c[0] = 0;
-              this.field_c[1] = 1 << var4;
-              var5 = 2;
-              for (var6 = 0; var6 < var2; var6++) {
-                var7 = this.field_l[var6];
-                for (var8 = 0; var8 < this.field_i[var7]; var8++) {
-                  incrementValue$0 = var5;
-                  var5++;
-                  this.field_c[incrementValue$0] = ua.b(var4);
-                }
-              }
-              L4: {
-                if (field_a != null) {
-                  if (field_a.length >= var5) {
-                    break L4;
-                  }
-                }
-                field_a = new int[var5];
-                field_g = new int[var5];
-                field_e = new boolean[var5];
-              }
-              return;
-            } else {
-              var5 = ua.b(4);
-              this.field_l[var4] = var5;
-              if (var5 >= var3) {
-                var3 = var5 + 1;
-                var4++;
-                continue L0;
-              } else {
-                var4++;
-                continue L0;
-              }
+          L0: for (var4 = 0; var4 < var2; var4++) {
+            var5 = ua.b(4);
+            this.field_l[var4] = var5;
+            if (var5 < var3) {
+              continue L0;
+            }
+            var3 = var5 + 1;
+          }
+          this.field_i = new int[var3];
+          this.field_h = new int[var3];
+          this.field_f = new int[var3];
+          this.field_j = new int[var3][];
+          for (var4 = 0; var4 < var3; var4++) {
+            this.field_i[var4] = ua.b(3) + 1;
+            dupTemp$1 = ua.b(2);
+            this.field_h[var4] = dupTemp$1;
+            var5 = dupTemp$1;
+            if (var5 != 0) {
+              this.field_f[var4] = ua.b(8);
+            }
+            var5 = 1 << var5;
+            var10 = new int[var5];
+            var9 = var10;
+            var6_ref_int__ = var9;
+            this.field_j[var4] = var10;
+            for (var7 = 0; var7 < var5; var7++) {
+              var6_ref_int__[var7] = ua.b(8) - 1;
             }
           }
-        } else {
-          throw new RuntimeException();
+          this.field_d = ua.b(2) + 1;
+          var4 = ua.b(4);
+          var5 = 2;
+          for (var6 = 0; var6 < var2; var6++) {
+            var5 = var5 + this.field_i[this.field_l[var6]];
+          }
+          this.field_c = new int[var5];
+          this.field_c[0] = 0;
+          this.field_c[1] = 1 << var4;
+          var5 = 2;
+          for (var6 = 0; var6 < var2; var6++) {
+            var7 = this.field_l[var6];
+            for (var8 = 0; var8 < this.field_i[var7]; var8++) {
+              incrementValue$0 = var5;
+              var5++;
+              this.field_c[incrementValue$0] = ua.b(var4);
+            }
+          }
+          L4: {
+            if (field_a != null) {
+              if (field_a.length >= var5) {
+                break L4;
+              }
+            }
+            field_a = new int[var5];
+            field_g = new int[var5];
+            field_e = new boolean[var5];
+          }
+          return;
         }
     }
 

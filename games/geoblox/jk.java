@@ -103,36 +103,33 @@ final class jk {
           if (param0 != 255) {
             jk.a(118);
           }
-          if (0 != var2_int) {
-            if (var2_int > 63) {
-              stackIn_9_0 = hk.field_x;
-              return stackIn_9_0;
-            } else {
-              for (var3 = 0; var2_int > var3; var3++) {
-                L2: {
-                  var4 = param1.charAt(var3);
-                  if (45 != var4) {
-                    if (pk.field_q.indexOf(var4) == -1) {
-                      stackIn_21_0 = ii.field_h;
-                      return stackIn_21_0;
-                    }
-                  } else {
-                    if (var3 != 0) {
-                      if (var3 != -1 + var2_int) {
-                        break L2;
-                      }
-                    }
-                    stackIn_18_0 = ii.field_h;
-                    return stackIn_18_0;
-                  }
-                }
-              }
-              return null;
-            }
-          } else {
+          if (0 == var2_int) {
             stackIn_5_0 = pj.field_f;
             return stackIn_5_0;
           }
+          if (var2_int > 63) {
+            stackIn_9_0 = hk.field_x;
+            return stackIn_9_0;
+          }
+          for (var3 = 0; var2_int > var3; var3++) {
+            L2: {
+              var4 = param1.charAt(var3);
+              if (45 == var4) {
+                if (var3 != 0) {
+                  if (var3 != -1 + var2_int) {
+                    break L2;
+                  }
+                }
+                stackIn_18_0 = ii.field_h;
+                return stackIn_18_0;
+              }
+              if (pk.field_q.indexOf(var4) == -1) {
+                stackIn_21_0 = ii.field_h;
+                return stackIn_21_0;
+              }
+            }
+          }
+          return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -176,14 +173,13 @@ final class jk {
             if (var3.field_a != 1) {
               bc.a(0, 100L);
               continue L0;
-            } else {
-              param0.setVisible(false);
-              if (param1 != 10) {
-                field_b = (String) null;
-              }
-              param0.dispose();
-              return;
             }
+            param0.setVisible(false);
+            if (param1 != 10) {
+              field_b = (String) null;
+            }
+            param0.dispose();
+            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

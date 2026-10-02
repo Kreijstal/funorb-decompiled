@@ -48,7 +48,10 @@ final class jf implements dh {
             stackIn_4_0 = null;
           }
           var12 = (ol) ((Object) stackIn_4_0);
-          if (param1 < -5) {
+          if (param1 >= -5) {
+            return;
+          }
+          {
             if (var12 == null) {
             }
             vb.a(param4.field_v + param0, param4.field_m + param2, param4.field_r, param4.field_h, this.field_h);
@@ -61,11 +64,8 @@ final class jf implements dh {
             }
             if (null == this.field_f) {
               return;
-            } else {
-              this.field_f.b(var12.field_s, var8 + var7 / 2, this.field_f.field_p + var9 + var12.field_G, this.field_k, this.field_l);
-              return;
             }
-          } else {
+            this.field_f.b(var12.field_s, var8 + var7 / 2, this.field_f.field_p + var9 + var12.field_G, this.field_k, this.field_l);
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -122,25 +122,23 @@ final class jf implements dh {
             if (param7 < 0) {
               if (param2 == 33423689) {
                 return;
-              } else {
-                field_c = -7;
-                return;
               }
-            } else {
-              var17 = param9;
-              var10 = var17;
-              var11 = param0;
-              var12 = param3;
-              var13 = param5;
-              var14 = param8;
-              var15 = var17[var11] >> 1 & 8355711;
-              var10[var11] = cd.a(255, var14 >> 17) + ((cd.a(33423689, var13) >> 9) + (cd.a(33423360, var12) >> 1)) + var15;
-              param0++;
-              param8 = param8 + param4;
-              param3 = param3 + param1;
-              param5 = param5 + param6;
-              continue L0;
+              field_c = -7;
+              return;
             }
+            var17 = param9;
+            var10 = var17;
+            var11 = param0;
+            var12 = param3;
+            var13 = param5;
+            var14 = param8;
+            var15 = var17[var11] >> 1 & 8355711;
+            var10[var11] = cd.a(255, var14 >> 17) + ((cd.a(33423689, var13) >> 9) + (cd.a(33423360, var12) >> 1)) + var15;
+            param0++;
+            param8 = param8 + param4;
+            param3 = param3 + param1;
+            param5 = param5 + param6;
+            continue L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -202,7 +200,8 @@ final class jf implements dh {
               vb.b(da.field_d);
               if (param5 == -17154) {
                 return;
-              } else {
+              }
+              {
                 var12 = (CharSequence) null;
                 jf.a((CharSequence) null, (byte) 66);
                 return;
@@ -267,143 +266,116 @@ final class jf implements dh {
                     break L3;
                   }
                 }
-                if (8364 != var5) {
-                  if (var5 != 8218) {
-                    if (402 != var5) {
-                      if (8222 != var5) {
-                        if (var5 == 8230) {
-                          var3[var4] = (byte)-123;
-                          break L2;
-                        } else {
-                          if (var5 != 8224) {
-                            if (var5 != 8225) {
-                              if (var5 != 710) {
-                                if (var5 == 8240) {
-                                  var3[var4] = (byte)-119;
-                                  break L2;
-                                } else {
-                                  if (352 == var5) {
-                                    var3[var4] = (byte)-118;
-                                    break L2;
-                                  } else {
-                                    if (8249 == var5) {
-                                      var3[var4] = (byte)-117;
-                                      break L2;
-                                    } else {
-                                      if (338 != var5) {
-                                        if (var5 == 381) {
-                                          var3[var4] = (byte)-114;
-                                          break L2;
-                                        } else {
-                                          if (8216 == var5) {
-                                            var3[var4] = (byte)-111;
-                                            break L2;
-                                          } else {
-                                            if (8217 == var5) {
-                                              var3[var4] = (byte)-110;
-                                              break L2;
-                                            } else {
-                                              if (var5 != 8220) {
-                                                if (var5 == 8221) {
-                                                  var3[var4] = (byte)-108;
-                                                  break L2;
-                                                } else {
-                                                  if (var5 == 8226) {
-                                                    var3[var4] = (byte)-107;
-                                                    break L2;
-                                                  } else {
-                                                    if (8211 == var5) {
-                                                      var3[var4] = (byte)-106;
-                                                      break L2;
-                                                    } else {
-                                                      if (var5 != 8212) {
-                                                        if (var5 != 732) {
-                                                          if (var5 != 8482) {
-                                                            if (var5 != 353) {
-                                                              if (var5 == 8250) {
-                                                                var3[var4] = (byte)-101;
-                                                                break L2;
-                                                              } else {
-                                                                if (var5 == 339) {
-                                                                  var3[var4] = (byte)-100;
-                                                                  break L2;
-                                                                } else {
-                                                                  if (var5 == 382) {
-                                                                    var3[var4] = (byte)-98;
-                                                                    break L2;
-                                                                  } else {
-                                                                    if (var5 != 376) {
-                                                                      var3[var4] = (byte)63;
-                                                                      break L2;
-                                                                    } else {
-                                                                      var3[var4] = (byte)-97;
-                                                                      break L2;
-                                                                    }
-                                                                  }
-                                                                }
-                                                              }
-                                                            } else {
-                                                              var3[var4] = (byte)-102;
-                                                              break L2;
-                                                            }
-                                                          } else {
-                                                            var3[var4] = (byte)-103;
-                                                            break L2;
-                                                          }
-                                                        } else {
-                                                          var3[var4] = (byte)-104;
-                                                          break L2;
-                                                        }
-                                                      } else {
-                                                        var3[var4] = (byte)-105;
-                                                        break L2;
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              } else {
-                                                var3[var4] = (byte)-109;
-                                                break L2;
-                                              }
-                                            }
-                                          }
-                                        }
-                                      } else {
-                                        var3[var4] = (byte)-116;
-                                        break L2;
-                                      }
-                                    }
-                                  }
-                                }
-                              } else {
-                                var3[var4] = (byte)-120;
-                                break L2;
-                              }
-                            } else {
-                              var3[var4] = (byte)-121;
-                              break L2;
-                            }
-                          } else {
-                            var3[var4] = (byte)-122;
-                            break L2;
-                          }
-                        }
-                      } else {
-                        var3[var4] = (byte)-124;
-                        break L2;
-                      }
-                    } else {
-                      var3[var4] = (byte)-125;
-                      break L2;
-                    }
-                  } else {
-                    var3[var4] = (byte)-126;
-                    break L2;
-                  }
-                } else {
+                if (8364 == var5) {
                   var3[var4] = (byte)-128;
                   break L2;
                 }
+                if (var5 == 8218) {
+                  var3[var4] = (byte)-126;
+                  break L2;
+                }
+                if (402 == var5) {
+                  var3[var4] = (byte)-125;
+                  break L2;
+                }
+                if (8222 == var5) {
+                  var3[var4] = (byte)-124;
+                  break L2;
+                }
+                if (var5 == 8230) {
+                  var3[var4] = (byte)-123;
+                  break L2;
+                }
+                if (var5 == 8224) {
+                  var3[var4] = (byte)-122;
+                  break L2;
+                }
+                if (var5 == 8225) {
+                  var3[var4] = (byte)-121;
+                  break L2;
+                }
+                if (var5 == 710) {
+                  var3[var4] = (byte)-120;
+                  break L2;
+                }
+                if (var5 == 8240) {
+                  var3[var4] = (byte)-119;
+                  break L2;
+                }
+                if (352 == var5) {
+                  var3[var4] = (byte)-118;
+                  break L2;
+                }
+                if (8249 == var5) {
+                  var3[var4] = (byte)-117;
+                  break L2;
+                }
+                if (338 == var5) {
+                  var3[var4] = (byte)-116;
+                  break L2;
+                }
+                if (var5 == 381) {
+                  var3[var4] = (byte)-114;
+                  break L2;
+                }
+                if (8216 == var5) {
+                  var3[var4] = (byte)-111;
+                  break L2;
+                }
+                if (8217 == var5) {
+                  var3[var4] = (byte)-110;
+                  break L2;
+                }
+                if (var5 == 8220) {
+                  var3[var4] = (byte)-109;
+                  break L2;
+                }
+                if (var5 == 8221) {
+                  var3[var4] = (byte)-108;
+                  break L2;
+                }
+                if (var5 == 8226) {
+                  var3[var4] = (byte)-107;
+                  break L2;
+                }
+                if (8211 == var5) {
+                  var3[var4] = (byte)-106;
+                  break L2;
+                }
+                if (var5 == 8212) {
+                  var3[var4] = (byte)-105;
+                  break L2;
+                }
+                if (var5 == 732) {
+                  var3[var4] = (byte)-104;
+                  break L2;
+                }
+                if (var5 == 8482) {
+                  var3[var4] = (byte)-103;
+                  break L2;
+                }
+                if (var5 == 353) {
+                  var3[var4] = (byte)-102;
+                  break L2;
+                }
+                if (var5 == 8250) {
+                  var3[var4] = (byte)-101;
+                  break L2;
+                }
+                if (var5 == 339) {
+                  var3[var4] = (byte)-100;
+                  break L2;
+                }
+                if (var5 == 382) {
+                  var3[var4] = (byte)-98;
+                  break L2;
+                }
+                if (var5 != 376) {
+                  var3[var4] = (byte)63;
+                  break L2;
+                }
+                var3[var4] = (byte)-97;
+                break L2;
               }
               var3[var4] = (byte)var5;
             }

@@ -29,10 +29,9 @@ final class uj {
           if (param2 == 0) {
             stackIn_4_0 = aa.a(vf.field_L, -(vf.field_L.field_s >> 1) + ng.field_G, -(vf.field_L.field_o >> 1) + td.field_E, bk.field_a, 0, 0);
             return stackIn_4_0;
-          } else {
-            stackIn_2_0 = 0;
-            return stackIn_2_0 != 0;
           }
+          stackIn_2_0 = 0;
+          return stackIn_2_0 != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;

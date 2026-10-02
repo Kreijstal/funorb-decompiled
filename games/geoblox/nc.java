@@ -27,32 +27,33 @@ final class nc extends m {
         L0: while (true) {
           if (var12 >= 0) {
             return;
-          } else {
-            var13 = -param6;
-            L1: while (true) {
-              if (var13 >= 0) {
-                param5 = param5 + param8;
-                param4 = param4 + param9;
-                var12++;
-                continue L0;
-              } else {
-                incrementValue$16 = param4;
-                param4++;
-                dupTemp$17 = param2[incrementValue$16];
-                param0 = dupTemp$17;
-                if (dupTemp$17 == 0) {
-                  param5++;
-                  var13++;
-                  continue L1;
-                } else {
-                  var14 = param1[param5];
-                  var15 = param3[param0 & 255];
-                  incrementValue$18 = param5;
-                  param5++;
-                  param1[incrementValue$18] = ((var15 & 16711935) * param10 + (var14 & 16711935) * var11 & -16711936) + ((var15 & 65280) * param10 + (var14 & 65280) * var11 & 16711680) >> 8;
-                  var13++;
-                  continue L1;
-                }
+          }
+          var13 = -param6;
+          L1: while (true) {
+            if (var13 >= 0) {
+              param5 = param5 + param8;
+              param4 = param4 + param9;
+              var12++;
+              continue L0;
+            }
+            {
+              incrementValue$16 = param4;
+              param4++;
+              dupTemp$17 = param2[incrementValue$16];
+              param0 = dupTemp$17;
+              if (dupTemp$17 == 0) {
+                param5++;
+                var13++;
+                continue L1;
+              }
+              {
+                var14 = param1[param5];
+                var15 = param3[param0 & 255];
+                incrementValue$18 = param5;
+                param5++;
+                param1[incrementValue$18] = ((var15 & 16711935) * param10 + (var14 & 16711935) * var11 & -16711936) + ((var15 & 65280) * param10 + (var14 & 65280) * var11 & 16711680) >> 8;
+                var13++;
+                continue L1;
               }
             }
           }
@@ -154,9 +155,9 @@ final class nc extends m {
     }
 
     private final static int a(int[] param0, int param1) {
+        int var4 = 0;
         int var2;
         int var3;
-        int var4;
         int var5;
         int var6;
         int var7;
@@ -164,27 +165,19 @@ final class nc extends m {
         int var9;
         var2 = 0;
         var3 = 2147483647;
-        var4 = 1;
-        L0: while (true) {
-          if (var4 >= param0.length) {
-            return var2;
-          } else {
-            var5 = param0[var4];
-            var6 = (var5 >> 16) - (param1 >> 16);
-            var7 = (var5 >> 8 & 255) - (param1 >> 8 & 255);
-            var8 = (var5 & 255) - (param1 & 255);
-            var9 = var6 * var6 + var7 * var7 + var8 * var8;
-            if (var9 < var3) {
-              var2 = var4;
-              var3 = var9;
-              var4++;
-              continue L0;
-            } else {
-              var4++;
-              continue L0;
-            }
+        L0: for (var4 = 1; var4 < param0.length; var4++) {
+          var5 = param0[var4];
+          var6 = (var5 >> 16) - (param1 >> 16);
+          var7 = (var5 >> 8 & 255) - (param1 >> 8 & 255);
+          var8 = (var5 & 255) - (param1 & 255);
+          var9 = var6 * var6 + var7 * var7 + var8 * var8;
+          if (var9 >= var3) {
+            continue L0;
           }
+          var2 = var4;
+          var3 = var9;
         }
+        return var2;
     }
 
     final int e(int param0) {
@@ -216,7 +209,8 @@ final class nc extends m {
         L0: while (true) {
           if (var11 >= 0) {
             return;
-          } else {
+          }
+          {
             var12 = var10;
             L1: while (true) {
               if (var12 >= 0) {
@@ -227,7 +221,8 @@ final class nc extends m {
                     param4 = param4 + param9;
                     var11++;
                     continue L0;
-                  } else {
+                  }
+                  {
                     incrementValue$0 = param4;
                     param4++;
                     dupTemp$1 = param2[incrementValue$0];
@@ -236,7 +231,8 @@ final class nc extends m {
                       param5++;
                       var12++;
                       continue L2;
-                    } else {
+                    }
+                    {
                       incrementValue$2 = param5;
                       param5++;
                       param1[incrementValue$2] = param3[param0 & 255];
@@ -245,7 +241,8 @@ final class nc extends m {
                     }
                   }
                 }
-              } else {
+              }
+              {
                 incrementValue$3 = param4;
                 param4++;
                 dupTemp$4 = param2[incrementValue$3];
@@ -287,7 +284,8 @@ final class nc extends m {
                   param5++;
                   var12++;
                   continue L1;
-                } else {
+                }
+                {
                   incrementValue$14 = param5;
                   param5++;
                   param1[incrementValue$14] = param3[param0 & 255];

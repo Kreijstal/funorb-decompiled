@@ -89,10 +89,9 @@ final class gg {
           if (param0 == -11455) {
             stackIn_4_0 = mj.a(0, param1.length, param1, (byte) 96);
             return stackIn_4_0;
-          } else {
-            stackIn_2_0 = (String) null;
-            return stackIn_2_0;
           }
+          stackIn_2_0 = (String) null;
+          return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

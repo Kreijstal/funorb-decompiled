@@ -25,17 +25,16 @@ final class vc extends dk {
         RuntimeException var1 = null;
         var4 = Geoblox.field_C;
         try {
-          if (param0 == 2971) {
-            var1_int = ch.field_d[0];
-            for (var2 = 1; var2 < ch.field_d.length; var2++) {
-              var3 = ch.field_d[var2];
-              sf.a(pj.field_i, var2 << 4, pj.field_i, var1_int, var3);
-              var1_int = var1_int + var3;
-            }
-            return;
-          } else {
+          if (param0 != 2971) {
             return;
           }
+          var1_int = ch.field_d[0];
+          for (var2 = 1; var2 < ch.field_d.length; var2++) {
+            var3 = ch.field_d[var2];
+            sf.a(pj.field_i, var2 << 4, pj.field_i, var1_int, var3);
+            var1_int = var1_int + var3;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
@@ -58,7 +57,11 @@ final class vc extends dk {
         lk var9 = null;
         lk var10 = null;
         try {
-          if (param4 != null) {
+          if (param4 == null) {
+            this.field_a = null;
+            return;
+          }
+          {
             if (this.field_p == param3) {
               if (this.field_d) {
                 if (this.field_k == 2) {
@@ -83,9 +86,6 @@ final class vc extends dk {
               var7 = (m) null;
               this.a(98, 34, (String) null, 56, (m) null, 65, 122, -79);
             }
-            return;
-          } else {
-            this.field_a = null;
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -212,7 +212,11 @@ final class vc extends dk {
           if (param3 == 0) {
             param3 = param4.field_p;
           }
-          if (param2 != null) {
+          if (param2 == null) {
+            this.field_a = null;
+            return;
+          }
+          {
             if (param4 == this.field_p) {
               if (!this.field_d) {
                 if (this.field_k == param6) {
@@ -304,9 +308,6 @@ final class vc extends dk {
               this.field_a[var12] = var14;
               var11 = var11 + param3;
             }
-            return;
-          } else {
-            this.field_a = null;
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

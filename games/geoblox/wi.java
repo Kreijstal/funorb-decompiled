@@ -53,26 +53,23 @@ final class wi extends ee implements pl {
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!super.a(param0, param1 + 0, param2, param3)) {
-            if (param1 != 13) {
-              field_F = (String) null;
-            }
-            if (param0 != 98) {
-              if (99 == param0) {
-                stackIn_13_0 = this.a(param3, -119);
-                return stackIn_13_0;
-              } else {
-                stackIn_15_0 = 0;
-                return stackIn_15_0 != 0;
-              }
-            } else {
-              stackIn_8_0 = this.a(7305, param3);
-              return stackIn_8_0;
-            }
-          } else {
+          if (super.a(param0, param1 + 0, param2, param3)) {
             stackIn_2_0 = 1;
             return stackIn_2_0 != 0;
           }
+          if (param1 != 13) {
+            field_F = (String) null;
+          }
+          if (param0 == 98) {
+            stackIn_8_0 = this.a(7305, param3);
+            return stackIn_8_0;
+          }
+          if (99 == param0) {
+            stackIn_13_0 = this.a(param3, -119);
+            return stackIn_13_0;
+          }
+          stackIn_15_0 = 0;
+          return stackIn_15_0 != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;

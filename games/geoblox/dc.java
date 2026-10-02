@@ -27,10 +27,9 @@ final class dc {
           }
           if (param0 == 7838) {
             return;
-          } else {
-            dc.b(-80);
-            return;
           }
+          dc.b(-80);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;

@@ -112,19 +112,18 @@ abstract class qf extends oe {
           if (super.a(param0, param1, param2, param3)) {
             stackIn_3_0 = 1;
             return stackIn_3_0 != 0;
-          } else {
-            if (this.field_W != null) {
-              if (param0 == 98) {
-                this.field_W.a((byte) -92, param3);
-              }
-              if (param0 == 99) {
-                this.field_W.a((byte) -99, param3);
-                return false;
-              }
-            }
-            stackIn_10_0 = 0;
-            return stackIn_10_0 != 0;
           }
+          if (this.field_W != null) {
+            if (param0 == 98) {
+              this.field_W.a((byte) -92, param3);
+            }
+            if (param0 == 99) {
+              this.field_W.a((byte) -99, param3);
+              return false;
+            }
+          }
+          stackIn_10_0 = 0;
+          return stackIn_10_0 != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -168,11 +167,10 @@ abstract class qf extends oe {
           this.field_eb = null;
           if (param0 == -21102) {
             return;
-          } else {
-            var4 = (el) null;
-            this.a(-67, -54, 'ﾽ', (el) null);
-            return;
           }
+          var4 = (el) null;
+          this.a(-67, -54, 'ﾽ', (el) null);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -211,10 +209,9 @@ abstract class qf extends oe {
           if (param3 == 25134) {
             stackIn_4_0 = (ai) (var9);
             return stackIn_4_0;
-          } else {
-            stackIn_2_0 = (ai) null;
-            return stackIn_2_0;
           }
+          stackIn_2_0 = (ai) null;
+          return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9_ref = decompiledCaughtException;
@@ -256,10 +253,9 @@ abstract class qf extends oe {
           }
           if (param1 < -10) {
             return;
-          } else {
-            this.field_W = (wj) null;
-            return;
           }
+          this.field_W = (wj) null;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;

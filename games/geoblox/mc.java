@@ -28,38 +28,35 @@ final class mc {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (kd.field_b == uf.field_l) {
-            var8 = new r(kd.field_e, param3);
-            var7 = var8;
-            kd.field_e.a(false, var8);
-            if (param4 == 0) {
-              if (kf.a(122)) {
-                var8.q(12086);
-                stackIn_12_0 = 1;
-                return stackIn_12_0 != 0;
-              } else {
-                if (!param5) {
-                  stackIn_10_0 = 0;
-                } else {
-                  stackIn_10_0 = 1;
-                }
-                bj.field_s = stackIn_10_0 != 0;
-                rd.field_u = param2;
-                dl.field_a = null;
-                rh.field_i = param1;
-                kd.field_b = tf.field_d;
-                oj.field_a = param6;
-                oc.field_a = param0;
-                return true;
-              }
-            } else {
-              stackIn_5_0 = 0;
-              return stackIn_5_0 != 0;
-            }
-          } else {
+          if (kd.field_b != uf.field_l) {
             stackIn_2_0 = 0;
             return stackIn_2_0 != 0;
           }
+          var8 = new r(kd.field_e, param3);
+          var7 = var8;
+          kd.field_e.a(false, var8);
+          if (param4 != 0) {
+            stackIn_5_0 = 0;
+            return stackIn_5_0 != 0;
+          }
+          if (kf.a(122)) {
+            var8.q(12086);
+            stackIn_12_0 = 1;
+            return stackIn_12_0 != 0;
+          }
+          if (!param5) {
+            stackIn_10_0 = 0;
+          } else {
+            stackIn_10_0 = 1;
+          }
+          bj.field_s = stackIn_10_0 != 0;
+          rd.field_u = param2;
+          dl.field_a = null;
+          rh.field_i = param1;
+          kd.field_b = tf.field_d;
+          oj.field_a = param6;
+          oc.field_a = param0;
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7_ref = decompiledCaughtException;

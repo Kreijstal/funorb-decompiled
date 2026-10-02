@@ -45,12 +45,11 @@ final class mb {
             stackIn_6_1 = 1;
           }
           ((mb) (this)).field_c = stackIn_6_1 != 0;
-          if (this.field_d.length() == 0) {
-            this.field_c = false;
-            return;
-          } else {
+          if (this.field_d.length() != 0) {
             return;
           }
+          this.field_c = false;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;

@@ -37,19 +37,18 @@ final class h {
             Throwable decompiledCaughtException = null;
             try {
               try {
-                if (!param1) {
-                  var2 = param0.getDocumentBase().getFile();
-                  var3 = var2.indexOf('?');
-                  var4 = "reload.ws";
-                  if (var3 >= 0) {
-                    var4 = var4 + var2.substring(var3);
-                  }
-                  var5 = new java.net.URL(param0.getCodeBase(), var4);
-                  param0.getAppletContext().showDocument(wf.a(var5, 58, param0), "_self");
-                  return;
-                } else {
+                if (param1) {
                   return;
                 }
+                var2 = param0.getDocumentBase().getFile();
+                var3 = var2.indexOf('?');
+                var4 = "reload.ws";
+                if (var3 >= 0) {
+                  var4 = var4 + var2.substring(var3);
+                }
+                var5 = new java.net.URL(param0.getCodeBase(), var4);
+                param0.getAppletContext().showDocument(wf.a(var5, 58, param0), "_self");
+                return;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var2_ref = (Exception) (Object) decompiledCaughtException;
@@ -103,10 +102,9 @@ final class h {
           }
           if (param0 == -1) {
             return;
-          } else {
-            h.c(116);
-            return;
           }
+          h.c(116);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;

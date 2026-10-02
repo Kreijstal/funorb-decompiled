@@ -97,10 +97,9 @@ final class ug {
           if (param2 == -78) {
             stackIn_4_0 = qc.a(var4_int, param2 ^ -95, var5, param1);
             return stackIn_4_0;
-          } else {
-            stackIn_2_0 = (dm) null;
-            return stackIn_2_0;
           }
+          stackIn_2_0 = (dm) null;
+          return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;

@@ -17,224 +17,198 @@ final class jc {
             td.a(-348, fl.field_c[23]);
           }
         }
-        if (pa.field_g <= 0) {
-          if (param1) {
-            field_a = (dm) null;
-            if (param0 != 0) {
-              if (1 != param0) {
-                if (param0 != 2) {
-                  if (3 != param0) {
-                    if (param0 != 4) {
-                      if (param0 == 5) {
-                        pa.field_g = 110;
-                        nd.field_a = 5;
-                        ka.field_h = 30;
-                        td.a(-348, fl.field_c[24]);
-                        uf.field_b = uf.field_b % 6 + ka.field_h;
-                        return;
-                      } else {
-                        uf.field_b = uf.field_b % 6 + ka.field_h;
-                        return;
-                      }
-                    } else {
-                      pa.field_g = 110;
-                      ka.field_h = 24;
-                      nd.field_a = 4;
-                      uf.field_b = uf.field_b % 6 + ka.field_h;
-                      return;
-                    }
-                  } else {
-                    ka.field_h = 18;
-                    wa.field_a = 50;
-                    pa.field_g = 110;
-                    nd.field_a = 3;
-                    td.a(-348, fl.field_c[27]);
-                    uf.field_b = uf.field_b % 6 + ka.field_h;
-                    return;
-                  }
-                } else {
-                  if (12 != ka.field_h) {
-                    if (ka.field_h != 24) {
-                      if (30 != ka.field_h) {
-                        if (36 != ka.field_h) {
-                          td.a(-348, fl.field_c[26]);
-                          nd.field_a = 2;
-                          ka.field_h = 12;
-                          uf.field_b = uf.field_b % 6 + ka.field_h;
-                          return;
-                        } else {
-                          nd.field_a = 2;
-                          ka.field_h = 12;
-                          uf.field_b = uf.field_b % 6 + ka.field_h;
-                          return;
-                        }
-                      } else {
-                        nd.field_a = 2;
-                        ka.field_h = 12;
-                        uf.field_b = uf.field_b % 6 + ka.field_h;
-                        return;
-                      }
-                    } else {
-                      nd.field_a = 2;
-                      ka.field_h = 12;
-                      uf.field_b = uf.field_b % 6 + ka.field_h;
-                      return;
-                    }
-                  } else {
-                    nd.field_a = 2;
-                    ka.field_h = 12;
-                    uf.field_b = uf.field_b % 6 + ka.field_h;
-                    return;
-                  }
-                }
-              } else {
-                nd.field_a = 1;
-                ka.field_h = 6;
-                uf.field_b = uf.field_b % 6 + ka.field_h;
-                return;
-              }
-            } else {
-              if (ka.field_h != 0) {
-                if (24 != ka.field_h) {
-                  if (ka.field_h != 30) {
-                    if (ka.field_h != 36) {
-                      td.a(-348, fl.field_c[25]);
-                      ka.field_h = 0;
-                      nd.field_a = 0;
-                      uf.field_b = uf.field_b % 6 + ka.field_h;
-                      return;
-                    } else {
-                      ka.field_h = 0;
-                      nd.field_a = 0;
-                      uf.field_b = uf.field_b % 6 + ka.field_h;
-                      return;
-                    }
-                  } else {
-                    ka.field_h = 0;
-                    nd.field_a = 0;
-                    uf.field_b = uf.field_b % 6 + ka.field_h;
-                    return;
-                  }
-                } else {
-                  ka.field_h = 0;
-                  nd.field_a = 0;
-                  uf.field_b = uf.field_b % 6 + ka.field_h;
-                  return;
-                }
-              } else {
-                ka.field_h = 0;
-                nd.field_a = 0;
-                uf.field_b = uf.field_b % 6 + ka.field_h;
-                return;
-              }
-            }
-          } else {
-            if (param0 != 0) {
-              if (1 != param0) {
-                if (param0 != 2) {
-                  if (3 != param0) {
-                    if (param0 != 4) {
-                      if (param0 != 5) {
-                        uf.field_b = uf.field_b % 6 + ka.field_h;
-                        return;
-                      } else {
-                        pa.field_g = 110;
-                        nd.field_a = 5;
-                        ka.field_h = 30;
-                        td.a(-348, fl.field_c[24]);
-                        uf.field_b = uf.field_b % 6 + ka.field_h;
-                        return;
-                      }
-                    } else {
-                      pa.field_g = 110;
-                      ka.field_h = 24;
-                      nd.field_a = 4;
-                      uf.field_b = uf.field_b % 6 + ka.field_h;
-                      return;
-                    }
-                  } else {
-                    ka.field_h = 18;
-                    wa.field_a = 50;
-                    pa.field_g = 110;
-                    nd.field_a = 3;
-                    td.a(-348, fl.field_c[27]);
-                    uf.field_b = uf.field_b % 6 + ka.field_h;
-                    return;
-                  }
-                } else {
-                  if (12 == ka.field_h) {
-                    nd.field_a = 2;
-                    ka.field_h = 12;
-                  } else {
-                    if (ka.field_h != 24) {
-                      if (30 != ka.field_h) {
-                        if (36 != ka.field_h) {
-                          td.a(-348, fl.field_c[26]);
-                          nd.field_a = 2;
-                          ka.field_h = 12;
-                          uf.field_b = uf.field_b % 6 + ka.field_h;
-                          return;
-                        } else {
-                          nd.field_a = 2;
-                          ka.field_h = 12;
-                          uf.field_b = uf.field_b % 6 + ka.field_h;
-                          return;
-                        }
-                      } else {
-                        nd.field_a = 2;
-                        ka.field_h = 12;
-                        uf.field_b = uf.field_b % 6 + ka.field_h;
-                        return;
-                      }
-                    } else {
-                      nd.field_a = 2;
-                      ka.field_h = 12;
-                      uf.field_b = uf.field_b % 6 + ka.field_h;
-                      return;
-                    }
-                  }
-                }
-              } else {
-                nd.field_a = 1;
-                ka.field_h = 6;
-                uf.field_b = uf.field_b % 6 + ka.field_h;
-                return;
-              }
-            } else {
-              if (ka.field_h != 0) {
-                if (24 != ka.field_h) {
-                  if (ka.field_h != 30) {
-                    if (ka.field_h != 36) {
-                      td.a(-348, fl.field_c[25]);
-                      ka.field_h = 0;
-                      nd.field_a = 0;
-                    } else {
-                      ka.field_h = 0;
-                      nd.field_a = 0;
-                    }
-                  } else {
-                    ka.field_h = 0;
-                    nd.field_a = 0;
-                  }
-                } else {
-                  ka.field_h = 0;
-                  nd.field_a = 0;
-                }
-              } else {
-                ka.field_h = 0;
-                nd.field_a = 0;
-              }
-            }
-            uf.field_b = uf.field_b % 6 + ka.field_h;
-            return;
-          }
-        } else {
+        if (pa.field_g > 0) {
           if (param0 == 3) {
             wa.field_a = 50;
             td.a(-348, fl.field_c[27]);
           }
           return;
         }
+        if (!param1) {
+          if (param0 != 0) {
+            if (1 == param0) {
+              nd.field_a = 1;
+              ka.field_h = 6;
+              uf.field_b = uf.field_b % 6 + ka.field_h;
+              return;
+            }
+            if (param0 != 2) {
+              if (3 == param0) {
+                ka.field_h = 18;
+                wa.field_a = 50;
+                pa.field_g = 110;
+                nd.field_a = 3;
+                td.a(-348, fl.field_c[27]);
+                uf.field_b = uf.field_b % 6 + ka.field_h;
+                return;
+              }
+              if (param0 == 4) {
+                pa.field_g = 110;
+                ka.field_h = 24;
+                nd.field_a = 4;
+                uf.field_b = uf.field_b % 6 + ka.field_h;
+                return;
+              }
+              if (param0 != 5) {
+                uf.field_b = uf.field_b % 6 + ka.field_h;
+                return;
+              }
+              pa.field_g = 110;
+              nd.field_a = 5;
+              ka.field_h = 30;
+              td.a(-348, fl.field_c[24]);
+              uf.field_b = uf.field_b % 6 + ka.field_h;
+              return;
+            }
+            if (12 != ka.field_h) {
+              if (ka.field_h == 24) {
+                nd.field_a = 2;
+                ka.field_h = 12;
+                uf.field_b = uf.field_b % 6 + ka.field_h;
+                return;
+              }
+              if (30 == ka.field_h) {
+                nd.field_a = 2;
+                ka.field_h = 12;
+                uf.field_b = uf.field_b % 6 + ka.field_h;
+                return;
+              }
+              if (36 == ka.field_h) {
+                nd.field_a = 2;
+                ka.field_h = 12;
+                uf.field_b = uf.field_b % 6 + ka.field_h;
+                return;
+              }
+              td.a(-348, fl.field_c[26]);
+              nd.field_a = 2;
+              ka.field_h = 12;
+              uf.field_b = uf.field_b % 6 + ka.field_h;
+              return;
+            }
+            nd.field_a = 2;
+            ka.field_h = 12;
+          } else {
+            if (ka.field_h != 0) {
+              if (24 != ka.field_h) {
+                if (ka.field_h != 30) {
+                  if (ka.field_h != 36) {
+                    td.a(-348, fl.field_c[25]);
+                    ka.field_h = 0;
+                    nd.field_a = 0;
+                  } else {
+                    ka.field_h = 0;
+                    nd.field_a = 0;
+                  }
+                } else {
+                  ka.field_h = 0;
+                  nd.field_a = 0;
+                }
+              } else {
+                ka.field_h = 0;
+                nd.field_a = 0;
+              }
+            } else {
+              ka.field_h = 0;
+              nd.field_a = 0;
+            }
+          }
+          uf.field_b = uf.field_b % 6 + ka.field_h;
+          return;
+        }
+        field_a = (dm) null;
+        if (param0 == 0) {
+          if (ka.field_h == 0) {
+            ka.field_h = 0;
+            nd.field_a = 0;
+            uf.field_b = uf.field_b % 6 + ka.field_h;
+            return;
+          }
+          if (24 == ka.field_h) {
+            ka.field_h = 0;
+            nd.field_a = 0;
+            uf.field_b = uf.field_b % 6 + ka.field_h;
+            return;
+          }
+          if (ka.field_h == 30) {
+            ka.field_h = 0;
+            nd.field_a = 0;
+            uf.field_b = uf.field_b % 6 + ka.field_h;
+            return;
+          }
+          if (ka.field_h == 36) {
+            ka.field_h = 0;
+            nd.field_a = 0;
+            uf.field_b = uf.field_b % 6 + ka.field_h;
+            return;
+          }
+          td.a(-348, fl.field_c[25]);
+          ka.field_h = 0;
+          nd.field_a = 0;
+          uf.field_b = uf.field_b % 6 + ka.field_h;
+          return;
+        }
+        if (1 == param0) {
+          nd.field_a = 1;
+          ka.field_h = 6;
+          uf.field_b = uf.field_b % 6 + ka.field_h;
+          return;
+        }
+        if (param0 != 2) {
+          if (3 == param0) {
+            ka.field_h = 18;
+            wa.field_a = 50;
+            pa.field_g = 110;
+            nd.field_a = 3;
+            td.a(-348, fl.field_c[27]);
+            uf.field_b = uf.field_b % 6 + ka.field_h;
+            return;
+          }
+          if (param0 == 4) {
+            pa.field_g = 110;
+            ka.field_h = 24;
+            nd.field_a = 4;
+            uf.field_b = uf.field_b % 6 + ka.field_h;
+            return;
+          }
+          if (param0 != 5) {
+            uf.field_b = uf.field_b % 6 + ka.field_h;
+            return;
+          }
+          pa.field_g = 110;
+          nd.field_a = 5;
+          ka.field_h = 30;
+          td.a(-348, fl.field_c[24]);
+          uf.field_b = uf.field_b % 6 + ka.field_h;
+          return;
+        }
+        if (12 == ka.field_h) {
+          nd.field_a = 2;
+          ka.field_h = 12;
+          uf.field_b = uf.field_b % 6 + ka.field_h;
+          return;
+        }
+        if (ka.field_h == 24) {
+          nd.field_a = 2;
+          ka.field_h = 12;
+          uf.field_b = uf.field_b % 6 + ka.field_h;
+          return;
+        }
+        if (30 == ka.field_h) {
+          nd.field_a = 2;
+          ka.field_h = 12;
+          uf.field_b = uf.field_b % 6 + ka.field_h;
+          return;
+        }
+        if (36 == ka.field_h) {
+          nd.field_a = 2;
+          ka.field_h = 12;
+          uf.field_b = uf.field_b % 6 + ka.field_h;
+          return;
+        }
+        td.a(-348, fl.field_c[26]);
+        nd.field_a = 2;
+        ka.field_h = 12;
+        uf.field_b = uf.field_b % 6 + ka.field_h;
     }
 
     final static fd[] a(pk param0, boolean param1) {
@@ -258,36 +232,34 @@ final class jc {
         var7 = Geoblox.field_C;
         try {
           var2_int = param0.e((byte) -17, 8);
-          if (param1) {
-            if (0 >= var2_int) {
-              var3 = param0.e((byte) -17, 12);
-              var4 = new fd[var3];
-              for (var5 = 0; var3 > var5; var5++) {
-                if (!ac.a((byte) 71, param0)) {
-                  var6 = param0.e((byte) -17, td.a(var5 - 1, (byte) 66));
-                  var4[var5] = var4[var6];
-                } else {
-                  var6_ref_fd = new fd();
-                  param0.e((byte) -17, 24);
-                  param0.e((byte) -17, 24);
-                  var6_ref_fd.field_a = param0.e((byte) -17, 24);
-                  param0.e((byte) -17, 9);
-                  param0.e((byte) -17, 12);
-                  param0.e((byte) -17, 12);
-                  param0.e((byte) -17, 12);
-                  var4[var5] = var6_ref_fd;
-                }
-              }
-              stackIn_14_0 = (fd[]) (var4);
-              return stackIn_14_0;
-            } else {
-              stackIn_6_0 = null;
-              return (fd[]) ((Object) stackIn_6_0);
-            }
-          } else {
+          if (!param1) {
             stackIn_3_0 = (fd[]) null;
             return stackIn_3_0;
           }
+          if (0 < var2_int) {
+            stackIn_6_0 = null;
+            return (fd[]) ((Object) stackIn_6_0);
+          }
+          var3 = param0.e((byte) -17, 12);
+          var4 = new fd[var3];
+          for (var5 = 0; var3 > var5; var5++) {
+            if (!ac.a((byte) 71, param0)) {
+              var6 = param0.e((byte) -17, td.a(var5 - 1, (byte) 66));
+              var4[var5] = var4[var6];
+            } else {
+              var6_ref_fd = new fd();
+              param0.e((byte) -17, 24);
+              param0.e((byte) -17, 24);
+              var6_ref_fd.field_a = param0.e((byte) -17, 24);
+              param0.e((byte) -17, 9);
+              param0.e((byte) -17, 12);
+              param0.e((byte) -17, 12);
+              param0.e((byte) -17, 12);
+              var4[var5] = var6_ref_fd;
+            }
+          }
+          stackIn_14_0 = (fd[]) (var4);
+          return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

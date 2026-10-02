@@ -7,9 +7,9 @@ final class tc {
     static int field_c;
 
     final static boolean a(byte param0, char param1) {
+        int var3 = 0;
         char[] var2 = null;
         RuntimeException var2_ref = null;
-        int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         char[] var6 = null;
@@ -33,28 +33,20 @@ final class tc {
             if (param0 != -112) {
               field_b = (String) null;
             }
-            if (param1 != 0) {
-              var6 = lf.field_e;
-              var2 = var6;
-              var3 = 0;
-              L4: while (true) {
-                if (var6.length <= var3) {
-                  stackIn_21_0 = 0;
-                  return stackIn_21_0 != 0;
-                } else {
-                  var4 = var6[var3];
-                  if (var4 == param1) {
-                    stackIn_18_0 = 1;
-                    return stackIn_18_0 != 0;
-                  } else {
-                    var3++;
-                    continue L4;
-                  }
-                }
-              }
-            } else {
+            if (param1 == 0) {
               return false;
             }
+            var6 = lf.field_e;
+            var2 = var6;
+            for (var3 = 0; var6.length > var3; var3++) {
+              var4 = var6[var3];
+              if (var4 == param1) {
+                stackIn_18_0 = 1;
+                return stackIn_18_0 != 0;
+              }
+            }
+            stackIn_21_0 = 0;
+            return stackIn_21_0 != 0;
           }
           stackIn_8_0 = 1;
           return stackIn_8_0 != 0;

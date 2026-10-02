@@ -34,104 +34,97 @@ final class hd extends sh {
     }
 
     final static void f(int param0) {
-        if (!el.field_o.field_Y) {
-          di.field_g = di.field_g + 1;
-          ul.field_b = ul.field_b + 1;
-          if (sa.field_b == di.field_g) {
-            if (gb.field_c < 2) {
-              di.field_g = 0;
-              ld.b(false);
-              gb.field_c = gb.field_c + 1;
-              if (param0 != 2) {
-                field_I = (int[]) null;
-                if (fa.field_b == ul.field_b) {
-                  ul.field_b = 0;
-                  fj.field_m = 0;
-                  el.field_o.field_bb = 1;
-                  di.field_g = 0;
-                  if (gb.field_c < 2) {
-                    ld.b(false);
-                  }
-                  gb.field_c = 0;
-                  el.field_t = el.field_t + 1;
-                }
-                return;
-              } else {
-                if (fa.field_b == ul.field_b) {
-                  ul.field_b = 0;
-                  fj.field_m = 0;
-                  el.field_o.field_bb = 1;
-                  di.field_g = 0;
-                  if (gb.field_c < 2) {
-                    ld.b(false);
-                  }
-                  gb.field_c = 0;
-                  el.field_t = el.field_t + 1;
-                }
-                return;
-              }
-            } else {
-              if (param0 != 2) {
-                field_I = (int[]) null;
-                if (fa.field_b == ul.field_b) {
-                  ul.field_b = 0;
-                  fj.field_m = 0;
-                  el.field_o.field_bb = 1;
-                  di.field_g = 0;
-                  if (gb.field_c < 2) {
-                    ld.b(false);
-                  }
-                  gb.field_c = 0;
-                  el.field_t = el.field_t + 1;
-                }
-                return;
-              } else {
-                if (fa.field_b == ul.field_b) {
-                  ul.field_b = 0;
-                  fj.field_m = 0;
-                  el.field_o.field_bb = 1;
-                  di.field_g = 0;
-                  if (gb.field_c < 2) {
-                    ld.b(false);
-                  }
-                  gb.field_c = 0;
-                  el.field_t = el.field_t + 1;
-                }
-                return;
-              }
-            }
-          } else {
-            if (param0 != 2) {
-              field_I = (int[]) null;
-              if (fa.field_b == ul.field_b) {
-                ul.field_b = 0;
-                fj.field_m = 0;
-                el.field_o.field_bb = 1;
-                di.field_g = 0;
-                if (gb.field_c < 2) {
-                  ld.b(false);
-                }
-                gb.field_c = 0;
-                el.field_t = el.field_t + 1;
-              }
-              return;
-            } else {
-              if (fa.field_b == ul.field_b) {
-                ul.field_b = 0;
-                fj.field_m = 0;
-                el.field_o.field_bb = 1;
-                di.field_g = 0;
-                if (gb.field_c < 2) {
-                  ld.b(false);
-                }
-                gb.field_c = 0;
-                el.field_t = el.field_t + 1;
-              }
-              return;
-            }
-          }
-        } else {
+        if (el.field_o.field_Y) {
           return;
+        }
+        di.field_g = di.field_g + 1;
+        ul.field_b = ul.field_b + 1;
+        if (sa.field_b != di.field_g) {
+          if (param0 == 2) {
+            if (fa.field_b == ul.field_b) {
+              ul.field_b = 0;
+              fj.field_m = 0;
+              el.field_o.field_bb = 1;
+              di.field_g = 0;
+              if (gb.field_c < 2) {
+                ld.b(false);
+              }
+              gb.field_c = 0;
+              el.field_t = el.field_t + 1;
+            }
+            return;
+          }
+          field_I = (int[]) null;
+          if (fa.field_b == ul.field_b) {
+            ul.field_b = 0;
+            fj.field_m = 0;
+            el.field_o.field_bb = 1;
+            di.field_g = 0;
+            if (gb.field_c < 2) {
+              ld.b(false);
+            }
+            gb.field_c = 0;
+            el.field_t = el.field_t + 1;
+          }
+          return;
+        }
+        if (gb.field_c >= 2) {
+          if (param0 == 2) {
+            if (fa.field_b == ul.field_b) {
+              ul.field_b = 0;
+              fj.field_m = 0;
+              el.field_o.field_bb = 1;
+              di.field_g = 0;
+              if (gb.field_c < 2) {
+                ld.b(false);
+              }
+              gb.field_c = 0;
+              el.field_t = el.field_t + 1;
+            }
+            return;
+          }
+          field_I = (int[]) null;
+          if (fa.field_b == ul.field_b) {
+            ul.field_b = 0;
+            fj.field_m = 0;
+            el.field_o.field_bb = 1;
+            di.field_g = 0;
+            if (gb.field_c < 2) {
+              ld.b(false);
+            }
+            gb.field_c = 0;
+            el.field_t = el.field_t + 1;
+          }
+          return;
+        }
+        di.field_g = 0;
+        ld.b(false);
+        gb.field_c = gb.field_c + 1;
+        if (param0 == 2) {
+          if (fa.field_b == ul.field_b) {
+            ul.field_b = 0;
+            fj.field_m = 0;
+            el.field_o.field_bb = 1;
+            di.field_g = 0;
+            if (gb.field_c < 2) {
+              ld.b(false);
+            }
+            gb.field_c = 0;
+            el.field_t = el.field_t + 1;
+          }
+          return;
+        }
+        field_I = (int[]) null;
+        if (fa.field_b == ul.field_b) {
+          ul.field_b = 0;
+          fj.field_m = 0;
+          el.field_o.field_bb = 1;
+          di.field_g = 0;
+          if (gb.field_c < 2) {
+            ld.b(false);
+          }
+          gb.field_c = 0;
+          el.field_t = el.field_t + 1;
         }
     }
 

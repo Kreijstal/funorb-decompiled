@@ -48,27 +48,20 @@ final class sj {
         var4 = Geoblox.field_C;
         if (param1 != 1) {
           return 80;
-        } else {
-          var3 = this.field_f.length;
-          L0: while (true) {
-            if (param0 < var3) {
-              return var3;
-            } else {
-              if (this.field_c) {
-                if (0 == var3) {
-                  var3 = 1;
-                  continue L0;
-                } else {
-                  var3 = var3 * this.field_a;
-                  continue L0;
-                }
-              } else {
-                var3 = var3 + this.field_a;
-                continue L0;
-              }
-            }
-          }
         }
+        var3 = this.field_f.length;
+        L0: while (param0 >= var3) {
+          if (!this.field_c) {
+            var3 = var3 + this.field_a;
+            continue L0;
+          }
+          if (0 == var3) {
+            var3 = 1;
+            continue L0;
+          }
+          var3 = var3 * this.field_a;
+        }
+        return var3;
     }
 
     final int a(int param0, byte param1) {

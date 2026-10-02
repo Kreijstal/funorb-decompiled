@@ -37,115 +37,91 @@ final class ae {
         var14 = new int[33];
         var12 = var14;
         var2_ref_int__ = var12;
-        var3 = 0;
-        L0: while (true) {
-          if (var3 >= this.field_f) {
-            this.field_d = new int[8];
-            var2 = 0;
-            var3 = 0;
-            L1: while (true) {
-              if (var3 >= this.field_f) {
-                return;
-              } else {
-                var4 = this.field_a[var3];
-                if (var4 != 0) {
-                  var5 = var17[var3];
-                  var6 = 0;
-                  for (var7 = 0; var7 < var4; var7++) {
-                    var8 = -2147483648 >>> var7;
-                    if ((var5 & var8) == 0) {
-                      var6++;
-                    } else {
-                      if (this.field_d[var6] == 0) {
-                        this.field_d[var6] = var2;
-                      }
-                      var6 = this.field_d[var6];
-                    }
-                    L5: {
-                      if (var6 >= this.field_d.length) {
-                        var9 = new int[this.field_d.length * 2];
-                        var11 = 0;
-                        var10 = var11;
-                        L6: while (var11 < this.field_d.length) {
-                          var9[var11] = this.field_d[var11];
-                          var11++;
-                        }
-                        this.field_d = var9;
-                        break L5;
-                      }
-                    }
-                    var8 = var8 >>> 1;
-                  }
-                  this.field_d[var6] = ~var3;
-                  if (var6 >= var2) {
-                    var2 = var6 + 1;
-                    var3++;
-                    continue L1;
-                  } else {
-                    var3++;
-                    continue L1;
-                  }
-                } else {
-                  var3++;
-                  continue L1;
+        L0: for (var3 = 0; var3 < this.field_f; var3++) {
+          var4 = this.field_a[var3];
+          if (var4 == 0) {
+            continue L0;
+          }
+          L7: {
+            var5 = 1 << 32 - var4;
+            var6 = var14[var4];
+            var17[var3] = var6;
+            if ((var6 & var5) == 0) {
+              var7 = var6 | var5;
+              for (var8 = var4 - 1; var8 >= 1; var8--) {
+                var9_int = var14[var8];
+                if (var9_int != var6) {
+                  break L7;
                 }
+                var10 = 1 << 32 - var8;
+                if ((var9_int & var10) != 0) {
+                  var2_ref_int__[var8] = var2_ref_int__[var8 - 1];
+                  break L7;
+                }
+                var2_ref_int__[var8] = var9_int | var10;
               }
+              break L7;
             }
-          } else {
+            var7 = var2_ref_int__[var4 - 1];
+          }
+          var14[var4] = var7;
+          L9: for (var8 = var4 + 1; var8 <= 32; var8++) {
+            var9_int = var14[var8];
+            if (var9_int != var6) {
+              continue L9;
+            }
+            var14[var8] = var7;
+          }
+        }
+        this.field_d = new int[8];
+        var2 = 0;
+        var3 = 0;
+        L1: while (true) {
+          if (var3 >= this.field_f) {
+            return;
+          }
+          {
             var4 = this.field_a[var3];
-            if (var4 != 0) {
-              L7: {
-                var5 = 1 << 32 - var4;
-                var6 = var14[var4];
-                var17[var3] = var6;
-                if ((var6 & var5) == 0) {
-                  var7 = var6 | var5;
-                  var8 = var4 - 1;
-                  L8: while (true) {
-                    if (var8 < 1) {
-                      break L7;
-                    } else {
-                      var9_int = var14[var8];
-                      if (var9_int != var6) {
-                        break L7;
-                      } else {
-                        var10 = 1 << 32 - var8;
-                        if ((var9_int & var10) == 0) {
-                          var2_ref_int__[var8] = var9_int | var10;
-                          var8--;
-                          continue L8;
-                        } else {
-                          var2_ref_int__[var8] = var2_ref_int__[var8 - 1];
-                          break L7;
-                        }
-                      }
-                    }
-                  }
-                } else {
-                  var7 = var2_ref_int__[var4 - 1];
-                }
-              }
-              var14[var4] = var7;
-              var8 = var4 + 1;
-              L9: while (true) {
-                if (var8 <= 32) {
-                  var9_int = var14[var8];
-                  if (var9_int == var6) {
-                    var14[var8] = var7;
-                    var8++;
-                    continue L9;
-                  } else {
-                    var8++;
-                    continue L9;
-                  }
-                } else {
-                  var3++;
-                  continue L0;
-                }
-              }
-            } else {
+            if (var4 == 0) {
               var3++;
-              continue L0;
+              continue L1;
+            }
+            {
+              var5 = var17[var3];
+              var6 = 0;
+              for (var7 = 0; var7 < var4; var7++) {
+                var8 = -2147483648 >>> var7;
+                if ((var5 & var8) == 0) {
+                  var6++;
+                } else {
+                  if (this.field_d[var6] == 0) {
+                    this.field_d[var6] = var2;
+                  }
+                  var6 = this.field_d[var6];
+                }
+                L5: {
+                  if (var6 >= this.field_d.length) {
+                    var9 = new int[this.field_d.length * 2];
+                    var11 = 0;
+                    var10 = var11;
+                    L6: while (var11 < this.field_d.length) {
+                      var9[var11] = this.field_d[var11];
+                      var11++;
+                    }
+                    this.field_d = var9;
+                    break L5;
+                  }
+                }
+                var8 = var8 >>> 1;
+              }
+              this.field_d[var6] = ~var3;
+              if (var6 < var2) {
+                var3++;
+                continue L1;
+              }
+              var2 = var6 + 1;
+              var3++;
+              continue L1;
             }
           }
         }
@@ -195,7 +171,21 @@ final class ae {
         }
         L1: {
           var1 = stackIn_3_0;
-          if (var1 == 0) {
+          if (var1 != 0) {
+            var2 = 0;
+            var3_int = ua.b(5) + 1;
+            L5: while (var2 < this.field_f) {
+              var4_int = ua.b(hj.a((byte) 58, this.field_f - var2));
+              for (var5 = 0; var5 < var4_int; var5++) {
+                incrementValue$0 = var2;
+                var2++;
+                this.field_a[incrementValue$0] = var3_int;
+              }
+              var3_int++;
+            }
+            break L1;
+          }
+          {
             if (ua.b() == 0) {
               stackIn_13_0 = 0;
             } else {
@@ -214,19 +204,6 @@ final class ae {
               }
               this.field_a[var14] = ua.b(5) + 1;
               var14++;
-            }
-            break L1;
-          } else {
-            var2 = 0;
-            var3_int = ua.b(5) + 1;
-            L5: while (var2 < this.field_f) {
-              var4_int = ua.b(hj.a((byte) 58, this.field_f - var2));
-              for (var5 = 0; var5 < var4_int; var5++) {
-                incrementValue$0 = var2;
-                var2++;
-                this.field_a[incrementValue$0] = var3_int;
-              }
-              var3_int++;
             }
             break L1;
           }
@@ -254,37 +231,7 @@ final class ae {
               this.field_b[var8] = ua.b(var5);
             }
             this.field_c = new float[this.field_f][this.field_e];
-            if (var2 != 1) {
-              var8 = 0;
-              L11: while (true) {
-                if (var8 >= this.field_f) {
-                  break L7;
-                } else {
-                  var9 = 0.0f;
-                  var10 = var8 * this.field_e;
-                  var11 = 0;
-                  L12: while (true) {
-                    if (var11 >= this.field_e) {
-                      var8++;
-                      continue L11;
-                    } else {
-                      var12 = (float)this.field_b[var10] * var4 + var3 + var9;
-                      this.field_c[var8][var11] = var12;
-                      if (var6 != 0) {
-                        var9 = var12;
-                        var10++;
-                        var11++;
-                        continue L12;
-                      } else {
-                        var10++;
-                        var11++;
-                        continue L12;
-                      }
-                    }
-                  }
-                }
-              }
-            } else {
+            if (var2 == 1) {
               for (var8 = 0; var8 < this.field_f; var8++) {
                 var9 = 0.0f;
                 var10 = 1;
@@ -300,6 +247,21 @@ final class ae {
               }
               break L7;
             }
+            for (var8 = 0; var8 < this.field_f; var8++) {
+              var9 = 0.0f;
+              var10 = var8 * this.field_e;
+              L12: for (var11 = 0; var11 < this.field_e; var11++) {
+                var12 = (float)this.field_b[var10] * var4 + var3 + var9;
+                this.field_c[var8][var11] = var12;
+                if (var6 == 0) {
+                  var10++;
+                  continue L12;
+                }
+                var9 = var12;
+                var10++;
+              }
+            }
+            break L7;
           }
         }
     }

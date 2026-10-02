@@ -48,46 +48,36 @@ abstract class jg {
         RuntimeException var2_ref = null;
         var5 = Geoblox.field_C;
         try {
-          if (nh.field_a != null) {
-            if (param1 != null) {
-              if (param1.length() != 0) {
-                if (param0 == -62) {
-                  var6 = (CharSequence) ((Object) param1);
-                  var2 = oe.a(var6, 12);
-                  if (var2 != null) {
-                    var3 = (j) ((Object) nh.field_a.a((long)var2.hashCode(), -1));
-                    L0: while (true) {
-                      if (var3 != null) {
-                        var7 = (CharSequence) ((Object) var3.field_hb);
-                        var4 = oe.a(var7, 12);
-                        if (var4.equals(var2)) {
-                          stackIn_20_0 = (j) (var3);
-                          return stackIn_20_0;
-                        } else {
-                          var3 = (j) ((Object) nh.field_a.a(-29925));
-                          continue L0;
-                        }
-                      } else {
-                        return null;
-                      }
-                    }
-                  } else {
-                    stackIn_13_0 = null;
-                    return (j) ((Object) stackIn_13_0);
-                  }
-                } else {
-                  stackIn_10_0 = (j) null;
-                  return stackIn_10_0;
-                }
-              } else {
-                return null;
-              }
-            } else {
-              return null;
-            }
-          } else {
+          if (nh.field_a == null) {
             return null;
           }
+          if (param1 == null) {
+            return null;
+          }
+          if (param1.length() == 0) {
+            return null;
+          }
+          if (param0 != -62) {
+            stackIn_10_0 = (j) null;
+            return stackIn_10_0;
+          }
+          var6 = (CharSequence) ((Object) param1);
+          var2 = oe.a(var6, 12);
+          if (var2 == null) {
+            stackIn_13_0 = null;
+            return (j) ((Object) stackIn_13_0);
+          }
+          var3 = (j) ((Object) nh.field_a.a((long)var2.hashCode(), -1));
+          L0: while (var3 != null) {
+            var7 = (CharSequence) ((Object) var3.field_hb);
+            var4 = oe.a(var7, 12);
+            if (var4.equals(var2)) {
+              stackIn_20_0 = (j) (var3);
+              return stackIn_20_0;
+            }
+            var3 = (j) ((Object) nh.field_a.a(-29925));
+          }
+          return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
@@ -358,10 +348,9 @@ abstract class jg {
                   if (!(var4_float > var5_float)) {
                     var6 = var4_float;
                     break L6;
-                  } else {
-                    var6 = var5_float;
-                    break L6;
                   }
+                  var6 = var5_float;
+                  break L6;
                 }
               }
               if (var4_float > var3_float) {

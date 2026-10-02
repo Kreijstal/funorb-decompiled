@@ -95,48 +95,39 @@ final class pk extends qc {
         int var4 = 0;
         try {
           var2_int = 0;
-          if (param0 < -117) {
-            L0: while (true) {
-              if (33 <= var2_int) {
-                var4 = 0;
-                var2_int = var4;
-                L1: while (true) {
-                  if (var4 >= 33) {
-                    p.field_i = null;
-                    return;
-                  } else {
-                    if (!vg.field_j[var4]) {
-                      return;
-                    } else {
-                      var4++;
-                      continue L1;
-                    }
-                  }
-                }
-              } else {
-                if (param1 == ck.field_c[var2_int]) {
-                  if (!vg.field_j[var2_int]) {
-                    L3: {
-                      if (10 <= var2_int) {
-                        if (26 >= var2_int) {
-                          var3 = te.field_c.c(-1879044097, w.field_b[var2_int]);
-                          break L3;
-                        }
-                      }
-                      var3 = te.field_c.b(1, w.field_b[var2_int]);
-                    }
-                    fl.field_c[var2_int] = var3.a(p.field_i);
-                    vg.field_j[var2_int] = true;
-                  }
-                  var2_int++;
-                  continue L0;
-                } else {
-                  var2_int++;
-                  continue L0;
-                }
+          if (param0 >= -117) {
+            return;
+          }
+          {
+            L0: while (33 > var2_int) {
+              if (param1 != ck.field_c[var2_int]) {
+                var2_int++;
+                continue L0;
               }
+              if (!vg.field_j[var2_int]) {
+                L3: {
+                  if (10 <= var2_int) {
+                    if (26 >= var2_int) {
+                      var3 = te.field_c.c(-1879044097, w.field_b[var2_int]);
+                      break L3;
+                    }
+                  }
+                  var3 = te.field_c.b(1, w.field_b[var2_int]);
+                }
+                fl.field_c[var2_int] = var3.a(p.field_i);
+                vg.field_j[var2_int] = true;
+              }
+              var2_int++;
             }
-          } else {
+            var4 = 0;
+            var2_int = var4;
+            L1: while (var4 < 33) {
+              if (!vg.field_j[var4]) {
+                return;
+              }
+              var4++;
+            }
+            p.field_i = null;
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

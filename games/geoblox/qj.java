@@ -23,9 +23,9 @@ final class qj {
     }
 
     final static String a(String param0, String param1, char param2, byte param3) {
+        StringBuilder discarded$2 = null;
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
-        StringBuilder discarded$2 = null;
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -60,13 +60,12 @@ final class qj {
               var8_int = 0;
               L2: while (true) {
                 var8_int = param0.indexOf((int) param2, var8_int);
-                if (var8_int >= 0) {
-                  var6 = var6 + var7;
-                  var8_int++;
-                  continue L2;
-                } else {
+                if (var8_int < 0) {
                   break L1;
                 }
+                var6 = var6 + var7;
+                var8_int++;
+                continue L2;
               }
             }
           }
@@ -74,15 +73,16 @@ final class qj {
           var9 = 0;
           L3: while (true) {
             var10 = param0.indexOf((int) param2, var9);
-            if (var10 >= 0) {
+            if (var10 < 0) {
+              discarded$2 = var8.append(param0.substring(var9));
+              stackIn_13_0 = var8.toString();
+              return stackIn_13_0;
+            }
+            {
               discarded$0 = var8.append(param0.substring(var9, var10));
               var9 = 1 + var10;
               discarded$1 = var8.append(param1);
               continue L3;
-            } else {
-              discarded$2 = var8.append(param0.substring(var9));
-              stackIn_13_0 = var8.toString();
-              return stackIn_13_0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

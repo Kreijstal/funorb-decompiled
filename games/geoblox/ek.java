@@ -35,7 +35,10 @@ final class ek {
           var7 = param2.field_m;
           var8 = 0;
           var9 = 0;
-          if (param1) {
+          if (!param1) {
+            return;
+          }
+          {
             var10 = param2.field_s;
             var11 = param2.field_o;
             var12 = (var10 << 16) / param4;
@@ -80,8 +83,6 @@ final class ek {
               param4 = param4 - var16;
             }
             lc.a(var8, param0, vb.field_c, var12, var13, var6_int, var9, var15, var14, param4, (byte) -104, param2.field_v, 0);
-            return;
-          } else {
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

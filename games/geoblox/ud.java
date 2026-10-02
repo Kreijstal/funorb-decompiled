@@ -52,38 +52,32 @@ final class ud {
         RuntimeException var2_ref = null;
         var5 = Geoblox.field_C;
         try {
-          if (null != ug.field_a) {
-            var7 = (CharSequence) ((Object) param1);
-            var2 = oe.a(var7, 12);
-            if (var2 == null) {
-              var2 = param1;
-            }
-            var3 = (j) ((Object) ug.field_a.a((long)var2.hashCode(), -1));
-            if (param0 != 0) {
-              var6 = (String) null;
-              ud.a(55, (String) null);
-            }
-            L2: while (true) {
-              if (var3 != null) {
-                var8 = (CharSequence) ((Object) var3.field_hb);
-                var4 = oe.a(var8, 12);
-                if (var4 == null) {
-                  var4 = var3.field_hb;
-                }
-                if (var4.equals(var2)) {
-                  stackIn_16_0 = (j) (var3);
-                  return stackIn_16_0;
-                } else {
-                  var3 = (j) ((Object) ug.field_a.a(param0 ^ -29925));
-                  continue L2;
-                }
-              } else {
-                return null;
-              }
-            }
-          } else {
+          if (null == ug.field_a) {
             return null;
           }
+          var7 = (CharSequence) ((Object) param1);
+          var2 = oe.a(var7, 12);
+          if (var2 == null) {
+            var2 = param1;
+          }
+          var3 = (j) ((Object) ug.field_a.a((long)var2.hashCode(), -1));
+          if (param0 != 0) {
+            var6 = (String) null;
+            ud.a(55, (String) null);
+          }
+          L2: while (var3 != null) {
+            var8 = (CharSequence) ((Object) var3.field_hb);
+            var4 = oe.a(var8, 12);
+            if (var4 == null) {
+              var4 = var3.field_hb;
+            }
+            if (var4.equals(var2)) {
+              stackIn_16_0 = (j) (var3);
+              return stackIn_16_0;
+            }
+            var3 = (j) ((Object) ug.field_a.a(param0 ^ -29925));
+          }
+          return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
@@ -135,33 +129,7 @@ final class ud {
           L0: {
             var12 = eh.field_d;
             var2 = var12.c((byte) 34);
-            if (0 != var2) {
-              if (var2 == 1) {
-                var11 = (p) ((Object) rh.field_a.g(0));
-                if (var11 == null) {
-                  jl.a((byte) -120);
-                  return;
-                } else {
-                  var11.a(false);
-                }
-              } else {
-                if (var2 == 2) {
-                  var15 = (qi) ((Object) k.field_e.g(0));
-                  if (var15 == null) {
-                    jl.a((byte) -115);
-                    return;
-                  } else {
-                    var15.field_g = wf.j(86);
-                    var15.field_j = var15.field_g[0];
-                    var15.field_f = true;
-                    var15.a(false);
-                  }
-                } else {
-                  gi.a((Throwable) null, "A1: " + og.e(55), (byte) 125);
-                  jl.a((byte) -116);
-                }
-              }
-            } else {
+            if (0 == var2) {
               var10 = wf.j(89);
               var16 = var10;
               var13 = var16;
@@ -177,12 +145,34 @@ final class ud {
               if (var14 == null) {
                 jl.a((byte) -117);
                 return;
+              }
+              var14.field_g = var3;
+              var14.field_f = true;
+              var14.field_j = var16[0];
+              var14.a(false);
+              break L0;
+            }
+            if (var2 == 1) {
+              var11 = (p) ((Object) rh.field_a.g(0));
+              if (var11 == null) {
+                jl.a((byte) -120);
+                return;
+              }
+              var11.a(false);
+            } else {
+              if (var2 == 2) {
+                var15 = (qi) ((Object) k.field_e.g(0));
+                if (var15 == null) {
+                  jl.a((byte) -115);
+                  return;
+                }
+                var15.field_g = wf.j(86);
+                var15.field_j = var15.field_g[0];
+                var15.field_f = true;
+                var15.a(false);
               } else {
-                var14.field_g = var3;
-                var14.field_f = true;
-                var14.field_j = var16[0];
-                var14.a(false);
-                break L0;
+                gi.a((Throwable) null, "A1: " + og.e(55), (byte) 125);
+                jl.a((byte) -116);
               }
             }
           }

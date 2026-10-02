@@ -16,59 +16,56 @@ final class al {
         byte[] var13 = null;
         var6 = Geoblox.field_C;
         try {
-          if (param0 == 26146) {
-            L0: {
-              var9 = eh.field_d;
-              var2 = var9.c((byte) 34);
-              if (var2 == 0) {
-                var8 = (ca) ((Object) qa.field_e.g(0));
-                if (var8 != null) {
-                  var4 = var9.c((byte) 34);
-                  if (0 != var4) {
-                    var13 = new byte[var4];
-                    var9.b(29915, var4, var13, 0);
-                  } else {
-                    var5 = null;
-                  }
-                  var9.field_f = var9.field_f + 4;
-                  if (var9.h((byte) 20)) {
-                    var8.a(false);
-                  } else {
-                    jl.a((byte) -121);
-                    return;
-                  }
-                } else {
-                  jl.a((byte) -124);
-                  return;
-                }
-              } else {
-                if (1 == var2) {
-                  var3 = var9.a((byte) -101);
-                  var4_ref_wc = (wc) ((Object) l.field_g.g(0));
-                  L2: while (var4_ref_wc != null) {
-                    if (var3 != var4_ref_wc.field_h) {
-                      var4_ref_wc = (wc) ((Object) l.field_g.d(1));
-                      continue L2;
-                    }
-                    break;
-                  }
-                  if (var4_ref_wc != null) {
-                    var4_ref_wc.a(false);
-                    break L0;
-                  } else {
-                    jl.a((byte) -124);
-                    return;
-                  }
-                } else {
-                  gi.a((Throwable) null, "A1: " + og.e(55), (byte) 125);
-                  jl.a((byte) -120);
-                }
-              }
-            }
-            return;
-          } else {
+          if (param0 != 26146) {
             return;
           }
+          L0: {
+            var9 = eh.field_d;
+            var2 = var9.c((byte) 34);
+            if (var2 == 0) {
+              var8 = (ca) ((Object) qa.field_e.g(0));
+              if (var8 == null) {
+                jl.a((byte) -124);
+                return;
+              }
+              {
+                var4 = var9.c((byte) 34);
+                if (0 != var4) {
+                  var13 = new byte[var4];
+                  var9.b(29915, var4, var13, 0);
+                } else {
+                  var5 = null;
+                }
+                var9.field_f = var9.field_f + 4;
+                if (!var9.h((byte) 20)) {
+                  jl.a((byte) -121);
+                  return;
+                }
+                var8.a(false);
+              }
+            } else {
+              if (1 == var2) {
+                var3 = var9.a((byte) -101);
+                var4_ref_wc = (wc) ((Object) l.field_g.g(0));
+                L2: while (var4_ref_wc != null) {
+                  if (var3 != var4_ref_wc.field_h) {
+                    var4_ref_wc = (wc) ((Object) l.field_g.d(1));
+                    continue L2;
+                  }
+                  break;
+                }
+                if (var4_ref_wc != null) {
+                  var4_ref_wc.a(false);
+                  break L0;
+                }
+                jl.a((byte) -124);
+                return;
+              }
+              gi.a((Throwable) null, "A1: " + og.e(55), (byte) 125);
+              jl.a((byte) -120);
+            }
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
@@ -82,38 +79,36 @@ final class al {
         int var4;
         var4 = Geoblox.field_C;
         var2 = qi.b(3, param0 ^ 9667);
-        if (param0 == 9666) {
-          var3 = param1;
-          if (var3 != 4) {
-            if (var3 == 3) {
-              td.a(-348, fl.field_c[var2 + 13]);
-            } else {
-              if (var3 != 1) {
-                if (var3 != 0) {
-                  if (var3 == 6) {
-                    td.a(-348, fl.field_c[var2 + 4]);
+        if (param0 != 9666) {
+          return;
+        }
+        var3 = param1;
+        if (var3 != 4) {
+          if (var3 == 3) {
+            td.a(-348, fl.field_c[var2 + 13]);
+          } else {
+            if (var3 != 1) {
+              if (var3 != 0) {
+                if (var3 == 6) {
+                  td.a(-348, fl.field_c[var2 + 4]);
+                } else {
+                  if (5 == var3) {
+                    td.a(-348, fl.field_c[16 + var2]);
                   } else {
-                    if (5 == var3) {
-                      td.a(-348, fl.field_c[16 + var2]);
-                    } else {
-                      if (var3 == 2) {
-                        td.a(-348, fl.field_c[var2 + 19]);
-                      }
+                    if (var3 == 2) {
+                      td.a(-348, fl.field_c[var2 + 19]);
                     }
                   }
-                } else {
-                  td.a(-348, fl.field_c[var2 + 1]);
                 }
               } else {
-                td.a(-348, fl.field_c[7 + var2]);
+                td.a(-348, fl.field_c[var2 + 1]);
               }
+            } else {
+              td.a(-348, fl.field_c[7 + var2]);
             }
-          } else {
-            td.a(-348, fl.field_c[10 + var2]);
           }
-          return;
         } else {
-          return;
+          td.a(-348, fl.field_c[10 + var2]);
         }
     }
 
@@ -141,37 +136,36 @@ final class al {
               if (td.field_H) {
                 stackIn_4_0 = 1;
                 return stackIn_4_0 != 0;
-              } else {
-                try {
-                  L0: {
-                    var8 = "tuhstatbut";
-                    var3 = (String) (wk.a((byte) -6, param1, "getcookies"));
-                    var4 = uj.a(';', true, var3);
-                    for (var5 = 0; var5 < var4.length; var5++) {
-                      var6 = var4[var5].indexOf('=');
-                      if (var6 >= 0) {
-                        if (var4[var5].substring(0, var6).trim().equals(var8)) {
-                          stackIn_12_0 = 1;
-                          return stackIn_12_0 != 0;
-                        }
+              }
+              try {
+                L0: {
+                  var8 = "tuhstatbut";
+                  var3 = (String) (wk.a((byte) -6, param1, "getcookies"));
+                  var4 = uj.a(';', true, var3);
+                  for (var5 = 0; var5 < var4.length; var5++) {
+                    var6 = var4[var5].indexOf('=');
+                    if (var6 >= 0) {
+                      if (var4[var5].substring(0, var6).trim().equals(var8)) {
+                        stackIn_12_0 = 1;
+                        return stackIn_12_0 != 0;
                       }
                     }
-                    if (param0 != -109) {
-                      al.a(114, -32);
-                    }
-                    break L0;
                   }
-                } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  var2_ref = decompiledCaughtException;
+                  if (param0 != -109) {
+                    al.a(114, -32);
+                  }
+                  break L0;
                 }
-                if (null == param1.getParameter("tuhstatbut")) {
-                  stackIn_21_0 = 0;
-                } else {
-                  stackIn_21_0 = 1;
-                }
-                return stackIn_21_0 != 0;
+              } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var2_ref = decompiledCaughtException;
               }
+              if (null == param1.getParameter("tuhstatbut")) {
+                stackIn_21_0 = 0;
+              } else {
+                stackIn_21_0 = 1;
+              }
+              return stackIn_21_0 != 0;
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2 = (RuntimeException) (Object) decompiledCaughtException;

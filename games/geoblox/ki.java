@@ -35,7 +35,10 @@ final class ki {
               p.field_o[dupTemp$3] = p.field_o[dupTemp$3] + 1;
             }
           }
-          if (param1 == 31274) {
+          if (param1 != 31274) {
+            return;
+          }
+          {
             dupTemp$0 = param0.c(125);
             p.field_o[dupTemp$0] = p.field_o[dupTemp$0] + 1;
             var2_int = 0;
@@ -57,8 +60,6 @@ final class ki {
             fieldTemp$1 = oj.field_b;
             oj.field_b = oj.field_b + 1;
             n.field_k[fieldTemp$1] = param0;
-            return;
-          } else {
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

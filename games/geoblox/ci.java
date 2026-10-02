@@ -21,10 +21,9 @@ final class ci {
           if (param0 == -1879044097) {
             stackIn_4_0 = this.a(param1, (int[]) null, param0 ^ -1879044098);
             return stackIn_4_0;
-          } else {
-            stackIn_2_0 = (gd) null;
-            return stackIn_2_0;
           }
+          stackIn_2_0 = (gd) null;
+          return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -59,10 +58,9 @@ final class ci {
           if (param0 == 1) {
             stackIn_4_0 = this.a((byte) -90, param1, (int[]) null);
             return stackIn_4_0;
-          } else {
-            stackIn_2_0 = (gd) null;
-            return stackIn_2_0;
           }
+          stackIn_2_0 = (gd) null;
+          return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -97,14 +95,12 @@ final class ci {
           if (1 == this.field_d.a(false)) {
             stackIn_3_0 = this.a(param2, 0, param0, (byte) 14);
             return stackIn_3_0;
-          } else {
-            if (param1 == this.field_d.c(-9467, param0)) {
-              stackIn_7_0 = this.a(param2, param0, 0, (byte) 14);
-              return stackIn_7_0;
-            } else {
-              throw new RuntimeException();
-            }
           }
+          if (param1 != this.field_d.c(-9467, param0)) {
+            throw new RuntimeException();
+          }
+          stackIn_7_0 = this.a(param2, param0, 0, (byte) 14);
+          return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -139,14 +135,12 @@ final class ci {
           if (this.field_c.a(param2) == 1) {
             stackIn_3_0 = this.a(param1, 97, 0, param0);
             return stackIn_3_0;
-          } else {
-            if (1 == this.field_c.c(-9467, param0)) {
-              stackIn_7_0 = this.a(param1, 125, param0, 0);
-              return stackIn_7_0;
-            } else {
-              throw new RuntimeException();
-            }
           }
+          if (1 != this.field_c.c(-9467, param0)) {
+            throw new RuntimeException();
+          }
+          stackIn_7_0 = this.a(param1, 125, param0, 0);
+          return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -187,10 +181,9 @@ final class ci {
           if (!this.field_c.b((byte) -126, "")) {
             stackIn_6_0 = this.a(param2, "", param1, true);
             return stackIn_6_0;
-          } else {
-            stackIn_4_0 = this.a(param2, param1, "", true);
-            return stackIn_4_0;
           }
+          stackIn_4_0 = this.a(param2, param1, "", true);
+          return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -286,21 +279,19 @@ final class ci {
         RuntimeException decompiledCaughtException = null;
         try {
           var5_int = this.field_c.a((byte) 127, param2);
-          if (var5_int >= 0) {
-            if (!param3) {
-              this.field_c = (rh) null;
-            }
-            var6 = this.field_c.a(param1, -98, var5_int);
-            if (var6 >= 0) {
-              stackIn_9_0 = this.a(param0, 98, var5_int, var6);
-              return stackIn_9_0;
-            } else {
-              stackIn_7_0 = null;
-              return (gd) ((Object) stackIn_7_0);
-            }
-          } else {
+          if (var5_int < 0) {
             return null;
           }
+          if (!param3) {
+            this.field_c = (rh) null;
+          }
+          var6 = this.field_c.a(param1, -98, var5_int);
+          if (var6 >= 0) {
+            stackIn_9_0 = this.a(param0, 98, var5_int, var6);
+            return stackIn_9_0;
+          }
+          stackIn_7_0 = null;
+          return (gd) ((Object) stackIn_7_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -373,26 +364,24 @@ final class ci {
           if (var8 != null) {
             stackIn_5_0 = (gd) (var8);
             return stackIn_5_0;
-          } else {
-            if (param0 != null) {
-              if (param0[0] <= 0) {
-                return null;
-              }
-            }
-            var9 = fg.a(this.field_c, param2, param3);
-            if (var9 != null) {
-              var10 = var9.a();
-              var8 = var10;
-              this.field_b.a((byte) 102, var8, var6);
-              if (param0 != null) {
-                param0[0] = param0[0] - var10.field_k.length;
-              }
-              stackIn_16_0 = (gd) (var8);
-              return stackIn_16_0;
-            } else {
+          }
+          if (param0 != null) {
+            if (param0[0] <= 0) {
               return null;
             }
           }
+          var9 = fg.a(this.field_c, param2, param3);
+          if (var9 == null) {
+            return null;
+          }
+          var10 = var9.a();
+          var8 = var10;
+          this.field_b.a((byte) 102, var8, var6);
+          if (param0 != null) {
+            param0[0] = param0[0] - var10.field_k.length;
+          }
+          stackIn_16_0 = (gd) (var8);
+          return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -436,42 +425,38 @@ final class ci {
           var5_int = var5_int | param1 << 16;
           var6 = (long)var5_int ^ 4294967296L;
           var8 = (gd) ((Object) this.field_b.a(var6, (byte) -115));
-          if (param3 == 14) {
-            if (var8 != null) {
-              stackIn_6_0 = (gd) (var8);
-              return stackIn_6_0;
-            } else {
-              if (param0 != null) {
-                if (param0[0] <= 0) {
-                  stackIn_10_0 = null;
-                  return (gd) ((Object) stackIn_10_0);
-                }
-              }
-              var9 = (ua) ((Object) this.field_a.a(var6, (byte) -96));
-              if (var9 == null) {
-                var9 = ua.a(this.field_d, param1, param2);
-                if (var9 != null) {
-                  this.field_a.a((byte) 102, var9, var6);
-                } else {
-                  stackIn_14_0 = null;
-                  return (gd) ((Object) stackIn_14_0);
-                }
-              }
-              var8 = var9.a(param0);
-              if (var8 != null) {
-                var9.a(false);
-                this.field_b.a((byte) 102, var8, var6);
-                stackIn_20_0 = (gd) (var8);
-                return stackIn_20_0;
-              } else {
-                stackIn_18_0 = null;
-                return (gd) ((Object) stackIn_18_0);
-              }
-            }
-          } else {
+          if (param3 != 14) {
             stackIn_2_0 = (gd) null;
             return stackIn_2_0;
           }
+          if (var8 != null) {
+            stackIn_6_0 = (gd) (var8);
+            return stackIn_6_0;
+          }
+          if (param0 != null) {
+            if (param0[0] <= 0) {
+              stackIn_10_0 = null;
+              return (gd) ((Object) stackIn_10_0);
+            }
+          }
+          var9 = (ua) ((Object) this.field_a.a(var6, (byte) -96));
+          if (var9 == null) {
+            var9 = ua.a(this.field_d, param1, param2);
+            if (var9 == null) {
+              stackIn_14_0 = null;
+              return (gd) ((Object) stackIn_14_0);
+            }
+            this.field_a.a((byte) 102, var9, var6);
+          }
+          var8 = var9.a(param0);
+          if (var8 == null) {
+            stackIn_18_0 = null;
+            return (gd) ((Object) stackIn_18_0);
+          }
+          var9.a(false);
+          this.field_b.a((byte) 102, var8, var6);
+          stackIn_20_0 = (gd) (var8);
+          return stackIn_20_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -501,19 +486,17 @@ final class ci {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 == 416577356) {
-            if (gf.field_d != null) {
-              gf.field_d.field_K.a((byte) 126, args);
-            }
-            if (null != vk.field_d) {
-              vk.field_d.field_D.a((byte) 126, args);
-              return;
-            } else {
-              return;
-            }
-          } else {
+          if (param1 != 416577356) {
             return;
           }
+          if (gf.field_d != null) {
+            gf.field_d.field_K.a((byte) 126, args);
+          }
+          if (null == vk.field_d) {
+            return;
+          }
+          vk.field_d.field_D.a((byte) 126, args);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -551,13 +534,12 @@ final class ci {
           if (this.field_d.b((byte) -120, "")) {
             stackIn_3_0 = this.a(param0, param1, 12628, "");
             return stackIn_3_0;
-          } else {
-            if (param2 != 1) {
-              this.field_a = (fi) null;
-            }
-            stackIn_7_0 = this.a("", param1, 12628, param0);
-            return stackIn_7_0;
           }
+          if (param2 != 1) {
+            this.field_a = (fi) null;
+          }
+          stackIn_7_0 = this.a("", param1, 12628, param0);
+          return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -613,24 +595,21 @@ final class ci {
         RuntimeException decompiledCaughtException = null;
         try {
           var5_int = this.field_d.a((byte) 127, param3);
-          if (0 <= var5_int) {
-            if (param2 == 12628) {
-              var6 = this.field_d.a(param0, -89, var5_int);
-              if (var6 >= 0) {
-                stackIn_10_0 = this.a(param1, var5_int, var6, (byte) 14);
-                return stackIn_10_0;
-              } else {
-                stackIn_8_0 = null;
-                return (gd) ((Object) stackIn_8_0);
-              }
-            } else {
-              stackIn_5_0 = (gd) null;
-              return stackIn_5_0;
-            }
-          } else {
+          if (0 > var5_int) {
             stackIn_2_0 = null;
             return (gd) ((Object) stackIn_2_0);
           }
+          if (param2 != 12628) {
+            stackIn_5_0 = (gd) null;
+            return stackIn_5_0;
+          }
+          var6 = this.field_d.a(param0, -89, var5_int);
+          if (var6 >= 0) {
+            stackIn_10_0 = this.a(param1, var5_int, var6, (byte) 14);
+            return stackIn_10_0;
+          }
+          stackIn_8_0 = null;
+          return (gd) ((Object) stackIn_8_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;

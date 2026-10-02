@@ -26,41 +26,37 @@ final class kb {
         RuntimeException decompiledCaughtException = null;
         var5 = Geoblox.field_C;
         try {
-          if (param1 == 6568) {
-            si.field_g = va.field_e;
-            if (param0 == 255) {
-              stackIn_11_0 = param1 ^ 6648;
-
-              if (rd.field_u >= 13) {
-                stackIn_12_0 = stackIn_11_0;
-                stackIn_12_1 = 0;
-              } else {
-                stackIn_12_0 = stackIn_11_0;
-                stackIn_12_1 = 1;
-              }
-              me.field_g = hh.a(stackIn_12_0, stackIn_12_1 != 0);
-              var6 = (String[]) null;
-              ci.a((String[]) null, 416577356);
-              return;
-            } else {
-              if (param0 < 100) {
-                me.field_g = ig.a(param3, param0, false);
-                return;
-              } else {
-                if (param0 > 105) {
-                  me.field_g = ig.a(param3, param0, false);
-                  return;
-                } else {
-                  var7 = param2;
-                  ci.a(var7, 416577356);
-                  me.field_g = ac.a(param1 - 6540, param2);
-                  return;
-                }
-              }
-            }
-          } else {
+          if (param1 != 6568) {
             return;
           }
+          si.field_g = va.field_e;
+          if (param0 != 255) {
+            if (param0 < 100) {
+              me.field_g = ig.a(param3, param0, false);
+              return;
+            }
+            if (param0 > 105) {
+              me.field_g = ig.a(param3, param0, false);
+              return;
+            }
+            var7 = param2;
+            ci.a(var7, 416577356);
+            me.field_g = ac.a(param1 - 6540, param2);
+            return;
+          }
+          stackIn_11_0 = param1 ^ 6648;
+
+          if (rd.field_u >= 13) {
+            stackIn_12_0 = stackIn_11_0;
+            stackIn_12_1 = 0;
+          } else {
+            stackIn_12_0 = stackIn_11_0;
+            stackIn_12_1 = 1;
+          }
+          me.field_g = hh.a(stackIn_12_0, stackIn_12_1 != 0);
+          var6 = (String[]) null;
+          ci.a((String[]) null, 416577356);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;

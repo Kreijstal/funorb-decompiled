@@ -149,82 +149,80 @@ final class i {
                 stackIn_11_0 = stackOut_10_0;
                 if (var19 != 0) {
                   break L2;
-                } else {
-                  L4: {
-                    if (stackIn_11_0) {
-                      var12 = sh.field_x[var9];
-                      var13 = dj.field_N[var9];
-                      var14 = sh.field_x[var10] - var12;
-                      var15 = sh.field_x[var11] - var12;
-                      var16 = dj.field_N[var10] - var13;
-                      var17 = -var13 + dj.field_N[var11];
-                      if (-(var16 * var15) + var14 * var17 >= 0) {
-                        break L4;
-                      }
+                }
+                L4: {
+                  if (stackIn_11_0) {
+                    var12 = sh.field_x[var9];
+                    var13 = dj.field_N[var9];
+                    var14 = sh.field_x[var10] - var12;
+                    var15 = sh.field_x[var11] - var12;
+                    var16 = dj.field_N[var10] - var13;
+                    var17 = -var13 + dj.field_N[var11];
+                    if (-(var16 * var15) + var14 * var17 >= 0) {
+                      break L4;
                     }
-                    var12 = bj.field_j[var9];
-                    if (-2147483648 == var12) {
-                      if (var19 == 0) {
-                        break L4;
-                      }
+                  }
+                  var12 = bj.field_j[var9];
+                  if (-2147483648 == var12) {
+                    if (var19 == 0) {
+                      break L4;
                     }
-                    var13 = bj.field_j[var10];
-                    if (-2147483648 == var13) {
-                      if (var19 == 0) {
-                        break L4;
-                      }
+                  }
+                  var13 = bj.field_j[var10];
+                  if (-2147483648 == var13) {
+                    if (var19 == 0) {
+                      break L4;
                     }
-                    var14 = bj.field_j[var11];
-                    if (var14 != -2147483648) {
-                      var15 = var13 + (var12 + var14 - var6);
-                      if (var7 < 0) {
-                        stackIn_28_0 = var15 << -var7;
-                      } else {
-                        stackIn_28_0 = var15 >> var7;
-                      }
-                      var16 = -stackIn_28_0 + (-1 + ch.field_d.length);
-                      var17 = ch.field_d[var16];
-                      L9: while (true) {
-                        L10: {
-                          if (var17 >> 4 != 0) {
-                            var16--;
-                            stackIn_39_0 = var16;
+                  }
+                  var14 = bj.field_j[var11];
+                  if (var14 != -2147483648) {
+                    var15 = var13 + (var12 + var14 - var6);
+                    if (var7 < 0) {
+                      stackIn_28_0 = var15 << -var7;
+                    } else {
+                      stackIn_28_0 = var15 >> var7;
+                    }
+                    var16 = -stackIn_28_0 + (-1 + ch.field_d.length);
+                    var17 = ch.field_d[var16];
+                    L9: while (true) {
+                      L10: {
+                        if (var17 >> 4 != 0) {
+                          var16--;
+                          stackIn_39_0 = var16;
 
-                            if (var19 != 0) {
-                              break L10;
-                            } else {
-                              if (stackIn_39_0 < 0) {
-                                System.err.println("Out of range!");
-                                if (var19 == 0) {
-                                  break L4;
-                                }
-                              }
-                              var17 = ch.field_d[var16];
-                              if (var19 == 0) {
-                                continue L9;
-                              }
+                          if (var19 != 0) {
+                            break L10;
+                          }
+                          if (stackIn_39_0 < 0) {
+                            System.err.println("Out of range!");
+                            if (var19 == 0) {
+                              break L4;
                             }
                           }
-                          stackIn_39_0 = (var16 << 4) + var17;
-                        }
-                        var18 = stackIn_39_0;
-                        pj.field_i[var18] = var8;
-                        ch.field_d[var16] = 1 + var17;
-                        if (0 < param2.field_v) {
-                          if (null != param2.field_n) {
-                            dupTemp$0 = param2.field_n[var8];
-                            uh.field_x[dupTemp$0] = uh.field_x[dupTemp$0] + 1;
+                          var17 = ch.field_d[var16];
+                          if (var19 == 0) {
+                            continue L9;
                           }
                         }
-                        ch.field_b = ch.field_b + 1;
-                        break L4;
+                        stackIn_39_0 = (var16 << 4) + var17;
                       }
+                      var18 = stackIn_39_0;
+                      pj.field_i[var18] = var8;
+                      ch.field_d[var16] = 1 + var17;
+                      if (0 < param2.field_v) {
+                        if (null != param2.field_n) {
+                          dupTemp$0 = param2.field_n[var8];
+                          uh.field_x[dupTemp$0] = uh.field_x[dupTemp$0] + 1;
+                        }
+                      }
+                      ch.field_b = ch.field_b + 1;
+                      break L4;
                     }
                   }
-                  var8++;
-                  if (var19 == 0) {
-                    continue L1;
-                  }
+                }
+                var8++;
+                if (var19 == 0) {
+                  continue L1;
                 }
               }
               stackIn_49_0 = -1;
@@ -238,21 +236,18 @@ final class i {
                     L16: while (true) {
                       if (uh.field_x.length <= var9) {
                         break L15;
-                      } else {
-                        var10 = uh.field_x[var9];
-                        uh.field_x[var9] = var8;
-                        var8 = var8 + var10;
-                        var9++;
-                        if (var19 != 0) {
-                          break L14;
-                        } else {
-                          if (var19 == 0) {
-                            continue L16;
-                          } else {
-                            break L15;
-                          }
-                        }
                       }
+                      var10 = uh.field_x[var9];
+                      uh.field_x[var9] = var8;
+                      var8 = var8 + var10;
+                      var9++;
+                      if (var19 != 0) {
+                        break L14;
+                      }
+                      if (var19 == 0) {
+                        continue L16;
+                      }
+                      break L15;
                     }
                   }
                 }

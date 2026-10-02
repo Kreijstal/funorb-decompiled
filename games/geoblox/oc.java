@@ -109,10 +109,9 @@ final class oc implements dh {
           }
           if (param1 < -5) {
             return;
-          } else {
-            field_c = 68;
-            return;
           }
+          field_c = 68;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
@@ -156,23 +155,22 @@ final class oc implements dh {
             Throwable decompiledCaughtException = null;
             try {
               var1_ref_java_lang_reflect_Method = Runtime.class.getMethod("maxMemory", new Class[]{});
-              if (var1_ref_java_lang_reflect_Method != null) {
-                try {
-                  var2 = Runtime.getRuntime();
-                  var4 = (Object[]) null;
-                  var3 = (Long) (var1_ref_java_lang_reflect_Method.invoke((Object) (var2), (Object[]) null));
-                  li.field_c = 1 + (int)(var3.longValue() / 1048576L);
-                  decompiledRegionSelector0 = 0;
-                } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  var2_ref = decompiledCaughtException;
-                  decompiledRegionSelector0 = 1;
-                }
-                if (decompiledRegionSelector0 == 0) {
-                  var1 = -93 / ((-13 - param0) / 47);
-                  return;
-                }
-              } else {
+              if (var1_ref_java_lang_reflect_Method == null) {
+                var1 = -93 / ((-13 - param0) / 47);
+                return;
+              }
+              try {
+                var2 = Runtime.getRuntime();
+                var4 = (Object[]) null;
+                var3 = (Long) (var1_ref_java_lang_reflect_Method.invoke((Object) (var2), (Object[]) null));
+                li.field_c = 1 + (int)(var3.longValue() / 1048576L);
+                decompiledRegionSelector0 = 0;
+              } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var2_ref = decompiledCaughtException;
+                decompiledRegionSelector0 = 1;
+              }
+              if (decompiledRegionSelector0 == 0) {
                 var1 = -93 / ((-13 - param0) / 47);
                 return;
               }

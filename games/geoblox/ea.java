@@ -123,13 +123,12 @@ final class ea extends hf {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (mf.a(param3, param4, 117, param0)) {
-            var5_int = 8 % ((-50 - param1) / 51);
-            stackIn_4_0 = qa.a(param2.a(param4, -28153, param3), false);
-            return stackIn_4_0;
-          } else {
+          if (!mf.a(param3, param4, 117, param0)) {
             return null;
           }
+          var5_int = 8 % ((-50 - param1) / 51);
+          stackIn_4_0 = qa.a(param2.a(param4, -28153, param3), false);
+          return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;

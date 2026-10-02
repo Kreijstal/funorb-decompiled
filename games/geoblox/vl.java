@@ -149,10 +149,9 @@ final class vl extends hf {
           if (var4 != null) {
             stackIn_6_0 = new vl(var4);
             return stackIn_6_0;
-          } else {
-            stackIn_4_0 = null;
-            return (vl) ((Object) stackIn_4_0);
           }
+          stackIn_4_0 = null;
+          return (vl) ((Object) stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -383,9 +382,8 @@ final class vl extends hf {
                 var11[var14] = (byte)var13_int;
               }
               break L6;
-            } else {
-              var12 = var9;
             }
+            var12 = var9;
           }
           var13 = new t[var12];
           for (var14 = 0; var14 < var13.length; var14++) {

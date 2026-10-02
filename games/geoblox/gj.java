@@ -39,36 +39,32 @@ final class gj extends fj {
         var5 = Geoblox.field_C;
         try {
           kd.field_b = va.field_e;
-          if (param2 == 30) {
-            if (param1 != 255) {
-              if (param1 < 100) {
-                dl.field_a = ig.a(param0, param1, false);
-                return;
-              } else {
-                if (param1 <= 105) {
-                  dl.field_a = ac.a(28, param3);
-                  return;
-                } else {
-                  dl.field_a = ig.a(param0, param1, false);
-                  return;
-                }
-              }
-            } else {
-              stackIn_6_0 = -106;
-
-              if (rd.field_u >= 13) {
-                stackIn_7_0 = stackIn_6_0;
-                stackIn_7_1 = 0;
-              } else {
-                stackIn_7_0 = stackIn_6_0;
-                stackIn_7_1 = 1;
-              }
-              dl.field_a = hh.a(stackIn_7_0, stackIn_7_1 != 0);
-              return;
-            }
-          } else {
+          if (param2 != 30) {
             return;
           }
+          if (param1 != 255) {
+            if (param1 < 100) {
+              dl.field_a = ig.a(param0, param1, false);
+              return;
+            }
+            if (param1 <= 105) {
+              dl.field_a = ac.a(28, param3);
+              return;
+            }
+            dl.field_a = ig.a(param0, param1, false);
+            return;
+          }
+          stackIn_6_0 = -106;
+
+          if (rd.field_u >= 13) {
+            stackIn_7_0 = stackIn_6_0;
+            stackIn_7_1 = 0;
+          } else {
+            stackIn_7_0 = stackIn_6_0;
+            stackIn_7_1 = 1;
+          }
+          dl.field_a = hh.a(stackIn_7_0, stackIn_7_1 != 0);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;

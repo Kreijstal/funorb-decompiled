@@ -21,32 +21,31 @@ final class ak {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          if (param2 <= -67) {
-            var3 = bj.a(32, param1);
-            if (param0.indexOf(param1) == -1) {
-              if (-1 == param0.indexOf(var3)) {
-                L1: {
-                  if (!param0.startsWith(param1)) {
-                    if (!param0.startsWith(var3)) {
-                      if (!param0.endsWith(param1)) {
-                        if (!param0.endsWith(var3)) {
-                          stackIn_15_0 = 0;
-                          break L1;
-                        }
-                      }
-                    }
-                  }
-                  stackIn_15_0 = 1;
-                }
-                return stackIn_15_0 != 0;
-              }
-            }
-            stackIn_7_0 = 1;
-            return stackIn_7_0 != 0;
-          } else {
+          if (param2 > -67) {
             stackIn_2_0 = 1;
             return stackIn_2_0 != 0;
           }
+          var3 = bj.a(32, param1);
+          if (param0.indexOf(param1) == -1) {
+            if (-1 == param0.indexOf(var3)) {
+              L1: {
+                if (!param0.startsWith(param1)) {
+                  if (!param0.startsWith(var3)) {
+                    if (!param0.endsWith(param1)) {
+                      if (!param0.endsWith(var3)) {
+                        stackIn_15_0 = 0;
+                        break L1;
+                      }
+                    }
+                  }
+                }
+                stackIn_15_0 = 1;
+              }
+              return stackIn_15_0 != 0;
+            }
+          }
+          stackIn_7_0 = 1;
+          return stackIn_7_0 != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -114,10 +113,9 @@ final class ak {
           if (param1 < -33) {
             stackIn_12_0 = 0;
             return stackIn_12_0 != 0;
-          } else {
-            field_a = -33L;
-            return false;
           }
+          field_a = -33L;
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

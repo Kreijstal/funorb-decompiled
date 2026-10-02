@@ -38,15 +38,14 @@ class qc extends hf {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (mf.a(param2, param0, 126, param3)) {
-            if (param1 != 19) {
-              field_i = -57;
-            }
-            stackIn_6_0 = sc.a((byte) -60);
-            return stackIn_6_0;
-          } else {
+          if (!mf.a(param2, param0, 126, param3)) {
             return null;
           }
+          if (param1 != 19) {
+            field_i = -57;
+          }
+          stackIn_6_0 = sc.a((byte) -60);
+          return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -206,20 +205,21 @@ class qc extends hf {
         var2 = this.field_j[fieldTemp$0];
         if (var2 != 0) {
           throw new IllegalStateException("");
-        } else {
+        }
+        {
           var3 = this.field_f;
           L1: while (true) {
             fieldTemp$1 = this.field_f;
             this.field_f = this.field_f + 1;
-            if (this.field_j[fieldTemp$1] == 0) {
+            if (this.field_j[fieldTemp$1] != 0) {
+              continue L1;
+            }
+            {
               var4 = -var3 + (this.field_f - 1);
               if (var4 != 0) {
                 return bc.a(param0 ^ -27439, this.field_j, var3, var4);
-              } else {
-                return "";
               }
-            } else {
-              continue L1;
+              return "";
             }
           }
         }
@@ -417,151 +417,123 @@ class qc extends hf {
                 break L1;
               }
             }
-            if (param0 != 8364) {
-              if (param0 != 8218) {
-                if (402 == param0) {
-                  var2 = -125;
-                  break L0;
-                } else {
-                  if (param0 == 8222) {
-                    var2 = -124;
-                    break L0;
-                  } else {
-                    if (param0 != 8230) {
-                      if (8224 == param0) {
-                        var2 = -122;
-                        break L0;
-                      } else {
-                        if (8225 == param0) {
-                          var2 = -121;
-                          break L0;
-                        } else {
-                          if (param0 != 710) {
-                            if (8240 != param0) {
-                              if (param0 == 352) {
-                                var2 = -118;
-                                break L0;
-                              } else {
-                                if (param0 == 8249) {
-                                  var2 = -117;
-                                  break L0;
-                                } else {
-                                  if (param0 == 338) {
-                                    var2 = -116;
-                                    break L0;
-                                  } else {
-                                    if (param0 == 381) {
-                                      var2 = -114;
-                                      break L0;
-                                    } else {
-                                      if (param0 == 8216) {
-                                        var2 = -111;
-                                        break L0;
-                                      } else {
-                                        if (8217 != param0) {
-                                          if (param0 != 8220) {
-                                            if (param0 == 8221) {
-                                              var2 = -108;
-                                              break L0;
-                                            } else {
-                                              if (param0 != 8226) {
-                                                if (param0 == 8211) {
-                                                  var2 = -106;
-                                                  break L0;
-                                                } else {
-                                                  if (param0 != 8212) {
-                                                    if (param0 == 732) {
-                                                      var2 = -104;
-                                                      break L0;
-                                                    } else {
-                                                      if (param0 != 8482) {
-                                                        if (param0 != 353) {
-                                                          if (param0 == 8250) {
-                                                            var2 = -101;
-                                                            break L0;
-                                                          } else {
-                                                            if (param0 != 339) {
-                                                              if (param0 == 382) {
-                                                                var2 = -98;
-                                                                break L0;
-                                                              } else {
-                                                                if (param0 != 376) {
-                                                                  var2 = 63;
-                                                                  break L0;
-                                                                } else {
-                                                                  var2 = -97;
-                                                                  break L0;
-                                                                }
-                                                              }
-                                                            } else {
-                                                              var2 = -100;
-                                                              break L0;
-                                                            }
-                                                          }
-                                                        } else {
-                                                          var2 = -102;
-                                                          break L0;
-                                                        }
-                                                      } else {
-                                                        var2 = -103;
-                                                        break L0;
-                                                      }
-                                                    }
-                                                  } else {
-                                                    var2 = -105;
-                                                    break L0;
-                                                  }
-                                                }
-                                              } else {
-                                                var2 = -107;
-                                                break L0;
-                                              }
-                                            }
-                                          } else {
-                                            var2 = -109;
-                                            break L0;
-                                          }
-                                        } else {
-                                          var2 = -110;
-                                          break L0;
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            } else {
-                              var2 = -119;
-                              break L0;
-                            }
-                          } else {
-                            var2 = -120;
-                            break L0;
-                          }
-                        }
-                      }
-                    } else {
-                      var2 = -123;
-                      break L0;
-                    }
-                  }
-                }
-              } else {
-                var2 = -126;
-                break L0;
-              }
-            } else {
+            if (param0 == 8364) {
               var2 = -128;
               break L0;
             }
+            if (param0 == 8218) {
+              var2 = -126;
+              break L0;
+            }
+            if (402 == param0) {
+              var2 = -125;
+              break L0;
+            }
+            if (param0 == 8222) {
+              var2 = -124;
+              break L0;
+            }
+            if (param0 == 8230) {
+              var2 = -123;
+              break L0;
+            }
+            if (8224 == param0) {
+              var2 = -122;
+              break L0;
+            }
+            if (8225 == param0) {
+              var2 = -121;
+              break L0;
+            }
+            if (param0 == 710) {
+              var2 = -120;
+              break L0;
+            }
+            if (8240 == param0) {
+              var2 = -119;
+              break L0;
+            }
+            if (param0 == 352) {
+              var2 = -118;
+              break L0;
+            }
+            if (param0 == 8249) {
+              var2 = -117;
+              break L0;
+            }
+            if (param0 == 338) {
+              var2 = -116;
+              break L0;
+            }
+            if (param0 == 381) {
+              var2 = -114;
+              break L0;
+            }
+            if (param0 == 8216) {
+              var2 = -111;
+              break L0;
+            }
+            if (8217 == param0) {
+              var2 = -110;
+              break L0;
+            }
+            if (param0 == 8220) {
+              var2 = -109;
+              break L0;
+            }
+            if (param0 == 8221) {
+              var2 = -108;
+              break L0;
+            }
+            if (param0 == 8226) {
+              var2 = -107;
+              break L0;
+            }
+            if (param0 == 8211) {
+              var2 = -106;
+              break L0;
+            }
+            if (param0 == 8212) {
+              var2 = -105;
+              break L0;
+            }
+            if (param0 == 732) {
+              var2 = -104;
+              break L0;
+            }
+            if (param0 == 8482) {
+              var2 = -103;
+              break L0;
+            }
+            if (param0 == 353) {
+              var2 = -102;
+              break L0;
+            }
+            if (param0 == 8250) {
+              var2 = -101;
+              break L0;
+            }
+            if (param0 == 339) {
+              var2 = -100;
+              break L0;
+            }
+            if (param0 == 382) {
+              var2 = -98;
+              break L0;
+            }
+            if (param0 != 376) {
+              var2 = 63;
+              break L0;
+            }
+            var2 = -97;
+            break L0;
           }
           var2 = (byte)param0;
         }
         if (param1) {
           return (byte) var2;
-        } else {
-          return (byte) 50;
         }
+        return (byte) 50;
     }
 
     final void b(int param0, int param1, byte[] param2, int param3) {
@@ -643,7 +615,8 @@ class qc extends hf {
           L1: while (true) {
             if (var3_int <= var4) {
               return;
-            } else {
+            }
+            {
               var5 = this.a((byte) -69);
               var6 = this.a((byte) -34);
               var7 = 0;
@@ -652,18 +625,17 @@ class qc extends hf {
               L2: while (true) {
                 incrementValue$0 = var9;
                 var9--;
-                if (0 >= incrementValue$0) {
-                  this.field_f = this.field_f - 8;
-                  this.c((byte) 95, var5);
-                  this.c((byte) 95, var6);
-                  var4++;
-                  continue L1;
-                } else {
+                if (0 < incrementValue$0) {
                   var5 = var5 + ((var6 >>> 5 ^ var6 << 4) + var6 ^ var7 + param0[3 & var7]);
                   var7 = var7 + var8;
                   var6 = var6 + (var5 + (var5 << 4 ^ var5 >>> 5) ^ var7 + param0[(var7 & 7480) >>> 11]);
                   continue L2;
                 }
+                this.field_f = this.field_f - 8;
+                this.c((byte) 95, var5);
+                this.c((byte) 95, var6);
+                var4++;
+                continue L1;
               }
             }
           }
@@ -734,7 +706,8 @@ class qc extends hf {
             if (var7 >= var6) {
               this.field_f = var5_int;
               return;
-            } else {
+            }
+            {
               var8 = this.a((byte) -36);
               var9 = this.a((byte) -103);
               var10 = -957401312;
@@ -743,18 +716,17 @@ class qc extends hf {
               L2: while (true) {
                 incrementValue$0 = var12;
                 var12--;
-                if (incrementValue$0 <= 0) {
-                  this.field_f = this.field_f - 8;
-                  this.c((byte) 95, var8);
-                  this.c((byte) 95, var9);
-                  var7++;
-                  continue L1;
-                } else {
+                if (incrementValue$0 > 0) {
                   var9 = var9 - (var10 + param1[(7701 & var10) >>> 11] ^ var8 + (var8 << 4 ^ var8 >>> 5));
                   var10 = var10 - var11;
                   var8 = var8 - (var10 + param1[var10 & 3] ^ (var9 >>> 5 ^ var9 << 4) + var9);
                   continue L2;
                 }
+                this.field_f = this.field_f - 8;
+                this.c((byte) 95, var8);
+                this.c((byte) 95, var9);
+                var7++;
+                continue L1;
               }
             }
           }
@@ -979,18 +951,18 @@ class qc extends hf {
         L0: while (true) {
           fieldTemp$0 = this.field_f;
           this.field_f = this.field_f + 1;
-          if (0 == this.field_j[fieldTemp$0]) {
+          if (0 != this.field_j[fieldTemp$0]) {
+            continue L0;
+          }
+          {
             var3 = this.field_f + (-var2 - 1);
-            if (var3 != 0) {
-              if (param0 < 94) {
-                field_i = 68;
-              }
-              return bc.a(-45, this.field_j, var2, var3);
-            } else {
+            if (var3 == 0) {
               return "";
             }
-          } else {
-            continue L0;
+            if (param0 < 94) {
+              field_i = 68;
+            }
+            return bc.a(-45, this.field_j, var2, var3);
           }
         }
     }

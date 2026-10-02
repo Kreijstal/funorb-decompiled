@@ -189,64 +189,55 @@ final class wa {
           var5_int = this.field_e + this.field_d;
           var6 = this.field_p + this.field_i;
           var7 = this.field_h;
-          if (param3 == -3140) {
-            if (-1 == var7) {
-              var7 = this.field_m.field_q + this.field_m.field_o;
-            }
-            L1: {
-              var8 = vb.field_f >> 2;
-              var9 = this.field_m.a(param1);
-              var10 = this.field_m.field_q + this.field_m.field_o;
-              var11 = 1;
-              if (var8 >= var9) {
-                if (-1 == param1.indexOf("<br>")) {
-                  break L1;
-                }
-              }
-              if (dd.field_E == null) {
-                dd.field_E = new String[16];
-              }
-              if (var8 >= var9) {
-                var12 = var8;
-              } else {
-                var13 = var9 / var8;
-                var12 = (var9 % var8 + var13 - 1) / var13 * 2 + var8;
-              }
-              var11 = this.field_m.a(param1, new int[]{var12}, dd.field_E);
-              var9 = 0;
-              var10 = var10 + (var11 - 1) * var7;
-              var13 = 0;
-              L5: while (true) {
-                if (var13 >= var11) {
-                  break L1;
-                } else {
-                  var14 = this.field_m.a(dd.field_E[var13]);
-                  if (var14 > var9) {
-                    var9 = var14;
-                    var13++;
-                    continue L5;
-                  } else {
-                    var13++;
-                    continue L5;
-                  }
-                }
-              }
-            }
-            var12 = param2;
-            if (var5_int + var9 + var12 > vb.field_f) {
-              var12 = -var5_int + (vb.field_f - var9);
-            }
-            var13 = 32 + (-this.field_m.field_y + param0);
-            if (vb.field_b < var10 + (var13 + var6)) {
-              var13 = param0 - var10 - var6;
-            }
-            vb.d(var12, var13, var5_int + var9, var10 + var6, this.field_n);
-            vb.a(1 + var12, 1 + var13, var9 + (var5_int - 2), -2 + (var10 + var6), this.field_f);
-            this.field_m.a(param1, this.field_d + var12, this.field_i + var13, var9, var10, this.field_k, -1, 0, 0, var7);
-            return;
-          } else {
+          if (param3 != -3140) {
             return;
           }
+          if (-1 == var7) {
+            var7 = this.field_m.field_q + this.field_m.field_o;
+          }
+          L1: {
+            var8 = vb.field_f >> 2;
+            var9 = this.field_m.a(param1);
+            var10 = this.field_m.field_q + this.field_m.field_o;
+            var11 = 1;
+            if (var8 >= var9) {
+              if (-1 == param1.indexOf("<br>")) {
+                break L1;
+              }
+            }
+            if (dd.field_E == null) {
+              dd.field_E = new String[16];
+            }
+            if (var8 >= var9) {
+              var12 = var8;
+            } else {
+              var13 = var9 / var8;
+              var12 = (var9 % var8 + var13 - 1) / var13 * 2 + var8;
+            }
+            var11 = this.field_m.a(param1, new int[]{var12}, dd.field_E);
+            var9 = 0;
+            var10 = var10 + (var11 - 1) * var7;
+            L5: for (var13 = 0; var13 < var11; var13++) {
+              var14 = this.field_m.a(dd.field_E[var13]);
+              if (var14 <= var9) {
+                continue L5;
+              }
+              var9 = var14;
+            }
+            break L1;
+          }
+          var12 = param2;
+          if (var5_int + var9 + var12 > vb.field_f) {
+            var12 = -var5_int + (vb.field_f - var9);
+          }
+          var13 = 32 + (-this.field_m.field_y + param0);
+          if (vb.field_b < var10 + (var13 + var6)) {
+            var13 = param0 - var10 - var6;
+          }
+          vb.d(var12, var13, var5_int + var9, var10 + var6, this.field_n);
+          vb.a(1 + var12, 1 + var13, var9 + (var5_int - 2), -2 + (var10 + var6), this.field_f);
+          this.field_m.a(param1, this.field_d + var12, this.field_i + var13, var9, var10, this.field_k, -1, 0, 0, var7);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;

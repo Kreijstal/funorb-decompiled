@@ -83,7 +83,8 @@ final class va {
                 va.a(80, (byte) 55);
               }
               return;
-            } else {
+            }
+            {
               param2 = ch.field_d[var5_int];
               var6 = var5_int << 4;
               L2: while (true) {
@@ -92,7 +93,8 @@ final class va {
                 if (0 == incrementValue$0) {
                   var5_int++;
                   continue L0;
-                } else {
+                }
+                {
                   incrementValue$1 = var6;
                   var6++;
                   param0 = pj.field_i[incrementValue$1];

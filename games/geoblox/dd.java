@@ -94,42 +94,35 @@ abstract class dd extends ee {
           if (ak.a(param0, (byte) -67)) {
             stackIn_3_0 = 0;
             return stackIn_3_0 != 0;
-          } else {
-            if (ra.a(18725, param0)) {
-              stackIn_7_0 = 0;
-              return stackIn_7_0 != 0;
-            } else {
-              if (!em.a(param0, param2 + 25409)) {
-                if (param1.length() != 0) {
-                  if (!ak.a(param0, param1, -75)) {
-                    if (param2 != -25321) {
-                      dd.i(31);
-                    }
-                    if (uk.a(8, param1, param0)) {
-                      stackIn_22_0 = 0;
-                      return stackIn_22_0 != 0;
-                    } else {
-                      if (wc.a(param0, param1, (byte) -107)) {
-                        stackIn_26_0 = 0;
-                        return stackIn_26_0 != 0;
-                      } else {
-                        return true;
-                      }
-                    }
-                  } else {
-                    stackIn_16_0 = 0;
-                    return stackIn_16_0 != 0;
-                  }
-                } else {
-                  stackIn_13_0 = 1;
-                  return stackIn_13_0 != 0;
-                }
-              } else {
-                stackIn_10_0 = 0;
-                return stackIn_10_0 != 0;
-              }
-            }
           }
+          if (ra.a(18725, param0)) {
+            stackIn_7_0 = 0;
+            return stackIn_7_0 != 0;
+          }
+          if (em.a(param0, param2 + 25409)) {
+            stackIn_10_0 = 0;
+            return stackIn_10_0 != 0;
+          }
+          if (param1.length() == 0) {
+            stackIn_13_0 = 1;
+            return stackIn_13_0 != 0;
+          }
+          if (ak.a(param0, param1, -75)) {
+            stackIn_16_0 = 0;
+            return stackIn_16_0 != 0;
+          }
+          if (param2 != -25321) {
+            dd.i(31);
+          }
+          if (uk.a(8, param1, param0)) {
+            stackIn_22_0 = 0;
+            return stackIn_22_0 != 0;
+          }
+          if (!wc.a(param0, param1, (byte) -107)) {
+            return true;
+          }
+          stackIn_26_0 = 0;
+          return stackIn_26_0 != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;

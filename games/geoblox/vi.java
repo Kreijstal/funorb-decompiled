@@ -60,12 +60,20 @@ final class vi extends hk {
         int[] var10 = null;
         var7 = Geoblox.field_C;
         try {
-          if (param1.b(-26098)) {
+          if (!param1.b(-26098)) {
+            stackIn_3_0 = new rj[]{};
+            return stackIn_3_0;
+          }
+          {
             var8 = param1.a(34);
             L0: while (var8.field_a == 0) {
               bc.a(0, 10L);
             }
-            if (var8.field_a != 2) {
+            if (var8.field_a == 2) {
+              stackIn_9_0 = new rj[]{};
+              return stackIn_9_0;
+            }
+            {
               var10 = (int[]) (var8.field_b);
               var9 = var10;
               var3 = var9;
@@ -83,13 +91,7 @@ final class vi extends hk {
               }
               stackIn_16_0 = (rj[]) (var4);
               return stackIn_16_0;
-            } else {
-              stackIn_9_0 = new rj[]{};
-              return stackIn_9_0;
             }
-          } else {
-            stackIn_3_0 = new rj[]{};
-            return stackIn_3_0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

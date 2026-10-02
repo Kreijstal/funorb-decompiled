@@ -12,75 +12,60 @@ final class w {
     static String field_e;
 
     final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        int var9;
+        int var9 = 0;
         param7--;
-        L0: while (true) {
-          if (param7 < 0) {
-            return;
-          } else {
-            var9 = param6 - 1;
-            L1: while (true) {
-              if (var9 < 0) {
-                param1 = param1 + param8;
-                param7--;
-                continue L0;
-              } else {
-                if (param0[param1] > 1) {
-                  param2 = param1 - 1;
-                  param3 = param1 + 1;
-                  param4 = param1 - vb.field_f;
-                  param5 = param1 + vb.field_f;
-                  if (param0[param4 + 1] == 0) {
-                    param0[param4 + 1] = 1;
-                  }
-                  if (param0[param5 + 1] == 0) {
-                    param0[param5 + 1] = 1;
-                  }
-                  if (param0[param4 - 1] == 0) {
-                    param0[param4 - 1] = 1;
-                  }
-                  if (param0[param5 - 1] == 0) {
-                    param0[param5 - 1] = 1;
-                  }
-                  if (param0[param2] == 0) {
-                    param0[param2] = 1;
-                  }
-                  if (param0[param3] == 0) {
-                    param0[param3] = 1;
-                  }
-                  if (param0[param4] == 0) {
-                    param0[param4] = 1;
-                  }
-                  if (param0[param5] == 0) {
-                    param0[param5] = 1;
-                  }
-                  if (param0[param2 - 1] == 0) {
-                    param0[param2 - 1] = 1;
-                  }
-                  if (param0[param3 + 1] == 0) {
-                    param0[param3 + 1] = 1;
-                  }
-                  if (param0[param4 - vb.field_f] == 0) {
-                    param0[param4 - vb.field_f] = 1;
-                  }
-                  if (param0[param5 + vb.field_f] == 0) {
-                    param0[param5 + vb.field_f] = 1;
-                    param1++;
-                    var9--;
-                    continue L1;
-                  } else {
-                    param1++;
-                    var9--;
-                    continue L1;
-                  }
-                } else {
-                  param1++;
-                  var9--;
-                  continue L1;
-                }
-              }
+        L0: while (param7 >= 0) {
+          L1: for (var9 = param6 - 1; var9 >= 0; var9--) {
+            if (param0[param1] <= 1) {
+              param1++;
+              continue L1;
             }
+            param2 = param1 - 1;
+            param3 = param1 + 1;
+            param4 = param1 - vb.field_f;
+            param5 = param1 + vb.field_f;
+            if (param0[param4 + 1] == 0) {
+              param0[param4 + 1] = 1;
+            }
+            if (param0[param5 + 1] == 0) {
+              param0[param5 + 1] = 1;
+            }
+            if (param0[param4 - 1] == 0) {
+              param0[param4 - 1] = 1;
+            }
+            if (param0[param5 - 1] == 0) {
+              param0[param5 - 1] = 1;
+            }
+            if (param0[param2] == 0) {
+              param0[param2] = 1;
+            }
+            if (param0[param3] == 0) {
+              param0[param3] = 1;
+            }
+            if (param0[param4] == 0) {
+              param0[param4] = 1;
+            }
+            if (param0[param5] == 0) {
+              param0[param5] = 1;
+            }
+            if (param0[param2 - 1] == 0) {
+              param0[param2 - 1] = 1;
+            }
+            if (param0[param3 + 1] == 0) {
+              param0[param3 + 1] = 1;
+            }
+            if (param0[param4 - vb.field_f] == 0) {
+              param0[param4 - vb.field_f] = 1;
+            }
+            if (param0[param5 + vb.field_f] != 0) {
+              param1++;
+              continue L1;
+            }
+            param0[param5 + vb.field_f] = 1;
+            param1++;
           }
+          param1 = param1 + param8;
+          param7--;
         }
     }
 
@@ -227,65 +212,48 @@ final class w {
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        int var8;
+        int var8 = 0;
         int var9;
-        var8 = -param5;
-        L0: while (true) {
-          if (var8 >= 0) {
-            return;
-          } else {
-            var9 = param3 + param4 - 3;
-            L1: while (true) {
-              if (param3 >= var9) {
-                var9 += 3;
-                L2: while (true) {
-                  if (param3 >= var9) {
-                    param3 = param3 + param6;
-                    param2 = param2 + param7;
-                    var8++;
-                    continue L0;
-                  } else {
-                    if (param0[param3] == 0) {
-                      param0[param3] = param1[param2];
-                      param3++;
-                      param2++;
-                      continue L2;
-                    } else {
-                      param3++;
-                      param2++;
-                      continue L2;
-                    }
-                  }
-                }
-              } else {
-                if (param0[param3] == 0) {
-                  param0[param3] = param1[param2];
-                }
-                param3++;
-                param2++;
-                if (param0[param3] == 0) {
-                  param0[param3] = param1[param2];
-                }
-                param3++;
-                param2++;
-                if (param0[param3] == 0) {
-                  param0[param3] = param1[param2];
-                }
-                param3++;
-                param2++;
-                if (param0[param3] == 0) {
-                  param0[param3] = param1[param2];
-                  param3++;
-                  param2++;
-                  continue L1;
-                } else {
-                  param3++;
-                  param2++;
-                  continue L1;
-                }
-              }
+        for (var8 = -param5; var8 < 0; var8++) {
+          var9 = param3 + param4 - 3;
+          L1: while (param3 < var9) {
+            if (param0[param3] == 0) {
+              param0[param3] = param1[param2];
             }
+            param3++;
+            param2++;
+            if (param0[param3] == 0) {
+              param0[param3] = param1[param2];
+            }
+            param3++;
+            param2++;
+            if (param0[param3] == 0) {
+              param0[param3] = param1[param2];
+            }
+            param3++;
+            param2++;
+            if (param0[param3] != 0) {
+              param3++;
+              param2++;
+              continue L1;
+            }
+            param0[param3] = param1[param2];
+            param3++;
+            param2++;
           }
+          var9 += 3;
+          L2: while (param3 < var9) {
+            if (param0[param3] != 0) {
+              param3++;
+              param2++;
+              continue L2;
+            }
+            param0[param3] = param1[param2];
+            param3++;
+            param2++;
+          }
+          param3 = param3 + param6;
+          param2 = param2 + param7;
         }
     }
 

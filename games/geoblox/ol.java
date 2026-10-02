@@ -105,7 +105,8 @@ final class ol extends hk {
           if (!super.a(param0, 93, param2, param3, param4, param5, param6)) {
             stackIn_23_0 = 0;
             return stackIn_23_0 != 0;
-          } else {
+          }
+          {
             var9 = -param2 + param4 - this.field_H;
             var10 = this.field_r - 2 * this.field_H;
             if (var10 < var9) {
@@ -130,10 +131,9 @@ final class ol extends hk {
                   }
                   if (0 > var12) {
                     break L2;
-                  } else {
-                    this.field_F.a(0, var12);
-                    break L2;
                   }
+                  this.field_F.a(0, var12);
+                  break L2;
                 }
               } else {
                 this.field_F.b(var9, (byte) -93);

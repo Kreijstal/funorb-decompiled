@@ -34,37 +34,33 @@ final class nd {
             va.field_b = var7;
           }
           md.field_c = md.field_c + 1;
-          if (qg.field_a > var7) {
-            qg.field_a = var7;
-            return;
-          } else {
+          if (qg.field_a <= var7) {
             return;
           }
-        } else {
-          va.field_b = param5;
-          fb.field_m[md.field_c] = param3;
-          k.field_i[md.field_c] = param4;
-          cj.field_b[md.field_c] = param0;
-          var6 = param0 + (param4 + param3);
-          var8 = -80 / ((30 - param2) / 42);
-          if (var6 != 0) {
-            stackIn_7_0 = param3 * 1000 / var6;
-          } else {
-            stackIn_7_0 = 0;
-          }
-          var7 = stackIn_7_0;
-          gk.field_a[md.field_c] = var7;
-          if (va.field_b < var7) {
-            va.field_b = var7;
-          }
-          md.field_c = md.field_c + 1;
-          if (qg.field_a > var7) {
-            qg.field_a = var7;
-            return;
-          } else {
-            return;
-          }
+          qg.field_a = var7;
+          return;
         }
+        va.field_b = param5;
+        fb.field_m[md.field_c] = param3;
+        k.field_i[md.field_c] = param4;
+        cj.field_b[md.field_c] = param0;
+        var6 = param0 + (param4 + param3);
+        var8 = -80 / ((30 - param2) / 42);
+        if (var6 != 0) {
+          stackIn_7_0 = param3 * 1000 / var6;
+        } else {
+          stackIn_7_0 = 0;
+        }
+        var7 = stackIn_7_0;
+        gk.field_a[md.field_c] = var7;
+        if (va.field_b < var7) {
+          va.field_b = var7;
+        }
+        md.field_c = md.field_c + 1;
+        if (qg.field_a <= var7) {
+          return;
+        }
+        qg.field_a = var7;
     }
 
     final static vk a(int param0) {

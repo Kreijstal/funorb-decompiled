@@ -42,27 +42,25 @@ final class mk extends q {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_m.a(param0, param1) != si.field_m) {
-            if (!param1.equals(this.field_j)) {
-              var3 = ci.a(-1, param1);
-              if (!var3.a(-76)) {
-                stackIn_8_0 = si.field_n;
-                return stackIn_8_0;
-              } else {
-                this.field_j = param1;
-                this.field_i = var3.a((byte) -52);
-              }
-            }
-            if (!this.field_i) {
-              stackIn_13_0 = si.field_m;
-            } else {
-              stackIn_13_0 = kk.field_w;
-            }
-            return stackIn_13_0;
-          } else {
+          if (this.field_m.a(param0, param1) == si.field_m) {
             stackIn_2_0 = si.field_m;
             return stackIn_2_0;
           }
+          if (!param1.equals(this.field_j)) {
+            var3 = ci.a(-1, param1);
+            if (!var3.a(-76)) {
+              stackIn_8_0 = si.field_n;
+              return stackIn_8_0;
+            }
+            this.field_j = param1;
+            this.field_i = var3.a((byte) -52);
+          }
+          if (!this.field_i) {
+            stackIn_13_0 = si.field_m;
+          } else {
+            stackIn_13_0 = kk.field_w;
+          }
+          return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -100,14 +98,12 @@ final class mk extends q {
           if (this.field_m.a(-257, param1) == si.field_m) {
             stackIn_5_0 = this.field_m.b(422, param1);
             return stackIn_5_0;
-          } else {
-            if (this.a(-257, param1) == si.field_m) {
-              stackIn_9_0 = g.field_m;
-              return stackIn_9_0;
-            } else {
-              return da.field_e;
-            }
           }
+          if (this.a(-257, param1) != si.field_m) {
+            return da.field_e;
+          }
+          stackIn_9_0 = g.field_m;
+          return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;

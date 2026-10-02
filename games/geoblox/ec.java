@@ -60,20 +60,23 @@ final class ec {
         try {
           if (0 == h.field_a) {
             if (0 < wb.field_b) {
-              if (!w.field_f) {
-                gf.field_f = 0;
-                if (el.field_o.field_T == 463) {
-                  el.field_o.field_y = 1;
-                  el.field_o.c(false);
-                }
-                stackIn_9_0 = 0;
-                return stackIn_9_0 != 0;
-              } else {
+              if (w.field_f) {
                 return false;
               }
+              gf.field_f = 0;
+              if (el.field_o.field_T == 463) {
+                el.field_o.field_y = 1;
+                el.field_o.c(false);
+              }
+              stackIn_9_0 = 0;
+              return stackIn_9_0 != 0;
             }
           }
-          if (h.field_a != 0) {
+          if (h.field_a == 0) {
+            stackIn_12_0 = 0;
+            return stackIn_12_0 != 0;
+          }
+          {
             if (gf.field_f >= 5) {
               ra.a(jf.field_g ^ 255, -99, jf.field_g);
             }
@@ -151,9 +154,6 @@ final class ec {
             h.field_a = 0;
             stackIn_49_0 = 1;
             return stackIn_49_0 != 0;
-          } else {
-            stackIn_12_0 = 0;
-            return stackIn_12_0 != 0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

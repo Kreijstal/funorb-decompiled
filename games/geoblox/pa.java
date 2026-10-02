@@ -118,15 +118,14 @@ final class pa {
                 L3: {
                   var9 = param0.charAt(var8);
                   if (var8 == 0) {
-                    if (45 != var9) {
-                      if (var9 == 43) {
-                        if (param1) {
-                          break L3;
-                        }
-                      }
-                    } else {
+                    if (45 == var9) {
                       var4_int = 1;
                       break L3;
+                    }
+                    if (var9 == 43) {
+                      if (param1) {
+                        break L3;
+                      }
                     }
                   }
                   L5: {
@@ -154,7 +153,8 @@ final class pa {
                   if (var9 >= param2) {
                     stackIn_30_0 = 0;
                     return stackIn_30_0 != 0;
-                  } else {
+                  }
+                  {
                     if (var4_int != 0) {
                       var9 = -var9;
                     }
@@ -162,10 +162,9 @@ final class pa {
                     if (var6 != var10 / param2) {
                       stackIn_37_0 = 0;
                       return stackIn_37_0 != 0;
-                    } else {
-                      var6 = var10;
-                      var5 = 1;
                     }
+                    var6 = var10;
+                    var5 = 1;
                   }
                 }
               }

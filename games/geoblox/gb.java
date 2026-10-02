@@ -26,7 +26,14 @@ final class gb {
           }
           n.field_j = n.field_j + 1;
           L1: while (true) {
-            if (!hh.a(93)) {
+            if (hh.a(93)) {
+              if (ki.field_d != 13) {
+                continue L1;
+              }
+              stackIn_7_0 = 1;
+              return stackIn_7_0 != 0;
+            }
+            {
               if (0 == n.field_j % 40) {
                 if (vc.field_h < 11) {
                   fh.field_c = n.field_j;
@@ -60,13 +67,6 @@ final class gb {
                 stackIn_25_0 = 1;
               }
               return stackIn_25_0 != 0;
-            } else {
-              if (ki.field_d != 13) {
-                continue L1;
-              } else {
-                stackIn_7_0 = 1;
-                return stackIn_7_0 != 0;
-              }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -137,35 +137,30 @@ final class gb {
           L0: while (hh.a(77)) {
             kd.field_e.a((byte) 105, te.field_a, ki.field_d);
           }
-          if (fe.field_d == param0) {
-            if (va.field_d) {
-              stackIn_10_0 = 3;
-              return stackIn_10_0;
-            } else {
-              if (si.field_g == tf.field_d) {
-                stackIn_14_0 = 1;
-                return stackIn_14_0;
-              } else {
-                if (ih.field_c.a(-106)) {
-                  if (kd.field_b != tf.field_d) {
-                    stackIn_22_0 = -1;
-                    return stackIn_22_0;
-                  } else {
-                    stackIn_20_0 = 2;
-                    return stackIn_20_0;
-                  }
-                } else {
-                  stackIn_17_0 = 1;
-                  return stackIn_17_0;
-                }
-              }
-            }
-          } else {
+          if (fe.field_d != param0) {
             var1_int = fe.field_d;
             pc.a(-1, false);
             stackIn_6_0 = var1_int;
             return stackIn_6_0;
           }
+          if (va.field_d) {
+            stackIn_10_0 = 3;
+            return stackIn_10_0;
+          }
+          if (si.field_g == tf.field_d) {
+            stackIn_14_0 = 1;
+            return stackIn_14_0;
+          }
+          if (!ih.field_c.a(-106)) {
+            stackIn_17_0 = 1;
+            return stackIn_17_0;
+          }
+          if (kd.field_b != tf.field_d) {
+            stackIn_22_0 = -1;
+            return stackIn_22_0;
+          }
+          stackIn_20_0 = 2;
+          return stackIn_20_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
@@ -191,16 +186,15 @@ final class gb {
           } else {
             var3 = param0;
           }
-          if (this.field_a.field_a != var3) {
-            var4 = 59 / ((param1 - 85) / 38);
-            this.field_d = var3.field_c;
-            stackIn_7_0 = (hf) (var3);
-            return stackIn_7_0;
-          } else {
+          if (this.field_a.field_a == var3) {
             this.field_d = null;
             stackIn_5_0 = null;
             return (hf) ((Object) stackIn_5_0);
           }
+          var4 = 59 / ((param1 - 85) / 38);
+          this.field_d = var3.field_c;
+          stackIn_7_0 = (hf) (var3);
+          return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -276,11 +270,10 @@ final class gb {
             this.field_d = null;
             stackIn_8_0 = null;
             return (hf) ((Object) stackIn_8_0);
-          } else {
-            this.field_d = var3.field_b;
-            stackIn_10_0 = (hf) (var3);
-            return stackIn_10_0;
           }
+          this.field_d = var3.field_b;
+          stackIn_10_0 = (hf) (var3);
+          return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;

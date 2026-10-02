@@ -58,10 +58,9 @@ final class ef implements Iterator {
           }
           if (el.field_o.field_C) {
             return;
-          } else {
-            lc.a(255);
-            return;
           }
+          lc.a(255);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;

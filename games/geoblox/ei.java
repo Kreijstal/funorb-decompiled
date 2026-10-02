@@ -84,26 +84,22 @@ final class ei extends qf {
           if (var3 != null) {
             stackIn_4_0 = (String) (var3);
             return stackIn_4_0;
-          } else {
-            if (!param1) {
-              var4 = 0;
-              L0: while (true) {
-                if (var4 < param2.length()) {
-                  if (q.a(param2.charAt(var4), (byte) 97)) {
-                    var4++;
-                    continue L0;
-                  } else {
-                    stackIn_13_0 = kc.field_b;
-                    return stackIn_13_0;
-                  }
-                } else {
-                  return null;
-                }
-              }
-            } else {
-              stackIn_7_0 = (String) null;
-              return stackIn_7_0;
+          }
+          if (param1) {
+            stackIn_7_0 = (String) null;
+            return stackIn_7_0;
+          }
+          var4 = 0;
+          L0: while (true) {
+            if (var4 >= param2.length()) {
+              return null;
             }
+            if (q.a(param2.charAt(var4), (byte) 97)) {
+              var4++;
+              continue L0;
+            }
+            stackIn_13_0 = kc.field_b;
+            return stackIn_13_0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
