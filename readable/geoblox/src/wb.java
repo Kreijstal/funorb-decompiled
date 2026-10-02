@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wb {
-    static int field_b;
+    static int newAttachmentCount;
     static String soundLabelText;
     static boolean field_a;
     private static String field_z;
@@ -14,7 +14,7 @@ final class wb {
 
     static {
         field_z = "wb.A(";
-        field_b = 0;
+        newAttachmentCount = 0;
         soundLabelText = "Sound: ";
         field_a = false;
     }

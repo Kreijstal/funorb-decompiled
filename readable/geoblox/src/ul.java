@@ -17,8 +17,8 @@ final class ul {
         }
     }
 
-    final static void collectMatchCandidates(int param0) {
-        int var6 = 0;
+    final static void collectMatchCandidates(int methodGuard) {
+        int firstNeighborIndex = 0;
         int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_21_0 = 0;
@@ -38,56 +38,56 @@ final class ul {
         int stackIn_82_0 = 0;
         int stackIn_82_1 = 0;
         RuntimeException decompiledCaughtException = null;
-        int var1_int = 0;
+        int eligibleNeighborhoodVisited = 0;
         RuntimeException var1 = null;
-        int var2 = 0;
-        GameplayEntity var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        var16 = Geoblox.field_C;
+        int dualMatchFound = 0;
+        GameplayEntity centralEntity = null;
+        int variantMatchingAllowed = 0;
+        int categoryMatchingAllowed = 0;
+        int firstNeighborSharesVariant = 0;
+        int firstNeighborSharesCategory = 0;
+        int secondNeighborIndex = 0;
+        int tripleSharesCategory = 0;
+        int tripleSharesVariant = 0;
+        int largestPackedEntityId = 0;
+        int middlePackedEntityId = 0;
+        int smallestPackedEntityId = 0;
+        int swappedEntityId = 0;
+        int controlFlowGuard = 0;
+        controlFlowGuard = Geoblox.field_C;
         try {
           L0: {
             h.matchCandidateCount = 0;
-            var1_int = 0;
-            var2 = 0;
-            var3 = (GameplayEntity) ((Object) a.attachedEntities.firstForIteration(0));
-            if (param0 != -2) {
+            eligibleNeighborhoodVisited = 0;
+            dualMatchFound = 0;
+            centralEntity = (GameplayEntity) ((Object) a.attachedEntities.firstForIteration(0));
+            if (methodGuard != -2) {
               field_a = (Sprite) null;
             }
-            L2: while (var3 != null) {
+            L2: while (centralEntity != null) {
               L4: {
-                if (var3.sameVariantEntityCount <= 1) {
-                  if (var3.sameCategoryEntityCount <= 1) {
+                if (centralEntity.sameVariantEntityCount <= 1) {
+                  if (centralEntity.sameCategoryEntityCount <= 1) {
                     break L4;
                   }
                 }
-                var3.entityQueue = bh.field_c;
-                if (var3.sameVariantEntityCount <= 1) {
+                centralEntity.entityQueue = bh.field_c;
+                if (centralEntity.sameVariantEntityCount <= 1) {
                   stackIn_10_0 = 0;
                 } else {
                   stackIn_10_0 = 1;
                 }
-                var4 = stackIn_10_0;
-                if (var3.sameCategoryEntityCount <= 1) {
+                variantMatchingAllowed = stackIn_10_0;
+                if (centralEntity.sameCategoryEntityCount <= 1) {
                   stackIn_13_0 = 0;
                 } else {
                   stackIn_13_0 = 1;
                 }
-                var5 = stackIn_13_0;
-                for (var6 = 0; var6 < var3.relatedEntityCount; var6++) {
-                  var1_int = 1;
-                  if (var4 != 0) {
-                    if (var3.spriteVariantIndex == var3.relatedEntities[var6].spriteVariantIndex) {
+                categoryMatchingAllowed = stackIn_13_0;
+                for (firstNeighborIndex = 0; firstNeighborIndex < centralEntity.relatedEntityCount; firstNeighborIndex++) {
+                  eligibleNeighborhoodVisited = 1;
+                  if (variantMatchingAllowed != 0) {
+                    if (centralEntity.spriteVariantIndex == centralEntity.relatedEntities[firstNeighborIndex].spriteVariantIndex) {
                       stackIn_21_0 = 1;
                     } else {
                       stackIn_21_0 = 0;
@@ -95,9 +95,9 @@ final class ul {
                   } else {
                     stackIn_21_0 = 0;
                   }
-                  var7 = stackIn_21_0;
-                  if (var5 != 0) {
-                    if (var3.entityCategoryKey == var3.relatedEntities[var6].entityCategoryKey) {
+                  firstNeighborSharesVariant = stackIn_21_0;
+                  if (categoryMatchingAllowed != 0) {
+                    if (centralEntity.entityCategoryKey == centralEntity.relatedEntities[firstNeighborIndex].entityCategoryKey) {
                       stackIn_27_0 = 1;
                     } else {
                       stackIn_27_0 = 0;
@@ -106,19 +106,19 @@ final class ul {
                     stackIn_27_0 = 0;
                   }
                   L11: {
-                    var8 = stackIn_27_0;
-                    if (var7 == 0) {
-                      if (var8 == 0) {
+                    firstNeighborSharesCategory = stackIn_27_0;
+                    if (firstNeighborSharesVariant == 0) {
+                      if (firstNeighborSharesCategory == 0) {
                         break L11;
                       }
                     }
-                    var9 = var6 + 1;
+                    secondNeighborIndex = firstNeighborIndex + 1;
                     L13: while (true) {
-                      if (var9 >= var3.relatedEntityCount) {
+                      if (secondNeighborIndex >= centralEntity.relatedEntityCount) {
                         break L11;
                       } else {
-                        if (var8 != 0) {
-                          if (var3.relatedEntities[var9].entityCategoryKey == var3.entityCategoryKey) {
+                        if (firstNeighborSharesCategory != 0) {
+                          if (centralEntity.relatedEntities[secondNeighborIndex].entityCategoryKey == centralEntity.entityCategoryKey) {
                             stackIn_38_0 = 1;
                           } else {
                             stackIn_38_0 = 0;
@@ -126,9 +126,9 @@ final class ul {
                         } else {
                           stackIn_38_0 = 0;
                         }
-                        var10 = stackIn_38_0;
-                        if (var7 != 0) {
-                          if (var3.spriteVariantIndex == var3.relatedEntities[var9].spriteVariantIndex) {
+                        tripleSharesCategory = stackIn_38_0;
+                        if (firstNeighborSharesVariant != 0) {
+                          if (centralEntity.spriteVariantIndex == centralEntity.relatedEntities[secondNeighborIndex].spriteVariantIndex) {
                             stackIn_44_0 = 1;
                           } else {
                             stackIn_44_0 = 0;
@@ -137,43 +137,43 @@ final class ul {
                           stackIn_44_0 = 0;
                         }
                         L16: {
-                          var11 = stackIn_44_0;
-                          if (var10 == 0) {
-                            if (var11 == 0) {
+                          tripleSharesVariant = stackIn_44_0;
+                          if (tripleSharesCategory == 0) {
+                            if (tripleSharesVariant == 0) {
                               break L16;
                             }
                           }
-                          var3.relatedEntities[var6].entityQueue = bh.field_c;
-                          var3.relatedEntities[var9].entityQueue = bh.field_c;
-                          var13 = var3.relatedEntities[var6].entityId;
-                          var12 = var3.entityId;
-                          var14 = var3.relatedEntities[var9].entityId;
-                          if (var13 < var14) {
-                            var15 = var13;
-                            var13 = var14;
-                            var14 = var15;
+                          centralEntity.relatedEntities[firstNeighborIndex].entityQueue = bh.field_c;
+                          centralEntity.relatedEntities[secondNeighborIndex].entityQueue = bh.field_c;
+                          middlePackedEntityId = centralEntity.relatedEntities[firstNeighborIndex].entityId;
+                          largestPackedEntityId = centralEntity.entityId;
+                          smallestPackedEntityId = centralEntity.relatedEntities[secondNeighborIndex].entityId;
+                          if (middlePackedEntityId < smallestPackedEntityId) {
+                            swappedEntityId = middlePackedEntityId;
+                            middlePackedEntityId = smallestPackedEntityId;
+                            smallestPackedEntityId = swappedEntityId;
                           }
-                          if (var11 != 0) {
+                          if (tripleSharesVariant != 0) {
                             dd.variantMatchCandidateCount = dd.variantMatchCandidateCount + 1;
                           }
-                          if (var11 != 0) {
-                            if (var10 != 0) {
+                          if (tripleSharesVariant != 0) {
+                            if (tripleSharesCategory != 0) {
                             }
                           }
-                          if (var10 != 0) {
+                          if (tripleSharesCategory != 0) {
                             dk.categoryMatchCandidateCount = dk.categoryMatchCandidateCount + 1;
                           }
-                          if (var12 >= var14) {
-                            if (var13 > var12) {
-                              var15 = var12;
-                              var12 = var13;
-                              var13 = var15;
+                          if (largestPackedEntityId >= smallestPackedEntityId) {
+                            if (middlePackedEntityId > largestPackedEntityId) {
+                              swappedEntityId = largestPackedEntityId;
+                              largestPackedEntityId = middlePackedEntityId;
+                              middlePackedEntityId = swappedEntityId;
                             }
                           } else {
-                            var15 = var13;
-                            var13 = var14;
-                            var14 = var12;
-                            var12 = var15;
+                            swappedEntityId = middlePackedEntityId;
+                            middlePackedEntityId = smallestPackedEntityId;
+                            smallestPackedEntityId = largestPackedEntityId;
+                            largestPackedEntityId = swappedEntityId;
                           }
                           stackIn_64_0 = nk.packedMatchCandidates;
 
@@ -181,9 +181,9 @@ final class ul {
 
                           stackIn_64_2 = nk.packedMatchCandidates[h.matchCandidateCount];
 
-                          stackIn_64_3 = var14;
+                          stackIn_64_3 = smallestPackedEntityId;
 
-                          if (var10 == 0) {
+                          if (tripleSharesCategory == 0) {
                             stackIn_65_0 = (int[]) ((Object) stackIn_64_0);
                             stackIn_65_1 = stackIn_64_1;
                             stackIn_65_2 = stackIn_64_2;
@@ -206,7 +206,7 @@ final class ul {
 
 
 
-                          if (var11 == 0) {
+                          if (tripleSharesVariant == 0) {
                             stackIn_65_0 = (int[]) ((Object) stackIn_65_0);
 
 
@@ -221,17 +221,17 @@ final class ul {
 
                             stackIn_68_5 = 1073741824;
                           }
-                          stackIn_65_0[stackIn_65_1] = lb.a(stackIn_65_2, lb.a(stackIn_65_3, lb.a(lb.a(lb.a(stackIn_65_4, stackIn_68_5), var12 << -1372000780), var13 << 147551786)));
+                          stackIn_65_0[stackIn_65_1] = lb.a(stackIn_65_2, lb.a(stackIn_65_3, lb.a(lb.a(lb.a(stackIn_65_4, stackIn_68_5), largestPackedEntityId << -1372000780), middlePackedEntityId << 147551786)));
                           h.matchCandidateCount = h.matchCandidateCount + 1;
                         }
-                        if (var10 != 0) {
-                          if (var11 != 0) {
-                            var2 = 1;
+                        if (tripleSharesCategory != 0) {
+                          if (tripleSharesVariant != 0) {
+                            dualMatchFound = 1;
                           }
-                          var9++;
+                          secondNeighborIndex++;
                           continue L13;
                         } else {
-                          var9++;
+                          secondNeighborIndex++;
                           continue L13;
                         }
                       }
@@ -240,10 +240,10 @@ final class ul {
                 }
                 break L4;
               }
-              var3 = (GameplayEntity) ((Object) a.attachedEntities.nextForIteration(1));
+              centralEntity = (GameplayEntity) ((Object) a.attachedEntities.nextForIteration(1));
             }
-            if (var1_int != 0) {
-              if (var2 == 0) {
+            if (eligibleNeighborhoodVisited != 0) {
+              if (dualMatchFound == 0) {
                 stackIn_82_0 = 4;
                 stackIn_82_1 = 0;
                 jc.a(stackIn_82_0, stackIn_82_1 != 0);
@@ -256,7 +256,7 @@ final class ul {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1), "ul.C(" + param0 + ')');
+          throw t.a((Throwable) ((Object) var1), "ul.C(" + methodGuard + ')');
         }
     }
 

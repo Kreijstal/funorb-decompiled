@@ -20,8 +20,8 @@ final class le implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         rb.field_b = 0;
         ab.boardContactStateDirty = false;
         fa.entitiesDetachedThisTick = false;
-        w.field_f = false;
-        wb.field_b = 0;
+        w.avatarShockPending = false;
+        wb.newAttachmentCount = 0;
         pf.field_D = false;
         re.connectivityDirty = false;
         if (param0 != -39) {

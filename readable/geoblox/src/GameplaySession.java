@@ -1465,29 +1465,29 @@ final class GameplaySession {
         }
     }
 
-    final void addScore(byte param0, int points) {
+    final void addScore(byte methodGuard, int points) {
         int pointsForCounters;
         int counterSplitMode;
         int oneThirdPoints;
-        int var6;
-        CharSequence var7;
-        CharSequence var8;
-        var6 = Geoblox.field_C;
+        int controlFlowGuard;
+        CharSequence cappedScoreText;
+        CharSequence scoreValueText;
+        controlFlowGuard = Geoblox.field_C;
         if (!this.tutorialMode) {
           L0: {
             this.score = this.score + points;
             if (this.score > 9999999) {
-              var7 = (CharSequence) ((Object) Integer.toString(9999999));
-              td.a(var7, this.scoreText, 0, 47);
-              if (var6 == 0) {
+              cappedScoreText = (CharSequence) ((Object) Integer.toString(9999999));
+              td.writeTextAtOffset(cappedScoreText, this.scoreText, 0, 47);
+              if (controlFlowGuard == 0) {
                 break L0;
               }
             }
-            var8 = (CharSequence) ((Object) Integer.toString(this.score));
-            td.a(var8, this.scoreText, 0, 69);
+            scoreValueText = (CharSequence) ((Object) Integer.toString(this.score));
+            td.writeTextAtOffset(scoreValueText, this.scoreText, 0, 69);
           }
           pointsForCounters = points;
-          if (param0 != 127) {
+          if (methodGuard != 127) {
             this.renderProgressHud(-17);
           }
           L3: {
@@ -1495,14 +1495,14 @@ final class GameplaySession {
             if (counterSplitMode != 0) {
               if (counterSplitMode == 1) {
                 ml.field_r = ml.field_r - pointsForCounters;
-                if (var6 == 0) {
+                if (controlFlowGuard == 0) {
                   break L3;
                 }
               }
               oneThirdPoints = pointsForCounters / 3;
               oa.field_a = oa.field_a + oneThirdPoints;
               ml.field_r = ml.field_r - (pointsForCounters - oneThirdPoints);
-              if (var6 == 0) {
+              if (controlFlowGuard == 0) {
                 break L3;
               }
             }
@@ -2015,26 +2015,26 @@ final class GameplaySession {
         ca.field_f = null;
     }
 
-    final void addPopupPoints(int points, int param1) {
+    final void addPopupPoints(int points, int methodGuard) {
         int var3;
-        CharSequence var4;
-        CharSequence var5;
+        CharSequence cappedPopupPointsText;
+        CharSequence popupPointsValueText;
         if (this.tutorialMode) {
           return;
         } else {
           L0: {
             this.pendingPopupPoints = this.pendingPopupPoints + points;
             if (this.pendingPopupPoints > 99999) {
-              var4 = (CharSequence) ((Object) Integer.toString(99999));
-              td.a(var4, this.popupPointsText, 0, 26);
+              cappedPopupPointsText = (CharSequence) ((Object) Integer.toString(99999));
+              td.writeTextAtOffset(cappedPopupPointsText, this.popupPointsText, 0, 26);
               if (Geoblox.field_C == 0) {
                 break L0;
               }
             }
-            var5 = (CharSequence) ((Object) Integer.toString(this.pendingPopupPoints));
-            td.a(var5, this.popupPointsText, 0, 73);
+            popupPointsValueText = (CharSequence) ((Object) Integer.toString(this.pendingPopupPoints));
+            td.writeTextAtOffset(popupPointsValueText, this.popupPointsText, 0, 73);
           }
-          var3 = -83 % ((-19 - param1) / 54);
+          var3 = -83 % ((-19 - methodGuard) / 54);
           return;
         }
     }

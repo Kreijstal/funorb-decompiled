@@ -11,13 +11,13 @@ over the obfuscated gamepacks by the pipeline in
 
 ## Readable GeoBlox export
 
-[`readable/geoblox/src`](readable/geoblox/src) contains GeoBlox pass 20 with
-972 reviewed naming rules for gameplay, tutorial flow, interface text,
+[`readable/geoblox/src`](readable/geoblox/src) contains GeoBlox pass 21 with
+1,017 reviewed naming rules for gameplay, tutorial flow, interface text,
 resource decoding, text validation, nine-slice sprite construction, result
 selection and PCM samples.
 Confirmed names omit opaque suffixes; the dictionary
 preserves original identities. Both 303-file Java corpora compile and preserve
-all 154,113 recorded bindings and 388 override relationships. The raw
+all 154,117 recorded bindings and 388 override relationships. The raw
 decompilation remains under `games/`.
 
 The [reproduction and update procedure](readable/README.md),
@@ -34,6 +34,11 @@ records pass 18 names and native selector/PCM checks. The [numeric-negation repo
 records the corrected sprite pivots and native result-sequence comparison.
 The [exception-continuation report](readable/EXCEPTION-CONTINUATION-READABILITY.md)
 records pass 19's handler boundaries and reviewed generated-local changes. [Floating comparison verification](readable/FLOAT-COMPARISON-READABILITY.md) records pass 20's native scoring proof and guarded source migration.
+Pass 21 names the remaining match-neighborhood roles, cooldown-blocked entities,
+attachment/shock gates and score-text writes through the same guarded pipeline.
+Its direct text-writer probe matches native bytecode in 152 offset, aliasing and
+failure scenarios. Shorter writes retain the old suffix; the helper is named
+`writeTextAtOffset` to reflect that behavior.
 Typed complement comparisons show direct conditions;
 see the [comparison report](readable/COMPARISON-READABILITY.md). Unknown
 identifiers and shared joins remain; the [state-machine report](readable/STATE-MACHINE-READABILITY.md)
@@ -45,7 +50,7 @@ GeoBlox has a newer 303-file source export from a pinned owned-decompiler
 revision. It reuses the unchanged transformed bytecode whose previous fresh ASM
 check covered 2,427 methods with zero failures. All regenerated sources compile.
 The other 43 games retain the previous full-catalog export.
-The latest renderer preserves exact floating-comparison behavior and evaluates
+The pass-20 renderer preserves exact floating-comparison behavior and evaluates
 stored comparison operands once. Ten files change; all 972 reviewed names and
 255 named local identities remain unchanged. One comparison helper and its two
 parameters are added. The new matching/scoring probe matches native bytecode

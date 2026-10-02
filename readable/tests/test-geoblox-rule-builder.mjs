@@ -25,7 +25,9 @@ function fixture(change) {
       'rules/geoblox-v17-migration.json', 'rules/geoblox-v17.json',
       'rules/geoblox-v18-results.json', 'rules/geoblox-v18.json',
       'rules/geoblox-v19-migration.json', 'rules/geoblox-v19.json',
-      'rules/geoblox-v20-migration.json', 'tools/PIN.json']) {
+      'rules/geoblox-v20-migration.json', 'rules/geoblox-v20.json',
+      'rules/geoblox-v21-matching.json', 'tests/test-geoblox-match-scoring.mjs',
+      'tests/test-geoblox-text-write.mjs', 'tools/PIN.json']) {
       fs.mkdirSync(path.dirname(path.join(temporary, file)), {recursive: true});
       fs.copyFileSync(path.join(root, file), path.join(temporary, file));
     }
@@ -44,8 +46,64 @@ function fixture(change) {
   } finally { fs.rmSync(temporary, {recursive: true, force: true}); }
 }
 
-test('reviewed lineage reproduces all 972 guarded rules', () => {
-  assert.equal(JSON.parse(fixture().stdout).rules, 972);
+test('reviewed lineage reproduces all 1017 guarded rules', () => {
+  assert.equal(JSON.parse(fixture().stdout).rules, 1017);
+});
+
+test('pass 21 freezes every pass 20 rule and the original generator identities', () => {
+  assert.throws(() => fixture(edit => edit('rules/geoblox-v20.json', data => {
+    data.renames[0].to = 'DifferentFrozenName';
+  })), /Retained pass 20.*reviewed rule lineage/);
+  for (const field of ['schema', 'version', 'previousRulesFile', 'previousRulesSha256',
+    'inputTreeSha256', 'sourceCommit', 'javaToolsCommit', 'decompilerSourceArchiveSha256',
+    'namingToolCommit', 'namingMigration', 'namingMigrationSha256'])
+    assert.throws(() => fixture(edit => edit('rules/geoblox-v21-matching.json', data => {
+      data[field] = 'different';
+    })), /reviewed pass-21 matching manifest/);
+});
+
+test('matching additions cannot replace or duplicate retained identities or omit spelling guards', () => {
+  assert.throws(() => fixture(edit => edit('rules/geoblox-v21-matching.json', data => {
+    data.renames[0].symbol = 'C:gh';
+  })), /replace a retained naming identity/);
+  assert.throws(() => fixture(edit => edit('rules/geoblox-v21-matching.json', data => {
+    data.renames[0].symbol = data.renames[1].symbol;
+  })), /duplicate naming identities/);
+  assert.throws(() => fixture(edit => edit('rules/geoblox-v21-matching.json', data => {
+    delete data.renames[0].originalName;
+  })), /Incomplete guarded matching rule/);
+});
+
+test('matching evidence retains all source bytes, counts and declaration identities', () => {
+  for (const change of [
+    data => { data.review.rulesRetained--; },
+    data => { data.review.rulesAdded--; },
+    data => { data.review.originalSpellingGuardsMatched--; },
+    data => { data.review.namedLocalsRetained--; },
+    data => { data.review.namedLocalsAdded--; },
+    data => { data.review.sourceDeclarationsUnchanged--; },
+    data => { data.review.overrideRelationshipsUnchanged--; },
+    data => { data.review.rawSourceTreeUnchanged = false; },
+    data => { data.review.sourceBodyEdited = true; },
+    data => { data.review.identityChanges.push({from: 'L:ul.b(I)V#0', to: 'L:ul.b(I)V#1'}); },
+    data => { data.sourceEvidence.pop(); },
+    data => { data.sourceEvidence[0].file = '../ab.java'; },
+    data => { data.sourceEvidence[0].sha256 = 'different'; },
+  ]) assert.throws(() => fixture(edit => edit('rules/geoblox-v21-matching.json', change)),
+    /reviewed pass-21 matching manifest/);
+});
+
+test('matching native evidence binds actual probe bytes and established native traces', () => {
+  for (const change of [
+    data => { data.nativeEvidence[0].sha256 = '0'.repeat(64); },
+    data => { data.nativeEvidence[0].nativeOutputSha256 = '0'.repeat(64); },
+    data => { data.nativeEvidence[0].scenarios--; },
+    data => { data.nativeEvidence[0].ticks--; },
+    data => { data.nativeEvidence[1].scenarios--; },
+    data => { data.nativeEvidence[1].file = '../test-geoblox-text-write.mjs'; },
+    data => { data.nativeEvidence.pop(); },
+  ]) assert.throws(() => fixture(edit => edit('rules/geoblox-v21-matching.json', change)),
+    /reviewed pass-21 matching manifest/);
 });
 
 test('pass 20 retains the frozen pass 19 manifest and exact input/tool identities', () => {
@@ -114,7 +172,7 @@ test('result additions retain input, generator, naming-tool and resource-evidenc
   })), /Retained pass 17.*reviewed rule lineage/);
   assert.throws(() => fixture(edit => edit('geoblox-source-pin.json', data => {
     data.namingAdditions = 'rules/geoblox-v16-border.json';
-  })), /reviewed result-helper additions/);
+  })), /reviewed matching additions/);
 });
 
 test('result additions require unchanged source identities, complete counts and reviewed source files', () => {

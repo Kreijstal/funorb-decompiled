@@ -482,7 +482,7 @@ final class kc {
               L36: while (candidateEntity != null) {
                 L38: {
                   if (null == candidateEntity.entityQueue) {
-                    if (!w.field_f) {
+                    if (!w.avatarShockPending) {
                       break L38;
                     } else {
                       if (!candidateEntity.touchesAvatar) {
@@ -534,7 +534,7 @@ final class kc {
                         }
                       }
                       if (candidateEntity.entityQueue != bh.field_c) {
-                        if (!w.field_f) {
+                        if (!w.avatarShockPending) {
                           break L41;
                         }
                       }
@@ -561,7 +561,7 @@ final class kc {
                       bh.field_c.addLast(-100, candidateEntity);
                       candidateEntity.animationFrameIndex = 0;
                       if (candidateEntity.touchesAvatar) {
-                        if (w.field_f) {
+                        if (w.avatarShockPending) {
                           L49: {
                             stackIn_88_0 = (int)candidateEntity.positionY;
 
@@ -637,7 +637,7 @@ final class kc {
                       }
                     }
                   }
-                  if (w.field_f) {
+                  if (w.avatarShockPending) {
                     jc.a(3, false);
                     jl.field_t = false;
                   }
@@ -651,7 +651,7 @@ final class kc {
                     if (!ab.boardContactStateDirty) {
 
 
-                      if (!w.field_f) {
+                      if (!w.avatarShockPending) {
                         stackIn_112_0 = (GameplaySession) ((Object) stackIn_110_0);
                         stackIn_112_1 = 0;
                         break L56;
@@ -664,7 +664,7 @@ final class kc {
                   stackIn_112_1 = 1;
                 }
                 stackIn_112_0.boardRasterDirty = stackIn_112_1 != 0;
-                w.field_f = false;
+                w.avatarShockPending = false;
                 if (entityIndexThenGroupCount >= 3) {
                   ra.a(255 ^ fe.field_f, -88, fe.field_f);
                 }

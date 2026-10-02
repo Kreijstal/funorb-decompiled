@@ -49,7 +49,7 @@ final class rh {
                 if (3 == var2.entitySpriteKindId) {
                   if (var2.touchesAvatar) {
                     if (0 >= var2.matchCooldownTicks) {
-                      w.field_f = true;
+                      w.avatarShockPending = true;
                     }
                   }
                 }

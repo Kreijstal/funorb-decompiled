@@ -389,9 +389,7 @@ const rebuiltPassSeventeen = {...passSixteen, version: 17, previousRulesSha256: 
   source: passSeventeen.source, generators: passSeventeen.generators, renames: borderRenames};
 if (passSeventeenBytes.toString() !== JSON.stringify(rebuiltPassSeventeen, null, 2) + '\n')
   throw new Error('Retained pass 17 does not match its reviewed rule lineage');
-if (pin.namingAdditions !== 'rules/geoblox-v18-results.json')
-  throw new Error('Changed names require reviewed result-helper additions');
-const resultBytes = read(pin.namingAdditions);
+const resultBytes = read('rules/geoblox-v18-results.json');
 const result = JSON.parse(resultBytes);
 if (result.schema !== 1 || result.version !== 18 ||
     result.previousRulesSha256 !== sha256(passSeventeenBytes) ||
@@ -444,7 +442,7 @@ if (continuation.schema !== 1 || continuation.version !== 19 ||
     JSON.stringify(passNineteen.generators.dekoblokoWork) !== JSON.stringify(passEighteen.generators.dekoblokoWork) ||
     continuation.textEvidenceMigration !== 'rules/geoblox-v15-migration.json' ||
     continuation.textEvidenceMigrationSha256 !== sha256(loopBytes) ||
-    continuation.resultEvidenceManifest !== pin.namingAdditions ||
+    continuation.resultEvidenceManifest !== 'rules/geoblox-v18-results.json' ||
     continuation.resultEvidenceManifestSha256 !== sha256(resultBytes) ||
     !Array.isArray(continuation.identityChanges) || continuation.identityChanges.length !== 0 ||
     continuation.review.rulesRetained !== resultRenames.length ||
@@ -499,7 +497,7 @@ if (floating.schema !== 1 || floating.version !== 20 ||
     JSON.stringify(pin.generators.dekoblokoWork) !== JSON.stringify(passNineteen.generators.dekoblokoWork) ||
     floating.textEvidenceMigration !== 'rules/geoblox-v15-migration.json' ||
     floating.textEvidenceMigrationSha256 !== sha256(loopBytes) ||
-    floating.resultEvidenceManifest !== pin.namingAdditions ||
+    floating.resultEvidenceManifest !== 'rules/geoblox-v18-results.json' ||
     floating.resultEvidenceManifestSha256 !== sha256(resultBytes) ||
     !Array.isArray(floating.identityChanges) || floating.identityChanges.length !== 0 ||
     floating.review.rulesRetained !== 972 || floating.review.originalSpellingGuardsMatched !== 972 ||
@@ -521,10 +519,63 @@ const resultUpdate = floating.sourceEvidence.find(item => item.file === 'jg.java
 if (JSON.stringify(floating.resultEvidenceUpdates) !== JSON.stringify([resultUpdate]) ||
     result.sourceEvidence.find(item => item.file === 'jg.java').sha256 !== resultUpdate.previousSha256)
   throw new Error('Result evidence differs from the reviewed pass-20 migration');
-const rules = {...passNineteen, version: 20, previousRulesSha256: sha256(passNineteenBytes),
+const rebuiltPassTwenty = {...passNineteen, version: 20, previousRulesSha256: sha256(passNineteenBytes),
   namingMigrationSha256: sha256(floatingBytes), inputTreeSha256: pin.inputTreeSha256,
   source: {repository: pin.sourceRepository, commit: pin.commit, subdirectory: pin.subdirectory},
   generators: pin.generators, renames: resultRenames};
+const passTwentyBytes = read('rules/geoblox-v20.json');
+if (passTwentyBytes.toString() !== JSON.stringify(rebuiltPassTwenty, null, 2) + '\n')
+  throw new Error('Retained pass 20 does not match its reviewed rule lineage');
+if (pin.namingAdditions !== 'rules/geoblox-v21-matching.json')
+  throw new Error('Changed names require reviewed matching additions');
+const matchingBytes = read(pin.namingAdditions);
+const matching = JSON.parse(matchingBytes);
+const matchingFiles = ['ab', 'cf', 'ec', 'gh', 'kc', 'le', 'rh', 'td', 'ug', 'ul', 'w', 'wb']
+  .map(name => name + '.java');
+const expectedNativeEvidence = [
+  {file: 'tests/test-geoblox-match-scoring.mjs',
+    sha256: sha256(read('tests/test-geoblox-match-scoring.mjs')),
+    nativeOutputSha256: '222f18c6366fdab862f1d5d70980cb0a6f32b3adb6eba308c08846a473bac16a',
+    scenarios: 708, ticks: 55728},
+  {file: 'tests/test-geoblox-text-write.mjs',
+    sha256: sha256(read('tests/test-geoblox-text-write.mjs')),
+    nativeOutputSha256: 'c99483f76661e9d3866aab389d6bd640e45ab1ff3e1766ad6a8aa7d9f3214f31',
+    scenarios: 152},
+];
+if (matching.schema !== 1 || matching.version !== 21 ||
+    matching.previousRulesFile !== 'rules/geoblox-v20.json' ||
+    matching.previousRulesSha256 !== sha256(passTwentyBytes) ||
+    matching.inputTreeSha256 !== pin.inputTreeSha256 || matching.sourceCommit !== pin.commit ||
+    matching.javaToolsCommit !== pin.generators.javaTools.commit ||
+    matching.decompilerSourceArchiveSha256 !== pin.generators.javaTools.sourceArchive.sha256 ||
+    matching.namingToolCommit !== JSON.parse(read('tools/PIN.json')).adaptedToolCommit ||
+    matching.namingMigration !== pin.namingMigration || matching.namingMigrationSha256 !== sha256(floatingBytes) ||
+    !Array.isArray(matching.renames) || matching.renames.length !== 45 ||
+    matching.review.rulesRetained !== resultRenames.length || matching.review.rulesAdded !== 45 ||
+    matching.review.originalSpellingGuardsMatched !== resultRenames.length + 45 ||
+    matching.review.namedLocalsRetained !== 255 || matching.review.namedLocalsAdded !== 32 ||
+    matching.renames.filter(rule => rule.symbol.startsWith('L:')).length !== 32 ||
+    matching.review.sourceDeclarationsUnchanged !== 21185 || matching.review.overrideRelationshipsUnchanged !== 388 ||
+    matching.review.rawSourceTreeUnchanged !== true || matching.review.sourceBodyEdited !== false ||
+    !Array.isArray(matching.review.identityChanges) || matching.review.identityChanges.length !== 0 ||
+    !Array.isArray(matching.sourceEvidence) ||
+    JSON.stringify(matching.sourceEvidence.map(item => item.file)) !== JSON.stringify(matchingFiles) ||
+    matching.sourceEvidence.some(item => !/^[a-f0-9]{64}$/.test(item.sha256)) ||
+    JSON.stringify(matching.nativeEvidence) !== JSON.stringify(expectedNativeEvidence))
+  throw new Error('Source or naming additions differ from the reviewed pass-21 matching manifest');
+const retainedMatchingSymbols = new Set(resultRenames.map(rule => rule.symbol));
+for (const rule of matching.renames) {
+  if (retainedMatchingSymbols.has(rule.symbol))
+    throw new Error('Matching additions replace a retained naming identity');
+  if (!/^[CMFPL]:/.test(rule.symbol) || !rule.originalName || !rule.to || !rule.evidence)
+    throw new Error('Incomplete guarded matching rule');
+}
+const matchingRenames = [...resultRenames, ...matching.renames]
+  .sort((a, b) => a.symbol < b.symbol ? -1 : a.symbol > b.symbol ? 1 : 0);
+if (new Set(matchingRenames.map(rule => rule.symbol)).size !== matchingRenames.length)
+  throw new Error('Matching additions have duplicate naming identities');
+const rules = {...rebuiltPassTwenty, version: 21, previousRulesSha256: sha256(passTwentyBytes),
+  namingAdditionsSha256: sha256(matchingBytes), renames: matchingRenames};
 const output = JSON.stringify(rules, null, 2) + '\n';
 const destination = path.join(root, 'geoblox-rules.json');
 const check = process.argv.includes('--check');

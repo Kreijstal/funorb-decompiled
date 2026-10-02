@@ -356,6 +356,8 @@ Generated from explicit rules; original names remain lookup identities.
 | `F:vi.field_F:Ljava/lang/String;` | `loginJustPlayTooltipText` | wi.a(BLrh;)V reads the explicit resource key 'login_justplay_tooltip' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:vi.field_G:Ljava/lang/String;` | `createNewsOptInTooltipText` | wi.a(BLrh;)V reads the explicit resource key 'create_optin_news_tooltip' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:w.field_a:Ljava/lang/String;` | `mouseOverIconText` | wi.a(BLrh;)V reads the explicit resource key 'mouseoveranicon' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
+| `F:w.field_f:Z` | `avatarShockPending` | Set by rh.updateAttachedEntities for kind-3 entities touching the avatar with nonpositive cooldown. Consumed and cleared by kc.reconcileBoardEntities after shock feedback; le reset also clears it. ec.processMatchCandidates suppresses the empty-candidate chain reset while it is set. Producers are verified by source inspection; the native scoring probe controls this gate directly. |
+| `F:wb.field_b:I` | `newAttachmentCount` | Reset at the start of ab.moveEntitiesAndCollectContacts and during le queue reset; incremented on a newly attached entity whose detachedFromBoard flag is false. The empty-candidate path in ec.processMatchCandidates uses a positive count to reset the chain unless avatarShockPending is set. Native scoring fixtures control this gate; they do not run contact physics. |
 | `F:wb.field_c:Ljava/lang/String;` | `soundLabelText` | wi.a(BLrh;)V reads the explicit resource key 'sound_colon' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:wd.field_b:Ldm;` | `contactProbeRaster` | The pixel contact probe uses this raster while resolving moving-entity contacts. |
 | `F:wd.field_e:Ltf;` | `spawnQueue` | lc advances staged entities and releases ready members to ji.field_r. |
@@ -403,6 +405,7 @@ Generated from explicit rules; original names remain lookup identities.
 | `L:c.a(ZBII)V#11` | `actionId` | Value read from per-screen action ID array using item index; drives action-specific branches. |
 | `L:c.b(IB)V#6` | `actionId` | Value read from per-screen action ID array using item index; drives action-specific branches. |
 | `L:cf.d(B)V#0` | `popup` | The active popup iteration updates progress and routes completed points before returning the object to its pool. |
+| `L:cf.d(B)V#1` | `controlFlowGuard` | Retained entry snapshot of Geoblox.field_C; popup advancement still uses the exact floating comparison, including NaN behavior. |
 | `L:dm.a(IIIIII)V#0` | `angleRadians` | Masked 16-bit angle multiplied by 2*pi/65536 before sin/cos. |
 | `L:dm.a(IIIIII)V#1` | `scaledSin` | floor(sin(angleRadians) * scale + 0.5), used in forward corner transform. |
 | `L:dm.a(IIIIII)V#10` | `corner3Y` | Vertical corner expression using width and height, used in Y bound reduction. |
@@ -478,9 +481,13 @@ Generated from explicit rules; original names remain lookup identities.
 | `L:ec.b(I)Z#11` | `secondMatchedEntity` | Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles. |
 | `L:ec.b(I)Z#12` | `thirdMatchedEntity` | Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles. |
 | `L:ec.b(I)Z#13` | `awardedPoints` | Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles. |
+| `L:ec.b(I)Z#14` | `firstBlockedEntity` | Alias of firstMatchedEntity on the cooldown-blocked path, immediately before its entityQueue marker is cleared. |
 | `L:ec.b(I)Z#15` | `popupX` | Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles. |
+| `L:ec.b(I)Z#16` | `secondBlockedEntity` | Alias of secondMatchedEntity on the cooldown-blocked path, immediately before its entityQueue marker is cleared. |
 | `L:ec.b(I)Z#17` | `popupY` | Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles. |
+| `L:ec.b(I)Z#18` | `controlFlowGuard` | Retained entry snapshot of Geoblox.field_C; unused in the generated processMatchCandidates body. |
 | `L:ec.b(I)Z#19` | `candidateIndex` | Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles. |
+| `L:ec.b(I)Z#5` | `sortInsertionIndex` | Outer insertion-sort cursor starting at one. Later receives candidateIndex zero before candidate traversal; it is not the traversal cursor. |
 | `L:ec.b(I)Z#7` | `sortCursorThenFirstEntityId` | Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles. |
 | `L:ec.b(I)Z#8` | `packedCandidateThenSecondEntityId` | Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles. |
 | `L:ec.b(I)Z#9` | `thirdEntityId` | Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles. |
@@ -493,6 +500,11 @@ Generated from explicit rules; original names remain lookup identities.
 | `L:gh.a(BI)V#0` | `pointsForCounters` | Copies points amount for per-mode score counters. |
 | `L:gh.a(BI)V#1` | `counterSplitMode` | kd.field_c modulo three selects how added points are split across counters. |
 | `L:gh.a(BI)V#2` | `oneThirdPoints` | One third of added points in mixed counter mode. |
+| `L:gh.a(BI)V#3` | `controlFlowGuard` | Entry snapshot that controls fallthrough from capped score text and counter split arms. The native scoring probe exercises ordinary zero-guard behavior; nonzero branches remain intact. |
+| `L:gh.a(BI)V#4` | `cappedScoreText` | Character sequence for the display cap 9999999 when stored score exceeds it. writeTextAtOffset does not clamp the stored integer or truncate an existing builder suffix. |
+| `L:gh.a(BI)V#5` | `scoreValueText` | Character sequence of the current stored score, passed to the prefix writer on the ordinary path or retained nonzero-guard fallthrough. |
+| `L:gh.a(II)V#1` | `cappedPopupPointsText` | Character sequence for the pending-point display cap 99999. The pending integer total is not clamped; shorter prefix writes preserve the old suffix. |
+| `L:gh.a(II)V#2` | `popupPointsValueText` | Character sequence of the current pending total for writeTextAtOffset; nonzero Geoblox.field_C preserves fallthrough after the cap write. |
 | `L:gh.a(Z)V#0` | `shrinkingDiameter` | Result render uses 920 minus the scene tick as shrinking diameter and displays resultBonusPoints in the shrinking/countdown phases. |
 | `L:gh.a(Z)V#2` | `shrinkingBonusText` | Result render uses 920 minus the scene tick as shrinking diameter and displays resultBonusPoints in the shrinking/countdown phases. |
 | `L:gh.a(Z)V#3` | `countdownBonusText` | Result render uses 920 minus the scene tick as shrinking diameter and displays resultBonusPoints in the shrinking/countdown phases. |
@@ -612,6 +624,12 @@ Generated from explicit rules; original names remain lookup identities.
 | `L:sk.a(I)Z#7` | `farthestRadiusSquared` | Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity. |
 | `L:sk.a(I)Z#8` | `candidateEntity` | Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity. |
 | `L:sk.a(I)Z#9` | `visitedCascadeEntities` | Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity. |
+| `L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#0` | `sourceCharacterIndex` | Loop index from zero to sourceLength minus one, supplied to sourceText.charAt. |
+| `L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#1` | `characterWriteOffset` | Saved destination offset before writeOffset increments, supplied to destination.setCharAt. |
+| `L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#2` | `originalLength` | Destination length before any growth, used to validate the initial offset and decide whether setLength is needed. |
+| `L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#4` | `sourceLength` | Length read from sourceText before sequential writes; aliasing does not change this loop bound even if the destination grows. |
+| `L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#5` | `writeEndOffset` | Initial writeOffset plus sourceLength, used only to grow destination when larger than originalLength. |
+| `L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#6` | `controlFlowGuard` | Retained entry snapshot of Geoblox.field_C; no reconstructed writer branch uses it. |
 | `L:tf.a(I)I#1` | `nodeCount` | Incremented once per node walked before reaching the sentinel. |
 | `L:tf.a(I)I#2` | `node` | Walk cursor advanced along the next-node chain in countNodes. |
 | `L:tf.a(Ltf;ILhf;)V#0` | `lastMovedNode` | Saves the original source tail before splicing and installs it as the destination tail. |
@@ -634,6 +652,22 @@ Generated from explicit rules; original names remain lookup identities.
 | `L:ua.b(I)I#2` | `value` | Accumulated extracted bits returned by the method. |
 | `L:ua.b(I)I#3` | `outputShift` | Total previously consumed bits; shifts each chunk into the result. |
 | `L:ug.a(IZIII)V#0` | `popup` | The factory reuses a pooled ScorePopup and fills its instance fields before inserting it into the active queue. |
+| `L:ul.b(I)V#0` | `firstNeighborIndex` | Index into centralEntity.relatedEntities in the outer pair-enumeration loop; secondNeighborIndex starts at this index plus one. |
+| `L:ul.b(I)V#20` | `eligibleNeighborhoodVisited` | Integer flag set when an eligible central neighborhood visits a neighbor. It can enable feedback even when no three-entity match was emitted; it is not a successful-match flag. |
+| `L:ul.b(I)V#22` | `dualMatchFound` | Set when a candidate triple shares both category and sprite variant; chooses feedback mode 5 instead of mode 4 after traversal. |
+| `L:ul.b(I)V#23` | `centralEntity` | Current attached entity from the deque. Its matching counts gate neighborhood traversal and its neighbor pairs form candidate triples. |
+| `L:ul.b(I)V#24` | `variantMatchingAllowed` | Integer boolean for centralEntity.sameVariantEntityCount > 1; gates both subsequent spriteVariantIndex comparisons. |
+| `L:ul.b(I)V#25` | `categoryMatchingAllowed` | Integer boolean for centralEntity.sameCategoryEntityCount > 1; gates both subsequent entityCategoryKey comparisons. |
+| `L:ul.b(I)V#26` | `firstNeighborSharesVariant` | Gated equality of the central and first-neighbor spriteVariantIndex values; combines with the second neighbor to form tripleSharesVariant. |
+| `L:ul.b(I)V#27` | `firstNeighborSharesCategory` | Gated equality of the central and first-neighbor entityCategoryKey values; combines with the second neighbor to form tripleSharesCategory. |
+| `L:ul.b(I)V#28` | `secondNeighborIndex` | Second index into centralEntity.relatedEntities, strictly greater than firstNeighborIndex, so each pair is visited once per central entity. |
+| `L:ul.b(I)V#29` | `tripleSharesCategory` | Integer boolean for the gated central/first/second category match. Increments the category-match counter and sets the packed sign bit. |
+| `L:ul.b(I)V#30` | `tripleSharesVariant` | Integer boolean for the gated central/first/second sprite-variant match. Increments the variant-match counter and sets packed bit 30. |
+| `L:ul.b(I)V#31` | `largestPackedEntityId` | Initially the central entity ID, then permuted by the three-way descending sort. The final largest ID occupies packed bits 20..29; this variable is not permanently the central entity ID. |
+| `L:ul.b(I)V#32` | `middlePackedEntityId` | Initially the first neighbor ID, then permuted by the descending sort. The final middle ID occupies packed bits 10..19. |
+| `L:ul.b(I)V#33` | `smallestPackedEntityId` | Initially the second neighbor ID, then permuted by the descending sort. The final smallest ID occupies packed bits 0..9. |
+| `L:ul.b(I)V#34` | `swappedEntityId` | Scratch entity ID during the descending three-ID sort; not a persistent reference to any particular neighbor. |
+| `L:ul.b(I)V#35` | `controlFlowGuard` | Snapshot of Geoblox.field_C at entry. The generated body retains this read even though this snapshot is unused by the reconstructed traversal. |
 | `L:wa.a(I)I#0` | `unfinishedPoints` | Drains active popups with removeFirst and accumulates their points into the returned integer. |
 | `L:wa.a(I)I#2` | `popup` | Drains active popups with removeFirst and accumulates their points into the returned integer. |
 | `L:wi$1$CfrPartitionedBody.run()V#0` | `caughtFailure` | Source-generated catch parameter for the original wi.a(BLrh;)V runtime catch, copied into the shared loading-failure field. |
@@ -770,6 +804,7 @@ Generated from explicit rules; original names remain lookup identities.
 | `M:rh.a(B)V` | `updateAttachedEntities` | Iterates the attached queue, decreases match cooldowns, updates the selected sprites, checks avatar-contact special effects and computes the maximum squared distance from the board center. |
 | `M:sk.a(I)Z` | `checkBoundaryLossAndStartCascade` | Checks the ownership raster boundary outside scene transitions; on loss starts the end sequence and traverses contacts from the farthest entity to assign staggered ending lifetimes. |
 | `M:td.a(ILgd;)V` | `playPcmSample` | Creates a stream at ratePercent 100 and volume 96, then registers it through GameplayEntity.registerAudioStream. This schedules playback; it does not advance the stream or output a device buffer itself. Guard -348 avoids the retained bad-guard recursion. |
+| `M:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;` | `writeTextAtOffset` | Overwrites destination characters sequentially from writeOffset and grows the builder only if the write extends its length. It returns the same builder; shorter and empty writes preserve trailing text. A source aliased to the destination is read live, not copied first. Invalid offsets and RuntimeExceptions retain context wrapping; source Errors escape. Native 152-case offset/aliasing/partial-write probe verifies these semantics. |
 | `M:tf.a(I)I` | `countNodes` | Walks from sentinel.field_b until returning to the sentinel, counting each node. |
 | `M:tf.a(IIIII)[Ldm;` | `buildUnitBorderNineSliceSprites` | Delegates to n.a with inner accent width 1, border gap 1, outer border width 1, edge length 3 and retention guard 1. It preserves all four caller-supplied colours. |
 | `M:tf.a(ILhf;)V` | `addLast` | Unlinks the argument if already linked, then inserts it before the sentinel after the previous tail. |
@@ -832,6 +867,7 @@ Generated from explicit rules; original names remain lookup identities.
 | `P:cf.a(ILjava/lang/String;)Llh;#1` | `candidateText` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
 | `P:cf.b(ILjava/lang/String;)Ljava/lang/String;#0` | `guard` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
 | `P:cf.b(ILjava/lang/String;)Ljava/lang/String;#1` | `candidateText` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
+| `P:cf.d(B)V#0` | `methodGuard` | Normal callers pass 27. Values below 8 retain cf.c((byte)121) before popup advancement; the guard is not removed. |
 | `P:dm.a(IIIIII)V#0` | `sourcePivotX` | Original position retained; transform equations and renderer differential fixtures. |
 | `P:dm.a(IIIIII)V#1` | `sourcePivotY` | Original position retained; transform equations and renderer differential fixtures. |
 | `P:dm.a(IIIIII)V#2` | `destinationX` | Original position retained; transform equations and renderer differential fixtures. |
@@ -849,6 +885,7 @@ Generated from explicit rules; original names remain lookup identities.
 | `P:dm.c(IIIII)V#2` | `sourceY` | Bilinear sampler array index and 12-bit fraction expressions. |
 | `P:dm.c(IIIII)V#3` | `fractionX` | Bilinear sampler array index and 12-bit fraction expressions. |
 | `P:dm.c(IIIII)V#4` | `fractionY` | Bilinear sampler array index and 12-bit fraction expressions. |
+| `P:ec.b(I)Z#0` | `methodGuard` | Normal callers pass -18913. Other values retain the recursive ec.b(-33) branch before candidate processing. |
 | `P:fk.a(ILjava/lang/String;)[B#0` | `readGuard` | Argument role follows the corresponding reviewed text loader, resource reader or whole-array decoder; guard arithmetic and side effects remain unchanged. |
 | `P:fk.a(ILjava/lang/String;)[B#1` | `resourceKey` | Argument role follows the corresponding reviewed text loader, resource reader or whole-array decoder; guard arithmetic and side effects remain unchanged. |
 | `P:g.a(ILjava/lang/String;)Llh;#0` | `guard` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
@@ -864,8 +901,10 @@ Generated from explicit rules; original names remain lookup identities.
 | `P:gd.<init>(I[BIIZ)V#2` | `loopStart` | Constructor stores this argument into the corresponding PcmSample field; the four-argument constructor retains its default false ping-pong flag. |
 | `P:gd.<init>(I[BIIZ)V#3` | `loopEnd` | Constructor stores this argument into the corresponding PcmSample field; the four-argument constructor retains its default false ping-pong flag. |
 | `P:gd.<init>(I[BIIZ)V#4` | `pingPongLoop` | Constructor stores this argument into the corresponding PcmSample field; the four-argument constructor retains its default false ping-pong flag. |
+| `P:gh.a(BI)V#0` | `methodGuard` | Normal scoring callers pass byte 127. Other values retain the private gh.e(-17) call after writing score text. |
 | `P:gh.a(BI)V#1` | `points` | Value added to score. |
 | `P:gh.a(II)V#0` | `points` | Value added to popup points. |
+| `P:gh.a(II)V#1` | `methodGuard` | Normal pending-score callers pass -73. This argument retains the final division/remainder guard and its possible arithmetic exception. |
 | `P:gh.c(Z)V#0` | `markSubmissionBlocked` | When true sets field_K, which blocks score submission. |
 | `P:gh.f(I)V#0` | `methodGuard` | Normal updateSession calls with 10. This parameter contributes the boundary-loss guard, xor-10 music guard, unlock guard and final !=10 cleanup branch; none is simplified away. |
 | `P:i.a(B)Lja;#0` | `methodGuard` | At values >= -127 calls i.a(false), which clears avatarMaskRaster. Normal result and boundary-loss callers pass -128; no guard is removed. |
@@ -947,6 +986,10 @@ Generated from explicit rules; original names remain lookup identities.
 | `P:ra.a(ILrf;)V#1` | `track` | Music-selection wrapper: parameter 1 is the rf track identity; parameter 0 retains the nonzero ra.field_d side effect after null/current-track early return. |
 | `P:td.a(ILgd;)V#0` | `methodGuard` | PCM registration wrapper: parameter 0 must be -348 for the ordinary path; parameter 1 is supplied to createForPlaybackRate(sample,100,96). |
 | `P:td.a(ILgd;)V#1` | `sample` | PCM registration wrapper: parameter 0 must be -348 for the ordinary path; parameter 1 is supplied to createForPlaybackRate(sample,100,96). |
+| `P:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#0` | `sourceText` | CharSequence read once for length, then read sequentially with charAt. Source aliasing, length/character failures and partial writes are retained. |
+| `P:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#1` | `destination` | Mutable builder whose initial length bounds the start offset. It grows only when needed and is returned by identity without suffix truncation. |
+| `P:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#2` | `writeOffset` | Initial destination offset, validated against zero and originalLength, then incremented for each character before setCharAt. Exception context retains the advanced offset after a failed source character read. |
+| `P:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#3` | `methodGuard` | Normal callers pass values above 23. Values <=23 retain the unrelated PCM helper call with a null sample; no guard branch is removed. |
 | `P:tf.a(IIIII)[Ldm;#0` | `bottomRightBorderColor` | Passed to n.a parameter 6, the bottom/right border colour. |
 | `P:tf.a(IIIII)[Ldm;#1` | `fillColor` | Passed to n.a parameter 5, the full-sprite initial fill colour. |
 | `P:tf.a(IIIII)[Ldm;#2` | `guard` | Values at most 90 clear tf.field_d before the unchanged delegation; this is a guard, not a colour. |
@@ -964,6 +1007,7 @@ Generated from explicit rules; original names remain lookup identities.
 | `P:ua.b([B)V#0` | `containerBytes` | qc wraps the input container bytes for header and packet parsing. |
 | `P:ua.c(I)[F#0` | `packetIndex` | Selects packets[packetIndex] before starting bit input. |
 | `P:ug.a(IZIII)V#0` | `points` | Stored in the popup and its decimal points text. |
+| `P:ug.a(IZIII)V#1` | `methodGuard` | True is the normal spawn guard. With a pooled popup, false clears ug.createEmailText before the identical enqueue; pool exhaustion returns through immediate addScore before this guard is tested. |
 | `P:ug.a(IZIII)V#2` | `originY` | Stored as popup originY. |
 | `P:ug.a(IZIII)V#3` | `chainMultiplier` | Stored as popup chain multiplier; points are already multiplied by the scoring caller. |
 | `P:ug.a(IZIII)V#4` | `originX` | Stored as popup originX. |
@@ -972,6 +1016,7 @@ Generated from explicit rules; original names remain lookup identities.
 | `P:uk.a(ILjava/lang/String;)Llh;#1` | `candidateText` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
 | `P:uk.b(ILjava/lang/String;)Ljava/lang/String;#0` | `guard` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
 | `P:uk.b(ILjava/lang/String;)Ljava/lang/String;#1` | `candidateText` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
+| `P:ul.b(I)V#0` | `methodGuard` | Normal callers pass -2. Other values clear ul.field_a; match enumeration and RuntimeException context remain intact. |
 | `P:wi$1$CfrPartitionedBody.<init>(BLrh;)V#0` | `initialLoadGuard` | Source-generated carrier constructor argument initializes the corresponding shared loader parameter field; this is not an original gamepack method. |
 | `P:wi$1$CfrPartitionedBody.<init>(BLrh;)V#1` | `initialTextArchive` | Source-generated carrier constructor argument initializes the corresponding shared loader parameter field; this is not an original gamepack method. |
 | `P:wi.a(BLrh;)V#0` | `loadGuard` | Argument role follows the corresponding reviewed text loader, resource reader or whole-array decoder; guard arithmetic and side effects remain unchanged. |

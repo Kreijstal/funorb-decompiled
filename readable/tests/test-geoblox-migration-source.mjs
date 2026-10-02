@@ -19,6 +19,8 @@ function rejection(mutate, message, refreshMigrationHash = false) {
     captureProcess('git', ['clone', '--shared', '--no-checkout', '--quiet', repository, temporary]);
     for (const file of ['reproduce-geoblox.mjs', 'geoblox-rules.json', 'geoblox-source-pin.json',
       'rules/geoblox-v19.json', 'rules/geoblox-v18-results.json', 'rules/geoblox-v20-migration.json',
+      'rules/geoblox-v20.json', 'rules/geoblox-v21-matching.json',
+      'tests/test-geoblox-match-scoring.mjs', 'tests/test-geoblox-text-write.mjs',
       'funorb-stubs.jar', 'tools/PIN.json', 'tools/readable-java.mjs',
       'tools/lib/ReadableJava.java', 'tools/lib/capture-process.mjs']) {
       const destination = path.join(temporary, 'readable', file);
@@ -83,4 +85,48 @@ test('changed result evidence must link the old reviewed hash and current migrat
     data => { data.resultEvidenceUpdates[0].file = 'gh.java'; },
     data => { data.resultEvidenceUpdates.push({...data.resultEvidenceUpdates[0]}); },
   ]) rejection(change, /Invalid reviewed result evidence update/, true);
+});
+
+test('historical result evidence remains verified after new matching additions', () => {
+  rejection(data => { data.resultEvidenceManifest = '../geoblox-v18-results.json'; },
+    /Invalid historical result manifest path/, true);
+  rejection((_data, temporary) => {
+    fs.appendFileSync(path.join(temporary, 'readable/rules/geoblox-v18-results.json'), ' ');
+  }, /Historical result manifest differs from the migration/);
+});
+
+function additionsRejection(change, message, refreshHash = true) {
+  rejection((_migration, temporary) => {
+    const file = path.join(temporary, 'readable/rules/geoblox-v21-matching.json');
+    const additions = JSON.parse(fs.readFileSync(file));
+    change(additions, temporary);
+    fs.writeFileSync(file, JSON.stringify(additions, null, 2) + '\n');
+    if (refreshHash) {
+      const rulesFile = path.join(temporary, 'readable/geoblox-rules.json');
+      const rules = JSON.parse(fs.readFileSync(rulesFile));
+      rules.namingAdditionsSha256 = hash(fs.readFileSync(file));
+      fs.writeFileSync(rulesFile, JSON.stringify(rules, null, 2) + '\n');
+    }
+  }, message);
+}
+
+test('current naming evidence refuses source and probe corruption before generation', () => {
+  additionsRejection(data => { data.review.rulesAdded--; },
+    /Reviewed naming additions differ from the rules/, false);
+  additionsRejection(data => { data.sourceEvidence.find(item => item.file === 'ul.java').sha256 = '0'.repeat(64); },
+    /Reviewed naming source differs: ul.java/);
+  additionsRejection(data => { data.sourceEvidence[0].file = '../ab.java'; },
+    /Reviewed naming source differs/);
+  additionsRejection(data => { data.nativeEvidence[1].sha256 = '0'.repeat(64); },
+    /Reviewed native probe differs: tests\/test-geoblox-text-write.mjs/);
+  additionsRejection(data => { data.nativeEvidence[1].file = '../test-geoblox-text-write.mjs'; },
+    /Reviewed native probe differs/);
+});
+
+test('matching additions require their frozen previous manifest', () => {
+  additionsRejection(data => { data.previousRulesFile = '../geoblox-v20.json'; },
+    /Invalid previous additions manifest path/);
+  additionsRejection((_data, temporary) => {
+    fs.appendFileSync(path.join(temporary, 'readable/rules/geoblox-v20.json'), ' ');
+  }, /Previous naming manifest differs from the additions/);
 });

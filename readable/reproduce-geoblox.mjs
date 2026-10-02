@@ -69,12 +69,7 @@ try {
       }
     }
   }
-  if (sourcePin.namingAdditions) {
-    const additionsBytes = fs.readFileSync(path.join(root, sourcePin.namingAdditions));
-    if (digest(additionsBytes) !== rules.namingAdditionsSha256)
-      throw new Error('Reviewed naming additions differ from the rules');
-    const additions = JSON.parse(additionsBytes);
-    const updates = migration?.resultEvidenceUpdates ?? [];
+  const verifySourceEvidence = (additions, updates = [], label = 'result-helper') => {
     if (!Array.isArray(updates) || new Set(updates.map(item => item.file)).size !== updates.length)
       throw new Error('Invalid reviewed result evidence updates');
     for (const update of updates) {
@@ -88,7 +83,39 @@ try {
       const expectedSha256 = updates.find(update => update.file === item.file)?.sha256 ?? item.sha256;
       if (!/^[A-Za-z_$][A-Za-z0-9_$]*\.java$/.test(item.file) ||
           digest(fs.readFileSync(path.join(temporary, sourcePin.subdirectory, item.file))) !== expectedSha256)
-        throw new Error(`Reviewed result-helper source differs: ${item.file}`);
+        throw new Error(`Reviewed ${label} source differs: ${item.file}`);
+    }
+  };
+  // Historical result evidence remains tied to its original manifest, even
+  // when the current naming additions cover a newer pass. Only the reviewed
+  // migration may update those old source hashes.
+  if (migration?.resultEvidenceManifest) {
+    if (!/^rules\/geoblox-v\d+-[a-z-]+\.json$/.test(migration.resultEvidenceManifest))
+      throw new Error('Invalid historical result manifest path');
+    const historicalBytes = fs.readFileSync(path.join(root, migration.resultEvidenceManifest));
+    if (digest(historicalBytes) !== migration.resultEvidenceManifestSha256)
+      throw new Error('Historical result manifest differs from the migration');
+    verifySourceEvidence(JSON.parse(historicalBytes), migration.resultEvidenceUpdates ?? []);
+  }
+  if (sourcePin.namingAdditions) {
+    const additionsBytes = fs.readFileSync(path.join(root, sourcePin.namingAdditions));
+    if (digest(additionsBytes) !== rules.namingAdditionsSha256)
+      throw new Error('Reviewed naming additions differ from the rules');
+    const additions = JSON.parse(additionsBytes);
+    if (additions.previousRulesFile) {
+      if (!/^rules\/geoblox-v\d+\.json$/.test(additions.previousRulesFile))
+        throw new Error('Invalid previous additions manifest path');
+      const previousBytes = fs.readFileSync(path.join(root, additions.previousRulesFile));
+      if (digest(previousBytes) !== additions.previousRulesSha256 ||
+          rules.previousRulesSha256 !== additions.previousRulesSha256)
+        throw new Error('Previous naming manifest differs from the additions');
+    }
+    const currentIsHistorical = sourcePin.namingAdditions === migration?.resultEvidenceManifest;
+    verifySourceEvidence(additions, currentIsHistorical ? migration.resultEvidenceUpdates ?? [] : [], 'naming');
+    for (const item of additions.nativeEvidence || []) {
+      if (!/^tests\/test-geoblox-[a-z-]+\.mjs$/.test(item.file) ||
+          digest(fs.readFileSync(path.join(root, item.file))) !== item.sha256)
+        throw new Error(`Reviewed native probe differs: ${item.file}`);
     }
   }
   console.log(JSON.stringify(generateReadable({

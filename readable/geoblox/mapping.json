@@ -2468,6 +2468,20 @@
       "renamedSymbol": "F:w.mouseOverIconText:Ljava/lang/String;"
     },
     {
+      "symbol": "F:w.field_f:Z",
+      "to": "avatarShockPending",
+      "originalName": "field_f",
+      "evidence": "Set by rh.updateAttachedEntities for kind-3 entities touching the avatar with nonpositive cooldown. Consumed and cleared by kc.reconcileBoardEntities after shock feedback; le reset also clears it. ec.processMatchCandidates suppresses the empty-candidate chain reset while it is set. Producers are verified by source inspection; the native scoring probe controls this gate directly.",
+      "renamedSymbol": "F:w.avatarShockPending:Z"
+    },
+    {
+      "symbol": "F:wb.field_b:I",
+      "to": "newAttachmentCount",
+      "originalName": "field_b",
+      "evidence": "Reset at the start of ab.moveEntitiesAndCollectContacts and during le queue reset; incremented on a newly attached entity whose detachedFromBoard flag is false. The empty-candidate path in ec.processMatchCandidates uses a positive count to reset the chain unless avatarShockPending is set. Native scoring fixtures control this gate; they do not run contact physics.",
+      "renamedSymbol": "F:wb.newAttachmentCount:I"
+    },
+    {
       "symbol": "F:wb.field_c:Ljava/lang/String;",
       "to": "soundLabelText",
       "originalName": "field_c",
@@ -2795,6 +2809,13 @@
       "originalName": "var1",
       "evidence": "The active popup iteration updates progress and routes completed points before returning the object to its pool.",
       "renamedSymbol": "L:cf.advanceScorePopups(B)V#0"
+    },
+    {
+      "symbol": "L:cf.d(B)V#1",
+      "to": "controlFlowGuard",
+      "originalName": "var2",
+      "evidence": "Retained entry snapshot of Geoblox.field_C; popup advancement still uses the exact floating comparison, including NaN behavior.",
+      "renamedSymbol": "L:cf.advanceScorePopups(B)V#1"
     },
     {
       "symbol": "L:dm.a(IIIIII)V#0",
@@ -3322,11 +3343,25 @@
       "renamedSymbol": "L:ec.processMatchCandidates(I)Z#13"
     },
     {
+      "symbol": "L:ec.b(I)Z#14",
+      "to": "firstBlockedEntity",
+      "originalName": "var8_ref_ja",
+      "evidence": "Alias of firstMatchedEntity on the cooldown-blocked path, immediately before its entityQueue marker is cleared.",
+      "renamedSymbol": "L:ec.processMatchCandidates(I)Z#14"
+    },
+    {
       "symbol": "L:ec.b(I)Z#15",
       "to": "popupX",
       "originalName": "var9",
       "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles.",
       "renamedSymbol": "L:ec.processMatchCandidates(I)Z#15"
+    },
+    {
+      "symbol": "L:ec.b(I)Z#16",
+      "to": "secondBlockedEntity",
+      "originalName": "var9_ref_ja",
+      "evidence": "Alias of secondMatchedEntity on the cooldown-blocked path, immediately before its entityQueue marker is cleared.",
+      "renamedSymbol": "L:ec.processMatchCandidates(I)Z#16"
     },
     {
       "symbol": "L:ec.b(I)Z#17",
@@ -3336,11 +3371,25 @@
       "renamedSymbol": "L:ec.processMatchCandidates(I)Z#17"
     },
     {
+      "symbol": "L:ec.b(I)Z#18",
+      "to": "controlFlowGuard",
+      "originalName": "var11",
+      "evidence": "Retained entry snapshot of Geoblox.field_C; unused in the generated processMatchCandidates body.",
+      "renamedSymbol": "L:ec.processMatchCandidates(I)Z#18"
+    },
+    {
       "symbol": "L:ec.b(I)Z#19",
       "to": "candidateIndex",
       "originalName": "var12",
       "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles.",
       "renamedSymbol": "L:ec.processMatchCandidates(I)Z#19"
+    },
+    {
+      "symbol": "L:ec.b(I)Z#5",
+      "to": "sortInsertionIndex",
+      "originalName": "var1_int",
+      "evidence": "Outer insertion-sort cursor starting at one. Later receives candidateIndex zero before candidate traversal; it is not the traversal cursor.",
+      "renamedSymbol": "L:ec.processMatchCandidates(I)Z#5"
     },
     {
       "symbol": "L:ec.b(I)Z#7",
@@ -3425,6 +3474,41 @@
       "to": "oneThirdPoints",
       "evidence": "One third of added points in mixed counter mode.",
       "renamedSymbol": "L:GameplaySession.addScore(BI)V#2"
+    },
+    {
+      "symbol": "L:gh.a(BI)V#3",
+      "to": "controlFlowGuard",
+      "originalName": "var6",
+      "evidence": "Entry snapshot that controls fallthrough from capped score text and counter split arms. The native scoring probe exercises ordinary zero-guard behavior; nonzero branches remain intact.",
+      "renamedSymbol": "L:GameplaySession.addScore(BI)V#3"
+    },
+    {
+      "symbol": "L:gh.a(BI)V#4",
+      "to": "cappedScoreText",
+      "originalName": "var7",
+      "evidence": "Character sequence for the display cap 9999999 when stored score exceeds it. writeTextAtOffset does not clamp the stored integer or truncate an existing builder suffix.",
+      "renamedSymbol": "L:GameplaySession.addScore(BI)V#4"
+    },
+    {
+      "symbol": "L:gh.a(BI)V#5",
+      "to": "scoreValueText",
+      "originalName": "var8",
+      "evidence": "Character sequence of the current stored score, passed to the prefix writer on the ordinary path or retained nonzero-guard fallthrough.",
+      "renamedSymbol": "L:GameplaySession.addScore(BI)V#5"
+    },
+    {
+      "symbol": "L:gh.a(II)V#1",
+      "to": "cappedPopupPointsText",
+      "originalName": "var4",
+      "evidence": "Character sequence for the pending-point display cap 99999. The pending integer total is not clamped; shorter prefix writes preserve the old suffix.",
+      "renamedSymbol": "L:GameplaySession.addPopupPoints(II)V#1"
+    },
+    {
+      "symbol": "L:gh.a(II)V#2",
+      "to": "popupPointsValueText",
+      "originalName": "var5",
+      "evidence": "Character sequence of the current pending total for writeTextAtOffset; nonzero Geoblox.field_C preserves fallthrough after the cap write.",
+      "renamedSymbol": "L:GameplaySession.addPopupPoints(II)V#2"
     },
     {
       "symbol": "L:gh.a(Z)V#0",
@@ -4260,6 +4344,48 @@
       "renamedSymbol": "L:sk.checkBoundaryLossAndStartCascade(I)Z#9"
     },
     {
+      "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#0",
+      "to": "sourceCharacterIndex",
+      "originalName": "var7",
+      "evidence": "Loop index from zero to sourceLength minus one, supplied to sourceText.charAt.",
+      "renamedSymbol": "L:td.writeTextAtOffset(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#0"
+    },
+    {
+      "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#1",
+      "to": "characterWriteOffset",
+      "originalName": "incrementValue$1",
+      "evidence": "Saved destination offset before writeOffset increments, supplied to destination.setCharAt.",
+      "renamedSymbol": "L:td.writeTextAtOffset(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#1"
+    },
+    {
+      "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#2",
+      "to": "originalLength",
+      "originalName": "var4_int",
+      "evidence": "Destination length before any growth, used to validate the initial offset and decide whether setLength is needed.",
+      "renamedSymbol": "L:td.writeTextAtOffset(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#2"
+    },
+    {
+      "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#4",
+      "to": "sourceLength",
+      "originalName": "var5",
+      "evidence": "Length read from sourceText before sequential writes; aliasing does not change this loop bound even if the destination grows.",
+      "renamedSymbol": "L:td.writeTextAtOffset(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#4"
+    },
+    {
+      "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#5",
+      "to": "writeEndOffset",
+      "originalName": "var6",
+      "evidence": "Initial writeOffset plus sourceLength, used only to grow destination when larger than originalLength.",
+      "renamedSymbol": "L:td.writeTextAtOffset(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#5"
+    },
+    {
+      "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#6",
+      "to": "controlFlowGuard",
+      "originalName": "var8",
+      "evidence": "Retained entry snapshot of Geoblox.field_C; no reconstructed writer branch uses it.",
+      "renamedSymbol": "L:td.writeTextAtOffset(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#6"
+    },
+    {
       "symbol": "L:tf.a(I)I#1",
       "to": "nodeCount",
       "evidence": "Incremented once per node walked before reaching the sentinel.",
@@ -4412,6 +4538,118 @@
       "originalName": "var5",
       "evidence": "The factory reuses a pooled ScorePopup and fills its instance fields before inserting it into the active queue.",
       "renamedSymbol": "L:ug.spawnScorePopup(IZIII)V#0"
+    },
+    {
+      "symbol": "L:ul.b(I)V#0",
+      "to": "firstNeighborIndex",
+      "originalName": "var6",
+      "evidence": "Index into centralEntity.relatedEntities in the outer pair-enumeration loop; secondNeighborIndex starts at this index plus one.",
+      "renamedSymbol": "L:ul.collectMatchCandidates(I)V#0"
+    },
+    {
+      "symbol": "L:ul.b(I)V#20",
+      "to": "eligibleNeighborhoodVisited",
+      "originalName": "var1_int",
+      "evidence": "Integer flag set when an eligible central neighborhood visits a neighbor. It can enable feedback even when no three-entity match was emitted; it is not a successful-match flag.",
+      "renamedSymbol": "L:ul.collectMatchCandidates(I)V#20"
+    },
+    {
+      "symbol": "L:ul.b(I)V#22",
+      "to": "dualMatchFound",
+      "originalName": "var2",
+      "evidence": "Set when a candidate triple shares both category and sprite variant; chooses feedback mode 5 instead of mode 4 after traversal.",
+      "renamedSymbol": "L:ul.collectMatchCandidates(I)V#22"
+    },
+    {
+      "symbol": "L:ul.b(I)V#23",
+      "to": "centralEntity",
+      "originalName": "var3",
+      "evidence": "Current attached entity from the deque. Its matching counts gate neighborhood traversal and its neighbor pairs form candidate triples.",
+      "renamedSymbol": "L:ul.collectMatchCandidates(I)V#23"
+    },
+    {
+      "symbol": "L:ul.b(I)V#24",
+      "to": "variantMatchingAllowed",
+      "originalName": "var4",
+      "evidence": "Integer boolean for centralEntity.sameVariantEntityCount > 1; gates both subsequent spriteVariantIndex comparisons.",
+      "renamedSymbol": "L:ul.collectMatchCandidates(I)V#24"
+    },
+    {
+      "symbol": "L:ul.b(I)V#25",
+      "to": "categoryMatchingAllowed",
+      "originalName": "var5",
+      "evidence": "Integer boolean for centralEntity.sameCategoryEntityCount > 1; gates both subsequent entityCategoryKey comparisons.",
+      "renamedSymbol": "L:ul.collectMatchCandidates(I)V#25"
+    },
+    {
+      "symbol": "L:ul.b(I)V#26",
+      "to": "firstNeighborSharesVariant",
+      "originalName": "var7",
+      "evidence": "Gated equality of the central and first-neighbor spriteVariantIndex values; combines with the second neighbor to form tripleSharesVariant.",
+      "renamedSymbol": "L:ul.collectMatchCandidates(I)V#26"
+    },
+    {
+      "symbol": "L:ul.b(I)V#27",
+      "to": "firstNeighborSharesCategory",
+      "originalName": "var8",
+      "evidence": "Gated equality of the central and first-neighbor entityCategoryKey values; combines with the second neighbor to form tripleSharesCategory.",
+      "renamedSymbol": "L:ul.collectMatchCandidates(I)V#27"
+    },
+    {
+      "symbol": "L:ul.b(I)V#28",
+      "to": "secondNeighborIndex",
+      "originalName": "var9",
+      "evidence": "Second index into centralEntity.relatedEntities, strictly greater than firstNeighborIndex, so each pair is visited once per central entity.",
+      "renamedSymbol": "L:ul.collectMatchCandidates(I)V#28"
+    },
+    {
+      "symbol": "L:ul.b(I)V#29",
+      "to": "tripleSharesCategory",
+      "originalName": "var10",
+      "evidence": "Integer boolean for the gated central/first/second category match. Increments the category-match counter and sets the packed sign bit.",
+      "renamedSymbol": "L:ul.collectMatchCandidates(I)V#29"
+    },
+    {
+      "symbol": "L:ul.b(I)V#30",
+      "to": "tripleSharesVariant",
+      "originalName": "var11",
+      "evidence": "Integer boolean for the gated central/first/second sprite-variant match. Increments the variant-match counter and sets packed bit 30.",
+      "renamedSymbol": "L:ul.collectMatchCandidates(I)V#30"
+    },
+    {
+      "symbol": "L:ul.b(I)V#31",
+      "to": "largestPackedEntityId",
+      "originalName": "var12",
+      "evidence": "Initially the central entity ID, then permuted by the three-way descending sort. The final largest ID occupies packed bits 20..29; this variable is not permanently the central entity ID.",
+      "renamedSymbol": "L:ul.collectMatchCandidates(I)V#31"
+    },
+    {
+      "symbol": "L:ul.b(I)V#32",
+      "to": "middlePackedEntityId",
+      "originalName": "var13",
+      "evidence": "Initially the first neighbor ID, then permuted by the descending sort. The final middle ID occupies packed bits 10..19.",
+      "renamedSymbol": "L:ul.collectMatchCandidates(I)V#32"
+    },
+    {
+      "symbol": "L:ul.b(I)V#33",
+      "to": "smallestPackedEntityId",
+      "originalName": "var14",
+      "evidence": "Initially the second neighbor ID, then permuted by the descending sort. The final smallest ID occupies packed bits 0..9.",
+      "renamedSymbol": "L:ul.collectMatchCandidates(I)V#33"
+    },
+    {
+      "symbol": "L:ul.b(I)V#34",
+      "to": "swappedEntityId",
+      "originalName": "var15",
+      "evidence": "Scratch entity ID during the descending three-ID sort; not a persistent reference to any particular neighbor.",
+      "renamedSymbol": "L:ul.collectMatchCandidates(I)V#34"
+    },
+    {
+      "symbol": "L:ul.b(I)V#35",
+      "to": "controlFlowGuard",
+      "originalName": "var16",
+      "evidence": "Snapshot of Geoblox.field_C at entry. The generated body retains this read even though this snapshot is unused by the reconstructed traversal.",
+      "renamedSymbol": "L:ul.collectMatchCandidates(I)V#35"
     },
     {
       "symbol": "L:wa.a(I)I#0",
@@ -5366,6 +5604,13 @@
       "renamedSymbol": "M:td.playPcmSample(ILPcmSample;)V"
     },
     {
+      "symbol": "M:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;",
+      "to": "writeTextAtOffset",
+      "originalName": "a",
+      "evidence": "Overwrites destination characters sequentially from writeOffset and grows the builder only if the write extends its length. It returns the same builder; shorter and empty writes preserve trailing text. A source aliased to the destination is read live, not copied first. Invalid offsets and RuntimeExceptions retain context wrapping; source Errors escape. Native 152-case offset/aliasing/partial-write probe verifies these semantics.",
+      "renamedSymbol": "M:td.writeTextAtOffset(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;"
+    },
+    {
       "symbol": "M:tf.a(I)I",
       "to": "countNodes",
       "evidence": "Walks from sentinel.field_b until returning to the sentinel, counting each node.",
@@ -5800,6 +6045,13 @@
       "renamedSymbol": "P:cf.validationMessageForText(ILjava/lang/String;)Ljava/lang/String;#1"
     },
     {
+      "symbol": "P:cf.d(B)V#0",
+      "to": "methodGuard",
+      "originalName": "param0",
+      "evidence": "Normal callers pass 27. Values below 8 retain cf.c((byte)121) before popup advancement; the guard is not removed.",
+      "renamedSymbol": "P:cf.advanceScorePopups(B)V#0"
+    },
+    {
       "symbol": "P:dm.a(IIIIII)V#0",
       "to": "sourcePivotX",
       "evidence": "Original position retained; transform equations and renderer differential fixtures.",
@@ -5919,6 +6171,13 @@
       "renamedSymbol": "P:Sprite.sampleBilinear(IIIII)V#4"
     },
     {
+      "symbol": "P:ec.b(I)Z#0",
+      "to": "methodGuard",
+      "originalName": "param0",
+      "evidence": "Normal callers pass -18913. Other values retain the recursive ec.b(-33) branch before candidate processing.",
+      "renamedSymbol": "P:ec.processMatchCandidates(I)Z#0"
+    },
+    {
       "symbol": "P:fk.a(ILjava/lang/String;)[B#0",
       "to": "readGuard",
       "originalName": "param0",
@@ -6024,6 +6283,13 @@
       "renamedSymbol": "P:PcmSample.<init>(I[BIIZ)V#4"
     },
     {
+      "symbol": "P:gh.a(BI)V#0",
+      "to": "methodGuard",
+      "originalName": "param0",
+      "evidence": "Normal scoring callers pass byte 127. Other values retain the private gh.e(-17) call after writing score text.",
+      "renamedSymbol": "P:GameplaySession.addScore(BI)V#0"
+    },
+    {
       "symbol": "P:gh.a(BI)V#1",
       "to": "points",
       "evidence": "Value added to score.",
@@ -6036,6 +6302,13 @@
       "evidence": "Value added to popup points.",
       "originalName": "param0",
       "renamedSymbol": "P:GameplaySession.addPopupPoints(II)V#0"
+    },
+    {
+      "symbol": "P:gh.a(II)V#1",
+      "to": "methodGuard",
+      "originalName": "param1",
+      "evidence": "Normal pending-score callers pass -73. This argument retains the final division/remainder guard and its possible arithmetic exception.",
+      "renamedSymbol": "P:GameplaySession.addPopupPoints(II)V#1"
     },
     {
       "symbol": "P:gh.c(Z)V#0",
@@ -6605,6 +6878,34 @@
       "renamedSymbol": "P:td.playPcmSample(ILPcmSample;)V#1"
     },
     {
+      "symbol": "P:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#0",
+      "to": "sourceText",
+      "originalName": "param0",
+      "evidence": "CharSequence read once for length, then read sequentially with charAt. Source aliasing, length/character failures and partial writes are retained.",
+      "renamedSymbol": "P:td.writeTextAtOffset(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#0"
+    },
+    {
+      "symbol": "P:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#1",
+      "to": "destination",
+      "originalName": "param1",
+      "evidence": "Mutable builder whose initial length bounds the start offset. It grows only when needed and is returned by identity without suffix truncation.",
+      "renamedSymbol": "P:td.writeTextAtOffset(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#1"
+    },
+    {
+      "symbol": "P:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#2",
+      "to": "writeOffset",
+      "originalName": "param2",
+      "evidence": "Initial destination offset, validated against zero and originalLength, then incremented for each character before setCharAt. Exception context retains the advanced offset after a failed source character read.",
+      "renamedSymbol": "P:td.writeTextAtOffset(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#2"
+    },
+    {
+      "symbol": "P:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#3",
+      "to": "methodGuard",
+      "originalName": "param3",
+      "evidence": "Normal callers pass values above 23. Values <=23 retain the unrelated PCM helper call with a null sample; no guard branch is removed.",
+      "renamedSymbol": "P:td.writeTextAtOffset(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#3"
+    },
+    {
       "symbol": "P:tf.a(IIIII)[Ldm;#0",
       "to": "bottomRightBorderColor",
       "originalName": "param0",
@@ -6724,6 +7025,13 @@
       "renamedSymbol": "P:ug.spawnScorePopup(IZIII)V#0"
     },
     {
+      "symbol": "P:ug.a(IZIII)V#1",
+      "to": "methodGuard",
+      "originalName": "param1",
+      "evidence": "True is the normal spawn guard. With a pooled popup, false clears ug.createEmailText before the identical enqueue; pool exhaustion returns through immediate addScore before this guard is tested.",
+      "renamedSymbol": "P:ug.spawnScorePopup(IZIII)V#1"
+    },
+    {
       "symbol": "P:ug.a(IZIII)V#2",
       "to": "originY",
       "originalName": "param2",
@@ -6778,6 +7086,13 @@
       "originalName": "param1",
       "evidence": "Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message.",
       "renamedSymbol": "P:uk.validationMessageForText(ILjava/lang/String;)Ljava/lang/String;#1"
+    },
+    {
+      "symbol": "P:ul.b(I)V#0",
+      "to": "methodGuard",
+      "originalName": "param0",
+      "evidence": "Normal callers pass -2. Other values clear ul.field_a; match enumeration and RuntimeException context remain intact.",
+      "renamedSymbol": "P:ul.collectMatchCandidates(I)V#0"
     },
     {
       "symbol": "P:wi$1$CfrPartitionedBody.<init>(BLrh;)V#0",
@@ -32276,9 +32591,9 @@
     },
     {
       "symbol": "F:w.field_f:Z",
-      "renamedSymbol": "F:w.field_f:Z",
+      "renamedSymbol": "F:w.avatarShockPending:Z",
       "originalName": "field_f",
-      "renamedName": "field_f",
+      "renamedName": "avatarShockPending",
       "declaration": {
         "file": "w.java",
         "start": 119,
@@ -32474,9 +32789,9 @@
     },
     {
       "symbol": "F:wb.field_b:I",
-      "renamedSymbol": "F:wb.field_b:I",
+      "renamedSymbol": "F:wb.newAttachmentCount:I",
       "originalName": "field_b",
-      "renamedName": "field_b",
+      "renamedName": "newAttachmentCount",
       "declaration": {
         "file": "wb.java",
         "start": 70,
@@ -47183,7 +47498,7 @@
       "symbol": "L:cf.d(B)V#1",
       "renamedSymbol": "L:cf.advanceScorePopups(B)V#1",
       "originalName": "var2",
-      "renamedName": "var2",
+      "renamedName": "controlFlowGuard",
       "declaration": {
         "file": "cf.java",
         "start": 5075,
@@ -60086,7 +60401,7 @@
       "symbol": "L:ec.b(I)Z#14",
       "renamedSymbol": "L:ec.processMatchCandidates(I)Z#14",
       "originalName": "var8_ref_ja",
-      "renamedName": "var8_ref_ja",
+      "renamedName": "firstBlockedEntity",
       "declaration": {
         "file": "ec.java",
         "start": 1716,
@@ -60108,7 +60423,7 @@
       "symbol": "L:ec.b(I)Z#16",
       "renamedSymbol": "L:ec.processMatchCandidates(I)Z#16",
       "originalName": "var9_ref_ja",
-      "renamedName": "var9_ref_ja",
+      "renamedName": "secondBlockedEntity",
       "declaration": {
         "file": "ec.java",
         "start": 1769,
@@ -60130,7 +60445,7 @@
       "symbol": "L:ec.b(I)Z#18",
       "renamedSymbol": "L:ec.processMatchCandidates(I)Z#18",
       "originalName": "var11",
-      "renamedName": "var11",
+      "renamedName": "controlFlowGuard",
       "declaration": {
         "file": "ec.java",
         "start": 1824,
@@ -60196,7 +60511,7 @@
       "symbol": "L:ec.b(I)Z#5",
       "renamedSymbol": "L:ec.processMatchCandidates(I)Z#5",
       "originalName": "var1_int",
-      "renamedName": "var1_int",
+      "renamedName": "sortInsertionIndex",
       "declaration": {
         "file": "ec.java",
         "start": 1493,
@@ -73495,7 +73810,7 @@
       "symbol": "L:gh.a(BI)V#3",
       "renamedSymbol": "L:GameplaySession.addScore(BI)V#3",
       "originalName": "var6",
-      "renamedName": "var6",
+      "renamedName": "controlFlowGuard",
       "declaration": {
         "file": "gh.java",
         "start": 52330,
@@ -73506,7 +73821,7 @@
       "symbol": "L:gh.a(BI)V#4",
       "renamedSymbol": "L:GameplaySession.addScore(BI)V#4",
       "originalName": "var7",
-      "renamedName": "var7",
+      "renamedName": "cappedScoreText",
       "declaration": {
         "file": "gh.java",
         "start": 52357,
@@ -73517,7 +73832,7 @@
       "symbol": "L:gh.a(BI)V#5",
       "renamedSymbol": "L:GameplaySession.addScore(BI)V#5",
       "originalName": "var8",
-      "renamedName": "var8",
+      "renamedName": "scoreValueText",
       "declaration": {
         "file": "gh.java",
         "start": 52384,
@@ -73913,7 +74228,7 @@
       "symbol": "L:gh.a(II)V#1",
       "renamedSymbol": "L:GameplaySession.addPopupPoints(II)V#1",
       "originalName": "var4",
-      "renamedName": "var4",
+      "renamedName": "cappedPopupPointsText",
       "declaration": {
         "file": "gh.java",
         "start": 70081,
@@ -73924,7 +74239,7 @@
       "symbol": "L:gh.a(II)V#2",
       "renamedSymbol": "L:GameplaySession.addPopupPoints(II)V#2",
       "originalName": "var5",
-      "renamedName": "var5",
+      "renamedName": "popupPointsValueText",
       "declaration": {
         "file": "gh.java",
         "start": 70108,
@@ -139075,9 +139390,9 @@
     },
     {
       "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#0",
-      "renamedSymbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#0",
+      "renamedSymbol": "L:td.writeTextAtOffset(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#0",
       "originalName": "var7",
-      "renamedName": "var7",
+      "renamedName": "sourceCharacterIndex",
       "declaration": {
         "file": "td.java",
         "start": 4592,
@@ -139086,9 +139401,9 @@
     },
     {
       "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#1",
-      "renamedSymbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#1",
+      "renamedSymbol": "L:td.writeTextAtOffset(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#1",
       "originalName": "incrementValue$1",
-      "renamedName": "incrementValue$1",
+      "renamedName": "characterWriteOffset",
       "declaration": {
         "file": "td.java",
         "start": 4614,
@@ -139097,7 +139412,7 @@
     },
     {
       "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#10",
-      "renamedSymbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#10",
+      "renamedSymbol": "L:td.writeTextAtOffset(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#10",
       "originalName": "stackIn_20_0",
       "renamedName": "stackIn_20_0",
       "declaration": {
@@ -139108,7 +139423,7 @@
     },
     {
       "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#11",
-      "renamedSymbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#11",
+      "renamedSymbol": "L:td.writeTextAtOffset(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#11",
       "originalName": "stackIn_20_1",
       "renamedName": "stackIn_20_1",
       "declaration": {
@@ -139119,7 +139434,7 @@
     },
     {
       "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#12",
-      "renamedSymbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#12",
+      "renamedSymbol": "L:td.writeTextAtOffset(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#12",
       "originalName": "stackIn_21_0",
       "renamedName": "stackIn_21_0",
       "declaration": {
@@ -139130,7 +139445,7 @@
     },
     {
       "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#13",
-      "renamedSymbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#13",
+      "renamedSymbol": "L:td.writeTextAtOffset(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#13",
       "originalName": "stackIn_21_1",
       "renamedName": "stackIn_21_1",
       "declaration": {
@@ -139141,7 +139456,7 @@
     },
     {
       "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#14",
-      "renamedSymbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#14",
+      "renamedSymbol": "L:td.writeTextAtOffset(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#14",
       "originalName": "stackIn_21_2",
       "renamedName": "stackIn_21_2",
       "declaration": {
@@ -139152,7 +139467,7 @@
     },
     {
       "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#15",
-      "renamedSymbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#15",
+      "renamedSymbol": "L:td.writeTextAtOffset(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#15",
       "originalName": "stackIn_23_1",
       "renamedName": "stackIn_23_1",
       "declaration": {
@@ -139163,7 +139478,7 @@
     },
     {
       "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#16",
-      "renamedSymbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#16",
+      "renamedSymbol": "L:td.writeTextAtOffset(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#16",
       "originalName": "stackIn_24_1",
       "renamedName": "stackIn_24_1",
       "declaration": {
@@ -139174,7 +139489,7 @@
     },
     {
       "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#17",
-      "renamedSymbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#17",
+      "renamedSymbol": "L:td.writeTextAtOffset(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#17",
       "originalName": "stackIn_24_2",
       "renamedName": "stackIn_24_2",
       "declaration": {
@@ -139185,7 +139500,7 @@
     },
     {
       "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#18",
-      "renamedSymbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#18",
+      "renamedSymbol": "L:td.writeTextAtOffset(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#18",
       "originalName": "decompiledRegionSelector0",
       "renamedName": "decompiledRegionSelector0",
       "declaration": {
@@ -139196,7 +139511,7 @@
     },
     {
       "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#19",
-      "renamedSymbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#19",
+      "renamedSymbol": "L:td.writeTextAtOffset(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#19",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -139207,9 +139522,9 @@
     },
     {
       "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#2",
-      "renamedSymbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#2",
+      "renamedSymbol": "L:td.writeTextAtOffset(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#2",
       "originalName": "var4_int",
-      "renamedName": "var4_int",
+      "renamedName": "originalLength",
       "declaration": {
         "file": "td.java",
         "start": 4648,
@@ -139218,7 +139533,7 @@
     },
     {
       "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#20",
-      "renamedSymbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#20",
+      "renamedSymbol": "L:td.writeTextAtOffset(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#20",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -139229,7 +139544,7 @@
     },
     {
       "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#3",
-      "renamedSymbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#3",
+      "renamedSymbol": "L:td.writeTextAtOffset(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -139240,9 +139555,9 @@
     },
     {
       "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#4",
-      "renamedSymbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#4",
+      "renamedSymbol": "L:td.writeTextAtOffset(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#4",
       "originalName": "var5",
-      "renamedName": "var5",
+      "renamedName": "sourceLength",
       "declaration": {
         "file": "td.java",
         "start": 4712,
@@ -139251,9 +139566,9 @@
     },
     {
       "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#5",
-      "renamedSymbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#5",
+      "renamedSymbol": "L:td.writeTextAtOffset(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#5",
       "originalName": "var6",
-      "renamedName": "var6",
+      "renamedName": "writeEndOffset",
       "declaration": {
         "file": "td.java",
         "start": 4734,
@@ -139262,9 +139577,9 @@
     },
     {
       "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#6",
-      "renamedSymbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#6",
+      "renamedSymbol": "L:td.writeTextAtOffset(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#6",
       "originalName": "var8",
-      "renamedName": "var8",
+      "renamedName": "controlFlowGuard",
       "declaration": {
         "file": "td.java",
         "start": 4756,
@@ -139273,7 +139588,7 @@
     },
     {
       "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#7",
-      "renamedSymbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#7",
+      "renamedSymbol": "L:td.writeTextAtOffset(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#7",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -139284,7 +139599,7 @@
     },
     {
       "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#8",
-      "renamedSymbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#8",
+      "renamedSymbol": "L:td.writeTextAtOffset(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#8",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -139295,7 +139610,7 @@
     },
     {
       "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#9",
-      "renamedSymbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#9",
+      "renamedSymbol": "L:td.writeTextAtOffset(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#9",
       "originalName": "stackIn_17_0",
       "renamedName": "stackIn_17_0",
       "declaration": {
@@ -147239,7 +147554,7 @@
       "symbol": "L:ul.b(I)V#0",
       "renamedSymbol": "L:ul.collectMatchCandidates(I)V#0",
       "originalName": "var6",
-      "renamedName": "var6",
+      "renamedName": "firstNeighborIndex",
       "declaration": {
         "file": "ul.java",
         "start": 416,
@@ -147382,7 +147697,7 @@
       "symbol": "L:ul.b(I)V#20",
       "renamedSymbol": "L:ul.collectMatchCandidates(I)V#20",
       "originalName": "var1_int",
-      "renamedName": "var1_int",
+      "renamedName": "eligibleNeighborhoodVisited",
       "declaration": {
         "file": "ul.java",
         "start": 1024,
@@ -147404,7 +147719,7 @@
       "symbol": "L:ul.b(I)V#22",
       "renamedSymbol": "L:ul.collectMatchCandidates(I)V#22",
       "originalName": "var2",
-      "renamedName": "var2",
+      "renamedName": "dualMatchFound",
       "declaration": {
         "file": "ul.java",
         "start": 1088,
@@ -147415,7 +147730,7 @@
       "symbol": "L:ul.b(I)V#23",
       "renamedSymbol": "L:ul.collectMatchCandidates(I)V#23",
       "originalName": "var3",
-      "renamedName": "var3",
+      "renamedName": "centralEntity",
       "declaration": {
         "file": "ul.java",
         "start": 1109,
@@ -147426,7 +147741,7 @@
       "symbol": "L:ul.b(I)V#24",
       "renamedSymbol": "L:ul.collectMatchCandidates(I)V#24",
       "originalName": "var4",
-      "renamedName": "var4",
+      "renamedName": "variantMatchingAllowed",
       "declaration": {
         "file": "ul.java",
         "start": 1134,
@@ -147437,7 +147752,7 @@
       "symbol": "L:ul.b(I)V#25",
       "renamedSymbol": "L:ul.collectMatchCandidates(I)V#25",
       "originalName": "var5",
-      "renamedName": "var5",
+      "renamedName": "categoryMatchingAllowed",
       "declaration": {
         "file": "ul.java",
         "start": 1156,
@@ -147448,7 +147763,7 @@
       "symbol": "L:ul.b(I)V#26",
       "renamedSymbol": "L:ul.collectMatchCandidates(I)V#26",
       "originalName": "var7",
-      "renamedName": "var7",
+      "renamedName": "firstNeighborSharesVariant",
       "declaration": {
         "file": "ul.java",
         "start": 1178,
@@ -147459,7 +147774,7 @@
       "symbol": "L:ul.b(I)V#27",
       "renamedSymbol": "L:ul.collectMatchCandidates(I)V#27",
       "originalName": "var8",
-      "renamedName": "var8",
+      "renamedName": "firstNeighborSharesCategory",
       "declaration": {
         "file": "ul.java",
         "start": 1200,
@@ -147470,7 +147785,7 @@
       "symbol": "L:ul.b(I)V#28",
       "renamedSymbol": "L:ul.collectMatchCandidates(I)V#28",
       "originalName": "var9",
-      "renamedName": "var9",
+      "renamedName": "secondNeighborIndex",
       "declaration": {
         "file": "ul.java",
         "start": 1222,
@@ -147481,7 +147796,7 @@
       "symbol": "L:ul.b(I)V#29",
       "renamedSymbol": "L:ul.collectMatchCandidates(I)V#29",
       "originalName": "var10",
-      "renamedName": "var10",
+      "renamedName": "tripleSharesCategory",
       "declaration": {
         "file": "ul.java",
         "start": 1244,
@@ -147503,7 +147818,7 @@
       "symbol": "L:ul.b(I)V#30",
       "renamedSymbol": "L:ul.collectMatchCandidates(I)V#30",
       "originalName": "var11",
-      "renamedName": "var11",
+      "renamedName": "tripleSharesVariant",
       "declaration": {
         "file": "ul.java",
         "start": 1267,
@@ -147514,7 +147829,7 @@
       "symbol": "L:ul.b(I)V#31",
       "renamedSymbol": "L:ul.collectMatchCandidates(I)V#31",
       "originalName": "var12",
-      "renamedName": "var12",
+      "renamedName": "largestPackedEntityId",
       "declaration": {
         "file": "ul.java",
         "start": 1290,
@@ -147525,7 +147840,7 @@
       "symbol": "L:ul.b(I)V#32",
       "renamedSymbol": "L:ul.collectMatchCandidates(I)V#32",
       "originalName": "var13",
-      "renamedName": "var13",
+      "renamedName": "middlePackedEntityId",
       "declaration": {
         "file": "ul.java",
         "start": 1313,
@@ -147536,7 +147851,7 @@
       "symbol": "L:ul.b(I)V#33",
       "renamedSymbol": "L:ul.collectMatchCandidates(I)V#33",
       "originalName": "var14",
-      "renamedName": "var14",
+      "renamedName": "smallestPackedEntityId",
       "declaration": {
         "file": "ul.java",
         "start": 1336,
@@ -147547,7 +147862,7 @@
       "symbol": "L:ul.b(I)V#34",
       "renamedSymbol": "L:ul.collectMatchCandidates(I)V#34",
       "originalName": "var15",
-      "renamedName": "var15",
+      "renamedName": "swappedEntityId",
       "declaration": {
         "file": "ul.java",
         "start": 1359,
@@ -147558,7 +147873,7 @@
       "symbol": "L:ul.b(I)V#35",
       "renamedSymbol": "L:ul.collectMatchCandidates(I)V#35",
       "originalName": "var16",
-      "renamedName": "var16",
+      "renamedName": "controlFlowGuard",
       "declaration": {
         "file": "ul.java",
         "start": 1382,
@@ -180897,9 +181212,9 @@
     },
     {
       "symbol": "M:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;",
-      "renamedSymbol": "M:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;",
+      "renamedSymbol": "M:td.writeTextAtOffset(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "writeTextAtOffset",
       "declaration": {
         "file": "td.java",
         "start": 4509,
@@ -189424,7 +189739,7 @@
       "symbol": "P:cf.d(B)V#0",
       "renamedSymbol": "P:cf.advanceScorePopups(B)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "methodGuard",
       "declaration": {
         "file": "cf.java",
         "start": 5029,
@@ -195188,7 +195503,7 @@
       "symbol": "P:ec.b(I)Z#0",
       "renamedSymbol": "P:ec.processMatchCandidates(I)Z#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "methodGuard",
       "declaration": {
         "file": "ec.java",
         "start": 1280,
@@ -200776,7 +201091,7 @@
       "symbol": "P:gh.a(BI)V#0",
       "renamedSymbol": "P:GameplaySession.addScore(BI)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "methodGuard",
       "declaration": {
         "file": "gh.java",
         "start": 52242,
@@ -200820,7 +201135,7 @@
       "symbol": "P:gh.a(II)V#1",
       "renamedSymbol": "P:GameplaySession.addPopupPoints(II)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "methodGuard",
       "declaration": {
         "file": "gh.java",
         "start": 70032,
@@ -231244,9 +231559,9 @@
     },
     {
       "symbol": "P:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#0",
-      "renamedSymbol": "P:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#0",
+      "renamedSymbol": "P:td.writeTextAtOffset(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "sourceText",
       "declaration": {
         "file": "td.java",
         "start": 4524,
@@ -231255,9 +231570,9 @@
     },
     {
       "symbol": "P:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#1",
-      "renamedSymbol": "P:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#1",
+      "renamedSymbol": "P:td.writeTextAtOffset(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "destination",
       "declaration": {
         "file": "td.java",
         "start": 4546,
@@ -231266,9 +231581,9 @@
     },
     {
       "symbol": "P:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#2",
-      "renamedSymbol": "P:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#2",
+      "renamedSymbol": "P:td.writeTextAtOffset(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "writeOffset",
       "declaration": {
         "file": "td.java",
         "start": 4558,
@@ -231277,9 +231592,9 @@
     },
     {
       "symbol": "P:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#3",
-      "renamedSymbol": "P:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#3",
+      "renamedSymbol": "P:td.writeTextAtOffset(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#3",
       "originalName": "param3",
-      "renamedName": "param3",
+      "renamedName": "methodGuard",
       "declaration": {
         "file": "td.java",
         "start": 4570,
@@ -233336,7 +233651,7 @@
       "symbol": "P:ug.a(IZIII)V#1",
       "renamedSymbol": "P:ug.spawnScorePopup(IZIII)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "methodGuard",
       "declaration": {
         "file": "ug.java",
         "start": 2202,
@@ -234084,7 +234399,7 @@
       "symbol": "P:ul.b(I)V#0",
       "renamedSymbol": "P:ul.collectMatchCandidates(I)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "methodGuard",
       "declaration": {
         "file": "ul.java",
         "start": 394,
@@ -241827,7 +242142,7 @@
       "original": "ab.java",
       "renamed": "ab.java",
       "inputSha256": "b2329f260c1d16820fd0e7ec027269d13b2c37c72d101930590d7f79e1583f54",
-      "outputSha256": "2c3f2284937bd892f1455064e887b5d1fb46f51b0e24d652dd87bb62aa12643b",
+      "outputSha256": "53c3efd3fb32a8c2a3ccb73269ee8d05662ac86800fb5ed63cc015c64fa18158",
       "edits": [
         {
           "start": 97,
@@ -242010,6 +242325,13 @@
           "symbol": "F:ab.field_f:Z",
           "original": "field_f",
           "renamed": "boardContactStateDirty"
+        },
+        {
+          "start": 9247,
+          "end": 9254,
+          "symbol": "F:wb.field_b:I",
+          "original": "field_b",
+          "renamed": "newAttachmentCount"
         },
         {
           "start": 9311,
@@ -242598,6 +242920,20 @@
           "symbol": "F:ja.field_B:Z",
           "original": "field_B",
           "renamed": "detachedFromBoard"
+        },
+        {
+          "start": 14561,
+          "end": 14568,
+          "symbol": "F:wb.field_b:I",
+          "original": "field_b",
+          "renamed": "newAttachmentCount"
+        },
+        {
+          "start": 14574,
+          "end": 14581,
+          "symbol": "F:wb.field_b:I",
+          "original": "field_b",
+          "renamed": "newAttachmentCount"
         },
         {
           "start": 14678,
@@ -251372,7 +251708,7 @@
       "original": "cf.java",
       "renamed": "cf.java",
       "inputSha256": "6bea34d6fb1e51f5fbf7b8960507fff21b6b33994dfd2d070903b0231b65d83c",
-      "outputSha256": "0e96d4ff76a6e967e8dca42008eaba84cd6f508fc943bdc2a2197551fdfe4e8a",
+      "outputSha256": "6af9a580c13f3575a0b47cdf433fdf755115be65f91348a58d9ba43c7aef5a08",
       "edits": [
         {
           "start": 61,
@@ -251515,6 +251851,13 @@
           "renamed": "advanceScorePopups"
         },
         {
+          "start": 5029,
+          "end": 5035,
+          "symbol": "P:cf.d(B)V#0",
+          "original": "param0",
+          "renamed": "methodGuard"
+        },
+        {
           "start": 5047,
           "end": 5049,
           "symbol": "C:me",
@@ -251527,6 +251870,27 @@
           "symbol": "L:cf.d(B)V#0",
           "original": "var1",
           "renamed": "popup"
+        },
+        {
+          "start": 5075,
+          "end": 5079,
+          "symbol": "L:cf.d(B)V#1",
+          "original": "var2",
+          "renamed": "controlFlowGuard"
+        },
+        {
+          "start": 5194,
+          "end": 5198,
+          "symbol": "L:cf.d(B)V#1",
+          "original": "var2",
+          "renamed": "controlFlowGuard"
+        },
+        {
+          "start": 5264,
+          "end": 5270,
+          "symbol": "P:cf.d(B)V#0",
+          "original": "param0",
+          "renamed": "methodGuard"
         },
         {
           "start": 5336,
@@ -251758,6 +252122,13 @@
           "symbol": "M:tf.d(I)Lhf;",
           "original": "d",
           "renamed": "nextForIteration"
+        },
+        {
+          "start": 6242,
+          "end": 6248,
+          "symbol": "P:cf.d(B)V#0",
+          "original": "param0",
+          "renamed": "methodGuard"
         },
         {
           "start": 6843,
@@ -269534,7 +269905,7 @@
       "original": "ec.java",
       "renamed": "ec.java",
       "inputSha256": "9680ab252d00cf9b5e5064f2f182765e8cbc9ef529f6c7ac68fa6ccd577f9b53",
-      "outputSha256": "1af063916e8fb141fb8c3c46f17759c20ac57f0d2447fb18b6927a1ac4ebc827",
+      "outputSha256": "897420e9c1c6eaafa3c5339c8391f2e0ed67d4fc7dde9f64a472572e2e6bb21d",
       "edits": [
         {
           "start": 97,
@@ -269584,6 +269955,20 @@
           "symbol": "M:ec.b(I)Z",
           "original": "b",
           "renamed": "processMatchCandidates"
+        },
+        {
+          "start": 1280,
+          "end": 1286,
+          "symbol": "P:ec.b(I)Z#0",
+          "original": "param0",
+          "renamed": "methodGuard"
+        },
+        {
+          "start": 1493,
+          "end": 1501,
+          "symbol": "L:ec.b(I)Z#5",
+          "original": "var1_int",
+          "renamed": "sortInsertionIndex"
         },
         {
           "start": 1557,
@@ -269663,6 +270048,13 @@
           "renamed": "GameplayEntity"
         },
         {
+          "start": 1716,
+          "end": 1727,
+          "symbol": "L:ec.b(I)Z#14",
+          "original": "var8_ref_ja",
+          "renamed": "firstBlockedEntity"
+        },
+        {
           "start": 1748,
           "end": 1752,
           "symbol": "L:ec.b(I)Z#15",
@@ -269677,11 +270069,25 @@
           "renamed": "GameplayEntity"
         },
         {
+          "start": 1769,
+          "end": 1780,
+          "symbol": "L:ec.b(I)Z#16",
+          "original": "var9_ref_ja",
+          "renamed": "secondBlockedEntity"
+        },
+        {
           "start": 1801,
           "end": 1806,
           "symbol": "L:ec.b(I)Z#17",
           "original": "var10",
           "renamed": "popupY"
+        },
+        {
+          "start": 1824,
+          "end": 1829,
+          "symbol": "L:ec.b(I)Z#18",
+          "original": "var11",
+          "renamed": "controlFlowGuard"
         },
         {
           "start": 1847,
@@ -269691,11 +270097,32 @@
           "renamed": "candidateIndex"
         },
         {
+          "start": 1866,
+          "end": 1871,
+          "symbol": "L:ec.b(I)Z#18",
+          "original": "var11",
+          "renamed": "controlFlowGuard"
+        },
+        {
           "start": 1944,
           "end": 1951,
           "symbol": "F:h.field_a:I",
           "original": "field_a",
           "renamed": "matchCandidateCount"
+        },
+        {
+          "start": 1980,
+          "end": 1987,
+          "symbol": "F:wb.field_b:I",
+          "original": "field_b",
+          "renamed": "newAttachmentCount"
+        },
+        {
+          "start": 2014,
+          "end": 2021,
+          "symbol": "F:w.field_f:Z",
+          "original": "field_f",
+          "renamed": "avatarShockPending"
         },
         {
           "start": 2046,
@@ -269789,6 +270216,20 @@
           "renamed": "IntrusiveDeque"
         },
         {
+          "start": 2815,
+          "end": 2823,
+          "symbol": "L:ec.b(I)Z#5",
+          "original": "var1_int",
+          "renamed": "sortInsertionIndex"
+        },
+        {
+          "start": 2829,
+          "end": 2837,
+          "symbol": "L:ec.b(I)Z#5",
+          "original": "var1_int",
+          "renamed": "sortInsertionIndex"
+        },
+        {
           "start": 2842,
           "end": 2849,
           "symbol": "F:h.field_a:I",
@@ -269796,11 +270237,25 @@
           "renamed": "matchCandidateCount"
         },
         {
+          "start": 2851,
+          "end": 2859,
+          "symbol": "L:ec.b(I)Z#5",
+          "original": "var1_int",
+          "renamed": "sortInsertionIndex"
+        },
+        {
           "start": 2881,
           "end": 2885,
           "symbol": "L:ec.b(I)Z#7",
           "original": "var2",
           "renamed": "sortCursorThenFirstEntityId"
+        },
+        {
+          "start": 2888,
+          "end": 2896,
+          "symbol": "L:ec.b(I)Z#5",
+          "original": "var1_int",
+          "renamed": "sortInsertionIndex"
         },
         {
           "start": 2919,
@@ -269815,6 +270270,13 @@
           "symbol": "F:nk.field_f:[I",
           "original": "field_f",
           "renamed": "packedMatchCandidates"
+        },
+        {
+          "start": 2937,
+          "end": 2945,
+          "symbol": "L:ec.b(I)Z#5",
+          "original": "var1_int",
+          "renamed": "sortInsertionIndex"
         },
         {
           "start": 2976,
@@ -269901,6 +270363,13 @@
           "renamed": "packedCandidateThenSecondEntityId"
         },
         {
+          "start": 3305,
+          "end": 3311,
+          "symbol": "P:ec.b(I)Z#0",
+          "original": "param0",
+          "renamed": "methodGuard"
+        },
+        {
           "start": 3344,
           "end": 3345,
           "symbol": "M:ec.b(I)Z",
@@ -269913,6 +270382,13 @@
           "symbol": "L:ec.b(I)Z#19",
           "original": "var12",
           "renamed": "candidateIndex"
+        },
+        {
+          "start": 3407,
+          "end": 3415,
+          "symbol": "L:ec.b(I)Z#5",
+          "original": "var1_int",
+          "renamed": "sortInsertionIndex"
         },
         {
           "start": 3418,
@@ -270349,11 +270825,25 @@
           "renamed": "candidateIndex"
         },
         {
+          "start": 5122,
+          "end": 5133,
+          "symbol": "L:ec.b(I)Z#14",
+          "original": "var8_ref_ja",
+          "renamed": "firstBlockedEntity"
+        },
+        {
           "start": 5136,
           "end": 5140,
           "symbol": "L:ec.b(I)Z#10",
           "original": "var5",
           "renamed": "firstMatchedEntity"
+        },
+        {
+          "start": 5160,
+          "end": 5171,
+          "symbol": "L:ec.b(I)Z#16",
+          "original": "var9_ref_ja",
+          "renamed": "secondBlockedEntity"
         },
         {
           "start": 5174,
@@ -270377,11 +270867,25 @@
           "renamed": "entityQueue"
         },
         {
+          "start": 5237,
+          "end": 5248,
+          "symbol": "L:ec.b(I)Z#16",
+          "original": "var9_ref_ja",
+          "renamed": "secondBlockedEntity"
+        },
+        {
           "start": 5249,
           "end": 5256,
           "symbol": "F:ja.field_K:Ltf;",
           "original": "field_K",
           "renamed": "entityQueue"
+        },
+        {
+          "start": 5283,
+          "end": 5294,
+          "symbol": "L:ec.b(I)Z#14",
+          "original": "var8_ref_ja",
+          "renamed": "firstBlockedEntity"
         },
         {
           "start": 5295,
@@ -270417,6 +270921,13 @@
           "symbol": "F:h.field_a:I",
           "original": "field_a",
           "renamed": "matchCandidateCount"
+        },
+        {
+          "start": 5908,
+          "end": 5914,
+          "symbol": "P:ec.b(I)Z#0",
+          "original": "param0",
+          "renamed": "methodGuard"
         },
         {
           "start": 6285,
@@ -273938,7 +274449,7 @@
       "original": "gh.java",
       "renamed": "GameplaySession.java",
       "inputSha256": "6e39ba682f51bb6e758c1e9cb4277a95a1fdedf007a1b8be571b618a04eb6b4d",
-      "outputSha256": "539d2a38cd3fec2015a859d9cd808b9ffb04c45e910619a829c8477fccb53d4d",
+      "outputSha256": "4118b066c4cebf8b7bd0399910fc9b9a2e488e077915a77f587ecdcb55190bc9",
       "edits": [
         {
           "start": 50,
@@ -277623,6 +278134,13 @@
           "renamed": "addScore"
         },
         {
+          "start": 52242,
+          "end": 52248,
+          "symbol": "P:gh.a(BI)V#0",
+          "original": "param0",
+          "renamed": "methodGuard"
+        },
+        {
           "start": 52254,
           "end": 52260,
           "symbol": "P:gh.a(BI)V#1",
@@ -277649,6 +278167,34 @@
           "symbol": "L:gh.a(BI)V#2",
           "original": "var5",
           "renamed": "oneThirdPoints"
+        },
+        {
+          "start": 52330,
+          "end": 52334,
+          "symbol": "L:gh.a(BI)V#3",
+          "original": "var6",
+          "renamed": "controlFlowGuard"
+        },
+        {
+          "start": 52357,
+          "end": 52361,
+          "symbol": "L:gh.a(BI)V#4",
+          "original": "var7",
+          "renamed": "cappedScoreText"
+        },
+        {
+          "start": 52384,
+          "end": 52388,
+          "symbol": "L:gh.a(BI)V#5",
+          "original": "var8",
+          "renamed": "scoreValueText"
+        },
+        {
+          "start": 52398,
+          "end": 52402,
+          "symbol": "L:gh.a(BI)V#3",
+          "original": "var6",
+          "renamed": "controlFlowGuard"
         },
         {
           "start": 52440,
@@ -277686,6 +278232,27 @@
           "renamed": "score"
         },
         {
+          "start": 52573,
+          "end": 52577,
+          "symbol": "L:gh.a(BI)V#4",
+          "original": "var7",
+          "renamed": "cappedScoreText"
+        },
+        {
+          "start": 52650,
+          "end": 52651,
+          "symbol": "M:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;",
+          "original": "a",
+          "renamed": "writeTextAtOffset"
+        },
+        {
+          "start": 52652,
+          "end": 52656,
+          "symbol": "L:gh.a(BI)V#4",
+          "original": "var7",
+          "renamed": "cappedScoreText"
+        },
+        {
           "start": 52663,
           "end": 52670,
           "symbol": "F:gh.field_X:Ljava/lang/StringBuilder;",
@@ -277693,11 +278260,39 @@
           "renamed": "scoreText"
         },
         {
+          "start": 52698,
+          "end": 52702,
+          "symbol": "L:gh.a(BI)V#3",
+          "original": "var6",
+          "renamed": "controlFlowGuard"
+        },
+        {
+          "start": 52779,
+          "end": 52783,
+          "symbol": "L:gh.a(BI)V#5",
+          "original": "var8",
+          "renamed": "scoreValueText"
+        },
+        {
           "start": 52833,
           "end": 52840,
           "symbol": "F:gh.field_o:I",
           "original": "field_o",
           "renamed": "score"
+        },
+        {
+          "start": 52859,
+          "end": 52860,
+          "symbol": "M:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;",
+          "original": "a",
+          "renamed": "writeTextAtOffset"
+        },
+        {
+          "start": 52861,
+          "end": 52865,
+          "symbol": "L:gh.a(BI)V#5",
+          "original": "var8",
+          "renamed": "scoreValueText"
         },
         {
           "start": 52872,
@@ -277719,6 +278314,13 @@
           "symbol": "P:gh.a(BI)V#1",
           "original": "param1",
           "renamed": "points"
+        },
+        {
+          "start": 52940,
+          "end": 52946,
+          "symbol": "P:gh.a(BI)V#0",
+          "original": "param0",
+          "renamed": "methodGuard"
         },
         {
           "start": 52974,
@@ -277756,6 +278358,13 @@
           "renamed": "pointsForCounters"
         },
         {
+          "start": 53173,
+          "end": 53177,
+          "symbol": "L:gh.a(BI)V#3",
+          "original": "var6",
+          "renamed": "controlFlowGuard"
+        },
+        {
           "start": 53262,
           "end": 53266,
           "symbol": "L:gh.a(BI)V#2",
@@ -277789,6 +278398,13 @@
           "symbol": "L:gh.a(BI)V#2",
           "original": "var5",
           "renamed": "oneThirdPoints"
+        },
+        {
+          "start": 53398,
+          "end": 53402,
+          "symbol": "L:gh.a(BI)V#3",
+          "original": "var6",
+          "renamed": "controlFlowGuard"
         },
         {
           "start": 53505,
@@ -279702,6 +280318,27 @@
           "renamed": "points"
         },
         {
+          "start": 70032,
+          "end": 70038,
+          "symbol": "P:gh.a(II)V#1",
+          "original": "param1",
+          "renamed": "methodGuard"
+        },
+        {
+          "start": 70081,
+          "end": 70085,
+          "symbol": "L:gh.a(II)V#1",
+          "original": "var4",
+          "renamed": "cappedPopupPointsText"
+        },
+        {
+          "start": 70108,
+          "end": 70112,
+          "symbol": "L:gh.a(II)V#2",
+          "original": "var5",
+          "renamed": "popupPointsValueText"
+        },
+        {
           "start": 70131,
           "end": 70138,
           "symbol": "F:gh.field_Y:Z",
@@ -279737,11 +280374,39 @@
           "renamed": "pendingPopupPoints"
         },
         {
+          "start": 70297,
+          "end": 70301,
+          "symbol": "L:gh.a(II)V#1",
+          "original": "var4",
+          "renamed": "cappedPopupPointsText"
+        },
+        {
+          "start": 70372,
+          "end": 70373,
+          "symbol": "M:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;",
+          "original": "a",
+          "renamed": "writeTextAtOffset"
+        },
+        {
+          "start": 70374,
+          "end": 70378,
+          "symbol": "L:gh.a(II)V#1",
+          "original": "var4",
+          "renamed": "cappedPopupPointsText"
+        },
+        {
           "start": 70385,
           "end": 70392,
           "symbol": "F:gh.field_g:Ljava/lang/StringBuilder;",
           "original": "field_g",
           "renamed": "popupPointsText"
+        },
+        {
+          "start": 70512,
+          "end": 70516,
+          "symbol": "L:gh.a(II)V#2",
+          "original": "var5",
+          "renamed": "popupPointsValueText"
         },
         {
           "start": 70566,
@@ -279751,11 +280416,32 @@
           "renamed": "pendingPopupPoints"
         },
         {
+          "start": 70592,
+          "end": 70593,
+          "symbol": "M:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;",
+          "original": "a",
+          "renamed": "writeTextAtOffset"
+        },
+        {
+          "start": 70594,
+          "end": 70598,
+          "symbol": "L:gh.a(II)V#2",
+          "original": "var5",
+          "renamed": "popupPointsValueText"
+        },
+        {
           "start": 70605,
           "end": 70612,
           "symbol": "F:gh.field_g:Ljava/lang/StringBuilder;",
           "original": "field_g",
           "renamed": "popupPointsText"
+        },
+        {
+          "start": 70665,
+          "end": 70671,
+          "symbol": "P:gh.a(II)V#1",
+          "original": "param1",
+          "renamed": "methodGuard"
         },
         {
           "start": 70738,
@@ -296965,7 +297651,7 @@
       "original": "kc.java",
       "renamed": "kc.java",
       "inputSha256": "54b618bab0d64b0e087a54c524ee0dfd2ca5b88a78223e1bd679b987ec79fab2",
-      "outputSha256": "da396f9466372ac44d6570af8258224d698ab65664a2756f1e1b99b18b069935",
+      "outputSha256": "61249cc1416a0fca065bf787aa6dbe4ba064fa43a6d817083987894194c5ffcf",
       "edits": [
         {
           "start": 97,
@@ -298599,6 +299285,13 @@
           "renamed": "entityQueue"
         },
         {
+          "start": 24980,
+          "end": 24987,
+          "symbol": "F:w.field_f:Z",
+          "original": "field_f",
+          "renamed": "avatarShockPending"
+        },
+        {
           "start": 25080,
           "end": 25091,
           "symbol": "L:kc.b(I)V#24",
@@ -299054,6 +299747,13 @@
           "renamed": "entityQueue"
         },
         {
+          "start": 27375,
+          "end": 27382,
+          "symbol": "F:w.field_f:Z",
+          "original": "field_f",
+          "renamed": "avatarShockPending"
+        },
+        {
           "start": 27554,
           "end": 27565,
           "symbol": "L:kc.b(I)V#24",
@@ -299227,6 +299927,13 @@
           "symbol": "F:ja.field_t:Z",
           "original": "field_t",
           "renamed": "touchesAvatar"
+        },
+        {
+          "start": 28491,
+          "end": 28498,
+          "symbol": "F:w.field_f:Z",
+          "original": "field_f",
+          "renamed": "avatarShockPending"
         },
         {
           "start": 28583,
@@ -299586,6 +300293,13 @@
           "renamed": "nextForIteration"
         },
         {
+          "start": 31213,
+          "end": 31220,
+          "symbol": "F:w.field_f:Z",
+          "original": "field_f",
+          "renamed": "avatarShockPending"
+        },
+        {
           "start": 31398,
           "end": 31405,
           "symbol": "F:el.field_o:Lgh;",
@@ -299621,6 +300335,13 @@
           "renamed": "boardContactStateDirty"
         },
         {
+          "start": 31591,
+          "end": 31598,
+          "symbol": "F:w.field_f:Z",
+          "original": "field_f",
+          "renamed": "avatarShockPending"
+        },
+        {
           "start": 31643,
           "end": 31645,
           "symbol": "C:gh",
@@ -299647,6 +300368,13 @@
           "symbol": "F:gh.field_F:Z",
           "original": "field_F",
           "renamed": "boardRasterDirty"
+        },
+        {
+          "start": 32117,
+          "end": 32124,
+          "symbol": "F:w.field_f:Z",
+          "original": "field_f",
+          "renamed": "avatarShockPending"
         },
         {
           "start": 32154,
@@ -304526,7 +305254,7 @@
       "original": "le.java",
       "renamed": "le.java",
       "inputSha256": "188c241f0cdacc051c8da5406c43b482c7059e8448ae2504831d0735a27d2eec",
-      "outputSha256": "79202166a031da5f4c501976b24a9286492283b779e44cfa4b05b604353adaa1",
+      "outputSha256": "0a7b1de5b5e3db5ee8f1cff13b4958d95b7f6dc58f15db318f62318adc18bb2c",
       "edits": [
         {
           "start": 265,
@@ -304646,6 +305374,20 @@
           "symbol": "F:fa.field_a:Z",
           "original": "field_a",
           "renamed": "entitiesDetachedThisTick"
+        },
+        {
+          "start": 686,
+          "end": 693,
+          "symbol": "F:w.field_f:Z",
+          "original": "field_f",
+          "renamed": "avatarShockPending"
+        },
+        {
+          "start": 714,
+          "end": 721,
+          "symbol": "F:wb.field_b:I",
+          "original": "field_b",
+          "renamed": "newAttachmentCount"
         },
         {
           "start": 766,
@@ -315037,7 +315779,7 @@
       "original": "rh.java",
       "renamed": "rh.java",
       "inputSha256": "145ea45adf9bb63403fe149ced81f949af6490abc4b71d619db144f41680fdb7",
-      "outputSha256": "2661c526c2fd02969703e17f79018b7cdb5475e92a41d18b26f2c80087fe732e",
+      "outputSha256": "ab5f6374bccafa88f696616f6c4cd25e670368bf253eb8255b3719214dd182d6",
       "edits": [
         {
           "start": 125,
@@ -315164,6 +315906,13 @@
           "symbol": "F:ja.field_E:I",
           "original": "field_E",
           "renamed": "matchCooldownTicks"
+        },
+        {
+          "start": 1411,
+          "end": 1418,
+          "symbol": "F:w.field_f:Z",
+          "original": "field_f",
+          "renamed": "avatarShockPending"
         },
         {
           "start": 1526,
@@ -317330,8 +318079,15 @@
       "original": "td.java",
       "renamed": "td.java",
       "inputSha256": "62ff2d322af3b014b52b9d86ccb89ac7bb503a35ff74b2ab83ae5a9bacdce71c",
-      "outputSha256": "d54ee289be37adfcdccbd3aa23902919413f20afdace5448674cd2dd4b25b4c7",
+      "outputSha256": "bbf9254fb5190234ef0b50ec413de71eba694bcbe26b6b403ee9770db705888f",
       "edits": [
+        {
+          "start": 1774,
+          "end": 1775,
+          "symbol": "M:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;",
+          "original": "a",
+          "renamed": "writeTextAtOffset"
+        },
         {
           "start": 2074,
           "end": 2076,
@@ -317543,11 +318299,102 @@
           "renamed": "sample"
         },
         {
+          "start": 4509,
+          "end": 4510,
+          "symbol": "M:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;",
+          "original": "a",
+          "renamed": "writeTextAtOffset"
+        },
+        {
+          "start": 4524,
+          "end": 4530,
+          "symbol": "P:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#0",
+          "original": "param0",
+          "renamed": "sourceText"
+        },
+        {
+          "start": 4546,
+          "end": 4552,
+          "symbol": "P:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#1",
+          "original": "param1",
+          "renamed": "destination"
+        },
+        {
+          "start": 4558,
+          "end": 4564,
+          "symbol": "P:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#2",
+          "original": "param2",
+          "renamed": "writeOffset"
+        },
+        {
+          "start": 4570,
+          "end": 4576,
+          "symbol": "P:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#3",
+          "original": "param3",
+          "renamed": "methodGuard"
+        },
+        {
+          "start": 4592,
+          "end": 4596,
+          "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#0",
+          "original": "var7",
+          "renamed": "sourceCharacterIndex"
+        },
+        {
+          "start": 4614,
+          "end": 4630,
+          "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#1",
+          "original": "incrementValue$1",
+          "renamed": "characterWriteOffset"
+        },
+        {
+          "start": 4648,
+          "end": 4656,
+          "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#2",
+          "original": "var4_int",
+          "renamed": "originalLength"
+        },
+        {
+          "start": 4712,
+          "end": 4716,
+          "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#4",
+          "original": "var5",
+          "renamed": "sourceLength"
+        },
+        {
+          "start": 4734,
+          "end": 4738,
+          "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#5",
+          "original": "var6",
+          "renamed": "writeEndOffset"
+        },
+        {
+          "start": 4756,
+          "end": 4760,
+          "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#6",
+          "original": "var8",
+          "renamed": "controlFlowGuard"
+        },
+        {
           "start": 4774,
           "end": 4776,
           "symbol": "C:gd",
           "original": "gd",
           "renamed": "PcmSample"
+        },
+        {
+          "start": 5321,
+          "end": 5325,
+          "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#6",
+          "original": "var8",
+          "renamed": "controlFlowGuard"
+        },
+        {
+          "start": 5391,
+          "end": 5397,
+          "symbol": "P:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#3",
+          "original": "param3",
+          "renamed": "methodGuard"
         },
         {
           "start": 5429,
@@ -317569,6 +318416,244 @@
           "symbol": "C:gd",
           "original": "gd",
           "renamed": "PcmSample"
+        },
+        {
+          "start": 5501,
+          "end": 5509,
+          "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#2",
+          "original": "var4_int",
+          "renamed": "originalLength"
+        },
+        {
+          "start": 5512,
+          "end": 5518,
+          "symbol": "P:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#1",
+          "original": "param1",
+          "renamed": "destination"
+        },
+        {
+          "start": 5545,
+          "end": 5551,
+          "symbol": "P:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#2",
+          "original": "param2",
+          "renamed": "writeOffset"
+        },
+        {
+          "start": 5578,
+          "end": 5586,
+          "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#2",
+          "original": "var4_int",
+          "renamed": "originalLength"
+        },
+        {
+          "start": 5590,
+          "end": 5596,
+          "symbol": "P:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#2",
+          "original": "param2",
+          "renamed": "writeOffset"
+        },
+        {
+          "start": 5616,
+          "end": 5620,
+          "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#4",
+          "original": "var5",
+          "renamed": "sourceLength"
+        },
+        {
+          "start": 5623,
+          "end": 5629,
+          "symbol": "P:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#0",
+          "original": "param0",
+          "renamed": "sourceText"
+        },
+        {
+          "start": 5660,
+          "end": 5664,
+          "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#4",
+          "original": "var5",
+          "renamed": "sourceLength"
+        },
+        {
+          "start": 5691,
+          "end": 5695,
+          "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#5",
+          "original": "var6",
+          "renamed": "writeEndOffset"
+        },
+        {
+          "start": 5698,
+          "end": 5704,
+          "symbol": "P:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#2",
+          "original": "param2",
+          "renamed": "writeOffset"
+        },
+        {
+          "start": 5708,
+          "end": 5712,
+          "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#4",
+          "original": "var5",
+          "renamed": "sourceLength"
+        },
+        {
+          "start": 5736,
+          "end": 5744,
+          "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#2",
+          "original": "var4_int",
+          "renamed": "originalLength"
+        },
+        {
+          "start": 5747,
+          "end": 5751,
+          "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#5",
+          "original": "var6",
+          "renamed": "writeEndOffset"
+        },
+        {
+          "start": 5775,
+          "end": 5781,
+          "symbol": "P:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#1",
+          "original": "param1",
+          "renamed": "destination"
+        },
+        {
+          "start": 5792,
+          "end": 5796,
+          "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#5",
+          "original": "var6",
+          "renamed": "writeEndOffset"
+        },
+        {
+          "start": 5842,
+          "end": 5846,
+          "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#0",
+          "original": "var7",
+          "renamed": "sourceCharacterIndex"
+        },
+        {
+          "start": 5852,
+          "end": 5856,
+          "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#0",
+          "original": "var7",
+          "renamed": "sourceCharacterIndex"
+        },
+        {
+          "start": 5859,
+          "end": 5863,
+          "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#4",
+          "original": "var5",
+          "renamed": "sourceLength"
+        },
+        {
+          "start": 5865,
+          "end": 5869,
+          "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#0",
+          "original": "var7",
+          "renamed": "sourceCharacterIndex"
+        },
+        {
+          "start": 5895,
+          "end": 5911,
+          "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#1",
+          "original": "incrementValue$1",
+          "renamed": "characterWriteOffset"
+        },
+        {
+          "start": 5914,
+          "end": 5920,
+          "symbol": "P:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#2",
+          "original": "param2",
+          "renamed": "writeOffset"
+        },
+        {
+          "start": 5942,
+          "end": 5948,
+          "symbol": "P:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#2",
+          "original": "param2",
+          "renamed": "writeOffset"
+        },
+        {
+          "start": 5972,
+          "end": 5978,
+          "symbol": "P:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#1",
+          "original": "param1",
+          "renamed": "destination"
+        },
+        {
+          "start": 5989,
+          "end": 6005,
+          "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#1",
+          "original": "incrementValue$1",
+          "renamed": "characterWriteOffset"
+        },
+        {
+          "start": 6007,
+          "end": 6013,
+          "symbol": "P:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#0",
+          "original": "param0",
+          "renamed": "sourceText"
+        },
+        {
+          "start": 6021,
+          "end": 6025,
+          "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#0",
+          "original": "var7",
+          "renamed": "sourceCharacterIndex"
+        },
+        {
+          "start": 6099,
+          "end": 6105,
+          "symbol": "P:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#1",
+          "original": "param1",
+          "renamed": "destination"
+        },
+        {
+          "start": 6259,
+          "end": 6265,
+          "symbol": "P:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#1",
+          "original": "param1",
+          "renamed": "destination"
+        },
+        {
+          "start": 6459,
+          "end": 6467,
+          "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#2",
+          "original": "var4_int",
+          "renamed": "originalLength"
+        },
+        {
+          "start": 6485,
+          "end": 6491,
+          "symbol": "P:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#2",
+          "original": "param2",
+          "renamed": "writeOffset"
+        },
+        {
+          "start": 6820,
+          "end": 6826,
+          "symbol": "P:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#0",
+          "original": "param0",
+          "renamed": "sourceText"
+        },
+        {
+          "start": 7334,
+          "end": 7340,
+          "symbol": "P:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#1",
+          "original": "param1",
+          "renamed": "destination"
+        },
+        {
+          "start": 7869,
+          "end": 7875,
+          "symbol": "P:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#2",
+          "original": "param2",
+          "renamed": "writeOffset"
+        },
+        {
+          "start": 7896,
+          "end": 7902,
+          "symbol": "P:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#3",
+          "original": "param3",
+          "renamed": "methodGuard"
         },
         {
           "start": 10251,
@@ -321854,7 +322939,7 @@
       "original": "ug.java",
       "renamed": "ug.java",
       "inputSha256": "50bf02ecfe05bb94c8d242d9f14c33fc473913a26e67ab69158c31c703f67ac5",
-      "outputSha256": "1c00da70ff94f9d3259f2a8df2e3cab267230128e344474ce2de13399033d610",
+      "outputSha256": "59cbd957880ad422467cead91cc99d24a88b9815e9eaf9571f929a919bb89a49",
       "edits": [
         {
           "start": 120,
@@ -321876,6 +322961,13 @@
           "symbol": "P:ug.a(IZIII)V#0",
           "original": "param0",
           "renamed": "points"
+        },
+        {
+          "start": 2202,
+          "end": 2208,
+          "symbol": "P:ug.a(IZIII)V#1",
+          "original": "param1",
+          "renamed": "methodGuard"
         },
         {
           "start": 2214,
@@ -322058,6 +323150,13 @@
           "symbol": "P:ug.a(IZIII)V#3",
           "original": "param3",
           "renamed": "chainMultiplier"
+        },
+        {
+          "start": 2596,
+          "end": 2602,
+          "symbol": "P:ug.a(IZIII)V#1",
+          "original": "param1",
+          "renamed": "methodGuard"
         },
         {
           "start": 2618,
@@ -322986,7 +324085,7 @@
       "original": "ul.java",
       "renamed": "ul.java",
       "inputSha256": "024b79f4a0317c0e8c058f19187000bf42dcdb08ed28874383c0eb42699378f8",
-      "outputSha256": "bf6cef7e8339468e7fb939673153849d6e262251ff169ac6d119e69d11d293ab",
+      "outputSha256": "bce4a527725ae151188f058a8b2a45f283f1a3902c00a2fc87f8de010cf64f2a",
       "edits": [
         {
           "start": 120,
@@ -323010,6 +324109,34 @@
           "renamed": "collectMatchCandidates"
         },
         {
+          "start": 394,
+          "end": 400,
+          "symbol": "P:ul.b(I)V#0",
+          "original": "param0",
+          "renamed": "methodGuard"
+        },
+        {
+          "start": 416,
+          "end": 420,
+          "symbol": "L:ul.b(I)V#0",
+          "original": "var6",
+          "renamed": "firstNeighborIndex"
+        },
+        {
+          "start": 1024,
+          "end": 1032,
+          "symbol": "L:ul.b(I)V#20",
+          "original": "var1_int",
+          "renamed": "eligibleNeighborhoodVisited"
+        },
+        {
+          "start": 1088,
+          "end": 1092,
+          "symbol": "L:ul.b(I)V#22",
+          "original": "var2",
+          "renamed": "dualMatchFound"
+        },
+        {
           "start": 1106,
           "end": 1108,
           "symbol": "C:ja",
@@ -323017,11 +324144,130 @@
           "renamed": "GameplayEntity"
         },
         {
+          "start": 1109,
+          "end": 1113,
+          "symbol": "L:ul.b(I)V#23",
+          "original": "var3",
+          "renamed": "centralEntity"
+        },
+        {
+          "start": 1134,
+          "end": 1138,
+          "symbol": "L:ul.b(I)V#24",
+          "original": "var4",
+          "renamed": "variantMatchingAllowed"
+        },
+        {
+          "start": 1156,
+          "end": 1160,
+          "symbol": "L:ul.b(I)V#25",
+          "original": "var5",
+          "renamed": "categoryMatchingAllowed"
+        },
+        {
+          "start": 1178,
+          "end": 1182,
+          "symbol": "L:ul.b(I)V#26",
+          "original": "var7",
+          "renamed": "firstNeighborSharesVariant"
+        },
+        {
+          "start": 1200,
+          "end": 1204,
+          "symbol": "L:ul.b(I)V#27",
+          "original": "var8",
+          "renamed": "firstNeighborSharesCategory"
+        },
+        {
+          "start": 1222,
+          "end": 1226,
+          "symbol": "L:ul.b(I)V#28",
+          "original": "var9",
+          "renamed": "secondNeighborIndex"
+        },
+        {
+          "start": 1244,
+          "end": 1249,
+          "symbol": "L:ul.b(I)V#29",
+          "original": "var10",
+          "renamed": "tripleSharesCategory"
+        },
+        {
+          "start": 1267,
+          "end": 1272,
+          "symbol": "L:ul.b(I)V#30",
+          "original": "var11",
+          "renamed": "tripleSharesVariant"
+        },
+        {
+          "start": 1290,
+          "end": 1295,
+          "symbol": "L:ul.b(I)V#31",
+          "original": "var12",
+          "renamed": "largestPackedEntityId"
+        },
+        {
+          "start": 1313,
+          "end": 1318,
+          "symbol": "L:ul.b(I)V#32",
+          "original": "var13",
+          "renamed": "middlePackedEntityId"
+        },
+        {
+          "start": 1336,
+          "end": 1341,
+          "symbol": "L:ul.b(I)V#33",
+          "original": "var14",
+          "renamed": "smallestPackedEntityId"
+        },
+        {
+          "start": 1359,
+          "end": 1364,
+          "symbol": "L:ul.b(I)V#34",
+          "original": "var15",
+          "renamed": "swappedEntityId"
+        },
+        {
+          "start": 1382,
+          "end": 1387,
+          "symbol": "L:ul.b(I)V#35",
+          "original": "var16",
+          "renamed": "controlFlowGuard"
+        },
+        {
+          "start": 1401,
+          "end": 1406,
+          "symbol": "L:ul.b(I)V#35",
+          "original": "var16",
+          "renamed": "controlFlowGuard"
+        },
+        {
           "start": 1470,
           "end": 1477,
           "symbol": "F:h.field_a:I",
           "original": "field_a",
           "renamed": "matchCandidateCount"
+        },
+        {
+          "start": 1495,
+          "end": 1503,
+          "symbol": "L:ul.b(I)V#20",
+          "original": "var1_int",
+          "renamed": "eligibleNeighborhoodVisited"
+        },
+        {
+          "start": 1521,
+          "end": 1525,
+          "symbol": "L:ul.b(I)V#22",
+          "original": "var2",
+          "renamed": "dualMatchFound"
+        },
+        {
+          "start": 1543,
+          "end": 1547,
+          "symbol": "L:ul.b(I)V#23",
+          "original": "var3",
+          "renamed": "centralEntity"
         },
         {
           "start": 1551,
@@ -323045,11 +324291,32 @@
           "renamed": "firstForIteration"
         },
         {
+          "start": 1598,
+          "end": 1604,
+          "symbol": "P:ul.b(I)V#0",
+          "original": "param0",
+          "renamed": "methodGuard"
+        },
+        {
           "start": 1639,
           "end": 1641,
           "symbol": "C:dm",
           "original": "dm",
           "renamed": "Sprite"
+        },
+        {
+          "start": 1686,
+          "end": 1690,
+          "symbol": "L:ul.b(I)V#23",
+          "original": "var3",
+          "renamed": "centralEntity"
+        },
+        {
+          "start": 1742,
+          "end": 1746,
+          "symbol": "L:ul.b(I)V#23",
+          "original": "var3",
+          "renamed": "centralEntity"
         },
         {
           "start": 1747,
@@ -323059,11 +324326,25 @@
           "renamed": "sameVariantEntityCount"
         },
         {
+          "start": 1785,
+          "end": 1789,
+          "symbol": "L:ul.b(I)V#23",
+          "original": "var3",
+          "renamed": "centralEntity"
+        },
+        {
           "start": 1790,
           "end": 1797,
           "symbol": "F:ja.field_N:I",
           "original": "field_N",
           "renamed": "sameCategoryEntityCount"
+        },
+        {
+          "start": 1890,
+          "end": 1894,
+          "symbol": "L:ul.b(I)V#23",
+          "original": "var3",
+          "renamed": "centralEntity"
         },
         {
           "start": 1895,
@@ -323073,11 +324354,32 @@
           "renamed": "entityQueue"
         },
         {
+          "start": 1937,
+          "end": 1941,
+          "symbol": "L:ul.b(I)V#23",
+          "original": "var3",
+          "renamed": "centralEntity"
+        },
+        {
           "start": 1942,
           "end": 1949,
           "symbol": "F:ja.field_m:I",
           "original": "field_m",
           "renamed": "sameVariantEntityCount"
+        },
+        {
+          "start": 2089,
+          "end": 2093,
+          "symbol": "L:ul.b(I)V#24",
+          "original": "var4",
+          "renamed": "variantMatchingAllowed"
+        },
+        {
+          "start": 2130,
+          "end": 2134,
+          "symbol": "L:ul.b(I)V#23",
+          "original": "var3",
+          "renamed": "centralEntity"
         },
         {
           "start": 2135,
@@ -323087,11 +324389,67 @@
           "renamed": "sameCategoryEntityCount"
         },
         {
+          "start": 2282,
+          "end": 2286,
+          "symbol": "L:ul.b(I)V#25",
+          "original": "var5",
+          "renamed": "categoryMatchingAllowed"
+        },
+        {
+          "start": 2324,
+          "end": 2328,
+          "symbol": "L:ul.b(I)V#0",
+          "original": "var6",
+          "renamed": "firstNeighborIndex"
+        },
+        {
+          "start": 2334,
+          "end": 2338,
+          "symbol": "L:ul.b(I)V#0",
+          "original": "var6",
+          "renamed": "firstNeighborIndex"
+        },
+        {
+          "start": 2341,
+          "end": 2345,
+          "symbol": "L:ul.b(I)V#23",
+          "original": "var3",
+          "renamed": "centralEntity"
+        },
+        {
           "start": 2346,
           "end": 2353,
           "symbol": "F:ja.field_L:I",
           "original": "field_L",
           "renamed": "relatedEntityCount"
+        },
+        {
+          "start": 2355,
+          "end": 2359,
+          "symbol": "L:ul.b(I)V#0",
+          "original": "var6",
+          "renamed": "firstNeighborIndex"
+        },
+        {
+          "start": 2383,
+          "end": 2391,
+          "symbol": "L:ul.b(I)V#20",
+          "original": "var1_int",
+          "renamed": "eligibleNeighborhoodVisited"
+        },
+        {
+          "start": 2419,
+          "end": 2423,
+          "symbol": "L:ul.b(I)V#24",
+          "original": "var4",
+          "renamed": "variantMatchingAllowed"
+        },
+        {
+          "start": 2456,
+          "end": 2460,
+          "symbol": "L:ul.b(I)V#23",
+          "original": "var3",
+          "renamed": "centralEntity"
         },
         {
           "start": 2461,
@@ -323101,11 +324459,25 @@
           "renamed": "spriteVariantIndex"
         },
         {
+          "start": 2472,
+          "end": 2476,
+          "symbol": "L:ul.b(I)V#23",
+          "original": "var3",
+          "renamed": "centralEntity"
+        },
+        {
           "start": 2477,
           "end": 2484,
           "symbol": "F:ja.field_n:[Lja;",
           "original": "field_n",
           "renamed": "relatedEntities"
+        },
+        {
+          "start": 2485,
+          "end": 2489,
+          "symbol": "L:ul.b(I)V#0",
+          "original": "var6",
+          "renamed": "firstNeighborIndex"
         },
         {
           "start": 2491,
@@ -323115,11 +324487,39 @@
           "renamed": "spriteVariantIndex"
         },
         {
+          "start": 2736,
+          "end": 2740,
+          "symbol": "L:ul.b(I)V#26",
+          "original": "var7",
+          "renamed": "firstNeighborSharesVariant"
+        },
+        {
+          "start": 2779,
+          "end": 2783,
+          "symbol": "L:ul.b(I)V#25",
+          "original": "var5",
+          "renamed": "categoryMatchingAllowed"
+        },
+        {
+          "start": 2816,
+          "end": 2820,
+          "symbol": "L:ul.b(I)V#23",
+          "original": "var3",
+          "renamed": "centralEntity"
+        },
+        {
           "start": 2821,
           "end": 2828,
           "symbol": "F:ja.field_C:I",
           "original": "field_C",
           "renamed": "entityCategoryKey"
+        },
+        {
+          "start": 2832,
+          "end": 2836,
+          "symbol": "L:ul.b(I)V#23",
+          "original": "var3",
+          "renamed": "centralEntity"
         },
         {
           "start": 2837,
@@ -323129,11 +324529,67 @@
           "renamed": "relatedEntities"
         },
         {
+          "start": 2845,
+          "end": 2849,
+          "symbol": "L:ul.b(I)V#0",
+          "original": "var6",
+          "renamed": "firstNeighborIndex"
+        },
+        {
           "start": 2851,
           "end": 2858,
           "symbol": "F:ja.field_C:I",
           "original": "field_C",
           "renamed": "entityCategoryKey"
+        },
+        {
+          "start": 3123,
+          "end": 3127,
+          "symbol": "L:ul.b(I)V#27",
+          "original": "var8",
+          "renamed": "firstNeighborSharesCategory"
+        },
+        {
+          "start": 3168,
+          "end": 3172,
+          "symbol": "L:ul.b(I)V#26",
+          "original": "var7",
+          "renamed": "firstNeighborSharesVariant"
+        },
+        {
+          "start": 3207,
+          "end": 3211,
+          "symbol": "L:ul.b(I)V#27",
+          "original": "var8",
+          "renamed": "firstNeighborSharesCategory"
+        },
+        {
+          "start": 3321,
+          "end": 3325,
+          "symbol": "L:ul.b(I)V#28",
+          "original": "var9",
+          "renamed": "secondNeighborIndex"
+        },
+        {
+          "start": 3328,
+          "end": 3332,
+          "symbol": "L:ul.b(I)V#0",
+          "original": "var6",
+          "renamed": "firstNeighborIndex"
+        },
+        {
+          "start": 3404,
+          "end": 3408,
+          "symbol": "L:ul.b(I)V#28",
+          "original": "var9",
+          "renamed": "secondNeighborIndex"
+        },
+        {
+          "start": 3412,
+          "end": 3416,
+          "symbol": "L:ul.b(I)V#23",
+          "original": "var3",
+          "renamed": "centralEntity"
         },
         {
           "start": 3417,
@@ -323143,11 +324599,32 @@
           "renamed": "relatedEntityCount"
         },
         {
+          "start": 3522,
+          "end": 3526,
+          "symbol": "L:ul.b(I)V#27",
+          "original": "var8",
+          "renamed": "firstNeighborSharesCategory"
+        },
+        {
+          "start": 3565,
+          "end": 3569,
+          "symbol": "L:ul.b(I)V#23",
+          "original": "var3",
+          "renamed": "centralEntity"
+        },
+        {
           "start": 3570,
           "end": 3577,
           "symbol": "F:ja.field_n:[Lja;",
           "original": "field_n",
           "renamed": "relatedEntities"
+        },
+        {
+          "start": 3578,
+          "end": 3582,
+          "symbol": "L:ul.b(I)V#28",
+          "original": "var9",
+          "renamed": "secondNeighborIndex"
         },
         {
           "start": 3584,
@@ -323157,11 +324634,39 @@
           "renamed": "entityCategoryKey"
         },
         {
+          "start": 3595,
+          "end": 3599,
+          "symbol": "L:ul.b(I)V#23",
+          "original": "var3",
+          "renamed": "centralEntity"
+        },
+        {
           "start": 3600,
           "end": 3607,
           "symbol": "F:ja.field_C:I",
           "original": "field_C",
           "renamed": "entityCategoryKey"
+        },
+        {
+          "start": 3893,
+          "end": 3898,
+          "symbol": "L:ul.b(I)V#29",
+          "original": "var10",
+          "renamed": "tripleSharesCategory"
+        },
+        {
+          "start": 3943,
+          "end": 3947,
+          "symbol": "L:ul.b(I)V#26",
+          "original": "var7",
+          "renamed": "firstNeighborSharesVariant"
+        },
+        {
+          "start": 3986,
+          "end": 3990,
+          "symbol": "L:ul.b(I)V#23",
+          "original": "var3",
+          "renamed": "centralEntity"
         },
         {
           "start": 3991,
@@ -323171,11 +324676,25 @@
           "renamed": "spriteVariantIndex"
         },
         {
+          "start": 4002,
+          "end": 4006,
+          "symbol": "L:ul.b(I)V#23",
+          "original": "var3",
+          "renamed": "centralEntity"
+        },
+        {
           "start": 4007,
           "end": 4014,
           "symbol": "F:ja.field_n:[Lja;",
           "original": "field_n",
           "renamed": "relatedEntities"
+        },
+        {
+          "start": 4015,
+          "end": 4019,
+          "symbol": "L:ul.b(I)V#28",
+          "original": "var9",
+          "renamed": "secondNeighborIndex"
         },
         {
           "start": 4021,
@@ -323185,11 +324704,46 @@
           "renamed": "spriteVariantIndex"
         },
         {
+          "start": 4347,
+          "end": 4352,
+          "symbol": "L:ul.b(I)V#30",
+          "original": "var11",
+          "renamed": "tripleSharesVariant"
+        },
+        {
+          "start": 4399,
+          "end": 4404,
+          "symbol": "L:ul.b(I)V#29",
+          "original": "var10",
+          "renamed": "tripleSharesCategory"
+        },
+        {
+          "start": 4445,
+          "end": 4450,
+          "symbol": "L:ul.b(I)V#30",
+          "original": "var11",
+          "renamed": "tripleSharesVariant"
+        },
+        {
+          "start": 4584,
+          "end": 4588,
+          "symbol": "L:ul.b(I)V#23",
+          "original": "var3",
+          "renamed": "centralEntity"
+        },
+        {
           "start": 4589,
           "end": 4596,
           "symbol": "F:ja.field_n:[Lja;",
           "original": "field_n",
           "renamed": "relatedEntities"
+        },
+        {
+          "start": 4597,
+          "end": 4601,
+          "symbol": "L:ul.b(I)V#0",
+          "original": "var6",
+          "renamed": "firstNeighborIndex"
         },
         {
           "start": 4603,
@@ -323199,11 +324753,25 @@
           "renamed": "entityQueue"
         },
         {
+          "start": 4651,
+          "end": 4655,
+          "symbol": "L:ul.b(I)V#23",
+          "original": "var3",
+          "renamed": "centralEntity"
+        },
+        {
           "start": 4656,
           "end": 4663,
           "symbol": "F:ja.field_n:[Lja;",
           "original": "field_n",
           "renamed": "relatedEntities"
+        },
+        {
+          "start": 4664,
+          "end": 4668,
+          "symbol": "L:ul.b(I)V#28",
+          "original": "var9",
+          "renamed": "secondNeighborIndex"
         },
         {
           "start": 4670,
@@ -323213,11 +324781,32 @@
           "renamed": "entityQueue"
         },
         {
+          "start": 4718,
+          "end": 4723,
+          "symbol": "L:ul.b(I)V#32",
+          "original": "var13",
+          "renamed": "middlePackedEntityId"
+        },
+        {
+          "start": 4726,
+          "end": 4730,
+          "symbol": "L:ul.b(I)V#23",
+          "original": "var3",
+          "renamed": "centralEntity"
+        },
+        {
           "start": 4731,
           "end": 4738,
           "symbol": "F:ja.field_n:[Lja;",
           "original": "field_n",
           "renamed": "relatedEntities"
+        },
+        {
+          "start": 4739,
+          "end": 4743,
+          "symbol": "L:ul.b(I)V#0",
+          "original": "var6",
+          "renamed": "firstNeighborIndex"
         },
         {
           "start": 4745,
@@ -323227,11 +324816,39 @@
           "renamed": "entityId"
         },
         {
+          "start": 4780,
+          "end": 4785,
+          "symbol": "L:ul.b(I)V#31",
+          "original": "var12",
+          "renamed": "largestPackedEntityId"
+        },
+        {
+          "start": 4788,
+          "end": 4792,
+          "symbol": "L:ul.b(I)V#23",
+          "original": "var3",
+          "renamed": "centralEntity"
+        },
+        {
           "start": 4793,
           "end": 4800,
           "symbol": "F:ja.field_H:I",
           "original": "field_H",
           "renamed": "entityId"
+        },
+        {
+          "start": 4828,
+          "end": 4833,
+          "symbol": "L:ul.b(I)V#33",
+          "original": "var14",
+          "renamed": "smallestPackedEntityId"
+        },
+        {
+          "start": 4836,
+          "end": 4840,
+          "symbol": "L:ul.b(I)V#23",
+          "original": "var3",
+          "renamed": "centralEntity"
         },
         {
           "start": 4841,
@@ -323241,11 +324858,81 @@
           "renamed": "relatedEntities"
         },
         {
+          "start": 4849,
+          "end": 4853,
+          "symbol": "L:ul.b(I)V#28",
+          "original": "var9",
+          "renamed": "secondNeighborIndex"
+        },
+        {
           "start": 4855,
           "end": 4862,
           "symbol": "F:ja.field_H:I",
           "original": "field_H",
           "renamed": "entityId"
+        },
+        {
+          "start": 4894,
+          "end": 4899,
+          "symbol": "L:ul.b(I)V#32",
+          "original": "var13",
+          "renamed": "middlePackedEntityId"
+        },
+        {
+          "start": 4902,
+          "end": 4907,
+          "symbol": "L:ul.b(I)V#33",
+          "original": "var14",
+          "renamed": "smallestPackedEntityId"
+        },
+        {
+          "start": 4939,
+          "end": 4944,
+          "symbol": "L:ul.b(I)V#34",
+          "original": "var15",
+          "renamed": "swappedEntityId"
+        },
+        {
+          "start": 4947,
+          "end": 4952,
+          "symbol": "L:ul.b(I)V#32",
+          "original": "var13",
+          "renamed": "middlePackedEntityId"
+        },
+        {
+          "start": 4982,
+          "end": 4987,
+          "symbol": "L:ul.b(I)V#32",
+          "original": "var13",
+          "renamed": "middlePackedEntityId"
+        },
+        {
+          "start": 4990,
+          "end": 4995,
+          "symbol": "L:ul.b(I)V#33",
+          "original": "var14",
+          "renamed": "smallestPackedEntityId"
+        },
+        {
+          "start": 5025,
+          "end": 5030,
+          "symbol": "L:ul.b(I)V#33",
+          "original": "var14",
+          "renamed": "smallestPackedEntityId"
+        },
+        {
+          "start": 5033,
+          "end": 5038,
+          "symbol": "L:ul.b(I)V#34",
+          "original": "var15",
+          "renamed": "swappedEntityId"
+        },
+        {
+          "start": 5098,
+          "end": 5103,
+          "symbol": "L:ul.b(I)V#30",
+          "original": "var11",
+          "renamed": "tripleSharesVariant"
         },
         {
           "start": 5143,
@@ -323262,6 +324949,27 @@
           "renamed": "variantMatchCandidateCount"
         },
         {
+          "start": 5227,
+          "end": 5232,
+          "symbol": "L:ul.b(I)V#30",
+          "original": "var11",
+          "renamed": "tripleSharesVariant"
+        },
+        {
+          "start": 5273,
+          "end": 5278,
+          "symbol": "L:ul.b(I)V#29",
+          "original": "var10",
+          "renamed": "tripleSharesCategory"
+        },
+        {
+          "start": 5375,
+          "end": 5380,
+          "symbol": "L:ul.b(I)V#29",
+          "original": "var10",
+          "renamed": "tripleSharesCategory"
+        },
+        {
           "start": 5420,
           "end": 5427,
           "symbol": "F:dk.field_b:I",
@@ -323274,6 +324982,132 @@
           "symbol": "F:dk.field_b:I",
           "original": "field_b",
           "renamed": "categoryMatchCandidateCount"
+        },
+        {
+          "start": 5504,
+          "end": 5509,
+          "symbol": "L:ul.b(I)V#31",
+          "original": "var12",
+          "renamed": "largestPackedEntityId"
+        },
+        {
+          "start": 5513,
+          "end": 5518,
+          "symbol": "L:ul.b(I)V#33",
+          "original": "var14",
+          "renamed": "smallestPackedEntityId"
+        },
+        {
+          "start": 5554,
+          "end": 5559,
+          "symbol": "L:ul.b(I)V#32",
+          "original": "var13",
+          "renamed": "middlePackedEntityId"
+        },
+        {
+          "start": 5562,
+          "end": 5567,
+          "symbol": "L:ul.b(I)V#31",
+          "original": "var12",
+          "renamed": "largestPackedEntityId"
+        },
+        {
+          "start": 5601,
+          "end": 5606,
+          "symbol": "L:ul.b(I)V#34",
+          "original": "var15",
+          "renamed": "swappedEntityId"
+        },
+        {
+          "start": 5609,
+          "end": 5614,
+          "symbol": "L:ul.b(I)V#31",
+          "original": "var12",
+          "renamed": "largestPackedEntityId"
+        },
+        {
+          "start": 5646,
+          "end": 5651,
+          "symbol": "L:ul.b(I)V#31",
+          "original": "var12",
+          "renamed": "largestPackedEntityId"
+        },
+        {
+          "start": 5654,
+          "end": 5659,
+          "symbol": "L:ul.b(I)V#32",
+          "original": "var13",
+          "renamed": "middlePackedEntityId"
+        },
+        {
+          "start": 5691,
+          "end": 5696,
+          "symbol": "L:ul.b(I)V#32",
+          "original": "var13",
+          "renamed": "middlePackedEntityId"
+        },
+        {
+          "start": 5699,
+          "end": 5704,
+          "symbol": "L:ul.b(I)V#34",
+          "original": "var15",
+          "renamed": "swappedEntityId"
+        },
+        {
+          "start": 5799,
+          "end": 5804,
+          "symbol": "L:ul.b(I)V#34",
+          "original": "var15",
+          "renamed": "swappedEntityId"
+        },
+        {
+          "start": 5807,
+          "end": 5812,
+          "symbol": "L:ul.b(I)V#32",
+          "original": "var13",
+          "renamed": "middlePackedEntityId"
+        },
+        {
+          "start": 5842,
+          "end": 5847,
+          "symbol": "L:ul.b(I)V#32",
+          "original": "var13",
+          "renamed": "middlePackedEntityId"
+        },
+        {
+          "start": 5850,
+          "end": 5855,
+          "symbol": "L:ul.b(I)V#33",
+          "original": "var14",
+          "renamed": "smallestPackedEntityId"
+        },
+        {
+          "start": 5885,
+          "end": 5890,
+          "symbol": "L:ul.b(I)V#33",
+          "original": "var14",
+          "renamed": "smallestPackedEntityId"
+        },
+        {
+          "start": 5893,
+          "end": 5898,
+          "symbol": "L:ul.b(I)V#31",
+          "original": "var12",
+          "renamed": "largestPackedEntityId"
+        },
+        {
+          "start": 5928,
+          "end": 5933,
+          "symbol": "L:ul.b(I)V#31",
+          "original": "var12",
+          "renamed": "largestPackedEntityId"
+        },
+        {
+          "start": 5936,
+          "end": 5941,
+          "symbol": "L:ul.b(I)V#34",
+          "original": "var15",
+          "renamed": "swappedEntityId"
         },
         {
           "start": 6015,
@@ -323304,6 +325138,41 @@
           "renamed": "matchCandidateCount"
         },
         {
+          "start": 6184,
+          "end": 6189,
+          "symbol": "L:ul.b(I)V#33",
+          "original": "var14",
+          "renamed": "smallestPackedEntityId"
+        },
+        {
+          "start": 6222,
+          "end": 6227,
+          "symbol": "L:ul.b(I)V#29",
+          "original": "var10",
+          "renamed": "tripleSharesCategory"
+        },
+        {
+          "start": 6935,
+          "end": 6940,
+          "symbol": "L:ul.b(I)V#30",
+          "original": "var11",
+          "renamed": "tripleSharesVariant"
+        },
+        {
+          "start": 7410,
+          "end": 7415,
+          "symbol": "L:ul.b(I)V#31",
+          "original": "var12",
+          "renamed": "largestPackedEntityId"
+        },
+        {
+          "start": 7433,
+          "end": 7438,
+          "symbol": "L:ul.b(I)V#32",
+          "original": "var13",
+          "renamed": "middlePackedEntityId"
+        },
+        {
           "start": 7484,
           "end": 7491,
           "symbol": "F:h.field_a:I",
@@ -323316,6 +325185,48 @@
           "symbol": "F:h.field_a:I",
           "original": "field_a",
           "renamed": "matchCandidateCount"
+        },
+        {
+          "start": 7563,
+          "end": 7568,
+          "symbol": "L:ul.b(I)V#29",
+          "original": "var10",
+          "renamed": "tripleSharesCategory"
+        },
+        {
+          "start": 7607,
+          "end": 7612,
+          "symbol": "L:ul.b(I)V#30",
+          "original": "var11",
+          "renamed": "tripleSharesVariant"
+        },
+        {
+          "start": 7649,
+          "end": 7653,
+          "symbol": "L:ul.b(I)V#22",
+          "original": "var2",
+          "renamed": "dualMatchFound"
+        },
+        {
+          "start": 7713,
+          "end": 7717,
+          "symbol": "L:ul.b(I)V#28",
+          "original": "var9",
+          "renamed": "secondNeighborIndex"
+        },
+        {
+          "start": 7820,
+          "end": 7824,
+          "symbol": "L:ul.b(I)V#28",
+          "original": "var9",
+          "renamed": "secondNeighborIndex"
+        },
+        {
+          "start": 8034,
+          "end": 8038,
+          "symbol": "L:ul.b(I)V#23",
+          "original": "var3",
+          "renamed": "centralEntity"
         },
         {
           "start": 8042,
@@ -323337,6 +325248,27 @@
           "symbol": "M:tf.d(I)Lhf;",
           "original": "d",
           "renamed": "nextForIteration"
+        },
+        {
+          "start": 8103,
+          "end": 8111,
+          "symbol": "L:ul.b(I)V#20",
+          "original": "var1_int",
+          "renamed": "eligibleNeighborhoodVisited"
+        },
+        {
+          "start": 8138,
+          "end": 8142,
+          "symbol": "L:ul.b(I)V#22",
+          "original": "var2",
+          "renamed": "dualMatchFound"
+        },
+        {
+          "start": 8636,
+          "end": 8642,
+          "symbol": "P:ul.b(I)V#0",
+          "original": "param0",
+          "renamed": "methodGuard"
         },
         {
           "start": 11758,
@@ -327486,8 +329418,15 @@
       "original": "w.java",
       "renamed": "w.java",
       "inputSha256": "a97ae4e9f87e1f25c7d2e6c47720c1213d601aad44848383980dd592ce52f21d",
-      "outputSha256": "7cb3808c2019859c88cd0474590a1391e5af0354f6257ae691d81fe6c9ff8551",
+      "outputSha256": "7beae6696265d99785fbb30102fbcdb7b819d7076748dc2d1f069903a99b99c6",
       "edits": [
+        {
+          "start": 119,
+          "end": 126,
+          "symbol": "F:w.field_f:Z",
+          "original": "field_f",
+          "renamed": "avatarShockPending"
+        },
         {
           "start": 169,
           "end": 176,
@@ -328265,8 +330204,15 @@
       "original": "wb.java",
       "renamed": "wb.java",
       "inputSha256": "21b1afcf5ea02debe36803cbde0f2b6642142818654e6830f7d3c98fe1e979d9",
-      "outputSha256": "2dae306ace85bf044e477c6d23ab4a1462b2ae4938fa85e4a9a43be5ef473cfb",
+      "outputSha256": "760a5568797894b4147c441ea2bcef98e968cbf12338d3aff0decc8193878c65",
       "edits": [
+        {
+          "start": 70,
+          "end": 77,
+          "symbol": "F:wb.field_b:I",
+          "original": "field_b",
+          "renamed": "newAttachmentCount"
+        },
         {
           "start": 97,
           "end": 104,
@@ -328280,6 +330226,13 @@
           "symbol": "F:wb.field_c:Ljava/lang/String;",
           "original": "field_c",
           "renamed": "soundLabelText"
+        },
+        {
+          "start": 337,
+          "end": 344,
+          "symbol": "F:wb.field_b:I",
+          "original": "field_b",
+          "renamed": "newAttachmentCount"
         },
         {
           "start": 358,

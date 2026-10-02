@@ -143,15 +143,15 @@ final class cf extends TextInputValidator {
         return var2;
     }
 
-    final static void advanceScorePopups(byte param0) {
+    final static void advanceScorePopups(byte methodGuard) {
         ScorePopup popup = null;
-        int var2 = 0;
+        int controlFlowGuard = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
-        var2 = Geoblox.field_C;
+        controlFlowGuard = Geoblox.field_C;
         try {
           L0: {
-            if (param0 < 8) {
+            if (methodGuard < 8) {
               cf.c((byte) 121);
             }
             popup = (ScorePopup) ((Object) md.activeScorePopups.firstForIteration(0));
@@ -174,7 +174,7 @@ final class cf extends TextInputValidator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1_ref), "cf.F(" + param0 + ')');
+          throw t.a((Throwable) ((Object) var1_ref), "cf.F(" + methodGuard + ')');
         }
     }
 

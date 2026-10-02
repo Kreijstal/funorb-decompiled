@@ -55,7 +55,7 @@ final class ug {
         return stackIn_7_0;
     }
 
-    final static void spawnScorePopup(int points, boolean param1, int originY, int chainMultiplier, int originX) {
+    final static void spawnScorePopup(int points, boolean methodGuard, int originY, int chainMultiplier, int originX) {
         ScorePopup popup = (ScorePopup) ((Object) ue.availableScorePopups.removeLast(1));
         if (!(popup != null)) {
             el.gameplaySession.addScore((byte) 127, points);
@@ -66,7 +66,7 @@ final class ug {
         popup.pointsText = Integer.toString(points);
         popup.originX = (float)originX;
         popup.chainMultiplier = chainMultiplier;
-        if (param1) {
+        if (methodGuard) {
             popup.originY = (float)originY;
             md.activeScorePopups.addLast(-95, popup);
             return;

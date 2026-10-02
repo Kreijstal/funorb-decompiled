@@ -248,7 +248,7 @@ final class ab {
         try {
           L0: {
             boardContactStateDirty = false;
-            wb.field_b = 0;
+            wb.newAttachmentCount = 0;
             sh.field_y.a(255);
             var2 = (GameplayEntity) ((Object) ji.movingEntities.firstForIteration(0));
             L1: while (var2 != null) {
@@ -360,7 +360,7 @@ final class ab {
                       var2.positionX = (float)ng.field_G;
                     }
                     if (!var2.detachedFromBoard) {
-                      wb.field_b = wb.field_b + 1;
+                      wb.newAttachmentCount = wb.newAttachmentCount + 1;
                       break L3;
                     } else {
                       var2 = (GameplayEntity) ((Object) ji.movingEntities.nextForIteration(1));

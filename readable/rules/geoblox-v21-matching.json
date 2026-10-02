@@ -1,0 +1,362 @@
+{
+  "schema": 1,
+  "version": 21,
+  "previousRulesFile": "rules/geoblox-v20.json",
+  "previousRulesSha256": "fdcb9263e6955665f30b78c8c99a60e0c2815a9186db54e0078fbe1cca702d8a",
+  "inputTreeSha256": "07610c2d655bf96e59584f07be867c62e47cf3b3c484063504d9958443e89da2",
+  "sourceCommit": "7d0e06122fc537ee96a9f56e633ac5356ba325d8",
+  "javaToolsCommit": "e6dd72c89fa7f51cc34cd78d08cf5c6227799126",
+  "decompilerSourceArchiveSha256": "6337fa96b5d83ef24ee2bf20c7e48ea5e0844482f6262e774d73fba6101d4912",
+  "namingToolCommit": "a0bc835957148b9b1e1f8221c59b79d899d22738",
+  "namingMigration": "rules/geoblox-v20-migration.json",
+  "namingMigrationSha256": "3ba075f11f4c795f8865435ec5010b1f2c7bebc16d20c4d6c097a0bd36fd4838",
+  "renames": [
+    {
+      "symbol": "F:w.field_f:Z",
+      "to": "avatarShockPending",
+      "originalName": "field_f",
+      "evidence": "Set by rh.updateAttachedEntities for kind-3 entities touching the avatar with nonpositive cooldown. Consumed and cleared by kc.reconcileBoardEntities after shock feedback; le reset also clears it. ec.processMatchCandidates suppresses the empty-candidate chain reset while it is set. Producers are verified by source inspection; the native scoring probe controls this gate directly."
+    },
+    {
+      "symbol": "F:wb.field_b:I",
+      "to": "newAttachmentCount",
+      "originalName": "field_b",
+      "evidence": "Reset at the start of ab.moveEntitiesAndCollectContacts and during le queue reset; incremented on a newly attached entity whose detachedFromBoard flag is false. The empty-candidate path in ec.processMatchCandidates uses a positive count to reset the chain unless avatarShockPending is set. Native scoring fixtures control this gate; they do not run contact physics."
+    },
+    {
+      "symbol": "L:cf.d(B)V#1",
+      "to": "controlFlowGuard",
+      "originalName": "var2",
+      "evidence": "Retained entry snapshot of Geoblox.field_C; popup advancement still uses the exact floating comparison, including NaN behavior."
+    },
+    {
+      "symbol": "L:ec.b(I)Z#14",
+      "to": "firstBlockedEntity",
+      "originalName": "var8_ref_ja",
+      "evidence": "Alias of firstMatchedEntity on the cooldown-blocked path, immediately before its entityQueue marker is cleared."
+    },
+    {
+      "symbol": "L:ec.b(I)Z#16",
+      "to": "secondBlockedEntity",
+      "originalName": "var9_ref_ja",
+      "evidence": "Alias of secondMatchedEntity on the cooldown-blocked path, immediately before its entityQueue marker is cleared."
+    },
+    {
+      "symbol": "L:ec.b(I)Z#18",
+      "to": "controlFlowGuard",
+      "originalName": "var11",
+      "evidence": "Retained entry snapshot of Geoblox.field_C; unused in the generated processMatchCandidates body."
+    },
+    {
+      "symbol": "L:ec.b(I)Z#5",
+      "to": "sortInsertionIndex",
+      "originalName": "var1_int",
+      "evidence": "Outer insertion-sort cursor starting at one. Later receives candidateIndex zero before candidate traversal; it is not the traversal cursor."
+    },
+    {
+      "symbol": "L:gh.a(BI)V#3",
+      "to": "controlFlowGuard",
+      "originalName": "var6",
+      "evidence": "Entry snapshot that controls fallthrough from capped score text and counter split arms. The native scoring probe exercises ordinary zero-guard behavior; nonzero branches remain intact."
+    },
+    {
+      "symbol": "L:gh.a(BI)V#4",
+      "to": "cappedScoreText",
+      "originalName": "var7",
+      "evidence": "Character sequence for the display cap 9999999 when stored score exceeds it. writeTextAtOffset does not clamp the stored integer or truncate an existing builder suffix."
+    },
+    {
+      "symbol": "L:gh.a(BI)V#5",
+      "to": "scoreValueText",
+      "originalName": "var8",
+      "evidence": "Character sequence of the current stored score, passed to the prefix writer on the ordinary path or retained nonzero-guard fallthrough."
+    },
+    {
+      "symbol": "L:gh.a(II)V#1",
+      "to": "cappedPopupPointsText",
+      "originalName": "var4",
+      "evidence": "Character sequence for the pending-point display cap 99999. The pending integer total is not clamped; shorter prefix writes preserve the old suffix."
+    },
+    {
+      "symbol": "L:gh.a(II)V#2",
+      "to": "popupPointsValueText",
+      "originalName": "var5",
+      "evidence": "Character sequence of the current pending total for writeTextAtOffset; nonzero Geoblox.field_C preserves fallthrough after the cap write."
+    },
+    {
+      "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#0",
+      "to": "sourceCharacterIndex",
+      "originalName": "var7",
+      "evidence": "Loop index from zero to sourceLength minus one, supplied to sourceText.charAt."
+    },
+    {
+      "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#1",
+      "to": "characterWriteOffset",
+      "originalName": "incrementValue$1",
+      "evidence": "Saved destination offset before writeOffset increments, supplied to destination.setCharAt."
+    },
+    {
+      "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#2",
+      "to": "originalLength",
+      "originalName": "var4_int",
+      "evidence": "Destination length before any growth, used to validate the initial offset and decide whether setLength is needed."
+    },
+    {
+      "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#4",
+      "to": "sourceLength",
+      "originalName": "var5",
+      "evidence": "Length read from sourceText before sequential writes; aliasing does not change this loop bound even if the destination grows."
+    },
+    {
+      "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#5",
+      "to": "writeEndOffset",
+      "originalName": "var6",
+      "evidence": "Initial writeOffset plus sourceLength, used only to grow destination when larger than originalLength."
+    },
+    {
+      "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#6",
+      "to": "controlFlowGuard",
+      "originalName": "var8",
+      "evidence": "Retained entry snapshot of Geoblox.field_C; no reconstructed writer branch uses it."
+    },
+    {
+      "symbol": "L:ul.b(I)V#0",
+      "to": "firstNeighborIndex",
+      "originalName": "var6",
+      "evidence": "Index into centralEntity.relatedEntities in the outer pair-enumeration loop; secondNeighborIndex starts at this index plus one."
+    },
+    {
+      "symbol": "L:ul.b(I)V#20",
+      "to": "eligibleNeighborhoodVisited",
+      "originalName": "var1_int",
+      "evidence": "Integer flag set when an eligible central neighborhood visits a neighbor. It can enable feedback even when no three-entity match was emitted; it is not a successful-match flag."
+    },
+    {
+      "symbol": "L:ul.b(I)V#22",
+      "to": "dualMatchFound",
+      "originalName": "var2",
+      "evidence": "Set when a candidate triple shares both category and sprite variant; chooses feedback mode 5 instead of mode 4 after traversal."
+    },
+    {
+      "symbol": "L:ul.b(I)V#23",
+      "to": "centralEntity",
+      "originalName": "var3",
+      "evidence": "Current attached entity from the deque. Its matching counts gate neighborhood traversal and its neighbor pairs form candidate triples."
+    },
+    {
+      "symbol": "L:ul.b(I)V#24",
+      "to": "variantMatchingAllowed",
+      "originalName": "var4",
+      "evidence": "Integer boolean for centralEntity.sameVariantEntityCount > 1; gates both subsequent spriteVariantIndex comparisons."
+    },
+    {
+      "symbol": "L:ul.b(I)V#25",
+      "to": "categoryMatchingAllowed",
+      "originalName": "var5",
+      "evidence": "Integer boolean for centralEntity.sameCategoryEntityCount > 1; gates both subsequent entityCategoryKey comparisons."
+    },
+    {
+      "symbol": "L:ul.b(I)V#26",
+      "to": "firstNeighborSharesVariant",
+      "originalName": "var7",
+      "evidence": "Gated equality of the central and first-neighbor spriteVariantIndex values; combines with the second neighbor to form tripleSharesVariant."
+    },
+    {
+      "symbol": "L:ul.b(I)V#27",
+      "to": "firstNeighborSharesCategory",
+      "originalName": "var8",
+      "evidence": "Gated equality of the central and first-neighbor entityCategoryKey values; combines with the second neighbor to form tripleSharesCategory."
+    },
+    {
+      "symbol": "L:ul.b(I)V#28",
+      "to": "secondNeighborIndex",
+      "originalName": "var9",
+      "evidence": "Second index into centralEntity.relatedEntities, strictly greater than firstNeighborIndex, so each pair is visited once per central entity."
+    },
+    {
+      "symbol": "L:ul.b(I)V#29",
+      "to": "tripleSharesCategory",
+      "originalName": "var10",
+      "evidence": "Integer boolean for the gated central/first/second category match. Increments the category-match counter and sets the packed sign bit."
+    },
+    {
+      "symbol": "L:ul.b(I)V#30",
+      "to": "tripleSharesVariant",
+      "originalName": "var11",
+      "evidence": "Integer boolean for the gated central/first/second sprite-variant match. Increments the variant-match counter and sets packed bit 30."
+    },
+    {
+      "symbol": "L:ul.b(I)V#31",
+      "to": "largestPackedEntityId",
+      "originalName": "var12",
+      "evidence": "Initially the central entity ID, then permuted by the three-way descending sort. The final largest ID occupies packed bits 20..29; this variable is not permanently the central entity ID."
+    },
+    {
+      "symbol": "L:ul.b(I)V#32",
+      "to": "middlePackedEntityId",
+      "originalName": "var13",
+      "evidence": "Initially the first neighbor ID, then permuted by the descending sort. The final middle ID occupies packed bits 10..19."
+    },
+    {
+      "symbol": "L:ul.b(I)V#33",
+      "to": "smallestPackedEntityId",
+      "originalName": "var14",
+      "evidence": "Initially the second neighbor ID, then permuted by the descending sort. The final smallest ID occupies packed bits 0..9."
+    },
+    {
+      "symbol": "L:ul.b(I)V#34",
+      "to": "swappedEntityId",
+      "originalName": "var15",
+      "evidence": "Scratch entity ID during the descending three-ID sort; not a persistent reference to any particular neighbor."
+    },
+    {
+      "symbol": "L:ul.b(I)V#35",
+      "to": "controlFlowGuard",
+      "originalName": "var16",
+      "evidence": "Snapshot of Geoblox.field_C at entry. The generated body retains this read even though this snapshot is unused by the reconstructed traversal."
+    },
+    {
+      "symbol": "M:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;",
+      "to": "writeTextAtOffset",
+      "originalName": "a",
+      "evidence": "Overwrites destination characters sequentially from writeOffset and grows the builder only if the write extends its length. It returns the same builder; shorter and empty writes preserve trailing text. A source aliased to the destination is read live, not copied first. Invalid offsets and RuntimeExceptions retain context wrapping; source Errors escape. Native 152-case offset/aliasing/partial-write probe verifies these semantics."
+    },
+    {
+      "symbol": "P:cf.d(B)V#0",
+      "to": "methodGuard",
+      "originalName": "param0",
+      "evidence": "Normal callers pass 27. Values below 8 retain cf.c((byte)121) before popup advancement; the guard is not removed."
+    },
+    {
+      "symbol": "P:ec.b(I)Z#0",
+      "to": "methodGuard",
+      "originalName": "param0",
+      "evidence": "Normal callers pass -18913. Other values retain the recursive ec.b(-33) branch before candidate processing."
+    },
+    {
+      "symbol": "P:gh.a(BI)V#0",
+      "to": "methodGuard",
+      "originalName": "param0",
+      "evidence": "Normal scoring callers pass byte 127. Other values retain the private gh.e(-17) call after writing score text."
+    },
+    {
+      "symbol": "P:gh.a(II)V#1",
+      "to": "methodGuard",
+      "originalName": "param1",
+      "evidence": "Normal pending-score callers pass -73. This argument retains the final division/remainder guard and its possible arithmetic exception."
+    },
+    {
+      "symbol": "P:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#0",
+      "to": "sourceText",
+      "originalName": "param0",
+      "evidence": "CharSequence read once for length, then read sequentially with charAt. Source aliasing, length/character failures and partial writes are retained."
+    },
+    {
+      "symbol": "P:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#1",
+      "to": "destination",
+      "originalName": "param1",
+      "evidence": "Mutable builder whose initial length bounds the start offset. It grows only when needed and is returned by identity without suffix truncation."
+    },
+    {
+      "symbol": "P:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#2",
+      "to": "writeOffset",
+      "originalName": "param2",
+      "evidence": "Initial destination offset, validated against zero and originalLength, then incremented for each character before setCharAt. Exception context retains the advanced offset after a failed source character read."
+    },
+    {
+      "symbol": "P:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#3",
+      "to": "methodGuard",
+      "originalName": "param3",
+      "evidence": "Normal callers pass values above 23. Values <=23 retain the unrelated PCM helper call with a null sample; no guard branch is removed."
+    },
+    {
+      "symbol": "P:ug.a(IZIII)V#1",
+      "to": "methodGuard",
+      "originalName": "param1",
+      "evidence": "True is the normal spawn guard. With a pooled popup, false clears ug.createEmailText before the identical enqueue; pool exhaustion returns through immediate addScore before this guard is tested."
+    },
+    {
+      "symbol": "P:ul.b(I)V#0",
+      "to": "methodGuard",
+      "originalName": "param0",
+      "evidence": "Normal callers pass -2. Other values clear ul.field_a; match enumeration and RuntimeException context remain intact."
+    }
+  ],
+  "sourceEvidence": [
+    {
+      "file": "ab.java",
+      "sha256": "b2329f260c1d16820fd0e7ec027269d13b2c37c72d101930590d7f79e1583f54"
+    },
+    {
+      "file": "cf.java",
+      "sha256": "6bea34d6fb1e51f5fbf7b8960507fff21b6b33994dfd2d070903b0231b65d83c"
+    },
+    {
+      "file": "ec.java",
+      "sha256": "9680ab252d00cf9b5e5064f2f182765e8cbc9ef529f6c7ac68fa6ccd577f9b53"
+    },
+    {
+      "file": "gh.java",
+      "sha256": "6e39ba682f51bb6e758c1e9cb4277a95a1fdedf007a1b8be571b618a04eb6b4d"
+    },
+    {
+      "file": "kc.java",
+      "sha256": "54b618bab0d64b0e087a54c524ee0dfd2ca5b88a78223e1bd679b987ec79fab2"
+    },
+    {
+      "file": "le.java",
+      "sha256": "188c241f0cdacc051c8da5406c43b482c7059e8448ae2504831d0735a27d2eec"
+    },
+    {
+      "file": "rh.java",
+      "sha256": "145ea45adf9bb63403fe149ced81f949af6490abc4b71d619db144f41680fdb7"
+    },
+    {
+      "file": "td.java",
+      "sha256": "62ff2d322af3b014b52b9d86ccb89ac7bb503a35ff74b2ab83ae5a9bacdce71c"
+    },
+    {
+      "file": "ug.java",
+      "sha256": "50bf02ecfe05bb94c8d242d9f14c33fc473913a26e67ab69158c31c703f67ac5"
+    },
+    {
+      "file": "ul.java",
+      "sha256": "024b79f4a0317c0e8c058f19187000bf42dcdb08ed28874383c0eb42699378f8"
+    },
+    {
+      "file": "w.java",
+      "sha256": "a97ae4e9f87e1f25c7d2e6c47720c1213d601aad44848383980dd592ce52f21d"
+    },
+    {
+      "file": "wb.java",
+      "sha256": "21b1afcf5ea02debe36803cbde0f2b6642142818654e6830f7d3c98fe1e979d9"
+    }
+  ],
+  "nativeEvidence": [
+    {
+      "file": "tests/test-geoblox-match-scoring.mjs",
+      "sha256": "927be731f1758efda5aece8cde91be6d4a1ac3d928407b9c003a3280227f4936",
+      "nativeOutputSha256": "222f18c6366fdab862f1d5d70980cb0a6f32b3adb6eba308c08846a473bac16a",
+      "scenarios": 708,
+      "ticks": 55728
+    },
+    {
+      "file": "tests/test-geoblox-text-write.mjs",
+      "sha256": "7e8a05a19eb0c1651a1820ad2142c4decaed8754a80462fda13fe91dd45a5afa",
+      "nativeOutputSha256": "c99483f76661e9d3866aab389d6bd640e45ab1ff3e1766ad6a8aa7d9f3214f31",
+      "scenarios": 152
+    }
+  ],
+  "review": {
+    "rulesRetained": 972,
+    "rulesAdded": 45,
+    "originalSpellingGuardsMatched": 1017,
+    "namedLocalsRetained": 255,
+    "namedLocalsAdded": 32,
+    "sourceDeclarationsUnchanged": 21185,
+    "overrideRelationshipsUnchanged": 388,
+    "rawSourceTreeUnchanged": true,
+    "sourceBodyEdited": false,
+    "identityChanges": []
+  }
+}

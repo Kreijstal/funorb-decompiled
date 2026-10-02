@@ -1,4 +1,4 @@
-# Reading GeoBlox pass 20
+# Reading GeoBlox pass 21
 
 The readable tree uses semantic names without opaque suffixes. The symbol map
 keeps the original spelling and JVM identity of every declaration, so
@@ -69,6 +69,24 @@ candidate batch; cooldowns can prevent every candidate in that batch from scorin
 `dd.variantMatchCandidateCount` and `dk.categoryMatchCandidateCount` count collected
 triples before cooldown checks and deduplication. They are also tutorial metrics.
 
+The collector now names both neighbor indices and the gated variant/category
+comparisons. `eligibleNeighborhoodVisited` controls feedback after visiting an
+eligible neighborhood; it does not mean a triple was found. `dualMatchFound`
+selects feedback mode 5 when a triple shares both properties. The IDs are sorted
+into `largestPackedEntityId`, `middlePackedEntityId` and `smallestPackedEntityId`
+before packing. Their variables initially hold different entity roles, so the
+names describe the final packed order rather than permanently identifying a
+central or neighboring entity.
+
+The processor's `sortInsertionIndex` belongs to the insertion sort; the existing
+`candidateIndex` walks the deduplicated batch. `firstBlockedEntity` and
+`secondBlockedEntity` are aliases used only to clear queue markers when a
+candidate fails a cooldown check. `wb.newAttachmentCount` is reset during motion
+and increments for newly attached entities. In an empty batch it can reset the
+chain, except while `w.avatarShockPending` is set. The shock flag originates in
+kind-3 avatar contacts and is cleared by board reconciliation. The native scoring
+probe controls these gates directly; it does not simulate their physics producers.
+
 `touchesAvatar` means direct contact with the white `0xFFFFFF` avatar marker.
 It is a root for the graph traversal, rather than a transitive connectivity flag.
 `re.connectivityDirty` requests a rebuild, and `pk.connectivityVisitedByEntityId`
@@ -79,6 +97,29 @@ the moving queue and set `fa.entitiesDetachedThisTick`.
 The session snapshots it as `boundaryCheckRequested` before advancing motion.
 `boardRasterDirty` requests a redraw of the attached scene raster; it is separate
 from both contact dirtiness and `connectivityRebuiltThisTick`.
+
+## Score popups and text writes
+
+`ug.spawnScorePopup` takes a popup from the pool. Pool exhaustion credits the
+points immediately; pooled popups enter the active queue with zero progress.
+`cf.advanceScorePopups` advances their float progress, including native NaN
+behavior, then credits points to the score or pending panel according to the
+chain multiplier. Tutorial mode suppresses the scoring methods.
+
+`GameplaySession.addScore` retains the integer total and writes a display cap of
+9999999 when needed; `addPopupPoints` similarly caps its displayed prefix at
+99999. Neither cap clamps the stored integer. `td.writeTextAtOffset` writes
+characters sequentially into the existing builder and grows its length only
+when needed. It does not truncate a suffix after a shorter write. An empty write
+returns the original builder unchanged. If the source is the same builder,
+earlier writes affect later source reads: writing `abc` at offset 1 into itself
+produces `aaaa`. The direct native probe verifies these details, partial writes
+on failure, exception wrapping and throwable identity.
+
+`sourceCharacterIndex`, `characterWriteOffset`, `originalLength`, `sourceLength`
+and `writeEndOffset` expose this operation without simplifying the retained
+guards or changing exception-context strings. A guard <=23 retains the PCM
+helper side effect; it is outside the direct text-writer probe.
 
 ## Releases, result sequence and scene transition
 

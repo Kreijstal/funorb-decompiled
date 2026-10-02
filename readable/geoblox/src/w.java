@@ -5,7 +5,7 @@ import java.io.*;
 
 final class w {
     static char[] field_c;
-    static boolean field_f;
+    static boolean avatarShockPending;
     static ck field_d;
     static String mouseOverIconText;
     static String[] field_b;

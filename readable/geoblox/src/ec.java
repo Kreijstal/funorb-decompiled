@@ -38,13 +38,13 @@ final class ec {
         }
     }
 
-    final static boolean processMatchCandidates(int param0) {
+    final static boolean processMatchCandidates(int methodGuard) {
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_49_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int var1_int = 0;
+        int sortInsertionIndex = 0;
         RuntimeException var1 = null;
         int sortCursorThenFirstEntityId = 0;
         int packedCandidateThenSecondEntityId = 0;
@@ -53,18 +53,18 @@ final class ec {
         GameplayEntity secondMatchedEntity = null;
         GameplayEntity thirdMatchedEntity = null;
         int awardedPoints = 0;
-        GameplayEntity var8_ref_ja = null;
+        GameplayEntity firstBlockedEntity = null;
         int popupX = 0;
-        GameplayEntity var9_ref_ja = null;
+        GameplayEntity secondBlockedEntity = null;
         int popupY = 0;
-        int var11 = 0;
+        int controlFlowGuard = 0;
         int candidateIndex = 0;
-        var11 = Geoblox.field_C;
+        controlFlowGuard = Geoblox.field_C;
         try {
           L0: {
             if (0 == h.matchCandidateCount) {
-              if (0 < wb.field_b) {
-                if (!w.field_f) {
+              if (0 < wb.newAttachmentCount) {
+                if (!w.avatarShockPending) {
                   gf.matchChainLength = 0;
                   if (el.gameplaySession.pointsPanelX == 463) {
                     el.gameplaySession.pointsPanelSlideDirection = 1;
@@ -88,9 +88,9 @@ final class ec {
               if (gf.matchChainLength >= 7) {
                 ra.a(255 ^ IntrusiveDeque.field_f, -97, IntrusiveDeque.field_f);
               }
-              for (var1_int = 1; var1_int < h.matchCandidateCount; var1_int++) {
-                sortCursorThenFirstEntityId = var1_int + -1;
-                packedCandidateThenSecondEntityId = nk.packedMatchCandidates[var1_int];
+              for (sortInsertionIndex = 1; sortInsertionIndex < h.matchCandidateCount; sortInsertionIndex++) {
+                sortCursorThenFirstEntityId = sortInsertionIndex + -1;
+                packedCandidateThenSecondEntityId = nk.packedMatchCandidates[sortInsertionIndex];
                 L14: while (sortCursorThenFirstEntityId >= 0) {
                   if (~nk.packedMatchCandidates[sortCursorThenFirstEntityId] < ~packedCandidateThenSecondEntityId) {
                     nk.packedMatchCandidates[1 + sortCursorThenFirstEntityId] = nk.packedMatchCandidates[sortCursorThenFirstEntityId];
@@ -101,11 +101,11 @@ final class ec {
                 }
                 nk.packedMatchCandidates[1 + sortCursorThenFirstEntityId] = packedCandidateThenSecondEntityId;
               }
-              if (param0 != -18913) {
+              if (methodGuard != -18913) {
                 ec.processMatchCandidates(-33);
               }
               candidateIndex = 0;
-              var1_int = candidateIndex;
+              sortInsertionIndex = candidateIndex;
               L8: while (candidateIndex < h.matchCandidateCount) {
                 L9: {
                   if (-1 + h.matchCandidateCount > candidateIndex) {
@@ -144,11 +144,11 @@ final class ec {
                       }
                     }
                   }
-                  var8_ref_ja = firstMatchedEntity;
-                  var9_ref_ja = secondMatchedEntity;
+                  firstBlockedEntity = firstMatchedEntity;
+                  secondBlockedEntity = secondMatchedEntity;
                   thirdMatchedEntity.entityQueue = null;
-                  var9_ref_ja.entityQueue = null;
-                  var8_ref_ja.entityQueue = null;
+                  secondBlockedEntity.entityQueue = null;
+                  firstBlockedEntity.entityQueue = null;
                   nk.packedMatchCandidates[candidateIndex] = 0;
                 }
                 candidateIndex++;
@@ -165,7 +165,7 @@ final class ec {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1), "ec.A(" + param0 + ')');
+          throw t.a((Throwable) ((Object) var1), "ec.A(" + methodGuard + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_9_0 != 0;

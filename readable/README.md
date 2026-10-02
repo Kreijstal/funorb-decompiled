@@ -1,7 +1,7 @@
 # Readable source exports
 
-GeoBlox pass 20 retains 972 reviewed naming rules: 21 classes, 358 fields,
-163 methods, 175 parameters and 255 guarded local declarations. It preserves strings and numeric IDs; typed XOR-minus-one expressions and
+GeoBlox pass 21 has 1,017 reviewed naming rules: 21 classes, 360 fields,
+164 methods, 185 parameters and 287 guarded local declarations. It preserves strings and numeric IDs; typed XOR-minus-one expressions and
 comparisons now use equivalent signed integer/long conditions. The new decompiler renders proven
 single-entry branches as ordinary Java bodies and keeps verified exception-region
 loop fanouts structured. Nested exception cycles are recovered with bounded
@@ -43,7 +43,8 @@ dispatchers, source-edge checks and native verification. The
   pass-13 text additions, the pass-14 comparison migration and the pass-15
   local-identity migration, pass-16 border/validation additions and pass-17
   numeric-negation input migration, pass-18 result-helper additions and pass-19
-  exception-continuation input migration, the frozen pass-19 manifest and pass-20 floating-comparison input migration.
+  exception-continuation input migration, the frozen pass-19 and pass-20 manifests,
+  pass-20 floating-comparison input migration and pass-21 matching additions.
   Every previous manifest and the changed input are guarded by SHA-256.
 - `funorb-stubs.jar`: the frozen compilation dependency, included byte for byte.
 
@@ -104,6 +105,13 @@ ordinals shift; all named local identities remain unchanged. The migration and
 wrapper guard both before/after source hashes. See
 [the exception-continuation report](EXCEPTION-CONTINUATION-READABILITY.md).
 Pass 20 preserves exact floating comparison behavior, adds one long-comparison helper, and keeps every reviewed name/identity. Its controlled scoring probe now matches native bytecode, including NaN progress. See [the comparison and scoring report](FLOAT-COMPARISON-READABILITY.md).
+Pass 21 retains those 972 rules and adds 45 guarded names: 32 locals, ten
+parameters, two fields and the text-writer method. The raw input and pinned
+decompiler remain unchanged. Native matching/scoring and direct text-writing
+traces verify the named behavior; contact-physics producers of the new attachment
+and shock fields are supported by source inspection, rather than full physics
+simulation. The wrapper separately verifies historical result evidence and the
+new naming/probe evidence. See [the gameplay reading guide](GEOBLOX-READING-GUIDE.md).
 The complete pass-14 rules remain frozen, and pass 15 binds the new source and
 decompiler identities. The previous ASM check covered
 2,427 methods with zero failures; those bytes have not changed. See
@@ -131,6 +139,22 @@ node readable/tests/test-geoblox-nine-slice.mjs
 node readable/tests/test-geoblox-result-sequence.mjs
 node readable/tests/test-geoblox-result-helpers.mjs
 ```
+
+For the native match/scoring and text-writing checks, supply the verified 303-class
+GeoBlox directory recorded in `decompilation/geoblox-provenance.json`:
+
+```sh
+JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-match-scoring.mjs /path/to/verified-geoblox-classes
+JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-text-write.mjs /path/to/verified-geoblox-classes
+```
+
+The second probe checks 152 cases: valid and invalid offsets, empty and growing
+writes, shorter writes retaining old suffixes, UTF-16 characters, source/destination
+aliasing, throwing source length/character reads, partial mutation and wrapper/cause
+identity. Method guards above 23 are exercised; the PCM side-effect branch at
+guards <=23 is outside that probe. Both zero and nonzero `Geoblox.field_C` snapshots
+are tested. The native output SHA-256 is
+`c99483f76661e9d3866aab389d6bd640e45ab1ff3e1766ad6a8aa7d9f3214f31`.
 
 The recorded environment is OpenJDK `11.0.32.1+1`, Node `22.23.2`, with Java
 compilation targeting release 8. Use the recorded JDK and dependency bytes for a
@@ -221,6 +245,14 @@ There is no second naming algorithm for exports and no manual edit of generated
 readable Java. Changing rules, input or tools deliberately changes their pins;
 unknown symbols are never renamed by guessing during reproduction.
 
+For a naming-only pass, keep the raw source and decompiler pins unchanged,
+freeze the previous full rule manifest, and add guarded names with source-file
+and native-probe evidence. Pass 21 does this in
+`rules/geoblox-v21-matching.json`; the builder reconstructs every retained pass
+through 20 before adding its 45 rules. The wrapper verifies pass 18's historical
+result evidence using the reviewed pass-20 hash update separately from current
+pass-21 source and probe hashes. Dictionary reversal remains a required check.
+
 ## Checks and limits
 
 Both complete 303-file corpora compile. All 154,113 bindings and 388 override
@@ -264,7 +296,7 @@ before treating the renamed export as a runnable replacement.
 | Java source tree | SHA-256 |
 | --- | --- |
 | Original GeoBlox | `07610c2d655bf96e59584f07be867c62e47cf3b3c484063504d9958443e89da2` |
-| Readable GeoBlox | `601aa49ecba2b3878d94c51cd8a1f6a6ba2e229837017eaadcb69ede1050b61a` |
+| Readable GeoBlox | `2ee30741e787ab09b6e7c70bf4cad0c80c2b0390ab10c084b6b138fac4a2140d` |
 
 These tree digests use `sourceIdentity(sourceInventory(root))` from the naming
 tool. They identify source bytes; the decompiler Git commits are listed above.
