@@ -250,15 +250,15 @@ final class nf {
             if (!el.b(30000, 1)) {
                 return false;
             }
-            p.field_k = eh.field_d.c((byte) 34);
-            eh.field_d.field_f = 0;
+            p.field_k = eh.field_d.readUnsignedByte((byte) 34);
+            eh.field_d.position = 0;
         }
         if (p.field_k == -2) {
             if (!(el.b(30000, 2))) {
                 return false;
             }
-            p.field_k = eh.field_d.b(true);
-            eh.field_d.field_f = 0;
+            p.field_k = eh.field_d.readUnsignedShortBE(true);
+            eh.field_d.position = 0;
         }
         return el.b(30000, p.field_k);
     }

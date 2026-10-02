@@ -9,7 +9,7 @@ final class qa {
     static int pointerXSnapshot;
     static ch field_d;
 
-    final static String a(qc param0, int param1, int param2) {
+    final static String a(ByteArrayBuffer param0, int param1, int param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -23,12 +23,12 @@ final class qa {
         Throwable decompiledCaughtException = null;
         try {
           try {
-            var3_int = param0.c(param1 + 1);
+            var3_int = param0.readUnsignedSmart(param1 + 1);
             if (var3_int > param2) {
               var3_int = param2;
             }
             var4 = new byte[var3_int];
-            param0.field_f = param0.field_f + vj.field_b.a(var4, param0.field_f, param0.field_j, param1, -127, var3_int);
+            param0.position = param0.position + vj.field_b.a(var4, param0.position, param0.bytes, param1, -127, var3_int);
             var5 = bc.decodeTextSlice(param1 ^ -103, var4, 0, var3_int);
             stackIn_4_0 = (String) (var5);
             return stackIn_4_0;

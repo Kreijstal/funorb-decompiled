@@ -189,9 +189,9 @@ abstract class sh extends el implements ql {
                   if (var3 > var5_ref_ma.field_f) {
                     var5_ref_ma.unlinkNode(false);
                     p.field_k = var5_ref_ma.field_g.length;
-                    eh.field_d.field_f = 0;
+                    eh.field_d.position = 0;
                     for (var6_int = 0; var6_int < p.field_k; var6_int++) {
-                      eh.field_d.field_j[var6_int] = var5_ref_ma.field_g[var6_int];
+                      eh.field_d.bytes[var6_int] = var5_ref_ma.field_g[var6_int];
                     }
                     ad.field_o = dc.field_b;
                     dc.field_b = kg.field_n;
@@ -204,12 +204,12 @@ abstract class sh extends el implements ql {
             }
             L2: while (true) {
               if (pc.field_f < 0) {
-                eh.field_d.field_f = 0;
+                eh.field_d.position = 0;
                 if (!el.b(30000, 1)) {
                   return false;
                 }
                 pc.field_f = eh.field_d.j((byte) 122);
-                eh.field_d.field_f = 0;
+                eh.field_d.position = 0;
                 p.field_k = param1[pc.field_f];
               }
               if (!nf.a(false)) {
@@ -233,7 +233,7 @@ abstract class sh extends el implements ql {
                 }
                 var6 = new ma((long)var5 + var3, pc.field_f, new byte[p.field_k]);
                 for (var7 = 0; p.field_k > var7; var7++) {
-                  var6.field_g[var7] = eh.field_d.field_j[var7];
+                  var6.field_g[var7] = eh.field_d.bytes[var7];
                 }
                 va.field_c.addLast(-108, var6);
                 pc.field_f = -1;

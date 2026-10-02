@@ -70,7 +70,7 @@ final class ub {
         return var1 * 3.1415927410125732f / 11025.0f;
     }
 
-    final void a(qc param0, uc param1) {
+    final void a(ByteArrayBuffer param0, uc param1) {
         int var3;
         int var4;
         int var5;
@@ -78,17 +78,17 @@ final class ub {
         int var7;
         int[] var11;
         L0: {
-          var3 = param0.c((byte) 34);
+          var3 = param0.readUnsignedByte((byte) 34);
           this.field_b[0] = var3 >> 4;
           this.field_b[1] = var3 & 15;
           if (var3 != 0) {
-            this.field_e[0] = param0.b(true);
-            this.field_e[1] = param0.b(true);
-            var4 = param0.c((byte) 34);
+            this.field_e[0] = param0.readUnsignedShortBE(true);
+            this.field_e[1] = param0.readUnsignedShortBE(true);
+            var4 = param0.readUnsignedByte((byte) 34);
             for (var5 = 0; var5 < 2; var5++) {
               for (var6 = 0; var6 < this.field_b[var5]; var6++) {
-                this.field_c[var5][0][var6] = param0.b(true);
-                this.field_h[var5][0][var6] = param0.b(true);
+                this.field_c[var5][0][var6] = param0.readUnsignedShortBE(true);
+                this.field_h[var5][0][var6] = param0.readUnsignedShortBE(true);
               }
             }
             for (var5 = 0; var5 < 2; var5++) {
@@ -101,8 +101,8 @@ final class ub {
                   var7++;
                   continue L5;
                 }
-                this.field_c[var5][1][var7] = param0.b(true);
-                this.field_h[var5][1][var7] = param0.b(true);
+                this.field_c[var5][1][var7] = param0.readUnsignedShortBE(true);
+                this.field_h[var5][1][var7] = param0.readUnsignedShortBE(true);
                 var7++;
               }
             }

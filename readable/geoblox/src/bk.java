@@ -50,34 +50,34 @@ final class bk {
         og var9 = null;
         var7 = Geoblox.field_C;
         var8 = eh.field_d;
-        var3 = var8.c((byte) 34);
+        var3 = var8.readUnsignedByte((byte) 34);
         gj.field_u = var3 & 127;
         stackIn_3_0 = !((param1 & var3) == 0);
         vd.field_l = stackIn_3_0;
-        bm.field_s = var8.c((byte) 34);
-        uf.field_c = var8.b(2901);
+        bm.field_s = var8.readUnsignedByte((byte) 34);
+        uf.field_c = var8.readLongBE(2901);
         if (gj.field_u != 2) {
           uk.field_o = 0;
           tj.field_b = 0;
         } else {
-          tj.field_b = var8.b(true);
-          uk.field_o = var8.e(105);
+          tj.field_b = var8.readUnsignedShortBE(true);
+          uk.field_o = var8.readUnsignedMediumBE(105);
         }
-        stackIn_9_0 = (var8.c((byte) 34) != 1) ? 0 : 1;
+        stackIn_9_0 = (var8.readUnsignedByte((byte) 34) != 1) ? 0 : 1;
         var4 = stackIn_9_0;
-        cj.field_a = var8.e((byte) 117);
+        cj.field_a = var8.readNullTerminatedText((byte) 117);
         if (var4 == 0) {
           jc.field_b = cj.field_a;
         } else {
-          jc.field_b = var8.e((byte) 124);
+          jc.field_b = var8.readNullTerminatedText((byte) 124);
         }
         if (gj.field_u == 1) {
-          var8.b(true);
-          var8.e((byte) 112);
+          var8.readUnsignedShortBE(true);
+          var8.readNullTerminatedText((byte) 112);
         } else {
           if (gj.field_u == 4) {
-            var8.b(true);
-            var8.e((byte) 112);
+            var8.readUnsignedShortBE(true);
+            var8.readNullTerminatedText((byte) 112);
           }
         }
         if (!param0) {
@@ -86,7 +86,7 @@ final class bk {
           return new vd(param0);
         }
         {
-          var5 = var8.b(true);
+          var5 = var8.readUnsignedShortBE(true);
           try {
             var9 = rd.field_r.a((byte) -14, var5);
             re.field_f = var9.e((byte) -69);

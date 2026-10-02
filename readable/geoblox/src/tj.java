@@ -11,12 +11,12 @@ final class tj {
         try {
             var6 = fj.field_q;
             var6.a(param0, (byte) -63);
-            var6.field_f = var6.field_f + 1;
+            var6.position = var6.position + 1;
             if (param1 != 86) {
                 se var5 = (se) null;
                 tj.a(-12, 107, (se) null);
             }
-            var4 = var6.field_f;
+            var4 = var6.position;
             var6.d((byte) 127, 1);
             var6.d((byte) 124, param2.field_g);
             var6.c(param2.field_j, param1 - 6048);
@@ -25,7 +25,7 @@ final class tj {
             var6.c((byte) 95, param2.field_l);
             var6.c((byte) 95, param2.field_f);
             var6.d(104, var4);
-            var6.f(11700, -var4 + var6.field_f);
+            var6.f(11700, -var4 + var6.position);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "tj.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

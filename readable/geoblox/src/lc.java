@@ -323,20 +323,20 @@ final class lc {
             field_b = 67;
           }
           var1 = eh.field_d;
-          var2 = var1.c((byte) 34);
+          var2 = var1.readUnsignedByte((byte) 34);
           if (var2 == 0) {
             if (ug.field_a == null) {
               ug.field_a = new vg(128);
               ca.field_i = 0;
             }
-            stackIn_15_0 = (var1.c((byte) 34) != 1) ? 0 : 1;
+            stackIn_15_0 = (var1.readUnsignedByte((byte) 34) != 1) ? 0 : 1;
             var3_int = stackIn_15_0;
-            var4_ref_String = var1.e((byte) 105);
+            var4_ref_String = var1.readNullTerminatedText((byte) 105);
             if (var3_int != 0) {
-              var1.e((byte) 108);
+              var1.readNullTerminatedText((byte) 108);
             }
             var5 = ud.a(0, var4_ref_String);
-            var6 = var1.e((byte) 103);
+            var6 = var1.readNullTerminatedText((byte) 103);
             var7 = oe.a((CharSequence) ((Object) var4_ref_String), 12);
             if (null == var7) {
               var7 = var4_ref_String;
@@ -378,9 +378,9 @@ final class lc {
             }
             {
               vk.field_a = 1;
-              var3 = var1.e((byte) 122);
+              var3 = var1.readNullTerminatedText((byte) 122);
               eg.field_l = ((String) (var3)).intern();
-              var4 = var1.c((byte) 34);
+              var4 = var1.readUnsignedByte((byte) 34);
               pi.c(var4, param0 ^ -12742);
               return;
             }
@@ -390,12 +390,12 @@ final class lc {
               nh.field_a = new vg(128);
               mg.field_g = 0;
             }
-            var3 = var1.e((byte) 108);
+            var3 = var1.readNullTerminatedText((byte) 108);
             if (((String) (var3)).equals("")) {
               var3 = null;
             }
-            var4_ref_String = var1.e((byte) 102);
-            var5_ref = var1.e((byte) 110);
+            var4_ref_String = var1.readNullTerminatedText((byte) 102);
+            var5_ref = var1.readNullTerminatedText((byte) 110);
             var6_ref = jg.a((byte) -62, var4_ref_String);
             if (null == var6_ref) {
               var6_ref = jg.a((byte) -62, var5_ref);

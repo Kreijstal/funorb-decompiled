@@ -316,7 +316,7 @@ final class qh extends ee implements pe, pl, ta {
         RuntimeException var6 = null;
         try {
           if (param4 == this.field_L) {
-            qc.g(0);
+            ByteArrayBuffer.g(0);
           } else {
             if (this.field_D == param4) {
               discarded$1 = this.g(-21440);

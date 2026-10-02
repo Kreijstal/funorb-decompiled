@@ -179,7 +179,7 @@ abstract class wf extends ch {
             }
           }
           if (wj.field_G[1]) {
-            qc.a(true, 2);
+            ByteArrayBuffer.a(true, 2);
           }
           if (wj.field_G[2]) {
             ec.a(param0 ^ 76, 3);
@@ -566,14 +566,14 @@ abstract class wf extends ch {
             String var9 = null;
             String var10 = null;
             Boolean var11 = null;
-            qc var12 = null;
+            ByteArrayBuffer var12 = null;
             var8 = Geoblox.field_C;
             var4 = gk.a(va.field_a, vc.field_i, param1, (byte) -117);
             if (param2 == ~var4) {
               throw new IllegalStateException();
             }
             if (var4 == 1) {
-              var5_int = qc.a(qh.i(param2 ^ -26), pf.h((byte) -42), -121);
+              var5_int = ByteArrayBuffer.a(qh.i(param2 ^ -26), pf.h((byte) -42), -121);
               if (var5_int != -1) {
                 kb.a(var5_int, 6568, si.field_i, kh.field_a);
                 kh.field_a = null;
@@ -661,7 +661,7 @@ abstract class wf extends ch {
                     var9 = (String) null;
                     SecondaryDeque.a((byte) 69, (String) null);
                   } else {
-                    var7 = bc.decodeTextSlice(-46, var12.field_j, 0, var12.field_f);
+                    var7 = bc.decodeTextSlice(-46, var12.bytes, 0, var12.position);
                     SecondaryDeque.a((byte) 69, var7);
                   }
                   mk.field_n = null;
@@ -866,7 +866,7 @@ abstract class wf extends ch {
     }
 
     private final void g(byte param0) {
-        int var2 = eh.field_d.c((byte) 34);
+        int var2 = eh.field_d.readUnsignedByte((byte) 34);
         int var3 = (var2 & 1) != 0 ? 1 : 0;
         if (param0 != 12) {
             this.h(106);

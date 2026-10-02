@@ -56,7 +56,7 @@ final class ge {
               var4 = 0;
               var5 = 56;
               L9: while (var4 < 8) {
-                this.field_k[var3] = f.a(this.field_k[var3], qc.field_g[var4][cd.a(255, (int)(this.field_a[cd.a(7, var3 - var4)] >>> var5))]);
+                this.field_k[var3] = f.a(this.field_k[var3], ByteArrayBuffer.field_g[var4][cd.a(255, (int)(this.field_a[cd.a(7, var3 - var4)] >>> var5))]);
                 var5 -= 8;
                 var4++;
               }
@@ -64,14 +64,14 @@ final class ge {
             for (var3 = 0; var3 < 8; var3++) {
               this.field_a[var3] = this.field_k[var3];
             }
-            this.field_a[0] = f.a(this.field_a[0], qc.field_h[var2]);
+            this.field_a[0] = f.a(this.field_a[0], ByteArrayBuffer.field_h[var2]);
             for (var3 = 0; var3 < 8; var3++) {
               this.field_k[var3] = this.field_a[var3];
               var7 = 0;
               var4 = var7;
               var5 = 56;
               L8: while (var7 < 8) {
-                this.field_k[var3] = f.a(this.field_k[var3], qc.field_g[var7][cd.a(255, (int)(this.field_b[cd.a(-var7 + var3, 7)] >>> var5))]);
+                this.field_k[var3] = f.a(this.field_k[var3], ByteArrayBuffer.field_g[var7][cd.a(255, (int)(this.field_b[cd.a(-var7 + var3, 7)] >>> var5))]);
                 var7++;
                 var5 -= 8;
               }
@@ -281,7 +281,7 @@ final class ge {
             int var1_int = 0;
             IOException var1 = null;
             String var2 = null;
-            qc var3 = null;
+            ByteArrayBuffer var3 = null;
             if (wg.field_i.field_b >= 4) {
               if (wg.field_i.field_q == -1) {
                 return 3;
@@ -311,11 +311,11 @@ final class ge {
               }
               if (2 == qh.field_J) {
                 li.field_a = new BufferedSocket((java.net.Socket) (gj.field_s.result), ph.field_i);
-                var3 = new qc(13);
+                var3 = new ByteArrayBuffer(13);
                 ke.a(pc.field_C, true, hc.field_T, bm.field_u, var3);
                 var3.d((byte) -54, 15);
                 var3.c((byte) 95, ag.field_l);
-                li.field_a.enqueueWrite(100, 0, 13, var3.field_j);
+                li.field_a.enqueueWrite(100, 0, 13, var3.bytes);
                 qh.field_J = qh.field_J + 1;
                 eb.field_b = 30000L + oa.a(param0 - 12446);
               }

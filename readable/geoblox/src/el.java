@@ -751,7 +751,7 @@ class el extends IntrusiveNode {
             int var2_int = 0;
             Throwable decompiledCaughtException = null;
             IOException var2 = null;
-            if (eh.field_d.field_f >= param1) {
+            if (eh.field_d.position >= param1) {
               return true;
             }
             if (oc.field_e == null) {
@@ -763,16 +763,16 @@ class el extends IntrusiveNode {
               }
               var2_int = oc.field_e.available((byte) 110);
               if (var2_int > 0) {
-                if (-eh.field_d.field_f + param1 < var2_int) {
-                  var2_int = param1 - eh.field_d.field_f;
+                if (-eh.field_d.position + param1 < var2_int) {
+                  var2_int = param1 - eh.field_d.position;
                 }
-                oc.field_e.readFully(eh.field_d.field_j, (byte) -97, eh.field_d.field_f, var2_int);
+                oc.field_e.readFully(eh.field_d.bytes, (byte) -97, eh.field_d.position, var2_int);
                 kh.field_e = oa.a(-12520);
-                eh.field_d.field_f = eh.field_d.field_f + var2_int;
-                if (param1 > eh.field_d.field_f) {
+                eh.field_d.position = eh.field_d.position + var2_int;
+                if (param1 > eh.field_d.position) {
                   return false;
                 }
-                eh.field_d.field_f = 0;
+                eh.field_d.position = 0;
                 return true;
               }
               if (var2_int < 0) {
@@ -796,12 +796,12 @@ class el extends IntrusiveNode {
         }
     }
 
-    final static void a(boolean param0, qc param1, qc param2, java.math.BigInteger param3, java.math.BigInteger param4) {
+    final static void a(boolean param0, ByteArrayBuffer param1, ByteArrayBuffer param2, java.math.BigInteger param3, java.math.BigInteger param4) {
         try {
             if (param0) {
                 field_p = (IntrusiveDeque) null;
             }
-            nh.a(param4, param3, 0, param2, param1.field_j, param1.field_f, true);
+            nh.a(param4, param3, 0, param2, param1.bytes, param1.position, true);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "el.WB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

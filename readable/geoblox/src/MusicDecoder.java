@@ -198,16 +198,16 @@ final class MusicDecoder extends IntrusiveNode {
         int var5 = 0;
         int var6_int = 0;
         byte[] var6 = null;
-        qc var2 = new qc(containerBytes);
-        this.field_q = var2.a((byte) -53);
-        this.sampleCount = var2.a((byte) -128);
-        this.field_I = var2.a((byte) -128);
-        this.field_n = var2.a((byte) -89);
+        ByteArrayBuffer var2 = new ByteArrayBuffer(containerBytes);
+        this.field_q = var2.readIntBE((byte) -53);
+        this.sampleCount = var2.readIntBE((byte) -128);
+        this.field_I = var2.readIntBE((byte) -128);
+        this.field_n = var2.readIntBE((byte) -89);
         if (this.field_n < 0) {
             this.field_n = ~this.field_n;
             this.field_A = true;
         }
-        int var3 = var2.a((byte) -108);
+        int var3 = var2.readIntBE((byte) -108);
         if (var3 < 0) {
             throw new IOException();
         }
@@ -215,7 +215,7 @@ final class MusicDecoder extends IntrusiveNode {
         for (var4 = 0; var4 < var3; var4++) {
             var5 = 0;
             do {
-                var6_int = var2.c((byte) 34);
+                var6_int = var2.readUnsignedByte((byte) 34);
                 var5 = var5 + var6_int;
             } while (var6_int >= 255);
             var6 = new byte[var5];

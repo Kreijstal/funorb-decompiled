@@ -11,8 +11,8 @@ final class ol extends hk {
     final static void a(int param0, p param1, int param2) {
         pk var5 = fj.field_q;
         var5.a(param0, (byte) -88);
-        var5.field_f = var5.field_f + 1;
-        int var4 = var5.field_f;
+        var5.position = var5.position + 1;
+        int var4 = var5.position;
         var5.d((byte) -55, 1);
         var5.d((byte) -31, param1.field_l);
         var5.d((byte) -104, param1.field_h);
@@ -25,7 +25,7 @@ final class ol extends hk {
             return;
         }
         try {
-            var5.f(11700, -var4 + var5.field_f);
+            var5.f(11700, -var4 + var5.position);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "ol.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

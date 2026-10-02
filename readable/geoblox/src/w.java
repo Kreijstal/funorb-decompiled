@@ -158,8 +158,8 @@ final class w {
                     oc.field_e = new BufferedSocket((java.net.Socket) (sd.field_B.result), GameplayEntity.field_D);
                     var4 = eh.field_d;
                     var5 = var4;
-                    fj.field_q.field_f = 0;
-                    var5.field_f = 0;
+                    fj.field_q.position = 0;
+                    var5.position = 0;
                     ad.field_o = param0 ? -2 : -1;
                     dc.field_b = param0 ? -2 : -1;
                     kg.field_n = param0 ? -2 : -1;

@@ -10,7 +10,7 @@ final class rf extends IntrusiveNode {
         if (var3 == null) {
             return null;
         }
-        return new rf(new qc(var3));
+        return new rf(new ByteArrayBuffer(var3));
     }
 
     final void b() {
@@ -113,7 +113,7 @@ final class rf extends IntrusiveNode {
         }
     }
 
-    private rf(qc param0) {
+    private rf(ByteArrayBuffer param0) {
         int incrementValue$0 = 0;
         int incrementValue$25 = 0;
         int incrementValue$26 = 0;
@@ -142,7 +142,7 @@ final class rf extends IntrusiveNode {
         int incrementValue$8 = 0;
         int incrementValue$9 = 0;
         int incrementValue$20 = 0;
-        qc stackIn_66_0 = null;
+        ByteArrayBuffer stackIn_66_0 = null;
         int stackIn_67_1 = 0;
         int stackIn_73_0 = 0;
         int var2;
@@ -194,7 +194,7 @@ final class rf extends IntrusiveNode {
         int var48;
         int var49;
         int var50;
-        qc var51;
+        ByteArrayBuffer var51;
         int var52;
         int var53;
         int var54;
@@ -210,11 +210,11 @@ final class rf extends IntrusiveNode {
         int var65;
         int var66;
         int[] var70;
-        param0.field_f = param0.field_j.length - 3;
-        var2 = param0.c((byte) 34);
-        var3 = param0.b(true);
+        param0.position = param0.bytes.length - 3;
+        var2 = param0.readUnsignedByte((byte) 34);
+        var3 = param0.readUnsignedShortBE(true);
         var4 = 14 + var2 * 10;
-        param0.field_f = 0;
+        param0.position = 0;
         var5 = 0;
         var6 = 0;
         var7 = 0;
@@ -228,7 +228,7 @@ final class rf extends IntrusiveNode {
           if (var13 < var2) {
             var14 = -1;
             L19: while (true) {
-              var15 = param0.c((byte) 34);
+              var15 = param0.readUnsignedByte((byte) 34);
               if (var15 != var14) {
                 var4++;
               }
@@ -276,13 +276,13 @@ final class rf extends IntrusiveNode {
             var4 = var4 + 5 * var5;
             var4 = var4 + 2 * (var7 + var8 + var6 + var9 + var11);
             var4 = var4 + (var10 + var12);
-            var13 = param0.field_f;
+            var13 = param0.position;
             var14 = var2 + var5 + var6 + var7 + var8 + var9 + var10 + var11 + var12;
             for (var15 = 0; var15 < var14; var15++) {
-              param0.g((byte) -110);
+              param0.readVariableIntBE((byte) -110);
             }
-            var4 = var4 + (param0.field_f - var13);
-            var15 = param0.field_f;
+            var4 = var4 + (param0.position - var13);
+            var15 = param0.position;
             var16 = 0;
             var17 = 0;
             var18 = 0;
@@ -297,7 +297,7 @@ final class rf extends IntrusiveNode {
             var27 = 0;
             var28 = 0;
             L2: for (var29 = 0; var29 < var6; var29++) {
-              var28 = var28 + param0.c((byte) 34) & 127;
+              var28 = var28 + param0.readUnsignedByte((byte) 34) & 127;
               if (var28 == 0) {
                 var12++;
                 continue L2;
@@ -369,62 +369,62 @@ final class rf extends IntrusiveNode {
               var26++;
             }
             var29 = 0;
-            var30 = param0.field_f;
-            param0.field_f = param0.field_f + var26;
-            var31 = param0.field_f;
-            param0.field_f = param0.field_f + var11;
-            var32 = param0.field_f;
-            param0.field_f = param0.field_f + var10;
-            var33 = param0.field_f;
-            param0.field_f = param0.field_f + var9;
-            var34 = param0.field_f;
-            param0.field_f = param0.field_f + var16;
-            var35 = param0.field_f;
-            param0.field_f = param0.field_f + var18;
-            var36 = param0.field_f;
-            param0.field_f = param0.field_f + var20;
-            var37 = param0.field_f;
-            param0.field_f = param0.field_f + (var7 + var8 + var11);
-            var38 = param0.field_f;
-            param0.field_f = param0.field_f + var7;
-            var39 = param0.field_f;
-            param0.field_f = param0.field_f + var27;
-            var40 = param0.field_f;
-            param0.field_f = param0.field_f + var8;
-            var41 = param0.field_f;
-            param0.field_f = param0.field_f + var17;
-            var42 = param0.field_f;
-            param0.field_f = param0.field_f + var19;
-            var43 = param0.field_f;
-            param0.field_f = param0.field_f + var21;
-            var44 = param0.field_f;
-            param0.field_f = param0.field_f + var12;
-            var45 = param0.field_f;
-            param0.field_f = param0.field_f + var9;
-            var46 = param0.field_f;
-            param0.field_f = param0.field_f + var22;
-            var47 = param0.field_f;
-            param0.field_f = param0.field_f + var23;
-            var48 = param0.field_f;
-            param0.field_f = param0.field_f + var24;
-            var49 = param0.field_f;
-            param0.field_f = param0.field_f + var25;
-            var50 = param0.field_f;
-            param0.field_f = param0.field_f + var5 * 3;
+            var30 = param0.position;
+            param0.position = param0.position + var26;
+            var31 = param0.position;
+            param0.position = param0.position + var11;
+            var32 = param0.position;
+            param0.position = param0.position + var10;
+            var33 = param0.position;
+            param0.position = param0.position + var9;
+            var34 = param0.position;
+            param0.position = param0.position + var16;
+            var35 = param0.position;
+            param0.position = param0.position + var18;
+            var36 = param0.position;
+            param0.position = param0.position + var20;
+            var37 = param0.position;
+            param0.position = param0.position + (var7 + var8 + var11);
+            var38 = param0.position;
+            param0.position = param0.position + var7;
+            var39 = param0.position;
+            param0.position = param0.position + var27;
+            var40 = param0.position;
+            param0.position = param0.position + var8;
+            var41 = param0.position;
+            param0.position = param0.position + var17;
+            var42 = param0.position;
+            param0.position = param0.position + var19;
+            var43 = param0.position;
+            param0.position = param0.position + var21;
+            var44 = param0.position;
+            param0.position = param0.position + var12;
+            var45 = param0.position;
+            param0.position = param0.position + var9;
+            var46 = param0.position;
+            param0.position = param0.position + var22;
+            var47 = param0.position;
+            param0.position = param0.position + var23;
+            var48 = param0.position;
+            param0.position = param0.position + var24;
+            var49 = param0.position;
+            param0.position = param0.position + var25;
+            var50 = param0.position;
+            param0.position = param0.position + var5 * 3;
             this.field_f = new byte[var4];
-            var51 = new qc(this.field_f);
+            var51 = new ByteArrayBuffer(this.field_f);
             var51.c((byte) 95, 1297377380);
             var51.c((byte) 95, 6);
-            stackIn_66_0 = (qc) (var51);
+            stackIn_66_0 = (ByteArrayBuffer) (var51);
             if (var2 <= 1) {
               stackIn_67_1 = 0;
             } else {
               stackIn_67_1 = 1;
             }
-            ((qc) (Object) stackIn_66_0).e(stackIn_67_1, 28695);
+            ((ByteArrayBuffer) (Object) stackIn_66_0).e(stackIn_67_1, 28695);
             var51.e(var2, 28695);
             var51.e(var3, 28695);
-            param0.field_f = var13;
+            param0.position = var13;
             var52 = 0;
             var53 = 0;
             var54 = 0;
@@ -441,15 +441,15 @@ final class rf extends IntrusiveNode {
               }
               {
                 var51.c((byte) 95, 1297379947);
-                var51.field_f = var51.field_f + 4;
-                var61 = var51.field_f;
+                var51.position = var51.position + 4;
+                var61 = var51.position;
                 var62 = -1;
                 L5: while (true) {
-                  var63 = param0.g((byte) -125);
+                  var63 = param0.readVariableIntBE((byte) -125);
                   var51.b((byte) -118, var63);
                   incrementValue$0 = var29;
                   var29++;
-                  var64 = param0.field_j[incrementValue$0] & 255;
+                  var64 = param0.bytes[incrementValue$0] & 255;
                   stackIn_73_0 = (var64 == var62) ? 0 : 1;
                   var65 = stackIn_73_0;
                   var62 = var64 & 15;
@@ -459,7 +459,7 @@ final class rf extends IntrusiveNode {
                     }
                     var51.d((byte) 124, 47);
                     var51.d((byte) 125, 0);
-                    var51.g(var51.field_f - var61, 0);
+                    var51.g(var51.position - var61, 0);
                     var60++;
                     continue L4;
                   }
@@ -471,13 +471,13 @@ final class rf extends IntrusiveNode {
                     var51.d((byte) 121, 3);
                     incrementValue$25 = var50;
                     var50++;
-                    var51.d((byte) -79, (int) param0.field_j[incrementValue$25]);
+                    var51.d((byte) -79, (int) param0.bytes[incrementValue$25]);
                     incrementValue$26 = var50;
                     var50++;
-                    var51.d((byte) 125, (int) param0.field_j[incrementValue$26]);
+                    var51.d((byte) 125, (int) param0.bytes[incrementValue$26]);
                     incrementValue$27 = var50;
                     var50++;
-                    var51.d((byte) -75, (int) param0.field_j[incrementValue$27]);
+                    var51.d((byte) -75, (int) param0.bytes[incrementValue$27]);
                     continue L5;
                   }
                   var52 = var52 ^ var64 >> 4;
@@ -487,10 +487,10 @@ final class rf extends IntrusiveNode {
                     }
                     incrementValue$23 = var37;
                     var37++;
-                    var53 = var53 + param0.field_j[incrementValue$23];
+                    var53 = var53 + param0.bytes[incrementValue$23];
                     incrementValue$24 = var38;
                     var38++;
-                    var54 = var54 + param0.field_j[incrementValue$24];
+                    var54 = var54 + param0.bytes[incrementValue$24];
                     var51.d((byte) -97, var53 & 127);
                     var51.d((byte) -56, var54 & 127);
                     continue L5;
@@ -501,10 +501,10 @@ final class rf extends IntrusiveNode {
                     }
                     incrementValue$21 = var37;
                     var37++;
-                    var53 = var53 + param0.field_j[incrementValue$21];
+                    var53 = var53 + param0.bytes[incrementValue$21];
                     incrementValue$22 = var40;
                     var40++;
-                    var55 = var55 + param0.field_j[incrementValue$22];
+                    var55 = var55 + param0.bytes[incrementValue$22];
                     var51.d((byte) -63, var53 & 127);
                     var51.d((byte) 125, var55 & 127);
                     continue L5;
@@ -516,10 +516,10 @@ final class rf extends IntrusiveNode {
                       }
                       incrementValue$5 = var45;
                       var45++;
-                      var56 = var56 + param0.field_j[incrementValue$5];
+                      var56 = var56 + param0.bytes[incrementValue$5];
                       incrementValue$6 = var33;
                       var33++;
-                      var56 = var56 + (param0.field_j[incrementValue$6] << 7);
+                      var56 = var56 + (param0.bytes[incrementValue$6] << 7);
                       var51.d((byte) -62, var56 & 127);
                       var51.d((byte) 122, var56 >> 7 & 127);
                       continue L5;
@@ -530,7 +530,7 @@ final class rf extends IntrusiveNode {
                       }
                       incrementValue$4 = var32;
                       var32++;
-                      var57 = var57 + param0.field_j[incrementValue$4];
+                      var57 = var57 + param0.bytes[incrementValue$4];
                       var51.d((byte) -44, var57 & 127);
                       continue L5;
                     }
@@ -544,7 +544,7 @@ final class rf extends IntrusiveNode {
                         }
                         incrementValue$1 = var44;
                         var44++;
-                        var51.d((byte) 121, (int) param0.field_j[incrementValue$1]);
+                        var51.d((byte) 121, (int) param0.bytes[incrementValue$1]);
                         continue L5;
                       }
                     }
@@ -554,10 +554,10 @@ final class rf extends IntrusiveNode {
                       }
                       incrementValue$2 = var37;
                       var37++;
-                      var53 = var53 + param0.field_j[incrementValue$2];
+                      var53 = var53 + param0.bytes[incrementValue$2];
                       incrementValue$3 = var31;
                       var31++;
-                      var58 = var58 + param0.field_j[incrementValue$3];
+                      var58 = var58 + param0.bytes[incrementValue$3];
                       var51.d((byte) -18, var53 & 127);
                       var51.d((byte) 124, var58 & 127);
                       continue L5;
@@ -569,68 +569,68 @@ final class rf extends IntrusiveNode {
                   L12: {
                     incrementValue$7 = var15;
                     var15++;
-                    var28 = var28 + param0.field_j[incrementValue$7] & 127;
+                    var28 = var28 + param0.bytes[incrementValue$7] & 127;
                     var51.d((byte) 126, var28);
                     if (var28 != 0) {
                       if (var28 != 32) {
                         if (var28 == 1) {
                           incrementValue$19 = var34;
                           var34++;
-                          var66 = param0.field_j[incrementValue$19];
+                          var66 = param0.bytes[incrementValue$19];
                           break L12;
                         }
                         if (var28 == 33) {
                           incrementValue$18 = var41;
                           var41++;
-                          var66 = param0.field_j[incrementValue$18];
+                          var66 = param0.bytes[incrementValue$18];
                           break L12;
                         }
                         if (var28 == 7) {
                           incrementValue$17 = var35;
                           var35++;
-                          var66 = param0.field_j[incrementValue$17];
+                          var66 = param0.bytes[incrementValue$17];
                           break L12;
                         }
                         if (var28 == 39) {
                           incrementValue$16 = var42;
                           var42++;
-                          var66 = param0.field_j[incrementValue$16];
+                          var66 = param0.bytes[incrementValue$16];
                           break L12;
                         }
                         if (var28 == 10) {
                           incrementValue$15 = var36;
                           var36++;
-                          var66 = param0.field_j[incrementValue$15];
+                          var66 = param0.bytes[incrementValue$15];
                           break L12;
                         }
                         if (var28 == 42) {
                           incrementValue$14 = var43;
                           var43++;
-                          var66 = param0.field_j[incrementValue$14];
+                          var66 = param0.bytes[incrementValue$14];
                           break L12;
                         }
                         if (var28 == 99) {
                           incrementValue$13 = var46;
                           var46++;
-                          var66 = param0.field_j[incrementValue$13];
+                          var66 = param0.bytes[incrementValue$13];
                           break L12;
                         }
                         if (var28 == 98) {
                           incrementValue$12 = var47;
                           var47++;
-                          var66 = param0.field_j[incrementValue$12];
+                          var66 = param0.bytes[incrementValue$12];
                           break L12;
                         }
                         if (var28 == 101) {
                           incrementValue$11 = var48;
                           var48++;
-                          var66 = param0.field_j[incrementValue$11];
+                          var66 = param0.bytes[incrementValue$11];
                           break L12;
                         }
                         if (var28 == 100) {
                           incrementValue$10 = var49;
                           var49++;
-                          var66 = param0.field_j[incrementValue$10];
+                          var66 = param0.bytes[incrementValue$10];
                           break L12;
                         }
                         {
@@ -641,7 +641,7 @@ final class rf extends IntrusiveNode {
                                   if (var28 != 123) {
                                     incrementValue$8 = var39;
                                     var39++;
-                                    var66 = param0.field_j[incrementValue$8];
+                                    var66 = param0.bytes[incrementValue$8];
                                     break L12;
                                   }
                                 }
@@ -650,14 +650,14 @@ final class rf extends IntrusiveNode {
                           }
                           incrementValue$9 = var30;
                           var30++;
-                          var66 = param0.field_j[incrementValue$9];
+                          var66 = param0.bytes[incrementValue$9];
                           break L12;
                         }
                       }
                     }
                     incrementValue$20 = var44;
                     var44++;
-                    var66 = param0.field_j[incrementValue$20];
+                    var66 = param0.bytes[incrementValue$20];
                   }
                   var66 = var66 + var70[var28];
                   var70[var28] = var66;

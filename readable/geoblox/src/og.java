@@ -28,7 +28,7 @@ final class og extends DualLinkNode {
             for (var2 = 0; var2 < p.field_k; var2++) {
               var7 = var1 + ' ';
               var1 = var7;
-              var3 = 255 & eh.field_d.field_j[var2];
+              var3 = 255 & eh.field_d.bytes[var2];
               var4 = var3 >> 4;
               var3 = var3 & 15;
               if (var4 >= 10) {
@@ -53,7 +53,7 @@ final class og extends DualLinkNode {
         return (String) null;
     }
 
-    private final void a(int param0, qc param1, int param2) {
+    private final void a(int param0, ByteArrayBuffer param1, int param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_23_0 = null;
@@ -66,35 +66,35 @@ final class og extends DualLinkNode {
         int var6 = 0;
         ck var7 = null;
         int var9 = 0;
-        qc var10 = null;
+        ByteArrayBuffer var10 = null;
         var9 = Geoblox.field_C;
         try {
           L0: {
             if (1 == param0) {
-              this.field_p = uj.a('<', true, param1.e((byte) 116));
+              this.field_p = uj.a('<', true, param1.readNullTerminatedText((byte) 116));
             } else {
               if (2 == param0) {
-                var4_int = param1.c((byte) 34);
+                var4_int = param1.readUnsignedByte((byte) 34);
                 this.field_m = new int[var4_int];
                 for (var5 = 0; var5 < var4_int; var5++) {
-                  this.field_m[var5] = param1.b(true);
+                  this.field_m[var5] = param1.readUnsignedShortBE(true);
                 }
                 break L0;
               }
               if (3 == param0) {
-                var4_int = param1.c((byte) 34);
+                var4_int = param1.readUnsignedByte((byte) 34);
                 this.field_s = new int[var4_int][];
                 this.field_o = new int[var4_int];
                 for (var5 = 0; var4_int > var5; var5++) {
                   L2: {
-                    var6 = param1.b(true);
+                    var6 = param1.readUnsignedShortBE(true);
                     var7 = b.a(false, var6);
                     if (var7 != null) {
                       this.field_o[var5] = var6;
                       array$0 = new int[var7.field_a];
                       this.field_s[var5] = array$0;
                       for (var8 = 0; var7.field_a > var8; var8++) {
-                        this.field_s[var5][var8] = param1.b(true);
+                        this.field_s[var5][var8] = param1.readUnsignedShortBE(true);
                       }
                       break L2;
                     }
@@ -107,8 +107,8 @@ final class og extends DualLinkNode {
             }
           }
           if (param2 != -26093) {
-            var10 = (qc) null;
-            this.a(-112, (qc) null);
+            var10 = (ByteArrayBuffer) null;
+            this.a(-112, (ByteArrayBuffer) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -184,7 +184,7 @@ final class og extends DualLinkNode {
         }
     }
 
-    final void a(int param0, qc param1) {
+    final void a(int param0, ByteArrayBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -198,7 +198,7 @@ final class og extends DualLinkNode {
             return;
           }
           L0: while (true) {
-            var3_int = param1.c((byte) 34);
+            var3_int = param1.readUnsignedByte((byte) 34);
             if (0 == var3_int) {
               return;
             }

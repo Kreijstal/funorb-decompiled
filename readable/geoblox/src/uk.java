@@ -168,7 +168,7 @@ final class uk extends TextInputValidator {
           hl.field_D[1] = bh.field_d.nextInt();
           hl.field_D[2] = (int)(ak.field_a >> 32);
           hl.field_D[3] = (int)ak.field_a;
-          fc.field_d.field_f = 0;
+          fc.field_d.position = 0;
           fc.field_d.c((byte) 95, hl.field_D[0]);
           fc.field_d.c((byte) 95, hl.field_D[1]);
           fc.field_d.c((byte) 95, hl.field_D[2]);
@@ -176,14 +176,14 @@ final class uk extends TextInputValidator {
           SpriteState.a(fc.field_d, true);
           fc.field_d.e(param1, 28695);
           param3.a(124, fc.field_d);
-          fj.field_q.field_f = 0;
+          fj.field_q.position = 0;
           if (param2) {
             fj.field_q.d((byte) 121, 18);
           } else {
             fj.field_q.d((byte) -116, 16);
           }
-          fj.field_q.field_f = fj.field_q.field_f + 2;
-          var5_int = fj.field_q.field_f;
+          fj.field_q.position = fj.field_q.position + 2;
+          var5_int = fj.field_q.position;
           fj.field_q.c((byte) 95, f.field_ib);
           fj.field_q.b((byte) 116, lb.field_c);
           var6 = 0;
@@ -213,7 +213,7 @@ final class uk extends TextInputValidator {
               fj.field_q.a(fl.field_b, (byte) -126);
             }
             el.a(false, fc.field_d, fj.field_q, ld.field_c, vl.field_l);
-            fj.field_q.a(-var5_int + fj.field_q.field_f, true);
+            fj.field_q.a(-var5_int + fj.field_q.position, true);
             cm.a(-1, -1);
             return;
           }

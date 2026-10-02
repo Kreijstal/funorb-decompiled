@@ -21,7 +21,7 @@ final class al {
           }
           L0: {
             var9 = eh.field_d;
-            var2 = var9.c((byte) 34);
+            var2 = var9.readUnsignedByte((byte) 34);
             if (var2 == 0) {
               var8 = (ca) ((Object) qa.field_e.firstForIteration(0));
               if (var8 == null) {
@@ -29,14 +29,14 @@ final class al {
                 return;
               }
               {
-                var4 = var9.c((byte) 34);
+                var4 = var9.readUnsignedByte((byte) 34);
                 if (0 != var4) {
                   var13 = new byte[var4];
                   var9.b(29915, var4, var13, 0);
                 } else {
                   var5 = null;
                 }
-                var9.field_f = var9.field_f + 4;
+                var9.position = var9.position + 4;
                 if (!var9.h((byte) 20)) {
                   jl.a((byte) -121);
                   return;
@@ -45,7 +45,7 @@ final class al {
               }
             } else {
               if (1 == var2) {
-                var3 = var9.a((byte) -101);
+                var3 = var9.readIntBE((byte) -101);
                 var4_ref_wc = (wc) ((Object) l.field_g.firstForIteration(0));
                 L2: while (var4_ref_wc != null) {
                   if (var3 != var4_ref_wc.field_h) {

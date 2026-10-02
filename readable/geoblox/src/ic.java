@@ -118,13 +118,13 @@ final class ic {
             if (null != af.field_b) {
               try {
                 af.field_b.a(22, 0L);
-                af.field_b.a(24, eh.field_d.field_f, eh.field_d.field_j, false);
+                af.field_b.a(24, eh.field_d.position, eh.field_d.bytes, false);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var1 = (Exception) (Object) decompiledCaughtException;
               }
             }
-            eh.field_d.field_f = eh.field_d.field_f + 24;
+            eh.field_d.position = eh.field_d.position + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

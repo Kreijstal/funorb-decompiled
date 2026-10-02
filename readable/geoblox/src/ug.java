@@ -83,7 +83,7 @@ final class ug {
           archiveGroupId = graphicsArchive.a((byte) 127, groupName);
           archiveFileId = graphicsArchive.a(resourceName, -57, archiveGroupId);
           if (methodGuard == -78) {
-            stackIn_4_0 = qc.a(archiveGroupId, methodGuard ^ -95, archiveFileId, graphicsArchive);
+            stackIn_4_0 = ByteArrayBuffer.a(archiveGroupId, methodGuard ^ -95, archiveFileId, graphicsArchive);
             return stackIn_4_0;
           }
           stackIn_2_0 = (Sprite) null;

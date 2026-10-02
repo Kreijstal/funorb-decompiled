@@ -19,21 +19,24 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and retain all 138,558 remaining bindings
 and 388 override relationships.
 
-The current naming pass adds 233 guarded identities for decoded sprite data
-and font/sprite loading. Shared count, canvas, offsets, dimensions, palette,
-index bytes and alpha planes have explicit names. The sheet decoder, archive
-acquisition, partial cleanup, font factories/loaders and five sprite builders
-now have named parameters and locals. RGB, ARGB and indexed construction retain
-their original data ownership and alpha choices.
+The current naming pass adds 53 guarded identities for `ByteArrayBuffer`,
+its shared `bytes`/`position`, both constructors and thirteen byte, integer,
+smart and text readers. All selected reader parameters and locals have names.
+Sprite decoding and archive consumers now expose their shared cursor and reads.
 
-The 4,305 rules apply 37,675 edits. All 303 raw/readable sources compile,
-preserving 138,558 bindings and 388 overrides. All 4,072 previous complete
-rules and raw source/decompiler pins are unchanged. Guards, captured aliases,
-row/column-major reads, diagnostic strings and operation order remain. Cleanup
-retains the alpha arrays/flags and scalar count/canvas dimensions. Existing
-native probes retain their original scopes and do not newly exercise decoded
-sheet/archive/font loading. Full asset/rendering/game/device execution remains
-unverified. The one manifest and dictionary preserve reproducibility and reversal.
+The 4,358 rules apply 38,775 edits. All 303 raw/readable sources compile,
+preserving 138,558 bindings and 388 overrides. All 4,305 previous complete
+rules and raw source/decompiler pins are unchanged. Guards, advances before
+array access, overflow, custom text decoding and diagnostic strings remain.
+Source/binding and byte-exact reversal checks support the names; existing
+native result-helper fixtures cover their original inherited-buffer scope,
+not new reader execution. Real assets, full gameplay and device performance
+remain unverified. The one manifest and dictionary preserve reproduction.
+
+Pass 59 named decoded sprite count, canvas, offsets, dimensions, palette,
+indices and alpha state, plus the sheet decoder, archive acquisition, partial
+cleanup, font factories/loaders and five sprite builders. Original RGB/ARGB/
+indexed choices, retained alpha arrays and failure cleanup remain unchanged.
 
 Pass 58 completed guarded names for the four-class font hierarchy, including
 palette selection, nearest-color search, grayscale conversion, glyph indices,

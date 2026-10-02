@@ -9,7 +9,7 @@ final class wg implements Runnable {
     private PlatformTaskDispatcher field_b;
     private int field_l;
     static int field_j;
-    private qc field_n;
+    private ByteArrayBuffer field_n;
     static ji field_i;
     static int field_m;
     static ck field_d;
@@ -19,7 +19,7 @@ final class wg implements Runnable {
     private PlatformTask field_g;
     static int field_a;
 
-    final qc b(byte param0) {
+    final ByteArrayBuffer b(byte param0) {
         int var2 = 62 / ((param0 - 9) / 53);
         if (!(this.field_l != 3)) {
             return this.field_n;
@@ -112,7 +112,7 @@ final class wg implements Runnable {
               var3.write(jf.a(var5, (byte) 127));
               this.field_c = new DataInputStream(var4.getInputStream());
             }
-            this.field_n.field_f = 0;
+            this.field_n.position = 0;
             decompiledRegionSelector0 = 0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -165,16 +165,16 @@ final class wg implements Runnable {
             Throwable decompiledCaughtException = null;
             var4 = Geoblox.field_C;
             try {
-              L0: while (this.field_n.field_f < this.field_n.field_j.length) {
-                var1_int = this.field_c.read(this.field_n.field_j, this.field_n.field_f, -this.field_n.field_f + this.field_n.field_j.length);
+              L0: while (this.field_n.position < this.field_n.bytes.length) {
+                var1_int = this.field_c.read(this.field_n.bytes, this.field_n.position, -this.field_n.position + this.field_n.bytes.length);
                 if (0 <= var1_int) {
-                  this.field_n.field_f = this.field_n.field_f + var1_int;
+                  this.field_n.position = this.field_n.position + var1_int;
                   continue L0;
                 }
                 break;
               }
-              if (this.field_n.field_j.length == this.field_n.field_f) {
-                throw wg.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_n.field_j.length + " " + this.field_h));
+              if (this.field_n.bytes.length == this.field_n.position) {
+                throw wg.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_n.bytes.length + " " + this.field_h));
               }
               var1 = this;
               synchronized (var1) {
@@ -211,7 +211,7 @@ final class wg implements Runnable {
         try {
             this.field_b = param0;
             this.field_h = param1;
-            this.field_n = new qc(param2);
+            this.field_n = new ByteArrayBuffer(param2);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "wg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

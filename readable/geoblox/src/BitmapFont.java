@@ -343,7 +343,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
             if (characterOrGlyphCode != 0) {
               builderAfterCharacter = wrappingBuffer.append((char) characterOrGlyphCode);
-              characterOrGlyphCode = (char)(qc.a((char) characterOrGlyphCode, true) & 255);
+              characterOrGlyphCode = (char)(ByteArrayBuffer.a((char) characterOrGlyphCode, true) & 255);
               lineWidth = lineWidth + this.glyphAdvances[characterOrGlyphCode];
               if (this.pairKerning != null) {
                 if (previousGlyph != 0) {
@@ -602,7 +602,7 @@ abstract class BitmapFont extends DualLinkNode {
     }
 
     final int measureCharacterAdvance(char character) {
-        return this.glyphAdvances[qc.a(character, true) & 255];
+        return this.glyphAdvances[ByteArrayBuffer.a(character, true) & 255];
     }
 
     final void drawRightAlignedText(String text, int rightX, int baselineY, int textColor, int shadowColor) {
@@ -708,7 +708,7 @@ abstract class BitmapFont extends DualLinkNode {
               textIndex++;
               continue L0;
             }
-            characterOrGlyphCode = (char)(qc.a((char) characterOrGlyphCode, true) & 255);
+            characterOrGlyphCode = (char)(ByteArrayBuffer.a((char) characterOrGlyphCode, true) & 255);
             textWidth = textWidth + this.glyphAdvances[characterOrGlyphCode];
             if (this.pairKerning != null) {
               if (previousGlyph != 0) {
@@ -892,7 +892,7 @@ abstract class BitmapFont extends DualLinkNode {
               continue L0;
             }
             {
-              characterOrGlyphCode = (char)(qc.a((char) characterOrGlyphCode, true) & 255);
+              characterOrGlyphCode = (char)(ByteArrayBuffer.a((char) characterOrGlyphCode, true) & 255);
               if (this.pairKerning != null) {
                 if (previousGlyph != 0) {
                   penX = penX + this.pairKerning[(previousGlyph << 8) + characterOrGlyphCode];

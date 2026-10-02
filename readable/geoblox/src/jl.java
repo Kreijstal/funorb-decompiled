@@ -36,7 +36,7 @@ final class jl {
     int field_G;
     byte[] field_z;
 
-    final static boolean a(qc param0, int param1) {
+    final static boolean a(ByteArrayBuffer param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -50,7 +50,7 @@ final class jl {
           if (param1 != 0) {
             jl.a((byte) 47);
           }
-          var2_int = param0.c((byte) 34);
+          var2_int = param0.readUnsignedByte((byte) 34);
           stackIn_5_0 = (var2_int == 1) ? 1 : 0;
           var3 = stackIn_5_0;
           stackIn_6_0 = var3;

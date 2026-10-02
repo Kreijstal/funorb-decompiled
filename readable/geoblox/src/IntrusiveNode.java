@@ -132,17 +132,17 @@ class IntrusiveNode {
         int pixelIndexOrColumn = 0;
         int alphaByteOrRow = 0;
         int columnAlphaValue = 0;
-        qc spriteDataBuffer = null;
-        qc spriteDataBufferAlias = null;
+        ByteArrayBuffer spriteDataBuffer = null;
+        ByteArrayBuffer spriteDataBufferAlias = null;
         byte[] paletteIndicesForwarded = null;
         byte[] alphaPlaneForwarded = null;
         byte[] allocatedPaletteIndices = null;
         byte[] allocatedAlphaPlane = null;
         try {
-          spriteDataBuffer = new qc(spriteBytes);
+          spriteDataBuffer = new ByteArrayBuffer(spriteBytes);
           spriteDataBufferAlias = spriteDataBuffer;
-          spriteDataBufferAlias.field_f = spriteBytes.length - 2;
-          sb.decodedSpriteCount = spriteDataBufferAlias.b(readGuard);
+          spriteDataBufferAlias.position = spriteBytes.length - 2;
+          sb.decodedSpriteCount = spriteDataBufferAlias.readUnsignedShortBE(readGuard);
           DualLinkNode.decodedSpriteWidths = new int[sb.decodedSpriteCount];
           hl.decodedSpriteHeights = new int[sb.decodedSpriteCount];
           ng.decodedSpriteHasNonOpaqueAlpha = new boolean[sb.decodedSpriteCount];
@@ -150,31 +150,31 @@ class IntrusiveNode {
           GameplaySession.decodedSpriteXOffsets = new int[sb.decodedSpriteCount];
           mj.decodedSpriteIndices = new byte[sb.decodedSpriteCount][];
           md.decodedSpriteYOffsets = new int[sb.decodedSpriteCount];
-          spriteDataBufferAlias.field_f = -7 + spriteBytes.length - sb.decodedSpriteCount * 8;
-          pg.decodedSpriteCanvasWidth = spriteDataBufferAlias.b(true);
-          dd.decodedSpriteCanvasHeight = spriteDataBufferAlias.b(true);
-          paletteSize = (255 & spriteDataBufferAlias.c((byte) 34)) + 1;
+          spriteDataBufferAlias.position = -7 + spriteBytes.length - sb.decodedSpriteCount * 8;
+          pg.decodedSpriteCanvasWidth = spriteDataBufferAlias.readUnsignedShortBE(true);
+          dd.decodedSpriteCanvasHeight = spriteDataBufferAlias.readUnsignedShortBE(true);
+          paletteSize = (255 & spriteDataBufferAlias.readUnsignedByte((byte) 34)) + 1;
           for (spriteIndex = 0; spriteIndex < sb.decodedSpriteCount; spriteIndex++) {
-            GameplaySession.decodedSpriteXOffsets[spriteIndex] = spriteDataBuffer.b(readGuard);
+            GameplaySession.decodedSpriteXOffsets[spriteIndex] = spriteDataBuffer.readUnsignedShortBE(readGuard);
           }
           for (spriteIndex = 0; spriteIndex < sb.decodedSpriteCount; spriteIndex++) {
-            md.decodedSpriteYOffsets[spriteIndex] = spriteDataBuffer.b(true);
+            md.decodedSpriteYOffsets[spriteIndex] = spriteDataBuffer.readUnsignedShortBE(true);
           }
           for (spriteIndex = 0; sb.decodedSpriteCount > spriteIndex; spriteIndex++) {
-            DualLinkNode.decodedSpriteWidths[spriteIndex] = spriteDataBuffer.b(true);
+            DualLinkNode.decodedSpriteWidths[spriteIndex] = spriteDataBuffer.readUnsignedShortBE(true);
           }
           for (spriteIndex = 0; spriteIndex < sb.decodedSpriteCount; spriteIndex++) {
-            hl.decodedSpriteHeights[spriteIndex] = spriteDataBuffer.b(true);
+            hl.decodedSpriteHeights[spriteIndex] = spriteDataBuffer.readUnsignedShortBE(true);
           }
-          spriteDataBufferAlias.field_f = -(paletteSize * 3) + 3 - 8 * sb.decodedSpriteCount - 7 + spriteBytes.length;
+          spriteDataBufferAlias.position = -(paletteSize * 3) + 3 - 8 * sb.decodedSpriteCount - 7 + spriteBytes.length;
           cm.decodedSpritePalette = new int[paletteSize];
           for (spriteIndex = 1; spriteIndex < paletteSize; spriteIndex++) {
-            cm.decodedSpritePalette[spriteIndex] = spriteDataBuffer.e(108);
+            cm.decodedSpritePalette[spriteIndex] = spriteDataBuffer.readUnsignedMediumBE(108);
             if (cm.decodedSpritePalette[spriteIndex] == 0) {
               cm.decodedSpritePalette[spriteIndex] = 1;
             }
           }
-          spriteDataBufferAlias.field_f = 0;
+          spriteDataBufferAlias.position = 0;
           for (spriteIndex = 0; spriteIndex < sb.decodedSpriteCount; spriteIndex++) {
             L6: {
               spriteWidth = DualLinkNode.decodedSpriteWidths[spriteIndex];
@@ -189,16 +189,16 @@ class IntrusiveNode {
               alphaPlaneForUpdates = alphaPlaneForwarded;
               vf.decodedSpriteAlpha[spriteIndex] = allocatedAlphaPlane;
               hasNonOpaqueAlphaFlag = 0;
-              storageFlags = spriteDataBufferAlias.c((byte) 34);
+              storageFlags = spriteDataBufferAlias.readUnsignedByte((byte) 34);
               if ((storageFlags & 1) == 0) {
                 for (pixelIndexOrColumn = 0; pixelIndexOrColumn < pixelCount; pixelIndexOrColumn++) {
-                  paletteIndicesForUpdates[pixelIndexOrColumn] = spriteDataBuffer.f((byte) 90);
+                  paletteIndicesForUpdates[pixelIndexOrColumn] = spriteDataBuffer.readSignedByte((byte) 90);
                 }
                 if ((storageFlags & 2) == 0) {
                   break L6;
                 }
                 for (pixelIndexOrColumn = 0; pixelCount > pixelIndexOrColumn; pixelIndexOrColumn++) {
-                  rowMajorAlphaByte = spriteDataBuffer.f((byte) 95);
+                  rowMajorAlphaByte = spriteDataBuffer.readSignedByte((byte) 95);
                   alphaPlaneForUpdates[pixelIndexOrColumn] = rowMajorAlphaByte;
                   alphaByteOrRow = rowMajorAlphaByte;
                   rowMajorOpacityFlagBeforeMerge = hasNonOpaqueAlphaFlag;
@@ -214,7 +214,7 @@ class IntrusiveNode {
               {
                 for (pixelIndexOrColumn = 0; spriteWidth > pixelIndexOrColumn; pixelIndexOrColumn++) {
                   for (alphaByteOrRow = 0; spriteHeight > alphaByteOrRow; alphaByteOrRow++) {
-                    paletteIndicesForUpdates[alphaByteOrRow * spriteWidth + pixelIndexOrColumn] = spriteDataBuffer.f((byte) 90);
+                    paletteIndicesForUpdates[alphaByteOrRow * spriteWidth + pixelIndexOrColumn] = spriteDataBuffer.readSignedByte((byte) 90);
                   }
                 }
                 if (0 == (2 & storageFlags)) {
@@ -222,7 +222,7 @@ class IntrusiveNode {
                 }
                 for (pixelIndexOrColumn = 0; spriteWidth > pixelIndexOrColumn; pixelIndexOrColumn++) {
                   for (alphaByteOrRow = 0; spriteHeight > alphaByteOrRow; alphaByteOrRow++) {
-                    columnMajorAlphaByte = spriteDataBuffer.f((byte) 78);
+                    columnMajorAlphaByte = spriteDataBuffer.readSignedByte((byte) 78);
                     alphaPlaneForUpdates[pixelIndexOrColumn + spriteWidth * alphaByteOrRow] = columnMajorAlphaByte;
                     columnAlphaValue = columnMajorAlphaByte;
                     columnMajorOpacityFlagBeforeMerge = hasNonOpaqueAlphaFlag;

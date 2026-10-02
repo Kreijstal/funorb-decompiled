@@ -64,16 +64,16 @@ final class v {
         byte[] var5_ref_byte__ = null;
         byte[] var6 = null;
         Object var7 = null;
-        qc var9 = null;
+        ByteArrayBuffer var9 = null;
         byte[] var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
         byte[] var13 = null;
         try {
           L0: {
-            var9 = new qc(param0);
-            var3 = var9.c((byte) 34);
-            var4 = var9.a((byte) -97);
+            var9 = new ByteArrayBuffer(param0);
+            var3 = var9.readUnsignedByte((byte) 34);
+            var4 = var9.readIntBE((byte) -97);
             if (var4 >= 0) {
               if (uj.field_b != 0) {
                 if (var4 > uj.field_b) {
@@ -89,7 +89,7 @@ final class v {
                 return stackIn_7_0;
               }
               L2: {
-                var5 = var9.a((byte) -49);
+                var5 = var9.readIntBE((byte) -49);
                 if (var5 >= 0) {
                   if (uj.field_b != 0) {
                     if (uj.field_b < var5) {

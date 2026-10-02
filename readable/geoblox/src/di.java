@@ -22,7 +22,7 @@ final class di {
             }
             var3 = new og();
             if (!(var5 == null)) {
-                var3.a(0, new qc(var5));
+                var3.a(0, new ByteArrayBuffer(var5));
             }
             if (!(param1 < 32768)) {
                 var3.f((byte) 119);

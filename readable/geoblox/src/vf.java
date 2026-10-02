@@ -4,7 +4,7 @@
 class vf extends hk {
     static byte[][] decodedSpriteAlpha;
     static Sprite spriteScratchRaster;
-    static qc field_I;
+    static ByteArrayBuffer field_I;
     private fb field_G;
     private String[] field_J;
     static Sprite[] avatarCryBeginFrames;
@@ -37,7 +37,7 @@ class vf extends hk {
           var4_long = 0L;
           var6 = null;
           if (param3) {
-            field_I = (qc) null;
+            field_I = (ByteArrayBuffer) null;
           }
           if (param2.indexOf('@') != -1) {
             var6 = param2;
@@ -219,7 +219,7 @@ class vf extends hk {
             String var2 = (String) null;
             vf.a(false, (String) null, (String) null, true);
         }
-        return eh.field_d.e((byte) 101);
+        return eh.field_d.readNullTerminatedText((byte) 101);
     }
 
     final void g(int param0) {
@@ -338,7 +338,7 @@ class vf extends hk {
 
     final void b(int param0, int param1, int param2, int param3) {
         if (param1 != 0) {
-            field_I = (qc) null;
+            field_I = (ByteArrayBuffer) null;
         }
         this.a(((cc) ((Object) this.field_q)).a(14, (el) (this)), param3, (byte) -40, param2, param0);
     }

@@ -22,7 +22,7 @@ class lf extends df {
         extendedTextCharacters = null;
     }
 
-    final void a(int param0, qc param1) {
+    final void a(int param0, ByteArrayBuffer param1) {
         try {
             param1.b((byte) 59, this.field_c);
             param1.a(this.field_d, false);

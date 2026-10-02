@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pk extends qc {
+final class pk extends ByteArrayBuffer {
     static String field_r;
     static int field_n;
     private ne field_p;
@@ -26,9 +26,9 @@ final class pk extends qc {
         try {
           var5_int = 31 % ((param0 + 36) / 37);
           for (var6 = 0; var6 < param3; var6++) {
-            fieldTemp$0 = this.field_f;
-            this.field_f = this.field_f + 1;
-            param2[var6 + param1] = (byte)(this.field_j[fieldTemp$0] - this.field_p.b(0));
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            param2[var6 + param1] = (byte)(this.bytes[fieldTemp$0] - this.field_p.b(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -72,7 +72,7 @@ final class pk extends qc {
     }
 
     final void k(int param0) {
-        this.field_s = param0 * this.field_f;
+        this.field_s = param0 * this.position;
     }
 
     pk(byte[] param0) {
@@ -153,29 +153,29 @@ final class pk extends qc {
         while (var4 < param1) {
             incrementValue$0 = var3;
             var3++;
-            var5 = var5 + ((this.field_j[incrementValue$0] & kj.field_G[var4]) << -var4 + param1);
+            var5 = var5 + ((this.bytes[incrementValue$0] & kj.field_G[var4]) << -var4 + param1);
             param1 = param1 - var4;
             var4 = 8;
         }
         if (param1 == var4) {
-            var5 = var5 + (this.field_j[var3] & kj.field_G[var4]);
+            var5 = var5 + (this.bytes[var3] & kj.field_G[var4]);
         } else {
-            var5 = var5 + (this.field_j[var3] >> var4 - param1 & kj.field_G[param1]);
+            var5 = var5 + (this.bytes[var3] >> var4 - param1 & kj.field_G[param1]);
         }
         return var5;
     }
 
     final void a(int param0, byte param1) {
-        int fieldTemp$0 = this.field_f;
-        this.field_f = this.field_f + 1;
-        this.field_j[fieldTemp$0] = (byte)(param0 + this.field_p.b(0));
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.bytes[fieldTemp$0] = (byte)(param0 + this.field_p.b(0));
         if (param1 >= -12) {
             pk.h(-6, -80);
         }
     }
 
     final void i(int param0) {
-        this.field_f = (7 + this.field_s) / 8;
+        this.position = (7 + this.field_s) / 8;
         if (param0 != -16989) {
             this.field_p = (ne) null;
         }
@@ -185,9 +185,9 @@ final class pk extends qc {
         if (param0 != 122) {
             this.k(-51);
         }
-        int fieldTemp$0 = this.field_f;
-        this.field_f = this.field_f + 1;
-        return 255 & this.field_j[fieldTemp$0] - this.field_p.b(0);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        return 255 & this.bytes[fieldTemp$0] - this.field_p.b(0);
     }
 
     pk(int param0) {

@@ -163,10 +163,10 @@ final class ec {
             return;
         }
         pk var2 = eh.field_d;
-        var2.a((byte) -102);
-        var2.a((byte) -108);
-        var2.a((byte) -71);
-        var2.a((byte) -83);
+        var2.readIntBE((byte) -102);
+        var2.readIntBE((byte) -108);
+        var2.readIntBE((byte) -71);
+        var2.readIntBE((byte) -83);
         var1.unlinkNode(false);
     }
 

@@ -3,7 +3,7 @@
  */
 final class fc {
     static String musicLabelText;
-    static qc field_d;
+    static ByteArrayBuffer field_d;
     static Sprite[] blackOrbFrames;
     static double field_a;
     static Sprite[] avatarEyeFrames;
@@ -65,7 +65,7 @@ final class fc {
             return;
         }
         try {
-            qc.a(pb.field_s, oi.field_e, lb.field_a, (byte) -40);
+            ByteArrayBuffer.a(pb.field_s, oi.field_e, lb.field_a, (byte) -40);
             i.a(0, (byte) 117, param1, 0);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "fc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -87,7 +87,7 @@ final class fc {
 
     static {
         musicLabelText = "Music: ";
-        field_d = new qc(256);
+        field_d = new ByteArrayBuffer(256);
         field_a = 0.0;
         pointerActivityPending = false;
     }

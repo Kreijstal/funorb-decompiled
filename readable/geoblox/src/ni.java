@@ -50,7 +50,7 @@ final class ni extends ee implements pl {
         try {
           var8 = new pk(param0.a(param1 + param1, "", "logo.fo3d"));
           var10 = var8;
-          var3 = var10.c((byte) 34);
+          var3 = var10.readUnsignedByte((byte) 34);
           var10.k(param1 + 8);
           l.field_i = jc.a(var10, true);
           bm.field_l = new nf[var3];

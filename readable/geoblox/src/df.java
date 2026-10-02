@@ -7,7 +7,7 @@ abstract class df {
 
     abstract qg a(byte param0);
 
-    abstract void a(int param0, qc param1);
+    abstract void a(int param0, ByteArrayBuffer param1);
 
     final static void a(boolean param0, java.awt.Component param1) {
         try {

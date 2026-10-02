@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 4,305 guarded naming rules: 36 classes, 593 fields,
-378 methods, 1,226 parameters and 2,072 local declarations. Both 303-file corpora
+The current export has 4,358 guarded naming rules: 37 classes, 595 fields,
+391 methods, 1,241 parameters and 2,094 local declarations. Both 303-file corpora
 compile, preserving 138,558 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -54,7 +54,29 @@ smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
 
-## Current decoded sprite and font loading names
+## Current byte-buffer reader names
+
+Pass 60 adds 53 guarded identities: one class, two fields, thirteen methods,
+fifteen parameters and 22 locals. `ByteArrayBuffer` owns `bytes` and `position`;
+its constructors allocate pooled storage or retain the supplied array. Byte,
+BE16/24/32/64, variable-length, signed/unsigned smart and three text readers
+have named parameters and locals. Consumers, including sprite decoding and
+inherited packet operations, share the same storage and cursor.
+
+Guard effects remain explicit. Some invalid guards return constants without
+reading, including BE16/32 after advancing the cursor; other guards invoke
+mutating helpers or fail before access. Text readers retain their zero prefix,
+nullable marker, custom decoding and original failure ordering. Writers,
+crypto/hash tables and unrelated static helpers still have opaque names.
+
+All 4,305 previous complete rules, raw source and generator pins stay unchanged.
+The 4,358 rules apply 38,775 edits; both 303-file corpora compile, preserving
+138,558 bindings and 388 overrides. Reproduction and dictionary reversal are
+byte-exact. Existing native result-helper fixtures retain their inherited-buffer
+scope; no new execution coverage of these reader APIs is claimed. Actual assets,
+complete gameplay and phone/FPS/heap behavior remain unverified.
+
+## Previous decoded sprite and font loading names
 
 Pass 59 adds 233 guarded identities: 11 fields, 15 methods, 38 parameters and
 169 locals. Shared decoded sprite count/canvas/offset/dimension/palette/index/
@@ -851,7 +873,7 @@ its historical proof recorded in the raw provenance. Current source/decompiler
 identity and naming migrations live in the single manifest. `ruleChanges`
 records naming changes; `sourceChange` is recorded when input identity changes.
 The latest structural pass records its source migration in Git. The current
-naming-only pass retains those source pins and records its 233 additions in
+naming-only pass retains those source pins and records its 53 additions in
 `ruleChanges`; every prior guarded rule is retained.
 All six native probe sources and their traces are pinned in
 the same manifest; no JSON snapshots are added.
@@ -876,6 +898,6 @@ the same manifest; no JSON snapshots are added.
 | Java source tree | SHA-256 |
 | --- | --- |
 | Raw | `39be3539b43d7acc9540acca49e7b6378cdb233908092706646df4c2cdc6a8fe` |
-| Readable | `82fe4c130272980e6e466a14162639552544f2dc4ccd145c97b95142f5c8c54e` |
+| Readable | `9b013f906acbe0e29fc3b8793b0dc0c955d73d5f5ac1e6578af50053aba11abb` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

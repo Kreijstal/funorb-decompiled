@@ -11,7 +11,7 @@ abstract class nh {
     public static void a(boolean param0) {
         if (!param0) {
             byte[] var2 = (byte[]) null;
-            nh.a((java.math.BigInteger) null, (java.math.BigInteger) null, 127, (qc) null, (byte[]) null, -60, false);
+            nh.a((java.math.BigInteger) null, (java.math.BigInteger) null, 127, (ByteArrayBuffer) null, (byte[]) null, -60, false);
         }
         field_b = null;
         field_a = null;
@@ -22,7 +22,7 @@ abstract class nh {
 
     abstract byte[] b(int param0, int param1);
 
-    final static void a(java.math.BigInteger param0, java.math.BigInteger param1, int param2, qc param3, byte[] param4, int param5, boolean param6) {
+    final static void a(java.math.BigInteger param0, java.math.BigInteger param1, int param2, ByteArrayBuffer param3, byte[] param4, int param5, boolean param6) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -53,25 +53,25 @@ abstract class nh {
           }
           L2: {
             if (null != fa.field_c) {
-              if (fa.field_c.field_j.length >= var7_int) {
+              if (fa.field_c.bytes.length >= var7_int) {
                 break L2;
               }
             }
-            fa.field_c = new qc(var7_int);
+            fa.field_c = new ByteArrayBuffer(var7_int);
           }
           L4: {
-            fa.field_c.field_f = 0;
+            fa.field_c.position = 0;
             fa.field_c.a(param5, -97, param4, param2);
             fa.field_c.a((byte) -84, var7_int);
             fa.field_c.a(var12, (byte) -33);
             if (vf.field_I != null) {
-              if (vf.field_I.field_j.length >= 100) {
+              if (vf.field_I.bytes.length >= 100) {
                 break L4;
               }
             }
-            vf.field_I = new qc(100);
+            vf.field_I = new ByteArrayBuffer(100);
           }
-          vf.field_I.field_f = 0;
+          vf.field_I.position = 0;
           vf.field_I.d((byte) -69, 10);
           var10 = 0;
           var9 = var10;
@@ -84,8 +84,8 @@ abstract class nh {
           }
           vf.field_I.e(param5, 28695);
           vf.field_I.a(0, param0, param1);
-          param3.a(vf.field_I.field_f, -97, vf.field_I.field_j, 0);
-          param3.a(fa.field_c.field_f, -97, fa.field_c.field_j, 0);
+          param3.a(vf.field_I.position, -97, vf.field_I.bytes, 0);
+          param3.a(fa.field_c.position, -97, fa.field_c.bytes, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

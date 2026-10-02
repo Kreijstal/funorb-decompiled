@@ -59,7 +59,7 @@ final class bh extends java.awt.Canvas {
             return;
           }
           {
-            var2 = var14.c((byte) 34);
+            var2 = var14.readUnsignedByte((byte) 34);
             var3 = (re) ((Object) PendingActionMarker.field_f.firstForIteration(0));
             L0: while (var3 != null) {
               if (var2 != var3.field_k) {
@@ -73,12 +73,12 @@ final class bh extends java.awt.Canvas {
               return;
             }
             L2: {
-              var4 = var14.c((byte) 34);
+              var4 = var14.readUnsignedByte((byte) 34);
               if (var4 != 0) {
                 oi.field_a[0] = SecondaryDeque.field_f;
                 var5 = var3.field_g;
                 for (var6_int = 1; var4 > var6_int; var6_int++) {
-                  oi.field_a[var6_int] = var14.e((byte) 120);
+                  oi.field_a[var6_int] = var14.readNullTerminatedText((byte) 120);
                 }
                 nf.a(2147483647, var5, var4);
                 for (var6_int = 0; var4 > var6_int; var6_int++) {

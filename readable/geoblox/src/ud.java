@@ -120,7 +120,7 @@ final class ud {
         try {
           L0: {
             var12 = eh.field_d;
-            var2 = var12.c((byte) 34);
+            var2 = var12.readUnsignedByte((byte) 34);
             if (0 == var2) {
               var10 = wf.j(89);
               var16 = var10;
@@ -129,9 +129,9 @@ final class ud {
               var9 = var10;
               var4 = var9;
               var5 = var12;
-              var6 = ((qc) ((Object) var5)).c((byte) 34);
+              var6 = ((ByteArrayBuffer) ((Object) var5)).readUnsignedByte((byte) 34);
               for (var7 = 0; var7 < var6; var7++) {
-                var9[var7] = ((qc) ((Object) var5)).a((byte) -97);
+                var9[var7] = ((ByteArrayBuffer) ((Object) var5)).readIntBE((byte) -97);
               }
               var14 = (qi) ((Object) k.field_e.firstForIteration(0));
               if (var14 == null) {

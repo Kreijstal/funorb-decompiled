@@ -77,10 +77,10 @@ final class kk extends ji {
               this.field_u.checkWriteFailure(-108);
               var2 = (sd) ((Object) this.field_g.firstForIteration((byte) 121));
               L4: while (var2 != null) {
-                this.field_m.field_f = 0;
+                this.field_m.position = 0;
                 this.field_m.d((byte) -54, 1);
                 this.field_m.a((byte) -127, var2.field_i);
-                this.field_u.enqueueWrite(100, 0, this.field_m.field_j.length, this.field_m.field_j);
+                this.field_u.enqueueWrite(100, 0, this.field_m.bytes.length, this.field_m.bytes);
                 this.field_e.addLast(-93, var2);
                 var2 = (sd) ((Object) this.field_g.nextForIteration(param0 ^ 41));
               }
@@ -89,10 +89,10 @@ final class kk extends ji {
                 this.e(-90);
               }
               L6: while (var2 != null) {
-                this.field_m.field_f = 0;
+                this.field_m.position = 0;
                 this.field_m.d((byte) 8, 0);
                 this.field_m.a((byte) -127, var2.field_i);
-                this.field_u.enqueueWrite(100, 0, this.field_m.field_j.length, this.field_m.field_j);
+                this.field_u.enqueueWrite(100, 0, this.field_m.bytes.length, this.field_m.bytes);
                 this.field_c.addLast(112, var2);
                 var2 = (sd) ((Object) this.field_p.nextForIteration(54));
               }
@@ -114,29 +114,29 @@ final class kk extends ji {
                   var4 = 10;
                 }
                 if (0 >= var4) {
-                  var5 = this.field_f.field_A.field_j.length - this.field_f.field_E;
+                  var5 = this.field_f.field_A.bytes.length - this.field_f.field_E;
                   var6 = 512 - this.field_f.field_D;
-                  if (-this.field_f.field_A.field_f + var5 < var6) {
-                    var6 = -this.field_f.field_A.field_f + var5;
+                  if (-this.field_f.field_A.position + var5 < var6) {
+                    var6 = -this.field_f.field_A.position + var5;
                   }
                   if (var6 > var3_int) {
                     var6 = var3_int;
                   }
                   L12: {
-                    this.field_u.readFully(this.field_f.field_A.field_j, (byte) -97, this.field_f.field_A.field_f, var6);
+                    this.field_u.readFully(this.field_f.field_A.bytes, (byte) -97, this.field_f.field_A.position, var6);
                     if (this.field_i != 0) {
                       var17 = 0;
                       var7 = var17;
                       L13: while (var6 > var17) {
-                        this.field_f.field_A.field_j[this.field_f.field_A.field_f + var17] = (byte)h.a((int) this.field_f.field_A.field_j[this.field_f.field_A.field_f + var17], (int) this.field_i);
+                        this.field_f.field_A.bytes[this.field_f.field_A.position + var17] = (byte)h.a((int) this.field_f.field_A.bytes[this.field_f.field_A.position + var17], (int) this.field_i);
                         var17++;
                       }
                       break L12;
                     }
                   }
                   this.field_f.field_D = this.field_f.field_D + var6;
-                  this.field_f.field_A.field_f = this.field_f.field_A.field_f + var6;
-                  if (var5 == this.field_f.field_A.field_f) {
+                  this.field_f.field_A.position = this.field_f.field_A.position + var6;
+                  if (var5 == this.field_f.field_A.position) {
                     this.field_f.unlinkSecondaryNode((byte) 57);
                     this.field_f.field_u = false;
                     this.field_f = null;
@@ -146,27 +146,27 @@ final class kk extends ji {
                     }
                   }
                 } else {
-                  var5 = -this.field_j.field_f + var4;
+                  var5 = -this.field_j.position + var4;
                   if (var5 > var3_int) {
                     var5 = var3_int;
                   }
                   L15: {
-                    this.field_u.readFully(this.field_j.field_j, (byte) -97, this.field_j.field_f, var5);
+                    this.field_u.readFully(this.field_j.bytes, (byte) -97, this.field_j.position, var5);
                     if (this.field_i != 0) {
                       for (var6 = 0; var6 < var5; var6++) {
-                        this.field_j.field_j[this.field_j.field_f + var6] = (byte)h.a((int) this.field_j.field_j[this.field_j.field_f + var6], (int) this.field_i);
+                        this.field_j.bytes[this.field_j.position + var6] = (byte)h.a((int) this.field_j.bytes[this.field_j.position + var6], (int) this.field_i);
                       }
                       break L15;
                     }
                   }
-                  this.field_j.field_f = this.field_j.field_f + var5;
-                  if (this.field_j.field_f >= var4) {
+                  this.field_j.position = this.field_j.position + var5;
+                  if (this.field_j.position >= var4) {
                     if (null == this.field_f) {
-                      this.field_j.field_f = 0;
-                      var6 = this.field_j.c((byte) 34);
-                      var7 = this.field_j.a((byte) -90);
-                      var8 = this.field_j.c((byte) 34);
-                      var9 = this.field_j.a((byte) -61);
+                      this.field_j.position = 0;
+                      var6 = this.field_j.readUnsignedByte((byte) 34);
+                      var7 = this.field_j.readIntBE((byte) -90);
+                      var8 = this.field_j.readUnsignedByte((byte) 34);
+                      var9 = this.field_j.readIntBE((byte) -61);
                       var10 = var8 & 127;
                       stackIn_49_0 = ((128 & var8) == 0) ? 0 : 1;
                       L18: {
@@ -199,18 +199,18 @@ final class kk extends ji {
                         this.field_f = var14_ref;
                         stackIn_66_0 = (0 != var10) ? 9 : 5;
                         var15 = stackIn_66_0;
-                        this.field_f.field_A = new qc(var9 + var15 + this.field_f.field_E);
+                        this.field_f.field_A = new ByteArrayBuffer(var9 + var15 + this.field_f.field_E);
                         this.field_f.field_A.d((byte) -26, var10);
                         this.field_f.field_A.c((byte) 95, var9);
-                        this.field_j.field_f = 0;
+                        this.field_j.position = 0;
                         this.field_f.field_D = 10;
                       }
                     } else {
                       if (0 != this.field_f.field_D) {
                         throw new IOException();
                       }
-                      if (-1 == this.field_j.field_j[0]) {
-                        this.field_j.field_f = 0;
+                      if (-1 == this.field_j.bytes[0]) {
+                        this.field_j.position = 0;
                         this.field_f.field_D = 1;
                       } else {
                         this.field_f = null;
@@ -354,7 +354,7 @@ final class kk extends ji {
               this.field_u = (BufferedSocket) (param0);
               this.b((byte) -113);
               this.a(param1, param2);
-              this.field_j.field_f = 0;
+              this.field_j.position = 0;
               this.field_f = null;
               L3: while (true) {
                 var4_ref = (sd) ((Object) this.field_e.removeFirst(true));
@@ -373,11 +373,11 @@ final class kk extends ji {
                   }
                   if (this.field_i != 0) {
                     try {
-                      this.field_m.field_f = 0;
+                      this.field_m.position = 0;
                       this.field_m.d((byte) -62, 4);
                       this.field_m.d((byte) 122, (int) this.field_i);
                       this.field_m.c((byte) 95, 0);
-                      this.field_u.enqueueWrite(100, 0, this.field_m.field_j.length, this.field_m.field_j);
+                      this.field_u.enqueueWrite(100, 0, this.field_m.bytes.length, this.field_m.bytes);
                     } catch (java.io.IOException decompiledCaughtParameter1) {
                       decompiledCaughtException = decompiledCaughtParameter1;
                       var4_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -434,11 +434,11 @@ final class kk extends ji {
               return;
             }
             try {
-              this.field_m.field_f = 0;
+              this.field_m.position = 0;
               this.field_m.d((byte) 126, 6);
               this.field_m.b(-12, 3);
               this.field_m.e(0, 28695);
-              this.field_u.enqueueWrite(100, 0, this.field_m.field_j.length, this.field_m.field_j);
+              this.field_u.enqueueWrite(100, 0, this.field_m.bytes.length, this.field_m.bytes);
               if (param0 > -56) {
                 kk.a(-8, (byte) 62);
               }
@@ -478,7 +478,7 @@ final class kk extends ji {
 
     private final void a(boolean param0, boolean param1) {
         try {
-            qc stackIn_5_0 = null;
+            ByteArrayBuffer stackIn_5_0 = null;
             int stackIn_5_1 = 0;
             int stackIn_6_2 = 0;
             Throwable decompiledCaughtException = null;
@@ -488,7 +488,7 @@ final class kk extends ji {
               return;
             }
             try {
-              this.field_m.field_f = 0;
+              this.field_m.position = 0;
               stackIn_5_0 = this.field_m;
               stackIn_5_1 = 124;
               if (param1) {
@@ -496,9 +496,9 @@ final class kk extends ji {
               } else {
                 stackIn_6_2 = 3;
               }
-              ((qc) (Object) stackIn_5_0).d((byte) stackIn_5_1, stackIn_6_2);
+              ((ByteArrayBuffer) (Object) stackIn_5_0).d((byte) stackIn_5_1, stackIn_6_2);
               this.field_m.a((byte) -127, 0L);
-              this.field_u.enqueueWrite(100, 0, this.field_m.field_j.length, this.field_m.field_j);
+              this.field_u.enqueueWrite(100, 0, this.field_m.bytes.length, this.field_m.bytes);
               if (param0) {
                 this.a(false, false);
               }

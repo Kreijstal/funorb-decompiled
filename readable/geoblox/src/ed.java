@@ -60,50 +60,50 @@ final class ed {
         return 0;
     }
 
-    final void a(qc param0) {
+    final void a(ByteArrayBuffer param0) {
         int var3 = 0;
         int var4 = 0;
         this.field_t = new uc();
         this.field_t.a(param0);
         this.field_o = new uc();
         this.field_o.a(param0);
-        int var2 = param0.c((byte) 34);
+        int var2 = param0.readUnsignedByte((byte) 34);
         if (var2 != 0) {
-            param0.field_f = param0.field_f - 1;
+            param0.position = param0.position - 1;
             this.field_y = new uc();
             this.field_y.a(param0);
             this.field_w = new uc();
             this.field_w.a(param0);
         }
-        var2 = param0.c((byte) 34);
+        var2 = param0.readUnsignedByte((byte) 34);
         if (var2 != 0) {
-            param0.field_f = param0.field_f - 1;
+            param0.position = param0.position - 1;
             this.field_u = new uc();
             this.field_u.a(param0);
             this.field_n = new uc();
             this.field_n.a(param0);
         }
-        var2 = param0.c((byte) 34);
+        var2 = param0.readUnsignedByte((byte) 34);
         if (var2 != 0) {
-            param0.field_f = param0.field_f - 1;
+            param0.position = param0.position - 1;
             this.field_q = new uc();
             this.field_q.a(param0);
             this.field_m = new uc();
             this.field_m.a(param0);
         }
         for (var3 = 0; var3 < 10; var3++) {
-            var4 = param0.c(1);
+            var4 = param0.readUnsignedSmart(1);
             if (var4 == 0) {
                 break;
             }
             this.field_a[var3] = var4;
-            this.field_j[var3] = param0.h(-125);
-            this.field_x[var3] = param0.c(1);
+            this.field_j[var3] = param0.readSignedSmart(-125);
+            this.field_x[var3] = param0.readUnsignedSmart(1);
         }
-        this.field_h = param0.c(1);
-        this.field_r = param0.c(1);
-        this.field_d = param0.b(true);
-        this.field_v = param0.b(true);
+        this.field_h = param0.readUnsignedSmart(1);
+        this.field_r = param0.readUnsignedSmart(1);
+        this.field_d = param0.readUnsignedShortBE(true);
+        this.field_v = param0.readUnsignedShortBE(true);
         this.field_e = new ub();
         this.field_k = new uc();
         this.field_e.a(param0, this.field_k);

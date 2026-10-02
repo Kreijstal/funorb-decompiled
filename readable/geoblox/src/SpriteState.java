@@ -846,7 +846,7 @@ abstract class SpriteState extends DualLinkNode {
         }
     }
 
-    final static void a(qc param0, boolean param1) {
+    final static void a(ByteArrayBuffer param0, boolean param1) {
         try {
             RuntimeException runtimeException = null;
             byte[] var2 = null;

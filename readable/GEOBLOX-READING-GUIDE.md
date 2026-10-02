@@ -692,8 +692,8 @@ the array indices, evidence, override families and remaining shared carriers.
 
 ## Remaining limitations
 
-There are 2,404 explicit guarded rules: 24 classes, 457 fields, 270 method
-declarations, 711 parameters and 942 locals. This is not full deobfuscation.
+There are 4,358 explicit guarded rules: 37 classes, 595 fields, 391 method
+declarations, 1,241 parameters and 2,094 locals. This is not full deobfuscation.
 Unknown flags, guard arguments and opaque shared helpers still need
 investigation. Current names and source identities live in the single manifest;
 previous naming and structural passes remain in Git. The earlier early-exit migration
@@ -717,7 +717,7 @@ reducing the method to 38 lines and coalescing its recursive/category clones.
 Every declaration key and spelling is unchanged, with no ordinal migrations.
 All 1,194 rules survived that structural pass. Later naming passes added
 asset/loading/overlay and sprite identities while retaining prior rules and the
-same raw source. The current structural refresh preserves all 2,404 rules.
+same raw source. That historical structural refresh preserved all 2,404 rules.
 Other carriers, shared joins and opaque names remain. The earlier terminal-return
 pass removed the vanished boundary selector;
 the current emitter also retains its proven early-exit reconstruction.
@@ -1488,3 +1488,50 @@ complete binding checks and byte-exact reversal support the names. Existing
 native probes retain their original scopes and do not newly execute this sheet,
 archive, font-factory or sprite-builder path. Actual assets, whole rendering/
 gameplay and device performance remain unverified.
+
+## Byte-array storage and readers (pass 60)
+
+`ByteArrayBuffer` replaces the opaque `qc` name. Its `bytes` field is shared
+backing storage and `position` is the mutable read/write cursor, not a checked
+length. The capacity constructor uses the original byte-array pool; the array
+constructor retains the supplied reference, including null. `pk` still inherits
+this storage base. Crypto/hash state and unrelated static helpers remain here
+with their original opaque names.
+
+| Reader | Successful read with its expected guard |
+| --- | --- |
+| `readSignedByte` / `readUnsignedByte` | One byte, signed or masked with255 |
+| `readUnsignedShortBE` | Two unsigned bytes, big-endian |
+| `readUnsignedMediumBE` | Three unsigned bytes, big-endian |
+| `readIntBE` | Four bytes forming a signed int |
+| `readLongBE` | Two masked32-bit words, high word shifted32 |
+| `readVariableIntBE` | Seven-bit groups, most-significant group first; negative signed bytes continue the scan |
+| `readUnsignedShortOrInt` | Leading bit0 selects BE16; leading bit1 selects BE32 masked with0x7fffffff, without consuming a separate prefix |
+| `readSignedSmart` | Leading unsigned byte<128: one byte minus64; otherwise BE16 minus49152 |
+| `readUnsignedSmart` | Leading unsigned byte<128: one byte; otherwise BE16 minus32768 |
+| `readNullTerminatedText` | Consume through zero and decode the preceding slice with the existing client character mapping |
+| `readNullableNullTerminatedText` | A leading zero consumes one byte and returns null; otherwise use the ordinary text reader |
+| `readZeroPrefixedNullTerminatedText` | Consume and require a zero prefix, then read null-terminated text |
+
+These APIs preserve obfuscation guards. `readUnsignedShortBE(false)` advances
+by2 then returns58 without an array read. `readIntBE` advances by4 before
+returning62 for guards>=-25. `readUnsignedShortOrInt` returns95 for guard!=-27
+without advancing; `readUnsignedSmart` similarly returns3 for guard!=1.
+The signed smart reader evaluates its sentinel remainder before peeking and
+can fail there. The long reader retains its table-clearing guard between words.
+
+Other invalid guards can backpatch bytes, invoke the RSA helper or load a sprite
+before reading; they are not merely unused arguments. Individual byte reads
+advance before array access, so failure can leave an advanced cursor. Empty
+ordinary text and a nullable zero marker return before their guard side effects.
+Nonempty ordinary text retains the field_i=68 guard write. Variable-length
+reads retain their original int overflow and unbounded scan. Diagnostic strings
+keep the original class/method spelling for reversal and trace comparison.
+
+Every selected reader parameter and local has a guarded semantic name. All
+prior complete rules and source/generator pins remain unchanged. Compilation,
+full binding checks, byte-exact reproduction and dictionary reversal support
+this pass. Existing native result-helper fixtures cover their original packet
+cursor/storage uses; they do not newly execute these thirteen readers. Other
+buffer writers/helpers, actual archives, complete gameplay and device
+performance remain unfinished or unverified.

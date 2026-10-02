@@ -61,10 +61,10 @@ final class pi extends vf {
         if (!(wg.field_a <= 2)) {
             wg.field_a = 2;
         }
-        qc.field_i = param0 >> 2 & 3;
+        ByteArrayBuffer.field_i = param0 >> 2 & 3;
         ad.field_j = 3 & param0;
-        if (!(qc.field_i <= 2)) {
-            qc.field_i = 2;
+        if (!(ByteArrayBuffer.field_i <= 2)) {
+            ByteArrayBuffer.field_i = 2;
         }
         if (param1 != -12718) {
             pi.j(-27);

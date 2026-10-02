@@ -254,7 +254,7 @@ final class vl extends IntrusiveNode {
         int var34 = 0;
         int var35 = 0;
         int var37 = 0;
-        qc var38 = null;
+        ByteArrayBuffer var38 = null;
         byte[] var39 = null;
         t var40 = null;
         byte[] var41 = null;
@@ -282,41 +282,41 @@ final class vl extends IntrusiveNode {
           this.field_j = new short[128];
           this.field_i = new byte[128];
           this.field_o = new byte[128];
-          var38 = new qc(param0);
-          for (var3 = 0; var38.field_j[var3 + var38.field_f] != 0; var3++) {
+          var38 = new ByteArrayBuffer(param0);
+          for (var3 = 0; var38.bytes[var3 + var38.position] != 0; var3++) {
           }
           var55 = new byte[var3];
           var42 = var55;
           var4 = var42;
           for (var5 = 0; var5 < var3; var5++) {
-            var4[var5] = var38.f((byte) 81);
+            var4[var5] = var38.readSignedByte((byte) 81);
           }
-          var38.field_f = var38.field_f + 1;
+          var38.position = var38.position + 1;
           var3++;
-          var5 = var38.field_f;
-          var38.field_f = var38.field_f + var3;
-          for (var6 = 0; 0 != var38.field_j[var6 + var38.field_f]; var6++) {
+          var5 = var38.position;
+          var38.position = var38.position + var3;
+          for (var6 = 0; 0 != var38.bytes[var6 + var38.position]; var6++) {
           }
           var56 = new byte[var6];
           var43 = var56;
           var7 = var43;
           for (var8 = 0; var8 < var6; var8++) {
-            var7[var8] = var38.f((byte) 91);
+            var7[var8] = var38.readSignedByte((byte) 91);
           }
           var6++;
-          var38.field_f = var38.field_f + 1;
-          var8 = var38.field_f;
-          var38.field_f = var38.field_f + var6;
-          for (var9 = 0; var38.field_j[var9 + var38.field_f] != 0; var9++) {
+          var38.position = var38.position + 1;
+          var8 = var38.position;
+          var38.position = var38.position + var6;
+          for (var9 = 0; var38.bytes[var9 + var38.position] != 0; var9++) {
           }
           var57 = new byte[var9];
           var44 = var57;
           var10 = var44;
           for (var11_int = 0; var11_int < var9; var11_int++) {
-            var10[var11_int] = var38.f((byte) 125);
+            var10[var11_int] = var38.readSignedByte((byte) 125);
           }
           L6: {
-            var38.field_f = var38.field_f + 1;
+            var38.position = var38.position + 1;
             var9++;
             var53 = new byte[var9];
             var39 = var53;
@@ -326,7 +326,7 @@ final class vl extends IntrusiveNode {
               var13_int = 1;
               var12 = 2;
               for (var14 = 2; var9 > var14; var14++) {
-                var15_int = var38.c((byte) 34);
+                var15_int = var38.readUnsignedByte((byte) 34);
                 if (0 == var15_int) {
                   incrementValue$0 = var12;
                   var12++;
@@ -349,17 +349,17 @@ final class vl extends IntrusiveNode {
             var13[var14] = dupTemp$8;
             var40 = dupTemp$8;
             var15_ref = var40;
-            var16_int = var38.c((byte) 34);
+            var16_int = var38.readUnsignedByte((byte) 34);
             if (0 < var16_int) {
               var15_ref.field_f = new byte[2 * var16_int];
             }
-            var16_int = var38.c((byte) 34);
+            var16_int = var38.readUnsignedByte((byte) 34);
             if (0 < var16_int) {
               var15_ref.field_e = new byte[2 * var16_int + 2];
               var40.field_e[1] = (byte)64;
             }
           }
-          var14 = var38.c((byte) 34);
+          var14 = var38.readUnsignedByte((byte) 34);
           if (var14 <= 0) {
             stackIn_39_0 = null;
           } else {
@@ -367,7 +367,7 @@ final class vl extends IntrusiveNode {
           }
           var46 = stackIn_39_0;
           var15 = var46;
-          var14 = var38.c((byte) 34);
+          var14 = var38.readUnsignedByte((byte) 34);
           if (0 >= var14) {
             stackIn_42_0 = null;
           } else {
@@ -375,24 +375,24 @@ final class vl extends IntrusiveNode {
           }
           var47 = stackIn_42_0;
           var16 = var47;
-          for (var17 = 0; var38.field_j[var17 + var38.field_f] != 0; var17++) {
+          for (var17 = 0; var38.bytes[var17 + var38.position] != 0; var17++) {
           }
           var54 = new byte[var17];
           var41 = var54;
           var18 = var41;
           for (var19 = 0; var17 > var19; var19++) {
-            var18[var19] = var38.f((byte) 127);
+            var18[var19] = var38.readSignedByte((byte) 127);
           }
-          var38.field_f = var38.field_f + 1;
+          var38.position = var38.position + 1;
           var17++;
           var19 = 0;
           for (var20 = 0; var20 < 128; var20++) {
-            var19 = var19 + var38.c((byte) 34);
+            var19 = var19 + var38.readUnsignedByte((byte) 34);
             this.field_j[var20] = (short)var19;
           }
           var19 = 0;
           for (var20 = 0; var20 < 128; var20++) {
-            var19 = var19 + var38.c((byte) 34);
+            var19 = var19 + var38.readUnsignedByte((byte) 34);
             this.field_j[var20] = (short)(this.field_j[var20] + (var19 << 8));
           }
           var20 = 0;
@@ -407,7 +407,7 @@ final class vl extends IntrusiveNode {
               } else {
                 var20 = -1;
               }
-              var22 = var38.g((byte) -116);
+              var22 = var38.readVariableIntBE((byte) -116);
             }
             this.field_j[var23] = (short)(this.field_j[var23] + cd.a(-1 + var22 << 14, 32768));
             this.field_h[var23] = var22;
@@ -421,7 +421,7 @@ final class vl extends IntrusiveNode {
               if (var20 == 0) {
                 incrementValue$5 = var5;
                 var5++;
-                var23 = -1 + var38.field_j[incrementValue$5];
+                var23 = -1 + var38.bytes[incrementValue$5];
                 if (var21 >= var55.length) {
                   var20 = -1;
                 } else {
@@ -442,7 +442,7 @@ final class vl extends IntrusiveNode {
               if (var20 == 0) {
                 incrementValue$3 = var8;
                 var8++;
-                var24 = 16 + var38.field_j[incrementValue$3] << 2;
+                var24 = 16 + var38.bytes[incrementValue$3] << 2;
                 if (var56.length > var21) {
                   incrementValue$4 = var21;
                   var21++;
@@ -487,19 +487,19 @@ final class vl extends IntrusiveNode {
                 var20 = -1;
               }
               if (0 < this.field_h[var27]) {
-                var26 = var38.c((byte) 34) + 1;
+                var26 = var38.readUnsignedByte((byte) 34) + 1;
               }
             }
             var20--;
             this.field_o[var27] = (byte)var26;
           }
-          this.field_g = 1 + var38.c((byte) 34);
+          this.field_g = 1 + var38.readUnsignedByte((byte) 34);
           for (var27 = 0; var12 > var27; var27++) {
             L61: {
               var45 = var13[var27];
               if (null != var45.field_f) {
                 for (var29 = 1; var45.field_f.length > var29; var29 += 2) {
-                  var45.field_f[var29] = var38.f((byte) 76);
+                  var45.field_f[var29] = var38.readSignedByte((byte) 76);
                 }
                 break L61;
               }
@@ -507,7 +507,7 @@ final class vl extends IntrusiveNode {
             L63: {
               if (var45.field_e != null) {
                 for (var29 = 3; -2 + var45.field_e.length > var29; var29 += 2) {
-                  var45.field_e[var29] = var38.f((byte) 102);
+                  var45.field_e[var29] = var38.readSignedByte((byte) 102);
                 }
                 break L63;
               }
@@ -516,7 +516,7 @@ final class vl extends IntrusiveNode {
           L23: {
             if (null != var15) {
               for (var27 = 1; var27 < var46.length; var27 += 2) {
-                var15[var27] = var38.f((byte) 96);
+                var15[var27] = var38.readSignedByte((byte) 96);
               }
               break L23;
             }
@@ -524,7 +524,7 @@ final class vl extends IntrusiveNode {
           L25: {
             if (var16 != null) {
               for (var27 = 1; var47.length > var27; var27 += 2) {
-                var16[var27] = var38.f((byte) 75);
+                var16[var27] = var38.readSignedByte((byte) 75);
               }
               break L25;
             }
@@ -535,7 +535,7 @@ final class vl extends IntrusiveNode {
               if (null != var48.field_e) {
                 var19 = 0;
                 for (var29 = 2; var29 < var48.field_e.length; var29 += 2) {
-                  var19 = var38.c((byte) 34) + (1 + var19);
+                  var19 = var38.readUnsignedByte((byte) 34) + (1 + var19);
                   var48.field_e[var29] = (byte)var19;
                 }
                 break L59;
@@ -548,7 +548,7 @@ final class vl extends IntrusiveNode {
               if (null != var49.field_f) {
                 var19 = 0;
                 for (var29 = 2; var29 < var49.field_f.length; var29 += 2) {
-                  var19 = var38.c((byte) 34) + (1 + var19);
+                  var19 = var38.readUnsignedByte((byte) 34) + (1 + var19);
                   var49.field_f[var29] = (byte)var19;
                 }
                 break L57;
@@ -557,10 +557,10 @@ final class vl extends IntrusiveNode {
           }
           L29: {
             if (null != var15) {
-              var19 = var38.c((byte) 34);
+              var19 = var38.readUnsignedByte((byte) 34);
               var15[0] = (byte)var19;
               for (var27 = 2; var27 < var46.length; var27 += 2) {
-                var19 = var38.c((byte) 34) + 1 + var19;
+                var19 = var38.readUnsignedByte((byte) 34) + 1 + var19;
                 var15[var27] = (byte)var19;
               }
               var27 = var46[0];
@@ -589,10 +589,10 @@ final class vl extends IntrusiveNode {
           }
           L35: {
             if (var16 != null) {
-              var19 = var38.c((byte) 34);
+              var19 = var38.readUnsignedByte((byte) 34);
               var16[0] = (byte)var19;
               for (var27 = 2; var27 < var47.length; var27 += 2) {
-                var19 = var38.c((byte) 34) + 1 + var19;
+                var19 = var38.readUnsignedByte((byte) 34) + 1 + var19;
                 var16[var27] = (byte)var19;
               }
               var27 = var47[0];
@@ -646,33 +646,33 @@ final class vl extends IntrusiveNode {
             }
           }
           for (var27 = 0; var12 > var27; var27++) {
-            var13[var27].field_c = var38.c((byte) 34);
+            var13[var27].field_c = var38.readUnsignedByte((byte) 34);
           }
           for (var27 = 0; var27 < var12; var27++) {
             var50 = var13[var27];
             if (null != var50.field_f) {
-              var50.field_g = var38.c((byte) 34);
+              var50.field_g = var38.readUnsignedByte((byte) 34);
             }
             if (var50.field_e != null) {
-              var50.field_a = var38.c((byte) 34);
+              var50.field_a = var38.readUnsignedByte((byte) 34);
             }
             if (var50.field_c > 0) {
-              var50.field_h = var38.c((byte) 34);
+              var50.field_h = var38.readUnsignedByte((byte) 34);
             }
           }
           for (var27 = 0; var12 > var27; var27++) {
-            var13[var27].field_d = var38.c((byte) 34);
+            var13[var27].field_d = var38.readUnsignedByte((byte) 34);
           }
           for (var27 = 0; var27 < var12; var27++) {
             var51 = var13[var27];
             if (var51.field_d > 0) {
-              var51.field_b = var38.c((byte) 34);
+              var51.field_b = var38.readUnsignedByte((byte) 34);
             }
           }
           for (var27 = 0; var27 < var12; var27++) {
             var52 = var13[var27];
             if (0 < var52.field_b) {
-              var52.field_j = var38.c((byte) 34);
+              var52.field_j = var38.readUnsignedByte((byte) 34);
             }
           }
           return;

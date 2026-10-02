@@ -14,11 +14,11 @@ abstract class ji {
     SecondaryDeque field_c;
     int field_o;
     long field_k;
-    qc field_m;
+    ByteArrayBuffer field_m;
     volatile int field_b;
     byte field_i;
     volatile int field_q;
-    qc field_j;
+    ByteArrayBuffer field_j;
     sd field_f;
 
     abstract void h(int param0);
@@ -39,11 +39,11 @@ abstract class ji {
             var1 = fj.field_q;
             L0: while (cf.c((byte) -114)) {
               var1.a(8, (byte) -71);
-              fieldTemp$0 = var1.field_f + 1;
-              var1.field_f = var1.field_f + 1;
+              fieldTemp$0 = var1.position + 1;
+              var1.position = var1.position + 1;
               var2 = fieldTemp$0;
               pf.a(46, var1);
-              fj.field_q.f(11700, var1.field_f - var2);
+              fj.field_q.f(11700, var1.position - var2);
             }
             return;
           }
@@ -226,11 +226,11 @@ abstract class ji {
         this.field_e = new SecondaryDeque();
         this.field_p = new SecondaryDeque();
         this.field_c = new SecondaryDeque();
-        this.field_m = new qc(6);
+        this.field_m = new ByteArrayBuffer(6);
         this.field_b = 0;
         this.field_i = (byte) 0;
         this.field_q = 0;
-        this.field_j = new qc(10);
+        this.field_j = new ByteArrayBuffer(10);
     }
 
     static {

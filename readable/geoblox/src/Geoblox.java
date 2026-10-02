@@ -353,7 +353,7 @@ public final class Geoblox extends wf {
         rh.b(30261);
         b.a(17062);
         kb.c(105);
-        qc.d(0);
+        ByteArrayBuffer.d(0);
         oa.b(8192);
         ab.a((byte) -60);
         gf.a(true);

@@ -64,21 +64,21 @@ final class fg {
         }
     }
 
-    private fg(qc param0) {
+    private fg(ByteArrayBuffer param0) {
         int var2 = 0;
         int var3;
         this.field_a = new ed[10];
         L0: for (var2 = 0; var2 < 10; var2++) {
-          var3 = param0.c((byte) 34);
+          var3 = param0.readUnsignedByte((byte) 34);
           if (var3 == 0) {
             continue L0;
           }
-          param0.field_f = param0.field_f - 1;
+          param0.position = param0.position - 1;
           this.field_a[var2] = new ed();
           this.field_a[var2].a(param0);
         }
-        this.field_c = param0.b(true);
-        this.field_b = param0.b(true);
+        this.field_c = param0.readUnsignedShortBE(true);
+        this.field_b = param0.readUnsignedShortBE(true);
     }
 
     final static fg a(rh param0, int param1, int param2) {
@@ -86,6 +86,6 @@ final class fg {
         if (var3 == null) {
             return null;
         }
-        return new fg(new qc(var3));
+        return new fg(new ByteArrayBuffer(var3));
     }
 }

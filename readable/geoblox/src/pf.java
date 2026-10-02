@@ -69,8 +69,8 @@ final class pf extends ee implements ga, pl {
         try {
           L0: {
             var9 = eh.field_d;
-            var2 = var9.c((byte) 34);
-            var3 = var9.c((byte) 34);
+            var2 = var9.readUnsignedByte((byte) 34);
+            var3 = var9.readUnsignedByte((byte) 34);
             if (0 == var2) {
               var4_ref_ea = (ea) ((Object) ea.field_g.firstForIteration(0));
               if (var4_ref_ea == null) {
@@ -78,7 +78,7 @@ final class pf extends ee implements ga, pl {
                 return;
               }
               {
-                var5_int = -var9.field_f + p.field_k;
+                var5_int = -var9.position + p.field_k;
                 var11 = var4_ref_ea.field_h;
                 var10 = var11;
                 var6 = var10;
@@ -86,14 +86,14 @@ final class pf extends ee implements ga, pl {
                   var5_int = var11.length << 2;
                 }
                 for (var7 = 0; var5_int > var7; var7++) {
-                  var6[var7 >> 2] = var6[var7 >> 2] + (var9.c((byte) 34) << cd.a(var7 << 8, 768));
+                  var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte((byte) 34) << cd.a(var7 << 8, 768));
                 }
                 var4_ref_ea.unlinkNode(false);
                 break L0;
               }
             }
             if (var2 == 1) {
-              var4 = var9.h(76);
+              var4 = var9.readSignedSmart(76);
               var5 = (se) ((Object) sj.field_g.firstForIteration(0));
               L1: while (true) {
                 L2: {
@@ -255,9 +255,9 @@ final class pf extends ee implements ga, pl {
     final static int a(int param0, int param1, mb param2, mb param3, String param4, boolean param5, int param6) {
         int var12 = 0;
         int stackIn_4_0 = 0;
-        qc stackIn_9_0 = null;
+        ByteArrayBuffer stackIn_9_0 = null;
         String stackIn_10_1 = null;
-        qc stackIn_12_0 = null;
+        ByteArrayBuffer stackIn_12_0 = null;
         String stackIn_13_1 = null;
         int stackIn_31_0 = 0;
         int stackIn_45_0 = 0;
@@ -291,11 +291,11 @@ final class pf extends ee implements ga, pl {
             }
           }
           if (gi.field_d == pk.field_l) {
-            fj.field_q.field_f = 0;
+            fj.field_q.position = 0;
             fi.field_b = null;
             if (param4 != null) {
               var9 = 0;
-              fc.field_d.field_f = 0;
+              fc.field_d.position = 0;
               if (param5) {
                 var9 = var9 | 1;
               }
@@ -309,17 +309,17 @@ final class pf extends ee implements ga, pl {
               fc.field_d.d((byte) -94, param1);
               fc.field_d.d((byte) 123, var9);
               fj.field_q.d((byte) 127, 18);
-              fj.field_q.field_f = fj.field_q.field_f + 2;
-              var10 = fj.field_q.field_f;
+              fj.field_q.position = fj.field_q.position + 2;
+              var10 = fj.field_q.position;
               var11_ref_String = s.a(-1, k.c(105));
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
               fj.field_q.a(var11_ref_String, 0);
               el.a(false, fc.field_d, fj.field_q, ld.field_c, vl.field_l);
-              fj.field_q.a(-var10 + fj.field_q.field_f, true);
+              fj.field_q.a(-var10 + fj.field_q.position, true);
             } else {
-              fc.field_d.field_f = 0;
+              fc.field_d.position = 0;
               fc.field_d.c((byte) 95, bh.field_d.nextInt());
               fc.field_d.c((byte) 95, bh.field_d.nextInt());
               stackIn_9_0 = fc.field_d;
@@ -328,19 +328,19 @@ final class pf extends ee implements ga, pl {
               } else {
                 stackIn_10_1 = (String) (var13);
               }
-              ((qc) (Object) stackIn_9_0).a(stackIn_10_1, (byte) -126);
+              ((ByteArrayBuffer) (Object) stackIn_9_0).a(stackIn_10_1, (byte) -126);
               stackIn_12_0 = fc.field_d;
               if (!param3.a((byte) 126)) {
                 stackIn_13_1 = "";
               } else {
                 stackIn_13_1 = (String) (var8);
               }
-              ((qc) (Object) stackIn_12_0).a(stackIn_13_1, (byte) -126);
+              ((ByteArrayBuffer) (Object) stackIn_12_0).a(stackIn_13_1, (byte) -126);
               fj.field_q.d((byte) 124, 16);
-              fj.field_q.field_f = fj.field_q.field_f + 1;
-              var9 = fj.field_q.field_f;
+              fj.field_q.position = fj.field_q.position + 1;
+              var9 = fj.field_q.position;
               el.a(false, fc.field_d, fj.field_q, ld.field_c, vl.field_l);
-              fj.field_q.f(11700, fj.field_q.field_f - var9);
+              fj.field_q.f(11700, fj.field_q.position - var9);
             }
             cm.a(-1, -1);
             pk.field_l = field_K;
@@ -348,8 +348,8 @@ final class pf extends ee implements ga, pl {
           L7: {
             if (field_K == pk.field_l) {
               if (el.b(30000, 1)) {
-                var9 = eh.field_d.c((byte) 34);
-                eh.field_d.field_f = 0;
+                var9 = eh.field_d.readUnsignedByte((byte) 34);
+                eh.field_d.position = 0;
                 if (var9 >= 100) {
                   if (var9 <= 105) {
                     pk.field_l = v.field_l;
@@ -372,7 +372,7 @@ final class pf extends ee implements ga, pl {
                 } else {
                   el.b(30000, DualLinkNode.d(112));
                   fi.field_b = new Boolean(jl.a(eh.field_d, 0));
-                  eh.field_d.field_f = 0;
+                  eh.field_d.position = 0;
                 }
               }
             }
@@ -380,12 +380,12 @@ final class pf extends ee implements ga, pl {
           if (pk.field_l == v.field_l) {
             var9 = 2;
             if (el.b(30000, var9)) {
-              var10 = eh.field_d.b(true);
-              eh.field_d.field_f = 0;
+              var10 = eh.field_d.readUnsignedShortBE(true);
+              eh.field_d.position = 0;
               if (el.b(30000, var10)) {
                 var11 = si.field_i.length;
                 for (var12 = 0; var12 < var11; var12++) {
-                  si.field_i[var12] = eh.field_d.f(27425);
+                  si.field_i[var12] = eh.field_d.readZeroPrefixedNullTerminatedText(27425);
                 }
                 jl.a((byte) -114);
                 ck.field_e = false;
@@ -397,9 +397,9 @@ final class pf extends ee implements ga, pl {
           if (pk.field_l == qh.field_F) {
             if (nf.a(false)) {
               if (ScorePopup.field_l != 255) {
-                kh.field_a = eh.field_d.e((byte) 98);
+                kh.field_a = eh.field_d.readNullTerminatedText((byte) 98);
               } else {
-                var9_ref_String = eh.field_d.i((byte) 53);
+                var9_ref_String = eh.field_d.readNullableNullTerminatedText((byte) 53);
                 if (var9_ref_String != null) {
                   tc.a(-128, var9_ref_String, k.c(106));
                 }
@@ -480,7 +480,7 @@ final class pf extends ee implements ga, pl {
                   if (!this.field_I) {
                     hg.b(param1 - 23718);
                   } else {
-                    qc.g(0);
+                    ByteArrayBuffer.g(0);
                   }
                 } else {
                   sd.h(param1 ^ -60);
@@ -578,7 +578,7 @@ final class pf extends ee implements ga, pl {
                   return;
                 }
                 {
-                  var5 = param1.field_f;
+                  var5 = param1.position;
                   param1.c((byte) 95, var17.field_m);
                   for (var6 = 0; var6 < var17.field_f; var6++) {
                     if (var13.field_j[var6] != 0) {

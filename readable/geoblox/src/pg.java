@@ -29,7 +29,7 @@ final class pg {
         gb.field_c = 0;
     }
 
-    final static void a(int param0, PlatformTaskDispatcher param1, int param2, qc param3) {
+    final static void a(int param0, PlatformTaskDispatcher param1, int param2, ByteArrayBuffer param3) {
         try {
             int var11_int = 0;
             int var12_int = 0;
@@ -57,7 +57,7 @@ final class pg {
             Class[] var12 = null;
             int var13 = 0;
             int var14 = 0;
-            qc var15 = null;
+            ByteArrayBuffer var15 = null;
             String var16 = null;
             String var17 = null;
             int var18 = 0;
@@ -68,8 +68,8 @@ final class pg {
             var14 = Geoblox.field_C;
             try {
               var19 = new eg();
-              var19.field_f = param3.c((byte) 34);
-              var19.field_m = param3.a((byte) -127);
+              var19.field_f = param3.readUnsignedByte((byte) 34);
+              var19.field_m = param3.readIntBE((byte) -127);
               var19.field_j = new int[var19.field_f];
               var19.field_i = new PlatformTask[var19.field_f];
               var19.field_g = new int[var19.field_f];
@@ -81,7 +81,7 @@ final class pg {
                 try {
                   L2: {
                     L3: {
-                      var6_int = param3.c((byte) 34);
+                      var6_int = param3.readUnsignedByte((byte) 34);
                       if (0 != var6_int) {
                         if (1 != var6_int) {
                           if (var6_int != 2) {
@@ -92,12 +92,12 @@ final class pg {
                                 break L2;
                               }
                             }
-                            var21 = param3.e((byte) 103);
-                            var8 = param3.e((byte) 98);
-                            var9 = param3.c((byte) 34);
+                            var21 = param3.readNullTerminatedText((byte) 103);
+                            var8 = param3.readNullTerminatedText((byte) 98);
+                            var9 = param3.readUnsignedByte((byte) 34);
                             var10 = new String[var9];
                             for (var11_int = 0; var9 > var11_int; var11_int++) {
-                              var10[var11_int] = param3.e((byte) 120);
+                              var10[var11_int] = param3.readNullTerminatedText((byte) 120);
                             }
                             L7: {
                               var22 = new byte[var9][];
@@ -105,7 +105,7 @@ final class pg {
                               var11 = var20;
                               if (var6_int == 3) {
                                 for (var12_int = 0; var12_int < var9; var12_int++) {
-                                  var13 = param3.a((byte) -70);
+                                  var13 = param3.readIntBE((byte) -70);
                                   array$0 = new byte[var13];
                                   var11[var12_int] = array$0;
                                   param3.b(29915, var13, var22[var12_int], 0);
@@ -127,13 +127,13 @@ final class pg {
                           }
                         }
                       }
-                      var16 = param3.e((byte) 117);
+                      var16 = param3.readNullTerminatedText((byte) 117);
                       var7 = var16;
-                      var17 = param3.e((byte) 125);
+                      var17 = param3.readNullTerminatedText((byte) 125);
                       var8 = var17;
                       var9 = 0;
                       if (var6_int == 1) {
-                        var9 = param3.a((byte) -123);
+                        var9 = param3.readIntBE((byte) -123);
                       }
                       var19.field_k[var5] = var6_int;
                       var19.field_g[var5] = var9;
@@ -173,8 +173,8 @@ final class pg {
                 var5++;
               }
               if (param0 != -4) {
-                var15 = (qc) null;
-                pg.a(96, (PlatformTaskDispatcher) null, -109, (qc) null);
+                var15 = (ByteArrayBuffer) null;
+                pg.a(96, (PlatformTaskDispatcher) null, -109, (ByteArrayBuffer) null);
               }
               sl.field_k.addLast(-92, var19);
               return;

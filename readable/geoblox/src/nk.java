@@ -10,7 +10,7 @@ final class nk extends df {
     static int[] packedMatchCandidates;
     static volatile int keyboardIdleTicks;
 
-    final void a(int param0, qc param1) {
+    final void a(int param0, ByteArrayBuffer param1) {
         try {
             if (param0 <= 107) {
                 byte[] var4 = (byte[]) null;

@@ -22,21 +22,21 @@ final class uc {
         this.field_b = 0;
     }
 
-    final void a(qc param0) {
-        this.field_e = param0.c((byte) 34);
-        this.field_j = param0.a((byte) -82);
-        this.field_g = param0.a((byte) -52);
+    final void a(ByteArrayBuffer param0) {
+        this.field_e = param0.readUnsignedByte((byte) 34);
+        this.field_j = param0.readIntBE((byte) -82);
+        this.field_g = param0.readIntBE((byte) -52);
         this.b(param0);
     }
 
-    final void b(qc param0) {
+    final void b(ByteArrayBuffer param0) {
         int var2 = 0;
-        this.field_k = param0.c((byte) 34);
+        this.field_k = param0.readUnsignedByte((byte) 34);
         this.field_c = new int[this.field_k];
         this.field_i = new int[this.field_k];
         for (var2 = 0; var2 < this.field_k; var2++) {
-            this.field_c[var2] = param0.b(true);
-            this.field_i[var2] = param0.b(true);
+            this.field_c[var2] = param0.readUnsignedShortBE(true);
+            this.field_i[var2] = param0.readUnsignedShortBE(true);
         }
     }
 

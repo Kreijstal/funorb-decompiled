@@ -18,12 +18,12 @@ final class dl {
     final static void a(int param0) {
         if (param0 == 11560) {
             fb.field_l = false;
-            eh.field_d.c((byte) 34);
+            eh.field_d.readUnsignedByte((byte) 34);
             return;
         }
         field_b = false;
         fb.field_l = false;
-        eh.field_d.c((byte) 34);
+        eh.field_d.readUnsignedByte((byte) 34);
     }
 
     static {

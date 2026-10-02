@@ -70,28 +70,28 @@ final class bm {
         int var15 = 0;
         int var16 = 0;
         byte[] var17 = null;
-        qc var18 = null;
+        ByteArrayBuffer var18 = null;
         byte[] var22 = null;
         var16 = Geoblox.field_C;
         try {
-          var18 = new qc(v.a(param1, -1));
-          var4 = var18.c((byte) 34);
+          var18 = new ByteArrayBuffer(v.a(param1, -1));
+          var4 = var18.readUnsignedByte((byte) 34);
           if (5 <= var4) {
             if (var4 <= 7) {
               if (var4 < 6) {
                 this.field_g = 0;
               } else {
-                this.field_g = var18.a((byte) -121);
+                this.field_g = var18.readIntBE((byte) -121);
               }
-              var5 = var18.c((byte) 34);
+              var5 = var18.readUnsignedByte((byte) 34);
               stackIn_11_0 = (0 == (1 & var5)) ? 0 : 1;
               var6 = stackIn_11_0;
               stackIn_14_0 = ((2 & var5) == 0) ? 0 : 1;
               var7 = stackIn_14_0;
               if (var4 >= 7) {
-                this.field_h = var18.d((byte) -27);
+                this.field_h = var18.readUnsignedShortOrInt((byte) -27);
               } else {
-                this.field_h = var18.b(true);
+                this.field_h = var18.readUnsignedShortBE(true);
               }
               L5: {
                 var8 = 0;
@@ -99,7 +99,7 @@ final class bm {
                 var9 = -1;
                 if (7 <= var4) {
                   for (var10 = 0; var10 < this.field_h; var10++) {
-                    dupTemp$0 = var8 + var18.d((byte) -27);
+                    dupTemp$0 = var8 + var18.readUnsignedShortOrInt((byte) -27);
                     var8 = dupTemp$0;
                     this.field_i[var10] = dupTemp$0;
                     if (this.field_i[var10] > var9) {
@@ -109,7 +109,7 @@ final class bm {
                   break L5;
                 }
                 for (var10 = 0; this.field_h > var10; var10++) {
-                  dupTemp$1 = var8 + var18.b(true);
+                  dupTemp$1 = var8 + var18.readUnsignedShortBE(true);
                   var8 = dupTemp$1;
                   this.field_i[var10] = dupTemp$1;
                   if (var9 < this.field_i[var10]) {
@@ -134,14 +134,14 @@ final class bm {
                     this.field_d[var10] = -1;
                   }
                   for (var10 = 0; var10 < this.field_h; var10++) {
-                    this.field_d[this.field_i[var10]] = var18.a((byte) -76);
+                    this.field_d[this.field_i[var10]] = var18.readIntBE((byte) -76);
                   }
                   this.field_n = new am(this.field_d);
                   break L11;
                 }
               }
               for (var10 = 0; var10 < this.field_h; var10++) {
-                this.field_q[this.field_i[var10]] = var18.a((byte) -95);
+                this.field_q[this.field_i[var10]] = var18.readIntBE((byte) -95);
               }
               L15: {
                 if (var7 != 0) {
@@ -159,13 +159,13 @@ final class bm {
                 this.a((byte) -96, (byte[]) null);
               }
               L18: while (this.field_h > var10) {
-                this.field_t[this.field_i[var10]] = var18.a((byte) -110);
+                this.field_t[this.field_i[var10]] = var18.readIntBE((byte) -110);
                 var10++;
               }
               L19: {
                 if (var4 >= 7) {
                   for (var10 = 0; var10 < this.field_h; var10++) {
-                    this.field_a[this.field_i[var10]] = var18.d((byte) -27);
+                    this.field_a[this.field_i[var10]] = var18.readUnsignedShortOrInt((byte) -27);
                   }
                   for (var10 = 0; this.field_h > var10; var10++) {
                     var11 = this.field_i[var10];
@@ -175,7 +175,7 @@ final class bm {
                     array$2 = new int[var12];
                     this.field_o[var11] = array$2;
                     for (var14 = 0; var12 > var14; var14++) {
-                      dupTemp$3 = var8 + var18.d((byte) -27);
+                      dupTemp$3 = var8 + var18.readUnsignedShortOrInt((byte) -27);
                       var8 = dupTemp$3;
                       dupTemp$4 = this.field_o[var11];
                       dupTemp$4[var14] = dupTemp$3;
@@ -192,7 +192,7 @@ final class bm {
                   break L19;
                 }
                 for (var10 = 0; this.field_h > var10; var10++) {
-                  this.field_a[this.field_i[var10]] = var18.b(true);
+                  this.field_a[this.field_i[var10]] = var18.readUnsignedShortBE(true);
                 }
                 for (var10 = 0; var10 < this.field_h; var10++) {
                   var11 = this.field_i[var10];
@@ -202,7 +202,7 @@ final class bm {
                   this.field_o[var11] = array$5;
                   var13 = -1;
                   L27: for (var14 = 0; var12 > var14; var14++) {
-                    dupTemp$6 = var8 + var18.b(true);
+                    dupTemp$6 = var8 + var18.readUnsignedShortBE(true);
                     var8 = dupTemp$6;
                     dupTemp$7 = this.field_o[var11];
                     dupTemp$7[var14] = dupTemp$6;
@@ -237,7 +237,7 @@ final class bm {
                       } else {
                         var14 = var13;
                       }
-                      this.field_e[var11][var14] = var18.a((byte) -78);
+                      this.field_e[var11][var14] = var18.readIntBE((byte) -78);
                     }
                     this.field_f[var11] = new am(this.field_e[var11]);
                   }
@@ -272,8 +272,8 @@ final class bm {
             var7 = fj.field_q;
             var8 = var7;
             var8.a(param1, (byte) -125);
-            var8.field_f = var8.field_f + 1;
-            var4 = var8.field_f;
+            var8.position = var8.position + 1;
+            var4 = var8.position;
             var8.d((byte) 122, 1);
             var8.e(param0.field_q, 28695);
             var8.e(param0.field_f, 28695);
@@ -290,7 +290,7 @@ final class bm {
                 var7.c((byte) 95, param0.field_o[var5]);
             }
             var8.d(78, var4);
-            var8.f(11700, -var4 + var8.field_f);
+            var8.f(11700, -var4 + var8.position);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "bm.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

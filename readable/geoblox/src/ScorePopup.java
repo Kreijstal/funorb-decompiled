@@ -43,25 +43,25 @@ final class ScorePopup extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, qc param1) {
+    final static void a(int param0, ByteArrayBuffer param1) {
         int var2_int = 0;
         try {
-            rd.field_v = param1.b(true) << 5;
-            var2_int = param1.c((byte) 34);
+            rd.field_v = param1.readUnsignedShortBE(true) << 5;
+            var2_int = param1.readUnsignedByte((byte) 34);
             rd.field_v = rd.field_v + (var2_int >> 3);
             h.field_b = var2_int << 18 & 1835008;
-            h.field_b = h.field_b + (param1.b(true) << 2);
-            var2_int = param1.c((byte) 34);
+            h.field_b = h.field_b + (param1.readUnsignedShortBE(true) << 2);
+            var2_int = param1.readUnsignedByte((byte) 34);
             if (param0 <= 105) {
                 ScorePopup.setAvatarNegativeRotationSteering((byte) 114);
             }
             fe.field_g = var2_int << 15 & 2064384;
             h.field_b = h.field_b + (var2_int >> 6);
-            fe.field_g = fe.field_g + (param1.c((byte) 34) << 7);
-            var2_int = param1.c((byte) 34);
+            fe.field_g = fe.field_g + (param1.readUnsignedByte((byte) 34) << 7);
+            var2_int = param1.readUnsignedByte((byte) 34);
             fe.field_g = fe.field_g + (var2_int >> 1);
             lc.field_b = (var2_int & 1) << 16;
-            lc.field_b = lc.field_b + param1.b(true);
+            lc.field_b = lc.field_b + param1.readUnsignedShortBE(true);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "me.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

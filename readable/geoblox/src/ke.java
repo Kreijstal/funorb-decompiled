@@ -4,7 +4,7 @@
 final class ke {
     static Sprite[][][] entitySpritesByThemeCategoryAndVariant;
 
-    final static void a(int param0, boolean param1, int param2, int param3, qc param4) {
+    final static void a(int param0, boolean param1, int param2, int param3, ByteArrayBuffer param4) {
         try {
             param4.d((byte) 126, 12);
             param4.e(17, 28695);

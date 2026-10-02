@@ -4,7 +4,7 @@
 final class sd extends pb {
     static int field_w;
     static PlatformTask field_B;
-    qc field_A;
+    ByteArrayBuffer field_A;
     byte field_E;
     static byte[][] field_C;
     int field_D;
@@ -26,11 +26,11 @@ final class sd extends pb {
         if (this.field_u) {
             throw new RuntimeException();
         }
-        if (this.field_A.field_f >= this.field_A.field_j.length - this.field_E) {
+        if (this.field_A.position >= this.field_A.bytes.length - this.field_E) {
             if (param0 != 397) {
                 this.g(-105);
             }
-            return this.field_A.field_j;
+            return this.field_A.bytes;
         }
         throw new RuntimeException();
     }
@@ -263,7 +263,7 @@ final class sd extends pb {
             return 76;
         }
         if (null != this.field_A) {
-            return 100 * this.field_A.field_f / (-this.field_E + this.field_A.field_j.length);
+            return 100 * this.field_A.position / (-this.field_E + this.field_A.bytes.length);
         }
         return 0;
     }

@@ -24,7 +24,7 @@ final class fe {
         field_a = null;
     }
 
-    final void a(int param0, qc param1, byte[] param2) {
+    final void a(int param0, ByteArrayBuffer param1, byte[] param2) {
         try {
             Exception exception = null;
             RuntimeException runtimeException = null;
@@ -35,13 +35,13 @@ final class fe {
             String stackIn_19_2 = null;
             Throwable decompiledCaughtException = null;
             try {
-              if (param1.field_j[param1.field_f] == 31) {
-                if (-117 == param1.field_j[1 + param1.field_f]) {
+              if (param1.bytes[param1.position] == 31) {
+                if (-117 == param1.bytes[1 + param1.position]) {
                   if (this.field_i == null) {
                     this.field_i = new java.util.zip.Inflater(true);
                   }
                   try {
-                    this.field_i.setInput(param1.field_j, param1.field_f + 10, param1.field_j.length - 8 - (param1.field_f + 10));
+                    this.field_i.setInput(param1.bytes, param1.position + 10, param1.bytes.length - 8 - (param1.position + 10));
                     if (param0 != -1) {
                       fe.a(76);
                     }

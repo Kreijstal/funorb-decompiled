@@ -9,7 +9,7 @@ final class em {
     private java.math.BigInteger field_c;
     private bj[] field_d;
     static String field_a;
-    private qc field_b;
+    private ByteArrayBuffer field_b;
 
     final static boolean b(int param0) {
         if (param0 != 255) {
@@ -85,9 +85,9 @@ final class em {
                 return stackIn_9_0;
               }
               {
-                this.field_b.field_f = 6 + 72 * param0;
-                var6_int = this.field_b.a((byte) -108);
-                var7 = this.field_b.a((byte) -55);
+                this.field_b.position = 6 + 72 * param0;
+                var6_int = this.field_b.readIntBE((byte) -108);
+                var7 = this.field_b.readIntBE((byte) -55);
                 var13 = new byte[64];
                 if (param1 != -9) {
                   this.field_h = (sd) null;
@@ -154,7 +154,7 @@ final class em {
         byte[] var5;
         java.math.BigInteger var7_ref_java_math_BigInteger;
         int var8;
-        qc var10;
+        ByteArrayBuffer var10;
         byte[] var11;
         java.math.BigInteger var12;
         byte[] var13;
@@ -176,11 +176,11 @@ final class em {
           return false;
         }
         L1: {
-          var10 = new qc(this.field_h.e(397));
-          var10.field_f = 5;
-          var3 = var10.c((byte) 34);
-          var10.field_f = var10.field_f + var3 * 72;
-          var13 = new byte[var10.field_j.length - var10.field_f];
+          var10 = new ByteArrayBuffer(this.field_h.e(397));
+          var10.position = 5;
+          var3 = var10.readUnsignedByte((byte) 34);
+          var10.position = var10.position + var3 * 72;
+          var13 = new byte[var10.bytes.length - var10.position];
           var11 = var13;
           var4 = var11;
           var10.b(29915, var13.length, var13, 0);
@@ -198,7 +198,7 @@ final class em {
           throw new RuntimeException();
         }
         {
-          var15 = SpriteState.a(-var13.length + var10.field_f - 5, 5, var10.field_j, 8);
+          var15 = SpriteState.a(-var13.length + var10.position - 5, 5, var10.bytes, 8);
           for (var7 = 0; var7 < 64; var7++) {
             if (var15[var7] != var5[1 + var7]) {
               throw new RuntimeException();

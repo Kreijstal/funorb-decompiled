@@ -8,7 +8,7 @@ final class fa {
     static int field_f;
     static int field_e;
     static boolean entitiesDetachedThisTick;
-    static qc field_c;
+    static ByteArrayBuffer field_c;
     static int field_i;
     static String[] membersExpansionBenefitTexts;
 

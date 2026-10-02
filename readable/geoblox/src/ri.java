@@ -48,7 +48,7 @@ final class ri {
                   var11 = (String) null;
                   ih.field_a = SecondaryDeque.a(true, oa.field_c, (String) null, param1, false);
                 }
-                fj.field_q.field_f = 0;
+                fj.field_q.position = 0;
                 fj.field_q.d((byte) -102, 14);
                 fj.field_q.d((byte) -78, ih.field_a.a((byte) -32).field_c);
                 cm.a(-1, -1);
@@ -56,8 +56,8 @@ final class ri {
               }
               if (oe.field_T == pk.field_l) {
                 if (el.b(30000, 1)) {
-                  var6_int = eh.field_d.c((byte) 34);
-                  eh.field_d.field_f = 0;
+                  var6_int = eh.field_d.readUnsignedByte((byte) 34);
+                  eh.field_d.position = 0;
                   if (var6_int != 0) {
                     p.field_k = -1;
                     pk.field_l = ac.field_v;
@@ -69,8 +69,8 @@ final class ri {
               }
               if (f.field_hb == pk.field_l) {
                 if (el.b(30000, 8)) {
-                  ak.field_a = eh.field_d.b(2901);
-                  eh.field_d.field_f = 0;
+                  ak.field_a = eh.field_d.readLongBE(2901);
+                  eh.field_d.position = 0;
                   uk.a(26, param2, param0, ih.field_a, param3);
                   pk.field_l = da.field_g;
                 }
@@ -82,8 +82,8 @@ final class ri {
               L6: {
                 if (da.field_g == pk.field_l) {
                   if (el.b(30000, 1)) {
-                    var6_int = eh.field_d.c((byte) 34);
-                    eh.field_d.field_f = 0;
+                    var6_int = eh.field_d.readUnsignedByte((byte) 34);
+                    eh.field_d.position = 0;
                     fl.field_b = null;
                     ScorePopup.field_l = var6_int;
                     if (var6_int != 0) {
@@ -106,12 +106,12 @@ final class ri {
               }
               if (da.field_f == pk.field_l) {
                 if (nf.a(false)) {
-                  oa.field_c = eh.field_d.b(2901);
-                  oc.field_f = eh.field_d.c((byte) 34);
-                  eh.field_d.c((byte) 34);
-                  og.field_n = eh.field_d.b(true);
-                  var6 = eh.field_d.i((byte) 53);
-                  var7 = eh.field_d.c((byte) 34);
+                  oa.field_c = eh.field_d.readLongBE(2901);
+                  oc.field_f = eh.field_d.readUnsignedByte((byte) 34);
+                  eh.field_d.readUnsignedByte((byte) 34);
+                  og.field_n = eh.field_d.readUnsignedShortBE(true);
+                  var6 = eh.field_d.readNullableNullTerminatedText((byte) 53);
+                  var7 = eh.field_d.readUnsignedByte((byte) 34);
                   if ((1 & var7) != 0) {
                     ic.a((byte) 65);
                   }
@@ -125,21 +125,21 @@ final class ri {
                   }
                   L13: {
                     if (ll.field_e) {
-                      eh.field_d.c((byte) 34);
-                      eh.field_d.c((byte) 34);
-                      eh.field_d.a((byte) -48);
-                      pk.field_n = eh.field_d.b(true);
+                      eh.field_d.readUnsignedByte((byte) 34);
+                      eh.field_d.readUnsignedByte((byte) 34);
+                      eh.field_d.readIntBE((byte) -48);
+                      pk.field_n = eh.field_d.readUnsignedShortBE(true);
                       hc.field_K = new byte[pk.field_n];
                       for (var8 = 0; pk.field_n > var8; var8++) {
-                        hc.field_K[var8] = eh.field_d.f((byte) 72);
+                        hc.field_K[var8] = eh.field_d.readSignedByte((byte) 72);
                       }
                       break L13;
                     }
                   }
-                  SecondaryDeque.field_f = eh.field_d.e((byte) 105);
+                  SecondaryDeque.field_f = eh.field_d.readNullTerminatedText((byte) 105);
                   var12 = (CharSequence) ((Object) SecondaryDeque.field_f);
                   vg.field_b = oe.a(var12, 12);
-                  ik.field_a = eh.field_d.c((byte) 34);
+                  ik.field_a = eh.field_d.readUnsignedByte((byte) 34);
                   pk.field_l = eh.field_b;
                   if (ih.field_a.a((byte) -32) != ej.field_b) {
                     if (ih.field_a.a((byte) -32) == Geoblox.field_B) {
@@ -196,7 +196,7 @@ final class ri {
                   if (ScorePopup.field_l == 7) {
                     ScorePopup.field_l = 3;
                   }
-                  kh.field_a = eh.field_d.e((byte) 101);
+                  kh.field_a = eh.field_d.readNullTerminatedText((byte) 101);
                   ck.field_e = false;
                   stackIn_91_0 = ScorePopup.field_l;
                   return stackIn_91_0;
