@@ -189,155 +189,155 @@ final class ab {
         }
     }
 
-    final static void moveEntitiesAndCollectContacts(int param0, float boardAngleRadians) {
-        int stackIn_17_0 = 0;
-        int stackIn_36_0 = 0;
-        int stackIn_39_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        GameplayEntity var2 = null;
-        RuntimeException var2_ref = null;
-        int var3 = 0;
-        float var3_float = 0.0f;
-        GameplayEntity var4 = null;
-        float var4_float = 0.0f;
-        float var5 = 0.0f;
-        float var6 = 0.0f;
-        float var7 = 0.0f;
-        float var8 = 0.0f;
-        float var9 = 0.0f;
-        float var10 = 0.0f;
-        float var11 = 0.0f;
-        int var12 = 0;
-        int var13 = 0;
-        float var14 = 0.0f;
-        int var15 = 0;
-        Object var16 = null;
-        GameplayEntity var17 = null;
-        var16 = null;
-        var15 = Geoblox.field_C;
+    final static void moveEntitiesAndCollectContacts(int methodGuard, float boardAngleRadians) {
+        int wasKind2IntSnapshot = 0;
+        int contactedEntityMovesOutwardIntSnapshot = 0;
+        int movingEntityMovesOutwardIntSnapshot = 0;
+        RuntimeException caughtMotionFailure = null;
+        GameplayEntity movingEntity = null;
+        RuntimeException motionFailureForContext = null;
+        int neighborIndexOrKindFlagOrContactIdOrDivisionGuard = 0;
+        float inwardOffsetX = 0.0f;
+        GameplayEntity contactedEntity = null;
+        float inwardOffsetY = 0.0f;
+        float sharedVelocityXOrCrossProduct = 0.0f;
+        float sharedVelocityYOrDirectionScale = 0.0f;
+        float velocityMagnitudeSquaredThenSpeedScale = 0.0f;
+        float centerOffsetX = 0.0f;
+        float centerOffsetY = 0.0f;
+        float nextCenterOffsetXThenSquared = 0.0f;
+        float nextCenterOffsetYThenSquared = 0.0f;
+        int contactedEntityMovesOutwardInt = 0;
+        int movingEntityMovesOutwardInt = 0;
+        float midpointInwardSpeedScale = 0.0f;
+        int clientControlFlowGuard = 0;
+        Object unusedMotionScratch = null;
+        GameplayEntity trailEntity = null;
+        unusedMotionScratch = null;
+        clientControlFlowGuard = Geoblox.field_C;
         try {
           boardContactStateDirty = false;
           wb.newAttachmentCount = 0;
           sh.field_y.a(255);
-          var2 = (GameplayEntity) ((Object) ji.movingEntities.firstForIteration(0));
-          L0: while (var2 != null) {
+          movingEntity = (GameplayEntity) ((Object) ji.movingEntities.firstForIteration(0));
+          L0: while (movingEntity != null) {
             L2: {
-              if (a.attachedEntities != var2.entityQueue) {
+              if (a.attachedEntities != movingEntity.entityQueue) {
                 if (!el.gameplaySession.tutorialPromptActive) {
-                  var2.integrateEntityVelocity((byte) -59);
-                  var2.advanceEntityAnimation(true);
+                  movingEntity.integrateEntityVelocity((byte) -59);
+                  movingEntity.advanceEntityAnimation(true);
                 }
-                gf.a(var2, -1232328029, boardAngleRadians);
-                if (uj.a(var2, boardAngleRadians, 0)) {
+                gf.a(movingEntity, -1232328029, boardAngleRadians);
+                if (uj.a(movingEntity, boardAngleRadians, 0)) {
                   vf.spriteScratchRaster.addOutline(1);
-                  if (var2.matchCooldownTicks <= 0) {
+                  if (movingEntity.matchCooldownTicks <= 0) {
                     al.a(9666, GameScreen.selectedThemeId);
                   }
                   boardContactStateDirty = true;
-                  var2.entityQueue = null;
-                  for (var3 = 0; var3 < var2.relatedEntityCount; var3++) {
-                    var2.relatedEntities[var3].removeRelatedEntity(var2, 0);
+                  movingEntity.entityQueue = null;
+                  for (neighborIndexOrKindFlagOrContactIdOrDivisionGuard = 0; neighborIndexOrKindFlagOrContactIdOrDivisionGuard < movingEntity.relatedEntityCount; neighborIndexOrKindFlagOrContactIdOrDivisionGuard++) {
+                    movingEntity.relatedEntities[neighborIndexOrKindFlagOrContactIdOrDivisionGuard].removeRelatedEntity(movingEntity, 0);
                   }
-                  var2.relatedEntityCount = 0;
-                  stackIn_17_0 = (var2.entitySpriteKindId != 2) ? 0 : 1;
+                  movingEntity.relatedEntityCount = 0;
+                  wasKind2IntSnapshot = (movingEntity.entitySpriteKindId != 2) ? 0 : 1;
                   L11: {
-                    var3 = stackIn_17_0;
-                    ih.linkEntityAtMaskContacts(-1, td.field_E, var2, ng.field_G);
-                    if (var3 != 0) {
-                      if (var2.entitySpriteKindId != 2) {
+                    neighborIndexOrKindFlagOrContactIdOrDivisionGuard = wasKind2IntSnapshot;
+                    ih.linkEntityAtMaskContacts(-1, td.field_E, movingEntity, ng.field_G);
+                    if (neighborIndexOrKindFlagOrContactIdOrDivisionGuard != 0) {
+                      if (movingEntity.entitySpriteKindId != 2) {
                         break L11;
                       }
                     }
-                    if (var2.entitySpriteKindId != 2) {
-                      var2.spriteAngleRadians = var2.spriteAngleRadians - boardAngleRadians;
+                    if (movingEntity.entitySpriteKindId != 2) {
+                      movingEntity.spriteAngleRadians = movingEntity.spriteAngleRadians - boardAngleRadians;
                     }
-                    var2.positionY = (float)td.field_E;
-                    var2.entityQueue = a.attachedEntities;
-                    var2.positionX = (float)ng.field_G;
+                    movingEntity.positionY = (float)td.field_E;
+                    movingEntity.entityQueue = a.attachedEntities;
+                    movingEntity.positionX = (float)ng.field_G;
                   }
-                  if (!var2.detachedFromBoard) {
+                  if (!movingEntity.detachedFromBoard) {
                     wb.newAttachmentCount = wb.newAttachmentCount + 1;
                     break L2;
                   }
-                  var2 = (GameplayEntity) ((Object) ji.movingEntities.nextForIteration(1));
+                  movingEntity = (GameplayEntity) ((Object) ji.movingEntities.nextForIteration(1));
                   continue L0;
                 }
-                if (ma.a(true, boardAngleRadians, var2)) {
-                  var3 = SecondaryDeque.contactProbeRaster.pixels[aa.field_a + SecondaryDeque.contactProbeRaster.fullWidth * aa.field_b] - 1;
-                  var4 = tl.entitiesById[var3];
-                  if (a.attachedEntities == var4.entityQueue) {
+                if (ma.a(true, boardAngleRadians, movingEntity)) {
+                  neighborIndexOrKindFlagOrContactIdOrDivisionGuard = SecondaryDeque.contactProbeRaster.pixels[aa.field_a + SecondaryDeque.contactProbeRaster.fullWidth * aa.field_b] - 1;
+                  contactedEntity = tl.entitiesById[neighborIndexOrKindFlagOrContactIdOrDivisionGuard];
+                  if (a.attachedEntities == contactedEntity.entityQueue) {
                     break L2;
                   }
                   {
-                    var5 = 0.5f * (var4.velocityX + var2.velocityX);
-                    var6 = (var4.velocityY + var2.velocityY) * 0.5f;
-                    var7 = var6 * var6 + var5 * var5;
-                    var7 = og.entityMotionSpeed / (float)Math.sqrt((double)var7);
-                    var6 = var6 * var7;
-                    var5 = var5 * var7;
-                    var8 = -var4.positionX + 320.0f;
-                    var9 = 240.0f - var4.positionY;
-                    var10 = -var5 - var4.positionX + 320.0f;
-                    var11 = 240.0f - (var4.positionY + var6);
-                    var10 = var10 * var10;
-                    var11 = var11 * var11;
-                    stackIn_36_0 = (!(var10 + var11 > var9 * var9 + var8 * var8)) ? 0 : 1;
-                    var12 = stackIn_36_0;
-                    var8 = 320.0f - var2.positionX;
-                    var11 = 240.0f - (var6 + var2.positionY);
-                    var10 = -var2.positionX - var5 + 320.0f;
-                    var9 = -var2.positionY + 240.0f;
-                    var10 = var10 * var10;
-                    var11 = var11 * var11;
-                    stackIn_39_0 = (!(var9 * var9 + var8 * var8 < var11 + var10)) ? 0 : 1;
-                    var13 = stackIn_39_0;
-                    if (var12 != 0) {
-                      if (var13 != 0) {
-                        var8 = -((var2.positionX + var4.positionX) * 0.5f) + 320.0f;
-                        var9 = 240.0f - 0.5f * (var4.positionY + var2.positionY);
-                        var14 = og.entityMotionSpeed / (float)Math.sqrt((double)(var8 * var8 + var9 * var9));
-                        var5 = var8 * var14;
-                        var6 = var14 * var9;
+                    sharedVelocityXOrCrossProduct = 0.5f * (contactedEntity.velocityX + movingEntity.velocityX);
+                    sharedVelocityYOrDirectionScale = (contactedEntity.velocityY + movingEntity.velocityY) * 0.5f;
+                    velocityMagnitudeSquaredThenSpeedScale = sharedVelocityYOrDirectionScale * sharedVelocityYOrDirectionScale + sharedVelocityXOrCrossProduct * sharedVelocityXOrCrossProduct;
+                    velocityMagnitudeSquaredThenSpeedScale = og.entityMotionSpeed / (float)Math.sqrt((double)velocityMagnitudeSquaredThenSpeedScale);
+                    sharedVelocityYOrDirectionScale = sharedVelocityYOrDirectionScale * velocityMagnitudeSquaredThenSpeedScale;
+                    sharedVelocityXOrCrossProduct = sharedVelocityXOrCrossProduct * velocityMagnitudeSquaredThenSpeedScale;
+                    centerOffsetX = -contactedEntity.positionX + 320.0f;
+                    centerOffsetY = 240.0f - contactedEntity.positionY;
+                    nextCenterOffsetXThenSquared = -sharedVelocityXOrCrossProduct - contactedEntity.positionX + 320.0f;
+                    nextCenterOffsetYThenSquared = 240.0f - (contactedEntity.positionY + sharedVelocityYOrDirectionScale);
+                    nextCenterOffsetXThenSquared = nextCenterOffsetXThenSquared * nextCenterOffsetXThenSquared;
+                    nextCenterOffsetYThenSquared = nextCenterOffsetYThenSquared * nextCenterOffsetYThenSquared;
+                    contactedEntityMovesOutwardIntSnapshot = (!(nextCenterOffsetXThenSquared + nextCenterOffsetYThenSquared > centerOffsetY * centerOffsetY + centerOffsetX * centerOffsetX)) ? 0 : 1;
+                    contactedEntityMovesOutwardInt = contactedEntityMovesOutwardIntSnapshot;
+                    centerOffsetX = 320.0f - movingEntity.positionX;
+                    nextCenterOffsetYThenSquared = 240.0f - (sharedVelocityYOrDirectionScale + movingEntity.positionY);
+                    nextCenterOffsetXThenSquared = -movingEntity.positionX - sharedVelocityXOrCrossProduct + 320.0f;
+                    centerOffsetY = -movingEntity.positionY + 240.0f;
+                    nextCenterOffsetXThenSquared = nextCenterOffsetXThenSquared * nextCenterOffsetXThenSquared;
+                    nextCenterOffsetYThenSquared = nextCenterOffsetYThenSquared * nextCenterOffsetYThenSquared;
+                    movingEntityMovesOutwardIntSnapshot = (!(centerOffsetY * centerOffsetY + centerOffsetX * centerOffsetX < nextCenterOffsetYThenSquared + nextCenterOffsetXThenSquared)) ? 0 : 1;
+                    movingEntityMovesOutwardInt = movingEntityMovesOutwardIntSnapshot;
+                    if (contactedEntityMovesOutwardInt != 0) {
+                      if (movingEntityMovesOutwardInt != 0) {
+                        centerOffsetX = -((movingEntity.positionX + contactedEntity.positionX) * 0.5f) + 320.0f;
+                        centerOffsetY = 240.0f - 0.5f * (contactedEntity.positionY + movingEntity.positionY);
+                        midpointInwardSpeedScale = og.entityMotionSpeed / (float)Math.sqrt((double)(centerOffsetX * centerOffsetX + centerOffsetY * centerOffsetY));
+                        sharedVelocityXOrCrossProduct = centerOffsetX * midpointInwardSpeedScale;
+                        sharedVelocityYOrDirectionScale = midpointInwardSpeedScale * centerOffsetY;
                       }
                     }
-                    var2.velocityY = var2.velocityY * -1.0f;
-                    var2.velocityX = var2.velocityX * -1.0f;
-                    var2.integrateEntityVelocity((byte) -59);
-                    var4.velocityX = var5;
-                    var2.velocityX = var5;
-                    var4.velocityY = var6;
-                    var2.velocityY = var6;
+                    movingEntity.velocityY = movingEntity.velocityY * -1.0f;
+                    movingEntity.velocityX = movingEntity.velocityX * -1.0f;
+                    movingEntity.integrateEntityVelocity((byte) -59);
+                    contactedEntity.velocityX = sharedVelocityXOrCrossProduct;
+                    movingEntity.velocityX = sharedVelocityXOrCrossProduct;
+                    contactedEntity.velocityY = sharedVelocityYOrDirectionScale;
+                    movingEntity.velocityY = sharedVelocityYOrDirectionScale;
                   }
                 } else {
-                  var3_float = 320.0f - var2.positionX;
-                  var4_float = 240.0f - var2.positionY;
-                  var5 = -(var4_float * var2.positionX) + var2.positionY * var3_float;
-                  if (var2.relatedEntityCount == 0) {
-                    if (var5 * var5 > 0.30000001192092896f) {
-                      var2.velocityX = var3_float;
-                      var2.velocityY = var4_float;
-                      var6 = og.entityMotionSpeed / (float)Math.sqrt((double)(var2.velocityX * var2.velocityX + var2.velocityY * var2.velocityY));
-                      var2.velocityX = var2.velocityX * var6;
-                      var2.velocityY = var2.velocityY * var6;
+                  inwardOffsetX = 320.0f - movingEntity.positionX;
+                  inwardOffsetY = 240.0f - movingEntity.positionY;
+                  sharedVelocityXOrCrossProduct = -(inwardOffsetY * movingEntity.positionX) + movingEntity.positionY * inwardOffsetX;
+                  if (movingEntity.relatedEntityCount == 0) {
+                    if (sharedVelocityXOrCrossProduct * sharedVelocityXOrCrossProduct > 0.30000001192092896f) {
+                      movingEntity.velocityX = inwardOffsetX;
+                      movingEntity.velocityY = inwardOffsetY;
+                      sharedVelocityYOrDirectionScale = og.entityMotionSpeed / (float)Math.sqrt((double)(movingEntity.velocityX * movingEntity.velocityX + movingEntity.velocityY * movingEntity.velocityY));
+                      movingEntity.velocityX = movingEntity.velocityX * sharedVelocityYOrDirectionScale;
+                      movingEntity.velocityY = movingEntity.velocityY * sharedVelocityYOrDirectionScale;
                     }
                   }
                 }
-                var2.drawEntityIdOnPointerMask((byte) 51);
+                movingEntity.drawEntityIdOnPointerMask((byte) 51);
               }
             }
-            var2 = (GameplayEntity) ((Object) ji.movingEntities.nextForIteration(1));
+            movingEntity = (GameplayEntity) ((Object) ji.movingEntities.nextForIteration(1));
           }
-          var3 = -125 % ((param0 - 35) / 49);
-          var17 = (GameplayEntity) ((Object) ji.movingEntities.firstForIteration(0));
-          L1: while (var17 != null) {
-            var17.eraseEntityTrail(30383);
-            var17 = (GameplayEntity) ((Object) ji.movingEntities.nextForIteration(1));
+          neighborIndexOrKindFlagOrContactIdOrDivisionGuard = -125 % ((methodGuard - 35) / 49);
+          trailEntity = (GameplayEntity) ((Object) ji.movingEntities.firstForIteration(0));
+          L1: while (trailEntity != null) {
+            trailEntity.eraseEntityTrail(30383);
+            trailEntity = (GameplayEntity) ((Object) ji.movingEntities.nextForIteration(1));
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var2_ref), "ab.C(" + param0 + ',' + boardAngleRadians + ')');
+        } catch (java.lang.RuntimeException motionFailure) {
+          caughtMotionFailure = motionFailure;
+          motionFailureForContext = caughtMotionFailure;
+          throw t.a((Throwable) ((Object) motionFailureForContext), "ab.C(" + methodGuard + ',' + boardAngleRadians + ')');
         }
     }
 

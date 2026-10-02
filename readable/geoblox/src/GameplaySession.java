@@ -56,36 +56,36 @@ final class GameplaySession {
     private int endingEntityRadius;
     int sessionPhase;
 
-    private final void leaveTutorial(int param0) {
+    private final void leaveTutorial(int methodGuard) {
         this.tutorialMode = false;
         this.sceneTransitionRequested = true;
-        if (param0 != 7000) {
+        if (methodGuard != 7000) {
             this.boardEmptyAtResultStart = true;
         }
         this.preserveScoreOnTransition = false;
         this.tutorialPromptActive = false;
     }
 
-    private final void renderTutorialPrompt(int param0) {
+    private final void renderTutorialPrompt(int lineSpacingOffset) {
         int lineSpacing;
         int promptWidthThenButtonX;
         int promptHeight;
         int promptTop;
-        int var7;
+        int clientControlFlowGuard;
         String promptText;
-        var7 = Geoblox.field_C;
+        clientControlFlowGuard = Geoblox.field_C;
         if (0 != this.tutorialStepPhase) {
           return;
         }
         L0: {
           promptText = uk.tutorialMessageForStep(this.tutorialStepId, 24146);
-          lineSpacing = fi.smallFont.field_o - fi.smallFont.field_q + param0;
+          lineSpacing = fi.smallFont.field_o - fi.smallFont.field_q + lineSpacingOffset;
           promptWidthThenButtonX = 460;
           promptHeight = 30 + fi.smallFont.b(promptText, promptWidthThenButtonX) * lineSpacing;
           promptTop = 300;
           if (this.tutorialStepId == 0) {
             promptTop = 232;
-            if (var7 == 0) {
+            if (clientControlFlowGuard == 0) {
               break L0;
             }
           }
@@ -94,7 +94,7 @@ final class GameplaySession {
               break L0;
             }
             promptTop = 280;
-            if (var7 == 0) {
+            if (clientControlFlowGuard == 0) {
               break L0;
             }
           }
@@ -128,7 +128,7 @@ final class GameplaySession {
             }
             dd.uiPaletteFont.b(nk.startGameText, promptWidthThenButtonX, 468, 0, -1);
             dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
-            if (var7 == 0) {
+            if (clientControlFlowGuard == 0) {
               break L3;
             }
           }
@@ -222,7 +222,7 @@ final class GameplaySession {
         }
     }
 
-    final void renderSession(byte param0) {
+    final void renderSession(byte methodGuard) {
         int stackIn_49_0 = 0;
         int stackIn_168_0 = 0;
         int stackIn_168_1 = 0;
@@ -362,7 +362,7 @@ final class GameplaySession {
         mf.selectedThemeBackground.drawRunEncoded(0, 0);
         var3 = 4;
         var4 = 4;
-        if (param0 >= -28) {
+        if (methodGuard >= -28) {
           this.updateSession(-63);
         }
         L17: {
@@ -635,54 +635,54 @@ final class GameplaySession {
         }
     }
 
-    final void updateSession(int param0) {
-        int fieldTemp$0 = 0;
-        boolean stackIn_233_0 = false;
-        Object stackIn_246_0 = null;
-        Object stackIn_249_0 = null;
-        Object stackIn_251_0 = null;
-        Object stackIn_252_0 = null;
-        boolean stackIn_252_1 = false;
-        Object stackIn_303_0 = null;
-        Object stackIn_304_0 = null;
-        boolean stackIn_304_1 = false;
-        Object stackIn_356_0 = null;
-        Object stackIn_358_0 = null;
-        Object stackIn_359_0 = null;
-        boolean stackIn_359_1 = false;
-        Object stackIn_387_0 = null;
-        Object stackIn_388_0 = null;
-        boolean stackIn_388_1 = false;
-        Object stackIn_407_0 = null;
-        Object stackIn_408_0 = null;
-        boolean stackIn_408_1 = false;
-        Object stackIn_413_0 = null;
-        Object stackIn_415_0 = null;
-        Object stackIn_416_0 = null;
-        boolean stackIn_416_1 = false;
-        Object stackIn_454_0 = null;
-        Object stackIn_455_0 = null;
-        boolean stackIn_455_1 = false;
-        int stackIn_464_0 = 0;
-        int stackIn_464_1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4_int = 0;
-        GameplayEntity var4 = null;
-        int var5 = 0;
+    final void updateSession(int methodGuard) {
+        int pointsPanelTickBeforeIncrement = 0;
+        boolean detachedEntityOrPositiveRotationKeySnapshot = false;
+        Object unusedBoardEmptySessionSnapshot = null;
+        Object unusedBoardReleaseSessionSnapshot = null;
+        Object unusedBoardClearBonusOwnerSnapshot = null;
+        Object unusedBoardClearBonusTargetSnapshot = null;
+        boolean nextBoardClearBonusEligible = false;
+        Object unusedDebugOverviewOwnerSnapshot = null;
+        Object unusedDebugOverviewTargetSnapshot = null;
+        boolean toggledDebugOverview = false;
+        Object unusedRotationSwapOwnerOnEnableSnapshot = null;
+        Object unusedRotationSwapOwnerSnapshot = null;
+        Object unusedRotationSwapTargetSnapshot = null;
+        boolean toggledRotationControlsSwapped = false;
+        Object unusedSpecialKindSpawnOwnerSnapshot = null;
+        Object unusedSpecialKindSpawnTargetSnapshot = null;
+        boolean toggledSpecialKindSpawn = false;
+        Object unusedPointerSpawnOwnerSnapshot = null;
+        Object unusedPointerSpawnTargetSnapshot = null;
+        boolean toggledDebugPointerSpawn = false;
+        Object unusedSpawnReleaseOwnerOnDisableSnapshot = null;
+        Object unusedSpawnReleaseOwnerSnapshot = null;
+        Object unusedSpawnReleaseTargetSnapshot = null;
+        boolean toggledSpawnReleaseDisabled = false;
+        Object unusedReducedRenderingOwnerSnapshot = null;
+        Object unusedReducedRenderingTargetSnapshot = null;
+        boolean toggledReducedRendering = false;
+        int debugKeyCodeOrPointerEventComplement = 0;
+        int debugKeySentinelOrPointerEventSentinel = 0;
+        int negativeRotationKeyCode = 0;
+        int positiveRotationKeyCode = 0;
+        int inputDerivedModuloIndex = 0;
+        GameplayEntity fastForwardEntity = null;
+        int clientControlFlowGuard = 0;
         L0: {
-          var5 = Geoblox.field_C;
-          lh.a(param0 ^ 1578896222);
-          fieldTemp$0 = this.updateTick;
+          clientControlFlowGuard = Geoblox.field_C;
+          lh.a(methodGuard ^ 1578896222);
+          pointsPanelTickBeforeIncrement = this.updateTick;
           this.updateTick = this.updateTick + 1;
-          if ((fieldTemp$0 & 15) == 0) {
+          if ((pointsPanelTickBeforeIncrement & 15) == 0) {
             this.pointsPanelFrameIndex = this.pointsPanelFrameIndex + this.pointsPanelFrameDirection;
             if (7 != this.pointsPanelFrameIndex) {
               if (this.pointsPanelFrameIndex != 0) {
                 break L0;
               }
               this.pointsPanelFrameDirection = 1;
-              if (var5 == 0) {
+              if (clientControlFlowGuard == 0) {
                 break L0;
               }
             }
@@ -711,12 +711,12 @@ final class GameplaySession {
                 }
                 this.pointsPanelSlideDirection = 1;
                 el.gameplaySession.emitPointsPopup(false);
-                if (var5 == 0) {
+                if (clientControlFlowGuard == 0) {
                   break L2;
                 }
               }
               this.pointsPanelX = this.pointsPanelX + 1;
-              if (var5 == 0) {
+              if (clientControlFlowGuard == 0) {
                 break L2;
               }
             }
@@ -747,12 +747,12 @@ final class GameplaySession {
                     break L7;
                   }
                   this.updateSceneTransition((byte) -80);
-                  if (var5 == 0) {
+                  if (clientControlFlowGuard == 0) {
                     break L7;
                   }
                 }
                 this.updateResultSequence(10);
-                if (var5 == 0) {
+                if (clientControlFlowGuard == 0) {
                   break L7;
                 }
               }
@@ -762,69 +762,69 @@ final class GameplaySession {
             }
             L14: {
               if (!this.rotationControlsSwapped) {
-                var2 = 96;
-                var3 = 97;
-                if (var5 == 0) {
+                negativeRotationKeyCode = 96;
+                positiveRotationKeyCode = 97;
+                if (clientControlFlowGuard == 0) {
                   break L14;
                 }
               }
-              var3 = 96;
-              var2 = 97;
+              positiveRotationKeyCode = 96;
+              negativeRotationKeyCode = 97;
             }
-            if (kj.field_o[var2]) {
+            if (kj.field_o[negativeRotationKeyCode]) {
               L17: {
                 this.boardAngleRadians = this.boardAngleRadians - DualLinkNode.rotationStepRadians;
                 ScorePopup.a((byte) 38);
-                var4_int = (ki.field_d + kd.field_c + qa.field_a + he.field_d) % 8;
-                if (var4_int == 0) {
+                inputDerivedModuloIndex = (ki.field_d + kd.field_c + qa.field_a + he.field_d) % 8;
+                if (inputDerivedModuloIndex == 0) {
                   oa.field_a = oa.field_a + kb.field_d;
                   gb.field_g = gb.field_g - 1;
-                  if (var5 == 0) {
+                  if (clientControlFlowGuard == 0) {
                     break L17;
                   }
                 }
-                if (var4_int == 1) {
+                if (inputDerivedModuloIndex == 1) {
                   oa.field_a = oa.field_a + gb.field_g;
                   kb.field_d = kb.field_d - 1;
-                  if (var5 == 0) {
+                  if (clientControlFlowGuard == 0) {
                     break L17;
                   }
                 }
-                if (var4_int != 2) {
-                  if (3 == var4_int) {
+                if (inputDerivedModuloIndex != 2) {
+                  if (3 == inputDerivedModuloIndex) {
                     oa.field_a = oa.field_a - gb.field_g;
                     kb.field_d = kb.field_d + 1;
-                    if (var5 == 0) {
+                    if (clientControlFlowGuard == 0) {
                       break L17;
                     }
                   }
-                  if (4 == var4_int) {
+                  if (4 == inputDerivedModuloIndex) {
                     ml.field_r = ml.field_r + kb.field_d;
                     gb.field_g = gb.field_g + 1;
-                    if (var5 == 0) {
+                    if (clientControlFlowGuard == 0) {
                       break L17;
                     }
                   }
-                  if (var4_int == 5) {
+                  if (inputDerivedModuloIndex == 5) {
                     kb.field_d = kb.field_d + 1;
                     ml.field_r = ml.field_r + gb.field_g;
-                    if (var5 == 0) {
+                    if (clientControlFlowGuard == 0) {
                       break L17;
                     }
                   }
-                  if (var4_int == 6) {
+                  if (inputDerivedModuloIndex == 6) {
                     ml.field_r = ml.field_r - kb.field_d;
                     gb.field_g = gb.field_g - 1;
-                    if (var5 == 0) {
+                    if (clientControlFlowGuard == 0) {
                       break L17;
                     }
                   }
-                  if (var4_int != 7) {
+                  if (inputDerivedModuloIndex != 7) {
                     break L17;
                   }
                   kb.field_d = kb.field_d - 1;
                   ml.field_r = ml.field_r - gb.field_g;
-                  if (var5 == 0) {
+                  if (clientControlFlowGuard == 0) {
                     break L17;
                   }
                 }
@@ -832,34 +832,34 @@ final class GameplaySession {
                 oa.field_a = oa.field_a - kb.field_d;
               }
               L25: {
-                var4_int = (kd.field_c + he.field_d + qa.field_a + ki.field_d) % 5;
-                if (0 == var4_int) {
+                inputDerivedModuloIndex = (kd.field_c + he.field_d + qa.field_a + ki.field_d) % 5;
+                if (0 == inputDerivedModuloIndex) {
                   dc.field_a = dc.field_a | lb.field_b + el.field_g << 17;
-                  if (var5 == 0) {
+                  if (clientControlFlowGuard == 0) {
                     break L25;
                   }
                 }
-                if (var4_int != 1) {
-                  if (var4_int != 2) {
-                    if (3 == var4_int) {
+                if (inputDerivedModuloIndex != 1) {
+                  if (inputDerivedModuloIndex != 2) {
+                    if (3 == inputDerivedModuloIndex) {
                       sc.field_f = sc.field_f + 1;
                       el.field_g = el.field_g + lb.field_b;
-                      if (var5 == 0) {
+                      if (clientControlFlowGuard == 0) {
                         break L25;
                       }
                     }
-                    if (var4_int != 4) {
+                    if (inputDerivedModuloIndex != 4) {
                       break L25;
                     }
                     sc.field_f = sc.field_f - 1;
                     el.field_g = el.field_g - lb.field_b;
-                    if (var5 == 0) {
+                    if (clientControlFlowGuard == 0) {
                       break L25;
                     }
                   }
                   lb.field_b = lb.field_b - 1;
                   el.field_g = el.field_g - sc.field_f;
-                  if (var5 == 0) {
+                  if (clientControlFlowGuard == 0) {
                     break L25;
                   }
                 }
@@ -871,98 +871,98 @@ final class GameplaySession {
               }
             }
             L30: {
-              if (kj.field_o[var3]) {
+              if (kj.field_o[positiveRotationKeyCode]) {
                 this.boardAngleRadians = this.boardAngleRadians + DualLinkNode.rotationStepRadians;
                 SecondaryDeque.a((byte) 74);
                 if (this.tutorialStepId == 0) {
                   this.tutorialProgressMetric = this.tutorialProgressMetric + 1;
                 }
                 L32: {
-                  var4_int = (he.field_d + (qa.field_a + kd.field_c) + ki.field_d) % 8;
-                  if (var4_int != 0) {
-                    if (1 != var4_int) {
-                      if (var4_int != 2) {
-                        if (var4_int == 3) {
+                  inputDerivedModuloIndex = (he.field_d + (qa.field_a + kd.field_c) + ki.field_d) % 8;
+                  if (inputDerivedModuloIndex != 0) {
+                    if (1 != inputDerivedModuloIndex) {
+                      if (inputDerivedModuloIndex != 2) {
+                        if (inputDerivedModuloIndex == 3) {
                           kb.field_d = kb.field_d + 1;
                           oa.field_a = oa.field_a - gb.field_g;
-                          if (var5 == 0) {
+                          if (clientControlFlowGuard == 0) {
                             break L32;
                           }
                         }
-                        if (4 == var4_int) {
+                        if (4 == inputDerivedModuloIndex) {
                           gb.field_g = gb.field_g + 1;
                           ml.field_r = ml.field_r + kb.field_d;
-                          if (var5 == 0) {
+                          if (clientControlFlowGuard == 0) {
                             break L32;
                           }
                         }
-                        if (5 == var4_int) {
+                        if (5 == inputDerivedModuloIndex) {
                           kb.field_d = kb.field_d + 1;
                           ml.field_r = ml.field_r + gb.field_g;
-                          if (var5 == 0) {
+                          if (clientControlFlowGuard == 0) {
                             break L32;
                           }
                         }
-                        if (var4_int == 6) {
+                        if (inputDerivedModuloIndex == 6) {
                           ml.field_r = ml.field_r - kb.field_d;
                           gb.field_g = gb.field_g - 1;
-                          if (var5 == 0) {
+                          if (clientControlFlowGuard == 0) {
                             break L32;
                           }
                         }
-                        if (var4_int != 7) {
+                        if (inputDerivedModuloIndex != 7) {
                           break L32;
                         }
                         kb.field_d = kb.field_d - 1;
                         ml.field_r = ml.field_r - gb.field_g;
-                        if (var5 == 0) {
+                        if (clientControlFlowGuard == 0) {
                           break L32;
                         }
                       }
                       gb.field_g = gb.field_g + 1;
                       oa.field_a = oa.field_a - kb.field_d;
-                      if (var5 == 0) {
+                      if (clientControlFlowGuard == 0) {
                         break L32;
                       }
                     }
                     oa.field_a = oa.field_a + gb.field_g;
                     kb.field_d = kb.field_d - 1;
-                    if (var5 == 0) {
+                    if (clientControlFlowGuard == 0) {
                       break L32;
                     }
                   }
                   gb.field_g = gb.field_g - 1;
                   oa.field_a = oa.field_a + kb.field_d;
                 }
-                var4_int = (kd.field_c + qa.field_a + he.field_d + ki.field_d) % 5;
-                if (var4_int != 0) {
-                  if (1 != var4_int) {
-                    if (2 != var4_int) {
-                      if (var4_int == 3) {
+                inputDerivedModuloIndex = (kd.field_c + qa.field_a + he.field_d + ki.field_d) % 5;
+                if (inputDerivedModuloIndex != 0) {
+                  if (1 != inputDerivedModuloIndex) {
+                    if (2 != inputDerivedModuloIndex) {
+                      if (inputDerivedModuloIndex == 3) {
                         sc.field_f = sc.field_f + 1;
                         el.field_g = el.field_g + lb.field_b;
-                        if (var5 == 0) {
+                        if (clientControlFlowGuard == 0) {
                           break L30;
                         }
                       }
-                      if (4 != var4_int) {
+                      if (4 != inputDerivedModuloIndex) {
                         break L30;
                       }
                       el.field_g = el.field_g - lb.field_b;
                       sc.field_f = sc.field_f - 1;
-                      if (var5 == 0) {
+                      if (clientControlFlowGuard == 0) {
                         break L30;
                       }
                     }
                     lb.field_b = lb.field_b - 1;
                     el.field_g = el.field_g - sc.field_f;
-                    if (var5 == 0) {
+                    if (clientControlFlowGuard == 0) {
                       break L30;
                     }
                   }
                   lb.field_b = lb.field_b + 1;
                   el.field_g = el.field_g + sc.field_f;
-                  if (var5 == 0) {
+                  if (clientControlFlowGuard == 0) {
                     break L30;
                   }
                 }
@@ -973,25 +973,25 @@ final class GameplaySession {
               L45: {
                 if (kj.field_o[99]) {
                   if (!this.tutorialPromptActive) {
-                    var4 = (GameplayEntity) ((Object) ji.movingEntities.firstForIteration(0));
+                    fastForwardEntity = (GameplayEntity) ((Object) ji.movingEntities.firstForIteration(0));
                     L46: while (true) {
-                      if (null == var4) {
+                      if (null == fastForwardEntity) {
                         break L45;
                       }
-                      stackIn_233_0 = var4.detachedFromBoard;
+                      detachedEntityOrPositiveRotationKeySnapshot = fastForwardEntity.detachedFromBoard;
 
-                      if (var5 != 0) {
+                      if (clientControlFlowGuard != 0) {
                         break L44;
                       }
-                      if (!stackIn_233_0) {
-                        var4.positionY = var4.positionY + 4.0f * var4.velocityY;
-                        var4.positionX = var4.positionX + 4.0f * var4.velocityX;
-                        if (var5 == 0) {
+                      if (!detachedEntityOrPositiveRotationKeySnapshot) {
+                        fastForwardEntity.positionY = fastForwardEntity.positionY + 4.0f * fastForwardEntity.velocityY;
+                        fastForwardEntity.positionX = fastForwardEntity.positionX + 4.0f * fastForwardEntity.velocityX;
+                        if (clientControlFlowGuard == 0) {
                           break L45;
                         }
                       }
-                      var4 = (GameplayEntity) ((Object) ji.movingEntities.nextForIteration(1));
-                      if (var5 == 0) {
+                      fastForwardEntity = (GameplayEntity) ((Object) ji.movingEntities.nextForIteration(1));
+                      if (clientControlFlowGuard == 0) {
                         continue L46;
                       }
                       break L45;
@@ -999,10 +999,10 @@ final class GameplaySession {
                   }
                 }
               }
-              stackIn_233_0 = kj.field_o[var3];
+              detachedEntityOrPositiveRotationKeySnapshot = kj.field_o[positiveRotationKeyCode];
             }
-            if (!stackIn_233_0) {
-              if (!kj.field_o[var2]) {
+            if (!detachedEntityOrPositiveRotationKeySnapshot) {
+              if (!kj.field_o[negativeRotationKeyCode]) {
                 jj.b(-106);
               }
             }
@@ -1011,35 +1011,35 @@ final class GameplaySession {
               ld.spawnPointsPopup(310, 320, 123, 100 + 100 * ji.difficultyStep);
             }
             L50: {
-              stackIn_251_0 = this;
+              unusedBoardClearBonusOwnerSnapshot = this;
 
               if (!fa.entitiesDetachedThisTick) {
-                stackIn_251_0 = this;
+                unusedBoardClearBonusOwnerSnapshot = this;
 
                 if (a.attachedEntities.isEmpty(13519)) {
-                  stackIn_246_0 = this;
-                  stackIn_251_0 = this;
+                  unusedBoardEmptySessionSnapshot = this;
+                  unusedBoardClearBonusOwnerSnapshot = this;
 
                   if (0 < ul.releasedInCurrentTheme) {
-                    stackIn_249_0 = this;
-                    stackIn_252_0 = this;
-                    stackIn_252_1 = true;
+                    unusedBoardReleaseSessionSnapshot = this;
+                    unusedBoardClearBonusTargetSnapshot = this;
+                    nextBoardClearBonusEligible = true;
                     break L50;
                   }
                 }
               }
-              stackIn_252_0 = this;
-              stackIn_252_1 = false;
+              unusedBoardClearBonusTargetSnapshot = this;
+              nextBoardClearBonusEligible = false;
             }
             L52: {
-              ((GameplaySession) (this)).boardClearBonusEligible = stackIn_252_1;
+              ((GameplaySession) (this)).boardClearBonusEligible = nextBoardClearBonusEligible;
               if (this.boardClearBonusEligible) {
                 if (this.connectivityRebuiltThisTick) {
                   this.connectivityRebuiltThisTick = false;
                   this.delayedActionCountdown = 300;
                   this.boardClearBonusEligible = false;
                   ra.a(le.field_a ^ 255, -88, le.field_a);
-                  if (var5 == 0) {
+                  if (clientControlFlowGuard == 0) {
                     break L52;
                   }
                 }
@@ -1048,25 +1048,25 @@ final class GameplaySession {
             }
             this.boundaryCheckRequested = ab.boardContactStateDirty;
             ef.advanceActiveEntityAnimations((byte) -15);
-            kc.reconcileBoardEntities(param0 + 1578896101);
+            kc.reconcileBoardEntities(methodGuard + 1578896101);
             if (ab.boardContactStateDirty) {
               ul.collectMatchCandidates(-2);
             }
             this.matchBatchProcessedThisTick = ec.processMatchCandidates(-18913);
             if (this.boundaryCheckRequested) {
-              sk.checkBoundaryLossAndStartCascade(param0 ^ 1578896190);
+              sk.checkBoundaryLossAndStartCascade(methodGuard ^ 1578896190);
             }
             cf.advanceScorePopups((byte) 27);
             f.advanceGameplayAvatarAnimation(600);
             if (this.tutorialMode) {
               this.advanceTutorialStep(109);
             }
-            if (var5 == 0) {
+            if (clientControlFlowGuard == 0) {
               break L7;
             }
           }
           if (this.sceneAnimationTick == 0) {
-            fi.a(param0 ^ -1578896191, pi.field_S);
+            fi.a(methodGuard ^ -1578896191, pi.field_S);
           }
           if (pf.field_D) {
             if (od.a(-3)) {
@@ -1081,7 +1081,7 @@ final class GameplaySession {
           this.sceneAnimationTick = this.sceneAnimationTick + 1;
           this.boardRasterDirty = true;
         }
-        if (param0 != -1578896191) {
+        if (methodGuard != -1578896191) {
           this.scoreText = (StringBuilder) null;
         }
         L60: while (true) {
@@ -1090,16 +1090,16 @@ final class GameplaySession {
               if (te.field_a > 0) {
                 pk.field_r = pk.field_r.substring(1) + te.field_a;
                 if (pk.field_r.equalsIgnoreCase("fog")) {
-                  stackIn_303_0 = this;
+                  unusedDebugOverviewOwnerSnapshot = this;
 
                   if (this.showDebugOverview) {
-                    stackIn_304_0 = this;
-                    stackIn_304_1 = false;
+                    unusedDebugOverviewTargetSnapshot = this;
+                    toggledDebugOverview = false;
                   } else {
-                    stackIn_304_0 = this;
-                    stackIn_304_1 = true;
+                    unusedDebugOverviewTargetSnapshot = this;
+                    toggledDebugOverview = true;
                   }
-                  ((GameplaySession) (this)).showDebugOverview = stackIn_304_1;
+                  ((GameplaySession) (this)).showDebugOverview = toggledDebugOverview;
                 }
                 if (oc.field_f >= 2) {
                   if (pk.field_r.equalsIgnoreCase("brk")) {
@@ -1110,7 +1110,7 @@ final class GameplaySession {
               if (ki.field_d == 13) {
                 if (!this.sessionEnding) {
                   ai.requestedScreenId = 1;
-                  if (var5 == 0) {
+                  if (clientControlFlowGuard == 0) {
                     return;
                   }
                 }
@@ -1133,12 +1133,12 @@ final class GameplaySession {
                           break L67;
                         }
                         this.tutorialProgressMetric = dk.categoryMatchCandidateCount;
-                        if (var5 == 0) {
+                        if (clientControlFlowGuard == 0) {
                           break L67;
                         }
                       }
                       this.tutorialProgressMetric = dd.variantMatchCandidateCount;
-                      if (var5 == 0) {
+                      if (clientControlFlowGuard == 0) {
                         break L67;
                       }
                     }
@@ -1149,7 +1149,7 @@ final class GameplaySession {
               if (ki.field_d == 85) {
                 if (5 == this.tutorialStepId) {
                   if (this.tutorialStepPhase == 0) {
-                    this.leaveTutorial(param0 ^ -1578897511);
+                    this.leaveTutorial(methodGuard ^ -1578897511);
                     this.tutorialMode = true;
                     this.tutorialStepId = 0;
                     this.tutorialPromptActive = true;
@@ -1157,30 +1157,30 @@ final class GameplaySession {
                 }
               }
               if (jg.field_g == ki.field_d) {
-                stackIn_358_0 = this;
+                unusedRotationSwapOwnerSnapshot = this;
 
                 if (this.rotationControlsSwapped) {
-                  stackIn_359_0 = this;
-                  stackIn_359_1 = false;
+                  unusedRotationSwapTargetSnapshot = this;
+                  toggledRotationControlsSwapped = false;
                 } else {
-                  stackIn_356_0 = this;
-                  stackIn_359_0 = this;
-                  stackIn_359_1 = true;
+                  unusedRotationSwapOwnerOnEnableSnapshot = this;
+                  unusedRotationSwapTargetSnapshot = this;
+                  toggledRotationControlsSwapped = true;
                 }
-                ((GameplaySession) (this)).rotationControlsSwapped = stackIn_359_1;
+                ((GameplaySession) (this)).rotationControlsSwapped = toggledRotationControlsSwapped;
                 jc.requestAvatarFeedback(7, false);
               }
               if (2 > oc.field_f) {
                 continue L60;
               }
-              stackIn_464_0 = ki.field_d;
+              debugKeyCodeOrPointerEventComplement = ki.field_d;
 
-              stackIn_464_1 = 48;
+              debugKeySentinelOrPointerEventSentinel = 48;
 
-              if (var5 != 0) {
+              if (clientControlFlowGuard != 0) {
                 break L61;
               }
-              if (stackIn_464_0 == stackIn_464_1) {
+              if (debugKeyCodeOrPointerEventComplement == debugKeySentinelOrPointerEventSentinel) {
                 this.debugSpawnVariantId = this.debugSpawnVariantId - 1;
                 if (this.debugSpawnVariantId < 0) {
                   this.debugSpawnVariantId = 6;
@@ -1199,16 +1199,16 @@ final class GameplaySession {
                 }
               }
               if (32 == ki.field_d) {
-                stackIn_387_0 = this;
+                unusedSpecialKindSpawnOwnerSnapshot = this;
 
                 if (this.debugSpawnSpecialKinds) {
-                  stackIn_388_0 = this;
-                  stackIn_388_1 = false;
+                  unusedSpecialKindSpawnTargetSnapshot = this;
+                  toggledSpecialKindSpawn = false;
                 } else {
-                  stackIn_388_0 = this;
-                  stackIn_388_1 = true;
+                  unusedSpecialKindSpawnTargetSnapshot = this;
+                  toggledSpecialKindSpawn = true;
                 }
-                ((GameplaySession) (this)).debugSpawnSpecialKinds = stackIn_388_1;
+                ((GameplaySession) (this)).debugSpawnSpecialKinds = toggledSpecialKindSpawn;
               }
               if (ki.field_d == 65) {
                 this.debugSpawnCategoryId = this.debugSpawnCategoryId + 1;
@@ -1225,29 +1225,29 @@ final class GameplaySession {
               }
               if (ki.field_d == 1) {
                 this.submissionBlocked = true;
-                stackIn_407_0 = this;
+                unusedPointerSpawnOwnerSnapshot = this;
 
                 if (this.debugPointerSpawnEnabled) {
-                  stackIn_408_0 = this;
-                  stackIn_408_1 = false;
+                  unusedPointerSpawnTargetSnapshot = this;
+                  toggledDebugPointerSpawn = false;
                 } else {
-                  stackIn_408_0 = this;
-                  stackIn_408_1 = true;
+                  unusedPointerSpawnTargetSnapshot = this;
+                  toggledDebugPointerSpawn = true;
                 }
-                ((GameplaySession) (this)).debugPointerSpawnEnabled = stackIn_408_1;
+                ((GameplaySession) (this)).debugPointerSpawnEnabled = toggledDebugPointerSpawn;
               }
               if (2 == ki.field_d) {
-                stackIn_415_0 = this;
+                unusedSpawnReleaseOwnerSnapshot = this;
 
                 if (this.spawnReleaseDisabled) {
-                  stackIn_416_0 = this;
-                  stackIn_416_1 = false;
+                  unusedSpawnReleaseTargetSnapshot = this;
+                  toggledSpawnReleaseDisabled = false;
                 } else {
-                  stackIn_413_0 = this;
-                  stackIn_416_0 = this;
-                  stackIn_416_1 = true;
+                  unusedSpawnReleaseOwnerOnDisableSnapshot = this;
+                  unusedSpawnReleaseTargetSnapshot = this;
+                  toggledSpawnReleaseDisabled = true;
                 }
-                ((GameplaySession) (this)).spawnReleaseDisabled = stackIn_416_1;
+                ((GameplaySession) (this)).spawnReleaseDisabled = toggledSpawnReleaseDisabled;
                 this.submissionBlocked = true;
               }
               if (ki.field_d == 3) {
@@ -1260,7 +1260,7 @@ final class GameplaySession {
               }
               if (ki.field_d == 5) {
                 GameScreen.selectedThemeId = 1;
-                IntrusiveNode.a(param0 ^ 1578896207, GameScreen.selectedThemeId);
+                IntrusiveNode.a(methodGuard ^ 1578896207, GameScreen.selectedThemeId);
                 cd.selectThemeRenderAssets((byte) 110);
               }
               if (ki.field_d == 6) {
@@ -1285,7 +1285,7 @@ final class GameplaySession {
               }
               if (10 == ki.field_d) {
                 GameScreen.selectedThemeId = 4;
-                IntrusiveNode.a(param0 ^ 1578896198, GameScreen.selectedThemeId);
+                IntrusiveNode.a(methodGuard ^ 1578896198, GameScreen.selectedThemeId);
                 cd.selectThemeRenderAssets((byte) 101);
               }
               if (ki.field_d == 11) {
@@ -1294,16 +1294,16 @@ final class GameplaySession {
                 cd.selectThemeRenderAssets((byte) 82);
               }
               if (ki.field_d == 12) {
-                stackIn_454_0 = this;
+                unusedReducedRenderingOwnerSnapshot = this;
 
                 if (this.debugReducedRendering) {
-                  stackIn_455_0 = this;
-                  stackIn_455_1 = false;
+                  unusedReducedRenderingTargetSnapshot = this;
+                  toggledReducedRendering = false;
                 } else {
-                  stackIn_455_0 = this;
-                  stackIn_455_1 = true;
+                  unusedReducedRenderingTargetSnapshot = this;
+                  toggledReducedRendering = true;
                 }
-                ((GameplaySession) (this)).debugReducedRendering = stackIn_455_1;
+                ((GameplaySession) (this)).debugReducedRendering = toggledReducedRendering;
               }
               if (36 == ki.field_d) {
                 GameScreen.selectedThemeId = GameScreen.selectedThemeId + 1;
@@ -1314,15 +1314,15 @@ final class GameplaySession {
                 continue L60;
               }
               this.showSessionCounters = true;
-              if (var5 == 0) {
+              if (clientControlFlowGuard == 0) {
                 continue L60;
               }
             }
-            stackIn_464_0 = ~bi.field_g;
-            stackIn_464_1 = -1;
+            debugKeyCodeOrPointerEventComplement = ~bi.field_g;
+            debugKeySentinelOrPointerEventSentinel = -1;
           }
           L98: {
-            if (stackIn_464_0 != stackIn_464_1) {
+            if (debugKeyCodeOrPointerEventComplement != debugKeySentinelOrPointerEventSentinel) {
               if (this.debugPointerSpawnEnabled) {
                 if (oc.field_f >= 2) {
                   nb.spawnEntityAtPointer(-28195, mc.field_a, this.debugSpawnCategoryId, he.field_d, this.debugSpawnVariantId, this.debugSpawnSpecialKinds);
@@ -1336,13 +1336,13 @@ final class GameplaySession {
                       this.tutorialStepPhase = 1;
                       if (this.tutorialStepId == 0) {
                         this.tutorialProgressMetric = 0;
-                        if (var5 == 0) {
+                        if (clientControlFlowGuard == 0) {
                           break L100;
                         }
                       }
                       if (this.tutorialStepId == 1) {
                         this.tutorialProgressMetric = dd.variantMatchCandidateCount;
-                        if (var5 == 0) {
+                        if (clientControlFlowGuard == 0) {
                           break L100;
                         }
                       }
@@ -1350,7 +1350,7 @@ final class GameplaySession {
                         break L98;
                       }
                       this.tutorialProgressMetric = dk.categoryMatchCandidateCount;
-                      if (var5 == 0) {
+                      if (clientControlFlowGuard == 0) {
                         break L100;
                       }
                     }
@@ -1358,7 +1358,7 @@ final class GameplaySession {
                       if (340 > mc.field_a) {
                         if (he.field_d > 440) {
                           if (476 > he.field_d) {
-                            this.leaveTutorial(param0 ^ -1578897511);
+                            this.leaveTutorial(methodGuard ^ -1578897511);
                             this.tutorialStepId = 0;
                             this.tutorialMode = true;
                             this.tutorialPromptActive = true;
@@ -1449,8 +1449,8 @@ final class GameplaySession {
         }
     }
 
-    final void startSessionEndSequence(byte param0) {
-        if (param0 != 116) {
+    final void startSessionEndSequence(byte methodGuard) {
+        if (methodGuard != 116) {
           this.score = -46;
         }
         L1: {
@@ -1470,32 +1470,32 @@ final class GameplaySession {
         }
     }
 
-    final boolean canAdvanceSession(boolean param0) {
-        boolean stackIn_9_0 = false;
-        if (!param0) {
+    final boolean canAdvanceSession(boolean requirePendingTransitionOrPhase) {
+        boolean hasPendingTransitionOrPhase = false;
+        if (!requirePendingTransitionOrPhase) {
           return true;
         }
         L0: {
           if (!this.sceneTransitionRequested) {
             if (0 == this.sessionPhase) {
-              stackIn_9_0 = false;
+              hasPendingTransitionOrPhase = false;
               break L0;
             }
           }
-          stackIn_9_0 = true;
+          hasPendingTransitionOrPhase = true;
         }
-        return stackIn_9_0;
+        return hasPendingTransitionOrPhase;
     }
 
-    private final void advanceTutorialStep(int param0) {
-        int var3;
+    private final void advanceTutorialStep(int methodGuard) {
+        int clientControlFlowGuard;
         L0: {
-          var3 = Geoblox.field_C;
+          clientControlFlowGuard = Geoblox.field_C;
           if (this.tutorialStepPhase == 2) {
             this.tutorialStepId = this.tutorialStepId + 1;
             this.tutorialPromptActive = true;
             this.tutorialStepPhase = 0;
-            if (var3 == 0) {
+            if (clientControlFlowGuard == 0) {
               break L0;
             }
           }
@@ -1515,7 +1515,7 @@ final class GameplaySession {
             if (this.tutorialStepId == 0) {
               if (this.tutorialProgressMetric > 450) {
                 this.tutorialStepPhase = 2;
-                if (var3 == 0) {
+                if (clientControlFlowGuard == 0) {
                   break L0;
                 }
               }
@@ -1533,30 +1533,30 @@ final class GameplaySession {
                 break L0;
               }
               this.tutorialStepPhase = 2;
-              if (var3 == 0) {
+              if (clientControlFlowGuard == 0) {
                 break L0;
               }
             }
             this.tutorialStepPhase = 2;
           }
         }
-        if (param0 < 59) {
+        if (methodGuard < 59) {
           this.spawnReleaseDisabled = true;
         }
     }
 
-    private final void updateSceneTransition(byte param0) {
-        int stackIn_27_0 = 0;
-        int stackIn_27_1 = 0;
+    private final void updateSceneTransition(byte methodGuard) {
+        int selectedThemeComplementOrThemeSentinel = 0;
+        int themeEntryComplementOrThemeId = 0;
         int precedingThemeId = 0;
         int themeIndexThenId = 0;
-        int var4 = 0;
-        var4 = Geoblox.field_C;
+        int clientControlFlowGuard = 0;
+        clientControlFlowGuard = Geoblox.field_C;
         if (this.sceneAnimationTick == 0) {
           L1: {
             if (!this.preserveScoreOnTransition) {
               this.resetScoreState(122);
-              if (var4 == 0) {
+              if (clientControlFlowGuard == 0) {
                 break L1;
               }
             }
@@ -1570,9 +1570,9 @@ final class GameplaySession {
           i.avatarMaskRaster.drawSilhouette(this.boardMaskOffsetX + 320, this.boardMaskOffsetY + 240, 16777215);
           sh.field_y.a(255);
         }
-        int fieldTemp$0 = this.sceneAnimationTick + 1;
+        int nextSceneAnimationTick = this.sceneAnimationTick + 1;
         this.sceneAnimationTick = this.sceneAnimationTick + 1;
-        if (160 == fieldTemp$0) {
+        if (160 == nextSceneAnimationTick) {
           L4: {
             if (this.preserveScoreOnTransition) {
               precedingThemeId = 0;
@@ -1581,34 +1581,34 @@ final class GameplaySession {
                 L6: {
                   L7: {
                     if (7 > themeIndexThenId) {
-                      stackIn_27_0 = ~GameScreen.selectedThemeId;
+                      selectedThemeComplementOrThemeSentinel = ~GameScreen.selectedThemeId;
 
-                      stackIn_27_1 = ~ee.field_B[themeIndexThenId];
+                      themeEntryComplementOrThemeId = ~ee.field_B[themeIndexThenId];
 
-                      if (var4 != 0) {
+                      if (clientControlFlowGuard != 0) {
                         break L6;
                       }
-                      if (stackIn_27_0 == stackIn_27_1) {
+                      if (selectedThemeComplementOrThemeSentinel == themeEntryComplementOrThemeId) {
                         if (0 < themeIndexThenId) {
                           precedingThemeId = ee.field_B[themeIndexThenId - 1];
-                          if (var4 == 0) {
+                          if (clientControlFlowGuard == 0) {
                             break L7;
                           }
                         }
                         precedingThemeId = ee.field_B[6];
-                        if (var4 == 0) {
+                        if (clientControlFlowGuard == 0) {
                           break L7;
                         }
                       }
                       themeIndexThenId++;
-                      if (var4 == 0) {
+                      if (clientControlFlowGuard == 0) {
                         continue L5;
                       }
                     }
                   }
                   themeIndexThenId = precedingThemeId;
-                  stackIn_27_0 = 4;
-                  stackIn_27_1 = themeIndexThenId;
+                  selectedThemeComplementOrThemeSentinel = 4;
+                  themeEntryComplementOrThemeId = themeIndexThenId;
                 }
                 L10: {
                   L11: {
@@ -1618,23 +1618,23 @@ final class GameplaySession {
                           L15: {
                             L16: {
                               L17: {
-                                if (stackIn_27_0 == stackIn_27_1) {
-                                  if (var4 == 0) {
+                                if (selectedThemeComplementOrThemeSentinel == themeEntryComplementOrThemeId) {
+                                  if (clientControlFlowGuard == 0) {
                                     break L17;
                                   }
                                 }
                                 if (themeIndexThenId == 1) {
-                                  if (var4 == 0) {
+                                  if (clientControlFlowGuard == 0) {
                                     break L16;
                                   }
                                 }
                                 if (themeIndexThenId == 3) {
-                                  if (var4 == 0) {
+                                  if (clientControlFlowGuard == 0) {
                                     break L15;
                                   }
                                 }
                                 if (themeIndexThenId == 0) {
-                                  if (var4 == 0) {
+                                  if (clientControlFlowGuard == 0) {
                                     break L14;
                                   }
                                 }
@@ -1642,49 +1642,49 @@ final class GameplaySession {
                                   break L13;
                                 }
                                 if (5 == themeIndexThenId) {
-                                  if (var4 == 0) {
+                                  if (clientControlFlowGuard == 0) {
                                     break L12;
                                   }
                                 }
                                 if (2 != themeIndexThenId) {
                                   break L10;
                                 }
-                                if (var4 == 0) {
+                                if (clientControlFlowGuard == 0) {
                                   break L11;
                                 }
                               }
                               ra.a(fa.field_f ^ 255, -61, fa.field_f);
-                              if (var4 == 0) {
+                              if (clientControlFlowGuard == 0) {
                                 break L4;
                               }
                             }
                             ra.a(255 ^ hj.field_b, -84, hj.field_b);
-                            if (var4 == 0) {
+                            if (clientControlFlowGuard == 0) {
                               break L4;
                             }
                           }
                           ra.a(255 ^ ac.field_u, -50, ac.field_u);
-                          if (var4 == 0) {
+                          if (clientControlFlowGuard == 0) {
                             break L4;
                           }
                         }
                         ra.a(255 ^ kf.field_d, -71, kf.field_d);
-                        if (var4 == 0) {
+                        if (clientControlFlowGuard == 0) {
                           break L4;
                         }
                       }
                       ra.a(255 ^ vi.field_E, -115, vi.field_E);
-                      if (var4 == 0) {
+                      if (clientControlFlowGuard == 0) {
                         break L4;
                       }
                     }
                     ra.a(255 ^ jj.field_g, -92, jj.field_g);
-                    if (var4 == 0) {
+                    if (clientControlFlowGuard == 0) {
                       break L4;
                     }
                   }
                   ra.a(255 ^ jg.field_a, -121, jg.field_a);
-                  if (var4 == 0) {
+                  if (clientControlFlowGuard == 0) {
                     break L4;
                   }
                 }
@@ -1704,18 +1704,18 @@ final class GameplaySession {
             ld.advanceDifficulty(false);
           }
         }
-        if (param0 > -76) {
+        if (methodGuard > -76) {
           this.showSessionCounters = true;
         }
     }
 
-    private final void renderResultSequence(boolean param0) {
+    private final void renderResultSequence(boolean methodGuard) {
         int shrinkingDiameter;
-        int var4;
+        int clientControlFlowGuard;
         String shrinkingBonusText;
         String countdownBonusText;
-        var4 = Geoblox.field_C;
-        if (param0) {
+        clientControlFlowGuard = Geoblox.field_C;
+        if (methodGuard) {
           this.addScore((byte) 71, 49);
         }
         L1: {
@@ -1723,7 +1723,7 @@ final class GameplaySession {
             pk.resultBubbleSprite.drawScaledAlpha(320 - (this.sceneAnimationTick >> 1), 240 - (this.sceneAnimationTick >> 1), this.sceneAnimationTick, this.sceneAnimationTick, 150);
             lj.smallBoxSprite.draw(this.resultPanelX, -(lj.smallBoxSprite.fullHeight >> 1) + 240 + 60);
             dd.uiPaletteFont.a(sg.field_f, 15 + this.resultPanelX, 312, 0, -1);
-            if (var4 == 0) {
+            if (clientControlFlowGuard == 0) {
               break L1;
             }
           }
@@ -1736,7 +1736,7 @@ final class GameplaySession {
             if (this.boardEmptyAtResultStart) {
               dd.uiPaletteFont.b(ld.field_a, 320, 352, 0, -1);
             }
-            if (var4 == 0) {
+            if (clientControlFlowGuard == 0) {
               break L1;
             }
           }
@@ -1916,8 +1916,8 @@ final class GameplaySession {
         }
     }
 
-    final void submitScore(byte param0) {
-        if (param0 != -70) {
+    final void submitScore(byte methodGuard) {
+        if (methodGuard != -70) {
             return;
         }
         if (0 < this.score && !this.submissionBlocked) {
@@ -1929,7 +1929,7 @@ final class GameplaySession {
     }
 
     final void addPopupPoints(int points, int methodGuard) {
-        int var3;
+        int clientControlFlowGuard;
         CharSequence cappedPopupPointsText;
         CharSequence popupPointsValueText;
         if (this.tutorialMode) {
@@ -1947,20 +1947,20 @@ final class GameplaySession {
           popupPointsValueText = (CharSequence) ((Object) Integer.toString(this.pendingPopupPoints));
           td.writeTextAtOffset(popupPointsValueText, this.popupPointsText, 0, 73);
         }
-        var3 = -83 % ((-19 - methodGuard) / 54);
+        clientControlFlowGuard = -83 % ((-19 - methodGuard) / 54);
     }
 
-    private final void renderProgressHud(int param0) {
+    private final void renderProgressHud(int methodGuard) {
         int remainingThemeReleases;
-        int var3;
-        var3 = Geoblox.field_C;
+        int clientControlFlowGuard;
+        clientControlFlowGuard = Geoblox.field_C;
         if (!this.preserveScoreOnTransition) {
           return;
         }
         L0: {
           if (this.sessionPhase != 0) {
             dd.uiPaletteFont.a(tj.field_a, 426, 404, 200, 100, 0, -1, 2, 0, 30);
-            if (var3 == 0) {
+            if (clientControlFlowGuard == 0) {
               break L0;
             }
           }
@@ -1973,27 +1973,27 @@ final class GameplaySession {
             dd.uiPaletteFont.colorPalettes[0][wf.field_p] = mk.field_k[remainingThemeReleases % 5];
             dd.uiPaletteFont.c(Integer.toString(remainingThemeReleases), 515, 468, 0, -1);
             dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
-            if (var3 == 0) {
+            if (clientControlFlowGuard == 0) {
               break L0;
             }
           }
           if (remainingThemeReleases <= 99999) {
             dd.uiPaletteFont.c(Integer.toString(remainingThemeReleases), 515, 468, 0, -1);
-            if (var3 == 0) {
+            if (clientControlFlowGuard == 0) {
               break L0;
             }
           }
           dd.uiPaletteFont.c(Integer.toString(99999), 515, 468, 0, -1);
         }
-        if (param0 >= -39) {
+        if (methodGuard >= -39) {
           this.resultBonusPoints = 7;
         }
     }
 
-    private final void requestSessionExitScreen(int param0) {
-        int var3;
-        var3 = Geoblox.field_C;
-        if (param0 != 28809) {
+    private final void requestSessionExitScreen(int methodGuard) {
+        int clientControlFlowGuard;
+        clientControlFlowGuard = Geoblox.field_C;
+        if (methodGuard != 28809) {
           this.debugPointerSpawnEnabled = true;
         }
         L1: {
@@ -2001,17 +2001,17 @@ final class GameplaySession {
             if (this.newActionCount <= 0) {
               if (this.score > 0) {
                 ai.requestedScreenId = 2;
-                if (var3 == 0) {
+                if (clientControlFlowGuard == 0) {
                   break L1;
                 }
               }
               ai.requestedScreenId = 0;
-              if (var3 == 0) {
+              if (clientControlFlowGuard == 0) {
                 break L1;
               }
             }
             ai.requestedScreenId = 6;
-            if (var3 == 0) {
+            if (clientControlFlowGuard == 0) {
               break L1;
             }
           }
@@ -2022,7 +2022,7 @@ final class GameplaySession {
               }
             }
             ai.requestedScreenId = 4;
-            if (var3 == 0) {
+            if (clientControlFlowGuard == 0) {
               break L1;
             }
           }
@@ -2031,7 +2031,7 @@ final class GameplaySession {
         fi.a(0, ll.field_d);
     }
 
-    private final void resetScoreState(int param0) {
+    private final void resetScoreState(int methodGuard) {
         this.score = 0;
         this.pendingPopupPoints = 0;
         sc.field_f = 3382;
@@ -2048,7 +2048,7 @@ final class GameplaySession {
         this.pointsPanelSlideDirection = 1;
         this.pointsPanelX = 640;
         td.a((byte) -93);
-        if (param0 < 104) {
+        if (methodGuard < 104) {
           GameplaySession.i(-111);
         }
     }
@@ -2059,21 +2059,21 @@ final class GameplaySession {
         }
     }
 
-    private final void prepareNextTheme(int param0) {
+    private final void prepareNextTheme(int methodGuard) {
         this.sessionPhase = 0;
         this.resultPanelX = 640;
         this.resultBonusPoints = 0;
         this.endingEntityRadius = 0;
-        if (param0 != 867) {
+        if (methodGuard != 867) {
             this.renderTutorialPrompt(20);
         }
         if (ji.difficultyStep >= 41) {
             ra.a(255 ^ pk.field_m, -103, pk.field_m);
         }
-        int var2 = uh.b(16);
-        GameScreen.selectedThemeId = var2;
+        int nextThemeId = uh.b(16);
+        GameScreen.selectedThemeId = nextThemeId;
         cd.selectThemeRenderAssets((byte) 116);
-        IntrusiveNode.a(param0 ^ -796, var2);
+        IntrusiveNode.a(methodGuard ^ -796, nextThemeId);
     }
 
     final void emitPointsPopup(boolean markSubmissionBlocked) {
@@ -2088,14 +2088,14 @@ final class GameplaySession {
         this.pendingPopupPoints = 0;
     }
 
-    GameplaySession(Geoblox param0, boolean param1) {
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var3 = null;
+    GameplaySession(Geoblox ownerApplet, boolean enableTutorial) {
+        RuntimeException constructorFailureForContext = null;
+        StringBuilder constructorMessagePrefix = null;
+        RuntimeException constructorFailureAtAppletArgument = null;
+        StringBuilder constructorMessageAtAppletArgument = null;
+        String appletArgumentDescription = null;
+        RuntimeException caughtConstructorFailure = null;
+        RuntimeException constructorFailure = null;
         this.boardEmptyAtResultStart = false;
         this.pointsPanelX = 640;
         this.delayedActionCountdown = 0;
@@ -2130,13 +2130,13 @@ final class GameplaySession {
         this.endingEntityRadius = 0;
         this.sessionPhase = 0;
         try {
-          this.gameApplet = param0;
+          this.gameApplet = ownerApplet;
           ug.field_c = 0;
           pb.pendingActionMarkers.clearNodes((byte) -126);
           this.pendingPopupPoints = 0;
           this.boardMaskOffsetX = -(i.avatarMaskRaster.width >> 1);
-          this.tutorialMode = param1;
-          this.tutorialPromptActive = param1;
+          this.tutorialMode = enableTutorial;
+          this.tutorialPromptActive = enableTutorial;
           this.score = 0;
           this.boardMaskOffsetY = -(i.avatarMaskRaster.height >> 1);
           this.boardAngleRadians = 0.0f;
@@ -2157,7 +2157,7 @@ final class GameplaySession {
             uf.avatarTintPalette[1] = 15439657;
           }
           td.a((byte) -93);
-          GameplayEntity.h(0);
+          GameplayEntity.resetAvatarFeedbackState(0);
           GameScreen.selectedThemeId = ee.field_B[0];
           cd.selectThemeRenderAssets((byte) 104);
           this.debugPointerSpawnEnabled = false;
@@ -2178,23 +2178,23 @@ final class GameplaySession {
           gb.field_g = 5997;
           this.newActionCount = 0;
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_12_0 = (RuntimeException) (var3);
+        } catch (java.lang.RuntimeException sessionConstructorException) {
+          caughtConstructorFailure = sessionConstructorException;
+          constructorFailure = caughtConstructorFailure;
+          constructorFailureForContext = (RuntimeException) (constructorFailure);
 
-          stackIn_12_1 = new StringBuilder().append("gh.<init>(");
+          constructorMessagePrefix = new StringBuilder().append("gh.<init>(");
 
-          if (param0 == null) {
-            stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-            stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-            stackIn_13_2 = "null";
+          if (ownerApplet == null) {
+            constructorFailureAtAppletArgument = (RuntimeException) ((Object) constructorFailureForContext);
+            constructorMessageAtAppletArgument = (StringBuilder) ((Object) constructorMessagePrefix);
+            appletArgumentDescription = "null";
           } else {
-            stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-            stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-            stackIn_13_2 = "{...}";
+            constructorFailureAtAppletArgument = (RuntimeException) ((Object) constructorFailureForContext);
+            constructorMessageAtAppletArgument = (StringBuilder) ((Object) constructorMessagePrefix);
+            appletArgumentDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) ((Object) constructorFailureAtAppletArgument), ((StringBuilder) (Object) constructorMessageAtAppletArgument).append(appletArgumentDescription).append(',').append(enableTutorial).append(')').toString());
         }
     }
 

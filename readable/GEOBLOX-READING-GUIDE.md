@@ -959,3 +959,50 @@ Throwable publishes status 2. ThreadDeath rethrows before completion notificatio
 The new names preserve handlers and monitor scope; they add no worker-service
 native coverage. All non-generated dispatcher parameters/locals are named;
 other classes and shared joins remain partly opaque.
+
+## Gameplay tick and motion variables
+
+`updateSession(methodGuard)` now names its preincrement panel tick and negative/
+positive rotation key codes. Debug toggles name the Boolean value to be stored;
+unused owner/target snapshots remain as explicit generated declarations. One
+Boolean still carries detached-entity state before the positive-rotation key
+state. The final integer comparison carriers still switch from debug key values
+to pointer-event complement/sentinel values. `inputDerivedModuloIndex` describes
+the shared modulo8/5 input-derived index without assigning an unsupported game
+mechanic to its bookkeeping branches. Full session-tick execution is unverified.
+
+`moveEntitiesAndCollectContacts` names the current/other moving entity, inward
+center offsets, normalized averaged velocity, outward-distance comparisons and
+midpoint direction scale. `sharedVelocityXOrCrossProduct` and
+`sharedVelocityYOrDirectionScale` preserve their reused meanings. Its integer
+`neighborIndexOrKindFlagOrContactIdOrDivisionGuard` is reused across attachment,
+moving contact and final arithmetic guard paths. The new names help follow these
+paths; splitting the reused declarations would require a later proven generic
+decompiler transformation. Actual contact production remains source-audited.
+
+`updateAttachedEntities` uses `maximumEntityRadiusSquared`, not a radius. Every
+member loses one cooldown tick; a zero crossing marks contact state dirty.
+Only queue-null members advance animation and contribute to the squared maximum.
+Kind3 avatar contacts with nonpositive cooldown set the shock flag, and squared
+thresholds10000/25600 select feedback0/1/2. This producer is source-audited.
+
+The entity constructor keeps supplied raw velocity. `initializeEntityMotion`
+normalizes it to `entityMotionSpeed`, including the original NaN behavior for
+zero velocity. Its arithmetic sentinel runs after position, lifetime, category,
+kind and velocity writes, before clearing counters/animation/queue/flags. A bad
+guard therefore retains those partial writes. Two float arguments in both APIs
+have no reads and are named `unusedFloatArgument1/2`. Ordinary kind selects its
+category/variant sprite; kind2 selects the amorphous frame and sets category -1.
+Successful reset clears active neighbor count while retaining old array slots.
+
+`rotateEntityAroundBoard` rotates about (320,240), then points velocity inward and
+normalizes only above the original squared-speed threshold. Kind2 retains its
+sprite angle; other kinds subtract the rotation delta. `integrateEntityVelocity`
+adds both velocity components before the invalid-guard variant-count side effect.
+`resetAvatarFeedbackState(initialFrameIndex)` names the helper used by the session
+constructor; the remaining reset writes and caller values are unchanged.
+
+The existing gameplay probe adds independent constructor/integration/rotation/
+initialization oracles for 4,500 cases and compares the separately pinned trace
+against native bytecode, raw Java and readable Java. This includes partial guard
+failures and non-finite arithmetic; it adds no real-asset or whole-game claim.

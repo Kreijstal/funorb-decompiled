@@ -31,17 +31,17 @@ final class GameplayEntity extends DualLinkNode {
     float velocityX;
     int sameCategoryEntityCount;
 
-    final void drawBoardRotatedEntity(int param0) {
+    final void drawBoardRotatedEntity(int methodGuard) {
         float entityOffsetX;
         float entityOffsetY;
         int rotatedEntityX;
         int rotatedEntityY;
-        int var6;
-        var6 = Geoblox.field_C;
+        int clientControlFlowGuard;
+        clientControlFlowGuard = Geoblox.field_C;
         entityOffsetX = this.positionX - 320.0f;
         entityOffsetY = this.positionY - 240.0f;
         rotatedEntityX = (int)((double)entityOffsetX * Math.cos((double)el.gameplaySession.boardAngleRadians) - (double)entityOffsetY * Math.sin((double)el.gameplaySession.boardAngleRadians) + 320.0);
-        if (param0 != -16096) {
+        if (methodGuard != -16096) {
           return;
         }
         L0: {
@@ -52,7 +52,7 @@ final class GameplayEntity extends DualLinkNode {
               SoftwareRasterizer.clearFramebuffer();
               this.entitySprite.drawUnmasked(-this.entitySprite.fullWidth + vf.spriteScratchRaster.fullWidth >> 1, vf.spriteScratchRaster.fullHeight - this.entitySprite.fullHeight >> 1);
               k.a(0, 0, vf.spriteScratchRaster.fullWidth, -27085, vf.spriteScratchRaster.fullHeight);
-              sh.field_y.a(param0 + 16351);
+              sh.field_y.a(methodGuard + 16351);
               vf.spriteScratchRaster.rotateSmooth(vf.spriteScratchRaster.fullWidth << 3, vf.spriteScratchRaster.fullHeight << 3, rotatedEntityX << 4, rotatedEntityY << 4, (int)(65535.0 * ((double)(-el.gameplaySession.boardAngleRadians + this.spriteAngleRadians) / 6.283185307179586)), 4096);
               break L0;
             }
@@ -62,7 +62,7 @@ final class GameplayEntity extends DualLinkNode {
             SoftwareRasterizer.clearFramebuffer();
             this.entitySprite.drawGrayModulated(-this.entitySprite.fullWidth + vf.spriteScratchRaster.fullWidth >> 1, vf.spriteScratchRaster.fullHeight - this.entitySprite.fullHeight >> 1, this.interpolatedPaletteColor);
             k.a(0, 0, vf.spriteScratchRaster.fullWidth, -27085, vf.spriteScratchRaster.fullHeight);
-            sh.field_y.a(param0 + 16351);
+            sh.field_y.a(methodGuard + 16351);
             vf.spriteScratchRaster.rotateSmooth(vf.spriteScratchRaster.fullWidth << 3, vf.spriteScratchRaster.fullHeight << 3, rotatedEntityX << 4, rotatedEntityY << 4, (int)(65535.0 * ((double)(-el.gameplaySession.boardAngleRadians + this.spriteAngleRadians) / 6.283185307179586)), 4096);
           } else {
             this.entitySprite.draw(-(this.entitySprite.fullWidth >> 1) + rotatedEntityX, rotatedEntityY - (this.entitySprite.fullHeight >> 1));
@@ -70,19 +70,19 @@ final class GameplayEntity extends DualLinkNode {
         }
     }
 
-    final void drawEntityIdOnBoardMask(int param0) {
+    final void drawEntityIdOnBoardMask(int verticalDivisor) {
         vf.spriteScratchRaster.setAsRasterTarget();
         SoftwareRasterizer.clearFramebuffer();
         this.entitySprite.rotateSmooth(this.entitySprite.fullWidth << 3, this.entitySprite.fullHeight << 3, vf.spriteScratchRaster.fullWidth << 3, vf.spriteScratchRaster.fullHeight << 3, (int)(65535.0 * ((double)this.spriteAngleRadians / 6.283185307179586)), 4096);
         bk.boardOwnershipRaster.setAsRasterTarget();
-        vf.spriteScratchRaster.drawSilhouette(-(vf.spriteScratchRaster.fullWidth / 2) + (int)this.positionX, (int)this.positionY - vf.spriteScratchRaster.fullHeight / param0, this.entityId + 1);
+        vf.spriteScratchRaster.drawSilhouette(-(vf.spriteScratchRaster.fullWidth / 2) + (int)this.positionX, (int)this.positionY - vf.spriteScratchRaster.fullHeight / verticalDivisor, this.entityId + 1);
         sh.field_y.a(255);
         bk.boardOwnershipRaster.setAsRasterTarget();
         i.avatarMaskRaster.drawSilhouette(320 + el.gameplaySession.boardMaskOffsetX, 240 + el.gameplaySession.boardMaskOffsetY, 16777215);
-        sh.field_y.a(param0 + 253);
+        sh.field_y.a(verticalDivisor + 253);
     }
 
-    final void drawFadingEntity(int param0) {
+    final void drawFadingEntity(int methodGuard) {
         float entityOffsetX;
         float entityOffsetY;
         float boardAngle;
@@ -121,7 +121,7 @@ final class GameplayEntity extends DualLinkNode {
             wl.field_a.rotateSmooth(wl.field_a.fullWidth << 3, wl.field_a.fullHeight << 3, vf.spriteScratchRaster.fullWidth << 3, vf.spriteScratchRaster.fullHeight << 3, (int)(65535.0 * (-((double)boardAngle / 6.283185307179586) + (double)this.spriteAngleRadians)), 4096);
           }
         }
-        sentinelDivisionGuard = 2 % ((-23 - param0) / 60);
+        sentinelDivisionGuard = 2 % ((-23 - methodGuard) / 60);
         sh.field_y.a(255);
         entityDrawX = rotatedEntityX - (vf.spriteScratchRaster.fullWidth >> 1);
         entityDrawY = rotatedEntityY - (vf.spriteScratchRaster.fullHeight >> 1);
@@ -136,14 +136,14 @@ final class GameplayEntity extends DualLinkNode {
         vf.spriteScratchRaster.drawAlpha(entityDrawX, entityDrawY, fadeOpacity);
     }
 
-    final static void h(int param0) {
+    final static void resetAvatarFeedbackState(int initialFrameIndex) {
         af.avatarFrameStepTicks = 0;
         ul.field_a = null;
         gg.field_b = 0;
         g.field_j = 0;
         pa.avatarFeedbackHoldTicks = 0;
         jf.avatarTintFadeTicks = 0;
-        uf.avatarFeedbackFrameIndex = param0;
+        uf.avatarFeedbackFrameIndex = initialFrameIndex;
         IndexedSpriteState.avatarShockFrameIndex = 0;
         rj.avatarTintColor = 5167632;
         MenuScreen.avatarFeedbackFrameBase = 0;
@@ -158,15 +158,15 @@ final class GameplayEntity extends DualLinkNode {
         int var1 = 106 % ((33 - param0) / 39);
     }
 
-    private final void updatePaletteChannelDeltas(int param0) {
-        int var2 = -121 % ((-63 - param0) / 39);
+    private final void updatePaletteChannelDeltas(int methodGuard) {
+        int sentinelDivisionGuard = -121 % ((-63 - methodGuard) / 39);
         this.paletteRedDelta = -(jg.themeCycleColors[GameScreen.selectedThemeId][this.animationFrameIndex] >> 16 & 255) + (255 & jg.themeCycleColors[GameScreen.selectedThemeId][(this.animationFrameIndex + 1) % 7] >> 16);
         this.paletteGreenDelta = -(jg.themeCycleColors[GameScreen.selectedThemeId][this.animationFrameIndex] >> 8 & 255) + ((jg.themeCycleColors[GameScreen.selectedThemeId][(1 + this.animationFrameIndex) % 7] & 65448) >> 8);
         this.paletteBlueDelta = -(jg.themeCycleColors[GameScreen.selectedThemeId][this.animationFrameIndex] & 255) + (jg.themeCycleColors[GameScreen.selectedThemeId][(1 + this.animationFrameIndex) % 7] & 255);
     }
 
-    final void eraseEntityPixels(int param0) {
-        int incrementValue$0 = 0;
+    final void eraseEntityPixels(int methodGuard) {
+        int rowHeightBeforeDecrement = 0;
         int negativeColumnCounter = 0;
         int clipLeftX;
         int clipTopY;
@@ -195,7 +195,7 @@ final class GameplayEntity extends DualLinkNode {
         if (clippedHeight + clipTopY > bk.boardOwnershipRaster.height) {
           clippedHeight = bk.boardOwnershipRaster.height - clipTopY;
         }
-        if (param0 < 78) {
+        if (methodGuard < 78) {
           return;
         }
         {
@@ -203,9 +203,9 @@ final class GameplayEntity extends DualLinkNode {
           rowSkip = -clippedWidth + bk.boardOwnershipRaster.width;
           framebufferPixels = bk.boardOwnershipRaster.pixels;
           L4: while (true) {
-            incrementValue$0 = clippedHeight;
+            rowHeightBeforeDecrement = clippedHeight;
             clippedHeight--;
-            if (incrementValue$0 <= 0) {
+            if (rowHeightBeforeDecrement <= 0) {
               return;
             }
             {
@@ -224,9 +224,9 @@ final class GameplayEntity extends DualLinkNode {
         }
     }
 
-    final void rotateEntityAroundBoard(float rotationDeltaRadians, int param1) {
+    final void rotateEntityAroundBoard(float rotationDeltaRadians, int methodGuard) {
         double velocityNormalizationScale = 0.0;
-        if (param1 > -79) {
+        if (methodGuard > -79) {
             this.rotateEntityAroundBoard(0.2609390318393707f, 75);
         }
         float positionOffsetX = this.positionX - 320.0f;
@@ -245,10 +245,10 @@ final class GameplayEntity extends DualLinkNode {
         }
     }
 
-    private final void selectEntitySprite(byte param0) {
-        int var3;
-        var3 = Geoblox.field_C;
-        if (param0 < 83) {
+    private final void selectEntitySprite(byte methodGuard) {
+        int clientControlFlowGuard;
+        clientControlFlowGuard = Geoblox.field_C;
+        if (methodGuard < 83) {
           this.drawBoardRotatedEntity(18);
         }
         if (0 == this.entitySpriteKindId) {
@@ -285,11 +285,11 @@ final class GameplayEntity extends DualLinkNode {
         }
     }
 
-    final void drawEntityIdOnPointerMask(byte param0) {
+    final void drawEntityIdOnPointerMask(byte methodGuard) {
         vf.spriteScratchRaster.setAsRasterTarget();
         SoftwareRasterizer.clearFramebuffer();
         this.entitySprite.rotateSmooth(this.entitySprite.fullWidth << 3, this.entitySprite.fullHeight << 3, vf.spriteScratchRaster.fullWidth << 3, vf.spriteScratchRaster.fullHeight << 3, (int)((double)(this.spriteAngleRadians - el.gameplaySession.boardAngleRadians) / 6.283185307179586 * 65535.0), 4096);
-        if (param0 <= 46) {
+        if (methodGuard <= 46) {
             this.paletteBlueDelta = 17;
         }
         vf.spriteScratchRaster.addOutline(this.entityId + 1);
@@ -298,15 +298,15 @@ final class GameplayEntity extends DualLinkNode {
         sh.field_y.a(255);
     }
 
-    final void integrateEntityVelocity(byte param0) {
+    final void integrateEntityVelocity(byte methodGuard) {
         this.positionX = this.positionX + this.velocityX;
         this.positionY = this.positionY + this.velocityY;
-        if (param0 != -59) {
+        if (methodGuard != -59) {
             this.sameVariantEntityCount = -29;
         }
     }
 
-    private final void resetEntityAnimation(int param0) {
+    private final void resetEntityAnimation(int methodGuard) {
         this.entityQueue = null;
         this.entityUpdateTick = 0;
         this.touchesAvatar = false;
@@ -314,7 +314,7 @@ final class GameplayEntity extends DualLinkNode {
         this.selectEntitySprite((byte) 99);
         this.detachedFromBoard = false;
         this.matchCooldownTicks = 0;
-        int var2 = 62 % ((param0 - 67) / 32);
+        int sentinelDivisionGuard = 62 % ((methodGuard - 67) / 32);
     }
 
     final static int alignBitOffset(int param0, int bitOffset) {
@@ -329,7 +329,7 @@ final class GameplayEntity extends DualLinkNode {
         return byteAlignedBitOffset;
     }
 
-    final void advanceEntityAnimation(boolean param0) {
+    final void advanceEntityAnimation(boolean preservePositionY) {
         int kind2AnimationFrame = 0;
         int kind8AnimationFrame = 0;
         int kind5AnimationFrame = 0;
@@ -338,11 +338,11 @@ final class GameplayEntity extends DualLinkNode {
         int kind7AnimationFrame = 0;
         int kind4AnimationFrame = 0;
         float paletteBlendFraction;
-        int var3;
-        var3 = Geoblox.field_C;
+        int clientControlFlowGuard;
+        clientControlFlowGuard = Geoblox.field_C;
         this.entityUpdateTick = this.entityUpdateTick + 1;
         this.remainingLifetimeTicks = this.remainingLifetimeTicks - 1;
-        if (!param0) {
+        if (!preservePositionY) {
           this.positionY = -0.09870309382677078f;
         }
         if (this.entitySpriteKindId != 5) {
@@ -436,15 +436,15 @@ final class GameplayEntity extends DualLinkNode {
 
     final void removeRelatedEntity(GameplayEntity relatedEntity, int startingChildIndex) {
         int relatedEntitySearchIndex = 0;
-        RuntimeException var3 = null;
-        int var4 = 0;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        String stackIn_24_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var4 = Geoblox.field_C;
+        RuntimeException caughtNeighborRemovalFailure = null;
+        int clientControlFlowGuard = 0;
+        RuntimeException neighborRemovalFailureForContext = null;
+        StringBuilder neighborRemovalMessagePrefix = null;
+        RuntimeException neighborRemovalFailureAtArgument = null;
+        StringBuilder neighborRemovalMessageAtArgument = null;
+        String relatedEntityArgumentDescription = null;
+        RuntimeException caughtNeighborRemovalException = null;
+        clientControlFlowGuard = Geoblox.field_C;
         try {
           L0: for (relatedEntitySearchIndex = startingChildIndex; relatedEntitySearchIndex < this.relatedEntityCount; relatedEntitySearchIndex++) {
             if (this.relatedEntities[relatedEntitySearchIndex] != relatedEntity) {
@@ -470,28 +470,28 @@ final class GameplayEntity extends DualLinkNode {
             }
           }
           throw new IllegalStateException("");
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_23_0 = (RuntimeException) (var3);
+        } catch (java.lang.RuntimeException neighborRemovalException) {
+          caughtNeighborRemovalException = neighborRemovalException;
+          caughtNeighborRemovalFailure = caughtNeighborRemovalException;
+          neighborRemovalFailureForContext = (RuntimeException) (caughtNeighborRemovalFailure);
 
-          stackIn_23_1 = new StringBuilder().append("ja.HA(");
+          neighborRemovalMessagePrefix = new StringBuilder().append("ja.HA(");
 
           if (relatedEntity == null) {
-            stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-            stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
-            stackIn_24_2 = "null";
+            neighborRemovalFailureAtArgument = (RuntimeException) ((Object) neighborRemovalFailureForContext);
+            neighborRemovalMessageAtArgument = (StringBuilder) ((Object) neighborRemovalMessagePrefix);
+            relatedEntityArgumentDescription = "null";
           } else {
-            stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-            stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
-            stackIn_24_2 = "{...}";
+            neighborRemovalFailureAtArgument = (RuntimeException) ((Object) neighborRemovalFailureForContext);
+            neighborRemovalMessageAtArgument = (StringBuilder) ((Object) neighborRemovalMessagePrefix);
+            relatedEntityArgumentDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_24_2).append(',').append(startingChildIndex).append(')').toString());
+          throw t.a((Throwable) ((Object) neighborRemovalFailureAtArgument), ((StringBuilder) (Object) neighborRemovalMessageAtArgument).append(relatedEntityArgumentDescription).append(',').append(startingChildIndex).append(')').toString());
         }
     }
 
-    final void eraseEntityTrail(int param0) {
-        int incrementValue$0 = 0;
+    final void eraseEntityTrail(int methodGuard) {
+        int rowHeightBeforeDecrement = 0;
         int negativeColumnCounter = 0;
         float entityOffsetX;
         float entityOffsetY;
@@ -503,9 +503,9 @@ final class GameplayEntity extends DualLinkNode {
         int clippedSpriteHeight;
         int framebufferIndex;
         int framebufferRowSkip;
-        int var14;
+        int clientControlFlowGuard;
         int[] backgroundPixels;
-        var14 = Geoblox.field_C;
+        clientControlFlowGuard = Geoblox.field_C;
         entityOffsetX = -320.0f + this.positionX;
         entityOffsetY = -240.0f + this.positionY;
         rotatedEntityX = (int)(Math.cos((double)el.gameplaySession.boardAngleRadians) * (double)entityOffsetX - (double)entityOffsetY * Math.sin((double)el.gameplaySession.boardAngleRadians) + 320.0);
@@ -529,15 +529,15 @@ final class GameplayEntity extends DualLinkNode {
           clippedSpriteHeight = SecondaryDeque.contactProbeRaster.height - clipTopY;
         }
         framebufferIndex = SecondaryDeque.contactProbeRaster.width * clipTopY + clipLeftX;
-        if (param0 != 30383) {
+        if (methodGuard != 30383) {
           this.entityCategoryKey = -47;
         }
         framebufferRowSkip = -clippedSpriteWidth + SecondaryDeque.contactProbeRaster.width;
         backgroundPixels = SecondaryDeque.contactProbeRaster.pixels;
         L5: while (true) {
-          incrementValue$0 = clippedSpriteHeight;
+          rowHeightBeforeDecrement = clippedSpriteHeight;
           clippedSpriteHeight--;
-          if (0 >= incrementValue$0) {
+          if (0 >= rowHeightBeforeDecrement) {
             return;
           }
           {
@@ -568,7 +568,7 @@ final class GameplayEntity extends DualLinkNode {
         this.selectEntitySprite((byte) 84);
     }
 
-    final void initializeEntityMotion(int param0, float positionX, int param2, float velocityX, int spriteVariantIndex, int lifetimeTicks, float param6, float positionY, float velocityY, int entityCategoryKey, float param10) {
+    final void initializeEntityMotion(int methodGuard, float positionX, int spriteKindId, float velocityX, int spriteVariantIndex, int lifetimeTicks, float unusedFloatArgument1, float positionY, float velocityY, int entityCategoryKey, float unusedFloatArgument2) {
         this.remainingLifetimeTicks = lifetimeTicks;
         this.initialLifetimeTicks = lifetimeTicks;
         this.positionX = positionX;
@@ -576,12 +576,12 @@ final class GameplayEntity extends DualLinkNode {
         this.positionY = positionY;
         this.spriteVariantIndex = spriteVariantIndex;
         this.velocityY = velocityY;
-        this.entitySpriteKindId = param2;
+        this.entitySpriteKindId = spriteKindId;
         this.velocityX = velocityX;
         double velocityNormalizationScale = (double)og.entityMotionSpeed / Math.sqrt((double)(velocityX * velocityX + velocityY * velocityY));
         this.velocityX = (float)((double)this.velocityX * velocityNormalizationScale);
         this.velocityY = (float)((double)this.velocityY * velocityNormalizationScale);
-        int var14 = -96 / ((param0 + 19) / 53);
+        int sentinelDivisionGuard = -96 / ((methodGuard + 19) / 53);
         this.spriteAngleRadians = 0.0f;
         this.sameCategoryEntityCount = 0;
         this.sameVariantEntityCount = 0;
@@ -602,8 +602,8 @@ final class GameplayEntity extends DualLinkNode {
         }
     }
 
-    final void drawEntityAtPosition(int param0) {
-        if (param0 != 1643839728) {
+    final void drawEntityAtPosition(int methodGuard) {
+        if (methodGuard != 1643839728) {
             this.entityId = -123;
         }
         if (this.entitySpriteKindId == 1) {
@@ -618,15 +618,15 @@ final class GameplayEntity extends DualLinkNode {
         }
     }
 
-    final void drawRotatedEntityOnCurrentRaster(int param0) {
-        if (param0 != 1915952803) {
-            GameplayEntity var3 = (GameplayEntity) null;
+    final void drawRotatedEntityOnCurrentRaster(int methodGuard) {
+        if (methodGuard != 1915952803) {
+            GameplayEntity unusedEntitySnapshot = (GameplayEntity) null;
             this.removeRelatedEntity((GameplayEntity) null, -128);
         }
         this.entitySprite.rotateSmooth(this.entitySprite.fullWidth << 3, this.entitySprite.fullHeight << 3, (int)this.positionX << 4, (int)this.positionY << 4, (int)((double)this.spriteAngleRadians / 6.283185307179586 * 65535.0), 4096);
     }
 
-    GameplayEntity(int param0, int param1, int param2, float param3, float param4, float param5, float param6, float param7, float param8, int param9) {
+    GameplayEntity(int spriteVariantIndex, int entityCategoryKey, int spriteKindId, float positionX, float positionY, float velocityX, float velocityY, float unusedFloatArgument1, float unusedFloatArgument2, int entityId) {
         this.relatedEntities = new GameplayEntity[6];
         this.interpolatedPaletteColor = 0;
         this.relatedEntityCount = 0;
@@ -636,14 +636,14 @@ final class GameplayEntity extends DualLinkNode {
         this.spriteAngleRadians = 0.0f;
         this.animationFrameIndex = 0;
         this.sameCategoryEntityCount = 0;
-        this.positionY = param4;
-        this.entityId = param9;
-        this.velocityX = param5;
-        this.spriteVariantIndex = param0;
-        this.velocityY = param6;
-        this.entityCategoryKey = param1;
-        this.entitySpriteKindId = param2;
-        this.positionX = param3;
+        this.positionY = positionY;
+        this.entityId = entityId;
+        this.velocityX = velocityX;
+        this.spriteVariantIndex = spriteVariantIndex;
+        this.velocityY = velocityY;
+        this.entityCategoryKey = entityCategoryKey;
+        this.entitySpriteKindId = spriteKindId;
+        this.positionX = positionX;
         this.resetEntityAnimation(99);
     }
 

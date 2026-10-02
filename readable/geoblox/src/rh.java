@@ -23,56 +23,56 @@ final class rh {
         return this.field_c.field_k.length;
     }
 
-    final static void updateAttachedEntities(byte param0) {
-        int stackIn_22_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        float var1_float = 0.0f;
-        RuntimeException var1 = null;
-        GameplayEntity var2 = null;
-        int var3 = 0;
-        var3 = Geoblox.field_C;
+    final static void updateAttachedEntities(byte methodGuard) {
+        int lowRadiusFeedbackMode = 0;
+        RuntimeException caughtAttachedUpdateFailure = null;
+        float maximumEntityRadiusSquared = 0.0f;
+        RuntimeException attachedUpdateFailureForContext = null;
+        GameplayEntity attachedEntity = null;
+        int clientControlFlowGuard = 0;
+        clientControlFlowGuard = Geoblox.field_C;
         try {
-          if (param0 <= 93) {
+          if (methodGuard <= 93) {
             rh.updateAttachedEntities((byte) 28);
           }
-          var1_float = 0.0f;
-          var2 = (GameplayEntity) ((Object) a.attachedEntities.firstForIteration(0));
-          L1: while (var2 != null) {
-            var2.matchCooldownTicks = var2.matchCooldownTicks - 1;
-            if (var2.matchCooldownTicks == 0) {
+          maximumEntityRadiusSquared = 0.0f;
+          attachedEntity = (GameplayEntity) ((Object) a.attachedEntities.firstForIteration(0));
+          L1: while (attachedEntity != null) {
+            attachedEntity.matchCooldownTicks = attachedEntity.matchCooldownTicks - 1;
+            if (attachedEntity.matchCooldownTicks == 0) {
               ab.boardContactStateDirty = true;
             }
-            if (null == var2.entityQueue) {
-              var2.advanceEntityAnimation(true);
-              if (3 == var2.entitySpriteKindId) {
-                if (var2.touchesAvatar) {
-                  if (0 >= var2.matchCooldownTicks) {
+            if (null == attachedEntity.entityQueue) {
+              attachedEntity.advanceEntityAnimation(true);
+              if (3 == attachedEntity.entitySpriteKindId) {
+                if (attachedEntity.touchesAvatar) {
+                  if (0 >= attachedEntity.matchCooldownTicks) {
                     w.avatarShockPending = true;
                   }
                 }
               }
-              if (var1_float < (var2.positionX - 320.0f) * (-320.0f + var2.positionX) + (var2.positionY - 240.0f) * (var2.positionY - 240.0f)) {
-                var1_float = (-240.0f + var2.positionY) * (-240.0f + var2.positionY) + (-320.0f + var2.positionX) * (-320.0f + var2.positionX);
+              if (maximumEntityRadiusSquared < (attachedEntity.positionX - 320.0f) * (-320.0f + attachedEntity.positionX) + (attachedEntity.positionY - 240.0f) * (attachedEntity.positionY - 240.0f)) {
+                maximumEntityRadiusSquared = (-240.0f + attachedEntity.positionY) * (-240.0f + attachedEntity.positionY) + (-320.0f + attachedEntity.positionX) * (-320.0f + attachedEntity.positionX);
               }
             }
-            var2 = (GameplayEntity) ((Object) a.attachedEntities.nextForIteration(1));
+            attachedEntity = (GameplayEntity) ((Object) a.attachedEntities.nextForIteration(1));
           }
-          wc.requestAvatarTintForRadius(var1_float, (byte) 14);
-          if (10000.0f > var1_float) {
-            stackIn_22_0 = 0;
-            jc.requestAvatarFeedback(stackIn_22_0, false);
+          wc.requestAvatarTintForRadius(maximumEntityRadiusSquared, (byte) 14);
+          if (10000.0f > maximumEntityRadiusSquared) {
+            lowRadiusFeedbackMode = 0;
+            jc.requestAvatarFeedback(lowRadiusFeedbackMode, false);
           } else {
-            if (!(25600.0f > var1_float)) {
+            if (!(25600.0f > maximumEntityRadiusSquared)) {
               jc.requestAvatarFeedback(2, false);
             } else {
               jc.requestAvatarFeedback(1, false);
             }
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1), "rh.I(" + param0 + ')');
+        } catch (java.lang.RuntimeException attachedUpdateFailure) {
+          caughtAttachedUpdateFailure = attachedUpdateFailure;
+          attachedUpdateFailureForContext = caughtAttachedUpdateFailure;
+          throw t.a((Throwable) ((Object) attachedUpdateFailureForContext), "rh.I(" + methodGuard + ')');
         }
     }
 

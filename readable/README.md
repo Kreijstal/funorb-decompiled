@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 2,663 guarded naming rules: 27 classes, 501 fields,
-292 methods, 774 parameters and 1,069 local declarations. Both 303-file corpora
+The current export has 2,815 guarded naming rules: 27 classes, 501 fields,
+293 methods, 821 parameters and 1,173 local declarations. Both 303-file corpora
 compile, preserving 150,387 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -54,7 +54,29 @@ smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
 
-## Current dispatcher naming and export refresh
+## Current gameplay tick and motion naming
+
+This pass adds 152 guarded identities: one method, 47 parameters and 104 locals.
+It preserves all 2,663 previous complete rules and the existing raw/generator
+pins. The export applies 29,126 identifier edits while retaining 150,387 bindings
+and 388 override relationships. Every parameter/local in the session update,
+moving-contact producer, attached update and entity constructor/motion initializer
+now has a guarded semantic name. Other methods and classes remain partly opaque.
+Combined names preserve reused-slot roles; generated unused owner snapshots
+remain explicit, with no handler or control-flow rewrite in this naming pass.
+
+The existing gameplay probe adds a separate 4,500-case native motion matrix:
+50 actual constructors, 100 velocity integrations, 600 valid-guard board rotations
+and 3,750 initializations. Independent arithmetic/state oracles cover signed zero,
+near-center/extreme coordinates, zero/extreme velocity, negative/zero/NaN/infinite
+speeds, ordinary/amorphous kinds, unused float inputs and partial writes before
+division failures. Its trace is
+`002e562320b82c572202b5df57ea645a7f71630b6f78e379d60fac1a41de1dd4`.
+The original gameplay, boundary, difficulty and comparator traces remain pinned.
+Moving/attached contact producers, the full session tick, recursive invalid
+rotation guards, live assets and whole-game behavior remain unverified.
+
+## Previous dispatcher naming and current export refresh
 
 This naming pass adds 104 guarded identities: 13 fields, nine service methods,
 29 parameters and 53 locals. Every previous rule remains unchanged, as do the
@@ -479,7 +501,7 @@ its historical proof recorded in the raw provenance. Current source/decompiler
 identity and naming migrations live in the single manifest. `ruleChanges`
 records naming changes; `sourceChange` is recorded when input identity changes.
 The latest structural pass records its source migration in Git. The current
-naming-only pass retains those source pins and records its 104 additions in
+naming-only pass retains those source pins and records its 152 additions in
 `ruleChanges`; every prior guarded rule is retained.
 All six native probe sources and their traces are pinned in
 the same manifest; no JSON snapshots are added.
@@ -504,6 +526,6 @@ the same manifest; no JSON snapshots are added.
 | Java source tree | SHA-256 |
 | --- | --- |
 | Raw | `e9497d12a451095457234cd1abee1018e845505bf5901b14c7f0eb36988c6c49` |
-| Readable | `d21d4ffcef52bd850d4a4e0933ee3ff96ebded43e530b126f4bf2240869a17fa` |
+| Readable | `04c6e2059710a1ae01af8edbfeed4f48ef90051c9154bd1d394d70cf63098a3e` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

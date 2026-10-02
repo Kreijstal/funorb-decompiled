@@ -15,6 +15,7 @@ const expectedNativeSha256 = '42be694a3c2f9a7a80ec7e0ec910bd312bdba5bc38f30293eb
 // remains independently pinned.
 const expectedDifficultySha256 = '8c66899b5955eac3380cc3aefd3cbe17a5063cc68f98cd507ff406cea4ae587b';
 const expectedComparatorSha256 = '9be228f7421970f2214c74e8890327f8592f706dc90ccd0d0933e6f2fbe0a604';
+const expectedMotionSha256 = '002e562320b82c572202b5df57ea645a7f71630b6f78e379d60fac1a41de1dd4';
 const rules = JSON.parse(fs.readFileSync(path.join(root, 'geoblox-rules.json')));
 const aliases = new Map(rules.renames.map(rule => [rule.symbol, rule.to]));
 const temporary = fs.mkdtempSync(path.join(os.tmpdir(), 'geoblox-gameplay-'));
@@ -748,6 +749,107 @@ try {
         for(byte value:digest.digest())hash.append(String.format("%02x",value&255));
         System.err.println("comparator-matrix:"+count+":"+hash);
       }
+      static void sameFloat(float actual,float wanted,String label) {
+        check(Float.floatToIntBits(actual)==Float.floatToIntBits(wanted),label+":"+actual+":"+wanted);
+      }
+      static String motionState(${entity} e) {
+        return Float.floatToIntBits(e.${field('ja','field_o','F')})+":"+
+          Float.floatToIntBits(e.${field('ja','field_v','F')})+":"+
+          Float.floatToIntBits(e.${field('ja','field_w','F')})+":"+
+          Float.floatToIntBits(e.${field('ja','field_F','F')})+":"+
+          Float.floatToIntBits(e.${field('ja','field_u','F')})+":"+
+          e.${field('ja','field_r','I')}+":"+e.${field('ja','field_p','I')}+":"+
+          e.${field('ja','field_C','I')}+":"+e.${field('ja','field_M','I')}+":"+
+          e.${field('ja','field_z','I')}+":"+e.${field('ja','field_L','I')}+":"+
+          e.${field('ja','field_N','I')}+":"+e.${field('ja','field_m','I')}+":"+
+          e.${field('ja','field_E','I')}+":"+e.${field('ja','field_G','I')}+":"+
+          e.${field('ja','field_t','Z')}+":"+e.${field('ja','field_B','Z')};
+      }
+      static void motionMatrix() throws Exception {
+        java.security.MessageDigest digest=java.security.MessageDigest.getInstance("SHA-256");
+        java.lang.reflect.Field clock=${entity}.class.getDeclaredField("${field('ja','field_I','I')}");
+        clock.setAccessible(true);int constructors=0,integrations=0,rotations=0,initializations=0;
+        float[][] positions={{320,240},{0,-0.0f},{320.00003f,239.99998f},
+          {Float.MAX_VALUE,-Float.MAX_VALUE},{Float.NaN,Float.POSITIVE_INFINITY}};
+        float[][] velocities={{0,-0.0f},{1.25f,-2.5f},{-10.5f,0.75f},
+          {Float.MAX_VALUE,-Float.MAX_VALUE},{Float.NaN,Float.POSITIVE_INFINITY}};
+        float[] speeds={0.4f,0,-0.7f,Float.NaN,Float.POSITIVE_INFINITY};
+        ${global('Geoblox','field_C','I')}=0;${global('c','field_ab','I')}=0;
+        ${raster} ordinary=new ${raster}(1,1),amorphous=new ${raster}(1,1);
+        ${global('ke','field_a','[[[Ldm;')}=new ${raster}[][][]{{{ordinary}}};
+        ${global('ka','field_m','[[[Ldm;')}=new ${raster}[][][]{{{amorphous,amorphous,amorphous,amorphous}}};
+        for(float[] position:positions)for(float[] velocity:velocities)for(int kind:new int[]{0,2}) {
+          ${entity} e=new ${entity}(0,0,kind,position[0],position[1],velocity[0],velocity[1],Float.NaN,Float.POSITIVE_INFINITY,37);
+          sameFloat(e.${field('ja','field_o','F')},position[0],"constructor X");
+          sameFloat(e.${field('ja','field_v','F')},position[1],"constructor Y");
+          sameFloat(e.${field('ja','field_w','F')},velocity[0],"constructor preserves X velocity");
+          sameFloat(e.${field('ja','field_F','F')},velocity[1],"constructor preserves Y velocity");
+          check(e.${field('ja','field_H','I')}==37 && e.${field('ja','field_C','I')}==(kind==2?-1:0) &&
+            e.${field('ja','field_J','Ldm;')}==(kind==2?amorphous:ordinary),"constructor selection");
+          check(e.${field('ja','field_n','[Lja;')}.length==6 && clock.getInt(e)==0 &&
+            e.${field('ja','field_L','I')}==0 && e.${field('ja','field_K','Ltf;')}==null,"constructor defaults");
+          digest.update(("construct:"+motionState(e)+(char)10).getBytes(java.nio.charset.StandardCharsets.UTF_8));constructors++;
+        }
+        for(float[] position:positions)for(float[] velocity:velocities)for(byte guard:new byte[]{-59,0,-128,127}) {
+          ${entity} e=entity(37,0,0,0);e.${field('ja','field_o','F')}=position[0];e.${field('ja','field_v','F')}=position[1];
+          e.${field('ja','field_w','F')}=velocity[0];e.${field('ja','field_F','F')}=velocity[1];e.${field('ja','field_m','I')}=5;
+          e.${method('ja','f(B)V')}(guard);
+          sameFloat(e.${field('ja','field_o','F')},position[0]+velocity[0],"integrated X");
+          sameFloat(e.${field('ja','field_v','F')},position[1]+velocity[1],"integrated Y");
+          sameFloat(e.${field('ja','field_w','F')},velocity[0],"integration preserves X velocity");
+          sameFloat(e.${field('ja','field_F','F')},velocity[1],"integration preserves Y velocity");
+          check(e.${field('ja','field_m','I')}==(guard==-59?5:-29),"integration guard side effect");
+          digest.update(("integrate:"+guard+":"+motionState(e)+(char)10).getBytes(java.nio.charset.StandardCharsets.UTF_8));integrations++;
+        }
+        for(float[] position:positions)for(float angle:new float[]{0,-0.0f,(float)(Math.PI/2),-(float)Math.PI,0.125f,Float.NaN})
+        for(float speed:speeds)for(int kind:new int[]{0,2})for(int guard:new int[]{-79,-128}) {
+          ${entity} e=entity(37,0,0,0);e.${field('ja','field_o','F')}=position[0];e.${field('ja','field_v','F')}=position[1];
+          e.${field('ja','field_z','I')}=kind;e.${field('ja','field_u','F')}=0.75f;${global('og','field_r','F')}=speed;
+          double cosine=Math.cos((double)angle),sine=Math.sin((double)angle);
+          double x=(double)(position[0]-320.0f),y=(double)(position[1]-240.0f);
+          float expectedX=(float)(x*cosine-y*sine)+320.0f,expectedY=(float)(x*sine+y*cosine)+240.0f;
+          float expectedVx=320.0f-expectedX,expectedVy=240.0f-expectedY;
+          float normSquared=expectedVx*expectedVx+expectedVy*expectedVy;
+          if(normSquared>speed*speed) {double factor=(double)speed/Math.sqrt((double)normSquared);
+            expectedVx=(float)((double)expectedVx*factor);expectedVy=(float)((double)expectedVy*factor);}
+          e.${method('ja','a(FI)V')}(angle,guard);
+          sameFloat(e.${field('ja','field_o','F')},expectedX,"rotated X");sameFloat(e.${field('ja','field_v','F')},expectedY,"rotated Y");
+          sameFloat(e.${field('ja','field_w','F')},expectedVx,"inward X velocity");sameFloat(e.${field('ja','field_F','F')},expectedVy,"inward Y velocity");
+          sameFloat(e.${field('ja','field_u','F')},kind==2?0.75f:0.75f-angle,"rotation sprite kind rule");
+          digest.update(("rotate:"+Float.floatToIntBits(angle)+":"+Float.floatToIntBits(speed)+":"+kind+":"+guard+":"+
+            motionState(e)+(char)10).getBytes(java.nio.charset.StandardCharsets.UTF_8));rotations++;
+        }
+        for(float[] position:positions)for(float[] velocity:velocities)for(float speed:speeds)
+        for(int lifetime:new int[]{-1,0,1,60,Integer.MAX_VALUE})for(int guard:new int[]{101,0,-19})for(int kind:new int[]{0,2}) {
+          ${entity} e=entity(37,0,0,0);${deque} queue=new ${deque}();clock.setInt(e,7);
+          e.${field('ja','field_K','Ltf;')}=queue;e.${field('ja','field_u','F')}=0.75f;e.${field('ja','field_G','I')}=3;
+          e.${field('ja','field_N','I')}=4;e.${field('ja','field_m','I')}=5;e.${field('ja','field_L','I')}=3;
+          e.${field('ja','field_E','I')}=9;e.${field('ja','field_t','Z')}=true;e.${field('ja','field_B','Z')}=true;
+          e.${field('ja','field_n','[Lja;')}[0]=e;${global('og','field_r','F')}=speed;
+          double factor=(double)speed/Math.sqrt((double)(velocity[0]*velocity[0]+velocity[1]*velocity[1]));
+          float vx=(float)((double)velocity[0]*factor),vy=(float)((double)velocity[1]*factor);boolean failed=false;
+          try {e.${method('ja','a(IFIFIIFFFIF)V')}(guard,position[0],kind,velocity[0],0,lifetime,
+            Float.NaN,position[1],velocity[1],0,Float.POSITIVE_INFINITY);}
+          catch(ArithmeticException failure){failed=true;}
+          boolean expectedFailure=guard!=101;check(failed==expectedFailure,"initialization arithmetic guard");
+          sameFloat(e.${field('ja','field_o','F')},position[0],"initialized X");sameFloat(e.${field('ja','field_v','F')},position[1],"initialized Y");
+          sameFloat(e.${field('ja','field_w','F')},vx,"normalized X");sameFloat(e.${field('ja','field_F','F')},vy,"normalized Y");
+          check(e.${field('ja','field_r','I')}==lifetime && e.${field('ja','field_p','I')}==lifetime &&
+            e.${field('ja','field_z','I')}==kind && e.${field('ja','field_C','I')}==(!failed && kind==2?-1:0),"initialization partial writes");
+          sameFloat(e.${field('ja','field_u','F')},failed?0.75f:0,"initialization angle reset order");
+          check(e.${field('ja','field_N','I')}==(failed?4:0) && e.${field('ja','field_m','I')}==(failed?5:0) &&
+            e.${field('ja','field_L','I')}==(failed?3:0) && e.${field('ja','field_E','I')}==(failed?9:0) &&
+            e.${field('ja','field_G','I')}==(failed?3:0) && clock.getInt(e)==(failed?7:0),"initialization reset order");
+          check(e.${field('ja','field_t','Z')}==failed && e.${field('ja','field_B','Z')}==failed &&
+            e.${field('ja','field_K','Ltf;')}==(failed?queue:null) && e.${field('ja','field_n','[Lja;')}[0]==e,"reset retains array slots");
+          check(e.${field('ja','field_J','Ldm;')}==(!failed && kind==2?amorphous:ordinary),"sprite reset follows guard");
+          digest.update(("initialize:"+Float.floatToIntBits(speed)+":"+guard+":"+failed+":"+clock.getInt(e)+":"+
+            motionState(e)+(char)10).getBytes(java.nio.charset.StandardCharsets.UTF_8));initializations++;
+        }
+        check(constructors==50 && integrations==100 && rotations==600 && initializations==3750,"motion coverage");
+        StringBuilder hash=new StringBuilder();for(byte value:digest.digest())hash.append(String.format("%02x",value&255));
+        System.err.println("motion-matrix:"+constructors+":"+integrations+":"+rotations+":"+initializations+":"+hash);
+      }
       static final class DifficultyState {
         int step,variants,categories,interval,quota;
         float speed,rotation,scale;
@@ -1026,6 +1128,7 @@ try {
         routing();
         difficultyMatrix();
         comparatorMatrix();
+        motionMatrix();
         System.out.println("complete:"+cases+":conversion-failures:"+conversionFailures);
       }
     }`;
@@ -1059,6 +1162,10 @@ try {
       difficultySha256:difficulty,difficultyFlagCases:82944,difficultyBoundsCases:56,difficultySequenceTicks:60,
       spawnIntervalCases:112,themeQuotaCases:150,difficultyResetCases:7,spawnSelectionCases:1332,
       comparatorSha256:comparator,comparatorCases:32768}));
+    const motion=output.stderr.toString().match(/(?:^|\n)motion-matrix:50:100:600:3750:([a-f0-9]{64})(?:\n|$)/)?.[1];
+    assert.ok(motion,'complete independent motion matrix must run in every variant');
+    console.log(JSON.stringify({variant,motionSha256:motion,motionCases:4500}));
+    assert.equal(motion,expectedMotionSha256,variant);
     assert.equal(sha256,expectedNativeSha256,variant);
     if(expected===undefined)expected=output.stdout;
     else assert.equal(Buffer.compare(output.stdout,expected),0,variant);
