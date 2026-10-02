@@ -7,8 +7,8 @@ final class di {
     static int field_a;
     private jj field_f;
     static IntrusiveDeque field_e;
-    private rh field_d;
-    private rh field_b;
+    private ResourceArchive field_d;
+    private ResourceArchive field_b;
 
     final og a(byte param0, int param1) {
         byte[] var5 = null;
@@ -16,9 +16,9 @@ final class di {
         if (var3 == null) {
             int var4 = 3 % ((param0 - 57) / 42);
             if (param1 < 32768) {
-                var5 = this.field_d.a(1, -28153, param1);
+                var5 = this.field_d.getFile(1, -28153, param1);
             } else {
-                var5 = this.field_b.a(1, -28153, 32767 & param1);
+                var5 = this.field_b.getFile(1, -28153, 32767 & param1);
             }
             var3 = new og();
             if (!(var5 == null)) {

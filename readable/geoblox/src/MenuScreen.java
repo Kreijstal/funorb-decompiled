@@ -16,7 +16,7 @@ abstract class MenuScreen {
     static long field_a;
     private int hitLeftX;
 
-    final static IndexedSprite[] a(String param0, String param1, boolean param2, rh param3) {
+    final static IndexedSprite[] a(String param0, String param1, boolean param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -35,8 +35,8 @@ abstract class MenuScreen {
             stackIn_2_0 = (IndexedSprite[]) null;
             return stackIn_2_0;
           }
-          var4_int = param3.a((byte) 126, param0);
-          var5 = param3.a(param1, -89, var4_int);
+          var4_int = param3.findGroupId((byte) 126, param0);
+          var5 = param3.findFileId(param1, -89, var4_int);
           stackIn_4_0 = sd.a(true, param3, var5, var4_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

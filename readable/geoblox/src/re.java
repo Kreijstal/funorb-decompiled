@@ -5,7 +5,7 @@ final class re extends IntrusiveNode {
     static String field_f;
     int field_g;
     static Sprite widgetSprite;
-    static rh field_i;
+    static ResourceArchive field_i;
     static boolean connectivityDirty;
     int field_k;
 

@@ -692,8 +692,8 @@ the array indices, evidence, override families and remaining shared carriers.
 
 ## Remaining limitations
 
-There are 4,856 explicit guarded rules: 41 classes, 618 fields, 441 method
-declarations, 1,356 parameters and 2,400 locals. This is not full deobfuscation.
+There are 5,084 explicit guarded rules: 42 classes, 624 fields, 463 method
+declarations, 1,409 parameters and 2,546 locals. This is not full deobfuscation.
 Unknown flags, guard arguments and opaque shared helpers still need
 investigation. Current names and source identities live in the single manifest;
 previous naming and structural passes remain in Git. The earlier early-exit migration
@@ -1819,3 +1819,70 @@ reproduction and reversal support these identities. Native gameplay fixtures
 cover the renamed owner's existing avatar/queue consumers, without new prefix
 codec execution. Real table setup, actual packets/archives, opaque helpers,
 complete gameplay and device performance remain unfinished or unverified.
+
+## Resource archive storage and lookup (pass 66)
+
+`ResourceArchive` names the instance archive wrapper of `rh`; the static
+attached-entity update and shared text helpers remain on that class. It owns a
+lazy `index` from `archiveSource`, staged `packedGroups`, per-group `decodedFiles`,
+a `discardPackedGroups` flag and `fileRetentionPolicy`. Successful index acquisition
+allocates both top-level arrays. If allocation fails after the index assignment,
+that partial state remains; subsequent index checks still observe the stored index.
+
+| API | Existing behavior |
+| --- | --- |
+| `ensureIndexLoaded(methodGuard)` | Fetch metadata and allocate group/file storage lazily |
+| `getGroupSlotCount(returnGuardConstant)` / `getFileSlotCount(methodGuard, groupId)` | Return sparse slot capacities, with original guard constants and unavailable values |
+| `hasGroupName`, `findGroupId`, `findFileId` | Lowercase with existing locale behavior, hash signed encoded text bytes and consult name tables |
+| `loadPackedGroup`, `loadGroupIfNeeded`, `loadGroupByName`, `loadAllGroups` | Stage source payloads; availability does not imply decoded files |
+| `isValidGroupId` / `isValidFileId` | Check slot ranges; file validation does not independently reject sparse holes |
+| `isFileAvailable` / `isNamedFileAvailable` | Report decoded entry or staged packed bytes, requesting a group if needed |
+| `getFile`, `getNamedFile`, `getSingleFile` | Retrieve bytes through cache/unpack/load/retry paths and apply retention cleanup |
+| `getGroupProgress`, `getGroupProgressByName`, `getLoadProgress` | Report staged groups as 100 or use source progress; aggregate only groups with actual files |
+
+`loadAllGroups(initialSuccess)` seeds its result from the argument: false stays
+false even when all groups are loaded. `getSingleFile` selects group 0 when there
+is one group slot; otherwise it requires a valid group containing one file slot.
+The methods retain their original unusual guards and early-return ordering.
+Name lookup preserves group/file argument order, nullable failures, default-locale
+lowercasing and original diagnostic strings. `findGroupId` can clear the discard
+flag through its wrong guard only after finding a valid group.
+
+`unpackGroup(requestedFileId, methodGuard, decryptionKey, groupId)` validates the
+group, requires staged bytes, allocates file slots and scans actual sparse file
+IDs. Already cached files return success. A supplied key with a nonzero first
+four words copies packed storage before decrypting byte range [5,length); null
+or all-zero keys retain the original storage path. Guard 4 is checked after
+extraction/decryption. Decompression failure preserves group, key-presence,
+length, checksums and index context. The discard flag clears packed storage only
+after successful decompression, before file splitting.
+
+Multi-file payloads end with a chunk-count byte and a BE32 length-delta table.
+Accumulating each row reconstructs successive file chunk lengths. Ordinary
+policies make a sizing pass, allocate each file, reset write positions and copy
+all chunks. Policy 2 sums and copies only the requested file. Its zero-length
+case returns true without storing an entry. Original aliases, table offsets,
+signed overflow, malformed inputs, allocations and partial writes remain.
+Several integer slots are reused for chunk/file indices, lengths and offsets;
+combined local names make those role changes explicit.
+
+| fileRetentionPolicy | Storage and successful retrieval cleanup |
+| --- | --- |
+| 0 | Keep decoded files through the existing storage helper; arrays up to 136 bytes can remain raw |
+| 1 | Store raw files, clear the retrieved file, and clear its group slots when that group has one file slot |
+| 2 | Store raw requested output, selectively split multi-file groups, then clear the decoded group on retrieval |
+
+`discardPackedGroups` is independent of these three policies. True uses direct
+source bytes during staging and discards packed data after decompression; false
+uses the storage helper and retains the packed group. Small storage-helper
+inputs can still be raw aliases. Successful retrieval extracts bytes before
+cleanup; failures add no rollback or finally cleanup. Existing synchronized
+method boundaries remain.
+
+Every instance field/API and constructor parameter/local has a guarded name,
+with all previous complete rules unchanged. Compilation, binding checks,
+reproduction and reversal support this pass. The native text fixture preserves
+its decoder and nested null-archive diagnostic scope; it does not execute group
+unpacking, source concurrency, storage wrappers or real assets. Archive-index,
+provider and compression helpers, static shared names, full gameplay and device
+performance remain unfinished or unverified.

@@ -14,7 +14,7 @@ abstract class SpriteState extends DualLinkNode {
     int trimX;
     static String field_q;
 
-    final static void a(boolean param0, rh param1) {
+    final static void a(boolean param0, ResourceArchive param1) {
         RuntimeException stackIn_310_0 = null;
         StringBuilder stackIn_310_1 = null;
         String stackIn_311_2 = null;

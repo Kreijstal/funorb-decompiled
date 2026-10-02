@@ -5,7 +5,7 @@ final class wj extends sh {
     static String fullscreenAfterAcceptText;
     static String createInvalidEmailAlertText;
     int field_D;
-    static rh field_F;
+    static ResourceArchive field_F;
     static boolean[] field_G;
     static String createDisplayNameText;
 
@@ -236,7 +236,7 @@ final class wj extends sh {
         }
     }
 
-    final static Sprite[] loadSpriteFrames(String resourceName, String groupName, rh graphicsArchive, int methodGuard) {
+    final static Sprite[] loadSpriteFrames(String resourceName, String groupName, ResourceArchive graphicsArchive, int methodGuard) {
         int archiveGroupId = 0;
         RuntimeException var4 = null;
         int archiveFileId = 0;
@@ -250,8 +250,8 @@ final class wj extends sh {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          archiveGroupId = graphicsArchive.a((byte) 126, groupName);
-          archiveFileId = graphicsArchive.a(resourceName, -114, archiveGroupId);
+          archiveGroupId = graphicsArchive.findGroupId((byte) 126, groupName);
+          archiveFileId = graphicsArchive.findFileId(resourceName, -114, archiveGroupId);
           if (methodGuard != 0) {
             field_G = (boolean[]) null;
           }

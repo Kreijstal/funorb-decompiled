@@ -5,7 +5,7 @@ import java.io.*;
 
 final class pf extends ee implements ga, pl {
     private String field_L;
-    static rh field_O;
+    static ResourceArchive field_O;
     private dj field_P;
     private boolean field_C;
     private hk field_G;
@@ -119,7 +119,7 @@ final class pf extends ee implements ga, pl {
             jl.a((byte) -123);
           }
           if (param0 >= -95) {
-            field_O = (rh) null;
+            field_O = (ResourceArchive) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -152,7 +152,7 @@ final class pf extends ee implements ga, pl {
             this.g(param1 ^ -18649);
           }
           if (param1 != -18649) {
-            field_O = (rh) null;
+            field_O = (ResourceArchive) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

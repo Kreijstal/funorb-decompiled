@@ -419,7 +419,7 @@ final class kj extends ia {
         }
     }
 
-    final synchronized boolean a(ci param0, int param1, int param2, rf param3, rh param4) {
+    final synchronized boolean a(ci param0, int param1, int param2, rf param3, ResourceArchive param4) {
         int stackIn_17_0 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;

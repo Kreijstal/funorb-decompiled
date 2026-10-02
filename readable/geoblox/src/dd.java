@@ -6,7 +6,7 @@ abstract class dd extends ee {
     boolean field_I;
     static PaletteBitmapFont uiPaletteFont;
     static int variantMatchCandidateCount;
-    static rh field_J;
+    static ResourceArchive field_J;
     private int field_H;
     static int decodedSpriteCanvasHeight;
     static String loadingMusicText;
@@ -14,7 +14,7 @@ abstract class dd extends ee {
 
     final static boolean a(byte param0) {
         if (param0 != 47) {
-            field_J = (rh) null;
+            field_J = (ResourceArchive) null;
             return cg.b(true);
         }
         return cg.b(true);

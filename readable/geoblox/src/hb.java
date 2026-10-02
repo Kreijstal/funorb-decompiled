@@ -4,7 +4,7 @@
 final class hb implements dh {
     static int[] field_l;
     static int field_b;
-    static rh field_n;
+    static ResourceArchive field_n;
     private int field_m;
     static String playFreeVersionText;
     private int field_e;

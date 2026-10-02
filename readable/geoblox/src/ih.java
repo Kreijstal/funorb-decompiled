@@ -209,7 +209,7 @@ final class ih {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > 119) {
-            stackIn_4_0 = pf.field_O.a(0, param1, "");
+            stackIn_4_0 = pf.field_O.getNamedFile(0, param1, "");
             return stackIn_4_0;
           }
           stackIn_2_0 = (byte[]) null;

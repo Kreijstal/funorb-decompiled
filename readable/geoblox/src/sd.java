@@ -35,7 +35,7 @@ final class sd extends pb {
         throw new RuntimeException();
     }
 
-    final static IndexedSprite[] a(boolean param0, rh param1, int param2, int param3) {
+    final static IndexedSprite[] a(boolean param0, ResourceArchive param1, int param2, int param3) {
         RuntimeException var4 = null;
         IndexedSprite[] stackIn_2_0 = null;
         RuntimeException stackIn_9_0 = null;

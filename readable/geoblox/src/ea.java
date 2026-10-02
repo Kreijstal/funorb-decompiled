@@ -85,7 +85,7 @@ final class ea extends IntrusiveNode {
         }
     }
 
-    final static CoverageBitmapFont loadCoverageFontById(rh glyphGraphicsArchive, byte methodGuard, rh fontMetricsArchive, int fileId, int groupId) {
+    final static CoverageBitmapFont loadCoverageFontById(ResourceArchive glyphGraphicsArchive, byte methodGuard, ResourceArchive fontMetricsArchive, int fileId, int groupId) {
         int sentinelRemainder = 0;
         RuntimeException fontFailureForContext = null;
         CoverageBitmapFont fontBeforeReturn = null;
@@ -100,7 +100,7 @@ final class ea extends IntrusiveNode {
             return null;
           }
           sentinelRemainder = 8 % ((-50 - methodGuard) / 51);
-          fontBeforeReturn = PrefixCodeDecoder.buildCoverageFontFromDecodedSprites(fontMetricsArchive.a(groupId, -28153, fileId), false);
+          fontBeforeReturn = PrefixCodeDecoder.buildCoverageFontFromDecodedSprites(fontMetricsArchive.getFile(groupId, -28153, fileId), false);
           return fontBeforeReturn;
         } catch (java.lang.RuntimeException fontFailure) {
           caughtFontFailure = fontFailure;

@@ -104,7 +104,7 @@ final class vl extends IntrusiveNode {
         field_l = null;
     }
 
-    final static vl a(int param0, byte param1, rh param2) {
+    final static vl a(int param0, byte param1, ResourceArchive param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
@@ -115,7 +115,7 @@ final class vl extends IntrusiveNode {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = param2.d(28319, param0);
+          var4 = param2.getSingleFile(28319, param0);
           var3 = var4;
           if (param1 < 26) {
             field_p = 30;

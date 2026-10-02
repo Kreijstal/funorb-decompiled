@@ -105,7 +105,7 @@ final class oi {
         }
     }
 
-    final static Sprite[] a(byte param0, String param1, String param2, rh param3) {
+    final static Sprite[] a(byte param0, String param1, String param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -121,8 +121,8 @@ final class oi {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = -59 % ((41 - param0) / 39);
-          var4_int = param3.a((byte) 127, param2);
-          var6 = param3.a(param1, -101, var4_int);
+          var4_int = param3.findGroupId((byte) 127, param2);
+          var6 = param3.findFileId(param1, -101, var4_int);
           stackIn_1_0 = rd.a(var4_int, -122, var6, param3);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

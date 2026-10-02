@@ -28,7 +28,7 @@ final class mf {
         selectedThemeBackground = null;
     }
 
-    final static boolean decodeSpritesFromArchive(int fileId, int groupId, int methodGuard, rh graphicsArchive) {
+    final static boolean decodeSpritesFromArchive(int fileId, int groupId, int methodGuard, ResourceArchive graphicsArchive) {
         byte[] unusedSpriteBytesSnapshot = null;
         RuntimeException decodeFailureForContext = null;
         byte[] spriteBytes = null;
@@ -37,7 +37,7 @@ final class mf {
         String graphicsArchiveDescription = null;
         RuntimeException caughtDecodeFailure = null;
         try {
-          spriteBytes = graphicsArchive.a(groupId, -28153, fileId);
+          spriteBytes = graphicsArchive.getFile(groupId, -28153, fileId);
           unusedSpriteBytesSnapshot = spriteBytes;
           if (methodGuard < 102) {
             return false;

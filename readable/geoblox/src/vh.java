@@ -10,9 +10,9 @@ final class vh extends ee implements pl {
     static Sprite largeBoxSprite;
     static String tutorialRotationMessage;
 
-    final static IndexedSprite a(int param0, rh param1, int param2, boolean param3) {
+    final static IndexedSprite a(int param0, ResourceArchive param1, int param2, boolean param3) {
         RuntimeException var4 = null;
-        rh var5 = null;
+        ResourceArchive var5 = null;
         Object stackIn_2_0 = null;
         IndexedSprite stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -25,8 +25,8 @@ final class vh extends ee implements pl {
             return (IndexedSprite) ((Object) stackIn_2_0);
           }
           if (!param3) {
-            var5 = (rh) null;
-            vh.a(110, (rh) null, -39, true);
+            var5 = (ResourceArchive) null;
+            vh.a(110, (ResourceArchive) null, -39, true);
           }
           stackIn_6_0 = ab.buildFirstIndexedSpriteFromDecodedSheet(104);
           return stackIn_6_0;
@@ -66,7 +66,7 @@ final class vh extends ee implements pl {
             vh.f(29);
         }
         if (kd.field_b == IntrusiveDeque.field_d) {
-            return rh.field_i;
+            return ResourceArchive.field_i;
         }
         if (!ih.field_c.a(-113)) {
             return ih.field_c.b(param0 + 19391);

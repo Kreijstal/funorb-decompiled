@@ -3,7 +3,7 @@
  */
 final class dc {
     static int field_a;
-    static rh field_c;
+    static ResourceArchive field_c;
     static int field_b;
 
     public static void b(int param0) {

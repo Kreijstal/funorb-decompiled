@@ -153,7 +153,7 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
 
     final static void b(int param0) {
         String var2 = (String) null;
-        f.b(rh.field_i, (String) null, 7697781);
+        f.b(ResourceArchive.field_i, (String) null, 7697781);
         if (param0 != -1) {
             field_a = (Sprite) null;
         }

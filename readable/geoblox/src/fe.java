@@ -5,7 +5,7 @@ import java.util.*;
 
 final class fe {
     static int field_d;
-    static rh field_a;
+    static ResourceArchive field_a;
     static int field_k;
     private static ck field_h;
     static rf field_e;

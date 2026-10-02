@@ -329,7 +329,7 @@ final class rd extends ff {
         }
     }
 
-    final static Sprite[] a(int param0, int param1, int param2, rh param3) {
+    final static Sprite[] a(int param0, int param1, int param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

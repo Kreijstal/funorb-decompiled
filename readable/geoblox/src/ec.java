@@ -23,10 +23,10 @@ final class ec {
             bm.a(var5, param1, -127);
             var5 = (ai) ((Object) nf.field_j.nextForIteration(1));
           }
-          var6 = (mg) ((Object) rh.field_d.firstForIteration(0));
+          var6 = (mg) ((Object) ResourceArchive.field_d.firstForIteration(0));
           L1: while (var6 != null) {
             ib.a(param1, 5, var6);
-            var6 = (mg) ((Object) rh.field_d.nextForIteration(1));
+            var6 = (mg) ((Object) ResourceArchive.field_d.nextForIteration(1));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

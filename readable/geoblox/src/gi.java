@@ -62,7 +62,7 @@ final class gi implements Iterable {
         }
     }
 
-    final static MonochromeBitmapFont loadBitmapFont(rh fontMetricsArchive, int methodGuard, rh glyphGraphicsArchive, String resourceName, String groupName) {
+    final static MonochromeBitmapFont loadBitmapFont(ResourceArchive fontMetricsArchive, int methodGuard, ResourceArchive glyphGraphicsArchive, String resourceName, String groupName) {
         int archiveGroupId = 0;
         RuntimeException fontFailureForContext = null;
         int archiveFileId = 0;
@@ -78,11 +78,11 @@ final class gi implements Iterable {
         String groupNameDescription = null;
         RuntimeException caughtFontFailure = null;
         try {
-          archiveGroupId = glyphGraphicsArchive.a((byte) 126, groupName);
+          archiveGroupId = glyphGraphicsArchive.findGroupId((byte) 126, groupName);
           if (methodGuard != 1) {
             field_b = (int[]) null;
           }
-          archiveFileId = glyphGraphicsArchive.a(resourceName, methodGuard ^ -82, archiveGroupId);
+          archiveFileId = glyphGraphicsArchive.findFileId(resourceName, methodGuard ^ -82, archiveGroupId);
           fontBeforeReturn = rb.loadMonochromeFontById(archiveFileId, 0, glyphGraphicsArchive, archiveGroupId, fontMetricsArchive);
           return fontBeforeReturn;
         } catch (java.lang.RuntimeException fontFailure) {

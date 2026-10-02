@@ -9,7 +9,7 @@ final class ab {
     static int field_b;
     static volatile boolean field_a;
 
-    final static void a(int param0, rh param1) {
+    final static void a(int param0, ResourceArchive param1) {
         MusicDecoder var2 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -17,7 +17,7 @@ final class ab {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         try {
-          MusicDecoder.a(param1.a(0, "", "headers.packvorbis"));
+          MusicDecoder.a(param1.getNamedFile(0, "", "headers.packvorbis"));
           var2 = MusicDecoder.a(param1, "jagex logo2.packvorbis", "");
           var2.decodePcm();
           if (param0 < 29) {

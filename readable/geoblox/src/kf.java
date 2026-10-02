@@ -6,7 +6,7 @@ final class kf {
     static String pleaseTryAgainText;
     static boolean field_e;
     static int field_d;
-    static rh field_c;
+    static ResourceArchive field_c;
 
     public static void b(int param0) {
         pleaseTryAgainText = null;

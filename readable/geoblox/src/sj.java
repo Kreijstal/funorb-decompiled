@@ -12,7 +12,7 @@ final class sj {
 
     final static void a(p param0, int param1, int param2) {
         try {
-            rh.field_a.addLast(-81, param0);
+            ResourceArchive.field_a.addLast(-81, param0);
             ol.a(param2, param0, 30175);
             int var3_int = -18 % ((param1 - 3) / 40);
         } catch (RuntimeException runtimeException) {

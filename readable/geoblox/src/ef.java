@@ -43,7 +43,7 @@ final class ef implements Iterator {
         try {
           var1_float = el.gameplaySession.boardAngleRadians;
           ab.moveEntitiesAndCollectContacts(param0 - 22, var1_float);
-          rh.updateAttachedEntities((byte) 123);
+          ResourceArchive.updateAttachedEntities((byte) 123);
           if (param0 != -15) {
             ef.a((byte) -11);
           }

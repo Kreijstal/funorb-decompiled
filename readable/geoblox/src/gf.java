@@ -35,7 +35,7 @@ final class gf {
             return;
         }
         String var2 = (String) null;
-        gf.formatArchiveGroupProgress((String) null, (rh) null, (String) null, (String) null, true);
+        gf.formatArchiveGroupProgress((String) null, (ResourceArchive) null, (String) null, (String) null, true);
         queuedKeyStateChanges = null;
         createPasswordContainsNameAlertText = null;
     }
@@ -119,7 +119,7 @@ final class gf {
         var2.writeByte((byte) -20, 0);
     }
 
-    final static String formatArchiveGroupProgress(String fallbackMessage, rh archive, String groupName, String progressLabel, boolean methodGuard) {
+    final static String formatArchiveGroupProgress(String fallbackMessage, ResourceArchive archive, String groupName, String progressLabel, boolean methodGuard) {
         RuntimeException progressFailureForContext = null;
         String fallbackBeforeReturn = null;
         String formattedProgressMessage = null;
@@ -137,11 +137,11 @@ final class gf {
           if (!methodGuard) {
             field_b = (int[]) null;
           }
-          if (!archive.a(0)) {
+          if (!archive.ensureIndexLoaded(0)) {
             fallbackBeforeReturn = (String) (fallbackMessage);
             return fallbackBeforeReturn;
           }
-          formattedProgressMessage = progressLabel + " - " + archive.a(0, groupName) + "%";
+          formattedProgressMessage = progressLabel + " - " + archive.getGroupProgressByName(0, groupName) + "%";
           return formattedProgressMessage;
         } catch (java.lang.RuntimeException archiveProgressFailure) {
           caughtProgressFailure = archiveProgressFailure;

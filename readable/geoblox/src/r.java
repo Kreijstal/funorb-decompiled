@@ -50,7 +50,7 @@ final class r extends f implements pl {
                 var4 = hi.createIneligibleText;
               }
             } else {
-              var4 = rh.createUsernameUnavailableText;
+              var4 = ResourceArchive.createUsernameUnavailableText;
               if (null != this.field_tb) {
                 this.field_tb.a((byte) 83);
               }

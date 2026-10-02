@@ -43,7 +43,7 @@ class vf extends hk {
             var6 = param2;
           } else {
             var7 = (CharSequence) ((Object) param2);
-            var4_long = rh.a(var7, -48);
+            var4_long = ResourceArchive.a(var7, -48);
           }
           stackIn_6_0 = SecondaryDeque.a(true, var4_long, (String) (var6), param1, param0);
           return stackIn_6_0;

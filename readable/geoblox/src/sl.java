@@ -12,7 +12,7 @@ final class sl {
     static String orbPointsText;
     static Sprite[] achievementSprites;
     static String loginEmailText;
-    static rh field_l;
+    static ResourceArchive field_l;
     static Sprite germsForegroundSprite;
 
     final static void a(java.awt.Canvas param0, int param1) {
@@ -140,7 +140,7 @@ final class sl {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2) {
-            field_l = (rh) null;
+            field_l = (ResourceArchive) null;
           }
           stackIn_3_0 = param1.a(param0, -17978);
           return stackIn_3_0;

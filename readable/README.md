@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 4,856 guarded naming rules: 41 classes, 618 fields,
-441 methods, 1,356 parameters and 2,400 local declarations. Both 303-file corpora
+The current export has 5,084 guarded naming rules: 42 classes, 624 fields,
+463 methods, 1,409 parameters and 2,546 local declarations. Both 303-file corpora
 compile, preserving 138,558 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -54,7 +54,36 @@ smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
 
-## Current prefix-code text decoding names
+## Current resource archive names
+
+Pass 66 adds 228 guarded identities: one class, six fields, 22 methods,
+53 parameters and 146 locals. `ResourceArchive` names the instance role of `rh`.
+Every instance field/API, constructor parameter and selected local now has a
+name. Unrelated static gameplay/text helpers retain their owner and identities.
+The wrapper exposes lazy `index`/`archiveSource`, `packedGroups`, `decodedFiles`,
+`discardPackedGroups` and `fileRetentionPolicy`.
+
+Lookups preserve default-locale lowercasing and signed encoded-byte hashing.
+Slot capacities remain distinct from actual sparse file counts. Group unpacking
+retains copy-before-XTEA, decompression context, chunk-delta sizing/copying and
+three decoded-file retention policies. Policy 0 keeps files through the storage
+helper (small arrays can remain raw); policy 1 clears each retrieved file;
+policy 2 selectively unpacks the requested file and clears its decoded group
+on retrieval. The separate discard flag clears packed data only after successful
+decompression. Zero-length selective output still returns success without a
+cached entry. Monitors, guard effects, aliases, overflow and partial changes
+remain. Reused chunk-loop slots have combined names that describe their role changes.
+
+All 4,856 previous complete rules and source/generator pins stay unchanged.
+The 5,084 rules apply 43,242 identifier edits; both 303-file corpora compile,
+preserving 138,558 bindings and 388 overrides. Reproduction and dictionary
+reversal are byte-exact. The existing native text fixture retains its decoder
+and nested null-archive failure scope; it does not newly execute archive
+unpacking or storage. Archive-index/provider/compression helpers, static shared
+names, actual assets/server traffic, complete gameplay and phone/FPS/heap
+behavior remain unfinished or unverified.
+
+## Previous prefix-code text decoding names
 
 Pass 65 adds 59 guarded identities: one class, two fields, two methods,
 nine parameters and 45 locals. `PrefixCodeDecoder` names the instance role of
@@ -1008,7 +1037,7 @@ its historical proof recorded in the raw provenance. Current source/decompiler
 identity and naming migrations live in the single manifest. `ruleChanges`
 records naming changes; `sourceChange` is recorded when input identity changes.
 The latest structural pass records its source migration in Git. The current
-naming-only pass retains those source pins and records its 59 additions in
+naming-only pass retains those source pins and records its 228 additions in
 `ruleChanges`; every prior guarded rule is retained.
 All six native probe sources and their traces are pinned in
 the same manifest; no JSON snapshots are added.
@@ -1033,6 +1062,6 @@ the same manifest; no JSON snapshots are added.
 | Java source tree | SHA-256 |
 | --- | --- |
 | Raw | `39be3539b43d7acc9540acca49e7b6378cdb233908092706646df4c2cdc6a8fe` |
-| Readable | `c6cfa2a68344ca3ffd59da4f9685fe9770cd7446b1faaedef452434a7d40317d` |
+| Readable | `31a6288c4c9bfd4ec10c5e8ec37b0be91b103e56b7dab7acc1c5e8278c519c23` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

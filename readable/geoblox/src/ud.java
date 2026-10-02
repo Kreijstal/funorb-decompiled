@@ -13,10 +13,10 @@ final class ud {
         RuntimeException var2_ref = null;
         var3 = Geoblox.field_C;
         try {
-          var4 = (p) ((Object) rh.field_a.firstForIteration(0));
+          var4 = (p) ((Object) ResourceArchive.field_a.firstForIteration(0));
           L0: while (var4 != null) {
             ol.a(param1, var4, 30175);
-            var4 = (p) ((Object) rh.field_a.nextForIteration(1));
+            var4 = (p) ((Object) ResourceArchive.field_a.nextForIteration(1));
           }
           var2 = k.field_e.firstForIteration(0);
           if (param0 > -123) {
@@ -145,7 +145,7 @@ final class ud {
               break L0;
             }
             if (var2 == 1) {
-              var11 = (p) ((Object) rh.field_a.firstForIteration(0));
+              var11 = (p) ((Object) ResourceArchive.field_a.firstForIteration(0));
               if (var11 == null) {
                 jl.a((byte) -120);
                 return;

@@ -270,7 +270,7 @@ final class uk extends TextInputValidator {
             stackIn_16_0 = ph.createUsernameAvailableText;
             return stackIn_16_0;
           }
-          stackIn_14_0 = rh.createUsernameUnavailableText;
+          stackIn_14_0 = ResourceArchive.createUsernameUnavailableText;
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

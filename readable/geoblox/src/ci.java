@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ci {
-    private rh field_d;
+    private ResourceArchive field_d;
     private fi field_a;
-    private rh field_c;
+    private ResourceArchive field_c;
     private fi field_b;
 
     final PcmSample c(int param0, String param1) {
@@ -74,11 +74,11 @@ final class ci {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (1 == this.field_d.a(false)) {
+          if (1 == this.field_d.getGroupSlotCount(false)) {
             stackIn_3_0 = this.a(param2, 0, param0, (byte) 14);
             return stackIn_3_0;
           }
-          if (param1 != this.field_d.c(-9467, param0)) {
+          if (param1 != this.field_d.getFileSlotCount(-9467, param0)) {
             throw new RuntimeException();
           }
           stackIn_7_0 = this.a(param2, param0, 0, (byte) 14);
@@ -106,11 +106,11 @@ final class ci {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_c.a(param2) == 1) {
+          if (this.field_c.getGroupSlotCount(param2) == 1) {
             stackIn_3_0 = this.a(param1, 97, 0, param0);
             return stackIn_3_0;
           }
-          if (1 != this.field_c.c(-9467, param0)) {
+          if (1 != this.field_c.getFileSlotCount(-9467, param0)) {
             throw new RuntimeException();
           }
           stackIn_7_0 = this.a(param1, 125, param0, 0);
@@ -141,9 +141,9 @@ final class ci {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -90) {
-            this.field_d = (rh) null;
+            this.field_d = (ResourceArchive) null;
           }
-          if (!this.field_c.b((byte) -126, "")) {
+          if (!this.field_c.hasGroupName((byte) -126, "")) {
             stackIn_6_0 = this.a(param2, "", param1, true);
             return stackIn_6_0;
           }
@@ -218,14 +218,14 @@ final class ci {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = this.field_c.a((byte) 127, param2);
+          var5_int = this.field_c.findGroupId((byte) 127, param2);
           if (var5_int < 0) {
             return null;
           }
           if (!param3) {
-            this.field_c = (rh) null;
+            this.field_c = (ResourceArchive) null;
           }
-          var6 = this.field_c.a(param1, -98, var5_int);
+          var6 = this.field_c.findFileId(param1, -98, var5_int);
           if (var6 >= 0) {
             stackIn_9_0 = this.a(param0, 98, var5_int, var6);
             return stackIn_9_0;
@@ -277,7 +277,7 @@ final class ci {
           var6 = (long)var5_int;
           var8 = (PcmSample) ((Object) this.field_b.a(var6, (byte) -74));
           if (param1 <= 19) {
-            this.field_c = (rh) null;
+            this.field_c = (ResourceArchive) null;
           }
           if (var8 != null) {
             stackIn_5_0 = (PcmSample) (var8);
@@ -424,7 +424,7 @@ final class ci {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_d.b((byte) -120, "")) {
+          if (this.field_d.hasGroupName((byte) -120, "")) {
             stackIn_3_0 = this.a(param0, param1, 12628, "");
             return stackIn_3_0;
           }
@@ -470,7 +470,7 @@ final class ci {
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = this.field_d.a((byte) 127, param3);
+          var5_int = this.field_d.findGroupId((byte) 127, param3);
           if (0 > var5_int) {
             stackIn_2_0 = null;
             return (PcmSample) ((Object) stackIn_2_0);
@@ -479,7 +479,7 @@ final class ci {
             stackIn_5_0 = (PcmSample) null;
             return stackIn_5_0;
           }
-          var6 = this.field_d.a(param0, -89, var5_int);
+          var6 = this.field_d.findFileId(param0, -89, var5_int);
           if (var6 >= 0) {
             stackIn_10_0 = this.a(param1, var5_int, var6, (byte) 14);
             return stackIn_10_0;
@@ -512,7 +512,7 @@ final class ci {
         }
     }
 
-    ci(rh param0, rh param1) {
+    ci(ResourceArchive param0, ResourceArchive param1) {
         this.field_a = new fi(256);
         this.field_b = new fi(256);
         try {

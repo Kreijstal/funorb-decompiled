@@ -290,7 +290,7 @@ final class p extends IntrusiveNode {
           if (param1 != 3) {
             field_i = (ue) null;
           }
-          var2 = fh.a(rh.a(param0, -48), -78);
+          var2 = fh.a(ResourceArchive.a(param0, -48), -78);
           if (null == var2) {
             var2 = "";
           }

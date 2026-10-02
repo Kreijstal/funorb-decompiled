@@ -81,8 +81,8 @@ final class fg {
         this.field_b = param0.readUnsignedShortBE(true);
     }
 
-    final static fg a(rh param0, int param1, int param2) {
-        byte[] var3 = param0.a(param1, -28153, param2);
+    final static fg a(ResourceArchive param0, int param1, int param2) {
+        byte[] var3 = param0.getFile(param1, -28153, param2);
         if (var3 == null) {
             return null;
         }

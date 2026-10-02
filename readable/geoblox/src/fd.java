@@ -18,7 +18,7 @@ final class fd {
           var3 = param0.getParameter("username");
           if (var3 != null) {
             var4 = (CharSequence) ((Object) var3);
-            if (0L != rh.a(var4, -48)) {
+            if (0L != ResourceArchive.a(var4, -48)) {
               return;
             }
           }

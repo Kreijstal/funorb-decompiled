@@ -90,7 +90,7 @@ abstract class jg {
         }
     }
 
-    final static IndexedSprite loadIndexedSprite(rh graphicsArchive, int methodGuard, String groupName, String resourceName) {
+    final static IndexedSprite loadIndexedSprite(ResourceArchive graphicsArchive, int methodGuard, String groupName, String resourceName) {
         int archiveGroupId = 0;
         RuntimeException var4 = null;
         int archiveFileId = 0;
@@ -104,11 +104,11 @@ abstract class jg {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          archiveGroupId = graphicsArchive.a((byte) 127, groupName);
+          archiveGroupId = graphicsArchive.findGroupId((byte) 127, groupName);
           if (methodGuard != 1) {
             field_a = 100;
           }
-          archiveFileId = graphicsArchive.a(resourceName, -110, archiveGroupId);
+          archiveFileId = graphicsArchive.findFileId(resourceName, -110, archiveGroupId);
           stackIn_3_0 = vh.a(archiveFileId, graphicsArchive, archiveGroupId, true);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -147,7 +147,7 @@ abstract class jg {
         themeCycleColors = (int[][]) null;
     }
 
-    final static void a(rh param0, byte param1, rh param2, rh param3, rh param4) {
+    final static void a(ResourceArchive param0, byte param1, ResourceArchive param2, ResourceArchive param3, ResourceArchive param4) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;

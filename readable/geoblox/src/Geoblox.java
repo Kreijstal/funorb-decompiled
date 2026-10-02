@@ -10,8 +10,8 @@ public final class Geoblox extends wf {
     public static int field_C;
 
     private final void loadSportsTheme(int param0) {
-        if (ll.gameGraphicsArchive.a(0)) {
-            if (!(ll.gameGraphicsArchive.a("sports", (byte) -126))) {
+        if (ll.gameGraphicsArchive.ensureIndexLoaded(0)) {
+            if (!(ll.gameGraphicsArchive.loadGroupByName("sports", (byte) -126))) {
                 return;
             }
             if (param0 <= 37) {
@@ -238,15 +238,15 @@ public final class Geoblox extends wf {
     }
 
     private final boolean pollArchiveLoading(boolean param0) {
-        rh stackIn_10_0 = null;
+        ResourceArchive stackIn_10_0 = null;
         boolean stackIn_11_1 = false;
         String stackIn_27_0;
-        rh stackIn_27_1;
+        ResourceArchive stackIn_27_1;
         String stackIn_27_2;
         String stackIn_27_3;
         boolean stackIn_28_4 = false;
         String stackIn_47_0;
-        rh stackIn_47_1;
+        ResourceArchive stackIn_47_1;
         String stackIn_47_2;
         String stackIn_47_3;
         boolean stackIn_48_4 = false;
@@ -254,26 +254,26 @@ public final class Geoblox extends wf {
           return true;
         }
         s.g(9);
-        if (wj.field_F.a(0)) {
-          if (wj.field_F.b(true)) {
-            if (ah.field_c.a(0)) {
+        if (wj.field_F.ensureIndexLoaded(0)) {
+          if (wj.field_F.loadAllGroups(true)) {
+            if (ah.field_c.ensureIndexLoaded(0)) {
               stackIn_10_0 = ah.field_c;
               stackIn_11_1 = (param0) ? false : true;
-              if (((rh) (Object) stackIn_10_0).b(stackIn_11_1)) {
-                if (fe.field_a.a(0)) {
-                  if (fe.field_a.b(true)) {
-                    if (cd.field_m.a(0)) {
-                      if (cd.field_m.b(true)) {
-                        if (ii.fontMetricsArchive.a(0)) {
-                          if (ii.fontMetricsArchive.b(true)) {
-                            if (ll.gameGraphicsArchive.a(0)) {
-                              if (ll.gameGraphicsArchive.a("", (byte) -127)) {
-                                if (ll.gameGraphicsArchive.a(0)) {
-                                  if (ll.gameGraphicsArchive.a("sun", (byte) -127)) {
+              if (((ResourceArchive) (Object) stackIn_10_0).loadAllGroups(stackIn_11_1)) {
+                if (fe.field_a.ensureIndexLoaded(0)) {
+                  if (fe.field_a.loadAllGroups(true)) {
+                    if (cd.field_m.ensureIndexLoaded(0)) {
+                      if (cd.field_m.loadAllGroups(true)) {
+                        if (ii.fontMetricsArchive.ensureIndexLoaded(0)) {
+                          if (ii.fontMetricsArchive.loadAllGroups(true)) {
+                            if (ll.gameGraphicsArchive.ensureIndexLoaded(0)) {
+                              if (ll.gameGraphicsArchive.loadGroupByName("", (byte) -127)) {
+                                if (ll.gameGraphicsArchive.ensureIndexLoaded(0)) {
+                                  if (ll.gameGraphicsArchive.loadGroupByName("sun", (byte) -127)) {
                                     L8: {
                                       if (da.a(0, -112)) {
-                                        if (ll.gameGraphicsArchive.a(0)) {
-                                          if (ll.gameGraphicsArchive.a("halloween", (byte) -127)) {
+                                        if (ll.gameGraphicsArchive.ensureIndexLoaded(0)) {
+                                          if (ll.gameGraphicsArchive.loadGroupByName("halloween", (byte) -127)) {
                                             break L8;
                                           }
                                         }
@@ -281,8 +281,8 @@ public final class Geoblox extends wf {
                                         return false;
                                       }
                                     }
-                                    if (ki.basicUiGraphicsArchive.a(0)) {
-                                      if (ki.basicUiGraphicsArchive.a("basic", (byte) -124)) {
+                                    if (ki.basicUiGraphicsArchive.ensureIndexLoaded(0)) {
+                                      if (ki.basicUiGraphicsArchive.loadGroupByName("basic", (byte) -124)) {
                                         if (param0) {
                                           return true;
                                         }
@@ -350,7 +350,7 @@ public final class Geoblox extends wf {
         PointerInputListener.a(-29313);
         vk.a(-42);
         SoftwareRasterizer.releaseRasterStorage();
-        rh.b(30261);
+        ResourceArchive.b(30261);
         b.a(17062);
         kb.c(105);
         ByteArrayBuffer.clearWhirlpoolTables(0);
@@ -572,8 +572,8 @@ public final class Geoblox extends wf {
     }
 
     private final void loadGermsTheme(byte param0) {
-        if (ll.gameGraphicsArchive.a(0)) {
-            if (!(ll.gameGraphicsArchive.a("germs", (byte) -126))) {
+        if (ll.gameGraphicsArchive.ensureIndexLoaded(0)) {
+            if (!(ll.gameGraphicsArchive.loadGroupByName("germs", (byte) -126))) {
                 return;
             }
             sl.germsForegroundSprite = ug.loadSprite("germs_foreground", ll.gameGraphicsArchive, (byte) -78, "germs");
@@ -928,8 +928,8 @@ public final class Geoblox extends wf {
     }
 
     private final void loadJewelsTheme(boolean param0) {
-        if (ll.gameGraphicsArchive.a(0)) {
-            if (!(ll.gameGraphicsArchive.a("jewels", (byte) -128))) {
+        if (ll.gameGraphicsArchive.ensureIndexLoaded(0)) {
+            if (!(ll.gameGraphicsArchive.loadGroupByName("jewels", (byte) -128))) {
                 return;
             }
             if (param0) {
@@ -943,8 +943,8 @@ public final class Geoblox extends wf {
     }
 
     private final void loadBakingTheme(int param0) {
-        if (ll.gameGraphicsArchive.a(param0 - 2)) {
-            if (!(ll.gameGraphicsArchive.a("baking", (byte) -125))) {
+        if (ll.gameGraphicsArchive.ensureIndexLoaded(param0 - 2)) {
+            if (!(ll.gameGraphicsArchive.loadGroupByName("baking", (byte) -125))) {
                 return;
             }
             hi.bakingForegroundSprite = ug.loadSprite("baking_foreground", ll.gameGraphicsArchive, (byte) -78, "baking");
@@ -958,8 +958,8 @@ public final class Geoblox extends wf {
     }
 
     private final void loadSpaceTheme(boolean param0) {
-        if (ll.gameGraphicsArchive.a(0)) {
-            if (!ll.gameGraphicsArchive.a("space", (byte) -127)) {
+        if (ll.gameGraphicsArchive.ensureIndexLoaded(0)) {
+            if (!ll.gameGraphicsArchive.loadGroupByName("space", (byte) -127)) {
                 return;
             }
             fl.spaceForegroundSprite = ug.loadSprite("space_foreground", ll.gameGraphicsArchive, (byte) -78, "space");
@@ -1087,8 +1087,8 @@ public final class Geoblox extends wf {
     }
 
     private final void loadSweetsTheme(int param0) {
-        if (ll.gameGraphicsArchive.a(0)) {
-            if (!(ll.gameGraphicsArchive.a("sweets", (byte) -128))) {
+        if (ll.gameGraphicsArchive.ensureIndexLoaded(0)) {
+            if (!(ll.gameGraphicsArchive.loadGroupByName("sweets", (byte) -128))) {
                 return;
             }
             lb.sweetsForegroundSprite = ug.loadSprite("sweets_foreground", ll.gameGraphicsArchive, (byte) -78, "sweets");

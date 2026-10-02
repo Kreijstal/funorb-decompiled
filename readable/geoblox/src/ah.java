@@ -4,7 +4,7 @@
 final class ah {
     static int field_a;
     static volatile int livePointerPressX;
-    static rh field_c;
+    static ResourceArchive field_c;
     static int field_d;
     static String connectionLostReconnectingText;
 

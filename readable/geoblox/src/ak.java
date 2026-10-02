@@ -3,7 +3,7 @@
  */
 final class ak {
     static long field_a;
-    static rh field_b;
+    static ResourceArchive field_b;
 
     final static boolean a(String param0, String param1, int param2) {
         String var3 = null;
@@ -61,7 +61,7 @@ final class ak {
 
     public static void a(int param0) {
         if (param0 != -30635) {
-            field_b = (rh) null;
+            field_b = (ResourceArchive) null;
         }
         field_b = null;
     }

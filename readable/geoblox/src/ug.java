@@ -21,7 +21,7 @@ final class ug {
         try {
           if (param1 >= -125) {
             var7 = (String) null;
-            ug.loadSprite((String) null, (rh) null, (byte) 14, (String) null);
+            ug.loadSprite((String) null, (ResourceArchive) null, (byte) 14, (String) null);
           }
           var4_int = param0.length();
           param0.setLength(param3);
@@ -65,7 +65,7 @@ final class ug {
         md.activeScorePopups.addLast(-95, popup);
     }
 
-    final static Sprite loadSprite(String resourceName, rh graphicsArchive, byte methodGuard, String groupName) {
+    final static Sprite loadSprite(String resourceName, ResourceArchive graphicsArchive, byte methodGuard, String groupName) {
         int archiveGroupId = 0;
         RuntimeException var4 = null;
         int archiveFileId = 0;
@@ -80,8 +80,8 @@ final class ug {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          archiveGroupId = graphicsArchive.a((byte) 127, groupName);
-          archiveFileId = graphicsArchive.a(resourceName, -57, archiveGroupId);
+          archiveGroupId = graphicsArchive.findGroupId((byte) 127, groupName);
+          archiveFileId = graphicsArchive.findFileId(resourceName, -57, archiveGroupId);
           if (methodGuard == -78) {
             stackIn_4_0 = ByteArrayBuffer.a(archiveGroupId, methodGuard ^ -95, archiveFileId, graphicsArchive);
             return stackIn_4_0;
@@ -119,7 +119,7 @@ final class ug {
         field_a = null;
         if (param0 != 9144) {
             String var2 = (String) null;
-            ug.loadSprite((String) null, (rh) null, (byte) 53, (String) null);
+            ug.loadSprite((String) null, (ResourceArchive) null, (byte) 53, (String) null);
         }
     }
 

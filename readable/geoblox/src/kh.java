@@ -24,31 +24,31 @@ final class kh implements Runnable {
             return j.field_lb;
         }
         if (!(dd.field_J == null)) {
-            if (!dd.field_J.a(0)) {
+            if (!dd.field_J.ensureIndexLoaded(0)) {
                 return ri.field_c;
             }
             return vc.field_g;
         }
-        if (!l.field_h.a(0)) {
+        if (!l.field_h.ensureIndexLoaded(0)) {
             return ff.waitingForGraphicsText;
         }
         if (param0 >= -59) {
             kh.a((byte) -7);
         }
-        if (!l.field_h.a("commonui", (byte) -127)) {
-            return AccountWelcomePanel.loadingGraphicsText + " - " + l.field_h.a(0, "commonui") + "%";
+        if (!l.field_h.loadGroupByName("commonui", (byte) -127)) {
+            return AccountWelcomePanel.loadingGraphicsText + " - " + l.field_h.getGroupProgressByName(0, "commonui") + "%";
         }
-        if (!(dc.field_c.a(0))) {
+        if (!(dc.field_c.ensureIndexLoaded(0))) {
             return ik.waitingForFontsText;
         }
-        if (!dc.field_c.a("commonui", (byte) -125)) {
-            return nb.loadingFontsText + " - " + dc.field_c.a(0, "commonui") + "%";
+        if (!dc.field_c.loadGroupByName("commonui", (byte) -125)) {
+            return nb.loadingFontsText + " - " + dc.field_c.getGroupProgressByName(0, "commonui") + "%";
         }
-        if (!hb.field_n.a(0)) {
+        if (!hb.field_n.ensureIndexLoaded(0)) {
             return ph.waitingForExtraDataText;
         }
-        if (!hb.field_n.b(true)) {
-            return oj.loadingExtraDataText + " - " + hb.field_n.b((byte) 101) + "%";
+        if (!hb.field_n.loadAllGroups(true)) {
+            return oj.loadingExtraDataText + " - " + hb.field_n.getLoadProgress((byte) 101) + "%";
         }
         return vg.pleaseWaitText;
     }

@@ -80,7 +80,7 @@ final class w {
         field_b = null;
     }
 
-    final static PaletteBitmapFont loadPaletteFont(String groupName, rh glyphGraphicsArchive, rh fontMetricsArchive, boolean methodGuard, String resourceName) {
+    final static PaletteBitmapFont loadPaletteFont(String groupName, ResourceArchive glyphGraphicsArchive, ResourceArchive fontMetricsArchive, boolean methodGuard, String resourceName) {
         int archiveGroupId = 0;
         RuntimeException fontFailureForContext = null;
         int archiveFileId = 0;
@@ -99,8 +99,8 @@ final class w {
           if (!methodGuard) {
             field_b = (String[]) null;
           }
-          archiveGroupId = glyphGraphicsArchive.a((byte) 127, groupName);
-          archiveFileId = glyphGraphicsArchive.a(resourceName, -107, archiveGroupId);
+          archiveGroupId = glyphGraphicsArchive.findGroupId((byte) 127, groupName);
+          archiveFileId = glyphGraphicsArchive.findFileId(resourceName, -107, archiveGroupId);
           fontBeforeReturn = pi.loadPaletteFontById(fontMetricsArchive, archiveGroupId, -128, glyphGraphicsArchive, archiveFileId);
           return fontBeforeReturn;
         } catch (java.lang.RuntimeException fontFailure) {

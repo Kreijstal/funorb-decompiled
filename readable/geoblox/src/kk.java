@@ -318,7 +318,7 @@ final class kk extends ji {
         }
     }
 
-    final static rh a(int param0, byte param1) {
+    final static ResourceArchive a(int param0, byte param1) {
         if (param1 != -62) {
             kk.i(118);
         }

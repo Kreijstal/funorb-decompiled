@@ -26,9 +26,9 @@ final class vd {
         int var1 = -39 % ((62 - param0) / 42);
     }
 
-    final static String a(String param0, String param1, int param2, boolean param3, rh param4) {
+    final static String a(String param0, String param1, int param2, boolean param3, ResourceArchive param4) {
         RuntimeException var5 = null;
-        rh var6 = null;
+        ResourceArchive var6 = null;
         String stackIn_3_0 = null;
         String stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
@@ -40,15 +40,15 @@ final class vd {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param4.a(0)) {
+          if (!param4.ensureIndexLoaded(0)) {
             stackIn_3_0 = (String) (param1);
             return stackIn_3_0;
           }
           if (param3) {
-            var6 = (rh) null;
-            vd.a((String) null, (String) null, 53, false, (rh) null);
+            var6 = (ResourceArchive) null;
+            vd.a((String) null, (String) null, 53, false, (ResourceArchive) null);
           }
-          stackIn_7_0 = param0 + " - " + param4.b((byte) 42, param2) + "%";
+          stackIn_7_0 = param0 + " - " + param4.getGroupProgress((byte) 42, param2) + "%";
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

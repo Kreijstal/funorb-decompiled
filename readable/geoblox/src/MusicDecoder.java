@@ -55,14 +55,14 @@ final class MusicDecoder extends IntrusiveNode {
         return (float)((double)var1 * Math.pow(2.0, (double)(var3 - 788)));
     }
 
-    final static MusicDecoder a(rh param0, int param1, int param2) {
+    final static MusicDecoder a(ResourceArchive param0, int param1, int param2) {
         try {
             MusicDecoder var4_ref = null;
             if (!MusicDecoder.a(param0)) {
-                param0.a((byte) 37, param1, param2);
+                param0.isFileAvailable((byte) 37, param1, param2);
                 return null;
             }
-            byte[] var3 = param0.a(param1, -28153, param2);
+            byte[] var3 = param0.getFile(param1, -28153, param2);
             if (var3 == null) {
                 return null;
             }
@@ -168,14 +168,14 @@ final class MusicDecoder extends IntrusiveNode {
         return value;
     }
 
-    final static MusicDecoder a(rh param0, String param1, String param2) {
+    final static MusicDecoder a(ResourceArchive param0, String param1, String param2) {
         try {
             MusicDecoder var4_ref = null;
             if (!MusicDecoder.a(param0)) {
-                param0.a((byte) 113, param2, param1);
+                param0.isNamedFileAvailable((byte) 113, param2, param1);
                 return null;
             }
-            byte[] var3 = param0.a(0, param2, param1);
+            byte[] var3 = param0.getNamedFile(0, param2, param1);
             if (var3 == null) {
                 return null;
             }
@@ -736,10 +736,10 @@ final class MusicDecoder extends IntrusiveNode {
         return (float[]) (var17);
     }
 
-    private final static boolean a(rh param0) {
+    private final static boolean a(ResourceArchive param0) {
         byte[] var1 = null;
         if (!field_z) {
-            var1 = param0.a(0, -28153, 0);
+            var1 = param0.getFile(0, -28153, 0);
             if (var1 == null) {
                 return false;
             }

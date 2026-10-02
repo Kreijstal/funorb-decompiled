@@ -3,7 +3,7 @@
  */
 final class ki {
     static Sprite field_c;
-    static rh basicUiGraphicsArchive;
+    static ResourceArchive basicUiGraphicsArchive;
     static int currentKeyboardEventCode;
     static String fullscreenNonmemberText;
     static String js5ConnectErrorText;
@@ -86,7 +86,7 @@ final class ki {
     }
 
     final static void a(int param0) {
-        r.a(rh.field_i, (byte) -61, true, oj.field_a);
+        r.a(ResourceArchive.field_i, (byte) -61, true, oj.field_a);
         int var1 = -30 % ((param0 + 30) / 36);
         mi.field_I = true;
     }

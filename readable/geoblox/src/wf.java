@@ -399,11 +399,11 @@ abstract class wf extends ch {
         }
         if (mi.field_C == 2) {
           if (dd.field_J != null) {
-            if (dd.field_J.a(0)) {
-              if (!dd.field_J.b((byte) -116, "")) {
+            if (dd.field_J.ensureIndexLoaded(0)) {
+              if (!dd.field_J.hasGroupName((byte) -116, "")) {
                 dd.field_J = null;
               } else {
-                if (dd.field_J.a("", (byte) -126)) {
+                if (dd.field_J.loadGroupByName("", (byte) -126)) {
                   AccountWelcomePanel.loadInterfaceText((byte) 74, dd.field_J);
                   dd.field_J = null;
                   ih.b(-50);
@@ -470,8 +470,8 @@ abstract class wf extends ch {
           if (mi.field_C == 11) {
             L31: {
               if (null != ak.field_b) {
-                if (ak.field_b.a(0)) {
-                  if (ak.field_b.b(true)) {
+                if (ak.field_b.ensureIndexLoaded(0)) {
+                  if (ak.field_b.loadAllGroups(true)) {
                     break L31;
                   }
                 }

@@ -125,7 +125,7 @@ final class qe {
         }
     }
 
-    final static void a(rh param0, rh param1, int param2) {
+    final static void a(ResourceArchive param0, ResourceArchive param1, int param2) {
         try {
             if (param2 > -66) {
                 PlatformTaskDispatcher var4 = (PlatformTaskDispatcher) null;

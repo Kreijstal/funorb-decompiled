@@ -4,7 +4,7 @@
 final class ll {
     static Sprite[] frameNineSliceSprites;
     static String createMoreSuggestionsText;
-    static rh gameGraphicsArchive;
+    static ResourceArchive gameGraphicsArchive;
     static rf field_d;
     static boolean field_e;
     static String createEmailTooltipText;
@@ -13,13 +13,13 @@ final class ll {
 
     final static long a(byte param0) {
         if (param0 != 12) {
-            rh var2 = (rh) null;
-            ll.a(55, (byte) -55, -85, (rh) null);
+            ResourceArchive var2 = (ResourceArchive) null;
+            ll.a(55, (byte) -55, -85, (ResourceArchive) null);
         }
         return -kh.field_e + oa.a(-12520);
     }
 
-    final static Sprite[] a(int param0, byte param1, int param2, rh param3) {
+    final static Sprite[] a(int param0, byte param1, int param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         Sprite[] stackIn_5_0 = null;

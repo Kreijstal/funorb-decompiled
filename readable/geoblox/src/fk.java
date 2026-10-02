@@ -14,7 +14,7 @@ final class fk extends sh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (readGuard == 2229) {
-            stackIn_4_0 = ImageProducerRasterBuffer.activeTextArchive.a(0, resourceKey, "");
+            stackIn_4_0 = ImageProducerRasterBuffer.activeTextArchive.getNamedFile(0, resourceKey, "");
             return stackIn_4_0;
           }
           stackIn_2_0 = (byte[]) null;

@@ -4,7 +4,7 @@
 final class ii {
     static int keyStateWriteIndexOrResetSentinel;
     static boolean field_e;
-    rh field_i;
+    ResourceArchive field_i;
     static boolean field_a;
     static nd field_h;
     static String highscoresText;
@@ -13,7 +13,7 @@ final class ii {
     String field_g;
     int field_l;
     String field_m;
-    static rh fontMetricsArchive;
+    static ResourceArchive fontMetricsArchive;
     static String createPasswordValidText;
 
     public static void a(int param0) {

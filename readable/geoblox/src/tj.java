@@ -95,53 +95,53 @@ final class tj {
           return 0;
         }
         if (va.field_a == 0) {
-          if (!l.field_h.a(0)) {
+          if (!l.field_h.ensureIndexLoaded(0)) {
             return 20;
           }
-          if (!l.field_h.a("commonui", (byte) -127)) {
+          if (!l.field_h.loadGroupByName("commonui", (byte) -127)) {
             return 40;
           }
-          if (!dc.field_c.a(0)) {
+          if (!dc.field_c.ensureIndexLoaded(0)) {
             return 50;
           }
-          if (!dc.field_c.a("commonui", (byte) -127)) {
+          if (!dc.field_c.loadGroupByName("commonui", (byte) -127)) {
             return 60;
           }
-          if (!hb.field_n.a(0)) {
+          if (!hb.field_n.ensureIndexLoaded(0)) {
             return 70;
           }
-          if (hb.field_n.b(true)) {
+          if (hb.field_n.loadAllGroups(true)) {
             return 100;
           }
           return 80;
         }
         if (dd.field_J != null) {
-          if (!dd.field_J.a(0)) {
+          if (!dd.field_J.ensureIndexLoaded(0)) {
             return 14;
           }
-          if (!dd.field_J.b((byte) -115, "")) {
+          if (!dd.field_J.hasGroupName((byte) -115, "")) {
             return 29;
           }
-          if (!dd.field_J.a("", (byte) -124)) {
+          if (!dd.field_J.loadGroupByName("", (byte) -124)) {
             return 29;
           }
         }
-        if (!l.field_h.a(param0 ^ 73)) {
+        if (!l.field_h.ensureIndexLoaded(param0 ^ 73)) {
           return 43;
         }
-        if (!l.field_h.a("commonui", (byte) -125)) {
+        if (!l.field_h.loadGroupByName("commonui", (byte) -125)) {
           return 57;
         }
-        if (!dc.field_c.a(0)) {
+        if (!dc.field_c.ensureIndexLoaded(0)) {
           return 71;
         }
-        if (!dc.field_c.a("commonui", (byte) -128)) {
+        if (!dc.field_c.loadGroupByName("commonui", (byte) -128)) {
           return 80;
         }
-        if (!hb.field_n.a(param0 - 73)) {
+        if (!hb.field_n.ensureIndexLoaded(param0 - 73)) {
           return 82;
         }
-        if (!hb.field_n.b(true)) {
+        if (!hb.field_n.loadAllGroups(true)) {
           return 86;
         }
         return 100;

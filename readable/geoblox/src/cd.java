@@ -9,13 +9,13 @@ final class cd extends jg {
     static int gameplayOriginScreenId;
     private java.net.ProxySelector field_k;
     static ck field_i;
-    static rh field_m;
+    static ResourceArchive field_m;
 
     final static void selectThemeRenderAssets(byte methodGuard) {
         int var2;
         var2 = Geoblox.field_C;
         if (methodGuard <= 75) {
-          field_m = (rh) null;
+          field_m = (ResourceArchive) null;
         }
         if (GameScreen.selectedThemeId == 4) {
           ec.selectedThemeForeground = hi.bakingForegroundSprite;

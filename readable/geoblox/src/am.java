@@ -40,17 +40,17 @@ final class am {
         }
     }
 
-    final static rh a(int param0, int param1, boolean param2, int param3, boolean param4, boolean param5) {
+    final static ResourceArchive a(int param0, int param1, boolean param2, int param3, boolean param4, boolean param5) {
         try {
             Object var6 = null;
             Object var7 = null;
             bj var8 = null;
-            rh stackIn_2_0 = null;
-            rh stackIn_15_0 = null;
+            ResourceArchive stackIn_2_0 = null;
+            ResourceArchive stackIn_15_0 = null;
             Throwable decompiledCaughtException = null;
             try {
               if (param0 > -49) {
-                stackIn_2_0 = (rh) null;
+                stackIn_2_0 = (ResourceArchive) null;
                 return stackIn_2_0;
               }
               var6 = null;
@@ -74,7 +74,7 @@ final class am {
               if (param2) {
                 var8.b(92);
               }
-              stackIn_15_0 = new rh(var8, param4, param3);
+              stackIn_15_0 = new ResourceArchive(var8, param4, param3);
               return stackIn_15_0;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

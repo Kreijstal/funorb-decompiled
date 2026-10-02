@@ -35,7 +35,7 @@ final class mc {
           bj.field_s = param5;
           rd.field_u = param2;
           dl.field_a = null;
-          rh.field_i = param1;
+          ResourceArchive.field_i = param1;
           kd.field_b = IntrusiveDeque.field_d;
           oj.field_a = param6;
           oc.field_a = param0;

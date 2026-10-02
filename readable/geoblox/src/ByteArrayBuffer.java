@@ -28,7 +28,7 @@ class ByteArrayBuffer extends IntrusiveNode {
         int sentinelQuotient = 65 / ((methodGuard - 67) / 54);
     }
 
-    final static Sprite a(int param0, int param1, int param2, rh param3) {
+    final static Sprite a(int param0, int param1, int param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         Sprite stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -179,10 +179,10 @@ class ByteArrayBuffer extends IntrusiveNode {
         int prefixByte;
         int textStart;
         int textLength;
-        rh unusedNullArchiveSnapshot;
+        ResourceArchive unusedNullArchiveSnapshot;
         if (methodGuard != 27425) {
-          unusedNullArchiveSnapshot = (rh) null;
-          ByteArrayBuffer.a(-4, 95, -17, (rh) null);
+          unusedNullArchiveSnapshot = (ResourceArchive) null;
+          ByteArrayBuffer.a(-4, 95, -17, (ResourceArchive) null);
         }
         int prefixByteIndex = this.position;
         this.position = this.position + 1;

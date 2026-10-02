@@ -27,14 +27,14 @@ final class rj {
         loggingInText = null;
     }
 
-    final static rh a(int param0, byte param1, boolean param2, boolean param3, int param4) {
+    final static ResourceArchive a(int param0, byte param1, boolean param2, boolean param3, int param4) {
         if (param1 >= -13) {
-            return (rh) null;
+            return (ResourceArchive) null;
         }
         return am.a(-90, param0, param3, param4, param2, false);
     }
 
-    final static boolean a(byte param0, rh param1) {
+    final static boolean a(byte param0, ResourceArchive param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         boolean stackIn_1_0 = false;
@@ -44,7 +44,7 @@ final class rj {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 12 % ((-57 - param0) / 57);
-          stackIn_1_0 = param1.b(true);
+          stackIn_1_0 = param1.loadAllGroups(true);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

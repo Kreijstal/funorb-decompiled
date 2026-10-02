@@ -7,7 +7,7 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
     private java.awt.image.ColorModel colorModel;
     static lh field_g;
     private java.awt.image.ImageConsumer imageConsumer;
-    static rh activeTextArchive;
+    static ResourceArchive activeTextArchive;
 
     final static h a(byte param0, String param1) {
         RuntimeException var2 = null;
@@ -18,7 +18,7 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 86) {
-            activeTextArchive = (rh) null;
+            activeTextArchive = (ResourceArchive) null;
           }
           stackIn_3_0 = new h(param1);
           return stackIn_3_0;
@@ -45,7 +45,7 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
             this.imageConsumer.imageComplete(2);
             return;
         }
-        activeTextArchive = (rh) null;
+        activeTextArchive = (ResourceArchive) null;
         this.imageConsumer.imageComplete(2);
     }
 

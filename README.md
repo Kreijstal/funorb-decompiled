@@ -19,21 +19,24 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and retain all 138,558 remaining bindings
 and 388 override relationships.
 
-The current naming pass adds 59 guarded identities for `PrefixCodeDecoder`,
-its decode tree/shared decoder, and compressed-text reading. Every selected
-parameter/local now has a name. MSB-first tree traversal, complemented leaf
-bytes, consumed-byte returns, partial writes and the `"Cabbage"` fallback retain
-the original behavior. The fixed source has no tree/shared-decoder setup and
-keeps its private throwing constructor; names do not imply live support.
+The current naming pass adds 228 guarded identities for `ResourceArchive`:
+all instance fields/APIs, constructor contracts and selected locals. Named paths
+cover lazy index/group loading, sparse file/name lookup, progress, keyed group
+unpacking and cache retention. Original monitors, guards, byte order, aliases,
+chunk tables, partial effects and diagnostic contexts remain.
 
-The 4,856 rules apply 41,958 edits. All 303 raw/readable sources compile,
-preserving 138,558 bindings and 388 overrides. All 4,797 previous complete rules
+The 5,084 rules apply 43,242 edits. All 303 raw/readable sources compile,
+preserving 138,558 bindings and 388 overrides. All 4,856 previous complete rules
 and raw source/decompiler pins are unchanged. Binding checks, reproduction and
-byte-exact reversal support the names. Existing native gameplay fixtures retain
-their menu-avatar/shared-queue scope without new prefix-decoding coverage.
-Opaque support helpers, real table setup, full assets/gameplay and device
-performance remain unfinished or unverified. One manifest holds current
-evidence, with Git for history.
+byte-exact reversal support the names. Existing native text fixtures retain
+their decoder/nested null-archive failure scope without new archive execution
+coverage. Archive metadata/providers/compression helpers, full assets/gameplay
+and device performance remain unfinished or unverified. One manifest holds
+current evidence, with Git for history.
+
+Pass 65 named `PrefixCodeDecoder`, its decode tree/shared decoder and compressed
+text reader. Its fixed source has no tree/shared-decoder initialization; names
+describe the retained routine without establishing live compressed-text support.
 
 Pass 64 named text-byte encoders, signed encoded-byte archive-name hashing and
 decoder return/failure locals. Fonts retain unsigned glyph indices while name

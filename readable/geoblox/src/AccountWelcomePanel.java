@@ -147,7 +147,7 @@ final class AccountWelcomePanel extends ee implements pl {
         }
     }
 
-    final static void loadInterfaceText(byte loadGuard, rh textArchive) {
+    final static void loadInterfaceText(byte loadGuard, ResourceArchive textArchive) {
         class $CfrPartitionedBody {
             RuntimeException contextFailure;
             StringBuilder failureContextBuilder;
@@ -158,9 +158,9 @@ final class AccountWelcomePanel extends ee implements pl {
             RuntimeException loadingFailure;
             int sharedFlowFlag;
             byte loadGuard;
-            rh textArchive;
+            ResourceArchive textArchive;
             boolean finished;
-            $CfrPartitionedBody(byte initialLoadGuard, rh initialTextArchive) {
+            $CfrPartitionedBody(byte initialLoadGuard, ResourceArchive initialTextArchive) {
                 this.loadGuard = initialLoadGuard;
                 this.textArchive = initialTextArchive;
                 this.contextFailure = null;
@@ -1714,7 +1714,7 @@ final class AccountWelcomePanel extends ee implements pl {
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "create_username_unavailable");
                 if (textResourceBytes != null) {
-                  rh.createUsernameUnavailableText = ag.decodeTextBytes(1, textResourceBytes);
+                  ResourceArchive.createUsernameUnavailableText = ag.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "create_username_available");
                 if (textResourceBytes != null) {
@@ -1958,7 +1958,7 @@ final class AccountWelcomePanel extends ee implements pl {
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "loading_instruments");
                 if (loadGuard < 57) {
-                  AccountWelcomePanel.loadInterfaceText((byte) -48, (rh) null);
+                  AccountWelcomePanel.loadInterfaceText((byte) -48, (ResourceArchive) null);
                 }
                 if (null != textResourceBytes) {
                   ag.decodeTextBytes(1, textResourceBytes);

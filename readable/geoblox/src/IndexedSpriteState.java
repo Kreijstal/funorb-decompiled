@@ -61,7 +61,7 @@ abstract class IndexedSpriteState {
         }
     }
 
-    final static void a(byte param0, rh param1, rh param2, rh param3) {
+    final static void a(byte param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3) {
         Sprite var18 = null;
         IndexedSprite[] var5 = null;
         IndexedSprite[][] var6 = null;
@@ -86,7 +86,7 @@ abstract class IndexedSpriteState {
             hh.field_d = (BitmapFont) ((Object) TextInputValidator.loadCoverageFont(param3, 1, "arezzo12", "commonui", param2));
             ng.field_F = (BitmapFont) ((Object) TextInputValidator.loadCoverageFont(param3, 1, "arezzo14", "commonui", param2));
             hh.field_c = (BitmapFont) ((Object) TextInputValidator.loadCoverageFont(param3, 1, "arezzo14bold", "commonui", param2));
-            var18 = new Sprite(param1.a(0, "", "button.gif"), (java.awt.Component) ((Object) f.field_kb));
+            var18 = new Sprite(param1.getNamedFile(0, "", "button.gif"), (java.awt.Component) ((Object) f.field_kb));
             jg.loadIndexedSprite(param2, 1, "commonui", "dropdown");
             var5 = MenuScreen.a("commonui", "screen_options", true, param2);
             ek.field_a = new IndexedSprite[4];

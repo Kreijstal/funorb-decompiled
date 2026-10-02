@@ -58,10 +58,10 @@ final class cm extends cj {
             var2 = var27.readUnsignedByte((byte) 34);
             if (var2 == 0) {
               var3 = var27.readUnsignedShortBE(true);
-              var4 = (mg) ((Object) rh.field_d.firstForIteration(0));
+              var4 = (mg) ((Object) ResourceArchive.field_d.firstForIteration(0));
               L2: while (var4 != null) {
                 if (var4.field_i != var3) {
-                  var4 = (mg) ((Object) rh.field_d.nextForIteration(1));
+                  var4 = (mg) ((Object) ResourceArchive.field_d.nextForIteration(1));
                   continue L2;
                 }
                 break;

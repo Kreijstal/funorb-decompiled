@@ -32,7 +32,7 @@ final class ni extends ee implements pl {
         }
     }
 
-    final static void a(rh param0, int param1) {
+    final static void a(ResourceArchive param0, int param1) {
         int var3 = 0;
         int var4 = 0;
         nf var5 = null;
@@ -48,7 +48,7 @@ final class ni extends ee implements pl {
         RuntimeException var2 = null;
         var7 = Geoblox.field_C;
         try {
-          var8 = new PacketBuffer(param0.a(param1 + param1, "", "logo.fo3d"));
+          var8 = new PacketBuffer(param0.getNamedFile(param1 + param1, "", "logo.fo3d"));
           var10 = var8;
           var3 = var10.readUnsignedByte((byte) 34);
           var10.beginBitAccess(param1 + 8);

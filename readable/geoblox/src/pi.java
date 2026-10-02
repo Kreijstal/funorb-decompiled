@@ -17,7 +17,7 @@ final class pi extends vf {
         return (String) null;
     }
 
-    final static PaletteBitmapFont loadPaletteFontById(rh fontMetricsArchive, int groupId, int methodGuard, rh glyphGraphicsArchive, int fileId) {
+    final static PaletteBitmapFont loadPaletteFontById(ResourceArchive fontMetricsArchive, int groupId, int methodGuard, ResourceArchive glyphGraphicsArchive, int fileId) {
         int sentinelRemainder = 0;
         RuntimeException fontFailureForContext = null;
         Object nullFontBeforeReturn = null;
@@ -31,7 +31,7 @@ final class pi extends vf {
         try {
           sentinelRemainder = -107 % ((-62 - methodGuard) / 58);
           if (mf.decodeSpritesFromArchive(fileId, groupId, 116, glyphGraphicsArchive)) {
-            fontBeforeReturn = ni.buildPaletteFontFromDecodedSprites(fontMetricsArchive.a(groupId, -28153, fileId), -108);
+            fontBeforeReturn = ni.buildPaletteFontFromDecodedSprites(fontMetricsArchive.getFile(groupId, -28153, fileId), -108);
             return fontBeforeReturn;
           }
           nullFontBeforeReturn = null;

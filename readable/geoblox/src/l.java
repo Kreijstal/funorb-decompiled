@@ -5,7 +5,7 @@ final class l extends oj {
     static IntrusiveDeque field_g;
     private java.nio.ByteBuffer field_f;
     static fd[] field_i;
-    static rh field_h;
+    static ResourceArchive field_h;
 
     public static void b(int param0) {
         field_g = null;

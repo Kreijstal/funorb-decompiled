@@ -19,7 +19,7 @@ final class bk {
         boardOwnershipRaster = null;
     }
 
-    final static void a(rh param0, int param1, int param2, ob param3) {
+    final static void a(ResourceArchive param0, int param1, int param2, ob param3) {
         try {
             uf.field_a = param1 * sb.a(true) / 1000;
             ab.a(99, param0);

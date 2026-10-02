@@ -17,7 +17,7 @@ final class si {
     static int field_j;
     static al field_g;
 
-    final static String a(String param0, int param1, String param2, rh param3) {
+    final static String a(String param0, int param1, String param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;
@@ -30,8 +30,8 @@ final class si {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param3.a(param1 ^ param1)) {
-            stackIn_4_0 = param2 + " - " + param3.b((byte) 110) + "%";
+          if (param3.ensureIndexLoaded(param1 ^ param1)) {
+            stackIn_4_0 = param2 + " - " + param3.getLoadProgress((byte) 110) + "%";
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) (param0);

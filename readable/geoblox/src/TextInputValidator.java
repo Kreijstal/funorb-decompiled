@@ -189,7 +189,7 @@ abstract class TextInputValidator extends ib implements ga {
         }
     }
 
-    final static CoverageBitmapFont loadCoverageFont(rh fontMetricsArchive, int methodGuard, String resourceName, String groupName, rh glyphGraphicsArchive) {
+    final static CoverageBitmapFont loadCoverageFont(ResourceArchive fontMetricsArchive, int methodGuard, String resourceName, String groupName, ResourceArchive glyphGraphicsArchive) {
         int archiveGroupId = 0;
         RuntimeException fontFailureForContext = null;
         int archiveFileId = 0;
@@ -210,8 +210,8 @@ abstract class TextInputValidator extends ib implements ga {
             unusedNullTextSnapshot = (String) null;
             TextInputValidator.a((byte) 108, 111, (String) null);
           }
-          archiveGroupId = glyphGraphicsArchive.a((byte) 126, groupName);
-          archiveFileId = glyphGraphicsArchive.a(resourceName, methodGuard - 69, archiveGroupId);
+          archiveGroupId = glyphGraphicsArchive.findGroupId((byte) 126, groupName);
+          archiveFileId = glyphGraphicsArchive.findFileId(resourceName, methodGuard - 69, archiveGroupId);
           fontBeforeReturn = ea.loadCoverageFontById(glyphGraphicsArchive, (byte) -127, fontMetricsArchive, archiveFileId, archiveGroupId);
           return fontBeforeReturn;
         } catch (java.lang.RuntimeException fontFailure) {
