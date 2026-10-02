@@ -10,7 +10,7 @@ import {captureProcess} from '../tools/lib/capture-process.mjs';
 const root = fileURLToPath(new URL('../', import.meta.url));
 const nativeInput = process.argv[2] && path.resolve(process.argv[2]);
 if (!nativeInput) throw new Error('Usage: node readable/tests/test-geoblox-gameplay.mjs NATIVE_CLASSES');
-const expectedNativeSha256 = 'e248b99cbb3c6a1e71d1873abc8cc1c2f7bb5c38ba560e0f14fe47f237c040db';
+const expectedNativeSha256 = '2ec59542cf3499de3d410ce1da73111ccb743d77fde48ca8c6bf316caed9a627';
 const rules = JSON.parse(fs.readFileSync(path.join(root, 'geoblox-rules.json')));
 const aliases = new Map(rules.renames.map(rule => [rule.symbol, rule.to]));
 const temporary = fs.mkdtempSync(path.join(os.tmpdir(), 'geoblox-gameplay-'));
@@ -273,10 +273,13 @@ try {
           System.out.println("conversion:"+guard+":"+mode+":"+root+":"+key+":"+mask+":"+outcome+":"+trace);cases++;
         }
       }
-      static ${type('gh')} session() throws Exception {
+      static Object allocate(Class<?> type) throws Exception {
         Class<?> unsafe=Class.forName("sun.misc.Unsafe");
         java.lang.reflect.Field field=unsafe.getDeclaredField("theUnsafe");field.setAccessible(true);
-        return (${type('gh')})unsafe.getMethod("allocateInstance",Class.class).invoke(field.get(null),${type('gh')}.class);
+        return unsafe.getMethod("allocateInstance",Class.class).invoke(field.get(null),type);
+      }
+      static ${type('gh')} session() throws Exception {
+        return (${type('gh')})allocate(${type('gh')}.class);
       }
       static String queueState(${deque} queue) {
         StringBuilder result=new StringBuilder();
@@ -365,6 +368,143 @@ try {
           System.out.println("reconcile:"+guard+":"+geometry+":"+rebuild+":"+contactDirty+":"+mask+":"+anchors+":"+outcome+":"+trace+":"+actualAttached+":"+actualMoving
             +":"+${global('re','field_j','Z')}+":"+${global('el','field_o','Lgh;')}.${field('gh','field_B','Z')}+":"+${global('el','field_o','Lgh;')}.${field('gh','field_F','Z')}
             +":"+${global('fa','field_a','Z')}+":"+visits+":"+${global('pk','field_o','[Z')}[1001]);cases++;
+        }
+      }
+      static void audio() {
+        ${global('qa','field_f','Ltf;')}=new ${deque}();${global('ge','field_d','Lob;')}=new ${type('ob')}();
+        ${global('qk','field_j','I')}=22050;${global('j','field_gb','I')}=80;
+        ${global('fl','field_c','[Lgd;')}=new ${type('gd')}[33];
+        for(int i=0;i<33;i++)${global('fl','field_c','[Lgd;')}[i]=new ${type('gd')}(22050,new byte[32],0,32);
+      }
+      static int soundSample() {
+        ${type('je')} sound=(${type('je')})${global('qa','field_f','Ltf;')}.${method('tf','g(I)Lhf;')}(0);
+        if(sound==null)return -1;
+        for(int i=0;i<33;i++)if(sound.${field('je','field_g','Lkl;')}.${field('ia','field_g','Le;')}==${global('fl','field_c','[Lgd;')}[i])return i;
+        throw new AssertionError("unknown sample identity");
+      }
+      static void feedback() {
+        for(int guard=0;guard<2;guard++)for(int base=0;base<=36;base+=6)
+        for(int request=-1;request<=7;request++)for(int hold:new int[]{-1,0,1,110})
+        for(boolean clear:new boolean[]{false,true})for(int frame:new int[]{-7,5,37}) {
+          ${global('Geoblox','field_C','I')}=guard;audio();
+          ${global('ka','field_h','I')}=base;${global('pa','field_g','I')}=hold;
+          ${global('nd','field_a','I')}=-5;${global('wa','field_a','I')}=7;${global('uf','field_b','I')}=frame;
+          ${raster} sprite=new ${raster}(1,1);${global('jc','field_a','Ldm;')}=sprite;
+          int wantedBase=base,wantedHold=hold,wantedMode=-5,wantedEffect=7,wantedFrame=frame,wantedSound=-1;
+          if(request==7&&base!=36){wantedBase=36;wantedHold=110;wantedMode=6;wantedSound=23;}
+          boolean held=wantedHold>0;
+          if(held) {if(request==3){wantedEffect=50;wantedSound=27;}}
+          else {
+            if(request>=0&&request<=5) {
+              wantedBase=request*6;wantedMode=request;
+              if(request==3||request==4||request==5)wantedHold=110;
+              if(request==3){wantedEffect=50;wantedSound=27;}
+              if(request==5)wantedSound=24;
+              if(request==0&&base!=0&&base<24)wantedSound=25;
+              if(request==2&&base!=12&&base<24)wantedSound=26;
+            }
+            wantedFrame=frame%6+wantedBase;
+          }
+          ${call('jc','a(IZ)V')}(request,clear);
+          check(${global('ka','field_h','I')}==wantedBase&&${global('pa','field_g','I')}==wantedHold,"feedback base/hold oracle");
+          check(${global('nd','field_a','I')}==wantedMode&&${global('wa','field_a','I')}==wantedEffect,"feedback mode/effect oracle");
+          check(${global('uf','field_b','I')}==wantedFrame,"feedback frame/remainder oracle");
+          check((${global('jc','field_a','Ldm;')}==null)==(clear&&!held),"feedback sprite guard");
+          check(${global('qa','field_f','Ltf;')}.${method('tf','a(I)I')}(100)==(wantedSound==-1?0:1)&&soundSample()==wantedSound,"feedback sample identity/count");
+          System.out.println("feedback:"+guard+":"+base+":"+request+":"+hold+":"+clear+":"+frame+":"+wantedBase+":"+wantedHold+":"+wantedMode+":"+wantedEffect+":"+wantedFrame+":"+wantedSound);cases++;
+        }
+      }
+      static void routing() throws Exception {
+        ${raster} sprite=new ${raster}(1,1);sprite.${field('dm','field_v','[I')}[0]=0x123456;
+        for(int c=0;c<2;c++)for(int v=0;v<2;v++)${global('ke','field_a','[[[Ldm;')}[0][c][v]=sprite;
+        ${global('s','field_G','[[Ldm;')}=new ${raster}[][]{{sprite,sprite}};
+        ${global('hb','field_d','[Ldm;')}=new ${raster}[]{sprite};${global('fc','field_g','[Ldm;')}=new ${raster}[]{sprite};
+        for(int v=0;v<2;v++)java.util.Arrays.fill(${global('ka','field_m','[[[Ldm;')}[0][v],sprite);
+        for(int guard=0;guard<2;guard++)for(int route=0;route<6;route++)for(int kind=0;kind<5;kind++)
+        for(int size:new int[]{1,3,5})for(boolean avatar:new boolean[]{false,true})for(float angle:new float[]{0,0.75f})
+        for(boolean withNeighbor:new boolean[]{false,true}) {
+          if(withNeighbor&&route!=1&&route!=2&&route!=3)continue;
+          ${global('Geoblox','field_C','I')}=guard;${global('el','field_o','Lgh;')}=session();
+          ${global('el','field_o','Lgh;')}.${field('gh','field_J','F')}=angle;
+          ${attached}=new ${deque}();${moving}=new ${deque}();${transient}=new ${deque}();${global('ra','field_a','Ltf;')}=new ${deque}();
+          ${global('re','field_j','Z')}=false;${global('w','field_f','Z')}=route==3;${global('jl','field_t','Z')}=true;
+          ${global('ab','field_f','Z')}=false;${global('rb','field_b','I')}=0;${global('og','field_r','F')}=2.5f;
+          ${global('ka','field_h','I')}=0;${global('pa','field_g','I')}=0;${global('nd','field_a','I')}=0;
+          ${global('wa','field_a','I')}=0;${global('uf','field_b','I')}=0;audio();
+          ${active}=new ${deque}();${available}=new ${deque}();
+          for(int i=0;i<size;i++)${available}.${addLast}(-35,new ${popup}());
+          // Keep scoring enabled for controlled shock popups without allocating
+          // session score builders: every award has an available popup.
+          ${global('el','field_o','Lgh;')}.${field('gh','field_Y','Z')}=false;
+          ${global('vl','field_p','I')}=-1;
+          ${global('vf','field_L','Ldm;')}=new ${raster}(9,9);${global('bk','field_a','Ldm;')}=new ${raster}(640,480);
+          ${global('wd','field_b','Ldm;')}=new ${raster}(460,460);${global('wd','field_a','I')}=90;${global('wd','field_d','I')}=10;
+          ${global('i','field_a','Ldm;')}=new ${raster}(1,1);
+          ${type('sc')} display=(${type('sc')})allocate(${type('bf')}.class);
+          display.${field('sc','field_a','I')}=640;display.${field('sc','field_c','I')}=480;display.${field('sc','field_d','[I')}=new int[640*480];
+          ${global('sh','field_y','Lsc;')}=display;display.${method('sc','a(I)V')}(255);
+          ${entity}[] nodes=new ${entity}[size];${type('wd')} secondary=new ${type('wd')}();
+          ${entity}[] neighbors=new ${entity}[size];
+          for(int i=0;i<size;i++) {
+            nodes[i]=entity(i+70,0,0,kind);nodes[i].${field('ja','field_o','F')}=330+i*8;nodes[i].${field('ja','field_v','F')}=246+i*4;
+            nodes[i].${field('ja','field_t','Z')}=avatar;
+            nodes[i].${field('ja','field_B','Z')}=route==5;
+            nodes[i].${field('ja','field_K','Ltf;')}=route==0?${attached}:route==1?${moving}:route==2?${transient}:route==4?${global('ra','field_a','Ltf;')}:null;
+            ${deque} input=route==0||route==5?${moving}:route==4?${transient}:${attached};input.${addLast}(-35,nodes[i]);
+            secondary.${method('wd','a(ILrc;)V')}(-45,nodes[i]);
+            if(withNeighbor) {
+              ${entity} neighbor=neighbors[i]=entity(i+90,0,0,0);neighbor.${field('ja','field_o','F')}=340+i*8;neighbor.${field('ja','field_v','F')}=260;
+              // Control one reciprocal edge without allowing contact conversion
+              // to consume the queue marker before routing is exercised.
+              nodes[i].${field('ja','field_n','[Lja;')}[0]=neighbor;neighbor.${field('ja','field_n','[Lja;')}[0]=nodes[i];
+              nodes[i].${field('ja','field_L','I')}=neighbor.${field('ja','field_L','I')}=1;
+              nodes[i].${field('ja','field_N','I')}=neighbor.${field('ja','field_N','I')}=nodes[i].${field('ja','field_C','I')}==0?1:0;
+              nodes[i].${field('ja','field_m','I')}=neighbor.${field('ja','field_m','I')}=nodes[i].${field('ja','field_M','I')}==0?1:0;
+            }
+          }
+          String outcome="ok";
+          try {${call('kc','b(I)V')}(-90);}catch(${type('sa')} error) {
+            outcome=error.${field('sa','field_a','Ljava/lang/Throwable;')}.getClass().getSimpleName()+":"+error.${field('sa','field_d','Ljava/lang/String;')};
+            if(guard==0){error.${field('sa','field_a','Ljava/lang/Throwable;')}.printStackTrace();throw new AssertionError(outcome);}
+          }
+          boolean triggered=route==2||route==3&&avatar;
+          StringBuilder expectedOrder=new StringBuilder(),trace=new StringBuilder();
+          for(${entity} node:nodes) {
+            expectedOrder.append(node.${field('ja','field_H','I')}).append(',');
+            if(guard==0) {
+              check(node.${field('ja','field_K','Ltf;')}==null,"routing clears marker");
+              check(node.${field('ja','field_z','I')}==(triggered?(kind==4?7:5):kind),"transient kind selection");
+              if(triggered)check(node.${field('ja','field_r','I')}==50&&node.${field('ja','field_G','I')}==0,"transient lifetime/frame");
+              check((node.${field('rc','field_l','Lrc;')}==null)==(route!=5&&!(route==3&&!avatar)),"secondary membership cleanup");
+              if(route==0) {
+                int pixels=0;for(int pixel:${global('bk','field_a','Ldm;')}.${field('dm','field_v','[I')})if(pixel==node.${field('ja','field_H','I')}+1)pixels++;
+                check(pixels>0,"attachment stamps ownership pixels");
+              }
+            }
+            trace.append(state(node)).append(':').append(node.${field('ja','field_r','I')}).append(':').append(node.${field('ja','field_G','I')}).append('/');
+          }
+          if(withNeighbor)for(${entity} neighbor:neighbors) {
+            if(guard==0&&(route==1||triggered))ordinaryOracle(neighbor,new ${entity}[0]);
+            trace.append(state(neighbor)).append('/');
+          }
+          String attachedTrace=queueState(${attached}),movingTrace=queueState(${moving}),transientTrace=queueState(${transient}),poolTrace=queueState(${global('ra','field_a','Ltf;')});
+          int points=0,popups=0;StringBuilder popupTrace=new StringBuilder();boolean[] seenOrigin=new boolean[size];
+          ${popup} pop=(${popup})${active}.${method('tf','g(I)Lhf;')}(0);
+          while(pop!=null){points+=pop.${field('me','field_f','I')};check(pop.${field('me','field_h','I')}==1,"shock popup multiplier");
+            float x=pop.${field('me','field_n','F')},y=pop.${field('me','field_i','F')};
+            int index=(int)(x-330)/8;
+            check(index>=0&&index<size&&x==330+index*8&&y==246+index*4&&!seenOrigin[index],"shock popup origin oracle");seenOrigin[index]=true;
+            popupTrace.append(Float.floatToIntBits(x)).append(',').append(Float.floatToIntBits(y)).append('/');
+            popups++;pop=(${popup})${active}.${method('tf','d(I)Lhf;')}(1);}
+          if(guard==0) {
+            String order=expectedOrder.toString();check(attachedTrace.equals(route==0||route==3&&!avatar?order:"")&&movingTrace.equals(route==1||route==5?order:"")
+              &&transientTrace.equals(triggered?order:"")&&poolTrace.equals(route==4?order:""),"routing queue oracle");
+            check(points==(route==3&&avatar?size*(kind==3||kind==4?100:10):0)&&popups==(route==3&&avatar?size:0),"shock popup points/count");
+            check(${global('rb','field_b','I')}==(triggered&&kind==4?size:0),"kind-four counter");
+            check(!${global('w','field_f','Z')}&&${global('jl','field_t','Z')}==(route!=3),"shock flags consumed");
+          }
+          System.out.println("route:"+guard+":"+route+":"+kind+":"+size+":"+avatar+":"+Float.floatToIntBits(angle)+":"+withNeighbor+":"+outcome+":"+trace+":"+attachedTrace+":"+movingTrace+":"+transientTrace+":"+poolTrace
+            +":"+points+":"+popups+":"+popupTrace+":"+${global('rb','field_b','I')}+":"+soundSample()+":"+java.util.Arrays.hashCode(${global('bk','field_a','Ldm;')}.${field('dm','field_v','[I')}));cases++;
         }
       }
       public static void main(String[] args) throws Exception {
@@ -456,6 +596,8 @@ try {
         secondaryQueues();
         conversions();
         reconciliation();
+        feedback();
+        routing();
         System.out.println("complete:"+cases+":conversion-failures:"+conversionFailures);
       }
     }`;

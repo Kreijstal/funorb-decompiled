@@ -1232,7 +1232,7 @@ final class GameplaySession {
                     stackIn_359_1 = 1;
                   }
                   ((GameplaySession) (this)).rotationControlsSwapped = stackIn_359_1 != 0;
-                  jc.a(7, false);
+                  jc.requestAvatarFeedback(7, false);
                 }
                 if (2 > oc.field_f) {
                   continue L60;

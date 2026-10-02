@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jl {
-    static boolean field_t;
+    static boolean avatarShockContactPending;
     int field_q;
     int field_i;
     byte[] field_e;
@@ -89,7 +89,7 @@ final class jl {
             }
             return;
         }
-        field_t = true;
+        avatarShockContactPending = true;
         if (!(oc.field_e == null)) {
             oc.field_e.b(-122);
             oc.field_e = null;

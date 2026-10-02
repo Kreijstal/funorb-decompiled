@@ -211,11 +211,11 @@ final class ij extends oe implements pl {
         if (!el.gameplaySession.sessionEnding) {
             var1 = el.gameplaySession.boardMaskOffsetX - 2;
             var2 = el.gameplaySession.boardMaskOffsetY - 2;
-            if (!(wa.field_a <= 0)) {
+            if (!(wa.avatarShockEffectTicks <= 0)) {
                 vg.field_f[ha.field_g].b(320 - (vg.field_f[ha.field_g].field_s >> -1387017855), -(vg.field_f[ha.field_g].field_o >> 10164129) + 240);
             }
-            fc.field_b[uf.field_b].b(var1 + 320, 240 + var2, rj.field_c);
-            vh.field_H[nd.field_a].b(320 + var1, 240 + var2, rj.field_c);
+            fc.field_b[uf.avatarFeedbackFrameIndex].b(var1 + 320, 240 + var2, rj.field_c);
+            vh.field_H[nd.avatarFeedbackModeId].b(320 + var1, 240 + var2, rj.field_c);
             if (param0 >= 3) {
                 return;
             }
@@ -225,11 +225,11 @@ final class ij extends oe implements pl {
         if (null == ul.field_a) {
             var1 = el.gameplaySession.boardMaskOffsetX - 2;
             var2 = el.gameplaySession.boardMaskOffsetY - 2;
-            if (!(wa.field_a <= 0)) {
+            if (!(wa.avatarShockEffectTicks <= 0)) {
                 vg.field_f[ha.field_g].b(320 - (vg.field_f[ha.field_g].field_s >> -1387017855), -(vg.field_f[ha.field_g].field_o >> 10164129) + 240);
             }
-            fc.field_b[uf.field_b].b(var1 + 320, 240 + var2, rj.field_c);
-            vh.field_H[nd.field_a].b(320 + var1, 240 + var2, rj.field_c);
+            fc.field_b[uf.avatarFeedbackFrameIndex].b(var1 + 320, 240 + var2, rj.field_c);
+            vh.field_H[nd.avatarFeedbackModeId].b(320 + var1, 240 + var2, rj.field_c);
             if (param0 >= 3) {
                 return;
             }

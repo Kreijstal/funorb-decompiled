@@ -202,6 +202,7 @@ Generated from explicit rules; original names remain lookup identities.
 | `F:jj.field_c:Ljava/lang/String;` | `loginUsernameEmailText` | wi.a(BLrh;)V reads the explicit resource key 'login_username_email' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:jk.field_b:Ljava/lang/String;` | `fullscreenAcceptCountdownPluralText` | wi.a(BLrh;)V reads the explicit resource key 'fs_accept_countdown_pl' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:jk.field_c:Ljava/lang/String;` | `returnToGameText` | wi.a(BLrh;)V reads the explicit resource key 'returntogame' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
+| `F:jl.field_t:Z` | `avatarShockContactPending` | Set by kind-three avatar mask contact, blocks queue-settling checks and is cleared when reconciliation consumes avatarShockPending. Native routing verifies the reset independently. |
 | `F:k.field_b:Ljava/lang/String;` | `fullscreenFocusText` | wi.a(BLrh;)V reads the explicit resource key 'fs_focus' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:k.field_k:Ljava/lang/String;` | `loginText` | wi.a(BLrh;)V reads the explicit resource key 'login' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:ka.field_b:I` | `selectedItemIndex` | Selected/hovered row index used for input dispatch and rendering highlighted row. |
@@ -209,6 +210,7 @@ Generated from explicit rules; original names remain lookup identities.
 | `F:ka.field_e:I` | `itemCount` | Constructor receives action-array length; bounds hit testing, selection wrapping and rendering loop. |
 | `F:ka.field_f:I` | `hitRightX` | Exclusive upper X boundary in base menu hit test; initialized by constructor. |
 | `F:ka.field_g:Z` | `pointerInteractionActive` | Set on nonempty pointer hit; gates held-button dispatch and keyboard selection. |
+| `F:ka.field_h:I` | `avatarFeedbackFrameBase` | Base of a six-frame avatar feedback segment: 0, 6, 12, 18, 24, 30 or 36. Native request matrix checks base and selected sound independently; qa advances frames and ij/ri render fc.field_b by uf frame index. |
 | `F:ka.field_j:I` | `hitLeftX` | Lower X boundary in base menu hit test; initialized by constructor. |
 | `F:ka.field_k:I` | `firstItemY` | Menu top Y; hit test subtracts it and render initializes row Y from it. |
 | `F:ka.field_l:Z` | `keyboardSelectionActive` | True when navigation selects a row; pointer hover clears it and changes selection. |
@@ -244,6 +246,7 @@ Generated from explicit rules; original names remain lookup identities.
 | `F:na.field_h:[I` | `palette` | Indexed raster looks up int color by unsigned byte pixel value. |
 | `F:na.field_i:[B` | `indices` | Byte indices consumed by indexed raster bodies. |
 | `F:nb.field_a:Ljava/lang/String;` | `loadingFontsText` | wi.a(BLrh;)V reads the explicit resource key 'loading_fonts' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
+| `F:nd.field_a:I` | `avatarFeedbackModeId` | Selects the vh.field_H avatar overlay and feedback state. Requests 0 through 5 set matching IDs; a new request 7 sets ID 6. |
 | `F:ne.field_d:Ljava/lang/String;` | `ticketingGoToWebsiteText` | wi.a(BLrh;)V reads the explicit resource key 'ticketing_gotowebsite' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:nf.field_A:I` | `screenTransitionTick` | Incremented while current/requested screens differ; reset at 160; drives clipping and curtain position in Geoblox render. |
 | `F:nf.field_E:Ljava/lang/String;` | `reloadGameText` | wi.a(BLrh;)V reads the explicit resource key 'reloadgame' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
@@ -267,6 +270,7 @@ Generated from explicit rules; original names remain lookup identities.
 | `F:ok.field_e:Ljava/lang/String;` | `createEmailConfirmationText` | wi.a(BLrh;)V reads the explicit resource key 'create_email_confirm' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:ok.field_i:Ljava/lang/String;` | `createEmailConfirmationTooltipText` | wi.a(BLrh;)V reads the explicit resource key 'create_email_confirm_tooltip' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:pa.field_e:Ljava/lang/String;` | `waitingForSoundEffectsText` | wi.a(BLrh;)V reads the explicit resource key 'waitingfor_soundeffects' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
+| `F:pa.field_g:I` | `avatarFeedbackHoldTicks` | A positive hold defers ordinary feedback changes; modes 3, 4, 5 and a new mode-7 request set 110. Native request matrix verifies held and expired cases. |
 | `F:pb.field_o:Ljava/lang/String;` | `createAgeTooltipText` | wi.a(BLrh;)V reads the explicit resource key 'create_age_tooltip' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:pb.field_t:Ltf;` | `pendingActionMarkers` | ra.a(int,int,int) enqueues new nj(param2) into pb.field_t; the GameplaySession constructor clears this deque. |
 | `F:pb.field_v:Ljava/lang/String;` | `fullscreenAcceptButtonText` | wi.a(BLrh;)V reads the explicit resource key 'fs_button_accept' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
@@ -289,6 +293,7 @@ Generated from explicit rules; original names remain lookup identities.
 | `F:ra.field_a:Ltf;` | `availableEntities` | Entity initialization removes a free entity from this queue; completed entity animations return their objects here. |
 | `F:ra.field_b:Ljava/lang/String;` | `ticketingUnreadCountText` | wi.a(BLrh;)V reads the explicit resource key 'ticketing_xunread' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:rb.field_a:Ljava/lang/String;` | `fullscreenCancelButtonText` | wi.a(BLrh;)V reads the explicit resource key 'fs_button_cancel' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
+| `F:rb.field_b:I` | `kindFourRemovalCount` | Counts original kind-four entities routed to kind seven in the transient list, reset by le session setup; at five it requests the existing unlock action. Native routing checks counters, with unlock delivery suppressed by pre-existing action bits. |
 | `F:rc.field_f:Ljava/lang/String;` | `invalidPasswordText` | wi.a(BLrh;)V reads the explicit resource key 'invalidpass' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:rc.field_g:Ljava/lang/String;` | `js5ConnectFullErrorText` | wi.a(BLrh;)V reads the explicit resource key 'error_js5connect_full' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:rc.field_h:F` | `rotationStepRadians` | Gameplay applies this angular step with opposite signs for the two rotation controls; difficulty setup assigns it. |
@@ -336,6 +341,7 @@ Generated from explicit rules; original names remain lookup identities.
 | `F:ue.field_d:Ljava/lang/String;` | `createNewsOptInText` | wi.a(BLrh;)V reads the explicit resource key 'create_optin_news' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:ue.field_f:Ltf;` | `availableScorePopups` | ug takes a popup from this pool; cf returns completed popups using intrusive insertion. |
 | `F:ue.field_g:Ljava/lang/String;` | `createAgeText` | wi.a(BLrh;)V reads the explicit resource key 'create_age' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
+| `F:uf.field_b:I` | `avatarFeedbackFrameIndex` | Indexes fc.field_b avatar frames. Accepted ordinary feedback keeps its Java remainder modulo six, then adds the selected frame base; native matrix covers negative, low and high frame values. |
 | `F:uf.field_i:Ljava/lang/String;` | `createPasswordContainsEmailAlertText` | wi.a(BLrh;)V reads the explicit resource key 'create_alert_passcontainsemail' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:ug.field_b:Ljava/lang/String;` | `createEmailText` | wi.a(BLrh;)V reads the explicit resource key 'create_email' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:uj.field_d:Ljava/lang/String;` | `fullscreenAfterCancelText` | wi.a(BLrh;)V reads the explicit resource key 'fs_accept_aftercancel' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
@@ -358,10 +364,13 @@ Generated from explicit rules; original names remain lookup identities.
 | `F:vi.field_G:Ljava/lang/String;` | `createNewsOptInTooltipText` | wi.a(BLrh;)V reads the explicit resource key 'create_optin_news_tooltip' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:w.field_a:Ljava/lang/String;` | `mouseOverIconText` | wi.a(BLrh;)V reads the explicit resource key 'mouseoveranicon' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:w.field_f:Z` | `avatarShockPending` | Set by rh.updateAttachedEntities for kind-3 entities touching the avatar with nonpositive cooldown. Consumed and cleared by kc.reconcileBoardEntities after shock feedback; le reset also clears it. ec.processMatchCandidates suppresses the empty-candidate chain reset while it is set. Producers are verified by source inspection; the native scoring probe controls this gate directly. |
+| `F:wa.field_a:I` | `avatarShockEffectTicks` | Request 3 starts a 50-tick effect even during a feedback hold. qa decrements this counter and ij draws the vg.field_f effect while it is positive. |
 | `F:wb.field_b:I` | `newAttachmentCount` | Reset at the start of ab.moveEntitiesAndCollectContacts and during le queue reset; incremented on a newly attached entity whose detachedFromBoard flag is false. The empty-candidate path in ec.processMatchCandidates uses a positive count to reset the chain unless avatarShockPending is set. Native scoring fixtures control this gate; they do not run contact physics. |
 | `F:wb.field_c:Ljava/lang/String;` | `soundLabelText` | wi.a(BLrh;)V reads the explicit resource key 'sound_colon' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
+| `F:wd.field_a:I` | `contactProbeOffsetX` | Horizontal offset of the 460-wide contact raster: (640 - raster canvas width)/2. Entity trail erasure and contact drawing subtract it; native attachment fixtures use the normal 90 offset. |
 | `F:wd.field_b:Ldm;` | `contactProbeRaster` | The pixel contact probe uses this raster while resolving moving-entity contacts. |
 | `F:wd.field_c:Lrc;` | `iterationCursor` | First iteration saves the following secondary node; next iteration returns this cursor and advances it to the next secondary link. |
+| `F:wd.field_d:I` | `contactProbeOffsetY` | Vertical offset of the 460-high contact raster: (480 - raster canvas height)/2. Entity trail erasure and contact drawing subtract it; native attachment fixtures use the normal 10 offset. |
 | `F:wd.field_e:Ltf;` | `spawnQueue` | lc advances staged entities and releases ready members to ji.field_r. |
 | `F:wd.field_g:Lrc;` | `sentinel` | Constructor self-links this secondary-node sentinel; traversal and removal compare against its identity. |
 | `F:wf.field_q:Ljava/lang/String;` | `fullscreenText` | wi.a(BLrh;)V reads the explicit resource key 'fullscreen' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
@@ -612,11 +621,17 @@ Generated from explicit rules; original names remain lookup identities.
 | `L:ja.n(I)V#7` | `entityDrawY` | ja.java computes var9 from rotated screen Y and half the offscreen sprite height before drawing. |
 | `L:ja.n(I)V#8` | `fadeOpacity` | ja.java derives var10 from remaining and initial lifetime, clamps it to 0..256, and passes it to vf.field_L.d as the sprite alpha. |
 | `L:ja.n(I)V#9` | `controlFlowGuard` | ja.java assigns Geoblox.field_C to var11 for decompiler control-flow branching; it is not a gameplay state value. |
+| `L:jc.a(IZ)V#0` | `unusedClientControlSnapshot` | Retained read of Geoblox.field_C at entry; this local is unused by the recovered feedback body. |
 | `L:ka.a(I)V#1` | `itemIndex` | Rendering row loop index bounded by item count. |
 | `L:ka.a(I)V#2` | `rowY` | Starts at first-item Y and advances by row spacing. |
 | `L:ka.a(Z)V#0` | `hitItemIndex` | Result of menu hit test, used for selection and pointer dispatch. |
 | `L:kc.b(I)V#0` | `entityQueueThenAttachedQueue` | Initially carries the moving entity queue marker; before rebuilding connectivity it is reused for the attached-entity deque. |
 | `L:kc.b(I)V#1` | `alreadyVisited` | Boolean carrier of connectivityVisitedByEntityId for the current attached entity. |
+| `L:kc.b(I)V#10` | `popupGuardInput` | Carries the normal popup-helper guard 117 into the merged point-selection branch. |
+| `L:kc.b(I)V#11` | `popupOriginY` | Final Y argument to spawnPointsPopup after the kind-three/kind-four branch merges. |
+| `L:kc.b(I)V#12` | `popupOriginX` | Final X argument to spawnPointsPopup after the kind-three/kind-four branch merges. |
+| `L:kc.b(I)V#13` | `popupMethodGuard` | Final normal guard 117 supplied to spawnPointsPopup, preserving its retained alternate branch. |
+| `L:kc.b(I)V#14` | `popupPoints` | Selects 100 for original kind three or four and 10 for the other kinds when an avatar contact is shocked; native routing oracles verify amount, multiplier and coordinates. |
 | `L:kc.b(I)V#15` | `sessionForRasterRead` | Carries the gameplay session while combining its existing boardRasterDirty state with contact and shock flags. |
 | `L:kc.b(I)V#16` | `sessionForRasterWrite` | Carries the gameplay session receiving the final raster-dirty decision. |
 | `L:kc.b(I)V#17` | `rasterDirtyDecision` | Integer Boolean carrier for old boardRasterDirty OR boardContactStateDirty OR avatarShockPending; native reconciliation probes independently check the first two gates. |
@@ -650,6 +665,8 @@ Generated from explicit rules; original names remain lookup identities.
 | `L:kc.b(I)V#5` | `comparedThenUnlinkTarget` | Carries the entity compared during worklist duplicate checks; reused as the neighbor whose reciprocal contact is removed during detachment. |
 | `L:kc.b(I)V#6` | `neighborThenUnlinkArgument` | Carries the neighbor identity for duplicate checks; reused as the detaching entity passed to removeRelatedEntity. |
 | `L:kc.b(I)V#7` | `visitedFlagThenResetIndex` | Initially carries the visited flag as an integer; reset to zero for neighbor cleanup or the visited-array reset index. |
+| `L:kc.b(I)V#8` | `popupOriginYInput` | Integer narrowing of the shocked entity Y position before selecting popup points; native routing checks original coordinates independently. |
+| `L:kc.b(I)V#9` | `popupOriginXInput` | Integer narrowing of the shocked entity X position before selecting popup points; native routing checks original coordinates independently. |
 | `L:ld.a(I)Z#21` | `circleHorizontalOffset` | The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions. |
 | `L:ld.a(I)Z#22` | `circleVerticalOffset` | The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions. |
 | `L:ld.a(I)Z#23` | `playfieldRadiusSquared` | The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions. |
@@ -829,6 +846,7 @@ Generated from explicit rules; original names remain lookup identities.
 | `M:ja.l(I)V` | `drawRotatedEntityOnCurrentRaster` | Rotates the entity sprite at its current position and angle into the current raster target; does not install a new raster target. |
 | `M:ja.m(I)V` | `updatePaletteChannelDeltas` | ja.java method m(int) extracts adjacent palette entries from jg.field_h and stores their red, green and blue channel differences in field_s, field_x and field_y. |
 | `M:ja.n(I)V` | `drawFadingEntity` | ja.java method n(int) computes a bounded opacity from field_r and field_p and passes it to the sprite draw call after positioning and rotation. |
+| `M:jc.a(IZ)V` | `requestAvatarFeedback` | Requests an avatar feedback mode while retaining hold, frame, sprite-guard and sound behavior. Native matrix verifies 3024 combinations with table-based state and actual PCM sample identity/count oracles. |
 | `M:ka.a(BI)V` | `increaseMenuValue` | Concrete increases music/effect sliders by ten; base dispatches right-direction keys here. Both base and concrete declarations are renamed. |
 | `M:ka.a(I)V` | `renderScreen` | Geoblox render calls c.a(-28750); base implementation renders item rows, concrete draws complete screen. Both base and concrete declarations are renamed. |
 | `M:ka.a(IB)V` | `decreaseMenuValue` | Concrete decreases music/effect sliders by ten; base dispatches left-direction keys here. Both base and concrete declarations are renamed. |
@@ -999,6 +1017,8 @@ Generated from explicit rules; original names remain lookup identities.
 | `P:ja.a(Lja;I)V#0` | `relatedEntity` | ja.java searches field_n for object identity equal to param0 before removing that related entity; kc.java passes the parent whose child is being detached. |
 | `P:ja.a(Lja;I)V#1` | `startingChildIndex` | ja.java initializes its field_n search cursor directly from param1 and increments it until field_L. |
 | `P:ja.b(II)I#1` | `bitOffset` | ja.java masks param1 with 7 to calculate padding to the next byte-aligned bit offset, then returns param1 plus that padding. |
+| `P:jc.a(IZ)V#0` | `feedbackRequestId` | Requests 0 through 5, or request 7 for mode six; native matrix includes -1 and 6 no-op requests. |
+| `P:jc.a(IZ)V#1` | `clearSpriteGuard` | Clears jc.field_a only when the feedback hold is not positive; normal gameplay passes false. Native matrix checks both values and an actual sprite identity. |
 | `P:ka.a(BI)V#1` | `itemIndex` | Indexes action IDs for increase operation. |
 | `P:ka.a(IB)V#0` | `itemIndex` | Indexes action IDs for decrease operation. |
 | `P:ka.a(II)V#0` | `itemIndex` | Selected row passed to key handling. |

@@ -16,8 +16,8 @@ final class le implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         SecondaryDeque.contactProbeRaster.e();
         SoftwareRasterizer.c();
         sh.field_y.a(255);
-        jl.field_t = false;
-        rb.field_b = 0;
+        jl.avatarShockContactPending = false;
+        rb.kindFourRemovalCount = 0;
         ab.boardContactStateDirty = false;
         fa.entitiesDetachedThisTick = false;
         w.avatarShockPending = false;

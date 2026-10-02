@@ -4,7 +4,7 @@
 final class rb {
     static String fullscreenCancelButtonText;
     static boolean field_c;
-    static int field_b;
+    static int kindFourRemovalCount;
     static v field_d;
 
     final static bg a(int param0, int param1, rh param2, int param3, rh param4) {

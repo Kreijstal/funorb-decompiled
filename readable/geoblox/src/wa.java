@@ -9,7 +9,7 @@ final class wa {
     int field_h;
     int field_p;
     dh field_g;
-    static int field_a;
+    static int avatarShockEffectTicks;
     dh field_c;
     dh field_l;
     int field_d;
@@ -365,6 +365,6 @@ final class wa {
     }
 
     static {
-        field_a = 0;
+        avatarShockEffectTicks = 0;
     }
 }

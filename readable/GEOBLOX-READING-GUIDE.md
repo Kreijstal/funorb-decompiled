@@ -1,4 +1,4 @@
-# Reading GeoBlox pass 24
+# Reading GeoBlox pass 25
 
 The readable tree uses semantic names without opaque suffixes. The symbol map
 keeps the original spelling and JVM identity of every declaration, so
@@ -282,7 +282,32 @@ shock state. The native reconciliation fixture checks connectivity and contact
 flags, including centre-position NaN velocities. It exercises the normal method
 guard -90 from `GameplaySession.updateSession` and compares both retained client
 control values. Attachment drawing, shock/transient routing and pool-return
-branches still have source evidence without native coverage in this probe.
+branches now also have native fixtures with minimal sprites and zero or one
+reciprocal neighbor. Attachment writes `entityId+1` ownership pixels; transient
+and pool transfers clear secondary membership. Shock popups use the original
+integer-narrowed `popupOriginX`/`popupOriginY`, with `popupPoints` set to 100 for
+original kinds three/four and 10 otherwise. `kindFourRemovalCount` increments
+for original kind-four entities changed to kind seven. New unlock delivery is
+outside these fixtures; existing action bits suppress it.
+
+`avatarShockContactPending` is set by a kind-three ownership-mask contact and
+blocks queue settling. Once the attached update requests `avatarShockPending`,
+reconciliation consumes that request, clears the contact flag and calls
+`jc.requestAvatarFeedback(3, false)`. These are distinct stages and flags.
+
+`requestAvatarFeedback` manages `avatarFeedbackModeId`, `avatarFeedbackFrameBase`,
+`avatarFeedbackFrameIndex` and `avatarFeedbackHoldTicks`. Ordinary requests
+0 through 5 select six-frame segments; request 7 selects mode six/base 36.
+A positive hold defers ordinary changes. Request 3 still starts
+`avatarShockEffectTicks` at 50 and queues its sound during a hold. A new request
+7 overrides a different frame base and starts a 110-tick hold.
+`clearSpriteGuard` preserves the original optional clearing of `jc.field_a`;
+normal gameplay passes false. The native matrix verifies both guard values and
+retains Java's negative frame remainder rather than clamping it.
+
+`SecondaryDeque.contactProbeOffsetX` and `contactProbeOffsetY` place the contact
+raster within the 640 by 480 viewport. Their normal values are 90 and 10 for a
+460 by 460 raster. Entity trail and contact drawing subtract these offsets.
 
 This is a reading map of the recovered source, not a whole-game behavioral
 proof. Several guards, scratch carriers and shared helper names remain opaque.

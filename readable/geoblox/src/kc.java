@@ -82,13 +82,13 @@ final class kc {
         GameplayEntity comparedThenUnlinkTarget = null;
         GameplayEntity neighborThenUnlinkArgument = null;
         int visitedFlagThenResetIndex = 0;
-        int stackIn_88_0 = 0;
-        int stackIn_88_1 = 0;
-        int stackIn_88_2 = 0;
-        int stackIn_90_0;
-        int stackIn_90_1;
-        int stackIn_90_2;
-        int stackIn_90_3;
+        int popupOriginYInput = 0;
+        int popupOriginXInput = 0;
+        int popupGuardInput = 0;
+        int popupOriginY;
+        int popupOriginX;
+        int popupMethodGuard;
+        int popupPoints;
         GameplaySession sessionForRasterRead = null;
         GameplaySession sessionForRasterWrite = null;
         int rasterDirtyDecision = 0;
@@ -563,11 +563,11 @@ final class kc {
                       if (routedAttachedEntity.touchesAvatar) {
                         if (w.avatarShockPending) {
                           L49: {
-                            stackIn_88_0 = (int)routedAttachedEntity.positionY;
+                            popupOriginYInput = (int)routedAttachedEntity.positionY;
 
-                            stackIn_88_1 = (int)routedAttachedEntity.positionX;
+                            popupOriginXInput = (int)routedAttachedEntity.positionX;
 
-                            stackIn_88_2 = 117;
+                            popupGuardInput = 117;
 
                             if (routedAttachedEntity.entitySpriteKindId != 4) {
 
@@ -577,10 +577,10 @@ final class kc {
 
 
                               if (routedAttachedEntity.entitySpriteKindId != 3) {
-                                stackIn_90_0 = stackIn_88_0;
-                                stackIn_90_1 = stackIn_88_1;
-                                stackIn_90_2 = stackIn_88_2;
-                                stackIn_90_3 = 10;
+                                popupOriginY = popupOriginYInput;
+                                popupOriginX = popupOriginXInput;
+                                popupMethodGuard = popupGuardInput;
+                                popupPoints = 10;
                                 break L49;
                               } else {
 
@@ -588,12 +588,12 @@ final class kc {
 
                               }
                             }
-                            stackIn_90_0 = stackIn_88_0;
-                            stackIn_90_1 = stackIn_88_1;
-                            stackIn_90_2 = stackIn_88_2;
-                            stackIn_90_3 = 100;
+                            popupOriginY = popupOriginYInput;
+                            popupOriginX = popupOriginXInput;
+                            popupMethodGuard = popupGuardInput;
+                            popupPoints = 100;
                           }
-                          ld.spawnPointsPopup(stackIn_90_0, stackIn_90_1, stackIn_90_2, stackIn_90_3);
+                          ld.spawnPointsPopup(popupOriginY, popupOriginX, popupMethodGuard, popupPoints);
                         }
                       }
                       if (4 != routedAttachedEntity.entitySpriteKindId) {
@@ -604,7 +604,7 @@ final class kc {
                       }
                       routedAttachedEntity.configureEntitySprite(320, routedAttachedEntity.entityCategoryKey, routedAttachedEntity.spriteVariantIndex, 7);
                       visitedResetIndexThenKindFourCount++;
-                      rb.field_b = rb.field_b + 1;
+                      rb.kindFourRemovalCount = rb.kindFourRemovalCount + 1;
                       break L41;
                     }
                     routedAttachedEntity.entityQueue = null;
@@ -638,8 +638,8 @@ final class kc {
                     }
                   }
                   if (w.avatarShockPending) {
-                    jc.a(3, false);
-                    jl.field_t = false;
+                    jc.requestAvatarFeedback(3, false);
+                    jl.avatarShockContactPending = false;
                   }
                 }
                 L56: {
@@ -668,7 +668,7 @@ final class kc {
                 if (visitedResetIndexThenKindFourCount >= 3) {
                   ra.a(255 ^ fe.field_f, -88, fe.field_f);
                 }
-                if (rb.field_b >= 5) {
+                if (rb.kindFourRemovalCount >= 5) {
                   ra.a(255 ^ vd.field_p, -83, vd.field_p);
                 }
                 break L0;

@@ -31,7 +31,7 @@ function fixture(change, check = true) {
 }
 
 test('one current manifest reproduces all guarded rules using Git history', () => {
-  assert.equal(JSON.parse(fixture().stdout).rules, 1097);
+  assert.equal(JSON.parse(fixture().stdout).rules, 1117);
 });
 test('previous Git objects and their hash cannot change silently', () => {
   for (const change of [
@@ -51,16 +51,18 @@ test('explicit additions and replacements check their complete previous identity
     const rule = {symbol: 'L:ul.b(I)V#21', originalName: 'var1', to: 'caughtRuntimeException', evidence: 'Fixture addition'};
     data.renames.push(rule); data.publication.ruleChanges.push({symbol: rule.symbol, before: null, after: rule});
   };
-  assert.equal(JSON.parse(fixture(add, false).stdout).rules, 1098);
+  assert.equal(JSON.parse(fixture(add, false).stdout).rules, 1118);
   assert.throws(() => fixture(data => { add(data); data.publication.ruleChanges[0].before = {}; }),
     /differs from the previous guarded identity/);
   assert.throws(() => fixture(data => { add(data); data.publication.ruleChanges.push(data.publication.ruleChanges[0]); }),
     /Invalid explicit naming changes/);
   for (const originalName of ['wrong', null])
     assert.throws(() => fixture(data => {
-      const change=data.publication.ruleChanges.find(item=>item.before!==null);
-      if(originalName===null)change.before=null;
-      else change.before.originalName=originalName;
+      const previousRule=data.renames.find(item=>item.symbol==='C:gh');
+      const replacement={...previousRule,to:'FixtureGame'};
+      data.renames[data.renames.indexOf(previousRule)]=replacement;
+      data.publication.ruleChanges.push({symbol:previousRule.symbol,
+        before:originalName===null?null:{...previousRule,originalName},after:replacement});
     }), /differs from the previous guarded identity/);
 });
 test('spelling guards, unique symbols and deterministic order remain mandatory', () => {

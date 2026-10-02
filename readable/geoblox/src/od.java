@@ -11,7 +11,7 @@ final class od {
             if (gg.field_b != 2) {
                 return false;
             }
-            if (pa.field_g < 0) {
+            if (pa.avatarFeedbackHoldTicks < 0) {
                 return true;
             }
             return false;
@@ -19,7 +19,7 @@ final class od {
         if (gg.field_b != 2) {
             return false;
         }
-        if (pa.field_g < 0) {
+        if (pa.avatarFeedbackHoldTicks < 0) {
             return true;
         }
         return false;

@@ -10,7 +10,7 @@ final class pa {
     static String field_a;
     private RandomAccessFile field_d;
     private long field_c;
-    static int field_g;
+    static int avatarFeedbackHoldTicks;
 
     final void a(byte[] param0, int param1, int param2, int param3) throws IOException {
         try {
@@ -45,7 +45,7 @@ final class pa {
             this.field_c = this.field_c + (long)var5_int;
           }
           if (param3) {
-            field_g = -101;
+            avatarFeedbackHoldTicks = -101;
           }
           stackIn_5_0 = var5_int;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -342,6 +342,6 @@ final class pa {
         field_b = new uj();
         field_a = "Score: <%0>";
         waitingForSoundEffectsText = "Waiting for sound effects";
-        field_g = 0;
+        avatarFeedbackHoldTicks = 0;
     }
 }

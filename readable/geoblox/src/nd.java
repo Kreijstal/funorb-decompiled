@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nd {
-    static int field_a;
+    static int avatarFeedbackModeId;
     static long field_b;
 
     final static void a(int param0, int param1, byte param2, int param3, int param4, int param5) {
@@ -119,6 +119,6 @@ final class nd {
     }
 
     static {
-        field_a = 0;
+        avatarFeedbackModeId = 0;
     }
 }

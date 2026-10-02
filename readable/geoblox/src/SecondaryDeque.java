@@ -3,8 +3,8 @@
  */
 final class SecondaryDeque {
     static Sprite contactProbeRaster;
-    static int field_d;
-    static int field_a;
+    static int contactProbeOffsetY;
+    static int contactProbeOffsetX;
     static IntrusiveDeque spawnQueue;
     private DualLinkNode sentinel;
     static String field_f;
@@ -53,7 +53,7 @@ final class SecondaryDeque {
     final static void c(int param0) {
         kb.b(-120);
         if (param0 != 480) {
-            field_d = -37;
+            contactProbeOffsetY = -37;
         }
     }
 
@@ -133,7 +133,7 @@ final class SecondaryDeque {
             if (param0) {
               break L0;
             } else {
-              field_a = -80;
+              contactProbeOffsetX = -80;
               return;
             }
           }
@@ -147,7 +147,7 @@ final class SecondaryDeque {
     final static void a(byte param0, String param1) {
         try {
             if (param0 != 69) {
-                field_a = 99;
+                contactProbeOffsetX = 99;
             }
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "wd.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -253,8 +253,8 @@ final class SecondaryDeque {
 
     static {
         contactProbeRaster = new Sprite(460, 460);
-        field_d = (-contactProbeRaster.field_o + 480) / 2;
-        field_a = (640 + -contactProbeRaster.field_s) / 2;
+        contactProbeOffsetY = (-contactProbeRaster.field_o + 480) / 2;
+        contactProbeOffsetX = (640 + -contactProbeRaster.field_s) / 2;
         spawnQueue = new IntrusiveDeque();
     }
 }

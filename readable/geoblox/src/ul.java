@@ -246,9 +246,9 @@ final class ul {
               if (dualMatchFound == 0) {
                 stackIn_82_0 = 4;
                 stackIn_82_1 = 0;
-                jc.a(stackIn_82_0, stackIn_82_1 != 0);
+                jc.requestAvatarFeedback(stackIn_82_0, stackIn_82_1 != 0);
               } else {
-                jc.a(5, false);
+                jc.requestAvatarFeedback(5, false);
               }
             }
             break L0;

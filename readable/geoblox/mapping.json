@@ -1390,6 +1390,13 @@
       "renamedSymbol": "F:jk.returnToGameText:Ljava/lang/String;"
     },
     {
+      "symbol": "F:jl.field_t:Z",
+      "originalName": "field_t",
+      "to": "avatarShockContactPending",
+      "evidence": "Set by kind-three avatar mask contact, blocks queue-settling checks and is cleared when reconciliation consumes avatarShockPending. Native routing verifies the reset independently.",
+      "renamedSymbol": "F:jl.avatarShockContactPending:Z"
+    },
+    {
       "symbol": "F:k.field_b:Ljava/lang/String;",
       "to": "fullscreenFocusText",
       "originalName": "field_b",
@@ -1437,6 +1444,13 @@
       "evidence": "Set on nonempty pointer hit; gates held-button dispatch and keyboard selection.",
       "originalName": "field_g",
       "renamedSymbol": "F:MenuScreen.pointerInteractionActive:Z"
+    },
+    {
+      "symbol": "F:ka.field_h:I",
+      "originalName": "field_h",
+      "to": "avatarFeedbackFrameBase",
+      "evidence": "Base of a six-frame avatar feedback segment: 0, 6, 12, 18, 24, 30 or 36. Native request matrix checks base and selected sound independently; qa advances frames and ij/ri render fc.field_b by uf frame index.",
+      "renamedSymbol": "F:MenuScreen.avatarFeedbackFrameBase:I"
     },
     {
       "symbol": "F:ka.field_j:I",
@@ -1684,6 +1698,13 @@
       "renamedSymbol": "F:nb.loadingFontsText:Ljava/lang/String;"
     },
     {
+      "symbol": "F:nd.field_a:I",
+      "originalName": "field_a",
+      "to": "avatarFeedbackModeId",
+      "evidence": "Selects the vh.field_H avatar overlay and feedback state. Requests 0 through 5 set matching IDs; a new request 7 sets ID 6.",
+      "renamedSymbol": "F:nd.avatarFeedbackModeId:I"
+    },
+    {
       "symbol": "F:ne.field_d:Ljava/lang/String;",
       "to": "ticketingGoToWebsiteText",
       "originalName": "field_d",
@@ -1845,6 +1866,13 @@
       "renamedSymbol": "F:pa.waitingForSoundEffectsText:Ljava/lang/String;"
     },
     {
+      "symbol": "F:pa.field_g:I",
+      "originalName": "field_g",
+      "to": "avatarFeedbackHoldTicks",
+      "evidence": "A positive hold defers ordinary feedback changes; modes 3, 4, 5 and a new mode-7 request set 110. Native request matrix verifies held and expired cases.",
+      "renamedSymbol": "F:pa.avatarFeedbackHoldTicks:I"
+    },
+    {
       "symbol": "F:pb.field_o:Ljava/lang/String;",
       "to": "createAgeTooltipText",
       "originalName": "field_o",
@@ -1997,6 +2025,13 @@
       "originalName": "field_a",
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'fs_button_cancel' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null.",
       "renamedSymbol": "F:rb.fullscreenCancelButtonText:Ljava/lang/String;"
+    },
+    {
+      "symbol": "F:rb.field_b:I",
+      "originalName": "field_b",
+      "to": "kindFourRemovalCount",
+      "evidence": "Counts original kind-four entities routed to kind seven in the transient list, reset by le session setup; at five it requests the existing unlock action. Native routing checks counters, with unlock delivery suppressed by pre-existing action bits.",
+      "renamedSymbol": "F:rb.kindFourRemovalCount:I"
     },
     {
       "symbol": "F:rc.field_f:Ljava/lang/String;",
@@ -2328,6 +2363,13 @@
       "renamedSymbol": "F:ue.createAgeText:Ljava/lang/String;"
     },
     {
+      "symbol": "F:uf.field_b:I",
+      "originalName": "field_b",
+      "to": "avatarFeedbackFrameIndex",
+      "evidence": "Indexes fc.field_b avatar frames. Accepted ordinary feedback keeps its Java remainder modulo six, then adds the selected frame base; native matrix covers negative, low and high frame values.",
+      "renamedSymbol": "F:uf.avatarFeedbackFrameIndex:I"
+    },
+    {
       "symbol": "F:uf.field_i:Ljava/lang/String;",
       "to": "createPasswordContainsEmailAlertText",
       "originalName": "field_i",
@@ -2482,6 +2524,13 @@
       "renamedSymbol": "F:w.avatarShockPending:Z"
     },
     {
+      "symbol": "F:wa.field_a:I",
+      "originalName": "field_a",
+      "to": "avatarShockEffectTicks",
+      "evidence": "Request 3 starts a 50-tick effect even during a feedback hold. qa decrements this counter and ij draws the vg.field_f effect while it is positive.",
+      "renamedSymbol": "F:wa.avatarShockEffectTicks:I"
+    },
+    {
       "symbol": "F:wb.field_b:I",
       "to": "newAttachmentCount",
       "originalName": "field_b",
@@ -2496,6 +2545,13 @@
       "renamedSymbol": "F:wb.soundLabelText:Ljava/lang/String;"
     },
     {
+      "symbol": "F:wd.field_a:I",
+      "originalName": "field_a",
+      "to": "contactProbeOffsetX",
+      "evidence": "Horizontal offset of the 460-wide contact raster: (640 - raster canvas width)/2. Entity trail erasure and contact drawing subtract it; native attachment fixtures use the normal 90 offset.",
+      "renamedSymbol": "F:SecondaryDeque.contactProbeOffsetX:I"
+    },
+    {
       "symbol": "F:wd.field_b:Ldm;",
       "to": "contactProbeRaster",
       "originalName": "field_b",
@@ -2508,6 +2564,13 @@
       "to": "iterationCursor",
       "evidence": "First iteration saves the following secondary node; next iteration returns this cursor and advances it to the next secondary link.",
       "renamedSymbol": "F:SecondaryDeque.iterationCursor:LDualLinkNode;"
+    },
+    {
+      "symbol": "F:wd.field_d:I",
+      "originalName": "field_d",
+      "to": "contactProbeOffsetY",
+      "evidence": "Vertical offset of the 460-high contact raster: (480 - raster canvas height)/2. Entity trail erasure and contact drawing subtract it; native attachment fixtures use the normal 10 offset.",
+      "renamedSymbol": "F:SecondaryDeque.contactProbeOffsetY:I"
     },
     {
       "symbol": "F:wd.field_e:Ltf;",
@@ -4260,6 +4323,13 @@
       "renamedSymbol": "L:GameplayEntity.drawFadingEntity(I)V#9"
     },
     {
+      "symbol": "L:jc.a(IZ)V#0",
+      "originalName": "var3",
+      "to": "unusedClientControlSnapshot",
+      "evidence": "Retained read of Geoblox.field_C at entry; this local is unused by the recovered feedback body.",
+      "renamedSymbol": "L:jc.requestAvatarFeedback(IZ)V#0"
+    },
+    {
       "symbol": "L:ka.a(I)V#1",
       "originalName": "var2",
       "to": "itemIndex",
@@ -4293,6 +4363,41 @@
       "to": "alreadyVisited",
       "evidence": "Boolean carrier of connectivityVisitedByEntityId for the current attached entity.",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#1"
+    },
+    {
+      "symbol": "L:kc.b(I)V#10",
+      "originalName": "stackIn_88_2",
+      "to": "popupGuardInput",
+      "evidence": "Carries the normal popup-helper guard 117 into the merged point-selection branch.",
+      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#10"
+    },
+    {
+      "symbol": "L:kc.b(I)V#11",
+      "originalName": "stackIn_90_0",
+      "to": "popupOriginY",
+      "evidence": "Final Y argument to spawnPointsPopup after the kind-three/kind-four branch merges.",
+      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#11"
+    },
+    {
+      "symbol": "L:kc.b(I)V#12",
+      "originalName": "stackIn_90_1",
+      "to": "popupOriginX",
+      "evidence": "Final X argument to spawnPointsPopup after the kind-three/kind-four branch merges.",
+      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#12"
+    },
+    {
+      "symbol": "L:kc.b(I)V#13",
+      "originalName": "stackIn_90_2",
+      "to": "popupMethodGuard",
+      "evidence": "Final normal guard 117 supplied to spawnPointsPopup, preserving its retained alternate branch.",
+      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#13"
+    },
+    {
+      "symbol": "L:kc.b(I)V#14",
+      "originalName": "stackIn_90_3",
+      "to": "popupPoints",
+      "evidence": "Selects 100 for original kind three or four and 10 for the other kinds when an avatar contact is shocked; native routing oracles verify amount, multiplier and coordinates.",
+      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#14"
     },
     {
       "symbol": "L:kc.b(I)V#15",
@@ -4524,6 +4629,20 @@
       "to": "visitedFlagThenResetIndex",
       "evidence": "Initially carries the visited flag as an integer; reset to zero for neighbor cleanup or the visited-array reset index.",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#7"
+    },
+    {
+      "symbol": "L:kc.b(I)V#8",
+      "originalName": "stackIn_88_0",
+      "to": "popupOriginYInput",
+      "evidence": "Integer narrowing of the shocked entity Y position before selecting popup points; native routing checks original coordinates independently.",
+      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#8"
+    },
+    {
+      "symbol": "L:kc.b(I)V#9",
+      "originalName": "stackIn_88_1",
+      "to": "popupOriginXInput",
+      "evidence": "Integer narrowing of the shocked entity X position before selecting popup points; native routing checks original coordinates independently.",
+      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#9"
     },
     {
       "symbol": "L:ld.a(I)Z#21",
@@ -5779,6 +5898,13 @@
       "renamedSymbol": "M:GameplayEntity.drawFadingEntity(I)V"
     },
     {
+      "symbol": "M:jc.a(IZ)V",
+      "originalName": "a",
+      "to": "requestAvatarFeedback",
+      "evidence": "Requests an avatar feedback mode while retaining hold, frame, sprite-guard and sound behavior. Native matrix verifies 3024 combinations with table-based state and actual PCM sample identity/count oracles.",
+      "renamedSymbol": "M:jc.requestAvatarFeedback(IZ)V"
+    },
+    {
       "symbol": "M:ka.a(BI)V",
       "to": "increaseMenuValue",
       "evidence": "Concrete increases music/effect sliders by ten; base dispatches right-direction keys here. Both base and concrete declarations are renamed.",
@@ -6967,6 +7093,20 @@
       "evidence": "ja.java masks param1 with 7 to calculate padding to the next byte-aligned bit offset, then returns param1 plus that padding.",
       "originalName": "param1",
       "renamedSymbol": "P:GameplayEntity.alignBitOffset(II)I#1"
+    },
+    {
+      "symbol": "P:jc.a(IZ)V#0",
+      "originalName": "param0",
+      "to": "feedbackRequestId",
+      "evidence": "Requests 0 through 5, or request 7 for mode six; native matrix includes -1 and 6 no-op requests.",
+      "renamedSymbol": "P:jc.requestAvatarFeedback(IZ)V#0"
+    },
+    {
+      "symbol": "P:jc.a(IZ)V#1",
+      "originalName": "param1",
+      "to": "clearSpriteGuard",
+      "evidence": "Clears jc.field_a only when the feedback hold is not positive; normal gameplay passes false. Native matrix checks both values and an actual sprite identity.",
+      "renamedSymbol": "P:jc.requestAvatarFeedback(IZ)V#1"
     },
     {
       "symbol": "P:ka.a(BI)V#1",
@@ -21007,9 +21147,9 @@
     },
     {
       "symbol": "F:jl.field_t:Z",
-      "renamedSymbol": "F:jl.field_t:Z",
+      "renamedSymbol": "F:jl.avatarShockContactPending:Z",
       "originalName": "field_t",
-      "renamedName": "field_t",
+      "renamedName": "avatarShockContactPending",
       "declaration": {
         "file": "jl.java",
         "start": 74,
@@ -21282,9 +21422,9 @@
     },
     {
       "symbol": "F:ka.field_h:I",
-      "renamedSymbol": "F:MenuScreen.field_h:I",
+      "renamedSymbol": "F:MenuScreen.avatarFeedbackFrameBase:I",
       "originalName": "field_h",
-      "renamedName": "field_h",
+      "renamedName": "avatarFeedbackFrameBase",
       "declaration": {
         "file": "ka.java",
         "start": 201,
@@ -24439,9 +24579,9 @@
     },
     {
       "symbol": "F:nd.field_a:I",
-      "renamedSymbol": "F:nd.field_a:I",
+      "renamedSymbol": "F:nd.avatarFeedbackModeId:I",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "avatarFeedbackModeId",
       "declaration": {
         "file": "nd.java",
         "start": 70,
@@ -26243,9 +26383,9 @@
     },
     {
       "symbol": "F:pa.field_g:I",
-      "renamedSymbol": "F:pa.field_g:I",
+      "renamedSymbol": "F:pa.avatarFeedbackHoldTicks:I",
       "originalName": "field_g",
-      "renamedName": "field_g",
+      "renamedName": "avatarFeedbackHoldTicks",
       "declaration": {
         "file": "pa.java",
         "start": 256,
@@ -28245,9 +28385,9 @@
     },
     {
       "symbol": "F:rb.field_b:I",
-      "renamedSymbol": "F:rb.field_b:I",
+      "renamedSymbol": "F:rb.kindFourRemovalCount:I",
       "originalName": "field_b",
-      "renamedName": "field_b",
+      "renamedName": "kindFourRemovalCount",
       "declaration": {
         "file": "rb.java",
         "start": 125,
@@ -31347,9 +31487,9 @@
     },
     {
       "symbol": "F:uf.field_b:I",
-      "renamedSymbol": "F:uf.field_b:I",
+      "renamedSymbol": "F:uf.avatarFeedbackFrameIndex:I",
       "originalName": "field_b",
-      "renamedName": "field_b",
+      "renamedName": "avatarFeedbackFrameIndex",
       "declaration": {
         "file": "uf.java",
         "start": 259,
@@ -33162,9 +33302,9 @@
     },
     {
       "symbol": "F:wa.field_a:I",
-      "renamedSymbol": "F:wa.field_a:I",
+      "renamedSymbol": "F:wa.avatarShockEffectTicks:I",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "avatarShockEffectTicks",
       "declaration": {
         "file": "wa.java",
         "start": 197,
@@ -33415,9 +33555,9 @@
     },
     {
       "symbol": "F:wd.field_a:I",
-      "renamedSymbol": "F:SecondaryDeque.field_a:I",
+      "renamedSymbol": "F:SecondaryDeque.contactProbeOffsetX:I",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "contactProbeOffsetX",
       "declaration": {
         "file": "wd.java",
         "start": 117,
@@ -33448,9 +33588,9 @@
     },
     {
       "symbol": "F:wd.field_d:I",
-      "renamedSymbol": "F:SecondaryDeque.field_d:I",
+      "renamedSymbol": "F:SecondaryDeque.contactProbeOffsetY:I",
       "originalName": "field_d",
-      "renamedName": "field_d",
+      "renamedName": "contactProbeOffsetY",
       "declaration": {
         "file": "wd.java",
         "start": 93,
@@ -87381,9 +87521,9 @@
     },
     {
       "symbol": "L:jc.a(IZ)V#0",
-      "renamedSymbol": "L:jc.a(IZ)V#0",
+      "renamedSymbol": "L:jc.requestAvatarFeedback(IZ)V#0",
       "originalName": "var3",
-      "renamedName": "var3",
+      "renamedName": "unusedClientControlSnapshot",
       "declaration": {
         "file": "jc.java",
         "start": 199,
@@ -92201,7 +92341,7 @@
       "symbol": "L:kc.b(I)V#10",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#10",
       "originalName": "stackIn_88_2",
-      "renamedName": "stackIn_88_2",
+      "renamedName": "popupGuardInput",
       "declaration": {
         "file": "kc.java",
         "start": 2779,
@@ -92212,7 +92352,7 @@
       "symbol": "L:kc.b(I)V#11",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#11",
       "originalName": "stackIn_90_0",
-      "renamedName": "stackIn_90_0",
+      "renamedName": "popupOriginY",
       "declaration": {
         "file": "kc.java",
         "start": 2809,
@@ -92223,7 +92363,7 @@
       "symbol": "L:kc.b(I)V#12",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#12",
       "originalName": "stackIn_90_1",
-      "renamedName": "stackIn_90_1",
+      "renamedName": "popupOriginX",
       "declaration": {
         "file": "kc.java",
         "start": 2835,
@@ -92234,7 +92374,7 @@
       "symbol": "L:kc.b(I)V#13",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#13",
       "originalName": "stackIn_90_2",
-      "renamedName": "stackIn_90_2",
+      "renamedName": "popupMethodGuard",
       "declaration": {
         "file": "kc.java",
         "start": 2861,
@@ -92245,7 +92385,7 @@
       "symbol": "L:kc.b(I)V#14",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#14",
       "originalName": "stackIn_90_3",
-      "renamedName": "stackIn_90_3",
+      "renamedName": "popupPoints",
       "declaration": {
         "file": "kc.java",
         "start": 2887,
@@ -92652,7 +92792,7 @@
       "symbol": "L:kc.b(I)V#8",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#8",
       "originalName": "stackIn_88_0",
-      "renamedName": "stackIn_88_0",
+      "renamedName": "popupOriginYInput",
       "declaration": {
         "file": "kc.java",
         "start": 2719,
@@ -92663,7 +92803,7 @@
       "symbol": "L:kc.b(I)V#9",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#9",
       "originalName": "stackIn_88_1",
-      "renamedName": "stackIn_88_1",
+      "renamedName": "popupOriginXInput",
       "declaration": {
         "file": "kc.java",
         "start": 2749,
@@ -171718,9 +171858,9 @@
     },
     {
       "symbol": "M:jc.a(IZ)V",
-      "renamedSymbol": "M:jc.a(IZ)V",
+      "renamedSymbol": "M:jc.requestAvatarFeedback(IZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requestAvatarFeedback",
       "declaration": {
         "file": "jc.java",
         "start": 155,
@@ -208282,9 +208422,9 @@
     },
     {
       "symbol": "P:jc.a(IZ)V#0",
-      "renamedSymbol": "P:jc.a(IZ)V#0",
+      "renamedSymbol": "P:jc.requestAvatarFeedback(IZ)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "feedbackRequestId",
       "declaration": {
         "file": "jc.java",
         "start": 161,
@@ -208293,9 +208433,9 @@
     },
     {
       "symbol": "P:jc.a(IZ)V#1",
-      "renamedSymbol": "P:jc.a(IZ)V#1",
+      "renamedSymbol": "P:jc.requestAvatarFeedback(IZ)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "clearSpriteGuard",
       "declaration": {
         "file": "jc.java",
         "start": 177,
@@ -273366,7 +273506,7 @@
       "original": "f.java",
       "renamed": "f.java",
       "inputSha256": "1ff720094c702eb71b475cdd1932fae938cfe91a915f1869f71da1cc18ae37bb",
-      "outputSha256": "b006d88657bb380f74026eaa8af0b2c837bbea569f84e047c57d89e5d019bc9b",
+      "outputSha256": "b2263b56f8b6b261b67edaf4ba09d9e0537816604011de242dc9e9dfb30cc56c",
       "edits": [
         {
           "start": 292,
@@ -273411,11 +273551,32 @@
           "renamed": "quickChatShortcutKeys"
         },
         {
+          "start": 8279,
+          "end": 8286,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
           "start": 8290,
           "end": 8292,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 8293,
+          "end": 8300,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 8325,
+          "end": 8332,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
         },
         {
           "start": 8335,
@@ -273425,6 +273586,13 @@
           "renamed": "MenuScreen"
         },
         {
+          "start": 8338,
+          "end": 8345,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
           "start": 8398,
           "end": 8400,
           "symbol": "C:ka",
@@ -273432,11 +273600,179 @@
           "renamed": "MenuScreen"
         },
         {
+          "start": 8401,
+          "end": 8408,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 8414,
+          "end": 8421,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 8603,
+          "end": 8610,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 8616,
+          "end": 8623,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 8809,
+          "end": 8816,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 8822,
+          "end": 8829,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 8982,
+          "end": 8989,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 8995,
+          "end": 9002,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 9219,
+          "end": 9226,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 9232,
+          "end": 9239,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 9357,
+          "end": 9364,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 9370,
+          "end": 9377,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 9552,
+          "end": 9559,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 9565,
+          "end": 9572,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 9758,
+          "end": 9765,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 9771,
+          "end": 9778,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 9931,
+          "end": 9938,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 9944,
+          "end": 9951,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 10168,
+          "end": 10175,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 10181,
+          "end": 10188,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 10297,
+          "end": 10304,
+          "symbol": "F:pa.field_g:I",
+          "original": "field_g",
+          "renamed": "avatarFeedbackHoldTicks"
+        },
+        {
+          "start": 10310,
+          "end": 10317,
+          "symbol": "F:pa.field_g:I",
+          "original": "field_g",
+          "renamed": "avatarFeedbackHoldTicks"
+        },
+        {
+          "start": 10437,
+          "end": 10444,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
           "start": 10451,
           "end": 10453,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 10454,
+          "end": 10461,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
         },
         {
           "start": 10504,
@@ -273453,11 +273789,186 @@
           "renamed": "sessionEnding"
         },
         {
+          "start": 10989,
+          "end": 10996,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 11025,
+          "end": 11032,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 11038,
+          "end": 11045,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 11141,
+          "end": 11148,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 11881,
+          "end": 11888,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 11917,
+          "end": 11924,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 11930,
+          "end": 11937,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 12033,
+          "end": 12040,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 12858,
+          "end": 12865,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 12896,
+          "end": 12903,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 12909,
+          "end": 12916,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 13016,
+          "end": 13023,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 13570,
+          "end": 13577,
+          "symbol": "F:pa.field_g:I",
+          "original": "field_g",
+          "renamed": "avatarFeedbackHoldTicks"
+        },
+        {
+          "start": 13766,
+          "end": 13773,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 13804,
+          "end": 13811,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 13817,
+          "end": 13824,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 13924,
+          "end": 13931,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 14772,
+          "end": 14779,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 14800,
+          "end": 14807,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 14813,
+          "end": 14820,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 15326,
+          "end": 15333,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 15760,
+          "end": 15767,
+          "symbol": "F:pa.field_g:I",
+          "original": "field_g",
+          "renamed": "avatarFeedbackHoldTicks"
+        },
+        {
+          "start": 15773,
+          "end": 15780,
+          "symbol": "F:pa.field_g:I",
+          "original": "field_g",
+          "renamed": "avatarFeedbackHoldTicks"
+        },
+        {
+          "start": 15882,
+          "end": 15889,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
           "start": 15896,
           "end": 15898,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 15899,
+          "end": 15906,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
         },
         {
           "start": 15937,
@@ -273474,11 +273985,214 @@
           "renamed": "sessionEnding"
         },
         {
+          "start": 16324,
+          "end": 16331,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 16354,
+          "end": 16361,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 16367,
+          "end": 16374,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 16903,
+          "end": 16910,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 17684,
+          "end": 17691,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 17714,
+          "end": 17721,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 17727,
+          "end": 17734,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 18263,
+          "end": 18270,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 18864,
+          "end": 18871,
+          "symbol": "F:pa.field_g:I",
+          "original": "field_g",
+          "renamed": "avatarFeedbackHoldTicks"
+        },
+        {
+          "start": 19042,
+          "end": 19049,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 19074,
+          "end": 19081,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 19087,
+          "end": 19094,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 19182,
+          "end": 19189,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 19885,
+          "end": 19892,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 19917,
+          "end": 19924,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 19930,
+          "end": 19937,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 20025,
+          "end": 20032,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 20757,
+          "end": 20764,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 20781,
+          "end": 20788,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 20794,
+          "end": 20801,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 21264,
+          "end": 21271,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 21784,
+          "end": 21791,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 21808,
+          "end": 21815,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 21821,
+          "end": 21828,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 22290,
+          "end": 22297,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 22732,
+          "end": 22739,
+          "symbol": "F:pa.field_g:I",
+          "original": "field_g",
+          "renamed": "avatarFeedbackHoldTicks"
+        },
+        {
+          "start": 22745,
+          "end": 22752,
+          "symbol": "F:pa.field_g:I",
+          "original": "field_g",
+          "renamed": "avatarFeedbackHoldTicks"
+        },
+        {
+          "start": 22854,
+          "end": 22861,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
           "start": 22868,
           "end": 22870,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 22871,
+          "end": 22878,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
         },
         {
           "start": 22909,
@@ -273493,6 +274207,153 @@
           "symbol": "F:gh.field_x:Z",
           "original": "field_x",
           "renamed": "sessionEnding"
+        },
+        {
+          "start": 23340,
+          "end": 23347,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 23370,
+          "end": 23377,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 23383,
+          "end": 23390,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 23474,
+          "end": 23481,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 24136,
+          "end": 24143,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 24166,
+          "end": 24173,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 24179,
+          "end": 24186,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 24270,
+          "end": 24277,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 25005,
+          "end": 25012,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 25037,
+          "end": 25044,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 25050,
+          "end": 25057,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 25145,
+          "end": 25152,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 25639,
+          "end": 25646,
+          "symbol": "F:pa.field_g:I",
+          "original": "field_g",
+          "renamed": "avatarFeedbackHoldTicks"
+        },
+        {
+          "start": 25817,
+          "end": 25824,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 25849,
+          "end": 25856,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 25862,
+          "end": 25869,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 25957,
+          "end": 25964,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 26697,
+          "end": 26704,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 26719,
+          "end": 26726,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 26732,
+          "end": 26739,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 27179,
+          "end": 27186,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
         },
         {
           "start": 29567,
@@ -275877,7 +276738,7 @@
       "original": "gh.java",
       "renamed": "GameplaySession.java",
       "inputSha256": "6e39ba682f51bb6e758c1e9cb4277a95a1fdedf007a1b8be571b618a04eb6b4d",
-      "outputSha256": "2e744dc6ecd9f0e39d47e83f70bc4e521acd691111c9b518031639ede5f88032",
+      "outputSha256": "8cdd936e52d3d2abdf83ddb209c125468c117e24edfe09c708a2ab68b37df601",
       "edits": [
         {
           "start": 50,
@@ -278825,6 +279686,13 @@
           "symbol": "F:gh.field_E:Z",
           "original": "field_E",
           "renamed": "rotationControlsSwapped"
+        },
+        {
+          "start": 43927,
+          "end": 43928,
+          "symbol": "M:jc.a(IZ)V",
+          "original": "a",
+          "renamed": "requestAvatarFeedback"
         },
         {
           "start": 44317,
@@ -285312,7 +286180,7 @@
       "original": "ih.java",
       "renamed": "ih.java",
       "inputSha256": "2593deffa871df4a77b45e67239108807c74556e21f86574096bc86a11c72fdc",
-      "outputSha256": "9cc6e990c19fd24b01b39be0413d09a37b49f145d13d93f3e81ce0712537d9f4",
+      "outputSha256": "712c483483840cd091677b630e7cd7a227eccc5a3623e23aaa9ee3fa513cfd05",
       "edits": [
         {
           "start": 73,
@@ -285369,6 +286237,13 @@
           "symbol": "M:tf.c(I)Z",
           "original": "c",
           "renamed": "isEmpty"
+        },
+        {
+          "start": 1021,
+          "end": 1028,
+          "symbol": "F:jl.field_t:Z",
+          "original": "field_t",
+          "renamed": "avatarShockContactPending"
         },
         {
           "start": 1454,
@@ -285868,6 +286743,20 @@
           "renamed": "entitySpriteKindId"
         },
         {
+          "start": 6397,
+          "end": 6398,
+          "symbol": "M:jc.a(IZ)V",
+          "original": "a",
+          "renamed": "requestAvatarFeedback"
+        },
+        {
+          "start": 6488,
+          "end": 6495,
+          "symbol": "F:jl.field_t:Z",
+          "original": "field_t",
+          "renamed": "avatarShockContactPending"
+        },
+        {
           "start": 7127,
           "end": 7133,
           "symbol": "P:ih.a(IILja;I)V#1",
@@ -285972,7 +286861,7 @@
       "original": "ij.java",
       "renamed": "ij.java",
       "inputSha256": "93772ce3162a4251d228478c6e82deaa09334aab1d9502ab72072aa7ec53b243",
-      "outputSha256": "fc0fc65c096d7ccf247d45b21100a9c08623a230cc9ab1f5578fbd22e7676718",
+      "outputSha256": "dad9cffe77888a50e82e2be7b7813b15bbab75db8f66b92772ebd3447a61084e",
       "edits": [
         {
           "start": 174,
@@ -286094,6 +286983,27 @@
           "renamed": "boardMaskOffsetY"
         },
         {
+          "start": 7662,
+          "end": 7669,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 7869,
+          "end": 7876,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 7943,
+          "end": 7950,
+          "symbol": "F:nd.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarFeedbackModeId"
+        },
+        {
           "start": 8072,
           "end": 8079,
           "symbol": "F:ij.field_Z:Ljava/lang/String;",
@@ -286127,6 +287037,27 @@
           "symbol": "F:gh.field_u:I",
           "original": "field_u",
           "renamed": "boardMaskOffsetY"
+        },
+        {
+          "start": 8268,
+          "end": 8275,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 8475,
+          "end": 8482,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 8549,
+          "end": 8556,
+          "symbol": "F:nd.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarFeedbackModeId"
         },
         {
           "start": 8678,
@@ -291464,7 +292395,7 @@
       "original": "ja.java",
       "renamed": "GameplayEntity.java",
       "inputSha256": "963465f2c0be6200fb41f2c01bf08c33ee020986cbaf15ddde6ec081324545e2",
-      "outputSha256": "a63ce33cf45e9a2c1eec7e442f169091d17cd3f279c5ea690b6607a6a8f83407",
+      "outputSha256": "e2177ac55de42ea2d386b042c5479341fc41f49f0a7cee6eb081bac4229f3434",
       "edits": [
         {
           "start": 50,
@@ -292930,11 +293861,46 @@
           "renamed": "fadeOpacity"
         },
         {
+          "start": 5940,
+          "end": 5947,
+          "symbol": "F:pa.field_g:I",
+          "original": "field_g",
+          "renamed": "avatarFeedbackHoldTicks"
+        },
+        {
+          "start": 5988,
+          "end": 5995,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
           "start": 6068,
           "end": 6070,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 6071,
+          "end": 6078,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 6119,
+          "end": 6126,
+          "symbol": "F:nd.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarFeedbackModeId"
+        },
+        {
+          "start": 6143,
+          "end": 6150,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
         },
         {
           "start": 6328,
@@ -294337,6 +295303,13 @@
           "renamed": "SecondaryDeque"
         },
         {
+          "start": 11490,
+          "end": 11497,
+          "symbol": "F:wd.field_a:I",
+          "original": "field_a",
+          "renamed": "contactProbeOffsetX"
+        },
+        {
           "start": 11505,
           "end": 11512,
           "symbol": "F:vf.field_L:Ldm;",
@@ -294356,6 +295329,13 @@
           "symbol": "C:wd",
           "original": "wd",
           "renamed": "SecondaryDeque"
+        },
+        {
+          "start": 11605,
+          "end": 11612,
+          "symbol": "F:wd.field_d:I",
+          "original": "field_d",
+          "renamed": "contactProbeOffsetY"
         },
         {
           "start": 11624,
@@ -295877,6 +296857,13 @@
           "renamed": "SecondaryDeque"
         },
         {
+          "start": 19290,
+          "end": 19297,
+          "symbol": "F:wd.field_a:I",
+          "original": "field_a",
+          "renamed": "contactProbeOffsetX"
+        },
+        {
           "start": 19308,
           "end": 19312,
           "symbol": "L:ja.j(I)V#6",
@@ -295889,6 +296876,13 @@
           "symbol": "C:wd",
           "original": "wd",
           "renamed": "SecondaryDeque"
+        },
+        {
+          "start": 19319,
+          "end": 19326,
+          "symbol": "F:wd.field_d:I",
+          "original": "field_d",
+          "renamed": "contactProbeOffsetY"
         },
         {
           "start": 19335,
@@ -297268,7 +298262,7 @@
       "original": "jc.java",
       "renamed": "jc.java",
       "inputSha256": "7a924a8135544204091692bc0f3758b8859fe62aca15c0d7408e2a6594d6853b",
-      "outputSha256": "d20882c7b5e3d49d92c14af72b21700233acc78bdb373399d7981d94cd3ed8fb",
+      "outputSha256": "588dd7fa3558255944753462ec49604f5d4bbda8276edc3a9e921a92ff0b04b1",
       "edits": [
         {
           "start": 66,
@@ -297285,11 +298279,60 @@
           "renamed": "toCustomerSupportText"
         },
         {
+          "start": 155,
+          "end": 156,
+          "symbol": "M:jc.a(IZ)V",
+          "original": "a",
+          "renamed": "requestAvatarFeedback"
+        },
+        {
+          "start": 161,
+          "end": 167,
+          "symbol": "P:jc.a(IZ)V#0",
+          "original": "param0",
+          "renamed": "feedbackRequestId"
+        },
+        {
+          "start": 177,
+          "end": 183,
+          "symbol": "P:jc.a(IZ)V#1",
+          "original": "param1",
+          "renamed": "clearSpriteGuard"
+        },
+        {
+          "start": 199,
+          "end": 203,
+          "symbol": "L:jc.a(IZ)V#0",
+          "original": "var3",
+          "renamed": "unusedClientControlSnapshot"
+        },
+        {
+          "start": 213,
+          "end": 217,
+          "symbol": "L:jc.a(IZ)V#0",
+          "original": "var3",
+          "renamed": "unusedClientControlSnapshot"
+        },
+        {
+          "start": 254,
+          "end": 260,
+          "symbol": "P:jc.a(IZ)V#0",
+          "original": "param0",
+          "renamed": "feedbackRequestId"
+        },
+        {
           "start": 278,
           "end": 280,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 281,
+          "end": 288,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
         },
         {
           "start": 310,
@@ -297299,11 +298342,46 @@
           "renamed": "MenuScreen"
         },
         {
+          "start": 313,
+          "end": 320,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 342,
+          "end": 349,
+          "symbol": "F:pa.field_g:I",
+          "original": "field_g",
+          "renamed": "avatarFeedbackHoldTicks"
+        },
+        {
+          "start": 372,
+          "end": 379,
+          "symbol": "F:nd.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarFeedbackModeId"
+        },
+        {
           "start": 400,
           "end": 401,
           "symbol": "M:td.a(ILgd;)V",
           "original": "a",
           "renamed": "playPcmSample"
+        },
+        {
+          "start": 462,
+          "end": 469,
+          "symbol": "F:pa.field_g:I",
+          "original": "field_g",
+          "renamed": "avatarFeedbackHoldTicks"
+        },
+        {
+          "start": 492,
+          "end": 498,
+          "symbol": "P:jc.a(IZ)V#1",
+          "original": "param1",
+          "renamed": "clearSpriteGuard"
         },
         {
           "start": 525,
@@ -297313,11 +298391,74 @@
           "renamed": "Sprite"
         },
         {
+          "start": 551,
+          "end": 557,
+          "symbol": "P:jc.a(IZ)V#0",
+          "original": "param0",
+          "renamed": "feedbackRequestId"
+        },
+        {
+          "start": 589,
+          "end": 595,
+          "symbol": "P:jc.a(IZ)V#0",
+          "original": "param0",
+          "renamed": "feedbackRequestId"
+        },
+        {
+          "start": 619,
+          "end": 625,
+          "symbol": "P:jc.a(IZ)V#0",
+          "original": "param0",
+          "renamed": "feedbackRequestId"
+        },
+        {
+          "start": 661,
+          "end": 667,
+          "symbol": "P:jc.a(IZ)V#0",
+          "original": "param0",
+          "renamed": "feedbackRequestId"
+        },
+        {
+          "start": 695,
+          "end": 701,
+          "symbol": "P:jc.a(IZ)V#0",
+          "original": "param0",
+          "renamed": "feedbackRequestId"
+        },
+        {
+          "start": 736,
+          "end": 742,
+          "symbol": "P:jc.a(IZ)V#0",
+          "original": "param0",
+          "renamed": "feedbackRequestId"
+        },
+        {
+          "start": 778,
+          "end": 785,
+          "symbol": "F:pa.field_g:I",
+          "original": "field_g",
+          "renamed": "avatarFeedbackHoldTicks"
+        },
+        {
+          "start": 820,
+          "end": 827,
+          "symbol": "F:nd.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarFeedbackModeId"
+        },
+        {
           "start": 857,
           "end": 859,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 860,
+          "end": 867,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
         },
         {
           "start": 901,
@@ -297327,11 +298468,46 @@
           "renamed": "playPcmSample"
         },
         {
+          "start": 953,
+          "end": 960,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 966,
+          "end": 973,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
           "start": 981,
           "end": 983,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 984,
+          "end": 991,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 1083,
+          "end": 1090,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 1096,
+          "end": 1103,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
         },
         {
           "start": 1111,
@@ -297341,11 +298517,53 @@
           "renamed": "MenuScreen"
         },
         {
+          "start": 1114,
+          "end": 1121,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 1233,
+          "end": 1240,
+          "symbol": "F:pa.field_g:I",
+          "original": "field_g",
+          "renamed": "avatarFeedbackHoldTicks"
+        },
+        {
           "start": 1270,
           "end": 1272,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 1273,
+          "end": 1280,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 1312,
+          "end": 1319,
+          "symbol": "F:nd.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarFeedbackModeId"
+        },
+        {
+          "start": 1350,
+          "end": 1357,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 1363,
+          "end": 1370,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
         },
         {
           "start": 1378,
@@ -297355,11 +298573,46 @@
           "renamed": "MenuScreen"
         },
         {
+          "start": 1381,
+          "end": 1388,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
           "start": 1489,
           "end": 1491,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 1492,
+          "end": 1499,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 1529,
+          "end": 1536,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 1566,
+          "end": 1573,
+          "symbol": "F:pa.field_g:I",
+          "original": "field_g",
+          "renamed": "avatarFeedbackHoldTicks"
+        },
+        {
+          "start": 1604,
+          "end": 1611,
+          "symbol": "F:nd.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarFeedbackModeId"
         },
         {
           "start": 1640,
@@ -297369,11 +298622,32 @@
           "renamed": "playPcmSample"
         },
         {
+          "start": 1688,
+          "end": 1695,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 1701,
+          "end": 1708,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
           "start": 1716,
           "end": 1718,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 1719,
+          "end": 1726,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
         },
         {
           "start": 1829,
@@ -297383,11 +298657,25 @@
           "renamed": "MenuScreen"
         },
         {
+          "start": 1832,
+          "end": 1839,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
           "start": 1867,
           "end": 1869,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 1870,
+          "end": 1877,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
         },
         {
           "start": 1919,
@@ -297397,11 +298685,25 @@
           "renamed": "MenuScreen"
         },
         {
+          "start": 1922,
+          "end": 1929,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
           "start": 1967,
           "end": 1969,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 1970,
+          "end": 1977,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
         },
         {
           "start": 2010,
@@ -297411,11 +298713,39 @@
           "renamed": "playPcmSample"
         },
         {
+          "start": 2064,
+          "end": 2071,
+          "symbol": "F:nd.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarFeedbackModeId"
+        },
+        {
           "start": 2103,
           "end": 2105,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 2106,
+          "end": 2113,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 2149,
+          "end": 2156,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 2162,
+          "end": 2169,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
         },
         {
           "start": 2177,
@@ -297425,11 +298755,46 @@
           "renamed": "MenuScreen"
         },
         {
+          "start": 2180,
+          "end": 2187,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 2285,
+          "end": 2292,
+          "symbol": "F:nd.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarFeedbackModeId"
+        },
+        {
           "start": 2324,
           "end": 2326,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 2327,
+          "end": 2334,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 2370,
+          "end": 2377,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 2383,
+          "end": 2390,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
         },
         {
           "start": 2398,
@@ -297439,11 +298804,46 @@
           "renamed": "MenuScreen"
         },
         {
+          "start": 2401,
+          "end": 2408,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 2528,
+          "end": 2535,
+          "symbol": "F:nd.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarFeedbackModeId"
+        },
+        {
           "start": 2565,
           "end": 2567,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 2568,
+          "end": 2575,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 2609,
+          "end": 2616,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 2622,
+          "end": 2629,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
         },
         {
           "start": 2637,
@@ -297453,11 +298853,46 @@
           "renamed": "MenuScreen"
         },
         {
+          "start": 2640,
+          "end": 2647,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 2759,
+          "end": 2766,
+          "symbol": "F:nd.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarFeedbackModeId"
+        },
+        {
           "start": 2794,
           "end": 2796,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 2797,
+          "end": 2804,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 2836,
+          "end": 2843,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 2849,
+          "end": 2856,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
         },
         {
           "start": 2864,
@@ -297467,11 +298902,46 @@
           "renamed": "MenuScreen"
         },
         {
+          "start": 2867,
+          "end": 2874,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 2978,
+          "end": 2985,
+          "symbol": "F:nd.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarFeedbackModeId"
+        },
+        {
           "start": 3011,
           "end": 3013,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 3014,
+          "end": 3021,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 3051,
+          "end": 3058,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 3064,
+          "end": 3071,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
         },
         {
           "start": 3079,
@@ -297481,11 +298951,46 @@
           "renamed": "MenuScreen"
         },
         {
+          "start": 3082,
+          "end": 3089,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 3199,
+          "end": 3206,
+          "symbol": "F:nd.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarFeedbackModeId"
+        },
+        {
           "start": 3228,
           "end": 3230,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 3231,
+          "end": 3238,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 3263,
+          "end": 3270,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 3276,
+          "end": 3283,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
         },
         {
           "start": 3291,
@@ -297495,11 +299000,25 @@
           "renamed": "MenuScreen"
         },
         {
+          "start": 3294,
+          "end": 3301,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
           "start": 3382,
           "end": 3384,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 3385,
+          "end": 3392,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
         },
         {
           "start": 3427,
@@ -297509,6 +299028,13 @@
           "renamed": "MenuScreen"
         },
         {
+          "start": 3430,
+          "end": 3437,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
           "start": 3463,
           "end": 3465,
           "symbol": "C:ka",
@@ -297516,11 +299042,25 @@
           "renamed": "MenuScreen"
         },
         {
+          "start": 3466,
+          "end": 3473,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
           "start": 3507,
           "end": 3509,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 3510,
+          "end": 3517,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
         },
         {
           "start": 3552,
@@ -297537,11 +299077,46 @@
           "renamed": "MenuScreen"
         },
         {
+          "start": 3602,
+          "end": 3609,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 3640,
+          "end": 3647,
+          "symbol": "F:nd.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarFeedbackModeId"
+        },
+        {
+          "start": 3678,
+          "end": 3685,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 3691,
+          "end": 3698,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
           "start": 3706,
           "end": 3708,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 3709,
+          "end": 3716,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
         },
         {
           "start": 3799,
@@ -297551,11 +299126,46 @@
           "renamed": "MenuScreen"
         },
         {
+          "start": 3802,
+          "end": 3809,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 3840,
+          "end": 3847,
+          "symbol": "F:nd.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarFeedbackModeId"
+        },
+        {
+          "start": 3878,
+          "end": 3885,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 3891,
+          "end": 3898,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
           "start": 3906,
           "end": 3908,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 3909,
+          "end": 3916,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
         },
         {
           "start": 4017,
@@ -297565,11 +299175,46 @@
           "renamed": "MenuScreen"
         },
         {
+          "start": 4020,
+          "end": 4027,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 4056,
+          "end": 4063,
+          "symbol": "F:nd.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarFeedbackModeId"
+        },
+        {
+          "start": 4092,
+          "end": 4099,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 4105,
+          "end": 4112,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
           "start": 4120,
           "end": 4122,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 4123,
+          "end": 4130,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
         },
         {
           "start": 4223,
@@ -297579,11 +299224,46 @@
           "renamed": "MenuScreen"
         },
         {
+          "start": 4226,
+          "end": 4233,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 4260,
+          "end": 4267,
+          "symbol": "F:nd.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarFeedbackModeId"
+        },
+        {
+          "start": 4294,
+          "end": 4301,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 4307,
+          "end": 4314,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
           "start": 4322,
           "end": 4324,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 4325,
+          "end": 4332,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
         },
         {
           "start": 4417,
@@ -297593,11 +299273,102 @@
           "renamed": "MenuScreen"
         },
         {
+          "start": 4420,
+          "end": 4427,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 4452,
+          "end": 4459,
+          "symbol": "F:nd.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarFeedbackModeId"
+        },
+        {
+          "start": 4484,
+          "end": 4491,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 4497,
+          "end": 4504,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
           "start": 4512,
           "end": 4514,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 4515,
+          "end": 4522,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 4613,
+          "end": 4619,
+          "symbol": "P:jc.a(IZ)V#0",
+          "original": "param0",
+          "renamed": "feedbackRequestId"
+        },
+        {
+          "start": 4651,
+          "end": 4657,
+          "symbol": "P:jc.a(IZ)V#0",
+          "original": "param0",
+          "renamed": "feedbackRequestId"
+        },
+        {
+          "start": 4681,
+          "end": 4687,
+          "symbol": "P:jc.a(IZ)V#0",
+          "original": "param0",
+          "renamed": "feedbackRequestId"
+        },
+        {
+          "start": 4723,
+          "end": 4729,
+          "symbol": "P:jc.a(IZ)V#0",
+          "original": "param0",
+          "renamed": "feedbackRequestId"
+        },
+        {
+          "start": 4757,
+          "end": 4763,
+          "symbol": "P:jc.a(IZ)V#0",
+          "original": "param0",
+          "renamed": "feedbackRequestId"
+        },
+        {
+          "start": 4798,
+          "end": 4804,
+          "symbol": "P:jc.a(IZ)V#0",
+          "original": "param0",
+          "renamed": "feedbackRequestId"
+        },
+        {
+          "start": 4840,
+          "end": 4847,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 4853,
+          "end": 4860,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
         },
         {
           "start": 4868,
@@ -297607,11 +299378,39 @@
           "renamed": "MenuScreen"
         },
         {
+          "start": 4871,
+          "end": 4878,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 4970,
+          "end": 4977,
+          "symbol": "F:pa.field_g:I",
+          "original": "field_g",
+          "renamed": "avatarFeedbackHoldTicks"
+        },
+        {
+          "start": 5012,
+          "end": 5019,
+          "symbol": "F:nd.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarFeedbackModeId"
+        },
+        {
           "start": 5049,
           "end": 5051,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 5052,
+          "end": 5059,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
         },
         {
           "start": 5093,
@@ -297621,11 +299420,39 @@
           "renamed": "playPcmSample"
         },
         {
+          "start": 5145,
+          "end": 5152,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 5158,
+          "end": 5165,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
           "start": 5173,
           "end": 5175,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 5176,
+          "end": 5183,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 5295,
+          "end": 5302,
+          "symbol": "F:pa.field_g:I",
+          "original": "field_g",
+          "renamed": "avatarFeedbackHoldTicks"
         },
         {
           "start": 5332,
@@ -297635,11 +299462,46 @@
           "renamed": "MenuScreen"
         },
         {
+          "start": 5335,
+          "end": 5342,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 5374,
+          "end": 5381,
+          "symbol": "F:nd.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarFeedbackModeId"
+        },
+        {
+          "start": 5412,
+          "end": 5419,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 5425,
+          "end": 5432,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
           "start": 5440,
           "end": 5442,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 5443,
+          "end": 5450,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
         },
         {
           "start": 5551,
@@ -297649,11 +299511,53 @@
           "renamed": "MenuScreen"
         },
         {
+          "start": 5554,
+          "end": 5561,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 5591,
+          "end": 5598,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 5628,
+          "end": 5635,
+          "symbol": "F:pa.field_g:I",
+          "original": "field_g",
+          "renamed": "avatarFeedbackHoldTicks"
+        },
+        {
+          "start": 5666,
+          "end": 5673,
+          "symbol": "F:nd.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarFeedbackModeId"
+        },
+        {
           "start": 5702,
           "end": 5703,
           "symbol": "M:td.a(ILgd;)V",
           "original": "a",
           "renamed": "playPcmSample"
+        },
+        {
+          "start": 5750,
+          "end": 5757,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 5763,
+          "end": 5770,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
         },
         {
           "start": 5778,
@@ -297663,11 +299567,32 @@
           "renamed": "MenuScreen"
         },
         {
+          "start": 5781,
+          "end": 5788,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
           "start": 5891,
           "end": 5893,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 5894,
+          "end": 5901,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 5928,
+          "end": 5935,
+          "symbol": "F:nd.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarFeedbackModeId"
         },
         {
           "start": 5961,
@@ -297677,11 +299602,25 @@
           "renamed": "MenuScreen"
         },
         {
+          "start": 5964,
+          "end": 5971,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
           "start": 6029,
           "end": 6031,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 6032,
+          "end": 6039,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
         },
         {
           "start": 6081,
@@ -297691,11 +299630,25 @@
           "renamed": "MenuScreen"
         },
         {
+          "start": 6084,
+          "end": 6091,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
           "start": 6129,
           "end": 6131,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 6132,
+          "end": 6139,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
         },
         {
           "start": 6172,
@@ -297705,11 +299658,39 @@
           "renamed": "playPcmSample"
         },
         {
+          "start": 6226,
+          "end": 6233,
+          "symbol": "F:nd.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarFeedbackModeId"
+        },
+        {
           "start": 6265,
           "end": 6267,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 6268,
+          "end": 6275,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 6311,
+          "end": 6318,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 6324,
+          "end": 6331,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
         },
         {
           "start": 6339,
@@ -297719,11 +299700,46 @@
           "renamed": "MenuScreen"
         },
         {
+          "start": 6342,
+          "end": 6349,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 6447,
+          "end": 6454,
+          "symbol": "F:nd.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarFeedbackModeId"
+        },
+        {
           "start": 6486,
           "end": 6488,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 6489,
+          "end": 6496,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 6532,
+          "end": 6539,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 6545,
+          "end": 6552,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
         },
         {
           "start": 6560,
@@ -297733,11 +299749,46 @@
           "renamed": "MenuScreen"
         },
         {
+          "start": 6563,
+          "end": 6570,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 6690,
+          "end": 6697,
+          "symbol": "F:nd.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarFeedbackModeId"
+        },
+        {
           "start": 6727,
           "end": 6729,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 6730,
+          "end": 6737,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 6771,
+          "end": 6778,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 6784,
+          "end": 6791,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
         },
         {
           "start": 6799,
@@ -297747,11 +299798,46 @@
           "renamed": "MenuScreen"
         },
         {
+          "start": 6802,
+          "end": 6809,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 6921,
+          "end": 6928,
+          "symbol": "F:nd.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarFeedbackModeId"
+        },
+        {
           "start": 6956,
           "end": 6958,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 6959,
+          "end": 6966,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 6998,
+          "end": 7005,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 7011,
+          "end": 7018,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
         },
         {
           "start": 7026,
@@ -297761,11 +299847,46 @@
           "renamed": "MenuScreen"
         },
         {
+          "start": 7029,
+          "end": 7036,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 7170,
+          "end": 7177,
+          "symbol": "F:nd.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarFeedbackModeId"
+        },
+        {
           "start": 7199,
           "end": 7201,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 7202,
+          "end": 7209,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 7234,
+          "end": 7241,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 7247,
+          "end": 7254,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
         },
         {
           "start": 7262,
@@ -297775,11 +299896,25 @@
           "renamed": "MenuScreen"
         },
         {
+          "start": 7265,
+          "end": 7272,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
           "start": 7353,
           "end": 7355,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 7356,
+          "end": 7363,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
         },
         {
           "start": 7398,
@@ -297789,6 +299924,13 @@
           "renamed": "MenuScreen"
         },
         {
+          "start": 7401,
+          "end": 7408,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
           "start": 7434,
           "end": 7436,
           "symbol": "C:ka",
@@ -297796,11 +299938,25 @@
           "renamed": "MenuScreen"
         },
         {
+          "start": 7437,
+          "end": 7444,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
           "start": 7478,
           "end": 7480,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 7481,
+          "end": 7488,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
         },
         {
           "start": 7523,
@@ -297817,11 +299973,39 @@
           "renamed": "MenuScreen"
         },
         {
+          "start": 7573,
+          "end": 7580,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 7611,
+          "end": 7618,
+          "symbol": "F:nd.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarFeedbackModeId"
+        },
+        {
           "start": 7675,
           "end": 7677,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 7678,
+          "end": 7685,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 7716,
+          "end": 7723,
+          "symbol": "F:nd.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarFeedbackModeId"
         },
         {
           "start": 7798,
@@ -297831,11 +300015,39 @@
           "renamed": "MenuScreen"
         },
         {
+          "start": 7801,
+          "end": 7808,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 7837,
+          "end": 7844,
+          "symbol": "F:nd.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarFeedbackModeId"
+        },
+        {
           "start": 7913,
           "end": 7915,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 7916,
+          "end": 7923,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 7950,
+          "end": 7957,
+          "symbol": "F:nd.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarFeedbackModeId"
         },
         {
           "start": 8020,
@@ -297845,11 +300057,60 @@
           "renamed": "MenuScreen"
         },
         {
+          "start": 8023,
+          "end": 8030,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 8055,
+          "end": 8062,
+          "symbol": "F:nd.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarFeedbackModeId"
+        },
+        {
+          "start": 8113,
+          "end": 8120,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 8126,
+          "end": 8133,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
           "start": 8141,
           "end": 8143,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 8144,
+          "end": 8151,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 8216,
+          "end": 8222,
+          "symbol": "P:jc.a(IZ)V#0",
+          "original": "param0",
+          "renamed": "feedbackRequestId"
+        },
+        {
+          "start": 8246,
+          "end": 8253,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
         },
         {
           "start": 8275,
@@ -298663,8 +300924,23 @@
       "original": "jl.java",
       "renamed": "jl.java",
       "inputSha256": "e22552e699a1abd863af4de62815ec70eb0701555bbc806850c17b1d9552789c",
-      "outputSha256": "e22552e699a1abd863af4de62815ec70eb0701555bbc806850c17b1d9552789c",
-      "edits": []
+      "outputSha256": "7e7cef22ebb4c4ea6d27d6a12fa5772599cf1595f4b1f51c8e2c73396da92e9c",
+      "edits": [
+        {
+          "start": 74,
+          "end": 81,
+          "symbol": "F:jl.field_t:Z",
+          "original": "field_t",
+          "renamed": "avatarShockContactPending"
+        },
+        {
+          "start": 2615,
+          "end": 2622,
+          "symbol": "F:jl.field_t:Z",
+          "original": "field_t",
+          "renamed": "avatarShockContactPending"
+        }
+      ]
     },
     {
       "original": "k.java",
@@ -298902,7 +301178,7 @@
       "original": "ka.java",
       "renamed": "MenuScreen.java",
       "inputSha256": "864cfa4b7155a6c890ce281996a0c8aba975d73a76fe0e74a4387f9781724366",
-      "outputSha256": "29b597f346cc43ea4c572f1a00e1a68eba00a5b092dd3230f980aa8d28c78190",
+      "outputSha256": "e149c11172e280d117a1c11ba33f9268335b471ffd775695ad4fbc9234984394",
       "edits": [
         {
           "start": 53,
@@ -298938,6 +301214,13 @@
           "symbol": "F:ka.field_d:I",
           "original": "field_d",
           "renamed": "itemSpacing"
+        },
+        {
+          "start": 201,
+          "end": 208,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
         },
         {
           "start": 218,
@@ -299792,6 +302075,13 @@
           "symbol": "C:dm",
           "original": "dm",
           "renamed": "Sprite"
+        },
+        {
+          "start": 8661,
+          "end": 8668,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
         }
       ]
     },
@@ -299842,7 +302132,7 @@
       "original": "kc.java",
       "renamed": "kc.java",
       "inputSha256": "54b618bab0d64b0e087a54c524ee0dfd2ca5b88a78223e1bd679b987ec79fab2",
-      "outputSha256": "aa7354f78a6b79516601b4da9ffb47833965eb4b101356b6ffc685af0fb0e2bb",
+      "outputSha256": "34d16129192d3b9cc70788f1043aa4af29e9288f3cb5a45322ddff09b9e15feb",
       "edits": [
         {
           "start": 97,
@@ -299955,6 +302245,55 @@
           "symbol": "L:kc.b(I)V#7",
           "original": "stackIn_56_0",
           "renamed": "visitedFlagThenResetIndex"
+        },
+        {
+          "start": 2719,
+          "end": 2731,
+          "symbol": "L:kc.b(I)V#8",
+          "original": "stackIn_88_0",
+          "renamed": "popupOriginYInput"
+        },
+        {
+          "start": 2749,
+          "end": 2761,
+          "symbol": "L:kc.b(I)V#9",
+          "original": "stackIn_88_1",
+          "renamed": "popupOriginXInput"
+        },
+        {
+          "start": 2779,
+          "end": 2791,
+          "symbol": "L:kc.b(I)V#10",
+          "original": "stackIn_88_2",
+          "renamed": "popupGuardInput"
+        },
+        {
+          "start": 2809,
+          "end": 2821,
+          "symbol": "L:kc.b(I)V#11",
+          "original": "stackIn_90_0",
+          "renamed": "popupOriginY"
+        },
+        {
+          "start": 2835,
+          "end": 2847,
+          "symbol": "L:kc.b(I)V#12",
+          "original": "stackIn_90_1",
+          "renamed": "popupOriginX"
+        },
+        {
+          "start": 2861,
+          "end": 2873,
+          "symbol": "L:kc.b(I)V#13",
+          "original": "stackIn_90_2",
+          "renamed": "popupMethodGuard"
+        },
+        {
+          "start": 2887,
+          "end": 2899,
+          "symbol": "L:kc.b(I)V#14",
+          "original": "stackIn_90_3",
+          "renamed": "popupPoints"
         },
         {
           "start": 2909,
@@ -303324,6 +305663,13 @@
           "renamed": "avatarShockPending"
         },
         {
+          "start": 28563,
+          "end": 28575,
+          "symbol": "L:kc.b(I)V#8",
+          "original": "stackIn_88_0",
+          "renamed": "popupOriginYInput"
+        },
+        {
           "start": 28583,
           "end": 28594,
           "symbol": "L:kc.b(I)V#24",
@@ -303338,6 +305684,13 @@
           "renamed": "positionY"
         },
         {
+          "start": 28633,
+          "end": 28645,
+          "symbol": "L:kc.b(I)V#9",
+          "original": "stackIn_88_1",
+          "renamed": "popupOriginXInput"
+        },
+        {
           "start": 28653,
           "end": 28664,
           "symbol": "L:kc.b(I)V#24",
@@ -303350,6 +305703,13 @@
           "symbol": "F:ja.field_o:F",
           "original": "field_o",
           "renamed": "positionX"
+        },
+        {
+          "start": 28703,
+          "end": 28715,
+          "symbol": "L:kc.b(I)V#10",
+          "original": "stackIn_88_2",
+          "renamed": "popupGuardInput"
         },
         {
           "start": 28756,
@@ -303380,11 +305740,137 @@
           "renamed": "entitySpriteKindId"
         },
         {
+          "start": 28884,
+          "end": 28896,
+          "symbol": "L:kc.b(I)V#11",
+          "original": "stackIn_90_0",
+          "renamed": "popupOriginY"
+        },
+        {
+          "start": 28899,
+          "end": 28911,
+          "symbol": "L:kc.b(I)V#8",
+          "original": "stackIn_88_0",
+          "renamed": "popupOriginYInput"
+        },
+        {
+          "start": 28945,
+          "end": 28957,
+          "symbol": "L:kc.b(I)V#12",
+          "original": "stackIn_90_1",
+          "renamed": "popupOriginX"
+        },
+        {
+          "start": 28960,
+          "end": 28972,
+          "symbol": "L:kc.b(I)V#9",
+          "original": "stackIn_88_1",
+          "renamed": "popupOriginXInput"
+        },
+        {
+          "start": 29006,
+          "end": 29018,
+          "symbol": "L:kc.b(I)V#13",
+          "original": "stackIn_90_2",
+          "renamed": "popupMethodGuard"
+        },
+        {
+          "start": 29021,
+          "end": 29033,
+          "symbol": "L:kc.b(I)V#10",
+          "original": "stackIn_88_2",
+          "renamed": "popupGuardInput"
+        },
+        {
+          "start": 29067,
+          "end": 29079,
+          "symbol": "L:kc.b(I)V#14",
+          "original": "stackIn_90_3",
+          "renamed": "popupPoints"
+        },
+        {
+          "start": 29261,
+          "end": 29273,
+          "symbol": "L:kc.b(I)V#11",
+          "original": "stackIn_90_0",
+          "renamed": "popupOriginY"
+        },
+        {
+          "start": 29276,
+          "end": 29288,
+          "symbol": "L:kc.b(I)V#8",
+          "original": "stackIn_88_0",
+          "renamed": "popupOriginYInput"
+        },
+        {
+          "start": 29318,
+          "end": 29330,
+          "symbol": "L:kc.b(I)V#12",
+          "original": "stackIn_90_1",
+          "renamed": "popupOriginX"
+        },
+        {
+          "start": 29333,
+          "end": 29345,
+          "symbol": "L:kc.b(I)V#9",
+          "original": "stackIn_88_1",
+          "renamed": "popupOriginXInput"
+        },
+        {
+          "start": 29375,
+          "end": 29387,
+          "symbol": "L:kc.b(I)V#13",
+          "original": "stackIn_90_2",
+          "renamed": "popupMethodGuard"
+        },
+        {
+          "start": 29390,
+          "end": 29402,
+          "symbol": "L:kc.b(I)V#10",
+          "original": "stackIn_88_2",
+          "renamed": "popupGuardInput"
+        },
+        {
+          "start": 29432,
+          "end": 29444,
+          "symbol": "L:kc.b(I)V#14",
+          "original": "stackIn_90_3",
+          "renamed": "popupPoints"
+        },
+        {
           "start": 29509,
           "end": 29510,
           "symbol": "M:ld.a(IIII)V",
           "original": "a",
           "renamed": "spawnPointsPopup"
+        },
+        {
+          "start": 29511,
+          "end": 29523,
+          "symbol": "L:kc.b(I)V#11",
+          "original": "stackIn_90_0",
+          "renamed": "popupOriginY"
+        },
+        {
+          "start": 29525,
+          "end": 29537,
+          "symbol": "L:kc.b(I)V#12",
+          "original": "stackIn_90_1",
+          "renamed": "popupOriginX"
+        },
+        {
+          "start": 29539,
+          "end": 29551,
+          "symbol": "L:kc.b(I)V#13",
+          "original": "stackIn_90_2",
+          "renamed": "popupMethodGuard"
+        },
+        {
+          "start": 29553,
+          "end": 29565,
+          "symbol": "L:kc.b(I)V#14",
+          "original": "stackIn_90_3",
+          "renamed": "popupPoints"
         },
         {
           "start": 29649,
@@ -303497,6 +305983,20 @@
           "symbol": "L:kc.b(I)V#22",
           "original": "var1_int",
           "renamed": "visitedResetIndexThenKindFourCount"
+        },
+        {
+          "start": 30035,
+          "end": 30042,
+          "symbol": "F:rb.field_b:I",
+          "original": "field_b",
+          "renamed": "kindFourRemovalCount"
+        },
+        {
+          "start": 30048,
+          "end": 30055,
+          "symbol": "F:rb.field_b:I",
+          "original": "field_b",
+          "renamed": "kindFourRemovalCount"
         },
         {
           "start": 30136,
@@ -303730,6 +306230,20 @@
           "renamed": "avatarShockPending"
         },
         {
+          "start": 31247,
+          "end": 31248,
+          "symbol": "M:jc.a(IZ)V",
+          "original": "a",
+          "renamed": "requestAvatarFeedback"
+        },
+        {
+          "start": 31283,
+          "end": 31290,
+          "symbol": "F:jl.field_t:Z",
+          "original": "field_t",
+          "renamed": "avatarShockContactPending"
+        },
+        {
           "start": 31379,
           "end": 31392,
           "symbol": "L:kc.b(I)V#15",
@@ -303903,6 +306417,13 @@
           "symbol": "L:kc.b(I)V#22",
           "original": "var1_int",
           "renamed": "visitedResetIndexThenKindFourCount"
+        },
+        {
+          "start": 32271,
+          "end": 32278,
+          "symbol": "F:rb.field_b:I",
+          "original": "field_b",
+          "renamed": "kindFourRemovalCount"
         },
         {
           "start": 32683,
@@ -308929,7 +311450,7 @@
       "original": "le.java",
       "renamed": "le.java",
       "inputSha256": "188c241f0cdacc051c8da5406c43b482c7059e8448ae2504831d0735a27d2eec",
-      "outputSha256": "533297222f50538730c950477d35cefde1858fe84fd06be2c9669b0accef0a78",
+      "outputSha256": "a7fff0980853cf53d5a2270789cb53e51db7b95b43582deb8f6c70618ec3b7de",
       "edits": [
         {
           "start": 265,
@@ -309049,6 +311570,20 @@
           "symbol": "C:vb",
           "original": "vb",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 579,
+          "end": 586,
+          "symbol": "F:jl.field_t:Z",
+          "original": "field_t",
+          "renamed": "avatarShockContactPending"
+        },
+        {
+          "start": 607,
+          "end": 614,
+          "symbol": "F:rb.field_b:I",
+          "original": "field_b",
+          "renamed": "kindFourRemovalCount"
         },
         {
           "start": 631,
@@ -309622,7 +312157,7 @@
       "original": "ma.java",
       "renamed": "ma.java",
       "inputSha256": "490c9d77b263e1ec493c50ba69c01682a538bc787b0c7d25669e4c3e078666de",
-      "outputSha256": "f2780d27a50a05869ba0423512670cde462d9682af425ba262e7f30a7608879d",
+      "outputSha256": "91328fe0be8e909f181a3b563294961ede3730ff18a526ea2efefbdb62e11282",
       "edits": [
         {
           "start": 61,
@@ -309667,6 +312202,13 @@
           "renamed": "SecondaryDeque"
         },
         {
+          "start": 2957,
+          "end": 2964,
+          "symbol": "F:wd.field_a:I",
+          "original": "field_a",
+          "renamed": "contactProbeOffsetX"
+        },
+        {
           "start": 2985,
           "end": 2992,
           "symbol": "F:vf.field_L:Ldm;",
@@ -309679,6 +312221,13 @@
           "symbol": "C:wd",
           "original": "wd",
           "renamed": "SecondaryDeque"
+        },
+        {
+          "start": 3021,
+          "end": 3028,
+          "symbol": "F:wd.field_d:I",
+          "original": "field_d",
+          "renamed": "contactProbeOffsetY"
         },
         {
           "start": 3036,
@@ -314348,8 +316897,23 @@
       "original": "nd.java",
       "renamed": "nd.java",
       "inputSha256": "9d8e0a3ea49af7ab05050bb5ad8dcf4bd3f761da612e7c95a9c07ac00ecf234d",
-      "outputSha256": "9d8e0a3ea49af7ab05050bb5ad8dcf4bd3f761da612e7c95a9c07ac00ecf234d",
-      "edits": []
+      "outputSha256": "5029ec7d62cc0dfdebafd2e278f59291d7210fea4c3a4a20cc4d40d5d8e7878a",
+      "edits": [
+        {
+          "start": 70,
+          "end": 77,
+          "symbol": "F:nd.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarFeedbackModeId"
+        },
+        {
+          "start": 3803,
+          "end": 3810,
+          "symbol": "F:nd.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarFeedbackModeId"
+        }
+      ]
     },
     {
       "original": "ne.java",
@@ -315359,8 +317923,23 @@
       "original": "od.java",
       "renamed": "od.java",
       "inputSha256": "a12c395ee4c07e195adfb00163c9c47bdcc0385eb20ccb37e06536c785375215",
-      "outputSha256": "a12c395ee4c07e195adfb00163c9c47bdcc0385eb20ccb37e06536c785375215",
-      "edits": []
+      "outputSha256": "2e5dceda1c02e6348584efcc7e5f4d4eb4375e2c09f5bb269cfa239ce7bf2637",
+      "edits": [
+        {
+          "start": 315,
+          "end": 322,
+          "symbol": "F:pa.field_g:I",
+          "original": "field_g",
+          "renamed": "avatarFeedbackHoldTicks"
+        },
+        {
+          "start": 491,
+          "end": 498,
+          "symbol": "F:pa.field_g:I",
+          "original": "field_g",
+          "renamed": "avatarFeedbackHoldTicks"
+        }
+      ]
     },
     {
       "original": "oe.java",
@@ -315884,7 +318463,7 @@
       "original": "pa.java",
       "renamed": "pa.java",
       "inputSha256": "e45b10443f4da7e65e65e067138db1c2de73f11b151649a39b69fec39ba26af6",
-      "outputSha256": "51f27aa60e35b06358884f9b8f4ea0a623c8392c201dd809aeb94f2c60913b24",
+      "outputSha256": "94b2b79e4ddcbb68a96a774566798bdba86eee8c6925aca1ef211e379c240d32",
       "edits": [
         {
           "start": 141,
@@ -315892,6 +318471,20 @@
           "symbol": "F:pa.field_e:Ljava/lang/String;",
           "original": "field_e",
           "renamed": "waitingForSoundEffectsText"
+        },
+        {
+          "start": 256,
+          "end": 263,
+          "symbol": "F:pa.field_g:I",
+          "original": "field_g",
+          "renamed": "avatarFeedbackHoldTicks"
+        },
+        {
+          "start": 1668,
+          "end": 1675,
+          "symbol": "F:pa.field_g:I",
+          "original": "field_g",
+          "renamed": "avatarFeedbackHoldTicks"
         },
         {
           "start": 2901,
@@ -315920,6 +318513,13 @@
           "symbol": "F:pa.field_e:Ljava/lang/String;",
           "original": "field_e",
           "renamed": "waitingForSoundEffectsText"
+        },
+        {
+          "start": 12833,
+          "end": 12840,
+          "symbol": "F:pa.field_g:I",
+          "original": "field_g",
+          "renamed": "avatarFeedbackHoldTicks"
         }
       ]
     },
@@ -317133,7 +319733,7 @@
       "original": "qa.java",
       "renamed": "qa.java",
       "inputSha256": "5901960713804b9fc0799c66e40bacdd7370a3a44f4cb43856ce3bffc45fc29e",
-      "outputSha256": "3add2fd24d026380dddfba3fc069addfe5648e0c2afba857f4fa83f236b8f46f",
+      "outputSha256": "86855cc04ff3e15bce0b8315a5281f79972dce7bc7257a514ddb8ab9efb4019e",
       "edits": [
         {
           "start": 117,
@@ -317171,11 +319771,32 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 14273,
+          "end": 14280,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
           "start": 14289,
           "end": 14291,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 14292,
+          "end": 14299,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 14320,
+          "end": 14327,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
         },
         {
           "start": 14330,
@@ -317185,11 +319806,81 @@
           "renamed": "MenuScreen"
         },
         {
+          "start": 14333,
+          "end": 14340,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 14394,
+          "end": 14401,
+          "symbol": "F:pa.field_g:I",
+          "original": "field_g",
+          "renamed": "avatarFeedbackHoldTicks"
+        },
+        {
+          "start": 14407,
+          "end": 14414,
+          "symbol": "F:pa.field_g:I",
+          "original": "field_g",
+          "renamed": "avatarFeedbackHoldTicks"
+        },
+        {
+          "start": 14525,
+          "end": 14532,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
           "start": 14535,
           "end": 14537,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 14538,
+          "end": 14545,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 14670,
+          "end": 14677,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 14696,
+          "end": 14703,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 14709,
+          "end": 14716,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 15196,
+          "end": 15203,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 15661,
+          "end": 15668,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
         },
         {
           "start": 15672,
@@ -317199,11 +319890,123 @@
           "renamed": "MenuScreen"
         },
         {
+          "start": 15675,
+          "end": 15682,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 15778,
+          "end": 15785,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 15791,
+          "end": 15798,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 15860,
+          "end": 15867,
+          "symbol": "F:pa.field_g:I",
+          "original": "field_g",
+          "renamed": "avatarFeedbackHoldTicks"
+        },
+        {
+          "start": 15873,
+          "end": 15880,
+          "symbol": "F:pa.field_g:I",
+          "original": "field_g",
+          "renamed": "avatarFeedbackHoldTicks"
+        },
+        {
+          "start": 16003,
+          "end": 16010,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
           "start": 16013,
           "end": 16015,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 16016,
+          "end": 16023,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 16160,
+          "end": 16167,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 16190,
+          "end": 16197,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 16203,
+          "end": 16210,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 16734,
+          "end": 16741,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 17255,
+          "end": 17262,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 17268,
+          "end": 17275,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 17345,
+          "end": 17352,
+          "symbol": "F:pa.field_g:I",
+          "original": "field_g",
+          "renamed": "avatarFeedbackHoldTicks"
+        },
+        {
+          "start": 17358,
+          "end": 17365,
+          "symbol": "F:pa.field_g:I",
+          "original": "field_g",
+          "renamed": "avatarFeedbackHoldTicks"
+        },
+        {
+          "start": 17500,
+          "end": 17507,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
         },
         {
           "start": 17510,
@@ -317213,11 +320016,137 @@
           "renamed": "MenuScreen"
         },
         {
+          "start": 17513,
+          "end": 17520,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 17669,
+          "end": 17676,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 17703,
+          "end": 17710,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 17716,
+          "end": 17723,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 17814,
+          "end": 17821,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 18368,
+          "end": 18375,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 18381,
+          "end": 18388,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 18458,
+          "end": 18465,
+          "symbol": "F:pa.field_g:I",
+          "original": "field_g",
+          "renamed": "avatarFeedbackHoldTicks"
+        },
+        {
+          "start": 18471,
+          "end": 18478,
+          "symbol": "F:pa.field_g:I",
+          "original": "field_g",
+          "renamed": "avatarFeedbackHoldTicks"
+        },
+        {
+          "start": 18613,
+          "end": 18620,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
           "start": 18623,
           "end": 18625,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 18626,
+          "end": 18633,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 18782,
+          "end": 18789,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 18816,
+          "end": 18823,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 18829,
+          "end": 18836,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 18927,
+          "end": 18934,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 19523,
+          "end": 19530,
+          "symbol": "F:pa.field_g:I",
+          "original": "field_g",
+          "renamed": "avatarFeedbackHoldTicks"
+        },
+        {
+          "start": 19536,
+          "end": 19543,
+          "symbol": "F:pa.field_g:I",
+          "original": "field_g",
+          "renamed": "avatarFeedbackHoldTicks"
+        },
+        {
+          "start": 19678,
+          "end": 19685,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
         },
         {
           "start": 19688,
@@ -317227,11 +320156,137 @@
           "renamed": "MenuScreen"
         },
         {
+          "start": 19691,
+          "end": 19698,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 19848,
+          "end": 19855,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 19882,
+          "end": 19889,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 19895,
+          "end": 19902,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 19994,
+          "end": 20001,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 20456,
+          "end": 20463,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 20469,
+          "end": 20476,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 20546,
+          "end": 20553,
+          "symbol": "F:pa.field_g:I",
+          "original": "field_g",
+          "renamed": "avatarFeedbackHoldTicks"
+        },
+        {
+          "start": 20559,
+          "end": 20566,
+          "symbol": "F:pa.field_g:I",
+          "original": "field_g",
+          "renamed": "avatarFeedbackHoldTicks"
+        },
+        {
+          "start": 20701,
+          "end": 20708,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
           "start": 20711,
           "end": 20713,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 20714,
+          "end": 20721,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 20871,
+          "end": 20878,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 20905,
+          "end": 20912,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 20918,
+          "end": 20925,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 21017,
+          "end": 21024,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 21534,
+          "end": 21541,
+          "symbol": "F:pa.field_g:I",
+          "original": "field_g",
+          "renamed": "avatarFeedbackHoldTicks"
+        },
+        {
+          "start": 21547,
+          "end": 21554,
+          "symbol": "F:pa.field_g:I",
+          "original": "field_g",
+          "renamed": "avatarFeedbackHoldTicks"
+        },
+        {
+          "start": 21683,
+          "end": 21690,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
         },
         {
           "start": 21693,
@@ -317241,11 +320296,151 @@
           "renamed": "MenuScreen"
         },
         {
+          "start": 21696,
+          "end": 21703,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 21847,
+          "end": 21854,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 21879,
+          "end": 21886,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 21892,
+          "end": 21899,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 21987,
+          "end": 21994,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 22542,
+          "end": 22549,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 22555,
+          "end": 22562,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 22628,
+          "end": 22635,
+          "symbol": "F:pa.field_g:I",
+          "original": "field_g",
+          "renamed": "avatarFeedbackHoldTicks"
+        },
+        {
+          "start": 22641,
+          "end": 22648,
+          "symbol": "F:pa.field_g:I",
+          "original": "field_g",
+          "renamed": "avatarFeedbackHoldTicks"
+        },
+        {
+          "start": 22777,
+          "end": 22784,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
           "start": 22787,
           "end": 22789,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 22790,
+          "end": 22797,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 22941,
+          "end": 22948,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 22973,
+          "end": 22980,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 22986,
+          "end": 22993,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 23081,
+          "end": 23088,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 23613,
+          "end": 23620,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 23626,
+          "end": 23633,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 23699,
+          "end": 23706,
+          "symbol": "F:pa.field_g:I",
+          "original": "field_g",
+          "renamed": "avatarFeedbackHoldTicks"
+        },
+        {
+          "start": 23712,
+          "end": 23719,
+          "symbol": "F:pa.field_g:I",
+          "original": "field_g",
+          "renamed": "avatarFeedbackHoldTicks"
+        },
+        {
+          "start": 23848,
+          "end": 23855,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
         },
         {
           "start": 23858,
@@ -317255,11 +320450,137 @@
           "renamed": "MenuScreen"
         },
         {
+          "start": 23861,
+          "end": 23868,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 24012,
+          "end": 24019,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 24044,
+          "end": 24051,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 24057,
+          "end": 24064,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 24152,
+          "end": 24159,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 24722,
+          "end": 24729,
+          "symbol": "F:pa.field_g:I",
+          "original": "field_g",
+          "renamed": "avatarFeedbackHoldTicks"
+        },
+        {
+          "start": 24735,
+          "end": 24742,
+          "symbol": "F:pa.field_g:I",
+          "original": "field_g",
+          "renamed": "avatarFeedbackHoldTicks"
+        },
+        {
+          "start": 24871,
+          "end": 24878,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
           "start": 24881,
           "end": 24883,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 24884,
+          "end": 24891,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 25035,
+          "end": 25042,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 25067,
+          "end": 25074,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 25080,
+          "end": 25087,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 25175,
+          "end": 25182,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 25619,
+          "end": 25626,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 25632,
+          "end": 25639,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 25705,
+          "end": 25712,
+          "symbol": "F:pa.field_g:I",
+          "original": "field_g",
+          "renamed": "avatarFeedbackHoldTicks"
+        },
+        {
+          "start": 25718,
+          "end": 25725,
+          "symbol": "F:pa.field_g:I",
+          "original": "field_g",
+          "renamed": "avatarFeedbackHoldTicks"
+        },
+        {
+          "start": 25854,
+          "end": 25861,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
         },
         {
           "start": 25864,
@@ -317269,6 +320590,62 @@
           "renamed": "MenuScreen"
         },
         {
+          "start": 25867,
+          "end": 25874,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 26018,
+          "end": 26025,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 26050,
+          "end": 26057,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 26063,
+          "end": 26070,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 26158,
+          "end": 26165,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 26653,
+          "end": 26660,
+          "symbol": "F:pa.field_g:I",
+          "original": "field_g",
+          "renamed": "avatarFeedbackHoldTicks"
+        },
+        {
+          "start": 26666,
+          "end": 26673,
+          "symbol": "F:pa.field_g:I",
+          "original": "field_g",
+          "renamed": "avatarFeedbackHoldTicks"
+        },
+        {
+          "start": 26796,
+          "end": 26803,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
           "start": 26806,
           "end": 26808,
           "symbol": "C:ka",
@@ -317276,11 +320653,102 @@
           "renamed": "MenuScreen"
         },
         {
+          "start": 26809,
+          "end": 26816,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 26954,
+          "end": 26961,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 26984,
+          "end": 26991,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 26997,
+          "end": 27004,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 27088,
+          "end": 27095,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 27550,
+          "end": 27557,
+          "symbol": "F:pa.field_g:I",
+          "original": "field_g",
+          "renamed": "avatarFeedbackHoldTicks"
+        },
+        {
+          "start": 27563,
+          "end": 27570,
+          "symbol": "F:pa.field_g:I",
+          "original": "field_g",
+          "renamed": "avatarFeedbackHoldTicks"
+        },
+        {
+          "start": 27675,
+          "end": 27682,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
           "start": 27685,
           "end": 27687,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 27688,
+          "end": 27695,
+          "symbol": "F:ka.field_h:I",
+          "original": "field_h",
+          "renamed": "avatarFeedbackFrameBase"
+        },
+        {
+          "start": 27815,
+          "end": 27822,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 27839,
+          "end": 27846,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 27852,
+          "end": 27859,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
+        {
+          "start": 28321,
+          "end": 28328,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
         },
         {
           "start": 28910,
@@ -319134,7 +322602,7 @@
       "original": "rb.java",
       "renamed": "rb.java",
       "inputSha256": "005f710bb874f53cd2edc603744a9a2ac2a10209a985367bd9edf12756dc9fd4",
-      "outputSha256": "a1b69044c4145bd8248145773508db429291d4141925879aa4d1d43c1c8249f6",
+      "outputSha256": "b9766cc663f7189ddafe4efe61277f4297b85ced8e12bd9c37bc03e77a11a85f",
       "edits": [
         {
           "start": 73,
@@ -319142,6 +322610,13 @@
           "symbol": "F:rb.field_a:Ljava/lang/String;",
           "original": "field_a",
           "renamed": "fullscreenCancelButtonText"
+        },
+        {
+          "start": 125,
+          "end": 132,
+          "symbol": "F:rb.field_b:I",
+          "original": "field_b",
+          "renamed": "kindFourRemovalCount"
         },
         {
           "start": 2526,
@@ -319517,7 +322992,7 @@
       "original": "rh.java",
       "renamed": "rh.java",
       "inputSha256": "145ea45adf9bb63403fe149ced81f949af6490abc4b71d619db144f41680fdb7",
-      "outputSha256": "ab5f6374bccafa88f696616f6c4cd25e670368bf253eb8255b3719214dd182d6",
+      "outputSha256": "10253fd0c76380c48d78909774cbf148acb010ea58c2211c36cd7bfacdf2d98b",
       "edits": [
         {
           "start": 125,
@@ -319730,6 +323205,27 @@
           "renamed": "nextForIteration"
         },
         {
+          "start": 2028,
+          "end": 2029,
+          "symbol": "M:jc.a(IZ)V",
+          "original": "a",
+          "renamed": "requestAvatarFeedback"
+        },
+        {
+          "start": 2150,
+          "end": 2151,
+          "symbol": "M:jc.a(IZ)V",
+          "original": "a",
+          "renamed": "requestAvatarFeedback"
+        },
+        {
+          "start": 2205,
+          "end": 2206,
+          "symbol": "M:jc.a(IZ)V",
+          "original": "a",
+          "renamed": "requestAvatarFeedback"
+        },
+        {
           "start": 2947,
           "end": 2949,
           "symbol": "C:hf",
@@ -319812,7 +323308,7 @@
       "original": "ri.java",
       "renamed": "ri.java",
       "inputSha256": "d02dbb0752b0e04a34daf65cf4bacb0f9c851351774b2e34a10f986b4137e102",
-      "outputSha256": "26cbca811d95bb8b2e05e9d2ddfe94c4e18095920049c224bae249c2fa7ed51b",
+      "outputSha256": "a004bcaee24b6ca131d5505c8454dd2f1e1adfef416f8e491769b9c8dadd6940",
       "edits": [
         {
           "start": 1958,
@@ -319918,6 +323414,20 @@
           "symbol": "F:i.field_a:Ldm;",
           "original": "field_a",
           "renamed": "avatarMaskRaster"
+        },
+        {
+          "start": 12928,
+          "end": 12935,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
+        },
+        {
+          "start": 13006,
+          "end": 13013,
+          "symbol": "F:nd.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarFeedbackModeId"
         }
       ]
     },
@@ -326746,7 +330256,7 @@
       "original": "uf.java",
       "renamed": "uf.java",
       "inputSha256": "f3ef04d1626117df773dec44b48be150b9d0d6e58eccc66152df22f840f4273a",
-      "outputSha256": "3301ad112f973730e45104a253c849b28226964ada7f718c589d13533e11f088",
+      "outputSha256": "507fc8b0197ab0f99505a3d51a2f221a199e5879f86bbdae58c7ed6af44e19f5",
       "edits": [
         {
           "start": 113,
@@ -326761,6 +330271,13 @@
           "symbol": "F:uf.field_i:Ljava/lang/String;",
           "original": "field_i",
           "renamed": "createPasswordContainsEmailAlertText"
+        },
+        {
+          "start": 259,
+          "end": 266,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
         },
         {
           "start": 532,
@@ -326817,6 +330334,13 @@
           "symbol": "F:uf.field_i:Ljava/lang/String;",
           "original": "field_i",
           "renamed": "createPasswordContainsEmailAlertText"
+        },
+        {
+          "start": 16976,
+          "end": 16983,
+          "symbol": "F:uf.field_b:I",
+          "original": "field_b",
+          "renamed": "avatarFeedbackFrameIndex"
         }
       ]
     },
@@ -327991,7 +331515,7 @@
       "original": "ul.java",
       "renamed": "ul.java",
       "inputSha256": "024b79f4a0317c0e8c058f19187000bf42dcdb08ed28874383c0eb42699378f8",
-      "outputSha256": "bce4a527725ae151188f058a8b2a45f283f1a3902c00a2fc87f8de010cf64f2a",
+      "outputSha256": "407f23a71c8f48a68e348d67e48d5487b647064e1a65a66f7923fd2107da6b14",
       "edits": [
         {
           "start": 120,
@@ -329168,6 +332692,20 @@
           "symbol": "L:ul.b(I)V#22",
           "original": "var2",
           "renamed": "dualMatchFound"
+        },
+        {
+          "start": 8238,
+          "end": 8239,
+          "symbol": "M:jc.a(IZ)V",
+          "original": "a",
+          "renamed": "requestAvatarFeedback"
+        },
+        {
+          "start": 8316,
+          "end": 8317,
+          "symbol": "M:jc.a(IZ)V",
+          "original": "a",
+          "renamed": "requestAvatarFeedback"
         },
         {
           "start": 8636,
@@ -333703,8 +337241,15 @@
       "original": "wa.java",
       "renamed": "wa.java",
       "inputSha256": "ba20120fa8578b2b0da2ec63039c1203b744e78a12282023ac97ac2e46998c5d",
-      "outputSha256": "dc71035d6f6b58f008f8ad15a298a4b50683ebe0457221dfa33b307297d79c52",
+      "outputSha256": "dda992de42efe9af9d7cfbfae9b1bd62812a5b6dc99d419b81089f60f77d16b0",
       "edits": [
+        {
+          "start": 197,
+          "end": 204,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
+        },
         {
           "start": 1018,
           "end": 1020,
@@ -334110,6 +337655,13 @@
           "symbol": "L:wa.a(I)I#0",
           "original": "var1_int",
           "renamed": "unfinishedPoints"
+        },
+        {
+          "start": 14261,
+          "end": 14268,
+          "symbol": "F:wa.field_a:I",
+          "original": "field_a",
+          "renamed": "avatarShockEffectTicks"
         }
       ]
     },
@@ -334175,7 +337727,7 @@
       "original": "wd.java",
       "renamed": "SecondaryDeque.java",
       "inputSha256": "c6c3a8582b0294b054c27dd1ad9fb68ae3ba8a621542efd11e9e2f1c13da5a57",
-      "outputSha256": "f21d648f37957d8786f1b173bf50e97d59e29cfc4ebaff02621589b8de743b42",
+      "outputSha256": "63e26f0b65726e4e4a6b9f3466c0e7cd3ab67171a8c7f8a0aa59e0134b411228",
       "edits": [
         {
           "start": 50,
@@ -334197,6 +337749,20 @@
           "symbol": "F:wd.field_b:Ldm;",
           "original": "field_b",
           "renamed": "contactProbeRaster"
+        },
+        {
+          "start": 93,
+          "end": 100,
+          "symbol": "F:wd.field_d:I",
+          "original": "field_d",
+          "renamed": "contactProbeOffsetY"
+        },
+        {
+          "start": 117,
+          "end": 124,
+          "symbol": "F:wd.field_a:I",
+          "original": "field_a",
+          "renamed": "contactProbeOffsetX"
         },
         {
           "start": 137,
@@ -334540,6 +338106,13 @@
           "symbol": "P:wd.a(Lrc;Z)V#1",
           "original": "param1",
           "renamed": "methodGuard"
+        },
+        {
+          "start": 1450,
+          "end": 1457,
+          "symbol": "F:wd.field_d:I",
+          "original": "field_d",
+          "renamed": "contactProbeOffsetY"
         },
         {
           "start": 1492,
@@ -335088,6 +338661,20 @@
           "renamed": "nextForIteration"
         },
         {
+          "start": 3701,
+          "end": 3708,
+          "symbol": "F:wd.field_a:I",
+          "original": "field_a",
+          "renamed": "contactProbeOffsetX"
+        },
+        {
+          "start": 4170,
+          "end": 4177,
+          "symbol": "F:wd.field_a:I",
+          "original": "field_a",
+          "renamed": "contactProbeOffsetX"
+        },
+        {
           "start": 4412,
           "end": 4414,
           "symbol": "M:wd.<init>()V",
@@ -335284,11 +338871,25 @@
           "renamed": "Sprite"
         },
         {
+          "start": 7962,
+          "end": 7969,
+          "symbol": "F:wd.field_d:I",
+          "original": "field_d",
+          "renamed": "contactProbeOffsetY"
+        },
+        {
           "start": 7974,
           "end": 7981,
           "symbol": "F:wd.field_b:Ldm;",
           "original": "field_b",
           "renamed": "contactProbeRaster"
+        },
+        {
+          "start": 8010,
+          "end": 8017,
+          "symbol": "F:wd.field_a:I",
+          "original": "field_a",
+          "renamed": "contactProbeOffsetX"
         },
         {
           "start": 8028,

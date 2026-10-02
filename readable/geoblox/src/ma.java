@@ -88,7 +88,7 @@ final class ma extends IntrusiveNode {
           if (!param0) {
             ma.b(-91);
           }
-          stackIn_3_0 = aa.a(SecondaryDeque.contactProbeRaster, 0, 0, vf.spriteScratchRaster, -SecondaryDeque.field_a + ng.field_G + -(vf.spriteScratchRaster.field_s >> 1323895489), -SecondaryDeque.field_d + -(vf.spriteScratchRaster.field_o >> -1840501887) + td.field_E);
+          stackIn_3_0 = aa.a(SecondaryDeque.contactProbeRaster, 0, 0, vf.spriteScratchRaster, -SecondaryDeque.contactProbeOffsetX + ng.field_G + -(vf.spriteScratchRaster.field_s >> 1323895489), -SecondaryDeque.contactProbeOffsetY + -(vf.spriteScratchRaster.field_o >> -1840501887) + td.field_E);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;

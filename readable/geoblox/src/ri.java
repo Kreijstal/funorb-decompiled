@@ -311,8 +311,8 @@ final class ri {
             return;
         }
         int var4 = (i.avatarMaskRaster.field_o >> -1165451615) - -2;
-        fc.field_b[uf.field_b].b(param0 + -var3, param1 + -var4, rj.field_c);
-        vh.field_H[nd.field_a].b(-var3 + param0, -var4 + param1, rj.field_c);
+        fc.field_b[uf.avatarFeedbackFrameIndex].b(param0 + -var3, param1 + -var4, rj.field_c);
+        vh.field_H[nd.avatarFeedbackModeId].b(-var3 + param0, -var4 + param1, rj.field_c);
     }
 
     public static void a(int param0) {

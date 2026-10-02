@@ -6,231 +6,231 @@ final class jc {
     static String toCustomerSupportText;
     static String field_b;
 
-    final static void a(int param0, boolean param1) {
-        int var3;
-        var3 = Geoblox.field_C;
-        if (7 == param0) {
-          if (MenuScreen.field_h != 36) {
-            MenuScreen.field_h = 36;
-            pa.field_g = 110;
-            nd.field_a = 6;
+    final static void requestAvatarFeedback(int feedbackRequestId, boolean clearSpriteGuard) {
+        int unusedClientControlSnapshot;
+        unusedClientControlSnapshot = Geoblox.field_C;
+        if (7 == feedbackRequestId) {
+          if (MenuScreen.avatarFeedbackFrameBase != 36) {
+            MenuScreen.avatarFeedbackFrameBase = 36;
+            pa.avatarFeedbackHoldTicks = 110;
+            nd.avatarFeedbackModeId = 6;
             td.playPcmSample(-348, fl.field_c[23]);
           }
         }
-        if (pa.field_g <= 0) {
-          if (param1) {
+        if (pa.avatarFeedbackHoldTicks <= 0) {
+          if (clearSpriteGuard) {
             field_a = (Sprite) null;
-            if (param0 != 0) {
-              if (1 != param0) {
-                if (param0 != 2) {
-                  if (3 != param0) {
-                    if (param0 != 4) {
-                      if (param0 == 5) {
-                        pa.field_g = 110;
-                        nd.field_a = 5;
-                        MenuScreen.field_h = 30;
+            if (feedbackRequestId != 0) {
+              if (1 != feedbackRequestId) {
+                if (feedbackRequestId != 2) {
+                  if (3 != feedbackRequestId) {
+                    if (feedbackRequestId != 4) {
+                      if (feedbackRequestId == 5) {
+                        pa.avatarFeedbackHoldTicks = 110;
+                        nd.avatarFeedbackModeId = 5;
+                        MenuScreen.avatarFeedbackFrameBase = 30;
                         td.playPcmSample(-348, fl.field_c[24]);
-                        uf.field_b = uf.field_b % 6 - -MenuScreen.field_h;
+                        uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
                         return;
                       } else {
-                        uf.field_b = uf.field_b % 6 - -MenuScreen.field_h;
+                        uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
                         return;
                       }
                     } else {
-                      pa.field_g = 110;
-                      MenuScreen.field_h = 24;
-                      nd.field_a = 4;
-                      uf.field_b = uf.field_b % 6 - -MenuScreen.field_h;
+                      pa.avatarFeedbackHoldTicks = 110;
+                      MenuScreen.avatarFeedbackFrameBase = 24;
+                      nd.avatarFeedbackModeId = 4;
+                      uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
                       return;
                     }
                   } else {
-                    MenuScreen.field_h = 18;
-                    wa.field_a = 50;
-                    pa.field_g = 110;
-                    nd.field_a = 3;
+                    MenuScreen.avatarFeedbackFrameBase = 18;
+                    wa.avatarShockEffectTicks = 50;
+                    pa.avatarFeedbackHoldTicks = 110;
+                    nd.avatarFeedbackModeId = 3;
                     td.playPcmSample(-348, fl.field_c[27]);
-                    uf.field_b = uf.field_b % 6 - -MenuScreen.field_h;
+                    uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
                     return;
                   }
                 } else {
-                  if (12 != MenuScreen.field_h) {
-                    if (MenuScreen.field_h != 24) {
-                      if (30 != MenuScreen.field_h) {
-                        if (36 != MenuScreen.field_h) {
+                  if (12 != MenuScreen.avatarFeedbackFrameBase) {
+                    if (MenuScreen.avatarFeedbackFrameBase != 24) {
+                      if (30 != MenuScreen.avatarFeedbackFrameBase) {
+                        if (36 != MenuScreen.avatarFeedbackFrameBase) {
                           td.playPcmSample(-348, fl.field_c[26]);
-                          nd.field_a = 2;
-                          MenuScreen.field_h = 12;
-                          uf.field_b = uf.field_b % 6 - -MenuScreen.field_h;
+                          nd.avatarFeedbackModeId = 2;
+                          MenuScreen.avatarFeedbackFrameBase = 12;
+                          uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
                           return;
                         } else {
-                          nd.field_a = 2;
-                          MenuScreen.field_h = 12;
-                          uf.field_b = uf.field_b % 6 - -MenuScreen.field_h;
+                          nd.avatarFeedbackModeId = 2;
+                          MenuScreen.avatarFeedbackFrameBase = 12;
+                          uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
                           return;
                         }
                       } else {
-                        nd.field_a = 2;
-                        MenuScreen.field_h = 12;
-                        uf.field_b = uf.field_b % 6 - -MenuScreen.field_h;
+                        nd.avatarFeedbackModeId = 2;
+                        MenuScreen.avatarFeedbackFrameBase = 12;
+                        uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
                         return;
                       }
                     } else {
-                      nd.field_a = 2;
-                      MenuScreen.field_h = 12;
-                      uf.field_b = uf.field_b % 6 - -MenuScreen.field_h;
+                      nd.avatarFeedbackModeId = 2;
+                      MenuScreen.avatarFeedbackFrameBase = 12;
+                      uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
                       return;
                     }
                   } else {
-                    nd.field_a = 2;
-                    MenuScreen.field_h = 12;
-                    uf.field_b = uf.field_b % 6 - -MenuScreen.field_h;
+                    nd.avatarFeedbackModeId = 2;
+                    MenuScreen.avatarFeedbackFrameBase = 12;
+                    uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
                     return;
                   }
                 }
               } else {
-                nd.field_a = 1;
-                MenuScreen.field_h = 6;
-                uf.field_b = uf.field_b % 6 - -MenuScreen.field_h;
+                nd.avatarFeedbackModeId = 1;
+                MenuScreen.avatarFeedbackFrameBase = 6;
+                uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
                 return;
               }
             } else {
-              if (MenuScreen.field_h != 0) {
-                if (24 != MenuScreen.field_h) {
-                  if (MenuScreen.field_h != 30) {
-                    if (MenuScreen.field_h != 36) {
+              if (MenuScreen.avatarFeedbackFrameBase != 0) {
+                if (24 != MenuScreen.avatarFeedbackFrameBase) {
+                  if (MenuScreen.avatarFeedbackFrameBase != 30) {
+                    if (MenuScreen.avatarFeedbackFrameBase != 36) {
                       td.playPcmSample(-348, fl.field_c[25]);
-                      MenuScreen.field_h = 0;
-                      nd.field_a = 0;
-                      uf.field_b = uf.field_b % 6 - -MenuScreen.field_h;
+                      MenuScreen.avatarFeedbackFrameBase = 0;
+                      nd.avatarFeedbackModeId = 0;
+                      uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
                       return;
                     } else {
-                      MenuScreen.field_h = 0;
-                      nd.field_a = 0;
-                      uf.field_b = uf.field_b % 6 - -MenuScreen.field_h;
+                      MenuScreen.avatarFeedbackFrameBase = 0;
+                      nd.avatarFeedbackModeId = 0;
+                      uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
                       return;
                     }
                   } else {
-                    MenuScreen.field_h = 0;
-                    nd.field_a = 0;
-                    uf.field_b = uf.field_b % 6 - -MenuScreen.field_h;
+                    MenuScreen.avatarFeedbackFrameBase = 0;
+                    nd.avatarFeedbackModeId = 0;
+                    uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
                     return;
                   }
                 } else {
-                  MenuScreen.field_h = 0;
-                  nd.field_a = 0;
-                  uf.field_b = uf.field_b % 6 - -MenuScreen.field_h;
+                  MenuScreen.avatarFeedbackFrameBase = 0;
+                  nd.avatarFeedbackModeId = 0;
+                  uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
                   return;
                 }
               } else {
-                MenuScreen.field_h = 0;
-                nd.field_a = 0;
-                uf.field_b = uf.field_b % 6 - -MenuScreen.field_h;
+                MenuScreen.avatarFeedbackFrameBase = 0;
+                nd.avatarFeedbackModeId = 0;
+                uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
                 return;
               }
             }
           } else {
-            if (param0 != 0) {
-              if (1 != param0) {
-                if (param0 != 2) {
-                  if (3 != param0) {
-                    if (param0 != 4) {
-                      if (param0 != 5) {
-                        uf.field_b = uf.field_b % 6 - -MenuScreen.field_h;
+            if (feedbackRequestId != 0) {
+              if (1 != feedbackRequestId) {
+                if (feedbackRequestId != 2) {
+                  if (3 != feedbackRequestId) {
+                    if (feedbackRequestId != 4) {
+                      if (feedbackRequestId != 5) {
+                        uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
                         return;
                       } else {
-                        pa.field_g = 110;
-                        nd.field_a = 5;
-                        MenuScreen.field_h = 30;
+                        pa.avatarFeedbackHoldTicks = 110;
+                        nd.avatarFeedbackModeId = 5;
+                        MenuScreen.avatarFeedbackFrameBase = 30;
                         td.playPcmSample(-348, fl.field_c[24]);
-                        uf.field_b = uf.field_b % 6 - -MenuScreen.field_h;
+                        uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
                         return;
                       }
                     } else {
-                      pa.field_g = 110;
-                      MenuScreen.field_h = 24;
-                      nd.field_a = 4;
-                      uf.field_b = uf.field_b % 6 - -MenuScreen.field_h;
+                      pa.avatarFeedbackHoldTicks = 110;
+                      MenuScreen.avatarFeedbackFrameBase = 24;
+                      nd.avatarFeedbackModeId = 4;
+                      uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
                       return;
                     }
                   } else {
-                    MenuScreen.field_h = 18;
-                    wa.field_a = 50;
-                    pa.field_g = 110;
-                    nd.field_a = 3;
+                    MenuScreen.avatarFeedbackFrameBase = 18;
+                    wa.avatarShockEffectTicks = 50;
+                    pa.avatarFeedbackHoldTicks = 110;
+                    nd.avatarFeedbackModeId = 3;
                     td.playPcmSample(-348, fl.field_c[27]);
-                    uf.field_b = uf.field_b % 6 - -MenuScreen.field_h;
+                    uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
                     return;
                   }
                 } else {
-                  if (12 == MenuScreen.field_h) {
-                    nd.field_a = 2;
-                    MenuScreen.field_h = 12;
+                  if (12 == MenuScreen.avatarFeedbackFrameBase) {
+                    nd.avatarFeedbackModeId = 2;
+                    MenuScreen.avatarFeedbackFrameBase = 12;
                   } else {
-                    if (MenuScreen.field_h != 24) {
-                      if (30 != MenuScreen.field_h) {
-                        if (36 != MenuScreen.field_h) {
+                    if (MenuScreen.avatarFeedbackFrameBase != 24) {
+                      if (30 != MenuScreen.avatarFeedbackFrameBase) {
+                        if (36 != MenuScreen.avatarFeedbackFrameBase) {
                           td.playPcmSample(-348, fl.field_c[26]);
-                          nd.field_a = 2;
-                          MenuScreen.field_h = 12;
-                          uf.field_b = uf.field_b % 6 - -MenuScreen.field_h;
+                          nd.avatarFeedbackModeId = 2;
+                          MenuScreen.avatarFeedbackFrameBase = 12;
+                          uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
                           return;
                         } else {
-                          nd.field_a = 2;
-                          MenuScreen.field_h = 12;
-                          uf.field_b = uf.field_b % 6 - -MenuScreen.field_h;
+                          nd.avatarFeedbackModeId = 2;
+                          MenuScreen.avatarFeedbackFrameBase = 12;
+                          uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
                           return;
                         }
                       } else {
-                        nd.field_a = 2;
-                        MenuScreen.field_h = 12;
-                        uf.field_b = uf.field_b % 6 - -MenuScreen.field_h;
+                        nd.avatarFeedbackModeId = 2;
+                        MenuScreen.avatarFeedbackFrameBase = 12;
+                        uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
                         return;
                       }
                     } else {
-                      nd.field_a = 2;
-                      MenuScreen.field_h = 12;
-                      uf.field_b = uf.field_b % 6 - -MenuScreen.field_h;
+                      nd.avatarFeedbackModeId = 2;
+                      MenuScreen.avatarFeedbackFrameBase = 12;
+                      uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
                       return;
                     }
                   }
                 }
               } else {
-                nd.field_a = 1;
-                MenuScreen.field_h = 6;
-                uf.field_b = uf.field_b % 6 - -MenuScreen.field_h;
+                nd.avatarFeedbackModeId = 1;
+                MenuScreen.avatarFeedbackFrameBase = 6;
+                uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
                 return;
               }
             } else {
-              if (MenuScreen.field_h != 0) {
-                if (24 != MenuScreen.field_h) {
-                  if (MenuScreen.field_h != 30) {
-                    if (MenuScreen.field_h != 36) {
+              if (MenuScreen.avatarFeedbackFrameBase != 0) {
+                if (24 != MenuScreen.avatarFeedbackFrameBase) {
+                  if (MenuScreen.avatarFeedbackFrameBase != 30) {
+                    if (MenuScreen.avatarFeedbackFrameBase != 36) {
                       td.playPcmSample(-348, fl.field_c[25]);
-                      MenuScreen.field_h = 0;
-                      nd.field_a = 0;
+                      MenuScreen.avatarFeedbackFrameBase = 0;
+                      nd.avatarFeedbackModeId = 0;
                     } else {
-                      MenuScreen.field_h = 0;
-                      nd.field_a = 0;
+                      MenuScreen.avatarFeedbackFrameBase = 0;
+                      nd.avatarFeedbackModeId = 0;
                     }
                   } else {
-                    MenuScreen.field_h = 0;
-                    nd.field_a = 0;
+                    MenuScreen.avatarFeedbackFrameBase = 0;
+                    nd.avatarFeedbackModeId = 0;
                   }
                 } else {
-                  MenuScreen.field_h = 0;
-                  nd.field_a = 0;
+                  MenuScreen.avatarFeedbackFrameBase = 0;
+                  nd.avatarFeedbackModeId = 0;
                 }
               } else {
-                MenuScreen.field_h = 0;
-                nd.field_a = 0;
+                MenuScreen.avatarFeedbackFrameBase = 0;
+                nd.avatarFeedbackModeId = 0;
               }
             }
-            uf.field_b = uf.field_b % 6 - -MenuScreen.field_h;
+            uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 - -MenuScreen.avatarFeedbackFrameBase;
             return;
           }
         } else {
-          if (param0 == 3) {
-            wa.field_a = 50;
+          if (feedbackRequestId == 3) {
+            wa.avatarShockEffectTicks = 50;
             td.playPcmSample(-348, fl.field_c[27]);
           }
           return;

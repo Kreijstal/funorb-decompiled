@@ -9,7 +9,7 @@ final class uf implements Runnable {
     static String createPasswordContainsEmailAlertText;
     int field_d;
     private Thread field_g;
-    static int field_b;
+    static int avatarFeedbackFrameIndex;
     static ob field_e;
     private boolean field_j;
     static wa field_f;
@@ -444,7 +444,7 @@ final class uf implements Runnable {
     static {
         field_h = new int[]{5167632, 12183066, 16031008, 15087386, 15079962};
         createPasswordContainsEmailAlertText = "This password contains your email address, and would be easy to guess";
-        field_b = 0;
+        avatarFeedbackFrameIndex = 0;
         field_l = new al();
     }
 }

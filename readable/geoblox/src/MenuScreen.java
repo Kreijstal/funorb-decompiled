@@ -8,7 +8,7 @@ abstract class MenuScreen {
     static float field_c;
     int itemSpacing;
     static d field_i;
-    static int field_h;
+    static int avatarFeedbackFrameBase;
     int selectedItemIndex;
     private int hitRightX;
     boolean pointerInteractionActive;
@@ -276,7 +276,7 @@ abstract class MenuScreen {
 
     static {
         field_m = new Sprite[7][7][4];
-        field_h = 0;
+        avatarFeedbackFrameBase = 0;
         field_a = 0L;
     }
 }

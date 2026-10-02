@@ -143,15 +143,15 @@ final class GameplayEntity extends DualLinkNode {
         ul.field_a = null;
         gg.field_b = 0;
         g.field_j = 0;
-        pa.field_g = 0;
+        pa.avatarFeedbackHoldTicks = 0;
         jf.field_j = 0;
-        uf.field_b = param0;
+        uf.avatarFeedbackFrameIndex = param0;
         ha.field_g = 0;
         rj.field_c = 5167632;
-        MenuScreen.field_h = 0;
+        MenuScreen.avatarFeedbackFrameBase = 0;
         gi.field_e = 0;
-        nd.field_a = 0;
-        wa.field_a = 0;
+        nd.avatarFeedbackModeId = 0;
+        wa.avatarShockEffectTicks = 0;
     }
 
     public static void e(byte param0) {
@@ -302,7 +302,7 @@ final class GameplayEntity extends DualLinkNode {
         }
         vf.spriteScratchRaster.g(this.entityId - -1);
         SecondaryDeque.contactProbeRaster.e();
-        vf.spriteScratchRaster.a(-SecondaryDeque.field_a + -(vf.spriteScratchRaster.field_s >> 811012289) + ng.field_G, -(vf.spriteScratchRaster.field_o >> 2111671105) + (td.field_E + -SecondaryDeque.field_d), 1 + this.entityId);
+        vf.spriteScratchRaster.a(-SecondaryDeque.contactProbeOffsetX + -(vf.spriteScratchRaster.field_s >> 811012289) + ng.field_G, -(vf.spriteScratchRaster.field_o >> 2111671105) + (td.field_E + -SecondaryDeque.contactProbeOffsetY), 1 + this.entityId);
         sh.field_y.a(255);
     }
 
@@ -521,8 +521,8 @@ final class GameplayEntity extends DualLinkNode {
         entityOffsetY = -240.0f + this.positionY;
         rotatedEntityX = (int)(Math.cos((double)el.gameplaySession.boardAngleRadians) * (double)entityOffsetX - (double)entityOffsetY * Math.sin((double)el.gameplaySession.boardAngleRadians) + 320.0);
         rotatedEntityY = (int)((double)entityOffsetX * Math.sin((double)el.gameplaySession.boardAngleRadians) + Math.cos((double)el.gameplaySession.boardAngleRadians) * (double)entityOffsetY + 240.0);
-        clipLeftX = -(vf.spriteScratchRaster.field_s / 2) + (rotatedEntityX - 4 + -SecondaryDeque.field_a);
-        clipTopY = -SecondaryDeque.field_d + -4 + (rotatedEntityY - vf.spriteScratchRaster.field_o / 2);
+        clipLeftX = -(vf.spriteScratchRaster.field_s / 2) + (rotatedEntityX - 4 + -SecondaryDeque.contactProbeOffsetX);
+        clipTopY = -SecondaryDeque.contactProbeOffsetY + -4 + (rotatedEntityY - vf.spriteScratchRaster.field_o / 2);
         clippedSpriteWidth = vf.spriteScratchRaster.field_s - -8;
         if (clipLeftX < 0) {
           clippedSpriteWidth = clippedSpriteWidth + clipLeftX;

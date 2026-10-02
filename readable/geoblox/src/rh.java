@@ -63,12 +63,12 @@ final class rh {
             if (10000.0f > var1_float) {
               stackIn_22_0 = 0;
               stackIn_22_1 = 0;
-              jc.a(stackIn_22_0, stackIn_22_1 != 0);
+              jc.requestAvatarFeedback(stackIn_22_0, stackIn_22_1 != 0);
             } else {
               if (!(25600.0f > var1_float)) {
-                jc.a(2, false);
+                jc.requestAvatarFeedback(2, false);
               } else {
-                jc.a(1, false);
+                jc.requestAvatarFeedback(1, false);
               }
             }
             break L0;

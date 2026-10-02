@@ -32,7 +32,7 @@ final class ih {
             if (ji.movingEntities.isEmpty(13519)) {
               if (SecondaryDeque.spawnQueue.isEmpty(13519)) {
                 if (bh.field_c.isEmpty(param0 + 13519)) {
-                  if (!jl.field_t) {
+                  if (!jl.avatarShockContactPending) {
                     stackIn_8_0 = 1;
                     break L0;
                   }
@@ -193,10 +193,10 @@ final class ih {
                     entity.touchesAvatar = true;
                     if (entity.entitySpriteKindId != 3) {
                       if (4 == entity.entitySpriteKindId) {
-                        jc.a(7, false);
+                        jc.requestAvatarFeedback(7, false);
                       }
                     } else {
-                      jl.field_t = true;
+                      jl.avatarShockContactPending = true;
                     }
                   }
                 }

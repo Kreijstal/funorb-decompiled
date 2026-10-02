@@ -388,17 +388,17 @@ final class qa {
           fieldTemp$0 = af.field_c;
           af.field_c = af.field_c - 1;
           if (0 > fieldTemp$0) {
-            if (uf.field_b == 0 - -MenuScreen.field_h) {
-              uf.field_b = MenuScreen.field_h + 3;
+            if (uf.avatarFeedbackFrameIndex == 0 - -MenuScreen.avatarFeedbackFrameBase) {
+              uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 3;
               af.field_c = 20;
-              pa.field_g = pa.field_g - 1;
+              pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
               gi.field_e = gi.field_e + 1;
               if (gi.field_e % 600 < 30) {
-                uf.field_b = MenuScreen.field_h + 0;
+                uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
               }
               var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
-              fieldTemp$1 = wa.field_a;
-              wa.field_a = wa.field_a - 1;
+              fieldTemp$1 = wa.avatarShockEffectTicks;
+              wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
               if (fieldTemp$1 <= 0) {
                 fieldTemp$2 = jf.field_j;
                 jf.field_j = jf.field_j - 1;
@@ -409,7 +409,7 @@ final class qa {
                   return;
                 }
               } else {
-                ha.field_g = wa.field_a % 15 % 2;
+                ha.field_g = wa.avatarShockEffectTicks % 15 % 2;
                 fieldTemp$3 = jf.field_j;
                 jf.field_j = jf.field_j - 1;
                 if (fieldTemp$3 <= 0) {
@@ -420,19 +420,19 @@ final class qa {
                 }
               }
             } else {
-              var1_int = uf.field_b + -MenuScreen.field_h;
+              var1_int = uf.avatarFeedbackFrameIndex + -MenuScreen.avatarFeedbackFrameBase;
               if (jk.field_d == 1) {
                 if (var1_int > 1) {
-                  uf.field_b = uf.field_b - 1;
+                  uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex - 1;
                   af.field_c = 20;
-                  pa.field_g = pa.field_g - 1;
+                  pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
                   gi.field_e = gi.field_e + 1;
                   if (gi.field_e % 600 < 30) {
-                    uf.field_b = MenuScreen.field_h + 0;
+                    uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
                   }
                   var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
-                  fieldTemp$4 = wa.field_a;
-                  wa.field_a = wa.field_a - 1;
+                  fieldTemp$4 = wa.avatarShockEffectTicks;
+                  wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                   if (fieldTemp$4 <= 0) {
                     fieldTemp$5 = jf.field_j;
                     jf.field_j = jf.field_j - 1;
@@ -443,7 +443,7 @@ final class qa {
                       return;
                     }
                   } else {
-                    ha.field_g = wa.field_a % 15 % 2;
+                    ha.field_g = wa.avatarShockEffectTicks % 15 % 2;
                     fieldTemp$6 = jf.field_j;
                     jf.field_j = jf.field_j - 1;
                     if (fieldTemp$6 > 0) {
@@ -454,18 +454,18 @@ final class qa {
                 } else {
                   if (jk.field_d == 2) {
                     if (var1_int < 5) {
-                      uf.field_b = uf.field_b + 1;
+                      uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex + 1;
                       af.field_c = 20;
-                      pa.field_g = pa.field_g - 1;
+                      pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
                       gi.field_e = gi.field_e + 1;
                       if (gi.field_e % 600 < 30) {
-                        uf.field_b = MenuScreen.field_h + 0;
+                        uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
                       }
                       var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
-                      fieldTemp$7 = wa.field_a;
-                      wa.field_a = wa.field_a - 1;
+                      fieldTemp$7 = wa.avatarShockEffectTicks;
+                      wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                       if (fieldTemp$7 > 0) {
-                        ha.field_g = wa.field_a % 15 % 2;
+                        ha.field_g = wa.avatarShockEffectTicks % 15 % 2;
                       }
                       fieldTemp$8 = jf.field_j;
                       jf.field_j = jf.field_j - 1;
@@ -477,18 +477,18 @@ final class qa {
                   }
                   if (jk.field_d == 0) {
                     if (var1_int < 3) {
-                      uf.field_b = uf.field_b + 1;
+                      uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex + 1;
                       af.field_c = 20;
-                      pa.field_g = pa.field_g - 1;
+                      pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
                       gi.field_e = gi.field_e + 1;
                       if (gi.field_e % 600 < 30) {
-                        uf.field_b = MenuScreen.field_h + 0;
+                        uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
                       }
                       var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
-                      fieldTemp$9 = wa.field_a;
-                      wa.field_a = wa.field_a - 1;
+                      fieldTemp$9 = wa.avatarShockEffectTicks;
+                      wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                       if (fieldTemp$9 > 0) {
-                        ha.field_g = wa.field_a % 15 % 2;
+                        ha.field_g = wa.avatarShockEffectTicks % 15 % 2;
                       }
                       fieldTemp$10 = jf.field_j;
                       jf.field_j = jf.field_j - 1;
@@ -501,16 +501,16 @@ final class qa {
                   if (jk.field_d == 0) {
                     if (var1_int <= 3) {
                       af.field_c = 20;
-                      pa.field_g = pa.field_g - 1;
+                      pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
                       gi.field_e = gi.field_e + 1;
                       if (gi.field_e % 600 < 30) {
-                        uf.field_b = MenuScreen.field_h + 0;
+                        uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
                       }
                       var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
-                      fieldTemp$11 = wa.field_a;
-                      wa.field_a = wa.field_a - 1;
+                      fieldTemp$11 = wa.avatarShockEffectTicks;
+                      wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                       if (fieldTemp$11 > 0) {
-                        ha.field_g = wa.field_a % 15 % 2;
+                        ha.field_g = wa.avatarShockEffectTicks % 15 % 2;
                       }
                       fieldTemp$12 = jf.field_j;
                       jf.field_j = jf.field_j - 1;
@@ -519,18 +519,18 @@ final class qa {
                       }
                       return;
                     } else {
-                      uf.field_b = uf.field_b - 1;
+                      uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex - 1;
                       af.field_c = 20;
-                      pa.field_g = pa.field_g - 1;
+                      pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
                       gi.field_e = gi.field_e + 1;
                       if (gi.field_e % 600 < 30) {
-                        uf.field_b = MenuScreen.field_h + 0;
+                        uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
                       }
                       var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
-                      fieldTemp$13 = wa.field_a;
-                      wa.field_a = wa.field_a - 1;
+                      fieldTemp$13 = wa.avatarShockEffectTicks;
+                      wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                       if (fieldTemp$13 > 0) {
-                        ha.field_g = wa.field_a % 15 % 2;
+                        ha.field_g = wa.avatarShockEffectTicks % 15 % 2;
                       }
                       fieldTemp$14 = jf.field_j;
                       jf.field_j = jf.field_j - 1;
@@ -541,16 +541,16 @@ final class qa {
                     }
                   } else {
                     af.field_c = 20;
-                    pa.field_g = pa.field_g - 1;
+                    pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
                     gi.field_e = gi.field_e + 1;
                     if (gi.field_e % 600 < 30) {
-                      uf.field_b = MenuScreen.field_h + 0;
+                      uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
                     }
                     var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
-                    fieldTemp$15 = wa.field_a;
-                    wa.field_a = wa.field_a - 1;
+                    fieldTemp$15 = wa.avatarShockEffectTicks;
+                    wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                     if (fieldTemp$15 > 0) {
-                      ha.field_g = wa.field_a % 15 % 2;
+                      ha.field_g = wa.avatarShockEffectTicks % 15 % 2;
                     }
                     fieldTemp$16 = jf.field_j;
                     jf.field_j = jf.field_j - 1;
@@ -563,18 +563,18 @@ final class qa {
               } else {
                 if (jk.field_d == 2) {
                   if (var1_int < 5) {
-                    uf.field_b = uf.field_b + 1;
+                    uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex + 1;
                     af.field_c = 20;
-                    pa.field_g = pa.field_g - 1;
+                    pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
                     gi.field_e = gi.field_e + 1;
                     if (gi.field_e % 600 < 30) {
-                      uf.field_b = MenuScreen.field_h + 0;
+                      uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
                     }
                     var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
-                    fieldTemp$17 = wa.field_a;
-                    wa.field_a = wa.field_a - 1;
+                    fieldTemp$17 = wa.avatarShockEffectTicks;
+                    wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                     if (fieldTemp$17 > 0) {
-                      ha.field_g = wa.field_a % 15 % 2;
+                      ha.field_g = wa.avatarShockEffectTicks % 15 % 2;
                     }
                     fieldTemp$18 = jf.field_j;
                     jf.field_j = jf.field_j - 1;
@@ -586,18 +586,18 @@ final class qa {
                 }
                 if (jk.field_d == 0) {
                   if (var1_int < 3) {
-                    uf.field_b = uf.field_b + 1;
+                    uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex + 1;
                     af.field_c = 20;
-                    pa.field_g = pa.field_g - 1;
+                    pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
                     gi.field_e = gi.field_e + 1;
                     if (gi.field_e % 600 < 30) {
-                      uf.field_b = MenuScreen.field_h + 0;
+                      uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
                     }
                     var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
-                    fieldTemp$19 = wa.field_a;
-                    wa.field_a = wa.field_a - 1;
+                    fieldTemp$19 = wa.avatarShockEffectTicks;
+                    wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                     if (fieldTemp$19 > 0) {
-                      ha.field_g = wa.field_a % 15 % 2;
+                      ha.field_g = wa.avatarShockEffectTicks % 15 % 2;
                     }
                     fieldTemp$20 = jf.field_j;
                     jf.field_j = jf.field_j - 1;
@@ -610,16 +610,16 @@ final class qa {
                 if (jk.field_d == 0) {
                   if (var1_int <= 3) {
                     af.field_c = 20;
-                    pa.field_g = pa.field_g - 1;
+                    pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
                     gi.field_e = gi.field_e + 1;
                     if (gi.field_e % 600 < 30) {
-                      uf.field_b = MenuScreen.field_h + 0;
+                      uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
                     }
                     var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
-                    fieldTemp$21 = wa.field_a;
-                    wa.field_a = wa.field_a - 1;
+                    fieldTemp$21 = wa.avatarShockEffectTicks;
+                    wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                     if (fieldTemp$21 > 0) {
-                      ha.field_g = wa.field_a % 15 % 2;
+                      ha.field_g = wa.avatarShockEffectTicks % 15 % 2;
                     }
                     fieldTemp$22 = jf.field_j;
                     jf.field_j = jf.field_j - 1;
@@ -628,18 +628,18 @@ final class qa {
                     }
                     return;
                   } else {
-                    uf.field_b = uf.field_b - 1;
+                    uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex - 1;
                     af.field_c = 20;
-                    pa.field_g = pa.field_g - 1;
+                    pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
                     gi.field_e = gi.field_e + 1;
                     if (gi.field_e % 600 < 30) {
-                      uf.field_b = MenuScreen.field_h + 0;
+                      uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
                     }
                     var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
-                    fieldTemp$23 = wa.field_a;
-                    wa.field_a = wa.field_a - 1;
+                    fieldTemp$23 = wa.avatarShockEffectTicks;
+                    wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                     if (fieldTemp$23 > 0) {
-                      ha.field_g = wa.field_a % 15 % 2;
+                      ha.field_g = wa.avatarShockEffectTicks % 15 % 2;
                     }
                     fieldTemp$24 = jf.field_j;
                     jf.field_j = jf.field_j - 1;
@@ -650,16 +650,16 @@ final class qa {
                   }
                 } else {
                   af.field_c = 20;
-                  pa.field_g = pa.field_g - 1;
+                  pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
                   gi.field_e = gi.field_e + 1;
                   if (gi.field_e % 600 < 30) {
-                    uf.field_b = MenuScreen.field_h + 0;
+                    uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
                   }
                   var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
-                  fieldTemp$25 = wa.field_a;
-                  wa.field_a = wa.field_a - 1;
+                  fieldTemp$25 = wa.avatarShockEffectTicks;
+                  wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                   if (fieldTemp$25 > 0) {
-                    ha.field_g = wa.field_a % 15 % 2;
+                    ha.field_g = wa.avatarShockEffectTicks % 15 % 2;
                   }
                   fieldTemp$26 = jf.field_j;
                   jf.field_j = jf.field_j - 1;
@@ -671,14 +671,14 @@ final class qa {
               }
             }
           } else {
-            pa.field_g = pa.field_g - 1;
+            pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
             gi.field_e = gi.field_e + 1;
             if (gi.field_e % 600 < 30) {
-              uf.field_b = MenuScreen.field_h + 0;
+              uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
             }
             var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
-            fieldTemp$27 = wa.field_a;
-            wa.field_a = wa.field_a - 1;
+            fieldTemp$27 = wa.avatarShockEffectTicks;
+            wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
             if (fieldTemp$27 <= 0) {
               fieldTemp$28 = jf.field_j;
               jf.field_j = jf.field_j - 1;
@@ -689,7 +689,7 @@ final class qa {
                 return;
               }
             } else {
-              ha.field_g = wa.field_a % 15 % 2;
+              ha.field_g = wa.avatarShockEffectTicks % 15 % 2;
               fieldTemp$29 = jf.field_j;
               jf.field_j = jf.field_j - 1;
               if (fieldTemp$29 > 0) {

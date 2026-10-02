@@ -1199,6 +1199,12 @@
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'returntogame' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
     },
     {
+      "symbol": "F:jl.field_t:Z",
+      "originalName": "field_t",
+      "to": "avatarShockContactPending",
+      "evidence": "Set by kind-three avatar mask contact, blocks queue-settling checks and is cleared when reconciliation consumes avatarShockPending. Native routing verifies the reset independently."
+    },
+    {
       "symbol": "F:k.field_b:Ljava/lang/String;",
       "to": "fullscreenFocusText",
       "originalName": "field_b",
@@ -1239,6 +1245,12 @@
       "to": "pointerInteractionActive",
       "evidence": "Set on nonempty pointer hit; gates held-button dispatch and keyboard selection.",
       "originalName": "field_g"
+    },
+    {
+      "symbol": "F:ka.field_h:I",
+      "originalName": "field_h",
+      "to": "avatarFeedbackFrameBase",
+      "evidence": "Base of a six-frame avatar feedback segment: 0, 6, 12, 18, 24, 30 or 36. Native request matrix checks base and selected sound independently; qa advances frames and ij/ri render fc.field_b by uf frame index."
     },
     {
       "symbol": "F:ka.field_j:I",
@@ -1451,6 +1463,12 @@
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'loading_fonts' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
     },
     {
+      "symbol": "F:nd.field_a:I",
+      "originalName": "field_a",
+      "to": "avatarFeedbackModeId",
+      "evidence": "Selects the vh.field_H avatar overlay and feedback state. Requests 0 through 5 set matching IDs; a new request 7 sets ID 6."
+    },
+    {
       "symbol": "F:ne.field_d:Ljava/lang/String;",
       "to": "ticketingGoToWebsiteText",
       "originalName": "field_d",
@@ -1589,6 +1607,12 @@
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'waitingfor_soundeffects' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
     },
     {
+      "symbol": "F:pa.field_g:I",
+      "originalName": "field_g",
+      "to": "avatarFeedbackHoldTicks",
+      "evidence": "A positive hold defers ordinary feedback changes; modes 3, 4, 5 and a new mode-7 request set 110. Native request matrix verifies held and expired cases."
+    },
+    {
       "symbol": "F:pb.field_o:Ljava/lang/String;",
       "to": "createAgeTooltipText",
       "originalName": "field_o",
@@ -1719,6 +1743,12 @@
       "to": "fullscreenCancelButtonText",
       "originalName": "field_a",
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'fs_button_cancel' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:rb.field_b:I",
+      "originalName": "field_b",
+      "to": "kindFourRemovalCount",
+      "evidence": "Counts original kind-four entities routed to kind seven in the transient list, reset by le session setup; at five it requests the existing unlock action. Native routing checks counters, with unlock delivery suppressed by pre-existing action bits."
     },
     {
       "symbol": "F:rc.field_f:Ljava/lang/String;",
@@ -2003,6 +2033,12 @@
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_age' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
     },
     {
+      "symbol": "F:uf.field_b:I",
+      "originalName": "field_b",
+      "to": "avatarFeedbackFrameIndex",
+      "evidence": "Indexes fc.field_b avatar frames. Accepted ordinary feedback keeps its Java remainder modulo six, then adds the selected frame base; native matrix covers negative, low and high frame values."
+    },
+    {
       "symbol": "F:uf.field_i:Ljava/lang/String;",
       "to": "createPasswordContainsEmailAlertText",
       "originalName": "field_i",
@@ -2135,6 +2171,12 @@
       "evidence": "Set by rh.updateAttachedEntities for kind-3 entities touching the avatar with nonpositive cooldown. Consumed and cleared by kc.reconcileBoardEntities after shock feedback; le reset also clears it. ec.processMatchCandidates suppresses the empty-candidate chain reset while it is set. Producers are verified by source inspection; the native scoring probe controls this gate directly."
     },
     {
+      "symbol": "F:wa.field_a:I",
+      "originalName": "field_a",
+      "to": "avatarShockEffectTicks",
+      "evidence": "Request 3 starts a 50-tick effect even during a feedback hold. qa decrements this counter and ij draws the vg.field_f effect while it is positive."
+    },
+    {
       "symbol": "F:wb.field_b:I",
       "to": "newAttachmentCount",
       "originalName": "field_b",
@@ -2147,6 +2189,12 @@
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'sound_colon' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
     },
     {
+      "symbol": "F:wd.field_a:I",
+      "originalName": "field_a",
+      "to": "contactProbeOffsetX",
+      "evidence": "Horizontal offset of the 460-wide contact raster: (640 - raster canvas width)/2. Entity trail erasure and contact drawing subtract it; native attachment fixtures use the normal 90 offset."
+    },
+    {
       "symbol": "F:wd.field_b:Ldm;",
       "to": "contactProbeRaster",
       "originalName": "field_b",
@@ -2157,6 +2205,12 @@
       "originalName": "field_c",
       "to": "iterationCursor",
       "evidence": "First iteration saves the following secondary node; next iteration returns this cursor and advances it to the next secondary link."
+    },
+    {
+      "symbol": "F:wd.field_d:I",
+      "originalName": "field_d",
+      "to": "contactProbeOffsetY",
+      "evidence": "Vertical offset of the 460-high contact raster: (480 - raster canvas height)/2. Entity trail erasure and contact drawing subtract it; native attachment fixtures use the normal 10 offset."
     },
     {
       "symbol": "F:wd.field_e:Ltf;",
@@ -3659,6 +3713,12 @@
       "evidence": "ja.java assigns Geoblox.field_C to var11 for decompiler control-flow branching; it is not a gameplay state value."
     },
     {
+      "symbol": "L:jc.a(IZ)V#0",
+      "originalName": "var3",
+      "to": "unusedClientControlSnapshot",
+      "evidence": "Retained read of Geoblox.field_C at entry; this local is unused by the recovered feedback body."
+    },
+    {
       "symbol": "L:ka.a(I)V#1",
       "originalName": "var2",
       "to": "itemIndex",
@@ -3687,6 +3747,36 @@
       "originalName": "stackIn_15_0",
       "to": "alreadyVisited",
       "evidence": "Boolean carrier of connectivityVisitedByEntityId for the current attached entity."
+    },
+    {
+      "symbol": "L:kc.b(I)V#10",
+      "originalName": "stackIn_88_2",
+      "to": "popupGuardInput",
+      "evidence": "Carries the normal popup-helper guard 117 into the merged point-selection branch."
+    },
+    {
+      "symbol": "L:kc.b(I)V#11",
+      "originalName": "stackIn_90_0",
+      "to": "popupOriginY",
+      "evidence": "Final Y argument to spawnPointsPopup after the kind-three/kind-four branch merges."
+    },
+    {
+      "symbol": "L:kc.b(I)V#12",
+      "originalName": "stackIn_90_1",
+      "to": "popupOriginX",
+      "evidence": "Final X argument to spawnPointsPopup after the kind-three/kind-four branch merges."
+    },
+    {
+      "symbol": "L:kc.b(I)V#13",
+      "originalName": "stackIn_90_2",
+      "to": "popupMethodGuard",
+      "evidence": "Final normal guard 117 supplied to spawnPointsPopup, preserving its retained alternate branch."
+    },
+    {
+      "symbol": "L:kc.b(I)V#14",
+      "originalName": "stackIn_90_3",
+      "to": "popupPoints",
+      "evidence": "Selects 100 for original kind three or four and 10 for the other kinds when an avatar contact is shocked; native routing oracles verify amount, multiplier and coordinates."
     },
     {
       "symbol": "L:kc.b(I)V#15",
@@ -3885,6 +3975,18 @@
       "originalName": "stackIn_56_0",
       "to": "visitedFlagThenResetIndex",
       "evidence": "Initially carries the visited flag as an integer; reset to zero for neighbor cleanup or the visited-array reset index."
+    },
+    {
+      "symbol": "L:kc.b(I)V#8",
+      "originalName": "stackIn_88_0",
+      "to": "popupOriginYInput",
+      "evidence": "Integer narrowing of the shocked entity Y position before selecting popup points; native routing checks original coordinates independently."
+    },
+    {
+      "symbol": "L:kc.b(I)V#9",
+      "originalName": "stackIn_88_1",
+      "to": "popupOriginXInput",
+      "evidence": "Integer narrowing of the shocked entity X position before selecting popup points; native routing checks original coordinates independently."
     },
     {
       "symbol": "L:ld.a(I)Z#21",
@@ -4961,6 +5063,12 @@
       "originalName": "n"
     },
     {
+      "symbol": "M:jc.a(IZ)V",
+      "originalName": "a",
+      "to": "requestAvatarFeedback",
+      "evidence": "Requests an avatar feedback mode while retaining hold, frame, sprite-guard and sound behavior. Native matrix verifies 3024 combinations with table-based state and actual PCM sample identity/count oracles."
+    },
+    {
       "symbol": "M:ka.a(BI)V",
       "to": "increaseMenuValue",
       "evidence": "Concrete increases music/effect sliders by ten; base dispatches right-direction keys here. Both base and concrete declarations are renamed.",
@@ -5981,6 +6089,18 @@
       "originalName": "param1"
     },
     {
+      "symbol": "P:jc.a(IZ)V#0",
+      "originalName": "param0",
+      "to": "feedbackRequestId",
+      "evidence": "Requests 0 through 5, or request 7 for mode six; native matrix includes -1 and 6 no-op requests."
+    },
+    {
+      "symbol": "P:jc.a(IZ)V#1",
+      "originalName": "param1",
+      "to": "clearSpriteGuard",
+      "evidence": "Clears jc.field_a only when the feedback hold is not positive; normal gameplay passes false. Native matrix checks both values and an actual sprite identity."
+    },
+    {
       "symbol": "P:ka.a(BI)V#1",
       "to": "itemIndex",
       "evidence": "Indexes action IDs for increase operation.",
@@ -6594,7 +6714,7 @@
     }
   ],
   "revision": 4,
-  "version": 24,
+  "version": 25,
   "generators": {
     "dekoblokoWork": {
       "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
@@ -6614,359 +6734,209 @@
   "publication": {
     "format": 1,
     "previousRules": {
-      "commit": "39ab1b60fcaa3a70e15401d1333d07f2bc2c35d5",
+      "commit": "fcc47df013a1d918b2a1e00ab05dd3471e202864",
       "path": "readable/geoblox-rules.json",
-      "sha256": "bd536278bd84875314a2cd1681cf300367c732c6f0f16893c2bcfabacfc243e0"
+      "sha256": "ae9f11cf37149c4dd661aa9879c358d622efc0ddb10db6bf17bc1277e29bf248"
     },
     "ruleChanges": [
       {
-        "symbol": "L:kc.b(I)V#0",
+        "symbol": "F:jl.field_t:Z",
         "before": null,
         "after": {
-          "symbol": "L:kc.b(I)V#0",
-          "originalName": "stackIn_12_0",
-          "to": "entityQueueThenAttachedQueue",
-          "evidence": "Initially carries the moving entity queue marker; before rebuilding connectivity it is reused for the attached-entity deque."
+          "symbol": "F:jl.field_t:Z",
+          "originalName": "field_t",
+          "to": "avatarShockContactPending",
+          "evidence": "Set by kind-three avatar mask contact, blocks queue-settling checks and is cleared when reconciliation consumes avatarShockPending. Native routing verifies the reset independently."
         }
       },
       {
-        "symbol": "L:kc.b(I)V#1",
+        "symbol": "F:ka.field_h:I",
         "before": null,
         "after": {
-          "symbol": "L:kc.b(I)V#1",
-          "originalName": "stackIn_15_0",
-          "to": "alreadyVisited",
-          "evidence": "Boolean carrier of connectivityVisitedByEntityId for the current attached entity."
+          "symbol": "F:ka.field_h:I",
+          "originalName": "field_h",
+          "to": "avatarFeedbackFrameBase",
+          "evidence": "Base of a six-frame avatar feedback segment: 0, 6, 12, 18, 24, 30 or 36. Native request matrix checks base and selected sound independently; qa advances frames and ij/ri render fc.field_b by uf frame index."
         }
       },
       {
-        "symbol": "L:kc.b(I)V#15",
+        "symbol": "F:nd.field_a:I",
         "before": null,
         "after": {
-          "symbol": "L:kc.b(I)V#15",
-          "originalName": "stackIn_110_0",
-          "to": "sessionForRasterRead",
-          "evidence": "Carries the gameplay session while combining its existing boardRasterDirty state with contact and shock flags."
+          "symbol": "F:nd.field_a:I",
+          "originalName": "field_a",
+          "to": "avatarFeedbackModeId",
+          "evidence": "Selects the vh.field_H avatar overlay and feedback state. Requests 0 through 5 set matching IDs; a new request 7 sets ID 6."
         }
       },
       {
-        "symbol": "L:kc.b(I)V#16",
+        "symbol": "F:pa.field_g:I",
         "before": null,
         "after": {
-          "symbol": "L:kc.b(I)V#16",
-          "originalName": "stackIn_112_0",
-          "to": "sessionForRasterWrite",
-          "evidence": "Carries the gameplay session receiving the final raster-dirty decision."
+          "symbol": "F:pa.field_g:I",
+          "originalName": "field_g",
+          "to": "avatarFeedbackHoldTicks",
+          "evidence": "A positive hold defers ordinary feedback changes; modes 3, 4, 5 and a new mode-7 request set 110. Native request matrix verifies held and expired cases."
         }
       },
       {
-        "symbol": "L:kc.b(I)V#17",
+        "symbol": "F:rb.field_b:I",
         "before": null,
         "after": {
-          "symbol": "L:kc.b(I)V#17",
-          "originalName": "stackIn_112_1",
-          "to": "rasterDirtyDecision",
-          "evidence": "Integer Boolean carrier for old boardRasterDirty OR boardContactStateDirty OR avatarShockPending; native reconciliation probes independently check the first two gates."
+          "symbol": "F:rb.field_b:I",
+          "originalName": "field_b",
+          "to": "kindFourRemovalCount",
+          "evidence": "Counts original kind-four entities routed to kind seven in the transient list, reset by le session setup; at five it requests the existing unlock action. Native routing checks counters, with unlock delivery suppressed by pre-existing action bits."
         }
       },
       {
-        "symbol": "L:kc.b(I)V#19",
+        "symbol": "F:uf.field_b:I",
         "before": null,
         "after": {
-          "symbol": "L:kc.b(I)V#19",
-          "originalName": "stackOut_14_0",
-          "to": "visitedByEntityIdValue",
-          "evidence": "Boolean transport of the current entity visited-array entry into the retained source branch carriers."
+          "symbol": "F:uf.field_b:I",
+          "originalName": "field_b",
+          "to": "avatarFeedbackFrameIndex",
+          "evidence": "Indexes fc.field_b avatar frames. Accepted ordinary feedback keeps its Java remainder modulo six, then adds the selected frame base; native matrix covers negative, low and high frame values."
         }
       },
       {
-        "symbol": "L:kc.b(I)V#2",
+        "symbol": "F:wa.field_a:I",
         "before": null,
         "after": {
-          "symbol": "L:kc.b(I)V#2",
-          "originalName": "stackIn_20_0",
-          "to": "poppedEntityOrSearchStart",
-          "evidence": "Carries a pending connectivity pop, then a first entity from visitedNonAvatarEntities while searching for an existing neighbor."
+          "symbol": "F:wa.field_a:I",
+          "originalName": "field_a",
+          "to": "avatarShockEffectTicks",
+          "evidence": "Request 3 starts a 50-tick effect even during a feedback hold. qa decrements this counter and ij draws the vg.field_f effect while it is positive."
         }
       },
       {
-        "symbol": "L:kc.b(I)V#20",
+        "symbol": "F:wd.field_a:I",
         "before": null,
         "after": {
-          "symbol": "L:kc.b(I)V#20",
-          "originalName": "stackOut_21_0",
-          "to": "directAvatarContactValue",
-          "evidence": "Boolean transport of the popped entity touchesAvatar flag; a true root stops the normal component search."
+          "symbol": "F:wd.field_a:I",
+          "originalName": "field_a",
+          "to": "contactProbeOffsetX",
+          "evidence": "Horizontal offset of the 460-wide contact raster: (640 - raster canvas width)/2. Entity trail erasure and contact drawing subtract it; native attachment fixtures use the normal 90 offset."
         }
       },
       {
-        "symbol": "L:kc.b(I)V#22",
-        "before": {
-          "symbol": "L:kc.b(I)V#22",
-          "originalName": "var1_int",
-          "to": "entityIndexThenGroupCount",
-          "evidence": "kc.java first uses var1_int to clear pk.field_o entries across the 1000 entity slots, then resets it and counts processed entity groups."
-        },
-        "after": {
-          "symbol": "L:kc.b(I)V#22",
-          "originalName": "var1_int",
-          "to": "visitedResetIndexThenKindFourCount",
-          "evidence": "First clears visited-array entries 0 through 999. Later resets to zero and counts transient/shock-routed kind-four entities changed to kind seven; it does not count connected components."
-        }
-      },
-      {
-        "symbol": "L:kc.b(I)V#24",
-        "before": {
-          "symbol": "L:kc.b(I)V#24",
-          "originalName": "var2_ref_ja",
-          "to": "candidateEntity",
-          "evidence": "kc.java traverses a.field_d for this ja entity, rotates it against el.field_o.field_J, detaches related children and routes it to a processing list."
-        },
-        "after": {
-          "symbol": "L:kc.b(I)V#24",
-          "originalName": "var2_ref_ja",
-          "to": "routedAttachedEntity",
-          "evidence": "Walks the attached deque to process queue-marker or shock routing, including transfer into moving entities after component detachment. Native component fixtures verify this moving route."
-        }
-      },
-      {
-        "symbol": "L:kc.b(I)V#25",
+        "symbol": "F:wd.field_d:I",
         "before": null,
         "after": {
-          "symbol": "L:kc.b(I)V#25",
-          "originalName": "var2",
-          "to": "methodGuardResidue",
-          "evidence": "Retains the unused integer division derived from the method guard before the transient queue pass; normal caller supplies -90."
+          "symbol": "F:wd.field_d:I",
+          "originalName": "field_d",
+          "to": "contactProbeOffsetY",
+          "evidence": "Vertical offset of the 460-high contact raster: (480 - raster canvas height)/2. Entity trail erasure and contact drawing subtract it; native attachment fixtures use the normal 10 offset."
         }
       },
       {
-        "symbol": "L:kc.b(I)V#27",
+        "symbol": "L:jc.a(IZ)V#0",
         "before": null,
         "after": {
-          "symbol": "L:kc.b(I)V#27",
-          "originalName": "var3_int",
-          "to": "transientNeighborIndex",
-          "evidence": "Walks related entities while clearing a transient/shock entity reciprocal contacts and refreshing neighbor ownership-mask pixels. This routing branch is source-backed; graph fixtures leave shock/transient requests off."
-        }
-      },
-      {
-        "symbol": "L:kc.b(I)V#28",
-        "before": {
-          "symbol": "L:kc.b(I)V#28",
+          "symbol": "L:jc.a(IZ)V#0",
           "originalName": "var3",
-          "to": "queuedEntity",
-          "evidence": "kc.java iterates bh.field_c through ja elements, removes each from that list and may reinsert it into ra.field_a."
-        },
-        "after": {
-          "symbol": "L:kc.b(I)V#28",
-          "originalName": "var3",
-          "to": "categoryResetThenTransientEntity",
-          "evidence": "Aliases the routed entity while resetting its same-category count, then walks the transient queue to return queued objects to the available pool. These routing roles are source-backed."
+          "to": "unusedClientControlSnapshot",
+          "evidence": "Retained read of Geoblox.field_C at entry; this local is unused by the recovered feedback body."
         }
       },
       {
-        "symbol": "L:kc.b(I)V#29",
+        "symbol": "L:kc.b(I)V#10",
         "before": null,
         "after": {
-          "symbol": "L:kc.b(I)V#29",
-          "originalName": "var4_int",
-          "to": "componentCanDetach",
-          "evidence": "Starts true for each unvisited attached root and becomes false when the search reaches direct avatar contact; independent native graph/anchor oracles verify component retention."
+          "symbol": "L:kc.b(I)V#10",
+          "originalName": "stackIn_88_2",
+          "to": "popupGuardInput",
+          "evidence": "Carries the normal popup-helper guard 117 into the merged point-selection branch."
         }
       },
       {
-        "symbol": "L:kc.b(I)V#3",
+        "symbol": "L:kc.b(I)V#11",
         "before": null,
         "after": {
-          "symbol": "L:kc.b(I)V#3",
-          "originalName": "stackIn_22_0",
-          "to": "poppedEntityTouchesAvatar",
-          "evidence": "Boolean carrier of direct avatar contact for the popped connectivity entity."
+          "symbol": "L:kc.b(I)V#11",
+          "originalName": "stackIn_90_0",
+          "to": "popupOriginY",
+          "evidence": "Final Y argument to spawnPointsPopup after the kind-three/kind-four branch merges."
         }
       },
       {
-        "symbol": "L:kc.b(I)V#31",
+        "symbol": "L:kc.b(I)V#12",
         "before": null,
         "after": {
-          "symbol": "L:kc.b(I)V#31",
-          "originalName": "var4",
-          "to": "entityForTransientVariantReset",
-          "evidence": "Alias used only to zero the transient/shock entity same-variant count after removing its related contacts; source-backed transient branch."
+          "symbol": "L:kc.b(I)V#12",
+          "originalName": "stackIn_90_1",
+          "to": "popupOriginX",
+          "evidence": "Final X argument to spawnPointsPopup after the kind-three/kind-four branch merges."
         }
       },
       {
-        "symbol": "L:kc.b(I)V#32",
-        "before": {
-          "symbol": "L:kc.b(I)V#32",
-          "originalName": "var5_ref_ja",
-          "to": "groupEntity",
-          "evidence": "kc.java obtains this ja from the temporary var13 list, iterates/removes its children and resets its child counters before continuing the outer entity-group walk."
-        },
-        "after": {
-          "symbol": "L:kc.b(I)V#32",
-          "originalName": "var5_ref_ja",
-          "to": "connectivityAliasThenDetachingEntity",
-          "evidence": "Initially aliases the popped connectivity entity; later receives entities removed from visitedNonAvatarEntities for reciprocal unlinking and count resets."
-        }
-      },
-      {
-        "symbol": "L:kc.b(I)V#34",
-        "before": {
-          "symbol": "L:kc.b(I)V#34",
-          "originalName": "var6_int",
-          "to": "childEntityIndex",
-          "evidence": "kc.java initializes var6_int to zero and increments it while iterating var12.field_n up to var12.field_L."
-        },
-        "after": {
-          "symbol": "L:kc.b(I)V#34",
-          "originalName": "var6_int",
-          "to": "componentNeighborIndex",
-          "evidence": "Walks related entities during connectivity discovery and reciprocal removal during group detachment. The contact graph is undirected, so this is a neighbor index rather than a child relationship."
-        }
-      },
-      {
-        "symbol": "L:kc.b(I)V#35",
+        "symbol": "L:kc.b(I)V#13",
         "before": null,
         "after": {
-          "symbol": "L:kc.b(I)V#35",
-          "originalName": "var6",
-          "to": "entityForComponentCategoryReset",
-          "evidence": "Alias of the detaching visited entity used to reset its same-category neighbor count."
+          "symbol": "L:kc.b(I)V#13",
+          "originalName": "stackIn_90_2",
+          "to": "popupMethodGuard",
+          "evidence": "Final normal guard 117 supplied to spawnPointsPopup, preserving its retained alternate branch."
         }
       },
       {
-        "symbol": "L:kc.b(I)V#36",
+        "symbol": "L:kc.b(I)V#14",
         "before": null,
         "after": {
-          "symbol": "L:kc.b(I)V#36",
-          "originalName": "var7",
-          "to": "neighborThenCountResetEntity",
-          "evidence": "Initially the candidate neighbor for worklist duplicate checks; later aliases a detaching entity while resetting variant or category counts in different phases."
+          "symbol": "L:kc.b(I)V#14",
+          "originalName": "stackIn_90_3",
+          "to": "popupPoints",
+          "evidence": "Selects 100 for original kind three or four and 10 for the other kinds when an avatar contact is shocked; native routing oracles verify amount, multiplier and coordinates."
         }
       },
       {
-        "symbol": "L:kc.b(I)V#38",
-        "before": {
-          "symbol": "L:kc.b(I)V#38",
-          "originalName": "var8",
-          "to": "relatedEntityCandidate",
-          "evidence": "kc.java obtains var8 from the temporary ja collection and compares it by identity against each parent child before list removal."
-        },
-        "after": {
-          "symbol": "L:kc.b(I)V#38",
-          "originalName": "var8",
-          "to": "componentSearchThenVariantResetEntity",
-          "evidence": "Scans both visited and pending secondary deques for the current neighbor; later aliases the routed moving entity for same-variant count reset."
-        }
-      },
-      {
-        "symbol": "L:kc.b(I)V#39",
+        "symbol": "L:kc.b(I)V#8",
         "before": null,
         "after": {
-          "symbol": "L:kc.b(I)V#39",
-          "originalName": "var9",
-          "to": "clientControlSnapshot",
-          "evidence": "Snapshot of Geoblox.field_C controlling the retained alternate branches; native traces compare values zero and one, with independent component oracles for zero."
+          "symbol": "L:kc.b(I)V#8",
+          "originalName": "stackIn_88_0",
+          "to": "popupOriginYInput",
+          "evidence": "Integer narrowing of the shocked entity Y position before selecting popup points; native routing checks original coordinates independently."
         }
       },
       {
-        "symbol": "L:kc.b(I)V#4",
+        "symbol": "L:kc.b(I)V#9",
         "before": null,
         "after": {
-          "symbol": "L:kc.b(I)V#4",
-          "originalName": "stackIn_44_0",
-          "to": "avatarContactThenDetachDecision",
-          "evidence": "Initially carries direct avatar contact as an integer Boolean; the shared exit replaces it with componentCanDetach on the normal path."
+          "symbol": "L:kc.b(I)V#9",
+          "originalName": "stackIn_88_1",
+          "to": "popupOriginXInput",
+          "evidence": "Integer narrowing of the shocked entity X position before selecting popup points; native routing checks original coordinates independently."
         }
       },
       {
-        "symbol": "L:kc.b(I)V#40",
-        "before": {
-          "symbol": "L:kc.b(I)V#40",
-          "originalName": "var10",
-          "to": "entityCandidate",
-          "evidence": "kc.java assigns the ja returned by var11.a(true), tests its category slot and field_t flag, and processes it in the nested-group pass."
-        },
-        "after": {
-          "symbol": "L:kc.b(I)V#40",
-          "originalName": "var10",
-          "to": "currentConnectivityEntity",
-          "evidence": "Entity popped from pendingConnectivityEntities, used to mark its ID visited and read its neighbor array; does not designate a proposed parent."
-        }
-      },
-      {
-        "symbol": "L:kc.b(I)V#41",
+        "symbol": "M:jc.a(IZ)V",
         "before": null,
         "after": {
-          "symbol": "L:kc.b(I)V#41",
-          "originalName": "var11",
-          "to": "pendingConnectivityEntities",
-          "evidence": "Secondary deque of entities awaiting connectivity traversal, checked for duplicate neighbor membership before insertion."
+          "symbol": "M:jc.a(IZ)V",
+          "originalName": "a",
+          "to": "requestAvatarFeedback",
+          "evidence": "Requests an avatar feedback mode while retaining hold, frame, sprite-guard and sound behavior. Native matrix verifies 3024 combinations with table-based state and actual PCM sample identity/count oracles."
         }
       },
       {
-        "symbol": "L:kc.b(I)V#42",
-        "before": {
-          "symbol": "L:kc.b(I)V#42",
-          "originalName": "var12",
-          "to": "parentEntity",
-          "evidence": "kc.java traverses the children of var12.field_L, removes its related entities and resets its category counts before relinking it."
-        },
-        "after": {
-          "symbol": "L:kc.b(I)V#42",
-          "originalName": "var12",
-          "to": "currentConnectivityEntityAlias",
-          "evidence": "Alias of currentConnectivityEntity used to inspect avatar contact and related count, then inserted into visitedNonAvatarEntities. No parent/child graph relationship is implied."
-        }
-      },
-      {
-        "symbol": "L:kc.b(I)V#43",
+        "symbol": "P:jc.a(IZ)V#0",
         "before": null,
         "after": {
-          "symbol": "L:kc.b(I)V#43",
-          "originalName": "var13",
-          "to": "visitedNonAvatarEntities",
-          "evidence": "Secondary deque collecting popped non-avatar entities. An avatar root stops the traversal before insertion, so this collection can be only a prefix of an anchored component."
-        }
-      },
-      {
-        "symbol": "L:kc.b(I)V#5",
-        "before": null,
-        "after": {
-          "symbol": "L:kc.b(I)V#5",
-          "originalName": "stackIn_51_0",
-          "to": "comparedThenUnlinkTarget",
-          "evidence": "Carries the entity compared during worklist duplicate checks; reused as the neighbor whose reciprocal contact is removed during detachment."
-        }
-      },
-      {
-        "symbol": "L:kc.b(I)V#6",
-        "before": null,
-        "after": {
-          "symbol": "L:kc.b(I)V#6",
-          "originalName": "stackIn_51_1",
-          "to": "neighborThenUnlinkArgument",
-          "evidence": "Carries the neighbor identity for duplicate checks; reused as the detaching entity passed to removeRelatedEntity."
-        }
-      },
-      {
-        "symbol": "L:kc.b(I)V#7",
-        "before": null,
-        "after": {
-          "symbol": "L:kc.b(I)V#7",
-          "originalName": "stackIn_56_0",
-          "to": "visitedFlagThenResetIndex",
-          "evidence": "Initially carries the visited flag as an integer; reset to zero for neighbor cleanup or the visited-array reset index."
-        }
-      },
-      {
-        "symbol": "P:kc.b(I)V#0",
-        "before": null,
-        "after": {
-          "symbol": "P:kc.b(I)V#0",
+          "symbol": "P:jc.a(IZ)V#0",
           "originalName": "param0",
-          "to": "methodGuard",
-          "evidence": "Retained guard used in the arithmetic residue and exception context. The normal GameplaySession caller passes -90; native graph probe uses that same value."
+          "to": "feedbackRequestId",
+          "evidence": "Requests 0 through 5, or request 7 for mode six; native matrix includes -1 and 6 no-op requests."
+        }
+      },
+      {
+        "symbol": "P:jc.a(IZ)V#1",
+        "before": null,
+        "after": {
+          "symbol": "P:jc.a(IZ)V#1",
+          "originalName": "param1",
+          "to": "clearSpriteGuard",
+          "evidence": "Clears jc.field_a only when the feedback hold is not positive; normal gameplay passes false. Native matrix checks both values and an actual sprite identity."
         }
       }
     ],
@@ -7009,12 +6979,24 @@
         "sha256": "73730baf4bec64e8d1d0380bebfd0e944bbba163f87819453166b38db1d67817"
       },
       {
+        "file": "ih.java",
+        "sha256": "2593deffa871df4a77b45e67239108807c74556e21f86574096bc86a11c72fdc"
+      },
+      {
+        "file": "ij.java",
+        "sha256": "93772ce3162a4251d228478c6e82deaa09334aab1d9502ab72072aa7ec53b243"
+      },
+      {
         "file": "ik.java",
         "sha256": "01701988f4028781e1919a8afc711b6bb30c9a2f82449fae2aec76ab9875d8d2"
       },
       {
         "file": "ja.java",
         "sha256": "963465f2c0be6200fb41f2c01bf08c33ee020986cbaf15ddde6ec081324545e2"
+      },
+      {
+        "file": "jc.java",
+        "sha256": "7a924a8135544204091692bc0f3758b8859fe62aca15c0d7408e2a6594d6853b"
       },
       {
         "file": "jg.java",
@@ -7041,6 +7023,10 @@
         "sha256": "6a2ab46b92a7db587c9baa7e1770a8e921e20580d1d1d1949169a9512a61adde"
       },
       {
+        "file": "qa.java",
+        "sha256": "5901960713804b9fc0799c66e40bacdd7370a3a44f4cb43856ce3bffc45fc29e"
+      },
+      {
         "file": "qb.java",
         "sha256": "14f5e289c3b6b857a3a2259553ac9bfb539645f7bb1a14349af2f97e3dbe6615"
       },
@@ -7063,6 +7049,10 @@
       {
         "file": "rh.java",
         "sha256": "145ea45adf9bb63403fe149ced81f949af6490abc4b71d619db144f41680fdb7"
+      },
+      {
+        "file": "ri.java",
+        "sha256": "d02dbb0752b0e04a34daf65cf4bacb0f9c851351774b2e34a10f986b4137e102"
       },
       {
         "file": "td.java",
@@ -7117,9 +7107,9 @@
       },
       {
         "file": "tests/test-geoblox-gameplay.mjs",
-        "sha256": "15febb0c5841f891e27f099faaef8d40c3467c8105dd3782859da5fddab941e7",
-        "nativeOutputSha256": "e248b99cbb3c6a1e71d1873abc8cc1c2f7bb5c38ba560e0f14fe47f237c040db",
-        "scenarios": 18931
+        "sha256": "184b7a4e19fc389a1db5f63a65704d93dabef4fce0a5e88b0032fecfd0394eb2",
+        "nativeOutputSha256": "2ec59542cf3499de3d410ce1da73111ccb743d77fde48ca8c6bf316caed9a627",
+        "scenarios": 23035
       }
     ],
     "textResources": {
@@ -9291,7 +9281,7 @@
       "sourceDeclarations": 21185,
       "bindingsCompared": 154117,
       "overrideRelationships": 388,
-      "identifierEdits": 17422,
+      "identifierEdits": 17916,
       "dictionaryRestorationFiles": 303,
       "wholeGameEquivalenceVerified": false,
       "nativeMatchingScenarios": 708,
@@ -9302,7 +9292,7 @@
         "Attachment and shock producers are supported by source inspection; native scoring fixtures control their gates directly.",
         "Text-writer PCM side effects for guard <=23 are not tested.",
         "Contact/conversion probes use one-pixel sprites and controlled palettes for kinds 0, 1 and 2. Conversion graphs control adjacency and initial counters; mask collision producers, real asset loading and full gameplay remain unverified.",
-        "Reconciliation fixtures use real ordinary-entity contact linking and blank rasters with a constructor-free session holder. Moving-to-attached rendering, shock/transient routing and pool returns remain source-backed, without native coverage in this probe.",
+        "Reconciliation/routing fixtures use real minimal sprites, controlled display/audio buffers and constructor-free holders. Routing checks use isolated entities or one controlled reciprocal edge. Real asset loading, sound-device playback and new unlock delivery remain unverified.",
         "Whole-game equivalence and FPS, heap and phone targets are not established."
       ],
       "checks": {
@@ -9313,7 +9303,7 @@
         "fullReproductionCheck": true,
         "dictionaryReversalByteExact": true
       },
-      "nativeGameplayScenarios": 18931,
+      "nativeGameplayScenarios": 23035,
       "nativeContactScenarios": 144,
       "nativeNeighborRemovalScenarios": 32,
       "nativeForcedNeighborhoodDetachScenarios": 2,
@@ -9321,7 +9311,10 @@
       "nativeConversionScenarios": 2048,
       "nativeConversionFailureScenarios": 472,
       "nativeReconciliationScenarios": 16384,
-      "nativeReconciliationOracleScenarios": 8192
+      "nativeReconciliationOracleScenarios": 8192,
+      "nativeAvatarFeedbackScenarios": 3024,
+      "nativeEntityRoutingScenarios": 1080,
+      "nativeEntityRoutingOracleScenarios": 540
     }
   }
 }
