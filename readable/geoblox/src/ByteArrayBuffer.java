@@ -246,7 +246,7 @@ class ByteArrayBuffer extends IntrusiveNode {
                 throw new IllegalArgumentException("");
             }
             textForEncoding = (CharSequence) ((Object) text);
-            this.position = this.position + hi.a(textForEncoding, this.bytes, characterStart, text.length(), this.position, 98);
+            this.position = this.position + hi.encodeTextSlice(textForEncoding, this.bytes, characterStart, text.length(), this.position, 98);
             terminatorByteIndex = this.position;
             this.position = this.position + 1;
             this.bytes[terminatorByteIndex] = (byte) 0;
@@ -379,135 +379,135 @@ class ByteArrayBuffer extends IntrusiveNode {
         return computedCrc32;
     }
 
-    final static byte a(char param0, boolean param1) {
-        int var2;
+    final static byte encodeTextCharacter(char character, boolean returnEncodedByte) {
+        int encodedByte;
         L0: {
           L1: {
-            if (0 < param0) {
-              if (param0 < 128) {
+            if (0 < character) {
+              if (character < 128) {
                 break L1;
               }
             }
-            if (param0 >= 160) {
-              if (255 >= param0) {
+            if (character >= 160) {
+              if (255 >= character) {
                 break L1;
               }
             }
-            if (param0 == 8364) {
-              var2 = -128;
+            if (character == 8364) {
+              encodedByte = -128;
               break L0;
             }
-            if (param0 == 8218) {
-              var2 = -126;
+            if (character == 8218) {
+              encodedByte = -126;
               break L0;
             }
-            if (402 == param0) {
-              var2 = -125;
+            if (402 == character) {
+              encodedByte = -125;
               break L0;
             }
-            if (param0 == 8222) {
-              var2 = -124;
+            if (character == 8222) {
+              encodedByte = -124;
               break L0;
             }
-            if (param0 == 8230) {
-              var2 = -123;
+            if (character == 8230) {
+              encodedByte = -123;
               break L0;
             }
-            if (8224 == param0) {
-              var2 = -122;
+            if (8224 == character) {
+              encodedByte = -122;
               break L0;
             }
-            if (8225 == param0) {
-              var2 = -121;
+            if (8225 == character) {
+              encodedByte = -121;
               break L0;
             }
-            if (param0 == 710) {
-              var2 = -120;
+            if (character == 710) {
+              encodedByte = -120;
               break L0;
             }
-            if (8240 == param0) {
-              var2 = -119;
+            if (8240 == character) {
+              encodedByte = -119;
               break L0;
             }
-            if (param0 == 352) {
-              var2 = -118;
+            if (character == 352) {
+              encodedByte = -118;
               break L0;
             }
-            if (param0 == 8249) {
-              var2 = -117;
+            if (character == 8249) {
+              encodedByte = -117;
               break L0;
             }
-            if (param0 == 338) {
-              var2 = -116;
+            if (character == 338) {
+              encodedByte = -116;
               break L0;
             }
-            if (param0 == 381) {
-              var2 = -114;
+            if (character == 381) {
+              encodedByte = -114;
               break L0;
             }
-            if (param0 == 8216) {
-              var2 = -111;
+            if (character == 8216) {
+              encodedByte = -111;
               break L0;
             }
-            if (8217 == param0) {
-              var2 = -110;
+            if (8217 == character) {
+              encodedByte = -110;
               break L0;
             }
-            if (param0 == 8220) {
-              var2 = -109;
+            if (character == 8220) {
+              encodedByte = -109;
               break L0;
             }
-            if (param0 == 8221) {
-              var2 = -108;
+            if (character == 8221) {
+              encodedByte = -108;
               break L0;
             }
-            if (param0 == 8226) {
-              var2 = -107;
+            if (character == 8226) {
+              encodedByte = -107;
               break L0;
             }
-            if (param0 == 8211) {
-              var2 = -106;
+            if (character == 8211) {
+              encodedByte = -106;
               break L0;
             }
-            if (param0 == 8212) {
-              var2 = -105;
+            if (character == 8212) {
+              encodedByte = -105;
               break L0;
             }
-            if (param0 == 732) {
-              var2 = -104;
+            if (character == 732) {
+              encodedByte = -104;
               break L0;
             }
-            if (param0 == 8482) {
-              var2 = -103;
+            if (character == 8482) {
+              encodedByte = -103;
               break L0;
             }
-            if (param0 == 353) {
-              var2 = -102;
+            if (character == 353) {
+              encodedByte = -102;
               break L0;
             }
-            if (param0 == 8250) {
-              var2 = -101;
+            if (character == 8250) {
+              encodedByte = -101;
               break L0;
             }
-            if (param0 == 339) {
-              var2 = -100;
+            if (character == 339) {
+              encodedByte = -100;
               break L0;
             }
-            if (param0 == 382) {
-              var2 = -98;
+            if (character == 382) {
+              encodedByte = -98;
               break L0;
             }
-            if (param0 != 376) {
-              var2 = 63;
+            if (character != 376) {
+              encodedByte = 63;
               break L0;
             }
-            var2 = -97;
+            encodedByte = -97;
             break L0;
           }
-          var2 = (byte)param0;
+          encodedByte = (byte)character;
         }
-        if (param1) {
-          return (byte) var2;
+        if (returnEncodedByte) {
+          return (byte) encodedByte;
         }
         return (byte) 50;
     }
@@ -812,7 +812,7 @@ class ByteArrayBuffer extends IntrusiveNode {
             this.position = this.position + 1;
             this.bytes[prefixByteIndex] = (byte) 0;
             textForEncoding = (CharSequence) ((Object) text);
-            this.position = this.position + hi.a(textForEncoding, this.bytes, 0, text.length(), this.position, 98);
+            this.position = this.position + hi.encodeTextSlice(textForEncoding, this.bytes, 0, text.length(), this.position, 98);
             terminatorByteIndex = this.position;
             this.position = this.position + 1;
             this.bytes[terminatorByteIndex] = (byte) 0;

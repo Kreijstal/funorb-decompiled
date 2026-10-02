@@ -122,7 +122,7 @@ final class rh {
           }
           param1 = param1.toLowerCase();
           var4 = (CharSequence) ((Object) param1);
-          var3_int = this.field_c.field_n.a(true, ab.a(94, var4));
+          var3_int = this.field_c.field_n.a(true, ab.hashEncodedText(94, var4));
           if (var3_int >= 0) {
             return true;
           }
@@ -202,7 +202,7 @@ final class rh {
           }
           param0 = param0.toLowerCase();
           var5 = (CharSequence) ((Object) param0);
-          var4_int = this.field_c.field_f[param2].a(true, ab.a(99, var5));
+          var4_int = this.field_c.field_f[param2].a(true, ab.hashEncodedText(99, var5));
           if (this.b(var4_int, -1, param2)) {
             stackIn_10_0 = var4_int;
             return stackIn_10_0;
@@ -256,7 +256,7 @@ final class rh {
           }
           param1 = param1.toLowerCase();
           var4 = (CharSequence) ((Object) param1);
-          var3_int = this.field_c.field_n.a(true, ab.a(84, var4));
+          var3_int = this.field_c.field_n.a(true, ab.hashEncodedText(84, var4));
           stackIn_4_0 = this.b((byte) 85, var3_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -703,7 +703,7 @@ final class rh {
           }
           param1 = param1.toLowerCase();
           var4 = (CharSequence) ((Object) param1);
-          var3_int = this.field_c.field_n.a(true, ab.a(124, var4));
+          var3_int = this.field_c.field_n.a(true, ab.hashEncodedText(124, var4));
           if (!this.b(var3_int, 3)) {
             stackIn_7_0 = -1;
             return stackIn_7_0;
@@ -745,7 +745,7 @@ final class rh {
             createUsernameUnavailableText = (String) null;
           }
           var4 = (CharSequence) ((Object) param0);
-          var3_int = this.field_c.field_n.a(true, ab.a(69, var4));
+          var3_int = this.field_c.field_n.a(true, ab.hashEncodedText(69, var4));
           stackIn_6_0 = this.a((byte) 102, var3_int);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -811,12 +811,12 @@ final class rh {
           param2 = param2.toLowerCase();
           param1 = param1.toLowerCase();
           var6 = (CharSequence) ((Object) param2);
-          var4_int = this.field_c.field_n.a(true, ab.a(80, var6));
+          var4_int = this.field_c.field_n.a(true, ab.hashEncodedText(80, var6));
           if (!this.b(var4_int, 3)) {
             return false;
           }
           var7 = (CharSequence) ((Object) param1);
-          var5 = this.field_c.field_f[var4_int].a(true, ab.a(93, var7));
+          var5 = this.field_c.field_f[var4_int].a(true, ab.hashEncodedText(93, var7));
           if (param0 == 113) {
             stackIn_12_0 = this.a((byte) 37, var4_int, var5);
             return stackIn_12_0;
@@ -879,12 +879,12 @@ final class rh {
           param2 = param2.toLowerCase();
           param1 = param1.toLowerCase();
           var6 = (CharSequence) ((Object) param2);
-          var4_int = this.field_c.field_n.a(true, ab.a(54, var6));
+          var4_int = this.field_c.field_n.a(true, ab.hashEncodedText(54, var6));
           if (!this.b(var4_int, 3)) {
             return null;
           }
           var7 = (CharSequence) ((Object) param1);
-          var5 = this.field_c.field_f[var4_int].a(true, ab.a(43, var7));
+          var5 = this.field_c.field_f[var4_int].a(true, ab.hashEncodedText(43, var7));
           stackIn_7_0 = this.a(var4_int, -28153, var5);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

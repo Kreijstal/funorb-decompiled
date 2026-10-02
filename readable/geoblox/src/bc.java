@@ -26,12 +26,12 @@ final class bc {
         char[] writeBuffer = null;
         char[] sharedBuffer = null;
         char[] decodedBuffer = null;
-        String stackIn_14_0 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        String stackIn_18_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var4_ref = null;
+        String decodedTextBeforeReturn = null;
+        RuntimeException decodingFailureBeforeDescription = null;
+        StringBuilder decodingMessagePrefix = null;
+        String textBytesDescription = null;
+        RuntimeException caughtDecodingFailure = null;
+        RuntimeException decodingFailureForContext = null;
         try {
           decodedBuffer = new char[length];
           sharedBuffer = decodedBuffer;
@@ -58,19 +58,19 @@ final class bc {
               writeBuffer[outputIndex] = (char)characterCode;
             }
           }
-          stackIn_14_0 = new String(decodedBuffer, 0, decodedLength);
-          return stackIn_14_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4_ref = decompiledCaughtException;
-          stackIn_17_0 = (RuntimeException) (var4_ref);
-          stackIn_17_1 = new StringBuilder().append("bc.B(").append(decodeGuard).append(',');
+          decodedTextBeforeReturn = new String(decodedBuffer, 0, decodedLength);
+          return decodedTextBeforeReturn;
+        } catch (java.lang.RuntimeException decodingFailure) {
+          caughtDecodingFailure = decodingFailure;
+          decodingFailureForContext = caughtDecodingFailure;
+          decodingFailureBeforeDescription = (RuntimeException) (decodingFailureForContext);
+          decodingMessagePrefix = new StringBuilder().append("bc.B(").append(decodeGuard).append(',');
           if (textBytes == null) {
-            stackIn_18_2 = "null";
+            textBytesDescription = "null";
           } else {
-            stackIn_18_2 = "{...}";
+            textBytesDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(offset).append(',').append(length).append(')').toString());
+          throw t.a((Throwable) ((Object) decodingFailureBeforeDescription), ((StringBuilder) (Object) decodingMessagePrefix).append(textBytesDescription).append(',').append(offset).append(',').append(length).append(')').toString());
         }
     }
 

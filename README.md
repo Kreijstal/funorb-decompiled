@@ -19,21 +19,24 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and retain all 138,558 remaining bindings
 and 388 override relationships.
 
-The current naming pass adds 136 guarded identities for the remaining buffer
-crypto APIs, `WhirlpoolHash`, its shared tables and five bitwise operator
-helpers. Every buffer and hash instance field/API/parameter/local now has a
-name. XTEA cycles, signed `BigInteger` replacement, bit-oriented hash input,
-padding, table rounds and digest output expose the original state and ordering.
+The current naming pass adds 68 guarded identities for text-byte encoding,
+signed encoded-byte archive-name hashing and decoder return/failure locals.
+Character, slice and whole-text encoders expose their mapping, fallback and
+guards. Font consumers use unsigned glyph indices; name hashing retains signed
+byte contributions. Partial writes and diagnostic scopes remain unchanged.
 
-The 4,729 rules apply 41,043 edits. All 303 raw/readable sources compile,
-preserving 138,558 bindings and 388 overrides. All 4,593 previous complete
-rules and raw source/decompiler pins are unchanged. Source/specification,
-binding and byte-exact reversal checks support the names. Masks, overflow,
-success-only cursor restoration, aliases, partial output, guards and literal
-diagnostics remain. Existing native sprite fixtures retain their operator-
-consumer scope without new crypto/hash execution coverage. Unknown static
-helpers, full assets/gameplay and device performance remain unfinished or
-unverified. One manifest holds current evidence, with Git for history.
+The 4,797 rules apply 41,532 edits. All 303 raw/readable sources compile,
+preserving 138,558 bindings and 388 overrides. All 4,729 previous complete rules
+and raw source/decompiler pins are unchanged. Binding checks, reproduction and
+byte-exact reversal support the names. Native text fixtures cover decoding,
+slices, guards and nested failures without new encoder/hash execution coverage.
+Compressed text, opaque support helpers, full assets/gameplay and device
+performance remain unfinished or unverified. One manifest holds current
+evidence, with Git for history.
+
+Pass 63 named the remaining buffer crypto APIs, `WhirlpoolHash`, its shared
+tables and five bitwise helpers. Every buffer and hash instance declaration now
+has a name; original cycles, signed payloads, guards and partial effects remain.
 
 Pass 62 named `PacketBuffer` and `PacketByteCipher` instance fields/APIs,
 bit masks, seeded mixing, batch generation and reverse result consumption.

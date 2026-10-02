@@ -185,7 +185,7 @@ final class jf implements dh {
               }
               {
                 var12 = (CharSequence) null;
-                jf.a((CharSequence) null, (byte) 66);
+                jf.encodeTextBytes((CharSequence) null, (byte) 66);
                 return;
               }
             }
@@ -205,168 +205,168 @@ final class jf implements dh {
         }
     }
 
-    final static byte[] a(CharSequence param0, byte param1) {
-        int var4 = 0;
-        byte[] stackIn_69_0 = null;
-        RuntimeException stackIn_72_0 = null;
-        StringBuilder stackIn_72_1 = null;
-        String stackIn_73_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        byte[] var3 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int[] var7 = null;
-        var6 = Geoblox.field_C;
+    final static byte[] encodeTextBytes(CharSequence text, byte methodGuard) {
+        int characterIndex = 0;
+        byte[] encodedBytesBeforeReturn = null;
+        RuntimeException encodingFailureBeforeDescription = null;
+        StringBuilder encodingMessagePrefix = null;
+        String textDescription = null;
+        RuntimeException caughtEncodingFailure = null;
+        int textLength = 0;
+        RuntimeException encodingFailureForContext = null;
+        byte[] encodedBytes = null;
+        int characterCode = 0;
+        int unusedClientGuardSnapshot = 0;
+        int[] unusedNullIntArraySnapshot = null;
+        unusedClientGuardSnapshot = Geoblox.field_C;
         try {
-          if (param1 < 117) {
-            var7 = (int[]) null;
+          if (methodGuard < 117) {
+            unusedNullIntArraySnapshot = (int[]) null;
             jf.a(25, 87, -85, 85, 111, -85, 50, 110, -77, (int[]) null);
           }
-          var2_int = param0.length();
-          var3 = new byte[var2_int];
-          for (var4 = 0; var2_int > var4; var4++) {
+          textLength = text.length();
+          encodedBytes = new byte[textLength];
+          for (characterIndex = 0; textLength > characterIndex; characterIndex++) {
             L2: {
               L3: {
-                var5 = param0.charAt(var4);
-                if (var5 > 0) {
-                  if (var5 < 128) {
+                characterCode = text.charAt(characterIndex);
+                if (characterCode > 0) {
+                  if (characterCode < 128) {
                     break L3;
                   }
                 }
-                if (var5 >= 160) {
-                  if (255 >= var5) {
+                if (characterCode >= 160) {
+                  if (255 >= characterCode) {
                     break L3;
                   }
                 }
-                if (8364 == var5) {
-                  var3[var4] = (byte)-128;
+                if (8364 == characterCode) {
+                  encodedBytes[characterIndex] = (byte)-128;
                   break L2;
                 }
-                if (var5 == 8218) {
-                  var3[var4] = (byte)-126;
+                if (characterCode == 8218) {
+                  encodedBytes[characterIndex] = (byte)-126;
                   break L2;
                 }
-                if (402 == var5) {
-                  var3[var4] = (byte)-125;
+                if (402 == characterCode) {
+                  encodedBytes[characterIndex] = (byte)-125;
                   break L2;
                 }
-                if (8222 == var5) {
-                  var3[var4] = (byte)-124;
+                if (8222 == characterCode) {
+                  encodedBytes[characterIndex] = (byte)-124;
                   break L2;
                 }
-                if (var5 == 8230) {
-                  var3[var4] = (byte)-123;
+                if (characterCode == 8230) {
+                  encodedBytes[characterIndex] = (byte)-123;
                   break L2;
                 }
-                if (var5 == 8224) {
-                  var3[var4] = (byte)-122;
+                if (characterCode == 8224) {
+                  encodedBytes[characterIndex] = (byte)-122;
                   break L2;
                 }
-                if (var5 == 8225) {
-                  var3[var4] = (byte)-121;
+                if (characterCode == 8225) {
+                  encodedBytes[characterIndex] = (byte)-121;
                   break L2;
                 }
-                if (var5 == 710) {
-                  var3[var4] = (byte)-120;
+                if (characterCode == 710) {
+                  encodedBytes[characterIndex] = (byte)-120;
                   break L2;
                 }
-                if (var5 == 8240) {
-                  var3[var4] = (byte)-119;
+                if (characterCode == 8240) {
+                  encodedBytes[characterIndex] = (byte)-119;
                   break L2;
                 }
-                if (352 == var5) {
-                  var3[var4] = (byte)-118;
+                if (352 == characterCode) {
+                  encodedBytes[characterIndex] = (byte)-118;
                   break L2;
                 }
-                if (8249 == var5) {
-                  var3[var4] = (byte)-117;
+                if (8249 == characterCode) {
+                  encodedBytes[characterIndex] = (byte)-117;
                   break L2;
                 }
-                if (338 == var5) {
-                  var3[var4] = (byte)-116;
+                if (338 == characterCode) {
+                  encodedBytes[characterIndex] = (byte)-116;
                   break L2;
                 }
-                if (var5 == 381) {
-                  var3[var4] = (byte)-114;
+                if (characterCode == 381) {
+                  encodedBytes[characterIndex] = (byte)-114;
                   break L2;
                 }
-                if (8216 == var5) {
-                  var3[var4] = (byte)-111;
+                if (8216 == characterCode) {
+                  encodedBytes[characterIndex] = (byte)-111;
                   break L2;
                 }
-                if (8217 == var5) {
-                  var3[var4] = (byte)-110;
+                if (8217 == characterCode) {
+                  encodedBytes[characterIndex] = (byte)-110;
                   break L2;
                 }
-                if (var5 == 8220) {
-                  var3[var4] = (byte)-109;
+                if (characterCode == 8220) {
+                  encodedBytes[characterIndex] = (byte)-109;
                   break L2;
                 }
-                if (var5 == 8221) {
-                  var3[var4] = (byte)-108;
+                if (characterCode == 8221) {
+                  encodedBytes[characterIndex] = (byte)-108;
                   break L2;
                 }
-                if (var5 == 8226) {
-                  var3[var4] = (byte)-107;
+                if (characterCode == 8226) {
+                  encodedBytes[characterIndex] = (byte)-107;
                   break L2;
                 }
-                if (8211 == var5) {
-                  var3[var4] = (byte)-106;
+                if (8211 == characterCode) {
+                  encodedBytes[characterIndex] = (byte)-106;
                   break L2;
                 }
-                if (var5 == 8212) {
-                  var3[var4] = (byte)-105;
+                if (characterCode == 8212) {
+                  encodedBytes[characterIndex] = (byte)-105;
                   break L2;
                 }
-                if (var5 == 732) {
-                  var3[var4] = (byte)-104;
+                if (characterCode == 732) {
+                  encodedBytes[characterIndex] = (byte)-104;
                   break L2;
                 }
-                if (var5 == 8482) {
-                  var3[var4] = (byte)-103;
+                if (characterCode == 8482) {
+                  encodedBytes[characterIndex] = (byte)-103;
                   break L2;
                 }
-                if (var5 == 353) {
-                  var3[var4] = (byte)-102;
+                if (characterCode == 353) {
+                  encodedBytes[characterIndex] = (byte)-102;
                   break L2;
                 }
-                if (var5 == 8250) {
-                  var3[var4] = (byte)-101;
+                if (characterCode == 8250) {
+                  encodedBytes[characterIndex] = (byte)-101;
                   break L2;
                 }
-                if (var5 == 339) {
-                  var3[var4] = (byte)-100;
+                if (characterCode == 339) {
+                  encodedBytes[characterIndex] = (byte)-100;
                   break L2;
                 }
-                if (var5 == 382) {
-                  var3[var4] = (byte)-98;
+                if (characterCode == 382) {
+                  encodedBytes[characterIndex] = (byte)-98;
                   break L2;
                 }
-                if (var5 != 376) {
-                  var3[var4] = (byte)63;
+                if (characterCode != 376) {
+                  encodedBytes[characterIndex] = (byte)63;
                   break L2;
                 }
-                var3[var4] = (byte)-97;
+                encodedBytes[characterIndex] = (byte)-97;
                 break L2;
               }
-              var3[var4] = (byte)var5;
+              encodedBytes[characterIndex] = (byte)characterCode;
             }
           }
-          stackIn_69_0 = (byte[]) (var3);
-          return stackIn_69_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_72_0 = (RuntimeException) (var2);
-          stackIn_72_1 = new StringBuilder().append("jf.C(");
-          if (param0 == null) {
-            stackIn_73_2 = "null";
+          encodedBytesBeforeReturn = (byte[]) (encodedBytes);
+          return encodedBytesBeforeReturn;
+        } catch (java.lang.RuntimeException encodingFailure) {
+          caughtEncodingFailure = encodingFailure;
+          encodingFailureForContext = caughtEncodingFailure;
+          encodingFailureBeforeDescription = (RuntimeException) (encodingFailureForContext);
+          encodingMessagePrefix = new StringBuilder().append("jf.C(");
+          if (text == null) {
+            textDescription = "null";
           } else {
-            stackIn_73_2 = "{...}";
+            textDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) ((Object) encodingFailureBeforeDescription), ((StringBuilder) (Object) encodingMessagePrefix).append(textDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 

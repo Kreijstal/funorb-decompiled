@@ -692,8 +692,8 @@ the array indices, evidence, override families and remaining shared carriers.
 
 ## Remaining limitations
 
-There are 4,729 explicit guarded rules: 40 classes, 616 fields, 435 method
-declarations, 1,335 parameters and 2,303 locals. This is not full deobfuscation.
+There are 4,797 explicit guarded rules: 40 classes, 616 fields, 439 method
+declarations, 1,347 parameters and 2,355 locals. This is not full deobfuscation.
 Unknown flags, guard arguments and opaque shared helpers still need
 investigation. Current names and source identities live in the single manifest;
 previous naming and structural passes remain in Git. The earlier early-exit migration
@@ -1744,4 +1744,37 @@ name. Compilation, binding checks, byte-exact reproduction and reversal support
 these names. Existing native sprite/pixel/transform fixtures retain their prior
 operator-consumer scope without new crypto/hash execution coverage. Real
 archives/server traffic, full gameplay and device performance remain unfinished
+or unverified.
+
+## Text-byte encoding and archive-name hashing (pass 64)
+
+The client uses one byte per UTF-16 code unit. Characters 1..127 and 160..255
+map directly; 27 extended characters map to defined slots in bytes 128..159.
+Unsupported code units, including zero and surrogate halves, become byte 63
+(`?`). `lf.extendedTextCharacters` is the matching decoding table, with five
+undefined slots. There is no surrogate joining or UTF-8 conversion.
+
+| API | Existing behavior |
+| --- | --- |
+| `ByteArrayBuffer.encodeTextCharacter(character, returnEncodedByte)` | Return the mapped signed byte when true; false returns 50 after mapping |
+| `hi.encodeTextSlice(text, destination, characterStart, characterEnd, destinationOffset, methodGuard)` | Compute end-start, then encode sequential charAt calls into the destination; guard other than 98 returns 52 before argument reads |
+| `jf.encodeTextBytes(text, methodGuard)` | Allocate one byte per code unit and map each character; guard below 117 retains a helper call before text.length |
+| `ab.hashEncodedText(methodGuard, text)` | Accumulate wrapping 31*hash plus the signed encoded byte; guard at most 42 retains the recursive null-text call |
+| `bc.decodeTextSlice(decodeGuard, textBytes, offset, length)` | Skip zero bytes; decode extended slots through the shared table, using `?` for undefined entries |
+| `ag.decodeTextBytes(decodeGuard, textBytes)` | Decode the whole array; guard other than 1 clears field_j before inspecting length |
+
+Font lookup masks encoded bytes with 255 to obtain unsigned glyph indices.
+Archive group/file-name lookups use `hashEncodedText` after their existing
+normalization and retain signed byte contributions. Slice encoding does not
+add bounds validation: negative/overflow lengths, per-character reads, aliases,
+partial writes and wrapped failures keep their original order. Whole encoding
+keeps its global guard snapshot outside the catch. Decoding retains allocation
+before guard effects, shared array aliases and the literal bc.B/ag.B contexts.
+
+Every parameter/local in these six APIs now has a guarded name, with every
+previous complete rule unchanged. Compilation, binding checks, reproduction
+and dictionary reversal support this pass. The native text fixture verifies
+all-byte decoding, slice boundaries, guard effects and nested failure contexts;
+it does not newly execute encoding or name hashing. Compressed text, actual
+font/archive assets, complete gameplay and device performance remain unfinished
 or unverified.

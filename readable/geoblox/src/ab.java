@@ -128,40 +128,40 @@ final class ab {
         return sprite;
     }
 
-    final static int a(int param0, CharSequence param1) {
-        int var4 = 0;
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        CharSequence var5 = null;
-        int stackIn_6_0 = 0;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static int hashEncodedText(int methodGuard, CharSequence text) {
+        int characterIndex = 0;
+        int textLength = 0;
+        RuntimeException hashFailureForContext = null;
+        int hash = 0;
+        CharSequence unusedNullTextSnapshot = null;
+        int hashBeforeReturn = 0;
+        RuntimeException hashFailureBeforeDescription = null;
+        StringBuilder hashMessagePrefix = null;
+        String textDescription = null;
+        RuntimeException caughtHashFailure = null;
         try {
-          var2_int = param1.length();
-          var3 = 0;
-          if (param0 <= 42) {
-            var5 = (CharSequence) null;
-            ab.a(-120, (CharSequence) null);
+          textLength = text.length();
+          hash = 0;
+          if (methodGuard <= 42) {
+            unusedNullTextSnapshot = (CharSequence) null;
+            ab.hashEncodedText(-120, (CharSequence) null);
           }
-          for (var4 = 0; var4 < var2_int; var4++) {
-            var3 = -var3 + (var3 << 5) + ByteArrayBuffer.a(param1.charAt(var4), true);
+          for (characterIndex = 0; characterIndex < textLength; characterIndex++) {
+            hash = -hash + (hash << 5) + ByteArrayBuffer.encodeTextCharacter(text.charAt(characterIndex), true);
           }
-          stackIn_6_0 = var3;
-          return stackIn_6_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_9_0 = (RuntimeException) (var2);
-          stackIn_9_1 = new StringBuilder().append("ab.B(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_10_2 = "null";
+          hashBeforeReturn = hash;
+          return hashBeforeReturn;
+        } catch (java.lang.RuntimeException hashFailure) {
+          caughtHashFailure = hashFailure;
+          hashFailureForContext = caughtHashFailure;
+          hashFailureBeforeDescription = (RuntimeException) (hashFailureForContext);
+          hashMessagePrefix = new StringBuilder().append("ab.B(").append(methodGuard).append(',');
+          if (text == null) {
+            textDescription = "null";
           } else {
-            stackIn_10_2 = "{...}";
+            textDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw t.a((Throwable) ((Object) hashFailureBeforeDescription), ((StringBuilder) (Object) hashMessagePrefix).append(textDescription).append(')').toString());
         }
     }
 

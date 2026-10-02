@@ -311,174 +311,174 @@ final class hi extends ee implements ta, pl {
         }
     }
 
-    final static int a(CharSequence param0, byte[] param1, int param2, int param3, int param4, int param5) {
-        int var7 = 0;
-        int stackIn_2_0 = 0;
-        int stackIn_69_0 = 0;
-        RuntimeException stackIn_72_0 = null;
-        StringBuilder stackIn_72_1 = null;
-        String stackIn_73_2 = null;
-        StringBuilder stackIn_75_1 = null;
-        String stackIn_76_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var6_int = 0;
-        RuntimeException var6 = null;
-        int var8 = 0;
+    final static int encodeTextSlice(CharSequence text, byte[] destination, int characterStart, int characterEnd, int destinationOffset, int methodGuard) {
+        int characterIndex = 0;
+        int guardResultBeforeReturn = 0;
+        int encodedLengthBeforeReturn = 0;
+        RuntimeException encodingFailureBeforeTextDescription = null;
+        StringBuilder encodingMessagePrefix = null;
+        String textDescription = null;
+        StringBuilder encodingMessageBeforeDestination = null;
+        String destinationDescription = null;
+        RuntimeException caughtEncodingFailure = null;
+        int encodedLength = 0;
+        RuntimeException encodingFailureForContext = null;
+        int characterCode = 0;
         try {
-          var6_int = -param2 + param3;
-          if (param5 != 98) {
-            stackIn_2_0 = 52;
-            return stackIn_2_0;
+          encodedLength = -characterStart + characterEnd;
+          if (methodGuard != 98) {
+            guardResultBeforeReturn = 52;
+            return guardResultBeforeReturn;
           }
           {
-            for (var7 = 0; var7 < var6_int; var7++) {
+            for (characterIndex = 0; characterIndex < encodedLength; characterIndex++) {
               L1: {
                 L2: {
-                  var8 = param0.charAt(param2 + var7);
-                  if (0 < var8) {
-                    if (var8 < 128) {
+                  characterCode = text.charAt(characterStart + characterIndex);
+                  if (0 < characterCode) {
+                    if (characterCode < 128) {
                       break L2;
                     }
                   }
-                  if (var8 >= 160) {
-                    if (var8 <= 255) {
+                  if (characterCode >= 160) {
+                    if (characterCode <= 255) {
                       break L2;
                     }
                   }
-                  if (var8 == 8364) {
-                    param1[var7 + param4] = (byte)-128;
+                  if (characterCode == 8364) {
+                    destination[characterIndex + destinationOffset] = (byte)-128;
                     break L1;
                   }
-                  if (var8 == 8218) {
-                    param1[param4 + var7] = (byte)-126;
+                  if (characterCode == 8218) {
+                    destination[destinationOffset + characterIndex] = (byte)-126;
                     break L1;
                   }
-                  if (var8 == 402) {
-                    param1[param4 + var7] = (byte)-125;
+                  if (characterCode == 402) {
+                    destination[destinationOffset + characterIndex] = (byte)-125;
                     break L1;
                   }
-                  if (8222 == var8) {
-                    param1[var7 + param4] = (byte)-124;
+                  if (8222 == characterCode) {
+                    destination[characterIndex + destinationOffset] = (byte)-124;
                     break L1;
                   }
-                  if (8230 == var8) {
-                    param1[var7 + param4] = (byte)-123;
+                  if (8230 == characterCode) {
+                    destination[characterIndex + destinationOffset] = (byte)-123;
                     break L1;
                   }
-                  if (var8 == 8224) {
-                    param1[param4 + var7] = (byte)-122;
+                  if (characterCode == 8224) {
+                    destination[destinationOffset + characterIndex] = (byte)-122;
                     break L1;
                   }
-                  if (var8 == 8225) {
-                    param1[var7 + param4] = (byte)-121;
+                  if (characterCode == 8225) {
+                    destination[characterIndex + destinationOffset] = (byte)-121;
                     break L1;
                   }
-                  if (var8 == 710) {
-                    param1[var7 + param4] = (byte)-120;
+                  if (characterCode == 710) {
+                    destination[characterIndex + destinationOffset] = (byte)-120;
                     break L1;
                   }
-                  if (8240 == var8) {
-                    param1[var7 + param4] = (byte)-119;
+                  if (8240 == characterCode) {
+                    destination[characterIndex + destinationOffset] = (byte)-119;
                     break L1;
                   }
-                  if (var8 == 352) {
-                    param1[param4 + var7] = (byte)-118;
+                  if (characterCode == 352) {
+                    destination[destinationOffset + characterIndex] = (byte)-118;
                     break L1;
                   }
-                  if (var8 == 8249) {
-                    param1[param4 + var7] = (byte)-117;
+                  if (characterCode == 8249) {
+                    destination[destinationOffset + characterIndex] = (byte)-117;
                     break L1;
                   }
-                  if (var8 == 338) {
-                    param1[var7 + param4] = (byte)-116;
+                  if (characterCode == 338) {
+                    destination[characterIndex + destinationOffset] = (byte)-116;
                     break L1;
                   }
-                  if (381 == var8) {
-                    param1[var7 + param4] = (byte)-114;
+                  if (381 == characterCode) {
+                    destination[characterIndex + destinationOffset] = (byte)-114;
                     break L1;
                   }
-                  if (var8 == 8216) {
-                    param1[param4 + var7] = (byte)-111;
+                  if (characterCode == 8216) {
+                    destination[destinationOffset + characterIndex] = (byte)-111;
                     break L1;
                   }
-                  if (var8 == 8217) {
-                    param1[param4 + var7] = (byte)-110;
+                  if (characterCode == 8217) {
+                    destination[destinationOffset + characterIndex] = (byte)-110;
                     break L1;
                   }
-                  if (var8 == 8220) {
-                    param1[var7 + param4] = (byte)-109;
+                  if (characterCode == 8220) {
+                    destination[characterIndex + destinationOffset] = (byte)-109;
                     break L1;
                   }
-                  if (var8 == 8221) {
-                    param1[param4 + var7] = (byte)-108;
+                  if (characterCode == 8221) {
+                    destination[destinationOffset + characterIndex] = (byte)-108;
                     break L1;
                   }
-                  if (8226 == var8) {
-                    param1[param4 + var7] = (byte)-107;
+                  if (8226 == characterCode) {
+                    destination[destinationOffset + characterIndex] = (byte)-107;
                     break L1;
                   }
-                  if (8211 == var8) {
-                    param1[var7 + param4] = (byte)-106;
+                  if (8211 == characterCode) {
+                    destination[characterIndex + destinationOffset] = (byte)-106;
                     break L1;
                   }
-                  if (var8 == 8212) {
-                    param1[param4 + var7] = (byte)-105;
+                  if (characterCode == 8212) {
+                    destination[destinationOffset + characterIndex] = (byte)-105;
                     break L1;
                   }
-                  if (var8 == 732) {
-                    param1[var7 + param4] = (byte)-104;
+                  if (characterCode == 732) {
+                    destination[characterIndex + destinationOffset] = (byte)-104;
                     break L1;
                   }
-                  if (var8 == 8482) {
-                    param1[param4 + var7] = (byte)-103;
+                  if (characterCode == 8482) {
+                    destination[destinationOffset + characterIndex] = (byte)-103;
                     break L1;
                   }
-                  if (var8 == 353) {
-                    param1[param4 + var7] = (byte)-102;
+                  if (characterCode == 353) {
+                    destination[destinationOffset + characterIndex] = (byte)-102;
                     break L1;
                   }
-                  if (var8 == 8250) {
-                    param1[var7 + param4] = (byte)-101;
+                  if (characterCode == 8250) {
+                    destination[characterIndex + destinationOffset] = (byte)-101;
                     break L1;
                   }
-                  if (339 == var8) {
-                    param1[var7 + param4] = (byte)-100;
+                  if (339 == characterCode) {
+                    destination[characterIndex + destinationOffset] = (byte)-100;
                     break L1;
                   }
-                  if (var8 == 382) {
-                    param1[var7 + param4] = (byte)-98;
+                  if (characterCode == 382) {
+                    destination[characterIndex + destinationOffset] = (byte)-98;
                     break L1;
                   }
-                  if (var8 != 376) {
-                    param1[var7 + param4] = (byte)63;
+                  if (characterCode != 376) {
+                    destination[characterIndex + destinationOffset] = (byte)63;
                     break L1;
                   }
-                  param1[var7 + param4] = (byte)-97;
+                  destination[characterIndex + destinationOffset] = (byte)-97;
                   break L1;
                 }
-                param1[param4 + var7] = (byte)var8;
+                destination[destinationOffset + characterIndex] = (byte)characterCode;
               }
             }
-            stackIn_69_0 = var6_int;
-            return stackIn_69_0;
+            encodedLengthBeforeReturn = encodedLength;
+            return encodedLengthBeforeReturn;
           }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_72_0 = (RuntimeException) (var6);
-          stackIn_72_1 = new StringBuilder().append("hi.N(");
-          if (param0 == null) {
-            stackIn_73_2 = "null";
+        } catch (java.lang.RuntimeException encodingFailure) {
+          caughtEncodingFailure = encodingFailure;
+          encodingFailureForContext = caughtEncodingFailure;
+          encodingFailureBeforeTextDescription = (RuntimeException) (encodingFailureForContext);
+          encodingMessagePrefix = new StringBuilder().append("hi.N(");
+          if (text == null) {
+            textDescription = "null";
           } else {
-            stackIn_73_2 = "{...}";
+            textDescription = "{...}";
           }
-          stackIn_75_1 = ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',');
-          if (param1 == null) {
-            stackIn_76_2 = "null";
+          encodingMessageBeforeDestination = ((StringBuilder) (Object) encodingMessagePrefix).append(textDescription).append(',');
+          if (destination == null) {
+            destinationDescription = "null";
           } else {
-            stackIn_76_2 = "{...}";
+            destinationDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw t.a((Throwable) ((Object) encodingFailureBeforeTextDescription), ((StringBuilder) (Object) encodingMessageBeforeDestination).append(destinationDescription).append(',').append(characterStart).append(',').append(characterEnd).append(',').append(destinationOffset).append(',').append(methodGuard).append(')').toString());
         }
     }
 

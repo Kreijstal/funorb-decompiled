@@ -108,29 +108,29 @@ final class ag extends TextInputValidator {
     }
 
     final static String decodeTextBytes(int decodeGuard, byte[] textBytes) {
-        RuntimeException var2 = null;
-        String stackIn_3_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
+        RuntimeException decodingFailureForContext = null;
+        String decodedTextBeforeReturn = null;
+        RuntimeException decodingFailureBeforeDescription = null;
+        StringBuilder decodingMessagePrefix = null;
+        String textBytesDescription = null;
+        RuntimeException caughtDecodingFailure = null;
         try {
           if (decodeGuard != 1) {
             field_j = (boolean[]) null;
           }
-          stackIn_3_0 = bc.decodeTextSlice(-8, textBytes, 0, textBytes.length);
-          return stackIn_3_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var2);
-          stackIn_6_1 = new StringBuilder().append("ag.B(").append(decodeGuard).append(',');
+          decodedTextBeforeReturn = bc.decodeTextSlice(-8, textBytes, 0, textBytes.length);
+          return decodedTextBeforeReturn;
+        } catch (java.lang.RuntimeException decodingFailure) {
+          caughtDecodingFailure = decodingFailure;
+          decodingFailureForContext = caughtDecodingFailure;
+          decodingFailureBeforeDescription = (RuntimeException) (decodingFailureForContext);
+          decodingMessagePrefix = new StringBuilder().append("ag.B(").append(decodeGuard).append(',');
           if (textBytes == null) {
-            stackIn_7_2 = "null";
+            textBytesDescription = "null";
           } else {
-            stackIn_7_2 = "{...}";
+            textBytesDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw t.a((Throwable) ((Object) decodingFailureBeforeDescription), ((StringBuilder) (Object) decodingMessagePrefix).append(textBytesDescription).append(')').toString());
         }
     }
 

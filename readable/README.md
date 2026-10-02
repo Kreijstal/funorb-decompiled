@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 4,729 guarded naming rules: 40 classes, 616 fields,
-435 methods, 1,335 parameters and 2,303 local declarations. Both 303-file corpora
+The current export has 4,797 guarded naming rules: 40 classes, 616 fields,
+439 methods, 1,347 parameters and 2,355 local declarations. Both 303-file corpora
 compile, preserving 138,558 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -54,7 +54,33 @@ smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
 
-## Current buffer crypto and Whirlpool names
+## Current text-byte encoding and name hashing
+
+Pass 64 adds 68 guarded identities: four methods, twelve parameters and
+52 locals. `encodeTextCharacter`, `encodeTextSlice`, `encodeTextBytes` and
+`hashEncodedText` now have complete parameter/local names. The existing
+`decodeTextSlice` and `decodeTextBytes` names remain, with their remaining
+return and failure-context locals named.
+
+The encoders pass characters 1..127 and 160..255 through, map 27 extended
+characters to selected bytes 128..159, and replace unsupported UTF-16 code
+units with `?`. Font consumers mask the encoded byte with 255; archive-name
+hashing adds the signed byte in its wrapping 31*hash recurrence. Character
+encoding with a false guard returns 50. Slice encoding computes the requested
+length before a wrong guard returns 52 without reading either argument array
+or text. Whole-text encoding preserves its wrong-guard helper before length
+inspection. Partial writes, aliases, integer overflow and literal diagnostics
+remain unchanged.
+
+All 4,729 prior complete rules and source/generator pins stay unchanged.
+The 4,797 rules apply 41,532 identifier edits; both 303-file corpora compile,
+preserving 138,558 bindings and 388 overrides. Reproduction and dictionary
+reversal are byte-exact. Existing native text fixtures verify decoding, slices,
+guard effects and nested failures; they do not newly execute encoders or hashing.
+Compressed text, other opaque support helpers, actual fonts/archives, complete
+gameplay and phone/FPS/heap behavior remain unfinished or unverified.
+
+## Previous buffer crypto and Whirlpool names
 
 Pass 63 adds 136 guarded identities: one class, eleven fields, thirteen methods,
 28 parameters and 83 locals. The remaining three buffer instance APIs read as
@@ -951,7 +977,7 @@ its historical proof recorded in the raw provenance. Current source/decompiler
 identity and naming migrations live in the single manifest. `ruleChanges`
 records naming changes; `sourceChange` is recorded when input identity changes.
 The latest structural pass records its source migration in Git. The current
-naming-only pass retains those source pins and records its 136 additions in
+naming-only pass retains those source pins and records its 68 additions in
 `ruleChanges`; every prior guarded rule is retained.
 All six native probe sources and their traces are pinned in
 the same manifest; no JSON snapshots are added.
@@ -976,6 +1002,6 @@ the same manifest; no JSON snapshots are added.
 | Java source tree | SHA-256 |
 | --- | --- |
 | Raw | `39be3539b43d7acc9540acca49e7b6378cdb233908092706646df4c2cdc6a8fe` |
-| Readable | `19746ae8b07d697e2983b9e013b437d1fbcf34ef7c6dad23b61c714434845023` |
+| Readable | `bb0413c401980ef5b01ae21ed1f8472e7628ba36af5f3a79308e4ae02334e6a8` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.
