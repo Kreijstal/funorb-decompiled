@@ -41,10 +41,10 @@ final class bg extends m {
         }
         if (param3 > 0) {
           if (param4 > 0) {
-            if (SoftwareRasterizer.field_a == null) {
+            if (SoftwareRasterizer.scanlineMaskStarts == null) {
               bg.a(SoftwareRasterizer.framebuffer, this.field_K[param0], param5, var11, var8, param3, param4, var9, var10);
             } else {
-              bg.a(SoftwareRasterizer.framebuffer, this.field_K[param0], param1, param2, param3, param4, param5, var11, var8, var9, var10, SoftwareRasterizer.field_a, SoftwareRasterizer.field_l);
+              bg.a(SoftwareRasterizer.framebuffer, this.field_K[param0], param1, param2, param3, param4, param5, var11, var8, var9, var10, SoftwareRasterizer.scanlineMaskStarts, SoftwareRasterizer.scanlineMaskWidths);
             }
             return;
           }

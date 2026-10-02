@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 3,369 guarded naming rules: 32 classes, 553 fields,
-325 methods, 957 parameters and 1,502 local declarations. Both 303-file corpora
+The current export has 3,539 guarded naming rules: 32 classes, 555 fields,
+325 methods, 957 parameters and 1,670 local declarations. Both 303-file corpora
 compile, preserving 138,558 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -37,7 +37,7 @@ git archive --format=tar 57969c34c9be16cd7dfaaa691774b95dbeaa2c5b | sha256sum
 This identifies tracked decompiler source and its Git archive metadata. It is
 separate from a game JAR or the Java source-tree hashes below.
 
-The preceding naming pass added 171 guarded identities: two image-constructor
+An earlier sprite naming pass added 171 guarded identities: two image-constructor
 parameters and 169 locals. Every parameter and local declaration in `Sprite`,
 `ArgbSprite` and `IndexedSprite` now has a guarded semantic name. This completes
 the ARGB nearest-rotation geometry, bilinear weight/channel arithmetic,
@@ -54,7 +54,33 @@ smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
 
-## Current blur kernel naming
+## Current raster drawing names
+
+Pass 56 adds 170 guarded identities: two scanline-mask fields and all 168
+remaining raster drawing locals. Every field, method, parameter and local in
+`SoftwareRasterizer` now has a guarded semantic name. Clipped circle spans,
+rounded corners, alpha weights, gradient interpolation, dominant-axis Q16 line
+stepping and unrolled framebuffer clearing have explicit roles. Shared variables
+retain combined names where their roles differ between stages.
+
+Circle fills track separate X- and Y-adjusted squared-distance estimates;
+rounded outlines keep eight evolving corner row-center indices. Span right
+endpoints retain their original exclusive/inclusive phases. The masked glyph
+consumer establishes that `scanlineMaskStarts` and `scanlineMaskWidths` are
+relative to the clip origin; the export clears those arrays but never assigns
+non-null masks internally. Original API parameters remain mutable: drawCircle
+squares its radius and drawLine reuses endpoints for deltas/accumulators/bounds.
+
+All 3,369 previous complete rules, raw source and generator pins remain unchanged.
+The 3,539 rules apply 33,770 edits; all 303 raw/readable sources compile,
+preserving 138,558 bindings and 388 override relationships. Large labeled
+bodies, clipping, geometry, integer overflow, masks, increments and read/write
+order remain unchanged. Source/binding checks support the new roles; existing
+native fixtures retain their documented scopes. Complete raster drawing,
+external/live scanline masks, full rendering/assets/gameplay and phone/FPS/heap
+performance are not newly verified.
+
+## Previous blur kernel naming
 
 Pass 55 adds 64 guarded identities: three reusable per-column channel caches
 and 61 row/column kernel locals. Every parameter and local in `blurRowsInPlace`
@@ -749,7 +775,7 @@ its historical proof recorded in the raw provenance. Current source/decompiler
 identity and naming migrations live in the single manifest. `ruleChanges`
 records naming changes; `sourceChange` is recorded when input identity changes.
 The latest structural pass records its source migration in Git. The current
-naming-only pass retains those source pins and records its 64 additions in
+naming-only pass retains those source pins and records its 170 additions in
 `ruleChanges`; every prior guarded rule is retained.
 All six native probe sources and their traces are pinned in
 the same manifest; no JSON snapshots are added.
@@ -774,6 +800,6 @@ the same manifest; no JSON snapshots are added.
 | Java source tree | SHA-256 |
 | --- | --- |
 | Raw | `39be3539b43d7acc9540acca49e7b6378cdb233908092706646df4c2cdc6a8fe` |
-| Readable | `f557ae637b8d55d4955853332704048d56e6186eec89f8fce7096cff58139644` |
+| Readable | `d11fce4c3749656ee4147bf6b5b269e693493a88f161e2a3e9dc7babe003411d` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

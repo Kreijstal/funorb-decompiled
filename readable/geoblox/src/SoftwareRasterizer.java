@@ -3,11 +3,11 @@
  */
 final class SoftwareRasterizer {
     private static int[] blurColumnRedSums;
-    static int[] field_l;
+    static int[] scanlineMaskWidths;
     static int clipBottom;
     private static int[] blurColumnBlueSums;
     static int clipRight;
-    static int[] field_a;
+    static int[] scanlineMaskStarts;
     static int clipTop;
     static int stride;
     static int framebufferHeight;
@@ -16,24 +16,24 @@ final class SoftwareRasterizer {
     private static int[] blurColumnGreenSums;
 
     final static void fillVerticalGradient(int x, int y, int width, int height, int topColor, int bottomColor) {
-        int var10 = 0;
-        int var14 = 0;
-        int incrementValue$0 = 0;
-        int var6;
-        int var7;
-        int var8;
-        int var9;
-        int var11;
-        int var12;
-        int var13;
-        var6 = 0;
-        var7 = 65536 / height;
+        int negativeRowCounter = 0;
+        int negativeColumnCounter = 0;
+        int destinationIndexBeforeIncrement = 0;
+        int gradientPositionQ16;
+        int gradientStepQ16;
+        int destinationRowSkip;
+        int destinationIndex;
+        int topWeight256;
+        int bottomWeight256;
+        int interpolatedColor;
+        gradientPositionQ16 = 0;
+        gradientStepQ16 = 65536 / height;
         if (x < clipLeft) {
           width = width - (clipLeft - x);
           x = clipLeft;
         }
         if (y < clipTop) {
-          var6 = var6 + (clipTop - y) * var7;
+          gradientPositionQ16 = gradientPositionQ16 + (clipTop - y) * gradientStepQ16;
           height = height - (clipTop - y);
           y = clipTop;
         }
@@ -43,19 +43,19 @@ final class SoftwareRasterizer {
         if (y + height > clipBottom) {
           height = clipBottom - y;
         }
-        var8 = stride - width;
-        var9 = x + y * stride;
-        for (var10 = -height; var10 < 0; var10++) {
-          var11 = 65536 - var6 >> 8;
-          var12 = var6 >> 8;
-          var13 = ((topColor & 16711935) * var11 + (bottomColor & 16711935) * var12 & -16711936) + ((topColor & 65280) * var11 + (bottomColor & 65280) * var12 & 16711680) >>> 8;
-          for (var14 = -width; var14 < 0; var14++) {
-            incrementValue$0 = var9;
-            var9++;
-            framebuffer[incrementValue$0] = var13;
+        destinationRowSkip = stride - width;
+        destinationIndex = x + y * stride;
+        for (negativeRowCounter = -height; negativeRowCounter < 0; negativeRowCounter++) {
+          topWeight256 = 65536 - gradientPositionQ16 >> 8;
+          bottomWeight256 = gradientPositionQ16 >> 8;
+          interpolatedColor = ((topColor & 16711935) * topWeight256 + (bottomColor & 16711935) * bottomWeight256 & -16711936) + ((topColor & 65280) * topWeight256 + (bottomColor & 65280) * bottomWeight256 & 16711680) >>> 8;
+          for (negativeColumnCounter = -width; negativeColumnCounter < 0; negativeColumnCounter++) {
+            destinationIndexBeforeIncrement = destinationIndex;
+            destinationIndex++;
+            framebuffer[destinationIndexBeforeIncrement] = interpolatedColor;
           }
-          var9 = var9 + var8;
-          var6 = var6 + var7;
+          destinationIndex = destinationIndex + destinationRowSkip;
+          gradientPositionQ16 = gradientPositionQ16 + gradientStepQ16;
         }
     }
 
@@ -76,12 +76,12 @@ final class SoftwareRasterizer {
     }
 
     final static void drawRectangleDropShadow(int x, int y, int width, int height, int color) {
-        int var6 = 0;
-        int var5 = 0;
-        for (var6 = 0; var6 < 4; var6++) {
-            var5 = 128 - (var6 << 5);
-            SoftwareRasterizer.drawHorizontalLineAlpha(x + var6, y + height + var6, width, color, var5);
-            SoftwareRasterizer.drawVerticalLineAlpha(x + width + var6, y + var6, height + 1, color, var5);
+        int shadowOffset = 0;
+        int shadowAlpha256 = 0;
+        for (shadowOffset = 0; shadowOffset < 4; shadowOffset++) {
+            shadowAlpha256 = 128 - (shadowOffset << 5);
+            SoftwareRasterizer.drawHorizontalLineAlpha(x + shadowOffset, y + height + shadowOffset, width, color, shadowAlpha256);
+            SoftwareRasterizer.drawVerticalLineAlpha(x + width + shadowOffset, y + shadowOffset, height + 1, color, shadowAlpha256);
         }
     }
 
@@ -93,14 +93,14 @@ final class SoftwareRasterizer {
     }
 
     final static void grayscaleRectangle(int x, int y, int width, int height) {
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int incrementValue$0 = 0;
+        int rowIndex = 0;
+        int columnIndex = 0;
+        int destinationColor = 0;
+        int twiceRed = 0;
+        int green = 0;
+        int blue = 0;
+        int grayLevel = 0;
+        int destinationIndexBeforeIncrement = 0;
         if (x < clipLeft) {
             width = width - (clipLeft - x);
             x = clipLeft;
@@ -115,48 +115,48 @@ final class SoftwareRasterizer {
         if (y + height > clipBottom) {
             height = clipBottom - y;
         }
-        int var4 = x + y * stride;
+        int destinationIndex = x + y * stride;
         if (width > 0) {
             if (height <= 0) {
                 return;
             }
-            for (var5 = 0; var5 < height; var5++) {
-                for (var6 = 0; var6 < width; var6++) {
-                    var7 = framebuffer[var4];
-                    var8 = var7 >> 15 & 510;
-                    var9 = var7 >> 8 & 255;
-                    var10 = var7 & 255;
-                    var11 = (var10 + var8) / 3 + var9 >> 1;
-                    incrementValue$0 = var4;
-                    var4++;
-                    framebuffer[incrementValue$0] = (var11 << 16) + (var11 << 8) + var11;
+            for (rowIndex = 0; rowIndex < height; rowIndex++) {
+                for (columnIndex = 0; columnIndex < width; columnIndex++) {
+                    destinationColor = framebuffer[destinationIndex];
+                    twiceRed = destinationColor >> 15 & 510;
+                    green = destinationColor >> 8 & 255;
+                    blue = destinationColor & 255;
+                    grayLevel = (blue + twiceRed) / 3 + green >> 1;
+                    destinationIndexBeforeIncrement = destinationIndex;
+                    destinationIndex++;
+                    framebuffer[destinationIndexBeforeIncrement] = (grayLevel << 16) + (grayLevel << 8) + grayLevel;
                 }
-                var4 = var4 + (stride - width);
+                destinationIndex = destinationIndex + (stride - width);
             }
             return;
         }
     }
 
     final static void drawRoundedRectangle(int x, int y, int width, int height, int cornerRadius, int color) {
-        int incrementValue$0 = 0;
-        int incrementValue$1 = 0;
-        int var6;
-        int var7;
-        int var8;
-        int var9;
-        int var10;
-        int var11;
-        int var12;
-        int var13;
-        int var14;
-        int var15;
-        int var16;
-        int var17;
-        int var18;
-        int var19;
-        int var20;
-        int var21;
-        int var22;
+        int unclippedMinorOffsetBeforeIncrement = 0;
+        int clippedMinorOffsetBeforeIncrement = 0;
+        int leftCornerCenterX;
+        int topCornerCenterY;
+        int rightCornerCenterX;
+        int bottomCornerCenterY;
+        int upperLeftOuterRowCenterIndex;
+        int upperRightOuterRowCenterIndex;
+        int upperLeftInnerRowCenterIndex;
+        int upperRightInnerRowCenterIndex;
+        int lowerLeftInnerRowCenterIndex;
+        int lowerRightInnerRowCenterIndex;
+        int lowerLeftOuterRowCenterIndex;
+        int lowerRightOuterRowCenterIndex;
+        int arcMajorOffset;
+        int arcMinorOffset;
+        int radiusSquared;
+        int xAdjustedSquaredDistance;
+        int edgePixelIndex;
         if (cornerRadius == 0) {
           SoftwareRasterizer.drawRectangle(x, y, width, height, color);
           return;
@@ -165,10 +165,10 @@ final class SoftwareRasterizer {
           if (cornerRadius < 0) {
             cornerRadius = -cornerRadius;
           }
-          var6 = x + cornerRadius;
-          var7 = y + cornerRadius;
-          var8 = x + width - cornerRadius - 1;
-          var9 = y + height - cornerRadius - 1;
+          leftCornerCenterX = x + cornerRadius;
+          topCornerCenterY = y + cornerRadius;
+          rightCornerCenterX = x + width - cornerRadius - 1;
+          bottomCornerCenterY = y + height - cornerRadius - 1;
           if (clipRight > clipLeft) {
             if (clipBottom <= clipTop) {
               return;
@@ -178,150 +178,150 @@ final class SoftwareRasterizer {
                 if (y + height >= clipTop) {
                   if (y < clipBottom) {
                     L3: {
-                      var10 = var6 + (var7 - cornerRadius) * stride;
-                      var11 = var8 + (var7 - cornerRadius) * stride;
-                      var12 = var6 + var7 * stride;
-                      var13 = var8 + var7 * stride;
-                      var14 = var6 + var9 * stride;
-                      var15 = var8 + var9 * stride;
-                      var16 = var6 + (var9 + cornerRadius) * stride;
-                      var17 = var8 + (var9 + cornerRadius) * stride;
-                      var18 = cornerRadius;
-                      var19 = 0;
-                      var20 = cornerRadius * cornerRadius;
-                      var21 = var20 - var18;
+                      upperLeftOuterRowCenterIndex = leftCornerCenterX + (topCornerCenterY - cornerRadius) * stride;
+                      upperRightOuterRowCenterIndex = rightCornerCenterX + (topCornerCenterY - cornerRadius) * stride;
+                      upperLeftInnerRowCenterIndex = leftCornerCenterX + topCornerCenterY * stride;
+                      upperRightInnerRowCenterIndex = rightCornerCenterX + topCornerCenterY * stride;
+                      lowerLeftInnerRowCenterIndex = leftCornerCenterX + bottomCornerCenterY * stride;
+                      lowerRightInnerRowCenterIndex = rightCornerCenterX + bottomCornerCenterY * stride;
+                      lowerLeftOuterRowCenterIndex = leftCornerCenterX + (bottomCornerCenterY + cornerRadius) * stride;
+                      lowerRightOuterRowCenterIndex = rightCornerCenterX + (bottomCornerCenterY + cornerRadius) * stride;
+                      arcMajorOffset = cornerRadius;
+                      arcMinorOffset = 0;
+                      radiusSquared = cornerRadius * cornerRadius;
+                      xAdjustedSquaredDistance = radiusSquared - arcMajorOffset;
                       if (x >= clipLeft) {
                         if (x + width < clipRight) {
                           if (y >= clipTop) {
                             if (y + height < clipBottom) {
-                              for (var22 = var12; var22 <= var14; var22 = var22 + stride) {
-                                framebuffer[var22 - var18] = color;
+                              for (edgePixelIndex = upperLeftInnerRowCenterIndex; edgePixelIndex <= lowerLeftInnerRowCenterIndex; edgePixelIndex = edgePixelIndex + stride) {
+                                framebuffer[edgePixelIndex - arcMajorOffset] = color;
                               }
-                              for (var22 = var13; var22 <= var15; var22 = var22 + stride) {
-                                framebuffer[var22 + var18] = color;
+                              for (edgePixelIndex = upperRightInnerRowCenterIndex; edgePixelIndex <= lowerRightInnerRowCenterIndex; edgePixelIndex = edgePixelIndex + stride) {
+                                framebuffer[edgePixelIndex + arcMajorOffset] = color;
                               }
-                              for (var22 = var10; var22 <= var11; var22++) {
-                                framebuffer[var22] = color;
+                              for (edgePixelIndex = upperLeftOuterRowCenterIndex; edgePixelIndex <= upperRightOuterRowCenterIndex; edgePixelIndex++) {
+                                framebuffer[edgePixelIndex] = color;
                               }
-                              for (var22 = var16; var22 <= var17; var22++) {
-                                framebuffer[var22] = color;
+                              for (edgePixelIndex = lowerLeftOuterRowCenterIndex; edgePixelIndex <= lowerRightOuterRowCenterIndex; edgePixelIndex++) {
+                                framebuffer[edgePixelIndex] = color;
                               }
                               L9: while (true) {
-                                incrementValue$0 = var19;
-                                var19++;
-                                var21 = var21 + (incrementValue$0 + var19);
-                                var12 = var12 - stride;
-                                var13 = var13 - stride;
-                                var14 = var14 + stride;
-                                var15 = var15 + stride;
-                                if (var21 > var20) {
-                                  var18--;
-                                  var21 = var21 - (var18 + var18);
-                                  var10 = var10 + stride;
-                                  var11 = var11 + stride;
-                                  var16 = var16 - stride;
-                                  var17 = var17 - stride;
+                                unclippedMinorOffsetBeforeIncrement = arcMinorOffset;
+                                arcMinorOffset++;
+                                xAdjustedSquaredDistance = xAdjustedSquaredDistance + (unclippedMinorOffsetBeforeIncrement + arcMinorOffset);
+                                upperLeftInnerRowCenterIndex = upperLeftInnerRowCenterIndex - stride;
+                                upperRightInnerRowCenterIndex = upperRightInnerRowCenterIndex - stride;
+                                lowerLeftInnerRowCenterIndex = lowerLeftInnerRowCenterIndex + stride;
+                                lowerRightInnerRowCenterIndex = lowerRightInnerRowCenterIndex + stride;
+                                if (xAdjustedSquaredDistance > radiusSquared) {
+                                  arcMajorOffset--;
+                                  xAdjustedSquaredDistance = xAdjustedSquaredDistance - (arcMajorOffset + arcMajorOffset);
+                                  upperLeftOuterRowCenterIndex = upperLeftOuterRowCenterIndex + stride;
+                                  upperRightOuterRowCenterIndex = upperRightOuterRowCenterIndex + stride;
+                                  lowerLeftOuterRowCenterIndex = lowerLeftOuterRowCenterIndex - stride;
+                                  lowerRightOuterRowCenterIndex = lowerRightOuterRowCenterIndex - stride;
                                 }
-                                if (var18 < var19) {
+                                if (arcMajorOffset < arcMinorOffset) {
                                   break L3;
                                 }
-                                framebuffer[var10 - var19] = color;
-                                framebuffer[var11 + var19] = color;
-                                framebuffer[var12 - var18] = color;
-                                framebuffer[var13 + var18] = color;
-                                framebuffer[var14 - var18] = color;
-                                framebuffer[var15 + var18] = color;
-                                framebuffer[var16 - var19] = color;
-                                framebuffer[var17 + var19] = color;
+                                framebuffer[upperLeftOuterRowCenterIndex - arcMinorOffset] = color;
+                                framebuffer[upperRightOuterRowCenterIndex + arcMinorOffset] = color;
+                                framebuffer[upperLeftInnerRowCenterIndex - arcMajorOffset] = color;
+                                framebuffer[upperRightInnerRowCenterIndex + arcMajorOffset] = color;
+                                framebuffer[lowerLeftInnerRowCenterIndex - arcMajorOffset] = color;
+                                framebuffer[lowerRightInnerRowCenterIndex + arcMajorOffset] = color;
+                                framebuffer[lowerLeftOuterRowCenterIndex - arcMinorOffset] = color;
+                                framebuffer[lowerRightOuterRowCenterIndex + arcMinorOffset] = color;
                                 continue L9;
                               }
                             }
                           }
                         }
                       }
-                      SoftwareRasterizer.drawVerticalLine(x, y + var18, height - var18 - var18, color);
-                      SoftwareRasterizer.drawVerticalLine(x + width - 1, y + var18, height - var18 - var18, color);
-                      SoftwareRasterizer.drawHorizontalLine(x + var18, y, width - var18 - var18, color);
-                      SoftwareRasterizer.drawHorizontalLine(x + var18, y + height - 1, width - var18 - var18, color);
+                      SoftwareRasterizer.drawVerticalLine(x, y + arcMajorOffset, height - arcMajorOffset - arcMajorOffset, color);
+                      SoftwareRasterizer.drawVerticalLine(x + width - 1, y + arcMajorOffset, height - arcMajorOffset - arcMajorOffset, color);
+                      SoftwareRasterizer.drawHorizontalLine(x + arcMajorOffset, y, width - arcMajorOffset - arcMajorOffset, color);
+                      SoftwareRasterizer.drawHorizontalLine(x + arcMajorOffset, y + height - 1, width - arcMajorOffset - arcMajorOffset, color);
                       L11: while (true) {
-                        incrementValue$1 = var19;
-                        var19++;
-                        var21 = var21 + (incrementValue$1 + var19);
-                        var12 = var12 - stride;
-                        var13 = var13 - stride;
-                        var14 = var14 + stride;
-                        var15 = var15 + stride;
-                        if (var21 > var20) {
-                          var18--;
-                          var21 = var21 - (var18 + var18);
-                          var10 = var10 + stride;
-                          var11 = var11 + stride;
-                          var16 = var16 - stride;
-                          var17 = var17 - stride;
+                        clippedMinorOffsetBeforeIncrement = arcMinorOffset;
+                        arcMinorOffset++;
+                        xAdjustedSquaredDistance = xAdjustedSquaredDistance + (clippedMinorOffsetBeforeIncrement + arcMinorOffset);
+                        upperLeftInnerRowCenterIndex = upperLeftInnerRowCenterIndex - stride;
+                        upperRightInnerRowCenterIndex = upperRightInnerRowCenterIndex - stride;
+                        lowerLeftInnerRowCenterIndex = lowerLeftInnerRowCenterIndex + stride;
+                        lowerRightInnerRowCenterIndex = lowerRightInnerRowCenterIndex + stride;
+                        if (xAdjustedSquaredDistance > radiusSquared) {
+                          arcMajorOffset--;
+                          xAdjustedSquaredDistance = xAdjustedSquaredDistance - (arcMajorOffset + arcMajorOffset);
+                          upperLeftOuterRowCenterIndex = upperLeftOuterRowCenterIndex + stride;
+                          upperRightOuterRowCenterIndex = upperRightOuterRowCenterIndex + stride;
+                          lowerLeftOuterRowCenterIndex = lowerLeftOuterRowCenterIndex - stride;
+                          lowerRightOuterRowCenterIndex = lowerRightOuterRowCenterIndex - stride;
                         }
-                        if (var18 < var19) {
+                        if (arcMajorOffset < arcMinorOffset) {
                           break L3;
                         }
-                        if (var7 - var18 >= clipTop) {
-                          if (var7 - var18 < clipBottom) {
-                            if (var6 - var19 >= clipLeft) {
-                              if (var6 - var19 < clipRight) {
-                                framebuffer[var10 - var19] = color;
+                        if (topCornerCenterY - arcMajorOffset >= clipTop) {
+                          if (topCornerCenterY - arcMajorOffset < clipBottom) {
+                            if (leftCornerCenterX - arcMinorOffset >= clipLeft) {
+                              if (leftCornerCenterX - arcMinorOffset < clipRight) {
+                                framebuffer[upperLeftOuterRowCenterIndex - arcMinorOffset] = color;
                               }
                             }
-                            if (var8 + var19 >= clipLeft) {
-                              if (var8 + var19 < clipRight) {
-                                framebuffer[var11 + var19] = color;
-                              }
-                            }
-                          }
-                        }
-                        if (var7 - var19 >= clipTop) {
-                          if (var7 - var19 < clipBottom) {
-                            if (var6 - var18 >= clipLeft) {
-                              if (var6 - var18 < clipRight) {
-                                framebuffer[var12 - var18] = color;
-                              }
-                            }
-                            if (var8 + var18 >= clipLeft) {
-                              if (var8 + var18 < clipRight) {
-                                framebuffer[var13 + var18] = color;
+                            if (rightCornerCenterX + arcMinorOffset >= clipLeft) {
+                              if (rightCornerCenterX + arcMinorOffset < clipRight) {
+                                framebuffer[upperRightOuterRowCenterIndex + arcMinorOffset] = color;
                               }
                             }
                           }
                         }
-                        if (var9 + var19 >= clipTop) {
-                          if (var9 + var19 < clipBottom) {
-                            if (var6 - var18 >= clipLeft) {
-                              if (var6 - var18 < clipRight) {
-                                framebuffer[var14 - var18] = color;
+                        if (topCornerCenterY - arcMinorOffset >= clipTop) {
+                          if (topCornerCenterY - arcMinorOffset < clipBottom) {
+                            if (leftCornerCenterX - arcMajorOffset >= clipLeft) {
+                              if (leftCornerCenterX - arcMajorOffset < clipRight) {
+                                framebuffer[upperLeftInnerRowCenterIndex - arcMajorOffset] = color;
                               }
                             }
-                            if (var8 + var18 >= clipLeft) {
-                              if (var8 + var18 < clipRight) {
-                                framebuffer[var15 + var18] = color;
+                            if (rightCornerCenterX + arcMajorOffset >= clipLeft) {
+                              if (rightCornerCenterX + arcMajorOffset < clipRight) {
+                                framebuffer[upperRightInnerRowCenterIndex + arcMajorOffset] = color;
                               }
                             }
                           }
                         }
-                        if (var9 + var18 < clipTop) {
-                          continue L11;
-                        }
-                        if (var9 + var18 >= clipBottom) {
-                          continue L11;
-                        }
-                        if (var6 - var19 >= clipLeft) {
-                          if (var6 - var19 < clipRight) {
-                            framebuffer[var16 - var19] = color;
+                        if (bottomCornerCenterY + arcMinorOffset >= clipTop) {
+                          if (bottomCornerCenterY + arcMinorOffset < clipBottom) {
+                            if (leftCornerCenterX - arcMajorOffset >= clipLeft) {
+                              if (leftCornerCenterX - arcMajorOffset < clipRight) {
+                                framebuffer[lowerLeftInnerRowCenterIndex - arcMajorOffset] = color;
+                              }
+                            }
+                            if (rightCornerCenterX + arcMajorOffset >= clipLeft) {
+                              if (rightCornerCenterX + arcMajorOffset < clipRight) {
+                                framebuffer[lowerRightInnerRowCenterIndex + arcMajorOffset] = color;
+                              }
+                            }
                           }
                         }
-                        if (var8 + var19 < clipLeft) {
+                        if (bottomCornerCenterY + arcMajorOffset < clipTop) {
                           continue L11;
                         }
-                        if (var8 + var19 >= clipRight) {
+                        if (bottomCornerCenterY + arcMajorOffset >= clipBottom) {
                           continue L11;
                         }
-                        framebuffer[var17 + var19] = color;
+                        if (leftCornerCenterX - arcMinorOffset >= clipLeft) {
+                          if (leftCornerCenterX - arcMinorOffset < clipRight) {
+                            framebuffer[lowerLeftOuterRowCenterIndex - arcMinorOffset] = color;
+                          }
+                        }
+                        if (rightCornerCenterX + arcMinorOffset < clipLeft) {
+                          continue L11;
+                        }
+                        if (rightCornerCenterX + arcMinorOffset >= clipRight) {
+                          continue L11;
+                        }
+                        framebuffer[lowerRightOuterRowCenterIndex + arcMinorOffset] = color;
                         continue L11;
                       }
                     }
@@ -497,17 +497,17 @@ final class SoftwareRasterizer {
     }
 
     private final static void drawHorizontalLineAlpha(int x, int y, int length, int color, int alpha256) {
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var14 = 0;
-        int incrementValue$0 = 0;
+        int destinationWeight256 = 0;
+        int sourceRedWeighted = 0;
+        int sourceGreenWeighted = 0;
+        int sourceBlueWeighted = 0;
+        int destinationIndex = 0;
+        int pixelOffset = 0;
+        int destinationRedWeighted = 0;
+        int destinationGreenWeighted = 0;
+        int destinationBlueWeighted = 0;
+        int blendedColor = 0;
+        int destinationIndexBeforeIncrement = 0;
         if (y >= clipTop) {
             if (y >= clipBottom) {
                 return;
@@ -519,35 +519,35 @@ final class SoftwareRasterizer {
             if (x + length > clipRight) {
                 length = clipRight - x;
             }
-            var5 = 256 - alpha256;
-            var6 = (color >> 16 & 255) * alpha256;
-            var7 = (color >> 8 & 255) * alpha256;
-            var8 = (color & 255) * alpha256;
-            var12 = x + y * stride;
-            for (var13 = 0; var13 < length; var13++) {
-                var9 = (framebuffer[var12] >> 16 & 255) * var5;
-                var10 = (framebuffer[var12] >> 8 & 255) * var5;
-                var11 = (framebuffer[var12] & 255) * var5;
-                var14 = (var6 + var9 >> 8 << 16) + (var7 + var10 >> 8 << 8) + (var8 + var11 >> 8);
-                incrementValue$0 = var12;
-                var12++;
-                framebuffer[incrementValue$0] = var14;
+            destinationWeight256 = 256 - alpha256;
+            sourceRedWeighted = (color >> 16 & 255) * alpha256;
+            sourceGreenWeighted = (color >> 8 & 255) * alpha256;
+            sourceBlueWeighted = (color & 255) * alpha256;
+            destinationIndex = x + y * stride;
+            for (pixelOffset = 0; pixelOffset < length; pixelOffset++) {
+                destinationRedWeighted = (framebuffer[destinationIndex] >> 16 & 255) * destinationWeight256;
+                destinationGreenWeighted = (framebuffer[destinationIndex] >> 8 & 255) * destinationWeight256;
+                destinationBlueWeighted = (framebuffer[destinationIndex] & 255) * destinationWeight256;
+                blendedColor = (sourceRedWeighted + destinationRedWeighted >> 8 << 16) + (sourceGreenWeighted + destinationGreenWeighted >> 8 << 8) + (sourceBlueWeighted + destinationBlueWeighted >> 8);
+                destinationIndexBeforeIncrement = destinationIndex;
+                destinationIndex++;
+                framebuffer[destinationIndexBeforeIncrement] = blendedColor;
             }
             return;
         }
     }
 
     private final static void drawVerticalLineAlpha(int x, int y, int length, int color, int alpha256) {
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var14 = 0;
+        int destinationWeight256 = 0;
+        int sourceRedWeighted = 0;
+        int sourceGreenWeighted = 0;
+        int sourceBlueWeighted = 0;
+        int destinationIndex = 0;
+        int pixelOffset = 0;
+        int destinationRedWeighted = 0;
+        int destinationGreenWeighted = 0;
+        int destinationBlueWeighted = 0;
+        int blendedColor = 0;
         if (x >= clipLeft) {
             if (x >= clipRight) {
                 return;
@@ -559,18 +559,18 @@ final class SoftwareRasterizer {
             if (y + length > clipBottom) {
                 length = clipBottom - y;
             }
-            var5 = 256 - alpha256;
-            var6 = (color >> 16 & 255) * alpha256;
-            var7 = (color >> 8 & 255) * alpha256;
-            var8 = (color & 255) * alpha256;
-            var12 = x + y * stride;
-            for (var13 = 0; var13 < length; var13++) {
-                var9 = (framebuffer[var12] >> 16 & 255) * var5;
-                var10 = (framebuffer[var12] >> 8 & 255) * var5;
-                var11 = (framebuffer[var12] & 255) * var5;
-                var14 = (var6 + var9 >> 8 << 16) + (var7 + var10 >> 8 << 8) + (var8 + var11 >> 8);
-                framebuffer[var12] = var14;
-                var12 = var12 + stride;
+            destinationWeight256 = 256 - alpha256;
+            sourceRedWeighted = (color >> 16 & 255) * alpha256;
+            sourceGreenWeighted = (color >> 8 & 255) * alpha256;
+            sourceBlueWeighted = (color & 255) * alpha256;
+            destinationIndex = x + y * stride;
+            for (pixelOffset = 0; pixelOffset < length; pixelOffset++) {
+                destinationRedWeighted = (framebuffer[destinationIndex] >> 16 & 255) * destinationWeight256;
+                destinationGreenWeighted = (framebuffer[destinationIndex] >> 8 & 255) * destinationWeight256;
+                destinationBlueWeighted = (framebuffer[destinationIndex] & 255) * destinationWeight256;
+                blendedColor = (sourceRedWeighted + destinationRedWeighted >> 8 << 16) + (sourceGreenWeighted + destinationGreenWeighted >> 8 << 8) + (sourceBlueWeighted + destinationBlueWeighted >> 8);
+                framebuffer[destinationIndex] = blendedColor;
+                destinationIndex = destinationIndex + stride;
             }
             return;
         }
@@ -578,8 +578,8 @@ final class SoftwareRasterizer {
 
     public static void releaseRasterStorage() {
         framebuffer = null;
-        field_a = null;
-        field_l = null;
+        scanlineMaskStarts = null;
+        scanlineMaskWidths = null;
         blurColumnRedSums = null;
         blurColumnGreenSums = null;
         blurColumnBlueSums = null;
@@ -601,38 +601,38 @@ final class SoftwareRasterizer {
     }
 
     private final static void clearScanlineMasks() {
-        field_a = null;
-        field_l = null;
+        scanlineMaskStarts = null;
+        scanlineMaskWidths = null;
     }
 
     final static void fillCircleAlpha(int centerX, int centerY, int radius, int color, int alpha256) {
-        int incrementValue$4 = 0;
-        int incrementValue$3 = 0;
-        int incrementValue$5 = 0;
-        int incrementValue$0 = 0;
-        int incrementValue$2 = 0;
-        int incrementValue$1 = 0;
-        int var5;
-        int var6;
-        int var7;
-        int var8;
-        int var9;
-        int var10;
-        int var11;
-        int var12;
-        int var13;
-        int var14;
-        int var15;
-        int var16;
-        int var17;
-        int var18;
-        int var19;
-        int var20;
-        int var21;
-        int var22;
-        int var23;
-        int var24;
-        int var25;
+        int upperDestinationIndexBeforeIncrement = 0;
+        int upperYOffsetBeforeDecrement = 0;
+        int upperXExtentBeforeIncrement = 0;
+        int lowerXExtentBeforeDecrement = 0;
+        int lowerDestinationIndexBeforeIncrement = 0;
+        int lowerYOffsetBeforeIncrement = 0;
+        int destinationWeight256;
+        int sourceRedWeighted;
+        int sourceGreenWeighted;
+        int sourceBlueWeighted;
+        int destinationRedWeighted;
+        int destinationGreenWeighted;
+        int destinationBlueWeighted;
+        int clippedTop;
+        int clippedBottomExclusive;
+        int rowY;
+        int radiusSquared;
+        int xExtent;
+        int yOffset;
+        int xAdjustedSquaredDistance;
+        int yAdjustedSquaredDistance;
+        int spanLeft;
+        int spanRightExclusiveOrInclusive;
+        int destinationIndex;
+        int spanX;
+        int blendedColor;
+        int lowerDestinationIndex;
         if (alpha256 == 0) {
           return;
         }
@@ -644,105 +644,105 @@ final class SoftwareRasterizer {
           if (radius < 0) {
             radius = -radius;
           }
-          var5 = 256 - alpha256;
-          var6 = (color >> 16 & 255) * alpha256;
-          var7 = (color >> 8 & 255) * alpha256;
-          var8 = (color & 255) * alpha256;
-          var12 = centerY - radius;
-          if (var12 < clipTop) {
-            var12 = clipTop;
+          destinationWeight256 = 256 - alpha256;
+          sourceRedWeighted = (color >> 16 & 255) * alpha256;
+          sourceGreenWeighted = (color >> 8 & 255) * alpha256;
+          sourceBlueWeighted = (color & 255) * alpha256;
+          clippedTop = centerY - radius;
+          if (clippedTop < clipTop) {
+            clippedTop = clipTop;
           }
-          var13 = centerY + radius + 1;
-          if (var13 > clipBottom) {
-            var13 = clipBottom;
+          clippedBottomExclusive = centerY + radius + 1;
+          if (clippedBottomExclusive > clipBottom) {
+            clippedBottomExclusive = clipBottom;
           }
-          var14 = var12;
-          var15 = radius * radius;
-          var16 = 0;
-          var17 = centerY - var14;
-          var18 = var17 * var17;
-          var19 = var18 - var17;
-          if (centerY > var13) {
-            centerY = var13;
+          rowY = clippedTop;
+          radiusSquared = radius * radius;
+          xExtent = 0;
+          yOffset = centerY - rowY;
+          xAdjustedSquaredDistance = yOffset * yOffset;
+          yAdjustedSquaredDistance = xAdjustedSquaredDistance - yOffset;
+          if (centerY > clippedBottomExclusive) {
+            centerY = clippedBottomExclusive;
           }
           L4: while (true) {
-            if (var14 < centerY) {
+            if (rowY < centerY) {
               L11: while (true) {
-                if (var19 > var15) {
-                  if (var18 > var15) {
-                    var20 = centerX - var16 + 1;
-                    if (var20 < clipLeft) {
-                      var20 = clipLeft;
+                if (yAdjustedSquaredDistance > radiusSquared) {
+                  if (xAdjustedSquaredDistance > radiusSquared) {
+                    spanLeft = centerX - xExtent + 1;
+                    if (spanLeft < clipLeft) {
+                      spanLeft = clipLeft;
                     }
-                    var21 = centerX + var16;
-                    if (var21 > clipRight) {
-                      var21 = clipRight;
+                    spanRightExclusiveOrInclusive = centerX + xExtent;
+                    if (spanRightExclusiveOrInclusive > clipRight) {
+                      spanRightExclusiveOrInclusive = clipRight;
                     }
-                    var22 = var20 + var14 * stride;
-                    for (var23 = var20; var23 < var21; var23++) {
-                      var9 = (framebuffer[var22] >> 16 & 255) * var5;
-                      var10 = (framebuffer[var22] >> 8 & 255) * var5;
-                      var11 = (framebuffer[var22] & 255) * var5;
-                      var24 = (var6 + var9 >> 8 << 16) + (var7 + var10 >> 8 << 8) + (var8 + var11 >> 8);
-                      incrementValue$4 = var22;
-                      var22++;
-                      framebuffer[incrementValue$4] = var24;
+                    destinationIndex = spanLeft + rowY * stride;
+                    for (spanX = spanLeft; spanX < spanRightExclusiveOrInclusive; spanX++) {
+                      destinationRedWeighted = (framebuffer[destinationIndex] >> 16 & 255) * destinationWeight256;
+                      destinationGreenWeighted = (framebuffer[destinationIndex] >> 8 & 255) * destinationWeight256;
+                      destinationBlueWeighted = (framebuffer[destinationIndex] & 255) * destinationWeight256;
+                      blendedColor = (sourceRedWeighted + destinationRedWeighted >> 8 << 16) + (sourceGreenWeighted + destinationGreenWeighted >> 8 << 8) + (sourceBlueWeighted + destinationBlueWeighted >> 8);
+                      upperDestinationIndexBeforeIncrement = destinationIndex;
+                      destinationIndex++;
+                      framebuffer[upperDestinationIndexBeforeIncrement] = blendedColor;
                     }
-                    var14++;
-                    incrementValue$3 = var17;
-                    var17--;
-                    var18 = var18 - (incrementValue$3 + var17);
-                    var19 = var19 - (var17 + var17);
+                    rowY++;
+                    upperYOffsetBeforeDecrement = yOffset;
+                    yOffset--;
+                    xAdjustedSquaredDistance = xAdjustedSquaredDistance - (upperYOffsetBeforeDecrement + yOffset);
+                    yAdjustedSquaredDistance = yAdjustedSquaredDistance - (yOffset + yOffset);
                     continue L4;
                   }
                 }
-                var18 = var18 + (var16 + var16);
-                incrementValue$5 = var16;
-                var16++;
-                var19 = var19 + (incrementValue$5 + var16);
+                xAdjustedSquaredDistance = xAdjustedSquaredDistance + (xExtent + xExtent);
+                upperXExtentBeforeIncrement = xExtent;
+                xExtent++;
+                yAdjustedSquaredDistance = yAdjustedSquaredDistance + (upperXExtentBeforeIncrement + xExtent);
                 continue L11;
               }
             }
-            var16 = radius;
-            var17 = -var17;
-            var19 = var17 * var17 + var15;
-            var18 = var19 - var16;
-            var19 = var19 - var17;
-            L5: while (var14 < var13) {
-              L6: while (var19 > var15) {
-                if (var18 > var15) {
-                  incrementValue$0 = var16;
-                  var16--;
-                  var19 = var19 - (incrementValue$0 + var16);
-                  var18 = var18 - (var16 + var16);
+            xExtent = radius;
+            yOffset = -yOffset;
+            yAdjustedSquaredDistance = yOffset * yOffset + radiusSquared;
+            xAdjustedSquaredDistance = yAdjustedSquaredDistance - xExtent;
+            yAdjustedSquaredDistance = yAdjustedSquaredDistance - yOffset;
+            L5: while (rowY < clippedBottomExclusive) {
+              L6: while (yAdjustedSquaredDistance > radiusSquared) {
+                if (xAdjustedSquaredDistance > radiusSquared) {
+                  lowerXExtentBeforeDecrement = xExtent;
+                  xExtent--;
+                  yAdjustedSquaredDistance = yAdjustedSquaredDistance - (lowerXExtentBeforeDecrement + xExtent);
+                  xAdjustedSquaredDistance = xAdjustedSquaredDistance - (xExtent + xExtent);
                   continue L6;
                 }
                 break;
               }
-              var20 = centerX - var16;
-              if (var20 < clipLeft) {
-                var20 = clipLeft;
+              spanLeft = centerX - xExtent;
+              if (spanLeft < clipLeft) {
+                spanLeft = clipLeft;
               }
-              var21 = centerX + var16;
-              if (var21 > clipRight - 1) {
-                var21 = clipRight - 1;
+              spanRightExclusiveOrInclusive = centerX + xExtent;
+              if (spanRightExclusiveOrInclusive > clipRight - 1) {
+                spanRightExclusiveOrInclusive = clipRight - 1;
               }
-              var25 = var20 + var14 * stride;
-              var22 = var25;
-              for (var23 = var20; var23 <= var21; var23++) {
-                var9 = (framebuffer[var25] >> 16 & 255) * var5;
-                var10 = (framebuffer[var25] >> 8 & 255) * var5;
-                var11 = (framebuffer[var25] & 255) * var5;
-                var24 = (var6 + var9 >> 8 << 16) + (var7 + var10 >> 8 << 8) + (var8 + var11 >> 8);
-                incrementValue$2 = var25;
-                var25++;
-                framebuffer[incrementValue$2] = var24;
+              lowerDestinationIndex = spanLeft + rowY * stride;
+              destinationIndex = lowerDestinationIndex;
+              for (spanX = spanLeft; spanX <= spanRightExclusiveOrInclusive; spanX++) {
+                destinationRedWeighted = (framebuffer[lowerDestinationIndex] >> 16 & 255) * destinationWeight256;
+                destinationGreenWeighted = (framebuffer[lowerDestinationIndex] >> 8 & 255) * destinationWeight256;
+                destinationBlueWeighted = (framebuffer[lowerDestinationIndex] & 255) * destinationWeight256;
+                blendedColor = (sourceRedWeighted + destinationRedWeighted >> 8 << 16) + (sourceGreenWeighted + destinationGreenWeighted >> 8 << 8) + (sourceBlueWeighted + destinationBlueWeighted >> 8);
+                lowerDestinationIndexBeforeIncrement = lowerDestinationIndex;
+                lowerDestinationIndex++;
+                framebuffer[lowerDestinationIndexBeforeIncrement] = blendedColor;
               }
-              var14++;
-              var19 = var19 + (var17 + var17);
-              incrementValue$1 = var17;
-              var17++;
-              var18 = var18 + (incrementValue$1 + var17);
+              rowY++;
+              yAdjustedSquaredDistance = yAdjustedSquaredDistance + (yOffset + yOffset);
+              lowerYOffsetBeforeIncrement = yOffset;
+              yOffset++;
+              xAdjustedSquaredDistance = xAdjustedSquaredDistance + (lowerYOffsetBeforeIncrement + yOffset);
             }
             return;
           }
@@ -750,9 +750,9 @@ final class SoftwareRasterizer {
     }
 
     final static void fillRectangle(int x, int y, int width, int height, int color) {
-        int var7 = 0;
-        int var8 = 0;
-        int incrementValue$0 = 0;
+        int negativeRowCounter = 0;
+        int negativeColumnCounter = 0;
+        int destinationIndexBeforeIncrement = 0;
         if (x < clipLeft) {
             width = width - (clipLeft - x);
             x = clipLeft;
@@ -767,21 +767,21 @@ final class SoftwareRasterizer {
         if (y + height > clipBottom) {
             height = clipBottom - y;
         }
-        int var5 = stride - width;
-        int var6 = x + y * stride;
-        for (var7 = -height; var7 < 0; var7++) {
-            for (var8 = -width; var8 < 0; var8++) {
-                incrementValue$0 = var6;
-                var6++;
-                framebuffer[incrementValue$0] = color;
+        int destinationRowSkip = stride - width;
+        int destinationIndex = x + y * stride;
+        for (negativeRowCounter = -height; negativeRowCounter < 0; negativeRowCounter++) {
+            for (negativeColumnCounter = -width; negativeColumnCounter < 0; negativeColumnCounter++) {
+                destinationIndexBeforeIncrement = destinationIndex;
+                destinationIndex++;
+                framebuffer[destinationIndexBeforeIncrement] = color;
             }
-            var6 = var6 + var5;
+            destinationIndex = destinationIndex + destinationRowSkip;
         }
     }
 
     final static void drawHorizontalLine(int x, int y, int length, int color) {
-        int var4 = 0;
-        int var5 = 0;
+        int rowStartIndex = 0;
+        int pixelOffset = 0;
         if (y >= clipTop) {
             if (y >= clipBottom) {
                 return;
@@ -793,33 +793,33 @@ final class SoftwareRasterizer {
             if (x + length > clipRight) {
                 length = clipRight - x;
             }
-            var4 = x + y * stride;
-            for (var5 = 0; var5 < length; var5++) {
-                framebuffer[var4 + var5] = color;
+            rowStartIndex = x + y * stride;
+            for (pixelOffset = 0; pixelOffset < length; pixelOffset++) {
+                framebuffer[rowStartIndex + pixelOffset] = color;
             }
             return;
         }
     }
 
     final static void fillCircle(int centerX, int centerY, int radius, int color) {
-        int incrementValue$4 = 0;
-        int incrementValue$3 = 0;
-        int incrementValue$5 = 0;
-        int incrementValue$0 = 0;
-        int incrementValue$2 = 0;
-        int incrementValue$1 = 0;
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        int var8;
-        int var9;
-        int var10;
-        int var11;
-        int var12;
-        int var13;
-        int var14;
-        int var15;
+        int upperDestinationIndexBeforeIncrement = 0;
+        int upperYOffsetBeforeDecrement = 0;
+        int upperXExtentBeforeIncrement = 0;
+        int lowerXExtentBeforeDecrement = 0;
+        int lowerDestinationIndexBeforeIncrement = 0;
+        int lowerYOffsetBeforeIncrement = 0;
+        int clippedTop;
+        int clippedBottomExclusive;
+        int rowY;
+        int radiusSquared;
+        int xExtent;
+        int yOffset;
+        int xAdjustedSquaredDistance;
+        int yAdjustedSquaredDistance;
+        int spanLeft;
+        int spanRightExclusiveOrInclusive;
+        int destinationIndex;
+        int spanX;
         if (radius == 0) {
           SoftwareRasterizer.setPixel(centerX, centerY, color);
           return;
@@ -828,92 +828,92 @@ final class SoftwareRasterizer {
           if (radius < 0) {
             radius = -radius;
           }
-          var4 = centerY - radius;
-          if (var4 < clipTop) {
-            var4 = clipTop;
+          clippedTop = centerY - radius;
+          if (clippedTop < clipTop) {
+            clippedTop = clipTop;
           }
-          var5 = centerY + radius + 1;
-          if (var5 > clipBottom) {
-            var5 = clipBottom;
+          clippedBottomExclusive = centerY + radius + 1;
+          if (clippedBottomExclusive > clipBottom) {
+            clippedBottomExclusive = clipBottom;
           }
-          var6 = var4;
-          var7 = radius * radius;
-          var8 = 0;
-          var9 = centerY - var6;
-          var10 = var9 * var9;
-          var11 = var10 - var9;
-          if (centerY > var5) {
-            centerY = var5;
+          rowY = clippedTop;
+          radiusSquared = radius * radius;
+          xExtent = 0;
+          yOffset = centerY - rowY;
+          xAdjustedSquaredDistance = yOffset * yOffset;
+          yAdjustedSquaredDistance = xAdjustedSquaredDistance - yOffset;
+          if (centerY > clippedBottomExclusive) {
+            centerY = clippedBottomExclusive;
           }
           L4: while (true) {
-            if (var6 < centerY) {
+            if (rowY < centerY) {
               L11: while (true) {
-                if (var11 > var7) {
-                  if (var10 > var7) {
-                    var12 = centerX - var8 + 1;
-                    if (var12 < clipLeft) {
-                      var12 = clipLeft;
+                if (yAdjustedSquaredDistance > radiusSquared) {
+                  if (xAdjustedSquaredDistance > radiusSquared) {
+                    spanLeft = centerX - xExtent + 1;
+                    if (spanLeft < clipLeft) {
+                      spanLeft = clipLeft;
                     }
-                    var13 = centerX + var8;
-                    if (var13 > clipRight) {
-                      var13 = clipRight;
+                    spanRightExclusiveOrInclusive = centerX + xExtent;
+                    if (spanRightExclusiveOrInclusive > clipRight) {
+                      spanRightExclusiveOrInclusive = clipRight;
                     }
-                    var14 = var12 + var6 * stride;
-                    for (var15 = var12; var15 < var13; var15++) {
-                      incrementValue$4 = var14;
-                      var14++;
-                      framebuffer[incrementValue$4] = color;
+                    destinationIndex = spanLeft + rowY * stride;
+                    for (spanX = spanLeft; spanX < spanRightExclusiveOrInclusive; spanX++) {
+                      upperDestinationIndexBeforeIncrement = destinationIndex;
+                      destinationIndex++;
+                      framebuffer[upperDestinationIndexBeforeIncrement] = color;
                     }
-                    var6++;
-                    incrementValue$3 = var9;
-                    var9--;
-                    var10 = var10 - (incrementValue$3 + var9);
-                    var11 = var11 - (var9 + var9);
+                    rowY++;
+                    upperYOffsetBeforeDecrement = yOffset;
+                    yOffset--;
+                    xAdjustedSquaredDistance = xAdjustedSquaredDistance - (upperYOffsetBeforeDecrement + yOffset);
+                    yAdjustedSquaredDistance = yAdjustedSquaredDistance - (yOffset + yOffset);
                     continue L4;
                   }
                 }
-                var10 = var10 + (var8 + var8);
-                incrementValue$5 = var8;
-                var8++;
-                var11 = var11 + (incrementValue$5 + var8);
+                xAdjustedSquaredDistance = xAdjustedSquaredDistance + (xExtent + xExtent);
+                upperXExtentBeforeIncrement = xExtent;
+                xExtent++;
+                yAdjustedSquaredDistance = yAdjustedSquaredDistance + (upperXExtentBeforeIncrement + xExtent);
                 continue L11;
               }
             }
-            var8 = radius;
-            var9 = var6 - centerY;
-            var11 = var9 * var9 + var7;
-            var10 = var11 - var8;
-            var11 = var11 - var9;
-            L5: while (var6 < var5) {
-              L6: while (var11 > var7) {
-                if (var10 > var7) {
-                  incrementValue$0 = var8;
-                  var8--;
-                  var11 = var11 - (incrementValue$0 + var8);
-                  var10 = var10 - (var8 + var8);
+            xExtent = radius;
+            yOffset = rowY - centerY;
+            yAdjustedSquaredDistance = yOffset * yOffset + radiusSquared;
+            xAdjustedSquaredDistance = yAdjustedSquaredDistance - xExtent;
+            yAdjustedSquaredDistance = yAdjustedSquaredDistance - yOffset;
+            L5: while (rowY < clippedBottomExclusive) {
+              L6: while (yAdjustedSquaredDistance > radiusSquared) {
+                if (xAdjustedSquaredDistance > radiusSquared) {
+                  lowerXExtentBeforeDecrement = xExtent;
+                  xExtent--;
+                  yAdjustedSquaredDistance = yAdjustedSquaredDistance - (lowerXExtentBeforeDecrement + xExtent);
+                  xAdjustedSquaredDistance = xAdjustedSquaredDistance - (xExtent + xExtent);
                   continue L6;
                 }
                 break;
               }
-              var12 = centerX - var8;
-              if (var12 < clipLeft) {
-                var12 = clipLeft;
+              spanLeft = centerX - xExtent;
+              if (spanLeft < clipLeft) {
+                spanLeft = clipLeft;
               }
-              var13 = centerX + var8;
-              if (var13 > clipRight - 1) {
-                var13 = clipRight - 1;
+              spanRightExclusiveOrInclusive = centerX + xExtent;
+              if (spanRightExclusiveOrInclusive > clipRight - 1) {
+                spanRightExclusiveOrInclusive = clipRight - 1;
               }
-              var14 = var12 + var6 * stride;
-              for (var15 = var12; var15 <= var13; var15++) {
-                incrementValue$2 = var14;
-                var14++;
-                framebuffer[incrementValue$2] = color;
+              destinationIndex = spanLeft + rowY * stride;
+              for (spanX = spanLeft; spanX <= spanRightExclusiveOrInclusive; spanX++) {
+                lowerDestinationIndexBeforeIncrement = destinationIndex;
+                destinationIndex++;
+                framebuffer[lowerDestinationIndexBeforeIncrement] = color;
               }
-              var6++;
-              var11 = var11 + (var9 + var9);
-              incrementValue$1 = var9;
-              var9++;
-              var10 = var10 + (incrementValue$1 + var9);
+              rowY++;
+              yAdjustedSquaredDistance = yAdjustedSquaredDistance + (yOffset + yOffset);
+              lowerYOffsetBeforeIncrement = yOffset;
+              yOffset++;
+              xAdjustedSquaredDistance = xAdjustedSquaredDistance + (lowerYOffsetBeforeIncrement + yOffset);
             }
             return;
           }
@@ -921,8 +921,8 @@ final class SoftwareRasterizer {
     }
 
     final static void drawLine(int startX, int startY, int endX, int endY, int color) {
-        int var5;
-        int var6;
+        int minorAxisStepQ16;
+        int minorAxisPixel;
         endX = endX - startX;
         endY = endY - startY;
         if (endY == 0) {
@@ -951,23 +951,23 @@ final class SoftwareRasterizer {
           startX = startX << 16;
           startX = startX + 32768;
           endX = endX << 16;
-          var5 = (int)Math.floor((double)endX / (double)endY + 0.5);
+          minorAxisStepQ16 = (int)Math.floor((double)endX / (double)endY + 0.5);
           endY = endY + startY;
           if (startY < clipTop) {
-            startX = startX + var5 * (clipTop - startY);
+            startX = startX + minorAxisStepQ16 * (clipTop - startY);
             startY = clipTop;
           }
           if (endY >= clipBottom) {
             endY = clipBottom - 1;
           }
           L3: while (startY <= endY) {
-            var6 = startX >> 16;
-            if (var6 >= clipLeft) {
-              if (var6 < clipRight) {
-                framebuffer[var6 + startY * stride] = color;
+            minorAxisPixel = startX >> 16;
+            if (minorAxisPixel >= clipLeft) {
+              if (minorAxisPixel < clipRight) {
+                framebuffer[minorAxisPixel + startY * stride] = color;
               }
             }
-            startX = startX + var5;
+            startX = startX + minorAxisStepQ16;
             startY++;
           }
           return;
@@ -975,37 +975,37 @@ final class SoftwareRasterizer {
         startY = startY << 16;
         startY = startY + 32768;
         endY = endY << 16;
-        var5 = (int)Math.floor((double)endY / (double)endX + 0.5);
+        minorAxisStepQ16 = (int)Math.floor((double)endY / (double)endX + 0.5);
         endX = endX + startX;
         if (startX < clipLeft) {
-          startY = startY + var5 * (clipLeft - startX);
+          startY = startY + minorAxisStepQ16 * (clipLeft - startX);
           startX = clipLeft;
         }
         if (endX >= clipRight) {
           endX = clipRight - 1;
         }
         L7: while (startX <= endX) {
-          var6 = startY >> 16;
-          if (var6 >= clipTop) {
-            if (var6 < clipBottom) {
-              framebuffer[startX + var6 * stride] = color;
+          minorAxisPixel = startY >> 16;
+          if (minorAxisPixel >= clipTop) {
+            if (minorAxisPixel < clipBottom) {
+              framebuffer[startX + minorAxisPixel * stride] = color;
             }
           }
-          startY = startY + var5;
+          startY = startY + minorAxisStepQ16;
           startX++;
         }
     }
 
     final static void drawCircle(int centerX, int centerY, int radius, int color) {
-        int incrementValue$0 = 0;
-        int incrementValue$1 = 0;
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        int var8;
-        int var9;
-        int var10;
+        int unclippedMinorOffsetBeforeIncrement = 0;
+        int clippedMinorOffsetBeforeIncrement = 0;
+        int upperMinorRowCenterIndex;
+        int lowerMinorRowCenterIndex;
+        int upperMajorRowCenterIndex;
+        int lowerMajorRowCenterIndex;
+        int arcMajorOffset;
+        int arcMinorOffset;
+        int xAdjustedSquaredDistance;
         if (radius == 0) {
           SoftwareRasterizer.setPixel(centerX, centerY, color);
           return;
@@ -1022,178 +1022,178 @@ final class SoftwareRasterizer {
               if (centerY + radius >= clipTop) {
                 if (centerY - radius < clipBottom) {
                   L3: {
-                    var4 = centerX + centerY * stride;
-                    var5 = var4;
-                    var6 = var4 - radius * stride;
-                    var7 = var4 + radius * stride;
-                    var8 = radius;
-                    var9 = 0;
+                    upperMinorRowCenterIndex = centerX + centerY * stride;
+                    lowerMinorRowCenterIndex = upperMinorRowCenterIndex;
+                    upperMajorRowCenterIndex = upperMinorRowCenterIndex - radius * stride;
+                    lowerMajorRowCenterIndex = upperMinorRowCenterIndex + radius * stride;
+                    arcMajorOffset = radius;
+                    arcMinorOffset = 0;
                     radius = radius * radius;
-                    var10 = radius - var8;
-                    if (centerX - var8 >= clipLeft) {
-                      if (centerX + var8 < clipRight) {
-                        if (centerY - var8 >= clipTop) {
-                          if (centerY + var8 < clipBottom) {
-                            framebuffer[var4 - var8] = color;
-                            framebuffer[var4 + var8] = color;
-                            framebuffer[var6] = color;
-                            framebuffer[var7] = color;
+                    xAdjustedSquaredDistance = radius - arcMajorOffset;
+                    if (centerX - arcMajorOffset >= clipLeft) {
+                      if (centerX + arcMajorOffset < clipRight) {
+                        if (centerY - arcMajorOffset >= clipTop) {
+                          if (centerY + arcMajorOffset < clipBottom) {
+                            framebuffer[upperMinorRowCenterIndex - arcMajorOffset] = color;
+                            framebuffer[upperMinorRowCenterIndex + arcMajorOffset] = color;
+                            framebuffer[upperMajorRowCenterIndex] = color;
+                            framebuffer[lowerMajorRowCenterIndex] = color;
                             L5: while (true) {
-                              incrementValue$0 = var9;
-                              var9++;
-                              var10 = var10 + (incrementValue$0 + var9);
-                              var4 = var4 - stride;
-                              var5 = var5 + stride;
-                              if (var10 > radius) {
-                                var8--;
-                                var10 = var10 - (var8 + var8);
-                                var6 = var6 + stride;
-                                var7 = var7 - stride;
+                              unclippedMinorOffsetBeforeIncrement = arcMinorOffset;
+                              arcMinorOffset++;
+                              xAdjustedSquaredDistance = xAdjustedSquaredDistance + (unclippedMinorOffsetBeforeIncrement + arcMinorOffset);
+                              upperMinorRowCenterIndex = upperMinorRowCenterIndex - stride;
+                              lowerMinorRowCenterIndex = lowerMinorRowCenterIndex + stride;
+                              if (xAdjustedSquaredDistance > radius) {
+                                arcMajorOffset--;
+                                xAdjustedSquaredDistance = xAdjustedSquaredDistance - (arcMajorOffset + arcMajorOffset);
+                                upperMajorRowCenterIndex = upperMajorRowCenterIndex + stride;
+                                lowerMajorRowCenterIndex = lowerMajorRowCenterIndex - stride;
                               }
-                              if (var8 < var9) {
+                              if (arcMajorOffset < arcMinorOffset) {
                                 break L3;
                               }
-                              framebuffer[var6 - var9] = color;
-                              framebuffer[var6 + var9] = color;
-                              framebuffer[var4 - var8] = color;
-                              framebuffer[var4 + var8] = color;
-                              framebuffer[var5 - var8] = color;
-                              framebuffer[var5 + var8] = color;
-                              framebuffer[var7 - var9] = color;
-                              framebuffer[var7 + var9] = color;
+                              framebuffer[upperMajorRowCenterIndex - arcMinorOffset] = color;
+                              framebuffer[upperMajorRowCenterIndex + arcMinorOffset] = color;
+                              framebuffer[upperMinorRowCenterIndex - arcMajorOffset] = color;
+                              framebuffer[upperMinorRowCenterIndex + arcMajorOffset] = color;
+                              framebuffer[lowerMinorRowCenterIndex - arcMajorOffset] = color;
+                              framebuffer[lowerMinorRowCenterIndex + arcMajorOffset] = color;
+                              framebuffer[lowerMajorRowCenterIndex - arcMinorOffset] = color;
+                              framebuffer[lowerMajorRowCenterIndex + arcMinorOffset] = color;
                               continue L5;
                             }
                           }
                         }
                       }
                     }
-                    if (centerX - var8 >= clipLeft) {
+                    if (centerX - arcMajorOffset >= clipLeft) {
                       if (centerY >= clipTop) {
                         if (centerY < clipBottom) {
-                          framebuffer[var4 - var8] = color;
+                          framebuffer[upperMinorRowCenterIndex - arcMajorOffset] = color;
                         }
                       }
                     }
-                    if (centerX + var8 < clipRight) {
+                    if (centerX + arcMajorOffset < clipRight) {
                       if (centerY >= clipTop) {
                         if (centerY < clipBottom) {
-                          framebuffer[var4 + var8] = color;
+                          framebuffer[upperMinorRowCenterIndex + arcMajorOffset] = color;
                         }
                       }
                     }
-                    if (centerY - var8 >= clipTop) {
+                    if (centerY - arcMajorOffset >= clipTop) {
                       if (centerX >= clipLeft) {
                         if (centerX < clipRight) {
-                          framebuffer[var6] = color;
-                          if (centerY + var8 < clipBottom) {
+                          framebuffer[upperMajorRowCenterIndex] = color;
+                          if (centerY + arcMajorOffset < clipBottom) {
                             if (centerX >= clipLeft) {
                               if (centerX < clipRight) {
-                                framebuffer[var7] = color;
+                                framebuffer[lowerMajorRowCenterIndex] = color;
                               }
                             }
                           }
                         } else {
-                          if (centerY + var8 < clipBottom) {
+                          if (centerY + arcMajorOffset < clipBottom) {
                             if (centerX >= clipLeft) {
                               if (centerX < clipRight) {
-                                framebuffer[var7] = color;
+                                framebuffer[lowerMajorRowCenterIndex] = color;
                               }
                             }
                           }
                         }
                       } else {
-                        if (centerY + var8 < clipBottom) {
+                        if (centerY + arcMajorOffset < clipBottom) {
                           if (centerX >= clipLeft) {
                             if (centerX < clipRight) {
-                              framebuffer[var7] = color;
+                              framebuffer[lowerMajorRowCenterIndex] = color;
                             }
                           }
                         }
                       }
                     } else {
-                      if (centerY + var8 < clipBottom) {
+                      if (centerY + arcMajorOffset < clipBottom) {
                         if (centerX >= clipLeft) {
                           if (centerX < clipRight) {
-                            framebuffer[var7] = color;
+                            framebuffer[lowerMajorRowCenterIndex] = color;
                           }
                         }
                       }
                     }
                     L10: while (true) {
-                      incrementValue$1 = var9;
-                      var9++;
-                      var10 = var10 + (incrementValue$1 + var9);
-                      var4 = var4 - stride;
-                      var5 = var5 + stride;
-                      if (var10 > radius) {
-                        var8--;
-                        var10 = var10 - (var8 + var8);
-                        var6 = var6 + stride;
-                        var7 = var7 - stride;
+                      clippedMinorOffsetBeforeIncrement = arcMinorOffset;
+                      arcMinorOffset++;
+                      xAdjustedSquaredDistance = xAdjustedSquaredDistance + (clippedMinorOffsetBeforeIncrement + arcMinorOffset);
+                      upperMinorRowCenterIndex = upperMinorRowCenterIndex - stride;
+                      lowerMinorRowCenterIndex = lowerMinorRowCenterIndex + stride;
+                      if (xAdjustedSquaredDistance > radius) {
+                        arcMajorOffset--;
+                        xAdjustedSquaredDistance = xAdjustedSquaredDistance - (arcMajorOffset + arcMajorOffset);
+                        upperMajorRowCenterIndex = upperMajorRowCenterIndex + stride;
+                        lowerMajorRowCenterIndex = lowerMajorRowCenterIndex - stride;
                       }
-                      if (var8 < var9) {
+                      if (arcMajorOffset < arcMinorOffset) {
                         break L3;
                       }
-                      if (centerY - var8 >= clipTop) {
-                        if (centerY - var8 < clipBottom) {
-                          if (centerX - var9 >= clipLeft) {
-                            if (centerX - var9 < clipRight) {
-                              framebuffer[var6 - var9] = color;
+                      if (centerY - arcMajorOffset >= clipTop) {
+                        if (centerY - arcMajorOffset < clipBottom) {
+                          if (centerX - arcMinorOffset >= clipLeft) {
+                            if (centerX - arcMinorOffset < clipRight) {
+                              framebuffer[upperMajorRowCenterIndex - arcMinorOffset] = color;
                             }
                           }
-                          if (centerX + var9 >= clipLeft) {
-                            if (centerX + var9 < clipRight) {
-                              framebuffer[var6 + var9] = color;
-                            }
-                          }
-                        }
-                      }
-                      if (centerY - var9 >= clipTop) {
-                        if (centerY - var9 < clipBottom) {
-                          if (centerX - var8 >= clipLeft) {
-                            if (centerX - var8 < clipRight) {
-                              framebuffer[var4 - var8] = color;
-                            }
-                          }
-                          if (centerX + var8 >= clipLeft) {
-                            if (centerX + var8 < clipRight) {
-                              framebuffer[var4 + var8] = color;
+                          if (centerX + arcMinorOffset >= clipLeft) {
+                            if (centerX + arcMinorOffset < clipRight) {
+                              framebuffer[upperMajorRowCenterIndex + arcMinorOffset] = color;
                             }
                           }
                         }
                       }
-                      if (centerY + var9 >= clipTop) {
-                        if (centerY + var9 < clipBottom) {
-                          if (centerX - var8 >= clipLeft) {
-                            if (centerX - var8 < clipRight) {
-                              framebuffer[var5 - var8] = color;
+                      if (centerY - arcMinorOffset >= clipTop) {
+                        if (centerY - arcMinorOffset < clipBottom) {
+                          if (centerX - arcMajorOffset >= clipLeft) {
+                            if (centerX - arcMajorOffset < clipRight) {
+                              framebuffer[upperMinorRowCenterIndex - arcMajorOffset] = color;
                             }
                           }
-                          if (centerX + var8 >= clipLeft) {
-                            if (centerX + var8 < clipRight) {
-                              framebuffer[var5 + var8] = color;
+                          if (centerX + arcMajorOffset >= clipLeft) {
+                            if (centerX + arcMajorOffset < clipRight) {
+                              framebuffer[upperMinorRowCenterIndex + arcMajorOffset] = color;
                             }
                           }
                         }
                       }
-                      if (centerY + var8 < clipTop) {
-                        continue L10;
-                      }
-                      if (centerY + var8 >= clipBottom) {
-                        continue L10;
-                      }
-                      if (centerX - var9 >= clipLeft) {
-                        if (centerX - var9 < clipRight) {
-                          framebuffer[var7 - var9] = color;
+                      if (centerY + arcMinorOffset >= clipTop) {
+                        if (centerY + arcMinorOffset < clipBottom) {
+                          if (centerX - arcMajorOffset >= clipLeft) {
+                            if (centerX - arcMajorOffset < clipRight) {
+                              framebuffer[lowerMinorRowCenterIndex - arcMajorOffset] = color;
+                            }
+                          }
+                          if (centerX + arcMajorOffset >= clipLeft) {
+                            if (centerX + arcMajorOffset < clipRight) {
+                              framebuffer[lowerMinorRowCenterIndex + arcMajorOffset] = color;
+                            }
+                          }
                         }
                       }
-                      if (centerX + var9 < clipLeft) {
+                      if (centerY + arcMajorOffset < clipTop) {
                         continue L10;
                       }
-                      if (centerX + var9 >= clipRight) {
+                      if (centerY + arcMajorOffset >= clipBottom) {
                         continue L10;
                       }
-                      framebuffer[var7 + var9] = color;
+                      if (centerX - arcMinorOffset >= clipLeft) {
+                        if (centerX - arcMinorOffset < clipRight) {
+                          framebuffer[lowerMajorRowCenterIndex - arcMinorOffset] = color;
+                        }
+                      }
+                      if (centerX + arcMinorOffset < clipLeft) {
+                        continue L10;
+                      }
+                      if (centerX + arcMinorOffset >= clipRight) {
+                        continue L10;
+                      }
+                      framebuffer[lowerMajorRowCenterIndex + arcMinorOffset] = color;
                       continue L10;
                     }
                   }
@@ -1207,48 +1207,48 @@ final class SoftwareRasterizer {
     }
 
     final static void clearFramebuffer() {
-        int incrementValue$0 = 0;
-        int incrementValue$1 = 0;
-        int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
-        int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
-        int incrementValue$6 = 0;
-        int incrementValue$7 = 0;
-        int incrementValue$8 = 0;
-        int var0 = 0;
-        int var1 = stride * framebufferHeight - 7;
-        while (var0 < var1) {
-            incrementValue$0 = var0;
-            var0++;
-            framebuffer[incrementValue$0] = 0;
-            incrementValue$1 = var0;
-            var0++;
-            framebuffer[incrementValue$1] = 0;
-            incrementValue$2 = var0;
-            var0++;
-            framebuffer[incrementValue$2] = 0;
-            incrementValue$3 = var0;
-            var0++;
-            framebuffer[incrementValue$3] = 0;
-            incrementValue$4 = var0;
-            var0++;
-            framebuffer[incrementValue$4] = 0;
-            incrementValue$5 = var0;
-            var0++;
-            framebuffer[incrementValue$5] = 0;
-            incrementValue$6 = var0;
-            var0++;
-            framebuffer[incrementValue$6] = 0;
-            incrementValue$7 = var0;
-            var0++;
-            framebuffer[incrementValue$7] = 0;
+        int firstUnrolledIndexBeforeIncrement = 0;
+        int secondUnrolledIndexBeforeIncrement = 0;
+        int thirdUnrolledIndexBeforeIncrement = 0;
+        int fourthUnrolledIndexBeforeIncrement = 0;
+        int fifthUnrolledIndexBeforeIncrement = 0;
+        int sixthUnrolledIndexBeforeIncrement = 0;
+        int seventhUnrolledIndexBeforeIncrement = 0;
+        int eighthUnrolledIndexBeforeIncrement = 0;
+        int tailIndexBeforeIncrement = 0;
+        int destinationIndex = 0;
+        int unrolledThresholdOrPixelCount = stride * framebufferHeight - 7;
+        while (destinationIndex < unrolledThresholdOrPixelCount) {
+            firstUnrolledIndexBeforeIncrement = destinationIndex;
+            destinationIndex++;
+            framebuffer[firstUnrolledIndexBeforeIncrement] = 0;
+            secondUnrolledIndexBeforeIncrement = destinationIndex;
+            destinationIndex++;
+            framebuffer[secondUnrolledIndexBeforeIncrement] = 0;
+            thirdUnrolledIndexBeforeIncrement = destinationIndex;
+            destinationIndex++;
+            framebuffer[thirdUnrolledIndexBeforeIncrement] = 0;
+            fourthUnrolledIndexBeforeIncrement = destinationIndex;
+            destinationIndex++;
+            framebuffer[fourthUnrolledIndexBeforeIncrement] = 0;
+            fifthUnrolledIndexBeforeIncrement = destinationIndex;
+            destinationIndex++;
+            framebuffer[fifthUnrolledIndexBeforeIncrement] = 0;
+            sixthUnrolledIndexBeforeIncrement = destinationIndex;
+            destinationIndex++;
+            framebuffer[sixthUnrolledIndexBeforeIncrement] = 0;
+            seventhUnrolledIndexBeforeIncrement = destinationIndex;
+            destinationIndex++;
+            framebuffer[seventhUnrolledIndexBeforeIncrement] = 0;
+            eighthUnrolledIndexBeforeIncrement = destinationIndex;
+            destinationIndex++;
+            framebuffer[eighthUnrolledIndexBeforeIncrement] = 0;
         }
-        var1 += 7;
-        while (var0 < var1) {
-            incrementValue$8 = var0;
-            var0++;
-            framebuffer[incrementValue$8] = 0;
+        unrolledThresholdOrPixelCount += 7;
+        while (destinationIndex < unrolledThresholdOrPixelCount) {
+            tailIndexBeforeIncrement = destinationIndex;
+            destinationIndex++;
+            framebuffer[tailIndexBeforeIncrement] = 0;
         }
     }
 
@@ -1260,13 +1260,13 @@ final class SoftwareRasterizer {
     }
 
     final static void fillRectangleAlpha(int x, int y, int width, int height, int color, int alpha256) {
-        int var9 = 0;
-        int var10 = 0;
-        int incrementValue$0 = 0;
-        int var6;
-        int var7;
-        int var8;
-        int var11;
+        int rowIndex = 0;
+        int negativeColumnCounter = 0;
+        int destinationIndexBeforeIncrement = 0;
+        int destinationWeight256;
+        int destinationRowSkip;
+        int destinationIndex;
+        int destinationColorOrWeightedColor;
         if (x < clipLeft) {
           width = width - (clipLeft - x);
           x = clipLeft;
@@ -1282,46 +1282,46 @@ final class SoftwareRasterizer {
           height = clipBottom - y;
         }
         color = ((color & 16711935) * alpha256 >> 8 & 16711935) + ((color & 65280) * alpha256 >> 8 & 65280);
-        var6 = 256 - alpha256;
-        var7 = stride - width;
-        var8 = x + y * stride;
-        for (var9 = 0; var9 < height; var9++) {
-          for (var10 = -width; var10 < 0; var10++) {
-            var11 = framebuffer[var8];
-            var11 = ((var11 & 16711935) * var6 >> 8 & 16711935) + ((var11 & 65280) * var6 >> 8 & 65280);
-            incrementValue$0 = var8;
-            var8++;
-            framebuffer[incrementValue$0] = color + var11;
+        destinationWeight256 = 256 - alpha256;
+        destinationRowSkip = stride - width;
+        destinationIndex = x + y * stride;
+        for (rowIndex = 0; rowIndex < height; rowIndex++) {
+          for (negativeColumnCounter = -width; negativeColumnCounter < 0; negativeColumnCounter++) {
+            destinationColorOrWeightedColor = framebuffer[destinationIndex];
+            destinationColorOrWeightedColor = ((destinationColorOrWeightedColor & 16711935) * destinationWeight256 >> 8 & 16711935) + ((destinationColorOrWeightedColor & 65280) * destinationWeight256 >> 8 & 65280);
+            destinationIndexBeforeIncrement = destinationIndex;
+            destinationIndex++;
+            framebuffer[destinationIndexBeforeIncrement] = color + destinationColorOrWeightedColor;
           }
-          var8 = var8 + var7;
+          destinationIndex = destinationIndex + destinationRowSkip;
         }
     }
 
     final static void fillRoundedRectangle(int x, int y, int width, int height, int cornerRadius, int color) {
-        int incrementValue$5 = 0;
-        int incrementValue$4 = 0;
-        int incrementValue$6 = 0;
-        int var22 = 0;
-        int incrementValue$3 = 0;
-        int incrementValue$0 = 0;
-        int incrementValue$2 = 0;
-        int incrementValue$1 = 0;
-        int var6;
-        int var7;
-        int var8;
-        int var9;
-        int var10;
-        int var11;
-        int var12;
-        int var13;
-        int var14;
-        int var15;
-        int var16;
-        int var17;
-        int var18;
-        int var19;
-        int var20;
-        int var21;
+        int upperDestinationIndexBeforeIncrement = 0;
+        int upperYOffsetBeforeDecrement = 0;
+        int upperXExtentBeforeIncrement = 0;
+        int middleSpanX = 0;
+        int middleDestinationIndexBeforeIncrement = 0;
+        int lowerXExtentBeforeDecrement = 0;
+        int lowerDestinationIndexBeforeIncrement = 0;
+        int lowerYOffsetBeforeIncrement = 0;
+        int leftCornerCenterX;
+        int topCornerCenterYOrUpperHalfEnd;
+        int clippedTop;
+        int clippedBottomExclusive;
+        int horizontalCenterGap;
+        int rowY;
+        int radiusSquared;
+        int xExtent;
+        int yOffset;
+        int xAdjustedSquaredDistance;
+        int yAdjustedSquaredDistance;
+        int spanLeft;
+        int spanRightExclusiveOrInclusive;
+        int destinationIndex;
+        int spanXOrMiddleRowSkip;
+        int middleBottomExclusive;
         if (cornerRadius == 0) {
           SoftwareRasterizer.fillRectangle(x, y, width, height, color);
           return;
@@ -1330,120 +1330,120 @@ final class SoftwareRasterizer {
           if (cornerRadius < 0) {
             cornerRadius = -cornerRadius;
           }
-          var6 = x + cornerRadius;
-          var7 = y + cornerRadius;
-          var8 = y;
-          if (var8 < clipTop) {
-            var8 = clipTop;
+          leftCornerCenterX = x + cornerRadius;
+          topCornerCenterYOrUpperHalfEnd = y + cornerRadius;
+          clippedTop = y;
+          if (clippedTop < clipTop) {
+            clippedTop = clipTop;
           }
-          var9 = y + height;
-          if (var9 > clipBottom) {
-            var9 = clipBottom;
+          clippedBottomExclusive = y + height;
+          if (clippedBottomExclusive > clipBottom) {
+            clippedBottomExclusive = clipBottom;
           }
-          var10 = width - cornerRadius - cornerRadius - 1;
-          var11 = var8;
-          var12 = cornerRadius * cornerRadius;
-          var13 = 0;
-          var14 = var7 - var11;
-          var15 = var14 * var14;
-          var16 = var15 - var14;
-          if (var7 > var9) {
-            var7 = var9;
+          horizontalCenterGap = width - cornerRadius - cornerRadius - 1;
+          rowY = clippedTop;
+          radiusSquared = cornerRadius * cornerRadius;
+          xExtent = 0;
+          yOffset = topCornerCenterYOrUpperHalfEnd - rowY;
+          xAdjustedSquaredDistance = yOffset * yOffset;
+          yAdjustedSquaredDistance = xAdjustedSquaredDistance - yOffset;
+          if (topCornerCenterYOrUpperHalfEnd > clippedBottomExclusive) {
+            topCornerCenterYOrUpperHalfEnd = clippedBottomExclusive;
           }
           L4: while (true) {
-            if (var11 < var7) {
+            if (rowY < topCornerCenterYOrUpperHalfEnd) {
               L16: while (true) {
-                if (var16 > var12) {
-                  if (var15 > var12) {
-                    var17 = var6 - var13 + 1;
-                    if (var17 < clipLeft) {
-                      var17 = clipLeft;
+                if (yAdjustedSquaredDistance > radiusSquared) {
+                  if (xAdjustedSquaredDistance > radiusSquared) {
+                    spanLeft = leftCornerCenterX - xExtent + 1;
+                    if (spanLeft < clipLeft) {
+                      spanLeft = clipLeft;
                     }
-                    var18 = var6 + var10 + var13;
-                    if (var18 > clipRight) {
-                      var18 = clipRight;
+                    spanRightExclusiveOrInclusive = leftCornerCenterX + horizontalCenterGap + xExtent;
+                    if (spanRightExclusiveOrInclusive > clipRight) {
+                      spanRightExclusiveOrInclusive = clipRight;
                     }
-                    var19 = var17 + var11 * stride;
-                    for (var20 = var17; var20 < var18; var20++) {
-                      incrementValue$5 = var19;
-                      var19++;
-                      framebuffer[incrementValue$5] = color;
+                    destinationIndex = spanLeft + rowY * stride;
+                    for (spanXOrMiddleRowSkip = spanLeft; spanXOrMiddleRowSkip < spanRightExclusiveOrInclusive; spanXOrMiddleRowSkip++) {
+                      upperDestinationIndexBeforeIncrement = destinationIndex;
+                      destinationIndex++;
+                      framebuffer[upperDestinationIndexBeforeIncrement] = color;
                     }
-                    var11++;
-                    incrementValue$4 = var14;
-                    var14--;
-                    var15 = var15 - (incrementValue$4 + var14);
-                    var16 = var16 - (var14 + var14);
+                    rowY++;
+                    upperYOffsetBeforeDecrement = yOffset;
+                    yOffset--;
+                    xAdjustedSquaredDistance = xAdjustedSquaredDistance - (upperYOffsetBeforeDecrement + yOffset);
+                    yAdjustedSquaredDistance = yAdjustedSquaredDistance - (yOffset + yOffset);
                     continue L4;
                   }
                 }
-                var15 = var15 + (var13 + var13);
-                incrementValue$6 = var13;
-                var13++;
-                var16 = var16 + (incrementValue$6 + var13);
+                xAdjustedSquaredDistance = xAdjustedSquaredDistance + (xExtent + xExtent);
+                upperXExtentBeforeIncrement = xExtent;
+                xExtent++;
+                yAdjustedSquaredDistance = yAdjustedSquaredDistance + (upperXExtentBeforeIncrement + xExtent);
                 continue L16;
               }
             }
             {
-              var14 = var11 - var7;
-              var17 = x;
-              if (var17 < clipLeft) {
-                var17 = clipLeft;
+              yOffset = rowY - topCornerCenterYOrUpperHalfEnd;
+              spanLeft = x;
+              if (spanLeft < clipLeft) {
+                spanLeft = clipLeft;
               }
-              var18 = x + width;
-              if (var18 > clipRight) {
-                var18 = clipRight;
+              spanRightExclusiveOrInclusive = x + width;
+              if (spanRightExclusiveOrInclusive > clipRight) {
+                spanRightExclusiveOrInclusive = clipRight;
               }
-              var19 = var17 + var11 * stride;
-              var20 = stride + var17 - var18;
-              var21 = y + height - cornerRadius - 1;
-              if (var21 > clipBottom) {
-                var21 = clipBottom;
+              destinationIndex = spanLeft + rowY * stride;
+              spanXOrMiddleRowSkip = stride + spanLeft - spanRightExclusiveOrInclusive;
+              middleBottomExclusive = y + height - cornerRadius - 1;
+              if (middleBottomExclusive > clipBottom) {
+                middleBottomExclusive = clipBottom;
               }
-              L8: while (var11 < var21) {
-                for (var22 = var17; var22 < var18; var22++) {
-                  incrementValue$3 = var19;
-                  var19++;
-                  framebuffer[incrementValue$3] = color;
+              L8: while (rowY < middleBottomExclusive) {
+                for (middleSpanX = spanLeft; middleSpanX < spanRightExclusiveOrInclusive; middleSpanX++) {
+                  middleDestinationIndexBeforeIncrement = destinationIndex;
+                  destinationIndex++;
+                  framebuffer[middleDestinationIndexBeforeIncrement] = color;
                 }
-                var11++;
-                var19 = var19 + var20;
+                rowY++;
+                destinationIndex = destinationIndex + spanXOrMiddleRowSkip;
               }
-              var14 = 0;
-              var13 = cornerRadius;
-              var16 = var14 * var14 + var12;
-              var15 = var16 - var13;
-              var16 = var16 - var14;
-              L9: while (var11 < var9) {
-                L10: while (var16 > var12) {
-                  if (var15 > var12) {
-                    incrementValue$0 = var13;
-                    var13--;
-                    var16 = var16 - (incrementValue$0 + var13);
-                    var15 = var15 - (var13 + var13);
+              yOffset = 0;
+              xExtent = cornerRadius;
+              yAdjustedSquaredDistance = yOffset * yOffset + radiusSquared;
+              xAdjustedSquaredDistance = yAdjustedSquaredDistance - xExtent;
+              yAdjustedSquaredDistance = yAdjustedSquaredDistance - yOffset;
+              L9: while (rowY < clippedBottomExclusive) {
+                L10: while (yAdjustedSquaredDistance > radiusSquared) {
+                  if (xAdjustedSquaredDistance > radiusSquared) {
+                    lowerXExtentBeforeDecrement = xExtent;
+                    xExtent--;
+                    yAdjustedSquaredDistance = yAdjustedSquaredDistance - (lowerXExtentBeforeDecrement + xExtent);
+                    xAdjustedSquaredDistance = xAdjustedSquaredDistance - (xExtent + xExtent);
                     continue L10;
                   }
                   break;
                 }
-                var17 = var6 - var13;
-                if (var17 < clipLeft) {
-                  var17 = clipLeft;
+                spanLeft = leftCornerCenterX - xExtent;
+                if (spanLeft < clipLeft) {
+                  spanLeft = clipLeft;
                 }
-                var18 = var6 + var10 + var13;
-                if (var18 > clipRight - 1) {
-                  var18 = clipRight - 1;
+                spanRightExclusiveOrInclusive = leftCornerCenterX + horizontalCenterGap + xExtent;
+                if (spanRightExclusiveOrInclusive > clipRight - 1) {
+                  spanRightExclusiveOrInclusive = clipRight - 1;
                 }
-                var19 = var17 + var11 * stride;
-                for (var20 = var17; var20 <= var18; var20++) {
-                  incrementValue$2 = var19;
-                  var19++;
-                  framebuffer[incrementValue$2] = color;
+                destinationIndex = spanLeft + rowY * stride;
+                for (spanXOrMiddleRowSkip = spanLeft; spanXOrMiddleRowSkip <= spanRightExclusiveOrInclusive; spanXOrMiddleRowSkip++) {
+                  lowerDestinationIndexBeforeIncrement = destinationIndex;
+                  destinationIndex++;
+                  framebuffer[lowerDestinationIndexBeforeIncrement] = color;
                 }
-                var11++;
-                var16 = var16 + (var14 + var14);
-                incrementValue$1 = var14;
-                var14++;
-                var15 = var15 + (incrementValue$1 + var14);
+                rowY++;
+                yAdjustedSquaredDistance = yAdjustedSquaredDistance + (yOffset + yOffset);
+                lowerYOffsetBeforeIncrement = yOffset;
+                yOffset++;
+                xAdjustedSquaredDistance = xAdjustedSquaredDistance + (lowerYOffsetBeforeIncrement + yOffset);
               }
               return;
             }
@@ -1723,8 +1723,8 @@ final class SoftwareRasterizer {
     }
 
     private final static void drawVerticalLine(int x, int y, int length, int color) {
-        int var4 = 0;
-        int var5 = 0;
+        int destinationIndex = 0;
+        int pixelOffset = 0;
         if (x >= clipLeft) {
             if (x >= clipRight) {
                 return;
@@ -1736,12 +1736,12 @@ final class SoftwareRasterizer {
             if (y + length > clipBottom) {
                 length = clipBottom - y;
             }
-            var4 = x + y * stride;
-            var5 = 0;
-            while (var5 < length) {
-                framebuffer[var4] = color;
-                var5++;
-                var4 = var4 + stride;
+            destinationIndex = x + y * stride;
+            pixelOffset = 0;
+            while (pixelOffset < length) {
+                framebuffer[destinationIndex] = color;
+                pixelOffset++;
+                destinationIndex = destinationIndex + stride;
             }
             return;
         }

@@ -1269,3 +1269,54 @@ division and increment snapshots retain their original order. The source and
 complete binding checks support these roles. Existing native fixtures do not
 execute the blur kernels; live debug rendering and device behavior remain
 unverified.
+
+## Raster primitive geometry (pass 56)
+
+Every field, method, parameter and local in `SoftwareRasterizer` now has a
+guarded semantic name. The raster class still has large labeled methods;
+this pass changes their identifiers without changing their control flow.
+
+`fillCircle` and `fillCircleAlpha` initialize `clippedTop` and
+`clippedBottomExclusive`, then walk `rowY` with an evolving `xExtent` and
+`yOffset`. At their geometry comparisons, `xAdjustedSquaredDistance` tracks
+`xExtent*(xExtent-1)+yOffset*yOffset` and `yAdjustedSquaredDistance` tracks
+`xExtent*xExtent+yOffset*(yOffset-1)`, with the original integer arithmetic.
+Upper spans exclude `spanRightExclusiveOrInclusive`; lower spans include it.
+The original `centerY` parameter is also capped by the bottom limit. Alpha0
+returns immediately and alpha256 delegates to `fillCircle`. Other alpha
+values retain source/destination channel weights and eight-bit shifts.
+
+`fillRoundedRectangle` uses the same two distance estimates around each corner,
+with `horizontalCenterGap` extending the spans across the rectangle. It fills
+the upper corners, middle band and lower corners in order.
+`topCornerCenterYOrUpperHalfEnd` retains the original clipped reuse of the
+corner center. `spanXOrMiddleRowSkip` first walks upper-span X coordinates,
+then holds the middle band's destination row skip, then walks lower-span X.
+`middleSpanX` remains its separate middle-band loop variable.
+
+`drawCircle` and `drawRoundedRectangle` keep distinct paths for entirely
+contained geometry and individually clipped pixels. `arcMajorOffset` shrinks
+while `arcMinorOffset` grows. The circle keeps four evolving row centers and
+the rounded rectangle keeps eight; the row-center names distinguish outer
+major-offset rows from inner minor-offset rows. Their one adjusted estimate
+tracks `major*(major-1)+minor*minor`. The circle still overwrites its original
+`radius` parameter with the squared radius.
+
+`drawLine` chooses the dominant axis and steps the other axis using
+`minorAxisStepQ16`, rounded with `Math.floor(ratio+0.5)`. Its original start/end
+parameters become deltas, Q16 accumulators and inclusive bounds as before.
+`fillVerticalGradient` uses `gradientPositionQ16`/`gradientStepQ16` and adjusts
+the position when clipping top rows. Alpha lines and rectangles expose their
+source/destination weights; `grayscaleRectangle` retains the original
+`((2*red+blue)/3+green)>>1` weighting. `clearFramebuffer` clears eight pixels
+per iteration, then changes `unrolledThresholdOrPixelCount` into the full
+pixel count for its tail loop.
+
+`scanlineMaskStarts` and `scanlineMaskWidths` are optional per-row glyph masks.
+The `bg` masked drawing kernel indexes them by Y relative to `clipTop` and
+compares starts to X relative to `clipLeft`. Clip changes and raster release
+clear both arrays. No non-null assignment appears in the exported game;
+external mask population and actual masked glyph rendering remain unverified.
+Source inspection and complete binding/reversal checks support these names.
+Existing native probes retain their original scopes; no full raster, real-asset,
+whole-game or device-performance claim is added.

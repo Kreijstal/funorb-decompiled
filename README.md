@@ -19,28 +19,33 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and retain all 138,558 remaining bindings
 and 388 override relationships.
 
-The current naming pass adds 64 guarded identities for the in-place blur kernels:
-61 locals and three reusable per-column color-sum caches. Every row/column
-blur parameter and local now has a role. Growing, full and shrinking windows,
-Q14 reciprocal scaling, edge sample counts, captured indices and shared cache
-aliases are explicit. Reads and writes still share the original pixel array.
+The current naming pass adds 170 guarded identities for raster drawing:
+168 locals and the two scanline-mask arrays. Every field, method, parameter and
+local in `SoftwareRasterizer` now has a guarded semantic name. Circle and rounded
+corner geometry, clipped spans, alpha weights, gradient interpolation, line
+stepping and unrolled clearing have explicit roles. Shared slots retain their
+multiple uses, including span-X/row-skip and exclusive/inclusive endpoints.
 
-The 3,369 rules apply 32,528 edits. All 303 raw/readable sources compile,
-preserving 138,558 bindings and 388 overrides. All 3,305 previous complete
-rules and raw source/decompiler pins are unchanged. Shared joins, original
-strings, clipping, clamp stores and arithmetic remain. The blur bodies are
-source-audited and binding-verified; existing native probes do not execute blur.
-Full renderer/game/device execution remains unverified. The one manifest and
+The 3,539 rules apply 33,770 edits. All 303 raw/readable sources compile,
+preserving 138,558 bindings and 388 overrides. All 3,369 previous complete
+rules and raw source/decompiler pins are unchanged. Large labeled bodies,
+original clip conditions, arithmetic and ordering remain. This names the class;
+full raster/game/device execution remains unverified. The one manifest and
 dictionary preserve reproducibility and reversal.
 
-The previous pass added 193 guarded identities for the main session renderer
+The previous pass named 61 blur-kernel locals and three reusable channel-sum
+caches. Growing, full and shrinking windows, Q14 reciprocal scaling, edge sample
+counts, captured indices and shared cache aliases are explicit. Reads and writes
+still share the original pixels. Existing native probes do not execute blur.
+
+Pass 54 added 193 guarded identities for the main session renderer
 and its draw pipeline. Every `renderSession` local now has a role. Moving and
 transient entities, avatar faces, the spawn highlight, pending-action panels,
 archive-progress formatting and debug compositing have named contracts. Two
 older names were corrected for a reused tutorial-height local and an RGB gray
 level previously described as alpha.
 
-The preceding naming pass added 118 guarded identities for raster presentation and
+Pass 53 added 118 guarded identities for raster presentation and
 nine-slice panels. `AwtRasterBuffer` and `ImageProducerRasterBuffer` describe the
 pixel/image ownership; the three-class `initialize`/`drawImage` virtual family
 keeps matching contracts. Gameplay now restores
