@@ -40,6 +40,10 @@ GeoBlox has a newer 303-file source export from a pinned owned-decompiler
 revision. It reuses the unchanged transformed bytecode whose previous fresh ASM
 check covered 2,427 methods with zero failures. All regenerated sources compile.
 The other 43 games retain the previous full-catalog export.
+The latest renderer corrects six nested-negation expressions in `dm.java` and
+`il.java`: `-(-value)` no longer becomes Java pre-decrement `--value`.
+Its 274 native numeric comparisons cover evaluation and boundary values.
+All 21,181 declaration identities and 926 reviewed spelling guards remain unchanged.
 
 [GeoBlox provenance](decompilation/geoblox-provenance.json) records the exact
 Deko and java-tools Git commits, input identities, reused pipeline proof and
