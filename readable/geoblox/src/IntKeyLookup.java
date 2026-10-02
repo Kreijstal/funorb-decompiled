@@ -55,17 +55,17 @@ final class IntKeyLookup {
               }
               indexDiskCacheOrIoFailure = null;
               if (ph.archiveTaskDispatcher.cacheDataFile != null) {
-                af.field_d = new sk(ph.archiveTaskDispatcher.cacheDataFile, 5200, 0);
+                af.field_d = new BufferedRandomAccessFile(ph.archiveTaskDispatcher.cacheDataFile, 5200, 0);
                 ph.archiveTaskDispatcher.cacheDataFile = null;
-                indexDiskCacheOrIoFailure = new jh(255, af.field_d, new sk(ph.archiveTaskDispatcher.masterCacheIndexFile, 12000, 0), 2097152);
+                indexDiskCacheOrIoFailure = new jh(255, af.field_d, new BufferedRandomAccessFile(ph.archiveTaskDispatcher.masterCacheIndexFile, 12000, 0), 2097152);
               }
               groupDiskCache = null;
               if (af.field_d != null) {
                 if (je.field_h == null) {
-                  je.field_h = new sk[ph.archiveTaskDispatcher.cacheIndexFiles.length];
+                  je.field_h = new BufferedRandomAccessFile[ph.archiveTaskDispatcher.cacheIndexFiles.length];
                 }
                 if (je.field_h[archiveId] == null) {
-                  je.field_h[archiveId] = new sk(ph.archiveTaskDispatcher.cacheIndexFiles[archiveId], 12000, 0);
+                  je.field_h[archiveId] = new BufferedRandomAccessFile(ph.archiveTaskDispatcher.cacheIndexFiles[archiveId], 12000, 0);
                   ph.archiveTaskDispatcher.cacheIndexFiles[archiveId] = null;
                 }
                 groupDiskCache = new jh(archiveId, af.field_d, je.field_h[archiveId], 2097152);

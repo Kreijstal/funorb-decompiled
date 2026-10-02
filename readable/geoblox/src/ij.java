@@ -95,7 +95,7 @@ final class ij extends oe implements pl {
                 this.field_h = this.field_h + 20;
               }
             } else {
-              if (param1 == pa.field_b) {
+              if (param1 == LimitedRandomAccessFile.field_b) {
                 var3 = f.fullscreenTimeoutText;
                 this.field_h = this.field_h + 30;
               }

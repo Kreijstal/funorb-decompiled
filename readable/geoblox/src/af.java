@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class af {
-    static sk field_b;
+    static BufferedRandomAccessFile field_b;
     static Sprite debugOverviewRaster;
-    static sk field_d;
+    static BufferedRandomAccessFile field_d;
     static int avatarFrameStepTicks;
     private static String field_z;
 
@@ -13,7 +13,7 @@ final class af {
         field_b = null;
         field_d = null;
         if (param0 > -86) {
-            field_d = (sk) null;
+            field_d = (BufferedRandomAccessFile) null;
         }
     }
 

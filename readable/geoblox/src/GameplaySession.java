@@ -591,7 +591,7 @@ final class GameplaySession {
               }
             }
             L55: {
-              dd.uiPaletteFont.drawText(wj.a(pa.field_a, new String[]{this.scoreText.toString()}, (byte) -53), 15 + selectedThemeIdOrScoreBoxX, 30 + loadingPanelWidthOrScoreBoxY, 0, -1);
+              dd.uiPaletteFont.drawText(wj.a(LimitedRandomAccessFile.field_a, new String[]{this.scoreText.toString()}, (byte) -53), 15 + selectedThemeIdOrScoreBoxX, 30 + loadingPanelWidthOrScoreBoxY, 0, -1);
               if (ih.areEntityQueuesSettled(0)) {
                 L56: {
                   if (0 != this.sessionPhase) {
@@ -1014,7 +1014,7 @@ final class GameplaySession {
             }
             this.matchBatchProcessedThisTick = ec.processMatchCandidates(-18913);
             if (this.boundaryCheckRequested) {
-              sk.checkBoundaryLossAndStartCascade(methodGuard ^ 1578896190);
+              BufferedRandomAccessFile.checkBoundaryLossAndStartCascade(methodGuard ^ 1578896190);
             }
             cf.advanceScorePopups((byte) 27);
             f.advanceGameplayAvatarAnimation(600);
@@ -1700,7 +1700,7 @@ final class GameplaySession {
         controlFlowGuard = Geoblox.field_C;
         if (0 == this.sceneAnimationTick) {
           gf.matchChainLength = 0;
-          if (sk.checkBoundaryLossAndStartCascade(methodGuard - 11)) {
+          if (BufferedRandomAccessFile.checkBoundaryLossAndStartCascade(methodGuard - 11)) {
             this.pointsPanelSlideDirection = 0;
             return;
           }

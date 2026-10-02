@@ -71,7 +71,7 @@ final class ic {
               qe.field_b = param6;
               if (GameplayEntity.field_D.randomSeedFile != null) {
                 try {
-                  af.field_b = new sk(GameplayEntity.field_D.randomSeedFile, 64, 0);
+                  af.field_b = new BufferedRandomAccessFile(GameplayEntity.field_D.randomSeedFile, 64, 0);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var15 = (IOException) (Object) decompiledCaughtException;
@@ -117,8 +117,8 @@ final class ic {
             }
             if (null != af.field_b) {
               try {
-                af.field_b.a(22, 0L);
-                af.field_b.a(24, eh.field_d.position, eh.field_d.bytes, false);
+                af.field_b.seek(22, 0L);
+                af.field_b.write(24, eh.field_d.position, eh.field_d.bytes, false);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var1 = (Exception) (Object) decompiledCaughtException;

@@ -246,7 +246,7 @@ final class eb {
                 }
                 var3 = new java.net.URL(param0.getCodeBase(), param2);
                 var3 = wf.a(var3, 59, param0);
-                pa.a(var3.toString(), (byte) 64, true, param0);
+                LimitedRandomAccessFile.a(var3.toString(), (byte) 64, true, param0);
                 return;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

@@ -1906,7 +1906,7 @@ final class AccountWelcomePanel extends ee implements pl {
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "waitingfor_soundeffects");
                 if (textResourceBytes != null) {
-                  pa.waitingForSoundEffectsText = ag.decodeTextBytes(1, textResourceBytes);
+                  LimitedRandomAccessFile.waitingForSoundEffectsText = ag.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "waitingfor_music");
                 if (textResourceBytes != null) {

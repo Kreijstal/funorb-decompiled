@@ -3,69 +3,69 @@
  */
 import java.io.*;
 
-final class pa {
+final class LimitedRandomAccessFile {
     static uj field_b;
-    private long field_f;
+    private long maximumLength;
     static String waitingForSoundEffectsText;
     static String field_a;
-    private RandomAccessFile field_d;
-    private long field_c;
+    private RandomAccessFile file;
+    private long position;
     static int avatarFeedbackHoldTicks;
 
-    final void a(byte[] param0, int param1, int param2, int param3) throws IOException {
+    final void write(byte[] source, int sourceOffset, int methodGuard, int length) throws IOException {
         try {
-            if (this.field_f < (long)param3 + this.field_c) {
-                this.field_d.seek(this.field_f);
-                this.field_d.write(1);
+            if (this.maximumLength < (long)length + this.position) {
+                this.file.seek(this.maximumLength);
+                this.file.write(1);
                 throw new EOFException();
             }
-            if (param2 != 90) {
-                pa.b((byte) 102);
+            if (methodGuard != 90) {
+                LimitedRandomAccessFile.b((byte) 102);
             }
-            this.field_d.write(param0, param1, param3);
-            this.field_c = this.field_c + (long)param3;
-        } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "pa.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+            this.file.write(source, sourceOffset, length);
+            this.position = this.position + (long)length;
+        } catch (RuntimeException writeFailure) {
+            throw t.a((Throwable) ((Object) writeFailure), "pa.A(" + (source != null ? "{...}" : "null") + ',' + sourceOffset + ',' + methodGuard + ',' + length + ')');
         }
     }
 
-    final int a(int param0, byte[] param1, int param2, boolean param3) throws IOException {
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        int stackIn_5_0 = 0;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final int read(int length, byte[] destination, int destinationOffset, boolean methodGuard) throws IOException {
+        int bytesRead = 0;
+        RuntimeException readFailureForContext = null;
+        int bytesReadBeforeReturn = 0;
+        RuntimeException readFailureBeforeContext = null;
+        StringBuilder readMessagePrefix = null;
+        String destinationDescription = null;
+        RuntimeException caughtReadFailure = null;
         try {
-          var5_int = this.field_d.read(param1, param2, param0);
-          if (var5_int > 0) {
-            this.field_c = this.field_c + (long)var5_int;
+          bytesRead = this.file.read(destination, destinationOffset, length);
+          if (bytesRead > 0) {
+            this.position = this.position + (long)bytesRead;
           }
-          if (param3) {
+          if (methodGuard) {
             avatarFeedbackHoldTicks = -101;
           }
-          stackIn_5_0 = var5_int;
-          return stackIn_5_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_8_0 = (RuntimeException) (var5);
-          stackIn_8_1 = new StringBuilder().append("pa.D(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_9_2 = "null";
+          bytesReadBeforeReturn = bytesRead;
+          return bytesReadBeforeReturn;
+        } catch (java.lang.RuntimeException readFailure) {
+          caughtReadFailure = readFailure;
+          readFailureForContext = caughtReadFailure;
+          readFailureBeforeContext = (RuntimeException) (readFailureForContext);
+          readMessagePrefix = new StringBuilder().append("pa.D(").append(length).append(',');
+          if (destination == null) {
+            destinationDescription = "null";
           } else {
-            stackIn_9_2 = "{...}";
+            destinationDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw t.a((Throwable) ((Object) readFailureBeforeContext), ((StringBuilder) (Object) readMessagePrefix).append(destinationDescription).append(',').append(destinationOffset).append(',').append(methodGuard).append(')').toString());
         }
     }
 
-    final long a(int param0) throws IOException {
-        if (param0 != 1) {
+    final long length(int methodGuard) throws IOException {
+        if (methodGuard != 1) {
             return -83L;
         }
-        return this.field_d.length();
+        return this.file.length();
     }
 
     public static void b(byte param0) {
@@ -172,9 +172,9 @@ final class pa {
     }
 
     protected final void finalize() throws Throwable {
-        if (null != this.field_d) {
+        if (null != this.file) {
             System.out.println("");
-            this.a((byte) -5);
+            this.close((byte) -5);
         }
     }
 
@@ -229,44 +229,44 @@ final class pa {
         }
     }
 
-    pa(File param0, String param1, long param2) throws IOException {
-        int var5_int = 0;
+    LimitedRandomAccessFile(File path, String mode, long maximumLength) throws IOException {
+        int firstByte = 0;
         try {
-            if (param2 == -1L) {
-                param2 = 9223372036854775807L;
+            if (maximumLength == -1L) {
+                maximumLength = 9223372036854775807L;
             }
-            if (~param2 > ~param0.length()) {
-                param0.delete();
+            if (~maximumLength > ~path.length()) {
+                path.delete();
             }
-            this.field_d = new RandomAccessFile(param0, param1);
-            this.field_f = param2;
-            this.field_c = 0L;
-            var5_int = this.field_d.read();
-            if (var5_int != -1 && !param1.equals("r")) {
-                this.field_d.seek(0L);
-                this.field_d.write(var5_int);
+            this.file = new RandomAccessFile(path, mode);
+            this.maximumLength = maximumLength;
+            this.position = 0L;
+            firstByte = this.file.read();
+            if (firstByte != -1 && !mode.equals("r")) {
+                this.file.seek(0L);
+                this.file.write(firstByte);
             }
-            this.field_d.seek(0L);
-        } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "pa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            this.file.seek(0L);
+        } catch (RuntimeException constructionFailure) {
+            throw t.a((Throwable) ((Object) constructionFailure), "pa.<init>(" + (path != null ? "{...}" : "null") + ',' + (mode != null ? "{...}" : "null") + ',' + maximumLength + ')');
         }
     }
 
-    final void a(long param0, boolean param1) throws IOException {
-        this.field_d.seek(param0);
-        this.field_c = param0;
-        if (!param1) {
+    final void seek(long position, boolean methodGuard) throws IOException {
+        this.file.seek(position);
+        this.position = position;
+        if (!methodGuard) {
             waitingForSoundEffectsText = (String) null;
         }
     }
 
-    final void a(byte param0) throws IOException {
-        if (param0 != -5) {
+    final void close(byte methodGuard) throws IOException {
+        if (methodGuard != -5) {
             return;
         }
-        if (null != this.field_d) {
-            this.field_d.close();
-            this.field_d = null;
+        if (null != this.file) {
+            this.file.close();
+            this.file = null;
         }
     }
 

@@ -12,12 +12,12 @@ final class jc {
         if (7 == feedbackRequestId) {
           if (MenuScreen.avatarFeedbackFrameBase != 36) {
             MenuScreen.avatarFeedbackFrameBase = 36;
-            pa.avatarFeedbackHoldTicks = 110;
+            LimitedRandomAccessFile.avatarFeedbackHoldTicks = 110;
             nd.avatarFeedbackModeId = 6;
             td.playPcmSample(-348, fl.field_c[23]);
           }
         }
-        if (pa.avatarFeedbackHoldTicks > 0) {
+        if (LimitedRandomAccessFile.avatarFeedbackHoldTicks > 0) {
           if (feedbackRequestId == 3) {
             wa.avatarShockEffectTicks = 50;
             td.playPcmSample(-348, fl.field_c[27]);
@@ -33,17 +33,17 @@ final class jc {
                   if (3 == feedbackRequestId) {
                     MenuScreen.avatarFeedbackFrameBase = 18;
                     wa.avatarShockEffectTicks = 50;
-                    pa.avatarFeedbackHoldTicks = 110;
+                    LimitedRandomAccessFile.avatarFeedbackHoldTicks = 110;
                     nd.avatarFeedbackModeId = 3;
                     td.playPcmSample(-348, fl.field_c[27]);
                   } else {
                     if (feedbackRequestId == 4) {
-                      pa.avatarFeedbackHoldTicks = 110;
+                      LimitedRandomAccessFile.avatarFeedbackHoldTicks = 110;
                       MenuScreen.avatarFeedbackFrameBase = 24;
                       nd.avatarFeedbackModeId = 4;
                     } else {
                       if (feedbackRequestId == 5) {
-                        pa.avatarFeedbackHoldTicks = 110;
+                        LimitedRandomAccessFile.avatarFeedbackHoldTicks = 110;
                         nd.avatarFeedbackModeId = 5;
                         MenuScreen.avatarFeedbackFrameBase = 30;
                         td.playPcmSample(-348, fl.field_c[24]);
@@ -100,17 +100,17 @@ final class jc {
                   if (3 == feedbackRequestId) {
                     MenuScreen.avatarFeedbackFrameBase = 18;
                     wa.avatarShockEffectTicks = 50;
-                    pa.avatarFeedbackHoldTicks = 110;
+                    LimitedRandomAccessFile.avatarFeedbackHoldTicks = 110;
                     nd.avatarFeedbackModeId = 3;
                     td.playPcmSample(-348, fl.field_c[27]);
                   } else {
                     if (feedbackRequestId == 4) {
-                      pa.avatarFeedbackHoldTicks = 110;
+                      LimitedRandomAccessFile.avatarFeedbackHoldTicks = 110;
                       MenuScreen.avatarFeedbackFrameBase = 24;
                       nd.avatarFeedbackModeId = 4;
                     } else {
                       if (feedbackRequestId == 5) {
-                        pa.avatarFeedbackHoldTicks = 110;
+                        LimitedRandomAccessFile.avatarFeedbackHoldTicks = 110;
                         nd.avatarFeedbackModeId = 5;
                         MenuScreen.avatarFeedbackFrameBase = 30;
                         td.playPcmSample(-348, fl.field_c[24]);

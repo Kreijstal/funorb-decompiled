@@ -344,7 +344,7 @@ final class PrefixCodeDecoder {
           frameStepTicksBeforeDecrement = af.avatarFrameStepTicks;
           af.avatarFrameStepTicks = af.avatarFrameStepTicks - 1;
           if (0 <= frameStepTicksBeforeDecrement) {
-            pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
+            LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
             gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
             if (gi.avatarBlinkClockTicks % 600 < 30) {
               DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
@@ -375,7 +375,7 @@ final class PrefixCodeDecoder {
           if (DiskCacheWorker.avatarFeedbackFrameIndex == 0 + MenuScreen.avatarFeedbackFrameBase) {
             DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 3;
             af.avatarFrameStepTicks = 20;
-            pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
+            LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
             gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
             if (gi.avatarBlinkClockTicks % 600 < 30) {
               DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
@@ -410,7 +410,7 @@ final class PrefixCodeDecoder {
                 if (avatarFrameOffsetInSegment < 5) {
                   DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex + 1;
                   af.avatarFrameStepTicks = 20;
-                  pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
+                  LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
                   gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
                   if (gi.avatarBlinkClockTicks % 600 < 30) {
                     DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
@@ -433,7 +433,7 @@ final class PrefixCodeDecoder {
                 if (avatarFrameOffsetInSegment < 3) {
                   DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex + 1;
                   af.avatarFrameStepTicks = 20;
-                  pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
+                  LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
                   gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
                   if (gi.avatarBlinkClockTicks % 600 < 30) {
                     DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
@@ -454,7 +454,7 @@ final class PrefixCodeDecoder {
               }
               if (jk.avatarSteeringDirectionId != 0) {
                 af.avatarFrameStepTicks = 20;
-                pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
+                LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
                 gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
                 if (gi.avatarBlinkClockTicks % 600 < 30) {
                   DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
@@ -474,7 +474,7 @@ final class PrefixCodeDecoder {
               }
               if (avatarFrameOffsetInSegment <= 3) {
                 af.avatarFrameStepTicks = 20;
-                pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
+                LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
                 gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
                 if (gi.avatarBlinkClockTicks % 600 < 30) {
                   DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
@@ -495,7 +495,7 @@ final class PrefixCodeDecoder {
               {
                 DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex - 1;
                 af.avatarFrameStepTicks = 20;
-                pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
+                LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
                 gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
                 if (gi.avatarBlinkClockTicks % 600 < 30) {
                   DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
@@ -517,7 +517,7 @@ final class PrefixCodeDecoder {
             if (avatarFrameOffsetInSegment > 1) {
               DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex - 1;
               af.avatarFrameStepTicks = 20;
-              pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
+              LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
               gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
               if (gi.avatarBlinkClockTicks % 600 < 30) {
                 DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
@@ -548,7 +548,7 @@ final class PrefixCodeDecoder {
               if (avatarFrameOffsetInSegment < 5) {
                 DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex + 1;
                 af.avatarFrameStepTicks = 20;
-                pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
+                LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
                 gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
                 if (gi.avatarBlinkClockTicks % 600 < 30) {
                   DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
@@ -571,7 +571,7 @@ final class PrefixCodeDecoder {
               if (avatarFrameOffsetInSegment < 3) {
                 DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex + 1;
                 af.avatarFrameStepTicks = 20;
-                pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
+                LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
                 gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
                 if (gi.avatarBlinkClockTicks % 600 < 30) {
                   DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
@@ -592,7 +592,7 @@ final class PrefixCodeDecoder {
             }
             if (jk.avatarSteeringDirectionId != 0) {
               af.avatarFrameStepTicks = 20;
-              pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
+              LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
               gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
               if (gi.avatarBlinkClockTicks % 600 < 30) {
                 DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
@@ -612,7 +612,7 @@ final class PrefixCodeDecoder {
             }
             if (avatarFrameOffsetInSegment <= 3) {
               af.avatarFrameStepTicks = 20;
-              pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
+              LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
               gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
               if (gi.avatarBlinkClockTicks % 600 < 30) {
                 DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
@@ -633,7 +633,7 @@ final class PrefixCodeDecoder {
             {
               DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex - 1;
               af.avatarFrameStepTicks = 20;
-              pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
+              LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
               gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
               if (gi.avatarBlinkClockTicks % 600 < 30) {
                 DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;

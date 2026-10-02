@@ -6,18 +6,18 @@ import java.io.*;
 final class PlatformTaskDispatcher implements Runnable {
     private static String userHomeDirectory;
     static java.lang.reflect.Method setFocusCycleRootMethod;
-    pa masterCacheIndexFile;
+    LimitedRandomAccessFile masterCacheIndexFile;
     private PlatformTask taskQueueHead;
     java.awt.EventQueue systemEventQueue;
     static String javaVersion;
     private PlatformTask taskQueueTail;
-    pa randomSeedFile;
+    LimitedRandomAccessFile randomSeedFile;
     private static volatile long networkBlockedUntilMillis;
     private Object reflectiveCursorBackend;
     private ie microsoftFullscreenBackend;
     private static int cacheVariant;
-    pa cacheDataFile;
-    pa[] cacheIndexFiles;
+    LimitedRandomAccessFile cacheDataFile;
+    LimitedRandomAccessFile[] cacheIndexFiles;
     private Thread workerThread;
     static String osNameLowerCase;
     private boolean privilegedServicesEnabled;
@@ -67,7 +67,7 @@ final class PlatformTaskDispatcher implements Runnable {
             ThreadDeath fatalThreadDeath = null;
             Throwable ignoredTaskFailure = null;
             InterruptedException ignoredWaitInterruption = null;
-            pa openedPreferencesFile = null;
+            LimitedRandomAccessFile openedPreferencesFile = null;
             int cursorXOrVisibleFlag = 0;
             Exception urlLaunchFailure = null;
             bd proxyConnectionFailure = null;
@@ -326,7 +326,7 @@ final class PlatformTaskDispatcher implements Runnable {
 
     private final PlatformTask requestSocketInternal(int guard, int port, boolean useProxy, String host) {
         if (guard != 0) {
-            this.cacheDataFile = (pa) null;
+            this.cacheDataFile = (LimitedRandomAccessFile) null;
         }
         return this.enqueueTask(1, host, port, useProxy ? 22 : 1, 0);
     }
@@ -338,16 +338,16 @@ final class PlatformTaskDispatcher implements Runnable {
         return this.enqueueTask(guard + 1, runnable, priority, 2, 0);
     }
 
-    private final static pa openPreferencesFile(byte guard, int cacheVariant, String gameName, String preferenceSuffix) {
+    private final static LimitedRandomAccessFile openPreferencesFile(byte guard, int cacheVariant, String gameName, String preferenceSuffix) {
         try {
-            pa preferencesFileAtReturn = null;
+            LimitedRandomAccessFile preferencesFileAtReturn = null;
             Throwable caughtPreferencesThrowable = null;
             String preferencesFilename = null;
             String[] searchDirectories = null;
             int directoryIndex = 0;
             int guardDivisionValue = 0;
             String searchDirectory = null;
-            pa preferencesFile = null;
+            LimitedRandomAccessFile preferencesFile = null;
             Exception ignoredOpenFailure = null;
             if (33 == cacheVariant) {
               preferencesFilename = "jagex_" + gameName + "_preferences" + preferenceSuffix + "_rc.dat";
@@ -370,8 +370,8 @@ final class PlatformTaskDispatcher implements Runnable {
                 }
               }
               try {
-                preferencesFile = new pa(new File(searchDirectory, preferencesFilename), "rw", 10000L);
-                preferencesFileAtReturn = (pa) (preferencesFile);
+                preferencesFile = new LimitedRandomAccessFile(new File(searchDirectory, preferencesFilename), "rw", 10000L);
+                preferencesFileAtReturn = (LimitedRandomAccessFile) (preferencesFile);
                 return preferencesFileAtReturn;
               } catch (java.lang.Exception openFailure) {
                 caughtPreferencesThrowable = openFailure;
@@ -414,7 +414,7 @@ final class PlatformTaskDispatcher implements Runnable {
             }
             if (this.cacheDataFile != null) {
               try {
-                this.cacheDataFile.a((byte) -5);
+                this.cacheDataFile.close((byte) -5);
               } catch (java.io.IOException dataCloseFailure) {
                 caughtShutdownThrowable = dataCloseFailure;
                 ignoredCacheCloseFailure = (IOException) (Object) caughtShutdownThrowable;
@@ -422,7 +422,7 @@ final class PlatformTaskDispatcher implements Runnable {
             }
             if (null != this.masterCacheIndexFile) {
               try {
-                this.masterCacheIndexFile.a((byte) -5);
+                this.masterCacheIndexFile.close((byte) -5);
               } catch (java.io.IOException masterIndexCloseFailure) {
                 caughtShutdownThrowable = masterIndexCloseFailure;
                 ignoredCacheCloseFailure = (IOException) (Object) caughtShutdownThrowable;
@@ -437,7 +437,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     continue L11;
                   }
                   try {
-                    this.cacheIndexFiles[cacheIndex].a((byte) -5);
+                    this.cacheIndexFiles[cacheIndex].close((byte) -5);
                     cacheIndex++;
                   } catch (java.io.IOException indexCloseFailure) {
                     caughtShutdownThrowable = indexCloseFailure;
@@ -450,7 +450,7 @@ final class PlatformTaskDispatcher implements Runnable {
             }
             if (null != this.randomSeedFile) {
               try {
-                this.randomSeedFile.a((byte) -5);
+                this.randomSeedFile.close((byte) -5);
               } catch (java.io.IOException seedCloseFailure) {
                 caughtShutdownThrowable = seedCloseFailure;
                 ignoredCacheCloseFailure = (IOException) (Object) caughtShutdownThrowable;
@@ -616,12 +616,12 @@ final class PlatformTaskDispatcher implements Runnable {
         L21: {
           aj.a((byte) 66, gameCacheName, cacheVariant);
           if (this.privilegedServicesEnabled) {
-            this.randomSeedFile = new pa(aj.a((String) null, -27533, "random.dat", cacheVariant), "rw", 25L);
-            this.cacheDataFile = new pa(aj.a("main_file_cache.dat2", (byte) -116), "rw", 314572800L);
-            this.masterCacheIndexFile = new pa(aj.a("main_file_cache.idx255", (byte) -77), "rw", 1048576L);
-            this.cacheIndexFiles = new pa[cacheIndexCount];
+            this.randomSeedFile = new LimitedRandomAccessFile(aj.a((String) null, -27533, "random.dat", cacheVariant), "rw", 25L);
+            this.cacheDataFile = new LimitedRandomAccessFile(aj.a("main_file_cache.dat2", (byte) -116), "rw", 314572800L);
+            this.masterCacheIndexFile = new LimitedRandomAccessFile(aj.a("main_file_cache.idx255", (byte) -77), "rw", 1048576L);
+            this.cacheIndexFiles = new LimitedRandomAccessFile[cacheIndexCount];
             for (cacheIndex = 0; cacheIndex < cacheIndexCount; cacheIndex++) {
-              this.cacheIndexFiles[cacheIndex] = new pa(aj.a("main_file_cache.idx" + cacheIndex, (byte) -104), "rw", 1048576L);
+              this.cacheIndexFiles[cacheIndex] = new LimitedRandomAccessFile(aj.a("main_file_cache.idx" + cacheIndex, (byte) -104), "rw", 1048576L);
             }
             if (this.useMicrosoftVmBackend) {
               try {

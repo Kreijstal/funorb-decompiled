@@ -212,7 +212,7 @@ class f extends qf implements pl {
         int frameStepTicksBeforeDecrement = af.avatarFrameStepTicks;
         af.avatarFrameStepTicks = af.avatarFrameStepTicks - 1;
         if (0 <= frameStepTicksBeforeDecrement) {
-          pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
+          LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
           gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
           if (30 > gi.avatarBlinkClockTicks % blinkPeriodTicks) {
             DiskCacheWorker.avatarFeedbackFrameIndex = 0 + MenuScreen.avatarFeedbackFrameBase;
@@ -275,7 +275,7 @@ class f extends qf implements pl {
                 }
                 {
                   gg.field_b = gg.field_b + 1;
-                  pa.avatarFeedbackHoldTicks = 200;
+                  LimitedRandomAccessFile.avatarFeedbackHoldTicks = 200;
                   g.field_j = g.field_j + 1;
                   avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
                   fieldTemp$57 = wa.avatarShockEffectTicks;
@@ -350,7 +350,7 @@ class f extends qf implements pl {
                   }
                 }
               }
-              pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
+              LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
               gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
               if (30 > gi.avatarBlinkClockTicks % blinkPeriodTicks) {
                 DiskCacheWorker.avatarFeedbackFrameIndex = 0 + MenuScreen.avatarFeedbackFrameBase;
@@ -413,7 +413,7 @@ class f extends qf implements pl {
                     }
                     {
                       gg.field_b = gg.field_b + 1;
-                      pa.avatarFeedbackHoldTicks = 200;
+                      LimitedRandomAccessFile.avatarFeedbackHoldTicks = 200;
                       g.field_j = g.field_j + 1;
                       avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
                       fieldTemp$30 = wa.avatarShockEffectTicks;
@@ -485,7 +485,7 @@ class f extends qf implements pl {
             }
           }
         }
-        pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
+        LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
         gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
         if (30 > gi.avatarBlinkClockTicks % blinkPeriodTicks) {
           DiskCacheWorker.avatarFeedbackFrameIndex = 0 + MenuScreen.avatarFeedbackFrameBase;
@@ -591,7 +591,7 @@ class f extends qf implements pl {
               }
               {
                 gg.field_b = gg.field_b + 1;
-                pa.avatarFeedbackHoldTicks = 200;
+                LimitedRandomAccessFile.avatarFeedbackHoldTicks = 200;
                 g.field_j = g.field_j + 1;
                 avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
                 fieldTemp$41 = wa.avatarShockEffectTicks;
@@ -750,7 +750,7 @@ class f extends qf implements pl {
           if (param0 >= -111) {
             quickChatShortcutKeys = (String[]) null;
           }
-          stackIn_3_0 = pa.a(param1, true, 10, 87);
+          stackIn_3_0 = LimitedRandomAccessFile.a(param1, true, 10, 87);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

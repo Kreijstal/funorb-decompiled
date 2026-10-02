@@ -19,22 +19,26 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and retain all 138,558 remaining bindings
 and 388 override relationships.
 
-The current naming pass adds 142 guarded identities for `ArchiveCatalog`,
-archive service initialization, connection headers, handshake stages/retries
-and archive creation. Every catalog instance declaration, constructor contract
-and local has a name. The 72-byte catalog records, digest validation, provider
-memoization, socket handoff and disk-file ownership expose their roles while
-retaining the original guards, partial effects and exception paths. The archive
-client identifier is supplied as 1; applet/cache initialization separately uses 11.
+The current naming pass adds 122 guarded identities for `LimitedRandomAccessFile`
+and `BufferedRandomAccessFile`. Every instance declaration, constructor contract
+and local has a name. Virtual/underlying positions, physical/logical lengths,
+pending writes, cached reads and overlap updates expose their roles. Original
+partial effects remain, including the over-limit marker write, zero-filled read
+gaps, guard effects and EOF behavior. Static UI/gameplay helpers retain their owners.
 
-The 5,698 rules apply 46,692 edits. All 303 raw/readable sources compile,
-preserving 138,558 bindings and 388 overrides. All 5,556 previous complete rules
+The 5,820 rules apply 47,558 edits. All 303 raw/readable sources compile,
+preserving 138,558 bindings and 388 overrides. All 5,698 previous complete rules
 and raw source/decompiler pins are unchanged. Binding checks, reproduction and
 byte-exact reversal support the names. Existing native helper/socket/cache/input
-fixtures retain their prior scope without new catalog/handshake/archive-factory
-execution coverage. Storage/compression helpers, static names,
+fixtures retain their prior scope without comprehensive buffered-file or archive
+sector-chain execution coverage. Disk archive/compression helpers, static names,
 large labeled bodies, full assets/gameplay and device performance remain
 unfinished or unverified. One manifest holds current evidence, with Git for history.
+
+Pass 71 named `ArchiveCatalog`, service initialization, connection headers,
+handshake stages/retries and archive creation. The archive client identifier is
+supplied as 1; applet/cache initialization separately uses 11. Catalog records,
+verification, provider memoization and file/socket ownership remain explicit.
 
 Pass 70 named `ArchiveNetworkClient`, `SocketArchiveNetworkClient`, the shared
 secondary key and direct XOR/sleep helpers. Every network-client instance

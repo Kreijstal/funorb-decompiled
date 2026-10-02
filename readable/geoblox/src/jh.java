@@ -4,10 +4,10 @@
 import java.io.*;
 
 final class jh {
-    private sk field_d;
+    private BufferedRandomAccessFile field_d;
     private int field_a;
     private int field_b;
-    private sk field_c;
+    private BufferedRandomAccessFile field_c;
 
     final boolean a(byte[] param0, byte param1, int param2, int param3) {
         Object var5 = null;
@@ -85,16 +85,16 @@ final class jh {
             var3 = this.field_d;
             synchronized (var3) {
               try {
-                if (~this.field_c.a((byte) 46) > ~(long)(param0 * 6 + 6)) {
+                if (~this.field_c.length((byte) 46) > ~(long)(param0 * 6 + 6)) {
                   stackIn_3_0 = null;
                   return (byte[]) ((Object) stackIn_3_0);
                 }
                 {
                   if (param1 > -14) {
-                    this.field_d = (sk) null;
+                    this.field_d = (BufferedRandomAccessFile) null;
                   }
-                  this.field_c.a(-128, (long)(6 * param0));
-                  this.field_c.a(dj.field_F, 6, 0, 9868);
+                  this.field_c.seek(-128, (long)(6 * param0));
+                  this.field_c.readFully(dj.field_F, 6, 0, 9868);
                   var4_int = (dj.field_F[2] & 255) + (((255 & dj.field_F[0]) << 16) + (dj.field_F[1] << 8 & 65280));
                   var5 = (dj.field_F[3] << 16 & 16711680) + (65280 & dj.field_F[4] << 8) + (255 & dj.field_F[5]);
                   if (var4_int < 0) {
@@ -107,7 +107,7 @@ final class jh {
                   if (var5 <= 0) {
                     return null;
                   }
-                  if ((long)var5 > this.field_d.a((byte) 46) / 520L) {
+                  if ((long)var5 > this.field_d.length((byte) 46) / 520L) {
                     return null;
                   }
                   {
@@ -124,14 +124,14 @@ final class jh {
                         return (byte[]) ((Object) stackIn_23_0);
                       }
                       {
-                        this.field_d.a(0, (long)(520 * var5));
+                        this.field_d.seek(0, (long)(520 * var5));
                         var9 = -var7 + var4_int;
                         if (65535 < param0) {
                           if (510 < var9) {
                             var9 = 510;
                           }
                           var14 = 10;
-                          this.field_d.a(dj.field_F, var9 + var14, 0, 9868);
+                          this.field_d.readFully(dj.field_F, var9 + var14, 0, 9868);
                           var10 = (255 & dj.field_F[3]) + ((65280 & dj.field_F[2] << 8) + (-16777216 & dj.field_F[0] << 24) + (16711680 & dj.field_F[1] << 16));
                           var11 = (255 & dj.field_F[5]) + (65280 & dj.field_F[4] << 8);
                           var13 = dj.field_F[9] & 255;
@@ -141,7 +141,7 @@ final class jh {
                           if (var9 > 512) {
                             var9 = 512;
                           }
-                          this.field_d.a(dj.field_F, var9 + var14, 0, 9868);
+                          this.field_d.readFully(dj.field_F, var9 + var14, 0, 9868);
                           var12 = (255 & dj.field_F[6]) + (((dj.field_F[4] & 255) << 16) + ((255 & dj.field_F[5]) << 8));
                           var11 = (255 & dj.field_F[3]) + (dj.field_F[2] << 8 & 65280);
                           var13 = 255 & dj.field_F[7];
@@ -159,7 +159,7 @@ final class jh {
                         if (var12 < 0) {
                           return null;
                         }
-                        if (this.field_d.a((byte) 46) / 520L < (long)var12) {
+                        if (this.field_d.length((byte) 46) / 520L < (long)var12) {
                           return null;
                         }
                         {
@@ -218,21 +218,21 @@ final class jh {
                 try {
                   L0: {
                     if (param4) {
-                      if (this.field_c.a((byte) 46) < (long)(6 + param2 * 6)) {
+                      if (this.field_c.length((byte) 46) < (long)(6 + param2 * 6)) {
                         return false;
                       }
-                      this.field_c.a(param0 - 228, (long)(param2 * 6));
-                      this.field_c.a(dj.field_F, 6, 0, 9868);
+                      this.field_c.seek(param0 - 228, (long)(param2 * 6));
+                      this.field_c.readFully(dj.field_F, 6, 0, 9868);
                       var7_int = (dj.field_F[5] & 255) + (((255 & dj.field_F[4]) << 8) + ((255 & dj.field_F[3]) << 16));
                       if (var7_int > 0) {
-                        if (this.field_d.a((byte) 46) / 520L >= (long)var7_int) {
+                        if (this.field_d.length((byte) 46) / 520L >= (long)var7_int) {
                           break L0;
                         }
                       }
                       return false;
                     }
                     {
-                      var7_int = (int)((this.field_d.a((byte) 46) + 519L) / 520L);
+                      var7_int = (int)((this.field_d.length((byte) 46) + 519L) / 520L);
                       if (var7_int == 0) {
                         var7_int = 1;
                       }
@@ -242,13 +242,13 @@ final class jh {
                   dj.field_F[2] = (byte)param1;
                   dj.field_F[1] = (byte)(param1 >> 8);
                   if (param0 != 255) {
-                    this.field_c = (sk) null;
+                    this.field_c = (BufferedRandomAccessFile) null;
                   }
                   dj.field_F[4] = (byte)(var7_int >> 8);
                   dj.field_F[5] = (byte)var7_int;
                   dj.field_F[0] = (byte)(param1 >> 16);
-                  this.field_c.a(param0 - 380, (long)(param2 * 6));
-                  this.field_c.a(6, 0, dj.field_F, false);
+                  this.field_c.seek(param0 - 380, (long)(param2 * 6));
+                  this.field_c.write(6, 0, dj.field_F, false);
                   var8 = 0;
                   var9 = 0;
                   L3: while (true) {
@@ -257,10 +257,10 @@ final class jh {
                         L5: {
                           var10 = 0;
                           if (param4) {
-                            this.field_d.a(param0 - 191, (long)(520 * var7_int));
+                            this.field_d.seek(param0 - 191, (long)(520 * var7_int));
                             if (65535 >= param2) {
                               try {
-                                this.field_d.a(dj.field_F, 8, 0, 9868);
+                                this.field_d.readFully(dj.field_F, 8, 0, 9868);
                                 decompiledRegionSelector0 = 0;
                               } catch (java.io.EOFException decompiledCaughtParameter0) {
                                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -278,7 +278,7 @@ final class jh {
                               }
                             } else {
                               try {
-                                this.field_d.a(dj.field_F, 10, 0, 9868);
+                                this.field_d.readFully(dj.field_F, 10, 0, 9868);
                                 decompiledRegionSelector1 = 0;
                               } catch (java.io.EOFException decompiledCaughtParameter1) {
                                 decompiledCaughtException = decompiledCaughtParameter1;
@@ -297,7 +297,7 @@ final class jh {
                               if (var9 == var12) {
                                 if (var13 == this.field_b) {
                                   if (var10 >= 0) {
-                                    if (~(this.field_d.a((byte) 46) / 520L) <= ~(long)var10) {
+                                    if (~(this.field_d.length((byte) 46) / 520L) <= ~(long)var10) {
                                       break L5;
                                     }
                                   }
@@ -310,7 +310,7 @@ final class jh {
                         }
                         if (var10 == 0) {
                           param4 = false;
-                          var10 = (int)((519L + this.field_d.a((byte) 46)) / 520L);
+                          var10 = (int)((519L + this.field_d.length((byte) 46)) / 520L);
                           if (var10 == 0) {
                             var10++;
                           }
@@ -330,13 +330,13 @@ final class jh {
                           dj.field_F[5] = (byte)(var10 >> 8);
                           dj.field_F[3] = (byte)var9;
                           dj.field_F[6] = (byte)var10;
-                          this.field_d.a(-97, (long)(520 * var7_int));
-                          this.field_d.a(8, 0, dj.field_F, false);
+                          this.field_d.seek(-97, (long)(520 * var7_int));
+                          this.field_d.write(8, 0, dj.field_F, false);
                           var11 = param1 - var8;
                           if (512 < var11) {
                             var11 = 512;
                           }
-                          this.field_d.a(var11, var8, param3, false);
+                          this.field_d.write(var11, var8, param3, false);
                           var8 = var8 + var11;
                         } else {
                           dj.field_F[6] = (byte)(var10 >> 16);
@@ -349,13 +349,13 @@ final class jh {
                           dj.field_F[8] = (byte)var10;
                           dj.field_F[3] = (byte)param2;
                           dj.field_F[0] = (byte)(param2 >> 24);
-                          this.field_d.a(73, (long)(var7_int * 520));
-                          this.field_d.a(10, 0, dj.field_F, false);
+                          this.field_d.seek(73, (long)(var7_int * 520));
+                          this.field_d.write(10, 0, dj.field_F, false);
                           var11 = param1 - var8;
                           if (510 < var11) {
                             var11 = 510;
                           }
-                          this.field_d.a(var11, var8, param3, false);
+                          this.field_d.write(var11, var8, param3, false);
                           var8 = var8 + var11;
                         }
                         var7_int = var10;
@@ -413,7 +413,7 @@ final class jh {
         }
     }
 
-    jh(int param0, sk param1, sk param2, int param3) {
+    jh(int param0, BufferedRandomAccessFile param1, BufferedRandomAccessFile param2, int param3) {
         this.field_d = null;
         this.field_a = 65000;
         this.field_c = null;

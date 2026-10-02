@@ -874,7 +874,7 @@ abstract class wf extends ch {
         int var4 = -1 + p.field_k;
         byte[] var5 = new byte[var4];
         eh.field_d.readCipherBytes(96, 0, var5, var4);
-        pa.a(ag.decodeTextBytes(1, var5), (byte) -128, var3 != 0, k.c(112));
+        LimitedRandomAccessFile.a(ag.decodeTextBytes(1, var5), (byte) -128, var3 != 0, k.c(112));
     }
 
     private final void i(int param0) {

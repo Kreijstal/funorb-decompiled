@@ -692,8 +692,8 @@ the array indices, evidence, override families and remaining shared carriers.
 
 ## Remaining limitations
 
-There are 5,698 explicit guarded rules: 53 classes, 711 fields, 518 method
-declarations, 1,539 parameters and 2,877 locals. This is not full deobfuscation.
+There are 5,820 explicit guarded rules: 55 classes, 725 fields, 532 method
+declarations, 1,573 parameters and 2,935 locals. This is not full deobfuscation.
 Unknown flags, guard arguments and opaque shared helpers still need
 investigation. Current names and source identities live in the single manifest;
 previous naming and structural passes remain in Git. The earlier early-exit migration
@@ -2305,3 +2305,88 @@ not newly execute the catalog, handshake or archive factories. Storage and
 compression code, unknown static helpers, large labeled bodies, real server/
 asset traffic, full gameplay and phone/FPS/heap behavior remain unfinished or
 unverified.
+
+## Limited and buffered random-access files (pass 72)
+
+`LimitedRandomAccessFile` names `pa`; `BufferedRandomAccessFile` names `sk`.
+Every instance declaration, constructor parameter and local has a guarded name.
+The limited file's `finalize` keeps its Java override identity. Unrelated static
+text/UI helpers and `checkBoundaryLossAndStartCascade` stay on these owners.
+
+| File member | Role |
+| --- | --- |
+| LimitedRandomAccessFile.file | Owned Java RandomAccessFile handle |
+| maximumLength | Maximum checked write extent, with the original overflow marker behavior |
+| LimitedRandomAccessFile.position | Tracked cursor after successful seek/write or positive read |
+| BufferedRandomAccessFile.file | Owned limited-file wrapper |
+| BufferedRandomAccessFile.position | Caller-visible virtual cursor |
+| underlyingPosition | Tracked file cursor, separate from the virtual cursor; -1 when marked unknown |
+| physicalLength / logicalLength | Initial/extended underlying length versus requested write extent |
+| readBuffer / readBufferStart / readBufferLength | Cached read bytes, file origin and valid extent |
+| writeBuffer / writeBufferStart / writeBufferLength | Pending write bytes, file origin and valid extent |
+
+The limited-file constructor maps only maximumLength -1 to Long.MAX_VALUE.
+If existing length exceeds the limit it attempts deletion and ignores the
+Boolean result. It opens the handle, records limit/cursor, reads the first byte,
+rewrites that byte at zero for a nonempty file opened with mode other than `r`,
+then seeks to zero. Failures preserve the existing partial construction.
+
+`write` checks signed `position + length` before its guard or source access.
+On overflow it seeks to maximumLength, writes marker byte 1 and throws
+EOFException; the tracked position is not updated by this marker path.
+Normal writes advance the tracked cursor after Java's write succeeds. `read`
+delegates partial reads and advances only for a positive result. `seek` seeks
+first, then assigns the cursor. Reads and seeks add no maximum-length check.
+The read guard can assign avatarFeedbackHoldTicks; the seek guard can clear
+waitingForSoundEffectsText. Wrong write guards retain static cleanup.
+`length` returns -83 before handle access for guard other than 1. `close`
+requires -5 and clears the handle only after successful close. The finalizer
+prints a blank line and invokes close when a handle remains; it adds no super call.
+
+The buffered constructor records the limited file's length in physicalLength
+and logicalLength, allocates write/read arrays in that order and starts the
+virtual position at zero. The write origin and read origin start at -1;
+underlyingPosition retains Java's default zero. `seek` rejects negative
+positions, evaluates its arithmetic guard, then changes only the virtual cursor.
+`length` returns logicalLength; a wrong guard clears readBuffer first.
+
+`readFully(destination, remainingLength, destinationOffset, methodGuard)` retains
+its original int-sum bounds check. If the whole request is available in pending
+writes, it copies and returns before the guard effect. Otherwise it records the
+initial position, destination offset and requested length, copies a cached
+prefix and obtains remaining bytes through direct partial reads or a refill.
+It then zero-fills an unread gap before pending writes and overlays pending
+bytes onto the original destination range. `readCountOrZeroFillEnd` names the
+reused int's two roles; the overlay's original snapshots remain separate.
+IOException within the read region marks underlyingPosition unknown. The final
+remaining-length EOFException retains partial output and cursor effects.
+
+`write` extends logicalLength before later guard checks or actual I/O. It
+flushes pending data when the cursor is outside that extent, and may fill and
+flush a full buffer before a true methodGuard returns early. With a false
+guard it buffers a short write or seeks/writes directly for a larger one.
+Direct writes update physicalLength and patch overlapping cached reads.
+The original partial copy, cursor, count and error order remains; a failed
+requested write need not roll back logicalLength.
+
+The private `flush` writes the complete pending extent at writeBufferStart,
+updates underlyingPosition/physicalLength, patches any read-cache overlap,
+then resets writeBufferLength and origin. Wrong guard <=60 overwrites
+physicalLength with 28 even without pending data. `refillReadBuffer` resets the
+valid read extent and reads in chunks capped at 200000000, stopping on -1 or
+capacity without advancing the virtual cursor. Its false argument retains the
+early return; no handling for repeated zero reads is added.
+
+`readAll` reads the whole destination before its arithmetic guard can fail.
+`close` flushes and closes the limited file before its wrong-guard length call
+can clear readBuffer. These names preserve malformed arguments, signed overflow,
+aliases, partial effects, exception coverage and original diagnostic strings.
+
+All 5,698 previous complete rules and raw source/generator pins remain.
+Compilation, binding checks, byte-exact reproduction and reversal support the
+names. Existing native cache-write fixtures retain controlled direct-write and
+failure coverage; other helper/shutdown/socket/dispatcher/input traces retain
+their scopes. Comprehensive buffered read/write/flush combinations, disk archive
+sector chains, real storage/server/assets, full gameplay and phone/FPS/heap
+behavior remain unverified. Compression, unknown static helpers and large
+labeled bodies remain unfinished.

@@ -6,7 +6,7 @@ final class je extends IntrusiveNode {
     int field_i;
     static KeyboardInputListener keyboardListener;
     IntrusiveNode field_f;
-    static sk[] field_h;
+    static BufferedRandomAccessFile[] field_h;
 
     final static void c(byte param0) {
         p var1 = null;

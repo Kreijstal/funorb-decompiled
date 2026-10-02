@@ -319,7 +319,7 @@ public final class Geoblox extends wf {
                         return false;
                       }
                     }
-                    lc.a(vd.a(ud.loadingSoundEffectsText, pa.waitingForSoundEffectsText, 0, param0, cd.field_m), -2, 25.0f);
+                    lc.a(vd.a(ud.loadingSoundEffectsText, LimitedRandomAccessFile.waitingForSoundEffectsText, 0, param0, cd.field_m), -2, 25.0f);
                     return false;
                   }
                 }
@@ -327,11 +327,11 @@ public final class Geoblox extends wf {
                 return false;
               }
             }
-            lc.a(gf.formatArchiveGroupProgress(pa.waitingForSoundEffectsText, ah.field_c, "", ud.loadingSoundEffectsText, true), -2, 10.0f);
+            lc.a(gf.formatArchiveGroupProgress(LimitedRandomAccessFile.waitingForSoundEffectsText, ah.field_c, "", ud.loadingSoundEffectsText, true), -2, 10.0f);
             return false;
           }
         }
-        lc.a(gf.formatArchiveGroupProgress(pa.waitingForSoundEffectsText, wj.field_F, "", ud.loadingSoundEffectsText, true), -2, 5.0f);
+        lc.a(gf.formatArchiveGroupProgress(LimitedRandomAccessFile.waitingForSoundEffectsText, wj.field_F, "", ud.loadingSoundEffectsText, true), -2, 5.0f);
         return false;
     }
 
@@ -429,7 +429,7 @@ public final class Geoblox extends wf {
         fl.a(33);
         kd.a((byte) 122);
         ri.a(5366);
-        pa.b((byte) 74);
+        LimitedRandomAccessFile.b((byte) 74);
         bh.a((byte) 81);
         ec.a(true);
         pj.b(false);

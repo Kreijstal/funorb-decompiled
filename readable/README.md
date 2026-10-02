@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 5,698 guarded naming rules: 53 classes, 711 fields,
-518 methods, 1,539 parameters and 2,877 local declarations. Both 303-file corpora
+The current export has 5,820 guarded naming rules: 55 classes, 725 fields,
+532 methods, 1,573 parameters and 2,935 local declarations. Both 303-file corpora
 compile, preserving 138,558 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -54,7 +54,40 @@ smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
 
-## Current archive catalog and handshake names
+## Current limited and buffered file names
+
+Pass 72 adds 122 guarded identities: two classes, fourteen fields, fourteen
+methods, 34 parameters and 58 locals. `LimitedRandomAccessFile` and
+`BufferedRandomAccessFile` name every instance declaration, constructor
+contract and local; `finalize` retains its Java override spelling.
+Static UI/gameplay helpers stay on their existing owners.
+
+The limited file exposes its Java handle, maximum write extent and tracked
+cursor. Constructor limit normalization, oversized-file deletion attempt,
+first-byte probe/rewrite and seek to zero remain. An over-limit write seeks to
+maximumLength, writes byte 1 and throws EOFException without updating its
+tracked cursor. Reads and seeks retain their original unbounded behavior.
+
+The buffered layer distinguishes caller position, underlyingPosition,
+physicalLength, logicalLength and the two caches' origins/valid lengths.
+`readFully` exposes cached/direct reads, pending-write overlays and zero-filled
+gaps. `write`, `flush` and `refillReadBuffer` expose capacity handling, overlap
+patching and partial effects. Logical length can grow before a write fails or
+a guard returns. Seek changes the virtual cursor after guard arithmetic;
+readAll performs its arithmetic after reading. No operation ordering, signed
+arithmetic, exception scopes, literal diagnostics or file ownership changes.
+
+All 5,698 previous complete rules and source/generator pins stay unchanged.
+The 5,820 rules apply 47,558 identifier edits; both 303-file corpora compile,
+preserving 138,558 bindings and 388 overrides. Reproduction and dictionary
+reversal are byte-exact. Existing native cache-write fixtures still cover their
+controlled direct-write/failure cases, alongside unchanged helper/shutdown/
+socket/dispatcher/input traces. They do not comprehensively execute buffered
+reads/writes/flushes or archive sector chains. Disk archives, compression,
+unknown static names, large labeled bodies, real storage/server/assets, complete
+gameplay and phone/FPS/heap behavior remain unfinished or unverified.
+
+## Previous archive catalog and handshake names
 
 Pass 71 adds 142 guarded identities: one class, 24 fields, eleven methods,
 forty parameters and 66 locals. `ArchiveCatalog` names every instance field/API,
@@ -1197,7 +1230,7 @@ its historical proof recorded in the raw provenance. Current source/decompiler
 identity and naming migrations live in the single manifest. `ruleChanges`
 records naming changes; `sourceChange` is recorded when input identity changes.
 The latest structural pass records its source migration in Git. The current
-naming-only pass retains those source pins and records its 142 additions in
+naming-only pass retains those source pins and records its 122 additions in
 `ruleChanges`; every prior guarded rule is retained.
 All six native probe sources and their traces are pinned in
 the same manifest; no JSON snapshots are added.
@@ -1222,6 +1255,6 @@ the same manifest; no JSON snapshots are added.
 | Java source tree | SHA-256 |
 | --- | --- |
 | Raw | `39be3539b43d7acc9540acca49e7b6378cdb233908092706646df4c2cdc6a8fe` |
-| Readable | `6a19f22884236a9a23f2ef5dcfbaa7343c8cc8cdbb80e7ad211861f78aa85480` |
+| Readable | `b3d57b35162af262bffe4f3a7e7456d3bc064eccbeec7666e5f913b7e995263d` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

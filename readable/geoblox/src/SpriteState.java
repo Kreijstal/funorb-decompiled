@@ -238,7 +238,7 @@ abstract class SpriteState extends DualLinkNode {
           }
           var2 = ih.a(124, "score");
           if (var2 != null) {
-            pa.field_a = ag.decodeTextBytes(1, var2);
+            LimitedRandomAccessFile.field_a = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(121, "waitingForPumpkin");
           if (var2 != null) {
@@ -868,8 +868,8 @@ abstract class SpriteState extends DualLinkNode {
                 if (null != af.field_b) {
                   try {
                     L2: {
-                      af.field_b.a(51, 0L);
-                      af.field_b.a((byte) -76, var2);
+                      af.field_b.seek(51, 0L);
+                      af.field_b.readAll((byte) -76, var2);
                       var3_int = 0;
                       L3: while (true) {
                         L4: {

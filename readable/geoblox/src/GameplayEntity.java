@@ -141,7 +141,7 @@ final class GameplayEntity extends DualLinkNode {
         ul.currentAvatarCryFrame = null;
         gg.field_b = 0;
         g.field_j = 0;
-        pa.avatarFeedbackHoldTicks = 0;
+        LimitedRandomAccessFile.avatarFeedbackHoldTicks = 0;
         jf.avatarTintFadeTicks = 0;
         DiskCacheWorker.avatarFeedbackFrameIndex = initialFrameIndex;
         IndexedSpriteState.avatarShockFrameIndex = 0;

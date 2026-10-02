@@ -150,7 +150,7 @@ abstract class dk {
               }
               if (null != af.field_d) {
                 try {
-                  af.field_d.b(27034);
+                  af.field_d.close(27034);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   iOException = (IOException) (Object) decompiledCaughtException;
@@ -163,7 +163,7 @@ abstract class dk {
                       continue L7;
                     }
                     try {
-                      je.field_h[var1_int].b(27034);
+                      je.field_h[var1_int].close(27034);
                     } catch (java.io.IOException decompiledCaughtParameter1) {
                       decompiledCaughtException = decompiledCaughtParameter1;
                       var2 = (IOException) (Object) decompiledCaughtException;
