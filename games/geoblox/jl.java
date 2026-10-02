@@ -53,11 +53,7 @@ final class jl {
             jl.a((byte) 47);
           }
           var2_int = param0.c((byte) 34);
-          if (var2_int == 1) {
-            stackIn_5_0 = 1;
-          } else {
-            stackIn_5_0 = 0;
-          }
+          stackIn_5_0 = (var2_int == 1) ? 1 : 0;
           var3 = stackIn_5_0;
           stackIn_6_0 = var3;
           return stackIn_6_0 != 0;

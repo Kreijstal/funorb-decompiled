@@ -84,11 +84,7 @@ class ac extends ff {
           if (param0 < 6) {
             ac.a((byte) -125);
           }
-          if (1 != param1.e((byte) -17, 1)) {
-            stackIn_5_0 = 0;
-          } else {
-            stackIn_5_0 = 1;
-          }
+          stackIn_5_0 = (1 != param1.e((byte) -17, 1)) ? 0 : 1;
           return stackIn_5_0 != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

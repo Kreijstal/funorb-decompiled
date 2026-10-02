@@ -88,20 +88,12 @@ final class ra implements Iterable {
             ug.field_c = ug.field_c | var3;
             el.field_o.field_e = el.field_o.field_e + 1;
             var4 = param2;
-            if ((1 << var4 & dc.field_a) == 0) {
-              stackIn_8_0 = 0;
-            } else {
-              stackIn_8_0 = 1;
-            }
+            stackIn_8_0 = ((1 << var4 & dc.field_a) == 0) ? 0 : 1;
             var5 = stackIn_8_0;
             if (param1 < -47) {
               if (var5 != 0) {
                 vl.field_p = vl.field_p | var3;
-                if (!pb.field_t.c(13519)) {
-                  stackIn_35_0 = 0;
-                } else {
-                  stackIn_35_0 = 1;
-                }
+                stackIn_35_0 = (!pb.field_t.c(13519)) ? 0 : 1;
                 var4 = stackIn_35_0;
                 pb.field_t.a(-35, new nj(param2));
                 if (var4 != 0) {
@@ -115,11 +107,7 @@ final class ra implements Iterable {
               dc.field_a = dc.field_a | 1 << var4;
               el.field_g = el.field_g - (1 << var4);
               vl.field_p = vl.field_p | var3;
-              if (!pb.field_t.c(13519)) {
-                stackIn_45_0 = 0;
-              } else {
-                stackIn_45_0 = 1;
-              }
+              stackIn_45_0 = (!pb.field_t.c(13519)) ? 0 : 1;
               var4 = stackIn_45_0;
               pb.field_t.a(-35, new nj(param2));
               if (var4 != 0) {
@@ -133,11 +121,7 @@ final class ra implements Iterable {
             field_b = (String) null;
             if (var5 != 0) {
               vl.field_p = vl.field_p | var3;
-              if (!pb.field_t.c(13519)) {
-                stackIn_23_0 = 0;
-              } else {
-                stackIn_23_0 = 1;
-              }
+              stackIn_23_0 = (!pb.field_t.c(13519)) ? 0 : 1;
               var4 = stackIn_23_0;
               pb.field_t.a(-35, new nj(param2));
               if (var4 != 0) {
@@ -151,11 +135,7 @@ final class ra implements Iterable {
             dc.field_a = dc.field_a | 1 << var4;
             el.field_g = el.field_g - (1 << var4);
             vl.field_p = vl.field_p | var3;
-            if (!pb.field_t.c(13519)) {
-              stackIn_13_0 = 0;
-            } else {
-              stackIn_13_0 = 1;
-            }
+            stackIn_13_0 = (!pb.field_t.c(13519)) ? 0 : 1;
             var4 = stackIn_13_0;
             pb.field_t.a(-35, new nj(param2));
             if (var4 != 0) {

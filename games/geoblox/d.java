@@ -205,11 +205,7 @@ final class d implements Runnable {
                                                 }
                                                 if (this.field_h) {
                                                   if (var2_int == 15) {
-                                                    if (var9.field_c == 0) {
-                                                      stackIn_76_0 = 0;
-                                                    } else {
-                                                      stackIn_76_0 = 1;
-                                                    }
+                                                    stackIn_76_0 = (var9.field_c == 0) ? 0 : 1;
                                                     var3_int = stackIn_76_0;
                                                     var12 = (java.awt.Component) (var9.field_f);
                                                     if (this.field_l) {

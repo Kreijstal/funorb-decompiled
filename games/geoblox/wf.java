@@ -318,11 +318,7 @@ abstract class wf extends ch {
               break L6;
             }
           }
-          if (-1 != ib.field_e) {
-            stackIn_24_0 = 0;
-          } else {
-            stackIn_24_0 = 1;
-          }
+          stackIn_24_0 = (-1 != ib.field_e) ? 0 : 1;
           var3 = stackIn_24_0;
           ib.field_e = ma.b(15869);
           if (var3 != 0) {
@@ -542,11 +538,7 @@ abstract class wf extends ch {
         if (mi.field_C == 13) {
           var3 = 1;
           if (null != b.field_b) {
-            if (!b.field_b.a(true)) {
-              stackIn_135_0 = 0;
-            } else {
-              stackIn_135_0 = 1;
-            }
+            stackIn_135_0 = (!b.field_b.a(true)) ? 0 : 1;
             var3 = stackIn_135_0;
             lc.a(b.field_b.field_e, -2, b.field_b.field_j);
           }
@@ -921,11 +913,7 @@ abstract class wf extends ch {
                                     break L2;
                                   }
                                 }
-                                if (var2 != 12) {
-                                  stackIn_30_0 = 0;
-                                } else {
-                                  stackIn_30_0 = 1;
-                                }
+                                stackIn_30_0 = (var2 != 12) ? 0 : 1;
                                 var3 = bk.a(stackIn_30_0 != 0, 128);
                                 s.a(var3, 0);
                               }

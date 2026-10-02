@@ -200,11 +200,7 @@ final class cd extends jg {
         if (!Boolean.parseBoolean(System.getProperty("java.net.useSystemProxies"))) {
           System.setProperty("java.net.useSystemProxies", "true");
         }
-        if (this.field_b != 443) {
-          stackIn_5_0 = 0;
-        } else {
-          stackIn_5_0 = 1;
-        }
+        stackIn_5_0 = (this.field_b != 443) ? 0 : 1;
         var5 = stackIn_5_0;
         try {
           stackIn_8_0 = this.field_k;

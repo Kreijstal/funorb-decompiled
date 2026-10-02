@@ -61,11 +61,7 @@ final class gb {
                   ab.field_d = true;
                 }
               }
-              if (494 > n.field_j) {
-                stackIn_25_0 = 0;
-              } else {
-                stackIn_25_0 = 1;
-              }
+              stackIn_25_0 = (494 > n.field_j) ? 0 : 1;
               return stackIn_25_0 != 0;
             }
           }

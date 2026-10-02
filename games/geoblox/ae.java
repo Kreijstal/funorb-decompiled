@@ -164,11 +164,7 @@ final class ae {
         this.field_e = ua.b(16);
         this.field_f = ua.b(24);
         this.field_a = new int[this.field_f];
-        if (ua.b() == 0) {
-          stackIn_3_0 = 0;
-        } else {
-          stackIn_3_0 = 1;
-        }
+        stackIn_3_0 = (ua.b() == 0) ? 0 : 1;
         L1: {
           var1 = stackIn_3_0;
           if (var1 != 0) {
@@ -186,11 +182,7 @@ final class ae {
             break L1;
           }
           {
-            if (ua.b() == 0) {
-              stackIn_13_0 = 0;
-            } else {
-              stackIn_13_0 = 1;
-            }
+            stackIn_13_0 = (ua.b() == 0) ? 0 : 1;
             var2 = stackIn_13_0;
             var14 = 0;
             var3_int = var14;
@@ -215,11 +207,7 @@ final class ae {
             var3 = ua.d(ua.b(32));
             var4 = ua.d(ua.b(32));
             var5 = ua.b(4) + 1;
-            if (ua.b() == 0) {
-              stackIn_23_0 = 0;
-            } else {
-              stackIn_23_0 = 1;
-            }
+            stackIn_23_0 = (ua.b() == 0) ? 0 : 1;
             var6 = stackIn_23_0;
             if (var2 != 1) {
               var7 = this.field_f * this.field_e;

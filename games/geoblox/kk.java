@@ -169,11 +169,7 @@ final class kk extends ji {
                       var8 = this.field_j.c((byte) 34);
                       var9 = this.field_j.a((byte) -61);
                       var10 = var8 & 127;
-                      if ((128 & var8) == 0) {
-                        stackIn_49_0 = 0;
-                      } else {
-                        stackIn_49_0 = 1;
-                      }
+                      stackIn_49_0 = ((128 & var8) == 0) ? 0 : 1;
                       L18: {
                         var11 = stackIn_49_0;
                         var12 = (long)var7 + ((long)var6 << 32);
@@ -202,11 +198,7 @@ final class kk extends ji {
                       }
                       {
                         this.field_f = var14_ref;
-                        if (0 != var10) {
-                          stackIn_66_0 = 9;
-                        } else {
-                          stackIn_66_0 = 5;
-                        }
+                        stackIn_66_0 = (0 != var10) ? 9 : 5;
                         var15 = stackIn_66_0;
                         this.field_f.field_A = new qc(var9 + var15 + this.field_f.field_E);
                         this.field_f.field_A.d((byte) -26, var10);

@@ -39,11 +39,7 @@ final class sa extends RuntimeException {
             }
             if (!vl.field_q) {
               if (wg.field_e <= oe.field_V) {
-                if (oe.field_V < ue.field_j + wg.field_e) {
-                  stackIn_16_0 = 1;
-                } else {
-                  stackIn_16_0 = 0;
-                }
+                stackIn_16_0 = (oe.field_V < ue.field_j + wg.field_e) ? 1 : 0;
               } else {
                 stackIn_16_0 = 0;
               }

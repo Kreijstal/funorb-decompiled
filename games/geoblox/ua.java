@@ -489,17 +489,9 @@ final class ua extends hf {
         var5 = 0;
         var6 = 0;
         if (var3 != 0) {
-          if (ua.b() == 0) {
-            stackIn_7_0 = 0;
-          } else {
-            stackIn_7_0 = 1;
-          }
+          stackIn_7_0 = (ua.b() == 0) ? 0 : 1;
           var5 = stackIn_7_0;
-          if (ua.b() == 0) {
-            stackIn_10_0 = 0;
-          } else {
-            stackIn_10_0 = 1;
-          }
+          stackIn_10_0 = (ua.b() == 0) ? 0 : 1;
           var6 = stackIn_10_0;
         }
         L4: {
@@ -532,11 +524,7 @@ final class ua extends hf {
         var14 = field_N[field_D[var2]];
         var16 = var14.field_a;
         var17_int = var14.field_c[var16];
-        if (field_F[var17_int].b()) {
-          stackIn_22_0 = 0;
-        } else {
-          stackIn_22_0 = 1;
-        }
+        stackIn_22_0 = (field_F[var17_int].b()) ? 0 : 1;
         var15 = stackIn_22_0;
         var16 = var15;
         for (var17_int = 0; var17_int < var14.field_b; var17_int++) {

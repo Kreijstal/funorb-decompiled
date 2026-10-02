@@ -71,36 +71,20 @@ final class ul {
                 }
               }
               var3.field_K = bh.field_c;
-              if (var3.field_m <= 1) {
-                stackIn_10_0 = 0;
-              } else {
-                stackIn_10_0 = 1;
-              }
+              stackIn_10_0 = (var3.field_m <= 1) ? 0 : 1;
               var4 = stackIn_10_0;
-              if (var3.field_N <= 1) {
-                stackIn_13_0 = 0;
-              } else {
-                stackIn_13_0 = 1;
-              }
+              stackIn_13_0 = (var3.field_N <= 1) ? 0 : 1;
               var5 = stackIn_13_0;
               for (var6 = 0; var6 < var3.field_L; var6++) {
                 var1_int = 1;
                 if (var4 != 0) {
-                  if (var3.field_M == var3.field_n[var6].field_M) {
-                    stackIn_21_0 = 1;
-                  } else {
-                    stackIn_21_0 = 0;
-                  }
+                  stackIn_21_0 = (var3.field_M == var3.field_n[var6].field_M) ? 1 : 0;
                 } else {
                   stackIn_21_0 = 0;
                 }
                 var7 = stackIn_21_0;
                 if (var5 != 0) {
-                  if (var3.field_C == var3.field_n[var6].field_C) {
-                    stackIn_27_0 = 1;
-                  } else {
-                    stackIn_27_0 = 0;
-                  }
+                  stackIn_27_0 = (var3.field_C == var3.field_n[var6].field_C) ? 1 : 0;
                 } else {
                   stackIn_27_0 = 0;
                 }
@@ -113,21 +97,13 @@ final class ul {
                   }
                   L12: for (var9 = var6 + 1; var9 < var3.field_L; var9++) {
                     if (var8 != 0) {
-                      if (var3.field_n[var9].field_C == var3.field_C) {
-                        stackIn_38_0 = 1;
-                      } else {
-                        stackIn_38_0 = 0;
-                      }
+                      stackIn_38_0 = (var3.field_n[var9].field_C == var3.field_C) ? 1 : 0;
                     } else {
                       stackIn_38_0 = 0;
                     }
                     var10 = stackIn_38_0;
                     if (var7 != 0) {
-                      if (var3.field_M == var3.field_n[var9].field_M) {
-                        stackIn_44_0 = 1;
-                      } else {
-                        stackIn_44_0 = 0;
-                      }
+                      stackIn_44_0 = (var3.field_M == var3.field_n[var9].field_M) ? 1 : 0;
                     } else {
                       stackIn_44_0 = 0;
                     }
@@ -286,11 +262,7 @@ final class ul {
               var3_int -= 200;
             }
           }
-          if (0 >= var3_int) {
-            stackIn_15_0 = 0;
-          } else {
-            stackIn_15_0 = 1;
-          }
+          stackIn_15_0 = (0 >= var3_int) ? 0 : 1;
           return stackIn_15_0 != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

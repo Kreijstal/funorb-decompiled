@@ -3211,11 +3211,7 @@ final class wi extends ee implements pl {
                   throw t.a((Throwable) ((Object) stackIn_2617_0), ((StringBuilder) (Object) stackIn_2617_1).append(stackIn_2617_2).append(')').toString());
                 }
                 if (var3 != 0) {
-                  if (!ch.field_h) {
-                    stackIn_2625_0 = 1;
-                  } else {
-                    stackIn_2625_0 = 0;
-                  }
+                  stackIn_2625_0 = (!ch.field_h) ? 1 : 0;
                   ch.field_h = stackIn_2625_0 != 0;
                 }
             }

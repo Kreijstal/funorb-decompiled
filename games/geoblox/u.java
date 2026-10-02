@@ -255,11 +255,7 @@ final class u {
         int var10;
         int var11;
         int var13;
-        if (ua.b() == 0) {
-          stackIn_3_0 = 0;
-        } else {
-          stackIn_3_0 = 1;
-        }
+        stackIn_3_0 = (ua.b() == 0) ? 0 : 1;
         var1 = stackIn_3_0;
         if (var1 == 0) {
           return false;

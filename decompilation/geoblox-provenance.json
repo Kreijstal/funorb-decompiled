@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "44435d91c3e1f48530c0f2462caa3874968993bc",
+      "commit": "2c72bb566a66adf31192ac0dd1447c2c99562b2e",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "91f00d39ebbcdeff76e1c4d507ba69839a1f5fe3573499906040ac6f712a63c1",
-        "reproduce": "git archive --format=tar 44435d91c3e1f48530c0f2462caa3874968993bc | sha256sum",
+        "sha256": "e25751f7a750281c5d588faefd06764441973b2bdd35f372524ca6e5a36aa703",
+        "reproduce": "git archive --format=tar 2c72bb566a66adf31192ac0dd1447c2c99562b2e | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
@@ -93,9 +93,9 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "baeae8c226093d2a14392d9994aa74ddd4c735009a09e713af1b7cf39f202029",
-  "previousSourceTreeSha256": "0ce7d77ce24b5c74be0439d9d363ac7fb407bf949c9385ecc5f7e4cbcfe48f0f",
-  "changedJavaFiles": 208,
+  "sourceTreeSha256": "db87af61f08e3fa11e6f19e45d63941889f9027d947e96dcf819b999be73d624",
+  "previousSourceTreeSha256": "baeae8c226093d2a14392d9994aa74ddd4c735009a09e713af1b7cf39f202029",
+  "changedJavaFiles": 36,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
@@ -1074,5 +1074,80 @@
     "scope": "Generic native fixtures verify conditions, side effects, NaNs, early returns, exceptions, labels, declaration scopes and synchronized transfers. Full raw corpus compiles. Controlled GeoBlox probes are recorded by the current readable manifest; whole-game equivalence remains unverified.",
     "sourceLinesRemoved": 2213,
     "elseWrappersRemoved": 2128
+  },
+  "typedLiteralAssignments": {
+    "javaToolsCommit": "2c72bb566a66adf31192ac0dd1447c2c99562b2e",
+    "sourceArchiveSha256": "e25751f7a750281c5d588faefd06764441973b2bdd35f372524ca6e5a36aa703",
+    "defaultEnabled": true,
+    "bytecodeChanged": false,
+    "sourceBodyEditedByHand": false,
+    "completeArmParsing": true,
+    "samePrimitiveLiteralTypeRequired": true,
+    "sameProvenLocalDestinationTypeRequired": true,
+    "nonliteralEffectsAndReferenceAssignmentsPreserved": true,
+    "originalEvaluationOrderRetained": true,
+    "narrowingAndBoxingRefused": true,
+    "assignmentsFolded": 77,
+    "difficultyAssignmentsFolded": 17,
+    "sourceLinesBefore": 87205,
+    "sourceLinesAfter": 86897,
+    "generatedElseWrappersBefore": 1353,
+    "generatedElseWrappersAfter": 1276,
+    "changedJavaFiles": [
+      "Geoblox.java",
+      "ab.java",
+      "ac.java",
+      "ae.java",
+      "ag.java",
+      "al.java",
+      "bk.java",
+      "bm.java",
+      "c.java",
+      "cd.java",
+      "d.java",
+      "ed.java",
+      "gb.java",
+      "hi.java",
+      "ic.java",
+      "ig.java",
+      "ih.java",
+      "ik.java",
+      "jl.java",
+      "kk.java",
+      "lc.java",
+      "ld.java",
+      "mc.java",
+      "ml.java",
+      "r.java",
+      "ra.java",
+      "rf.java",
+      "ri.java",
+      "sa.java",
+      "tg.java",
+      "u.java",
+      "ua.java",
+      "ul.java",
+      "v.java",
+      "wf.java",
+      "wi.java"
+    ],
+    "sourceDeclarationsPreserved": 20931,
+    "overrideRelationshipsPreserved": 388,
+    "namedRulesPreserved": 1208,
+    "localOrdinalMigrations": 0,
+    "referenceOccurrencesRemoved": 77,
+    "referenceRemovalAttribution": {
+      "localAssignmentTargets": 76,
+      "generatedInitializerHelperFieldTarget": "F:wi$1$CfrPartitionedBody.stackIn_2625_0:I"
+    },
+    "genericEmitterTestGroups": 14,
+    "nativeEmitterComparisons": 700,
+    "enclosingReturnGuardInverted": "ig.a(ZIBI)Z",
+    "nativeComparatorCases": 32768,
+    "nativeComparatorTraceSha256": "9be228f7421970f2214c74e8890327f8592f706dc90ccd0d0933e6f2fbe0a604",
+    "nativeComparatorProbe": "readable/tests/test-geoblox-gameplay.mjs",
+    "cleanSourceArchiveByteExact": true,
+    "diagnosticsUnchanged": true,
+    "scope": "Generic emitter tests cover primitive literal bits, unboxing, exceptions, effect order and a nested enclosing guard. Native/raw/readable comparator and difficulty matrices are verified in the current readable manifest; whole-game equivalence remains unverified."
   }
 }

@@ -114,11 +114,7 @@ final class ik {
             }
             var5_int = 0;
             var6_int = 0;
-            if (param1.field_z != 1) {
-              stackIn_14_0 = 0;
-            } else {
-              stackIn_14_0 = 1;
-            }
+            stackIn_14_0 = (param1.field_z != 1) ? 0 : 1;
 
 
             if (param0.field_z != 1) {

@@ -86,17 +86,9 @@ final class bm {
                 this.field_g = var18.a((byte) -121);
               }
               var5 = var18.c((byte) 34);
-              if (0 == (1 & var5)) {
-                stackIn_11_0 = 0;
-              } else {
-                stackIn_11_0 = 1;
-              }
+              stackIn_11_0 = (0 == (1 & var5)) ? 0 : 1;
               var6 = stackIn_11_0;
-              if ((2 & var5) == 0) {
-                stackIn_14_0 = 0;
-              } else {
-                stackIn_14_0 = 1;
-              }
+              stackIn_14_0 = ((2 & var5) == 0) ? 0 : 1;
               var7 = stackIn_14_0;
               if (var4 >= 7) {
                 this.field_h = var18.d((byte) -27);

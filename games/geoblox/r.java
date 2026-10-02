@@ -158,11 +158,7 @@ final class r extends f implements pl {
             for (var4 = 1; var4 < -1 + var2_int; var4++) {
               var5 = param0.charAt(var4);
               if (var5 == 92) {
-                if (var3 != 0) {
-                  stackIn_22_0 = 0;
-                } else {
-                  stackIn_22_0 = 1;
-                }
+                stackIn_22_0 = (var3 != 0) ? 0 : 1;
                 var3 = stackIn_22_0;
               } else {
                 if (var5 == 34) {

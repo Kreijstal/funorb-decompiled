@@ -730,11 +730,7 @@ public final class Geoblox extends wf {
               } else {
                 if (dd.a((byte) 47)) {
                   if (!jk.field_a) {
-                    if (vl.field_n == null) {
-                      stackIn_91_0 = 0;
-                    } else {
-                      stackIn_91_0 = 1;
-                    }
+                    stackIn_91_0 = (vl.field_n == null) ? 0 : 1;
                     L10: {
                       var2 = sl.a(stackIn_91_0 != 0, (wf) (this), false);
                       if (var2 != 2364824) {
@@ -860,11 +856,7 @@ public final class Geoblox extends wf {
                 } else {
                   if (tc.field_c == -1) {
                     if (dl.field_b) {
-                      if (gb.b(1)) {
-                        stackIn_63_0 = 0;
-                      } else {
-                        stackIn_63_0 = 1;
-                      }
+                      stackIn_63_0 = (gb.b(1)) ? 0 : 1;
                       dl.field_b = stackIn_63_0 != 0;
                       if (stackIn_63_0 == 0) {
                         tc.field_c = -2;

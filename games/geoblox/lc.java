@@ -362,11 +362,7 @@ final class lc {
               ug.field_a = new vg(128);
               ca.field_i = 0;
             }
-            if (var1.c((byte) 34) != 1) {
-              stackIn_15_0 = 0;
-            } else {
-              stackIn_15_0 = 1;
-            }
+            stackIn_15_0 = (var1.c((byte) 34) != 1) ? 0 : 1;
             var3_int = stackIn_15_0;
             var4_ref_String = var1.e((byte) 105);
             if (var3_int != 0) {
