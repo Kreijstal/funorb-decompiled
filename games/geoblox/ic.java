@@ -127,7 +127,6 @@ final class ic {
     final static void a(byte param0) {
         try {
             Exception var1 = null;
-            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             if (param0 != 65) {
               field_a = (String) null;
@@ -136,13 +135,9 @@ final class ic {
               try {
                 af.field_b.a(22, 0L);
                 af.field_b.a(24, eh.field_d.field_f, eh.field_d.field_j, false);
-                decompiledRegionSelector0 = 0;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var1 = (Exception) (Object) decompiledCaughtException;
-                decompiledRegionSelector0 = 1;
-              }
-              if (decompiledRegionSelector0 == 0) {
               }
             }
             eh.field_d.field_f = eh.field_d.field_f + 24;

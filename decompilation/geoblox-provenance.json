@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "1fa1f5ca8db58810744ef29e04bcf31c74e81805",
+      "commit": "b0593cb3fba9e3316c7915bd3039a9872ecbd6e6",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "80101c5837724ddef2f706256e25320fdf76a57642d7c9b9de64fcf131f229c4",
-        "reproduce": "git archive --format=tar 1fa1f5ca8db58810744ef29e04bcf31c74e81805 | sha256sum",
+        "sha256": "da07e440f2a1886da40e4d7abb6e2e733afe50a92eeb13e0f21d243a6c9ee69e",
+        "reproduce": "git archive --format=tar b0593cb3fba9e3316c7915bd3039a9872ecbd6e6 | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
@@ -93,9 +93,9 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "cf0cbc50ff6b23458db1a7beb4edb6829ab61e7e6ea3dc7d7d47f03e2492095d",
-  "previousSourceTreeSha256": "c1f3218a7a4e1ac693bea85f5c5806eb16859e8f6f99368a4c00b498cee74057",
-  "changedJavaFiles": 4,
+  "sourceTreeSha256": "97e83f6dc8cd521730af2d3f19096f4a24fb00d4c6ea45ba341caf11ed6ab2b0",
+  "previousSourceTreeSha256": "cf0cbc50ff6b23458db1a7beb4edb6829ab61e7e6ea3dc7d7d47f03e2492095d",
+  "changedJavaFiles": 1,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
