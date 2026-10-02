@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "inputTreeSha256": "c1f3218a7a4e1ac693bea85f5c5806eb16859e8f6f99368a4c00b498cee74057",
+  "inputTreeSha256": "cf0cbc50ff6b23458db1a7beb4edb6829ab61e7e6ea3dc7d7d47f03e2492095d",
   "positionUnits": "UTF-16 code units in original source",
   "rules": [
     {
@@ -74018,8 +74018,8 @@
       "renamedName": "var3_int",
       "declaration": {
         "file": "gi.java",
-        "start": 10737,
-        "end": 10745
+        "start": 10733,
+        "end": 10741
       }
     },
     {
@@ -74029,8 +74029,8 @@
       "renamedName": "var3",
       "declaration": {
         "file": "gi.java",
-        "start": 10776,
-        "end": 10780
+        "start": 10772,
+        "end": 10776
       }
     },
     {
@@ -74040,8 +74040,8 @@
       "renamedName": "var4",
       "declaration": {
         "file": "gi.java",
-        "start": 10801,
-        "end": 10805
+        "start": 10797,
+        "end": 10801
       }
     },
     {
@@ -74051,8 +74051,8 @@
       "renamedName": "stackIn_8_0",
       "declaration": {
         "file": "gi.java",
-        "start": 10823,
-        "end": 10834
+        "start": 10819,
+        "end": 10830
       }
     },
     {
@@ -74062,8 +74062,8 @@
       "renamedName": "stackIn_10_0",
       "declaration": {
         "file": "gi.java",
-        "start": 10852,
-        "end": 10864
+        "start": 10848,
+        "end": 10860
       }
     },
     {
@@ -74073,8 +74073,8 @@
       "renamedName": "decompiledCaughtException",
       "declaration": {
         "file": "gi.java",
-        "start": 10895,
-        "end": 10920
+        "start": 10891,
+        "end": 10916
       }
     },
     {
@@ -74084,8 +74084,8 @@
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
         "file": "gi.java",
-        "start": 11454,
-        "end": 11480
+        "start": 11450,
+        "end": 11476
       }
     },
     {
@@ -74095,8 +74095,8 @@
       "renamedName": "var9",
       "declaration": {
         "file": "gi.java",
-        "start": 5618,
-        "end": 5622
+        "start": 5614,
+        "end": 5618
       }
     },
     {
@@ -74106,8 +74106,8 @@
       "renamedName": "var4",
       "declaration": {
         "file": "gi.java",
-        "start": 11992,
-        "end": 11996
+        "start": 11988,
+        "end": 11992
       }
     },
     {
@@ -74117,8 +74117,8 @@
       "renamedName": "var5",
       "declaration": {
         "file": "gi.java",
-        "start": 12009,
-        "end": 12013
+        "start": 12005,
+        "end": 12009
       }
     },
     {
@@ -74128,8 +74128,8 @@
       "renamedName": "var6",
       "declaration": {
         "file": "gi.java",
-        "start": 12026,
-        "end": 12030
+        "start": 12022,
+        "end": 12026
       }
     },
     {
@@ -74139,8 +74139,8 @@
       "renamedName": "var7",
       "declaration": {
         "file": "gi.java",
-        "start": 12044,
-        "end": 12048
+        "start": 12040,
+        "end": 12044
       }
     },
     {
@@ -74150,8 +74150,8 @@
       "renamedName": "var5",
       "declaration": {
         "file": "gi.java",
-        "start": 1235,
-        "end": 1239
+        "start": 1231,
+        "end": 1235
       }
     },
     {
@@ -74161,8 +74161,8 @@
       "renamedName": "runtimeException",
       "declaration": {
         "file": "gi.java",
-        "start": 1755,
-        "end": 1771
+        "start": 1751,
+        "end": 1767
       }
     },
     {
@@ -74172,8 +74172,8 @@
       "renamedName": "stackIn_13_0",
       "declaration": {
         "file": "gi.java",
-        "start": 6722,
-        "end": 6734
+        "start": 6718,
+        "end": 6730
       }
     },
     {
@@ -74183,8 +74183,8 @@
       "renamedName": "stackIn_13_1",
       "declaration": {
         "file": "gi.java",
-        "start": 6752,
-        "end": 6764
+        "start": 6748,
+        "end": 6760
       }
     },
     {
@@ -74194,8 +74194,8 @@
       "renamedName": "stackIn_14_4",
       "declaration": {
         "file": "gi.java",
-        "start": 7084,
-        "end": 7096
+        "start": 7080,
+        "end": 7092
       }
     },
     {
@@ -74205,8 +74205,8 @@
       "renamedName": "stackIn_14_5",
       "declaration": {
         "file": "gi.java",
-        "start": 7124,
-        "end": 7136
+        "start": 7120,
+        "end": 7132
       }
     },
     {
@@ -74216,8 +74216,8 @@
       "renamedName": "stackIn_14_6",
       "declaration": {
         "file": "gi.java",
-        "start": 7157,
-        "end": 7169
+        "start": 7153,
+        "end": 7165
       }
     },
     {
@@ -74227,8 +74227,8 @@
       "renamedName": "decompiledCaughtException",
       "declaration": {
         "file": "gi.java",
-        "start": 7193,
-        "end": 7218
+        "start": 7189,
+        "end": 7214
       }
     },
     {
@@ -74238,8 +74238,8 @@
       "renamedName": "var3",
       "declaration": {
         "file": "gi.java",
-        "start": 7246,
-        "end": 7250
+        "start": 7242,
+        "end": 7246
       }
     },
     {
@@ -74249,8 +74249,8 @@
       "renamedName": "var3_ref",
       "declaration": {
         "file": "gi.java",
-        "start": 7281,
-        "end": 7289
+        "start": 7277,
+        "end": 7285
       }
     },
     {
@@ -74260,8 +74260,8 @@
       "renamedName": "var4",
       "declaration": {
         "file": "gi.java",
-        "start": 7313,
-        "end": 7317
+        "start": 7309,
+        "end": 7313
       }
     },
     {
@@ -74271,8 +74271,8 @@
       "renamedName": "var5",
       "declaration": {
         "file": "gi.java",
-        "start": 7354,
-        "end": 7358
+        "start": 7350,
+        "end": 7354
       }
     },
     {
@@ -74282,8 +74282,8 @@
       "renamedName": "var6",
       "declaration": {
         "file": "gi.java",
-        "start": 7386,
-        "end": 7390
+        "start": 7382,
+        "end": 7386
       }
     },
     {
@@ -74293,8 +74293,8 @@
       "renamedName": "var7",
       "declaration": {
         "file": "gi.java",
-        "start": 7418,
-        "end": 7422
+        "start": 7414,
+        "end": 7418
       }
     },
     {
@@ -74304,8 +74304,8 @@
       "renamedName": "stackIn_13_2",
       "declaration": {
         "file": "gi.java",
-        "start": 6791,
-        "end": 6803
+        "start": 6787,
+        "end": 6799
       }
     },
     {
@@ -74315,8 +74315,8 @@
       "renamedName": "var8",
       "declaration": {
         "file": "gi.java",
-        "start": 7450,
-        "end": 7454
+        "start": 7446,
+        "end": 7450
       }
     },
     {
@@ -74326,8 +74326,8 @@
       "renamedName": "var9",
       "declaration": {
         "file": "gi.java",
-        "start": 7482,
-        "end": 7486
+        "start": 7478,
+        "end": 7482
       }
     },
     {
@@ -74337,8 +74337,8 @@
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
         "file": "gi.java",
-        "start": 10119,
-        "end": 10145
+        "start": 10115,
+        "end": 10141
       }
     },
     {
@@ -74348,8 +74348,8 @@
       "renamedName": "decompiledUncheckedException",
       "declaration": {
         "file": "gi.java",
-        "start": 10441,
-        "end": 10469
+        "start": 10437,
+        "end": 10465
       }
     },
     {
@@ -74359,8 +74359,8 @@
       "renamedName": "decompiledCheckedException",
       "declaration": {
         "file": "gi.java",
-        "start": 10548,
-        "end": 10574
+        "start": 10544,
+        "end": 10570
       }
     },
     {
@@ -74370,8 +74370,8 @@
       "renamedName": "stackIn_13_3",
       "declaration": {
         "file": "gi.java",
-        "start": 6830,
-        "end": 6842
+        "start": 6826,
+        "end": 6838
       }
     },
     {
@@ -74381,8 +74381,8 @@
       "renamedName": "stackIn_13_4",
       "declaration": {
         "file": "gi.java",
-        "start": 6869,
-        "end": 6881
+        "start": 6865,
+        "end": 6877
       }
     },
     {
@@ -74392,8 +74392,8 @@
       "renamedName": "stackIn_13_5",
       "declaration": {
         "file": "gi.java",
-        "start": 6909,
-        "end": 6921
+        "start": 6905,
+        "end": 6917
       }
     },
     {
@@ -74403,8 +74403,8 @@
       "renamedName": "stackIn_14_0",
       "declaration": {
         "file": "gi.java",
-        "start": 6937,
-        "end": 6949
+        "start": 6933,
+        "end": 6945
       }
     },
     {
@@ -74414,8 +74414,8 @@
       "renamedName": "stackIn_14_1",
       "declaration": {
         "file": "gi.java",
-        "start": 6967,
-        "end": 6979
+        "start": 6963,
+        "end": 6975
       }
     },
     {
@@ -74425,8 +74425,8 @@
       "renamedName": "stackIn_14_2",
       "declaration": {
         "file": "gi.java",
-        "start": 7006,
-        "end": 7018
+        "start": 7002,
+        "end": 7014
       }
     },
     {
@@ -74436,8 +74436,8 @@
       "renamedName": "stackIn_14_3",
       "declaration": {
         "file": "gi.java",
-        "start": 7045,
-        "end": 7057
+        "start": 7041,
+        "end": 7053
       }
     },
     {
@@ -74447,8 +74447,8 @@
       "renamedName": "var5_int",
       "declaration": {
         "file": "gi.java",
-        "start": 2039,
-        "end": 2047
+        "start": 2035,
+        "end": 2043
       }
     },
     {
@@ -74458,8 +74458,8 @@
       "renamedName": "var5",
       "declaration": {
         "file": "gi.java",
-        "start": 2078,
-        "end": 2082
+        "start": 2074,
+        "end": 2078
       }
     },
     {
@@ -74469,8 +74469,8 @@
       "renamedName": "stackIn_10_1",
       "declaration": {
         "file": "gi.java",
-        "start": 2417,
-        "end": 2429
+        "start": 2413,
+        "end": 2425
       }
     },
     {
@@ -74480,8 +74480,8 @@
       "renamedName": "stackIn_10_2",
       "declaration": {
         "file": "gi.java",
-        "start": 2453,
-        "end": 2465
+        "start": 2449,
+        "end": 2461
       }
     },
     {
@@ -74491,8 +74491,8 @@
       "renamedName": "stackIn_12_1",
       "declaration": {
         "file": "gi.java",
-        "start": 2496,
-        "end": 2508
+        "start": 2492,
+        "end": 2504
       }
     },
     {
@@ -74502,8 +74502,8 @@
       "renamedName": "stackIn_13_1",
       "declaration": {
         "file": "gi.java",
-        "start": 2539,
-        "end": 2551
+        "start": 2535,
+        "end": 2547
       }
     },
     {
@@ -74513,8 +74513,8 @@
       "renamedName": "stackIn_13_2",
       "declaration": {
         "file": "gi.java",
-        "start": 2575,
-        "end": 2587
+        "start": 2571,
+        "end": 2583
       }
     },
     {
@@ -74524,8 +74524,8 @@
       "renamedName": "stackIn_15_1",
       "declaration": {
         "file": "gi.java",
-        "start": 2618,
-        "end": 2630
+        "start": 2614,
+        "end": 2626
       }
     },
     {
@@ -74535,8 +74535,8 @@
       "renamedName": "stackIn_16_1",
       "declaration": {
         "file": "gi.java",
-        "start": 2661,
-        "end": 2673
+        "start": 2657,
+        "end": 2669
       }
     },
     {
@@ -74546,8 +74546,8 @@
       "renamedName": "stackIn_16_2",
       "declaration": {
         "file": "gi.java",
-        "start": 2697,
-        "end": 2709
+        "start": 2693,
+        "end": 2705
       }
     },
     {
@@ -74557,8 +74557,8 @@
       "renamedName": "decompiledCaughtException",
       "declaration": {
         "file": "gi.java",
-        "start": 2743,
-        "end": 2768
+        "start": 2739,
+        "end": 2764
       }
     },
     {
@@ -74568,8 +74568,8 @@
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
         "file": "gi.java",
-        "start": 3117,
-        "end": 3143
+        "start": 3113,
+        "end": 3139
       }
     },
     {
@@ -74579,8 +74579,8 @@
       "renamedName": "var6",
       "declaration": {
         "file": "gi.java",
-        "start": 2103,
-        "end": 2107
+        "start": 2099,
+        "end": 2103
       }
     },
     {
@@ -74590,8 +74590,8 @@
       "renamedName": "stackIn_3_0",
       "declaration": {
         "file": "gi.java",
-        "start": 2124,
-        "end": 2135
+        "start": 2120,
+        "end": 2131
       }
     },
     {
@@ -74601,8 +74601,8 @@
       "renamedName": "stackIn_6_0",
       "declaration": {
         "file": "gi.java",
-        "start": 2169,
-        "end": 2180
+        "start": 2165,
+        "end": 2176
       }
     },
     {
@@ -74612,8 +74612,8 @@
       "renamedName": "stackIn_6_1",
       "declaration": {
         "file": "gi.java",
-        "start": 2211,
-        "end": 2222
+        "start": 2207,
+        "end": 2218
       }
     },
     {
@@ -74623,8 +74623,8 @@
       "renamedName": "stackIn_7_0",
       "declaration": {
         "file": "gi.java",
-        "start": 2256,
-        "end": 2267
+        "start": 2252,
+        "end": 2263
       }
     },
     {
@@ -74634,8 +74634,8 @@
       "renamedName": "stackIn_7_1",
       "declaration": {
         "file": "gi.java",
-        "start": 2298,
-        "end": 2309
+        "start": 2294,
+        "end": 2305
       }
     },
     {
@@ -74645,8 +74645,8 @@
       "renamedName": "stackIn_7_2",
       "declaration": {
         "file": "gi.java",
-        "start": 2333,
-        "end": 2344
+        "start": 2329,
+        "end": 2340
       }
     },
     {
@@ -74656,8 +74656,8 @@
       "renamedName": "stackIn_9_1",
       "declaration": {
         "file": "gi.java",
-        "start": 2375,
-        "end": 2386
+        "start": 2371,
+        "end": 2382
       }
     },
     {
@@ -75877,8 +75877,8 @@
       "renamedName": "stackIn_3_0",
       "declaration": {
         "file": "hd.java",
-        "start": 2335,
-        "end": 2346
+        "start": 2331,
+        "end": 2342
       }
     },
     {
@@ -75888,8 +75888,8 @@
       "renamedName": "stackIn_4_0",
       "declaration": {
         "file": "hd.java",
-        "start": 2370,
-        "end": 2381
+        "start": 2366,
+        "end": 2377
       }
     },
     {
@@ -75899,8 +75899,8 @@
       "renamedName": "stackIn_18_1",
       "declaration": {
         "file": "hd.java",
-        "start": 2736,
-        "end": 2748
+        "start": 2732,
+        "end": 2744
       }
     },
     {
@@ -75910,8 +75910,8 @@
       "renamedName": "stackIn_18_2",
       "declaration": {
         "file": "hd.java",
-        "start": 2772,
-        "end": 2784
+        "start": 2768,
+        "end": 2780
       }
     },
     {
@@ -75921,8 +75921,8 @@
       "renamedName": "stackIn_20_1",
       "declaration": {
         "file": "hd.java",
-        "start": 2815,
-        "end": 2827
+        "start": 2811,
+        "end": 2823
       }
     },
     {
@@ -75932,8 +75932,8 @@
       "renamedName": "stackIn_21_1",
       "declaration": {
         "file": "hd.java",
-        "start": 2858,
-        "end": 2870
+        "start": 2854,
+        "end": 2866
       }
     },
     {
@@ -75943,8 +75943,8 @@
       "renamedName": "stackIn_21_2",
       "declaration": {
         "file": "hd.java",
-        "start": 2894,
-        "end": 2906
+        "start": 2890,
+        "end": 2902
       }
     },
     {
@@ -75954,8 +75954,8 @@
       "renamedName": "decompiledCaughtException",
       "declaration": {
         "file": "hd.java",
-        "start": 2940,
-        "end": 2965
+        "start": 2936,
+        "end": 2961
       }
     },
     {
@@ -75965,8 +75965,8 @@
       "renamedName": "var12_int",
       "declaration": {
         "file": "hd.java",
-        "start": 2986,
-        "end": 2995
+        "start": 2982,
+        "end": 2991
       }
     },
     {
@@ -75976,8 +75976,8 @@
       "renamedName": "var12",
       "declaration": {
         "file": "hd.java",
-        "start": 3026,
-        "end": 3031
+        "start": 3022,
+        "end": 3027
       }
     },
     {
@@ -75987,8 +75987,8 @@
       "renamedName": "var13",
       "declaration": {
         "file": "hd.java",
-        "start": 3052,
-        "end": 3057
+        "start": 3048,
+        "end": 3053
       }
     },
     {
@@ -75998,8 +75998,8 @@
       "renamedName": "var14",
       "declaration": {
         "file": "hd.java",
-        "start": 3075,
-        "end": 3080
+        "start": 3071,
+        "end": 3076
       }
     },
     {
@@ -76009,8 +76009,8 @@
       "renamedName": "stackIn_4_1",
       "declaration": {
         "file": "hd.java",
-        "start": 2406,
-        "end": 2417
+        "start": 2402,
+        "end": 2413
       }
     },
     {
@@ -76020,8 +76020,8 @@
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
         "file": "hd.java",
-        "start": 4266,
-        "end": 4292
+        "start": 4262,
+        "end": 4288
       }
     },
     {
@@ -76031,8 +76031,8 @@
       "renamedName": "stackIn_10_0",
       "declaration": {
         "file": "hd.java",
-        "start": 2439,
-        "end": 2451
+        "start": 2435,
+        "end": 2447
       }
     },
     {
@@ -76042,8 +76042,8 @@
       "renamedName": "stackIn_14_0",
       "declaration": {
         "file": "hd.java",
-        "start": 2482,
-        "end": 2494
+        "start": 2478,
+        "end": 2490
       }
     },
     {
@@ -76053,8 +76053,8 @@
       "renamedName": "stackIn_14_1",
       "declaration": {
         "file": "hd.java",
-        "start": 2525,
-        "end": 2537
+        "start": 2521,
+        "end": 2533
       }
     },
     {
@@ -76064,8 +76064,8 @@
       "renamedName": "stackIn_15_0",
       "declaration": {
         "file": "hd.java",
-        "start": 2571,
-        "end": 2583
+        "start": 2567,
+        "end": 2579
       }
     },
     {
@@ -76075,8 +76075,8 @@
       "renamedName": "stackIn_15_1",
       "declaration": {
         "file": "hd.java",
-        "start": 2614,
-        "end": 2626
+        "start": 2610,
+        "end": 2622
       }
     },
     {
@@ -76086,8 +76086,8 @@
       "renamedName": "stackIn_15_2",
       "declaration": {
         "file": "hd.java",
-        "start": 2650,
-        "end": 2662
+        "start": 2646,
+        "end": 2658
       }
     },
     {
@@ -76097,8 +76097,8 @@
       "renamedName": "stackIn_17_1",
       "declaration": {
         "file": "hd.java",
-        "start": 2693,
-        "end": 2705
+        "start": 2689,
+        "end": 2701
       }
     },
     {
@@ -76152,8 +76152,8 @@
       "renamedName": "var2",
       "declaration": {
         "file": "hd.java",
-        "start": 1892,
-        "end": 1896
+        "start": 1888,
+        "end": 1892
       }
     },
     {
@@ -76163,8 +76163,8 @@
       "renamedName": "var3",
       "declaration": {
         "file": "hd.java",
-        "start": 1989,
-        "end": 1993
+        "start": 1985,
+        "end": 1989
       }
     },
     {
@@ -144341,8 +144341,8 @@
       "renamedName": "var2",
       "declaration": {
         "file": "v.java",
-        "start": 13733,
-        "end": 13737
+        "start": 13721,
+        "end": 13725
       }
     },
     {
@@ -144352,8 +144352,8 @@
       "renamedName": "stackIn_5_0",
       "declaration": {
         "file": "v.java",
-        "start": 13762,
-        "end": 13773
+        "start": 13750,
+        "end": 13761
       }
     },
     {
@@ -144363,8 +144363,8 @@
       "renamedName": "stackIn_8_0",
       "declaration": {
         "file": "v.java",
-        "start": 13808,
-        "end": 13819
+        "start": 13796,
+        "end": 13807
       }
     },
     {
@@ -144374,8 +144374,8 @@
       "renamedName": "stackIn_8_1",
       "declaration": {
         "file": "v.java",
-        "start": 13850,
-        "end": 13861
+        "start": 13838,
+        "end": 13849
       }
     },
     {
@@ -144385,8 +144385,8 @@
       "renamedName": "stackIn_9_0",
       "declaration": {
         "file": "v.java",
-        "start": 13895,
-        "end": 13906
+        "start": 13883,
+        "end": 13894
       }
     },
     {
@@ -144396,8 +144396,8 @@
       "renamedName": "stackIn_9_1",
       "declaration": {
         "file": "v.java",
-        "start": 13937,
-        "end": 13948
+        "start": 13925,
+        "end": 13936
       }
     },
     {
@@ -144407,8 +144407,8 @@
       "renamedName": "stackIn_9_2",
       "declaration": {
         "file": "v.java",
-        "start": 13972,
-        "end": 13983
+        "start": 13960,
+        "end": 13971
       }
     },
     {
@@ -144418,8 +144418,8 @@
       "renamedName": "decompiledCaughtException",
       "declaration": {
         "file": "v.java",
-        "start": 14017,
-        "end": 14042
+        "start": 14005,
+        "end": 14030
       }
     },
     {
@@ -144429,8 +144429,8 @@
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
         "file": "v.java",
-        "start": 14279,
-        "end": 14305
+        "start": 14267,
+        "end": 14293
       }
     },
     {
@@ -144682,8 +144682,8 @@
       "renamedName": "var2",
       "declaration": {
         "file": "v.java",
-        "start": 8125,
-        "end": 8129
+        "start": 8113,
+        "end": 8117
       }
     },
     {
@@ -144693,8 +144693,8 @@
       "renamedName": "var3",
       "declaration": {
         "file": "v.java",
-        "start": 8143,
-        "end": 8147
+        "start": 8131,
+        "end": 8135
       }
     },
     {
@@ -144704,8 +144704,8 @@
       "renamedName": "var4",
       "declaration": {
         "file": "v.java",
-        "start": 8161,
-        "end": 8165
+        "start": 8149,
+        "end": 8153
       }
     },
     {
@@ -144715,8 +144715,8 @@
       "renamedName": "var5",
       "declaration": {
         "file": "v.java",
-        "start": 8179,
-        "end": 8183
+        "start": 8167,
+        "end": 8171
       }
     },
     {
@@ -164592,8 +164592,8 @@
       "renamedName": "gi",
       "declaration": {
         "file": "gi.java",
-        "start": 11879,
-        "end": 11881
+        "start": 11875,
+        "end": 11877
       }
     },
     {
@@ -164603,8 +164603,8 @@
       "renamedName": "a",
       "declaration": {
         "file": "gi.java",
-        "start": 11738,
-        "end": 11739
+        "start": 11734,
+        "end": 11735
       }
     },
     {
@@ -164614,8 +164614,8 @@
       "renamedName": "a",
       "declaration": {
         "file": "gi.java",
-        "start": 10684,
-        "end": 10685
+        "start": 10680,
+        "end": 10681
       }
     },
     {
@@ -164625,8 +164625,8 @@
       "renamedName": "a",
       "declaration": {
         "file": "gi.java",
-        "start": 5506,
-        "end": 5507
+        "start": 5502,
+        "end": 5503
       }
     },
     {
@@ -164636,8 +164636,8 @@
       "renamedName": "a",
       "declaration": {
         "file": "gi.java",
-        "start": 11950,
-        "end": 11951
+        "start": 11946,
+        "end": 11947
       }
     },
     {
@@ -164647,8 +164647,8 @@
       "renamedName": "a",
       "declaration": {
         "file": "gi.java",
-        "start": 1184,
-        "end": 1185
+        "start": 1180,
+        "end": 1181
       }
     },
     {
@@ -164658,8 +164658,8 @@
       "renamedName": "a",
       "declaration": {
         "file": "gi.java",
-        "start": 6644,
-        "end": 6645
+        "start": 6640,
+        "end": 6641
       }
     },
     {
@@ -164669,8 +164669,8 @@
       "renamedName": "a",
       "declaration": {
         "file": "gi.java",
-        "start": 1959,
-        "end": 1960
+        "start": 1955,
+        "end": 1956
       }
     },
     {
@@ -165164,8 +165164,8 @@
       "renamedName": "hd",
       "declaration": {
         "file": "hd.java",
-        "start": 2109,
-        "end": 2111
+        "start": 2105,
+        "end": 2107
       }
     },
     {
@@ -165186,8 +165186,8 @@
       "renamedName": "c",
       "declaration": {
         "file": "hd.java",
-        "start": 1863,
-        "end": 1864
+        "start": 1859,
+        "end": 1860
       }
     },
     {
@@ -169652,8 +169652,8 @@
       "renamedName": "spawnPointsPopup",
       "declaration": {
         "file": "ld.java",
-        "start": 4820,
-        "end": 4821
+        "start": 4268,
+        "end": 4269
       }
     },
     {
@@ -178738,8 +178738,8 @@
       "renamedName": "v",
       "declaration": {
         "file": "v.java",
-        "start": 13594,
-        "end": 13595
+        "start": 13582,
+        "end": 13583
       }
     },
     {
@@ -178771,8 +178771,8 @@
       "renamedName": "a",
       "declaration": {
         "file": "v.java",
-        "start": 13128,
-        "end": 13129
+        "start": 13116,
+        "end": 13117
       }
     },
     {
@@ -178782,8 +178782,8 @@
       "renamedName": "a",
       "declaration": {
         "file": "v.java",
-        "start": 13676,
-        "end": 13677
+        "start": 13664,
+        "end": 13665
       }
     },
     {
@@ -178826,8 +178826,8 @@
       "renamedName": "b",
       "declaration": {
         "file": "v.java",
-        "start": 8093,
-        "end": 8094
+        "start": 8081,
+        "end": 8082
       }
     },
     {
@@ -197361,8 +197361,8 @@
       "renamedName": "param0",
       "declaration": {
         "file": "gi.java",
-        "start": 11744,
-        "end": 11750
+        "start": 11740,
+        "end": 11746
       }
     },
     {
@@ -197372,8 +197372,8 @@
       "renamedName": "param0",
       "declaration": {
         "file": "gi.java",
-        "start": 10690,
-        "end": 10696
+        "start": 10686,
+        "end": 10692
       }
     },
     {
@@ -197383,8 +197383,8 @@
       "renamedName": "param1",
       "declaration": {
         "file": "gi.java",
-        "start": 10703,
-        "end": 10709
+        "start": 10699,
+        "end": 10705
       }
     },
     {
@@ -197394,8 +197394,8 @@
       "renamedName": "param2",
       "declaration": {
         "file": "gi.java",
-        "start": 10715,
-        "end": 10721
+        "start": 10711,
+        "end": 10717
       }
     },
     {
@@ -197405,8 +197405,8 @@
       "renamedName": "param0",
       "declaration": {
         "file": "gi.java",
-        "start": 5512,
-        "end": 5518
+        "start": 5508,
+        "end": 5514
       }
     },
     {
@@ -197416,8 +197416,8 @@
       "renamedName": "param1",
       "declaration": {
         "file": "gi.java",
-        "start": 5524,
-        "end": 5530
+        "start": 5520,
+        "end": 5526
       }
     },
     {
@@ -197427,8 +197427,8 @@
       "renamedName": "param2",
       "declaration": {
         "file": "gi.java",
-        "start": 5536,
-        "end": 5542
+        "start": 5532,
+        "end": 5538
       }
     },
     {
@@ -197438,8 +197438,8 @@
       "renamedName": "param3",
       "declaration": {
         "file": "gi.java",
-        "start": 5548,
-        "end": 5554
+        "start": 5544,
+        "end": 5550
       }
     },
     {
@@ -197449,8 +197449,8 @@
       "renamedName": "param4",
       "declaration": {
         "file": "gi.java",
-        "start": 5560,
-        "end": 5566
+        "start": 5556,
+        "end": 5562
       }
     },
     {
@@ -197460,8 +197460,8 @@
       "renamedName": "param5",
       "declaration": {
         "file": "gi.java",
-        "start": 5572,
-        "end": 5578
+        "start": 5568,
+        "end": 5574
       }
     },
     {
@@ -197471,8 +197471,8 @@
       "renamedName": "param6",
       "declaration": {
         "file": "gi.java",
-        "start": 5584,
-        "end": 5590
+        "start": 5580,
+        "end": 5586
       }
     },
     {
@@ -197482,8 +197482,8 @@
       "renamedName": "param7",
       "declaration": {
         "file": "gi.java",
-        "start": 5596,
-        "end": 5602
+        "start": 5592,
+        "end": 5598
       }
     },
     {
@@ -197493,8 +197493,8 @@
       "renamedName": "param0",
       "declaration": {
         "file": "gi.java",
-        "start": 11957,
-        "end": 11963
+        "start": 11953,
+        "end": 11959
       }
     },
     {
@@ -197504,8 +197504,8 @@
       "renamedName": "param1",
       "declaration": {
         "file": "gi.java",
-        "start": 11970,
-        "end": 11976
+        "start": 11966,
+        "end": 11972
       }
     },
     {
@@ -197515,8 +197515,8 @@
       "renamedName": "param0",
       "declaration": {
         "file": "gi.java",
-        "start": 1191,
-        "end": 1197
+        "start": 1187,
+        "end": 1193
       }
     },
     {
@@ -197526,8 +197526,8 @@
       "renamedName": "param1",
       "declaration": {
         "file": "gi.java",
-        "start": 1203,
-        "end": 1209
+        "start": 1199,
+        "end": 1205
       }
     },
     {
@@ -197537,8 +197537,8 @@
       "renamedName": "param2",
       "declaration": {
         "file": "gi.java",
-        "start": 1214,
-        "end": 1220
+        "start": 1210,
+        "end": 1216
       }
     },
     {
@@ -197548,8 +197548,8 @@
       "renamedName": "param0",
       "declaration": {
         "file": "gi.java",
-        "start": 6656,
-        "end": 6662
+        "start": 6652,
+        "end": 6658
       }
     },
     {
@@ -197559,8 +197559,8 @@
       "renamedName": "param1",
       "declaration": {
         "file": "gi.java",
-        "start": 6671,
-        "end": 6677
+        "start": 6667,
+        "end": 6673
       }
     },
     {
@@ -197570,8 +197570,8 @@
       "renamedName": "param2",
       "declaration": {
         "file": "gi.java",
-        "start": 6684,
-        "end": 6690
+        "start": 6680,
+        "end": 6686
       }
     },
     {
@@ -197581,8 +197581,8 @@
       "renamedName": "param0",
       "declaration": {
         "file": "gi.java",
-        "start": 1964,
-        "end": 1970
+        "start": 1960,
+        "end": 1966
       }
     },
     {
@@ -197592,8 +197592,8 @@
       "renamedName": "param1",
       "declaration": {
         "file": "gi.java",
-        "start": 1976,
-        "end": 1982
+        "start": 1972,
+        "end": 1978
       }
     },
     {
@@ -197603,8 +197603,8 @@
       "renamedName": "param2",
       "declaration": {
         "file": "gi.java",
-        "start": 1987,
-        "end": 1993
+        "start": 1983,
+        "end": 1989
       }
     },
     {
@@ -197614,8 +197614,8 @@
       "renamedName": "param3",
       "declaration": {
         "file": "gi.java",
-        "start": 2002,
-        "end": 2008
+        "start": 1998,
+        "end": 2004
       }
     },
     {
@@ -197625,8 +197625,8 @@
       "renamedName": "param4",
       "declaration": {
         "file": "gi.java",
-        "start": 2017,
-        "end": 2023
+        "start": 2013,
+        "end": 2019
       }
     },
     {
@@ -198538,8 +198538,8 @@
       "renamedName": "param0",
       "declaration": {
         "file": "hd.java",
-        "start": 2116,
-        "end": 2122
+        "start": 2112,
+        "end": 2118
       }
     },
     {
@@ -198549,8 +198549,8 @@
       "renamedName": "param1",
       "declaration": {
         "file": "hd.java",
-        "start": 2128,
-        "end": 2134
+        "start": 2124,
+        "end": 2130
       }
     },
     {
@@ -198560,8 +198560,8 @@
       "renamedName": "param10",
       "declaration": {
         "file": "hd.java",
-        "start": 2240,
-        "end": 2247
+        "start": 2236,
+        "end": 2243
       }
     },
     {
@@ -198571,8 +198571,8 @@
       "renamedName": "param2",
       "declaration": {
         "file": "hd.java",
-        "start": 2140,
-        "end": 2146
+        "start": 2136,
+        "end": 2142
       }
     },
     {
@@ -198582,8 +198582,8 @@
       "renamedName": "param3",
       "declaration": {
         "file": "hd.java",
-        "start": 2152,
-        "end": 2158
+        "start": 2148,
+        "end": 2154
       }
     },
     {
@@ -198593,8 +198593,8 @@
       "renamedName": "param4",
       "declaration": {
         "file": "hd.java",
-        "start": 2163,
-        "end": 2169
+        "start": 2159,
+        "end": 2165
       }
     },
     {
@@ -198604,8 +198604,8 @@
       "renamedName": "param5",
       "declaration": {
         "file": "hd.java",
-        "start": 2179,
-        "end": 2185
+        "start": 2175,
+        "end": 2181
       }
     },
     {
@@ -198615,8 +198615,8 @@
       "renamedName": "param6",
       "declaration": {
         "file": "hd.java",
-        "start": 2191,
-        "end": 2197
+        "start": 2187,
+        "end": 2193
       }
     },
     {
@@ -198626,8 +198626,8 @@
       "renamedName": "param7",
       "declaration": {
         "file": "hd.java",
-        "start": 2203,
-        "end": 2209
+        "start": 2199,
+        "end": 2205
       }
     },
     {
@@ -198637,8 +198637,8 @@
       "renamedName": "param8",
       "declaration": {
         "file": "hd.java",
-        "start": 2213,
-        "end": 2219
+        "start": 2209,
+        "end": 2215
       }
     },
     {
@@ -198648,8 +198648,8 @@
       "renamedName": "param9",
       "declaration": {
         "file": "hd.java",
-        "start": 2225,
-        "end": 2231
+        "start": 2221,
+        "end": 2227
       }
     },
     {
@@ -198703,8 +198703,8 @@
       "renamedName": "param0",
       "declaration": {
         "file": "hd.java",
-        "start": 1870,
-        "end": 1876
+        "start": 1866,
+        "end": 1872
       }
     },
     {
@@ -210572,8 +210572,8 @@
       "renamedName": "originY",
       "declaration": {
         "file": "ld.java",
-        "start": 4826,
-        "end": 4832
+        "start": 4274,
+        "end": 4280
       }
     },
     {
@@ -210583,8 +210583,8 @@
       "renamedName": "originX",
       "declaration": {
         "file": "ld.java",
-        "start": 4838,
-        "end": 4844
+        "start": 4286,
+        "end": 4292
       }
     },
     {
@@ -210594,8 +210594,8 @@
       "renamedName": "methodGuard",
       "declaration": {
         "file": "ld.java",
-        "start": 4850,
-        "end": 4856
+        "start": 4298,
+        "end": 4304
       }
     },
     {
@@ -210605,8 +210605,8 @@
       "renamedName": "points",
       "declaration": {
         "file": "ld.java",
-        "start": 4862,
-        "end": 4868
+        "start": 4310,
+        "end": 4316
       }
     },
     {
@@ -230471,8 +230471,8 @@
       "renamedName": "param0",
       "declaration": {
         "file": "v.java",
-        "start": 13134,
-        "end": 13140
+        "start": 13122,
+        "end": 13128
       }
     },
     {
@@ -230482,8 +230482,8 @@
       "renamedName": "param0",
       "declaration": {
         "file": "v.java",
-        "start": 13685,
-        "end": 13691
+        "start": 13673,
+        "end": 13679
       }
     },
     {
@@ -230493,8 +230493,8 @@
       "renamedName": "param1",
       "declaration": {
         "file": "v.java",
-        "start": 13698,
-        "end": 13704
+        "start": 13686,
+        "end": 13692
       }
     },
     {
@@ -230548,8 +230548,8 @@
       "renamedName": "param0",
       "declaration": {
         "file": "v.java",
-        "start": 8103,
-        "end": 8109
+        "start": 8091,
+        "end": 8097
       }
     },
     {
@@ -281425,8 +281425,8 @@
     {
       "original": "gi.java",
       "renamed": "gi.java",
-      "inputSha256": "4dc8dc2c8ff133b50fe95eff6e9132dc3c16e5764a3ce895d1fd7d7e254fdf9e",
-      "outputSha256": "ea7be637500a58583c9b3c6275d9525ae7b7dcd8e45dd5b4b36a8610cfb0cbe7",
+      "inputSha256": "d28a7b4d3557f5c9bed9384ceaf8a9602fb0742f25ca0cb52aa7d3d96ee07fa2",
+      "outputSha256": "f5b48a6ab589ca688c779abb7f099f5c97e9b944a3ec54be6567eebf61078f52",
       "edits": [
         {
           "start": 118,
@@ -281450,246 +281450,246 @@
           "renamed": "IntrusiveNode"
         },
         {
-          "start": 768,
-          "end": 775,
+          "start": 764,
+          "end": 771,
           "symbol": "F:ih.field_b:Ljava/lang/String;",
           "original": "field_b",
           "renamed": "ticketingOneUnreadText"
         },
         {
-          "start": 833,
-          "end": 840,
+          "start": 829,
+          "end": 836,
           "symbol": "F:ra.field_b:Ljava/lang/String;",
           "original": "field_b",
           "renamed": "ticketingUnreadCountText"
         },
         {
-          "start": 1065,
-          "end": 1072,
+          "start": 1061,
+          "end": 1068,
           "symbol": "F:ne.field_d:Ljava/lang/String;",
           "original": "field_d",
           "renamed": "ticketingGoToWebsiteText"
         },
         {
-          "start": 1211,
-          "end": 1213,
+          "start": 1207,
+          "end": 1209,
           "symbol": "C:hf",
           "original": "hf",
           "renamed": "IntrusiveNode"
         },
         {
-          "start": 1232,
-          "end": 1234,
+          "start": 1228,
+          "end": 1230,
           "symbol": "C:hf",
           "original": "hf",
           "renamed": "IntrusiveNode"
         },
         {
-          "start": 1287,
-          "end": 1294,
+          "start": 1283,
+          "end": 1290,
           "symbol": "F:hf.field_c:Lhf;",
           "original": "field_c",
           "renamed": "previousNode"
         },
         {
-          "start": 1330,
-          "end": 1331,
+          "start": 1326,
+          "end": 1327,
           "symbol": "M:hf.a(Z)V",
           "original": "a",
           "renamed": "unlinkNode"
         },
         {
-          "start": 1449,
-          "end": 1456,
+          "start": 1445,
+          "end": 1452,
           "symbol": "F:hf.field_c:Lhf;",
           "original": "field_c",
           "renamed": "previousNode"
         },
         {
-          "start": 1464,
-          "end": 1471,
+          "start": 1460,
+          "end": 1467,
           "symbol": "F:hf.field_c:Lhf;",
           "original": "field_c",
           "renamed": "previousNode"
         },
         {
-          "start": 1578,
-          "end": 1585,
+          "start": 1574,
+          "end": 1581,
           "symbol": "F:hf.field_b:Lhf;",
           "original": "field_b",
           "renamed": "nextNode"
         },
         {
-          "start": 1613,
-          "end": 1620,
+          "start": 1609,
+          "end": 1616,
           "symbol": "F:hf.field_c:Lhf;",
           "original": "field_c",
           "renamed": "previousNode"
         },
         {
-          "start": 1621,
-          "end": 1628,
+          "start": 1617,
+          "end": 1624,
           "symbol": "F:hf.field_b:Lhf;",
           "original": "field_b",
           "renamed": "nextNode"
         },
         {
-          "start": 1695,
-          "end": 1702,
+          "start": 1691,
+          "end": 1698,
           "symbol": "F:hf.field_b:Lhf;",
           "original": "field_b",
           "renamed": "nextNode"
         },
         {
-          "start": 1703,
-          "end": 1710,
+          "start": 1699,
+          "end": 1706,
           "symbol": "F:hf.field_c:Lhf;",
           "original": "field_c",
           "renamed": "previousNode"
         },
         {
-          "start": 5767,
-          "end": 5769,
+          "start": 5763,
+          "end": 5765,
           "symbol": "C:vb",
           "original": "vb",
           "renamed": "SoftwareRasterizer"
         },
         {
-          "start": 5770,
-          "end": 5777,
+          "start": 5766,
+          "end": 5773,
           "symbol": "F:vb.field_c:[I",
           "original": "field_c",
           "renamed": "framebuffer"
         },
         {
-          "start": 5914,
-          "end": 5916,
+          "start": 5910,
+          "end": 5912,
           "symbol": "C:vb",
           "original": "vb",
           "renamed": "SoftwareRasterizer"
         },
         {
-          "start": 5917,
-          "end": 5924,
+          "start": 5913,
+          "end": 5920,
           "symbol": "F:vb.field_c:[I",
           "original": "field_c",
           "renamed": "framebuffer"
         },
         {
-          "start": 6028,
-          "end": 6030,
+          "start": 6024,
+          "end": 6026,
           "symbol": "C:vb",
           "original": "vb",
           "renamed": "SoftwareRasterizer"
         },
         {
-          "start": 6031,
-          "end": 6038,
+          "start": 6027,
+          "end": 6034,
           "symbol": "F:vb.field_c:[I",
           "original": "field_c",
           "renamed": "framebuffer"
         },
         {
-          "start": 6195,
-          "end": 6197,
+          "start": 6191,
+          "end": 6193,
           "symbol": "C:vb",
           "original": "vb",
           "renamed": "SoftwareRasterizer"
         },
         {
-          "start": 6198,
-          "end": 6205,
+          "start": 6194,
+          "end": 6201,
           "symbol": "F:vb.field_c:[I",
           "original": "field_c",
           "renamed": "framebuffer"
         },
         {
-          "start": 6343,
-          "end": 6345,
+          "start": 6339,
+          "end": 6341,
           "symbol": "C:vb",
           "original": "vb",
           "renamed": "SoftwareRasterizer"
         },
         {
-          "start": 6346,
-          "end": 6353,
+          "start": 6342,
+          "end": 6349,
           "symbol": "F:vb.field_c:[I",
           "original": "field_c",
           "renamed": "framebuffer"
         },
         {
-          "start": 6458,
-          "end": 6460,
+          "start": 6454,
+          "end": 6456,
           "symbol": "C:vb",
           "original": "vb",
           "renamed": "SoftwareRasterizer"
         },
         {
-          "start": 6461,
-          "end": 6468,
+          "start": 6457,
+          "end": 6464,
           "symbol": "F:vb.field_c:[I",
           "original": "field_c",
           "renamed": "framebuffer"
         },
         {
-          "start": 8146,
-          "end": 8147,
+          "start": 8142,
+          "end": 8143,
           "symbol": "C:c",
           "original": "c",
           "renamed": "GameScreen"
         },
         {
-          "start": 8419,
-          "end": 8420,
+          "start": 8415,
+          "end": 8416,
           "symbol": "C:c",
           "original": "c",
           "renamed": "GameScreen"
         },
         {
-          "start": 11947,
-          "end": 11949,
+          "start": 11943,
+          "end": 11945,
           "symbol": "C:hf",
           "original": "hf",
           "renamed": "IntrusiveNode"
         },
         {
-          "start": 12006,
-          "end": 12008,
+          "start": 12002,
+          "end": 12004,
           "symbol": "C:hf",
           "original": "hf",
           "renamed": "IntrusiveNode"
         },
         {
-          "start": 12023,
-          "end": 12025,
+          "start": 12019,
+          "end": 12021,
           "symbol": "C:hf",
           "original": "hf",
           "renamed": "IntrusiveNode"
         },
         {
-          "start": 12224,
-          "end": 12231,
+          "start": 12220,
+          "end": 12227,
           "symbol": "F:hf.field_b:Lhf;",
           "original": "field_b",
           "renamed": "nextNode"
         },
         {
-          "start": 12458,
-          "end": 12465,
+          "start": 12454,
+          "end": 12461,
           "symbol": "F:hf.field_b:Lhf;",
           "original": "field_b",
           "renamed": "nextNode"
         },
         {
-          "start": 12573,
-          "end": 12580,
+          "start": 12569,
+          "end": 12576,
           "symbol": "F:hf.field_b:Lhf;",
           "original": "field_b",
           "renamed": "nextNode"
         },
         {
-          "start": 12643,
-          "end": 12650,
+          "start": 12639,
+          "end": 12646,
           "symbol": "F:gi.field_e:I",
           "original": "field_e",
           "renamed": "avatarBlinkClockTicks"
@@ -282349,8 +282349,8 @@
     {
       "original": "hd.java",
       "renamed": "hd.java",
-      "inputSha256": "a6dcaf3af732b220f588d4b69a73fca50adfb8c633342912c2527f438aa55977",
-      "outputSha256": "6f0c8ac3b64bc24f179651709f8a2af69d3eda47ba406bc9030cd811e889e717",
+      "inputSha256": "3d1d4dd0c0149796780b706a717bbceb77d02d68ea7afadb2377e05bd7864a14",
+      "outputSha256": "da9aa3aee5752783b75761be5a60165cdacc4583550e9eb30bea01e9f8834551",
       "edits": [
         {
           "start": 153,
@@ -282423,64 +282423,64 @@
           "renamed": "releasedInDifficultyStep"
         },
         {
-          "start": 1370,
-          "end": 1377,
+          "start": 1366,
+          "end": 1373,
           "symbol": "F:di.field_g:I",
           "original": "field_g",
           "renamed": "releasedInDifficultyStep"
         },
         {
-          "start": 1398,
-          "end": 1399,
+          "start": 1394,
+          "end": 1395,
           "symbol": "M:ld.b(Z)V",
           "original": "b",
           "renamed": "advanceDifficulty"
         },
         {
-          "start": 1557,
-          "end": 1564,
+          "start": 1553,
+          "end": 1560,
           "symbol": "F:fa.field_b:I",
           "original": "field_b",
           "renamed": "releasesPerTheme"
         },
         {
-          "start": 1571,
-          "end": 1578,
+          "start": 1567,
+          "end": 1574,
           "symbol": "F:ul.field_b:I",
           "original": "field_b",
           "renamed": "releasedInCurrentTheme"
         },
         {
-          "start": 1595,
-          "end": 1602,
+          "start": 1591,
+          "end": 1598,
           "symbol": "F:ul.field_b:I",
           "original": "field_b",
           "renamed": "releasedInCurrentTheme"
         },
         {
-          "start": 1647,
-          "end": 1654,
+          "start": 1643,
+          "end": 1650,
           "symbol": "F:el.field_o:Lgh;",
           "original": "field_o",
           "renamed": "gameplaySession"
         },
         {
-          "start": 1655,
-          "end": 1663,
+          "start": 1651,
+          "end": 1659,
           "symbol": "F:gh.field_bb:I",
           "original": "field_bb",
           "renamed": "sessionPhase"
         },
         {
-          "start": 1682,
-          "end": 1689,
+          "start": 1678,
+          "end": 1685,
           "symbol": "F:di.field_g:I",
           "original": "field_g",
           "renamed": "releasedInDifficultyStep"
         },
         {
-          "start": 1742,
-          "end": 1743,
+          "start": 1738,
+          "end": 1739,
           "symbol": "M:ld.b(Z)V",
           "original": "b",
           "renamed": "advanceDifficulty"
@@ -307735,8 +307735,8 @@
     {
       "original": "ld.java",
       "renamed": "ld.java",
-      "inputSha256": "00b403c3c5ab86a0547b2262971e3a7f7d25f89573d686d9ec1b8e43bad511f2",
-      "outputSha256": "27142b7ec6f40622e44e577e7e98ac5d34d4ddb7d4c02810bcbd3f8d464e05e2",
+      "inputSha256": "7d602bebe3d2cfd7a4519525436e3a168222659a9bd8b0303aa7c8a6a8a0772a",
+      "outputSha256": "c0a7922e86cdf13a95237c30d9d41698409f96e41ee2a425f4e33d3cb0f431bf",
       "edits": [
         {
           "start": 66,
@@ -308726,365 +308726,267 @@
           "renamed": "difficultyStep"
         },
         {
-          "start": 3477,
-          "end": 3483,
-          "symbol": "P:ld.b(Z)V#0",
-          "original": "param0",
-          "renamed": "recursiveAdvanceGuard"
-        },
-        {
-          "start": 3504,
-          "end": 3505,
-          "symbol": "M:ld.b(Z)V",
-          "original": "b",
-          "renamed": "advanceDifficulty"
-        },
-        {
-          "start": 3547,
-          "end": 3554,
-          "symbol": "F:kd.field_f:[I",
-          "original": "field_f",
-          "renamed": "difficultyStepFlags"
-        },
-        {
-          "start": 3558,
-          "end": 3565,
-          "symbol": "F:ji.field_h:I",
-          "original": "field_h",
-          "renamed": "difficultyStep"
-        },
-        {
-          "start": 3600,
-          "end": 3608,
-          "symbol": "F:f.field_qb:I",
-          "original": "field_qb",
-          "renamed": "availableEntityCategoryCount"
-        },
-        {
-          "start": 3634,
-          "end": 3642,
-          "symbol": "F:f.field_qb:I",
-          "original": "field_qb",
-          "renamed": "availableEntityCategoryCount"
-        },
-        {
-          "start": 3647,
-          "end": 3655,
-          "symbol": "F:f.field_qb:I",
-          "original": "field_qb",
-          "renamed": "availableEntityCategoryCount"
-        },
-        {
-          "start": 3729,
-          "end": 3736,
+          "start": 3480,
+          "end": 3487,
           "symbol": "F:ag.field_k:I",
           "original": "field_k",
           "renamed": "availableSpriteVariantCount"
         },
         {
-          "start": 3761,
-          "end": 3768,
+          "start": 3512,
+          "end": 3519,
           "symbol": "F:ag.field_k:I",
           "original": "field_k",
           "renamed": "availableSpriteVariantCount"
         },
         {
-          "start": 3774,
-          "end": 3781,
+          "start": 3525,
+          "end": 3532,
           "symbol": "F:ag.field_k:I",
           "original": "field_k",
           "renamed": "availableSpriteVariantCount"
         },
         {
-          "start": 3805,
-          "end": 3811,
+          "start": 3578,
+          "end": 3584,
           "symbol": "P:ld.b(Z)V#0",
           "original": "param0",
           "renamed": "recursiveAdvanceGuard"
         },
         {
-          "start": 3834,
-          "end": 3835,
+          "start": 3603,
+          "end": 3604,
           "symbol": "M:ld.b(Z)V",
           "original": "b",
           "renamed": "advanceDifficulty"
         },
         {
-          "start": 3881,
-          "end": 3888,
+          "start": 3642,
+          "end": 3649,
           "symbol": "F:kd.field_f:[I",
           "original": "field_f",
           "renamed": "difficultyStepFlags"
         },
         {
-          "start": 3892,
-          "end": 3899,
+          "start": 3653,
+          "end": 3660,
           "symbol": "F:ji.field_h:I",
           "original": "field_h",
           "renamed": "difficultyStep"
         },
         {
-          "start": 3936,
-          "end": 3944,
+          "start": 3693,
+          "end": 3701,
           "symbol": "F:f.field_qb:I",
           "original": "field_qb",
           "renamed": "availableEntityCategoryCount"
         },
         {
-          "start": 3972,
-          "end": 3980,
+          "start": 3725,
+          "end": 3733,
           "symbol": "F:f.field_qb:I",
           "original": "field_qb",
           "renamed": "availableEntityCategoryCount"
         },
         {
-          "start": 3985,
-          "end": 3993,
+          "start": 3738,
+          "end": 3746,
           "symbol": "F:f.field_qb:I",
           "original": "field_qb",
           "renamed": "availableEntityCategoryCount"
         },
         {
-          "start": 4072,
-          "end": 4078,
-          "symbol": "P:ld.b(Z)V#0",
-          "original": "param0",
-          "renamed": "recursiveAdvanceGuard"
-        },
-        {
-          "start": 4101,
-          "end": 4102,
-          "symbol": "M:ld.b(Z)V",
-          "original": "b",
-          "renamed": "advanceDifficulty"
-        },
-        {
-          "start": 4148,
-          "end": 4155,
+          "start": 3801,
+          "end": 3808,
           "symbol": "F:kd.field_f:[I",
           "original": "field_f",
           "renamed": "difficultyStepFlags"
         },
         {
-          "start": 4159,
-          "end": 4166,
+          "start": 3812,
+          "end": 3819,
           "symbol": "F:ji.field_h:I",
           "original": "field_h",
           "renamed": "difficultyStep"
+        },
+        {
+          "start": 3845,
+          "end": 3852,
+          "symbol": "F:sa.field_c:D",
+          "original": "field_c",
+          "renamed": "specialSpriteKindProbability"
+        },
+        {
+          "start": 3858,
+          "end": 3865,
+          "symbol": "F:sa.field_c:D",
+          "original": "field_c",
+          "renamed": "specialSpriteKindProbability"
+        },
+        {
+          "start": 3908,
+          "end": 3915,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
+          "start": 3919,
+          "end": 3926,
+          "symbol": "F:ji.field_h:I",
+          "original": "field_h",
+          "renamed": "difficultyStep"
+        },
+        {
+          "start": 3949,
+          "end": 3951,
+          "symbol": "C:rc",
+          "original": "rc",
+          "renamed": "DualLinkNode"
+        },
+        {
+          "start": 3952,
+          "end": 3959,
+          "symbol": "F:rc.field_h:F",
+          "original": "field_h",
+          "renamed": "rotationStepRadians"
+        },
+        {
+          "start": 3962,
+          "end": 3964,
+          "symbol": "C:rc",
+          "original": "rc",
+          "renamed": "DualLinkNode"
+        },
+        {
+          "start": 3965,
+          "end": 3972,
+          "symbol": "F:rc.field_h:F",
+          "original": "field_h",
+          "renamed": "rotationStepRadians"
+        },
+        {
+          "start": 4030,
+          "end": 4037,
+          "symbol": "F:kd.field_f:[I",
+          "original": "field_f",
+          "renamed": "difficultyStepFlags"
+        },
+        {
+          "start": 4041,
+          "end": 4048,
+          "symbol": "F:ji.field_h:I",
+          "original": "field_h",
+          "renamed": "difficultyStep"
+        },
+        {
+          "start": 4100,
+          "end": 4108,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 4129,
+          "end": 4137,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
+        },
+        {
+          "start": 4143,
+          "end": 4151,
+          "symbol": "F:ij.field_ab:F",
+          "original": "field_ab",
+          "renamed": "spawnIntervalScale"
         },
         {
           "start": 4205,
-          "end": 4213,
-          "symbol": "F:f.field_qb:I",
-          "original": "field_qb",
-          "renamed": "availableEntityCategoryCount"
-        },
-        {
-          "start": 4243,
-          "end": 4251,
-          "symbol": "F:f.field_qb:I",
-          "original": "field_qb",
-          "renamed": "availableEntityCategoryCount"
-        },
-        {
-          "start": 4256,
-          "end": 4264,
-          "symbol": "F:f.field_qb:I",
-          "original": "field_qb",
-          "renamed": "availableEntityCategoryCount"
-        },
-        {
-          "start": 4353,
-          "end": 4360,
-          "symbol": "F:kd.field_f:[I",
-          "original": "field_f",
-          "renamed": "difficultyStepFlags"
-        },
-        {
-          "start": 4364,
-          "end": 4371,
-          "symbol": "F:ji.field_h:I",
-          "original": "field_h",
-          "renamed": "difficultyStep"
-        },
-        {
-          "start": 4397,
-          "end": 4404,
-          "symbol": "F:sa.field_c:D",
-          "original": "field_c",
-          "renamed": "specialSpriteKindProbability"
-        },
-        {
-          "start": 4410,
-          "end": 4417,
-          "symbol": "F:sa.field_c:D",
-          "original": "field_c",
-          "renamed": "specialSpriteKindProbability"
-        },
-        {
-          "start": 4460,
-          "end": 4467,
-          "symbol": "F:kd.field_f:[I",
-          "original": "field_f",
-          "renamed": "difficultyStepFlags"
-        },
-        {
-          "start": 4471,
-          "end": 4478,
-          "symbol": "F:ji.field_h:I",
-          "original": "field_h",
-          "renamed": "difficultyStep"
-        },
-        {
-          "start": 4501,
-          "end": 4503,
-          "symbol": "C:rc",
-          "original": "rc",
-          "renamed": "DualLinkNode"
-        },
-        {
-          "start": 4504,
-          "end": 4511,
-          "symbol": "F:rc.field_h:F",
-          "original": "field_h",
-          "renamed": "rotationStepRadians"
-        },
-        {
-          "start": 4514,
-          "end": 4516,
-          "symbol": "C:rc",
-          "original": "rc",
-          "renamed": "DualLinkNode"
-        },
-        {
-          "start": 4517,
-          "end": 4524,
-          "symbol": "F:rc.field_h:F",
-          "original": "field_h",
-          "renamed": "rotationStepRadians"
-        },
-        {
-          "start": 4582,
-          "end": 4589,
-          "symbol": "F:kd.field_f:[I",
-          "original": "field_f",
-          "renamed": "difficultyStepFlags"
-        },
-        {
-          "start": 4593,
-          "end": 4600,
-          "symbol": "F:ji.field_h:I",
-          "original": "field_h",
-          "renamed": "difficultyStep"
-        },
-        {
-          "start": 4652,
-          "end": 4660,
-          "symbol": "F:ij.field_ab:F",
-          "original": "field_ab",
-          "renamed": "spawnIntervalScale"
-        },
-        {
-          "start": 4681,
-          "end": 4689,
-          "symbol": "F:ij.field_ab:F",
-          "original": "field_ab",
-          "renamed": "spawnIntervalScale"
-        },
-        {
-          "start": 4695,
-          "end": 4703,
-          "symbol": "F:ij.field_ab:F",
-          "original": "field_ab",
-          "renamed": "spawnIntervalScale"
-        },
-        {
-          "start": 4757,
-          "end": 4758,
+          "end": 4206,
           "symbol": "M:sa.b(Z)V",
           "original": "b",
           "renamed": "recomputeSpawnReleaseInterval"
         },
         {
-          "start": 4760,
-          "end": 4766,
+          "start": 4208,
+          "end": 4214,
           "symbol": "P:ld.b(Z)V#0",
           "original": "param0",
           "renamed": "recursiveAdvanceGuard"
         },
         {
-          "start": 4820,
-          "end": 4821,
+          "start": 4268,
+          "end": 4269,
           "symbol": "M:ld.a(IIII)V",
           "original": "a",
           "renamed": "spawnPointsPopup"
         },
         {
-          "start": 4826,
-          "end": 4832,
+          "start": 4274,
+          "end": 4280,
           "symbol": "P:ld.a(IIII)V#0",
           "original": "param0",
           "renamed": "originY"
         },
         {
-          "start": 4838,
-          "end": 4844,
+          "start": 4286,
+          "end": 4292,
           "symbol": "P:ld.a(IIII)V#1",
           "original": "param1",
           "renamed": "originX"
         },
         {
-          "start": 4850,
-          "end": 4856,
+          "start": 4298,
+          "end": 4304,
           "symbol": "P:ld.a(IIII)V#2",
           "original": "param2",
           "renamed": "methodGuard"
         },
         {
-          "start": 4862,
-          "end": 4868,
+          "start": 4310,
+          "end": 4316,
           "symbol": "P:ld.a(IIII)V#3",
           "original": "param3",
           "renamed": "points"
         },
         {
-          "start": 4883,
-          "end": 4884,
+          "start": 4331,
+          "end": 4332,
           "symbol": "M:ug.a(IZIII)V",
           "original": "a",
           "renamed": "spawnScorePopup"
         },
         {
-          "start": 4885,
-          "end": 4891,
+          "start": 4333,
+          "end": 4339,
           "symbol": "P:ld.a(IIII)V#3",
           "original": "param3",
           "renamed": "points"
         },
         {
-          "start": 4899,
-          "end": 4905,
+          "start": 4347,
+          "end": 4353,
           "symbol": "P:ld.a(IIII)V#0",
           "original": "param0",
           "renamed": "originY"
         },
         {
-          "start": 4910,
-          "end": 4916,
+          "start": 4358,
+          "end": 4364,
           "symbol": "P:ld.a(IIII)V#1",
           "original": "param1",
           "renamed": "originX"
         },
         {
-          "start": 4931,
-          "end": 4937,
+          "start": 4379,
+          "end": 4385,
           "symbol": "P:ld.a(IIII)V#2",
           "original": "param2",
           "renamed": "methodGuard"
         },
         {
-          "start": 4987,
-          "end": 4988,
+          "start": 4435,
+          "end": 4436,
           "symbol": "M:ld.a(I)Z",
           "original": "a",
           "renamed": "hasPixelsAtPlayfieldBoundary"
@@ -332842,8 +332744,8 @@
     {
       "original": "v.java",
       "renamed": "v.java",
-      "inputSha256": "00af3d25d792918deb13b167d48b0aedc8c8a6e3f71ad0b7f0c4a48d6cc6fc7f",
-      "outputSha256": "3e46975808fbad4d58544fc0a4e9afeef8b952d828eed173fe73836e4b833216",
+      "inputSha256": "987337ede23275e45112dc662241de719fd13e00a4391d3eb180c77a2229d5da",
+      "outputSha256": "4d8d83c57a5c87ea7895e220f0c8f5278b48c3baaf9dac37bf37f8a5f88f4608",
       "edits": [
         {
           "start": 172,
@@ -332860,15 +332762,15 @@
           "renamed": "createPasswordConfirmationText"
         },
         {
-          "start": 13184,
-          "end": 13191,
+          "start": 13172,
+          "end": 13179,
           "symbol": "F:v.field_m:Ljava/lang/String;",
           "original": "field_m",
           "renamed": "createPasswordConfirmationText"
         },
         {
-          "start": 15139,
-          "end": 15146,
+          "start": 15127,
+          "end": 15134,
           "symbol": "F:v.field_m:Ljava/lang/String;",
           "original": "field_m",
           "renamed": "createPasswordConfirmationText"

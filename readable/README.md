@@ -2,7 +2,7 @@
 
 The current export has 1,194 guarded naming rules: 22 classes, 389 fields,
 181 methods, 217 parameters and 385 local declarations. Both 303-file corpora
-compile, preserving 150,827 bindings and 388 override relationships. Unknown
+compile, preserving 150,801 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
 ## One current manifest
@@ -21,17 +21,17 @@ tool bytes; `funorb-stubs.jar` is the frozen compilation dependency. The
 [reading guide](GEOBLOX-READING-GUIDE.md) explains the named gameplay flow.
 
 The raw input is `games/geoblox` at
-`eae5126229130771e056e45992d5315b100babc3`. It comes from java-tools
-`fb6ea7871e4f1657f678211830229997b4785e33` and Deko
+`dcd9609f476b0225c9e29821bec50439bb8a2be3`. It comes from java-tools
+`1fa1f5ca8db58810744ef29e04bcf31c74e81805` and Deko
 `a572c4dd0f0174bfcd7777be53d7ceba2f970f18`. The adapted naming tool is
 `a0bc835957148b9b1e1f8221c59b79d899d22738`; its source archive SHA-256 is
 `cb10756aa3ecb28159c9b81f2fb78bf559b4111d9ad203819458b30d0d84cf8c`.
 
 The **decompiler repository source** SHA-256 is
-`5ad4b8f16b9b82c1a427d69119b4b673ba8bbf1987c85b5f1463f583ef0231c2`:
+`80101c5837724ddef2f706256e25320fdf76a57642d7c9b9de64fcf131f229c4`:
 
 ```sh
-git archive --format=tar fb6ea7871e4f1657f678211830229997b4785e33 | sha256sum
+git archive --format=tar 1fa1f5ca8db58810744ef29e04bcf31c74e81805 | sha256sum
 ```
 
 This identifies tracked decompiler source and its Git archive metadata. It is
@@ -177,7 +177,7 @@ and synchronized bodies retain their destinations and scopes.
 The previous early-exit pass removed 2,128 generated else wrappers (3,481 to 1,353) and 2,213 raw source
 lines across 208 files. That pass preserved all 20,931
 declaration identities and 388 override edges. The only duplicate-name method,
-`wg.finalize`, is byte-identical. Current raw/readable comparison checks 150,827
+`wg.finalize`, is byte-identical. Current raw/readable comparison checks 150,801
 bindings. The structural update migrated 35 named local ordinals. The following
 naming pass added 38 guarded identities with the raw input unchanged, retaining all
 1,170 prior semantic names. Reference inventory changes comprise 86 merged
@@ -245,7 +245,7 @@ checks of effects, throwing conditions, nullable unboxing, input mutations,
 nested arms, NaNs and whole handler/monitor tails. Whole-program equivalence
 remains unverified. All six native game probes retain their pinned traces.
 
-The current pass also reconstructs nested terminal continuations, discarding a
+The previous pass also reconstructs nested terminal continuations, discarding a
 virtual continuation on an existing return/throw/jump path. Every crossed
 if/block scope must remain free of declarations. No condition is evaluated
 again. Final straight factoring refuses repeated source statements and identifier
@@ -257,16 +257,37 @@ Bare transfer guards remain intact. AST children are deep-copied by createNode,
 so the duplication check uses exact source spelling rather than object identity.
 
 This removes another 21 lines across seven files (86,004 to 85,983). The difficulty
-method is now 56 lines, down from 69, with one probability/rotation/interval tail.
+method then reached 56 lines, down from 69, with one probability/rotation/interval tail.
 Four unnamed v.a(B)V snapshots reorder their declaration ordinals. Matching all
 20,710 declarations by method and original spelling preserves the full inventory,
 all 388 override rows and every one of the 1,194 guarded rules. Exactly 57 reference
-occurrences disappear and none are added after this normalization. The current
-mirror checks 150,827 bindings and makes 18,625 identifier edits. The emitter
+occurrences disappear and none are added after this normalization. That
+mirror checked 150,827 bindings and made 18,625 identifier edits. The emitter
 passes 21 groups and 4,849 native comparisons, including 2,520 new checks of
 multiple enclosing exits, skipped effects, partial writes, nullable conditions,
 signed zero/NaNs, sentinel throwable identity and label collision avoidance.
 All six game probes retain their native traces within their recorded scopes.
+
+The current pass uses integral-predicate evidence from the already-rendered
+JVM operand cache. An exact source spelling is usable only when all matching
+predicates and their complements have integral evidence; conflicting or unknown
+evidence invalidates both sides. No block is rendered again. Floating and
+untyped relational conditions keep logical negation, preserving NaNs and
+unboxing failure. Original operand bytes and evaluation order remain intact.
+
+This removes 18 lines across four files (85,983 to 85,965). The difficulty method
+shrinks from 56 to 38 lines, coalescing its category-update and recursive-advance
+clones. The category flag table is still re-read after recursion. Every one of
+20,710 declaration keys and original spellings, all 388 override rows and all
+1,194 guarded rules are unchanged. No ordinal migrations occur. Exactly 26
+reference occurrences disappear and none are added: two category-update clones
+and two recursive-advance clones. The current mirror checks 150,801 bindings and
+makes 18,611 identifier edits. The emitter passes 23 groups and 40,129 native
+comparisons, including 35,280 new checks of all integral relational complements,
+signed long/int boundaries, throwing operands and effect order, plus unknown
+floating and nullable comparisons. Cache immutability and conflicting evidence
+have focused checks. All six game probes retain their recorded native traces;
+whole-game equivalence remains unverified.
 
 In the pinned java-tools checkout, run the focused checks:
 
@@ -320,7 +341,7 @@ the same manifest; no JSON snapshots are added.
 
 | Java source tree | SHA-256 |
 | --- | --- |
-| Raw | `c1f3218a7a4e1ac693bea85f5c5806eb16859e8f6f99368a4c00b498cee74057` |
-| Readable | `4fd846ee0ad892a960c79cf4eda528eb884dee03ecb51c8ff86d607355a0ae8a` |
+| Raw | `cf0cbc50ff6b23458db1a7beb4edb6829ab61e7e6ea3dc7d7d47f03e2492095d` |
+| Readable | `5016f53e48632db33bc17a3dcb650ea43e1ce3493a179d993341ed228b0a1f8a` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

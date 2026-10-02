@@ -29,7 +29,7 @@ final class gi implements Iterable {
           Geoblox.field_y.c(false);
         } else {
           var1 = ik.field_a;
-          if (!(var1 <= 0)) {
+          if (var1 > 0) {
             if (1 == var1) {
               ff.field_d = ih.ticketingOneUnreadText;
             } else {

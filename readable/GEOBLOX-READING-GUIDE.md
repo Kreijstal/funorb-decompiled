@@ -1,4 +1,4 @@
-# Reading GeoBlox pass 30
+# Reading GeoBlox
 
 The readable tree uses semantic names without opaque suffixes. The symbol map
 keeps the original spelling and JVM identity of every declaration, so
@@ -209,10 +209,14 @@ caller resumes and re-reads an exhausted table; partial updates remain visible. 
 `sa.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard)` directly. The proof
 requires a single adjacent use and a nonthrowing primitive condition whose
 inputs are unchanged. The local tail pass reduced the method from 220 lines
-to 69. The current nested-continuation pass reduces it to 56 lines and removes
-the remaining repeated probability/rotation/interval tail. Category and variant
-paths still read the shared flag table after any recursive advancement. No table
-read or recursive effect is moved ahead of its prefix. This game method requires
+to 69; the nested-continuation pass then reduced it to 56. The current integral
+predicate proof reduces it to 38 lines: variant, recursive-advance and category
+updates each have one path, followed by one probability/rotation/interval tail.
+The category path still reads the shared flag table after recursive advancement;
+the variant path runs before it. No table read or recursive effect is moved
+ahead of its prefix. Cached JVM operands prove integral relational complements
+without rendering blocks again. Unknown and floating predicates retain logical
+negation; conflicting evidence refuses both complementary spellings. This game method requires
 no generated block label; exact terminal clones in more complex nested prefixes
 can use a deterministic plain-block break without duplicating effects. The 84,661-case difficulty matrix checks the
 resulting partial state and exceptions.
@@ -566,11 +570,14 @@ semantic names remain. The previous local shared-tail pass removed 451 lines acr
 16 files, retaining every declaration identity and all 1,194 naming rules without
 ordinal changes. It factors exact whole tails within a block scope after Boolean
 cleanup and preserves bare return guards. That pass left the difficulty method at 69 lines.
-The current nested pass removes another 21 lines across seven files and reduces
+The previous nested pass removed another 21 lines across seven files and reduced
 it to 56 lines, coalescing its repeated probability/rotation/interval tail.
 Four unnamed snapshot ordinals reorder in v.a(B)V; method/original-spelling
-normalization preserves every declaration. No naming rules change. Category and
-variant paths, other carriers, shared joins and opaque names remain. The earlier terminal-return
+normalization preserves every declaration. The current cached integral-guard pass removes 18 lines across four files,
+reducing the method to 38 lines and coalescing its recursive/category clones.
+Every declaration key and spelling is unchanged, with no ordinal migrations.
+All 1,194 naming rules remain unchanged. Other carriers, shared joins and opaque
+names remain. The earlier terminal-return
 pass removed the vanished boundary selector;
 the current emitter also retains its proven early-exit reconstruction.
 Complete parsing and preserved declaration scopes keep this reproducible.

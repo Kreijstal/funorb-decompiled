@@ -114,35 +114,17 @@ final class ld {
             og.entityMotionSpeed = og.entityMotionSpeed + 0.055555559694767f;
             sa.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard);
           }
-          if ((kd.difficultyStepFlags[ji.difficultyStep] & 1) == 0) {
-            if (recursiveAdvanceGuard) {
-              ld.advanceDifficulty(true);
-            }
-            if ((kd.difficultyStepFlags[ji.difficultyStep] & 2) != 0) {
-              if (f.availableEntityCategoryCount < 7) {
-                f.availableEntityCategoryCount = f.availableEntityCategoryCount + 1;
-              }
-            }
-          } else {
+          if ((kd.difficultyStepFlags[ji.difficultyStep] & 1) != 0) {
             if (ag.availableSpriteVariantCount < 7) {
               ag.availableSpriteVariantCount = ag.availableSpriteVariantCount + 1;
-              if (recursiveAdvanceGuard) {
-                ld.advanceDifficulty(true);
-              }
-              if ((kd.difficultyStepFlags[ji.difficultyStep] & 2) != 0) {
-                if (f.availableEntityCategoryCount < 7) {
-                  f.availableEntityCategoryCount = f.availableEntityCategoryCount + 1;
-                }
-              }
-            } else {
-              if (recursiveAdvanceGuard) {
-                ld.advanceDifficulty(true);
-              }
-              if ((kd.difficultyStepFlags[ji.difficultyStep] & 2) != 0) {
-                if (!(f.availableEntityCategoryCount >= 7)) {
-                  f.availableEntityCategoryCount = f.availableEntityCategoryCount + 1;
-                }
-              }
+            }
+          }
+          if (recursiveAdvanceGuard) {
+            ld.advanceDifficulty(true);
+          }
+          if ((kd.difficultyStepFlags[ji.difficultyStep] & 2) != 0) {
+            if (f.availableEntityCategoryCount < 7) {
+              f.availableEntityCategoryCount = f.availableEntityCategoryCount + 1;
             }
           }
           if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 16)) {

@@ -40,7 +40,7 @@ final class hd extends sh {
         di.releasedInDifficultyStep = di.releasedInDifficultyStep + 1;
         ul.releasedInCurrentTheme = ul.releasedInCurrentTheme + 1;
         if (sa.releasesPerDifficultyStep == di.releasedInDifficultyStep) {
-          if (!(gb.field_c >= 2)) {
+          if (gb.field_c < 2) {
             di.releasedInDifficultyStep = 0;
             ld.advanceDifficulty(false);
             gb.field_c = gb.field_c + 1;

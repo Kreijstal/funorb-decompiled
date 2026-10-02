@@ -152,7 +152,7 @@ final class v {
         if (null != vl.field_n) {
           return;
         }
-        if (!(param0 >= -108)) {
+        if (param0 < -108) {
           if (og.field_n <= 0) {
             this.field_t = false;
             if (this.field_t) {
@@ -194,7 +194,7 @@ final class v {
             if (this.field_d > kh.field_d) {
               qa.field_b = (-kh.field_d + this.field_d) / 2;
             } else {
-              if (!(this.field_d <= 0)) {
+              if (this.field_d > 0) {
                 qa.field_b = 0;
               }
             }
@@ -249,7 +249,7 @@ final class v {
           if (this.field_d > kh.field_d) {
             qa.field_b = (-kh.field_d + this.field_d) / 2;
           } else {
-            if (!(this.field_d <= 0)) {
+            if (this.field_d > 0) {
               qa.field_b = 0;
             }
           }

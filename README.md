@@ -16,14 +16,14 @@ mirror. The current [manifest](readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
-identities. Both 303-file Java corpora compile and retain all 150,827 bindings
+identities. Both 303-file Java corpora compile and retain all 150,801 bindings
 and 388 override relationships.
 
 Difficulty and spawning now name the step flags, sprite-variant/category
 bounds, special-kind probability, release interval and queue geometry.
 The previous naming pass added 38 rules. The Boolean-carrier pass removed
 14 obsolete names and migrated 61 local ordinals plus one generated field type.
-The current branch-tail pass preserves all 1,194 guarded rules unchanged. Independent
+The current integral-guard pass preserves all 1,194 guarded rules unchanged. Independent
 native fixtures verify 84,661 additional difficulty/reset/selection cases,
 including floating-point casts, recursive failures, partial writes and seeded
 random draw consumption. The current input and decompiler revisions are pinned
@@ -45,32 +45,32 @@ prior snapshots in Git.
 
 ## GeoBlox source refresh
 
-The latest owned decompiler reconstructs nested terminal continuations after
-local tail factoring. It removes 21 lines across seven files and reduces
-`ld.advanceDifficulty` from 69 lines to 56. Its probability, rotation and
-interval updates now have one shared tail; category/variant paths remain explicit.
-The previous local pass removed 451 lines across 16 files and had reduced the
-same method from 220 lines to 69.
+The latest owned decompiler reuses cached JVM integral-predicate evidence to
+simplify relational inversions during nested-tail reconstruction. It removes
+18 lines across four files and reduces `ld.advanceDifficulty` from 56 lines to
+38. Variant, recursive-advance and category updates now each have one path;
+category flags are still read after the recursive call, preserving partial
+updates and array failures. The earlier local and nested passes reduced this
+method from 220 lines to 69 and then 56.
 
-A continuation is copied into proven declaration-free if/block scopes only
-while constructing its equivalent control flow. The final source refuses
-repeated prefix statements or identifier occurrences. Exact return/throw clones
-can instead exit a new plain block through a deterministic label; existing
-identifiers are excluded from generated label names. Try, monitor, loop, switch
-and old-label regions retain their boundaries. GeoBlox needs no new block labels
-in this pass. The preceding Boolean pass still eliminates 221 integer locals,
-including all 17 difficulty and 13 boundary result carriers.
+Only integral predicates with unambiguous evidence can use relational
+complements. Floating, unknown and conflicting predicates keep logical
+negation. Cached operands are never rendered again. Operand order, declaration
+scopes and handler/monitor boundaries stay intact; scope or completion
+uncertainty still refuses reconstruction. GeoBlox needs no generated block
+labels. The preceding Boolean pass eliminates 221 integer locals, including
+all 17 difficulty and 13 boundary result carriers.
 
-All 303 sources compile with 20,710 declarations and 388 override edges.
-Four unnamed snapshots in `v.a(B)V` have new declaration ordinals; matching by
-method and original spelling preserves every declaration and attributes all 57
-removed references, with none added. All 1,194 guarded names and evidence remain
-unchanged. The current mirror checks 150,827 bindings and makes 18,625 identifier
-edits. The emitter passes 21 groups and 4,849 native comparisons, including 2,520
-new nested-continuation checks. All six game probes retain their native traces.
-Clean committed decompiler source reproduces all raw Java and diagnostics;
-dictionary reversal restores all 303 raw files byte-for-byte. Whole-game
-behavior, other shared joins and unknown names remain unverified.
+All 303 sources compile with 20,710 unchanged declaration identities and 388
+override edges. Exactly 26 references disappear with the two category-update
+clones and two recursive-advance clones; none are added. All 1,194 guarded names
+and evidence remain unchanged, with no ordinal migrations. The current mirror
+checks 150,801 bindings and makes 18,611 identifier edits. The emitter passes
+23 groups and 40,129 native comparisons, including 35,280 new integral-guard
+checks. All six game probes retain their native traces. Clean committed
+decompiler source reproduces all raw Java and diagnostics; dictionary reversal
+restores all 303 raw files byte-for-byte. Whole-game behavior, other shared joins
+and unknown names remain unverified.
 
 The previous terminal-return reconstruction removed 254 selectors and the
 boundary scan's 13-arm post-try ladder. Shared joins and throwing continuations
