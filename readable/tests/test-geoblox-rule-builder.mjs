@@ -31,7 +31,7 @@ function fixture(change, check = true) {
 }
 
 test('one current manifest reproduces all guarded rules using Git history', () => {
-  assert.equal(JSON.parse(fixture().stdout).rules, 1710);
+  assert.equal(JSON.parse(fixture().stdout).rules, 2233);
 });
 test('previous Git objects and their hash cannot change silently', () => {
   for (const change of [
@@ -51,7 +51,7 @@ test('explicit additions and replacements check their complete previous identity
     const rule = {symbol: 'L:ul.b(I)V#2', originalName: 'stackIn_10_0', to: 'fixtureResult', evidence: 'Fixture addition'};
     data.renames.push(rule); data.publication.ruleChanges.push({symbol: rule.symbol, before: null, after: rule});
   };
-  assert.equal(JSON.parse(fixture(add, false).stdout).rules, 1711);
+  assert.equal(JSON.parse(fixture(add, false).stdout).rules, 2234);
   assert.throws(() => fixture(data => { add(data); data.publication.ruleChanges[0].before = {}; }),
     /differs from the previous guarded identity/);
   assert.throws(() => fixture(data => { add(data); data.publication.ruleChanges.push(data.publication.ruleChanges[0]); }),

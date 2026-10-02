@@ -100,12 +100,34 @@ families share names; no RGB assumptions are imposed on their ARGB variants.
 `drawRunEncoded` additionally interprets the original -1 skip-run marker.
 
 Clipped wrappers now name `sourceIndex`, `destinationIndex`, `drawWidth`,
-`drawHeight`, row skips and `clippedEdgePixels`. Pixel kernels still contain
-opaque temporary names. Raster APIs distinguish `drawCircle` from `fillCircle`
-and name rectangles, lines, gradients and rounded shapes. Original clipping,
+`drawHeight`, row skips and `clippedEdgePixels`. Raster APIs distinguish
+`drawCircle` from `fillCircle` and name rectangles, lines, gradients and rounded shapes. Original clipping,
 rounding, guard and invalid-input behavior remains; these names do not change
 alpha ranges or fix edge cases. Controlled native fixtures exercise drawing,
 but whole-game rendering with real assets remains unverified.
+
+All 23 private static sprite kernels now have guarded names. `blitColorKey`
+and `blitUnmasked` distinguish skipped zeros from copied zeros;
+`blitColorKeyAlpha` and `blitArgbAlpha` distinguish global and combined alpha.
+The scaled counterparts name `sourceX16`, `sourceY16`, `stepX16`, `stepY16` and
+`sourceRowOffset`. Gray and additive kernels name their channel products,
+blend weights and carry scratches. `sourceReadIndex` and
+`destinationWriteIndex` retain snapshots taken before post-increments; numbered
+copies follow declaration order, preserving the original unrolled loops.
+`widthThenNegativeTail`, `quadOrTailCounter` and
+`trimStepsThenDestinationIndex` make reused storage explicit rather than
+inventing separate variables. `blitPaletteRuns` retains the marker and row-start
+rules, including their original clipping behavior.
+
+RGB/indexed alpha kernels sign-extend their packed 24-bit blend with `>> 8`;
+ARGB kernels use `>>> 8`. The drawing probe preserves that difference and
+independently verifies 43,750 normal pixel-buffer cases, including gray channel
+boundaries, full canvas versus cropped pixels, alpha boundaries and unsigned
+palette indexes. A nonzero palette index can copy zero; index zero remains
+transparent even with a nonzero palette entry. Another 1,324 reduction,
+run-marker and invalid-alpha cases preserve fixed native traces. Those cases
+have no independent semantic oracle. Rotation and quarter-size scratch locals,
+real-asset rendering and whole-game behavior still need investigation.
 
 ## Tutorial prompts and progression
 
@@ -641,8 +663,8 @@ the array indices, evidence, override families and remaining shared carriers.
 
 ## Remaining limitations
 
-There are 1,710 explicit guarded rules: 24 classes, 457 fields, 247 method
-declarations, 450 parameters and 532 locals. This is not full deobfuscation.
+There are 2,233 explicit guarded rules: 24 classes, 457 fields, 270 method
+declarations, 709 parameters and 773 locals. This is not full deobfuscation.
 Unknown flags, guard arguments and opaque shared helpers still need
 investigation. Current names and source identities live in the single manifest;
 previous naming and structural passes remain in Git. The earlier early-exit migration

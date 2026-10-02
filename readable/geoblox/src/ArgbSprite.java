@@ -41,39 +41,39 @@ final class ArgbSprite extends Sprite {
             if (drawHeight <= 0) {
                 return;
             }
-            ArgbSprite.c(SoftwareRasterizer.framebuffer, this.pixels, 0, sourceIndex, destinationIndex, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip, tintColor);
+            ArgbSprite.blitArgbGrayTinted(SoftwareRasterizer.framebuffer, this.pixels, 0, sourceIndex, destinationIndex, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip, tintColor);
             return;
         }
     }
 
-    private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var18 = 0;
-        int incrementValue$0 = 0;
-        int var17 = 0;
-        int var12 = param3;
-        for (var13 = -param8; var13 < 0; var13++) {
-            var14 = (param4 >> 16) * param11;
-            for (var15 = -param7; var15 < 0; var15++) {
-                param2 = param1[(param3 >> 16) + var14];
-                var16 = param2 >>> 24;
-                if (var16 != 0) {
-                    var17 = 256 - var16;
-                    var18 = param0[param5];
-                    incrementValue$0 = param5;
-                    param5++;
-                    param0[incrementValue$0] = ((param2 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((param2 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >>> 8;
+    private final static void blitArgbScaled(int[] destinationPixels, int[] sourcePixels, int sourcePixel, int sourceX16, int sourceY16, int destinationIndex, int destinationRowSkip, int drawWidth, int drawHeight, int stepX16, int stepY16, int sourceWidth) {
+        int negativeRow = 0;
+        int sourceRowOffset = 0;
+        int negativeColumn = 0;
+        int storedAlpha = 0;
+        int destinationPixel = 0;
+        int destinationWriteIndex = 0;
+        int inverseAlpha256 = 0;
+        int rowSourceX16 = sourceX16;
+        for (negativeRow = -drawHeight; negativeRow < 0; negativeRow++) {
+            sourceRowOffset = (sourceY16 >> 16) * sourceWidth;
+            for (negativeColumn = -drawWidth; negativeColumn < 0; negativeColumn++) {
+                sourcePixel = sourcePixels[(sourceX16 >> 16) + sourceRowOffset];
+                storedAlpha = sourcePixel >>> 24;
+                if (storedAlpha != 0) {
+                    inverseAlpha256 = 256 - storedAlpha;
+                    destinationPixel = destinationPixels[destinationIndex];
+                    destinationWriteIndex = destinationIndex;
+                    destinationIndex++;
+                    destinationPixels[destinationWriteIndex] = ((sourcePixel & 16711935) * storedAlpha + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((sourcePixel & 65280) * storedAlpha + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
                 } else {
-                    param5++;
+                    destinationIndex++;
                 }
-                param3 = param3 + param9;
+                sourceX16 = sourceX16 + stepX16;
             }
-            param4 = param4 + param10;
-            param3 = var12;
-            param5 = param5 + param6;
+            sourceY16 = sourceY16 + stepY16;
+            sourceX16 = rowSourceX16;
+            destinationIndex = destinationIndex + destinationRowSkip;
         }
     }
 
@@ -116,7 +116,7 @@ final class ArgbSprite extends Sprite {
             if (drawHeight <= 0) {
                 return;
             }
-            ArgbSprite.d(SoftwareRasterizer.framebuffer, this.pixels, 0, sourceIndex, destinationIndex, 0, 0, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip, tintColor);
+            ArgbSprite.blitArgbGrayModulated(SoftwareRasterizer.framebuffer, this.pixels, 0, sourceIndex, destinationIndex, 0, 0, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip, tintColor);
             return;
         }
     }
@@ -160,80 +160,80 @@ final class ArgbSprite extends Sprite {
             if (drawHeight <= 0) {
                 return;
             }
-            ArgbSprite.d(SoftwareRasterizer.framebuffer, this.pixels, 0, sourceIndex, destinationIndex, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip, alpha256);
+            ArgbSprite.blitArgbAlpha(SoftwareRasterizer.framebuffer, this.pixels, 0, sourceIndex, destinationIndex, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip, alpha256);
             return;
         }
     }
 
-    private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        int incrementValue$5 = 0;
-        int incrementValue$6 = 0;
-        int var10;
-        int var11;
-        int var12;
-        int var13;
-        int var14;
-        int var15;
-        int var16;
-        int var17;
-        int var18;
-        int var19;
-        int var20;
-        int var21;
-        int var22;
-        int var23;
-        var10 = param9 >> 16 & 255;
-        var11 = param9 >> 8 & 255;
-        var12 = param9 & 255;
-        var13 = -(param5 >> 2);
-        param5 = -(param5 & 3);
-        var14 = var13 + var13 + var13 + var13 + param5;
-        var15 = -param6;
+    private final static void blitArgbGrayTinted(int[] destinationPixels, int[] sourcePixels, int sourcePixel, int sourceIndex, int destinationIndex, int widthThenNegativeTail, int drawHeight, int destinationRowSkip, int sourceRowSkip, int tintColor) {
+        int sourceReadIndex = 0;
+        int destinationWriteIndex = 0;
+        int tintRed;
+        int tintGreen;
+        int tintBlue;
+        int negativeQuadCount;
+        int negativeRowPixelCount;
+        int negativeRow;
+        int negativeColumn;
+        int storedAlpha;
+        int tintedPixel;
+        int sourceRed;
+        int sourceGreen;
+        int sourceBlue;
+        int inverseAlpha256;
+        int destinationPixel;
+        tintRed = tintColor >> 16 & 255;
+        tintGreen = tintColor >> 8 & 255;
+        tintBlue = tintColor & 255;
+        negativeQuadCount = -(widthThenNegativeTail >> 2);
+        widthThenNegativeTail = -(widthThenNegativeTail & 3);
+        negativeRowPixelCount = negativeQuadCount + negativeQuadCount + negativeQuadCount + negativeQuadCount + widthThenNegativeTail;
+        negativeRow = -drawHeight;
         L0: while (true) {
-          if (var15 >= 0) {
+          if (negativeRow >= 0) {
             return;
           }
-          var16 = var14;
+          negativeColumn = negativeRowPixelCount;
           L1: while (true) {
-            if (var16 >= 0) {
-              param4 = param4 + param7;
-              param3 = param3 + param8;
-              var15++;
+            if (negativeColumn >= 0) {
+              destinationIndex = destinationIndex + destinationRowSkip;
+              sourceIndex = sourceIndex + sourceRowSkip;
+              negativeRow++;
               continue L0;
             }
             {
-              incrementValue$5 = param3;
-              param3++;
-              param2 = param1[incrementValue$5];
-              var17 = param2 >>> 24;
-              if (var17 == 0) {
-                param4++;
-                var16++;
+              sourceReadIndex = sourceIndex;
+              sourceIndex++;
+              sourcePixel = sourcePixels[sourceReadIndex];
+              storedAlpha = sourcePixel >>> 24;
+              if (storedAlpha == 0) {
+                destinationIndex++;
+                negativeColumn++;
                 continue L1;
               }
               {
                 L2: {
-                  var19 = param2 >> 16 & 255;
-                  var20 = param2 >> 8 & 255;
-                  var21 = param2 & 255;
-                  if (var19 == var20) {
-                    if (var20 == var21) {
-                      if (var19 > 128) {
-                        var18 = (var10 * (256 - var19) + 255 * (var19 - 128) >> 7 << 16) + (var11 * (256 - var20) + 255 * (var20 - 128) >> 7 << 8) + (var12 * (256 - var21) + 255 * (var21 - 128) >> 7);
+                  sourceRed = sourcePixel >> 16 & 255;
+                  sourceGreen = sourcePixel >> 8 & 255;
+                  sourceBlue = sourcePixel & 255;
+                  if (sourceRed == sourceGreen) {
+                    if (sourceGreen == sourceBlue) {
+                      if (sourceRed > 128) {
+                        tintedPixel = (tintRed * (256 - sourceRed) + 255 * (sourceRed - 128) >> 7 << 16) + (tintGreen * (256 - sourceGreen) + 255 * (sourceGreen - 128) >> 7 << 8) + (tintBlue * (256 - sourceBlue) + 255 * (sourceBlue - 128) >> 7);
                         break L2;
                       }
-                      var18 = (var19 * var10 >> 7 << 16) + (var20 * var11 >> 7 << 8) + (var21 * var12 >> 7);
+                      tintedPixel = (sourceRed * tintRed >> 7 << 16) + (sourceGreen * tintGreen >> 7 << 8) + (sourceBlue * tintBlue >> 7);
                       break L2;
                     }
                   }
-                  var18 = param2;
+                  tintedPixel = sourcePixel;
                 }
-                var22 = 256 - var17;
-                var23 = param0[param4];
-                incrementValue$6 = param4;
-                param4++;
-                param0[incrementValue$6] = ((var18 & 16711935) * var17 + (var23 & 16711935) * var22 & -16711936) + ((var18 & 65280) * var17 + (var23 & 65280) * var22 & 16711680) >>> 8;
-                var16++;
+                inverseAlpha256 = 256 - storedAlpha;
+                destinationPixel = destinationPixels[destinationIndex];
+                destinationWriteIndex = destinationIndex;
+                destinationIndex++;
+                destinationPixels[destinationWriteIndex] = ((tintedPixel & 16711935) * storedAlpha + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((tintedPixel & 65280) * storedAlpha + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
+                negativeColumn++;
                 continue L1;
               }
             }
@@ -241,46 +241,46 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
-        int var9;
-        int var10;
-        int var11;
-        int var12;
-        int var13;
-        int var14;
-        var9 = -param5;
-        var10 = -param6;
+    private final static void blitArgb(int[] destinationPixels, int[] sourcePixels, int sourcePixel, int sourceIndex, int destinationIndex, int drawWidth, int drawHeight, int destinationRowSkip, int sourceRowSkip) {
+        int sourceReadIndex = 0;
+        int destinationWriteIndex = 0;
+        int negativeRowPixelCount;
+        int negativeRow;
+        int negativeColumn;
+        int storedAlpha;
+        int inverseAlpha256;
+        int destinationPixel;
+        negativeRowPixelCount = -drawWidth;
+        negativeRow = -drawHeight;
         L0: while (true) {
-          if (var10 >= 0) {
+          if (negativeRow >= 0) {
             return;
           }
-          var11 = var9;
+          negativeColumn = negativeRowPixelCount;
           L1: while (true) {
-            if (var11 >= 0) {
-              param4 = param4 + param7;
-              param3 = param3 + param8;
-              var10++;
+            if (negativeColumn >= 0) {
+              destinationIndex = destinationIndex + destinationRowSkip;
+              sourceIndex = sourceIndex + sourceRowSkip;
+              negativeRow++;
               continue L0;
             }
             {
-              incrementValue$11 = param3;
-              param3++;
-              param2 = param1[incrementValue$11];
-              var12 = param2 >>> 24;
-              if (var12 == 0) {
-                param4++;
-                var11++;
+              sourceReadIndex = sourceIndex;
+              sourceIndex++;
+              sourcePixel = sourcePixels[sourceReadIndex];
+              storedAlpha = sourcePixel >>> 24;
+              if (storedAlpha == 0) {
+                destinationIndex++;
+                negativeColumn++;
                 continue L1;
               }
               {
-                var13 = 256 - var12;
-                var14 = param0[param4];
-                incrementValue$12 = param4;
-                param4++;
-                param0[incrementValue$12] = ((param2 & 16711935) * var12 + (var14 & 16711935) * var13 & -16711936) + ((param2 & 65280) * var12 + (var14 & 65280) * var13 & 16711680) >>> 8;
-                var11++;
+                inverseAlpha256 = 256 - storedAlpha;
+                destinationPixel = destinationPixels[destinationIndex];
+                destinationWriteIndex = destinationIndex;
+                destinationIndex++;
+                destinationPixels[destinationWriteIndex] = ((sourcePixel & 16711935) * storedAlpha + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((sourcePixel & 65280) * storedAlpha + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
+                negativeColumn++;
                 continue L1;
               }
             }
@@ -288,35 +288,35 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int incrementValue$0 = 0;
-        int var13 = param3;
-        for (var14 = -param8; var14 < 0; var14++) {
-            var15 = (param4 >> 16) * param11;
-            for (var16 = -param7; var16 < 0; var16++) {
-                var17 = param1[(param3 >> 16) + var15];
-                var18 = param0[param5];
-                var19 = (var17 >>> 24) * param12 >> 8;
-                var20 = 256 - var19;
-                incrementValue$0 = param5;
-                param5++;
-                param0[incrementValue$0] = ((var17 & 16711935) * var19 + (var18 & 16711935) * var20 & -16711936) + ((var17 & 65280) * var19 + (var18 & 65280) * var20 & 16711680) >>> 8;
-                param3 = param3 + param9;
+    private final static void blitArgbScaledAlpha(int[] destinationPixels, int[] sourcePixels, int unusedPixelScratch, int sourceX16, int sourceY16, int destinationIndex, int destinationRowSkip, int drawWidth, int drawHeight, int stepX16, int stepY16, int sourceWidth, int alpha256) {
+        int negativeRow = 0;
+        int sourceRowOffset = 0;
+        int negativeColumn = 0;
+        int sourcePixel = 0;
+        int destinationPixel = 0;
+        int effectiveAlpha256 = 0;
+        int inverseAlpha256 = 0;
+        int destinationWriteIndex = 0;
+        int rowSourceX16 = sourceX16;
+        for (negativeRow = -drawHeight; negativeRow < 0; negativeRow++) {
+            sourceRowOffset = (sourceY16 >> 16) * sourceWidth;
+            for (negativeColumn = -drawWidth; negativeColumn < 0; negativeColumn++) {
+                sourcePixel = sourcePixels[(sourceX16 >> 16) + sourceRowOffset];
+                destinationPixel = destinationPixels[destinationIndex];
+                effectiveAlpha256 = (sourcePixel >>> 24) * alpha256 >> 8;
+                inverseAlpha256 = 256 - effectiveAlpha256;
+                destinationWriteIndex = destinationIndex;
+                destinationIndex++;
+                destinationPixels[destinationWriteIndex] = ((sourcePixel & 16711935) * effectiveAlpha256 + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((sourcePixel & 65280) * effectiveAlpha256 + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
+                sourceX16 = sourceX16 + stepX16;
             }
-            param4 = param4 + param10;
-            param3 = var13;
-            param5 = param5 + param6;
+            sourceY16 = sourceY16 + stepY16;
+            sourceX16 = rowSourceX16;
+            destinationIndex = destinationIndex + destinationRowSkip;
         }
     }
 
-    final void rotateNearest(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void rotateNearest(int sourcePivotX, int sourcePivotY, int destinationX, int destinationY, int angle, int scale) {
         int incrementValue$8 = 0;
         int incrementValue$6 = 0;
         int incrementValue$7 = 0;
@@ -359,23 +359,23 @@ final class ArgbSprite extends Sprite {
         int var39;
         int var40;
         int var41;
-        if (param5 == 0) {
+        if (scale == 0) {
           return;
         }
         {
-          param0 = param0 - (this.trimX << 4);
-          param1 = param1 - (this.trimY << 4);
-          var7 = (double)(param4 & 65535) * 0.00009587379924285257;
-          var9 = (int)Math.floor(Math.sin(var7) * (double)param5 + 0.5);
-          var10 = (int)Math.floor(Math.cos(var7) * (double)param5 + 0.5);
-          var11 = -param0 * var10 + -param1 * var9;
-          var12 = -(-param0) * var9 + -param1 * var10;
-          var13 = ((this.width << 4) - param0) * var10 + -param1 * var9;
-          var14 = -((this.width << 4) - param0) * var9 + -param1 * var10;
-          var15 = -param0 * var10 + ((this.height << 4) - param1) * var9;
-          var16 = -(-param0) * var9 + ((this.height << 4) - param1) * var10;
-          var17 = ((this.width << 4) - param0) * var10 + ((this.height << 4) - param1) * var9;
-          var18 = -((this.width << 4) - param0) * var9 + ((this.height << 4) - param1) * var10;
+          sourcePivotX = sourcePivotX - (this.trimX << 4);
+          sourcePivotY = sourcePivotY - (this.trimY << 4);
+          var7 = (double)(angle & 65535) * 0.00009587379924285257;
+          var9 = (int)Math.floor(Math.sin(var7) * (double)scale + 0.5);
+          var10 = (int)Math.floor(Math.cos(var7) * (double)scale + 0.5);
+          var11 = -sourcePivotX * var10 + -sourcePivotY * var9;
+          var12 = -(-sourcePivotX) * var9 + -sourcePivotY * var10;
+          var13 = ((this.width << 4) - sourcePivotX) * var10 + -sourcePivotY * var9;
+          var14 = -((this.width << 4) - sourcePivotX) * var9 + -sourcePivotY * var10;
+          var15 = -sourcePivotX * var10 + ((this.height << 4) - sourcePivotY) * var9;
+          var16 = -(-sourcePivotX) * var9 + ((this.height << 4) - sourcePivotY) * var10;
+          var17 = ((this.width << 4) - sourcePivotX) * var10 + ((this.height << 4) - sourcePivotY) * var9;
+          var18 = -((this.width << 4) - sourcePivotX) * var9 + ((this.height << 4) - sourcePivotY) * var10;
           if (var11 >= var13) {
             var19 = var13;
             var20 = var11;
@@ -418,10 +418,10 @@ final class ArgbSprite extends Sprite {
           var20 = var20 + 4095 >> 12;
           var21 = var21 >> 12;
           var22 = var22 + 4095 >> 12;
-          var19 = var19 + param2;
-          var20 = var20 + param2;
-          var21 = var21 + param3;
-          var22 = var22 + param3;
+          var19 = var19 + destinationX;
+          var20 = var20 + destinationX;
+          var21 = var21 + destinationY;
+          var22 = var22 + destinationY;
           var19 = var19 >> 4;
           var20 = var20 + 15 >> 4;
           var21 = var21 >> 4;
@@ -448,13 +448,13 @@ final class ArgbSprite extends Sprite {
           }
           L14: {
             var23 = var21 * SoftwareRasterizer.stride + var19;
-            var24 = 16777216.0 / (double)param5;
+            var24 = 16777216.0 / (double)scale;
             var26 = (int)Math.floor(Math.sin(var7) * var24 + 0.5);
             var27 = (int)Math.floor(Math.cos(var7) * var24 + 0.5);
-            var28 = (var19 << 4) + 8 - param2;
-            var29 = (var21 << 4) + 8 - param3;
-            var30 = (param0 << 8) - (var29 * var26 >> 4);
-            var31 = (param1 << 8) + (var29 * var27 >> 4);
+            var28 = (var19 << 4) + 8 - destinationX;
+            var29 = (var21 << 4) + 8 - destinationY;
+            var30 = (sourcePivotX << 8) - (var29 * var26 >> 4);
+            var31 = (sourcePivotY << 8) + (var29 * var27 >> 4);
             if (var27 == 0) {
               if (var26 == 0) {
                 var33 = var22;
@@ -853,44 +853,44 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    private final static void b(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
-        int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
-        int var14;
-        param8 = -param10;
+    private final static void blitArgbAdditive(int sourceColorScratch, int blendScratch, int rgbSum, int[] destinationPixels, int[] sourcePixels, int sourceIndex, int negativeColumnScratch, int destinationIndex, int negativeRowScratch, int drawWidth, int drawHeight, int destinationRowSkip, int sourceRowSkip, int intensity256) {
+        int sourceReadIndex = 0;
+        int destinationWriteIndex = 0;
+        int effectiveAlpha256;
+        negativeRowScratch = -drawHeight;
         L0: while (true) {
-          if (param8 >= 0) {
+          if (negativeRowScratch >= 0) {
             return;
           }
-          param6 = -param9;
+          negativeColumnScratch = -drawWidth;
           L1: while (true) {
-            if (param6 >= 0) {
-              param7 = param7 + param11;
-              param5 = param5 + param12;
-              param8++;
+            if (negativeColumnScratch >= 0) {
+              destinationIndex = destinationIndex + destinationRowSkip;
+              sourceIndex = sourceIndex + sourceRowSkip;
+              negativeRowScratch++;
               continue L0;
             }
             {
-              incrementValue$11 = param5;
-              param5++;
-              param0 = param4[incrementValue$11];
-              if (param0 == 0) {
-                param7++;
-                param6++;
+              sourceReadIndex = sourceIndex;
+              sourceIndex++;
+              sourceColorScratch = sourcePixels[sourceReadIndex];
+              if (sourceColorScratch == 0) {
+                destinationIndex++;
+                negativeColumnScratch++;
                 continue L1;
               }
               {
-                var14 = param13 * (param0 >>> 24) >> 8 & 255;
-                param1 = (param0 & 16711935) * var14;
-                param0 = (param1 & -16711936) + (param0 * var14 - param1 & 16711680) >>> 8;
-                param1 = param3[param7];
-                param2 = param0 + param1;
-                param0 = (param0 & 16711935) + (param1 & 16711935);
-                param1 = (param0 & 16777472) + (param2 - param0 & 65536);
-                incrementValue$12 = param7;
-                param7++;
-                param3[incrementValue$12] = param2 - param1 | param1 - (param1 >>> 8);
-                param6++;
+                effectiveAlpha256 = intensity256 * (sourceColorScratch >>> 24) >> 8 & 255;
+                blendScratch = (sourceColorScratch & 16711935) * effectiveAlpha256;
+                sourceColorScratch = (blendScratch & -16711936) + (sourceColorScratch * effectiveAlpha256 - blendScratch & 16711680) >>> 8;
+                blendScratch = destinationPixels[destinationIndex];
+                rgbSum = sourceColorScratch + blendScratch;
+                sourceColorScratch = (sourceColorScratch & 16711935) + (blendScratch & 16711935);
+                blendScratch = (sourceColorScratch & 16777472) + (rgbSum - sourceColorScratch & 65536);
+                destinationWriteIndex = destinationIndex;
+                destinationIndex++;
+                destinationPixels[destinationWriteIndex] = rgbSum - blendScratch | blendScratch - (blendScratch >>> 8);
+                negativeColumnScratch++;
                 continue L1;
               }
             }
@@ -1139,55 +1139,55 @@ final class ArgbSprite extends Sprite {
         super(width, height);
     }
 
-    private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
-        int incrementValue$0 = 0;
-        int incrementValue$1 = 0;
-        int var12;
-        int var13;
-        int var14;
-        int var15;
-        int var16;
-        int var17;
-        var12 = param11 & 16711935;
-        var13 = param11 >> 8 & 255;
-        param6 = -param8;
+    private final static void blitArgbGrayModulated(int[] destinationPixels, int[] sourcePixels, int sourcePixel, int sourceIndex, int destinationIndex, int negativeColumnScratch, int negativeRowScratch, int drawWidth, int drawHeight, int destinationRowSkip, int sourceRowSkip, int tintColor) {
+        int sourceReadIndex = 0;
+        int destinationWriteIndex = 0;
+        int tintRedBlue;
+        int tintGreen;
+        int storedAlpha;
+        int modulatedPixel;
+        int inverseAlpha256;
+        int destinationPixel;
+        tintRedBlue = tintColor & 16711935;
+        tintGreen = tintColor >> 8 & 255;
+        negativeRowScratch = -drawHeight;
         L0: while (true) {
-          if (param6 >= 0) {
+          if (negativeRowScratch >= 0) {
             return;
           }
-          param5 = -param7;
+          negativeColumnScratch = -drawWidth;
           L1: while (true) {
-            if (param5 >= 0) {
-              param4 = param4 + param9;
-              param3 = param3 + param10;
-              param6++;
+            if (negativeColumnScratch >= 0) {
+              destinationIndex = destinationIndex + destinationRowSkip;
+              sourceIndex = sourceIndex + sourceRowSkip;
+              negativeRowScratch++;
               continue L0;
             }
             {
-              incrementValue$0 = param3;
-              param3++;
-              param2 = param1[incrementValue$0];
-              var14 = param2 >>> 24;
-              param2 = param2 & 16777215;
-              if (var14 == 0) {
-                param4++;
-                param5++;
+              sourceReadIndex = sourceIndex;
+              sourceIndex++;
+              sourcePixel = sourcePixels[sourceReadIndex];
+              storedAlpha = sourcePixel >>> 24;
+              sourcePixel = sourcePixel & 16777215;
+              if (storedAlpha == 0) {
+                destinationIndex++;
+                negativeColumnScratch++;
                 continue L1;
               }
               {
-                var15 = 0;
-                if (param2 >> 8 != (param2 & 65535)) {
-                  var15 = param2;
+                modulatedPixel = 0;
+                if (sourcePixel >> 8 != (sourcePixel & 65535)) {
+                  modulatedPixel = sourcePixel;
                 } else {
-                  param2 = param2 & 255;
-                  var15 = (param2 * var12 >> 8 & 16711934) + (param2 * var13 & 65280) + 1;
+                  sourcePixel = sourcePixel & 255;
+                  modulatedPixel = (sourcePixel * tintRedBlue >> 8 & 16711934) + (sourcePixel * tintGreen & 65280) + 1;
                 }
-                var16 = 256 - var14;
-                var17 = param0[param4];
-                incrementValue$1 = param4;
-                param4++;
-                param0[incrementValue$1] = ((var15 & 16711935) * var14 + (var17 & 16711935) * var16 & -16711936) + ((var15 & 65280) * var14 + (var17 & 65280) * var16 & 16711680) >>> 8;
-                param5++;
+                inverseAlpha256 = 256 - storedAlpha;
+                destinationPixel = destinationPixels[destinationIndex];
+                destinationWriteIndex = destinationIndex;
+                destinationIndex++;
+                destinationPixels[destinationWriteIndex] = ((modulatedPixel & 16711935) * storedAlpha + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((modulatedPixel & 65280) * storedAlpha + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
+                negativeColumnScratch++;
                 continue L1;
               }
             }
@@ -1234,7 +1234,7 @@ final class ArgbSprite extends Sprite {
             if (drawHeight <= 0) {
                 return;
             }
-            ArgbSprite.b(0, 0, 0, SoftwareRasterizer.framebuffer, this.pixels, sourceIndex, 0, destinationIndex, 0, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip, intensity256);
+            ArgbSprite.blitArgbAdditive(0, 0, 0, SoftwareRasterizer.framebuffer, this.pixels, sourceIndex, 0, destinationIndex, 0, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip, intensity256);
             return;
         }
     }
@@ -1278,169 +1278,169 @@ final class ArgbSprite extends Sprite {
             if (drawHeight <= 0) {
                 return;
             }
-            ArgbSprite.c(SoftwareRasterizer.framebuffer, this.pixels, 0, sourceIndex, destinationIndex, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip);
+            ArgbSprite.blitArgb(SoftwareRasterizer.framebuffer, this.pixels, 0, sourceIndex, destinationIndex, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip);
             return;
         }
     }
 
-    private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int incrementValue$0 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int incrementValue$1 = 0;
-        for (var10 = -param6; var10 < 0; var10++) {
-            for (var11 = -param5; var11 < 0; var11++) {
-                var12 = (param1[param3] >>> 24) * param9 >> 8;
-                var13 = 256 - var12;
-                incrementValue$0 = param3;
-                param3++;
-                var14 = param1[incrementValue$0];
-                var15 = param0[param4];
-                incrementValue$1 = param4;
-                param4++;
-                param0[incrementValue$1] = ((var14 & 16711935) * var12 + (var15 & 16711935) * var13 & -16711936) + ((var14 & 65280) * var12 + (var15 & 65280) * var13 & 16711680) >>> 8;
+    private final static void blitArgbAlpha(int[] destinationPixels, int[] sourcePixels, int unusedPixelScratch, int sourceIndex, int destinationIndex, int drawWidth, int drawHeight, int destinationRowSkip, int sourceRowSkip, int alpha256) {
+        int negativeRow = 0;
+        int negativeColumn = 0;
+        int effectiveAlpha256 = 0;
+        int inverseAlpha256 = 0;
+        int sourceReadIndex = 0;
+        int sourcePixel = 0;
+        int destinationPixel = 0;
+        int destinationWriteIndex = 0;
+        for (negativeRow = -drawHeight; negativeRow < 0; negativeRow++) {
+            for (negativeColumn = -drawWidth; negativeColumn < 0; negativeColumn++) {
+                effectiveAlpha256 = (sourcePixels[sourceIndex] >>> 24) * alpha256 >> 8;
+                inverseAlpha256 = 256 - effectiveAlpha256;
+                sourceReadIndex = sourceIndex;
+                sourceIndex++;
+                sourcePixel = sourcePixels[sourceReadIndex];
+                destinationPixel = destinationPixels[destinationIndex];
+                destinationWriteIndex = destinationIndex;
+                destinationIndex++;
+                destinationPixels[destinationWriteIndex] = ((sourcePixel & 16711935) * effectiveAlpha256 + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((sourcePixel & 65280) * effectiveAlpha256 + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
             }
-            param4 = param4 + param7;
-            param3 = param3 + param8;
+            destinationIndex = destinationIndex + destinationRowSkip;
+            sourceIndex = sourceIndex + sourceRowSkip;
         }
     }
 
     final void drawScaledAlpha(int x, int y, int destinationWidth, int destinationHeight, int alpha256) {
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var15 = 0;
-        int var14 = 0;
-        int var16 = 0;
+        int sourceWidth = 0;
+        int sourceHeight = 0;
+        int sourceX16 = 0;
+        int sourceY16 = 0;
+        int canvasWidth = 0;
+        int canvasHeight = 0;
+        int stepX16 = 0;
+        int stepY16 = 0;
+        int destinationRowSkip = 0;
+        int trimStepsThenDestinationIndex = 0;
+        int clippedEdgePixels = 0;
         if (destinationWidth > 0) {
             if (destinationHeight <= 0) {
                 return;
             }
-            var6 = this.width;
-            var7 = this.height;
-            var8 = 0;
-            var9 = 0;
-            var10 = this.fullWidth;
-            var11 = this.fullHeight;
-            var12 = (var10 << 16) / destinationWidth;
-            var13 = (var11 << 16) / destinationHeight;
+            sourceWidth = this.width;
+            sourceHeight = this.height;
+            sourceX16 = 0;
+            sourceY16 = 0;
+            canvasWidth = this.fullWidth;
+            canvasHeight = this.fullHeight;
+            stepX16 = (canvasWidth << 16) / destinationWidth;
+            stepY16 = (canvasHeight << 16) / destinationHeight;
             if (this.trimX > 0) {
-                var14 = ((this.trimX << 16) + var12 - 1) / var12;
-                x = x + var14;
-                var8 = var8 + (var14 * var12 - (this.trimX << 16));
+                trimStepsThenDestinationIndex = ((this.trimX << 16) + stepX16 - 1) / stepX16;
+                x = x + trimStepsThenDestinationIndex;
+                sourceX16 = sourceX16 + (trimStepsThenDestinationIndex * stepX16 - (this.trimX << 16));
             }
             if (this.trimY > 0) {
-                var14 = ((this.trimY << 16) + var13 - 1) / var13;
-                y = y + var14;
-                var9 = var9 + (var14 * var13 - (this.trimY << 16));
+                trimStepsThenDestinationIndex = ((this.trimY << 16) + stepY16 - 1) / stepY16;
+                y = y + trimStepsThenDestinationIndex;
+                sourceY16 = sourceY16 + (trimStepsThenDestinationIndex * stepY16 - (this.trimY << 16));
             }
-            if (var6 < var10) {
-                destinationWidth = ((var6 << 16) - var8 + var12 - 1) / var12;
+            if (sourceWidth < canvasWidth) {
+                destinationWidth = ((sourceWidth << 16) - sourceX16 + stepX16 - 1) / stepX16;
             }
-            if (var7 < var11) {
-                destinationHeight = ((var7 << 16) - var9 + var13 - 1) / var13;
+            if (sourceHeight < canvasHeight) {
+                destinationHeight = ((sourceHeight << 16) - sourceY16 + stepY16 - 1) / stepY16;
             }
-            var14 = x + y * SoftwareRasterizer.stride;
-            var15 = SoftwareRasterizer.stride - destinationWidth;
+            trimStepsThenDestinationIndex = x + y * SoftwareRasterizer.stride;
+            destinationRowSkip = SoftwareRasterizer.stride - destinationWidth;
             if (y + destinationHeight > SoftwareRasterizer.clipBottom) {
                 destinationHeight = destinationHeight - (y + destinationHeight - SoftwareRasterizer.clipBottom);
             }
             if (y < SoftwareRasterizer.clipTop) {
-                var16 = SoftwareRasterizer.clipTop - y;
-                destinationHeight = destinationHeight - var16;
-                var14 = var14 + var16 * SoftwareRasterizer.stride;
-                var9 = var9 + var13 * var16;
+                clippedEdgePixels = SoftwareRasterizer.clipTop - y;
+                destinationHeight = destinationHeight - clippedEdgePixels;
+                trimStepsThenDestinationIndex = trimStepsThenDestinationIndex + clippedEdgePixels * SoftwareRasterizer.stride;
+                sourceY16 = sourceY16 + stepY16 * clippedEdgePixels;
             }
             if (x + destinationWidth > SoftwareRasterizer.clipRight) {
-                var16 = x + destinationWidth - SoftwareRasterizer.clipRight;
-                destinationWidth = destinationWidth - var16;
-                var15 = var15 + var16;
+                clippedEdgePixels = x + destinationWidth - SoftwareRasterizer.clipRight;
+                destinationWidth = destinationWidth - clippedEdgePixels;
+                destinationRowSkip = destinationRowSkip + clippedEdgePixels;
             }
             if (x < SoftwareRasterizer.clipLeft) {
-                var16 = SoftwareRasterizer.clipLeft - x;
-                destinationWidth = destinationWidth - var16;
-                var14 = var14 + var16;
-                var8 = var8 + var12 * var16;
-                var15 = var15 + var16;
+                clippedEdgePixels = SoftwareRasterizer.clipLeft - x;
+                destinationWidth = destinationWidth - clippedEdgePixels;
+                trimStepsThenDestinationIndex = trimStepsThenDestinationIndex + clippedEdgePixels;
+                sourceX16 = sourceX16 + stepX16 * clippedEdgePixels;
+                destinationRowSkip = destinationRowSkip + clippedEdgePixels;
             }
-            ArgbSprite.c(SoftwareRasterizer.framebuffer, this.pixels, 0, var8, var9, var14, var15, destinationWidth, destinationHeight, var12, var13, var6, alpha256);
+            ArgbSprite.blitArgbScaledAlpha(SoftwareRasterizer.framebuffer, this.pixels, 0, sourceX16, sourceY16, trimStepsThenDestinationIndex, destinationRowSkip, destinationWidth, destinationHeight, stepX16, stepY16, sourceWidth, alpha256);
             return;
         }
     }
 
     final void drawScaled(int x, int y, int destinationWidth, int destinationHeight) {
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var14 = 0;
-        int var13 = 0;
-        int var15 = 0;
+        int sourceWidth = 0;
+        int sourceHeight = 0;
+        int sourceX16 = 0;
+        int sourceY16 = 0;
+        int canvasWidth = 0;
+        int canvasHeight = 0;
+        int stepX16 = 0;
+        int stepY16 = 0;
+        int destinationRowSkip = 0;
+        int trimStepsThenDestinationIndex = 0;
+        int clippedEdgePixels = 0;
         if (destinationWidth > 0) {
             if (destinationHeight <= 0) {
                 return;
             }
-            var5 = this.width;
-            var6 = this.height;
-            var7 = 0;
-            var8 = 0;
-            var9 = this.fullWidth;
-            var10 = this.fullHeight;
-            var11 = (var9 << 16) / destinationWidth;
-            var12 = (var10 << 16) / destinationHeight;
+            sourceWidth = this.width;
+            sourceHeight = this.height;
+            sourceX16 = 0;
+            sourceY16 = 0;
+            canvasWidth = this.fullWidth;
+            canvasHeight = this.fullHeight;
+            stepX16 = (canvasWidth << 16) / destinationWidth;
+            stepY16 = (canvasHeight << 16) / destinationHeight;
             if (this.trimX > 0) {
-                var13 = ((this.trimX << 16) + var11 - 1) / var11;
-                x = x + var13;
-                var7 = var7 + (var13 * var11 - (this.trimX << 16));
+                trimStepsThenDestinationIndex = ((this.trimX << 16) + stepX16 - 1) / stepX16;
+                x = x + trimStepsThenDestinationIndex;
+                sourceX16 = sourceX16 + (trimStepsThenDestinationIndex * stepX16 - (this.trimX << 16));
             }
             if (this.trimY > 0) {
-                var13 = ((this.trimY << 16) + var12 - 1) / var12;
-                y = y + var13;
-                var8 = var8 + (var13 * var12 - (this.trimY << 16));
+                trimStepsThenDestinationIndex = ((this.trimY << 16) + stepY16 - 1) / stepY16;
+                y = y + trimStepsThenDestinationIndex;
+                sourceY16 = sourceY16 + (trimStepsThenDestinationIndex * stepY16 - (this.trimY << 16));
             }
-            if (var5 < var9) {
-                destinationWidth = ((var5 << 16) - var7 + var11 - 1) / var11;
+            if (sourceWidth < canvasWidth) {
+                destinationWidth = ((sourceWidth << 16) - sourceX16 + stepX16 - 1) / stepX16;
             }
-            if (var6 < var10) {
-                destinationHeight = ((var6 << 16) - var8 + var12 - 1) / var12;
+            if (sourceHeight < canvasHeight) {
+                destinationHeight = ((sourceHeight << 16) - sourceY16 + stepY16 - 1) / stepY16;
             }
-            var13 = x + y * SoftwareRasterizer.stride;
-            var14 = SoftwareRasterizer.stride - destinationWidth;
+            trimStepsThenDestinationIndex = x + y * SoftwareRasterizer.stride;
+            destinationRowSkip = SoftwareRasterizer.stride - destinationWidth;
             if (y + destinationHeight > SoftwareRasterizer.clipBottom) {
                 destinationHeight = destinationHeight - (y + destinationHeight - SoftwareRasterizer.clipBottom);
             }
             if (y < SoftwareRasterizer.clipTop) {
-                var15 = SoftwareRasterizer.clipTop - y;
-                destinationHeight = destinationHeight - var15;
-                var13 = var13 + var15 * SoftwareRasterizer.stride;
-                var8 = var8 + var12 * var15;
+                clippedEdgePixels = SoftwareRasterizer.clipTop - y;
+                destinationHeight = destinationHeight - clippedEdgePixels;
+                trimStepsThenDestinationIndex = trimStepsThenDestinationIndex + clippedEdgePixels * SoftwareRasterizer.stride;
+                sourceY16 = sourceY16 + stepY16 * clippedEdgePixels;
             }
             if (x + destinationWidth > SoftwareRasterizer.clipRight) {
-                var15 = x + destinationWidth - SoftwareRasterizer.clipRight;
-                destinationWidth = destinationWidth - var15;
-                var14 = var14 + var15;
+                clippedEdgePixels = x + destinationWidth - SoftwareRasterizer.clipRight;
+                destinationWidth = destinationWidth - clippedEdgePixels;
+                destinationRowSkip = destinationRowSkip + clippedEdgePixels;
             }
             if (x < SoftwareRasterizer.clipLeft) {
-                var15 = SoftwareRasterizer.clipLeft - x;
-                destinationWidth = destinationWidth - var15;
-                var13 = var13 + var15;
-                var7 = var7 + var11 * var15;
-                var14 = var14 + var15;
+                clippedEdgePixels = SoftwareRasterizer.clipLeft - x;
+                destinationWidth = destinationWidth - clippedEdgePixels;
+                trimStepsThenDestinationIndex = trimStepsThenDestinationIndex + clippedEdgePixels;
+                sourceX16 = sourceX16 + stepX16 * clippedEdgePixels;
+                destinationRowSkip = destinationRowSkip + clippedEdgePixels;
             }
-            ArgbSprite.c(SoftwareRasterizer.framebuffer, this.pixels, 0, var7, var8, var13, var14, destinationWidth, destinationHeight, var11, var12, var5);
+            ArgbSprite.blitArgbScaled(SoftwareRasterizer.framebuffer, this.pixels, 0, sourceX16, sourceY16, trimStepsThenDestinationIndex, destinationRowSkip, destinationWidth, destinationHeight, stepX16, stepY16, sourceWidth);
             return;
         }
     }
@@ -1484,7 +1484,7 @@ final class ArgbSprite extends Sprite {
             if (drawHeight <= 0) {
                 return;
             }
-            ArgbSprite.c(SoftwareRasterizer.framebuffer, this.pixels, 0, sourceIndex, destinationIndex, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip);
+            ArgbSprite.blitArgb(SoftwareRasterizer.framebuffer, this.pixels, 0, sourceIndex, destinationIndex, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip);
             return;
         }
     }

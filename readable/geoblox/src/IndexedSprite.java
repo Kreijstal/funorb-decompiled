@@ -5,44 +5,44 @@ final class IndexedSprite extends IndexedSpriteState {
     int[] palette;
     byte[] indices;
 
-    private final static void b(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
-        int var10;
-        int var11;
-        int var12;
-        int var13;
-        int var14;
-        var10 = 256 - param9;
-        var11 = -param6;
+    private final static void blitPaletteAlpha(int[] destinationPixels, byte[] sourceIndices, int[] palette, int sourceIndex, int destinationIndex, int drawWidth, int drawHeight, int destinationRowSkip, int sourceRowSkip, int alpha256) {
+        int sourceReadIndex = 0;
+        int destinationWriteIndex = 0;
+        int inverseAlpha256;
+        int negativeRow;
+        int negativeColumn;
+        int indexThenPaletteColor;
+        int destinationPixel;
+        inverseAlpha256 = 256 - alpha256;
+        negativeRow = -drawHeight;
         L0: while (true) {
-          if (var11 >= 0) {
+          if (negativeRow >= 0) {
             return;
           }
-          var12 = -param5;
+          negativeColumn = -drawWidth;
           L1: while (true) {
-            if (var12 >= 0) {
-              param4 = param4 + param7;
-              param3 = param3 + param8;
-              var11++;
+            if (negativeColumn >= 0) {
+              destinationIndex = destinationIndex + destinationRowSkip;
+              sourceIndex = sourceIndex + sourceRowSkip;
+              negativeRow++;
               continue L0;
             }
             {
-              incrementValue$11 = param3;
-              param3++;
-              var13 = param1[incrementValue$11];
-              if (var13 == 0) {
-                param4++;
-                var12++;
+              sourceReadIndex = sourceIndex;
+              sourceIndex++;
+              indexThenPaletteColor = sourceIndices[sourceReadIndex];
+              if (indexThenPaletteColor == 0) {
+                destinationIndex++;
+                negativeColumn++;
                 continue L1;
               }
               {
-                var13 = param2[var13 & 255];
-                var14 = param0[param4];
-                incrementValue$12 = param4;
-                param4++;
-                param0[incrementValue$12] = ((var13 & 16711935) * param9 + (var14 & 16711935) * var10 & -16711936) + ((var13 & 65280) * param9 + (var14 & 65280) * var10 & 16711680) >> 8;
-                var12++;
+                indexThenPaletteColor = palette[indexThenPaletteColor & 255];
+                destinationPixel = destinationPixels[destinationIndex];
+                destinationWriteIndex = destinationIndex;
+                destinationIndex++;
+                destinationPixels[destinationWriteIndex] = ((indexThenPaletteColor & 16711935) * alpha256 + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((indexThenPaletteColor & 65280) * alpha256 + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >> 8;
+                negativeColumn++;
                 continue L1;
               }
             }
@@ -89,7 +89,7 @@ final class IndexedSprite extends IndexedSpriteState {
             if (drawHeight <= 0) {
                 return;
             }
-            IndexedSprite.a(SoftwareRasterizer.framebuffer, this.indices, this.palette, 0, sourceIndex, destinationIndex, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip);
+            IndexedSprite.blitPalette(SoftwareRasterizer.framebuffer, this.indices, this.palette, 0, sourceIndex, destinationIndex, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip);
             return;
         }
     }
@@ -133,62 +133,62 @@ final class IndexedSprite extends IndexedSpriteState {
             if (drawHeight <= 0) {
                 return;
             }
-            IndexedSprite.b(SoftwareRasterizer.framebuffer, this.indices, this.palette, sourceIndex, destinationIndex, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip, alpha256);
+            IndexedSprite.blitPaletteAlpha(SoftwareRasterizer.framebuffer, this.indices, this.palette, sourceIndex, destinationIndex, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip, alpha256);
             return;
         }
     }
 
-    private final static void a(int param0, byte[] param1, int param2, int param3, int param4, int[] param5, int[] param6, int param7, int param8, int param9, int param10, int param11) {
-        int incrementValue$12 = 0;
-        int incrementValue$13 = 0;
-        int incrementValue$14 = 0;
-        param10 = -param11;
+    private final static void blitPaletteRuns(int indexThenRunLength, byte[] sourceIndices, int sourceIndex, int destinationIndex, int remainingColumnsScratch, int[] destinationPixels, int[] palette, int drawWidth, int destinationRowSkip, int sourceRowSkip, int negativeRowScratch, int drawHeight) {
+        int sourceReadIndex = 0;
+        int destinationWriteIndex = 0;
+        int sourceReadIndex2 = 0;
+        negativeRowScratch = -drawHeight;
         L0: while (true) {
-          if (param10 >= 0) {
+          if (negativeRowScratch >= 0) {
             return;
           }
-          param4 = param7;
-          if (param2 > 0) {
-            if (param1[param2 - 1] == -1) {
-              param4--;
-              param2++;
-              param3++;
+          remainingColumnsScratch = drawWidth;
+          if (sourceIndex > 0) {
+            if (sourceIndices[sourceIndex - 1] == -1) {
+              remainingColumnsScratch--;
+              sourceIndex++;
+              destinationIndex++;
             }
           }
           L2: while (true) {
-            if (param4 <= 0) {
-              param3 = param3 + param8;
-              param2 = param2 + param9;
-              param10++;
+            if (remainingColumnsScratch <= 0) {
+              destinationIndex = destinationIndex + destinationRowSkip;
+              sourceIndex = sourceIndex + sourceRowSkip;
+              negativeRowScratch++;
               continue L0;
             }
             {
-              incrementValue$12 = param2;
-              param2++;
-              param0 = param1[incrementValue$12];
-              param4--;
-              if (param0 == 0) {
-                param3++;
+              sourceReadIndex = sourceIndex;
+              sourceIndex++;
+              indexThenRunLength = sourceIndices[sourceReadIndex];
+              remainingColumnsScratch--;
+              if (indexThenRunLength == 0) {
+                destinationIndex++;
                 continue L2;
               }
-              if (param0 != -1) {
-                incrementValue$13 = param3;
-                param3++;
-                param5[incrementValue$13] = param6[param0 & 255];
+              if (indexThenRunLength != -1) {
+                destinationWriteIndex = destinationIndex;
+                destinationIndex++;
+                destinationPixels[destinationWriteIndex] = palette[indexThenRunLength & 255];
                 continue L2;
               }
               {
-                incrementValue$14 = param2;
-                param2++;
-                param0 = param1[incrementValue$14] & 255;
-                param4--;
-                param0 = param0 + param0;
-                if (param0 > param4) {
-                  param0 = param4;
+                sourceReadIndex2 = sourceIndex;
+                sourceIndex++;
+                indexThenRunLength = sourceIndices[sourceReadIndex2] & 255;
+                remainingColumnsScratch--;
+                indexThenRunLength = indexThenRunLength + indexThenRunLength;
+                if (indexThenRunLength > remainingColumnsScratch) {
+                  indexThenRunLength = remainingColumnsScratch;
                 }
-                param2 = param2 + param0;
-                param4 = param4 - param0;
-                param3 = param3 + (param0 + 2);
+                sourceIndex = sourceIndex + indexThenRunLength;
+                remainingColumnsScratch = remainingColumnsScratch - indexThenRunLength;
+                destinationIndex = destinationIndex + (indexThenRunLength + 2);
                 continue L2;
               }
             }
@@ -235,107 +235,107 @@ final class IndexedSprite extends IndexedSpriteState {
             if (drawHeight <= 0) {
                 return;
             }
-            IndexedSprite.a(0, this.indices, sourceIndex, destinationIndex, 0, SoftwareRasterizer.framebuffer, this.palette, drawWidth, destinationRowSkip, sourceRowSkip, 0, drawHeight);
+            IndexedSprite.blitPaletteRuns(0, this.indices, sourceIndex, destinationIndex, 0, SoftwareRasterizer.framebuffer, this.palette, drawWidth, destinationRowSkip, sourceRowSkip, 0, drawHeight);
             return;
         }
     }
 
-    private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        int incrementValue$0 = 0;
-        int incrementValue$1 = 0;
-        int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
-        int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
-        int incrementValue$6 = 0;
-        int incrementValue$7 = 0;
-        int incrementValue$8 = 0;
-        int incrementValue$9 = 0;
-        int var10;
-        int var11;
-        int var12;
-        var10 = -(param6 >> 2);
-        param6 = -(param6 & 3);
-        var11 = -param7;
+    private final static void blitPalette(int[] destinationPixels, byte[] sourceIndices, int[] palette, int paletteIndexScratch, int sourceIndex, int destinationIndex, int widthThenNegativeTail, int drawHeight, int destinationRowSkip, int sourceRowSkip) {
+        int sourceReadIndex = 0;
+        int destinationWriteIndex = 0;
+        int sourceReadIndex2 = 0;
+        int destinationWriteIndex2 = 0;
+        int sourceReadIndex3 = 0;
+        int destinationWriteIndex3 = 0;
+        int sourceReadIndex4 = 0;
+        int destinationWriteIndex4 = 0;
+        int sourceReadIndex5 = 0;
+        int destinationWriteIndex5 = 0;
+        int negativeQuadCount;
+        int negativeRow;
+        int quadOrTailCounter;
+        negativeQuadCount = -(widthThenNegativeTail >> 2);
+        widthThenNegativeTail = -(widthThenNegativeTail & 3);
+        negativeRow = -drawHeight;
         L0: while (true) {
-          if (var11 >= 0) {
+          if (negativeRow >= 0) {
             return;
           }
           {
-            var12 = var10;
+            quadOrTailCounter = negativeQuadCount;
             L1: while (true) {
-              if (var12 >= 0) {
-                var12 = param6;
+              if (quadOrTailCounter >= 0) {
+                quadOrTailCounter = widthThenNegativeTail;
                 L2: while (true) {
-                  if (var12 >= 0) {
-                    param5 = param5 + param8;
-                    param4 = param4 + param9;
-                    var11++;
+                  if (quadOrTailCounter >= 0) {
+                    destinationIndex = destinationIndex + destinationRowSkip;
+                    sourceIndex = sourceIndex + sourceRowSkip;
+                    negativeRow++;
                     continue L0;
                   }
                   {
-                    incrementValue$0 = param4;
-                    param4++;
-                    param3 = param1[incrementValue$0];
-                    if (param3 == 0) {
-                      param5++;
-                      var12++;
+                    sourceReadIndex = sourceIndex;
+                    sourceIndex++;
+                    paletteIndexScratch = sourceIndices[sourceReadIndex];
+                    if (paletteIndexScratch == 0) {
+                      destinationIndex++;
+                      quadOrTailCounter++;
                       continue L2;
                     }
                     {
-                      incrementValue$1 = param5;
-                      param5++;
-                      param0[incrementValue$1] = param2[param3 & 255];
-                      var12++;
+                      destinationWriteIndex = destinationIndex;
+                      destinationIndex++;
+                      destinationPixels[destinationWriteIndex] = palette[paletteIndexScratch & 255];
+                      quadOrTailCounter++;
                       continue L2;
                     }
                   }
                 }
               }
               {
-                incrementValue$2 = param4;
-                param4++;
-                param3 = param1[incrementValue$2];
-                if (param3 == 0) {
-                  param5++;
+                sourceReadIndex2 = sourceIndex;
+                sourceIndex++;
+                paletteIndexScratch = sourceIndices[sourceReadIndex2];
+                if (paletteIndexScratch == 0) {
+                  destinationIndex++;
                 } else {
-                  incrementValue$3 = param5;
-                  param5++;
-                  param0[incrementValue$3] = param2[param3 & 255];
+                  destinationWriteIndex2 = destinationIndex;
+                  destinationIndex++;
+                  destinationPixels[destinationWriteIndex2] = palette[paletteIndexScratch & 255];
                 }
-                incrementValue$4 = param4;
-                param4++;
-                param3 = param1[incrementValue$4];
-                if (param3 == 0) {
-                  param5++;
+                sourceReadIndex3 = sourceIndex;
+                sourceIndex++;
+                paletteIndexScratch = sourceIndices[sourceReadIndex3];
+                if (paletteIndexScratch == 0) {
+                  destinationIndex++;
                 } else {
-                  incrementValue$5 = param5;
-                  param5++;
-                  param0[incrementValue$5] = param2[param3 & 255];
+                  destinationWriteIndex3 = destinationIndex;
+                  destinationIndex++;
+                  destinationPixels[destinationWriteIndex3] = palette[paletteIndexScratch & 255];
                 }
-                incrementValue$6 = param4;
-                param4++;
-                param3 = param1[incrementValue$6];
-                if (param3 == 0) {
-                  param5++;
+                sourceReadIndex4 = sourceIndex;
+                sourceIndex++;
+                paletteIndexScratch = sourceIndices[sourceReadIndex4];
+                if (paletteIndexScratch == 0) {
+                  destinationIndex++;
                 } else {
-                  incrementValue$7 = param5;
-                  param5++;
-                  param0[incrementValue$7] = param2[param3 & 255];
+                  destinationWriteIndex4 = destinationIndex;
+                  destinationIndex++;
+                  destinationPixels[destinationWriteIndex4] = palette[paletteIndexScratch & 255];
                 }
-                incrementValue$8 = param4;
-                param4++;
-                param3 = param1[incrementValue$8];
-                if (param3 == 0) {
-                  param5++;
-                  var12++;
+                sourceReadIndex5 = sourceIndex;
+                sourceIndex++;
+                paletteIndexScratch = sourceIndices[sourceReadIndex5];
+                if (paletteIndexScratch == 0) {
+                  destinationIndex++;
+                  quadOrTailCounter++;
                   continue L1;
                 }
                 {
-                  incrementValue$9 = param5;
-                  param5++;
-                  param0[incrementValue$9] = param2[param3 & 255];
-                  var12++;
+                  destinationWriteIndex5 = destinationIndex;
+                  destinationIndex++;
+                  destinationPixels[destinationWriteIndex5] = palette[paletteIndexScratch & 255];
+                  quadOrTailCounter++;
                   continue L1;
                 }
               }

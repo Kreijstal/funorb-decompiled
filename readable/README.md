@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 1,710 guarded naming rules: 24 classes, 457 fields,
-247 methods, 450 parameters and 532 local declarations. Both 303-file corpora
+The current export has 2,233 guarded naming rules: 24 classes, 457 fields,
+270 methods, 709 parameters and 773 local declarations. Both 303-file corpora
 compile, preserving 150,801 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -37,19 +37,22 @@ git archive --format=tar 1fa1f5ca8db58810744ef29e04bcf31c74e81805 | sha256sum
 This identifies tracked decompiler source and its Git archive metadata. It is
 separate from a game JAR or the Java source-tree hashes below.
 
-The current naming pass adds 399 guarded identities: two classes, nine fields,
-60 method declarations, 209 parameters and 119 locals. It names raster drawing
-and clipping APIs, complete RGB/ARGB sprite override families, indexed sprite
-operations, canvas dimensions and clipped-blit cursors. Two existing preparation
-locals are refined to distinguish full canvas dimensions from cropped pixels;
-all other 1,309 prior rules remain unchanged. The mirror applies 23,212 identifier
-edits while preserving all 150,801 bindings and 388 override edges. Raw source
-and generator pins are unchanged.
+The current naming pass adds 523 guarded identities: 23 private static pixel
+kernels, 259 parameters and 241 locals. Every such kernel in RGB `Sprite`,
+`ArgbSprite` and `IndexedSprite` now names its operation, buffers, cursors,
+channel arithmetic and saved increment indexes. Scaled wrappers name their
+16-bit source coordinates and crop/clip adjustments. The mirror applies 25,527
+identifier edits while preserving all 150,801 bindings and 388 override edges.
+Raw source, generator pins and all 1,710 prior rules are unchanged.
 
-The previous pass added 117 asset/loading identities. Original resource keys,
-numeric indexes, guards, zero-colour transparency, stored ARGB alpha and indexed
-run markers remain intact. The complete archive-loading path and rendering with
-real assets are not established by the existing native fixtures.
+The previous passes named rendering contracts and asset/loading identities.
+Original resource keys, numeric indexes, guards, zero-colour transparency,
+stored ARGB alpha and indexed run markers remain intact. RGB/indexed alpha
+kernels retain signed shifts; ARGB kernels retain unsigned shifts.
+The expanded existing drawing probe adds 45,074 pixel-buffer cases against
+fixed native bytecode: 43,750 have independent per-channel/coordinate oracles;
+1,324 reductions, skip-run and invalid-alpha cases compare native traces only.
+Real-asset rendering and whole-game equivalence remain unverified.
 
 ## Reproduce and check
 
@@ -83,6 +86,19 @@ JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-result-seque
 JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-result-helpers.mjs /path/to/verified-geoblox-classes
 JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-nine-slice.mjs /path/to/verified-geoblox-classes
 ```
+
+The drawing probe retains its 2,592 nine-slice cases and separate original trace.
+Its additional 45,074 sprite cases use four crop/canvas layouts, three pixel
+patterns, five clips, five placements and alpha boundaries. The independent
+oracles compute channels separately from the packed kernels and map destination
+coordinates back to the logical source canvas. They check RGB/ARGB copies,
+blends, gray tint/modulation, additive saturation, RGB multiply/silhouette,
+nearest scaling and palette indexing. Palette zero transparency depends on the
+index, including nonzero indexes whose palette color is zero; signed byte
+indexes are converted to unsigned values. Reductions, run-marker clipping and
+invalid alpha values have fixed native traces without independent oracles.
+The additional trace SHA-256 is
+`c986ff493508bf516e6bd33e187ee51ed478a012dfebf467a8b76e00f78a1f09`.
 
 Matching/scoring covers 708 controlled scenarios and 55,728 ticks per variant.
 The text writer covers 152 cases, including retained suffixes, empty/growing
@@ -358,6 +374,6 @@ the same manifest; no JSON snapshots are added.
 | Java source tree | SHA-256 |
 | --- | --- |
 | Raw | `cf0cbc50ff6b23458db1a7beb4edb6829ab61e7e6ea3dc7d7d47f03e2492095d` |
-| Readable | `0c98b7ae5eed853e73ba5cebce1d0b1cdd4bf966f35987db87ae412f119f5cca` |
+| Readable | `d39bf5f11c910b60c1889a31132de94a4e3ab2e023f03b6bc1ede8d53ecb4271` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.
