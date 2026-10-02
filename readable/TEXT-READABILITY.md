@@ -15,7 +15,7 @@ assign decoded strings to 152 fields, including indexed text arrays. One field,
 includes the enclosing class's unqualified `field_F` assignment for
 `loading_graphics`, as well as qualified field and array assignments.
 
-The [text manifest](rules/geoblox-v13-text.json) records every destination's
+The [text manifest](https://github.com/Kreijstal/funorb-decompiled/blob/29baf97271daba9862060eece24bc6e4cb0b11c0/readable/rules/geoblox-v13-text.json) records every destination's
 original field identity, spelling, key, array index and source line. The
 [evidence check](text-resource-evidence.mjs) compares that record with the pinned
 loader bytes and checks every destination against the retained and new rules.

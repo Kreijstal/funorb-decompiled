@@ -22,7 +22,7 @@ decompilation remains under `games/`.
 
 The [reproduction and update procedure](readable/README.md),
 [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md),
-[frozen rules](readable/geoblox-rules.json),
+[current manifest](readable/geoblox-rules.json),
 [symbol map](readable/geoblox/SYMBOLS.md) and
 [provenance](readable/geoblox/provenance.json) describe the export.
 `node readable/reproduce-geoblox.mjs --check` verifies deterministic regeneration
@@ -37,7 +37,8 @@ records pass 19's handler boundaries and reviewed generated-local changes. [Floa
 Pass 21 names the remaining match-neighborhood roles, cooldown-blocked entities,
 attachment/shock gates and score-text writes through the same guarded pipeline.
 Its direct text-writer probe matches native bytecode in 152 offset, aliasing and
-failure scenarios. Shorter writes retain the old suffix; the helper is named
+failure scenarios. The single current manifest holds pins, rules and verification
+evidence; prior snapshots live in Git. Shorter writes retain the old suffix; the helper is named
 `writeTextAtOffset` to reflect that behavior.
 Typed complement comparisons show direct conditions;
 see the [comparison report](readable/COMPARISON-READABILITY.md). Unknown

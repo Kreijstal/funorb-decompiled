@@ -4,8 +4,8 @@ This naming pass adds 46 reviewed names: one class, ten fields, six methods,
 22 parameters and seven locals. All 926 earlier names remain unchanged, giving
 972 rules. The raw Java, bytecode, decompiler, naming tool and stub dependency
 are unchanged. Generated source bodies are not edited by hand. The frozen
-[pass-17 manifest](rules/geoblox-v17.json) and
-[pass-18 additions](rules/geoblox-v18-results.json) retain full JVM identities,
+[pass-17 manifest](https://github.com/Kreijstal/funorb-decompiled/blob/29baf97271daba9862060eece24bc6e4cb0b11c0/readable/rules/geoblox-v17.json) and
+[pass-18 additions](https://github.com/Kreijstal/funorb-decompiled/blob/29baf97271daba9862060eece24bc6e4cb0b11c0/readable/rules/geoblox-v18-results.json) retain full JVM identities,
 original spellings, semantic evidence and hashes of ten reviewed source files.
 The publication wrapper verifies these source hashes against the Git-extracted
 pinned input before invoking the bundled naming tool.
@@ -111,7 +111,7 @@ node readable/tools/restore-original.mjs readable/geoblox /tmp/geoblox-v18-resto
 Both complete corpora compile. All 154,109 bindings and 388 override edges are
 preserved. Generation applies 16,605 identifier edits; dictionary-only reversal
 restores all 303 raw sources exactly. Rule-builder tests pass 30/30 and retained
-text-resource evidence tests pass 8/8. See [validation.json](validation.json) for
+text-resource evidence tests pass 8/8. See [validation.json](https://github.com/Kreijstal/funorb-decompiled/blob/29baf97271daba9862060eece24bc6e4cb0b11c0/readable/validation.json) for
 fresh checks and historical evidence.
 
 | Identity | SHA-256 |

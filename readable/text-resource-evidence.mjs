@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 
 // This checks one reviewed, pinned source representation. It does not infer
 // names or try to accommodate unreviewed decompiler output shapes.
-export function validateTextResourceEvidence(source, manifest, retainedRules) {
+export function validateTextResourceEvidence(source, manifest, currentRules) {
   assert.equal(crypto.createHash('sha256').update(source).digest('hex'),
     manifest.loaderSourceSha256, 'loader source differs from the reviewed text evidence');
   const reads = [...source.matchAll(/var2 = fk\.a\(2229, "([^"]+)"\);/g)];
@@ -29,9 +29,8 @@ export function validateTextResourceEvidence(source, manifest, retainedRules) {
   assert.equal(reads.length, manifest.review.allResourceReads);
   assert.equal(stored, manifest.review.storedResourceReads);
   assert.equal(reads.length - stored, manifest.review.discardedReadsUnnamed);
-  const retained = new Map(retainedRules.map(rule => [rule.symbol, rule]));
-  const rules = new Map([...retainedRules, ...manifest.renames].map(rule => [rule.symbol, rule]));
-  assert.equal(rules.size, retainedRules.length + manifest.renames.length, 'duplicate naming identity');
+  const rules = new Map(currentRules.map(rule => [rule.symbol, rule]));
+  assert.equal(rules.size, currentRules.length, 'duplicate naming identity');
   for (const binding of manifest.resourceAssignments) {
     const prefixes = new Set(binding.resources.map(resource => resource.key.split(',')[0]));
     assert.equal(prefixes.size, 1, 'ambiguous resource group');
@@ -39,7 +38,6 @@ export function validateTextResourceEvidence(source, manifest, retainedRules) {
     assert.ok(rule, 'resource field has no guarded name');
     assert.equal(rule.originalName, binding.originalName, 'resource spelling guard differs');
     assert.equal(rule.to, binding.to, 'resource field differs from its reviewed name');
-    assert.equal(binding.retainedRule, retained.has(binding.symbol), 'resource retention differs');
   }
   return {resourceFields: observed.length, storedReads: stored, discardedReads: reads.length - stored};
 }

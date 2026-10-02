@@ -1,132 +1,59 @@
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import crypto from 'node:crypto';
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import {fileURLToPath} from 'node:url';
 import {captureProcess} from '../tools/lib/capture-process.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
-const repository = path.resolve(root, '..');
-const hash = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
-
-// Use the real wrapper and pinned Git objects in an isolated local clone.
-// Corruptions must be refused before javac or readable-source generation.
-function rejection(mutate, message, refreshMigrationHash = false) {
-  const temporary = fs.mkdtempSync(path.join(os.tmpdir(), 'geoblox-migration-source-'));
+function rejection(change, message) {
+  const temporary = fs.mkdtempSync(path.join(os.tmpdir(), 'geoblox-current-source-'));
   try {
-    captureProcess('git', ['clone', '--shared', '--no-checkout', '--quiet', repository, temporary]);
-    for (const file of ['reproduce-geoblox.mjs', 'geoblox-rules.json', 'geoblox-source-pin.json',
-      'rules/geoblox-v19.json', 'rules/geoblox-v18-results.json', 'rules/geoblox-v20-migration.json',
-      'rules/geoblox-v20.json', 'rules/geoblox-v21-matching.json',
-      'tests/test-geoblox-match-scoring.mjs', 'tests/test-geoblox-text-write.mjs',
-      'funorb-stubs.jar', 'tools/PIN.json', 'tools/readable-java.mjs',
+    captureProcess('git', ['clone', '--shared', '--no-checkout', '--quiet', path.resolve(root, '..'), temporary]);
+    const directory = path.join(temporary, 'readable');
+    for (const file of ['reproduce-geoblox.mjs', 'build-geoblox-rules.mjs', 'text-resource-evidence.mjs',
+      'geoblox-rules.json', 'funorb-stubs.jar', 'tests/test-geoblox-match-scoring.mjs',
+      'tests/test-geoblox-text-write.mjs', 'tools/PIN.json', 'tools/readable-java.mjs',
       'tools/lib/ReadableJava.java', 'tools/lib/capture-process.mjs']) {
-      const destination = path.join(temporary, 'readable', file);
+      const destination = path.join(directory, file);
       fs.mkdirSync(path.dirname(destination), {recursive: true});
       fs.copyFileSync(path.join(root, file), destination);
     }
-    const migrationFile = path.join(temporary, 'readable/rules/geoblox-v20-migration.json');
-    const migration = JSON.parse(fs.readFileSync(migrationFile));
-    mutate(migration, temporary);
-    fs.writeFileSync(migrationFile, JSON.stringify(migration, null, 2) + '\n');
-    if (refreshMigrationHash) {
-      const rulesFile = path.join(temporary, 'readable/geoblox-rules.json');
-      const rules = JSON.parse(fs.readFileSync(rulesFile));
-      rules.namingMigrationSha256 = hash(fs.readFileSync(migrationFile));
-      fs.writeFileSync(rulesFile, JSON.stringify(rules, null, 2) + '\n');
-    }
+    const file = path.join(directory, 'geoblox-rules.json');
+    const manifest = JSON.parse(fs.readFileSync(file));
+    change(manifest, directory);
+    fs.writeFileSync(file, JSON.stringify(manifest, null, 2) + '\n');
     const output = path.join(temporary, 'output');
     assert.throws(() => {
-      try { captureProcess(process.execPath, [path.join(temporary, 'readable/reproduce-geoblox.mjs'), output]); }
+      try { captureProcess(process.execPath, [path.join(directory, 'reproduce-geoblox.mjs'), output]); }
       catch (error) { throw new Error(error.stderr?.toString() || error.message); }
     }, message);
-    assert.equal(fs.existsSync(output), false, 'refusal must not produce a partial export');
+    assert.equal(fs.existsSync(output), false, 'refusal must not leave a partial export');
   } finally { fs.rmSync(temporary, {recursive: true, force: true}); }
 }
 
-test('wrapper rejects a changed reviewed migration before generation', () => {
-  rejection(data => { data.review.rulesRetained--; }, /Reviewed naming migration differs from the rules/);
+test('wrapper checks frozen source bytes directly from the Git input', () => {
+  rejection(data => { data.publication.sourceEvidence[0].sha256 = '0'.repeat(64); }, /Reviewed source differs/);
+  rejection(data => { data.publication.sourceEvidence[0].file = '../ab.java'; }, /Invalid current source evidence/);
 });
-
-test('wrapper checks current and previous source bytes despite self-consistent manifest hashes', () => {
-  rejection(data => { data.sourceEvidence[0].sha256 = '0'.repeat(64); },
-    /Reviewed migration source differs: ab.java/, true);
-  rejection(data => { data.sourceEvidence[0].previousSha256 = '0'.repeat(64); },
-    /Previous migration source differs: ab.java/, true);
+test('wrapper refuses unreviewed rule changes and previous Git hash corruption', () => {
+  rejection(data => { data.renames[0].to = 'Different'; }, /without an explicit naming change/);
+  rejection(data => { data.publication.previousRules.sha256 = '0'.repeat(64); }, /Previous Git rules differ/);
 });
-
-test('wrapper rejects traversal in current source and previous manifest paths', () => {
-  rejection(data => { data.sourceEvidence[0].file = '../ab.java'; },
-    /Reviewed migration source differs/, true);
-  rejection(data => { data.previousRulesFile = '../geoblox-v19.json'; },
-    /Invalid previous naming manifest path/, true);
+test('wrapper rejects changed native probe bytes before compilation', () => {
+  rejection(data => { data.publication.nativeEvidence[0].sha256 = '0'.repeat(64); }, /Reviewed native probe differs/);
+  rejection((_data, directory) => {
+    fs.appendFileSync(path.join(directory, 'tests/test-geoblox-text-write.mjs'), '\n');
+  }, /Reviewed native probe differs/);
 });
-
-test('wrapper checks the previous manifest bytes and its publication source pin', () => {
-  rejection((_data, temporary) => {
-    const file = path.join(temporary, 'readable/rules/geoblox-v19.json');
-    fs.appendFileSync(file, ' ');
-  }, /Previous naming manifest differs from the migration/);
-  rejection((data, temporary) => {
-    const file = path.join(temporary, 'readable/rules/geoblox-v19.json');
-    const previous = JSON.parse(fs.readFileSync(file));
-    previous.source.commit = 'different';
-    fs.writeFileSync(file, JSON.stringify(previous, null, 2) + '\n');
-    data.previousRulesSha256 = hash(fs.readFileSync(file));
-  }, /Invalid previous publication source pin/, true);
+test('wrapper verifies resource assignments against the actual current source', () => {
+  rejection(data => { data.publication.textResources.loaderSourceSha256 = '0'.repeat(64); }, /loader source differs/);
+  rejection(data => { data.publication.textResources.resourceAssignments[0].resources[0].key = 'wrong'; },
+    /direct guarded assignments/);
 });
-
-test('changed result evidence must link the old reviewed hash and current migration source', () => {
-  for (const change of [
-    data => { data.resultEvidenceUpdates[0].sha256 = '0'.repeat(64); },
-    data => { data.resultEvidenceUpdates[0].previousSha256 = '0'.repeat(64); },
-    data => { data.resultEvidenceUpdates[0].file = 'gh.java'; },
-    data => { data.resultEvidenceUpdates.push({...data.resultEvidenceUpdates[0]}); },
-  ]) rejection(change, /Invalid reviewed result evidence update/, true);
-});
-
-test('historical result evidence remains verified after new matching additions', () => {
-  rejection(data => { data.resultEvidenceManifest = '../geoblox-v18-results.json'; },
-    /Invalid historical result manifest path/, true);
-  rejection((_data, temporary) => {
-    fs.appendFileSync(path.join(temporary, 'readable/rules/geoblox-v18-results.json'), ' ');
-  }, /Historical result manifest differs from the migration/);
-});
-
-function additionsRejection(change, message, refreshHash = true) {
-  rejection((_migration, temporary) => {
-    const file = path.join(temporary, 'readable/rules/geoblox-v21-matching.json');
-    const additions = JSON.parse(fs.readFileSync(file));
-    change(additions, temporary);
-    fs.writeFileSync(file, JSON.stringify(additions, null, 2) + '\n');
-    if (refreshHash) {
-      const rulesFile = path.join(temporary, 'readable/geoblox-rules.json');
-      const rules = JSON.parse(fs.readFileSync(rulesFile));
-      rules.namingAdditionsSha256 = hash(fs.readFileSync(file));
-      fs.writeFileSync(rulesFile, JSON.stringify(rules, null, 2) + '\n');
-    }
-  }, message);
-}
-
-test('current naming evidence refuses source and probe corruption before generation', () => {
-  additionsRejection(data => { data.review.rulesAdded--; },
-    /Reviewed naming additions differ from the rules/, false);
-  additionsRejection(data => { data.sourceEvidence.find(item => item.file === 'ul.java').sha256 = '0'.repeat(64); },
-    /Reviewed naming source differs: ul.java/);
-  additionsRejection(data => { data.sourceEvidence[0].file = '../ab.java'; },
-    /Reviewed naming source differs/);
-  additionsRejection(data => { data.nativeEvidence[1].sha256 = '0'.repeat(64); },
-    /Reviewed native probe differs: tests\/test-geoblox-text-write.mjs/);
-  additionsRejection(data => { data.nativeEvidence[1].file = '../test-geoblox-text-write.mjs'; },
-    /Reviewed native probe differs/);
-});
-
-test('matching additions require their frozen previous manifest', () => {
-  additionsRejection(data => { data.previousRulesFile = '../geoblox-v20.json'; },
-    /Invalid previous additions manifest path/);
-  additionsRejection((_data, temporary) => {
-    fs.appendFileSync(path.join(temporary, 'readable/rules/geoblox-v20.json'), ' ');
-  }, /Previous naming manifest differs from the additions/);
+test('wrapper refuses a changed compilation dependency or naming tool', () => {
+  rejection(data => { data.publication.stubJarSha256 = '0'.repeat(64); }, /Frozen compilation dependency changed/);
+  rejection((_data, directory) => { fs.appendFileSync(path.join(directory, 'tools/readable-java.mjs'), '\n'); },
+    /Frozen naming tool changed/);
 });

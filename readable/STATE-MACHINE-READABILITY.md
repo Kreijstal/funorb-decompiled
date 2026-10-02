@@ -188,11 +188,11 @@ Fresh `runCfr.js` emits all 303 sources with zero hard failures. The frozen nami
 generator compiles both corpora and checks every binding and override edge,
 deterministic reproduction and exact dictionary-only reversal. Deque and
 gameplay helper probes run against both original and renamed sources.
-[validation.json](validation.json) records the commands and results.
+[validation.json](https://github.com/Kreijstal/funorb-decompiled/blob/29baf97271daba9862060eece24bc6e4cb0b11c0/readable/validation.json) records the commands and results.
 
 All 642 names remain. Pass 8's eight local-ordinal moves and pass 9's unchanged
 identities remain in their frozen manifests. Pass 10's
-[reviewed migration](rules/geoblox-v10-migration.json) moves thirteen
+[reviewed migration](https://github.com/Kreijstal/funorb-decompiled/blob/29baf97271daba9862060eece24bc6e4cb0b11c0/readable/rules/geoblox-v10-migration.json) moves thirteen
 board-reconciliation local ordinals down by 21 after dispatcher-only carriers
 disappear. Each retains its type, original spelling, full JVM method and
 unchanged semantic evidence. All 227 named locals remain unique within their
@@ -226,7 +226,7 @@ All 303 GeoBlox sources were freshly exported and compiled. The only raw-source
 changes remove six unused `caughtException` declarations across `c`, `wh` and
 `vl`; no method newly switches to a dispatcher. All 642 spelling guards and all
 227 named-local identities remain unchanged in the
-[reviewed pass-11 migration](rules/geoblox-v11-migration.json). The binding audit
+[reviewed pass-11 migration](https://github.com/Kreijstal/funorb-decompiled/blob/29baf97271daba9862060eece24bc6e4cb0b11c0/readable/rules/geoblox-v11-migration.json). The binding audit
 now covers 156,445 bindings and 388 override relationships. A clean checkout of
 the pinned decompiler reproduces all source and diagnostic bytes.
 

@@ -4,8 +4,8 @@ This naming pass retains all 841 pass-15 rules and adds 85 guarded declarations:
 two classes, two fields, 21 methods, 50 parameters and ten locals. There are now
 926 rules. The raw Java input, local identities, decompiler, naming tool and
 compilation dependency are unchanged. No generated source body was edited by
-hand. The additions live in [geoblox-v16-border.json](rules/geoblox-v16-border.json);
-the exact previous rules remain in [geoblox-v15.json](rules/geoblox-v15.json).
+hand. The additions live in [geoblox-v16-border.json](https://github.com/Kreijstal/funorb-decompiled/blob/29baf97271daba9862060eece24bc6e4cb0b11c0/readable/rules/geoblox-v16-border.json);
+the exact previous rules remain in [geoblox-v15.json](https://github.com/Kreijstal/funorb-decompiled/blob/29baf97271daba9862060eece24bc6e4cb0b11c0/readable/rules/geoblox-v15.json).
 
 ## Nine-slice sprite construction
 
@@ -102,7 +102,7 @@ and colour seeds. The native bytecode pin is checked before execution. The
 common output SHA-256 remains
 `16c92de1c3230786836344a4848c7046488b9cfa4a48078ca34024fdcbdc7be9`.
 The existing deque, gameplay and text probes also pass. Exact commands and
-scope are recorded in [validation.json](validation.json).
+scope are recorded in [validation.json](https://github.com/Kreijstal/funorb-decompiled/blob/29baf97271daba9862060eece24bc6e4cb0b11c0/readable/validation.json).
 
 | Identity | SHA-256 |
 | --- | --- |

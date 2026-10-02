@@ -35,8 +35,8 @@ zero dispatchers.
 All 21,181 declaration identities and original spellings are unchanged,
 including all 926 reviewed naming rules and 248 named locals. All 388 override
 relationships remain identical. The pass-16 rules remain frozen in
-[geoblox-v16.json](rules/geoblox-v16.json). The reviewed
-[pass-17 migration](rules/geoblox-v17-migration.json) guards the old rules and
+[geoblox-v16.json](https://github.com/Kreijstal/funorb-decompiled/blob/29baf97271daba9862060eece24bc6e4cb0b11c0/readable/rules/geoblox-v16.json). The reviewed
+[pass-17 migration](https://github.com/Kreijstal/funorb-decompiled/blob/29baf97271daba9862060eece24bc6e4cb0b11c0/readable/rules/geoblox-v17-migration.json) guards the old rules and
 input, new source and generator identities, unchanged declarations, the exact
 two changed files and the existing text-resource evidence. No names are added
 or reinterpreted in this pass; no generated Java body is edited by hand.
@@ -105,6 +105,6 @@ assertions also pass.
 The publication rule builder has 27 tests and text-resource evidence has eight.
 Both full source corpora compile, all 154,109 bindings and 388 overrides are
 preserved, and dictionary-only reversal restores all 303 corrected raw files
-exactly. See [validation.json](validation.json) for commands and scope.
+exactly. See [validation.json](https://github.com/Kreijstal/funorb-decompiled/blob/29baf97271daba9862060eece24bc6e4cb0b11c0/readable/validation.json) for commands and scope.
 Unknown names and shared joins remain; this pass does not establish complete
 readability or whole-game runtime equivalence.
