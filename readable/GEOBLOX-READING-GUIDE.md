@@ -829,8 +829,8 @@ its monitor, executes their numeric `taskType`, writes `result`, and publishes
 volatile `status`: 0 pending, 1 success, 2 failure. `next` links its FIFO;
 `input`, `firstIntArgument` and `secondIntArgument` retain their type-specific
 meanings. `startThread(runnable, guard, priority)` queues type 2; the socket
-requests this with guard 0 and priority 3. Other dispatcher bodies still have
-opaque names.
+requests this with guard 0 and priority 3. Dispatcher service requests and
+worker/constructor variables now have source-audited semantic names.
 
 | Socket member | Behavior |
 | --- | --- |
@@ -927,3 +927,35 @@ Across GeoBlox this removes 2,128 else wrappers and 2,213 source lines in 208
 files. Native boundary probes still verify the independent lattice oracle,
 425,042 pixel checks, 18 guard cases and five invalid-raster cases per variant.
 These controlled probes do not establish whole-game equivalence or phone FPS.
+
+## Dispatcher request and worker names
+
+All 24 dispatcher fields now have guarded names. `javaVendor` selects
+`useMicrosoftVmBackend`; `javaVersion`, `osName` and `osNameLowerCase` preserve
+the original property reads. `privilegedServicesEnabled` gates cache/desktop
+services and bootstrap reflection restrictions. Microsoft fullscreen/cursor
+adapters and reflected fullscreen/cursor adapters each retain their own field.
+`networkBlockedUntilMillis` is compared against the backward-clock-corrected
+millisecond clock before network task execution.
+
+| Request API | Original task and arguments |
+| --- | --- |
+| `requestSocket(port, host, guard)` | Type 1; true guard first executes the original invalid display-mode request. |
+| `requestSocketInternal(guard, port, useProxy, host)` | Type 1 or proxy type 22; nonzero guard first nulls cache data. |
+| `requestUrlStream(guard, url)` | Type 4; guard -14 required. |
+| `requestDisplayModes(guard)` | Type 5; guard 34 avoids the original preferences-search side effect. |
+| `requestEnterFullscreen(height, guard, refreshRate, bitDepth, width)` | Type 6; guard -1743550128 required; original width/height and bitDepth/refresh packing remains. |
+| `requestExitFullscreen(frame, guard)` | Type 7; guard 0 required. |
+| `requestDeclaredMethod(methodName, guard, parameterTypes, targetClass)` | Type 8; guard >=-118 clears reflected fullscreen backend before queuing. |
+| `requestDeclaredField(targetClass, guard, fieldName)` | Type 9; nonzero guard clears Microsoft fullscreen backend before queuing. |
+
+`hasFullscreenSupport(guard)` checks enabled services and the chosen non-null
+backend for guard -26098. The worker removes `task` under
+`dispatcherOrTaskMonitor`, then executes `taskType` outside that monitor. Its
+reused `cursorXOrVisibleFlag` names both actual roles. Reflection argument tuples,
+clipboard objects, fullscreen frame, preference file, URL whitelist/index and
+proxy failure now describe their source uses. Success publishes status 1; caught
+Throwable publishes status 2. ThreadDeath rethrows before completion notification.
+The new names preserve handlers and monitor scope; they add no worker-service
+native coverage. All non-generated dispatcher parameters/locals are named;
+other classes and shared joins remain partly opaque.

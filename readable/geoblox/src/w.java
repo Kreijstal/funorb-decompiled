@@ -172,7 +172,7 @@ final class w {
             pk var4 = null;
             pk var5 = null;
             if (null == sd.field_B) {
-                sd.field_B = GameplayEntity.field_D.a(sd.field_x, ol.field_I, false);
+                sd.field_B = GameplayEntity.field_D.requestSocket(sd.field_x, ol.field_I, false);
             }
             if (param1 != 52) {
                 field_d = (ck) null;

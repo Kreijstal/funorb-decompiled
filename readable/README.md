@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 2,559 guarded naming rules: 27 classes, 488 fields,
-283 methods, 745 parameters and 1,016 local declarations. Both 303-file corpora
+The current export has 2,663 guarded naming rules: 27 classes, 501 fields,
+292 methods, 774 parameters and 1,069 local declarations. Both 303-file corpora
 compile, preserving 150,387 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -54,7 +54,32 @@ smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
 
-## Current protected-counter recovery
+## Current dispatcher naming and export refresh
+
+This naming pass adds 104 guarded identities: 13 fields, nine service methods,
+29 parameters and 53 locals. Every previous rule remains unchanged, as do the
+raw source and generator pins. The export applies 28,446 identifier edits and
+preserves all 150,387 bindings and 388 override relationships. Dispatcher fields,
+request APIs and worker/constructor variables now describe their roles; numeric
+task IDs, guards, bit packing, catch boundaries and reused local roles remain.
+Generated sneakyThrow identifiers already describe their role and stay unchanged.
+
+`node readable/reproduce-geoblox.mjs --update` regenerates the existing export.
+It verifies a temporary staged tree before replacing the current output, cleans
+staging afterward, and retains the previous output when validation fails.
+Unmanaged files and symlinks refuse replacement. `--update` targets only the
+current export and cannot be combined with `--check` or another output path.
+Maintain one current rules manifest and one current generated export; use Git
+for history, with no dated rule files or additional maintained JSON reports.
+The existing migration/refusal tests check preservation after bad evidence,
+stale spelling guards and unmanaged entries, plus refresh argument restrictions.
+
+New service names are audited against dispatcher and adapter source. Existing
+native helper/cache/socket/shutdown traces cover their documented scopes; live
+worker service execution, constructor platform effects, networking and desktop
+operations remain unverified.
+
+## Previous protected-counter recovery
 
 A native shutdown fixture exposed a correctness bug in the previous Java export:
 a for-header update was inferred from the null-entry continue while explicit
@@ -74,7 +99,7 @@ the bug; native visitation checks do.
 
 This pass adds 41 guarded names for dispatcher shutdown, cache handles and
 preferences search. It retains every previous spelling/name and corrects one
-evidence note: URL-stream task type is 4; reverse DNS is 3. Current 2,559 rules
+evidence note: URL-stream task type is 4; reverse DNS is 3. Its 2,559 rules
 apply 27,995 identifier edits and preserve all 150,387 bindings.
 
 The generic exception-loop suite passes eight groups, including 600 native
@@ -453,8 +478,9 @@ byte-for-byte. Previous integral-sign and literal-shift cleanup remains, with
 its historical proof recorded in the raw provenance. Current source/decompiler
 identity and naming migrations live in the single manifest. `ruleChanges`
 records naming changes; `sourceChange` is recorded when input identity changes.
-The current structural pass records an explicit source migration and zero
-naming changes. Every prior guarded rule is retained; `ruleChanges` is empty.
+The latest structural pass records its source migration in Git. The current
+naming-only pass retains those source pins and records its 104 additions in
+`ruleChanges`; every prior guarded rule is retained.
 All six native probe sources and their traces are pinned in
 the same manifest; no JSON snapshots are added.
 
@@ -469,14 +495,15 @@ the same manifest; no JSON snapshots are added.
    `sourceChange` and review affected local ordinals and spelling guards.
 3. Update the current source/native evidence and resource assignments in the
    same manifest. Preserve metadata, strings and guards needed by the original
-   program. Run the canonical builder and generate into a fresh directory.
+   program. Run `node readable/build-geoblox-rules.mjs --check`, then
+   `node readable/reproduce-geoblox.mjs --update` to refresh the current output.
 4. Review the diff, run the relevant behavior probes and full binding check,
-   reverse the dictionary, and replace the generated outputs. Keep verification
+   reverse the dictionary, and verify the refreshed generated outputs. Keep verification
    results current in the manifest; use Git for history instead of new snapshots.
 
 | Java source tree | SHA-256 |
 | --- | --- |
 | Raw | `e9497d12a451095457234cd1abee1018e845505bf5901b14c7f0eb36988c6c49` |
-| Readable | `febf42223dd4379b143ba418e5d4ab77a45c1c31fc3f5d952dc271eebe3f2575` |
+| Readable | `d21d4ffcef52bd850d4a4e0933ee3ff96ebded43e530b126f4bf2240869a17fa` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

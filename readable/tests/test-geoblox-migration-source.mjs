@@ -8,7 +8,7 @@ import {captureProcess} from '../tools/lib/capture-process.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const current = JSON.parse(fs.readFileSync(path.join(root, 'geoblox-rules.json')));
-function rejection(change, message) {
+function rejection(change, message, update = false) {
   const temporary = fs.mkdtempSync(path.join(os.tmpdir(), 'geoblox-current-source-'));
   try {
     captureProcess('git', ['clone', '--shared', '--no-checkout', '--quiet', path.resolve(root, '..'), temporary]);
@@ -26,11 +26,28 @@ function rejection(change, message) {
     change(manifest, directory);
     fs.writeFileSync(file, JSON.stringify(manifest, null, 2) + '\n');
     const output = path.join(temporary, 'output');
+    const currentOutput = path.join(directory, 'geoblox');
+    const retained = path.join(currentOutput, 'src', 'Retained.java');
+    if (update) {
+      fs.mkdirSync(path.dirname(retained), {recursive: true});
+      fs.writeFileSync(retained, 'previous reviewed output\n');
+    }
+    const inventory = directory => fs.readdirSync(directory, {withFileTypes: true}).sort((a,b) =>
+      a.name.localeCompare(b.name)).flatMap(item => item.isDirectory()
+        ? inventory(path.join(directory, item.name)).map(([name,bytes]) => [item.name + '/' + name,bytes])
+        : [[item.name,fs.readFileSync(path.join(directory, item.name), 'utf8')]]);
+    const before = update ? inventory(currentOutput) : undefined;
     assert.throws(() => {
-      try { captureProcess(process.execPath, [path.join(directory, 'reproduce-geoblox.mjs'), output]); }
+      try { captureProcess(process.execPath, [path.join(directory, 'reproduce-geoblox.mjs'),
+        ...(update ? ['--update'] : [output])]); }
       catch (error) { throw new Error(error.stderr?.toString() || error.message); }
     }, message);
     assert.equal(fs.existsSync(output), false, 'refusal must not leave a partial export');
+    if (update) {
+      assert.deepEqual(inventory(currentOutput), before, 'rejected refresh must preserve the complete current output');
+      assert.equal(fs.readdirSync(directory).some(name => name.startsWith('.geoblox-refresh-')), false,
+        'failed refresh must clean its staging directory');
+    }
   } finally { fs.rmSync(temporary, {recursive: true, force: true}); }
 }
 
@@ -57,4 +74,27 @@ test('wrapper refuses a changed compilation dependency or naming tool', () => {
   rejection(data => { data.publication.stubJarSha256 = '0'.repeat(64); }, /Frozen compilation dependency changed/);
   rejection((_data, directory) => { fs.appendFileSync(path.join(directory, 'tools/readable-java.mjs'), '\n'); },
     /Frozen naming tool changed/);
+});
+test('current output survives rejected evidence and stale symbol spelling during refresh', () => {
+  rejection(data => { data.publication.sourceEvidence[0].sha256 = '0'.repeat(64); },
+    /Reviewed source differs/, true);
+  rejection(data => {
+    const change = data.publication.ruleChanges.find(item => !item.before && item.after);
+    const rule = data.renames.find(item => item.symbol === change.symbol);
+    rule.originalName = 'incorrectOriginalSpelling';
+    change.after = {...rule};
+  }, /Original name mismatch/, true);
+});
+test('refresh refuses unmanaged files in the current export', () => {
+  rejection((_data, directory) => {
+    fs.mkdirSync(path.join(directory, 'geoblox'), {recursive: true});
+    fs.writeFileSync(path.join(directory, 'geoblox', 'notes.txt'), 'preserve this file\n');
+  }, /Refusing to replace unmanaged export entry: notes.txt/, true);
+});
+test('refresh targets only the current export and cannot be combined with check', () => {
+  for (const args of [['--update', '--check'], ['--update', '/tmp/another-export']])
+    assert.throws(() => {
+      try { captureProcess(process.execPath, [path.join(root, 'reproduce-geoblox.mjs'), ...args]); }
+      catch (error) { throw new Error(error.stderr?.toString() || error.message); }
+    }, /Usage:/);
 });

@@ -509,6 +509,18 @@
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'checking' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
     },
     {
+      "symbol": "F:d.field_a:Ltg;",
+      "originalName": "field_a",
+      "to": "microsoftCursorBackend",
+      "evidence": "Legacy Microsoft VM tg cursor adapter; worker passes cursor position and visibility requests to it."
+    },
+    {
+      "symbol": "F:d.field_b:Ljava/lang/String;",
+      "originalName": "field_b",
+      "to": "osNameLowerCase",
+      "evidence": "Lower-case copy of os.name; URL-launch task accepts Windows only by its win prefix."
+    },
+    {
       "symbol": "F:d.field_c:Z",
       "originalName": "field_c",
       "to": "shutdownRequested",
@@ -519,6 +531,12 @@
       "originalName": "field_d",
       "to": "taskQueueHead",
       "evidence": "Dispatcher worker removes this record under its monitor and advances through next; enqueue sets head for an empty queue."
+    },
+    {
+      "symbol": "F:d.field_e:Ljava/lang/Object;",
+      "originalName": "field_e",
+      "to": "reflectiveFullscreenBackend",
+      "evidence": "Constructed with Class.forName(pd).newInstance; worker reflects listmodes, enter and exit on it."
     },
     {
       "symbol": "F:d.field_f:I",
@@ -533,6 +551,12 @@
       "evidence": "enqueue appends via tail.next and updates this; worker clears it when the last queued record is removed."
     },
     {
+      "symbol": "F:d.field_h:Z",
+      "originalName": "field_h",
+      "to": "privilegedServicesEnabled",
+      "evidence": "Constructor-supplied flag gates disk/cache, DNS and desktop services; also restricts reflection requests targeting bootstrap-loaded classes."
+    },
+    {
       "symbol": "F:d.field_i:Ljava/lang/Thread;",
       "originalName": "field_i",
       "to": "workerThread",
@@ -545,16 +569,46 @@
       "evidence": "Dispatcher constructor opens main_file_cache.dat2 with 314572800-byte limit; shutdown closes it before master/index/seed files. Invalid shutdown guard deliberately clears it before closing."
     },
     {
+      "symbol": "F:d.field_k:Ljava/lang/String;",
+      "originalName": "field_k",
+      "to": "osName",
+      "evidence": "Constructor reads os.name with Unknown on caught failure and derives the lower-case OS string."
+    },
+    {
+      "symbol": "F:d.field_l:Z",
+      "originalName": "field_l",
+      "to": "useMicrosoftVmBackend",
+      "evidence": "Set when java.vendor contains microsoft; selects DirectDraw/User32 adapters instead of reflected pd/tk desktop adapters."
+    },
+    {
+      "symbol": "F:d.field_m:J",
+      "originalName": "field_m",
+      "to": "networkBlockedUntilMillis",
+      "evidence": "Volatile deadline initially zero; socket, proxy, URL-stream and DNS branches refuse work while the backward-clock-corrected millisecond clock oa.a(-12520) is below it."
+    },
+    {
       "symbol": "F:d.field_n:Lpa;",
       "originalName": "field_n",
       "to": "randomSeedFile",
       "evidence": "Dispatcher constructor opens random.dat with a 25-byte limit; shutdown closes this holder last."
     },
     {
+      "symbol": "F:d.field_o:Ljava/lang/String;",
+      "originalName": "field_o",
+      "to": "javaVendor",
+      "evidence": "Constructor defaults to Unknown then reads java.vendor; its lower-case microsoft substring selects the legacy Microsoft VM adapters."
+    },
+    {
       "symbol": "F:d.field_p:Ljava/lang/String;",
       "originalName": "field_p",
       "to": "gameCacheName",
       "evidence": "Constructor captures game-name argument for aj cache lookup and type12 preference filename prefix jagex_<name>_preferences."
+    },
+    {
+      "symbol": "F:d.field_q:Ljava/awt/EventQueue;",
+      "originalName": "field_q",
+      "to": "systemEventQueue",
+      "evidence": "Constructor captures Toolkit.getDefaultToolkit().getSystemEventQueue; caller posts AWT events through this queue."
     },
     {
       "symbol": "F:d.field_r:[Lpa;",
@@ -567,6 +621,30 @@
       "originalName": "field_s",
       "to": "masterCacheIndexFile",
       "evidence": "Dispatcher constructor opens main_file_cache.idx255; shutdown closes it after data and before per-archive indices."
+    },
+    {
+      "symbol": "F:d.field_t:Ljava/lang/String;",
+      "originalName": "field_t",
+      "to": "javaVersion",
+      "evidence": "Constructor defaults to 1.1 then reads System.getProperty(java.version); platform checks consume the resulting version string."
+    },
+    {
+      "symbol": "F:d.field_u:Ljava/lang/Object;",
+      "originalName": "field_u",
+      "to": "reflectiveCursorBackend",
+      "evidence": "Constructed with Class.forName(tk).newInstance; worker reflects movemouse, showcursor and setcustomcursor on it."
+    },
+    {
+      "symbol": "F:d.field_v:Ljava/lang/reflect/Method;",
+      "originalName": "field_v",
+      "to": "setFocusCycleRootMethod",
+      "evidence": "Constructor reflects Container.setFocusCycleRoot(boolean); ch invokes this cached Method for frame focus setup."
+    },
+    {
+      "symbol": "F:d.field_w:Lie;",
+      "originalName": "field_w",
+      "to": "microsoftFullscreenBackend",
+      "evidence": "Legacy Microsoft VM ie DirectDraw adapter; worker uses it for listing display modes and entering/exiting fullscreen."
     },
     {
       "symbol": "F:d.field_x:Ljava/lang/String;",
@@ -3683,6 +3761,120 @@
       "evidence": "Retained entry snapshot of Geoblox.field_C; popup advancement still uses the exact floating comparison, including NaN behavior."
     },
     {
+      "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#0",
+      "originalName": "var5_int",
+      "to": "cacheIndex",
+      "evidence": "Constructor setup source: cache index iteration, guarded Java/OS/home property reads, AWT queue/focus lookup, Microsoft compatibility class and fullscreen/cursor backend creation. Reused ignored exceptions and generated snapshots retain their original writes and catch boundaries; live platform setup is unverified."
+    },
+    {
+      "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#1",
+      "originalName": "exception",
+      "to": "ignoredSetupException",
+      "evidence": "Constructor setup source: cache index iteration, guarded Java/OS/home property reads, AWT queue/focus lookup, Microsoft compatibility class and fullscreen/cursor backend creation. Reused ignored exceptions and generated snapshots retain their original writes and catch boundaries; live platform setup is unverified."
+    },
+    {
+      "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#10",
+      "originalName": "decompiledCaughtParameter2",
+      "to": "osArchitectureFailure",
+      "evidence": "Constructor setup source: cache index iteration, guarded Java/OS/home property reads, AWT queue/focus lookup, Microsoft compatibility class and fullscreen/cursor backend creation. Reused ignored exceptions and generated snapshots retain their original writes and catch boundaries; live platform setup is unverified."
+    },
+    {
+      "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#11",
+      "originalName": "decompiledCaughtParameter3",
+      "to": "osVersionFailure",
+      "evidence": "Constructor setup source: cache index iteration, guarded Java/OS/home property reads, AWT queue/focus lookup, Microsoft compatibility class and fullscreen/cursor backend creation. Reused ignored exceptions and generated snapshots retain their original writes and catch boundaries; live platform setup is unverified."
+    },
+    {
+      "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#12",
+      "originalName": "decompiledCaughtParameter4",
+      "to": "homeDirectoryFailure",
+      "evidence": "Constructor setup source: cache index iteration, guarded Java/OS/home property reads, AWT queue/focus lookup, Microsoft compatibility class and fullscreen/cursor backend creation. Reused ignored exceptions and generated snapshots retain their original writes and catch boundaries; live platform setup is unverified."
+    },
+    {
+      "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#13",
+      "originalName": "decompiledCaughtParameter5",
+      "to": "eventQueueFailure",
+      "evidence": "Constructor setup source: cache index iteration, guarded Java/OS/home property reads, AWT queue/focus lookup, Microsoft compatibility class and fullscreen/cursor backend creation. Reused ignored exceptions and generated snapshots retain their original writes and catch boundaries; live platform setup is unverified."
+    },
+    {
+      "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#14",
+      "originalName": "decompiledCaughtParameter6",
+      "to": "focusTraversalLookupFailure",
+      "evidence": "Constructor setup source: cache index iteration, guarded Java/OS/home property reads, AWT queue/focus lookup, Microsoft compatibility class and fullscreen/cursor backend creation. Reused ignored exceptions and generated snapshots retain their original writes and catch boundaries; live platform setup is unverified."
+    },
+    {
+      "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#15",
+      "originalName": "decompiledCaughtParameter7",
+      "to": "focusCycleRootLookupFailure",
+      "evidence": "Constructor setup source: cache index iteration, guarded Java/OS/home property reads, AWT queue/focus lookup, Microsoft compatibility class and fullscreen/cursor backend creation. Reused ignored exceptions and generated snapshots retain their original writes and catch boundaries; live platform setup is unverified."
+    },
+    {
+      "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#16",
+      "originalName": "decompiledCaughtParameter8",
+      "to": "microsoftCompatibilitySetupFailure",
+      "evidence": "Constructor setup source: cache index iteration, guarded Java/OS/home property reads, AWT queue/focus lookup, Microsoft compatibility class and fullscreen/cursor backend creation. Reused ignored exceptions and generated snapshots retain their original writes and catch boundaries; live platform setup is unverified."
+    },
+    {
+      "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#17",
+      "originalName": "decompiledCaughtParameter9",
+      "to": "fullscreenBackendSetupFailure",
+      "evidence": "Constructor setup source: cache index iteration, guarded Java/OS/home property reads, AWT queue/focus lookup, Microsoft compatibility class and fullscreen/cursor backend creation. Reused ignored exceptions and generated snapshots retain their original writes and catch boundaries; live platform setup is unverified."
+    },
+    {
+      "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#18",
+      "originalName": "decompiledCaughtParameter10",
+      "to": "cursorBackendSetupFailure",
+      "evidence": "Constructor setup source: cache index iteration, guarded Java/OS/home property reads, AWT queue/focus lookup, Microsoft compatibility class and fullscreen/cursor backend creation. Reused ignored exceptions and generated snapshots retain their original writes and catch boundaries; live platform setup is unverified."
+    },
+    {
+      "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#2",
+      "originalName": "throwable",
+      "to": "ignoredSetupThrowable",
+      "evidence": "Constructor setup source: cache index iteration, guarded Java/OS/home property reads, AWT queue/focus lookup, Microsoft compatibility class and fullscreen/cursor backend creation. Reused ignored exceptions and generated snapshots retain their original writes and catch boundaries; live platform setup is unverified."
+    },
+    {
+      "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#3",
+      "originalName": "stackIn_2_0",
+      "to": "unusedDispatcherSnapshot",
+      "evidence": "Constructor setup source: cache index iteration, guarded Java/OS/home property reads, AWT queue/focus lookup, Microsoft compatibility class and fullscreen/cursor backend creation. Reused ignored exceptions and generated snapshots retain their original writes and catch boundaries; live platform setup is unverified."
+    },
+    {
+      "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#4",
+      "originalName": "stackIn_3_0",
+      "to": "unusedServiceOwnerSnapshot",
+      "evidence": "Constructor setup source: cache index iteration, guarded Java/OS/home property reads, AWT queue/focus lookup, Microsoft compatibility class and fullscreen/cursor backend creation. Reused ignored exceptions and generated snapshots retain their original writes and catch boundaries; live platform setup is unverified."
+    },
+    {
+      "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#5",
+      "originalName": "stackIn_3_1",
+      "to": "privilegedServicesFlag",
+      "evidence": "Constructor setup source: cache index iteration, guarded Java/OS/home property reads, AWT queue/focus lookup, Microsoft compatibility class and fullscreen/cursor backend creation. Reused ignored exceptions and generated snapshots retain their original writes and catch boundaries; live platform setup is unverified."
+    },
+    {
+      "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#6",
+      "originalName": "decompiledCaughtException",
+      "to": "caughtSetupThrowable",
+      "evidence": "Constructor setup source: cache index iteration, guarded Java/OS/home property reads, AWT queue/focus lookup, Microsoft compatibility class and fullscreen/cursor backend creation. Reused ignored exceptions and generated snapshots retain their original writes and catch boundaries; live platform setup is unverified."
+    },
+    {
+      "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#7",
+      "originalName": "var6",
+      "to": "createdMicrosoftFullscreenBackend",
+      "evidence": "Constructor setup source: cache index iteration, guarded Java/OS/home property reads, AWT queue/focus lookup, Microsoft compatibility class and fullscreen/cursor backend creation. Reused ignored exceptions and generated snapshots retain their original writes and catch boundaries; live platform setup is unverified."
+    },
+    {
+      "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#8",
+      "originalName": "decompiledCaughtParameter0",
+      "to": "javaPropertiesFailure",
+      "evidence": "Constructor setup source: cache index iteration, guarded Java/OS/home property reads, AWT queue/focus lookup, Microsoft compatibility class and fullscreen/cursor backend creation. Reused ignored exceptions and generated snapshots retain their original writes and catch boundaries; live platform setup is unverified."
+    },
+    {
+      "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#9",
+      "originalName": "decompiledCaughtParameter1",
+      "to": "osNameFailure",
+      "evidence": "Constructor setup source: cache index iteration, guarded Java/OS/home property reads, AWT queue/focus lookup, Microsoft compatibility class and fullscreen/cursor backend creation. Reused ignored exceptions and generated snapshots retain their original writes and catch boundaries; live platform setup is unverified."
+    },
+    {
       "symbol": "L:d.a(B)V#0",
       "originalName": "discarded$0",
       "to": "ignoredGuardSocketTask",
@@ -3845,6 +4037,12 @@
       "evidence": "Resolved current declaration in a(BILjava/lang/String;Ljava/lang/String;)Lpa;; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
     },
     {
+      "symbol": "L:d.a(I)Lcb;#0",
+      "originalName": "var3",
+      "to": "unusedPreferencesSuffix",
+      "evidence": "Unused null String declared on the invalid display-mode guard path before the existing preferences-search call; no new side effect or dead-code removal."
+    },
+    {
       "symbol": "L:d.a(ILjava/lang/Object;III)Lcb;#0",
       "originalName": "var6",
       "to": "task",
@@ -3861,6 +4059,204 @@
       "originalName": "var7",
       "to": "queueMonitor",
       "evidence": "enqueueTask allocates task, copies input/arguments and synchronizes on this via queueMonitor; unused generated Throwable carrier remains as-is except name."
+    },
+    {
+      "symbol": "L:d.run()V#0",
+      "originalName": "stackIn_76_0",
+      "to": "cursorVisibleInt",
+      "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+    },
+    {
+      "symbol": "L:d.run()V#1",
+      "originalName": "decompiledCaughtException",
+      "to": "caughtTaskThrowable",
+      "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+    },
+    {
+      "symbol": "L:d.run()V#10",
+      "originalName": "var3_ref3",
+      "to": "proxyConnectionFailure",
+      "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+    },
+    {
+      "symbol": "L:d.run()V#11",
+      "originalName": "var4_int",
+      "to": "cursorY",
+      "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+    },
+    {
+      "symbol": "L:d.run()V#12",
+      "originalName": "var4",
+      "to": "allowedUrlCharacters",
+      "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+    },
+    {
+      "symbol": "L:d.run()V#13",
+      "originalName": "var5",
+      "to": "urlCharacterIndex",
+      "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+    },
+    {
+      "symbol": "L:d.run()V#14",
+      "originalName": "var7",
+      "to": "clipboardContents",
+      "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+    },
+    {
+      "symbol": "L:d.run()V#15",
+      "originalName": "var8",
+      "to": "urlToLaunch",
+      "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+    },
+    {
+      "symbol": "L:d.run()V#16",
+      "originalName": "var9",
+      "to": "task",
+      "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+    },
+    {
+      "symbol": "L:d.run()V#17",
+      "originalName": "var10",
+      "to": "startedThread",
+      "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+    },
+    {
+      "symbol": "L:d.run()V#18",
+      "originalName": "var11",
+      "to": "customCursorArguments",
+      "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+    },
+    {
+      "symbol": "L:d.run()V#19",
+      "originalName": "var12",
+      "to": "cursorComponent",
+      "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+    },
+    {
+      "symbol": "L:d.run()V#2",
+      "originalName": "var2",
+      "to": "dispatcherOrTaskMonitor",
+      "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage. This reused Object locks both the dispatcher and the completed task."
+    },
+    {
+      "symbol": "L:d.run()V#20",
+      "originalName": "var13",
+      "to": "fullscreenFrame",
+      "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+    },
+    {
+      "symbol": "L:d.run()V#21",
+      "originalName": "var14",
+      "to": "reverseLookupAddress",
+      "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+    },
+    {
+      "symbol": "L:d.run()V#22",
+      "originalName": "var15",
+      "to": "clipboardForWrite",
+      "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+    },
+    {
+      "symbol": "L:d.run()V#23",
+      "originalName": "var16",
+      "to": "clipboardForRead",
+      "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+    },
+    {
+      "symbol": "L:d.run()V#24",
+      "originalName": "var17",
+      "to": "fieldLookupArguments",
+      "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+    },
+    {
+      "symbol": "L:d.run()V#25",
+      "originalName": "var18",
+      "to": "methodLookupArguments",
+      "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+    },
+    {
+      "symbol": "L:d.run()V#26",
+      "originalName": "decompiledCaughtParameter0",
+      "to": "waitInterruption",
+      "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+    },
+    {
+      "symbol": "L:d.run()V#27",
+      "originalName": "decompiledCaughtParameter1",
+      "to": "caughtUrlLaunchFailure",
+      "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+    },
+    {
+      "symbol": "L:d.run()V#28",
+      "originalName": "decompiledCaughtParameter2",
+      "to": "caughtProxyConnectionFailure",
+      "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+    },
+    {
+      "symbol": "L:d.run()V#29",
+      "originalName": "decompiledCaughtParameter3",
+      "to": "caughtThreadDeath",
+      "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+    },
+    {
+      "symbol": "L:d.run()V#3",
+      "originalName": "var2_int",
+      "to": "taskType",
+      "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+    },
+    {
+      "symbol": "L:d.run()V#30",
+      "originalName": "decompiledCaughtParameter4",
+      "to": "caughtTaskFailure",
+      "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+    },
+    {
+      "symbol": "L:d.run()V#31",
+      "originalName": "decompiledUncheckedException",
+      "to": "uncheckedWorkerFailure",
+      "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+    },
+    {
+      "symbol": "L:d.run()V#32",
+      "originalName": "decompiledCheckedException",
+      "to": "checkedWorkerFailure",
+      "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+    },
+    {
+      "symbol": "L:d.run()V#4",
+      "originalName": "var2_ref",
+      "to": "fatalThreadDeath",
+      "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+    },
+    {
+      "symbol": "L:d.run()V#5",
+      "originalName": "var2_ref2",
+      "to": "ignoredTaskFailure",
+      "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+    },
+    {
+      "symbol": "L:d.run()V#6",
+      "originalName": "var3",
+      "to": "ignoredWaitInterruption",
+      "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+    },
+    {
+      "symbol": "L:d.run()V#7",
+      "originalName": "var3_ref",
+      "to": "openedPreferencesFile",
+      "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+    },
+    {
+      "symbol": "L:d.run()V#8",
+      "originalName": "var3_int",
+      "to": "cursorXOrVisibleFlag",
+      "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage. This reused integer stores cursor X for task14 and a 0/1 visibility flag for task15."
+    },
+    {
+      "symbol": "L:d.run()V#9",
+      "originalName": "var3_ref2",
+      "to": "urlLaunchFailure",
+      "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
     },
     {
       "symbol": "L:dm.<init>([BLjava/awt/Component;)V#0",
@@ -9539,16 +9935,70 @@
       "evidence": "Builds jagex_<game>_preferences<suffix>[_rc|_wip].dat according to variant; searches fixed directories, skips absent directories, catches each file-open exception and advances exactly once, returning first pa or null. Guard division and all original path/exception effects remain; actual directory search unverified."
     },
     {
+      "symbol": "M:d.a(I)Lcb;",
+      "originalName": "a",
+      "to": "requestDisplayModes",
+      "evidence": "Queues display-mode task type 5. Guard 34 avoids the original preferences-search side effect; other guards still execute that side effect."
+    },
+    {
+      "symbol": "M:d.a(IIIII)Lcb;",
+      "originalName": "a",
+      "to": "requestEnterFullscreen",
+      "evidence": "Guard -1743550128 queues task6 with width/height and bitDepth/refreshRate packed into its two integer arguments. Worker unpacks them into pd.enter(Frame,width,height,bitDepth,refreshRate); addition, shifts and truncation remain unchanged."
+    },
+    {
+      "symbol": "M:d.a(IIZLjava/lang/String;)Lcb;",
+      "originalName": "a",
+      "to": "requestSocketInternal",
+      "evidence": "Queues host/port as ordinary socket type 1 or proxy socket type 22; guard !=0 first clears the cache data handle. Worker type22 uses mk proxy connection and retains bd message on failure."
+    },
+    {
       "symbol": "M:d.a(ILjava/lang/Object;III)Lcb;",
       "originalName": "a",
       "to": "enqueueTask",
       "evidence": "Allocates task, stores input and integer arguments, then for guard 1 stores taskType, appends under dispatcher monitor and notifies; other guards return null."
     },
     {
+      "symbol": "M:d.a(ILjava/lang/String;Z)Lcb;",
+      "originalName": "a",
+      "to": "requestSocket",
+      "evidence": "Queues an ordinary socket request through requestSocketInternal with guard 0 and proxy false; true guard first invokes requestDisplayModes with its original invalid guard."
+    },
+    {
+      "symbol": "M:d.a(ILjava/net/URL;)Lcb;",
+      "originalName": "a",
+      "to": "requestUrlStream",
+      "evidence": "Guard -14 queues URL input as task4; worker opens it as a DataInputStream after the network deadline check. Other guards return null."
+    },
+    {
+      "symbol": "M:d.a(Ljava/awt/Frame;I)Lcb;",
+      "originalName": "a",
+      "to": "requestExitFullscreen",
+      "evidence": "Guard 0 queues fullscreen-exit task type 7 carrying the frame; other guards return null."
+    },
+    {
+      "symbol": "M:d.a(Ljava/lang/Class;ILjava/lang/String;)Lcb;",
+      "originalName": "a",
+      "to": "requestDeclaredField",
+      "evidence": "Queues type9 tuple Class and field name for getDeclaredField; guard !=0 first clears Microsoft fullscreen backend without suppressing the request."
+    },
+    {
       "symbol": "M:d.a(Ljava/lang/Runnable;II)Lcb;",
       "originalName": "a",
       "to": "startThread",
       "evidence": "Valid guard 0 queues task type 2 with Runnable input and requested priority; worker makes daemon Thread(input), starts it, sets priority and publishes it as result."
+    },
+    {
+      "symbol": "M:d.a(Ljava/lang/String;I[Ljava/lang/Class;Ljava/lang/Class;)Lcb;",
+      "originalName": "a",
+      "to": "requestDeclaredMethod",
+      "evidence": "Queues type8 tuple Class, method name and parameter types for getDeclaredMethod; guard >=-118 first clears reflected fullscreen backend."
+    },
+    {
+      "symbol": "M:d.b(I)Z",
+      "originalName": "b",
+      "to": "hasFullscreenSupport",
+      "evidence": "Guard -26098 and privileged services are required; tests the selected Microsoft or reflected fullscreen backend for null."
     },
     {
       "symbol": "M:dc.a(I)V",
@@ -11255,6 +11705,30 @@
       "evidence": "Normal callers pass 27. Values below 8 retain cf.c((byte)121) before popup advancement; the guard is not removed."
     },
     {
+      "symbol": "P:d.<init>(ILjava/lang/String;IZ)V#0",
+      "originalName": "param0",
+      "to": "initialCacheVariant",
+      "evidence": "Constructor copies cache variant/game name into static cache identity, uses the count for index-file allocation, and enables gated services from the supplied boolean. Backend selection follows Java vendor; worker startup order is unchanged."
+    },
+    {
+      "symbol": "P:d.<init>(ILjava/lang/String;IZ)V#1",
+      "originalName": "param1",
+      "to": "gameName",
+      "evidence": "Constructor copies cache variant/game name into static cache identity, uses the count for index-file allocation, and enables gated services from the supplied boolean. Backend selection follows Java vendor; worker startup order is unchanged."
+    },
+    {
+      "symbol": "P:d.<init>(ILjava/lang/String;IZ)V#2",
+      "originalName": "param2",
+      "to": "cacheIndexCount",
+      "evidence": "Constructor copies cache variant/game name into static cache identity, uses the count for index-file allocation, and enables gated services from the supplied boolean. Backend selection follows Java vendor; worker startup order is unchanged."
+    },
+    {
+      "symbol": "P:d.<init>(ILjava/lang/String;IZ)V#3",
+      "originalName": "param3",
+      "to": "privilegedServicesEnabled",
+      "evidence": "Constructor copies cache variant/game name into static cache identity, uses the count for index-file allocation, and enables gated services from the supplied boolean. Backend selection follows Java vendor; worker startup order is unchanged."
+    },
+    {
       "symbol": "P:d.a(B)V#0",
       "originalName": "param0",
       "to": "guard",
@@ -11283,6 +11757,66 @@
       "originalName": "param3",
       "to": "preferenceSuffix",
       "evidence": "Exact shutdown guard13 or preferences filename/variant/guard-arithmetic parameter role in current dispatcher source; numeric values unchanged."
+    },
+    {
+      "symbol": "P:d.a(I)Lcb;#0",
+      "originalName": "param0",
+      "to": "guard",
+      "evidence": "Queues display-mode task type 5. Guard 34 avoids the original preferences-search side effect; other guards still execute that side effect."
+    },
+    {
+      "symbol": "P:d.a(IIIII)Lcb;#0",
+      "originalName": "param0",
+      "to": "height",
+      "evidence": "Guard -1743550128 queues task6 with width/height and bitDepth/refreshRate packed into its two integer arguments. Worker unpacks them into pd.enter(Frame,width,height,bitDepth,refreshRate); addition, shifts and truncation remain unchanged."
+    },
+    {
+      "symbol": "P:d.a(IIIII)Lcb;#1",
+      "originalName": "param1",
+      "to": "guard",
+      "evidence": "Guard -1743550128 queues task6 with width/height and bitDepth/refreshRate packed into its two integer arguments. Worker unpacks them into pd.enter(Frame,width,height,bitDepth,refreshRate); addition, shifts and truncation remain unchanged."
+    },
+    {
+      "symbol": "P:d.a(IIIII)Lcb;#2",
+      "originalName": "param2",
+      "to": "refreshRate",
+      "evidence": "Guard -1743550128 queues task6 with width/height and bitDepth/refreshRate packed into its two integer arguments. Worker unpacks them into pd.enter(Frame,width,height,bitDepth,refreshRate); addition, shifts and truncation remain unchanged."
+    },
+    {
+      "symbol": "P:d.a(IIIII)Lcb;#3",
+      "originalName": "param3",
+      "to": "bitDepth",
+      "evidence": "Guard -1743550128 queues task6 with width/height and bitDepth/refreshRate packed into its two integer arguments. Worker unpacks them into pd.enter(Frame,width,height,bitDepth,refreshRate); addition, shifts and truncation remain unchanged."
+    },
+    {
+      "symbol": "P:d.a(IIIII)Lcb;#4",
+      "originalName": "param4",
+      "to": "width",
+      "evidence": "Guard -1743550128 queues task6 with width/height and bitDepth/refreshRate packed into its two integer arguments. Worker unpacks them into pd.enter(Frame,width,height,bitDepth,refreshRate); addition, shifts and truncation remain unchanged."
+    },
+    {
+      "symbol": "P:d.a(IIZLjava/lang/String;)Lcb;#0",
+      "originalName": "param0",
+      "to": "guard",
+      "evidence": "Queues host/port as ordinary socket type 1 or proxy socket type 22; guard !=0 first clears the cache data handle. Worker type22 uses mk proxy connection and retains bd message on failure."
+    },
+    {
+      "symbol": "P:d.a(IIZLjava/lang/String;)Lcb;#1",
+      "originalName": "param1",
+      "to": "port",
+      "evidence": "Queues host/port as ordinary socket type 1 or proxy socket type 22; guard !=0 first clears the cache data handle. Worker type22 uses mk proxy connection and retains bd message on failure."
+    },
+    {
+      "symbol": "P:d.a(IIZLjava/lang/String;)Lcb;#2",
+      "originalName": "param2",
+      "to": "useProxy",
+      "evidence": "Queues host/port as ordinary socket type 1 or proxy socket type 22; guard !=0 first clears the cache data handle. Worker type22 uses mk proxy connection and retains bd message on failure."
+    },
+    {
+      "symbol": "P:d.a(IIZLjava/lang/String;)Lcb;#3",
+      "originalName": "param3",
+      "to": "host",
+      "evidence": "Queues host/port as ordinary socket type 1 or proxy socket type 22; guard !=0 first clears the cache data handle. Worker type22 uses mk proxy connection and retains bd message on failure."
     },
     {
       "symbol": "P:d.a(ILjava/lang/Object;III)Lcb;#0",
@@ -11315,6 +11849,66 @@
       "evidence": "Dispatcher queue/thread-start parameter role proven by stored task fields and type-2 worker branch; original numeric guards and dispatch IDs remain."
     },
     {
+      "symbol": "P:d.a(ILjava/lang/String;Z)Lcb;#0",
+      "originalName": "param0",
+      "to": "port",
+      "evidence": "Queues an ordinary socket request through requestSocketInternal with guard 0 and proxy false; true guard first invokes requestDisplayModes with its original invalid guard."
+    },
+    {
+      "symbol": "P:d.a(ILjava/lang/String;Z)Lcb;#1",
+      "originalName": "param1",
+      "to": "host",
+      "evidence": "Queues an ordinary socket request through requestSocketInternal with guard 0 and proxy false; true guard first invokes requestDisplayModes with its original invalid guard."
+    },
+    {
+      "symbol": "P:d.a(ILjava/lang/String;Z)Lcb;#2",
+      "originalName": "param2",
+      "to": "guard",
+      "evidence": "Queues an ordinary socket request through requestSocketInternal with guard 0 and proxy false; true guard first invokes requestDisplayModes with its original invalid guard."
+    },
+    {
+      "symbol": "P:d.a(ILjava/net/URL;)Lcb;#0",
+      "originalName": "param0",
+      "to": "guard",
+      "evidence": "Guard -14 queues URL input as task4; worker opens it as a DataInputStream after the network deadline check. Other guards return null."
+    },
+    {
+      "symbol": "P:d.a(ILjava/net/URL;)Lcb;#1",
+      "originalName": "param1",
+      "to": "url",
+      "evidence": "Guard -14 queues URL input as task4; worker opens it as a DataInputStream after the network deadline check. Other guards return null."
+    },
+    {
+      "symbol": "P:d.a(Ljava/awt/Frame;I)Lcb;#0",
+      "originalName": "param0",
+      "to": "frame",
+      "evidence": "Guard 0 queues fullscreen-exit task type 7 carrying the frame; other guards return null."
+    },
+    {
+      "symbol": "P:d.a(Ljava/awt/Frame;I)Lcb;#1",
+      "originalName": "param1",
+      "to": "guard",
+      "evidence": "Guard 0 queues fullscreen-exit task type 7 carrying the frame; other guards return null."
+    },
+    {
+      "symbol": "P:d.a(Ljava/lang/Class;ILjava/lang/String;)Lcb;#0",
+      "originalName": "param0",
+      "to": "targetClass",
+      "evidence": "Queues type9 tuple Class and field name for getDeclaredField; guard !=0 first clears Microsoft fullscreen backend without suppressing the request."
+    },
+    {
+      "symbol": "P:d.a(Ljava/lang/Class;ILjava/lang/String;)Lcb;#1",
+      "originalName": "param1",
+      "to": "guard",
+      "evidence": "Queues type9 tuple Class and field name for getDeclaredField; guard !=0 first clears Microsoft fullscreen backend without suppressing the request."
+    },
+    {
+      "symbol": "P:d.a(Ljava/lang/Class;ILjava/lang/String;)Lcb;#2",
+      "originalName": "param2",
+      "to": "fieldName",
+      "evidence": "Queues type9 tuple Class and field name for getDeclaredField; guard !=0 first clears Microsoft fullscreen backend without suppressing the request."
+    },
+    {
       "symbol": "P:d.a(Ljava/lang/Runnable;II)Lcb;#0",
       "originalName": "param0",
       "to": "runnable",
@@ -11331,6 +11925,36 @@
       "originalName": "param2",
       "to": "priority",
       "evidence": "Dispatcher queue/thread-start parameter role proven by stored task fields and type-2 worker branch; original numeric guards and dispatch IDs remain."
+    },
+    {
+      "symbol": "P:d.a(Ljava/lang/String;I[Ljava/lang/Class;Ljava/lang/Class;)Lcb;#0",
+      "originalName": "param0",
+      "to": "methodName",
+      "evidence": "Queues type8 tuple Class, method name and parameter types for getDeclaredMethod; guard >=-118 first clears reflected fullscreen backend."
+    },
+    {
+      "symbol": "P:d.a(Ljava/lang/String;I[Ljava/lang/Class;Ljava/lang/Class;)Lcb;#1",
+      "originalName": "param1",
+      "to": "guard",
+      "evidence": "Queues type8 tuple Class, method name and parameter types for getDeclaredMethod; guard >=-118 first clears reflected fullscreen backend."
+    },
+    {
+      "symbol": "P:d.a(Ljava/lang/String;I[Ljava/lang/Class;Ljava/lang/Class;)Lcb;#2",
+      "originalName": "param2",
+      "to": "parameterTypes",
+      "evidence": "Queues type8 tuple Class, method name and parameter types for getDeclaredMethod; guard >=-118 first clears reflected fullscreen backend."
+    },
+    {
+      "symbol": "P:d.a(Ljava/lang/String;I[Ljava/lang/Class;Ljava/lang/Class;)Lcb;#3",
+      "originalName": "param3",
+      "to": "targetClass",
+      "evidence": "Queues type8 tuple Class, method name and parameter types for getDeclaredMethod; guard >=-118 first clears reflected fullscreen backend."
+    },
+    {
+      "symbol": "P:d.b(I)Z#0",
+      "originalName": "param0",
+      "to": "guard",
+      "evidence": "Guard -26098 and privileged services are required; tests the selected Microsoft or reflected fullscreen backend for null."
     },
     {
       "symbol": "P:dm.<init>(II)V#0",
@@ -15366,7 +15990,7 @@
     }
   ],
   "revision": 4,
-  "version": 45,
+  "version": 46,
   "generators": {
     "dekoblokoWork": {
       "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
@@ -15386,434 +16010,1049 @@
   "publication": {
     "format": 1,
     "previousRules": {
-      "commit": "d8c22177ddabfdec736d7912f5e0e7b02967f497",
+      "commit": "85556c6357f7fe2a7c87b3439deaf5a110fd29d0",
       "path": "readable/geoblox-rules.json",
-      "sha256": "63dd52c3627a6d9516e2ca3585d57d4ded083b71c65ff6434d40629c1bb30ba3"
+      "sha256": "01f91679bf5add240e3fa12b0d8ef2e6e309a62fe4b862b1c1cb775c2b6a07cc"
     },
     "ruleChanges": [
       {
-        "symbol": "F:cb.field_d:I",
-        "before": {
-          "symbol": "F:cb.field_d:I",
-          "originalName": "field_d",
-          "to": "taskType",
-          "evidence": "enqueuePlatformTask stores the dispatch type; worker branches on it, including 1 socket, 2 thread and 3 URL stream. Numeric IDs remain unchanged."
-        },
+        "symbol": "F:d.field_a:Ltg;",
+        "before": null,
         "after": {
-          "symbol": "F:cb.field_d:I",
-          "originalName": "field_d",
-          "to": "taskType",
-          "evidence": "enqueuePlatformTask stores the dispatch type; worker branches on it, including 1 socket, 2 thread and 4 URL stream. Numeric IDs remain unchanged."
+          "symbol": "F:d.field_a:Ltg;",
+          "originalName": "field_a",
+          "to": "microsoftCursorBackend",
+          "evidence": "Legacy Microsoft VM tg cursor adapter; worker passes cursor position and visibility requests to it."
         }
       },
       {
-        "symbol": "F:d.field_f:I",
+        "symbol": "F:d.field_b:Ljava/lang/String;",
         "before": null,
         "after": {
-          "symbol": "F:d.field_f:I",
-          "originalName": "field_f",
-          "to": "cacheVariant",
-          "evidence": "Constructor captures cache variant integer passed to aj; preferences filename uses _rc for33 and _wip for34, default otherwise."
+          "symbol": "F:d.field_b:Ljava/lang/String;",
+          "originalName": "field_b",
+          "to": "osNameLowerCase",
+          "evidence": "Lower-case copy of os.name; URL-launch task accepts Windows only by its win prefix."
         }
       },
       {
-        "symbol": "F:d.field_j:Lpa;",
+        "symbol": "F:d.field_e:Ljava/lang/Object;",
         "before": null,
         "after": {
-          "symbol": "F:d.field_j:Lpa;",
-          "originalName": "field_j",
-          "to": "cacheDataFile",
-          "evidence": "Dispatcher constructor opens main_file_cache.dat2 with 314572800-byte limit; shutdown closes it before master/index/seed files. Invalid shutdown guard deliberately clears it before closing."
+          "symbol": "F:d.field_e:Ljava/lang/Object;",
+          "originalName": "field_e",
+          "to": "reflectiveFullscreenBackend",
+          "evidence": "Constructed with Class.forName(pd).newInstance; worker reflects listmodes, enter and exit on it."
         }
       },
       {
-        "symbol": "F:d.field_n:Lpa;",
+        "symbol": "F:d.field_h:Z",
         "before": null,
         "after": {
-          "symbol": "F:d.field_n:Lpa;",
-          "originalName": "field_n",
-          "to": "randomSeedFile",
-          "evidence": "Dispatcher constructor opens random.dat with a 25-byte limit; shutdown closes this holder last."
+          "symbol": "F:d.field_h:Z",
+          "originalName": "field_h",
+          "to": "privilegedServicesEnabled",
+          "evidence": "Constructor-supplied flag gates disk/cache, DNS and desktop services; also restricts reflection requests targeting bootstrap-loaded classes."
         }
       },
       {
-        "symbol": "F:d.field_p:Ljava/lang/String;",
+        "symbol": "F:d.field_k:Ljava/lang/String;",
         "before": null,
         "after": {
-          "symbol": "F:d.field_p:Ljava/lang/String;",
-          "originalName": "field_p",
-          "to": "gameCacheName",
-          "evidence": "Constructor captures game-name argument for aj cache lookup and type12 preference filename prefix jagex_<name>_preferences."
+          "symbol": "F:d.field_k:Ljava/lang/String;",
+          "originalName": "field_k",
+          "to": "osName",
+          "evidence": "Constructor reads os.name with Unknown on caught failure and derives the lower-case OS string."
         }
       },
       {
-        "symbol": "F:d.field_r:[Lpa;",
+        "symbol": "F:d.field_l:Z",
         "before": null,
         "after": {
-          "symbol": "F:d.field_r:[Lpa;",
-          "originalName": "field_r",
-          "to": "cacheIndexFiles",
-          "evidence": "Dispatcher constructor opens main_file_cache.idxN into this array; shutdown visits all non-null entries and continues after caught IOException. Native96-case fixture exposes prior doubled for-update bug."
+          "symbol": "F:d.field_l:Z",
+          "originalName": "field_l",
+          "to": "useMicrosoftVmBackend",
+          "evidence": "Set when java.vendor contains microsoft; selects DirectDraw/User32 adapters instead of reflected pd/tk desktop adapters."
         }
       },
       {
-        "symbol": "F:d.field_s:Lpa;",
+        "symbol": "F:d.field_m:J",
         "before": null,
         "after": {
-          "symbol": "F:d.field_s:Lpa;",
-          "originalName": "field_s",
-          "to": "masterCacheIndexFile",
-          "evidence": "Dispatcher constructor opens main_file_cache.idx255; shutdown closes it after data and before per-archive indices."
+          "symbol": "F:d.field_m:J",
+          "originalName": "field_m",
+          "to": "networkBlockedUntilMillis",
+          "evidence": "Volatile deadline initially zero; socket, proxy, URL-stream and DNS branches refuse work while the backward-clock-corrected millisecond clock oa.a(-12520) is below it."
         }
       },
       {
-        "symbol": "F:d.field_x:Ljava/lang/String;",
+        "symbol": "F:d.field_o:Ljava/lang/String;",
         "before": null,
         "after": {
-          "symbol": "F:d.field_x:Ljava/lang/String;",
-          "originalName": "field_x",
-          "to": "userHomeDirectory",
-          "evidence": "Constructor captures user.home with trailing slash or ~/ fallback; preference search includes this path among its directories."
+          "symbol": "F:d.field_o:Ljava/lang/String;",
+          "originalName": "field_o",
+          "to": "javaVendor",
+          "evidence": "Constructor defaults to Unknown then reads java.vendor; its lower-case microsoft substring selects the legacy Microsoft VM adapters."
         }
       },
       {
-        "symbol": "L:d.a(B)V#0",
+        "symbol": "F:d.field_q:Ljava/awt/EventQueue;",
         "before": null,
         "after": {
-          "symbol": "L:d.a(B)V#0",
-          "originalName": "discarded$0",
-          "to": "ignoredGuardSocketTask",
-          "evidence": "Resolved current declaration in a(B)V; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+          "symbol": "F:d.field_q:Ljava/awt/EventQueue;",
+          "originalName": "field_q",
+          "to": "systemEventQueue",
+          "evidence": "Constructor captures Toolkit.getDefaultToolkit().getSystemEventQueue; caller posts AWT events through this queue."
         }
       },
       {
-        "symbol": "L:d.a(B)V#1",
+        "symbol": "F:d.field_t:Ljava/lang/String;",
         "before": null,
         "after": {
-          "symbol": "L:d.a(B)V#1",
-          "originalName": "decompiledCaughtException",
-          "to": "caughtShutdownThrowable",
-          "evidence": "Resolved current declaration in a(B)V; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+          "symbol": "F:d.field_t:Ljava/lang/String;",
+          "originalName": "field_t",
+          "to": "javaVersion",
+          "evidence": "Constructor defaults to 1.1 then reads System.getProperty(java.version); platform checks consume the resulting version string."
         }
       },
       {
-        "symbol": "L:d.a(B)V#10",
+        "symbol": "F:d.field_u:Ljava/lang/Object;",
         "before": null,
         "after": {
-          "symbol": "L:d.a(B)V#10",
-          "originalName": "decompiledCaughtParameter2",
-          "to": "masterIndexCloseFailure",
-          "evidence": "Resolved current declaration in a(B)V; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+          "symbol": "F:d.field_u:Ljava/lang/Object;",
+          "originalName": "field_u",
+          "to": "reflectiveCursorBackend",
+          "evidence": "Constructed with Class.forName(tk).newInstance; worker reflects movemouse, showcursor and setcustomcursor on it."
         }
       },
       {
-        "symbol": "L:d.a(B)V#11",
+        "symbol": "F:d.field_v:Ljava/lang/reflect/Method;",
         "before": null,
         "after": {
-          "symbol": "L:d.a(B)V#11",
-          "originalName": "decompiledCaughtParameter3",
-          "to": "indexCloseFailure",
-          "evidence": "Resolved current declaration in a(B)V; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+          "symbol": "F:d.field_v:Ljava/lang/reflect/Method;",
+          "originalName": "field_v",
+          "to": "setFocusCycleRootMethod",
+          "evidence": "Constructor reflects Container.setFocusCycleRoot(boolean); ch invokes this cached Method for frame focus setup."
         }
       },
       {
-        "symbol": "L:d.a(B)V#12",
+        "symbol": "F:d.field_w:Lie;",
         "before": null,
         "after": {
-          "symbol": "L:d.a(B)V#12",
-          "originalName": "decompiledCaughtParameter4",
-          "to": "seedCloseFailure",
-          "evidence": "Resolved current declaration in a(B)V; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+          "symbol": "F:d.field_w:Lie;",
+          "originalName": "field_w",
+          "to": "microsoftFullscreenBackend",
+          "evidence": "Legacy Microsoft VM ie DirectDraw adapter; worker uses it for listing display modes and entering/exiting fullscreen."
         }
       },
       {
-        "symbol": "L:d.a(B)V#13",
+        "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#0",
         "before": null,
         "after": {
-          "symbol": "L:d.a(B)V#13",
-          "originalName": "decompiledUncheckedException",
-          "to": "uncheckedShutdownFailure",
-          "evidence": "Resolved current declaration in a(B)V; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
-        }
-      },
-      {
-        "symbol": "L:d.a(B)V#14",
-        "before": null,
-        "after": {
-          "symbol": "L:d.a(B)V#14",
-          "originalName": "decompiledCheckedException",
-          "to": "checkedShutdownFailure",
-          "evidence": "Resolved current declaration in a(B)V; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
-        }
-      },
-      {
-        "symbol": "L:d.a(B)V#2",
-        "before": null,
-        "after": {
-          "symbol": "L:d.a(B)V#2",
-          "originalName": "var2",
-          "to": "shutdownMonitor",
-          "evidence": "Resolved current declaration in a(B)V; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
-        }
-      },
-      {
-        "symbol": "L:d.a(B)V#3",
-        "before": null,
-        "after": {
-          "symbol": "L:d.a(B)V#3",
-          "originalName": "var2_ref",
-          "to": "ignoredWorkerJoinInterruption",
-          "evidence": "Resolved current declaration in a(B)V; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
-        }
-      },
-      {
-        "symbol": "L:d.a(B)V#4",
-        "before": null,
-        "after": {
-          "symbol": "L:d.a(B)V#4",
-          "originalName": "var2_ref2",
-          "to": "ignoredCacheCloseFailure",
-          "evidence": "Resolved current declaration in a(B)V; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
-        }
-      },
-      {
-        "symbol": "L:d.a(B)V#5",
-        "before": null,
-        "after": {
-          "symbol": "L:d.a(B)V#5",
-          "originalName": "var2_int",
+          "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#0",
+          "originalName": "var5_int",
           "to": "cacheIndex",
-          "evidence": "Resolved current declaration in a(B)V; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+          "evidence": "Constructor setup source: cache index iteration, guarded Java/OS/home property reads, AWT queue/focus lookup, Microsoft compatibility class and fullscreen/cursor backend creation. Reused ignored exceptions and generated snapshots retain their original writes and catch boundaries; live platform setup is unverified."
         }
       },
       {
-        "symbol": "L:d.a(B)V#6",
+        "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#1",
         "before": null,
         "after": {
-          "symbol": "L:d.a(B)V#6",
-          "originalName": "var3",
-          "to": "ignoredIndexCloseFailure",
-          "evidence": "Resolved current declaration in a(B)V; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+          "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#1",
+          "originalName": "exception",
+          "to": "ignoredSetupException",
+          "evidence": "Constructor setup source: cache index iteration, guarded Java/OS/home property reads, AWT queue/focus lookup, Microsoft compatibility class and fullscreen/cursor backend creation. Reused ignored exceptions and generated snapshots retain their original writes and catch boundaries; live platform setup is unverified."
         }
       },
       {
-        "symbol": "L:d.a(B)V#7",
+        "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#10",
         "before": null,
         "after": {
-          "symbol": "L:d.a(B)V#7",
-          "originalName": "var4",
-          "to": "unusedGuardHost",
-          "evidence": "Resolved current declaration in a(B)V; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+          "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#10",
+          "originalName": "decompiledCaughtParameter2",
+          "to": "osArchitectureFailure",
+          "evidence": "Constructor setup source: cache index iteration, guarded Java/OS/home property reads, AWT queue/focus lookup, Microsoft compatibility class and fullscreen/cursor backend creation. Reused ignored exceptions and generated snapshots retain their original writes and catch boundaries; live platform setup is unverified."
         }
       },
       {
-        "symbol": "L:d.a(B)V#8",
+        "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#11",
         "before": null,
         "after": {
-          "symbol": "L:d.a(B)V#8",
-          "originalName": "decompiledCaughtParameter0",
-          "to": "workerJoinInterruption",
-          "evidence": "Resolved current declaration in a(B)V; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+          "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#11",
+          "originalName": "decompiledCaughtParameter3",
+          "to": "osVersionFailure",
+          "evidence": "Constructor setup source: cache index iteration, guarded Java/OS/home property reads, AWT queue/focus lookup, Microsoft compatibility class and fullscreen/cursor backend creation. Reused ignored exceptions and generated snapshots retain their original writes and catch boundaries; live platform setup is unverified."
         }
       },
       {
-        "symbol": "L:d.a(B)V#9",
+        "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#12",
         "before": null,
         "after": {
-          "symbol": "L:d.a(B)V#9",
-          "originalName": "decompiledCaughtParameter1",
-          "to": "dataCloseFailure",
-          "evidence": "Resolved current declaration in a(B)V; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+          "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#12",
+          "originalName": "decompiledCaughtParameter4",
+          "to": "homeDirectoryFailure",
+          "evidence": "Constructor setup source: cache index iteration, guarded Java/OS/home property reads, AWT queue/focus lookup, Microsoft compatibility class and fullscreen/cursor backend creation. Reused ignored exceptions and generated snapshots retain their original writes and catch boundaries; live platform setup is unverified."
         }
       },
       {
-        "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#0",
+        "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#13",
         "before": null,
         "after": {
-          "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#0",
-          "originalName": "stackIn_13_0",
-          "to": "preferencesFileAtReturn",
-          "evidence": "Resolved current declaration in a(BILjava/lang/String;Ljava/lang/String;)Lpa;; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+          "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#13",
+          "originalName": "decompiledCaughtParameter5",
+          "to": "eventQueueFailure",
+          "evidence": "Constructor setup source: cache index iteration, guarded Java/OS/home property reads, AWT queue/focus lookup, Microsoft compatibility class and fullscreen/cursor backend creation. Reused ignored exceptions and generated snapshots retain their original writes and catch boundaries; live platform setup is unverified."
         }
       },
       {
-        "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#1",
+        "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#14",
         "before": null,
         "after": {
-          "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#1",
+          "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#14",
+          "originalName": "decompiledCaughtParameter6",
+          "to": "focusTraversalLookupFailure",
+          "evidence": "Constructor setup source: cache index iteration, guarded Java/OS/home property reads, AWT queue/focus lookup, Microsoft compatibility class and fullscreen/cursor backend creation. Reused ignored exceptions and generated snapshots retain their original writes and catch boundaries; live platform setup is unverified."
+        }
+      },
+      {
+        "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#15",
+        "before": null,
+        "after": {
+          "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#15",
+          "originalName": "decompiledCaughtParameter7",
+          "to": "focusCycleRootLookupFailure",
+          "evidence": "Constructor setup source: cache index iteration, guarded Java/OS/home property reads, AWT queue/focus lookup, Microsoft compatibility class and fullscreen/cursor backend creation. Reused ignored exceptions and generated snapshots retain their original writes and catch boundaries; live platform setup is unverified."
+        }
+      },
+      {
+        "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#16",
+        "before": null,
+        "after": {
+          "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#16",
+          "originalName": "decompiledCaughtParameter8",
+          "to": "microsoftCompatibilitySetupFailure",
+          "evidence": "Constructor setup source: cache index iteration, guarded Java/OS/home property reads, AWT queue/focus lookup, Microsoft compatibility class and fullscreen/cursor backend creation. Reused ignored exceptions and generated snapshots retain their original writes and catch boundaries; live platform setup is unverified."
+        }
+      },
+      {
+        "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#17",
+        "before": null,
+        "after": {
+          "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#17",
+          "originalName": "decompiledCaughtParameter9",
+          "to": "fullscreenBackendSetupFailure",
+          "evidence": "Constructor setup source: cache index iteration, guarded Java/OS/home property reads, AWT queue/focus lookup, Microsoft compatibility class and fullscreen/cursor backend creation. Reused ignored exceptions and generated snapshots retain their original writes and catch boundaries; live platform setup is unverified."
+        }
+      },
+      {
+        "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#18",
+        "before": null,
+        "after": {
+          "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#18",
+          "originalName": "decompiledCaughtParameter10",
+          "to": "cursorBackendSetupFailure",
+          "evidence": "Constructor setup source: cache index iteration, guarded Java/OS/home property reads, AWT queue/focus lookup, Microsoft compatibility class and fullscreen/cursor backend creation. Reused ignored exceptions and generated snapshots retain their original writes and catch boundaries; live platform setup is unverified."
+        }
+      },
+      {
+        "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#2",
+        "before": null,
+        "after": {
+          "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#2",
+          "originalName": "throwable",
+          "to": "ignoredSetupThrowable",
+          "evidence": "Constructor setup source: cache index iteration, guarded Java/OS/home property reads, AWT queue/focus lookup, Microsoft compatibility class and fullscreen/cursor backend creation. Reused ignored exceptions and generated snapshots retain their original writes and catch boundaries; live platform setup is unverified."
+        }
+      },
+      {
+        "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#3",
+        "before": null,
+        "after": {
+          "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#3",
+          "originalName": "stackIn_2_0",
+          "to": "unusedDispatcherSnapshot",
+          "evidence": "Constructor setup source: cache index iteration, guarded Java/OS/home property reads, AWT queue/focus lookup, Microsoft compatibility class and fullscreen/cursor backend creation. Reused ignored exceptions and generated snapshots retain their original writes and catch boundaries; live platform setup is unverified."
+        }
+      },
+      {
+        "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#4",
+        "before": null,
+        "after": {
+          "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#4",
+          "originalName": "stackIn_3_0",
+          "to": "unusedServiceOwnerSnapshot",
+          "evidence": "Constructor setup source: cache index iteration, guarded Java/OS/home property reads, AWT queue/focus lookup, Microsoft compatibility class and fullscreen/cursor backend creation. Reused ignored exceptions and generated snapshots retain their original writes and catch boundaries; live platform setup is unverified."
+        }
+      },
+      {
+        "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#5",
+        "before": null,
+        "after": {
+          "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#5",
+          "originalName": "stackIn_3_1",
+          "to": "privilegedServicesFlag",
+          "evidence": "Constructor setup source: cache index iteration, guarded Java/OS/home property reads, AWT queue/focus lookup, Microsoft compatibility class and fullscreen/cursor backend creation. Reused ignored exceptions and generated snapshots retain their original writes and catch boundaries; live platform setup is unverified."
+        }
+      },
+      {
+        "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#6",
+        "before": null,
+        "after": {
+          "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#6",
           "originalName": "decompiledCaughtException",
-          "to": "caughtPreferencesThrowable",
-          "evidence": "Resolved current declaration in a(BILjava/lang/String;Ljava/lang/String;)Lpa;; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+          "to": "caughtSetupThrowable",
+          "evidence": "Constructor setup source: cache index iteration, guarded Java/OS/home property reads, AWT queue/focus lookup, Microsoft compatibility class and fullscreen/cursor backend creation. Reused ignored exceptions and generated snapshots retain their original writes and catch boundaries; live platform setup is unverified."
         }
       },
       {
-        "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#10",
+        "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#7",
         "before": null,
         "after": {
-          "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#10",
-          "originalName": "decompiledUncheckedException",
-          "to": "uncheckedPreferencesFailure",
-          "evidence": "Resolved current declaration in a(BILjava/lang/String;Ljava/lang/String;)Lpa;; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
-        }
-      },
-      {
-        "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#11",
-        "before": null,
-        "after": {
-          "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#11",
-          "originalName": "decompiledCheckedException",
-          "to": "checkedPreferencesFailure",
-          "evidence": "Resolved current declaration in a(BILjava/lang/String;Ljava/lang/String;)Lpa;; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
-        }
-      },
-      {
-        "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#2",
-        "before": null,
-        "after": {
-          "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#2",
-          "originalName": "var4",
-          "to": "preferencesFilename",
-          "evidence": "Resolved current declaration in a(BILjava/lang/String;Ljava/lang/String;)Lpa;; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
-        }
-      },
-      {
-        "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#3",
-        "before": null,
-        "after": {
-          "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#3",
-          "originalName": "var5",
-          "to": "searchDirectories",
-          "evidence": "Resolved current declaration in a(BILjava/lang/String;Ljava/lang/String;)Lpa;; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
-        }
-      },
-      {
-        "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#4",
-        "before": null,
-        "after": {
-          "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#4",
+          "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#7",
           "originalName": "var6",
-          "to": "directoryIndex",
-          "evidence": "Resolved current declaration in a(BILjava/lang/String;Ljava/lang/String;)Lpa;; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+          "to": "createdMicrosoftFullscreenBackend",
+          "evidence": "Constructor setup source: cache index iteration, guarded Java/OS/home property reads, AWT queue/focus lookup, Microsoft compatibility class and fullscreen/cursor backend creation. Reused ignored exceptions and generated snapshots retain their original writes and catch boundaries; live platform setup is unverified."
         }
       },
       {
-        "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#5",
+        "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#8",
         "before": null,
         "after": {
-          "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#5",
-          "originalName": "var7",
-          "to": "guardDivisionValue",
-          "evidence": "Resolved current declaration in a(BILjava/lang/String;Ljava/lang/String;)Lpa;; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
-        }
-      },
-      {
-        "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#6",
-        "before": null,
-        "after": {
-          "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#6",
-          "originalName": "var8",
-          "to": "searchDirectory",
-          "evidence": "Resolved current declaration in a(BILjava/lang/String;Ljava/lang/String;)Lpa;; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
-        }
-      },
-      {
-        "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#7",
-        "before": null,
-        "after": {
-          "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#7",
-          "originalName": "var9",
-          "to": "preferencesFile",
-          "evidence": "Resolved current declaration in a(BILjava/lang/String;Ljava/lang/String;)Lpa;; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
-        }
-      },
-      {
-        "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#8",
-        "before": null,
-        "after": {
-          "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#8",
-          "originalName": "var9_ref",
-          "to": "ignoredOpenFailure",
-          "evidence": "Resolved current declaration in a(BILjava/lang/String;Ljava/lang/String;)Lpa;; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
-        }
-      },
-      {
-        "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#9",
-        "before": null,
-        "after": {
-          "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#9",
+          "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#8",
           "originalName": "decompiledCaughtParameter0",
-          "to": "openFailure",
-          "evidence": "Resolved current declaration in a(BILjava/lang/String;Ljava/lang/String;)Lpa;; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+          "to": "javaPropertiesFailure",
+          "evidence": "Constructor setup source: cache index iteration, guarded Java/OS/home property reads, AWT queue/focus lookup, Microsoft compatibility class and fullscreen/cursor backend creation. Reused ignored exceptions and generated snapshots retain their original writes and catch boundaries; live platform setup is unverified."
         }
       },
       {
-        "symbol": "M:d.a(B)V",
+        "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#9",
         "before": null,
         "after": {
-          "symbol": "M:d.a(B)V",
+          "symbol": "L:d.<init>(ILjava/lang/String;IZ)V#9",
+          "originalName": "decompiledCaughtParameter1",
+          "to": "osNameFailure",
+          "evidence": "Constructor setup source: cache index iteration, guarded Java/OS/home property reads, AWT queue/focus lookup, Microsoft compatibility class and fullscreen/cursor backend creation. Reused ignored exceptions and generated snapshots retain their original writes and catch boundaries; live platform setup is unverified."
+        }
+      },
+      {
+        "symbol": "L:d.a(I)Lcb;#0",
+        "before": null,
+        "after": {
+          "symbol": "L:d.a(I)Lcb;#0",
+          "originalName": "var3",
+          "to": "unusedPreferencesSuffix",
+          "evidence": "Unused null String declared on the invalid display-mode guard path before the existing preferences-search call; no new side effect or dead-code removal."
+        }
+      },
+      {
+        "symbol": "L:d.run()V#0",
+        "before": null,
+        "after": {
+          "symbol": "L:d.run()V#0",
+          "originalName": "stackIn_76_0",
+          "to": "cursorVisibleInt",
+          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+        }
+      },
+      {
+        "symbol": "L:d.run()V#1",
+        "before": null,
+        "after": {
+          "symbol": "L:d.run()V#1",
+          "originalName": "decompiledCaughtException",
+          "to": "caughtTaskThrowable",
+          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+        }
+      },
+      {
+        "symbol": "L:d.run()V#10",
+        "before": null,
+        "after": {
+          "symbol": "L:d.run()V#10",
+          "originalName": "var3_ref3",
+          "to": "proxyConnectionFailure",
+          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+        }
+      },
+      {
+        "symbol": "L:d.run()V#11",
+        "before": null,
+        "after": {
+          "symbol": "L:d.run()V#11",
+          "originalName": "var4_int",
+          "to": "cursorY",
+          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+        }
+      },
+      {
+        "symbol": "L:d.run()V#12",
+        "before": null,
+        "after": {
+          "symbol": "L:d.run()V#12",
+          "originalName": "var4",
+          "to": "allowedUrlCharacters",
+          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+        }
+      },
+      {
+        "symbol": "L:d.run()V#13",
+        "before": null,
+        "after": {
+          "symbol": "L:d.run()V#13",
+          "originalName": "var5",
+          "to": "urlCharacterIndex",
+          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+        }
+      },
+      {
+        "symbol": "L:d.run()V#14",
+        "before": null,
+        "after": {
+          "symbol": "L:d.run()V#14",
+          "originalName": "var7",
+          "to": "clipboardContents",
+          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+        }
+      },
+      {
+        "symbol": "L:d.run()V#15",
+        "before": null,
+        "after": {
+          "symbol": "L:d.run()V#15",
+          "originalName": "var8",
+          "to": "urlToLaunch",
+          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+        }
+      },
+      {
+        "symbol": "L:d.run()V#16",
+        "before": null,
+        "after": {
+          "symbol": "L:d.run()V#16",
+          "originalName": "var9",
+          "to": "task",
+          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+        }
+      },
+      {
+        "symbol": "L:d.run()V#17",
+        "before": null,
+        "after": {
+          "symbol": "L:d.run()V#17",
+          "originalName": "var10",
+          "to": "startedThread",
+          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+        }
+      },
+      {
+        "symbol": "L:d.run()V#18",
+        "before": null,
+        "after": {
+          "symbol": "L:d.run()V#18",
+          "originalName": "var11",
+          "to": "customCursorArguments",
+          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+        }
+      },
+      {
+        "symbol": "L:d.run()V#19",
+        "before": null,
+        "after": {
+          "symbol": "L:d.run()V#19",
+          "originalName": "var12",
+          "to": "cursorComponent",
+          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+        }
+      },
+      {
+        "symbol": "L:d.run()V#2",
+        "before": null,
+        "after": {
+          "symbol": "L:d.run()V#2",
+          "originalName": "var2",
+          "to": "dispatcherOrTaskMonitor",
+          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage. This reused Object locks both the dispatcher and the completed task."
+        }
+      },
+      {
+        "symbol": "L:d.run()V#20",
+        "before": null,
+        "after": {
+          "symbol": "L:d.run()V#20",
+          "originalName": "var13",
+          "to": "fullscreenFrame",
+          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+        }
+      },
+      {
+        "symbol": "L:d.run()V#21",
+        "before": null,
+        "after": {
+          "symbol": "L:d.run()V#21",
+          "originalName": "var14",
+          "to": "reverseLookupAddress",
+          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+        }
+      },
+      {
+        "symbol": "L:d.run()V#22",
+        "before": null,
+        "after": {
+          "symbol": "L:d.run()V#22",
+          "originalName": "var15",
+          "to": "clipboardForWrite",
+          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+        }
+      },
+      {
+        "symbol": "L:d.run()V#23",
+        "before": null,
+        "after": {
+          "symbol": "L:d.run()V#23",
+          "originalName": "var16",
+          "to": "clipboardForRead",
+          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+        }
+      },
+      {
+        "symbol": "L:d.run()V#24",
+        "before": null,
+        "after": {
+          "symbol": "L:d.run()V#24",
+          "originalName": "var17",
+          "to": "fieldLookupArguments",
+          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+        }
+      },
+      {
+        "symbol": "L:d.run()V#25",
+        "before": null,
+        "after": {
+          "symbol": "L:d.run()V#25",
+          "originalName": "var18",
+          "to": "methodLookupArguments",
+          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+        }
+      },
+      {
+        "symbol": "L:d.run()V#26",
+        "before": null,
+        "after": {
+          "symbol": "L:d.run()V#26",
+          "originalName": "decompiledCaughtParameter0",
+          "to": "waitInterruption",
+          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+        }
+      },
+      {
+        "symbol": "L:d.run()V#27",
+        "before": null,
+        "after": {
+          "symbol": "L:d.run()V#27",
+          "originalName": "decompiledCaughtParameter1",
+          "to": "caughtUrlLaunchFailure",
+          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+        }
+      },
+      {
+        "symbol": "L:d.run()V#28",
+        "before": null,
+        "after": {
+          "symbol": "L:d.run()V#28",
+          "originalName": "decompiledCaughtParameter2",
+          "to": "caughtProxyConnectionFailure",
+          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+        }
+      },
+      {
+        "symbol": "L:d.run()V#29",
+        "before": null,
+        "after": {
+          "symbol": "L:d.run()V#29",
+          "originalName": "decompiledCaughtParameter3",
+          "to": "caughtThreadDeath",
+          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+        }
+      },
+      {
+        "symbol": "L:d.run()V#3",
+        "before": null,
+        "after": {
+          "symbol": "L:d.run()V#3",
+          "originalName": "var2_int",
+          "to": "taskType",
+          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+        }
+      },
+      {
+        "symbol": "L:d.run()V#30",
+        "before": null,
+        "after": {
+          "symbol": "L:d.run()V#30",
+          "originalName": "decompiledCaughtParameter4",
+          "to": "caughtTaskFailure",
+          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+        }
+      },
+      {
+        "symbol": "L:d.run()V#31",
+        "before": null,
+        "after": {
+          "symbol": "L:d.run()V#31",
+          "originalName": "decompiledUncheckedException",
+          "to": "uncheckedWorkerFailure",
+          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+        }
+      },
+      {
+        "symbol": "L:d.run()V#32",
+        "before": null,
+        "after": {
+          "symbol": "L:d.run()V#32",
+          "originalName": "decompiledCheckedException",
+          "to": "checkedWorkerFailure",
+          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+        }
+      },
+      {
+        "symbol": "L:d.run()V#4",
+        "before": null,
+        "after": {
+          "symbol": "L:d.run()V#4",
+          "originalName": "var2_ref",
+          "to": "fatalThreadDeath",
+          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+        }
+      },
+      {
+        "symbol": "L:d.run()V#5",
+        "before": null,
+        "after": {
+          "symbol": "L:d.run()V#5",
+          "originalName": "var2_ref2",
+          "to": "ignoredTaskFailure",
+          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+        }
+      },
+      {
+        "symbol": "L:d.run()V#6",
+        "before": null,
+        "after": {
+          "symbol": "L:d.run()V#6",
+          "originalName": "var3",
+          "to": "ignoredWaitInterruption",
+          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+        }
+      },
+      {
+        "symbol": "L:d.run()V#7",
+        "before": null,
+        "after": {
+          "symbol": "L:d.run()V#7",
+          "originalName": "var3_ref",
+          "to": "openedPreferencesFile",
+          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+        }
+      },
+      {
+        "symbol": "L:d.run()V#8",
+        "before": null,
+        "after": {
+          "symbol": "L:d.run()V#8",
+          "originalName": "var3_int",
+          "to": "cursorXOrVisibleFlag",
+          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage. This reused integer stores cursor X for task14 and a 0/1 visibility flag for task15."
+        }
+      },
+      {
+        "symbol": "L:d.run()V#9",
+        "before": null,
+        "after": {
+          "symbol": "L:d.run()V#9",
+          "originalName": "var3_ref2",
+          "to": "urlLaunchFailure",
+          "evidence": "Worker source dispatch: FIFO removal under dispatcher monitor, then numeric task execution, result/status publication and notification under the task monitor. Exceptions, ThreadDeath, original handlers and all task IDs remain unchanged; these names are source-audited, not new native service coverage."
+        }
+      },
+      {
+        "symbol": "M:d.a(I)Lcb;",
+        "before": null,
+        "after": {
+          "symbol": "M:d.a(I)Lcb;",
           "originalName": "a",
-          "to": "shutdown",
-          "evidence": "Sets shutdownRequested under dispatcher monitor and notifies, joins worker, then closes data/master/per-index/seed files while swallowing InterruptedException/IOException. Guard13 is validated by96 independent native closure-order/failure cases; invalid guard preserves original extra-task/data-field effects."
+          "to": "requestDisplayModes",
+          "evidence": "Queues display-mode task type 5. Guard 34 avoids the original preferences-search side effect; other guards still execute that side effect."
         }
       },
       {
-        "symbol": "M:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;",
+        "symbol": "M:d.a(IIIII)Lcb;",
         "before": null,
         "after": {
-          "symbol": "M:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;",
+          "symbol": "M:d.a(IIIII)Lcb;",
           "originalName": "a",
-          "to": "openPreferencesFile",
-          "evidence": "Builds jagex_<game>_preferences<suffix>[_rc|_wip].dat according to variant; searches fixed directories, skips absent directories, catches each file-open exception and advances exactly once, returning first pa or null. Guard division and all original path/exception effects remain; actual directory search unverified."
+          "to": "requestEnterFullscreen",
+          "evidence": "Guard -1743550128 queues task6 with width/height and bitDepth/refreshRate packed into its two integer arguments. Worker unpacks them into pd.enter(Frame,width,height,bitDepth,refreshRate); addition, shifts and truncation remain unchanged."
         }
       },
       {
-        "symbol": "P:d.a(B)V#0",
+        "symbol": "M:d.a(IIZLjava/lang/String;)Lcb;",
         "before": null,
         "after": {
-          "symbol": "P:d.a(B)V#0",
+          "symbol": "M:d.a(IIZLjava/lang/String;)Lcb;",
+          "originalName": "a",
+          "to": "requestSocketInternal",
+          "evidence": "Queues host/port as ordinary socket type 1 or proxy socket type 22; guard !=0 first clears the cache data handle. Worker type22 uses mk proxy connection and retains bd message on failure."
+        }
+      },
+      {
+        "symbol": "M:d.a(ILjava/lang/String;Z)Lcb;",
+        "before": null,
+        "after": {
+          "symbol": "M:d.a(ILjava/lang/String;Z)Lcb;",
+          "originalName": "a",
+          "to": "requestSocket",
+          "evidence": "Queues an ordinary socket request through requestSocketInternal with guard 0 and proxy false; true guard first invokes requestDisplayModes with its original invalid guard."
+        }
+      },
+      {
+        "symbol": "M:d.a(ILjava/net/URL;)Lcb;",
+        "before": null,
+        "after": {
+          "symbol": "M:d.a(ILjava/net/URL;)Lcb;",
+          "originalName": "a",
+          "to": "requestUrlStream",
+          "evidence": "Guard -14 queues URL input as task4; worker opens it as a DataInputStream after the network deadline check. Other guards return null."
+        }
+      },
+      {
+        "symbol": "M:d.a(Ljava/awt/Frame;I)Lcb;",
+        "before": null,
+        "after": {
+          "symbol": "M:d.a(Ljava/awt/Frame;I)Lcb;",
+          "originalName": "a",
+          "to": "requestExitFullscreen",
+          "evidence": "Guard 0 queues fullscreen-exit task type 7 carrying the frame; other guards return null."
+        }
+      },
+      {
+        "symbol": "M:d.a(Ljava/lang/Class;ILjava/lang/String;)Lcb;",
+        "before": null,
+        "after": {
+          "symbol": "M:d.a(Ljava/lang/Class;ILjava/lang/String;)Lcb;",
+          "originalName": "a",
+          "to": "requestDeclaredField",
+          "evidence": "Queues type9 tuple Class and field name for getDeclaredField; guard !=0 first clears Microsoft fullscreen backend without suppressing the request."
+        }
+      },
+      {
+        "symbol": "M:d.a(Ljava/lang/String;I[Ljava/lang/Class;Ljava/lang/Class;)Lcb;",
+        "before": null,
+        "after": {
+          "symbol": "M:d.a(Ljava/lang/String;I[Ljava/lang/Class;Ljava/lang/Class;)Lcb;",
+          "originalName": "a",
+          "to": "requestDeclaredMethod",
+          "evidence": "Queues type8 tuple Class, method name and parameter types for getDeclaredMethod; guard >=-118 first clears reflected fullscreen backend."
+        }
+      },
+      {
+        "symbol": "M:d.b(I)Z",
+        "before": null,
+        "after": {
+          "symbol": "M:d.b(I)Z",
+          "originalName": "b",
+          "to": "hasFullscreenSupport",
+          "evidence": "Guard -26098 and privileged services are required; tests the selected Microsoft or reflected fullscreen backend for null."
+        }
+      },
+      {
+        "symbol": "P:d.<init>(ILjava/lang/String;IZ)V#0",
+        "before": null,
+        "after": {
+          "symbol": "P:d.<init>(ILjava/lang/String;IZ)V#0",
           "originalName": "param0",
-          "to": "guard",
-          "evidence": "Exact shutdown guard13 or preferences filename/variant/guard-arithmetic parameter role in current dispatcher source; numeric values unchanged."
+          "to": "initialCacheVariant",
+          "evidence": "Constructor copies cache variant/game name into static cache identity, uses the count for index-file allocation, and enables gated services from the supplied boolean. Backend selection follows Java vendor; worker startup order is unchanged."
         }
       },
       {
-        "symbol": "P:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#0",
+        "symbol": "P:d.<init>(ILjava/lang/String;IZ)V#1",
         "before": null,
         "after": {
-          "symbol": "P:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#0",
-          "originalName": "param0",
-          "to": "guard",
-          "evidence": "Exact shutdown guard13 or preferences filename/variant/guard-arithmetic parameter role in current dispatcher source; numeric values unchanged."
-        }
-      },
-      {
-        "symbol": "P:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#1",
-        "before": null,
-        "after": {
-          "symbol": "P:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#1",
+          "symbol": "P:d.<init>(ILjava/lang/String;IZ)V#1",
           "originalName": "param1",
-          "to": "cacheVariant",
-          "evidence": "Exact shutdown guard13 or preferences filename/variant/guard-arithmetic parameter role in current dispatcher source; numeric values unchanged."
-        }
-      },
-      {
-        "symbol": "P:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#2",
-        "before": null,
-        "after": {
-          "symbol": "P:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#2",
-          "originalName": "param2",
           "to": "gameName",
-          "evidence": "Exact shutdown guard13 or preferences filename/variant/guard-arithmetic parameter role in current dispatcher source; numeric values unchanged."
+          "evidence": "Constructor copies cache variant/game name into static cache identity, uses the count for index-file allocation, and enables gated services from the supplied boolean. Backend selection follows Java vendor; worker startup order is unchanged."
         }
       },
       {
-        "symbol": "P:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#3",
+        "symbol": "P:d.<init>(ILjava/lang/String;IZ)V#2",
         "before": null,
         "after": {
-          "symbol": "P:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#3",
+          "symbol": "P:d.<init>(ILjava/lang/String;IZ)V#2",
+          "originalName": "param2",
+          "to": "cacheIndexCount",
+          "evidence": "Constructor copies cache variant/game name into static cache identity, uses the count for index-file allocation, and enables gated services from the supplied boolean. Backend selection follows Java vendor; worker startup order is unchanged."
+        }
+      },
+      {
+        "symbol": "P:d.<init>(ILjava/lang/String;IZ)V#3",
+        "before": null,
+        "after": {
+          "symbol": "P:d.<init>(ILjava/lang/String;IZ)V#3",
           "originalName": "param3",
-          "to": "preferenceSuffix",
-          "evidence": "Exact shutdown guard13 or preferences filename/variant/guard-arithmetic parameter role in current dispatcher source; numeric values unchanged."
+          "to": "privilegedServicesEnabled",
+          "evidence": "Constructor copies cache variant/game name into static cache identity, uses the count for index-file allocation, and enables gated services from the supplied boolean. Backend selection follows Java vendor; worker startup order is unchanged."
+        }
+      },
+      {
+        "symbol": "P:d.a(I)Lcb;#0",
+        "before": null,
+        "after": {
+          "symbol": "P:d.a(I)Lcb;#0",
+          "originalName": "param0",
+          "to": "guard",
+          "evidence": "Queues display-mode task type 5. Guard 34 avoids the original preferences-search side effect; other guards still execute that side effect."
+        }
+      },
+      {
+        "symbol": "P:d.a(IIIII)Lcb;#0",
+        "before": null,
+        "after": {
+          "symbol": "P:d.a(IIIII)Lcb;#0",
+          "originalName": "param0",
+          "to": "height",
+          "evidence": "Guard -1743550128 queues task6 with width/height and bitDepth/refreshRate packed into its two integer arguments. Worker unpacks them into pd.enter(Frame,width,height,bitDepth,refreshRate); addition, shifts and truncation remain unchanged."
+        }
+      },
+      {
+        "symbol": "P:d.a(IIIII)Lcb;#1",
+        "before": null,
+        "after": {
+          "symbol": "P:d.a(IIIII)Lcb;#1",
+          "originalName": "param1",
+          "to": "guard",
+          "evidence": "Guard -1743550128 queues task6 with width/height and bitDepth/refreshRate packed into its two integer arguments. Worker unpacks them into pd.enter(Frame,width,height,bitDepth,refreshRate); addition, shifts and truncation remain unchanged."
+        }
+      },
+      {
+        "symbol": "P:d.a(IIIII)Lcb;#2",
+        "before": null,
+        "after": {
+          "symbol": "P:d.a(IIIII)Lcb;#2",
+          "originalName": "param2",
+          "to": "refreshRate",
+          "evidence": "Guard -1743550128 queues task6 with width/height and bitDepth/refreshRate packed into its two integer arguments. Worker unpacks them into pd.enter(Frame,width,height,bitDepth,refreshRate); addition, shifts and truncation remain unchanged."
+        }
+      },
+      {
+        "symbol": "P:d.a(IIIII)Lcb;#3",
+        "before": null,
+        "after": {
+          "symbol": "P:d.a(IIIII)Lcb;#3",
+          "originalName": "param3",
+          "to": "bitDepth",
+          "evidence": "Guard -1743550128 queues task6 with width/height and bitDepth/refreshRate packed into its two integer arguments. Worker unpacks them into pd.enter(Frame,width,height,bitDepth,refreshRate); addition, shifts and truncation remain unchanged."
+        }
+      },
+      {
+        "symbol": "P:d.a(IIIII)Lcb;#4",
+        "before": null,
+        "after": {
+          "symbol": "P:d.a(IIIII)Lcb;#4",
+          "originalName": "param4",
+          "to": "width",
+          "evidence": "Guard -1743550128 queues task6 with width/height and bitDepth/refreshRate packed into its two integer arguments. Worker unpacks them into pd.enter(Frame,width,height,bitDepth,refreshRate); addition, shifts and truncation remain unchanged."
+        }
+      },
+      {
+        "symbol": "P:d.a(IIZLjava/lang/String;)Lcb;#0",
+        "before": null,
+        "after": {
+          "symbol": "P:d.a(IIZLjava/lang/String;)Lcb;#0",
+          "originalName": "param0",
+          "to": "guard",
+          "evidence": "Queues host/port as ordinary socket type 1 or proxy socket type 22; guard !=0 first clears the cache data handle. Worker type22 uses mk proxy connection and retains bd message on failure."
+        }
+      },
+      {
+        "symbol": "P:d.a(IIZLjava/lang/String;)Lcb;#1",
+        "before": null,
+        "after": {
+          "symbol": "P:d.a(IIZLjava/lang/String;)Lcb;#1",
+          "originalName": "param1",
+          "to": "port",
+          "evidence": "Queues host/port as ordinary socket type 1 or proxy socket type 22; guard !=0 first clears the cache data handle. Worker type22 uses mk proxy connection and retains bd message on failure."
+        }
+      },
+      {
+        "symbol": "P:d.a(IIZLjava/lang/String;)Lcb;#2",
+        "before": null,
+        "after": {
+          "symbol": "P:d.a(IIZLjava/lang/String;)Lcb;#2",
+          "originalName": "param2",
+          "to": "useProxy",
+          "evidence": "Queues host/port as ordinary socket type 1 or proxy socket type 22; guard !=0 first clears the cache data handle. Worker type22 uses mk proxy connection and retains bd message on failure."
+        }
+      },
+      {
+        "symbol": "P:d.a(IIZLjava/lang/String;)Lcb;#3",
+        "before": null,
+        "after": {
+          "symbol": "P:d.a(IIZLjava/lang/String;)Lcb;#3",
+          "originalName": "param3",
+          "to": "host",
+          "evidence": "Queues host/port as ordinary socket type 1 or proxy socket type 22; guard !=0 first clears the cache data handle. Worker type22 uses mk proxy connection and retains bd message on failure."
+        }
+      },
+      {
+        "symbol": "P:d.a(ILjava/lang/String;Z)Lcb;#0",
+        "before": null,
+        "after": {
+          "symbol": "P:d.a(ILjava/lang/String;Z)Lcb;#0",
+          "originalName": "param0",
+          "to": "port",
+          "evidence": "Queues an ordinary socket request through requestSocketInternal with guard 0 and proxy false; true guard first invokes requestDisplayModes with its original invalid guard."
+        }
+      },
+      {
+        "symbol": "P:d.a(ILjava/lang/String;Z)Lcb;#1",
+        "before": null,
+        "after": {
+          "symbol": "P:d.a(ILjava/lang/String;Z)Lcb;#1",
+          "originalName": "param1",
+          "to": "host",
+          "evidence": "Queues an ordinary socket request through requestSocketInternal with guard 0 and proxy false; true guard first invokes requestDisplayModes with its original invalid guard."
+        }
+      },
+      {
+        "symbol": "P:d.a(ILjava/lang/String;Z)Lcb;#2",
+        "before": null,
+        "after": {
+          "symbol": "P:d.a(ILjava/lang/String;Z)Lcb;#2",
+          "originalName": "param2",
+          "to": "guard",
+          "evidence": "Queues an ordinary socket request through requestSocketInternal with guard 0 and proxy false; true guard first invokes requestDisplayModes with its original invalid guard."
+        }
+      },
+      {
+        "symbol": "P:d.a(ILjava/net/URL;)Lcb;#0",
+        "before": null,
+        "after": {
+          "symbol": "P:d.a(ILjava/net/URL;)Lcb;#0",
+          "originalName": "param0",
+          "to": "guard",
+          "evidence": "Guard -14 queues URL input as task4; worker opens it as a DataInputStream after the network deadline check. Other guards return null."
+        }
+      },
+      {
+        "symbol": "P:d.a(ILjava/net/URL;)Lcb;#1",
+        "before": null,
+        "after": {
+          "symbol": "P:d.a(ILjava/net/URL;)Lcb;#1",
+          "originalName": "param1",
+          "to": "url",
+          "evidence": "Guard -14 queues URL input as task4; worker opens it as a DataInputStream after the network deadline check. Other guards return null."
+        }
+      },
+      {
+        "symbol": "P:d.a(Ljava/awt/Frame;I)Lcb;#0",
+        "before": null,
+        "after": {
+          "symbol": "P:d.a(Ljava/awt/Frame;I)Lcb;#0",
+          "originalName": "param0",
+          "to": "frame",
+          "evidence": "Guard 0 queues fullscreen-exit task type 7 carrying the frame; other guards return null."
+        }
+      },
+      {
+        "symbol": "P:d.a(Ljava/awt/Frame;I)Lcb;#1",
+        "before": null,
+        "after": {
+          "symbol": "P:d.a(Ljava/awt/Frame;I)Lcb;#1",
+          "originalName": "param1",
+          "to": "guard",
+          "evidence": "Guard 0 queues fullscreen-exit task type 7 carrying the frame; other guards return null."
+        }
+      },
+      {
+        "symbol": "P:d.a(Ljava/lang/Class;ILjava/lang/String;)Lcb;#0",
+        "before": null,
+        "after": {
+          "symbol": "P:d.a(Ljava/lang/Class;ILjava/lang/String;)Lcb;#0",
+          "originalName": "param0",
+          "to": "targetClass",
+          "evidence": "Queues type9 tuple Class and field name for getDeclaredField; guard !=0 first clears Microsoft fullscreen backend without suppressing the request."
+        }
+      },
+      {
+        "symbol": "P:d.a(Ljava/lang/Class;ILjava/lang/String;)Lcb;#1",
+        "before": null,
+        "after": {
+          "symbol": "P:d.a(Ljava/lang/Class;ILjava/lang/String;)Lcb;#1",
+          "originalName": "param1",
+          "to": "guard",
+          "evidence": "Queues type9 tuple Class and field name for getDeclaredField; guard !=0 first clears Microsoft fullscreen backend without suppressing the request."
+        }
+      },
+      {
+        "symbol": "P:d.a(Ljava/lang/Class;ILjava/lang/String;)Lcb;#2",
+        "before": null,
+        "after": {
+          "symbol": "P:d.a(Ljava/lang/Class;ILjava/lang/String;)Lcb;#2",
+          "originalName": "param2",
+          "to": "fieldName",
+          "evidence": "Queues type9 tuple Class and field name for getDeclaredField; guard !=0 first clears Microsoft fullscreen backend without suppressing the request."
+        }
+      },
+      {
+        "symbol": "P:d.a(Ljava/lang/String;I[Ljava/lang/Class;Ljava/lang/Class;)Lcb;#0",
+        "before": null,
+        "after": {
+          "symbol": "P:d.a(Ljava/lang/String;I[Ljava/lang/Class;Ljava/lang/Class;)Lcb;#0",
+          "originalName": "param0",
+          "to": "methodName",
+          "evidence": "Queues type8 tuple Class, method name and parameter types for getDeclaredMethod; guard >=-118 first clears reflected fullscreen backend."
+        }
+      },
+      {
+        "symbol": "P:d.a(Ljava/lang/String;I[Ljava/lang/Class;Ljava/lang/Class;)Lcb;#1",
+        "before": null,
+        "after": {
+          "symbol": "P:d.a(Ljava/lang/String;I[Ljava/lang/Class;Ljava/lang/Class;)Lcb;#1",
+          "originalName": "param1",
+          "to": "guard",
+          "evidence": "Queues type8 tuple Class, method name and parameter types for getDeclaredMethod; guard >=-118 first clears reflected fullscreen backend."
+        }
+      },
+      {
+        "symbol": "P:d.a(Ljava/lang/String;I[Ljava/lang/Class;Ljava/lang/Class;)Lcb;#2",
+        "before": null,
+        "after": {
+          "symbol": "P:d.a(Ljava/lang/String;I[Ljava/lang/Class;Ljava/lang/Class;)Lcb;#2",
+          "originalName": "param2",
+          "to": "parameterTypes",
+          "evidence": "Queues type8 tuple Class, method name and parameter types for getDeclaredMethod; guard >=-118 first clears reflected fullscreen backend."
+        }
+      },
+      {
+        "symbol": "P:d.a(Ljava/lang/String;I[Ljava/lang/Class;Ljava/lang/Class;)Lcb;#3",
+        "before": null,
+        "after": {
+          "symbol": "P:d.a(Ljava/lang/String;I[Ljava/lang/Class;Ljava/lang/Class;)Lcb;#3",
+          "originalName": "param3",
+          "to": "targetClass",
+          "evidence": "Queues type8 tuple Class, method name and parameter types for getDeclaredMethod; guard >=-118 first clears reflected fullscreen backend."
+        }
+      },
+      {
+        "symbol": "P:d.b(I)Z#0",
+        "before": null,
+        "after": {
+          "symbol": "P:d.b(I)Z#0",
+          "originalName": "param0",
+          "to": "guard",
+          "evidence": "Guard -26098 and privileged services are required; tests the selected Microsoft or reflected fullscreen backend for null."
         }
       }
     ],
@@ -16008,6 +17247,10 @@
         "sha256": "fb9712b34bdf72f5b957fef362d91543e733ac9dab7ba2db0ac02b4b4338640b"
       },
       {
+        "file": "ie.java",
+        "sha256": "5f4610630413f16f7c3709d87feac67bfd0c3f66479c19d232046d4fb4eaa7c6"
+      },
+      {
         "file": "ih.java",
         "sha256": "6a065aa97f02f890e76b9025b292659cf5d0c936a33ab4df9a4aee513d1f9146"
       },
@@ -16168,6 +17411,10 @@
         "sha256": "7e181db4bb5f9cbc4aa2e5504109cadfe8aaf7ff201825f68305d4e1549d4257"
       },
       {
+        "file": "pd.java",
+        "sha256": "c4c16d2aaedf51694f1b53b7dc8a92e6409ba0b9a528b8130abcd8d3b06365b1"
+      },
+      {
         "file": "pg.java",
         "sha256": "6c6e4e27dfba1a43ab68b4f819008fe9411a6794645fc744094bb6eb212d6d70"
       },
@@ -16272,8 +17519,16 @@
         "sha256": "d71b34bf4176d1a22bddeeefc79b4ca3a277fe343e227b7e83019aeb6335b6e1"
       },
       {
+        "file": "tg.java",
+        "sha256": "2455b6508b83501ee242b950f00f57daa619f15f5f80c40bbe74913c54324de7"
+      },
+      {
         "file": "th.java",
         "sha256": "3001702b130decb49c44ab271d9a7fef3bc216b0afb421c7a151579fe6110c89"
+      },
+      {
+        "file": "tk.java",
+        "sha256": "5863b7ca0bbdcccc46d55192a555936450c2ebcf0ba01a06f04853effd13983d"
       },
       {
         "file": "tl.java",
@@ -18632,7 +19887,7 @@
       "sourceDeclarations": 20708,
       "bindingsCompared": 150387,
       "overrideRelationships": 388,
-      "identifierEdits": 27995,
+      "identifierEdits": 28446,
       "dictionaryRestorationFiles": 303,
       "wholeGameEquivalenceVerified": false,
       "nativeMatchingScenarios": 708,
@@ -18656,12 +19911,13 @@
         "Dead selector cleanup only removes allocated int locals whose complete parsed/token-accounted body occurrences are literal stores or empty pure comparisons. The remaining nine selectors retain observable continuation routing. The independent 140-case cache probe covers null/closed/limited caches, payload bounds, null packets/buffers, guard side effects and integer offset overflow; it does not validate live cache concurrency, device timing or whole-game behavior.",
         "Plain-block tail recovery preserves existing braces, declaration scopes and opaque loop/label/try/monitor bodies. Exact terminal clones can skip intact prefixes without assuming loop completion; only terminal breaks to a newly introduced block can be trimmed, and retained new labels have a 512-token prefix cap. The 84-case native shutdown probe uses constructor-free sockets, controlled task statuses and valid close guards below -117; it verifies interrupt consumption, task retention/release, notification and monitor release, but not guard-triggered run(), stream/device I/O, normal blocking live joins or real network operation.",
         "Socket/task names follow current source dispatch and 308 independent fake-stream/ring fixtures, retaining 84 shutdown cases. PlatformTaskDispatcher service branches, actual socket traffic, browser reload/cookies, static keyboard/rendering helpers and normal open-writer waiting/concurrency remain supported by source inspection only; no multiplayer server or whole-game equivalence claim.",
-        "Loop update recovery requires exactly one selected update on every normal/own-continue backedge and none on other exits. Other counter writes, shadows, unsupported syntax/Unicode and selected updates/own continues in protected/monitor/nested-loop bodies refuse lifting. Shutdown and preferences search retain while paths;96 actual native cache-close fixtures expose/correct earlier skip-entry behavior. Cache fixture worker is unstarted, close failures are instrumented; wrong guards, live worker joining, preference search, Windows URL launch and whole-game behavior remain unverified."
+        "Loop update recovery requires exactly one selected update on every normal/own-continue backedge and none on other exits. Other counter writes, shadows, unsupported syntax/Unicode and selected updates/own continues in protected/monitor/nested-loop bodies refuse lifting. Shutdown and preferences search retain while paths;96 actual native cache-close fixtures expose/correct earlier skip-entry behavior. Cache fixture worker is unstarted, close failures are instrumented; wrong guards, live worker joining, preference search, Windows URL launch and whole-game behavior remain unverified.",
+        "Remaining dispatcher fields/service APIs and worker/constructor names are audited against the unchanged d.java plus pd/tk/ie/tg/oa/qe/ch consumers. Original numeric tasks, bit packing, guards, bootstrap reflection checks, ThreadDeath path and monitor scopes remain. Existing helper/cache/socket/shutdown native traces are retained; worker service execution, constructor platform effects, URL/network/desktop operations and whole-game equivalence are not newly verified. Generated sneakyThrow method/parameter already have descriptive identities and are left unchanged."
       ],
       "checks": {
         "ruleBuilderTests": 9,
-        "sourceRefusalGroups": 5,
-        "sourceRefusalScenarios": 15,
+        "sourceRefusalGroups": 8,
+        "sourceRefusalScenarios": 20,
         "textResourceTests": 6,
         "fullReproductionCheck": true,
         "dictionaryReversalByteExact": true
@@ -18692,8 +19948,8 @@
         641
       ],
       "nativeBoundaryIndependentOracle": true,
-      "guardedNamingRules": 2559,
-      "namedLocalDeclarations": 1016,
+      "guardedNamingRules": 2663,
+      "namedLocalDeclarations": 1069,
       "nonselectorDeclarationsPreserved": 20699,
       "generatedSelectorsBefore": 265,
       "generatedSelectorsAfter": 9,
@@ -18731,7 +19987,7 @@
       "typedAssignmentElseWrappersRemoved": 77,
       "nativeComparatorCases": 32768,
       "nativeComparatorTraceSha256": "9be228f7421970f2214c74e8890327f8592f706dc90ccd0d0933e6f2fbe0a604",
-      "referenceRemovalAttribution": "All 20708 declaration identities are preserved after normalizing24 unguarded dispatcher-local ordinal permutations by unique original spelling;129679 references and388 override rows are unchanged. Moving old for-header updates back to their original while paths fixes visitation despite unchanged reference counts. Every2518 prior spelling/name is retained; one task-type evidence string is corrected (URL is4, reverse DNS3).",
+      "referenceRemovalAttribution": "Naming-only pass on the unchanged raw input/decompiler. All2559 previous guarded rules are byte-for-byte preserved;104 additions name remaining dispatcher fields/service APIs, worker/constructor parameters and locals. All20708 declarations,129679 references and388 override rows retain their identities.",
       "genericBooleanCarrierTestGroups": 3,
       "localBooleanCarriersEliminated": 221,
       "localBooleanSnapshotsRetyped": 70,
@@ -18747,30 +20003,30 @@
       "difficultyMethodLinesBefore": 38,
       "difficultyMethodLinesAfter": 38,
       "allGuardedNamesUnchanged": true,
-      "ruleChangesInCurrentPass": 42,
+      "ruleChangesInCurrentPass": 104,
       "genericNestedContinuationTestGroups": 2,
       "nativeNestedContinuationComparisons": 2520,
       "nestedContinuationChangedJavaFiles": 7,
-      "generatedLocalOrdinalsReordered": 24,
+      "generatedLocalOrdinalsReordered": 0,
       "allDeclarationsPreservedAfterOriginalSpellingNormalization": true,
       "generatedBlockLabelsInGeoblox": 0,
       "genericIntegralTailGuardTestGroups": 2,
       "nativeIntegralTailGuardComparisons": 35280,
       "integralTailGuardChangedJavaFiles": 4,
-      "allDeclarationIdentitiesAndSpellingsUnchanged": false,
+      "allDeclarationIdentitiesAndSpellingsUnchanged": true,
       "cachedJvmOperandsNotReevaluated": true,
       "ambiguousPredicateComplementsRefused": true,
       "difficultyCategoryAndRecursiveAdvanceClonesEliminated": true,
       "allPriorGuardedNamesPreserved": true,
-      "namingRulesAddedInCurrentPass": 41,
-      "sourceInputChangedInCurrentPass": true,
+      "namingRulesAddedInCurrentPass": 104,
+      "sourceInputChangedInCurrentPass": false,
       "namedVisualAssetFieldsAdded": 59,
       "namedAssetLoadingMethodsAdded": 6,
       "namedAssetLoadingParametersAdded": 24,
       "namedAssetPreparationAndLookupLocalsAdded": 28,
-      "identifierEditsAddedInCurrentPass": 158,
+      "identifierEditsAddedInCurrentPass": 451,
       "lastStructuralPassVersion": 45,
-      "namingRulesRefinedInCurrentPass": 1,
+      "namingRulesRefinedInCurrentPass": 0,
       "allUnaffectedPriorRulesPreserved": true,
       "namedRenderingClassRulesAdded": 0,
       "namedRenderingMethodRulesAdded": 0,
@@ -18802,128 +20058,7 @@
       "nativeCacheWriteTraceSha256": "e5d3ac6ab42a61da22e44337bc05b64e89e0360d4d51a94256fff69d3a37081d",
       "protectedTerminalArmNativeComparisons": 2240,
       "protectedTerminalArmTestGroups": 3,
-      "sourceDeclarationOrdinalMigrations": [
-        {
-          "before": "L:d.run()V#1",
-          "after": "L:d.run()V#0",
-          "originalName": "stackIn_76_0"
-        },
-        {
-          "before": "L:d.run()V#2",
-          "after": "L:d.run()V#1",
-          "originalName": "decompiledCaughtException"
-        },
-        {
-          "before": "L:d.run()V#3",
-          "after": "L:d.run()V#2",
-          "originalName": "var2"
-        },
-        {
-          "before": "L:d.run()V#4",
-          "after": "L:d.run()V#3",
-          "originalName": "var2_int"
-        },
-        {
-          "before": "L:d.run()V#5",
-          "after": "L:d.run()V#4",
-          "originalName": "var2_ref"
-        },
-        {
-          "before": "L:d.run()V#6",
-          "after": "L:d.run()V#5",
-          "originalName": "var2_ref2"
-        },
-        {
-          "before": "L:d.run()V#7",
-          "after": "L:d.run()V#6",
-          "originalName": "var3"
-        },
-        {
-          "before": "L:d.run()V#8",
-          "after": "L:d.run()V#7",
-          "originalName": "var3_ref"
-        },
-        {
-          "before": "L:d.run()V#9",
-          "after": "L:d.run()V#8",
-          "originalName": "var3_int"
-        },
-        {
-          "before": "L:d.run()V#10",
-          "after": "L:d.run()V#9",
-          "originalName": "var3_ref2"
-        },
-        {
-          "before": "L:d.run()V#11",
-          "after": "L:d.run()V#10",
-          "originalName": "var3_ref3"
-        },
-        {
-          "before": "L:d.run()V#12",
-          "after": "L:d.run()V#11",
-          "originalName": "var4_int"
-        },
-        {
-          "before": "L:d.run()V#13",
-          "after": "L:d.run()V#12",
-          "originalName": "var4"
-        },
-        {
-          "before": "L:d.run()V#0",
-          "after": "L:d.run()V#13",
-          "originalName": "var5"
-        },
-        {
-          "before": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#1",
-          "after": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#0",
-          "originalName": "stackIn_13_0"
-        },
-        {
-          "before": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#2",
-          "after": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#1",
-          "originalName": "decompiledCaughtException"
-        },
-        {
-          "before": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#3",
-          "after": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#2",
-          "originalName": "var4"
-        },
-        {
-          "before": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#4",
-          "after": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#3",
-          "originalName": "var5"
-        },
-        {
-          "before": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#0",
-          "after": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#4",
-          "originalName": "var6"
-        },
-        {
-          "before": "L:d.a(B)V#2",
-          "after": "L:d.a(B)V#1",
-          "originalName": "decompiledCaughtException"
-        },
-        {
-          "before": "L:d.a(B)V#3",
-          "after": "L:d.a(B)V#2",
-          "originalName": "var2"
-        },
-        {
-          "before": "L:d.a(B)V#4",
-          "after": "L:d.a(B)V#3",
-          "originalName": "var2_ref"
-        },
-        {
-          "before": "L:d.a(B)V#5",
-          "after": "L:d.a(B)V#4",
-          "originalName": "var2_ref2"
-        },
-        {
-          "before": "L:d.a(B)V#1",
-          "after": "L:d.a(B)V#5",
-          "originalName": "var2_int"
-        }
-      ],
+      "sourceDeclarationOrdinalMigrations": [],
       "nativeShutdownCases": 84,
       "nativeShutdownTraceSha256": "2fec6ee86681993c79d39ef1e57026f31fd9b0a87b7d7f94a5bddf5af83d6335",
       "genericPlainBlockTailTestGroups": 2,
@@ -18941,7 +20076,7 @@
       "nativeSocketIoCases": 308,
       "nativeSocketIoTraceSha256": "ed8f7d5f5438f4fb39cb3bceca82a861d01f4e08502ca73ba7af8ca475b6292b",
       "allBufferedSocketParametersAndNonselectorLocalsNamed": true,
-      "rawSourceLinesAdded": 8,
+      "rawSourceLinesAdded": 0,
       "namedDispatcherCleanupRulesAdded": {
         "C": 0,
         "F": 7,
@@ -18955,55 +20090,16 @@
       "nativeProtectedCounterCases": 600,
       "nativeProtectedCounterComparisons": 1200,
       "allDispatcherShutdownAndPreferencesParametersAndLocalsNamed": true,
-      "ruleEvidenceRefinementsInCurrentPass": 1
-    },
-    "sourceChange": {
-      "before": {
-        "source": {
-          "repository": "Kreijstal/funorb-decompiled",
-          "commit": "de1fa91e8e6d6ce11229380bbc05b0e343bf5082",
-          "subdirectory": "games/geoblox"
-        },
-        "generators": {
-          "dekoblokoWork": {
-            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
-            "trackedClean": true
-          },
-          "javaTools": {
-            "commit": "3564f5d1f8ec3e288a80decab1b1815cc675c3fa",
-            "trackedClean": true,
-            "sourceArchive": {
-              "sha256": "93e62046b7f1e880f3f7c28449d89b90e64b92c34d7dcdbb8dade76e9e86913f",
-              "reproduce": "git archive --format=tar 3564f5d1f8ec3e288a80decab1b1815cc675c3fa | sha256sum",
-              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
-            }
-          }
-        },
-        "inputTreeSha256": "084346454dabfd60bbdcd5e9edfa05ac3786798eee83a6ce673176cfca80e8af"
+      "ruleEvidenceRefinementsInCurrentPass": 0,
+      "namedDispatcherServiceRulesAdded": {
+        "C": 0,
+        "F": 13,
+        "M": 9,
+        "P": 29,
+        "L": 53
       },
-      "after": {
-        "source": {
-          "repository": "Kreijstal/funorb-decompiled",
-          "commit": "f1fc0338feac7c9140bbdab315b770c17478d822",
-          "subdirectory": "games/geoblox"
-        },
-        "generators": {
-          "dekoblokoWork": {
-            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
-            "trackedClean": true
-          },
-          "javaTools": {
-            "commit": "f9f0838416053d3f6189ae5990365d73b7be6596",
-            "trackedClean": true,
-            "sourceArchive": {
-              "sha256": "4812cac052bc37ad4cf1a36f907bff3dce8a86535f2379f7d7cf2b60bb9f1053",
-              "reproduce": "git archive --format=tar f9f0838416053d3f6189ae5990365d73b7be6596 | sha256sum",
-              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
-            }
-          }
-        },
-        "inputTreeSha256": "e9497d12a451095457234cd1abee1018e845505bf5901b14c7f0eb36988c6c49"
-      }
+      "allDispatcherFieldsAndServiceMethodsNamed": true,
+      "allDispatcherNongeneratedParametersAndLocalsNamed": true
     }
   }
 }

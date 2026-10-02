@@ -5,93 +5,93 @@ import java.io.*;
 
 final class PlatformTaskDispatcher implements Runnable {
     private static String userHomeDirectory;
-    static java.lang.reflect.Method field_v;
+    static java.lang.reflect.Method setFocusCycleRootMethod;
     pa masterCacheIndexFile;
     private PlatformTask taskQueueHead;
-    java.awt.EventQueue field_q;
-    static String field_t;
+    java.awt.EventQueue systemEventQueue;
+    static String javaVersion;
     private PlatformTask taskQueueTail;
     pa randomSeedFile;
-    private static volatile long field_m;
-    private Object field_u;
-    private ie field_w;
+    private static volatile long networkBlockedUntilMillis;
+    private Object reflectiveCursorBackend;
+    private ie microsoftFullscreenBackend;
     private static int cacheVariant;
     pa cacheDataFile;
     pa[] cacheIndexFiles;
     private Thread workerThread;
-    static String field_b;
-    private boolean field_h;
-    static String field_o;
-    private Object field_e;
-    private tg field_a;
-    private boolean field_l;
+    static String osNameLowerCase;
+    private boolean privilegedServicesEnabled;
+    static String javaVendor;
+    private Object reflectiveFullscreenBackend;
+    private tg microsoftCursorBackend;
+    private boolean useMicrosoftVmBackend;
     private boolean shutdownRequested;
     private static String gameCacheName;
-    private static String field_k;
+    private static String osName;
 
-    final PlatformTask a(int param0) {
-        if (param0 != 34) {
-            String var3 = (String) null;
+    final PlatformTask requestDisplayModes(int guard) {
+        if (guard != 34) {
+            String unusedPreferencesSuffix = (String) null;
             PlatformTaskDispatcher.openPreferencesFile((byte) 23, 7, (String) null, (String) null);
         }
         return this.enqueueTask(1, (Object) null, 0, 5, 0);
     }
 
-    final PlatformTask a(java.awt.Frame param0, int param1) {
-        if (param1 != 0) {
+    final PlatformTask requestExitFullscreen(java.awt.Frame frame, int guard) {
+        if (guard != 0) {
             return (PlatformTask) null;
         }
-        return this.enqueueTask(1, param0, 0, 7, 0);
+        return this.enqueueTask(1, frame, 0, 7, 0);
     }
 
-    final boolean b(int param0) {
-        if (param0 != -26098) {
+    final boolean hasFullscreenSupport(int guard) {
+        if (guard != -26098) {
             return false;
         }
-        if (!this.field_h) {
+        if (!this.privilegedServicesEnabled) {
             return false;
         }
-        if (!this.field_l) {
-            return null != this.field_e ? true : false;
+        if (!this.useMicrosoftVmBackend) {
+            return null != this.reflectiveFullscreenBackend ? true : false;
         }
-        return this.field_w != null ? true : false;
+        return this.microsoftFullscreenBackend != null ? true : false;
     }
 
     public final void run() {
         try {
-            int stackIn_76_0 = 0;
-            Throwable decompiledCaughtException = null;
-            Object var2 = null;
-            int var2_int = 0;
-            ThreadDeath var2_ref = null;
-            Throwable var2_ref2 = null;
-            InterruptedException var3 = null;
-            pa var3_ref = null;
-            int var3_int = 0;
-            Exception var3_ref2 = null;
-            bd var3_ref3 = null;
-            int var4_int = 0;
-            String var4 = null;
-            int var5 = 0;
-            java.awt.datatransfer.Transferable var7 = null;
-            String var8 = null;
-            PlatformTask var9 = null;
-            Thread var10 = null;
-            Object[] var11 = null;
-            java.awt.Component var12 = null;
-            java.awt.Frame var13 = null;
-            String var14 = null;
-            java.awt.datatransfer.Clipboard var15 = null;
-            java.awt.datatransfer.Clipboard var16 = null;
-            Object[] var17 = null;
-            Object[] var18 = null;
+            int cursorVisibleInt = 0;
+            Throwable caughtTaskThrowable = null;
+            Object dispatcherOrTaskMonitor = null;
+            int taskType = 0;
+            ThreadDeath fatalThreadDeath = null;
+            Throwable ignoredTaskFailure = null;
+            InterruptedException ignoredWaitInterruption = null;
+            pa openedPreferencesFile = null;
+            int cursorXOrVisibleFlag = 0;
+            Exception urlLaunchFailure = null;
+            bd proxyConnectionFailure = null;
+            int cursorY = 0;
+            String allowedUrlCharacters = null;
+            int urlCharacterIndex = 0;
+            java.awt.datatransfer.Transferable clipboardContents = null;
+            String urlToLaunch = null;
+            PlatformTask task = null;
+            Thread startedThread = null;
+            Object[] customCursorArguments = null;
+            java.awt.Component cursorComponent = null;
+            java.awt.Frame fullscreenFrame = null;
+            String reverseLookupAddress = null;
+            java.awt.datatransfer.Clipboard clipboardForWrite = null;
+            java.awt.datatransfer.Clipboard clipboardForRead = null;
+            Object[] fieldLookupArguments = null;
+            Object[] methodLookupArguments = null;
             L0: while (true) {
-              var2 = this;
-              synchronized (var2) {
+              dispatcherOrTaskMonitor = this;
+              synchronized (dispatcherOrTaskMonitor) {
                 L1: {
                   L2: while (!this.shutdownRequested) {
                     if (this.taskQueueHead != null) {
-                      var9 = this.taskQueueHead;
+                      task = this.taskQueueHead;
                       this.taskQueueHead = this.taskQueueHead.next;
                       if (null == this.taskQueueHead) {
                         this.taskQueueTail = null;
@@ -100,9 +100,9 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     try {
                       this.wait();
-                    } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
-                      decompiledCaughtException = decompiledCaughtParameter0;
-                      var3 = (InterruptedException) (Object) decompiledCaughtException;
+                    } catch (java.lang.InterruptedException waitInterruption) {
+                      caughtTaskThrowable = waitInterruption;
+                      ignoredWaitInterruption = (InterruptedException) (Object) caughtTaskThrowable;
                     }
                   }
                   return;
@@ -110,162 +110,162 @@ final class PlatformTaskDispatcher implements Runnable {
               }
               try {
                 L7: {
-                  var2_int = var9.taskType;
-                  if (1 != var2_int) {
-                    if (var2_int != 22) {
-                      if (var2_int != 2) {
-                        if (4 == var2_int) {
-                          if (oa.a(-12520) < field_m) {
+                  taskType = task.taskType;
+                  if (1 != taskType) {
+                    if (taskType != 22) {
+                      if (taskType != 2) {
+                        if (4 == taskType) {
+                          if (oa.a(-12520) < networkBlockedUntilMillis) {
                             throw new IOException();
                           }
-                          var9.result = new DataInputStream(((java.net.URL) (var9.input)).openStream());
+                          task.result = new DataInputStream(((java.net.URL) (task.input)).openStream());
                         } else {
-                          if (var2_int == 8) {
-                            var18 = (Object[]) (var9.input);
-                            if (this.field_h) {
-                              if (((Class) (var18[0])).getClassLoader() == null) {
+                          if (taskType == 8) {
+                            methodLookupArguments = (Object[]) (task.input);
+                            if (this.privilegedServicesEnabled) {
+                              if (((Class) (methodLookupArguments[0])).getClassLoader() == null) {
                                 throw new SecurityException();
                               }
                             }
-                            var9.result = ((Class) (var18[0])).getDeclaredMethod((String) (var18[1]), (Class[]) (var18[2]));
+                            task.result = ((Class) (methodLookupArguments[0])).getDeclaredMethod((String) (methodLookupArguments[1]), (Class[]) (methodLookupArguments[2]));
                           } else {
-                            if (var2_int == 9) {
-                              var17 = (Object[]) (var9.input);
-                              if (this.field_h) {
-                                if (null == ((Class) (var17[0])).getClassLoader()) {
+                            if (taskType == 9) {
+                              fieldLookupArguments = (Object[]) (task.input);
+                              if (this.privilegedServicesEnabled) {
+                                if (null == ((Class) (fieldLookupArguments[0])).getClassLoader()) {
                                   throw new SecurityException();
                                 }
                               }
-                              var9.result = ((Class) (var17[0])).getDeclaredField((String) (var17[1]));
+                              task.result = ((Class) (fieldLookupArguments[0])).getDeclaredField((String) (fieldLookupArguments[1]));
                             } else {
-                              if (18 == var2_int) {
-                                var16 = java.awt.Toolkit.getDefaultToolkit().getSystemClipboard();
-                                var9.result = var16.getContents((Object) null);
+                              if (18 == taskType) {
+                                clipboardForRead = java.awt.Toolkit.getDefaultToolkit().getSystemClipboard();
+                                task.result = clipboardForRead.getContents((Object) null);
                               } else {
-                                if (var2_int == 19) {
-                                  var7 = (java.awt.datatransfer.Transferable) (var9.input);
-                                  var15 = java.awt.Toolkit.getDefaultToolkit().getSystemClipboard();
-                                  var15.setContents(var7, (java.awt.datatransfer.ClipboardOwner) null);
+                                if (taskType == 19) {
+                                  clipboardContents = (java.awt.datatransfer.Transferable) (task.input);
+                                  clipboardForWrite = java.awt.Toolkit.getDefaultToolkit().getSystemClipboard();
+                                  clipboardForWrite.setContents(clipboardContents, (java.awt.datatransfer.ClipboardOwner) null);
                                 } else {
-                                  if (!this.field_h) {
+                                  if (!this.privilegedServicesEnabled) {
                                     throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
                                   }
-                                  if (var2_int == 3) {
-                                    if (~oa.a(-12520) > ~field_m) {
+                                  if (taskType == 3) {
+                                    if (~oa.a(-12520) > ~networkBlockedUntilMillis) {
                                       throw new IOException();
                                     }
                                     {
-                                      var14 = (255 & var9.firstIntArgument >> 24) + "." + ((var9.firstIntArgument & 16718053) >> 16) + "." + (var9.firstIntArgument >> 8 & 255) + "." + (255 & var9.firstIntArgument);
-                                      var9.result = java.net.InetAddress.getByName(var14).getHostName();
+                                      reverseLookupAddress = (255 & task.firstIntArgument >> 24) + "." + ((task.firstIntArgument & 16718053) >> 16) + "." + (task.firstIntArgument >> 8 & 255) + "." + (255 & task.firstIntArgument);
+                                      task.result = java.net.InetAddress.getByName(reverseLookupAddress).getHostName();
                                     }
                                   } else {
-                                    if (var2_int == 21) {
-                                      if (~oa.a(-12520) > ~field_m) {
+                                    if (taskType == 21) {
+                                      if (~oa.a(-12520) > ~networkBlockedUntilMillis) {
                                         throw new IOException();
                                       }
-                                      var9.result = java.net.InetAddress.getByName((String) (var9.input)).getAddress();
+                                      task.result = java.net.InetAddress.getByName((String) (task.input)).getAddress();
                                     } else {
-                                      if (var2_int != 5) {
-                                        if (6 == var2_int) {
-                                          var13 = new java.awt.Frame("Jagex Full Screen");
-                                          var9.result = var13;
-                                          var13.setResizable(false);
-                                          if (this.field_l) {
-                                            this.field_w.a(8, var9.firstIntArgument >>> 16, var13, var9.secondIntArgument >> 16, var9.firstIntArgument & 65535, var9.secondIntArgument & 65535);
+                                      if (taskType != 5) {
+                                        if (6 == taskType) {
+                                          fullscreenFrame = new java.awt.Frame("Jagex Full Screen");
+                                          task.result = fullscreenFrame;
+                                          fullscreenFrame.setResizable(false);
+                                          if (this.useMicrosoftVmBackend) {
+                                            this.microsoftFullscreenBackend.a(8, task.firstIntArgument >>> 16, fullscreenFrame, task.secondIntArgument >> 16, task.firstIntArgument & 65535, task.secondIntArgument & 65535);
                                           } else {
-                                            Class.forName("pd").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.field_e, new Object[]{var13, new Integer(var9.firstIntArgument >>> 16), new Integer(var9.firstIntArgument & 65535), new Integer(var9.secondIntArgument >> 16), new Integer(var9.secondIntArgument & 65535)});
+                                            Class.forName("pd").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.reflectiveFullscreenBackend, new Object[]{fullscreenFrame, new Integer(task.firstIntArgument >>> 16), new Integer(task.firstIntArgument & 65535), new Integer(task.secondIntArgument >> 16), new Integer(task.secondIntArgument & 65535)});
                                           }
                                         } else {
-                                          if (var2_int == 7) {
-                                            if (this.field_l) {
-                                              this.field_w.a(111, (java.awt.Frame) (var9.input));
+                                          if (taskType == 7) {
+                                            if (this.useMicrosoftVmBackend) {
+                                              this.microsoftFullscreenBackend.a(111, (java.awt.Frame) (task.input));
                                             } else {
-                                              Class.forName("pd").getMethod("exit", new Class[]{}).invoke(this.field_e, new Object[]{});
+                                              Class.forName("pd").getMethod("exit", new Class[]{}).invoke(this.reflectiveFullscreenBackend, new Object[]{});
                                             }
                                           } else {
-                                            if (12 == var2_int) {
-                                              var3_ref = PlatformTaskDispatcher.openPreferencesFile((byte) -103, cacheVariant, gameCacheName, (String) (var9.input));
-                                              var9.result = var3_ref;
+                                            if (12 == taskType) {
+                                              openedPreferencesFile = PlatformTaskDispatcher.openPreferencesFile((byte) -103, cacheVariant, gameCacheName, (String) (task.input));
+                                              task.result = openedPreferencesFile;
                                             } else {
-                                              if (var2_int == 13) {
-                                                var3_ref = PlatformTaskDispatcher.openPreferencesFile((byte) 19, cacheVariant, "", (String) (var9.input));
-                                                var9.result = var3_ref;
+                                              if (taskType == 13) {
+                                                openedPreferencesFile = PlatformTaskDispatcher.openPreferencesFile((byte) 19, cacheVariant, "", (String) (task.input));
+                                                task.result = openedPreferencesFile;
                                               } else {
-                                                if (this.field_h) {
-                                                  if (var2_int == 14) {
-                                                    var3_int = var9.firstIntArgument;
-                                                    var4_int = var9.secondIntArgument;
-                                                    if (!this.field_l) {
-                                                      Class.forName("tk").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.field_u, new Object[]{new Integer(var3_int), new Integer(var4_int)});
+                                                if (this.privilegedServicesEnabled) {
+                                                  if (taskType == 14) {
+                                                    cursorXOrVisibleFlag = task.firstIntArgument;
+                                                    cursorY = task.secondIntArgument;
+                                                    if (!this.useMicrosoftVmBackend) {
+                                                      Class.forName("tk").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.reflectiveCursorBackend, new Object[]{new Integer(cursorXOrVisibleFlag), new Integer(cursorY)});
                                                       break L7;
                                                     }
-                                                    this.field_a.a(-71, var4_int, var3_int);
+                                                    this.microsoftCursorBackend.a(-71, cursorY, cursorXOrVisibleFlag);
                                                     break L7;
                                                   }
                                                 }
-                                                if (this.field_h) {
-                                                  if (var2_int == 15) {
-                                                    stackIn_76_0 = (var9.firstIntArgument == 0) ? 0 : 1;
-                                                    var3_int = stackIn_76_0;
-                                                    var12 = (java.awt.Component) (var9.input);
-                                                    if (this.field_l) {
-                                                      this.field_a.a(12758, var3_int != 0, var12);
+                                                if (this.privilegedServicesEnabled) {
+                                                  if (taskType == 15) {
+                                                    cursorVisibleInt = (task.firstIntArgument == 0) ? 0 : 1;
+                                                    cursorXOrVisibleFlag = cursorVisibleInt;
+                                                    cursorComponent = (java.awt.Component) (task.input);
+                                                    if (this.useMicrosoftVmBackend) {
+                                                      this.microsoftCursorBackend.a(12758, cursorXOrVisibleFlag != 0, cursorComponent);
                                                       break L7;
                                                     }
-                                                    Class.forName("tk").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.field_u, new Object[]{var12, new Boolean(var3_int != 0)});
+                                                    Class.forName("tk").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.reflectiveCursorBackend, new Object[]{cursorComponent, new Boolean(cursorXOrVisibleFlag != 0)});
                                                     break L7;
                                                   }
                                                 }
-                                                if (!this.field_l) {
-                                                  if (var2_int == 17) {
-                                                    var11 = (Object[]) (var9.input);
-                                                    Class.forName("tk").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_u, new Object[]{var11[0], var11[1], new Integer(var9.firstIntArgument), new Integer(var9.secondIntArgument), var11[2]});
+                                                if (!this.useMicrosoftVmBackend) {
+                                                  if (taskType == 17) {
+                                                    customCursorArguments = (Object[]) (task.input);
+                                                    Class.forName("tk").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.reflectiveCursorBackend, new Object[]{customCursorArguments[0], customCursorArguments[1], new Integer(task.firstIntArgument), new Integer(task.secondIntArgument), customCursorArguments[2]});
                                                     break L7;
                                                   }
                                                 }
-                                                if (var2_int != 16) {
+                                                if (taskType != 16) {
                                                   throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
                                                 }
                                                 try {
                                                   L14: {
-                                                    if (!field_b.startsWith("win")) {
+                                                    if (!osNameLowerCase.startsWith("win")) {
                                                       throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
                                                     }
                                                     {
-                                                      var8 = (String) (var9.input);
-                                                      if (!var8.startsWith("http://")) {
-                                                        if (!var8.startsWith("https://")) {
+                                                      urlToLaunch = (String) (task.input);
+                                                      if (!urlToLaunch.startsWith("http://")) {
+                                                        if (!urlToLaunch.startsWith("https://")) {
                                                           throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
                                                         }
                                                       }
-                                                      var4 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
-                                                      var5 = 0;
-                                                      L16: while (var5 < var8.length()) {
-                                                        if (-1 == var4.indexOf((int) var8.charAt(var5))) {
+                                                      allowedUrlCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
+                                                      urlCharacterIndex = 0;
+                                                      L16: while (urlCharacterIndex < urlToLaunch.length()) {
+                                                        if (-1 == allowedUrlCharacters.indexOf((int) urlToLaunch.charAt(urlCharacterIndex))) {
                                                           throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
                                                         }
-                                                        var5++;
+                                                        urlCharacterIndex++;
                                                       }
-                                                      Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var8 + "\"");
-                                                      var9.result = null;
+                                                      Runtime.getRuntime().exec("cmd /c start \"j\" \"" + urlToLaunch + "\"");
+                                                      task.result = null;
                                                       break L14;
                                                     }
                                                   }
-                                                } catch (java.lang.Exception decompiledCaughtParameter1) {
-                                                  decompiledCaughtException = decompiledCaughtParameter1;
-                                                  var3_ref2 = (Exception) (Object) decompiledCaughtException;
-                                                  var9.result = var3_ref2;
-                                                  throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(var3_ref2);
+                                                } catch (java.lang.Exception caughtUrlLaunchFailure) {
+                                                  caughtTaskThrowable = caughtUrlLaunchFailure;
+                                                  urlLaunchFailure = (Exception) (Object) caughtTaskThrowable;
+                                                  task.result = urlLaunchFailure;
+                                                  throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(urlLaunchFailure);
                                                 }
                                               }
                                             }
                                           }
                                         }
                                       } else {
-                                        if (!this.field_l) {
-                                          var9.result = Class.forName("pd").getMethod("listmodes", new Class[]{}).invoke(this.field_e, new Object[]{});
+                                        if (!this.useMicrosoftVmBackend) {
+                                          task.result = Class.forName("pd").getMethod("listmodes", new Class[]{}).invoke(this.reflectiveFullscreenBackend, new Object[]{});
                                         } else {
-                                          var9.result = this.field_w.a(8);
+                                          task.result = this.microsoftFullscreenBackend.a(8);
                                         }
                                       }
                                     }
@@ -276,61 +276,61 @@ final class PlatformTaskDispatcher implements Runnable {
                           }
                         }
                       } else {
-                        var10 = new Thread((Runnable) (var9.input));
-                        var10.setDaemon(true);
-                        var10.start();
-                        var10.setPriority(var9.firstIntArgument);
-                        var9.result = var10;
+                        startedThread = new Thread((Runnable) (task.input));
+                        startedThread.setDaemon(true);
+                        startedThread.start();
+                        startedThread.setPriority(task.firstIntArgument);
+                        task.result = startedThread;
                       }
                     } else {
-                      if (oa.a(-12520) < field_m) {
+                      if (oa.a(-12520) < networkBlockedUntilMillis) {
                         throw new IOException();
                       }
                       try {
                           if (false) throw (bd) null;
-                        var9.result = mk.a(-43, (String) (var9.input), var9.firstIntArgument).b(0);
-                      } catch (bd decompiledCaughtParameter2) {
-                        decompiledCaughtException = decompiledCaughtParameter2;
-                        var3_ref3 = (bd) (Object) decompiledCaughtException;
-                        var9.result = var3_ref3.getMessage();
-                        throw var3_ref3;
+                        task.result = mk.a(-43, (String) (task.input), task.firstIntArgument).b(0);
+                      } catch (bd caughtProxyConnectionFailure) {
+                        caughtTaskThrowable = caughtProxyConnectionFailure;
+                        proxyConnectionFailure = (bd) (Object) caughtTaskThrowable;
+                        task.result = proxyConnectionFailure.getMessage();
+                        throw proxyConnectionFailure;
                       }
                     }
                   } else {
-                    if (~oa.a(-12520) > ~field_m) {
+                    if (~oa.a(-12520) > ~networkBlockedUntilMillis) {
                       throw new IOException();
                     }
-                    var9.result = new java.net.Socket(java.net.InetAddress.getByName((String) (var9.input)), var9.firstIntArgument);
+                    task.result = new java.net.Socket(java.net.InetAddress.getByName((String) (task.input)), task.firstIntArgument);
                   }
                 }
-                var9.status = 1;
-              } catch (java.lang.ThreadDeath decompiledCaughtParameter3) {
-                decompiledCaughtException = decompiledCaughtParameter3;
-                var2_ref = (ThreadDeath) (Object) decompiledCaughtException;
-                throw var2_ref;
-              } catch (java.lang.Throwable decompiledCaughtParameter4) {
-                decompiledCaughtException = decompiledCaughtParameter4;
-                var2_ref2 = decompiledCaughtException;
-                var9.status = 2;
+                task.status = 1;
+              } catch (java.lang.ThreadDeath caughtThreadDeath) {
+                caughtTaskThrowable = caughtThreadDeath;
+                fatalThreadDeath = (ThreadDeath) (Object) caughtTaskThrowable;
+                throw fatalThreadDeath;
+              } catch (java.lang.Throwable caughtTaskFailure) {
+                caughtTaskThrowable = caughtTaskFailure;
+                ignoredTaskFailure = caughtTaskThrowable;
+                task.status = 2;
               }
-              var2 = var9;
-              synchronized (var2) {
-                var9.notify();
+              dispatcherOrTaskMonitor = task;
+              synchronized (dispatcherOrTaskMonitor) {
+                task.notify();
               }
               continue L0;
             }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+        } catch (RuntimeException | Error uncheckedWorkerFailure) {
+            throw uncheckedWorkerFailure;
+        } catch (Throwable checkedWorkerFailure) {
+            throw new RuntimeException(checkedWorkerFailure);
         }
     }
 
-    private final PlatformTask a(int param0, int param1, boolean param2, String param3) {
-        if (param0 != 0) {
+    private final PlatformTask requestSocketInternal(int guard, int port, boolean useProxy, String host) {
+        if (guard != 0) {
             this.cacheDataFile = (pa) null;
         }
-        return this.enqueueTask(1, param3, param1, param2 ? 22 : 1, 0);
+        return this.enqueueTask(1, host, port, useProxy ? 22 : 1, 0);
     }
 
     final PlatformTask startThread(Runnable runnable, int guard, int priority) {
@@ -404,7 +404,7 @@ final class PlatformTaskDispatcher implements Runnable {
               this.shutdownRequested = true;
               if (guard != 13) {
                 unusedGuardHost = (String) null;
-                ignoredGuardSocketTask = this.a(-99, 45, true, (String) null);
+                ignoredGuardSocketTask = this.requestSocketInternal(-99, 45, true, (String) null);
               }
               this.notifyAll();
             }
@@ -465,25 +465,25 @@ final class PlatformTaskDispatcher implements Runnable {
         }
     }
 
-    final PlatformTask a(int param0, String param1, boolean param2) {
-        if (param2) {
-            this.a(82);
+    final PlatformTask requestSocket(int port, String host, boolean guard) {
+        if (guard) {
+            this.requestDisplayModes(82);
         }
-        return this.a(0, param0, false, param1);
+        return this.requestSocketInternal(0, port, false, host);
     }
 
-    final PlatformTask a(int param0, int param1, int param2, int param3, int param4) {
-        if (param1 != -1743550128) {
+    final PlatformTask requestEnterFullscreen(int height, int guard, int refreshRate, int bitDepth, int width) {
+        if (guard != -1743550128) {
             return (PlatformTask) null;
         }
-        return this.enqueueTask(param1 ^ -1743550127, (Object) null, param0 + (param4 << 16), 6, (param3 << 16) + param2);
+        return this.enqueueTask(guard ^ -1743550127, (Object) null, height + (width << 16), 6, (bitDepth << 16) + refreshRate);
     }
 
-    final PlatformTask a(Class param0, int param1, String param2) {
-        if (param1 != 0) {
-            this.field_w = (ie) null;
+    final PlatformTask requestDeclaredField(Class targetClass, int guard, String fieldName) {
+        if (guard != 0) {
+            this.microsoftFullscreenBackend = (ie) null;
         }
-        return this.enqueueTask(1, new Object[]{param0, param2}, 0, 9, 0);
+        return this.enqueueTask(1, new Object[]{targetClass, fieldName}, 0, 9, 0);
     }
 
     private final PlatformTask enqueueTask(int guard, Object input, int firstIntArgument, int taskType, int secondIntArgument) {
@@ -514,151 +514,151 @@ final class PlatformTaskDispatcher implements Runnable {
         }
     }
 
-    final PlatformTask a(String param0, int param1, Class[] param2, Class param3) {
-        if (param1 >= -118) {
-            this.field_e = (Object) null;
+    final PlatformTask requestDeclaredMethod(String methodName, int guard, Class[] parameterTypes, Class targetClass) {
+        if (guard >= -118) {
+            this.reflectiveFullscreenBackend = (Object) null;
         }
-        return this.enqueueTask(1, new Object[]{param3, param0, param2}, 0, 8, 0);
+        return this.enqueueTask(1, new Object[]{targetClass, methodName, parameterTypes}, 0, 8, 0);
     }
 
-    final PlatformTask a(int param0, java.net.URL param1) {
-        if (param0 != -14) {
+    final PlatformTask requestUrlStream(int guard, java.net.URL url) {
+        if (guard != -14) {
             return (PlatformTask) null;
         }
-        return this.enqueueTask(1, param1, 0, 4, 0);
+        return this.enqueueTask(1, url, 0, 4, 0);
     }
 
-    PlatformTaskDispatcher(int param0, String param1, int param2, boolean param3) throws Exception {
-        int var5_int = 0;
-        Exception exception = null;
-        Throwable throwable = null;
-        Object stackIn_2_0 = null;
-        Object stackIn_3_0 = null;
-        boolean stackIn_3_1 = false;
-        Throwable decompiledCaughtException = null;
-        ie var6 = null;
+    PlatformTaskDispatcher(int initialCacheVariant, String gameName, int cacheIndexCount, boolean privilegedServicesEnabled) throws Exception {
+        int cacheIndex = 0;
+        Exception ignoredSetupException = null;
+        Throwable ignoredSetupThrowable = null;
+        Object unusedDispatcherSnapshot = null;
+        Object unusedServiceOwnerSnapshot = null;
+        boolean privilegedServicesFlag = false;
+        Throwable caughtSetupThrowable = null;
+        ie createdMicrosoftFullscreenBackend = null;
         this.taskQueueHead = null;
         this.randomSeedFile = null;
         this.cacheDataFile = null;
         this.taskQueueTail = null;
         this.masterCacheIndexFile = null;
-        this.field_l = false;
-        this.field_h = false;
+        this.useMicrosoftVmBackend = false;
+        this.privilegedServicesEnabled = false;
         this.shutdownRequested = false;
-        gameCacheName = param1;
-        stackIn_2_0 = this;
+        gameCacheName = gameName;
+        unusedDispatcherSnapshot = this;
 
-        if (!param3) {
-          stackIn_3_0 = this;
-          stackIn_3_1 = false;
+        if (!privilegedServicesEnabled) {
+          unusedServiceOwnerSnapshot = this;
+          privilegedServicesFlag = false;
         } else {
-          stackIn_3_0 = this;
-          stackIn_3_1 = true;
+          unusedServiceOwnerSnapshot = this;
+          privilegedServicesFlag = true;
         }
-        ((PlatformTaskDispatcher) (this)).field_h = stackIn_3_1;
-        field_o = "Unknown";
-        field_t = "1.1";
-        cacheVariant = param0;
+        ((PlatformTaskDispatcher) (this)).privilegedServicesEnabled = privilegedServicesFlag;
+        javaVendor = "Unknown";
+        javaVersion = "1.1";
+        cacheVariant = initialCacheVariant;
         try {
-          field_o = System.getProperty("java.vendor");
-          field_t = System.getProperty("java.version");
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          exception = (Exception) (Object) decompiledCaughtException;
+          javaVendor = System.getProperty("java.vendor");
+          javaVersion = System.getProperty("java.version");
+        } catch (java.lang.Exception javaPropertiesFailure) {
+          caughtSetupThrowable = javaPropertiesFailure;
+          ignoredSetupException = (Exception) (Object) caughtSetupThrowable;
         }
-        if (field_o.toLowerCase().indexOf("microsoft") != -1) {
-          this.field_l = true;
+        if (javaVendor.toLowerCase().indexOf("microsoft") != -1) {
+          this.useMicrosoftVmBackend = true;
         }
         try {
-          field_k = System.getProperty("os.name");
-        } catch (java.lang.Exception decompiledCaughtParameter1) {
-          decompiledCaughtException = decompiledCaughtParameter1;
-          exception = (Exception) (Object) decompiledCaughtException;
-          field_k = "Unknown";
+          osName = System.getProperty("os.name");
+        } catch (java.lang.Exception osNameFailure) {
+          caughtSetupThrowable = osNameFailure;
+          ignoredSetupException = (Exception) (Object) caughtSetupThrowable;
+          osName = "Unknown";
         }
-        field_b = field_k.toLowerCase();
+        osNameLowerCase = osName.toLowerCase();
         try {
           System.getProperty("os.arch").toLowerCase();
-        } catch (java.lang.Exception decompiledCaughtParameter2) {
-          decompiledCaughtException = decompiledCaughtParameter2;
-          exception = (Exception) (Object) decompiledCaughtException;
+        } catch (java.lang.Exception osArchitectureFailure) {
+          caughtSetupThrowable = osArchitectureFailure;
+          ignoredSetupException = (Exception) (Object) caughtSetupThrowable;
         }
         try {
           System.getProperty("os.version").toLowerCase();
-        } catch (java.lang.Exception decompiledCaughtParameter3) {
-          decompiledCaughtException = decompiledCaughtParameter3;
-          exception = (Exception) (Object) decompiledCaughtException;
+        } catch (java.lang.Exception osVersionFailure) {
+          caughtSetupThrowable = osVersionFailure;
+          ignoredSetupException = (Exception) (Object) caughtSetupThrowable;
         }
         try {
           userHomeDirectory = System.getProperty("user.home");
           if (userHomeDirectory != null) {
             userHomeDirectory = userHomeDirectory + "/";
           }
-        } catch (java.lang.Exception decompiledCaughtParameter4) {
-          decompiledCaughtException = decompiledCaughtParameter4;
-          exception = (Exception) (Object) decompiledCaughtException;
+        } catch (java.lang.Exception homeDirectoryFailure) {
+          caughtSetupThrowable = homeDirectoryFailure;
+          ignoredSetupException = (Exception) (Object) caughtSetupThrowable;
         }
         if (null == userHomeDirectory) {
           userHomeDirectory = "~/";
         }
         try {
-          this.field_q = java.awt.Toolkit.getDefaultToolkit().getSystemEventQueue();
-        } catch (java.lang.Throwable decompiledCaughtParameter5) {
-          decompiledCaughtException = decompiledCaughtParameter5;
-          throwable = decompiledCaughtException;
+          this.systemEventQueue = java.awt.Toolkit.getDefaultToolkit().getSystemEventQueue();
+        } catch (java.lang.Throwable eventQueueFailure) {
+          caughtSetupThrowable = eventQueueFailure;
+          ignoredSetupThrowable = caughtSetupThrowable;
         }
-        if (!this.field_l) {
+        if (!this.useMicrosoftVmBackend) {
           try {
             Class.forName("java.awt.Component").getDeclaredMethod("setFocusTraversalKeysEnabled", new Class[]{Boolean.TYPE});
-          } catch (java.lang.Exception decompiledCaughtParameter6) {
-            decompiledCaughtException = decompiledCaughtParameter6;
-            exception = (Exception) (Object) decompiledCaughtException;
+          } catch (java.lang.Exception focusTraversalLookupFailure) {
+            caughtSetupThrowable = focusTraversalLookupFailure;
+            ignoredSetupException = (Exception) (Object) caughtSetupThrowable;
           }
           try {
-            field_v = Class.forName("java.awt.Container").getDeclaredMethod("setFocusCycleRoot", new Class[]{Boolean.TYPE});
-          } catch (java.lang.Exception decompiledCaughtParameter7) {
-            decompiledCaughtException = decompiledCaughtParameter7;
-            exception = (Exception) (Object) decompiledCaughtException;
+            setFocusCycleRootMethod = Class.forName("java.awt.Container").getDeclaredMethod("setFocusCycleRoot", new Class[]{Boolean.TYPE});
+          } catch (java.lang.Exception focusCycleRootLookupFailure) {
+            caughtSetupThrowable = focusCycleRootLookupFailure;
+            ignoredSetupException = (Exception) (Object) caughtSetupThrowable;
           }
         }
         L21: {
           aj.a((byte) 66, gameCacheName, cacheVariant);
-          if (this.field_h) {
+          if (this.privilegedServicesEnabled) {
             this.randomSeedFile = new pa(aj.a((String) null, -27533, "random.dat", cacheVariant), "rw", 25L);
             this.cacheDataFile = new pa(aj.a("main_file_cache.dat2", (byte) -116), "rw", 314572800L);
             this.masterCacheIndexFile = new pa(aj.a("main_file_cache.idx255", (byte) -77), "rw", 1048576L);
-            this.cacheIndexFiles = new pa[param2];
-            for (var5_int = 0; var5_int < param2; var5_int++) {
-              this.cacheIndexFiles[var5_int] = new pa(aj.a("main_file_cache.idx" + var5_int, (byte) -104), "rw", 1048576L);
+            this.cacheIndexFiles = new pa[cacheIndexCount];
+            for (cacheIndex = 0; cacheIndex < cacheIndexCount; cacheIndex++) {
+              this.cacheIndexFiles[cacheIndex] = new pa(aj.a("main_file_cache.idx" + cacheIndex, (byte) -104), "rw", 1048576L);
             }
-            if (this.field_l) {
+            if (this.useMicrosoftVmBackend) {
               try {
                 Class.forName("of").newInstance();
-              } catch (java.lang.Throwable decompiledCaughtParameter8) {
-                decompiledCaughtException = decompiledCaughtParameter8;
-                throwable = decompiledCaughtException;
+              } catch (java.lang.Throwable microsoftCompatibilitySetupFailure) {
+                caughtSetupThrowable = microsoftCompatibilitySetupFailure;
+                ignoredSetupThrowable = caughtSetupThrowable;
               }
             }
             try {
-              if (this.field_l) {
-                var6 = new ie();
-                this.field_w = var6;
+              if (this.useMicrosoftVmBackend) {
+                createdMicrosoftFullscreenBackend = new ie();
+                this.microsoftFullscreenBackend = createdMicrosoftFullscreenBackend;
               } else {
-                this.field_e = Class.forName("pd").newInstance();
+                this.reflectiveFullscreenBackend = Class.forName("pd").newInstance();
               }
-            } catch (java.lang.Throwable decompiledCaughtParameter9) {
-              decompiledCaughtException = decompiledCaughtParameter9;
-              throwable = decompiledCaughtException;
+            } catch (java.lang.Throwable fullscreenBackendSetupFailure) {
+              caughtSetupThrowable = fullscreenBackendSetupFailure;
+              ignoredSetupThrowable = caughtSetupThrowable;
             }
             try {
-              if (!this.field_l) {
-                this.field_u = Class.forName("tk").newInstance();
+              if (!this.useMicrosoftVmBackend) {
+                this.reflectiveCursorBackend = Class.forName("tk").newInstance();
               } else {
-                this.field_a = new tg();
+                this.microsoftCursorBackend = new tg();
               }
-            } catch (java.lang.Throwable decompiledCaughtParameter10) {
-              decompiledCaughtException = decompiledCaughtParameter10;
-              throwable = decompiledCaughtException;
+            } catch (java.lang.Throwable cursorBackendSetupFailure) {
+              caughtSetupThrowable = cursorBackendSetupFailure;
+              ignoredSetupThrowable = caughtSetupThrowable;
             }
             break L21;
           }
@@ -671,7 +671,7 @@ final class PlatformTaskDispatcher implements Runnable {
     }
 
     static {
-        field_m = 0L;
+        networkBlockedUntilMillis = 0L;
     }
 
     @SuppressWarnings("unchecked")

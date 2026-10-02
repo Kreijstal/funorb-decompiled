@@ -124,7 +124,7 @@ final class pg {
                               var12[var18] = ag.a(var10[var18], false);
                               var18++;
                             }
-                            var19.field_i[var5] = param1.a(var8, -126, var12, ag.a(var21, false));
+                            var19.field_i[var5] = param1.requestDeclaredMethod(var8, -126, var12, ag.a(var21, false));
                             var19.field_o[var5] = var22;
                             break L3;
                           }
@@ -140,7 +140,7 @@ final class pg {
                       }
                       var19.field_k[var5] = var6_int;
                       var19.field_g[var5] = var9;
-                      var19.field_n[var5] = param1.a(ag.a(var16, false), 0, var17);
+                      var19.field_n[var5] = param1.requestDeclaredField(ag.a(var16, false), 0, var17);
                     }
                     decompiledRegionSelector0 = 0;
                   }

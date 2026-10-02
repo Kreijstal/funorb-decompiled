@@ -163,7 +163,7 @@ final class GameplaySession {
         var4 = Geoblox.field_C;
         try {
           try {
-            if (!PlatformTaskDispatcher.field_b.startsWith("win")) {
+            if (!PlatformTaskDispatcher.osNameLowerCase.startsWith("win")) {
               return false;
             }
             if (param1) {

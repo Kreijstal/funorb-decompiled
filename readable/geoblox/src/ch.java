@@ -323,15 +323,15 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                   L2: {
                     L3: {
                       L4: {
-                        if (PlatformTaskDispatcher.field_o != null) {
-                          var1 = PlatformTaskDispatcher.field_o.toLowerCase();
+                        if (PlatformTaskDispatcher.javaVendor != null) {
+                          var1 = PlatformTaskDispatcher.javaVendor.toLowerCase();
                           if (-1 == ((String) (var1)).indexOf("sun")) {
                             if (((String) (var1)).indexOf("apple") == -1) {
                               break L4;
                             }
                           }
                           L6: {
-                            var2 = PlatformTaskDispatcher.field_t;
+                            var2 = PlatformTaskDispatcher.javaVersion;
                             if (!var2.equals("1.1")) {
                               if (!var2.startsWith("1.1.")) {
                                 if (!var2.equals("1.2")) {
@@ -391,18 +391,18 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                           }
                         }
                       }
-                      if (PlatformTaskDispatcher.field_t == null) {
+                      if (PlatformTaskDispatcher.javaVersion == null) {
                         break L2;
                       }
-                      stackIn_66_0 = PlatformTaskDispatcher.field_t.startsWith("1.");
+                      stackIn_66_0 = PlatformTaskDispatcher.javaVersion.startsWith("1.");
                     }
                     if (stackIn_66_0) {
                       var1_int = 2;
                       var2_int = 0;
                       L10: while (true) {
                         L11: {
-                          if (~PlatformTaskDispatcher.field_t.length() < ~var1_int) {
-                            var3 = PlatformTaskDispatcher.field_t.charAt(var1_int);
+                          if (~PlatformTaskDispatcher.javaVersion.length() < ~var1_int) {
+                            var3 = PlatformTaskDispatcher.javaVersion.charAt(var1_int);
                             stackIn_78_0 = var3;
 
                             stackIn_78_1 = 48;
@@ -435,7 +435,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                   if (null != kg.field_m) {
                     var1 = kg.field_m;
                   }
-                  var2_ref = PlatformTaskDispatcher.field_v;
+                  var2_ref = PlatformTaskDispatcher.setFocusCycleRootMethod;
                   if (null != var2_ref) {
                     try {
                       var2_ref.invoke(var1, new Object[]{Boolean.TRUE});

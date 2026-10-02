@@ -60,12 +60,12 @@ final class vi extends hk {
         int[] var10 = null;
         var7 = Geoblox.field_C;
         try {
-          if (!param1.b(-26098)) {
+          if (!param1.hasFullscreenSupport(-26098)) {
             stackIn_3_0 = new rj[]{};
             return stackIn_3_0;
           }
           {
-            var8 = param1.a(34);
+            var8 = param1.requestDisplayModes(34);
             L0: while (var8.status == 0) {
               bc.a(0, 10L);
             }

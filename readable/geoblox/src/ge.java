@@ -317,7 +317,7 @@ final class ge {
             }
             try {
               if (qh.field_J == 0) {
-                gj.field_s = ph.field_i.a(vg.field_a, GameplaySession.field_z, false);
+                gj.field_s = ph.field_i.requestSocket(vg.field_a, GameplaySession.field_z, false);
                 qh.field_J = qh.field_J + 1;
               }
               if (qh.field_J == 1) {

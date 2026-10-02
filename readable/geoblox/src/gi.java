@@ -253,7 +253,7 @@ final class gi implements Iterable {
                     stackIn_14_5 = (StringBuilder) ((Object) stackIn_13_5);
                     stackIn_14_6 = uk.field_p;
                   }
-                  var4 = ((PlatformTaskDispatcher) (Object) stackIn_14_0).a(stackIn_14_1, new java.net.URL(stackIn_14_4, ((StringBuilder) (Object) stackIn_14_5).append(stackIn_14_6).append("&v1=").append(PlatformTaskDispatcher.field_o).append("&v2=").append(PlatformTaskDispatcher.field_t).append("&e=").append(var9).toString()));
+                  var4 = ((PlatformTaskDispatcher) (Object) stackIn_14_0).requestUrlStream(stackIn_14_1, new java.net.URL(stackIn_14_4, ((StringBuilder) (Object) stackIn_14_5).append(stackIn_14_6).append("&v1=").append(PlatformTaskDispatcher.javaVendor).append("&v2=").append(PlatformTaskDispatcher.javaVersion).append("&e=").append(var9).toString()));
                   L5: while (var4.status == 0) {
                     bc.a(param2 - 125, 1L);
                   }

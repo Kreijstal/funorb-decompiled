@@ -74,7 +74,7 @@ final class wg implements Runnable {
         }
         if (this.field_l == 0) {
           if (null == this.field_f) {
-            this.field_f = this.field_b.a(-14, this.field_h);
+            this.field_f = this.field_b.requestUrlStream(-14, this.field_h);
           }
           if (0 == this.field_f.status) {
             return false;
@@ -87,7 +87,7 @@ final class wg implements Runnable {
         }
         if (this.field_l == 1) {
           if (this.field_k == null) {
-            this.field_k = this.field_b.a(443, this.field_h.getHost(), false);
+            this.field_k = this.field_b.requestSocket(443, this.field_h.getHost(), false);
           }
           if (this.field_k.status == 0) {
             return false;

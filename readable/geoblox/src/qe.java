@@ -26,7 +26,7 @@ final class qe {
         PlatformTask var11 = null;
         var9 = Geoblox.field_C;
         try {
-          if (!param4.b(-26098)) {
+          if (!param4.hasFullscreenSupport(-26098)) {
             return null;
           }
           {
@@ -66,7 +66,7 @@ final class qe {
                 }
               }
             }
-            var11 = param4.a(param2, param1 ^ 1743550127, param5, param0, param3);
+            var11 = param4.requestEnterFullscreen(param2, param1 ^ 1743550127, param5, param0, param3);
             L5: while (var11.status == 0) {
               bc.a(0, 10L);
             }

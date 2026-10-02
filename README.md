@@ -68,7 +68,9 @@ use structured control flow, but opaque names, generated carriers and shared
 joins remain. Earlier structural and native-behavior investigations are recorded
 in the readable reports; they describe their individual historical passes. The
 single current manifest holds current naming pins and verification limits, with
-prior snapshots in Git.
+prior snapshots in Git. `node readable/reproduce-geoblox.mjs --update` refreshes
+the same current export after staging and verification; keep the one current
+manifest rather than creating dated JSON files.
 
 ## GeoBlox source refresh
 

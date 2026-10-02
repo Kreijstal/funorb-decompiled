@@ -166,7 +166,7 @@ final class jk {
         var4 = Geoblox.field_C;
         try {
           L0: while (true) {
-            var3 = param2.a(param0, 0);
+            var3 = param2.requestExitFullscreen(param0, 0);
             L1: while (var3.status == 0) {
               bc.a(0, 10L);
             }

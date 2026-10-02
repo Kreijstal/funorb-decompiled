@@ -213,12 +213,12 @@ final class wj extends sh {
         int var5 = 0;
         var5 = Geoblox.field_C;
         try {
-          if (param0.field_q == null) {
+          if (param0.systemEventQueue == null) {
             return;
           }
           {
             L0: for (var3_int = 0; var3_int < 50; var3_int++) {
-              if (null != param0.field_q.peekEvent()) {
+              if (null != param0.systemEventQueue.peekEvent()) {
                 bc.a(0, 1L);
                 continue L0;
               }
@@ -227,7 +227,7 @@ final class wj extends sh {
             var4 = 11 / ((param1 - 2) / 48);
             try {
               if (param2 != null) {
-                param0.field_q.postEvent((java.awt.AWTEvent) ((Object) new java.awt.event.ActionEvent(param2, 1001, "dummy")));
+                param0.systemEventQueue.postEvent((java.awt.AWTEvent) ((Object) new java.awt.event.ActionEvent(param2, 1001, "dummy")));
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
