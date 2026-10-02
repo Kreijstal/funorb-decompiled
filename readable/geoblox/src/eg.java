@@ -9,7 +9,7 @@ final class eg extends IntrusiveNode {
     int field_m;
     static Sprite[] pointsPanelGlowFrames;
     PlatformTask[] field_i;
-    static volatile int field_h;
+    static volatile int livePointerY;
     byte[][][] field_o;
     PlatformTask[] field_n;
     int field_f;
@@ -138,6 +138,6 @@ final class eg extends IntrusiveNode {
     }
 
     static {
-        field_h = -1;
+        livePointerY = -1;
     }
 }

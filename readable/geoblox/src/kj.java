@@ -7,7 +7,7 @@ final class kj extends ia {
     private jb field_C;
     private int[] field_z;
     int[] field_u;
-    static boolean[] field_o;
+    static boolean[] heldInternalKeys;
     static Sprite jewelsForegroundSprite;
     private int field_T;
     private int[] field_r;
@@ -24,7 +24,7 @@ final class kj extends ia {
     private int field_R;
     private int[] field_y;
     private int[] field_s;
-    static int[] field_O;
+    static int[] queuedKeyboardEventCodes;
     private int[] field_Q;
     static int[] field_G;
     private int[] field_F;
@@ -654,7 +654,7 @@ final class kj extends ia {
         int var6 = 0;
         try {
           if (param1 != -70) {
-            field_o = (boolean[]) null;
+            heldInternalKeys = (boolean[]) null;
           }
           L1: {
             var4_int = param0.field_i.samples.length;
@@ -1085,8 +1085,8 @@ final class kj extends ia {
 
     public static void b(boolean param0) {
         jewelsForegroundSprite = null;
-        field_O = null;
-        field_o = null;
+        queuedKeyboardEventCodes = null;
+        heldInternalKeys = null;
         field_G = null;
         if (param0) {
             kj.c(-77);
@@ -1329,10 +1329,10 @@ final class kj extends ia {
     final static void c(int param0) {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
-        if (null != je.field_j) {
-          var1 = je.field_j;
+        if (null != je.keyboardListener) {
+          var1 = je.keyboardListener;
           synchronized (var1) {
-            je.field_j = null;
+            je.keyboardListener = null;
           }
         }
         if (param0 != -11099) {
@@ -1402,8 +1402,8 @@ final class kj extends ia {
 
     static {
         field_J = 0;
-        field_o = new boolean[112];
-        field_O = new int[128];
+        heldInternalKeys = new boolean[112];
+        queuedKeyboardEventCodes = new int[128];
         field_G = new int[]{0, 1, 3, 7, 15, 31, 63, 127, 255, 511, 1023, 2047, 4095, 8191, 16383, 32767, 65535, 131071, 262143, 524287, 1048575, 2097151, 4194303, 8388607, 16777215, 33554431, 67108863, 134217727, 268435455, 536870911, 1073741823, 2147483647, -1};
     }
 }

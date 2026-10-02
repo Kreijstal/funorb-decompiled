@@ -16,7 +16,7 @@ final class GameplaySession {
     boolean spawnReleaseDisabled;
     private int delayedActionCountdown;
     int resultBonusPoints;
-    static volatile int field_P;
+    static volatile int pointerIdleTicks;
     private boolean debugReducedRendering;
     private int debugSpawnVariantId;
     boolean submissionBlocked;
@@ -104,10 +104,10 @@ final class GameplaySession {
           ma.a(promptTop, 70, 10 + promptHeight, (byte) -92, 500, ll.frameNineSliceSprites);
           fi.smallFont.a(promptText, 95, 15 + promptTop, promptWidthThenButtonX, 300, 1, -1, 0, 0, lineSpacing);
           if (this.tutorialStepId == 5) {
-            if (qa.field_a > 100) {
-              if (qa.field_a < 340) {
-                if (ue.field_e > 440) {
-                  if (ue.field_e < 476) {
+            if (qa.pointerXSnapshot > 100) {
+              if (qa.pointerXSnapshot < 340) {
+                if (ue.pointerYSnapshot > 440) {
+                  if (ue.pointerYSnapshot < 476) {
                     dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
                   }
                 }
@@ -117,10 +117,10 @@ final class GameplaySession {
             dd.uiPaletteFont.b(cf.field_j, 220, 468, 0, -1);
             dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
             ma.a(440, 380, 36, (byte) -92, 160, eb.mouseBoxFrames);
-            if (380 < qa.field_a) {
-              if (540 > qa.field_a) {
-                if (ue.field_e > 440) {
-                  if (476 > ue.field_e) {
+            if (380 < qa.pointerXSnapshot) {
+              if (540 > qa.pointerXSnapshot) {
+                if (ue.pointerYSnapshot > 440) {
+                  if (476 > ue.pointerYSnapshot) {
                     dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
                   }
                 }
@@ -133,10 +133,10 @@ final class GameplaySession {
             }
           }
           ma.a(440, 240, 36, (byte) -92, 160, eb.mouseBoxFrames);
-          if (250 < qa.field_a) {
-            if (qa.field_a < 389) {
-              if (ue.field_e > 440) {
-                if (476 > ue.field_e) {
+          if (250 < qa.pointerXSnapshot) {
+            if (qa.pointerXSnapshot < 389) {
+              if (ue.pointerYSnapshot > 440) {
+                if (476 > ue.pointerYSnapshot) {
                   dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
                 }
               }
@@ -574,7 +574,7 @@ final class GameplaySession {
           if (!this.tutorialMode) {
             if (this.delayedActionCountdown > 0) {
               lj.smallBoxSprite.draw(-(lj.smallBoxSprite.fullWidth >> 1) + 320, 60 - (lj.smallBoxSprite.fullHeight >> 1) + 240);
-              dd.uiPaletteFont.b(wl.field_b, 320, 310, 0, -1);
+              dd.uiPaletteFont.b(KeyboardInputListener.field_b, 320, 310, 0, -1);
             }
             eg.pointsPanelGlowFrames[this.pointsPanelFrameIndex].draw(this.pointsPanelX, 4);
             if (640 > this.pointsPanelX) {
@@ -753,11 +753,11 @@ final class GameplaySession {
               positiveRotationKeyCode = 96;
               negativeRotationKeyCode = 97;
             }
-            if (kj.field_o[negativeRotationKeyCode]) {
+            if (kj.heldInternalKeys[negativeRotationKeyCode]) {
               L17: {
                 this.boardAngleRadians = this.boardAngleRadians - DualLinkNode.rotationStepRadians;
                 ScorePopup.a((byte) 38);
-                inputDerivedModuloIndex = (ki.field_d + kd.field_c + qa.field_a + he.field_d) % 8;
+                inputDerivedModuloIndex = (ki.currentKeyboardEventCode + kd.field_c + qa.pointerXSnapshot + he.pointerPressYSnapshot) % 8;
                 if (inputDerivedModuloIndex == 0) {
                   oa.field_a = oa.field_a + kb.field_d;
                   gb.field_g = gb.field_g - 1;
@@ -814,7 +814,7 @@ final class GameplaySession {
                 oa.field_a = oa.field_a - kb.field_d;
               }
               L25: {
-                inputDerivedModuloIndex = (kd.field_c + he.field_d + qa.field_a + ki.field_d) % 5;
+                inputDerivedModuloIndex = (kd.field_c + he.pointerPressYSnapshot + qa.pointerXSnapshot + ki.currentKeyboardEventCode) % 5;
                 if (0 == inputDerivedModuloIndex) {
                   dc.field_a = dc.field_a | lb.field_b + el.field_g << 17;
                   if (clientControlFlowGuard == 0) {
@@ -853,14 +853,14 @@ final class GameplaySession {
               }
             }
             L30: {
-              if (kj.field_o[positiveRotationKeyCode]) {
+              if (kj.heldInternalKeys[positiveRotationKeyCode]) {
                 this.boardAngleRadians = this.boardAngleRadians + DualLinkNode.rotationStepRadians;
                 SecondaryDeque.a((byte) 74);
                 if (this.tutorialStepId == 0) {
                   this.tutorialProgressMetric = this.tutorialProgressMetric + 1;
                 }
                 L32: {
-                  inputDerivedModuloIndex = (he.field_d + (qa.field_a + kd.field_c) + ki.field_d) % 8;
+                  inputDerivedModuloIndex = (he.pointerPressYSnapshot + (qa.pointerXSnapshot + kd.field_c) + ki.currentKeyboardEventCode) % 8;
                   if (inputDerivedModuloIndex != 0) {
                     if (1 != inputDerivedModuloIndex) {
                       if (inputDerivedModuloIndex != 2) {
@@ -916,7 +916,7 @@ final class GameplaySession {
                   gb.field_g = gb.field_g - 1;
                   oa.field_a = oa.field_a + kb.field_d;
                 }
-                inputDerivedModuloIndex = (kd.field_c + qa.field_a + he.field_d + ki.field_d) % 5;
+                inputDerivedModuloIndex = (kd.field_c + qa.pointerXSnapshot + he.pointerPressYSnapshot + ki.currentKeyboardEventCode) % 5;
                 if (inputDerivedModuloIndex != 0) {
                   if (1 != inputDerivedModuloIndex) {
                     if (2 != inputDerivedModuloIndex) {
@@ -953,7 +953,7 @@ final class GameplaySession {
             }
             L44: {
               L45: {
-                if (kj.field_o[99]) {
+                if (kj.heldInternalKeys[99]) {
                   if (!this.tutorialPromptActive) {
                     fastForwardEntity = (GameplayEntity) ((Object) ji.movingEntities.firstForIteration(0));
                     L46: while (true) {
@@ -981,10 +981,10 @@ final class GameplaySession {
                   }
                 }
               }
-              detachedEntityOrPositiveRotationKeySnapshot = kj.field_o[positiveRotationKeyCode];
+              detachedEntityOrPositiveRotationKeySnapshot = kj.heldInternalKeys[positiveRotationKeyCode];
             }
             if (!detachedEntityOrPositiveRotationKeySnapshot) {
-              if (!kj.field_o[negativeRotationKeyCode]) {
+              if (!kj.heldInternalKeys[negativeRotationKeyCode]) {
                 jj.b(-106);
               }
             }
@@ -1013,7 +1013,7 @@ final class GameplaySession {
                   this.connectivityRebuiltThisTick = false;
                   this.delayedActionCountdown = 300;
                   this.boardClearBonusEligible = false;
-                  ra.a(le.field_a ^ 255, -88, le.field_a);
+                  ra.a(PointerInputListener.field_a ^ 255, -88, PointerInputListener.field_a);
                   if (clientControlFlowGuard == 0) {
                     break L52;
                   }
@@ -1061,9 +1061,9 @@ final class GameplaySession {
         }
         L60: while (true) {
           L61: {
-            if (hh.a(111)) {
-              if (te.field_a > 0) {
-                pk.field_r = pk.field_r.substring(1) + te.field_a;
+            if (hh.pollKeyboardEvent(111)) {
+              if (te.currentKeyboardEventCharacter > 0) {
+                pk.field_r = pk.field_r.substring(1) + te.currentKeyboardEventCharacter;
                 if (pk.field_r.equalsIgnoreCase("fog")) {
 
                   if (this.showDebugOverview) {
@@ -1079,7 +1079,7 @@ final class GameplaySession {
                   }
                 }
               }
-              if (ki.field_d == 13) {
+              if (ki.currentKeyboardEventCode == 13) {
                 if (!this.sessionEnding) {
                   ai.requestedScreenId = 1;
                   if (clientControlFlowGuard == 0) {
@@ -1089,13 +1089,13 @@ final class GameplaySession {
                 this.requestSessionExitScreen(28809);
                 return;
               }
-              if (ki.field_d == 83) {
+              if (ki.currentKeyboardEventCode == 83) {
                 if (this.tutorialMode) {
                   this.leaveTutorial(7000);
                 }
               }
               L67: {
-                if (ki.field_d == 84) {
+                if (ki.currentKeyboardEventCode == 84) {
                   if (this.tutorialStepPhase == 0) {
                     this.tutorialStepPhase = 1;
                     this.tutorialPromptActive = false;
@@ -1118,7 +1118,7 @@ final class GameplaySession {
                   }
                 }
               }
-              if (ki.field_d == 85) {
+              if (ki.currentKeyboardEventCode == 85) {
                 if (5 == this.tutorialStepId) {
                   if (this.tutorialStepPhase == 0) {
                     this.leaveTutorial(methodGuard ^ -1578897511);
@@ -1128,7 +1128,7 @@ final class GameplaySession {
                   }
                 }
               }
-              if (jg.field_g == ki.field_d) {
+              if (jg.swapRotationControlsKeyCode == ki.currentKeyboardEventCode) {
 
                 if (this.rotationControlsSwapped) {
                   toggledRotationControlsSwapped = false;
@@ -1141,7 +1141,7 @@ final class GameplaySession {
               if (2 > oc.field_f) {
                 continue L60;
               }
-              debugKeyCodeOrPointerEventComplement = ki.field_d;
+              debugKeyCodeOrPointerEventComplement = ki.currentKeyboardEventCode;
 
               debugKeySentinelOrPointerEventSentinel = 48;
 
@@ -1154,19 +1154,19 @@ final class GameplaySession {
                   this.debugSpawnVariantId = 6;
                 }
               }
-              if (ki.field_d == 49) {
+              if (ki.currentKeyboardEventCode == 49) {
                 this.debugSpawnVariantId = this.debugSpawnVariantId + 1;
                 if (this.debugSpawnVariantId == 7) {
                   this.debugSpawnVariantId = 0;
                 }
               }
-              if (ki.field_d == 64) {
+              if (ki.currentKeyboardEventCode == 64) {
                 this.debugSpawnCategoryId = this.debugSpawnCategoryId - 1;
                 if (this.debugSpawnCategoryId < 0) {
                   this.debugSpawnCategoryId = 6;
                 }
               }
-              if (32 == ki.field_d) {
+              if (32 == ki.currentKeyboardEventCode) {
 
                 if (this.debugSpawnSpecialKinds) {
                   toggledSpecialKindSpawn = false;
@@ -1175,20 +1175,20 @@ final class GameplaySession {
                 }
                 ((GameplaySession) (this)).debugSpawnSpecialKinds = toggledSpecialKindSpawn;
               }
-              if (ki.field_d == 65) {
+              if (ki.currentKeyboardEventCode == 65) {
                 this.debugSpawnCategoryId = this.debugSpawnCategoryId + 1;
                 if (this.debugSpawnCategoryId == 7) {
                   this.debugSpawnCategoryId = 0;
                 }
               }
-              if (ki.field_d == 16) {
+              if (ki.currentKeyboardEventCode == 16) {
                 this.tutorialAdvanceRequested = true;
               }
-              if (68 == ki.field_d) {
+              if (68 == ki.currentKeyboardEventCode) {
                 this.sessionPhase = 1;
                 this.submissionBlocked = true;
               }
-              if (ki.field_d == 1) {
+              if (ki.currentKeyboardEventCode == 1) {
                 this.submissionBlocked = true;
 
                 if (this.debugPointerSpawnEnabled) {
@@ -1198,7 +1198,7 @@ final class GameplaySession {
                 }
                 ((GameplaySession) (this)).debugPointerSpawnEnabled = toggledDebugPointerSpawn;
               }
-              if (2 == ki.field_d) {
+              if (2 == ki.currentKeyboardEventCode) {
 
                 if (this.spawnReleaseDisabled) {
                   toggledSpawnReleaseDisabled = false;
@@ -1208,50 +1208,50 @@ final class GameplaySession {
                 ((GameplaySession) (this)).spawnReleaseDisabled = toggledSpawnReleaseDisabled;
                 this.submissionBlocked = true;
               }
-              if (ki.field_d == 3) {
+              if (ki.currentKeyboardEventCode == 3) {
                 ag.availableSpriteVariantCount = 7;
                 f.availableEntityCategoryCount = 7;
               }
-              if (ki.field_d == 4) {
+              if (ki.currentKeyboardEventCode == 4) {
                 hd.recordEntityRelease(2);
                 this.submissionBlocked = true;
               }
-              if (ki.field_d == 5) {
+              if (ki.currentKeyboardEventCode == 5) {
                 GameScreen.selectedThemeId = 1;
                 IntrusiveNode.a(methodGuard ^ 1578896207, GameScreen.selectedThemeId);
                 cd.selectThemeRenderAssets((byte) 110);
               }
-              if (ki.field_d == 6) {
+              if (ki.currentKeyboardEventCode == 6) {
                 GameScreen.selectedThemeId = 0;
                 IntrusiveNode.a(-126, GameScreen.selectedThemeId);
                 cd.selectThemeRenderAssets((byte) 126);
               }
-              if (7 == ki.field_d) {
+              if (7 == ki.currentKeyboardEventCode) {
                 GameScreen.selectedThemeId = 6;
                 IntrusiveNode.a(-99, GameScreen.selectedThemeId);
                 cd.selectThemeRenderAssets((byte) 113);
               }
-              if (ki.field_d == 8) {
+              if (ki.currentKeyboardEventCode == 8) {
                 GameScreen.selectedThemeId = 5;
                 IntrusiveNode.a(-124, GameScreen.selectedThemeId);
                 cd.selectThemeRenderAssets((byte) 115);
               }
-              if (ki.field_d == 9) {
+              if (ki.currentKeyboardEventCode == 9) {
                 GameScreen.selectedThemeId = 3;
                 IntrusiveNode.a(-98, GameScreen.selectedThemeId);
                 cd.selectThemeRenderAssets((byte) 122);
               }
-              if (10 == ki.field_d) {
+              if (10 == ki.currentKeyboardEventCode) {
                 GameScreen.selectedThemeId = 4;
                 IntrusiveNode.a(methodGuard ^ 1578896198, GameScreen.selectedThemeId);
                 cd.selectThemeRenderAssets((byte) 101);
               }
-              if (ki.field_d == 11) {
+              if (ki.currentKeyboardEventCode == 11) {
                 GameScreen.selectedThemeId = 2;
                 IntrusiveNode.a(-118, GameScreen.selectedThemeId);
                 cd.selectThemeRenderAssets((byte) 82);
               }
-              if (ki.field_d == 12) {
+              if (ki.currentKeyboardEventCode == 12) {
 
                 if (this.debugReducedRendering) {
                   toggledReducedRendering = false;
@@ -1260,12 +1260,12 @@ final class GameplaySession {
                 }
                 ((GameplaySession) (this)).debugReducedRendering = toggledReducedRendering;
               }
-              if (36 == ki.field_d) {
+              if (36 == ki.currentKeyboardEventCode) {
                 GameScreen.selectedThemeId = GameScreen.selectedThemeId + 1;
                 GameScreen.selectedThemeId = GameScreen.selectedThemeId % 7;
                 cd.selectThemeRenderAssets((byte) 108);
               }
-              if (ki.field_d != 39) {
+              if (ki.currentKeyboardEventCode != 39) {
                 continue L60;
               }
               this.showSessionCounters = true;
@@ -1273,14 +1273,14 @@ final class GameplaySession {
                 continue L60;
               }
             }
-            debugKeyCodeOrPointerEventComplement = ~bi.field_g;
+            debugKeyCodeOrPointerEventComplement = ~bi.pointerPressButtonSnapshot;
             debugKeySentinelOrPointerEventSentinel = -1;
           }
           L98: {
             if (debugKeyCodeOrPointerEventComplement != debugKeySentinelOrPointerEventSentinel) {
               if (this.debugPointerSpawnEnabled) {
                 if (oc.field_f >= 2) {
-                  nb.spawnEntityAtPointer(-28195, mc.field_a, this.debugSpawnCategoryId, he.field_d, this.debugSpawnVariantId, this.debugSpawnSpecialKinds);
+                  nb.spawnEntityAtPointer(-28195, mc.pointerPressXSnapshot, this.debugSpawnCategoryId, he.pointerPressYSnapshot, this.debugSpawnVariantId, this.debugSpawnSpecialKinds);
                 }
               }
               L100: {
@@ -1309,10 +1309,10 @@ final class GameplaySession {
                         break L100;
                       }
                     }
-                    if (mc.field_a > 100) {
-                      if (340 > mc.field_a) {
-                        if (he.field_d > 440) {
-                          if (476 > he.field_d) {
+                    if (mc.pointerPressXSnapshot > 100) {
+                      if (340 > mc.pointerPressXSnapshot) {
+                        if (he.pointerPressYSnapshot > 440) {
+                          if (476 > he.pointerPressYSnapshot) {
                             this.leaveTutorial(methodGuard ^ -1578897511);
                             this.tutorialStepId = 0;
                             this.tutorialMode = true;
@@ -1321,10 +1321,10 @@ final class GameplaySession {
                         }
                       }
                     }
-                    if (mc.field_a > 380) {
-                      if (540 > mc.field_a) {
-                        if (he.field_d > 440) {
-                          if (he.field_d >= 476) {
+                    if (mc.pointerPressXSnapshot > 380) {
+                      if (540 > mc.pointerPressXSnapshot) {
+                        if (he.pointerPressYSnapshot > 440) {
+                          if (he.pointerPressYSnapshot >= 476) {
                             break L98;
                           }
                           this.tutorialPromptActive = false;
@@ -1400,7 +1400,7 @@ final class GameplaySession {
         field_m = null;
         field_z = null;
         if (param0 != -17199) {
-          field_P = 53;
+          pointerIdleTicks = 53;
         }
     }
 
@@ -1519,7 +1519,7 @@ final class GameplaySession {
           }
           this.sceneTransitionInProgress = true;
           sf.a(sh.field_y.field_d, 0, oc.boardSceneRaster.pixels, 0, sh.field_y.field_d.length);
-          le.a((byte) -39);
+          PointerInputListener.a((byte) -39);
           bk.boardOwnershipRaster.setAsRasterTarget();
           SoftwareRasterizer.clearFramebuffer();
           i.avatarMaskRaster.drawSilhouette(this.boardMaskOffsetX + 320, this.boardMaskOffsetY + 240, 16777215);
@@ -2154,6 +2154,6 @@ final class GameplaySession {
     }
 
     static {
-        field_P = 0;
+        pointerIdleTicks = 0;
     }
 }

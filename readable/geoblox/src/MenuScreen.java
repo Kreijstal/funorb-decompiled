@@ -98,12 +98,12 @@ abstract class MenuScreen {
           this.hitLeftX = 8;
         }
         L1: {
-          if (ki.field_d != 96) {
-            if (ki.field_d == 97) {
+          if (ki.currentKeyboardEventCode != 96) {
+            if (ki.currentKeyboardEventCode == 97) {
               this.increaseMenuValue((byte) 90, itemIndex);
             } else {
-              if (ki.field_d != 84) {
-                if (ki.field_d != 83) {
+              if (ki.currentKeyboardEventCode != 84) {
+                if (ki.currentKeyboardEventCode != 83) {
                   break L1;
                 }
               }
@@ -180,15 +180,15 @@ abstract class MenuScreen {
         boolean stackIn_17_3;
         L0: {
           var3 = Geoblox.field_C;
-          if (bi.field_g != 0) {
-            hitItemIndex = this.hitTestMenuItem(mc.field_a, he.field_d, (byte) 28);
+          if (bi.pointerPressButtonSnapshot != 0) {
+            hitItemIndex = this.hitTestMenuItem(mc.pointerPressXSnapshot, he.pointerPressYSnapshot, (byte) 28);
             this.selectedItemIndex = hitItemIndex;
             if (hitItemIndex != -1) {
               this.pointerInteractionActive = true;
 
               stackIn_16_1 = hitItemIndex;
 
-              stackIn_16_2 = mc.field_a;
+              stackIn_16_2 = mc.pointerPressXSnapshot;
 
               if (param0) {
                 stackIn_17_0 = this;
@@ -201,24 +201,24 @@ abstract class MenuScreen {
                 stackIn_17_2 = stackIn_16_2;
                 stackIn_17_3 = true;
               }
-              this.handleMenuPointer(stackIn_17_1, stackIn_17_2, stackIn_17_3, -(hitItemIndex * this.itemSpacing) - this.firstItemY + he.field_d, false, bi.field_g);
+              this.handleMenuPointer(stackIn_17_1, stackIn_17_2, stackIn_17_3, -(hitItemIndex * this.itemSpacing) - this.firstItemY + he.pointerPressYSnapshot, false, bi.pointerPressButtonSnapshot);
             } else {
               this.pointerInteractionActive = false;
             }
           } else {
-            if (gf.field_a != 0) {
+            if (gf.heldPointerButtonSnapshot != 0) {
               if (this.pointerInteractionActive) {
                 hitItemIndex = this.selectedItemIndex;
                 if (hitItemIndex == -1) {
                   break L0;
                 }
-                this.handleMenuPointer(hitItemIndex, qa.field_a, false, -(this.itemSpacing * hitItemIndex) + (ue.field_e - this.firstItemY), true, gf.field_a);
+                this.handleMenuPointer(hitItemIndex, qa.pointerXSnapshot, false, -(this.itemSpacing * hitItemIndex) + (ue.pointerYSnapshot - this.firstItemY), true, gf.heldPointerButtonSnapshot);
                 break L0;
               }
             }
             this.pointerInteractionActive = false;
-            if (wb.field_a) {
-              hitItemIndex = this.hitTestMenuItem(qa.field_a, ue.field_e, (byte) 126);
+            if (wb.pointerActivitySnapshot) {
+              hitItemIndex = this.hitTestMenuItem(qa.pointerXSnapshot, ue.pointerYSnapshot, (byte) 126);
               if (hitItemIndex != -1) {
                 this.selectedItemIndex = hitItemIndex;
                 this.keyboardSelectionActive = false;

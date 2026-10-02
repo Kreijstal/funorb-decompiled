@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pg {
-    static le field_c;
+    static PointerInputListener pointerListener;
     static int[] field_d;
     static String[] field_a;
     static boolean screenChangePending;
@@ -221,7 +221,7 @@ final class pg {
 
     public static void b(int param0) {
         field_d = null;
-        field_c = null;
+        pointerListener = null;
         field_a = null;
         if (param0 != 22059) {
             pg.resetGameplayDifficulty(52);
@@ -230,7 +230,7 @@ final class pg {
 
     static {
         field_d = new int[8192];
-        field_c = new le();
+        pointerListener = new PointerInputListener();
         field_a = new String[]{"Geoblox Flush", "Ordered Geometry", "Perfect Geometry", "Chain Geometry", "Sequence Geometry", "Succession Geometry", "Dark Geometry", "Lightning Geometrician", "Natural Geometrician", "Sweet Geometrician", "Sparkly Geometrician", "Sick Geometrician", "Stellar Geometrician", "Sporty Geometrician", "Cooking Geometrician", "Parallel Geometrician", "Spooky Geometrician"};
     }
 }

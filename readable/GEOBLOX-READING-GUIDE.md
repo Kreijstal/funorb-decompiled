@@ -1007,3 +1007,44 @@ The existing gameplay probe adds independent constructor/integration/rotation/
 initialization oracles for 4,500 cases and compares the separately pinned trace
 against native bytecode, raw Java and readable Java. This includes partial guard
 failures and non-finite arithmetic; it adds no real-asset or whole-game claim.
+
+## Keyboard and pointer input
+
+`KeyboardInputListener` (`wl`) translates AWT key codes through
+`oe.awtKeyCodeToInternalCode`. Press/release callbacks reset `nk.keyboardIdleTicks`
+and enqueue positive press or complemented release values in
+`gf.queuedKeyStateChanges`. `ii.keyStateWriteIndexOrResetSentinel` becomes -1 on
+overflow or focus loss. `re.updateKeyboardStateForFrame` replays changes into
+`kj.heldInternalKeys`, or clears all 112 held flags on reset. It advances the
+frame event fence from `pc.keyboardEventFrameEndIndex` to
+`BufferedSocket.keyEventWriteIndex`, first setting the read cursor to the
+previous fence. Unpolled events in the preceding frame are therefore discarded.
+
+A separate 128-slot queue pairs `kj.queuedKeyboardEventCodes` with
+`ai.queuedKeyboardEventCharacters`. Presses store an internal code and character
+zero; typed characters store code -1. A full queue drops new events.
+`hh.pollKeyboardEvent` reads only up to the captured frame fence, publishes
+`ki.currentKeyboardEventCode` and `te.currentKeyboardEventCharacter`, then wraps
+`vd.keyboardEventReadIndex`. Empty/invalid-guard polls retain the previous payload.
+The poll holds `je.keyboardListener` as its monitor; keyTyped retains the original
+unsynchronized method. Gameplay reads held keys for rotation/fast-forward and
+polls queued events for tutorial, exit and debug actions. Numeric codes retain
+their original mapping; `jg.swapRotationControlsKeyCode` defaults to 35 and is
+loaded from preference byte zero.
+
+`PointerInputListener` (`le`) writes live pointer position in
+`lj.livePointerX`/`eg.livePointerY` and press position in
+`ah.livePointerPressX`/`hi.livePointerPressY`. Press button 2 means right button;
+other presses use 1. Releases/focus loss clear `s.liveHeldPointerButton`; focus
+loss retains pending press/activity state. Motion/enter/exit/press/release reset
+`GameplaySession.pointerIdleTicks` and mark `fc.pointerActivityPending`.
+Exit uses position (-1,-1). Popup press/release/click events are consumed.
+
+`mc.snapshotPointerInput` copies these fields under `pg.pointerListener` into
+position, press position/button, held-button and activity snapshots, then clears
+pending press/activity. A second snapshot retains held-button/position state but
+has no new press or activity. The session debug-spawn/tutorial handlers use
+press snapshots; hovering and menu hit testing use position snapshots. The
+native input matrix checks 2,184 controlled callback/queue cases. Real concurrent
+AWT delivery, browser key mapping and full session execution remain unverified.
+The listener classes retain unrelated static helper methods.

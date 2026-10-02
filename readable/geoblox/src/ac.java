@@ -178,10 +178,10 @@ class ac extends ff {
                   break L14;
                 }
               }
-              if (qa.field_a >= var3_int) {
-                if (32 + var3_int >= qa.field_a) {
-                  if (var4 <= ue.field_e) {
-                    if (32 + var4 >= ue.field_e) {
+              if (qa.pointerXSnapshot >= var3_int) {
+                if (32 + var3_int >= qa.pointerXSnapshot) {
+                  if (var4 <= ue.pointerYSnapshot) {
+                    if (32 + var4 >= ue.pointerYSnapshot) {
                       SoftwareRasterizer.fillRoundedRectangle(var3_int, var4, 32, 32, 2, 16689938);
                       if (var7 < 0) {
                         var7 = var10;

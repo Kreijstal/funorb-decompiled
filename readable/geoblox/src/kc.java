@@ -12,13 +12,13 @@ final class kc {
     }
 
     final static void a(java.awt.Component param0, int param1) {
-        param0.removeKeyListener(je.field_j);
+        param0.removeKeyListener(je.keyboardListener);
         if (param1 != 0) {
             return;
         }
         try {
-            param0.removeFocusListener(je.field_j);
-            ii.field_c = -1;
+            param0.removeFocusListener(je.keyboardListener);
+            ii.keyStateWriteIndexOrResetSentinel = -1;
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "kc.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

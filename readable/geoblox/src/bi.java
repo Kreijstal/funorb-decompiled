@@ -13,7 +13,7 @@ final class bi implements dh {
     private int field_j;
     private int field_n;
     private int field_a;
-    static int field_g;
+    static int pointerPressButtonSnapshot;
     private int field_h;
     static String[] mustLogin3Texts;
 
@@ -158,7 +158,7 @@ final class bi implements dh {
     }
 
     static {
-        field_g = 0;
+        pointerPressButtonSnapshot = 0;
         mustLogin3Texts = new String[]{null, "Or click", "Or click", "Or click", "Or click", "Or click", "Or click", "Or click"};
     }
 }

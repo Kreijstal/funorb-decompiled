@@ -3,7 +3,7 @@
  */
 final class te {
     static ci field_c;
-    static char field_a;
+    static char currentKeyboardEventCharacter;
     static rf field_b;
     private static String field_z;
 

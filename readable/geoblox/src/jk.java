@@ -76,9 +76,9 @@ final class jk {
     final static int a(boolean param0) {
         if (param0) {
             jk.a(-65);
-            return GameplaySession.field_P;
+            return GameplaySession.pointerIdleTicks;
         }
-        return GameplaySession.field_P;
+        return GameplaySession.pointerIdleTicks;
     }
 
     final static nd a(int param0, String param1) {

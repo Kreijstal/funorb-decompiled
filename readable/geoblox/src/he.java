@@ -3,7 +3,7 @@
  */
 final class he extends java.awt.Canvas implements java.awt.event.FocusListener {
     volatile boolean field_c;
-    static int field_d;
+    static int pointerPressYSnapshot;
     static java.awt.Frame field_a;
     java.awt.Frame field_b;
 
@@ -48,6 +48,6 @@ final class he extends java.awt.Canvas implements java.awt.event.FocusListener {
     }
 
     static {
-        field_d = 0;
+        pointerPressYSnapshot = 0;
     }
 }

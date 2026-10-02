@@ -3,7 +3,7 @@
  */
 final class pc extends IntrusiveNode {
     PcmSample field_i;
-    static int field_p;
+    static int keyboardEventFrameEndIndex;
     int field_y;
     int field_l;
     int field_k;
@@ -83,7 +83,7 @@ final class pc extends IntrusiveNode {
     }
 
     static {
-        field_p = 0;
+        keyboardEventFrameEndIndex = 0;
         field_f = -1;
     }
 }

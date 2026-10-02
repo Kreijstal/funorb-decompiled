@@ -40,8 +40,8 @@ final class hj {
                 field_c = false;
             }
             param1.setFocusTraversalKeysEnabled(false);
-            param1.addKeyListener(je.field_j);
-            param1.addFocusListener(je.field_j);
+            param1.addKeyListener(je.keyboardListener);
+            param1.addFocusListener(je.keyboardListener);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "hj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

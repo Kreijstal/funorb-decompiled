@@ -11,13 +11,13 @@ abstract class df {
 
     final static void a(boolean param0, java.awt.Component param1) {
         try {
-            param1.removeMouseListener(pg.field_c);
-            param1.removeMouseMotionListener(pg.field_c);
+            param1.removeMouseListener(pg.pointerListener);
+            param1.removeMouseMotionListener(pg.pointerListener);
             if (param0) {
                 spaceBackgroundSprite = (IndexedSprite) null;
             }
-            param1.removeFocusListener(pg.field_c);
-            s.field_I = 0;
+            param1.removeFocusListener(pg.pointerListener);
+            s.liveHeldPointerButton = 0;
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "df.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

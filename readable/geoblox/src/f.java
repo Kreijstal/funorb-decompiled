@@ -123,7 +123,7 @@ class f extends qf implements pl {
                 return;
             }
             if (this.field_gb) {
-                wl.b(-1);
+                KeyboardInputListener.b(-1);
                 return;
             }
             return;
@@ -135,7 +135,7 @@ class f extends qf implements pl {
         if (!this.field_gb) {
             return;
         }
-        wl.b(-1);
+        KeyboardInputListener.b(-1);
     }
 
     final boolean a(int param0, int param1, char param2, el param3) {

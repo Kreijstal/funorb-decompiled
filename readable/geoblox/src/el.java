@@ -131,7 +131,7 @@ class el extends IntrusiveNode {
           if (param0) {
             return;
           }
-          var5_int = this.a(qa.field_a, -1, ue.field_e, param1, param3) ? 1 : 0;
+          var5_int = this.a(qa.pointerXSnapshot, -1, ue.pointerYSnapshot, param1, param3) ? 1 : 0;
           stackIn_4_0 = var5_int;
 
           if (this.field_l) {
@@ -258,19 +258,19 @@ class el extends IntrusiveNode {
           var5 = this.e((byte) 54) ? 1 : 0;
           if (!param0) {
             if (var5 != 0) {
-              if (bi.field_g != 0) {
+              if (bi.pointerPressButtonSnapshot != 0) {
                 this.d(-126);
               }
             }
-            ij.field_X = gf.field_a;
+            ij.field_X = gf.heldPointerButtonSnapshot;
             sa.a(this.c((byte) 69), (byte) 72);
             return param0;
           }
           if (0 == vc.field_i) {
-            if (0 == bi.field_g) {
-              if (gf.field_a == 0) {
+            if (0 == bi.pointerPressButtonSnapshot) {
+              if (gf.heldPointerButtonSnapshot == 0) {
                 if (0 != ij.field_X) {
-                  this.a(param2, qa.field_a, true, (el) (this), param3, ue.field_e);
+                  this.a(param2, qa.pointerXSnapshot, true, (el) (this), param3, ue.pointerYSnapshot);
                   var8 = lh.field_b;
                   if (var8 != null) {
                     if (var8.field_u instanceof rg) {
@@ -280,23 +280,23 @@ class el extends IntrusiveNode {
                   }
                   if (var7 != 0) {
                     if (var5 != 0) {
-                      if (bi.field_g != 0) {
+                      if (bi.pointerPressButtonSnapshot != 0) {
                         this.d(-126);
                       }
                     }
                   }
                 }
               }
-              ij.field_X = gf.field_a;
+              ij.field_X = gf.heldPointerButtonSnapshot;
               sa.a(this.c((byte) 69), (byte) 72);
               return param0;
             }
             L19: {
-              if (!this.a(param3, -109, param2, bi.field_g, mc.field_a, he.field_d, (el) (this))) {
+              if (!this.a(param3, -109, param2, bi.pointerPressButtonSnapshot, mc.pointerPressXSnapshot, he.pointerPressYSnapshot, (el) (this))) {
                 if (var5 == 0) {
-                  if (gf.field_a == 0) {
+                  if (gf.heldPointerButtonSnapshot == 0) {
                     if (0 != ij.field_X) {
-                      this.a(param2, qa.field_a, true, (el) (this), param3, ue.field_e);
+                      this.a(param2, qa.pointerXSnapshot, true, (el) (this), param3, ue.pointerYSnapshot);
                       var9 = lh.field_b;
                       if (var9 != null) {
                         if (var9.field_u instanceof rg) {
@@ -306,14 +306,14 @@ class el extends IntrusiveNode {
                       }
                       if (var7 != 0) {
                         if (var5 != 0) {
-                          if (bi.field_g != 0) {
+                          if (bi.pointerPressButtonSnapshot != 0) {
                             this.d(-126);
                           }
                         }
                       }
                     }
                   }
-                  ij.field_X = gf.field_a;
+                  ij.field_X = gf.heldPointerButtonSnapshot;
                   sa.a(this.c((byte) 69), (byte) 72);
                   return param0;
                 }
@@ -324,18 +324,18 @@ class el extends IntrusiveNode {
               }
               param0 = false;
             }
-            if (gf.field_a != 0) {
-              ij.field_X = gf.field_a;
+            if (gf.heldPointerButtonSnapshot != 0) {
+              ij.field_X = gf.heldPointerButtonSnapshot;
               sa.a(this.c((byte) 69), (byte) 72);
               return param0;
             }
             if (0 == ij.field_X) {
-              ij.field_X = gf.field_a;
+              ij.field_X = gf.heldPointerButtonSnapshot;
               sa.a(this.c((byte) 69), (byte) 72);
               return param0;
             }
             {
-              this.a(param2, qa.field_a, true, (el) (this), param3, ue.field_e);
+              this.a(param2, qa.pointerXSnapshot, true, (el) (this), param3, ue.pointerYSnapshot);
               var10 = lh.field_b;
               if (var10 != null) {
                 if (var10.field_u instanceof rg) {
@@ -345,22 +345,22 @@ class el extends IntrusiveNode {
               }
               if (var7 != 0) {
                 if (var5 != 0) {
-                  if (bi.field_g != 0) {
+                  if (bi.pointerPressButtonSnapshot != 0) {
                     this.d(-126);
                   }
                 }
               }
-              ij.field_X = gf.field_a;
+              ij.field_X = gf.heldPointerButtonSnapshot;
               sa.a(this.c((byte) 69), (byte) 72);
               return param0;
             }
           }
           if (var5 != 0) {
-            this.a(param3, vc.field_i, param2, -1, qa.field_a, (el) (this), ue.field_e);
-            if (0 == bi.field_g) {
-              if (gf.field_a == 0) {
+            this.a(param3, vc.field_i, param2, -1, qa.pointerXSnapshot, (el) (this), ue.pointerYSnapshot);
+            if (0 == bi.pointerPressButtonSnapshot) {
+              if (gf.heldPointerButtonSnapshot == 0) {
                 if (0 != ij.field_X) {
-                  this.a(param2, qa.field_a, true, (el) (this), param3, ue.field_e);
+                  this.a(param2, qa.pointerXSnapshot, true, (el) (this), param3, ue.pointerYSnapshot);
                   var15 = lh.field_b;
                   var6 = var15;
                   if (var15 != null) {
@@ -371,23 +371,23 @@ class el extends IntrusiveNode {
                   }
                   if (var7 != 0) {
                     if (var5 != 0) {
-                      if (bi.field_g != 0) {
+                      if (bi.pointerPressButtonSnapshot != 0) {
                         this.d(-126);
                       }
                     }
                   }
                 }
               }
-              ij.field_X = gf.field_a;
+              ij.field_X = gf.heldPointerButtonSnapshot;
               sa.a(this.c((byte) 69), (byte) 72);
               return param0;
             }
             L0: {
-              if (!this.a(param3, -109, param2, bi.field_g, mc.field_a, he.field_d, (el) (this))) {
+              if (!this.a(param3, -109, param2, bi.pointerPressButtonSnapshot, mc.pointerPressXSnapshot, he.pointerPressYSnapshot, (el) (this))) {
                 if (var5 == 0) {
-                  if (gf.field_a == 0) {
+                  if (gf.heldPointerButtonSnapshot == 0) {
                     if (0 != ij.field_X) {
-                      this.a(param2, qa.field_a, true, (el) (this), param3, ue.field_e);
+                      this.a(param2, qa.pointerXSnapshot, true, (el) (this), param3, ue.pointerYSnapshot);
                       var16 = lh.field_b;
                       var6 = var16;
                       if (var16 != null) {
@@ -398,14 +398,14 @@ class el extends IntrusiveNode {
                       }
                       if (var7 != 0) {
                         if (var5 != 0) {
-                          if (bi.field_g != 0) {
+                          if (bi.pointerPressButtonSnapshot != 0) {
                             this.d(-126);
                           }
                         }
                       }
                     }
                   }
-                  ij.field_X = gf.field_a;
+                  ij.field_X = gf.heldPointerButtonSnapshot;
                   sa.a(this.c((byte) 69), (byte) 72);
                   return param0;
                 }
@@ -416,18 +416,18 @@ class el extends IntrusiveNode {
               }
               param0 = false;
             }
-            if (gf.field_a != 0) {
-              ij.field_X = gf.field_a;
+            if (gf.heldPointerButtonSnapshot != 0) {
+              ij.field_X = gf.heldPointerButtonSnapshot;
               sa.a(this.c((byte) 69), (byte) 72);
               return param0;
             }
             if (0 == ij.field_X) {
-              ij.field_X = gf.field_a;
+              ij.field_X = gf.heldPointerButtonSnapshot;
               sa.a(this.c((byte) 69), (byte) 72);
               return param0;
             }
             {
-              this.a(param2, qa.field_a, true, (el) (this), param3, ue.field_e);
+              this.a(param2, qa.pointerXSnapshot, true, (el) (this), param3, ue.pointerYSnapshot);
               var17 = lh.field_b;
               var6 = var17;
               if (var17 != null) {
@@ -438,20 +438,20 @@ class el extends IntrusiveNode {
               }
               if (var7 != 0) {
                 if (var5 != 0) {
-                  if (bi.field_g != 0) {
+                  if (bi.pointerPressButtonSnapshot != 0) {
                     this.d(-126);
                   }
                 }
               }
-              ij.field_X = gf.field_a;
+              ij.field_X = gf.heldPointerButtonSnapshot;
               sa.a(this.c((byte) 69), (byte) 72);
               return param0;
             }
           }
-          if (0 == bi.field_g) {
-            if (gf.field_a == 0) {
+          if (0 == bi.pointerPressButtonSnapshot) {
+            if (gf.heldPointerButtonSnapshot == 0) {
               if (0 != ij.field_X) {
-                this.a(param2, qa.field_a, true, (el) (this), param3, ue.field_e);
+                this.a(param2, qa.pointerXSnapshot, true, (el) (this), param3, ue.pointerYSnapshot);
                 var11 = lh.field_b;
                 if (var11 != null) {
                   if (var11.field_u instanceof rg) {
@@ -461,32 +461,32 @@ class el extends IntrusiveNode {
                 }
                 if (var7 != 0) {
                   if (var5 != 0) {
-                    if (bi.field_g != 0) {
+                    if (bi.pointerPressButtonSnapshot != 0) {
                       this.d(-126);
                     }
                   }
                 }
               }
             }
-            ij.field_X = gf.field_a;
+            ij.field_X = gf.heldPointerButtonSnapshot;
             sa.a(this.c((byte) 69), (byte) 72);
             return param0;
           }
           L10: {
-            if (!this.a(param3, -109, param2, bi.field_g, mc.field_a, he.field_d, (el) (this))) {
+            if (!this.a(param3, -109, param2, bi.pointerPressButtonSnapshot, mc.pointerPressXSnapshot, he.pointerPressYSnapshot, (el) (this))) {
               if (var5 == 0) {
-                if (gf.field_a != 0) {
-                  ij.field_X = gf.field_a;
+                if (gf.heldPointerButtonSnapshot != 0) {
+                  ij.field_X = gf.heldPointerButtonSnapshot;
                   sa.a(this.c((byte) 69), (byte) 72);
                   return param0;
                 }
                 if (0 == ij.field_X) {
-                  ij.field_X = gf.field_a;
+                  ij.field_X = gf.heldPointerButtonSnapshot;
                   sa.a(this.c((byte) 69), (byte) 72);
                   return param0;
                 }
                 {
-                  this.a(param2, qa.field_a, true, (el) (this), param3, ue.field_e);
+                  this.a(param2, qa.pointerXSnapshot, true, (el) (this), param3, ue.pointerYSnapshot);
                   var12 = lh.field_b;
                   var6 = var12;
                   if (var12 != null) {
@@ -496,22 +496,22 @@ class el extends IntrusiveNode {
                     lh.field_b = null;
                   }
                   if (var7 == 0) {
-                    ij.field_X = gf.field_a;
+                    ij.field_X = gf.heldPointerButtonSnapshot;
                     sa.a(this.c((byte) 69), (byte) 72);
                     return param0;
                   }
                   if (var5 == 0) {
-                    ij.field_X = gf.field_a;
+                    ij.field_X = gf.heldPointerButtonSnapshot;
                     sa.a(this.c((byte) 69), (byte) 72);
                     return param0;
                   }
-                  if (bi.field_g == 0) {
-                    ij.field_X = gf.field_a;
+                  if (bi.pointerPressButtonSnapshot == 0) {
+                    ij.field_X = gf.heldPointerButtonSnapshot;
                     sa.a(this.c((byte) 69), (byte) 72);
                     return param0;
                   }
                   this.d(-126);
-                  ij.field_X = gf.field_a;
+                  ij.field_X = gf.heldPointerButtonSnapshot;
                   sa.a(this.c((byte) 69), (byte) 72);
                   return param0;
                 }
@@ -523,18 +523,18 @@ class el extends IntrusiveNode {
             }
             param0 = false;
           }
-          if (gf.field_a != 0) {
-            ij.field_X = gf.field_a;
+          if (gf.heldPointerButtonSnapshot != 0) {
+            ij.field_X = gf.heldPointerButtonSnapshot;
             sa.a(this.c((byte) 69), (byte) 72);
             return param0;
           }
           if (0 == ij.field_X) {
-            ij.field_X = gf.field_a;
+            ij.field_X = gf.heldPointerButtonSnapshot;
             sa.a(this.c((byte) 69), (byte) 72);
             return param0;
           }
           {
-            this.a(param2, qa.field_a, true, (el) (this), param3, ue.field_e);
+            this.a(param2, qa.pointerXSnapshot, true, (el) (this), param3, ue.pointerYSnapshot);
             var14 = lh.field_b;
             if (var14 != null) {
               if (var14.field_u instanceof rg) {
@@ -544,12 +544,12 @@ class el extends IntrusiveNode {
             }
             if (var7 != 0) {
               if (var5 != 0) {
-                if (bi.field_g != 0) {
+                if (bi.pointerPressButtonSnapshot != 0) {
                   this.d(-126);
                 }
               }
             }
-            ij.field_X = gf.field_a;
+            ij.field_X = gf.heldPointerButtonSnapshot;
             sa.a(this.c((byte) 69), (byte) 72);
             return param0;
           }

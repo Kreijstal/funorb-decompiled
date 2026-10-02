@@ -46,7 +46,7 @@ class dj extends hk {
           if (this.field_f == 1) {
             if (this.field_q instanceof cc) {
               var7 = (cc) ((Object) this.field_q);
-              var6 = var7.a((el) (this), qa.field_a, -15539, param1, ue.field_e, param3);
+              var6 = var7.a((el) (this), qa.pointerXSnapshot, -15539, param1, ue.pointerYSnapshot, param3);
               if (-1 != var6) {
                 if (this.field_G) {
                   if (this.field_J > var6) {
@@ -214,7 +214,7 @@ class dj extends hk {
         if (param1 >= -114) {
             this.j(-114);
         }
-        if (!(kj.field_o[81])) {
+        if (!(kj.heldInternalKeys[81])) {
             this.field_L = this.field_H;
         }
     }
@@ -243,7 +243,7 @@ class dj extends hk {
         try {
           if (super.a(param0, 104, param2, param3, param4, param5, param6)) {
             if (this.field_q instanceof cc) {
-              var8_int = ((cc) ((Object) this.field_q)).a((el) (this), qa.field_a, -15539, param0, ue.field_e, param2);
+              var8_int = ((cc) ((Object) this.field_q)).a((el) (this), qa.pointerXSnapshot, -15539, param0, ue.pointerYSnapshot, param2);
 
               if (var8_int != -1) {
                 stackIn_5_1 = var8_int;
@@ -455,7 +455,7 @@ class dj extends hk {
               if (param0 == 96) {
                 if (0 < this.field_H) {
 
-                  if (!kj.field_o[82]) {
+                  if (!kj.heldInternalKeys[82]) {
                     stackIn_55_1 = this.field_H - 1;
                   } else {
                     stackIn_55_1 = this.j((byte) 77);
@@ -467,7 +467,7 @@ class dj extends hk {
                 if (param0 == 97) {
                   if (this.field_H < this.field_s.length()) {
 
-                    if (!kj.field_o[82]) {
+                    if (!kj.heldInternalKeys[82]) {
                       stackIn_48_1 = this.field_H + 1;
                     } else {
                       stackIn_48_1 = this.h((byte) -57);
@@ -488,19 +488,19 @@ class dj extends hk {
                     this.m((byte) 111);
                     return true;
                   }
-                  if (kj.field_o[82]) {
+                  if (kj.heldInternalKeys[82]) {
                     if (param0 == 65) {
                       this.h(112);
                       return true;
                     }
                   }
-                  if (kj.field_o[82]) {
+                  if (kj.heldInternalKeys[82]) {
                     if (param0 == 66) {
                       this.i(-23161);
                       return true;
                     }
                   }
-                  if (kj.field_o[82]) {
+                  if (kj.heldInternalKeys[82]) {
                     if (67 == param0) {
                       this.f(82);
                       return true;

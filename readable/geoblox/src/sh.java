@@ -658,7 +658,7 @@ abstract class sh extends el implements ql {
           if (var5_int != 80) {
             return false;
           }
-          if (!kj.field_o[81]) {
+          if (!kj.heldInternalKeys[81]) {
             stackIn_11_0 = this.a(param3, 22439);
           } else {
             stackIn_11_0 = this.a(param3, (byte) -119);

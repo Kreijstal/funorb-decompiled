@@ -88,15 +88,15 @@ class hk extends el {
         try {
             super.a(param0, param1, param2, param3);
             if (0 != this.field_f) {
-                if (gf.field_a == this.field_f) {
+                if (gf.heldPointerButtonSnapshot == this.field_f) {
                     return;
                 }
-                if (this.a(qa.field_a, -1, ue.field_e, param1, param3)) {
-                    if (!(gf.field_a != 0)) {
-                        this.a(ue.field_e - param1, -28922, qa.field_a - param3, this.field_f);
+                if (this.a(qa.pointerXSnapshot, -1, ue.pointerYSnapshot, param1, param3)) {
+                    if (!(gf.heldPointerButtonSnapshot != 0)) {
+                        this.a(ue.pointerYSnapshot - param1, -28922, qa.pointerXSnapshot - param3, this.field_f);
                     }
                 }
-                this.a(param3, qa.field_a, !param0 ? true : false, param2, param1, ue.field_e);
+                this.a(param3, qa.pointerXSnapshot, !param0 ? true : false, param2, param1, ue.pointerYSnapshot);
             }
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "hk.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

@@ -9,7 +9,7 @@ final class ue {
     static String fullscreenBeforeAcceptText;
     static String highscoreFriendTipText;
     static String createNewsOptInText;
-    static int field_e;
+    static int pointerYSnapshot;
     private int field_h;
     static int field_j;
 
@@ -201,7 +201,7 @@ final class ue {
         fullscreenBeforeAcceptText = "Click";
         highscoreFriendTipText = "Friends can be added in multiplayer<nbsp>games";
         createNewsOptInText = "Please send me news and updates (I can unsubscribe at any time)";
-        field_e = 0;
+        pointerYSnapshot = 0;
         availableScorePopups = new IntrusiveDeque();
         for (var0 = 0; var0 < 20; var0++) {
             availableScorePopups.addLast(-83, new ScorePopup());

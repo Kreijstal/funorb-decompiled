@@ -3,7 +3,7 @@
  */
 final class hi extends ee implements ta, pl {
     private hc field_E;
-    static volatile int field_C;
+    static volatile int livePointerPressY;
     vh field_D;
     private hk field_H;
     static Sprite bakingForegroundSprite;
@@ -782,7 +782,7 @@ final class hi extends ee implements ta, pl {
     }
 
     static {
-        field_C = 0;
+        livePointerPressY = 0;
         createIneligibleText = "Unfortunately you are not eligible to create an account.";
     }
 }

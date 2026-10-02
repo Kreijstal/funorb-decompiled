@@ -3,8 +3,8 @@
  */
 final class gf {
     static int matchChainLength;
-    static int field_a;
-    static int[] field_c;
+    static int heldPointerButtonSnapshot;
+    static int[] queuedKeyStateChanges;
     static int[] field_b;
     static qh field_d;
     static String createPasswordContainsNameAlertText;
@@ -30,13 +30,13 @@ final class gf {
         field_d = null;
         field_b = null;
         if (param0) {
-            field_c = null;
+            queuedKeyStateChanges = null;
             createPasswordContainsNameAlertText = null;
             return;
         }
         String var2 = (String) null;
         gf.a((String) null, (rh) null, (String) null, (String) null, true);
-        field_c = null;
+        queuedKeyStateChanges = null;
         createPasswordContainsNameAlertText = null;
     }
 
@@ -225,8 +225,8 @@ final class gf {
 
     static {
         matchChainLength = 0;
-        field_c = new int[128];
-        field_a = 0;
+        queuedKeyStateChanges = new int[128];
+        heldPointerButtonSnapshot = 0;
         field_b = new int[8192];
         createPasswordContainsNameAlertText = "This password contains your Player Name, and would be easy to guess";
     }

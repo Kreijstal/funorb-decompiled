@@ -7,9 +7,9 @@ final class vd {
     private static int[] field_b;
     String field_k;
     int field_o;
-    static int field_n;
+    static int keyboardEventReadIndex;
     private int field_c;
-    static volatile int field_a;
+    static volatile int pendingPointerPressButton;
     private String field_i;
     int[] field_g;
     private boolean field_j;
@@ -163,8 +163,8 @@ final class vd {
     static {
         int var0 = 0;
         field_b = new int[5];
-        field_n = 0;
-        field_a = 0;
+        keyboardEventReadIndex = 0;
+        pendingPointerPressButton = 0;
         highscoreModeNames = new String[]{"All scores", "My scores", "Best each"};
         field_p = 6;
         L0: for (var0 = 0; field_b.length > var0; var0++) {

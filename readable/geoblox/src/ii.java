@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ii {
-    static int field_c;
+    static int keyStateWriteIndexOrResetSentinel;
     static boolean field_e;
     rh field_i;
     static boolean field_a;
@@ -38,7 +38,7 @@ final class ii {
     }
 
     static {
-        field_c = 0;
+        keyStateWriteIndexOrResetSentinel = 0;
         field_d = new int[8192];
         highscoresText = "Highscores";
         field_h = new nd();

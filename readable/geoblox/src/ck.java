@@ -72,11 +72,11 @@ final class ck {
           var7 = 0;
           var8 = bh.a((byte) 81, var6) >> 8;
           var9 = fi.a(var6, 2048) >> 8;
-          if (qa.field_a != -1) {
-            if (ue.field_e != -1) {
-              var7 = -320 + qa.field_a;
+          if (qa.pointerXSnapshot != -1) {
+            if (ue.pointerYSnapshot != -1) {
+              var7 = -320 + qa.pointerXSnapshot;
               var9 = -128;
-              var8 = -ue.field_e + 240;
+              var8 = -ue.pointerYSnapshot + 240;
             }
           }
           var10 = 256.0 / Math.sqrt((double)(var8 * var8 + (var7 * var7 + var9 * var9)));
@@ -146,8 +146,8 @@ final class ck {
           }
           oh.field_b.a(true, 127, dk.field_c, ni.field_I);
           oh.field_b.i(-50);
-          L1: while (hh.a(125)) {
-            oh.field_b.a((byte) -126, te.field_a, ki.field_d);
+          L1: while (hh.pollKeyboardEvent(125)) {
+            oh.field_b.a((byte) -126, te.currentKeyboardEventCharacter, ki.currentKeyboardEventCode);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

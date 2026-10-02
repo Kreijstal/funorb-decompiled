@@ -39,7 +39,7 @@ final class lc {
             }
             L3: {
               L4: {
-                if (kj.field_o[99]) {
+                if (kj.heldInternalKeys[99]) {
                   if (ji.movingEntities.isEmpty(13519)) {
                     break L4;
                   }
@@ -475,7 +475,7 @@ final class lc {
                     break L17;
                   }
                 }
-                le.a(var7_ref, 121, var6_ref);
+                PointerInputListener.a(var7_ref, 121, var6_ref);
               }
               return;
             }

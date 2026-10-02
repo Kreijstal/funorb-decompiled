@@ -4,7 +4,7 @@
 final class wb {
     static int newAttachmentCount;
     static String soundLabelText;
-    static boolean field_a;
+    static boolean pointerActivitySnapshot;
     private static String field_z;
 
     public static void a(byte param0) {
@@ -16,6 +16,6 @@ final class wb {
         field_z = "wb.A(";
         newAttachmentCount = 0;
         soundLabelText = "Sound: ";
-        field_a = false;
+        pointerActivitySnapshot = false;
     }
 }

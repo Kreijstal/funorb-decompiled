@@ -25,8 +25,8 @@ final class gb {
           }
           MatchingTextValidator.field_j = MatchingTextValidator.field_j + 1;
           L1: while (true) {
-            if (hh.a(93)) {
-              if (ki.field_d != 13) {
+            if (hh.pollKeyboardEvent(93)) {
+              if (ki.currentKeyboardEventCode != 13) {
                 continue L1;
               }
               return true;
@@ -128,8 +128,8 @@ final class gb {
         try {
           kd.field_e.a(true, 127, ec.field_d, mj.field_b);
           kd.field_e.i(-65);
-          L0: while (hh.a(77)) {
-            kd.field_e.a((byte) 105, te.field_a, ki.field_d);
+          L0: while (hh.pollKeyboardEvent(77)) {
+            kd.field_e.a((byte) 105, te.currentKeyboardEventCharacter, ki.currentKeyboardEventCode);
           }
           if (fe.field_d != param0) {
             var1_int = fe.field_d;

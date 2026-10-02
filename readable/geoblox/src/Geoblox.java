@@ -394,8 +394,8 @@ public final class Geoblox extends wf {
         ok.a(true);
         wf.g(30344);
         wg.c((byte) 108);
-        wl.a(31997);
-        le.a(-29313);
+        KeyboardInputListener.a(31997);
+        PointerInputListener.a(-29313);
         vk.a(-42);
         SoftwareRasterizer.releaseRasterStorage();
         rh.b(30261);

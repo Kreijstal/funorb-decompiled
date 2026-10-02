@@ -4,7 +4,7 @@
 final class je extends IntrusiveNode {
     PcmSampleStream field_g;
     int field_i;
-    static wl field_j;
+    static KeyboardInputListener keyboardListener;
     IntrusiveNode field_f;
     static sk[] field_h;
 
@@ -21,7 +21,7 @@ final class je extends IntrusiveNode {
                 }
             }
             if (param0 >= -119) {
-                field_j = (wl) null;
+                keyboardListener = (KeyboardInputListener) null;
             }
             if (!fh.c(-91)) {
                 while (true) {
@@ -91,7 +91,7 @@ final class je extends IntrusiveNode {
     }
 
     public static void a(byte param0) {
-        field_j = null;
+        keyboardListener = null;
         if (param0 <= 49) {
             je.c((byte) -123);
             field_h = null;
@@ -112,6 +112,6 @@ final class je extends IntrusiveNode {
     }
 
     static {
-        field_j = new wl();
+        keyboardListener = new KeyboardInputListener();
     }
 }

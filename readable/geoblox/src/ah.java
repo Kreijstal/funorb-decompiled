@@ -3,7 +3,7 @@
  */
 final class ah {
     static int field_a;
-    static volatile int field_e;
+    static volatile int livePointerPressX;
     static rh field_c;
     static int field_d;
     static String connectionLostReconnectingText;
@@ -36,7 +36,7 @@ final class ah {
     }
 
     static {
-        field_e = 0;
+        livePointerPressX = 0;
         field_d = 0;
         connectionLostReconnectingText = "Connection lost - attempting to reconnect";
     }

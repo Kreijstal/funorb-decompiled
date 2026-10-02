@@ -154,7 +154,7 @@ abstract class IndexedSpriteState {
 
     final static int a(int param0) {
         int var1 = 77 / ((param0 + 17) / 52);
-        return nk.field_e;
+        return nk.keyboardIdleTicks;
     }
 
     static {

@@ -8,7 +8,7 @@ final class nk extends df {
     static int[] field_c;
     private String field_h;
     static int[] packedMatchCandidates;
-    static volatile int field_e;
+    static volatile int keyboardIdleTicks;
 
     final void a(int param0, qc param1) {
         try {
@@ -91,6 +91,6 @@ final class nk extends df {
         startGameText = "Start Game";
         createUnder13TermsText = "As you are under 13, we won't save your email address on our systems. Your email address will still be used to log in, but you won't recieve any emails from Jagex. For more information, please check the relevant parts of our <%0><hotspot=0>Terms and Conditions</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
         packedMatchCandidates = new int[1000];
-        field_e = 0;
+        keyboardIdleTicks = 0;
     }
 }

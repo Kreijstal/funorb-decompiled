@@ -113,12 +113,12 @@ final class GameplayEntity extends DualLinkNode {
             SoftwareRasterizer.clearFramebuffer();
             this.entitySprite.draw(-(this.entitySprite.fullWidth >> 1) + (vf.spriteScratchRaster.fullWidth >> 1), (vf.spriteScratchRaster.fullHeight >> 1) - (this.entitySprite.fullHeight >> 1));
           } else {
-            wl.field_a.setAsRasterTarget();
+            KeyboardInputListener.field_a.setAsRasterTarget();
             SoftwareRasterizer.clearFramebuffer();
-            this.entitySprite.drawGrayModulated(-this.entitySprite.fullWidth + wl.field_a.fullWidth >> 1, -this.entitySprite.fullHeight + wl.field_a.fullHeight >> 1, this.interpolatedPaletteColor);
+            this.entitySprite.drawGrayModulated(-this.entitySprite.fullWidth + KeyboardInputListener.field_a.fullWidth >> 1, -this.entitySprite.fullHeight + KeyboardInputListener.field_a.fullHeight >> 1, this.interpolatedPaletteColor);
             vf.spriteScratchRaster.setAsRasterTarget();
             SoftwareRasterizer.clearFramebuffer();
-            wl.field_a.rotateSmooth(wl.field_a.fullWidth << 3, wl.field_a.fullHeight << 3, vf.spriteScratchRaster.fullWidth << 3, vf.spriteScratchRaster.fullHeight << 3, (int)(65535.0 * (-((double)boardAngle / 6.283185307179586) + (double)this.spriteAngleRadians)), 4096);
+            KeyboardInputListener.field_a.rotateSmooth(KeyboardInputListener.field_a.fullWidth << 3, KeyboardInputListener.field_a.fullHeight << 3, vf.spriteScratchRaster.fullWidth << 3, vf.spriteScratchRaster.fullHeight << 3, (int)(65535.0 * (-((double)boardAngle / 6.283185307179586) + (double)this.spriteAngleRadians)), 4096);
           }
         }
         sentinelDivisionGuard = 2 % ((-23 - methodGuard) / 60);

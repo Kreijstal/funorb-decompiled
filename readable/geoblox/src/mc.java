@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mc {
-    static int field_a;
+    static int pointerPressXSnapshot;
 
     final static boolean a(String param0, String param1, int param2, qh param3, int param4, boolean param5, String param6) {
         r var7 = null;
@@ -104,28 +104,28 @@ final class mc {
         }
     }
 
-    final static void a(byte param0) {
-        Throwable decompiledCaughtException = null;
-        Object var1 = null;
-        var1 = pg.field_c;
-        synchronized (var1) {
-          GameplaySession.field_P = GameplaySession.field_P + 1;
-          gf.field_a = s.field_I;
-          if (param0 >= -126) {
-            field_a = -77;
+    final static void snapshotPointerInput(byte methodGuard) {
+        Throwable unusedPointerSnapshotFailureCarrier = null;
+        Object pointerMonitor = null;
+        pointerMonitor = pg.pointerListener;
+        synchronized (pointerMonitor) {
+          GameplaySession.pointerIdleTicks = GameplaySession.pointerIdleTicks + 1;
+          gf.heldPointerButtonSnapshot = s.liveHeldPointerButton;
+          if (methodGuard >= -126) {
+            pointerPressXSnapshot = -77;
           }
-          qa.field_a = lj.field_b;
-          ue.field_e = eg.field_h;
-          wb.field_a = fc.field_f;
-          fc.field_f = false;
-          bi.field_g = vd.field_a;
-          field_a = ah.field_e;
-          he.field_d = hi.field_C;
-          vd.field_a = 0;
+          qa.pointerXSnapshot = lj.livePointerX;
+          ue.pointerYSnapshot = eg.livePointerY;
+          wb.pointerActivitySnapshot = fc.pointerActivityPending;
+          fc.pointerActivityPending = false;
+          bi.pointerPressButtonSnapshot = vd.pendingPointerPressButton;
+          pointerPressXSnapshot = ah.livePointerPressX;
+          he.pointerPressYSnapshot = hi.livePointerPressY;
+          vd.pendingPointerPressButton = 0;
         }
     }
 
     static {
-        field_a = 0;
+        pointerPressXSnapshot = 0;
     }
 }

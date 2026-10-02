@@ -19,15 +19,14 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and retain all 150,124 remaining bindings
 and 388 override relationships.
 
-The current refresh removes 75 proven unread receiver locals and 188 lines
-across 19 files through the generic decompiler. All surviving bindings and
-388 override relationships remain after explicit local-ordinal migration.
-The 2,795 guarded rules preserve every surviving semantic name and apply
-29,076 identifier edits. The decompiler's 96 new native cleanup comparisons
-check effects, exceptions, finally behavior and monitor release; the existing
-game probes retain their native traces. Full-game and real-device behavior
-remain unverified. One current manifest and generated export are maintained,
-with Git history for previous passes.
+The current pass names `KeyboardInputListener`, `PointerInputListener` and the
+keyboard/pointer fields, callbacks and frame consumers used by gameplay and
+menus. It adds 148 guarded names and 2,184 native input cases for queue boundaries,
+focus resets and pointer snapshots. All previous rules and source/decompiler
+pins are unchanged. Current 2,943 rules apply 30,063 identifier edits. The prior
+generic cleanup removed 75 unread receiver locals and 188 lines. Full-game and
+real-device behavior remain unverified. One current manifest and generated
+export are maintained, with Git history for previous passes.
 
 The previous naming pass added 114 rules for `BufferedSocket`, `PlatformTask`
 and `PlatformTaskDispatcher`, including every socket parameter/nonselector

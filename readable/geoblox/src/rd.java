@@ -197,18 +197,18 @@ final class rd extends ff {
     }
 
     final static void b(int param0) {
-        oe.field_P[45] = 26;
-        oe.field_P[44] = 71;
-        oe.field_P[520] = 59;
-        oe.field_P[222] = 58;
-        oe.field_P[192] = param0;
-        oe.field_P[46] = 72;
-        oe.field_P[47] = 73;
-        oe.field_P[92] = 74;
-        oe.field_P[91] = 42;
-        oe.field_P[93] = 43;
-        oe.field_P[61] = 27;
-        oe.field_P[59] = 57;
+        oe.awtKeyCodeToInternalCode[45] = 26;
+        oe.awtKeyCodeToInternalCode[44] = 71;
+        oe.awtKeyCodeToInternalCode[520] = 59;
+        oe.awtKeyCodeToInternalCode[222] = 58;
+        oe.awtKeyCodeToInternalCode[192] = param0;
+        oe.awtKeyCodeToInternalCode[46] = 72;
+        oe.awtKeyCodeToInternalCode[47] = 73;
+        oe.awtKeyCodeToInternalCode[92] = 74;
+        oe.awtKeyCodeToInternalCode[91] = 42;
+        oe.awtKeyCodeToInternalCode[93] = 43;
+        oe.awtKeyCodeToInternalCode[61] = 27;
+        oe.awtKeyCodeToInternalCode[59] = 57;
     }
 
     public rd() {

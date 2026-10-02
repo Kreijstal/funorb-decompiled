@@ -217,7 +217,7 @@ abstract class SpriteState extends DualLinkNode {
           }
           var2 = ih.a(120, "clearBonus");
           if (null != var2) {
-            wl.field_b = ag.decodeTextBytes(1, var2);
+            KeyboardInputListener.field_b = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(121, "cheat");
           if (!param0) {
@@ -368,7 +368,7 @@ abstract class SpriteState extends DualLinkNode {
           }
           var2 = ih.a(122, "keycode_reverseControls");
           if (null != var2) {
-            jg.field_g = var2[0] & 255;
+            jg.swapRotationControlsKeyCode = var2[0] & 255;
           }
           pf.field_O = null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

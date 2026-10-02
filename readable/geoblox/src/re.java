@@ -28,51 +28,51 @@ final class re extends IntrusiveNode {
         }
     }
 
-    final static void b(boolean param0) {
-        Object var1 = null;
-        int var2 = 0;
-        int var4 = 0;
-        Throwable decompiledCaughtException = null;
-        RuntimeException var1_ref = null;
-        int var5 = 0;
-        var4 = Geoblox.field_C;
+    final static void updateKeyboardStateForFrame(boolean methodGuard) {
+        Object keyboardMonitor = null;
+        int keyStateChangeOrResetIndex = 0;
+        int clientControlFlowGuard = 0;
+        Throwable caughtKeyboardFrameFailure = null;
+        RuntimeException keyboardFrameFailureForContext = null;
+        int resetKeyIndex = 0;
+        clientControlFlowGuard = Geoblox.field_C;
         try {
-          var1 = je.field_j;
-          synchronized (var1) {
-            if (!param0) {
+          keyboardMonitor = je.keyboardListener;
+          synchronized (keyboardMonitor) {
+            if (!methodGuard) {
               field_f = (String) null;
             }
             L2: {
-              vd.field_n = pc.field_p;
-              nk.field_e = nk.field_e + 1;
-              if (ii.field_c < 0) {
-                var5 = 0;
-                var2 = var5;
-                L3: while (var5 < 112) {
-                  kj.field_o[var5] = false;
-                  var5++;
+              vd.keyboardEventReadIndex = pc.keyboardEventFrameEndIndex;
+              nk.keyboardIdleTicks = nk.keyboardIdleTicks + 1;
+              if (ii.keyStateWriteIndexOrResetSentinel < 0) {
+                resetKeyIndex = 0;
+                keyStateChangeOrResetIndex = resetKeyIndex;
+                L3: while (resetKeyIndex < 112) {
+                  kj.heldInternalKeys[resetKeyIndex] = false;
+                  resetKeyIndex++;
                 }
-                ii.field_c = gk.field_b;
+                ii.keyStateWriteIndexOrResetSentinel = gk.keyStateReadIndex;
                 break L2;
               }
-              L4: while (gk.field_b != ii.field_c) {
-                var2 = gf.field_c[gk.field_b];
-                gk.field_b = 1 + gk.field_b & 127;
-                if (var2 < 0) {
-                  kj.field_o[~var2] = false;
+              L4: while (gk.keyStateReadIndex != ii.keyStateWriteIndexOrResetSentinel) {
+                keyStateChangeOrResetIndex = gf.queuedKeyStateChanges[gk.keyStateReadIndex];
+                gk.keyStateReadIndex = 1 + gk.keyStateReadIndex & 127;
+                if (keyStateChangeOrResetIndex < 0) {
+                  kj.heldInternalKeys[~keyStateChangeOrResetIndex] = false;
                   continue L4;
                 }
-                kj.field_o[var2] = true;
+                kj.heldInternalKeys[keyStateChangeOrResetIndex] = true;
               }
               break L2;
             }
-            pc.field_p = BufferedSocket.keyEventWriteIndex;
+            pc.keyboardEventFrameEndIndex = BufferedSocket.keyEventWriteIndex;
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1_ref), "re.C(" + param0 + ')');
+        } catch (java.lang.RuntimeException keyboardFrameFailure) {
+          caughtKeyboardFrameFailure = keyboardFrameFailure;
+          keyboardFrameFailureForContext = (RuntimeException) (Object) caughtKeyboardFrameFailure;
+          throw t.a((Throwable) ((Object) keyboardFrameFailureForContext), "re.C(" + methodGuard + ')');
         }
     }
 

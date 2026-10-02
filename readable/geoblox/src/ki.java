@@ -4,7 +4,7 @@
 final class ki {
     static Sprite field_c;
     static rh basicUiGraphicsArchive;
-    static int field_d;
+    static int currentKeyboardEventCode;
     static String fullscreenNonmemberText;
     static String js5ConnectErrorText;
 

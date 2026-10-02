@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 2,795 guarded naming rules: 27 classes, 501 fields,
-293 methods, 821 parameters and 1,153 local declarations. Both 303-file corpora
+The current export has 2,943 guarded naming rules: 29 classes, 531 fields,
+296 methods, 838 parameters and 1,249 local declarations. Both 303-file corpora
 compile, preserving 150,124 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -54,7 +54,39 @@ smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
 
-## Current unread receiver cleanup
+## Current keyboard and pointer naming
+
+This naming pass adds 148 guarded identities: two classes, 30 fields, three
+methods, 17 parameters and 96 locals. All 2,795 previous complete rules, raw
+source and generator pins are unchanged. The current export applies 30,063
+identifier edits while preserving all 150,124 bindings and 388 override rows.
+Every parameter/local in the AWT keyboard/pointer callbacks, keyboard frame
+update, keyboard event poll and pointer snapshot now has a guarded role name.
+The listener classes retain unrelated static helpers; their original diagnostic
+strings and interface callback names remain unchanged.
+
+`KeyboardInputListener` and `PointerInputListener` replace wl/le. The code now
+separates live input from frame snapshots and distinguishes held-key changes
+from press/typed events. `pollKeyboardEvent`, `updateKeyboardStateForFrame` and
+`snapshotPointerInput` describe the three consumers. The previously named
+`BufferedSocket.keyEventWriteIndex` remains unchanged; it is an unrelated static
+keyboard cursor stored in that original mixed-purpose class.
+
+The existing result-helper probe adds an independently pinned 2,184-case input
+matrix: 75 poll cases, 100 held-state replay/reset cases, 1,200 key callbacks,
+420 typed-character cases, five focus-loss cases and 384 pointer cases. It checks
+queue wrap/fullness, frame fences, overflow reset sentinels, encoded releases,
+character payloads, idle counters, pointer coordinates/buttons/activity,
+popup consumption and monitor release. Pointer presses/activity are consumed
+once while held-button state persists. The trace is
+`f8fe8768fbba9c94298f8e9a9193605681295cdd49d1eeba47929c208634844e`.
+Previous helper/cache/socket/shutdown and gameplay/drawing traces are unchanged.
+Callbacks run sequentially on a headless Canvas, with controlled key mappings;
+constructor-rejected character sentinels are injected via setKeyChar. Live
+concurrent AWT delivery, browser mapping and complete session execution remain
+unverified. Other opaque names and shared joins remain.
+
+## Previous unread receiver cleanup
 
 The generic decompiler now removes allocator-owned Object slots whose only
 stores are `this` or `null` and whose complete parsed body contains no reads.
@@ -69,7 +101,7 @@ store references and 75 Object declaration-type references. After 293 explicit
 local ordinal migrations, every surviving binding and all 388 override rows
 match. Twenty guarded names disappear with their dead declarations; 28 surviving
 named locals change ordinal, preserving their original spellings, names and
-evidence. The current 2,795 rules apply 29,076 identifier edits.
+evidence. That pass applied 29,076 identifier edits with 2,795 rules.
 
 The generic emitter suite passes 33 groups, including 96 new native comparisons
 for effects, exceptions, finally priority and lock release. The exception-loop
@@ -553,6 +585,6 @@ the same manifest; no JSON snapshots are added.
 | Java source tree | SHA-256 |
 | --- | --- |
 | Raw | `b18afdee6bf7d59ae30800e398696f8f0319943a75296c5608fe7708968c7bf1` |
-| Readable | `e6094e53b4baf24e17942cde8ea05d4d109af8f4b777e6cffdd9a20244f569c3` |
+| Readable | `5253289abba80804748fdac9ef7d0da8fc7a95d112c51f68101decfdf398364f` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

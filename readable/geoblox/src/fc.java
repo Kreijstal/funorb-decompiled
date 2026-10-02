@@ -7,7 +7,7 @@ final class fc {
     static Sprite[] blackOrbFrames;
     static double field_a;
     static Sprite[] avatarEyeFrames;
-    static volatile boolean field_f;
+    static volatile boolean pointerActivityPending;
     static int field_c;
 
     final static void a(int param0) {
@@ -89,6 +89,6 @@ final class fc {
         musicLabelText = "Music: ";
         field_d = new qc(256);
         field_a = 0.0;
-        field_f = false;
+        pointerActivityPending = false;
     }
 }

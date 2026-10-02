@@ -7,7 +7,7 @@ final class s extends ee implements pe, pl {
     private vf field_J;
     private r field_C;
     static int field_H;
-    static volatile int field_I;
+    static volatile int liveHeldPointerButton;
     static Sprite[][] geometrySpritesByThemeAndCategory;
     static String field_F;
 
@@ -240,7 +240,7 @@ final class s extends ee implements pe, pl {
             field_F = null;
             return;
         }
-        field_I = 58;
+        liveHeldPointerButton = 58;
         geometrySpritesByThemeAndCategory = (Sprite[][]) null;
         field_E = null;
         field_F = null;
@@ -370,7 +370,7 @@ final class s extends ee implements pe, pl {
     static {
         field_E = new ck(7, 0, 1, 1);
         geometrySpritesByThemeAndCategory = new Sprite[7][7];
-        field_I = 0;
+        liveHeldPointerButton = 0;
         field_F = "Growing Pumpkin";
     }
 }

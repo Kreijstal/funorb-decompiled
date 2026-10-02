@@ -6,7 +6,7 @@ final class qa {
     private int[] field_c;
     static IntrusiveDeque field_e;
     static IntrusiveDeque field_f;
-    static int field_a;
+    static int pointerXSnapshot;
     static ch field_d;
 
     final static String a(qc param0, int param1, int param2) {
@@ -694,7 +694,7 @@ final class qa {
     static {
         field_b = 0;
         field_e = new IntrusiveDeque();
-        field_a = 0;
+        pointerXSnapshot = 0;
         field_f = new IntrusiveDeque();
         field_d = null;
     }

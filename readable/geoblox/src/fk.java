@@ -43,12 +43,12 @@ final class fk extends sh {
 
     final static void a(java.awt.Component param0, int param1) {
         try {
-            param0.addMouseListener(pg.field_c);
+            param0.addMouseListener(pg.pointerListener);
             if (param1 != 1) {
                 field_B = (ck) null;
             }
-            param0.addMouseMotionListener(pg.field_c);
-            param0.addFocusListener(pg.field_c);
+            param0.addMouseMotionListener(pg.pointerListener);
+            param0.addFocusListener(pg.pointerListener);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "fk.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

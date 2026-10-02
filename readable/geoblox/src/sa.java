@@ -22,8 +22,8 @@ final class sa extends RuntimeException {
         try {
           if (-1 == k.field_g) {
             if (gb.field_e == -1) {
-              k.field_g = qa.field_a;
-              gb.field_e = ue.field_e;
+              k.field_g = qa.pointerXSnapshot;
+              gb.field_e = ue.pointerYSnapshot;
             }
           }
           L1: {
@@ -72,7 +72,7 @@ final class sa extends RuntimeException {
           }
           if (!vl.field_q) {
             if (wg.field_e > oe.field_V) {
-              if (wb.field_a) {
+              if (wb.pointerActivitySnapshot) {
                 oe.field_V = 0;
                 bc.field_a = k.field_g;
                 PendingActionMarker.field_g = gb.field_e;

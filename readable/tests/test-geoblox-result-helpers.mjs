@@ -16,6 +16,7 @@ const expectedCacheWriteSha256 = 'e5d3ac6ab42a61da22e44337bc05b64e89e0360d4d51a9
 const expectedShutdownSha256 = '2fec6ee86681993c79d39ef1e57026f31fd9b0a87b7d7f94a5bddf5af83d6335';
 const expectedSocketIoSha256 = 'ed8f7d5f5438f4fb39cb3bceca82a861d01f4e08502ca73ba7af8ca475b6292b';
 const expectedDispatcherShutdownSha256 = '86554dba87ac6740912bf88fcd328c871758629250b6277e4223e4955bfcfb29';
+const expectedInputSha256 = 'f8fe8768fbba9c94298f8e9a9193605681295cdd49d1eeba47929c208634844e';
 const temporary = fs.mkdtempSync(path.join(os.tmpdir(), 'geoblox-result-helpers-'));
 try {
   if (nativeInput) {
@@ -494,6 +495,135 @@ try {
           }
           check(cases==96,"dispatcher shutdown case count");System.out.println("dispatcher-shutdown-complete:"+cases);
         }
+      }
+      class InputBehavior extends ResultHelperBehavior {
+        static int cases;
+        static void check(boolean value,String label) { ResultHelperBehavior.check(value,label); }
+        static void resetKeyboard(Object listener,int read,int write,int end) throws Exception {
+          ${set('Geoblox','field_C','I','null','0')}
+          ${set('je','field_j','Lwl;','null','listener')}
+          ${set('vd','field_n','I','null','read')}
+          ${set('ba','field_c','I','null','write')}
+          ${set('pc','field_p','I','null','end')}
+          ${set('kj','field_O','[I','null','new int[128]')}
+          ${set('ai','field_n','[C','null','new char[128]')}
+          ${set('kj','field_o','[Z','null','new boolean[112]')}
+          ${set('gf','field_c','[I','null','new int[128]')}
+          ${set('gk','field_b','I','null','read')}
+          ${set('ii','field_c','I','null','read')}
+          ${set('nk','field_e','I','null','7')}
+        }
+        static void trace(String name,int... values) {
+          StringBuilder out=new StringBuilder(name);for(int value:values)out.append(':').append(value);
+          System.out.println(out);cases++;
+        }
+        public static void main(String[] args) throws Exception {
+          Object keyboard=ResultHelperBehavior.allocate("${type('wl')}");
+          java.awt.Canvas canvas=new java.awt.Canvas();
+          int[] starts={0,1,63,126,127};
+          for(int start:starts)for(int count:new int[]{0,1,2,64,127})for(int guard:new int[]{41,42,127}) {
+            int end=(start+count)%128;resetKeyboard(keyboard,start,(end+1)%128,end);
+            ${set('ki','field_d','I','null','-777')}${set('te','field_a','C','null',"(char)777")}
+            int[] codes=(int[])${get('kj','field_O','[I')};char[] chars=(char[])${get('ai','field_n','[C')};
+            for(int i=0;i<count;i++){int slot=(start+i)%128;codes[slot]=i%2==0?96:-1;chars[slot]=(char)(i%2==0?0:65+i);}
+            int consumed=0;
+            while(${type('hh')}.${method('hh','a(I)Z')}(guard)) {
+              check(guard>41 && consumed<count,"poll boundary");
+              check((Integer)${get('ki','field_d','I')}==codes[(start+consumed)%128],"poll code");
+              check((Character)${get('te','field_a','C')}==chars[(start+consumed)%128],"poll character");consumed++;
+            }
+            check(consumed==(guard>41?count:0),"poll count");
+            check((Integer)${get('vd','field_n','I')}==(start+consumed)%128,"poll cursor wrap");
+            check((Integer)${get('ba','field_c','I')}==(end+1)%128 && (Integer)${get('pc','field_p','I')}==end,"poll frame fence");
+            if(consumed==0)check((Integer)${get('ki','field_d','I')}==-777 && (Character)${get('te','field_a','C')}==777,"empty poll retains payload");
+            check(!Thread.holdsLock(keyboard),"poll monitor released");trace("poll",start,count,guard,consumed);
+          }
+          int[][] changes={{},{0},{96,~96},{~0,111,~111,97},{1,2,~1,3,~2,~3}};
+          for(int start:starts)for(int pattern=0;pattern<changes.length;pattern++)for(boolean reset:new boolean[]{false,true})for(boolean guard:new boolean[]{false,true}) {
+            resetKeyboard(keyboard,start,17,11);boolean[] held=(boolean[])${get('kj','field_o','[Z')};
+            Arrays.fill(held,true);boolean[] expected=held.clone();int[] queue=(int[])${get('gf','field_c','[I')};
+            for(int i=0;i<changes[pattern].length;i++)queue[(start+i)%128]=changes[pattern][i];
+            int write=reset?-1:(start+changes[pattern].length)%128;
+            ${set('ii','field_c','I','null','write')}${set('re','field_f','Ljava/lang/String;','null','"retained"')}
+            if(reset)Arrays.fill(expected,false);else for(int change:changes[pattern])expected[change<0?~change:change]=change>=0;
+            ${type('re')}.${method('re','b(Z)V')}(guard);
+            check(Arrays.equals(held,expected),"held key replay/reset");
+            check((Integer)${get('gk','field_b','I')}==(reset?start:write) && (Integer)${get('ii','field_c','I')}==(reset?start:write),"held queue cursors");
+            check((Integer)${get('vd','field_n','I')}==11 && (Integer)${get('pc','field_p','I')}==17,"new frame fence");
+            check((Integer)${get('nk','field_e','I')}==8,"keyboard idle increment");
+            check(guard?"retained".equals(${get('re','field_f','Ljava/lang/String;')}):${get('re','field_f','Ljava/lang/String;')}==null,"keyboard guard effect");
+            check(!Thread.holdsLock(keyboard),"frame monitor released");trace("held",start,pattern,reset?1:0,guard?1:0,Arrays.hashCode(held));
+          }
+          int[] mapping={-1,0,96,225,85,10,111,82};
+          for(int start:starts)for(int code=0;code<10;code++)for(int modifiers:new int[]{0,2,8})for(boolean full:new boolean[]{false,true})for(boolean stateFull:new boolean[]{false,true})for(boolean release:new boolean[]{false,true}) {
+            int next=(start+1)%128;resetKeyboard(keyboard,full?next:(start+2)%128,start,0);
+            ${set('gk','field_b','I','null','stateFull?next:start')}
+            ${set('ii','field_c','I','null','start')}
+            ${set('oe','field_P','[I','null','mapping.clone()')}
+            java.awt.event.KeyEvent event=new java.awt.event.KeyEvent(canvas,release?java.awt.event.KeyEvent.KEY_RELEASED:java.awt.event.KeyEvent.KEY_PRESSED,0,modifiers,code,'x');
+            java.awt.event.KeyListener listener=(java.awt.event.KeyListener)keyboard;
+            if(release)listener.keyReleased(event);else listener.keyPressed(event);
+            int translated=code<mapping.length?mapping[code]:-1;
+            translated=release?(translated & ~128):((translated & 128)==0?translated:-1);
+            boolean queued=translated>=0;
+            int[] stateQueue=(int[])${get('gf','field_c','[I')};int[] eventQueue=(int[])${get('kj','field_O','[I')};
+            check((Integer)${get('ii','field_c','I')}==(queued?(stateFull?-1:next):start),"listener state write/overflow");
+            if(queued)check(stateQueue[start]==(release?~translated:translated),"listener state encoding");
+            boolean eventAdded=queued&&!release&&!full;
+            check((Integer)${get('ba','field_c','I')}==(eventAdded?next:start),"listener event fullness");
+            if(eventAdded)check(eventQueue[start]==translated && ((char[])${get('ai','field_n','[C')})[start]==0,"press payload");
+            check((Integer)${get('nk','field_e','I')}==0,"callback idle reset");
+            check(event.isConsumed()==(release || (modifiers&10)!=0 || translated==85 || translated==10),"key consumption");
+            trace("key",start,code,modifiers,full?1:0,stateFull?1:0,release?1:0,translated,eventAdded?1:0);
+          }
+          for(int start:starts)for(int character:new int[]{0,1,31,32,65,127,128,159,160,255,256,8364,8218,402,8230,352,338,8482,376,0xd800,65535})for(boolean active:new boolean[]{false,true})for(boolean full:new boolean[]{false,true}) {
+            resetKeyboard(active?keyboard:null,full?(start+1)%128:(start+2)%128,start,0);
+            java.awt.event.KeyEvent event=new java.awt.event.KeyEvent(canvas,java.awt.event.KeyEvent.KEY_TYPED,0,0,java.awt.event.KeyEvent.VK_UNDEFINED,'x');
+            // Include sentinel payloads that the AWT constructor rejects.
+            event.setKeyChar((char)character);
+            ((java.awt.event.KeyListener)keyboard).keyTyped(event);
+            boolean accepted=character>0&&character<128 || character>=160&&character<=255 || Arrays.binarySearch(new int[]{338,352,376,402,8218,8230,8364,8482},character)>=0;
+            boolean added=active&&accepted&&!full;
+            check((Integer)${get('ba','field_c','I')}==(added?(start+1)%128:start),"typed queue index");
+            if(added)check(((int[])${get('kj','field_O','[I')})[start]==-1 && ((char[])${get('ai','field_n','[C')})[start]==character,"typed payload");
+            check(event.isConsumed(),"typed event consumed");trace("typed",start,character,active?1:0,full?1:0,added?1:0);
+          }
+          for(int start:starts) {
+            resetKeyboard(keyboard,start,start,0);((java.awt.event.FocusListener)keyboard).focusLost(new java.awt.event.FocusEvent(canvas,java.awt.event.FocusEvent.FOCUS_LOST));
+            check((Integer)${get('ii','field_c','I')}==-1,"focus reset sentinel");trace("focus",start);
+          }
+          Object pointer=ResultHelperBehavior.allocate("${type('le')}");
+          String[] operations={"mouseMoved","mouseDragged","mouseEntered","mouseExited","mousePressed","mouseReleased","mouseClicked","focusLost"};
+          for(String operation:operations)for(int[] xy:new int[][]{{-1,-1},{0,0},{320,240},{639,479}})for(int button:new int[]{0,1,3})for(boolean active:new boolean[]{false,true})for(boolean popup:new boolean[]{false,true}) {
+            ${set('pg','field_c','Lle;','null','active?pointer:null')}
+            ${set('gh','field_P','I','null','13')}${set('lj','field_b','I','null','31')}${set('eg','field_h','I','null','29')}
+            ${set('ah','field_e','I','null','37')}${set('hi','field_C','I','null','43')}${set('vd','field_a','I','null','2')}
+            ${set('s','field_I','I','null','1')}${set('fc','field_f','Z','null','false')}
+            if(operation.equals("focusLost"))((java.awt.event.FocusListener)pointer).focusLost(new java.awt.event.FocusEvent(canvas,java.awt.event.FocusEvent.FOCUS_LOST));
+            else {
+              java.awt.event.MouseEvent event=new java.awt.event.MouseEvent(canvas,java.awt.event.MouseEvent.MOUSE_PRESSED,0,0,xy[0],xy[1],1,popup,button);
+              ResultHelperBehavior.method("${type('le')}",operation,java.awt.event.MouseEvent.class).invoke(pointer,event);
+              boolean consumes=popup&&(operation.equals("mousePressed")||operation.equals("mouseReleased")||operation.equals("mouseClicked"));
+              check(event.isConsumed()==consumes,"pointer popup consumption");
+            }
+            boolean motion=operation.equals("mouseMoved")||operation.equals("mouseDragged")||operation.equals("mouseEntered"),exit=operation.equals("mouseExited"),press=operation.equals("mousePressed"),release=operation.equals("mouseReleased"),focus=operation.equals("focusLost");
+            int x=active&&motion?xy[0]:active&&exit?-1:31,y=active&&motion?xy[1]:active&&exit?-1:29;
+            int pressX=active&&press?xy[0]:37,pressY=active&&press?xy[1]:43,pressButton=active&&press?(button==3?2:1):2;
+            int held=active&&press?pressButton:active&&(release||focus)?0:1;
+            boolean changed=active&&(motion||exit||press||release);
+            check((Integer)${get('gh','field_P','I')}==(changed?0:13),"pointer idle state");
+            ${set('pg','field_c','Lle;','null','pointer')}
+            ${type('mc')}.${method('mc','a(B)V')}((byte)-128);
+            check((Integer)${get('qa','field_a','I')}==x && (Integer)${get('ue','field_e','I')}==y,"pointer position snapshot");
+            check((Integer)${get('mc','field_a','I')}==pressX && (Integer)${get('he','field_d','I')}==pressY,"press position snapshot");
+            check((Integer)${get('bi','field_g','I')}==pressButton && (Integer)${get('gf','field_a','I')}==held,"button snapshots");
+            check((Boolean)${get('wb','field_a','Z')}==changed && !(Boolean)${get('fc','field_f','Z')} && (Integer)${get('vd','field_a','I')}==0,"pending pointer state consumed");
+            ${type('mc')}.${method('mc','a(B)V')}((byte)-128);
+            check((Integer)${get('bi','field_g','I')}==0 && !(Boolean)${get('wb','field_a','Z')} && (Integer)${get('gf','field_a','I')}==held,"press consumed once; held retained");
+            check(!Thread.holdsLock(pointer),"pointer monitor released");trace(operation,xy[0],xy[1],button,active?1:0,popup?1:0,x,y,pressX,pressY,pressButton,held,changed?1:0);
+          }
+          check(cases==2184,"input case count");System.out.println("input-complete:"+cases);
+        }
       }`;
     const directory = path.join(temporary, variant), classes = path.join(directory, 'classes');
     fs.mkdirSync(classes, {recursive: true});
@@ -533,6 +663,11 @@ try {
     const dispatcherShutdownSha256 = crypto.createHash('sha256').update(dispatcherShutdownOutput).digest('hex');
     console.log(JSON.stringify({variant, dispatcherShutdownSha256, completion: dispatcherShutdownOutput.toString().trim().split('\n').at(-1)}));
     assert.equal(dispatcherShutdownSha256, expectedDispatcherShutdownSha256, variant);
+    const inputOutput = captureProcess('java', ['-Djava.awt.headless=true','-cp',classes + path.delimiter + cp,
+      'InputBehavior']).stdout;
+    const inputSha256 = crypto.createHash('sha256').update(inputOutput).digest('hex');
+    console.log(JSON.stringify({variant, inputSha256, completion: inputOutput.toString().trim().split('\n').at(-1)}));
+    assert.equal(inputSha256, expectedInputSha256, variant);
   }
 } catch (error) {
   if (error.stderr) process.stderr.write(error.stderr);

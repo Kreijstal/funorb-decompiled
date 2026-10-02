@@ -6,7 +6,7 @@ import java.util.*;
 final class gk {
     static Random field_d;
     static String createDisplayNameHintText;
-    static int field_b;
+    static int keyStateReadIndex;
     static int[] field_a;
 
     public final String toString() {
@@ -48,6 +48,6 @@ final class gk {
     static {
         field_d = new Random();
         createDisplayNameHintText = "Player names can be up to 12 letters, numbers and underscores";
-        field_b = 0;
+        keyStateReadIndex = 0;
     }
 }

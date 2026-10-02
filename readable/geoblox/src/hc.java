@@ -16,7 +16,7 @@ final class hc extends dj implements nl {
                 return null;
             }
             if (null != this.field_j) {
-                oe.a(ue.field_e, (byte) -84, qa.field_a + this.field_r - this.field_S);
+                oe.a(ue.pointerYSnapshot, (byte) -84, qa.pointerXSnapshot + this.field_r - this.field_S);
                 return this.field_j;
             }
             return null;
@@ -25,7 +25,7 @@ final class hc extends dj implements nl {
             return null;
         }
         if (null != this.field_j) {
-            oe.a(ue.field_e, (byte) -84, qa.field_a + this.field_r - this.field_S);
+            oe.a(ue.pointerYSnapshot, (byte) -84, qa.pointerXSnapshot + this.field_r - this.field_S);
             return this.field_j;
         }
         return null;
@@ -72,7 +72,7 @@ final class hc extends dj implements nl {
         }
         try {
             super.a(param0, param1, param2, param3);
-            this.field_S = -this.field_v + (qa.field_a - param3);
+            this.field_S = -this.field_v + (qa.pointerXSnapshot - param3);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "hc.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -383,12 +383,12 @@ final class hc extends dj implements nl {
         if (!param0) {
           field_T = -8;
         }
-        if (pg.field_c == null) {
+        if (pg.pointerListener == null) {
           return;
         }
-        var1 = pg.field_c;
+        var1 = pg.pointerListener;
         synchronized (var1) {
-          pg.field_c = null;
+          pg.pointerListener = null;
         }
     }
 

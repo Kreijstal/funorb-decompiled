@@ -274,8 +274,8 @@ abstract class wf extends ch {
           }
           rb.field_d.a((byte) -126);
         }
-        re.b(true);
-        mc.a((byte) -128);
+        re.updateKeyboardStateForFrame(true);
+        mc.snapshotPointerInput((byte) -128);
         if (!bl.b(255)) {
           if (hj.field_a != 11) {
             ck.c(1);

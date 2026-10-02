@@ -18,26 +18,26 @@ final class hh {
         throw new IllegalStateException();
     }
 
-    final static boolean a(int param0) {
-        Object var1 = null;
-        Object var1_ref = null;
-        Throwable var2 = null;
-        boolean stackIn_9_0 = false;
-        Throwable decompiledCaughtException = null;
-        var1_ref = je.field_j;
-        synchronized (var1_ref) {
-          if (param0 <= 41) {
+    final static boolean pollKeyboardEvent(int methodGuard) {
+        Object unusedKeyboardMonitorScratch = null;
+        Object keyboardMonitor = null;
+        Throwable unusedPollFailureScratch = null;
+        boolean eventAvailable = false;
+        Throwable unusedPollFailureCarrier = null;
+        keyboardMonitor = je.keyboardListener;
+        synchronized (keyboardMonitor) {
+          if (methodGuard <= 41) {
             return false;
           }
-          if (vd.field_n == pc.field_p) {
+          if (vd.keyboardEventReadIndex == pc.keyboardEventFrameEndIndex) {
             return false;
           }
-          ki.field_d = kj.field_O[vd.field_n];
-          te.field_a = ai.field_n[vd.field_n];
-          vd.field_n = 1 + vd.field_n & 127;
-          stackIn_9_0 = true;
+          ki.currentKeyboardEventCode = kj.queuedKeyboardEventCodes[vd.keyboardEventReadIndex];
+          te.currentKeyboardEventCharacter = ai.queuedKeyboardEventCharacters[vd.keyboardEventReadIndex];
+          vd.keyboardEventReadIndex = 1 + vd.keyboardEventReadIndex & 127;
+          eventAvailable = true;
         }
-        return stackIn_9_0;
+        return eventAvailable;
     }
 
     public static void a(boolean param0) {

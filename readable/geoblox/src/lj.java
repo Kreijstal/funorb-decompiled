@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lj {
-    static volatile int field_b;
+    static volatile int livePointerX;
     static ck field_e;
     static int field_a;
     static Sprite smallBoxSprite;
@@ -16,7 +16,7 @@ final class lj {
             field_c = null;
             return;
         }
-        field_b = -112;
+        livePointerX = -112;
         smallBoxSprite = null;
         field_e = null;
         field_c = null;
@@ -24,7 +24,7 @@ final class lj {
 
     static {
         field_z = "lj.A(";
-        field_b = -1;
+        livePointerX = -1;
         field_e = new ck(6, 0, 4, 2);
         field_a = 20;
     }
