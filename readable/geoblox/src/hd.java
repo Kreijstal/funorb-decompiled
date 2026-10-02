@@ -39,82 +39,16 @@ final class hd extends sh {
         }
         di.releasedInDifficultyStep = di.releasedInDifficultyStep + 1;
         ul.releasedInCurrentTheme = ul.releasedInCurrentTheme + 1;
-        if (sa.releasesPerDifficultyStep != di.releasedInDifficultyStep) {
-          if (param0 == 2) {
-            if (fa.releasesPerTheme == ul.releasedInCurrentTheme) {
-              ul.releasedInCurrentTheme = 0;
-              fj.field_m = 0;
-              el.gameplaySession.sessionPhase = 1;
-              di.releasedInDifficultyStep = 0;
-              if (gb.field_c < 2) {
-                ld.advanceDifficulty(false);
-              }
-              gb.field_c = 0;
-              el.field_t = el.field_t + 1;
-            }
-            return;
+        if (sa.releasesPerDifficultyStep == di.releasedInDifficultyStep) {
+          if (!(gb.field_c >= 2)) {
+            di.releasedInDifficultyStep = 0;
+            ld.advanceDifficulty(false);
+            gb.field_c = gb.field_c + 1;
           }
+        }
+        if (param0 != 2) {
           field_I = (int[]) null;
-          if (fa.releasesPerTheme == ul.releasedInCurrentTheme) {
-            ul.releasedInCurrentTheme = 0;
-            fj.field_m = 0;
-            el.gameplaySession.sessionPhase = 1;
-            di.releasedInDifficultyStep = 0;
-            if (gb.field_c < 2) {
-              ld.advanceDifficulty(false);
-            }
-            gb.field_c = 0;
-            el.field_t = el.field_t + 1;
-          }
-          return;
         }
-        if (gb.field_c >= 2) {
-          if (param0 == 2) {
-            if (fa.releasesPerTheme == ul.releasedInCurrentTheme) {
-              ul.releasedInCurrentTheme = 0;
-              fj.field_m = 0;
-              el.gameplaySession.sessionPhase = 1;
-              di.releasedInDifficultyStep = 0;
-              if (gb.field_c < 2) {
-                ld.advanceDifficulty(false);
-              }
-              gb.field_c = 0;
-              el.field_t = el.field_t + 1;
-            }
-            return;
-          }
-          field_I = (int[]) null;
-          if (fa.releasesPerTheme == ul.releasedInCurrentTheme) {
-            ul.releasedInCurrentTheme = 0;
-            fj.field_m = 0;
-            el.gameplaySession.sessionPhase = 1;
-            di.releasedInDifficultyStep = 0;
-            if (gb.field_c < 2) {
-              ld.advanceDifficulty(false);
-            }
-            gb.field_c = 0;
-            el.field_t = el.field_t + 1;
-          }
-          return;
-        }
-        di.releasedInDifficultyStep = 0;
-        ld.advanceDifficulty(false);
-        gb.field_c = gb.field_c + 1;
-        if (param0 == 2) {
-          if (fa.releasesPerTheme == ul.releasedInCurrentTheme) {
-            ul.releasedInCurrentTheme = 0;
-            fj.field_m = 0;
-            el.gameplaySession.sessionPhase = 1;
-            di.releasedInDifficultyStep = 0;
-            if (gb.field_c < 2) {
-              ld.advanceDifficulty(false);
-            }
-            gb.field_c = 0;
-            el.field_t = el.field_t + 1;
-          }
-          return;
-        }
-        field_I = (int[]) null;
         if (fa.releasesPerTheme == ul.releasedInCurrentTheme) {
           ul.releasedInCurrentTheme = 0;
           fj.field_m = 0;

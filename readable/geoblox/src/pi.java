@@ -186,29 +186,20 @@ final class pi extends vf {
           if (this.field_Q == null) {
             this.field_Q = new Sprite(var12, var13);
             Geoblox.setRasterTarget(1, this.field_Q);
-            var19.rotateSmooth(112, 144, var19.field_s << 4, var19.field_o << 4, -this.field_P << 10, 4096);
-            id.a(true);
-            this.field_Q.c(-(var19.field_s >> 1) + var9, var10 - var19.field_o, 256);
-            return;
+          } else {
+            if (this.field_Q.width < var12) {
+              this.field_Q = new Sprite(var12, var13);
+              Geoblox.setRasterTarget(1, this.field_Q);
+            } else {
+              if (this.field_Q.height < var13) {
+                this.field_Q = new Sprite(var12, var13);
+                Geoblox.setRasterTarget(1, this.field_Q);
+              } else {
+                Geoblox.setRasterTarget(1, this.field_Q);
+                SoftwareRasterizer.c();
+              }
+            }
           }
-          if (this.field_Q.width < var12) {
-            this.field_Q = new Sprite(var12, var13);
-            Geoblox.setRasterTarget(1, this.field_Q);
-            var19.rotateSmooth(112, 144, var19.field_s << 4, var19.field_o << 4, -this.field_P << 10, 4096);
-            id.a(true);
-            this.field_Q.c(-(var19.field_s >> 1) + var9, var10 - var19.field_o, 256);
-            return;
-          }
-          if (this.field_Q.height < var13) {
-            this.field_Q = new Sprite(var12, var13);
-            Geoblox.setRasterTarget(1, this.field_Q);
-            var19.rotateSmooth(112, 144, var19.field_s << 4, var19.field_o << 4, -this.field_P << 10, 4096);
-            id.a(true);
-            this.field_Q.c(-(var19.field_s >> 1) + var9, var10 - var19.field_o, 256);
-            return;
-          }
-          Geoblox.setRasterTarget(1, this.field_Q);
-          SoftwareRasterizer.c();
           var19.rotateSmooth(112, 144, var19.field_s << 4, var19.field_o << 4, -this.field_P << 10, 4096);
           id.a(true);
           this.field_Q.c(-(var19.field_s >> 1) + var9, var10 - var19.field_o, 256);

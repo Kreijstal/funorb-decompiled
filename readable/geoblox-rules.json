@@ -4,10 +4,10 @@
   "purpose": "Offline readable source mirror; not a runtime patch",
   "source": {
     "repository": "Kreijstal/funorb-decompiled",
-    "commit": "c311d5adc1fe86b3d917967adc56c71803bcb77d",
+    "commit": "2814e2a8c367d698d4751d726745336ea37ab975",
     "subdirectory": "games/geoblox"
   },
-  "inputTreeSha256": "54a54b0e7576a6af94adb3b69987428f011658f7b2513f6de27ba0dd45fdd331",
+  "inputTreeSha256": "d7bea0c5687e00ea49ab0d6f5b89aace3e2cca0067c862db74bd7ce881569adc",
   "namingPolicy": "Confirmed semantic names without opaque suffixes; unknown symbols stay unchanged. Original spellings and JVM identities remain in the reverse symbol map. Every rule guards the original spelling. Local identities also use declaration ordinals; reused variables retain all supported roles. Numeric screen/action IDs and decompiler state remain unchanged.",
   "renames": [
     {
@@ -7176,18 +7176,18 @@
     }
   ],
   "revision": 4,
-  "version": 34,
+  "version": 35,
   "generators": {
     "dekoblokoWork": {
       "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "dc899ebfaed78111257c7cd7c9c647428a8207e9",
+      "commit": "a4cb12769e663bb0318f864ba63242eb769defd8",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "ca1ac1f6748b27b17cbda6141556ee9b08faabb28cd68073f44a48c2ace8992e",
-        "reproduce": "git archive --format=tar dc899ebfaed78111257c7cd7c9c647428a8207e9 | sha256sum",
+        "sha256": "4a602f64863503fc42934d47c05b546784f7ebaee646a7c7ea7093b24bd5ee66",
+        "reproduce": "git archive --format=tar a4cb12769e663bb0318f864ba63242eb769defd8 | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
@@ -7196,1137 +7196,11 @@
   "publication": {
     "format": 1,
     "previousRules": {
-      "commit": "cd4a22508dfff5126753982af2f142548036ef3e",
+      "commit": "1b729d7ef3781113c71537dc6964ab1133c8c168",
       "path": "readable/geoblox-rules.json",
-      "sha256": "171330b293c173fc52b6f1220c0a6120e73b1a2132d0721f308cc3253a8fa5d3"
+      "sha256": "20def86dd0577417e251fbc02f3d1e56e68c52869cdc93954b4945137afdb0a5"
     },
-    "ruleChanges": [
-      {
-        "symbol": "F:wi$1$CfrPartitionedBody.stackIn_2625_0:I",
-        "before": {
-          "symbol": "F:wi$1$CfrPartitionedBody.stackIn_2625_0:I",
-          "to": "invertedClientFlagValue",
-          "originalName": "stackIn_2625_0",
-          "evidence": "Source-generated carrier field for original wi.a(BLrh;)V. Integer materialization of !ch.field_h before restoring a JVM boolean at the loader tail."
-        },
-        "after": null
-      },
-      {
-        "symbol": "F:wi$1$CfrPartitionedBody.stackIn_2625_0:Z",
-        "before": null,
-        "after": {
-          "symbol": "F:wi$1$CfrPartitionedBody.stackIn_2625_0:Z",
-          "to": "invertedClientFlagValue",
-          "originalName": "stackIn_2625_0",
-          "evidence": "Source-generated carrier field for original wi.a(BLrh;)V. Boolean snapshot of !ch.field_h at the loader tail; now uses the proven truth-value representation directly before assigning the shared client flag. Its field descriptor migration from I to Z is explicit in this manifest."
-        }
-      },
-      {
-        "symbol": "L:ec.b(I)Z#1",
-        "before": null,
-        "after": {
-          "symbol": "L:ec.b(I)Z#1",
-          "to": "sortInsertionIndex",
-          "originalName": "var1_int",
-          "evidence": "Outer insertion-sort cursor starting at one. Later receives candidateIndex zero before candidate traversal; it is not the traversal cursor."
-        }
-      },
-      {
-        "symbol": "L:ec.b(I)Z#10",
-        "before": {
-          "symbol": "L:ec.b(I)Z#10",
-          "to": "secondMatchedEntity",
-          "originalName": "var6",
-          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
-        },
-        "after": {
-          "symbol": "L:ec.b(I)Z#10",
-          "to": "firstBlockedEntity",
-          "originalName": "var8_ref_ja",
-          "evidence": "Alias of firstMatchedEntity on the cooldown-blocked path, immediately before its entityQueue marker is cleared."
-        }
-      },
-      {
-        "symbol": "L:ec.b(I)Z#11",
-        "before": {
-          "symbol": "L:ec.b(I)Z#11",
-          "to": "thirdMatchedEntity",
-          "originalName": "var7",
-          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
-        },
-        "after": {
-          "symbol": "L:ec.b(I)Z#11",
-          "to": "popupX",
-          "originalName": "var9",
-          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
-        }
-      },
-      {
-        "symbol": "L:ec.b(I)Z#12",
-        "before": {
-          "symbol": "L:ec.b(I)Z#12",
-          "to": "awardedPoints",
-          "originalName": "var8",
-          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
-        },
-        "after": {
-          "symbol": "L:ec.b(I)Z#12",
-          "to": "secondBlockedEntity",
-          "originalName": "var9_ref_ja",
-          "evidence": "Alias of secondMatchedEntity on the cooldown-blocked path, immediately before its entityQueue marker is cleared."
-        }
-      },
-      {
-        "symbol": "L:ec.b(I)Z#13",
-        "before": {
-          "symbol": "L:ec.b(I)Z#13",
-          "to": "firstBlockedEntity",
-          "originalName": "var8_ref_ja",
-          "evidence": "Alias of firstMatchedEntity on the cooldown-blocked path, immediately before its entityQueue marker is cleared."
-        },
-        "after": {
-          "symbol": "L:ec.b(I)Z#13",
-          "to": "popupY",
-          "originalName": "var10",
-          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
-        }
-      },
-      {
-        "symbol": "L:ec.b(I)Z#14",
-        "before": {
-          "symbol": "L:ec.b(I)Z#14",
-          "to": "popupX",
-          "originalName": "var9",
-          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
-        },
-        "after": {
-          "symbol": "L:ec.b(I)Z#14",
-          "to": "controlFlowGuard",
-          "originalName": "var11",
-          "evidence": "Retained entry snapshot of Geoblox.field_C; unused in the generated processMatchCandidates body."
-        }
-      },
-      {
-        "symbol": "L:ec.b(I)Z#15",
-        "before": {
-          "symbol": "L:ec.b(I)Z#15",
-          "to": "secondBlockedEntity",
-          "originalName": "var9_ref_ja",
-          "evidence": "Alias of secondMatchedEntity on the cooldown-blocked path, immediately before its entityQueue marker is cleared."
-        },
-        "after": {
-          "symbol": "L:ec.b(I)Z#15",
-          "to": "candidateIndex",
-          "originalName": "var12",
-          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
-        }
-      },
-      {
-        "symbol": "L:ec.b(I)Z#16",
-        "before": {
-          "symbol": "L:ec.b(I)Z#16",
-          "to": "popupY",
-          "originalName": "var10",
-          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
-        },
-        "after": null
-      },
-      {
-        "symbol": "L:ec.b(I)Z#17",
-        "before": {
-          "symbol": "L:ec.b(I)Z#17",
-          "to": "controlFlowGuard",
-          "originalName": "var11",
-          "evidence": "Retained entry snapshot of Geoblox.field_C; unused in the generated processMatchCandidates body."
-        },
-        "after": null
-      },
-      {
-        "symbol": "L:ec.b(I)Z#18",
-        "before": {
-          "symbol": "L:ec.b(I)Z#18",
-          "to": "candidateIndex",
-          "originalName": "var12",
-          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
-        },
-        "after": null
-      },
-      {
-        "symbol": "L:ec.b(I)Z#3",
-        "before": null,
-        "after": {
-          "symbol": "L:ec.b(I)Z#3",
-          "to": "sortCursorThenFirstEntityId",
-          "originalName": "var2",
-          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
-        }
-      },
-      {
-        "symbol": "L:ec.b(I)Z#4",
-        "before": {
-          "symbol": "L:ec.b(I)Z#4",
-          "to": "sortInsertionIndex",
-          "originalName": "var1_int",
-          "evidence": "Outer insertion-sort cursor starting at one. Later receives candidateIndex zero before candidate traversal; it is not the traversal cursor."
-        },
-        "after": {
-          "symbol": "L:ec.b(I)Z#4",
-          "to": "packedCandidateThenSecondEntityId",
-          "originalName": "var3",
-          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
-        }
-      },
-      {
-        "symbol": "L:ec.b(I)Z#5",
-        "before": null,
-        "after": {
-          "symbol": "L:ec.b(I)Z#5",
-          "to": "thirdEntityId",
-          "originalName": "var4",
-          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
-        }
-      },
-      {
-        "symbol": "L:ec.b(I)Z#6",
-        "before": {
-          "symbol": "L:ec.b(I)Z#6",
-          "to": "sortCursorThenFirstEntityId",
-          "originalName": "var2",
-          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
-        },
-        "after": {
-          "symbol": "L:ec.b(I)Z#6",
-          "to": "firstMatchedEntity",
-          "originalName": "var5",
-          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
-        }
-      },
-      {
-        "symbol": "L:ec.b(I)Z#7",
-        "before": {
-          "symbol": "L:ec.b(I)Z#7",
-          "to": "packedCandidateThenSecondEntityId",
-          "originalName": "var3",
-          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
-        },
-        "after": {
-          "symbol": "L:ec.b(I)Z#7",
-          "to": "secondMatchedEntity",
-          "originalName": "var6",
-          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
-        }
-      },
-      {
-        "symbol": "L:ec.b(I)Z#8",
-        "before": {
-          "symbol": "L:ec.b(I)Z#8",
-          "to": "thirdEntityId",
-          "originalName": "var4",
-          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
-        },
-        "after": {
-          "symbol": "L:ec.b(I)Z#8",
-          "to": "thirdMatchedEntity",
-          "originalName": "var7",
-          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
-        }
-      },
-      {
-        "symbol": "L:ec.b(I)Z#9",
-        "before": {
-          "symbol": "L:ec.b(I)Z#9",
-          "to": "firstMatchedEntity",
-          "originalName": "var5",
-          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
-        },
-        "after": {
-          "symbol": "L:ec.b(I)Z#9",
-          "to": "awardedPoints",
-          "originalName": "var8",
-          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
-        }
-      },
-      {
-        "symbol": "L:ik.a(Lja;Lja;Z)Z#14",
-        "before": null,
-        "after": {
-          "symbol": "L:ik.a(Lja;Lja;Z)Z#14",
-          "originalName": "var3_int",
-          "to": "neighborIndexThenDetachSecond",
-          "evidence": "First searches the second neighbor list; after no duplicate exists, becomes its Boolean detach flag and final return value. Both roles are retained."
-        }
-      },
-      {
-        "symbol": "L:ik.a(Lja;Lja;Z)Z#15",
-        "before": {
-          "symbol": "L:ik.a(Lja;Lja;Z)Z#15",
-          "originalName": "var3_int",
-          "to": "neighborIndexThenDetachSecond",
-          "evidence": "First searches the second neighbor list; after no duplicate exists, becomes its Boolean detach flag and final return value. Both roles are retained."
-        },
-        "after": null
-      },
-      {
-        "symbol": "L:ik.a(Lja;Lja;Z)Z#16",
-        "before": null,
-        "after": {
-          "symbol": "L:ik.a(Lja;Lja;Z)Z#16",
-          "originalName": "var4",
-          "to": "detachFirst",
-          "evidence": "Flags first-entity reciprocal unlink, count reset, avatar-contact clearing and transfer marker to moving entities."
-        }
-      },
-      {
-        "symbol": "L:ik.a(Lja;Lja;Z)Z#17",
-        "before": {
-          "symbol": "L:ik.a(Lja;Lja;Z)Z#17",
-          "originalName": "var4",
-          "to": "detachFirst",
-          "evidence": "Flags first-entity reciprocal unlink, count reset, avatar-contact clearing and transfer marker to moving entities."
-        },
-        "after": {
-          "symbol": "L:ik.a(Lja;Lja;Z)Z#17",
-          "originalName": "var5_int",
-          "to": "variantPropagationThenNeighborIndex",
-          "evidence": "Initially selects variant propagation through bh.a; later reuses the slot to walk neighbors while detaching either entity."
-        }
-      },
-      {
-        "symbol": "L:ik.a(Lja;Lja;Z)Z#18",
-        "before": {
-          "symbol": "L:ik.a(Lja;Lja;Z)Z#18",
-          "originalName": "var5_int",
-          "to": "variantPropagationThenNeighborIndex",
-          "evidence": "Initially selects variant propagation through bh.a; later reuses the slot to walk neighbors while detaching either entity."
-        },
-        "after": {
-          "symbol": "L:ik.a(Lja;Lja;Z)Z#18",
-          "originalName": "var5",
-          "to": "entityForNeighborCountReset",
-          "evidence": "Aliases either detaching entity while zeroing its related-entity count; does not permanently identify first or second."
-        }
-      },
-      {
-        "symbol": "L:ik.a(Lja;Lja;Z)Z#19",
-        "before": {
-          "symbol": "L:ik.a(Lja;Lja;Z)Z#19",
-          "originalName": "var5",
-          "to": "entityForNeighborCountReset",
-          "evidence": "Aliases either detaching entity while zeroing its related-entity count; does not permanently identify first or second."
-        },
-        "after": {
-          "symbol": "L:ik.a(Lja;Lja;Z)Z#19",
-          "originalName": "var6_int",
-          "to": "propagateCategory",
-          "evidence": "Selects the category/kind propagation flag passed as bh.a first argument after special-kind contacts."
-        }
-      },
-      {
-        "symbol": "L:ik.a(Lja;Lja;Z)Z#2",
-        "before": {
-          "symbol": "L:ik.a(Lja;Lja;Z)Z#2",
-          "originalName": "stackIn_6_0",
-          "to": "duplicateContactReturnValue",
-          "evidence": "Zero-valued return carrier on an existing reciprocal contact; duplicate native cases verify no mutation even with forced detachment."
-        },
-        "after": {
-          "symbol": "L:ik.a(Lja;Lja;Z)Z#2",
-          "originalName": "stackIn_14_0",
-          "to": "secondIsKindOne",
-          "evidence": "Integer Boolean carrier for second.entitySpriteKindId == 1, XORed with the first entity kind check."
-        }
-      },
-      {
-        "symbol": "L:ik.a(Lja;Lja;Z)Z#20",
-        "before": {
-          "symbol": "L:ik.a(Lja;Lja;Z)Z#20",
-          "originalName": "var6_int",
-          "to": "propagateCategory",
-          "evidence": "Selects the category/kind propagation flag passed as bh.a first argument after special-kind contacts."
-        },
-        "after": {
-          "symbol": "L:ik.a(Lja;Lja;Z)Z#20",
-          "originalName": "var6",
-          "to": "entityForVariantCountReset",
-          "evidence": "Aliases either detaching entity while zeroing its same-variant neighbor count; does not permanently identify first or second."
-        }
-      },
-      {
-        "symbol": "L:ik.a(Lja;Lja;Z)Z#21",
-        "before": {
-          "symbol": "L:ik.a(Lja;Lja;Z)Z#21",
-          "originalName": "var6",
-          "to": "entityForVariantCountReset",
-          "evidence": "Aliases either detaching entity while zeroing its same-variant neighbor count; does not permanently identify first or second."
-        },
-        "after": null
-      },
-      {
-        "symbol": "L:ik.a(Lja;Lja;Z)Z#3",
-        "before": {
-          "symbol": "L:ik.a(Lja;Lja;Z)Z#3",
-          "originalName": "stackIn_14_0",
-          "to": "secondIsKindOne",
-          "evidence": "Integer Boolean carrier for second.entitySpriteKindId == 1, XORed with the first entity kind check."
-        },
-        "after": {
-          "symbol": "L:ik.a(Lja;Lja;Z)Z#3",
-          "originalName": "stackIn_17_1",
-          "to": "firstIsKindOne",
-          "evidence": "Integer Boolean carrier for first.entitySpriteKindId == 1, XORed with the second entity kind check."
-        }
-      },
-      {
-        "symbol": "L:ik.a(Lja;Lja;Z)Z#4",
-        "before": {
-          "symbol": "L:ik.a(Lja;Lja;Z)Z#4",
-          "originalName": "stackIn_17_1",
-          "to": "firstIsKindOne",
-          "evidence": "Integer Boolean carrier for first.entitySpriteKindId == 1, XORed with the second entity kind check."
-        },
-        "after": {
-          "symbol": "L:ik.a(Lja;Lja;Z)Z#4",
-          "originalName": "stackIn_77_0",
-          "to": "secondDetachmentReturnValue",
-          "evidence": "Final return carrier copied from the second-entity detach flag; native kind/force matrix verifies the returned outcome."
-        }
-      },
-      {
-        "symbol": "L:ik.a(Lja;Lja;Z)Z#5",
-        "before": {
-          "symbol": "L:ik.a(Lja;Lja;Z)Z#5",
-          "originalName": "stackIn_77_0",
-          "to": "secondDetachmentReturnValue",
-          "evidence": "Final return carrier copied from the second-entity detach flag; native kind/force matrix verifies the returned outcome."
-        },
-        "after": null
-      },
-      {
-        "symbol": "L:ld.a(I)Z#1",
-        "before": {
-          "symbol": "L:ld.a(I)Z#1",
-          "to": "leftCardinalHit",
-          "originalName": "stackIn_4_0",
-          "evidence": "Carries integer true from the first nonzero pixel at (90,240) to the immediate return on this path inside the try."
-        },
-        "after": {
-          "symbol": "L:ld.a(I)Z#1",
-          "to": "caughtBoundaryScanFailure",
-          "originalName": "decompiledCaughtException",
-          "evidence": "Stores the caught RuntimeException before passing it through the retained alias to t.a."
-        }
-      },
-      {
-        "symbol": "L:ld.a(I)Z#10",
-        "before": {
-          "symbol": "L:ld.a(I)Z#10",
-          "to": "lowerNearRightHit",
-          "originalName": "stackIn_37_0",
-          "evidence": "Carries integer true from lowerNearRowCenterIndex plus circleHorizontalOffset to the immediate return on this path inside the try."
-        },
-        "after": {
-          "symbol": "L:ld.a(I)Z#10",
-          "to": "guardDivisionResult",
-          "originalName": "var8",
-          "evidence": "Retains the otherwise unused 64/((methodGuard-32)/34) computation before any framebuffer read. Native guard cases verify ArithmeticException precedence and context."
-        }
-      },
-      {
-        "symbol": "L:ld.a(I)Z#11",
-        "before": {
-          "symbol": "L:ld.a(I)Z#11",
-          "to": "lowerFarLeftHit",
-          "originalName": "stackIn_41_0",
-          "evidence": "Carries integer true from lowerFarRowCenterIndex minus circleVerticalOffset to the immediate return on this path inside the try."
-        },
-        "after": {
-          "symbol": "L:ld.a(I)Z#11",
-          "to": "circleError",
-          "originalName": "var9",
-          "evidence": "The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions."
-        }
-      },
-      {
-        "symbol": "L:ld.a(I)Z#12",
-        "before": {
-          "symbol": "L:ld.a(I)Z#12",
-          "to": "lowerFarRightHit",
-          "originalName": "stackIn_45_0",
-          "evidence": "Carries integer true from lowerFarRowCenterIndex plus circleVerticalOffset to the immediate return on this path inside the try."
-        },
-        "after": {
-          "symbol": "L:ld.a(I)Z#12",
-          "to": "clientControlFlowGuard",
-          "originalName": "var10",
-          "evidence": "Retains the initial Geoblox.field_C read; its stored value is unused in this method. Matrix checks run with zero and one without removing the read."
-        }
-      },
-      {
-        "symbol": "L:ld.a(I)Z#13",
-        "before": {
-          "symbol": "L:ld.a(I)Z#13",
-          "to": "boundaryScanMissResult",
-          "originalName": "stackIn_47_0",
-          "evidence": "Carries integer false when the vertical octant offset passes the horizontal offset; the immediate return ends the scan. It is not a flag set true on a miss."
-        },
-        "after": {
-          "symbol": "L:ld.a(I)Z#13",
-          "to": "boundaryScanFailure",
-          "originalName": "decompiledCaughtParameter0",
-          "evidence": "Catch parameter for RuntimeException from guard arithmetic or framebuffer reads; transferred through two retained aliases before wrapping."
-        }
-      },
-      {
-        "symbol": "L:ld.a(I)Z#14",
-        "before": {
-          "symbol": "L:ld.a(I)Z#14",
-          "to": "caughtBoundaryScanFailure",
-          "originalName": "decompiledCaughtException",
-          "evidence": "Stores the caught RuntimeException before passing it through the retained alias to t.a."
-        },
-        "after": null
-      },
-      {
-        "symbol": "L:ld.a(I)Z#15",
-        "before": {
-          "symbol": "L:ld.a(I)Z#15",
-          "to": "upperNearRowCenterIndex",
-          "originalName": "var1_int",
-          "evidence": "Starts at (320,240) and subtracts one framebuffer stride each vertical step, representing the center-column address on row 240-circleVerticalOffset."
-        },
-        "after": null
-      },
-      {
-        "symbol": "L:ld.a(I)Z#16",
-        "before": {
-          "symbol": "L:ld.a(I)Z#16",
-          "to": "boundaryScanFailureForContext",
-          "originalName": "var1",
-          "evidence": "Aliases caughtBoundaryScanFailure for the retained ld.B exception-context wrapper."
-        },
-        "after": null
-      },
-      {
-        "symbol": "L:ld.a(I)Z#17",
-        "before": {
-          "symbol": "L:ld.a(I)Z#17",
-          "to": "lowerNearRowCenterIndex",
-          "originalName": "var2",
-          "evidence": "Starts at (320,240) and adds one stride each vertical step, representing row 240+circleVerticalOffset at column 320."
-        },
-        "after": null
-      },
-      {
-        "symbol": "L:ld.a(I)Z#18",
-        "before": {
-          "symbol": "L:ld.a(I)Z#18",
-          "to": "upperFarRowCenterIndex",
-          "originalName": "var3",
-          "evidence": "Starts at (320,10) and adds a stride when circleHorizontalOffset decreases, representing row 240-circleHorizontalOffset at column 320."
-        },
-        "after": null
-      },
-      {
-        "symbol": "L:ld.a(I)Z#19",
-        "before": {
-          "symbol": "L:ld.a(I)Z#19",
-          "to": "lowerFarRowCenterIndex",
-          "originalName": "var4",
-          "evidence": "Starts at (320,470) and subtracts a stride when circleHorizontalOffset decreases, representing row 240+circleHorizontalOffset at column 320."
-        },
-        "after": null
-      },
-      {
-        "symbol": "L:ld.a(I)Z#2",
-        "before": {
-          "symbol": "L:ld.a(I)Z#2",
-          "to": "rightCardinalHit",
-          "originalName": "stackIn_7_0",
-          "evidence": "Carries integer true from the nonzero pixel at (550,240) to the immediate return on this path inside the try."
-        },
-        "after": {
-          "symbol": "L:ld.a(I)Z#2",
-          "to": "upperNearRowCenterIndex",
-          "originalName": "var1_int",
-          "evidence": "Starts at (320,240) and subtracts one framebuffer stride each vertical step, representing the center-column address on row 240-circleVerticalOffset."
-        }
-      },
-      {
-        "symbol": "L:ld.a(I)Z#20",
-        "before": {
-          "symbol": "L:ld.a(I)Z#20",
-          "to": "circleHorizontalOffset",
-          "originalName": "var5",
-          "evidence": "The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions."
-        },
-        "after": null
-      },
-      {
-        "symbol": "L:ld.a(I)Z#21",
-        "before": {
-          "symbol": "L:ld.a(I)Z#21",
-          "to": "circleVerticalOffset",
-          "originalName": "var6",
-          "evidence": "The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions."
-        },
-        "after": null
-      },
-      {
-        "symbol": "L:ld.a(I)Z#22",
-        "before": {
-          "symbol": "L:ld.a(I)Z#22",
-          "to": "playfieldRadiusSquared",
-          "originalName": "var7",
-          "evidence": "The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions."
-        },
-        "after": null
-      },
-      {
-        "symbol": "L:ld.a(I)Z#23",
-        "before": {
-          "symbol": "L:ld.a(I)Z#23",
-          "to": "guardDivisionResult",
-          "originalName": "var8",
-          "evidence": "Retains the otherwise unused 64/((methodGuard-32)/34) computation before any framebuffer read. Native guard cases verify ArithmeticException precedence and context."
-        },
-        "after": null
-      },
-      {
-        "symbol": "L:ld.a(I)Z#24",
-        "before": {
-          "symbol": "L:ld.a(I)Z#24",
-          "to": "circleError",
-          "originalName": "var9",
-          "evidence": "The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions."
-        },
-        "after": null
-      },
-      {
-        "symbol": "L:ld.a(I)Z#25",
-        "before": {
-          "symbol": "L:ld.a(I)Z#25",
-          "to": "clientControlFlowGuard",
-          "originalName": "var10",
-          "evidence": "Retains the initial Geoblox.field_C read; its stored value is unused in this method. Matrix checks run with zero and one without removing the read."
-        },
-        "after": null
-      },
-      {
-        "symbol": "L:ld.a(I)Z#26",
-        "before": {
-          "symbol": "L:ld.a(I)Z#26",
-          "to": "boundaryScanFailure",
-          "originalName": "decompiledCaughtParameter0",
-          "evidence": "Catch parameter for RuntimeException from guard arithmetic or framebuffer reads; transferred through two retained aliases before wrapping."
-        },
-        "after": null
-      },
-      {
-        "symbol": "L:ld.a(I)Z#3",
-        "before": {
-          "symbol": "L:ld.a(I)Z#3",
-          "to": "topCardinalHit",
-          "originalName": "stackIn_11_0",
-          "evidence": "Carries integer true from the nonzero pixel at (320,10) to the immediate return on this path inside the try."
-        },
-        "after": {
-          "symbol": "L:ld.a(I)Z#3",
-          "to": "boundaryScanFailureForContext",
-          "originalName": "var1",
-          "evidence": "Aliases caughtBoundaryScanFailure for the retained ld.B exception-context wrapper."
-        }
-      },
-      {
-        "symbol": "L:ld.a(I)Z#4",
-        "before": {
-          "symbol": "L:ld.a(I)Z#4",
-          "to": "bottomCardinalHit",
-          "originalName": "stackIn_15_0",
-          "evidence": "Carries integer true from the nonzero pixel at (320,470) to the immediate return on this path inside the try."
-        },
-        "after": {
-          "symbol": "L:ld.a(I)Z#4",
-          "to": "lowerNearRowCenterIndex",
-          "originalName": "var2",
-          "evidence": "Starts at (320,240) and adds one stride each vertical step, representing row 240+circleVerticalOffset at column 320."
-        }
-      },
-      {
-        "symbol": "L:ld.a(I)Z#5",
-        "before": {
-          "symbol": "L:ld.a(I)Z#5",
-          "to": "upperFarLeftHit",
-          "originalName": "stackIn_21_0",
-          "evidence": "Carries integer true from upperFarRowCenterIndex minus circleVerticalOffset to the immediate return on this path inside the try."
-        },
-        "after": {
-          "symbol": "L:ld.a(I)Z#5",
-          "to": "upperFarRowCenterIndex",
-          "originalName": "var3",
-          "evidence": "Starts at (320,10) and adds a stride when circleHorizontalOffset decreases, representing row 240-circleHorizontalOffset at column 320."
-        }
-      },
-      {
-        "symbol": "L:ld.a(I)Z#6",
-        "before": {
-          "symbol": "L:ld.a(I)Z#6",
-          "to": "upperFarRightHit",
-          "originalName": "stackIn_24_0",
-          "evidence": "Carries integer true from upperFarRowCenterIndex plus circleVerticalOffset to the immediate return on this path inside the try."
-        },
-        "after": {
-          "symbol": "L:ld.a(I)Z#6",
-          "to": "lowerFarRowCenterIndex",
-          "originalName": "var4",
-          "evidence": "Starts at (320,470) and subtracts a stride when circleHorizontalOffset decreases, representing row 240+circleHorizontalOffset at column 320."
-        }
-      },
-      {
-        "symbol": "L:ld.a(I)Z#7",
-        "before": {
-          "symbol": "L:ld.a(I)Z#7",
-          "to": "upperNearLeftHit",
-          "originalName": "stackIn_27_0",
-          "evidence": "Carries integer true from upperNearRowCenterIndex minus circleHorizontalOffset to the immediate return on this path inside the try."
-        },
-        "after": {
-          "symbol": "L:ld.a(I)Z#7",
-          "to": "circleHorizontalOffset",
-          "originalName": "var5",
-          "evidence": "The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions."
-        }
-      },
-      {
-        "symbol": "L:ld.a(I)Z#8",
-        "before": {
-          "symbol": "L:ld.a(I)Z#8",
-          "to": "upperNearRightHit",
-          "originalName": "stackIn_30_0",
-          "evidence": "Carries integer true from upperNearRowCenterIndex plus circleHorizontalOffset to the immediate return on this path inside the try."
-        },
-        "after": {
-          "symbol": "L:ld.a(I)Z#8",
-          "to": "circleVerticalOffset",
-          "originalName": "var6",
-          "evidence": "The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions."
-        }
-      },
-      {
-        "symbol": "L:ld.a(I)Z#9",
-        "before": {
-          "symbol": "L:ld.a(I)Z#9",
-          "to": "lowerNearLeftHit",
-          "originalName": "stackIn_34_0",
-          "evidence": "Carries integer true from lowerNearRowCenterIndex minus circleHorizontalOffset to the immediate return on this path inside the try."
-        },
-        "after": {
-          "symbol": "L:ld.a(I)Z#9",
-          "to": "playfieldRadiusSquared",
-          "originalName": "var7",
-          "evidence": "The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions."
-        }
-      },
-      {
-        "symbol": "L:sk.a(I)Z#1",
-        "before": null,
-        "after": {
-          "symbol": "L:sk.a(I)Z#1",
-          "to": "farthestEntity",
-          "originalName": "var1",
-          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
-        }
-      },
-      {
-        "symbol": "L:sk.a(I)Z#10",
-        "before": {
-          "symbol": "L:sk.a(I)Z#10",
-          "to": "cascadeEntity",
-          "originalName": "var6",
-          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
-        },
-        "after": {
-          "symbol": "L:sk.a(I)Z#10",
-          "to": "searchedEntity",
-          "originalName": "var9",
-          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
-        }
-      },
-      {
-        "symbol": "L:sk.a(I)Z#11",
-        "before": {
-          "symbol": "L:sk.a(I)Z#11",
-          "to": "neighborIndex",
-          "originalName": "var7",
-          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
-        },
-        "after": null
-      },
-      {
-        "symbol": "L:sk.a(I)Z#12",
-        "before": {
-          "symbol": "L:sk.a(I)Z#12",
-          "to": "neighborEntity",
-          "originalName": "var8",
-          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
-        },
-        "after": {
-          "symbol": "L:sk.a(I)Z#12",
-          "to": "seedEntity",
-          "originalName": "var11",
-          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
-        }
-      },
-      {
-        "symbol": "L:sk.a(I)Z#13",
-        "before": {
-          "symbol": "L:sk.a(I)Z#13",
-          "to": "searchedEntity",
-          "originalName": "var9",
-          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
-        },
-        "after": {
-          "symbol": "L:sk.a(I)Z#13",
-          "to": "cascadeFrontier",
-          "originalName": "var12",
-          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
-        }
-      },
-      {
-        "symbol": "L:sk.a(I)Z#15",
-        "before": {
-          "symbol": "L:sk.a(I)Z#15",
-          "to": "seedEntity",
-          "originalName": "var11",
-          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
-        },
-        "after": null
-      },
-      {
-        "symbol": "L:sk.a(I)Z#16",
-        "before": {
-          "symbol": "L:sk.a(I)Z#16",
-          "to": "cascadeFrontier",
-          "originalName": "var12",
-          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
-        },
-        "after": null
-      },
-      {
-        "symbol": "L:sk.a(I)Z#3",
-        "before": null,
-        "after": {
-          "symbol": "L:sk.a(I)Z#3",
-          "to": "farthestRadiusSquared",
-          "originalName": "var2",
-          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
-        }
-      },
-      {
-        "symbol": "L:sk.a(I)Z#4",
-        "before": {
-          "symbol": "L:sk.a(I)Z#4",
-          "to": "farthestEntity",
-          "originalName": "var1",
-          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
-        },
-        "after": {
-          "symbol": "L:sk.a(I)Z#4",
-          "to": "candidateEntity",
-          "originalName": "var3",
-          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
-        }
-      },
-      {
-        "symbol": "L:sk.a(I)Z#5",
-        "before": null,
-        "after": {
-          "symbol": "L:sk.a(I)Z#5",
-          "to": "visitedCascadeEntities",
-          "originalName": "var4",
-          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
-        }
-      },
-      {
-        "symbol": "L:sk.a(I)Z#6",
-        "before": {
-          "symbol": "L:sk.a(I)Z#6",
-          "to": "farthestRadiusSquared",
-          "originalName": "var2",
-          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
-        },
-        "after": {
-          "symbol": "L:sk.a(I)Z#6",
-          "to": "staggeredLifetime",
-          "originalName": "var5",
-          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
-        }
-      },
-      {
-        "symbol": "L:sk.a(I)Z#7",
-        "before": {
-          "symbol": "L:sk.a(I)Z#7",
-          "to": "candidateEntity",
-          "originalName": "var3",
-          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
-        },
-        "after": {
-          "symbol": "L:sk.a(I)Z#7",
-          "to": "cascadeEntity",
-          "originalName": "var6",
-          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
-        }
-      },
-      {
-        "symbol": "L:sk.a(I)Z#8",
-        "before": {
-          "symbol": "L:sk.a(I)Z#8",
-          "to": "visitedCascadeEntities",
-          "originalName": "var4",
-          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
-        },
-        "after": {
-          "symbol": "L:sk.a(I)Z#8",
-          "to": "neighborIndex",
-          "originalName": "var7",
-          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
-        }
-      },
-      {
-        "symbol": "L:sk.a(I)Z#9",
-        "before": {
-          "symbol": "L:sk.a(I)Z#9",
-          "to": "staggeredLifetime",
-          "originalName": "var5",
-          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
-        },
-        "after": {
-          "symbol": "L:sk.a(I)Z#9",
-          "to": "neighborEntity",
-          "originalName": "var8",
-          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
-        }
-      },
-      {
-        "symbol": "L:ul.b(I)V#20",
-        "before": null,
-        "after": {
-          "symbol": "L:ul.b(I)V#20",
-          "to": "eligibleNeighborhoodVisited",
-          "originalName": "var1_int",
-          "evidence": "Integer flag set when an eligible central neighborhood visits a neighbor. It can enable feedback even when no three-entity match was emitted; it is not a successful-match flag."
-        }
-      },
-      {
-        "symbol": "L:ul.b(I)V#21",
-        "before": {
-          "symbol": "L:ul.b(I)V#21",
-          "to": "eligibleNeighborhoodVisited",
-          "originalName": "var1_int",
-          "evidence": "Integer flag set when an eligible central neighborhood visits a neighbor. It can enable feedback even when no three-entity match was emitted; it is not a successful-match flag."
-        },
-        "after": null
-      },
-      {
-        "symbol": "L:ul.b(I)V#22",
-        "before": null,
-        "after": {
-          "symbol": "L:ul.b(I)V#22",
-          "to": "dualMatchFound",
-          "originalName": "var2",
-          "evidence": "Set when a candidate triple shares both category and sprite variant; chooses feedback mode 5 instead of mode 4 after traversal."
-        }
-      },
-      {
-        "symbol": "L:ul.b(I)V#23",
-        "before": {
-          "symbol": "L:ul.b(I)V#23",
-          "to": "dualMatchFound",
-          "originalName": "var2",
-          "evidence": "Set when a candidate triple shares both category and sprite variant; chooses feedback mode 5 instead of mode 4 after traversal."
-        },
-        "after": {
-          "symbol": "L:ul.b(I)V#23",
-          "to": "centralEntity",
-          "originalName": "var3",
-          "evidence": "Current attached entity from the deque. Its matching counts gate neighborhood traversal and its neighbor pairs form candidate triples."
-        }
-      },
-      {
-        "symbol": "L:ul.b(I)V#24",
-        "before": {
-          "symbol": "L:ul.b(I)V#24",
-          "to": "centralEntity",
-          "originalName": "var3",
-          "evidence": "Current attached entity from the deque. Its matching counts gate neighborhood traversal and its neighbor pairs form candidate triples."
-        },
-        "after": {
-          "symbol": "L:ul.b(I)V#24",
-          "to": "variantMatchingAllowed",
-          "originalName": "var4",
-          "evidence": "Integer boolean for centralEntity.sameVariantEntityCount > 1; gates both subsequent spriteVariantIndex comparisons."
-        }
-      },
-      {
-        "symbol": "L:ul.b(I)V#25",
-        "before": {
-          "symbol": "L:ul.b(I)V#25",
-          "to": "variantMatchingAllowed",
-          "originalName": "var4",
-          "evidence": "Integer boolean for centralEntity.sameVariantEntityCount > 1; gates both subsequent spriteVariantIndex comparisons."
-        },
-        "after": {
-          "symbol": "L:ul.b(I)V#25",
-          "to": "categoryMatchingAllowed",
-          "originalName": "var5",
-          "evidence": "Integer boolean for centralEntity.sameCategoryEntityCount > 1; gates both subsequent entityCategoryKey comparisons."
-        }
-      },
-      {
-        "symbol": "L:ul.b(I)V#26",
-        "before": {
-          "symbol": "L:ul.b(I)V#26",
-          "to": "categoryMatchingAllowed",
-          "originalName": "var5",
-          "evidence": "Integer boolean for centralEntity.sameCategoryEntityCount > 1; gates both subsequent entityCategoryKey comparisons."
-        },
-        "after": {
-          "symbol": "L:ul.b(I)V#26",
-          "to": "firstNeighborSharesVariant",
-          "originalName": "var7",
-          "evidence": "Gated equality of the central and first-neighbor spriteVariantIndex values; combines with the second neighbor to form tripleSharesVariant."
-        }
-      },
-      {
-        "symbol": "L:ul.b(I)V#27",
-        "before": {
-          "symbol": "L:ul.b(I)V#27",
-          "to": "firstNeighborSharesVariant",
-          "originalName": "var7",
-          "evidence": "Gated equality of the central and first-neighbor spriteVariantIndex values; combines with the second neighbor to form tripleSharesVariant."
-        },
-        "after": {
-          "symbol": "L:ul.b(I)V#27",
-          "to": "firstNeighborSharesCategory",
-          "originalName": "var8",
-          "evidence": "Gated equality of the central and first-neighbor entityCategoryKey values; combines with the second neighbor to form tripleSharesCategory."
-        }
-      },
-      {
-        "symbol": "L:ul.b(I)V#28",
-        "before": {
-          "symbol": "L:ul.b(I)V#28",
-          "to": "firstNeighborSharesCategory",
-          "originalName": "var8",
-          "evidence": "Gated equality of the central and first-neighbor entityCategoryKey values; combines with the second neighbor to form tripleSharesCategory."
-        },
-        "after": {
-          "symbol": "L:ul.b(I)V#28",
-          "to": "tripleSharesCategory",
-          "originalName": "var10",
-          "evidence": "Integer boolean for the gated central/first/second category match. Increments the category-match counter and sets the packed sign bit."
-        }
-      },
-      {
-        "symbol": "L:ul.b(I)V#29",
-        "before": {
-          "symbol": "L:ul.b(I)V#29",
-          "to": "tripleSharesCategory",
-          "originalName": "var10",
-          "evidence": "Integer boolean for the gated central/first/second category match. Increments the category-match counter and sets the packed sign bit."
-        },
-        "after": {
-          "symbol": "L:ul.b(I)V#29",
-          "to": "tripleSharesVariant",
-          "originalName": "var11",
-          "evidence": "Integer boolean for the gated central/first/second sprite-variant match. Increments the variant-match counter and sets packed bit 30."
-        }
-      },
-      {
-        "symbol": "L:ul.b(I)V#30",
-        "before": {
-          "symbol": "L:ul.b(I)V#30",
-          "to": "tripleSharesVariant",
-          "originalName": "var11",
-          "evidence": "Integer boolean for the gated central/first/second sprite-variant match. Increments the variant-match counter and sets packed bit 30."
-        },
-        "after": {
-          "symbol": "L:ul.b(I)V#30",
-          "to": "largestPackedEntityId",
-          "originalName": "var12",
-          "evidence": "Initially the central entity ID, then permuted by the three-way descending sort. The final largest ID occupies packed bits 20..29; this variable is not permanently the central entity ID."
-        }
-      },
-      {
-        "symbol": "L:ul.b(I)V#31",
-        "before": {
-          "symbol": "L:ul.b(I)V#31",
-          "to": "largestPackedEntityId",
-          "originalName": "var12",
-          "evidence": "Initially the central entity ID, then permuted by the three-way descending sort. The final largest ID occupies packed bits 20..29; this variable is not permanently the central entity ID."
-        },
-        "after": {
-          "symbol": "L:ul.b(I)V#31",
-          "to": "middlePackedEntityId",
-          "originalName": "var13",
-          "evidence": "Initially the first neighbor ID, then permuted by the descending sort. The final middle ID occupies packed bits 10..19."
-        }
-      },
-      {
-        "symbol": "L:ul.b(I)V#32",
-        "before": {
-          "symbol": "L:ul.b(I)V#32",
-          "to": "middlePackedEntityId",
-          "originalName": "var13",
-          "evidence": "Initially the first neighbor ID, then permuted by the descending sort. The final middle ID occupies packed bits 10..19."
-        },
-        "after": {
-          "symbol": "L:ul.b(I)V#32",
-          "to": "smallestPackedEntityId",
-          "originalName": "var14",
-          "evidence": "Initially the second neighbor ID, then permuted by the descending sort. The final smallest ID occupies packed bits 0..9."
-        }
-      },
-      {
-        "symbol": "L:ul.b(I)V#33",
-        "before": {
-          "symbol": "L:ul.b(I)V#33",
-          "to": "smallestPackedEntityId",
-          "originalName": "var14",
-          "evidence": "Initially the second neighbor ID, then permuted by the descending sort. The final smallest ID occupies packed bits 0..9."
-        },
-        "after": {
-          "symbol": "L:ul.b(I)V#33",
-          "to": "swappedEntityId",
-          "originalName": "var15",
-          "evidence": "Scratch entity ID during the descending three-ID sort; not a persistent reference to any particular neighbor."
-        }
-      },
-      {
-        "symbol": "L:ul.b(I)V#34",
-        "before": {
-          "symbol": "L:ul.b(I)V#34",
-          "to": "swappedEntityId",
-          "originalName": "var15",
-          "evidence": "Scratch entity ID during the descending three-ID sort; not a persistent reference to any particular neighbor."
-        },
-        "after": {
-          "symbol": "L:ul.b(I)V#34",
-          "to": "controlFlowGuard",
-          "originalName": "var16",
-          "evidence": "Snapshot of Geoblox.field_C at entry. The generated body retains this read even though this snapshot is unused by the reconstructed traversal."
-        }
-      },
-      {
-        "symbol": "L:ul.b(I)V#35",
-        "before": {
-          "symbol": "L:ul.b(I)V#35",
-          "to": "controlFlowGuard",
-          "originalName": "var16",
-          "evidence": "Snapshot of Geoblox.field_C at entry. The generated body retains this read even though this snapshot is unused by the reconstructed traversal."
-        },
-        "after": null
-      }
-    ],
+    "ruleChanges": [],
     "stubJarSha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2",
     "sourceEvidence": [
       {
@@ -8379,7 +7253,7 @@
       },
       {
         "file": "gi.java",
-        "sha256": "329e10e0ea5e8b0ed0c8108a8b8c940667b58e6ec7345eeedc877022b0d9469b"
+        "sha256": "4dc8dc2c8ff133b50fe95eff6e9132dc3c16e5764a3ce895d1fd7d7e254fdf9e"
       },
       {
         "file": "gk.java",
@@ -8415,7 +7289,7 @@
       },
       {
         "file": "jc.java",
-        "sha256": "ed79e12fede69e14e3e0b8d9faa2e23bad8b39282c61be74bd91f178f1513b37"
+        "sha256": "080f13b5917cbf9fb7693896114273a23c1dda4c1db4d1fa059057d57a8ac960"
       },
       {
         "file": "jf.java",
@@ -8447,7 +7321,7 @@
       },
       {
         "file": "kl.java",
-        "sha256": "a75cfdd3309d25c4c36e8b7065b23c69f79133c220039ae034569998e3d360e5"
+        "sha256": "c081e0ded9eee5661ee72eadceef767e270869c84c6ddd66f16c533490ea7c93"
       },
       {
         "file": "lc.java",
@@ -8455,7 +7329,7 @@
       },
       {
         "file": "ld.java",
-        "sha256": "8b240f79b6a5e0fb02c92310221684f67f888153d37699566fad1c69998d660c"
+        "sha256": "037a7029574ed874fd70196714b5516cc5b77cbf33fc8df7c98a597d2f62e26a"
       },
       {
         "file": "le.java",
@@ -8563,7 +7437,7 @@
       },
       {
         "file": "vd.java",
-        "sha256": "39eda8e79978a13caa10abd0c2f087011a759e5a5b5773a5d97154a41114f2b5"
+        "sha256": "4330d3f11d5e75485b4fef7cdad42e7fd8525a946e3ea42d3193f7cb070cd85c"
       },
       {
         "file": "w.java",
@@ -10808,9 +9682,9 @@
     },
     "verification": {
       "sourceDeclarations": 20710,
-      "bindingsCompared": 151774,
+      "bindingsCompared": 150884,
       "overrideRelationships": 388,
-      "identifierEdits": 19018,
+      "identifierEdits": 18657,
       "dictionaryRestorationFiles": 303,
       "wholeGameEquivalenceVerified": false,
       "nativeMatchingScenarios": 708,
@@ -10825,7 +9699,8 @@
         "Avatar animation fixtures independently verify menu and gameplay timer/frame/tint state with sessionEnding=false. Gameplay ending-message selection, rendering with real assets and device audio remain outside the added animation checks.",
         "Whole-game equivalence and FPS, heap and phone targets are not established.",
         "Spawn-queue angle/position locals and live special-kind selection remain supported by source inspection. The added selection probes test seeded category/variant RNG and closed special-kind gates; real spawn queue execution, live Math.random distribution and extreme quota-overflow loops remain unverified.",
-        "Boolean carrier cleanup keeps effectful/nullable conditions as snapshots. Unknown syntax, shadowing, numeric uses and ambiguous offsets refuse the conversion. Repeated difficulty tails, opaque names and other shared joins remain."
+        "Boolean carrier cleanup keeps effectful/nullable conditions as snapshots. Unknown syntax, shadowing, numeric uses and ambiguous offsets refuse the conversion. Repeated difficulty tails, opaque names and other shared joins remain.",
+        "Identical branch tails are factored after Boolean-carrier cleanup only within the same emitted block scope. Nested try, monitor, loop and labeled bodies stay whole. One nested difficulty tail remains, alongside unknown names and other shared joins."
       ],
       "checks": {
         "ruleBuilderTests": 9,
@@ -10867,9 +9742,9 @@
       "generatedSelectorsBefore": 265,
       "generatedSelectorsAfter": 11,
       "generatedSelectorsRemoved": 254,
-      "rawSourceLinesRemoved": 442,
+      "rawSourceLinesRemoved": 451,
       "returnReconstructionChangedJavaFiles": 181,
-      "localOrdinalMigrations": 61,
+      "localOrdinalMigrations": 0,
       "obsoleteNamedSelectorsRemoved": 1,
       "genericRegionContractTestGroups": 36,
       "genericExceptionExitTestGroups": 6,
@@ -10881,8 +9756,8 @@
       "earlyExitChangedJavaFiles": 208,
       "elseWrappersRemoved": 2128,
       "genericEarlyExitTestGroups": 11,
-      "nativeEmitterComparisons": 1510,
-      "sourceReferenceOccurrencesRemoved": 442,
+      "nativeEmitterComparisons": 2329,
+      "sourceReferenceOccurrencesRemoved": 890,
       "sourceReferenceOccurrencesAdded": 0,
       "nativeDifficultyFlagCases": 82944,
       "nativeDifficultyBoundsCases": 56,
@@ -10892,7 +9767,7 @@
       "nativeDifficultyResetCases": 7,
       "nativeSpawnSelectionCases": 1332,
       "nativeDifficultyTraceSha256": "8c66899b5955eac3380cc3aefd3cbe17a5063cc68f98cd507ff406cea4ae587b",
-      "genericEmitterTestGroups": 17,
+      "genericEmitterTestGroups": 19,
       "genericTypedAssignmentTestGroups": 3,
       "typedLiteralAssignmentsFolded": 77,
       "difficultyAssignmentsFolded": 17,
@@ -10900,7 +9775,7 @@
       "typedAssignmentElseWrappersRemoved": 77,
       "nativeComparatorCases": 32768,
       "nativeComparatorTraceSha256": "9be228f7421970f2214c74e8890327f8592f706dc90ccd0d0933e6f2fbe0a604",
-      "referenceRemovalAttribution": "221 local store/read pairs, normalized by original spelling within each method and the one generated helper-field type change; no other normalized occurrences added or removed.",
+      "referenceRemovalAttribution": "Duplicate occurrences in identical whole tails; all declaration identities and override rows are unchanged, with no reference occurrences added.",
       "genericBooleanCarrierTestGroups": 3,
       "localBooleanCarriersEliminated": 221,
       "localBooleanSnapshotsRetyped": 70,
@@ -10909,33 +9784,17 @@
       "boundaryResultCarriersEliminated": 13,
       "obsoleteNamedCarriersRemoved": 14,
       "booleanCarrierChangedJavaFiles": 75,
-      "namedGeneratedFieldTypeMigrations": 1
+      "namedGeneratedFieldTypeMigrations": 1,
+      "genericSharedTailTestGroups": 2,
+      "nativeSharedTailComparisons": 819,
+      "sharedTailChangedJavaFiles": 16,
+      "difficultyMethodLinesBefore": 220,
+      "difficultyMethodLinesAfter": 69,
+      "allGuardedNamesUnchanged": true,
+      "ruleChangesInCurrentPass": 0
     },
     "sourceChange": {
       "before": {
-        "source": {
-          "repository": "Kreijstal/funorb-decompiled",
-          "commit": "30d11311c75ae8908eb7bfcb72b0b220d16fc456",
-          "subdirectory": "games/geoblox"
-        },
-        "generators": {
-          "dekoblokoWork": {
-            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
-            "trackedClean": true
-          },
-          "javaTools": {
-            "commit": "2c72bb566a66adf31192ac0dd1447c2c99562b2e",
-            "trackedClean": true,
-            "sourceArchive": {
-              "sha256": "e25751f7a750281c5d588faefd06764441973b2bdd35f372524ca6e5a36aa703",
-              "reproduce": "git archive --format=tar 2c72bb566a66adf31192ac0dd1447c2c99562b2e | sha256sum",
-              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
-            }
-          }
-        },
-        "inputTreeSha256": "db87af61f08e3fa11e6f19e45d63941889f9027d947e96dcf819b999be73d624"
-      },
-      "after": {
         "source": {
           "repository": "Kreijstal/funorb-decompiled",
           "commit": "c311d5adc1fe86b3d917967adc56c71803bcb77d",
@@ -10957,6 +9816,29 @@
           }
         },
         "inputTreeSha256": "54a54b0e7576a6af94adb3b69987428f011658f7b2513f6de27ba0dd45fdd331"
+      },
+      "after": {
+        "source": {
+          "repository": "Kreijstal/funorb-decompiled",
+          "commit": "2814e2a8c367d698d4751d726745336ea37ab975",
+          "subdirectory": "games/geoblox"
+        },
+        "generators": {
+          "dekoblokoWork": {
+            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
+            "trackedClean": true
+          },
+          "javaTools": {
+            "commit": "a4cb12769e663bb0318f864ba63242eb769defd8",
+            "trackedClean": true,
+            "sourceArchive": {
+              "sha256": "4a602f64863503fc42934d47c05b546784f7ebaee646a7c7ea7093b24bd5ee66",
+              "reproduce": "git archive --format=tar a4cb12769e663bb0318f864ba63242eb769defd8 | sha256sum",
+              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
+            }
+          }
+        },
+        "inputTreeSha256": "d7bea0c5687e00ea49ab0d6f5b89aace3e2cca0067c862db74bd7ce881569adc"
       }
     }
   }

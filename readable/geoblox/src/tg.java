@@ -39,7 +39,6 @@ final class tg extends com.ms.dll.Callback {
         }
         if (var5 == this.field_b) {
           stackIn_27_0 = this;
-
           if (!param1) {
             stackIn_28_0 = this;
             stackIn_28_1 = false;
@@ -48,32 +47,30 @@ final class tg extends com.ms.dll.Callback {
             stackIn_28_1 = true;
           }
           ((tg) (this)).field_e = stackIn_28_1;
-          com.ms.win32.User32.SendMessage(var5, 101024, 0, 0);
-          return;
-        }
-        if (0 != this.field_b) {
-          this.field_e = true;
-          com.ms.win32.User32.SendMessage(var5, 101024, 0, 0);
+        } else {
+          if (0 != this.field_b) {
+            this.field_e = true;
+            com.ms.win32.User32.SendMessage(var5, 101024, 0, 0);
+            var6 = this;
+            synchronized (var6) {
+              com.ms.win32.User32.SetWindowLong(this.field_b, -4, this.field_c);
+            }
+          }
           var6 = this;
           synchronized (var6) {
-            com.ms.win32.User32.SetWindowLong(this.field_b, -4, this.field_c);
+            this.field_b = var5;
+            this.field_c = com.ms.win32.User32.SetWindowLong(this.field_b, -4, this);
           }
+          stackIn_21_0 = this;
+          if (!param1) {
+            stackIn_22_0 = this;
+            stackIn_22_1 = false;
+          } else {
+            stackIn_22_0 = this;
+            stackIn_22_1 = true;
+          }
+          ((tg) (this)).field_e = stackIn_22_1;
         }
-        var6 = this;
-        synchronized (var6) {
-          this.field_b = var5;
-          this.field_c = com.ms.win32.User32.SetWindowLong(this.field_b, -4, this);
-        }
-        stackIn_21_0 = this;
-
-        if (!param1) {
-          stackIn_22_0 = this;
-          stackIn_22_1 = false;
-        } else {
-          stackIn_22_0 = this;
-          stackIn_22_1 = true;
-        }
-        ((tg) (this)).field_e = stackIn_22_1;
         com.ms.win32.User32.SendMessage(var5, 101024, 0, 0);
     }
 

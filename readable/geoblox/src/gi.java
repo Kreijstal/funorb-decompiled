@@ -27,25 +27,19 @@ final class gi implements Iterable {
         ff.field_d = null;
         if (cf.field_i) {
           Geoblox.field_y.c(false);
-          return;
-        }
-        var1 = ik.field_a;
-        if (var1 <= 0) {
+        } else {
+          var1 = ik.field_a;
+          if (!(var1 <= 0)) {
+            if (1 == var1) {
+              ff.field_d = ih.ticketingOneUnreadText;
+            } else {
+              ff.field_d = wj.a(ra.ticketingUnreadCountText, new String[]{Integer.toString(var1)}, (byte) -124);
+            }
+            ff.field_d = gg.a(-11455, new CharSequence[]{(CharSequence) ((Object) ff.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) ne.ticketingGoToWebsiteText)});
+          }
           Geoblox.field_y.h((byte) -104);
           rd.c(520);
-          return;
         }
-        if (1 == var1) {
-          ff.field_d = ih.ticketingOneUnreadText;
-          ff.field_d = gg.a(-11455, new CharSequence[]{(CharSequence) ((Object) ff.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) ne.ticketingGoToWebsiteText)});
-          Geoblox.field_y.h((byte) -104);
-          rd.c(520);
-          return;
-        }
-        ff.field_d = wj.a(ra.ticketingUnreadCountText, new String[]{Integer.toString(var1)}, (byte) -124);
-        ff.field_d = gg.a(-11455, new CharSequence[]{(CharSequence) ((Object) ff.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) ne.ticketingGoToWebsiteText)});
-        Geoblox.field_y.h((byte) -104);
-        rd.c(520);
     }
 
     final void a(long param0, int param1, IntrusiveNode param2) {
@@ -161,44 +155,24 @@ final class gi implements Iterable {
         if (param6 >= param3) {
           if (param2 > param6) {
             sd.a(param5, param4, param7, 110, SoftwareRasterizer.framebuffer, param2, param0, param6, param3);
-            if (param1 < -102) {
-              return;
+          } else {
+            if (param3 < param2) {
+              sd.a(param0, param4, param7, 127, SoftwareRasterizer.framebuffer, param6, param5, param2, param3);
+            } else {
+              sd.a(param4, param0, param7, 120, SoftwareRasterizer.framebuffer, param6, param5, param3, param2);
             }
-            gi.a(-38);
-            return;
           }
+        } else {
           if (param3 < param2) {
-            sd.a(param0, param4, param7, 127, SoftwareRasterizer.framebuffer, param6, param5, param2, param3);
-            if (param1 < -102) {
-              return;
+            sd.a(param4, param5, param7, 116, SoftwareRasterizer.framebuffer, param2, param0, param3, param6);
+          } else {
+            if (param2 > param6) {
+              sd.a(param0, param5, param7, -110, SoftwareRasterizer.framebuffer, param3, param4, param2, param6);
+            } else {
+              sd.a(param5, param0, param7, -102, SoftwareRasterizer.framebuffer, param3, param4, param6, param2);
             }
-            gi.a(-38);
-            return;
           }
-          sd.a(param4, param0, param7, 120, SoftwareRasterizer.framebuffer, param6, param5, param3, param2);
-          if (param1 < -102) {
-            return;
-          }
-          gi.a(-38);
-          return;
         }
-        if (param3 < param2) {
-          sd.a(param4, param5, param7, 116, SoftwareRasterizer.framebuffer, param2, param0, param3, param6);
-          if (param1 < -102) {
-            return;
-          }
-          gi.a(-38);
-          return;
-        }
-        if (param2 > param6) {
-          sd.a(param0, param5, param7, -110, SoftwareRasterizer.framebuffer, param3, param4, param2, param6);
-          if (param1 < -102) {
-            return;
-          }
-          gi.a(-38);
-          return;
-        }
-        sd.a(param5, param0, param7, -102, SoftwareRasterizer.framebuffer, param3, param4, param6, param2);
         if (param1 < -102) {
           return;
         }

@@ -22,193 +22,125 @@ final class jc {
             wa.avatarShockEffectTicks = 50;
             td.playPcmSample(-348, fl.field_c[27]);
           }
-          return;
-        }
-        if (!clearSpriteGuard) {
-          if (feedbackRequestId != 0) {
-            if (1 == feedbackRequestId) {
-              nd.avatarFeedbackModeId = 1;
-              MenuScreen.avatarFeedbackFrameBase = 6;
-              uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
-              return;
-            }
-            if (feedbackRequestId != 2) {
-              if (3 == feedbackRequestId) {
-                MenuScreen.avatarFeedbackFrameBase = 18;
-                wa.avatarShockEffectTicks = 50;
-                pa.avatarFeedbackHoldTicks = 110;
-                nd.avatarFeedbackModeId = 3;
-                td.playPcmSample(-348, fl.field_c[27]);
+        } else {
+          if (!clearSpriteGuard) {
+            if (feedbackRequestId != 0) {
+              if (1 == feedbackRequestId) {
+                nd.avatarFeedbackModeId = 1;
+                MenuScreen.avatarFeedbackFrameBase = 6;
                 uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
                 return;
               }
-              if (feedbackRequestId == 4) {
-                pa.avatarFeedbackHoldTicks = 110;
-                MenuScreen.avatarFeedbackFrameBase = 24;
-                nd.avatarFeedbackModeId = 4;
+              if (feedbackRequestId != 2) {
+                if (3 == feedbackRequestId) {
+                  MenuScreen.avatarFeedbackFrameBase = 18;
+                  wa.avatarShockEffectTicks = 50;
+                  pa.avatarFeedbackHoldTicks = 110;
+                  nd.avatarFeedbackModeId = 3;
+                  td.playPcmSample(-348, fl.field_c[27]);
+                } else {
+                  if (feedbackRequestId == 4) {
+                    pa.avatarFeedbackHoldTicks = 110;
+                    MenuScreen.avatarFeedbackFrameBase = 24;
+                    nd.avatarFeedbackModeId = 4;
+                  } else {
+                    if (feedbackRequestId == 5) {
+                      pa.avatarFeedbackHoldTicks = 110;
+                      nd.avatarFeedbackModeId = 5;
+                      MenuScreen.avatarFeedbackFrameBase = 30;
+                      td.playPcmSample(-348, fl.field_c[24]);
+                    }
+                  }
+                }
                 uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
                 return;
               }
-              if (feedbackRequestId != 5) {
-                uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
-                return;
-              }
-              pa.avatarFeedbackHoldTicks = 110;
-              nd.avatarFeedbackModeId = 5;
-              MenuScreen.avatarFeedbackFrameBase = 30;
-              td.playPcmSample(-348, fl.field_c[24]);
-              uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
-              return;
-            }
-            if (12 != MenuScreen.avatarFeedbackFrameBase) {
-              if (MenuScreen.avatarFeedbackFrameBase == 24) {
+              if (12 != MenuScreen.avatarFeedbackFrameBase) {
+                if (MenuScreen.avatarFeedbackFrameBase != 24) {
+                  if (30 != MenuScreen.avatarFeedbackFrameBase) {
+                    if (36 != MenuScreen.avatarFeedbackFrameBase) {
+                      td.playPcmSample(-348, fl.field_c[26]);
+                    }
+                  }
+                }
                 nd.avatarFeedbackModeId = 2;
                 MenuScreen.avatarFeedbackFrameBase = 12;
                 uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
                 return;
               }
-              if (30 == MenuScreen.avatarFeedbackFrameBase) {
-                nd.avatarFeedbackModeId = 2;
-                MenuScreen.avatarFeedbackFrameBase = 12;
-                uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
-                return;
-              }
-              if (36 == MenuScreen.avatarFeedbackFrameBase) {
-                nd.avatarFeedbackModeId = 2;
-                MenuScreen.avatarFeedbackFrameBase = 12;
-                uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
-                return;
-              }
-              td.playPcmSample(-348, fl.field_c[26]);
               nd.avatarFeedbackModeId = 2;
               MenuScreen.avatarFeedbackFrameBase = 12;
-              uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
-              return;
-            }
-            nd.avatarFeedbackModeId = 2;
-            MenuScreen.avatarFeedbackFrameBase = 12;
-          } else {
-            if (MenuScreen.avatarFeedbackFrameBase != 0) {
-              if (24 != MenuScreen.avatarFeedbackFrameBase) {
-                if (MenuScreen.avatarFeedbackFrameBase != 30) {
-                  if (MenuScreen.avatarFeedbackFrameBase != 36) {
-                    td.playPcmSample(-348, fl.field_c[25]);
-                    MenuScreen.avatarFeedbackFrameBase = 0;
-                    nd.avatarFeedbackModeId = 0;
-                  } else {
-                    MenuScreen.avatarFeedbackFrameBase = 0;
-                    nd.avatarFeedbackModeId = 0;
-                  }
-                } else {
-                  MenuScreen.avatarFeedbackFrameBase = 0;
-                  nd.avatarFeedbackModeId = 0;
-                }
-              } else {
-                MenuScreen.avatarFeedbackFrameBase = 0;
-                nd.avatarFeedbackModeId = 0;
-              }
             } else {
+              if (MenuScreen.avatarFeedbackFrameBase != 0) {
+                if (24 != MenuScreen.avatarFeedbackFrameBase) {
+                  if (MenuScreen.avatarFeedbackFrameBase != 30) {
+                    if (MenuScreen.avatarFeedbackFrameBase != 36) {
+                      td.playPcmSample(-348, fl.field_c[25]);
+                    }
+                  }
+                }
+              }
               MenuScreen.avatarFeedbackFrameBase = 0;
               nd.avatarFeedbackModeId = 0;
             }
+          } else {
+            field_a = (Sprite) null;
+            if (feedbackRequestId == 0) {
+              if (MenuScreen.avatarFeedbackFrameBase != 0) {
+                if (24 != MenuScreen.avatarFeedbackFrameBase) {
+                  if (MenuScreen.avatarFeedbackFrameBase != 30) {
+                    if (MenuScreen.avatarFeedbackFrameBase != 36) {
+                      td.playPcmSample(-348, fl.field_c[25]);
+                    }
+                  }
+                }
+              }
+              MenuScreen.avatarFeedbackFrameBase = 0;
+              nd.avatarFeedbackModeId = 0;
+            } else {
+              if (1 == feedbackRequestId) {
+                nd.avatarFeedbackModeId = 1;
+                MenuScreen.avatarFeedbackFrameBase = 6;
+              } else {
+                if (feedbackRequestId != 2) {
+                  if (3 == feedbackRequestId) {
+                    MenuScreen.avatarFeedbackFrameBase = 18;
+                    wa.avatarShockEffectTicks = 50;
+                    pa.avatarFeedbackHoldTicks = 110;
+                    nd.avatarFeedbackModeId = 3;
+                    td.playPcmSample(-348, fl.field_c[27]);
+                  } else {
+                    if (feedbackRequestId == 4) {
+                      pa.avatarFeedbackHoldTicks = 110;
+                      MenuScreen.avatarFeedbackFrameBase = 24;
+                      nd.avatarFeedbackModeId = 4;
+                    } else {
+                      if (feedbackRequestId == 5) {
+                        pa.avatarFeedbackHoldTicks = 110;
+                        nd.avatarFeedbackModeId = 5;
+                        MenuScreen.avatarFeedbackFrameBase = 30;
+                        td.playPcmSample(-348, fl.field_c[24]);
+                      }
+                    }
+                  }
+                } else {
+                  if (12 != MenuScreen.avatarFeedbackFrameBase) {
+                    if (MenuScreen.avatarFeedbackFrameBase != 24) {
+                      if (30 != MenuScreen.avatarFeedbackFrameBase) {
+                        if (36 != MenuScreen.avatarFeedbackFrameBase) {
+                          td.playPcmSample(-348, fl.field_c[26]);
+                        }
+                      }
+                    }
+                  }
+                  nd.avatarFeedbackModeId = 2;
+                  MenuScreen.avatarFeedbackFrameBase = 12;
+                }
+              }
+            }
           }
           uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
-          return;
         }
-        field_a = (Sprite) null;
-        if (feedbackRequestId == 0) {
-          if (MenuScreen.avatarFeedbackFrameBase == 0) {
-            MenuScreen.avatarFeedbackFrameBase = 0;
-            nd.avatarFeedbackModeId = 0;
-            uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
-            return;
-          }
-          if (24 == MenuScreen.avatarFeedbackFrameBase) {
-            MenuScreen.avatarFeedbackFrameBase = 0;
-            nd.avatarFeedbackModeId = 0;
-            uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
-            return;
-          }
-          if (MenuScreen.avatarFeedbackFrameBase == 30) {
-            MenuScreen.avatarFeedbackFrameBase = 0;
-            nd.avatarFeedbackModeId = 0;
-            uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
-            return;
-          }
-          if (MenuScreen.avatarFeedbackFrameBase == 36) {
-            MenuScreen.avatarFeedbackFrameBase = 0;
-            nd.avatarFeedbackModeId = 0;
-            uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
-            return;
-          }
-          td.playPcmSample(-348, fl.field_c[25]);
-          MenuScreen.avatarFeedbackFrameBase = 0;
-          nd.avatarFeedbackModeId = 0;
-          uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
-          return;
-        }
-        if (1 == feedbackRequestId) {
-          nd.avatarFeedbackModeId = 1;
-          MenuScreen.avatarFeedbackFrameBase = 6;
-          uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
-          return;
-        }
-        if (feedbackRequestId != 2) {
-          if (3 == feedbackRequestId) {
-            MenuScreen.avatarFeedbackFrameBase = 18;
-            wa.avatarShockEffectTicks = 50;
-            pa.avatarFeedbackHoldTicks = 110;
-            nd.avatarFeedbackModeId = 3;
-            td.playPcmSample(-348, fl.field_c[27]);
-            uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
-            return;
-          }
-          if (feedbackRequestId == 4) {
-            pa.avatarFeedbackHoldTicks = 110;
-            MenuScreen.avatarFeedbackFrameBase = 24;
-            nd.avatarFeedbackModeId = 4;
-            uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
-            return;
-          }
-          if (feedbackRequestId != 5) {
-            uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
-            return;
-          }
-          pa.avatarFeedbackHoldTicks = 110;
-          nd.avatarFeedbackModeId = 5;
-          MenuScreen.avatarFeedbackFrameBase = 30;
-          td.playPcmSample(-348, fl.field_c[24]);
-          uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
-          return;
-        }
-        if (12 == MenuScreen.avatarFeedbackFrameBase) {
-          nd.avatarFeedbackModeId = 2;
-          MenuScreen.avatarFeedbackFrameBase = 12;
-          uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
-          return;
-        }
-        if (MenuScreen.avatarFeedbackFrameBase == 24) {
-          nd.avatarFeedbackModeId = 2;
-          MenuScreen.avatarFeedbackFrameBase = 12;
-          uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
-          return;
-        }
-        if (30 == MenuScreen.avatarFeedbackFrameBase) {
-          nd.avatarFeedbackModeId = 2;
-          MenuScreen.avatarFeedbackFrameBase = 12;
-          uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
-          return;
-        }
-        if (36 == MenuScreen.avatarFeedbackFrameBase) {
-          nd.avatarFeedbackModeId = 2;
-          MenuScreen.avatarFeedbackFrameBase = 12;
-          uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
-          return;
-        }
-        td.playPcmSample(-348, fl.field_c[26]);
-        nd.avatarFeedbackModeId = 2;
-        MenuScreen.avatarFeedbackFrameBase = 12;
-        uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
     }
 
     final static fd[] a(pk param0, boolean param1) {

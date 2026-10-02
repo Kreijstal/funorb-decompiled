@@ -208,8 +208,11 @@ caller resumes and re-reads an exhausted table; partial updates remain visible. 
 17 integer Boolean carriers are now eliminated, so the interval calls use
 `sa.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard)` directly. The proof
 requires a single adjacent use and a nonthrowing primitive condition whose
-inputs are unchanged. Shared difficulty tails remain duplicated. The 84,661-case
-difficulty matrix checks the resulting partial state and exceptions.
+inputs are unchanged. The generic tail pass reduces the method from 220 lines
+to 69. Most category, probability, rotation and interval updates now follow the
+branches. One nested return tail remains; no table read or recursive effect is
+moved ahead of the branch prefix. The 84,661-case difficulty matrix checks the
+resulting partial state and exceptions.
 
 | Flag bit | Observed effect |
 | --- | --- |
@@ -552,11 +555,16 @@ previous naming and structural passes remain in Git. The earlier early-exit migr
 moved 35 named local ordinals by unique method/original-spelling identity.
 The subsequent naming pass retained all prior rules and added 38 difficulty
 and spawning identities without changing the raw source. The previous migration
-folded 77 typed literal assignment branches. The current proof removes 221
+folded 77 typed literal assignment branches. The subsequent proof removed 221
 generated locals, keeps 70 Boolean local snapshots and retypes one generated
 helper field. Fourteen obsolete names are explicitly removed, 61 surviving local
 ordinals migrate, and the helper field has an explicit type migration. All other
-semantic names remain. Duplicated difficulty tails and other carriers remain. The earlier terminal-return pass removed the vanished boundary selector;
+semantic names remain. The current shared-tail pass removes 451 lines across
+16 files, retaining every declaration identity and all 1,194 naming rules without
+ordinal changes. It factors exact whole tails within a block scope after Boolean
+cleanup and preserves bare return guards. The difficulty method is now 69 lines;
+one nested difficulty tail and other carriers remain. The earlier terminal-return
+pass removed the vanished boundary selector;
 the current emitter also retains its proven early-exit reconstruction.
 Complete parsing and preserved declaration scopes keep this reproducible.
 

@@ -16,14 +16,14 @@ mirror. The current [manifest](readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
-identities. Both 303-file Java corpora compile and retain all 151,774 bindings
+identities. Both 303-file Java corpora compile and retain all 150,884 bindings
 and 388 override relationships.
 
 Difficulty and spawning now name the step flags, sprite-variant/category
 bounds, special-kind probability, release interval and queue geometry.
-The previous naming pass added 38 rules. The current structural export
-retains 1,194 guarded rules after removing 14 obsolete carrier names and
-migrating 61 local ordinals plus one generated helper field type. Independent
+The previous naming pass added 38 rules. The Boolean-carrier pass removed
+14 obsolete names and migrated 61 local ordinals plus one generated field type.
+The current branch-tail pass preserves all 1,194 guarded rules unchanged. Independent
 native fixtures verify 84,661 additional difficulty/reset/selection cases,
 including floating-point casts, recursive failures, partial writes and seeded
 random draw consumption. The current input and decompiler revisions are pinned
@@ -32,8 +32,8 @@ in the manifest.
 The boundary scan now has guarded semantic names for every local and parameter.
 An independent geometric oracle verifies 425,042 pixel cases at two framebuffer
 strides, plus guard arithmetic and invalid-raster read ordering, against native
-bytecode and both source mirrors. Its original-path returns and retained result carriers are explained in the
-reading guide; other opaque names and shared control-flow joins remain.
+bytecode and both source mirrors. Its direct true/false returns are explained
+in the reading guide; other opaque names and shared control-flow joins remain.
 
 `node readable/reproduce-geoblox.mjs --check` verifies deterministic regeneration
 from the pinned input and bundled naming tool. All original dispatcher methods
@@ -45,27 +45,28 @@ prior snapshots in Git.
 
 ## GeoBlox source refresh
 
-The latest owned decompiler proves Boolean-only uses of generated integer stack
-carriers. It removes 221 locals and 442 lines across 75 files, while retaining
-70 Boolean local snapshots and retyping one generated helper field. Every
-condition stays at its original evaluation point unless a single adjacent use
-can safely inline a nonthrowing primitive expression. Numeric uses, shadowing,
-unknown syntax, nullable unboxing and later input mutation prevent unsafe inlining.
+The latest owned decompiler factors identical whole branch tails after Boolean
+carrier cleanup. It removes 451 lines across 16 files and reduces
+`ld.advanceDifficulty` from 220 lines to 69. Most probability, rotation and
+interval updates now follow the branches; one nested return tail remains.
+Conditions still execute when both prefixes are empty. Scope changes refuse
+factoring, and nested exception, monitor, loop and labeled bodies stay whole.
+Bare return guard ladders retain their readable exits.
 
-The difficulty method now calls the interval helper with `!recursiveAdvanceGuard`
-directly. The boundary scan uses direct true/false returns in place of its 13
-result carriers. Its pixel order, integer guard, exception context and shared
-loop structure remain. Earlier early-exit and literal-assignment cleanup remains.
+The preceding pass removed 221 generated integer locals, retained 70 Boolean
+snapshots and retyped one generated helper field. All 17 difficulty carriers
+and 13 boundary result carriers remain eliminated, with direct interval Boolean
+arguments and original-path true/false returns.
 
-All 303 sources compile with 20,710 declarations and 388 override edges.
-Raw/readable rebinding compares 151,774 bindings. The manifest explicitly
-removes 14 obsolete carrier rules, migrates 61 local ordinals and records the
-named generated field's I-to-Z change, retaining 1,194 rules. Every normalized
-reference removal is a discarded carrier's store/read pair. The emitter passes
-17 groups and 1,510 native comparisons; floating, nested-cycle, exception-exit
-and catch regressions also pass. All six GeoBlox native probes match both source
-mirrors. A clean committed decompiler source archive reproduces all raw Java
-and diagnostics byte-for-byte.
+All 303 sources compile with the same 20,710 declaration identities and 388
+override edges. Raw/readable rebinding compares 150,884 bindings. No guarded
+name, spelling, evidence, ordinal or descriptor changes in this pass; all 1,194
+rules are unchanged. The 890 removed reference occurrences come from duplicate
+tails, with none added. The emitter passes 19 groups and 2,329 native comparisons,
+including 819 shared-tail checks. Floating, nested-cycle, exception-exit and
+catch checks pass. All six GeoBlox native probes retain their traces across
+native, raw and readable variants. The clean committed decompiler archive
+reproduces all raw Java and diagnostics byte-for-byte.
 
 The previous terminal-return reconstruction removed 254 selectors and the
 boundary scan's 13-arm post-try ladder. Shared joins and throwing continuations

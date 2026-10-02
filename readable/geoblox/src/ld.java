@@ -109,218 +109,67 @@ final class ld {
           if (sa.specialSpriteKindProbability > 0.15000000000000002) {
             sa.specialSpriteKindProbability = sa.specialSpriteKindProbability - 0.05;
           }
-          return;
-        }
-        if ((4 & kd.difficultyStepFlags[ji.difficultyStep]) != 0) {
-          og.entityMotionSpeed = og.entityMotionSpeed + 0.055555559694767f;
-          sa.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard);
-        }
-        if ((kd.difficultyStepFlags[ji.difficultyStep] & 1) == 0) {
-          if (!recursiveAdvanceGuard) {
+        } else {
+          if ((4 & kd.difficultyStepFlags[ji.difficultyStep]) != 0) {
+            og.entityMotionSpeed = og.entityMotionSpeed + 0.055555559694767f;
+            sa.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard);
+          }
+          if ((kd.difficultyStepFlags[ji.difficultyStep] & 1) == 0) {
+            if (recursiveAdvanceGuard) {
+              ld.advanceDifficulty(true);
+            }
             if ((kd.difficultyStepFlags[ji.difficultyStep] & 2) != 0) {
               if (f.availableEntityCategoryCount < 7) {
                 f.availableEntityCategoryCount = f.availableEntityCategoryCount + 1;
               }
             }
-            if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 16)) {
-              sa.specialSpriteKindProbability = sa.specialSpriteKindProbability + 0.05;
-            }
-            if ((8 & kd.difficultyStepFlags[ji.difficultyStep]) != 0) {
-              DualLinkNode.rotationStepRadians = DualLinkNode.rotationStepRadians * 1.100000023841858f;
-            }
-            if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 128)) {
-              if (0.800000011920929f > ij.spawnIntervalScale) {
-                ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
+          } else {
+            if (ag.availableSpriteVariantCount < 7) {
+              ag.availableSpriteVariantCount = ag.availableSpriteVariantCount + 1;
+              if (recursiveAdvanceGuard) {
+                ld.advanceDifficulty(true);
               }
-              sa.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard);
-            }
-            return;
-          }
-          ld.advanceDifficulty(true);
-          if ((kd.difficultyStepFlags[ji.difficultyStep] & 2) == 0) {
-            if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 16)) {
-              sa.specialSpriteKindProbability = sa.specialSpriteKindProbability + 0.05;
-            }
-            if ((8 & kd.difficultyStepFlags[ji.difficultyStep]) != 0) {
-              DualLinkNode.rotationStepRadians = DualLinkNode.rotationStepRadians * 1.100000023841858f;
-            }
-            if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 128)) {
-              if (0.800000011920929f > ij.spawnIntervalScale) {
-                ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
-              }
-              sa.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard);
-            }
-            return;
-          }
-          if (f.availableEntityCategoryCount < 7) {
-            f.availableEntityCategoryCount = f.availableEntityCategoryCount + 1;
-          }
-          if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 16)) {
-            sa.specialSpriteKindProbability = sa.specialSpriteKindProbability + 0.05;
-          }
-          if ((8 & kd.difficultyStepFlags[ji.difficultyStep]) != 0) {
-            DualLinkNode.rotationStepRadians = DualLinkNode.rotationStepRadians * 1.100000023841858f;
-          }
-          if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 128)) {
-            if (0.800000011920929f > ij.spawnIntervalScale) {
-              ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
-            }
-            sa.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard);
-          }
-          return;
-        }
-        if (ag.availableSpriteVariantCount < 7) {
-          ag.availableSpriteVariantCount = ag.availableSpriteVariantCount + 1;
-          if (recursiveAdvanceGuard) {
-            ld.advanceDifficulty(true);
-          }
-          if ((kd.difficultyStepFlags[ji.difficultyStep] & 2) != 0) {
-            if (f.availableEntityCategoryCount < 7) {
-              f.availableEntityCategoryCount = f.availableEntityCategoryCount + 1;
-            }
-          }
-          if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 16)) {
-            sa.specialSpriteKindProbability = sa.specialSpriteKindProbability + 0.05;
-          }
-          if ((8 & kd.difficultyStepFlags[ji.difficultyStep]) != 0) {
-            DualLinkNode.rotationStepRadians = DualLinkNode.rotationStepRadians * 1.100000023841858f;
-          }
-          if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 128)) {
-            if (0.800000011920929f > ij.spawnIntervalScale) {
-              ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
-            }
-            sa.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard);
-          }
-          return;
-        }
-        if (recursiveAdvanceGuard) {
-          ld.advanceDifficulty(true);
-          if ((kd.difficultyStepFlags[ji.difficultyStep] & 2) != 0) {
-            if (f.availableEntityCategoryCount >= 7) {
-              if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 16)) {
-                sa.specialSpriteKindProbability = sa.specialSpriteKindProbability + 0.05;
-              }
-              if ((8 & kd.difficultyStepFlags[ji.difficultyStep]) != 0) {
-                DualLinkNode.rotationStepRadians = DualLinkNode.rotationStepRadians * 1.100000023841858f;
-              }
-              if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 128)) {
-                if (0.800000011920929f > ij.spawnIntervalScale) {
-                  ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
+              if ((kd.difficultyStepFlags[ji.difficultyStep] & 2) != 0) {
+                if (f.availableEntityCategoryCount < 7) {
+                  f.availableEntityCategoryCount = f.availableEntityCategoryCount + 1;
                 }
-                sa.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard);
               }
-              return;
-            }
-            f.availableEntityCategoryCount = f.availableEntityCategoryCount + 1;
-          }
-          if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 16)) {
-            sa.specialSpriteKindProbability = sa.specialSpriteKindProbability + 0.05;
-            if ((8 & kd.difficultyStepFlags[ji.difficultyStep]) != 0) {
-              DualLinkNode.rotationStepRadians = DualLinkNode.rotationStepRadians * 1.100000023841858f;
-            }
-            if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 128)) {
-              if (0.800000011920929f > ij.spawnIntervalScale) {
-                ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
+            } else {
+              if (recursiveAdvanceGuard) {
+                ld.advanceDifficulty(true);
               }
-              sa.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard);
-            }
-            return;
-          }
-          if ((8 & kd.difficultyStepFlags[ji.difficultyStep]) == 0) {
-            if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 128)) {
-              if (0.800000011920929f > ij.spawnIntervalScale) {
-                ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
-              }
-              sa.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard);
-            }
-            return;
-          }
-          DualLinkNode.rotationStepRadians = DualLinkNode.rotationStepRadians * 1.100000023841858f;
-          if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 128)) {
-            if (0.800000011920929f > ij.spawnIntervalScale) {
-              ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
-            }
-            sa.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard);
-          }
-          return;
-        }
-        if ((kd.difficultyStepFlags[ji.difficultyStep] & 2) != 0) {
-          if (f.availableEntityCategoryCount >= 7) {
-            if (0 == (kd.difficultyStepFlags[ji.difficultyStep] & 16)) {
-              if ((8 & kd.difficultyStepFlags[ji.difficultyStep]) == 0) {
-                if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 128)) {
-                  if (0.800000011920929f > ij.spawnIntervalScale) {
-                    ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
+              if ((kd.difficultyStepFlags[ji.difficultyStep] & 2) != 0) {
+                if (f.availableEntityCategoryCount >= 7) {
+                  if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 16)) {
+                    sa.specialSpriteKindProbability = sa.specialSpriteKindProbability + 0.05;
                   }
-                  sa.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard);
+                  if ((8 & kd.difficultyStepFlags[ji.difficultyStep]) != 0) {
+                    DualLinkNode.rotationStepRadians = DualLinkNode.rotationStepRadians * 1.100000023841858f;
+                  }
+                  if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 128)) {
+                    if (0.800000011920929f > ij.spawnIntervalScale) {
+                      ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
+                    }
+                    sa.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard);
+                  }
+                  return;
                 }
-                return;
+                f.availableEntityCategoryCount = f.availableEntityCategoryCount + 1;
               }
-              DualLinkNode.rotationStepRadians = DualLinkNode.rotationStepRadians * 1.100000023841858f;
-              if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 128)) {
-                if (0.800000011920929f > ij.spawnIntervalScale) {
-                  ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
-                }
-                sa.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard);
-              }
-              return;
             }
+          }
+          if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 16)) {
             sa.specialSpriteKindProbability = sa.specialSpriteKindProbability + 0.05;
-            if ((8 & kd.difficultyStepFlags[ji.difficultyStep]) == 0) {
-              if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 128)) {
-                if (0.800000011920929f > ij.spawnIntervalScale) {
-                  ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
-                }
-                sa.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard);
-              }
-              return;
-            }
+          }
+          if ((8 & kd.difficultyStepFlags[ji.difficultyStep]) != 0) {
             DualLinkNode.rotationStepRadians = DualLinkNode.rotationStepRadians * 1.100000023841858f;
-            if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 128)) {
-              if (0.800000011920929f > ij.spawnIntervalScale) {
-                ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
-              }
-              sa.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard);
-            }
-            return;
           }
-          f.availableEntityCategoryCount = f.availableEntityCategoryCount + 1;
-        }
-        if (0 == (kd.difficultyStepFlags[ji.difficultyStep] & 16)) {
-          if ((8 & kd.difficultyStepFlags[ji.difficultyStep]) == 0) {
-            if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 128)) {
-              if (0.800000011920929f > ij.spawnIntervalScale) {
-                ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
-              }
-              sa.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard);
-            }
-            return;
-          }
-          DualLinkNode.rotationStepRadians = DualLinkNode.rotationStepRadians * 1.100000023841858f;
           if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 128)) {
             if (0.800000011920929f > ij.spawnIntervalScale) {
               ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
             }
             sa.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard);
           }
-          return;
-        }
-        sa.specialSpriteKindProbability = sa.specialSpriteKindProbability + 0.05;
-        if ((8 & kd.difficultyStepFlags[ji.difficultyStep]) == 0) {
-          if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 128)) {
-            if (0.800000011920929f > ij.spawnIntervalScale) {
-              ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
-            }
-            sa.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard);
-          }
-          return;
-        }
-        DualLinkNode.rotationStepRadians = DualLinkNode.rotationStepRadians * 1.100000023841858f;
-        if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 128)) {
-          if (0.800000011920929f > ij.spawnIntervalScale) {
-            ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
-          }
-          sa.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard);
         }
     }
 

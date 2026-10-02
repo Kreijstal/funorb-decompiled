@@ -88,97 +88,53 @@ final class nb {
         pointerY = (int)(Math.sin((double)(-el.gameplaySession.boardAngleRadians)) * var7 + Math.cos((double)(-el.gameplaySession.boardAngleRadians)) * var9 + 240.0);
         if (!specialKinds) {
           var6.initializeEntityMotion(-75, (float)pointerX, 0, (float)(-pointerX + 320), variantId, 0, 0.0f, (float)pointerY, (float)(-pointerY + 240), categoryId, 0.0f);
-          var6.entityQueue = null;
-          ji.movingEntities.addLast(param0 ^ 28286, var6);
-          return;
-        }
-        var11 = (variantId + categoryId) % 4;
-        var12 = 0;
-        if (var11 == 0) {
-          var12 = 2;
-        }
-        if (var11 == 1) {
-          var12 = 4;
-        }
-        if (var11 == 2) {
-          var12 = 3;
-        }
-        if (3 == var11) {
-          var12 = 1;
-        }
-        stackIn_17_0 = (GameplayEntity) (var6);
-
-        stackIn_17_1 = param0 + 28113;
-
-        stackIn_17_2 = (float)pointerX;
-
-        stackIn_17_3 = var12;
-
-        stackIn_17_4 = (float)(320 - pointerX);
-
-        if (var12 != 2) {
-          stackIn_18_0 = (GameplayEntity) ((Object) stackIn_17_0);
-          stackIn_18_1 = stackIn_17_1;
-          stackIn_18_2 = stackIn_17_2;
-          stackIn_18_3 = stackIn_17_3;
-          stackIn_18_4 = stackIn_17_4;
-          stackIn_18_5 = -1;
         } else {
-          stackIn_18_0 = (GameplayEntity) ((Object) stackIn_17_0);
-          stackIn_18_1 = stackIn_17_1;
-          stackIn_18_2 = stackIn_17_2;
-          stackIn_18_3 = stackIn_17_3;
-          stackIn_18_4 = stackIn_17_4;
-          stackIn_18_5 = variantId;
-        }
-        L5: {
-          stackIn_18_0 = (GameplayEntity) ((Object) stackIn_18_0);
-
-          stackIn_21_6 = 0;
-
-          stackIn_21_7 = 0.0f;
-
-          stackIn_21_8 = (float)pointerY;
-
-          stackIn_21_9 = (float)(-pointerY + 240);
-
+          var11 = (variantId + categoryId) % 4;
+          var12 = 0;
+          if (var11 == 0) {
+            var12 = 2;
+          }
+          if (var11 == 1) {
+            var12 = 4;
+          }
+          if (var11 == 2) {
+            var12 = 3;
+          }
+          if (3 == var11) {
+            var12 = 1;
+          }
+          stackIn_17_0 = (GameplayEntity) (var6);
+          stackIn_17_1 = param0 + 28113;
+          stackIn_17_2 = (float)pointerX;
+          stackIn_17_3 = var12;
+          stackIn_17_4 = (float)(320 - pointerX);
           if (var12 != 2) {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            if (1 != var12) {
-              stackIn_23_0 = (GameplayEntity) ((Object) stackIn_18_0);
-              stackIn_23_1 = stackIn_18_1;
-              stackIn_23_2 = stackIn_18_2;
-              stackIn_23_3 = stackIn_18_3;
-              stackIn_23_4 = stackIn_18_4;
-              stackIn_23_5 = stackIn_18_5;
-              stackIn_23_6 = stackIn_21_6;
-              stackIn_23_7 = stackIn_21_7;
-              stackIn_23_8 = stackIn_21_8;
-              stackIn_23_9 = stackIn_21_9;
-              stackIn_23_10 = -1;
-              break L5;
-            }
+            stackIn_18_0 = (GameplayEntity) ((Object) stackIn_17_0);
+            stackIn_18_1 = stackIn_17_1;
+            stackIn_18_2 = stackIn_17_2;
+            stackIn_18_3 = stackIn_17_3;
+            stackIn_18_4 = stackIn_17_4;
+            stackIn_18_5 = -1;
+          } else {
+            stackIn_18_0 = (GameplayEntity) ((Object) stackIn_17_0);
+            stackIn_18_1 = stackIn_17_1;
+            stackIn_18_2 = stackIn_17_2;
+            stackIn_18_3 = stackIn_17_3;
+            stackIn_18_4 = stackIn_17_4;
+            stackIn_18_5 = variantId;
+          }
+          L5: {
             stackIn_18_0 = (GameplayEntity) ((Object) stackIn_18_0);
 
+            stackIn_21_6 = 0;
+
+            stackIn_21_7 = 0.0f;
+
+            stackIn_21_8 = (float)pointerY;
+
+            stackIn_21_9 = (float)(-pointerY + 240);
+
+            if (var12 != 2) {
 
 
 
@@ -187,20 +143,57 @@ final class nb {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+              if (1 != var12) {
+                stackIn_23_0 = (GameplayEntity) ((Object) stackIn_18_0);
+                stackIn_23_1 = stackIn_18_1;
+                stackIn_23_2 = stackIn_18_2;
+                stackIn_23_3 = stackIn_18_3;
+                stackIn_23_4 = stackIn_18_4;
+                stackIn_23_5 = stackIn_18_5;
+                stackIn_23_6 = stackIn_21_6;
+                stackIn_23_7 = stackIn_21_7;
+                stackIn_23_8 = stackIn_21_8;
+                stackIn_23_9 = stackIn_21_9;
+                stackIn_23_10 = -1;
+                break L5;
+              }
+              stackIn_18_0 = (GameplayEntity) ((Object) stackIn_18_0);
+
+
+
+
+
+
+
+
+
+            }
+            stackIn_23_0 = (GameplayEntity) ((Object) stackIn_18_0);
+            stackIn_23_1 = stackIn_18_1;
+            stackIn_23_2 = stackIn_18_2;
+            stackIn_23_3 = stackIn_18_3;
+            stackIn_23_4 = stackIn_18_4;
+            stackIn_23_5 = stackIn_18_5;
+            stackIn_23_6 = stackIn_21_6;
+            stackIn_23_7 = stackIn_21_7;
+            stackIn_23_8 = stackIn_21_8;
+            stackIn_23_9 = stackIn_21_9;
+            stackIn_23_10 = categoryId;
           }
-          stackIn_23_0 = (GameplayEntity) ((Object) stackIn_18_0);
-          stackIn_23_1 = stackIn_18_1;
-          stackIn_23_2 = stackIn_18_2;
-          stackIn_23_3 = stackIn_18_3;
-          stackIn_23_4 = stackIn_18_4;
-          stackIn_23_5 = stackIn_18_5;
-          stackIn_23_6 = stackIn_21_6;
-          stackIn_23_7 = stackIn_21_7;
-          stackIn_23_8 = stackIn_21_8;
-          stackIn_23_9 = stackIn_21_9;
-          stackIn_23_10 = categoryId;
+          ((GameplayEntity) (Object) stackIn_23_0).initializeEntityMotion(stackIn_23_1, stackIn_23_2, stackIn_23_3, stackIn_23_4, stackIn_23_5, stackIn_23_6, stackIn_23_7, stackIn_23_8, stackIn_23_9, stackIn_23_10, 0.0f);
         }
-        ((GameplayEntity) (Object) stackIn_23_0).initializeEntityMotion(stackIn_23_1, stackIn_23_2, stackIn_23_3, stackIn_23_4, stackIn_23_5, stackIn_23_6, stackIn_23_7, stackIn_23_8, stackIn_23_9, stackIn_23_10, 0.0f);
         var6.entityQueue = null;
         ji.movingEntities.addLast(param0 ^ 28286, var6);
     }

@@ -124,41 +124,18 @@ final class vd {
         if (this.field_j) {
           return 2;
         }
-        if (this.field_f != 2) {
-          if (SpriteState.field_n == this.field_h) {
-            return 1;
+        if (this.field_f == 2) {
+          if (this.field_c > 0) {
+            return 2;
           }
-          if (vk.field_a != 2) {
-            if (param0 > 113) {
-              return 0;
-            }
-            vd.chooseSpawnSpriteKind(-69);
-            return 0;
-          }
-          if (v.a(this.field_i, (byte) 89)) {
-            return 1;
-          }
-          if (param0 > 113) {
-            return 0;
-          }
-          vd.chooseSpawnSpriteKind(-69);
-          return 0;
-        }
-        if (this.field_c > 0) {
-          return 2;
         }
         if (SpriteState.field_n == this.field_h) {
           return 1;
         }
-        if (vk.field_a != 2) {
-          if (param0 > 113) {
-            return 0;
+        if (vk.field_a == 2) {
+          if (v.a(this.field_i, (byte) 89)) {
+            return 1;
           }
-          vd.chooseSpawnSpriteKind(-69);
-          return 0;
-        }
-        if (v.a(this.field_i, (byte) 89)) {
-          return 1;
         }
         if (param0 > 113) {
           return 0;

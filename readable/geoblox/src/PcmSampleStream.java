@@ -147,12 +147,10 @@ final class PcmSampleStream extends ia {
         }
         if (this.field_s < var3) {
           this.field_w = 1;
-          if (this.field_l == 0) {
-            this.field_l = var3 - this.field_s;
-            return false;
-          }
-          if (this.field_l <= var3 - this.field_s) {
-            return false;
+          if (this.field_l != 0) {
+            if (this.field_l <= var3 - this.field_s) {
+              return false;
+            }
           }
           this.field_l = var3 - this.field_s;
           return false;
@@ -915,12 +913,12 @@ final class PcmSampleStream extends ia {
                 return;
               }
               this.samplePositionFixed = var3 + (this.samplePositionFixed - var3) % var6;
-              return;
+            } else {
+              if (this.samplePositionFixed >= var3) {
+                return;
+              }
+              this.samplePositionFixed = var4 - 1 - (var4 - 1 - this.samplePositionFixed) % var6;
             }
-            if (this.samplePositionFixed >= var3) {
-              return;
-            }
-            this.samplePositionFixed = var4 - 1 - (var4 - 1 - this.samplePositionFixed) % var6;
             return;
           }
           if (this.sampleStepFixed < 0) {
@@ -1022,14 +1020,14 @@ final class PcmSampleStream extends ia {
             this.f();
             this.unlinkNode(false);
           }
-          return;
+        } else {
+          if (this.samplePositionFixed >= 0) {
+            return;
+          }
+          this.samplePositionFixed = -1;
+          this.f();
+          this.unlinkNode(false);
         }
-        if (this.samplePositionFixed >= 0) {
-          return;
-        }
-        this.samplePositionFixed = -1;
-        this.f();
-        this.unlinkNode(false);
     }
 
     private final static int a(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, PcmSampleStream param10) {
