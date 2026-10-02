@@ -692,8 +692,8 @@ the array indices, evidence, override families and remaining shared carriers.
 
 ## Remaining limitations
 
-There are 5,336 explicit guarded rules: 49 classes, 669 fields, 483 method
-declarations, 1,455 parameters and 2,680 locals. This is not full deobfuscation.
+There are 5,422 explicit guarded rules: 50 classes, 673 fields, 489 method
+declarations, 1,469 parameters and 2,741 locals. This is not full deobfuscation.
 Unknown flags, guard arguments and opaque shared helpers still need
 investigation. Current names and source identities live in the single manifest;
 previous naming and structural passes remain in Git. The earlier early-exit migration
@@ -2052,3 +2052,60 @@ reversal support these names. Existing native text fixtures retain their prior
 scope without new provider/request/worker/transport or actual asset execution.
 Worker/network/storage/compression helpers, static shared names, remaining large
 bodies, full gameplay and device performance remain unfinished or unverified.
+
+## Disk-cache worker and secondary request queue (pass 69)
+
+`DiskCacheWorker` names `uf` for its instance role. All four instance fields,
+six instance methods, constructor parameter and instance locals have guarded
+names. Static UI/login helpers still share this owner. The constructor builds
+the queue before its catch, asks `PlatformTaskDispatcher.startThread` to run it
+at priority 5, polls the volatile task status with the existing sleep helper,
+throws on status 2, then retains the returned thread.
+
+| Worker member | Role |
+| --- | --- |
+| requestQueue | SecondaryDeque FIFO; the same object is the enqueue/dequeue/lookup monitor |
+| queuedRequestCount | Nonvolatile queued-only count, decremented before disk I/O; provider reads it without synchronization |
+| workerThread | Dispatcher-created thread, normally joined and cleared during shutdown |
+| stopRequested | Nonvolatile loop flag; shutdown sets it before acquiring the queue monitor to notify |
+| queueWrite / queueRead | Construct operation 2/3 requests, retain cache/key/bytes as appropriate and enqueue |
+| readSynchronously | Operation 1 request, served from a matching queued write or direct disk read |
+| enqueueRequest | Private tail insertion, count increment and notification under the queue monitor |
+
+`readSynchronously` iterates the queue while holding its monitor. The first
+operation 2 request with the same group key and identical cache supplies its
+original byte array. The new request completes and returns early with priority
+still false. Neither synchronous path assigns cache/key fields on that returned
+request. When no queued write matches, the queue monitor is released before
+reading disk; that path sets priority true and completes. No copy or extra
+request initialization is added.
+
+`run` retains its Java callback name. Under the queue monitor it removes the
+first request, or waits and ignores an interruption. A selected request
+decrements the queued count before the monitor is released. Disk writes and
+reads then occur outside that monitor. Writes and unmatched operation codes
+complete inside the protected operation region. Reads and reported Exceptions
+complete after it. `requestSelected` and `completeRequestAfterOperation` retain
+the two original int 0/1 continuation selectors and their monitor/catch routing.
+An Error retains the outer unchecked rethrow path.
+
+`shutdown` sets stopRequested and notifies the queue. Only guard 51 permits
+joining the thread and clearing its reference; an ignored join interruption
+still clears the reference. Shutdown does not drain the queue. These names
+expose the original synchronization and visibility behavior without changing it.
+
+Every SecondaryDeque instance declaration now has a semantic name. Its five
+new locals identify unused arithmetic-guard remainders, the client-guard
+snapshot and insertion failures. `addLast` unlinks an already linked node before
+its guard arithmetic can fail. `addFirst` with a true guard returns after node
+link assignments but before neighbor writes. `nextForIteration` retains a null
+dereference if called again after iteration exhaustion. Wrong worker guards
+retain their early returns, static mutations and partially enqueued requests.
+
+All 5,336 previous complete rules, raw sources and generator pins remain.
+Compilation, binding checks, reproduction and reversal support the names.
+Existing deque fixtures cover the primary deque and independent dual links;
+they do not newly execute SecondaryDeque or live disk-worker storage/concurrency.
+Unknown static helpers, network/storage/compression, large labeled bodies,
+real assets, full gameplay and phone/FPS/heap behavior remain unfinished or
+unverified.

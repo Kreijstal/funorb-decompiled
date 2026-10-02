@@ -9,7 +9,7 @@ final class CachedArchiveSource extends ArchiveSource {
     private ji networkClient;
     private ArchiveRequest indexRequest;
     private int archiveId;
-    private uf diskWorker;
+    private DiskCacheWorker diskWorker;
     private int expectedIndexCrc32;
     private jh indexDiskCache;
     static IndexedSprite jewelsBackgroundSprite;
@@ -97,7 +97,7 @@ final class CachedArchiveSource extends ArchiveSource {
               return null;
             }
             if (null != this.indexDiskCache) {
-              this.diskWorker.a((byte) 88, this.archiveId, this.indexDiskCache, indexBytesAfterRequest);
+              this.diskWorker.queueWrite((byte) 88, this.archiveId, this.indexDiskCache, indexBytesAfterRequest);
             }
           }
           this.indexRequest = null;
@@ -149,7 +149,7 @@ final class CachedArchiveSource extends ArchiveSource {
                 if (null == this.groupDiskCache) {
                   throw new RuntimeException();
                 }
-                request = this.diskWorker.a(methodGuard + 131, this.groupDiskCache, groupId);
+                request = this.diskWorker.queueRead(methodGuard + 131, this.groupDiskCache, groupId);
               } else {
                 if (requestMode != 2) {
                   throw new RuntimeException();
@@ -168,7 +168,7 @@ final class CachedArchiveSource extends ArchiveSource {
             } else {
               if (null != this.groupDiskCache) {
                 if (-1 != this.groupDiskStatus[groupId]) {
-                  request = this.diskWorker.a(this.groupDiskCache, groupId, 15079962);
+                  request = this.diskWorker.readSynchronously(this.groupDiskCache, groupId, 15079962);
                   break L2;
                 }
               }
@@ -299,7 +299,7 @@ final class CachedArchiveSource extends ArchiveSource {
           groupBytes[groupBytesForPayloadChecks.length - 2] = (byte)(this.index.groupRevisions[groupId] >>> 8);
           groupBytes[-1 + groupBytesForPayloadChecks.length] = (byte)this.index.groupRevisions[groupId];
           if (null != this.groupDiskCache) {
-            this.diskWorker.a((byte) 66, groupId, this.groupDiskCache, groupBytesForPayloadChecks);
+            this.diskWorker.queueWrite((byte) 66, groupId, this.groupDiskCache, groupBytesForPayloadChecks);
             complementedDiskStatusBeforeWrite = ~this.groupDiskStatus[groupId];
             complementedValidStatus = -2;
             if (complementedDiskStatusBeforeWrite != complementedValidStatus) {
@@ -480,7 +480,7 @@ final class CachedArchiveSource extends ArchiveSource {
                         this.backgroundGroupIndex = this.backgroundGroupIndex + 1;
                         continue L5;
                       }
-                      if (this.diskWorker.field_d < 250) {
+                      if (this.diskWorker.queuedRequestCount < 250) {
                         if (this.groupDiskStatus[this.backgroundGroupIndex] == 0) {
                           unusedScannedDiskVerificationRequest = this.getGroupRequest((byte) -71, 1, this.backgroundGroupIndex);
                         }
@@ -606,7 +606,7 @@ final class CachedArchiveSource extends ArchiveSource {
         }
     }
 
-    CachedArchiveSource(int archiveId, jh groupDiskCache, jh indexDiskCache, ji networkClient, uf diskWorker, int expectedIndexCrc32, byte[] expectedIndexWhirlpoolDigest, int expectedIndexRevision, boolean sweepCompletedRequests) {
+    CachedArchiveSource(int archiveId, jh groupDiskCache, jh indexDiskCache, ji networkClient, DiskCacheWorker diskWorker, int expectedIndexCrc32, byte[] expectedIndexWhirlpoolDigest, int expectedIndexRevision, boolean sweepCompletedRequests) {
         boolean sweepOptionSnapshot = false;
         RuntimeException constructionFailureBeforeContext = null;
         StringBuilder constructionMessagePrefix = null;
@@ -647,7 +647,7 @@ final class CachedArchiveSource extends ArchiveSource {
           this.expectedIndexRevision = expectedIndexRevision;
           this.expectedIndexCrc32 = expectedIndexCrc32;
           if (this.indexDiskCache != null) {
-            this.indexRequest = (ArchiveRequest) ((Object) this.diskWorker.a(this.indexDiskCache, this.archiveId, 15079962));
+            this.indexRequest = (ArchiveRequest) ((Object) this.diskWorker.readSynchronously(this.indexDiskCache, this.archiveId, 15079962));
           }
           return;
         } catch (java.lang.RuntimeException constructionFailure) {

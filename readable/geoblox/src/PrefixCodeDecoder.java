@@ -347,7 +347,7 @@ final class PrefixCodeDecoder {
             pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
             gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
             if (gi.avatarBlinkClockTicks % 600 < 30) {
-              uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
+              DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
             }
             avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
             fieldTemp$27 = wa.avatarShockEffectTicks;
@@ -372,13 +372,13 @@ final class PrefixCodeDecoder {
               return;
             }
           }
-          if (uf.avatarFeedbackFrameIndex == 0 + MenuScreen.avatarFeedbackFrameBase) {
-            uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 3;
+          if (DiskCacheWorker.avatarFeedbackFrameIndex == 0 + MenuScreen.avatarFeedbackFrameBase) {
+            DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 3;
             af.avatarFrameStepTicks = 20;
             pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
             gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
             if (gi.avatarBlinkClockTicks % 600 < 30) {
-              uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
+              DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
             }
             avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
             fieldTemp$1 = wa.avatarShockEffectTicks;
@@ -404,16 +404,16 @@ final class PrefixCodeDecoder {
             }
           }
           {
-            avatarFrameOffsetInSegment = uf.avatarFeedbackFrameIndex - MenuScreen.avatarFeedbackFrameBase;
+            avatarFrameOffsetInSegment = DiskCacheWorker.avatarFeedbackFrameIndex - MenuScreen.avatarFeedbackFrameBase;
             if (jk.avatarSteeringDirectionId != 1) {
               if (jk.avatarSteeringDirectionId == 2) {
                 if (avatarFrameOffsetInSegment < 5) {
-                  uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex + 1;
+                  DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex + 1;
                   af.avatarFrameStepTicks = 20;
                   pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
                   gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
                   if (gi.avatarBlinkClockTicks % 600 < 30) {
-                    uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
+                    DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
                   }
                   avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
                   fieldTemp$17 = wa.avatarShockEffectTicks;
@@ -431,12 +431,12 @@ final class PrefixCodeDecoder {
               }
               if (jk.avatarSteeringDirectionId == 0) {
                 if (avatarFrameOffsetInSegment < 3) {
-                  uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex + 1;
+                  DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex + 1;
                   af.avatarFrameStepTicks = 20;
                   pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
                   gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
                   if (gi.avatarBlinkClockTicks % 600 < 30) {
-                    uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
+                    DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
                   }
                   avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
                   fieldTemp$19 = wa.avatarShockEffectTicks;
@@ -457,7 +457,7 @@ final class PrefixCodeDecoder {
                 pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
                 gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
                 if (gi.avatarBlinkClockTicks % 600 < 30) {
-                  uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
+                  DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
                 }
                 avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
                 fieldTemp$25 = wa.avatarShockEffectTicks;
@@ -477,7 +477,7 @@ final class PrefixCodeDecoder {
                 pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
                 gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
                 if (gi.avatarBlinkClockTicks % 600 < 30) {
-                  uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
+                  DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
                 }
                 avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
                 fieldTemp$21 = wa.avatarShockEffectTicks;
@@ -493,12 +493,12 @@ final class PrefixCodeDecoder {
                 return;
               }
               {
-                uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex - 1;
+                DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex - 1;
                 af.avatarFrameStepTicks = 20;
                 pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
                 gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
                 if (gi.avatarBlinkClockTicks % 600 < 30) {
-                  uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
+                  DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
                 }
                 avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
                 fieldTemp$23 = wa.avatarShockEffectTicks;
@@ -515,12 +515,12 @@ final class PrefixCodeDecoder {
               }
             }
             if (avatarFrameOffsetInSegment > 1) {
-              uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex - 1;
+              DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex - 1;
               af.avatarFrameStepTicks = 20;
               pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
               gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
               if (gi.avatarBlinkClockTicks % 600 < 30) {
-                uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
+                DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
               }
               avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
               fieldTemp$4 = wa.avatarShockEffectTicks;
@@ -546,12 +546,12 @@ final class PrefixCodeDecoder {
             }
             if (jk.avatarSteeringDirectionId == 2) {
               if (avatarFrameOffsetInSegment < 5) {
-                uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex + 1;
+                DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex + 1;
                 af.avatarFrameStepTicks = 20;
                 pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
                 gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
                 if (gi.avatarBlinkClockTicks % 600 < 30) {
-                  uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
+                  DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
                 }
                 avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
                 fieldTemp$7 = wa.avatarShockEffectTicks;
@@ -569,12 +569,12 @@ final class PrefixCodeDecoder {
             }
             if (jk.avatarSteeringDirectionId == 0) {
               if (avatarFrameOffsetInSegment < 3) {
-                uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex + 1;
+                DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex + 1;
                 af.avatarFrameStepTicks = 20;
                 pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
                 gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
                 if (gi.avatarBlinkClockTicks % 600 < 30) {
-                  uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
+                  DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
                 }
                 avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
                 fieldTemp$9 = wa.avatarShockEffectTicks;
@@ -595,7 +595,7 @@ final class PrefixCodeDecoder {
               pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
               gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
               if (gi.avatarBlinkClockTicks % 600 < 30) {
-                uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
+                DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
               }
               avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
               fieldTemp$15 = wa.avatarShockEffectTicks;
@@ -615,7 +615,7 @@ final class PrefixCodeDecoder {
               pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
               gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
               if (gi.avatarBlinkClockTicks % 600 < 30) {
-                uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
+                DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
               }
               avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
               fieldTemp$11 = wa.avatarShockEffectTicks;
@@ -631,12 +631,12 @@ final class PrefixCodeDecoder {
               return;
             }
             {
-              uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex - 1;
+              DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex - 1;
               af.avatarFrameStepTicks = 20;
               pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
               gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
               if (gi.avatarBlinkClockTicks % 600 < 30) {
-                uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
+                DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
               }
               avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
               fieldTemp$13 = wa.avatarShockEffectTicks;

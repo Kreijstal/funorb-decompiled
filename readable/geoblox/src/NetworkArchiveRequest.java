@@ -278,6 +278,6 @@ final class NetworkArchiveRequest extends ArchiveRequest {
 
     static {
         field_C = new byte[50][];
-        uf.a(116, 50);
+        DiskCacheWorker.a(116, 50);
     }
 }

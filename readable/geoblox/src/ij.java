@@ -176,7 +176,7 @@ final class ij extends oe implements pl {
             if (!(wa.avatarShockEffectTicks <= 0)) {
                 vg.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].draw(320 - (vg.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].fullWidth >> 1), -(vg.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].fullHeight >> 1) + 240);
             }
-            fc.avatarEyeFrames[uf.avatarFeedbackFrameIndex].drawGrayModulated(avatarEyeMouthOffsetX + 320, 240 + avatarEyeMouthOffsetY, rj.avatarTintColor);
+            fc.avatarEyeFrames[DiskCacheWorker.avatarFeedbackFrameIndex].drawGrayModulated(avatarEyeMouthOffsetX + 320, 240 + avatarEyeMouthOffsetY, rj.avatarTintColor);
             vh.avatarMouthFrames[nd.avatarFeedbackModeId].drawGrayModulated(320 + avatarEyeMouthOffsetX, 240 + avatarEyeMouthOffsetY, rj.avatarTintColor);
             if (methodGuard >= 3) {
                 return;
@@ -190,7 +190,7 @@ final class ij extends oe implements pl {
             if (!(wa.avatarShockEffectTicks <= 0)) {
                 vg.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].draw(320 - (vg.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].fullWidth >> 1), -(vg.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].fullHeight >> 1) + 240);
             }
-            fc.avatarEyeFrames[uf.avatarFeedbackFrameIndex].drawGrayModulated(avatarEyeMouthOffsetX + 320, 240 + avatarEyeMouthOffsetY, rj.avatarTintColor);
+            fc.avatarEyeFrames[DiskCacheWorker.avatarFeedbackFrameIndex].drawGrayModulated(avatarEyeMouthOffsetX + 320, 240 + avatarEyeMouthOffsetY, rj.avatarTintColor);
             vh.avatarMouthFrames[nd.avatarFeedbackModeId].drawGrayModulated(320 + avatarEyeMouthOffsetX, 240 + avatarEyeMouthOffsetY, rj.avatarTintColor);
             if (methodGuard >= 3) {
                 return;

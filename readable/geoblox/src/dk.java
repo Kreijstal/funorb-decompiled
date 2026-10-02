@@ -146,7 +146,7 @@ abstract class dk {
                 categoryMatchCandidateCount = 18;
               }
               if (cl.field_c != null) {
-                cl.field_c.a((byte) 51);
+                cl.field_c.shutdown((byte) 51);
               }
               if (null != af.field_d) {
                 try {

@@ -2078,8 +2078,8 @@ final class GameplaySession {
           this.sessionEnding = false;
           this.addScore((byte) 127, 0);
           if (da.a(0, 111)) {
-            uf.avatarTintPalette[0] = 14788623;
-            uf.avatarTintPalette[1] = 15439657;
+            DiskCacheWorker.avatarTintPalette[0] = 14788623;
+            DiskCacheWorker.avatarTintPalette[1] = 15439657;
           }
           td.a((byte) -93);
           GameplayEntity.resetAvatarFeedbackState(0);

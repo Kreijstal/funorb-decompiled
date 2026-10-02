@@ -133,7 +133,7 @@ final class jc {
               }
             }
           }
-          uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
+          DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex % 6 + MenuScreen.avatarFeedbackFrameBase;
         }
     }
 

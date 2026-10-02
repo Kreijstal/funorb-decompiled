@@ -3,7 +3,7 @@
  */
 final class em {
     private ji field_g;
-    private uf field_f;
+    private DiskCacheWorker field_f;
     private NetworkArchiveRequest field_h;
     private java.math.BigInteger field_e;
     private java.math.BigInteger field_c;
@@ -56,7 +56,7 @@ final class em {
         field_a = null;
     }
 
-    em(ji param0, uf param1) {
+    em(ji param0, DiskCacheWorker param1) {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
@@ -210,7 +210,7 @@ final class em {
         }
     }
 
-    private em(ji param0, uf param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    private em(ji param0, DiskCacheWorker param1, java.math.BigInteger param2, java.math.BigInteger param3) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

@@ -340,12 +340,12 @@ final class MatchingTextValidator extends TextInputValidator {
     }
 
     final static sl d(byte param0) {
-        if (!(uf.field_l != kd.field_b)) {
+        if (!(DiskCacheWorker.field_l != kd.field_b)) {
             throw new IllegalStateException();
         }
         int var1 = 28 % ((-79 - param0) / 44);
         if (va.field_e == kd.field_b) {
-            kd.field_b = uf.field_l;
+            kd.field_b = DiskCacheWorker.field_l;
             return dl.field_a;
         }
         return null;

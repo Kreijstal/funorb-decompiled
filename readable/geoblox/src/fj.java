@@ -53,8 +53,8 @@ abstract class fj extends DualLinkNode {
             ih.field_c.a((byte) -126, false);
             IndexedSpriteState.a((byte) 103, param1, param4, param3);
             qh.h((byte) -121);
-            kd.field_b = uf.field_l;
-            si.field_g = uf.field_l;
+            kd.field_b = DiskCacheWorker.field_l;
+            si.field_g = DiskCacheWorker.field_l;
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "fj.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

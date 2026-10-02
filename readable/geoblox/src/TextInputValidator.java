@@ -89,7 +89,7 @@ abstract class TextInputValidator extends ib implements ga {
             }
             ij.field_W = param8;
             wg.field_i = (ji) ((Object) new kk());
-            cl.field_c = new uf(param5);
+            cl.field_c = new DiskCacheWorker(param5);
             gb.field_b = new em(wg.field_i, cl.field_c);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "q.N(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');

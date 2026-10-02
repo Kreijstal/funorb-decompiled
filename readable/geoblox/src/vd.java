@@ -123,7 +123,7 @@ final class vd {
     vd(boolean param0) {
         this.field_i = jc.field_b;
         this.field_f = gj.field_u;
-        this.field_h = uf.field_c;
+        this.field_h = DiskCacheWorker.field_c;
         this.field_d = uk.field_o;
         this.field_k = re.field_f;
         this.field_j = field_l;

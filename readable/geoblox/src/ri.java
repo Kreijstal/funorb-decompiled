@@ -251,7 +251,7 @@ final class ri {
             return;
         }
         int var4 = (i.avatarMaskRaster.fullHeight >> 1) + 2;
-        fc.avatarEyeFrames[uf.avatarFeedbackFrameIndex].drawGrayModulated(param0 - var3, param1 - var4, rj.avatarTintColor);
+        fc.avatarEyeFrames[DiskCacheWorker.avatarFeedbackFrameIndex].drawGrayModulated(param0 - var3, param1 - var4, rj.avatarTintColor);
         vh.avatarMouthFrames[nd.avatarFeedbackModeId].drawGrayModulated(-var3 + param0, -var4 + param1, rj.avatarTintColor);
     }
 

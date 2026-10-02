@@ -1754,7 +1754,7 @@ final class AccountWelcomePanel extends ee implements pl {
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "create_alert_passcontainsemail");
                 if (null != textResourceBytes) {
-                  uf.createPasswordContainsEmailAlertText = ag.decodeTextBytes(1, textResourceBytes);
+                  DiskCacheWorker.createPasswordContainsEmailAlertText = ag.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "create_alert_passcontainsname_partial");
                 if (textResourceBytes != null) {

@@ -19,20 +19,26 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and retain all 138,558 remaining bindings
 and 388 override relationships.
 
-The current naming pass adds 116 guarded identities for `CachedArchiveSource`
-and the three-class archive-request hierarchy. Every instance field/API,
-constructor contract and local has a name. Request modes, disk validation,
-background scans, cleanup markers, volatile pending state and network response
-storage expose their roles while retaining the original behavior.
+The current naming pass adds 86 guarded identities for `DiskCacheWorker`
+and the remaining `SecondaryDeque` instance locals. Every worker instance
+field/API, constructor contract and local has a name. Queue operations,
+synchronous queued-write reuse, thread startup and shutdown expose their roles.
+Both worker continuation selectors, monitor boundaries, exception paths and
+original visibility semantics remain intact.
 
-The 5,336 rules apply 44,882 edits. All 303 raw/readable sources compile,
-preserving 138,558 bindings and 388 overrides. All 5,220 previous complete rules
+The 5,422 rules apply 45,284 edits. All 303 raw/readable sources compile,
+preserving 138,558 bindings and 388 overrides. All 5,336 previous complete rules
 and raw source/decompiler pins are unchanged. Binding checks, reproduction and
-byte-exact reversal support the names. Existing native text fixtures retain
-their decoder/failure-context scope without new provider/worker/request/network
-execution coverage. Worker/network/storage/compression helpers, static names,
+byte-exact reversal support the names. Existing deque fixtures retain their
+primary-deque/dual-link scope without new live disk-worker or secondary-queue
+execution coverage. Network/storage/compression helpers, static names,
 large labeled bodies, full assets/gameplay and device performance remain
 unfinished or unverified. One manifest holds current evidence, with Git for history.
+
+Pass 68 named `CachedArchiveSource` and the three-class archive-request
+hierarchy. Every instance field/API, constructor contract and local has a name.
+Request modes, disk validation, background scans, cleanup markers, volatile
+pending state and network response storage retain the original behavior.
 
 Pass 67 named `ArchiveIndex`, `IntKeyLookup`, `ArchiveSource`, matching provider
 contracts and checksum/digest helpers. Counts, sparse slots, revisions, CRCs,

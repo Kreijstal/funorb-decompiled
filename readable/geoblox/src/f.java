@@ -215,7 +215,7 @@ class f extends qf implements pl {
           pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
           gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
           if (30 > gi.avatarBlinkClockTicks % blinkPeriodTicks) {
-            uf.avatarFeedbackFrameIndex = 0 + MenuScreen.avatarFeedbackFrameBase;
+            DiskCacheWorker.avatarFeedbackFrameIndex = 0 + MenuScreen.avatarFeedbackFrameBase;
           }
           if (el.gameplaySession.sessionEnding) {
             if (gi.avatarBlinkClockTicks % 18 == 0) {
@@ -320,32 +320,32 @@ class f extends qf implements pl {
         }
         L0: {
           af.avatarFrameStepTicks = 20;
-          if (uf.avatarFeedbackFrameIndex == MenuScreen.avatarFeedbackFrameBase + 0) {
-            uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 3;
+          if (DiskCacheWorker.avatarFeedbackFrameIndex == MenuScreen.avatarFeedbackFrameBase + 0) {
+            DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 3;
           } else {
-            avatarFrameOffsetInSegment = -MenuScreen.avatarFeedbackFrameBase + uf.avatarFeedbackFrameIndex;
+            avatarFrameOffsetInSegment = -MenuScreen.avatarFeedbackFrameBase + DiskCacheWorker.avatarFeedbackFrameIndex;
             if (1 != jk.avatarSteeringDirectionId) {
               L2: {
                 if (2 == jk.avatarSteeringDirectionId) {
                   if (5 > avatarFrameOffsetInSegment) {
-                    uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex + 1;
+                    DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex + 1;
                     break L2;
                   }
                 }
                 if (0 == jk.avatarSteeringDirectionId) {
                   if (avatarFrameOffsetInSegment < 3) {
-                    uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex + 1;
+                    DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex + 1;
                   } else {
                     if (0 == jk.avatarSteeringDirectionId) {
                       if (3 < avatarFrameOffsetInSegment) {
-                        uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex - 1;
+                        DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex - 1;
                       }
                     }
                   }
                 } else {
                   if (0 == jk.avatarSteeringDirectionId) {
                     if (3 < avatarFrameOffsetInSegment) {
-                      uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex - 1;
+                      DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex - 1;
                     }
                   }
                 }
@@ -353,7 +353,7 @@ class f extends qf implements pl {
               pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
               gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
               if (30 > gi.avatarBlinkClockTicks % blinkPeriodTicks) {
-                uf.avatarFeedbackFrameIndex = 0 + MenuScreen.avatarFeedbackFrameBase;
+                DiskCacheWorker.avatarFeedbackFrameIndex = 0 + MenuScreen.avatarFeedbackFrameBase;
               }
               if (el.gameplaySession.sessionEnding) {
                 if (gi.avatarBlinkClockTicks % 18 == 0) {
@@ -459,36 +459,36 @@ class f extends qf implements pl {
             if (avatarFrameOffsetInSegment <= 1) {
               if (2 == jk.avatarSteeringDirectionId) {
                 if (5 > avatarFrameOffsetInSegment) {
-                  uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex + 1;
+                  DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex + 1;
                   break L0;
                 }
               }
               if (0 == jk.avatarSteeringDirectionId) {
                 if (avatarFrameOffsetInSegment < 3) {
-                  uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex + 1;
+                  DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex + 1;
                 } else {
                   if (0 == jk.avatarSteeringDirectionId) {
                     if (3 < avatarFrameOffsetInSegment) {
-                      uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex - 1;
+                      DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex - 1;
                     }
                   }
                 }
               } else {
                 if (0 == jk.avatarSteeringDirectionId) {
                   if (3 < avatarFrameOffsetInSegment) {
-                    uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex - 1;
+                    DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex - 1;
                   }
                 }
               }
             } else {
-              uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex - 1;
+              DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex - 1;
             }
           }
         }
         pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
         gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
         if (30 > gi.avatarBlinkClockTicks % blinkPeriodTicks) {
-          uf.avatarFeedbackFrameIndex = 0 + MenuScreen.avatarFeedbackFrameBase;
+          DiskCacheWorker.avatarFeedbackFrameIndex = 0 + MenuScreen.avatarFeedbackFrameBase;
         }
         if (!el.gameplaySession.sessionEnding) {
           avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
@@ -638,24 +638,24 @@ class f extends qf implements pl {
     }
 
     final static wa p(int param0) {
-        if (null == uf.field_f) {
-            uf.field_f = new wa();
-            uf.field_f.a(9, ng.field_F);
-            uf.field_f.field_h = 14;
-            uf.field_f.field_f = 2763306;
-            uf.field_f.field_d = 6;
-            uf.field_f.field_n = 7697781;
-            uf.field_f.field_e = 5;
-            uf.field_f.field_i = 0;
-            uf.field_f.field_p = 4;
-            uf.field_f.field_m = hh.field_d;
+        if (null == DiskCacheWorker.field_f) {
+            DiskCacheWorker.field_f = new wa();
+            DiskCacheWorker.field_f.a(9, ng.field_F);
+            DiskCacheWorker.field_f.field_h = 14;
+            DiskCacheWorker.field_f.field_f = 2763306;
+            DiskCacheWorker.field_f.field_d = 6;
+            DiskCacheWorker.field_f.field_n = 7697781;
+            DiskCacheWorker.field_f.field_e = 5;
+            DiskCacheWorker.field_f.field_i = 0;
+            DiskCacheWorker.field_f.field_p = 4;
+            DiskCacheWorker.field_f.field_m = hh.field_d;
             if (param0 >= 71) {
-                return uf.field_f;
+                return DiskCacheWorker.field_f;
             }
             return (wa) null;
         }
         if (param0 >= 71) {
-            return uf.field_f;
+            return DiskCacheWorker.field_f;
         }
         return (wa) null;
     }

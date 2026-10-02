@@ -26,9 +26,9 @@ abstract class df {
     final static ob b(byte param0) {
         if (param0 <= 11) {
             df.b((byte) 74);
-            return uf.field_e;
+            return DiskCacheWorker.field_e;
         }
-        return uf.field_e;
+        return DiskCacheWorker.field_e;
     }
 
     public static void a(int param0) {

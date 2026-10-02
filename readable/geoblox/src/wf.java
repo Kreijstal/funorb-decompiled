@@ -585,7 +585,7 @@ abstract class wf extends ch {
               }
             }
             if (var4 == 2) {
-              var5_int = uf.a((byte) -94, sa.a(true), qj.b((byte) 81), this.field_r, vh.f(100), al.b(0), cg.a((byte) 27));
+              var5_int = DiskCacheWorker.a((byte) -94, sa.a(true), qj.b((byte) 81), this.field_r, vh.f(100), al.b(0), cg.a((byte) 27));
               if (var5_int != -1) {
                 gj.a(kh.field_a, var5_int, (byte) 30, si.field_i);
                 kh.field_a = null;

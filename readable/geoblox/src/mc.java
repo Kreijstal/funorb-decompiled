@@ -19,7 +19,7 @@ final class mc {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (kd.field_b != uf.field_l) {
+          if (kd.field_b != DiskCacheWorker.field_l) {
             return false;
           }
           var8 = new r(kd.field_e, param3);

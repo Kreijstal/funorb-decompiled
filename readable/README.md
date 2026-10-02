@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 5,336 guarded naming rules: 49 classes, 669 fields,
-483 methods, 1,455 parameters and 2,680 local declarations. Both 303-file corpora
+The current export has 5,422 guarded naming rules: 50 classes, 673 fields,
+489 methods, 1,469 parameters and 2,741 local declarations. Both 303-file corpora
 compile, preserving 138,558 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -54,7 +54,39 @@ smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
 
-## Current cached provider and request names
+## Current disk-cache worker and secondary queue names
+
+Pass 69 adds 86 guarded identities: one class, four fields, six methods,
+fourteen parameters and 61 locals. `DiskCacheWorker` names every instance
+field/API/constructor contract and local. `Runnable.run` retains its spelling.
+Five remaining locals complete the already named `SecondaryDeque` instance
+contracts; shared static UI/login/graphics helpers retain their existing names.
+
+`queueWrite`, `queueRead`, `readSynchronously`, `enqueueRequest` and `shutdown`
+make the disk request paths explicit. `requestQueue` is the shared FIFO monitor;
+`queuedRequestCount` decreases before I/O and excludes in-flight work.
+`stopRequested` and the count remain nonvolatile; each request's `pending` flag
+remains volatile. Synchronous queued-write reuse returns the same bytes early,
+still nonpriority, without assigning cache/key to the newly returned request.
+Direct disk I/O occurs after releasing the queue monitor.
+
+Thread startup retains dispatcher priority 5, task-status polling and the
+existing sleep helper. Shutdown retains stop-before-notify ordering, ignored
+join interruption and the absence of queue draining. `requestSelected` and
+`completeRequestAfterOperation` name the two retained int continuation
+selectors across the monitor/catch regions; their routing is unchanged.
+Queue guards still retain their partial linking/unlinking and arithmetic effects.
+
+All 5,336 previous complete rules and source/generator pins stay unchanged.
+The 5,422 rules apply 45,284 identifier edits; both 303-file corpora compile,
+preserving 138,558 bindings and 388 overrides. Reproduction and dictionary
+reversal are byte-exact. Existing deque fixtures retain their primary-deque and
+independent dual-link scope; they do not newly execute SecondaryDeque or live
+disk-worker concurrency/storage I/O. Network/storage/compression helpers,
+unknown static names, large labeled bodies, real assets/server traffic,
+complete gameplay and phone/FPS/heap behavior remain unfinished or unverified.
+
+## Previous cached provider and request names
 
 Pass 68 adds 116 guarded identities: four classes, 28 fields, ten methods,
 21 parameters and 53 locals. `CachedArchiveSource` names every instance
@@ -1094,7 +1126,7 @@ its historical proof recorded in the raw provenance. Current source/decompiler
 identity and naming migrations live in the single manifest. `ruleChanges`
 records naming changes; `sourceChange` is recorded when input identity changes.
 The latest structural pass records its source migration in Git. The current
-naming-only pass retains those source pins and records its 116 additions in
+naming-only pass retains those source pins and records its 86 additions in
 `ruleChanges`; every prior guarded rule is retained.
 All six native probe sources and their traces are pinned in
 the same manifest; no JSON snapshots are added.
@@ -1119,6 +1151,6 @@ the same manifest; no JSON snapshots are added.
 | Java source tree | SHA-256 |
 | --- | --- |
 | Raw | `39be3539b43d7acc9540acca49e7b6378cdb233908092706646df4c2cdc6a8fe` |
-| Readable | `1d0fcadd1d43973dc0376d33790eab90fe3bb8ca87d5761dc1c59967b3eacecb` |
+| Readable | `8c7bd16d47e39f9caf56e7dd021c59aa5805fdc87e29fb536099e39fa0806888` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

@@ -61,7 +61,7 @@ final class g extends TextInputValidator {
             g.g(119);
           }
           if (this.a(candidateText, -29267)) {
-            stackIn_19_0 = uf.createPasswordContainsEmailAlertText;
+            stackIn_19_0 = DiskCacheWorker.createPasswordContainsEmailAlertText;
             return stackIn_19_0;
           }
           if (0 >= var6.length()) {

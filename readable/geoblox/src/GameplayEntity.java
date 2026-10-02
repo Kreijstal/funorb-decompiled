@@ -143,7 +143,7 @@ final class GameplayEntity extends DualLinkNode {
         g.field_j = 0;
         pa.avatarFeedbackHoldTicks = 0;
         jf.avatarTintFadeTicks = 0;
-        uf.avatarFeedbackFrameIndex = initialFrameIndex;
+        DiskCacheWorker.avatarFeedbackFrameIndex = initialFrameIndex;
         IndexedSpriteState.avatarShockFrameIndex = 0;
         rj.avatarTintColor = 5167632;
         MenuScreen.avatarFeedbackFrameBase = 0;

@@ -4,7 +4,7 @@
 final class cl {
     static java.security.SecureRandom field_e;
     static String continueText;
-    static uf field_c;
+    static DiskCacheWorker field_c;
     static int field_a;
     static Sprite field_b;
 
@@ -37,7 +37,7 @@ final class cl {
           }
           if (si.field_g == va.field_e) {
             if (param1.equals(cg.field_k)) {
-              si.field_g = uf.field_l;
+              si.field_g = DiskCacheWorker.field_l;
               stackIn_8_0 = ScorePopup.field_g;
               return stackIn_8_0;
             }

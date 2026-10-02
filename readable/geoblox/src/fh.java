@@ -12,8 +12,8 @@ final class fh implements dh {
         cf.field_i = false;
         va.field_d = false;
         pc.a(-1, false);
-        si.field_g = uf.field_l;
-        kd.field_b = uf.field_l;
+        si.field_g = DiskCacheWorker.field_l;
+        kd.field_b = DiskCacheWorker.field_l;
         if (param0 != -6011) {
             field_c = 36;
         }

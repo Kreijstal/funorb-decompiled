@@ -190,7 +190,7 @@ final class PacketByteCipher {
     }
 
     final static void a(byte param0) {
-        int var1 = uf.avatarTintPalette[-1 + uf.avatarTintPalette.length];
+        int var1 = DiskCacheWorker.avatarTintPalette[-1 + DiskCacheWorker.avatarTintPalette.length];
         kk.field_x = (float)(-(255 & si.field_j) + (255 & var1));
         MenuScreen.field_c = (float)(-(si.field_j >> 8 & 255) + (var1 >> 8 & 255));
         lk.field_b = (float)(((var1 & 16735942) >> 16) - (si.field_j >> 16 & 255));

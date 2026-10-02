@@ -220,7 +220,7 @@ final class td extends hk {
 
     final static void g(byte param0) {
         int var1 = -28 % ((param0 - 36) / 43);
-        if (gb.field_f != -uf.field_a + 0 && 250 - uf.field_a == gb.field_f) {
+        if (gb.field_f != -DiskCacheWorker.field_a + 0 && 250 - DiskCacheWorker.field_a == gb.field_f) {
         }
         gb.field_f = gb.field_f + 1;
     }

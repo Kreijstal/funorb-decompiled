@@ -11,7 +11,7 @@ final class SecondaryDeque {
     private DualLinkNode iterationCursor;
 
     final DualLinkNode nextForIteration(int methodGuard) {
-        int var3 = -123 % ((methodGuard - 21) / 32);
+        int unusedIterationGuardRemainder = -123 % ((methodGuard - 21) / 32);
         DualLinkNode iterationNode = this.iterationCursor;
         if (this.sentinel != iterationNode) {
             this.iterationCursor = iterationNode.nextSecondaryNode;
@@ -45,8 +45,8 @@ final class SecondaryDeque {
         try {
             node.previousSecondaryNode.nextSecondaryNode = node;
             node.nextSecondaryNode.previousSecondaryNode = node;
-        } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "wd.L(" + (node != null ? "{...}" : "null") + ',' + methodGuard + ')');
+        } catch (RuntimeException insertionFailure) {
+            throw t.a((Throwable) ((Object) insertionFailure), "wd.L(" + (node != null ? "{...}" : "null") + ',' + methodGuard + ')');
         }
     }
 
@@ -76,7 +76,7 @@ final class SecondaryDeque {
 
     final int countNodes(byte methodGuard) {
         DualLinkNode nodeToCount = null;
-        int var4 = Geoblox.field_C;
+        int unusedClientGuardSnapshot = Geoblox.field_C;
         int nodeCount = 0;
         if (methodGuard == 67) {
             nodeToCount = this.sentinel.nextSecondaryNode;
@@ -100,13 +100,13 @@ final class SecondaryDeque {
             if (!(node.previousSecondaryNode == null)) {
                 node.unlinkSecondaryNode((byte) 62);
             }
-            int var3_int = -75 % ((methodGuard - 62) / 46);
+            int unusedInsertionGuardRemainder = -75 % ((methodGuard - 62) / 46);
             node.previousSecondaryNode = this.sentinel.previousSecondaryNode;
             node.nextSecondaryNode = this.sentinel;
             node.previousSecondaryNode.nextSecondaryNode = node;
             node.nextSecondaryNode.previousSecondaryNode = node;
-        } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "wd.I(" + methodGuard + ',' + (node != null ? "{...}" : "null") + ')');
+        } catch (RuntimeException insertionFailure) {
+            throw t.a((Throwable) ((Object) insertionFailure), "wd.I(" + methodGuard + ',' + (node != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -373,7 +373,7 @@ public final class Geoblox extends wf {
         GameScreen.d((byte) 28);
         GameplaySession.i(-17199);
         ji.d(-50);
-        uf.a(param0 ^ 74);
+        DiskCacheWorker.a(param0 ^ 74);
         em.a(86);
         BufferedSocket.releaseTransformedVertexScratch(21888);
         IntrusiveDeque.f(51);

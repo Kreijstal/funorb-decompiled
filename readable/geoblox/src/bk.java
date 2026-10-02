@@ -21,7 +21,7 @@ final class bk {
 
     final static void a(ResourceArchive param0, int param1, int param2, ob param3) {
         try {
-            uf.field_a = param1 * sb.a(true) / 1000;
+            DiskCacheWorker.field_a = param1 * sb.a(true) / 1000;
             ab.a(99, param0);
             ni.a(param0, 0);
             if (param2 < 97) {
@@ -30,7 +30,7 @@ final class bk {
             ul.a(-21541, param0);
             jk.b((byte) -91);
             ad.a((byte) -32);
-            gb.field_f = -uf.field_a + 0;
+            gb.field_f = -DiskCacheWorker.field_a + 0;
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "bk.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -55,7 +55,7 @@ final class bk {
         stackIn_3_0 = !((param1 & var3) == 0);
         vd.field_l = stackIn_3_0;
         ArchiveIndex.field_s = var8.readUnsignedByte((byte) 34);
-        uf.field_c = var8.readLongBE(2901);
+        DiskCacheWorker.field_c = var8.readLongBE(2901);
         if (gj.field_u != 2) {
           uk.field_o = 0;
           tj.field_b = 0;
