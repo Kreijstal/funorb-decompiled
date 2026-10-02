@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "a4cb12769e663bb0318f864ba63242eb769defd8",
+      "commit": "fb6ea7871e4f1657f678211830229997b4785e33",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "4a602f64863503fc42934d47c05b546784f7ebaee646a7c7ea7093b24bd5ee66",
-        "reproduce": "git archive --format=tar a4cb12769e663bb0318f864ba63242eb769defd8 | sha256sum",
+        "sha256": "5ad4b8f16b9b82c1a427d69119b4b673ba8bbf1987c85b5f1463f583ef0231c2",
+        "reproduce": "git archive --format=tar fb6ea7871e4f1657f678211830229997b4785e33 | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
@@ -93,9 +93,9 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "d7bea0c5687e00ea49ab0d6f5b89aace3e2cca0067c862db74bd7ce881569adc",
-  "previousSourceTreeSha256": "54a54b0e7576a6af94adb3b69987428f011658f7b2513f6de27ba0dd45fdd331",
-  "changedJavaFiles": 16,
+  "sourceTreeSha256": "c1f3218a7a4e1ac693bea85f5c5806eb16859e8f6f99368a4c00b498cee74057",
+  "previousSourceTreeSha256": "d7bea0c5687e00ea49ab0d6f5b89aace3e2cca0067c862db74bd7ce881569adc",
+  "changedJavaFiles": 7,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
@@ -1323,5 +1323,79 @@
     "cleanSourceArchiveByteExact": true,
     "diagnosticsUnchanged": true,
     "scope": "The prior Boolean-carrier proof records the previous export. This pass factors exact tails within emitted block scopes, retaining nested try/monitor/loop/labeled constructs whole. Generic native fixtures cover effect order, nullable condition unboxing, mutation, nested arms, NaNs and handler/lock effects. Current readable reproduction and six native game probes are recorded in the readable manifest; whole-game equivalence remains unverified."
+  },
+  "nestedTerminalContinuations": {
+    "javaToolsCommit": "fb6ea7871e4f1657f678211830229997b4785e33",
+    "sourceArchiveSha256": "5ad4b8f16b9b82c1a427d69119b4b673ba8bbf1987c85b5f1463f583ef0231c2",
+    "defaultEnabled": true,
+    "bytecodeChanged": false,
+    "sourceBodyEditedByHand": false,
+    "runsAfterBooleanCarrierCleanupAndLocalTailFactoring": true,
+    "completeKnownBodyParsingRequired": true,
+    "terminalContinuationRequired": true,
+    "branchLocalScopeChangesRefused": true,
+    "ambiguousLoopSwitchAndLabelCompletionRefused": true,
+    "handlerAndMonitorBoundariesUnchanged": true,
+    "rawTryMonitorLoopAndLabelBodiesKeptWhole": true,
+    "conditionEvaluationsNotRepeated": true,
+    "sourceStatementsAndIdentifierOccurrencesNotDuplicated": true,
+    "newPlainBlockBreakUsedIfStraightFactoringCopiesPrefixWork": true,
+    "generatedBlockLabelsDeterministicAndAvoidExistingIdentifiers": true,
+    "bareTransferGuardLaddersRetained": true,
+    "sourceLinesBefore": 86004,
+    "sourceLinesAfter": 85983,
+    "changedJavaFiles": [
+      "dj.java",
+      "ic.java",
+      "jc.java",
+      "kl.java",
+      "ld.java",
+      "v.java",
+      "vb.java"
+    ],
+    "difficultyMethodLinesBefore": 69,
+    "difficultyMethodLinesAfter": 56,
+    "difficultyRepeatedProbabilityRotationAndIntervalTailEliminated": true,
+    "generatedBlockLabelsInGeoblox": 0,
+    "sourceDeclarationsBefore": 20710,
+    "sourceDeclarationsAfter": 20710,
+    "allDeclarationsPreservedAfterOriginalSpellingNormalization": true,
+    "generatedLocalOrdinalsReordered": [
+      {
+        "symbol": "L:v.a(B)V#0",
+        "originalNameBefore": "fieldTemp$3",
+        "originalNameAfter": "fieldTemp$1"
+      },
+      {
+        "symbol": "L:v.a(B)V#1",
+        "originalNameBefore": "fieldTemp$2",
+        "originalNameAfter": "fieldTemp$0"
+      },
+      {
+        "symbol": "L:v.a(B)V#2",
+        "originalNameBefore": "fieldTemp$1",
+        "originalNameAfter": "fieldTemp$3"
+      },
+      {
+        "symbol": "L:v.a(B)V#3",
+        "originalNameBefore": "fieldTemp$0",
+        "originalNameAfter": "fieldTemp$2"
+      }
+    ],
+    "namedLocalOrdinalMigrations": 0,
+    "overrideRelationshipsPreserved": 388,
+    "sourceReferenceOccurrencesBefore": 130174,
+    "sourceReferenceOccurrencesAfter": 130117,
+    "normalizedSourceReferenceOccurrencesRemoved": 57,
+    "normalizedSourceReferenceOccurrencesAdded": 0,
+    "referenceRemovalAttribution": "Terminal clones coalesced; normalize four generated v.a(B)V local ordinal permutations by original spelling. All declaration inventories and override rows are preserved; no reference occurrences are added.",
+    "duplicateLocalMethodWgFinalizeFileByteExact": true,
+    "guardedRulesUnchanged": 1194,
+    "genericEmitterTestGroups": 21,
+    "nativeEmitterComparisons": 4849,
+    "nativeNestedContinuationComparisons": 2520,
+    "cleanSourceArchiveByteExact": true,
+    "diagnosticsUnchanged": true,
+    "scope": "Prior branchTailFactoring proof describes the previous export. Current native generic fixtures cover multiple enclosing exits, skipped prefix effects, nullable unboxing, signed zero/NaNs, partial writes, receiver/call failures, sentinel throwable identity, handler/monitor tails and deterministic label collision avoidance. The six current game probe scopes and reproducible naming mirror remain in the current readable manifest. Other shared joins, opaque names and whole-game equivalence remain unverified."
   }
 }

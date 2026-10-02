@@ -143,8 +143,6 @@ final class ic {
                 decompiledRegionSelector0 = 1;
               }
               if (decompiledRegionSelector0 == 0) {
-                eh.field_d.field_f = eh.field_d.field_f + 24;
-                return;
               }
             }
             eh.field_d.field_f = eh.field_d.field_f + 24;

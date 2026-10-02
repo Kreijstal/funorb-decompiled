@@ -139,22 +139,9 @@ final class ld {
                 ld.b(true);
               }
               if ((kd.field_f[ji.field_h] & 2) != 0) {
-                if (f.field_qb >= 7) {
-                  if (0 != (kd.field_f[ji.field_h] & 16)) {
-                    sa.field_c = sa.field_c + 0.05;
-                  }
-                  if ((8 & kd.field_f[ji.field_h]) != 0) {
-                    rc.field_h = rc.field_h * 1.100000023841858f;
-                  }
-                  if (0 != (kd.field_f[ji.field_h] & 128)) {
-                    if (0.800000011920929f > ij.field_ab) {
-                      ij.field_ab = ij.field_ab + 0.02857142873108387f;
-                    }
-                    sa.b(!param0);
-                  }
-                  return;
+                if (!(f.field_qb >= 7)) {
+                  f.field_qb = f.field_qb + 1;
                 }
-                f.field_qb = f.field_qb + 1;
               }
             }
           }
