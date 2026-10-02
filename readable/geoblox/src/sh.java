@@ -12,7 +12,7 @@ abstract class sh extends el implements ql {
     boolean a(int param0, int param1, int param2, int param3, int param4, int param5, el param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
-        int stackIn_4_0 = 0;
+        boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -24,13 +24,13 @@ abstract class sh extends el implements ql {
             var8_int = 124 % ((-3 - param1) / 38);
             if (this.field_A != null) {
               if (this.field_A.a(this.field_m + param0, -96, this.field_v + param2, param3, param4, param5, param6)) {
-                stackIn_4_0 = 1;
+                stackIn_4_0 = true;
                 break L0;
               }
             }
-            stackIn_4_0 = 0;
+            stackIn_4_0 = false;
           }
-          return stackIn_4_0 != 0;
+          return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
@@ -132,7 +132,7 @@ abstract class sh extends el implements ql {
     private final boolean a(el param0, int param1) {
         RuntimeException var3 = null;
         el var4 = null;
-        int stackIn_7_0 = 0;
+        boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
@@ -148,14 +148,14 @@ abstract class sh extends el implements ql {
             if (this.field_A != null) {
               if (!this.field_A.e((byte) 54)) {
                 if (this.field_A.a((byte) -117, param0)) {
-                  stackIn_7_0 = 1;
+                  stackIn_7_0 = true;
                   break L1;
                 }
               }
             }
-            stackIn_7_0 = 0;
+            stackIn_7_0 = false;
           }
-          return stackIn_7_0 != 0;
+          return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -179,11 +179,6 @@ abstract class sh extends el implements ql {
     final static boolean a(byte param0, int[] param1) {
         int var6_int = 0;
         int var7 = 0;
-        int stackIn_4_0 = 0;
-        int stackIn_13_0 = 0;
-        int stackIn_18_0 = 0;
-        int stackIn_22_0 = 0;
-        int stackIn_32_0 = 0;
         RuntimeException stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
         RuntimeException stackIn_36_0 = null;
@@ -201,8 +196,7 @@ abstract class sh extends el implements ql {
         try {
           var2_int = -108 / ((-71 - param0) / 45);
           if (eh.field_b != pk.field_l) {
-            stackIn_4_0 = 0;
-            return stackIn_4_0 != 0;
+            return false;
           }
           {
             var3 = oa.a(-12520);
@@ -221,8 +215,7 @@ abstract class sh extends el implements ql {
                     dc.field_b = kg.field_n;
                     kg.field_n = ScorePopup.field_l;
                     ScorePopup.field_l = var5_ref_ma.field_h;
-                    stackIn_13_0 = 1;
-                    return stackIn_13_0 != 0;
+                    return true;
                   }
                 }
               }
@@ -231,16 +224,14 @@ abstract class sh extends el implements ql {
               if (pc.field_f < 0) {
                 eh.field_d.field_f = 0;
                 if (!el.b(30000, 1)) {
-                  stackIn_18_0 = 0;
-                  return stackIn_18_0 != 0;
+                  return false;
                 }
                 pc.field_f = eh.field_d.j((byte) 122);
                 eh.field_d.field_f = 0;
                 p.field_k = param1[pc.field_f];
               }
               if (!nf.a(false)) {
-                stackIn_22_0 = 0;
-                return stackIn_22_0 != 0;
+                return false;
               }
               if (ab.field_b == 0) {
                 ad.field_o = dc.field_b;
@@ -248,8 +239,7 @@ abstract class sh extends el implements ql {
                 kg.field_n = ScorePopup.field_l;
                 ScorePopup.field_l = pc.field_f;
                 pc.field_f = -1;
-                stackIn_32_0 = 1;
-                return stackIn_32_0 != 0;
+                return true;
               }
               {
                 var5 = ab.field_b;
@@ -468,7 +458,7 @@ abstract class sh extends el implements ql {
     private final boolean a(el param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        int stackIn_5_0 = 0;
+        boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
@@ -481,14 +471,14 @@ abstract class sh extends el implements ql {
             if (null != this.field_A) {
               if (!this.field_A.e((byte) 54)) {
                 if (this.field_A.a((byte) -85, param0)) {
-                  stackIn_5_0 = 1;
+                  stackIn_5_0 = true;
                   break L0;
                 }
               }
             }
-            stackIn_5_0 = 0;
+            stackIn_5_0 = false;
           }
-          return stackIn_5_0 != 0;
+          return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -511,7 +501,7 @@ abstract class sh extends el implements ql {
 
     final boolean a(byte param0, el param1) {
         RuntimeException var3 = null;
-        int stackIn_6_0 = 0;
+        boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
@@ -525,13 +515,13 @@ abstract class sh extends el implements ql {
           L1: {
             if (null != this.field_A) {
               if (this.field_A.a((byte) -34, param1)) {
-                stackIn_6_0 = 1;
+                stackIn_6_0 = true;
                 break L1;
               }
             }
-            stackIn_6_0 = 0;
+            stackIn_6_0 = false;
           }
-          return stackIn_6_0 != 0;
+          return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -562,8 +552,7 @@ abstract class sh extends el implements ql {
 
     final boolean a(int param0, int param1, int param2, int param3, int param4, el param5, int param6) {
         RuntimeException var8 = null;
-        int stackIn_2_0 = 0;
-        int stackIn_8_0 = 0;
+        boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
@@ -572,21 +561,20 @@ abstract class sh extends el implements ql {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != -1) {
-            stackIn_2_0 = 1;
-            return stackIn_2_0 != 0;
+            return true;
           }
           L0: {
             if (null != this.field_A) {
               if (this.field_A.e((byte) 54)) {
                 if (this.field_A.a(param0, param1, param2, -1, param4, param5, param6)) {
-                  stackIn_8_0 = 1;
+                  stackIn_8_0 = true;
                   break L0;
                 }
               }
             }
-            stackIn_8_0 = 0;
+            stackIn_8_0 = false;
           }
-          return stackIn_8_0 != 0;
+          return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
@@ -648,9 +636,7 @@ abstract class sh extends el implements ql {
     final boolean a(int param0, int param1, char param2, el param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
-        int stackIn_4_0 = 0;
         boolean stackIn_11_0 = false;
-        int stackIn_13_0 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
@@ -661,8 +647,7 @@ abstract class sh extends el implements ql {
           if (null != this.field_A) {
             if (this.field_A.e((byte) 54)) {
               if (this.field_A.a(param0, 13, param2, param3)) {
-                stackIn_4_0 = 1;
-                return stackIn_4_0 != 0;
+                return true;
               }
             }
           }
@@ -671,8 +656,7 @@ abstract class sh extends el implements ql {
           }
           var5_int = param0;
           if (var5_int != 80) {
-            stackIn_13_0 = 0;
-            return stackIn_13_0 != 0;
+            return false;
           }
           if (!kj.field_o[81]) {
             stackIn_11_0 = this.a(param3, 22439);

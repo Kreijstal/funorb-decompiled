@@ -16,13 +16,14 @@ mirror. The current [manifest](readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
-identities. Both 303-file Java corpora compile and retain all 152,437 bindings
+identities. Both 303-file Java corpora compile and retain all 151,774 bindings
 and 388 override relationships.
 
 Difficulty and spawning now name the step flags, sprite-variant/category
 bounds, special-kind probability, release interval and queue geometry.
 The previous naming pass added 38 rules. The current structural export
-preserves all 1,208 guarded rules without ordinal migrations. Independent
+retains 1,194 guarded rules after removing 14 obsolete carrier names and
+migrating 61 local ordinals plus one generated helper field type. Independent
 native fixtures verify 84,661 additional difficulty/reset/selection cases,
 including floating-point casts, recursive failures, partial writes and seeded
 random draw consumption. The current input and decompiler revisions are pinned
@@ -44,24 +45,27 @@ prior snapshots in Git.
 
 ## GeoBlox source refresh
 
-The latest owned decompiler folds 77 literal assignment branches into conditional
-assignments, including all 17 repeated integer Boolean assignments in the
-difficulty method. This removes 308 lines across 36 files. Folding requires
-complete single-assignment arms and identical proven primitive types; boxing,
-narrowing and effectful expressions retain their original control flow.
+The latest owned decompiler proves Boolean-only uses of generated integer stack
+carriers. It removes 221 locals and 442 lines across 75 files, while retaining
+70 Boolean local snapshots and retyping one generated helper field. Every
+condition stays at its original evaluation point unless a single adjacent use
+can safely inline a nonthrowing primitive expression. Numeric uses, shadowing,
+unknown syntax, nullable unboxing and later input mutation prevent unsafe inlining.
 
-The earlier early-exit pass removed 2,128 else wrappers and 2,213 lines across
-208 files. Complete-arm parsing, original render order, exact inversion and
-retained declaration blocks protect scopes, effects, NaNs, labels and catches.
+The difficulty method now calls the interval helper with `!recursiveAdvanceGuard`
+directly. The boundary scan uses direct true/false returns in place of its 13
+result carriers. Its pixel order, integer guard, exception context and shared
+loop structure remain. Earlier early-exit and literal-assignment cleanup remains.
 
-All 303 sources compile, preserving 20,931 declaration identities and 388
-override edges. Raw/readable rebinding compares 152,437 bindings. The current
-pass preserves all 1,208 rules, with zero local ordinal migrations. The 77 removed
-references are duplicate assignment targets. The generic emitter passes 14 test
-groups and 700 native comparisons; floating, nested-cycle, exception-exit and
-catch regressions also pass. A 32,768-case independent comparator oracle checks
-the enclosing guard inversion in the actual game method. A clean committed
-source archive regenerates all raw Java and diagnostics byte-for-byte.
+All 303 sources compile with 20,710 declarations and 388 override edges.
+Raw/readable rebinding compares 151,774 bindings. The manifest explicitly
+removes 14 obsolete carrier rules, migrates 61 local ordinals and records the
+named generated field's I-to-Z change, retaining 1,194 rules. Every normalized
+reference removal is a discarded carrier's store/read pair. The emitter passes
+17 groups and 1,510 native comparisons; floating, nested-cycle, exception-exit
+and catch regressions also pass. All six GeoBlox native probes match both source
+mirrors. A clean committed decompiler source archive reproduces all raw Java
+and diagnostics byte-for-byte.
 
 The previous terminal-return reconstruction removed 254 selectors and the
 boundary scan's 13-arm post-try ladder. Shared joins and throwing continuations

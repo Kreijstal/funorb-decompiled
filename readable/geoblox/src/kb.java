@@ -14,7 +14,7 @@ final class kb {
         String[] var7 = null;
         int stackIn_11_0 = 0;
         int stackIn_12_0 = 0;
-        int stackIn_12_1 = 0;
+        boolean stackIn_12_1 = false;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
@@ -48,12 +48,12 @@ final class kb {
 
           if (rd.field_u >= 13) {
             stackIn_12_0 = stackIn_11_0;
-            stackIn_12_1 = 0;
+            stackIn_12_1 = false;
           } else {
             stackIn_12_0 = stackIn_11_0;
-            stackIn_12_1 = 1;
+            stackIn_12_1 = true;
           }
-          ScorePopup.field_g = hh.a(stackIn_12_0, stackIn_12_1 != 0);
+          ScorePopup.field_g = hh.a(stackIn_12_0, stackIn_12_1);
           var6 = (String[]) null;
           ci.a((String[]) null, 416577356);
           return;

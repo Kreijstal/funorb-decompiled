@@ -24,20 +24,20 @@ final class qi extends IntrusiveNode {
     }
 
     final static boolean d(int param0) {
-        int stackIn_6_0 = 0;
+        boolean stackIn_6_0 = false;
         if (param0 <= 76) {
           field_h = (gk) null;
         }
         L1: {
           if (ra.field_d > 0) {
             if ((65536 & ra.field_d) != 0) {
-              stackIn_6_0 = 1;
+              stackIn_6_0 = true;
               break L1;
             }
           }
-          stackIn_6_0 = 0;
+          stackIn_6_0 = false;
         }
-        return stackIn_6_0 != 0;
+        return stackIn_6_0;
     }
 
     qi() {

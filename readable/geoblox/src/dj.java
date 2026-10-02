@@ -234,9 +234,7 @@ class dj extends hk {
         int stackIn_5_1 = 0;
         Object stackIn_7_0 = null;
         Object stackIn_8_0 = null;
-        int stackIn_8_1 = 0;
-        int stackIn_15_0 = 0;
-        int stackIn_17_0 = 0;
+        boolean stackIn_8_1 = false;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
@@ -265,12 +263,12 @@ class dj extends hk {
 
               if (var8_long - this.field_P >= 250L) {
                 stackIn_8_0 = this;
-                stackIn_8_1 = 0;
+                stackIn_8_1 = false;
               } else {
                 stackIn_8_0 = this;
-                stackIn_8_1 = 1;
+                stackIn_8_1 = true;
               }
-              ((dj) (this)).field_G = stackIn_8_1 != 0;
+              ((dj) (this)).field_G = stackIn_8_1;
               if (this.field_G) {
                 this.field_L = this.j((byte) 77);
                 this.field_H = this.h((byte) -57);
@@ -282,13 +280,11 @@ class dj extends hk {
                 this.field_J = this.field_H;
               }
               this.field_P = var8_long;
-              stackIn_15_0 = 1;
-              return stackIn_15_0 != 0;
+              return true;
             }
           }
           var8_int = 70 / ((param1 + 3) / 38);
-          stackIn_17_0 = 0;
-          return stackIn_17_0 != 0;
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
@@ -404,29 +400,12 @@ class dj extends hk {
 
     final boolean a(int param0, int param1, char param2, el param3) {
         int dupTemp$0 = 0;
-        int stackIn_2_0 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_16_0 = 0;
-        int stackIn_18_0 = 0;
-        int stackIn_24_0 = 0;
-        int stackIn_28_0 = 0;
-        int stackIn_32_0 = 0;
-        int stackIn_36_0 = 0;
-        int stackIn_41_0 = 0;
-        int stackIn_43_0 = 0;
         Object stackIn_47_0 = null;
         Object stackIn_48_0 = null;
         int stackIn_48_1 = 0;
-        int stackIn_49_0 = 0;
         Object stackIn_54_0 = null;
         Object stackIn_55_0 = null;
         int stackIn_55_1 = 0;
-        int stackIn_56_0 = 0;
-        int stackIn_58_0 = 0;
-        int stackIn_61_0 = 0;
-        int stackIn_65_0 = 0;
-        int stackIn_76_0 = 0;
-        int stackIn_78_0 = 0;
         RuntimeException stackIn_81_0 = null;
         StringBuilder stackIn_81_1 = null;
         RuntimeException stackIn_82_0 = null;
@@ -436,13 +415,11 @@ class dj extends hk {
         RuntimeException var5 = null;
         try {
           if (param1 != 13) {
-            stackIn_2_0 = 0;
-            return stackIn_2_0 != 0;
+            return false;
           }
           this.field_O = oa.a(-12520);
           if (60 == param2) {
-            stackIn_7_0 = 0;
-            return stackIn_7_0 != 0;
+            return false;
           }
           if (param2 == 62) {
             return false;
@@ -470,28 +447,24 @@ class dj extends hk {
                 }
                 this.g((byte) -36);
               }
-              stackIn_76_0 = 1;
-              return stackIn_76_0 != 0;
+              return true;
             }
           }
           if (param0 == 85) {
             if (this.field_H != this.field_L) {
               this.g(0);
-              stackIn_61_0 = 1;
-              return stackIn_61_0 != 0;
+              return true;
             }
             if (0 < this.field_H) {
               this.field_L = this.field_H - 1;
               this.g(param1 ^ 13);
-              stackIn_65_0 = 1;
-              return stackIn_65_0 != 0;
+              return true;
             }
           } else {
             if (101 != param0) {
               if (param0 == 13) {
                 this.i((byte) 76);
-                stackIn_58_0 = 1;
-                return stackIn_58_0 != 0;
+                return true;
               }
               if (param0 == 96) {
                 if (0 < this.field_H) {
@@ -505,8 +478,7 @@ class dj extends hk {
                     stackIn_55_1 = this.j((byte) 77);
                   }
                   this.a(stackIn_55_1, (byte) -126);
-                  stackIn_56_0 = 1;
-                  return stackIn_56_0 != 0;
+                  return true;
                 }
               } else {
                 if (param0 == 97) {
@@ -521,44 +493,37 @@ class dj extends hk {
                       stackIn_48_1 = this.h((byte) -57);
                     }
                     this.a(stackIn_48_1, (byte) -125);
-                    stackIn_49_0 = 1;
-                    return stackIn_49_0 != 0;
+                    return true;
                   }
                 } else {
                   if (102 == param0) {
                     this.a(0, (byte) -118);
-                    stackIn_24_0 = 1;
-                    return stackIn_24_0 != 0;
+                    return true;
                   }
                   if (param0 == 103) {
                     this.a(this.field_s.length(), (byte) -126);
-                    stackIn_43_0 = 1;
-                    return stackIn_43_0 != 0;
+                    return true;
                   }
                   if (param0 == 84) {
                     this.m((byte) 111);
-                    stackIn_28_0 = 1;
-                    return stackIn_28_0 != 0;
+                    return true;
                   }
                   if (kj.field_o[82]) {
                     if (param0 == 65) {
                       this.h(112);
-                      stackIn_32_0 = 1;
-                      return stackIn_32_0 != 0;
+                      return true;
                     }
                   }
                   if (kj.field_o[82]) {
                     if (param0 == 66) {
                       this.i(-23161);
-                      stackIn_36_0 = 1;
-                      return stackIn_36_0 != 0;
+                      return true;
                     }
                   }
                   if (kj.field_o[82]) {
                     if (67 == param0) {
                       this.f(82);
-                      stackIn_41_0 = 1;
-                      return stackIn_41_0 != 0;
+                      return true;
                     }
                   }
                 }
@@ -566,19 +531,16 @@ class dj extends hk {
             } else {
               if (this.field_L != this.field_H) {
                 this.g(0);
-                stackIn_18_0 = 1;
-                return stackIn_18_0 != 0;
+                return true;
               }
               if (this.field_H < this.field_s.length()) {
                 this.field_L = this.field_H + 1;
                 this.g(0);
-                stackIn_16_0 = 1;
-                return stackIn_16_0 != 0;
+                return true;
               }
             }
           }
-          stackIn_78_0 = 0;
-          return stackIn_78_0 != 0;
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;

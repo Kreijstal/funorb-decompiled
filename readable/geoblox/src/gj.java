@@ -26,7 +26,7 @@ final class gj extends fj {
         int var5 = 0;
         int stackIn_6_0 = 0;
         int stackIn_7_0 = 0;
-        int stackIn_7_1 = 0;
+        boolean stackIn_7_1 = false;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
@@ -58,12 +58,12 @@ final class gj extends fj {
 
           if (rd.field_u >= 13) {
             stackIn_7_0 = stackIn_6_0;
-            stackIn_7_1 = 0;
+            stackIn_7_1 = false;
           } else {
             stackIn_7_0 = stackIn_6_0;
-            stackIn_7_1 = 1;
+            stackIn_7_1 = true;
           }
-          dl.field_a = hh.a(stackIn_7_0, stackIn_7_1 != 0);
+          dl.field_a = hh.a(stackIn_7_0, stackIn_7_1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

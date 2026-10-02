@@ -43,8 +43,6 @@ final class qb extends hk {
     }
 
     final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, el param6) {
-        int stackIn_14_0 = 0;
-        int stackIn_16_0 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
@@ -60,8 +58,7 @@ final class qb extends hk {
         try {
           if (!super.a(param0, -52, param2, param3, param4, param5, param6)) {
             var8_int = 35 % ((-3 - param1) / 38);
-            stackIn_16_0 = 0;
-            return stackIn_16_0 != 0;
+            return false;
           }
           L0: {
             var8_int = -this.field_E - (this.field_v + (param2 - param4));
@@ -85,8 +82,7 @@ final class qb extends hk {
               break L0;
             }
           }
-          stackIn_14_0 = 1;
-          return stackIn_14_0 != 0;
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;

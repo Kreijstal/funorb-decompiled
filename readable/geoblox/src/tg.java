@@ -16,10 +16,10 @@ final class tg extends com.ms.dll.Callback {
         int stackIn_6_0 = 0;
         Object stackIn_21_0 = null;
         Object stackIn_22_0 = null;
-        int stackIn_22_1 = 0;
+        boolean stackIn_22_1 = false;
         Object stackIn_27_0 = null;
         Object stackIn_28_0 = null;
-        int stackIn_28_1 = 0;
+        boolean stackIn_28_1 = false;
         Throwable decompiledCaughtException = null;
         if (param0 != 12758) {
           this.field_d = true;
@@ -42,12 +42,12 @@ final class tg extends com.ms.dll.Callback {
 
           if (!param1) {
             stackIn_28_0 = this;
-            stackIn_28_1 = 0;
+            stackIn_28_1 = false;
           } else {
             stackIn_28_0 = this;
-            stackIn_28_1 = 1;
+            stackIn_28_1 = true;
           }
-          ((tg) (this)).field_e = stackIn_28_1 != 0;
+          ((tg) (this)).field_e = stackIn_28_1;
           com.ms.win32.User32.SendMessage(var5, 101024, 0, 0);
           return;
         }
@@ -68,12 +68,12 @@ final class tg extends com.ms.dll.Callback {
 
         if (!param1) {
           stackIn_22_0 = this;
-          stackIn_22_1 = 0;
+          stackIn_22_1 = false;
         } else {
           stackIn_22_0 = this;
-          stackIn_22_1 = 1;
+          stackIn_22_1 = true;
         }
-        ((tg) (this)).field_e = stackIn_22_1 != 0;
+        ((tg) (this)).field_e = stackIn_22_1;
         com.ms.win32.User32.SendMessage(var5, 101024, 0, 0);
     }
 

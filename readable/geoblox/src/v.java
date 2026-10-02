@@ -523,7 +523,7 @@ final class v {
 
     final static boolean a(String param0, byte param1) {
         RuntimeException var2 = null;
-        int stackIn_5_0 = 0;
+        boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
@@ -534,8 +534,8 @@ final class v {
           if (param1 <= 12) {
             field_e = (String) null;
           }
-          stackIn_5_0 = (jg.a((byte) -62, param0) == null) ? 0 : 1;
-          return stackIn_5_0 != 0;
+          stackIn_5_0 = !(jg.a((byte) -62, param0) == null);
+          return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

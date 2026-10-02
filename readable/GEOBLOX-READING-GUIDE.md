@@ -165,11 +165,11 @@ negative nonzero pixels and signed guard overflow retain their native behavior.
 The exception-region reconstruction now returns on each original nonthrowing
 path inside the try. Its 13-arm post-try ladder and `boundaryResultArmId` are
 removed by the generic decompiler; shared joins and throwing continuations in
-other methods retain external routing. Thirteen integer result carriers remain.
-`leftCardinalHit`, `upperNearLeftHit` and the other hit carriers hold integer
-true; `boundaryScanMissResult` holds integer false. All 27 remaining locals and
-the method guard have semantic names. The original exception aliases and the
-nested probe conditions remain; no framebuffer reads are reordered.
+other methods retain external routing. The current Boolean carrier proof removes
+all 13 integer result carriers and emits direct true/false returns. Fourteen
+remaining locals and the method guard retain their semantic names. The original
+exception aliases and nested probe conditions remain; no framebuffer reads are
+reordered.
 
 ## Score popups and text writes
 
@@ -205,11 +205,11 @@ tutorial mode. The theme threshold is `fa.releasesPerTheme`; `qe.a` calculates
 `kd.difficultyStepFlags`. Its normal callers pass `recursiveAdvanceGuard=false`.
 The true guard recursively advances the shared index and may throw when a
 caller resumes and re-reads an exhausted table; partial updates remain visible. The
-17 duplicated Boolean assignment branches now use compact expressions such as
-`stackIn_10_0 = (recursiveAdvanceGuard) ? 0 : 1;`. The later `!= 0` conversion
-and shared tails remain explicit. This generic decompiler change preserves
-integer carrier types, all naming identities and condition evaluation order;
-the 84,661-case difficulty matrix checks its partial state and exceptions.
+17 integer Boolean carriers are now eliminated, so the interval calls use
+`sa.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard)` directly. The proof
+requires a single adjacent use and a nonthrowing primitive condition whose
+inputs are unchanged. Shared difficulty tails remain duplicated. The 84,661-case
+difficulty matrix checks the resulting partial state and exceptions.
 
 | Flag bit | Observed effect |
 | --- | --- |
@@ -544,17 +544,19 @@ the array indices, evidence, override families and remaining shared carriers.
 
 ## Remaining limitations
 
-There are 1,208 explicit guarded rules: 22 classes, 389 fields, 181 method
-declarations, 217 parameters and 399 locals. This is not full deobfuscation.
+There are 1,194 explicit guarded rules: 22 classes, 389 fields, 181 method
+declarations, 217 parameters and 385 locals. This is not full deobfuscation.
 Unknown flags, guard arguments and opaque shared helpers still need
 investigation. Current names and source identities live in the single manifest;
 previous naming and structural passes remain in Git. The earlier early-exit migration
 moved 35 named local ordinals by unique method/original-spelling identity.
 The subsequent naming pass retained all prior rules and added 38 difficulty
-and spawning identities without changing the raw source. The current migration
-folds 77 typed literal assignment branches and preserves all 1,208 rules with
-zero ordinal changes. Integer Boolean carriers and duplicated difficulty tails
-remain. The earlier terminal-return pass removed the vanished boundary selector;
+and spawning identities without changing the raw source. The previous migration
+folded 77 typed literal assignment branches. The current proof removes 221
+generated locals, keeps 70 Boolean local snapshots and retypes one generated
+helper field. Fourteen obsolete names are explicitly removed, 61 surviving local
+ordinals migrate, and the helper field has an explicit type migration. All other
+semantic names remain. Duplicated difficulty tails and other carriers remain. The earlier terminal-return pass removed the vanished boundary selector;
 the current emitter also retains its proven early-exit reconstruction.
 Complete parsing and preserved declaration scopes keep this reproducible.
 
@@ -641,7 +643,8 @@ The current decompiler pass removes an else wrapper when the preceding arm
 leaves on every path. When both arms leave, the shorter arm becomes the guard.
 `hasPixelsAtPlayfieldBoundary` now reads as sequential cardinal checks followed
 by sequential perimeter checks inside its loop. The original read order,
-integer division guard, 13 result carriers and exception context remain.
+integer division guard and exception context remain; the 13 result carriers now
+use direct true/false returns.
 Nested branches with normally completing paths or consumed inner breaks keep
 their control flow; blocks that declare locals keep their scopes.
 

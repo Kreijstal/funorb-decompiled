@@ -20,19 +20,6 @@ final class ld {
 
     final static boolean hasPixelsAtPlayfieldBoundary(int methodGuard) {
         int previousCircleVerticalOffset = 0;
-        int leftCardinalHit = 0;
-        int rightCardinalHit = 0;
-        int topCardinalHit = 0;
-        int bottomCardinalHit = 0;
-        int upperFarLeftHit = 0;
-        int upperFarRightHit = 0;
-        int upperNearLeftHit = 0;
-        int upperNearRightHit = 0;
-        int lowerNearLeftHit = 0;
-        int lowerNearRightHit = 0;
-        int lowerFarLeftHit = 0;
-        int lowerFarRightHit = 0;
-        int boundaryScanMissResult = 0;
         RuntimeException caughtBoundaryScanFailure = null;
         int upperNearRowCenterIndex = 0;
         RuntimeException boundaryScanFailureForContext = null;
@@ -57,20 +44,16 @@ final class ld {
           guardDivisionResult = 64 / ((methodGuard - 32) / 34);
           circleError = playfieldRadiusSquared - circleHorizontalOffset;
           if (SoftwareRasterizer.framebuffer[-circleHorizontalOffset + upperNearRowCenterIndex] != 0) {
-            leftCardinalHit = 1;
-            return leftCardinalHit != 0;
+            return true;
           }
           if (0 != SoftwareRasterizer.framebuffer[upperNearRowCenterIndex + circleHorizontalOffset]) {
-            rightCardinalHit = 1;
-            return rightCardinalHit != 0;
+            return true;
           }
           if (SoftwareRasterizer.framebuffer[upperFarRowCenterIndex] != 0) {
-            topCardinalHit = 1;
-            return topCardinalHit != 0;
+            return true;
           }
           if (SoftwareRasterizer.framebuffer[lowerFarRowCenterIndex] != 0) {
-            bottomCardinalHit = 1;
-            return bottomCardinalHit != 0;
+            return true;
           }
           L0: while (true) {
             previousCircleVerticalOffset = circleVerticalOffset;
@@ -85,42 +68,33 @@ final class ld {
               circleError = circleError - (circleHorizontalOffset + circleHorizontalOffset);
             }
             if (circleVerticalOffset > circleHorizontalOffset) {
-              boundaryScanMissResult = 0;
-              return boundaryScanMissResult != 0;
+              return false;
             }
             if (0 != SoftwareRasterizer.framebuffer[-circleVerticalOffset + upperFarRowCenterIndex]) {
-              upperFarLeftHit = 1;
-              return upperFarLeftHit != 0;
+              return true;
             }
             if (SoftwareRasterizer.framebuffer[upperFarRowCenterIndex + circleVerticalOffset] != 0) {
-              upperFarRightHit = 1;
-              return upperFarRightHit != 0;
+              return true;
             }
             if (SoftwareRasterizer.framebuffer[-circleHorizontalOffset + upperNearRowCenterIndex] != 0) {
-              upperNearLeftHit = 1;
-              return upperNearLeftHit != 0;
+              return true;
             }
             if (SoftwareRasterizer.framebuffer[circleHorizontalOffset + upperNearRowCenterIndex] != 0) {
-              upperNearRightHit = 1;
-              return upperNearRightHit != 0;
+              return true;
             }
             if (SoftwareRasterizer.framebuffer[lowerNearRowCenterIndex - circleHorizontalOffset] != 0) {
-              lowerNearLeftHit = 1;
-              return lowerNearLeftHit != 0;
+              return true;
             }
             if (SoftwareRasterizer.framebuffer[circleHorizontalOffset + lowerNearRowCenterIndex] != 0) {
-              lowerNearRightHit = 1;
-              return lowerNearRightHit != 0;
+              return true;
             }
             if (SoftwareRasterizer.framebuffer[lowerFarRowCenterIndex - circleVerticalOffset] != 0) {
-              lowerFarLeftHit = 1;
-              return lowerFarLeftHit != 0;
+              return true;
             }
             if (SoftwareRasterizer.framebuffer[lowerFarRowCenterIndex + circleVerticalOffset] == 0) {
               continue L0;
             }
-            lowerFarRightHit = 1;
-            return lowerFarRightHit != 0;
+            return true;
           }
         } catch (java.lang.RuntimeException boundaryScanFailure) {
           caughtBoundaryScanFailure = boundaryScanFailure;
@@ -130,23 +104,6 @@ final class ld {
     }
 
     final static void advanceDifficulty(boolean recursiveAdvanceGuard) {
-        int stackIn_10_0 = 0;
-        int stackIn_29_0 = 0;
-        int stackIn_47_0 = 0;
-        int stackIn_61_0 = 0;
-        int stackIn_83_0 = 0;
-        int stackIn_100_0 = 0;
-        int stackIn_114_0 = 0;
-        int stackIn_125_0 = 0;
-        int stackIn_135_0 = 0;
-        int stackIn_150_0 = 0;
-        int stackIn_160_0 = 0;
-        int stackIn_172_0 = 0;
-        int stackIn_182_0 = 0;
-        int stackIn_196_0 = 0;
-        int stackIn_206_0 = 0;
-        int stackIn_218_0 = 0;
-        int stackIn_228_0 = 0;
         ji.difficultyStep = ji.difficultyStep + 1;
         if (ji.difficultyStep >= kd.difficultyStepFlags.length) {
           if (sa.specialSpriteKindProbability > 0.15000000000000002) {
@@ -156,8 +113,7 @@ final class ld {
         }
         if ((4 & kd.difficultyStepFlags[ji.difficultyStep]) != 0) {
           og.entityMotionSpeed = og.entityMotionSpeed + 0.055555559694767f;
-          stackIn_10_0 = (recursiveAdvanceGuard) ? 0 : 1;
-          sa.recomputeSpawnReleaseInterval(stackIn_10_0 != 0);
+          sa.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard);
         }
         if ((kd.difficultyStepFlags[ji.difficultyStep] & 1) == 0) {
           if (!recursiveAdvanceGuard) {
@@ -176,8 +132,7 @@ final class ld {
               if (0.800000011920929f > ij.spawnIntervalScale) {
                 ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
               }
-              stackIn_29_0 = (recursiveAdvanceGuard) ? 0 : 1;
-              sa.recomputeSpawnReleaseInterval(stackIn_29_0 != 0);
+              sa.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard);
             }
             return;
           }
@@ -193,8 +148,7 @@ final class ld {
               if (0.800000011920929f > ij.spawnIntervalScale) {
                 ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
               }
-              stackIn_61_0 = (recursiveAdvanceGuard) ? 0 : 1;
-              sa.recomputeSpawnReleaseInterval(stackIn_61_0 != 0);
+              sa.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard);
             }
             return;
           }
@@ -211,8 +165,7 @@ final class ld {
             if (0.800000011920929f > ij.spawnIntervalScale) {
               ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
             }
-            stackIn_47_0 = (recursiveAdvanceGuard) ? 0 : 1;
-            sa.recomputeSpawnReleaseInterval(stackIn_47_0 != 0);
+            sa.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard);
           }
           return;
         }
@@ -236,8 +189,7 @@ final class ld {
             if (0.800000011920929f > ij.spawnIntervalScale) {
               ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
             }
-            stackIn_83_0 = (recursiveAdvanceGuard) ? 0 : 1;
-            sa.recomputeSpawnReleaseInterval(stackIn_83_0 != 0);
+            sa.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard);
           }
           return;
         }
@@ -255,8 +207,7 @@ final class ld {
                 if (0.800000011920929f > ij.spawnIntervalScale) {
                   ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
                 }
-                stackIn_100_0 = (recursiveAdvanceGuard) ? 0 : 1;
-                sa.recomputeSpawnReleaseInterval(stackIn_100_0 != 0);
+                sa.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard);
               }
               return;
             }
@@ -271,8 +222,7 @@ final class ld {
               if (0.800000011920929f > ij.spawnIntervalScale) {
                 ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
               }
-              stackIn_114_0 = (recursiveAdvanceGuard) ? 0 : 1;
-              sa.recomputeSpawnReleaseInterval(stackIn_114_0 != 0);
+              sa.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard);
             }
             return;
           }
@@ -281,8 +231,7 @@ final class ld {
               if (0.800000011920929f > ij.spawnIntervalScale) {
                 ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
               }
-              stackIn_125_0 = (recursiveAdvanceGuard) ? 0 : 1;
-              sa.recomputeSpawnReleaseInterval(stackIn_125_0 != 0);
+              sa.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard);
             }
             return;
           }
@@ -291,8 +240,7 @@ final class ld {
             if (0.800000011920929f > ij.spawnIntervalScale) {
               ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
             }
-            stackIn_135_0 = (recursiveAdvanceGuard) ? 0 : 1;
-            sa.recomputeSpawnReleaseInterval(stackIn_135_0 != 0);
+            sa.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard);
           }
           return;
         }
@@ -304,8 +252,7 @@ final class ld {
                   if (0.800000011920929f > ij.spawnIntervalScale) {
                     ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
                   }
-                  stackIn_172_0 = (recursiveAdvanceGuard) ? 0 : 1;
-                  sa.recomputeSpawnReleaseInterval(stackIn_172_0 != 0);
+                  sa.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard);
                 }
                 return;
               }
@@ -314,8 +261,7 @@ final class ld {
                 if (0.800000011920929f > ij.spawnIntervalScale) {
                   ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
                 }
-                stackIn_182_0 = (recursiveAdvanceGuard) ? 0 : 1;
-                sa.recomputeSpawnReleaseInterval(stackIn_182_0 != 0);
+                sa.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard);
               }
               return;
             }
@@ -325,8 +271,7 @@ final class ld {
                 if (0.800000011920929f > ij.spawnIntervalScale) {
                   ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
                 }
-                stackIn_160_0 = (recursiveAdvanceGuard) ? 0 : 1;
-                sa.recomputeSpawnReleaseInterval(stackIn_160_0 != 0);
+                sa.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard);
               }
               return;
             }
@@ -335,8 +280,7 @@ final class ld {
               if (0.800000011920929f > ij.spawnIntervalScale) {
                 ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
               }
-              stackIn_150_0 = (recursiveAdvanceGuard) ? 0 : 1;
-              sa.recomputeSpawnReleaseInterval(stackIn_150_0 != 0);
+              sa.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard);
             }
             return;
           }
@@ -348,8 +292,7 @@ final class ld {
               if (0.800000011920929f > ij.spawnIntervalScale) {
                 ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
               }
-              stackIn_218_0 = (recursiveAdvanceGuard) ? 0 : 1;
-              sa.recomputeSpawnReleaseInterval(stackIn_218_0 != 0);
+              sa.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard);
             }
             return;
           }
@@ -358,8 +301,7 @@ final class ld {
             if (0.800000011920929f > ij.spawnIntervalScale) {
               ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
             }
-            stackIn_228_0 = (recursiveAdvanceGuard) ? 0 : 1;
-            sa.recomputeSpawnReleaseInterval(stackIn_228_0 != 0);
+            sa.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard);
           }
           return;
         }
@@ -369,8 +311,7 @@ final class ld {
             if (0.800000011920929f > ij.spawnIntervalScale) {
               ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
             }
-            stackIn_196_0 = (recursiveAdvanceGuard) ? 0 : 1;
-            sa.recomputeSpawnReleaseInterval(stackIn_196_0 != 0);
+            sa.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard);
           }
           return;
         }
@@ -379,8 +320,7 @@ final class ld {
           if (0.800000011920929f > ij.spawnIntervalScale) {
             ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
           }
-          stackIn_206_0 = (recursiveAdvanceGuard) ? 0 : 1;
-          sa.recomputeSpawnReleaseInterval(stackIn_206_0 != 0);
+          sa.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard);
         }
     }
 

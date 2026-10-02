@@ -42,10 +42,8 @@ final class AccountWelcomePanel extends ee implements pl {
 
     final boolean a(int param0, int param1, char param2, el param3) {
         RuntimeException var5 = null;
-        int stackIn_2_0 = 0;
         boolean stackIn_8_0 = false;
         boolean stackIn_13_0 = false;
-        int stackIn_15_0 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
@@ -54,8 +52,7 @@ final class AccountWelcomePanel extends ee implements pl {
         RuntimeException decompiledCaughtException = null;
         try {
           if (super.a(param0, param1 + 0, param2, param3)) {
-            stackIn_2_0 = 1;
-            return stackIn_2_0 != 0;
+            return true;
           }
           if (param1 != 13) {
             loadingGraphicsText = (String) null;
@@ -68,8 +65,7 @@ final class AccountWelcomePanel extends ee implements pl {
             stackIn_13_0 = this.a(param3, -119);
             return stackIn_13_0;
           }
-          stackIn_15_0 = 0;
-          return stackIn_15_0 != 0;
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -174,7 +170,7 @@ final class AccountWelcomePanel extends ee implements pl {
             RuntimeException forwardedContextFailure;
             StringBuilder forwardedContextBuilder;
             String archiveContextToken;
-            int invertedClientFlagValue;
+            boolean invertedClientFlagValue;
             RuntimeException caughtLoadingFailure;
             byte[] textResourceBytes;
             RuntimeException loadingFailure;
@@ -190,7 +186,7 @@ final class AccountWelcomePanel extends ee implements pl {
                 this.forwardedContextFailure = null;
                 this.forwardedContextBuilder = null;
                 this.archiveContextToken = null;
-                this.invertedClientFlagValue = 0;
+                this.invertedClientFlagValue = false;
                 this.caughtLoadingFailure = null;
                 this.textResourceBytes = null;
                 this.loadingFailure = null;
@@ -3211,8 +3207,8 @@ final class AccountWelcomePanel extends ee implements pl {
                   throw t.a((Throwable) ((Object) forwardedContextFailure), ((StringBuilder) (Object) forwardedContextBuilder).append(archiveContextToken).append(')').toString());
                 }
                 if (sharedFlowFlag != 0) {
-                  invertedClientFlagValue = (!ch.field_h) ? 1 : 0;
-                  ch.field_h = invertedClientFlagValue != 0;
+                  invertedClientFlagValue = (!ch.field_h);
+                  ch.field_h = invertedClientFlagValue;
                 }
             }
         }

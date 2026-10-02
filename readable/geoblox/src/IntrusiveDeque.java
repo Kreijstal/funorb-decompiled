@@ -88,20 +88,20 @@ final class IntrusiveDeque {
     }
 
     final static boolean a(byte param0) {
-        int stackIn_6_0 = 0;
+        boolean stackIn_6_0 = false;
         if (param0 <= 65) {
           return false;
         }
         L0: {
           if (oh.field_b != null) {
             if (oh.field_b.j(75) != null) {
-              stackIn_6_0 = 1;
+              stackIn_6_0 = true;
               break L0;
             }
           }
-          stackIn_6_0 = 0;
+          stackIn_6_0 = false;
         }
-        return stackIn_6_0 != 0;
+        return stackIn_6_0;
     }
 
     public static void f(int param0) {

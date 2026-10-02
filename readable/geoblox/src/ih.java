@@ -26,7 +26,7 @@ final class ih {
     }
 
     final static boolean areEntityQueuesSettled(int param0) {
-        int stackIn_8_0 = 0;
+        boolean stackIn_8_0 = false;
         if (param0 != 0) {
           return true;
         }
@@ -35,15 +35,15 @@ final class ih {
             if (SecondaryDeque.spawnQueue.isEmpty(13519)) {
               if (bh.field_c.isEmpty(param0 + 13519)) {
                 if (!jl.avatarShockContactPending) {
-                  stackIn_8_0 = 1;
+                  stackIn_8_0 = true;
                   break L0;
                 }
               }
             }
           }
-          stackIn_8_0 = 0;
+          stackIn_8_0 = false;
         }
-        return stackIn_8_0 != 0;
+        return stackIn_8_0;
     }
 
     public static void a(byte param0) {

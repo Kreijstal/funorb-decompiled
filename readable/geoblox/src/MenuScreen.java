@@ -178,7 +178,7 @@ abstract class MenuScreen {
         Object stackIn_17_0;
         int stackIn_17_1;
         int stackIn_17_2;
-        int stackIn_17_3;
+        boolean stackIn_17_3;
         L0: {
           var3 = Geoblox.field_C;
           if (bi.field_g != 0) {
@@ -196,14 +196,14 @@ abstract class MenuScreen {
                 stackIn_17_0 = this;
                 stackIn_17_1 = stackIn_16_1;
                 stackIn_17_2 = stackIn_16_2;
-                stackIn_17_3 = 0;
+                stackIn_17_3 = false;
               } else {
                 stackIn_17_0 = this;
                 stackIn_17_1 = stackIn_16_1;
                 stackIn_17_2 = stackIn_16_2;
-                stackIn_17_3 = 1;
+                stackIn_17_3 = true;
               }
-              this.handleMenuPointer(stackIn_17_1, stackIn_17_2, stackIn_17_3 != 0, -(hitItemIndex * this.itemSpacing) - this.firstItemY + he.field_d, false, bi.field_g);
+              this.handleMenuPointer(stackIn_17_1, stackIn_17_2, stackIn_17_3, -(hitItemIndex * this.itemSpacing) - this.firstItemY + he.field_d, false, bi.field_g);
             } else {
               this.pointerInteractionActive = false;
             }

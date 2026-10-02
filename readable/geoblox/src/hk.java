@@ -15,8 +15,6 @@ class hk extends el {
     boolean a(int param0, int param1, int param2, int param3, int param4, int param5, el param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
-        int stackIn_8_0 = 0;
-        int stackIn_10_0 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
@@ -34,13 +32,11 @@ class hk extends el {
                 }
                 ((ti) ((Object) this.field_u)).a(param0, -30896, param2, param4, (hk) (this), param3, param5);
               }
-              stackIn_8_0 = 1;
-              return stackIn_8_0 != 0;
+              return true;
             }
           }
           var8_int = 4 / ((param1 + 3) / 38);
-          stackIn_10_0 = 0;
-          return stackIn_10_0 != 0;
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
@@ -116,8 +112,6 @@ class hk extends el {
 
     boolean a(int param0, int param1, char param2, el param3) {
         RuntimeException var5 = null;
-        int stackIn_5_0 = 0;
-        int stackIn_9_0 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
@@ -133,13 +127,11 @@ class hk extends el {
                 }
               }
               this.a(-1, -28922, -1, 1);
-              stackIn_5_0 = 1;
-              return stackIn_5_0 != 0;
+              return true;
             }
           }
           if (param1 == 13) {
-            stackIn_9_0 = 0;
-            return stackIn_9_0 != 0;
+            return false;
           }
           this.field_y = true;
           return false;
@@ -210,8 +202,6 @@ class hk extends el {
 
     boolean a(byte param0, el param1) {
         RuntimeException var3 = null;
-        int stackIn_4_0 = 0;
-        int stackIn_12_0 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
@@ -229,15 +219,13 @@ class hk extends el {
                 }
               }
               if (param0 <= -30) {
-                stackIn_12_0 = 1;
-                return stackIn_12_0 != 0;
+                return true;
               }
               this.field_A = true;
               return true;
             }
           }
-          stackIn_4_0 = 0;
-          return stackIn_4_0 != 0;
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;

@@ -87,9 +87,6 @@ final class pa {
 
     final static boolean a(CharSequence param0, boolean param1, int param2, int param3) {
         int var8 = 0;
-        int stackIn_25_0 = 0;
-        int stackIn_30_0 = 0;
-        int stackIn_37_0 = 0;
         int stackIn_41_0 = 0;
         RuntimeException stackIn_44_0 = null;
         StringBuilder stackIn_44_1 = null;
@@ -147,12 +144,10 @@ final class pa {
                         break L5;
                       }
                     }
-                    stackIn_25_0 = 0;
-                    return stackIn_25_0 != 0;
+                    return false;
                   }
                   if (var9 >= param2) {
-                    stackIn_30_0 = 0;
-                    return stackIn_30_0 != 0;
+                    return false;
                   }
                   {
                     if (var4_int != 0) {
@@ -160,8 +155,7 @@ final class pa {
                     }
                     var10 = var6 * param2 + var9;
                     if (var6 != var10 / param2) {
-                      stackIn_37_0 = 0;
-                      return stackIn_37_0 != 0;
+                      return false;
                     }
                     var6 = var10;
                     var5 = 1;

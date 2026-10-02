@@ -27,7 +27,6 @@ final class od {
 
     final boolean a(int param0, String param1) {
         RuntimeException var3 = null;
-        int stackIn_2_0 = 0;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -40,8 +39,7 @@ final class od {
             stackIn_4_0 = this.field_a.equals(param1);
             return stackIn_4_0;
           }
-          stackIn_2_0 = 0;
-          return stackIn_2_0 != 0;
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;

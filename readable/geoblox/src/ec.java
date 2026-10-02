@@ -37,9 +37,6 @@ final class ec {
     }
 
     final static boolean processMatchCandidates(int methodGuard) {
-        int stackIn_9_0 = 0;
-        int stackIn_12_0 = 0;
-        int stackIn_49_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int sortInsertionIndex = 0;
         RuntimeException var1 = null;
@@ -68,13 +65,11 @@ final class ec {
                 el.gameplaySession.pointsPanelSlideDirection = 1;
                 el.gameplaySession.emitPointsPopup(false);
               }
-              stackIn_9_0 = 0;
-              return stackIn_9_0 != 0;
+              return false;
             }
           }
           if (h.matchCandidateCount == 0) {
-            stackIn_12_0 = 0;
-            return stackIn_12_0 != 0;
+            return false;
           }
           {
             if (gf.matchChainLength >= 5) {
@@ -152,8 +147,7 @@ final class ec {
               candidateIndex++;
             }
             h.matchCandidateCount = 0;
-            stackIn_49_0 = 1;
-            return stackIn_49_0 != 0;
+            return true;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

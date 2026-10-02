@@ -17,7 +17,6 @@ final class uj {
 
     final static boolean a(GameplayEntity param0, float param1, int param2) {
         RuntimeException var3 = null;
-        int stackIn_2_0 = 0;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -30,8 +29,7 @@ final class uj {
             stackIn_4_0 = aa.a(vf.spriteScratchRaster, -(vf.spriteScratchRaster.field_s >> 1) + ng.field_G, -(vf.spriteScratchRaster.field_o >> 1) + td.field_E, bk.boardOwnershipRaster, 0, 0);
             return stackIn_4_0;
           }
-          stackIn_2_0 = 0;
-          return stackIn_2_0 != 0;
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;

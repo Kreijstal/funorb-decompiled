@@ -135,7 +135,7 @@ final class rl extends oe {
         int stackIn_3_1 = 0;
         Object stackIn_7_0 = null;
         Object stackIn_8_0 = null;
-        int stackIn_8_1 = 0;
+        boolean stackIn_8_1 = false;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
@@ -162,12 +162,12 @@ final class rl extends oe {
 
           if (!param0) {
             stackIn_8_0 = this;
-            stackIn_8_1 = 0;
+            stackIn_8_1 = false;
           } else {
             stackIn_8_0 = this;
-            stackIn_8_1 = 1;
+            stackIn_8_1 = true;
           }
-          ((rl) (this)).field_Z = stackIn_8_1 != 0;
+          ((rl) (this)).field_Z = stackIn_8_1;
           if (!this.field_Z) {
             this.field_bb.a(4210752, 2113632, (byte) -103);
             if (this.field_ab) {

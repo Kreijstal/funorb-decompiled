@@ -419,11 +419,6 @@ final class qh extends ee implements pe, pl, ta {
         RuntimeException var3_ref = null;
         lh var4 = null;
         nl var5 = null;
-        int stackIn_3_0 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_13_0 = 0;
-        int stackIn_16_0 = 0;
-        int stackIn_18_0 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
@@ -433,28 +428,23 @@ final class qh extends ee implements pe, pl, ta {
         try {
           var3 = param1.a((byte) -106);
           if (var3 == null) {
-            stackIn_3_0 = 1;
-            return stackIn_3_0 != 0;
+            return true;
           }
           var4 = var3.a((byte) -105);
           if (si.field_m == var4) {
-            stackIn_7_0 = 0;
-            return stackIn_7_0 != 0;
+            return false;
           }
           if (param0 >= -73) {
             var5 = (nl) null;
             discarded$1 = this.a((byte) 82, (nl) null);
           }
           if (bf.field_g == var4) {
-            stackIn_13_0 = 0;
-            return stackIn_13_0 != 0;
+            return false;
           }
           if (var4 != oj.field_d) {
-            stackIn_18_0 = 1;
-            return stackIn_18_0 != 0;
+            return true;
           }
-          stackIn_16_0 = 0;
-          return stackIn_16_0 != 0;
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -537,7 +527,6 @@ final class qh extends ee implements pe, pl, ta {
 
     final boolean a(int param0, int param1, char param2, el param3) {
         RuntimeException var5 = null;
-        int stackIn_3_0 = 0;
         boolean stackIn_7_0 = false;
         boolean stackIn_13_0 = false;
         RuntimeException stackIn_16_0 = null;
@@ -548,8 +537,7 @@ final class qh extends ee implements pe, pl, ta {
         RuntimeException decompiledCaughtException = null;
         try {
           if (super.a(param0, param1 ^ 0, param2, param3)) {
-            stackIn_3_0 = 1;
-            return stackIn_3_0 != 0;
+            return true;
           }
           if (98 == param0) {
             stackIn_7_0 = this.a(7305, param3);

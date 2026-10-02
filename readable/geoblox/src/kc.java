@@ -80,7 +80,7 @@ final class kc {
         int popupPoints;
         GameplaySession sessionForRasterRead = null;
         GameplaySession sessionForRasterWrite = null;
-        int rasterDirtyDecision = 0;
+        boolean rasterDirtyDecision = false;
         RuntimeException decompiledCaughtException = null;
         boolean visitedByEntityIdValue;
         boolean directAvatarContactValue;
@@ -607,16 +607,16 @@ final class kc {
 
                     if (!w.avatarShockPending) {
                       sessionForRasterWrite = (GameplaySession) ((Object) sessionForRasterRead);
-                      rasterDirtyDecision = 0;
+                      rasterDirtyDecision = false;
                       break L55;
                     }
                     sessionForRasterRead = (GameplaySession) ((Object) sessionForRasterRead);
                   }
                 }
                 sessionForRasterWrite = (GameplaySession) ((Object) sessionForRasterRead);
-                rasterDirtyDecision = 1;
+                rasterDirtyDecision = true;
               }
-              sessionForRasterWrite.boardRasterDirty = rasterDirtyDecision != 0;
+              sessionForRasterWrite.boardRasterDirty = rasterDirtyDecision;
               w.avatarShockPending = false;
               if (visitedResetIndexThenKindFourCount >= 3) {
                 ra.a(255 ^ fe.field_f, -88, fe.field_f);

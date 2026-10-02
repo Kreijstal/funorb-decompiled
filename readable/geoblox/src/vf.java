@@ -215,7 +215,6 @@ class vf extends hk {
 
     boolean a(byte param0, el param1) {
         RuntimeException var3 = null;
-        int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
@@ -226,8 +225,7 @@ class vf extends hk {
           if (param0 >= -30) {
             this.a(-15, -109, 48, 91);
           }
-          stackIn_3_0 = 0;
-          return stackIn_3_0 != 0;
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;

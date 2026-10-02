@@ -8,10 +8,6 @@ final class mc {
         r var7 = null;
         RuntimeException var7_ref = null;
         r var8 = null;
-        int stackIn_2_0 = 0;
-        int stackIn_5_0 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_12_0 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
@@ -29,23 +25,19 @@ final class mc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (kd.field_b != uf.field_l) {
-            stackIn_2_0 = 0;
-            return stackIn_2_0 != 0;
+            return false;
           }
           var8 = new r(kd.field_e, param3);
           var7 = var8;
           kd.field_e.a(false, var8);
           if (param4 != 0) {
-            stackIn_5_0 = 0;
-            return stackIn_5_0 != 0;
+            return false;
           }
           if (kf.a(122)) {
             var8.q(12086);
-            stackIn_12_0 = 1;
-            return stackIn_12_0 != 0;
+            return true;
           }
-          stackIn_10_0 = (!param5) ? 0 : 1;
-          bj.field_s = stackIn_10_0 != 0;
+          bj.field_s = param5;
           rd.field_u = param2;
           dl.field_a = null;
           rh.field_i = param1;

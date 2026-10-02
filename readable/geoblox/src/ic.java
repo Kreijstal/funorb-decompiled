@@ -47,8 +47,6 @@ final class ic {
 
     final static void a(int param0, long param1, int param2, int param3, boolean param4, boolean param5, int param6, int param7, int param8, String param9, int param10, d param11, int param12, int param13) {
         try {
-            int stackIn_3_0 = 0;
-            int stackIn_6_0 = 0;
             RuntimeException stackIn_16_0 = null;
             StringBuilder stackIn_16_1 = null;
             RuntimeException stackIn_17_0 = null;
@@ -69,12 +67,10 @@ final class ic {
               sd.field_x = param13;
               ac.field_s = param7;
               f.field_ib = param0;
-              stackIn_3_0 = (!param4) ? 0 : 1;
-              rb.field_c = stackIn_3_0 != 0;
+              rb.field_c = param4;
               mk.field_l = param10;
               ol.field_I = param9;
-              stackIn_6_0 = (!param5) ? 0 : 1;
-              ll.field_e = stackIn_6_0 != 0;
+              ll.field_e = param5;
               qe.field_b = param6;
               if (GameplayEntity.field_D.field_n != null) {
                 try {

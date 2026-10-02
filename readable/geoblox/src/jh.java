@@ -205,12 +205,6 @@ final class jh {
 
     private final boolean a(int param0, int param1, int param2, byte[] param3, boolean param4) {
         try {
-            int stackIn_6_0 = 0;
-            int stackIn_12_0 = 0;
-            int stackIn_36_0 = 0;
-            int stackIn_42_0 = 0;
-            int stackIn_63_0 = 0;
-            int stackIn_66_0 = 0;
             RuntimeException stackIn_71_0 = null;
             StringBuilder stackIn_71_1 = null;
             RuntimeException stackIn_72_0 = null;
@@ -239,9 +233,8 @@ final class jh {
                   L0: {
                     if (param4) {
                       if (this.field_c.a((byte) 46) < (long)(6 + param2 * 6)) {
-                        stackIn_6_0 = 0;
 
-                        return stackIn_6_0 != 0;
+                        return false;
                       }
                       this.field_c.a(param0 - 228, (long)(param2 * 6));
                       this.field_c.a(dj.field_F, 6, 0, 9868);
@@ -251,9 +244,8 @@ final class jh {
                           break L0;
                         }
                       }
-                      stackIn_12_0 = 0;
 
-                      return stackIn_12_0 != 0;
+                      return false;
                     }
                     {
                       var7_int = (int)((this.field_d.a((byte) 46) + 519L) / 520L);
@@ -325,15 +317,13 @@ final class jh {
                                       break L5;
                                     }
                                   }
-                                  stackIn_42_0 = 0;
 
-                                  return stackIn_42_0 != 0;
+                                  return false;
                                 }
                               }
                             }
-                            stackIn_36_0 = 0;
 
-                            return stackIn_36_0 != 0;
+                            return false;
                           }
                         }
                         if (var10 == 0) {
@@ -391,15 +381,13 @@ final class jh {
                         continue L3;
                       }
                     }
-                    stackIn_63_0 = 1;
 
-                    return stackIn_63_0 != 0;
+                    return true;
                   }
                 } catch (java.io.IOException decompiledCaughtParameter2) {
                   decompiledCaughtException = decompiledCaughtParameter2;
                   var7 = (IOException) (Object) decompiledCaughtException;
-                  stackIn_66_0 = 0;
-                  return stackIn_66_0 != 0;
+                  return false;
                 }
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter3) {

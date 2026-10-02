@@ -3,7 +3,6 @@
  */
 final class ig {
     final static boolean a(boolean param0, int param1, byte param2, int param3) {
-        int stackIn_36_0 = 0;
         int var4;
         int var5;
         int var6;
@@ -29,8 +28,7 @@ final class ig {
           if (var4 > var5) {
             return false;
           }
-          stackIn_36_0 = (param3 >= param1) ? 0 : 1;
-          return stackIn_36_0 != 0;
+          return !(param3 >= param1);
         }
         if (hg.field_a[param3] < hg.field_a[param1]) {
           return true;

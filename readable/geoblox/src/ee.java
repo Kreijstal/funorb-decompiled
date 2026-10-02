@@ -16,8 +16,6 @@ class ee extends el implements ql {
         el var9_ref_el = null;
         int var9 = 0;
         int var10 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_10_0 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
@@ -31,8 +29,7 @@ class ee extends el implements ql {
           L0: while (var9_ref_el != null) {
             if (var9_ref_el.a(118)) {
               if (var9_ref_el.a(param0 + this.field_m, 60, this.field_v + param2, param3, param4, param5, param6)) {
-                stackIn_7_0 = 1;
-                return stackIn_7_0 != 0;
+                return true;
               }
               var9_ref_el = (el) ((Object) var8.a((byte) 109));
               continue L0;
@@ -40,8 +37,7 @@ class ee extends el implements ql {
             break;
           }
           var9 = -13 / ((-3 - param1) / 38);
-          stackIn_10_0 = 0;
-          return stackIn_10_0 != 0;
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8_ref = decompiledCaughtException;
@@ -153,9 +149,6 @@ class ee extends el implements ql {
         el var6 = null;
         int var7 = 0;
         gb var8 = null;
-        int stackIn_3_0 = 0;
-        int stackIn_13_0 = 0;
-        int stackIn_17_0 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
@@ -165,8 +158,7 @@ class ee extends el implements ql {
         var7 = Geoblox.field_C;
         try {
           if (this.field_z.isEmpty(13519)) {
-            stackIn_3_0 = 0;
-            return stackIn_3_0 != 0;
+            return false;
           }
           var8 = new gb(this.field_z);
           var4 = (el) ((Object) var8.d(1));
@@ -187,15 +179,13 @@ class ee extends el implements ql {
                     var6 = (el) ((Object) var5.c(26));
                     continue L3;
                   }
-                  stackIn_13_0 = 1;
-                  return stackIn_13_0 != 0;
+                  return true;
                 }
               }
             }
             var4 = (el) ((Object) var8.c(26));
           }
-          stackIn_17_0 = 0;
-          return stackIn_17_0 != 0;
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -323,10 +313,6 @@ class ee extends el implements ql {
         gb var5 = null;
         el var6 = null;
         int var7 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_15_0 = 0;
-        int stackIn_19_0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
@@ -336,13 +322,11 @@ class ee extends el implements ql {
         var7 = Geoblox.field_C;
         try {
           if (this.field_z.isEmpty(13519)) {
-            stackIn_3_0 = 0;
-            return stackIn_3_0 != 0;
+            return false;
           }
           var3 = new gb(this.field_z);
           if (param1 > -75) {
-            stackIn_6_0 = 1;
-            return stackIn_6_0 != 0;
+            return true;
           }
           var4 = (el) ((Object) var3.c((byte) 88));
           L0: while (var4 != null) {
@@ -359,15 +343,13 @@ class ee extends el implements ql {
                     var6 = (el) ((Object) var5.a((byte) 114));
                     continue L2;
                   }
-                  stackIn_15_0 = 1;
-                  return stackIn_15_0 != 0;
+                  return true;
                 }
               }
             }
             var4 = (el) ((Object) var3.a((byte) 109));
           }
-          stackIn_19_0 = 0;
-          return stackIn_19_0 != 0;
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -411,9 +393,6 @@ class ee extends el implements ql {
         RuntimeException var3_ref = null;
         el var4 = null;
         int var5 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_8_0 = 0;
-        int stackIn_11_0 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
@@ -424,21 +403,18 @@ class ee extends el implements ql {
         try {
           var3 = new gb(this.field_z);
           if (param0 >= -30) {
-            stackIn_3_0 = 0;
-            return stackIn_3_0 != 0;
+            return false;
           }
           var4 = (el) ((Object) var3.c((byte) 88));
           L0: while (true) {
             if (var4 == null) {
-              stackIn_11_0 = 0;
-              return stackIn_11_0 != 0;
+              return false;
             }
             if (!var4.a((byte) -123, param1)) {
               var4 = (el) ((Object) var3.a((byte) 125));
               continue L0;
             }
-            stackIn_8_0 = 1;
-            return stackIn_8_0 != 0;
+            return true;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -521,7 +497,6 @@ class ee extends el implements ql {
         int var7 = 0;
         el var8 = null;
         gb var9 = null;
-        int stackIn_10_0 = 0;
         boolean stackIn_17_0 = false;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -540,8 +515,7 @@ class ee extends el implements ql {
             if (var8.a(120)) {
               if (var8.e((byte) 54)) {
                 if (var8.a(param0, 13, param2, param3)) {
-                  stackIn_10_0 = 1;
-                  return stackIn_10_0 != 0;
+                  return true;
                 }
               }
               var8 = (el) ((Object) var9.a((byte) 110));
@@ -682,8 +656,6 @@ class ee extends el implements ql {
         el var9 = null;
         int var10 = 0;
         gb var11 = null;
-        int stackIn_9_0 = 0;
-        int stackIn_12_0 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
@@ -701,8 +673,7 @@ class ee extends el implements ql {
             if (var9.a(127)) {
               if (var9.e((byte) 54)) {
                 if (var9.a(param0, param1, param2, param3 + 0, param4, param5, param6)) {
-                  stackIn_9_0 = 1;
-                  return stackIn_9_0 != 0;
+                  return true;
                 }
               }
               var9 = (el) ((Object) var11.a((byte) 124));
@@ -710,8 +681,7 @@ class ee extends el implements ql {
             }
             break;
           }
-          stackIn_12_0 = 0;
-          return stackIn_12_0 != 0;
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;

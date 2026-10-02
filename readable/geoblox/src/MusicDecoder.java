@@ -279,7 +279,7 @@ final class MusicDecoder extends IntrusiveNode {
         int stackIn_39_1 = 0;
         boolean[] stackIn_40_0 = null;
         int stackIn_40_1 = 0;
-        int stackIn_40_2 = 0;
+        boolean stackIn_40_2 = false;
         int var1;
         int var2;
         int var3;
@@ -371,13 +371,13 @@ final class MusicDecoder extends IntrusiveNode {
           if (MusicDecoder.readBit() == 0) {
             stackIn_40_0 = (boolean[]) ((Object) stackIn_39_0);
             stackIn_40_1 = stackIn_39_1;
-            stackIn_40_2 = 0;
+            stackIn_40_2 = false;
           } else {
             stackIn_40_0 = (boolean[]) ((Object) stackIn_39_0);
             stackIn_40_1 = stackIn_39_1;
-            stackIn_40_2 = 1;
+            stackIn_40_2 = true;
           }
-          stackIn_40_0[stackIn_40_1] = stackIn_40_2 != 0;
+          stackIn_40_0[stackIn_40_1] = stackIn_40_2;
           MusicDecoder.readBits(16);
           MusicDecoder.readBits(16);
           field_D[var6] = MusicDecoder.readBits(8);
@@ -416,7 +416,7 @@ final class MusicDecoder extends IntrusiveNode {
         int[] stackIn_49_0 = null;
         Object stackIn_110_0 = null;
         Object stackIn_111_0 = null;
-        int stackIn_111_1 = 0;
+        boolean stackIn_111_1 = false;
         int var2;
         int var3;
         int var4;
@@ -741,12 +741,12 @@ final class MusicDecoder extends IntrusiveNode {
 
         if (var15 == 0) {
           stackIn_111_0 = this;
-          stackIn_111_1 = 0;
+          stackIn_111_1 = false;
         } else {
           stackIn_111_0 = this;
-          stackIn_111_1 = 1;
+          stackIn_111_1 = true;
         }
-        ((MusicDecoder) (this)).field_i = stackIn_111_1 != 0;
+        ((MusicDecoder) (this)).field_i = stackIn_111_1;
         return (float[]) (var17);
     }
 

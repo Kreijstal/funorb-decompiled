@@ -266,8 +266,8 @@ abstract class wf extends ch {
         String stackIn_100_1 = null;
         int stackIn_101_0 = 0;
         String stackIn_101_1 = null;
-        int stackIn_101_2 = 0;
-        int stackIn_104_3;
+        boolean stackIn_101_2 = false;
+        boolean stackIn_104_3;
         int stackIn_135_0 = 0;
         int var3;
         java.awt.Dimension var4;
@@ -462,11 +462,11 @@ abstract class wf extends ch {
                 if (ri.field_a) {
                   stackIn_101_0 = stackIn_100_0;
                   stackIn_101_1 = (String) ((Object) stackIn_100_1);
-                  stackIn_101_2 = 0;
+                  stackIn_101_2 = false;
                 } else {
                   stackIn_101_0 = stackIn_100_0;
                   stackIn_101_1 = (String) ((Object) stackIn_100_1);
-                  stackIn_101_2 = 1;
+                  stackIn_101_2 = true;
                 }
 
 
@@ -478,14 +478,14 @@ abstract class wf extends ch {
 
                   stackIn_101_1 = (String) ((Object) stackIn_101_1);
 
-                  stackIn_104_3 = 0;
+                  stackIn_104_3 = false;
                 } else {
 
                   stackIn_101_1 = (String) ((Object) stackIn_101_1);
 
-                  stackIn_104_3 = 1;
+                  stackIn_104_3 = true;
                 }
-                og.a(stackIn_101_0, stackIn_101_1, stackIn_101_2 != 0, stackIn_104_3 != 0);
+                og.a(stackIn_101_0, stackIn_101_1, stackIn_101_2, stackIn_104_3);
               }
               if (p.field_m) {
                 hk.e(83);
@@ -566,7 +566,7 @@ abstract class wf extends ch {
         int stackIn_3_1 = 0;
         Object stackIn_4_0 = null;
         int stackIn_4_1 = 0;
-        int stackIn_4_2 = 0;
+        boolean stackIn_4_2 = false;
         var3 = Geoblox.field_C;
         if (!fj.f(-31456)) {
           if (mi.field_C >= 10) {
@@ -588,13 +588,13 @@ abstract class wf extends ch {
           if (vl.field_n == null) {
             stackIn_4_0 = this;
             stackIn_4_1 = stackIn_3_1;
-            stackIn_4_2 = 0;
+            stackIn_4_2 = false;
           } else {
             stackIn_4_0 = this;
             stackIn_4_1 = stackIn_3_1;
-            stackIn_4_2 = 1;
+            stackIn_4_2 = true;
           }
-          discarded$56 = this.a(stackIn_4_1 != 0, stackIn_4_2 != 0, -1);
+          discarded$56 = this.a(stackIn_4_1 != 0, stackIn_4_2, -1);
         }
         if (param0 < 104) {
           this.f(80);
@@ -755,7 +755,7 @@ abstract class wf extends ch {
         Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
-        int stackIn_7_1 = 0;
+        boolean stackIn_7_1 = false;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
@@ -785,15 +785,15 @@ abstract class wf extends ch {
 
                   if (!var6.endsWith(".jagex.com")) {
                     stackIn_7_0 = this;
-                    stackIn_7_1 = 0;
+                    stackIn_7_1 = false;
                     break L1;
                   }
                   stackIn_5_0 = this;
                 }
                 stackIn_7_0 = this;
-                stackIn_7_1 = 1;
+                stackIn_7_1 = true;
               }
-              ((wf) (this)).field_v = stackIn_7_1 != 0;
+              ((wf) (this)).field_v = stackIn_7_1;
               this.field_l = Integer.parseInt(this.getParameter("gameport1"));
               this.field_w = Integer.parseInt(this.getParameter("gameport2"));
               var7 = this.getParameter("servernum");
@@ -856,7 +856,7 @@ abstract class wf extends ch {
     }
 
     final void l(int param0) {
-        int stackIn_30_0 = 0;
+        boolean stackIn_30_0 = false;
         int var2;
         vd var3;
         int var4;
@@ -913,8 +913,8 @@ abstract class wf extends ch {
                                     break L2;
                                   }
                                 }
-                                stackIn_30_0 = (var2 != 12) ? 0 : 1;
-                                var3 = bk.a(stackIn_30_0 != 0, 128);
+                                stackIn_30_0 = !(var2 != 12);
+                                var3 = bk.a(stackIn_30_0, 128);
                                 s.a(var3, 0);
                               }
                             }

@@ -69,7 +69,6 @@ final class ik {
     final static boolean linkTouchingEntities(GameplayEntity firstEntity, GameplayEntity secondEntity, boolean forceDetachSecond) {
         int secondNeighborInsertionIndex = 0;
         int firstNeighborInsertionIndex = 0;
-        int duplicateContactReturnValue = 0;
         int secondIsKindOne = 0;
         int firstIsKindOne = 0;
         int secondDetachmentReturnValue = 0;
@@ -94,8 +93,7 @@ final class ik {
         try {
           for (neighborIndexThenDetachSecond = 0; neighborIndexThenDetachSecond < secondEntity.relatedEntityCount; neighborIndexThenDetachSecond++) {
             if (secondEntity.relatedEntities[neighborIndexThenDetachSecond] == firstEntity) {
-              duplicateContactReturnValue = 0;
-              return duplicateContactReturnValue != 0;
+              return false;
             }
           }
           L1: {

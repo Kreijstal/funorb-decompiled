@@ -100,8 +100,6 @@ abstract class qf extends oe {
 
     boolean a(int param0, int param1, char param2, el param3) {
         RuntimeException var5 = null;
-        int stackIn_3_0 = 0;
-        int stackIn_10_0 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
@@ -110,8 +108,7 @@ abstract class qf extends oe {
         RuntimeException decompiledCaughtException = null;
         try {
           if (super.a(param0, param1, param2, param3)) {
-            stackIn_3_0 = 1;
-            return stackIn_3_0 != 0;
+            return true;
           }
           if (this.field_W != null) {
             if (param0 == 98) {
@@ -122,8 +119,7 @@ abstract class qf extends oe {
               return false;
             }
           }
-          stackIn_10_0 = 0;
-          return stackIn_10_0 != 0;
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;

@@ -140,7 +140,7 @@ final class hd extends sh {
         super(param0, param1, param2, param3, (dh) null, (bb) null);
         Object stackIn_3_0 = null;
         Object stackIn_4_0 = null;
-        int stackIn_4_1 = 0;
+        boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -167,12 +167,12 @@ final class hd extends sh {
 
           if (!param5) {
             stackIn_4_0 = this;
-            stackIn_4_1 = 0;
+            stackIn_4_1 = false;
           } else {
             stackIn_4_0 = this;
-            stackIn_4_1 = 1;
+            stackIn_4_1 = true;
           }
-          ((hd) (this)).field_B = stackIn_4_1 != 0;
+          ((hd) (this)).field_B = stackIn_4_1;
           this.field_K = param6;
           this.field_J = param10;
           var12_int = this.field_K - this.field_C;

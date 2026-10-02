@@ -155,8 +155,6 @@ final class ra implements Iterable {
         int var3 = 0;
         int var4 = 0;
         String var5 = null;
-        int stackIn_7_0 = 0;
-        int stackIn_10_0 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
@@ -173,15 +171,13 @@ final class ra implements Iterable {
           var3 = 1;
           L1: while (true) {
             if (param1.length() <= var3) {
-              stackIn_10_0 = 1;
-              return stackIn_10_0 != 0;
+              return true;
             }
             if (var2_int == param1.charAt(var3)) {
               var3++;
               continue L1;
             }
-            stackIn_7_0 = 0;
-            return stackIn_7_0 != 0;
+            return false;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -86,7 +86,7 @@ final class ad extends ia {
         kj stackIn_7_0;
         pc stackIn_7_1;
         int stackIn_7_2;
-        int stackIn_7_3;
+        boolean stackIn_7_3;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
@@ -117,14 +117,14 @@ final class ad extends ia {
                     stackIn_7_0 = (kj) ((Object) stackIn_6_0);
                     stackIn_7_1 = (pc) ((Object) stackIn_6_1);
                     stackIn_7_2 = stackIn_6_2;
-                    stackIn_7_3 = 0;
+                    stackIn_7_3 = false;
                   } else {
                     stackIn_7_0 = (kj) ((Object) stackIn_6_0);
                     stackIn_7_1 = (pc) ((Object) stackIn_6_1);
                     stackIn_7_2 = stackIn_6_2;
-                    stackIn_7_3 = 1;
+                    stackIn_7_3 = true;
                   }
-                  ((kj) (Object) stackIn_7_0).a(stackIn_7_1, (byte) stackIn_7_2, stackIn_7_3 != 0);
+                  ((kj) (Object) stackIn_7_0).a(stackIn_7_1, (byte) stackIn_7_2, stackIn_7_3);
                 }
                 if (param1.field_z.field_j[param1.field_D] < 0) {
                   param1.field_u.g(-1);
@@ -245,7 +245,7 @@ final class ad extends ia {
         kj stackIn_12_0;
         pc stackIn_12_1;
         int stackIn_12_2;
-        int stackIn_12_3;
+        boolean stackIn_12_3;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         RuntimeException stackIn_27_0 = null;
@@ -297,14 +297,14 @@ final class ad extends ia {
                         stackIn_12_0 = (kj) ((Object) stackIn_11_0);
                         stackIn_12_1 = (pc) ((Object) stackIn_11_1);
                         stackIn_12_2 = stackIn_11_2;
-                        stackIn_12_3 = 0;
+                        stackIn_12_3 = false;
                       } else {
                         stackIn_12_0 = (kj) ((Object) stackIn_11_0);
                         stackIn_12_1 = (pc) ((Object) stackIn_11_1);
                         stackIn_12_2 = stackIn_11_2;
-                        stackIn_12_3 = 1;
+                        stackIn_12_3 = true;
                       }
-                      ((kj) (Object) stackIn_12_0).a(stackIn_12_1, (byte) stackIn_12_2, stackIn_12_3 != 0);
+                      ((kj) (Object) stackIn_12_0).a(stackIn_12_1, (byte) stackIn_12_2, stackIn_12_3);
                       param4.field_u.c(var9, var11.i());
                     }
                     if (param4.field_z.field_j[param4.field_D] < 0) {

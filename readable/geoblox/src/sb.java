@@ -27,7 +27,7 @@ final class sb {
     }
 
     final static boolean a(int param0) {
-        int stackIn_7_0 = 0;
+        boolean stackIn_7_0 = false;
         if (param0 <= 46) {
           field_a = -60;
         }
@@ -35,14 +35,14 @@ final class sb {
           if (hj.field_a >= 10) {
             if (!hl.field_G) {
               if (!t.b(13)) {
-                stackIn_7_0 = 1;
+                stackIn_7_0 = true;
                 break L1;
               }
             }
           }
-          stackIn_7_0 = 0;
+          stackIn_7_0 = false;
         }
-        return stackIn_7_0 != 0;
+        return stackIn_7_0;
     }
 
     static {

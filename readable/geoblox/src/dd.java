@@ -74,13 +74,6 @@ abstract class dd extends ee {
 
     final static boolean a(String param0, String param1, int param2) {
         RuntimeException var3 = null;
-        int stackIn_3_0 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_13_0 = 0;
-        int stackIn_16_0 = 0;
-        int stackIn_22_0 = 0;
-        int stackIn_26_0 = 0;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         RuntimeException stackIn_30_0 = null;
@@ -92,37 +85,30 @@ abstract class dd extends ee {
         RuntimeException decompiledCaughtException = null;
         try {
           if (ak.a(param0, (byte) -67)) {
-            stackIn_3_0 = 0;
-            return stackIn_3_0 != 0;
+            return false;
           }
           if (ra.a(18725, param0)) {
-            stackIn_7_0 = 0;
-            return stackIn_7_0 != 0;
+            return false;
           }
           if (em.a(param0, param2 + 25409)) {
-            stackIn_10_0 = 0;
-            return stackIn_10_0 != 0;
+            return false;
           }
           if (param1.length() == 0) {
-            stackIn_13_0 = 1;
-            return stackIn_13_0 != 0;
+            return true;
           }
           if (ak.a(param0, param1, -75)) {
-            stackIn_16_0 = 0;
-            return stackIn_16_0 != 0;
+            return false;
           }
           if (param2 != -25321) {
             dd.i(31);
           }
           if (uk.a(8, param1, param0)) {
-            stackIn_22_0 = 0;
-            return stackIn_22_0 != 0;
+            return false;
           }
           if (!wc.a(param0, param1, (byte) -107)) {
             return true;
           }
-          stackIn_26_0 = 0;
-          return stackIn_26_0 != 0;
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;

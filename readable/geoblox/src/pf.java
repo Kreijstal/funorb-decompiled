@@ -20,7 +20,7 @@ final class pf extends ee implements ga, pl {
 
     final static boolean a(int param0, char param1) {
         pk var3;
-        int stackIn_13_0 = 0;
+        boolean stackIn_13_0 = false;
         if (param0 != -123) {
           var3 = (pk) null;
           pf.a(-108, (pk) null);
@@ -42,12 +42,12 @@ final class pf extends ee implements ga, pl {
                 break L2;
               }
             }
-            stackIn_13_0 = 0;
+            stackIn_13_0 = false;
             break L1;
           }
-          stackIn_13_0 = 1;
+          stackIn_13_0 = true;
         }
-        return stackIn_13_0 != 0;
+        return stackIn_13_0;
     }
 
     final static void f(int param0) {
@@ -216,7 +216,6 @@ final class pf extends ee implements ga, pl {
 
     final boolean a(int param0, int param1, char param2, el param3) {
         RuntimeException var5 = null;
-        int stackIn_2_0 = 0;
         boolean stackIn_5_0 = false;
         boolean stackIn_9_0 = false;
         RuntimeException stackIn_12_0 = null;
@@ -227,8 +226,7 @@ final class pf extends ee implements ga, pl {
         RuntimeException decompiledCaughtException = null;
         try {
           if (super.a(param0, param1, param2, param3)) {
-            stackIn_2_0 = 1;
-            return stackIn_2_0 != 0;
+            return true;
           }
           if (98 == param0) {
             stackIn_5_0 = this.a(7305, param3);
@@ -801,13 +799,13 @@ final class pf extends ee implements ga, pl {
         hd dupTemp$1 = null;
         Object stackIn_3_0 = null;
         Object stackIn_4_0 = null;
-        int stackIn_4_1 = 0;
+        boolean stackIn_4_1 = false;
         Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
-        int stackIn_7_1 = 0;
+        boolean stackIn_7_1 = false;
         Object stackIn_9_0 = null;
         Object stackIn_10_0 = null;
-        int stackIn_10_1 = 0;
+        boolean stackIn_10_1 = false;
         Object stackIn_18_0 = null;
         hk stackIn_18_1 = null;
         hk stackIn_18_2 = null;
@@ -836,34 +834,34 @@ final class pf extends ee implements ga, pl {
 
           if (!param3) {
             stackIn_4_0 = this;
-            stackIn_4_1 = 0;
+            stackIn_4_1 = false;
           } else {
             stackIn_4_0 = this;
-            stackIn_4_1 = 1;
+            stackIn_4_1 = true;
           }
-          ((pf) (this)).field_C = stackIn_4_1 != 0;
+          ((pf) (this)).field_C = stackIn_4_1;
           this.field_L = param1;
           stackIn_6_0 = this;
 
           if (!param2) {
             stackIn_7_0 = this;
-            stackIn_7_1 = 0;
+            stackIn_7_1 = false;
           } else {
             stackIn_7_0 = this;
-            stackIn_7_1 = 1;
+            stackIn_7_1 = true;
           }
-          ((pf) (this)).field_N = stackIn_7_1 != 0;
+          ((pf) (this)).field_N = stackIn_7_1;
           stackIn_9_0 = this;
 
           if (!param4) {
             stackIn_10_0 = this;
-            stackIn_10_1 = 0;
+            stackIn_10_1 = false;
           } else {
             stackIn_10_0 = this;
-            stackIn_10_1 = 1;
+            stackIn_10_1 = true;
           }
           L3: {
-            ((pf) (this)).field_I = stackIn_10_1 != 0;
+            ((pf) (this)).field_I = stackIn_10_1;
             if (this.field_N) {
               if (!this.field_C) {
                 if (!this.field_I) {

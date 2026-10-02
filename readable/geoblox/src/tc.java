@@ -13,9 +13,6 @@ final class tc {
         int var4 = 0;
         int var5 = 0;
         char[] var6 = null;
-        int stackIn_8_0 = 0;
-        int stackIn_18_0 = 0;
-        int stackIn_21_0 = 0;
         RuntimeException decompiledCaughtException = null;
         var5 = Geoblox.field_C;
         try {
@@ -41,15 +38,12 @@ final class tc {
             for (var3 = 0; var6.length > var3; var3++) {
               var4 = var6[var3];
               if (var4 == param1) {
-                stackIn_18_0 = 1;
-                return stackIn_18_0 != 0;
+                return true;
               }
             }
-            stackIn_21_0 = 0;
-            return stackIn_21_0 != 0;
+            return false;
           }
-          stackIn_8_0 = 1;
-          return stackIn_8_0 != 0;
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;

@@ -140,7 +140,6 @@ class f extends qf implements pl {
 
     final boolean a(int param0, int param1, char param2, el param3) {
         RuntimeException var5 = null;
-        int stackIn_2_0 = 0;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -154,8 +153,7 @@ class f extends qf implements pl {
             return stackIn_4_0;
           }
           this.h((byte) -104);
-          stackIn_2_0 = 1;
-          return stackIn_2_0 != 0;
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -681,7 +679,7 @@ class f extends qf implements pl {
     final void a(int param0, int param1, String param2) {
         Object stackIn_8_0 = null;
         Object stackIn_9_0 = null;
-        int stackIn_9_1 = 0;
+        boolean stackIn_9_1 = false;
         ni stackIn_14_0 = null;
         ni stackIn_15_0 = null;
         String stackIn_15_1 = null;
@@ -707,12 +705,12 @@ class f extends qf implements pl {
 
             if (256 != param0) {
               stackIn_9_0 = this;
-              stackIn_9_1 = 0;
+              stackIn_9_1 = false;
             } else {
               stackIn_9_0 = this;
-              stackIn_9_1 = 1;
+              stackIn_9_1 = true;
             }
-            ((f) (this)).field_ob = stackIn_9_1 != 0;
+            ((f) (this)).field_ob = stackIn_9_1;
             this.field_rb = true;
             this.field_pb.a(4210752, 8405024, (byte) -103);
             var6 = new ni((f) (this), this.field_jb, param2);

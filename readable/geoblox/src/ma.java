@@ -310,10 +310,6 @@ final class ma extends IntrusiveNode {
 
     final static boolean a(rh param0, rh param1, rh param2, int param3) {
         RuntimeException var4 = null;
-        int stackIn_4_0 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_12_0 = 0;
-        int stackIn_17_0 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
@@ -332,24 +328,20 @@ final class ma extends IntrusiveNode {
               if (param1.a(param3 + 11652)) {
                 if (param1.a("commonui", (byte) -124)) {
                   if (param3 != -11652) {
-                    stackIn_12_0 = 0;
-                    return stackIn_12_0 != 0;
+                    return false;
                   }
                   if (param0.a(0)) {
                     if (param0.a("button.gif", (byte) -125)) {
                       return true;
                     }
                   }
-                  stackIn_17_0 = 0;
-                  return stackIn_17_0 != 0;
+                  return false;
                 }
               }
-              stackIn_9_0 = 0;
-              return stackIn_9_0 != 0;
+              return false;
             }
           }
-          stackIn_4_0 = 0;
-          return stackIn_4_0 != 0;
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;

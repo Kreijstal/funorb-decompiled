@@ -539,8 +539,7 @@ final class hi extends ee implements ta, pl {
         RuntimeException var3_ref = null;
         int var4 = 0;
         lh var5 = null;
-        int stackIn_3_0 = 0;
-        int stackIn_7_0 = 0;
+        boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
@@ -550,13 +549,12 @@ final class hi extends ee implements ta, pl {
         try {
           var3 = param1.a((byte) -98);
           if (var3 == null) {
-            stackIn_3_0 = 1;
-            return stackIn_3_0 != 0;
+            return true;
           }
           var4 = 37 / ((-70 - param0) / 38);
           var5 = var3.a((byte) -105);
-          stackIn_7_0 = (var5 != kk.field_w) ? 0 : 1;
-          return stackIn_7_0 != 0;
+          stackIn_7_0 = !(var5 != kk.field_w);
+          return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -655,10 +653,8 @@ final class hi extends ee implements ta, pl {
     final boolean a(int param0, int param1, char param2, el param3) {
         boolean discarded$1 = false;
         RuntimeException var5 = null;
-        int stackIn_4_0 = 0;
         boolean stackIn_7_0 = false;
         boolean stackIn_10_0 = false;
-        int stackIn_12_0 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
@@ -670,16 +666,14 @@ final class hi extends ee implements ta, pl {
             discarded$1 = this.h((byte) -45);
           }
           if (super.a(param0, param1 + 0, param2, param3)) {
-            stackIn_4_0 = 1;
-            return stackIn_4_0 != 0;
+            return true;
           }
           if (98 == param0) {
             stackIn_7_0 = this.a(7305, param3);
             return stackIn_7_0;
           }
           if (param0 != 99) {
-            stackIn_12_0 = 0;
-            return stackIn_12_0 != 0;
+            return false;
           }
           stackIn_10_0 = this.a(param3, -96);
           return stackIn_10_0;

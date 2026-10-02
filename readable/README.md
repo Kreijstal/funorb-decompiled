@@ -1,8 +1,8 @@
 # Readable GeoBlox
 
-The current export has 1,208 guarded naming rules: 22 classes, 389 fields,
-181 methods, 217 parameters and 399 local declarations. Both 303-file corpora
-compile, preserving 152,437 bindings and 388 override relationships. Unknown
+The current export has 1,194 guarded naming rules: 22 classes, 389 fields,
+181 methods, 217 parameters and 385 local declarations. Both 303-file corpora
+compile, preserving 151,774 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
 ## One current manifest
@@ -21,17 +21,17 @@ tool bytes; `funorb-stubs.jar` is the frozen compilation dependency. The
 [reading guide](GEOBLOX-READING-GUIDE.md) explains the named gameplay flow.
 
 The raw input is `games/geoblox` at
-`30d11311c75ae8908eb7bfcb72b0b220d16fc456`. It comes from java-tools
-`2c72bb566a66adf31192ac0dd1447c2c99562b2e` and Deko
+`c311d5adc1fe86b3d917967adc56c71803bcb77d`. It comes from java-tools
+`dc899ebfaed78111257c7cd7c9c647428a8207e9` and Deko
 `a572c4dd0f0174bfcd7777be53d7ceba2f970f18`. The adapted naming tool is
 `a0bc835957148b9b1e1f8221c59b79d899d22738`; its source archive SHA-256 is
 `cb10756aa3ecb28159c9b81f2fb78bf559b4111d9ad203819458b30d0d84cf8c`.
 
 The **decompiler repository source** SHA-256 is
-`e25751f7a750281c5d588faefd06764441973b2bdd35f372524ca6e5a36aa703`:
+`ca1ac1f6748b27b17cbda6141556ee9b08faabb28cd68073f44a48c2ace8992e`:
 
 ```sh
-git archive --format=tar 2c72bb566a66adf31192ac0dd1447c2c99562b2e | sha256sum
+git archive --format=tar dc899ebfaed78111257c7cd7c9c647428a8207e9 | sha256sum
 ```
 
 This identifies tracked decompiler source and its Git archive metadata. It is
@@ -175,9 +175,9 @@ Condition inversion preserves Boolean and NaN semantics. Shared labels, catches
 and synchronized bodies retain their destinations and scopes.
 
 The previous early-exit pass removed 2,128 generated else wrappers (3,481 to 1,353) and 2,213 raw source
-lines across 208 files. The fresh javac inventory preserves all 20,931
+lines across 208 files. That pass preserved all 20,931
 declaration identities and 388 override edges. The only duplicate-name method,
-`wg.finalize`, is byte-identical. Current raw/readable comparison checks 152,437
+`wg.finalize`, is byte-identical. Current raw/readable comparison checks 151,774
 bindings. The structural update migrated 35 named local ordinals. The following
 naming pass added 38 guarded identities with the raw input unchanged, retaining all
 1,170 prior semantic names. Reference inventory changes comprise 86 merged
@@ -185,20 +185,46 @@ unit increments, one assignment moved into an initializer and one unreachable
 checked-catch sentinel. This inventory audit does not establish whole-program
 equivalence.
 
-The current emitter also folds 77 literal assignment branches into conditional
-assignments, removing 308 lines across 36 files. All 17 repeated integer Boolean
-assignments in `ld.advanceDifficulty` are compact expressions. Folding requires
+The previous pass folded 77 literal assignment branches into conditional
+assignments, removing 308 lines across 36 files. That pass made the 17 repeated integer Boolean
+assignments in `ld.advanceDifficulty` compact expressions. Folding requires
 complete single-assignment arms, the same primitive literal type and a proven
 local of that exact type. Reference values, effects, boxing and narrow constant
 assignments retain their branches. Integer carriers and shared tails remain.
 
-All 20,931 declarations and 388 override relationships retain their identities.
-All 1,208 naming rules are unchanged, with zero ordinal migrations. The 77
+That pass retained all 20,931 declarations and 388 override relationships,
+with all 1,208 naming rules unchanged and zero ordinal migrations. The 77
 removed references are duplicate assignment targets: 76 locals and one existing
 initializer carrier lifted into a generated helper field. One enclosing return
 guard in `ig.a(ZIBI)Z` also becomes shorter and is inverted by the existing
-early-exit pass. The emitter passes 14 groups and 700 native comparisons; the
+early-exit pass. Those fixtures cover 14 groups and 700 native comparisons; the
 comparator matrix above checks the actual game method in all three variants.
+
+The current pass proves every occurrence of a generated integer stack carrier
+before changing it to a primitive Boolean value. Stores must be literal 0/1 values or a conditional
+with literal bit arms, and all reads must compare with zero. It rejects unknown
+syntax, shadowing, numeric uses and ambiguous offsets. Effectful and nullable
+conditions retain snapshots at their original evaluation point. A single adjacent
+use can inline a nonthrowing primitive condition if that statement does not
+change any condition input. Integer and floating comparisons keep their original
+NaN semantics and signed minimum literals.
+
+This removes 221 generated locals and 442 lines across 75 files. Seventy locals
+retain Boolean snapshots; one existing generated initializer field changes from
+`int` to primitive `boolean`. All 17 difficulty carriers disappear, giving calls such as
+`sa.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard)`. The boundary scan's
+13 result carriers become direct true/false returns. Fourteen obsolete named
+carrier rules are removed, 61 surviving local rules migrate by method/original
+spelling, and the named helper field has an explicit I-to-Z migration. All other
+semantic names are retained. Both corpora compile with 20,710 declarations,
+151,774 compared bindings and 388 override relationships. Normalizing those
+identity migrations attributes every removed reference to one store/read pair
+for an eliminated carrier; no other normalized references change.
+
+The emitter passes 17 groups and 1,510 native comparisons, including 810 checks
+for safe inlining, snapshot order, receiver/argument failures, nullable unboxing,
+mutation, short-circuiting, loops, NaNs and signed minima. All six GeoBlox probes
+retain their native traces. Unknown names and duplicated difficulty tails remain.
 
 In the pinned java-tools checkout, run the focused checks:
 
@@ -230,8 +256,8 @@ byte-for-byte. Previous integral-sign and literal-shift cleanup remains, with
 its historical proof recorded in the raw provenance. Current source/decompiler
 identity and naming migrations live in the single manifest. `ruleChanges`
 records naming changes; `sourceChange` is recorded when input identity changes.
-This structural pass changes the input with an explicit migration, preserving
-every naming rule. All six native probe sources and their traces are pinned in
+This structural pass changes the input with explicit migrations for surviving
+identities and explicit removals for obsolete carrier names. All six native probe sources and their traces are pinned in
 the same manifest; no JSON snapshots are added.
 
 ## Update this export
@@ -252,7 +278,7 @@ the same manifest; no JSON snapshots are added.
 
 | Java source tree | SHA-256 |
 | --- | --- |
-| Raw | `db87af61f08e3fa11e6f19e45d63941889f9027d947e96dcf819b999be73d624` |
-| Readable | `d1f4825b2dc0103fce657ea60e70063b0a70fa6617f379238dfe4cacbcfe7d05` |
+| Raw | `54a54b0e7576a6af94adb3b69987428f011658f7b2513f6de27ba0dd45fdd331` |
+| Readable | `86cd82c4001ce914e72bfad23ada9d45483937f9f7b13bbf5e15baede74b4901` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

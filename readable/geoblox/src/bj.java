@@ -617,7 +617,7 @@ final class bj extends nh {
     bj(int param0, jh param1, jh param2, ji param3, uf param4, int param5, byte[] param6, int param7, boolean param8) {
         Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
-        int stackIn_7_1 = 0;
+        boolean stackIn_7_1 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
@@ -656,12 +656,12 @@ final class bj extends nh {
 
           if (!param8) {
             stackIn_7_0 = this;
-            stackIn_7_1 = 0;
+            stackIn_7_1 = false;
           } else {
             stackIn_7_0 = this;
-            stackIn_7_1 = 1;
+            stackIn_7_1 = true;
           }
-          ((bj) (this)).field_w = stackIn_7_1 != 0;
+          ((bj) (this)).field_w = stackIn_7_1;
           this.field_x = param6;
           this.field_f = param3;
           this.field_h = param7;
