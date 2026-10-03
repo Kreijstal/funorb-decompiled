@@ -7,9 +7,9 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-## Current readability (pass 93)
+## Current readability (pass 94)
 
-The export has 7,076 guarded names. All 303 sources compile, reproduce and
+The export has 7,249 guarded names. All 303 sources compile, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
 short-circuit guards for their original remainders, consuming 82 breaks and
 saving 219 lines. Menu hit-test trees preserve every strict boundary and
@@ -35,9 +35,9 @@ large bodies are:
 | `SpriteState.drawSortedHalfBlendRgbTriangle` | 388 | 11 |
 | `MusicDecoder.decodePacket` | 323 | 1 |
 
-The menu renderer, background tiler, tutorial page renderer and curtain updater
-now have names for every parameter/local. Other menu/input locals and mixed-effect
-exits remain. Larger reconstructions need
+Every GameScreen field, method, parameter and local now has a guarded name,
+with the constructor name supplied by its class rule. Base-menu/shared helpers
+and mixed-effect exits remain. Larger reconstructions need
 proofs for intermediate loops/protected regions and multiple continuations;
 control flags are not assumed constant. The 16,128-case generic comparison and
 six recorded native probes establish controlled behavior only. Complete assets/
@@ -61,12 +61,14 @@ methods have matching names in `GameScreen`, preserving the virtual contracts.
 
 `GameScreen.renderScreen(methodGuard)` checks the original `-28750` guard,
 draws the scrolling background, then selects the panel/title/overlay/tutorial
-branch by `screenId`. `panelLeft`, `panelWidth` and `panelHeight` name its main
-panel dimensions. Separate membership, unavailable, acceptance and fallback
+branch by `screenId`. `panelTop`, `panelWidth` and `panelHeight` name its main
+panel dimensions; the helper receives Y before X. Separate membership, unavailable, acceptance and fallback
 alpha carriers preserve the four `activeTicks`/200 branch results. Fullscreen
 prompt/countdown text and button left/center/width slots describe their draw calls.
-The shared `layoutYOrOverlayAlphaOrCurtainX` stores layout Y, overlay alpha and
-curtain X at different points; the name does not imply independent state.
+The shared `panelLeftOrTextYOrOverlayAlphaOrCurtainX` stores panel X, text Y,
+overlay alpha and curtain X at different points. Pass94 corrects the two
+misleading axis names from pass93 by tracing the panel helper implementation;
+these slots do not represent independent state.
 
 `drawScrollingMenuBackground(setTutorialOffsetGuard)` tiles background and
 foreground sprites with separate `backgroundScrollX/Y` and `foregroundScrollX/Y`
@@ -89,6 +91,48 @@ The `-45` pointer-guard page assignment, other guard side effects, control flags
 clip order and diagnostic strings remain unchanged. These are source-audited
 names with compile/binding/reversal checks; dynamic menu/tutorial execution,
 actual assets and browser/phone performance are not newly verified.
+
+## Screen input, press feedback and score rows
+
+`fullscreenDialogActive` selects the dialog overlay/input route.
+`fullscreenDialogButtonIndex` selects keyboard button 0/1; -1 uses pointer hit
+testing. `previousPointerX/Y` remember the previous live snapshot. Any movement
+clears the keyboard dialog selection. The acceptance overlay still expires
+through the original `activeTicks > 1500` check and fullscreen-state gates.
+`handleScreenKey`, `handleMenuKey` and `updateScreen` retain their original,
+sometimes different, click/hover rectangles and all sentinel/control paths.
+
+Menu activation starts `menuPressAnimationActive` unless
+`suppressPressAnimationFlag` is set for an unavailable tutorial slide action.
+`advanceMenuPressAnimation` decrements `menuPressOffset` to -4, clears the flag,
+then returns the offset toward zero. Selected menu rows add that displacement
+to text/panel X and subtract it from panel Y. `renderMenuItem` names the button
+geometry, action text, outgoing/current page snapshot and slider level/position.
+Its reused `itemColumnOrPressOffset` and `volumeLevelOrSliderOffset` remain
+explicit. Tutorial curtain advancement waits for zero offset and a cleared flag.
+
+`skipUnavailableTutorialItemsForward/Backward` repair selection after the
+original increment/decrement paths. `hitTestMenuItem` names its returned hit/miss
+carriers while preserving strict rectangles and the wrong-guard -109 result.
+The paired-right footer condition still compares pointer Y with 518; naming
+this suspicious expression does not change it. Music/effect volume actions
+retain their original ten-step/end-point arithmetic and music-preview stream.
+
+`renderHighscoreList` draws up to ten category rank/name/score rows, the first
+eligible current-score highlight, optional unlisted current score, and original
+loading/service/friend messages. Null arrays, signed score/absolute-value
+boundaries and source guard effects remain. `inputDerivedStateBranch` describes
+the two input-derived modulo branches at the end of `updateScreen`; their
+purpose is not inferred and their shared-state writes remain.
+
+Tutorial demonstration fields name category/variant selection, tick/drop/orbit,
+effect frame and tint arithmetic. `tutorialStarFrameOrColorIndex` is shared by
+page4's star frame and page3's color index; red/green masks and float rounding
+are preserved. `decodeNonzeroTextByte` is a static utility colocated with the
+screen class. `errorReportApplet` is shared error-report state used to obtain
+`clienterror.ws`'s code base, separate from the instance `gameApplet`.
+These are source-audited names verified through compilation, binding comparison
+and dictionary reversal, with no new dynamic menu/tutorial/asset/device coverage.
 
 ## Gameplay graphics and theme selection
 

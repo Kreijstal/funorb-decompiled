@@ -19,6 +19,17 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 138,772 bindings,
 preserving 388 override relationships.
 
+Pass 94 adds 173 guarded identities, completing names for every GameScreen field,
+nonconstructor method, parameter and local. It covers screen input, fullscreen
+state, menu press animation, tutorial demonstrations, hit tests, volume controls,
+highscores and related static utilities. It also corrects two misleading pass93
+panel-axis names after tracing the panel helper's Y-before-X signature. All
+7,074 unaffected previous complete rules and raw/decompiler/native evidence pins
+remain. The 7,249 rules apply 58,741 edits. Compilation/binding checks, full
+reproduction and dictionary reversal pass. Shared helpers, necessary block labels,
+larger gameplay reconstruction and whole-game/browser/phone acceptance remain;
+this source-audited pass adds no dynamic screen/asset/device coverage.
+
 Pass 93 adds 61 guarded menu/background/tutorial names: 11 fields, three methods,
 five parameters and 42 locals. Every parameter/local in the menu renderer,
 scrolling background renderer, tutorial page renderer and curtain updater has a

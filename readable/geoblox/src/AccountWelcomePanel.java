@@ -2657,7 +2657,7 @@ final class AccountWelcomePanel extends ee implements pl {
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "keychar_the_character_under_questionmark");
                 if (textResourceBytes != null) {
-                  GameScreen.c(105, textResourceBytes[0]);
+                  GameScreen.decodeNonzeroTextByte(105, textResourceBytes[0]);
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "rating_noratings");
                 if (null != textResourceBytes) {

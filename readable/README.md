@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 7,076 guarded naming rules: 67 classes, 882 fields,
-606 methods, 1,781 parameters and 3,740 local declarations. Both 303-file corpora
+The current export has 7,249 guarded naming rules: 67 classes, 900 fields,
+612 methods, 1,801 parameters and 3,869 local declarations. Both 303-file corpora
 compile, comparing 138,772 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -54,7 +54,52 @@ smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
 
+## GameScreen declaration names and axis correction (pass 94)
+
+This naming-only pass adds 173 guarded identities: 18 fields, six methods,
+20 parameters and 129 locals. Every field, nonconstructor method, parameter
+and local declaration in `GameScreen` now has a name. Its constructor follows
+the existing class rule. The names cover fullscreen visibility/button selection,
+pointer snapshots, menu press animation, tutorial illustration/color state,
+keyboard/pointer/volume actions, hit-test return carriers, highscore rows,
+activation/update/row rendering, static character decoding and error-report state.
+Shared classes and required block labels still contain opaque names.
+
+Reviewing the actual `ma.drawNineSlicePanel(panelTop, panelLeft, ...)` callee
+exposed two misleading names in pass93. The renderer's `var3` is Y140, now
+`panelTop`; its shared `var5` holds panel X120/130/110, text Y184/185, overlay alpha
+and curtain X, now `panelLeftOrTextYOrOverlayAlphaOrCurtainX`. These are explicit
+rule replacements with the complete previous objects recorded in `ruleChanges`.
+Every unaffected previous naming object (7,074) remains byte-for-byte identical.
+
+`fullscreenDialogButtonIndex` retains -1 for pointer hit testing and 0/1 for
+keyboard selection. Moving either pointer coordinate resets it. Menu activation
+starts `menuPressAnimationActive`; `advanceMenuPressAnimation` moves
+`menuPressOffset` to -4, clears the press flag and later returns the offset to zero.
+Tutorial curtain advancement still waits for both original press gates.
+`tutorialStarFrameOrColorIndex`, `itemColumnOrPressOffset` and
+`volumeLevelOrSliderOffset` retain their multiple roles. Color masks, float/int
+rounding, the tutorial -45 pointer sentinel, guard arithmetic and suspicious
+hit-test comparisons are not normalized or repaired by naming.
+
+The 7,249 rules apply 58,741 identifier edits. Raw/decompiler pins, all ordered
+bindings/ordinals and six native probe sources/traces remain unchanged. Both
+303-file corpora compile, preserving 138,772 bindings and 388 override
+relationships. Rule-builder/source-migration/text-resource checks pass all three
+files; full reproduction and dictionary reversal recover the pinned raw Git
+input byte-for-byte. Pass94's readable source-tree SHA-256 is
+`80e6855ee9ea47d9eac294a0569b960c3447b094bfebf329056da0ec63910a86`.
+
+The names are source-audited; this pass adds no dynamic menu, fullscreen,
+highscore, tutorial, asset or device coverage. The structural inventory remains
+21 overlapping large spans, ten with block labels. Base-menu/shared helpers,
+larger gameplay reconstruction and whole-game/browser/phone acceptance remain
+unfinished or unverified. Earlier sections describe historical counts and scope.
+
 ## Menu, background and tutorial names (pass 93)
+
+Pass94 corrects two panel-axis names from this historical pass after tracing
+the panel helper's Y-before-X signature.
 
 This naming-only pass adds 61 guarded identities: 11 fields, three methods,
 five parameters and 42 locals. Every parameter/local in `GameScreen.renderScreen`,
@@ -77,7 +122,7 @@ native probe sources/traces remain. The 7,076 rules apply 57,788 identifier edit
 Both 303-file corpora compile and compare 138,772 bindings and 388 override
 relationships. Rule-builder/source-migration/text-resource checks pass all three
 files; full reproduction and dictionary reversal recover the pinned raw Git
-input byte-for-byte. The current readable source-tree SHA-256 is
+input byte-for-byte. Pass93's readable source-tree SHA-256 is
 `d2272fdac93bd61b39c204ab0aec40c431ce1bd8db120ac5d5bf504796c9eee7`.
 
 These names are source-audited; this pass adds no dynamic menu/tutorial or asset

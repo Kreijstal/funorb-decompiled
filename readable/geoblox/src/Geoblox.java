@@ -359,7 +359,7 @@ public final class Geoblox extends wf {
         eb.a((byte) -127);
         he.a(param0 + 64);
         v.a(true);
-        GameScreen.d((byte) 28);
+        GameScreen.releaseStaticReferences((byte) 28);
         GameplaySession.i(-17199);
         ArchiveNetworkClient.d(-50);
         DiskCacheWorker.a(param0 ^ 74);

@@ -786,7 +786,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                   kh.field_d = param4;
                   qb.field_G = param4;
                   PrefixCodeDecoder.field_d = (ch) (this);
-                  GameScreen.field_x = k.c(107);
+                  GameScreen.errorReportApplet = k.c(107);
                   if (param1 != -14948) {
                     return;
                   }

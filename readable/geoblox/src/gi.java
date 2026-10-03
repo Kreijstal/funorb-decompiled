@@ -183,14 +183,14 @@ final class gi implements Iterable {
               var7 = og.a(var6, "%40", true, "@");
               var8 = og.a(var7, "%26", true, "&");
               var9 = og.a(var8, "%23", true, "#");
-              if (null == GameScreen.field_x) {
+              if (null == GameScreen.errorReportApplet) {
                 return;
               }
               stackIn_13_0 = ml.field_s;
               stackIn_13_1 = -14;
               stackIn_13_2 = null;
               stackIn_13_3 = null;
-              stackIn_13_4 = GameScreen.field_x.getCodeBase();
+              stackIn_13_4 = GameScreen.errorReportApplet.getCodeBase();
               stackIn_13_5 = new StringBuilder().append("clienterror.ws?c=").append(SocketArchiveNetworkClient.field_t).append("&u=");
               if (null == uk.field_p) {
                 stackIn_14_2 = null;
