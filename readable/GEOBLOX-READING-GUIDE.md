@@ -7,9 +7,9 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-## Current readability (pass 100)
+## Current readability (pass 101)
 
-The export has 8,030 guarded names. All 303 sources compile, reproduce and
+The export has 8,439 guarded names. All 303 sources compile, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
 short-circuit guards for their original remainders, consuming 82 breaks and
 saving 219 lines. Menu hit-test trees preserve every strict boundary and
@@ -59,6 +59,59 @@ remain intact.
 `MenuScreen` handles selection and hit testing. Its overridden activation/input
 methods have matching names in `GameScreen`, preserving the virtual contracts.
 
+## Pointer frames and drag/drop routing
+
+`UiWidget.processPointerFrame(pointerEventsAvailable, methodGuard, parentX,
+parentY)` calls `updatePointerState` first. Its boolean indicates whether pointer
+events remain available to later widgets and becomes false when a press is
+consumed. Focus clearing, focused wheel dispatch, press hit testing, release
+routing, `previousUiPointerButton` and hover text preserve their original order.
+Distinct released-drag references remain in the duplicated branches; source flags
+are not assumed constant and no continuation is shared by this naming pass.
+
+The complete `updatePointerState`, `handlePointerPress`, `handlePointerWheel`,
+`handlePointerRelease` and `getHoverText` families now have named parameters.
+`PointerHoverListener.onPointerInsideChanged` follows the hover write;
+`KeyboardFocusListener.onKeyboardFocusChanged` follows the focus write.
+`ButtonPointerListener` adds pointer press/release callbacks to activation.
+Their coordinates keep original parent/world order, rather than being converted
+into a new event object. A base press can record its button and return false;
+the hover guard skips only the base hover work, not every subclass action.
+
+`ButtonWidget.activateButton` sends `onButtonActivated` after release hit testing
+or focused key84/83. Its text-hit subclass delegates first, then emits a second
+hit-record callback. Its checkbox subclass toggles `active` before delegation.
+Button release emits `onButtonPointerReleased` before checking `releaseGuard`
+and before its own catch; callback failure therefore preserves the original
+button state and exception coverage. `enabled`, `focusable`, `focused`, `active`,
+pressed and hover fields retain distinct roles.
+
+`DraggableWidget` maps to the original `la`. Left press captures `grabOffsetX/Y`
+and publishes `activeDragWidget`; child-handled press priority and nonleft press
+behavior remain. Each drag update uses pointer minus parent coordinates and grab
+offsets, writes Y/X and then calls `DragMovementListener.onDragMoved`. When enabled,
+`easeToLayoutPosition` approaches `layoutTargetX/Y` using the original integer
+steps. Layout snapshots and Integer.MAX_VALUE sentinels remain. True hover guard
+still writes the original target-Y54 side effect after superclass work.
+
+`DropTargetWidget` maps to `fk`. It releases its child before checking the active
+drag and its own bounds. Its own `DropListener` takes priority over the dragged
+widget listener. `onDrop` receives target, dragged widget and guard; global drag
+clears after the callback returns. The root's remaining-drag fallback uses a null
+target. No finally clear, local merge or callback reordering is introduced.
+
+`wheelRotationSnapshot` is shared by UI/gameplay after `mouseWheelInput` drains
+its signed accumulator each frame. `MouseWheelInput` exposes attach/detach/drain;
+the synchronized concrete `gl` listener consumes AWT events after accumulating
+rotation and resets only on drain. The reflective factory still loads literal
+`gl`, so that concrete class and AWT callback spelling remain unchanged.
+
+Selected base/button/drag/drop/wheel bodies have all parameters and locals named.
+Other subclass internals, repeated control-flow tails and unrelated statics remain
+opaque. Compilation, binding/override comparison, reproduction, reversal and the
+existing six native probes pass without new live pointer/drag/drop/wheel or
+browser/device execution coverage.
+
 ## Widget ownership and focus
 
 `UiWidget` is the original `el` base. Its `widgetText`, `renderer`, `listener`,
@@ -102,8 +155,9 @@ failures remain; it is not a standard iterator replacement. Container predicates
 now read `IntrusiveNode.isLinked`, which checks previous-node membership rather
 than button enabled state.
 
-All selected dialog-layer/cursor instance parameters/locals are named; pointer/
-drag dispatch, some numeric widget fields and colocated utilities remain opaque.
+All selected dialog-layer/cursor instance parameters/locals are named. Other
+pointer/drag subclass internals, some numeric widget fields and colocated utilities
+remain opaque.
 The existing compile/binding/override, deterministic reproduction, reversal and
 six native probes pass without claiming new live UI or browser/device coverage.
 

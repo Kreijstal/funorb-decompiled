@@ -26,11 +26,11 @@ final class sl {
           if (param1 != 57) {
             return;
           }
-          fk.a((java.awt.Component) ((Object) param0), param1 - 56);
-          if (null == vc.field_f) {
+          DropTargetWidget.a((java.awt.Component) ((Object) param0), param1 - 56);
+          if (null == vc.mouseWheelInput) {
             return;
           }
-          vc.field_f.a(124, (java.awt.Component) ((Object) param0));
+          vc.mouseWheelInput.attachWheelListener(124, (java.awt.Component) ((Object) param0));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

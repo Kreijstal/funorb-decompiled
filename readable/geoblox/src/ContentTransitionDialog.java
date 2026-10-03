@@ -43,11 +43,11 @@ abstract class ContentTransitionDialog extends ResizableDialog {
         if (this.contentTransitionPhase == null) {
             return super.advanceDialogAnimation(-1);
         }
-        if (la.contentFadeOutPhase == this.contentTransitionPhase) {
+        if (DraggableWidget.contentFadeOutPhase == this.contentTransitionPhase) {
             nextFadeOutTick = this.contentFadeTick + 1;
             this.contentFadeTick = this.contentFadeTick + 1;
             if (nextFadeOutTick == this.fadeOutDurationTicks) {
-                this.contentTransitionPhase = la.contentResizePhase;
+                this.contentTransitionPhase = DraggableWidget.contentResizePhase;
                 this.startResizeTransition(12 + this.contentVerticalInset + this.pendingContent.widgetHeight, this.pendingContent.widgetWidth + 12, methodGuard ^ 5268, this.contentResizeDurationTicks);
                 this.contentFadeTick = 0;
                 this.contentOpacityWidget.opacity = 0;
@@ -79,7 +79,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
     }
 
     final void onResizeTransitionComplete(int methodGuard) {
-        if (la.contentFadeOutPhase == this.contentTransitionPhase) {
+        if (DraggableWidget.contentFadeOutPhase == this.contentTransitionPhase) {
             return;
         }
         if (methodGuard < -20) {
@@ -212,9 +212,9 @@ abstract class ContentTransitionDialog extends ResizableDialog {
         RuntimeException caughtContentReplacementException = null;
         try {
           this.pendingContent = content;
-          if (la.contentResizePhase != this.contentTransitionPhase) {
-            if (la.contentFadeOutPhase != this.contentTransitionPhase) {
-              this.contentTransitionPhase = la.contentFadeOutPhase;
+          if (DraggableWidget.contentResizePhase != this.contentTransitionPhase) {
+            if (DraggableWidget.contentFadeOutPhase != this.contentTransitionPhase) {
+              this.contentTransitionPhase = DraggableWidget.contentFadeOutPhase;
               this.contentFadeTick = 0;
             }
           } else {

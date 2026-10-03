@@ -11,13 +11,13 @@ class vf extends ButtonWidget {
     static boolean field_K;
     private IntrusiveDeque field_F;
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, param1, param2, param3);
-        int var5 = -this.widgetX + param2;
-        int var6 = param0 - this.widgetY;
-        fb var7 = this.a((byte) -114, var6, var5);
-        if (var7 != null && null != this.listener) {
-            ((pe) ((Object) this.listener)).a((vf) (this), var7.field_g, param1 + 28924, param3);
+    final void activateButton(int buttonY, int methodGuard, int buttonX, int pointerButton) {
+        super.activateButton(buttonY, methodGuard, buttonX, pointerButton);
+        int relativeButtonX = -this.widgetX + buttonX;
+        int relativeButtonY = buttonY - this.widgetY;
+        fb hitRecord = this.a((byte) -114, relativeButtonY, relativeButtonX);
+        if (hitRecord != null && null != this.listener) {
+            ((pe) ((Object) this.listener)).a((vf) (this), hitRecord.field_g, methodGuard + 28924, pointerButton);
         }
     }
 
@@ -87,7 +87,7 @@ class vf extends ButtonWidget {
         }
     }
 
-    String c(byte param0) {
+    String getHoverText(byte methodGuard) {
         if (null == this.field_G) {
             return null;
         }
@@ -97,13 +97,13 @@ class vf extends ButtonWidget {
         if (this.field_J.length <= this.field_G.field_g) {
             return null;
         }
-        if (param0 != 69) {
+        if (methodGuard != 69) {
             return (String) null;
         }
         return this.field_J[this.field_G.field_g];
     }
 
-    void a(boolean param0, int param1, UiWidget param2, int param3) {
+    void updatePointerState(boolean hoverGuard, int parentY, UiWidget eventContext, int parentX) {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -112,14 +112,14 @@ class vf extends ButtonWidget {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointerState(hoverGuard, parentY, eventContext, parentX);
           this.field_G = null;
           if (this.pointerInside) {
-            var5_int = -this.widgetX + PrefixCodeDecoder.pointerXSnapshot - param3;
-            var6 = -this.widgetY - param1 + ue.pointerYSnapshot;
+            var5_int = -this.widgetX + PrefixCodeDecoder.pointerXSnapshot - parentX;
+            var6 = -this.widgetY - parentY + ue.pointerYSnapshot;
             this.field_G = this.a((byte) 72, var6, var5_int);
           }
-          if (param0) {
+          if (hoverGuard) {
             spriteScratchRaster = (Sprite) null;
           }
           return;
@@ -127,13 +127,13 @@ class vf extends ButtonWidget {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_8_0 = (RuntimeException) (var5);
-          stackIn_8_1 = new StringBuilder().append("vf.H(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_8_1 = new StringBuilder().append("vf.H(").append(hoverGuard).append(',').append(parentY).append(',');
+          if (eventContext == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(parentX).append(')').toString());
         }
     }
 
@@ -197,7 +197,7 @@ class vf extends ButtonWidget {
         RuntimeException decompiledCaughtException = null;
         try {
           if (methodGuard >= -30) {
-            this.a(-15, -109, 48, 91);
+            this.activateButton(-15, -109, 48, 91);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

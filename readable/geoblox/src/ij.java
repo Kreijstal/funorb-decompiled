@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ij extends ResizableDialog implements ButtonActivationListener {
-    static int field_X;
+    static int previousUiPointerButton;
     static float spawnIntervalScale;
     private ButtonWidget field_bb;
     static String menuText;
@@ -24,7 +24,7 @@ final class ij extends ResizableDialog implements ButtonActivationListener {
         try {
           var4 = new ButtonWidget(param0, param2);
           if (param1 != 87) {
-            field_X = 121;
+            previousUiPointerButton = 121;
           }
           var4.renderer = (WidgetRenderer) ((Object) new ml());
           var5 = this.widgetHeight - 6;
@@ -206,7 +206,7 @@ final class ij extends ResizableDialog implements ButtonActivationListener {
     }
 
     static {
-        field_X = 0;
+        previousUiPointerButton = 0;
         menuText = "Menu";
         spawnIntervalScale = 0.5f;
         createPasswordTooltipText = "Enter a password for this account. Try to pick a strong password that can't easily be guessed.";

@@ -12,9 +12,9 @@ final class je extends IntrusiveNode {
         p var1 = null;
         int var2 = Geoblox.clientControlFlowFlag;
         try {
-            if ((!hj.field_c && null != vk.field_b) &&
-                (!(!vk.field_b.field_f))) {
-                ra.field_d = vk.field_b.field_j;
+            if ((!hj.field_c && null != MouseWheelInput.field_b) &&
+                (!(!MouseWheelInput.field_b.field_f))) {
+                ra.field_d = MouseWheelInput.field_b.field_j;
                 hj.field_c = true;
                 ug.field_c = ug.field_c & ~ra.field_d;
                 InstrumentPatch.field_p = InstrumentPatch.field_p | ra.field_d;

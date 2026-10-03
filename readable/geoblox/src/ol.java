@@ -73,7 +73,7 @@ final class ol extends ButtonWidget {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6) {
+    final boolean handlePointerPress(int parentY, int methodGuard, int parentX, int pointerButton, int pointerX, int pointerY, UiWidget eventContext) {
         int var13 = 0;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
@@ -89,11 +89,11 @@ final class ol extends ButtonWidget {
         int var15 = 0;
         var15 = Geoblox.clientControlFlowFlag;
         try {
-          var8_int = -89 % ((-3 - param1) / 38);
-          if (!super.a(param0, 93, param2, param3, param4, param5, param6)) {
+          var8_int = -89 % ((-3 - methodGuard) / 38);
+          if (!super.handlePointerPress(parentY, 93, parentX, pointerButton, pointerX, pointerY, eventContext)) {
             return false;
           }
-          var9 = -param2 + param4 - this.field_H;
+          var9 = -parentX + pointerX - this.field_H;
           var10 = this.widgetWidth - 2 * this.field_H;
           if (var10 < var9) {
             var9 = var10;
@@ -102,8 +102,8 @@ final class ol extends ButtonWidget {
             var9 = 0;
           }
           var9 = this.field_E * var9 / var10;
-          if (param3 != 1) {
-            if (param3 == 2) {
+          if (pointerButton != 1) {
+            if (pointerButton == 2) {
               var11 = 2147483647;
               var12 = -1;
               for (var13 = 0; var13 < this.field_F.a((byte) 48); var13++) {
@@ -126,8 +126,8 @@ final class ol extends ButtonWidget {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
           stackIn_26_0 = (RuntimeException) (var8);
-          stackIn_26_1 = new StringBuilder().append("ol.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
-          if (param6 == null) {
+          stackIn_26_1 = new StringBuilder().append("ol.D(").append(parentY).append(',').append(methodGuard).append(',').append(parentX).append(',').append(pointerButton).append(',').append(pointerX).append(',').append(pointerY).append(',');
+          if (eventContext == null) {
             stackIn_27_2 = "null";
           } else {
             stackIn_27_2 = "{...}";

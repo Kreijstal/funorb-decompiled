@@ -87,7 +87,7 @@ final class ml extends ff {
         this.field_w = param0;
         this.field_v = param2;
         this.field_x = param1;
-        this.field_y = vk.field_e;
+        this.field_y = MouseWheelInput.field_e;
     }
 
     final static String c(int param0) {

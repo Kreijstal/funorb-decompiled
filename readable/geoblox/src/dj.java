@@ -30,7 +30,7 @@ class dj extends ButtonWidget {
         }
     }
 
-    void a(boolean param0, int param1, UiWidget param2, int param3) {
+    void updatePointerState(boolean hoverGuard, int parentY, UiWidget eventContext, int parentX) {
         int var6 = 0;
         cc var7 = null;
         RuntimeException stackIn_16_0 = null;
@@ -39,12 +39,12 @@ class dj extends ButtonWidget {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointerState(hoverGuard, parentY, eventContext, parentX);
           this.j(-115);
           if (this.pressedPointerButton == 1) {
             if (this.renderer instanceof cc) {
               var7 = (cc) ((Object) this.renderer);
-              var6 = var7.a((UiWidget) (this), PrefixCodeDecoder.pointerXSnapshot, -15539, param1, ue.pointerYSnapshot, param3);
+              var6 = var7.a((UiWidget) (this), PrefixCodeDecoder.pointerXSnapshot, -15539, parentY, ue.pointerYSnapshot, parentX);
               if (-1 != var6) {
                 if ((this.field_G) &&
                     (this.field_J > var6) &&
@@ -56,7 +56,7 @@ class dj extends ButtonWidget {
             }
             this.field_O = oa.a(-12520);
           }
-          if (param0) {
+          if (hoverGuard) {
             field_I = (byte[][]) null;
           }
           return;
@@ -64,13 +64,13 @@ class dj extends ButtonWidget {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_16_0 = (RuntimeException) (var5);
-          stackIn_16_1 = new StringBuilder().append("dj.H(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_16_1 = new StringBuilder().append("dj.H(").append(hoverGuard).append(',').append(parentY).append(',');
+          if (eventContext == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(parentX).append(')').toString());
         }
     }
 
@@ -210,7 +210,7 @@ class dj extends ButtonWidget {
         field_I = (byte[][]) null;
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6) {
+    final boolean handlePointerPress(int parentY, int methodGuard, int parentX, int pointerButton, int pointerX, int pointerY, UiWidget eventContext) {
         int stackIn_5_1 = 0;
         boolean stackIn_8_1 = false;
         RuntimeException stackIn_20_0 = null;
@@ -221,9 +221,9 @@ class dj extends ButtonWidget {
         long var8_long = 0L;
         RuntimeException var8 = null;
         try {
-          if ((super.a(param0, 104, param2, param3, param4, param5, param6)) &&
+          if ((super.handlePointerPress(parentY, 104, parentX, pointerButton, pointerX, pointerY, eventContext)) &&
               (this.renderer instanceof cc)) {
-            var8_int = ((cc) ((Object) this.renderer)).a((UiWidget) (this), PrefixCodeDecoder.pointerXSnapshot, -15539, param0, ue.pointerYSnapshot, param2);
+            var8_int = ((cc) ((Object) this.renderer)).a((UiWidget) (this), PrefixCodeDecoder.pointerXSnapshot, -15539, parentY, ue.pointerYSnapshot, parentX);
             if (var8_int != -1) {
               stackIn_5_1 = var8_int;
             } else {
@@ -249,14 +249,14 @@ class dj extends ButtonWidget {
             this.field_P = var8_long;
             return true;
           }
-          var8_int = 70 / ((param1 + 3) / 38);
+          var8_int = 70 / ((methodGuard + 3) / 38);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
           stackIn_20_0 = (RuntimeException) (var8);
-          stackIn_20_1 = new StringBuilder().append("dj.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
-          if (param6 == null) {
+          stackIn_20_1 = new StringBuilder().append("dj.D(").append(parentY).append(',').append(methodGuard).append(',').append(parentX).append(',').append(pointerButton).append(',').append(pointerX).append(',').append(pointerY).append(',');
+          if (eventContext == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";

@@ -10,8 +10,8 @@ final class pi extends vf {
     static MusicScore field_S;
     private String field_N;
 
-    final String c(byte param0) {
-        if (param0 == 69) {
+    final String getHoverText(byte methodGuard) {
+        if (methodGuard == 69) {
             return null;
         }
         return (String) null;
@@ -80,12 +80,12 @@ final class pi extends vf {
         ad.field_j = 2;
     }
 
-    final void a(boolean param0, int param1, UiWidget param2, int param3) {
+    final void updatePointerState(boolean hoverGuard, int parentY, UiWidget eventContext, int parentX) {
         try {
             this.field_P = this.field_P + 1;
-            super.a(param0, param1, param2, param3);
+            super.updatePointerState(hoverGuard, parentY, eventContext, parentX);
         } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "pi.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "pi.H(" + hoverGuard + ',' + parentY + ',' + (eventContext != null ? "{...}" : "null") + ',' + parentX + ')');
         }
     }
 

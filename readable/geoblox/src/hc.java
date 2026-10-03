@@ -9,9 +9,9 @@ final class hc extends dj implements nl {
     static byte[] field_K;
     private dg field_Q;
 
-    final String c(byte param0) {
-        if (param0 != 69) {
-            this.c((byte) -87);
+    final String getHoverText(byte methodGuard) {
+        if (methodGuard != 69) {
+            this.getHoverText((byte) -87);
             if (!this.pointerInside) {
                 return null;
             }
@@ -58,15 +58,15 @@ final class hc extends dj implements nl {
         }
     }
 
-    final void a(boolean param0, int param1, UiWidget param2, int param3) {
-        if (param0) {
+    final void updatePointerState(boolean hoverGuard, int parentY, UiWidget eventContext, int parentX) {
+        if (hoverGuard) {
             return;
         }
         try {
-            super.a(param0, param1, param2, param3);
-            this.field_S = -this.widgetX + (PrefixCodeDecoder.pointerXSnapshot - param3);
+            super.updatePointerState(hoverGuard, parentY, eventContext, parentX);
+            this.field_S = -this.widgetX + (PrefixCodeDecoder.pointerXSnapshot - parentX);
         } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "hc.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "hc.H(" + hoverGuard + ',' + parentY + ',' + (eventContext != null ? "{...}" : "null") + ',' + parentX + ')');
         }
     }
 

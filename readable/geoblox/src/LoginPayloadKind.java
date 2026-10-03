@@ -30,8 +30,8 @@ final class LoginPayloadKind {
             if (fh.c(-114)) {
                 return;
             }
-            if (vk.field_b == null) {
-                vk.field_b = cf.a(4, 94);
+            if (MouseWheelInput.field_b == null) {
+                MouseWheelInput.field_b = cf.a(4, 94);
                 return;
             }
             return;
@@ -39,8 +39,8 @@ final class LoginPayloadKind {
         if (fh.c(-114)) {
             return;
         }
-        if (vk.field_b == null) {
-            vk.field_b = cf.a(4, 94);
+        if (MouseWheelInput.field_b == null) {
+            MouseWheelInput.field_b = cf.a(4, 94);
             return;
         }
     }

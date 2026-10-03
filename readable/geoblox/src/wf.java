@@ -111,7 +111,7 @@ abstract class wf extends ch {
             ic.a(this.field_s, this.field_k, 5000, param7, this.field_m, param5, va.field_a, this.field_w, 5000, this.field_n, this.field_x, MenuScreen.platformTaskDispatcher, 64, this.field_l);
             TextInputValidator.initializeArchiveServices(param7, va.field_a, this.field_l, this.field_x, -23949, MenuScreen.platformTaskDispatcher, this.field_n, this.field_s, this.field_w);
             rd.b(28);
-            vc.field_f = nd.a(param0 + 113);
+            vc.mouseWheelInput = nd.a(param0 + 113);
             sl.a(MessageDialog.gameCanvas, 57);
             lk.field_e = param2;
             ib.field_c = param4;
@@ -253,8 +253,8 @@ abstract class wf extends ch {
             (hj.field_a != 11)) {
           ck.c(1);
         }
-        if (null != vc.field_f) {
-          vc.field_i = vc.field_f.a(true);
+        if (null != vc.mouseWheelInput) {
+          vc.wheelRotationSnapshot = vc.mouseWheelInput.drainWheelRotation(true);
         }
         if (InstrumentEnvelope.b(param1 ^ 19649)) {
           var3 = 1200 * sb.a(true);
@@ -477,7 +477,7 @@ abstract class wf extends ch {
               td.advanceLogoAnimationTick((byte) 88);
             } else {
               if (hj.field_a != 0) {
-                oj.a(vc.field_i, (byte) -96);
+                oj.a(vc.wheelRotationSnapshot, (byte) -96);
               } else {
                 discarded$55 = this.a(false, false, -1);
               }
@@ -518,7 +518,7 @@ abstract class wf extends ch {
             Boolean var11 = null;
             ByteArrayBuffer var12 = null;
             var8 = Geoblox.clientControlFlowFlag;
-            var4 = gk.a(va.field_a, vc.field_i, param1, (byte) -117);
+            var4 = gk.a(va.field_a, vc.wheelRotationSnapshot, param1, (byte) -117);
             if (param2 == ~var4) {
               throw new IllegalStateException();
             }

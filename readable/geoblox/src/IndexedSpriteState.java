@@ -81,7 +81,7 @@ abstract class IndexedSpriteState {
             id.field_c = OpacityWidget.loadSpriteFrames("frame_top", "commonui", param2, 0);
             fh.field_e = OpacityWidget.loadSpriteFrames("frame_bottom", "commonui", param2, 0);
             jc.field_a = ug.loadSprite("jagex_logo_grey", param2, (byte) -78, "commonui");
-            vk.field_e = OpacityWidget.loadSpriteFrames("button", "commonui", param2, 0);
+            MouseWheelInput.field_e = OpacityWidget.loadSpriteFrames("button", "commonui", param2, 0);
             oa.field_e = oi.a((byte) -39, "validation", "commonui", param2);
             hh.field_d = (BitmapFont) ((Object) TextInputValidator.loadCoverageFont(param3, 1, "arezzo12", "commonui", param2));
             DialogLayer.sharedUiFont = (BitmapFont) ((Object) TextInputValidator.loadCoverageFont(param3, 1, "arezzo14", "commonui", param2));
@@ -130,7 +130,7 @@ abstract class IndexedSpriteState {
             var12.setAsRasterTarget();
             var18.drawUnmasked(-var9, 0);
             id.a(true);
-            vk.field_e = new Sprite[]{var16, var12, var11};
+            MouseWheelInput.field_e = new Sprite[]{var16, var12, var11};
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ha.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

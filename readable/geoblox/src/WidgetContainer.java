@@ -10,7 +10,7 @@ class WidgetContainer extends UiWidget implements ql {
     static String[] mustLogin2Texts;
     static int[] field_B;
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6) {
+    final boolean handlePointerPress(int parentY, int methodGuard, int parentX, int pointerButton, int pointerX, int pointerY, UiWidget eventContext) {
         DequeCursor var8 = null;
         RuntimeException var8_ref = null;
         UiWidget var9_ref_el = null;
@@ -26,7 +26,7 @@ class WidgetContainer extends UiWidget implements ql {
           var9_ref_el = (UiWidget) ((Object) var8.beginForward((byte) 88));
           while (var9_ref_el != null) {
             if (var9_ref_el.isLinked(118)) {
-              if (var9_ref_el.a(param0 + this.widgetY, 60, this.widgetX + param2, param3, param4, param5, param6)) {
+              if (var9_ref_el.handlePointerPress(parentY + this.widgetY, 60, this.widgetX + parentX, pointerButton, pointerX, pointerY, eventContext)) {
                 return true;
               }
               var9_ref_el = (UiWidget) ((Object) var8.nextForward((byte) 109));
@@ -34,14 +34,14 @@ class WidgetContainer extends UiWidget implements ql {
             }
             break;
           }
-          var9 = -13 / ((-3 - param1) / 38);
+          var9 = -13 / ((-3 - methodGuard) / 38);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8_ref = decompiledCaughtException;
           stackIn_13_0 = (RuntimeException) (var8_ref);
-          stackIn_13_1 = new StringBuilder().append("ee.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
-          if (param6 == null) {
+          stackIn_13_1 = new StringBuilder().append("ee.D(").append(parentY).append(',').append(methodGuard).append(',').append(parentX).append(',').append(pointerButton).append(',').append(pointerX).append(',').append(pointerY).append(',');
+          if (eventContext == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
@@ -174,7 +174,7 @@ class WidgetContainer extends UiWidget implements ql {
         }
     }
 
-    void a(boolean param0, int param1, UiWidget param2, int param3) {
+    void updatePointerState(boolean hoverGuard, int parentY, UiWidget eventContext, int parentX) {
         RuntimeException runtimeException = null;
         DequeCursor var5 = null;
         UiWidget var6 = null;
@@ -185,12 +185,12 @@ class WidgetContainer extends UiWidget implements ql {
         RuntimeException decompiledCaughtException = null;
         var7 = Geoblox.clientControlFlowFlag;
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointerState(hoverGuard, parentY, eventContext, parentX);
           var5 = new DequeCursor(this.children);
           var6 = (UiWidget) ((Object) var5.beginForward((byte) 88));
           while (var6 != null) {
             if (var6.isLinked(122)) {
-              var6.a(false, this.widgetY + param1, param2, this.widgetX + param3);
+              var6.updatePointerState(false, this.widgetY + parentY, eventContext, this.widgetX + parentX);
               var6 = (UiWidget) ((Object) var5.nextForward((byte) 123));
               continue;
             }
@@ -201,13 +201,13 @@ class WidgetContainer extends UiWidget implements ql {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
           stackIn_8_0 = (RuntimeException) (runtimeException);
-          stackIn_8_1 = new StringBuilder().append("ee.H(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_8_1 = new StringBuilder().append("ee.H(").append(hoverGuard).append(',').append(parentY).append(',');
+          if (eventContext == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(parentX).append(')').toString());
         }
     }
 
@@ -236,17 +236,17 @@ class WidgetContainer extends UiWidget implements ql {
         menuBackgroundSprite = null;
     }
 
-    final String c(byte param0) {
+    final String getHoverText(byte methodGuard) {
         DequeCursor var2;
         UiWidget var3;
         String var4;
         var2 = new DequeCursor(this.children);
-        if (param0 != 69) {
+        if (methodGuard != 69) {
           menuBackgroundSprite = (Sprite) null;
         }
         var3 = (UiWidget) ((Object) var2.beginForward((byte) 88));
         while (var3 != null) {
-          var4 = var3.c((byte) 69);
+          var4 = var3.getHoverText((byte) 69);
           if (var4 != null) {
             return var4;
           }
@@ -382,12 +382,12 @@ class WidgetContainer extends UiWidget implements ql {
     final void setWidgetBounds(int height, int width, byte methodGuard, int y, int x) {
         super.setWidgetBounds(height, width, (byte) -21, y, x);
         if (methodGuard >= -6) {
-            this.c((byte) 85);
+            this.getHoverText((byte) 85);
         }
         this.refreshChildrenLayout((byte) 123);
     }
 
-    final void a(int param0, int param1, boolean param2, UiWidget param3, int param4, int param5) {
+    final void handlePointerRelease(int parentX, int pointerX, boolean releaseGuard, UiWidget eventContext, int parentY, int pointerY) {
         DequeCursor var7 = null;
         UiWidget var8 = null;
         int var9 = 0;
@@ -402,27 +402,27 @@ class WidgetContainer extends UiWidget implements ql {
           var8 = (UiWidget) ((Object) var7.beginForward((byte) 88));
           while (var8 != null) {
             if (var8.isLinked(122)) {
-              var8.a(param0 + this.widgetX, param1, true, param3, this.widgetY + param4, param5);
+              var8.handlePointerRelease(parentX + this.widgetX, pointerX, true, eventContext, this.widgetY + parentY, pointerY);
               var8 = (UiWidget) ((Object) var7.nextForward((byte) 109));
               continue;
             }
             break;
           }
-          if (!param2) {
-            this.c((byte) -6);
+          if (!releaseGuard) {
+            this.getHoverText((byte) -6);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7_ref = decompiledCaughtException;
           stackIn_10_0 = (RuntimeException) (var7_ref);
-          stackIn_10_1 = new StringBuilder().append("ee.TA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_10_1 = new StringBuilder().append("ee.TA(").append(parentX).append(',').append(pointerX).append(',').append(releaseGuard).append(',');
+          if (eventContext == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(parentY).append(',').append(pointerY).append(')').toString());
         }
     }
 
@@ -500,7 +500,7 @@ class WidgetContainer extends UiWidget implements ql {
           var6 = (UiWidget) ((Object) var10.beginForward((byte) 88));
           if (param2 != -3188) {
             var9 = (UiWidget) null;
-            this.a(true, 26, (UiWidget) null, 23);
+            this.updatePointerState(true, 26, (UiWidget) null, 23);
           }
           while (var6 != null) {
             discarded$3 = param1.append('\n');
@@ -561,7 +561,7 @@ class WidgetContainer extends UiWidget implements ql {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
+    final boolean handlePointerWheel(int parentY, int wheelRotation, int parentX, int methodGuard, int pointerX, UiWidget eventContext, int pointerY) {
         RuntimeException var8 = null;
         UiWidget var9 = null;
         int var10 = 0;
@@ -573,14 +573,14 @@ class WidgetContainer extends UiWidget implements ql {
         var10 = Geoblox.clientControlFlowFlag;
         try {
           var11 = new DequeCursor(this.children);
-          if (param3 != -1) {
+          if (methodGuard != -1) {
             this.setWidgetBounds(-119, -117, (byte) 87, 105, 63);
           }
           var9 = (UiWidget) ((Object) var11.beginForward((byte) 88));
           while (var9 != null) {
             if (var9.isLinked(127)) {
               if ((var9.hasKeyboardFocus((byte) 54)) &&
-                  (var9.a(param0, param1, param2, param3 + 0, param4, param5, param6))) {
+                  (var9.handlePointerWheel(parentY, wheelRotation, parentX, methodGuard + 0, pointerX, eventContext, pointerY))) {
                 return true;
               }
               var9 = (UiWidget) ((Object) var11.nextForward((byte) 124));
@@ -593,13 +593,13 @@ class WidgetContainer extends UiWidget implements ql {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
           stackIn_15_0 = (RuntimeException) (var8);
-          stackIn_15_1 = new StringBuilder().append("ee.EB(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-          if (param5 == null) {
+          stackIn_15_1 = new StringBuilder().append("ee.EB(").append(parentY).append(',').append(wheelRotation).append(',').append(parentX).append(',').append(methodGuard).append(',').append(pointerX).append(',');
+          if (eventContext == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param6).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(pointerY).append(')').toString());
         }
     }
 

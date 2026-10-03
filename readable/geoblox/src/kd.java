@@ -23,13 +23,13 @@ final class kd {
             return;
         }
         if (10 == hj.field_a) {
-            la.f((byte) 24);
+            DraggableWidget.f((byte) 24);
             hj.field_a = 11;
             lb.field_a = true;
             return;
         }
         if (!ck.b(0)) {
-            la.f((byte) 24);
+            DraggableWidget.f((byte) 24);
             hj.field_a = 11;
             lb.field_a = true;
             return;

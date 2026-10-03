@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 8,030 guarded naming rules: 82 classes, 963 fields,
-733 methods, 2,093 parameters and 4,159 local declarations. Both 303-file corpora
+The current export has 8,439 guarded naming rules: 90 classes, 976 fields,
+787 methods, 2,344 parameters and 4,242 local declarations. Both 303-file corpora
 compile, comparing 138,772 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -53,6 +53,87 @@ Another 9,828 cases preserve native general-angle/extreme-scale traces. ARGB
 smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
+
+## Pointer frames, dragging, drops and wheel input (pass 101)
+
+This naming-only pass adds 409 guarded identities: eight classes, thirteen fields,
+54 methods, 251 parameters and 83 locals. `DraggableWidget`, `DropTargetWidget`,
+`PointerHoverListener`, `KeyboardFocusListener`, `ButtonPointerListener`,
+`DragMovementListener`, `DropListener` and `MouseWheelInput` map back to the
+original owners. All 8,030 prior complete rules and raw/decompiler/native pins
+remain. The 8,439 rules apply 66,223 edits, including two constructor spellings.
+
+`UiWidget.processPointerFrame` names every parameter/local. Its boolean is pointer
+event availability for later widgets; a consumed press clears it. It is not a
+handled-result flag. Update precedes this availability check; focus, wheel,
+press/release, previous-held-button write and hover-text ordering remain.
+Distinct released-drag snapshots remain in the repeated continuations. This pass
+makes those paths easier to follow but does not share tails, alter scopes or
+remove the nonzero-control-flag paths.
+
+Complete override families name 13 `updatePointerState`, eight
+`handlePointerPress`, three `handlePointerWheel`, six `handlePointerRelease`
+and eight `getHoverText` methods, with every parameter named. The base hover guard
+can skip its own hover update; subclasses still retain their other work. A base
+press can store its button while returning false; return values are not
+normalized. Release retains the listener callback before the boolean check and
+before ButtonWidget's own catch. Hover helpers preserve temporary child-state
+changes and restoration only on normal return. Six callback contracts name
+pointer-inside/focus changes, button press/release, drag movement and dropping,
+with their independently traced coordinate orders and guards.
+
+`activateButton` names its complete three-member family. The text-hit subclass
+first invokes the button callback then subtracts its widget position for the
+additional hit callback. The checkbox subclass toggles `active` before invoking
+superclass activation; failure leaves the toggle in place. `active`, `focused`,
+`enabled`, `focusable`, pressed and hover state remain separate. The rule checker
+initially rejected a missing activation override; the final export includes all
+three connected methods and preserves their original relationships.
+
+`DraggableWidget` exposes grab offsets, layout targets, optional return easing
+and child-press priority. Left-button capture writes offsets before publishing
+`activeDragWidget`; nonleft capture still has its original button/write/return
+behavior. Movement writes Y/X before its callback; optional easing uses the
+original integer steps. `DropTargetWidget` releases its child first, prefers its
+own drop listener, then the dragged widget listener. The global drag clears only
+after callback returns; root fallback uses a null drop target. Constructor work,
+null failures, sentinels and guard side effects remain.
+
+`wheelRotationSnapshot` is the frame's signed wheel rotation drained from
+`mouseWheelInput`. The synchronized concrete listener accumulates rotation and
+consumes each event; draining snapshots then resets. Its attach/detach/drain
+families and instance arguments/locals are named. The concrete class `gl` and
+AWT `mouseWheelMoved` spelling remain original because the factory uses the
+literal `Class.forName("gl")`. Wrong guards still retain their original writes,
+arithmetic or null-event failure paths. No reflective string rewrite is added.
+
+Both 303-file corpora compile, comparing 138,772 bindings and preserving 388
+overrides. Deterministic reproduction, dictionary reversal, the three focused
+test files and all six existing native/raw/readable probes pass. The readable
+source-tree SHA-256 is
+`b144aa59d1d876f323602c4accf082cc24f10d19637b888a7ee2b0a95bd0ff0f`.
+Existing fixtures retain their previous scopes; this does not add live widget/
+pointer/drag/drop/wheel/AWT, network or browser/phone execution coverage. The
+structural inventory stays 21 overlapping large spans, ten with block labels.
+Repeated continuations, opaque shared/static internals and whole-game acceptance
+remain open. Runtime control flow, allocations and the original memory/FPS
+acceptance targets are unchanged and unverified by this naming pass.
+
+Validation commands (all exit 0):
+
+```sh
+node readable/build-geoblox-rules.mjs --check
+node readable/reproduce-geoblox.mjs --update
+node readable/reproduce-geoblox.mjs --check
+node readable/tools/restore-original.mjs readable/geoblox /tmp/geoblox-pointer-names-restored
+JAVA_TOOL_OPTIONS=-XX:-UsePerfData node --test readable/tests/test-geoblox-rule-builder.mjs readable/tests/test-geoblox-migration-source.mjs readable/tests/test-geoblox-text-rules.mjs
+JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-match-scoring.mjs /home/kreijstal/git/dekobloko-decompiled-pass/.work/games/geoblox/decompile-owned/out
+JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-text-write.mjs /home/kreijstal/git/dekobloko-decompiled-pass/.work/games/geoblox/decompile-owned/out
+JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-gameplay.mjs /home/kreijstal/git/dekobloko-decompiled-pass/.work/games/geoblox/decompile-owned/out
+JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-result-sequence.mjs /home/kreijstal/git/dekobloko-decompiled-pass/.work/games/geoblox/decompile-owned/out
+JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-nine-slice.mjs /home/kreijstal/git/dekobloko-decompiled-pass/.work/games/geoblox/decompile-owned/out
+JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-result-helpers.mjs /home/kreijstal/git/dekobloko-decompiled-pass/.work/games/geoblox/decompile-owned/out
+```
 
 ## Widget ownership, focus and deque traversal (pass 100)
 

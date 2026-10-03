@@ -257,7 +257,7 @@ final class rd extends ff {
             this.field_t.a((byte) -28);
             var7.a(param0, param2, this.field_t, (rd) (this), -16566, param4);
             if (var10 != null) {
-              if (var10.field_y) {
+              if (var10.active) {
                 var11 = this.field_x[1];
                 if (var11 != null) {
                   var11.a(param0, param2, this.field_t, (rd) (this), -16566, param4);

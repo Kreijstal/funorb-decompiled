@@ -126,7 +126,7 @@ final class uh extends ac {
           }
           L4: {
             if (ac.a((byte) 37, param0)) {
-              var5.facePriorities = vk.a(var5.facePriorities, param0, 16, 8);
+              var5.facePriorities = MouseWheelInput.a(var5.facePriorities, param0, 16, 8);
               var6 = 0;
               for (var7 = 0; var5.facePriorities.length > var7; var7++) {
                 if (~(255 & var5.facePriorities[var7]) < ~var6) {

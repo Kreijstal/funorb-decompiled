@@ -142,7 +142,7 @@ final class ck {
           if (param0 != 1) {
             ck.renderLogoMeshes((byte) 8);
           }
-          oh.field_b.a(true, 127, dk.field_c, ni.field_I);
+          oh.field_b.processPointerFrame(true, 127, dk.field_c, ni.field_I);
           oh.field_b.advanceDialogAnimations(-50);
           while (hh.pollKeyboardEvent(125)) {
             oh.field_b.a((byte) -126, te.currentKeyboardEventCharacter, ki.currentKeyboardEventCode);

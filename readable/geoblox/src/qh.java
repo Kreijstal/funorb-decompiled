@@ -192,7 +192,7 @@ final class qh extends WidgetContainer implements pe, ButtonActivationListener, 
             var2 = Integer.parseInt(this.field_R.widgetText);
         } catch (NumberFormatException numberFormatException) {
         }
-        return mc.a(this.field_H.widgetText, this.field_I.widgetText, var2, (qh) (this), 0, this.field_P.field_y, this.field_M.widgetText);
+        return mc.a(this.field_H.widgetText, this.field_I.widgetText, var2, (qh) (this), 0, this.field_P.active, this.field_M.widgetText);
     }
 
     final static mb i(int param0) {
@@ -535,12 +535,12 @@ final class qh extends WidgetContainer implements pe, ButtonActivationListener, 
         }
     }
 
-    final void a(boolean param0, int param1, UiWidget param2, int param3) {
+    final void updatePointerState(boolean hoverGuard, int parentY, UiWidget eventContext, int parentX) {
         try {
-            super.a(param0, param1, param2, param3);
+            super.updatePointerState(hoverGuard, parentY, eventContext, parentX);
             this.field_D.enabled = this.f(6626);
         } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "qh.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "qh.H(" + hoverGuard + ',' + parentY + ',' + (eventContext != null ? "{...}" : "null") + ',' + parentX + ')');
         }
     }
 

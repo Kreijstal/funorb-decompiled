@@ -61,10 +61,10 @@ final class hd extends SingleChildWidget {
         }
     }
 
-    final String c(byte param0) {
+    final String getHoverText(byte methodGuard) {
         int var2 = this.child.pointerInside ? 1 : 0;
         this.child.pointerInside = this.pointerInside;
-        String var3 = this.child.c(param0);
+        String var3 = this.child.getHoverText(methodGuard);
         this.child.pointerInside = var2 != 0 ? true : false;
         return var3;
     }

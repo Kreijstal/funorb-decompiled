@@ -98,7 +98,7 @@ final class oc implements WidgetRenderer {
           ik.a(var6_int, param4.widgetHeight, var7, param4.widgetWidth, -1540604944);
           var8 = oa.field_e[1];
           if ((param4 instanceof ButtonWidget) &&
-              (((ButtonWidget) ((Object) param4)).field_y)) {
+              (((ButtonWidget) ((Object) param4)).active)) {
             var8.drawAdditive(var6_int - (-1 - (-var8.fullWidth + param4.widgetWidth >> 1)), (-var8.fullHeight + param4.widgetHeight >> 1) + 1 + var7, 256);
           }
           if (param4.hasKeyboardFocus((byte) 54)) {

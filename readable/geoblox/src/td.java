@@ -196,12 +196,12 @@ final class td extends ButtonWidget {
         }
     }
 
-    final void a(boolean param0, int param1, UiWidget param2, int param3) {
+    final void updatePointerState(boolean hoverGuard, int parentY, UiWidget eventContext, int parentX) {
         try {
             this.field_G = this.field_G + 1;
-            super.a(param0, param1, param2, param3);
+            super.updatePointerState(hoverGuard, parentY, eventContext, parentX);
         } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "td.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "td.H(" + hoverGuard + ',' + parentY + ',' + (eventContext != null ? "{...}" : "null") + ',' + parentX + ')');
         }
     }
 
@@ -252,8 +252,8 @@ final class td extends ButtonWidget {
         }
     }
 
-    final String c(byte param0) {
-        if (param0 != 69) {
+    final String getHoverText(byte methodGuard) {
+        if (methodGuard != 69) {
             return (String) null;
         }
         if (!(!this.pointerInside)) {

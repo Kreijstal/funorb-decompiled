@@ -63,16 +63,16 @@ final class nd {
         LoginPayloadKind.field_a = var7;
     }
 
-    final static vk a(int param0) {
+    final static MouseWheelInput a(int param0) {
         try {
             Throwable var1 = null;
-            vk stackIn_3_0 = null;
+            MouseWheelInput stackIn_3_0 = null;
             Throwable decompiledCaughtException = null;
             if (param0 < 2) {
               field_b = -62L;
             }
             try {
-              stackIn_3_0 = (vk) (Class.forName("gl").newInstance());
+              stackIn_3_0 = (MouseWheelInput) (Class.forName("gl").newInstance());
               return stackIn_3_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

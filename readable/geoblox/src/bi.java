@@ -92,7 +92,7 @@ final class bi implements WidgetRenderer {
           var9 = this.field_j + (param4.widgetY + param2);
           SoftwareRasterizer.drawRectangleDropShadow(var8, var9, this.field_n, this.field_h, 5592405);
           SoftwareRasterizer.fillRectangle(var8, var9, this.field_n, this.field_h, var7);
-          if (var11.field_y) {
+          if (var11.active) {
             SoftwareRasterizer.drawLine(var8, var9, this.field_n + var8, var9 + this.field_h, 1);
             SoftwareRasterizer.drawLine(var8 + this.field_n, var9, var8, this.field_h + var9, 1);
           }

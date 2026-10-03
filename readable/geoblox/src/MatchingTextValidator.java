@@ -239,9 +239,9 @@ final class MatchingTextValidator extends TextInputValidator {
         if (!(Geoblox.activeMessageDialog == null)) {
             Geoblox.activeMessageDialog.dismissDialog((byte) -104);
         }
-        vk.field_d = new hi();
+        MouseWheelInput.field_d = new hi();
         int var1 = 32 / ((param0 - 43) / 47);
-        ButtonWidget.field_C.replaceContent(vk.field_d, -106);
+        ButtonWidget.field_C.replaceContent(MouseWheelInput.field_d, -106);
     }
 
     final lh validationStateForText(int guard, String candidateText) {

@@ -391,10 +391,10 @@ final class ci {
           if (gf.field_d != null) {
             gf.field_d.field_K.a((byte) 126, args);
           }
-          if (null == vk.field_d) {
+          if (null == MouseWheelInput.field_d) {
             return;
           }
-          vk.field_d.field_D.a((byte) 126, args);
+          MouseWheelInput.field_d.field_D.a((byte) 126, args);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

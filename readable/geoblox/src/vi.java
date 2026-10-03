@@ -25,9 +25,9 @@ final class vi extends ButtonWidget {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        this.field_y = !this.field_y ? true : false;
-        super.a(param0, param1, param2, param3);
+    final void activateButton(int buttonY, int methodGuard, int buttonX, int pointerButton) {
+        this.active = !this.active ? true : false;
+        super.activateButton(buttonY, methodGuard, buttonX, pointerButton);
     }
 
     private vi(String param0, WidgetRenderer param1, WidgetListener param2) {
@@ -104,7 +104,7 @@ final class vi extends ButtonWidget {
     vi(String param0, WidgetListener param1, boolean param2) {
         this(param0, param1);
         try {
-            this.field_y = param2 ? true : false;
+            this.active = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "vi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

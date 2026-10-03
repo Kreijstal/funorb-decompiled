@@ -19,6 +19,16 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 138,772 bindings,
 preserving 388 override relationships.
 
+Pass 101 adds 409 guarded names for pointer frames, dragging/dropping, wheel input,
+button activation and complete shared event contracts. `DraggableWidget`,
+`DropTargetWidget` and readable callback interfaces expose source-traced event
+availability, coordinate order and partial callback effects. All 8,030 prior
+complete rules and raw/decompiler/native pins remain; the 8,439 rules apply 66,223
+edits. Both corpora compile and compare bindings/overrides; all six existing native
+probes, reproduction and dictionary reversal pass. The reflectively loaded wheel
+class remains `gl`. Duplicated continuations, shared opaque code, larger control-
+flow reconstruction and whole-game/browser/phone acceptance remain open.
+
 Pass 100 adds 228 guarded names for widget ownership, layout, focus and independent
 deque traversal. The preview includes readable widget/container/dialog-layer,
 button, renderer/listener and cursor classes. Complete connected bounds and focus

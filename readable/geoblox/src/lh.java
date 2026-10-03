@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lh {
-    static la field_b;
+    static DraggableWidget activeDragWidget;
     static boolean field_d;
     static String nextText;
     static String createAccountSuccessText;
@@ -89,7 +89,7 @@ final class lh {
     }
 
     public static void b(int param0) {
-        field_b = null;
+        activeDragWidget = null;
         if (param0 != -481) {
             lh.a(90);
             nextText = null;

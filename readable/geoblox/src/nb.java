@@ -16,10 +16,10 @@ final class nb {
           if (param0 != -2) {
             loadingFontsText = (String) null;
           }
-          if (null == vc.field_f) {
+          if (null == vc.mouseWheelInput) {
             return;
           }
-          vc.field_f.a((java.awt.Component) ((Object) param1), (byte) 83);
+          vc.mouseWheelInput.detachWheelListener((java.awt.Component) ((Object) param1), (byte) 83);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -57,7 +57,7 @@ public final class Geoblox extends wf {
         int geometryCanvasWidthThenFrameIndex = 0;
         int paletteVariantThenKeyboardIndex = 0;
         int clientFlagSnapshot = clientControlFlowFlag;
-        oj.a(vc.field_i, (byte) -104);
+        oj.a(vc.wheelRotationSnapshot, (byte) -104);
         if (null != OpacityWidget.field_F && null != GzipInflater.field_a && ah.field_c != null && null != cd.field_m) {
             lc.a(ca.unpackingMusicText, -2, 60.0f);
             this.renderFrame(25853);
@@ -337,7 +337,7 @@ public final class Geoblox extends wf {
         wg.c((byte) 108);
         KeyboardInputListener.a(31997);
         PointerInputListener.a(-29313);
-        vk.a(-42);
+        MouseWheelInput.a(-42);
         SoftwareRasterizer.releaseRasterStorage();
         ResourceArchive.b(30261);
         b.a(17062);
@@ -507,8 +507,8 @@ public final class Geoblox extends wf {
         vc.b((byte) -87);
         l.b(methodGuard ^ 47);
         sj.a(27);
-        la.g((byte) -113);
-        fk.f(methodGuard + 14576);
+        DraggableWidget.g((byte) -113);
+        DropTargetWidget.f(methodGuard + 14576);
         ck.a(-113);
         gi.a(methodGuard ^ 63);
         ra.a(methodGuard + 63);
@@ -641,7 +641,7 @@ public final class Geoblox extends wf {
         if (!bl.b(255)) {
           L6: {
             if (!ib.gameAssetsInitialized) {
-              oj.a(vc.field_i, (byte) -98);
+              oj.a(vc.wheelRotationSnapshot, (byte) -98);
               if ((this.pollArchiveLoading(false)) &&
                   (this.prepareGameAssets(25869))) {
                 ib.gameAssetsInitialized = true;

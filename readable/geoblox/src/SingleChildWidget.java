@@ -9,7 +9,7 @@ abstract class SingleChildWidget extends UiWidget implements ql {
     static String field_z;
     UiWidget child;
 
-    boolean a(int param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6) {
+    boolean handlePointerPress(int parentY, int methodGuard, int parentX, int pointerButton, int pointerX, int pointerY, UiWidget eventContext) {
         int var8_int = 0;
         RuntimeException var8 = null;
         boolean stackIn_4_0 = false;
@@ -18,15 +18,15 @@ abstract class SingleChildWidget extends UiWidget implements ql {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8_int = 124 % ((-3 - param1) / 38);
-          stackIn_4_0 = (this.child != null) && (this.child.a(this.widgetY + param0, -96, this.widgetX + param2, param3, param4, param5, param6));
+          var8_int = 124 % ((-3 - methodGuard) / 38);
+          stackIn_4_0 = (this.child != null) && (this.child.handlePointerPress(this.widgetY + parentY, -96, this.widgetX + parentX, pointerButton, pointerX, pointerY, eventContext));
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
           stackIn_7_0 = (RuntimeException) (var8);
-          stackIn_7_1 = new StringBuilder().append("sh.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
-          if (param6 == null) {
+          stackIn_7_1 = new StringBuilder().append("sh.D(").append(parentY).append(',').append(methodGuard).append(',').append(parentX).append(',').append(pointerButton).append(',').append(pointerX).append(',').append(pointerY).append(',');
+          if (eventContext == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
@@ -121,7 +121,7 @@ abstract class SingleChildWidget extends UiWidget implements ql {
         try {
           if (param1 != 22439) {
             var4 = (UiWidget) null;
-            this.a(73, 123, false, (UiWidget) null, 48, 45);
+            this.handlePointerRelease(73, 123, false, (UiWidget) null, 48, 45);
           }
           stackIn_7_0 = (this.child != null) && (!this.child.hasKeyboardFocus((byte) 54)) && (this.child.requestKeyboardFocus((byte) -117, param0));
           return stackIn_7_0;
@@ -277,7 +277,7 @@ abstract class SingleChildWidget extends UiWidget implements ql {
             return null;
         }
         UiWidget guardedNullWidgetSnapshot = (UiWidget) null;
-        this.a(114, -49, -37, 74, 126, 94, (UiWidget) null);
+        this.handlePointerPress(114, -49, -37, 74, 126, 94, (UiWidget) null);
         return null;
     }
 
@@ -292,23 +292,23 @@ abstract class SingleChildWidget extends UiWidget implements ql {
         }
     }
 
-    void a(int param0, int param1, boolean param2, UiWidget param3, int param4, int param5) {
-        if (!param2) {
+    void handlePointerRelease(int parentX, int pointerX, boolean releaseGuard, UiWidget eventContext, int parentY, int pointerY) {
+        if (!releaseGuard) {
             return;
         }
         try {
             if (null != this.child) {
-                this.child.a(this.widgetX + param0, param1, true, param3, param4 + this.widgetY, param5);
+                this.child.handlePointerRelease(this.widgetX + parentX, pointerX, true, eventContext, parentY + this.widgetY, pointerY);
             }
         } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "sh.TA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "sh.TA(" + parentX + ',' + pointerX + ',' + releaseGuard + ',' + (eventContext != null ? "{...}" : "null") + ',' + parentY + ',' + pointerY + ')');
         }
     }
 
     final int d(byte param0) {
         if (param0 <= 82) {
             UiWidget var3 = (UiWidget) null;
-            this.a(-119, 24, -30, 98, 113, (UiWidget) null, 116);
+            this.handlePointerWheel(-119, 24, -30, 98, 113, (UiWidget) null, 116);
         }
         return this.child != null ? this.child.d((byte) 123) : 0;
     }
@@ -358,11 +358,11 @@ abstract class SingleChildWidget extends UiWidget implements ql {
         }
     }
 
-    String c(byte param0) {
+    String getHoverText(byte methodGuard) {
         String var3 = null;
-        String var2 = super.c(param0);
+        String var2 = super.getHoverText(methodGuard);
         if (!(this.child == null)) {
-            var3 = this.child.c((byte) 69);
+            var3 = this.child.getHoverText((byte) 69);
             if (!(var3 == null)) {
                 return var3;
             }
@@ -426,12 +426,12 @@ abstract class SingleChildWidget extends UiWidget implements ql {
     final boolean hasKeyboardFocus(byte methodGuard) {
         if (methodGuard != 54) {
             UiWidget guardedNullWidgetSnapshot = (UiWidget) null;
-            this.a(false, 15, (UiWidget) null, 31);
+            this.updatePointerState(false, 15, (UiWidget) null, 31);
         }
         return this.findFocusTarget(-4863) != null ? true : false;
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
+    final boolean handlePointerWheel(int parentY, int wheelRotation, int parentX, int methodGuard, int pointerX, UiWidget eventContext, int pointerY) {
         RuntimeException var8 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
@@ -439,22 +439,22 @@ abstract class SingleChildWidget extends UiWidget implements ql {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param3 != -1) {
+          if (methodGuard != -1) {
             return true;
           }
-          stackIn_8_0 = (null != this.child) && (this.child.hasKeyboardFocus((byte) 54)) && (this.child.a(param0, param1, param2, -1, param4, param5, param6));
+          stackIn_8_0 = (null != this.child) && (this.child.hasKeyboardFocus((byte) 54)) && (this.child.handlePointerWheel(parentY, wheelRotation, parentX, -1, pointerX, eventContext, pointerY));
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
           stackIn_11_0 = (RuntimeException) (var8);
-          stackIn_11_1 = new StringBuilder().append("sh.EB(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-          if (param5 == null) {
+          stackIn_11_1 = new StringBuilder().append("sh.EB(").append(parentY).append(',').append(wheelRotation).append(',').append(parentX).append(',').append(methodGuard).append(',').append(pointerX).append(',');
+          if (eventContext == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param6).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(pointerY).append(')').toString());
         }
     }
 
@@ -485,14 +485,14 @@ abstract class SingleChildWidget extends UiWidget implements ql {
         projectedMeshVertexX = null;
     }
 
-    void a(boolean param0, int param1, UiWidget param2, int param3) {
+    void updatePointerState(boolean hoverGuard, int parentY, UiWidget eventContext, int parentX) {
         try {
-            super.a(param0, param1, param2, param3);
+            super.updatePointerState(hoverGuard, parentY, eventContext, parentX);
             if (this.child != null) {
-                this.child.a(false, this.widgetY + param1, param2, this.widgetX + param3);
+                this.child.updatePointerState(false, this.widgetY + parentY, eventContext, this.widgetX + parentX);
             }
         } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "sh.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "sh.H(" + hoverGuard + ',' + parentY + ',' + (eventContext != null ? "{...}" : "null") + ',' + parentX + ')');
         }
     }
 

@@ -342,14 +342,14 @@ final class lc {
           }
           if (var2 != 1) {
             if (var2 == 2) {
-              if (vk.field_a == 1) {
-                vk.field_a = 2;
+              if (MouseWheelInput.field_a == 1) {
+                MouseWheelInput.field_a = 2;
               }
               return;
             }
             if (var2 == 3) {
-              if (vk.field_a == 2) {
-                vk.field_a = 1;
+              if (MouseWheelInput.field_a == 2) {
+                MouseWheelInput.field_a = 1;
               }
               return;
             }
@@ -358,7 +358,7 @@ final class lc {
               Bzip2DecoderState.a((byte) -119);
               return;
             }
-            vk.field_a = 1;
+            MouseWheelInput.field_a = 1;
             var3 = var1.readNullTerminatedText((byte) 122);
             eg.field_l = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte((byte) 34);

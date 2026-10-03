@@ -4,62 +4,62 @@
 import java.util.*;
 
 class ButtonWidget extends UiWidget {
-    boolean field_y;
+    boolean active;
     static ei field_C;
     static int field_B;
-    private boolean field_z;
+    private boolean focusable;
     boolean enabled;
     static nd field_x;
     private boolean focused;
 
-    boolean a(int param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6) {
-        int var8_int = 0;
-        RuntimeException var8 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    boolean handlePointerPress(int parentY, int methodGuard, int parentX, int pointerButton, int pointerX, int pointerY, UiWidget eventContext) {
+        int guardResidue = 0;
+        RuntimeException pointerPressFailure = null;
+        RuntimeException pressFailureBeforeContext = null;
+        StringBuilder pressFailureContextBuilder = null;
+        String eventContextDescription = null;
+        RuntimeException caughtPointerPressException = null;
         try {
           if ((this.enabled) &&
-              (this.containsPointer(param4, -1, param5, param0, param2))) {
-            this.requestKeyboardFocus((byte) -116, param6);
-            this.pressedPointerButton = param3;
+              (this.containsPointer(pointerX, -1, pointerY, parentY, parentX))) {
+            this.requestKeyboardFocus((byte) -116, eventContext);
+            this.pressedPointerButton = pointerButton;
             if (null != this.listener) {
-              if (!(this.listener instanceof ti)) {
+              if (!(this.listener instanceof ButtonPointerListener)) {
                 return true;
               }
-              ((ti) ((Object) this.listener)).a(param0, -30896, param2, param4, (ButtonWidget) (this), param3, param5);
+              ((ButtonPointerListener) ((Object) this.listener)).onButtonPointerPressed(parentY, -30896, parentX, pointerX, (ButtonWidget) (this), pointerButton, pointerY);
             }
             return true;
           }
-          var8_int = 4 / ((param1 + 3) / 38);
+          guardResidue = 4 / ((methodGuard + 3) / 38);
           return false;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var8 = decompiledCaughtException;
-          stackIn_13_0 = (RuntimeException) (var8);
-          stackIn_13_1 = new StringBuilder().append("hk.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
-          if (param6 == null) {
-            stackIn_14_2 = "null";
+        } catch (java.lang.RuntimeException caughtPointerPressFailure) {
+          caughtPointerPressException = caughtPointerPressFailure;
+          pointerPressFailure = caughtPointerPressException;
+          pressFailureBeforeContext = (RuntimeException) (pointerPressFailure);
+          pressFailureContextBuilder = new StringBuilder().append("hk.D(").append(parentY).append(',').append(methodGuard).append(',').append(parentX).append(',').append(pointerButton).append(',').append(pointerX).append(',').append(pointerY).append(',');
+          if (eventContext == null) {
+            eventContextDescription = "null";
           } else {
-            stackIn_14_2 = "{...}";
+            eventContextDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) pressFailureBeforeContext), ((StringBuilder) (Object) pressFailureContextBuilder).append(eventContextDescription).append(')').toString());
         }
     }
 
-    void a(int param0, int param1, int param2, int param3) {
+    void activateButton(int buttonY, int methodGuard, int buttonX, int pointerButton) {
         if (null != this.listener) {
             if (!(this.listener instanceof ButtonActivationListener)) {
-                if (param1 != -28922) {
+                if (methodGuard != -28922) {
                     field_B = -42;
                     return;
                 }
                 return;
             }
-            ((ButtonActivationListener) ((Object) this.listener)).onButtonActivated(param2, (byte) -20, param0, param3, (ButtonWidget) (this));
+            ((ButtonActivationListener) ((Object) this.listener)).onButtonActivated(buttonX, (byte) -20, buttonY, pointerButton, (ButtonWidget) (this));
         }
-        if (param1 == -28922) {
+        if (methodGuard == -28922) {
             return;
         }
         field_B = -42;
@@ -71,65 +71,65 @@ class ButtonWidget extends UiWidget {
         field_C = null;
     }
 
-    ButtonWidget(String param0, WidgetListener param1) {
-        this(param0, hb.field_j.field_j, param1);
+    ButtonWidget(String text, WidgetListener listener) {
+        this(text, hb.field_j.field_j, listener);
     }
 
-    void a(boolean param0, int param1, UiWidget param2, int param3) {
+    void updatePointerState(boolean hoverGuard, int parentY, UiWidget eventContext, int parentX) {
         try {
-            super.a(param0, param1, param2, param3);
+            super.updatePointerState(hoverGuard, parentY, eventContext, parentX);
             if (0 != this.pressedPointerButton) {
                 if (gf.heldPointerButtonSnapshot == this.pressedPointerButton) {
                     return;
                 }
-                if ((this.containsPointer(PrefixCodeDecoder.pointerXSnapshot, -1, ue.pointerYSnapshot, param1, param3)) &&
+                if ((this.containsPointer(PrefixCodeDecoder.pointerXSnapshot, -1, ue.pointerYSnapshot, parentY, parentX)) &&
                     (!(gf.heldPointerButtonSnapshot != 0))) {
-                    this.a(ue.pointerYSnapshot - param1, -28922, PrefixCodeDecoder.pointerXSnapshot - param3, this.pressedPointerButton);
+                    this.activateButton(ue.pointerYSnapshot - parentY, -28922, PrefixCodeDecoder.pointerXSnapshot - parentX, this.pressedPointerButton);
                 }
-                this.a(param3, PrefixCodeDecoder.pointerXSnapshot, !param0 ? true : false, param2, param1, ue.pointerYSnapshot);
+                this.handlePointerRelease(parentX, PrefixCodeDecoder.pointerXSnapshot, !hoverGuard ? true : false, eventContext, parentY, ue.pointerYSnapshot);
             }
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "hk.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+        } catch (RuntimeException pointerUpdateFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) pointerUpdateFailure), "hk.H(" + hoverGuard + ',' + parentY + ',' + (eventContext != null ? "{...}" : "null") + ',' + parentX + ')');
         }
     }
 
-    ButtonWidget(String param0, WidgetRenderer param1, WidgetListener param2) {
-        super(param0, param1, param2);
+    ButtonWidget(String text, WidgetRenderer renderer, WidgetListener listener) {
+        super(text, renderer, listener);
         this.enabled = true;
-        this.field_z = true;
+        this.focusable = true;
         this.focused = false;
     }
 
-    boolean handleKeyInput(int param0, int param1, char param2, UiWidget param3) {
-        RuntimeException var5 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    boolean handleKeyInput(int keyCode, int methodGuard, char typedCharacter, UiWidget eventContext) {
+        RuntimeException keyInputFailure = null;
+        RuntimeException keyFailureBeforeContext = null;
+        StringBuilder keyFailureContextBuilder = null;
+        String eventContextDescription = null;
+        RuntimeException caughtKeyInputException = null;
         try {
           if (this.hasKeyboardFocus((byte) 54)) {
-            if (!((param0 != 84) &&
-                (param0 != 83))) {
-              this.a(-1, -28922, -1, 1);
+            if (!((keyCode != 84) &&
+                (keyCode != 83))) {
+              this.activateButton(-1, -28922, -1, 1);
               return true;
             }
           }
-          if (param1 == 13) {
+          if (methodGuard == 13) {
             return false;
           }
-          this.field_y = true;
+          this.active = true;
           return false;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_12_0 = (RuntimeException) (var5);
-          stackIn_12_1 = new StringBuilder().append("hk.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
-            stackIn_13_2 = "null";
+        } catch (java.lang.RuntimeException caughtKeyInputFailure) {
+          caughtKeyInputException = caughtKeyInputFailure;
+          keyInputFailure = caughtKeyInputException;
+          keyFailureBeforeContext = (RuntimeException) (keyInputFailure);
+          keyFailureContextBuilder = new StringBuilder().append("hk.I(").append(keyCode).append(',').append(methodGuard).append(',').append(typedCharacter).append(',');
+          if (eventContext == null) {
+            eventContextDescription = "null";
           } else {
-            stackIn_13_2 = "{...}";
+            eventContextDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) keyFailureBeforeContext), ((StringBuilder) (Object) keyFailureContextBuilder).append(eventContextDescription).append(')').toString());
         }
     }
 
@@ -143,7 +143,7 @@ class ButtonWidget extends UiWidget {
 
     final void clearKeyboardFocus(int methodGuard) {
         if (methodGuard >= -122) {
-            this.field_y = false;
+            this.active = false;
             if (!this.focused) {
                 return;
             }
@@ -151,10 +151,10 @@ class ButtonWidget extends UiWidget {
             if (null == this.listener) {
                 return;
             }
-            if (!(this.listener instanceof rk)) {
+            if (!(this.listener instanceof KeyboardFocusListener)) {
                 return;
             }
-            ((rk) ((Object) this.listener)).a(3520, (UiWidget) (this), this.focused);
+            ((KeyboardFocusListener) ((Object) this.listener)).onKeyboardFocusChanged(3520, (UiWidget) (this), this.focused);
             return;
         }
         if (!this.focused) {
@@ -164,10 +164,10 @@ class ButtonWidget extends UiWidget {
         if (null == this.listener) {
             return;
         }
-        if (!(this.listener instanceof rk)) {
+        if (!(this.listener instanceof KeyboardFocusListener)) {
             return;
         }
-        ((rk) ((Object) this.listener)).a(3520, (UiWidget) (this), this.focused);
+        ((KeyboardFocusListener) ((Object) this.listener)).onKeyboardFocusChanged(3520, (UiWidget) (this), this.focused);
     }
 
     final static void e(int param0) {
@@ -186,12 +186,12 @@ class ButtonWidget extends UiWidget {
         RuntimeException decompiledCaughtException = null;
         try {
           if ((this.enabled) &&
-              (this.field_z)) {
+              (this.focusable)) {
             focusContext.clearKeyboardFocus(-128);
             this.focused = true;
             if ((null != this.listener) &&
-                (this.listener instanceof rk)) {
-              ((rk) ((Object) this.listener)).a(3520, (UiWidget) (this), this.focused);
+                (this.listener instanceof KeyboardFocusListener)) {
+              ((KeyboardFocusListener) ((Object) this.listener)).onKeyboardFocusChanged(3520, (UiWidget) (this), this.focused);
             }
             if (methodGuard <= -30) {
               return true;
@@ -231,7 +231,7 @@ class ButtonWidget extends UiWidget {
           }
           if (this.a(param1, param3, 10095, param2)) {
             this.a(param3, param2, 34, param1);
-            if (this.field_y) {
+            if (this.active) {
               discarded$2 = param1.append(" active");
             }
             if (!this.enabled) {
@@ -260,23 +260,23 @@ class ButtonWidget extends UiWidget {
         }
     }
 
-    final void a(int param0, int param1, boolean param2, UiWidget param3, int param4, int param5) {
-        if (null != this.listener && this.listener instanceof ti) {
-            ((ti) ((Object) this.listener)).a(param4, param5, (byte) 55, (ButtonWidget) (this), param0, param1);
+    final void handlePointerRelease(int parentX, int pointerX, boolean releaseGuard, UiWidget eventContext, int parentY, int pointerY) {
+        if (null != this.listener && this.listener instanceof ButtonPointerListener) {
+            ((ButtonPointerListener) ((Object) this.listener)).onButtonPointerReleased(parentY, pointerY, (byte) 55, (ButtonWidget) (this), parentX, pointerX);
         }
-        if (!param2) {
+        if (!releaseGuard) {
             return;
         }
         try {
             this.pressedPointerButton = 0;
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "hk.TA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+        } catch (RuntimeException pointerReleaseFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) pointerReleaseFailure), "hk.TA(" + parentX + ',' + pointerX + ',' + releaseGuard + ',' + (eventContext != null ? "{...}" : "null") + ',' + parentY + ',' + pointerY + ')');
         }
     }
 
     protected ButtonWidget() {
         this.enabled = true;
-        this.field_z = true;
+        this.focusable = true;
         this.focused = false;
         this.renderer = hb.field_j.field_l;
     }

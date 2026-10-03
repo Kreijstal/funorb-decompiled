@@ -42,7 +42,7 @@ final class qb extends ButtonWidget {
         fullscreenMembersButtonText = null;
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6) {
+    final boolean handlePointerPress(int parentY, int methodGuard, int parentX, int pointerButton, int pointerX, int pointerY, UiWidget eventContext) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -54,12 +54,12 @@ final class qb extends ButtonWidget {
         int var12 = 0;
         var12 = Geoblox.clientControlFlowFlag;
         try {
-          if (!super.a(param0, -52, param2, param3, param4, param5, param6)) {
-            var8_int = 35 % ((-3 - param1) / 38);
+          if (!super.handlePointerPress(parentY, -52, parentX, pointerButton, pointerX, pointerY, eventContext)) {
+            var8_int = 35 % ((-3 - methodGuard) / 38);
             return false;
           }
-          var8_int = -this.field_E - (this.widgetX + (param2 - param4));
-          var9 = param5 - (this.widgetY + param0 + this.field_O);
+          var8_int = -this.field_E - (this.widgetX + (parentX - pointerX));
+          var9 = pointerY - (this.widgetY + parentY + this.field_O);
           if (var8_int * var8_int + var9 * var9 < this.field_K * this.field_K) {
             var10 = Math.atan2((double)var9, (double)var8_int) - TextInputValidator.field_f;
             if (!(var10 < 0.0)) {
@@ -82,8 +82,8 @@ final class qb extends ButtonWidget {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
           stackIn_19_0 = (RuntimeException) (var8);
-          stackIn_19_1 = new StringBuilder().append("qb.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
-          if (param6 == null) {
+          stackIn_19_1 = new StringBuilder().append("qb.D(").append(parentY).append(',').append(methodGuard).append(',').append(parentX).append(',').append(pointerButton).append(',').append(pointerX).append(',').append(pointerY).append(',');
+          if (eventContext == null) {
             stackIn_20_2 = "null";
           } else {
             stackIn_20_2 = "{...}";

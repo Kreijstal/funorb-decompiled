@@ -200,7 +200,7 @@ final class hl extends UiWidget {
         field_D = null;
     }
 
-    final void a(boolean param0, int param1, UiWidget param2, int param3) {
+    final void updatePointerState(boolean hoverGuard, int parentY, UiWidget eventContext, int parentX) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -213,7 +213,7 @@ final class hl extends UiWidget {
               this.field_I = this.field_I - 2 * this.field_H;
             }
           }
-          if (param0) {
+          if (hoverGuard) {
             field_G = false;
           }
           return;
@@ -221,13 +221,13 @@ final class hl extends UiWidget {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_8_0 = (RuntimeException) (var5);
-          stackIn_8_1 = new StringBuilder().append("hl.H(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_8_1 = new StringBuilder().append("hl.H(").append(hoverGuard).append(',').append(parentY).append(',');
+          if (eventContext == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(parentX).append(')').toString());
         }
     }
 

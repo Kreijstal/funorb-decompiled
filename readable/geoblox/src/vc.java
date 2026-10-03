@@ -13,8 +13,8 @@ final class vc extends dk {
     private int field_e;
     private boolean field_d;
     static int field_h;
-    static int field_i;
-    static vk field_f;
+    static int wheelRotationSnapshot;
+    static MouseWheelInput mouseWheelInput;
 
     final static void compactDepthBucketFaceOrder(int guard) {
         int depthBucketIndex = 0;
@@ -343,7 +343,7 @@ final class vc extends dk {
     public static void b(byte param0) {
         field_g = null;
         menuForegroundSprite = null;
-        field_f = null;
+        mouseWheelInput = null;
         int var1 = 78 % ((-20 - param0) / 33);
     }
 

@@ -121,7 +121,7 @@ final class DequeCursor {
         RuntimeException decompiledCaughtException = null;
         var2 = Geoblox.clientControlFlowFlag;
         try {
-          kd.field_e.a(true, 127, ec.field_d, mj.field_b);
+          kd.field_e.processPointerFrame(true, 127, ec.field_d, mj.field_b);
           kd.field_e.advanceDialogAnimations(-65);
           while (hh.pollKeyboardEvent(77)) {
             kd.field_e.a((byte) 105, te.currentKeyboardEventCharacter, ki.currentKeyboardEventCode);

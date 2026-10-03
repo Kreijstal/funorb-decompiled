@@ -107,7 +107,7 @@ final class vd {
         if (SpriteState.field_n == this.field_h) {
           return 1;
         }
-        if ((vk.field_a == 2) &&
+        if ((MouseWheelInput.field_a == 2) &&
             (v.a(this.field_i, (byte) 89))) {
           return 1;
         }
