@@ -26,7 +26,7 @@ final class ca extends IntrusiveNode {
               (0 != param0.length())) {
             var2_int = param0.indexOf('@');
             if (var2_int == -1) {
-              stackIn_7_0 = pj.field_f;
+              stackIn_7_0 = InstrumentNoteMask.field_f;
               return stackIn_7_0;
             }
             var3 = param0.substring(0, var2_int);

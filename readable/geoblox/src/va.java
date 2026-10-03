@@ -92,11 +92,11 @@ final class va {
               }
               sourceIndexBeforeIncrement = depthBucketReadIndex;
               depthBucketReadIndex++;
-              faceIndexScratch = pj.meshFaceOrder[sourceIndexBeforeIncrement];
+              faceIndexScratch = InstrumentNoteMask.meshFaceOrder[sourceIndexBeforeIncrement];
               facePriority = facePriorities[faceIndexScratch];
               destinationIndexBeforeIncrement = priorityWriteOffsets[facePriority];
               priorityWriteOffsets[facePriority] = destinationIndexBeforeIncrement + 1;
-              pj.meshFaceOrder[destinationIndexBeforeIncrement] = faceIndexScratch;
+              InstrumentNoteMask.meshFaceOrder[destinationIndexBeforeIncrement] = faceIndexScratch;
               continue;
             }
           }

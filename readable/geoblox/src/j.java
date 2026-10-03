@@ -7,7 +7,7 @@ final class j extends mi {
     static int field_gb;
     int field_kb;
     static String field_lb;
-    static rf field_ib;
+    static MusicScore field_ib;
     static String quitWarningText;
 
     final static void e(int param0) {

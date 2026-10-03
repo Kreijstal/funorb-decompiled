@@ -371,7 +371,7 @@ public final class Geoblox extends wf {
         IntrusiveDeque.f(51);
         IntrusiveNode.b((byte) -128);
         fi.a(param0 - 63);
-        jb.b();
+        MidiTrackReader.clearStatusDataByteCounts();
         ad.c(-1);
         je.a((byte) 54);
         AudioOutput.h();
@@ -424,7 +424,7 @@ public final class Geoblox extends wf {
         LimitedRandomAccessFile.b((byte) 74);
         bh.a((byte) 81);
         ec.a(true);
-        pj.b(false);
+        InstrumentNoteMask.b(false);
         vl.b(true);
         t.a(17348);
         kh.a(104);

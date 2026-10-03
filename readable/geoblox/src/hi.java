@@ -207,7 +207,7 @@ final class hi extends ee implements ta, pl {
             specularResponses[normalOrFaceQueueIndex] = specularResponseOrVertexA;
           }
           for (normalOrFaceQueueIndex = 0; normalOrFaceQueueIndex < ch.queuedMeshFaceCount; normalOrFaceQueueIndex++) {
-            diffuseResponseOrFaceIndex = pj.meshFaceOrder[normalOrFaceQueueIndex];
+            diffuseResponseOrFaceIndex = InstrumentNoteMask.meshFaceOrder[normalOrFaceQueueIndex];
             specularResponseOrVertexA = mesh.faceVertexA[diffuseResponseOrFaceIndex];
             faceVertexB = mesh.faceVertexB[diffuseResponseOrFaceIndex];
             faceVertexC = mesh.faceVertexC[diffuseResponseOrFaceIndex];

@@ -8,7 +8,7 @@ final class GzipInflater {
     static ResourceArchive field_a;
     static int field_k;
     private static ck field_h;
-    static rf field_e;
+    static MusicScore field_e;
     static IndexedSprite sunBackgroundSprite;
     static int field_f;
     private java.util.zip.Inflater inflater;
@@ -90,10 +90,10 @@ final class GzipInflater {
 
     final static ck[] a(int param0) {
         if (param0 == -1) {
-            return new ck[]{pj.field_g, w.field_d, ab.field_c, wg.field_d, lj.field_e, s.field_E, cd.field_i, SpriteState.field_t, qj.field_a, fk.field_B, IntKeyLookup.field_d, bd.field_c, va.field_f, field_h};
+            return new ck[]{InstrumentNoteMask.field_g, w.field_d, ab.field_c, wg.field_d, lj.field_e, s.field_E, cd.field_i, SpriteState.field_t, qj.field_a, fk.field_B, IntKeyLookup.field_d, bd.field_c, va.field_f, field_h};
         }
         avatarTintGreenDelta = -1.1302366256713867f;
-        return new ck[]{pj.field_g, w.field_d, ab.field_c, wg.field_d, lj.field_e, s.field_E, cd.field_i, SpriteState.field_t, qj.field_a, fk.field_B, IntKeyLookup.field_d, bd.field_c, va.field_f, field_h};
+        return new ck[]{InstrumentNoteMask.field_g, w.field_d, ab.field_c, wg.field_d, lj.field_e, s.field_E, cd.field_i, SpriteState.field_t, qj.field_a, fk.field_B, IntKeyLookup.field_d, bd.field_c, va.field_f, field_h};
     }
 
     public GzipInflater() {
@@ -127,7 +127,7 @@ final class GzipInflater {
           }
           var2_int = param0.length();
           if (var2_int == 0) {
-            stackIn_6_0 = pj.field_f;
+            stackIn_6_0 = InstrumentNoteMask.field_f;
             return stackIn_6_0;
           }
           if (255 < var2_int) {
@@ -136,7 +136,7 @@ final class GzipInflater {
           }
           var3 = uj.a('.', true, param0);
           if (var3.length < 2) {
-            stackIn_13_0 = pj.field_f;
+            stackIn_13_0 = InstrumentNoteMask.field_f;
             return stackIn_13_0;
           }
           var4 = var3;

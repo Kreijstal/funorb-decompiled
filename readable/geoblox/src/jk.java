@@ -102,7 +102,7 @@ final class jk {
             jk.a(118);
           }
           if (0 == var2_int) {
-            stackIn_5_0 = pj.field_f;
+            stackIn_5_0 = InstrumentNoteMask.field_f;
             return stackIn_5_0;
           }
           if (var2_int > 63) {

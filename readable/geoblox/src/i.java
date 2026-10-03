@@ -193,7 +193,7 @@ final class i {
                         bucketIndexOrFaceOrderIndex = (edgeBYOrDepthBucketIndex << 4) + edgeCYOrBucketOccupancy;
                       }
                       faceOrderWriteIndex = bucketIndexOrFaceOrderIndex;
-                      pj.meshFaceOrder[faceOrderWriteIndex] = faceIndexOrPriorityPrefix;
+                      InstrumentNoteMask.meshFaceOrder[faceOrderWriteIndex] = faceIndexOrPriorityPrefix;
                       ch.meshFaceCountsByDepthBucket[edgeBYOrDepthBucketIndex] = 1 + edgeCYOrBucketOccupancy;
                       if ((0 < mesh.facePriorityCount) &&
                           (null != mesh.facePriorities)) {
@@ -363,7 +363,7 @@ final class i {
                         bucketIndexOrFaceOrderIndex = (edgeBYOrDepthBucketIndex << 4) + edgeCYOrBucketOccupancy;
                       }
                       faceOrderWriteIndex = bucketIndexOrFaceOrderIndex;
-                      pj.meshFaceOrder[faceOrderWriteIndex] = faceIndexOrPriorityPrefix;
+                      InstrumentNoteMask.meshFaceOrder[faceOrderWriteIndex] = faceIndexOrPriorityPrefix;
                       ch.meshFaceCountsByDepthBucket[edgeBYOrDepthBucketIndex] = 1 + edgeCYOrBucketOccupancy;
                       if ((0 < mesh.facePriorityCount) &&
                           (null != mesh.facePriorities)) {

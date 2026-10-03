@@ -4,7 +4,7 @@
 final class kj extends ia {
     private pc[][] field_D;
     private int[] field_p;
-    private jb field_C;
+    private MidiTrackReader field_C;
     private int[] field_z;
     int[] field_u;
     static boolean[] heldInternalKeys;
@@ -36,7 +36,7 @@ final class kj extends ia {
     private long field_x;
     private long field_A;
     private boolean field_P;
-    private rf field_l;
+    private MusicScore field_l;
     private int field_U;
 
     final synchronized void a(int[] param0, int param1, int param2) {
@@ -50,8 +50,8 @@ final class kj extends ia {
         RuntimeException var4 = null;
         try {
           L0: {
-            if (this.field_C.f()) {
-              var4_int = this.field_C.field_d * this.field_T / AudioOutput.sampleRateHz;
+            if (this.field_C.isLoaded()) {
+              var4_int = this.field_C.tickDivision * this.field_T / AudioOutput.sampleRateHz;
               while (true) {
                 var5 = (long)param2 * (long)var4_int + this.field_x;
                 if (this.field_A - var5 >= 0L) {
@@ -64,7 +64,7 @@ final class kj extends ia {
                 param2 = param2 - var7;
                 param1 = param1 + var7;
                 this.a((byte) 65);
-                if (!this.field_C.f()) {
+                if (!this.field_C.isLoaded()) {
                   break L0;
                 }
                 continue;
@@ -407,11 +407,11 @@ final class kj extends ia {
             }
         }
         if (param1 != 67) {
-            this.field_l = (rf) null;
+            this.field_l = (MusicScore) null;
         }
     }
 
-    final synchronized boolean a(ci param0, int param1, int param2, rf param3, ResourceArchive param4) {
+    final synchronized boolean a(ci param0, int param1, int param2, MusicScore param3, ResourceArchive param4) {
         int stackIn_17_0 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -424,19 +424,19 @@ final class kj extends ia {
         int var6_int = 0;
         RuntimeException var6 = null;
         Object var7 = null;
-        pj var8 = null;
+        InstrumentNoteMask var8 = null;
         int var9 = 0;
         vl var10 = null;
         int var11 = 0;
         var11 = Geoblox.field_C;
         try {
-          param3.b();
+          param3.collectInstrumentNotes();
           var6_int = 1;
           var7 = null;
           if (~param1 < param2) {
             var7 = new int[]{param1};
           }
-          var8 = (pj) ((Object) param3.field_g.a((byte) 125));
+          var8 = (InstrumentNoteMask) ((Object) param3.instrumentNoteMasks.a((byte) 125));
           while (var8 != null) {
             var9 = (int)var8.field_a;
             var10 = (vl) ((Object) this.field_q.a((long)var9, (byte) -91));
@@ -449,13 +449,13 @@ final class kj extends ia {
               }
             }
             if ((var10 != null) &&
-                (!var10.a((int[]) (var7), var8.field_h, param2 + 36, param0))) {
+                (!var10.a((int[]) (var7), var8.notesUsed, param2 + 36, param0))) {
               var6_int = 0;
             }
-            var8 = (pj) ((Object) param3.field_g.b(param2 - 100));
+            var8 = (InstrumentNoteMask) ((Object) param3.instrumentNoteMasks.b(param2 - 100));
           }
           if (var6_int != 0) {
-            param3.a();
+            param3.clearInstrumentNotes();
           }
           stackIn_17_0 = var6_int;
           return stackIn_17_0 != 0;
@@ -835,26 +835,26 @@ final class kj extends ia {
                 (this.field_U < var4)) {
               this.field_k = this.field_U;
               this.field_t = -1;
-              this.field_A = this.field_C.d(this.field_k);
+              this.field_A = this.field_C.getTickTime(this.field_k);
             }
             return;
           }
           while (true) {
             L4: {
-              if (this.field_C.field_a[var2] == var4) {
-                this.field_C.a(var2);
-                var7 = this.field_C.e(var2);
+              if (this.field_C.trackTicks[var2] == var4) {
+                this.field_C.seekTrack(var2);
+                var7 = this.field_C.readTrackEvent(var2);
                 if (1 != var7) {
                   if ((128 & var7) != 0) {
                     this.c(var7, (byte) 38);
                   }
-                  this.field_C.f(var2);
-                  this.field_C.b(var2);
+                  this.field_C.readTrackDelta(var2);
+                  this.field_C.saveTrackPosition(var2);
                   continue;
                 }
-                this.field_C.d();
-                this.field_C.b(var2);
-                if (this.field_C.e()) {
+                this.field_C.markCurrentTrackEnded();
+                this.field_C.saveTrackPosition(var2);
+                if (this.field_C.areAllTracksEnded()) {
                   if (this.field_l != null) {
                     this.a(this.field_B, this.field_l, -1706);
                     this.a((byte) -32);
@@ -862,24 +862,24 @@ final class kj extends ia {
                   }
                   if ((this.field_B) &&
                       (var4 != 0)) {
-                    this.field_C.a(var5);
+                    this.field_C.restartTracks(var5);
                     break L4;
                   }
                   this.a(true, 2097151);
-                  this.field_C.a();
+                  this.field_C.unload();
                   return;
                 }
               }
             }
-            var2 = this.field_C.c();
-            var4 = this.field_C.field_a[var2];
-            var5 = this.field_C.d(var4);
+            var2 = this.field_C.selectEarliestTrack();
+            var4 = this.field_C.trackTicks[var2];
+            var5 = this.field_C.getTickTime(var4);
             continue L1;
           }
         }
     }
 
-    final synchronized void a(boolean param0, rf param1, int param2) {
+    final synchronized void a(boolean param0, MusicScore param1, int param2) {
         try {
             if (param2 != -1706) {
                 this.field_t = -24;
@@ -1018,8 +1018,8 @@ final class kj extends ia {
         long var3;
         int var5;
         L0: {
-          if (this.field_C.f()) {
-            var2 = this.field_T * this.field_C.field_d / AudioOutput.sampleRateHz;
+          if (this.field_C.isLoaded()) {
+            var2 = this.field_T * this.field_C.tickDivision / AudioOutput.sampleRateHz;
             while (true) {
               var3 = this.field_x + (long)param0 * (long)var2;
               if (-var3 + this.field_A >= 0L) {
@@ -1031,7 +1031,7 @@ final class kj extends ia {
               param0 = param0 - var5;
               this.field_I.b(var5);
               this.a((byte) -42);
-              if (this.field_C.f()) {
+              if (this.field_C.isLoaded()) {
                 continue;
               }
               break L0;
@@ -1078,7 +1078,7 @@ final class kj extends ia {
     }
 
     private final synchronized void a(byte param0, boolean param1) {
-        this.field_C.a();
+        this.field_C.unload();
         if (param0 < 78) {
             this.field_y = (int[]) null;
         }
@@ -1210,26 +1210,26 @@ final class kj extends ia {
         }
     }
 
-    private final synchronized void a(int param0, rf param1, boolean param2, boolean param3) {
+    private final synchronized void a(int param0, MusicScore param1, boolean param2, boolean param3) {
         int var5_int = 0;
         int var6 = 0;
         try {
             this.a((byte) 98, param3);
-            this.field_C.a(param1.field_f);
+            this.field_C.load(param1.midiBytes);
             this.field_x = 0L;
             this.field_B = param2 ? true : false;
-            var5_int = this.field_C.g();
+            var5_int = this.field_C.getTrackCount();
             if (param0 <= 92) {
                 this.a(60, (byte) -45);
             }
             for (var6 = 0; var6 < var5_int; var6++) {
-                this.field_C.a(var6);
-                this.field_C.f(var6);
-                this.field_C.b(var6);
+                this.field_C.seekTrack(var6);
+                this.field_C.readTrackDelta(var6);
+                this.field_C.saveTrackPosition(var6);
             }
-            this.field_t = this.field_C.c();
-            this.field_k = this.field_C.field_a[this.field_t];
-            this.field_A = this.field_C.d(this.field_k);
+            this.field_t = this.field_C.selectEarliestTrack();
+            this.field_k = this.field_C.trackTicks[this.field_t];
+            this.field_A = this.field_C.getTickTime(this.field_k);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "kj.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -1263,7 +1263,7 @@ final class kj extends ia {
         this.field_Q = new int[16];
         this.field_F = new int[16];
         this.field_w = new int[16];
-        this.field_C = new jb();
+        this.field_C = new MidiTrackReader();
         this.field_I = new ad((kj) (this));
         this.field_q = new fi(128);
         this.a((byte) 74, -1, 256);

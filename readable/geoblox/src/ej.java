@@ -5,7 +5,7 @@ final class ej {
     static qg field_b;
     static Sprite[] amorphousCrackFrames;
     static String[] ratingModeNames;
-    static rf field_d;
+    static MusicScore field_d;
     private static String field_z;
 
     public static void a(int param0) {

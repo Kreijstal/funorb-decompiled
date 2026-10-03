@@ -3,7 +3,7 @@
  */
 final class qb extends hk {
     static hh field_N;
-    static rf field_M;
+    static MusicScore field_M;
     static String js5IoErrorText;
     int field_E;
     int field_H;
@@ -36,7 +36,7 @@ final class qb extends hk {
         js5IoErrorText = null;
         field_M = null;
         if (param0 != 0) {
-            field_M = (rf) null;
+            field_M = (MusicScore) null;
         }
         field_N = null;
         fullscreenMembersButtonText = null;

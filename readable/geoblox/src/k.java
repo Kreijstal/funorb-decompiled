@@ -13,7 +13,7 @@ final class k implements Iterator {
     static IntrusiveDeque field_e;
     static String loginText;
     static String fullscreenFocusText;
-    static rf field_f;
+    static MusicScore field_f;
     static Sprite popSprite;
 
     public final void remove() {

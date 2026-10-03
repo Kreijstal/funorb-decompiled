@@ -3096,3 +3096,52 @@ generated block labels. The text-loader outer span includes nested helpers, so
 these are not 21 unique state machines. Larger control reconstruction, opaque
 names, complete asset/gameplay execution and browser/phone targets remain
 unfinished or unverified.
+
+## Compact music decoding and instrument notes (pass 87)
+
+`MusicScore.loadNamedScore(archive, groupName, fileName)` loads a named archive
+entry and returns null for an absent file. `tf` requests theme music; `jg`
+requests `title_music_loop`, `game_over`, `sun` and `bonus_bubble_jingle`.
+Only the local constructor/reader pipeline is executed in the new fixture;
+successful loading from a real archive is source-audited.
+
+The private `MusicScore(packedInput)` constructor uses the last three bytes for
+track count and tick division, scans packed event types to size the MIDI output,
+then scans variable-length delta ticks and delta-coded controller numbers.
+It counts the controller-specific streams, assigns their cursors, and emits
+MThd/MTrk headers, delta ticks and event payloads. Track lengths are backpatched.
+`noteNumber`, velocities, pitch, pressure and controller values accumulate
+signed input deltas; the channel uses XOR deltas. These accumulators span tracks.
+`programAndBankCursor` is shared by program changes and controllers 0/32.
+Controller 64/65/120/121/123 share `switchControllerCursor`; other controller
+stream names use numbers, retaining the dispatch rather than guessing meanings.
+The existing loop and labeled controller-value join remain.
+
+`collectInstrumentNotes` reads the emitted MIDI. Each channel keeps a bank and
+program; channel 9 initializes both to 128. Controllers 0/32 replace their bank
+bit ranges; a program-change event snapshots bank plus program. Positive-velocity
+note-on events create or update `InstrumentNoteMask.notesUsed`, keyed by that
+instrument ID. Zero-velocity events do not add notes. The method selects the
+lowest-tick live track, resolving ties by its first index, then consumes that
+track's events at the selected tick. The note cache is lazy and idempotent;
+`clearInstrumentNotes` clears the cache while retaining the MIDI bytes.
+
+`MidiTrackReader` keeps track starts, saved positions, accumulated ticks and
+running statuses separately. Ended positions are negative. `readTrackDelta`
+adds a variable-length value; `seekTrack` and `saveTrackPosition` move the shared
+input cursor. `readTrackEvent` returns packed channel messages, 1 for end-of-track,
+2 for tempo and 3 for other meta events. Skipped system-exclusive events return
+0; accepted escaped system statuses are decoded with the status-length table.
+A tempo change adjusts `tickTimeOffset` to preserve time at the change tick.
+`getTickTime(tick)` returns offset plus tick times tempo, without dividing by
+`tickDivision`. `restartTracks` clears running statuses/ticks, seeks each start
+and reads its first delta; it retains the current tempo. `unload` releases input
+bytes and all per-track arrays. Static table cleanup is a separate method.
+
+The existing result-helper probe contains 1,536 exact-MIDI and instrument-note
+oracle fixtures, 128 reader event/time oracles and seven edge-input traces.
+All three native/raw/readable variants match the frozen trace. This establishes
+the controlled decoding/cache behavior, not real archived songs, arbitrary
+malformed files, synthesized audio or game/device performance. All score/reader
+parameters and locals now have guarded names. Large-method counts remain 21
+spans of at least 300 lines, 15 containing labels.

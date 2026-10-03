@@ -5,7 +5,7 @@ final class ll {
     static Sprite[] frameNineSliceSprites;
     static String createMoreSuggestionsText;
     static ResourceArchive gameGraphicsArchive;
-    static rf field_d;
+    static MusicScore field_d;
     static boolean field_e;
     static String createEmailTooltipText;
     static boolean[] themesLoaded;

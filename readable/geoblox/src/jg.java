@@ -168,10 +168,10 @@ abstract class jg {
           kf.field_c = param3;
           sl.field_l = param4;
           p.field_i = new ue(22050, AudioOutput.sampleRateHz);
-          ll.field_d = rf.a(kf.field_c, "", "title_music_loop");
-          pi.field_S = rf.a(kf.field_c, "", "game_over");
-          IntrusiveNode.field_d = rf.a(kf.field_c, "", "sun");
-          qf.resultMusicTrack = rf.a(kf.field_c, "", "bonus_bubble_jingle");
+          ll.field_d = MusicScore.loadNamedScore(kf.field_c, "", "title_music_loop");
+          pi.field_S = MusicScore.loadNamedScore(kf.field_c, "", "game_over");
+          IntrusiveNode.field_d = MusicScore.loadNamedScore(kf.field_c, "", "sun");
+          qf.resultMusicTrack = MusicScore.loadNamedScore(kf.field_c, "", "bonus_bubble_jingle");
           te.field_c = new ci(param0, param2);
           uh.field_y.a(te.field_c, 0, -1, IntrusiveNode.field_d, sl.field_l);
           ag.field_j[1] = true;

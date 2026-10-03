@@ -9,7 +9,7 @@ abstract class qf extends oe {
     private int field_X;
     private hh field_Z;
     static int[] secondVertexTransformedX;
-    static rf resultMusicTrack;
+    static MusicScore resultMusicTrack;
     private wj field_W;
     private int field_cb;
 

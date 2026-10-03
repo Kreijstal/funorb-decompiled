@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pj extends IntrusiveNode {
-    byte[] field_h;
+final class InstrumentNoteMask extends IntrusiveNode {
+    byte[] notesUsed;
     static nd field_f;
     static int[] meshFaceOrder;
     static ck field_g;
 
-    pj(byte[] param0) {
+    InstrumentNoteMask(byte[] notesUsed) {
         try {
-            this.field_h = param0;
-        } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "pj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            this.notesUsed = notesUsed;
+        } catch (RuntimeException caughtFailure) {
+            throw t.a((Throwable) ((Object) caughtFailure), "pj.<init>(" + (notesUsed != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -19,7 +19,7 @@ final class pj extends IntrusiveNode {
         meshFaceOrder = null;
         field_g = null;
         if (param0) {
-            pj.b(false);
+            InstrumentNoteMask.b(false);
             field_f = null;
             return;
         }

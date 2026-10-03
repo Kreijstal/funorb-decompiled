@@ -19,6 +19,15 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 138,772 bindings,
 preserving 388 override relationships.
 
+Pass 87 names `MusicScore`, `MidiTrackReader` and `InstrumentNoteMask`, including
+all 96 locals in the 541-line compact-to-MIDI constructor. It adds 188 guarded
+identities, bringing the export to 6,871 rules and 54,798 edits; every previous
+rule and source/decompiler pin remains. A separately pinned 1,671-case native
+trace includes independent exact-MIDI/instrument-note oracles and reader
+meta/system/running-status/tempo checks. Native, raw and readable variants
+match. Full regeneration and dictionary reversal remain reproducible. Actual
+archive music loading, audio synthesis and browser/phone acceptance are unverified.
+
 Pass 86 removes 57 labeled skip blocks and 66 guard breaks across 25 files,
 reconstructing ordinary conditional guards without moving declarations, effects
 or protected boundaries. It removes 197 lines; `updateSession` shrinks from

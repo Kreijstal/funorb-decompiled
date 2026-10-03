@@ -68,7 +68,7 @@ final class fi {
         }
     }
 
-    final static void a(int param0, rf param1) {
+    final static void a(int param0, MusicScore param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;

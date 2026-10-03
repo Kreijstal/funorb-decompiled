@@ -5,7 +5,7 @@ abstract class wf extends ch {
     private int field_x;
     private long field_k;
     private int field_r;
-    static rf field_o;
+    static MusicScore field_o;
     private boolean field_t;
     private boolean field_v;
     String field_n;

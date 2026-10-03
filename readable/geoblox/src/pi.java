@@ -7,7 +7,7 @@ final class pi extends vf {
     static int[][] logoMeshCenters;
     private dg field_M;
     static IndexedSprite sweetsBackgroundSprite;
-    static rf field_S;
+    static MusicScore field_S;
     private String field_N;
 
     final String c(byte param0) {

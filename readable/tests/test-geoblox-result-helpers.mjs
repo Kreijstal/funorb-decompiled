@@ -20,6 +20,7 @@ const expectedInputSha256 = 'f8fe8768fbba9c94298f8e9a9193605681295cdd49d1eeba479
 const expectedArchiveSectorSha256 = '77dc4b47188f20793aaecb76f198e59850d0fc3d8af0ca07b2d0a111719a869b';
 const expectedArchiveCompressionSha256 = '191d74dde65e8e0a6b5dc72a0193765baa165a94ab82ef5df15f10d86fd6f8fe';
 const expectedBzip2BlockSha256 = 'f237b1b6fd8e69c006fa43ec005f742ae5909d107d0ba5ec4574f2c804ad3ba9';
+const expectedMusicScoreSha256 = 'dbb5328e2411eeac81a8c9f515fb6ab1cd3f07f56a2bca7ffda0508a6f444ff4';
 const temporary = fs.mkdtempSync(path.join(os.tmpdir(), 'geoblox-result-helpers-'));
 try {
   if (nativeInput) {
@@ -44,7 +45,7 @@ try {
     assert.equal(files.length, pin.files);
     assert.equal(hash.digest('hex'), pin.sha256);
   }
-  let expected, expectedArchiveSectorSha256Baseline, expectedArchiveCompressionBaseline, expectedBzip2BlockBaseline;
+  let expected, expectedArchiveSectorSha256Baseline, expectedArchiveCompressionBaseline, expectedBzip2BlockBaseline, expectedMusicScoreBaseline;
   for (const variant of [...(nativeInput ? ['native'] : []), 'original', 'renamed']) {
     const native = variant === 'native', renamed = variant === 'renamed';
     const name = (symbol, original) => renamed ? aliases.get(symbol) ?? original : original;
@@ -836,7 +837,192 @@ try {
           }
           check(cases==2184,"input case count");System.out.println("input-complete:"+cases);
         }
-      }`;
+      }
+
+      class MusicScoreBehavior extends ResultHelperBehavior {
+        static class Event {
+          int kind, channel, a, b, delta, track, ordinal; long tick;
+          Event(int kind,int channel,int a,int b,int delta) {this.kind=kind;this.channel=channel;this.a=a;this.b=b;this.delta=delta;}
+        }
+        static void u16(java.io.ByteArrayOutputStream out,int value) {out.write(value>>>8);out.write(value);}
+        static void i32(java.io.ByteArrayOutputStream out,int value) {out.write(value>>>24);out.write(value>>>16);out.write(value>>>8);out.write(value);}
+        static void vlq(java.io.ByteArrayOutputStream out,int value) {
+          int shift=0;while((value>>>(shift+7))!=0 && shift<21)shift+=7;
+          for(;shift>=0;shift-=7)out.write(((value>>>shift)&127)|(shift==0?0:128));
+        }
+        static int stream(int controller) {
+          switch(controller) {
+            case 0:case 32:return 14;case 1:return 4;case 33:return 11;
+            case 7:return 5;case 39:return 12;case 10:return 6;case 42:return 13;
+            case 99:return 16;case 98:return 17;case 101:return 18;case 100:return 19;
+            case 64:case 65:case 120:case 121:case 123:return 0;default:return 9;
+          }
+        }
+        static byte[] pack(List<List<Event>> tracks,int division) throws Exception {
+          java.io.ByteArrayOutputStream out=new java.io.ByteArrayOutputStream(),deltas=new java.io.ByteArrayOutputStream(),controllers=new java.io.ByteArrayOutputStream();
+          java.io.ByteArrayOutputStream[] values=new java.io.ByteArrayOutputStream[21];for(int i=0;i<values.length;i++)values[i]=new java.io.ByteArrayOutputStream();
+          int channel=0,note=0,on=0,off=0,pitch=0,pressure=0,poly=0,controller=0;
+          int[] controls=new int[128];
+          for(List<Event> track:tracks)for(Event e:track) {
+            out.write(e.kind>=7?e.kind:e.kind|((channel^e.channel)<<4));
+            if(e.kind<7)channel=e.channel;
+            vlq(deltas,e.delta);
+            switch(e.kind) {
+              case 0:case 1:case 5:
+                values[7].write(e.a-note);note=e.a;
+                if(e.kind==0){values[8].write(e.b-on);on=e.b;}
+                else if(e.kind==1){values[10].write(e.b-off);off=e.b;}
+                else {values[1].write(e.b-poly);poly=e.b;}break;
+              case 2:
+                controllers.write(e.a-controller);controller=e.a;
+                values[stream(e.a)].write(e.b-controls[e.a]);controls[e.a]=e.b;break;
+              case 3:
+                int change=e.a-pitch;int low=change&127;int high=(change-low)>>7;
+                check(change==low+(high<<7)&&high==(byte)high,"representable pitch delta");
+                values[15].write(low);values[3].write(high);pitch=e.a;break;
+              case 4:values[2].write(e.a-pressure);pressure=e.a;break;
+              case 6:values[14].write(e.a);break;
+              case 23:values[20].write(e.a>>>16);values[20].write(e.a>>>8);values[20].write(e.a);break;
+              case 7:break;default:throw new AssertionError("fixture event");
+            }
+          }
+          out.write(deltas.toByteArray());out.write(controllers.toByteArray());for(java.io.ByteArrayOutputStream v:values)out.write(v.toByteArray());
+          out.write(tracks.size());u16(out,division);return out.toByteArray();
+        }
+        // Build the expected standard chunks directly from absolute event values.
+        // This does not use the packed stream counts/cursors or delta reconstruction.
+        static byte[] midi(List<List<Event>> tracks,int division) throws Exception {
+          java.io.ByteArrayOutputStream out=new java.io.ByteArrayOutputStream();
+          i32(out,0x4d546864);i32(out,6);u16(out,tracks.size()>1?1:0);u16(out,tracks.size());u16(out,division);
+          int[] statuses={144,128,176,224,208,160,192};
+          for(List<Event> track:tracks) {
+            java.io.ByteArrayOutputStream bytes=new java.io.ByteArrayOutputStream();int lastStatus=-1;
+            for(Event e:track) {
+              vlq(bytes,e.delta);int status=e.kind<7?statuses[e.kind]+e.channel:255;
+              if(status!=lastStatus||e.kind==23)bytes.write(status);lastStatus=status;
+              switch(e.kind) {
+                case 0:case 1:case 2:case 5:bytes.write(e.a);bytes.write(e.b);break;
+                case 3:bytes.write(e.a&127);bytes.write((e.a>>>7)&127);break;
+                case 4:case 6:bytes.write(e.a);break;
+                case 7:bytes.write(47);bytes.write(0);break;
+                case 23:bytes.write(81);bytes.write(3);bytes.write(e.a>>>16);bytes.write(e.a>>>8);bytes.write(e.a);break;
+                default:throw new AssertionError();
+              }
+            }
+            i32(out,0x4d54726b);i32(out,bytes.size());out.write(bytes.toByteArray());
+          }
+          return out.toByteArray();
+        }
+        static List<List<Event>> fixture(int shape,int channel,int velocity,int delta,int seed) {
+          List<List<Event>> tracks=new ArrayList<>();
+          for(int t=0;t<(shape==3?2:1);t++) {
+            List<Event> events=new ArrayList<>();int c=(channel+t)&15,n=(seed*31+t*17)&127;
+            if(shape!=0) {
+              events.add(new Event(23,0,400000+seed*33333,0,delta));
+              events.add(new Event(0,c,n,velocity,delta));
+              events.add(new Event(0,c,(n+1)&127,127,delta));
+              events.add(new Event(6,c,(seed*19+t)&127,0,delta));
+              if(shape>=2) {
+                for(int control:new int[]{0,32,1,33,7,39,10,42,99,98,101,100,64,65,120,121,123,11,127}) {
+                  events.add(new Event(2,c,control,(control*3+seed+t)&127,delta));
+                  events.add(new Event(2,c,control,(control*7+seed+t)&127,0));
+                }
+                events.add(new Event(6,c,(seed*23+t)&127,0,delta));
+                events.add(new Event(3,c,8192,0,delta));events.add(new Event(3,c,0,0,delta));
+                events.add(new Event(3,c,16383,0,delta));
+                events.add(new Event(4,c,127,0,delta));events.add(new Event(4,c,0,0,delta));
+                events.add(new Event(5,c,n,127,delta));events.add(new Event(5,c,(n+1)&127,0,delta));
+              }
+              events.add(new Event(0,c,(n+2)&127,velocity,delta));
+              events.add(new Event(1,c,n,64,delta));events.add(new Event(1,c,(n+2)&127,0,delta));
+            }
+            events.add(new Event(7,0,0,0,delta));long tick=0;int index=0;
+            for(Event e:events){tick+=e.delta;e.tick=tick;e.track=t;e.ordinal=index++;}tracks.add(events);
+          }
+          return tracks;
+        }
+        static SortedMap<Integer,byte[]> masks(List<List<Event>> tracks) {
+          List<Event> ordered=new ArrayList<>();for(List<Event> track:tracks)ordered.addAll(track);
+          Collections.sort(ordered,(a,b)->a.tick!=b.tick?Long.compare(a.tick,b.tick):a.track!=b.track?Integer.compare(a.track,b.track):Integer.compare(a.ordinal,b.ordinal));
+          int[] banks=new int[16],programs=new int[16];banks[9]=programs[9]=128;
+          SortedMap<Integer,byte[]> result=new TreeMap<>();
+          for(Event e:ordered) {
+            if(e.kind==2&&e.a==0)banks[e.channel]=(banks[e.channel]&~(127<<14))|(e.b<<14);
+            if(e.kind==2&&e.a==32)banks[e.channel]=(banks[e.channel]&~(127<<7))|(e.b<<7);
+            if(e.kind==6)programs[e.channel]=banks[e.channel]+e.a;
+            if(e.kind==0&&e.b>0){int instrument=programs[e.channel];if(!result.containsKey(instrument))result.put(instrument,new byte[128]);result.get(instrument)[e.a]=1;}
+          }
+          return result;
+        }
+        static void checkMasks(Object table,SortedMap<Integer,byte[]> wanted) throws Exception {
+          Method first=method("${type('fi')}","${method('fi','a(B)Lhf;')}",byte.class);
+          Method next=method("${type('fi')}","${method('fi','b(I)Lhf;')}",int.class);
+          SortedMap<Integer,byte[]> actual=new TreeMap<>();Object node=first.invoke(table,(byte)125);
+          while(node!=null){int key=(int)(long)(Long)${get('hf','field_a','J','node')};check(!actual.containsKey(key),"unique instrument key");actual.put(key,(byte[])${get('pj','field_h','[B','node')});node=next.invoke(table,-100);}
+          check(actual.keySet().equals(wanted.keySet()),"instrument key oracle");
+          for(int key:wanted.keySet())check(Arrays.equals(actual.get(key),wanted.get(key)),"instrument note mask oracle");
+        }
+        public static void main(String[] args) throws Exception {
+          Method collect=method("${type('rf')}","${method('rf','b()V')}");Method clear=method("${type('rf')}","${method('rf','a()V')}");
+          Class<?> bufferType=Class.forName("${type('qc')}");int cases=0;
+          for(int shape=0;shape<4;shape++)for(int channel=0;channel<16;channel++)for(int seed=0;seed<4;seed++)for(int delta:new int[]{0,1,127,128,16384,0x1fffff}) {
+            int velocity=new int[]{0,1,64,127}[seed],division=new int[]{1,96,480,32767}[seed];
+            List<List<Event>> tracks=fixture(shape,channel,velocity,delta,seed);byte[] packed=pack(tracks,division),before=packed.clone(),wanted=midi(tracks,division);
+            Object buffer=construct("${type('qc')}",new Class<?>[]{byte[].class},packed);
+            Object score=construct("${type('rf')}",new Class<?>[]{bufferType},buffer);
+            byte[] decoded=(byte[])${get('rf','field_f','[B','score')};
+            check(Arrays.equals(decoded,wanted),"exact MIDI oracle case "+cases+" actual="+ArchiveSectorBehavior.digest(decoded)+" wanted="+ArchiveSectorBehavior.digest(wanted));
+            check(Arrays.equals(packed,before),"packed score unmodified");check(${get('rf','field_g','Lfi;','score')}==null,"instrument cache initially absent");
+            collect.invoke(score);Object table=${get('rf','field_g','Lfi;','score')};SortedMap<Integer,byte[]> notes=masks(tracks);checkMasks(table,notes);
+            collect.invoke(score);check(${get('rf','field_g','Lfi;','score')}==table,"idempotent collection");clear.invoke(score);check(${get('rf','field_g','Lfi;','score')}==null,"clear cache");
+            check(${get('rf','field_f','[B','score')}==decoded,"clearing retains MIDI array");collect.invoke(score);Object rebuilt=${get('rf','field_g','Lfi;','score')};check(rebuilt!=table,"rebuild cache identity");checkMasks(rebuilt,notes);
+            Object reader=construct("${type('jb')}",new Class<?>[]{byte[].class},decoded);
+            Method count=method("${type('jb')}","${method('jb','g()I')}");Method loaded=method("${type('jb')}","${method('jb','f()Z')}");Method restart=method("${type('jb')}","${method('jb','a(J)V')}",long.class);
+            Method time=method("${type('jb')}","${method('jb','d(I)J')}",int.class);Method select=method("${type('jb')}","${method('jb','c()I')}");
+            check((Integer)count.invoke(reader)==tracks.size()&&(Boolean)loaded.invoke(reader),"reader header/loaded");check((Integer)${get('jb','field_d','I','reader')}==division,"reader division");
+            restart.invoke(reader,123456789L);check((Integer)select.invoke(reader)==0,"equal tick tie picks first track");
+            int[] ticks=(int[])${get('jb','field_a','[I','reader')};for(int tick:ticks)check(tick==delta,"restart reads first delta");
+            check((Long)time.invoke(reader,7)==123456789L+7L*500000L,"initial tempo time oracle");
+            method("${type('jb')}","${method('jb','a()V')}").invoke(reader);check(!(Boolean)loaded.invoke(reader),"unload");
+            check(${get('jb','field_e','[I','reader')}==null&&${get('jb','field_a','[I','reader')}==null&&${get('jb','field_c','[I','reader')}==null&&${get('jb','field_i','[I','reader')}==null,"unload releases track arrays");
+            System.out.println("music:"+shape+":"+channel+":"+seed+":"+delta+":"+ArchiveSectorBehavior.digest(decoded)+":"+notes.keySet()+":"+${get('qc','field_f','I','buffer')});cases++;
+          }
+          for(byte[] input:new byte[][]{null,new byte[0],new byte[1],new byte[2],new byte[]{8,0,1,0,96},new byte[]{7,0,1,0,96},new byte[]{0,7,0,0,1,0,96}}) {
+            Object buffer=construct("${type('qc')}",new Class<?>[]{byte[].class},(Object)input);String failure="ok";
+            try{construct("${type('rf')}",new Class<?>[]{bufferType},buffer);}catch(InvocationTargetException error){failure=error.getCause().getClass().getName();}
+            System.out.println("music-failure:"+cases+":"+failure+":"+${get('qc','field_f','I','buffer')});cases++;
+          }
+
+          for(int shape=0;shape<8;shape++)for(int tempo:new int[]{0,500000,1000000,0xffffff})for(int tick:new int[]{0,1,127,32767}) {
+            java.io.ByteArrayOutputStream body=new java.io.ByteArrayOutputStream();vlq(body,tick);int expectedEvent;
+            if(shape==0){body.write(new byte[]{(byte)255,1,2,3,4});expectedEvent=3;}
+            else if(shape==1||shape==2){body.write(shape==1?240:247);body.write(new byte[]{3,1,2,3});expectedEvent=0;}
+            else if(shape==3){body.write(new byte[]{(byte)247,1,(byte)246});expectedEvent=246;}
+            else if(shape==4){body.write(new byte[]{(byte)247,2,(byte)241,55});expectedEvent=241|(55<<8);}
+            else if(shape==5||shape==6){body.write(255);body.write(81);body.write(shape==5?3:5);body.write(tempo>>>16);body.write(tempo>>>8);body.write(tempo);if(shape==6)body.write(new byte[]{9,10});expectedEvent=2;}
+            else {body.write(new byte[]{(byte)144,60,64,0,61,0});expectedEvent=144|(60<<8)|(64<<16);}
+            body.write(new byte[]{0,(byte)255,47,0});
+            java.io.ByteArrayOutputStream bytes=new java.io.ByteArrayOutputStream();i32(bytes,0x4d546864);i32(bytes,6);u16(bytes,0);u16(bytes,1);u16(bytes,480);
+            if((shape&1)!=0){i32(bytes,0x4a554e4b);i32(bytes,3);bytes.write(new byte[]{7,8,9});}
+            i32(bytes,0x4d54726b);i32(bytes,body.size());bytes.write(body.toByteArray());
+            Object reader=construct("${type('jb')}",new Class<?>[]{byte[].class},(Object)bytes.toByteArray());
+            method("${type('jb')}","${method('jb','a(J)V')}",long.class).invoke(reader,123L);
+            Method seek=method("${type('jb')}","${method('jb','a(I)V')}",int.class),event=method("${type('jb')}","${method('jb','e(I)I')}",int.class);
+            Method delta=method("${type('jb')}","${method('jb','f(I)V')}",int.class),save=method("${type('jb')}","${method('jb','b(I)V')}",int.class);
+            seek.invoke(reader,0);int actual=(Integer)event.invoke(reader,0);check(actual==expectedEvent,"reader meta/system/packed event oracle");
+            long expectedTime=123L+(long)tick*500000L+2L*(shape==5||shape==6?tempo:500000);
+            check((Long)method("${type('jb')}","${method('jb','d(I)J')}",int.class).invoke(reader,tick+2)==expectedTime,"tempo continuity oracle");
+            if(shape==7){delta.invoke(reader,0);check((Integer)event.invoke(reader,0)==(144|(61<<8)),"running-status data event oracle");}
+            delta.invoke(reader,0);check((Integer)event.invoke(reader,0)==1,"end-of-track oracle");
+            method("${type('jb')}","${method('jb','d()V')}").invoke(reader);save.invoke(reader,0);
+            check((Boolean)method("${type('jb')}","${method('jb','e()Z')}").invoke(reader),"all tracks ended");
+            check((Integer)method("${type('jb')}","${method('jb','c()I')}").invoke(reader)==-1,"ended track excluded");
+            System.out.println("music-reader:"+shape+":"+tempo+":"+tick+":"+actual+":"+expectedTime);cases++;
+          }
+          check(cases==1671,"music case count");System.out.println("music-complete:"+cases+":1536:128");
+        }
+      }
+`;
     const directory = path.join(temporary, variant), classes = path.join(directory, 'classes');
     fs.mkdirSync(classes, {recursive: true});
     const harnessFile = path.join(directory, 'ResultHelperBehavior.java');
@@ -848,6 +1034,15 @@ try {
     const list = path.join(directory, 'sources.txt');
     fs.writeFileSync(list, [...sources, harnessFile].map(file => JSON.stringify(file)).join('\n') + '\n');
     captureProcess('javac', ['--release','8','-proc:none','-encoding','UTF-8','-classpath',cp,'-d',classes,'@'+list]);
+
+    const musicOutput = captureProcess('java', ['-Djava.awt.headless=true','-cp',classes + path.delimiter + cp,
+      'MusicScoreBehavior']).stdout;
+    const musicScoreSha256 = crypto.createHash('sha256').update(musicOutput).digest('hex');
+    console.log(JSON.stringify({variant, musicScoreSha256, completion: musicOutput.toString().trim().split('\n').at(-1)}));
+    assert.equal(musicScoreSha256, expectedMusicScoreSha256, variant);
+    if (variant === 'native') expectedMusicScoreBaseline = musicOutput;
+    if (nativeInput && variant !== 'native') assert.equal(Buffer.compare(musicOutput, expectedMusicScoreBaseline), 0, variant);
+
     const output = captureProcess('java', ['-Djava.awt.headless=true','-cp',classes + path.delimiter + cp,
       'ResultHelperBehavior']).stdout;
     const sha256 = crypto.createHash('sha256').update(output).digest('hex');

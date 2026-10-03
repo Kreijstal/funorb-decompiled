@@ -42,7 +42,7 @@ final class ra implements Iterable {
         }
     }
 
-    final static void selectBackgroundMusic(int methodGuard, rf track) {
+    final static void selectBackgroundMusic(int methodGuard, MusicScore track) {
         if (track == null || GzipInflater.field_e == track) {
             return;
         }

@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 6,683 guarded naming rules: 62 classes, 842 fields,
-579 methods, 1,746 parameters and 3,454 local declarations. Both 303-file corpora
+The current export has 6,871 guarded naming rules: 65 classes, 854 fields,
+598 methods, 1,762 parameters and 3,592 local declarations. Both 303-file corpora
 compile, comparing 138,772 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -54,7 +54,48 @@ smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
 
-## Current labeled skip-guard reconstruction
+## Music scores and track reading (pass 87)
+
+`MusicScore` replaces `rf`, `MidiTrackReader` replaces `jb`, and
+`InstrumentNoteMask` replaces `pj`. The 541-line score constructor now names
+all 96 local declarations and its input. Event counts, delta-tick scans,
+controller-number streams, source cursors, MIDI header/track output, running
+status and cumulative note/velocity/pitch values have guarded names. Reused
+slots keep their multiple roles explicit. The reader names every field, method,
+parameter and local; unrelated static fields in the note-mask holder remain.
+
+This naming-only pass adds 188 identities (three classes, 12 fields, 19 methods,
+16 parameters and 138 locals), preserving every one of the previous 6,683
+complete rules and all raw source/decompiler pins. The current 6,871 rules apply
+54,798 edits, including four constructor spellings supplied by class rules.
+There is no new decompiler build, source migration or JSON snapshot.
+
+The existing result-helper probe adds a separately pinned music trace:
+`dbb5328e2411eeac81a8c9f515fb6ab1cd3f07f56a2bca7ffda0508a6f444ff4`.
+Its 1,536 compact-score fixtures cover all 16 channels, four velocities,
+six delta encodings, one/two tracks, all seven channel-event kinds, tempo,
+controller streams, bank/program changes and empty tracks. An independent
+builder writes expected MIDI chunks directly from absolute events; another
+oracle schedules positive-velocity notes by tick/track and checks every
+instrument key and its full 128-byte mask. Cache identity, clearing/rebuilding,
+input retention, initial reader timing and release of track arrays are checked.
+
+Another 128 reader oracles cover other meta events, both system-exclusive
+statuses, escaped system events, running status, extra tempo payload bytes,
+unknown chunk skipping, tempo continuity and ended-track selection. Seven
+null/short/invalid-or-minimal scores preserve failure/cursor traces; those are
+native comparisons rather than broad malformed-input equivalence proofs.
+All 1,671 cases match transformed native classes, raw Java and readable Java.
+All pre-existing result-helper traces retain their hashes. The rules, migration
+and text-resource checks pass; full reproduction compiles both 303-file corpora
+and compares 138,772 bindings. Dictionary reversal matches the pinned input.
+
+No successful archive-backed music load or synthesized audio is claimed.
+The constructor still has one generated block label, and the survey still contains
+21 large spans (15 with labels). Larger control reconstruction, opaque helpers
+and browser/phone memory/startup/FPS acceptance remain unfinished.
+
+## Labeled skip-guard reconstruction (pass 86)
 
 Pass 86 changes the generic decompiler, preserving all 6,683 complete naming
 objects and 53,607 identifier edits. `foldLabeledSkipGuards` replaces 57 plain
@@ -1836,8 +1877,10 @@ byte-for-byte. Previous integral-sign and literal-shift cleanup remains, with
 its historical proof recorded in the raw provenance. Current source/decompiler
 identity and naming migrations live in the single manifest. `ruleChanges`
 records naming changes; `sourceChange` is recorded when input identity changes.
-Pass 86 records its source migration in `sourceChange` with an empty
-`ruleChanges` list, preserving all 6,683 previous complete naming objects.
+Pass 86 recorded its source migration in `sourceChange` with an empty
+`ruleChanges` list. Current pass 87 retains that source identity and records
+188 naming additions in `ruleChanges`, preserving all 6,683 previous complete
+naming objects.
 All native probe sources and their traces are pinned in
 the same manifest; no JSON snapshots are added.
 

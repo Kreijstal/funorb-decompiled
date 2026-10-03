@@ -132,7 +132,7 @@ final class r extends f implements pl {
         try {
           var2_int = param0.length();
           if (var2_int == 0) {
-            stackIn_4_0 = pj.field_f;
+            stackIn_4_0 = InstrumentNoteMask.field_f;
             return stackIn_4_0;
           }
           if (var2_int > 64) {

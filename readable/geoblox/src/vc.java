@@ -31,7 +31,7 @@ final class vc extends dk {
           destinationFaceOffset = ch.meshFaceCountsByDepthBucket[0];
           for (depthBucketIndex = 1; depthBucketIndex < ch.meshFaceCountsByDepthBucket.length; depthBucketIndex++) {
             bucketFaceCount = ch.meshFaceCountsByDepthBucket[depthBucketIndex];
-            sf.a(pj.meshFaceOrder, depthBucketIndex << 4, pj.meshFaceOrder, destinationFaceOffset, bucketFaceCount);
+            sf.a(InstrumentNoteMask.meshFaceOrder, depthBucketIndex << 4, InstrumentNoteMask.meshFaceOrder, destinationFaceOffset, bucketFaceCount);
             destinationFaceOffset = destinationFaceOffset + bucketFaceCount;
           }
           return;

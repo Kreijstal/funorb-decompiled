@@ -6,7 +6,7 @@ class IntrusiveNode {
     IntrusiveNode nextNode;
     static String loginMessage3Text;
     IntrusiveNode previousNode;
-    static rf field_d;
+    static MusicScore field_d;
 
     final static void a(int param0, int param1) {
         int var2;
