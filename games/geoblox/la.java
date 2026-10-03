@@ -36,26 +36,22 @@ final class la extends sh {
         int var6 = 0;
         try {
           L0: {
-            L1: {
-              if ((this.field_A instanceof hk) &&
-                  (!((hk) ((Object) this.field_A)).field_D)) {
-                break L1;
-              }
-              if (this.field_f == 1) {
-                var5_int = qa.field_a - this.field_D - param3;
-                var6 = -this.field_H + (ue.field_e - param1);
-                if ((this.field_v == var5_int) &&
-                    (var6 == this.field_m)) {
-                  break L0;
-                }
-                this.field_m = var6;
-                this.field_v = var5_int;
-                if (!(this.field_u instanceof de)) {
-                  break L0;
-                }
-                ((de) ((Object) this.field_u)).a(param3, -20951, (la) (this), param1);
+            if ((!((this.field_A instanceof hk) &&
+                  (!((hk) ((Object) this.field_A)).field_D))) &&
+                (this.field_f == 1)) {
+              var5_int = qa.field_a - this.field_D - param3;
+              var6 = -this.field_H + (ue.field_e - param1);
+              if ((this.field_v == var5_int) &&
+                  (var6 == this.field_m)) {
                 break L0;
               }
+              this.field_m = var6;
+              this.field_v = var5_int;
+              if (!(this.field_u instanceof de)) {
+                break L0;
+              }
+              ((de) ((Object) this.field_u)).a(param3, -20951, (la) (this), param1);
+              break L0;
             }
             if (this.field_C) {
               if (this.field_B != this.field_v) {

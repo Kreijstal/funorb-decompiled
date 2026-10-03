@@ -51,11 +51,8 @@ abstract class nh {
           for (var9 = 0; var9 < 4; var9++) {
             var8[var9] = cl.field_e.nextInt();
           }
-          L2: {
-            if ((null != fa.field_c) &&
-                (fa.field_c.field_j.length >= var7_int)) {
-              break L2;
-            }
+          if (!((null != fa.field_c) &&
+                (fa.field_c.field_j.length >= var7_int))) {
             fa.field_c = new qc(var7_int);
           }
           L4: {

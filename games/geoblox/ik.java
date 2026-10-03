@@ -160,11 +160,8 @@ final class ik {
                 }
               }
             }
-            L11: {
-              if ((var5_int == 0) &&
-                  (var6_int == 0)) {
-                break L11;
-              }
+            if (!((var5_int == 0) &&
+                  (var6_int == 0))) {
               bh.a(var6_int != 0, param1, 1, param0, var5_int != 0);
             }
             if ((param1.field_z == 1) &&

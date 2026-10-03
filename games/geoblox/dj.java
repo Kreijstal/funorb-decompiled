@@ -382,11 +382,8 @@ class dj extends hk {
             if (this.field_H != this.field_L) {
               this.g(0);
             }
-            L2: {
-              if ((-1 != this.field_M) &&
-                  (this.field_s.length() >= this.field_M)) {
-                break L2;
-              }
+            if (!((-1 != this.field_M) &&
+                  (this.field_s.length() >= this.field_M))) {
               if (this.field_H >= this.field_s.length()) {
                 this.field_s = this.field_s + param2;
                 dupTemp$0 = this.field_s.length();

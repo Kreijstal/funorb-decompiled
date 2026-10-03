@@ -203,11 +203,8 @@ final class bh extends java.awt.Canvas {
                 var6.a(var10, false);
                 continue L0;
               }
-              L6: {
-                if ((var10.field_n[var11].field_z == 1) &&
-                    (param4)) {
-                  break L6;
-                }
+              if (!((var10.field_n[var11].field_z == 1) &&
+                    (param4))) {
                 if (2 != var10.field_n[var11].field_z) {
                   var11++;
                   continue;

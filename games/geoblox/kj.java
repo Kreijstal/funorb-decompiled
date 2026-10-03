@@ -923,11 +923,8 @@ final class kj extends ia {
         pc var3;
         var3 = (pc) ((Object) this.field_I.field_l.g(param0 - 100));
         while (var3 != null) {
-          L2: {
-            if ((param1 >= 0) &&
-                (param1 != var3.field_t)) {
-              break L2;
-            }
+          if (!((param1 >= 0) &&
+                (param1 != var3.field_t))) {
             if (null != var3.field_u) {
               var3.field_u.c(qk.field_j / 100);
               if (var3.field_u.g()) {

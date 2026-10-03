@@ -129,15 +129,11 @@ class ac extends ff {
             var9 = 0;
             if (param1) {
               for (var10 = 16; var10 >= 0; var10--) {
-                L4: {
-                  if ((!da.a(0, -100)) &&
-                      (var10 == 16)) {
-                    break L4;
-                  }
-                  if ((1 << var10 & var5) == 0) {
-                    var9++;
-                    var8 += 20;
-                  }
+                if ((!((!da.a(0, -100)) &&
+                      (var10 == 16))) &&
+                    ((1 << var10 & var5) == 0)) {
+                  var9++;
+                  var8 += 20;
                 }
               }
               break L2;
@@ -152,21 +148,17 @@ class ac extends ff {
                 (!qi.d(105))) {
               continue;
             }
-            L14: {
-              if ((0 == (1 << var10 & var5)) &&
-                  (param1)) {
-                break L14;
-              }
-              if ((qa.field_a >= var3_int) &&
+            if ((!((0 == (1 << var10 & var5)) &&
+                  (param1))) &&
+                ((qa.field_a >= var3_int) &&
                   (32 + var3_int >= qa.field_a) &&
                   (var4 <= ue.field_e) &&
-                  (32 + var4 >= ue.field_e)) {
-                vb.c(var3_int, var4, 32, 32, 2, 16689938);
-                if (var7 < 0) {
-                  var7 = var10;
-                }
-                vb.a(2 + var3_int, var4 + 2, 28, 28, 2, 16777215);
+                  (32 + var4 >= ue.field_e))) {
+              vb.c(var3_int, var4, 32, 32, 2, 16689938);
+              if (var7 < 0) {
+                var7 = var10;
               }
+              vb.a(2 + var3_int, var4 + 2, 28, 28, 2, 16777215);
             }
             if (var10 == a.field_e) {
               vb.c(var3_int, var4, 32, 32, 2, 15488514);

@@ -30,15 +30,10 @@ final class em {
           field_a = (String) null;
         }
         L1: {
-          L2: {
-            if ((65 <= param0) &&
-                (param0 <= 90)) {
-              break L2;
-            }
-            if ((97 <= param0) &&
-                (param0 <= 122)) {
-              break L2;
-            }
+          if (!((65 <= param0) &&
+                (param0 <= 90)) &&
+              !((97 <= param0) &&
+                (param0 <= 122))) {
             stackIn_10_0 = false;
             break L1;
           }

@@ -1011,11 +1011,8 @@ public final class Geoblox extends wf {
           var5 = -1;
           var4 = 1;
         }
-        L6: {
-          if ((7 != param1) &&
-              (8 != param1)) {
-            break L6;
-          }
+        if (!((7 != param1) &&
+              (8 != param1))) {
           var5 = -1;
           var4 = -1;
         }

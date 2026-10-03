@@ -38,18 +38,14 @@ final class lc {
               }
             }
             L3: {
-              L4: {
-                if ((kj.field_o[99]) &&
-                    (ji.field_r.c(13519))) {
-                  break L4;
+              if ((!((kj.field_o[99]) &&
+                    (ji.field_r.c(13519)))) &&
+                  (~kb.field_c <= ~kc.field_a)) {
+                if (ul.field_b != 0) {
+                  break L3;
                 }
-                if (~kb.field_c <= ~kc.field_a) {
-                  if (ul.field_b != 0) {
-                    break L3;
-                  }
-                  if (el.field_o.field_Y) {
-                    break L3;
-                  }
+                if (el.field_o.field_Y) {
+                  break L3;
                 }
               }
               if ((0 < wd.field_e.a(param0 ^ -170)) &&

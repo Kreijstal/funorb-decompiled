@@ -38,11 +38,8 @@ final class vl extends hf {
           var6 = 0;
           var7 = null;
           for (var8 = 0; var8 < 128; var8++) {
-            L2: {
-              if ((param1 != null) &&
-                  (param1[var8] == 0)) {
-                break L2;
-              }
+            if (!((param1 != null) &&
+                  (param1[var8] == 0))) {
               var9 = this.field_h[var8];
               if (var9 != 0) {
                 if (var9 != var6) {
