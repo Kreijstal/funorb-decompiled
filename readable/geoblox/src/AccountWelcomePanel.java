@@ -238,7 +238,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "ticketing_oneunread");
                 if (textResourceBytes != null) {
-                  ih.ticketingOneUnreadText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  EntityContactSupport.ticketingOneUnreadText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "ticketing_xunread");
                 if (textResourceBytes != null) {
@@ -1178,7 +1178,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "tocustomersupport");
                 if (textResourceBytes != null) {
-                  jc.toCustomerSupportText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  AvatarFeedbackSupport.toCustomerSupportText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "changedisplayname");
                 if (textResourceBytes != null) {
@@ -1580,7 +1580,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "create_suggestions");
                 if (null != textResourceBytes) {
-                  ab.createSuggestionsText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  EntityMotionSupport.createSuggestionsText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "create_more_suggestions");
                 if (null != textResourceBytes) {
@@ -1724,7 +1724,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "create_alert_namechars");
                 if (textResourceBytes != null) {
-                  kc.createNameCharacterAlertText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  BoardReconciliationSupport.createNameCharacterAlertText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "create_alert_nameleadingspace");
                 if (null != textResourceBytes) {
@@ -1748,7 +1748,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "create_alert_passcontainsname");
                 if (textResourceBytes != null) {
-                  gf.createPasswordContainsNameAlertText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  EntityCollisionSupport.createPasswordContainsNameAlertText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "create_alert_passcontainsemail");
                 if (null != textResourceBytes) {
@@ -1900,7 +1900,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "waitingfor_fonts");
                 if (textResourceBytes != null) {
-                  ik.waitingForFontsText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  EntityLinkSupport.waitingForFontsText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "waitingfor_soundeffects");
                 if (textResourceBytes != null) {
@@ -1944,7 +1944,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "loading_fonts");
                 if (textResourceBytes != null) {
-                  nb.loadingFontsText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  EntitySpawnSupport.loadingFontsText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "loading_soundeffects");
                 if (textResourceBytes != null) {

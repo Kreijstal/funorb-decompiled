@@ -1,11 +1,32 @@
 # Readable GeoBlox
 
-The current export has 9,889 guarded naming rules: 226 classes, 1,356 fields,
-970 methods, 2,896 parameters and 4,441 local declarations. Both 303-file corpora
+The current export has 10,038 guarded naming rules: 233 classes, 1,360 fields,
+985 methods, 2,924 parameters and 4,536 local declarations. Both 303-file corpora
 compile, comparing 136,612 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
-## Current array-read recovery (pass 119)
+## Current gameplay support names (pass 120)
+
+Pass 120 adds 149 guarded names: seven classes, four fields, 15 methods,
+28 parameters and 95 locals. The main gameplay helper owners now read as
+`EntityMotionSupport`, `EntityCollisionSupport`, `EntitySpawnSupport`,
+`BoardReconciliationSupport`, `EntityContactSupport`, `EntityLinkSupport` and
+`AvatarFeedbackSupport`. These describe their gameplay helper families; unrelated
+static functions and globals remain on their original owners. The contact-mask
+scan now names its crop bounds, pixel indices, row skips, kind-two mismatch,
+pooled conversion entity, avatar sentinel handling and exception context.
+The remaining link-operation diagnostics, canvas listener cleanup, ranked-list
+index sorting, applet quit navigation and widget gradient-border parameters
+also have source-supported names. Raw sources, local ordinals, bytecode,
+decompiler/naming-tool pins and native probe source/trace pins are unchanged;
+all 9,889 previous complete rules survive. The export has 10,038 rules and
+79,782 identifier edits. All 303 raw/readable files compile, compare 136,612
+bindings and preserve 388 override relationships. Class coverage is 233 renamed,
+one meaningful original name and 69 opaque names. The six large labeled bodies
+and 207 block labels remain. Whole-game/assets, applet navigation, live network,
+browser/phone and heap/FPS acceptance remain unverified.
+
+## Previous array-read recovery (pass 119)
 
 Pass 119 replaces 67 capture temporaries with proven postfix array reads in
 26 methods across seven files, including font glyph-mask conditions. The raw
@@ -44,7 +65,7 @@ bytecode and decompiler/naming-tool pins stay unchanged. The source/probe paths
 move into Deko; existing native trace hashes remain fixed. Whole-game and
 browser/device performance are still unverified.
 
-The maintained [workflow](https://github.com/Kreijstal/dekobloko-work/blob/afddd01bff7bb0dbac4b1577a96024a054ec5dd4/readable/README.md) and [manifest](https://github.com/Kreijstal/dekobloko-work/blob/afddd01bff7bb0dbac4b1577a96024a054ec5dd4/readable/geoblox-rules.json)
+The maintained [workflow](https://github.com/Kreijstal/dekobloko-work/blob/9b812d9c89626764cfc09971b1499118ebac9b82/readable/README.md) and [manifest](https://github.com/Kreijstal/dekobloko-work/blob/9b812d9c89626764cfc09971b1499118ebac9b82/readable/geoblox-rules.json)
 live in `dekobloko-work`. From Deko, select this checkout and regenerate:
 
 ```sh
@@ -288,7 +309,7 @@ requires a separately verified literal-lookup transformation.
 The current raw tree is
 `ed3b8d3273e80abdca9bb56ff0354f6d23734ac2a90e6778ac871e1feabd6f8f`;
 the current readable tree is
-`925dc212e43f65666ab59f2b58542a13c87f41bb1275759c681569d55e227316`.
+`393e7ceab781989c3d9f532006d258c873c24de7583eb482ed6a5048492cf205`.
 The pinned decompiler-source SHA-256 is
 `c5ea1520d6be43f14bf44349fed7ffdf0e08be03c5e14cc59db89df4155a45e3`.
 All seven existing native/raw/readable probes pass with their pinned traces.
@@ -302,16 +323,16 @@ Generated Java, [dictionary](geoblox/mapping.json), [symbol reference](geoblox/S
 [export provenance](geoblox/provenance.json), the frozen `funorb-stubs.jar`
 compilation artifact and reading documentation belong here in **funorb-decompiled**.
 The generator, rules, proof fixtures and frozen naming dependency are maintained
-only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/afddd01bff7bb0dbac4b1577a96024a054ec5dd4/readable/README.md).
+only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/9b812d9c89626764cfc09971b1499118ebac9b82/readable/README.md).
 **blank-github-cloner** owns loading/diagnostics and tracks no Java exports.
-The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/afddd01bff7bb0dbac4b1577a96024a054ec5dd4/readable/geoblox-rules.json) pins all source and tool
+The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/9b812d9c89626764cfc09971b1499118ebac9b82/readable/geoblox-rules.json) pins all source and tool
 identities, workflow source hashes and native trace evidence. It records the
-previous manifest's Git repository, commit and hash; pass119 refers to the
-Deko-owned pass118 manifest, which refers to this repository's pass117 history. The export records its exact
+previous manifest's Git repository, commit and hash; pass120 refers to the
+Deko-owned pass119 manifest. Pass118 refers to this repository's pass117 history. The export records its exact
 manifest SHA-256. Old scripts and manifests remain accessible in Git history.
 
-The current Deko workflow/manifest commit is `afddd01bff7bb0dbac4b1577a96024a054ec5dd4`; the
-manifest SHA-256 is `0d1ece6a0ba41426540a89699eb9bc4b27a144aafb2c4345278491bb32439178`.
+The current Deko workflow/manifest commit is `9b812d9c89626764cfc09971b1499118ebac9b82`; the
+manifest SHA-256 is `e2d2312496a045c8d208c9569471d16a125573e7151a31c4a5e315ee2c8f106b`.
 The existing decompilation provenance records these identities and all four
 executable workflow source hashes.
 
@@ -784,7 +805,7 @@ archive SHA-256 recorded above.
 
 `Sprite.rotateNearest` drops its final block label (531 to 529 lines).
 `GameplaySession.renderSession` becomes 377 lines/17 labels, `updateSession`
-641/13, and `kc.reconcileBoardEntities` 494/14. The current inventory contains
+641/13, and `BoardReconciliationSupport.reconcileBoardEntities` 494/14. The current inventory contains
 267 generated plain block labels and 21 method/constructor spans of at least
 300 lines, nine labeled. Nested text-loader helpers make some spans overlap;
 these are not unique state-machine counts. The previous unqualified manifest
@@ -1863,7 +1884,7 @@ dimensions/centers, framebuffer row offsets and reciprocal/sine/cosine tables.
 `setTriangleClip` fills row offsets and grows their table when necessary.
 `releaseTriangleTables` releases all five arrays without resetting dimensions.
 
-`nb.drawHalfBlendRgbTriangle` orders three vertices by Y and forwards their
+`EntitySpawnSupport.drawHalfBlendRgbTriangle` orders three vertices by Y and forwards their
 matching X/R/G/B attributes to `SpriteState.drawSortedHalfBlendRgbTriangle`.
 The latter interpolates left/right X and RGB values with Q16 edge slopes and
 calls `jf.drawHalfBlendRgbGradientSpan`. The span adds the original masked and

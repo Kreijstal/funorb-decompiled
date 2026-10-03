@@ -90,7 +90,7 @@ final class FullscreenErrorDialog extends ResizableDialog implements ButtonActiv
             if (failureReason == AccountContentDialog.field_hb) {
               var3 = NodeHashTableIterator.fullscreenFocusText;
               this.widgetHeight = this.widgetHeight + 10;
-              if (nb.a(true)) {
+              if (EntitySpawnSupport.isCanvasResizeAllowed(true)) {
                 var3 = MidiNoteMixer.fullscreenFocusOrResolutionText;
                 this.widgetHeight = this.widgetHeight + 20;
               }

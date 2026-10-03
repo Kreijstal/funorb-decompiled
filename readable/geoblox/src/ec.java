@@ -60,7 +60,7 @@ final class ec {
             if (w.avatarShockPending) {
               return false;
             }
-            gf.matchChainLength = 0;
+            EntityCollisionSupport.matchChainLength = 0;
             if (UiWidget.gameplaySession.pointsPanelX == 463) {
               UiWidget.gameplaySession.pointsPanelSlideDirection = 1;
               UiWidget.gameplaySession.emitPointsPopup(false);
@@ -70,13 +70,13 @@ final class ec {
           if (EmailAvailabilityQuery.matchCandidateCount == 0) {
             return false;
           }
-          if (gf.matchChainLength >= 5) {
+          if (EntityCollisionSupport.matchChainLength >= 5) {
             SecondaryNodeDeque.recordAchievement(MultiHandleSliderRenderer.field_g ^ 255, -99, MultiHandleSliderRenderer.field_g);
           }
-          if (gf.matchChainLength >= 6) {
+          if (EntityCollisionSupport.matchChainLength >= 6) {
             SecondaryNodeDeque.recordAchievement(LoginPayloadKind.field_d ^ 255, -57, LoginPayloadKind.field_d);
           }
-          if (gf.matchChainLength >= 7) {
+          if (EntityCollisionSupport.matchChainLength >= 7) {
             SecondaryNodeDeque.recordAchievement(255 ^ IntrusiveDeque.field_f, -97, IntrusiveDeque.field_f);
           }
           for (sortInsertionIndex = 1; sortInsertionIndex < EmailAvailabilityQuery.matchCandidateCount; sortInsertionIndex++) {
@@ -112,21 +112,21 @@ final class ec {
                   (secondMatchedEntity.matchCooldownTicks <= 0) &&
                   (thirdMatchedEntity.matchCooldownTicks <= 0)) {
                 ValidationIconWidget.playPcmSample(-348, fl.gameSoundSamples[31]);
-                gf.matchChainLength = gf.matchChainLength + 1;
-                if (gf.matchChainLength > 1) {
+                EntityCollisionSupport.matchChainLength = EntityCollisionSupport.matchChainLength + 1;
+                if (EntityCollisionSupport.matchChainLength > 1) {
                   UiWidget.gameplaySession.pointsPanelSlideDirection = -1;
                 }
                 if (-1073741824 == (-1073741824 & TextPairLoginPayload.packedMatchCandidates[candidateIndex])) {
-                  awardedPoints = 90 * gf.matchChainLength;
+                  awardedPoints = 90 * EntityCollisionSupport.matchChainLength;
                   SecondaryNodeDeque.recordAchievement(fa.field_e ^ 255, -100, fa.field_e);
                 } else {
-                  awardedPoints = 30 * gf.matchChainLength;
+                  awardedPoints = 30 * EntityCollisionSupport.matchChainLength;
                 }
                 popupX = 0;
                 popupX = (int)firstMatchedEntity.positionX;
                 popupY = 0;
                 popupY = (int)firstMatchedEntity.positionY;
-                ug.spawnScorePopup(awardedPoints, true, popupY, gf.matchChainLength, popupX);
+                ug.spawnScorePopup(awardedPoints, true, popupY, EntityCollisionSupport.matchChainLength, popupX);
                 TextPairLoginPayload.packedMatchCandidates[candidateIndex] = 0;
               } else {
                 firstBlockedEntity = firstMatchedEntity;

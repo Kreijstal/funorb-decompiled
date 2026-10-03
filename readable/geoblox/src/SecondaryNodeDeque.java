@@ -108,7 +108,7 @@ final class SecondaryNodeDeque implements Iterable {
         }
         ArchiveRequest.pendingActionMarkers.addLast(-35, new PendingActionMarker(achievementId));
         if (achievementIdThenPanelEmptyFlag != 0) {
-          gf.preparePendingActionPanel((byte) -122);
+          EntityCollisionSupport.preparePendingActionPanel((byte) -122);
         }
         if (!UiWidget.gameplaySession.submissionBlocked) {
           GameplayEntity.pendingAchievementSubmissions.addLast(-44, new AchievementSubmission(achievementId, achievementCheckByte, dc.achievementTrackingBits, UiWidget.achievementTrackingAccumulator, AwtRasterBuffer.primaryAchievementTrackingCounter, lb.secondaryAchievementTrackingCounter));

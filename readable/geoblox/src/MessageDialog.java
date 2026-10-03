@@ -671,7 +671,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
           } else {
             if (errorKind != 4) {
               if (errorKind == 6) {
-                errorTextContent.appendActionButton(jc.toCustomerSupportText, 1, 9);
+                errorTextContent.appendActionButton(AvatarFeedbackSupport.toCustomerSupportText, 1, 9);
               } else {
                 if (errorKind != 9) {
                   this.replaceContent(errorTextContent, methodGuard ^ -19736);

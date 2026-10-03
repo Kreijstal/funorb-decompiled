@@ -11,7 +11,7 @@ final class jk {
         if (InstrumentPatch.field_n == null) {
             return;
         }
-        nb.a(-2, InstrumentPatch.field_n);
+        EntitySpawnSupport.detachCanvasInputListeners(-2, InstrumentPatch.field_n);
         InstrumentPatch.field_n.exitFullscreen(0, MenuScreen.platformTaskDispatcher);
         if (param0 <= -14) {
             InstrumentPatch.field_n = null;

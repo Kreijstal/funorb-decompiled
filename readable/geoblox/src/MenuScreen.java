@@ -167,13 +167,13 @@ abstract class MenuScreen {
               this.pointerInteractionActive = false;
             }
           } else {
-            if ((gf.heldPointerButtonSnapshot != 0) &&
+            if ((EntityCollisionSupport.heldPointerButtonSnapshot != 0) &&
                 (this.pointerInteractionActive)) {
               hitItemIndex = this.selectedItemIndex;
               if (hitItemIndex == -1) {
                 break L0;
               }
-              this.handleMenuPointer(hitItemIndex, PrefixCodeDecoder.pointerXSnapshot, false, -(this.itemSpacing * hitItemIndex) + (PcmResampler.pointerYSnapshot - this.firstItemY), true, gf.heldPointerButtonSnapshot);
+              this.handleMenuPointer(hitItemIndex, PrefixCodeDecoder.pointerXSnapshot, false, -(this.itemSpacing * hitItemIndex) + (PcmResampler.pointerYSnapshot - this.firstItemY), true, EntityCollisionSupport.heldPointerButtonSnapshot);
               break L0;
             }
             this.pointerInteractionActive = false;

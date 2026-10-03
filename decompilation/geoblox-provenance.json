@@ -3263,11 +3263,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "afddd01bff7bb0dbac4b1577a96024a054ec5dd4",
+    "commit": "9b812d9c89626764cfc09971b1499118ebac9b82",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "0d1ece6a0ba41426540a89699eb9bc4b27a144aafb2c4345278491bb32439178"
+      "sha256": "e2d2312496a045c8d208c9569471d16a125573e7151a31c4a5e315ee2c8f106b"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "2c484739875974414ece3eee5edc52aabfcd7ce012183ea699381ff0177687fa",
@@ -3277,10 +3277,10 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "925dc212e43f65666ab59f2b58542a13c87f41bb1275759c681569d55e227316",
+    "outputTreeSha256": "393e7ceab781989c3d9f532006d258c873c24de7583eb482ed6a5048492cf205",
     "files": 303,
-    "rules": 9889,
-    "identifierEdits": 78860,
+    "rules": 10038,
+    "identifierEdits": 79782,
     "bindingsCompared": 136612,
     "overrideRelationshipsPreserved": 388,
     "relocation": "Current scripts, manifest, proofs and frozen naming dependency moved from FunOrb to Deko; previous reviewed rules remain in FunOrb Git history. Source proof imports and repository paths change, native trace/oracle constants do not.",
@@ -3320,5 +3320,45 @@
     "sourceProofTestRepository": "Kreijstal/dekobloko-work",
     "sourceProofTestSha256": "ca56dedb147639199db9571d40786321275e25707ace1c886313bb0ee087b42c",
     "scope": "One-shot array reads in direct returns, primitive declarations, bound local assignments and leading if operands. Capture/index/counter bindings and pure array references are proved from complete AST/token accounting. No repeated condition, earlier side effect, field/getter array reference, compound assignment or escaped capture is accepted. Null/bounds/unboxing failure, counter overflow, later condition effects, short-circuit selection and cleanup/monitor order remain. Generic native comparisons and full source token/binding compilation checks do not establish whole-game, asset, browser, phone, heap or FPS equivalence."
+  },
+  "gameplaySupportNaming": {
+    "historicalPassVersion": 120,
+    "workflowRepository": "Kreijstal/dekobloko-work",
+    "workflowCommit": "9b812d9c89626764cfc09971b1499118ebac9b82",
+    "previousRulesCommit": "afddd01bff7bb0dbac4b1577a96024a054ec5dd4",
+    "rulesAdded": 149,
+    "kindsAdded": {
+      "C": 7,
+      "F": 4,
+      "L": 95,
+      "M": 15,
+      "P": 28
+    },
+    "allPreviousCompleteRulesPreserved": 9889,
+    "identifierEditsAdded": 922,
+    "classNamesAfter": {
+      "renamed": 233,
+      "originalMeaningful": 1,
+      "opaque": 69
+    },
+    "owners": {
+      "ab": "EntityMotionSupport",
+      "gf": "EntityCollisionSupport",
+      "nb": "EntitySpawnSupport",
+      "kc": "BoardReconciliationSupport",
+      "ih": "EntityContactSupport",
+      "ik": "EntityLinkSupport",
+      "jc": "AvatarFeedbackSupport"
+    },
+    "sourceToolAndNativePinsUnchanged": true,
+    "rawSourceBodiesEdited": false,
+    "bytecodeChanged": false,
+    "declarationLocalOrdinalsChanged": false,
+    "bindingsCompared": 136612,
+    "overrideRelationshipsPreserved": 388,
+    "publicationTestsPassed": 24,
+    "nativeProbeFilesPassed": 7,
+    "dictionaryReversalByteExactFiles": 303,
+    "scope": "Mixed-purpose static helper owners named by their gameplay operation; unrelated functions and globals remain on each owner. Contact mask clipping/scan, reciprocal-link context, input cleanup, ranked-index sorting and applet navigation names follow guarded source declarations. Existing native fixture scopes retain fixed hashes; no new whole-game, asset, navigation/network, browser/phone or heap/FPS equivalence."
   }
 }

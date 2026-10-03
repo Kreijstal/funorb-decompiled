@@ -48,9 +48,9 @@ abstract class CacheReference extends DualLinkNode {
 
     final static void a(byte param0, ResourceArchive param1, boolean param2, ResourceArchive param3, ResourceArchive param4) {
         try {
-            ih.field_c = ImageProducerRasterBuffer.a((byte) 86, "");
+            EntityContactSupport.activeEmailAvailabilityQuery = ImageProducerRasterBuffer.a((byte) 86, "");
             int var5_int = 103 / ((param0 - 70) / 34);
-            ih.field_c.complete((byte) -126, false);
+            EntityContactSupport.activeEmailAvailabilityQuery.complete((byte) -126, false);
             IndexedSpriteState.a((byte) 103, param1, param4, param3);
             AccountCreationForm.h((byte) -121);
             kd.field_b = DiskCacheWorker.field_l;

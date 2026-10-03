@@ -492,7 +492,7 @@ abstract class ResizableDialog extends FadingDialog {
           var7++;
           var8++;
         }
-        jc.field_a.draw(-90 + this.widgetWidth + param0, 10 + param2);
+        AvatarFeedbackSupport.grayJagexLogoSprite.draw(-90 + this.widgetWidth + param0, 10 + param2);
         if (param1 != 20) {
           this.resizeTargetHeight = -34;
         }

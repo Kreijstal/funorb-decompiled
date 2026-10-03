@@ -32,7 +32,7 @@ final class MidiNote extends IntrusiveNode {
         int var1 = -125 / ((param0 - 56) / 54);
         jk.a((byte) -90);
         if (null != MessageDialog.gameCanvas) {
-            nb.a(-2, MessageDialog.gameCanvas);
+            EntitySpawnSupport.detachCanvasInputListeners(-2, MessageDialog.gameCanvas);
             MidiPcmStream.c(-11099);
             ValidatedTextInputWidget.b(true);
             TextLayout.a((byte) -121);

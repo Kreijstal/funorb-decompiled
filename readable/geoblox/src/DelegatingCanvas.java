@@ -87,7 +87,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
                 TextValidationFailure.a(GzipInflater.field_g, var6_int, (byte) -97, StatefulWidgetRenderer.field_v, EmailAvailabilityQuery.field_b, HighscoreNameEntry.field_b);
               }
             }
-            kc.a(var5, (byte) -98);
+            BoardReconciliationSupport.sortRankedListIndices(var5, (byte) -98);
             var6 = new String[2][var5];
             var18 = new int[2][4 * var5];
             var8 = md.field_c;

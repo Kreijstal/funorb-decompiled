@@ -40,7 +40,7 @@ final class ResourceArchive {
           while (attachedEntity != null) {
             attachedEntity.matchCooldownTicks = attachedEntity.matchCooldownTicks - 1;
             if (attachedEntity.matchCooldownTicks == 0) {
-              ab.boardContactStateDirty = true;
+              EntityMotionSupport.boardContactStateDirty = true;
             }
             if (null == attachedEntity.entityQueue) {
               attachedEntity.advanceEntityAnimation(true);
@@ -58,12 +58,12 @@ final class ResourceArchive {
           CrcAcknowledgedPacket.requestAvatarTintForRadius(maximumEntityRadiusSquared, (byte) 14);
           if (10000.0f > maximumEntityRadiusSquared) {
             lowRadiusFeedbackMode = 0;
-            jc.requestAvatarFeedback(lowRadiusFeedbackMode, false);
+            AvatarFeedbackSupport.requestAvatarFeedback(lowRadiusFeedbackMode, false);
           } else {
             if (!(25600.0f > maximumEntityRadiusSquared)) {
-              jc.requestAvatarFeedback(2, false);
+              AvatarFeedbackSupport.requestAvatarFeedback(2, false);
             } else {
-              jc.requestAvatarFeedback(1, false);
+              AvatarFeedbackSupport.requestAvatarFeedback(1, false);
             }
           }
           return;
@@ -120,7 +120,7 @@ final class ResourceArchive {
           }
           groupName = groupName.toLowerCase();
           groupNameCharacters = (CharSequence) ((Object) groupName);
-          groupId = this.index.groupNameLookup.findIndex(true, ab.hashEncodedText(94, groupNameCharacters));
+          groupId = this.index.groupNameLookup.findIndex(true, EntityMotionSupport.hashEncodedText(94, groupNameCharacters));
           if (groupId >= 0) {
             return true;
           }
@@ -200,7 +200,7 @@ final class ResourceArchive {
           }
           fileName = fileName.toLowerCase();
           fileNameCharacters = (CharSequence) ((Object) fileName);
-          fileId = this.index.fileNameLookups[groupId].findIndex(true, ab.hashEncodedText(99, fileNameCharacters));
+          fileId = this.index.fileNameLookups[groupId].findIndex(true, EntityMotionSupport.hashEncodedText(99, fileNameCharacters));
           if (this.isValidFileId(fileId, -1, groupId)) {
             fileIdBeforeReturn = fileId;
             return fileIdBeforeReturn;
@@ -254,7 +254,7 @@ final class ResourceArchive {
           }
           groupName = groupName.toLowerCase();
           groupNameCharacters = (CharSequence) ((Object) groupName);
-          groupId = this.index.groupNameLookup.findIndex(true, ab.hashEncodedText(84, groupNameCharacters));
+          groupId = this.index.groupNameLookup.findIndex(true, EntityMotionSupport.hashEncodedText(84, groupNameCharacters));
           groupProgressBeforeReturn = this.getGroupProgress((byte) 85, groupId);
           return groupProgressBeforeReturn;
         } catch (java.lang.RuntimeException progressFailure) {
@@ -682,7 +682,7 @@ final class ResourceArchive {
           }
           groupName = groupName.toLowerCase();
           groupNameCharacters = (CharSequence) ((Object) groupName);
-          groupId = this.index.groupNameLookup.findIndex(true, ab.hashEncodedText(124, groupNameCharacters));
+          groupId = this.index.groupNameLookup.findIndex(true, EntityMotionSupport.hashEncodedText(124, groupNameCharacters));
           if (!this.isValidGroupId(groupId, 3)) {
             invalidGroupIdBeforeReturn = -1;
             return invalidGroupIdBeforeReturn;
@@ -724,7 +724,7 @@ final class ResourceArchive {
             createUsernameUnavailableText = (String) null;
           }
           groupNameCharacters = (CharSequence) ((Object) groupName);
-          groupId = this.index.groupNameLookup.findIndex(true, ab.hashEncodedText(69, groupNameCharacters));
+          groupId = this.index.groupNameLookup.findIndex(true, EntityMotionSupport.hashEncodedText(69, groupNameCharacters));
           groupLoadedBeforeReturn = this.loadGroupIfNeeded((byte) 102, groupId);
           return groupLoadedBeforeReturn;
         } catch (java.lang.RuntimeException groupFailure) {
@@ -790,12 +790,12 @@ final class ResourceArchive {
           groupName = groupName.toLowerCase();
           fileName = fileName.toLowerCase();
           groupNameCharacters = (CharSequence) ((Object) groupName);
-          groupId = this.index.groupNameLookup.findIndex(true, ab.hashEncodedText(80, groupNameCharacters));
+          groupId = this.index.groupNameLookup.findIndex(true, EntityMotionSupport.hashEncodedText(80, groupNameCharacters));
           if (!this.isValidGroupId(groupId, 3)) {
             return false;
           }
           fileNameCharacters = (CharSequence) ((Object) fileName);
-          fileId = this.index.fileNameLookups[groupId].findIndex(true, ab.hashEncodedText(93, fileNameCharacters));
+          fileId = this.index.fileNameLookups[groupId].findIndex(true, EntityMotionSupport.hashEncodedText(93, fileNameCharacters));
           if (methodGuard == 113) {
             fileAvailabilityBeforeReturn = this.isFileAvailable((byte) 37, groupId, fileId);
             return fileAvailabilityBeforeReturn;
@@ -858,12 +858,12 @@ final class ResourceArchive {
           groupName = groupName.toLowerCase();
           fileName = fileName.toLowerCase();
           groupNameCharacters = (CharSequence) ((Object) groupName);
-          groupId = this.index.groupNameLookup.findIndex(true, ab.hashEncodedText(54, groupNameCharacters));
+          groupId = this.index.groupNameLookup.findIndex(true, EntityMotionSupport.hashEncodedText(54, groupNameCharacters));
           if (!this.isValidGroupId(groupId, 3)) {
             return null;
           }
           fileNameCharacters = (CharSequence) ((Object) fileName);
-          fileId = this.index.fileNameLookups[groupId].findIndex(true, ab.hashEncodedText(43, fileNameCharacters));
+          fileId = this.index.fileNameLookups[groupId].findIndex(true, EntityMotionSupport.hashEncodedText(43, fileNameCharacters));
           fileBytesBeforeReturn = this.getFile(groupId, -28153, fileId);
           return fileBytesBeforeReturn;
         } catch (java.lang.RuntimeException fileFailure) {

@@ -40,7 +40,7 @@ final class ValidationState {
                 eh.pendingActionPanelTop = eh.pendingActionPanelTop + 1;
                 if (panelTopBeforeIncrement > 480) {
                   ArchiveRequest.pendingActionMarkers.removeFirst((byte) -118);
-                  gf.preparePendingActionPanel((byte) -12);
+                  EntityCollisionSupport.preparePendingActionPanel((byte) -12);
                   return;
                 }
               }
@@ -80,7 +80,7 @@ final class ValidationState {
           return;
         }
         ArchiveRequest.pendingActionMarkers.removeFirst((byte) -118);
-        gf.preparePendingActionPanel((byte) -12);
+        EntityCollisionSupport.preparePendingActionPanel((byte) -12);
         return;
     }
 

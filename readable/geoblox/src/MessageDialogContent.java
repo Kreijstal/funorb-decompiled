@@ -52,7 +52,7 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
           logoInputAlias = logoInput;
           meshCount = logoInputAlias.readUnsignedByte((byte) 34);
           logoInputAlias.beginBitAccess(methodGuard + 8);
-          DirectByteStorage.meshMaterials = jc.readMeshMaterials(logoInputAlias, true);
+          DirectByteStorage.meshMaterials = AvatarFeedbackSupport.readMeshMaterials(logoInputAlias, true);
           ArchiveIndex.logoMeshes = new TriangleMesh[meshCount];
           ValidationMessageWidget.logoMeshCenters = new int[meshCount][];
           for (meshIndexOrInitialCursor = 0; meshIndexOrInitialCursor < meshCount; meshIndexOrInitialCursor++) {

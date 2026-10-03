@@ -10,7 +10,7 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
         a.attachedEntities.moveAllTo(SecondaryNodeDeque.availableEntities, (byte) -70);
         SecondaryDeque.spawnQueue.moveAllTo(SecondaryNodeDeque.availableEntities, (byte) -70);
         DelegatingCanvas.transientEntities.moveAllTo(SecondaryNodeDeque.availableEntities, (byte) -70);
-        kc.ticksSinceLastEntityRelease = 0;
+        BoardReconciliationSupport.ticksSinceLastEntityRelease = 0;
         HotspotTextWidget.spriteScratchRaster.setAsRasterTarget();
         SoftwareRasterizer.clearFramebuffer();
         SecondaryDeque.contactProbeRaster.setAsRasterTarget();
@@ -18,7 +18,7 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
         SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
         Bzip2DecoderState.avatarShockContactPending = false;
         rb.kindFourRemovalCount = 0;
-        ab.boardContactStateDirty = false;
+        EntityMotionSupport.boardContactStateDirty = false;
         fa.entitiesDetachedThisTick = false;
         w.avatarShockPending = false;
         wb.newAttachmentCount = 0;

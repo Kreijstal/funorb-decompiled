@@ -28,7 +28,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
             var5 = (ResourceArchive) null;
             UsernameSuggestionsPanel.a(110, (ResourceArchive) null, -39, true);
           }
-          stackIn_6_0 = ab.buildFirstIndexedSpriteFromDecodedSheet(104);
+          stackIn_6_0 = EntityMotionSupport.buildFirstIndexedSpriteFromDecodedSheet(104);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -60,11 +60,11 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
         if (kd.field_b == IntrusiveDeque.field_d) {
             return ResourceArchive.field_i;
         }
-        if (!ih.field_c.isCompleted(-113)) {
-            return ih.field_c.candidateEmail(param0 + 19391);
+        if (!EntityContactSupport.activeEmailAvailabilityQuery.isCompleted(-113)) {
+            return EntityContactSupport.activeEmailAvailabilityQuery.candidateEmail(param0 + 19391);
         }
         if (WidgetSkinState.field_g == IntrusiveDeque.field_d) {
-            return ih.field_c.candidateEmail(19491);
+            return EntityContactSupport.activeEmailAvailabilityQuery.candidateEmail(19491);
         }
         return b.field_a;
     }
@@ -87,7 +87,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
         BitmapFont var5 = DialogLayer.sharedUiFont;
         int var6 = -69 / ((1 - methodGuard) / 43);
         if (!(this.suggestions == null)) {
-            var5.drawParagraph(ab.createSuggestionsText, this.widgetX + parentX, parentY + this.widgetY, this.widgetWidth, 20, 16777215, -1, 0, 0, var5.maxDescent + var5.maxAscent);
+            var5.drawParagraph(EntityMotionSupport.createSuggestionsText, this.widgetX + parentX, parentY + this.widgetY, this.widgetWidth, 20, 16777215, -1, 0, 0, var5.maxDescent + var5.maxAscent);
         }
     }
 

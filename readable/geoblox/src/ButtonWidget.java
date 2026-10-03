@@ -79,11 +79,11 @@ class ButtonWidget extends UiWidget {
         try {
             super.updatePointerState(hoverGuard, parentY, eventContext, parentX);
             if (0 != this.pressedPointerButton) {
-                if (gf.heldPointerButtonSnapshot == this.pressedPointerButton) {
+                if (EntityCollisionSupport.heldPointerButtonSnapshot == this.pressedPointerButton) {
                     return;
                 }
                 if ((this.containsPointer(PrefixCodeDecoder.pointerXSnapshot, -1, PcmResampler.pointerYSnapshot, parentY, parentX)) &&
-                    (!(gf.heldPointerButtonSnapshot != 0))) {
+                    (!(EntityCollisionSupport.heldPointerButtonSnapshot != 0))) {
                     this.activateButton(PcmResampler.pointerYSnapshot - parentY, -28922, PrefixCodeDecoder.pointerXSnapshot - parentX, this.pressedPointerButton);
                 }
                 this.handlePointerRelease(parentX, PrefixCodeDecoder.pointerXSnapshot, !hoverGuard ? true : false, eventContext, parentY, PcmResampler.pointerYSnapshot);

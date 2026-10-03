@@ -26,7 +26,7 @@ abstract class SocketConnector {
         if (param0 != 7) {
             return true;
         }
-        return !ih.field_c.isCompleted(-95) ? true : false;
+        return !EntityContactSupport.activeEmailAvailabilityQuery.isCompleted(-95) ? true : false;
     }
 
     final static SocialListEntry findSocialEntry(byte methodGuard, String displayName) {

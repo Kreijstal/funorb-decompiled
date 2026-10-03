@@ -37,17 +37,17 @@ final class HighscoreNameEntry {
             }
             if ((!((!((MidiPcmStream.heldInternalKeys[99]) &&
                   (ArchiveNetworkClient.movingEntities.isEmpty(13519)))) &&
-                (~kb.spawnReleaseIntervalTicks <= ~kc.ticksSinceLastEntityRelease)) ||
+                (~kb.spawnReleaseIntervalTicks <= ~BoardReconciliationSupport.ticksSinceLastEntityRelease)) ||
                 (!(ul.releasedInCurrentTheme != 0) &&
                   !(UiWidget.gameplaySession.tutorialMode)))) {
               if ((0 < SecondaryDeque.spawnQueue.countNodes(methodGuard ^ -170)) &&
                   (!UiWidget.gameplaySession.spawnReleaseDisabled)) {
                 ArchiveNetworkClient.movingEntities.addLast(-48, SecondaryDeque.spawnQueue.removeFirst((byte) -124));
                 LabeledChildWidget.recordEntityRelease(2);
-                kc.ticksSinceLastEntityRelease = 0;
+                BoardReconciliationSupport.ticksSinceLastEntityRelease = 0;
               }
             }
-            kc.ticksSinceLastEntityRelease = kc.ticksSinceLastEntityRelease + 1;
+            BoardReconciliationSupport.ticksSinceLastEntityRelease = BoardReconciliationSupport.ticksSinceLastEntityRelease + 1;
             if ((SecondaryDeque.spawnQueue.countNodes(methodGuard ^ 143) < 3) &&
                 (DelayedIncomingPacket.c((byte) -53)) &&
                 (!UiWidget.gameplaySession.canAdvanceSession(true))) {
@@ -61,7 +61,7 @@ final class HighscoreNameEntry {
                 inverseSpawnDistance = 1.0 / Math.sqrt((double)(inwardDirectionY * inwardDirectionY + inwardDirectionX * inwardDirectionX));
                 inwardDirectionY = (float)((double)inwardDirectionY * inverseSpawnDistance);
                 inwardDirectionX = (float)((double)inwardDirectionX * inverseSpawnDistance);
-                queuedEntityThenPooledEntity.initializeEntityMotion(101, spawnPositionX, ClientSessionSnapshot.chooseSpawnSpriteKind(methodGuard ^ 741924143), TextTemplateDefinition.entityMotionSpeed * inwardDirectionX, TriangleMesh.chooseSpawnSpriteVariant((byte) -67), kc.ticksSinceLastEntityRelease + kb.spawnReleaseIntervalTicks * (1 + SecondaryDeque.spawnQueue.countNodes(111)), 0.0f, spawnPositionY, inwardDirectionY * TextTemplateDefinition.entityMotionSpeed, FullscreenErrorDialog.chooseSpawnEntityCategory(methodGuard ^ 131), 0.0f);
+                queuedEntityThenPooledEntity.initializeEntityMotion(101, spawnPositionX, ClientSessionSnapshot.chooseSpawnSpriteKind(methodGuard ^ 741924143), TextTemplateDefinition.entityMotionSpeed * inwardDirectionX, TriangleMesh.chooseSpawnSpriteVariant((byte) -67), BoardReconciliationSupport.ticksSinceLastEntityRelease + kb.spawnReleaseIntervalTicks * (1 + SecondaryDeque.spawnQueue.countNodes(111)), 0.0f, spawnPositionY, inwardDirectionY * TextTemplateDefinition.entityMotionSpeed, FullscreenErrorDialog.chooseSpawnEntityCategory(methodGuard ^ 131), 0.0f);
                 SecondaryDeque.spawnQueue.addLast(-47, queuedEntityThenPooledEntity);
                 mf.b(false);
               }

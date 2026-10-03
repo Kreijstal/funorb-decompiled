@@ -42,14 +42,14 @@ final class ri {
               }
               if (PacketBuffer.currentProtocolStage == IterableNodeHashTable.field_d) {
                 if (!param0) {
-                  ih.field_a = HotspotTextWidget.a(false, param1, param4, false);
+                  EntityContactSupport.pendingLoginPayload = HotspotTextWidget.a(false, param1, param4, false);
                 } else {
                   var11 = (String) null;
-                  ih.field_a = SecondaryDeque.a(true, oa.field_c, (String) null, param1, false);
+                  EntityContactSupport.pendingLoginPayload = SecondaryDeque.a(true, oa.field_c, (String) null, param1, false);
                 }
                 CacheReference.field_q.position = 0;
                 CacheReference.field_q.writeByte((byte) -102, 14);
-                CacheReference.field_q.writeByte((byte) -78, ih.field_a.payloadKind((byte) -32).wireId);
+                CacheReference.field_q.writeByte((byte) -78, EntityContactSupport.pendingLoginPayload.payloadKind((byte) -32).wireId);
                 NanoFrameTimer.a(-1, -1);
                 PacketBuffer.currentProtocolStage = ResizableDialog.field_T;
               }
@@ -69,7 +69,7 @@ final class ri {
                   (UiWidget.b(30000, 8))) {
                 ak.field_a = eh.field_d.readLongBE(2901);
                 eh.field_d.position = 0;
-                UsernameAvailabilityValidator.a(26, param2, param0, ih.field_a, param3);
+                UsernameAvailabilityValidator.a(26, param2, param0, EntityContactSupport.pendingLoginPayload, param3);
                 PacketBuffer.currentProtocolStage = da.field_g;
               }
               if (param5 != 0) {
@@ -131,10 +131,10 @@ final class ri {
                 SecondaryDeque.field_f = eh.field_d.readNullTerminatedText((byte) 105);
                 var12 = (CharSequence) ((Object) SecondaryDeque.field_f);
                 SecondaryNodeHashTable.field_b = ResizableDialog.a(var12, 12);
-                ik.field_a = eh.field_d.readUnsignedByte((byte) 34);
+                EntityLinkSupport.field_a = eh.field_d.readUnsignedByte((byte) 34);
                 PacketBuffer.currentProtocolStage = eh.field_b;
-                if (ih.field_a.payloadKind((byte) -32) != ej.field_b) {
-                  if (ih.field_a.payloadKind((byte) -32) == Geoblox.longAndNameLoginType) {
+                if (EntityContactSupport.pendingLoginPayload.payloadKind((byte) -32) != ej.field_b) {
+                  if (EntityContactSupport.pendingLoginPayload.payloadKind((byte) -32) == Geoblox.longAndNameLoginType) {
                     ProgressDialog.field_W.rememberMethod(NodeHashTableIterator.c(108), 0);
                   }
                 } else {

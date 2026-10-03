@@ -269,13 +269,13 @@ final class GameplaySession {
             default:
               themeResourceGroup = "";
           }
-          graphicsLoadingMessage = gf.formatArchiveGroupProgress(TextWidgetRenderer.waitingForGraphicsText, ll.gameGraphicsArchive, themeResourceGroup, AccountWelcomePanel.loadingGraphicsText, true);
+          graphicsLoadingMessage = EntityCollisionSupport.formatArchiveGroupProgress(TextWidgetRenderer.waitingForGraphicsText, ll.gameGraphicsArchive, themeResourceGroup, AccountWelcomePanel.loadingGraphicsText, true);
           loadingPanelWidthOrScoreBoxY = 30 + FadingDialog.uiPaletteFont.measureTextWidth(graphicsLoadingMessage);
           DelayedIncomingPacket.drawNineSlicePanel(215, 320 - loadingPanelWidthOrScoreBoxY / 2, 50, (byte) -92, loadingPanelWidthOrScoreBoxY, ll.frameNineSliceSprites);
           FadingDialog.uiPaletteFont.drawCenteredText(graphicsLoadingMessage, 320, 250, 0, -1);
           return;
         }
-        if ((ih.areEntityQueuesSettled(0)) &&
+        if ((EntityContactSupport.areEntityQueuesSettled(0)) &&
             (this.sceneTransitionRequested) &&
             (this.sceneTransitionInProgress)) {
           selectedSceneTransitionFlag = 1;
@@ -345,7 +345,7 @@ final class GameplaySession {
           }
           lj.smallBoxSprite.draw(selectedThemeIdOrScoreBoxX, loadingPanelWidthOrScoreBoxY);
           if (!((0 == this.sessionPhase) &&
-              (!ih.areEntityQueuesSettled(0)))) {
+              (!EntityContactSupport.areEntityQueuesSettled(0)))) {
             UsernameSuggestionsPanel.largeBoxSprite.draw(446, 410);
             if (clientControlFlowGuard == 0) {
               break L19;
@@ -354,7 +354,7 @@ final class GameplaySession {
           PasswordValidator.countBoxSprite.draw(468, 410);
         }
         if (!this.tutorialMode) {
-          if ((!(ih.areEntityQueuesSettled(0)) ||
+          if ((!(EntityContactSupport.areEntityQueuesSettled(0)) ||
               (!(sceneTransitionFlag == 0) &&
                 !((0 != this.sessionPhase) &&
                 (this.sessionPhase != 1))))) {
@@ -477,7 +477,7 @@ final class GameplaySession {
                         lj.smallBoxSprite.drawScaledSilhouette(selectedThemeIdOrScoreBoxX / 2, loadingPanelWidthOrScoreBoxY / 2, lj.smallBoxSprite.fullWidth / 2, lj.smallBoxSprite.fullHeight / 2, tutorialTopOrDebugColorOrTransitionClipTop);
                       }
                       if ((this.sessionPhase == 0) &&
-                          (!ih.areEntityQueuesSettled(0))) {
+                          (!EntityContactSupport.areEntityQueuesSettled(0))) {
                         PasswordValidator.countBoxSprite.drawScaledSilhouette(234, 205, PasswordValidator.countBoxSprite.fullWidth / 2, PasswordValidator.countBoxSprite.fullHeight / 2, tutorialTopOrDebugColorOrTransitionClipTop);
                         if (clientControlFlowGuard == 0) {
                           break L43;
@@ -531,7 +531,7 @@ final class GameplaySession {
             }
             L55: {
               FadingDialog.uiPaletteFont.drawText(OpacityWidget.a(LimitedRandomAccessFile.field_a, new String[]{this.scoreText.toString()}, (byte) -53), 15 + selectedThemeIdOrScoreBoxX, 30 + loadingPanelWidthOrScoreBoxY, 0, -1);
-              if (ih.areEntityQueuesSettled(0)) {
+              if (EntityContactSupport.areEntityQueuesSettled(0)) {
                 if (!((0 != this.sessionPhase) &&
                       (this.sessionPhase != 1))) {
                   if (sceneTransitionFlag == 0) {
@@ -604,7 +604,7 @@ final class GameplaySession {
                 if (this.pointsPanelX != 463) {
                   break L2;
                 }
-                if (gf.matchChainLength != 0) {
+                if (EntityCollisionSupport.matchChainLength != 0) {
                   break L2;
                 }
                 this.pointsPanelSlideDirection = 1;
@@ -623,7 +623,7 @@ final class GameplaySession {
         }
         L7: {
           if (!this.sessionEnding) {
-            if ((!((!((ih.areEntityQueuesSettled(0)) &&
+            if ((!((!((EntityContactSupport.areEntityQueuesSettled(0)) &&
                     (!this.matchBatchProcessedThisTick))) &&
                   (this.preserveScoreOnTransition))) &&
                 (this.canAdvanceSession(true))) {
@@ -897,10 +897,10 @@ final class GameplaySession {
               }
               this.connectivityRebuiltThisTick = false;
             }
-            this.boundaryCheckRequested = ab.boardContactStateDirty;
+            this.boundaryCheckRequested = EntityMotionSupport.boardContactStateDirty;
             SecondaryNodeDequeIterator.advanceActiveEntityAnimations((byte) -15);
-            kc.reconcileBoardEntities(methodGuard + 1578896101);
-            if (ab.boardContactStateDirty) {
+            BoardReconciliationSupport.reconcileBoardEntities(methodGuard + 1578896101);
+            if (EntityMotionSupport.boardContactStateDirty) {
               ul.collectMatchCandidates(-2);
             }
             this.matchBatchProcessedThisTick = ec.processMatchCandidates(-18913);
@@ -1003,7 +1003,7 @@ final class GameplaySession {
                   toggledRotationControlsSwapped = true;
                 }
                 ((GameplaySession) (this)).rotationControlsSwapped = toggledRotationControlsSwapped;
-                jc.requestAvatarFeedback(7, false);
+                AvatarFeedbackSupport.requestAvatarFeedback(7, false);
               }
               if (2 > SpriteCheckboxRenderer.field_f) {
                 continue;
@@ -1138,7 +1138,7 @@ final class GameplaySession {
           if (debugKeyCodeOrPointerEventComplement != debugKeySentinelOrPointerEventSentinel) {
             if ((this.debugPointerSpawnEnabled) &&
                 (SpriteCheckboxRenderer.field_f >= 2)) {
-              nb.spawnEntityAtPointer(-28195, mc.pointerPressXSnapshot, this.debugSpawnCategoryId, FullscreenFocusCanvas.pointerPressYSnapshot, this.debugSpawnVariantId, this.debugSpawnSpecialKinds);
+              EntitySpawnSupport.spawnEntityAtPointer(-28195, mc.pointerPressXSnapshot, this.debugSpawnCategoryId, FullscreenFocusCanvas.pointerPressYSnapshot, this.debugSpawnVariantId, this.debugSpawnSpecialKinds);
             }
             L100: {
               if ((this.tutorialMode) &&
@@ -1536,7 +1536,7 @@ final class GameplaySession {
         GameplayEntity endingEntity = null;
         controlFlowGuard = Geoblox.clientControlFlowFlag;
         if (0 == this.sceneAnimationTick) {
-          gf.matchChainLength = 0;
+          EntityCollisionSupport.matchChainLength = 0;
           if (BufferedRandomAccessFile.checkBoundaryLossAndStartCascade(methodGuard - 11)) {
             this.pointsPanelSlideDirection = 0;
             return;
@@ -1786,7 +1786,7 @@ final class GameplaySession {
         lb.secondaryAchievementTrackingCounter = 935;
         this.addScore((byte) 127, 0);
         this.addPopupPoints(0, -96);
-        gf.matchChainLength = 1;
+        EntityCollisionSupport.matchChainLength = 1;
         this.pointsPanelSlideDirection = 1;
         this.pointsPanelX = 640;
         ValidationIconWidget.recycleAllScorePopups((byte) -93);

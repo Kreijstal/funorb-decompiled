@@ -50,10 +50,10 @@ final class DequeCursor {
               ValidationIconWidget.playPcmSample(-348, fl.gameSoundSamples[7]);
               sg.field_d = true;
             }
-            if ((!ab.field_d) &&
+            if ((!EntityMotionSupport.field_d) &&
                 (-var2 + (320 - AccountCreationForm.introGeometryFrames[1].fullWidth) <= -1200 + var3)) {
               ValidationIconWidget.playPcmSample(-348, fl.gameSoundSamples[8]);
-              ab.field_d = true;
+              EntityMotionSupport.field_d = true;
             }
             stackIn_25_0 = !(494 > MatchingTextValidator.field_j);
             return stackIn_25_0;
@@ -140,7 +140,7 @@ final class DequeCursor {
             stackIn_14_0 = 1;
             return stackIn_14_0;
           }
-          if (!ih.field_c.isCompleted(-106)) {
+          if (!EntityContactSupport.activeEmailAvailabilityQuery.isCompleted(-106)) {
             stackIn_17_0 = 1;
             return stackIn_17_0;
           }

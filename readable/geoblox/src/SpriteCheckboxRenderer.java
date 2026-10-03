@@ -95,7 +95,7 @@ final class SpriteCheckboxRenderer implements WidgetRenderer {
         try {
           var6_int = widget.widgetX + parentX;
           var7 = widget.widgetY + parentY;
-          ik.a(var6_int, widget.widgetHeight, var7, widget.widgetWidth, -1540604944);
+          EntityLinkSupport.drawGradientWidgetBorder(var6_int, widget.widgetHeight, var7, widget.widgetWidth, -1540604944);
           var8 = oa.field_e[1];
           if ((widget instanceof ButtonWidget) &&
               (((ButtonWidget) ((Object) widget)).active)) {

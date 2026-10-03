@@ -2049,7 +2049,7 @@ final class GameScreen extends MenuScreen {
                     break L1;
                   }
                 case 7:
-                  gf.a(NodeHashTableIterator.c(methodGuard ^ -125), 62);
+                  EntityCollisionSupport.openQuitPage(NodeHashTableIterator.c(methodGuard ^ -125), 62);
                   if (clientControlFlowGuard == 0) {
                     break L1;
                   }
@@ -2115,7 +2115,7 @@ final class GameScreen extends MenuScreen {
             L47: {
               if (newSessionTutorialModeFlag == 0) {
                 if ((UnderlinedButtonRenderer.c(methodGuard ^ 107)) &&
-                    (kc.sessionStartAttemptCount == 0)) {
+                    (BoardReconciliationSupport.sessionStartAttemptCount == 0)) {
                   newSessionTutorialModeFlag = 1;
                   if (clientControlFlowGuard == 0) {
                     break L47;
@@ -2130,7 +2130,7 @@ final class GameScreen extends MenuScreen {
                 }
               }
             }
-            kc.sessionStartAttemptCount = kc.sessionStartAttemptCount + 1;
+            BoardReconciliationSupport.sessionStartAttemptCount = BoardReconciliationSupport.sessionStartAttemptCount + 1;
             pg.resetGameplayDifficulty(methodGuard ^ -9410);
             UiWidget.gameplaySession = new GameplaySession(this.gameApplet, newSessionTutorialModeFlag != 0);
             PointerInputListener.a((byte) -39);

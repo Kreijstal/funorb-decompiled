@@ -524,7 +524,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           ValidationState.field_d = true;
           CrcAcknowledgedPacket.field_g = true;
           dl.field_c = true;
-          ab.field_a = false;
+          EntityMotionSupport.field_a = false;
           Geoblox.canvasCreationTimeMillis = oa.a(-12520);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -713,7 +713,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   return;
                 }
               }
-              ab.field_a = true;
+              EntityMotionSupport.field_a = true;
             }
             return;
           }

@@ -7,13 +7,13 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/afddd01bff7bb0dbac4b1577a96024a054ec5dd4/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/9b812d9c89626764cfc09971b1499118ebac9b82/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 119)
+## Current readability (pass 120)
 
-The export has 9,889 guarded names and 78,860 identifier edits. Class coverage is
-226 semantic renames, one already meaningful `Geoblox` name and 76 opaque names.
+The export has 10,038 guarded names and 79,782 identifier edits. Class coverage is
+233 semantic renames, one already meaningful `Geoblox` name and 69 opaque names.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
 compile and compare 136,612 bindings, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
@@ -23,7 +23,26 @@ predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
 
-Pass 119 replaces 67 capture temporaries with proven postfix array reads in
+Pass 120 adds 149 guarded names: seven classes, four fields, 15 methods,
+28 parameters and 95 locals. The main gameplay helper owners now read as
+`EntityMotionSupport`, `EntityCollisionSupport`, `EntitySpawnSupport`,
+`BoardReconciliationSupport`, `EntityContactSupport`, `EntityLinkSupport` and
+`AvatarFeedbackSupport`. These describe their gameplay helper families; unrelated
+static functions and globals remain on their original owners. The contact-mask
+scan now names its crop bounds, pixel indices, row skips, kind-two mismatch,
+pooled conversion entity, avatar sentinel handling and exception context.
+The remaining link-operation diagnostics, canvas listener cleanup, ranked-list
+index sorting, applet quit navigation and widget gradient-border parameters
+also have source-supported names. Raw sources, local ordinals, bytecode,
+decompiler/naming-tool pins and native probe source/trace pins are unchanged;
+all 9,889 previous complete rules survive. The export has 10,038 rules and
+79,782 identifier edits. All 303 raw/readable files compile, compare 136,612
+bindings and preserve 388 override relationships. Class coverage is 233 renamed,
+one meaningful original name and 69 opaque names. The six large labeled bodies
+and 207 block labels remain. Whole-game/assets, applet navigation, live network,
+browser/phone and heap/FPS acceptance remain unverified.
+
+Pass 119 replaced 67 capture temporaries with proven postfix array reads in
 26 methods across seven files, including font glyph-mask conditions. The raw
 source shrinks by 201 lines to 76,320. The dictionary retires 47 deleted capture
 names and migrates 220 guarded local identities among 260 surviving local ordinal
@@ -118,7 +137,7 @@ No additional live account/UI coverage is claimed.
 Pass112 revisits proven exits exposed by final guard cleanup, replacing 13
 generated labels across nine bodies with ordinary guards and alternatives.
 There remain 207 generated plain block labels and six large labeled spans.
-`kc.reconcileBoardEntities` is now 339 lines with nine labels;
+`BoardReconciliationSupport.reconcileBoardEntities` is now 339 lines with nine labels;
 `SpriteState.drawSortedHalfBlendRgbTriangle` is 364 lines with seven. All 8,898
 complete naming rules and ordered bindings stay unchanged; source-byte and
 native evidence covers the documented transforms and probe scopes.
@@ -277,7 +296,7 @@ listed below, alongside the shortened menu dispatcher for comparison.
 | `GameScreen.activateMenuItem` | 277 | 4 |
 | `GameplaySession.renderSession` | 357 | 11 |
 | `GameplaySession.updateSession` | 631 | 13 |
-| `kc.reconcileBoardEntities` | 345 | 11 |
+| `BoardReconciliationSupport.reconcileBoardEntities` | 345 | 11 |
 | `SpriteState.drawSortedHalfBlendRgbTriangle` | 372 | 11 |
 
 Every field, method, parameter and local in GameScreen, MenuScreen and
@@ -303,7 +322,7 @@ Read `ra.recordAchievement(checkByte, guard, achievementId)` first. Tutorials
 and already-earned bits return immediately. A new achievement sets the newly
 earned mask, increments the session count, updates tracking bits/accumulator if
 not already tracked, sets the earned mask and queues a `PendingActionMarker`.
-A first notification calls `gf.preparePendingActionPanel`; subsequent notifications
+A first notification calls `EntityCollisionSupport.preparePendingActionPanel`; subsequent notifications
 wait in order. `lh.updatePendingActionPanel` moves the panel through phase 0
 (entering), 1 (holding) and 2 (exiting), then consumes the marker and prepares
 the next one. Title text comes from `pg.achievementTitles[actionId]`.
@@ -625,7 +644,7 @@ for phase2 and hold<0; its wrong guard still clears its unrelated static string.
 The session checks the prior scan flag, cry hold and sceneAnimationTick>1000
 before advancing the next scan/avatar update.
 
-`kc.sessionStartAttemptCount` increments before difficulty reset and constructing
+`BoardReconciliationSupport.sessionStartAttemptCount` increments before difficulty reset and constructing
 the next session; failure after that write does not roll it back. Its zero check
 participates in the first-session tutorial decision. Board reconciliation's catch
 aliases also have names, completing every parameter/local in that method.
@@ -970,17 +989,17 @@ tutorial mode off and retains the original state changes.
 
 The motion, contact and match stages are named separately:
 
-- `ab.moveEntitiesAndCollectContacts` advances `ji.movingEntities` and gathers
+- `EntityMotionSupport.moveEntitiesAndCollectContacts` advances `ji.movingEntities` and gathers
   mask contacts relative to `boardAngleRadians`.
-- `kc.reconcileBoardEntities` resolves contacts and rebuilds dirty connectivity.
-  `ik.linkTouchingEntities` updates the reciprocal neighbor lists and counts;
-  `ih.linkEntityAtMaskContacts` decodes the ownership-mask pixels.
+- `BoardReconciliationSupport.reconcileBoardEntities` resolves contacts and rebuilds dirty connectivity.
+  `EntityLinkSupport.linkTouchingEntities` updates the reciprocal neighbor lists and counts;
+  `EntityContactSupport.linkEntityAtMaskContacts` decodes the ownership-mask pixels.
 - `ul.collectMatchCandidates` finds triples sharing `entityCategoryKey` or
   `spriteVariantIndex`. `nk.packedMatchCandidates` stores three 10-bit entity IDs
   and two equality flags; `h.matchCandidateCount` bounds the array.
 - `ec.processMatchCandidates` sorts and deduplicates the triples. All three
   `matchCooldownTicks` values must be nonpositive before it awards points.
-  Points are 30 or 90 multiplied by the increasing `gf.matchChainLength`.
+  Points are 30 or 90 multiplied by the increasing `EntityCollisionSupport.matchChainLength`.
 - `rh.updateAttachedEntities` decrements cooldowns, updates attached animations
   and computes the board's maximum squared entity distance.
 
@@ -1013,7 +1032,7 @@ It is a root for the graph traversal, rather than a transitive connectivity flag
 records traversal visits. Detached components set `detachedFromBoard`, return to
 the moving queue and set `fa.entitiesDetachedThisTick`.
 
-`ab.boardContactStateDirty` covers contact changes and cooldowns reaching zero.
+`EntityMotionSupport.boardContactStateDirty` covers contact changes and cooldowns reaching zero.
 The session snapshots it as `boundaryCheckRequested` before advancing motion.
 `boardRasterDirty` requests a redraw of the attached scene raster; it is separate
 from both contact dirtiness and `connectivityRebuiltThisTick`.
@@ -1176,7 +1195,7 @@ return 104. These compatibility effects retain their exact sentinels.
 roles of the reused slot. `spawnAngleRadians` sets `spawnPositionX/Y` on the
 radius-240 circle; `inwardDirectionX/Y` initially hold offsets toward the centre,
 then are normalized using `inverseSpawnDistance` before velocity scaling.
-`kc.ticksSinceLastEntityRelease` resets to zero on release, then receives the
+`BoardReconciliationSupport.ticksSinceLastEntityRelease` resets to zero on release, then receives the
 same update's unconditional increment. These geometry names have direct source
 evidence.
 
@@ -1213,7 +1232,7 @@ when true and `resetScoreState` when false. It also gates the progress HUD.
 The transition completes at tick 160 and clears the request. `renderProgressHud`
 shows remaining theme releases during normal play or phase-specific text.
 
-`ih.areEntityQueuesSettled` requires the moving, spawn and transient animation
+`EntityContactSupport.areEntityQueuesSettled` requires the moving, spawn and transient animation
 queues to be empty and `jl.field_t` to be clear; attached entities can remain.
 `sk.checkBoundaryLossAndStartCascade` selects the ownership raster and calls
 `ld.hasPixelsAtPlayfieldBoundary`, a radius-230 circle probe centered at (320,240).
@@ -1248,7 +1267,7 @@ stream belongs to a gameplay entity.
 
 ## Board entity reconciliation
 
-`kc.reconcileBoardEntities` now uses structured loops instead of 60 dispatcher
+`BoardReconciliationSupport.reconcileBoardEntities` now uses structured loops instead of 60 dispatcher
 cases. Start with the usual zero-value path of the shared `Geoblox.field_C`
 guard; the generated source retains its other outcomes too.
 
@@ -1310,7 +1329,7 @@ outside these fixtures; existing action bits suppress it.
 `avatarShockContactPending` is set by a kind-three ownership-mask contact and
 blocks queue settling. Once the attached update requests `avatarShockPending`,
 reconciliation consumes that request, clears the contact flag and calls
-`jc.requestAvatarFeedback(3, false)`. These are distinct stages and flags.
+`AvatarFeedbackSupport.requestAvatarFeedback(3, false)`. These are distinct stages and flags.
 
 `requestAvatarFeedback` manages `avatarFeedbackModeId`, `avatarFeedbackFrameBase`,
 `avatarFeedbackFrameIndex` and `avatarFeedbackHoldTicks`. Ordinary requests
@@ -1318,7 +1337,7 @@ reconciliation consumes that request, clears the contact flag and calls
 A positive hold defers ordinary changes. Request 3 still starts
 `avatarShockEffectTicks` at 50 and queues its sound during a hold. A new request
 7 overrides a different frame base and starts a 110-tick hold.
-`clearSpriteGuard` preserves the original optional clearing of `jc.field_a`;
+`clearSpriteGuard` preserves the original optional clearing of `AvatarFeedbackSupport.grayJagexLogoSprite`;
 normal gameplay passes false. The native matrix verifies both guard values and
 retains Java's negative frame remainder rather than clamping it.
 
@@ -1392,7 +1411,7 @@ Debug input can enable `debugPointerSpawnEnabled`, choose
 `debugSpawnCategoryId`/`debugSpawnVariantId`, select `debugSpawnSpecialKinds`,
 toggle `spawnReleaseDisabled` or `rotationControlsSwapped`, and enable
 `showSessionCounters`, `showDebugOverview` or `debugReducedRendering`.
-`nb.spawnEntityAtPointer` transforms pointer coordinates relative to board
+`EntitySpawnSupport.spawnEntityAtPointer` transforms pointer coordinates relative to board
 rotation before initializing the entity. `submissionBlocked` gates score/action
 submission after the existing debug actions. `newActionCount` counts newly
 recorded action bits; these names do not establish a multiplayer protocol.
@@ -1795,7 +1814,7 @@ failures and non-finite arithmetic; it adds no real-asset or whole-game claim.
 `KeyboardInputListener` (`wl`) translates AWT key codes through
 `oe.awtKeyCodeToInternalCode`. Press/release callbacks reset `nk.keyboardIdleTicks`
 and enqueue positive press or complemented release values in
-`gf.queuedKeyStateChanges`. `ii.keyStateWriteIndexOrResetSentinel` becomes -1 on
+`EntityCollisionSupport.queuedKeyStateChanges`. `ii.keyStateWriteIndexOrResetSentinel` becomes -1 on
 overflow or focus loss. `re.updateKeyboardStateForFrame` replays changes into
 `kj.heldInternalKeys`, or clears all 112 held flags on reset. It advances the
 frame event fence from `pc.keyboardEventFrameEndIndex` to
@@ -1842,7 +1861,7 @@ returns false and retains the previous output coordinates. It never writes to
 the input buffers. `overlapRightThenWidth` and `overlapBottomThenHeight` retain
 their original reused roles instead of introducing new declarations.
 
-`gf.renderEntityCollisionSprite` (`gf.a(Lja;IF)V`) rotates the entity position
+`EntityCollisionSupport.renderEntityCollisionSprite` (`gf.a(Lja;IF)V`) rotates the entity position
 around (320,240) into `ng.rotatedEntityScreenX`/`td.rotatedEntityScreenY`, renders
 the entity sprite into `vf.spriteScratchRaster` with nearest rotation, then
 restores the display raster. This renderer remains supported by source inspection.
@@ -1853,7 +1872,7 @@ false. Its entity/angle parameters are used only in diagnostic wrapping.
 comparing the probe against the scratch raster. The moving-contact producer
 uses the resulting probe coordinates to read the entity ID minus one.
 
-`nb.spawnEntityAtPointer` accepts guard -28195, then removes the available pool's
+`EntitySpawnSupport.spawnEntityAtPointer` accepts guard -28195, then removes the available pool's
 last entity. Empty pools and other guards return immediately. It inverse-rotates
 the integer pointer about (320,240), truncates both coordinates and initializes
 velocity toward the center. Ordinary mode uses kind0 with the supplied category
@@ -1878,7 +1897,7 @@ buffer/overflow behavior or whole-game equivalence.
 
 The current generic reconstruction resolves aliases before checking later joins.
 A value copied through two earlier carriers can therefore remain one captured
-value when those paths meet. `nb.spawnEntityAtPointer` retains its argument
+value when those paths meet. `EntitySpawnSupport.spawnEntityAtPointer` retains its argument
 snapshots before variant/category selection, but no longer repeats them through
 15 additional declarations. The selected variant/category still differ by path
 and remain explicit. Other methods benefit from the same proof, including
@@ -1892,7 +1911,7 @@ native matrices cover their controlled scopes, not complete gameplay/assets.
 
 ## Primitive selections and safe alias substitution (pass 52)
 
-`nb.spawnEntityAtPointer` now expresses kind-dependent variant selection as
+`EntitySpawnSupport.spawnEntityAtPointer` now expresses kind-dependent variant selection as
 `selectedVariantId = (spriteKindId != 2) ? -1 : variantId;`. The selected kind,
 board coordinates and velocities are still captured at their original points.
 The genuinely different category join stays explicit. `PixelOverlapProbe`
@@ -1996,10 +2015,10 @@ queue; their existing animation/recycling logic remains.
 `currentAvatarCryFrame`. `uh.drawSpawnQueueAndHighlight` rotates the first queued
 entity's position, draws a circular/spiral highlight, then draws the whole queue.
 
-`gf.preparePendingActionPanel` sizes the panel from `achievementTitles`, resets
+`EntityCollisionSupport.preparePendingActionPanel` sizes the panel from `achievementTitles`, resets
 its top position and retains the original minimum height. `vc.drawPendingActionPanel`
 uses the same geometry and action ID for the title and quarter-size icon.
-`gf.formatArchiveGroupProgress` returns the original fallback when the archive
+`EntityCollisionSupport.formatArchiveGroupProgress` returns the original fallback when the archive
 query is false, otherwise formats the label, group percentage and percent sign.
 It makes no new assumption about actual archive completion.
 
@@ -2541,7 +2560,7 @@ undefined slots. There is no surrogate joining or UTF-8 conversion.
 | `ByteArrayBuffer.encodeTextCharacter(character, returnEncodedByte)` | Return the mapped signed byte when true; false returns 50 after mapping |
 | `hi.encodeTextSlice(text, destination, characterStart, characterEnd, destinationOffset, methodGuard)` | Compute end-start, then encode sequential charAt calls into the destination; guard other than 98 returns 52 before argument reads |
 | `jf.encodeTextBytes(text, methodGuard)` | Allocate one byte per code unit and map each character; guard below 117 retains a helper call before text.length |
-| `ab.hashEncodedText(methodGuard, text)` | Accumulate wrapping 31*hash plus the signed encoded byte; guard at most 42 retains the recursive null-text call |
+| `EntityMotionSupport.hashEncodedText(methodGuard, text)` | Accumulate wrapping 31*hash plus the signed encoded byte; guard at most 42 retains the recursive null-text call |
 | `bc.decodeTextSlice(decodeGuard, textBytes, offset, length)` | Skip zero bytes; decode extended slots through the shared table, using `?` for undefined entries |
 | `ag.decodeTextBytes(decodeGuard, textBytes)` | Decode the whole array; guard other than 1 clears field_j before inspecting length |
 
@@ -3479,7 +3498,7 @@ nested as statements in another block; variable, loop, conditional, protected
 and monitor scopes remain. All operations, operators, literals and transfer
 routes stay in order. No guard value is assumed.
 
-`GameplaySession.updateSession` and `kc.reconcileBoardEntities` lose redundant
+`GameplaySession.updateSession` and `BoardReconciliationSupport.reconcileBoardEntities` lose redundant
 loop labels and some frame nesting, along with rendering, storage, compression
 and other helpers. The large session/reconciliation bodies are still nested and
 need further reconstruction to expose their higher-level gameplay phases.
@@ -3512,7 +3531,7 @@ migration and evidence; no extra JSON snapshots are created.
 `GameplaySession.updateSession` now expresses board-clear eligibility through
 three short-circuit checks: no entity detached this tick, the attached queue is
 empty, and the current theme has released at least one entity. The queue query
-retains guard 13519. `kc.reconcileBoardEntities` expresses raster dirtiness as
+retains guard 13519. `BoardReconciliationSupport.reconcileBoardEntities` expresses raster dirtiness as
 the existing session dirtiness, contact-state dirtiness or pending avatar shock.
 Its earlier session-reference snapshot stays before the field checks, preserving
 aliases and null/failure order. The original local result stores remain.
@@ -3584,7 +3603,7 @@ browser/phone performance remain outside these proofs.
 ## Triangle shading (pass 80)
 
 The triangle path begins in the model renderer `hi`: it extracts each vertex's
-red, green and blue channels and calls `nb.drawHalfBlendRgbTriangle`. Its parameters
+red, green and blue channels and calls `EntitySpawnSupport.drawHalfBlendRgbTriangle`. Its parameters
 name the three X/Y pairs `vertexAX`/`vertexAY`, `vertexBX`/`vertexBY` and
 `vertexCX`/`vertexCY`; the entry wrapper sorts their Y coordinates before
 dispatching matching X/R/G/B values. Numeric
@@ -3653,7 +3672,7 @@ out-of-range behavior remains. Missing materials select gray 8355711; negative
 indices other than the -1 sentinel retain their failures.
 
 Faces with identical normal indices use the existing flat triangle helper.
-Other faces compute three lit RGB values and use `nb.drawHalfBlendRgbTriangle`.
+Other faces compute three lit RGB values and use `EntitySpawnSupport.drawHalfBlendRgbTriangle`.
 The original masks and shifts remain, including their differing values across
 the flat and smooth branches. Combined names describe slots reused between those
 branches; the three diffuse-array aliases remain explicit.
@@ -3807,7 +3826,7 @@ and browser/phone acceptance are unverified.
 ## Animated logo scene (pass 85)
 
 `ni.loadLogoMeshesAndMaterials` loads `logo.fo3d`, reads a mesh count, decodes
-materials/meshes and centers the scaled geometry. `jc.readMeshMaterials` checks
+materials/meshes and centers the scaled geometry. `AvatarFeedbackSupport.readMeshMaterials` checks
 version/read enable, reads base RGB values for new materials and aliases earlier
 entries for references. Other encoded values remain unnamed in meaning because
 the decoder discards them. Successful real archive decoding is source-audited;
@@ -4121,3 +4140,38 @@ reject invalid guards before obtaining the browser window. Script evaluation
 happens before the guard arithmetic; its possible division failure remains.
 The cookie, zap/unzap, logout and link-update callers now use these names.
 Actual browser JavaScript and cache startup are outside the native probes.
+
+## Gameplay support owner map (pass120)
+
+| Readable owner | Original owner | Main gameplay operation |
+| --- | --- | --- |
+| `EntityMotionSupport` | `ab` | `moveEntitiesAndCollectContacts` |
+| `EntityCollisionSupport` | `gf` | `renderEntityCollisionSprite` |
+| `EntitySpawnSupport` | `nb` | `spawnEntityAtPointer` |
+| `BoardReconciliationSupport` | `kc` | `reconcileBoardEntities` |
+| `EntityContactSupport` | `ih` | `linkEntityAtMaskContacts`, `areEntityQueuesSettled` |
+| `EntityLinkSupport` | `ik` | `linkTouchingEntities` |
+| `AvatarFeedbackSupport` | `jc` | `requestAvatarFeedback` |
+
+These are mixed-purpose static owners. Their names describe the exposed gameplay
+helpers; archive loading, input cleanup, UI borders, ranking packets, login/email
+query state, mesh materials and navigation can still share an owner. Nothing was
+moved between Java classes. Use the dictionary for exact original declarations.
+
+In `EntityContactSupport.linkEntityAtMaskContacts`, `scratchPixelIndex` scans
+nonzero pixels of the rotated incoming sprite, while `ownershipPixelIndex` scans
+the cropped board ownership raster. `overlapWidth`, `overlapHeight` and both row
+skips preserve the clipping arithmetic. Ownership pixel zero means no owner;
+16777215 marks the avatar, and other nonzero values select `entitiesById[pixel-1]`.
+A kind-two mismatch may consume `pooledConversionEntity` and append it to the
+transient queue before reciprocal linking. A link-detach result can end the scan
+early. The supplied `negativeHorizontalClipGuard` participates in the first-column
+comparison; it is not treated as a constant during naming or source generation.
+
+`BoardReconciliationSupport.sortRankedListIndices` first orders existing indices,
+then on its accepted guard initializes a secondary range, sorts the combined
+indices and limits the retained count. `EntityCollisionSupport.openQuitPage` still
+uses the original nested failure/print/context boundaries and the `quit.ws` path.
+`EntityLinkSupport.drawGradientWidgetBorder` retains its fixed top/bottom colors
+and clipped grayscale side edges. Names clarify those operations without
+simplifying guards, packet payloads, failure scopes or memory writes.

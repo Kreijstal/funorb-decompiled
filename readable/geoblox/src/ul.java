@@ -160,9 +160,9 @@ final class ul {
           if (eligibleNeighborhoodVisited != 0) {
             if (dualMatchFound == 0) {
               stackIn_82_0 = 4;
-              jc.requestAvatarFeedback(stackIn_82_0, false);
+              AvatarFeedbackSupport.requestAvatarFeedback(stackIn_82_0, false);
             } else {
-              jc.requestAvatarFeedback(5, false);
+              AvatarFeedbackSupport.requestAvatarFeedback(5, false);
             }
           }
           return;

@@ -23,10 +23,10 @@ final class EmailAvailabilityValidator extends TextInputValidator {
     final static void a(int param0, boolean param1) {
         if (param0 >= 0) {
             EmailAvailabilityValidator.a(83, true);
-            ih.field_c.complete((byte) -110, param1);
+            EntityContactSupport.activeEmailAvailabilityQuery.complete((byte) -110, param1);
             return;
         }
-        ih.field_c.complete((byte) -110, param1);
+        EntityContactSupport.activeEmailAvailabilityQuery.complete((byte) -110, param1);
     }
 
     final ValidationState validationStateForText(int guard, String candidateText) {

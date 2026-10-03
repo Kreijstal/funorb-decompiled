@@ -54,7 +54,7 @@ final class RankedListQuery extends IntrusiveNode {
               ArchiveLoadStep.keyStateWriteIndexOrResetSentinel = ClientProtocolStage.keyStateReadIndex;
             } else {
               while (ClientProtocolStage.keyStateReadIndex != ArchiveLoadStep.keyStateWriteIndexOrResetSentinel) {
-                keyStateChangeOrResetIndex = gf.queuedKeyStateChanges[ClientProtocolStage.keyStateReadIndex];
+                keyStateChangeOrResetIndex = EntityCollisionSupport.queuedKeyStateChanges[ClientProtocolStage.keyStateReadIndex];
                 ClientProtocolStage.keyStateReadIndex = 1 + ClientProtocolStage.keyStateReadIndex & 127;
                 if (keyStateChangeOrResetIndex < 0) {
                   MidiPcmStream.heldInternalKeys[~keyStateChangeOrResetIndex] = false;

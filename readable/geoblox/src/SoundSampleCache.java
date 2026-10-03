@@ -178,15 +178,15 @@ final class SoundSampleCache {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if ((ih.field_c.isCompleted(-87)) &&
-              (!param1.equals(ih.field_c.candidateEmail(19491)))) {
-            ih.field_c = ImageProducerRasterBuffer.a((byte) 86, param1);
+          if ((EntityContactSupport.activeEmailAvailabilityQuery.isCompleted(-87)) &&
+              (!param1.equals(EntityContactSupport.activeEmailAvailabilityQuery.candidateEmail(19491)))) {
+            EntityContactSupport.activeEmailAvailabilityQuery = ImageProducerRasterBuffer.a((byte) 86, param1);
           }
           if (param0 != -1) {
             var3 = (String) null;
             SoundSampleCache.a(-30, (String) null);
           }
-          stackIn_7_0 = ih.field_c;
+          stackIn_7_0 = EntityContactSupport.activeEmailAvailabilityQuery;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -388,8 +388,8 @@ final class SoundSampleCache {
           if (param1 != 416577356) {
             return;
           }
-          if (gf.field_d != null) {
-            gf.field_d.usernameSuggestions.setSuggestions((byte) 126, args);
+          if (EntityCollisionSupport.activeAccountCreationForm != null) {
+            EntityCollisionSupport.activeAccountCreationForm.usernameSuggestions.setSuggestions((byte) 126, args);
           }
           if (null == MouseWheelInput.field_d) {
             return;

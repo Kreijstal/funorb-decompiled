@@ -42,7 +42,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         var3 = Geoblox.clientControlFlowFlag;
         try {
           var1_float = UiWidget.gameplaySession.boardAngleRadians;
-          ab.moveEntitiesAndCollectContacts(param0 - 22, var1_float);
+          EntityMotionSupport.moveEntitiesAndCollectContacts(param0 - 22, var1_float);
           ResourceArchive.updateAttachedEntities((byte) 123);
           if (param0 != -15) {
             SecondaryNodeDequeIterator.a((byte) -11);

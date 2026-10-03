@@ -181,7 +181,7 @@ final class al {
         if (param0 != 0) {
             al.b(66);
         }
-        if (!ih.field_c.isCompleted(-91)) {
+        if (!EntityContactSupport.activeEmailAvailabilityQuery.isCompleted(-91)) {
             return DelayedPcmStream.field_k;
         }
         return b.field_a;

@@ -90,10 +90,10 @@ final class GzipInflater {
 
     final static TextTemplateArgumentType[] textTemplateArgumentTypes(int methodGuard) {
         if (methodGuard == -1) {
-            return new TextTemplateArgumentType[]{InstrumentNoteMask.field_g, w.field_d, ab.field_c, AsyncResourceDownloader.field_d, lj.field_e, Under13TermsPanel.field_E, ProxySocketConnector.field_i, SpriteState.field_t, qj.field_a, DropTargetWidget.field_B, IntKeyLookup.field_d, ProxyAuthenticationRequiredException.field_c, va.field_f, field_h};
+            return new TextTemplateArgumentType[]{InstrumentNoteMask.field_g, w.field_d, EntityMotionSupport.field_c, AsyncResourceDownloader.field_d, lj.field_e, Under13TermsPanel.field_E, ProxySocketConnector.field_i, SpriteState.field_t, qj.field_a, DropTargetWidget.field_B, IntKeyLookup.field_d, ProxyAuthenticationRequiredException.field_c, va.field_f, field_h};
         }
         avatarTintGreenDelta = -1.1302366256713867f;
-        return new TextTemplateArgumentType[]{InstrumentNoteMask.field_g, w.field_d, ab.field_c, AsyncResourceDownloader.field_d, lj.field_e, Under13TermsPanel.field_E, ProxySocketConnector.field_i, SpriteState.field_t, qj.field_a, DropTargetWidget.field_B, IntKeyLookup.field_d, ProxyAuthenticationRequiredException.field_c, va.field_f, field_h};
+        return new TextTemplateArgumentType[]{InstrumentNoteMask.field_g, w.field_d, EntityMotionSupport.field_c, AsyncResourceDownloader.field_d, lj.field_e, Under13TermsPanel.field_E, ProxySocketConnector.field_i, SpriteState.field_t, qj.field_a, DropTargetWidget.field_B, IntKeyLookup.field_d, ProxyAuthenticationRequiredException.field_c, va.field_f, field_h};
     }
 
     public GzipInflater() {

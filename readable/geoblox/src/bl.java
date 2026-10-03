@@ -19,7 +19,7 @@ final class bl {
             if (!CacheReference.f(-31456)) {
                 return true;
             }
-            if (ik.field_a <= 0) {
+            if (EntityLinkSupport.field_a <= 0) {
                 return false;
             }
             if (!TextTemplateArgumentType.b(0)) {
@@ -33,7 +33,7 @@ final class bl {
         if (!CacheReference.f(-31456)) {
             return true;
         }
-        if (ik.field_a <= 0) {
+        if (EntityLinkSupport.field_a <= 0) {
             return false;
         }
         if (!TextTemplateArgumentType.b(0)) {

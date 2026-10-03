@@ -126,7 +126,7 @@ final class SecondaryDeque {
         try {
           var4 = (RankedListQuery) ((Object) PendingActionMarker.pendingRankedListQueries.firstForIteration(0));
           while (var4 != null) {
-            ik.writeRankedListQuery(var4, packetOpcode, (byte) 107);
+            EntityLinkSupport.writeRankedListQuery(var4, packetOpcode, (byte) 107);
             var4 = (RankedListQuery) ((Object) PendingActionMarker.pendingRankedListQueries.nextForIteration(1));
           }
           if (methodGuard) {

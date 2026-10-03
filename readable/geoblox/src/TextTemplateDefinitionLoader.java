@@ -54,7 +54,7 @@ final class TextTemplateDefinitionLoader {
           }
           var2 = PrefixCodeDecoder.field_e.firstForIteration(0);
           while (var2 != null) {
-            gf.a(param0, 125);
+            EntityCollisionSupport.writeOpcodeWithOneZeroPayload(param0, 125);
             var2 = PrefixCodeDecoder.field_e.nextForIteration(1);
           }
           return;

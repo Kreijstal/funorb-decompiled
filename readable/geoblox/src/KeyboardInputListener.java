@@ -30,7 +30,7 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
           }
           if ((ArchiveLoadStep.keyStateWriteIndexOrResetSentinel >= 0) &&
               (internalKeyCode >= 0)) {
-            gf.queuedKeyStateChanges[ArchiveLoadStep.keyStateWriteIndexOrResetSentinel] = internalKeyCode;
+            EntityCollisionSupport.queuedKeyStateChanges[ArchiveLoadStep.keyStateWriteIndexOrResetSentinel] = internalKeyCode;
             ArchiveLoadStep.keyStateWriteIndexOrResetSentinel = 127 & 1 + ArchiveLoadStep.keyStateWriteIndexOrResetSentinel;
             if (ClientProtocolStage.keyStateReadIndex == ArchiveLoadStep.keyStateWriteIndexOrResetSentinel) {
               ArchiveLoadStep.keyStateWriteIndexOrResetSentinel = -1;
@@ -117,7 +117,7 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
             }
             if ((ArchiveLoadStep.keyStateWriteIndexOrResetSentinel >= 0) &&
                 (0 <= internalKeyCode)) {
-              gf.queuedKeyStateChanges[ArchiveLoadStep.keyStateWriteIndexOrResetSentinel] = ~internalKeyCode;
+              EntityCollisionSupport.queuedKeyStateChanges[ArchiveLoadStep.keyStateWriteIndexOrResetSentinel] = ~internalKeyCode;
               ArchiveLoadStep.keyStateWriteIndexOrResetSentinel = 1 + ArchiveLoadStep.keyStateWriteIndexOrResetSentinel & 127;
               if (ClientProtocolStage.keyStateReadIndex == ArchiveLoadStep.keyStateWriteIndexOrResetSentinel) {
                 ArchiveLoadStep.keyStateWriteIndexOrResetSentinel = -1;

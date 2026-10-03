@@ -16,13 +16,13 @@ final class MultiHandleSliderRenderer implements WidgetRenderer {
     static int pendingActionPanelWidth;
 
     final static void a(byte param0) {
-        gf.field_d = new AccountCreationForm();
+        EntityCollisionSupport.activeAccountCreationForm = new AccountCreationForm();
         if (param0 >= 19) {
-            ButtonWidget.field_C.replaceContent(gf.field_d, -54);
+            ButtonWidget.field_C.replaceContent(EntityCollisionSupport.activeAccountCreationForm, -54);
             return;
         }
         rotatedThemeForegroundRaster = (Sprite) null;
-        ButtonWidget.field_C.replaceContent(gf.field_d, -54);
+        ButtonWidget.field_C.replaceContent(EntityCollisionSupport.activeAccountCreationForm, -54);
     }
 
     public final void drawWidget(int parentX, int methodGuard, int parentY, boolean widgetEnabled, UiWidget widget) {

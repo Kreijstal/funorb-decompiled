@@ -69,7 +69,7 @@ final class PasswordValidator extends TextInputValidator {
             return stackIn_22_0;
           }
           if (ak.a(var5, var6, -98)) {
-            stackIn_26_0 = gf.createPasswordContainsNameAlertText;
+            stackIn_26_0 = EntityCollisionSupport.createPasswordContainsNameAlertText;
             return stackIn_26_0;
           }
           if (UsernameAvailabilityValidator.a(8, var6, var5)) {
@@ -79,7 +79,7 @@ final class PasswordValidator extends TextInputValidator {
           if (!CrcAcknowledgedPacket.a(var5, var6, (byte) -96)) {
             return ArchiveNetworkClient.createPasswordLengthAlertText;
           }
-          stackIn_34_0 = gf.createPasswordContainsNameAlertText;
+          stackIn_34_0 = EntityCollisionSupport.createPasswordContainsNameAlertText;
           return stackIn_34_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

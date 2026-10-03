@@ -229,13 +229,13 @@ class UiWidget extends IntrusiveNode {
               (CheckboxRenderer.pointerPressButtonSnapshot != 0)) {
             this.clearKeyboardFocus(-126);
           }
-          FullscreenErrorDialog.previousUiPointerButton = gf.heldPointerButtonSnapshot;
+          FullscreenErrorDialog.previousUiPointerButton = EntityCollisionSupport.heldPointerButtonSnapshot;
           ContextualRuntimeException.a(this.getHoverText((byte) 69), (byte) 72);
           return pointerEventsAvailable;
         }
         if (0 == CachedTextLayout.wheelRotationSnapshot) {
           if (0 == CheckboxRenderer.pointerPressButtonSnapshot) {
-            if ((gf.heldPointerButtonSnapshot == 0) &&
+            if ((EntityCollisionSupport.heldPointerButtonSnapshot == 0) &&
                 (0 != FullscreenErrorDialog.previousUiPointerButton)) {
               this.handlePointerRelease(parentX, PrefixCodeDecoder.pointerXSnapshot, true, (UiWidget) (this), parentY, PcmResampler.pointerYSnapshot);
               releasedDragWithoutPressOrWheel = ValidationState.activeDragWidget;
@@ -251,14 +251,14 @@ class UiWidget extends IntrusiveNode {
                 this.clearKeyboardFocus(-126);
               }
             }
-            FullscreenErrorDialog.previousUiPointerButton = gf.heldPointerButtonSnapshot;
+            FullscreenErrorDialog.previousUiPointerButton = EntityCollisionSupport.heldPointerButtonSnapshot;
             ContextualRuntimeException.a(this.getHoverText((byte) 69), (byte) 72);
             return pointerEventsAvailable;
           }
           L19: {
             if (!this.handlePointerPress(parentY, -109, parentX, CheckboxRenderer.pointerPressButtonSnapshot, mc.pointerPressXSnapshot, FullscreenFocusCanvas.pointerPressYSnapshot, (UiWidget) (this))) {
               if (focusFlag == 0) {
-                if ((gf.heldPointerButtonSnapshot == 0) &&
+                if ((EntityCollisionSupport.heldPointerButtonSnapshot == 0) &&
                     (0 != FullscreenErrorDialog.previousUiPointerButton)) {
                   this.handlePointerRelease(parentX, PrefixCodeDecoder.pointerXSnapshot, true, (UiWidget) (this), parentY, PcmResampler.pointerYSnapshot);
                   releasedDragAfterRejectedPressWithoutFocusOrWheel = ValidationState.activeDragWidget;
@@ -274,7 +274,7 @@ class UiWidget extends IntrusiveNode {
                     this.clearKeyboardFocus(-126);
                   }
                 }
-                FullscreenErrorDialog.previousUiPointerButton = gf.heldPointerButtonSnapshot;
+                FullscreenErrorDialog.previousUiPointerButton = EntityCollisionSupport.heldPointerButtonSnapshot;
                 ContextualRuntimeException.a(this.getHoverText((byte) 69), (byte) 72);
                 return pointerEventsAvailable;
               }
@@ -285,13 +285,13 @@ class UiWidget extends IntrusiveNode {
             }
             pointerEventsAvailable = false;
           }
-          if (gf.heldPointerButtonSnapshot != 0) {
-            FullscreenErrorDialog.previousUiPointerButton = gf.heldPointerButtonSnapshot;
+          if (EntityCollisionSupport.heldPointerButtonSnapshot != 0) {
+            FullscreenErrorDialog.previousUiPointerButton = EntityCollisionSupport.heldPointerButtonSnapshot;
             ContextualRuntimeException.a(this.getHoverText((byte) 69), (byte) 72);
             return pointerEventsAvailable;
           }
           if (0 == FullscreenErrorDialog.previousUiPointerButton) {
-            FullscreenErrorDialog.previousUiPointerButton = gf.heldPointerButtonSnapshot;
+            FullscreenErrorDialog.previousUiPointerButton = EntityCollisionSupport.heldPointerButtonSnapshot;
             ContextualRuntimeException.a(this.getHoverText((byte) 69), (byte) 72);
             return pointerEventsAvailable;
           }
@@ -308,14 +308,14 @@ class UiWidget extends IntrusiveNode {
               (CheckboxRenderer.pointerPressButtonSnapshot != 0)) {
             this.clearKeyboardFocus(-126);
           }
-          FullscreenErrorDialog.previousUiPointerButton = gf.heldPointerButtonSnapshot;
+          FullscreenErrorDialog.previousUiPointerButton = EntityCollisionSupport.heldPointerButtonSnapshot;
           ContextualRuntimeException.a(this.getHoverText((byte) 69), (byte) 72);
           return pointerEventsAvailable;
         }
         if (focusFlag != 0) {
           this.handlePointerWheel(parentY, CachedTextLayout.wheelRotationSnapshot, parentX, -1, PrefixCodeDecoder.pointerXSnapshot, (UiWidget) (this), PcmResampler.pointerYSnapshot);
           if (0 == CheckboxRenderer.pointerPressButtonSnapshot) {
-            if ((gf.heldPointerButtonSnapshot == 0) &&
+            if ((EntityCollisionSupport.heldPointerButtonSnapshot == 0) &&
                 (0 != FullscreenErrorDialog.previousUiPointerButton)) {
               this.handlePointerRelease(parentX, PrefixCodeDecoder.pointerXSnapshot, true, (UiWidget) (this), parentY, PcmResampler.pointerYSnapshot);
               releasedDragWithWheelAndNoPress = ValidationState.activeDragWidget;
@@ -332,7 +332,7 @@ class UiWidget extends IntrusiveNode {
                 this.clearKeyboardFocus(-126);
               }
             }
-            FullscreenErrorDialog.previousUiPointerButton = gf.heldPointerButtonSnapshot;
+            FullscreenErrorDialog.previousUiPointerButton = EntityCollisionSupport.heldPointerButtonSnapshot;
             ContextualRuntimeException.a(this.getHoverText((byte) 69), (byte) 72);
             return pointerEventsAvailable;
           }
@@ -345,13 +345,13 @@ class UiWidget extends IntrusiveNode {
             }
             pointerEventsAvailable = false;
           }
-          if (gf.heldPointerButtonSnapshot != 0) {
-            FullscreenErrorDialog.previousUiPointerButton = gf.heldPointerButtonSnapshot;
+          if (EntityCollisionSupport.heldPointerButtonSnapshot != 0) {
+            FullscreenErrorDialog.previousUiPointerButton = EntityCollisionSupport.heldPointerButtonSnapshot;
             ContextualRuntimeException.a(this.getHoverText((byte) 69), (byte) 72);
             return pointerEventsAvailable;
           }
           if (0 == FullscreenErrorDialog.previousUiPointerButton) {
-            FullscreenErrorDialog.previousUiPointerButton = gf.heldPointerButtonSnapshot;
+            FullscreenErrorDialog.previousUiPointerButton = EntityCollisionSupport.heldPointerButtonSnapshot;
             ContextualRuntimeException.a(this.getHoverText((byte) 69), (byte) 72);
             return pointerEventsAvailable;
           }
@@ -369,12 +369,12 @@ class UiWidget extends IntrusiveNode {
               (CheckboxRenderer.pointerPressButtonSnapshot != 0)) {
             this.clearKeyboardFocus(-126);
           }
-          FullscreenErrorDialog.previousUiPointerButton = gf.heldPointerButtonSnapshot;
+          FullscreenErrorDialog.previousUiPointerButton = EntityCollisionSupport.heldPointerButtonSnapshot;
           ContextualRuntimeException.a(this.getHoverText((byte) 69), (byte) 72);
           return pointerEventsAvailable;
         }
         if (0 == CheckboxRenderer.pointerPressButtonSnapshot) {
-          if ((gf.heldPointerButtonSnapshot == 0) &&
+          if ((EntityCollisionSupport.heldPointerButtonSnapshot == 0) &&
               (0 != FullscreenErrorDialog.previousUiPointerButton)) {
             this.handlePointerRelease(parentX, PrefixCodeDecoder.pointerXSnapshot, true, (UiWidget) (this), parentY, PcmResampler.pointerYSnapshot);
             releasedDragWithoutFocusOrPress = ValidationState.activeDragWidget;
@@ -390,18 +390,18 @@ class UiWidget extends IntrusiveNode {
               this.clearKeyboardFocus(-126);
             }
           }
-          FullscreenErrorDialog.previousUiPointerButton = gf.heldPointerButtonSnapshot;
+          FullscreenErrorDialog.previousUiPointerButton = EntityCollisionSupport.heldPointerButtonSnapshot;
           ContextualRuntimeException.a(this.getHoverText((byte) 69), (byte) 72);
           return pointerEventsAvailable;
         }
         if (!this.handlePointerPress(parentY, -109, parentX, CheckboxRenderer.pointerPressButtonSnapshot, mc.pointerPressXSnapshot, FullscreenFocusCanvas.pointerPressYSnapshot, (UiWidget) (this))) {
-          if (gf.heldPointerButtonSnapshot != 0) {
-            FullscreenErrorDialog.previousUiPointerButton = gf.heldPointerButtonSnapshot;
+          if (EntityCollisionSupport.heldPointerButtonSnapshot != 0) {
+            FullscreenErrorDialog.previousUiPointerButton = EntityCollisionSupport.heldPointerButtonSnapshot;
             ContextualRuntimeException.a(this.getHoverText((byte) 69), (byte) 72);
             return pointerEventsAvailable;
           }
           if (0 == FullscreenErrorDialog.previousUiPointerButton) {
-            FullscreenErrorDialog.previousUiPointerButton = gf.heldPointerButtonSnapshot;
+            FullscreenErrorDialog.previousUiPointerButton = EntityCollisionSupport.heldPointerButtonSnapshot;
             ContextualRuntimeException.a(this.getHoverText((byte) 69), (byte) 72);
             return pointerEventsAvailable;
           }
@@ -415,22 +415,22 @@ class UiWidget extends IntrusiveNode {
             ValidationState.activeDragWidget = null;
           }
           if (clientControlFlowSnapshot == 0) {
-            FullscreenErrorDialog.previousUiPointerButton = gf.heldPointerButtonSnapshot;
+            FullscreenErrorDialog.previousUiPointerButton = EntityCollisionSupport.heldPointerButtonSnapshot;
             ContextualRuntimeException.a(this.getHoverText((byte) 69), (byte) 72);
             return pointerEventsAvailable;
           }
-          FullscreenErrorDialog.previousUiPointerButton = gf.heldPointerButtonSnapshot;
+          FullscreenErrorDialog.previousUiPointerButton = EntityCollisionSupport.heldPointerButtonSnapshot;
           ContextualRuntimeException.a(this.getHoverText((byte) 69), (byte) 72);
           return pointerEventsAvailable;
         }
         pointerEventsAvailable = false;
-        if (gf.heldPointerButtonSnapshot != 0) {
-          FullscreenErrorDialog.previousUiPointerButton = gf.heldPointerButtonSnapshot;
+        if (EntityCollisionSupport.heldPointerButtonSnapshot != 0) {
+          FullscreenErrorDialog.previousUiPointerButton = EntityCollisionSupport.heldPointerButtonSnapshot;
           ContextualRuntimeException.a(this.getHoverText((byte) 69), (byte) 72);
           return pointerEventsAvailable;
         }
         if (0 == FullscreenErrorDialog.previousUiPointerButton) {
-          FullscreenErrorDialog.previousUiPointerButton = gf.heldPointerButtonSnapshot;
+          FullscreenErrorDialog.previousUiPointerButton = EntityCollisionSupport.heldPointerButtonSnapshot;
           ContextualRuntimeException.a(this.getHoverText((byte) 69), (byte) 72);
           return pointerEventsAvailable;
         }
@@ -447,7 +447,7 @@ class UiWidget extends IntrusiveNode {
             (CheckboxRenderer.pointerPressButtonSnapshot != 0)) {
           this.clearKeyboardFocus(-126);
         }
-        FullscreenErrorDialog.previousUiPointerButton = gf.heldPointerButtonSnapshot;
+        FullscreenErrorDialog.previousUiPointerButton = EntityCollisionSupport.heldPointerButtonSnapshot;
         ContextualRuntimeException.a(this.getHoverText((byte) 69), (byte) 72);
         return pointerEventsAvailable;
     }

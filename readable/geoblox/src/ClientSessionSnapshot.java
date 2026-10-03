@@ -119,7 +119,7 @@ final class ClientSessionSnapshot {
     }
 
     ClientSessionSnapshot(boolean param0) {
-        this.field_i = jc.field_b;
+        this.field_i = AvatarFeedbackSupport.field_b;
         this.field_f = StrongCacheReference.field_u;
         this.field_h = DiskCacheWorker.field_c;
         this.field_d = UsernameAvailabilityValidator.field_o;

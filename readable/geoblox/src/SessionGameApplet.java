@@ -369,7 +369,7 @@ abstract class SessionGameApplet extends GameApplet {
               if (FadingDialog.field_J.loadGroupByName("", (byte) -126)) {
                 AccountWelcomePanel.loadInterfaceText((byte) 74, FadingDialog.field_J);
                 FadingDialog.field_J = null;
-                ih.b(-50);
+                EntityContactSupport.resetFrameTimingHistory(-50);
               }
             }
           }
@@ -413,7 +413,7 @@ abstract class SessionGameApplet extends GameApplet {
           dc.field_c = null;
           DirectByteStorage.field_h = null;
           MeshMaterial.a((java.applet.Applet) (this), -82);
-          ih.b(-69);
+          EntityContactSupport.resetFrameTimingHistory(-69);
           VisualPropertyOverrides.field_C = 10;
         }
         if (10 == VisualPropertyOverrides.field_C) {
@@ -454,8 +454,8 @@ abstract class SessionGameApplet extends GameApplet {
           }
         }
         if ((!param0) &&
-            (ab.field_a)) {
-          nb.a(-2, MessageDialog.gameCanvas);
+            (EntityMotionSupport.field_a)) {
+          EntitySpawnSupport.detachCanvasInputListeners(-2, MessageDialog.gameCanvas);
           this.b(true);
           UsernameAvailabilityQuery.a(MessageDialog.gameCanvas, 57);
         }
@@ -574,7 +574,7 @@ abstract class SessionGameApplet extends GameApplet {
               }
             }
             if (5 == var4) {
-              gf.a(NodeHashTableIterator.c(120), 62);
+              EntityCollisionSupport.openQuitPage(NodeHashTableIterator.c(120), 62);
             }
             if ((var4 == 6) &&
                 (kf.field_e)) {
@@ -596,7 +596,7 @@ abstract class SessionGameApplet extends GameApplet {
               EmailAvailabilityQuery.a(NodeHashTableIterator.c(110), false);
             }
             if (var4 == 12) {
-              ArchiveLoadSequence.a(NodeHashTableIterator.c(121), (byte) 117, gf.a(param2 ^ -241));
+              ArchiveLoadSequence.a(NodeHashTableIterator.c(121), (byte) 117, EntityCollisionSupport.getSharedNavigationTarget(param2 ^ -241));
             }
             if (var4 == 13) {
               try {

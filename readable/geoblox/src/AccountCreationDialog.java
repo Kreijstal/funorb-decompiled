@@ -80,7 +80,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
               var5.appendActionButton(WidgetContainer.toServerListText, 1, 7);
             } else {
               if (6 == result.field_j) {
-                var5.appendActionButton(jc.toCustomerSupportText, 1, 9);
+                var5.appendActionButton(AvatarFeedbackSupport.toCustomerSupportText, 1, 9);
               }
             }
           }

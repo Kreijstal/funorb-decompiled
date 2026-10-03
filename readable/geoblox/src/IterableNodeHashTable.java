@@ -28,10 +28,10 @@ final class IterableNodeHashTable implements Iterable {
         if (AgeValidator.field_i) {
           Geoblox.activeMessageDialog.showConnectionRestoredContent(false);
         } else {
-          var1 = ik.field_a;
+          var1 = EntityLinkSupport.field_a;
           if (var1 > 0) {
             if (1 == var1) {
-              TextWidgetRenderer.field_d = ih.ticketingOneUnreadText;
+              TextWidgetRenderer.field_d = EntityContactSupport.ticketingOneUnreadText;
             } else {
               TextWidgetRenderer.field_d = OpacityWidget.a(SecondaryNodeDeque.ticketingUnreadCountText, new String[]{Integer.toString(var1)}, (byte) -124);
             }

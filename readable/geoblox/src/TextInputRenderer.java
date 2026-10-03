@@ -20,7 +20,7 @@ class TextInputRenderer extends TextWidgetRenderer {
     public final void drawWidget(int parentX, int methodGuard, int parentY, boolean widgetEnabled, UiWidget widget) {
         try {
             if (widgetEnabled) {
-                ik.a(parentX + widget.widgetX, widget.widgetHeight, widget.widgetY + parentY, widget.widgetWidth, -1540604944);
+                EntityLinkSupport.drawGradientWidgetBorder(parentX + widget.widgetX, widget.widgetHeight, widget.widgetY + parentY, widget.widgetWidth, -1540604944);
             }
             if (methodGuard > -5) {
                 field_t = (TextWidgetRenderer) null;

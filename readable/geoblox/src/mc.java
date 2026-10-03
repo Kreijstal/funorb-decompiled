@@ -78,7 +78,7 @@ final class mc {
         pointerMonitor = pg.pointerListener;
         synchronized (pointerMonitor) {
           GameplaySession.pointerIdleTicks = GameplaySession.pointerIdleTicks + 1;
-          gf.heldPointerButtonSnapshot = Under13TermsPanel.liveHeldPointerButton;
+          EntityCollisionSupport.heldPointerButtonSnapshot = Under13TermsPanel.liveHeldPointerButton;
           if (methodGuard >= -126) {
             pointerPressXSnapshot = -77;
           }

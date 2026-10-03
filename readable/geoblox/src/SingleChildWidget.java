@@ -160,7 +160,7 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
             return false;
           }
           var3 = oa.a(-12520);
-          if ((ab.field_b != 0) &&
+          if ((EntityMotionSupport.field_b != 0) &&
               (MidiNote.field_f < 0)) {
             var5_ref_ma = (DelayedIncomingPacket) ((Object) va.field_c.firstForIteration(0));
             if ((var5_ref_ma != null) &&
@@ -191,7 +191,7 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
             if (!TriangleMesh.a(false)) {
               return false;
             }
-            if (ab.field_b == 0) {
+            if (EntityMotionSupport.field_b == 0) {
               MidiNoteMixer.field_o = dc.field_b;
               dc.field_b = VisualPropertyNode.field_n;
               VisualPropertyNode.field_n = ScorePopup.field_l;
@@ -199,7 +199,7 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
               MidiNote.field_f = -1;
               return true;
             }
-            var5 = ab.field_b;
+            var5 = EntityMotionSupport.field_b;
             if (0.0 != fc.field_a) {
               var5 = (int)((double)var5 + DelegatingCanvas.field_d.nextGaussian() * fc.field_a);
               if (var5 < 0) {

@@ -22,7 +22,7 @@ final class bk {
     final static void a(ResourceArchive param0, int param1, int param2, PcmStreamMixer param3) {
         try {
             DiskCacheWorker.logoStartDelayTicks = param1 * sb.a(true) / 1000;
-            ab.a(99, param0);
+            EntityMotionSupport.a(99, param0);
             MessageDialogContent.loadLogoMeshesAndMaterials(param0, 0);
             if (param2 < 97) {
                 bk.a(true, -54);
@@ -67,9 +67,9 @@ final class bk {
         var4 = stackIn_9_0;
         FrameTimer.field_a = var8.readNullTerminatedText((byte) 117);
         if (var4 == 0) {
-          jc.field_b = FrameTimer.field_a;
+          AvatarFeedbackSupport.field_b = FrameTimer.field_a;
         } else {
-          jc.field_b = var8.readNullTerminatedText((byte) 124);
+          AvatarFeedbackSupport.field_b = var8.readNullTerminatedText((byte) 124);
         }
         if (StrongCacheReference.field_u == 1) {
           var8.readUnsignedShortBE(true);
@@ -89,7 +89,7 @@ final class bk {
         try {
           var9 = StatefulWidgetRenderer.field_r.getDefinition((byte) -14, var5);
           RankedListQuery.field_f = var9.summarizeLiteralSegments((byte) -69);
-          if (!jc.field_b.equals(SecondaryDeque.field_f)) {
+          if (!AvatarFeedbackSupport.field_b.equals(SecondaryDeque.field_f)) {
             stackIn_22_0 = var9.referencedTemplateIds;
           } else {
             stackIn_22_0 = null;

@@ -69,7 +69,7 @@ abstract class AwtRasterBuffer {
             if (var3_int <= var4) {
               continue;
             }
-            stackIn_12_0 = jc.a(var4, param2, param0 ^ 121);
+            stackIn_12_0 = AvatarFeedbackSupport.computeAdjustedRemainder(var4, param2, param0 ^ 121);
             return stackIn_12_0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

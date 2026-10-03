@@ -66,7 +66,7 @@ public final class Geoblox extends SessionGameApplet {
             OpacityWidget.field_F = null;
             ProxySocketConnector.field_m = null;
             GzipInflater.field_a = null;
-            ih.b(127);
+            EntityContactSupport.resetFrameTimingHistory(127);
             return false;
         }
         if (null != ll.gameGraphicsArchive && null != ArchiveLoadStep.fontMetricsArchive && ki.basicUiGraphicsArchive != null) {
@@ -223,7 +223,7 @@ public final class Geoblox extends SessionGameApplet {
             UsernameAvailabilityValidator.orbCoinSprite = ug.loadSprite("orbcoin", ki.basicUiGraphicsArchive, (byte) -78, "basic");
             GameScreen.selectedThemeId = 1;
             ProxySocketConnector.selectThemeRenderAssets((byte) 79);
-            ih.b(-62);
+            EntityContactSupport.resetFrameTimingHistory(-62);
             ArchiveLoadStep.fontMetricsArchive = null;
             ki.basicUiGraphicsArchive = null;
             return false;
@@ -273,7 +273,7 @@ public final class Geoblox extends SessionGameApplet {
                         if (da.a(0, -112)) {
                           if (!((ll.gameGraphicsArchive.ensureIndexLoaded(0)) &&
                               (ll.gameGraphicsArchive.loadGroupByName("halloween", (byte) -127)))) {
-                            HighscoreNameEntry.a(gf.formatArchiveGroupProgress(Under13TermsPanel.field_F, ll.gameGraphicsArchive, "halloween", FullscreenFailureReason.field_c, true), -2, 45.0f);
+                            HighscoreNameEntry.a(EntityCollisionSupport.formatArchiveGroupProgress(Under13TermsPanel.field_F, ll.gameGraphicsArchive, "halloween", FullscreenFailureReason.field_c, true), -2, 45.0f);
                             return false;
                           }
                         }
@@ -293,34 +293,34 @@ public final class Geoblox extends SessionGameApplet {
                         graphicsGroupNameSnapshot = "basic";
                         graphicsLoadingTextSnapshot = AccountWelcomePanel.loadingGraphicsText;
                         graphicsProgressGuard = (archivePollGuard) ? false : true;
-                        HighscoreNameEntry.a(gf.formatArchiveGroupProgress(graphicsWaitingTextSnapshot, graphicsArchiveSnapshot, graphicsGroupNameSnapshot, graphicsLoadingTextSnapshot, graphicsProgressGuard), -2, 50.0f);
+                        HighscoreNameEntry.a(EntityCollisionSupport.formatArchiveGroupProgress(graphicsWaitingTextSnapshot, graphicsArchiveSnapshot, graphicsGroupNameSnapshot, graphicsLoadingTextSnapshot, graphicsProgressGuard), -2, 50.0f);
                         return false;
                       }
-                      HighscoreNameEntry.a(gf.formatArchiveGroupProgress(TextWidgetRenderer.waitingForGraphicsText, ll.gameGraphicsArchive, "sun", AccountWelcomePanel.loadingGraphicsText, true), -2, 45.0f);
+                      HighscoreNameEntry.a(EntityCollisionSupport.formatArchiveGroupProgress(TextWidgetRenderer.waitingForGraphicsText, ll.gameGraphicsArchive, "sun", AccountWelcomePanel.loadingGraphicsText, true), -2, 45.0f);
                       return false;
                     }
-                    HighscoreNameEntry.a(gf.formatArchiveGroupProgress(TextWidgetRenderer.waitingForGraphicsText, ll.gameGraphicsArchive, "", AccountWelcomePanel.loadingGraphicsText, true), -2, 45.0f);
+                    HighscoreNameEntry.a(EntityCollisionSupport.formatArchiveGroupProgress(TextWidgetRenderer.waitingForGraphicsText, ll.gameGraphicsArchive, "", AccountWelcomePanel.loadingGraphicsText, true), -2, 45.0f);
                     return false;
                   }
-                  fontWaitingTextSnapshot = ik.waitingForFontsText;
+                  fontWaitingTextSnapshot = EntityLinkSupport.waitingForFontsText;
                   fontArchiveSnapshot = ArchiveLoadStep.fontMetricsArchive;
                   fontGroupNameSnapshot = "";
-                  fontLoadingTextSnapshot = nb.loadingFontsText;
+                  fontLoadingTextSnapshot = EntitySpawnSupport.loadingFontsText;
                   fontProgressGuard = (archivePollGuard) ? false : true;
-                  HighscoreNameEntry.a(gf.formatArchiveGroupProgress(fontWaitingTextSnapshot, fontArchiveSnapshot, fontGroupNameSnapshot, fontLoadingTextSnapshot, fontProgressGuard), -2, 35.0f);
+                  HighscoreNameEntry.a(EntityCollisionSupport.formatArchiveGroupProgress(fontWaitingTextSnapshot, fontArchiveSnapshot, fontGroupNameSnapshot, fontLoadingTextSnapshot, fontProgressGuard), -2, 35.0f);
                   return false;
                 }
                 HighscoreNameEntry.a(ClientSessionSnapshot.a(ud.loadingSoundEffectsText, LimitedRandomAccessFile.waitingForSoundEffectsText, 0, archivePollGuard, ProxySocketConnector.field_m), -2, 25.0f);
                 return false;
               }
-              HighscoreNameEntry.a(gf.formatArchiveGroupProgress(ArchiveNetworkClient.waitingForMusicText, GzipInflater.field_a, "", FadingDialog.loadingMusicText, true), -2, 15.0f);
+              HighscoreNameEntry.a(EntityCollisionSupport.formatArchiveGroupProgress(ArchiveNetworkClient.waitingForMusicText, GzipInflater.field_a, "", FadingDialog.loadingMusicText, true), -2, 15.0f);
               return false;
             }
           }
-          HighscoreNameEntry.a(gf.formatArchiveGroupProgress(LimitedRandomAccessFile.waitingForSoundEffectsText, ah.field_c, "", ud.loadingSoundEffectsText, true), -2, 10.0f);
+          HighscoreNameEntry.a(EntityCollisionSupport.formatArchiveGroupProgress(LimitedRandomAccessFile.waitingForSoundEffectsText, ah.field_c, "", ud.loadingSoundEffectsText, true), -2, 10.0f);
           return false;
         }
-        HighscoreNameEntry.a(gf.formatArchiveGroupProgress(LimitedRandomAccessFile.waitingForSoundEffectsText, OpacityWidget.field_F, "", ud.loadingSoundEffectsText, true), -2, 5.0f);
+        HighscoreNameEntry.a(EntityCollisionSupport.formatArchiveGroupProgress(LimitedRandomAccessFile.waitingForSoundEffectsText, OpacityWidget.field_F, "", ud.loadingSoundEffectsText, true), -2, 5.0f);
         return false;
     }
 
@@ -344,11 +344,11 @@ public final class Geoblox extends SessionGameApplet {
         kb.c(105);
         ByteArrayBuffer.clearWhirlpoolTables(0);
         oa.b(8192);
-        ab.a((byte) -60);
-        gf.a(true);
+        EntityMotionSupport.a((byte) -60);
+        EntityCollisionSupport.releaseStaticReferences(true);
         gg.a(45);
         jk.a(methodGuard ^ 10848);
-        ik.a(48);
+        EntityLinkSupport.releaseStaticReferences(48);
         ClientSessionSnapshot.b(methodGuard + 59);
         pg.b(22059);
         lj.a(-1);
@@ -412,7 +412,7 @@ public final class Geoblox extends SessionGameApplet {
         oh.a((byte) -88);
         SecondaryDeque.b(-10943);
         GameplayEntity.e((byte) 104);
-        kc.releaseStaticReferences(126);
+        BoardReconciliationSupport.releaseStaticReferences(126);
         mf.a(false);
         ah.a(39);
         fl.a(33);
@@ -441,7 +441,7 @@ public final class Geoblox extends SessionGameApplet {
         lb.a(31);
         rb.a((byte) -112);
         fc.a((byte) -126);
-        nb.a(-102);
+        EntitySpawnSupport.releaseStaticReferences(-102);
         ak.a(methodGuard ^ 30613);
         kf.b(methodGuard - 15583);
         tc.a(true);
@@ -468,7 +468,7 @@ public final class Geoblox extends SessionGameApplet {
         MusicDecodeStage.a();
         ul.a(-113);
         TextTemplateDefinition.f(111);
-        ih.a((byte) 73);
+        EntityContactSupport.releaseStaticReferences((byte) 73);
         TextTemplateDefinitionLoader.a((byte) 107);
         WeightedObjectCache.a(126);
         wb.a((byte) 95);
@@ -499,7 +499,7 @@ public final class Geoblox extends SessionGameApplet {
         ValidationMessageWidget.j(24033);
         CheckboxWidget.f(-75);
         TextInputValidator.f(methodGuard + 65);
-        jc.a(-43);
+        AvatarFeedbackSupport.releaseStaticReferences(-43);
         Under13TermsPanel.b(false);
         DialWidget.f(0);
         MultiHandleSliderWidget.f(0);
@@ -666,7 +666,7 @@ public final class Geoblox extends SessionGameApplet {
                       InstrumentPatch.field_n = null;
                     }
                     if (uiServiceResultOrOverlayMode == 2) {
-                      gf.a(NodeHashTableIterator.c(109), 62);
+                      EntityCollisionSupport.openQuitPage(NodeHashTableIterator.c(109), 62);
                     }
                   }
                 } else {
@@ -939,7 +939,7 @@ public final class Geoblox extends SessionGameApplet {
         if (ak.field_b != null) {
             SpriteState.a(true, ak.field_b);
             ak.field_b = null;
-            ih.b(-105);
+            EntityContactSupport.resetFrameTimingHistory(-105);
         }
         ll.gameGraphicsArchive = TrackedPcmStream.a(1, true, graphicsArchiveGuard, true, (byte) -111);
         OpacityWidget.field_F = SocketArchiveNetworkClient.createResourceArchive(2, (byte) -62);
