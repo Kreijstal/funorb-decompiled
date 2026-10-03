@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class fe {
+final class GzipInflater {
     static int field_d;
     static ResourceArchive field_a;
     static int field_k;
@@ -11,7 +11,7 @@ final class fe {
     static rf field_e;
     static IndexedSprite sunBackgroundSprite;
     static int field_f;
-    private java.util.zip.Inflater field_i;
+    private java.util.zip.Inflater inflater;
     static boolean field_b;
     static int field_g;
     static float avatarTintGreenDelta;
@@ -24,61 +24,61 @@ final class fe {
         field_a = null;
     }
 
-    final void a(int param0, ByteArrayBuffer param1, byte[] param2) {
+    final void inflateInto(int methodGuard, ByteArrayBuffer buffer, byte[] destination) {
         try {
-            Exception exception = null;
-            RuntimeException runtimeException = null;
-            RuntimeException stackIn_15_0 = null;
-            StringBuilder stackIn_15_1 = null;
-            String stackIn_16_2 = null;
-            StringBuilder stackIn_18_1 = null;
-            String stackIn_19_2 = null;
-            Throwable decompiledCaughtException = null;
+            Exception inflateException = null;
+            RuntimeException inflateFailureForContext = null;
+            RuntimeException inflateFailureBeforeContext = null;
+            StringBuilder inflateMessagePrefix = null;
+            String bufferDescription = null;
+            StringBuilder inflateMessageBeforeDestination = null;
+            String destinationDescription = null;
+            Throwable caughtInflateFailure = null;
             try {
-              if (param1.bytes[param1.position] == 31) {
-                if (-117 == param1.bytes[1 + param1.position]) {
-                  if (this.field_i == null) {
-                    this.field_i = new java.util.zip.Inflater(true);
+              if (buffer.bytes[buffer.position] == 31) {
+                if (-117 == buffer.bytes[1 + buffer.position]) {
+                  if (this.inflater == null) {
+                    this.inflater = new java.util.zip.Inflater(true);
                   }
                   try {
-                    this.field_i.setInput(param1.bytes, param1.position + 10, param1.bytes.length - 8 - (param1.position + 10));
-                    if (param0 != -1) {
-                      fe.a(76);
+                    this.inflater.setInput(buffer.bytes, buffer.position + 10, buffer.bytes.length - 8 - (buffer.position + 10));
+                    if (methodGuard != -1) {
+                      GzipInflater.a(76);
                     }
-                    this.field_i.inflate(param2);
-                  } catch (java.lang.Exception decompiledCaughtParameter0) {
-                    decompiledCaughtException = decompiledCaughtParameter0;
-                    exception = (Exception) (Object) decompiledCaughtException;
-                    this.field_i.reset();
+                    this.inflater.inflate(destination);
+                  } catch (java.lang.Exception inflateOperationException) {
+                    caughtInflateFailure = inflateOperationException;
+                    inflateException = (Exception) (Object) caughtInflateFailure;
+                    this.inflater.reset();
                     throw new RuntimeException("");
                   }
-                  this.field_i.reset();
+                  this.inflater.reset();
                   return;
                 }
               }
               throw new RuntimeException("");
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-              stackIn_15_0 = (RuntimeException) (runtimeException);
-              stackIn_15_1 = new StringBuilder().append("fe.D(").append(param0).append(',');
-              if (param1 == null) {
-                stackIn_16_2 = "null";
+            } catch (java.lang.RuntimeException inflateFailure) {
+              caughtInflateFailure = inflateFailure;
+              inflateFailureForContext = (RuntimeException) (Object) caughtInflateFailure;
+              inflateFailureBeforeContext = (RuntimeException) (inflateFailureForContext);
+              inflateMessagePrefix = new StringBuilder().append("fe.D(").append(methodGuard).append(',');
+              if (buffer == null) {
+                bufferDescription = "null";
               } else {
-                stackIn_16_2 = "{...}";
+                bufferDescription = "{...}";
               }
-              stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',');
-              if (param2 == null) {
-                stackIn_19_2 = "null";
+              inflateMessageBeforeDestination = ((StringBuilder) (Object) inflateMessagePrefix).append(bufferDescription).append(',');
+              if (destination == null) {
+                destinationDescription = "null";
               } else {
-                stackIn_19_2 = "{...}";
+                destinationDescription = "{...}";
               }
-              throw t.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+              throw t.a((Throwable) ((Object) inflateFailureBeforeContext), ((StringBuilder) (Object) inflateMessageBeforeDestination).append(destinationDescription).append(')').toString());
             }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+        } catch (RuntimeException | Error uncheckedInflateFailure) {
+            throw uncheckedInflateFailure;
+        } catch (Throwable checkedInflateFailure) {
+            throw new RuntimeException(checkedInflateFailure);
         }
     }
 
@@ -97,7 +97,7 @@ final class fe {
         return new ck[]{pj.field_g, w.field_d, ab.field_c, wg.field_d, lj.field_e, s.field_E, cd.field_i, SpriteState.field_t, qj.field_a, fk.field_B, IntKeyLookup.field_d, bd.field_c, va.field_f, field_h};
     }
 
-    public fe() {
+    public GzipInflater() {
         this(-1, 1000000, 1000000);
     }
 
@@ -165,7 +165,7 @@ final class fe {
         }
     }
 
-    private fe(int param0, int param1, int param2) {
+    private GzipInflater(int unusedFirstArgument, int unusedSecondArgument, int unusedThirdArgument) {
     }
 
     static {

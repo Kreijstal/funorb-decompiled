@@ -74,7 +74,7 @@ final class ArchiveIndex {
         byte[] newGroupDigest = null;
         unusedClientGuardSnapshot = Geoblox.field_C;
         try {
-          indexBuffer = new ByteArrayBuffer(v.a(packedIndexBytes, -1));
+          indexBuffer = new ByteArrayBuffer(v.decompressArchive(packedIndexBytes, -1));
           formatVersion = indexBuffer.readUnsignedByte((byte) 34);
           if (5 <= formatVersion) {
             if (formatVersion <= 7) {

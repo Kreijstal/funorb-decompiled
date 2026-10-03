@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class uj {
-    static int field_b;
+    static int maximumArchiveLength;
     static String loginMessage2Text;
     static String field_c;
     static String field_a;
@@ -103,7 +103,7 @@ final class uj {
     }
 
     static {
-        field_b = 0;
+        maximumArchiveLength = 0;
         loginMessage2Text = "Error connecting to server. Please try using a different server.";
         field_c = "Harvesting Pumpkin";
         field_a = "Starting Game";

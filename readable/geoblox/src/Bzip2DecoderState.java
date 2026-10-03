@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jl {
+final class Bzip2DecoderState {
     static boolean avatarShockContactPending;
     int field_q;
-    int field_i;
+    int outputBytesWritten;
     byte[] field_e;
     byte field_h;
     byte[] field_r;
-    int field_C;
-    int field_B;
+    int outputPosition;
+    int inputPosition;
     int[][] field_E;
     int[][] field_f;
-    byte[] field_p;
-    int field_u;
+    byte[] inputBytes;
+    int inputBytesRead;
     boolean[] field_b;
-    byte[] field_j;
-    int field_s;
+    byte[] outputBytes;
+    int bufferedBitCount;
     int field_k;
     int[][] field_l;
     byte[] field_x;
@@ -28,8 +28,8 @@ final class jl {
     int field_D;
     int[] field_w;
     int field_a;
-    int field_A;
-    int field_g;
+    int remainingOutputBytes;
+    int bitBuffer;
     int[] field_F;
     boolean[] field_n;
     int field_c;
@@ -48,7 +48,7 @@ final class jl {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
-            jl.a((byte) 47);
+            Bzip2DecoderState.a((byte) 47);
           }
           var2_int = param0.readUnsignedByte((byte) 34);
           stackIn_5_0 = (var2_int == 1) ? 1 : 0;
@@ -84,9 +84,9 @@ final class jl {
         }
     }
 
-    jl() {
-        this.field_C = 0;
-        this.field_B = 0;
+    Bzip2DecoderState() {
+        this.outputPosition = 0;
+        this.inputPosition = 0;
         this.field_E = new int[6][258];
         this.field_r = new byte[18002];
         this.field_b = new boolean[16];

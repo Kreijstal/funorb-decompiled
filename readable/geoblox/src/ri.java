@@ -93,7 +93,7 @@ final class ri {
                           p.field_k = -1;
                           break L6;
                         }
-                        jl.a((byte) -116);
+                        Bzip2DecoderState.a((byte) -116);
                         ck.field_e = false;
                         stackIn_33_0 = var6_int;
                         return stackIn_33_0;
@@ -117,7 +117,7 @@ final class ri {
                   }
                   if (!param0) {
                     stackIn_45_0 = !((var7 & 4) == 0);
-                    fe.field_b = stackIn_45_0;
+                    GzipInflater.field_b = stackIn_45_0;
                     stackIn_48_0 = !((var7 & 8) == 0);
                     fb.field_l = stackIn_48_0;
                     if (!fb.field_l) {
@@ -154,7 +154,7 @@ final class ri {
                   }
                   L17: {
                     if (og.field_n <= 0) {
-                      if (!fe.field_b) {
+                      if (!GzipInflater.field_b) {
                         try {
                           wk.a((byte) -6, k.c(107), "unzap");
                         } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -185,7 +185,7 @@ final class ri {
               }
               if (PacketBuffer.field_l == ac.field_v) {
                 if (nf.a(false)) {
-                  jl.a((byte) -118);
+                  Bzip2DecoderState.a((byte) -118);
                   if (ScorePopup.field_l == 7) {
                     if (!ck.field_e) {
                       ck.field_e = true;

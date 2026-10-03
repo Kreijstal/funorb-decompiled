@@ -35,7 +35,7 @@ final class v {
             return;
         }
         byte[] var2 = (byte[]) null;
-        v.a((byte[]) null, -18);
+        v.decompressArchive((byte[]) null, -18);
         field_q = null;
         field_e = null;
     }
@@ -50,82 +50,82 @@ final class v {
         this.field_p = param1;
     }
 
-    final static byte[] a(byte[] param0, int param1) {
-        byte[] stackIn_7_0 = null;
-        byte[] stackIn_21_0 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        String stackIn_25_2 = null;
-        Throwable decompiledCaughtException = null;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        byte[] var5_ref_byte__ = null;
-        byte[] var6 = null;
-        Object var7 = null;
-        ByteArrayBuffer var9 = null;
-        byte[] var10 = null;
-        byte[] var11 = null;
-        byte[] var12 = null;
-        byte[] var13 = null;
+    final static byte[] decompressArchive(byte[] packedBytes, int uncompressedTypeComplement) {
+        byte[] uncompressedBytesBeforeReturn = null;
+        byte[] decompressedBytesBeforeReturn = null;
+        RuntimeException unpackFailureBeforeContext = null;
+        StringBuilder unpackMessagePrefix = null;
+        String packedBytesDescription = null;
+        Throwable caughtUnpackFailure = null;
+        RuntimeException unpackFailureForContext = null;
+        int compressionType = 0;
+        int packedLength = 0;
+        int unpackedLength = 0;
+        byte[] uncompressedBytes = null;
+        byte[] decompressedBytes = null;
+        Object gzipInflaterMonitor = null;
+        ByteArrayBuffer buffer = null;
+        byte[] uncompressedBytesAlias = null;
+        byte[] decompressedBytesAlias = null;
+        byte[] allocatedUncompressedBytes = null;
+        byte[] allocatedDecompressedBytes = null;
         try {
           L0: {
-            var9 = new ByteArrayBuffer(param0);
-            var3 = var9.readUnsignedByte((byte) 34);
-            var4 = var9.readIntBE((byte) -97);
-            if (var4 >= 0) {
-              if (uj.field_b != 0) {
-                if (var4 > uj.field_b) {
+            buffer = new ByteArrayBuffer(packedBytes);
+            compressionType = buffer.readUnsignedByte((byte) 34);
+            packedLength = buffer.readIntBE((byte) -97);
+            if (packedLength >= 0) {
+              if (uj.maximumArchiveLength != 0) {
+                if (packedLength > uj.maximumArchiveLength) {
                   break L0;
                 }
               }
-              if (param1 == ~var3) {
-                var12 = new byte[var4];
-                var10 = var12;
-                var5_ref_byte__ = var10;
-                var9.readBytes(29915, var4, var12, 0);
-                stackIn_7_0 = (byte[]) (var5_ref_byte__);
-                return stackIn_7_0;
+              if (uncompressedTypeComplement == ~compressionType) {
+                allocatedUncompressedBytes = new byte[packedLength];
+                uncompressedBytesAlias = allocatedUncompressedBytes;
+                uncompressedBytes = uncompressedBytesAlias;
+                buffer.readBytes(29915, packedLength, allocatedUncompressedBytes, 0);
+                uncompressedBytesBeforeReturn = (byte[]) (uncompressedBytes);
+                return uncompressedBytesBeforeReturn;
               }
               L2: {
-                var5 = var9.readIntBE((byte) -49);
-                if (var5 >= 0) {
-                  if (uj.field_b != 0) {
-                    if (uj.field_b < var5) {
+                unpackedLength = buffer.readIntBE((byte) -49);
+                if (unpackedLength >= 0) {
+                  if (uj.maximumArchiveLength != 0) {
+                    if (uj.maximumArchiveLength < unpackedLength) {
                       break L2;
                     }
                   }
-                  var13 = new byte[var5];
-                  var11 = var13;
-                  var6 = var11;
-                  if (var3 == 1) {
-                    tb.a(var13, var5, param0, var4, 9);
+                  allocatedDecompressedBytes = new byte[unpackedLength];
+                  decompressedBytesAlias = allocatedDecompressedBytes;
+                  decompressedBytes = decompressedBytesAlias;
+                  if (compressionType == 1) {
+                    Bzip2Decoder.decompressInto(allocatedDecompressedBytes, unpackedLength, packedBytes, packedLength, 9);
                   } else {
-                    var7 = AwtRasterBuffer.field_b;
-                    synchronized (var7) {
-                      AwtRasterBuffer.field_b.a(param1 + 0, var9, var13);
+                    gzipInflaterMonitor = AwtRasterBuffer.archiveGzipInflater;
+                    synchronized (gzipInflaterMonitor) {
+                      AwtRasterBuffer.archiveGzipInflater.inflateInto(uncompressedTypeComplement + 0, buffer, allocatedDecompressedBytes);
                     }
                   }
-                  stackIn_21_0 = (byte[]) (var6);
-                  return stackIn_21_0;
+                  decompressedBytesBeforeReturn = (byte[]) (decompressedBytes);
+                  return decompressedBytesBeforeReturn;
                 }
               }
               throw new RuntimeException();
             }
           }
           throw new RuntimeException();
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = (RuntimeException) (Object) decompiledCaughtException;
-          stackIn_24_0 = (RuntimeException) (var2);
-          stackIn_24_1 = new StringBuilder().append("v.C(");
-          if (param0 == null) {
-            stackIn_25_2 = "null";
+        } catch (java.lang.RuntimeException unpackFailure) {
+          caughtUnpackFailure = unpackFailure;
+          unpackFailureForContext = (RuntimeException) (Object) caughtUnpackFailure;
+          unpackFailureBeforeContext = (RuntimeException) (unpackFailureForContext);
+          unpackMessagePrefix = new StringBuilder().append("v.C(");
+          if (packedBytes == null) {
+            packedBytesDescription = "null";
           } else {
-            stackIn_25_2 = "{...}";
+            packedBytesDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) ((Object) unpackFailureBeforeContext), ((StringBuilder) (Object) unpackMessagePrefix).append(packedBytesDescription).append(',').append(uncompressedTypeComplement).append(')').toString());
         }
     }
 

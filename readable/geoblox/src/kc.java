@@ -561,7 +561,7 @@ final class kc {
                 }
                 if (w.avatarShockPending) {
                   jc.requestAvatarFeedback(3, false);
-                  jl.avatarShockContactPending = false;
+                  Bzip2DecoderState.avatarShockContactPending = false;
                 }
               }
               L55: {
@@ -579,7 +579,7 @@ final class kc {
               sessionForRasterRead.boardRasterDirty = rasterDirtyDecision;
               w.avatarShockPending = false;
               if (visitedResetIndexThenKindFourCount >= 3) {
-                ra.a(255 ^ fe.field_f, -88, fe.field_f);
+                ra.a(255 ^ GzipInflater.field_f, -88, GzipInflater.field_f);
               }
               if (rb.kindFourRemovalCount >= 5) {
                 ra.a(255 ^ vd.field_p, -83, vd.field_p);

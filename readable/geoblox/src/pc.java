@@ -39,31 +39,31 @@ final class pc extends IntrusiveNode {
             if (vh.g(-88)) {
                 fj.field_q.writeCipherByte(1, (byte) -27);
                 cm.a(-1, 0);
-                jl.a((byte) -126);
+                Bzip2DecoderState.a((byte) -126);
                 return;
             }
-            jl.a((byte) -126);
+            Bzip2DecoderState.a((byte) -126);
             return;
         }
         kj.c(-11099);
         hc.b(true);
         dk.a((byte) -121);
         if (!vh.g(-88)) {
-            jl.a((byte) -126);
+            Bzip2DecoderState.a((byte) -126);
             return;
         }
         fj.field_q.writeCipherByte(1, (byte) -27);
         cm.a(-1, 0);
-        jl.a((byte) -126);
+        Bzip2DecoderState.a((byte) -126);
     }
 
     final static void a(int param0, boolean param1) {
         if (param1) {
             archiveLanguageId = 99;
-            fe.field_d = param0;
+            GzipInflater.field_d = param0;
             return;
         }
-        fe.field_d = param0;
+        GzipInflater.field_d = param0;
     }
 
     final void b(int param0) {

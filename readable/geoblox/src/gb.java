@@ -131,8 +131,8 @@ final class gb {
           L0: while (hh.pollKeyboardEvent(77)) {
             kd.field_e.a((byte) 105, te.currentKeyboardEventCharacter, ki.currentKeyboardEventCode);
           }
-          if (fe.field_d != param0) {
-            var1_int = fe.field_d;
+          if (GzipInflater.field_d != param0) {
+            var1_int = GzipInflater.field_d;
             pc.a(-1, false);
             stackIn_6_0 = var1_int;
             return stackIn_6_0;

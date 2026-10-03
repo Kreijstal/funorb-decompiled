@@ -69,7 +69,7 @@ final class bh extends java.awt.Canvas {
               break;
             }
             if (var3 == null) {
-              jl.a((byte) -122);
+              Bzip2DecoderState.a((byte) -122);
               return;
             }
             L2: {
@@ -84,9 +84,9 @@ final class bh extends java.awt.Canvas {
                 for (var6_int = 0; var4 > var6_int; var6_int++) {
                   ScorePopup.a(116, var14);
                   if (var6_int != 0) {
-                    nd.a(fe.field_g, var6_int, (byte) 123, rd.field_v, h.field_b, lc.field_b);
+                    nd.a(GzipInflater.field_g, var6_int, (byte) 123, rd.field_v, h.field_b, lc.field_b);
                   } else {
-                    nd.a(fe.field_g, var6_int, (byte) -97, rd.field_v, h.field_b, lc.field_b);
+                    nd.a(GzipInflater.field_g, var6_int, (byte) -97, rd.field_v, h.field_b, lc.field_b);
                   }
                 }
                 kc.a(var5, (byte) -98);

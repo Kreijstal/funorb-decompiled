@@ -16,7 +16,7 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
         SecondaryDeque.contactProbeRaster.setAsRasterTarget();
         SoftwareRasterizer.clearFramebuffer();
         sh.mainRasterBuffer.setAsRasterTarget(255);
-        jl.avatarShockContactPending = false;
+        Bzip2DecoderState.avatarShockContactPending = false;
         rb.kindFourRemovalCount = 0;
         ab.boardContactStateDirty = false;
         fa.entitiesDetachedThisTick = false;

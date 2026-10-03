@@ -34,7 +34,7 @@ final class ih {
           if (ArchiveNetworkClient.movingEntities.isEmpty(13519)) {
             if (SecondaryDeque.spawnQueue.isEmpty(13519)) {
               if (bh.transientEntities.isEmpty(param0 + 13519)) {
-                if (!jl.avatarShockContactPending) {
+                if (!Bzip2DecoderState.avatarShockContactPending) {
                   stackIn_8_0 = true;
                   break L0;
                 }
@@ -174,7 +174,7 @@ final class ih {
                       jc.requestAvatarFeedback(7, false);
                     }
                   } else {
-                    jl.avatarShockContactPending = true;
+                    Bzip2DecoderState.avatarShockContactPending = true;
                   }
                 }
               }

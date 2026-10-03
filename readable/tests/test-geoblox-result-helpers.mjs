@@ -18,6 +18,7 @@ const expectedSocketIoSha256 = 'ed8f7d5f5438f4fb39cb3bceca82a861d01f4e08502ca73b
 const expectedDispatcherShutdownSha256 = '86554dba87ac6740912bf88fcd328c871758629250b6277e4223e4955bfcfb29';
 const expectedInputSha256 = 'f8fe8768fbba9c94298f8e9a9193605681295cdd49d1eeba47929c208634844e';
 const expectedArchiveSectorSha256 = '77dc4b47188f20793aaecb76f198e59850d0fc3d8af0ca07b2d0a111719a869b';
+const expectedArchiveCompressionSha256 = '191d74dde65e8e0a6b5dc72a0193765baa165a94ab82ef5df15f10d86fd6f8fe';
 const temporary = fs.mkdtempSync(path.join(os.tmpdir(), 'geoblox-result-helpers-'));
 try {
   if (nativeInput) {
@@ -42,7 +43,7 @@ try {
     assert.equal(files.length, pin.files);
     assert.equal(hash.digest('hex'), pin.sha256);
   }
-  let expected, expectedArchiveSectorSha256Baseline;
+  let expected, expectedArchiveSectorSha256Baseline, expectedArchiveCompressionBaseline;
   for (const variant of [...(nativeInput ? ['native'] : []), 'original', 'renamed']) {
     const native = variant === 'native', renamed = variant === 'renamed';
     const name = (symbol, original) => renamed ? aliases.get(symbol) ?? original : original;
@@ -337,6 +338,79 @@ try {
             }
           }
           check(cases==138,"sector archive case count");System.out.println("archive-sector-complete:"+cases);
+        }
+      }
+      class ArchiveCompressionBehavior extends ResultHelperBehavior {
+        static byte[] packet(int type,byte[] payload,int packedLength,int outputLength) throws Exception {
+          java.io.ByteArrayOutputStream bytes=new java.io.ByteArrayOutputStream();
+          java.io.DataOutputStream out=new java.io.DataOutputStream(bytes);out.writeByte(type);out.writeInt(packedLength);
+          if(type!=0)out.writeInt(outputLength);out.write(payload);return bytes.toByteArray();
+        }
+        static byte[] gzip(byte[] payload) throws Exception {
+          java.io.ByteArrayOutputStream bytes=new java.io.ByteArrayOutputStream();
+          try(java.util.zip.GZIPOutputStream gzip=new java.util.zip.GZIPOutputStream(bytes)){gzip.write(payload);}
+          return bytes.toByteArray();
+        }
+        static String error(InvocationTargetException failure) throws Exception {
+          Throwable cause=failure.getCause();check(cause.getClass()==Class.forName("${type('sa')}"),"compression contextual error");
+          return "context:"+((Throwable)${get('sa','field_a','Ljava/lang/Throwable;','cause')}).getClass().getName();
+        }
+        public static void main(String[] args) throws Exception {
+          ${set('Geoblox','field_C','I','null','0')}
+          Object shared=construct("${type('fe')}",new Class<?>[0]);${set('sc','field_b','Lfe;','null','shared')}
+          Method unpack=method("${type('v')}","${method('v','a([BI)[B')}",byte[].class,int.class);
+          Method inflate=method("${type('fe')}","${method('fe','a(ILqc;[B)V')}",int.class,Class.forName("${type('qc')}"),byte[].class);
+          int cases=0;
+          for(int type:new int[]{0,2,99})for(int length:new int[]{0,1,16,513})for(int limit:new int[]{0,length,length==0?1:length-1}) {
+            byte[] expected=ArchiveSectorBehavior.payload(length),packed=type==0?expected:gzip(expected);
+            byte[] input=packet(type,packed,packed.length,length),before=input.clone();
+            ${set('uj','field_b','I','null','limit')}
+            boolean rejected=limit!=0&&(packed.length>limit||length>limit);byte[] actual=null;String status="ok";
+            try{actual=(byte[])unpack.invoke(null,input,-1);}catch(InvocationTargetException failure){status=error(failure);}
+            check(rejected?!status.equals("ok"):status.equals("ok")&&Arrays.equals(actual,expected),"container length limit/payload");
+            check(Arrays.equals(before,input),"container input retained");
+            System.out.println("compression:container:"+type+":"+length+":"+limit+":"+status+":"+(actual==null?"null":ArchiveSectorBehavior.digest(actual)));cases++;
+          }
+          ${set('uj','field_b','I','null','0')}
+          for(int type:new int[]{2,99})for(int declared:new int[]{0,1}) {
+            byte[] expected=ArchiveSectorBehavior.payload(16),input=packet(type,gzip(expected),declared,16);
+            byte[] actual=(byte[])unpack.invoke(null,input,-1);check(Arrays.equals(actual,expected),"gzip uses full backing input");
+            System.out.println("compression:declared:"+type+":"+declared+":"+ArchiveSectorBehavior.digest(actual));cases++;
+          }
+          for(int type:new int[]{2,99}) {
+            byte[] compressed=gzip(ArchiveSectorBehavior.payload(16)),input=packet(type,compressed,compressed.length,16);
+            byte[] actual=(byte[])unpack.invoke(null,input,~type);
+            check(Arrays.equals(actual,Arrays.copyOfRange(input,5,5+compressed.length)),"complement selector raw-copy branch");
+            System.out.println("compression:selector:"+type+":"+ArchiveSectorBehavior.digest(actual));cases++;
+          }
+          byte[] prefix="Archive block payload: ".getBytes(java.nio.charset.StandardCharsets.US_ASCII),expected=new byte[151];
+          System.arraycopy(prefix,0,expected,0,prefix.length);for(int i=prefix.length;i<expected.length;i++)expected[i]=(byte)((i-prefix.length)%32);
+          byte[] bzip=Base64.getDecoder().decode("MUFZJlNZNrnT2AAAQn2Af////8AAABAgAD5s0SAgAHIpAGhoAAyAAMNQKqoGgGgAGI9TENMgIQtXC6XiIvmAwmIxmQykZmM5oNJqNZsNpuN5wOJyJCUmOZ0IHXxXVshPKmvFoSwCgERYE/F3JFOFCQNrnT2A");
+          byte[] decoded=(byte[])unpack.invoke(null,packet(1,bzip,bzip.length,expected.length),-1);
+          check(Arrays.equals(decoded,expected),"fixed stripped Bzh1 block vector");
+          Object state=${get('tb','field_a','Ljl;')};
+          check(${get('jl','field_p','[B','state')}==null&&${get('jl','field_j','[B','state')}==null,"successful bzip releases input/output arrays");
+          System.out.println("compression:bzip:"+ArchiveSectorBehavior.digest(decoded));cases++;
+          decoded=(byte[])unpack.invoke(null,packet(1,new byte[]{23},0,4),-1);
+          check(Arrays.equals(decoded,new byte[4]),"early bzip end ignores declared packed length/output completion");
+          System.out.println("compression:bzip-end:"+ArchiveSectorBehavior.digest(decoded));cases++;
+          Object reusable=construct("${type('fe')}",new Class<?>[0]);byte[] payload=ArchiveSectorBehavior.payload(16),compressed=gzip(payload);
+          for(int position:new int[]{0,3})for(int outputLength:new int[]{0,1,16,20})for(int mode=0;mode<4;mode++) {
+            if(outputLength==0&&mode==3)continue;
+            byte[] input=new byte[position+compressed.length];System.arraycopy(compressed,0,input,position,compressed.length);
+            if(mode==1)input[position]=0;if(mode==2)input[input.length-8]^=127;if(mode==3)input[position+10]=7;
+            byte[] before=input.clone(),actual=new byte[outputLength];Arrays.fill(actual,(byte)85);
+            Object buffer=construct("${type('qc')}",new Class<?>[]{byte[].class},input);${set('qc','field_f','I','buffer','position')}
+            String status="ok";try{inflate.invoke(reusable,-1,buffer,actual);}catch(InvocationTargetException failure){status=error(failure);}
+            boolean rejected=mode==1||mode==3;check(rejected?!status.equals("ok"):status.equals("ok"),"gzip completion kind");
+            byte[] wanted=new byte[outputLength];Arrays.fill(wanted,(byte)85);if(!rejected)System.arraycopy(payload,0,wanted,0,Math.min(outputLength,payload.length));
+            check(Arrays.equals(actual,wanted),"gzip partial output/tail retention");check(Arrays.equals(input,before),"gzip input unchanged");
+            check((Integer)${get('qc','field_f','I','buffer')}==position,"gzip input cursor unchanged");
+            java.util.zip.Inflater decoder=(java.util.zip.Inflater)${get('fe','field_i','Ljava/util/zip/Inflater;','reusable')};
+            check(decoder.getBytesRead()==0&&decoder.getBytesWritten()==0,"gzip inflater reset/reused");
+            System.out.println("compression:inflate:"+position+":"+outputLength+":"+mode+":"+status+":"+ArchiveSectorBehavior.digest(actual));cases++;
+          }
+          check(cases==74,"compression case count");System.out.println("archive-compression-complete:"+cases);
         }
       }
       class ShutdownBehavior extends ResultHelperBehavior {
@@ -755,6 +829,13 @@ try {
     const shutdownSha256 = crypto.createHash('sha256').update(shutdownOutput).digest('hex');
     console.log(JSON.stringify({variant, shutdownSha256, completion: shutdownOutput.toString().trim().split('\n').at(-1)}));
     assert.equal(shutdownSha256, expectedShutdownSha256, variant);
+    const compressionOutput = captureProcess('java', ['-Djava.awt.headless=true','-cp',classes + path.delimiter + cp,
+      'ArchiveCompressionBehavior']).stdout;
+    const archiveCompressionSha256 = crypto.createHash('sha256').update(compressionOutput).digest('hex');
+    console.log(JSON.stringify({variant, archiveCompressionSha256, completion: compressionOutput.toString().trim().split('\n').at(-1)}));
+    assert.equal(archiveCompressionSha256, expectedArchiveCompressionSha256, variant);
+    if (variant === 'native') expectedArchiveCompressionBaseline = compressionOutput;
+    if (nativeInput && variant !== 'native') assert.equal(Buffer.compare(compressionOutput, expectedArchiveCompressionBaseline), 0, variant);
     const socketIoOutput = captureProcess('java', ['-Djava.awt.headless=true','-cp',classes + path.delimiter + cp,
       'SocketIoBehavior']).stdout;
     const socketIoSha256 = crypto.createHash('sha256').update(socketIoOutput).digest('hex');

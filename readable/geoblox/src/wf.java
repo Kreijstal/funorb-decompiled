@@ -278,7 +278,7 @@ abstract class wf extends ch {
               }
             }
             this.field_t = false;
-            jl.a((byte) -115);
+            Bzip2DecoderState.a((byte) -115);
             kd.b((byte) 81);
             TextInputValidator.a((byte) 124, 2, fa.idleMessage20MinText);
             bl.c(-113);
@@ -448,7 +448,7 @@ abstract class wf extends ch {
               }
               if (null == bh.field_a) {
                 bh.field_a = df.b((byte) 72);
-                hc.field_R = fe.b(110);
+                hc.field_R = GzipInflater.b(110);
               }
               bk.a(hb.field_n, hc.field_R, 111, bh.field_a);
               hb.field_n = null;
@@ -837,7 +837,7 @@ abstract class wf extends ch {
                                       break L2;
                                     }
                                     gi.a((Throwable) null, "MGS1: " + og.e(55), (byte) 125);
-                                    jl.a((byte) -122);
+                                    Bzip2DecoderState.a((byte) -122);
                                     break L2;
                                   }
                                 }
@@ -862,7 +862,7 @@ abstract class wf extends ch {
           }
         }
         gi.a((Throwable) null, "MGS2: " + og.e(55), (byte) 125);
-        jl.a((byte) -118);
+        Bzip2DecoderState.a((byte) -118);
     }
 
     private final void g(byte param0) {

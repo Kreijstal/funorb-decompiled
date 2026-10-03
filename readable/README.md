@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 5,907 guarded naming rules: 56 classes, 730 fields,
-536 methods, 1,588 parameters and 2,997 local declarations. Both 303-file corpora
+The current export has 5,982 guarded naming rules: 59 classes, 743 fields,
+543 methods, 1,605 parameters and 3,032 local declarations. Both 303-file corpora
 compile, preserving 138,558 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -54,7 +54,47 @@ smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
 
-## Current disk archive sector names
+## Current archive compression and entry-state names
+
+Pass 74 adds 75 guarded identities: three classes, thirteen fields, seven
+methods, seventeen parameters and 35 locals. `GzipInflater` names every
+instance declaration, constructor contract and local. `v.decompressArchive`,
+selected `Bzip2Decoder` entry/bit-reader contracts and their state have names;
+deep Bzip2 block/table/run locals and other state fields remain unfinished.
+Mixed static UI/gameplay helpers stay on their existing owners.
+
+`maximumArchiveLength` bounds nonnegative packed/unpacked lengths when nonzero.
+The second decompression argument is `uncompressedTypeComplement`: equality
+with the bitwise complement of the type selects the raw-copy branch. Normal
+callers pass -1, selecting raw type 0. Otherwise type 1 uses Bzip2 and every
+other type uses the shared `archiveGzipInflater` under its existing monitor.
+Allocation, aliases, guards and original diagnostic strings remain.
+
+`inflateInto` checks two magic bytes, skips a fixed ten-byte header and excludes
+eight trailing bytes from the whole backing array. It leaves the input cursor
+unchanged, calls inflate once, ignores the produced count/finished state and
+resets on success or a caught Exception. It does not validate trailer CRC/size
+or optional header fields. `Bzip2Decoder.decompressInto` ignores packed length,
+returns the produced count and clears retained input/output references only
+after success; the container ignores that count. Names preserve these limits.
+
+The existing result-helper probe adds 74 controlled compression cases covering
+raw/gzip routing and limits, packed-length mismatches, complement selection,
+gzip cursor/reset/error/partial output, a stripped Bzh1 vector and early Bzip2
+end. Explicit payload/state checks and native/raw/readable output traces match.
+The new pinned trace is
+`191d74dde65e8e0a6b5dc72a0193765baa165a94ab82ef5df15f10d86fd6f8fe`.
+The source/trace hashes live in the existing manifest, without new report JSON.
+
+All 5,907 previous complete rules and raw source/generator pins stay unchanged.
+The 5,982 rules apply 48,544 identifier edits; both 303-file corpora compile,
+preserving 138,558 bindings and 388 overrides. Reproduction and dictionary
+reversal are byte-exact. The seven prior native traces stay unchanged. Deep
+Bzip2 state/control flow, arbitrary malformed inputs, optional gzip headers,
+real assets/server traffic, full gameplay and phone/FPS/heap behavior remain
+unfinished or unverified.
+
+## Previous disk archive sector names
 
 Pass 73 adds 87 guarded identities: one class, five fields, four methods,
 fifteen parameters and 62 locals. `DiskArchiveCache` names every instance
@@ -1272,7 +1312,7 @@ its historical proof recorded in the raw provenance. Current source/decompiler
 identity and naming migrations live in the single manifest. `ruleChanges`
 records naming changes; `sourceChange` is recorded when input identity changes.
 The latest structural pass records its source migration in Git. The current
-naming-only pass retains those source pins and records its 87 additions in
+naming-only pass retains those source pins and records its 75 additions in
 `ruleChanges`; every prior guarded rule is retained.
 All six native probe sources and their traces are pinned in
 the same manifest; no JSON snapshots are added.
@@ -1297,6 +1337,6 @@ the same manifest; no JSON snapshots are added.
 | Java source tree | SHA-256 |
 | --- | --- |
 | Raw | `39be3539b43d7acc9540acca49e7b6378cdb233908092706646df4c2cdc6a8fe` |
-| Readable | `2e82485bc63e89bad5e82aa59c81ccb485f2cadb1a266519174ba4011b1f60f0` |
+| Readable | `e46272c4b0118acfcad7c9ea2e510459cc57705fb247e233357d6756c5452cf1` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

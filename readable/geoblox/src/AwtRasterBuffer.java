@@ -9,7 +9,7 @@ abstract class AwtRasterBuffer {
     int height;
     static int field_f;
     java.awt.Image image;
-    static fe field_b;
+    static GzipInflater archiveGzipInflater;
 
     abstract void drawImage(int drawY, java.awt.Graphics graphics, int drawX, int methodGuard);
 
@@ -33,7 +33,7 @@ abstract class AwtRasterBuffer {
     }
 
     public static void b(byte param0) {
-        field_b = null;
+        archiveGzipInflater = null;
         if (param0 != 58) {
             Random var2 = (Random) null;
             AwtRasterBuffer.a((byte) 47, (Random) null, -73);
@@ -95,6 +95,6 @@ abstract class AwtRasterBuffer {
     }
 
     static {
-        field_b = new fe();
+        archiveGzipInflater = new GzipInflater();
     }
 }

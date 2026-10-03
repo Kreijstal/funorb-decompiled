@@ -135,7 +135,7 @@ final class ud {
               }
               var14 = (qi) ((Object) k.field_e.firstForIteration(0));
               if (var14 == null) {
-                jl.a((byte) -117);
+                Bzip2DecoderState.a((byte) -117);
                 return;
               }
               var14.field_g = var3;
@@ -147,7 +147,7 @@ final class ud {
             if (var2 == 1) {
               var11 = (p) ((Object) ResourceArchive.field_a.firstForIteration(0));
               if (var11 == null) {
-                jl.a((byte) -120);
+                Bzip2DecoderState.a((byte) -120);
                 return;
               }
               var11.unlinkNode(false);
@@ -155,7 +155,7 @@ final class ud {
               if (var2 == 2) {
                 var15 = (qi) ((Object) k.field_e.firstForIteration(0));
                 if (var15 == null) {
-                  jl.a((byte) -115);
+                  Bzip2DecoderState.a((byte) -115);
                   return;
                 }
                 var15.field_g = wf.j(86);
@@ -164,7 +164,7 @@ final class ud {
                 var15.unlinkNode(false);
               } else {
                 gi.a((Throwable) null, "A1: " + og.e(55), (byte) 125);
-                jl.a((byte) -116);
+                Bzip2DecoderState.a((byte) -116);
               }
             }
           }

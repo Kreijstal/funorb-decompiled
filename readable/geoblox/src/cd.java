@@ -22,7 +22,7 @@ final class cd extends jg {
           mf.selectedThemeBackground = ca.bakingBackgroundSprite;
         } else {
           if (GameScreen.selectedThemeId == 1) {
-            mf.selectedThemeBackground = fe.sunBackgroundSprite;
+            mf.selectedThemeBackground = GzipInflater.sunBackgroundSprite;
             ec.selectedThemeForeground = PacketByteCipher.sunForegroundSprite;
           } else {
             if (GameScreen.selectedThemeId == 3) {

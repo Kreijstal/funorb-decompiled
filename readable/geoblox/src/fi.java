@@ -79,11 +79,11 @@ final class fi {
             changeDisplayNameText = (String) null;
           }
           if (param1 != null) {
-            if (param1 != fe.field_e) {
+            if (param1 != GzipInflater.field_e) {
               uh.field_y.d(-9268);
               fj.field_p.a();
-              fe.field_e = param1;
-              uh.field_y.a(true, fe.field_e, -1706);
+              GzipInflater.field_e = param1;
+              uh.field_y.a(true, GzipInflater.field_e, -1706);
               return;
             }
           }

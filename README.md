@@ -19,21 +19,24 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and retain all 138,558 remaining bindings
 and 388 override relationships.
 
-The current naming pass adds 87 guarded identities for `DiskArchiveCache` and
-the shared sector scratch buffer. Every instance declaration, constructor
-contract and local has a name, including the two retained header-EOF states.
-Index rows, sector headers, chain reuse/allocation and partial effects expose
-their roles. A new 138-case native fixture confirms controlled sector chains,
-malformed reads, the original header-EOF success exits and large-ID boundary behavior.
+The current naming pass adds 75 guarded identities for archive decompression,
+`GzipInflater`, `Bzip2Decoder`/`Bzip2DecoderState` and selected entry/bit-reader
+state. Every gzip instance declaration and selected entry contract/local has
+a name. A new 74-case native fixture confirms controlled payloads, length limits,
+type routing, gzip partial/error/reset behavior and two Bzip2 vectors.
 
-The 5,907 rules apply 48,058 edits. All 303 raw/readable sources compile,
-preserving 138,558 bindings and 388 overrides. All 5,820 previous complete rules
+The 5,982 rules apply 48,544 edits. All 303 raw/readable sources compile,
+preserving 138,558 bindings and 388 overrides. All 5,907 previous complete rules
 and raw source/decompiler pins are unchanged. Binding checks, reproduction and
-byte-exact reversal support the names. Existing six native helper/socket/cache/input
-traces remain unchanged; the sector fixture matches native/raw/readable file bytes
-and results in its controlled cases. Comprehensive buffering/concurrency, compression, static names,
+byte-exact reversal support the names. The seven prior native traces remain
+unchanged; compression payloads/results match native/raw/readable Java in the
+controlled cases. Deep Bzip2 state/control flow, comprehensive buffering/concurrency, static names,
 large labeled bodies, full assets/gameplay and device performance remain
 unfinished or unverified. One manifest holds current evidence, with Git for history.
+
+Pass 73 named `DiskArchiveCache` and the shared sector scratch buffer, including
+the two retained header-EOF states. Its 138-case native fixture confirms controlled
+sector chains, malformed reads, EOF success exits and large-ID boundary behavior.
 
 Pass 72 named `LimitedRandomAccessFile` and `BufferedRandomAccessFile` instance
 state/APIs/constructors/locals. Virtual/underlying positions, physical/logical

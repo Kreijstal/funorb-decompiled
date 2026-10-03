@@ -776,17 +776,17 @@ class el extends IntrusiveNode {
                 return true;
               }
               if (var2_int < 0) {
-                jl.a((byte) -127);
+                Bzip2DecoderState.a((byte) -127);
               } else {
                 if (ll.a((byte) 12) <= 30000L) {
                   return false;
                 }
-                jl.a((byte) -127);
+                Bzip2DecoderState.a((byte) -127);
               }
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = (IOException) (Object) decompiledCaughtException;
-              jl.a((byte) -120);
+              Bzip2DecoderState.a((byte) -120);
             }
             return false;
         } catch (RuntimeException | Error decompiledUncheckedException) {

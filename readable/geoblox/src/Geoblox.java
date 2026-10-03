@@ -58,14 +58,14 @@ public final class Geoblox extends wf {
         int paletteVariantThenKeyboardIndex = 0;
         int clientFlagSnapshot = field_C;
         oj.a(vc.field_i, (byte) -104);
-        if (null != wj.field_F && null != fe.field_a && ah.field_c != null && null != cd.field_m) {
+        if (null != wj.field_F && null != GzipInflater.field_a && ah.field_c != null && null != cd.field_m) {
             lc.a(ca.unpackingMusicText, -2, 60.0f);
             this.renderFrame(25853);
-            jg.a(wj.field_F, (byte) 80, ah.field_c, fe.field_a, cd.field_m);
+            jg.a(wj.field_F, (byte) 80, ah.field_c, GzipInflater.field_a, cd.field_m);
             ah.field_c = null;
             wj.field_F = null;
             cd.field_m = null;
-            fe.field_a = null;
+            GzipInflater.field_a = null;
             ih.b(127);
             return false;
         }
@@ -144,7 +144,7 @@ public final class Geoblox extends wf {
                 vh.avatarMouthFrames[geometryCanvasWidthThenFrameIndex].trimTransparentBorders();
             }
             sh.mainRasterBuffer.setAsRasterTarget(255);
-            fe.sunBackgroundSprite = jg.loadIndexedSprite(ll.gameGraphicsArchive, 1, "sun", "sky_background");
+            GzipInflater.sunBackgroundSprite = jg.loadIndexedSprite(ll.gameGraphicsArchive, 1, "sun", "sky_background");
             PacketByteCipher.sunForegroundSprite = ug.loadSprite("sky_foreground", ll.gameGraphicsArchive, (byte) -78, "sun");
             ll.themesLoaded[1] = true;
             ee.menuBackgroundSprite = ug.loadSprite("menu_background", ll.gameGraphicsArchive, (byte) -78, "");
@@ -260,8 +260,8 @@ public final class Geoblox extends wf {
               stackIn_10_0 = ah.field_c;
               stackIn_11_1 = (param0) ? false : true;
               if (((ResourceArchive) (Object) stackIn_10_0).loadAllGroups(stackIn_11_1)) {
-                if (fe.field_a.ensureIndexLoaded(0)) {
-                  if (fe.field_a.loadAllGroups(true)) {
+                if (GzipInflater.field_a.ensureIndexLoaded(0)) {
+                  if (GzipInflater.field_a.loadAllGroups(true)) {
                     if (cd.field_m.ensureIndexLoaded(0)) {
                       if (cd.field_m.loadAllGroups(true)) {
                         if (ii.fontMetricsArchive.ensureIndexLoaded(0)) {
@@ -323,7 +323,7 @@ public final class Geoblox extends wf {
                     return false;
                   }
                 }
-                lc.a(gf.formatArchiveGroupProgress(ArchiveNetworkClient.waitingForMusicText, fe.field_a, "", dd.loadingMusicText, true), -2, 15.0f);
+                lc.a(gf.formatArchiveGroupProgress(ArchiveNetworkClient.waitingForMusicText, GzipInflater.field_a, "", dd.loadingMusicText, true), -2, 15.0f);
                 return false;
               }
             }
@@ -387,7 +387,7 @@ public final class Geoblox extends wf {
         ud.a(0);
         da.a(50);
         ArchiveIndex.a(114);
-        fe.c(-127);
+        GzipInflater.c(-127);
         ArchiveSource.a(true);
         eh.a(-6910);
         ld.a(true);
@@ -460,7 +460,7 @@ public final class Geoblox extends wf {
         vg.a(true);
         IntKeyLookup.a((byte) 49);
         oj.a(-87);
-        tb.a();
+        Bzip2Decoder.releaseSharedState();
         eg.b(false);
         oi.a((byte) -108);
         ek.a(-128);
@@ -982,7 +982,7 @@ public final class Geoblox extends wf {
         wj.field_F = SocketArchiveNetworkClient.createResourceArchive(2, (byte) -62);
         ah.field_c = SocketArchiveNetworkClient.createResourceArchive(3, (byte) -62);
         cd.field_m = SocketArchiveNetworkClient.createResourceArchive(4, (byte) -62);
-        fe.field_a = SocketArchiveNetworkClient.createResourceArchive(5, (byte) -62);
+        GzipInflater.field_a = SocketArchiveNetworkClient.createResourceArchive(5, (byte) -62);
         ii.fontMetricsArchive = SocketArchiveNetworkClient.createResourceArchive(6, (byte) -62);
         qe.a(ki.basicUiGraphicsArchive, re.field_i, -84);
     }

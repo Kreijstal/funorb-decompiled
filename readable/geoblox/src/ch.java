@@ -914,9 +914,9 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
             this.windowActivated((java.awt.event.WindowEvent) null);
           }
           var2_long = oa.a(param0 - 44520);
-          var4 = ArchiveRequest.field_p[fe.field_k];
-          ArchiveRequest.field_p[fe.field_k] = var2_long;
-          fe.field_k = 31 & fe.field_k + 1;
+          var4 = ArchiveRequest.field_p[GzipInflater.field_k];
+          ArchiveRequest.field_p[GzipInflater.field_k] = var2_long;
+          GzipInflater.field_k = 31 & GzipInflater.field_k + 1;
           if (0L != var4) {
             if (var4 < var2_long) {
               var6_int = (int)(-var4 + var2_long);

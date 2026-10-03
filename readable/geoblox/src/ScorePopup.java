@@ -55,11 +55,11 @@ final class ScorePopup extends IntrusiveNode {
             if (param0 <= 105) {
                 ScorePopup.setAvatarNegativeRotationSteering((byte) 114);
             }
-            fe.field_g = var2_int << 15 & 2064384;
+            GzipInflater.field_g = var2_int << 15 & 2064384;
             h.field_b = h.field_b + (var2_int >> 6);
-            fe.field_g = fe.field_g + (param1.readUnsignedByte((byte) 34) << 7);
+            GzipInflater.field_g = GzipInflater.field_g + (param1.readUnsignedByte((byte) 34) << 7);
             var2_int = param1.readUnsignedByte((byte) 34);
-            fe.field_g = fe.field_g + (var2_int >> 1);
+            GzipInflater.field_g = GzipInflater.field_g + (var2_int >> 1);
             lc.field_b = (var2_int & 1) << 16;
             lc.field_b = lc.field_b + param1.readUnsignedShortBE(true);
         } catch (RuntimeException runtimeException) {

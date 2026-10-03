@@ -692,8 +692,8 @@ the array indices, evidence, override families and remaining shared carriers.
 
 ## Remaining limitations
 
-There are 5,907 explicit guarded rules: 56 classes, 730 fields, 536 method
-declarations, 1,588 parameters and 2,997 locals. This is not full deobfuscation.
+There are 5,982 explicit guarded rules: 59 classes, 743 fields, 543 method
+declarations, 1,605 parameters and 3,032 locals. This is not full deobfuscation.
 Unknown flags, guard arguments and opaque shared helpers still need
 investigation. Current names and source identities live in the single manifest;
 previous naming and structural passes remain in Git. The earlier early-exit migration
@@ -2483,3 +2483,89 @@ do not establish complete buffering/concurrency, malformed-write/guard or live
 cache/server/asset behavior. Compression, unknown static helpers and large
 labeled bodies remain unfinished; full gameplay and phone/FPS/heap behavior
 remain unverified.
+
+## Archive compression and inflater entry state (pass 74)
+
+`GzipInflater` names `fe`, `Bzip2Decoder` names `tb` and `Bzip2DecoderState`
+names `jl`. Every gzip instance field/API, constructor contract and local is
+named. The Bzip2 entry/bit-reader APIs and selected state have names; deeper
+block/table/run locals and other state fields still need tracing. Mixed static
+UI/validation/gameplay helpers remain on these owners.
+
+`v.decompressArchive` is the shared archive-index/group unpacker. It reads an
+unsigned compression type and a signed packed length, rejecting a negative
+length or one above nonzero `uj.maximumArchiveLength`. Zero disables the bound;
+the fixed initializer sets zero. The second argument participates in the format
+branch: equality with `~compressionType` selects allocation and copying of
+packedLength bytes from cursor 5. Normal callers supply -1, so type 0 is raw.
+The name `uncompressedTypeComplement` records that comparison without treating
+the argument as unused.
+
+| Normal type routing | Data layout/action |
+| --- | --- |
+| 0 | Type byte, packed length, then raw payload at offset 5 |
+| 1 | Type byte, packed length, unpacked length, then stripped Bzip2 payload at offset 9 |
+| Other values | Same nine-byte prefix; invoke shared gzip inflater at cursor 9 |
+
+The compressed branch reads a signed unpacked length, applies the same bound,
+allocates the output and retains its original aliases. Type 1 calls the Bzip2
+entry; all other values lock `AwtRasterBuffer.archiveGzipInflater` and invoke
+`inflateInto`. It retains the capture/global-dereference order and contextual
+RuntimeException wrapper. The input array is not rewritten. Neither gzip nor
+the Bzip2 entry enforces the declared packed length as an input boundary.
+
+`GzipInflater.inflateInto` requires magic bytes 31 and -117 at the buffer cursor.
+It lazily creates `Inflater(true)`, skips exactly ten header bytes, excludes
+eight tail bytes from the backing array and invokes inflate once. The return
+count and finished state are ignored; the ByteArrayBuffer cursor is unchanged.
+Trailer CRC/size and optional header fields are not validated. Short destinations
+can hold a prefix, while excess destination bytes retain their previous values.
+Bad magic fails before the protected inflate operation; caught Exceptions during
+input/inflate reset the inflater and become an empty RuntimeException inside
+the original contextual wrapper. Success resets it too; no new Error cleanup,
+end call, unsigned normalization or complete-output check is added.
+
+The no-arg gzip constructor still delegates -1,1000000,1000000. Its private
+constructor body is empty. `unusedFirstArgument`, `unusedSecondArgument` and
+`unusedThirdArgument` record that fact without assigning unsupported size/guard
+semantics. Wrong inflate guards retain the original static-helper side effect.
+
+`Bzip2Decoder.decompressInto` captures and locks `decoderState`, then assigns
+input/output arrays, input offset, zero output cursor, output allowance, bit
+buffer/count and byte counters. `ignoredPackedLength` is not read. The method
+decodes blocks, computes requested minus remaining output, clears input/output
+references only on success and returns the produced count. The archive
+container ignores that count, preserving partially initialized output. Failures
+do not acquire new finally cleanup. `releaseSharedState` clears the shared
+reference without installing a replacement for later calls.
+
+| Named Bzip2 state | Role |
+| --- | --- |
+| inputBytes / inputPosition | Input backing array and byte cursor |
+| outputBytes / outputPosition | Output backing array and destination cursor |
+| remainingOutputBytes | Unconsumed output allowance |
+| bitBuffer / bufferedBitCount | Shifted input bits and unread bit count |
+| inputBytesRead / outputBytesWritten | Original integer counters |
+
+`readBits` loads unsigned bytes into the shifted int until enough bits exist,
+then extracts with the original signed shift/mask and consumes the count.
+`readByte` and `readBit` delegate counts 8 and 1 and narrow to byte. Input bounds,
+shift/overflow behavior and the empty overflow-check branches remain.
+
+The existing result-helper probe adds 74 controlled compression cases. Its
+36 type/length/limit cases check raw and gzip results; eight additional cases
+check declared packed lengths, the complement branch and two Bzip2 vectors.
+Thirty direct gzip cases check offsets, short/oversized destinations, malformed
+magic/deflate, unchecked CRC trailer, unchanged input/cursor and inflater reset.
+The valid Bzip2 vector is a fixed stripped Bzh1 block. A one-byte early-end
+vector retains zero-filled allocated output and ignored completion count.
+These payload/state assertions and native/raw/readable traces match at
+`191d74dde65e8e0a6b5dc72a0193765baa165a94ab82ef5df15f10d86fd6f8fe`.
+
+All 5,907 previous complete rules and raw source/generator pins remain.
+Compilation, 138,558 binding checks, 388 override relationships, byte-exact
+reproduction and reversal support the export. Seven prior native traces remain
+unchanged. These controlled cases do not establish arbitrary malformed-input,
+optional gzip-header, deep Bzip2 state/control-flow or real-asset equivalence.
+Unknown static helpers and large labeled bodies remain unfinished; full
+gameplay and phone/FPS/heap behavior remain unverified.

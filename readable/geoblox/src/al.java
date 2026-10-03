@@ -25,7 +25,7 @@ final class al {
             if (var2 == 0) {
               var8 = (ca) ((Object) PrefixCodeDecoder.field_e.firstForIteration(0));
               if (var8 == null) {
-                jl.a((byte) -124);
+                Bzip2DecoderState.a((byte) -124);
                 return;
               }
               {
@@ -38,7 +38,7 @@ final class al {
                 }
                 var9.position = var9.position + 4;
                 if (!var9.verifyTrailingCrc32((byte) 20)) {
-                  jl.a((byte) -121);
+                  Bzip2DecoderState.a((byte) -121);
                   return;
                 }
                 var8.unlinkNode(false);
@@ -58,11 +58,11 @@ final class al {
                   var4_ref_wc.unlinkNode(false);
                   break L0;
                 }
-                jl.a((byte) -124);
+                Bzip2DecoderState.a((byte) -124);
                 return;
               }
               gi.a((Throwable) null, "A1: " + og.e(55), (byte) 125);
-              jl.a((byte) -120);
+              Bzip2DecoderState.a((byte) -120);
             }
           }
           return;

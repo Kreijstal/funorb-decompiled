@@ -441,7 +441,7 @@ final class ResourceArchive {
               return false;
             }
             try {
-              unpackedBytes = v.a(packedBytes, -1);
+              unpackedBytes = v.decompressArchive(packedBytes, -1);
               unpackedBytesAfterDecompression = unpackedBytes;
               unpackedBytesForChunkCount = unpackedBytesAfterDecompression;
               unpackedBytesForChunkCopies = unpackedBytesForChunkCount;

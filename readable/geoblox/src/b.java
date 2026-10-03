@@ -26,7 +26,7 @@ final class b {
         int var3;
         int var4;
         var4 = Geoblox.field_C;
-        var2 = fe.a(-1);
+        var2 = GzipInflater.a(-1);
         var3 = 0;
         if (param0) {
           b.a(-38);

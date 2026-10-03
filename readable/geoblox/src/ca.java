@@ -33,7 +33,7 @@ final class ca extends IntrusiveNode {
               var4 = param0.substring(param1 + var2_int);
               var5 = r.a(var3, true);
               if (var5 == null) {
-                stackIn_12_0 = fe.a(var4, false);
+                stackIn_12_0 = GzipInflater.a(var4, false);
                 return stackIn_12_0;
               }
               stackIn_10_0 = (nd) (var5);

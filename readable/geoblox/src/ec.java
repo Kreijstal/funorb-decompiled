@@ -159,7 +159,7 @@ final class ec {
     final static void a(int param0) {
         ph var1 = (ph) ((Object) el.field_p.firstForIteration(param0 ^ param0));
         if (!(var1 != null)) {
-            jl.a((byte) -122);
+            Bzip2DecoderState.a((byte) -122);
             return;
         }
         PacketBuffer var2 = eh.field_d;

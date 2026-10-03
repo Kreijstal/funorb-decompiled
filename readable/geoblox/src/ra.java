@@ -43,7 +43,7 @@ final class ra implements Iterable {
     }
 
     final static void selectBackgroundMusic(int methodGuard, rf track) {
-        if (track == null || fe.field_e == track) {
+        if (track == null || GzipInflater.field_e == track) {
             return;
         }
         try {
@@ -52,8 +52,8 @@ final class ra implements Iterable {
             }
             uh.field_y.d(-9268);
             fj.field_p.a();
-            fe.field_e = track;
-            uh.field_y.a(false, fe.field_e, -1706);
+            GzipInflater.field_e = track;
+            uh.field_y.a(false, GzipInflater.field_e, -1706);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "ra.A(" + methodGuard + ',' + (track != null ? "{...}" : "null") + ')');
         }
