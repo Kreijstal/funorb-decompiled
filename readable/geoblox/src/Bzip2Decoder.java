@@ -321,7 +321,6 @@ final class Bzip2Decoder {
                       }
                       state.moveToFrontBlockStarts[mtfBlockIndex] = selectorRankOrMtfWritePosition + 1;
                     }
-                    break L17;
                   }
                   frequencyByteValue = state.alphabetBytes[byteOrBitValue & 255] & 255;
                   state.byteFrequencies[frequencyByteValue] = state.byteFrequencies[frequencyByteValue] + 1;
@@ -613,7 +612,6 @@ final class Bzip2Decoder {
               remainingOutputBytes--;
             }
             remainingRunLength = 0;
-            break L1;
           }
           previousOutputBytesWritten = state.outputBytesWritten;
           state.outputBytesWritten = state.outputBytesWritten + (initialOutputAllowance - remainingOutputBytes);

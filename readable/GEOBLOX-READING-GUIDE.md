@@ -7,6 +7,43 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
+## Current control-flow readability (pass 89)
+
+The export has 7,015 guarded names. All 303 sources compile, reproduce and
+reverse to the pinned raw Git input. Removing terminal plain-block breaks now
+saves 248 lines and 73 labels without moving declarations or effects. The patch
+constructor has one meaningful label left; its 77 locals retain their names.
+Enclosing exception/monitor regions remain intact, and intermediate protected
+regions, loops or switches refuse this cleanup.
+
+There remain 21 method/constructor spans of at least 300 lines, 13 with generated
+block labels. The 3,042-line interface text-loader span includes its three nested
+helpers, so this inventory does not count unique state machines. The labeled
+large bodies are:
+
+| Method | Lines | Block labels |
+| --- | ---: | ---: |
+| `GameScreen.renderScreen` | 372 | 10 |
+| `GameScreen.updateScreen` | 330 | 6 |
+| `GameScreen.activateMenuItem` | 335 | 20 |
+| `GameplaySession.renderSession` | 395 | 22 |
+| `GameplaySession.updateSession` | 643 | 14 |
+| `kc.reconcileBoardEntities` | 504 | 17 |
+| `f.advanceGameplayAvatarAnimation` | 436 | 2 |
+| `Sprite.rotateNearest` | 531 | 1 |
+| `SpriteState.drawSortedHalfBlendRgbTriangle` | 388 | 11 |
+| `MusicDecoder.decodePacket` | 327 | 3 |
+| `Bzip2Decoder.decodeBlocks` | 388 | 1 |
+| `MusicScore` constructor | 541 | 1 |
+| `InstrumentPatch` constructor | 468 | 1 |
+
+The next structural work should start with a remaining gameplay exit and its
+actual skipped work/protected boundary. Removing further labels needs a proof
+for that continuation; terminal fallthrough alone does not justify it. The
+5,376-case generic native comparison and six recorded game probes establish
+controlled behavior only. Real assets, complete gameplay and browser/phone
+memory/startup/FPS targets remain unverified.
+
 ## Menu to gameplay
 
 `Geoblox.initializeScreens` constructs the nine `GameScreen` controllers.
@@ -3015,7 +3052,7 @@ new token streams. All seven native game probes retain their expected traces.
 The generic emitter suite passes 46 tests with its optional historical pass77
 frame-only proof skipped; the exception suite passes eight groups.
 
-The current survey still has 21 method/constructor spans of at least 300 lines,
+The pass 84 survey still had 21 method/constructor spans of at least 300 lines,
 15 with generated block labels. Three text-loader helpers occur inside the large
 outer span, so these counts do not represent unique dispatchers. Opaque helpers,
 reused scratch phases and large control bodies remain; actual assets/gameplay
@@ -3200,3 +3237,24 @@ are controlled; uncached sample decoding, real patches, synthesized sound and
 game/device performance are unverified. All patch music parameters/locals and
 instance fields now have guarded names, while the constructor's nine generated
 block labels and the overall 21 large spans/15 labeled spans remain.
+
+
+## Terminal exits without jumps (pass 89)
+
+An ordinary braced block can complete at the same destination as its final
+labeled break. The decompiler now removes that redundant break when the entire
+path consists of final block statements, conditional branches and plain labels.
+Existing scope-safe cleanup removes labels/braces that no longer serve a role.
+A bare `if` branch keeps an empty statement and still evaluates its predicate.
+Loops, switches and protected regions between jump and destination remain
+unchanged because their continuations require a different proof. Protected
+regions surrounding the whole destination remain intact.
+
+This removes 102 breaks and 73 labels across 50 files. The instrument-patch
+constructor loses eight labels; its remaining early exit skips real fallback
+work and stays. All ordered naming bindings and full previous naming rules are
+identical. Independent JDK body positions plus only these documented rules
+produce all 303 regenerated token streams. Native 5,376-case generic comparisons
+cover scopes, failures, ancestor jumps, enclosing cleanup and monitors. All six
+recorded game probes retain their traces. Large bodies and whole-game/browser/
+phone acceptance remain unfinished or unverified.

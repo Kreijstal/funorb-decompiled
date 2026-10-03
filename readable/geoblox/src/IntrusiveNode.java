@@ -233,7 +233,6 @@ class IntrusiveNode {
                   hasNonOpaqueAlphaFlag = columnMajorOpacityFlagBeforeMerge | columnMajorNonOpaqueFlag;
                 }
               }
-              break L6;
             }
             ng.decodedSpriteHasNonOpaqueAlpha[spriteIndex] = hasNonOpaqueAlphaFlag != 0;
           }

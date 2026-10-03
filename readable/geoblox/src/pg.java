@@ -98,18 +98,15 @@ final class pg {
                         for (var11_int = 0; var9 > var11_int; var11_int++) {
                           var10[var11_int] = param3.readNullTerminatedText((byte) 120);
                         }
-                        L7: {
-                          var22 = new byte[var9][];
-                          var20 = var22;
-                          var11 = var20;
-                          if (var6_int == 3) {
-                            for (var12_int = 0; var12_int < var9; var12_int++) {
-                              var13 = param3.readIntBE((byte) -70);
-                              array$0 = new byte[var13];
-                              var11[var12_int] = array$0;
-                              param3.readBytes(29915, var13, var22[var12_int], 0);
-                            }
-                            break L7;
+                        var22 = new byte[var9][];
+                        var20 = var22;
+                        var11 = var20;
+                        if (var6_int == 3) {
+                          for (var12_int = 0; var12_int < var9; var12_int++) {
+                            var13 = param3.readIntBE((byte) -70);
+                            array$0 = new byte[var13];
+                            var11[var12_int] = array$0;
+                            param3.readBytes(29915, var13, var22[var12_int], 0);
                           }
                         }
                         var19.field_k[var5] = var6_int;

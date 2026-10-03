@@ -21,17 +21,17 @@ tool bytes; `funorb-stubs.jar` is the frozen compilation dependency. The
 [reading guide](GEOBLOX-READING-GUIDE.md) explains the named gameplay flow.
 
 The raw input is `games/geoblox` at
-`d290b8609553a0785782aab7968653ae68a5ac76`. It comes from java-tools
-`4c1b05352b59d68fd556df1ce2072ad5d57eefbd` and Deko
+`b77f32b2bb60c74dc8ab1ec52d603089965ae79c`. It comes from java-tools
+`d63d66ce9426ee8b704b348b4e8b552c2fb160a5` and Deko
 `a572c4dd0f0174bfcd7777be53d7ceba2f970f18`. The adapted naming tool is
 `a0bc835957148b9b1e1f8221c59b79d899d22738`; its source archive SHA-256 is
 `cb10756aa3ecb28159c9b81f2fb78bf559b4111d9ad203819458b30d0d84cf8c`.
 
 The **decompiler repository source** SHA-256 is
-`3eaabc8a6f5bc8030d2b8c6f11d02f4947a619c107811f134714ea78220754a4`:
+`0f8129c561be1e7fa6de7e62fe5a29196614ad308dcaa4b10b7e9ca94be486c1`:
 
 ```sh
-git archive --format=tar 4c1b05352b59d68fd556df1ce2072ad5d57eefbd | sha256sum
+git archive --format=tar d63d66ce9426ee8b704b348b4e8b552c2fb160a5 | sha256sum
 ```
 
 This identifies tracked decompiler source and its Git archive metadata. It is
@@ -53,6 +53,49 @@ Another 9,828 cases preserve native general-angle/extreme-scale traces. ARGB
 smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
+
+## Terminal plain-block exits (pass 89)
+
+The generic decompiler removes 102 breaks where ordinary completion already
+reaches the same plain-block destination. Subsequent scope-safe cleanup removes
+73 unused labels and 73 block frames across 50 files, saving 248 lines
+(78,689 to 78,441). `InstrumentPatch`'s constructor falls from 492 to 468 lines
+and nine block labels to one. Its meaningful early skip over fallback work stays.
+The complete 7,015 naming objects and 57,278 edits remain unchanged.
+
+Only final statements of blocks, conditional branches and plain labels may lie
+on the path to the destination. Bare conditional branches retain an empty
+statement so predicate effects/unboxing still occur. Intermediate loops,
+switches, try/catch/finally and monitors refuse this proof; enclosing protected
+regions remain intact. No declaration, predicate or effect moves. Duplicate or
+unbound labels, malformed/unsupported syntax, comments, Unicode escapes and
+nested executable bodies refuse cleanup. An initial implementation trusting
+parser end offsets changed nothing: those offsets describe leading tokens,
+not complete statements. Matching lexical delimiters provide the required proof.
+
+Independent JDK body positions and only the terminal-break/frame transforms
+reproduce all 303 regenerated token streams. Every ordered declaration,
+reference, local ordinal and override remains (19,591/119,181/388). A clean
+committed decompiler Git-source tar reproduces all raw files and unchanged
+diagnostics byte-for-byte. The single manifest records this source migration
+with an empty `ruleChanges` list; all 7,015 prior complete rules are preserved.
+
+`NODE_PATH=/path/to/dependencies JAVA_TOOL_OPTIONS=-XX:-UsePerfData node test/javaAstEmitterLoopExits.test.js`
+passes 50 groups with one optional historical corpus check skipped. The two
+new groups include 5,376 native comparisons of scopes, nullable predicates,
+NaNs, work/predicate failures, retained meaningful exits, ancestor transfers,
+enclosing finally state after invocation and monitor ownership/release.
+`node test/cfrExceptionLoopExits.test.js` and
+`node test/cfrNarrowIntegerArguments.test.js` retain eight and two passing groups.
+
+All six recorded native/raw/readable probes retain their sources and trace pins.
+Rules/migration/text checks pass all three test files. Reproduction compiles both
+303-file corpora, compares 138,772 bindings, and dictionary reversal recovers
+the pinned raw Git input byte-for-byte. There remain 21 method/constructor spans
+of at least 300 lines, 13 with generated block labels. Some spans contain nested
+helpers; they are not 21 unique state machines. Larger gameplay/control-flow
+reconstruction, opaque names, real assets and browser/phone acceptance remain
+unfinished or unverified.
 
 ## Instrument patches and envelopes (pass 88)
 
@@ -187,7 +230,7 @@ Rule-builder/migration/text checks pass 9/8/6 groups. Reproduction compiles both
 against the pinned Git input. One maintained manifest records the explicit source
 migration with no naming changes or new JSON snapshots.
 
-The current survey has 2,080 method/constructor bodies, including 21 spans of at
+The pass 86 survey had 2,080 method/constructor bodies, including 21 spans of at
 least 300 lines, 15 with generated labels. Some spans contain nested helpers.
 This pass simplifies decisions inside those bodies without reducing that count.
 Opaque names, larger control reconstructions, real assets/gameplay and
@@ -290,7 +333,7 @@ A clean pinned decompiler Git-source tar regenerates all 303 raw files and
 unchanged diagnostics byte-for-byte. Raw/readable sources compile, reproduction
 and dictionary reversal are byte-exact, and all seven native game probes retain
 their traces. The rule-builder/source-migration/text-resource checks pass 9/8/6.
-The latest source survey has 2,079 method/constructor bodies, including 21 spans
+The earlier source survey had 2,079 method/constructor bodies, including 21 spans
 of at least 300 lines, 15 with generated block labels. The outer text-loader span
 includes three helper spans, so this is not a count of unique dispatchers.
 Opaque names, reused scratch phases, large control bodies, real assets/gameplay
@@ -1928,8 +1971,9 @@ identity and naming migrations live in the single manifest. `ruleChanges`
 records naming changes; `sourceChange` is recorded when input identity changes.
 Pass 86 recorded its source migration in `sourceChange` with an empty
 `ruleChanges` list. Pass 87 retained that source identity and added 188 naming rules.
-Current pass 88 retains it and records 144 additions in `ruleChanges`,
-preserving all 6,871 previous complete naming objects.
+Pass 88 retained it and added 144 naming rules. Current pass 89 records a
+new source migration and an empty `ruleChanges` list, preserving all 7,015
+previous complete naming objects.
 All native probe sources and their traces are pinned in
 the same manifest; no JSON snapshots are added.
 
@@ -1952,7 +1996,7 @@ the same manifest; no JSON snapshots are added.
 
 | Java source tree | SHA-256 |
 | --- | --- |
-| Raw | `9b2813de69324920bb4493adc25afb63eb3100219fbcd4c2a483de5e4600b9df` |
-| Readable | `2feceddf14ba0ad73b9822dd3ecfcf4bada845a826058cfba5d7cd6fbd03a356` |
+| Raw | `1ab9cf8e1c01efc41dac59ad83e327a714d52cfb870524a893aebd71f5fd2d78` |
+| Readable | `194217575c62bcc9f968a8deb766b93bae6068e77c535bae7ac69978913aa0d5` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

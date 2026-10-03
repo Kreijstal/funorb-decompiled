@@ -52,7 +52,6 @@ abstract class vk {
             for (var7 = 0; var4_int > var7; var7++) {
               param0[var7] = (byte)(param1.readBits((byte) -17, var5) + var6);
             }
-            break L2;
           }
           stackIn_16_0 = (byte[]) (param0);
           return stackIn_16_0;

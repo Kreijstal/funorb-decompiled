@@ -118,17 +118,14 @@ final class ri {
                   if (!fb.field_l) {
                   }
                 }
-                L13: {
-                  if (ll.field_e) {
-                    eh.field_d.readUnsignedByte((byte) 34);
-                    eh.field_d.readUnsignedByte((byte) 34);
-                    eh.field_d.readIntBE((byte) -48);
-                    PacketBuffer.field_n = eh.field_d.readUnsignedShortBE(true);
-                    hc.field_K = new byte[PacketBuffer.field_n];
-                    for (var8 = 0; PacketBuffer.field_n > var8; var8++) {
-                      hc.field_K[var8] = eh.field_d.readSignedByte((byte) 72);
-                    }
-                    break L13;
+                if (ll.field_e) {
+                  eh.field_d.readUnsignedByte((byte) 34);
+                  eh.field_d.readUnsignedByte((byte) 34);
+                  eh.field_d.readIntBE((byte) -48);
+                  PacketBuffer.field_n = eh.field_d.readUnsignedShortBE(true);
+                  hc.field_K = new byte[PacketBuffer.field_n];
+                  for (var8 = 0; PacketBuffer.field_n > var8; var8++) {
+                    hc.field_K[var8] = eh.field_d.readSignedByte((byte) 72);
                   }
                 }
                 SecondaryDeque.field_f = eh.field_d.readNullTerminatedText((byte) 105);

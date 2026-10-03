@@ -427,43 +427,40 @@ final class kc {
                 }
                 L39: {
                   L40: {
-                    L41: {
-                      re.connectivityDirty = true;
-                      routedAttachedEntity.unlinkNode(false);
-                      routedAttachedEntity.unlinkSecondaryNode((byte) 100);
-                      el.gameplaySession.boardRasterDirty = true;
-                      routedAttachedEntity.eraseEntityPixels(92);
-                      if (ArchiveNetworkClient.movingEntities == routedAttachedEntity.entityQueue) {
-                        routedAttachedEntity.rotateEntityAroundBoard(-el.gameplaySession.boardAngleRadians, -117);
-                        radialOffsetX = -routedAttachedEntity.positionX + 320.0f;
-                        radialOffsetY = -routedAttachedEntity.positionY + 240.0f;
-                        radialVelocityScale = (double)og.entityMotionSpeed / Math.sqrt((double)(radialOffsetY * radialOffsetY + radialOffsetX * radialOffsetX));
-                        radialOffsetX = (float)((double)radialOffsetX * radialVelocityScale);
-                        radialOffsetY = (float)((double)radialOffsetY * radialVelocityScale);
-                        routedAttachedEntity.velocityY = radialOffsetY;
-                        routedAttachedEntity.velocityX = radialOffsetX;
-                        relatedEntityIndex = 0;
-                        while (routedAttachedEntity.relatedEntityCount > relatedEntityIndex) {
-                          routedAttachedEntity.relatedEntities[relatedEntityIndex].removeRelatedEntity(routedAttachedEntity, 0);
-                          relatedEntityIndex++;
-                          if (clientControlSnapshot != 0) {
-                            break L39;
-                          }
-                          if (clientControlSnapshot == 0) {
-                            continue;
-                          }
-                          break;
+                    re.connectivityDirty = true;
+                    routedAttachedEntity.unlinkNode(false);
+                    routedAttachedEntity.unlinkSecondaryNode((byte) 100);
+                    el.gameplaySession.boardRasterDirty = true;
+                    routedAttachedEntity.eraseEntityPixels(92);
+                    if (ArchiveNetworkClient.movingEntities == routedAttachedEntity.entityQueue) {
+                      routedAttachedEntity.rotateEntityAroundBoard(-el.gameplaySession.boardAngleRadians, -117);
+                      radialOffsetX = -routedAttachedEntity.positionX + 320.0f;
+                      radialOffsetY = -routedAttachedEntity.positionY + 240.0f;
+                      radialVelocityScale = (double)og.entityMotionSpeed / Math.sqrt((double)(radialOffsetY * radialOffsetY + radialOffsetX * radialOffsetX));
+                      radialOffsetX = (float)((double)radialOffsetX * radialVelocityScale);
+                      radialOffsetY = (float)((double)radialOffsetY * radialVelocityScale);
+                      routedAttachedEntity.velocityY = radialOffsetY;
+                      routedAttachedEntity.velocityX = radialOffsetX;
+                      relatedEntityIndex = 0;
+                      while (routedAttachedEntity.relatedEntityCount > relatedEntityIndex) {
+                        routedAttachedEntity.relatedEntities[relatedEntityIndex].removeRelatedEntity(routedAttachedEntity, 0);
+                        relatedEntityIndex++;
+                        if (clientControlSnapshot != 0) {
+                          break L39;
                         }
-                        neighborThenCountResetEntity = routedAttachedEntity;
-                        componentSearchThenVariantResetEntity = routedAttachedEntity;
-                        routedAttachedEntity.relatedEntityCount = 0;
-                        neighborThenCountResetEntity.sameCategoryEntityCount = 0;
-                        componentSearchThenVariantResetEntity.sameVariantEntityCount = 0;
-                        ArchiveNetworkClient.movingEntities.addLast(-36, routedAttachedEntity);
                         if (clientControlSnapshot == 0) {
-                          break L40;
+                          continue;
                         }
-                        break L41;
+                        break;
+                      }
+                      neighborThenCountResetEntity = routedAttachedEntity;
+                      componentSearchThenVariantResetEntity = routedAttachedEntity;
+                      routedAttachedEntity.relatedEntityCount = 0;
+                      neighborThenCountResetEntity.sameCategoryEntityCount = 0;
+                      componentSearchThenVariantResetEntity.sameVariantEntityCount = 0;
+                      ArchiveNetworkClient.movingEntities.addLast(-36, routedAttachedEntity);
+                      if (clientControlSnapshot == 0) {
+                        break L40;
                       }
                     }
                     if ((routedAttachedEntity.entityQueue != bh.transientEntities) &&
@@ -515,7 +512,6 @@ final class kc {
                     routedAttachedEntity.configureEntitySprite(320, routedAttachedEntity.entityCategoryKey, routedAttachedEntity.spriteVariantIndex, 7);
                     visitedResetIndexThenKindFourCount++;
                     rb.kindFourRemovalCount = rb.kindFourRemovalCount + 1;
-                    break L40;
                   }
                   routedAttachedEntity.entityQueue = null;
                 }

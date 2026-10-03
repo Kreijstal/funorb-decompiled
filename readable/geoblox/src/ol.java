@@ -119,7 +119,6 @@ final class ol extends hk {
                   break L2;
                 }
                 this.field_F.a(0, var12);
-                break L2;
               }
             } else {
               this.field_F.b(var9, (byte) -93);

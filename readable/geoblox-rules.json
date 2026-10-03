@@ -4,10 +4,10 @@
   "purpose": "Offline readable source mirror; not a runtime patch",
   "source": {
     "repository": "Kreijstal/funorb-decompiled",
-    "commit": "d290b8609553a0785782aab7968653ae68a5ac76",
+    "commit": "b77f32b2bb60c74dc8ab1ec52d603089965ae79c",
     "subdirectory": "games/geoblox"
   },
-  "inputTreeSha256": "9b2813de69324920bb4493adc25afb63eb3100219fbcd4c2a483de5e4600b9df",
+  "inputTreeSha256": "1ab9cf8e1c01efc41dac59ad83e327a714d52cfb870524a893aebd71f5fd2d78",
   "namingPolicy": "Confirmed semantic names without opaque suffixes; unknown symbols stay unchanged. Original spellings and JVM identities remain in the reverse symbol map. Every rule guards the original spelling. Local identities also use declaration ordinals; reused variables retain all supported roles. Numeric screen/action IDs and decompiler state remain unchanged.",
   "renames": [
     {
@@ -42101,19 +42101,19 @@
       "evidence": "Input source audit: wl queues translated key presses/typed characters and encoded releases; re.b(Z)V replays held-key changes and snapshots the keyboard-event frame end; hh.a(I)Z polls that frame. le AWT mouse/focus callbacks update live pointer state; mc.a(B)V copies it under the listener monitor and consumes pending presses/activity. Numeric internal codes,128-slot queues,112 held-key flags,guards,handlers and original diagnostic strings remain. The2184-case native matrix checks controlled-event/queue scopes; real concurrent AWT delivery and complete gameplay remain unverified."
     }
   ],
-  "revision": 17,
-  "version": 88,
+  "revision": 18,
+  "version": 89,
   "generators": {
     "dekoblokoWork": {
       "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "4c1b05352b59d68fd556df1ce2072ad5d57eefbd",
+      "commit": "d63d66ce9426ee8b704b348b4e8b552c2fb160a5",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "3eaabc8a6f5bc8030d2b8c6f11d02f4947a619c107811f134714ea78220754a4",
-        "reproduce": "git archive --format=tar 4c1b05352b59d68fd556df1ce2072ad5d57eefbd | sha256sum",
+        "sha256": "0f8129c561be1e7fa6de7e62fe5a29196614ad308dcaa4b10b7e9ca94be486c1",
+        "reproduce": "git archive --format=tar d63d66ce9426ee8b704b348b4e8b552c2fb160a5 | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
@@ -42122,1452 +42122,11 @@
   "publication": {
     "format": 1,
     "previousRules": {
-      "commit": "bd7f77c7a830bcbead5a5af0f8c69c81ea201f14",
+      "commit": "aee623a3af993abe34346a9a3ccda8c06ad48ec0",
       "path": "readable/geoblox-rules.json",
-      "sha256": "42fa68f89ffb6204eeee1ce1e14e70835e1e7cf95e6febc32ffdf6385888aada"
+      "sha256": "c65e993e6bf3f79772a49b08032f1c5bc1750453d8b9cc01b59af964e4a28d1b"
     },
-    "ruleChanges": [
-      {
-        "symbol": "C:t",
-        "before": null,
-        "after": {
-          "symbol": "C:t",
-          "originalName": "t",
-          "to": "InstrumentEnvelope",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "C:vl",
-        "before": null,
-        "after": {
-          "symbol": "C:vl",
-          "originalName": "vl",
-          "to": "InstrumentPatch",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "F:t.field_a:I",
-        "before": null,
-        "after": {
-          "symbol": "F:t.field_a:I",
-          "originalName": "field_a",
-          "to": "releaseEnvelopeKeyScaling",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "F:t.field_b:I",
-        "before": null,
-        "after": {
-          "symbol": "F:t.field_b:I",
-          "originalName": "field_b",
-          "to": "vibratoDepth",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "F:t.field_c:I",
-        "before": null,
-        "after": {
-          "symbol": "F:t.field_c:I",
-          "originalName": "field_c",
-          "to": "decayRate",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "F:t.field_d:I",
-        "before": null,
-        "after": {
-          "symbol": "F:t.field_d:I",
-          "originalName": "field_d",
-          "to": "vibratoPhaseStep",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "F:t.field_e:[B",
-        "before": null,
-        "after": {
-          "symbol": "F:t.field_e:[B",
-          "originalName": "field_e",
-          "to": "releaseEnvelope",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "F:t.field_f:[B",
-        "before": null,
-        "after": {
-          "symbol": "F:t.field_f:[B",
-          "originalName": "field_f",
-          "to": "volumeEnvelope",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "F:t.field_g:I",
-        "before": null,
-        "after": {
-          "symbol": "F:t.field_g:I",
-          "originalName": "field_g",
-          "to": "volumeEnvelopeKeyScaling",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "F:t.field_h:I",
-        "before": null,
-        "after": {
-          "symbol": "F:t.field_h:I",
-          "originalName": "field_h",
-          "to": "decayKeyScaling",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "F:t.field_j:I",
-        "before": null,
-        "after": {
-          "symbol": "F:t.field_j:I",
-          "originalName": "field_j",
-          "to": "vibratoRampTicks",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "F:vl.field_f:[Lt;",
-        "before": null,
-        "after": {
-          "symbol": "F:vl.field_f:[Lt;",
-          "originalName": "field_f",
-          "to": "keyEnvelopes",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "F:vl.field_g:I",
-        "before": null,
-        "after": {
-          "symbol": "F:vl.field_g:I",
-          "originalName": "field_g",
-          "to": "globalVolume",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "F:vl.field_h:[I",
-        "before": null,
-        "after": {
-          "symbol": "F:vl.field_h:[I",
-          "originalName": "field_h",
-          "to": "encodedSampleIds",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "F:vl.field_i:[B",
-        "before": null,
-        "after": {
-          "symbol": "F:vl.field_i:[B",
-          "originalName": "field_i",
-          "to": "keyGroups",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "F:vl.field_j:[S",
-        "before": null,
-        "after": {
-          "symbol": "F:vl.field_j:[S",
-          "originalName": "field_j",
-          "to": "pitchOffsetsAndLoopFlag",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "F:vl.field_k:[Lgd;",
-        "before": null,
-        "after": {
-          "symbol": "F:vl.field_k:[Lgd;",
-          "originalName": "field_k",
-          "to": "keySamples",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "F:vl.field_m:[B",
-        "before": null,
-        "after": {
-          "symbol": "F:vl.field_m:[B",
-          "originalName": "field_m",
-          "to": "keyPans",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "F:vl.field_o:[B",
-        "before": null,
-        "after": {
-          "symbol": "F:vl.field_o:[B",
-          "originalName": "field_o",
-          "to": "keyVolumes",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:pk.a(IBI)I#0",
-        "before": null,
-        "after": {
-          "symbol": "L:pk.a(IBI)I#0",
-          "originalName": "var3",
-          "to": "numeratorSign",
-          "evidence": "pk.a computes -sign+(numerator+sign)/divisor, sign=numerator>>>31. For positive divisors it matches mathematical floor division, including int boundaries. Guard -6 avoids unrelated static cleanup/recursive guard paths. Controlled positive-divisor native oracles and patch gain/pan interpolation verify negative rounding; nonpositive divisors and other guards are not claimed."
-        }
-      },
-      {
-        "symbol": "L:t.a(Ljava/lang/Throwable;Ljava/lang/String;)Lsa;#0",
-        "before": null,
-        "after": {
-          "symbol": "L:t.a(Ljava/lang/Throwable;Ljava/lang/String;)Lsa;#0",
-          "originalName": "var2",
-          "to": "wrappedFailure",
-          "evidence": "t.a preserves an existing sa wrapper identity and appends a space plus new context to its field_d; other Throwables create a new sa holding the original cause and supplied context. This static utility shares the t instance envelope holder. Controlled null/ordinary/already-wrapped Throwable oracles verify identity, original cause, null text and context accumulation; patch/native failure probes preserve original diagnostic strings."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#0",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#0",
-          "originalName": "var11_int",
-          "to": "envelopeRunReadIndex",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#1",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#1",
-          "originalName": "incrementValue$0",
-          "to": "newEnvelopeIndex",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#10",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#10",
-          "originalName": "incrementValue$1",
-          "to": "volumeRunReadIndexSnapshot",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#11",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#11",
-          "originalName": "stackIn_39_0",
-          "to": "optionalVolumeCurve",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#12",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#12",
-          "originalName": "stackIn_42_0",
-          "to": "optionalPanCurve",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#13",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#13",
-          "originalName": "stackIn_205_0",
-          "to": "failureContextCause",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#14",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#14",
-          "originalName": "stackIn_205_1",
-          "to": "failureContextBuilder",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#15",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#15",
-          "originalName": "stackIn_206_2",
-          "to": "inputContextDescription",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#16",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#16",
-          "originalName": "decompiledCaughtException",
-          "to": "caughtFailure",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#17",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#17",
-          "originalName": "var2",
-          "to": "failure",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#18",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#18",
-          "originalName": "var3",
-          "to": "keyGroupRunByteCount",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#19",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#19",
-          "originalName": "var4",
-          "to": "keyGroupRuns",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#2",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#2",
-          "originalName": "dupTemp$8",
-          "to": "newEnvelopeStorage",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#20",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#20",
-          "originalName": "var5",
-          "to": "keyGroupReadIndexOrCursor",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#21",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#21",
-          "originalName": "var6",
-          "to": "panRunByteCount",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#22",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#22",
-          "originalName": "var7",
-          "to": "panRuns",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#23",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#23",
-          "originalName": "var8",
-          "to": "panReadIndexOrCursor",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#24",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#24",
-          "originalName": "var9",
-          "to": "envelopeRunByteCountOrMapLength",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#25",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#25",
-          "originalName": "var10",
-          "to": "envelopeRuns",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#26",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#26",
-          "originalName": "var11",
-          "to": "envelopeAssignments",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#27",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#27",
-          "originalName": "var12",
-          "to": "envelopeCount",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#28",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#28",
-          "originalName": "var13_int",
-          "to": "currentEnvelopeIndex",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#29",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#29",
-          "originalName": "var13",
-          "to": "envelopes",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#3",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#3",
-          "originalName": "incrementValue$7",
-          "to": "sampleRunReadIndexSnapshot",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#30",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#30",
-          "originalName": "var14",
-          "to": "envelopeIndexOrCurvePointCount",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#31",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#31",
-          "originalName": "var15_int",
-          "to": "encodedEnvelopeIndex",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#32",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#32",
-          "originalName": "var15",
-          "to": "volumeCurve",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#33",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#33",
-          "originalName": "var15_ref",
-          "to": "newEnvelope",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#34",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#34",
-          "originalName": "var16",
-          "to": "panCurve",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#35",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#35",
-          "originalName": "var16_int",
-          "to": "envelopePointCount",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#36",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#36",
-          "originalName": "var17",
-          "to": "sampleRunByteCount",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#37",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#37",
-          "originalName": "var18",
-          "to": "sampleRuns",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#38",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#38",
-          "originalName": "var19",
-          "to": "pitchOrCurveTimeAccumulator",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#39",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#39",
-          "originalName": "var20",
-          "to": "remainingRunLength",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#4",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#4",
-          "originalName": "incrementValue$5",
-          "to": "keyGroupValueReadIndexSnapshot",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#40",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#40",
-          "originalName": "var21",
-          "to": "runReadIndex",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#41",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#41",
-          "originalName": "var22",
-          "to": "encodedSampleId",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#42",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#42",
-          "originalName": "var23",
-          "to": "keyIndexOrKeyGroup",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#43",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#43",
-          "originalName": "var24",
-          "to": "keyIndexOrPan",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#44",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#44",
-          "originalName": "var25",
-          "to": "currentEnvelope",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#45",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#45",
-          "originalName": "var26",
-          "to": "keyIndexOrVolume",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#46",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#46",
-          "originalName": "var27",
-          "to": "envelopeIndexOrCurveKey",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#47",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#47",
-          "originalName": "var28",
-          "to": "curveValue",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#48",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#48",
-          "originalName": "var29",
-          "to": "curvePairOrKeyIndex",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#49",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#49",
-          "originalName": "var30",
-          "to": "nextCurveKeyOrClampedPan",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#5",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#5",
-          "originalName": "incrementValue$6",
-          "to": "keyGroupRunReadIndexSnapshot",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#50",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#50",
-          "originalName": "var31",
-          "to": "nextCurveValueOrClampedPan",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#51",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#51",
-          "originalName": "var32",
-          "to": "interpolationNumerator",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#52",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#52",
-          "originalName": "var33",
-          "to": "curveKeyIndexOrAlias",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#53",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#53",
-          "originalName": "var34",
-          "to": "interpolatedCurveValue",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#54",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#54",
-          "originalName": "var35",
-          "to": "clampedPan",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#55",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#55",
-          "originalName": "var37",
-          "to": "panCurveKeyIndex",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#56",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#56",
-          "originalName": "var38",
-          "to": "patchInput",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#57",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#57",
-          "originalName": "var39",
-          "to": "envelopeAssignmentsAlias",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#58",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#58",
-          "originalName": "var40",
-          "to": "newEnvelopeAlias",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#59",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#59",
-          "originalName": "var41",
-          "to": "sampleRunsAlias",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#6",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#6",
-          "originalName": "var25_int",
-          "to": "panKeyIndex",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#60",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#60",
-          "originalName": "var42",
-          "to": "keyGroupRunsAlias",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#61",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#61",
-          "originalName": "var43",
-          "to": "panRunsAlias",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#62",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#62",
-          "originalName": "var44",
-          "to": "envelopeRunsAlias",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#63",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#63",
-          "originalName": "var45",
-          "to": "envelopeForValues",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#64",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#64",
-          "originalName": "var46",
-          "to": "volumeCurveAlias",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#65",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#65",
-          "originalName": "var47",
-          "to": "panCurveAlias",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#66",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#66",
-          "originalName": "var48",
-          "to": "releaseEnvelopeForTimes",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#67",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#67",
-          "originalName": "var49",
-          "to": "volumeEnvelopeForTimes",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#68",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#68",
-          "originalName": "var50",
-          "to": "envelopeForKeyScaling",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#69",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#69",
-          "originalName": "var51",
-          "to": "envelopeForVibratoDepth",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#7",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#7",
-          "originalName": "incrementValue$3",
-          "to": "panValueReadIndexSnapshot",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#70",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#70",
-          "originalName": "var52",
-          "to": "envelopeForVibratoRamp",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#71",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#71",
-          "originalName": "var53",
-          "to": "envelopeAssignmentsStorage",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#72",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#72",
-          "originalName": "var54",
-          "to": "sampleRunsStorage",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#73",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#73",
-          "originalName": "var55",
-          "to": "keyGroupRunsStorage",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#74",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#74",
-          "originalName": "var56",
-          "to": "panRunsStorage",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#75",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#75",
-          "originalName": "var57",
-          "to": "envelopeRunsStorage",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#76",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#76",
-          "originalName": "decompiledCaughtParameter0",
-          "to": "caughtParameter",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#8",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#8",
-          "originalName": "incrementValue$4",
-          "to": "panRunReadIndexSnapshot",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.<init>([B)V#9",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.<init>([B)V#9",
-          "originalName": "incrementValue$2",
-          "to": "envelopeRunReadIndexSnapshot",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.a(IBLrh;)Lvl;#0",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.a(IBLrh;)Lvl;#0",
-          "originalName": "var3",
-          "to": "packedPatch",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.a(IBLrh;)Lvl;#1",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.a(IBLrh;)Lvl;#1",
-          "originalName": "var3_ref",
-          "to": "failure",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.a(IBLrh;)Lvl;#2",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.a(IBLrh;)Lvl;#2",
-          "originalName": "var4",
-          "to": "packedPatchResult",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.a(IBLrh;)Lvl;#3",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.a(IBLrh;)Lvl;#3",
-          "originalName": "stackIn_4_0",
-          "to": "missingPatchResult",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.a(IBLrh;)Lvl;#4",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.a(IBLrh;)Lvl;#4",
-          "originalName": "stackIn_6_0",
-          "to": "decodedPatchResult",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.a(IBLrh;)Lvl;#5",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.a(IBLrh;)Lvl;#5",
-          "originalName": "stackIn_9_0",
-          "to": "failureContextCause",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.a(IBLrh;)Lvl;#6",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.a(IBLrh;)Lvl;#6",
-          "originalName": "stackIn_9_1",
-          "to": "failureContextBuilder",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.a(IBLrh;)Lvl;#7",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.a(IBLrh;)Lvl;#7",
-          "originalName": "stackIn_10_2",
-          "to": "archiveContextDescription",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.a(IBLrh;)Lvl;#8",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.a(IBLrh;)Lvl;#8",
-          "originalName": "decompiledCaughtException",
-          "to": "caughtFailure",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.a(IBLrh;)Lvl;#9",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.a(IBLrh;)Lvl;#9",
-          "originalName": "decompiledCaughtParameter0",
-          "to": "caughtParameter",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.a([I[BILci;)Z#0",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.a([I[BILci;)Z#0",
-          "originalName": "var8",
-          "to": "keyIndex",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.a([I[BILci;)Z#1",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.a([I[BILci;)Z#1",
-          "originalName": "stackIn_21_0",
-          "to": "allLoadedResult",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.a([I[BILci;)Z#10",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.a([I[BILci;)Z#10",
-          "originalName": "var5_int",
-          "to": "allLoaded",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.a([I[BILci;)Z#11",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.a([I[BILci;)Z#11",
-          "originalName": "var5",
-          "to": "failure",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.a([I[BILci;)Z#12",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.a([I[BILci;)Z#12",
-          "originalName": "var6",
-          "to": "previousEncodedSampleId",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.a([I[BILci;)Z#13",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.a([I[BILci;)Z#13",
-          "originalName": "var7",
-          "to": "resolvedSample",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.a([I[BILci;)Z#14",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.a([I[BILci;)Z#14",
-          "originalName": "var9",
-          "to": "encodedSampleId",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.a([I[BILci;)Z#15",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.a([I[BILci;)Z#15",
-          "originalName": "var10",
-          "to": "controlFlagSnapshot",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.a([I[BILci;)Z#16",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.a([I[BILci;)Z#16",
-          "originalName": "decompiledCaughtParameter0",
-          "to": "caughtParameter",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.a([I[BILci;)Z#2",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.a([I[BILci;)Z#2",
-          "originalName": "stackIn_24_0",
-          "to": "failureContextCause",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.a([I[BILci;)Z#3",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.a([I[BILci;)Z#3",
-          "originalName": "stackIn_24_1",
-          "to": "failureContextBuilder",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.a([I[BILci;)Z#4",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.a([I[BILci;)Z#4",
-          "originalName": "stackIn_25_2",
-          "to": "budgetContextDescription",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.a([I[BILci;)Z#5",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.a([I[BILci;)Z#5",
-          "originalName": "stackIn_27_1",
-          "to": "maskContextBuilder",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.a([I[BILci;)Z#6",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.a([I[BILci;)Z#6",
-          "originalName": "stackIn_28_2",
-          "to": "maskContextDescription",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.a([I[BILci;)Z#7",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.a([I[BILci;)Z#7",
-          "originalName": "stackIn_30_1",
-          "to": "providerContextBuilder",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.a([I[BILci;)Z#8",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.a([I[BILci;)Z#8",
-          "originalName": "stackIn_31_2",
-          "to": "providerContextDescription",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "L:vl.a([I[BILci;)Z#9",
-        "before": null,
-        "after": {
-          "symbol": "L:vl.a([I[BILci;)Z#9",
-          "originalName": "decompiledCaughtException",
-          "to": "caughtFailure",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "M:pk.a(IBI)I",
-        "before": null,
-        "after": {
-          "symbol": "M:pk.a(IBI)I",
-          "originalName": "a",
-          "to": "divideFloorWithPositiveDivisor",
-          "evidence": "pk.a computes -sign+(numerator+sign)/divisor, sign=numerator>>>31. For positive divisors it matches mathematical floor division, including int boundaries. Guard -6 avoids unrelated static cleanup/recursive guard paths. Controlled positive-divisor native oracles and patch gain/pan interpolation verify negative rounding; nonpositive divisors and other guards are not claimed."
-        }
-      },
-      {
-        "symbol": "M:t.a(Ljava/lang/Throwable;Ljava/lang/String;)Lsa;",
-        "before": null,
-        "after": {
-          "symbol": "M:t.a(Ljava/lang/Throwable;Ljava/lang/String;)Lsa;",
-          "originalName": "a",
-          "to": "withFailureContext",
-          "evidence": "t.a preserves an existing sa wrapper identity and appends a space plus new context to its field_d; other Throwables create a new sa holding the original cause and supplied context. This static utility shares the t instance envelope holder. Controlled null/ordinary/already-wrapped Throwable oracles verify identity, original cause, null text and context accumulation; patch/native failure probes preserve original diagnostic strings."
-        }
-      },
-      {
-        "symbol": "M:vl.a(B)V",
-        "before": null,
-        "after": {
-          "symbol": "M:vl.a(B)V",
-          "originalName": "a",
-          "to": "clearEncodedSampleIds",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "M:vl.a(IBLrh;)Lvl;",
-        "before": null,
-        "after": {
-          "symbol": "M:vl.a(IBLrh;)Lvl;",
-          "originalName": "a",
-          "to": "loadInstrumentPatch",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "M:vl.a([I[BILci;)Z",
-        "before": null,
-        "after": {
-          "symbol": "M:vl.a([I[BILci;)Z",
-          "originalName": "a",
-          "to": "loadSelectedSamples",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "P:pk.a(IBI)I#0",
-        "before": null,
-        "after": {
-          "symbol": "P:pk.a(IBI)I#0",
-          "originalName": "param0",
-          "to": "divisor",
-          "evidence": "pk.a computes -sign+(numerator+sign)/divisor, sign=numerator>>>31. For positive divisors it matches mathematical floor division, including int boundaries. Guard -6 avoids unrelated static cleanup/recursive guard paths. Controlled positive-divisor native oracles and patch gain/pan interpolation verify negative rounding; nonpositive divisors and other guards are not claimed."
-        }
-      },
-      {
-        "symbol": "P:pk.a(IBI)I#1",
-        "before": null,
-        "after": {
-          "symbol": "P:pk.a(IBI)I#1",
-          "originalName": "param1",
-          "to": "methodGuard",
-          "evidence": "pk.a computes -sign+(numerator+sign)/divisor, sign=numerator>>>31. For positive divisors it matches mathematical floor division, including int boundaries. Guard -6 avoids unrelated static cleanup/recursive guard paths. Controlled positive-divisor native oracles and patch gain/pan interpolation verify negative rounding; nonpositive divisors and other guards are not claimed."
-        }
-      },
-      {
-        "symbol": "P:pk.a(IBI)I#2",
-        "before": null,
-        "after": {
-          "symbol": "P:pk.a(IBI)I#2",
-          "originalName": "param2",
-          "to": "numerator",
-          "evidence": "pk.a computes -sign+(numerator+sign)/divisor, sign=numerator>>>31. For positive divisors it matches mathematical floor division, including int boundaries. Guard -6 avoids unrelated static cleanup/recursive guard paths. Controlled positive-divisor native oracles and patch gain/pan interpolation verify negative rounding; nonpositive divisors and other guards are not claimed."
-        }
-      },
-      {
-        "symbol": "P:t.a(Ljava/lang/Throwable;Ljava/lang/String;)Lsa;#0",
-        "before": null,
-        "after": {
-          "symbol": "P:t.a(Ljava/lang/Throwable;Ljava/lang/String;)Lsa;#0",
-          "originalName": "param0",
-          "to": "cause",
-          "evidence": "t.a preserves an existing sa wrapper identity and appends a space plus new context to its field_d; other Throwables create a new sa holding the original cause and supplied context. This static utility shares the t instance envelope holder. Controlled null/ordinary/already-wrapped Throwable oracles verify identity, original cause, null text and context accumulation; patch/native failure probes preserve original diagnostic strings."
-        }
-      },
-      {
-        "symbol": "P:t.a(Ljava/lang/Throwable;Ljava/lang/String;)Lsa;#1",
-        "before": null,
-        "after": {
-          "symbol": "P:t.a(Ljava/lang/Throwable;Ljava/lang/String;)Lsa;#1",
-          "originalName": "param1",
-          "to": "context",
-          "evidence": "t.a preserves an existing sa wrapper identity and appends a space plus new context to its field_d; other Throwables create a new sa holding the original cause and supplied context. This static utility shares the t instance envelope holder. Controlled null/ordinary/already-wrapped Throwable oracles verify identity, original cause, null text and context accumulation; patch/native failure probes preserve original diagnostic strings."
-        }
-      },
-      {
-        "symbol": "P:vl.<init>([B)V#0",
-        "before": null,
-        "after": {
-          "symbol": "P:vl.<init>([B)V#0",
-          "originalName": "param0",
-          "to": "packedPatch",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "P:vl.a(B)V#0",
-        "before": null,
-        "after": {
-          "symbol": "P:vl.a(B)V#0",
-          "originalName": "param0",
-          "to": "methodGuard",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "P:vl.a(IBLrh;)Lvl;#0",
-        "before": null,
-        "after": {
-          "symbol": "P:vl.a(IBLrh;)Lvl;#0",
-          "originalName": "param0",
-          "to": "patchId",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "P:vl.a(IBLrh;)Lvl;#1",
-        "before": null,
-        "after": {
-          "symbol": "P:vl.a(IBLrh;)Lvl;#1",
-          "originalName": "param1",
-          "to": "methodGuard",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "P:vl.a(IBLrh;)Lvl;#2",
-        "before": null,
-        "after": {
-          "symbol": "P:vl.a(IBLrh;)Lvl;#2",
-          "originalName": "param2",
-          "to": "archive",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "P:vl.a([I[BILci;)Z#0",
-        "before": null,
-        "after": {
-          "symbol": "P:vl.a([I[BILci;)Z#0",
-          "originalName": "param0",
-          "to": "sampleBudget",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "P:vl.a([I[BILci;)Z#1",
-        "before": null,
-        "after": {
-          "symbol": "P:vl.a([I[BILci;)Z#1",
-          "originalName": "param1",
-          "to": "noteSelectionMask",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "P:vl.a([I[BILci;)Z#2",
-        "before": null,
-        "after": {
-          "symbol": "P:vl.a([I[BILci;)Z#2",
-          "originalName": "param2",
-          "to": "methodGuard",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      },
-      {
-        "symbol": "P:vl.a([I[BILci;)Z#3",
-        "before": null,
-        "after": {
-          "symbol": "P:vl.a([I[BILci;)Z#3",
-          "originalName": "param3",
-          "to": "sampleCache",
-          "evidence": "vl decodes instrument patches into128-key sample IDs, pitch/loop-flag shorts, exclusive key groups, pan/volume bytes and shared t envelope objects. kj note creation consumes these arrays for sample selection, pitch, looping, amplitude, pan and key-group replacement. Its update/volume/pitch methods identify t volume/release envelope pairs, key scaling, exponential decay and vibrato phase/depth/ramp. Patch count/run/value cursors, aliases and reused scratch roles follow the exact decoder reads. Native/raw/readable fixtures verify controlled patch arrays, envelope identity/parameters, curve rounding/clamping, selective cached sample installation and encoded-ID cleanup, with partial failures traced. Real archive/audio decoding and synthesized sound are unverified; unrelated shared static state remains unchanged."
-        }
-      }
-    ],
+    "ruleChanges": [],
     "stubJarSha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2",
     "sourceEvidence": [
       {
@@ -43588,11 +42147,11 @@
       },
       {
         "file": "ac.java",
-        "sha256": "14ad593098a8e96986f052f2cecff6b4229315ac89316d210809341a2148a435"
+        "sha256": "fdef048d9ea9bb053753630fcd686f3d589e593cfa1668a27d909740d30e46c9"
       },
       {
         "file": "ad.java",
-        "sha256": "07d3b78544632ba3b9de40110b82f3020c117d8b21b7c3a23052ff65a424714b"
+        "sha256": "0e799ddc52d5ca87ea7940e97502460370fa8d3bf10294d77c47325f8feb7765"
       },
       {
         "file": "af.java",
@@ -43620,7 +42179,7 @@
       },
       {
         "file": "ba.java",
-        "sha256": "18457d6dcc6de68da8e870e7a8a5dcc11e527f8d7188b2690fe6b157397c9edd"
+        "sha256": "2250431683449decf9d978765b8f315df9504ed0fa180b7ef71510eaef6b10c4"
       },
       {
         "file": "bc.java",
@@ -43644,7 +42203,7 @@
       },
       {
         "file": "bj.java",
-        "sha256": "26dd5ac24a201e78c77bfa075a9c5988662a1672e35ac4268da4fcc34a26d54d"
+        "sha256": "a760277855648036c22cd867bf3991ce9ea8d95174274089cf24637e660be095"
       },
       {
         "file": "bk.java",
@@ -43652,7 +42211,7 @@
       },
       {
         "file": "bm.java",
-        "sha256": "4038d084e03cb34613f645e3819d09606507e5822ca544660b0ef113757fedf7"
+        "sha256": "c2c6651568ffb39783a2df583d71485883129f3ec78fdfafac1b27dc3b97c950"
       },
       {
         "file": "c.java",
@@ -43676,7 +42235,7 @@
       },
       {
         "file": "ch.java",
-        "sha256": "7bfc5f48ca6493d95f34aa4af3c4efa6c11de3f3b747dc776c378ec10401d0a1"
+        "sha256": "c98957f89da141454ab4a8a3d30ab7571d846eedd06cab2dab239b48056c00cf"
       },
       {
         "file": "ci.java",
@@ -43696,11 +42255,11 @@
       },
       {
         "file": "cm.java",
-        "sha256": "f288dd5554dc38504f3405b27941f3f3f3e740aa5ab7ea001ae57b697d15bd5d"
+        "sha256": "b0782948306396fbe3709105a1048295c34df9a304fdaa14d8481e6f94c31ce4"
       },
       {
         "file": "d.java",
-        "sha256": "472a07857d2cb82d4ba42feb925b327c9965f9f9d3d0cbbaa4af987d94e6bfcb"
+        "sha256": "b7b4cdf7cf226569cc3b79c49b1ed935808f709ecd4afe9435d67f681251441e"
       },
       {
         "file": "dd.java",
@@ -43712,7 +42271,7 @@
       },
       {
         "file": "dj.java",
-        "sha256": "0e85beb5620bb53f399e315f47e0b691f3e974e221a3e56e762f31ff8d308596"
+        "sha256": "f3bb797409df55179f427e306d79678b640ff05d05569faddc4a107a85a4abfe"
       },
       {
         "file": "dk.java",
@@ -43720,7 +42279,7 @@
       },
       {
         "file": "dm.java",
-        "sha256": "6f43627adc6de9ec3a01cc444b17c5e0ffb9617cc269caddf9b9d2528bc274ce"
+        "sha256": "22d354d67a56bd39ed76d43df2d7550bba506d89b6fd96c8f8d482623214560c"
       },
       {
         "file": "ea.java",
@@ -43804,7 +42363,7 @@
       },
       {
         "file": "ge.java",
-        "sha256": "36fd1cb973a2a0495eccdcaf5d30d868772d25b16643c8992b68e7309b985d93"
+        "sha256": "e10df48a0350331e1823cad3201c18015a9d5569695feeb8e3bf4355bd64dab1"
       },
       {
         "file": "gf.java",
@@ -43816,11 +42375,11 @@
       },
       {
         "file": "gh.java",
-        "sha256": "3868e5ba11ebe85e765696b442660a6e375b93f7e7ddb5c80136b1db04a0d689"
+        "sha256": "a618c699547bcc024031c39f9998d883802a404dd12a83d8aae27a04994ef901"
       },
       {
         "file": "gi.java",
-        "sha256": "03ba5a3c3cbc98931066575473f62d123617e269ba3fe2f8aceea4a7e8b0e3f1"
+        "sha256": "71b9330f3ec60828470684ea48177209774d06e3e3d9f8928391a1e72fd7c5ad"
       },
       {
         "file": "gj.java",
@@ -43856,7 +42415,7 @@
       },
       {
         "file": "hf.java",
-        "sha256": "27784f40921ab59b1c97485dba17c69c3b2ed031b7e290091b4c2febceb19d06"
+        "sha256": "8b0fd7e4e90397be69c34e56bf3685ee3704f92ae0b3ce31cd481adf0e680dba"
       },
       {
         "file": "hg.java",
@@ -43908,11 +42467,11 @@
       },
       {
         "file": "ik.java",
-        "sha256": "fd97ef74e206aabc82b2c83034cf5c3b0565feb2f15c341af115c1d62d78889f"
+        "sha256": "6031c8ea20a202b048c136bb1f33c16864e5892a19b1aca542da74f56455c651"
       },
       {
         "file": "il.java",
-        "sha256": "72c73c10c3edc46015ade2d44bf5fda4d56b28cef8248f53b74f6be37e607a0f"
+        "sha256": "72239dc1f2a6cf301a00f2d76be355f295295d53e1fcb7c882d525070d8d2620"
       },
       {
         "file": "ja.java",
@@ -43944,7 +42503,7 @@
       },
       {
         "file": "ji.java",
-        "sha256": "2a0fc5fb00f0e51c3f428a28a4dc4f42d5c95a85a101a5f02bfc633a10429212"
+        "sha256": "d8a151d335db81b2f3ce04987c3a01fdcaa60df4ca80f9a206bac28a86cbf611"
       },
       {
         "file": "jj.java",
@@ -43972,7 +42531,7 @@
       },
       {
         "file": "kc.java",
-        "sha256": "05a0bee627c1329882f97cd3152dcea1409e6793fd98063c9bb166869b73649e"
+        "sha256": "dca6849ac9db1452e6328160df71e2b6a3a3ea3c06d83ee8062ed30e5fe553f1"
       },
       {
         "file": "kd.java",
@@ -43996,11 +42555,11 @@
       },
       {
         "file": "kj.java",
-        "sha256": "c09c0345941f1b24ecad59c86c21215202f3be8d0fd825531790f565abdfbbc8"
+        "sha256": "be63ecf2bd08f9cbdc46aa5615c9631e1ab2df4b216890e4657da1aed223cc7b"
       },
       {
         "file": "kk.java",
-        "sha256": "77951c5c55d6ca26fb72f1f25c1f19461772d8adc21182a3ccf6a07e1cf7d1dc"
+        "sha256": "a761ae29065a6cec83ea77c4081b3466a3f7c8c77395ed2bba3782af765e8f90"
       },
       {
         "file": "kl.java",
@@ -44052,7 +42611,7 @@
       },
       {
         "file": "ma.java",
-        "sha256": "9a519b0b2869fbd5d94208ad2a04a119e52ca350959086c6a01d6a904579b70f"
+        "sha256": "68acb3c46ccacb5fba9d1e1e3ec2dd8df5e784e67ed839bde659ed0f56823a9a"
       },
       {
         "file": "mc.java",
@@ -44132,7 +42691,7 @@
       },
       {
         "file": "oe.java",
-        "sha256": "7cdb017daf049c6942087af393a08edc74972f69aac0032a5e5640bf6d2d00fa"
+        "sha256": "109ec51bfbf16acbb0e00ef147aec75ca10be86c589ac21e891fd4b11b87a390"
       },
       {
         "file": "ok.java",
@@ -44160,7 +42719,7 @@
       },
       {
         "file": "pg.java",
-        "sha256": "7e015b5ae3bf58760a9cf86624cfa6c4cdedfe3182c63128961d841fe5325058"
+        "sha256": "3a62864edcc6528e24aee1b5e9dd2396865239e44568f27e0ad202ffee59a05b"
       },
       {
         "file": "ph.java",
@@ -44188,7 +42747,7 @@
       },
       {
         "file": "qb.java",
-        "sha256": "60015220b4f93f06b656cc5d7014ec673b3b4a0d36a2770adf942a78e616bb98"
+        "sha256": "18e656d8efe58d88d8b2d85703f7f19c9424087e4e53bbe59774618368985933"
       },
       {
         "file": "qc.java",
@@ -44212,11 +42771,11 @@
       },
       {
         "file": "qi.java",
-        "sha256": "ea2d47fd7351cf1d046381839d1639f7d657ac1b561e9545feef78d26113c0c3"
+        "sha256": "ff59231e7a6208d9763e175749400933fd38a9295c840a2dc5c4f9558a2d8144"
       },
       {
         "file": "qk.java",
-        "sha256": "438b4f8ab1a284dd23ecfd93d4620dad893ff08d68e53338ce57a8f776580008"
+        "sha256": "21b3c2a3afc707bb532fa530feb1b795c17ca1064d32691e70ed5e807e0b13d6"
       },
       {
         "file": "r.java",
@@ -44240,7 +42799,7 @@
       },
       {
         "file": "re.java",
-        "sha256": "3fffb3d1ae2750f75386b33af83859b777f683f028107a44ea50aba533b05304"
+        "sha256": "24b1dedd99527a3b5dbece164bae6e0aa9713102074a1b18aa9dbbca65f3642d"
       },
       {
         "file": "rf.java",
@@ -44252,7 +42811,7 @@
       },
       {
         "file": "ri.java",
-        "sha256": "49222a9c8661b1b59c03d07e647ab903f20b4364d82f61c706e3351ee748cbec"
+        "sha256": "3bf94bdf3c102b0b632b427e37b6ff66198dc94ed3821b0745ea1eff4883b8b1"
       },
       {
         "file": "rj.java",
@@ -44260,7 +42819,7 @@
       },
       {
         "file": "s.java",
-        "sha256": "e931e844409ea352bc86794fed52f419dce010512977015eb506991959f432ed"
+        "sha256": "bbce88a936bef2635b46be73e09ff0b5b7a868d591af206f9bd0fbdaaa67778c"
       },
       {
         "file": "sa.java",
@@ -44276,7 +42835,7 @@
       },
       {
         "file": "sd.java",
-        "sha256": "9f03036eff0f2415cadeeeaf376df3267264d5491e0c1158c29622a0f8b62e0f"
+        "sha256": "b16e324256c0dde2ae316688320abb544e91ba82ebffb11642f317d025618adf"
       },
       {
         "file": "sg.java",
@@ -44292,7 +42851,7 @@
       },
       {
         "file": "sk.java",
-        "sha256": "6305e51eb7819a1efb7cc3fcbdb8016a818419033fa527ca376f9e5549b3f3bc"
+        "sha256": "0976eebd18a8326d2ca1726cda47ebc4d33a16f8e8a5b846c4c8e44a24ffdddd"
       },
       {
         "file": "sl.java",
@@ -44304,7 +42863,7 @@
       },
       {
         "file": "tb.java",
-        "sha256": "89626a9747d10f7e24536265df0e2ebbd65056fcef2f03deda1568963e8a9886"
+        "sha256": "3185928a066b6e7161201e87593013444a06d7191b592c49655488cc7558dd5f"
       },
       {
         "file": "tc.java",
@@ -44344,11 +42903,11 @@
       },
       {
         "file": "ue.java",
-        "sha256": "f197a2d04aa39915b1e2274dd3d128bf21d1bed619d8876fc0b83ec4e9f386f1"
+        "sha256": "ec9503012bdd9324d7a02475ed5442270c3cc45e096af4fb7a8090ac79da1655"
       },
       {
         "file": "uf.java",
-        "sha256": "81b2e80841d3c7fb78f7abde75dcdcff36e2996fc7383e234fbc4ef7454183fa"
+        "sha256": "977f647aab106301e8d38d7105a4e325ad9a25030f919e22aaa92fb9a4e64333"
       },
       {
         "file": "ug.java",
@@ -44356,7 +42915,7 @@
       },
       {
         "file": "uh.java",
-        "sha256": "86bba4cf4c88843f7b45398ef4cece18c204e5dc552aab6b32af6846ad348010"
+        "sha256": "2b697dc4e4846578b8924b5f07ef0f6090a5bd0aa537daef00b70b29f6d5f973"
       },
       {
         "file": "uj.java",
@@ -44368,7 +42927,7 @@
       },
       {
         "file": "ul.java",
-        "sha256": "ce71776e1ac03bd5a5207334f70f7dfb9a6f02f9d348aca98d5cacefaefbfd8a"
+        "sha256": "1692f7b1d608351caa0673c456cc4488a8e1f410a20b70506225cf112310e8bf"
       },
       {
         "file": "v.java",
@@ -44396,7 +42955,7 @@
       },
       {
         "file": "vf.java",
-        "sha256": "e90661f65a173e549d881d9f9c8b3384eaa35aeaf2bcc1a34710566292f34eb5"
+        "sha256": "5d58355d5c5fce6eda49baeb8a97b52cb92b72503f615df6e6a1560e89a8fc9a"
       },
       {
         "file": "vg.java",
@@ -44412,11 +42971,11 @@
       },
       {
         "file": "vk.java",
-        "sha256": "1469654978dd3e8aaed40082f0b08e190f70e38a7b4d2bf8629c4bb44d0e687a"
+        "sha256": "ad873fefe25f62e6a3652661071d514561a5b891fe7d26bf81c94483ebad9a1b"
       },
       {
         "file": "vl.java",
-        "sha256": "c391045f45aa119b71aaf7a71d355754e91cb5abd1b5507f2871f1af66c8d32b"
+        "sha256": "ccb3798d4b7d71f7d46dced25b7ff335230f41a9dfc287f5c3708d166a105c2b"
       },
       {
         "file": "w.java",
@@ -44444,7 +43003,7 @@
       },
       {
         "file": "wh.java",
-        "sha256": "f288c32d9df001698be2de0980671b024c9d2bff34275897e76ecd3f1bd46e3c"
+        "sha256": "c8d1ed68b53cdf157809018608072fd05a6dae655cad40f93abca75c205eef0a"
       },
       {
         "file": "wi.java",
@@ -46846,7 +45405,8 @@
         "Pass85 names the logo clock/transforms/materials/loader/rendering path and adds an int-guard collector entry point. Native56862 logo cases include trig/matrix oracles within one integer unit,224 clock cases,48 valid material-input oracles,72 draw-order/depth oracles and4320 scene traces.804 scene calls succeed,216 change pixels. Native corrected120 sprite-reference cleanup mismatches caused by a narrowing byte cast. Only null-archive loader failures are executed; complete logo archive decoding, general easing and whole-game rendering/performance are unverified. Integer-argument discovery covers owned static targets reached through int stackIn carriers, not arbitrary direct expressions/external/virtual/constructor/boolean paths. The original and full-int collector bodies coexist; large bodies remain.",
         "Pass86 reconstructs57 plain labeled skip blocks whose only label references are66 leading bare guard breaks. Logical negation retains predicate bytes, NaNs, unboxing and left-to-right effects; remaining declaration blocks/protected boundaries stay intact.4032 native comparisons cover scopes, failures, cleanup state after invocation, ancestor transfers and monitor ownership/release. All303 token streams match only the skip/nested-guard transforms and every ordered binding/ordinal remains. Session updater falls660 to643 lines and19 to14 labels;21 overlapping method spans >=300 lines,15 with labels remain. Recorded native probes keep their prior scopes/pins; real assets/full-game/browser/phone acceptance remain unverified.",
         "Pass87 names MusicScore including its541-line compact-to-MIDI constructor, MidiTrackReader and InstrumentNoteMask.1536 controlled score fixtures verify exact MIDI bytes, scheduled positive-velocity instrument-note sets and idempotent cache rebuild; seven null/short/invalid-or-minimal scores and128 reader meta/system/running-status/time oracles retain narrow scopes. Controller streams are named by number rather than unverified musical interpretation. No structural/source change, actual archived music loading, audio synthesis, full-game or browser/phone acceptance is claimed.21 large spans and15 with labels remain.",
-        "Pass88 names InstrumentPatch, InstrumentEnvelope instance fields and patch decoder/sample loader/cleanup, plus the shared failure-context utility and positive-divisor floor helper. Controlled patch/sample/cache/curve/envelope oracles preserve the documented scope. Shared static UI/authentication/graphics state remains independently named or opaque. Real archive patch/sample decoding, arbitrary malformed data, actual synthesis, full-game and browser/phone acceptance remain unverified. The492-line constructor and21 large spans/15 with block labels remain; no structural/source/decompiler change is made."
+        "Pass88 names InstrumentPatch, InstrumentEnvelope instance fields and patch decoder/sample loader/cleanup, plus the shared failure-context utility and positive-divisor floor helper. Controlled patch/sample/cache/curve/envelope oracles preserve the documented scope. Shared static UI/authentication/graphics state remains independently named or opaque. Real archive patch/sample decoding, arbitrary malformed data, actual synthesis, full-game and browser/phone acceptance remain unverified. The492-line constructor and21 large spans/15 with block labels remain; no structural/source/decompiler change is made.",
+        "Pass89 removes102 terminal breaks whose plain-block destination is already reached by normal completion through final block statements, if branches and plain labels. Bare branches retain empty statements and predicates. Intermediate loops/switches/protected regions refuse cleanup; enclosing finally/monitors remain.5376 native comparisons cover scopes, failures, partial effects, ancestor transfers, finally state after invocation and lock ownership/release. All303 expected token streams and ordered naming bindings remain. The instrument patch constructor falls492 to468 lines and9 to1 labels.21 overlapping spans >=300 lines remain,13 with block labels. Recorded native probes keep their scopes/pins; whole-game/browser/phone acceptance remains unverified."
       ],
       "checks": {
         "ruleBuilderTests": 9,
@@ -46888,7 +45448,7 @@
       "generatedSelectorsBefore": 265,
       "generatedSelectorsAfter": 9,
       "generatedSelectorsRemoved": 256,
-      "rawSourceLinesRemoved": 197,
+      "rawSourceLinesRemoved": 248,
       "returnReconstructionChangedJavaFiles": 181,
       "localOrdinalMigrations": 0,
       "obsoleteNamedSelectorsRemoved": 1,
@@ -46913,7 +45473,7 @@
       "nativeDifficultyResetCases": 7,
       "nativeSpawnSelectionCases": 1332,
       "nativeDifficultyTraceSha256": "8c66899b5955eac3380cc3aefd3cbe17a5063cc68f98cd507ff406cea4ae587b",
-      "genericEmitterTestGroups": 48,
+      "genericEmitterTestGroups": 50,
       "genericTypedAssignmentTestGroups": 3,
       "typedLiteralAssignmentsFolded": 77,
       "difficultyAssignmentsFolded": 17,
@@ -46921,7 +45481,7 @@
       "typedAssignmentElseWrappersRemoved": 77,
       "nativeComparatorCases": 32768,
       "nativeComparatorTraceSha256": "9be228f7421970f2214c74e8890327f8592f706dc90ccd0d0933e6f2fbe0a604",
-      "referenceRemovalAttribution": "Pass88 adds names only. Raw source, ordered declarations/references/overrides and local ordinals are unchanged; all6871 previous complete guarded rule objects are preserved.",
+      "referenceRemovalAttribution": "Pass89 removes only terminal plain-block breaks and unused control frames. All ordered declarations/references/overrides, local ordinals and every guarded naming object remain.",
       "genericBooleanCarrierTestGroups": 3,
       "localBooleanCarriersEliminated": 221,
       "localBooleanSnapshotsRetyped": 70,
@@ -46937,7 +45497,7 @@
       "difficultyMethodLinesBefore": 38,
       "difficultyMethodLinesAfter": 38,
       "allGuardedNamesUnchanged": true,
-      "ruleChangesInCurrentPass": 144,
+      "ruleChangesInCurrentPass": 0,
       "genericNestedContinuationTestGroups": 2,
       "nativeNestedContinuationComparisons": 2520,
       "nestedContinuationChangedJavaFiles": 7,
@@ -46952,14 +45512,14 @@
       "ambiguousPredicateComplementsRefused": true,
       "difficultyCategoryAndRecursiveAdvanceClonesEliminated": true,
       "allPriorGuardedNamesPreserved": true,
-      "namingRulesAddedInCurrentPass": 144,
-      "sourceInputChangedInCurrentPass": false,
+      "namingRulesAddedInCurrentPass": 0,
+      "sourceInputChangedInCurrentPass": true,
       "namedVisualAssetFieldsAdded": 59,
       "namedAssetLoadingMethodsAdded": 6,
       "namedAssetLoadingParametersAdded": 24,
       "namedAssetPreparationAndLookupLocalsAdded": 28,
-      "identifierEditsAddedInCurrentPass": 2480,
-      "lastStructuralPassVersion": 86,
+      "identifierEditsAddedInCurrentPass": 0,
+      "lastStructuralPassVersion": 89,
       "namingRulesRefinedInCurrentPass": 0,
       "allUnaffectedPriorRulesPreserved": true,
       "namedRenderingClassRulesAdded": 0,
@@ -47344,7 +45904,7 @@
       "genericCfrFixturePasses": 33,
       "preexistingCfrFixtureFailures": 3,
       "nativeEmitterComparisonsHistoricalPassVersion": 52,
-      "genericEmitterTestsRegistered": 49,
+      "genericEmitterTestsRegistered": 51,
       "genericEmitterTestsSkipped": 1,
       "independentJavaAstCorpusHistoricalPassVersion": 77,
       "genericCfrFixtureHistoricalPassVersion": 77,
@@ -47482,7 +46042,7 @@
       "sessionUpdaterLabelsAfter": 14,
       "sourceMethodBodies": 2080,
       "sourceLargeMethodSpansAtLeast300Lines": 21,
-      "sourceLargeMethodSpansWithGeneratedBlockLabels": 15,
+      "sourceLargeMethodSpansWithGeneratedBlockLabels": 13,
       "currentRecordedNativeProbeCount": 6,
       "namedMusicRulesAdded": {
         "C": 3,
@@ -47516,7 +46076,70 @@
       "nativeInstrumentPatchCleanupOracles": 256,
       "nativeInstrumentPatchFloorOracles": 98,
       "nativeInstrumentPatchContextOracles": 12,
-      "nativeInstrumentPatchTruncationOracles": 369
+      "nativeInstrumentPatchTruncationOracles": 369,
+      "allGuardedRuleObjectsPreserved": true,
+      "terminalPlainBlockBreaksHistoricalPassVersion": 89,
+      "terminalPlainBlockBreaksRemoved": 102,
+      "terminalPlainBlockLabelsRemoved": 73,
+      "terminalPlainBlockFramesRemoved": 73,
+      "terminalPlainBlockChangedJavaFiles": 50,
+      "terminalPlainBlockSourceLinesBefore": 78689,
+      "terminalPlainBlockSourceLinesAfter": 78441,
+      "terminalPlainBlockExpectedRewriteTokenStreamsCheckedJavaFiles": 303,
+      "nativeTerminalPlainBlockBreakComparisons": 5376,
+      "instrumentPatchConstructorLinesBefore": 492,
+      "instrumentPatchConstructorLinesAfter": 468,
+      "instrumentPatchConstructorBlockLabelsBefore": 9,
+      "instrumentPatchConstructorBlockLabelsAfter": 1
+    },
+    "sourceChange": {
+      "before": {
+        "source": {
+          "repository": "Kreijstal/funorb-decompiled",
+          "commit": "d290b8609553a0785782aab7968653ae68a5ac76",
+          "subdirectory": "games/geoblox"
+        },
+        "generators": {
+          "dekoblokoWork": {
+            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
+            "trackedClean": true
+          },
+          "javaTools": {
+            "commit": "4c1b05352b59d68fd556df1ce2072ad5d57eefbd",
+            "trackedClean": true,
+            "sourceArchive": {
+              "sha256": "3eaabc8a6f5bc8030d2b8c6f11d02f4947a619c107811f134714ea78220754a4",
+              "reproduce": "git archive --format=tar 4c1b05352b59d68fd556df1ce2072ad5d57eefbd | sha256sum",
+              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
+            }
+          }
+        },
+        "inputTreeSha256": "9b2813de69324920bb4493adc25afb63eb3100219fbcd4c2a483de5e4600b9df"
+      },
+      "after": {
+        "source": {
+          "repository": "Kreijstal/funorb-decompiled",
+          "commit": "b77f32b2bb60c74dc8ab1ec52d603089965ae79c",
+          "subdirectory": "games/geoblox"
+        },
+        "generators": {
+          "dekoblokoWork": {
+            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
+            "trackedClean": true
+          },
+          "javaTools": {
+            "commit": "d63d66ce9426ee8b704b348b4e8b552c2fb160a5",
+            "trackedClean": true,
+            "sourceArchive": {
+              "sha256": "0f8129c561be1e7fa6de7e62fe5a29196614ad308dcaa4b10b7e9ca94be486c1",
+              "reproduce": "git archive --format=tar d63d66ce9426ee8b704b348b4e8b552c2fb160a5 | sha256sum",
+              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
+            }
+          }
+        },
+        "inputTreeSha256": "1ab9cf8e1c01efc41dac59ad83e327a714d52cfb870524a893aebd71f5fd2d78"
+      },
+      "reason": "Pass89 removes102 terminal breaks to plain blocks and73 unused labels/braces across50 files, saving248 lines. Only final block statements, if branches and plain labels can lie between a break and its destination. Enclosing cleanup remains; intermediate loops/switches/protected regions refuse rewriting. No predicate, effect or scope moves. All ordered bindings/ordinals and7015 complete naming objects remain."
     }
   }
 }

@@ -121,16 +121,13 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
                   if (bodyReadLengthOrHeaderXorIndexOrArchiveId > availableBytes) {
                     bodyReadLengthOrHeaderXorIndexOrArchiveId = availableBytes;
                   }
-                  L12: {
-                    this.socket.readFully(this.currentResponseRequest.responseBuffer.bytes, (byte) -97, this.currentResponseRequest.responseBuffer.position, bodyReadLengthOrHeaderXorIndexOrArchiveId);
-                    if (this.responseXorKey != 0) {
-                      bodyXorByteIndex = 0;
-                      bodyXorStartSnapshotOrGroupId = bodyXorByteIndex;
-                      while (bodyReadLengthOrHeaderXorIndexOrArchiveId > bodyXorByteIndex) {
-                        this.currentResponseRequest.responseBuffer.bytes[this.currentResponseRequest.responseBuffer.position + bodyXorByteIndex] = (byte)h.xorInt((int) this.currentResponseRequest.responseBuffer.bytes[this.currentResponseRequest.responseBuffer.position + bodyXorByteIndex], (int) this.responseXorKey);
-                        bodyXorByteIndex++;
-                      }
-                      break L12;
+                  this.socket.readFully(this.currentResponseRequest.responseBuffer.bytes, (byte) -97, this.currentResponseRequest.responseBuffer.position, bodyReadLengthOrHeaderXorIndexOrArchiveId);
+                  if (this.responseXorKey != 0) {
+                    bodyXorByteIndex = 0;
+                    bodyXorStartSnapshotOrGroupId = bodyXorByteIndex;
+                    while (bodyReadLengthOrHeaderXorIndexOrArchiveId > bodyXorByteIndex) {
+                      this.currentResponseRequest.responseBuffer.bytes[this.currentResponseRequest.responseBuffer.position + bodyXorByteIndex] = (byte)h.xorInt((int) this.currentResponseRequest.responseBuffer.bytes[this.currentResponseRequest.responseBuffer.position + bodyXorByteIndex], (int) this.responseXorKey);
+                      bodyXorByteIndex++;
                     }
                   }
                   this.currentResponseRequest.blockPosition = this.currentResponseRequest.blockPosition + bodyReadLengthOrHeaderXorIndexOrArchiveId;
@@ -149,13 +146,10 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
                   if (responseLimitOrHeaderReadLength > availableBytes) {
                     responseLimitOrHeaderReadLength = availableBytes;
                   }
-                  L15: {
-                    this.socket.readFully(this.responseHeaderBuffer.bytes, (byte) -97, this.responseHeaderBuffer.position, responseLimitOrHeaderReadLength);
-                    if (this.responseXorKey != 0) {
-                      for (bodyReadLengthOrHeaderXorIndexOrArchiveId = 0; bodyReadLengthOrHeaderXorIndexOrArchiveId < responseLimitOrHeaderReadLength; bodyReadLengthOrHeaderXorIndexOrArchiveId++) {
-                        this.responseHeaderBuffer.bytes[this.responseHeaderBuffer.position + bodyReadLengthOrHeaderXorIndexOrArchiveId] = (byte)h.xorInt((int) this.responseHeaderBuffer.bytes[this.responseHeaderBuffer.position + bodyReadLengthOrHeaderXorIndexOrArchiveId], (int) this.responseXorKey);
-                      }
-                      break L15;
+                  this.socket.readFully(this.responseHeaderBuffer.bytes, (byte) -97, this.responseHeaderBuffer.position, responseLimitOrHeaderReadLength);
+                  if (this.responseXorKey != 0) {
+                    for (bodyReadLengthOrHeaderXorIndexOrArchiveId = 0; bodyReadLengthOrHeaderXorIndexOrArchiveId < responseLimitOrHeaderReadLength; bodyReadLengthOrHeaderXorIndexOrArchiveId++) {
+                      this.responseHeaderBuffer.bytes[this.responseHeaderBuffer.position + bodyReadLengthOrHeaderXorIndexOrArchiveId] = (byte)h.xorInt((int) this.responseHeaderBuffer.bytes[this.responseHeaderBuffer.position + bodyReadLengthOrHeaderXorIndexOrArchiveId], (int) this.responseXorKey);
                     }
                   }
                   this.responseHeaderBuffer.position = this.responseHeaderBuffer.position + responseLimitOrHeaderReadLength;
@@ -189,7 +183,6 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
                           }
                           matchedRequest = (NetworkArchiveRequest) ((Object) this.sentPriorityRequests.nextForIteration(72));
                         }
-                        break L18;
                       }
                       if (matchedRequest == null) {
                         throw new IOException();

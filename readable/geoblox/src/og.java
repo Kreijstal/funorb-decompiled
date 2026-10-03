@@ -19,32 +19,29 @@ final class og extends DualLinkNode {
         String var6;
         String var7;
         String var8;
-        L0: {
-          var5 = Geoblox.field_C;
-          var6 = "(" + ad.field_o + " " + dc.field_b + " " + kg.field_n + ") " + ScorePopup.field_l;
-          var1 = var6;
-          if (0 < p.field_k) {
-            var1 = var6 + ":";
-            for (var2 = 0; var2 < p.field_k; var2++) {
-              var7 = var1 + ' ';
-              var1 = var7;
-              var3 = 255 & eh.field_d.bytes[var2];
-              var4 = var3 >> 4;
-              var3 = var3 & 15;
-              if (var4 >= 10) {
-                var4 += 55;
-              } else {
-                var4 += 48;
-              }
-              if (var3 < 10) {
-                var3 += 48;
-              } else {
-                var3 += 55;
-              }
-              var8 = var7 + (char)var4;
-              var1 = var8 + (char)var3;
+        var5 = Geoblox.field_C;
+        var6 = "(" + ad.field_o + " " + dc.field_b + " " + kg.field_n + ") " + ScorePopup.field_l;
+        var1 = var6;
+        if (0 < p.field_k) {
+          var1 = var6 + ":";
+          for (var2 = 0; var2 < p.field_k; var2++) {
+            var7 = var1 + ' ';
+            var1 = var7;
+            var3 = 255 & eh.field_d.bytes[var2];
+            var4 = var3 >> 4;
+            var3 = var3 & 15;
+            if (var4 >= 10) {
+              var4 += 55;
+            } else {
+              var4 += 48;
             }
-            break L0;
+            if (var3 < 10) {
+              var3 += 48;
+            } else {
+              var3 += 55;
+            }
+            var8 = var7 + (char)var4;
+            var1 = var8 + (char)var3;
           }
         }
         if (param0 == 55) {
@@ -86,17 +83,14 @@ final class og extends DualLinkNode {
                 this.field_s = new int[var4_int][];
                 this.field_o = new int[var4_int];
                 for (var5 = 0; var4_int > var5; var5++) {
-                  L2: {
-                    var6 = param1.readUnsignedShortBE(true);
-                    var7 = b.a(false, var6);
-                    if (var7 != null) {
-                      this.field_o[var5] = var6;
-                      array$0 = new int[var7.field_a];
-                      this.field_s[var5] = array$0;
-                      for (var8 = 0; var7.field_a > var8; var8++) {
-                        this.field_s[var5][var8] = param1.readUnsignedShortBE(true);
-                      }
-                      break L2;
+                  var6 = param1.readUnsignedShortBE(true);
+                  var7 = b.a(false, var6);
+                  if (var7 != null) {
+                    this.field_o[var5] = var6;
+                    array$0 = new int[var7.field_a];
+                    this.field_s[var5] = array$0;
+                    for (var8 = 0; var7.field_a > var8; var8++) {
+                      this.field_s[var5][var8] = param1.readUnsignedShortBE(true);
                     }
                   }
                 }

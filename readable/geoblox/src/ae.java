@@ -97,18 +97,15 @@ final class ae {
               }
               var6 = this.field_d[var6];
             }
-            L5: {
-              if (var6 >= this.field_d.length) {
-                var9 = new int[this.field_d.length * 2];
-                var11 = 0;
-                var10 = var11;
-                while (var11 < this.field_d.length) {
-                  var9[var11] = this.field_d[var11];
-                  var11++;
-                }
-                this.field_d = var9;
-                break L5;
+            if (var6 >= this.field_d.length) {
+              var9 = new int[this.field_d.length * 2];
+              var11 = 0;
+              var10 = var11;
+              while (var11 < this.field_d.length) {
+                var9[var11] = this.field_d[var11];
+                var11++;
               }
+              this.field_d = var9;
             }
             var8 = var8 >>> 1;
           }
@@ -191,7 +188,6 @@ final class ae {
             this.field_a[var14] = MusicDecoder.readBits(5) + 1;
             var14++;
           }
-          break L1;
         }
         L7: {
           this.c();
@@ -242,7 +238,6 @@ final class ae {
                 var10++;
               }
             }
-            break L7;
           }
         }
     }

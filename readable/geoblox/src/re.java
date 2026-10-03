@@ -64,7 +64,6 @@ final class re extends IntrusiveNode {
                 }
                 kj.heldInternalKeys[keyStateChangeOrResetIndex] = true;
               }
-              break L2;
             }
             pc.keyboardEventFrameEndIndex = BufferedSocket.keyEventWriteIndex;
           }

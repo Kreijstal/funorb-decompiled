@@ -104,29 +104,26 @@ final class MusicDecoder extends IntrusiveNode {
               (sampleBudget[0] <= 0)) {
             return null;
           }
-          L4: {
-            decodedSamples = this.decodePacket(this.packetCursor);
-            if (decodedSamples != null) {
-              writePosition = this.pcmWriteCursor;
-              samplesToWrite = decodedSamples.length;
-              if (samplesToWrite > this.sampleCount - writePosition) {
-                samplesToWrite = this.sampleCount - writePosition;
-              }
-              for (sampleIndex = 0; sampleIndex < samplesToWrite; sampleIndex++) {
-                unsignedPcmSample = (int)(128.0f + decodedSamples[sampleIndex] * 128.0f);
-                if ((unsignedPcmSample & -256) != 0) {
-                  unsignedPcmSample = ~unsignedPcmSample >> 31;
-                }
-                incrementValue$0 = writePosition;
-                writePosition++;
-                this.pcmBytes[incrementValue$0] = (byte)(unsignedPcmSample - 128);
-              }
-              if (sampleBudget != null) {
-                sampleBudget[0] = sampleBudget[0] - (writePosition - this.pcmWriteCursor);
-              }
-              this.pcmWriteCursor = writePosition;
-              break L4;
+          decodedSamples = this.decodePacket(this.packetCursor);
+          if (decodedSamples != null) {
+            writePosition = this.pcmWriteCursor;
+            samplesToWrite = decodedSamples.length;
+            if (samplesToWrite > this.sampleCount - writePosition) {
+              samplesToWrite = this.sampleCount - writePosition;
             }
+            for (sampleIndex = 0; sampleIndex < samplesToWrite; sampleIndex++) {
+              unsignedPcmSample = (int)(128.0f + decodedSamples[sampleIndex] * 128.0f);
+              if ((unsignedPcmSample & -256) != 0) {
+                unsignedPcmSample = ~unsignedPcmSample >> 31;
+              }
+              incrementValue$0 = writePosition;
+              writePosition++;
+              this.pcmBytes[incrementValue$0] = (byte)(unsignedPcmSample - 128);
+            }
+            if (sampleBudget != null) {
+              sampleBudget[0] = sampleBudget[0] - (writePosition - this.pcmWriteCursor);
+            }
+            this.pcmWriteCursor = writePosition;
           }
           this.packetCursor = this.packetCursor + 1;
         }
@@ -686,29 +683,23 @@ final class MusicDecoder extends IntrusiveNode {
             break L11;
           }
         }
-        L35: {
-          var17 = null;
-          if (this.previousBlockSize > 0) {
-            L36: {
-              var18_int = this.previousBlockSize + var4 >> 2;
-              var50 = new float[var18_int];
-              var46 = var50;
-              var40 = var46;
-              var17 = var40;
-              if (!this.field_i) {
-                for (var19 = 0; var19 < this.field_m; var19++) {
-                  var20 = (this.previousBlockSize >> 1) + var19;
-                  var40[var19] = var40[var19] + this.previousBlock[var20];
-                }
-                break L36;
-              }
+        var17 = null;
+        if (this.previousBlockSize > 0) {
+          var18_int = this.previousBlockSize + var4 >> 2;
+          var50 = new float[var18_int];
+          var46 = var50;
+          var40 = var46;
+          var17 = var40;
+          if (!this.field_i) {
+            for (var19 = 0; var19 < this.field_m; var19++) {
+              var20 = (this.previousBlockSize >> 1) + var19;
+              var40[var19] = var40[var19] + this.previousBlock[var20];
             }
-            if (var15 == 0) {
-              for (var19 = var8; var19 < var4 >> 1; var19++) {
-                var20 = var50.length - (var4 >> 1) + var19;
-                var40[var20] = var40[var20] + workBlock[var19];
-              }
-              break L35;
+          }
+          if (var15 == 0) {
+            for (var19 = var8; var19 < var4 >> 1; var19++) {
+              var20 = var50.length - (var4 >> 1) + var19;
+              var40[var20] = var40[var20] + workBlock[var19];
             }
           }
         }

@@ -154,23 +154,20 @@ final class BufferedSocket implements Runnable {
           }
           enqueueMonitor = this;
           synchronized (enqueueMonitor) {
-            L1: {
-              for (sourceIndex = 0; length > sourceIndex; sourceIndex++) {
-                this.writeBuffer[this.writeInsertIndex] = source[sourceOffset + sourceIndex];
-                this.writeInsertIndex = (this.writeInsertIndex + 1) % this.bufferCapacity;
-                if (this.writeInsertIndex == (this.bufferCapacity + (this.writeReadIndex - 100)) % this.bufferCapacity) {
-                  throw new IOException();
-                }
+            for (sourceIndex = 0; length > sourceIndex; sourceIndex++) {
+              this.writeBuffer[this.writeInsertIndex] = source[sourceOffset + sourceIndex];
+              this.writeInsertIndex = (this.writeInsertIndex + 1) % this.bufferCapacity;
+              if (this.writeInsertIndex == (this.bufferCapacity + (this.writeReadIndex - 100)) % this.bufferCapacity) {
+                throw new IOException();
               }
-              if (guard != 100) {
-                this.outputStream = (OutputStream) null;
-              }
-              if (null == this.writerTask) {
-                this.writerTask = this.taskDispatcher.startThread((Runnable) (this), 0, 3);
-              }
-              this.notifyAll();
-              break L1;
             }
+            if (guard != 100) {
+              this.outputStream = (OutputStream) null;
+            }
+            if (null == this.writerTask) {
+              this.writerTask = this.taskDispatcher.startThread((Runnable) (this), 0, 3);
+            }
+            this.notifyAll();
           }
           return;
         } catch (java.lang.RuntimeException enqueueRuntimeFailure) {

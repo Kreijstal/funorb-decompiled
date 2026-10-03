@@ -418,7 +418,6 @@ abstract class oe extends dd {
                 }
               }
             }
-            break L3;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -485,29 +484,26 @@ abstract class oe extends dd {
               }
             }
           }
-          L6: {
-            if (20 >= var7) {
-              var12 = var11;
-              var11 -= 21;
-              for (var13 = 0; var13 <= 20; var13++) {
-                var14 = (-var7 + 20) * (-var7 + 20) + var13 * var13;
-                if (var14 <= 462) {
-                  if (var14 < 420) {
-                    var12 = var11 + 1;
-                    var11++;
-                    continue;
-                  }
-                  var15 = var9 * (462 - var14) / 42;
-                  var15 = var15 | (var15 << 8 | var15 << 16);
-                  SoftwareRasterizer.framebuffer[var11 + param0 + SoftwareRasterizer.stride * var8] = var15;
+          if (20 >= var7) {
+            var12 = var11;
+            var11 -= 21;
+            for (var13 = 0; var13 <= 20; var13++) {
+              var14 = (-var7 + 20) * (-var7 + 20) + var13 * var13;
+              if (var14 <= 462) {
+                if (var14 < 420) {
+                  var12 = var11 + 1;
                   var11++;
                   continue;
                 }
-                break;
+                var15 = var9 * (462 - var14) / 42;
+                var15 = var15 | (var15 << 8 | var15 << 16);
+                SoftwareRasterizer.framebuffer[var11 + param0 + SoftwareRasterizer.stride * var8] = var15;
+                var11++;
+                continue;
               }
-              var11 = var12;
-              break L6;
+              break;
             }
+            var11 = var12;
           }
           var9 = var9 | (var9 << 16 | var9 << 8);
           SoftwareRasterizer.drawHorizontalLine(var10 + param0, var8, var11 - var10, var9);

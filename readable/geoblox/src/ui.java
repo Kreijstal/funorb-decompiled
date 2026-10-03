@@ -45,16 +45,13 @@ final class ui {
         for (var8 = 0; var8 < 8; var8++) {
           var9 = 0;
           L2: while (var9 < var6) {
-            L3: {
-              if (var8 == 0) {
-                var10 = MusicDecoder.field_u[this.field_a].b();
-                for (var11 = var4 - 1; var11 >= 0; var11--) {
-                  if (var9 + var11 < var6) {
-                    var7[var9 + var11] = var10 % this.field_e;
-                  }
-                  var10 = var10 / this.field_e;
+            if (var8 == 0) {
+              var10 = MusicDecoder.field_u[this.field_a].b();
+              for (var11 = var4 - 1; var11 >= 0; var11--) {
+                if (var9 + var11 < var6) {
+                  var7[var9 + var11] = var10 % this.field_e;
                 }
-                break L3;
+                var10 = var10 / this.field_e;
               }
             }
             var22 = var19;
@@ -84,7 +81,6 @@ final class ui {
                       param0[var13 + var16 + var18 * var15] = param0[var13 + var16 + var18 * var15] + var27[var18];
                     }
                   }
-                  break L7;
                 }
               }
               var9++;

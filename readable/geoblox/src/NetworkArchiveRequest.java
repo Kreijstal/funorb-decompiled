@@ -181,7 +181,6 @@ final class NetworkArchiveRequest extends ArchiveRequest {
                   leftXQ16 = leftXQ16 + leftXStepQ16;
                   rightXQ16 = rightXQ16 + rightXStepQ16;
                 }
-                break L6;
               }
               edgeSwapOrRowBaseOrLowerRowsOrGuardRemainder = -middleY + bottomY;
               if (edgeSwapOrRowBaseOrLowerRowsOrGuardRemainder == 0) {

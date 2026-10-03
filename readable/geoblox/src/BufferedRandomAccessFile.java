@@ -161,23 +161,20 @@ final class BufferedRandomAccessFile {
               }
             }
             if (-1L != this.writeBufferStart) {
-              L9: {
-                if (~this.writeBufferStart < ~this.position) {
-                  zeroFillComparisonMinusOne = -1;
-                  complementedRemainingLength = ~remainingLength;
-                  if (zeroFillComparisonMinusOne > complementedRemainingLength) {
-                    readCountOrZeroFillEnd = destinationOffset + (int)(-this.position + this.writeBufferStart);
-                    if (destinationOffset + remainingLength < readCountOrZeroFillEnd) {
-                      readCountOrZeroFillEnd = destinationOffset + remainingLength;
-                    }
-                    while (readCountOrZeroFillEnd > destinationOffset) {
-                      remainingLength--;
-                      zeroFillDestinationIndex = destinationOffset;
-                      destinationOffset++;
-                      destination[zeroFillDestinationIndex] = (byte) 0;
-                      this.position = this.position + 1L;
-                    }
-                    break L9;
+              if (~this.writeBufferStart < ~this.position) {
+                zeroFillComparisonMinusOne = -1;
+                complementedRemainingLength = ~remainingLength;
+                if (zeroFillComparisonMinusOne > complementedRemainingLength) {
+                  readCountOrZeroFillEnd = destinationOffset + (int)(-this.position + this.writeBufferStart);
+                  if (destinationOffset + remainingLength < readCountOrZeroFillEnd) {
+                    readCountOrZeroFillEnd = destinationOffset + remainingLength;
+                  }
+                  while (readCountOrZeroFillEnd > destinationOffset) {
+                    remainingLength--;
+                    zeroFillDestinationIndex = destinationOffset;
+                    destinationOffset++;
+                    destination[zeroFillDestinationIndex] = (byte) 0;
+                    this.position = this.position + 1L;
                   }
                 }
               }

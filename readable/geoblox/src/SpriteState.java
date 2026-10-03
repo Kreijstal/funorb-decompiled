@@ -402,25 +402,22 @@ abstract class SpriteState extends DualLinkNode {
         clientControlFlowGuard = Geoblox.field_C;
         try {
           L0: {
-            L1: {
-              if (sourceOffset > 0) {
-                digestInput = new byte[length];
-                copiedByteIndex = 0;
-                while (~length < ~copiedByteIndex) {
-                  digestInput[copiedByteIndex] = source[sourceOffset + copiedByteIndex];
-                  copiedByteIndex++;
-                  if (clientControlFlowGuard != 0) {
-                    break L0;
-                  }
-                  if (clientControlFlowGuard == 0) {
-                    continue;
-                  }
-                  break;
-                }
-                if (clientControlFlowGuard == 0) {
+            if (sourceOffset > 0) {
+              digestInput = new byte[length];
+              copiedByteIndex = 0;
+              while (~length < ~copiedByteIndex) {
+                digestInput[copiedByteIndex] = source[sourceOffset + copiedByteIndex];
+                copiedByteIndex++;
+                if (clientControlFlowGuard != 0) {
                   break L0;
                 }
-                break L1;
+                if (clientControlFlowGuard == 0) {
+                  continue;
+                }
+                break;
+              }
+              if (clientControlFlowGuard == 0) {
+                break L0;
               }
             }
             digestInput = source;
@@ -907,7 +904,6 @@ abstract class SpriteState extends DualLinkNode {
                         break;
                       }
                       decompiledRegionSelector0 = 0;
-                      break L7;
                     }
                   }
                   if (!(decompiledRegionSelector0 == 0)) {

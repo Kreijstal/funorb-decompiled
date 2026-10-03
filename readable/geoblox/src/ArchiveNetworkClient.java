@@ -161,7 +161,6 @@ abstract class ArchiveNetworkClient {
             for (var7 = 0; var4_int > var7; var7++) {
               param0[var7] = (short)(var6 + param3.readBits((byte) -17, var5));
             }
-            break L2;
           }
           stackIn_16_0 = (short[]) (param0);
           return stackIn_16_0;

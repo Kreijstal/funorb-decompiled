@@ -214,19 +214,16 @@ final class WhirlpoolHash {
         int unusedClientGuardSnapshot = 0;
         unusedClientGuardSnapshot = Geoblox.field_C;
         try {
-          L0: {
-            this.blockBuffer[this.bufferBytePosition] = (byte)lb.orInt((int) this.blockBuffer[this.bufferBytePosition], 128 >>> cd.andInt(this.bufferedBitCount, 7));
-            this.bufferBytePosition = this.bufferBytePosition + 1;
-            if (this.bufferBytePosition > 32) {
-              while (this.bufferBytePosition < 64) {
-                extraBlockPaddingIndex = this.bufferBytePosition;
-                this.bufferBytePosition = this.bufferBytePosition + 1;
-                this.blockBuffer[extraBlockPaddingIndex] = (byte) 0;
-              }
-              this.processBlock(116);
-              this.bufferBytePosition = 0;
-              break L0;
+          this.blockBuffer[this.bufferBytePosition] = (byte)lb.orInt((int) this.blockBuffer[this.bufferBytePosition], 128 >>> cd.andInt(this.bufferedBitCount, 7));
+          this.bufferBytePosition = this.bufferBytePosition + 1;
+          if (this.bufferBytePosition > 32) {
+            while (this.bufferBytePosition < 64) {
+              extraBlockPaddingIndex = this.bufferBytePosition;
+              this.bufferBytePosition = this.bufferBytePosition + 1;
+              this.blockBuffer[extraBlockPaddingIndex] = (byte) 0;
             }
+            this.processBlock(116);
+            this.bufferBytePosition = 0;
           }
           if (!skipResetGuard) {
             this.reset(-38);

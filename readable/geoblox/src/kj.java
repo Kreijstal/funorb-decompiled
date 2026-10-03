@@ -323,7 +323,6 @@ final class kj extends ia {
                 break L7;
               }
               var8 = 1;
-              break L7;
             }
           }
           L11: {
@@ -350,7 +349,6 @@ final class kj extends ia {
                 break L11;
               }
               var8 = 1;
-              break L11;
             }
           }
           if (var8 == 0) {
@@ -1098,25 +1096,22 @@ final class kj extends ia {
         pc var8;
         InstrumentPatch var9;
         InstrumentPatch var10;
-        L0: {
-          this.b(23327, param3, 64, param1);
-          if (0 != (2 & this.field_m[param1])) {
-            var5 = (pc) ((Object) this.field_I.field_l.lastForIteration(false));
-            while (var5 != null) {
-              if ((param1 == var5.field_t) &&
-                  (var5.field_y < 0)) {
-                this.field_j[param1][var5.field_D] = null;
-                this.field_j[param1][param3] = var5;
-                var6_int = (var5.field_n * var5.field_s >> 12) + var5.field_E;
-                var5.field_E = var5.field_E + (param3 - var5.field_D << 8);
-                var5.field_D = param3;
-                var5.field_n = var6_int - var5.field_E;
-                var5.field_s = 4096;
-                return;
-              }
-              var5 = (pc) ((Object) this.field_I.field_l.previousForIteration(~param0));
+        this.b(23327, param3, 64, param1);
+        if (0 != (2 & this.field_m[param1])) {
+          var5 = (pc) ((Object) this.field_I.field_l.lastForIteration(false));
+          while (var5 != null) {
+            if ((param1 == var5.field_t) &&
+                (var5.field_y < 0)) {
+              this.field_j[param1][var5.field_D] = null;
+              this.field_j[param1][param3] = var5;
+              var6_int = (var5.field_n * var5.field_s >> 12) + var5.field_E;
+              var5.field_E = var5.field_E + (param3 - var5.field_D << 8);
+              var5.field_D = param3;
+              var5.field_n = var6_int - var5.field_E;
+              var5.field_s = 4096;
+              return;
             }
-            break L0;
+            var5 = (pc) ((Object) this.field_I.field_l.previousForIteration(~param0));
           }
         }
         var9 = (InstrumentPatch) ((Object) this.field_q.a((long)this.field_S[param1], (byte) -105));

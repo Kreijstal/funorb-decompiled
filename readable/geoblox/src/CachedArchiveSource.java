@@ -193,17 +193,14 @@ final class CachedArchiveSource extends ArchiveSource {
               if (payloadCrc32 != this.index.groupCrc32[groupId]) {
                 throw new RuntimeException();
               }
-              L12: {
-                if ((this.index.groupWhirlpoolDigests != null) &&
-                    (null != this.index.groupWhirlpoolDigests[groupId])) {
-                  expectedDiskGroupDigest = this.index.groupWhirlpoolDigests[groupId];
-                  computedDiskGroupDigest = SpriteState.computeWhirlpoolDigest(-2 + groupBytesForPayloadChecks.length, 0, groupBytesForPayloadChecks, 8);
-                  for (digestByteIndex = 0; digestByteIndex < 64; digestByteIndex++) {
-                    if (~expectedDiskGroupDigest[digestByteIndex] != ~computedDiskGroupDigest[digestByteIndex]) {
-                      throw new RuntimeException();
-                    }
+              if ((this.index.groupWhirlpoolDigests != null) &&
+                  (null != this.index.groupWhirlpoolDigests[groupId])) {
+                expectedDiskGroupDigest = this.index.groupWhirlpoolDigests[groupId];
+                computedDiskGroupDigest = SpriteState.computeWhirlpoolDigest(-2 + groupBytesForPayloadChecks.length, 0, groupBytesForPayloadChecks, 8);
+                for (digestByteIndex = 0; digestByteIndex < 64; digestByteIndex++) {
+                  if (~expectedDiskGroupDigest[digestByteIndex] != ~computedDiskGroupDigest[digestByteIndex]) {
+                    throw new RuntimeException();
                   }
-                  break L12;
                 }
               }
               storedGroupRevision = (groupBytes[-2 + groupBytesForPayloadChecks.length] << 8 & 65280) + (groupBytes[groupBytesForPayloadChecks.length - 1] & 255);
@@ -248,20 +245,17 @@ final class CachedArchiveSource extends ArchiveSource {
               if (payloadCrc32 != this.index.groupCrc32[groupId]) {
                 throw new RuntimeException();
               }
-              L6: {
-                if ((null != this.index.groupWhirlpoolDigests) &&
-                    (null != this.index.groupWhirlpoolDigests[groupId])) {
-                  expectedNetworkGroupDigest = this.index.groupWhirlpoolDigests[groupId];
-                  computedNetworkGroupDigest = SpriteState.computeWhirlpoolDigest(-2 + groupBytesForPayloadChecks.length, 0, groupBytesForPayloadChecks, 8);
-                  networkDigestByteIndex = 0;
-                  digestByteIndex = networkDigestByteIndex;
-                  while (networkDigestByteIndex < 64) {
-                    if (~computedNetworkGroupDigest[networkDigestByteIndex] != ~expectedNetworkGroupDigest[networkDigestByteIndex]) {
-                      throw new RuntimeException();
-                    }
-                    networkDigestByteIndex++;
+              if ((null != this.index.groupWhirlpoolDigests) &&
+                  (null != this.index.groupWhirlpoolDigests[groupId])) {
+                expectedNetworkGroupDigest = this.index.groupWhirlpoolDigests[groupId];
+                computedNetworkGroupDigest = SpriteState.computeWhirlpoolDigest(-2 + groupBytesForPayloadChecks.length, 0, groupBytesForPayloadChecks, 8);
+                networkDigestByteIndex = 0;
+                digestByteIndex = networkDigestByteIndex;
+                while (networkDigestByteIndex < 64) {
+                  if (~computedNetworkGroupDigest[networkDigestByteIndex] != ~expectedNetworkGroupDigest[networkDigestByteIndex]) {
+                    throw new RuntimeException();
                   }
-                  break L6;
+                  networkDigestByteIndex++;
                 }
               }
               this.networkClient.failureCount = 0;
@@ -582,7 +576,6 @@ final class CachedArchiveSource extends ArchiveSource {
                 }
                 cleanupRequest = (ArchiveRequest) ((Object) this.groupRequests.b(74));
               }
-              break L2;
             }
             this.nextRequestSweepMillis = 1000L + oa.a(methodGuard - 12482);
           }

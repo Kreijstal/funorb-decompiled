@@ -334,7 +334,6 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                             if (var5 == 0) {
                               break L1;
                             }
-                            break L4;
                           }
                         }
                       }

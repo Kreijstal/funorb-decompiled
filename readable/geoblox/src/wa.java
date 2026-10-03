@@ -213,7 +213,6 @@ final class wa {
               }
               var9 = var14;
             }
-            break L1;
           }
           var12 = param2;
           if (var5_int + var9 + var12 > SoftwareRasterizer.stride) {

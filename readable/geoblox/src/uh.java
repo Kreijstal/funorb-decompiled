@@ -138,7 +138,6 @@ final class uh extends ac {
                 break L4;
               }
               var5.facePriorities = null;
-              break L4;
             }
           }
           stackIn_28_0 = (TriangleMesh) (var5);

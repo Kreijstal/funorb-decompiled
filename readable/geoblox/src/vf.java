@@ -306,13 +306,10 @@ class vf extends hk {
                 (param0 < this.field_J.length)) {
               break L0;
             }
-            L2: {
-              var5 = new String[param0 + 1];
-              if (null != this.field_J) {
-                for (var6 = 0; var6 < this.field_J.length; var6++) {
-                  var5[var6] = this.field_J[var6];
-                }
-                break L2;
+            var5 = new String[param0 + 1];
+            if (null != this.field_J) {
+              for (var6 = 0; var6 < this.field_J.length; var6++) {
+                var5[var6] = this.field_J[var6];
               }
             }
             this.field_J = var5;

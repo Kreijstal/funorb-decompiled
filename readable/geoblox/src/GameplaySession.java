@@ -1625,38 +1625,35 @@ final class GameplaySession {
                 stackIn_11_0 = spriteColumn;
                 stackIn_11_1 = vf.spriteScratchRaster.width;
                 L5: while (true) {
-                  L6: {
-                    if (stackIn_11_0 < stackIn_11_1) {
-                      stackIn_23_0 = 0;
+                  if (stackIn_11_0 < stackIn_11_1) {
+                    stackIn_23_0 = 0;
+                    if (controlFlowGuard != 0) {
+                      break L1;
+                    }
+                    spriteRow = stackIn_23_0;
+                    while (vf.spriteScratchRaster.height > spriteRow) {
+                      stackIn_11_0 = 0;
+                      stackIn_11_1 = vf.spriteScratchRaster.pixels[vf.spriteScratchRaster.width * spriteRow + spriteColumn];
                       if (controlFlowGuard != 0) {
-                        break L1;
+                        continue L5;
                       }
-                      spriteRow = stackIn_23_0;
-                      while (vf.spriteScratchRaster.height > spriteRow) {
-                        stackIn_11_0 = 0;
-                        stackIn_11_1 = vf.spriteScratchRaster.pixels[vf.spriteScratchRaster.width * spriteRow + spriteColumn];
-                        if (controlFlowGuard != 0) {
-                          continue L5;
+                      if (stackIn_11_0 != stackIn_11_1) {
+                        pixelOffsetFromCenterX = spriteOffsetFromCenterX + spriteColumn;
+                        pixelOffsetFromCenterY = spriteRow + spriteOffsetFromCenterY;
+                        pixelRadiusSquared = pixelOffsetFromCenterX * pixelOffsetFromCenterX + pixelOffsetFromCenterY * pixelOffsetFromCenterY;
+                        if (pixelRadiusSquared > maxRadiusSquared) {
+                          maxRadiusSquared = pixelRadiusSquared;
                         }
-                        if (stackIn_11_0 != stackIn_11_1) {
-                          pixelOffsetFromCenterX = spriteOffsetFromCenterX + spriteColumn;
-                          pixelOffsetFromCenterY = spriteRow + spriteOffsetFromCenterY;
-                          pixelRadiusSquared = pixelOffsetFromCenterX * pixelOffsetFromCenterX + pixelOffsetFromCenterY * pixelOffsetFromCenterY;
-                          if (pixelRadiusSquared > maxRadiusSquared) {
-                            maxRadiusSquared = pixelRadiusSquared;
-                          }
-                        }
-                        spriteRow++;
-                        if (controlFlowGuard == 0) {
-                          continue;
-                        }
-                        break;
                       }
-                      spriteColumn++;
+                      spriteRow++;
                       if (controlFlowGuard == 0) {
-                        continue L4;
+                        continue;
                       }
-                      break L6;
+                      break;
+                    }
+                    spriteColumn++;
+                    if (controlFlowGuard == 0) {
+                      continue L4;
                     }
                   }
                   this.endingEntityRadius = (int)(0.5 + Math.sqrt((double)maxRadiusSquared));

@@ -490,155 +490,131 @@ final class InstrumentPatch extends IntrusiveNode {
           }
           this.globalVolume = 1 + patchInput.readUnsignedByte((byte) 34);
           for (envelopeIndexOrCurveKey = 0; envelopeCount > envelopeIndexOrCurveKey; envelopeIndexOrCurveKey++) {
-            L61: {
-              envelopeForValues = envelopes[envelopeIndexOrCurveKey];
-              if (null != envelopeForValues.volumeEnvelope) {
-                for (curvePairOrKeyIndex = 1; envelopeForValues.volumeEnvelope.length > curvePairOrKeyIndex; curvePairOrKeyIndex += 2) {
-                  envelopeForValues.volumeEnvelope[curvePairOrKeyIndex] = patchInput.readSignedByte((byte) 76);
-                }
-                break L61;
+            envelopeForValues = envelopes[envelopeIndexOrCurveKey];
+            if (null != envelopeForValues.volumeEnvelope) {
+              for (curvePairOrKeyIndex = 1; envelopeForValues.volumeEnvelope.length > curvePairOrKeyIndex; curvePairOrKeyIndex += 2) {
+                envelopeForValues.volumeEnvelope[curvePairOrKeyIndex] = patchInput.readSignedByte((byte) 76);
               }
             }
-            L63: {
-              if (envelopeForValues.releaseEnvelope != null) {
-                for (curvePairOrKeyIndex = 3; -2 + envelopeForValues.releaseEnvelope.length > curvePairOrKeyIndex; curvePairOrKeyIndex += 2) {
-                  envelopeForValues.releaseEnvelope[curvePairOrKeyIndex] = patchInput.readSignedByte((byte) 102);
-                }
-                break L63;
+            if (envelopeForValues.releaseEnvelope != null) {
+              for (curvePairOrKeyIndex = 3; -2 + envelopeForValues.releaseEnvelope.length > curvePairOrKeyIndex; curvePairOrKeyIndex += 2) {
+                envelopeForValues.releaseEnvelope[curvePairOrKeyIndex] = patchInput.readSignedByte((byte) 102);
               }
             }
           }
-          L23: {
-            if (null != volumeCurve) {
-              for (envelopeIndexOrCurveKey = 1; envelopeIndexOrCurveKey < volumeCurveAlias.length; envelopeIndexOrCurveKey += 2) {
-                volumeCurve[envelopeIndexOrCurveKey] = patchInput.readSignedByte((byte) 96);
-              }
-              break L23;
+          if (null != volumeCurve) {
+            for (envelopeIndexOrCurveKey = 1; envelopeIndexOrCurveKey < volumeCurveAlias.length; envelopeIndexOrCurveKey += 2) {
+              volumeCurve[envelopeIndexOrCurveKey] = patchInput.readSignedByte((byte) 96);
             }
           }
-          L25: {
-            if (panCurve != null) {
-              for (envelopeIndexOrCurveKey = 1; panCurveAlias.length > envelopeIndexOrCurveKey; envelopeIndexOrCurveKey += 2) {
-                panCurve[envelopeIndexOrCurveKey] = patchInput.readSignedByte((byte) 75);
-              }
-              break L25;
+          if (panCurve != null) {
+            for (envelopeIndexOrCurveKey = 1; panCurveAlias.length > envelopeIndexOrCurveKey; envelopeIndexOrCurveKey += 2) {
+              panCurve[envelopeIndexOrCurveKey] = patchInput.readSignedByte((byte) 75);
             }
           }
           for (envelopeIndexOrCurveKey = 0; envelopeIndexOrCurveKey < envelopeCount; envelopeIndexOrCurveKey++) {
-            L59: {
-              releaseEnvelopeForTimes = envelopes[envelopeIndexOrCurveKey];
-              if (null != releaseEnvelopeForTimes.releaseEnvelope) {
-                pitchOrCurveTimeAccumulator = 0;
-                for (curvePairOrKeyIndex = 2; curvePairOrKeyIndex < releaseEnvelopeForTimes.releaseEnvelope.length; curvePairOrKeyIndex += 2) {
-                  pitchOrCurveTimeAccumulator = patchInput.readUnsignedByte((byte) 34) + (1 + pitchOrCurveTimeAccumulator);
-                  releaseEnvelopeForTimes.releaseEnvelope[curvePairOrKeyIndex] = (byte)pitchOrCurveTimeAccumulator;
-                }
-                break L59;
+            releaseEnvelopeForTimes = envelopes[envelopeIndexOrCurveKey];
+            if (null != releaseEnvelopeForTimes.releaseEnvelope) {
+              pitchOrCurveTimeAccumulator = 0;
+              for (curvePairOrKeyIndex = 2; curvePairOrKeyIndex < releaseEnvelopeForTimes.releaseEnvelope.length; curvePairOrKeyIndex += 2) {
+                pitchOrCurveTimeAccumulator = patchInput.readUnsignedByte((byte) 34) + (1 + pitchOrCurveTimeAccumulator);
+                releaseEnvelopeForTimes.releaseEnvelope[curvePairOrKeyIndex] = (byte)pitchOrCurveTimeAccumulator;
               }
             }
           }
           for (envelopeIndexOrCurveKey = 0; envelopeCount > envelopeIndexOrCurveKey; envelopeIndexOrCurveKey++) {
-            L57: {
-              volumeEnvelopeForTimes = envelopes[envelopeIndexOrCurveKey];
-              if (null != volumeEnvelopeForTimes.volumeEnvelope) {
-                pitchOrCurveTimeAccumulator = 0;
-                for (curvePairOrKeyIndex = 2; curvePairOrKeyIndex < volumeEnvelopeForTimes.volumeEnvelope.length; curvePairOrKeyIndex += 2) {
-                  pitchOrCurveTimeAccumulator = patchInput.readUnsignedByte((byte) 34) + (1 + pitchOrCurveTimeAccumulator);
-                  volumeEnvelopeForTimes.volumeEnvelope[curvePairOrKeyIndex] = (byte)pitchOrCurveTimeAccumulator;
-                }
-                break L57;
+            volumeEnvelopeForTimes = envelopes[envelopeIndexOrCurveKey];
+            if (null != volumeEnvelopeForTimes.volumeEnvelope) {
+              pitchOrCurveTimeAccumulator = 0;
+              for (curvePairOrKeyIndex = 2; curvePairOrKeyIndex < volumeEnvelopeForTimes.volumeEnvelope.length; curvePairOrKeyIndex += 2) {
+                pitchOrCurveTimeAccumulator = patchInput.readUnsignedByte((byte) 34) + (1 + pitchOrCurveTimeAccumulator);
+                volumeEnvelopeForTimes.volumeEnvelope[curvePairOrKeyIndex] = (byte)pitchOrCurveTimeAccumulator;
               }
             }
           }
-          L29: {
-            if (null != volumeCurve) {
-              pitchOrCurveTimeAccumulator = patchInput.readUnsignedByte((byte) 34);
-              volumeCurve[0] = (byte)pitchOrCurveTimeAccumulator;
-              for (envelopeIndexOrCurveKey = 2; envelopeIndexOrCurveKey < volumeCurveAlias.length; envelopeIndexOrCurveKey += 2) {
-                pitchOrCurveTimeAccumulator = patchInput.readUnsignedByte((byte) 34) + 1 + pitchOrCurveTimeAccumulator;
-                volumeCurve[envelopeIndexOrCurveKey] = (byte)pitchOrCurveTimeAccumulator;
-              }
-              envelopeIndexOrCurveKey = volumeCurveAlias[0];
-              curveValue = volumeCurveAlias[1];
-              for (curvePairOrKeyIndex = 0; envelopeIndexOrCurveKey > curvePairOrKeyIndex; curvePairOrKeyIndex++) {
-                this.keyVolumes[curvePairOrKeyIndex] = (byte)(this.keyVolumes[curvePairOrKeyIndex] * curveValue + 32 >> 6);
-              }
-              for (curvePairOrKeyIndex = 2; volumeCurveAlias.length > curvePairOrKeyIndex; curvePairOrKeyIndex += 2) {
-                nextCurveKeyOrClampedPan = volumeCurveAlias[curvePairOrKeyIndex];
-                nextCurveValueOrClampedPan = volumeCurve[1 + curvePairOrKeyIndex];
-                interpolationNumerator = curveValue * (nextCurveKeyOrClampedPan - envelopeIndexOrCurveKey) + (-envelopeIndexOrCurveKey + nextCurveKeyOrClampedPan) / 2;
-                for (curveKeyIndexOrAlias = envelopeIndexOrCurveKey; nextCurveKeyOrClampedPan > curveKeyIndexOrAlias; curveKeyIndexOrAlias++) {
-                  interpolatedCurveValue = PacketBuffer.divideFloorWithPositiveDivisor(nextCurveKeyOrClampedPan - envelopeIndexOrCurveKey, (byte) -6, interpolationNumerator);
-                  this.keyVolumes[curveKeyIndexOrAlias] = (byte)(32 + this.keyVolumes[curveKeyIndexOrAlias] * interpolatedCurveValue >> 6);
-                  interpolationNumerator = interpolationNumerator + (nextCurveValueOrClampedPan - curveValue);
-                }
-                envelopeIndexOrCurveKey = nextCurveKeyOrClampedPan;
-                curveValue = nextCurveValueOrClampedPan;
-              }
-              for (nextCurveKeyOrClampedPan = envelopeIndexOrCurveKey; nextCurveKeyOrClampedPan < 128; nextCurveKeyOrClampedPan++) {
-                this.keyVolumes[nextCurveKeyOrClampedPan] = (byte)(32 + this.keyVolumes[nextCurveKeyOrClampedPan] * curveValue >> 6);
-              }
-              volumeCurve = null;
-              break L29;
+          if (null != volumeCurve) {
+            pitchOrCurveTimeAccumulator = patchInput.readUnsignedByte((byte) 34);
+            volumeCurve[0] = (byte)pitchOrCurveTimeAccumulator;
+            for (envelopeIndexOrCurveKey = 2; envelopeIndexOrCurveKey < volumeCurveAlias.length; envelopeIndexOrCurveKey += 2) {
+              pitchOrCurveTimeAccumulator = patchInput.readUnsignedByte((byte) 34) + 1 + pitchOrCurveTimeAccumulator;
+              volumeCurve[envelopeIndexOrCurveKey] = (byte)pitchOrCurveTimeAccumulator;
             }
+            envelopeIndexOrCurveKey = volumeCurveAlias[0];
+            curveValue = volumeCurveAlias[1];
+            for (curvePairOrKeyIndex = 0; envelopeIndexOrCurveKey > curvePairOrKeyIndex; curvePairOrKeyIndex++) {
+              this.keyVolumes[curvePairOrKeyIndex] = (byte)(this.keyVolumes[curvePairOrKeyIndex] * curveValue + 32 >> 6);
+            }
+            for (curvePairOrKeyIndex = 2; volumeCurveAlias.length > curvePairOrKeyIndex; curvePairOrKeyIndex += 2) {
+              nextCurveKeyOrClampedPan = volumeCurveAlias[curvePairOrKeyIndex];
+              nextCurveValueOrClampedPan = volumeCurve[1 + curvePairOrKeyIndex];
+              interpolationNumerator = curveValue * (nextCurveKeyOrClampedPan - envelopeIndexOrCurveKey) + (-envelopeIndexOrCurveKey + nextCurveKeyOrClampedPan) / 2;
+              for (curveKeyIndexOrAlias = envelopeIndexOrCurveKey; nextCurveKeyOrClampedPan > curveKeyIndexOrAlias; curveKeyIndexOrAlias++) {
+                interpolatedCurveValue = PacketBuffer.divideFloorWithPositiveDivisor(nextCurveKeyOrClampedPan - envelopeIndexOrCurveKey, (byte) -6, interpolationNumerator);
+                this.keyVolumes[curveKeyIndexOrAlias] = (byte)(32 + this.keyVolumes[curveKeyIndexOrAlias] * interpolatedCurveValue >> 6);
+                interpolationNumerator = interpolationNumerator + (nextCurveValueOrClampedPan - curveValue);
+              }
+              envelopeIndexOrCurveKey = nextCurveKeyOrClampedPan;
+              curveValue = nextCurveValueOrClampedPan;
+            }
+            for (nextCurveKeyOrClampedPan = envelopeIndexOrCurveKey; nextCurveKeyOrClampedPan < 128; nextCurveKeyOrClampedPan++) {
+              this.keyVolumes[nextCurveKeyOrClampedPan] = (byte)(32 + this.keyVolumes[nextCurveKeyOrClampedPan] * curveValue >> 6);
+            }
+            volumeCurve = null;
           }
-          L35: {
-            if (panCurve != null) {
-              pitchOrCurveTimeAccumulator = patchInput.readUnsignedByte((byte) 34);
-              panCurve[0] = (byte)pitchOrCurveTimeAccumulator;
-              for (envelopeIndexOrCurveKey = 2; envelopeIndexOrCurveKey < panCurveAlias.length; envelopeIndexOrCurveKey += 2) {
-                pitchOrCurveTimeAccumulator = patchInput.readUnsignedByte((byte) 34) + 1 + pitchOrCurveTimeAccumulator;
-                panCurve[envelopeIndexOrCurveKey] = (byte)pitchOrCurveTimeAccumulator;
-              }
-              envelopeIndexOrCurveKey = panCurveAlias[0];
-              curveValue = panCurveAlias[1] << 1;
-              for (curvePairOrKeyIndex = 0; envelopeIndexOrCurveKey > curvePairOrKeyIndex; curvePairOrKeyIndex++) {
-                nextCurveKeyOrClampedPan = (255 & this.keyPans[curvePairOrKeyIndex]) + curveValue;
-                if (nextCurveKeyOrClampedPan < 0) {
-                  nextCurveKeyOrClampedPan = 0;
-                }
-                if (nextCurveKeyOrClampedPan > 128) {
-                  nextCurveKeyOrClampedPan = 128;
-                }
-                this.keyPans[curvePairOrKeyIndex] = (byte)nextCurveKeyOrClampedPan;
-              }
-              curvePairOrKeyIndex = 2;
-              while (curvePairOrKeyIndex < panCurveAlias.length) {
-                nextCurveKeyOrClampedPan = panCurveAlias[curvePairOrKeyIndex];
-                nextCurveValueOrClampedPan = panCurve[curvePairOrKeyIndex + 1] << 1;
-                interpolationNumerator = (nextCurveKeyOrClampedPan - envelopeIndexOrCurveKey) * curveValue + (-envelopeIndexOrCurveKey + nextCurveKeyOrClampedPan) / 2;
-                panCurveKeyIndex = envelopeIndexOrCurveKey;
-                curveKeyIndexOrAlias = panCurveKeyIndex;
-                while (nextCurveKeyOrClampedPan > panCurveKeyIndex) {
-                  interpolatedCurveValue = PacketBuffer.divideFloorWithPositiveDivisor(nextCurveKeyOrClampedPan - envelopeIndexOrCurveKey, (byte) -6, interpolationNumerator);
-                  clampedPan = (this.keyPans[panCurveKeyIndex] & 255) + interpolatedCurveValue;
-                  if (clampedPan < 0) {
-                    clampedPan = 0;
-                  }
-                  if (clampedPan > 128) {
-                    clampedPan = 128;
-                  }
-                  this.keyPans[panCurveKeyIndex] = (byte)clampedPan;
-                  interpolationNumerator = interpolationNumerator + (nextCurveValueOrClampedPan - curveValue);
-                  panCurveKeyIndex++;
-                }
-                curvePairOrKeyIndex += 2;
-                curveValue = nextCurveValueOrClampedPan;
-                envelopeIndexOrCurveKey = nextCurveKeyOrClampedPan;
-              }
-              for (nextCurveKeyOrClampedPan = envelopeIndexOrCurveKey; nextCurveKeyOrClampedPan < 128; nextCurveKeyOrClampedPan++) {
-                nextCurveValueOrClampedPan = (this.keyPans[nextCurveKeyOrClampedPan] & 255) + curveValue;
-                if (nextCurveValueOrClampedPan < 0) {
-                  nextCurveValueOrClampedPan = 0;
-                }
-                if (nextCurveValueOrClampedPan > 128) {
-                  nextCurveValueOrClampedPan = 128;
-                }
-                this.keyPans[nextCurveKeyOrClampedPan] = (byte)nextCurveValueOrClampedPan;
-              }
-              panCurve = null;
-              break L35;
+          if (panCurve != null) {
+            pitchOrCurveTimeAccumulator = patchInput.readUnsignedByte((byte) 34);
+            panCurve[0] = (byte)pitchOrCurveTimeAccumulator;
+            for (envelopeIndexOrCurveKey = 2; envelopeIndexOrCurveKey < panCurveAlias.length; envelopeIndexOrCurveKey += 2) {
+              pitchOrCurveTimeAccumulator = patchInput.readUnsignedByte((byte) 34) + 1 + pitchOrCurveTimeAccumulator;
+              panCurve[envelopeIndexOrCurveKey] = (byte)pitchOrCurveTimeAccumulator;
             }
+            envelopeIndexOrCurveKey = panCurveAlias[0];
+            curveValue = panCurveAlias[1] << 1;
+            for (curvePairOrKeyIndex = 0; envelopeIndexOrCurveKey > curvePairOrKeyIndex; curvePairOrKeyIndex++) {
+              nextCurveKeyOrClampedPan = (255 & this.keyPans[curvePairOrKeyIndex]) + curveValue;
+              if (nextCurveKeyOrClampedPan < 0) {
+                nextCurveKeyOrClampedPan = 0;
+              }
+              if (nextCurveKeyOrClampedPan > 128) {
+                nextCurveKeyOrClampedPan = 128;
+              }
+              this.keyPans[curvePairOrKeyIndex] = (byte)nextCurveKeyOrClampedPan;
+            }
+            curvePairOrKeyIndex = 2;
+            while (curvePairOrKeyIndex < panCurveAlias.length) {
+              nextCurveKeyOrClampedPan = panCurveAlias[curvePairOrKeyIndex];
+              nextCurveValueOrClampedPan = panCurve[curvePairOrKeyIndex + 1] << 1;
+              interpolationNumerator = (nextCurveKeyOrClampedPan - envelopeIndexOrCurveKey) * curveValue + (-envelopeIndexOrCurveKey + nextCurveKeyOrClampedPan) / 2;
+              panCurveKeyIndex = envelopeIndexOrCurveKey;
+              curveKeyIndexOrAlias = panCurveKeyIndex;
+              while (nextCurveKeyOrClampedPan > panCurveKeyIndex) {
+                interpolatedCurveValue = PacketBuffer.divideFloorWithPositiveDivisor(nextCurveKeyOrClampedPan - envelopeIndexOrCurveKey, (byte) -6, interpolationNumerator);
+                clampedPan = (this.keyPans[panCurveKeyIndex] & 255) + interpolatedCurveValue;
+                if (clampedPan < 0) {
+                  clampedPan = 0;
+                }
+                if (clampedPan > 128) {
+                  clampedPan = 128;
+                }
+                this.keyPans[panCurveKeyIndex] = (byte)clampedPan;
+                interpolationNumerator = interpolationNumerator + (nextCurveValueOrClampedPan - curveValue);
+                panCurveKeyIndex++;
+              }
+              curvePairOrKeyIndex += 2;
+              curveValue = nextCurveValueOrClampedPan;
+              envelopeIndexOrCurveKey = nextCurveKeyOrClampedPan;
+            }
+            for (nextCurveKeyOrClampedPan = envelopeIndexOrCurveKey; nextCurveKeyOrClampedPan < 128; nextCurveKeyOrClampedPan++) {
+              nextCurveValueOrClampedPan = (this.keyPans[nextCurveKeyOrClampedPan] & 255) + curveValue;
+              if (nextCurveValueOrClampedPan < 0) {
+                nextCurveValueOrClampedPan = 0;
+              }
+              if (nextCurveValueOrClampedPan > 128) {
+                nextCurveValueOrClampedPan = 128;
+              }
+              this.keyPans[nextCurveKeyOrClampedPan] = (byte)nextCurveValueOrClampedPan;
+            }
+            panCurve = null;
           }
           for (envelopeIndexOrCurveKey = 0; envelopeCount > envelopeIndexOrCurveKey; envelopeIndexOrCurveKey++) {
             envelopes[envelopeIndexOrCurveKey].decayRate = patchInput.readUnsignedByte((byte) 34);

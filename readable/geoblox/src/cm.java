@@ -105,59 +105,49 @@ final class cm extends cj {
                   break L4;
                 }
                 for (var19 = 0; var19 < var18; var19++) {
-                  L7: {
-                    var20 = var27.readUnsignedByte((byte) 34);
-                    var21 = id.field_b[var20].field_d;
-                    var22 = var27.readLongBE(2901);
-                    var24 = var27.position;
-                    if (var6 > var19) {
-                      var8[0][var12] = var21;
-                      var9[0][var12] = id.field_b[var20].field_a;
-                      var31[0][var12] = var22;
-                      for (var25 = 0; var25 < var7; var25++) {
-                        incrementValue$2 = var15;
-                        var15++;
-                        var11[0][incrementValue$2] = var27.readIntBE((byte) -76);
-                      }
-                      var12++;
-                      break L7;
+                  var20 = var27.readUnsignedByte((byte) 34);
+                  var21 = id.field_b[var20].field_d;
+                  var22 = var27.readLongBE(2901);
+                  var24 = var27.position;
+                  if (var6 > var19) {
+                    var8[0][var12] = var21;
+                    var9[0][var12] = id.field_b[var20].field_a;
+                    var31[0][var12] = var22;
+                    for (var25 = 0; var25 < var7; var25++) {
+                      incrementValue$2 = var15;
+                      var15++;
+                      var11[0][incrementValue$2] = var27.readIntBE((byte) -76);
+                    }
+                    var12++;
+                  }
+                  if ((var21 != null) &&
+                      (WhirlpoolHash.a(var21, (byte) 12))) {
+                    var8[1][var13] = SecondaryDeque.field_f;
+                    var9[1][var13] = null;
+                    var31[1][var13] = var22;
+                    var13++;
+                    var27.position = var24;
+                    for (var25 = 0; var25 < var7; var25++) {
+                      incrementValue$3 = var16;
+                      var16++;
+                      var11[1][incrementValue$3] = var27.readIntBE((byte) -122);
                     }
                   }
-                  L9: {
-                    if ((var21 != null) &&
-                        (WhirlpoolHash.a(var21, (byte) 12))) {
-                      var8[1][var13] = SecondaryDeque.field_f;
-                      var9[1][var13] = null;
-                      var31[1][var13] = var22;
-                      var13++;
-                      var27.position = var24;
-                      for (var25 = 0; var25 < var7; var25++) {
-                        incrementValue$3 = var16;
-                        var16++;
-                        var11[1][incrementValue$3] = var27.readIntBE((byte) -122);
-                      }
-                      break L9;
-                    }
-                  }
-                  L11: {
-                    if ((var14 < var6) &&
-                        (!id.field_b[var20].field_c)) {
-                      id.field_b[var20].field_c = true;
-                      var8[2][var14] = var21;
-                      var9[2][var14] = id.field_b[var20].field_a;
-                      var31[2][var14] = var22;
-                      var14++;
-                      var27.position = var24;
-                      for (var25 = 0; var7 > var25; var25++) {
-                        incrementValue$4 = var17;
-                        var17++;
-                        var11[2][incrementValue$4] = var27.readIntBE((byte) -101);
-                      }
-                      break L11;
+                  if ((var14 < var6) &&
+                      (!id.field_b[var20].field_c)) {
+                    id.field_b[var20].field_c = true;
+                    var8[2][var14] = var21;
+                    var9[2][var14] = id.field_b[var20].field_a;
+                    var31[2][var14] = var22;
+                    var14++;
+                    var27.position = var24;
+                    for (var25 = 0; var7 > var25; var25++) {
+                      incrementValue$4 = var17;
+                      var17++;
+                      var11[2][incrementValue$4] = var27.readIntBE((byte) -101);
                     }
                   }
                 }
-                break L4;
               }
             }
             var4.field_j = true;

@@ -189,36 +189,30 @@ final class ik {
               firstEntity.sameVariantEntityCount = firstEntity.sameVariantEntityCount + 1;
             }
           }
-          L16: {
-            if (neighborIndexThenDetachSecond != 0) {
-              for (variantPropagationThenNeighborIndex = 0; secondEntity.relatedEntityCount > variantPropagationThenNeighborIndex; variantPropagationThenNeighborIndex++) {
-                secondEntity.relatedEntities[variantPropagationThenNeighborIndex].removeRelatedEntity(secondEntity, 0);
-              }
-              entityForNeighborCountReset = secondEntity;
-              secondEntity.sameCategoryEntityCount = 0;
-              entityForVariantCountReset = secondEntity;
-              entityForVariantCountReset.sameVariantEntityCount = 0;
-              entityForNeighborCountReset.relatedEntityCount = 0;
-              secondEntity.entityQueue = ArchiveNetworkClient.movingEntities;
-              secondEntity.detachedFromBoard = true;
-              break L16;
+          if (neighborIndexThenDetachSecond != 0) {
+            for (variantPropagationThenNeighborIndex = 0; secondEntity.relatedEntityCount > variantPropagationThenNeighborIndex; variantPropagationThenNeighborIndex++) {
+              secondEntity.relatedEntities[variantPropagationThenNeighborIndex].removeRelatedEntity(secondEntity, 0);
             }
+            entityForNeighborCountReset = secondEntity;
+            secondEntity.sameCategoryEntityCount = 0;
+            entityForVariantCountReset = secondEntity;
+            entityForVariantCountReset.sameVariantEntityCount = 0;
+            entityForNeighborCountReset.relatedEntityCount = 0;
+            secondEntity.entityQueue = ArchiveNetworkClient.movingEntities;
+            secondEntity.detachedFromBoard = true;
           }
-          L18: {
-            if (detachFirst != 0) {
-              for (variantPropagationThenNeighborIndex = 0; firstEntity.relatedEntityCount > variantPropagationThenNeighborIndex; variantPropagationThenNeighborIndex++) {
-                firstEntity.relatedEntities[variantPropagationThenNeighborIndex].removeRelatedEntity(firstEntity, 0);
-              }
-              entityForNeighborCountReset = firstEntity;
-              firstEntity.sameCategoryEntityCount = 0;
-              entityForVariantCountReset = firstEntity;
-              entityForNeighborCountReset.relatedEntityCount = 0;
-              firstEntity.touchesAvatar = false;
-              firstEntity.detachedFromBoard = true;
-              firstEntity.entityQueue = ArchiveNetworkClient.movingEntities;
-              entityForVariantCountReset.sameVariantEntityCount = 0;
-              break L18;
+          if (detachFirst != 0) {
+            for (variantPropagationThenNeighborIndex = 0; firstEntity.relatedEntityCount > variantPropagationThenNeighborIndex; variantPropagationThenNeighborIndex++) {
+              firstEntity.relatedEntities[variantPropagationThenNeighborIndex].removeRelatedEntity(firstEntity, 0);
             }
+            entityForNeighborCountReset = firstEntity;
+            firstEntity.sameCategoryEntityCount = 0;
+            entityForVariantCountReset = firstEntity;
+            entityForNeighborCountReset.relatedEntityCount = 0;
+            firstEntity.touchesAvatar = false;
+            firstEntity.detachedFromBoard = true;
+            firstEntity.entityQueue = ArchiveNetworkClient.movingEntities;
+            entityForVariantCountReset.sameVariantEntityCount = 0;
           }
           secondDetachmentReturnValue = neighborIndexThenDetachSecond;
           return secondDetachmentReturnValue != 0;

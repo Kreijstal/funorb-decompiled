@@ -220,25 +220,22 @@ final class PlatformTaskDispatcher implements Runnable {
                                                   throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
                                                 }
                                                 try {
-                                                  L14: {
-                                                    if (!osNameLowerCase.startsWith("win")) {
-                                                      throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
-                                                    }
-                                                    urlToLaunch = (String) (task.input);
-                                                    if ((!urlToLaunch.startsWith("http://")) &&
-                                                        (!urlToLaunch.startsWith("https://"))) {
-                                                      throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
-                                                    }
-                                                    allowedUrlCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
-                                                    for (urlCharacterIndex = 0; urlCharacterIndex < urlToLaunch.length(); urlCharacterIndex++) {
-                                                      if (-1 == allowedUrlCharacters.indexOf((int) urlToLaunch.charAt(urlCharacterIndex))) {
-                                                        throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
-                                                      }
-                                                    }
-                                                    Runtime.getRuntime().exec("cmd /c start \"j\" \"" + urlToLaunch + "\"");
-                                                    task.result = null;
-                                                    break L14;
+                                                  if (!osNameLowerCase.startsWith("win")) {
+                                                    throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
                                                   }
+                                                  urlToLaunch = (String) (task.input);
+                                                  if ((!urlToLaunch.startsWith("http://")) &&
+                                                      (!urlToLaunch.startsWith("https://"))) {
+                                                    throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                                                  }
+                                                  allowedUrlCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
+                                                  for (urlCharacterIndex = 0; urlCharacterIndex < urlToLaunch.length(); urlCharacterIndex++) {
+                                                    if (-1 == allowedUrlCharacters.indexOf((int) urlToLaunch.charAt(urlCharacterIndex))) {
+                                                      throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                                                    }
+                                                  }
+                                                  Runtime.getRuntime().exec("cmd /c start \"j\" \"" + urlToLaunch + "\"");
+                                                  task.result = null;
                                                 } catch (java.lang.Exception caughtUrlLaunchFailure) {
                                                   caughtTaskThrowable = caughtUrlLaunchFailure;
                                                   urlLaunchFailure = (Exception) (Object) caughtTaskThrowable;
@@ -417,24 +414,21 @@ final class PlatformTaskDispatcher implements Runnable {
                 ignoredCacheCloseFailure = (IOException) (Object) caughtShutdownThrowable;
               }
             }
-            L10: {
-              if (null != this.cacheIndexFiles) {
-                cacheIndex = 0;
-                while (cacheIndex < this.cacheIndexFiles.length) {
-                  if (this.cacheIndexFiles[cacheIndex] == null) {
-                    cacheIndex++;
-                    continue;
-                  }
-                  try {
-                    this.cacheIndexFiles[cacheIndex].close((byte) -5);
-                    cacheIndex++;
-                  } catch (java.io.IOException indexCloseFailure) {
-                    caughtShutdownThrowable = indexCloseFailure;
-                    ignoredIndexCloseFailure = (IOException) (Object) caughtShutdownThrowable;
-                    cacheIndex++;
-                  }
+            if (null != this.cacheIndexFiles) {
+              cacheIndex = 0;
+              while (cacheIndex < this.cacheIndexFiles.length) {
+                if (this.cacheIndexFiles[cacheIndex] == null) {
+                  cacheIndex++;
+                  continue;
                 }
-                break L10;
+                try {
+                  this.cacheIndexFiles[cacheIndex].close((byte) -5);
+                  cacheIndex++;
+                } catch (java.io.IOException indexCloseFailure) {
+                  caughtShutdownThrowable = indexCloseFailure;
+                  ignoredIndexCloseFailure = (IOException) (Object) caughtShutdownThrowable;
+                  cacheIndex++;
+                }
               }
             }
             if (null != this.randomSeedFile) {
@@ -600,46 +594,43 @@ final class PlatformTaskDispatcher implements Runnable {
             ignoredSetupException = (Exception) (Object) caughtSetupThrowable;
           }
         }
-        L21: {
-          aj.a((byte) 66, gameCacheName, cacheVariant);
-          if (this.privilegedServicesEnabled) {
-            this.randomSeedFile = new LimitedRandomAccessFile(aj.a((String) null, -27533, "random.dat", cacheVariant), "rw", 25L);
-            this.cacheDataFile = new LimitedRandomAccessFile(aj.a("main_file_cache.dat2", (byte) -116), "rw", 314572800L);
-            this.masterCacheIndexFile = new LimitedRandomAccessFile(aj.a("main_file_cache.idx255", (byte) -77), "rw", 1048576L);
-            this.cacheIndexFiles = new LimitedRandomAccessFile[cacheIndexCount];
-            for (cacheIndex = 0; cacheIndex < cacheIndexCount; cacheIndex++) {
-              this.cacheIndexFiles[cacheIndex] = new LimitedRandomAccessFile(aj.a("main_file_cache.idx" + cacheIndex, (byte) -104), "rw", 1048576L);
+        aj.a((byte) 66, gameCacheName, cacheVariant);
+        if (this.privilegedServicesEnabled) {
+          this.randomSeedFile = new LimitedRandomAccessFile(aj.a((String) null, -27533, "random.dat", cacheVariant), "rw", 25L);
+          this.cacheDataFile = new LimitedRandomAccessFile(aj.a("main_file_cache.dat2", (byte) -116), "rw", 314572800L);
+          this.masterCacheIndexFile = new LimitedRandomAccessFile(aj.a("main_file_cache.idx255", (byte) -77), "rw", 1048576L);
+          this.cacheIndexFiles = new LimitedRandomAccessFile[cacheIndexCount];
+          for (cacheIndex = 0; cacheIndex < cacheIndexCount; cacheIndex++) {
+            this.cacheIndexFiles[cacheIndex] = new LimitedRandomAccessFile(aj.a("main_file_cache.idx" + cacheIndex, (byte) -104), "rw", 1048576L);
+          }
+          if (this.useMicrosoftVmBackend) {
+            try {
+              Class.forName("of").newInstance();
+            } catch (java.lang.Throwable microsoftCompatibilitySetupFailure) {
+              caughtSetupThrowable = microsoftCompatibilitySetupFailure;
+              ignoredSetupThrowable = caughtSetupThrowable;
             }
+          }
+          try {
             if (this.useMicrosoftVmBackend) {
-              try {
-                Class.forName("of").newInstance();
-              } catch (java.lang.Throwable microsoftCompatibilitySetupFailure) {
-                caughtSetupThrowable = microsoftCompatibilitySetupFailure;
-                ignoredSetupThrowable = caughtSetupThrowable;
-              }
+              createdMicrosoftFullscreenBackend = new ie();
+              this.microsoftFullscreenBackend = createdMicrosoftFullscreenBackend;
+            } else {
+              this.reflectiveFullscreenBackend = Class.forName("pd").newInstance();
             }
-            try {
-              if (this.useMicrosoftVmBackend) {
-                createdMicrosoftFullscreenBackend = new ie();
-                this.microsoftFullscreenBackend = createdMicrosoftFullscreenBackend;
-              } else {
-                this.reflectiveFullscreenBackend = Class.forName("pd").newInstance();
-              }
-            } catch (java.lang.Throwable fullscreenBackendSetupFailure) {
-              caughtSetupThrowable = fullscreenBackendSetupFailure;
-              ignoredSetupThrowable = caughtSetupThrowable;
+          } catch (java.lang.Throwable fullscreenBackendSetupFailure) {
+            caughtSetupThrowable = fullscreenBackendSetupFailure;
+            ignoredSetupThrowable = caughtSetupThrowable;
+          }
+          try {
+            if (!this.useMicrosoftVmBackend) {
+              this.reflectiveCursorBackend = Class.forName("tk").newInstance();
+            } else {
+              this.microsoftCursorBackend = new tg();
             }
-            try {
-              if (!this.useMicrosoftVmBackend) {
-                this.reflectiveCursorBackend = Class.forName("tk").newInstance();
-              } else {
-                this.microsoftCursorBackend = new tg();
-              }
-            } catch (java.lang.Throwable cursorBackendSetupFailure) {
-              caughtSetupThrowable = cursorBackendSetupFailure;
-              ignoredSetupThrowable = caughtSetupThrowable;
-            }
-            break L21;
+          } catch (java.lang.Throwable cursorBackendSetupFailure) {
+            caughtSetupThrowable = cursorBackendSetupFailure;
+            ignoredSetupThrowable = caughtSetupThrowable;
           }
         }
         this.shutdownRequested = false;

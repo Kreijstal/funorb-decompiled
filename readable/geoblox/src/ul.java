@@ -161,10 +161,8 @@ final class ul {
                       dualMatchFound = 1;
                     }
                   }
-                  break L10;
                 }
               }
-              break L3;
             }
             centralEntity = (GameplayEntity) ((Object) a.attachedEntities.nextForIteration(1));
           }
