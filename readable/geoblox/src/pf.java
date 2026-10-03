@@ -10,7 +10,7 @@ final class pf extends ee implements ga, pl {
     private boolean field_C;
     private hk field_G;
     private static gk field_K;
-    static boolean field_D;
+    static boolean endingEntityScanClear;
     private boolean field_I;
     private hk field_M;
     private dj field_J;
@@ -885,7 +885,7 @@ final class pf extends ee implements ga, pl {
     }
 
     static {
-        field_D = false;
+        endingEntityScanClear = false;
         js5CrcErrorText = "CRC mismatch - unable to get a valid download. Please check any firewall/antivirus/filtering software.";
         field_K = new gk();
     }

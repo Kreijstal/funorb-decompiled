@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class g extends TextInputValidator {
-    static int field_j;
+    static int avatarCryFrameCursor;
     static String createEmailUnavailableAlertText;
     private dj field_k;
     static String serviceUnavailableText;
@@ -201,6 +201,6 @@ final class g extends TextInputValidator {
     static {
         createEmailUnavailableAlertText = "Email address is unavailable";
         serviceUnavailableText = "Service unavailable";
-        field_j = 0;
+        avatarCryFrameCursor = 0;
     }
 }

@@ -11,7 +11,7 @@ final class nb {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          kc.a((java.awt.Component) ((Object) param1), 0);
+          kc.detachKeyboardListener((java.awt.Component) ((Object) param1), 0);
           df.a(false, (java.awt.Component) ((Object) param1));
           if (param0 != -2) {
             loadingFontsText = (String) null;

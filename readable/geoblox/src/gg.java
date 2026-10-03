@@ -5,7 +5,7 @@ final class gg {
     static String createRepeatedPasswordAlertText;
     static String createNameLengthAlertText;
     static String createPasswordContainsPartialNameAlertText;
-    static int field_b;
+    static int avatarCryPhase;
 
     final static boolean a(byte param0, char param1) {
         int var2 = 87 / ((param0 - 25) / 53);
@@ -99,7 +99,7 @@ final class gg {
     static {
         createRepeatedPasswordAlertText = "This password contains repeated characters, and would be easy to guess";
         createPasswordContainsPartialNameAlertText = "This password is part of your Player Name, and would be easy to guess";
-        field_b = 0;
+        avatarCryPhase = 0;
         createNameLengthAlertText = "Names should contain a maximum of 12 characters";
     }
 }

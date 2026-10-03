@@ -10,45 +10,45 @@ final class fc {
     static volatile boolean pointerActivityPending;
     static int field_c;
 
-    final static void a(int param0) {
-        RuntimeException decompiledCaughtException = null;
-        GameplayEntity var1 = null;
-        RuntimeException var1_ref = null;
-        int var2 = 0;
-        int var3 = 0;
-        var3 = Geoblox.clientControlFlowFlag;
+    final static void advanceEndingEntityAnimations(int methodGuard) {
+        RuntimeException caughtEndingAnimationException = null;
+        GameplayEntity attachedThenTransientEntity = null;
+        RuntimeException endingAnimationFailure = null;
+        int guardResidue = 0;
+        int clientControlFlowSnapshot = 0;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          pf.field_D = true;
-          var1 = (GameplayEntity) ((Object) a.attachedEntities.firstForIteration(0));
-          while (var1 != null) {
-            var1.advanceEntityAnimation(true);
-            if (6 == var1.entitySpriteKindId) {
-              pf.field_D = false;
-              if (var1.animationFrameIndex >= 3) {
-                ra.availableEntities.addLast(-67, var1);
+          pf.endingEntityScanClear = true;
+          attachedThenTransientEntity = (GameplayEntity) ((Object) a.attachedEntities.firstForIteration(0));
+          while (attachedThenTransientEntity != null) {
+            attachedThenTransientEntity.advanceEntityAnimation(true);
+            if (6 == attachedThenTransientEntity.entitySpriteKindId) {
+              pf.endingEntityScanClear = false;
+              if (attachedThenTransientEntity.animationFrameIndex >= 3) {
+                ra.availableEntities.addLast(-67, attachedThenTransientEntity);
               }
             }
-            var1 = (GameplayEntity) ((Object) a.attachedEntities.nextForIteration(1));
+            attachedThenTransientEntity = (GameplayEntity) ((Object) a.attachedEntities.nextForIteration(1));
           }
-          var2 = 12 % ((-69 - param0) / 38);
-          var1 = (GameplayEntity) ((Object) bh.transientEntities.firstForIteration(0));
-          while (var1 != null) {
-            var1.advanceEntityAnimation(true);
-            if (!((5 != var1.entitySpriteKindId) &&
-                (var1.entitySpriteKindId != 7) &&
-                (var1.entitySpriteKindId != 8))) {
-              pf.field_D = false;
-              if (var1.animationFrameIndex >= 3) {
-                ra.availableEntities.addLast(-115, var1);
+          guardResidue = 12 % ((-69 - methodGuard) / 38);
+          attachedThenTransientEntity = (GameplayEntity) ((Object) bh.transientEntities.firstForIteration(0));
+          while (attachedThenTransientEntity != null) {
+            attachedThenTransientEntity.advanceEntityAnimation(true);
+            if (!((5 != attachedThenTransientEntity.entitySpriteKindId) &&
+                (attachedThenTransientEntity.entitySpriteKindId != 7) &&
+                (attachedThenTransientEntity.entitySpriteKindId != 8))) {
+              pf.endingEntityScanClear = false;
+              if (attachedThenTransientEntity.animationFrameIndex >= 3) {
+                ra.availableEntities.addLast(-115, attachedThenTransientEntity);
               }
             }
-            var1 = (GameplayEntity) ((Object) bh.transientEntities.nextForIteration(1));
+            attachedThenTransientEntity = (GameplayEntity) ((Object) bh.transientEntities.nextForIteration(1));
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1_ref = decompiledCaughtException;
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var1_ref), "fc.B(" + param0 + ')');
+        } catch (java.lang.RuntimeException caughtEndingAnimationFailure) {
+          caughtEndingAnimationException = caughtEndingAnimationFailure;
+          endingAnimationFailure = caughtEndingAnimationException;
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) endingAnimationFailure), "fc.B(" + methodGuard + ')');
         }
     }
 
@@ -75,7 +75,7 @@ final class fc {
             musicLabelText = null;
             return;
         }
-        fc.a(-17);
+        fc.advanceEndingEntityAnimations(-17);
         field_d = null;
         musicLabelText = null;
     }

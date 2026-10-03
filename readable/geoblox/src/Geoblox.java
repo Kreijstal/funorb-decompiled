@@ -412,7 +412,7 @@ public final class Geoblox extends wf {
         oh.a((byte) -88);
         SecondaryDeque.b(-10943);
         GameplayEntity.e((byte) 104);
-        kc.a(126);
+        kc.releaseStaticReferences(126);
         mf.a(false);
         ah.a(39);
         fl.a(33);

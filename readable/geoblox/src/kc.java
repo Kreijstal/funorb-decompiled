@@ -4,23 +4,23 @@
 final class kc {
     static int ticksSinceLastEntityRelease;
     static String createNameCharacterAlertText;
-    static int field_c;
+    static int sessionStartAttemptCount;
 
-    public static void a(int param0) {
-        int var1 = 7 % ((79 - param0) / 43);
+    public static void releaseStaticReferences(int methodGuard) {
+        int guardResidue = 7 % ((79 - methodGuard) / 43);
         createNameCharacterAlertText = null;
     }
 
-    final static void a(java.awt.Component param0, int param1) {
-        param0.removeKeyListener(je.keyboardListener);
-        if (param1 != 0) {
+    final static void detachKeyboardListener(java.awt.Component component, int methodGuard) {
+        component.removeKeyListener(je.keyboardListener);
+        if (methodGuard != 0) {
             return;
         }
         try {
-            param0.removeFocusListener(je.keyboardListener);
+            component.removeFocusListener(je.keyboardListener);
             ii.keyStateWriteIndexOrResetSentinel = -1;
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "kc.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        } catch (RuntimeException keyboardDetachFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) keyboardDetachFailure), "kc.D(" + (component != null ? "{...}" : "null") + ',' + methodGuard + ')');
         }
     }
 
@@ -77,12 +77,12 @@ final class kc {
         int popupPoints;
         GameplaySession sessionForRasterRead = null;
         boolean rasterDirtyDecision = false;
-        RuntimeException decompiledCaughtException = null;
+        RuntimeException caughtReconciliationException = null;
         boolean visitedByEntityIdValue;
         boolean directAvatarContactValue;
         GameplayEntity activeEntity = null;
         int visitedResetIndexThenKindFourCount = 0;
-        RuntimeException var1_ref = null;
+        RuntimeException reconciliationFailure = null;
         GameplayEntity routedAttachedEntity = null;
         int methodGuardResidue = 0;
         float radialOffsetX = 0.0f;
@@ -552,15 +552,15 @@ final class kc {
               return;
             }
           }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1_ref = decompiledCaughtException;
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var1_ref), "kc.C(" + methodGuard + ')');
+        } catch (java.lang.RuntimeException caughtReconciliationFailure) {
+          caughtReconciliationException = caughtReconciliationFailure;
+          reconciliationFailure = caughtReconciliationException;
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) reconciliationFailure), "kc.C(" + methodGuard + ')');
         }
     }
 
     static {
-        field_c = 0;
+        sessionStartAttemptCount = 0;
         createNameCharacterAlertText = "Names can only contain letters, numbers, spaces and underscores";
         ticksSinceLastEntityRelease = 0;
     }

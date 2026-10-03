@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 7,391 guarded naming rules: 68 classes, 911 fields,
-619 methods, 1,847 parameters and 3,946 local declarations. Both 303-file corpora
+The current export has 7,482 guarded naming rules: 68 classes, 915 fields,
+623 methods, 1,852 parameters and 4,024 local declarations. Both 303-file corpora
 compile, comparing 138,772 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -53,6 +53,48 @@ Another 9,828 cases preserve native general-angle/extreme-scale traces. ARGB
 smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
+
+## Avatar animation and ending flow names (pass 97)
+
+This naming-only pass adds 91 guarded identities: four fields, four methods,
+five parameters and 78 locals. Every parameter and local in both avatar animation
+updaters and board reconciliation now has a name. Sixty-seven independent old-value
+shock/tint snapshots identify the branch that owns them, without merging variables
+or changing their declaration identities. `held`, `steered` and `stepped` prefixes
+follow the original gameplay frame-timer paths; menu snapshots identify steering,
+neutral and retained fallback paths. Snapshot comparisons still test the old timer,
+while shock frame selection uses its decremented value.
+
+`avatarCryPhase` and `avatarCryFrameCursor` expose the begin/middle/end sprite
+sequence. `endingEntityScanClear` describes the ending animation scan result;
+it can remain false in the pass that queues the last observed ending entity as
+available. `advanceEndingEntityAnimations` preserves attached-before-transient
+order and the guard arithmetic between those scans. `isAvatarCryHoldExpired`
+requires exactly phase2 and a negative hold timer. Gameplay exit still reads the
+previous scan flag before running the next scan. `sessionStartAttemptCount`
+increments before difficulty reset and session construction; a later failure
+keeps the increment. Shared keyboard detachment and guarded cleanup also receive
+names without moving their failure boundaries.
+
+All 7,391 previous complete naming rules, raw/decompiler pins and native probe
+sources/trace pins remain. The 7,482 rules apply 59,943 identifier edits. Both
+303-file corpora compile, preserving 138,772 bindings and 388 override
+relationships. Rule-builder/source-migration/text-resource checks pass all three
+files. The existing native/raw/readable gameplay probe retains its fixed traces,
+including the independent active-session avatar steering/timer/tint oracles.
+Full reproduction and dictionary reversal recover the pinned raw input byte-for-
+byte. Pass97's readable source-tree SHA-256 is
+`0a1af584e49b85909750a3dd7684cda953be5234ef7fa6c4d6ee8e492a7933b3`.
+
+No new native execution coverage is added. The existing animation oracle sets
+sessionEnding=false; source auditing and binding/reversal checks do not establish
+the full crying/ending sequence, actual assets, listener lifecycle or browser/
+phone behavior. Repeated animation tails and original contradictory direction
+alternatives remain. Their synthetic locals have distinct bindings, so a future
+structural fold needs proof for equivalent stores/reads and exceptional prefix
+effects before merging tails. The structural inventory remains 21 overlapping
+large spans, ten with block labels. Other shared classes, larger control-flow
+reconstruction and whole-game acceptance remain unfinished or unverified.
 
 ## Client/session declarations and shared control flag (pass 96)
 

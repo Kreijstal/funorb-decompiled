@@ -5,10 +5,10 @@ final class od {
     static String field_b;
     private String field_a;
 
-    final static boolean a(int param0) {
-        if (param0 != -3) {
+    final static boolean isAvatarCryHoldExpired(int methodGuard) {
+        if (methodGuard != -3) {
             field_b = (String) null;
-            if (gg.field_b != 2) {
+            if (gg.avatarCryPhase != 2) {
                 return false;
             }
             if (LimitedRandomAccessFile.avatarFeedbackHoldTicks < 0) {
@@ -16,7 +16,7 @@ final class od {
             }
             return false;
         }
-        if (gg.field_b != 2) {
+        if (gg.avatarCryPhase != 2) {
             return false;
         }
         if (LimitedRandomAccessFile.avatarFeedbackHoldTicks < 0) {

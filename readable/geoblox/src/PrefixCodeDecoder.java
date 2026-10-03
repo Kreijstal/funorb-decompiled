@@ -300,35 +300,35 @@ final class PrefixCodeDecoder {
 
     final static void advanceMenuAvatarAnimation(byte methodGuard) {
         int frameStepTicksBeforeDecrement = 0;
-        int fieldTemp$27 = 0;
-        int fieldTemp$28 = 0;
-        int fieldTemp$29 = 0;
-        int fieldTemp$1 = 0;
-        int fieldTemp$2 = 0;
-        int fieldTemp$3 = 0;
-        int fieldTemp$17 = 0;
-        int fieldTemp$18 = 0;
-        int fieldTemp$19 = 0;
-        int fieldTemp$20 = 0;
-        int fieldTemp$25 = 0;
-        int fieldTemp$26 = 0;
-        int fieldTemp$21 = 0;
-        int fieldTemp$22 = 0;
-        int fieldTemp$23 = 0;
-        int fieldTemp$24 = 0;
-        int fieldTemp$4 = 0;
-        int fieldTemp$5 = 0;
-        int fieldTemp$6 = 0;
-        int fieldTemp$7 = 0;
-        int fieldTemp$8 = 0;
-        int fieldTemp$9 = 0;
-        int fieldTemp$10 = 0;
-        int fieldTemp$15 = 0;
-        int fieldTemp$16 = 0;
-        int fieldTemp$11 = 0;
-        int fieldTemp$12 = 0;
-        int fieldTemp$13 = 0;
-        int fieldTemp$14 = 0;
+        int heldFrameShockTicksSnapshot = 0;
+        int heldFrameTintWithoutShockSnapshot = 0;
+        int heldFrameTintAfterShockSnapshot = 0;
+        int blinkFrameResetShockTicksSnapshot = 0;
+        int blinkFrameResetTintWithoutShockSnapshot = 0;
+        int blinkFrameResetTintAfterShockSnapshot = 0;
+        int rightSteerShockTicksSnapshot = 0;
+        int rightSteerTintTicksSnapshot = 0;
+        int neutralStepUpShockTicksSnapshot = 0;
+        int neutralStepUpTintTicksSnapshot = 0;
+        int nonneutralHoldShockTicksSnapshot = 0;
+        int nonneutralHoldTintTicksSnapshot = 0;
+        int neutralHoldShockTicksSnapshot = 0;
+        int neutralHoldTintTicksSnapshot = 0;
+        int neutralStepDownShockTicksSnapshot = 0;
+        int neutralStepDownTintTicksSnapshot = 0;
+        int leftSteerShockTicksSnapshot = 0;
+        int leftSteerTintWithoutShockSnapshot = 0;
+        int leftSteerTintAfterShockSnapshot = 0;
+        int leftFallbackRightSteerShockTicksSnapshot = 0;
+        int leftFallbackRightSteerTintTicksSnapshot = 0;
+        int leftFallbackNeutralStepUpShockTicksSnapshot = 0;
+        int leftFallbackNeutralStepUpTintTicksSnapshot = 0;
+        int leftFallbackNonneutralHoldShockTicksSnapshot = 0;
+        int leftFallbackNonneutralHoldTintTicksSnapshot = 0;
+        int leftFallbackNeutralHoldShockTicksSnapshot = 0;
+        int leftFallbackNeutralHoldTintTicksSnapshot = 0;
+        int leftFallbackNeutralStepDownShockTicksSnapshot = 0;
+        int leftFallbackNeutralStepDownTintTicksSnapshot = 0;
         float avatarTintFadeFactor;
         int avatarFrameOffsetInSegment;
         int unusedClientControlSnapshot;
@@ -345,21 +345,21 @@ final class PrefixCodeDecoder {
             DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
           }
           avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
-          fieldTemp$27 = wa.avatarShockEffectTicks;
+          heldFrameShockTicksSnapshot = wa.avatarShockEffectTicks;
           wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
-          if (fieldTemp$27 <= 0) {
-            fieldTemp$28 = jf.avatarTintFadeTicks;
+          if (heldFrameShockTicksSnapshot <= 0) {
+            heldFrameTintWithoutShockSnapshot = jf.avatarTintFadeTicks;
             jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-            if (fieldTemp$28 <= 0) {
+            if (heldFrameTintWithoutShockSnapshot <= 0) {
               return;
             }
             rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
             return;
           }
           IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
-          fieldTemp$29 = jf.avatarTintFadeTicks;
+          heldFrameTintAfterShockSnapshot = jf.avatarTintFadeTicks;
           jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-          if (fieldTemp$29 <= 0) {
+          if (heldFrameTintAfterShockSnapshot <= 0) {
             return;
           }
           rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
@@ -374,21 +374,21 @@ final class PrefixCodeDecoder {
             DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
           }
           avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
-          fieldTemp$1 = wa.avatarShockEffectTicks;
+          blinkFrameResetShockTicksSnapshot = wa.avatarShockEffectTicks;
           wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
-          if (fieldTemp$1 <= 0) {
-            fieldTemp$2 = jf.avatarTintFadeTicks;
+          if (blinkFrameResetShockTicksSnapshot <= 0) {
+            blinkFrameResetTintWithoutShockSnapshot = jf.avatarTintFadeTicks;
             jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-            if (fieldTemp$2 <= 0) {
+            if (blinkFrameResetTintWithoutShockSnapshot <= 0) {
               return;
             }
             rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
             return;
           }
           IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
-          fieldTemp$3 = jf.avatarTintFadeTicks;
+          blinkFrameResetTintAfterShockSnapshot = jf.avatarTintFadeTicks;
           jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-          if (fieldTemp$3 <= 0) {
+          if (blinkFrameResetTintAfterShockSnapshot <= 0) {
             return;
           }
           rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
@@ -406,14 +406,14 @@ final class PrefixCodeDecoder {
               DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
             }
             avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
-            fieldTemp$17 = wa.avatarShockEffectTicks;
+            rightSteerShockTicksSnapshot = wa.avatarShockEffectTicks;
             wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
-            if (fieldTemp$17 > 0) {
+            if (rightSteerShockTicksSnapshot > 0) {
               IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
             }
-            fieldTemp$18 = jf.avatarTintFadeTicks;
+            rightSteerTintTicksSnapshot = jf.avatarTintFadeTicks;
             jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-            if (fieldTemp$18 > 0) {
+            if (rightSteerTintTicksSnapshot > 0) {
               rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
             }
             return;
@@ -428,14 +428,14 @@ final class PrefixCodeDecoder {
               DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
             }
             avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
-            fieldTemp$19 = wa.avatarShockEffectTicks;
+            neutralStepUpShockTicksSnapshot = wa.avatarShockEffectTicks;
             wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
-            if (fieldTemp$19 > 0) {
+            if (neutralStepUpShockTicksSnapshot > 0) {
               IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
             }
-            fieldTemp$20 = jf.avatarTintFadeTicks;
+            neutralStepUpTintTicksSnapshot = jf.avatarTintFadeTicks;
             jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-            if (fieldTemp$20 > 0) {
+            if (neutralStepUpTintTicksSnapshot > 0) {
               rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
             }
             return;
@@ -448,14 +448,14 @@ final class PrefixCodeDecoder {
               DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
             }
             avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
-            fieldTemp$25 = wa.avatarShockEffectTicks;
+            nonneutralHoldShockTicksSnapshot = wa.avatarShockEffectTicks;
             wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
-            if (fieldTemp$25 > 0) {
+            if (nonneutralHoldShockTicksSnapshot > 0) {
               IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
             }
-            fieldTemp$26 = jf.avatarTintFadeTicks;
+            nonneutralHoldTintTicksSnapshot = jf.avatarTintFadeTicks;
             jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-            if (fieldTemp$26 > 0) {
+            if (nonneutralHoldTintTicksSnapshot > 0) {
               rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
             }
             return;
@@ -468,14 +468,14 @@ final class PrefixCodeDecoder {
               DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
             }
             avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
-            fieldTemp$21 = wa.avatarShockEffectTicks;
+            neutralHoldShockTicksSnapshot = wa.avatarShockEffectTicks;
             wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
-            if (fieldTemp$21 > 0) {
+            if (neutralHoldShockTicksSnapshot > 0) {
               IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
             }
-            fieldTemp$22 = jf.avatarTintFadeTicks;
+            neutralHoldTintTicksSnapshot = jf.avatarTintFadeTicks;
             jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-            if (fieldTemp$22 > 0) {
+            if (neutralHoldTintTicksSnapshot > 0) {
               rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
             }
             return;
@@ -488,14 +488,14 @@ final class PrefixCodeDecoder {
             DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
           }
           avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
-          fieldTemp$23 = wa.avatarShockEffectTicks;
+          neutralStepDownShockTicksSnapshot = wa.avatarShockEffectTicks;
           wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
-          if (fieldTemp$23 > 0) {
+          if (neutralStepDownShockTicksSnapshot > 0) {
             IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
           }
-          fieldTemp$24 = jf.avatarTintFadeTicks;
+          neutralStepDownTintTicksSnapshot = jf.avatarTintFadeTicks;
           jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-          if (fieldTemp$24 > 0) {
+          if (neutralStepDownTintTicksSnapshot > 0) {
             rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
           }
           return;
@@ -509,21 +509,21 @@ final class PrefixCodeDecoder {
             DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
           }
           avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
-          fieldTemp$4 = wa.avatarShockEffectTicks;
+          leftSteerShockTicksSnapshot = wa.avatarShockEffectTicks;
           wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
-          if (fieldTemp$4 <= 0) {
-            fieldTemp$5 = jf.avatarTintFadeTicks;
+          if (leftSteerShockTicksSnapshot <= 0) {
+            leftSteerTintWithoutShockSnapshot = jf.avatarTintFadeTicks;
             jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-            if (fieldTemp$5 <= 0) {
+            if (leftSteerTintWithoutShockSnapshot <= 0) {
               return;
             }
             rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
             return;
           }
           IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
-          fieldTemp$6 = jf.avatarTintFadeTicks;
+          leftSteerTintAfterShockSnapshot = jf.avatarTintFadeTicks;
           jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-          if (fieldTemp$6 > 0) {
+          if (leftSteerTintAfterShockSnapshot > 0) {
             rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
           }
           return;
@@ -538,14 +538,14 @@ final class PrefixCodeDecoder {
             DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
           }
           avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
-          fieldTemp$7 = wa.avatarShockEffectTicks;
+          leftFallbackRightSteerShockTicksSnapshot = wa.avatarShockEffectTicks;
           wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
-          if (fieldTemp$7 > 0) {
+          if (leftFallbackRightSteerShockTicksSnapshot > 0) {
             IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
           }
-          fieldTemp$8 = jf.avatarTintFadeTicks;
+          leftFallbackRightSteerTintTicksSnapshot = jf.avatarTintFadeTicks;
           jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-          if (fieldTemp$8 > 0) {
+          if (leftFallbackRightSteerTintTicksSnapshot > 0) {
             rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
           }
           return;
@@ -560,14 +560,14 @@ final class PrefixCodeDecoder {
             DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
           }
           avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
-          fieldTemp$9 = wa.avatarShockEffectTicks;
+          leftFallbackNeutralStepUpShockTicksSnapshot = wa.avatarShockEffectTicks;
           wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
-          if (fieldTemp$9 > 0) {
+          if (leftFallbackNeutralStepUpShockTicksSnapshot > 0) {
             IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
           }
-          fieldTemp$10 = jf.avatarTintFadeTicks;
+          leftFallbackNeutralStepUpTintTicksSnapshot = jf.avatarTintFadeTicks;
           jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-          if (fieldTemp$10 > 0) {
+          if (leftFallbackNeutralStepUpTintTicksSnapshot > 0) {
             rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
           }
           return;
@@ -580,14 +580,14 @@ final class PrefixCodeDecoder {
             DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
           }
           avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
-          fieldTemp$15 = wa.avatarShockEffectTicks;
+          leftFallbackNonneutralHoldShockTicksSnapshot = wa.avatarShockEffectTicks;
           wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
-          if (fieldTemp$15 > 0) {
+          if (leftFallbackNonneutralHoldShockTicksSnapshot > 0) {
             IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
           }
-          fieldTemp$16 = jf.avatarTintFadeTicks;
+          leftFallbackNonneutralHoldTintTicksSnapshot = jf.avatarTintFadeTicks;
           jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-          if (fieldTemp$16 > 0) {
+          if (leftFallbackNonneutralHoldTintTicksSnapshot > 0) {
             rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
           }
           return;
@@ -600,14 +600,14 @@ final class PrefixCodeDecoder {
             DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
           }
           avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
-          fieldTemp$11 = wa.avatarShockEffectTicks;
+          leftFallbackNeutralHoldShockTicksSnapshot = wa.avatarShockEffectTicks;
           wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
-          if (fieldTemp$11 > 0) {
+          if (leftFallbackNeutralHoldShockTicksSnapshot > 0) {
             IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
           }
-          fieldTemp$12 = jf.avatarTintFadeTicks;
+          leftFallbackNeutralHoldTintTicksSnapshot = jf.avatarTintFadeTicks;
           jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-          if (fieldTemp$12 > 0) {
+          if (leftFallbackNeutralHoldTintTicksSnapshot > 0) {
             rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
           }
           return;
@@ -620,14 +620,14 @@ final class PrefixCodeDecoder {
           DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
         }
         avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
-        fieldTemp$13 = wa.avatarShockEffectTicks;
+        leftFallbackNeutralStepDownShockTicksSnapshot = wa.avatarShockEffectTicks;
         wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
-        if (fieldTemp$13 > 0) {
+        if (leftFallbackNeutralStepDownShockTicksSnapshot > 0) {
           IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
         }
-        fieldTemp$14 = jf.avatarTintFadeTicks;
+        leftFallbackNeutralStepDownTintTicksSnapshot = jf.avatarTintFadeTicks;
         jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-        if (fieldTemp$14 > 0) {
+        if (leftFallbackNeutralStepDownTintTicksSnapshot > 0) {
           rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
         }
         return;

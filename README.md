@@ -19,6 +19,17 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 138,772 bindings,
 preserving 388 override relationships.
 
+Pass 97 adds 91 guarded avatar/ending/shared-input identities, completing the
+parameters/locals of both avatar updaters and board reconciliation. Cry phases,
+frame cursor, ending scan result and session-start attempt counter follow exact
+source reads/writes and partial effects. All 7,391 previous complete rules and
+raw/decompiler/native pins remain. The 7,482 rules apply 59,943 edits. The existing
+native/raw/readable gameplay probe retains its traces, including active-session
+animation oracles; it does not establish the complete crying/ending lifecycle.
+Compilation/binding checks, full reproduction and dictionary reversal pass.
+Repeated animation tails, shared opaque classes, large control bodies and
+whole-game/browser/phone acceptance remain unfinished or unverified.
+
 Pass 96 adds 77 guarded identities, completing GameplaySession declarations and
 Geoblox's fields/parameters/locals/nonlifecycle methods. Already semantic client
 lifecycle names remain original. Canvas timing, message dialog and login payload

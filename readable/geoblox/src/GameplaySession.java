@@ -953,12 +953,12 @@ final class GameplaySession {
           if (this.sceneAnimationTick == 0) {
             fi.a(methodGuard ^ -1578896191, pi.field_S);
           }
-          if ((pf.field_D) &&
-              (od.a(-3)) &&
+          if ((pf.endingEntityScanClear) &&
+              (od.isAvatarCryHoldExpired(-3)) &&
               (this.sceneAnimationTick > 1000)) {
             this.requestSessionExitScreen(28809);
           }
-          fc.a(19);
+          fc.advanceEndingEntityAnimations(19);
           cf.advanceScorePopups((byte) 24);
           f.advanceGameplayAvatarAnimation(600);
           this.sceneAnimationTick = this.sceneAnimationTick + 1;

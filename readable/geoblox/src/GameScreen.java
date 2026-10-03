@@ -2206,7 +2206,7 @@ final class GameScreen extends MenuScreen {
             L47: {
               if (newSessionTutorialModeFlag == 0) {
                 if ((fh.c(methodGuard ^ 107)) &&
-                    (kc.field_c == 0)) {
+                    (kc.sessionStartAttemptCount == 0)) {
                   newSessionTutorialModeFlag = 1;
                   if (clientControlFlowGuard == 0) {
                     break L47;
@@ -2221,7 +2221,7 @@ final class GameScreen extends MenuScreen {
                 }
               }
             }
-            kc.field_c = kc.field_c + 1;
+            kc.sessionStartAttemptCount = kc.sessionStartAttemptCount + 1;
             pg.resetGameplayDifficulty(methodGuard ^ -9410);
             el.gameplaySession = new GameplaySession(this.gameApplet, newSessionTutorialModeFlag != 0);
             PointerInputListener.a((byte) -39);

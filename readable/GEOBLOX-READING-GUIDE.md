@@ -7,9 +7,9 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-## Current readability (pass 96)
+## Current readability (pass 97)
 
-The export has 7,391 guarded names. All 303 sources compile, reproduce and
+The export has 7,482 guarded names. All 303 sources compile, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
 short-circuit guards for their original remainders, consuming 82 breaks and
 saving 219 lines. Menu hit-test trees preserve every strict boundary and
@@ -58,6 +58,51 @@ remain intact.
 
 `MenuScreen` handles selection and hit testing. Its overridden activation/input
 methods have matching names in `GameScreen`, preserving the virtual contracts.
+
+## Avatar ending state and branch snapshots
+
+Both avatar updaters now name every parameter/local, including all 67 shock/tint
+old-value snapshots. A `ShockTicksSnapshot` is copied before decrement; a
+`TintTicksSnapshot` likewise retains the old fade timer. `TintWithoutShockSnapshot`
+and `TintAfterShockSnapshot` belong to separate original shock alternatives.
+Gameplay prefixes `held`, `steered` and `stepped` distinguish the old frame-step
+countdown>=0 branch, the expired-timer direction!=1 branch and the shared remainder,
+respectively. Menu prefixes distinguish blink reset, steering, neutral and the
+original left-path fallback tests. Repeated or contradictory predicates remain;
+the renamer does not fold them or assume shared fields stay constant.
+
+`avatarCryPhase` starts at0; `avatarCryFrameCursor` starts at0. While the session
+ends, each blink-clock multiple of18 updates the cry sequence. Phase0 cycles the
+four begin frames until `endingEntityScanClear` permits a transition to1, resets
+the cursor, queues the existing sound and increments the cursor. Phase1 consumes
+middle frames until its length check fails, then increments the phase and sets
+feedback hold200. Other phase values cycle the four end frames. Negative cursors,
+integer overflow, null arrays and external phase values keep their original behavior.
+
+`fc.advanceEndingEntityAnimations` sets `endingEntityScanClear=true`, scans attached
+entities before transient entities and advances each with the original true argument.
+Observing attached kind6 or transient kind5/7/8 clears the flag, including when that
+entity reaches frame>=3 and joins the available queue in the same pass. The flag
+describes this scan, not empty queues. Guard arithmetic occurs between the scans
+and can fail after attached effects. `od.isAvatarCryHoldExpired` returns true only
+for phase2 and hold<0; its wrong guard still clears its unrelated static string.
+The session checks the prior scan flag, cry hold and sceneAnimationTick>1000
+before advancing the next scan/avatar update.
+
+`kc.sessionStartAttemptCount` increments before difficulty reset and constructing
+the next session; failure after that write does not roll it back. Its zero check
+participates in the first-session tutorial decision. Board reconciliation's catch
+aliases also have names, completing every parameter/local in that method.
+`detachKeyboardListener` removes the key listener outside its catch, then only
+guard0 removes the focus listener and writes the keyboard-reset sentinel. Guarded
+static cleanup evaluates its residue before clearing its text reference.
+
+The existing gameplay probe preserves active-session animation oracles and all
+its pinned traces. It sets sessionEnding=false, so it does not prove the complete
+cry/ending scan/exit sequence. No new runtime coverage is claimed. Compilation,
+binding comparison, reproduction and reversal preserve both303-file corpora.
+Repeated tails still have distinct local bindings; simplifying them requires a
+separate structural proof, including partial effects if a sprite or sound fails.
 
 ## Client/session completion and public control flag
 
