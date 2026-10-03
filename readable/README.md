@@ -2,7 +2,7 @@
 
 The current export has 6,081 guarded naming rules: 59 classes, 767 fields,
 547 methods, 1,615 parameters and 3,093 local declarations. Both 303-file corpora
-compile, preserving 138,558 bindings and 388 override relationships. Unknown
+compile, preserving 138,519 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
 ## One current manifest
@@ -21,17 +21,17 @@ tool bytes; `funorb-stubs.jar` is the frozen compilation dependency. The
 [reading guide](GEOBLOX-READING-GUIDE.md) explains the named gameplay flow.
 
 The raw input is `games/geoblox` at
-`2fc0a44e10f161f82554e2652b0f4e025c997c34`. It comes from java-tools
-`57969c34c9be16cd7dfaaa691774b95dbeaa2c5b` and Deko
+`f31e2a033e8b343453d3a717ac15f104435ab2df`. It comes from java-tools
+`73b2571fd252aaef9c8552d5d72416be9632d5ab` and Deko
 `a572c4dd0f0174bfcd7777be53d7ceba2f970f18`. The adapted naming tool is
 `a0bc835957148b9b1e1f8221c59b79d899d22738`; its source archive SHA-256 is
 `cb10756aa3ecb28159c9b81f2fb78bf559b4111d9ad203819458b30d0d84cf8c`.
 
 The **decompiler repository source** SHA-256 is
-`8c17ad8f1c1eedc51941af4d35064fed2c7b1f8bb73a8c4909a2744fb923e1ce`:
+`8c8d1fd40c52f3f831bdc78cb7295df688c7b544722030f93bde71638c3cd31a`:
 
 ```sh
-git archive --format=tar 57969c34c9be16cd7dfaaa691774b95dbeaa2c5b | sha256sum
+git archive --format=tar 73b2571fd252aaef9c8552d5d72416be9632d5ab | sha256sum
 ```
 
 This identifies tracked decompiler source and its Git archive metadata. It is
@@ -54,7 +54,39 @@ smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
 
-## Current Bzip2 block, table and run names
+## Current shared cleanup through an existing exit block
+
+Pass 76 regenerates the raw source using the generic java-tools renderer.
+`Bzip2Decoder.emitBlockRuns` replaces one duplicate state-publication-and-return
+tail with `break L1`, reaching the identical tail after that existing plain
+block. This removes thirteen lines, reducing the raw corpus from 80,470 to
+80,457 lines. No label frame or helper is added. The other 302 files and the
+decompiler diagnostics are unchanged; the large labeled body still remains.
+
+The new rule matches exact tokens after local-variable scope normalization.
+It can exit nested loops and labels through the existing destination, while
+refusing try/catch/finally, monitor and switch crossings. A candidate wholly
+inside a protected region or monitor retains both copies in that region.
+Inner shadows, tail declarations, unsupported syntax, Unicode escapes and
+comments refuse the transformation. Method locals declared before the block
+retain their shared enclosing identity.
+
+`node test/javaAstEmitterLoopExits.test.js` passes 38 groups, including two
+new groups and 2,048 native comparisons of loop effects, protected/monitor
+ownership, failure order, throwable identity, shadows and enclosing locals.
+`node test/cfrExceptionLoopExits.test.js` passes eight groups. A clean Git
+source archive regenerates all 303 Java files and diagnostics byte-for-byte.
+
+All 6,081 previous complete naming rules survive without ordinal migrations.
+The current manifest records the explicit raw/source-generator change and an
+empty `ruleChanges` list. It applies 49,580 edits; 39 redundant references are
+removed, 38 of which previously received names. Both corpora compile, preserving
+138,519 bindings and 388 overrides. Reproduction/reversal are byte-exact, and
+all nine existing native helper traces retain their pins, including the Bzip2
+40-case matrix. Full assets/gameplay, concurrency, remaining opaque helpers/
+large bodies and browser/phone memory/startup/FPS behavior remain unverified.
+
+## Previous Bzip2 block, table and run names
 
 Pass 75 adds 99 guarded identities: 24 fields, four methods, ten parameters
 and 61 locals. Every `Bzip2Decoder` declaration, parameter and local now has
@@ -1350,9 +1382,8 @@ byte-for-byte. Previous integral-sign and literal-shift cleanup remains, with
 its historical proof recorded in the raw provenance. Current source/decompiler
 identity and naming migrations live in the single manifest. `ruleChanges`
 records naming changes; `sourceChange` is recorded when input identity changes.
-The latest structural pass records its source migration in Git. The current
-naming-only pass retains those source pins and records its 99 additions in
-`ruleChanges`; every prior guarded rule is retained.
+The current structural pass records its source migration in `sourceChange`
+and retains all 6,081 complete rules with an empty `ruleChanges` list.
 All six native probe sources and their traces are pinned in
 the same manifest; no JSON snapshots are added.
 
@@ -1375,7 +1406,7 @@ the same manifest; no JSON snapshots are added.
 
 | Java source tree | SHA-256 |
 | --- | --- |
-| Raw | `39be3539b43d7acc9540acca49e7b6378cdb233908092706646df4c2cdc6a8fe` |
-| Readable | `f66bbb75f86589049ec4c6eb4cc95eb8f131f414b642176c0fe6cd4a12c5a40a` |
+| Raw | `30d4aa4f3db79e67862d7f59381af8fd20ed178a3acf9c9b7ead4a3a4de94638` |
+| Readable | `08bae78e263190ad7ca2b50c2f8eae36226f8e284b97a736a735c66e5aafa5c4` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

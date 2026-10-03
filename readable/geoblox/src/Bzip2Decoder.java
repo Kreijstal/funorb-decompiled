@@ -543,20 +543,7 @@ final class Bzip2Decoder {
               if (remainingRunLength > 0) {
                 L3: while (true) {
                   if (remainingOutputBytes == 0) {
-                    previousOutputBytesWritten = state.outputBytesWritten;
-                    state.outputBytesWritten = state.outputBytesWritten + (initialOutputAllowance - remainingOutputBytes);
-                    if (state.outputBytesWritten >= previousOutputBytesWritten) {
-                    }
-                    state.pendingRunByte = (byte) runByte;
-                    state.pendingRunLength = remainingRunLength;
-                    state.blockBytesConsumed = blockBytesConsumed;
-                    state.currentByte = currentByte;
-                    kb.bzip2TransformTable = transformTable;
-                    state.transformPositionOrEntry = transformPositionOrEntry;
-                    state.outputBytes = outputBytes;
-                    state.outputPosition = outputPosition;
-                    state.remainingOutputBytes = remainingOutputBytes;
-                    return;
+                    break L1;
                   }
                   if (remainingRunLength != 1) {
                     outputBytes[outputPosition] = (byte)runByte;

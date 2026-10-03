@@ -2652,3 +2652,35 @@ randomized-stream handling, shared-state concurrency, live asset compatibility
 or whole-game/device behavior. Remaining large labeled bodies and opaque
 static helpers still need work; the memory, startup and FPS targets remain
 unverified.
+
+## Shared Bzip2 output cleanup through an existing exit (pass 76)
+
+`emitBlockRuns` previously published the same output state and returned in two
+places. When the destination filled with a pending run, an inner loop repeated
+the publication tail. The same tail already followed its enclosing `L1` block.
+The early path now uses `break L1`, skipping the remaining decoding work and
+reaching that existing tail. The pending run, byte consumption, current byte,
+transform-table alias/cursor, output position/allowance and byte counter are
+published in the same order, once on either path. Empty overflow checks remain.
+
+The generic java-tools renderer makes this change after reconstructing local
+scopes. Exact terminal token sequences must match, the existing destination
+must be a plain labeled block, and inner declarations cannot shadow names in
+the tail. Nested loops/labels are transparent to the exit; try/catch/finally,
+monitor and switch boundaries are opaque. No new label frame, helper method
+or dispatcher is introduced. The large loop/label structure still needs work.
+
+This removes thirteen raw/readable source lines and 39 binding references,
+38 of which received semantic names. All 19,558 declarations and all 6,081
+complete rules survive without ordinal migration. The current 49,580 naming
+edits preserve 138,519 bindings and 388 overrides. The other 302 Java files
+and diagnostics are unchanged; the single manifest records the new source and
+decompiler pins explicitly.
+
+The generic emitter has 2,048 additional native comparisons covering loop
+effects, protected/monitor ownership, failure order, throwable identity and
+scope refusals. The actual GeoBlox native/raw/readable Bzip2 matrix retains its
+40-case trace, as do the eight other existing helper traces. Clean decompiler
+source-archive regeneration, readable reproduction and dictionary reversal are
+byte-exact. These checks do not establish full asset/gameplay, concurrency or
+phone memory/startup/FPS acceptance.

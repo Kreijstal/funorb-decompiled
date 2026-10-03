@@ -4,10 +4,10 @@
   "purpose": "Offline readable source mirror; not a runtime patch",
   "source": {
     "repository": "Kreijstal/funorb-decompiled",
-    "commit": "2fc0a44e10f161f82554e2652b0f4e025c997c34",
+    "commit": "f31e2a033e8b343453d3a717ac15f104435ab2df",
     "subdirectory": "games/geoblox"
   },
-  "inputTreeSha256": "39be3539b43d7acc9540acca49e7b6378cdb233908092706646df4c2cdc6a8fe",
+  "inputTreeSha256": "30d4aa4f3db79e67862d7f59381af8fd20ed178a3acf9c9b7ead4a3a4de94638",
   "namingPolicy": "Confirmed semantic names without opaque suffixes; unknown symbols stay unchanged. Original spellings and JVM identities remain in the reverse symbol map. Every rule guards the original spelling. Local identities also use declaration ordinals; reused variables retain all supported roles. Numeric screen/action IDs and decompiler state remain unchanged.",
   "renames": [
     {
@@ -36497,19 +36497,19 @@
       "evidence": "Input source audit: wl queues translated key presses/typed characters and encoded releases; re.b(Z)V replays held-key changes and snapshots the keyboard-event frame end; hh.a(I)Z polls that frame. le AWT mouse/focus callbacks update live pointer state; mc.a(B)V copies it under the listener monitor and consumes pending presses/activity. Numeric internal codes,128-slot queues,112 held-key flags,guards,handlers and original diagnostic strings remain. The2184-case native matrix checks controlled-event/queue scopes; real concurrent AWT delivery and complete gameplay remain unverified."
     }
   ],
-  "revision": 4,
-  "version": 75,
+  "revision": 5,
+  "version": 76,
   "generators": {
     "dekoblokoWork": {
       "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "57969c34c9be16cd7dfaaa691774b95dbeaa2c5b",
+      "commit": "73b2571fd252aaef9c8552d5d72416be9632d5ab",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "8c17ad8f1c1eedc51941af4d35064fed2c7b1f8bb73a8c4909a2744fb923e1ce",
-        "reproduce": "git archive --format=tar 57969c34c9be16cd7dfaaa691774b95dbeaa2c5b | sha256sum",
+        "sha256": "8c8d1fd40c52f3f831bdc78cb7295df688c7b544722030f93bde71638c3cd31a",
+        "reproduce": "git archive --format=tar 73b2571fd252aaef9c8552d5d72416be9632d5ab | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
@@ -36518,1002 +36518,11 @@
   "publication": {
     "format": 1,
     "previousRules": {
-      "commit": "0a2e8e2083f2b99cec89c7bd7a4cfa88619c7f70",
+      "commit": "774ccaee4d2e2343b53a5037f43abe9c45c6dee5",
       "path": "readable/geoblox-rules.json",
-      "sha256": "b9d4ce38fa0ba8c77f624713424461dc9d5afacdebec30f46b1102e77cd90593"
+      "sha256": "056ee255fa8033b99eb4e495fa4737800dc05db3fefc356f3105758b405525bc"
     },
-    "ruleChanges": [
-      {
-        "symbol": "F:jl.field_D:I",
-        "before": null,
-        "after": {
-          "symbol": "F:jl.field_D:I",
-          "originalName": "field_D",
-          "to": "transformPositionOrEntry",
-          "evidence": "Inverse transform cursor. Initial block setup temporarily stores packed table entry before separating current byte and shifted next index; run emitter publishes next index. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "F:jl.field_E:[[I",
-        "before": null,
-        "after": {
-          "symbol": "F:jl.field_E:[[I",
-          "originalName": "field_E",
-          "to": "huffmanLimits",
-          "evidence": "Per-table maximum canonical code for each length; read loops extend bit count while code exceeds selected limit. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "F:jl.field_F:[I",
-        "before": null,
-        "after": {
-          "symbol": "F:jl.field_F:[I",
-          "originalName": "field_F",
-          "to": "byteBucketPositions",
-          "evidence": "257-entry prefix array initialized from byte frequencies and accumulated, then incremented as scatter cursors while upper transform links are installed. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "F:jl.field_G:I",
-        "before": null,
-        "after": {
-          "symbol": "F:jl.field_G:I",
-          "originalName": "field_G",
-          "to": "blockBytesConsumed",
-          "evidence": "Inverse-transform byte consumption count, starts1 after initial current byte and advances through values/run-count bytes until blockLength+1. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "F:jl.field_a:I",
-        "before": null,
-        "after": {
-          "symbol": "F:jl.field_a:I",
-          "originalName": "field_a",
-          "to": "alphabetSize",
-          "evidence": "Number of actual used bytes, reset/populated by buildByteAlphabet; Huffman alphabet size is count+2 and end symbol count+1. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "F:jl.field_b:[Z",
-        "before": null,
-        "after": {
-          "symbol": "F:jl.field_b:[Z",
-          "originalName": "field_b",
-          "to": "usedByteGroups",
-          "evidence": "Sixteen flags selecting which16-byte groups have per-byte in-use bits in the block header. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "F:jl.field_c:I",
-        "before": null,
-        "after": {
-          "symbol": "F:jl.field_c:I",
-          "originalName": "field_c",
-          "to": "currentByte",
-          "evidence": "Current signed byte extracted from packed inverse-transform entry and retained between partial run emissions. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "F:jl.field_d:I",
-        "before": null,
-        "after": {
-          "symbol": "F:jl.field_d:I",
-          "originalName": "field_d",
-          "to": "originalPointer",
-          "evidence": "24-bit BWT original-row pointer assembled from three unsigned bytes; indexes packed transform table to start inverse traversal. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "F:jl.field_e:[B",
-        "before": null,
-        "after": {
-          "symbol": "F:jl.field_e:[B",
-          "originalName": "field_e",
-          "to": "moveToFrontBytes",
-          "evidence": "4096-byte chunked MTF storage, initialized at high end in16 blocks of16 alphabet values; front movement uses block starts and rebuild at zero. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "F:jl.field_f:[[I",
-        "before": null,
-        "after": {
-          "symbol": "F:jl.field_f:[[I",
-          "originalName": "field_f",
-          "to": "huffmanBases",
-          "evidence": "Per-table canonical code offsets, built from code-length frequency prefixes and limit values; selected code-minus-base indexes symbols. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "F:jl.field_h:B",
-        "before": null,
-        "after": {
-          "symbol": "F:jl.field_h:B",
-          "originalName": "field_h",
-          "to": "pendingRunByte",
-          "evidence": "Run-emitter byte snapshot, initialized0 per block and published with pending run count on partial/end return. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "F:jl.field_k:I",
-        "before": null,
-        "after": {
-          "symbol": "F:jl.field_k:I",
-          "originalName": "field_k",
-          "to": "pendingRunLength",
-          "evidence": "Number of pending copies of pendingRunByte, initialized0 per block, decremented by emission and retained when destination fills. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "F:jl.field_l:[[I",
-        "before": null,
-        "after": {
-          "symbol": "F:jl.field_l:[[I",
-          "originalName": "field_l",
-          "to": "huffmanSymbols",
-          "evidence": "Canonical code-order symbol permutation, filled in increasing code length then original symbol index. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "F:jl.field_m:[I",
-        "before": null,
-        "after": {
-          "symbol": "F:jl.field_m:[I",
-          "originalName": "field_m",
-          "to": "byteFrequencies",
-          "evidence": "Per-byte frequencies of decoded BWT last column, reset per block and increased for ordinary MTF output or repeated front runs. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "F:jl.field_n:[Z",
-        "before": null,
-        "after": {
-          "symbol": "F:jl.field_n:[Z",
-          "originalName": "field_n",
-          "to": "usedBytes",
-          "evidence": "256-byte in-use bitmap cleared each block and set by bits for enabled groups; determines dense alphabet mapping. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "F:jl.field_o:I",
-        "before": null,
-        "after": {
-          "symbol": "F:jl.field_o:I",
-          "originalName": "field_o",
-          "to": "blockSize100k",
-          "evidence": "decodeBlocks forces1 before allocating absent transform workspace as value*100000; caller strips Bzh header and no size digit is read. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "F:jl.field_q:I",
-        "before": null,
-        "after": {
-          "symbol": "F:jl.field_q:I",
-          "originalName": "field_q",
-          "to": "blockLength",
-          "evidence": "Decoded BWT last-column length, assigned from blockLength local before run emission; consumed-end target is length+1. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "F:jl.field_r:[B",
-        "before": null,
-        "after": {
-          "symbol": "F:jl.field_r:[B",
-          "originalName": "field_r",
-          "to": "huffmanSelectors",
-          "evidence": "Decoded selector table IDs, obtained by MTF-decoding unary selector ranks; selects tables for each50-symbol group. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "F:jl.field_v:[[B",
-        "before": null,
-        "after": {
-          "symbol": "F:jl.field_v:[[B",
-          "originalName": "field_v",
-          "to": "huffmanCodeLengths",
-          "evidence": "Per-table code lengths for Huffman alphabet, read from initial5-bit length and two-bit increment/decrement sequence. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "F:jl.field_w:[I",
-        "before": null,
-        "after": {
-          "symbol": "F:jl.field_w:[I",
-          "originalName": "field_w",
-          "to": "minimumCodeLengths",
-          "evidence": "Per-table minimum code length, assigned after scanning its Huffman lengths and used as initial symbol bit count. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "F:jl.field_x:[B",
-        "before": null,
-        "after": {
-          "symbol": "F:jl.field_x:[B",
-          "originalName": "field_x",
-          "to": "alphabetBytes",
-          "evidence": "Dense alphabet-index to actual byte mapping built from usedBytes in ascending0..255 order. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "F:jl.field_y:[I",
-        "before": null,
-        "after": {
-          "symbol": "F:jl.field_y:[I",
-          "originalName": "field_y",
-          "to": "moveToFrontBlockStarts",
-          "evidence": "Sixteen MTF chunk origins into4096-byte storage, adjusted during front movement and republished by storage rebuild. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "F:jl.field_z:[B",
-        "before": null,
-        "after": {
-          "symbol": "F:jl.field_z:[B",
-          "originalName": "field_z",
-          "to": "selectorMoveToFrontValues",
-          "evidence": "Unary ranks read for each selector and MTF-decoded into huffmanSelectors. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "F:kb.field_a:[I",
-        "before": null,
-        "after": {
-          "symbol": "F:kb.field_a:[I",
-          "originalName": "field_a",
-          "to": "bzip2TransformTable",
-          "evidence": "Shared int workspace, allocated once when absent. Low bytes hold BWT last column; upper bits hold scatter-installed row links for inverse traversal. Original kb cleanup clears it, and emitter retains aliases and republishes snapshot without new ownership rules. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.a([I[I[I[BIII)V#0",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.a([I[I[I[BIII)V#0",
-          "originalName": "var9",
-          "to": "symbolIndex",
-          "evidence": "Populate symbols by increasing code length then symbol index; count lengths+1 into bases, prefix sum23 entries, zero limits, compute highest canonical code per length by counts/left shifts, then convert bases to code offsets. Retain byte-signed length indexing, exact23 bounds and arithmetic order. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.a([I[I[I[BIII)V#1",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.a([I[I[I[BIII)V#1",
-          "originalName": "dupTemp$0",
-          "to": "lengthBucketIndex",
-          "evidence": "Populate symbols by increasing code length then symbol index; count lengths+1 into bases, prefix sum23 entries, zero limits, compute highest canonical code per length by counts/left shifts, then convert bases to code offsets. Retain byte-signed length indexing, exact23 bounds and arithmetic order. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.a([I[I[I[BIII)V#2",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.a([I[I[I[BIII)V#2",
-          "originalName": "var7",
-          "to": "symbolWritePosition",
-          "evidence": "Populate symbols by increasing code length then symbol index; count lengths+1 into bases, prefix sum23 entries, zero limits, compute highest canonical code per length by counts/left shifts, then convert bases to code offsets. Retain byte-signed length indexing, exact23 bounds and arithmetic order. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.a([I[I[I[BIII)V#3",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.a([I[I[I[BIII)V#3",
-          "originalName": "var8",
-          "to": "tableIndexOrCodeLength",
-          "evidence": "Populate symbols by increasing code length then symbol index; count lengths+1 into bases, prefix sum23 entries, zero limits, compute highest canonical code per length by counts/left shifts, then convert bases to code offsets. Retain byte-signed length indexing, exact23 bounds and arithmetic order. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.a([I[I[I[BIII)V#4",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.a([I[I[I[BIII)V#4",
-          "originalName": "var10",
-          "to": "nextCode",
-          "evidence": "Populate symbols by increasing code length then symbol index; count lengths+1 into bases, prefix sum23 entries, zero limits, compute highest canonical code per length by counts/left shifts, then convert bases to code offsets. Retain byte-signed length indexing, exact23 bounds and arithmetic order. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.c(Ljl;)V#0",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.c(Ljl;)V#0",
-          "originalName": "var1",
-          "to": "byteValue",
-          "evidence": "Reset alphabetSize0, scan all256 in-use flags and store byte-narrowed ascending values in alphabetBytes. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.d(Ljl;)V#0",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.d(Ljl;)V#0",
-          "originalName": "var1",
-          "to": "nextByteOrRunCount",
-          "evidence": "Snapshot pending run/current byte/consumption and shared packed table/output state. Traverse inverse links, recognize one/two/three repeats or fourth-byte run count+4, and emit until block end or destination allowance exhausted. Preserve all partial exits, signed bytes versus unsigned run count, empty overflow check and duplicate publication tails. Publish run/cursor/counters/table/output aliases at original points; nextByteOrRunCount and transformPositionOrEntry retain packed/reused roles. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.d(Ljl;)V#1",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.d(Ljl;)V#1",
-          "originalName": "var2",
-          "to": "runByte",
-          "evidence": "Snapshot pending run/current byte/consumption and shared packed table/output state. Traverse inverse links, recognize one/two/three repeats or fourth-byte run count+4, and emit until block end or destination allowance exhausted. Preserve all partial exits, signed bytes versus unsigned run count, empty overflow check and duplicate publication tails. Publish run/cursor/counters/table/output aliases at original points; nextByteOrRunCount and transformPositionOrEntry retain packed/reused roles. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.d(Ljl;)V#10",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.d(Ljl;)V#10",
-          "originalName": "var11",
-          "to": "initialOutputAllowance",
-          "evidence": "Snapshot pending run/current byte/consumption and shared packed table/output state. Traverse inverse links, recognize one/two/three repeats or fourth-byte run count+4, and emit until block end or destination allowance exhausted. Preserve all partial exits, signed bytes versus unsigned run count, empty overflow check and duplicate publication tails. Publish run/cursor/counters/table/output aliases at original points; nextByteOrRunCount and transformPositionOrEntry retain packed/reused roles. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.d(Ljl;)V#11",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.d(Ljl;)V#11",
-          "originalName": "var12",
-          "to": "blockEndPosition",
-          "evidence": "Snapshot pending run/current byte/consumption and shared packed table/output state. Traverse inverse links, recognize one/two/three repeats or fourth-byte run count+4, and emit until block end or destination allowance exhausted. Preserve all partial exits, signed bytes versus unsigned run count, empty overflow check and duplicate publication tails. Publish run/cursor/counters/table/output aliases at original points; nextByteOrRunCount and transformPositionOrEntry retain packed/reused roles. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.d(Ljl;)V#12",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.d(Ljl;)V#12",
-          "originalName": "var13",
-          "to": "previousOutputBytesWritten",
-          "evidence": "Snapshot pending run/current byte/consumption and shared packed table/output state. Traverse inverse links, recognize one/two/three repeats or fourth-byte run count+4, and emit until block end or destination allowance exhausted. Preserve all partial exits, signed bytes versus unsigned run count, empty overflow check and duplicate publication tails. Publish run/cursor/counters/table/output aliases at original points; nextByteOrRunCount and transformPositionOrEntry retain packed/reused roles. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.d(Ljl;)V#13",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.d(Ljl;)V#13",
-          "originalName": "var14",
-          "to": "transformTableAlias",
-          "evidence": "Snapshot pending run/current byte/consumption and shared packed table/output state. Traverse inverse links, recognize one/two/three repeats or fourth-byte run count+4, and emit until block end or destination allowance exhausted. Preserve all partial exits, signed bytes versus unsigned run count, empty overflow check and duplicate publication tails. Publish run/cursor/counters/table/output aliases at original points; nextByteOrRunCount and transformPositionOrEntry retain packed/reused roles. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.d(Ljl;)V#14",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.d(Ljl;)V#14",
-          "originalName": "var15",
-          "to": "sharedTransformTableSnapshot",
-          "evidence": "Snapshot pending run/current byte/consumption and shared packed table/output state. Traverse inverse links, recognize one/two/three repeats or fourth-byte run count+4, and emit until block end or destination allowance exhausted. Preserve all partial exits, signed bytes versus unsigned run count, empty overflow check and duplicate publication tails. Publish run/cursor/counters/table/output aliases at original points; nextByteOrRunCount and transformPositionOrEntry retain packed/reused roles. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.d(Ljl;)V#2",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.d(Ljl;)V#2",
-          "originalName": "var3",
-          "to": "remainingRunLength",
-          "evidence": "Snapshot pending run/current byte/consumption and shared packed table/output state. Traverse inverse links, recognize one/two/three repeats or fourth-byte run count+4, and emit until block end or destination allowance exhausted. Preserve all partial exits, signed bytes versus unsigned run count, empty overflow check and duplicate publication tails. Publish run/cursor/counters/table/output aliases at original points; nextByteOrRunCount and transformPositionOrEntry retain packed/reused roles. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.d(Ljl;)V#3",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.d(Ljl;)V#3",
-          "originalName": "var4",
-          "to": "blockBytesConsumed",
-          "evidence": "Snapshot pending run/current byte/consumption and shared packed table/output state. Traverse inverse links, recognize one/two/three repeats or fourth-byte run count+4, and emit until block end or destination allowance exhausted. Preserve all partial exits, signed bytes versus unsigned run count, empty overflow check and duplicate publication tails. Publish run/cursor/counters/table/output aliases at original points; nextByteOrRunCount and transformPositionOrEntry retain packed/reused roles. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.d(Ljl;)V#4",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.d(Ljl;)V#4",
-          "originalName": "var5",
-          "to": "currentByte",
-          "evidence": "Snapshot pending run/current byte/consumption and shared packed table/output state. Traverse inverse links, recognize one/two/three repeats or fourth-byte run count+4, and emit until block end or destination allowance exhausted. Preserve all partial exits, signed bytes versus unsigned run count, empty overflow check and duplicate publication tails. Publish run/cursor/counters/table/output aliases at original points; nextByteOrRunCount and transformPositionOrEntry retain packed/reused roles. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.d(Ljl;)V#5",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.d(Ljl;)V#5",
-          "originalName": "var6",
-          "to": "transformTable",
-          "evidence": "Snapshot pending run/current byte/consumption and shared packed table/output state. Traverse inverse links, recognize one/two/three repeats or fourth-byte run count+4, and emit until block end or destination allowance exhausted. Preserve all partial exits, signed bytes versus unsigned run count, empty overflow check and duplicate publication tails. Publish run/cursor/counters/table/output aliases at original points; nextByteOrRunCount and transformPositionOrEntry retain packed/reused roles. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.d(Ljl;)V#6",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.d(Ljl;)V#6",
-          "originalName": "var7",
-          "to": "transformPositionOrEntry",
-          "evidence": "Snapshot pending run/current byte/consumption and shared packed table/output state. Traverse inverse links, recognize one/two/three repeats or fourth-byte run count+4, and emit until block end or destination allowance exhausted. Preserve all partial exits, signed bytes versus unsigned run count, empty overflow check and duplicate publication tails. Publish run/cursor/counters/table/output aliases at original points; nextByteOrRunCount and transformPositionOrEntry retain packed/reused roles. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.d(Ljl;)V#7",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.d(Ljl;)V#7",
-          "originalName": "var8",
-          "to": "outputBytes",
-          "evidence": "Snapshot pending run/current byte/consumption and shared packed table/output state. Traverse inverse links, recognize one/two/three repeats or fourth-byte run count+4, and emit until block end or destination allowance exhausted. Preserve all partial exits, signed bytes versus unsigned run count, empty overflow check and duplicate publication tails. Publish run/cursor/counters/table/output aliases at original points; nextByteOrRunCount and transformPositionOrEntry retain packed/reused roles. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.d(Ljl;)V#8",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.d(Ljl;)V#8",
-          "originalName": "var9",
-          "to": "outputPosition",
-          "evidence": "Snapshot pending run/current byte/consumption and shared packed table/output state. Traverse inverse links, recognize one/two/three repeats or fourth-byte run count+4, and emit until block end or destination allowance exhausted. Preserve all partial exits, signed bytes versus unsigned run count, empty overflow check and duplicate publication tails. Publish run/cursor/counters/table/output aliases at original points; nextByteOrRunCount and transformPositionOrEntry retain packed/reused roles. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.d(Ljl;)V#9",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.d(Ljl;)V#9",
-          "originalName": "var10",
-          "to": "remainingOutputBytes",
-          "evidence": "Snapshot pending run/current byte/consumption and shared packed table/output state. Traverse inverse links, recognize one/two/three repeats or fourth-byte run count+4, and emit until block end or destination allowance exhausted. Preserve all partial exits, signed bytes versus unsigned run count, empty overflow check and duplicate publication tails. Publish run/cursor/counters/table/output aliases at original points; nextByteOrRunCount and transformPositionOrEntry retain packed/reused roles. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.e(Ljl;)V#0",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.e(Ljl;)V#0",
-          "originalName": "dupTemp$1",
-          "to": "transformBucketPosition",
-          "evidence": "Read header bytes/bit without new validation, early-return on first marker23; force100k workspace. Build used-byte alphabet, unary/MTF selectors and canonical Huffman tables. Decode groups of50 symbols with selected limit/base/permutation. RUNA/RUNB accumulate weighted front-symbol repeats; ordinary symbols shift chunked MTF list, preserving unrolled moves and rebuild order. Count last-column byte frequencies, scatter packed inverse links through bucket cursors, initialize original-pointer traversal and emitBlockRuns. Int continuation1/0 selects another block only when consumed==length+1 and no pending run. index serves byte-group, byte, selector, symbol and BWT loops; byteOrBitValue serves header bits, alphabet/MTF bytes and literals. Other reused roles and selector array aliases are explicit; no lifetime splitting, label restructuring or algorithm changes. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.e(Ljl;)V#1",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.e(Ljl;)V#1",
-          "originalName": "dupTemp$0",
-          "to": "frequencyByteValue",
-          "evidence": "Read header bytes/bit without new validation, early-return on first marker23; force100k workspace. Build used-byte alphabet, unary/MTF selectors and canonical Huffman tables. Decode groups of50 symbols with selected limit/base/permutation. RUNA/RUNB accumulate weighted front-symbol repeats; ordinary symbols shift chunked MTF list, preserving unrolled moves and rebuild order. Count last-column byte frequencies, scatter packed inverse links through bucket cursors, initialize original-pointer traversal and emitBlockRuns. Int continuation1/0 selects another block only when consumed==length+1 and no pending run. index serves byte-group, byte, selector, symbol and BWT loops; byteOrBitValue serves header bits, alphabet/MTF bytes and literals. Other reused roles and selector array aliases are explicit; no lifetime splitting, label restructuring or algorithm changes. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.e(Ljl;)V#10",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.e(Ljl;)V#10",
-          "originalName": "var9",
-          "to": "selectorCount",
-          "evidence": "Read header bytes/bit without new validation, early-return on first marker23; force100k workspace. Build used-byte alphabet, unary/MTF selectors and canonical Huffman tables. Decode groups of50 symbols with selected limit/base/permutation. RUNA/RUNB accumulate weighted front-symbol repeats; ordinary symbols shift chunked MTF list, preserving unrolled moves and rebuild order. Count last-column byte frequencies, scatter packed inverse links through bucket cursors, initialize original-pointer traversal and emitBlockRuns. Int continuation1/0 selects another block only when consumed==length+1 and no pending run. index serves byte-group, byte, selector, symbol and BWT loops; byteOrBitValue serves header bits, alphabet/MTF bytes and literals. Other reused roles and selector array aliases are explicit; no lifetime splitting, label restructuring or algorithm changes. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.e(Ljl;)V#11",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.e(Ljl;)V#11",
-          "originalName": "var10",
-          "to": "endOfBlockSymbol",
-          "evidence": "Read header bytes/bit without new validation, early-return on first marker23; force100k workspace. Build used-byte alphabet, unary/MTF selectors and canonical Huffman tables. Decode groups of50 symbols with selected limit/base/permutation. RUNA/RUNB accumulate weighted front-symbol repeats; ordinary symbols shift chunked MTF list, preserving unrolled moves and rebuild order. Count last-column byte frequencies, scatter packed inverse links through bucket cursors, initialize original-pointer traversal and emitBlockRuns. Int continuation1/0 selects another block only when consumed==length+1 and no pending run. index serves byte-group, byte, selector, symbol and BWT loops; byteOrBitValue serves header bits, alphabet/MTF bytes and literals. Other reused roles and selector array aliases are explicit; no lifetime splitting, label restructuring or algorithm changes. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.e(Ljl;)V#12",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.e(Ljl;)V#12",
-          "originalName": "var11",
-          "to": "selectorIndex",
-          "evidence": "Read header bytes/bit without new validation, early-return on first marker23; force100k workspace. Build used-byte alphabet, unary/MTF selectors and canonical Huffman tables. Decode groups of50 symbols with selected limit/base/permutation. RUNA/RUNB accumulate weighted front-symbol repeats; ordinary symbols shift chunked MTF list, preserving unrolled moves and rebuild order. Count last-column byte frequencies, scatter packed inverse links through bucket cursors, initialize original-pointer traversal and emitBlockRuns. Int continuation1/0 selects another block only when consumed==length+1 and no pending run. index serves byte-group, byte, selector, symbol and BWT loops; byteOrBitValue serves header bits, alphabet/MTF bytes and literals. Other reused roles and selector array aliases are explicit; no lifetime splitting, label restructuring or algorithm changes. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.e(Ljl;)V#13",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.e(Ljl;)V#13",
-          "originalName": "var12",
-          "to": "symbolsRemainingInGroup",
-          "evidence": "Read header bytes/bit without new validation, early-return on first marker23; force100k workspace. Build used-byte alphabet, unary/MTF selectors and canonical Huffman tables. Decode groups of50 symbols with selected limit/base/permutation. RUNA/RUNB accumulate weighted front-symbol repeats; ordinary symbols shift chunked MTF list, preserving unrolled moves and rebuild order. Count last-column byte frequencies, scatter packed inverse links through bucket cursors, initialize original-pointer traversal and emitBlockRuns. Int continuation1/0 selects another block only when consumed==length+1 and no pending run. index serves byte-group, byte, selector, symbol and BWT loops; byteOrBitValue serves header bits, alphabet/MTF bytes and literals. Other reused roles and selector array aliases are explicit; no lifetime splitting, label restructuring or algorithm changes. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.e(Ljl;)V#14",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.e(Ljl;)V#14",
-          "originalName": "var13",
-          "to": "symbol",
-          "evidence": "Read header bytes/bit without new validation, early-return on first marker23; force100k workspace. Build used-byte alphabet, unary/MTF selectors and canonical Huffman tables. Decode groups of50 symbols with selected limit/base/permutation. RUNA/RUNB accumulate weighted front-symbol repeats; ordinary symbols shift chunked MTF list, preserving unrolled moves and rebuild order. Count last-column byte frequencies, scatter packed inverse links through bucket cursors, initialize original-pointer traversal and emitBlockRuns. Int continuation1/0 selects another block only when consumed==length+1 and no pending run. index serves byte-group, byte, selector, symbol and BWT loops; byteOrBitValue serves header bits, alphabet/MTF bytes and literals. Other reused roles and selector array aliases are explicit; no lifetime splitting, label restructuring or algorithm changes. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.e(Ljl;)V#15",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.e(Ljl;)V#15",
-          "originalName": "var14",
-          "to": "blockLength",
-          "evidence": "Read header bytes/bit without new validation, early-return on first marker23; force100k workspace. Build used-byte alphabet, unary/MTF selectors and canonical Huffman tables. Decode groups of50 symbols with selected limit/base/permutation. RUNA/RUNB accumulate weighted front-symbol repeats; ordinary symbols shift chunked MTF list, preserving unrolled moves and rebuild order. Count last-column byte frequencies, scatter packed inverse links through bucket cursors, initialize original-pointer traversal and emitBlockRuns. Int continuation1/0 selects another block only when consumed==length+1 and no pending run. index serves byte-group, byte, selector, symbol and BWT loops; byteOrBitValue serves header bits, alphabet/MTF bytes and literals. Other reused roles and selector array aliases are explicit; no lifetime splitting, label restructuring or algorithm changes. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.e(Ljl;)V#16",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.e(Ljl;)V#16",
-          "originalName": "var15",
-          "to": "runLength",
-          "evidence": "Read header bytes/bit without new validation, early-return on first marker23; force100k workspace. Build used-byte alphabet, unary/MTF selectors and canonical Huffman tables. Decode groups of50 symbols with selected limit/base/permutation. RUNA/RUNB accumulate weighted front-symbol repeats; ordinary symbols shift chunked MTF list, preserving unrolled moves and rebuild order. Count last-column byte frequencies, scatter packed inverse links through bucket cursors, initialize original-pointer traversal and emitBlockRuns. Int continuation1/0 selects another block only when consumed==length+1 and no pending run. index serves byte-group, byte, selector, symbol and BWT loops; byteOrBitValue serves header bits, alphabet/MTF bytes and literals. Other reused roles and selector array aliases are explicit; no lifetime splitting, label restructuring or algorithm changes. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.e(Ljl;)V#17",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.e(Ljl;)V#17",
-          "originalName": "var16",
-          "to": "runWeight",
-          "evidence": "Read header bytes/bit without new validation, early-return on first marker23; force100k workspace. Build used-byte alphabet, unary/MTF selectors and canonical Huffman tables. Decode groups of50 symbols with selected limit/base/permutation. RUNA/RUNB accumulate weighted front-symbol repeats; ordinary symbols shift chunked MTF list, preserving unrolled moves and rebuild order. Count last-column byte frequencies, scatter packed inverse links through bucket cursors, initialize original-pointer traversal and emitBlockRuns. Int continuation1/0 selects another block only when consumed==length+1 and no pending run. index serves byte-group, byte, selector, symbol and BWT loops; byteOrBitValue serves header bits, alphabet/MTF bytes and literals. Other reused roles and selector array aliases are explicit; no lifetime splitting, label restructuring or algorithm changes. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.e(Ljl;)V#18",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.e(Ljl;)V#18",
-          "originalName": "var17",
-          "to": "codeLength",
-          "evidence": "Read header bytes/bit without new validation, early-return on first marker23; force100k workspace. Build used-byte alphabet, unary/MTF selectors and canonical Huffman tables. Decode groups of50 symbols with selected limit/base/permutation. RUNA/RUNB accumulate weighted front-symbol repeats; ordinary symbols shift chunked MTF list, preserving unrolled moves and rebuild order. Count last-column byte frequencies, scatter packed inverse links through bucket cursors, initialize original-pointer traversal and emitBlockRuns. Int continuation1/0 selects another block only when consumed==length+1 and no pending run. index serves byte-group, byte, selector, symbol and BWT loops; byteOrBitValue serves header bits, alphabet/MTF bytes and literals. Other reused roles and selector array aliases are explicit; no lifetime splitting, label restructuring or algorithm changes. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.e(Ljl;)V#19",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.e(Ljl;)V#19",
-          "originalName": "var18",
-          "to": "currentCodeLength",
-          "evidence": "Read header bytes/bit without new validation, early-return on first marker23; force100k workspace. Build used-byte alphabet, unary/MTF selectors and canonical Huffman tables. Decode groups of50 symbols with selected limit/base/permutation. RUNA/RUNB accumulate weighted front-symbol repeats; ordinary symbols shift chunked MTF list, preserving unrolled moves and rebuild order. Count last-column byte frequencies, scatter packed inverse links through bucket cursors, initialize original-pointer traversal and emitBlockRuns. Int continuation1/0 selects another block only when consumed==length+1 and no pending run. index serves byte-group, byte, selector, symbol and BWT loops; byteOrBitValue serves header bits, alphabet/MTF bytes and literals. Other reused roles and selector array aliases are explicit; no lifetime splitting, label restructuring or algorithm changes. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.e(Ljl;)V#2",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.e(Ljl;)V#2",
-          "originalName": "var1",
-          "to": "byteOrBitValue",
-          "evidence": "Read header bytes/bit without new validation, early-return on first marker23; force100k workspace. Build used-byte alphabet, unary/MTF selectors and canonical Huffman tables. Decode groups of50 symbols with selected limit/base/permutation. RUNA/RUNB accumulate weighted front-symbol repeats; ordinary symbols shift chunked MTF list, preserving unrolled moves and rebuild order. Count last-column byte frequencies, scatter packed inverse links through bucket cursors, initialize original-pointer traversal and emitBlockRuns. Int continuation1/0 selects another block only when consumed==length+1 and no pending run. index serves byte-group, byte, selector, symbol and BWT loops; byteOrBitValue serves header bits, alphabet/MTF bytes and literals. Other reused roles and selector array aliases are explicit; no lifetime splitting, label restructuring or algorithm changes. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.e(Ljl;)V#20",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.e(Ljl;)V#20",
-          "originalName": "var19",
-          "to": "codeBits",
-          "evidence": "Read header bytes/bit without new validation, early-return on first marker23; force100k workspace. Build used-byte alphabet, unary/MTF selectors and canonical Huffman tables. Decode groups of50 symbols with selected limit/base/permutation. RUNA/RUNB accumulate weighted front-symbol repeats; ordinary symbols shift chunked MTF list, preserving unrolled moves and rebuild order. Count last-column byte frequencies, scatter packed inverse links through bucket cursors, initialize original-pointer traversal and emitBlockRuns. Int continuation1/0 selects another block only when consumed==length+1 and no pending run. index serves byte-group, byte, selector, symbol and BWT loops; byteOrBitValue serves header bits, alphabet/MTF bytes and literals. Other reused roles and selector array aliases are explicit; no lifetime splitting, label restructuring or algorithm changes. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.e(Ljl;)V#21",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.e(Ljl;)V#21",
-          "originalName": "var20",
-          "to": "nextCodeBit",
-          "evidence": "Read header bytes/bit without new validation, early-return on first marker23; force100k workspace. Build used-byte alphabet, unary/MTF selectors and canonical Huffman tables. Decode groups of50 symbols with selected limit/base/permutation. RUNA/RUNB accumulate weighted front-symbol repeats; ordinary symbols shift chunked MTF list, preserving unrolled moves and rebuild order. Count last-column byte frequencies, scatter packed inverse links through bucket cursors, initialize original-pointer traversal and emitBlockRuns. Int continuation1/0 selects another block only when consumed==length+1 and no pending run. index serves byte-group, byte, selector, symbol and BWT loops; byteOrBitValue serves header bits, alphabet/MTF bytes and literals. Other reused roles and selector array aliases are explicit; no lifetime splitting, label restructuring or algorithm changes. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.e(Ljl;)V#22",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.e(Ljl;)V#22",
-          "originalName": "var21",
-          "to": "selectedTableIndex",
-          "evidence": "Read header bytes/bit without new validation, early-return on first marker23; force100k workspace. Build used-byte alphabet, unary/MTF selectors and canonical Huffman tables. Decode groups of50 symbols with selected limit/base/permutation. RUNA/RUNB accumulate weighted front-symbol repeats; ordinary symbols shift chunked MTF list, preserving unrolled moves and rebuild order. Count last-column byte frequencies, scatter packed inverse links through bucket cursors, initialize original-pointer traversal and emitBlockRuns. Int continuation1/0 selects another block only when consumed==length+1 and no pending run. index serves byte-group, byte, selector, symbol and BWT loops; byteOrBitValue serves header bits, alphabet/MTF bytes and literals. Other reused roles and selector array aliases are explicit; no lifetime splitting, label restructuring or algorithm changes. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.e(Ljl;)V#23",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.e(Ljl;)V#23",
-          "originalName": "var22",
-          "to": "selectedMinimumCodeLength",
-          "evidence": "Read header bytes/bit without new validation, early-return on first marker23; force100k workspace. Build used-byte alphabet, unary/MTF selectors and canonical Huffman tables. Decode groups of50 symbols with selected limit/base/permutation. RUNA/RUNB accumulate weighted front-symbol repeats; ordinary symbols shift chunked MTF list, preserving unrolled moves and rebuild order. Count last-column byte frequencies, scatter packed inverse links through bucket cursors, initialize original-pointer traversal and emitBlockRuns. Int continuation1/0 selects another block only when consumed==length+1 and no pending run. index serves byte-group, byte, selector, symbol and BWT loops; byteOrBitValue serves header bits, alphabet/MTF bytes and literals. Other reused roles and selector array aliases are explicit; no lifetime splitting, label restructuring or algorithm changes. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.e(Ljl;)V#24",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.e(Ljl;)V#24",
-          "originalName": "var23",
-          "to": "selectedLimits",
-          "evidence": "Read header bytes/bit without new validation, early-return on first marker23; force100k workspace. Build used-byte alphabet, unary/MTF selectors and canonical Huffman tables. Decode groups of50 symbols with selected limit/base/permutation. RUNA/RUNB accumulate weighted front-symbol repeats; ordinary symbols shift chunked MTF list, preserving unrolled moves and rebuild order. Count last-column byte frequencies, scatter packed inverse links through bucket cursors, initialize original-pointer traversal and emitBlockRuns. Int continuation1/0 selects another block only when consumed==length+1 and no pending run. index serves byte-group, byte, selector, symbol and BWT loops; byteOrBitValue serves header bits, alphabet/MTF bytes and literals. Other reused roles and selector array aliases are explicit; no lifetime splitting, label restructuring or algorithm changes. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.e(Ljl;)V#25",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.e(Ljl;)V#25",
-          "originalName": "var24",
-          "to": "selectedBases",
-          "evidence": "Read header bytes/bit without new validation, early-return on first marker23; force100k workspace. Build used-byte alphabet, unary/MTF selectors and canonical Huffman tables. Decode groups of50 symbols with selected limit/base/permutation. RUNA/RUNB accumulate weighted front-symbol repeats; ordinary symbols shift chunked MTF list, preserving unrolled moves and rebuild order. Count last-column byte frequencies, scatter packed inverse links through bucket cursors, initialize original-pointer traversal and emitBlockRuns. Int continuation1/0 selects another block only when consumed==length+1 and no pending run. index serves byte-group, byte, selector, symbol and BWT loops; byteOrBitValue serves header bits, alphabet/MTF bytes and literals. Other reused roles and selector array aliases are explicit; no lifetime splitting, label restructuring or algorithm changes. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.e(Ljl;)V#26",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.e(Ljl;)V#26",
-          "originalName": "var25",
-          "to": "selectedSymbols",
-          "evidence": "Read header bytes/bit without new validation, early-return on first marker23; force100k workspace. Build used-byte alphabet, unary/MTF selectors and canonical Huffman tables. Decode groups of50 symbols with selected limit/base/permutation. RUNA/RUNB accumulate weighted front-symbol repeats; ordinary symbols shift chunked MTF list, preserving unrolled moves and rebuild order. Count last-column byte frequencies, scatter packed inverse links through bucket cursors, initialize original-pointer traversal and emitBlockRuns. Int continuation1/0 selects another block only when consumed==length+1 and no pending run. index serves byte-group, byte, selector, symbol and BWT loops; byteOrBitValue serves header bits, alphabet/MTF bytes and literals. Other reused roles and selector array aliases are explicit; no lifetime splitting, label restructuring or algorithm changes. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.e(Ljl;)V#27",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.e(Ljl;)V#27",
-          "originalName": "var26",
-          "to": "continueDecodingBlocks",
-          "evidence": "Read header bytes/bit without new validation, early-return on first marker23; force100k workspace. Build used-byte alphabet, unary/MTF selectors and canonical Huffman tables. Decode groups of50 symbols with selected limit/base/permutation. RUNA/RUNB accumulate weighted front-symbol repeats; ordinary symbols shift chunked MTF list, preserving unrolled moves and rebuild order. Count last-column byte frequencies, scatter packed inverse links through bucket cursors, initialize original-pointer traversal and emitBlockRuns. Int continuation1/0 selects another block only when consumed==length+1 and no pending run. index serves byte-group, byte, selector, symbol and BWT loops; byteOrBitValue serves header bits, alphabet/MTF bytes and literals. Other reused roles and selector array aliases are explicit; no lifetime splitting, label restructuring or algorithm changes. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.e(Ljl;)V#28",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.e(Ljl;)V#28",
-          "originalName": "var27_ref_byte__",
-          "to": "selectorOrderAlias",
-          "evidence": "Read header bytes/bit without new validation, early-return on first marker23; force100k workspace. Build used-byte alphabet, unary/MTF selectors and canonical Huffman tables. Decode groups of50 symbols with selected limit/base/permutation. RUNA/RUNB accumulate weighted front-symbol repeats; ordinary symbols shift chunked MTF list, preserving unrolled moves and rebuild order. Count last-column byte frequencies, scatter packed inverse links through bucket cursors, initialize original-pointer traversal and emitBlockRuns. Int continuation1/0 selects another block only when consumed==length+1 and no pending run. index serves byte-group, byte, selector, symbol and BWT loops; byteOrBitValue serves header bits, alphabet/MTF bytes and literals. Other reused roles and selector array aliases are explicit; no lifetime splitting, label restructuring or algorithm changes. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.e(Ljl;)V#29",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.e(Ljl;)V#29",
-          "originalName": "var27",
-          "to": "mtfBlockIndex",
-          "evidence": "Read header bytes/bit without new validation, early-return on first marker23; force100k workspace. Build used-byte alphabet, unary/MTF selectors and canonical Huffman tables. Decode groups of50 symbols with selected limit/base/permutation. RUNA/RUNB accumulate weighted front-symbol repeats; ordinary symbols shift chunked MTF list, preserving unrolled moves and rebuild order. Count last-column byte frequencies, scatter packed inverse links through bucket cursors, initialize original-pointer traversal and emitBlockRuns. Int continuation1/0 selects another block only when consumed==length+1 and no pending run. index serves byte-group, byte, selector, symbol and BWT loops; byteOrBitValue serves header bits, alphabet/MTF bytes and literals. Other reused roles and selector array aliases are explicit; no lifetime splitting, label restructuring or algorithm changes. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.e(Ljl;)V#3",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.e(Ljl;)V#3",
-          "originalName": "var2",
-          "to": "minimumCodeLength",
-          "evidence": "Read header bytes/bit without new validation, early-return on first marker23; force100k workspace. Build used-byte alphabet, unary/MTF selectors and canonical Huffman tables. Decode groups of50 symbols with selected limit/base/permutation. RUNA/RUNB accumulate weighted front-symbol repeats; ordinary symbols shift chunked MTF list, preserving unrolled moves and rebuild order. Count last-column byte frequencies, scatter packed inverse links through bucket cursors, initialize original-pointer traversal and emitBlockRuns. Int continuation1/0 selects another block only when consumed==length+1 and no pending run. index serves byte-group, byte, selector, symbol and BWT loops; byteOrBitValue serves header bits, alphabet/MTF bytes and literals. Other reused roles and selector array aliases are explicit; no lifetime splitting, label restructuring or algorithm changes. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.e(Ljl;)V#30",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.e(Ljl;)V#30",
-          "originalName": "var28",
-          "to": "selectorTableOrMtfByteIndex",
-          "evidence": "Read header bytes/bit without new validation, early-return on first marker23; force100k workspace. Build used-byte alphabet, unary/MTF selectors and canonical Huffman tables. Decode groups of50 symbols with selected limit/base/permutation. RUNA/RUNB accumulate weighted front-symbol repeats; ordinary symbols shift chunked MTF list, preserving unrolled moves and rebuild order. Count last-column byte frequencies, scatter packed inverse links through bucket cursors, initialize original-pointer traversal and emitBlockRuns. Int continuation1/0 selects another block only when consumed==length+1 and no pending run. index serves byte-group, byte, selector, symbol and BWT loops; byteOrBitValue serves header bits, alphabet/MTF bytes and literals. Other reused roles and selector array aliases are explicit; no lifetime splitting, label restructuring or algorithm changes. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.e(Ljl;)V#31",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.e(Ljl;)V#31",
-          "originalName": "var29",
-          "to": "selectorRankOrMtfWritePosition",
-          "evidence": "Read header bytes/bit without new validation, early-return on first marker23; force100k workspace. Build used-byte alphabet, unary/MTF selectors and canonical Huffman tables. Decode groups of50 symbols with selected limit/base/permutation. RUNA/RUNB accumulate weighted front-symbol repeats; ordinary symbols shift chunked MTF list, preserving unrolled moves and rebuild order. Count last-column byte frequencies, scatter packed inverse links through bucket cursors, initialize original-pointer traversal and emitBlockRuns. Int continuation1/0 selects another block only when consumed==length+1 and no pending run. index serves byte-group, byte, selector, symbol and BWT loops; byteOrBitValue serves header bits, alphabet/MTF bytes and literals. Other reused roles and selector array aliases are explicit; no lifetime splitting, label restructuring or algorithm changes. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.e(Ljl;)V#32",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.e(Ljl;)V#32",
-          "originalName": "var30",
-          "to": "mtfPosition",
-          "evidence": "Read header bytes/bit without new validation, early-return on first marker23; force100k workspace. Build used-byte alphabet, unary/MTF selectors and canonical Huffman tables. Decode groups of50 symbols with selected limit/base/permutation. RUNA/RUNB accumulate weighted front-symbol repeats; ordinary symbols shift chunked MTF list, preserving unrolled moves and rebuild order. Count last-column byte frequencies, scatter packed inverse links through bucket cursors, initialize original-pointer traversal and emitBlockRuns. Int continuation1/0 selects another block only when consumed==length+1 and no pending run. index serves byte-group, byte, selector, symbol and BWT loops; byteOrBitValue serves header bits, alphabet/MTF bytes and literals. Other reused roles and selector array aliases are explicit; no lifetime splitting, label restructuring or algorithm changes. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.e(Ljl;)V#33",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.e(Ljl;)V#33",
-          "originalName": "var31",
-          "to": "mtfBlockIndexForMove",
-          "evidence": "Read header bytes/bit without new validation, early-return on first marker23; force100k workspace. Build used-byte alphabet, unary/MTF selectors and canonical Huffman tables. Decode groups of50 symbols with selected limit/base/permutation. RUNA/RUNB accumulate weighted front-symbol repeats; ordinary symbols shift chunked MTF list, preserving unrolled moves and rebuild order. Count last-column byte frequencies, scatter packed inverse links through bucket cursors, initialize original-pointer traversal and emitBlockRuns. Int continuation1/0 selects another block only when consumed==length+1 and no pending run. index serves byte-group, byte, selector, symbol and BWT loops; byteOrBitValue serves header bits, alphabet/MTF bytes and literals. Other reused roles and selector array aliases are explicit; no lifetime splitting, label restructuring or algorithm changes. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.e(Ljl;)V#34",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.e(Ljl;)V#34",
-          "originalName": "var32",
-          "to": "mtfOffsetInBlock",
-          "evidence": "Read header bytes/bit without new validation, early-return on first marker23; force100k workspace. Build used-byte alphabet, unary/MTF selectors and canonical Huffman tables. Decode groups of50 symbols with selected limit/base/permutation. RUNA/RUNB accumulate weighted front-symbol repeats; ordinary symbols shift chunked MTF list, preserving unrolled moves and rebuild order. Count last-column byte frequencies, scatter packed inverse links through bucket cursors, initialize original-pointer traversal and emitBlockRuns. Int continuation1/0 selects another block only when consumed==length+1 and no pending run. index serves byte-group, byte, selector, symbol and BWT loops; byteOrBitValue serves header bits, alphabet/MTF bytes and literals. Other reused roles and selector array aliases are explicit; no lifetime splitting, label restructuring or algorithm changes. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.e(Ljl;)V#35",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.e(Ljl;)V#35",
-          "originalName": "var33",
-          "to": "mtfRank",
-          "evidence": "Read header bytes/bit without new validation, early-return on first marker23; force100k workspace. Build used-byte alphabet, unary/MTF selectors and canonical Huffman tables. Decode groups of50 symbols with selected limit/base/permutation. RUNA/RUNB accumulate weighted front-symbol repeats; ordinary symbols shift chunked MTF list, preserving unrolled moves and rebuild order. Count last-column byte frequencies, scatter packed inverse links through bucket cursors, initialize original-pointer traversal and emitBlockRuns. Int continuation1/0 selects another block only when consumed==length+1 and no pending run. index serves byte-group, byte, selector, symbol and BWT loops; byteOrBitValue serves header bits, alphabet/MTF bytes and literals. Other reused roles and selector array aliases are explicit; no lifetime splitting, label restructuring or algorithm changes. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.e(Ljl;)V#36",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.e(Ljl;)V#36",
-          "originalName": "var34",
-          "to": "mtfShiftPosition",
-          "evidence": "Read header bytes/bit without new validation, early-return on first marker23; force100k workspace. Build used-byte alphabet, unary/MTF selectors and canonical Huffman tables. Decode groups of50 symbols with selected limit/base/permutation. RUNA/RUNB accumulate weighted front-symbol repeats; ordinary symbols shift chunked MTF list, preserving unrolled moves and rebuild order. Count last-column byte frequencies, scatter packed inverse links through bucket cursors, initialize original-pointer traversal and emitBlockRuns. Int continuation1/0 selects another block only when consumed==length+1 and no pending run. index serves byte-group, byte, selector, symbol and BWT loops; byteOrBitValue serves header bits, alphabet/MTF bytes and literals. Other reused roles and selector array aliases are explicit; no lifetime splitting, label restructuring or algorithm changes. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.e(Ljl;)V#37",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.e(Ljl;)V#37",
-          "originalName": "var35",
-          "to": "mtfCursor",
-          "evidence": "Read header bytes/bit without new validation, early-return on first marker23; force100k workspace. Build used-byte alphabet, unary/MTF selectors and canonical Huffman tables. Decode groups of50 symbols with selected limit/base/permutation. RUNA/RUNB accumulate weighted front-symbol repeats; ordinary symbols shift chunked MTF list, preserving unrolled moves and rebuild order. Count last-column byte frequencies, scatter packed inverse links through bucket cursors, initialize original-pointer traversal and emitBlockRuns. Int continuation1/0 selects another block only when consumed==length+1 and no pending run. index serves byte-group, byte, selector, symbol and BWT loops; byteOrBitValue serves header bits, alphabet/MTF bytes and literals. Other reused roles and selector array aliases are explicit; no lifetime splitting, label restructuring or algorithm changes. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.e(Ljl;)V#38",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.e(Ljl;)V#38",
-          "originalName": "var36",
-          "to": "selectorOrder",
-          "evidence": "Read header bytes/bit without new validation, early-return on first marker23; force100k workspace. Build used-byte alphabet, unary/MTF selectors and canonical Huffman tables. Decode groups of50 symbols with selected limit/base/permutation. RUNA/RUNB accumulate weighted front-symbol repeats; ordinary symbols shift chunked MTF list, preserving unrolled moves and rebuild order. Count last-column byte frequencies, scatter packed inverse links through bucket cursors, initialize original-pointer traversal and emitBlockRuns. Int continuation1/0 selects another block only when consumed==length+1 and no pending run. index serves byte-group, byte, selector, symbol and BWT loops; byteOrBitValue serves header bits, alphabet/MTF bytes and literals. Other reused roles and selector array aliases are explicit; no lifetime splitting, label restructuring or algorithm changes. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.e(Ljl;)V#39",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.e(Ljl;)V#39",
-          "originalName": "var37",
-          "to": "allocatedSelectorOrder",
-          "evidence": "Read header bytes/bit without new validation, early-return on first marker23; force100k workspace. Build used-byte alphabet, unary/MTF selectors and canonical Huffman tables. Decode groups of50 symbols with selected limit/base/permutation. RUNA/RUNB accumulate weighted front-symbol repeats; ordinary symbols shift chunked MTF list, preserving unrolled moves and rebuild order. Count last-column byte frequencies, scatter packed inverse links through bucket cursors, initialize original-pointer traversal and emitBlockRuns. Int continuation1/0 selects another block only when consumed==length+1 and no pending run. index serves byte-group, byte, selector, symbol and BWT loops; byteOrBitValue serves header bits, alphabet/MTF bytes and literals. Other reused roles and selector array aliases are explicit; no lifetime splitting, label restructuring or algorithm changes. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.e(Ljl;)V#4",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.e(Ljl;)V#4",
-          "originalName": "var3",
-          "to": "maximumCodeLength",
-          "evidence": "Read header bytes/bit without new validation, early-return on first marker23; force100k workspace. Build used-byte alphabet, unary/MTF selectors and canonical Huffman tables. Decode groups of50 symbols with selected limit/base/permutation. RUNA/RUNB accumulate weighted front-symbol repeats; ordinary symbols shift chunked MTF list, preserving unrolled moves and rebuild order. Count last-column byte frequencies, scatter packed inverse links through bucket cursors, initialize original-pointer traversal and emitBlockRuns. Int continuation1/0 selects another block only when consumed==length+1 and no pending run. index serves byte-group, byte, selector, symbol and BWT loops; byteOrBitValue serves header bits, alphabet/MTF bytes and literals. Other reused roles and selector array aliases are explicit; no lifetime splitting, label restructuring or algorithm changes. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.e(Ljl;)V#5",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.e(Ljl;)V#5",
-          "originalName": "var4",
-          "to": "index",
-          "evidence": "Read header bytes/bit without new validation, early-return on first marker23; force100k workspace. Build used-byte alphabet, unary/MTF selectors and canonical Huffman tables. Decode groups of50 symbols with selected limit/base/permutation. RUNA/RUNB accumulate weighted front-symbol repeats; ordinary symbols shift chunked MTF list, preserving unrolled moves and rebuild order. Count last-column byte frequencies, scatter packed inverse links through bucket cursors, initialize original-pointer traversal and emitBlockRuns. Int continuation1/0 selects another block only when consumed==length+1 and no pending run. index serves byte-group, byte, selector, symbol and BWT loops; byteOrBitValue serves header bits, alphabet/MTF bytes and literals. Other reused roles and selector array aliases are explicit; no lifetime splitting, label restructuring or algorithm changes. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.e(Ljl;)V#6",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.e(Ljl;)V#6",
-          "originalName": "var5",
-          "to": "byteInGroupOrSelectorRank",
-          "evidence": "Read header bytes/bit without new validation, early-return on first marker23; force100k workspace. Build used-byte alphabet, unary/MTF selectors and canonical Huffman tables. Decode groups of50 symbols with selected limit/base/permutation. RUNA/RUNB accumulate weighted front-symbol repeats; ordinary symbols shift chunked MTF list, preserving unrolled moves and rebuild order. Count last-column byte frequencies, scatter packed inverse links through bucket cursors, initialize original-pointer traversal and emitBlockRuns. Int continuation1/0 selects another block only when consumed==length+1 and no pending run. index serves byte-group, byte, selector, symbol and BWT loops; byteOrBitValue serves header bits, alphabet/MTF bytes and literals. Other reused roles and selector array aliases are explicit; no lifetime splitting, label restructuring or algorithm changes. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.e(Ljl;)V#7",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.e(Ljl;)V#7",
-          "originalName": "var6",
-          "to": "huffmanTableIndex",
-          "evidence": "Read header bytes/bit without new validation, early-return on first marker23; force100k workspace. Build used-byte alphabet, unary/MTF selectors and canonical Huffman tables. Decode groups of50 symbols with selected limit/base/permutation. RUNA/RUNB accumulate weighted front-symbol repeats; ordinary symbols shift chunked MTF list, preserving unrolled moves and rebuild order. Count last-column byte frequencies, scatter packed inverse links through bucket cursors, initialize original-pointer traversal and emitBlockRuns. Int continuation1/0 selects another block only when consumed==length+1 and no pending run. index serves byte-group, byte, selector, symbol and BWT loops; byteOrBitValue serves header bits, alphabet/MTF bytes and literals. Other reused roles and selector array aliases are explicit; no lifetime splitting, label restructuring or algorithm changes. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.e(Ljl;)V#8",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.e(Ljl;)V#8",
-          "originalName": "var7",
-          "to": "huffmanAlphabetSize",
-          "evidence": "Read header bytes/bit without new validation, early-return on first marker23; force100k workspace. Build used-byte alphabet, unary/MTF selectors and canonical Huffman tables. Decode groups of50 symbols with selected limit/base/permutation. RUNA/RUNB accumulate weighted front-symbol repeats; ordinary symbols shift chunked MTF list, preserving unrolled moves and rebuild order. Count last-column byte frequencies, scatter packed inverse links through bucket cursors, initialize original-pointer traversal and emitBlockRuns. Int continuation1/0 selects another block only when consumed==length+1 and no pending run. index serves byte-group, byte, selector, symbol and BWT loops; byteOrBitValue serves header bits, alphabet/MTF bytes and literals. Other reused roles and selector array aliases are explicit; no lifetime splitting, label restructuring or algorithm changes. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "L:tb.e(Ljl;)V#9",
-        "before": null,
-        "after": {
-          "symbol": "L:tb.e(Ljl;)V#9",
-          "originalName": "var8",
-          "to": "huffmanTableCount",
-          "evidence": "Read header bytes/bit without new validation, early-return on first marker23; force100k workspace. Build used-byte alphabet, unary/MTF selectors and canonical Huffman tables. Decode groups of50 symbols with selected limit/base/permutation. RUNA/RUNB accumulate weighted front-symbol repeats; ordinary symbols shift chunked MTF list, preserving unrolled moves and rebuild order. Count last-column byte frequencies, scatter packed inverse links through bucket cursors, initialize original-pointer traversal and emitBlockRuns. Int continuation1/0 selects another block only when consumed==length+1 and no pending run. index serves byte-group, byte, selector, symbol and BWT loops; byteOrBitValue serves header bits, alphabet/MTF bytes and literals. Other reused roles and selector array aliases are explicit; no lifetime splitting, label restructuring or algorithm changes. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "M:tb.a([I[I[I[BIII)V",
-        "before": null,
-        "after": {
-          "symbol": "M:tb.a([I[I[I[BIII)V",
-          "originalName": "a",
-          "to": "buildHuffmanTables",
-          "evidence": "Populate symbols by increasing code length then symbol index; count lengths+1 into bases, prefix sum23 entries, zero limits, compute highest canonical code per length by counts/left shifts, then convert bases to code offsets. Retain byte-signed length indexing, exact23 bounds and arithmetic order. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "M:tb.c(Ljl;)V",
-        "before": null,
-        "after": {
-          "symbol": "M:tb.c(Ljl;)V",
-          "originalName": "c",
-          "to": "buildByteAlphabet",
-          "evidence": "Reset alphabetSize0, scan all256 in-use flags and store byte-narrowed ascending values in alphabetBytes. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "M:tb.d(Ljl;)V",
-        "before": null,
-        "after": {
-          "symbol": "M:tb.d(Ljl;)V",
-          "originalName": "d",
-          "to": "emitBlockRuns",
-          "evidence": "Snapshot pending run/current byte/consumption and shared packed table/output state. Traverse inverse links, recognize one/two/three repeats or fourth-byte run count+4, and emit until block end or destination allowance exhausted. Preserve all partial exits, signed bytes versus unsigned run count, empty overflow check and duplicate publication tails. Publish run/cursor/counters/table/output aliases at original points; nextByteOrRunCount and transformPositionOrEntry retain packed/reused roles. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "M:tb.e(Ljl;)V",
-        "before": null,
-        "after": {
-          "symbol": "M:tb.e(Ljl;)V",
-          "originalName": "e",
-          "to": "decodeBlocks",
-          "evidence": "Read header bytes/bit without new validation, early-return on first marker23; force100k workspace. Build used-byte alphabet, unary/MTF selectors and canonical Huffman tables. Decode groups of50 symbols with selected limit/base/permutation. RUNA/RUNB accumulate weighted front-symbol repeats; ordinary symbols shift chunked MTF list, preserving unrolled moves and rebuild order. Count last-column byte frequencies, scatter packed inverse links through bucket cursors, initialize original-pointer traversal and emitBlockRuns. Int continuation1/0 selects another block only when consumed==length+1 and no pending run. index serves byte-group, byte, selector, symbol and BWT loops; byteOrBitValue serves header bits, alphabet/MTF bytes and literals. Other reused roles and selector array aliases are explicit; no lifetime splitting, label restructuring or algorithm changes. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "P:tb.a([I[I[I[BIII)V#0",
-        "before": null,
-        "after": {
-          "symbol": "P:tb.a([I[I[I[BIII)V#0",
-          "originalName": "param0",
-          "to": "limits",
-          "evidence": "Populate symbols by increasing code length then symbol index; count lengths+1 into bases, prefix sum23 entries, zero limits, compute highest canonical code per length by counts/left shifts, then convert bases to code offsets. Retain byte-signed length indexing, exact23 bounds and arithmetic order. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "P:tb.a([I[I[I[BIII)V#1",
-        "before": null,
-        "after": {
-          "symbol": "P:tb.a([I[I[I[BIII)V#1",
-          "originalName": "param1",
-          "to": "bases",
-          "evidence": "Populate symbols by increasing code length then symbol index; count lengths+1 into bases, prefix sum23 entries, zero limits, compute highest canonical code per length by counts/left shifts, then convert bases to code offsets. Retain byte-signed length indexing, exact23 bounds and arithmetic order. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "P:tb.a([I[I[I[BIII)V#2",
-        "before": null,
-        "after": {
-          "symbol": "P:tb.a([I[I[I[BIII)V#2",
-          "originalName": "param2",
-          "to": "symbols",
-          "evidence": "Populate symbols by increasing code length then symbol index; count lengths+1 into bases, prefix sum23 entries, zero limits, compute highest canonical code per length by counts/left shifts, then convert bases to code offsets. Retain byte-signed length indexing, exact23 bounds and arithmetic order. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "P:tb.a([I[I[I[BIII)V#3",
-        "before": null,
-        "after": {
-          "symbol": "P:tb.a([I[I[I[BIII)V#3",
-          "originalName": "param3",
-          "to": "codeLengths",
-          "evidence": "Populate symbols by increasing code length then symbol index; count lengths+1 into bases, prefix sum23 entries, zero limits, compute highest canonical code per length by counts/left shifts, then convert bases to code offsets. Retain byte-signed length indexing, exact23 bounds and arithmetic order. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "P:tb.a([I[I[I[BIII)V#4",
-        "before": null,
-        "after": {
-          "symbol": "P:tb.a([I[I[I[BIII)V#4",
-          "originalName": "param4",
-          "to": "minimumLength",
-          "evidence": "Populate symbols by increasing code length then symbol index; count lengths+1 into bases, prefix sum23 entries, zero limits, compute highest canonical code per length by counts/left shifts, then convert bases to code offsets. Retain byte-signed length indexing, exact23 bounds and arithmetic order. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "P:tb.a([I[I[I[BIII)V#5",
-        "before": null,
-        "after": {
-          "symbol": "P:tb.a([I[I[I[BIII)V#5",
-          "originalName": "param5",
-          "to": "maximumLength",
-          "evidence": "Populate symbols by increasing code length then symbol index; count lengths+1 into bases, prefix sum23 entries, zero limits, compute highest canonical code per length by counts/left shifts, then convert bases to code offsets. Retain byte-signed length indexing, exact23 bounds and arithmetic order. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "P:tb.a([I[I[I[BIII)V#6",
-        "before": null,
-        "after": {
-          "symbol": "P:tb.a([I[I[I[BIII)V#6",
-          "originalName": "param6",
-          "to": "alphabetSize",
-          "evidence": "Populate symbols by increasing code length then symbol index; count lengths+1 into bases, prefix sum23 entries, zero limits, compute highest canonical code per length by counts/left shifts, then convert bases to code offsets. Retain byte-signed length indexing, exact23 bounds and arithmetic order. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "P:tb.c(Ljl;)V#0",
-        "before": null,
-        "after": {
-          "symbol": "P:tb.c(Ljl;)V#0",
-          "originalName": "param0",
-          "to": "state",
-          "evidence": "Reset alphabetSize0, scan all256 in-use flags and store byte-narrowed ascending values in alphabetBytes. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "P:tb.d(Ljl;)V#0",
-        "before": null,
-        "after": {
-          "symbol": "P:tb.d(Ljl;)V#0",
-          "originalName": "param0",
-          "to": "state",
-          "evidence": "Snapshot pending run/current byte/consumption and shared packed table/output state. Traverse inverse links, recognize one/two/three repeats or fourth-byte run count+4, and emit until block end or destination allowance exhausted. Preserve all partial exits, signed bytes versus unsigned run count, empty overflow check and duplicate publication tails. Publish run/cursor/counters/table/output aliases at original points; nextByteOrRunCount and transformPositionOrEntry retain packed/reused roles. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      },
-      {
-        "symbol": "P:tb.e(Ljl;)V#0",
-        "before": null,
-        "after": {
-          "symbol": "P:tb.e(Ljl;)V#0",
-          "originalName": "param0",
-          "to": "state",
-          "evidence": "Read header bytes/bit without new validation, early-return on first marker23; force100k workspace. Build used-byte alphabet, unary/MTF selectors and canonical Huffman tables. Decode groups of50 symbols with selected limit/base/permutation. RUNA/RUNB accumulate weighted front-symbol repeats; ordinary symbols shift chunked MTF list, preserving unrolled moves and rebuild order. Count last-column byte frequencies, scatter packed inverse links through bucket cursors, initialize original-pointer traversal and emitBlockRuns. Int continuation1/0 selects another block only when consumed==length+1 and no pending run. index serves byte-group, byte, selector, symbol and BWT loops; byteOrBitValue serves header bits, alphabet/MTF bytes and literals. Other reused roles and selector array aliases are explicit; no lifetime splitting, label restructuring or algorithm changes. Source-audited Bzip2 block/table/MTF/inverse-transform/run state, names only. Preserve forced100k workspace, unchecked marker/CRC/randomized flag behavior, alphabet/selector/Huffman construction,50-symbol selector groups, RUNA/RUNB arithmetic, chunked MTF shifts/rebuilds, packed transform links, pending run/partial output state, aliases/shared ownership, numeric branches, overflow and empty checks, exceptions and literal diagnostics. Native40 controlled block cases pin empty/alphabet/random/run/multi-block data, partial destinations, malformed input array retention and recovery. Arbitrary corrupt streams, randomized blocks, real assets, full gameplay and device performance remain unverified."
-        }
-      }
-    ],
+    "ruleChanges": [],
     "stubJarSha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2",
     "sourceEvidence": [
       {
@@ -38194,7 +37203,7 @@
       },
       {
         "file": "tb.java",
-        "sha256": "8aec167c140c9de838e8629f1dea039ec4586db3d9bd49a69df5ced9497dfcd3"
+        "sha256": "023f4673504bb7e9873e645f2289c97934006b68db21e47bd974860e83f484cf"
       },
       {
         "file": "tc.java",
@@ -40626,9 +39635,9 @@
     },
     "verification": {
       "sourceDeclarations": 19558,
-      "bindingsCompared": 138558,
+      "bindingsCompared": 138519,
       "overrideRelationships": 388,
-      "identifierEdits": 49618,
+      "identifierEdits": 49580,
       "dictionaryRestorationFiles": 303,
       "wholeGameEquivalenceVerified": false,
       "nativeMatchingScenarios": 708,
@@ -40773,7 +39782,7 @@
       "difficultyMethodLinesBefore": 38,
       "difficultyMethodLinesAfter": 38,
       "allGuardedNamesUnchanged": false,
-      "ruleChangesInCurrentPass": 99,
+      "ruleChangesInCurrentPass": 0,
       "genericNestedContinuationTestGroups": 2,
       "nativeNestedContinuationComparisons": 2520,
       "nestedContinuationChangedJavaFiles": 7,
@@ -40788,13 +39797,13 @@
       "ambiguousPredicateComplementsRefused": true,
       "difficultyCategoryAndRecursiveAdvanceClonesEliminated": true,
       "allPriorGuardedNamesPreserved": true,
-      "namingRulesAddedInCurrentPass": 99,
-      "sourceInputChangedInCurrentPass": false,
+      "namingRulesAddedInCurrentPass": 0,
+      "sourceInputChangedInCurrentPass": true,
       "namedVisualAssetFieldsAdded": 59,
       "namedAssetLoadingMethodsAdded": 6,
       "namedAssetLoadingParametersAdded": 24,
       "namedAssetPreparationAndLookupLocalsAdded": 28,
-      "identifierEditsAddedInCurrentPass": 1074,
+      "identifierEditsAddedInCurrentPass": 0,
       "lastStructuralPassVersion": 52,
       "namingRulesRefinedInCurrentPass": 0,
       "allUnaffectedPriorRulesPreserved": true,
@@ -40835,7 +39844,7 @@
       "nativePlainBlockTailComparisons": 432,
       "plainBlockTailChangedJavaFiles": 7,
       "retainedNewTailLabelPrefixTokenBudget": 512,
-      "identifierEditsRemovedInCurrentPass": 0,
+      "identifierEditsRemovedInCurrentPass": 38,
       "namedSocketAndTaskRulesAdded": {
         "C": 3,
         "F": 24,
@@ -41157,7 +40166,63 @@
       "allBzip2DecoderFieldsMethodsParametersAndLocalsNamed": true,
       "allBzip2DecoderStateInstanceFieldsMethodsParametersAndLocalsNamed": true,
       "nativeBzip2BlockScenarios": 40,
-      "nativeBzip2BlockTraceSha256": "f237b1b6fd8e69c006fa43ec005f742ae5909d107d0ba5ec4574f2c804ad3ba9"
+      "nativeBzip2BlockTraceSha256": "f237b1b6fd8e69c006fa43ec005f742ae5909d107d0ba5ec4574f2c804ad3ba9",
+      "existingExitBlockCleanupHistoricalPassVersion": 76,
+      "existingExitBlockCleanupSourceLinesRemoved": 13,
+      "existingExitBlockCleanupOrdinalMigrations": 0,
+      "existingExitBlockCleanupNewFrames": 0,
+      "nativeExistingExitBlockComparisons": 2048,
+      "genericExistingExitBlockEmitterGroups": 38,
+      "genericExistingExitBlockExceptionGroups": 8,
+      "cleanDecompilerSourceArchiveReproducesJavaAndDiagnostics": true
+    },
+    "sourceChange": {
+      "before": {
+        "source": {
+          "repository": "Kreijstal/funorb-decompiled",
+          "commit": "2fc0a44e10f161f82554e2652b0f4e025c997c34",
+          "subdirectory": "games/geoblox"
+        },
+        "generators": {
+          "dekoblokoWork": {
+            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
+            "trackedClean": true
+          },
+          "javaTools": {
+            "commit": "57969c34c9be16cd7dfaaa691774b95dbeaa2c5b",
+            "trackedClean": true,
+            "sourceArchive": {
+              "sha256": "8c17ad8f1c1eedc51941af4d35064fed2c7b1f8bb73a8c4909a2744fb923e1ce",
+              "reproduce": "git archive --format=tar 57969c34c9be16cd7dfaaa691774b95dbeaa2c5b | sha256sum",
+              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
+            }
+          }
+        },
+        "inputTreeSha256": "39be3539b43d7acc9540acca49e7b6378cdb233908092706646df4c2cdc6a8fe"
+      },
+      "after": {
+        "source": {
+          "repository": "Kreijstal/funorb-decompiled",
+          "commit": "f31e2a033e8b343453d3a717ac15f104435ab2df",
+          "subdirectory": "games/geoblox"
+        },
+        "generators": {
+          "dekoblokoWork": {
+            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
+            "trackedClean": true
+          },
+          "javaTools": {
+            "commit": "73b2571fd252aaef9c8552d5d72416be9632d5ab",
+            "trackedClean": true,
+            "sourceArchive": {
+              "sha256": "8c8d1fd40c52f3f831bdc78cb7295df688c7b544722030f93bde71638c3cd31a",
+              "reproduce": "git archive --format=tar 73b2571fd252aaef9c8552d5d72416be9632d5ab | sha256sum",
+              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
+            }
+          }
+        },
+        "inputTreeSha256": "30d4aa4f3db79e67862d7f59381af8fd20ed178a3acf9c9b7ead4a3a4de94638"
+      }
     }
   }
 }

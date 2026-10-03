@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "inputTreeSha256": "39be3539b43d7acc9540acca49e7b6378cdb233908092706646df4c2cdc6a8fe",
+  "inputTreeSha256": "30d4aa4f3db79e67862d7f59381af8fd20ed178a3acf9c9b7ead4a3a4de94638",
   "positionUnits": "UTF-16 code units in original source",
   "rules": [
     {
@@ -524699,8 +524699,8 @@
     {
       "original": "tb.java",
       "renamed": "Bzip2Decoder.java",
-      "inputSha256": "8aec167c140c9de838e8629f1dea039ec4586db3d9bd49a69df5ced9497dfcd3",
-      "outputSha256": "72c32bcc912a296e25cf8f1450a0404ab59fe82e3a9e1bbe77f0555ae98de2ee",
+      "inputSha256": "023f4673504bb7e9873e645f2289c97934006b68db21e47bd974860e83f484cf",
+      "outputSha256": "f50438f3f3907fd28fe75f968403eca1ec256c69169a9415c255e6f0982027dc",
       "edits": [
         {
           "start": 50,
@@ -532067,624 +532067,547 @@
           "renamed": "remainingOutputBytes"
         },
         {
-          "start": 20024,
-          "end": 20029,
-          "symbol": "L:tb.d(Ljl;)V#12",
-          "original": "var13",
-          "renamed": "previousOutputBytesWritten"
-        },
-        {
-          "start": 20032,
-          "end": 20038,
-          "symbol": "P:tb.d(Ljl;)V#0",
-          "original": "param0",
-          "renamed": "state"
-        },
-        {
-          "start": 20039,
-          "end": 20046,
-          "symbol": "F:jl.field_i:I",
-          "original": "field_i",
-          "renamed": "outputBytesWritten"
-        },
-        {
-          "start": 20068,
-          "end": 20074,
-          "symbol": "P:tb.d(Ljl;)V#0",
-          "original": "param0",
-          "renamed": "state"
-        },
-        {
-          "start": 20075,
-          "end": 20082,
-          "symbol": "F:jl.field_i:I",
-          "original": "field_i",
-          "renamed": "outputBytesWritten"
-        },
-        {
-          "start": 20085,
-          "end": 20091,
-          "symbol": "P:tb.d(Ljl;)V#0",
-          "original": "param0",
-          "renamed": "state"
-        },
-        {
-          "start": 20092,
-          "end": 20099,
-          "symbol": "F:jl.field_i:I",
-          "original": "field_i",
-          "renamed": "outputBytesWritten"
-        },
-        {
-          "start": 20103,
-          "end": 20108,
-          "symbol": "L:tb.d(Ljl;)V#10",
-          "original": "var11",
-          "renamed": "initialOutputAllowance"
-        },
-        {
-          "start": 20111,
-          "end": 20116,
-          "symbol": "L:tb.d(Ljl;)V#9",
-          "original": "var10",
-          "renamed": "remainingOutputBytes"
-        },
-        {
-          "start": 20143,
-          "end": 20149,
-          "symbol": "P:tb.d(Ljl;)V#0",
-          "original": "param0",
-          "renamed": "state"
-        },
-        {
-          "start": 20150,
-          "end": 20157,
-          "symbol": "F:jl.field_i:I",
-          "original": "field_i",
-          "renamed": "outputBytesWritten"
-        },
-        {
-          "start": 20161,
-          "end": 20166,
-          "symbol": "L:tb.d(Ljl;)V#12",
-          "original": "var13",
-          "renamed": "previousOutputBytesWritten"
-        },
-        {
-          "start": 20212,
-          "end": 20218,
-          "symbol": "P:tb.d(Ljl;)V#0",
-          "original": "param0",
-          "renamed": "state"
-        },
-        {
-          "start": 20219,
-          "end": 20226,
-          "symbol": "F:jl.field_h:B",
-          "original": "field_h",
-          "renamed": "pendingRunByte"
-        },
-        {
-          "start": 20236,
-          "end": 20240,
-          "symbol": "L:tb.d(Ljl;)V#1",
-          "original": "var2",
-          "renamed": "runByte"
-        },
-        {
-          "start": 20262,
-          "end": 20268,
-          "symbol": "P:tb.d(Ljl;)V#0",
-          "original": "param0",
-          "renamed": "state"
-        },
-        {
-          "start": 20269,
-          "end": 20276,
-          "symbol": "F:jl.field_k:I",
-          "original": "field_k",
-          "renamed": "pendingRunLength"
-        },
-        {
-          "start": 20279,
-          "end": 20283,
+          "start": 20076,
+          "end": 20080,
           "symbol": "L:tb.d(Ljl;)V#2",
           "original": "var3",
           "renamed": "remainingRunLength"
         },
         {
-          "start": 20305,
-          "end": 20311,
-          "symbol": "P:tb.d(Ljl;)V#0",
-          "original": "param0",
-          "renamed": "state"
+          "start": 20109,
+          "end": 20113,
+          "symbol": "L:tb.d(Ljl;)V#7",
+          "original": "var8",
+          "renamed": "outputBytes"
         },
         {
-          "start": 20312,
-          "end": 20319,
-          "symbol": "F:jl.field_G:I",
-          "original": "field_G",
-          "renamed": "blockBytesConsumed"
+          "start": 20114,
+          "end": 20118,
+          "symbol": "L:tb.d(Ljl;)V#8",
+          "original": "var9",
+          "renamed": "outputPosition"
         },
         {
-          "start": 20322,
-          "end": 20326,
+          "start": 20128,
+          "end": 20132,
+          "symbol": "L:tb.d(Ljl;)V#1",
+          "original": "var2",
+          "renamed": "runByte"
+        },
+        {
+          "start": 20154,
+          "end": 20158,
+          "symbol": "L:tb.d(Ljl;)V#2",
+          "original": "var3",
+          "renamed": "remainingRunLength"
+        },
+        {
+          "start": 20182,
+          "end": 20186,
+          "symbol": "L:tb.d(Ljl;)V#8",
+          "original": "var9",
+          "renamed": "outputPosition"
+        },
+        {
+          "start": 20210,
+          "end": 20215,
+          "symbol": "L:tb.d(Ljl;)V#9",
+          "original": "var10",
+          "renamed": "remainingOutputBytes"
+        },
+        {
+          "start": 20294,
+          "end": 20299,
+          "symbol": "L:tb.d(Ljl;)V#9",
+          "original": "var10",
+          "renamed": "remainingOutputBytes"
+        },
+        {
+          "start": 20328,
+          "end": 20332,
+          "symbol": "L:tb.d(Ljl;)V#2",
+          "original": "var3",
+          "renamed": "remainingRunLength"
+        },
+        {
+          "start": 20406,
+          "end": 20410,
+          "symbol": "L:tb.d(Ljl;)V#7",
+          "original": "var8",
+          "renamed": "outputBytes"
+        },
+        {
+          "start": 20411,
+          "end": 20415,
+          "symbol": "L:tb.d(Ljl;)V#8",
+          "original": "var9",
+          "renamed": "outputPosition"
+        },
+        {
+          "start": 20425,
+          "end": 20429,
+          "symbol": "L:tb.d(Ljl;)V#1",
+          "original": "var2",
+          "renamed": "runByte"
+        },
+        {
+          "start": 20449,
+          "end": 20453,
+          "symbol": "L:tb.d(Ljl;)V#8",
+          "original": "var9",
+          "renamed": "outputPosition"
+        },
+        {
+          "start": 20475,
+          "end": 20480,
+          "symbol": "L:tb.d(Ljl;)V#9",
+          "original": "var10",
+          "renamed": "remainingOutputBytes"
+        },
+        {
+          "start": 20583,
+          "end": 20587,
           "symbol": "L:tb.d(Ljl;)V#3",
           "original": "var4",
           "renamed": "blockBytesConsumed"
         },
         {
-          "start": 20348,
-          "end": 20354,
-          "symbol": "P:tb.d(Ljl;)V#0",
-          "original": "param0",
-          "renamed": "state"
-        },
-        {
-          "start": 20355,
-          "end": 20362,
-          "symbol": "F:jl.field_c:I",
-          "original": "field_c",
-          "renamed": "currentByte"
-        },
-        {
-          "start": 20365,
-          "end": 20369,
-          "symbol": "L:tb.d(Ljl;)V#4",
-          "original": "var5",
-          "renamed": "currentByte"
-        },
-        {
-          "start": 20394,
-          "end": 20401,
-          "symbol": "F:kb.field_a:[I",
-          "original": "field_a",
-          "renamed": "bzip2TransformTable"
-        },
-        {
-          "start": 20404,
-          "end": 20408,
-          "symbol": "L:tb.d(Ljl;)V#5",
-          "original": "var6",
-          "renamed": "transformTable"
-        },
-        {
-          "start": 20430,
-          "end": 20436,
-          "symbol": "P:tb.d(Ljl;)V#0",
-          "original": "param0",
-          "renamed": "state"
-        },
-        {
-          "start": 20437,
-          "end": 20444,
-          "symbol": "F:jl.field_D:I",
-          "original": "field_D",
-          "renamed": "transformPositionOrEntry"
-        },
-        {
-          "start": 20447,
-          "end": 20451,
-          "symbol": "L:tb.d(Ljl;)V#6",
-          "original": "var7",
-          "renamed": "transformPositionOrEntry"
-        },
-        {
-          "start": 20473,
-          "end": 20479,
-          "symbol": "P:tb.d(Ljl;)V#0",
-          "original": "param0",
-          "renamed": "state"
-        },
-        {
-          "start": 20480,
-          "end": 20487,
-          "symbol": "F:jl.field_j:[B",
-          "original": "field_j",
-          "renamed": "outputBytes"
-        },
-        {
-          "start": 20490,
-          "end": 20494,
-          "symbol": "L:tb.d(Ljl;)V#7",
-          "original": "var8",
-          "renamed": "outputBytes"
-        },
-        {
-          "start": 20516,
-          "end": 20522,
-          "symbol": "P:tb.d(Ljl;)V#0",
-          "original": "param0",
-          "renamed": "state"
-        },
-        {
-          "start": 20523,
-          "end": 20530,
-          "symbol": "F:jl.field_C:I",
-          "original": "field_C",
-          "renamed": "outputPosition"
-        },
-        {
-          "start": 20533,
-          "end": 20537,
-          "symbol": "L:tb.d(Ljl;)V#8",
-          "original": "var9",
-          "renamed": "outputPosition"
-        },
-        {
-          "start": 20559,
-          "end": 20565,
-          "symbol": "P:tb.d(Ljl;)V#0",
-          "original": "param0",
-          "renamed": "state"
-        },
-        {
-          "start": 20566,
-          "end": 20573,
-          "symbol": "F:jl.field_A:I",
-          "original": "field_A",
-          "renamed": "remainingOutputBytes"
-        },
-        {
-          "start": 20576,
-          "end": 20581,
-          "symbol": "L:tb.d(Ljl;)V#9",
-          "original": "var10",
-          "renamed": "remainingOutputBytes"
-        },
-        {
-          "start": 20653,
-          "end": 20657,
-          "symbol": "L:tb.d(Ljl;)V#2",
-          "original": "var3",
-          "renamed": "remainingRunLength"
-        },
-        {
-          "start": 20686,
-          "end": 20690,
-          "symbol": "L:tb.d(Ljl;)V#7",
-          "original": "var8",
-          "renamed": "outputBytes"
-        },
-        {
-          "start": 20691,
-          "end": 20695,
-          "symbol": "L:tb.d(Ljl;)V#8",
-          "original": "var9",
-          "renamed": "outputPosition"
-        },
-        {
-          "start": 20705,
-          "end": 20709,
-          "symbol": "L:tb.d(Ljl;)V#1",
-          "original": "var2",
-          "renamed": "runByte"
-        },
-        {
-          "start": 20731,
-          "end": 20735,
-          "symbol": "L:tb.d(Ljl;)V#2",
-          "original": "var3",
-          "renamed": "remainingRunLength"
-        },
-        {
-          "start": 20759,
-          "end": 20763,
-          "symbol": "L:tb.d(Ljl;)V#8",
-          "original": "var9",
-          "renamed": "outputPosition"
-        },
-        {
-          "start": 20787,
-          "end": 20792,
-          "symbol": "L:tb.d(Ljl;)V#9",
-          "original": "var10",
-          "renamed": "remainingOutputBytes"
-        },
-        {
-          "start": 20871,
-          "end": 20876,
-          "symbol": "L:tb.d(Ljl;)V#9",
-          "original": "var10",
-          "renamed": "remainingOutputBytes"
-        },
-        {
-          "start": 20905,
-          "end": 20909,
-          "symbol": "L:tb.d(Ljl;)V#2",
-          "original": "var3",
-          "renamed": "remainingRunLength"
-        },
-        {
-          "start": 20983,
-          "end": 20987,
-          "symbol": "L:tb.d(Ljl;)V#7",
-          "original": "var8",
-          "renamed": "outputBytes"
-        },
-        {
-          "start": 20988,
-          "end": 20992,
-          "symbol": "L:tb.d(Ljl;)V#8",
-          "original": "var9",
-          "renamed": "outputPosition"
-        },
-        {
-          "start": 21002,
-          "end": 21006,
-          "symbol": "L:tb.d(Ljl;)V#1",
-          "original": "var2",
-          "renamed": "runByte"
-        },
-        {
-          "start": 21026,
-          "end": 21030,
-          "symbol": "L:tb.d(Ljl;)V#8",
-          "original": "var9",
-          "renamed": "outputPosition"
-        },
-        {
-          "start": 21052,
-          "end": 21057,
-          "symbol": "L:tb.d(Ljl;)V#9",
-          "original": "var10",
-          "renamed": "remainingOutputBytes"
-        },
-        {
-          "start": 21160,
-          "end": 21164,
-          "symbol": "L:tb.d(Ljl;)V#3",
-          "original": "var4",
-          "renamed": "blockBytesConsumed"
-        },
-        {
-          "start": 21168,
-          "end": 21173,
+          "start": 20591,
+          "end": 20596,
           "symbol": "L:tb.d(Ljl;)V#11",
           "original": "var12",
           "renamed": "blockEndPosition"
         },
         {
-          "start": 21191,
-          "end": 21196,
+          "start": 20614,
+          "end": 20619,
           "symbol": "L:tb.d(Ljl;)V#14",
           "original": "var15",
           "renamed": "sharedTransformTableSnapshot"
         },
         {
-          "start": 21199,
-          "end": 21204,
+          "start": 20622,
+          "end": 20627,
           "symbol": "L:tb.d(Ljl;)V#13",
           "original": "var14",
           "renamed": "transformTableAlias"
         },
         {
-          "start": 21220,
-          "end": 21224,
+          "start": 20643,
+          "end": 20647,
           "symbol": "L:tb.d(Ljl;)V#1",
           "original": "var2",
           "renamed": "runByte"
         },
         {
-          "start": 21233,
-          "end": 21237,
+          "start": 20656,
+          "end": 20660,
           "symbol": "L:tb.d(Ljl;)V#4",
           "original": "var5",
           "renamed": "currentByte"
         },
         {
-          "start": 21253,
-          "end": 21257,
+          "start": 20676,
+          "end": 20680,
           "symbol": "L:tb.d(Ljl;)V#6",
           "original": "var7",
           "renamed": "transformPositionOrEntry"
         },
         {
-          "start": 21260,
-          "end": 21265,
+          "start": 20683,
+          "end": 20688,
           "symbol": "L:tb.d(Ljl;)V#14",
           "original": "var15",
           "renamed": "sharedTransformTableSnapshot"
         },
         {
-          "start": 21266,
-          "end": 21270,
+          "start": 20689,
+          "end": 20693,
           "symbol": "L:tb.d(Ljl;)V#6",
           "original": "var7",
           "renamed": "transformPositionOrEntry"
         },
         {
-          "start": 21287,
-          "end": 21291,
+          "start": 20710,
+          "end": 20714,
           "symbol": "L:tb.d(Ljl;)V#0",
           "original": "var1",
           "renamed": "nextByteOrRunCount"
         },
         {
-          "start": 21300,
-          "end": 21304,
+          "start": 20723,
+          "end": 20727,
           "symbol": "L:tb.d(Ljl;)V#6",
           "original": "var7",
           "renamed": "transformPositionOrEntry"
         },
         {
-          "start": 21320,
-          "end": 21324,
+          "start": 20743,
+          "end": 20747,
           "symbol": "L:tb.d(Ljl;)V#6",
           "original": "var7",
           "renamed": "transformPositionOrEntry"
         },
         {
-          "start": 21327,
-          "end": 21331,
+          "start": 20750,
+          "end": 20754,
           "symbol": "L:tb.d(Ljl;)V#6",
           "original": "var7",
           "renamed": "transformPositionOrEntry"
         },
         {
-          "start": 21352,
-          "end": 21356,
+          "start": 20775,
+          "end": 20779,
           "symbol": "L:tb.d(Ljl;)V#3",
           "original": "var4",
           "renamed": "blockBytesConsumed"
         },
         {
-          "start": 21378,
-          "end": 21382,
+          "start": 20801,
+          "end": 20805,
           "symbol": "L:tb.d(Ljl;)V#0",
           "original": "var1",
           "renamed": "nextByteOrRunCount"
         },
         {
-          "start": 21386,
-          "end": 21390,
+          "start": 20809,
+          "end": 20813,
           "symbol": "L:tb.d(Ljl;)V#4",
           "original": "var5",
           "renamed": "currentByte"
         },
         {
-          "start": 21414,
-          "end": 21418,
+          "start": 20837,
+          "end": 20841,
+          "symbol": "L:tb.d(Ljl;)V#3",
+          "original": "var4",
+          "renamed": "blockBytesConsumed"
+        },
+        {
+          "start": 20845,
+          "end": 20850,
+          "symbol": "L:tb.d(Ljl;)V#11",
+          "original": "var12",
+          "renamed": "blockEndPosition"
+        },
+        {
+          "start": 20872,
+          "end": 20876,
+          "symbol": "L:tb.d(Ljl;)V#2",
+          "original": "var3",
+          "renamed": "remainingRunLength"
+        },
+        {
+          "start": 20900,
+          "end": 20904,
+          "symbol": "L:tb.d(Ljl;)V#6",
+          "original": "var7",
+          "renamed": "transformPositionOrEntry"
+        },
+        {
+          "start": 20907,
+          "end": 20912,
+          "symbol": "L:tb.d(Ljl;)V#14",
+          "original": "var15",
+          "renamed": "sharedTransformTableSnapshot"
+        },
+        {
+          "start": 20913,
+          "end": 20917,
+          "symbol": "L:tb.d(Ljl;)V#6",
+          "original": "var7",
+          "renamed": "transformPositionOrEntry"
+        },
+        {
+          "start": 20938,
+          "end": 20942,
+          "symbol": "L:tb.d(Ljl;)V#0",
+          "original": "var1",
+          "renamed": "nextByteOrRunCount"
+        },
+        {
+          "start": 20951,
+          "end": 20955,
+          "symbol": "L:tb.d(Ljl;)V#6",
+          "original": "var7",
+          "renamed": "transformPositionOrEntry"
+        },
+        {
+          "start": 20975,
+          "end": 20979,
+          "symbol": "L:tb.d(Ljl;)V#6",
+          "original": "var7",
+          "renamed": "transformPositionOrEntry"
+        },
+        {
+          "start": 20982,
+          "end": 20986,
+          "symbol": "L:tb.d(Ljl;)V#6",
+          "original": "var7",
+          "renamed": "transformPositionOrEntry"
+        },
+        {
+          "start": 21011,
+          "end": 21015,
+          "symbol": "L:tb.d(Ljl;)V#3",
+          "original": "var4",
+          "renamed": "blockBytesConsumed"
+        },
+        {
+          "start": 21041,
+          "end": 21045,
+          "symbol": "L:tb.d(Ljl;)V#3",
+          "original": "var4",
+          "renamed": "blockBytesConsumed"
+        },
+        {
+          "start": 21049,
+          "end": 21054,
+          "symbol": "L:tb.d(Ljl;)V#11",
+          "original": "var12",
+          "renamed": "blockEndPosition"
+        },
+        {
+          "start": 21133,
+          "end": 21137,
+          "symbol": "L:tb.d(Ljl;)V#0",
+          "original": "var1",
+          "renamed": "nextByteOrRunCount"
+        },
+        {
+          "start": 21141,
+          "end": 21145,
+          "symbol": "L:tb.d(Ljl;)V#4",
+          "original": "var5",
+          "renamed": "currentByte"
+        },
+        {
+          "start": 21169,
+          "end": 21173,
+          "symbol": "L:tb.d(Ljl;)V#4",
+          "original": "var5",
+          "renamed": "currentByte"
+        },
+        {
+          "start": 21176,
+          "end": 21180,
+          "symbol": "L:tb.d(Ljl;)V#0",
+          "original": "var1",
+          "renamed": "nextByteOrRunCount"
+        },
+        {
+          "start": 21253,
+          "end": 21257,
+          "symbol": "L:tb.d(Ljl;)V#2",
+          "original": "var3",
+          "renamed": "remainingRunLength"
+        },
+        {
+          "start": 21281,
+          "end": 21285,
+          "symbol": "L:tb.d(Ljl;)V#6",
+          "original": "var7",
+          "renamed": "transformPositionOrEntry"
+        },
+        {
+          "start": 21288,
+          "end": 21293,
+          "symbol": "L:tb.d(Ljl;)V#14",
+          "original": "var15",
+          "renamed": "sharedTransformTableSnapshot"
+        },
+        {
+          "start": 21294,
+          "end": 21298,
+          "symbol": "L:tb.d(Ljl;)V#6",
+          "original": "var7",
+          "renamed": "transformPositionOrEntry"
+        },
+        {
+          "start": 21319,
+          "end": 21323,
+          "symbol": "L:tb.d(Ljl;)V#0",
+          "original": "var1",
+          "renamed": "nextByteOrRunCount"
+        },
+        {
+          "start": 21332,
+          "end": 21336,
+          "symbol": "L:tb.d(Ljl;)V#6",
+          "original": "var7",
+          "renamed": "transformPositionOrEntry"
+        },
+        {
+          "start": 21356,
+          "end": 21360,
+          "symbol": "L:tb.d(Ljl;)V#6",
+          "original": "var7",
+          "renamed": "transformPositionOrEntry"
+        },
+        {
+          "start": 21363,
+          "end": 21367,
+          "symbol": "L:tb.d(Ljl;)V#6",
+          "original": "var7",
+          "renamed": "transformPositionOrEntry"
+        },
+        {
+          "start": 21392,
+          "end": 21396,
           "symbol": "L:tb.d(Ljl;)V#3",
           "original": "var4",
           "renamed": "blockBytesConsumed"
         },
         {
           "start": 21422,
-          "end": 21427,
+          "end": 21426,
+          "symbol": "L:tb.d(Ljl;)V#3",
+          "original": "var4",
+          "renamed": "blockBytesConsumed"
+        },
+        {
+          "start": 21430,
+          "end": 21435,
           "symbol": "L:tb.d(Ljl;)V#11",
           "original": "var12",
           "renamed": "blockEndPosition"
         },
         {
-          "start": 21449,
-          "end": 21453,
-          "symbol": "L:tb.d(Ljl;)V#2",
-          "original": "var3",
-          "renamed": "remainingRunLength"
+          "start": 21514,
+          "end": 21518,
+          "symbol": "L:tb.d(Ljl;)V#0",
+          "original": "var1",
+          "renamed": "nextByteOrRunCount"
         },
         {
-          "start": 21477,
-          "end": 21481,
+          "start": 21522,
+          "end": 21526,
+          "symbol": "L:tb.d(Ljl;)V#4",
+          "original": "var5",
+          "renamed": "currentByte"
+        },
+        {
+          "start": 21550,
+          "end": 21554,
+          "symbol": "L:tb.d(Ljl;)V#4",
+          "original": "var5",
+          "renamed": "currentByte"
+        },
+        {
+          "start": 21557,
+          "end": 21561,
+          "symbol": "L:tb.d(Ljl;)V#0",
+          "original": "var1",
+          "renamed": "nextByteOrRunCount"
+        },
+        {
+          "start": 21634,
+          "end": 21638,
           "symbol": "L:tb.d(Ljl;)V#6",
           "original": "var7",
           "renamed": "transformPositionOrEntry"
         },
         {
-          "start": 21484,
-          "end": 21489,
+          "start": 21641,
+          "end": 21646,
           "symbol": "L:tb.d(Ljl;)V#14",
           "original": "var15",
           "renamed": "sharedTransformTableSnapshot"
         },
         {
-          "start": 21490,
-          "end": 21494,
+          "start": 21647,
+          "end": 21651,
           "symbol": "L:tb.d(Ljl;)V#6",
           "original": "var7",
           "renamed": "transformPositionOrEntry"
         },
         {
-          "start": 21515,
-          "end": 21519,
+          "start": 21672,
+          "end": 21676,
           "symbol": "L:tb.d(Ljl;)V#0",
           "original": "var1",
           "renamed": "nextByteOrRunCount"
         },
         {
-          "start": 21528,
-          "end": 21532,
+          "start": 21685,
+          "end": 21689,
           "symbol": "L:tb.d(Ljl;)V#6",
           "original": "var7",
           "renamed": "transformPositionOrEntry"
         },
         {
-          "start": 21552,
-          "end": 21556,
+          "start": 21709,
+          "end": 21713,
           "symbol": "L:tb.d(Ljl;)V#6",
           "original": "var7",
           "renamed": "transformPositionOrEntry"
         },
         {
-          "start": 21559,
-          "end": 21563,
+          "start": 21716,
+          "end": 21720,
           "symbol": "L:tb.d(Ljl;)V#6",
           "original": "var7",
           "renamed": "transformPositionOrEntry"
         },
         {
-          "start": 21588,
-          "end": 21592,
+          "start": 21745,
+          "end": 21749,
           "symbol": "L:tb.d(Ljl;)V#3",
           "original": "var4",
           "renamed": "blockBytesConsumed"
         },
         {
-          "start": 21618,
-          "end": 21622,
-          "symbol": "L:tb.d(Ljl;)V#3",
-          "original": "var4",
-          "renamed": "blockBytesConsumed"
-        },
-        {
-          "start": 21626,
-          "end": 21631,
-          "symbol": "L:tb.d(Ljl;)V#11",
-          "original": "var12",
-          "renamed": "blockEndPosition"
-        },
-        {
-          "start": 21710,
-          "end": 21714,
-          "symbol": "L:tb.d(Ljl;)V#0",
-          "original": "var1",
-          "renamed": "nextByteOrRunCount"
-        },
-        {
-          "start": 21718,
-          "end": 21722,
-          "symbol": "L:tb.d(Ljl;)V#4",
-          "original": "var5",
-          "renamed": "currentByte"
-        },
-        {
-          "start": 21746,
-          "end": 21750,
-          "symbol": "L:tb.d(Ljl;)V#4",
-          "original": "var5",
-          "renamed": "currentByte"
-        },
-        {
-          "start": 21753,
-          "end": 21757,
-          "symbol": "L:tb.d(Ljl;)V#0",
-          "original": "var1",
-          "renamed": "nextByteOrRunCount"
-        },
-        {
-          "start": 21830,
-          "end": 21834,
+          "start": 21771,
+          "end": 21775,
           "symbol": "L:tb.d(Ljl;)V#2",
           "original": "var3",
           "renamed": "remainingRunLength"
         },
         {
-          "start": 21858,
-          "end": 21862,
+          "start": 21779,
+          "end": 21783,
+          "symbol": "L:tb.d(Ljl;)V#0",
+          "original": "var1",
+          "renamed": "nextByteOrRunCount"
+        },
+        {
+          "start": 21814,
+          "end": 21818,
           "symbol": "L:tb.d(Ljl;)V#6",
           "original": "var7",
           "renamed": "transformPositionOrEntry"
+        },
+        {
+          "start": 21821,
+          "end": 21826,
+          "symbol": "L:tb.d(Ljl;)V#14",
+          "original": "var15",
+          "renamed": "sharedTransformTableSnapshot"
+        },
+        {
+          "start": 21827,
+          "end": 21831,
+          "symbol": "L:tb.d(Ljl;)V#6",
+          "original": "var7",
+          "renamed": "transformPositionOrEntry"
+        },
+        {
+          "start": 21852,
+          "end": 21856,
+          "symbol": "L:tb.d(Ljl;)V#4",
+          "original": "var5",
+          "renamed": "currentByte"
         },
         {
           "start": 21865,
-          "end": 21870,
-          "symbol": "L:tb.d(Ljl;)V#14",
-          "original": "var15",
-          "renamed": "sharedTransformTableSnapshot"
+          "end": 21869,
+          "symbol": "L:tb.d(Ljl;)V#6",
+          "original": "var7",
+          "renamed": "transformPositionOrEntry"
         },
         {
-          "start": 21871,
-          "end": 21875,
+          "start": 21889,
+          "end": 21893,
           "symbol": "L:tb.d(Ljl;)V#6",
           "original": "var7",
           "renamed": "transformPositionOrEntry"
@@ -532692,566 +532615,377 @@
         {
           "start": 21896,
           "end": 21900,
-          "symbol": "L:tb.d(Ljl;)V#0",
-          "original": "var1",
-          "renamed": "nextByteOrRunCount"
-        },
-        {
-          "start": 21909,
-          "end": 21913,
           "symbol": "L:tb.d(Ljl;)V#6",
           "original": "var7",
           "renamed": "transformPositionOrEntry"
         },
         {
-          "start": 21933,
-          "end": 21937,
-          "symbol": "L:tb.d(Ljl;)V#6",
-          "original": "var7",
-          "renamed": "transformPositionOrEntry"
-        },
-        {
-          "start": 21940,
-          "end": 21944,
-          "symbol": "L:tb.d(Ljl;)V#6",
-          "original": "var7",
-          "renamed": "transformPositionOrEntry"
-        },
-        {
-          "start": 21969,
-          "end": 21973,
+          "start": 21925,
+          "end": 21929,
           "symbol": "L:tb.d(Ljl;)V#3",
           "original": "var4",
           "renamed": "blockBytesConsumed"
         },
         {
-          "start": 21999,
-          "end": 22003,
-          "symbol": "L:tb.d(Ljl;)V#3",
-          "original": "var4",
-          "renamed": "blockBytesConsumed"
-        },
-        {
-          "start": 22007,
-          "end": 22012,
-          "symbol": "L:tb.d(Ljl;)V#11",
-          "original": "var12",
-          "renamed": "blockEndPosition"
-        },
-        {
-          "start": 22091,
-          "end": 22095,
-          "symbol": "L:tb.d(Ljl;)V#0",
-          "original": "var1",
-          "renamed": "nextByteOrRunCount"
-        },
-        {
-          "start": 22099,
-          "end": 22103,
-          "symbol": "L:tb.d(Ljl;)V#4",
-          "original": "var5",
-          "renamed": "currentByte"
-        },
-        {
-          "start": 22127,
-          "end": 22131,
-          "symbol": "L:tb.d(Ljl;)V#4",
-          "original": "var5",
-          "renamed": "currentByte"
-        },
-        {
-          "start": 22134,
-          "end": 22138,
-          "symbol": "L:tb.d(Ljl;)V#0",
-          "original": "var1",
-          "renamed": "nextByteOrRunCount"
-        },
-        {
-          "start": 22211,
-          "end": 22215,
-          "symbol": "L:tb.d(Ljl;)V#6",
-          "original": "var7",
-          "renamed": "transformPositionOrEntry"
-        },
-        {
-          "start": 22218,
-          "end": 22223,
-          "symbol": "L:tb.d(Ljl;)V#14",
-          "original": "var15",
-          "renamed": "sharedTransformTableSnapshot"
-        },
-        {
-          "start": 22224,
-          "end": 22228,
-          "symbol": "L:tb.d(Ljl;)V#6",
-          "original": "var7",
-          "renamed": "transformPositionOrEntry"
-        },
-        {
-          "start": 22249,
-          "end": 22253,
-          "symbol": "L:tb.d(Ljl;)V#0",
-          "original": "var1",
-          "renamed": "nextByteOrRunCount"
-        },
-        {
-          "start": 22262,
-          "end": 22266,
-          "symbol": "L:tb.d(Ljl;)V#6",
-          "original": "var7",
-          "renamed": "transformPositionOrEntry"
-        },
-        {
-          "start": 22286,
-          "end": 22290,
-          "symbol": "L:tb.d(Ljl;)V#6",
-          "original": "var7",
-          "renamed": "transformPositionOrEntry"
-        },
-        {
-          "start": 22293,
-          "end": 22297,
-          "symbol": "L:tb.d(Ljl;)V#6",
-          "original": "var7",
-          "renamed": "transformPositionOrEntry"
-        },
-        {
-          "start": 22322,
-          "end": 22326,
-          "symbol": "L:tb.d(Ljl;)V#3",
-          "original": "var4",
-          "renamed": "blockBytesConsumed"
-        },
-        {
-          "start": 22348,
-          "end": 22352,
-          "symbol": "L:tb.d(Ljl;)V#2",
-          "original": "var3",
-          "renamed": "remainingRunLength"
-        },
-        {
-          "start": 22356,
-          "end": 22360,
-          "symbol": "L:tb.d(Ljl;)V#0",
-          "original": "var1",
-          "renamed": "nextByteOrRunCount"
-        },
-        {
-          "start": 22391,
-          "end": 22395,
-          "symbol": "L:tb.d(Ljl;)V#6",
-          "original": "var7",
-          "renamed": "transformPositionOrEntry"
-        },
-        {
-          "start": 22398,
-          "end": 22403,
-          "symbol": "L:tb.d(Ljl;)V#14",
-          "original": "var15",
-          "renamed": "sharedTransformTableSnapshot"
-        },
-        {
-          "start": 22404,
-          "end": 22408,
-          "symbol": "L:tb.d(Ljl;)V#6",
-          "original": "var7",
-          "renamed": "transformPositionOrEntry"
-        },
-        {
-          "start": 22429,
-          "end": 22433,
-          "symbol": "L:tb.d(Ljl;)V#4",
-          "original": "var5",
-          "renamed": "currentByte"
-        },
-        {
-          "start": 22442,
-          "end": 22446,
-          "symbol": "L:tb.d(Ljl;)V#6",
-          "original": "var7",
-          "renamed": "transformPositionOrEntry"
-        },
-        {
-          "start": 22466,
-          "end": 22470,
-          "symbol": "L:tb.d(Ljl;)V#6",
-          "original": "var7",
-          "renamed": "transformPositionOrEntry"
-        },
-        {
-          "start": 22473,
-          "end": 22477,
-          "symbol": "L:tb.d(Ljl;)V#6",
-          "original": "var7",
-          "renamed": "transformPositionOrEntry"
-        },
-        {
-          "start": 22502,
-          "end": 22506,
-          "symbol": "L:tb.d(Ljl;)V#3",
-          "original": "var4",
-          "renamed": "blockBytesConsumed"
-        },
-        {
-          "start": 22579,
-          "end": 22584,
+          "start": 22002,
+          "end": 22007,
           "symbol": "L:tb.d(Ljl;)V#9",
           "original": "var10",
           "renamed": "remainingOutputBytes"
         },
         {
-          "start": 22611,
-          "end": 22615,
+          "start": 22034,
+          "end": 22038,
           "symbol": "L:tb.d(Ljl;)V#2",
           "original": "var3",
           "renamed": "remainingRunLength"
         },
         {
-          "start": 22706,
-          "end": 22710,
+          "start": 22129,
+          "end": 22133,
           "symbol": "L:tb.d(Ljl;)V#4",
           "original": "var5",
           "renamed": "currentByte"
         },
         {
-          "start": 22713,
-          "end": 22717,
+          "start": 22136,
+          "end": 22140,
           "symbol": "L:tb.d(Ljl;)V#0",
           "original": "var1",
           "renamed": "nextByteOrRunCount"
         },
         {
-          "start": 22739,
-          "end": 22744,
+          "start": 22162,
+          "end": 22167,
           "symbol": "L:tb.d(Ljl;)V#9",
           "original": "var10",
           "renamed": "remainingOutputBytes"
         },
         {
-          "start": 22771,
-          "end": 22775,
+          "start": 22194,
+          "end": 22198,
           "symbol": "L:tb.d(Ljl;)V#2",
           "original": "var3",
           "renamed": "remainingRunLength"
         },
         {
-          "start": 22857,
-          "end": 22861,
+          "start": 22280,
+          "end": 22284,
           "symbol": "L:tb.d(Ljl;)V#7",
           "original": "var8",
           "renamed": "outputBytes"
         },
         {
-          "start": 22862,
-          "end": 22866,
+          "start": 22285,
+          "end": 22289,
           "symbol": "L:tb.d(Ljl;)V#8",
           "original": "var9",
           "renamed": "outputPosition"
         },
         {
-          "start": 22876,
-          "end": 22880,
+          "start": 22299,
+          "end": 22303,
           "symbol": "L:tb.d(Ljl;)V#1",
           "original": "var2",
           "renamed": "runByte"
         },
         {
-          "start": 22896,
-          "end": 22900,
+          "start": 22319,
+          "end": 22323,
           "symbol": "L:tb.d(Ljl;)V#8",
           "original": "var9",
           "renamed": "outputPosition"
         },
         {
-          "start": 22918,
-          "end": 22923,
+          "start": 22341,
+          "end": 22346,
           "symbol": "L:tb.d(Ljl;)V#9",
           "original": "var10",
           "renamed": "remainingOutputBytes"
         },
         {
-          "start": 22953,
-          "end": 22957,
+          "start": 22376,
+          "end": 22380,
           "symbol": "L:tb.d(Ljl;)V#2",
           "original": "var3",
           "renamed": "remainingRunLength"
         },
         {
-          "start": 23007,
-          "end": 23012,
+          "start": 22430,
+          "end": 22435,
           "symbol": "L:tb.d(Ljl;)V#12",
           "original": "var13",
           "renamed": "previousOutputBytesWritten"
         },
         {
-          "start": 23015,
-          "end": 23021,
+          "start": 22438,
+          "end": 22444,
           "symbol": "P:tb.d(Ljl;)V#0",
           "original": "param0",
           "renamed": "state"
         },
         {
-          "start": 23022,
-          "end": 23029,
+          "start": 22445,
+          "end": 22452,
           "symbol": "F:jl.field_i:I",
           "original": "field_i",
           "renamed": "outputBytesWritten"
         },
         {
-          "start": 23041,
-          "end": 23047,
+          "start": 22464,
+          "end": 22470,
           "symbol": "P:tb.d(Ljl;)V#0",
           "original": "param0",
           "renamed": "state"
         },
         {
-          "start": 23048,
-          "end": 23055,
+          "start": 22471,
+          "end": 22478,
           "symbol": "F:jl.field_i:I",
           "original": "field_i",
           "renamed": "outputBytesWritten"
         },
         {
-          "start": 23058,
-          "end": 23064,
+          "start": 22481,
+          "end": 22487,
           "symbol": "P:tb.d(Ljl;)V#0",
           "original": "param0",
           "renamed": "state"
         },
         {
-          "start": 23065,
-          "end": 23072,
+          "start": 22488,
+          "end": 22495,
           "symbol": "F:jl.field_i:I",
           "original": "field_i",
           "renamed": "outputBytesWritten"
         },
         {
-          "start": 23076,
-          "end": 23081,
+          "start": 22499,
+          "end": 22504,
           "symbol": "L:tb.d(Ljl;)V#10",
           "original": "var11",
           "renamed": "initialOutputAllowance"
         },
         {
-          "start": 23084,
-          "end": 23089,
+          "start": 22507,
+          "end": 22512,
           "symbol": "L:tb.d(Ljl;)V#9",
           "original": "var10",
           "renamed": "remainingOutputBytes"
         },
         {
-          "start": 23106,
-          "end": 23112,
+          "start": 22529,
+          "end": 22535,
           "symbol": "P:tb.d(Ljl;)V#0",
           "original": "param0",
           "renamed": "state"
         },
         {
-          "start": 23113,
-          "end": 23120,
+          "start": 22536,
+          "end": 22543,
           "symbol": "F:jl.field_i:I",
           "original": "field_i",
           "renamed": "outputBytesWritten"
         },
         {
-          "start": 23124,
-          "end": 23129,
+          "start": 22547,
+          "end": 22552,
           "symbol": "L:tb.d(Ljl;)V#12",
           "original": "var13",
           "renamed": "previousOutputBytesWritten"
         },
         {
-          "start": 23155,
-          "end": 23161,
+          "start": 22578,
+          "end": 22584,
           "symbol": "P:tb.d(Ljl;)V#0",
           "original": "param0",
           "renamed": "state"
         },
         {
-          "start": 23162,
-          "end": 23169,
+          "start": 22585,
+          "end": 22592,
           "symbol": "F:jl.field_h:B",
           "original": "field_h",
           "renamed": "pendingRunByte"
         },
         {
-          "start": 23179,
-          "end": 23183,
+          "start": 22602,
+          "end": 22606,
           "symbol": "L:tb.d(Ljl;)V#1",
           "original": "var2",
           "renamed": "runByte"
         },
         {
-          "start": 23195,
-          "end": 23201,
+          "start": 22618,
+          "end": 22624,
           "symbol": "P:tb.d(Ljl;)V#0",
           "original": "param0",
           "renamed": "state"
         },
         {
-          "start": 23202,
-          "end": 23209,
+          "start": 22625,
+          "end": 22632,
           "symbol": "F:jl.field_k:I",
           "original": "field_k",
           "renamed": "pendingRunLength"
         },
         {
-          "start": 23212,
-          "end": 23216,
+          "start": 22635,
+          "end": 22639,
           "symbol": "L:tb.d(Ljl;)V#2",
           "original": "var3",
           "renamed": "remainingRunLength"
         },
         {
-          "start": 23228,
-          "end": 23234,
+          "start": 22651,
+          "end": 22657,
           "symbol": "P:tb.d(Ljl;)V#0",
           "original": "param0",
           "renamed": "state"
         },
         {
-          "start": 23235,
-          "end": 23242,
+          "start": 22658,
+          "end": 22665,
           "symbol": "F:jl.field_G:I",
           "original": "field_G",
           "renamed": "blockBytesConsumed"
         },
         {
-          "start": 23245,
-          "end": 23249,
+          "start": 22668,
+          "end": 22672,
           "symbol": "L:tb.d(Ljl;)V#3",
           "original": "var4",
           "renamed": "blockBytesConsumed"
         },
         {
-          "start": 23261,
-          "end": 23267,
+          "start": 22684,
+          "end": 22690,
           "symbol": "P:tb.d(Ljl;)V#0",
           "original": "param0",
           "renamed": "state"
         },
         {
-          "start": 23268,
-          "end": 23275,
+          "start": 22691,
+          "end": 22698,
           "symbol": "F:jl.field_c:I",
           "original": "field_c",
           "renamed": "currentByte"
         },
         {
-          "start": 23278,
-          "end": 23282,
+          "start": 22701,
+          "end": 22705,
           "symbol": "L:tb.d(Ljl;)V#4",
           "original": "var5",
           "renamed": "currentByte"
         },
         {
-          "start": 23297,
-          "end": 23304,
+          "start": 22720,
+          "end": 22727,
           "symbol": "F:kb.field_a:[I",
           "original": "field_a",
           "renamed": "bzip2TransformTable"
         },
         {
-          "start": 23307,
-          "end": 23311,
+          "start": 22730,
+          "end": 22734,
           "symbol": "L:tb.d(Ljl;)V#5",
           "original": "var6",
           "renamed": "transformTable"
         },
         {
-          "start": 23323,
-          "end": 23329,
+          "start": 22746,
+          "end": 22752,
           "symbol": "P:tb.d(Ljl;)V#0",
           "original": "param0",
           "renamed": "state"
         },
         {
-          "start": 23330,
-          "end": 23337,
+          "start": 22753,
+          "end": 22760,
           "symbol": "F:jl.field_D:I",
           "original": "field_D",
           "renamed": "transformPositionOrEntry"
         },
         {
-          "start": 23340,
-          "end": 23344,
+          "start": 22763,
+          "end": 22767,
           "symbol": "L:tb.d(Ljl;)V#6",
           "original": "var7",
           "renamed": "transformPositionOrEntry"
         },
         {
-          "start": 23356,
-          "end": 23362,
+          "start": 22779,
+          "end": 22785,
           "symbol": "P:tb.d(Ljl;)V#0",
           "original": "param0",
           "renamed": "state"
         },
         {
-          "start": 23363,
-          "end": 23370,
+          "start": 22786,
+          "end": 22793,
           "symbol": "F:jl.field_j:[B",
           "original": "field_j",
           "renamed": "outputBytes"
         },
         {
-          "start": 23373,
-          "end": 23377,
+          "start": 22796,
+          "end": 22800,
           "symbol": "L:tb.d(Ljl;)V#7",
           "original": "var8",
           "renamed": "outputBytes"
         },
         {
-          "start": 23389,
-          "end": 23395,
+          "start": 22812,
+          "end": 22818,
           "symbol": "P:tb.d(Ljl;)V#0",
           "original": "param0",
           "renamed": "state"
         },
         {
-          "start": 23396,
-          "end": 23403,
+          "start": 22819,
+          "end": 22826,
           "symbol": "F:jl.field_C:I",
           "original": "field_C",
           "renamed": "outputPosition"
         },
         {
-          "start": 23406,
-          "end": 23410,
+          "start": 22829,
+          "end": 22833,
           "symbol": "L:tb.d(Ljl;)V#8",
           "original": "var9",
           "renamed": "outputPosition"
         },
         {
-          "start": 23422,
-          "end": 23428,
+          "start": 22845,
+          "end": 22851,
           "symbol": "P:tb.d(Ljl;)V#0",
           "original": "param0",
           "renamed": "state"
         },
         {
-          "start": 23429,
-          "end": 23436,
+          "start": 22852,
+          "end": 22859,
           "symbol": "F:jl.field_A:I",
           "original": "field_A",
           "renamed": "remainingOutputBytes"
         },
         {
-          "start": 23439,
-          "end": 23444,
+          "start": 22862,
+          "end": 22867,
           "symbol": "L:tb.d(Ljl;)V#9",
           "original": "var10",
           "renamed": "remainingOutputBytes"
         },
         {
-          "start": 23502,
-          "end": 23509,
+          "start": 22925,
+          "end": 22932,
           "symbol": "F:tb.field_a:Ljl;",
           "original": "field_a",
           "renamed": "decoderState"
         },
         {
-          "start": 23516,
-          "end": 23518,
+          "start": 22939,
+          "end": 22941,
           "symbol": "C:jl",
           "original": "jl",
           "renamed": "Bzip2DecoderState"

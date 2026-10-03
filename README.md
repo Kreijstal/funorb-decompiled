@@ -16,23 +16,29 @@ mirror. The current [manifest](readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
-identities. Both 303-file Java corpora compile and retain all 138,558 remaining bindings
+identities. Both 303-file Java corpora compile and retain all 138,519 remaining bindings
 and 388 override relationships.
 
-The current naming pass adds 99 guarded identities for Bzip2 block decoding,
-Huffman tables, move-to-front state, inverse-transform links and output runs.
-Every `Bzip2Decoder` field/API/parameter/local and `Bzip2DecoderState` instance
-field has a name. A new 40-case native fixture checks varied blocks, two-block
-input, partial destinations, malformed input and recovery.
+The current structural pass removes a 13-line duplicate Bzip2 output-state
+publication/return tail. The generic decompiler reuses an existing plain exit
+block, preserving protected/monitor boundaries and refusing shadowed names.
+Its 2,048 native comparisons check loop effects, failure ordering, throwable
+identity and lock ownership. The other 302 Java files and diagnostics are unchanged.
 
-The 6,081 rules apply 49,618 edits. All 303 raw/readable sources compile,
-preserving 138,558 bindings and 388 overrides. All 5,982 previous complete rules
-and raw source/decompiler pins are unchanged. Binding checks, reproduction and
-byte-exact reversal support the names. The eight prior native traces remain
-unchanged; controlled Bzip2 payloads and state match native/raw/readable Java.
-Large labeled decoder bodies, comprehensive buffering/concurrency, static names,
-full assets/gameplay and device performance remain unfinished or unverified.
-One manifest holds current evidence, with Git for history.
+All 6,081 prior complete naming rules survive with no ordinal migrations. They
+apply 49,580 edits after removing the redundant references. Both 303-file
+corpora compile, preserving 138,519 bindings and 388 overrides. A clean pinned
+decompiler source archive regenerates the raw source and diagnostics byte-for-byte;
+the readable export reproduces and reverses exactly. All nine existing native
+helper traces remain unchanged, including the 40-case Bzip2 matrix.
+The single manifest records the explicit source/decompiler migration and evidence.
+Large labeled bodies, opaque helpers, comprehensive concurrency, full assets/
+gameplay and device memory/startup/FPS targets remain unfinished or unverified.
+
+Pass 75 named Bzip2 block/table/run decoding and all decoder state fields. Its
+40-case native fixture checks varied blocks, two-block input, partial output,
+malformed input and recovery. Every decoder field/API/parameter/local has a name;
+unrelated static helpers on the state owner remain opaque.
 
 Pass 74 named archive decompression, `GzipInflater`, Bzip2 entry/bit-reader
 contracts and selected state. Its 74-case native fixture confirms controlled
