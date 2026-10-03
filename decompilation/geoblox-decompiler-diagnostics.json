@@ -22,5 +22,16 @@
       "helpers": 3,
       "sharedLocals": 8
     }
+  ],
+  "intArgumentBridges": [
+    {
+      "name": "i.java",
+      "kind": "intArgumentBridge",
+      "className": "i",
+      "methodName": "a",
+      "descriptor": "(IBLnf;IZ)V",
+      "sourceMethodName": "$cfr$intArgs$a$77236d03e70d",
+      "sourceDescriptor": "(IILnf;IZ)V"
+    }
   ]
 }

@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "f0763fad063121cd249c9cfd0c522fa52d9b4ace",
+      "commit": "ac70ec74349c21a7d91b321575243577a4a3734a",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "6f7b251bee18053f7db1c3970dc6a52d421b1709d3366b65c4cb11cf0b3c370e",
-        "reproduce": "git archive --format=tar f0763fad063121cd249c9cfd0c522fa52d9b4ace | sha256sum",
+        "sha256": "c7a180dd8a0c328443818cbdd414a05e5af77e370cad17eebebd20b777060d50",
+        "reproduce": "git archive --format=tar ac70ec74349c21a7d91b321575243577a4a3734a | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
@@ -93,9 +93,9 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "fe14e8a5abf577b825d5d210ee51cce9b3d43481bc3715bff080220b5636cd25",
-  "previousSourceTreeSha256": "16f31721bd664b9bb5cf4545ef1eeabe8ac675be1b29c36f682bd55ebd226f17",
-  "changedJavaFiles": 131,
+  "sourceTreeSha256": "2995331e604149cd5b7e6e4cbc608fbd8eca8f61cc104b3da7f1910ced8a4399",
+  "previousSourceTreeSha256": "fe14e8a5abf577b825d5d210ee51cce9b3d43481bc3715bff080220b5636cd25",
+  "changedJavaFiles": 2,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
@@ -2303,5 +2303,33 @@
     "cleanSourceArchiveByteExact": true,
     "diagnosticsUnchanged": true,
     "scope": "Braced nested ifs without alternates or intervening statements become ordered && guards. The innermost declaration block and original condition bytes remain. Generic17280 native comparisons cover unboxing, floating/NaN predicates, operand order, throwing calls, partial state, early returns, finally effects observed after invocation and monitor ownership. Applying only guard folding and existing frame cleanup to prior method/initializer bodies reproduces all303 new token streams. All ordered bindings remain. Existing game-probe pins remain in the one readable manifest; complete assets/platform/server/gameplay and browser/phone acceptance are unverified."
+  },
+  "integerArgumentPreservation": {
+    "historicalPassVersion": 85,
+    "javaToolsCommit": "ac70ec74349c21a7d91b321575243577a4a3734a",
+    "sourceArchiveSha256": "c7a180dd8a0c328443818cbdd414a05e5af77e370cad17eebebd20b777060d50",
+    "bytecodeChanged": false,
+    "sourceBodyEditedByHand": false,
+    "changedJavaFiles": 2,
+    "sourceDeclarationsBefore": 19558,
+    "sourceDeclarationsAfter": 19591,
+    "sourceReferenceOccurrencesBefore": 118944,
+    "sourceReferenceOccurrencesAfter": 119181,
+    "originalDeclarationsAndLocalOrdinalsPreserved": true,
+    "overrideRelationshipsPreserved": 388,
+    "addedMethod": "i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V",
+    "originalMethod": "i.a(IBLnf;IZ)V",
+    "originalSignatureAndBodyPreserved": true,
+    "generatedBodyIdenticalExceptNameAndByteParameterType": true,
+    "sourceCallSiteReplacementCount": 1,
+    "genericNativeTestGroupsPassed": 2,
+    "genericNativeInvocationResultsPerExport": 201,
+    "genericNativeExportModes": [
+      "directory",
+      "jar",
+      "multi-class-ast"
+    ],
+    "cleanSourceArchiveGeneratedAllJavaFiles": 303,
+    "scope": "The JVM forwards full int slots to byte/short/char parameters without narrowing. The logo probe exposed120 scene cases where -8170 narrowed to22 and skipped sprite cleanup. An owned static int-parameter entry point preserves the value; original source declarations/body/signature remain.301 files unchanged, one call edit in p, identical additional body in i. Generic discovery currently covers int-typed stackIn carriers and selected owned static targets; external/virtual/constructor/boolean paths and arbitrary direct int arguments remain outside this proof. Native logo proof and naming evidence live in the one readable manifest."
   }
 }
