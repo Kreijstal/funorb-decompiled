@@ -82,12 +82,9 @@ final class pf extends ee implements ga, pl {
               var4 = var9.h(76);
               var5 = (se) ((Object) sj.field_g.g(0));
               while (true) {
-                L2: {
-                  if (var5 != null) {
-                    if ((var5.field_g == var3) &&
-                        (var5.field_j == var4)) {
-                      break L2;
-                    }
+                if (var5 != null) {
+                  if (!((var5.field_g == var3) &&
+                      (var5.field_j == var4))) {
                     var5 = (se) ((Object) sj.field_g.d(1));
                     continue;
                   }
@@ -687,15 +684,9 @@ final class pf extends ee implements ga, pl {
     }
 
     private final void g(int param0) {
-        L0: {
-          if (!wh.e(param0)) {
-            if (this.field_J.field_s.length() <= 0) {
-              break L0;
-            }
-            if (0 >= this.field_P.field_s.length()) {
-              break L0;
-            }
-          }
+        if ((!(!wh.e(param0)) ||
+            (!(this.field_J.field_s.length() <= 0) &&
+              !(0 >= this.field_P.field_s.length())))) {
           ef.a(this.field_P.field_s, (byte) 66, this.field_J.field_s);
         }
     }
@@ -744,13 +735,10 @@ final class pf extends ee implements ga, pl {
           } else {
             stackIn_10_1 = true;
           }
-          L3: {
-            ((pf) (this)).field_I = stackIn_10_1;
-            if (this.field_N) {
-              if ((!this.field_C) &&
-                  (!this.field_I)) {
-                break L3;
-              }
+          ((pf) (this)).field_I = stackIn_10_1;
+          if (this.field_N) {
+            if (!((!this.field_C) &&
+                (!this.field_I))) {
               throw new IllegalStateException();
             }
           }

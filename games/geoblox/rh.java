@@ -413,14 +413,11 @@ final class rh {
             return true;
           }
           L4: {
-            L5: {
-              if (param2 != null) {
-                if ((param2[0] == 0) &&
-                    (param2[1] == 0) &&
-                    (param2[2] == 0) &&
-                    (0 == param2[3])) {
-                  break L5;
-                }
+            if (param2 != null) {
+              if (!((param2[0] == 0) &&
+                  (param2[1] == 0) &&
+                  (param2[2] == 0) &&
+                  (0 == param2[3]))) {
                 var34 = uk.a(true, param1 ^ -114, this.field_f[param3]);
                 var24 = var34;
                 var9 = var24;

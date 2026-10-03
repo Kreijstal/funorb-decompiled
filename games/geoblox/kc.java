@@ -416,15 +416,9 @@ final class kc {
             }
             var2_ref_ja = (ja) ((Object) a.field_d.g(0));
             while (var2_ref_ja != null) {
-              L37: {
-                if (null == var2_ref_ja.field_K) {
-                  if (!w.field_f) {
-                    break L37;
-                  }
-                  if (!var2_ref_ja.field_t) {
-                    break L37;
-                  }
-                }
+              if ((!(null == var2_ref_ja.field_K) ||
+                  (!(!w.field_f) &&
+                    !(!var2_ref_ja.field_t)))) {
                 L39: {
                   L40: {
                     re.field_j = true;

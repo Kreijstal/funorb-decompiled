@@ -180,15 +180,12 @@ final class kj extends ia {
         int var6 = 0;
         double var7 = 0.0;
         try {
-          L0: {
-            var3_int = (param1.field_n * param1.field_s >> 12) + param1.field_E;
-            var3_int = var3_int + ((-8192 + this.field_y[param1.field_t]) * this.field_v[param1.field_t] >> 12);
-            var4 = param1.field_x;
-            if (0 < var4.field_d) {
-              if ((var4.field_b <= 0) &&
-                  (this.field_s[param1.field_t] <= 0)) {
-                break L0;
-              }
+          var3_int = (param1.field_n * param1.field_s >> 12) + param1.field_E;
+          var3_int = var3_int + ((-8192 + this.field_y[param1.field_t]) * this.field_v[param1.field_t] >> 12);
+          var4 = param1.field_x;
+          if (0 < var4.field_d) {
+            if (!((var4.field_b <= 0) &&
+                (this.field_s[param1.field_t] <= 0))) {
               var5 = var4.field_b << 2;
               var6 = var4.field_j << 1;
               if (var6 > param1.field_j) {
@@ -261,13 +258,10 @@ final class kj extends ia {
         int var8 = 0;
         double var9 = 0.0;
         try {
-          L0: {
-            param3.field_g = qk.field_j / 100;
-            if (param3.field_y >= 0) {
-              if ((null != param3.field_u) &&
-                  (!param3.field_u.l())) {
-                break L0;
-              }
+          param3.field_g = qk.field_j / 100;
+          if (param3.field_y >= 0) {
+            if (!((null != param3.field_u) &&
+                (!param3.field_u.l()))) {
               param3.b(-1);
               param3.a(param4);
               if ((0 < param3.field_r) &&
@@ -302,26 +296,21 @@ final class kj extends ia {
               var8 = 1;
             }
           }
-          L7: {
-            if (var7.field_f != null) {
-              if (var7.field_g > 0) {
-                param3.field_o = param3.field_o + (int)(0.5 + 128.0 * Math.pow(2.0, var9 * (double)var7.field_g));
-              } else {
-                param3.field_o = param3.field_o + 128;
+          if (var7.field_f != null) {
+            if (var7.field_g > 0) {
+              param3.field_o = param3.field_o + (int)(0.5 + 128.0 * Math.pow(2.0, var9 * (double)var7.field_g));
+            } else {
+              param3.field_o = param3.field_o + 128;
+            }
+            while (param3.field_k < -2 + var7.field_f.length) {
+              if ((65280 & var7.field_f[param3.field_k + 2] << 8) < param3.field_o) {
+                param3.field_k = param3.field_k + 2;
+                continue;
               }
-              while (param3.field_k < -2 + var7.field_f.length) {
-                if ((65280 & var7.field_f[param3.field_k + 2] << 8) < param3.field_o) {
-                  param3.field_k = param3.field_k + 2;
-                  continue;
-                }
-                break;
-              }
-              if (param3.field_k != -2 + var7.field_f.length) {
-                break L7;
-              }
-              if (var7.field_f[param3.field_k + 1] != 0) {
-                break L7;
-              }
+              break;
+            }
+            if ((!(param3.field_k != -2 + var7.field_f.length) &&
+                !(var7.field_f[param3.field_k + 1] != 0))) {
               var8 = 1;
             }
           }

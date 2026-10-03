@@ -795,12 +795,9 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                   ml.field_s = dupTemp$0;
                   var8 = ka.field_i.a((Runnable) (this), 0, 1);
                   while (true) {
-                    L2: {
-                      if (var8.field_a == 0) {
-                        bc.a(0, 10L);
-                        if (var9 != 0) {
-                          break L2;
-                        }
+                    if (var8.field_a == 0) {
+                      bc.a(0, 10L);
+                      if (!(var9 != 0)) {
                         if (var9 == 0) {
                           continue;
                         }

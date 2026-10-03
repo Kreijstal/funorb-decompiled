@@ -37,17 +37,11 @@ final class lc {
                 field_b = -11;
               }
             }
-            L3: {
-              if ((!((kj.field_o[99]) &&
-                    (ji.field_r.c(13519)))) &&
-                  (~kb.field_c <= ~kc.field_a)) {
-                if (ul.field_b != 0) {
-                  break L3;
-                }
-                if (el.field_o.field_Y) {
-                  break L3;
-                }
-              }
+            if ((!((!((kj.field_o[99]) &&
+                  (ji.field_r.c(13519)))) &&
+                (~kb.field_c <= ~kc.field_a)) ||
+                (!(ul.field_b != 0) &&
+                  !(el.field_o.field_Y)))) {
               if ((0 < wd.field_e.a(param0 ^ -170)) &&
                   (!el.field_o.field_N)) {
                 ji.field_r.a(-48, wd.field_e.b((byte) -124));

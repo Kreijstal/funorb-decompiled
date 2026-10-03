@@ -375,17 +375,11 @@ final class gh {
           }
           g.field_i.b(468, 410);
         }
-        L24: {
-          if (!this.field_Y) {
-            if (ih.a(0)) {
-              if (var2 == 0) {
-                break L24;
-              }
-              if ((0 != this.field_bb) &&
-                  (this.field_bb != 1)) {
-                break L24;
-              }
-            }
+        if (!this.field_Y) {
+          if ((!(ih.a(0)) ||
+              (!(var2 == 0) &&
+                !((0 != this.field_bb) &&
+                (this.field_bb != 1))))) {
             this.e(-46);
           }
         }

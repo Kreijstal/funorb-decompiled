@@ -859,17 +859,14 @@ abstract class wh extends rc {
                       var3_int = 0;
                       while (true) {
                         L4: {
-                          L5: {
-                            if (var3_int < 24) {
-                              stackIn_17_0 = ~var2[var3_int];
-                              stackIn_17_1 = -1;
-                              if (var5 != 0) {
-                                break L4;
-                              }
-                              if ((stackIn_17_0 != stackIn_17_1) &&
-                                  (var5 == 0)) {
-                                break L5;
-                              }
+                          if (var3_int < 24) {
+                            stackIn_17_0 = ~var2[var3_int];
+                            stackIn_17_1 = -1;
+                            if (var5 != 0) {
+                              break L4;
+                            }
+                            if (!((stackIn_17_0 != stackIn_17_1) &&
+                                (var5 == 0))) {
                               var3_int++;
                               if (var5 == 0) {
                                 continue;

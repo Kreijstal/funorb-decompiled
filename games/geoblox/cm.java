@@ -69,41 +69,38 @@ final class cm extends cj {
               jl.a((byte) -115);
               return;
             }
-            L4: {
-              var5 = var27.c((byte) 34);
-              if (var5 != 0) {
-                var6 = var4.field_f;
-                var7 = var4.field_l;
-                id.field_b[0].field_c = false;
-                id.field_b[0].field_d = wd.field_f;
-                id.field_b[0].field_a = null;
-                for (var8_int = 1; var5 > var8_int; var8_int++) {
-                  id.field_b[var8_int].field_d = var27.e((byte) 104);
-                  id.field_b[var8_int].field_c = false;
-                  if (var27.c((byte) 34) == 1) {
-                    id.field_b[var8_int].field_a = var27.e((byte) 122);
-                  } else {
-                    id.field_b[var8_int].field_a = null;
-                  }
+            var5 = var27.c((byte) 34);
+            if (var5 != 0) {
+              var6 = var4.field_f;
+              var7 = var4.field_l;
+              id.field_b[0].field_c = false;
+              id.field_b[0].field_d = wd.field_f;
+              id.field_b[0].field_a = null;
+              for (var8_int = 1; var5 > var8_int; var8_int++) {
+                id.field_b[var8_int].field_d = var27.e((byte) 104);
+                id.field_b[var8_int].field_c = false;
+                if (var27.c((byte) 34) == 1) {
+                  id.field_b[var8_int].field_a = var27.e((byte) 122);
+                } else {
+                  id.field_b[var8_int].field_a = null;
                 }
-                dupTemp$0 = new String[3][var6];
-                var4.field_k = dupTemp$0;
-                var8 = dupTemp$0;
-                var9 = new String[3][var6];
-                var31 = new long[3][var6];
-                dupTemp$1 = new int[3][var6 * var7];
-                var4.field_h = dupTemp$1;
-                var11 = dupTemp$1;
-                var12 = 0;
-                var13 = 0;
-                var14 = 0;
-                var15 = 0;
-                var16 = 0;
-                var17 = 0;
-                var18 = var27.c((byte) 34);
-                if (0 >= var18) {
-                  break L4;
-                }
+              }
+              dupTemp$0 = new String[3][var6];
+              var4.field_k = dupTemp$0;
+              var8 = dupTemp$0;
+              var9 = new String[3][var6];
+              var31 = new long[3][var6];
+              dupTemp$1 = new int[3][var6 * var7];
+              var4.field_h = dupTemp$1;
+              var11 = dupTemp$1;
+              var12 = 0;
+              var13 = 0;
+              var14 = 0;
+              var15 = 0;
+              var16 = 0;
+              var17 = 0;
+              var18 = var27.c((byte) 34);
+              if (!(0 >= var18)) {
                 for (var19 = 0; var19 < var18; var19++) {
                   var20 = var27.c((byte) 34);
                   var21 = id.field_b[var20].field_d;
@@ -194,12 +191,9 @@ final class cm extends cj {
         try {
             IOException iOException = null;
             Throwable decompiledCaughtException = null;
-            L0: {
-              if (null != oc.field_e) {
-                if ((param1 >= 0) &&
-                    (pk.field_l != eh.field_b)) {
-                  break L0;
-                }
+            if (null != oc.field_e) {
+              if (!((param1 >= 0) &&
+                  (pk.field_l != eh.field_b))) {
                 if ((0 == fj.field_q.field_f) &&
                     (~oa.a(-12520) < ~(10000L + v.field_r))) {
                   fj.field_q.a(param1, (byte) -76);

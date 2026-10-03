@@ -113,21 +113,18 @@ class qk {
     final synchronized void c() {
         int var2 = 0;
         int var1;
-        L0: {
-          if (field_r != null) {
-            var1 = 1;
-            for (var2 = 0; var2 < 2; var2++) {
-              if (field_r.field_g[var2] == this) {
-                field_r.field_g[var2] = null;
-              }
-              if (field_r.field_g[var2] == null) {
-                continue;
-              }
-              var1 = 0;
+        if (field_r != null) {
+          var1 = 1;
+          for (var2 = 0; var2 < 2; var2++) {
+            if (field_r.field_g[var2] == this) {
+              field_r.field_g[var2] = null;
             }
-            if (var1 == 0) {
-              break L0;
+            if (field_r.field_g[var2] == null) {
+              continue;
             }
+            var1 = 0;
+          }
+          if (!(var1 == 0)) {
             field_r.field_f = true;
             while (field_r.field_c) {
               bc.a(0, 50L);

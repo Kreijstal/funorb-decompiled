@@ -70,15 +70,12 @@ final class v {
         byte[] var12 = null;
         byte[] var13 = null;
         try {
-          L0: {
-            var9 = new qc(param0);
-            var3 = var9.c((byte) 34);
-            var4 = var9.a((byte) -97);
-            if (var4 >= 0) {
-              if ((uj.field_b != 0) &&
-                  (var4 > uj.field_b)) {
-                break L0;
-              }
+          var9 = new qc(param0);
+          var3 = var9.c((byte) 34);
+          var4 = var9.a((byte) -97);
+          if (var4 >= 0) {
+            if (!((uj.field_b != 0) &&
+                (var4 > uj.field_b))) {
               if (param1 == ~var3) {
                 var12 = new byte[var4];
                 var10 = var12;
@@ -87,13 +84,10 @@ final class v {
                 stackIn_7_0 = (byte[]) (var5_ref_byte__);
                 return stackIn_7_0;
               }
-              L2: {
-                var5 = var9.a((byte) -49);
-                if (var5 >= 0) {
-                  if ((uj.field_b != 0) &&
-                      (uj.field_b < var5)) {
-                    break L2;
-                  }
+              var5 = var9.a((byte) -49);
+              if (var5 >= 0) {
+                if (!((uj.field_b != 0) &&
+                    (uj.field_b < var5))) {
                   var13 = new byte[var5];
                   var11 = var13;
                   var6 = var11;

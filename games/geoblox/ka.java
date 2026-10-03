@@ -73,20 +73,17 @@ abstract class ka {
         if (param1 >= -26) {
           this.field_j = 8;
         }
-        L1: {
-          if (ki.field_d != 96) {
-            if (ki.field_d == 97) {
-              this.a((byte) 90, param0);
-            } else {
-              if ((ki.field_d != 84) &&
-                  (ki.field_d != 83)) {
-                break L1;
-              }
+        if (ki.field_d != 96) {
+          if (ki.field_d == 97) {
+            this.a((byte) 90, param0);
+          } else {
+            if (!((ki.field_d != 84) &&
+                (ki.field_d != 83))) {
               this.b(param0, (byte) -2);
             }
-          } else {
-            this.a(param0, (byte) -7);
           }
+        } else {
+          this.a(param0, (byte) -7);
         }
     }
 

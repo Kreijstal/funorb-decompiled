@@ -256,17 +256,11 @@ abstract class wf extends ch {
         if (null != vc.field_f) {
           vc.field_i = vc.field_f.a(true);
         }
-        L4: {
-          if (t.b(param1 ^ 19649)) {
-            var3 = 1200 * sb.a(true);
-            if (!this.field_t) {
-              if (~var3 <= ~ha.a(-76)) {
-                break L4;
-              }
-              if (var3 >= jk.a(false)) {
-                break L4;
-              }
-            }
+        if (t.b(param1 ^ 19649)) {
+          var3 = 1200 * sb.a(true);
+          if ((!(!this.field_t) ||
+              (!(~var3 <= ~ha.a(-76)) &&
+                !(var3 >= jk.a(false))))) {
             this.field_t = false;
             jl.a((byte) -115);
             kd.b((byte) 81);
@@ -430,12 +424,9 @@ abstract class wf extends ch {
         }
         L30: {
           if (mi.field_C == 11) {
-            L31: {
-              if (null != ak.field_b) {
-                if ((ak.field_b.a(0)) &&
-                    (ak.field_b.b(true))) {
-                  break L31;
-                }
+            if (null != ak.field_b) {
+              if (!((ak.field_b.a(0)) &&
+                  (ak.field_b.b(true)))) {
                 lc.a(si.a(ri.field_c, 2147483647, vc.field_g, ak.field_b), -2, 0.0f);
                 break L30;
               }

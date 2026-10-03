@@ -101,28 +101,25 @@ final class ol extends hk {
           if (0 > var9) {
             var9 = 0;
           }
-          L2: {
-            var9 = this.field_E * var9 / var10;
-            if (param3 != 1) {
-              if (param3 == 2) {
-                var11 = 2147483647;
-                var12 = -1;
-                for (var13 = 0; var13 < this.field_F.a((byte) 48); var13++) {
-                  var14 = this.field_F.a(var13, (byte) 94) - var9;
-                  var14 = var14 * var14;
-                  if (~var11 < ~var14) {
-                    var11 = var14;
-                    var12 = var13;
-                  }
+          var9 = this.field_E * var9 / var10;
+          if (param3 != 1) {
+            if (param3 == 2) {
+              var11 = 2147483647;
+              var12 = -1;
+              for (var13 = 0; var13 < this.field_F.a((byte) 48); var13++) {
+                var14 = this.field_F.a(var13, (byte) 94) - var9;
+                var14 = var14 * var14;
+                if (~var11 < ~var14) {
+                  var11 = var14;
+                  var12 = var13;
                 }
-                if (0 > var12) {
-                  break L2;
-                }
+              }
+              if (!(0 > var12)) {
                 this.field_F.a(0, var12);
               }
-            } else {
-              this.field_F.b(var9, (byte) -93);
             }
+          } else {
+            this.field_F.b(var9, (byte) -93);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
