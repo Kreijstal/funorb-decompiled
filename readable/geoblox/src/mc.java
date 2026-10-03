@@ -24,7 +24,7 @@ final class mc {
           }
           var8 = new r(kd.field_e, param3);
           var7 = var8;
-          kd.field_e.a(false, var8);
+          kd.field_e.showDialog(false, var8);
           if (param4 != 0) {
             return false;
           }

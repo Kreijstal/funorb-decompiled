@@ -1,6 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-interface lg extends bb {
-    public abstract void a(int param0, el param1, boolean param2);
+interface lg extends WidgetListener {
+    public abstract void a(int param0, UiWidget param1, boolean param2);
 }

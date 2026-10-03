@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class OpacityWidget extends sh {
+final class OpacityWidget extends SingleChildWidget {
     static String fullscreenAfterAcceptText;
     static String createInvalidEmailAlertText;
     int opacity;
@@ -10,7 +10,7 @@ final class OpacityWidget extends sh {
     static String createDisplayNameText;
 
     public OpacityWidget() {
-        super(0, 0, 0, 0, (dh) null, (bb) null);
+        super(0, 0, 0, 0, (WidgetRenderer) null, (WidgetListener) null);
         this.opacity = 256;
     }
 
@@ -18,15 +18,15 @@ final class OpacityWidget extends sh {
         if (methodGuard != 7426) {
             createDisplayNameText = (String) null;
         }
-        return 250 < gb.logoAnimationTick ? true : false;
+        return 250 < DequeCursor.logoAnimationTick ? true : false;
     }
 
-    OpacityWidget(el content) {
-        super(content.widgetX, content.widgetY, content.widgetWidth, content.widgetHeight, (dh) null, (bb) null);
+    OpacityWidget(UiWidget content) {
+        super(content.widgetX, content.widgetY, content.widgetWidth, content.widgetHeight, (WidgetRenderer) null, (WidgetListener) null);
         try {
-            content.a(this.widgetHeight, this.widgetWidth, (byte) -113, 0, 0);
+            content.setWidgetBounds(this.widgetHeight, this.widgetWidth, (byte) -113, 0, 0);
             this.opacity = 256;
-            this.field_A = content;
+            this.child = content;
         } catch (RuntimeException opacityWidgetConstructionFailure) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) opacityWidgetConstructionFailure), "wj.<init>(" + (content != null ? "{...}" : "null") + ')');
         }
@@ -146,19 +146,19 @@ final class OpacityWidget extends sh {
         if (!(renderPass == 0)) {
             return;
         }
-        if (null == this.field_A) {
+        if (null == this.child) {
             return;
         }
         if (this.opacity == 0) {
             return;
         }
         if (this.opacity == 256) {
-            this.field_A.renderWidget(parentX + this.widgetX, parentY + this.widgetY, (byte) 83, renderPass);
+            this.child.renderWidget(parentX + this.widgetX, parentY + this.widgetY, (byte) 83, renderPass);
             return;
         }
-        Sprite contentRaster = new Sprite(this.field_A.widgetWidth, this.field_A.widgetHeight);
+        Sprite contentRaster = new Sprite(this.child.widgetWidth, this.child.widgetHeight);
         Geoblox.setRasterTarget(1, contentRaster);
-        this.field_A.renderWidget(0, 0, (byte) -115, renderPass);
+        this.child.renderWidget(0, 0, (byte) -115, renderPass);
         id.a(true);
         contentRaster.drawAlpha(this.widgetX + parentX, this.widgetY + parentY, this.opacity);
     }

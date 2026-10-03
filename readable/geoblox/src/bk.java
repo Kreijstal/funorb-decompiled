@@ -30,7 +30,7 @@ final class bk {
             ul.a(-21541, param0);
             jk.b((byte) -91);
             ad.a((byte) -32);
-            gb.logoAnimationTick = -DiskCacheWorker.logoStartDelayTicks + 0;
+            DequeCursor.logoAnimationTick = -DiskCacheWorker.logoStartDelayTicks + 0;
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "bk.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

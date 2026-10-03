@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ol extends hk {
+final class ol extends ButtonWidget {
     private sj field_F;
     int field_H;
     int field_G;
@@ -73,7 +73,7 @@ final class ol extends hk {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, el param6) {
+    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6) {
         int var13 = 0;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;

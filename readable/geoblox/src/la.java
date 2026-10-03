@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class la extends sh {
+final class la extends SingleChildWidget {
     private int field_D;
     private boolean field_F;
     static hh contentFadeOutPhase;
@@ -13,16 +13,16 @@ final class la extends sh {
     private int field_H;
     static hh contentResizePhase;
 
-    final void a(int param0, int param1, boolean param2, el param3, int param4, int param5) {
+    final void a(int param0, int param1, boolean param2, UiWidget param3, int param4, int param5) {
         try {
             super.a(param0, param1, param2, param3, param4, param5);
-            this.field_f = 0;
+            this.pressedPointerButton = 0;
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "la.TA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    final void a(boolean param0, int param1, el param2, int param3) {
+    final void a(boolean param0, int param1, UiWidget param2, int param3) {
         int stackIn_17_1 = 0;
         int stackIn_18_2 = 0;
         int stackIn_23_1 = 0;
@@ -35,17 +35,17 @@ final class la extends sh {
         RuntimeException var5 = null;
         int var6 = 0;
         try {
-          if ((!((this.field_A instanceof hk) &&
-                (!((hk) ((Object) this.field_A)).field_D))) &&
-              (this.field_f == 1)) {
+          if ((!((this.child instanceof ButtonWidget) &&
+                (!((ButtonWidget) ((Object) this.child)).enabled))) &&
+              (this.pressedPointerButton == 1)) {
             var5_int = PrefixCodeDecoder.pointerXSnapshot - this.field_D - param3;
             var6 = -this.field_H + (ue.pointerYSnapshot - param1);
             if (!((this.widgetX == var5_int) &&
                 (var6 == this.widgetY))) {
               this.widgetY = var6;
               this.widgetX = var5_int;
-              if (!(!(this.field_u instanceof de))) {
-                ((de) ((Object) this.field_u)).a(param3, -20951, (la) (this), param1);
+              if (!(!(this.listener instanceof de))) {
+                ((de) ((Object) this.listener)).a(param3, -20951, (la) (this), param1);
               }
             }
           } else {
@@ -100,12 +100,12 @@ final class la extends sh {
         }
     }
 
-    private la(int param0, int param1, int param2, int param3, dh param4, bb param5, el param6, boolean param7, boolean param8) {
+    private la(int param0, int param1, int param2, int param3, WidgetRenderer param4, WidgetListener param5, UiWidget param6, boolean param7, boolean param8) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_G = 2147483647;
         this.field_B = 2147483647;
         try {
-            this.field_A = param6;
+            this.child = param6;
             this.field_C = param7 ? true : false;
             this.field_F = param8 ? true : false;
         } catch (RuntimeException runtimeException) {
@@ -159,7 +159,7 @@ final class la extends sh {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, el param6) {
+    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
         int var9 = 0;
@@ -175,11 +175,11 @@ final class la extends sh {
               (this.field_F)) {
             return true;
           }
-          if (!this.a(param4, -1, param5, param0, param2)) {
+          if (!this.containsPointer(param4, -1, param5, param0, param2)) {
             stackIn_10_0 = var8_int;
             return stackIn_10_0 != 0;
           }
-          this.field_f = param3;
+          this.pressedPointerButton = param3;
           if (param3 != 1) {
             return true;
           }
@@ -206,7 +206,7 @@ final class la extends sh {
             fh.b(-6011);
             ii.field_a = true;
             cf.field_i = true;
-            kd.field_e.f(param0 + 10912);
+            kd.field_e.hideAllDialogs(param0 + 10912);
             fa.showMessageDialog(ah.connectionLostReconnectingText, 480, false);
             return;
         }
@@ -214,13 +214,13 @@ final class la extends sh {
         fh.b(-6011);
         ii.field_a = true;
         cf.field_i = true;
-        kd.field_e.f(param0 + 10912);
+        kd.field_e.hideAllDialogs(param0 + 10912);
         fa.showMessageDialog(ah.connectionLostReconnectingText, 480, false);
     }
 
-    final void b(boolean param0) {
-        super.b(param0);
-        this.field_A.a(this.widgetHeight, this.widgetWidth, (byte) -85, 0, 0);
+    final void refreshChildLayout(boolean layoutGuard) {
+        super.refreshChildLayout(layoutGuard);
+        this.child.setWidgetBounds(this.widgetHeight, this.widgetWidth, (byte) -85, 0, 0);
         this.field_B = this.widgetX;
         this.field_G = this.widgetY;
     }

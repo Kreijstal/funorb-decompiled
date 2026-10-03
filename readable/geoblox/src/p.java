@@ -99,7 +99,7 @@ final class p extends IntrusiveNode {
                 }
                 L5: {
                   if (nearPlaneOrNormalCapacityOrQueueMinDepth >= invertedDepthOrNormalIndexOrQueueGuard) {
-                    sh.projectedMeshVertexX[cameraXBasisOrDeltaZOrVertexIndex] = cameraZBasisOrCameraXScaled / cameraZBasisOrCameraDepth + cameraXBasisOrDeltaXOrClipCenterXOrNormalZ;
+                    SingleChildWidget.projectedMeshVertexX[cameraXBasisOrDeltaZOrVertexIndex] = cameraZBasisOrCameraXScaled / cameraZBasisOrCameraDepth + cameraXBasisOrDeltaXOrClipCenterXOrNormalZ;
                     dj.projectedMeshVertexY[cameraXBasisOrDeltaZOrVertexIndex] = cameraXBasisOrDeltaYOrClipCenterY + cameraZBasisOrCameraYScaled / cameraZBasisOrCameraDepth;
                     if (~cameraZBasisOrCameraDepth > ~minimumVisibleDepth) {
                       minimumVisibleDepth = cameraZBasisOrCameraDepth;

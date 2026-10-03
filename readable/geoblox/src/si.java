@@ -87,7 +87,7 @@ final class si {
         return (si) (this);
     }
 
-    final void a(rd param0, int param1, int param2, el param3, int param4) {
+    final void a(rd param0, int param1, int param2, UiWidget param3, int param4) {
         BitmapFont stackIn_20_0 = null;
         String stackIn_20_1 = null;
         int stackIn_21_2 = 0;
@@ -216,7 +216,7 @@ final class si {
         field_n = null;
     }
 
-    final void a(int param0, int param1, si param2, rd param3, int param4, el param5) {
+    final void a(int param0, int param1, si param2, rd param3, int param4, UiWidget param5) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;

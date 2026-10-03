@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hd extends sh {
+final class hd extends SingleChildWidget {
     private int field_K;
     private BitmapFont field_F;
     private String field_J;
@@ -34,16 +34,16 @@ final class hd extends sh {
     }
 
     final static void recordEntityRelease(int param0) {
-        if (el.gameplaySession.tutorialMode) {
+        if (UiWidget.gameplaySession.tutorialMode) {
           return;
         }
         di.releasedInDifficultyStep = di.releasedInDifficultyStep + 1;
         ul.releasedInCurrentTheme = ul.releasedInCurrentTheme + 1;
         if ((sa.releasesPerDifficultyStep == di.releasedInDifficultyStep) &&
-            (gb.field_c < 2)) {
+            (DequeCursor.field_c < 2)) {
           di.releasedInDifficultyStep = 0;
           ld.advanceDifficulty(false);
-          gb.field_c = gb.field_c + 1;
+          DequeCursor.field_c = DequeCursor.field_c + 1;
         }
         if (param0 != 2) {
           nineSliceSavedClip = (int[]) null;
@@ -51,26 +51,26 @@ final class hd extends sh {
         if (fa.releasesPerTheme == ul.releasedInCurrentTheme) {
           ul.releasedInCurrentTheme = 0;
           fj.field_m = 0;
-          el.gameplaySession.sessionPhase = 1;
+          UiWidget.gameplaySession.sessionPhase = 1;
           di.releasedInDifficultyStep = 0;
-          if (gb.field_c < 2) {
+          if (DequeCursor.field_c < 2) {
             ld.advanceDifficulty(false);
           }
-          gb.field_c = 0;
-          el.field_t = el.field_t + 1;
+          DequeCursor.field_c = 0;
+          UiWidget.field_t = UiWidget.field_t + 1;
         }
     }
 
     final String c(byte param0) {
-        int var2 = this.field_A.field_l ? 1 : 0;
-        this.field_A.field_l = this.field_l;
-        String var3 = this.field_A.c(param0);
-        this.field_A.field_l = var2 != 0 ? true : false;
+        int var2 = this.child.pointerInside ? 1 : 0;
+        this.child.pointerInside = this.pointerInside;
+        String var3 = this.child.c(param0);
+        this.child.pointerInside = var2 != 0 ? true : false;
         return var3;
     }
 
-    hd(int param0, int param1, int param2, int param3, el param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
-        super(param0, param1, param2, param3, (dh) null, (bb) null);
+    hd(int param0, int param1, int param2, int param3, UiWidget param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
+        super(param0, param1, param2, param3, (WidgetRenderer) null, (WidgetListener) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -87,7 +87,7 @@ final class hd extends sh {
         int var14 = 0;
         try {
           this.field_G = param9;
-          this.field_A = param4;
+          this.child = param4;
           this.field_C = param7;
           this.field_F = param8;
           if (!param5) {
@@ -103,7 +103,7 @@ final class hd extends sh {
           if (var13 <= param3) {
             var13 = param3;
           } else {
-            this.a(var13, param2, (byte) -74, param1, param0);
+            this.setWidgetBounds(var13, param2, (byte) -74, param1, param0);
           }
           if (!this.field_B) {
             stackIn_10_0 = this.field_K + this.field_C * 2;
@@ -111,7 +111,7 @@ final class hd extends sh {
             stackIn_10_0 = 0;
           }
           var14 = stackIn_10_0;
-          this.field_A.a(-(2 * this.field_C) + param3, param2 - this.field_K - this.field_C * 3, (byte) -105, (-param3 + var13 >> 1) + this.field_C, var14);
+          this.child.setWidgetBounds(-(2 * this.field_C) + param3, param2 - this.field_K - this.field_C * 3, (byte) -105, (-param3 + var13 >> 1) + this.field_C, var14);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

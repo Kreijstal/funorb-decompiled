@@ -76,7 +76,7 @@ final class ma extends IntrusiveNode {
           if (!methodGuard) {
             ma.tickArchiveLoading(-91);
           }
-          overlapFound = PixelOverlapProbe.findFirstNonzeroPixelOverlap(SecondaryDeque.contactProbeRaster, 0, 0, vf.spriteScratchRaster, -SecondaryDeque.contactProbeOffsetX + ng.rotatedEntityScreenX - (vf.spriteScratchRaster.fullWidth >> 1), -SecondaryDeque.contactProbeOffsetY - (vf.spriteScratchRaster.fullHeight >> 1) + td.rotatedEntityScreenY);
+          overlapFound = PixelOverlapProbe.findFirstNonzeroPixelOverlap(SecondaryDeque.contactProbeRaster, 0, 0, vf.spriteScratchRaster, -SecondaryDeque.contactProbeOffsetX + DialogLayer.rotatedEntityScreenX - (vf.spriteScratchRaster.fullWidth >> 1), -SecondaryDeque.contactProbeOffsetY - (vf.spriteScratchRaster.fullHeight >> 1) + td.rotatedEntityScreenY);
           return overlapFound;
         } catch (java.lang.RuntimeException contactOverlapFailure) {
           caughtContactOverlapFailure = contactOverlapFailure;
@@ -93,7 +93,7 @@ final class ma extends IntrusiveNode {
     }
 
     final static int tickArchiveLoading(int methodGuard) {
-        gb.archiveCatalog.advanceArchiveLoading((byte) -65);
+        DequeCursor.archiveCatalog.advanceArchiveLoading((byte) -65);
         if (methodGuard != 15869) {
             return 61;
         }

@@ -1,46 +1,46 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountWelcomePanel extends ee implements pl {
+final class AccountWelcomePanel extends WidgetContainer implements ButtonActivationListener {
     static String loadingGraphicsText;
-    private hk goBackButton;
-    private hk createAccountButton;
-    private hk justPlayButton;
+    private ButtonWidget goBackButton;
+    private ButtonWidget createAccountButton;
+    private ButtonWidget justPlayButton;
 
     public AccountWelcomePanel() {
-        super(0, 0, 476, 225, (dh) null);
+        super(0, 0, 476, 225, (WidgetRenderer) null);
         ml var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         try {
-            this.createAccountButton = new hk(se.createAnAccountText, (bb) null);
-            this.goBackButton = new hk(hc.goBackText, (bb) null);
-            this.justPlayButton = new hk(ok.justPlayText, (bb) null);
+            this.createAccountButton = new ButtonWidget(se.createAnAccountText, (WidgetListener) null);
+            this.goBackButton = new ButtonWidget(hc.goBackText, (WidgetListener) null);
+            this.justPlayButton = new ButtonWidget(ok.justPlayText, (WidgetListener) null);
             var1 = new ml();
-            this.createAccountButton.field_q = (dh) ((Object) var1);
-            this.goBackButton.field_q = (dh) ((Object) var1);
-            this.justPlayButton.field_q = (dh) ((Object) var1);
+            this.createAccountButton.renderer = (WidgetRenderer) ((Object) var1);
+            this.goBackButton.renderer = (WidgetRenderer) ((Object) var1);
+            this.justPlayButton.renderer = (WidgetRenderer) ((Object) var1);
             var2 = 4;
             var3 = 326;
             var4 = var3 - var2 >> 1;
-            this.goBackButton.a(30, var4, (byte) -38, -48 + (this.widgetHeight - var2), this.widgetWidth - var3 >> 1);
-            this.justPlayButton.a(30, var4, (byte) -77, -var2 - 48 + this.widgetHeight, var2 + ((-var3 + this.widgetWidth >> 1) + var4));
-            this.createAccountButton.a(30, var3, (byte) -73, this.widgetHeight - (78 + 2 * var2), -var3 + this.widgetWidth >> 1);
-            this.goBackButton.field_u = (bb) (this);
-            this.createAccountButton.field_u = (bb) (this);
-            this.createAccountButton.field_j = ic.loginCreateTooltipText;
-            this.justPlayButton.field_u = (bb) (this);
-            this.justPlayButton.field_j = vi.loginJustPlayTooltipText;
-            this.b((byte) -88, this.goBackButton);
-            this.b((byte) -102, this.createAccountButton);
-            this.b((byte) -104, this.justPlayButton);
+            this.goBackButton.setWidgetBounds(30, var4, (byte) -38, -48 + (this.widgetHeight - var2), this.widgetWidth - var3 >> 1);
+            this.justPlayButton.setWidgetBounds(30, var4, (byte) -77, -var2 - 48 + this.widgetHeight, var2 + ((-var3 + this.widgetWidth >> 1) + var4));
+            this.createAccountButton.setWidgetBounds(30, var3, (byte) -73, this.widgetHeight - (78 + 2 * var2), -var3 + this.widgetWidth >> 1);
+            this.goBackButton.listener = (WidgetListener) (this);
+            this.createAccountButton.listener = (WidgetListener) (this);
+            this.createAccountButton.hoverText = ic.loginCreateTooltipText;
+            this.justPlayButton.listener = (WidgetListener) (this);
+            this.justPlayButton.hoverText = vi.loginJustPlayTooltipText;
+            this.addChild((byte) -88, this.goBackButton);
+            this.addChild((byte) -102, this.createAccountButton);
+            this.addChild((byte) -104, this.justPlayButton);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "wi.<init>()");
         }
     }
 
-    final boolean handleKeyInput(int param0, int param1, char param2, el param3) {
+    final boolean handleKeyInput(int param0, int param1, char param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_8_0 = false;
         boolean stackIn_13_0 = false;
@@ -85,14 +85,14 @@ final class AccountWelcomePanel extends ee implements pl {
             int var5_int = 90 % ((1 - methodGuard) / 43);
             var6 = parentX + this.widgetX;
             var7 = parentY + this.widgetY;
-            ng.field_F.drawParagraph(ArchiveNetworkClient.createWelcomeText, var6 + 20, 20 + var7, -40 + this.widgetWidth, this.widgetHeight - 50, 16777215, -1, 1, 0, ng.field_F.maxAscent);
+            DialogLayer.sharedUiFont.drawParagraph(ArchiveNetworkClient.createWelcomeText, var6 + 20, 20 + var7, -40 + this.widgetWidth, this.widgetHeight - 50, 16777215, -1, 1, 0, DialogLayer.sharedUiFont.maxAscent);
             super.renderWidget(parentX, parentY, (byte) 63, renderPass);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "wi.FA(" + parentX + ',' + parentY + ',' + methodGuard + ',' + renderPass + ')');
         }
     }
 
-    public final void onButtonActivated(int param0, byte param1, int param2, int param3, hk param4) {
+    public final void onButtonActivated(int param0, byte param1, int param2, int param3, ButtonWidget param4) {
         int var7 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -102,7 +102,7 @@ final class AccountWelcomePanel extends ee implements pl {
         var7 = Geoblox.clientControlFlowFlag;
         try {
           if (param1 != -20) {
-            this.justPlayButton = (hk) null;
+            this.justPlayButton = (ButtonWidget) null;
           }
           if (this.goBackButton == param4) {
             ib.d(param1 ^ -24121);
@@ -117,7 +117,7 @@ final class AccountWelcomePanel extends ee implements pl {
             }
           }
           if (this.justPlayButton == param4) {
-            hk.e(param1 + 103);
+            ButtonWidget.e(param1 + 103);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1174,7 +1174,7 @@ final class AccountWelcomePanel extends ee implements pl {
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "toserverlist");
                 if (textResourceBytes != null) {
-                  ee.toServerListText = ag.decodeTextBytes(1, textResourceBytes);
+                  WidgetContainer.toServerListText = ag.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "tocustomersupport");
                 if (textResourceBytes != null) {
@@ -2981,31 +2981,31 @@ final class AccountWelcomePanel extends ee implements pl {
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "mustlogin2,1");
                 if (textResourceBytes != null) {
-                  ee.mustLogin2Texts[1] = ag.decodeTextBytes(1, textResourceBytes);
+                  WidgetContainer.mustLogin2Texts[1] = ag.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "mustlogin2,2");
                 if (null != textResourceBytes) {
-                  ee.mustLogin2Texts[2] = ag.decodeTextBytes(1, textResourceBytes);
+                  WidgetContainer.mustLogin2Texts[2] = ag.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "mustlogin2,3");
                 if (null != textResourceBytes) {
-                  ee.mustLogin2Texts[3] = ag.decodeTextBytes(1, textResourceBytes);
+                  WidgetContainer.mustLogin2Texts[3] = ag.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "mustlogin2,4");
                 if (textResourceBytes != null) {
-                  ee.mustLogin2Texts[4] = ag.decodeTextBytes(1, textResourceBytes);
+                  WidgetContainer.mustLogin2Texts[4] = ag.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "mustlogin2,5");
                 if (textResourceBytes != null) {
-                  ee.mustLogin2Texts[5] = ag.decodeTextBytes(1, textResourceBytes);
+                  WidgetContainer.mustLogin2Texts[5] = ag.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "mustlogin2,6");
                 if (null != textResourceBytes) {
-                  ee.mustLogin2Texts[6] = ag.decodeTextBytes(1, textResourceBytes);
+                  WidgetContainer.mustLogin2Texts[6] = ag.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "mustlogin2,7");
                 if (null != textResourceBytes) {
-                  ee.mustLogin2Texts[7] = ag.decodeTextBytes(1, textResourceBytes);
+                  WidgetContainer.mustLogin2Texts[7] = ag.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "mustlogin3,1");
                 if (textResourceBytes != null) {

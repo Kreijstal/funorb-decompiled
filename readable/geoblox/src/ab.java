@@ -188,12 +188,12 @@ final class ab {
         try {
           boardContactStateDirty = false;
           wb.newAttachmentCount = 0;
-          sh.mainRasterBuffer.setAsRasterTarget(255);
+          SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
           movingEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.firstForIteration(0));
           while (movingEntity != null) {
             L2: {
               if (a.attachedEntities != movingEntity.entityQueue) {
-                if (!el.gameplaySession.tutorialPromptActive) {
+                if (!UiWidget.gameplaySession.tutorialPromptActive) {
                   movingEntity.integrateEntityVelocity((byte) -59);
                   movingEntity.advanceEntityAnimation(true);
                 }
@@ -211,7 +211,7 @@ final class ab {
                   movingEntity.relatedEntityCount = 0;
                   wasKind2IntSnapshot = (movingEntity.entitySpriteKindId != 2) ? 0 : 1;
                   neighborIndexOrKindFlagOrContactIdOrDivisionGuard = wasKind2IntSnapshot;
-                  ih.linkEntityAtMaskContacts(-1, td.rotatedEntityScreenY, movingEntity, ng.rotatedEntityScreenX);
+                  ih.linkEntityAtMaskContacts(-1, td.rotatedEntityScreenY, movingEntity, DialogLayer.rotatedEntityScreenX);
                   if (!((neighborIndexOrKindFlagOrContactIdOrDivisionGuard != 0) &&
                       (movingEntity.entitySpriteKindId != 2))) {
                     if (movingEntity.entitySpriteKindId != 2) {
@@ -219,7 +219,7 @@ final class ab {
                     }
                     movingEntity.positionY = (float)td.rotatedEntityScreenY;
                     movingEntity.entityQueue = a.attachedEntities;
-                    movingEntity.positionX = (float)ng.rotatedEntityScreenX;
+                    movingEntity.positionX = (float)DialogLayer.rotatedEntityScreenX;
                   }
                   if (!movingEntity.detachedFromBoard) {
                     wb.newAttachmentCount = wb.newAttachmentCount + 1;

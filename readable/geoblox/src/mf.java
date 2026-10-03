@@ -5,7 +5,7 @@ final class mf {
     static IndexedSprite selectedThemeBackground;
 
     final static void b(boolean param0) {
-        if (!el.gameplaySession.tutorialMode) {
+        if (!UiWidget.gameplaySession.tutorialMode) {
             fj.field_m = fj.field_m + 1;
             if (param0) {
                 mf.a(false);

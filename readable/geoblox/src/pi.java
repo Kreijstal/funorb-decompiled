@@ -80,7 +80,7 @@ final class pi extends vf {
         ad.field_j = 2;
     }
 
-    final void a(boolean param0, int param1, el param2, int param3) {
+    final void a(boolean param0, int param1, UiWidget param2, int param3) {
         try {
             this.field_P = this.field_P + 1;
             super.a(param0, param1, param2, param3);
@@ -89,14 +89,14 @@ final class pi extends vf {
         }
     }
 
-    final boolean a(byte param0, el param1) {
+    final boolean requestKeyboardFocus(byte methodGuard, UiWidget focusContext) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 <= -30) {
+          if (methodGuard <= -30) {
             return false;
           }
           this.field_P = 97;
@@ -105,8 +105,8 @@ final class pi extends vf {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_6_0 = (RuntimeException) (var3);
-          stackIn_6_1 = new StringBuilder().append("pi.UA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("pi.UA(").append(methodGuard).append(',');
+          if (focusContext == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
@@ -141,15 +141,15 @@ final class pi extends vf {
         } else {
           var5 = cm.checkingText;
         }
-        if (!var5.equals(this.field_s)) {
-          this.field_s = var5;
+        if (!var5.equals(this.widgetText)) {
+          this.widgetText = var5;
           this.g(-55);
         }
         super.renderWidget(parentX, parentY, (byte) 106, renderPass);
         var6 = this.field_M.a((byte) -105);
-        var8 = (cc) ((Object) this.field_q);
+        var8 = (cc) ((Object) this.renderer);
         var9 = this.widgetX + parentX;
-        var10 = var8.a(parentY, -2, (el) (this)) + (var8.a((byte) 125, (el) (this)).b(-3111) >> 1);
+        var10 = var8.a(parentY, -2, (UiWidget) (this)) + (var8.a((byte) 125, (UiWidget) (this)).b(-3111) >> 1);
         var11 = 7 % ((methodGuard - 1) / 43);
         if (ImageProducerRasterBuffer.field_g == var6) {
           var19 = oa.field_e[0];
@@ -240,7 +240,7 @@ final class pi extends vf {
         try {
             this.field_M = param0;
             this.field_N = param1;
-            this.a(param5, param4, (byte) -77, param3, param2);
+            this.setWidgetBounds(param5, param4, (byte) -77, param3, param2);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "pi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

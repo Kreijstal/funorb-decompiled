@@ -61,8 +61,8 @@ final class nb {
         }
         pointerCenterOffsetX = (double)(-320 + pointerX);
         pointerCenterOffsetY = (double)(-240 + pointerY);
-        pointerX = (int)(320.0 + (pointerCenterOffsetX * Math.cos((double)(-el.gameplaySession.boardAngleRadians)) - pointerCenterOffsetY * Math.sin((double)(-el.gameplaySession.boardAngleRadians))));
-        pointerY = (int)(Math.sin((double)(-el.gameplaySession.boardAngleRadians)) * pointerCenterOffsetX + Math.cos((double)(-el.gameplaySession.boardAngleRadians)) * pointerCenterOffsetY + 240.0);
+        pointerX = (int)(320.0 + (pointerCenterOffsetX * Math.cos((double)(-UiWidget.gameplaySession.boardAngleRadians)) - pointerCenterOffsetY * Math.sin((double)(-UiWidget.gameplaySession.boardAngleRadians))));
+        pointerY = (int)(Math.sin((double)(-UiWidget.gameplaySession.boardAngleRadians)) * pointerCenterOffsetX + Math.cos((double)(-UiWidget.gameplaySession.boardAngleRadians)) * pointerCenterOffsetY + 240.0);
         if (!specialKinds) {
           pooledEntity.initializeEntityMotion(-75, (float)pointerX, 0, (float)(-pointerX + 320), variantId, 0, 0.0f, (float)pointerY, (float)(-pointerY + 240), categoryId, 0.0f);
         } else {

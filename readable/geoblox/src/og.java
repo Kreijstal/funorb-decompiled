@@ -165,14 +165,14 @@ final class og extends DualLinkNode {
 
     final static void a(int param0, String param1, boolean param2, boolean param3) {
         fh.b(-6011);
-        kd.field_e.f(10936);
+        kd.field_e.hideAllDialogs(10936);
         if (param0 != 2274) {
             return;
         }
         try {
             ml.field_t = new pf(b.field_a, (String) null, cf.field_i, param2, param3);
-            hk.field_C = new ei(kd.field_e, ml.field_t);
-            kd.field_e.a(false, hk.field_C);
+            ButtonWidget.field_C = new ei(kd.field_e, ml.field_t);
+            kd.field_e.showDialog(false, ButtonWidget.field_C);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "og.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }

@@ -68,7 +68,7 @@ final class ra implements Iterable {
         int var3;
         int var4;
         int var5;
-        if (el.gameplaySession.tutorialMode) {
+        if (UiWidget.gameplaySession.tutorialMode) {
           return;
         }
         var3 = 1 << param2;
@@ -76,7 +76,7 @@ final class ra implements Iterable {
           return;
         }
         ug.field_c = ug.field_c | var3;
-        el.gameplaySession.newActionCount = el.gameplaySession.newActionCount + 1;
+        UiWidget.gameplaySession.newActionCount = UiWidget.gameplaySession.newActionCount + 1;
         var4 = param2;
         stackIn_8_0 = ((1 << var4 & dc.field_a) == 0) ? 0 : 1;
         var5 = stackIn_8_0;
@@ -87,7 +87,7 @@ final class ra implements Iterable {
             var4 = stackIn_35_0;
           } else {
             dc.field_a = dc.field_a | 1 << var4;
-            el.field_g = el.field_g - (1 << var4);
+            UiWidget.field_g = UiWidget.field_g - (1 << var4);
             InstrumentPatch.field_p = InstrumentPatch.field_p | var3;
             stackIn_45_0 = (!ArchiveRequest.pendingActionMarkers.isEmpty(13519)) ? 0 : 1;
             var4 = stackIn_45_0;
@@ -100,7 +100,7 @@ final class ra implements Iterable {
             var4 = stackIn_23_0;
           } else {
             dc.field_a = dc.field_a | 1 << var4;
-            el.field_g = el.field_g - (1 << var4);
+            UiWidget.field_g = UiWidget.field_g - (1 << var4);
             InstrumentPatch.field_p = InstrumentPatch.field_p | var3;
             stackIn_13_0 = (!ArchiveRequest.pendingActionMarkers.isEmpty(13519)) ? 0 : 1;
             var4 = stackIn_13_0;
@@ -110,8 +110,8 @@ final class ra implements Iterable {
         if (var4 != 0) {
           gf.preparePendingActionPanel((byte) -122);
         }
-        if (!el.gameplaySession.submissionBlocked) {
-          GameplayEntity.field_A.addLast(-44, new p(param2, param0, dc.field_a, el.field_g, AwtRasterBuffer.field_f, lb.field_b));
+        if (!UiWidget.gameplaySession.submissionBlocked) {
+          GameplayEntity.field_A.addLast(-44, new p(param2, param0, dc.field_a, UiWidget.field_g, AwtRasterBuffer.field_f, lb.field_b));
         }
         return;
     }

@@ -54,7 +54,7 @@ final class ri {
                 PacketBuffer.field_l = ResizableDialog.field_T;
               }
               if ((ResizableDialog.field_T == PacketBuffer.field_l) &&
-                  (el.b(30000, 1))) {
+                  (UiWidget.b(30000, 1))) {
                 var6_int = eh.field_d.readUnsignedByte((byte) 34);
                 eh.field_d.position = 0;
                 if (var6_int != 0) {
@@ -66,7 +66,7 @@ final class ri {
                 }
               }
               if ((MessageDialog.awaitingLoginLongState == PacketBuffer.field_l) &&
-                  (el.b(30000, 8))) {
+                  (UiWidget.b(30000, 8))) {
                 ak.field_a = eh.field_d.readLongBE(2901);
                 eh.field_d.position = 0;
                 uk.a(26, param2, param0, ih.field_a, param3);
@@ -78,7 +78,7 @@ final class ri {
               }
               L6: {
                 if ((da.field_g == PacketBuffer.field_l) &&
-                    (el.b(30000, 1))) {
+                    (UiWidget.b(30000, 1))) {
                   var6_int = eh.field_d.readUnsignedByte((byte) 34);
                   eh.field_d.position = 0;
                   fl.field_b = null;

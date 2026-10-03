@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vh extends ee implements pl {
+final class vh extends WidgetContainer implements ButtonActivationListener {
     private String[] field_C;
-    private hk[] field_I;
+    private ButtonWidget[] field_I;
     private ta field_J;
     static LoginPayloadKind field_D;
     static Sprite[] avatarMouthFrames;
@@ -84,7 +84,7 @@ final class vh extends ee implements pl {
         if (!(renderPass == 0)) {
             return;
         }
-        BitmapFont var5 = ng.field_F;
+        BitmapFont var5 = DialogLayer.sharedUiFont;
         int var6 = -69 / ((1 - methodGuard) / 43);
         if (!(this.field_C == null)) {
             var5.drawParagraph(ab.createSuggestionsText, this.widgetX + parentX, parentY + this.widgetY, this.widgetWidth, 20, 16777215, -1, 0, 0, var5.maxDescent + var5.maxAscent);
@@ -92,7 +92,7 @@ final class vh extends ee implements pl {
     }
 
     vh(ta param0) {
-        super(0, 0, 0, 0, (dh) null);
+        super(0, 0, 0, 0, (WidgetRenderer) null);
         try {
             this.field_J = param0;
         } catch (RuntimeException runtimeException) {
@@ -100,7 +100,7 @@ final class vh extends ee implements pl {
         }
     }
 
-    final boolean handleKeyInput(int param0, int param1, char param2, el param3) {
+    final boolean handleKeyInput(int param0, int param1, char param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_8_0 = false;
         boolean stackIn_11_0 = false;
@@ -138,7 +138,7 @@ final class vh extends ee implements pl {
         }
     }
 
-    public final void onButtonActivated(int param0, byte param1, int param2, int param3, hk param4) {
+    public final void onButtonActivated(int param0, byte param1, int param2, int param3, ButtonWidget param4) {
         int var6_int = 0;
         int var7 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -187,7 +187,7 @@ final class vh extends ee implements pl {
         int var6 = 0;
         var6 = Geoblox.clientControlFlowFlag;
         try {
-          this.field_z.clearNodes((byte) -98);
+          this.children.clearNodes((byte) -98);
           if (param0 != 126) {
             return;
           }
@@ -198,19 +198,19 @@ final class vh extends ee implements pl {
             for (var4_int = 0; var3_int > var4_int; var4_int++) {
               this.field_C[var4_int] = p.a((CharSequence) ((Object) param1[var4_int]), param0 - 123).replace(' ', ' ');
             }
-            var4 = new fh(ng.field_F, 0, 1);
-            this.field_I = new hk[var3_int + 1];
+            var4 = new fh(DialogLayer.sharedUiFont, 0, 1);
+            this.field_I = new ButtonWidget[var3_int + 1];
             for (var5 = 0; var5 < var3_int; var5++) {
-              this.field_I[var5] = new hk(this.field_C[var5], (bb) (this));
-              this.field_I[var5].field_q = (dh) ((Object) var4);
-              this.field_I[var5].field_j = ml.createSelectAlternativeText;
-              this.field_I[var5].a(15, 80, (byte) -14, var5 * 16 + 20, 0);
-              this.b((byte) -126, this.field_I[var5]);
+              this.field_I[var5] = new ButtonWidget(this.field_C[var5], (WidgetListener) (this));
+              this.field_I[var5].renderer = (WidgetRenderer) ((Object) var4);
+              this.field_I[var5].hoverText = ml.createSelectAlternativeText;
+              this.field_I[var5].setWidgetBounds(15, 80, (byte) -14, var5 * 16 + 20, 0);
+              this.addChild((byte) -126, this.field_I[var5]);
             }
-            this.field_I[var3_int] = new hk(ll.createMoreSuggestionsText, (bb) (this));
-            this.field_I[var3_int].field_q = (dh) ((Object) var4);
-            this.field_I[var3_int].a(15, 100, (byte) -59, 16 + (var3_int * 16 + 20), 0);
-            this.b((byte) -122, this.field_I[var3_int]);
+            this.field_I[var3_int] = new ButtonWidget(ll.createMoreSuggestionsText, (WidgetListener) (this));
+            this.field_I[var3_int].renderer = (WidgetRenderer) ((Object) var4);
+            this.field_I[var3_int].setWidgetBounds(15, 100, (byte) -59, 16 + (var3_int * 16 + 20), 0);
+            this.addChild((byte) -122, this.field_I[var3_int]);
             return;
           }
           this.field_C = null;

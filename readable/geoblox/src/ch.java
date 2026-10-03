@@ -386,7 +386,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                   }
                   oc.a(75);
                   this.b(true);
-                  sh.mainRasterBuffer = fk.createCanvasRasterBuffer(false, (java.awt.Component) ((Object) MessageDialog.gameCanvas), ok.field_c, kh.field_d);
+                  SingleChildWidget.mainRasterBuffer = fk.createCanvasRasterBuffer(false, (java.awt.Component) ((Object) MessageDialog.gameCanvas), ok.field_c, kh.field_d);
                   this.initializeGame(117);
                   eg.field_p = BufferedSocket.createFrameClock(5000);
                   L17: while (true) {
@@ -517,13 +517,13 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
             MessageDialog.gameCanvas.setSize(kh.field_d, ok.field_c);
             MessageDialog.gameCanvas.setVisible(param0);
             if (sg.field_a != var2) {
-              MessageDialog.gameCanvas.setLocation(PrefixCodeDecoder.field_b, hk.field_B);
+              MessageDialog.gameCanvas.setLocation(PrefixCodeDecoder.field_b, ButtonWidget.field_B);
               if (var4 == 0) {
                 break L5;
               }
             }
             var3 = sg.field_a.getInsets();
-            MessageDialog.gameCanvas.setLocation(var3.left + PrefixCodeDecoder.field_b, var3.top + hk.field_B);
+            MessageDialog.gameCanvas.setLocation(var3.left + PrefixCodeDecoder.field_b, var3.top + ButtonWidget.field_B);
           }
           MessageDialog.gameCanvas.addFocusListener((java.awt.event.FocusListener) (this));
           MessageDialog.gameCanvas.requestFocus();
@@ -782,7 +782,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                   ok.field_c = param3;
                   NetworkArchiveRequest.field_w = param3;
                   PrefixCodeDecoder.field_b = 0;
-                  hk.field_B = 0;
+                  ButtonWidget.field_B = 0;
                   kh.field_d = param4;
                   qb.field_G = param4;
                   PrefixCodeDecoder.field_d = (ch) (this);
@@ -898,13 +898,13 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
               MessageDialog.gameCanvas.setVisible(true);
               if (!((sg.field_a != null) &&
                   (he.field_a == null))) {
-                MessageDialog.gameCanvas.setLocation(PrefixCodeDecoder.field_b, hk.field_B);
+                MessageDialog.gameCanvas.setLocation(PrefixCodeDecoder.field_b, ButtonWidget.field_B);
                 if (Geoblox.clientControlFlowFlag == 0) {
                   break L2;
                 }
               }
               var6 = sg.field_a.getInsets();
-              MessageDialog.gameCanvas.setLocation(var6.left + PrefixCodeDecoder.field_b, hk.field_B + var6.top);
+              MessageDialog.gameCanvas.setLocation(var6.left + PrefixCodeDecoder.field_b, ButtonWidget.field_B + var6.top);
             }
           }
           this.renderFrame(25853);

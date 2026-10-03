@@ -19,9 +19,9 @@ final class sa extends RuntimeException {
         var3 = Geoblox.clientControlFlowFlag;
         try {
           if ((-1 == k.field_g) &&
-              (gb.field_e == -1)) {
+              (DequeCursor.field_e == -1)) {
             k.field_g = PrefixCodeDecoder.pointerXSnapshot;
-            gb.field_e = ue.pointerYSnapshot;
+            DequeCursor.field_e = ue.pointerYSnapshot;
           }
           L1: {
             ResizableDialog.field_V = ResizableDialog.field_V + 1;
@@ -57,7 +57,7 @@ final class sa extends RuntimeException {
                 }
               }
             }
-            PendingActionMarker.field_g = gb.field_e;
+            PendingActionMarker.field_g = DequeCursor.field_e;
             bc.field_a = k.field_g;
             if (param0 == null) {
               if (var2_int != 0) {
@@ -72,7 +72,7 @@ final class sa extends RuntimeException {
               (wb.pointerActivitySnapshot)) {
             ResizableDialog.field_V = 0;
             bc.field_a = k.field_g;
-            PendingActionMarker.field_g = gb.field_e;
+            PendingActionMarker.field_g = DequeCursor.field_e;
           }
           tc.field_a = param0;
           if ((InstrumentPatch.field_q) &&
@@ -80,7 +80,7 @@ final class sa extends RuntimeException {
             InstrumentPatch.field_q = false;
             ResizableDialog.field_V = 0;
           }
-          gb.field_e = -1;
+          DequeCursor.field_e = -1;
           k.field_g = -1;
           if (param1 >= 69) {
             return;

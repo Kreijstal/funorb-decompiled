@@ -46,7 +46,7 @@ final class gf {
         try {
             boardCenterOffsetX = -320.0f + entity.positionX;
             boardCenterOffsetY = entity.positionY - 240.0f;
-            ng.rotatedEntityScreenX = (int)(0.5 + (Math.cos((double)boardAngleRadians) * (double)boardCenterOffsetX - Math.sin((double)boardAngleRadians) * (double)boardCenterOffsetY + 320.0));
+            DialogLayer.rotatedEntityScreenX = (int)(0.5 + (Math.cos((double)boardAngleRadians) * (double)boardCenterOffsetX - Math.sin((double)boardAngleRadians) * (double)boardCenterOffsetY + 320.0));
             if (methodGuard != -1232328029) {
                 java.applet.Applet nullAppletForInvalidGuard = (java.applet.Applet) null;
                 gf.a((java.applet.Applet) null, 60);
@@ -55,7 +55,7 @@ final class gf {
             vf.spriteScratchRaster.setAsRasterTarget();
             SoftwareRasterizer.clearFramebuffer();
             entity.entitySprite.rotateNearest(entity.entitySprite.fullWidth << 3, entity.entitySprite.fullHeight << 3, vf.spriteScratchRaster.fullWidth << 3, vf.spriteScratchRaster.fullHeight << 3, (int)(65535.0 * ((double)(-boardAngleRadians + entity.spriteAngleRadians) / 6.283185307179586)), 4096);
-            sh.mainRasterBuffer.setAsRasterTarget(255);
+            SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
         } catch (RuntimeException collisionSpriteRenderFailure) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) collisionSpriteRenderFailure), "gf.F(" + (entity != null ? "{...}" : "null") + ',' + methodGuard + ',' + boardAngleRadians + ')');
         }

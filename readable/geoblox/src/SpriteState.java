@@ -230,7 +230,7 @@ abstract class SpriteState extends DualLinkNode {
           }
           var2 = ih.a(123, "fps");
           if (null != var2) {
-            sh.field_z = ag.decodeTextBytes(1, var2);
+            SingleChildWidget.field_z = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(127, "level");
           if (var2 != null) {

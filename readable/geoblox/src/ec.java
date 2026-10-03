@@ -61,9 +61,9 @@ final class ec {
               return false;
             }
             gf.matchChainLength = 0;
-            if (el.gameplaySession.pointsPanelX == 463) {
-              el.gameplaySession.pointsPanelSlideDirection = 1;
-              el.gameplaySession.emitPointsPopup(false);
+            if (UiWidget.gameplaySession.pointsPanelX == 463) {
+              UiWidget.gameplaySession.pointsPanelSlideDirection = 1;
+              UiWidget.gameplaySession.emitPointsPopup(false);
             }
             return false;
           }
@@ -114,7 +114,7 @@ final class ec {
                 td.playPcmSample(-348, fl.field_c[31]);
                 gf.matchChainLength = gf.matchChainLength + 1;
                 if (gf.matchChainLength > 1) {
-                  el.gameplaySession.pointsPanelSlideDirection = -1;
+                  UiWidget.gameplaySession.pointsPanelSlideDirection = -1;
                 }
                 if (-1073741824 == (-1073741824 & nk.packedMatchCandidates[candidateIndex])) {
                   awardedPoints = 90 * gf.matchChainLength;
@@ -149,7 +149,7 @@ final class ec {
     }
 
     final static void a(int param0) {
-        ph var1 = (ph) ((Object) el.field_p.firstForIteration(param0 ^ param0));
+        ph var1 = (ph) ((Object) UiWidget.field_p.firstForIteration(param0 ^ param0));
         if (!(var1 != null)) {
             Bzip2DecoderState.a((byte) -122);
             return;

@@ -113,7 +113,7 @@ final class ei extends ContentTransitionDialog {
         fullscreenUnavailableTrySignedAppletText = null;
     }
 
-    final void replaceContent(el content, int methodGuard) {
+    final void replaceContent(UiWidget content, int methodGuard) {
         try {
             if (methodGuard > -10) {
                 fullscreenUnavailableTrySignedAppletText = (String) null;
@@ -124,7 +124,7 @@ final class ei extends ContentTransitionDialog {
         }
     }
 
-    ei(ng param0, el param1) {
+    ei(DialogLayer param0, UiWidget param1) {
         super(param0, param1, 33, 20, 30);
     }
 

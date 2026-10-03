@@ -326,7 +326,7 @@ final class GameplaySession {
             this.boardRasterDirty = false;
           }
         }
-        sh.mainRasterBuffer.setAsRasterTarget(255);
+        SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
         mf.selectedThemeBackground.drawRunEncoded(0, 0);
         selectedThemeIdOrScoreBoxX = 4;
         loadingPanelWidthOrScoreBoxY = 4;
@@ -397,7 +397,7 @@ final class GameplaySession {
         jf.rotatedThemeForegroundRaster.setAsRasterTarget();
         SoftwareRasterizer.clearFramebuffer();
         ec.selectedThemeForeground.rotateNearest(ec.selectedThemeForeground.fullWidth << 3, ec.selectedThemeForeground.fullHeight << 3, jf.rotatedThemeForegroundRaster.fullWidth << 3, jf.rotatedThemeForegroundRaster.fullHeight << 3, (int)(65535.0 * ((double)(-this.boardAngleRadians) / 6.283185307179586)), 4096);
-        sh.mainRasterBuffer.setAsRasterTarget(255);
+        SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
         w.a(jf.rotatedThemeForegroundRaster, -(jf.rotatedThemeForegroundRaster.fullWidth >> 1) + 320, -(jf.rotatedThemeForegroundRaster.fullHeight >> 1) + 240);
         if (!this.debugReducedRendering) {
           uh.drawSpawnQueueAndHighlight(4740);
@@ -416,8 +416,8 @@ final class GameplaySession {
                 if (renderedEntity != null) {
                   entityOffsetX = -320.0f + renderedEntity.positionX;
                   entityOffsetY = -240.0f + renderedEntity.positionY;
-                  debugEntityXOrTutorialTextHeight = (int)(320.0 + (Math.cos((double)el.gameplaySession.boardAngleRadians) * (double)entityOffsetX - Math.sin((double)el.gameplaySession.boardAngleRadians) * (double)entityOffsetY));
-                  renderedEntityY = (int)(240.0 + ((double)entityOffsetX * Math.sin((double)el.gameplaySession.boardAngleRadians) + (double)entityOffsetY * Math.cos((double)el.gameplaySession.boardAngleRadians)));
+                  debugEntityXOrTutorialTextHeight = (int)(320.0 + (Math.cos((double)UiWidget.gameplaySession.boardAngleRadians) * (double)entityOffsetX - Math.sin((double)UiWidget.gameplaySession.boardAngleRadians) * (double)entityOffsetY));
+                  renderedEntityY = (int)(240.0 + ((double)entityOffsetX * Math.sin((double)UiWidget.gameplaySession.boardAngleRadians) + (double)entityOffsetY * Math.cos((double)UiWidget.gameplaySession.boardAngleRadians)));
                   spawnEntityGrayLevel = 255 - renderedEntity.remainingLifetimeTicks * 255 / renderedEntity.initialLifetimeTicks;
                   minimumGrayLevelOrCompositeHeight = 11;
                   grayLevelForComparisonOrCompositeEnabled = spawnEntityGrayLevel;
@@ -444,8 +444,8 @@ final class GameplaySession {
                     if (null != renderedEntity) {
                       entityOffsetX = -320.0f + renderedEntity.positionX;
                       entityOffsetY = -240.0f + renderedEntity.positionY;
-                      debugEntityXOrTutorialTextHeight = (int)(Math.cos((double)el.gameplaySession.boardAngleRadians) * (double)entityOffsetX - Math.sin((double)el.gameplaySession.boardAngleRadians) * (double)entityOffsetY + 320.0);
-                      renderedEntityY = (int)(240.0 + ((double)entityOffsetX * Math.sin((double)el.gameplaySession.boardAngleRadians) + (double)entityOffsetY * Math.cos((double)el.gameplaySession.boardAngleRadians)));
+                      debugEntityXOrTutorialTextHeight = (int)(Math.cos((double)UiWidget.gameplaySession.boardAngleRadians) * (double)entityOffsetX - Math.sin((double)UiWidget.gameplaySession.boardAngleRadians) * (double)entityOffsetY + 320.0);
+                      renderedEntityY = (int)(240.0 + ((double)entityOffsetX * Math.sin((double)UiWidget.gameplaySession.boardAngleRadians) + (double)entityOffsetY * Math.cos((double)UiWidget.gameplaySession.boardAngleRadians)));
                       SoftwareRasterizer.fillCircle(debugEntityXOrTutorialTextHeight / 2, renderedEntityY / 2, tutorialLineHeightOrDebugEntityRadius, tutorialTopOrDebugColorOrTransitionClipTop);
                       renderedEntity = (GameplayEntity) ((Object) debugMovingQueueSnapshot.nextForIteration(1));
                       if (clientControlFlowGuard != 0) {
@@ -510,7 +510,7 @@ final class GameplaySession {
                       }
                       SoftwareRasterizer.fillCircle(160, 120, 21, 16777215);
                       SoftwareRasterizer.blurRasterRegion(2, 2, 0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight);
-                      sh.mainRasterBuffer.setAsRasterTarget(255);
+                      SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
                       minimumGrayLevelOrCompositeHeight = SoftwareRasterizer.framebufferHeight;
                       grayLevelForComparisonOrCompositeEnabled = 1;
                       break L32;
@@ -535,7 +535,7 @@ final class GameplaySession {
               FadingDialog.uiPaletteFont.drawText(OpacityWidget.a(ic.field_a, new String[]{this.popupPointsText.toString()}, (byte) -79), this.pointsPanelX + 20, 34, 0, -1);
             }
             if (this.showSessionCounters) {
-              FadingDialog.uiPaletteFont.drawText(OpacityWidget.a(sh.field_z, new String[]{Integer.toString(ec.field_b)}, (byte) -26), 400, 50, 0, -1);
+              FadingDialog.uiPaletteFont.drawText(OpacityWidget.a(SingleChildWidget.field_z, new String[]{Integer.toString(ec.field_b)}, (byte) -26), 400, 50, 0, -1);
               FadingDialog.uiPaletteFont.drawText(OpacityWidget.a(LoginPayloadKind.field_e, new String[]{Integer.toString(ArchiveNetworkClient.difficultyStep)}, (byte) -71), 400, 80, 0, -1);
             }
             L53: {
@@ -562,7 +562,7 @@ final class GameplaySession {
                     break L55;
                   }
                   tutorialTopOrDebugColorOrTransitionClipTop = 35 + (6 * this.sceneAnimationTick - 480);
-                  sh.mainRasterBuffer.setAsRasterTarget(255);
+                  SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
                   SoftwareRasterizer.setClip(0, tutorialTopOrDebugColorOrTransitionClipTop, 640, 480);
                   oc.boardSceneRaster.draw(0, 0);
                   SoftwareRasterizer.setClip(0, 0, 640, 480);
@@ -632,7 +632,7 @@ final class GameplaySession {
                   break L2;
                 }
                 this.pointsPanelSlideDirection = 1;
-                el.gameplaySession.emitPointsPopup(false);
+                UiWidget.gameplaySession.emitPointsPopup(false);
                 if (clientControlFlowGuard == 0) {
                   break L2;
                 }
@@ -687,13 +687,13 @@ final class GameplaySession {
                 inputDerivedModuloIndex = (ki.currentKeyboardEventCode + kd.field_c + PrefixCodeDecoder.pointerXSnapshot + he.pointerPressYSnapshot) % 8;
                 if (inputDerivedModuloIndex == 0) {
                   oa.field_a = oa.field_a + kb.field_d;
-                  gb.field_g = gb.field_g - 1;
+                  DequeCursor.field_g = DequeCursor.field_g - 1;
                   if (clientControlFlowGuard == 0) {
                     break L17;
                   }
                 }
                 if (inputDerivedModuloIndex == 1) {
-                  oa.field_a = oa.field_a + gb.field_g;
+                  oa.field_a = oa.field_a + DequeCursor.field_g;
                   kb.field_d = kb.field_d - 1;
                   if (clientControlFlowGuard == 0) {
                     break L17;
@@ -701,7 +701,7 @@ final class GameplaySession {
                 }
                 if (inputDerivedModuloIndex != 2) {
                   if (3 == inputDerivedModuloIndex) {
-                    oa.field_a = oa.field_a - gb.field_g;
+                    oa.field_a = oa.field_a - DequeCursor.field_g;
                     kb.field_d = kb.field_d + 1;
                     if (clientControlFlowGuard == 0) {
                       break L17;
@@ -709,21 +709,21 @@ final class GameplaySession {
                   }
                   if (4 == inputDerivedModuloIndex) {
                     ml.field_r = ml.field_r + kb.field_d;
-                    gb.field_g = gb.field_g + 1;
+                    DequeCursor.field_g = DequeCursor.field_g + 1;
                     if (clientControlFlowGuard == 0) {
                       break L17;
                     }
                   }
                   if (inputDerivedModuloIndex == 5) {
                     kb.field_d = kb.field_d + 1;
-                    ml.field_r = ml.field_r + gb.field_g;
+                    ml.field_r = ml.field_r + DequeCursor.field_g;
                     if (clientControlFlowGuard == 0) {
                       break L17;
                     }
                   }
                   if (inputDerivedModuloIndex == 6) {
                     ml.field_r = ml.field_r - kb.field_d;
-                    gb.field_g = gb.field_g - 1;
+                    DequeCursor.field_g = DequeCursor.field_g - 1;
                     if (clientControlFlowGuard == 0) {
                       break L17;
                     }
@@ -732,18 +732,18 @@ final class GameplaySession {
                     break L17;
                   }
                   kb.field_d = kb.field_d - 1;
-                  ml.field_r = ml.field_r - gb.field_g;
+                  ml.field_r = ml.field_r - DequeCursor.field_g;
                   if (clientControlFlowGuard == 0) {
                     break L17;
                   }
                 }
-                gb.field_g = gb.field_g + 1;
+                DequeCursor.field_g = DequeCursor.field_g + 1;
                 oa.field_a = oa.field_a - kb.field_d;
               }
               L25: {
                 inputDerivedModuloIndex = (kd.field_c + he.pointerPressYSnapshot + PrefixCodeDecoder.pointerXSnapshot + ki.currentKeyboardEventCode) % 5;
                 if (0 == inputDerivedModuloIndex) {
-                  dc.field_a = dc.field_a | lb.field_b + el.field_g << 17;
+                  dc.field_a = dc.field_a | lb.field_b + UiWidget.field_g << 17;
                   if (clientControlFlowGuard == 0) {
                     break L25;
                   }
@@ -752,7 +752,7 @@ final class GameplaySession {
                   if (inputDerivedModuloIndex != 2) {
                     if (3 == inputDerivedModuloIndex) {
                       AwtRasterBuffer.field_f = AwtRasterBuffer.field_f + 1;
-                      el.field_g = el.field_g + lb.field_b;
+                      UiWidget.field_g = UiWidget.field_g + lb.field_b;
                       if (clientControlFlowGuard == 0) {
                         break L25;
                       }
@@ -761,18 +761,18 @@ final class GameplaySession {
                       break L25;
                     }
                     AwtRasterBuffer.field_f = AwtRasterBuffer.field_f - 1;
-                    el.field_g = el.field_g - lb.field_b;
+                    UiWidget.field_g = UiWidget.field_g - lb.field_b;
                     if (clientControlFlowGuard == 0) {
                       break L25;
                     }
                   }
                   lb.field_b = lb.field_b - 1;
-                  el.field_g = el.field_g - AwtRasterBuffer.field_f;
+                  UiWidget.field_g = UiWidget.field_g - AwtRasterBuffer.field_f;
                   if (clientControlFlowGuard == 0) {
                     break L25;
                   }
                 }
-                el.field_g = el.field_g + AwtRasterBuffer.field_f;
+                UiWidget.field_g = UiWidget.field_g + AwtRasterBuffer.field_f;
                 lb.field_b = lb.field_b + 1;
               }
               if (this.tutorialStepId == 0) {
@@ -793,13 +793,13 @@ final class GameplaySession {
                       if (inputDerivedModuloIndex != 2) {
                         if (inputDerivedModuloIndex == 3) {
                           kb.field_d = kb.field_d + 1;
-                          oa.field_a = oa.field_a - gb.field_g;
+                          oa.field_a = oa.field_a - DequeCursor.field_g;
                           if (clientControlFlowGuard == 0) {
                             break L32;
                           }
                         }
                         if (4 == inputDerivedModuloIndex) {
-                          gb.field_g = gb.field_g + 1;
+                          DequeCursor.field_g = DequeCursor.field_g + 1;
                           ml.field_r = ml.field_r + kb.field_d;
                           if (clientControlFlowGuard == 0) {
                             break L32;
@@ -807,14 +807,14 @@ final class GameplaySession {
                         }
                         if (5 == inputDerivedModuloIndex) {
                           kb.field_d = kb.field_d + 1;
-                          ml.field_r = ml.field_r + gb.field_g;
+                          ml.field_r = ml.field_r + DequeCursor.field_g;
                           if (clientControlFlowGuard == 0) {
                             break L32;
                           }
                         }
                         if (inputDerivedModuloIndex == 6) {
                           ml.field_r = ml.field_r - kb.field_d;
-                          gb.field_g = gb.field_g - 1;
+                          DequeCursor.field_g = DequeCursor.field_g - 1;
                           if (clientControlFlowGuard == 0) {
                             break L32;
                           }
@@ -823,24 +823,24 @@ final class GameplaySession {
                           break L32;
                         }
                         kb.field_d = kb.field_d - 1;
-                        ml.field_r = ml.field_r - gb.field_g;
+                        ml.field_r = ml.field_r - DequeCursor.field_g;
                         if (clientControlFlowGuard == 0) {
                           break L32;
                         }
                       }
-                      gb.field_g = gb.field_g + 1;
+                      DequeCursor.field_g = DequeCursor.field_g + 1;
                       oa.field_a = oa.field_a - kb.field_d;
                       if (clientControlFlowGuard == 0) {
                         break L32;
                       }
                     }
-                    oa.field_a = oa.field_a + gb.field_g;
+                    oa.field_a = oa.field_a + DequeCursor.field_g;
                     kb.field_d = kb.field_d - 1;
                     if (clientControlFlowGuard == 0) {
                       break L32;
                     }
                   }
-                  gb.field_g = gb.field_g - 1;
+                  DequeCursor.field_g = DequeCursor.field_g - 1;
                   oa.field_a = oa.field_a + kb.field_d;
                 }
                 inputDerivedModuloIndex = (kd.field_c + PrefixCodeDecoder.pointerXSnapshot + he.pointerPressYSnapshot + ki.currentKeyboardEventCode) % 5;
@@ -849,7 +849,7 @@ final class GameplaySession {
                     if (2 != inputDerivedModuloIndex) {
                       if (inputDerivedModuloIndex == 3) {
                         AwtRasterBuffer.field_f = AwtRasterBuffer.field_f + 1;
-                        el.field_g = el.field_g + lb.field_b;
+                        UiWidget.field_g = UiWidget.field_g + lb.field_b;
                         if (clientControlFlowGuard == 0) {
                           break L30;
                         }
@@ -857,25 +857,25 @@ final class GameplaySession {
                       if (4 != inputDerivedModuloIndex) {
                         break L30;
                       }
-                      el.field_g = el.field_g - lb.field_b;
+                      UiWidget.field_g = UiWidget.field_g - lb.field_b;
                       AwtRasterBuffer.field_f = AwtRasterBuffer.field_f - 1;
                       if (clientControlFlowGuard == 0) {
                         break L30;
                       }
                     }
                     lb.field_b = lb.field_b - 1;
-                    el.field_g = el.field_g - AwtRasterBuffer.field_f;
+                    UiWidget.field_g = UiWidget.field_g - AwtRasterBuffer.field_f;
                     if (clientControlFlowGuard == 0) {
                       break L30;
                     }
                   }
                   lb.field_b = lb.field_b + 1;
-                  el.field_g = el.field_g + AwtRasterBuffer.field_f;
+                  UiWidget.field_g = UiWidget.field_g + AwtRasterBuffer.field_f;
                   if (clientControlFlowGuard == 0) {
                     break L30;
                   }
                 }
-                dc.field_a = dc.field_a | el.field_g + lb.field_b << 17;
+                dc.field_a = dc.field_a | UiWidget.field_g + lb.field_b << 17;
               }
             }
             L44: {
@@ -1384,12 +1384,12 @@ final class GameplaySession {
             this.prepareNextTheme(867);
           }
           this.sceneTransitionInProgress = true;
-          sf.a(sh.mainRasterBuffer.pixels, 0, oc.boardSceneRaster.pixels, 0, sh.mainRasterBuffer.pixels.length);
+          sf.a(SingleChildWidget.mainRasterBuffer.pixels, 0, oc.boardSceneRaster.pixels, 0, SingleChildWidget.mainRasterBuffer.pixels.length);
           PointerInputListener.a((byte) -39);
           bk.boardOwnershipRaster.setAsRasterTarget();
           SoftwareRasterizer.clearFramebuffer();
           i.avatarMaskRaster.drawSilhouette(this.boardMaskOffsetX + 320, this.boardMaskOffsetY + 240, 16777215);
-          sh.mainRasterBuffer.setAsRasterTarget(255);
+          SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
         }
         int nextSceneAnimationTick = this.sceneAnimationTick + 1;
         this.sceneAnimationTick = this.sceneAnimationTick + 1;
@@ -1403,18 +1403,18 @@ final class GameplaySession {
                   L7: {
                     if (7 > themeIndexThenId) {
                       selectedThemeComplementOrThemeSentinel = ~GameScreen.selectedThemeId;
-                      themeEntryComplementOrThemeId = ~ee.field_B[themeIndexThenId];
+                      themeEntryComplementOrThemeId = ~WidgetContainer.field_B[themeIndexThenId];
                       if (clientControlFlowGuard != 0) {
                         break L6;
                       }
                       if (selectedThemeComplementOrThemeSentinel == themeEntryComplementOrThemeId) {
                         if (0 < themeIndexThenId) {
-                          precedingThemeId = ee.field_B[themeIndexThenId - 1];
+                          precedingThemeId = WidgetContainer.field_B[themeIndexThenId - 1];
                           if (clientControlFlowGuard == 0) {
                             break L7;
                           }
                         }
-                        precedingThemeId = ee.field_B[6];
+                        precedingThemeId = WidgetContainer.field_B[6];
                         if (clientControlFlowGuard == 0) {
                           break L7;
                         }
@@ -1600,7 +1600,7 @@ final class GameplaySession {
               vf.spriteScratchRaster.setAsRasterTarget();
               SoftwareRasterizer.clearFramebuffer();
               endingEntity.entitySprite.rotateSmooth(endingEntity.entitySprite.fullWidth << 3, endingEntity.entitySprite.fullHeight << 3, vf.spriteScratchRaster.fullWidth << 3, vf.spriteScratchRaster.fullHeight << 3, (int)(65535.0 * ((double)endingEntity.spriteAngleRadians / 6.283185307179586)), 4096);
-              sh.mainRasterBuffer.setAsRasterTarget(255);
+              SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
               maxRadiusSquared = 0;
               spriteOffsetFromCenterX = (int)(endingEntity.positionX + 0.5f) + (-(vf.spriteScratchRaster.width >> 1) - 320);
               spriteOffsetFromCenterY = -240 + ((int)(endingEntity.positionY + 0.5f) - (vf.spriteScratchRaster.height >> 1));
@@ -1721,7 +1721,7 @@ final class GameplaySession {
         }
         if ((0 < this.score && !this.submissionBlocked) &&
             (!fh.c(-102))) {
-            ContentTransitionDialog.a(oa.field_a, 22, kb.field_d, 25134, new int[]{this.score}, ml.field_r, 65513, 3, gb.field_g);
+            ContentTransitionDialog.a(oa.field_a, 22, kb.field_d, 25134, new int[]{this.score}, ml.field_r, 65513, 3, DequeCursor.field_g);
         }
         ca.field_f = null;
     }
@@ -1829,11 +1829,11 @@ final class GameplaySession {
         this.score = 0;
         this.pendingPopupPoints = 0;
         AwtRasterBuffer.field_f = 3382;
-        el.field_g = 8801;
+        UiWidget.field_g = 8801;
         ml.field_r = 1385;
         dc.field_a = 0;
         oa.field_a = 4703;
-        gb.field_g = 5997;
+        DequeCursor.field_g = 5997;
         kb.field_d = 275;
         lb.field_b = 935;
         this.addScore((byte) 127, 0);
@@ -1937,7 +1937,7 @@ final class GameplaySession {
           i.avatarMaskRaster.drawSilhouette(320 + this.boardMaskOffsetX, this.boardMaskOffsetY + 240, 16777215);
           oc.boardSceneRaster.setAsRasterTarget();
           SoftwareRasterizer.clearFramebuffer();
-          sh.mainRasterBuffer.setAsRasterTarget(255);
+          SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
           this.sceneTransitionRequested = false;
           this.sceneAnimationTick = 0;
           this.boardRasterDirty = true;
@@ -1950,7 +1950,7 @@ final class GameplaySession {
           }
           td.a((byte) -93);
           GameplayEntity.resetAvatarFeedbackState(0);
-          GameScreen.selectedThemeId = ee.field_B[0];
+          GameScreen.selectedThemeId = WidgetContainer.field_B[0];
           cd.selectThemeRenderAssets((byte) 104);
           this.debugPointerSpawnEnabled = false;
           this.submissionBlocked = false;
@@ -1965,9 +1965,9 @@ final class GameplaySession {
           lb.field_b = 935;
           dc.field_a = 0;
           ml.field_r = 1385;
-          el.field_g = 8801;
+          UiWidget.field_g = 8801;
           AwtRasterBuffer.field_f = 3382;
-          gb.field_g = 5997;
+          DequeCursor.field_g = 5997;
           this.newActionCount = 0;
           return;
         } catch (java.lang.RuntimeException sessionConstructorException) {

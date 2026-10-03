@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class MessageDialog extends ContentTransitionDialog implements pl {
+class MessageDialog extends ContentTransitionDialog implements ButtonActivationListener {
     private boolean showLoginOnDismiss;
     private boolean errorContentInstallationStarted;
     private boolean showRetryLoginOnDismiss;
@@ -19,7 +19,7 @@ class MessageDialog extends ContentTransitionDialog implements pl {
         return left ^ right;
     }
 
-    public void onButtonActivated(int buttonX, byte methodGuard, int buttonY, int pointerButton, hk button) {
+    public void onButtonActivated(int buttonX, byte methodGuard, int buttonY, int pointerButton, ButtonWidget button) {
         CharSequence guardedNullTextSnapshot = null;
         RuntimeException buttonFailureBeforeContext = null;
         StringBuilder buttonFailureContextBuilder = null;
@@ -61,13 +61,13 @@ class MessageDialog extends ContentTransitionDialog implements pl {
         }
         try {
             ml.field_t = new pf(prefilledUsername, prefilledPassword, false, true, true);
-            hk.field_C.replaceContent(ml.field_t, -81);
+            ButtonWidget.field_C.replaceContent(ml.field_t, -81);
         } catch (RuntimeException loginFormFailure) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) loginFormFailure), "f.HA(" + (prefilledUsername != null ? "{...}" : "null") + ',' + (prefilledPassword != null ? "{...}" : "null") + ',' + methodGuard + ')');
         }
     }
 
-    MessageDialog(ng uiRoot, BitmapFont messageFont, String messageText, boolean showRetryLoginOnDismiss, boolean showLoginOnDismiss) {
+    MessageDialog(DialogLayer uiRoot, BitmapFont messageFont, String messageText, boolean showRetryLoginOnDismiss, boolean showLoginOnDismiss) {
         super(uiRoot, new ni((MessageDialog) null, messageFont, messageText), 77, 10, 10);
         try {
             this.showLoginOnDismiss = showLoginOnDismiss ? true : false;
@@ -77,7 +77,7 @@ class MessageDialog extends ContentTransitionDialog implements pl {
             this.showRetryLoginOnDismiss = showRetryLoginOnDismiss ? true : false;
             this.dialogStatusPanel = new hl(13, 50, 274, 30, 15, 2113632, 4210752);
             this.dialogStatusPanel.field_C = true;
-            this.b((byte) -61, (el) (this.dialogStatusPanel));
+            this.addChild((byte) -61, (UiWidget) (this.dialogStatusPanel));
         } catch (RuntimeException dialogConstructionFailure) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) dialogConstructionFailure), "f.<init>(" + (uiRoot != null ? "{...}" : "null") + ',' + (messageFont != null ? "{...}" : "null") + ',' + (messageText != null ? "{...}" : "null") + ',' + showRetryLoginOnDismiss + ',' + showLoginOnDismiss + ')');
         }
@@ -130,7 +130,7 @@ class MessageDialog extends ContentTransitionDialog implements pl {
         KeyboardInputListener.b(-1);
     }
 
-    final boolean handleKeyInput(int keyCode, int methodGuardOrDismissKeyCode, char typedCharacter, el eventContext) {
+    final boolean handleKeyInput(int keyCode, int methodGuardOrDismissKeyCode, char typedCharacter, UiWidget eventContext) {
         RuntimeException keyInputFailure = null;
         boolean delegatedKeyInputResult = false;
         RuntimeException keyFailureBeforeContext = null;
@@ -217,7 +217,7 @@ class MessageDialog extends ContentTransitionDialog implements pl {
           if (30 > gi.avatarBlinkClockTicks % blinkPeriodTicks) {
             DiskCacheWorker.avatarFeedbackFrameIndex = 0 + MenuScreen.avatarFeedbackFrameBase;
           }
-          if ((el.gameplaySession.sessionEnding) &&
+          if ((UiWidget.gameplaySession.sessionEnding) &&
               (gi.avatarBlinkClockTicks % 18 == 0)) {
             if (gg.avatarCryPhase == 0) {
               if (!pf.endingEntityScanClear) {
@@ -343,7 +343,7 @@ class MessageDialog extends ContentTransitionDialog implements pl {
               if (30 > gi.avatarBlinkClockTicks % blinkPeriodTicks) {
                 DiskCacheWorker.avatarFeedbackFrameIndex = 0 + MenuScreen.avatarFeedbackFrameBase;
               }
-              if ((el.gameplaySession.sessionEnding) &&
+              if ((UiWidget.gameplaySession.sessionEnding) &&
                   (gi.avatarBlinkClockTicks % 18 == 0)) {
                 if (gg.avatarCryPhase == 0) {
                   if (!pf.endingEntityScanClear) {
@@ -468,7 +468,7 @@ class MessageDialog extends ContentTransitionDialog implements pl {
         if (30 > gi.avatarBlinkClockTicks % blinkPeriodTicks) {
           DiskCacheWorker.avatarFeedbackFrameIndex = 0 + MenuScreen.avatarFeedbackFrameBase;
         }
-        if (!el.gameplaySession.sessionEnding) {
+        if (!UiWidget.gameplaySession.sessionEnding) {
           avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
           steppedActiveShockTicksSnapshot = wa.avatarShockEffectTicks;
           wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
@@ -604,7 +604,7 @@ class MessageDialog extends ContentTransitionDialog implements pl {
     final static wa getSharedUiStyle(int methodGuard) {
         if (null == DiskCacheWorker.field_f) {
             DiskCacheWorker.field_f = new wa();
-            DiskCacheWorker.field_f.a(9, ng.field_F);
+            DiskCacheWorker.field_f.a(9, DialogLayer.sharedUiFont);
             DiskCacheWorker.field_f.field_h = 14;
             DiskCacheWorker.field_f.field_f = 2763306;
             DiskCacheWorker.field_f.field_d = 6;
@@ -665,11 +665,11 @@ class MessageDialog extends ContentTransitionDialog implements pl {
               }
               ((ni) (Object) buttonTextContentSnapshot).a(retryOrBackButtonText, 1, -1);
             } else {
-              errorTextContent.a(-2, a.retryText, (bb) (this));
+              errorTextContent.a(-2, a.retryText, (WidgetListener) (this));
             }
           }
           if (errorKind == 3) {
-            errorTextContent.a(ee.toServerListText, methodGuard ^ 19811, 7);
+            errorTextContent.a(WidgetContainer.toServerListText, methodGuard ^ 19811, 7);
           } else {
             if (errorKind != 4) {
               if (errorKind == 6) {
@@ -679,7 +679,7 @@ class MessageDialog extends ContentTransitionDialog implements pl {
                   this.replaceContent(errorTextContent, methodGuard ^ -19736);
                   return;
                 }
-                errorTextContent.a(-2, fi.changeDisplayNameText, (bb) (this));
+                errorTextContent.a(-2, fi.changeDisplayNameText, (WidgetListener) (this));
               }
             } else {
               errorTextContent.a(hb.playFreeVersionText, 1, 8);

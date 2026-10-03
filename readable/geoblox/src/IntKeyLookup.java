@@ -70,7 +70,7 @@ final class IntKeyLookup {
                 }
                 groupDiskCache = new DiskArchiveCache(archiveId, af.field_d, je.field_h[archiveId], 2097152);
               }
-              archiveSource = gb.archiveCatalog.getArchiveSource(archiveId, (byte) -9, sweepCompletedRequests, (DiskArchiveCache) (indexDiskCacheOrIoFailure), (DiskArchiveCache) (groupDiskCache));
+              archiveSource = DequeCursor.archiveCatalog.getArchiveSource(archiveId, (byte) -9, sweepCompletedRequests, (DiskArchiveCache) (indexDiskCacheOrIoFailure), (DiskArchiveCache) (groupDiskCache));
               if (downloadAllGroups) {
                 archiveSource.requestAllGroups(92);
               }

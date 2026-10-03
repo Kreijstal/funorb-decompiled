@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qb extends hk {
+final class qb extends ButtonWidget {
     static hh contentFadeInPhase;
     static MusicScore field_M;
     static String js5IoErrorText;
@@ -42,7 +42,7 @@ final class qb extends hk {
         fullscreenMembersButtonText = null;
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, el param6) {
+    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;

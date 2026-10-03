@@ -4,7 +4,7 @@
 final class kd {
     static al field_b;
     static String field_d;
-    static ng field_e;
+    static DialogLayer field_e;
     static String achievedText;
     static int[] difficultyStepFlags;
     static int field_c;

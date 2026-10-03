@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 7,802 guarded naming rules: 73 classes, 949 fields,
-690 methods, 1,992 parameters and 4,098 local declarations. Both 303-file corpora
+The current export has 8,030 guarded naming rules: 82 classes, 963 fields,
+733 methods, 2,093 parameters and 4,159 local declarations. Both 303-file corpora
 compile, comparing 138,772 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -53,6 +53,75 @@ Another 9,828 cases preserve native general-angle/extreme-scale traces. ARGB
 smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
+
+## Widget ownership, focus and deque traversal (pass 100)
+
+This naming-only pass adds 228 guarded identities: nine classes, fourteen fields,
+43 methods, 101 parameters and 61 locals. The preview now includes `UiWidget`,
+`WidgetContainer`, `SingleChildWidget`, `DialogLayer`, `ButtonWidget`,
+`WidgetRenderer`, `WidgetListener`, `ButtonActivationListener` and `DequeCursor`.
+Original identities remain in the dictionary. Shared static utilities stay on
+their owners; the empty `ql` marker and untraced numeric fields remain opaque.
+
+Widgets expose `widgetText`, `renderer`, `listener`, `pointerInside`, `hoverText`
+and `pressedPointerButton`. Containers own `children`; wrappers own a nullable
+`child`; the dialog layer owns its separate `dialogs` deque. Button enabled and
+focused flags have independent names. `sharedUiFont` is the coverage font loaded
+from commonui/arezzo14; wrong guards and cleanup can still null it. No font assets
+or live input dispatch are newly executed by this pass.
+
+Complete override families name five `setWidgetBounds` methods, four
+`hasKeyboardFocus` queries, four `clearKeyboardFocus` methods, seven
+`requestKeyboardFocus` methods, four `findFocusTarget` methods across two distinct
+signatures, and two `refreshChildLayout` methods. Bounds retain height, width,
+guard, Y, X argument order, then the original child/layout regeneration.
+`containsPointer` preserves inclusive left/top and exclusive right/bottom bounds.
+Focus requests preserve context clearing, rejection, callbacks and wrong-guard
+recursion. Names do not make every widget focusable or change event behavior.
+
+`DialogLayer` names show/hide, top-visible selection, animation advance/settlement,
+rendering and static-reference cleanup. Every instance parameter/local is named.
+Insertion puts dialogs at the front; drawing traverses in reverse; top selection
+uses the first visible node. Both update paths preserve removal during iteration
+and their original guards. Other colocated static initialization/cache helpers
+remain opaque.
+
+`DequeCursor` names its retained deque and pending node, six forward/reverse
+begin/advance methods and all instance parameters/locals. It snapshots the
+neighbor link before returning a node. Direction shares a single pending reference;
+foreign-node starts, wrong guards and repeated exhaustion retain their original
+behavior, including possible null dereferences. It is not converted into a
+standard Java iterator. `IntrusiveNode.isLinked` checks `previousNode`, explaining
+container dispatch predicates as membership tests rather than enabled flags.
+
+All 7,802 previous complete rules and raw/decompiler/native pins remain. The
+8,030 rules apply 64,011 identifier edits, including eleven constructor spellings.
+Both 303-file corpora compile, comparing 138,772 bindings and preserving 388
+overrides. Full deterministic reproduction, dictionary reversal, the three
+focused test files and all six existing native/raw/readable probes pass. The
+readable source-tree SHA-256 is
+`3fc6bef7a02c9f62cc436d736b0af747ad5e1d00df5573bb4c041d874c2e2432`.
+Existing fixtures keep their previous execution scopes; this does not establish
+live widget/focus/cursor behavior, network services or browser/phone acceptance.
+Pointer/drag dispatch, opaque shared utilities and larger reconstruction remain
+open. The structural inventory stays 21 overlapping large spans, ten with block
+labels; raw control flow and runtime allocations are unchanged.
+
+Validation commands (all exit 0):
+
+```sh
+node readable/build-geoblox-rules.mjs --check
+node readable/reproduce-geoblox.mjs --update
+node readable/reproduce-geoblox.mjs --check
+node readable/tools/restore-original.mjs readable/geoblox /tmp/geoblox-widget-names-restored
+JAVA_TOOL_OPTIONS=-XX:-UsePerfData node --test readable/tests/test-geoblox-rule-builder.mjs readable/tests/test-geoblox-migration-source.mjs readable/tests/test-geoblox-text-rules.mjs
+JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-match-scoring.mjs /home/kreijstal/git/dekobloko-decompiled-pass/.work/games/geoblox/decompile-owned/out
+JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-text-write.mjs /home/kreijstal/git/dekobloko-decompiled-pass/.work/games/geoblox/decompile-owned/out
+JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-gameplay.mjs /home/kreijstal/git/dekobloko-decompiled-pass/.work/games/geoblox/decompile-owned/out
+JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-result-sequence.mjs /home/kreijstal/git/dekobloko-decompiled-pass/.work/games/geoblox/decompile-owned/out
+JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-nine-slice.mjs /home/kreijstal/git/dekobloko-decompiled-pass/.work/games/geoblox/decompile-owned/out
+JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-result-helpers.mjs /home/kreijstal/git/dekobloko-decompiled-pass/.work/games/geoblox/decompile-owned/out
+```
 
 ## Dialog fade, resize and content transitions (pass 99)
 

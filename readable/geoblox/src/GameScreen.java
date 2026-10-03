@@ -222,10 +222,10 @@ final class GameScreen extends MenuScreen {
                 }
               }
               this.pointerInteractionActive = true;
-              if (null != el.gameplaySession) {
-                el.gameplaySession.submitScore((byte) -70);
+              if (null != UiWidget.gameplaySession) {
+                UiWidget.gameplaySession.submitScore((byte) -70);
               }
-              el.gameplayReturnScreenId = 0;
+              UiWidget.gameplayReturnScreenId = 0;
               ai.requestedScreenId = -1;
               cd.gameplayOriginScreenId = 0;
               if (clientControlFlowGuard == 0) {
@@ -257,23 +257,23 @@ final class GameScreen extends MenuScreen {
           if (setTutorialOffsetGuard) {
             this.tutorialSlideOffset = 124;
           }
-          this.backgroundScrollX = this.backgroundScrollX % ee.menuBackgroundSprite.fullWidth;
-          this.backgroundScrollY = this.backgroundScrollY % ee.menuBackgroundSprite.fullHeight;
-          tileX = -ee.menuBackgroundSprite.fullWidth + this.backgroundScrollX;
+          this.backgroundScrollX = this.backgroundScrollX % WidgetContainer.menuBackgroundSprite.fullWidth;
+          this.backgroundScrollY = this.backgroundScrollY % WidgetContainer.menuBackgroundSprite.fullHeight;
+          tileX = -WidgetContainer.menuBackgroundSprite.fullWidth + this.backgroundScrollX;
           L1: while (true) {
             L2: {
               L3: {
                 if (640 > tileX) {
-                  tileOriginYOrForegroundStartX = ee.menuBackgroundSprite.fullHeight + this.backgroundScrollY + 480;
+                  tileOriginYOrForegroundStartX = WidgetContainer.menuBackgroundSprite.fullHeight + this.backgroundScrollY + 480;
                   if (clientControlFlowGuard != 0) {
                     break L2;
                   }
                   tileY = tileOriginYOrForegroundStartX;
                   while (true) {
                     L5: {
-                      if (~-ee.menuBackgroundSprite.fullHeight >= ~tileY) {
-                        ee.menuBackgroundSprite.drawUnmasked(tileX, tileY);
-                        tileY = tileY - ee.menuBackgroundSprite.fullHeight;
+                      if (~-WidgetContainer.menuBackgroundSprite.fullHeight >= ~tileY) {
+                        WidgetContainer.menuBackgroundSprite.drawUnmasked(tileX, tileY);
+                        tileY = tileY - WidgetContainer.menuBackgroundSprite.fullHeight;
                         if (clientControlFlowGuard != 0) {
                           break L5;
                         }
@@ -281,7 +281,7 @@ final class GameScreen extends MenuScreen {
                           continue;
                         }
                       }
-                      tileX = tileX + ee.menuBackgroundSprite.fullWidth;
+                      tileX = tileX + WidgetContainer.menuBackgroundSprite.fullWidth;
                     }
                     if (clientControlFlowGuard == 0) {
                       continue L1;
@@ -1037,8 +1037,8 @@ final class GameScreen extends MenuScreen {
                             hasDisplayedEntryFlag = 1;
                             entryName = categoryNames[entryIndex];
                             if ((currentScoreHighlightedFlag == 0) &&
-                                (null != el.gameplaySession) &&
-                                (categoryScores[entryIndex] == Math.abs(el.gameplaySession.score)) &&
+                                (null != UiWidget.gameplaySession) &&
+                                (categoryScores[entryIndex] == Math.abs(UiWidget.gameplaySession.score)) &&
                                 (WhirlpoolHash.a(entryName, (byte) 12))) {
                               currentScoreHighlightedFlag = 1;
                               scoreFont.drawRightAlignedText(1 + entryIndex + ". ", 165, entryTextY, 16610816, -1);
@@ -1064,18 +1064,18 @@ final class GameScreen extends MenuScreen {
                       }
                       nullEntryOrSessionSentinel = null;
                     }
-                    if (nullEntryOrSessionSentinel == el.gameplaySession) {
+                    if (nullEntryOrSessionSentinel == UiWidget.gameplaySession) {
                       break L8;
                     }
-                    if (el.gameplaySession.score == 0) {
+                    if (UiWidget.gameplaySession.score == 0) {
                       break L8;
                     }
-                    if (el.gameplaySession.score == -2147483648) {
+                    if (UiWidget.gameplaySession.score == -2147483648) {
                       break L8;
                     }
                     unlistedCurrentScoreText = SecondaryDeque.field_f;
                     scoreFont.drawText(unlistedCurrentScoreText, 165, entryTextY, 16724225, -1);
-                    scoreFont.drawRightAlignedText(Integer.toString(Math.abs(el.gameplaySession.score)), 500, entryTextY, 16724225, -1);
+                    scoreFont.drawRightAlignedText(Integer.toString(Math.abs(UiWidget.gameplaySession.score)), 500, entryTextY, 16724225, -1);
                     break L8;
                   }
                 }
@@ -1287,11 +1287,11 @@ final class GameScreen extends MenuScreen {
                       }
                     }
                     this.pointerInteractionActive = true;
-                    if (null != el.gameplaySession) {
-                      el.gameplaySession.submitScore((byte) -70);
+                    if (null != UiWidget.gameplaySession) {
+                      UiWidget.gameplaySession.submitScore((byte) -70);
                     }
                     ai.requestedScreenId = -1;
-                    el.gameplayReturnScreenId = 0;
+                    UiWidget.gameplayReturnScreenId = 0;
                     cd.gameplayOriginScreenId = 0;
                     if (clientControlFlowGuard == 0) {
                       break L21;
@@ -1353,7 +1353,7 @@ final class GameScreen extends MenuScreen {
                   if (inputDerivedStateBranch != 1) {
                     if (inputDerivedStateBranch != 2) {
                       if (inputDerivedStateBranch == 3) {
-                        oa.field_a = oa.field_a - gb.field_g;
+                        oa.field_a = oa.field_a - DequeCursor.field_g;
                         kb.field_d = kb.field_d + 1;
                         if (clientControlFlowGuard == 0) {
                           break L39;
@@ -1362,7 +1362,7 @@ final class GameScreen extends MenuScreen {
                       if (inputDerivedStateBranch != 4) {
                         if (inputDerivedStateBranch != 5) {
                           if (6 == inputDerivedStateBranch) {
-                            gb.field_g = gb.field_g - 1;
+                            DequeCursor.field_g = DequeCursor.field_g - 1;
                             ml.field_r = ml.field_r - kb.field_d;
                             if (clientControlFlowGuard == 0) {
                               break L39;
@@ -1372,43 +1372,43 @@ final class GameScreen extends MenuScreen {
                             break L39;
                           }
                           kb.field_d = kb.field_d - 1;
-                          ml.field_r = ml.field_r - gb.field_g;
+                          ml.field_r = ml.field_r - DequeCursor.field_g;
                           if (clientControlFlowGuard == 0) {
                             break L39;
                           }
                         }
                         kb.field_d = kb.field_d + 1;
-                        ml.field_r = ml.field_r + gb.field_g;
+                        ml.field_r = ml.field_r + DequeCursor.field_g;
                         if (clientControlFlowGuard == 0) {
                           break L39;
                         }
                       }
-                      gb.field_g = gb.field_g + 1;
+                      DequeCursor.field_g = DequeCursor.field_g + 1;
                       ml.field_r = ml.field_r + kb.field_d;
                       if (clientControlFlowGuard == 0) {
                         break L39;
                       }
                     }
                     oa.field_a = oa.field_a - kb.field_d;
-                    gb.field_g = gb.field_g + 1;
+                    DequeCursor.field_g = DequeCursor.field_g + 1;
                     if (clientControlFlowGuard == 0) {
                       break L39;
                     }
                   }
-                  oa.field_a = oa.field_a + gb.field_g;
+                  oa.field_a = oa.field_a + DequeCursor.field_g;
                   kb.field_d = kb.field_d - 1;
                   if (clientControlFlowGuard == 0) {
                     break L39;
                   }
                 }
                 oa.field_a = oa.field_a + kb.field_d;
-                gb.field_g = gb.field_g - 1;
+                DequeCursor.field_g = DequeCursor.field_g - 1;
               }
               inputDerivedStateBranch = (ki.currentKeyboardEventCode + PrefixCodeDecoder.pointerXSnapshot - (-he.pointerPressYSnapshot - kd.field_c)) % 5;
               if (0 != inputDerivedStateBranch) {
                 if (inputDerivedStateBranch != 1) {
                   if (inputDerivedStateBranch == 2) {
-                    el.field_g = el.field_g - AwtRasterBuffer.field_f;
+                    UiWidget.field_g = UiWidget.field_g - AwtRasterBuffer.field_f;
                     lb.field_b = lb.field_b - 1;
                     if (clientControlFlowGuard == 0) {
                       return;
@@ -1416,7 +1416,7 @@ final class GameScreen extends MenuScreen {
                   }
                   if (inputDerivedStateBranch == 3) {
                     AwtRasterBuffer.field_f = AwtRasterBuffer.field_f + 1;
-                    el.field_g = el.field_g + lb.field_b;
+                    UiWidget.field_g = UiWidget.field_g + lb.field_b;
                     if (clientControlFlowGuard == 0) {
                       return;
                     }
@@ -1424,19 +1424,19 @@ final class GameScreen extends MenuScreen {
                   if (inputDerivedStateBranch != 4) {
                     return;
                   }
-                  el.field_g = el.field_g - lb.field_b;
+                  UiWidget.field_g = UiWidget.field_g - lb.field_b;
                   AwtRasterBuffer.field_f = AwtRasterBuffer.field_f - 1;
                   if (clientControlFlowGuard == 0) {
                     return;
                   }
                 }
-                el.field_g = el.field_g + AwtRasterBuffer.field_f;
+                UiWidget.field_g = UiWidget.field_g + AwtRasterBuffer.field_f;
                 lb.field_b = lb.field_b + 1;
                 if (clientControlFlowGuard == 0) {
                   return;
                 }
               }
-              dc.field_a = dc.field_a | lb.field_b + el.field_g << 17;
+              dc.field_a = dc.field_a | lb.field_b + UiWidget.field_g << 17;
             }
             return;
           }
@@ -1481,7 +1481,7 @@ final class GameScreen extends MenuScreen {
               vf.spriteScratchRaster.setAsRasterTarget();
               SoftwareRasterizer.clearFramebuffer();
               ke.entitySpritesByThemeCategoryAndVariant[1][this.tutorialGeometryCategory][this.tutorialGeometryVariant].draw((vf.spriteScratchRaster.fullWidth >> 1) - (ke.entitySpritesByThemeCategoryAndVariant[1][this.tutorialGeometryCategory][this.tutorialGeometryVariant].fullWidth >> 1), (vf.spriteScratchRaster.fullHeight >> 1) - (ke.entitySpritesByThemeCategoryAndVariant[1][this.tutorialGeometryCategory][this.tutorialGeometryVariant].fullHeight >> 1));
-              sh.mainRasterBuffer.setAsRasterTarget(255);
+              SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
               SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
               SoftwareRasterizer.intersectClip(50, 250, 90, 310);
               vf.spriteScratchRaster.addOutline(1);
@@ -1498,7 +1498,7 @@ final class GameScreen extends MenuScreen {
                 vf.spriteScratchRaster.setAsRasterTarget();
                 SoftwareRasterizer.clearFramebuffer();
                 ke.entitySpritesByThemeCategoryAndVariant[1][this.tutorialGeometryCategory][this.tutorialGeometryVariant].drawRotatedCentered(vf.spriteScratchRaster.fullWidth >> 1, vf.spriteScratchRaster.fullHeight >> 1, orbitAngle, 3072);
-                sh.mainRasterBuffer.setAsRasterTarget(255);
+                SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
                 SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
                 SoftwareRasterizer.intersectClip(40, 355, 103, 415);
                 vf.spriteScratchRaster.addOutline(1);
@@ -1509,7 +1509,7 @@ final class GameScreen extends MenuScreen {
                 vf.spriteScratchRaster.setAsRasterTarget();
                 SoftwareRasterizer.clearFramebuffer();
                 ke.entitySpritesByThemeCategoryAndVariant[1][this.tutorialGeometryCategory][this.tutorialGeometryVariant].drawRotatedCentered(vf.spriteScratchRaster.fullWidth >> 1, vf.spriteScratchRaster.fullHeight >> 1, orbitAngle, 3072);
-                sh.mainRasterBuffer.setAsRasterTarget(255);
+                SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
                 SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
                 SoftwareRasterizer.intersectClip(40, 355, 103, 415);
                 vf.spriteScratchRaster.addOutline(1);
@@ -1521,7 +1521,7 @@ final class GameScreen extends MenuScreen {
                 vf.spriteScratchRaster.setAsRasterTarget();
                 SoftwareRasterizer.clearFramebuffer();
                 ke.entitySpritesByThemeCategoryAndVariant[1][this.tutorialGeometryCategory][this.tutorialGeometryVariant].drawRotatedCentered(vf.spriteScratchRaster.fullWidth >> 1, vf.spriteScratchRaster.fullHeight >> 1, orbitAngle, 3072);
-                sh.mainRasterBuffer.setAsRasterTarget(255);
+                SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
                 SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
                 SoftwareRasterizer.intersectClip(40, 355, 103, 415);
                 vf.spriteScratchRaster.addOutline(1);
@@ -1533,7 +1533,7 @@ final class GameScreen extends MenuScreen {
               KeyboardInputListener.field_a.setAsRasterTarget();
               SoftwareRasterizer.clearFramebuffer();
               mi.sparkleFrames[this.tutorialEffectFrame].drawScaled(-10 + (KeyboardInputListener.field_a.fullWidth >> 1), (KeyboardInputListener.field_a.fullHeight >> 1) - 10, 20, 20);
-              sh.mainRasterBuffer.setAsRasterTarget(255);
+              SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
               SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
               SoftwareRasterizer.intersectClip(40, 355, 103, 415);
               KeyboardInputListener.field_a.draw(orbitXOrPageIndexOrLineHeight - (KeyboardInputListener.field_a.fullWidth >> 1), orbitYOrParagraphWidth - (KeyboardInputListener.field_a.fullWidth >> 1));
@@ -1543,7 +1543,7 @@ final class GameScreen extends MenuScreen {
               KeyboardInputListener.field_a.setAsRasterTarget();
               SoftwareRasterizer.clearFramebuffer();
               mi.sparkleFrames[this.tutorialEffectFrame].drawScaled((KeyboardInputListener.field_a.fullWidth >> 1) - 10, (KeyboardInputListener.field_a.fullHeight >> 1) - 10, 20, 20);
-              sh.mainRasterBuffer.setAsRasterTarget(255);
+              SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
               SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
               SoftwareRasterizer.intersectClip(40, 355, 103, 415);
               KeyboardInputListener.field_a.draw(orbitXOrPageIndexOrLineHeight - (KeyboardInputListener.field_a.fullWidth >> 1), -(KeyboardInputListener.field_a.fullWidth >> 1) + orbitYOrParagraphWidth);
@@ -1554,7 +1554,7 @@ final class GameScreen extends MenuScreen {
               KeyboardInputListener.field_a.setAsRasterTarget();
               SoftwareRasterizer.clearFramebuffer();
               mi.sparkleFrames[this.tutorialEffectFrame].drawScaled((KeyboardInputListener.field_a.fullWidth >> 1) - 10, -10 + (KeyboardInputListener.field_a.fullHeight >> 1), 20, 20);
-              sh.mainRasterBuffer.setAsRasterTarget(255);
+              SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
               SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
               SoftwareRasterizer.intersectClip(40, 355, 103, 415);
               KeyboardInputListener.field_a.draw(orbitXOrPageIndexOrLineHeight - (KeyboardInputListener.field_a.fullWidth >> 1), orbitYOrParagraphWidth - (KeyboardInputListener.field_a.fullWidth >> 1));
@@ -1586,13 +1586,13 @@ final class GameScreen extends MenuScreen {
                   vf.spriteScratchRaster.setAsRasterTarget();
                   SoftwareRasterizer.clearFramebuffer();
                   MenuScreen.amorphousFramesByThemeAndVariant[1][this.tutorialGeometryVariant][this.tutorialEffectFrame].draw(-(MenuScreen.amorphousFramesByThemeAndVariant[1][this.tutorialGeometryVariant][this.tutorialEffectFrame].fullWidth >> 1) + (vf.spriteScratchRaster.fullWidth >> 1), (vf.spriteScratchRaster.fullHeight >> 1) - (MenuScreen.amorphousFramesByThemeAndVariant[1][this.tutorialGeometryVariant][this.tutorialEffectFrame].fullHeight >> 1));
-                  sh.mainRasterBuffer.setAsRasterTarget(255);
+                  SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
                   SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
                   vf.spriteScratchRaster.draw(70 - (vf.spriteScratchRaster.fullWidth >> 1), -(vf.spriteScratchRaster.fullHeight >> 1) + 180);
                   vf.spriteScratchRaster.setAsRasterTarget();
                   SoftwareRasterizer.clearFramebuffer();
                   s.geometrySpritesByThemeAndCategory[1][this.tutorialGeometryCategory].drawGrayModulated((vf.spriteScratchRaster.fullWidth >> 1) - (s.geometrySpritesByThemeAndCategory[1][this.tutorialGeometryCategory].fullWidth >> 1), (vf.spriteScratchRaster.fullHeight >> 1) - (s.geometrySpritesByThemeAndCategory[1][this.tutorialGeometryCategory].fullHeight >> 1), this.tutorialTintRgb);
-                  sh.mainRasterBuffer.setAsRasterTarget(255);
+                  SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
                   SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
                   vf.spriteScratchRaster.addOutline(1);
                   vf.spriteScratchRaster.draw(70 - (vf.spriteScratchRaster.fullWidth >> 1), 282 - (vf.spriteScratchRaster.fullHeight >> 1));
@@ -1604,7 +1604,7 @@ final class GameScreen extends MenuScreen {
                     SoftwareRasterizer.clearFramebuffer();
                     fc.blackOrbFrames[this.tutorialEffectFrame].draw(-(fc.blackOrbFrames[this.tutorialEffectFrame].fullWidth >> 1) + (vf.spriteScratchRaster.fullWidth >> 1), -(fc.blackOrbFrames[this.tutorialEffectFrame].fullHeight >> 1) + (vf.spriteScratchRaster.fullHeight >> 1));
                     k.a(0, 0, vf.spriteScratchRaster.fullWidth, -27085, vf.spriteScratchRaster.fullHeight);
-                    sh.mainRasterBuffer.setAsRasterTarget(255);
+                    SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
                     SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
                     vf.spriteScratchRaster.draw(70 - (vf.spriteScratchRaster.fullWidth >> 1), 180 - (vf.spriteScratchRaster.fullHeight >> 1));
                     vf.spriteScratchRaster.setAsRasterTarget();
@@ -1614,7 +1614,7 @@ final class GameScreen extends MenuScreen {
                     }
                     hb.silverStarFrames[this.tutorialStarFrameOrColorIndex].draw(-(hb.silverStarFrames[this.tutorialStarFrameOrColorIndex].fullWidth >> 1) + (vf.spriteScratchRaster.fullWidth >> 1), (vf.spriteScratchRaster.fullHeight >> 1) - (hb.silverStarFrames[this.tutorialStarFrameOrColorIndex].fullHeight >> 1));
                     k.a(0, 0, vf.spriteScratchRaster.fullWidth, -27085, vf.spriteScratchRaster.fullHeight);
-                    sh.mainRasterBuffer.setAsRasterTarget(255);
+                    SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
                     SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
                     vf.spriteScratchRaster.draw(70 - (vf.spriteScratchRaster.fullWidth >> 1), -(vf.spriteScratchRaster.fullHeight >> 1) + 282);
                     FadingDialog.uiPaletteFont.drawText(a.field_a[5], orbitCenterYOrTextLeft, paragraphY, 0, -1);
@@ -2067,28 +2067,28 @@ final class GameScreen extends MenuScreen {
                                   break L1;
                                 }
                               }
-                              if (null != el.gameplaySession) {
-                                el.gameplaySession.submitScore((byte) -70);
+                              if (null != UiWidget.gameplaySession) {
+                                UiWidget.gameplaySession.submitScore((byte) -70);
                               }
                               L30: {
                                 ai.requestedScreenId = -1;
                                 if (this.screenId != 8) {
                                   if (!((4 == this.screenId) &&
-                                      (null != el.gameplaySession) &&
-                                      (el.gameplaySession.newActionCount == 0))) {
+                                      (null != UiWidget.gameplaySession) &&
+                                      (UiWidget.gameplaySession.newActionCount == 0))) {
                                     if (this.screenId != 7) {
-                                      el.gameplayReturnScreenId = 6;
+                                      UiWidget.gameplayReturnScreenId = 6;
                                       if (clientControlFlowGuard == 0) {
                                         break L30;
                                       }
                                     }
-                                    el.gameplayReturnScreenId = 5;
+                                    UiWidget.gameplayReturnScreenId = 5;
                                     if (clientControlFlowGuard == 0) {
                                       break L30;
                                     }
                                   }
                                 }
-                                el.gameplayReturnScreenId = 2;
+                                UiWidget.gameplayReturnScreenId = 2;
                               }
                               cd.gameplayOriginScreenId = this.screenId;
                               if (clientControlFlowGuard == 0) {
@@ -2096,17 +2096,17 @@ final class GameScreen extends MenuScreen {
                               }
                             }
                             L34: {
-                              el.gameplaySession.emitPointsPopup(false);
-                              el.gameplaySession.addScore((byte) 127, wa.collectUnfinishedPopupPoints(methodGuard ^ 25864));
-                              el.gameplaySession.addScore((byte) 127, el.gameplaySession.resultBonusPoints);
-                              el.gameplaySession.resultBonusPoints = 0;
+                              UiWidget.gameplaySession.emitPointsPopup(false);
+                              UiWidget.gameplaySession.addScore((byte) 127, wa.collectUnfinishedPopupPoints(methodGuard ^ 25864));
+                              UiWidget.gameplaySession.addScore((byte) 127, UiWidget.gameplaySession.resultBonusPoints);
+                              UiWidget.gameplaySession.resultBonusPoints = 0;
                               if (fh.c(-114)) {
-                                if (!((!el.gameplaySession.tutorialMode) &&
-                                      (el.gameplaySession.score == 0) &&
+                                if (!((!UiWidget.gameplaySession.tutorialMode) &&
+                                      (UiWidget.gameplaySession.score == 0) &&
                                       (ug.field_c == 0)) &&
-                                    !((el.gameplaySession.tutorialMode) &&
-                                      (el.gameplaySession.updateTick < 750))) {
-                                  if ((0 == el.gameplaySession.score) &&
+                                    !((UiWidget.gameplaySession.tutorialMode) &&
+                                      (UiWidget.gameplaySession.updateTick < 750))) {
+                                  if ((0 == UiWidget.gameplaySession.score) &&
                                       (0 == ug.field_c)) {
                                     ai.requestedScreenId = 0;
                                     if (clientControlFlowGuard == 0) {
@@ -2123,15 +2123,15 @@ final class GameScreen extends MenuScreen {
                                   break L34;
                                 }
                               }
-                              if ((el.gameplaySession.score == 0) &&
+                              if ((UiWidget.gameplaySession.score == 0) &&
                                   (ug.field_c == 0)) {
                                 ai.requestedScreenId = 0;
                                 if (clientControlFlowGuard == 0) {
                                   break L34;
                                 }
                               }
-                              el.gameplaySession.submitScore((byte) -70);
-                              if (0 < el.gameplaySession.newActionCount) {
+                              UiWidget.gameplaySession.submitScore((byte) -70);
+                              if (0 < UiWidget.gameplaySession.newActionCount) {
                                 ai.requestedScreenId = 6;
                                 if (clientControlFlowGuard == 0) {
                                   break L34;
@@ -2223,7 +2223,7 @@ final class GameScreen extends MenuScreen {
             }
             kc.sessionStartAttemptCount = kc.sessionStartAttemptCount + 1;
             pg.resetGameplayDifficulty(methodGuard ^ -9410);
-            el.gameplaySession = new GameplaySession(this.gameApplet, newSessionTutorialModeFlag != 0);
+            UiWidget.gameplaySession = new GameplaySession(this.gameApplet, newSessionTutorialModeFlag != 0);
             PointerInputListener.a((byte) -39);
             ai.requestedScreenId = -1;
           }

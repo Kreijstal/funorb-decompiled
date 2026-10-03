@@ -25,8 +25,8 @@ final class pg {
         }
         di.releasedInDifficultyStep = 0;
         sa.recomputeSpawnReleaseInterval(true);
-        el.field_t = 0;
-        gb.field_c = 0;
+        UiWidget.field_t = 0;
+        DequeCursor.field_c = 0;
     }
 
     final static void a(int param0, PlatformTaskDispatcher param1, int param2, ByteArrayBuffer param3) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jf implements dh {
+final class jf implements WidgetRenderer {
     private int field_i;
     static int field_g;
     private int field_d;
@@ -18,16 +18,16 @@ final class jf implements dh {
     final static void a(byte param0) {
         gf.field_d = new qh();
         if (param0 >= 19) {
-            hk.field_C.replaceContent(gf.field_d, -54);
+            ButtonWidget.field_C.replaceContent(gf.field_d, -54);
             return;
         }
         rotatedThemeForegroundRaster = (Sprite) null;
-        hk.field_C.replaceContent(gf.field_d, -54);
+        ButtonWidget.field_C.replaceContent(gf.field_d, -54);
     }
 
-    public final void a(int param0, int param1, int param2, boolean param3, el param4) {
+    public final void a(int param0, int param1, int param2, boolean param3, UiWidget param4) {
         int var10 = 0;
-        el stackIn_4_0 = null;
+        UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -41,7 +41,7 @@ final class jf implements dh {
         var11 = Geoblox.clientControlFlowFlag;
         try {
           if (param4 instanceof ol) {
-            stackIn_4_0 = (el) (param4);
+            stackIn_4_0 = (UiWidget) (param4);
           } else {
             stackIn_4_0 = null;
           }
@@ -62,7 +62,7 @@ final class jf implements dh {
           if (null == this.field_f) {
             return;
           }
-          this.field_f.drawCenteredText(var12.field_s, var8 + var7 / 2, this.field_f.lineAdvance + var9 + var12.field_G, this.field_k, this.field_l);
+          this.field_f.drawCenteredText(var12.widgetText, var8 + var7 / 2, this.field_f.lineAdvance + var9 + var12.field_G, this.field_k, this.field_l);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

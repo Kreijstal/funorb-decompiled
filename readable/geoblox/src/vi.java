@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vi extends hk {
+final class vi extends ButtonWidget {
     static String loginJustPlayTooltipText;
     static long field_H;
     static String createNewsOptInTooltipText;
@@ -16,10 +16,10 @@ final class vi extends hk {
         createNewsOptInTooltipText = null;
     }
 
-    private vi(String param0, bb param1) {
+    private vi(String param0, WidgetListener param1) {
         this(param0, hb.field_j.field_j, param1);
         try {
-            this.field_q = hb.field_j.field_c;
+            this.renderer = hb.field_j.field_c;
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "vi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -30,10 +30,10 @@ final class vi extends hk {
         super.a(param0, param1, param2, param3);
     }
 
-    private vi(String param0, dh param1, bb param2) {
+    private vi(String param0, WidgetRenderer param1, WidgetListener param2) {
         super(param0, param1, param2);
         try {
-            this.field_q = hb.field_j.field_c;
+            this.renderer = hb.field_j.field_c;
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "vi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -101,7 +101,7 @@ final class vi extends hk {
         }
     }
 
-    vi(String param0, bb param1, boolean param2) {
+    vi(String param0, WidgetListener param1, boolean param2) {
         this(param0, param1);
         try {
             this.field_y = param2 ? true : false;

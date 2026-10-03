@@ -15,7 +15,7 @@ final class ml extends ff {
         this(2188450, 2591221, 9543);
     }
 
-    public final void a(int param0, int param1, int param2, boolean param3, el param4) {
+    public final void a(int param0, int param1, int param2, boolean param3, UiWidget param4) {
         int stackIn_6_0 = 0;
         int stackIn_16_0 = 0;
         int stackIn_19_0 = 0;
@@ -28,14 +28,14 @@ final class ml extends ff {
         int var7 = 0;
         int var8 = 0;
         try {
-          if (!param4.field_l) {
-            stackIn_6_0 = (param4.e((byte) 54)) ? 1 : 0;
+          if (!param4.pointerInside) {
+            stackIn_6_0 = (param4.hasKeyboardFocus((byte) 54)) ? 1 : 0;
           } else {
             stackIn_6_0 = 1;
           }
           var6_int = stackIn_6_0;
-          if (param4 instanceof hk) {
-            param3 = param3 & ((hk) ((Object) param4)).field_D;
+          if (param4 instanceof ButtonWidget) {
+            param3 = param3 & ((ButtonWidget) ((Object) param4)).enabled;
           }
           if (param1 >= -5) {
             ml.c(-17);
@@ -53,7 +53,7 @@ final class ml extends ff {
           jf.a(this.field_y, var7, param0 + param4.widgetX, param4.widgetWidth, (-this.field_y[0].fullHeight + param4.widgetHeight >> 1) + (param2 + param4.widgetY), -17154);
           stackIn_19_0 = (param3) ? 16777215 : 7105644;
           var8 = stackIn_19_0;
-          this.field_n.drawParagraph(param4.field_s, param4.widgetX + param0, -2 + param2 + param4.widgetY, param4.widgetWidth, param4.widgetHeight, var8, -1, 1, 1, this.field_n.maxAscent);
+          this.field_n.drawParagraph(param4.widgetText, param4.widgetX + param0, -2 + param2 + param4.widgetY, param4.widgetWidth, param4.widgetHeight, var8, -1, 1, 1, this.field_n.maxAscent);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

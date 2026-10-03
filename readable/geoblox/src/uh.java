@@ -16,9 +16,9 @@ final class uh extends ac {
         meshFacePriorityWriteOffsets = null;
     }
 
-    final String c(int param0, el param1) {
+    final String c(int param0, UiWidget param1) {
         RuntimeException var3 = null;
-        el var4 = null;
+        UiWidget var4 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -26,10 +26,10 @@ final class uh extends ac {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 109) {
-            var4 = (el) null;
-            this.c(-111, (el) null);
+            var4 = (UiWidget) null;
+            this.c(-111, (UiWidget) null);
           }
-          stackIn_3_0 = ah.a(0, '*', param1.field_s.length());
+          stackIn_3_0 = ah.a(0, '*', param1.widgetText.length());
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -46,15 +46,15 @@ final class uh extends ac {
     }
 
     uh(int param0) {
-        this(ng.field_F, param0);
+        this(DialogLayer.sharedUiFont, param0);
     }
 
     final static int b(int param0) {
         if (param0 == 16) {
-            return ee.field_B[el.field_t % ee.field_B.length];
+            return WidgetContainer.field_B[UiWidget.field_t % WidgetContainer.field_B.length];
         }
         meshFacePriorityWriteOffsets = (int[]) null;
-        return ee.field_B[el.field_t % ee.field_B.length];
+        return WidgetContainer.field_B[UiWidget.field_t % WidgetContainer.field_B.length];
     }
 
     private uh(BitmapFont param0, int param1) {
@@ -183,11 +183,11 @@ final class uh extends ac {
           }
           spawnCenterOffsetX = -320.0f + spawnQueueHead.positionX;
           spawnCenterOffsetY = -240.0f + spawnQueueHead.positionY;
-          highlightCenterX = (int)((double)spawnCenterOffsetX * Math.cos((double)el.gameplaySession.boardAngleRadians) - Math.sin((double)el.gameplaySession.boardAngleRadians) * (double)spawnCenterOffsetY + 320.0);
-          highlightCenterY = (int)((double)spawnCenterOffsetX * Math.sin((double)el.gameplaySession.boardAngleRadians) + (double)spawnCenterOffsetY * Math.cos((double)el.gameplaySession.boardAngleRadians) + 240.0);
+          highlightCenterX = (int)((double)spawnCenterOffsetX * Math.cos((double)UiWidget.gameplaySession.boardAngleRadians) - Math.sin((double)UiWidget.gameplaySession.boardAngleRadians) * (double)spawnCenterOffsetY + 320.0);
+          highlightCenterY = (int)((double)spawnCenterOffsetX * Math.sin((double)UiWidget.gameplaySession.boardAngleRadians) + (double)spawnCenterOffsetY * Math.cos((double)UiWidget.gameplaySession.boardAngleRadians) + 240.0);
           highlightAngleStep = 0.01666666753590107f;
           highlightRgb = 16764416;
-          highlightPhaseRadians = (float)el.gameplaySession.updateTick * 0.03999999910593033f;
+          highlightPhaseRadians = (float)UiWidget.gameplaySession.updateTick * 0.03999999910593033f;
           SoftwareRasterizer.fillCircleAlpha(highlightCenterX, highlightCenterY, 16, 16777215, 100);
           SoftwareRasterizer.drawCircle(highlightCenterX, highlightCenterY, 16, 0);
           for (highlightAngleRadians = highlightPhaseRadians + 3.1415927410125732f; highlightPhaseRadians < highlightAngleRadians; highlightAngleRadians = highlightAngleRadians - highlightAngleStep) {

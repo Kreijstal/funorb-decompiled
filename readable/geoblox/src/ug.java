@@ -47,7 +47,7 @@ final class ug {
     final static void spawnScorePopup(int points, boolean methodGuard, int originY, int chainMultiplier, int originX) {
         ScorePopup popup = (ScorePopup) ((Object) ue.availableScorePopups.removeLast(1));
         if (!(popup != null)) {
-            el.gameplaySession.addScore((byte) 127, points);
+            UiWidget.gameplaySession.addScore((byte) 127, points);
             return;
         }
         popup.progress = 0.0f;

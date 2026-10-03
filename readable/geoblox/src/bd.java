@@ -17,7 +17,7 @@ final class bd extends IOException {
         RuntimeException var1_ref = null;
         var4 = Geoblox.clientControlFlowFlag;
         try {
-          sh.mainRasterBuffer.setAsRasterTarget(255);
+          SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
           popup = (ScorePopup) ((Object) md.activeScorePopups.firstForIteration(0));
           if (param0 > -112) {
             return;
@@ -27,7 +27,7 @@ final class bd extends IOException {
               chainAndPointsText = "X" + popup.chainMultiplier + " - " + popup.pointsText;
               var3 = FadingDialog.uiPaletteFont.colorPalettes[0][wf.field_p];
               FadingDialog.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
-              FadingDialog.uiPaletteFont.drawCenteredText(chainAndPointsText, (int)(popup.progress * ((float)(80 + el.gameplaySession.pointsPanelX) - popup.originX) + popup.originX), (int)(popup.progress * (34.0f - popup.originY) + popup.originY), 0, -1);
+              FadingDialog.uiPaletteFont.drawCenteredText(chainAndPointsText, (int)(popup.progress * ((float)(80 + UiWidget.gameplaySession.pointsPanelX) - popup.originX) + popup.originX), (int)(popup.progress * (34.0f - popup.originY) + popup.originY), 0, -1);
               FadingDialog.uiPaletteFont.colorPalettes[0][wf.field_p] = var3;
             } else {
               FadingDialog.uiPaletteFont.drawCenteredText(popup.pointsText, (int)(popup.progress * (-popup.originX + 144.0f) + popup.originX), (int)((-popup.originY + 34.0f) * popup.progress + popup.originY), 0, -1);

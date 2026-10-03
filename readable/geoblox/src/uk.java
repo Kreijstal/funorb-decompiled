@@ -203,7 +203,7 @@ final class uk extends TextInputValidator {
           if (null != fl.field_b) {
             fj.field_q.writeZeroPrefixedNullTerminatedText(fl.field_b, (byte) -126);
           }
-          el.a(false, fc.field_d, fj.field_q, ld.field_c, InstrumentPatch.field_l);
+          UiWidget.a(false, fc.field_d, fj.field_q, ld.field_c, InstrumentPatch.field_l);
           fj.field_q.backpatchLengthShortBE(-var5_int + fj.field_q.position, true);
           cm.a(-1, -1);
           return;

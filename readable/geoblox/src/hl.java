@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hl extends el {
+final class hl extends UiWidget {
     static int[] field_D;
     private Sprite[] field_F;
     private int field_J;
@@ -159,11 +159,11 @@ final class hl extends el {
         }
     }
 
-    final void a(int param0, int param1, byte param2, int param3, int param4) {
+    final void setWidgetBounds(int height, int width, byte methodGuard, int y, int x) {
         Sprite discarded$0 = null;
-        super.a(param0, param1, (byte) -74, param3, param4);
+        super.setWidgetBounds(height, width, (byte) -74, y, x);
         this.e(-1326628703);
-        if (param2 > -6) {
+        if (methodGuard > -6) {
             discarded$0 = this.g(109);
         }
     }
@@ -184,7 +184,7 @@ final class hl extends el {
         this.field_L = param6;
         this.field_J = param7;
         this.field_A = param8;
-        this.a(param3, param2, (byte) -121, param1, param0);
+        this.setWidgetBounds(param3, param2, (byte) -121, param1, param0);
     }
 
     hl(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -200,7 +200,7 @@ final class hl extends el {
         field_D = null;
     }
 
-    final void a(boolean param0, int param1, el param2, int param3) {
+    final void a(boolean param0, int param1, UiWidget param2, int param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;

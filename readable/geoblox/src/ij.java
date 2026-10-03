@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ij extends ResizableDialog implements pl {
+final class ij extends ResizableDialog implements ButtonActivationListener {
     static int field_X;
     static float spawnIntervalScale;
-    private hk field_bb;
+    private ButtonWidget field_bb;
     static String menuText;
     static int field_cb;
     static int alternateArchivePort;
     static String createPasswordTooltipText;
 
-    private final hk a(String param0, byte param1, bb param2) {
-        hk var4 = null;
+    private final ButtonWidget a(String param0, byte param1, WidgetListener param2) {
+        ButtonWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        hk stackIn_3_0 = null;
+        ButtonWidget stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -22,17 +22,17 @@ final class ij extends ResizableDialog implements pl {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new hk(param0, param2);
+          var4 = new ButtonWidget(param0, param2);
           if (param1 != 87) {
             field_X = 121;
           }
-          var4.field_q = (dh) ((Object) new ml());
+          var4.renderer = (WidgetRenderer) ((Object) new ml());
           var5 = this.widgetHeight - 6;
           this.widgetHeight = this.widgetHeight + 38;
-          var4.a(30, -14 + (this.widgetWidth - 16), (byte) -111, var5, 15);
-          this.b((byte) -70, var4);
-          this.c(param1 - 198);
-          stackIn_3_0 = (hk) (var4);
+          var4.setWidgetBounds(30, -14 + (this.widgetWidth - 16), (byte) -111, var5, 15);
+          this.addChild((byte) -70, var4);
+          this.refreshLayout(param1 - 198);
+          stackIn_3_0 = (ButtonWidget) (var4);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -72,7 +72,7 @@ final class ij extends ResizableDialog implements pl {
         return qi.b(MessageDialog.availableEntityCategoryCount, 1);
     }
 
-    ij(ng param0, uj param1) {
+    ij(DialogLayer param0, uj param1) {
         super(param0, 200, 150);
         Object var3 = null;
         Object stackIn_12_0 = null;
@@ -81,7 +81,7 @@ final class ij extends ResizableDialog implements pl {
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        el var4 = null;
+        UiWidget var4 = null;
         try {
           var3 = null;
           if (TextInputValidator.field_h == param1) {
@@ -101,14 +101,14 @@ final class ij extends ResizableDialog implements pl {
               }
             }
           }
-          var4 = new el((String) (var3), (bb) null);
+          var4 = new UiWidget((String) (var3), (WidgetListener) null);
           var4.widgetX = 0;
           var4.widgetHeight = 80;
           var4.widgetWidth = this.widgetWidth;
           var4.widgetY = 50;
-          var4.field_q = (dh) ((Object) new ff(hh.field_d, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-          this.b((byte) -91, var4);
-          this.field_bb = this.a(hh.fullscreenCloseButtonText, (byte) 87, (bb) (this));
+          var4.renderer = (WidgetRenderer) ((Object) new ff(hh.field_d, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          this.addChild((byte) -91, var4);
+          this.field_bb = this.a(hh.fullscreenCloseButtonText, (byte) 87, (WidgetListener) (this));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -138,7 +138,7 @@ final class ij extends ResizableDialog implements pl {
         this.dialogVisible = false;
     }
 
-    public final void onButtonActivated(int param0, byte param1, int param2, int param3, hk param4) {
+    public final void onButtonActivated(int param0, byte param1, int param2, int param3, ButtonWidget param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -170,9 +170,9 @@ final class ij extends ResizableDialog implements pl {
     final static void drawAvatarFaceOrCryFrame(byte methodGuard) {
         int avatarEyeMouthOffsetX = 0;
         int avatarEyeMouthOffsetY = 0;
-        if (!el.gameplaySession.sessionEnding) {
-            avatarEyeMouthOffsetX = el.gameplaySession.boardMaskOffsetX - 2;
-            avatarEyeMouthOffsetY = el.gameplaySession.boardMaskOffsetY - 2;
+        if (!UiWidget.gameplaySession.sessionEnding) {
+            avatarEyeMouthOffsetX = UiWidget.gameplaySession.boardMaskOffsetX - 2;
+            avatarEyeMouthOffsetY = UiWidget.gameplaySession.boardMaskOffsetY - 2;
             if (!(wa.avatarShockEffectTicks <= 0)) {
                 vg.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].draw(320 - (vg.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].fullWidth >> 1), -(vg.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].fullHeight >> 1) + 240);
             }
@@ -185,8 +185,8 @@ final class ij extends ResizableDialog implements pl {
             return;
         }
         if (null == ul.currentAvatarCryFrame) {
-            avatarEyeMouthOffsetX = el.gameplaySession.boardMaskOffsetX - 2;
-            avatarEyeMouthOffsetY = el.gameplaySession.boardMaskOffsetY - 2;
+            avatarEyeMouthOffsetX = UiWidget.gameplaySession.boardMaskOffsetX - 2;
+            avatarEyeMouthOffsetY = UiWidget.gameplaySession.boardMaskOffsetY - 2;
             if (!(wa.avatarShockEffectTicks <= 0)) {
                 vg.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].draw(320 - (vg.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].fullWidth >> 1), -(vg.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].fullHeight >> 1) + 240);
             }

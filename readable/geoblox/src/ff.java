@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ff implements dh, cc {
+class ff implements WidgetRenderer, cc {
     int field_g;
     private boolean field_q;
     BitmapFont field_n;
@@ -20,10 +20,10 @@ class ff implements dh, cc {
     int field_h;
     static String field_d;
 
-    private final int a(el param0, int param1, int param2, int param3) {
+    private final int a(UiWidget param0, int param1, int param2, int param3) {
         int discarded$1 = 0;
         RuntimeException var5 = null;
-        el var6 = null;
+        UiWidget var6 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -31,8 +31,8 @@ class ff implements dh, cc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 11875) {
-            var6 = (el) null;
-            discarded$1 = this.b((el) null, 96, -93, -23);
+            var6 = (UiWidget) null;
+            discarded$1 = this.b((UiWidget) null, 96, -93, -23);
           }
           stackIn_3_0 = this.field_e + param0.widgetX + param1 + (param0.field_k + param3);
           return stackIn_3_0;
@@ -50,7 +50,7 @@ class ff implements dh, cc {
         }
     }
 
-    private final void a(int param0, int param1, el param2, int param3, int param4, int param5, int param6, int param7) {
+    private final void a(int param0, int param1, UiWidget param2, int param3, int param4, int param5, int param6, int param7) {
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_31_2 = null;
@@ -118,19 +118,19 @@ class ff implements dh, cc {
         }
     }
 
-    private final void a(int param0, int param1, el param2, boolean param3) {
+    private final void a(int param0, int param1, UiWidget param2, boolean param3) {
         try {
             this.a(param1, this.field_p, param2, 0, 0, this.field_o, 0, param0);
             if (!param3) {
-                el var6 = (el) null;
-                this.b((byte) -108, (el) null);
+                UiWidget var6 = (UiWidget) null;
+                this.b((byte) -108, (UiWidget) null);
             }
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ff.P(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    private final void b(byte param0, el param1) {
+    private final void b(byte param0, UiWidget param1) {
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_31_2 = null;
@@ -204,7 +204,7 @@ class ff implements dh, cc {
         }
     }
 
-    public final dk a(byte param0, el param1) {
+    public final dk a(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         dk stackIn_8_0 = null;
         dk stackIn_10_0 = null;
@@ -245,9 +245,9 @@ class ff implements dh, cc {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
-    public final int a(el param0, int param1, int param2, int param3, int param4, int param5) {
+    public final int a(UiWidget param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
-        el var8 = null;
+        UiWidget var8 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -256,8 +256,8 @@ class ff implements dh, cc {
         try {
           this.a((byte) 115, param0);
           if (param2 != -15539) {
-            var8 = (el) null;
-            this.b((byte) 9, (el) null);
+            var8 = (UiWidget) null;
+            this.b((byte) 9, (UiWidget) null);
           }
           stackIn_3_0 = param0.field_w.a(param1 - this.a(param5, param0, (byte) 46), -109, param4 - this.a(param3, -2, param0));
           return stackIn_3_0;
@@ -275,7 +275,7 @@ class ff implements dh, cc {
         }
     }
 
-    public final int a(el param0, byte param1) {
+    public final int a(UiWidget param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
@@ -302,7 +302,7 @@ class ff implements dh, cc {
         }
     }
 
-    public final int a(int param0, el param1) {
+    public final int a(int param0, UiWidget param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
@@ -361,9 +361,9 @@ class ff implements dh, cc {
         }
     }
 
-    private final int b(el param0, int param1, int param2, int param3) {
+    private final int b(UiWidget param0, int param1, int param2, int param3) {
         RuntimeException var5 = null;
-        el var6 = null;
+        UiWidget var6 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -371,8 +371,8 @@ class ff implements dh, cc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 1674) {
-            var6 = (el) null;
-            this.c(-123, (el) null);
+            var6 = (UiWidget) null;
+            this.c(-123, (UiWidget) null);
           }
           stackIn_3_0 = param3 + param0.field_n + (this.field_m + (param0.widgetY + param1));
           return stackIn_3_0;
@@ -390,7 +390,7 @@ class ff implements dh, cc {
         }
     }
 
-    String c(int param0, el param1) {
+    String c(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -401,7 +401,7 @@ class ff implements dh, cc {
           if (param0 < 109) {
             this.field_i = 23;
           }
-          stackIn_3_0 = param1.field_s;
+          stackIn_3_0 = param1.widgetText;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -417,7 +417,7 @@ class ff implements dh, cc {
         }
     }
 
-    public final int a(int param0, int param1, el param2) {
+    public final int a(int param0, int param1, UiWidget param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -444,7 +444,7 @@ class ff implements dh, cc {
         }
     }
 
-    public final int a(int param0, el param1, byte param2) {
+    public final int a(int param0, UiWidget param1, byte param2) {
         RuntimeException var4 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -473,7 +473,7 @@ class ff implements dh, cc {
         }
     }
 
-    public void a(int param0, int param1, int param2, boolean param3, el param4) {
+    public void a(int param0, int param1, int param2, boolean param3, UiWidget param4) {
         if (!(null != this.field_n)) {
             return;
         }
@@ -489,13 +489,13 @@ class ff implements dh, cc {
 
     public final int a(int param0) {
         if (param0 != 1) {
-            el var3 = (el) null;
-            this.a(79, -83, (el) null, -31, 118, 54, 3, -68);
+            UiWidget var3 = (UiWidget) null;
+            this.a(79, -83, (UiWidget) null, -31, 118, 54, 3, -68);
         }
         return this.field_n.maxAscent + this.field_n.maxDescent;
     }
 
-    private final int b(int param0, el param1) {
+    private final int b(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -524,14 +524,14 @@ class ff implements dh, cc {
         }
     }
 
-    public final void a(int param0, int param1, int param2, el param3, int param4) {
+    public final void a(int param0, int param1, int param2, UiWidget param3, int param4) {
         int var7 = 0;
         lk var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        el var13 = null;
+        UiWidget var13 = null;
         dk var14 = null;
         dk var15 = null;
         int stackIn_4_0 = 0;
@@ -544,7 +544,7 @@ class ff implements dh, cc {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         try {
-          if (param3.e((byte) 54)) {
+          if (param3.hasKeyboardFocus((byte) 54)) {
             var14 = this.a((byte) 121, param3);
             var15 = var14;
             var7 = var15.a((byte) 24, param1);
@@ -566,8 +566,8 @@ class ff implements dh, cc {
             id.a(true);
           }
           if (param2 != -2) {
-            var13 = (el) null;
-            this.a((el) null, (byte) 70);
+            var13 = (UiWidget) null;
+            this.a((UiWidget) null, (byte) 70);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -584,9 +584,9 @@ class ff implements dh, cc {
         }
     }
 
-    public final int a(el param0, int param1) {
+    public final int a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
-        el var4 = null;
+        UiWidget var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -594,8 +594,8 @@ class ff implements dh, cc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -1) {
-            var4 = (el) null;
-            this.a(106, 101, 118, (el) null, -6);
+            var4 = (UiWidget) null;
+            this.a(106, 101, 118, (UiWidget) null, -6);
           }
           stackIn_3_0 = -this.field_j - this.field_e + param0.widgetWidth;
           return stackIn_3_0;
@@ -613,7 +613,7 @@ class ff implements dh, cc {
         }
     }
 
-    public final void a(int param0, int param1, int param2, int param3, int param4, el param5) {
+    public final void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
         int var12 = 0;
         int stackIn_15_0 = 0;
         int stackIn_20_0 = 0;
@@ -630,7 +630,7 @@ class ff implements dh, cc {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        el var17 = null;
+        UiWidget var17 = null;
         dk var18 = null;
         dk var19 = null;
         var16 = Geoblox.clientControlFlowFlag;
@@ -639,10 +639,10 @@ class ff implements dh, cc {
             return;
           }
           if (param1 != 0) {
-            var17 = (el) null;
-            this.a(90, -50, (el) null);
+            var17 = (UiWidget) null;
+            this.a(90, -50, (UiWidget) null);
           }
-          if (param5.e((byte) 54)) {
+          if (param5.hasKeyboardFocus((byte) 54)) {
             var18 = this.a((byte) 115, param5);
             var19 = var18;
             if (param4 <= param0) {

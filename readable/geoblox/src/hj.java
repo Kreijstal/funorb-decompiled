@@ -77,7 +77,7 @@ final class hj {
           }
           pixelCount = hl.decodedSpriteHeights[spriteIndex] * DualLinkNode.decodedSpriteWidths[spriteIndex];
           paletteIndices = mj.decodedSpriteIndices[spriteIndex];
-          if (!ng.decodedSpriteHasNonOpaqueAlpha[spriteIndex]) {
+          if (!DialogLayer.decodedSpriteHasNonOpaqueAlpha[spriteIndex]) {
             rgbPixelsForUpdates = new int[pixelCount];
             rgbPixelsSnapshot = rgbPixelsForUpdates;
             for (rgbPixelIndex = 0; pixelCount > rgbPixelIndex; rgbPixelIndex++) {

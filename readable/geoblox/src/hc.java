@@ -12,21 +12,21 @@ final class hc extends dj implements nl {
     final String c(byte param0) {
         if (param0 != 69) {
             this.c((byte) -87);
-            if (!this.field_l) {
+            if (!this.pointerInside) {
                 return null;
             }
-            if (null != this.field_j) {
+            if (null != this.hoverText) {
                 ResizableDialog.a(ue.pointerYSnapshot, (byte) -84, PrefixCodeDecoder.pointerXSnapshot + this.widgetWidth - this.field_S);
-                return this.field_j;
+                return this.hoverText;
             }
             return null;
         }
-        if (!this.field_l) {
+        if (!this.pointerInside) {
             return null;
         }
-        if (null != this.field_j) {
+        if (null != this.hoverText) {
             ResizableDialog.a(ue.pointerYSnapshot, (byte) -84, PrefixCodeDecoder.pointerXSnapshot + this.widgetWidth - this.field_S);
-            return this.field_j;
+            return this.hoverText;
         }
         return null;
     }
@@ -58,7 +58,7 @@ final class hc extends dj implements nl {
         }
     }
 
-    final void a(boolean param0, int param1, el param2, int param3) {
+    final void a(boolean param0, int param1, UiWidget param2, int param3) {
         if (param0) {
             return;
         }
@@ -70,7 +70,7 @@ final class hc extends dj implements nl {
         }
     }
 
-    hc(String param0, bb param1, int param2) {
+    hc(String param0, WidgetListener param1, int param2) {
         super(param0, param1, param2);
     }
 

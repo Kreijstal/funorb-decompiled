@@ -220,7 +220,7 @@ class ByteArrayBuffer extends IntrusiveNode {
         if (param0 != 0) {
             return;
         }
-        hk.field_C.replaceContent(new AccountWelcomePanel(), param0 - 110);
+        ButtonWidget.field_C.replaceContent(new AccountWelcomePanel(), param0 - 110);
     }
 
     final void writeNullTerminatedText(String text, int characterStart) {
@@ -257,7 +257,7 @@ class ByteArrayBuffer extends IntrusiveNode {
         try {
             if (vg.field_i == null) {
                 vg.field_i = new rl(kd.field_e, ff.field_d);
-                kd.field_e.a(false, vg.field_i);
+                kd.field_e.showDialog(false, vg.field_i);
             }
             vg.field_i.a(param2, param1, param3 ^ -92, param0);
             SoftwareRasterizer.clearFramebuffer();
@@ -305,10 +305,10 @@ class ByteArrayBuffer extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          var3 = (ph) ((Object) el.field_p.firstForIteration(0));
+          var3 = (ph) ((Object) UiWidget.field_p.firstForIteration(0));
           while (var3 != null) {
             rl.a(param1, 534, var3);
-            var3 = (ph) ((Object) el.field_p.nextForIteration(1));
+            var3 = (ph) ((Object) UiWidget.field_p.nextForIteration(1));
           }
           if (!param0) {
             field_i = -54;

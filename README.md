@@ -19,6 +19,16 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 138,772 bindings,
 preserving 388 override relationships.
 
+Pass 100 adds 228 guarded names for widget ownership, layout, focus and independent
+deque traversal. The preview includes readable widget/container/dialog-layer,
+button, renderer/listener and cursor classes. Complete connected bounds and focus
+contracts retain their original order and guard behavior. All 7,802 prior complete
+rules and raw/decompiler/native pins remain; the 8,030 rules apply 64,011 edits.
+Compilation/binding/override checks, all six existing native probes, full
+reproduction and dictionary reversal pass. Pointer/drag dispatch, shared opaque
+utilities, larger reconstruction and whole-game/browser/phone acceptance remain
+open; runtime control flow and allocations are unchanged.
+
 Pass 99 adds 205 guarded names for dialog fade/resize/content transitions,
 widget geometry and complete shared rendering/transition contracts. The preview
 includes `FadingDialog`, `ResizableDialog`, `ContentTransitionDialog` and

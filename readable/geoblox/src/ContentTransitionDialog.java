@@ -4,7 +4,7 @@
 abstract class ContentTransitionDialog extends ResizableDialog {
     private int contentResizeDurationTicks;
     private int contentVerticalInset;
-    private el pendingContent;
+    private UiWidget pendingContent;
     private int fadeOutDurationTicks;
     private int contentFadeTick;
     private hh contentTransitionPhase;
@@ -21,7 +21,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
         return super.settleDialogAnimation(229);
     }
 
-    ContentTransitionDialog(ng dialogLayer, el initialContent, int contentVerticalInset, int fadeDurationTicks, int resizeDurationTicks) {
+    ContentTransitionDialog(DialogLayer dialogLayer, UiWidget initialContent, int contentVerticalInset, int fadeDurationTicks, int resizeDurationTicks) {
         super(dialogLayer, initialContent.widgetWidth + 12, 12 + contentVerticalInset + initialContent.widgetHeight);
         try {
             this.contentResizeDurationTicks = resizeDurationTicks;
@@ -98,7 +98,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
         this.contentOpacityWidget.opacity = 0;
     }
 
-    boolean handleKeyInput(int keyCode, int methodGuard, char typedCharacter, el eventContext) {
+    boolean handleKeyInput(int keyCode, int methodGuard, char typedCharacter, UiWidget eventContext) {
         RuntimeException keyInputFailure = null;
         RuntimeException keyFailureBeforeContext = null;
         StringBuilder keyFailureContextBuilder = null;
@@ -110,10 +110,10 @@ abstract class ContentTransitionDialog extends ResizableDialog {
           }
           if (this.contentOpacityWidget != null) {
             if (keyCode == 98) {
-              this.contentOpacityWidget.a((byte) -92, eventContext);
+              this.contentOpacityWidget.requestKeyboardFocus((byte) -92, eventContext);
             }
             if (keyCode == 99) {
-              this.contentOpacityWidget.a((byte) -99, eventContext);
+              this.contentOpacityWidget.requestKeyboardFocus((byte) -99, eventContext);
               return false;
             }
           }
@@ -132,9 +132,9 @@ abstract class ContentTransitionDialog extends ResizableDialog {
         }
     }
 
-    private final void installContent(int methodGuard, el content) {
+    private final void installContent(int methodGuard, UiWidget content) {
         RuntimeException contentInstallationFailure = null;
-        el guardedNullContentSnapshot = null;
+        UiWidget guardedNullContentSnapshot = null;
         RuntimeException contentFailureBeforeContext = null;
         StringBuilder contentFailureContextBuilder = null;
         String contentContextDescription = null;
@@ -146,16 +146,16 @@ abstract class ContentTransitionDialog extends ResizableDialog {
           if (content == null) {
             this.contentOpacityWidget = new OpacityWidget();
           } else {
-            content.a(content.widgetHeight, content.widgetWidth, (byte) -77, this.contentVerticalInset + 6, 6);
+            content.setWidgetBounds(content.widgetHeight, content.widgetWidth, (byte) -77, this.contentVerticalInset + 6, 6);
             this.contentOpacityWidget = new OpacityWidget(content);
           }
-          this.b((byte) -123, (el) (this.contentOpacityWidget));
+          this.addChild((byte) -123, (UiWidget) (this.contentOpacityWidget));
           this.pendingContent = null;
           if (methodGuard == -21102) {
             return;
           }
-          guardedNullContentSnapshot = (el) null;
-          this.handleKeyInput(-67, -54, 'ﾽ', (el) null);
+          guardedNullContentSnapshot = (UiWidget) null;
+          this.handleKeyInput(-67, -54, 'ﾽ', (UiWidget) null);
           return;
         } catch (java.lang.RuntimeException caughtContentInstallationFailure) {
           caughtContentInstallationException = caughtContentInstallationFailure;
@@ -204,7 +204,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
         }
     }
 
-    void replaceContent(el content, int methodGuard) {
+    void replaceContent(UiWidget content, int methodGuard) {
         RuntimeException contentReplacementFailure = null;
         RuntimeException replacementFailureBeforeContext = null;
         StringBuilder replacementFailureContextBuilder = null;

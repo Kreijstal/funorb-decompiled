@@ -5,16 +5,16 @@ final class wa {
     private boolean field_o;
     int field_f;
     BitmapFont field_m;
-    dh field_j;
+    WidgetRenderer field_j;
     int field_h;
     int field_p;
-    dh field_g;
+    WidgetRenderer field_g;
     static int avatarShockEffectTicks;
-    dh field_c;
-    dh field_l;
+    WidgetRenderer field_c;
+    WidgetRenderer field_l;
     int field_d;
     private int field_k;
-    dh field_b;
+    WidgetRenderer field_b;
     int field_e;
     int field_i;
     int field_n;
@@ -86,7 +86,7 @@ final class wa {
         int var15 = Geoblox.clientControlFlowFlag;
         try {
             var17 = new ff(param1, 2, 2, 2236962, 1, 1, 1, 2 + (param1.maxAscent + param1.maxDescent));
-            this.field_b = (dh) ((Object) var17);
+            this.field_b = (WidgetRenderer) ((Object) var17);
             var17.field_o = 16777215;
             var4 = new rd();
             var17.a(var4, true);
@@ -113,21 +113,21 @@ final class wa {
             var5[4] = (Sprite) ((Object) var18);
             var4.a(-127, 4).a(true, (byte) 73).a(var5, true);
             var4.a(-101, 5).a(IntrusiveDeque.buildUnitBorderNineSliceSprites(0, 0, 116, 0, 65793), true).a(true, (byte) 73).b(256, -1);
-            this.field_j = (dh) ((Object) var4);
+            this.field_j = (WidgetRenderer) ((Object) var4);
             var6 = new rd(var4, true);
             var6.field_g = 0;
             var7 = new rd(var4, true);
             var7.field_g = 0;
             var7.a((byte) 124, va.a(8947848, (byte) -112));
             var7.a(-116, 1).a(va.a(11184810, (byte) -112), true).b(256, 2236962);
-            this.field_c = (dh) ((Object) new bi(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+            this.field_c = (WidgetRenderer) ((Object) new bi(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
             discarded$0 = new hb(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
             discarded$1 = new jf(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
             var8 = new rd();
             var17.a(var8, true);
             var8.a(-124, 0).a(wa.a(7829367, 15658734, 10066329, 1), true).b(256, 1118481).a((byte) 16, -1);
             var8.a(-105, 4).a(true, (byte) 73).a(var5, true);
-            this.field_g = (dh) ((Object) var8);
+            this.field_g = (WidgetRenderer) ((Object) var8);
             var9 = new Sprite[param0];
             var10 = new Sprite[9];
             var9[4] = new Sprite(2, 1);
@@ -250,7 +250,7 @@ final class wa {
             this.a(param0, param3, param2, -3140);
           }
           if (!param1) {
-            this.field_c = (dh) null;
+            this.field_c = (WidgetRenderer) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -178,7 +178,7 @@ final class gi implements Iterable {
                 }
                 var3 = var3 + param1;
               }
-              gb.a(var3, (byte) -75);
+              DequeCursor.a(var3, (byte) -75);
               var6 = og.a(var3, "%3a", true, ":");
               var7 = og.a(var6, "%40", true, "@");
               var8 = og.a(var7, "%26", true, "&");

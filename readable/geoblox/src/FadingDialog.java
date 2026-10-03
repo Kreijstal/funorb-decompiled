@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class FadingDialog extends ee {
-    private ng dialogLayer;
+abstract class FadingDialog extends WidgetContainer {
+    private DialogLayer dialogLayer;
     boolean dialogVisible;
     static PaletteBitmapFont uiPaletteFont;
     static int variantMatchCandidateCount;
@@ -22,16 +22,16 @@ abstract class FadingDialog extends ee {
 
     final void resizeAndCenter(int targetHeight, int methodGuard, int targetWidth) {
         if (methodGuard > 95) {
-            this.a(targetHeight, targetWidth, (byte) -87, -targetHeight + fa.field_i >> 1, kb.field_b - targetWidth >> 1);
+            this.setWidgetBounds(targetHeight, targetWidth, (byte) -87, -targetHeight + fa.field_i >> 1, kb.field_b - targetWidth >> 1);
             return;
         }
         uiPaletteFont = (PaletteBitmapFont) null;
-        this.a(targetHeight, targetWidth, (byte) -87, -targetHeight + fa.field_i >> 1, kb.field_b - targetWidth >> 1);
+        this.setWidgetBounds(targetHeight, targetWidth, (byte) -87, -targetHeight + fa.field_i >> 1, kb.field_b - targetWidth >> 1);
     }
 
     private final int getTargetOpacity(int methodGuard) {
         int guardResidue = 80 % ((-11 - methodGuard) / 46);
-        return !this.dialogVisible ? 0 : this.dialogLayer.j(81) != this ? 0 : 256;
+        return !this.dialogVisible ? 0 : this.dialogLayer.getTopVisibleDialog(81) != this ? 0 : 256;
     }
 
     abstract void b(int param0, int param1, int param2);
@@ -61,8 +61,8 @@ abstract class FadingDialog extends ee {
         return false;
     }
 
-    FadingDialog(ng dialogLayer, int initialWidth, int initialHeight) {
-        super(kb.field_b - initialWidth >> 1, -initialHeight + fa.field_i >> 1, initialWidth, initialHeight, (dh) null);
+    FadingDialog(DialogLayer dialogLayer, int initialWidth, int initialHeight) {
+        super(kb.field_b - initialWidth >> 1, -initialHeight + fa.field_i >> 1, initialWidth, initialHeight, (WidgetRenderer) null);
         try {
             this.dialogLayer = dialogLayer;
             this.dialogOpacity = 0;
@@ -155,19 +155,19 @@ abstract class FadingDialog extends ee {
         field_E = null;
     }
 
-    final el f(byte param0) {
-        el var2 = super.f((byte) -62);
-        if (param0 > -60) {
+    final UiWidget findFocusTarget(byte methodGuard) {
+        UiWidget focusedChild = super.findFocusTarget((byte) -62);
+        if (methodGuard > -60) {
             this.dialogVisible = false;
-            if (!(var2 == null)) {
-                return var2;
+            if (!(focusedChild == null)) {
+                return focusedChild;
             }
-            return (el) (this);
+            return (UiWidget) (this);
         }
-        if (!(var2 == null)) {
-            return var2;
+        if (!(focusedChild == null)) {
+            return focusedChild;
         }
-        return (el) (this);
+        return (UiWidget) (this);
     }
 
     final void renderWidget(int parentX, int parentY, byte methodGuard, int renderPass) {

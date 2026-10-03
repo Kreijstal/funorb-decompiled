@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class td extends hk {
+final class td extends ButtonWidget {
     private dg field_F;
     static od field_I;
     private int field_G;
@@ -196,7 +196,7 @@ final class td extends hk {
         }
     }
 
-    final void a(boolean param0, int param1, el param2, int param3) {
+    final void a(boolean param0, int param1, UiWidget param2, int param3) {
         try {
             this.field_G = this.field_G + 1;
             super.a(param0, param1, param2, param3);
@@ -207,19 +207,19 @@ final class td extends hk {
 
     final static void advanceLogoAnimationTick(byte methodGuard) {
         int guardRemainder = -28 % ((methodGuard - 36) / 43);
-        if (gb.logoAnimationTick != -DiskCacheWorker.logoStartDelayTicks + 0 && 250 - DiskCacheWorker.logoStartDelayTicks == gb.logoAnimationTick) {
+        if (DequeCursor.logoAnimationTick != -DiskCacheWorker.logoStartDelayTicks + 0 && 250 - DiskCacheWorker.logoStartDelayTicks == DequeCursor.logoAnimationTick) {
         }
-        gb.logoAnimationTick = gb.logoAnimationTick + 1;
+        DequeCursor.logoAnimationTick = DequeCursor.logoAnimationTick + 1;
     }
 
-    final boolean a(byte param0, el param1) {
+    final boolean requestKeyboardFocus(byte methodGuard, UiWidget focusContext) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 > -30) {
+          if (methodGuard > -30) {
             this.renderWidget(89, -88, (byte) -40, -90);
           }
           return false;
@@ -227,8 +227,8 @@ final class td extends hk {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_6_0 = (RuntimeException) (var3);
-          stackIn_6_1 = new StringBuilder().append("td.UA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("td.UA(").append(methodGuard).append(',');
+          if (focusContext == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
@@ -256,7 +256,7 @@ final class td extends hk {
         if (param0 != 69) {
             return (String) null;
         }
-        if (!(!this.field_l)) {
+        if (!(!this.pointerInside)) {
             return this.field_F.c(-21666);
         }
         return null;

@@ -7,9 +7,9 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-## Current readability (pass 99)
+## Current readability (pass 100)
 
-The export has 7,802 guarded names. All 303 sources compile, reproduce and
+The export has 8,030 guarded names. All 303 sources compile, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
 short-circuit guards for their original remainders, consuming 82 breaks and
 saving 219 lines. Menu hit-test trees preserve every strict boundary and
@@ -58,6 +58,54 @@ remain intact.
 
 `MenuScreen` handles selection and hit testing. Its overridden activation/input
 methods have matching names in `GameScreen`, preserving the virtual contracts.
+
+## Widget ownership and focus
+
+`UiWidget` is the original `el` base. Its `widgetText`, `renderer`, `listener`,
+`pointerInside`, `hoverText` and `pressedPointerButton` have source-traced roles.
+`WidgetRenderer` is the drawing-strategy interface; `WidgetListener` is the empty
+callback marker. `ButtonActivationListener` defines the already named
+`onButtonActivated` contract. `ButtonWidget` retains separate `enabled` and
+`focused` flags; other button state is not collapsed into either.
+
+`WidgetContainer` owns a deque of `children`. `addChild` appends to its tail and
+retains its wrong-guard side effect after insertion. `SingleChildWidget` owns one
+nullable `child`. Drawing/input/focus delegation preserve those distinct ownership
+models. `setWidgetBounds` names the complete five-method override family, retaining
+height, width, guard, Y, X order. `refreshLayout`, `refreshChildrenLayout` and
+`refreshChildLayout` invoke the original virtual layout paths without reordering
+writes, graphics allocations or exceptions. `containsPointer` uses inclusive
+left/top and exclusive right/bottom bounds; wrong guard still returns true.
+
+`hasKeyboardFocus` checks own/descendant focus; `clearKeyboardFocus` clears it.
+`requestKeyboardFocus` preserves enabled/focusable gating, clearing the supplied
+context before setting button focus, and original listener callbacks. Containers
+search their children and decorative widgets still reject requests. The two
+`findFocusTarget` signature families preserve child lookup and the dialog's
+self fallback. Wrong-guard recursive and arbitrary-event paths remain unchanged.
+
+`DialogLayer.showDialog` rejects non-dialog widgets, adds the dialog at the front,
+marks it visible and requests focus. `getTopVisibleDialog` scans forward for the
+first visible node; drawing scans in reverse. `hideAllDialogs` always clears
+visibility but only its normal guard clears the current single child.
+`advanceDialogAnimations` advances/removes eligible dialogs and then stores the
+top visible dialog as current child. `settleDialogAnimations` uses the separate
+snap/removal path. Shared UI font loading, cleanup and unrelated statics remain
+on this class.
+
+`DequeCursor` supports independent forward/reverse iteration over the intrusive
+deques. `beginForward`, `nextForward`, `beginReverse`, `nextReverse` and the two
+`begin...At` helpers snapshot the next neighbor before returning the current node,
+so callers may unlink that current node. Both directions share `pendingNode`.
+Its wrong guards, foreign-node starts and possible repeated-exhaustion null
+failures remain; it is not a standard iterator replacement. Container predicates
+now read `IntrusiveNode.isLinked`, which checks previous-node membership rather
+than button enabled state.
+
+All selected dialog-layer/cursor instance parameters/locals are named; pointer/
+drag dispatch, some numeric widget fields and colocated utilities remain opaque.
+The existing compile/binding/override, deterministic reproduction, reversal and
+six native probes pass without claiming new live UI or browser/device coverage.
 
 ## Dialog transition implementation
 

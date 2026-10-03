@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fk extends sh {
+final class fk extends SingleChildWidget {
     static ck field_B;
 
     final static byte[] readTextResourceBytes(int readGuard, String resourceKey) {
@@ -46,10 +46,10 @@ final class fk extends sh {
         }
     }
 
-    private fk(int param0, int param1, int param2, int param3, dh param4, bb param5, el param6) {
+    private fk(int param0, int param1, int param2, int param3, WidgetRenderer param4, WidgetListener param5, UiWidget param6) {
         super(param0, param1, param2, param3, param4, param5);
         try {
-            this.field_A = param6;
+            this.child = param6;
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "fk.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
@@ -62,21 +62,21 @@ final class fk extends sh {
         }
     }
 
-    final void a(int param0, int param1, boolean param2, el param3, int param4, int param5) {
+    final void a(int param0, int param1, boolean param2, UiWidget param3, int param4, int param5) {
         la var7 = null;
         try {
             super.a(param0, param1, param2, param3, param4, param5);
             var7 = lh.field_b;
-            if (var7 != null && this.a(param1, -1, param5, param4, param0)) {
-                if (this.field_u instanceof rg) {
-                    ((rg) ((Object) this.field_u)).a((fk) (this), var7, 22176);
+            if (var7 != null && this.containsPointer(param1, -1, param5, param4, param0)) {
+                if (this.listener instanceof rg) {
+                    ((rg) ((Object) this.listener)).a((fk) (this), var7, 22176);
                     lh.field_b = null;
                     return;
                 }
-                if (!(var7.field_u instanceof rg)) {
+                if (!(var7.listener instanceof rg)) {
                     return;
                 }
-                ((rg) ((Object) var7.field_u)).a((fk) (this), var7, 22176);
+                ((rg) ((Object) var7.listener)).a((fk) (this), var7, 22176);
                 lh.field_b = null;
             }
         } catch (RuntimeException runtimeException) {

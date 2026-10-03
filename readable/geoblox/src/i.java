@@ -65,7 +65,7 @@ final class i {
         try {
           try {
             var4 = param2.getGraphics();
-            sh.mainRasterBuffer.drawImage(param3, var4, param0, 0);
+            SingleChildWidget.mainRasterBuffer.drawImage(param3, var4, param0, 0);
             var5 = 56 % ((-32 - param1) / 59);
             var4.dispose();
           } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -141,10 +141,10 @@ final class i {
                 }
                 L4: {
                   if (cullBackfacesSnapshot) {
-                    projectedAXOrVertexADepth = sh.projectedMeshVertexX[vertexAOrPriorityIndex];
+                    projectedAXOrVertexADepth = SingleChildWidget.projectedMeshVertexX[vertexAOrPriorityIndex];
                     projectedAYOrVertexBDepth = dj.projectedMeshVertexY[vertexAOrPriorityIndex];
-                    edgeBXOrVertexCDepth = sh.projectedMeshVertexX[vertexBOrPriorityCount] - projectedAXOrVertexADepth;
-                    edgeCXOrRelativeDepthSum = sh.projectedMeshVertexX[vertexC] - projectedAXOrVertexADepth;
+                    edgeBXOrVertexCDepth = SingleChildWidget.projectedMeshVertexX[vertexBOrPriorityCount] - projectedAXOrVertexADepth;
+                    edgeCXOrRelativeDepthSum = SingleChildWidget.projectedMeshVertexX[vertexC] - projectedAXOrVertexADepth;
                     edgeBYOrDepthBucketIndex = dj.projectedMeshVertexY[vertexBOrPriorityCount] - projectedAYOrVertexBDepth;
                     edgeCYOrBucketOccupancy = -projectedAYOrVertexBDepth + dj.projectedMeshVertexY[vertexC];
                     if (-(edgeBYOrDepthBucketIndex * edgeCXOrRelativeDepthSum) + edgeBXOrVertexCDepth * edgeCYOrBucketOccupancy >= 0) {
@@ -311,10 +311,10 @@ final class i {
                 }
                 L4: {
                   if (cullBackfacesSnapshot) {
-                    projectedAXOrVertexADepth = sh.projectedMeshVertexX[vertexAOrPriorityIndex];
+                    projectedAXOrVertexADepth = SingleChildWidget.projectedMeshVertexX[vertexAOrPriorityIndex];
                     projectedAYOrVertexBDepth = dj.projectedMeshVertexY[vertexAOrPriorityIndex];
-                    edgeBXOrVertexCDepth = sh.projectedMeshVertexX[vertexBOrPriorityCount] - projectedAXOrVertexADepth;
-                    edgeCXOrRelativeDepthSum = sh.projectedMeshVertexX[vertexC] - projectedAXOrVertexADepth;
+                    edgeBXOrVertexCDepth = SingleChildWidget.projectedMeshVertexX[vertexBOrPriorityCount] - projectedAXOrVertexADepth;
+                    edgeCXOrRelativeDepthSum = SingleChildWidget.projectedMeshVertexX[vertexC] - projectedAXOrVertexADepth;
                     edgeBYOrDepthBucketIndex = dj.projectedMeshVertexY[vertexBOrPriorityCount] - projectedAYOrVertexBDepth;
                     edgeCYOrBucketOccupancy = -projectedAYOrVertexBDepth + dj.projectedMeshVertexY[vertexC];
                     if (-(edgeBYOrDepthBucketIndex * edgeCXOrRelativeDepthSum) + edgeBXOrVertexCDepth * edgeCYOrBucketOccupancy >= 0) {

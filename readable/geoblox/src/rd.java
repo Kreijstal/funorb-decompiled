@@ -24,7 +24,7 @@ final class rd extends ff {
         si[] var3 = null;
         si var5 = null;
         int var6 = 0;
-        el var7 = null;
+        UiWidget var7 = null;
         si[] var8 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -34,8 +34,8 @@ final class rd extends ff {
         var6 = Geoblox.clientControlFlowFlag;
         try {
           if (param0 != 124) {
-            var7 = (el) null;
-            this.a(-125, -66, 53, true, (el) null);
+            var7 = (UiWidget) null;
+            this.a(-125, -66, 53, true, (UiWidget) null);
           }
           var8 = this.field_x;
           var3 = var8;
@@ -155,11 +155,11 @@ final class rd extends ff {
             String var2 = (String) null;
             rd.a(38, (String) null);
         }
-        kd.field_e.f(10936);
+        kd.field_e.hideAllDialogs(10936);
         if (!(null != vg.field_i)) {
             vg.field_i = new rl(kd.field_e, ff.field_d);
         }
-        kd.field_e.a(false, vg.field_i);
+        kd.field_e.showDialog(false, vg.field_i);
     }
 
     final static void b(int param0) {
@@ -224,8 +224,8 @@ final class rd extends ff {
         }
     }
 
-    public final void a(int param0, int param1, int param2, boolean param3, el param4) {
-        el stackIn_3_0 = null;
+    public final void a(int param0, int param1, int param2, boolean param3, UiWidget param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         String stackIn_32_2 = null;
@@ -233,21 +233,21 @@ final class rd extends ff {
         RuntimeException var6 = null;
         si var7 = null;
         si var9 = null;
-        hk var10 = null;
+        ButtonWidget var10 = null;
         si var11 = null;
         si var12 = null;
         si var13 = null;
         si var14 = null;
         try {
-          if (!(param4 instanceof hk)) {
+          if (!(param4 instanceof ButtonWidget)) {
             stackIn_3_0 = null;
           } else {
-            stackIn_3_0 = (el) (param4);
+            stackIn_3_0 = (UiWidget) (param4);
           }
-          var10 = (hk) ((Object) stackIn_3_0);
+          var10 = (ButtonWidget) ((Object) stackIn_3_0);
           uh.a(param4.widgetY + param2, param4.widgetX + param0, -14045, param4.widgetHeight + (param2 + param4.widgetY), param4.widgetWidth + (param0 + param4.widgetX));
           if (var10 != null) {
-            param3 = param3 & var10.field_D;
+            param3 = param3 & var10.enabled;
           }
           var7 = this.field_x[0];
           if (param1 >= -5) {
@@ -263,9 +263,9 @@ final class rd extends ff {
                   var11.a(param0, param2, this.field_t, (rd) (this), -16566, param4);
                 }
               }
-              if (var10.field_l) {
+              if (var10.pointerInside) {
                 var12 = this.field_x[3];
-                if ((var10.field_f != 0) &&
+                if ((var10.pressedPointerButton != 0) &&
                     (var12 != null)) {
                   var12.a(param0, param2, this.field_t, (rd) (this), -16566, param4);
                   break L3;
@@ -277,7 +277,7 @@ final class rd extends ff {
               }
             }
           }
-          if (param4.e((byte) 54)) {
+          if (param4.hasKeyboardFocus((byte) 54)) {
             var13 = this.field_x[5];
             if (var13 != null) {
               var13.a(param0, param2, this.field_t, (rd) (this), -16566, param4);

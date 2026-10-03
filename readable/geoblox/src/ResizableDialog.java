@@ -144,7 +144,7 @@ abstract class ResizableDialog extends FadingDialog {
         }
     }
 
-    ResizableDialog(ng dialogLayer, int initialWidth, int initialHeight) {
+    ResizableDialog(DialogLayer dialogLayer, int initialWidth, int initialHeight) {
         super(dialogLayer, initialWidth, initialHeight);
         this.resizeDurationTicks = 0;
         this.resizeTick = 0;
@@ -222,7 +222,7 @@ abstract class ResizableDialog extends FadingDialog {
         if (param1 > -20) {
             return;
         }
-        gb.field_e = param0;
+        DequeCursor.field_e = param0;
     }
 
     final static String a(CharSequence param0, int param1) {

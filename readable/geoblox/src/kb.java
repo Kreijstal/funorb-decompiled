@@ -93,7 +93,7 @@ final class kb {
     final static void b(int param0) {
         int var1 = 0;
         if (null != kd.field_e) {
-            kd.field_e.l(0);
+            kd.field_e.settleDialogAnimations(0);
             if (vg.field_i != null) {
                 vg.field_i.m(23181);
                 eh.a((byte) -2);

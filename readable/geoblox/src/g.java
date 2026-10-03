@@ -38,7 +38,7 @@ final class g extends TextInputValidator {
         String stackIn_38_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = this.field_k.field_s.toLowerCase();
+          var6 = this.field_k.widgetText.toLowerCase();
           var4 = candidateText.toLowerCase();
           if (var4.length() == 0) {
             stackIn_2_0 = null;
@@ -107,7 +107,7 @@ final class g extends TextInputValidator {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = this.field_n.field_s.toLowerCase();
+          var3 = this.field_n.widgetText.toLowerCase();
           var4 = param0.toLowerCase();
           if ((0 < var3.length()) &&
               (var4.length() > 0)) {
@@ -159,7 +159,7 @@ final class g extends TextInputValidator {
           if (guard != -257) {
             this.field_k = (dj) null;
           }
-          var3 = this.field_k.field_s.toLowerCase();
+          var3 = this.field_k.widgetText.toLowerCase();
           var4 = candidateText.toLowerCase();
           if (var4.length() == 0) {
             stackIn_5_0 = si.field_m;

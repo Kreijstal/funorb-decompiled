@@ -14,10 +14,10 @@ class ac extends ff {
     }
 
     ac(int param0) {
-        this(ng.field_F, param0);
+        this(DialogLayer.sharedUiFont, param0);
     }
 
-    public final void a(int param0, int param1, int param2, boolean param3, el param4) {
+    public final void a(int param0, int param1, int param2, boolean param3, UiWidget param4) {
         try {
             if (param3) {
                 ik.a(param0 + param4.widgetX, param4.widgetHeight, param4.widgetY + param2, param4.widgetWidth, -1540604944);

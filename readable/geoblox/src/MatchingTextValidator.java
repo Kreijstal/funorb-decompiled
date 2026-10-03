@@ -241,7 +241,7 @@ final class MatchingTextValidator extends TextInputValidator {
         }
         vk.field_d = new hi();
         int var1 = 32 / ((param0 - 43) / 47);
-        hk.field_C.replaceContent(vk.field_d, -106);
+        ButtonWidget.field_C.replaceContent(vk.field_d, -106);
     }
 
     final lh validationStateForText(int guard, String candidateText) {
@@ -267,7 +267,7 @@ final class MatchingTextValidator extends TextInputValidator {
               return stackIn_9_0;
             }
           }
-          if (!candidateText.equals(this.referenceInput.field_s)) {
+          if (!candidateText.equals(this.referenceInput.widgetText)) {
             stackIn_13_0 = si.field_m;
           } else {
             stackIn_13_0 = SocketArchiveNetworkClient.field_w;
@@ -305,7 +305,7 @@ final class MatchingTextValidator extends TextInputValidator {
             referenceValidation = ((nl) ((Object) this.referenceInput)).a((byte) -118);
             if (referenceValidation != null) {
               if ((referenceValidation.a((byte) -105) == SocketArchiveNetworkClient.field_w) &&
-                  (!candidateText.equals(this.referenceInput.field_s))) {
+                  (!candidateText.equals(this.referenceInput.widgetText))) {
                 stackIn_8_0 = sj.createMismatchAlertText;
                 return stackIn_8_0;
               }
@@ -313,7 +313,7 @@ final class MatchingTextValidator extends TextInputValidator {
               return stackIn_10_0;
             }
           }
-          if (candidateText.equals(this.referenceInput.field_s)) {
+          if (candidateText.equals(this.referenceInput.widgetText)) {
             return null;
           }
           stackIn_14_0 = sj.createMismatchAlertText;

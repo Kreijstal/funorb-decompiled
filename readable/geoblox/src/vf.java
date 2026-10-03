@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class vf extends hk {
+class vf extends ButtonWidget {
     static byte[][] decodedSpriteAlpha;
     static Sprite spriteScratchRaster;
     static ByteArrayBuffer field_I;
@@ -16,8 +16,8 @@ class vf extends hk {
         int var5 = -this.widgetX + param2;
         int var6 = param0 - this.widgetY;
         fb var7 = this.a((byte) -114, var6, var5);
-        if (var7 != null && null != this.field_u) {
-            ((pe) ((Object) this.field_u)).a((vf) (this), var7.field_g, param1 + 28924, param3);
+        if (var7 != null && null != this.listener) {
+            ((pe) ((Object) this.listener)).a((vf) (this), var7.field_g, param1 + 28924, param3);
         }
     }
 
@@ -77,11 +77,11 @@ class vf extends hk {
         decodedSpriteAlpha = (byte[][]) null;
     }
 
-    vf(String param0, dh param1) {
-        super(param0, (bb) null);
+    vf(String param0, WidgetRenderer param1) {
+        super(param0, (WidgetListener) null);
         this.field_G = null;
         try {
-            this.field_q = param1;
+            this.renderer = param1;
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "vf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -103,7 +103,7 @@ class vf extends hk {
         return this.field_J[this.field_G.field_g];
     }
 
-    void a(boolean param0, int param1, el param2, int param3) {
+    void a(boolean param0, int param1, UiWidget param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -114,7 +114,7 @@ class vf extends hk {
         try {
           super.a(param0, param1, param2, param3);
           this.field_G = null;
-          if (this.field_l) {
+          if (this.pointerInside) {
             var5_int = -this.widgetX + PrefixCodeDecoder.pointerXSnapshot - param3;
             var6 = -this.widgetY - param1 + ue.pointerYSnapshot;
             this.field_G = this.a((byte) 72, var6, var5_int);
@@ -145,12 +145,12 @@ class vf extends hk {
         if (renderPass != 0) {
             return;
         }
-        cc var6 = (cc) ((Object) this.field_q);
+        cc var6 = (cc) ((Object) this.renderer);
         fb var7 = this.field_G;
         if (var7 == null) {
         } else {
-            var8 = var6.a(parentX, (el) (this), (byte) 46);
-            var9 = var6.a(parentY, -2, (el) (this));
+            var8 = var6.a(parentX, (UiWidget) (this), (byte) 46);
+            var9 = var6.a(parentY, -2, (UiWidget) (this));
             do {
                 ImageProducerRasterBuffer.a(-2 + var9 + var7.field_i, 2 + var7.field_f, 14164, 2 + var7.field_n, var7.field_k + (var8 - 2));
                 var7 = var7.field_h;
@@ -189,14 +189,14 @@ class vf extends hk {
         }
     }
 
-    boolean a(byte param0, el param1) {
+    boolean requestKeyboardFocus(byte methodGuard, UiWidget focusContext) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 >= -30) {
+          if (methodGuard >= -30) {
             this.a(-15, -109, 48, 91);
           }
           return false;
@@ -204,8 +204,8 @@ class vf extends hk {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_6_0 = (RuntimeException) (var3);
-          stackIn_6_1 = new StringBuilder().append("vf.UA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("vf.UA(").append(methodGuard).append(',');
+          if (focusContext == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
@@ -245,17 +245,17 @@ class vf extends hk {
         this.field_F = new IntrusiveDeque();
         var2 = 83 / ((param0 - 48) / 55);
         var3 = 0;
-        var4 = (cc) ((Object) this.field_q);
-        var5 = var4.a((byte) 116, (el) (this));
+        var4 = (cc) ((Object) this.renderer);
+        var5 = var4.a((byte) 116, (UiWidget) (this));
         while (true) {
-          var6 = this.field_s.indexOf("<hotspot=", var3);
+          var6 = this.widgetText.indexOf("<hotspot=", var3);
           if (-1 == var6) {
             return;
           }
-          var8 = this.field_s.indexOf(">", var6);
-          var7 = this.field_s.substring(var6 + 9, var8);
+          var8 = this.widgetText.indexOf(">", var6);
+          var7 = this.widgetText.substring(var6 + 9, var8);
           var8 = Integer.parseInt(var7);
-          var3 = this.field_s.indexOf("</hotspot>", var6);
+          var3 = this.widgetText.indexOf("</hotspot>", var6);
           var9 = var5.a((byte) 24, var6);
           var10 = var5.a((byte) 24, var3);
           var11 = null;
@@ -331,14 +331,14 @@ class vf extends hk {
         if (param1 != 0) {
             field_I = (ByteArrayBuffer) null;
         }
-        this.a(((cc) ((Object) this.field_q)).a(14, (el) (this)), param3, (byte) -40, param2, param0);
+        this.setWidgetBounds(((cc) ((Object) this.renderer)).a(14, (UiWidget) (this)), param3, (byte) -40, param2, param0);
     }
 
-    final void a(int param0, int param1, byte param2, int param3, int param4) {
-        if (param2 > -6) {
+    final void setWidgetBounds(int height, int width, byte methodGuard, int y, int x) {
+        if (methodGuard > -6) {
             decodedSpriteAlpha = (byte[][]) null;
         }
-        super.a(param0, param1, (byte) -123, param3, param4);
+        super.setWidgetBounds(height, width, (byte) -123, y, x);
         this.g(-96);
     }
 

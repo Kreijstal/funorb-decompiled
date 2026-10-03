@@ -66,7 +66,7 @@ abstract class oj {
     }
 
     final static void a(int param0, byte param1) {
-        gb.a(-1);
+        DequeCursor.a(-1);
         if (param1 >= -89) {
             oj.a(70);
         }

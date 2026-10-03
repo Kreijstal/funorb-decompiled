@@ -68,7 +68,7 @@ final class ck {
           meshIndexOrViewDirectionXQ8 = IntKeyLookup.meshCameraTransform[9] >> 8;
           viewDirectionYQ8 = IntKeyLookup.meshCameraTransform[10] >> 8;
           boundsCenterXOrViewDirectionZQ8 = IntKeyLookup.meshCameraTransform[11] >> 8;
-          boundsCenterYOrLightAngle = gb.logoAnimationTick << 4;
+          boundsCenterYOrLightAngle = DequeCursor.logoAnimationTick << 4;
           boundsCenterZOrLightDirectionXQ8 = 0;
           cameraDepthBasisXQ14OrLightDirectionYQ8 = bh.sineQ16((byte) 81, boundsCenterYOrLightAngle) >> 8;
           cameraDepthBasisYQ14OrLightDirectionZQ8 = fi.cosineQ16(boundsCenterYOrLightAngle, 2048) >> 8;
@@ -135,7 +135,7 @@ final class ck {
             if ((InstrumentPatch.field_n != null) &&
                 (InstrumentPatch.field_n.field_c)) {
               jk.a((byte) -87);
-              oh.field_b.a(false, new ij(oh.field_b, ei.field_hb));
+              oh.field_b.showDialog(false, new ij(oh.field_b, ei.field_hb));
             }
             return;
           }
@@ -143,7 +143,7 @@ final class ck {
             ck.renderLogoMeshes((byte) 8);
           }
           oh.field_b.a(true, 127, dk.field_c, ni.field_I);
-          oh.field_b.i(-50);
+          oh.field_b.advanceDialogAnimations(-50);
           while (hh.pollKeyboardEvent(125)) {
             oh.field_b.a((byte) -126, te.currentKeyboardEventCharacter, ki.currentKeyboardEventCode);
           }

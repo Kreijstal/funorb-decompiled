@@ -31,7 +31,7 @@ final class kc {
         RuntimeException var2 = null;
         var3 = Geoblox.clientControlFlowFlag;
         try {
-          sh.a(0, param0, ok.field_b, bd.field_a, (byte) 121, md.field_c, true);
+          SingleChildWidget.a(0, param0, ok.field_b, bd.field_a, (byte) 121, md.field_c, true);
           if (param1 != -98) {
             return;
           }
@@ -48,7 +48,7 @@ final class kc {
                   continue;
                 }
               }
-              sh.a(param0, param0 + param0, LoginPayloadKind.field_a, va.field_b, (byte) 112, md.field_c + param0, false);
+              SingleChildWidget.a(param0, param0 + param0, LoginPayloadKind.field_a, va.field_b, (byte) 112, md.field_c + param0, false);
             }
             if (param0 < md.field_c) {
               md.field_c = param0;
@@ -131,7 +131,7 @@ final class kc {
                       activeEntity.unlinkNode(false);
                       activeEntity.unlinkSecondaryNode((byte) 54);
                       a.attachedEntities.addLast(-80, activeEntity);
-                      el.gameplaySession.boardRasterDirty = true;
+                      UiWidget.gameplaySession.boardRasterDirty = true;
                     }
                     activeEntity.entityQueue = null;
                     activeEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.nextForIteration(1));
@@ -392,7 +392,7 @@ final class kc {
                       }
                     }
                     re.connectivityDirty = false;
-                    el.gameplaySession.connectivityRebuiltThisTick = true;
+                    UiWidget.gameplaySession.connectivityRebuiltThisTick = true;
                     visitedFlagThenResetIndex = 0;
                   }
                   visitedResetIndexThenKindFourCount = visitedFlagThenResetIndex;
@@ -424,10 +424,10 @@ final class kc {
                     re.connectivityDirty = true;
                     routedAttachedEntity.unlinkNode(false);
                     routedAttachedEntity.unlinkSecondaryNode((byte) 100);
-                    el.gameplaySession.boardRasterDirty = true;
+                    UiWidget.gameplaySession.boardRasterDirty = true;
                     routedAttachedEntity.eraseEntityPixels(92);
                     if (ArchiveNetworkClient.movingEntities == routedAttachedEntity.entityQueue) {
-                      routedAttachedEntity.rotateEntityAroundBoard(-el.gameplaySession.boardAngleRadians, -117);
+                      routedAttachedEntity.rotateEntityAroundBoard(-UiWidget.gameplaySession.boardAngleRadians, -117);
                       radialOffsetX = -routedAttachedEntity.positionX + 320.0f;
                       radialOffsetY = -routedAttachedEntity.positionY + 240.0f;
                       radialVelocityScale = (double)og.entityMotionSpeed / Math.sqrt((double)(radialOffsetY * radialOffsetY + radialOffsetX * radialOffsetX));
@@ -507,7 +507,7 @@ final class kc {
                   }
                   routedAttachedEntity.entityQueue = null;
                 }
-                el.gameplaySession.boardRasterDirty = true;
+                UiWidget.gameplaySession.boardRasterDirty = true;
               }
               routedAttachedEntity = (GameplayEntity) ((Object) a.attachedEntities.nextForIteration(1));
               if (clientControlSnapshot == 0) {
@@ -539,8 +539,8 @@ final class kc {
                   Bzip2DecoderState.avatarShockContactPending = false;
                 }
               }
-              sessionForRasterRead = el.gameplaySession;
-              rasterDirtyDecision = (el.gameplaySession.boardRasterDirty) || (ab.boardContactStateDirty) || (w.avatarShockPending);
+              sessionForRasterRead = UiWidget.gameplaySession;
+              rasterDirtyDecision = (UiWidget.gameplaySession.boardRasterDirty) || (ab.boardContactStateDirty) || (w.avatarShockPending);
               sessionForRasterRead.boardRasterDirty = rasterDirtyDecision;
               w.avatarShockPending = false;
               if (visitedResetIndexThenKindFourCount >= 3) {

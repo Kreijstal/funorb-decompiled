@@ -9,7 +9,7 @@ final class rl extends ResizableDialog {
     private hl field_bb;
     private String field_X;
 
-    rl(ng param0, String param1) {
+    rl(DialogLayer param0, String param1) {
         super(param0, 300, 120);
         int var3_int = 0;
         try {
@@ -22,7 +22,7 @@ final class rl extends ResizableDialog {
             this.field_ab = false;
             this.field_bb.field_C = true;
             this.field_Z = false;
-            this.b((byte) -98, this.field_bb);
+            this.addChild((byte) -98, this.field_bb);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "rl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

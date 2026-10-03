@@ -185,7 +185,7 @@ final class ag extends TextInputValidator {
             return;
           }
           while (var2 != null) {
-            if (!var2.field_f.a(126)) {
+            if (!var2.field_f.isLinked(126)) {
               var2.unlinkNode(false);
             } else {
               var2.field_g.f((int)((float)(j.field_gb * var2.field_i / 80) * 1.399999976158142f));

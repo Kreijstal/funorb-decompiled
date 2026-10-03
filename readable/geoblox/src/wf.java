@@ -188,7 +188,7 @@ abstract class wf extends ch {
             SecondaryDeque.a(true, 7);
           }
           if (OpacityWidget.field_G[8]) {
-            ng.g(-13912);
+            DialogLayer.g(-13912);
           }
         }
         return var2;
@@ -402,7 +402,7 @@ abstract class wf extends ch {
             og.a(stackIn_100_0, stackIn_100_1, stackIn_101_2, stackIn_104_3);
           }
           if (p.field_m) {
-            hk.e(83);
+            ButtonWidget.e(83);
           }
           if (null == bh.field_a) {
             bh.field_a = df.b((byte) 72);

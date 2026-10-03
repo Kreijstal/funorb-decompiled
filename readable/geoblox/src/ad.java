@@ -142,7 +142,7 @@ final class ad extends ia {
             Geoblox.setRasterTarget(1, var1);
             TriangleRasterState.prepareTriangleClipFromRasterizer();
             SoftwareRasterizer.clearFramebuffer();
-            gb.logoAnimationTick = 0;
+            DequeCursor.logoAnimationTick = 0;
             ck.renderLogoMeshes((byte) -73);
             var2 = var1.copy();
             for (var3 = 0; var3 < 15; var3++) {

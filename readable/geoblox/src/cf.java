@@ -120,10 +120,10 @@ final class cf extends TextInputValidator {
               popup.progress = popup.progress + (0.03999999910593033f * popup.progress + 0.00004999999873689376f);
             } else {
               if (popup.chainMultiplier != 1) {
-                el.gameplaySession.addPopupPoints(popup.points, -73);
+                UiWidget.gameplaySession.addPopupPoints(popup.points, -73);
                 ue.availableScorePopups.addLast(-35, popup);
               } else {
-                el.gameplaySession.addScore((byte) 127, popup.points);
+                UiWidget.gameplaySession.addScore((byte) 127, popup.points);
                 ue.availableScorePopups.addLast(-35, popup);
               }
             }

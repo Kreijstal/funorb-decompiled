@@ -20,7 +20,7 @@ final class qi extends IntrusiveNode {
 
     final static boolean ensureArchiveCatalogLoaded(int methodGuard) {
         int unusedCatalogGuardRemainder = -46 % ((methodGuard + 28) / 60);
-        return gb.archiveCatalog.ensureCatalogLoaded((byte) 126);
+        return DequeCursor.archiveCatalog.ensureCatalogLoaded((byte) 126);
     }
 
     final static boolean d(int param0) {

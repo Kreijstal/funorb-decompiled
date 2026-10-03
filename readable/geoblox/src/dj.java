@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class dj extends hk {
+class dj extends ButtonWidget {
     static byte[] diskSectorBuffer;
     private int field_H;
     private int field_L;
@@ -25,12 +25,12 @@ class dj extends hk {
             var3 = this.field_H > this.field_L ? this.field_H : this.field_L;
             this.field_H = var2;
             this.field_L = var2;
-            this.field_s = this.field_s.substring(0, var2) + this.field_s.substring(var3, this.field_s.length());
+            this.widgetText = this.widgetText.substring(0, var2) + this.widgetText.substring(var3, this.widgetText.length());
             this.g((byte) -117);
         }
     }
 
-    void a(boolean param0, int param1, el param2, int param3) {
+    void a(boolean param0, int param1, UiWidget param2, int param3) {
         int var6 = 0;
         cc var7 = null;
         RuntimeException stackIn_16_0 = null;
@@ -41,10 +41,10 @@ class dj extends hk {
         try {
           super.a(param0, param1, param2, param3);
           this.j(-115);
-          if (this.field_f == 1) {
-            if (this.field_q instanceof cc) {
-              var7 = (cc) ((Object) this.field_q);
-              var6 = var7.a((el) (this), PrefixCodeDecoder.pointerXSnapshot, -15539, param1, ue.pointerYSnapshot, param3);
+          if (this.pressedPointerButton == 1) {
+            if (this.renderer instanceof cc) {
+              var7 = (cc) ((Object) this.renderer);
+              var6 = var7.a((UiWidget) (this), PrefixCodeDecoder.pointerXSnapshot, -15539, param1, ue.pointerYSnapshot, param3);
               if (-1 != var6) {
                 if ((this.field_G) &&
                     (this.field_J > var6) &&
@@ -80,7 +80,7 @@ class dj extends hk {
         int var3;
         int var4;
         var4 = Geoblox.clientControlFlowFlag;
-        var2 = this.field_s.length();
+        var2 = this.widgetText.length();
         if (var2 == this.field_H) {
           return this.field_H;
         }
@@ -89,7 +89,7 @@ class dj extends hk {
           discarded$1 = this.k((byte) -79);
         }
         while (var3 < var2) {
-          if (32 != this.field_s.charAt(-1 + var3)) {
+          if (32 != this.widgetText.charAt(-1 + var3)) {
             var3++;
             continue;
           }
@@ -102,7 +102,7 @@ class dj extends hk {
         int var2 = 33 % ((-77 - param0) / 39);
         int var3 = this.field_L >= this.field_H ? this.field_H : this.field_L;
         int var4 = this.field_L < this.field_H ? this.field_H : this.field_L;
-        return this.field_s.substring(var3, var4);
+        return this.widgetText.substring(var3, var4);
     }
 
     final static Sprite[] a(int param0, byte param1, int param2, int param3, int param4) {
@@ -127,14 +127,14 @@ class dj extends hk {
         return var5;
     }
 
-    dj(String param0, bb param1, int param2) {
+    dj(String param0, WidgetListener param1, int param2) {
         super(param0, param1);
         this.field_G = false;
         this.field_P = 0L;
         this.field_J = -1;
         try {
             this.field_M = param2;
-            this.field_q = hb.field_j.field_g;
+            this.renderer = hb.field_j.field_g;
             this.a(-128, param0, true);
             this.field_E = true;
             this.field_O = oa.a(-12520);
@@ -162,16 +162,16 @@ class dj extends hk {
         try {
           var3_int = -6 / ((param1 - 63) / 50);
           if (this.field_M != -1) {
-            var4 = this.field_M - this.field_s.length();
+            var4 = this.field_M - this.widgetText.length();
             if (var4 >= 0) {
               return;
             }
             param0 = param0.substring(0, var4);
           }
-          if (this.field_H != this.field_s.length()) {
-            this.field_s = this.field_s.substring(0, this.field_H) + param0 + this.field_s.substring(this.field_H, this.field_s.length());
+          if (this.field_H != this.widgetText.length()) {
+            this.widgetText = this.widgetText.substring(0, this.field_H) + param0 + this.widgetText.substring(this.field_H, this.widgetText.length());
           } else {
-            this.field_s = this.field_s + param0;
+            this.widgetText = this.widgetText + param0;
           }
           this.field_H = this.field_H + param0.length();
           this.field_L = this.field_H;
@@ -210,7 +210,7 @@ class dj extends hk {
         field_I = (byte[][]) null;
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, el param6) {
+    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6) {
         int stackIn_5_1 = 0;
         boolean stackIn_8_1 = false;
         RuntimeException stackIn_20_0 = null;
@@ -222,8 +222,8 @@ class dj extends hk {
         RuntimeException var8 = null;
         try {
           if ((super.a(param0, 104, param2, param3, param4, param5, param6)) &&
-              (this.field_q instanceof cc)) {
-            var8_int = ((cc) ((Object) this.field_q)).a((el) (this), PrefixCodeDecoder.pointerXSnapshot, -15539, param0, ue.pointerYSnapshot, param2);
+              (this.renderer instanceof cc)) {
+            var8_int = ((cc) ((Object) this.renderer)).a((UiWidget) (this), PrefixCodeDecoder.pointerXSnapshot, -15539, param0, ue.pointerYSnapshot, param2);
             if (var8_int != -1) {
               stackIn_5_1 = var8_int;
             } else {
@@ -241,7 +241,7 @@ class dj extends hk {
               this.field_L = this.j((byte) 77);
               this.field_H = this.h((byte) -57);
               if ((0 < this.field_H) &&
-                  (this.field_s.charAt(this.field_H - 1) == 32)) {
+                  (this.widgetText.charAt(this.field_H - 1) == 32)) {
                 this.field_H = this.field_H - 1;
               }
               this.field_J = this.field_H;
@@ -290,25 +290,25 @@ class dj extends hk {
         cc var6;
         long var7;
         var5 = -124 % ((methodGuard - 1) / 43);
-        if ((this.field_q != null) &&
+        if ((this.renderer != null) &&
             (renderPass == 0)) {
-          this.field_q.a(parentX, -8, parentY, this.field_D, (el) (this));
-          if (this.field_q instanceof cc) {
-            var6 = (cc) ((Object) this.field_q);
+          this.renderer.a(parentX, -8, parentY, this.enabled, (UiWidget) (this));
+          if (this.renderer instanceof cc) {
+            var6 = (cc) ((Object) this.renderer);
             if (this.field_H != this.field_L) {
-              var6.a(this.field_L, 0, parentY, parentX, this.field_H, (el) (this));
+              var6.a(this.field_L, 0, parentY, parentX, this.field_H, (UiWidget) (this));
             }
             var7 = oa.a(-12520);
             if ((-this.field_O + var7) % 1000L < 500L) {
-              var6.a(parentX, this.field_H, -2, (el) (this), parentY);
+              var6.a(parentX, this.field_H, -2, (UiWidget) (this), parentY);
             }
           }
         }
     }
 
     private final void m(byte param0) {
-        if (this.field_u instanceof ga) {
-            ((ga) ((Object) this.field_u)).a((dj) (this), -18649);
+        if (this.listener instanceof ga) {
+            ((ga) ((Object) this.listener)).a((dj) (this), -18649);
         }
         if (param0 < 107) {
             this.field_G = true;
@@ -326,7 +326,7 @@ class dj extends hk {
           return 108;
         }
         for (var2 = this.field_H - 1; var2 > 0; var2--) {
-          if (this.field_s.charAt(var2 - 1) != 32) {
+          if (this.widgetText.charAt(var2 - 1) != 32) {
             continue;
           }
           break;
@@ -347,14 +347,14 @@ class dj extends hk {
     final void i(byte param0) {
         this.field_L = 0;
         this.field_H = 0;
-        this.field_s = "";
+        this.widgetText = "";
         this.g((byte) -78);
         if (param0 <= 20) {
             this.field_E = true;
         }
     }
 
-    final boolean handleKeyInput(int param0, int param1, char param2, el param3) {
+    final boolean handleKeyInput(int param0, int param1, char param2, UiWidget param3) {
         int dupTemp$0 = 0;
         int stackIn_48_1 = 0;
         int stackIn_55_1 = 0;
@@ -380,14 +380,14 @@ class dj extends hk {
               this.g(0);
             }
             if (!((-1 != this.field_M) &&
-                  (this.field_s.length() >= this.field_M))) {
-              if (this.field_H >= this.field_s.length()) {
-                this.field_s = this.field_s + param2;
-                dupTemp$0 = this.field_s.length();
+                  (this.widgetText.length() >= this.field_M))) {
+              if (this.field_H >= this.widgetText.length()) {
+                this.widgetText = this.widgetText + param2;
+                dupTemp$0 = this.widgetText.length();
                 this.field_H = dupTemp$0;
                 this.field_L = dupTemp$0;
               } else {
-                this.field_s = this.field_s.substring(0, this.field_H) + param2 + this.field_s.substring(this.field_H, this.field_s.length());
+                this.widgetText = this.widgetText.substring(0, this.field_H) + param2 + this.widgetText.substring(this.field_H, this.widgetText.length());
                 this.field_H = this.field_H + 1;
                 this.field_L = this.field_H;
               }
@@ -423,7 +423,7 @@ class dj extends hk {
                 }
               } else {
                 if (param0 == 97) {
-                  if (this.field_H < this.field_s.length()) {
+                  if (this.field_H < this.widgetText.length()) {
                     if (!kj.heldInternalKeys[82]) {
                       stackIn_48_1 = this.field_H + 1;
                     } else {
@@ -438,7 +438,7 @@ class dj extends hk {
                     return true;
                   }
                   if (param0 == 103) {
-                    this.a(this.field_s.length(), (byte) -126);
+                    this.a(this.widgetText.length(), (byte) -126);
                     return true;
                   }
                   if (param0 == 84) {
@@ -467,7 +467,7 @@ class dj extends hk {
                 this.g(0);
                 return true;
               }
-              if (this.field_H < this.field_s.length()) {
+              if (this.field_H < this.widgetText.length()) {
                 this.field_L = this.field_H + 1;
                 this.g(0);
                 return true;
@@ -503,16 +503,16 @@ class dj extends hk {
           this.field_k = 0;
           return;
         }
-        if (!(this.field_q instanceof cc)) {
+        if (!(this.renderer instanceof cc)) {
           return;
         }
-        var9 = (cc) ((Object) this.field_q);
+        var9 = (cc) ((Object) this.renderer);
         if (param0 > -66) {
           return;
         }
-        var3 = var9.a((byte) 119, (el) (this));
+        var3 = var9.a((byte) 119, (UiWidget) (this));
         var4 = var3.a(96);
-        var5 = var9.a((el) (this), -1);
+        var5 = var9.a((UiWidget) (this), -1);
         var6 = var9.a(1) >> 1;
         if (var4 < var5 - var6) {
           this.field_k = 0;
@@ -550,13 +550,13 @@ class dj extends hk {
           if (param1 == null) {
             param1 = "";
           }
-          this.field_s = param1;
+          this.widgetText = param1;
           var5 = param1.length();
           if ((this.field_M != -1) &&
               (this.field_M < var5)) {
-            this.field_s = this.field_s.substring(0, this.field_M);
+            this.widgetText = this.widgetText.substring(0, this.field_M);
           }
-          dupTemp$1 = this.field_s.length();
+          dupTemp$1 = this.widgetText.length();
           this.field_L = dupTemp$1;
           this.field_H = dupTemp$1;
           if (!param2) {
@@ -581,8 +581,8 @@ class dj extends hk {
         if (param0 >= -16) {
             return;
         }
-        if (!(!(this.field_u instanceof ga))) {
-            ((ga) ((Object) this.field_u)).a((dj) (this), (byte) 74);
+        if (!(!(this.listener instanceof ga))) {
+            ((ga) ((Object) this.listener)).a((dj) (this), (byte) 74);
         }
     }
 

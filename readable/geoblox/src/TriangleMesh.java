@@ -215,20 +215,20 @@ final class TriangleMesh {
             return false;
         }
         if (!(p.field_k != -1)) {
-            if (!el.b(30000, 1)) {
+            if (!UiWidget.b(30000, 1)) {
                 return false;
             }
             p.field_k = eh.field_d.readUnsignedByte((byte) 34);
             eh.field_d.position = 0;
         }
         if (p.field_k == -2) {
-            if (!(el.b(30000, 2))) {
+            if (!(UiWidget.b(30000, 2))) {
                 return false;
             }
             p.field_k = eh.field_d.readUnsignedShortBE(true);
             eh.field_d.position = 0;
         }
-        return el.b(30000, p.field_k);
+        return UiWidget.b(30000, p.field_k);
     }
 
     private final void invalidateBounds(int guard) {

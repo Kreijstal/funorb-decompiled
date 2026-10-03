@@ -84,7 +84,7 @@ abstract class IndexedSpriteState {
             vk.field_e = OpacityWidget.loadSpriteFrames("button", "commonui", param2, 0);
             oa.field_e = oi.a((byte) -39, "validation", "commonui", param2);
             hh.field_d = (BitmapFont) ((Object) TextInputValidator.loadCoverageFont(param3, 1, "arezzo12", "commonui", param2));
-            ng.field_F = (BitmapFont) ((Object) TextInputValidator.loadCoverageFont(param3, 1, "arezzo14", "commonui", param2));
+            DialogLayer.sharedUiFont = (BitmapFont) ((Object) TextInputValidator.loadCoverageFont(param3, 1, "arezzo14", "commonui", param2));
             hh.field_c = (BitmapFont) ((Object) TextInputValidator.loadCoverageFont(param3, 1, "arezzo14bold", "commonui", param2));
             var18 = new Sprite(param1.getNamedFile(0, "", "button.gif"), (java.awt.Component) ((Object) MessageDialog.gameCanvas));
             jg.loadIndexedSprite(param2, 1, "commonui", "dropdown");

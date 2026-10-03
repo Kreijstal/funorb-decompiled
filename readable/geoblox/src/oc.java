@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oc implements dh {
+final class oc implements WidgetRenderer {
     static Sprite boardSceneRaster;
     static BufferedSocket field_e;
     static int field_f;
@@ -83,7 +83,7 @@ final class oc implements dh {
         field_a = null;
     }
 
-    public final void a(int param0, int param1, int param2, boolean param3, el param4) {
+    public final void a(int param0, int param1, int param2, boolean param3, UiWidget param4) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -97,11 +97,11 @@ final class oc implements dh {
           var7 = param4.widgetY + param2;
           ik.a(var6_int, param4.widgetHeight, var7, param4.widgetWidth, -1540604944);
           var8 = oa.field_e[1];
-          if ((param4 instanceof hk) &&
-              (((hk) ((Object) param4)).field_y)) {
+          if ((param4 instanceof ButtonWidget) &&
+              (((ButtonWidget) ((Object) param4)).field_y)) {
             var8.drawAdditive(var6_int - (-1 - (-var8.fullWidth + param4.widgetWidth >> 1)), (-var8.fullHeight + param4.widgetHeight >> 1) + 1 + var7, 256);
           }
-          if (param4.e((byte) 54)) {
+          if (param4.hasKeyboardFocus((byte) 54)) {
             ImageProducerRasterBuffer.a(var7 + 2, -4 + param4.widgetWidth, 14164, -4 + param4.widgetHeight, var6_int + 2);
           }
           if (param1 < -5) {

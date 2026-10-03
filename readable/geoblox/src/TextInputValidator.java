@@ -17,22 +17,22 @@ abstract class TextInputValidator extends ib implements ga {
         if (guard != 32) {
             return (lh) null;
         }
-        return this.validationStateForText(-257, this.validatedInput.field_s);
+        return this.validationStateForText(-257, this.validatedInput.widgetText);
     }
 
     public final boolean a(int param0) {
         if (param0 != -26556) {
             String var3 = (String) null;
             this.validationMessageForText(-33, (String) null);
-            if (this.validatedInput.field_s != null) {
-                return this.validatedInput.field_s.length() == 0 ? true : false;
+            if (this.validatedInput.widgetText != null) {
+                return this.validatedInput.widgetText.length() == 0 ? true : false;
             }
             return true;
         }
-        if (this.validatedInput.field_s == null) {
+        if (this.validatedInput.widgetText == null) {
             return true;
         }
-        if (this.validatedInput.field_s.length() != 0) {
+        if (this.validatedInput.widgetText.length() != 0) {
             return false;
         }
         return true;
@@ -90,7 +90,7 @@ abstract class TextInputValidator extends ib implements ga {
             ij.alternateArchivePort = alternatePort;
             wg.archiveNetworkClient = (ArchiveNetworkClient) ((Object) new SocketArchiveNetworkClient());
             cl.archiveDiskWorker = new DiskCacheWorker(taskDispatcher);
-            gb.archiveCatalog = new ArchiveCatalog(wg.archiveNetworkClient, cl.archiveDiskWorker);
+            DequeCursor.archiveCatalog = new ArchiveCatalog(wg.archiveNetworkClient, cl.archiveDiskWorker);
         } catch (RuntimeException initializationFailure) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) initializationFailure), "q.N(" + clientId + ',' + languageId + ',' + primaryPort + ',' + serverNumber + ',' + methodGuard + ',' + (taskDispatcher != null ? "{...}" : "null") + ',' + (archiveHost != null ? "{...}" : "null") + ',' + gameCrc + ',' + alternatePort + ')');
         }
@@ -247,10 +247,10 @@ abstract class TextInputValidator extends ib implements ga {
 
     final String currentValidationMessage(byte guard) {
         if (guard == -103) {
-            return this.validationMessageForText(422, this.validatedInput.field_s);
+            return this.validationMessageForText(422, this.validatedInput.widgetText);
         }
         this.validatedInput = (dj) null;
-        return this.validationMessageForText(422, this.validatedInput.field_s);
+        return this.validationMessageForText(422, this.validatedInput.widgetText);
     }
 
     public static void f(int param0) {

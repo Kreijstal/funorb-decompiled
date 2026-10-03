@@ -112,7 +112,7 @@ public final class Geoblox extends wf {
                     }
                 }
             }
-            sh.mainRasterBuffer.setAsRasterTarget(255);
+            SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
             fi.smallFont = gi.loadBitmapFont(ii.fontMetricsArchive, 1, ll.gameGraphicsArchive, "small_font", "");
             fc.blackOrbFrames = OpacityWidget.loadSpriteFrames("black", "", ll.gameGraphicsArchive, 0);
             hg.blackOrbImplosionFrames = OpacityWidget.loadSpriteFrames("black_implode", "", ll.gameGraphicsArchive, 0);
@@ -143,11 +143,11 @@ public final class Geoblox extends wf {
                 k.a(2 + avatarMouthSourceFrames[geometryCanvasWidthThenFrameIndex].trimY, 0, vh.avatarMouthFrames[geometryCanvasWidthThenFrameIndex].fullWidth, -27085, avatarMouthSourceFrames[geometryCanvasWidthThenFrameIndex].height);
                 vh.avatarMouthFrames[geometryCanvasWidthThenFrameIndex].trimTransparentBorders();
             }
-            sh.mainRasterBuffer.setAsRasterTarget(255);
+            SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
             GzipInflater.sunBackgroundSprite = jg.loadIndexedSprite(ll.gameGraphicsArchive, 1, "sun", "sky_background");
             PacketByteCipher.sunForegroundSprite = ug.loadSprite("sky_foreground", ll.gameGraphicsArchive, (byte) -78, "sun");
             ll.themesLoaded[1] = true;
-            ee.menuBackgroundSprite = ug.loadSprite("menu_background", ll.gameGraphicsArchive, (byte) -78, "");
+            WidgetContainer.menuBackgroundSprite = ug.loadSprite("menu_background", ll.gameGraphicsArchive, (byte) -78, "");
             vc.menuForegroundSprite = ug.loadSprite("menu_foreground", ll.gameGraphicsArchive, (byte) -78, "");
             qj.transitionCurtain = ug.loadSprite("transition", ll.gameGraphicsArchive, (byte) -78, "");
             vg.silverStarShockFrames = OpacityWidget.loadSpriteFrames("silver_shock", "", ll.gameGraphicsArchive, 0);
@@ -187,7 +187,7 @@ public final class Geoblox extends wf {
                 keyboardIconIndex++;
             }
             fi.smallFont.setInlineImages(keyboardIconSprites, keyboardIconAdvanceWidths);
-            sh.mainRasterBuffer.setAsRasterTarget(255);
+            SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
             kh.screenTitleSprites[0] = ug.loadSprite("main_title", ll.gameGraphicsArchive, (byte) -78, "");
             kh.screenTitleSprites[2] = ug.loadSprite("bestscoreseach_title", ll.gameGraphicsArchive, (byte) -78, "");
             kh.screenTitleSprites[3] = ug.loadSprite("myscores_title", ll.gameGraphicsArchive, (byte) -78, "");
@@ -381,7 +381,7 @@ public final class Geoblox extends wf {
         eh.a(-6910);
         ld.a(true);
         fa.a(30970);
-        ng.k(methodGuard - 33);
+        DialogLayer.releaseStaticReferences(methodGuard - 33);
         r.r(-60);
         rl.h((byte) 57);
         ei.n(methodGuard ^ 69);
@@ -457,13 +457,13 @@ public final class Geoblox extends wf {
         rd.a((byte) 94);
         hb.a(methodGuard ^ -64);
         jf.b((byte) -89);
-        el.b(-5927);
-        hk.f((byte) -11);
-        sh.a((byte) -3);
+        UiWidget.b(-5927);
+        ButtonWidget.f((byte) -11);
+        SingleChildWidget.a((byte) -3);
         ResizableDialog.j(89);
         FadingDialog.i(256);
-        ee.e(14078);
-        gb.b((byte) 79);
+        WidgetContainer.e(14078);
+        DequeCursor.b((byte) 79);
         a.a(methodGuard);
         MusicDecodeStage.a();
         ul.a(-113);
@@ -611,7 +611,7 @@ public final class Geoblox extends wf {
         int uiServiceResultOrOverlayMode;
         int clientControlFlowGuard;
         clientControlFlowGuard = clientControlFlowFlag;
-        ng.h(78);
+        DialogLayer.h(78);
         if (methodGuard) {
           return;
         }
@@ -635,7 +635,7 @@ public final class Geoblox extends wf {
           this.requestGameArchives(archiveRequestGuardSnapshot);
           cf.field_k = false;
         }
-        while (sh.a((byte) -118, ArchiveRequest.field_m)) {
+        while (SingleChildWidget.a((byte) -118, ArchiveRequest.field_m)) {
           this.l(121);
         }
         if (!bl.b(255)) {
@@ -712,21 +712,21 @@ public final class Geoblox extends wf {
                   if (0 < og.field_n) {
                     InstrumentEnvelope.menuActionIds[1] = new int[]{1, 8, 9, 4, 3, 6};
                     og.screens[1].setItemCount(-12831, InstrumentEnvelope.menuActionIds[1].length);
-                    if (0 == el.gameplayReturnScreenId) {
+                    if (0 == UiWidget.gameplayReturnScreenId) {
                       MessageDialog.requestFullscreen((byte) -112);
                       og.screens[0].activeTicks = 0;
                     }
                   }
-                  if ((null != el.gameplaySession) &&
-                      (el.gameplaySession.score > 0)) {
-                    el.gameplaySession.submitScore((byte) -70);
+                  if ((null != UiWidget.gameplaySession) &&
+                      (UiWidget.gameplaySession.score > 0)) {
+                    UiWidget.gameplaySession.submitScore((byte) -70);
                   }
-                  ai.requestedScreenId = el.gameplayReturnScreenId;
+                  ai.requestedScreenId = UiWidget.gameplayReturnScreenId;
                 } else {
                   ai.requestedScreenId = cd.gameplayOriginScreenId;
                 }
                 tc.currentScreenId = -1;
-                el.gameplayReturnScreenId = -1;
+                UiWidget.gameplayReturnScreenId = -1;
                 qj.clearGameplayDuringTransition = true;
               }
               if (ai.requestedScreenId != tc.currentScreenId) {
@@ -752,7 +752,7 @@ public final class Geoblox extends wf {
                 nextScreenTransitionTickSnapshot = TriangleMesh.screenTransitionTick + 1;
                 TriangleMesh.screenTransitionTick = TriangleMesh.screenTransitionTick + 1;
                 if (nextScreenTransitionTickSnapshot == 160) {
-                  if ((el.gameplayReturnScreenId != -1) &&
+                  if ((UiWidget.gameplayReturnScreenId != -1) &&
                       (fh.c(-109))) {
                     if (cd.gameplayOriginScreenId != 0) {
                       kb.a(-106);
@@ -772,14 +772,14 @@ public final class Geoblox extends wf {
               } else {
                 if (tc.currentScreenId == -1) {
                   if (dl.field_b) {
-                    introStillRunningSnapshot = !(gb.b(1));
+                    introStillRunningSnapshot = !(DequeCursor.b(1));
                     dl.field_b = introStillRunningSnapshot;
                     if (!introStillRunningSnapshot) {
                       tc.currentScreenId = -2;
                       ai.requestedScreenId = 0;
                     }
                   } else {
-                    el.gameplaySession.updateSession(-1578896191);
+                    UiWidget.gameplaySession.updateSession(-1578896191);
                   }
                 } else {
                   og.screens[tc.currentScreenId].updateScreen((byte) 29);
@@ -839,25 +839,25 @@ public final class Geoblox extends wf {
           fc.a(true, (java.awt.Canvas) (renderTargetCanvas));
           return;
         }
-        sh.mainRasterBuffer.setAsRasterTarget(methodGuard - 25598);
+        SingleChildWidget.mainRasterBuffer.setAsRasterTarget(methodGuard - 25598);
         SoftwareRasterizer.clearFramebuffer();
         if ((tc.currentScreenId == ai.requestedScreenId) &&
-            (el.gameplayReturnScreenId == -1)) {
+            (UiWidget.gameplayReturnScreenId == -1)) {
           if (tc.currentScreenId != -1) {
             og.screens[tc.currentScreenId].renderScreen(-28750);
           } else if (!dl.field_b) {
-            el.gameplaySession.renderSession((byte) -49);
+            UiWidget.gameplaySession.renderSession((byte) -49);
           } else {
             oc.c(240);
           }
         } else {
           transitionSplitY = -480 + (TriangleMesh.screenTransitionTick * 6 + 35);
-          if ((el.gameplayReturnScreenId == -1) &&
+          if ((UiWidget.gameplayReturnScreenId == -1) &&
               (!qj.clearGameplayDuringTransition)) {
             if (ai.requestedScreenId == -1) {
-              el.gameplaySession.renderSession((byte) -68);
+              UiWidget.gameplaySession.renderSession((byte) -68);
             } else if (!(tc.currentScreenId != -1)) {
-              el.gameplaySession.renderSession((byte) -68);
+              UiWidget.gameplaySession.renderSession((byte) -68);
             }
           } else {
             SoftwareRasterizer.fillRectangle(0, 0, 640, 480, 1);
@@ -958,7 +958,7 @@ public final class Geoblox extends wf {
         int controlFlagSnapshot;
         controlFlagSnapshot = clientControlFlowFlag;
         rotationAngle8192 = 0;
-        animationTickOrRemainingTicks = gb.logoAnimationTick;
+        animationTickOrRemainingTicks = DequeCursor.logoAnimationTick;
         if (animationTickOrRemainingTicks >= 5) {
           if (animationTickOrRemainingTicks < 105) {
             rotationAngle8192 = (-40960 + 16384 * animationTickOrRemainingTicks) / 220;
@@ -1031,13 +1031,13 @@ public final class Geoblox extends wf {
         tc.currentScreenId = -1;
         vf.f(0);
         PacketByteCipher.a((byte) -74);
-        gb.field_g = 5997;
+        DequeCursor.field_g = 5997;
         oa.field_a = 4703;
         kb.field_d = 275;
         ml.field_r = 1385;
         lb.field_b = 935;
         dc.field_a = 0;
-        el.field_g = 8801;
+        UiWidget.field_g = 8801;
         AwtRasterBuffer.field_f = 3382;
         if (methodGuard <= 68) {
             this.loadJewelsTheme(true);

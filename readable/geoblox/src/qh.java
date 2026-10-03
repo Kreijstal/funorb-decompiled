@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qh extends ee implements pe, pl, ta {
+final class qh extends WidgetContainer implements pe, ButtonActivationListener, ta {
     static gk field_F;
     private hc field_N;
     private hc field_R;
@@ -13,14 +13,14 @@ final class qh extends ee implements pe, pl, ta {
     static int archiveHandshakeStage;
     private vf field_E;
     static Sprite[] introGeometryFrames;
-    private hk field_D;
+    private ButtonWidget field_D;
     static boolean[] field_C;
     private vi field_P;
     static String createPasswordHintText;
     static String tutorialFailedMessage;
-    private hk field_L;
+    private ButtonWidget field_L;
 
-    private final int a(int param0, String param1, int param2, el param3, int param4) {
+    private final int a(int param0, String param1, int param2, UiWidget param3, int param4) {
         hd var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_2_0 = 0;
@@ -36,8 +36,8 @@ final class qh extends ee implements pe, pl, ta {
             stackIn_2_0 = 0;
             return stackIn_2_0;
           }
-          var6 = new hd(20, param0, 120 + param2, 25, param3, false, 120, 3, ng.field_F, 16777215, param1);
-          this.b((byte) -114, var6);
+          var6 = new hd(20, param0, 120 + param2, 25, param3, false, 120, 3, DialogLayer.sharedUiFont, 16777215, param1);
+          this.addChild((byte) -114, var6);
           stackIn_4_0 = var6.widgetHeight;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -60,7 +60,7 @@ final class qh extends ee implements pe, pl, ta {
         }
     }
 
-    private final int a(el param0, int param1, String param2, int param3, String param4, int param5, byte param6) {
+    private final int a(UiWidget param0, int param1, String param2, int param3, String param4, int param5, byte param6) {
         RuntimeException var8 = null;
         pi var9 = null;
         int var10 = 0;
@@ -75,11 +75,11 @@ final class qh extends ee implements pe, pl, ta {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var11 = new hd(20, param5, 120 + param1, 25, param0, false, 120, 3, ng.field_F, 16777215, param2);
-          this.b((byte) -128, var11);
+          var11 = new hd(20, param5, 120 + param1, 25, param0, false, 120, 3, DialogLayer.sharedUiFont, 16777215, param2);
+          this.addChild((byte) -128, var11);
           var9 = new pi(((nl) ((Object) param0)).a((byte) -101), param4, 126, param5 + var11.widgetHeight, param1 + 50, param3);
-          var9.field_u = (bb) (this);
-          this.b((byte) -127, var9);
+          var9.listener = (WidgetListener) (this);
+          this.addChild((byte) -127, var9);
           var10 = 38 / ((-14 - param6) / 46);
           stackIn_1_0 = var9.widgetHeight + var11.widgetHeight;
           return stackIn_1_0;
@@ -110,42 +110,42 @@ final class qh extends ee implements pe, pl, ta {
     }
 
     public qh() {
-        super(0, 0, 496, 0, (dh) null);
-        this.field_H = new hc("", (bb) null, 12);
-        this.field_I = new hc("", (bb) null, 100);
-        this.field_G = new hc("", (bb) null, 100);
-        this.field_M = new hc("", (bb) null, 20);
-        this.field_N = new hc("", (bb) null, 20);
-        this.field_R = new hc("", (bb) null, 3);
+        super(0, 0, 496, 0, (WidgetRenderer) null);
+        this.field_H = new hc("", (WidgetListener) null, 12);
+        this.field_I = new hc("", (WidgetListener) null, 100);
+        this.field_G = new hc("", (WidgetListener) null, 100);
+        this.field_M = new hc("", (WidgetListener) null, 20);
+        this.field_N = new hc("", (WidgetListener) null, 20);
+        this.field_R = new hc("", (WidgetListener) null, 3);
         int var1 = 1;
-        this.field_P = new vi("", (bb) null, var1 != 0);
-        this.field_D = new hk(di.createText, (bb) null);
-        this.field_L = new hk(hc.goBackText, (bb) null);
-        this.field_H.field_j = ud.createDisplayNameTooltipText;
-        this.field_I.field_j = ll.createEmailTooltipText;
-        this.field_G.field_j = ok.createEmailConfirmationTooltipText;
-        this.field_M.field_j = ij.createPasswordTooltipText;
-        this.field_N.field_j = oi.createPasswordConfirmationTooltipText;
-        this.field_R.field_j = ArchiveRequest.createAgeTooltipText;
-        this.field_P.field_j = vi.createNewsOptInTooltipText;
+        this.field_P = new vi("", (WidgetListener) null, var1 != 0);
+        this.field_D = new ButtonWidget(di.createText, (WidgetListener) null);
+        this.field_L = new ButtonWidget(hc.goBackText, (WidgetListener) null);
+        this.field_H.hoverText = ud.createDisplayNameTooltipText;
+        this.field_I.hoverText = ll.createEmailTooltipText;
+        this.field_G.hoverText = ok.createEmailConfirmationTooltipText;
+        this.field_M.hoverText = ij.createPasswordTooltipText;
+        this.field_N.hoverText = oi.createPasswordConfirmationTooltipText;
+        this.field_R.hoverText = ArchiveRequest.createAgeTooltipText;
+        this.field_P.hoverText = vi.createNewsOptInTooltipText;
         this.field_H.a((byte) -27, new uk(this.field_H));
         this.field_I.a((byte) -111, new ag(this.field_I));
         this.field_G.a((byte) 126, new mk(this.field_G, this.field_I));
         this.field_M.a((byte) 83, new g(this.field_M, this.field_H, this.field_I));
         this.field_N.a((byte) -71, new MatchingTextValidator(this.field_N, this.field_M));
         this.field_R.a((byte) -116, new cf(this.field_R));
-        this.field_D.field_D = false;
-        this.field_D.field_q = (dh) ((Object) new ml());
-        this.field_L.field_q = (dh) ((Object) new fh());
-        this.field_H.field_q = (dh) ((Object) new ac(10000536));
+        this.field_D.enabled = false;
+        this.field_D.renderer = (WidgetRenderer) ((Object) new ml());
+        this.field_L.renderer = (WidgetRenderer) ((Object) new fh());
+        this.field_H.renderer = (WidgetRenderer) ((Object) new ac(10000536));
         ac dupTemp$0 = new ac(10000536);
-        this.field_G.field_q = (dh) ((Object) dupTemp$0);
-        this.field_I.field_q = (dh) ((Object) dupTemp$0);
-        this.field_R.field_q = (dh) ((Object) new ac(10000536));
-        this.field_P.field_q = (dh) ((Object) new oc());
+        this.field_G.renderer = (WidgetRenderer) ((Object) dupTemp$0);
+        this.field_I.renderer = (WidgetRenderer) ((Object) dupTemp$0);
+        this.field_R.renderer = (WidgetRenderer) ((Object) new ac(10000536));
+        this.field_P.renderer = (WidgetRenderer) ((Object) new oc());
         uh dupTemp$1 = new uh(10000536);
-        this.field_N.field_q = (dh) ((Object) dupTemp$1);
-        this.field_M.field_q = (dh) ((Object) dupTemp$1);
+        this.field_N.renderer = (WidgetRenderer) ((Object) dupTemp$1);
+        this.field_M.renderer = (WidgetRenderer) ((Object) dupTemp$1);
         String var2 = OpacityWidget.a(ArchiveIndex.createAgreeTermsText, new String[]{this.b(false), this.c(false)}, (byte) -72);
         int var3 = 20;
         var3 = var3 + this.a(var3, ug.createEmailText, 170, this.field_I, 5);
@@ -155,29 +155,29 @@ final class qh extends ee implements pe, pl, ta {
         var3 = var3 + (this.a(-103, this.field_H, OpacityWidget.createDisplayNameText, var3, 170, gk.createDisplayNameHintText) + 5);
         var3 = var3 + this.a(var3, 170, this.field_R, ue.createAgeText, (byte) -127);
         hd var4 = new hd(46, var3, this.widgetWidth - 90, 25, this.field_P, true, this.widgetWidth - 120, 5, hh.field_d, 11579568, ue.createNewsOptInText);
-        this.b((byte) -106, var4);
+        this.addChild((byte) -106, var4);
         var3 = var3 + var4.widgetHeight;
-        ff var5 = new ff(ng.field_F, 0, 0, 0, 0, 16777215, -1, 0, 0, ng.field_F.maxAscent, -1, 2147483647, true);
+        ff var5 = new ff(DialogLayer.sharedUiFont, 0, 0, 0, 0, 16777215, -1, 0, 0, DialogLayer.sharedUiFont.maxAscent, -1, 2147483647, true);
         this.field_E = new vf(var2, var5);
-        this.field_E.field_j = "";
+        this.field_E.hoverText = "";
         this.field_E.a(0, -42, eh.openInPopupWindowText);
         this.field_E.a(1, -62, eh.openInPopupWindowText);
-        this.field_E.field_u = (bb) (this);
+        this.field_E.listener = (WidgetListener) (this);
         this.field_E.b(46, 0, var3, -90 + this.widgetWidth);
         var3 = var3 + (this.field_E.widgetHeight + 15);
-        this.b((byte) -73, this.field_E);
+        this.addChild((byte) -73, this.field_E);
         int var6 = 4;
         int var7 = 200;
-        this.field_D.a(40, var7, (byte) -53, var3, -var7 + 496 >> 1);
-        this.field_L.a(40, 60, (byte) -118, var3 + 15, 3 + var6);
-        this.field_L.field_u = (bb) (this);
-        this.field_D.field_u = (bb) (this);
-        this.b((byte) -83, this.field_D);
-        this.b((byte) -108, this.field_L);
+        this.field_D.setWidgetBounds(40, var7, (byte) -53, var3, -var7 + 496 >> 1);
+        this.field_L.setWidgetBounds(40, 60, (byte) -118, var3 + 15, 3 + var6);
+        this.field_L.listener = (WidgetListener) (this);
+        this.field_D.listener = (WidgetListener) (this);
+        this.addChild((byte) -83, this.field_D);
+        this.addChild((byte) -108, this.field_L);
         this.field_K = new vh((ta) (this));
-        this.field_K.a(150, -this.field_H.widgetX + this.widgetWidth - this.field_H.widgetWidth - 60, (byte) -13, 20 + this.field_H.widgetY, 60 + (this.field_H.widgetWidth + this.field_H.widgetX));
-        this.b((byte) -113, this.field_K);
-        this.a(55 + var3 + var6, 496, (byte) -65, 0, 0);
+        this.field_K.setWidgetBounds(150, -this.field_H.widgetX + this.widgetWidth - this.field_H.widgetWidth - 60, (byte) -13, 20 + this.field_H.widgetY, 60 + (this.field_H.widgetWidth + this.field_H.widgetX));
+        this.addChild((byte) -113, this.field_K);
+        this.setWidgetBounds(55 + var3 + var6, 496, (byte) -65, 0, 0);
     }
 
     private final boolean g(int param0) {
@@ -189,10 +189,10 @@ final class qh extends ee implements pe, pl, ta {
             field_C = (boolean[]) null;
         }
         try {
-            var2 = Integer.parseInt(this.field_R.field_s);
+            var2 = Integer.parseInt(this.field_R.widgetText);
         } catch (NumberFormatException numberFormatException) {
         }
-        return mc.a(this.field_H.field_s, this.field_I.field_s, var2, (qh) (this), 0, this.field_P.field_y, this.field_M.field_s);
+        return mc.a(this.field_H.widgetText, this.field_I.widgetText, var2, (qh) (this), 0, this.field_P.field_y, this.field_M.widgetText);
     }
 
     final static mb i(int param0) {
@@ -210,7 +210,7 @@ final class qh extends ee implements pe, pl, ta {
         return new mb(al.b(0), rl.n(-1071908447));
     }
 
-    private final int a(int param0, int param1, el param2, String param3, byte param4) {
+    private final int a(int param0, int param1, UiWidget param2, String param3, byte param4) {
         String discarded$1 = null;
         RuntimeException var6 = null;
         td var7 = null;
@@ -223,14 +223,14 @@ final class qh extends ee implements pe, pl, ta {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8 = new hd(20, param0, param1 + 120, 25, param2, false, 120, 3, ng.field_F, 16777215, param3);
-          this.b((byte) -120, var8);
+          var8 = new hd(20, param0, param1 + 120, 25, param2, false, 120, 3, DialogLayer.sharedUiFont, 16777215, param3);
+          this.addChild((byte) -120, var8);
           var7 = new td(((nl) ((Object) param2)).a((byte) -124));
-          this.b((byte) -79, var7);
+          this.addChild((byte) -79, var7);
           if (param4 > -123) {
             discarded$1 = this.b(false);
           }
-          var7.a(15, 15, (byte) -22, var8.widgetY + (-15 + var8.widgetHeight >> 1), 3 + var8.widgetWidth + var8.widgetX);
+          var7.setWidgetBounds(15, 15, (byte) -22, var8.widgetY + (-15 + var8.widgetHeight >> 1), 3 + var8.widgetWidth + var8.widgetX);
           stackIn_3_0 = var8.widgetHeight;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -295,7 +295,7 @@ final class qh extends ee implements pe, pl, ta {
     final static void h(byte param0) {
         hb.field_j = MessageDialog.getSharedUiStyle(125);
         int var1 = -117 / ((12 - param0) / 57);
-        kd.field_e = new ng();
+        kd.field_e = new DialogLayer();
         b.a(true, true, false);
     }
 
@@ -307,7 +307,7 @@ final class qh extends ee implements pe, pl, ta {
         return "</col></u>";
     }
 
-    public final void onButtonActivated(int param0, byte param1, int param2, int param3, hk param4) {
+    public final void onButtonActivated(int param0, byte param1, int param2, int param3, ButtonWidget param4) {
         boolean discarded$1 = false;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -445,7 +445,7 @@ final class qh extends ee implements pe, pl, ta {
         return "<u=2164A2><col=2164A2>";
     }
 
-    final boolean handleKeyInput(int param0, int param1, char param2, el param3) {
+    final boolean handleKeyInput(int param0, int param1, char param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_13_0 = false;
@@ -483,7 +483,7 @@ final class qh extends ee implements pe, pl, ta {
         }
     }
 
-    private final int a(int param0, el param1, String param2, int param3, int param4, String param5) {
+    private final int a(int param0, UiWidget param1, String param2, int param3, int param4, String param5) {
         RuntimeException var7 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -535,10 +535,10 @@ final class qh extends ee implements pe, pl, ta {
         }
     }
 
-    final void a(boolean param0, int param1, el param2, int param3) {
+    final void a(boolean param0, int param1, UiWidget param2, int param3) {
         try {
             super.a(param0, param1, param2, param3);
-            this.field_D.field_D = this.f(6626);
+            this.field_D.enabled = this.f(6626);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "qh.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

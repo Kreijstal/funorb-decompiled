@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ni extends ee implements pl {
+final class ni extends WidgetContainer implements ButtonActivationListener {
     private String field_K;
     private MessageDialog field_J;
-    private hk[] field_F;
+    private ButtonWidget[] field_F;
     private int[] field_H;
     private BitmapFont field_G;
     private int field_D;
@@ -17,8 +17,8 @@ final class ni extends ee implements pl {
         if (this.field_D >= param1) {
             return;
         }
-        hk[] var7 = new hk[param1];
-        hk[] var3 = var7;
+        ButtonWidget[] var7 = new ButtonWidget[param1];
+        ButtonWidget[] var3 = var7;
         int[] var4 = new int[param1];
         for (var5 = 0; var5 < this.field_D; var5++) {
             var7[var5] = this.field_F[var5];
@@ -85,11 +85,11 @@ final class ni extends ee implements pl {
         }
     }
 
-    final hk a(int param0, String param1, bb param2) {
-        hk var4 = null;
+    final ButtonWidget a(int param0, String param1, WidgetListener param2) {
+        ButtonWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        hk stackIn_1_0 = null;
+        ButtonWidget stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -97,13 +97,13 @@ final class ni extends ee implements pl {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new hk(param1, param2);
-          var4.field_q = (dh) ((Object) new ml());
+          var4 = new ButtonWidget(param1, param2);
+          var4.renderer = (WidgetRenderer) ((Object) new ml());
           var5 = param0 + this.widgetHeight;
-          this.a(34 + this.widgetHeight, this.widgetWidth, (byte) -53, 0, 0);
-          var4.a(30, this.widgetWidth - 14, (byte) -33, var5, 7);
-          this.b((byte) -73, var4);
-          stackIn_1_0 = (hk) (var4);
+          this.setWidgetBounds(34 + this.widgetHeight, this.widgetWidth, (byte) -53, 0, 0);
+          var4.setWidgetBounds(30, this.widgetWidth - 14, (byte) -33, var5, 7);
+          this.addChild((byte) -73, var4);
+          stackIn_1_0 = (ButtonWidget) (var4);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -126,7 +126,7 @@ final class ni extends ee implements pl {
     }
 
     ni(MessageDialog param0, BitmapFont param1, String param2) {
-        super(0, 0, 288, 0, (dh) null);
+        super(0, 0, 288, 0, (WidgetRenderer) null);
         int var4_int = 0;
         this.field_D = 0;
         try {
@@ -134,7 +134,7 @@ final class ni extends ee implements pl {
             this.field_J = param0;
             this.field_K = param2;
             var4_int = null == this.field_K ? 0 : this.field_G.measureWrappedHeight(this.field_K, 260, this.field_G.maxAscent);
-            this.a(var4_int + 22, 288, (byte) -119, 0, 0);
+            this.setWidgetBounds(var4_int + 22, 288, (byte) -119, 0, 0);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ni.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -169,7 +169,7 @@ final class ni extends ee implements pl {
         int var5 = 35 / ((methodGuard - 1) / 43);
     }
 
-    public final void onButtonActivated(int param0, byte param1, int param2, int param3, hk param4) {
+    public final void onButtonActivated(int param0, byte param1, int param2, int param3, ButtonWidget param4) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
@@ -215,7 +215,7 @@ final class ni extends ee implements pl {
         try {
             var4_int = this.field_D;
             this.c(-11272, var4_int + param1);
-            this.field_F[var4_int] = this.a(-2, param0, (bb) (this));
+            this.field_F[var4_int] = this.a(-2, param0, (WidgetListener) (this));
             this.field_H[var4_int] = param2;
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ni.IA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');

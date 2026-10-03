@@ -1,0 +1,273 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class DequeCursor {
+    static ArchiveCatalog archiveCatalog;
+    static int logoAnimationTick;
+    static int field_c;
+    static int field_g;
+    private IntrusiveDeque deque;
+    private IntrusiveNode pendingNode;
+    static int field_e;
+
+    final static boolean b(int param0) {
+        boolean stackIn_25_0 = false;
+        RuntimeException decompiledCaughtException = null;
+        float var1_float = 0.0f;
+        RuntimeException var1 = null;
+        int var2 = 0;
+        int var3 = 0;
+        int var4 = 0;
+        var4 = Geoblox.clientControlFlowFlag;
+        try {
+          if (MatchingTextValidator.field_j == param0) {
+            td.playPcmSample(-348, fl.field_c[25]);
+          }
+          MatchingTextValidator.field_j = MatchingTextValidator.field_j + 1;
+          while (true) {
+            if (hh.pollKeyboardEvent(93)) {
+              if (ki.currentKeyboardEventCode != 13) {
+                continue;
+              }
+              return true;
+            }
+            if ((0 == MatchingTextValidator.field_j % 40) &&
+                (vc.field_h < 11)) {
+              fh.field_c = MatchingTextValidator.field_j;
+              vc.field_h = vc.field_h + 1;
+              if (10 == vc.field_h) {
+                td.playPcmSample(-348, fl.field_c[26]);
+              }
+            }
+            var1_float = -((480.0f - (float)MatchingTextValidator.field_j) / 480.0f) + 1.0f;
+            if (11 > vc.field_h) {
+              si.field_j = ((int)(var1_float * MenuScreen.introTintGreenDelta) << 8) + (DiskCacheWorker.avatarTintPalette[0] + ((int)(var1_float * lk.field_b) << 16)) + (int)(SocketArchiveNetworkClient.field_x * var1_float);
+            }
+            var2 = tl.introFaceFrames[vc.field_h].fullWidth >> 1;
+            var3 = MatchingTextValidator.field_j << 2;
+            if ((!sg.field_d) &&
+                (-var3 + 900 <= 320 + var2)) {
+              td.playPcmSample(-348, fl.field_c[7]);
+              sg.field_d = true;
+            }
+            if ((!ab.field_d) &&
+                (-var2 + (320 - qh.introGeometryFrames[1].fullWidth) <= -1200 + var3)) {
+              td.playPcmSample(-348, fl.field_c[8]);
+              ab.field_d = true;
+            }
+            stackIn_25_0 = !(494 > MatchingTextValidator.field_j);
+            return stackIn_25_0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var1), "gb.A(" + param0 + ')');
+        }
+    }
+
+    final IntrusiveNode beginForward(byte methodGuard) {
+        IntrusiveNode firstNode = this.deque.sentinel.nextNode;
+        if (firstNode == this.deque.sentinel) {
+            this.pendingNode = null;
+            return null;
+        }
+        if (methodGuard == 88) {
+            this.pendingNode = firstNode.nextNode;
+            return firstNode;
+        }
+        field_g = -4;
+        this.pendingNode = firstNode.nextNode;
+        return firstNode;
+    }
+
+    final IntrusiveNode beginReverse(int methodGuard) {
+        IntrusiveNode lastNode = this.deque.sentinel.previousNode;
+        if (!(this.deque.sentinel != lastNode)) {
+            this.pendingNode = null;
+            return null;
+        }
+        if (methodGuard == 1) {
+            this.pendingNode = lastNode.previousNode;
+            return lastNode;
+        }
+        this.nextForward((byte) 55);
+        this.pendingNode = lastNode.previousNode;
+        return lastNode;
+    }
+
+    final IntrusiveNode nextReverse(int methodGuard) {
+        IntrusiveNode node = this.pendingNode;
+        if (node == this.deque.sentinel) {
+            this.pendingNode = null;
+            return null;
+        }
+        this.pendingNode = node.previousNode;
+        if (methodGuard == 26) {
+            return node;
+        }
+        return (IntrusiveNode) null;
+    }
+
+    final static int a(int param0) {
+        int var1_int = 0;
+        RuntimeException var1 = null;
+        int var2 = 0;
+        int stackIn_6_0 = 0;
+        int stackIn_10_0 = 0;
+        int stackIn_14_0 = 0;
+        int stackIn_17_0 = 0;
+        int stackIn_20_0 = 0;
+        int stackIn_22_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var2 = Geoblox.clientControlFlowFlag;
+        try {
+          kd.field_e.a(true, 127, ec.field_d, mj.field_b);
+          kd.field_e.advanceDialogAnimations(-65);
+          while (hh.pollKeyboardEvent(77)) {
+            kd.field_e.a((byte) 105, te.currentKeyboardEventCharacter, ki.currentKeyboardEventCode);
+          }
+          if (GzipInflater.field_d != param0) {
+            var1_int = GzipInflater.field_d;
+            pc.a(-1, false);
+            stackIn_6_0 = var1_int;
+            return stackIn_6_0;
+          }
+          if (va.field_d) {
+            stackIn_10_0 = 3;
+            return stackIn_10_0;
+          }
+          if (si.field_g == IntrusiveDeque.field_d) {
+            stackIn_14_0 = 1;
+            return stackIn_14_0;
+          }
+          if (!ih.field_c.a(-106)) {
+            stackIn_17_0 = 1;
+            return stackIn_17_0;
+          }
+          if (kd.field_b != IntrusiveDeque.field_d) {
+            stackIn_22_0 = -1;
+            return stackIn_22_0;
+          }
+          stackIn_20_0 = 2;
+          return stackIn_20_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var1), "gb.B(" + param0 + ')');
+        }
+    }
+
+    final IntrusiveNode beginReverseAt(IntrusiveNode node, byte methodGuard) {
+        IntrusiveNode startNode = null;
+        RuntimeException reverseCursorFailure = null;
+        int guardResidue = 0;
+        Object emptyResult = null;
+        IntrusiveNode returnedNode = null;
+        RuntimeException reverseFailureBeforeContext = null;
+        StringBuilder reverseFailureContextBuilder = null;
+        String nodeContextDescription = null;
+        RuntimeException caughtReverseCursorException = null;
+        try {
+          if (node == null) {
+            startNode = this.deque.sentinel.previousNode;
+          } else {
+            startNode = node;
+          }
+          if (this.deque.sentinel == startNode) {
+            this.pendingNode = null;
+            emptyResult = null;
+            return (IntrusiveNode) ((Object) emptyResult);
+          }
+          guardResidue = 59 / ((methodGuard - 85) / 38);
+          this.pendingNode = startNode.previousNode;
+          returnedNode = (IntrusiveNode) (startNode);
+          return returnedNode;
+        } catch (java.lang.RuntimeException caughtReverseCursorFailure) {
+          caughtReverseCursorException = caughtReverseCursorFailure;
+          reverseCursorFailure = caughtReverseCursorException;
+          reverseFailureBeforeContext = (RuntimeException) (reverseCursorFailure);
+          reverseFailureContextBuilder = new StringBuilder().append("gb.F(");
+          if (node == null) {
+            nodeContextDescription = "null";
+          } else {
+            nodeContextDescription = "{...}";
+          }
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) reverseFailureBeforeContext), ((StringBuilder) (Object) reverseFailureContextBuilder).append(nodeContextDescription).append(',').append(methodGuard).append(')').toString());
+        }
+    }
+
+    public static void b(byte param0) {
+        int var1 = -66 / ((33 - param0) / 32);
+        archiveCatalog = null;
+    }
+
+    final static void a(String param0, byte param1) {
+        int var2 = -10 / ((58 - param1) / 41);
+        System.out.println("Error: " + og.a(param0, "\n", true, "%0a"));
+    }
+
+    DequeCursor(IntrusiveDeque deque) {
+        try {
+            this.deque = deque;
+        } catch (RuntimeException cursorConstructionFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) cursorConstructionFailure), "gb.<init>(" + (deque != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final IntrusiveNode nextForward(byte methodGuard) {
+        IntrusiveNode node = this.pendingNode;
+        if (methodGuard <= 105) {
+            return (IntrusiveNode) null;
+        }
+        if (!(node != this.deque.sentinel)) {
+            this.pendingNode = null;
+            return null;
+        }
+        this.pendingNode = node.nextNode;
+        return node;
+    }
+
+    final IntrusiveNode beginForwardAt(byte methodGuard, IntrusiveNode node) {
+        IntrusiveNode startNode = null;
+        RuntimeException forwardCursorFailure = null;
+        Object emptyResult = null;
+        IntrusiveNode returnedNode = null;
+        RuntimeException forwardFailureBeforeContext = null;
+        StringBuilder forwardFailureContextBuilder = null;
+        String nodeContextDescription = null;
+        RuntimeException caughtForwardCursorException = null;
+        try {
+          if (node != null) {
+            startNode = node;
+          } else {
+            startNode = this.deque.sentinel.nextNode;
+          }
+          if (methodGuard != 56) {
+            this.beginReverse(-60);
+          }
+          if (this.deque.sentinel == startNode) {
+            this.pendingNode = null;
+            emptyResult = null;
+            return (IntrusiveNode) ((Object) emptyResult);
+          }
+          this.pendingNode = startNode.nextNode;
+          returnedNode = (IntrusiveNode) (startNode);
+          return returnedNode;
+        } catch (java.lang.RuntimeException caughtForwardCursorFailure) {
+          caughtForwardCursorException = caughtForwardCursorFailure;
+          forwardCursorFailure = caughtForwardCursorException;
+          forwardFailureBeforeContext = (RuntimeException) (forwardCursorFailure);
+          forwardFailureContextBuilder = new StringBuilder().append("gb.J(").append(methodGuard).append(',');
+          if (node == null) {
+            nodeContextDescription = "null";
+          } else {
+            nodeContextDescription = "{...}";
+          }
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) forwardFailureBeforeContext), ((StringBuilder) (Object) forwardFailureContextBuilder).append(nodeContextDescription).append(')').toString());
+        }
+    }
+
+    static {
+        field_e = -1;
+    }
+}

@@ -44,32 +44,32 @@ final class tj {
                 field_a = (String) null;
                 var3 = ml.c(7789);
                 ml.field_t = new pf(var3, (String) null, true, false, false);
-                kd.field_e.a(false, hk.field_C);
-                hk.field_C.replaceContent(ml.field_t, -85);
-                hk.field_C.finishTransition(true);
+                kd.field_e.showDialog(false, ButtonWidget.field_C);
+                ButtonWidget.field_C.replaceContent(ml.field_t, -85);
+                ButtonWidget.field_C.finishTransition(true);
                 return;
             }
             var2 = ml.c(7789);
             ml.field_t = new pf(var2, (String) null, true, false, false);
-            kd.field_e.a(false, hk.field_C);
-            hk.field_C.replaceContent(ml.field_t, -85);
-            hk.field_C.finishTransition(true);
+            kd.field_e.showDialog(false, ButtonWidget.field_C);
+            ButtonWidget.field_C.replaceContent(ml.field_t, -85);
+            ButtonWidget.field_C.finishTransition(true);
             return;
         }
         if (param0 < -47) {
             var5 = ml.c(7789);
             ml.field_t = new pf(var5, (String) null, true, false, false);
-            kd.field_e.a(false, hk.field_C);
-            hk.field_C.replaceContent(ml.field_t, -85);
-            hk.field_C.finishTransition(true);
+            kd.field_e.showDialog(false, ButtonWidget.field_C);
+            ButtonWidget.field_C.replaceContent(ml.field_t, -85);
+            ButtonWidget.field_C.finishTransition(true);
             return;
         }
         field_a = (String) null;
         String var4 = ml.c(7789);
         ml.field_t = new pf(var4, (String) null, true, false, false);
-        kd.field_e.a(false, hk.field_C);
-        hk.field_C.replaceContent(ml.field_t, -85);
-        hk.field_C.finishTransition(true);
+        kd.field_e.showDialog(false, ButtonWidget.field_C);
+        ButtonWidget.field_C.replaceContent(ml.field_t, -85);
+        ButtonWidget.field_C.finishTransition(true);
     }
 
     public static void a(int param0) {

@@ -145,7 +145,7 @@ class IntrusiveNode {
           sb.decodedSpriteCount = spriteDataBufferAlias.readUnsignedShortBE(readGuard);
           DualLinkNode.decodedSpriteWidths = new int[sb.decodedSpriteCount];
           hl.decodedSpriteHeights = new int[sb.decodedSpriteCount];
-          ng.decodedSpriteHasNonOpaqueAlpha = new boolean[sb.decodedSpriteCount];
+          DialogLayer.decodedSpriteHasNonOpaqueAlpha = new boolean[sb.decodedSpriteCount];
           vf.decodedSpriteAlpha = new byte[sb.decodedSpriteCount][];
           GameplaySession.decodedSpriteXOffsets = new int[sb.decodedSpriteCount];
           mj.decodedSpriteIndices = new byte[sb.decodedSpriteCount][];
@@ -230,7 +230,7 @@ class IntrusiveNode {
                 }
               }
             }
-            ng.decodedSpriteHasNonOpaqueAlpha[spriteIndex] = hasNonOpaqueAlphaFlag != 0;
+            DialogLayer.decodedSpriteHasNonOpaqueAlpha[spriteIndex] = hasNonOpaqueAlphaFlag != 0;
           }
           return;
         } catch (java.lang.RuntimeException decodeFailure) {
@@ -253,11 +253,11 @@ class IntrusiveNode {
         field_d = null;
     }
 
-    final boolean a(int param0) {
+    final boolean isLinked(int methodGuard) {
         if (!(null != this.previousNode)) {
             return false;
         }
-        if (param0 < 112) {
+        if (methodGuard < 112) {
             IntrusiveNode.b((byte) 110);
         }
         return true;

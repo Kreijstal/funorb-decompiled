@@ -1,6 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-interface rk extends bb {
-    public abstract void a(int param0, el param1, boolean param2);
+interface rk extends WidgetListener {
+    public abstract void a(int param0, UiWidget param1, boolean param2);
 }

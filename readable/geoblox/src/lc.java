@@ -41,9 +41,9 @@ final class lc {
                   (ArchiveNetworkClient.movingEntities.isEmpty(13519)))) &&
                 (~kb.spawnReleaseIntervalTicks <= ~kc.ticksSinceLastEntityRelease)) ||
                 (!(ul.releasedInCurrentTheme != 0) &&
-                  !(el.gameplaySession.tutorialMode)))) {
+                  !(UiWidget.gameplaySession.tutorialMode)))) {
               if ((0 < SecondaryDeque.spawnQueue.countNodes(methodGuard ^ -170)) &&
-                  (!el.gameplaySession.spawnReleaseDisabled)) {
+                  (!UiWidget.gameplaySession.spawnReleaseDisabled)) {
                 ArchiveNetworkClient.movingEntities.addLast(-48, SecondaryDeque.spawnQueue.removeFirst((byte) -124));
                 hd.recordEntityRelease(2);
                 kc.ticksSinceLastEntityRelease = 0;
@@ -52,7 +52,7 @@ final class lc {
             kc.ticksSinceLastEntityRelease = kc.ticksSinceLastEntityRelease + 1;
             if ((SecondaryDeque.spawnQueue.countNodes(methodGuard ^ 143) < 3) &&
                 (ma.c((byte) -53)) &&
-                (!el.gameplaySession.canAdvanceSession(true))) {
+                (!UiWidget.gameplaySession.canAdvanceSession(true))) {
               queuedEntityThenPooledEntity = (GameplayEntity) ((Object) ra.availableEntities.removeFirst((byte) -101));
               if (null != queuedEntityThenPooledEntity) {
                 spawnAngleRadians = 2.0 * Math.random() * 3.141592653589793;

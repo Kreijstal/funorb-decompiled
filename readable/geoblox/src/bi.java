@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bi implements dh {
+final class bi implements WidgetRenderer {
     private int field_f;
     private int field_k;
     private int field_i;
@@ -58,8 +58,8 @@ final class bi implements dh {
         }
     }
 
-    public final void a(int param0, int param1, int param2, boolean param3, el param4) {
-        el stackIn_3_0 = null;
+    public final void a(int param0, int param1, int param2, boolean param3, UiWidget param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -72,13 +72,13 @@ final class bi implements dh {
         vi var11 = null;
         try {
           if (param4 instanceof vi) {
-            stackIn_3_0 = (el) (param4);
+            stackIn_3_0 = (UiWidget) (param4);
           } else {
             stackIn_3_0 = null;
           }
           var11 = (vi) ((Object) stackIn_3_0);
           if (var11 != null) {
-            param3 = param3 & var11.field_D;
+            param3 = param3 & var11.enabled;
           }
           if (param1 > -5) {
             this.field_a = -3;
@@ -98,7 +98,7 @@ final class bi implements dh {
           }
           if (null != this.field_b) {
             var10 = this.field_m + this.field_n + this.field_k;
-            this.field_b.drawParagraph(param4.field_s, var10 + param4.widgetX + param0, param4.widgetY + param2 + this.field_i, param4.widgetWidth + (-this.field_m - var10), -(this.field_m << 1) + param4.widgetHeight, this.field_e, this.field_f, this.field_a, this.field_l, 0);
+            this.field_b.drawParagraph(param4.widgetText, var10 + param4.widgetX + param0, param4.widgetY + param2 + this.field_i, param4.widgetWidth + (-this.field_m - var10), -(this.field_m << 1) + param4.widgetHeight, this.field_e, this.field_f, this.field_a, this.field_l, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

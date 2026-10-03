@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class r extends MessageDialog implements pl {
+final class r extends MessageDialog implements ButtonActivationListener {
     private qh field_tb;
     private boolean field_vb;
     static String field_sb;
@@ -64,7 +64,7 @@ final class r extends MessageDialog implements pl {
               this.replaceContent(new s((r) (this)), -111);
               return;
             }
-            var5.a(-2, cl.continueText, (bb) (this));
+            var5.a(-2, cl.continueText, (WidgetListener) (this));
           } else {
             if (!this.field_vb) {
               if (param1.field_j == 5) {
@@ -74,10 +74,10 @@ final class r extends MessageDialog implements pl {
                 var5.a(ll.backText, 1, -1);
               }
             } else {
-              var5.a(-2, cl.continueText, (bb) (this));
+              var5.a(-2, cl.continueText, (WidgetListener) (this));
             }
             if (param1.field_j == 3) {
-              var5.a(ee.toServerListText, 1, 7);
+              var5.a(WidgetContainer.toServerListText, 1, 7);
             } else {
               if (6 == param1.field_j) {
                 var5.a(jc.toCustomerSupportText, 1, 9);
@@ -100,7 +100,7 @@ final class r extends MessageDialog implements pl {
         }
     }
 
-    r(ng param0, qh param1) {
+    r(DialogLayer param0, qh param1) {
         super(param0, hh.field_c, se.creatingYourAccountText, false, false);
         try {
             this.field_tb = param1;
@@ -136,7 +136,7 @@ final class r extends MessageDialog implements pl {
             return stackIn_4_0;
           }
           if (var2_int > 64) {
-            stackIn_8_0 = hk.field_x;
+            stackIn_8_0 = ButtonWidget.field_x;
             return stackIn_8_0;
           }
           if (34 == param0.charAt(0)) {
@@ -209,7 +209,7 @@ final class r extends MessageDialog implements pl {
         }
     }
 
-    public final void onButtonActivated(int param0, byte param1, int param2, int param3, hk param4) {
+    public final void onButtonActivated(int param0, byte param1, int param2, int param3, ButtonWidget param4) {
         if (!(!this.field_vb)) {
             b.a(true, false, false);
             return;

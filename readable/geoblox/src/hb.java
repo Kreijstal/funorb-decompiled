@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hb implements dh {
+final class hb implements WidgetRenderer {
     static int[] field_l;
     static int field_b;
     static ResourceArchive field_n;
@@ -17,7 +17,7 @@ final class hb implements dh {
     static wa field_j;
     static Sprite[] silverStarFrames;
 
-    public final void a(int param0, int param1, int param2, boolean param3, el param4) {
+    public final void a(int param0, int param1, int param2, boolean param3, UiWidget param4) {
         int var13 = 0;
         double var9 = 0.0;
         int var11 = 0;
@@ -46,7 +46,7 @@ final class hb implements dh {
             SoftwareRasterizer.drawLine(var7, var8, var11 + var7, var12 + var8, 1);
             if (this.field_a != null) {
                 var13 = this.field_c + (var14.field_E + var14.field_K);
-                this.field_a.drawParagraph(param4.field_s, var13 + (param0 + param4.widgetX), param2 + param4.widgetY + this.field_i, param4.widgetWidth - (this.field_c + var13), -(this.field_c << 1) + param4.widgetHeight, this.field_m, this.field_k, 1, 1, 0);
+                this.field_a.drawParagraph(param4.widgetText, var13 + (param0 + param4.widgetX), param2 + param4.widgetY + this.field_i, param4.widgetWidth - (this.field_c + var13), -(this.field_c << 1) + param4.widgetHeight, this.field_m, this.field_k, 1, 1, 0);
             }
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "hb.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');

@@ -91,7 +91,7 @@ final class IntrusiveDeque {
         if (param0 <= 65) {
           return false;
         }
-        stackIn_6_0 = (oh.field_b != null) && (oh.field_b.j(75) != null);
+        stackIn_6_0 = (oh.field_b != null) && (oh.field_b.getTopVisibleDialog(75) != null);
         return stackIn_6_0;
     }
 

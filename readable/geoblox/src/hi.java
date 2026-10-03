@@ -1,60 +1,60 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hi extends ee implements ta, pl {
+final class hi extends WidgetContainer implements ta, ButtonActivationListener {
     private hc field_E;
     static volatile int livePointerPressY;
     vh field_D;
-    private hk field_H;
+    private ButtonWidget field_H;
     static Sprite bakingForegroundSprite;
     static String createIneligibleText;
     static long field_G;
-    private hk field_J;
+    private ButtonWidget field_J;
 
     private final boolean h(byte param0) {
         if (!this.a(-115, (nl) (this.field_E))) {
             return false;
         }
         if (param0 != -118) {
-            this.field_H = (hk) null;
+            this.field_H = (ButtonWidget) null;
             return true;
         }
         return true;
     }
 
     public hi() {
-        super(0, 0, 496, 0, (dh) null);
-        this.field_E = new hc("", (bb) null, 12);
-        ff var1 = new ff(hh.field_d, 0, 0, 0, 0, 16777215, -1, 3, 0, ng.field_F.maxAscent, -1, 2147483647, true);
-        el var2 = new el(sb.loginNoDisplayNameText, var1, (bb) null);
-        this.field_H = new hk(ec.okText, (bb) null);
-        this.field_J = new hk(ck.cancelText, (bb) null);
-        this.field_E.field_j = ud.createDisplayNameTooltipText;
+        super(0, 0, 496, 0, (WidgetRenderer) null);
+        this.field_E = new hc("", (WidgetListener) null, 12);
+        ff var1 = new ff(hh.field_d, 0, 0, 0, 0, 16777215, -1, 3, 0, DialogLayer.sharedUiFont.maxAscent, -1, 2147483647, true);
+        UiWidget var2 = new UiWidget(sb.loginNoDisplayNameText, var1, (WidgetListener) null);
+        this.field_H = new ButtonWidget(ec.okText, (WidgetListener) null);
+        this.field_J = new ButtonWidget(ck.cancelText, (WidgetListener) null);
+        this.field_E.hoverText = ud.createDisplayNameTooltipText;
         this.field_E.a((byte) -58, new uk(this.field_E));
-        this.field_H.field_D = false;
-        this.field_H.field_q = (dh) ((Object) new ml());
-        this.field_J.field_q = (dh) ((Object) new fh());
-        this.field_E.field_q = (dh) ((Object) new ac(10000536));
+        this.field_H.enabled = false;
+        this.field_H.renderer = (WidgetRenderer) ((Object) new ml());
+        this.field_J.renderer = (WidgetRenderer) ((Object) new fh());
+        this.field_E.renderer = (WidgetRenderer) ((Object) new ac(10000536));
         int var3 = 20;
         int var4 = 4;
-        var2.a(50, 270, (byte) -8, var3, 20);
+        var2.setWidgetBounds(50, 270, (byte) -8, var3, 20);
         int var5 = 200;
-        this.b((byte) -110, var2);
+        this.addChild((byte) -110, var2);
         var3 += 50;
         var3 = var3 + (5 + this.a(var3, -12037, 170, this.field_E, gk.createDisplayNameHintText, OpacityWidget.createDisplayNameText));
-        this.field_H.a(40, var5, (byte) -23, var3, -var5 + 496 >> 1);
-        this.field_J.a(40, 60, (byte) -85, var3 + 15, 3 + var4);
-        this.field_J.field_u = (bb) (this);
-        this.field_H.field_u = (bb) (this);
-        this.b((byte) -102, this.field_H);
-        this.b((byte) -105, this.field_J);
+        this.field_H.setWidgetBounds(40, var5, (byte) -23, var3, -var5 + 496 >> 1);
+        this.field_J.setWidgetBounds(40, 60, (byte) -85, var3 + 15, 3 + var4);
+        this.field_J.listener = (WidgetListener) (this);
+        this.field_H.listener = (WidgetListener) (this);
+        this.addChild((byte) -102, this.field_H);
+        this.addChild((byte) -105, this.field_J);
         this.field_D = new vh((ta) (this));
-        this.field_D.a(150, -60 + this.widgetWidth + (-this.field_E.widgetX - this.field_E.widgetWidth), (byte) -54, 20, 60 + this.field_E.widgetX + this.field_E.widgetWidth);
-        this.b((byte) -102, this.field_D);
-        this.a(var4 + 55 + var3, 496, (byte) -55, 0, 0);
+        this.field_D.setWidgetBounds(150, -60 + this.widgetWidth + (-this.field_E.widgetX - this.field_E.widgetWidth), (byte) -54, 20, 60 + this.field_E.widgetX + this.field_E.widgetWidth);
+        this.addChild((byte) -102, this.field_D);
+        this.setWidgetBounds(var4 + 55 + var3, 496, (byte) -55, 0, 0);
     }
 
-    private final int a(int param0, int param1, String param2, String param3, int param4, int param5, el param6) {
+    private final int a(int param0, int param1, String param2, String param3, int param4, int param5, UiWidget param6) {
         RuntimeException var8 = null;
         pi var9 = null;
         int var10 = 0;
@@ -69,12 +69,12 @@ final class hi extends ee implements ta, pl {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var11 = new hd(20, param0, param5 + 120, 25, param6, false, 120, 3, ng.field_F, 16777215, param2);
+          var11 = new hd(20, param0, param5 + 120, 25, param6, false, 120, 3, DialogLayer.sharedUiFont, 16777215, param2);
           var10 = -110 / ((70 - param1) / 33);
-          this.b((byte) -108, var11);
+          this.addChild((byte) -108, var11);
           var9 = new pi(((nl) ((Object) param6)).a((byte) -113), param3, 126, param0 + var11.widgetHeight, 25 + param5, param4);
-          var9.field_u = (bb) (this);
-          this.b((byte) -115, var9);
+          var9.listener = (WidgetListener) (this);
+          this.addChild((byte) -115, var9);
           stackIn_1_0 = var9.widgetHeight + var11.widgetHeight;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -237,11 +237,11 @@ final class hi extends ee implements ta, pl {
               faceMaterialOrNull = null;
             }
             faceMaterial = faceMaterialOrNull;
-            vertexAX = sh.projectedMeshVertexX[specularResponseOrVertexA];
+            vertexAX = SingleChildWidget.projectedMeshVertexX[specularResponseOrVertexA];
             vertexAY = dj.projectedMeshVertexY[specularResponseOrVertexA];
-            vertexBX = sh.projectedMeshVertexX[faceVertexB];
+            vertexBX = SingleChildWidget.projectedMeshVertexX[faceVertexB];
             vertexBY = dj.projectedMeshVertexY[faceVertexB];
-            vertexCX = sh.projectedMeshVertexX[faceVertexC];
+            vertexCX = SingleChildWidget.projectedMeshVertexX[faceVertexC];
             vertexCY = dj.projectedMeshVertexY[faceVertexC];
             if ((faceNormalA == faceNormalB) &&
                 (faceNormalC == faceNormalB)) {
@@ -493,7 +493,7 @@ final class hi extends ee implements ta, pl {
         }
     }
 
-    public final void onButtonActivated(int param0, byte param1, int param2, int param3, hk param4) {
+    public final void onButtonActivated(int param0, byte param1, int param2, int param3, ButtonWidget param4) {
         boolean discarded$1 = false;
         nl var7 = null;
         RuntimeException stackIn_10_0 = null;
@@ -533,7 +533,7 @@ final class hi extends ee implements ta, pl {
         String var4 = null;
         try {
             if (param1 != 20) {
-                this.field_J = (hk) null;
+                this.field_J = (ButtonWidget) null;
             }
             var3 = this.field_E;
             var4 = param0;
@@ -543,10 +543,10 @@ final class hi extends ee implements ta, pl {
         }
     }
 
-    final void a(boolean param0, int param1, el param2, int param3) {
+    final void a(boolean param0, int param1, UiWidget param2, int param3) {
         try {
             super.a(param0, param1, param2, param3);
-            this.field_H.field_D = this.h((byte) -118);
+            this.field_H.enabled = this.h((byte) -118);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "hi.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -560,7 +560,7 @@ final class hi extends ee implements ta, pl {
         bakingForegroundSprite = null;
     }
 
-    final boolean handleKeyInput(int param0, int param1, char param2, el param3) {
+    final boolean handleKeyInput(int param0, int param1, char param2, UiWidget param3) {
         boolean discarded$1 = false;
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
@@ -602,11 +602,11 @@ final class hi extends ee implements ta, pl {
     public final void a(byte param0) {
         ((uk) ((Object) this.field_E.a((byte) -117))).c((byte) -80);
         if (param0 != 83) {
-            this.field_H = (hk) null;
+            this.field_H = (ButtonWidget) null;
         }
     }
 
-    private final int a(int param0, int param1, int param2, el param3, String param4, String param5) {
+    private final int a(int param0, int param1, int param2, UiWidget param3, String param4, String param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -656,7 +656,7 @@ final class hi extends ee implements ta, pl {
         if (param0 >= -42) {
             return;
         }
-        ag.c(12607, this.field_E.field_s);
+        ag.c(12607, this.field_E.widgetText);
     }
 
     static {

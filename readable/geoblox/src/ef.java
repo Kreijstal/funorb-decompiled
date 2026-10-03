@@ -41,7 +41,7 @@ final class ef implements Iterator {
         RuntimeException decompiledCaughtException = null;
         var3 = Geoblox.clientControlFlowFlag;
         try {
-          var1_float = el.gameplaySession.boardAngleRadians;
+          var1_float = UiWidget.gameplaySession.boardAngleRadians;
           ab.moveEntitiesAndCollectContacts(param0 - 22, var1_float);
           ResourceArchive.updateAttachedEntities((byte) 123);
           if (param0 != -15) {
@@ -56,7 +56,7 @@ final class ef implements Iterator {
             }
             var2 = (GameplayEntity) ((Object) bh.transientEntities.nextForIteration(1));
           }
-          if (el.gameplaySession.tutorialPromptActive) {
+          if (UiWidget.gameplaySession.tutorialPromptActive) {
             return;
           }
           lc.updateSpawnQueue(255);

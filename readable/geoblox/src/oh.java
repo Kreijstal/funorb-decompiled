@@ -4,7 +4,7 @@
 final class oh {
     static AudioOutput field_a;
     static String unpackingGraphicsText;
-    static ng field_b;
+    static DialogLayer field_b;
 
     final static void a(int param0, int param1, BitmapFont param2, int param3, int param4, int param5) {
         try {
@@ -20,7 +20,7 @@ final class oh {
         field_b = null;
         field_a = null;
         if (param0 > -73) {
-            field_b = (ng) null;
+            field_b = (DialogLayer) null;
         }
     }
 

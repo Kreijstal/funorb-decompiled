@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fh implements dh {
+final class fh implements WidgetRenderer {
     private int field_a;
     private int field_b;
     private BitmapFont field_d;
@@ -77,7 +77,7 @@ final class fh implements dh {
         return null;
     }
 
-    public final void a(int param0, int param1, int param2, boolean param3, el param4) {
+    public final void a(int param0, int param1, int param2, boolean param3, UiWidget param4) {
         int stackIn_5_0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -92,21 +92,21 @@ final class fh implements dh {
         int var11 = 0;
         var11 = Geoblox.clientControlFlowFlag;
         try {
-          if ((!param4.field_l) &&
-              (!param4.e((byte) 54))) {
+          if ((!param4.pointerInside) &&
+              (!param4.hasKeyboardFocus((byte) 54))) {
             stackIn_5_0 = 2188450;
           } else {
             stackIn_5_0 = 3249872;
           }
           var6_int = stackIn_5_0;
-          this.field_d.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param4.field_s + "</u>", param4.widgetX + param0, param2 + param4.widgetY, param4.widgetWidth, param4.widgetHeight, var6_int, -1, this.field_b, this.field_a, this.field_d.maxAscent + this.field_d.maxDescent);
+          this.field_d.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param4.widgetText + "</u>", param4.widgetX + param0, param2 + param4.widgetY, param4.widgetWidth, param4.widgetHeight, var6_int, -1, this.field_b, this.field_a, this.field_d.maxAscent + this.field_d.maxDescent);
           if (param1 > -5) {
             fh.a(53L, -116);
           }
-          if (!param4.e((byte) 54)) {
+          if (!param4.hasKeyboardFocus((byte) 54)) {
             return;
           }
-          var7 = this.field_d.measureTextWidth(param4.field_s);
+          var7 = this.field_d.measureTextWidth(param4.widgetText);
           var8 = this.field_d.maxDescent + this.field_d.maxAscent;
           var9 = param4.widgetX + param0;
           if (this.field_b == 2) {
@@ -143,7 +143,7 @@ final class fh implements dh {
     public fh() {
         this.field_a = 1;
         this.field_b = 1;
-        this.field_d = ng.field_F;
+        this.field_d = DialogLayer.sharedUiFont;
     }
 
     fh(BitmapFont param0, int param1, int param2) {

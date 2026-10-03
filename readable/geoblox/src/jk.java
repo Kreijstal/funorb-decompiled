@@ -106,7 +106,7 @@ final class jk {
             return stackIn_5_0;
           }
           if (var2_int > 63) {
-            stackIn_9_0 = hk.field_x;
+            stackIn_9_0 = ButtonWidget.field_x;
             return stackIn_9_0;
           }
           for (var3 = 0; var2_int > var3; var3++) {

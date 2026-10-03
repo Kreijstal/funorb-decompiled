@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class s extends ee implements pe, pl {
-    private hk field_K;
+final class s extends WidgetContainer implements pe, ButtonActivationListener {
+    private ButtonWidget field_K;
     static ck field_E;
     private vf field_J;
     private r field_C;
@@ -86,7 +86,7 @@ final class s extends ee implements pe, pl {
     }
 
     s(r param0) {
-        super(0, 0, 288, 0, (dh) null);
+        super(0, 0, 288, 0, (WidgetRenderer) null);
         String var7 = null;
         int var3 = 0;
         ff var4 = null;
@@ -94,26 +94,26 @@ final class s extends ee implements pe, pl {
         int var6 = 0;
         try {
             this.field_C = param0;
-            this.field_K = new hk(cl.continueText, (bb) null);
-            this.field_K.field_q = (dh) ((Object) new ml());
+            this.field_K = new ButtonWidget(cl.continueText, (WidgetListener) null);
+            this.field_K.renderer = (WidgetRenderer) ((Object) new ml());
             var7 = OpacityWidget.a(nk.createUnder13TermsText, new String[]{this.f(11501), this.c(false)}, (byte) -114);
             var3 = 20;
-            var4 = new ff(ng.field_F, 0, 0, 0, 0, 16777215, -1, 3, 0, ng.field_F.maxAscent, -1, 2147483647, true);
+            var4 = new ff(DialogLayer.sharedUiFont, 0, 0, 0, 0, 16777215, -1, 3, 0, DialogLayer.sharedUiFont.maxAscent, -1, 2147483647, true);
             this.field_J = new vf(var7, var4);
-            this.field_J.field_j = "";
+            this.field_J.hoverText = "";
             this.field_J.a(0, -47, eh.openInPopupWindowText);
             this.field_J.a(1, 118, eh.openInPopupWindowText);
-            this.field_J.field_u = (bb) (this);
+            this.field_J.listener = (WidgetListener) (this);
             this.field_J.widgetWidth = this.widgetWidth - 40;
             this.field_J.b(26, 0, var3, this.widgetWidth - 40);
             var3 = var3 + (this.field_J.widgetHeight + 15);
-            this.b((byte) -108, this.field_J);
+            this.addChild((byte) -108, this.field_J);
             var5 = 4;
             var6 = 200;
-            this.field_K.a(40, var6, (byte) -71, var3, -var6 + 300 >> 1);
-            this.field_K.field_u = (bb) (this);
-            this.b((byte) -63, this.field_K);
-            this.a(var3 + (55 + var5), 300, (byte) -104, 0, 0);
+            this.field_K.setWidgetBounds(40, var6, (byte) -71, var3, -var6 + 300 >> 1);
+            this.field_K.listener = (WidgetListener) (this);
+            this.addChild((byte) -63, this.field_K);
+            this.setWidgetBounds(var3 + (55 + var5), 300, (byte) -104, 0, 0);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "s.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -167,7 +167,7 @@ final class s extends ee implements pe, pl {
         return "<u=2164A2><col=2164A2>";
     }
 
-    final boolean handleKeyInput(int param0, int param1, char param2, el param3) {
+    final boolean handleKeyInput(int param0, int param1, char param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_10_0 = false;
@@ -223,7 +223,7 @@ final class s extends ee implements pe, pl {
         return "</col></u>";
     }
 
-    public final void onButtonActivated(int param0, byte param1, int param2, int param3, hk param4) {
+    public final void onButtonActivated(int param0, byte param1, int param2, int param3, ButtonWidget param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

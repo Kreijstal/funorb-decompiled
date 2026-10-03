@@ -3,18 +3,18 @@
  */
 import java.io.*;
 
-final class pf extends ee implements ga, pl {
+final class pf extends WidgetContainer implements ga, ButtonActivationListener {
     private String field_L;
     static ResourceArchive field_O;
     private dj field_P;
     private boolean field_C;
-    private hk field_G;
+    private ButtonWidget field_G;
     private static gk field_K;
     static boolean endingEntityScanClear;
     private boolean field_I;
-    private hk field_M;
+    private ButtonWidget field_M;
     private dj field_J;
-    private hk field_E;
+    private ButtonWidget field_E;
     static String js5CrcErrorText;
     private boolean field_N;
 
@@ -128,7 +128,7 @@ final class pf extends ee implements ga, pl {
         RuntimeException var3 = null;
         try {
           if (param0 == this.field_J) {
-            this.field_P.a((byte) -69, (el) (this));
+            this.field_P.requestKeyboardFocus((byte) -69, (UiWidget) (this));
           }
           if (this.field_P == param0) {
             this.g(param1 ^ -18649);
@@ -169,7 +169,7 @@ final class pf extends ee implements ga, pl {
 
     final void renderWidget(int parentX, int parentY, byte methodGuard, int renderPass) {
         if (!(this.field_L == null)) {
-            ng.field_F.drawParagraph(this.field_L, this.widgetX + parentX + 20, 15 + this.widgetY + parentY, -40 + this.widgetWidth, this.widgetHeight, 16777215, -1, 1, 0, ng.field_F.maxAscent);
+            DialogLayer.sharedUiFont.drawParagraph(this.field_L, this.widgetX + parentX + 20, 15 + this.widgetY + parentY, -40 + this.widgetWidth, this.widgetHeight, 16777215, -1, 1, 0, DialogLayer.sharedUiFont.maxAscent);
         }
         if (null != this.field_M) {
             SoftwareRasterizer.drawHorizontalLine(10 + parentX, 134 + parentY, -20 + this.widgetWidth, 4210752);
@@ -188,7 +188,7 @@ final class pf extends ee implements ga, pl {
         }
     }
 
-    final boolean handleKeyInput(int param0, int param1, char param2, el param3) {
+    final boolean handleKeyInput(int param0, int param1, char param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
         boolean stackIn_9_0 = false;
@@ -224,14 +224,14 @@ final class pf extends ee implements ga, pl {
     }
 
     final String h(int param0) {
-        if (null == this.field_J.field_s) {
+        if (null == this.field_J.widgetText) {
             return "";
         }
         if (param0 < 62) {
-            el var3 = (el) null;
-            this.handleKeyInput(28, 70, '"', (el) null);
+            UiWidget var3 = (UiWidget) null;
+            this.handleKeyInput(28, 70, '"', (UiWidget) null);
         }
-        return this.field_J.field_s;
+        return this.field_J.widgetText;
     }
 
     final static int a(int param0, int param1, mb param2, mb param3, String param4, boolean param5, int param6) {
@@ -297,7 +297,7 @@ final class pf extends ee implements ga, pl {
                 var11_ref_String = "";
               }
               fj.field_q.writeNullTerminatedText(var11_ref_String, 0);
-              el.a(false, fc.field_d, fj.field_q, ld.field_c, InstrumentPatch.field_l);
+              UiWidget.a(false, fc.field_d, fj.field_q, ld.field_c, InstrumentPatch.field_l);
               fj.field_q.backpatchLengthShortBE(-var10 + fj.field_q.position, true);
             } else {
               fc.field_d.position = 0;
@@ -320,7 +320,7 @@ final class pf extends ee implements ga, pl {
               fj.field_q.writeByte((byte) 124, 16);
               fj.field_q.position = fj.field_q.position + 1;
               var9 = fj.field_q.position;
-              el.a(false, fc.field_d, fj.field_q, ld.field_c, InstrumentPatch.field_l);
+              UiWidget.a(false, fc.field_d, fj.field_q, ld.field_c, InstrumentPatch.field_l);
               fj.field_q.backpatchLengthByte(11700, fj.field_q.position - var9);
             }
             cm.a(-1, -1);
@@ -328,7 +328,7 @@ final class pf extends ee implements ga, pl {
           }
           L7: {
             if ((field_K == PacketBuffer.field_l) &&
-                (el.b(30000, 1))) {
+                (UiWidget.b(30000, 1))) {
               var9 = eh.field_d.readUnsignedByte((byte) 34);
               eh.field_d.position = 0;
               if ((var9 >= 100) &&
@@ -350,7 +350,7 @@ final class pf extends ee implements ga, pl {
                 p.field_k = -1;
                 ScorePopup.field_l = var9;
               } else {
-                el.b(30000, DualLinkNode.d(112));
+                UiWidget.b(30000, DualLinkNode.d(112));
                 fi.field_b = new Boolean(Bzip2DecoderState.a(eh.field_d, 0));
                 eh.field_d.position = 0;
               }
@@ -358,10 +358,10 @@ final class pf extends ee implements ga, pl {
           }
           if (PacketBuffer.field_l == v.field_l) {
             var9 = 2;
-            if (el.b(30000, var9)) {
+            if (UiWidget.b(30000, var9)) {
               var10 = eh.field_d.readUnsignedShortBE(true);
               eh.field_d.position = 0;
-              if (el.b(30000, var10)) {
+              if (UiWidget.b(30000, var10)) {
                 var11 = si.field_i.length;
                 for (var12 = 0; var12 < var11; var12++) {
                   si.field_i[var12] = eh.field_d.readZeroPrefixedNullTerminatedText(27425);
@@ -435,7 +435,7 @@ final class pf extends ee implements ga, pl {
         }
     }
 
-    public final void onButtonActivated(int param0, byte param1, int param2, int param3, hk param4) {
+    public final void onButtonActivated(int param0, byte param1, int param2, int param3, ButtonWidget param4) {
         int var7 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -445,7 +445,7 @@ final class pf extends ee implements ga, pl {
         var7 = Geoblox.clientControlFlowFlag;
         try {
           if (param1 != -20) {
-            this.field_E = (hk) null;
+            this.field_E = (ButtonWidget) null;
           }
           if (this.field_E == param4) {
             this.g(0);
@@ -685,23 +685,23 @@ final class pf extends ee implements ga, pl {
 
     private final void g(int param0) {
         if ((!(!SpriteState.e(param0)) ||
-            (!(this.field_J.field_s.length() <= 0) &&
-              !(0 >= this.field_P.field_s.length())))) {
-          ef.a(this.field_P.field_s, (byte) 66, this.field_J.field_s);
+            (!(this.field_J.widgetText.length() <= 0) &&
+              !(0 >= this.field_P.widgetText.length())))) {
+          ef.a(this.field_P.widgetText, (byte) 66, this.field_J.widgetText);
         }
     }
 
     pf(String param0, String param1, boolean param2, boolean param3, boolean param4) {
-        super(0, 0, 310, 190, (dh) null);
+        super(0, 0, 310, 190, (WidgetRenderer) null);
         hd dupTemp$0 = null;
         hd dupTemp$1 = null;
         boolean stackIn_4_1 = false;
         boolean stackIn_7_1 = false;
         boolean stackIn_10_1 = false;
-        hk stackIn_18_1 = null;
-        hk stackIn_18_2 = null;
-        hk stackIn_19_1 = null;
-        hk stackIn_19_2 = null;
+        ButtonWidget stackIn_18_1 = null;
+        ButtonWidget stackIn_18_2 = null;
+        ButtonWidget stackIn_19_1 = null;
+        ButtonWidget stackIn_19_2 = null;
         String stackIn_19_3 = null;
         RuntimeException stackIn_59_0 = null;
         StringBuilder stackIn_59_1 = null;
@@ -742,10 +742,10 @@ final class pf extends ee implements ga, pl {
               throw new IllegalStateException();
             }
           }
-          this.field_J = (dj) ((Object) new hc(param0, (bb) (this), 100));
-          this.field_P = (dj) ((Object) new hc("", (bb) (this), 20));
+          this.field_J = (dj) ((Object) new hc(param0, (WidgetListener) (this), 100));
+          this.field_P = (dj) ((Object) new hc("", (WidgetListener) (this), 20));
           if (!this.field_N) {
-            this.field_E = new hk(k.loginText, (bb) null);
+            this.field_E = new ButtonWidget(k.loginText, (WidgetListener) null);
             stackIn_18_1 = null;
             stackIn_18_2 = null;
             if (this.field_I) {
@@ -757,41 +757,41 @@ final class pf extends ee implements ga, pl {
               stackIn_19_2 = null;
               stackIn_19_3 = ll.backText;
             }
-            ((pf) (this)).field_G = new hk(stackIn_19_3, (bb) null);
+            ((pf) (this)).field_G = new ButtonWidget(stackIn_19_3, (WidgetListener) null);
             if (this.field_C) {
-              this.field_M = new hk(se.createAnAccountText, (bb) (this));
+              this.field_M = new ButtonWidget(se.createAnAccountText, (WidgetListener) (this));
             }
           } else {
-            this.field_E = new hk(a.retryText, (bb) null);
-            this.field_G = new hk(rj.quitToWebsiteText, (bb) null);
-            this.field_J.field_D = false;
+            this.field_E = new ButtonWidget(a.retryText, (WidgetListener) null);
+            this.field_G = new ButtonWidget(rj.quitToWebsiteText, (WidgetListener) null);
+            this.field_J.enabled = false;
           }
-          this.field_J.field_q = (dh) ((Object) new ac(10000536));
-          this.field_P.field_q = (dh) ((Object) new uh(10000536));
+          this.field_J.renderer = (WidgetRenderer) ((Object) new ac(10000536));
+          this.field_P.renderer = (WidgetRenderer) ((Object) new uh(10000536));
           var6 = new ml();
-          this.field_E.field_q = (dh) ((Object) var6);
+          this.field_E.renderer = (WidgetRenderer) ((Object) var6);
           if (this.field_G != null) {
-            this.field_G.field_q = (dh) ((Object) var6);
+            this.field_G.renderer = (WidgetRenderer) ((Object) var6);
           }
           if (this.field_M != null) {
-            this.field_M.field_q = (dh) ((Object) var6);
+            this.field_M.renderer = (WidgetRenderer) ((Object) var6);
           }
-          this.field_J.field_j = SocketArchiveNetworkClient.loginUsernameTooltipText;
+          this.field_J.hoverText = SocketArchiveNetworkClient.loginUsernameTooltipText;
           if (null != this.field_M) {
-            this.field_M.field_j = ic.loginCreateTooltipText;
+            this.field_M.hoverText = ic.loginCreateTooltipText;
           }
           if (this.field_N) {
-            this.field_G.field_j = j.quitWarningText;
+            this.field_G.hoverText = j.quitWarningText;
           } else {
             if (!this.field_I) {
-              this.field_G.field_q = (dh) ((Object) new fh());
+              this.field_G.renderer = (WidgetRenderer) ((Object) new fh());
             } else {
-              this.field_G.field_j = vi.loginJustPlayTooltipText;
-              this.field_G.field_q = (dh) ((Object) new fh());
+              this.field_G.hoverText = vi.loginJustPlayTooltipText;
+              this.field_G.renderer = (WidgetRenderer) ((Object) new fh());
             }
           }
           this.widgetY = 15;
-          var7 = ng.field_F;
+          var7 = DialogLayer.sharedUiFont;
           if (this.field_L != null) {
             this.widgetY = this.widgetY + (var7.measureWrappedHeight(this.field_L, this.widgetWidth - 40, var7.maxAscent) + 5);
           }
@@ -806,49 +806,49 @@ final class pf extends ee implements ga, pl {
           }
           dupTemp$0 = new hd(10, this.widgetY, -20 + this.widgetWidth, 25, this.field_J, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
-          this.b((byte) -110, dupTemp$0);
-          this.widgetY = this.widgetY + (((el) ((Object) var12)).widgetHeight + 5);
+          this.addChild((byte) -110, dupTemp$0);
+          this.widgetY = this.widgetY + (((UiWidget) ((Object) var12)).widgetHeight + 5);
           dupTemp$1 = new hd(10, this.widgetY, this.widgetWidth - 20, 25, this.field_P, false, 80, 3, var7, 16777215, LoginPayloadKind.createPasswordText);
           var13 = dupTemp$1;
-          this.b((byte) -120, dupTemp$1);
-          this.field_E.field_u = (bb) (this);
-          this.widgetY = this.widgetY + (((el) ((Object) var13)).widgetHeight + 5);
+          this.addChild((byte) -120, dupTemp$1);
+          this.field_E.listener = (WidgetListener) (this);
+          this.widgetY = this.widgetY + (((UiWidget) ((Object) var13)).widgetHeight + 5);
           if (this.field_M != null) {
-            this.field_M.field_u = (bb) (this);
+            this.field_M.listener = (WidgetListener) (this);
           }
           if (this.field_G != null) {
-            this.field_G.field_u = (bb) (this);
+            this.field_G.listener = (WidgetListener) (this);
           }
           if (this.field_M != null) {
-            this.field_E.a(30, this.widgetWidth - 95, (byte) -92, this.widgetY, 85);
+            this.field_E.setWidgetBounds(30, this.widgetWidth - 95, (byte) -92, this.widgetY, 85);
             this.widgetY = this.widgetY + 60;
           } else {
-            this.field_E.a(30, -10 + this.widgetWidth - 6, (byte) -33, this.widgetY, 8);
+            this.field_E.setWidgetBounds(30, -10 + this.widgetWidth - 6, (byte) -33, this.widgetY, 8);
             this.widgetY = this.widgetY + 35;
           }
           if (this.field_M != null) {
-            this.field_M.a(30, -10 + this.widgetWidth - 6, (byte) -42, this.widgetY, 8);
+            this.field_M.setWidgetBounds(30, -10 + this.widgetWidth - 6, (byte) -42, this.widgetY, 8);
             this.widgetY = this.widgetY + 35;
           }
           L17: {
             if (this.field_G != null) {
               if ((!this.field_N) &&
                   (!this.field_I)) {
-                this.field_G.a(20, 40, (byte) -55, this.widgetY, 8);
+                this.field_G.setWidgetBounds(20, 40, (byte) -55, this.widgetY, 8);
                 this.widgetY = this.widgetY + 25;
                 break L17;
               }
-              this.field_G.a(30, -10 + (this.widgetWidth - 6), (byte) -64, this.widgetY, 8);
+              this.field_G.setWidgetBounds(30, -10 + (this.widgetWidth - 6), (byte) -64, this.widgetY, 8);
               this.widgetY = this.widgetY + 35;
             }
           }
-          this.a(3 + this.widgetY, this.widgetWidth, (byte) -17, 0, 0);
-          this.b((byte) -83, this.field_E);
+          this.setWidgetBounds(3 + this.widgetY, this.widgetWidth, (byte) -17, 0, 0);
+          this.addChild((byte) -83, this.field_E);
           if (null != this.field_M) {
-            this.b((byte) -111, this.field_M);
+            this.addChild((byte) -111, this.field_M);
           }
           if (this.field_G != null) {
-            this.b((byte) -127, this.field_G);
+            this.addChild((byte) -127, this.field_G);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
