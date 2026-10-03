@@ -14,7 +14,7 @@ final class DialRenderer implements WidgetRenderer {
     private int padding;
     private int backgroundColor;
     private int textShadowColor;
-    static wa field_j;
+    static WidgetTheme field_j;
     static Sprite[] silverStarFrames;
 
     public final void drawWidget(int parentX, int methodGuard, int parentY, boolean widgetEnabled, UiWidget widget) {

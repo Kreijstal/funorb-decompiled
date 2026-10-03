@@ -204,7 +204,7 @@ final class DraggableWidget extends SingleChildWidget {
     final static void f(byte param0) {
         if (param0 == 24) {
             UnderlinedButtonRenderer.b(-6011);
-            ii.field_a = true;
+            ArchiveLoadStep.field_a = true;
             AgeValidator.field_i = true;
             kd.field_e.hideAllDialogs(param0 + 10912);
             fa.showMessageDialog(ah.connectionLostReconnectingText, 480, false);
@@ -212,7 +212,7 @@ final class DraggableWidget extends SingleChildWidget {
         }
         DraggableWidget.g((byte) 86);
         UnderlinedButtonRenderer.b(-6011);
-        ii.field_a = true;
+        ArchiveLoadStep.field_a = true;
         AgeValidator.field_i = true;
         kd.field_e.hideAllDialogs(param0 + 10912);
         fa.showMessageDialog(ah.connectionLostReconnectingText, 480, false);

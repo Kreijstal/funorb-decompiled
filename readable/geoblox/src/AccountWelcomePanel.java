@@ -178,7 +178,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "loginm2");
                 if (textResourceBytes != null) {
-                  uj.loginMessage2Text = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  FullscreenFailureReason.loginMessage2Text = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "loginm1");
                 if (textResourceBytes != null) {
@@ -1138,7 +1138,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "cancel");
                 if (null != textResourceBytes) {
-                  ck.cancelText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  TextTemplateArgumentType.cancelText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "pleaselogintoplay");
                 if (textResourceBytes != null) {
@@ -1222,7 +1222,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "logging_in");
                 if (null != textResourceBytes) {
-                  rj.loggingInText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  DisplayModeInfo.loggingInText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "reconnect");
                 if (textResourceBytes != null) {
@@ -1272,7 +1272,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "quittowebsite");
                 if (textResourceBytes != null) {
-                  rj.quitToWebsiteText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  DisplayModeInfo.quitToWebsiteText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "connectionrestored");
                 if (textResourceBytes != null) {
@@ -1424,7 +1424,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "create");
                 if (textResourceBytes != null) {
-                  di.createText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  TextTemplateDefinitionLoader.createText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "create_pleasechooseapassword");
                 if (textResourceBytes != null) {
@@ -1656,7 +1656,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "create_displayname_hint");
                 if (null != textResourceBytes) {
-                  gk.createDisplayNameHintText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  ClientProtocolStage.createDisplayNameHintText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "create_password_tooltip");
                 if (null != textResourceBytes) {
@@ -1788,7 +1788,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "create_passwordvalid");
                 if (textResourceBytes != null) {
-                  ii.createPasswordValidText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  ArchiveLoadStep.createPasswordValidText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "create_emailvalid");
                 if (textResourceBytes != null) {
@@ -2043,7 +2043,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "highscores");
                 if (textResourceBytes != null) {
-                  ii.highscoresText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  ArchiveLoadStep.highscoresText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "rankings");
                 if (textResourceBytes != null) {
@@ -2175,7 +2175,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "prev");
                 if (textResourceBytes != null) {
-                  tl.previousText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  RasterTargetSnapshot.previousText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "next");
                 if (null != textResourceBytes) {
@@ -2797,7 +2797,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "fs_accept_aftercancel");
                 if (textResourceBytes != null) {
-                  uj.fullscreenAfterCancelText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  FullscreenFailureReason.fullscreenAfterCancelText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "fs_accept_countdown_sing");
                 if (null != textResourceBytes) {
@@ -2953,7 +2953,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "pleasewait_dotdotdot");
                 if (textResourceBytes != null) {
-                  vg.pleaseWaitText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  SecondaryNodeHashTable.pleaseWaitText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "serviceunavailable");
                 if (textResourceBytes != null) {

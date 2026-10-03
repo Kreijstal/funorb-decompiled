@@ -134,7 +134,7 @@ final class AchievementSubmission extends IntrusiveNode {
                   cameraYBasisOrVertexX = mesh.firstVertexSourceX[cameraXBasisOrDeltaZOrVertexIndex];
                   cameraYBasisOrVertexY = mesh.firstVertexSourceY[cameraXBasisOrDeltaZOrVertexIndex];
                   cameraYBasisOrVertexZ = mesh.firstVertexSourceZ[cameraXBasisOrDeltaZOrVertexIndex];
-                  ii.firstVertexTransformedX[cameraXBasisOrDeltaZOrVertexIndex] = (cameraXXOrNormalXYQ16 * cameraYBasisOrVertexX - (-(cameraXYOrNormalXZQ16 * cameraYBasisOrVertexY) - cameraXZQ16OrNormalIndex * cameraYBasisOrVertexZ) >> 16) + cameraTranslationXScaledOrNormalXXQ16;
+                  ArchiveLoadStep.firstVertexTransformedX[cameraXBasisOrDeltaZOrVertexIndex] = (cameraXXOrNormalXYQ16 * cameraYBasisOrVertexX - (-(cameraXYOrNormalXZQ16 * cameraYBasisOrVertexY) - cameraXZQ16OrNormalIndex * cameraYBasisOrVertexZ) >> 16) + cameraTranslationXScaledOrNormalXXQ16;
                   pg.firstVertexTransformedY[cameraXBasisOrDeltaZOrVertexIndex] = cameraTranslationYScaledOrNormalYXQ16 + (cameraYBasisOrVertexZ * cameraYZQ16OrNormalX + cameraYYOrNormalYZQ16 * cameraYBasisOrVertexY + cameraYBasisOrVertexX * cameraYXOrNormalYYQ16 >> 16);
                   kf.firstVertexTransformedZ[cameraXBasisOrDeltaZOrVertexIndex] = (cameraYBasisOrVertexZ * cameraZZQ16OrNormalY + (cameraZYOrNormalZZQ16 * cameraYBasisOrVertexY + cameraZXOrNormalZYQ16 * cameraYBasisOrVertexX) >> 16) + cameraTranslationZOrNormalZXQ16;
                   cameraYBasisOrVertexX = mesh.secondVertexSourceX[cameraXBasisOrDeltaZOrVertexIndex];

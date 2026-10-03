@@ -26,7 +26,7 @@ final class md {
             var7 = ul.field_c.get(11);
             var8 = ul.field_c.get(12);
             var9 = ul.field_c.get(13);
-            return ArchiveNetworkClient.field_a[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + mb.field_a[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
+            return ArchiveNetworkClient.field_a[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + LoginTextValue.field_a[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
         }
         md.a((byte) -70, -99L);
         var4 = ul.field_c.get(5);
@@ -35,7 +35,7 @@ final class md {
         var7 = ul.field_c.get(11);
         var8 = ul.field_c.get(12);
         var9 = ul.field_c.get(13);
-        return ArchiveNetworkClient.field_a[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + mb.field_a[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
+        return ArchiveNetworkClient.field_a[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + LoginTextValue.field_a[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
     }
 
     public static void a(byte param0) {

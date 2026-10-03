@@ -5,7 +5,7 @@ final class al {
     final static void a(int param0) {
         int var2 = 0;
         int var3 = 0;
-        wc var4_ref_wc = null;
+        CrcAcknowledgedPacket var4_ref_wc = null;
         int var6 = 0;
         PacketBuffer var9 = null;
         RuntimeException decompiledCaughtException = null;
@@ -43,10 +43,10 @@ final class al {
           } else {
             if (1 == var2) {
               var3 = var9.readIntBE((byte) -101);
-              var4_ref_wc = (wc) ((Object) DirectByteStorage.field_g.firstForIteration(0));
+              var4_ref_wc = (CrcAcknowledgedPacket) ((Object) DirectByteStorage.field_g.firstForIteration(0));
               while (var4_ref_wc != null) {
-                if (var3 != var4_ref_wc.field_h) {
-                  var4_ref_wc = (wc) ((Object) DirectByteStorage.field_g.nextForIteration(1));
+                if (var3 != var4_ref_wc.acknowledgementCrc) {
+                  var4_ref_wc = (CrcAcknowledgedPacket) ((Object) DirectByteStorage.field_g.nextForIteration(1));
                   continue;
                 }
                 break;
@@ -58,7 +58,7 @@ final class al {
               Bzip2DecoderState.closeSessionSocket((byte) -124);
               return;
             }
-            IterableNodeHashTable.a((Throwable) null, "A1: " + og.e(55), (byte) 125);
+            IterableNodeHashTable.a((Throwable) null, "A1: " + TextTemplateDefinition.e(55), (byte) 125);
             Bzip2DecoderState.closeSessionSocket((byte) -120);
           }
           return;
@@ -131,7 +131,7 @@ final class al {
               try {
                 var8 = "tuhstatbut";
                 var3 = (String) (wk.a((byte) -6, param1, "getcookies"));
-                var4 = uj.a(';', true, var3);
+                var4 = FullscreenFailureReason.a(';', true, var3);
                 for (var5 = 0; var5 < var4.length; var5++) {
                   var6 = var4[var5].indexOf('=');
                   if ((var6 >= 0) &&

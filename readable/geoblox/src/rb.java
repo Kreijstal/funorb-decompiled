@@ -23,7 +23,7 @@ final class rb {
           if (!mf.decodeSpritesFromArchive(fileId, groupId, 107, glyphGraphicsArchive)) {
             return null;
           }
-          fontBeforeReturn = lc.buildMonochromeFontFromDecodedSprites(4520, fontMetricsArchive.getFile(groupId, -28153, fileId));
+          fontBeforeReturn = HighscoreNameEntry.buildMonochromeFontFromDecodedSprites(4520, fontMetricsArchive.getFile(groupId, -28153, fileId));
           return fontBeforeReturn;
         } catch (java.lang.RuntimeException fontFailure) {
           caughtFontFailure = fontFailure;

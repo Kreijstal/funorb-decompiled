@@ -14,7 +14,7 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
         String eventArgumentDescription = null;
         RuntimeException caughtCallbackFailure = null;
         try {
-          if (je.keyboardListener == null) {
+          if (TrackedPcmStream.keyboardListener == null) {
             return;
           }
           TextPairLoginPayload.keyboardIdleTicks = 0;
@@ -28,12 +28,12 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
           } else {
             internalKeyCode = -1;
           }
-          if ((ii.keyStateWriteIndexOrResetSentinel >= 0) &&
+          if ((ArchiveLoadStep.keyStateWriteIndexOrResetSentinel >= 0) &&
               (internalKeyCode >= 0)) {
-            gf.queuedKeyStateChanges[ii.keyStateWriteIndexOrResetSentinel] = internalKeyCode;
-            ii.keyStateWriteIndexOrResetSentinel = 127 & 1 + ii.keyStateWriteIndexOrResetSentinel;
-            if (gk.keyStateReadIndex == ii.keyStateWriteIndexOrResetSentinel) {
-              ii.keyStateWriteIndexOrResetSentinel = -1;
+            gf.queuedKeyStateChanges[ArchiveLoadStep.keyStateWriteIndexOrResetSentinel] = internalKeyCode;
+            ArchiveLoadStep.keyStateWriteIndexOrResetSentinel = 127 & 1 + ArchiveLoadStep.keyStateWriteIndexOrResetSentinel;
+            if (ClientProtocolStage.keyStateReadIndex == ArchiveLoadStep.keyStateWriteIndexOrResetSentinel) {
+              ArchiveLoadStep.keyStateWriteIndexOrResetSentinel = -1;
             }
           }
           if (internalKeyCode >= 0) {
@@ -81,7 +81,7 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
         int typedCharacterCode = 0;
         int nextEventWriteIndex = 0;
         try {
-            if (!(je.keyboardListener == null)) {
+            if (!(TrackedPcmStream.keyboardListener == null)) {
                 typedCharacterCode = event.getKeyChar();
                 if (typedCharacterCode != 0 && typedCharacterCode != 65535 && tc.a((byte) -112, (char) typedCharacterCode)) {
                     nextEventWriteIndex = 1 + BufferedSocket.keyEventWriteIndex & 127;
@@ -106,7 +106,7 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
         String eventArgumentDescription = null;
         RuntimeException caughtCallbackFailure = null;
         try {
-          if (je.keyboardListener != null) {
+          if (TrackedPcmStream.keyboardListener != null) {
             TextPairLoginPayload.keyboardIdleTicks = 0;
             internalKeyCode = event.getKeyCode();
             if ((internalKeyCode >= 0) &&
@@ -115,12 +115,12 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
             } else {
               internalKeyCode = -1;
             }
-            if ((ii.keyStateWriteIndexOrResetSentinel >= 0) &&
+            if ((ArchiveLoadStep.keyStateWriteIndexOrResetSentinel >= 0) &&
                 (0 <= internalKeyCode)) {
-              gf.queuedKeyStateChanges[ii.keyStateWriteIndexOrResetSentinel] = ~internalKeyCode;
-              ii.keyStateWriteIndexOrResetSentinel = 1 + ii.keyStateWriteIndexOrResetSentinel & 127;
-              if (gk.keyStateReadIndex == ii.keyStateWriteIndexOrResetSentinel) {
-                ii.keyStateWriteIndexOrResetSentinel = -1;
+              gf.queuedKeyStateChanges[ArchiveLoadStep.keyStateWriteIndexOrResetSentinel] = ~internalKeyCode;
+              ArchiveLoadStep.keyStateWriteIndexOrResetSentinel = 1 + ArchiveLoadStep.keyStateWriteIndexOrResetSentinel & 127;
+              if (ClientProtocolStage.keyStateReadIndex == ArchiveLoadStep.keyStateWriteIndexOrResetSentinel) {
+                ArchiveLoadStep.keyStateWriteIndexOrResetSentinel = -1;
               }
             }
           }
@@ -155,10 +155,10 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
         String eventArgumentDescription = null;
         RuntimeException caughtCallbackFailure = null;
         try {
-          if (null == je.keyboardListener) {
+          if (null == TrackedPcmStream.keyboardListener) {
             return;
           }
-          ii.keyStateWriteIndexOrResetSentinel = -1;
+          ArchiveLoadStep.keyStateWriteIndexOrResetSentinel = -1;
           return;
         } catch (java.lang.RuntimeException callbackFailure) {
           caughtCallbackFailure = callbackFailure;

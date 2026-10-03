@@ -3,7 +3,7 @@
  */
 final class ug {
     static int newAchievementMask;
-    static vg field_a;
+    static SecondaryNodeHashTable field_a;
     static String createEmailText;
 
     final static StringBuilder a(StringBuilder param0, byte param1, char param2, int param3) {

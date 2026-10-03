@@ -15,12 +15,12 @@ final class qe {
         StringBuilder stackIn_40_1 = null;
         String stackIn_41_2 = null;
         RuntimeException decompiledCaughtException = null;
-        rj[] var6 = null;
+        DisplayModeInfo[] var6 = null;
         RuntimeException var6_ref = null;
         int var7_int = 0;
         java.awt.Frame var7 = null;
         int var9 = 0;
-        rj[] var10 = null;
+        DisplayModeInfo[] var10 = null;
         PlatformTask var11 = null;
         var9 = Geoblox.clientControlFlowFlag;
         try {
@@ -36,20 +36,20 @@ final class qe {
             }
             var7_int = 0;
             for (var8 = 0; var8 < var10.length; var8++) {
-              if (param3 != var10[var8].field_d) {
+              if (param3 != var10[var8].width) {
                 continue;
               }
-              if (var10[var8].field_f == param2) {
+              if (var10[var8].height == param2) {
                 if ((param5 != 0) &&
-                    (param5 != var10[var8].field_a)) {
+                    (param5 != var10[var8].refreshRate)) {
                   continue;
                 }
                 if ((var7_int != 0) &&
-                    (param0 >= var10[var8].field_h)) {
+                    (param0 >= var10[var8].bitDepth)) {
                   continue;
                 }
                 var7_int = 1;
-                param0 = var10[var8].field_h;
+                param0 = var10[var8].bitDepth;
               }
             }
             if (!(var7_int != 0)) {

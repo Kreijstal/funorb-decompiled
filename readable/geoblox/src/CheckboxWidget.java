@@ -39,19 +39,19 @@ final class CheckboxWidget extends ButtonWidget {
         }
     }
 
-    final static rj[] a(int param0, PlatformTaskDispatcher param1) {
+    final static DisplayModeInfo[] a(int param0, PlatformTaskDispatcher param1) {
         int var5 = 0;
-        rj[] stackIn_3_0 = null;
-        rj[] stackIn_9_0 = null;
-        rj[] stackIn_16_0 = null;
+        DisplayModeInfo[] stackIn_3_0 = null;
+        DisplayModeInfo[] stackIn_9_0 = null;
+        DisplayModeInfo[] stackIn_16_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int[] var3 = null;
-        rj[] var4 = null;
-        rj var6 = null;
+        DisplayModeInfo[] var4 = null;
+        DisplayModeInfo var6 = null;
         int var7 = 0;
         PlatformTask var8 = null;
         int[] var9 = null;
@@ -59,7 +59,7 @@ final class CheckboxWidget extends ButtonWidget {
         var7 = Geoblox.clientControlFlowFlag;
         try {
           if (!param1.hasFullscreenSupport(-26098)) {
-            stackIn_3_0 = new rj[]{};
+            stackIn_3_0 = new DisplayModeInfo[]{};
             return stackIn_3_0;
           }
           var8 = param1.requestDisplayModes(34);
@@ -67,23 +67,23 @@ final class CheckboxWidget extends ButtonWidget {
             bc.sleepMillis(0, 10L);
           }
           if (var8.status == 2) {
-            stackIn_9_0 = new rj[]{};
+            stackIn_9_0 = new DisplayModeInfo[]{};
             return stackIn_9_0;
           }
           var10 = (int[]) (var8.result);
           var9 = var10;
           var3 = var9;
-          var4 = new rj[var10.length >> 2];
+          var4 = new DisplayModeInfo[var10.length >> 2];
           if (param0 <= 61) {
             field_H = 120L;
           }
           for (var5 = 0; var5 < var4.length; var5++) {
-            var6 = new rj();
+            var6 = new DisplayModeInfo();
             var4[var5] = var6;
-            var6.field_d = var3[var5 << 2];
-            var6.field_f = var3[1 + (var5 << 2)];
-            var6.field_h = var3[2 + (var5 << 2)];
-            var6.field_a = var3[(var5 << 2) + 3];
+            var6.width = var3[var5 << 2];
+            var6.height = var3[1 + (var5 << 2)];
+            var6.bitDepth = var3[2 + (var5 << 2)];
+            var6.refreshRate = var3[(var5 << 2) + 3];
           }
           stackIn_16_0 = var4;
           return stackIn_16_0;

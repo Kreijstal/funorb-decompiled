@@ -189,14 +189,14 @@ final class ul {
             return false;
           }
           var3_int = param0.field_kb - param1.field_kb;
-          if (eg.field_l != param0.field_mb) {
+          if (ReflectionCheckRequest.field_l != param0.field_mb) {
             if (param0.field_mb == null) {
               var3_int += 200;
             }
           } else {
             var3_int -= 200;
           }
-          if (param1.field_mb == eg.field_l) {
+          if (param1.field_mb == ReflectionCheckRequest.field_l) {
             var3_int += 200;
           } else {
             if (null == param1.field_mb) {
@@ -232,7 +232,7 @@ final class ul {
             var2 = new Sprite(param1.getNamedFile(0, "", "final_frame.jpg"), (java.awt.Component) ((Object) MessageDialog.gameCanvas));
             var3 = var2.width;
             var4 = var2.height;
-            SpriteCheckboxRenderer.b(param0 + 21619);
+            SpriteCheckboxRenderer.pushRasterTarget(param0 + 21619);
             bk.field_b = new Sprite(var3, 3 * var4 / 4);
             bk.field_b.setAsRasterTarget();
             var2.drawUnmasked(0, 0);
@@ -243,7 +243,7 @@ final class ul {
             }
             var2.drawUnmasked(0, -bk.field_b.height);
             cl.field_b.trimY = bk.field_b.height;
-            id.a(true);
+            id.restoreRasterTarget(true);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ul.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

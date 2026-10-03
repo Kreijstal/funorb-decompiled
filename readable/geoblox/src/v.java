@@ -22,7 +22,7 @@ final class v {
     private int field_s;
     static String tutorialSkipMessage;
     private boolean field_t;
-    static gk field_l;
+    static ClientProtocolStage field_l;
     static long field_r;
 
     public static void a(boolean param0) {
@@ -74,8 +74,8 @@ final class v {
           compressionType = buffer.readUnsignedByte((byte) 34);
           packedLength = buffer.readIntBE((byte) -97);
           if (packedLength >= 0) {
-            if (!((uj.maximumArchiveLength != 0) &&
-                (packedLength > uj.maximumArchiveLength))) {
+            if (!((FullscreenFailureReason.maximumArchiveLength != 0) &&
+                (packedLength > FullscreenFailureReason.maximumArchiveLength))) {
               if (uncompressedTypeComplement == ~compressionType) {
                 allocatedUncompressedBytes = new byte[packedLength];
                 uncompressedBytesAlias = allocatedUncompressedBytes;
@@ -86,8 +86,8 @@ final class v {
               }
               unpackedLength = buffer.readIntBE((byte) -49);
               if (unpackedLength >= 0) {
-                if (!((uj.maximumArchiveLength != 0) &&
-                    (uj.maximumArchiveLength < unpackedLength))) {
+                if (!((FullscreenFailureReason.maximumArchiveLength != 0) &&
+                    (FullscreenFailureReason.maximumArchiveLength < unpackedLength))) {
                   allocatedDecompressedBytes = new byte[unpackedLength];
                   decompressedBytesAlias = allocatedDecompressedBytes;
                   decompressedBytes = decompressedBytesAlias;
@@ -137,7 +137,7 @@ final class v {
           return;
         }
         if (param0 < -108) {
-          if (og.field_n <= 0) {
+          if (TextTemplateDefinition.field_n <= 0) {
             this.field_t = false;
             if (this.field_t) {
               fieldTemp$1 = this.field_c - 1;
@@ -191,7 +191,7 @@ final class v {
           return;
         }
         this.field_a = -79;
-        if (og.field_n > 0) {
+        if (TextTemplateDefinition.field_n > 0) {
           if (this.field_t) {
             fieldTemp$3 = this.field_c - 1;
             this.field_c = this.field_c - 1;
@@ -400,7 +400,7 @@ final class v {
             if (li.field_c < this.field_k) {
                 return false;
             }
-            if (og.field_n > 0) {
+            if (TextTemplateDefinition.field_n > 0) {
                 return true;
             }
             return false;
@@ -408,7 +408,7 @@ final class v {
         if (li.field_c < this.field_k) {
             return false;
         }
-        if (og.field_n > 0) {
+        if (TextTemplateDefinition.field_n > 0) {
             return true;
         }
         return false;
@@ -450,6 +450,6 @@ final class v {
         field_e = null;
         tutorialSkipMessage = "To skip this tutorial, press <img=3> at any point.";
         field_q = new java.awt.Color(10040319);
-        field_l = new gk();
+        field_l = new ClientProtocolStage();
     }
 }

@@ -25,7 +25,7 @@ abstract class SessionGameApplet extends GameApplet {
         if (!sb.a(75)) {
           return -1;
         }
-        if (ii.field_e) {
+        if (ArchiveLoadStep.field_e) {
           return -1;
         }
         var2 = ri.a(true, ContextualRuntimeException.a(true), this.field_r, this.field_v, al.b(param0 + 1), 0);
@@ -39,7 +39,7 @@ abstract class SessionGameApplet extends GameApplet {
           }
           kd.b((byte) 103);
           TextInputValidator.a((byte) 124, var2, AudioService.field_a);
-          ii.field_e = true;
+          ArchiveLoadStep.field_e = true;
           DisplayNamePanel.field_G = oa.a(-12520) + 15000L;
           return var2;
         }
@@ -111,7 +111,7 @@ abstract class SessionGameApplet extends GameApplet {
             ic.a(this.field_s, this.field_k, 5000, param7, this.field_m, param5, va.field_a, this.field_w, 5000, this.field_n, this.field_x, MenuScreen.platformTaskDispatcher, 64, this.field_l);
             TextInputValidator.initializeArchiveServices(param7, va.field_a, this.field_l, this.field_x, -23949, MenuScreen.platformTaskDispatcher, this.field_n, this.field_s, this.field_w);
             StatefulWidgetRenderer.b(28);
-            CachedTextLayout.mouseWheelInput = nd.a(param0 + 113);
+            CachedTextLayout.mouseWheelInput = TextValidationFailure.a(param0 + 113);
             UsernameAvailabilityQuery.a(MessageDialog.gameCanvas, 57);
             TextLayoutLine.field_e = param2;
             DebouncedValidationProvider.field_c = param4;
@@ -182,7 +182,7 @@ abstract class SessionGameApplet extends GameApplet {
             oi.a(5, 116);
           }
           if (OpacityWidget.field_G[5]) {
-            di.a(6, param0 + 21789);
+            TextTemplateDefinitionLoader.a(6, param0 + 21789);
           }
           if (OpacityWidget.field_G[6]) {
             SecondaryDeque.a(true, 7);
@@ -251,7 +251,7 @@ abstract class SessionGameApplet extends GameApplet {
         mc.snapshotPointerInput((byte) -128);
         if ((!bl.b(255)) &&
             (hj.field_a != 11)) {
-          ck.c(1);
+          TextTemplateArgumentType.c(1);
         }
         if (null != CachedTextLayout.mouseWheelInput) {
           CachedTextLayout.wheelRotationSnapshot = CachedTextLayout.mouseWheelInput.drainWheelRotation(true);
@@ -266,7 +266,7 @@ abstract class SessionGameApplet extends GameApplet {
             kd.b((byte) 81);
             TextInputValidator.a((byte) 124, 2, fa.idleMessage20MinText);
             bl.c(-113);
-            ii.field_e = true;
+            ArchiveLoadStep.field_e = true;
             DisplayNamePanel.field_G = oa.a(-12520) + 15000L;
           }
         }
@@ -274,7 +274,7 @@ abstract class SessionGameApplet extends GameApplet {
               (DebouncedValidationProvider.archiveLoadStatus != 0))) {
           stackIn_24_0 = (-1 != DebouncedValidationProvider.archiveLoadStatus) ? 0 : 1;
           var3 = stackIn_24_0;
-          DebouncedValidationProvider.archiveLoadStatus = ma.tickArchiveLoading(15869);
+          DebouncedValidationProvider.archiveLoadStatus = DelayedIncomingPacket.tickArchiveLoading(15869);
           if ((var3 != 0) &&
               (DebouncedValidationProvider.archiveLoadStatus == 0) &&
               (11 == hj.field_a) &&
@@ -308,7 +308,7 @@ abstract class SessionGameApplet extends GameApplet {
               } else {
                 TextInputValidator.a((byte) 124, 256, LoginPanel.js5CrcErrorText);
               }
-              ii.field_e = true;
+              ArchiveLoadStep.field_e = true;
             }
           } else {
             if (DebouncedValidationProvider.archiveLoadStatus != 3) {
@@ -334,7 +334,7 @@ abstract class SessionGameApplet extends GameApplet {
                 (DebouncedValidationProvider.archiveLoadStatus != 0))) &&
               (!sb.a(param1 - 19585)))) &&
             (~DisplayNamePanel.field_G >= ~oa.a(param1 - 32180))) {
-          ii.field_e = false;
+          ArchiveLoadStep.field_e = false;
           if ((-1 != DebouncedValidationProvider.archiveLoadStatus) &&
               (DebouncedValidationProvider.archiveLoadStatus != 0)) {
             DebouncedValidationProvider.archiveLoadStatus = -1;
@@ -353,9 +353,9 @@ abstract class SessionGameApplet extends GameApplet {
           if (va.field_a != 0) {
             FadingDialog.field_J = SocketArchiveNetworkClient.createResourceArchive(TextLayoutLine.field_e, (byte) -62);
           }
-          DirectByteStorage.field_h = rj.a(DebouncedValidationProvider.field_c, (byte) -18, true, false, 1);
-          dc.field_c = rj.a(ArchiveRequest.field_r, (byte) -124, true, false, 1);
-          DialRenderer.field_n = rj.a(sb.field_d, (byte) -41, true, false, 1);
+          DirectByteStorage.field_h = DisplayModeInfo.a(DebouncedValidationProvider.field_c, (byte) -18, true, false, 1);
+          dc.field_c = DisplayModeInfo.a(ArchiveRequest.field_r, (byte) -124, true, false, 1);
+          DialRenderer.field_n = DisplayModeInfo.a(sb.field_d, (byte) -41, true, false, 1);
           ki.basicUiGraphicsArchive = DirectByteStorage.field_h;
           mi.field_C = 2;
           re.field_i = dc.field_c;
@@ -378,8 +378,8 @@ abstract class SessionGameApplet extends GameApplet {
           }
         }
         if ((3 == mi.field_C) &&
-            (ma.a(DialRenderer.field_n, dc.field_c, DirectByteStorage.field_h, -11652)) &&
-            (rj.a((byte) -127, DialRenderer.field_n))) {
+            (DelayedIncomingPacket.a(DialRenderer.field_n, dc.field_c, DirectByteStorage.field_h, -11652)) &&
+            (DisplayModeInfo.a((byte) -127, DialRenderer.field_n))) {
           tj.c((byte) -105);
           ke.b((byte) 120);
           oi.field_e = ArchiveSource.loadingText;
@@ -399,7 +399,7 @@ abstract class SessionGameApplet extends GameApplet {
             } else {
               stackIn_104_3 = true;
             }
-            og.a(stackIn_100_0, stackIn_100_1, stackIn_101_2, stackIn_104_3);
+            TextTemplateDefinition.a(stackIn_100_0, stackIn_100_1, stackIn_101_2, stackIn_104_3);
           }
           if (AchievementSubmission.field_m) {
             ButtonWidget.e(83);
@@ -427,7 +427,7 @@ abstract class SessionGameApplet extends GameApplet {
             if (null != ak.field_b) {
               if (!((ak.field_b.ensureIndexLoaded(0)) &&
                   (ak.field_b.loadAllGroups(true)))) {
-                lc.a(WidgetSkinState.a(ri.field_c, 2147483647, CachedTextLayout.field_g, ak.field_b), -2, 0.0f);
+                HighscoreNameEntry.a(WidgetSkinState.a(ri.field_c, 2147483647, CachedTextLayout.field_g, ak.field_b), -2, 0.0f);
                 break L30;
               }
             }
@@ -445,9 +445,9 @@ abstract class SessionGameApplet extends GameApplet {
         if (mi.field_C == 13) {
           var3 = 1;
           if (null != b.field_b) {
-            stackIn_135_0 = (!b.field_b.a(true)) ? 0 : 1;
+            stackIn_135_0 = (!b.field_b.pollLoaded(true)) ? 0 : 1;
             var3 = stackIn_135_0;
-            lc.a(b.field_b.field_e, -2, b.field_b.field_j);
+            HighscoreNameEntry.a(b.field_b.statusText, -2, b.field_b.scaledProgress);
           }
           if (var3 != 0) {
             mi.field_C = 20;
@@ -518,7 +518,7 @@ abstract class SessionGameApplet extends GameApplet {
             Boolean var11 = null;
             ByteArrayBuffer var12 = null;
             var8 = Geoblox.clientControlFlowFlag;
-            var4 = gk.a(va.field_a, CachedTextLayout.wheelRotationSnapshot, param1, (byte) -117);
+            var4 = ClientProtocolStage.a(va.field_a, CachedTextLayout.wheelRotationSnapshot, param1, (byte) -117);
             if (param2 == ~var4) {
               throw new IllegalStateException();
             }
@@ -562,7 +562,7 @@ abstract class SessionGameApplet extends GameApplet {
                   }
                 }
               } else {
-                ii.field_e = false;
+                ArchiveLoadStep.field_e = false;
               }
             }
             if (var4 == 4) {
@@ -581,13 +581,13 @@ abstract class SessionGameApplet extends GameApplet {
               hj.field_a = 10;
             }
             if (var4 == 7) {
-              je.a((byte) 114, NodeHashTableIterator.c(107));
+              TrackedPcmStream.a((byte) 114, NodeHashTableIterator.c(107));
             }
             if (var4 == 8) {
               BufferedSocket.clearSessionAndReload((byte) 116, NodeHashTableIterator.c(119));
             }
             if (9 == var4) {
-              tl.a(NodeHashTableIterator.c(115), (byte) -91);
+              RasterTargetSnapshot.a(NodeHashTableIterator.c(115), (byte) -91);
             }
             if (var4 == 10) {
               CacheReference.field_q.writeCipherByte(17, (byte) -21);
@@ -596,7 +596,7 @@ abstract class SessionGameApplet extends GameApplet {
               EmailAvailabilityQuery.a(NodeHashTableIterator.c(110), false);
             }
             if (var4 == 12) {
-              eb.a(NodeHashTableIterator.c(121), (byte) 117, gf.a(param2 ^ -241));
+              ArchiveLoadSequence.a(NodeHashTableIterator.c(121), (byte) 117, gf.a(param2 ^ -241));
             }
             if (var4 == 13) {
               try {
@@ -740,7 +740,7 @@ abstract class SessionGameApplet extends GameApplet {
             ec.a(-1073741824);
           } else {
             if (var2 == 2) {
-              NanoFrameTimer.c(-24839);
+              NanoFrameTimer.handleRankingResponse(-24839);
             } else {
               if (3 == var2) {
                 ud.handleAchievementResponse(119);
@@ -754,7 +754,7 @@ abstract class SessionGameApplet extends GameApplet {
                     } else {
                       if (var2 != 7) {
                         if (8 == var2) {
-                          pg.a(-4, MenuScreen.platformTaskDispatcher, AchievementSubmission.field_k, eh.field_d);
+                          pg.readReflectionCheckRequest(-4, MenuScreen.platformTaskDispatcher, AchievementSubmission.field_k, eh.field_d);
                         } else {
                           if (var2 == 16) {
                             DualLinkNode.b(1);
@@ -762,7 +762,7 @@ abstract class SessionGameApplet extends GameApplet {
                             if ((11 != var2) &&
                                 (12 != var2)) {
                               if (var2 == 13) {
-                                lc.a((byte) 104);
+                                HighscoreNameEntry.a((byte) 104);
                                 return;
                               }
                               if (17 == var2) {
@@ -773,7 +773,7 @@ abstract class SessionGameApplet extends GameApplet {
                                 dl.a(11560);
                                 return;
                               }
-                              IterableNodeHashTable.a((Throwable) null, "MGS1: " + og.e(55), (byte) 125);
+                              IterableNodeHashTable.a((Throwable) null, "MGS1: " + TextTemplateDefinition.e(55), (byte) 125);
                               Bzip2DecoderState.closeSessionSocket((byte) -122);
                               return;
                             }
@@ -795,7 +795,7 @@ abstract class SessionGameApplet extends GameApplet {
           }
           return;
         }
-        IterableNodeHashTable.a((Throwable) null, "MGS2: " + og.e(55), (byte) 125);
+        IterableNodeHashTable.a((Throwable) null, "MGS2: " + TextTemplateDefinition.e(55), (byte) 125);
         Bzip2DecoderState.closeSessionSocket((byte) -118);
     }
 

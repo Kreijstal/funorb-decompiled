@@ -62,7 +62,7 @@ final class PasswordWidgetRenderer extends TextInputRenderer {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        SpriteCheckboxRenderer.b(-96);
+        SpriteCheckboxRenderer.pushRasterTarget(-96);
         SoftwareRasterizer.intersectClip(param1, param0, param4, param3);
         if (param2 == -14045) {
             return;

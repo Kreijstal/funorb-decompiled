@@ -65,7 +65,7 @@ abstract class SocketConnector {
             stackIn_13_0 = null;
             return (j) (stackIn_13_0);
           }
-          var3 = (j) ((Object) ArchiveSource.field_a.a((long)var2.hashCode(), -1));
+          var3 = (j) ((Object) ArchiveSource.field_a.findFirst((long)var2.hashCode(), -1));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.field_hb);
             var4 = ResizableDialog.a(var7, 12);
@@ -73,7 +73,7 @@ abstract class SocketConnector {
               stackIn_20_0 = var3;
               return stackIn_20_0;
             }
-            var3 = (j) ((Object) ArchiveSource.field_a.a(-29925));
+            var3 = (j) ((Object) ArchiveSource.field_a.findNext(-29925));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -184,8 +184,8 @@ abstract class SocketConnector {
             SocketConnector.a((byte) 74, (String) null);
           }
           while (var5_int < 33) {
-            if ((ck.field_c[var5_int] > 0) &&
-                (ck.field_c[var5_int] != 1)) {
+            if ((TextTemplateArgumentType.field_c[var5_int] > 0) &&
+                (TextTemplateArgumentType.field_c[var5_int] != 1)) {
               var5_int++;
               continue;
             }
@@ -196,7 +196,7 @@ abstract class SocketConnector {
               var6 = te.field_c.b(1, w.field_b[var5_int]);
             }
             fl.field_c[var5_int] = var6.a(AchievementSubmission.field_i);
-            vg.field_j[var5_int] = true;
+            SecondaryNodeHashTable.field_j[var5_int] = true;
             var5_int++;
           }
           return;

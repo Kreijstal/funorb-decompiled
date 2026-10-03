@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class TextInputValidator extends DebouncedValidationProvider implements TextInputListener {
-    static uj field_h;
+    static FullscreenFailureReason field_h;
     static double field_f;
     private TextInputWidget validatedInput;
 
@@ -82,7 +82,7 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
             GameplaySession.archiveHost = archiveHost;
             ValidatedTextInputWidget.archiveClientId = clientId;
             MidiNote.archiveLanguageId = languageId;
-            vg.archivePort = primaryPort;
+            SecondaryNodeHashTable.archivePort = primaryPort;
             ph.archiveTaskDispatcher = taskDispatcher;
             if (methodGuard != -23949) {
                 field_f = -0.8279321027589008;
@@ -134,7 +134,7 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
         RuntimeException decompiledCaughtException = null;
         try {
           va.field_d = false;
-          ii.field_a = false;
+          ArchiveLoadStep.field_a = false;
           if ((null != Geoblox.activeMessageDialog) &&
               (Geoblox.activeMessageDialog.dialogVisible)) {
             if (8 == param1) {
@@ -152,7 +152,7 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
               var3_int = 0;
             }
             if (var3_int != 0) {
-              if (ii.field_a) {
+              if (ArchiveLoadStep.field_a) {
                 param2 = OpacityWidget.a(mi.connectionLostWithReasonText, new String[]{param2}, (byte) -25);
               }
               if (mi.field_I) {
@@ -256,7 +256,7 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
     public static void f(int param0) {
         field_h = null;
         if (param0 != 1) {
-            field_h = (uj) null;
+            field_h = (FullscreenFailureReason) null;
         }
     }
 
@@ -269,7 +269,7 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
     }
 
     static {
-        field_h = new uj();
+        field_h = new FullscreenFailureReason();
         field_f = Math.atan2(1.0, 0.0);
     }
 }

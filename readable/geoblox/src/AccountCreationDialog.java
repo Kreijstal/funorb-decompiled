@@ -18,7 +18,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
             b.field_a = param0;
             hg.field_d = param3;
             int var4_int = -62 % ((13 - param1) / 62);
-            fa.showMessageDialog(rj.loggingInText, 480, param2);
+            fa.showMessageDialog(DisplayModeInfo.loggingInText, 480, param2);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "r.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -69,7 +69,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
             if (!this.accountIneligible) {
               if (result.field_j == 5) {
                 var5.appendActionButton(TriangleMesh.reloadGameText, 1, 11);
-                var5.appendActionButton(rj.quitToWebsiteText, 1, 17);
+                var5.appendActionButton(DisplayModeInfo.quitToWebsiteText, 1, 17);
               } else {
                 var5.appendActionButton(ll.backText, 1, -1);
               }
@@ -109,14 +109,14 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
         }
     }
 
-    final static nd a(String param0, boolean param1) {
-        nd stackIn_4_0 = null;
-        nd stackIn_8_0 = null;
-        nd stackIn_13_0 = null;
+    final static TextValidationFailure a(String param0, boolean param1) {
+        TextValidationFailure stackIn_4_0 = null;
+        TextValidationFailure stackIn_8_0 = null;
+        TextValidationFailure stackIn_13_0 = null;
         int stackIn_22_0 = 0;
-        nd stackIn_27_0 = null;
-        nd stackIn_41_0 = null;
-        nd stackIn_46_0 = null;
+        TextValidationFailure stackIn_27_0 = null;
+        TextValidationFailure stackIn_41_0 = null;
+        TextValidationFailure stackIn_46_0 = null;
         Object stackIn_52_0 = null;
         RuntimeException stackIn_55_0 = null;
         StringBuilder stackIn_55_1 = null;
@@ -141,7 +141,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
           }
           if (34 == param0.charAt(0)) {
             if (param0.charAt(var2_int - 1) != 34) {
-              stackIn_13_0 = ii.field_h;
+              stackIn_13_0 = ArchiveLoadStep.field_h;
               return stackIn_13_0;
             }
             var3 = 0;
@@ -153,7 +153,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
               } else {
                 if ((var5 == 34) &&
                     (var3 == 0)) {
-                  stackIn_27_0 = ii.field_h;
+                  stackIn_27_0 = ArchiveLoadStep.field_h;
                   return stackIn_27_0;
                 }
                 var3 = 0;
@@ -172,11 +172,11 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
                   var3 = 1;
                   break L1;
                 }
-                stackIn_41_0 = ii.field_h;
+                stackIn_41_0 = ArchiveLoadStep.field_h;
                 return stackIn_41_0;
               }
               if (StatefulWidgetRenderer.field_w.indexOf(var5) == -1) {
-                stackIn_46_0 = ii.field_h;
+                stackIn_46_0 = ArchiveLoadStep.field_h;
                 return stackIn_46_0;
               }
               var3 = 0;
@@ -187,7 +187,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
           }
           field_sb = (String) null;
           stackIn_52_0 = null;
-          return (nd) (stackIn_52_0);
+          return (TextValidationFailure) (stackIn_52_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

@@ -14,21 +14,21 @@ final class DialWidget extends ButtonWidget {
     int selectedStep;
     int radius;
 
-    final static mg b(int param0, int param1, int param2, int param3, int param4) {
+    final static HighscoreQuery getOrRequestHighscores(int queryId, int valuesPerEntry, int methodGuard, int entryLimit, int packetOpcode) {
         int var6 = Geoblox.clientControlFlowFlag;
-        mg var5 = (mg) ((Object) ResourceArchive.field_d.firstForIteration(param2 ^ param2));
+        HighscoreQuery var5 = (HighscoreQuery) ((Object) ResourceArchive.field_d.firstForIteration(methodGuard ^ methodGuard));
         while (var5 != null) {
-            if (~var5.field_i == ~param0) {
+            if (~var5.queryId == ~queryId) {
                 return var5;
             }
-            var5 = (mg) ((Object) ResourceArchive.field_d.nextForIteration(1));
+            var5 = (HighscoreQuery) ((Object) ResourceArchive.field_d.nextForIteration(1));
         }
-        var5 = new mg();
-        var5.field_f = param3;
-        var5.field_l = param1;
-        var5.field_i = param0;
+        var5 = new HighscoreQuery();
+        var5.entryLimit = entryLimit;
+        var5.valuesPerEntry = valuesPerEntry;
+        var5.queryId = queryId;
         ResourceArchive.field_d.addLast(-71, var5);
-        DebouncedValidationProvider.a(param4, param2 + 5, var5);
+        DebouncedValidationProvider.writeHighscoreRequest(packetOpcode, methodGuard + 5, var5);
         return var5;
     }
 

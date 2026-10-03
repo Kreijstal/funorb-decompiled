@@ -184,7 +184,7 @@ final class WhirlpoolHash {
             field_d = (PcmStreamMixer) null;
           }
           var3 = (CharSequence) ((Object) param0);
-          stackIn_3_0 = vg.field_b.equals(ResizableDialog.a(var3, 12));
+          stackIn_3_0 = SecondaryNodeHashTable.field_b.equals(ResizableDialog.a(var3, 12));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -287,12 +287,12 @@ final class WhirlpoolHash {
             }
             try {
               if (AccountCreationForm.archiveHandshakeStage == 0) {
-                StrongCacheReference.archiveConnectTask = ph.archiveTaskDispatcher.requestSocket(vg.archivePort, GameplaySession.archiveHost, false);
+                StrongCacheReference.archiveConnectTask = ph.archiveTaskDispatcher.requestSocket(SecondaryNodeHashTable.archivePort, GameplaySession.archiveHost, false);
                 AccountCreationForm.archiveHandshakeStage = AccountCreationForm.archiveHandshakeStage + 1;
               }
               if (AccountCreationForm.archiveHandshakeStage == 1) {
                 if (StrongCacheReference.archiveConnectTask.status == 2) {
-                  connectFailureBeforeReturn = eb.handleArchiveHandshakeFailure(-1, 28625);
+                  connectFailureBeforeReturn = ArchiveLoadSequence.handleArchiveHandshakeFailure(-1, 28625);
                   return connectFailureBeforeReturn;
                 }
                 if (1 == StrongCacheReference.archiveConnectTask.status) {
@@ -311,19 +311,19 @@ final class WhirlpoolHash {
                 handshakePacket.writeIntBE((byte) 95, EmailValidator.archiveGameCrc);
                 li.archiveHandshakeSocket.enqueueWrite(100, 0, 13, handshakePacket.bytes);
                 AccountCreationForm.archiveHandshakeStage = AccountCreationForm.archiveHandshakeStage + 1;
-                eb.archiveHandshakeDeadlineMillis = 30000L + oa.a(methodGuard - 12446);
+                ArchiveLoadSequence.archiveHandshakeDeadlineMillis = 30000L + oa.a(methodGuard - 12446);
               }
               if (AccountCreationForm.archiveHandshakeStage == 3) {
                 if (0 < li.archiveHandshakeSocket.available((byte) 78)) {
                   replyCode = li.archiveHandshakeSocket.readByte(-17422);
                   if (replyCode != 0) {
-                    replyFailureBeforeReturn = eb.handleArchiveHandshakeFailure(replyCode, 28625);
+                    replyFailureBeforeReturn = ArchiveLoadSequence.handleArchiveHandshakeFailure(replyCode, 28625);
                     return replyFailureBeforeReturn;
                   }
                   AccountCreationForm.archiveHandshakeStage = AccountCreationForm.archiveHandshakeStage + 1;
                 } else {
-                  if (oa.a(-12520) > eb.archiveHandshakeDeadlineMillis) {
-                    timeoutStatusBeforeReturn = eb.handleArchiveHandshakeFailure(-2, methodGuard ^ -28569);
+                  if (oa.a(-12520) > ArchiveLoadSequence.archiveHandshakeDeadlineMillis) {
+                    timeoutStatusBeforeReturn = ArchiveLoadSequence.handleArchiveHandshakeFailure(-2, methodGuard ^ -28569);
                     return timeoutStatusBeforeReturn;
                   }
                 }
@@ -340,7 +340,7 @@ final class WhirlpoolHash {
             } catch (java.io.IOException handshakeIOException) {
               caughtHandshakeFailure = handshakeIOException;
               handshakeIoFailure = (IOException) (Object) caughtHandshakeFailure;
-              return eb.handleArchiveHandshakeFailure(-3, 28625);
+              return ArchiveLoadSequence.handleArchiveHandshakeFailure(-3, 28625);
             }
         } catch (RuntimeException | Error uncheckedHandshakeFailure) {
             throw uncheckedHandshakeFailure;

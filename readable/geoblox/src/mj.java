@@ -82,13 +82,13 @@ final class mj {
         }
     }
 
-    final static nd a(String param0, byte param1) {
+    final static TextValidationFailure a(String param0, byte param1) {
         int var3 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var4 = 0;
         int var5 = 0;
-        nd stackIn_12_0 = null;
+        TextValidationFailure stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -108,7 +108,7 @@ final class mj {
               return null;
             }
           }
-          stackIn_12_0 = ii.field_h;
+          stackIn_12_0 = ArchiveLoadStep.field_h;
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

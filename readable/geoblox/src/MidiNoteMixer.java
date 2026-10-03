@@ -141,7 +141,7 @@ final class MidiNoteMixer extends PcmStream {
             TriangleRasterState.prepareTriangleClipFromRasterizer();
             SoftwareRasterizer.clearFramebuffer();
             DequeCursor.logoAnimationTick = 0;
-            ck.renderLogoMeshes((byte) -73);
+            TextTemplateArgumentType.renderLogoMeshes((byte) -73);
             var2 = var1.copy();
             for (var3 = 0; var3 < 15; var3++) {
                 var2.drawSilhouette(-2, -2, 16777215);
@@ -149,7 +149,7 @@ final class MidiNoteMixer extends PcmStream {
             }
             ProxySocketConnector.field_l.setAsRasterTarget();
             var1.drawHalfSize(0, 0);
-            id.a(true);
+            id.restoreRasterTarget(true);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ad.H(" + param0 + ')');
         }

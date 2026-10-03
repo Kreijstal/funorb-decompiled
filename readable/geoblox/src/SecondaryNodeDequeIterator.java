@@ -59,7 +59,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           if (UiWidget.gameplaySession.tutorialPromptActive) {
             return;
           }
-          lc.updateSpawnQueue(255);
+          HighscoreNameEntry.updateSpawnQueue(255);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

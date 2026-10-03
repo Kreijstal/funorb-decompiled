@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class DropTargetWidget extends SingleChildWidget {
-    static ck field_B;
+    static TextTemplateArgumentType field_B;
 
     final static byte[] readTextResourceBytes(int readGuard, String resourceKey) {
         RuntimeException var2 = null;
@@ -37,7 +37,7 @@ final class DropTargetWidget extends SingleChildWidget {
         try {
             param0.addMouseListener(pg.pointerListener);
             if (param1 != 1) {
-                field_B = (ck) null;
+                field_B = (TextTemplateArgumentType) null;
             }
             param0.addMouseMotionListener(pg.pointerListener);
             param0.addFocusListener(pg.pointerListener);
@@ -58,7 +58,7 @@ final class DropTargetWidget extends SingleChildWidget {
     public static void f(int param0) {
         field_B = null;
         if (param0 != 14512) {
-            field_B = (ck) null;
+            field_B = (TextTemplateArgumentType) null;
         }
     }
 
@@ -137,6 +137,6 @@ final class DropTargetWidget extends SingleChildWidget {
     }
 
     static {
-        field_B = new ck(11, 0, 1, 2);
+        field_B = new TextTemplateArgumentType(11, 0, 1, 2);
     }
 }

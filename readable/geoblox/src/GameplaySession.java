@@ -101,7 +101,7 @@ final class GameplaySession {
           promptTop = 270;
         }
         L3: {
-          ma.drawNineSlicePanel(promptTop, 70, 10 + promptHeight, (byte) -92, 500, ll.frameNineSliceSprites);
+          DelayedIncomingPacket.drawNineSlicePanel(promptTop, 70, 10 + promptHeight, (byte) -92, 500, ll.frameNineSliceSprites);
           IntrusiveNodeHashTable.smallFont.drawParagraph(promptText, 95, 15 + promptTop, promptWidthThenButtonX, 300, 1, -1, 0, 0, lineSpacing);
           if (this.tutorialStepId == 5) {
             if ((PrefixCodeDecoder.pointerXSnapshot > 100) &&
@@ -110,10 +110,10 @@ final class GameplaySession {
                 (PcmResampler.pointerYSnapshot < 476)) {
               FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.field_p] = 15488514;
             }
-            ma.drawNineSlicePanel(440, 100, 36, (byte) -92, 240, eb.mouseBoxFrames);
+            DelayedIncomingPacket.drawNineSlicePanel(440, 100, 36, (byte) -92, 240, ArchiveLoadSequence.mouseBoxFrames);
             FadingDialog.uiPaletteFont.drawCenteredText(AgeValidator.field_j, 220, 468, 0, -1);
             FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.field_p] = 16689938;
-            ma.drawNineSlicePanel(440, 380, 36, (byte) -92, 160, eb.mouseBoxFrames);
+            DelayedIncomingPacket.drawNineSlicePanel(440, 380, 36, (byte) -92, 160, ArchiveLoadSequence.mouseBoxFrames);
             if ((380 < PrefixCodeDecoder.pointerXSnapshot) &&
                 (540 > PrefixCodeDecoder.pointerXSnapshot) &&
                 (PcmResampler.pointerYSnapshot > 440) &&
@@ -126,7 +126,7 @@ final class GameplaySession {
               break L3;
             }
           }
-          ma.drawNineSlicePanel(440, 240, 36, (byte) -92, 160, eb.mouseBoxFrames);
+          DelayedIncomingPacket.drawNineSlicePanel(440, 240, 36, (byte) -92, 160, ArchiveLoadSequence.mouseBoxFrames);
           if ((250 < PrefixCodeDecoder.pointerXSnapshot) &&
               (PrefixCodeDecoder.pointerXSnapshot < 389) &&
               (PcmResampler.pointerYSnapshot > 440) &&
@@ -271,7 +271,7 @@ final class GameplaySession {
           }
           graphicsLoadingMessage = gf.formatArchiveGroupProgress(TextWidgetRenderer.waitingForGraphicsText, ll.gameGraphicsArchive, themeResourceGroup, AccountWelcomePanel.loadingGraphicsText, true);
           loadingPanelWidthOrScoreBoxY = 30 + FadingDialog.uiPaletteFont.measureTextWidth(graphicsLoadingMessage);
-          ma.drawNineSlicePanel(215, 320 - loadingPanelWidthOrScoreBoxY / 2, 50, (byte) -92, loadingPanelWidthOrScoreBoxY, ll.frameNineSliceSprites);
+          DelayedIncomingPacket.drawNineSlicePanel(215, 320 - loadingPanelWidthOrScoreBoxY / 2, 50, (byte) -92, loadingPanelWidthOrScoreBoxY, ll.frameNineSliceSprites);
           FadingDialog.uiPaletteFont.drawCenteredText(graphicsLoadingMessage, 320, 250, 0, -1);
           return;
         }
@@ -336,7 +336,7 @@ final class GameplaySession {
             tutorialLineHeightOrDebugEntityRadius = -IntrusiveNodeHashTable.smallFont.maxDescent + IntrusiveNodeHashTable.smallFont.maxAscent;
             tutorialPanelWidth = IntrusiveNodeHashTable.smallFont.measureMaximumWrappedWidth(v.tutorialSkipMessage, 640) + 40;
             tutorialTextHeightOrDebugPanelTop = IntrusiveNodeHashTable.smallFont.countWrappedLines(v.tutorialSkipMessage, 640) * tutorialLineHeightOrDebugEntityRadius + 10;
-            ma.drawNineSlicePanel(tutorialTopOrDebugColorOrTransitionClipTop, -(tutorialPanelWidth / 2) + 320, 20 + tutorialTextHeightOrDebugPanelTop, (byte) -92, tutorialPanelWidth, ll.frameNineSliceSprites);
+            DelayedIncomingPacket.drawNineSlicePanel(tutorialTopOrDebugColorOrTransitionClipTop, -(tutorialPanelWidth / 2) + 320, 20 + tutorialTextHeightOrDebugPanelTop, (byte) -92, tutorialPanelWidth, ll.frameNineSliceSprites);
             IntrusiveNodeHashTable.smallFont.drawCenteredText(v.tutorialSkipMessage, 320, tutorialTopOrDebugColorOrTransitionClipTop + 28, 1, -1);
             IntrusiveNodeHashTable.smallFont.drawCenteredText(v.tutorialSkipMessage, 319, 28 + tutorialTopOrDebugColorOrTransitionClipTop, 1, -1);
             if (clientControlFlowGuard == 0) {
@@ -505,7 +505,7 @@ final class GameplaySession {
               lj.smallBoxSprite.draw(-(lj.smallBoxSprite.fullWidth >> 1) + 320, 60 - (lj.smallBoxSprite.fullHeight >> 1) + 240);
               FadingDialog.uiPaletteFont.drawCenteredText(KeyboardInputListener.field_b, 320, 310, 0, -1);
             }
-            eg.pointsPanelGlowFrames[this.pointsPanelFrameIndex].draw(this.pointsPanelX, 4);
+            ReflectionCheckRequest.pointsPanelGlowFrames[this.pointsPanelFrameIndex].draw(this.pointsPanelX, 4);
             if ((640 > this.pointsPanelX) &&
                 (0 < this.pendingPopupPoints)) {
               FadingDialog.uiPaletteFont.drawText(OpacityWidget.a(ic.field_a, new String[]{this.popupPointsText.toString()}, (byte) -79), this.pointsPanelX + 20, 34, 0, -1);
@@ -1260,7 +1260,7 @@ final class GameplaySession {
             this.sessionEnding = true;
             this.showGameOverOverlay = true;
             this.emitPointsPopup(false);
-            this.addScore((byte) 127, wa.collectUnfinishedPopupPoints(-25866));
+            this.addScore((byte) 127, WidgetTheme.collectUnfinishedPopupPoints(-25866));
             this.submitScore((byte) -70);
             if (Geoblox.clientControlFlowFlag == 0) {
               break L1;
@@ -1651,7 +1651,7 @@ final class GameplaySession {
           this.sessionPhase = 5;
           if (this.boardEmptyAtResultStart) {
             ld.spawnPointsPopup(350, 320, 66, 2000);
-            SecondaryNodeDeque.recordAchievement(eb.field_i ^ 255, methodGuard - 101, eb.field_i);
+            SecondaryNodeDeque.recordAchievement(ArchiveLoadSequence.field_i ^ 255, methodGuard - 101, ArchiveLoadSequence.field_i);
             this.connectivityRebuiltThisTick = false;
           }
           ld.spawnPointsPopup(310, 320, 90, this.resultBonusPoints);

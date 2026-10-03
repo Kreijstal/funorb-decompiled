@@ -192,7 +192,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          wc.field_g = true;
+          CrcAcknowledgedPacket.field_g = true;
           dl.field_c = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -384,7 +384,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   this.b(true);
                   SingleChildWidget.mainRasterBuffer = DropTargetWidget.createCanvasRasterBuffer(false, (java.awt.Component) ((Object) MessageDialog.gameCanvas), ok.field_c, AudioService.field_d);
                   this.initializeGame(117);
-                  eg.field_p = BufferedSocket.createFrameClock(5000);
+                  ReflectionCheckRequest.field_p = BufferedSocket.createFrameClock(5000);
                   L17: while (true) {
                     L18: {
                       if (0L != MenuScreen.appletStopDeadlineMillis) {
@@ -396,7 +396,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                           break L1;
                         }
                       }
-                      TriangleMesh.field_w = eg.field_p.a((byte) -6, ByteStorage.field_c);
+                      TriangleMesh.field_w = ReflectionCheckRequest.field_p.a((byte) -6, ByteStorage.field_c);
                       stackIn_99_0 = 0;
                     }
                     var3 = stackIn_99_0;
@@ -522,7 +522,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           MessageDialog.gameCanvas.addFocusListener((java.awt.event.FocusListener) (this));
           MessageDialog.gameCanvas.requestFocus();
           ValidationState.field_d = true;
-          wc.field_g = true;
+          CrcAcknowledgedPacket.field_g = true;
           dl.field_c = true;
           ab.field_a = false;
           Geoblox.canvasCreationTimeMillis = oa.a(-12520);
@@ -639,7 +639,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          wc.field_g = false;
+          CrcAcknowledgedPacket.field_g = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -668,15 +668,15 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             queuedMeshFaceCount = -102;
           }
           var2_long = oa.a(param0 ^ 12526);
-          var4 = tl.field_l[FullscreenErrorDialog.field_cb];
-          tl.field_l[FullscreenErrorDialog.field_cb] = var2_long;
+          var4 = RasterTargetSnapshot.field_l[FullscreenErrorDialog.field_cb];
+          RasterTargetSnapshot.field_l[FullscreenErrorDialog.field_cb] = var2_long;
           FullscreenErrorDialog.field_cb = 31 & 1 + FullscreenErrorDialog.field_cb;
           if ((var4 != 0L) &&
               (var2_long > var4)) {
           }
           var6 = this;
           synchronized (var6) {
-            ValidationState.field_d = wc.field_g;
+            ValidationState.field_d = CrcAcknowledgedPacket.field_g;
           }
           this.updateGame(false);
           return;
@@ -879,10 +879,10 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             ec.field_b = (32000 + (var6_int >> 1)) / var6_int;
           }
           L2: {
-            fieldTemp$1 = rj.field_i;
-            rj.field_i = rj.field_i + 1;
+            fieldTemp$1 = DisplayModeInfo.field_i;
+            DisplayModeInfo.field_i = DisplayModeInfo.field_i + 1;
             if (fieldTemp$1 > 50) {
-              rj.field_i = rj.field_i - 50;
+              DisplayModeInfo.field_i = DisplayModeInfo.field_i - 50;
               dl.field_c = true;
               MessageDialog.gameCanvas.setSize(AudioService.field_d, ok.field_c);
               MessageDialog.gameCanvas.setVisible(true);

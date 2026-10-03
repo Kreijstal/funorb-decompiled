@@ -14,7 +14,7 @@ final class PlatformTaskDispatcher implements Runnable {
     LimitedRandomAccessFile randomSeedFile;
     private static volatile long networkBlockedUntilMillis;
     private Object reflectiveCursorBackend;
-    private ie microsoftFullscreenBackend;
+    private DirectDrawFullscreenController microsoftFullscreenBackend;
     private static int cacheVariant;
     LimitedRandomAccessFile cacheDataFile;
     LimitedRandomAccessFile[] cacheIndexFiles;
@@ -23,7 +23,7 @@ final class PlatformTaskDispatcher implements Runnable {
     private boolean privilegedServicesEnabled;
     static String javaVendor;
     private Object reflectiveFullscreenBackend;
-    private tg microsoftCursorBackend;
+    private WindowsCursorController microsoftCursorBackend;
     private boolean useMicrosoftVmBackend;
     private boolean shutdownRequested;
     private static String gameCacheName;
@@ -167,14 +167,14 @@ final class PlatformTaskDispatcher implements Runnable {
                                           task.result = fullscreenFrame;
                                           fullscreenFrame.setResizable(false);
                                           if (this.useMicrosoftVmBackend) {
-                                            this.microsoftFullscreenBackend.a(8, task.firstIntArgument >>> 16, fullscreenFrame, task.secondIntArgument >> 16, task.firstIntArgument & 65535, task.secondIntArgument & 65535);
+                                            this.microsoftFullscreenBackend.enterFullscreen(8, task.firstIntArgument >>> 16, fullscreenFrame, task.secondIntArgument >> 16, task.firstIntArgument & 65535, task.secondIntArgument & 65535);
                                           } else {
                                             Class.forName("pd").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.reflectiveFullscreenBackend, new Object[]{fullscreenFrame, new Integer(task.firstIntArgument >>> 16), new Integer(task.firstIntArgument & 65535), new Integer(task.secondIntArgument >> 16), new Integer(task.secondIntArgument & 65535)});
                                           }
                                         } else {
                                           if (taskType == 7) {
                                             if (this.useMicrosoftVmBackend) {
-                                              this.microsoftFullscreenBackend.a(111, (java.awt.Frame) (task.input));
+                                              this.microsoftFullscreenBackend.exitFullscreen(111, (java.awt.Frame) (task.input));
                                             } else {
                                               Class.forName("pd").getMethod("exit", new Class[]{}).invoke(this.reflectiveFullscreenBackend, new Object[]{});
                                             }
@@ -195,7 +195,7 @@ final class PlatformTaskDispatcher implements Runnable {
                                                     Class.forName("tk").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.reflectiveCursorBackend, new Object[]{new Integer(cursorXOrVisibleFlag), new Integer(cursorY)});
                                                     break L7;
                                                   }
-                                                  this.microsoftCursorBackend.a(-71, cursorY, cursorXOrVisibleFlag);
+                                                  this.microsoftCursorBackend.moveCursor(-71, cursorY, cursorXOrVisibleFlag);
                                                   break L7;
                                                 }
                                                 if ((this.privilegedServicesEnabled) &&
@@ -204,7 +204,7 @@ final class PlatformTaskDispatcher implements Runnable {
                                                   cursorXOrVisibleFlag = cursorVisibleInt;
                                                   cursorComponent = (java.awt.Component) (task.input);
                                                   if (this.useMicrosoftVmBackend) {
-                                                    this.microsoftCursorBackend.a(12758, cursorXOrVisibleFlag != 0, cursorComponent);
+                                                    this.microsoftCursorBackend.setCursorVisible(12758, cursorXOrVisibleFlag != 0, cursorComponent);
                                                     break L7;
                                                   }
                                                   Class.forName("tk").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.reflectiveCursorBackend, new Object[]{cursorComponent, new Boolean(cursorXOrVisibleFlag != 0)});
@@ -250,7 +250,7 @@ final class PlatformTaskDispatcher implements Runnable {
                                         if (!this.useMicrosoftVmBackend) {
                                           task.result = Class.forName("pd").getMethod("listmodes", new Class[]{}).invoke(this.reflectiveFullscreenBackend, new Object[]{});
                                         } else {
-                                          task.result = this.microsoftFullscreenBackend.a(8);
+                                          task.result = this.microsoftFullscreenBackend.listDisplayModes(8);
                                         }
                                       }
                                     }
@@ -462,7 +462,7 @@ final class PlatformTaskDispatcher implements Runnable {
 
     final PlatformTask requestDeclaredField(Class targetClass, int guard, String fieldName) {
         if (guard != 0) {
-            this.microsoftFullscreenBackend = (ie) null;
+            this.microsoftFullscreenBackend = (DirectDrawFullscreenController) null;
         }
         return this.enqueueTask(1, new Object[]{targetClass, fieldName}, 0, 9, 0);
     }
@@ -513,7 +513,7 @@ final class PlatformTaskDispatcher implements Runnable {
         Throwable ignoredSetupThrowable = null;
         boolean privilegedServicesFlag = false;
         Throwable caughtSetupThrowable = null;
-        ie createdMicrosoftFullscreenBackend = null;
+        DirectDrawFullscreenController createdMicrosoftFullscreenBackend = null;
         this.taskQueueHead = null;
         this.randomSeedFile = null;
         this.cacheDataFile = null;
@@ -613,7 +613,7 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           try {
             if (this.useMicrosoftVmBackend) {
-              createdMicrosoftFullscreenBackend = new ie();
+              createdMicrosoftFullscreenBackend = new DirectDrawFullscreenController();
               this.microsoftFullscreenBackend = createdMicrosoftFullscreenBackend;
             } else {
               this.reflectiveFullscreenBackend = Class.forName("pd").newInstance();
@@ -626,7 +626,7 @@ final class PlatformTaskDispatcher implements Runnable {
             if (!this.useMicrosoftVmBackend) {
               this.reflectiveCursorBackend = Class.forName("tk").newInstance();
             } else {
-              this.microsoftCursorBackend = new tg();
+              this.microsoftCursorBackend = new WindowsCursorController();
             }
           } catch (java.lang.Throwable cursorBackendSetupFailure) {
             caughtSetupThrowable = cursorBackendSetupFailure;

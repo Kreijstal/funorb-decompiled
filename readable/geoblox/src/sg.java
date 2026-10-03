@@ -3,7 +3,7 @@
  */
 final class sg {
     static boolean field_d;
-    static IntrusiveDeque field_b;
+    static IntrusiveDeque rasterSnapshotPool;
     static java.awt.Frame field_a;
     static IndexedSprite germsBackgroundSprite;
     static byte[][][] field_c;
@@ -15,20 +15,20 @@ final class sg {
         if (param0 == -13575) {
             field_f = null;
             field_a = null;
-            field_b = null;
+            rasterSnapshotPool = null;
             field_c = (byte[][][]) null;
             return;
         }
         sg.a(-7);
         field_f = null;
         field_a = null;
-        field_b = null;
+        rasterSnapshotPool = null;
         field_c = (byte[][][]) null;
     }
 
     static {
         field_z = "sg.A(";
-        field_b = new IntrusiveDeque();
+        rasterSnapshotPool = new IntrusiveDeque();
         field_f = "Bubble Bonus!";
     }
 }

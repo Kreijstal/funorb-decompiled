@@ -5,7 +5,7 @@ import java.io.*;
 
 final class IntKeyLookup {
     static Sprite unachievedSprite;
-    static ck field_d;
+    static TextTemplateArgumentType field_d;
     private int[] keyIndexPairs;
     static int[] meshCameraTransform;
 
@@ -61,14 +61,14 @@ final class IntKeyLookup {
               }
               groupDiskCache = null;
               if (af.field_d != null) {
-                if (je.field_h == null) {
-                  je.field_h = new BufferedRandomAccessFile[ph.archiveTaskDispatcher.cacheIndexFiles.length];
+                if (TrackedPcmStream.field_h == null) {
+                  TrackedPcmStream.field_h = new BufferedRandomAccessFile[ph.archiveTaskDispatcher.cacheIndexFiles.length];
                 }
-                if (je.field_h[archiveId] == null) {
-                  je.field_h[archiveId] = new BufferedRandomAccessFile(ph.archiveTaskDispatcher.cacheIndexFiles[archiveId], 12000, 0);
+                if (TrackedPcmStream.field_h[archiveId] == null) {
+                  TrackedPcmStream.field_h[archiveId] = new BufferedRandomAccessFile(ph.archiveTaskDispatcher.cacheIndexFiles[archiveId], 12000, 0);
                   ph.archiveTaskDispatcher.cacheIndexFiles[archiveId] = null;
                 }
-                groupDiskCache = new DiskArchiveCache(archiveId, af.field_d, je.field_h[archiveId], 2097152);
+                groupDiskCache = new DiskArchiveCache(archiveId, af.field_d, TrackedPcmStream.field_h[archiveId], 2097152);
               }
               archiveSource = DequeCursor.archiveCatalog.getArchiveSource(archiveId, (byte) -9, sweepCompletedRequests, (DiskArchiveCache) (indexDiskCacheOrIoFailure), (DiskArchiveCache) (groupDiskCache));
               if (downloadAllGroups) {
@@ -129,6 +129,6 @@ final class IntKeyLookup {
 
     static {
         meshCameraTransform = new int[12];
-        field_d = new ck(12, 0, 1, 0);
+        field_d = new TextTemplateArgumentType(12, 0, 1, 0);
     }
 }

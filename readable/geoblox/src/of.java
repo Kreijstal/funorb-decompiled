@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class of implements be {
+final class of implements DirectSoundCompatibility {
     private com.ms.directX.DSBufferDesc[] field_b;
     private com.ms.directX.DSCursors[] field_a;
 

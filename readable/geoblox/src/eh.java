@@ -4,7 +4,7 @@
 final class eh {
     static int pendingActionPanelTop;
     static String openInPopupWindowText;
-    static gk field_b;
+    static ClientProtocolStage field_b;
     static PacketBuffer field_d;
 
     final static void a(int param0, int param1, int param2) {
@@ -30,10 +30,10 @@ final class eh {
         Geoblox.setRasterTarget(1, ki.field_c);
         TriangleRasterState.prepareTriangleClipFromRasterizer();
         SoftwareRasterizer.clearFramebuffer();
-        ck.renderLogoMeshes((byte) 123);
+        TextTemplateArgumentType.renderLogoMeshes((byte) 123);
         if (var5 < 256) {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight, 0, -var5 + 256);
-          id.a(true);
+          id.restoreRasterTarget(true);
           if (DequeCursor.logoAnimationTick >= 150) {
             bk.field_b.drawAlpha(15 + var3, var4 + 10, var5);
           } else {
@@ -58,7 +58,7 @@ final class eh {
             }
           }
         } else {
-          id.a(true);
+          id.restoreRasterTarget(true);
           if (DequeCursor.logoAnimationTick >= 150) {
             bk.field_b.drawAlpha(15 + var3, var4 + 10, var5);
             var6 = -125 + DequeCursor.logoAnimationTick;
@@ -213,6 +213,6 @@ final class eh {
 
     static {
         openInPopupWindowText = "Open in popup window";
-        field_b = new gk();
+        field_b = new ClientProtocolStage();
     }
 }

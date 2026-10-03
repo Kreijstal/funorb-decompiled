@@ -37,11 +37,11 @@ final class LabeledChildWidget extends SingleChildWidget {
         if (UiWidget.gameplaySession.tutorialMode) {
           return;
         }
-        di.releasedInDifficultyStep = di.releasedInDifficultyStep + 1;
+        TextTemplateDefinitionLoader.releasedInDifficultyStep = TextTemplateDefinitionLoader.releasedInDifficultyStep + 1;
         ul.releasedInCurrentTheme = ul.releasedInCurrentTheme + 1;
-        if ((ContextualRuntimeException.releasesPerDifficultyStep == di.releasedInDifficultyStep) &&
+        if ((ContextualRuntimeException.releasesPerDifficultyStep == TextTemplateDefinitionLoader.releasedInDifficultyStep) &&
             (DequeCursor.field_c < 2)) {
-          di.releasedInDifficultyStep = 0;
+          TextTemplateDefinitionLoader.releasedInDifficultyStep = 0;
           ld.advanceDifficulty(false);
           DequeCursor.field_c = DequeCursor.field_c + 1;
         }
@@ -52,7 +52,7 @@ final class LabeledChildWidget extends SingleChildWidget {
           ul.releasedInCurrentTheme = 0;
           CacheReference.field_m = 0;
           UiWidget.gameplaySession.sessionPhase = 1;
-          di.releasedInDifficultyStep = 0;
+          TextTemplateDefinitionLoader.releasedInDifficultyStep = 0;
           if (DequeCursor.field_c < 2) {
             ld.advanceDifficulty(false);
           }

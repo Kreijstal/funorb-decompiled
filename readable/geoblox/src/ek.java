@@ -79,7 +79,7 @@ final class ek {
             sampleXQ16 = sampleXQ16 + clippedPixelCount * sampleXStepQ16;
             destinationWidth = destinationWidth - clippedPixelCount;
           }
-          lc.blendScaledDebugOverviewPixels(sampleXQ16, destinationHeight, SoftwareRasterizer.framebuffer, sampleXStepQ16, sampleYStepQ16, sourceCropWidth, sampleYQ16, destinationRowSkip, trimSkipOrDestinationIndex, destinationWidth, (byte) -104, overviewSprite.pixels, 0);
+          HighscoreNameEntry.blendScaledDebugOverviewPixels(sampleXQ16, destinationHeight, SoftwareRasterizer.framebuffer, sampleXStepQ16, sampleYStepQ16, sourceCropWidth, sampleYQ16, destinationRowSkip, trimSkipOrDestinationIndex, destinationWidth, (byte) -104, overviewSprite.pixels, 0);
           return;
         } catch (java.lang.RuntimeException scaledOverviewFailure) {
           caughtCompositeFailure = scaledOverviewFailure;

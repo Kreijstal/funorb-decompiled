@@ -50,7 +50,7 @@ final class AudioService implements Runnable {
         if (!DialRenderer.field_n.loadAllGroups(true)) {
             return ByteStorage.loadingExtraDataText + " - " + DialRenderer.field_n.getLoadProgress((byte) 101) + "%";
         }
-        return vg.pleaseWaitText;
+        return SecondaryNodeHashTable.pleaseWaitText;
     }
 
     public final void run() {

@@ -10,7 +10,7 @@ abstract class SpriteState extends DualLinkNode {
     int trimY;
     int fullHeight;
     static long field_n;
-    static ck field_t;
+    static TextTemplateArgumentType field_t;
     int trimX;
     static String field_q;
 
@@ -163,7 +163,7 @@ abstract class SpriteState extends DualLinkNode {
           }
           var2 = ih.a(127, "starting");
           if (null != var2) {
-            uj.field_a = EmailValidator.decodeTextBytes(1, var2);
+            FullscreenFailureReason.field_a = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = ih.a(120, "gameName");
           if (var2 != null) {
@@ -219,7 +219,7 @@ abstract class SpriteState extends DualLinkNode {
           }
           var2 = ih.a(121, "cheat");
           if (!param0) {
-            field_t = (ck) null;
+            field_t = (TextTemplateArgumentType) null;
           }
           if (var2 != null) {
             EmailValidator.decodeTextBytes(1, var2);
@@ -246,7 +246,7 @@ abstract class SpriteState extends DualLinkNode {
           }
           var2 = ih.a(121, "loadingPumpkin");
           if (var2 != null) {
-            uj.field_c = EmailValidator.decodeTextBytes(1, var2);
+            FullscreenFailureReason.field_c = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = ih.a(125, "skipText");
           if (var2 != null) {
@@ -298,7 +298,7 @@ abstract class SpriteState extends DualLinkNode {
           }
           var2 = ih.a(122, "fetchingHS");
           if (null != var2) {
-            eb.field_f = EmailValidator.decodeTextBytes(1, var2);
+            ArchiveLoadSequence.field_f = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = ih.a(126, "instructionTitles,0");
           if (var2 != null) {
@@ -876,7 +876,7 @@ abstract class SpriteState extends DualLinkNode {
                 param0.writeBytes(24, -97, var2, 0);
               }
               if (!param1) {
-                field_t = (ck) null;
+                field_t = (TextTemplateArgumentType) null;
               }
               return;
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -937,6 +937,6 @@ abstract class SpriteState extends DualLinkNode {
 
     static {
         field_q = null;
-        field_t = new ck(9, 0, 4, 1);
+        field_t = new TextTemplateArgumentType(9, 0, 4, 1);
     }
 }

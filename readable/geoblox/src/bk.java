@@ -47,7 +47,7 @@ final class bk {
         Exception var6 = null;
         int var7 = 0;
         PacketBuffer var8 = null;
-        og var9 = null;
+        TextTemplateDefinition var9 = null;
         var7 = Geoblox.clientControlFlowFlag;
         var8 = eh.field_d;
         var3 = var8.readUnsignedByte((byte) 34);
@@ -87,10 +87,10 @@ final class bk {
         }
         var5 = var8.readUnsignedShortBE(true);
         try {
-          var9 = StatefulWidgetRenderer.field_r.a((byte) -14, var5);
-          re.field_f = var9.e((byte) -69);
+          var9 = StatefulWidgetRenderer.field_r.getDefinition((byte) -14, var5);
+          re.field_f = var9.summarizeLiteralSegments((byte) -69);
           if (!jc.field_b.equals(SecondaryDeque.field_f)) {
-            stackIn_22_0 = var9.field_m;
+            stackIn_22_0 = var9.referencedTemplateIds;
           } else {
             stackIn_22_0 = null;
           }

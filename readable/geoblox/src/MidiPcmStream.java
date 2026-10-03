@@ -1174,10 +1174,10 @@ final class MidiPcmStream extends PcmStream {
     final static void c(int param0) {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
-        if (null != je.keyboardListener) {
-          var1 = je.keyboardListener;
+        if (null != TrackedPcmStream.keyboardListener) {
+          var1 = TrackedPcmStream.keyboardListener;
           synchronized (var1) {
-            je.keyboardListener = null;
+            TrackedPcmStream.keyboardListener = null;
           }
         }
         if (param0 != -11099) {

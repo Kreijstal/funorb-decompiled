@@ -9,7 +9,7 @@ final class pg {
     static int decodedSpriteCanvasWidth;
 
     final static void resetGameplayDifficulty(int methodGuard) {
-        og.entityMotionSpeed = 0.4000000059604645f;
+        TextTemplateDefinition.entityMotionSpeed = 0.4000000059604645f;
         ContextualRuntimeException.specialSpriteKindProbability = 0.0;
         ul.releasedInCurrentTheme = 0;
         EmailValidator.availableSpriteVariantCount = 3;
@@ -23,13 +23,13 @@ final class pg {
         if (methodGuard != 9408) {
             return;
         }
-        di.releasedInDifficultyStep = 0;
+        TextTemplateDefinitionLoader.releasedInDifficultyStep = 0;
         ContextualRuntimeException.recomputeSpawnReleaseInterval(true);
         UiWidget.field_t = 0;
         DequeCursor.field_c = 0;
     }
 
-    final static void a(int param0, PlatformTaskDispatcher param1, int param2, ByteArrayBuffer param3) {
+    final static void readReflectionCheckRequest(int methodGuard, PlatformTaskDispatcher taskDispatcher, int unusedArgument, ByteArrayBuffer buffer) {
         try {
             int var11_int = 0;
             int var12_int = 0;
@@ -61,26 +61,26 @@ final class pg {
             String var16 = null;
             String var17 = null;
             int var18 = 0;
-            eg var19 = null;
+            ReflectionCheckRequest var19 = null;
             byte[][] var20 = null;
             String var21 = null;
             byte[][] var22 = null;
             var14 = Geoblox.clientControlFlowFlag;
             try {
-              var19 = new eg();
-              var19.field_f = param3.readUnsignedByte((byte) 34);
-              var19.field_m = param3.readIntBE((byte) -127);
-              var19.field_j = new int[var19.field_f];
-              var19.field_i = new PlatformTask[var19.field_f];
-              var19.field_g = new int[var19.field_f];
-              var19.field_n = new PlatformTask[var19.field_f];
-              var19.field_k = new int[var19.field_f];
-              var19.field_o = new byte[var19.field_f][][];
+              var19 = new ReflectionCheckRequest();
+              var19.operationCount = buffer.readUnsignedByte((byte) 34);
+              var19.requestId = buffer.readIntBE((byte) -127);
+              var19.operationErrors = new int[var19.operationCount];
+              var19.methodLookupTasks = new PlatformTask[var19.operationCount];
+              var19.integerWriteValues = new int[var19.operationCount];
+              var19.fieldLookupTasks = new PlatformTask[var19.operationCount];
+              var19.operationTypes = new int[var19.operationCount];
+              var19.serializedArguments = new byte[var19.operationCount][][];
               var5 = 0;
-              while (var5 < var19.field_f) {
+              while (var5 < var19.operationCount) {
                 try {
                   L2: {
-                    var6_int = param3.readUnsignedByte((byte) 34);
+                    var6_int = buffer.readUnsignedByte((byte) 34);
                     if ((0 != var6_int) &&
                         (1 != var6_int) &&
                         (var6_int != 2)) {
@@ -90,25 +90,25 @@ final class pg {
                         decompiledRegionSelector0 = 1;
                         break L2;
                       }
-                      var21 = param3.readNullTerminatedText((byte) 103);
-                      var8 = param3.readNullTerminatedText((byte) 98);
-                      var9 = param3.readUnsignedByte((byte) 34);
+                      var21 = buffer.readNullTerminatedText((byte) 103);
+                      var8 = buffer.readNullTerminatedText((byte) 98);
+                      var9 = buffer.readUnsignedByte((byte) 34);
                       var10 = new String[var9];
                       for (var11_int = 0; var9 > var11_int; var11_int++) {
-                        var10[var11_int] = param3.readNullTerminatedText((byte) 120);
+                        var10[var11_int] = buffer.readNullTerminatedText((byte) 120);
                       }
                       var22 = new byte[var9][];
                       var20 = var22;
                       var11 = var20;
                       if (var6_int == 3) {
                         for (var12_int = 0; var12_int < var9; var12_int++) {
-                          var13 = param3.readIntBE((byte) -70);
+                          var13 = buffer.readIntBE((byte) -70);
                           array$0 = new byte[var13];
                           var11[var12_int] = array$0;
-                          param3.readBytes(29915, var13, var22[var12_int], 0);
+                          buffer.readBytes(29915, var13, var22[var12_int], 0);
                         }
                       }
-                      var19.field_k[var5] = var6_int;
+                      var19.operationTypes[var5] = var6_int;
                       var12 = new Class[var9];
                       var18 = 0;
                       var13 = var18;
@@ -116,47 +116,47 @@ final class pg {
                         var12[var18] = EmailValidator.a(var10[var18], false);
                         var18++;
                       }
-                      var19.field_i[var5] = param1.requestDeclaredMethod(var8, -126, var12, EmailValidator.a(var21, false));
-                      var19.field_o[var5] = var22;
+                      var19.methodLookupTasks[var5] = taskDispatcher.requestDeclaredMethod(var8, -126, var12, EmailValidator.a(var21, false));
+                      var19.serializedArguments[var5] = var22;
                     } else {
-                      var16 = param3.readNullTerminatedText((byte) 117);
+                      var16 = buffer.readNullTerminatedText((byte) 117);
                       var7 = var16;
-                      var17 = param3.readNullTerminatedText((byte) 125);
+                      var17 = buffer.readNullTerminatedText((byte) 125);
                       var8 = var17;
                       var9 = 0;
                       if (var6_int == 1) {
-                        var9 = param3.readIntBE((byte) -123);
+                        var9 = buffer.readIntBE((byte) -123);
                       }
-                      var19.field_k[var5] = var6_int;
-                      var19.field_g[var5] = var9;
-                      var19.field_n[var5] = param1.requestDeclaredField(EmailValidator.a(var16, false), 0, var17);
+                      var19.operationTypes[var5] = var6_int;
+                      var19.integerWriteValues[var5] = var9;
+                      var19.fieldLookupTasks[var5] = taskDispatcher.requestDeclaredField(EmailValidator.a(var16, false), 0, var17);
                     }
                     decompiledRegionSelector0 = 0;
                   }
                 } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var6 = (ClassNotFoundException) (Object) decompiledCaughtException;
-                  var19.field_j[var5] = -1;
+                  var19.operationErrors[var5] = -1;
                   decompiledRegionSelector0 = 0;
                 } catch (java.lang.SecurityException decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var6_ref = (SecurityException) (Object) decompiledCaughtException;
-                  var19.field_j[var5] = -2;
+                  var19.operationErrors[var5] = -2;
                   decompiledRegionSelector0 = 0;
                 } catch (java.lang.NullPointerException decompiledCaughtParameter2) {
                   decompiledCaughtException = decompiledCaughtParameter2;
                   var6_ref2 = (NullPointerException) (Object) decompiledCaughtException;
-                  var19.field_j[var5] = -3;
+                  var19.operationErrors[var5] = -3;
                   decompiledRegionSelector0 = 0;
                 } catch (java.lang.Exception decompiledCaughtParameter3) {
                   decompiledCaughtException = decompiledCaughtParameter3;
                   var6_ref3 = (Exception) (Object) decompiledCaughtException;
-                  var19.field_j[var5] = -4;
+                  var19.operationErrors[var5] = -4;
                   decompiledRegionSelector0 = 0;
                 } catch (java.lang.Throwable decompiledCaughtParameter4) {
                   decompiledCaughtException = decompiledCaughtParameter4;
                   var6_ref4 = decompiledCaughtException;
-                  var19.field_j[var5] = -5;
+                  var19.operationErrors[var5] = -5;
                   decompiledRegionSelector0 = 0;
                 }
                 if (!(decompiledRegionSelector0 == 0)) {
@@ -164,9 +164,9 @@ final class pg {
                 }
                 var5++;
               }
-              if (param0 != -4) {
+              if (methodGuard != -4) {
                 var15 = (ByteArrayBuffer) null;
-                pg.a(96, (PlatformTaskDispatcher) null, -109, (ByteArrayBuffer) null);
+                pg.readReflectionCheckRequest(96, (PlatformTaskDispatcher) null, -109, (ByteArrayBuffer) null);
               }
               UsernameAvailabilityQuery.field_k.addLast(-92, var19);
               return;
@@ -174,14 +174,14 @@ final class pg {
               decompiledCaughtException = decompiledCaughtParameter5;
               var4 = (RuntimeException) (Object) decompiledCaughtException;
               stackIn_41_0 = var4;
-              stackIn_41_1 = new StringBuilder().append("pg.C(").append(param0).append(',');
-              if (param1 == null) {
+              stackIn_41_1 = new StringBuilder().append("pg.C(").append(methodGuard).append(',');
+              if (taskDispatcher == null) {
                 stackIn_42_2 = "null";
               } else {
                 stackIn_42_2 = "{...}";
               }
-              stackIn_44_1 = ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param2).append(',');
-              if (param3 == null) {
+              stackIn_44_1 = ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(unusedArgument).append(',');
+              if (buffer == null) {
                 stackIn_45_2 = "null";
               } else {
                 stackIn_45_2 = "{...}";

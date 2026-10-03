@@ -4,7 +4,7 @@
 final class qj {
     static boolean clearGameplayDuringTransition;
     static Sprite transitionCurtain;
-    static ck field_a;
+    static TextTemplateArgumentType field_a;
 
     public static void a(byte param0) {
         transitionCurtain = null;
@@ -99,6 +99,6 @@ final class qj {
     }
 
     static {
-        field_a = new ck(10, 2, 2, 0);
+        field_a = new TextTemplateArgumentType(10, 2, 2, 0);
     }
 }

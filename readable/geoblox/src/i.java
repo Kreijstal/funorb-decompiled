@@ -123,7 +123,7 @@ final class i {
           ResizableDialog.clearMeshDepthBucketCounts(0);
           if ((mesh.facePriorityCount > 0) &&
               (null != mesh.facePriorities)) {
-            ma.clearMeshPriorityCounts((byte) -35);
+            DelayedIncomingPacket.clearMeshPriorityCounts((byte) -35);
           }
           GameApplet.queuedMeshFaceCount = 0;
           faceIndexOrPriorityPrefix = 0;
@@ -274,7 +274,7 @@ final class i {
           ResizableDialog.clearMeshDepthBucketCounts(0);
           if ((mesh.facePriorityCount > 0) &&
               (null != mesh.facePriorities)) {
-            ma.clearMeshPriorityCounts((byte) -35);
+            DelayedIncomingPacket.clearMeshPriorityCounts((byte) -35);
           }
           GameApplet.queuedMeshFaceCount = 0;
           faceIndexOrPriorityPrefix = 0;

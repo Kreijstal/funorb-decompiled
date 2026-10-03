@@ -1,0 +1,122 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class ReflectionCheckRequest extends IntrusiveNode {
+    int[] operationTypes;
+    static FrameTimer field_p;
+    int[] operationErrors;
+    int[] integerWriteValues;
+    int requestId;
+    static Sprite[] pointsPanelGlowFrames;
+    PlatformTask[] methodLookupTasks;
+    static volatile int livePointerY;
+    byte[][][] serializedArguments;
+    PlatformTask[] fieldLookupTasks;
+    int operationCount;
+    static String field_l;
+
+    public static void b(boolean param0) {
+        pointsPanelGlowFrames = null;
+        if (param0) {
+            field_l = (String) null;
+            field_p = null;
+            field_l = null;
+            return;
+        }
+        field_p = null;
+        field_l = null;
+    }
+
+    final static int a(CharSequence param0, byte param1, int param2, boolean param3) {
+        int var8 = 0;
+        int stackIn_41_0 = 0;
+        RuntimeException stackIn_44_0 = null;
+        StringBuilder stackIn_44_1 = null;
+        String stackIn_45_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var4_int = 0;
+        RuntimeException var4 = null;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        CharSequence var11 = null;
+        try {
+          if ((2 <= param2) &&
+              (param2 <= 36)) {
+            var4_int = 0;
+            var5 = 0;
+            var6 = 0;
+            var7 = param0.length();
+            if (param1 <= 2) {
+              var11 = (CharSequence) null;
+              ReflectionCheckRequest.a((CharSequence) null, (byte) 58, 6, false);
+            }
+            for (var8 = 0; var7 > var8; var8++) {
+              L3: {
+                var9 = param0.charAt(var8);
+                if (var8 == 0) {
+                  if (var9 == 45) {
+                    var4_int = 1;
+                    break L3;
+                  }
+                  if ((var9 == 43) &&
+                      (param3)) {
+                    break L3;
+                  }
+                }
+                if ((48 <= var9) &&
+                    (var9 <= 57)) {
+                  var9 -= 48;
+                } else if ((65 <= var9) &&
+                    (90 >= var9)) {
+                  var9 -= 55;
+                } else if ((var9 >= 97) &&
+                    (122 >= var9)) {
+                  var9 -= 87;
+                } else {
+                  throw new NumberFormatException();
+                }
+                if (var9 >= param2) {
+                  throw new NumberFormatException();
+                }
+                if (var4_int != 0) {
+                  var9 = -var9;
+                }
+                var10 = var6 * param2 + var9;
+                if (var6 != var10 / param2) {
+                  throw new NumberFormatException();
+                }
+                var5 = 1;
+                var6 = var10;
+              }
+            }
+            if (var5 == 0) {
+              throw new NumberFormatException();
+            }
+            stackIn_41_0 = var6;
+            return stackIn_41_0;
+          }
+          throw new IllegalArgumentException("" + param2);
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4 = decompiledCaughtException;
+          stackIn_44_0 = var4;
+          stackIn_44_1 = new StringBuilder().append("eg.B(");
+          if (param0 == null) {
+            stackIn_45_2 = "null";
+          } else {
+            stackIn_45_2 = "{...}";
+          }
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    ReflectionCheckRequest() {
+    }
+
+    static {
+        livePointerY = -1;
+    }
+}

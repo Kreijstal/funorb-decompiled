@@ -7,10 +7,10 @@ final class ig {
         int var5;
         int var6;
         if (!param0) {
-          if (gk.field_a[param3] < gk.field_a[param1]) {
+          if (ClientProtocolStage.field_a[param3] < ClientProtocolStage.field_a[param1]) {
             return true;
           }
-          if (gk.field_a[param3] > gk.field_a[param1]) {
+          if (ClientProtocolStage.field_a[param3] > ClientProtocolStage.field_a[param1]) {
             return false;
           }
           if (hg.field_a[param1] > hg.field_a[param3]) {
@@ -36,10 +36,10 @@ final class ig {
         if (hg.field_a[param3] > hg.field_a[param1]) {
           return false;
         }
-        if (gk.field_a[param3] < gk.field_a[param1]) {
+        if (ClientProtocolStage.field_a[param3] < ClientProtocolStage.field_a[param1]) {
           return true;
         }
-        if (gk.field_a[param3] > gk.field_a[param1]) {
+        if (ClientProtocolStage.field_a[param3] > ClientProtocolStage.field_a[param1]) {
           return false;
         }
         var4 = FrameTimer.field_b[param3] + TextHotspotBounds.field_m[param3] + NodeHashTableIterator.field_i[param3];

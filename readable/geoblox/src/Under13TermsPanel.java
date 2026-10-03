@@ -3,7 +3,7 @@
  */
 final class Under13TermsPanel extends WidgetContainer implements HotspotActivationListener, ButtonActivationListener {
     private ButtonWidget continueButton;
-    static ck field_E;
+    static TextTemplateArgumentType field_E;
     private HotspotTextWidget termsText;
     private AccountCreationDialog accountCreationDialog;
     static int menuPointerRepeatCountdown;
@@ -12,29 +12,29 @@ final class Under13TermsPanel extends WidgetContainer implements HotspotActivati
     static String field_F;
 
     final static void g(int param0) {
-        if (null == tl.field_f) {
+        if (null == RasterTargetSnapshot.field_f) {
             jk.fullscreenAcceptCountdownPluralText = OpacityWidget.a(jk.fullscreenAcceptCountdownPluralText, new String[]{"<br><shad=000001><%0></shad><br>"}, (byte) -123);
             mj.fullscreenAcceptCountdownSingularText = OpacityWidget.a(mj.fullscreenAcceptCountdownSingularText, new String[]{"<br><shad=000001><%0></shad><br>"}, (byte) -55);
-            tl.field_f = new String[19];
-            tl.field_f[12] = ValidationState.nextText;
-            tl.field_f[7] = tc.quitText;
-            tl.field_f[6] = LoginPayload.endGameText;
-            tl.field_f[8] = wb.soundLabelText;
-            tl.field_f[14] = PacketByteCipher.field_c;
-            tl.field_f[5] = FullscreenErrorDialog.menuText;
-            tl.field_f[0] = TextPairLoginPayload.startGameText;
-            tl.field_f[4] = SessionGameApplet.fullscreenText;
-            tl.field_f[param0] = fc.musicLabelText;
-            tl.field_f[10] = bl.achievementsText;
-            tl.field_f[11] = tl.previousText;
-            tl.field_f[15] = ArchiveCatalog.field_a;
-            tl.field_f[1] = id.resumeGameText;
-            tl.field_f[13] = StrongCacheReference.field_t;
-            tl.field_f[3] = SecondaryNodeDequeIterator.instructionsText;
-            tl.field_f[2] = ii.highscoresText;
-            tl.field_f[18] = ClientSessionSnapshot.highscoreModeNames[2];
-            tl.field_f[16] = ClientSessionSnapshot.highscoreModeNames[0];
-            tl.field_f[17] = ClientSessionSnapshot.highscoreModeNames[1];
+            RasterTargetSnapshot.field_f = new String[19];
+            RasterTargetSnapshot.field_f[12] = ValidationState.nextText;
+            RasterTargetSnapshot.field_f[7] = tc.quitText;
+            RasterTargetSnapshot.field_f[6] = LoginPayload.endGameText;
+            RasterTargetSnapshot.field_f[8] = wb.soundLabelText;
+            RasterTargetSnapshot.field_f[14] = PacketByteCipher.field_c;
+            RasterTargetSnapshot.field_f[5] = FullscreenErrorDialog.menuText;
+            RasterTargetSnapshot.field_f[0] = TextPairLoginPayload.startGameText;
+            RasterTargetSnapshot.field_f[4] = SessionGameApplet.fullscreenText;
+            RasterTargetSnapshot.field_f[param0] = fc.musicLabelText;
+            RasterTargetSnapshot.field_f[10] = bl.achievementsText;
+            RasterTargetSnapshot.field_f[11] = RasterTargetSnapshot.previousText;
+            RasterTargetSnapshot.field_f[15] = ArchiveCatalog.field_a;
+            RasterTargetSnapshot.field_f[1] = id.resumeGameText;
+            RasterTargetSnapshot.field_f[13] = StrongCacheReference.field_t;
+            RasterTargetSnapshot.field_f[3] = SecondaryNodeDequeIterator.instructionsText;
+            RasterTargetSnapshot.field_f[2] = ArchiveLoadStep.highscoresText;
+            RasterTargetSnapshot.field_f[18] = ClientSessionSnapshot.highscoreModeNames[2];
+            RasterTargetSnapshot.field_f[16] = ClientSessionSnapshot.highscoreModeNames[0];
+            RasterTargetSnapshot.field_f[17] = ClientSessionSnapshot.highscoreModeNames[1];
             return;
         }
     }
@@ -217,7 +217,7 @@ final class Under13TermsPanel extends WidgetContainer implements HotspotActivati
 
     private final String c(boolean param0) {
         if (param0) {
-            field_E = (ck) null;
+            field_E = (TextTemplateArgumentType) null;
             return "</col></u>";
         }
         return "</col></u>";
@@ -275,7 +275,7 @@ final class Under13TermsPanel extends WidgetContainer implements HotspotActivati
                 var8 = param1.getParameter("cookieprefix");
                 var3 = var8 + "settings";
                 var4 = (String) (wk.a((byte) -6, param1, "getcookies"));
-                var5 = uj.a(';', true, var4);
+                var5 = FullscreenFailureReason.a(';', true, var4);
                 for (var6 = 0; var5.length > var6; var6++) {
                   var7 = var5[var6].indexOf('=');
                   if ((var7 >= 0) &&
@@ -317,7 +317,7 @@ final class Under13TermsPanel extends WidgetContainer implements HotspotActivati
     }
 
     static {
-        field_E = new ck(7, 0, 1, 1);
+        field_E = new TextTemplateArgumentType(7, 0, 1, 1);
         geometrySpritesByThemeAndCategory = new Sprite[7][7];
         liveHeldPointerButton = 0;
         field_F = "Growing Pumpkin";

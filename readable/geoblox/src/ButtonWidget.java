@@ -9,7 +9,7 @@ class ButtonWidget extends UiWidget {
     static int field_B;
     private boolean focusable;
     boolean enabled;
-    static nd field_x;
+    static TextValidationFailure field_x;
     private boolean focused;
 
     boolean handlePointerPress(int parentY, int methodGuard, int parentX, int pointerButton, int pointerX, int pointerY, UiWidget eventContext) {
@@ -283,6 +283,6 @@ class ButtonWidget extends UiWidget {
 
     static {
         field_B = 0;
-        field_x = new nd();
+        field_x = new TextValidationFailure();
     }
 }

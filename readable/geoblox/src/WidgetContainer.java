@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class WidgetContainer extends UiWidget implements ql {
+class WidgetContainer extends UiWidget implements ChildWidgetOwner {
     static String toServerListText;
     static Sprite menuBackgroundSprite;
     IntrusiveDeque children;

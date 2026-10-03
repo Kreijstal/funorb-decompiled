@@ -12,7 +12,7 @@ final class DiskCacheWorker implements Runnable {
     static int avatarFeedbackFrameIndex;
     static PcmStreamMixer field_e;
     private boolean stopRequested;
-    static wa field_f;
+    static WidgetTheme field_f;
     static long field_c;
 
     public static void a(int param0) {
@@ -163,9 +163,9 @@ final class DiskCacheWorker implements Runnable {
     }
 
     final static int a(byte param0, String param1, int param2, int param3, String param4, String param5, boolean param6) {
-        mb var7 = null;
+        LoginTextValue var7 = null;
         RuntimeException var7_ref = null;
-        mb var8 = null;
+        LoginTextValue var8 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -176,8 +176,8 @@ final class DiskCacheWorker implements Runnable {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var7 = new mb(param5);
-          var8 = new mb(param4);
+          var7 = new LoginTextValue(param5);
+          var8 = new LoginTextValue(param4);
           if (param0 != -94) {
             field_e = (PcmStreamMixer) null;
           }

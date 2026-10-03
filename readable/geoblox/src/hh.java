@@ -24,7 +24,7 @@ final class hh {
         Throwable unusedPollFailureScratch = null;
         boolean eventAvailable = false;
         Throwable unusedPollFailureCarrier = null;
-        keyboardMonitor = je.keyboardListener;
+        keyboardMonitor = TrackedPcmStream.keyboardListener;
         synchronized (keyboardMonitor) {
           if (methodGuard <= 41) {
             return false;

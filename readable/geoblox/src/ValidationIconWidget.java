@@ -115,7 +115,7 @@ final class ValidationIconWidget extends ButtonWidget {
             Geoblox.setRasterTarget(1, da.field_b);
           }
           var13.rotateSmooth(112, 144, var13.fullWidth << 4, var13.fullHeight << 4, -this.animationTicks << 10, 4096);
-          id.a(true);
+          id.restoreRasterTarget(true);
           da.field_b.drawAdditive(-var13.fullWidth + var5, var6 - var13.fullHeight, 256);
         }
     }

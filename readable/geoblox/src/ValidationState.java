@@ -20,7 +20,7 @@ final class ValidationState {
             panelPhase = MidiPcmStream.pendingActionPanelPhase;
             if (panelPhase == 0) {
               eh.pendingActionPanelTop = eh.pendingActionPanelTop - 1;
-              if (eh.pendingActionPanelTop <= -10 - (tl.pendingActionPanelHeight - 480)) {
+              if (eh.pendingActionPanelTop <= -10 - (RasterTargetSnapshot.pendingActionPanelHeight - 480)) {
                 EmailAvailabilityQuery.pendingActionPanelHoldTicks = 0;
                 MidiPcmStream.pendingActionPanelPhase = 1;
                 return;
@@ -55,7 +55,7 @@ final class ValidationState {
         panelPhase = MidiPcmStream.pendingActionPanelPhase;
         if (panelPhase == 0) {
           eh.pendingActionPanelTop = eh.pendingActionPanelTop - 1;
-          if (eh.pendingActionPanelTop > -10 - (tl.pendingActionPanelHeight - 480)) {
+          if (eh.pendingActionPanelTop > -10 - (RasterTargetSnapshot.pendingActionPanelHeight - 480)) {
             return;
           }
           EmailAvailabilityQuery.pendingActionPanelHoldTicks = 0;

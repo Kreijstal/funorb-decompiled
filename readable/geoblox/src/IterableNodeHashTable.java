@@ -7,7 +7,7 @@ import java.util.*;
 final class IterableNodeHashTable implements Iterable {
     IntrusiveNode[] field_a;
     static int avatarBlinkClockTicks;
-    static gk field_d;
+    static ClientProtocolStage field_d;
     private IntrusiveNode field_f;
     int field_c;
     static int[] transformedMeshNormalZ;
@@ -179,10 +179,10 @@ final class IterableNodeHashTable implements Iterable {
                 var3 = var3 + param1;
               }
               DequeCursor.a(var3, (byte) -75);
-              var6 = og.a(var3, "%3a", true, ":");
-              var7 = og.a(var6, "%40", true, "@");
-              var8 = og.a(var7, "%26", true, "&");
-              var9 = og.a(var8, "%23", true, "#");
+              var6 = TextTemplateDefinition.a(var3, "%3a", true, ":");
+              var7 = TextTemplateDefinition.a(var6, "%40", true, "@");
+              var8 = TextTemplateDefinition.a(var7, "%26", true, "&");
+              var9 = TextTemplateDefinition.a(var8, "%23", true, "#");
               if (null == GameScreen.errorReportApplet) {
                 return;
               }
@@ -293,7 +293,7 @@ final class IterableNodeHashTable implements Iterable {
 
     static {
         avatarBlinkClockTicks = 0;
-        field_d = new gk();
+        field_d = new ClientProtocolStage();
         transformedMeshNormalZ = new int[8192];
     }
 }

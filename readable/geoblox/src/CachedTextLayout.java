@@ -292,9 +292,9 @@ final class CachedTextLayout extends TextLayout {
         PendingActionMarker pendingActionMarkerBeforeNullCheck = pendingActionMarkerForDrawing;
         if (pendingActionMarkerBeforeNullCheck != null) {
             pendingActionDrawTop = eh.pendingActionPanelTop;
-            ma.drawNineSlicePanel(pendingActionDrawTop, 10, tl.pendingActionPanelHeight, (byte) -92, MultiHandleSliderRenderer.pendingActionPanelWidth, ll.frameNineSliceSprites);
-            UsernameAvailabilityQuery.achievementSprites[pendingActionMarkerForDrawing.actionId].drawQuarterSize(25, pendingActionDrawTop + (-32 + (tl.pendingActionPanelHeight - 15)) / 2);
-            FadingDialog.uiPaletteFont.drawParagraph(pg.achievementTitles[pendingActionMarkerForDrawing.actionId], 67, 15 + pendingActionDrawTop, MultiHandleSliderRenderer.pendingActionPanelWidth - 42 - 30, tl.pendingActionPanelHeight - 30, 0, -1, 1, 1, 30);
+            DelayedIncomingPacket.drawNineSlicePanel(pendingActionDrawTop, 10, RasterTargetSnapshot.pendingActionPanelHeight, (byte) -92, MultiHandleSliderRenderer.pendingActionPanelWidth, ll.frameNineSliceSprites);
+            UsernameAvailabilityQuery.achievementSprites[pendingActionMarkerForDrawing.actionId].drawQuarterSize(25, pendingActionDrawTop + (-32 + (RasterTargetSnapshot.pendingActionPanelHeight - 15)) / 2);
+            FadingDialog.uiPaletteFont.drawParagraph(pg.achievementTitles[pendingActionMarkerForDrawing.actionId], 67, 15 + pendingActionDrawTop, MultiHandleSliderRenderer.pendingActionPanelWidth - 42 - 30, RasterTargetSnapshot.pendingActionPanelHeight - 30, 0, -1, 1, 1, 30);
         }
     }
 

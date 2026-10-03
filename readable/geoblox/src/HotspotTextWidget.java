@@ -179,7 +179,7 @@ class HotspotTextWidget extends ButtonWidget {
           for (var1_int = 0; 1000 > var1_int; var1_int++) {
             var2 = new GameplayEntity(0, 0, 0, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, var1_int);
             SecondaryNodeDeque.availableEntities.addLast(-117, var2);
-            tl.entitiesById[var1_int] = var2;
+            RasterTargetSnapshot.entitiesById[var1_int] = var2;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

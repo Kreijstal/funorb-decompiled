@@ -5,7 +5,7 @@ import java.io.*;
 
 final class ProxyAuthenticationRequiredException extends IOException {
     static int field_a;
-    static ck field_c;
+    static TextTemplateArgumentType field_c;
     static String field_b;
 
     final static void drawScorePopups(int param0) {
@@ -56,7 +56,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
     }
 
     static {
-        field_c = new ck(13, 0, 1, 0);
+        field_c = new TextTemplateArgumentType(13, 0, 1, 0);
         field_b = "Click 'Discard Results' to lose all progress, Achievements and your score.";
     }
 }

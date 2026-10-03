@@ -9,7 +9,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
     private TextInputWidget passwordInput;
     private boolean showCreateAccount;
     private ButtonWidget alternateButton;
-    private static gk field_K;
+    private static ClientProtocolStage field_K;
     static boolean endingEntityScanClear;
     private boolean allowJustPlay;
     private ButtonWidget createAccountButton;
@@ -23,7 +23,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
         boolean stackIn_13_0 = false;
         if (param0 != -123) {
           var3 = (PacketBuffer) null;
-          LoginPanel.a(-108, (PacketBuffer) null);
+          LoginPanel.writeReflectionCheckReply(-108, (PacketBuffer) null);
         }
         if (!((param1 >= 48) &&
               (param1 <= 57)) &&
@@ -96,7 +96,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
                   return;
                 }
               }
-              IterableNodeHashTable.a((Throwable) null, "LR1: " + og.e(55), (byte) 125);
+              IterableNodeHashTable.a((Throwable) null, "LR1: " + TextTemplateDefinition.e(55), (byte) 125);
               Bzip2DecoderState.closeSessionSocket((byte) -123);
             }
           }
@@ -234,7 +234,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
         return this.loginIdentifierInput.widgetText;
     }
 
-    final static int a(int param0, int param1, mb param2, mb param3, String param4, boolean param5, int param6) {
+    final static int a(int param0, int param1, LoginTextValue param2, LoginTextValue param3, String param4, boolean param5, int param6) {
         int var12 = 0;
         int stackIn_4_0 = 0;
         ByteArrayBuffer stackIn_9_0 = null;
@@ -264,14 +264,14 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
         String var13 = null;
         CharSequence var14 = null;
         try {
-          var13 = param2.b(16925);
-          var8 = param3.b(16925);
+          var13 = param2.getText(16925);
+          var8 = param3.getText(16925);
           if ((SpriteCheckboxRenderer.field_e == null) &&
               (!w.a(false, 52))) {
             stackIn_4_0 = -1;
             return stackIn_4_0;
           }
-          if (IterableNodeHashTable.field_d == PacketBuffer.field_l) {
+          if (IterableNodeHashTable.field_d == PacketBuffer.currentProtocolStage) {
             CacheReference.field_q.position = 0;
             IntrusiveNodeHashTable.field_b = null;
             if (param4 != null) {
@@ -304,14 +304,14 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
               fc.field_d.writeIntBE((byte) 95, DelegatingCanvas.field_d.nextInt());
               fc.field_d.writeIntBE((byte) 95, DelegatingCanvas.field_d.nextInt());
               stackIn_9_0 = fc.field_d;
-              if (!param2.a((byte) 97)) {
+              if (!param2.isIncludedInLookupRequest((byte) 97)) {
                 stackIn_10_1 = "";
               } else {
                 stackIn_10_1 = var13;
               }
               ((ByteArrayBuffer) (Object) stackIn_9_0).writeZeroPrefixedNullTerminatedText(stackIn_10_1, (byte) -126);
               stackIn_12_0 = fc.field_d;
-              if (!param3.a((byte) 126)) {
+              if (!param3.isIncludedInLookupRequest((byte) 126)) {
                 stackIn_13_1 = "";
               } else {
                 stackIn_13_1 = var8;
@@ -324,27 +324,27 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
               CacheReference.field_q.backpatchLengthByte(11700, CacheReference.field_q.position - var9);
             }
             NanoFrameTimer.a(-1, -1);
-            PacketBuffer.field_l = field_K;
+            PacketBuffer.currentProtocolStage = field_K;
           }
-          if ((field_K == PacketBuffer.field_l) &&
+          if ((field_K == PacketBuffer.currentProtocolStage) &&
               (UiWidget.b(30000, 1))) {
             var9 = eh.field_d.readUnsignedByte((byte) 34);
             eh.field_d.position = 0;
             if ((var9 >= 100) &&
                 (var9 <= 105)) {
-              PacketBuffer.field_l = v.field_l;
+              PacketBuffer.currentProtocolStage = v.field_l;
               WidgetSkinState.field_i = new String[var9 - 100];
             } else {
               if (var9 == 248) {
                 GrowableIntList.a(NodeHashTableIterator.c(124), (byte) 123);
                 AudioService.field_a = ph.createUnableText;
                 Bzip2DecoderState.closeSessionSocket((byte) -124);
-                ck.field_e = false;
+                TextTemplateArgumentType.field_e = false;
                 stackIn_31_0 = var9;
                 return stackIn_31_0;
               }
               if (99 != var9) {
-                PacketBuffer.field_l = AccountCreationForm.field_F;
+                PacketBuffer.currentProtocolStage = AccountCreationForm.field_F;
                 AchievementSubmission.field_k = -1;
                 ScorePopup.field_l = var9;
               } else {
@@ -354,7 +354,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
               }
             }
           }
-          if (PacketBuffer.field_l == v.field_l) {
+          if (PacketBuffer.currentProtocolStage == v.field_l) {
             var9 = 2;
             if (UiWidget.b(30000, var9)) {
               var10 = eh.field_d.readUnsignedShortBE(true);
@@ -365,13 +365,13 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
                   WidgetSkinState.field_i[var12] = eh.field_d.readZeroPrefixedNullTerminatedText(27425);
                 }
                 Bzip2DecoderState.closeSessionSocket((byte) -114);
-                ck.field_e = false;
+                TextTemplateArgumentType.field_e = false;
                 stackIn_45_0 = var11 + 100;
                 return stackIn_45_0;
               }
             }
           }
-          if ((PacketBuffer.field_l == AccountCreationForm.field_F) &&
+          if ((PacketBuffer.currentProtocolStage == AccountCreationForm.field_F) &&
               (TriangleMesh.a(false))) {
             if (ScorePopup.field_l != 255) {
               AudioService.field_a = eh.field_d.readNullTerminatedText((byte) 98);
@@ -382,27 +382,27 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
               }
             }
             Bzip2DecoderState.closeSessionSocket((byte) -114);
-            ck.field_e = false;
+            TextTemplateArgumentType.field_e = false;
             stackIn_54_0 = ScorePopup.field_l;
             return stackIn_54_0;
           }
           if (param6 < 56) {
-            field_K = (gk) null;
+            field_K = (ClientProtocolStage) null;
           }
           if (SpriteCheckboxRenderer.field_e == null) {
-            if (ck.field_e) {
+            if (TextTemplateArgumentType.field_e) {
               if (ll.a((byte) 12) <= 30000L) {
-                AudioService.field_a = uj.loginMessage2Text;
+                AudioService.field_a = FullscreenFailureReason.loginMessage2Text;
               } else {
                 AudioService.field_a = IntrusiveNode.loginMessage3Text;
               }
-              ck.field_e = false;
+              TextTemplateArgumentType.field_e = false;
               stackIn_63_0 = 249;
               return stackIn_63_0;
             }
             var9 = NetworkArchiveRequest.field_x;
             NetworkArchiveRequest.field_x = TextInputRenderer.field_s;
-            ck.field_e = true;
+            TextTemplateArgumentType.field_e = true;
             TextInputRenderer.field_s = var9;
           }
           stackIn_66_0 = -1;
@@ -479,7 +479,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
         }
     }
 
-    final static void a(int param0, PacketBuffer param1) {
+    final static void writeReflectionCheckReply(int methodGuard, PacketBuffer buffer) {
         try {
             int var6 = 0;
             int var11_int = 0;
@@ -509,10 +509,10 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
             Object[] var10 = null;
             Object var11 = null;
             ObjectInputStream var12 = null;
-            eg var13 = null;
+            ReflectionCheckRequest var13 = null;
             java.lang.reflect.Field var14 = null;
             java.lang.reflect.Field var15 = null;
-            eg var17 = null;
+            ReflectionCheckRequest var17 = null;
             Object var18 = null;
             Object var19 = null;
             Object var21 = null;
@@ -524,27 +524,27 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
             var19 = null;
             var21 = null;
             try {
-              var13 = (eg) ((Object) UsernameAvailabilityQuery.field_k.firstForIteration(0));
+              var13 = (ReflectionCheckRequest) ((Object) UsernameAvailabilityQuery.field_k.firstForIteration(0));
               var17 = var13;
               if (var17 == null) {
                 return;
               }
-              var4 = 2 % ((param0 + 26) / 62);
+              var4 = 2 % ((methodGuard + 26) / 62);
               var3 = 0;
-              for (var5 = 0; var5 < var17.field_f; var5++) {
-                if (var13.field_n[var5] != null) {
-                  if (var13.field_n[var5].status == 2) {
-                    var13.field_j[var5] = -5;
+              for (var5 = 0; var5 < var17.operationCount; var5++) {
+                if (var13.fieldLookupTasks[var5] != null) {
+                  if (var13.fieldLookupTasks[var5].status == 2) {
+                    var13.operationErrors[var5] = -5;
                   }
-                  if (var13.field_n[var5].status == 0) {
+                  if (var13.fieldLookupTasks[var5].status == 0) {
                     var3 = 1;
                   }
                 }
-                if (var13.field_i[var5] != null) {
-                  if (2 == var13.field_i[var5].status) {
-                    var13.field_j[var5] = -6;
+                if (var13.methodLookupTasks[var5] != null) {
+                  if (2 == var13.methodLookupTasks[var5].status) {
+                    var13.operationErrors[var5] = -6;
                   }
-                  if (var13.field_i[var5].status == 0) {
+                  if (var13.methodLookupTasks[var5].status == 0) {
                     var3 = 1;
                   }
                 }
@@ -552,37 +552,37 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
               if (var3 != 0) {
                 return;
               }
-              var5 = param1.position;
-              param1.writeIntBE((byte) 95, var17.field_m);
-              for (var6 = 0; var6 < var17.field_f; var6++) {
-                if (var13.field_j[var6] != 0) {
-                  param1.writeByte((byte) 6, var13.field_j[var6]);
+              var5 = buffer.position;
+              buffer.writeIntBE((byte) 95, var17.requestId);
+              for (var6 = 0; var6 < var17.operationCount; var6++) {
+                if (var13.operationErrors[var6] != 0) {
+                  buffer.writeByte((byte) 6, var13.operationErrors[var6]);
                 } else {
                   try {
-                    var7_int = var13.field_k[var6];
+                    var7_int = var13.operationTypes[var6];
                     if (var7_int == 0) {
-                      var15 = (java.lang.reflect.Field) (var13.field_n[var6].result);
+                      var15 = (java.lang.reflect.Field) (var13.fieldLookupTasks[var6].result);
                       var9 = var15.getInt((Object) null);
-                      param1.writeByte((byte) 3, 0);
-                      param1.writeIntBE((byte) 95, var9);
+                      buffer.writeByte((byte) 3, 0);
+                      buffer.writeIntBE((byte) 95, var9);
                     } else {
                       if (var7_int == 1) {
-                        var14 = (java.lang.reflect.Field) (var13.field_n[var6].result);
+                        var14 = (java.lang.reflect.Field) (var13.fieldLookupTasks[var6].result);
                         var8 = var14;
-                        var14.setInt((Object) null, var13.field_g[var6]);
-                        param1.writeByte((byte) 124, 0);
+                        var14.setInt((Object) null, var13.integerWriteValues[var6]);
+                        buffer.writeByte((byte) 124, 0);
                       } else {
                         if (2 == var7_int) {
-                          var25 = (java.lang.reflect.Field) (var13.field_n[var6].result);
+                          var25 = (java.lang.reflect.Field) (var13.fieldLookupTasks[var6].result);
                           var9 = var25.getModifiers();
-                          param1.writeByte((byte) 126, 0);
-                          param1.writeIntBE((byte) 95, var9);
+                          buffer.writeByte((byte) 126, 0);
+                          buffer.writeIntBE((byte) 95, var9);
                         }
                       }
                     }
                     if (var7_int == 3) {
-                      var27 = (java.lang.reflect.Method) (var13.field_i[var6].result);
-                      var24 = var13.field_o[var6];
+                      var27 = (java.lang.reflect.Method) (var13.methodLookupTasks[var6].result);
+                      var24 = var13.serializedArguments[var6];
                       var10 = new Object[var24.length];
                       for (var11_int = 0; var11_int < var24.length; var11_int++) {
                         var12 = new ObjectInputStream((InputStream) ((Object) new ByteArrayInputStream(var24[var11_int])));
@@ -590,84 +590,84 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
                       }
                       var11 = var27.invoke((Object) null, var10);
                       if (var11 == null) {
-                        param1.writeByte((byte) -88, 0);
+                        buffer.writeByte((byte) -88, 0);
                       } else if (var11 instanceof Number) {
-                        param1.writeByte((byte) 126, 1);
-                        param1.writeLongBE((byte) 116, ((Number) (var11)).longValue());
+                        buffer.writeByte((byte) 126, 1);
+                        buffer.writeLongBE((byte) 116, ((Number) (var11)).longValue());
                       } else if (!(var11 instanceof String)) {
-                        param1.writeByte((byte) -86, 4);
+                        buffer.writeByte((byte) -86, 4);
                       } else {
-                        param1.writeByte((byte) 121, 2);
-                        param1.writeNullTerminatedText((String) (var11), 0);
+                        buffer.writeByte((byte) 121, 2);
+                        buffer.writeNullTerminatedText((String) (var11), 0);
                       }
                     } else {
                       if (var7_int == 4) {
-                        var26 = (java.lang.reflect.Method) (var13.field_i[var6].result);
+                        var26 = (java.lang.reflect.Method) (var13.methodLookupTasks[var6].result);
                         var9 = var26.getModifiers();
-                        param1.writeByte((byte) 123, 0);
-                        param1.writeIntBE((byte) 95, var9);
+                        buffer.writeByte((byte) 123, 0);
+                        buffer.writeIntBE((byte) 95, var9);
                       }
                     }
                   } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                     decompiledCaughtException = decompiledCaughtParameter0;
                     var7 = (ClassNotFoundException) (Object) decompiledCaughtException;
-                    param1.writeByte((byte) 122, -10);
+                    buffer.writeByte((byte) 122, -10);
                   } catch (java.io.InvalidClassException decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     var7_ref = (InvalidClassException) (Object) decompiledCaughtException;
-                    param1.writeByte((byte) -101, -11);
+                    buffer.writeByte((byte) -101, -11);
                   } catch (java.io.StreamCorruptedException decompiledCaughtParameter2) {
                     decompiledCaughtException = decompiledCaughtParameter2;
                     var7_ref2 = (StreamCorruptedException) (Object) decompiledCaughtException;
-                    param1.writeByte((byte) 124, -12);
+                    buffer.writeByte((byte) 124, -12);
                   } catch (java.io.OptionalDataException decompiledCaughtParameter3) {
                     decompiledCaughtException = decompiledCaughtParameter3;
                     var7_ref3 = (OptionalDataException) (Object) decompiledCaughtException;
-                    param1.writeByte((byte) -78, -13);
+                    buffer.writeByte((byte) -78, -13);
                   } catch (java.lang.IllegalAccessException decompiledCaughtParameter4) {
                     decompiledCaughtException = decompiledCaughtParameter4;
                     var7_ref4 = (IllegalAccessException) (Object) decompiledCaughtException;
-                    param1.writeByte((byte) 4, -14);
+                    buffer.writeByte((byte) 4, -14);
                   } catch (java.lang.IllegalArgumentException decompiledCaughtParameter5) {
                     decompiledCaughtException = decompiledCaughtParameter5;
                     var7_ref5 = (IllegalArgumentException) (Object) decompiledCaughtException;
-                    param1.writeByte((byte) 11, -15);
+                    buffer.writeByte((byte) 11, -15);
                   } catch (java.lang.reflect.InvocationTargetException decompiledCaughtParameter6) {
                     decompiledCaughtException = decompiledCaughtParameter6;
                     var7_ref6 = (java.lang.reflect.InvocationTargetException) (Object) decompiledCaughtException;
-                    param1.writeByte((byte) -127, -16);
+                    buffer.writeByte((byte) -127, -16);
                   } catch (java.lang.SecurityException decompiledCaughtParameter7) {
                     decompiledCaughtException = decompiledCaughtParameter7;
                     var7_ref7 = (SecurityException) (Object) decompiledCaughtException;
-                    param1.writeByte((byte) 126, -17);
+                    buffer.writeByte((byte) 126, -17);
                   } catch (java.io.IOException decompiledCaughtParameter8) {
                     decompiledCaughtException = decompiledCaughtParameter8;
                     var7_ref8 = (IOException) (Object) decompiledCaughtException;
-                    param1.writeByte((byte) 121, -18);
+                    buffer.writeByte((byte) 121, -18);
                   } catch (java.lang.NullPointerException decompiledCaughtParameter9) {
                     decompiledCaughtException = decompiledCaughtParameter9;
                     var7_ref9 = (NullPointerException) (Object) decompiledCaughtException;
-                    param1.writeByte((byte) -100, -19);
+                    buffer.writeByte((byte) -100, -19);
                   } catch (java.lang.Exception decompiledCaughtParameter10) {
                     decompiledCaughtException = decompiledCaughtParameter10;
                     var7_ref10 = (Exception) (Object) decompiledCaughtException;
-                    param1.writeByte((byte) -74, -20);
+                    buffer.writeByte((byte) -74, -20);
                   } catch (java.lang.Throwable decompiledCaughtParameter11) {
                     decompiledCaughtException = decompiledCaughtParameter11;
                     var7_ref11 = decompiledCaughtException;
-                    param1.writeByte((byte) -37, -21);
+                    buffer.writeByte((byte) -37, -21);
                   }
                 }
               }
-              param1.appendCrc32(8, var5);
+              buffer.appendCrc32(8, var5);
               var17.unlinkNode(false);
               return;
             } catch (java.lang.RuntimeException decompiledCaughtParameter12) {
               decompiledCaughtException = decompiledCaughtParameter12;
               var2 = (RuntimeException) (Object) decompiledCaughtException;
               stackIn_67_0 = var2;
-              stackIn_67_1 = new StringBuilder().append("pf.M(").append(param0).append(',');
-              if (param1 == null) {
+              stackIn_67_1 = new StringBuilder().append("pf.M(").append(methodGuard).append(',');
+              if (buffer == null) {
                 stackIn_68_2 = "null";
               } else {
                 stackIn_68_2 = "{...}";
@@ -761,7 +761,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
             }
           } else {
             this.loginOrRetryButton = new ButtonWidget(a.retryText, (WidgetListener) null);
-            this.alternateButton = new ButtonWidget(rj.quitToWebsiteText, (WidgetListener) null);
+            this.alternateButton = new ButtonWidget(DisplayModeInfo.quitToWebsiteText, (WidgetListener) null);
             this.loginIdentifierInput.enabled = false;
           }
           this.loginIdentifierInput.renderer = (WidgetRenderer) ((Object) new TextInputRenderer(10000536));
@@ -795,7 +795,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
           }
           var8 = WeightedObjectCache.loginUsernameEmailText;
           var9 = AlternateLongAndTextLoginPayload.readRememberedMethod(NodeHashTableIterator.c(120), 200);
-          if (var9 != mb.field_b) {
+          if (var9 != LoginTextValue.field_b) {
             if (var9 == ProgressDialog.field_W) {
               var8 = bk.loginUsernameText;
             }
@@ -867,11 +867,11 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
         }
     }
 
-    final static mb h(byte param0) {
+    final static LoginTextValue h(byte param0) {
         if (param0 != -42) {
             LoginPanel.h((byte) -98);
         }
-        return new mb(UsernameSuggestionsPanel.f(100), SocketConnector.d(7));
+        return new LoginTextValue(UsernameSuggestionsPanel.f(100), SocketConnector.d(7));
     }
 
     final void i(int param0) {
@@ -883,6 +883,6 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
     static {
         endingEntityScanClear = false;
         js5CrcErrorText = "CRC mismatch - unable to get a valid download. Please check any firewall/antivirus/filtering software.";
-        field_K = new gk();
+        field_K = new ClientProtocolStage();
     }
 }

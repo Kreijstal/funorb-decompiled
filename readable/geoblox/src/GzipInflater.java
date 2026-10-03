@@ -7,7 +7,7 @@ final class GzipInflater {
     static int field_d;
     static ResourceArchive field_a;
     static int field_k;
-    private static ck field_h;
+    private static TextTemplateArgumentType field_h;
     static MusicScore field_e;
     static IndexedSprite sunBackgroundSprite;
     static int field_f;
@@ -43,7 +43,7 @@ final class GzipInflater {
                 try {
                   this.inflater.setInput(buffer.bytes, buffer.position + 10, buffer.bytes.length - 8 - (buffer.position + 10));
                   if (methodGuard != -1) {
-                    GzipInflater.a(76);
+                    GzipInflater.textTemplateArgumentTypes(76);
                   }
                   this.inflater.inflate(destination);
                 } catch (java.lang.Exception inflateOperationException) {
@@ -88,33 +88,33 @@ final class GzipInflater {
         return qe.field_a;
     }
 
-    final static ck[] a(int param0) {
-        if (param0 == -1) {
-            return new ck[]{InstrumentNoteMask.field_g, w.field_d, ab.field_c, AsyncResourceDownloader.field_d, lj.field_e, Under13TermsPanel.field_E, ProxySocketConnector.field_i, SpriteState.field_t, qj.field_a, DropTargetWidget.field_B, IntKeyLookup.field_d, ProxyAuthenticationRequiredException.field_c, va.field_f, field_h};
+    final static TextTemplateArgumentType[] textTemplateArgumentTypes(int methodGuard) {
+        if (methodGuard == -1) {
+            return new TextTemplateArgumentType[]{InstrumentNoteMask.field_g, w.field_d, ab.field_c, AsyncResourceDownloader.field_d, lj.field_e, Under13TermsPanel.field_E, ProxySocketConnector.field_i, SpriteState.field_t, qj.field_a, DropTargetWidget.field_B, IntKeyLookup.field_d, ProxyAuthenticationRequiredException.field_c, va.field_f, field_h};
         }
         avatarTintGreenDelta = -1.1302366256713867f;
-        return new ck[]{InstrumentNoteMask.field_g, w.field_d, ab.field_c, AsyncResourceDownloader.field_d, lj.field_e, Under13TermsPanel.field_E, ProxySocketConnector.field_i, SpriteState.field_t, qj.field_a, DropTargetWidget.field_B, IntKeyLookup.field_d, ProxyAuthenticationRequiredException.field_c, va.field_f, field_h};
+        return new TextTemplateArgumentType[]{InstrumentNoteMask.field_g, w.field_d, ab.field_c, AsyncResourceDownloader.field_d, lj.field_e, Under13TermsPanel.field_E, ProxySocketConnector.field_i, SpriteState.field_t, qj.field_a, DropTargetWidget.field_B, IntKeyLookup.field_d, ProxyAuthenticationRequiredException.field_c, va.field_f, field_h};
     }
 
     public GzipInflater() {
         this(-1, 1000000, 1000000);
     }
 
-    final static nd a(String param0, boolean param1) {
+    final static TextValidationFailure a(String param0, boolean param1) {
         int var5 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
         String[] var3 = null;
         String[] var4 = null;
         String var6 = null;
-        nd var7 = null;
+        TextValidationFailure var7 = null;
         int var8 = 0;
-        nd stackIn_3_0 = null;
-        nd stackIn_6_0 = null;
-        nd stackIn_10_0 = null;
-        nd stackIn_13_0 = null;
-        nd stackIn_19_0 = null;
-        nd stackIn_22_0 = null;
+        TextValidationFailure stackIn_3_0 = null;
+        TextValidationFailure stackIn_6_0 = null;
+        TextValidationFailure stackIn_10_0 = null;
+        TextValidationFailure stackIn_13_0 = null;
+        TextValidationFailure stackIn_19_0 = null;
+        TextValidationFailure stackIn_22_0 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
@@ -122,7 +122,7 @@ final class GzipInflater {
         var8 = Geoblox.clientControlFlowFlag;
         try {
           if (param1) {
-            stackIn_3_0 = (nd) null;
+            stackIn_3_0 = (TextValidationFailure) null;
             return stackIn_3_0;
           }
           var2_int = param0.length();
@@ -134,7 +134,7 @@ final class GzipInflater {
             stackIn_10_0 = ButtonWidget.field_x;
             return stackIn_10_0;
           }
-          var3 = uj.a('.', true, param0);
+          var3 = FullscreenFailureReason.a('.', true, param0);
           if (var3.length < 2) {
             stackIn_13_0 = InstrumentNoteMask.field_f;
             return stackIn_13_0;
@@ -170,6 +170,6 @@ final class GzipInflater {
     static {
         field_d = -1;
         field_f = 7;
-        field_h = new ck(15, 0, 1, 0);
+        field_h = new TextTemplateArgumentType(15, 0, 1, 0);
     }
 }

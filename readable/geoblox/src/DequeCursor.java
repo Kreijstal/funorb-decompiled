@@ -43,7 +43,7 @@ final class DequeCursor {
             if (11 > CachedTextLayout.field_h) {
               WidgetSkinState.field_j = ((int)(var1_float * MenuScreen.introTintGreenDelta) << 8) + (DiskCacheWorker.avatarTintPalette[0] + ((int)(var1_float * TextLayoutLine.field_b) << 16)) + (int)(SocketArchiveNetworkClient.field_x * var1_float);
             }
-            var2 = tl.introFaceFrames[CachedTextLayout.field_h].fullWidth >> 1;
+            var2 = RasterTargetSnapshot.introFaceFrames[CachedTextLayout.field_h].fullWidth >> 1;
             var3 = MatchingTextValidator.field_j << 2;
             if ((!sg.field_d) &&
                 (-var3 + 900 <= 320 + var2)) {
@@ -203,7 +203,7 @@ final class DequeCursor {
 
     final static void a(String param0, byte param1) {
         int var2 = -10 / ((58 - param1) / 41);
-        System.out.println("Error: " + og.a(param0, "\n", true, "%0a"));
+        System.out.println("Error: " + TextTemplateDefinition.a(param0, "\n", true, "%0a"));
     }
 
     DequeCursor(IntrusiveDeque deque) {

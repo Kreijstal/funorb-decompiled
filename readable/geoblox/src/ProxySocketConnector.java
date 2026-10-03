@@ -8,7 +8,7 @@ final class ProxySocketConnector extends SocketConnector {
     static Sprite field_l;
     static int gameplayOriginScreenId;
     private java.net.ProxySelector field_k;
-    static ck field_i;
+    static TextTemplateArgumentType field_i;
     static ResourceArchive field_m;
 
     final static void selectThemeRenderAssets(byte methodGuard) {
@@ -359,7 +359,7 @@ final class ProxySocketConnector extends SocketConnector {
     static {
         gameplayOriginScreenId = -1;
         field_l = new Sprite(270, 70);
-        field_i = new ck(8, 0, 4, 1);
+        field_i = new TextTemplateArgumentType(8, 0, 4, 1);
     }
 
     @SuppressWarnings("unchecked")

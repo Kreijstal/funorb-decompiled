@@ -6,7 +6,7 @@ final class PacketBuffer extends ByteArrayBuffer {
     static int field_n;
     private PacketByteCipher cipher;
     private int bitPosition;
-    static gk field_l;
+    static ClientProtocolStage currentProtocolStage;
     static String field_q;
     static Sprite resultBubbleSprite;
     static boolean[] connectivityVisitedByEntityId;
@@ -91,11 +91,11 @@ final class PacketBuffer extends ByteArrayBuffer {
             return;
           }
           while (33 > var2_int) {
-            if (param1 != ck.field_c[var2_int]) {
+            if (param1 != TextTemplateArgumentType.field_c[var2_int]) {
               var2_int++;
               continue;
             }
-            if (!vg.field_j[var2_int]) {
+            if (!SecondaryNodeHashTable.field_j[var2_int]) {
               if ((10 <= var2_int) &&
                   (26 >= var2_int)) {
                 var3 = te.field_c.c(-1879044097, w.field_b[var2_int]);
@@ -103,14 +103,14 @@ final class PacketBuffer extends ByteArrayBuffer {
                 var3 = te.field_c.b(1, w.field_b[var2_int]);
               }
               fl.field_c[var2_int] = var3.a(AchievementSubmission.field_i);
-              vg.field_j[var2_int] = true;
+              SecondaryNodeHashTable.field_j[var2_int] = true;
             }
             var2_int++;
           }
           var4 = 0;
           var2_int = var4;
           while (var4 < 33) {
-            if (!vg.field_j[var4]) {
+            if (!SecondaryNodeHashTable.field_j[var4]) {
               return;
             }
             var4++;
@@ -132,7 +132,7 @@ final class PacketBuffer extends ByteArrayBuffer {
         }
         field_r = null;
         field_q = null;
-        field_l = null;
+        currentProtocolStage = null;
     }
 
     final int readBits(byte methodGuard, int remainingBitCount) {

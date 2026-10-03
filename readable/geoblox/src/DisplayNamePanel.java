@@ -28,7 +28,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
         TextWidgetRenderer var1 = new TextWidgetRenderer(hh.field_d, 0, 0, 0, 0, 16777215, -1, 3, 0, DialogLayer.sharedUiFont.maxAscent, -1, 2147483647, true);
         UiWidget var2 = new UiWidget(sb.loginNoDisplayNameText, var1, (WidgetListener) null);
         this.confirmButton = new ButtonWidget(ec.okText, (WidgetListener) null);
-        this.cancelButton = new ButtonWidget(ck.cancelText, (WidgetListener) null);
+        this.cancelButton = new ButtonWidget(TextTemplateArgumentType.cancelText, (WidgetListener) null);
         this.displayNameInput.hoverText = ud.createDisplayNameTooltipText;
         this.displayNameInput.a((byte) -58, new UsernameAvailabilityValidator(this.displayNameInput));
         this.confirmButton.enabled = false;
@@ -41,7 +41,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
         int var5 = 200;
         this.addChild((byte) -110, var2);
         var3 += 50;
-        var3 = var3 + (5 + this.a(var3, -12037, 170, this.displayNameInput, gk.createDisplayNameHintText, OpacityWidget.createDisplayNameText));
+        var3 = var3 + (5 + this.a(var3, -12037, 170, this.displayNameInput, ClientProtocolStage.createDisplayNameHintText, OpacityWidget.createDisplayNameText));
         this.confirmButton.setWidgetBounds(40, var5, (byte) -23, var3, -var5 + 496 >> 1);
         this.cancelButton.setWidgetBounds(40, 60, (byte) -85, var3 + 15, 3 + var4);
         this.cancelButton.listener = (WidgetListener) (this);

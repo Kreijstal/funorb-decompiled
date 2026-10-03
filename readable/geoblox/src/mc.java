@@ -83,7 +83,7 @@ final class mc {
             pointerPressXSnapshot = -77;
           }
           PrefixCodeDecoder.pointerXSnapshot = lj.livePointerX;
-          PcmResampler.pointerYSnapshot = eg.livePointerY;
+          PcmResampler.pointerYSnapshot = ReflectionCheckRequest.livePointerY;
           wb.pointerActivitySnapshot = fc.pointerActivityPending;
           fc.pointerActivityPending = false;
           CheckboxRenderer.pointerPressButtonSnapshot = ClientSessionSnapshot.pendingPointerPressButton;

@@ -81,15 +81,15 @@ final class jk {
         return GameplaySession.pointerIdleTicks;
     }
 
-    final static nd a(int param0, String param1) {
+    final static TextValidationFailure a(int param0, String param1) {
         int var3 = 0;
         int var2_int = 0;
         int var4 = 0;
         int var5 = 0;
-        nd stackIn_5_0 = null;
-        nd stackIn_9_0 = null;
-        nd stackIn_18_0 = null;
-        nd stackIn_21_0 = null;
+        TextValidationFailure stackIn_5_0 = null;
+        TextValidationFailure stackIn_9_0 = null;
+        TextValidationFailure stackIn_18_0 = null;
+        TextValidationFailure stackIn_21_0 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -117,11 +117,11 @@ final class jk {
                     (var3 != -1 + var2_int)) {
                   break L2;
                 }
-                stackIn_18_0 = ii.field_h;
+                stackIn_18_0 = ArchiveLoadStep.field_h;
                 return stackIn_18_0;
               }
               if (PacketBuffer.field_q.indexOf(var4) == -1) {
-                stackIn_21_0 = ii.field_h;
+                stackIn_21_0 = ArchiveLoadStep.field_h;
                 return stackIn_21_0;
               }
             }

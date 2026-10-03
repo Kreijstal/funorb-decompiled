@@ -22,7 +22,7 @@ final class bl {
             if (ik.field_a <= 0) {
                 return false;
             }
-            if (!ck.b(0)) {
+            if (!TextTemplateArgumentType.b(0)) {
                 return true;
             }
             return false;
@@ -36,7 +36,7 @@ final class bl {
         if (ik.field_a <= 0) {
             return false;
         }
-        if (!ck.b(0)) {
+        if (!TextTemplateArgumentType.b(0)) {
             return true;
         }
         return false;

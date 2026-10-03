@@ -168,9 +168,9 @@ final class TriangleMesh {
               (FrameTimer.field_b.length >= param2))) {
           FrameTimer.field_b = new int[2 * param2];
         }
-        if (!((null != gk.field_a) &&
-              (gk.field_a.length >= param2))) {
-          gk.field_a = new int[param2 * 2];
+        if (!((null != ClientProtocolStage.field_a) &&
+              (ClientProtocolStage.field_a.length >= param2))) {
+          ClientProtocolStage.field_a = new int[param2 * 2];
         }
         if (!((null != AchievementQuery.field_i) &&
               (AchievementQuery.field_i.length >= param2 + param1))) {

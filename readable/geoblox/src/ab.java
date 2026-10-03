@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ab {
-    static ck field_c;
+    static TextTemplateArgumentType field_c;
     static boolean boardContactStateDirty;
     static boolean field_d;
     static String createSuggestionsText;
@@ -198,7 +198,7 @@ final class ab {
                   movingEntity.advanceEntityAnimation(true);
                 }
                 gf.renderEntityCollisionSprite(movingEntity, -1232328029, boardAngleRadians);
-                if (uj.scratchSpriteOverlapsBoard(movingEntity, boardAngleRadians, 0)) {
+                if (FullscreenFailureReason.scratchSpriteOverlapsBoard(movingEntity, boardAngleRadians, 0)) {
                   HotspotTextWidget.spriteScratchRaster.addOutline(1);
                   if (movingEntity.matchCooldownTicks <= 0) {
                     al.a(9666, GameScreen.selectedThemeId);
@@ -228,16 +228,16 @@ final class ab {
                   movingEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.nextForIteration(1));
                   continue;
                 }
-                if (ma.contactProbeOverlapsScratchSprite(true, boardAngleRadians, movingEntity)) {
+                if (DelayedIncomingPacket.contactProbeOverlapsScratchSprite(true, boardAngleRadians, movingEntity)) {
                   neighborIndexOrKindFlagOrContactIdOrDivisionGuard = SecondaryDeque.contactProbeRaster.pixels[PixelOverlapProbe.firstOverlapX + SecondaryDeque.contactProbeRaster.fullWidth * PixelOverlapProbe.firstOverlapY] - 1;
-                  contactedEntity = tl.entitiesById[neighborIndexOrKindFlagOrContactIdOrDivisionGuard];
+                  contactedEntity = RasterTargetSnapshot.entitiesById[neighborIndexOrKindFlagOrContactIdOrDivisionGuard];
                   if (a.attachedEntities == contactedEntity.entityQueue) {
                     break L2;
                   }
                   sharedVelocityXOrCrossProduct = 0.5f * (contactedEntity.velocityX + movingEntity.velocityX);
                   sharedVelocityYOrDirectionScale = (contactedEntity.velocityY + movingEntity.velocityY) * 0.5f;
                   velocityMagnitudeSquaredThenSpeedScale = sharedVelocityYOrDirectionScale * sharedVelocityYOrDirectionScale + sharedVelocityXOrCrossProduct * sharedVelocityXOrCrossProduct;
-                  velocityMagnitudeSquaredThenSpeedScale = og.entityMotionSpeed / (float)Math.sqrt((double)velocityMagnitudeSquaredThenSpeedScale);
+                  velocityMagnitudeSquaredThenSpeedScale = TextTemplateDefinition.entityMotionSpeed / (float)Math.sqrt((double)velocityMagnitudeSquaredThenSpeedScale);
                   sharedVelocityYOrDirectionScale = sharedVelocityYOrDirectionScale * velocityMagnitudeSquaredThenSpeedScale;
                   sharedVelocityXOrCrossProduct = sharedVelocityXOrCrossProduct * velocityMagnitudeSquaredThenSpeedScale;
                   centerOffsetX = -contactedEntity.positionX + 320.0f;
@@ -260,7 +260,7 @@ final class ab {
                       (movingEntityMovesOutwardInt != 0)) {
                     centerOffsetX = -((movingEntity.positionX + contactedEntity.positionX) * 0.5f) + 320.0f;
                     centerOffsetY = 240.0f - 0.5f * (contactedEntity.positionY + movingEntity.positionY);
-                    midpointInwardSpeedScale = og.entityMotionSpeed / (float)Math.sqrt((double)(centerOffsetX * centerOffsetX + centerOffsetY * centerOffsetY));
+                    midpointInwardSpeedScale = TextTemplateDefinition.entityMotionSpeed / (float)Math.sqrt((double)(centerOffsetX * centerOffsetX + centerOffsetY * centerOffsetY));
                     sharedVelocityXOrCrossProduct = centerOffsetX * midpointInwardSpeedScale;
                     sharedVelocityYOrDirectionScale = midpointInwardSpeedScale * centerOffsetY;
                   }
@@ -279,7 +279,7 @@ final class ab {
                       (sharedVelocityXOrCrossProduct * sharedVelocityXOrCrossProduct > 0.30000001192092896f)) {
                     movingEntity.velocityX = inwardOffsetX;
                     movingEntity.velocityY = inwardOffsetY;
-                    sharedVelocityYOrDirectionScale = og.entityMotionSpeed / (float)Math.sqrt((double)(movingEntity.velocityX * movingEntity.velocityX + movingEntity.velocityY * movingEntity.velocityY));
+                    sharedVelocityYOrDirectionScale = TextTemplateDefinition.entityMotionSpeed / (float)Math.sqrt((double)(movingEntity.velocityX * movingEntity.velocityX + movingEntity.velocityY * movingEntity.velocityY));
                     movingEntity.velocityX = movingEntity.velocityX * sharedVelocityYOrDirectionScale;
                     movingEntity.velocityY = movingEntity.velocityY * sharedVelocityYOrDirectionScale;
                   }
@@ -310,7 +310,7 @@ final class ab {
     }
 
     static {
-        field_c = new ck(2, 4, 4, 0);
+        field_c = new TextTemplateArgumentType(2, 4, 4, 0);
         createSuggestionsText = "Suggested names: ";
         field_a = false;
         field_b = 0;

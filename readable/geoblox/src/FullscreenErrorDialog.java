@@ -72,7 +72,7 @@ final class FullscreenErrorDialog extends ResizableDialog implements ButtonActiv
         return AchievementQuery.b(MessageDialog.availableEntityCategoryCount, 1);
     }
 
-    FullscreenErrorDialog(DialogLayer dialogLayer, uj failureReason) {
+    FullscreenErrorDialog(DialogLayer dialogLayer, FullscreenFailureReason failureReason) {
         super(dialogLayer, 200, 150);
         Object var3 = null;
         Object stackIn_12_0 = null;
@@ -173,11 +173,11 @@ final class FullscreenErrorDialog extends ResizableDialog implements ButtonActiv
         if (!UiWidget.gameplaySession.sessionEnding) {
             avatarEyeMouthOffsetX = UiWidget.gameplaySession.boardMaskOffsetX - 2;
             avatarEyeMouthOffsetY = UiWidget.gameplaySession.boardMaskOffsetY - 2;
-            if (!(wa.avatarShockEffectTicks <= 0)) {
-                vg.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].draw(320 - (vg.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].fullWidth >> 1), -(vg.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].fullHeight >> 1) + 240);
+            if (!(WidgetTheme.avatarShockEffectTicks <= 0)) {
+                SecondaryNodeHashTable.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].draw(320 - (SecondaryNodeHashTable.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].fullWidth >> 1), -(SecondaryNodeHashTable.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].fullHeight >> 1) + 240);
             }
-            fc.avatarEyeFrames[DiskCacheWorker.avatarFeedbackFrameIndex].drawGrayModulated(avatarEyeMouthOffsetX + 320, 240 + avatarEyeMouthOffsetY, rj.avatarTintColor);
-            UsernameSuggestionsPanel.avatarMouthFrames[nd.avatarFeedbackModeId].drawGrayModulated(320 + avatarEyeMouthOffsetX, 240 + avatarEyeMouthOffsetY, rj.avatarTintColor);
+            fc.avatarEyeFrames[DiskCacheWorker.avatarFeedbackFrameIndex].drawGrayModulated(avatarEyeMouthOffsetX + 320, 240 + avatarEyeMouthOffsetY, DisplayModeInfo.avatarTintColor);
+            UsernameSuggestionsPanel.avatarMouthFrames[TextValidationFailure.avatarFeedbackModeId].drawGrayModulated(320 + avatarEyeMouthOffsetX, 240 + avatarEyeMouthOffsetY, DisplayModeInfo.avatarTintColor);
             if (methodGuard >= 3) {
                 return;
             }
@@ -187,11 +187,11 @@ final class FullscreenErrorDialog extends ResizableDialog implements ButtonActiv
         if (null == ul.currentAvatarCryFrame) {
             avatarEyeMouthOffsetX = UiWidget.gameplaySession.boardMaskOffsetX - 2;
             avatarEyeMouthOffsetY = UiWidget.gameplaySession.boardMaskOffsetY - 2;
-            if (!(wa.avatarShockEffectTicks <= 0)) {
-                vg.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].draw(320 - (vg.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].fullWidth >> 1), -(vg.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].fullHeight >> 1) + 240);
+            if (!(WidgetTheme.avatarShockEffectTicks <= 0)) {
+                SecondaryNodeHashTable.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].draw(320 - (SecondaryNodeHashTable.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].fullWidth >> 1), -(SecondaryNodeHashTable.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].fullHeight >> 1) + 240);
             }
-            fc.avatarEyeFrames[DiskCacheWorker.avatarFeedbackFrameIndex].drawGrayModulated(avatarEyeMouthOffsetX + 320, 240 + avatarEyeMouthOffsetY, rj.avatarTintColor);
-            UsernameSuggestionsPanel.avatarMouthFrames[nd.avatarFeedbackModeId].drawGrayModulated(320 + avatarEyeMouthOffsetX, 240 + avatarEyeMouthOffsetY, rj.avatarTintColor);
+            fc.avatarEyeFrames[DiskCacheWorker.avatarFeedbackFrameIndex].drawGrayModulated(avatarEyeMouthOffsetX + 320, 240 + avatarEyeMouthOffsetY, DisplayModeInfo.avatarTintColor);
+            UsernameSuggestionsPanel.avatarMouthFrames[TextValidationFailure.avatarFeedbackModeId].drawGrayModulated(320 + avatarEyeMouthOffsetX, 240 + avatarEyeMouthOffsetY, DisplayModeInfo.avatarTintColor);
             if (methodGuard >= 3) {
                 return;
             }

@@ -40,8 +40,8 @@ final class hj {
                 achievementMaskReceived = false;
             }
             param1.setFocusTraversalKeysEnabled(false);
-            param1.addKeyListener(je.keyboardListener);
-            param1.addFocusListener(je.keyboardListener);
+            param1.addKeyListener(TrackedPcmStream.keyboardListener);
+            param1.addFocusListener(TrackedPcmStream.keyboardListener);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "hj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

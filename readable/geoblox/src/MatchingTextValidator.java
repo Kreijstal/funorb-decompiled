@@ -4,7 +4,7 @@
 final class MatchingTextValidator extends TextInputValidator {
     private TextInputWidget referenceInput;
     static ClientSessionSnapshot[] field_k;
-    static IntrusiveDeque field_l;
+    static IntrusiveDeque rasterTargetStack;
     static int field_j;
 
     MatchingTextValidator(TextInputWidget validatedInput, TextInputWidget referenceInput) {
@@ -17,7 +17,7 @@ final class MatchingTextValidator extends TextInputValidator {
     }
 
     public static void clearStaticReferences(int guard) {
-        field_l = null;
+        rasterTargetStack = null;
         field_k = null;
         if (guard != 0) {
             MatchingTextValidator.c((byte) 89);
@@ -243,7 +243,7 @@ final class MatchingTextValidator extends TextInputValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           if (guard != 422) {
-            field_l = (IntrusiveDeque) null;
+            rasterTargetStack = (IntrusiveDeque) null;
           }
           if (this.referenceInput instanceof ValidationProviderSource) {
             referenceValidation = ((ValidationProviderSource) ((Object) this.referenceInput)).getValidationProvider((byte) -118);
@@ -289,6 +289,6 @@ final class MatchingTextValidator extends TextInputValidator {
     }
 
     static {
-        field_l = new IntrusiveDeque();
+        rasterTargetStack = new IntrusiveDeque();
     }
 }

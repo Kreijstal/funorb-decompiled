@@ -173,7 +173,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             }
           }
           var19.rotateSmooth(112, 144, var19.fullWidth << 4, var19.fullHeight << 4, -this.animationTicks << 10, 4096);
-          id.a(true);
+          id.restoreRasterTarget(true);
           this.spinnerSprite.drawAdditive(-(var19.fullWidth >> 1) + var9, var10 - var19.fullHeight, 256);
           return;
         }
@@ -212,7 +212,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           }
         }
         var18.rotateSmooth(112, 144, var18.fullWidth << 4, var18.fullHeight << 4, -this.animationTicks << 10, 4096);
-        id.a(true);
+        id.restoreRasterTarget(true);
         this.spinnerSprite.drawAdditive(-(var18.fullWidth >> 1) + var9, var10 - var18.fullHeight, 256);
         return;
     }

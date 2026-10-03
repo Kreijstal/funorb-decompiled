@@ -94,8 +94,8 @@ final class kb {
         int var1 = 0;
         if (null != kd.field_e) {
             kd.field_e.settleDialogAnimations(0);
-            if (vg.field_i != null) {
-                vg.field_i.stopNormalAnimation(23181);
+            if (SecondaryNodeHashTable.field_i != null) {
+                SecondaryNodeHashTable.field_i.stopNormalAnimation(23181);
                 eh.a((byte) -2);
                 var1 = -121 % ((-38 - param0) / 59);
                 return;
@@ -104,12 +104,12 @@ final class kb {
             var1 = -121 % ((-38 - param0) / 59);
             return;
         }
-        if (vg.field_i == null) {
+        if (SecondaryNodeHashTable.field_i == null) {
             eh.a((byte) -2);
             var1 = -121 % ((-38 - param0) / 59);
             return;
         }
-        vg.field_i.stopNormalAnimation(23181);
+        SecondaryNodeHashTable.field_i.stopNormalAnimation(23181);
         eh.a((byte) -2);
         var1 = -121 % ((-38 - param0) / 59);
     }

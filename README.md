@@ -23,6 +23,16 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 137,964 bindings,
 preserving 388 override relationships.
 
+Pass 114 names 23 record/helper classes and 205 fields, methods and parameters.
+The additions cover staged archive loading, raster snapshots, display modes,
+tracked audio streams, highscore views, queued reflection checks, delayed incoming
+packets, typed text templates and legacy platform controls. Class coverage is
+212 renames, one already meaningful `Geoblox` name and 90 opaque names; there are
+9,380 guarded rules and 75,701 identifier edits. All 9,152 prior naming objects,
+raw sources and decompiler/tool/native-probe pins stay unchanged. Public native
+callback names and literal reflection spellings remain. This source-audited
+naming pass adds no live platform/archive/highscore/reflection/network coverage.
+
 Pass 113 names 20 account/widget classes and 234 fields, methods and parameters.
 `LoginPanel`, `AccountCreationForm`, `DisplayNamePanel` and
 `AccountCreationDialog` expose the account flow; `HotspotTextWidget` parses

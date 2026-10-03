@@ -6,7 +6,7 @@ import java.io.*;
 final class w {
     static char[] field_c;
     static boolean avatarShockPending;
-    static ck field_d;
+    static TextTemplateArgumentType field_d;
     static String mouseOverIconText;
     static String[] field_b;
     static String field_e;
@@ -143,7 +143,7 @@ final class w {
                 NetworkArchiveRequest.field_B = GameplayEntity.field_D.requestSocket(NetworkArchiveRequest.field_x, MultiHandleSliderWidget.field_I, false);
             }
             if (param1 != 52) {
-                field_d = (ck) null;
+                field_d = (TextTemplateArgumentType) null;
             }
             if (!(NetworkArchiveRequest.field_B.status != 0)) {
                 return false;
@@ -152,7 +152,7 @@ final class w {
             v.field_r = dupTemp$0;
             AudioService.field_e = dupTemp$0;
             if (1 != NetworkArchiveRequest.field_B.status) {
-                PacketBuffer.field_l = AchievementQuery.field_h;
+                PacketBuffer.currentProtocolStage = AchievementQuery.field_h;
             } else {
                 try {
                     SpriteCheckboxRenderer.field_e = new BufferedSocket((java.net.Socket) (NetworkArchiveRequest.field_B.result), GameplayEntity.field_D);
@@ -163,11 +163,11 @@ final class w {
                     MidiNoteMixer.field_o = param0 ? -2 : -1;
                     dc.field_b = param0 ? -2 : -1;
                     kg.field_n = param0 ? -2 : -1;
-                    PacketBuffer.field_l = IterableNodeHashTable.field_d;
+                    PacketBuffer.currentProtocolStage = IterableNodeHashTable.field_d;
                     ke.writeConnectionHeader(qe.field_b, true, ok.field_f, EmailAvailabilityValidator.field_l, CacheReference.field_q);
                     NanoFrameTimer.a(param1 ^ -53, -1);
                 } catch (IOException iOException) {
-                    PacketBuffer.field_l = AchievementQuery.field_h;
+                    PacketBuffer.currentProtocolStage = AchievementQuery.field_h;
                 }
             }
             NetworkArchiveRequest.field_B = null;
@@ -273,7 +273,7 @@ final class w {
     static {
         field_c = new char[]{(char)95, (char)97, (char)98, (char)99, (char)100, (char)101, (char)102, (char)103, (char)104, (char)105, (char)106, (char)107, (char)108, (char)109, (char)110, (char)111, (char)112, (char)113, (char)114, (char)115, (char)116, (char)117, (char)118, (char)119, (char)120, (char)121, (char)122, (char)48, (char)49, (char)50, (char)51, (char)52, (char)53, (char)54, (char)55, (char)56, (char)57};
         mouseOverIconText = "Mouse over an icon for details";
-        field_d = new ck(1, 2, 2, 0);
+        field_d = new TextTemplateArgumentType(1, 2, 2, 0);
         field_e = "Countdown";
         field_b = new String[]{"menu_select", "jewel_1", "jewel_2", "jewel_3", "space_1", "space_2", "space_3", "sun_1", "sun_2", "sun_3", "baking_1", "baking_2", "baking_3", "germs_1", "germs_2", "germs_3", "sport_1", "sport_2", "sport_3", "sweets_1", "sweets_2", "sweets_3", "cry", "to_angry", "to_excited", "to_happy", "to_unhappy", "electric_shock", "bubble_swell", "button_bleep", "geom_rain", "geom_vanish", "bonus", "round_clear"};
     }

@@ -3,20 +3,20 @@
  */
 final class ca extends IntrusiveNode {
     static String unpackingMusicText;
-    static mg field_f;
+    static HighscoreQuery field_f;
     static int field_i;
     static IndexedSprite bakingBackgroundSprite;
 
-    final static nd a(String param0, int param1) {
+    final static TextValidationFailure a(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String var3 = null;
         String var4 = null;
-        nd var5 = null;
-        nd stackIn_4_0 = null;
-        nd stackIn_7_0 = null;
-        nd stackIn_10_0 = null;
-        nd stackIn_12_0 = null;
+        TextValidationFailure var5 = null;
+        TextValidationFailure stackIn_4_0 = null;
+        TextValidationFailure stackIn_7_0 = null;
+        TextValidationFailure stackIn_10_0 = null;
+        TextValidationFailure stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;

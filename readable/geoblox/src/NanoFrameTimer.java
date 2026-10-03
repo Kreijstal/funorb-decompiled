@@ -13,7 +13,7 @@ final class NanoFrameTimer extends FrameTimer {
     static int[] decodedSpritePalette;
     private long field_c;
 
-    final static void c(int param0) {
+    final static void handleRankingResponse(int methodGuard) {
         int var8_int = 0;
         String[][] dupTemp$0 = null;
         int[][] dupTemp$1 = null;
@@ -25,7 +25,7 @@ final class NanoFrameTimer extends FrameTimer {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        mg var4 = null;
+        HighscoreQuery var4 = null;
         ai var4_ref = null;
         int var5 = 0;
         int var6 = 0;
@@ -50,17 +50,17 @@ final class NanoFrameTimer extends FrameTimer {
         long[][] var31 = null;
         var26 = Geoblox.clientControlFlowFlag;
         try {
-          if (param0 != -24839) {
+          if (methodGuard != -24839) {
             NanoFrameTimer.a(false);
           }
           var27 = eh.field_d;
           var2 = var27.readUnsignedByte((byte) 34);
           if (var2 == 0) {
             var3 = var27.readUnsignedShortBE(true);
-            var4 = (mg) ((Object) ResourceArchive.field_d.firstForIteration(0));
+            var4 = (HighscoreQuery) ((Object) ResourceArchive.field_d.firstForIteration(0));
             while (var4 != null) {
-              if (var4.field_i != var3) {
-                var4 = (mg) ((Object) ResourceArchive.field_d.nextForIteration(1));
+              if (var4.queryId != var3) {
+                var4 = (HighscoreQuery) ((Object) ResourceArchive.field_d.nextForIteration(1));
                 continue;
               }
               break;
@@ -71,27 +71,27 @@ final class NanoFrameTimer extends FrameTimer {
             }
             var5 = var27.readUnsignedByte((byte) 34);
             if (var5 != 0) {
-              var6 = var4.field_f;
-              var7 = var4.field_l;
-              id.field_b[0].field_c = false;
-              id.field_b[0].field_d = SecondaryDeque.field_f;
-              id.field_b[0].field_a = null;
+              var6 = var4.entryLimit;
+              var7 = var4.valuesPerEntry;
+              id.field_b[0].usedInUniqueView = false;
+              id.field_b[0].primaryName = SecondaryDeque.field_f;
+              id.field_b[0].alternateName = null;
               for (var8_int = 1; var5 > var8_int; var8_int++) {
-                id.field_b[var8_int].field_d = var27.readNullTerminatedText((byte) 104);
-                id.field_b[var8_int].field_c = false;
+                id.field_b[var8_int].primaryName = var27.readNullTerminatedText((byte) 104);
+                id.field_b[var8_int].usedInUniqueView = false;
                 if (var27.readUnsignedByte((byte) 34) == 1) {
-                  id.field_b[var8_int].field_a = var27.readNullTerminatedText((byte) 122);
+                  id.field_b[var8_int].alternateName = var27.readNullTerminatedText((byte) 122);
                 } else {
-                  id.field_b[var8_int].field_a = null;
+                  id.field_b[var8_int].alternateName = null;
                 }
               }
               dupTemp$0 = new String[3][var6];
-              var4.field_k = dupTemp$0;
+              var4.namesByView = dupTemp$0;
               var8 = dupTemp$0;
               var9 = new String[3][var6];
               var31 = new long[3][var6];
               dupTemp$1 = new int[3][var6 * var7];
-              var4.field_h = dupTemp$1;
+              var4.valuesByView = dupTemp$1;
               var11 = dupTemp$1;
               var12 = 0;
               var13 = 0;
@@ -103,12 +103,12 @@ final class NanoFrameTimer extends FrameTimer {
               if (!(0 >= var18)) {
                 for (var19 = 0; var19 < var18; var19++) {
                   var20 = var27.readUnsignedByte((byte) 34);
-                  var21 = id.field_b[var20].field_d;
+                  var21 = id.field_b[var20].primaryName;
                   var22 = var27.readLongBE(2901);
                   var24 = var27.position;
                   if (var6 > var19) {
                     var8[0][var12] = var21;
-                    var9[0][var12] = id.field_b[var20].field_a;
+                    var9[0][var12] = id.field_b[var20].alternateName;
                     var31[0][var12] = var22;
                     for (var25 = 0; var25 < var7; var25++) {
                       incrementValue$2 = var15;
@@ -131,10 +131,10 @@ final class NanoFrameTimer extends FrameTimer {
                     }
                   }
                   if ((var14 < var6) &&
-                      (!id.field_b[var20].field_c)) {
-                    id.field_b[var20].field_c = true;
+                      (!id.field_b[var20].usedInUniqueView)) {
+                    id.field_b[var20].usedInUniqueView = true;
                     var8[2][var14] = var21;
-                    var9[2][var14] = id.field_b[var20].field_a;
+                    var9[2][var14] = id.field_b[var20].alternateName;
                     var31[2][var14] = var22;
                     var14++;
                     var27.position = var24;
@@ -147,13 +147,13 @@ final class NanoFrameTimer extends FrameTimer {
                 }
               }
             }
-            var4.field_j = true;
+            var4.completed = true;
             var4.unlinkNode(false);
             return;
           }
           if (1 == var2) {
             var3 = var27.readUnsignedShortBE(true);
-            var27.readLongBE(param0 + 27740);
+            var27.readLongBE(methodGuard + 27740);
             var4_ref = (ai) ((Object) TriangleMesh.field_j.firstForIteration(0));
             while (var4_ref != null) {
               if (var3 != var4_ref.field_q) {
@@ -169,13 +169,13 @@ final class NanoFrameTimer extends FrameTimer {
             Bzip2DecoderState.closeSessionSocket((byte) -117);
             return;
           }
-          IterableNodeHashTable.a((Throwable) null, "HS1: " + og.e(param0 + 24894), (byte) 125);
+          IterableNodeHashTable.a((Throwable) null, "HS1: " + TextTemplateDefinition.e(methodGuard + 24894), (byte) 125);
           Bzip2DecoderState.closeSessionSocket((byte) -117);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var1), "cm.F(" + param0 + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var1), "cm.F(" + methodGuard + ')');
         }
     }
 
@@ -193,7 +193,7 @@ final class NanoFrameTimer extends FrameTimer {
             Throwable decompiledCaughtException = null;
             if (null != SpriteCheckboxRenderer.field_e) {
               if (!((param1 >= 0) &&
-                  (PacketBuffer.field_l != eh.field_b))) {
+                  (PacketBuffer.currentProtocolStage != eh.field_b))) {
                 if ((0 == CacheReference.field_q.position) &&
                     (~oa.a(-12520) < ~(10000L + v.field_r))) {
                   CacheReference.field_q.writeCipherByte(param1, (byte) -76);

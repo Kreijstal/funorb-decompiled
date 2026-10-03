@@ -46,7 +46,7 @@ final class ProgressBarWidget extends UiWidget {
             SoftwareRasterizer.drawHorizontalLine(this.stripeWidth + var7, var6, this.stripeWidth, var12);
             SoftwareRasterizer.drawHorizontalLine(-this.stripeWidth + var7, var6, this.stripeWidth, var12);
         }
-        id.a(restoreGuard);
+        id.restoreRasterTarget(restoreGuard);
         return var14;
     }
 
@@ -84,7 +84,7 @@ final class ProgressBarWidget extends UiWidget {
                 SoftwareRasterizer.setPixel(var5, var4, var8 << 16 | (var8 | var8 << 8));
             }
         }
-        id.a(true);
+        id.restoreRasterTarget(true);
         return var3;
     }
 
@@ -109,13 +109,13 @@ final class ProgressBarWidget extends UiWidget {
           if (methodGuard != -12276) {
             discarded$0 = this.buildRightEndMask(1);
           }
-          id.a(true);
+          id.restoreRasterTarget(true);
           if (this.rightEndMask.width + x >= SoftwareRasterizer.clipLeft) {
             Geoblox.setRasterTarget(1, this.endScratchSprite);
             stripeSprite.draw(-this.stripeOffset, 0);
             stripeSprite.draw(2 * this.stripeWidth - this.stripeOffset, 0);
             this.leftEndMask.drawMultiply(0, 0);
-            id.a(true);
+            id.restoreRasterTarget(true);
             this.endScratchSprite.draw(x, y);
           }
           if (SoftwareRasterizer.clipRight >= var5_int - this.rightEndMask.width) {
@@ -125,7 +125,7 @@ final class ProgressBarWidget extends UiWidget {
             stripeSprite.draw(-var7, 0);
             stripeSprite.draw(-var7 + this.stripeWidth * 2, 0);
             this.rightEndMask.drawMultiply(0, 0);
-            id.a(true);
+            id.restoreRasterTarget(true);
             this.endScratchSprite.draw(-this.rightEndMask.width + var5_int, y);
             return;
           }
@@ -155,7 +155,7 @@ final class ProgressBarWidget extends UiWidget {
         if (this.fillFractionQ16 < 65536) {
             PasswordWidgetRenderer.a(var7, var6 + (this.widgetWidth * this.fillFractionQ16 >> 16), -14045, var7 + this.widgetHeight, this.widgetWidth + var6);
             this.drawRoundedStripes(this.stripeSprites[1], var7, var6, -12276);
-            id.a(true);
+            id.restoreRasterTarget(true);
         }
     }
 

@@ -159,7 +159,7 @@ final class OpacityWidget extends SingleChildWidget {
         Sprite contentRaster = new Sprite(this.child.widgetWidth, this.child.widgetHeight);
         Geoblox.setRasterTarget(1, contentRaster);
         this.child.renderWidget(0, 0, (byte) -115, renderPass);
-        id.a(true);
+        id.restoreRasterTarget(true);
         contentRaster.drawAlpha(this.widgetX + parentX, this.widgetY + parentY, this.opacity);
     }
 

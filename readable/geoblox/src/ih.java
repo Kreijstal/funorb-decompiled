@@ -11,13 +11,13 @@ final class ih {
         int var2 = 0;
         int var3 = Geoblox.clientControlFlowFlag;
         try {
-            eg.field_p.a(111);
+            ReflectionCheckRequest.field_p.a(111);
             var1_int = 10 / ((param0 - 68) / 57);
             for (var2 = 0; var2 < 32; var2++) {
                 ArchiveRequest.field_p[var2] = 0L;
             }
             for (var1_int = 0; var1_int < 32; var1_int++) {
-                tl.field_l[var1_int] = 0L;
+                RasterTargetSnapshot.field_l[var1_int] = 0L;
             }
             TriangleMesh.field_w = 0;
         } catch (RuntimeException runtimeException) {
@@ -128,7 +128,7 @@ final class ih {
               if (var34[var16] != 0) {
                 if (var35[var18] != 16777215) {
                   if (var35[var18] != 0) {
-                    var24 = tl.entitiesById[-1 + var35[var18]];
+                    var24 = RasterTargetSnapshot.entitiesById[-1 + var35[var18]];
                     stackIn_35_0 = (var24.entitySpriteKindId != 2) ? 0 : 1;
                     if (entity.entitySpriteKindId != 2) {
                       stackIn_38_1 = 0;

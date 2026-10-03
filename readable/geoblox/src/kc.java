@@ -12,13 +12,13 @@ final class kc {
     }
 
     final static void detachKeyboardListener(java.awt.Component component, int methodGuard) {
-        component.removeKeyListener(je.keyboardListener);
+        component.removeKeyListener(TrackedPcmStream.keyboardListener);
         if (methodGuard != 0) {
             return;
         }
         try {
-            component.removeFocusListener(je.keyboardListener);
-            ii.keyStateWriteIndexOrResetSentinel = -1;
+            component.removeFocusListener(TrackedPcmStream.keyboardListener);
+            ArchiveLoadStep.keyStateWriteIndexOrResetSentinel = -1;
         } catch (RuntimeException keyboardDetachFailure) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) keyboardDetachFailure), "kc.D(" + (component != null ? "{...}" : "null") + ',' + methodGuard + ')');
         }
@@ -279,7 +279,7 @@ final class kc {
                       routedAttachedEntity.rotateEntityAroundBoard(-UiWidget.gameplaySession.boardAngleRadians, -117);
                       radialOffsetX = -routedAttachedEntity.positionX + 320.0f;
                       radialOffsetY = -routedAttachedEntity.positionY + 240.0f;
-                      radialVelocityScale = (double)og.entityMotionSpeed / Math.sqrt((double)(radialOffsetY * radialOffsetY + radialOffsetX * radialOffsetX));
+                      radialVelocityScale = (double)TextTemplateDefinition.entityMotionSpeed / Math.sqrt((double)(radialOffsetY * radialOffsetY + radialOffsetX * radialOffsetX));
                       radialOffsetX = (float)((double)radialOffsetX * radialVelocityScale);
                       radialOffsetY = (float)((double)radialOffsetY * radialVelocityScale);
                       routedAttachedEntity.velocityY = radialOffsetY;

@@ -34,7 +34,7 @@ class DualLinkNode extends IntrusiveNode {
     final static void b(int param0) {
         SecondaryDeque.field_f = eh.field_d.readNullTerminatedText((byte) 113);
         CharSequence var2 = (CharSequence) ((Object) SecondaryDeque.field_f);
-        vg.field_b = ResizableDialog.a(var2, 12);
+        SecondaryNodeHashTable.field_b = ResizableDialog.a(var2, 12);
         if (param0 != 1) {
             DualLinkNode.b(83);
         }

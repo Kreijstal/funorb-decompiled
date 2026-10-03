@@ -112,7 +112,7 @@ final class WidgetSkinState {
         RuntimeException var6_ref = null;
         int var7 = 0;
         try {
-          ma.drawNineSlicePanel(param3.widgetY + param2, param1 + param3.widgetX, param3.widgetHeight, (byte) -92, param3.widgetWidth, this.panelSprites);
+          DelayedIncomingPacket.drawNineSlicePanel(param3.widgetY + param2, param1 + param3.widgetX, param3.widgetHeight, (byte) -92, param3.widgetWidth, this.panelSprites);
           if (this.icon != null) {
             var6_int = this.offsetX + (param3.widgetX + param1);
             var7 = this.offsetY + param2 + param3.widgetY;

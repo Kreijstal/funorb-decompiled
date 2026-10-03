@@ -19,9 +19,9 @@ final class gf {
         eh.pendingActionPanelTop = 480;
         MidiPcmStream.pendingActionPanelPhase = 0;
         MultiHandleSliderRenderer.pendingActionPanelWidth = 72 + FadingDialog.uiPaletteFont.measureMaximumWrappedWidth(pg.achievementTitles[pendingActionMarker.actionId], 100);
-        tl.pendingActionPanelHeight = 30 * FadingDialog.uiPaletteFont.countWrappedLines(pg.achievementTitles[pendingActionMarker.actionId], 100) + 30;
-        if (62 > tl.pendingActionPanelHeight) {
-            tl.pendingActionPanelHeight = 62;
+        RasterTargetSnapshot.pendingActionPanelHeight = 30 * FadingDialog.uiPaletteFont.countWrappedLines(pg.achievementTitles[pendingActionMarker.actionId], 100) + 30;
+        if (62 > RasterTargetSnapshot.pendingActionPanelHeight) {
+            RasterTargetSnapshot.pendingActionPanelHeight = 62;
             return;
         }
     }

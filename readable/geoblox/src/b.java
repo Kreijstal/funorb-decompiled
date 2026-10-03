@@ -3,11 +3,11 @@
  */
 final class b {
     static String field_a;
-    static eb field_b;
+    static ArchiveLoadSequence field_b;
 
     final static void a(boolean param0, boolean param1, boolean param2) {
         String var4 = (String) null;
-        og.a(2274, (String) null, param1, param0);
+        TextTemplateDefinition.a(2274, (String) null, param1, param0);
         if (param2) {
             b.a(true, false, true);
         }
@@ -21,18 +21,18 @@ final class b {
         field_b = null;
     }
 
-    final static ck a(boolean param0, int param1) {
-        ck[] var2;
+    final static TextTemplateArgumentType findTextTemplateArgumentType(boolean methodGuard, int typeId) {
+        TextTemplateArgumentType[] var2;
         int var3;
         int var4;
         var4 = Geoblox.clientControlFlowFlag;
-        var2 = GzipInflater.a(-1);
+        var2 = GzipInflater.textTemplateArgumentTypes(-1);
         var3 = 0;
-        if (param0) {
+        if (methodGuard) {
           b.a(-38);
         }
         while (var3 < var2.length) {
-          if (param1 == var2[var3].field_b) {
+          if (typeId == var2[var3].typeId) {
             return var2[var3];
           }
           var3++;

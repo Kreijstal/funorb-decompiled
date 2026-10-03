@@ -313,7 +313,7 @@ final class MusicDecoder extends IntrusiveNode {
           var9 = new int[var5];
           var10 = hj.unsignedBitLength((byte) 58, var5 - 1);
           for (var11 = 0; var11 < var5; var11++) {
-            var9[var11] = nd.a(var11, 0, var10);
+            var9[var11] = TextValidationFailure.a(var11, 0, var10);
           }
           if (var1 == 0) {
             field_s = var6_ref_float__;

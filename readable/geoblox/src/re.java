@@ -37,25 +37,25 @@ final class re extends IntrusiveNode {
         int resetKeyIndex = 0;
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
-          keyboardMonitor = je.keyboardListener;
+          keyboardMonitor = TrackedPcmStream.keyboardListener;
           synchronized (keyboardMonitor) {
             if (!methodGuard) {
               field_f = (String) null;
             }
             ClientSessionSnapshot.keyboardEventReadIndex = MidiNote.keyboardEventFrameEndIndex;
             TextPairLoginPayload.keyboardIdleTicks = TextPairLoginPayload.keyboardIdleTicks + 1;
-            if (ii.keyStateWriteIndexOrResetSentinel < 0) {
+            if (ArchiveLoadStep.keyStateWriteIndexOrResetSentinel < 0) {
               resetKeyIndex = 0;
               keyStateChangeOrResetIndex = resetKeyIndex;
               while (resetKeyIndex < 112) {
                 MidiPcmStream.heldInternalKeys[resetKeyIndex] = false;
                 resetKeyIndex++;
               }
-              ii.keyStateWriteIndexOrResetSentinel = gk.keyStateReadIndex;
+              ArchiveLoadStep.keyStateWriteIndexOrResetSentinel = ClientProtocolStage.keyStateReadIndex;
             } else {
-              while (gk.keyStateReadIndex != ii.keyStateWriteIndexOrResetSentinel) {
-                keyStateChangeOrResetIndex = gf.queuedKeyStateChanges[gk.keyStateReadIndex];
-                gk.keyStateReadIndex = 1 + gk.keyStateReadIndex & 127;
+              while (ClientProtocolStage.keyStateReadIndex != ArchiveLoadStep.keyStateWriteIndexOrResetSentinel) {
+                keyStateChangeOrResetIndex = gf.queuedKeyStateChanges[ClientProtocolStage.keyStateReadIndex];
+                ClientProtocolStage.keyStateReadIndex = 1 + ClientProtocolStage.keyStateReadIndex & 127;
                 if (keyStateChangeOrResetIndex < 0) {
                   MidiPcmStream.heldInternalKeys[~keyStateChangeOrResetIndex] = false;
                   continue;

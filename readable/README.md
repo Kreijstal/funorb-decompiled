@@ -1,11 +1,53 @@
 # Readable GeoBlox
 
-The current export has 9,152 guarded naming rules: 189 classes, 1,187 fields,
-873 methods, 2,610 parameters and 4,293 local declarations. Both 303-file corpora
+The current export has 9,380 guarded naming rules: 212 classes, 1,264 fields,
+904 methods, 2,707 parameters and 4,293 local declarations. Both 303-file corpora
 compile, comparing 137,964 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
-## Current names (pass 113)
+## Current names (pass 114)
+
+This pass adds 23 class roles, 77 fields, 31 methods and 97 parameters. There are
+75,701 identifier edits: 1,864 additional bound occurrences and 17 constructor
+spellings. Class coverage is 212 renamed classes, one meaningful original
+`Geoblox` name and 90 opaque filenames. All 9,152 previous complete naming
+objects, raw sources, decompiler/naming tool and seven native-probe pins remain.
+
+`ArchiveLoadSequence` polls `ArchiveLoadStep` records in order and exposes scaled
+progress; their retained private constructors throw. `RasterTargetSnapshot`
+records pixels, stride, height and clip, with named `pushRasterTarget` and
+`restoreRasterTarget` callers. `DisplayModeInfo` records the four display-mode
+values. `SecondaryNodeHashTable` retains duplicate-key lookup and secondary-link
+ownership. `TrackedPcmStream` retains its initial volume and lifetime node.
+
+`HighscoreQuery` and `HighscoreNameEntry` describe the three result views and
+shared name table. `NanoFrameTimer.handleRankingResponse` handles both the result
+and submission acknowledgement. `ReflectionCheckRequest` stores the operation
+arrays and asynchronous field/method lookups used by `readReflectionCheckRequest`
+and `writeReflectionCheckReply`. `DelayedIncomingPacket` preserves a delivery
+deadline and incoming opcode/payload, while `CrcAcknowledgedPacket` stores an
+outgoing payload and its CRC acknowledgement. Undocumented wire values keep
+neutral names. `LoginTextValue` marks whether its text is included in the lookup
+request; other serialization paths retain their separate behavior.
+
+`TextTemplateDefinition`, `TextTemplateDefinitionLoader` and
+`TextTemplateArgumentType` describe the decoded segments, references and typed
+value arrays without assigning undocumented server semantics. `WidgetTheme`
+exposes tooltip drawing. `DirectDrawFullscreenController` and
+`WindowsCursorController` describe the legacy Microsoft VM backends while their
+native callback names and unsupported peer carriers remain. The marker contracts
+are `TextValidationFailure`, `FullscreenFailureReason`, `ClientProtocolStage`,
+`ChildWidgetOwner` and `DirectSoundCompatibility`; literal reflected owners
+`gl`, `ve`, `tk`, `pd` and `of` remain unchanged.
+
+Regeneration compiles all 303 raw/readable sources and compares 137,964 bindings
+and 388 override relationships. Dictionary reversal restores all 303 raw files
+byte-for-byte. Publication checks and all seven existing native probes pass.
+This adds no live archive/platform/highscore/reflection/network/assets/UI or
+whole-game/device coverage. Control flow is unchanged: 207 block labels and six
+large labeled spans remain.
+
+## Earlier names (pass 113)
 
 This pass adds 20 account/widget class names and 234 field/method/parameter names,
 including constructor arguments. Class coverage is 189 semantic renames, one
@@ -102,7 +144,7 @@ requires a separately verified literal-lookup transformation.
 The current raw tree is
 `3982781d068dcb3ecceebc8a2ee6f3da14e8a7119574068204ef70ef2bc04b1a`;
 the current readable tree is
-`093bdf691f6f30f5de0ef5e6a012b039c9ccbe81d433d86a185d58e912b37b1c`.
+`eda870c5a2361d0f33ef0eb8026fd9f37cbdbdd8fd23d6185f6785a2c548533a`.
 The pinned decompiler-source SHA-256 is
 `f931fad10ba711145115262619cc04e5c81e13450de01a56d1c7c350f6c465b5`.
 All seven existing native/raw/readable probes pass with their pinned traces.

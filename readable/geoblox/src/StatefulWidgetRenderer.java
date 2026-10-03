@@ -4,7 +4,7 @@
 final class StatefulWidgetRenderer extends TextWidgetRenderer {
     static byte[][] field_s;
     static int field_u;
-    static di field_r;
+    static TextTemplateDefinitionLoader field_r;
     static int field_v;
     static String field_w;
     private WidgetSkinState workingSkin;
@@ -156,10 +156,10 @@ final class StatefulWidgetRenderer extends TextWidgetRenderer {
             StatefulWidgetRenderer.a(38, (String) null);
         }
         kd.field_e.hideAllDialogs(10936);
-        if (!(null != vg.field_i)) {
-            vg.field_i = new ProgressDialog(kd.field_e, TextWidgetRenderer.field_d);
+        if (!(null != SecondaryNodeHashTable.field_i)) {
+            SecondaryNodeHashTable.field_i = new ProgressDialog(kd.field_e, TextWidgetRenderer.field_d);
         }
-        kd.field_e.showDialog(false, vg.field_i);
+        kd.field_e.showDialog(false, SecondaryNodeHashTable.field_i);
     }
 
     final static void b(int param0) {
@@ -207,7 +207,7 @@ final class StatefulWidgetRenderer extends TextWidgetRenderer {
           }
           this.stateSkins[param1].panelSprites = param0;
           if (param2 <= 38) {
-            field_r = (di) null;
+            field_r = (TextTemplateDefinitionLoader) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -288,7 +288,7 @@ final class StatefulWidgetRenderer extends TextWidgetRenderer {
             }
           }
           this.workingSkin.a((StatefulWidgetRenderer) (this), parentX, parentY, widget, 0);
-          id.a(true);
+          id.restoreRasterTarget(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

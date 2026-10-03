@@ -28,7 +28,7 @@ final class kd {
             lb.field_a = true;
             return;
         }
-        if (!ck.b(0)) {
+        if (!TextTemplateArgumentType.b(0)) {
             DraggableWidget.f((byte) 24);
             hj.field_a = 11;
             lb.field_a = true;

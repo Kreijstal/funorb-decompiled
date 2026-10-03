@@ -60,7 +60,7 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
             if (pg.pointerListener != null) {
                 GameplaySession.pointerIdleTicks = 0;
                 lj.livePointerX = event.getX();
-                eg.livePointerY = event.getY();
+                ReflectionCheckRequest.livePointerY = event.getY();
                 fc.pointerActivityPending = true;
             }
         } catch (RuntimeException callbackFailure) {
@@ -139,7 +139,7 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
             if (null != pg.pointerListener) {
                 GameplaySession.pointerIdleTicks = 0;
                 lj.livePointerX = event.getX();
-                eg.livePointerY = event.getY();
+                ReflectionCheckRequest.livePointerY = event.getY();
                 fc.pointerActivityPending = true;
             }
         } catch (RuntimeException callbackFailure) {
@@ -159,7 +159,7 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
           }
           GameplaySession.pointerIdleTicks = 0;
           lj.livePointerX = -1;
-          eg.livePointerY = -1;
+          ReflectionCheckRequest.livePointerY = -1;
           fc.pointerActivityPending = true;
           return;
         } catch (java.lang.RuntimeException callbackFailure) {
@@ -262,7 +262,7 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
           }
           GameplaySession.pointerIdleTicks = 0;
           lj.livePointerX = event.getX();
-          eg.livePointerY = event.getY();
+          ReflectionCheckRequest.livePointerY = event.getY();
           fc.pointerActivityPending = true;
           return;
         } catch (java.lang.RuntimeException callbackFailure) {

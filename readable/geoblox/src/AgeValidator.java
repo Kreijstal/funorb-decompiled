@@ -139,28 +139,28 @@ final class AgeValidator extends TextInputValidator {
 
     final static boolean c(byte param0) {
         int var2 = 0;
-        eg var1 = null;
+        ReflectionCheckRequest var1 = null;
         RuntimeException var1_ref = null;
         int var3 = 0;
-        eg var4 = null;
+        ReflectionCheckRequest var4 = null;
         RuntimeException decompiledCaughtException = null;
         var3 = Geoblox.clientControlFlowFlag;
         try {
           if (param0 != -114) {
             return true;
           }
-          var4 = (eg) ((Object) UsernameAvailabilityQuery.field_k.firstForIteration(0));
+          var4 = (ReflectionCheckRequest) ((Object) UsernameAvailabilityQuery.field_k.firstForIteration(0));
           var1 = var4;
           if (var1 == null) {
             return false;
           }
-          for (var2 = 0; var1.field_f > var2; var2++) {
-            if ((null != var4.field_n[var2]) &&
-                (var4.field_n[var2].status == 0)) {
+          for (var2 = 0; var1.operationCount > var2; var2++) {
+            if ((null != var4.fieldLookupTasks[var2]) &&
+                (var4.fieldLookupTasks[var2].status == 0)) {
               return false;
             }
-            if ((var4.field_i[var2] != null) &&
-                (var4.field_i[var2].status == 0)) {
+            if ((var4.methodLookupTasks[var2] != null) &&
+                (var4.methodLookupTasks[var2].status == 0)) {
               return false;
             }
           }

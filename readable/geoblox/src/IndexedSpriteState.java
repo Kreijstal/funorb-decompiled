@@ -112,7 +112,7 @@ abstract class IndexedSpriteState {
                 }
             }
             var9 = var18.height;
-            SpriteCheckboxRenderer.b(-105);
+            SpriteCheckboxRenderer.pushRasterTarget(-105);
             if (param0 <= 98) {
                 IndexedSprite var14 = (IndexedSprite) null;
                 IndexedSpriteState.a(72, (int[]) null, (IndexedSprite) null);
@@ -129,7 +129,7 @@ abstract class IndexedSpriteState {
             var12 = new Sprite(var18.width - 2 * var9, var9);
             var12.setAsRasterTarget();
             var18.drawUnmasked(-var9, 0);
-            id.a(true);
+            id.restoreRasterTarget(true);
             MouseWheelInput.field_e = new Sprite[]{var16, var12, var11};
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ha.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');

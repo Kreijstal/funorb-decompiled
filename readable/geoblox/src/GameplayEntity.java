@@ -139,11 +139,11 @@ final class GameplayEntity extends DualLinkNode {
         MultiHandleSliderRenderer.avatarTintFadeTicks = 0;
         DiskCacheWorker.avatarFeedbackFrameIndex = initialFrameIndex;
         IndexedSpriteState.avatarShockFrameIndex = 0;
-        rj.avatarTintColor = 5167632;
+        DisplayModeInfo.avatarTintColor = 5167632;
         MenuScreen.avatarFeedbackFrameBase = 0;
         IterableNodeHashTable.avatarBlinkClockTicks = 0;
-        nd.avatarFeedbackModeId = 0;
-        wa.avatarShockEffectTicks = 0;
+        TextValidationFailure.avatarFeedbackModeId = 0;
+        WidgetTheme.avatarShockEffectTicks = 0;
     }
 
     public static void e(byte param0) {
@@ -225,8 +225,8 @@ final class GameplayEntity extends DualLinkNode {
         this.positionY = (float)(Math.sin((double)rotationDeltaRadians) * (double)positionOffsetX + (double)positionOffsetY * Math.cos((double)rotationDeltaRadians)) + 240.0f;
         this.velocityY = 240.0f - this.positionY;
         this.velocityX = 320.0f - this.positionX;
-        if (this.velocityX * this.velocityX + this.velocityY * this.velocityY > og.entityMotionSpeed * og.entityMotionSpeed) {
-            velocityNormalizationScale = (double)og.entityMotionSpeed / Math.sqrt((double)(this.velocityX * this.velocityX + this.velocityY * this.velocityY));
+        if (this.velocityX * this.velocityX + this.velocityY * this.velocityY > TextTemplateDefinition.entityMotionSpeed * TextTemplateDefinition.entityMotionSpeed) {
+            velocityNormalizationScale = (double)TextTemplateDefinition.entityMotionSpeed / Math.sqrt((double)(this.velocityX * this.velocityX + this.velocityY * this.velocityY));
             this.velocityX = (float)((double)this.velocityX * velocityNormalizationScale);
             this.velocityY = (float)((double)this.velocityY * velocityNormalizationScale);
         }
@@ -554,7 +554,7 @@ final class GameplayEntity extends DualLinkNode {
         this.velocityY = velocityY;
         this.entitySpriteKindId = spriteKindId;
         this.velocityX = velocityX;
-        double velocityNormalizationScale = (double)og.entityMotionSpeed / Math.sqrt((double)(velocityX * velocityX + velocityY * velocityY));
+        double velocityNormalizationScale = (double)TextTemplateDefinition.entityMotionSpeed / Math.sqrt((double)(velocityX * velocityX + velocityY * velocityY));
         this.velocityX = (float)((double)this.velocityX * velocityNormalizationScale);
         this.velocityY = (float)((double)this.velocityY * velocityNormalizationScale);
         int sentinelDivisionGuard = -96 / ((methodGuard + 19) / 53);
@@ -567,7 +567,7 @@ final class GameplayEntity extends DualLinkNode {
 
     final static void registerAudioStream(boolean param0, PcmSampleStream param1) {
         try {
-            PrefixCodeDecoder.field_f.addLast(-74, new je(param1, param1));
+            PrefixCodeDecoder.field_f.addLast(-74, new TrackedPcmStream(param1, param1));
             WhirlpoolHash.field_d.a(param1);
             if (param0) {
                 PcmSampleStream var3 = (PcmSampleStream) null;

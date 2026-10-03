@@ -510,7 +510,7 @@ class UiWidget extends IntrusiveNode {
         }
         var5 = LongAndTextLoginPayload.c((byte) 55);
         if (var5 != null) {
-          DialRenderer.field_j.a(PendingActionMarker.field_g, true, bc.field_a, var5);
+          DialRenderer.field_j.drawTooltip(PendingActionMarker.field_g, true, bc.field_a, var5);
         }
     }
 

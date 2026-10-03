@@ -4,8 +4,8 @@
 final class da {
     static int[] field_d;
     static int field_a;
-    static gk field_f;
-    static gk field_g;
+    static ClientProtocolStage field_f;
+    static ClientProtocolStage field_g;
     static int field_c;
     static Sprite field_b;
     static String createEmailValidText;
@@ -63,8 +63,8 @@ final class da {
     static {
         field_d = new int[4];
         field_a = 0;
-        field_f = new gk();
-        field_g = new gk();
+        field_f = new ClientProtocolStage();
+        field_g = new ClientProtocolStage();
         createEmailValidText = "Email is valid";
         field_c = 0;
     }

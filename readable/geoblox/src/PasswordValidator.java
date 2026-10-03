@@ -65,7 +65,7 @@ final class PasswordValidator extends TextInputValidator {
             return stackIn_19_0;
           }
           if (0 >= var6.length()) {
-            stackIn_22_0 = ii.createPasswordValidText;
+            stackIn_22_0 = ArchiveLoadStep.createPasswordValidText;
             return stackIn_22_0;
           }
           if (ak.a(var5, var6, -98)) {
@@ -76,7 +76,7 @@ final class PasswordValidator extends TextInputValidator {
             stackIn_30_0 = gg.createPasswordContainsPartialNameAlertText;
             return stackIn_30_0;
           }
-          if (!wc.a(var5, var6, (byte) -96)) {
+          if (!CrcAcknowledgedPacket.a(var5, var6, (byte) -96)) {
             return ArchiveNetworkClient.createPasswordLengthAlertText;
           }
           stackIn_34_0 = gf.createPasswordContainsNameAlertText;

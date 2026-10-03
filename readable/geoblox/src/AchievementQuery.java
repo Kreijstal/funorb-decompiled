@@ -5,7 +5,7 @@ import java.util.*;
 
 final class AchievementQuery extends IntrusiveNode {
     int[] resultValues;
-    static gk field_h;
+    static ClientProtocolStage field_h;
     boolean completed;
     static int[] field_i;
     int achievementMask;
@@ -26,7 +26,7 @@ final class AchievementQuery extends IntrusiveNode {
     final static boolean hasReceivedAchievementSixteen(int methodGuard) {
         boolean positiveMaskContainsBitSixteen = false;
         if (methodGuard <= 76) {
-          field_h = (gk) null;
+          field_h = (ClientProtocolStage) null;
         }
         positiveMaskContainsBitSixteen = (SecondaryNodeDeque.receivedAchievementMask > 0) && ((65536 & SecondaryNodeDeque.receivedAchievementMask) != 0);
         return positiveMaskContainsBitSixteen;
@@ -59,7 +59,7 @@ final class AchievementQuery extends IntrusiveNode {
               var3_int = -105 / ((param2 + 33) / 57);
               try {
                 var4 = (String) (wk.a((byte) -6, param1, "getcookies"));
-                var5 = uj.a(';', true, var4);
+                var5 = FullscreenFailureReason.a(';', true, var4);
                 for (var6 = 0; var6 < var5.length; var6++) {
                   var7 = var5[var6].indexOf('=');
                   if ((var7 >= 0) &&
@@ -103,10 +103,10 @@ final class AchievementQuery extends IntrusiveNode {
         if (param1 != 1) {
             return 99;
         }
-        return AwtRasterBuffer.a((byte) -75, gk.field_d, param0);
+        return AwtRasterBuffer.a((byte) -75, ClientProtocolStage.field_d, param0);
     }
 
     static {
-        field_h = new gk();
+        field_h = new ClientProtocolStage();
     }
 }

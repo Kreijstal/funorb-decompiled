@@ -94,7 +94,7 @@ final class ak {
         if (param0) {
             ak.a(false);
         }
-        return new LoginMethod[]{mb.field_b, ProgressDialog.field_W, ValidationIconWidget.field_I};
+        return new LoginMethod[]{LoginTextValue.field_b, ProgressDialog.field_W, ValidationIconWidget.field_I};
     }
 
     static {

@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-abstract class SingleChildWidget extends UiWidget implements ql {
+abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
     static AwtRasterBuffer mainRasterBuffer;
     static int[] projectedMeshVertexX;
     static String field_z;
@@ -68,7 +68,7 @@ abstract class SingleChildWidget extends UiWidget implements ql {
             for (var11 = param0; var11 < param5; var11++) {
               var12 = AchievementQuery.field_i[var11];
               if (!param6) {
-                stackIn_24_0 = gk.field_a[var12];
+                stackIn_24_0 = ClientProtocolStage.field_a[var12];
               } else {
                 stackIn_24_0 = hg.field_a[var12];
               }
@@ -149,32 +149,32 @@ abstract class SingleChildWidget extends UiWidget implements ql {
         int var2_int = 0;
         RuntimeException var2 = null;
         long var3 = 0L;
-        ma var5_ref_ma = null;
+        DelayedIncomingPacket var5_ref_ma = null;
         int var5 = 0;
-        ma var6 = null;
+        DelayedIncomingPacket var6 = null;
         int var8 = 0;
         var8 = Geoblox.clientControlFlowFlag;
         try {
           var2_int = -108 / ((-71 - param0) / 45);
-          if (eh.field_b != PacketBuffer.field_l) {
+          if (eh.field_b != PacketBuffer.currentProtocolStage) {
             return false;
           }
           var3 = oa.a(-12520);
           if ((ab.field_b != 0) &&
               (MidiNote.field_f < 0)) {
-            var5_ref_ma = (ma) ((Object) va.field_c.firstForIteration(0));
+            var5_ref_ma = (DelayedIncomingPacket) ((Object) va.field_c.firstForIteration(0));
             if ((var5_ref_ma != null) &&
-                (var3 > var5_ref_ma.field_f)) {
+                (var3 > var5_ref_ma.deliveryTimeMillis)) {
               var5_ref_ma.unlinkNode(false);
-              AchievementSubmission.field_k = var5_ref_ma.field_g.length;
+              AchievementSubmission.field_k = var5_ref_ma.payload.length;
               eh.field_d.position = 0;
               for (var6_int = 0; var6_int < AchievementSubmission.field_k; var6_int++) {
-                eh.field_d.bytes[var6_int] = var5_ref_ma.field_g[var6_int];
+                eh.field_d.bytes[var6_int] = var5_ref_ma.payload[var6_int];
               }
               MidiNoteMixer.field_o = dc.field_b;
               dc.field_b = kg.field_n;
               kg.field_n = ScorePopup.field_l;
-              ScorePopup.field_l = var5_ref_ma.field_h;
+              ScorePopup.field_l = var5_ref_ma.packetOpcode;
               return true;
             }
           }
@@ -206,9 +206,9 @@ abstract class SingleChildWidget extends UiWidget implements ql {
                 var5 = 0;
               }
             }
-            var6 = new ma((long)var5 + var3, MidiNote.field_f, new byte[AchievementSubmission.field_k]);
+            var6 = new DelayedIncomingPacket((long)var5 + var3, MidiNote.field_f, new byte[AchievementSubmission.field_k]);
             for (var7 = 0; AchievementSubmission.field_k > var7; var7++) {
-              var6.field_g[var7] = eh.field_d.bytes[var7];
+              var6.payload[var7] = eh.field_d.bytes[var7];
             }
             va.field_c.addLast(-108, var6);
             MidiNote.field_f = -1;

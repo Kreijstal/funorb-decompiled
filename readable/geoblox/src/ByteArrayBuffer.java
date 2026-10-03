@@ -255,11 +255,11 @@ class ByteArrayBuffer extends IntrusiveNode {
 
     final static void a(float param0, String param1, boolean param2, byte param3) {
         try {
-            if (vg.field_i == null) {
-                vg.field_i = new ProgressDialog(kd.field_e, TextWidgetRenderer.field_d);
-                kd.field_e.showDialog(false, vg.field_i);
+            if (SecondaryNodeHashTable.field_i == null) {
+                SecondaryNodeHashTable.field_i = new ProgressDialog(kd.field_e, TextWidgetRenderer.field_d);
+                kd.field_e.showDialog(false, SecondaryNodeHashTable.field_i);
             }
-            vg.field_i.updateProgress(param2, param1, param3 ^ -92, param0);
+            SecondaryNodeHashTable.field_i.updateProgress(param2, param1, param3 ^ -92, param0);
             SoftwareRasterizer.clearFramebuffer();
             if (param3 != -40) {
                 whirlpoolTables = (long[][]) null;
@@ -500,12 +500,12 @@ class ByteArrayBuffer extends IntrusiveNode {
         RuntimeException caughtCopyFailure = null;
         int destinationIndex = 0;
         RuntimeException copyFailureForContext = null;
-        mb unusedNullTextInputSnapshot = null;
+        LoginTextValue unusedNullTextInputSnapshot = null;
         try {
           destinationIndex = destinationOffset;
           if (methodGuard != 29915) {
-            unusedNullTextInputSnapshot = (mb) null;
-            ByteArrayBuffer.a((mb) null, (mb) null, 35);
+            unusedNullTextInputSnapshot = (LoginTextValue) null;
+            ByteArrayBuffer.a((LoginTextValue) null, (LoginTextValue) null, 35);
           }
           while (destinationOffset + length > destinationIndex) {
             bufferByteIndex = this.position;
@@ -549,13 +549,13 @@ class ByteArrayBuffer extends IntrusiveNode {
         int cycleSum = 0;
         int delta = 0;
         int cyclesRemaining = 0;
-        mb unusedNullTextInputSnapshot = null;
+        LoginTextValue unusedNullTextInputSnapshot = null;
         try {
           blockCount = this.position / 8;
           this.position = 0;
           if (methodGuard != -33) {
-            unusedNullTextInputSnapshot = (mb) null;
-            ByteArrayBuffer.a((mb) null, (mb) null, 109);
+            unusedNullTextInputSnapshot = (LoginTextValue) null;
+            ByteArrayBuffer.a((LoginTextValue) null, (LoginTextValue) null, 109);
           }
           blockIndex = 0;
           L1: while (true) {
@@ -682,8 +682,8 @@ class ByteArrayBuffer extends IntrusiveNode {
         whirlpoolRoundConstants = null;
         whirlpoolTables = (long[][]) null;
         if (methodGuard != 0) {
-            mb unusedNullTextInputSnapshot = (mb) null;
-            ByteArrayBuffer.a((mb) null, (mb) null, -47);
+            LoginTextValue unusedNullTextInputSnapshot = (LoginTextValue) null;
+            ByteArrayBuffer.a((LoginTextValue) null, (LoginTextValue) null, -47);
         }
     }
 
@@ -901,7 +901,7 @@ class ByteArrayBuffer extends IntrusiveNode {
         return -49152 + this.readUnsignedShortBE(true);
     }
 
-    final static int a(mb param0, mb param1, int param2) {
+    final static int a(LoginTextValue param0, LoginTextValue param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;

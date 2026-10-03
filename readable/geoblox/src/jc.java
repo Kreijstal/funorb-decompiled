@@ -13,37 +13,37 @@ final class jc {
             (MenuScreen.avatarFeedbackFrameBase != 36)) {
           MenuScreen.avatarFeedbackFrameBase = 36;
           LimitedRandomAccessFile.avatarFeedbackHoldTicks = 110;
-          nd.avatarFeedbackModeId = 6;
+          TextValidationFailure.avatarFeedbackModeId = 6;
           ValidationIconWidget.playPcmSample(-348, fl.field_c[23]);
         }
         if (LimitedRandomAccessFile.avatarFeedbackHoldTicks > 0) {
           if (feedbackRequestId == 3) {
-            wa.avatarShockEffectTicks = 50;
+            WidgetTheme.avatarShockEffectTicks = 50;
             ValidationIconWidget.playPcmSample(-348, fl.field_c[27]);
           }
         } else {
           if (!clearSpriteGuard) {
             if (feedbackRequestId != 0) {
               if (1 == feedbackRequestId) {
-                nd.avatarFeedbackModeId = 1;
+                TextValidationFailure.avatarFeedbackModeId = 1;
                 MenuScreen.avatarFeedbackFrameBase = 6;
               } else {
                 if (feedbackRequestId != 2) {
                   if (3 == feedbackRequestId) {
                     MenuScreen.avatarFeedbackFrameBase = 18;
-                    wa.avatarShockEffectTicks = 50;
+                    WidgetTheme.avatarShockEffectTicks = 50;
                     LimitedRandomAccessFile.avatarFeedbackHoldTicks = 110;
-                    nd.avatarFeedbackModeId = 3;
+                    TextValidationFailure.avatarFeedbackModeId = 3;
                     ValidationIconWidget.playPcmSample(-348, fl.field_c[27]);
                   } else {
                     if (feedbackRequestId == 4) {
                       LimitedRandomAccessFile.avatarFeedbackHoldTicks = 110;
                       MenuScreen.avatarFeedbackFrameBase = 24;
-                      nd.avatarFeedbackModeId = 4;
+                      TextValidationFailure.avatarFeedbackModeId = 4;
                     } else {
                       if (feedbackRequestId == 5) {
                         LimitedRandomAccessFile.avatarFeedbackHoldTicks = 110;
-                        nd.avatarFeedbackModeId = 5;
+                        TextValidationFailure.avatarFeedbackModeId = 5;
                         MenuScreen.avatarFeedbackFrameBase = 30;
                         ValidationIconWidget.playPcmSample(-348, fl.field_c[24]);
                       }
@@ -56,7 +56,7 @@ final class jc {
                       (36 != MenuScreen.avatarFeedbackFrameBase)) {
                     ValidationIconWidget.playPcmSample(-348, fl.field_c[26]);
                   }
-                  nd.avatarFeedbackModeId = 2;
+                  TextValidationFailure.avatarFeedbackModeId = 2;
                   MenuScreen.avatarFeedbackFrameBase = 12;
                 }
               }
@@ -68,7 +68,7 @@ final class jc {
                 ValidationIconWidget.playPcmSample(-348, fl.field_c[25]);
               }
               MenuScreen.avatarFeedbackFrameBase = 0;
-              nd.avatarFeedbackModeId = 0;
+              TextValidationFailure.avatarFeedbackModeId = 0;
             }
           } else {
             field_a = (Sprite) null;
@@ -80,28 +80,28 @@ final class jc {
                 ValidationIconWidget.playPcmSample(-348, fl.field_c[25]);
               }
               MenuScreen.avatarFeedbackFrameBase = 0;
-              nd.avatarFeedbackModeId = 0;
+              TextValidationFailure.avatarFeedbackModeId = 0;
             } else {
               if (1 == feedbackRequestId) {
-                nd.avatarFeedbackModeId = 1;
+                TextValidationFailure.avatarFeedbackModeId = 1;
                 MenuScreen.avatarFeedbackFrameBase = 6;
               } else {
                 if (feedbackRequestId != 2) {
                   if (3 == feedbackRequestId) {
                     MenuScreen.avatarFeedbackFrameBase = 18;
-                    wa.avatarShockEffectTicks = 50;
+                    WidgetTheme.avatarShockEffectTicks = 50;
                     LimitedRandomAccessFile.avatarFeedbackHoldTicks = 110;
-                    nd.avatarFeedbackModeId = 3;
+                    TextValidationFailure.avatarFeedbackModeId = 3;
                     ValidationIconWidget.playPcmSample(-348, fl.field_c[27]);
                   } else {
                     if (feedbackRequestId == 4) {
                       LimitedRandomAccessFile.avatarFeedbackHoldTicks = 110;
                       MenuScreen.avatarFeedbackFrameBase = 24;
-                      nd.avatarFeedbackModeId = 4;
+                      TextValidationFailure.avatarFeedbackModeId = 4;
                     } else {
                       if (feedbackRequestId == 5) {
                         LimitedRandomAccessFile.avatarFeedbackHoldTicks = 110;
-                        nd.avatarFeedbackModeId = 5;
+                        TextValidationFailure.avatarFeedbackModeId = 5;
                         MenuScreen.avatarFeedbackFrameBase = 30;
                         ValidationIconWidget.playPcmSample(-348, fl.field_c[24]);
                       }
@@ -114,7 +114,7 @@ final class jc {
                       (36 != MenuScreen.avatarFeedbackFrameBase)) {
                     ValidationIconWidget.playPcmSample(-348, fl.field_c[26]);
                   }
-                  nd.avatarFeedbackModeId = 2;
+                  TextValidationFailure.avatarFeedbackModeId = 2;
                   MenuScreen.avatarFeedbackFrameBase = 12;
                 }
               }

@@ -102,7 +102,7 @@ abstract class FadingDialog extends WidgetContainer {
           if (UsernameAvailabilityValidator.a(8, param1, param0)) {
             return false;
           }
-          if (!wc.a(param0, param1, (byte) -107)) {
+          if (!CrcAcknowledgedPacket.a(param0, param1, (byte) -107)) {
             return true;
           }
           return false;
@@ -190,7 +190,7 @@ abstract class FadingDialog extends WidgetContainer {
             SoftwareRasterizer.clearFramebuffer();
             this.b(0, 20, 0);
             super.renderWidget(-parentX - this.widgetX, -parentY - this.widgetY, (byte) 104, renderPass);
-            id.a(true);
+            id.restoreRasterTarget(true);
             oi.field_b.drawAlpha(parentX + this.widgetX, this.widgetY + parentY, this.dialogOpacity);
             return;
         }
@@ -201,7 +201,7 @@ abstract class FadingDialog extends WidgetContainer {
             SoftwareRasterizer.clearFramebuffer();
             this.b(0, 20, 0);
             super.renderWidget(-parentX - this.widgetX, -parentY - this.widgetY, (byte) 104, renderPass);
-            id.a(true);
+            id.restoreRasterTarget(true);
             oi.field_b.drawAlpha(parentX + this.widgetX, this.widgetY + parentY, this.dialogOpacity);
             return;
         }
@@ -212,7 +212,7 @@ abstract class FadingDialog extends WidgetContainer {
             SoftwareRasterizer.clearFramebuffer();
             this.b(0, 20, 0);
             super.renderWidget(-parentX - this.widgetX, -parentY - this.widgetY, (byte) 104, renderPass);
-            id.a(true);
+            id.restoreRasterTarget(true);
             oi.field_b.drawAlpha(parentX + this.widgetX, this.widgetY + parentY, this.dialogOpacity);
             return;
         }
@@ -221,7 +221,7 @@ abstract class FadingDialog extends WidgetContainer {
         SoftwareRasterizer.clearFramebuffer();
         this.b(0, 20, 0);
         super.renderWidget(-parentX - this.widgetX, -parentY - this.widgetY, (byte) 104, renderPass);
-        id.a(true);
+        id.restoreRasterTarget(true);
         oi.field_b.drawAlpha(parentX + this.widgetX, this.widgetY + parentY, this.dialogOpacity);
     }
 

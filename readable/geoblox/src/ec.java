@@ -12,7 +12,7 @@ final class ec {
         int var3 = 0;
         int var4 = 0;
         ai var5 = null;
-        mg var6 = null;
+        HighscoreQuery var6 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var4 = Geoblox.clientControlFlowFlag;
@@ -23,10 +23,10 @@ final class ec {
             ArchiveIndex.a(var5, param1, -127);
             var5 = (ai) ((Object) TriangleMesh.field_j.nextForIteration(1));
           }
-          var6 = (mg) ((Object) ResourceArchive.field_d.firstForIteration(0));
+          var6 = (HighscoreQuery) ((Object) ResourceArchive.field_d.firstForIteration(0));
           while (var6 != null) {
-            DebouncedValidationProvider.a(param1, 5, var6);
-            var6 = (mg) ((Object) ResourceArchive.field_d.nextForIteration(1));
+            DebouncedValidationProvider.writeHighscoreRequest(param1, 5, var6);
+            var6 = (HighscoreQuery) ((Object) ResourceArchive.field_d.nextForIteration(1));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -105,9 +105,9 @@ final class ec {
               sortCursorThenFirstEntityId = (TextPairLoginPayload.packedMatchCandidates[candidateIndex] & 1072693248) >> 20;
               packedCandidateThenSecondEntityId = TextPairLoginPayload.packedMatchCandidates[candidateIndex] >> 10 & 1023;
               thirdEntityId = 1023 & TextPairLoginPayload.packedMatchCandidates[candidateIndex];
-              firstMatchedEntity = tl.entitiesById[sortCursorThenFirstEntityId];
-              secondMatchedEntity = tl.entitiesById[packedCandidateThenSecondEntityId];
-              thirdMatchedEntity = tl.entitiesById[thirdEntityId];
+              firstMatchedEntity = RasterTargetSnapshot.entitiesById[sortCursorThenFirstEntityId];
+              secondMatchedEntity = RasterTargetSnapshot.entitiesById[packedCandidateThenSecondEntityId];
+              thirdMatchedEntity = RasterTargetSnapshot.entitiesById[thirdEntityId];
               if ((firstMatchedEntity.matchCooldownTicks <= 0) &&
                   (secondMatchedEntity.matchCooldownTicks <= 0) &&
                   (thirdMatchedEntity.matchCooldownTicks <= 0)) {

@@ -61,18 +61,18 @@ abstract class DebouncedValidationProvider implements ValidationProvider {
         }
     }
 
-    final static void a(int param0, int param1, mg param2) {
+    final static void writeHighscoreRequest(int packetOpcode, int requestType, HighscoreQuery query) {
         PacketBuffer var3 = null;
         try {
             var3 = CacheReference.field_q;
-            var3.writeCipherByte(param0, (byte) -82);
-            var3.writeByte((byte) 124, param1);
+            var3.writeCipherByte(packetOpcode, (byte) -82);
+            var3.writeByte((byte) 124, requestType);
             var3.writeByte((byte) -66, 0);
-            var3.writeShortBE(param2.field_i, 28695);
-            var3.writeByte((byte) -84, param2.field_f);
-            var3.writeByte((byte) 125, param2.field_l);
+            var3.writeShortBE(query.queryId, 28695);
+            var3.writeByte((byte) -84, query.entryLimit);
+            var3.writeByte((byte) 125, query.valuesPerEntry);
         } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ib.DA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ib.DA(" + packetOpcode + ',' + requestType + ',' + (query != null ? "{...}" : "null") + ')');
         }
     }
 

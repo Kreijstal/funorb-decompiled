@@ -3,7 +3,7 @@
  */
 final class lj {
     static volatile int livePointerX;
-    static ck field_e;
+    static TextTemplateArgumentType field_e;
     static int menuPointerInitialRepeatDelay;
     static Sprite smallBoxSprite;
     static IndexedSprite[] field_c;
@@ -25,7 +25,7 @@ final class lj {
     static {
         field_z = "lj.A(";
         livePointerX = -1;
-        field_e = new ck(6, 0, 4, 2);
+        field_e = new TextTemplateArgumentType(6, 0, 4, 2);
         menuPointerInitialRepeatDelay = 20;
     }
 }

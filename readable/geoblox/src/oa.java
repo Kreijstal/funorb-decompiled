@@ -11,14 +11,14 @@ final class oa {
 
     final synchronized static long a(int param0) {
         long var1 = System.currentTimeMillis();
-        if (!(~nd.field_b >= ~var1)) {
-            rj.field_b = rj.field_b + (nd.field_b - var1);
+        if (!(~TextValidationFailure.field_b >= ~var1)) {
+            DisplayModeInfo.field_b = DisplayModeInfo.field_b + (TextValidationFailure.field_b - var1);
         }
-        nd.field_b = var1;
+        TextValidationFailure.field_b = var1;
         if (param0 != -12520) {
             subscriptionMonthlyCostTexts = (String[]) null;
         }
-        return rj.field_b + var1;
+        return DisplayModeInfo.field_b + var1;
     }
 
     final static int a(int param0, CharSequence param1, int param2) {
@@ -31,7 +31,7 @@ final class oa {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 == 8192) {
-            stackIn_4_0 = eg.a(param1, (byte) 49, param0, true);
+            stackIn_4_0 = ReflectionCheckRequest.a(param1, (byte) 49, param0, true);
             return stackIn_4_0;
           }
           stackIn_2_0 = -10;

@@ -4,7 +4,7 @@
 abstract class ArchiveSource {
     static String loadingText;
     static char[] field_b;
-    static vg field_a;
+    static SecondaryNodeHashTable field_a;
 
     abstract int getGroupProgress(int methodGuard, int groupId);
 

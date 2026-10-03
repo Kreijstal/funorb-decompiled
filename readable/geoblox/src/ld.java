@@ -111,7 +111,7 @@ final class ld {
           }
         } else {
           if ((4 & kd.difficultyStepFlags[ArchiveNetworkClient.difficultyStep]) != 0) {
-            og.entityMotionSpeed = og.entityMotionSpeed + 0.055555559694767f;
+            TextTemplateDefinition.entityMotionSpeed = TextTemplateDefinition.entityMotionSpeed + 0.055555559694767f;
             ContextualRuntimeException.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard);
           }
           if (((kd.difficultyStepFlags[ArchiveNetworkClient.difficultyStep] & 1) != 0) &&

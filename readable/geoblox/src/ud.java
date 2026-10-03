@@ -58,7 +58,7 @@ final class ud {
           if (var2 == null) {
             var2 = param1;
           }
-          var3 = (j) ((Object) ug.field_a.a((long)var2.hashCode(), -1));
+          var3 = (j) ((Object) ug.field_a.findFirst((long)var2.hashCode(), -1));
           if (param0 != 0) {
             var6 = (String) null;
             ud.a(55, (String) null);
@@ -73,7 +73,7 @@ final class ud {
               stackIn_16_0 = var3;
               return stackIn_16_0;
             }
-            var3 = (j) ((Object) ug.field_a.a(param0 ^ -29925));
+            var3 = (j) ((Object) ug.field_a.findNext(param0 ^ -29925));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -161,7 +161,7 @@ final class ud {
                 queryReceivingZeroValues.completed = true;
                 queryReceivingZeroValues.unlinkNode(false);
               } else {
-                IterableNodeHashTable.a((Throwable) null, "A1: " + og.e(55), (byte) 125);
+                IterableNodeHashTable.a((Throwable) null, "A1: " + TextTemplateDefinition.e(55), (byte) 125);
                 Bzip2DecoderState.closeSessionSocket((byte) -116);
               }
             }

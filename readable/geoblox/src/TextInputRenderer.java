@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class TextInputRenderer extends TextWidgetRenderer {
-    static gk field_v;
+    static ClientProtocolStage field_v;
     static int field_s;
     static String[] mustLoginAlternateTexts;
     static TextWidgetRenderer field_t;
@@ -244,7 +244,7 @@ class TextInputRenderer extends TextWidgetRenderer {
     }
 
     static {
-        field_v = new gk();
+        field_v = new ClientProtocolStage();
         mustLoginAlternateTexts = new String[]{null, "To store your progress, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and score, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue."};
         secondVertexTransformedY = new int[8192];
         field_u = 11;

@@ -55,7 +55,7 @@ final class ResourceArchive {
             }
             attachedEntity = (GameplayEntity) ((Object) a.attachedEntities.nextForIteration(1));
           }
-          wc.requestAvatarTintForRadius(maximumEntityRadiusSquared, (byte) 14);
+          CrcAcknowledgedPacket.requestAvatarTintForRadius(maximumEntityRadiusSquared, (byte) 14);
           if (10000.0f > maximumEntityRadiusSquared) {
             lowRadiusFeedbackMode = 0;
             jc.requestAvatarFeedback(lowRadiusFeedbackMode, false);

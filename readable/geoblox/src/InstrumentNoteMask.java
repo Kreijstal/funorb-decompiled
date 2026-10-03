@@ -3,9 +3,9 @@
  */
 final class InstrumentNoteMask extends IntrusiveNode {
     byte[] notesUsed;
-    static nd field_f;
+    static TextValidationFailure field_f;
     static int[] meshFaceOrder;
-    static ck field_g;
+    static TextTemplateArgumentType field_g;
 
     InstrumentNoteMask(byte[] notesUsed) {
         try {
@@ -27,8 +27,8 @@ final class InstrumentNoteMask extends IntrusiveNode {
     }
 
     static {
-        field_f = new nd();
+        field_f = new TextValidationFailure();
         meshFaceOrder = new int[16384];
-        field_g = new ck(0, 2, 2, 1);
+        field_g = new TextTemplateArgumentType(0, 2, 2, 1);
     }
 }

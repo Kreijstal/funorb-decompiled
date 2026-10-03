@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class AccountContentDialog extends ContentTransitionDialog {
-    static uj field_hb;
+    static FullscreenFailureReason field_hb;
     static String fullscreenUnavailableTrySignedAppletText;
 
     final static void a(boolean param0, int param1, java.awt.Canvas param2) {
@@ -129,7 +129,7 @@ final class AccountContentDialog extends ContentTransitionDialog {
     }
 
     static {
-        field_hb = new uj();
+        field_hb = new FullscreenFailureReason();
         fullscreenUnavailableTrySignedAppletText = "Unfortunately your configuration doesn't support fullscreen mode. You could try restarting your browser and using the signed applet.";
     }
 }

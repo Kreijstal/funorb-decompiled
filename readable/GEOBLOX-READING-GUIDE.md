@@ -7,10 +7,10 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-## Current readability (pass 113)
+## Current readability (pass 114)
 
-The export has 9,152 guarded names and 73,820 identifier edits. Class coverage is
-189 semantic renames, one already meaningful `Geoblox` name and 113 opaque names.
+The export has 9,380 guarded names and 75,701 identifier edits. Class coverage is
+212 semantic renames, one already meaningful `Geoblox` name and 90 opaque names.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
 compile and compare 137,964 bindings, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
@@ -19,6 +19,18 @@ saving 219 lines. Menu hit-test trees preserve every strict boundary and
 predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
+
+Pass114 adds 23 record/helper class roles, 77 fields, 31 methods and 97 parameters.
+Read `RasterTargetSnapshot` and the named `pushRasterTarget`/`restoreRasterTarget`
+callers for raster scope. `HighscoreQuery` holds three result views;
+`NanoFrameTimer.handleRankingResponse` fills those views or acknowledges a queued
+submission. `ReflectionCheckRequest` keeps the operation/lookup arrays used by
+`readReflectionCheckRequest` and `writeReflectionCheckReply`. `DelayedIncomingPacket`
+is the receive-delay queue record; `CrcAcknowledgedPacket` retains an outgoing
+payload and its CRC acknowledgement. The template classes expose literal
+segments, referenced IDs and typed value arrays. All 9,152 prior naming objects,
+raw bodies and tool/probe pins remain; no new live platform/network coverage is
+claimed.
 
 Pass113 adds 20 account/widget class roles, 81 fields, 27 methods and 126
 parameters. Read `LoginPanel` for login/retry controls, `AccountCreationForm`
@@ -65,6 +77,10 @@ These are useful entry points for the newly named families:
 | Suggestions and text hotspots | [UsernameSuggestionsPanel](geoblox/src/UsernameSuggestionsPanel.java), [UsernameSuggestionListener](geoblox/src/UsernameSuggestionListener.java), [HotspotTextWidget](geoblox/src/HotspotTextWidget.java), [TextHotspotBounds](geoblox/src/TextHotspotBounds.java), [HotspotActivationListener](geoblox/src/HotspotActivationListener.java) |
 | Status and auxiliary controls | [ValidationMessageWidget](geoblox/src/ValidationMessageWidget.java), [ValidationIconWidget](geoblox/src/ValidationIconWidget.java), [ProgressBarWidget](geoblox/src/ProgressBarWidget.java), [ProgressDialog](geoblox/src/ProgressDialog.java), [LabeledChildWidget](geoblox/src/LabeledChildWidget.java), [MessageDialogContent](geoblox/src/MessageDialogContent.java), [FullscreenErrorDialog](geoblox/src/FullscreenErrorDialog.java), [UnderlinedButtonRenderer](geoblox/src/UnderlinedButtonRenderer.java), [SpriteCheckboxRenderer](geoblox/src/SpriteCheckboxRenderer.java) |
 | Login payloads | [LoginPayload](geoblox/src/LoginPayload.java), [LongAndTextLoginPayload](geoblox/src/LongAndTextLoginPayload.java), [TextPairLoginPayload](geoblox/src/TextPairLoginPayload.java), [AlternateLongAndTextLoginPayload](geoblox/src/AlternateLongAndTextLoginPayload.java), [LoginMethod](geoblox/src/LoginMethod.java) |
+| Archive, collections and raster records | [ArchiveLoadStep](geoblox/src/ArchiveLoadStep.java), [ArchiveLoadSequence](geoblox/src/ArchiveLoadSequence.java), [SecondaryNodeHashTable](geoblox/src/SecondaryNodeHashTable.java), [RasterTargetSnapshot](geoblox/src/RasterTargetSnapshot.java), [DisplayModeInfo](geoblox/src/DisplayModeInfo.java), [TrackedPcmStream](geoblox/src/TrackedPcmStream.java) |
+| Ranking and protocol records | [HighscoreQuery](geoblox/src/HighscoreQuery.java), [HighscoreNameEntry](geoblox/src/HighscoreNameEntry.java), [ReflectionCheckRequest](geoblox/src/ReflectionCheckRequest.java), [DelayedIncomingPacket](geoblox/src/DelayedIncomingPacket.java), [CrcAcknowledgedPacket](geoblox/src/CrcAcknowledgedPacket.java), [LoginTextValue](geoblox/src/LoginTextValue.java), [ClientProtocolStage](geoblox/src/ClientProtocolStage.java) |
+| Templates and theme | [TextTemplateDefinition](geoblox/src/TextTemplateDefinition.java), [TextTemplateDefinitionLoader](geoblox/src/TextTemplateDefinitionLoader.java), [TextTemplateArgumentType](geoblox/src/TextTemplateArgumentType.java), [WidgetTheme](geoblox/src/WidgetTheme.java) |
+| Platform controls and markers | [DirectDrawFullscreenController](geoblox/src/DirectDrawFullscreenController.java), [WindowsCursorController](geoblox/src/WindowsCursorController.java), [FullscreenFailureReason](geoblox/src/FullscreenFailureReason.java), [DirectSoundCompatibility](geoblox/src/DirectSoundCompatibility.java), [TextValidationFailure](geoblox/src/TextValidationFailure.java), [ChildWidgetOwner](geoblox/src/ChildWidgetOwner.java) |
 | Network and storage | [SocketConnector](geoblox/src/SocketConnector.java), [ProxySocketConnector](geoblox/src/ProxySocketConnector.java), [AsyncResourceDownloader](geoblox/src/AsyncResourceDownloader.java), [ByteStorage](geoblox/src/ByteStorage.java), [DirectByteStorage](geoblox/src/DirectByteStorage.java) |
 
 Class names describe supported instance roles. Unrelated static helpers remain

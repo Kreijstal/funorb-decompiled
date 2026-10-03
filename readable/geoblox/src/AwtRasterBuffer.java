@@ -59,7 +59,7 @@ abstract class AwtRasterBuffer {
           if (param2 <= 0) {
             throw new IllegalArgumentException();
           }
-          if (uj.a(true, param2)) {
+          if (FullscreenFailureReason.a(true, param2)) {
             stackIn_7_0 = (int)((4294967295L & (long)param1.nextInt()) * (long)param2 >> 32);
             return stackIn_7_0;
           }

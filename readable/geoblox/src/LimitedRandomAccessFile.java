@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class LimitedRandomAccessFile {
-    static uj field_b;
+    static FullscreenFailureReason field_b;
     private long maximumLength;
     static String waitingForSoundEffectsText;
     static String field_a;
@@ -99,7 +99,7 @@ final class LimitedRandomAccessFile {
             var6 = 0;
             var7 = param0.length();
             if (param3 != 87) {
-              field_b = (uj) null;
+              field_b = (FullscreenFailureReason) null;
             }
             for (var8 = 0; var8 < var7; var8++) {
               L3: {
@@ -257,7 +257,7 @@ final class LimitedRandomAccessFile {
     }
 
     static {
-        field_b = new uj();
+        field_b = new FullscreenFailureReason();
         field_a = "Score: <%0>";
         waitingForSoundEffectsText = "Waiting for sound effects";
         avatarFeedbackHoldTicks = 0;

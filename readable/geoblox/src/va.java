@@ -3,7 +3,7 @@
  */
 final class va {
     static int field_b;
-    static ck field_f;
+    static TextTemplateArgumentType field_f;
     static boolean field_d;
     static al field_e;
     static int field_a;
@@ -122,7 +122,7 @@ final class va {
 
     static {
         field_d = false;
-        field_f = new ck(14, 0, 4, 1);
+        field_f = new TextTemplateArgumentType(14, 0, 4, 1);
         field_e = new al();
     }
 }

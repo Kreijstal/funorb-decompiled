@@ -173,24 +173,24 @@ final class EmailValidator extends TextInputValidator {
     }
 
     final static void a(int param0, byte param1) {
-        je var2 = null;
+        TrackedPcmStream var2 = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         var3 = Geoblox.clientControlFlowFlag;
         try {
           j.field_gb = param0;
-          var2 = (je) ((Object) PrefixCodeDecoder.field_f.firstForIteration(0));
+          var2 = (TrackedPcmStream) ((Object) PrefixCodeDecoder.field_f.firstForIteration(0));
           if (param1 != -67) {
             return;
           }
           while (var2 != null) {
-            if (!var2.field_f.isLinked(126)) {
+            if (!var2.lifetimeNode.isLinked(126)) {
               var2.unlinkNode(false);
             } else {
-              var2.field_g.f((int)((float)(j.field_gb * var2.field_i / 80) * 1.399999976158142f));
+              var2.stream.f((int)((float)(j.field_gb * var2.initialVolume / 80) * 1.399999976158142f));
             }
-            var2 = (je) ((Object) PrefixCodeDecoder.field_f.nextForIteration(1));
+            var2 = (TrackedPcmStream) ((Object) PrefixCodeDecoder.field_f.nextForIteration(1));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -221,7 +221,7 @@ final class EmailValidator extends TextInputValidator {
             if (param0 != 12607) {
                 archiveGameCrc = 32;
             }
-            fa.showMessageDialog(rj.loggingInText, 480, false);
+            fa.showMessageDialog(DisplayModeInfo.loggingInText, 480, false);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ag.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

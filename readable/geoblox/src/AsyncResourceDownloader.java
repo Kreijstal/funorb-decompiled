@@ -12,7 +12,7 @@ final class AsyncResourceDownloader implements Runnable {
     private ByteArrayBuffer field_n;
     static ArchiveNetworkClient archiveNetworkClient;
     static int field_m;
-    static ck field_d;
+    static TextTemplateArgumentType field_d;
     private DataInputStream field_c;
     private PlatformTask field_k;
     private PlatformTask field_f;
@@ -221,7 +221,7 @@ final class AsyncResourceDownloader implements Runnable {
         field_m = 5;
         field_j = 0;
         field_e = 50;
-        field_d = new ck(4, 1, 1, 1);
+        field_d = new TextTemplateArgumentType(4, 1, 1, 1);
     }
 
     @SuppressWarnings("unchecked")

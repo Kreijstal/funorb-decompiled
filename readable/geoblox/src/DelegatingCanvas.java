@@ -82,9 +82,9 @@ final class DelegatingCanvas extends java.awt.Canvas {
             for (var6_int = 0; var4 > var6_int; var6_int++) {
               ScorePopup.a(116, var14);
               if (var6_int != 0) {
-                nd.a(GzipInflater.field_g, var6_int, (byte) 123, StatefulWidgetRenderer.field_v, EmailAvailabilityQuery.field_b, lc.field_b);
+                TextValidationFailure.a(GzipInflater.field_g, var6_int, (byte) 123, StatefulWidgetRenderer.field_v, EmailAvailabilityQuery.field_b, HighscoreNameEntry.field_b);
               } else {
-                nd.a(GzipInflater.field_g, var6_int, (byte) -97, StatefulWidgetRenderer.field_v, EmailAvailabilityQuery.field_b, lc.field_b);
+                TextValidationFailure.a(GzipInflater.field_g, var6_int, (byte) -97, StatefulWidgetRenderer.field_v, EmailAvailabilityQuery.field_b, HighscoreNameEntry.field_b);
               }
             }
             kc.a(var5, (byte) -98);
