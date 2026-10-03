@@ -206,7 +206,7 @@ final class eh {
         InstrumentPatch.field_q = false;
         tc.field_a = null;
         int var1 = 46 / ((param0 + 64) / 39);
-        oe.field_V = 0;
+        ResizableDialog.field_V = 0;
         bc.field_a = -1;
         PendingActionMarker.field_g = -1;
     }

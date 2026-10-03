@@ -136,7 +136,7 @@ abstract class TextInputValidator extends ib implements ga {
           va.field_d = false;
           ii.field_a = false;
           if ((null != Geoblox.activeMessageDialog) &&
-              (Geoblox.activeMessageDialog.field_I)) {
+              (Geoblox.activeMessageDialog.dialogVisible)) {
             if (8 == param1) {
               param1 = 2;
               if (!cf.field_i) {
@@ -153,7 +153,7 @@ abstract class TextInputValidator extends ib implements ga {
             }
             if (var3_int != 0) {
               if (ii.field_a) {
-                param2 = wj.a(mi.connectionLostWithReasonText, new String[]{param2}, (byte) -25);
+                param2 = OpacityWidget.a(mi.connectionLostWithReasonText, new String[]{param2}, (byte) -25);
               }
               if (mi.field_I) {
                 param2 = kf.pleaseTryAgainText;

@@ -65,7 +65,7 @@ final class ab {
           var3_int = param2.length();
           if ((var3_int >= 1) &&
               (var3_int <= 12)) {
-            var4 = oe.a(param2, 12);
+            var4 = ResizableDialog.a(param2, 12);
             if (param1 != 2) {
               ab.a((byte) 112);
             }
@@ -116,7 +116,7 @@ final class ab {
     }
 
     final static IndexedSprite buildFirstIndexedSpriteFromDecodedSheet(int methodGuard) {
-        IndexedSprite sprite = new IndexedSprite(pg.decodedSpriteCanvasWidth, dd.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[0], md.decodedSpriteYOffsets[0], DualLinkNode.decodedSpriteWidths[0], hl.decodedSpriteHeights[0], mj.decodedSpriteIndices[0], cm.decodedSpritePalette);
+        IndexedSprite sprite = new IndexedSprite(pg.decodedSpriteCanvasWidth, FadingDialog.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[0], md.decodedSpriteYOffsets[0], DualLinkNode.decodedSpriteWidths[0], hl.decodedSpriteHeights[0], mj.decodedSpriteIndices[0], cm.decodedSpritePalette);
         int sentinelDivision = -128 / ((methodGuard - 52) / 49);
         kj.clearDecodedSpriteWorkingArrays(true);
         return sprite;

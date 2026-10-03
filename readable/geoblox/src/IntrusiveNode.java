@@ -152,7 +152,7 @@ class IntrusiveNode {
           md.decodedSpriteYOffsets = new int[sb.decodedSpriteCount];
           spriteDataBufferAlias.position = -7 + spriteBytes.length - sb.decodedSpriteCount * 8;
           pg.decodedSpriteCanvasWidth = spriteDataBufferAlias.readUnsignedShortBE(true);
-          dd.decodedSpriteCanvasHeight = spriteDataBufferAlias.readUnsignedShortBE(true);
+          FadingDialog.decodedSpriteCanvasHeight = spriteDataBufferAlias.readUnsignedShortBE(true);
           paletteSize = (255 & spriteDataBufferAlias.readUnsignedByte((byte) 34)) + 1;
           for (spriteIndex = 0; spriteIndex < sb.decodedSpriteCount; spriteIndex++) {
             GameplaySession.decodedSpriteXOffsets[spriteIndex] = spriteDataBuffer.readUnsignedShortBE(readGuard);

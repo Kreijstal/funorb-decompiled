@@ -99,7 +99,7 @@ final class fh implements dh {
             stackIn_5_0 = 3249872;
           }
           var6_int = stackIn_5_0;
-          this.field_d.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param4.field_s + "</u>", param4.field_v + param0, param2 + param4.field_m, param4.field_r, param4.field_h, var6_int, -1, this.field_b, this.field_a, this.field_d.maxAscent + this.field_d.maxDescent);
+          this.field_d.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param4.field_s + "</u>", param4.widgetX + param0, param2 + param4.widgetY, param4.widgetWidth, param4.widgetHeight, var6_int, -1, this.field_b, this.field_a, this.field_d.maxAscent + this.field_d.maxDescent);
           if (param1 > -5) {
             fh.a(53L, -116);
           }
@@ -108,20 +108,20 @@ final class fh implements dh {
           }
           var7 = this.field_d.measureTextWidth(param4.field_s);
           var8 = this.field_d.maxDescent + this.field_d.maxAscent;
-          var9 = param4.field_v + param0;
+          var9 = param4.widgetX + param0;
           if (this.field_b == 2) {
-            var9 = var9 + (-var7 + param4.field_r);
+            var9 = var9 + (-var7 + param4.widgetWidth);
           } else {
             if (this.field_b == 1) {
-              var9 = var9 + (-var7 + param4.field_r >> 1);
+              var9 = var9 + (-var7 + param4.widgetWidth >> 1);
             }
           }
-          var10 = param2 + param4.field_m;
+          var10 = param2 + param4.widgetY;
           if (this.field_a == 2) {
-            var10 = var10 + (param4.field_h - var8);
+            var10 = var10 + (param4.widgetHeight - var8);
           } else {
             if (this.field_a == 1) {
-              var10 = var10 + (param4.field_h - var8 >> 1);
+              var10 = var10 + (param4.widgetHeight - var8 >> 1);
             }
           }
           ImageProducerRasterBuffer.a(var10 + 2, 4 + var7, 14164, var8, -2 + var9);

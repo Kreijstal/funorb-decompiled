@@ -108,7 +108,7 @@ final class ul {
                         smallestPackedEntityId = swappedEntityId;
                       }
                       if (tripleSharesVariant != 0) {
-                        dd.variantMatchCandidateCount = dd.variantMatchCandidateCount + 1;
+                        FadingDialog.variantMatchCandidateCount = FadingDialog.variantMatchCandidateCount + 1;
                       }
                       if ((tripleSharesVariant != 0) &&
                           (tripleSharesCategory != 0)) {

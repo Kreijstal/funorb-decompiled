@@ -7,9 +7,9 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-## Current readability (pass 98)
+## Current readability (pass 99)
 
-The export has 7,597 guarded names. All 303 sources compile, reproduce and
+The export has 7,802 guarded names. All 303 sources compile, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
 short-circuit guards for their original remainders, consuming 82 breaks and
 saving 219 lines. Menu hit-test trees preserve every strict boundary and
@@ -58,6 +58,50 @@ remain intact.
 
 `MenuScreen` handles selection and hit testing. Its overridden activation/input
 methods have matching names in `GameScreen`, preserving the virtual contracts.
+
+## Dialog transition implementation
+
+`MessageDialog` now extends `ContentTransitionDialog`, which extends
+`ResizableDialog`, which extends `FadingDialog`. These classes keep their unrelated
+static utilities. Widget geometry reads `widgetX`, `widgetY`, `widgetWidth` and
+`widgetHeight`; the original parameter order for layout remains height, width,
+guard, Y, X. All 16 connected rendering implementations use `renderWidget` with
+`parentX`, `parentY`, `methodGuard`, `renderPass`; pass handling still differs by
+implementation.
+
+`FadingDialog` owns `dialogVisible`, `dialogOpacity` and `dialogLayer`. Only the
+visible top dialog targets opacity256. Animation rises/falls using the original
+asymmetric integer steps. `advanceDialogAnimation` returns true when a hidden
+dialog has reached zero opacity; `settleDialogAnimation` snaps first and returns
+removal eligibility. The root layer unlinks dialogs on these returns. Wrong guards
+and subclass account polling remain, so neither return simply means success.
+
+`ResizableDialog.startResizeTransition` captures starting/target dimensions and
+sets duration/cursor. Positive-duration animation uses quadratic integer easing;
+nonpositive duration resizes/centers immediately. On the last tick,
+`onResizeTransitionComplete` runs before applying the final size. Division,
+overflow, sentinel writes and partial effects preserve the raw source.
+
+`ContentTransitionDialog.replaceContent` writes `pendingContent` first. Idle or
+fade-in starts `contentFadeOutPhase`; existing fade-out keeps its tick; an active
+`contentResizePhase` restarts sizing. Fade-out hides the wrapper and starts
+resizing. Resize completion calls `installContent` and enters `contentFadeInPhase`.
+Installation unlinks the prior wrapper before construction/addition and clears
+pending only afterward. Null content installs an empty wrapper. Phase tokens are
+mutable singleton references: cleanup nulls them, rather than immutable enum
+values. `finishTransition` always completes active content changes; its boolean
+controls only superclass resize completion. The false case retains that asymmetry.
+
+`OpacityWidget` wraps the dialog body. It draws nothing at opacity0 and delegates
+directly at256. Intermediate opacity allocates a temporary sprite, draws the child
+into it, restores the raster and alpha draws the result. These names expose the
+allocation; this pass does not optimize it or establish actual frame timing.
+
+All selected transition bodies have named parameters/locals. Untraced colocated
+statics (including the original qf request factory), shared widget internals,
+larger state-machine reconstruction and live dialog/browser/device behavior remain
+unfinished or unverified. Full source/binding/override checks and the existing six
+native probes pass without expanding those probes' execution scopes.
 
 ## MessageDialog and shared widget entry points
 

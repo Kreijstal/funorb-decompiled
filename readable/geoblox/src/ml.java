@@ -50,10 +50,10 @@ final class ml extends ff {
             stackIn_16_0 = this.field_v;
           }
           var7 = stackIn_16_0;
-          jf.a(this.field_y, var7, param0 + param4.field_v, param4.field_r, (-this.field_y[0].fullHeight + param4.field_h >> 1) + (param2 + param4.field_m), -17154);
+          jf.a(this.field_y, var7, param0 + param4.widgetX, param4.widgetWidth, (-this.field_y[0].fullHeight + param4.widgetHeight >> 1) + (param2 + param4.widgetY), -17154);
           stackIn_19_0 = (param3) ? 16777215 : 7105644;
           var8 = stackIn_19_0;
-          this.field_n.drawParagraph(param4.field_s, param4.field_v + param0, -2 + param2 + param4.field_m, param4.field_r, param4.field_h, var8, -1, 1, 1, this.field_n.maxAscent);
+          this.field_n.drawParagraph(param4.field_s, param4.widgetX + param0, -2 + param2 + param4.widgetY, param4.widgetWidth, param4.widgetHeight, var8, -1, 1, 1, this.field_n.maxAscent);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

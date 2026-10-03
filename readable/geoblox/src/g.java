@@ -165,7 +165,7 @@ final class g extends TextInputValidator {
             stackIn_5_0 = si.field_m;
             return stackIn_5_0;
           }
-          if (!dd.a(var4, var3, -25321)) {
+          if (!FadingDialog.a(var4, var3, -25321)) {
             stackIn_8_0 = si.field_m;
             return stackIn_8_0;
           }

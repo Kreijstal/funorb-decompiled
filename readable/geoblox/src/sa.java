@@ -24,7 +24,7 @@ final class sa extends RuntimeException {
             gb.field_e = ue.pointerYSnapshot;
           }
           L1: {
-            oe.field_V = oe.field_V + 1;
+            ResizableDialog.field_V = ResizableDialog.field_V + 1;
             if (param0 != null) {
               if (param0.equals(tc.field_a)) {
                 break L1;
@@ -35,8 +35,8 @@ final class sa extends RuntimeException {
               }
             }
             if (!InstrumentPatch.field_q) {
-              if (wg.field_e <= oe.field_V) {
-                stackIn_16_0 = (oe.field_V < ue.field_j + wg.field_e) ? 1 : 0;
+              if (wg.field_e <= ResizableDialog.field_V) {
+                stackIn_16_0 = (ResizableDialog.field_V < ue.field_j + wg.field_e) ? 1 : 0;
               } else {
                 stackIn_16_0 = 0;
               }
@@ -45,15 +45,15 @@ final class sa extends RuntimeException {
             }
             var2_int = stackIn_16_0;
             if (param0 == null) {
-              oe.field_V = 0;
+              ResizableDialog.field_V = 0;
             } else {
               if (InstrumentPatch.field_q) {
-                oe.field_V = wg.field_e;
+                ResizableDialog.field_V = wg.field_e;
               } else {
                 if (var2_int == 0) {
-                  oe.field_V = 0;
+                  ResizableDialog.field_V = 0;
                 } else {
-                  oe.field_V = wg.field_e;
+                  ResizableDialog.field_V = wg.field_e;
                 }
               }
             }
@@ -68,17 +68,17 @@ final class sa extends RuntimeException {
             }
           }
           if ((!InstrumentPatch.field_q) &&
-              (wg.field_e > oe.field_V) &&
+              (wg.field_e > ResizableDialog.field_V) &&
               (wb.pointerActivitySnapshot)) {
-            oe.field_V = 0;
+            ResizableDialog.field_V = 0;
             bc.field_a = k.field_g;
             PendingActionMarker.field_g = gb.field_e;
           }
           tc.field_a = param0;
           if ((InstrumentPatch.field_q) &&
-              (cl.field_a == oe.field_V)) {
+              (cl.field_a == ResizableDialog.field_V)) {
             InstrumentPatch.field_q = false;
-            oe.field_V = 0;
+            ResizableDialog.field_V = 0;
           }
           gb.field_e = -1;
           k.field_g = -1;

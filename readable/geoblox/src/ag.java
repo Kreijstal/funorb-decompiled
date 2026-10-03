@@ -24,7 +24,7 @@ final class ag extends TextInputValidator {
             stackIn_6_0 = da.createEmailValidText;
             return stackIn_6_0;
           }
-          stackIn_4_0 = wj.createInvalidEmailAlertText;
+          stackIn_4_0 = OpacityWidget.createInvalidEmailAlertText;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

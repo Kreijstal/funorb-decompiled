@@ -54,7 +54,7 @@ final class ud {
             return null;
           }
           var7 = (CharSequence) ((Object) param1);
-          var2 = oe.a(var7, 12);
+          var2 = ResizableDialog.a(var7, 12);
           if (var2 == null) {
             var2 = param1;
           }
@@ -65,7 +65,7 @@ final class ud {
           }
           while (var3 != null) {
             var8 = (CharSequence) ((Object) var3.field_hb);
-            var4 = oe.a(var8, 12);
+            var4 = ResizableDialog.a(var8, 12);
             if (var4 == null) {
               var4 = var3.field_hb;
             }

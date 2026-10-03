@@ -241,7 +241,7 @@ final class MatchingTextValidator extends TextInputValidator {
         }
         vk.field_d = new hi();
         int var1 = 32 / ((param0 - 43) / 47);
-        hk.field_C.b(vk.field_d, -106);
+        hk.field_C.replaceContent(vk.field_d, -106);
     }
 
     final lh validationStateForText(int guard, String candidateText) {

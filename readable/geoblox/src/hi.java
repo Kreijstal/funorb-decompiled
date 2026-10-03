@@ -41,7 +41,7 @@ final class hi extends ee implements ta, pl {
         int var5 = 200;
         this.b((byte) -110, var2);
         var3 += 50;
-        var3 = var3 + (5 + this.a(var3, -12037, 170, this.field_E, gk.createDisplayNameHintText, wj.createDisplayNameText));
+        var3 = var3 + (5 + this.a(var3, -12037, 170, this.field_E, gk.createDisplayNameHintText, OpacityWidget.createDisplayNameText));
         this.field_H.a(40, var5, (byte) -23, var3, -var5 + 496 >> 1);
         this.field_J.a(40, 60, (byte) -85, var3 + 15, 3 + var4);
         this.field_J.field_u = (bb) (this);
@@ -49,7 +49,7 @@ final class hi extends ee implements ta, pl {
         this.b((byte) -102, this.field_H);
         this.b((byte) -105, this.field_J);
         this.field_D = new vh((ta) (this));
-        this.field_D.a(150, -60 + this.field_r + (-this.field_E.field_v - this.field_E.field_r), (byte) -54, 20, 60 + this.field_E.field_v + this.field_E.field_r);
+        this.field_D.a(150, -60 + this.widgetWidth + (-this.field_E.widgetX - this.field_E.widgetWidth), (byte) -54, 20, 60 + this.field_E.widgetX + this.field_E.widgetWidth);
         this.b((byte) -102, this.field_D);
         this.a(var4 + 55 + var3, 496, (byte) -55, 0, 0);
     }
@@ -72,10 +72,10 @@ final class hi extends ee implements ta, pl {
           var11 = new hd(20, param0, param5 + 120, 25, param6, false, 120, 3, ng.field_F, 16777215, param2);
           var10 = -110 / ((70 - param1) / 33);
           this.b((byte) -108, var11);
-          var9 = new pi(((nl) ((Object) param6)).a((byte) -113), param3, 126, param0 + var11.field_h, 25 + param5, param4);
+          var9 = new pi(((nl) ((Object) param6)).a((byte) -113), param3, 126, param0 + var11.widgetHeight, 25 + param5, param4);
           var9.field_u = (bb) (this);
           this.b((byte) -115, var9);
-          stackIn_1_0 = var9.field_h + var11.field_h;
+          stackIn_1_0 = var9.widgetHeight + var11.widgetHeight;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

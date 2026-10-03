@@ -236,7 +236,7 @@ final class uk extends TextInputValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = (CharSequence) ((Object) candidateText);
-          var3 = oe.a((byte) 44, var5);
+          var3 = ResizableDialog.a((byte) 44, var5);
           if (var3 != null) {
             stackIn_2_0 = (String) (var3);
             return stackIn_2_0;

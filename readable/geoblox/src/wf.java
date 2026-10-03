@@ -169,25 +169,25 @@ abstract class wf extends ch {
         var2 = this.k(-1);
         if (!((var2 != 0) &&
             (1 != var2))) {
-          if (wj.field_G[1]) {
+          if (OpacityWidget.field_G[1]) {
             ByteArrayBuffer.a(true, 2);
           }
-          if (wj.field_G[2]) {
+          if (OpacityWidget.field_G[2]) {
             ec.a(param0 ^ 76, 3);
           }
-          if (wj.field_G[3]) {
+          if (OpacityWidget.field_G[3]) {
             ud.a((byte) -125, 4);
           }
-          if (wj.field_G[4]) {
+          if (OpacityWidget.field_G[4]) {
             oi.a(5, 116);
           }
-          if (wj.field_G[5]) {
+          if (OpacityWidget.field_G[5]) {
             di.a(6, param0 + 21789);
           }
-          if (wj.field_G[6]) {
+          if (OpacityWidget.field_G[6]) {
             SecondaryDeque.a(true, 7);
           }
-          if (wj.field_G[8]) {
+          if (OpacityWidget.field_G[8]) {
             ng.g(-13912);
           }
         }
@@ -195,16 +195,16 @@ abstract class wf extends ch {
     }
 
     private final void a(boolean param0, byte param1) {
-        wj.field_G[18] = true;
-        wj.field_G[17] = true;
-        wj.field_G[8] = param0;
-        wj.field_G[0] = true;
-        wj.field_G[3] = true;
+        OpacityWidget.field_G[18] = true;
+        OpacityWidget.field_G[17] = true;
+        OpacityWidget.field_G[8] = param0;
+        OpacityWidget.field_G[0] = true;
+        OpacityWidget.field_G[3] = true;
         if (param1 != -91) {
             this.e((byte) 55);
         }
-        wj.field_G[7] = true;
-        wj.field_G[16] = true;
+        OpacityWidget.field_G[7] = true;
+        OpacityWidget.field_G[16] = true;
     }
 
     private final void e(int param0) {
@@ -351,7 +351,7 @@ abstract class wf extends ch {
         }
         if (mi.field_C == 1) {
           if (va.field_a != 0) {
-            dd.field_J = SocketArchiveNetworkClient.createResourceArchive(lk.field_e, (byte) -62);
+            FadingDialog.field_J = SocketArchiveNetworkClient.createResourceArchive(lk.field_e, (byte) -62);
           }
           l.field_h = rj.a(ib.field_c, (byte) -18, true, false, 1);
           dc.field_c = rj.a(ArchiveRequest.field_r, (byte) -124, true, false, 1);
@@ -361,19 +361,19 @@ abstract class wf extends ch {
           re.field_i = dc.field_c;
         }
         if (mi.field_C == 2) {
-          if ((dd.field_J != null) &&
-              (dd.field_J.ensureIndexLoaded(0))) {
-            if (!dd.field_J.hasGroupName((byte) -116, "")) {
-              dd.field_J = null;
+          if ((FadingDialog.field_J != null) &&
+              (FadingDialog.field_J.ensureIndexLoaded(0))) {
+            if (!FadingDialog.field_J.hasGroupName((byte) -116, "")) {
+              FadingDialog.field_J = null;
             } else {
-              if (dd.field_J.loadGroupByName("", (byte) -126)) {
-                AccountWelcomePanel.loadInterfaceText((byte) 74, dd.field_J);
-                dd.field_J = null;
+              if (FadingDialog.field_J.loadGroupByName("", (byte) -126)) {
+                AccountWelcomePanel.loadInterfaceText((byte) 74, FadingDialog.field_J);
+                FadingDialog.field_J = null;
                 ih.b(-50);
               }
             }
           }
-          if (null == dd.field_J) {
+          if (null == FadingDialog.field_J) {
             mi.field_C = 3;
           }
         }
@@ -459,7 +459,7 @@ abstract class wf extends ch {
           this.b(true);
           sl.a(MessageDialog.gameCanvas, 57);
         }
-        if (wj.field_G[8]) {
+        if (OpacityWidget.field_G[8]) {
           ArchiveNetworkClient.f(-102);
         }
     }
@@ -473,7 +473,7 @@ abstract class wf extends ch {
         var3 = Geoblox.clientControlFlowFlag;
         if (!fj.f(-31456)) {
           if (mi.field_C >= 10) {
-            if (!wj.isLogoAnimationComplete(7426)) {
+            if (!OpacityWidget.isLogoAnimationComplete(7426)) {
               td.advanceLogoAnimationTick((byte) 88);
             } else {
               if (hj.field_a != 0) {
@@ -641,7 +641,7 @@ abstract class wf extends ch {
     }
 
     private final void e(byte param0) {
-        wj.field_G[4] = true;
+        OpacityWidget.field_G[4] = true;
         int var2 = 10 % ((-61 - param0) / 32);
     }
 
@@ -732,7 +732,7 @@ abstract class wf extends ch {
         }
         var2 = ScorePopup.field_l;
         if ((var2 < 64) &&
-            (wj.field_G[var2])) {
+            (OpacityWidget.field_G[var2])) {
           if (var2 == 0) {
             return;
           }
@@ -812,21 +812,21 @@ abstract class wf extends ch {
     }
 
     private final void i(int param0) {
-        wj.field_G[2] = true;
+        OpacityWidget.field_G[2] = true;
         if (param0 != 16072) {
             wf.g(124);
         }
     }
 
     private final void d(boolean param0) {
-        wj.field_G[5] = param0;
+        OpacityWidget.field_G[5] = param0;
     }
 
     private final void f(byte param0) {
         if (param0 != 32) {
             this.field_u = 72;
         }
-        wj.field_G[1] = true;
+        OpacityWidget.field_G[1] = true;
     }
 
     final void h(byte param0) {

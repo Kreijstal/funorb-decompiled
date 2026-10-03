@@ -51,9 +51,9 @@ final class ri {
                 fj.field_q.writeByte((byte) -102, 14);
                 fj.field_q.writeByte((byte) -78, ih.field_a.a((byte) -32).wireId);
                 cm.a(-1, -1);
-                PacketBuffer.field_l = oe.field_T;
+                PacketBuffer.field_l = ResizableDialog.field_T;
               }
-              if ((oe.field_T == PacketBuffer.field_l) &&
+              if ((ResizableDialog.field_T == PacketBuffer.field_l) &&
                   (el.b(30000, 1))) {
                 var6_int = eh.field_d.readUnsignedByte((byte) 34);
                 eh.field_d.position = 0;
@@ -130,7 +130,7 @@ final class ri {
                 }
                 SecondaryDeque.field_f = eh.field_d.readNullTerminatedText((byte) 105);
                 var12 = (CharSequence) ((Object) SecondaryDeque.field_f);
-                vg.field_b = oe.a(var12, 12);
+                vg.field_b = ResizableDialog.a(var12, 12);
                 ik.field_a = eh.field_d.readUnsignedByte((byte) 34);
                 PacketBuffer.field_l = eh.field_b;
                 if (ih.field_a.a((byte) -32) != ej.field_b) {

@@ -63,7 +63,7 @@ class ByteArrayBuffer extends IntrusiveNode {
         if (methodGuard != 20) {
             this.readZeroPrefixedNullTerminatedText(-46);
         }
-        int computedCrc32 = oe.computeCrc32(this.position, this.bytes, methodGuard - 138, 0);
+        int computedCrc32 = ResizableDialog.computeCrc32(this.position, this.bytes, methodGuard - 138, 0);
         int storedCrc32 = this.readIntBE((byte) -85);
         if (computedCrc32 == storedCrc32) {
             return true;
@@ -220,7 +220,7 @@ class ByteArrayBuffer extends IntrusiveNode {
         if (param0 != 0) {
             return;
         }
-        hk.field_C.b(new AccountWelcomePanel(), param0 - 110);
+        hk.field_C.replaceContent(new AccountWelcomePanel(), param0 - 110);
     }
 
     final void writeNullTerminatedText(String text, int characterStart) {
@@ -361,7 +361,7 @@ class ByteArrayBuffer extends IntrusiveNode {
         if (methodGuard <= 4) {
             return -122;
         }
-        int computedCrc32 = oe.computeCrc32(this.position, this.bytes, -37, startPosition);
+        int computedCrc32 = ResizableDialog.computeCrc32(this.position, this.bytes, -37, startPosition);
         this.writeIntBE((byte) 95, computedCrc32);
         return computedCrc32;
     }

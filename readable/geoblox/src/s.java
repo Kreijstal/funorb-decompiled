@@ -13,8 +13,8 @@ final class s extends ee implements pe, pl {
 
     final static void g(int param0) {
         if (null == tl.field_f) {
-            jk.fullscreenAcceptCountdownPluralText = wj.a(jk.fullscreenAcceptCountdownPluralText, new String[]{"<br><shad=000001><%0></shad><br>"}, (byte) -123);
-            mj.fullscreenAcceptCountdownSingularText = wj.a(mj.fullscreenAcceptCountdownSingularText, new String[]{"<br><shad=000001><%0></shad><br>"}, (byte) -55);
+            jk.fullscreenAcceptCountdownPluralText = OpacityWidget.a(jk.fullscreenAcceptCountdownPluralText, new String[]{"<br><shad=000001><%0></shad><br>"}, (byte) -123);
+            mj.fullscreenAcceptCountdownSingularText = OpacityWidget.a(mj.fullscreenAcceptCountdownSingularText, new String[]{"<br><shad=000001><%0></shad><br>"}, (byte) -55);
             tl.field_f = new String[19];
             tl.field_f[12] = lh.nextText;
             tl.field_f[7] = tc.quitText;
@@ -96,7 +96,7 @@ final class s extends ee implements pe, pl {
             this.field_C = param0;
             this.field_K = new hk(cl.continueText, (bb) null);
             this.field_K.field_q = (dh) ((Object) new ml());
-            var7 = wj.a(nk.createUnder13TermsText, new String[]{this.f(11501), this.c(false)}, (byte) -114);
+            var7 = OpacityWidget.a(nk.createUnder13TermsText, new String[]{this.f(11501), this.c(false)}, (byte) -114);
             var3 = 20;
             var4 = new ff(ng.field_F, 0, 0, 0, 0, 16777215, -1, 3, 0, ng.field_F.maxAscent, -1, 2147483647, true);
             this.field_J = new vf(var7, var4);
@@ -104,9 +104,9 @@ final class s extends ee implements pe, pl {
             this.field_J.a(0, -47, eh.openInPopupWindowText);
             this.field_J.a(1, 118, eh.openInPopupWindowText);
             this.field_J.field_u = (bb) (this);
-            this.field_J.field_r = this.field_r - 40;
-            this.field_J.b(26, 0, var3, this.field_r - 40);
-            var3 = var3 + (this.field_J.field_h + 15);
+            this.field_J.widgetWidth = this.widgetWidth - 40;
+            this.field_J.b(26, 0, var3, this.widgetWidth - 40);
+            var3 = var3 + (this.field_J.widgetHeight + 15);
             this.b((byte) -108, this.field_J);
             var5 = 4;
             var6 = 200;

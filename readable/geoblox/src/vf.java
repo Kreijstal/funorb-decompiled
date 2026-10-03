@@ -13,8 +13,8 @@ class vf extends hk {
 
     final void a(int param0, int param1, int param2, int param3) {
         super.a(param0, param1, param2, param3);
-        int var5 = -this.field_v + param2;
-        int var6 = param0 - this.field_m;
+        int var5 = -this.widgetX + param2;
+        int var6 = param0 - this.widgetY;
         fb var7 = this.a((byte) -114, var6, var5);
         if (var7 != null && null != this.field_u) {
             ((pe) ((Object) this.field_u)).a((vf) (this), var7.field_g, param1 + 28924, param3);
@@ -115,8 +115,8 @@ class vf extends hk {
           super.a(param0, param1, param2, param3);
           this.field_G = null;
           if (this.field_l) {
-            var5_int = -this.field_v + PrefixCodeDecoder.pointerXSnapshot - param3;
-            var6 = -this.field_m - param1 + ue.pointerYSnapshot;
+            var5_int = -this.widgetX + PrefixCodeDecoder.pointerXSnapshot - param3;
+            var6 = -this.widgetY - param1 + ue.pointerYSnapshot;
             this.field_G = this.a((byte) 72, var6, var5_int);
           }
           if (param0) {
@@ -137,20 +137,20 @@ class vf extends hk {
         }
     }
 
-    void a(int param0, int param1, byte param2, int param3) {
+    void renderWidget(int parentX, int parentY, byte methodGuard, int renderPass) {
         int var8 = 0;
         int var9 = 0;
-        int var5 = 46 / ((1 - param2) / 43);
-        super.a(param0, param1, (byte) -42, param3);
-        if (param3 != 0) {
+        int var5 = 46 / ((1 - methodGuard) / 43);
+        super.renderWidget(parentX, parentY, (byte) -42, renderPass);
+        if (renderPass != 0) {
             return;
         }
         cc var6 = (cc) ((Object) this.field_q);
         fb var7 = this.field_G;
         if (var7 == null) {
         } else {
-            var8 = var6.a(param0, (el) (this), (byte) 46);
-            var9 = var6.a(param1, -2, (el) (this));
+            var8 = var6.a(parentX, (el) (this), (byte) 46);
+            var9 = var6.a(parentY, -2, (el) (this));
             do {
                 ImageProducerRasterBuffer.a(-2 + var9 + var7.field_i, 2 + var7.field_f, 14164, 2 + var7.field_n, var7.field_k + (var8 - 2));
                 var7 = var7.field_h;

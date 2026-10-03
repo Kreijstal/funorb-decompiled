@@ -58,12 +58,12 @@ public final class Geoblox extends wf {
         int paletteVariantThenKeyboardIndex = 0;
         int clientFlagSnapshot = clientControlFlowFlag;
         oj.a(vc.field_i, (byte) -104);
-        if (null != wj.field_F && null != GzipInflater.field_a && ah.field_c != null && null != cd.field_m) {
+        if (null != OpacityWidget.field_F && null != GzipInflater.field_a && ah.field_c != null && null != cd.field_m) {
             lc.a(ca.unpackingMusicText, -2, 60.0f);
             this.renderFrame(25853);
-            jg.a(wj.field_F, (byte) 80, ah.field_c, GzipInflater.field_a, cd.field_m);
+            jg.a(OpacityWidget.field_F, (byte) 80, ah.field_c, GzipInflater.field_a, cd.field_m);
             ah.field_c = null;
-            wj.field_F = null;
+            OpacityWidget.field_F = null;
             cd.field_m = null;
             GzipInflater.field_a = null;
             ih.b(127);
@@ -72,16 +72,16 @@ public final class Geoblox extends wf {
         if (null != ll.gameGraphicsArchive && null != ii.fontMetricsArchive && ki.basicUiGraphicsArchive != null) {
             lc.a(oh.unpackingGraphicsText, methodGuard - 25871, 80.0f);
             this.renderFrame(25853);
-            dd.uiPaletteFont = w.loadPaletteFont("", ll.gameGraphicsArchive, ii.fontMetricsArchive, true, "font");
-            wf.field_p = dd.uiPaletteFont.findNearestBasePaletteIndex(1);
-            dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
-            dd.uiPaletteFont.colorPalettes[0][dd.uiPaletteFont.findNearestBasePaletteIndex(16777215)] = 1;
-            uiPaletteSize = dd.uiPaletteFont.colorPalettes[0].length;
+            FadingDialog.uiPaletteFont = w.loadPaletteFont("", ll.gameGraphicsArchive, ii.fontMetricsArchive, true, "font");
+            wf.field_p = FadingDialog.uiPaletteFont.findNearestBasePaletteIndex(1);
+            FadingDialog.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
+            FadingDialog.uiPaletteFont.colorPalettes[0][FadingDialog.uiPaletteFont.findNearestBasePaletteIndex(16777215)] = 1;
+            uiPaletteSize = FadingDialog.uiPaletteFont.colorPalettes[0].length;
             alternateUiPalette = new int[uiPaletteSize];
-            dd.uiPaletteFont.colorPalettes[1] = alternateUiPalette;
-            sf.a(dd.uiPaletteFont.colorPalettes[0], 0, dd.uiPaletteFont.colorPalettes[1], 0, uiPaletteSize);
-            dd.uiPaletteFont.colorPalettes[1][wf.field_p] = 16777215;
-            geometrySourceFrames = wj.loadSpriteFrames("geoms", "", ll.gameGraphicsArchive, 0);
+            FadingDialog.uiPaletteFont.colorPalettes[1] = alternateUiPalette;
+            sf.a(FadingDialog.uiPaletteFont.colorPalettes[0], 0, FadingDialog.uiPaletteFont.colorPalettes[1], 0, uiPaletteSize);
+            FadingDialog.uiPaletteFont.colorPalettes[1][wf.field_p] = 16777215;
+            geometrySourceFrames = OpacityWidget.loadSpriteFrames("geoms", "", ll.gameGraphicsArchive, 0);
             geometryAliasThenAmorphousFrames = geometrySourceFrames;
             themeIndex = -1;
             for (geometryFrameThenVariantIndex = 0; geometrySourceFrames.length > geometryFrameThenVariantIndex; geometryFrameThenVariantIndex++) {
@@ -101,7 +101,7 @@ public final class Geoblox extends wf {
                     geometrySourceFrames[geometryFrameThenVariantIndex].drawGrayModulated(0, 0, jg.themeSpriteColors[themeIndex][paletteVariantThenKeyboardIndex]);
                 }
             }
-            geometryAliasThenAmorphousFrames = wj.loadSpriteFrames("amorphic", "", ll.gameGraphicsArchive, methodGuard ^ 25869);
+            geometryAliasThenAmorphousFrames = OpacityWidget.loadSpriteFrames("amorphic", "", ll.gameGraphicsArchive, methodGuard ^ 25869);
             for (themeIndex = 0; themeIndex < 7; themeIndex++) {
                 for (geometryFrameThenVariantIndex = 0; geometryFrameThenVariantIndex < 7; geometryFrameThenVariantIndex++) {
                     for (categoryThenAnimationFrameIndex = 0; categoryThenAnimationFrameIndex < geometryAliasThenAmorphousFrames.length; categoryThenAnimationFrameIndex++) {
@@ -114,14 +114,14 @@ public final class Geoblox extends wf {
             }
             sh.mainRasterBuffer.setAsRasterTarget(255);
             fi.smallFont = gi.loadBitmapFont(ii.fontMetricsArchive, 1, ll.gameGraphicsArchive, "small_font", "");
-            fc.blackOrbFrames = wj.loadSpriteFrames("black", "", ll.gameGraphicsArchive, 0);
-            hg.blackOrbImplosionFrames = wj.loadSpriteFrames("black_implode", "", ll.gameGraphicsArchive, 0);
-            hb.silverStarFrames = wj.loadSpriteFrames("silver", "", ll.gameGraphicsArchive, 0);
-            ej.amorphousCrackFrames = wj.loadSpriteFrames("amorph_crack", "", ll.gameGraphicsArchive, 0);
+            fc.blackOrbFrames = OpacityWidget.loadSpriteFrames("black", "", ll.gameGraphicsArchive, 0);
+            hg.blackOrbImplosionFrames = OpacityWidget.loadSpriteFrames("black_implode", "", ll.gameGraphicsArchive, 0);
+            hb.silverStarFrames = OpacityWidget.loadSpriteFrames("silver", "", ll.gameGraphicsArchive, 0);
+            ej.amorphousCrackFrames = OpacityWidget.loadSpriteFrames("amorph_crack", "", ll.gameGraphicsArchive, 0);
             i.avatarMaskRaster = ug.loadSprite("player_back", ll.gameGraphicsArchive, (byte) -78, "");
-            avatarEyeSourceFrames = wj.loadSpriteFrames("player_eyes", "", ll.gameGraphicsArchive, 0);
+            avatarEyeSourceFrames = OpacityWidget.loadSpriteFrames("player_eyes", "", ll.gameGraphicsArchive, 0);
             if (da.a(0, 125)) {
-                avatarEyeSourceFrames = wj.loadSpriteFrames("player_eyes", "halloween", ll.gameGraphicsArchive, 0);
+                avatarEyeSourceFrames = OpacityWidget.loadSpriteFrames("player_eyes", "halloween", ll.gameGraphicsArchive, 0);
             }
             fc.avatarEyeFrames = new Sprite[avatarEyeSourceFrames.length];
             for (categoryThenAnimationFrameIndex = 0; avatarEyeSourceFrames.length > categoryThenAnimationFrameIndex; categoryThenAnimationFrameIndex++) {
@@ -131,9 +131,9 @@ public final class Geoblox extends wf {
                 k.a(0, 0, fc.avatarEyeFrames[categoryThenAnimationFrameIndex].fullWidth, -27085, fc.avatarEyeFrames[categoryThenAnimationFrameIndex].height);
                 fc.avatarEyeFrames[categoryThenAnimationFrameIndex].trimTransparentBorders();
             }
-            avatarMouthSourceFrames = wj.loadSpriteFrames("player_mouth", "", ll.gameGraphicsArchive, 0);
+            avatarMouthSourceFrames = OpacityWidget.loadSpriteFrames("player_mouth", "", ll.gameGraphicsArchive, 0);
             if (da.a(0, methodGuard - 25774)) {
-                avatarMouthSourceFrames = wj.loadSpriteFrames("player_mouth", "halloween", ll.gameGraphicsArchive, 0);
+                avatarMouthSourceFrames = OpacityWidget.loadSpriteFrames("player_mouth", "halloween", ll.gameGraphicsArchive, 0);
             }
             vh.avatarMouthFrames = new Sprite[avatarMouthSourceFrames.length];
             for (geometryCanvasWidthThenFrameIndex = 0; avatarMouthSourceFrames.length > geometryCanvasWidthThenFrameIndex; geometryCanvasWidthThenFrameIndex++) {
@@ -150,23 +150,23 @@ public final class Geoblox extends wf {
             ee.menuBackgroundSprite = ug.loadSprite("menu_background", ll.gameGraphicsArchive, (byte) -78, "");
             vc.menuForegroundSprite = ug.loadSprite("menu_foreground", ll.gameGraphicsArchive, (byte) -78, "");
             qj.transitionCurtain = ug.loadSprite("transition", ll.gameGraphicsArchive, (byte) -78, "");
-            vg.silverStarShockFrames = wj.loadSpriteFrames("silver_shock", "", ll.gameGraphicsArchive, 0);
-            mi.sparkleFrames = wj.loadSpriteFrames("sparkle", "", ll.gameGraphicsArchive, 0);
+            vg.silverStarShockFrames = OpacityWidget.loadSpriteFrames("silver_shock", "", ll.gameGraphicsArchive, 0);
+            mi.sparkleFrames = OpacityWidget.loadSpriteFrames("sparkle", "", ll.gameGraphicsArchive, 0);
             for (geometryCanvasWidthThenFrameIndex = 0; mi.sparkleFrames.length > geometryCanvasWidthThenFrameIndex; geometryCanvasWidthThenFrameIndex++) {
                 mi.sparkleFrames[geometryCanvasWidthThenFrameIndex].addOutline(1);
             }
-            vj.bangFrames = wj.loadSpriteFrames("bang", "", ll.gameGraphicsArchive, 0);
-            eg.pointsPanelGlowFrames = wj.loadSpriteFrames("bonus_glow", "", ll.gameGraphicsArchive, 0);
+            vj.bangFrames = OpacityWidget.loadSpriteFrames("bang", "", ll.gameGraphicsArchive, 0);
+            eg.pointsPanelGlowFrames = OpacityWidget.loadSpriteFrames("bonus_glow", "", ll.gameGraphicsArchive, 0);
             PacketBuffer.resultBubbleSprite = ug.loadSprite("bubble", ll.gameGraphicsArchive, (byte) -78, "");
             k.popSprite = ug.loadSprite("pop", ll.gameGraphicsArchive, (byte) -78, "");
-            eb.mouseBoxFrames = wj.loadSpriteFrames("box_mouse", "", ll.gameGraphicsArchive, 0);
-            vf.avatarCryBeginFrames = wj.loadSpriteFrames("cry_begin", "", ll.gameGraphicsArchive, 0);
-            ok.avatarCryMiddleFrames = wj.loadSpriteFrames("cry_middle", "", ll.gameGraphicsArchive, 0);
-            ld.avatarCryEndFrames = wj.loadSpriteFrames("cry_end", "", ll.gameGraphicsArchive, 0);
+            eb.mouseBoxFrames = OpacityWidget.loadSpriteFrames("box_mouse", "", ll.gameGraphicsArchive, 0);
+            vf.avatarCryBeginFrames = OpacityWidget.loadSpriteFrames("cry_begin", "", ll.gameGraphicsArchive, 0);
+            ok.avatarCryMiddleFrames = OpacityWidget.loadSpriteFrames("cry_middle", "", ll.gameGraphicsArchive, 0);
+            ld.avatarCryEndFrames = OpacityWidget.loadSpriteFrames("cry_end", "", ll.gameGraphicsArchive, 0);
             if (!(!da.a(0, 110))) {
-                vf.avatarCryBeginFrames = wj.loadSpriteFrames("cry_begin", "halloween", ll.gameGraphicsArchive, 0);
-                ok.avatarCryMiddleFrames = wj.loadSpriteFrames("cry_middle", "halloween", ll.gameGraphicsArchive, 0);
-                ld.avatarCryEndFrames = wj.loadSpriteFrames("cry_end", "halloween", ll.gameGraphicsArchive, 0);
+                vf.avatarCryBeginFrames = OpacityWidget.loadSpriteFrames("cry_begin", "halloween", ll.gameGraphicsArchive, 0);
+                ok.avatarCryMiddleFrames = OpacityWidget.loadSpriteFrames("cry_middle", "halloween", ll.gameGraphicsArchive, 0);
+                ld.avatarCryEndFrames = OpacityWidget.loadSpriteFrames("cry_end", "halloween", ll.gameGraphicsArchive, 0);
             }
             keyboardIconSprites = new IndexedSprite[8];
             keyboardIconSprites[0] = jg.loadIndexedSprite(ll.gameGraphicsArchive, 1, "", "keyboard_left");
@@ -212,12 +212,12 @@ public final class Geoblox extends wf {
             lj.smallBoxSprite = ug.loadSprite("box_sml", ll.gameGraphicsArchive, (byte) -78, "");
             g.countBoxSprite = ug.loadSprite("box_count", ll.gameGraphicsArchive, (byte) -78, "");
             vh.largeBoxSprite = ug.loadSprite("box_lgr", ll.gameGraphicsArchive, (byte) -78, "");
-            tl.introFaceFrames = wj.loadSpriteFrames("intro_faces", "", ll.gameGraphicsArchive, 0);
+            tl.introFaceFrames = OpacityWidget.loadSpriteFrames("intro_faces", "", ll.gameGraphicsArchive, 0);
             if (da.a(0, -105)) {
-                tl.introFaceFrames = wj.loadSpriteFrames("intro_faces", "halloween", ll.gameGraphicsArchive, 0);
+                tl.introFaceFrames = OpacityWidget.loadSpriteFrames("intro_faces", "halloween", ll.gameGraphicsArchive, 0);
             }
-            qh.introGeometryFrames = wj.loadSpriteFrames("intro_geoms", "", ll.gameGraphicsArchive, 0);
-            sl.achievementSprites = wj.loadSpriteFrames("achievements", "", ll.gameGraphicsArchive, 0);
+            qh.introGeometryFrames = OpacityWidget.loadSpriteFrames("intro_geoms", "", ll.gameGraphicsArchive, 0);
+            sl.achievementSprites = OpacityWidget.loadSpriteFrames("achievements", "", ll.gameGraphicsArchive, 0);
             IntKeyLookup.unachievedSprite = ug.loadSprite("unachieved", ki.basicUiGraphicsArchive, (byte) -78, "basic");
             ug.loadSprite("locked", ki.basicUiGraphicsArchive, (byte) -78, "basic");
             uk.orbCoinSprite = ug.loadSprite("orbcoin", ki.basicUiGraphicsArchive, (byte) -78, "basic");
@@ -254,8 +254,8 @@ public final class Geoblox extends wf {
           return true;
         }
         s.g(9);
-        if ((wj.field_F.ensureIndexLoaded(0)) &&
-            (wj.field_F.loadAllGroups(true))) {
+        if ((OpacityWidget.field_F.ensureIndexLoaded(0)) &&
+            (OpacityWidget.field_F.loadAllGroups(true))) {
           if (ah.field_c.ensureIndexLoaded(0)) {
             soundArchiveSnapshot = ah.field_c;
             soundLoadGroupsGuard = (archivePollGuard) ? false : true;
@@ -313,14 +313,14 @@ public final class Geoblox extends wf {
                 lc.a(vd.a(ud.loadingSoundEffectsText, LimitedRandomAccessFile.waitingForSoundEffectsText, 0, archivePollGuard, cd.field_m), -2, 25.0f);
                 return false;
               }
-              lc.a(gf.formatArchiveGroupProgress(ArchiveNetworkClient.waitingForMusicText, GzipInflater.field_a, "", dd.loadingMusicText, true), -2, 15.0f);
+              lc.a(gf.formatArchiveGroupProgress(ArchiveNetworkClient.waitingForMusicText, GzipInflater.field_a, "", FadingDialog.loadingMusicText, true), -2, 15.0f);
               return false;
             }
           }
           lc.a(gf.formatArchiveGroupProgress(LimitedRandomAccessFile.waitingForSoundEffectsText, ah.field_c, "", ud.loadingSoundEffectsText, true), -2, 10.0f);
           return false;
         }
-        lc.a(gf.formatArchiveGroupProgress(LimitedRandomAccessFile.waitingForSoundEffectsText, wj.field_F, "", ud.loadingSoundEffectsText, true), -2, 5.0f);
+        lc.a(gf.formatArchiveGroupProgress(LimitedRandomAccessFile.waitingForSoundEffectsText, OpacityWidget.field_F, "", ud.loadingSoundEffectsText, true), -2, 5.0f);
         return false;
     }
 
@@ -460,8 +460,8 @@ public final class Geoblox extends wf {
         el.b(-5927);
         hk.f((byte) -11);
         sh.a((byte) -3);
-        oe.j(89);
-        dd.i(256);
+        ResizableDialog.j(89);
+        FadingDialog.i(256);
         ee.e(14078);
         gb.b((byte) 79);
         a.a(methodGuard);
@@ -491,7 +491,7 @@ public final class Geoblox extends wf {
         hd.f((byte) -52);
         hc.k(-243);
         dj.l((byte) -15);
-        qf.m(methodGuard ^ -320);
+        ContentTransitionDialog.releaseStaticReferences(methodGuard ^ -320);
         hl.f(407213000);
         vh.b(true);
         vf.h(0);
@@ -526,7 +526,7 @@ public final class Geoblox extends wf {
         ac.a((byte) 68);
         uh.c(0);
         oc.a(true);
-        wj.f((byte) -60);
+        OpacityWidget.f((byte) -60);
         j.f((byte) -128);
         re.b(127);
         ii.a(122);
@@ -654,7 +654,7 @@ public final class Geoblox extends wf {
             if (!uk.g(79)) {
               lc.a(ph.waitingForExtraDataText, -2, 100.0f);
             } else {
-              if ((dd.a((byte) 47)) &&
+              if ((FadingDialog.a((byte) 47)) &&
                   (!jk.field_a)) {
                 fullscreenAvailableForUiSnapshot = !(InstrumentPatch.field_n == null);
                 uiServiceResultOrOverlayMode = sl.a(fullscreenAvailableForUiSnapshot, (wf) (this), false);
@@ -942,7 +942,7 @@ public final class Geoblox extends wf {
             ih.b(-105);
         }
         ll.gameGraphicsArchive = je.a(1, true, graphicsArchiveGuard, true, (byte) -111);
-        wj.field_F = SocketArchiveNetworkClient.createResourceArchive(2, (byte) -62);
+        OpacityWidget.field_F = SocketArchiveNetworkClient.createResourceArchive(2, (byte) -62);
         ah.field_c = SocketArchiveNetworkClient.createResourceArchive(3, (byte) -62);
         cd.field_m = SocketArchiveNetworkClient.createResourceArchive(4, (byte) -62);
         GzipInflater.field_a = SocketArchiveNetworkClient.createResourceArchive(5, (byte) -62);

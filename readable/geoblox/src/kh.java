@@ -23,8 +23,8 @@ final class kh implements Runnable {
         if (mi.field_C < 2) {
             return j.field_lb;
         }
-        if (!(dd.field_J == null)) {
-            if (!dd.field_J.ensureIndexLoaded(0)) {
+        if (!(FadingDialog.field_J == null)) {
+            if (!FadingDialog.field_J.ensureIndexLoaded(0)) {
                 return ri.field_c;
             }
             return vc.field_g;
@@ -68,7 +68,7 @@ final class kh implements Runnable {
                 }
                 bc.sleepMillis(0, 10L);
                 Object var5 = (Object) null;
-                wj.a(this.field_b, (byte) 116, (Object) null);
+                OpacityWidget.a(this.field_b, (byte) 116, (Object) null);
             }
         } catch (Exception exception) {
             String var6 = (String) null;

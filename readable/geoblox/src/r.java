@@ -61,7 +61,7 @@ final class r extends MessageDialog implements pl {
           var5 = new ni((MessageDialog) (this), hh.field_c, var4);
           if (param1.field_g) {
             if (param1.field_d) {
-              this.b(new s((r) (this)), -111);
+              this.replaceContent(new s((r) (this)), -111);
               return;
             }
             var5.a(-2, cl.continueText, (bb) (this));
@@ -84,7 +84,7 @@ final class r extends MessageDialog implements pl {
               }
             }
           }
-          this.b(var5, -36);
+          this.replaceContent(var5, -36);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -225,19 +225,19 @@ final class r extends MessageDialog implements pl {
         }
     }
 
-    final boolean f(int param0) {
+    final boolean advanceDialogAnimation(int param0) {
         sl var2 = null;
         if (param0 != -1) {
             field_sb = (String) null;
         }
-        if ((this.field_I) &&
+        if ((this.dialogVisible) &&
             (!(this.field_wb))) {
             var2 = MatchingTextValidator.d((byte) 93);
             if (!(var2 == null)) {
                 this.a(false, var2, (byte) -69);
             }
         }
-        return super.f(-1);
+        return super.advanceDialogAnimation(-1);
     }
 
     static {

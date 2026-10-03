@@ -10,10 +10,10 @@ final class ng extends sh {
     final void f(int param0) {
         int var4 = Geoblox.clientControlFlowFlag;
         gb var2 = new gb(this.field_C);
-        dd var3 = (dd) ((Object) var2.c((byte) 88));
+        FadingDialog var3 = (FadingDialog) ((Object) var2.c((byte) 88));
         while (var3 != null) {
-            var3.field_I = false;
-            var3 = (dd) ((Object) var2.a((byte) 125));
+            var3.dialogVisible = false;
+            var3 = (FadingDialog) ((Object) var2.a((byte) 125));
         }
         if (param0 != 10936) {
             return;
@@ -22,30 +22,30 @@ final class ng extends sh {
     }
 
     final void a(boolean param0, el param1) {
-        dd var3 = null;
+        FadingDialog var3 = null;
         try {
-            if (!(param1 instanceof dd)) {
+            if (!(param1 instanceof FadingDialog)) {
                 throw new IllegalArgumentException();
             }
-            var3 = (dd) ((Object) param1);
+            var3 = (FadingDialog) ((Object) param1);
             this.field_C.addFirst(var3, param0);
-            var3.field_I = true;
+            var3.dialogVisible = true;
             var3.a((byte) -37, (el) (this));
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ng.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
+    final void renderWidget(int parentX, int parentY, byte methodGuard, int renderPass) {
         int var8 = Geoblox.clientControlFlowFlag;
         if (null != this.field_q) {
-            this.field_q.a(param0, -70, param1, true, (el) (this));
+            this.field_q.a(parentX, -70, parentY, true, (el) (this));
         }
-        int var6 = 75 / ((1 - param2) / 43);
+        int var6 = 75 / ((1 - methodGuard) / 43);
         gb var5 = new gb(this.field_C);
         el var7 = (el) ((Object) var5.d(1));
         while (var7 != null) {
-            var7.a(param0 + this.field_v, param1 + this.field_m, (byte) -106, param3);
+            var7.renderWidget(parentX + this.widgetX, parentY + this.widgetY, (byte) -106, renderPass);
             var7 = (el) ((Object) var5.c(26));
         }
     }
@@ -71,12 +71,12 @@ final class ng extends sh {
         if (param0 != 0) {
             return;
         }
-        dd var3 = (dd) ((Object) var2.c((byte) 88));
+        FadingDialog var3 = (FadingDialog) ((Object) var2.c((byte) 88));
         while (var3 != null) {
-            if (var3.h(229)) {
+            if (var3.settleDialogAnimation(229)) {
                 var3.unlinkNode(false);
             }
-            var3 = (dd) ((Object) var2.a((byte) 112));
+            var3 = (FadingDialog) ((Object) var2.a((byte) 112));
         }
     }
 
@@ -88,12 +88,12 @@ final class ng extends sh {
     final el e(int param0) {
         int var4 = Geoblox.clientControlFlowFlag;
         gb var2 = new gb(this.field_C);
-        dd var3 = (dd) ((Object) var2.c((byte) 88));
+        FadingDialog var3 = (FadingDialog) ((Object) var2.c((byte) 88));
         while (var3 != null) {
-            if (!(!var3.field_I)) {
+            if (!(!var3.dialogVisible)) {
                 return var3.f((byte) -79);
             }
-            var3 = (dd) ((Object) var2.a((byte) 119));
+            var3 = (FadingDialog) ((Object) var2.a((byte) 119));
         }
         if (param0 == -4863) {
             return null;
@@ -105,12 +105,12 @@ final class ng extends sh {
     final void i(int param0) {
         int var4 = Geoblox.clientControlFlowFlag;
         gb var2 = new gb(this.field_C);
-        dd var3 = (dd) ((Object) var2.c((byte) 88));
+        FadingDialog var3 = (FadingDialog) ((Object) var2.c((byte) 88));
         while (var3 != null) {
-            if (var3.f(-1)) {
+            if (var3.advanceDialogAnimation(-1)) {
                 var3.unlinkNode(false);
             }
-            var3 = (dd) ((Object) var2.a((byte) 115));
+            var3 = (FadingDialog) ((Object) var2.a((byte) 115));
         }
         this.field_A = (el) ((Object) this.j(100));
         if (param0 >= -14) {
@@ -126,15 +126,15 @@ final class ng extends sh {
         }
     }
 
-    final dd j(int param0) {
+    final FadingDialog j(int param0) {
         int var4 = Geoblox.clientControlFlowFlag;
         gb var2 = new gb(this.field_C);
-        dd var3 = (dd) ((Object) var2.c((byte) 88));
+        FadingDialog var3 = (FadingDialog) ((Object) var2.c((byte) 88));
         while (var3 != null) {
-            if (var3.field_I) {
+            if (var3.dialogVisible) {
                 return var3;
             }
-            var3 = (dd) ((Object) var2.a((byte) 111));
+            var3 = (FadingDialog) ((Object) var2.a((byte) 111));
         }
         if (param0 >= 57) {
             return null;

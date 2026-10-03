@@ -115,7 +115,7 @@ final class pi extends vf {
         }
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
+    final void renderWidget(int parentX, int parentY, byte methodGuard, int renderPass) {
         String var5;
         lh var6;
         int var14;
@@ -145,12 +145,12 @@ final class pi extends vf {
           this.field_s = var5;
           this.g(-55);
         }
-        super.a(param0, param1, (byte) 106, param3);
+        super.renderWidget(parentX, parentY, (byte) 106, renderPass);
         var6 = this.field_M.a((byte) -105);
         var8 = (cc) ((Object) this.field_q);
-        var9 = this.field_v + param0;
-        var10 = var8.a(param1, -2, (el) (this)) + (var8.a((byte) 125, (el) (this)).b(-3111) >> 1);
-        var11 = 7 % ((param2 - 1) / 43);
+        var9 = this.widgetX + parentX;
+        var10 = var8.a(parentY, -2, (el) (this)) + (var8.a((byte) 125, (el) (this)).b(-3111) >> 1);
+        var11 = 7 % ((methodGuard - 1) / 43);
         if (ImageProducerRasterBuffer.field_g == var6) {
           var19 = oa.field_e[0];
           var12 = var19.fullWidth << 1;

@@ -28,10 +28,10 @@ final class hl extends el {
         int var11 = 0;
         int var12 = 0;
         int var13 = Geoblox.clientControlFlowFlag;
-        Sprite var14 = new Sprite(this.field_H * 2, this.field_h);
+        Sprite var14 = new Sprite(this.field_H * 2, this.widgetHeight);
         Geoblox.setRasterTarget(1, var14);
-        int var5 = this.field_h >> 1;
-        for (var6 = 0; this.field_h > var6; var6++) {
+        int var5 = this.widgetHeight >> 1;
+        for (var6 = 0; this.widgetHeight > var6; var6++) {
             var7 = (var6 >> 1) * (-1 + this.field_H * 2) % (this.field_H * 2);
             var8 = 16711935 & param2;
             var9 = 65280 & param2;
@@ -67,15 +67,15 @@ final class hl extends el {
         double var6 = 0.0;
         int var8 = 0;
         int var9 = Geoblox.clientControlFlowFlag;
-        int var2 = this.field_h >> 1;
-        Sprite var3 = new Sprite(var2, this.field_h);
+        int var2 = this.widgetHeight >> 1;
+        Sprite var3 = new Sprite(var2, this.widgetHeight);
         if (param0 != 255) {
             return (Sprite) null;
         }
         Geoblox.setRasterTarget(1, var3);
-        for (var4 = 0; var4 < this.field_h; var4++) {
+        for (var4 = 0; var4 < this.widgetHeight; var4++) {
             for (var5 = 0; var5 < var2; var5++) {
-                var6 = (double)var5 * (double)var5 / (double)(var4 * (-var4 + this.field_h));
+                var6 = (double)var5 * (double)var5 / (double)(var4 * (-var4 + this.widgetHeight));
                 var8 = 1;
                 if (!(!(var6 < 1.0))) {
                     var6 = Math.sqrt(1.0 - var6);
@@ -101,8 +101,8 @@ final class hl extends el {
         int var8 = 0;
         var8 = Geoblox.clientControlFlowFlag;
         try {
-          var5_int = param2 + this.field_r;
-          uh.a(param1, this.field_M.width + param2, param3 ^ 6447, this.field_h + param1, var5_int - this.field_M.width);
+          var5_int = param2 + this.widgetWidth;
+          uh.a(param1, this.field_M.width + param2, param3 ^ 6447, this.widgetHeight + param1, var5_int - this.field_M.width);
           for (var6 = param2 - this.field_I; var6 < var5_int; var6 = var6 + param0.width) {
             param0.draw(var6, param1);
           }
@@ -120,7 +120,7 @@ final class hl extends el {
           }
           if (SoftwareRasterizer.clipRight >= var5_int - this.field_M.width) {
             Geoblox.setRasterTarget(param3 ^ -12275, this.field_z);
-            for (var7 = this.field_I + (this.field_r - this.field_M.width); var7 > 2 * this.field_H; var7 = var7 - 2 * this.field_H) {
+            for (var7 = this.field_I + (this.widgetWidth - this.field_M.width); var7 > 2 * this.field_H; var7 = var7 - 2 * this.field_H) {
             }
             param0.draw(-var7, 0);
             param0.draw(-var7 + this.field_H * 2, 0);
@@ -144,16 +144,16 @@ final class hl extends el {
         }
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
-        int var5 = -76 % ((param2 - 1) / 43);
-        if (!(param3 == 0)) {
+    final void renderWidget(int parentX, int parentY, byte methodGuard, int renderPass) {
+        int var5 = -76 % ((methodGuard - 1) / 43);
+        if (!(renderPass == 0)) {
             return;
         }
-        int var6 = param0 + this.field_v;
-        int var7 = param1 + this.field_m;
+        int var6 = parentX + this.widgetX;
+        int var7 = parentY + this.widgetY;
         this.a(this.field_F[0], var7, var6, -12276);
         if (this.field_x < 65536) {
-            uh.a(var7, var6 + (this.field_r * this.field_x >> 16), -14045, var7 + this.field_h, this.field_r + var6);
+            uh.a(var7, var6 + (this.widgetWidth * this.field_x >> 16), -14045, var7 + this.widgetHeight, this.widgetWidth + var6);
             this.a(this.field_F[1], var7, var6, -12276);
             id.a(true);
         }
@@ -175,7 +175,7 @@ final class hl extends el {
             return;
         }
         this.field_y = this.field_M.copyMirroredHorizontally();
-        this.field_z = new Sprite(this.field_h >> 1, this.field_h);
+        this.field_z = new Sprite(this.widgetHeight >> 1, this.widgetHeight);
     }
 
     private hl(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {

@@ -6,12 +6,12 @@ import java.util.*;
 final class la extends sh {
     private int field_D;
     private boolean field_F;
-    static hh field_I;
+    static hh contentFadeOutPhase;
     private int field_G;
     private int field_B;
     private boolean field_C;
     private int field_H;
-    static hh field_E;
+    static hh contentResizePhase;
 
     final void a(int param0, int param1, boolean param2, el param3, int param4, int param5) {
         try {
@@ -40,19 +40,19 @@ final class la extends sh {
               (this.field_f == 1)) {
             var5_int = PrefixCodeDecoder.pointerXSnapshot - this.field_D - param3;
             var6 = -this.field_H + (ue.pointerYSnapshot - param1);
-            if (!((this.field_v == var5_int) &&
-                (var6 == this.field_m))) {
-              this.field_m = var6;
-              this.field_v = var5_int;
+            if (!((this.widgetX == var5_int) &&
+                (var6 == this.widgetY))) {
+              this.widgetY = var6;
+              this.widgetX = var5_int;
               if (!(!(this.field_u instanceof de))) {
                 ((de) ((Object) this.field_u)).a(param3, -20951, (la) (this), param1);
               }
             }
           } else {
             if (this.field_C) {
-              if (this.field_B != this.field_v) {
-                var5_int = this.field_B - this.field_v;
-                stackIn_17_1 = this.field_v;
+              if (this.field_B != this.widgetX) {
+                var5_int = this.field_B - this.widgetX;
+                stackIn_17_1 = this.widgetX;
                 if (Math.abs(var5_int) > 2) {
                   stackIn_18_2 = var5_int >> 1;
                 } else {
@@ -62,11 +62,11 @@ final class la extends sh {
                     stackIn_18_2 = 1;
                   }
                 }
-                ((la) (this)).field_v = stackIn_17_1 + stackIn_18_2;
+                ((la) (this)).widgetX = stackIn_17_1 + stackIn_18_2;
               }
-              if (this.field_m != this.field_G) {
-                var5_int = this.field_G - this.field_m;
-                stackIn_23_1 = this.field_m;
+              if (this.widgetY != this.field_G) {
+                var5_int = this.field_G - this.widgetY;
+                stackIn_23_1 = this.widgetY;
                 if (Math.abs(var5_int) <= 2) {
                   if (var5_int > 0) {
                     stackIn_26_2 = 1;
@@ -76,7 +76,7 @@ final class la extends sh {
                 } else {
                   stackIn_26_2 = var5_int >> 1;
                 }
-                ((la) (this)).field_m = stackIn_23_1 + stackIn_26_2;
+                ((la) (this)).widgetY = stackIn_23_1 + stackIn_26_2;
               }
             }
           }
@@ -135,7 +135,7 @@ final class la extends sh {
             }
           }
           if (param0 != 0) {
-            field_E = (hh) null;
+            contentResizePhase = (hh) null;
           }
           stackIn_8_0 = (StringBuilder) (param1);
           return stackIn_8_0;
@@ -183,8 +183,8 @@ final class la extends sh {
           if (param3 != 1) {
             return true;
           }
-          this.field_H = -param0 + param5 - this.field_m;
-          this.field_D = -param2 + (param4 - this.field_v);
+          this.field_H = -param0 + param5 - this.widgetY;
+          this.field_D = -param2 + (param4 - this.widgetX);
           lh.field_b = (la) (this);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -220,19 +220,19 @@ final class la extends sh {
 
     final void b(boolean param0) {
         super.b(param0);
-        this.field_A.a(this.field_h, this.field_r, (byte) -85, 0, 0);
-        this.field_B = this.field_v;
-        this.field_G = this.field_m;
+        this.field_A.a(this.widgetHeight, this.widgetWidth, (byte) -85, 0, 0);
+        this.field_B = this.widgetX;
+        this.field_G = this.widgetY;
     }
 
     public static void g(byte param0) {
         int var1 = 47 % ((param0 + 51) / 55);
-        field_E = null;
-        field_I = null;
+        contentResizePhase = null;
+        contentFadeOutPhase = null;
     }
 
     static {
-        field_I = new hh();
-        field_E = new hh();
+        contentFadeOutPhase = new hh();
+        contentResizePhase = new hh();
     }
 }

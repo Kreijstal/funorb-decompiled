@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ei extends qf {
+final class ei extends ContentTransitionDialog {
     static uj field_hb;
     static String fullscreenUnavailableTrySignedAppletText;
 
@@ -24,7 +24,7 @@ final class ei extends qf {
             }
             ArchiveRequest.a(tj.a((byte) 73), v.field_q, var3_int != 0, false, kh.a((byte) -85));
           } else {
-            if (wj.isLogoAnimationComplete(7426)) {
+            if (OpacityWidget.isLogoAnimationComplete(7426)) {
               if (hj.field_a == 0) {
                 ue.a(param0, false, (byte) -102);
                 i.a(0, (byte) 42, param2, 0);
@@ -113,14 +113,14 @@ final class ei extends qf {
         fullscreenUnavailableTrySignedAppletText = null;
     }
 
-    final void b(el param0, int param1) {
+    final void replaceContent(el content, int methodGuard) {
         try {
-            if (param1 > -10) {
+            if (methodGuard > -10) {
                 fullscreenUnavailableTrySignedAppletText = (String) null;
             }
-            super.b(param0, -22);
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ei.PB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            super.replaceContent(content, -22);
+        } catch (RuntimeException contentReplacementFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) contentReplacementFailure), "ei.PB(" + (content != null ? "{...}" : "null") + ',' + methodGuard + ')');
         }
     }
 

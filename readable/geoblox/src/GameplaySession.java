@@ -108,20 +108,20 @@ final class GameplaySession {
                 (PrefixCodeDecoder.pointerXSnapshot < 340) &&
                 (ue.pointerYSnapshot > 440) &&
                 (ue.pointerYSnapshot < 476)) {
-              dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
+              FadingDialog.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
             }
             ma.drawNineSlicePanel(440, 100, 36, (byte) -92, 240, eb.mouseBoxFrames);
-            dd.uiPaletteFont.drawCenteredText(cf.field_j, 220, 468, 0, -1);
-            dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
+            FadingDialog.uiPaletteFont.drawCenteredText(cf.field_j, 220, 468, 0, -1);
+            FadingDialog.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
             ma.drawNineSlicePanel(440, 380, 36, (byte) -92, 160, eb.mouseBoxFrames);
             if ((380 < PrefixCodeDecoder.pointerXSnapshot) &&
                 (540 > PrefixCodeDecoder.pointerXSnapshot) &&
                 (ue.pointerYSnapshot > 440) &&
                 (476 > ue.pointerYSnapshot)) {
-              dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
+              FadingDialog.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
             }
-            dd.uiPaletteFont.drawCenteredText(nk.startGameText, promptWidthThenButtonX, 468, 0, -1);
-            dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
+            FadingDialog.uiPaletteFont.drawCenteredText(nk.startGameText, promptWidthThenButtonX, 468, 0, -1);
+            FadingDialog.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
             if (clientControlFlowGuard == 0) {
               break L3;
             }
@@ -131,10 +131,10 @@ final class GameplaySession {
               (PrefixCodeDecoder.pointerXSnapshot < 389) &&
               (ue.pointerYSnapshot > 440) &&
               (476 > ue.pointerYSnapshot)) {
-            dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
+            FadingDialog.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
           }
-          dd.uiPaletteFont.drawCenteredText(mi.field_y, 320, 468, 0, -1);
-          dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
+          FadingDialog.uiPaletteFont.drawCenteredText(mi.field_y, 320, 468, 0, -1);
+          FadingDialog.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
         }
     }
 
@@ -292,9 +292,9 @@ final class GameplaySession {
             themeResourceGroup = "";
           }
           graphicsLoadingMessage = gf.formatArchiveGroupProgress(ff.waitingForGraphicsText, ll.gameGraphicsArchive, themeResourceGroup, AccountWelcomePanel.loadingGraphicsText, true);
-          loadingPanelWidthOrScoreBoxY = 30 + dd.uiPaletteFont.measureTextWidth(graphicsLoadingMessage);
+          loadingPanelWidthOrScoreBoxY = 30 + FadingDialog.uiPaletteFont.measureTextWidth(graphicsLoadingMessage);
           ma.drawNineSlicePanel(215, 320 - loadingPanelWidthOrScoreBoxY / 2, 50, (byte) -92, loadingPanelWidthOrScoreBoxY, ll.frameNineSliceSprites);
-          dd.uiPaletteFont.drawCenteredText(graphicsLoadingMessage, 320, 250, 0, -1);
+          FadingDialog.uiPaletteFont.drawCenteredText(graphicsLoadingMessage, 320, 250, 0, -1);
           return;
         }
         if ((ih.areEntityQueuesSettled(0)) &&
@@ -527,16 +527,16 @@ final class GameplaySession {
           if (!this.tutorialMode) {
             if (this.delayedActionCountdown > 0) {
               lj.smallBoxSprite.draw(-(lj.smallBoxSprite.fullWidth >> 1) + 320, 60 - (lj.smallBoxSprite.fullHeight >> 1) + 240);
-              dd.uiPaletteFont.drawCenteredText(KeyboardInputListener.field_b, 320, 310, 0, -1);
+              FadingDialog.uiPaletteFont.drawCenteredText(KeyboardInputListener.field_b, 320, 310, 0, -1);
             }
             eg.pointsPanelGlowFrames[this.pointsPanelFrameIndex].draw(this.pointsPanelX, 4);
             if ((640 > this.pointsPanelX) &&
                 (0 < this.pendingPopupPoints)) {
-              dd.uiPaletteFont.drawText(wj.a(ic.field_a, new String[]{this.popupPointsText.toString()}, (byte) -79), this.pointsPanelX + 20, 34, 0, -1);
+              FadingDialog.uiPaletteFont.drawText(OpacityWidget.a(ic.field_a, new String[]{this.popupPointsText.toString()}, (byte) -79), this.pointsPanelX + 20, 34, 0, -1);
             }
             if (this.showSessionCounters) {
-              dd.uiPaletteFont.drawText(wj.a(sh.field_z, new String[]{Integer.toString(ec.field_b)}, (byte) -26), 400, 50, 0, -1);
-              dd.uiPaletteFont.drawText(wj.a(LoginPayloadKind.field_e, new String[]{Integer.toString(ArchiveNetworkClient.difficultyStep)}, (byte) -71), 400, 80, 0, -1);
+              FadingDialog.uiPaletteFont.drawText(OpacityWidget.a(sh.field_z, new String[]{Integer.toString(ec.field_b)}, (byte) -26), 400, 50, 0, -1);
+              FadingDialog.uiPaletteFont.drawText(OpacityWidget.a(LoginPayloadKind.field_e, new String[]{Integer.toString(ArchiveNetworkClient.difficultyStep)}, (byte) -71), 400, 80, 0, -1);
             }
             L53: {
               bd.drawScorePopups(-117);
@@ -554,7 +554,7 @@ final class GameplaySession {
               }
             }
             L55: {
-              dd.uiPaletteFont.drawText(wj.a(LimitedRandomAccessFile.field_a, new String[]{this.scoreText.toString()}, (byte) -53), 15 + selectedThemeIdOrScoreBoxX, 30 + loadingPanelWidthOrScoreBoxY, 0, -1);
+              FadingDialog.uiPaletteFont.drawText(OpacityWidget.a(LimitedRandomAccessFile.field_a, new String[]{this.scoreText.toString()}, (byte) -53), 15 + selectedThemeIdOrScoreBoxX, 30 + loadingPanelWidthOrScoreBoxY, 0, -1);
               if (ih.areEntityQueuesSettled(0)) {
                 if (!((0 != this.sessionPhase) &&
                       (this.sessionPhase != 1))) {
@@ -1014,7 +1014,7 @@ final class GameplaySession {
                         break L67;
                       }
                     }
-                    this.tutorialProgressMetric = dd.variantMatchCandidateCount;
+                    this.tutorialProgressMetric = FadingDialog.variantMatchCandidateCount;
                     if (clientControlFlowGuard == 0) {
                       break L67;
                     }
@@ -1189,7 +1189,7 @@ final class GameplaySession {
                     }
                   }
                   if (this.tutorialStepId == 1) {
-                    this.tutorialProgressMetric = dd.variantMatchCandidateCount;
+                    this.tutorialProgressMetric = FadingDialog.variantMatchCandidateCount;
                     if (clientControlFlowGuard == 0) {
                       break L100;
                     }
@@ -1346,7 +1346,7 @@ final class GameplaySession {
               }
             }
             if (!((this.tutorialStepId == 1) &&
-                  (0 < dd.variantMatchCandidateCount - this.tutorialProgressMetric))) {
+                  (0 < FadingDialog.variantMatchCandidateCount - this.tutorialProgressMetric))) {
               if (this.tutorialStepId != 2) {
                 break L0;
               }
@@ -1533,7 +1533,7 @@ final class GameplaySession {
           if (2 == this.sessionPhase) {
             PacketBuffer.resultBubbleSprite.drawScaledAlpha(320 - (this.sceneAnimationTick >> 1), 240 - (this.sceneAnimationTick >> 1), this.sceneAnimationTick, this.sceneAnimationTick, 150);
             lj.smallBoxSprite.draw(this.resultPanelX, -(lj.smallBoxSprite.fullHeight >> 1) + 240 + 60);
-            dd.uiPaletteFont.drawText(sg.field_f, 15 + this.resultPanelX, 312, 0, -1);
+            FadingDialog.uiPaletteFont.drawText(sg.field_f, 15 + this.resultPanelX, 312, 0, -1);
             if (clientControlFlowGuard == 0) {
               break L1;
             }
@@ -1543,9 +1543,9 @@ final class GameplaySession {
             PacketBuffer.resultBubbleSprite.drawScaledAlpha(-(shrinkingDiameter >> 1) + 320, 240 - (shrinkingDiameter >> 1), shrinkingDiameter, shrinkingDiameter, 150);
             lj.smallBoxSprite.draw(-(lj.smallBoxSprite.fullWidth >> 1) + 320, -(lj.smallBoxSprite.fullHeight >> 1) + 240 + 60);
             shrinkingBonusText = Integer.toString(this.resultBonusPoints);
-            dd.uiPaletteFont.drawCenteredText(shrinkingBonusText, 320, 312, 0, -1);
+            FadingDialog.uiPaletteFont.drawCenteredText(shrinkingBonusText, 320, 312, 0, -1);
             if (this.boardEmptyAtResultStart) {
-              dd.uiPaletteFont.drawCenteredText(ld.field_a, 320, 352, 0, -1);
+              FadingDialog.uiPaletteFont.drawCenteredText(ld.field_a, 320, 352, 0, -1);
             }
             if (clientControlFlowGuard == 0) {
               break L1;
@@ -1554,12 +1554,12 @@ final class GameplaySession {
           k.popSprite.drawAlpha(-(k.popSprite.fullWidth >> 1) + 320, 240 - (k.popSprite.fullHeight >> 1), this.resultSequenceCountdown - 150 + 150);
           lj.smallBoxSprite.draw(-(lj.smallBoxSprite.fullWidth >> 1) + 320, 300 - (lj.smallBoxSprite.fullHeight >> 1));
           countdownBonusText = Integer.toString(this.resultBonusPoints);
-          dd.uiPaletteFont.drawCenteredText(countdownBonusText, 320, 312, 0, -1);
+          FadingDialog.uiPaletteFont.drawCenteredText(countdownBonusText, 320, 312, 0, -1);
           if (this.boardEmptyAtResultStart) {
-            dd.uiPaletteFont.drawCenteredText(ld.field_a, 320, 352, 0, -1);
+            FadingDialog.uiPaletteFont.drawCenteredText(ld.field_a, 320, 352, 0, -1);
           }
         }
-        dd.uiPaletteFont.drawParagraph(kd.field_d, 426, 404, 200, 100, 0, -1, 2, 0, 30);
+        FadingDialog.uiPaletteFont.drawParagraph(kd.field_d, 426, 404, 200, 100, 0, -1, 2, 0, 30);
     }
 
     private final void updateResultSequence(int methodGuard) {
@@ -1648,7 +1648,7 @@ final class GameplaySession {
             this.resultCompletionTickOffset = 920 + (-(2 * this.endingEntityRadius) - 58 - 1);
             rowStartOrMusicGuard = methodGuard ^ 10;
           }
-          ra.selectBackgroundMusic(rowStartOrMusicGuard, qf.resultMusicTrack);
+          ra.selectBackgroundMusic(rowStartOrMusicGuard, ContentTransitionDialog.resultMusicTrack);
         }
         L10: {
           nextSceneAnimationTick = this.sceneAnimationTick + 1;
@@ -1721,7 +1721,7 @@ final class GameplaySession {
         }
         if ((0 < this.score && !this.submissionBlocked) &&
             (!fh.c(-102))) {
-            qf.a(oa.field_a, 22, kb.field_d, 25134, new int[]{this.score}, ml.field_r, 65513, 3, gb.field_g);
+            ContentTransitionDialog.a(oa.field_a, 22, kb.field_d, 25134, new int[]{this.score}, ml.field_r, 65513, 3, gb.field_g);
         }
         ca.field_f = null;
     }
@@ -1757,31 +1757,31 @@ final class GameplaySession {
         }
         L0: {
           if (this.sessionPhase != 0) {
-            dd.uiPaletteFont.drawParagraph(tj.field_a, 426, 404, 200, 100, 0, -1, 2, 0, 30);
+            FadingDialog.uiPaletteFont.drawParagraph(tj.field_a, 426, 404, 200, 100, 0, -1, 2, 0, 30);
             if (clientControlFlowGuard == 0) {
               break L0;
             }
           }
           remainingThemeReleases = -ul.releasedInCurrentTheme + fa.releasesPerTheme;
-          dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
-          dd.uiPaletteFont.drawRightAlignedText(w.field_e, 621, 441, 0, -1);
-          dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
-          dd.uiPaletteFont.drawRightAlignedText(od.field_b, 621, 468, 0, -1);
+          FadingDialog.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
+          FadingDialog.uiPaletteFont.drawRightAlignedText(w.field_e, 621, 441, 0, -1);
+          FadingDialog.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
+          FadingDialog.uiPaletteFont.drawRightAlignedText(od.field_b, 621, 468, 0, -1);
           if (remainingThemeReleases <= 10) {
-            dd.uiPaletteFont.colorPalettes[0][wf.field_p] = mk.field_k[remainingThemeReleases % 5];
-            dd.uiPaletteFont.drawRightAlignedText(Integer.toString(remainingThemeReleases), 515, 468, 0, -1);
-            dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
+            FadingDialog.uiPaletteFont.colorPalettes[0][wf.field_p] = mk.field_k[remainingThemeReleases % 5];
+            FadingDialog.uiPaletteFont.drawRightAlignedText(Integer.toString(remainingThemeReleases), 515, 468, 0, -1);
+            FadingDialog.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
             if (clientControlFlowGuard == 0) {
               break L0;
             }
           }
           if (remainingThemeReleases <= 99999) {
-            dd.uiPaletteFont.drawRightAlignedText(Integer.toString(remainingThemeReleases), 515, 468, 0, -1);
+            FadingDialog.uiPaletteFont.drawRightAlignedText(Integer.toString(remainingThemeReleases), 515, 468, 0, -1);
             if (clientControlFlowGuard == 0) {
               break L0;
             }
           }
-          dd.uiPaletteFont.drawRightAlignedText(Integer.toString(99999), 515, 468, 0, -1);
+          FadingDialog.uiPaletteFont.drawRightAlignedText(Integer.toString(99999), 515, 468, 0, -1);
         }
         if (methodGuard >= -39) {
           this.resultBonusPoints = 7;

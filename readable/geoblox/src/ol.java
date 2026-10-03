@@ -94,7 +94,7 @@ final class ol extends hk {
             return false;
           }
           var9 = -param2 + param4 - this.field_H;
-          var10 = this.field_r - 2 * this.field_H;
+          var10 = this.widgetWidth - 2 * this.field_H;
           if (var10 < var9) {
             var9 = var10;
           }

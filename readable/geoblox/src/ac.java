@@ -20,7 +20,7 @@ class ac extends ff {
     public final void a(int param0, int param1, int param2, boolean param3, el param4) {
         try {
             if (param3) {
-                ik.a(param0 + param4.field_v, param4.field_h, param4.field_m + param2, param4.field_r, -1540604944);
+                ik.a(param0 + param4.widgetX, param4.widgetHeight, param4.widgetY + param2, param4.widgetWidth, -1540604944);
             }
             if (param1 > -5) {
                 field_t = (ff) null;
@@ -201,17 +201,17 @@ class ac extends ff {
             if (0 != (1 << var7 & var5)) {
               sl.achievementSprites[var7].draw(160, var12);
               var12 += 30;
-              dd.uiPaletteFont.drawText(kd.achievedText, 318, var12, 0, -1);
+              FadingDialog.uiPaletteFont.drawText(kd.achievedText, 318, var12, 0, -1);
             } else {
               IntKeyLookup.unachievedSprite.draw(160, var12);
               var12 += 30;
-              dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
-              dd.uiPaletteFont.drawText(ib.field_d, 318, var12, 0, -1);
-              dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
+              FadingDialog.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
+              FadingDialog.uiPaletteFont.drawText(ib.field_d, 318, var12, 0, -1);
+              FadingDialog.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
             }
             var12 = var12 + (fi.smallFont.drawParagraph(ri.field_b[var7], 318, var12, 190, 200, 0, -1, 0, 0, 16) * var11 + var11);
             var12 += 10;
-            fi.smallFont.drawText(wj.a(sl.orbPointsText, new String[]{Integer.toString(th.field_h[var7])}, (byte) -50), 318, 360, 0, -1);
+            fi.smallFont.drawText(OpacityWidget.a(sl.orbPointsText, new String[]{Integer.toString(th.field_h[var7])}, (byte) -50), 318, 360, 0, -1);
             for (var13 = 0; var13 < SocketArchiveNetworkClient.field_s[var7]; var13++) {
               uk.orbCoinSprite.drawQuarterSize(318 + 10 * var13, 370);
             }
@@ -219,7 +219,7 @@ class ac extends ff {
           } else {
             fi.smallFont.drawCenteredText(w.mouseOverIconText, 315, var10, 0, -1);
             if (fh.c(-94)) {
-              dd.uiPaletteFont.drawParagraph(ni.createToUseText, 125, 350, 395, 100, 0, -1, 1, 0, 26);
+              FadingDialog.uiPaletteFont.drawParagraph(ni.createToUseText, 125, 350, 395, 100, 0, -1, 1, 0, 26);
             }
           }
           if (param2 > -61) {

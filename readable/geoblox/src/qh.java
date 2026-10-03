@@ -38,7 +38,7 @@ final class qh extends ee implements pe, pl, ta {
           }
           var6 = new hd(20, param0, 120 + param2, 25, param3, false, 120, 3, ng.field_F, 16777215, param1);
           this.b((byte) -114, var6);
-          stackIn_4_0 = var6.field_h;
+          stackIn_4_0 = var6.widgetHeight;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -77,11 +77,11 @@ final class qh extends ee implements pe, pl, ta {
         try {
           var11 = new hd(20, param5, 120 + param1, 25, param0, false, 120, 3, ng.field_F, 16777215, param2);
           this.b((byte) -128, var11);
-          var9 = new pi(((nl) ((Object) param0)).a((byte) -101), param4, 126, param5 + var11.field_h, param1 + 50, param3);
+          var9 = new pi(((nl) ((Object) param0)).a((byte) -101), param4, 126, param5 + var11.widgetHeight, param1 + 50, param3);
           var9.field_u = (bb) (this);
           this.b((byte) -127, var9);
           var10 = 38 / ((-14 - param6) / 46);
-          stackIn_1_0 = var9.field_h + var11.field_h;
+          stackIn_1_0 = var9.widgetHeight + var11.widgetHeight;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -146,25 +146,25 @@ final class qh extends ee implements pe, pl, ta {
         uh dupTemp$1 = new uh(10000536);
         this.field_N.field_q = (dh) ((Object) dupTemp$1);
         this.field_M.field_q = (dh) ((Object) dupTemp$1);
-        String var2 = wj.a(ArchiveIndex.createAgreeTermsText, new String[]{this.b(false), this.c(false)}, (byte) -72);
+        String var2 = OpacityWidget.a(ArchiveIndex.createAgreeTermsText, new String[]{this.b(false), this.c(false)}, (byte) -72);
         int var3 = 20;
         var3 = var3 + this.a(var3, ug.createEmailText, 170, this.field_I, 5);
         var3 = var3 + (5 + this.a(this.field_G, 170, ok.createEmailConfirmationText, 20, "", var3, (byte) -65));
         var3 = var3 + this.a(var3, LoginPayloadKind.createPasswordText, 170, this.field_M, 5);
         var3 = var3 + (this.a(-99, this.field_N, v.createPasswordConfirmationText, var3, 170, createPasswordHintText) + 5);
-        var3 = var3 + (this.a(-103, this.field_H, wj.createDisplayNameText, var3, 170, gk.createDisplayNameHintText) + 5);
+        var3 = var3 + (this.a(-103, this.field_H, OpacityWidget.createDisplayNameText, var3, 170, gk.createDisplayNameHintText) + 5);
         var3 = var3 + this.a(var3, 170, this.field_R, ue.createAgeText, (byte) -127);
-        hd var4 = new hd(46, var3, this.field_r - 90, 25, this.field_P, true, this.field_r - 120, 5, hh.field_d, 11579568, ue.createNewsOptInText);
+        hd var4 = new hd(46, var3, this.widgetWidth - 90, 25, this.field_P, true, this.widgetWidth - 120, 5, hh.field_d, 11579568, ue.createNewsOptInText);
         this.b((byte) -106, var4);
-        var3 = var3 + var4.field_h;
+        var3 = var3 + var4.widgetHeight;
         ff var5 = new ff(ng.field_F, 0, 0, 0, 0, 16777215, -1, 0, 0, ng.field_F.maxAscent, -1, 2147483647, true);
         this.field_E = new vf(var2, var5);
         this.field_E.field_j = "";
         this.field_E.a(0, -42, eh.openInPopupWindowText);
         this.field_E.a(1, -62, eh.openInPopupWindowText);
         this.field_E.field_u = (bb) (this);
-        this.field_E.b(46, 0, var3, -90 + this.field_r);
-        var3 = var3 + (this.field_E.field_h + 15);
+        this.field_E.b(46, 0, var3, -90 + this.widgetWidth);
+        var3 = var3 + (this.field_E.widgetHeight + 15);
         this.b((byte) -73, this.field_E);
         int var6 = 4;
         int var7 = 200;
@@ -175,7 +175,7 @@ final class qh extends ee implements pe, pl, ta {
         this.b((byte) -83, this.field_D);
         this.b((byte) -108, this.field_L);
         this.field_K = new vh((ta) (this));
-        this.field_K.a(150, -this.field_H.field_v + this.field_r - this.field_H.field_r - 60, (byte) -13, 20 + this.field_H.field_m, 60 + (this.field_H.field_r + this.field_H.field_v));
+        this.field_K.a(150, -this.field_H.widgetX + this.widgetWidth - this.field_H.widgetWidth - 60, (byte) -13, 20 + this.field_H.widgetY, 60 + (this.field_H.widgetWidth + this.field_H.widgetX));
         this.b((byte) -113, this.field_K);
         this.a(55 + var3 + var6, 496, (byte) -65, 0, 0);
     }
@@ -230,8 +230,8 @@ final class qh extends ee implements pe, pl, ta {
           if (param4 > -123) {
             discarded$1 = this.b(false);
           }
-          var7.a(15, 15, (byte) -22, var8.field_m + (-15 + var8.field_h >> 1), 3 + var8.field_r + var8.field_v);
-          stackIn_3_0 = var8.field_h;
+          var7.a(15, 15, (byte) -22, var8.widgetY + (-15 + var8.widgetHeight >> 1), 3 + var8.widgetWidth + var8.widgetX);
+          stackIn_3_0 = var8.widgetHeight;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

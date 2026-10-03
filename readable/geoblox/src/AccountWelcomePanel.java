@@ -24,9 +24,9 @@ final class AccountWelcomePanel extends ee implements pl {
             var2 = 4;
             var3 = 326;
             var4 = var3 - var2 >> 1;
-            this.goBackButton.a(30, var4, (byte) -38, -48 + (this.field_h - var2), this.field_r - var3 >> 1);
-            this.justPlayButton.a(30, var4, (byte) -77, -var2 - 48 + this.field_h, var2 + ((-var3 + this.field_r >> 1) + var4));
-            this.createAccountButton.a(30, var3, (byte) -73, this.field_h - (78 + 2 * var2), -var3 + this.field_r >> 1);
+            this.goBackButton.a(30, var4, (byte) -38, -48 + (this.widgetHeight - var2), this.widgetWidth - var3 >> 1);
+            this.justPlayButton.a(30, var4, (byte) -77, -var2 - 48 + this.widgetHeight, var2 + ((-var3 + this.widgetWidth >> 1) + var4));
+            this.createAccountButton.a(30, var3, (byte) -73, this.widgetHeight - (78 + 2 * var2), -var3 + this.widgetWidth >> 1);
             this.goBackButton.field_u = (bb) (this);
             this.createAccountButton.field_u = (bb) (this);
             this.createAccountButton.field_j = ic.loginCreateTooltipText;
@@ -78,17 +78,17 @@ final class AccountWelcomePanel extends ee implements pl {
         }
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
+    final void renderWidget(int parentX, int parentY, byte methodGuard, int renderPass) {
         int var6 = 0;
         int var7 = 0;
         try {
-            int var5_int = 90 % ((1 - param2) / 43);
-            var6 = param0 + this.field_v;
-            var7 = param1 + this.field_m;
-            ng.field_F.drawParagraph(ArchiveNetworkClient.createWelcomeText, var6 + 20, 20 + var7, -40 + this.field_r, this.field_h - 50, 16777215, -1, 1, 0, ng.field_F.maxAscent);
-            super.a(param0, param1, (byte) 63, param3);
+            int var5_int = 90 % ((1 - methodGuard) / 43);
+            var6 = parentX + this.widgetX;
+            var7 = parentY + this.widgetY;
+            ng.field_F.drawParagraph(ArchiveNetworkClient.createWelcomeText, var6 + 20, 20 + var7, -40 + this.widgetWidth, this.widgetHeight - 50, 16777215, -1, 1, 0, ng.field_F.maxAscent);
+            super.renderWidget(parentX, parentY, (byte) 63, renderPass);
         } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "wi.FA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "wi.FA(" + parentX + ',' + parentY + ',' + methodGuard + ',' + renderPass + ')');
         }
     }
 
@@ -1276,7 +1276,7 @@ final class AccountWelcomePanel extends ee implements pl {
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "connectionrestored");
                 if (textResourceBytes != null) {
-                  oe.connectionRestoredText = ag.decodeTextBytes(1, textResourceBytes);
+                  ResizableDialog.connectionRestoredText = ag.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "warning_ifyouquit");
                 if (null != textResourceBytes) {
@@ -1532,7 +1532,7 @@ final class AccountWelcomePanel extends ee implements pl {
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "create_displayname");
                 if (null != textResourceBytes) {
-                  wj.createDisplayNameText = ag.decodeTextBytes(1, textResourceBytes);
+                  OpacityWidget.createDisplayNameText = ag.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "create_password");
                 if (null != textResourceBytes) {
@@ -1764,7 +1764,7 @@ final class AccountWelcomePanel extends ee implements pl {
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "create_alert_invalidemail");
                 if (null != textResourceBytes) {
-                  wj.createInvalidEmailAlertText = ag.decodeTextBytes(1, textResourceBytes);
+                  OpacityWidget.createInvalidEmailAlertText = ag.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "create_alert_email_unavailable");
                 if (textResourceBytes != null) {
@@ -1952,7 +1952,7 @@ final class AccountWelcomePanel extends ee implements pl {
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "loading_music");
                 if (textResourceBytes != null) {
-                  dd.loadingMusicText = ag.decodeTextBytes(1, textResourceBytes);
+                  FadingDialog.loadingMusicText = ag.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "loading_instruments");
                 if (loadGuard < 57) {
@@ -2789,7 +2789,7 @@ final class AccountWelcomePanel extends ee implements pl {
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "fs_accept_afteraccept");
                 if (textResourceBytes != null) {
-                  wj.fullscreenAfterAcceptText = ag.decodeTextBytes(1, textResourceBytes);
+                  OpacityWidget.fullscreenAfterAcceptText = ag.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "fs_button_cancel");
                 if (textResourceBytes != null) {

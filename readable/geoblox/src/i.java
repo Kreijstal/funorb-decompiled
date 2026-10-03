@@ -120,7 +120,7 @@ final class i {
           depthRangeBitLength = hj.unsignedBitLength((byte) 58, (maximumVisibleDepth - minimumVisibleDepth) * 3);
           minimumDepthTimesThree = minimumVisibleDepth * 3;
           depthBucketShift = depthRangeBitLength - 10;
-          oe.clearMeshDepthBucketCounts(0);
+          ResizableDialog.clearMeshDepthBucketCounts(0);
           if ((mesh.facePriorityCount > 0) &&
               (null != mesh.facePriorities)) {
             ma.clearMeshPriorityCounts((byte) -35);
@@ -290,7 +290,7 @@ final class i {
           depthRangeBitLength = hj.unsignedBitLength((byte) 58, (maximumVisibleDepth - minimumVisibleDepth) * 3);
           minimumDepthTimesThree = minimumVisibleDepth * 3;
           depthBucketShift = depthRangeBitLength - 10;
-          oe.clearMeshDepthBucketCounts(0);
+          ResizableDialog.clearMeshDepthBucketCounts(0);
           if ((mesh.facePriorityCount > 0) &&
               (null != mesh.facePriorities)) {
             ma.clearMeshPriorityCounts((byte) -35);

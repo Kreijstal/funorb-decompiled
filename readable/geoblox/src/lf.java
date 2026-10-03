@@ -49,10 +49,10 @@ class lf extends df {
             if (InstrumentPatch.field_q) {
                 return null;
             }
-            if (wg.field_e > oe.field_V) {
+            if (wg.field_e > ResizableDialog.field_V) {
                 return null;
             }
-            if (!(ue.field_j + wg.field_e <= oe.field_V)) {
+            if (!(ue.field_j + wg.field_e <= ResizableDialog.field_V)) {
                 return tc.field_a;
             }
             return null;
@@ -60,10 +60,10 @@ class lf extends df {
         if (InstrumentPatch.field_q) {
             return null;
         }
-        if (wg.field_e > oe.field_V) {
+        if (wg.field_e > ResizableDialog.field_V) {
             return null;
         }
-        if (!(ue.field_j + wg.field_e <= oe.field_V)) {
+        if (!(ue.field_j + wg.field_e <= ResizableDialog.field_V)) {
             return tc.field_a;
         }
         return null;

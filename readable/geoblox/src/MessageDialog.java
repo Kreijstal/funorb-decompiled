@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class MessageDialog extends qf implements pl {
+class MessageDialog extends ContentTransitionDialog implements pl {
     private boolean showLoginOnDismiss;
     private boolean errorContentInstallationStarted;
     private boolean showRetryLoginOnDismiss;
@@ -61,7 +61,7 @@ class MessageDialog extends qf implements pl {
         }
         try {
             ml.field_t = new pf(prefilledUsername, prefilledPassword, false, true, true);
-            hk.field_C.b(ml.field_t, -81);
+            hk.field_C.replaceContent(ml.field_t, -81);
         } catch (RuntimeException loginFormFailure) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) loginFormFailure), "f.HA(" + (prefilledUsername != null ? "{...}" : "null") + ',' + (prefilledPassword != null ? "{...}" : "null") + ',' + methodGuard + ')');
         }
@@ -104,10 +104,10 @@ class MessageDialog extends qf implements pl {
     }
 
     final void dismissDialog(byte methodGuard) {
-        if (!(this.field_I)) {
+        if (!(this.dialogVisible)) {
             return;
         }
-        this.field_I = false;
+        this.dialogVisible = false;
         if (methodGuard != -104) {
             this.retryButtonAction = true;
             if (this.showRetryLoginOnDismiss) {
@@ -676,7 +676,7 @@ class MessageDialog extends qf implements pl {
                 errorTextContent.a(jc.toCustomerSupportText, 1, 9);
               } else {
                 if (errorKind != 9) {
-                  this.b(errorTextContent, methodGuard ^ -19736);
+                  this.replaceContent(errorTextContent, methodGuard ^ -19736);
                   return;
                 }
                 errorTextContent.a(-2, fi.changeDisplayNameText, (bb) (this));
@@ -685,7 +685,7 @@ class MessageDialog extends qf implements pl {
               errorTextContent.a(hb.playFreeVersionText, 1, 8);
             }
           }
-          this.b(errorTextContent, methodGuard ^ -19736);
+          this.replaceContent(errorTextContent, methodGuard ^ -19736);
           return;
         } catch (java.lang.RuntimeException caughtErrorContentFailure) {
           caughtErrorContentException = caughtErrorContentFailure;
@@ -732,15 +732,15 @@ class MessageDialog extends qf implements pl {
         ni restoredTextContent = null;
         this.dialogStatusPanel.a(4210752, 2121792, (byte) -103);
         if (!clearCanvasGuard) {
-            restoredTextContent = new ni((MessageDialog) (this), this.messageFont, oe.connectionRestoredText);
+            restoredTextContent = new ni((MessageDialog) (this), this.messageFont, ResizableDialog.connectionRestoredText);
             restoredTextContent.a(jk.returnToGameText, 1, 15);
-            this.b(restoredTextContent, -23);
+            this.replaceContent(restoredTextContent, -23);
             return;
         }
         gameCanvas = (java.awt.Canvas) null;
-        restoredTextContent = new ni((MessageDialog) (this), this.messageFont, oe.connectionRestoredText);
+        restoredTextContent = new ni((MessageDialog) (this), this.messageFont, ResizableDialog.connectionRestoredText);
         restoredTextContent.a(jk.returnToGameText, 1, 15);
-        this.b(restoredTextContent, -23);
+        this.replaceContent(restoredTextContent, -23);
     }
 
     static {

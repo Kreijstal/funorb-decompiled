@@ -23,11 +23,11 @@ final class hb implements dh {
         int var11 = 0;
         int var12 = 0;
         qb var14 = param4 instanceof qb ? (qb) ((Object) param4) : null;
-        SoftwareRasterizer.fillRectangle(param0 + param4.field_v, param4.field_m + param2, param4.field_r, param4.field_h, this.field_f);
+        SoftwareRasterizer.fillRectangle(param0 + param4.widgetX, param4.widgetY + param2, param4.widgetWidth, param4.widgetHeight, this.field_f);
         if (var14 != null) {
         }
-        int var7 = param4.field_v + param0 + var14.field_E;
-        int var8 = param4.field_m + param2 + var14.field_O;
+        int var7 = param4.widgetX + param0 + var14.field_E;
+        int var8 = param4.widgetY + param2 + var14.field_O;
         SoftwareRasterizer.fillCircle(var7, var8, var14.field_K, this.field_e);
         if (var14.field_J != -1) {
             var9 = (double)var14.field_J * 3.141592653589793 * 2.0 / (double)var14.field_H;
@@ -46,7 +46,7 @@ final class hb implements dh {
             SoftwareRasterizer.drawLine(var7, var8, var11 + var7, var12 + var8, 1);
             if (this.field_a != null) {
                 var13 = this.field_c + (var14.field_E + var14.field_K);
-                this.field_a.drawParagraph(param4.field_s, var13 + (param0 + param4.field_v), param2 + param4.field_m + this.field_i, param4.field_r - (this.field_c + var13), -(this.field_c << 1) + param4.field_h, this.field_m, this.field_k, 1, 1, 0);
+                this.field_a.drawParagraph(param4.field_s, var13 + (param0 + param4.widgetX), param2 + param4.widgetY + this.field_i, param4.widgetWidth - (this.field_c + var13), -(this.field_c << 1) + param4.widgetHeight, this.field_m, this.field_k, 1, 1, 0);
             }
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "hb.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');

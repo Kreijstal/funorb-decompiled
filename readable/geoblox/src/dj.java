@@ -285,22 +285,22 @@ class dj extends hk {
         }
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
+    final void renderWidget(int parentX, int parentY, byte methodGuard, int renderPass) {
         int var5;
         cc var6;
         long var7;
-        var5 = -124 % ((param2 - 1) / 43);
+        var5 = -124 % ((methodGuard - 1) / 43);
         if ((this.field_q != null) &&
-            (param3 == 0)) {
-          this.field_q.a(param0, -8, param1, this.field_D, (el) (this));
+            (renderPass == 0)) {
+          this.field_q.a(parentX, -8, parentY, this.field_D, (el) (this));
           if (this.field_q instanceof cc) {
             var6 = (cc) ((Object) this.field_q);
             if (this.field_H != this.field_L) {
-              var6.a(this.field_L, 0, param1, param0, this.field_H, (el) (this));
+              var6.a(this.field_L, 0, parentY, parentX, this.field_H, (el) (this));
             }
             var7 = oa.a(-12520);
             if ((-this.field_O + var7) % 1000L < 500L) {
-              var6.a(param0, this.field_H, -2, (el) (this), param1);
+              var6.a(parentX, this.field_H, -2, (el) (this), parentY);
             }
           }
         }

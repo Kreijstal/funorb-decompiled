@@ -366,7 +366,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                         if (stackIn_78_0 > stackIn_78_1) {
                           break L2;
                         }
-                        oe.field_S = true;
+                        ResizableDialog.field_S = true;
                         break L2;
                       }
                     }
@@ -417,7 +417,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                           }
                         }
                         this.d(32000);
-                        wj.a(MenuScreen.platformTaskDispatcher, (byte) 83, MessageDialog.gameCanvas);
+                        OpacityWidget.a(MenuScreen.platformTaskDispatcher, (byte) 83, MessageDialog.gameCanvas);
                       }
                       if (var5 == 0) {
                         continue L17;
@@ -708,7 +708,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
           if ((PrefixCodeDecoder.field_d == this) &&
               (!ad.field_p)) {
             dl.field_c = true;
-            if ((oe.field_S) &&
+            if ((ResizableDialog.field_S) &&
                 (-Geoblox.canvasCreationTimeMillis + oa.a(-12520) > 1000L)) {
               var2 = param0.getClipBounds();
               if (null != var2) {

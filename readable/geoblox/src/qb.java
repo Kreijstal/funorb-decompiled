@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qb extends hk {
-    static hh field_N;
+    static hh contentFadeInPhase;
     static MusicScore field_M;
     static String js5IoErrorText;
     int field_E;
@@ -38,7 +38,7 @@ final class qb extends hk {
         if (param0 != 0) {
             field_M = (MusicScore) null;
         }
-        field_N = null;
+        contentFadeInPhase = null;
         fullscreenMembersButtonText = null;
     }
 
@@ -58,8 +58,8 @@ final class qb extends hk {
             var8_int = 35 % ((-3 - param1) / 38);
             return false;
           }
-          var8_int = -this.field_E - (this.field_v + (param2 - param4));
-          var9 = param5 - (this.field_m + param0 + this.field_O);
+          var8_int = -this.field_E - (this.widgetX + (param2 - param4));
+          var9 = param5 - (this.widgetY + param0 + this.field_O);
           if (var8_int * var8_int + var9 * var9 < this.field_K * this.field_K) {
             var10 = Math.atan2((double)var9, (double)var8_int) - TextInputValidator.field_f;
             if (!(var10 < 0.0)) {
@@ -166,7 +166,7 @@ final class qb extends hk {
     }
 
     static {
-        field_N = new hh();
+        contentFadeInPhase = new hh();
         js5IoErrorText = "IO error - unable to communicate reliably with the data server. Please check any firewall/antivirus/filtering software.";
         fullscreenMembersButtonText = "Members";
     }

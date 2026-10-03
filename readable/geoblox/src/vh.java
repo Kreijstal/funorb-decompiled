@@ -79,15 +79,15 @@ final class vh extends ee implements pl {
         largeBoxSprite = null;
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
-        super.a(param0, param1, (byte) 88, param3);
-        if (!(param3 == 0)) {
+    final void renderWidget(int parentX, int parentY, byte methodGuard, int renderPass) {
+        super.renderWidget(parentX, parentY, (byte) 88, renderPass);
+        if (!(renderPass == 0)) {
             return;
         }
         BitmapFont var5 = ng.field_F;
-        int var6 = -69 / ((1 - param2) / 43);
+        int var6 = -69 / ((1 - methodGuard) / 43);
         if (!(this.field_C == null)) {
-            var5.drawParagraph(ab.createSuggestionsText, this.field_v + param0, param1 + this.field_m, this.field_r, 20, 16777215, -1, 0, 0, var5.maxDescent + var5.maxAscent);
+            var5.drawParagraph(ab.createSuggestionsText, this.widgetX + parentX, parentY + this.widgetY, this.widgetWidth, 20, 16777215, -1, 0, 0, var5.maxDescent + var5.maxAscent);
         }
     }
 

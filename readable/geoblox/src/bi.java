@@ -84,12 +84,12 @@ final class bi implements dh {
             this.field_a = -3;
           }
           var7 = 5592405;
-          SoftwareRasterizer.fillRectangle(param4.field_v + param0, param2 + param4.field_m, param4.field_r, param4.field_h, this.field_d);
+          SoftwareRasterizer.fillRectangle(param4.widgetX + param0, param2 + param4.widgetY, param4.widgetWidth, param4.widgetHeight, this.field_d);
           if (param3) {
             var7 = 16777215;
           }
-          var8 = this.field_k + (param0 + param4.field_v);
-          var9 = this.field_j + (param4.field_m + param2);
+          var8 = this.field_k + (param0 + param4.widgetX);
+          var9 = this.field_j + (param4.widgetY + param2);
           SoftwareRasterizer.drawRectangleDropShadow(var8, var9, this.field_n, this.field_h, 5592405);
           SoftwareRasterizer.fillRectangle(var8, var9, this.field_n, this.field_h, var7);
           if (var11.field_y) {
@@ -98,7 +98,7 @@ final class bi implements dh {
           }
           if (null != this.field_b) {
             var10 = this.field_m + this.field_n + this.field_k;
-            this.field_b.drawParagraph(param4.field_s, var10 + param4.field_v + param0, param4.field_m + param2 + this.field_i, param4.field_r + (-this.field_m - var10), -(this.field_m << 1) + param4.field_h, this.field_e, this.field_f, this.field_a, this.field_l, 0);
+            this.field_b.drawParagraph(param4.field_s, var10 + param4.widgetX + param0, param4.widgetY + param2 + this.field_i, param4.widgetWidth + (-this.field_m - var10), -(this.field_m << 1) + param4.widgetHeight, this.field_e, this.field_f, this.field_a, this.field_l, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

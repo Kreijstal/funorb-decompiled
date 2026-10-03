@@ -19,6 +19,16 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 138,772 bindings,
 preserving 388 override relationships.
 
+Pass 99 adds 205 guarded names for dialog fade/resize/content transitions,
+widget geometry and complete shared rendering/transition contracts. The preview
+includes `FadingDialog`, `ResizableDialog`, `ContentTransitionDialog` and
+`OpacityWidget`. All 7,597 previous complete rules and raw/decompiler/native pins
+remain; the 7,802 rules apply 61,845 edits. Compilation/binding/override checks,
+all six existing native probes, full reproduction and dictionary reversal pass.
+Opacity rendering retains its intermediate sprite allocations; this pass does
+not change runtime memory or performance. Shared opaque code, larger control-flow
+reconstruction and whole-game/browser/phone acceptance remain open.
+
 Pass 98 adds 115 guarded names, completing MessageDialog's own declarations and
 two shared UI override families (11 button callbacks and 13 key-input methods).
 Dialog error/dismissal/restored content and colocated static utilities follow

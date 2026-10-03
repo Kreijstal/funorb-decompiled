@@ -60,7 +60,7 @@ abstract class jg {
             return stackIn_10_0;
           }
           var6 = (CharSequence) ((Object) param1);
-          var2 = oe.a(var6, 12);
+          var2 = ResizableDialog.a(var6, 12);
           if (var2 == null) {
             stackIn_13_0 = null;
             return (j) ((Object) stackIn_13_0);
@@ -68,7 +68,7 @@ abstract class jg {
           var3 = (j) ((Object) ArchiveSource.field_a.a((long)var2.hashCode(), -1));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.field_hb);
-            var4 = oe.a(var7, 12);
+            var4 = ResizableDialog.a(var7, 12);
             if (var4.equals(var2)) {
               stackIn_20_0 = (j) (var3);
               return stackIn_20_0;
@@ -171,11 +171,11 @@ abstract class jg {
           ll.field_d = MusicScore.loadNamedScore(kf.field_c, "", "title_music_loop");
           pi.field_S = MusicScore.loadNamedScore(kf.field_c, "", "game_over");
           IntrusiveNode.field_d = MusicScore.loadNamedScore(kf.field_c, "", "sun");
-          qf.resultMusicTrack = MusicScore.loadNamedScore(kf.field_c, "", "bonus_bubble_jingle");
+          ContentTransitionDialog.resultMusicTrack = MusicScore.loadNamedScore(kf.field_c, "", "bonus_bubble_jingle");
           te.field_c = new ci(param0, param2);
           uh.field_y.a(te.field_c, 0, -1, IntrusiveNode.field_d, sl.field_l);
           ag.field_j[1] = true;
-          uh.field_y.a(te.field_c, 0, -1, qf.resultMusicTrack, sl.field_l);
+          uh.field_y.a(te.field_c, 0, -1, ContentTransitionDialog.resultMusicTrack, sl.field_l);
           uh.field_y.a(te.field_c, 0, -1, pi.field_S, sl.field_l);
           uh.field_y.a(te.field_c, 0, -1, ll.field_d, sl.field_l);
           var5_int = 0;

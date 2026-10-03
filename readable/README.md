@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 7,597 guarded naming rules: 69 classes, 924 fields,
-656 methods, 1,887 parameters and 4,061 local declarations. Both 303-file corpora
+The current export has 7,802 guarded naming rules: 73 classes, 949 fields,
+690 methods, 1,992 parameters and 4,098 local declarations. Both 303-file corpora
 compile, comparing 138,772 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -53,6 +53,72 @@ Another 9,828 cases preserve native general-angle/extreme-scale traces. ARGB
 smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
+
+## Dialog fade, resize and content transitions (pass 99)
+
+This naming-only pass adds 205 guarded identities: four classes, 25 fields,
+34 methods, 105 parameters and 37 locals. `FadingDialog`, `ResizableDialog`,
+`ContentTransitionDialog` and `OpacityWidget` map back to `dd`, `oe`, `qf` and
+`wj`. All selected instance transition bodies have named parameters and locals;
+untraced colocated static helpers and other widget implementation remain opaque.
+Four shared geometry fields now read `widgetX`, `widgetY`, `widgetWidth` and
+`widgetHeight`. `renderWidget` names all 16 connected overrides and their 64
+parameters, preserving the complete rendering contract.
+
+The dialog opacity target is 256 only for the visible top dialog, otherwise zero.
+`advanceDialogAnimation` and `settleDialogAnimation` return removal eligibility;
+the layer unlinks eligible hidden dialogs. Their four-member and three-member
+families retain subclass work and wrong-guard behavior. Resize names expose the
+starting/target sizes, duration, tick and original quadratic integer easing.
+`onResizeTransitionComplete` runs before the final size is applied. Content
+replacement uses identity tokens for fade-out, resizing and fade-in; static
+cleanup can still null those tokens. Pending content is written before transition
+changes, and installation unlinks the old wrapper before creating its replacement.
+`finishTransition(false)` still completes content changes while leaving the
+superclass's active resize unfinished. No guard, failure path or partial write
+is normalized.
+
+`OpacityWidget.renderWidget` skips opacity zero, directly delegates at 256, and
+otherwise allocates a child-sized intermediate sprite, switches/restores the
+raster and alpha draws it. This allocation remains per call. The export does not
+change memory use, frame timing or runtime execution. Render-pass behavior remains
+specific to each override; names do not impose a new universal pass-zero rule.
+
+All 7,597 prior complete rules and raw/decompiler/native pins remain. The 7,802
+rules apply 61,845 identifier edits, including five constructor spellings. Both
+303-file corpora compile, preserving 138,772 bindings and 388 overrides. The
+rule-builder/source-migration/text-resource tests pass all three files; all six
+existing native/raw/readable probes retain their fixed traces. Reproduction and
+dictionary reversal recover the pinned raw sources byte-for-byte. The readable
+source-tree SHA-256 is
+`15784c4b228979b30078ce1028d07c6e727ce8d4103d0d72d7c4eefbe3b2f637`.
+These existing probes do not add dialog transition, input dispatch, login/network,
+actual raster presentation or browser/device runtime coverage. The large-body
+inventory remains 21 overlapping spans, ten with generated block labels. Larger
+control-flow reconstruction and whole-game/browser/phone acceptance remain open.
+
+Validation commands for this pass (all exit 0):
+
+```sh
+node readable/build-geoblox-rules.mjs --check
+node readable/reproduce-geoblox.mjs --update
+node readable/reproduce-geoblox.mjs --check
+node readable/tools/restore-original.mjs readable/geoblox /tmp/geoblox-transition-names-restored
+JAVA_TOOL_OPTIONS=-XX:-UsePerfData node --test readable/tests/test-geoblox-rule-builder.mjs readable/tests/test-geoblox-migration-source.mjs readable/tests/test-geoblox-text-rules.mjs
+```
+
+Each of the following uses the same verified transformed-bytecode directory as
+its final argument:
+`/home/kreijstal/git/dekobloko-decompiled-pass/.work/games/geoblox/decompile-owned/out`.
+
+```sh
+JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-match-scoring.mjs /home/kreijstal/git/dekobloko-decompiled-pass/.work/games/geoblox/decompile-owned/out
+JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-text-write.mjs /home/kreijstal/git/dekobloko-decompiled-pass/.work/games/geoblox/decompile-owned/out
+JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-gameplay.mjs /home/kreijstal/git/dekobloko-decompiled-pass/.work/games/geoblox/decompile-owned/out
+JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-result-sequence.mjs /home/kreijstal/git/dekobloko-decompiled-pass/.work/games/geoblox/decompile-owned/out
+JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-nine-slice.mjs /home/kreijstal/git/dekobloko-decompiled-pass/.work/games/geoblox/decompile-owned/out
+JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-result-helpers.mjs /home/kreijstal/git/dekobloko-decompiled-pass/.work/games/geoblox/decompile-owned/out
+```
 
 ## Message dialog and shared UI contracts (pass 98)
 

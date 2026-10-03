@@ -191,8 +191,8 @@ final class wa {
           var11 = 1;
           if (!((var8 >= var9) &&
               (-1 == param1.indexOf("<br>")))) {
-            if (dd.field_E == null) {
-              dd.field_E = new String[16];
+            if (FadingDialog.field_E == null) {
+              FadingDialog.field_E = new String[16];
             }
             if (var8 >= var9) {
               var12 = var8;
@@ -200,11 +200,11 @@ final class wa {
               var13 = var9 / var8;
               var12 = (var9 % var8 + var13 - 1) / var13 * 2 + var8;
             }
-            var11 = this.field_m.wrapText(param1, new int[]{var12}, dd.field_E);
+            var11 = this.field_m.wrapText(param1, new int[]{var12}, FadingDialog.field_E);
             var9 = 0;
             var10 = var10 + (var11 - 1) * var7;
             for (var13 = 0; var13 < var11; var13++) {
-              var14 = this.field_m.measureTextWidth(dd.field_E[var13]);
+              var14 = this.field_m.measureTextWidth(FadingDialog.field_E[var13]);
               if (var14 <= var9) {
                 continue;
               }

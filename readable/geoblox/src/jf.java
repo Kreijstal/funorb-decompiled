@@ -18,11 +18,11 @@ final class jf implements dh {
     final static void a(byte param0) {
         gf.field_d = new qh();
         if (param0 >= 19) {
-            hk.field_C.b(gf.field_d, -54);
+            hk.field_C.replaceContent(gf.field_d, -54);
             return;
         }
         rotatedThemeForegroundRaster = (Sprite) null;
-        hk.field_C.b(gf.field_d, -54);
+        hk.field_C.replaceContent(gf.field_d, -54);
     }
 
     public final void a(int param0, int param1, int param2, boolean param3, el param4) {
@@ -51,10 +51,10 @@ final class jf implements dh {
           }
           if (var12 == null) {
           }
-          SoftwareRasterizer.fillRectangle(param4.field_v + param0, param4.field_m + param2, param4.field_r, param4.field_h, this.field_h);
-          var7 = -(2 * var12.field_H) + param4.field_r;
-          var8 = param0 - (-param4.field_v - var12.field_H);
-          var9 = var12.field_G + param2 + param4.field_m;
+          SoftwareRasterizer.fillRectangle(param4.widgetX + param0, param4.widgetY + param2, param4.widgetWidth, param4.widgetHeight, this.field_h);
+          var7 = -(2 * var12.field_H) + param4.widgetWidth;
+          var8 = param0 - (-param4.widgetX - var12.field_H);
+          var9 = var12.field_G + param2 + param4.widgetY;
           SoftwareRasterizer.drawLine(var8, var9, var7 + var8, var9, this.field_d);
           for (var10 = var12.a((byte) 86) - 1; var10 >= 0; var10--) {
             SoftwareRasterizer.fillCircle(var7 * var12.c(-113, var10) / var12.g(-128) + var8, var9, this.field_i, this.field_e);

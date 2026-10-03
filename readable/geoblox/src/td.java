@@ -72,7 +72,7 @@ final class td extends hk {
         field_I = null;
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
+    final void renderWidget(int parentX, int parentY, byte methodGuard, int renderPass) {
         int var5;
         int var6;
         int var7;
@@ -84,13 +84,13 @@ final class td extends hk {
         Sprite var14;
         Sprite var15;
         var12 = Geoblox.clientControlFlowFlag;
-        super.a(param0, param1, (byte) -86, param3);
-        if (0 != param3) {
+        super.renderWidget(parentX, parentY, (byte) -86, renderPass);
+        if (0 != renderPass) {
           return;
         }
-        var5 = (this.field_r >> 1) + (this.field_v + param0);
-        var7 = -74 % ((param2 - 1) / 43);
-        var6 = param1 - (-this.field_m - (this.field_h >> 1));
+        var5 = (this.widgetWidth >> 1) + (this.widgetX + parentX);
+        var7 = -74 % ((methodGuard - 1) / 43);
+        var6 = parentY - (-this.widgetY - (this.widgetHeight >> 1));
         var9 = this.field_F.a((byte) -105);
         if ((var9 != ImageProducerRasterBuffer.field_g) &&
             (si.field_n != var9)) {
@@ -220,7 +220,7 @@ final class td extends hk {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > -30) {
-            this.a(89, -88, (byte) -40, -90);
+            this.renderWidget(89, -88, (byte) -40, -90);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

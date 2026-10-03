@@ -294,7 +294,7 @@ final class vc extends dk {
             pendingActionDrawTop = eh.pendingActionPanelTop;
             ma.drawNineSlicePanel(pendingActionDrawTop, 10, tl.pendingActionPanelHeight, (byte) -92, jf.pendingActionPanelWidth, ll.frameNineSliceSprites);
             sl.achievementSprites[pendingActionMarkerForDrawing.actionId].drawQuarterSize(25, pendingActionDrawTop + (-32 + (tl.pendingActionPanelHeight - 15)) / 2);
-            dd.uiPaletteFont.drawParagraph(pg.achievementTitles[pendingActionMarkerForDrawing.actionId], 67, 15 + pendingActionDrawTop, jf.pendingActionPanelWidth - 42 - 30, tl.pendingActionPanelHeight - 30, 0, -1, 1, 1, 30);
+            FadingDialog.uiPaletteFont.drawParagraph(pg.achievementTitles[pendingActionMarkerForDrawing.actionId], 67, 15 + pendingActionDrawTop, jf.pendingActionPanelWidth - 42 - 30, tl.pendingActionPanelHeight - 30, 0, -1, 1, 1, 30);
         }
     }
 

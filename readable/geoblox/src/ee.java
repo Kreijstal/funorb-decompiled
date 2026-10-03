@@ -26,7 +26,7 @@ class ee extends el implements ql {
           var9_ref_el = (el) ((Object) var8.c((byte) 88));
           while (var9_ref_el != null) {
             if (var9_ref_el.a(118)) {
-              if (var9_ref_el.a(param0 + this.field_m, 60, this.field_v + param2, param3, param4, param5, param6)) {
+              if (var9_ref_el.a(param0 + this.widgetY, 60, this.widgetX + param2, param3, param4, param5, param6)) {
                 return true;
               }
               var9_ref_el = (el) ((Object) var8.a((byte) 109));
@@ -190,7 +190,7 @@ class ee extends el implements ql {
           var6 = (el) ((Object) var5.c((byte) 88));
           while (var6 != null) {
             if (var6.a(122)) {
-              var6.a(false, this.field_m + param1, param2, this.field_v + param3);
+              var6.a(false, this.widgetY + param1, param2, this.widgetX + param3);
               var6 = (el) ((Object) var5.a((byte) 123));
               continue;
             }
@@ -211,17 +211,17 @@ class ee extends el implements ql {
         }
     }
 
-    void a(int param0, int param1, byte param2, int param3) {
+    void renderWidget(int parentX, int parentY, byte methodGuard, int renderPass) {
         int var8 = Geoblox.clientControlFlowFlag;
-        if ((param3 == 0) &&
+        if ((renderPass == 0) &&
             (!(this.field_q == null))) {
-            this.field_q.a(param0, -9, param1, true, (el) (this));
+            this.field_q.a(parentX, -9, parentY, true, (el) (this));
         }
-        int var6 = -58 % ((param2 - 1) / 43);
+        int var6 = -58 % ((methodGuard - 1) / 43);
         gb var5 = new gb(this.field_z);
         el var7 = (el) ((Object) var5.d(1));
         while (var7 != null) {
-            var7.a(this.field_v + param0, param1 + this.field_m, (byte) 93, param3);
+            var7.renderWidget(this.widgetX + parentX, parentY + this.widgetY, (byte) 93, renderPass);
             var7 = (el) ((Object) var5.c(26));
         }
     }
@@ -402,7 +402,7 @@ class ee extends el implements ql {
           var8 = (el) ((Object) var7.c((byte) 88));
           while (var8 != null) {
             if (var8.a(122)) {
-              var8.a(param0 + this.field_v, param1, true, param3, this.field_m + param4, param5);
+              var8.a(param0 + this.widgetX, param1, true, param3, this.widgetY + param4, param5);
               var8 = (el) ((Object) var7.a((byte) 109));
               continue;
             }

@@ -112,21 +112,21 @@ final class si {
         RuntimeException var6_ref = null;
         int var7 = 0;
         try {
-          ma.drawNineSlicePanel(param3.field_m + param2, param1 + param3.field_v, param3.field_h, (byte) -92, param3.field_r, this.field_a);
+          ma.drawNineSlicePanel(param3.widgetY + param2, param1 + param3.widgetX, param3.widgetHeight, (byte) -92, param3.widgetWidth, this.field_a);
           if (this.field_l != null) {
-            var6_int = this.field_b + (param3.field_v + param1);
-            var7 = this.field_f + param2 + param3.field_m;
+            var6_int = this.field_b + (param3.widgetX + param1);
+            var7 = this.field_f + param2 + param3.widgetY;
             if (param0.field_g == 1) {
-              var6_int = var6_int + (-this.field_l.fullWidth + param3.field_r) / 2;
+              var6_int = var6_int + (-this.field_l.fullWidth + param3.widgetWidth) / 2;
             }
             if (2 == param0.field_g) {
-              var6_int = var6_int + (-this.field_l.fullWidth + param3.field_r);
+              var6_int = var6_int + (-this.field_l.fullWidth + param3.widgetWidth);
             }
             if (param0.field_i == 1) {
-              var7 = var7 + (param3.field_h - this.field_l.fullHeight) / 2;
+              var7 = var7 + (param3.widgetHeight - this.field_l.fullHeight) / 2;
             }
             if (2 == param0.field_i) {
-              var7 = var7 + (-this.field_l.fullHeight + param3.field_h);
+              var7 = var7 + (-this.field_l.fullHeight + param3.widgetHeight);
             }
             this.field_l.draw(var6_int, var7);
           }
@@ -146,17 +146,17 @@ final class si {
             } else {
               stackIn_21_2 = 0;
             }
-            stackIn_23_2 = stackIn_21_2 + param0.field_e + param3.field_v + param1;
+            stackIn_23_2 = stackIn_21_2 + param0.field_e + param3.widgetX + param1;
             stackIn_23_3 = param0.field_m;
-            stackIn_23_4 = param3.field_m + param2;
+            stackIn_23_4 = param3.widgetY + param2;
             if (this.field_f == -2147483648) {
               stackIn_24_5 = 0;
             } else {
               stackIn_24_5 = this.field_f;
             }
             stackIn_26_3 = stackIn_23_3 + (stackIn_23_4 + stackIn_24_5);
-            stackIn_26_4 = -param0.field_e + param3.field_r - param0.field_j;
-            stackIn_26_5 = -param0.field_b + (-param0.field_m + param3.field_h);
+            stackIn_26_4 = -param0.field_e + param3.widgetWidth - param0.field_j;
+            stackIn_26_5 = -param0.field_b + (-param0.field_m + param3.widgetHeight);
             stackIn_26_6 = this.field_e;
             stackIn_26_7 = this.field_d;
             if (this.field_k != -2147483648) {

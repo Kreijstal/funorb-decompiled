@@ -167,15 +167,15 @@ final class pf extends ee implements ga, pl {
         }
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
+    final void renderWidget(int parentX, int parentY, byte methodGuard, int renderPass) {
         if (!(this.field_L == null)) {
-            ng.field_F.drawParagraph(this.field_L, this.field_v + param0 + 20, 15 + this.field_m + param1, -40 + this.field_r, this.field_h, 16777215, -1, 1, 0, ng.field_F.maxAscent);
+            ng.field_F.drawParagraph(this.field_L, this.widgetX + parentX + 20, 15 + this.widgetY + parentY, -40 + this.widgetWidth, this.widgetHeight, 16777215, -1, 1, 0, ng.field_F.maxAscent);
         }
         if (null != this.field_M) {
-            SoftwareRasterizer.drawHorizontalLine(10 + param0, 134 + param1, -20 + this.field_r, 4210752);
+            SoftwareRasterizer.drawHorizontalLine(10 + parentX, 134 + parentY, -20 + this.widgetWidth, 4210752);
         }
-        int var5 = 20 / ((param2 - 1) / 43);
-        super.a(param0, param1, (byte) -48, param3);
+        int var5 = 20 / ((methodGuard - 1) / 43);
+        super.renderWidget(parentX, parentY, (byte) -48, renderPass);
     }
 
     public final void a(dj param0, byte param1) {
@@ -790,10 +790,10 @@ final class pf extends ee implements ga, pl {
               this.field_G.field_q = (dh) ((Object) new fh());
             }
           }
-          this.field_m = 15;
+          this.widgetY = 15;
           var7 = ng.field_F;
           if (this.field_L != null) {
-            this.field_m = this.field_m + (var7.measureWrappedHeight(this.field_L, this.field_r - 40, var7.maxAscent) + 5);
+            this.widgetY = this.widgetY + (var7.measureWrappedHeight(this.field_L, this.widgetWidth - 40, var7.maxAscent) + 5);
           }
           var8 = jj.loginUsernameEmailText;
           var9 = th.a(k.c(120), 200);
@@ -804,15 +804,15 @@ final class pf extends ee implements ga, pl {
           } else {
             var8 = sl.loginEmailText;
           }
-          dupTemp$0 = new hd(10, this.field_m, -20 + this.field_r, 25, this.field_J, false, 80, 3, var7, 16777215, var8);
+          dupTemp$0 = new hd(10, this.widgetY, -20 + this.widgetWidth, 25, this.field_J, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
           this.b((byte) -110, dupTemp$0);
-          this.field_m = this.field_m + (((el) ((Object) var12)).field_h + 5);
-          dupTemp$1 = new hd(10, this.field_m, this.field_r - 20, 25, this.field_P, false, 80, 3, var7, 16777215, LoginPayloadKind.createPasswordText);
+          this.widgetY = this.widgetY + (((el) ((Object) var12)).widgetHeight + 5);
+          dupTemp$1 = new hd(10, this.widgetY, this.widgetWidth - 20, 25, this.field_P, false, 80, 3, var7, 16777215, LoginPayloadKind.createPasswordText);
           var13 = dupTemp$1;
           this.b((byte) -120, dupTemp$1);
           this.field_E.field_u = (bb) (this);
-          this.field_m = this.field_m + (((el) ((Object) var13)).field_h + 5);
+          this.widgetY = this.widgetY + (((el) ((Object) var13)).widgetHeight + 5);
           if (this.field_M != null) {
             this.field_M.field_u = (bb) (this);
           }
@@ -820,29 +820,29 @@ final class pf extends ee implements ga, pl {
             this.field_G.field_u = (bb) (this);
           }
           if (this.field_M != null) {
-            this.field_E.a(30, this.field_r - 95, (byte) -92, this.field_m, 85);
-            this.field_m = this.field_m + 60;
+            this.field_E.a(30, this.widgetWidth - 95, (byte) -92, this.widgetY, 85);
+            this.widgetY = this.widgetY + 60;
           } else {
-            this.field_E.a(30, -10 + this.field_r - 6, (byte) -33, this.field_m, 8);
-            this.field_m = this.field_m + 35;
+            this.field_E.a(30, -10 + this.widgetWidth - 6, (byte) -33, this.widgetY, 8);
+            this.widgetY = this.widgetY + 35;
           }
           if (this.field_M != null) {
-            this.field_M.a(30, -10 + this.field_r - 6, (byte) -42, this.field_m, 8);
-            this.field_m = this.field_m + 35;
+            this.field_M.a(30, -10 + this.widgetWidth - 6, (byte) -42, this.widgetY, 8);
+            this.widgetY = this.widgetY + 35;
           }
           L17: {
             if (this.field_G != null) {
               if ((!this.field_N) &&
                   (!this.field_I)) {
-                this.field_G.a(20, 40, (byte) -55, this.field_m, 8);
-                this.field_m = this.field_m + 25;
+                this.field_G.a(20, 40, (byte) -55, this.widgetY, 8);
+                this.widgetY = this.widgetY + 25;
                 break L17;
               }
-              this.field_G.a(30, -10 + (this.field_r - 6), (byte) -64, this.field_m, 8);
-              this.field_m = this.field_m + 35;
+              this.field_G.a(30, -10 + (this.widgetWidth - 6), (byte) -64, this.widgetY, 8);
+              this.widgetY = this.widgetY + 35;
             }
           }
-          this.a(3 + this.field_m, this.field_r, (byte) -17, 0, 0);
+          this.a(3 + this.widgetY, this.widgetWidth, (byte) -17, 0, 0);
           this.b((byte) -83, this.field_E);
           if (null != this.field_M) {
             this.b((byte) -111, this.field_M);

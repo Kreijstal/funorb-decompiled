@@ -444,7 +444,7 @@ final class GameScreen extends MenuScreen {
                 kh.screenTitleSprites[8].draw(0, 20);
                 ma.drawNineSlicePanel(panelTop + 10, 120, 100, (byte) -92, panelWidth, ll.frameNineSliceSprites);
                 panelLeftOrTextYOrOverlayAlphaOrCurtainX = 184;
-                dd.uiPaletteFont.drawCenteredText(Geoblox.loginMessage, 320, panelLeftOrTextYOrOverlayAlphaOrCurtainX, 0, -1);
+                FadingDialog.uiPaletteFont.drawCenteredText(Geoblox.loginMessage, 320, panelLeftOrTextYOrOverlayAlphaOrCurtainX, 0, -1);
                 panelLeftOrTextYOrOverlayAlphaOrCurtainX = 185;
                 fi.smallFont.drawParagraph(r.field_sb, 130, panelLeftOrTextYOrOverlayAlphaOrCurtainX, 380, 300, 0, -1, 1, 0, 14);
                 ma.drawNineSlicePanel(320, 120, 60, (byte) -92, panelWidth, ll.frameNineSliceSprites);
@@ -484,11 +484,11 @@ final class GameScreen extends MenuScreen {
                         !(PrefixCodeDecoder.pointerXSnapshot >= 470) &&
                         !(ue.pointerYSnapshot <= 265) &&
                         !(ue.pointerYSnapshot >= 299)))) {
-                    dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
+                    FadingDialog.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
                   }
-                  dd.uiPaletteFont.drawCenteredText(hh.fullscreenCloseButtonText, buttonTextCenterOrConfirmationWidth, 30 + textYOrButtonTop, 0, -1);
+                  FadingDialog.uiPaletteFont.drawCenteredText(hh.fullscreenCloseButtonText, buttonTextCenterOrConfirmationWidth, 30 + textYOrButtonTop, 0, -1);
                   dialogButtonLeft = 320 - (20 + dialogButtonWidth >> 1) - 90;
-                  dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
+                  FadingDialog.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
                   textYOrButtonTop = 265;
                   buttonTextCenterOrConfirmationWidth = 10 + (dialogButtonWidth >> 1) + dialogButtonLeft;
                   ma.drawNineSlicePanel(textYOrButtonTop, dialogButtonLeft, 36, (byte) -92, dialogButtonWidth + 20, eb.mouseBoxFrames);
@@ -498,10 +498,10 @@ final class GameScreen extends MenuScreen {
                         !(PrefixCodeDecoder.pointerXSnapshot >= 290) &&
                         !(ue.pointerYSnapshot <= 265) &&
                         !(ue.pointerYSnapshot >= 299)))) {
-                    dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
+                    FadingDialog.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
                   }
-                  dd.uiPaletteFont.drawCenteredText(qb.fullscreenMembersButtonText, buttonTextCenterOrConfirmationWidth, 30 + textYOrButtonTop, 0, -1);
-                  dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
+                  FadingDialog.uiPaletteFont.drawCenteredText(qb.fullscreenMembersButtonText, buttonTextCenterOrConfirmationWidth, 30 + textYOrButtonTop, 0, -1);
+                  FadingDialog.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
                   if (clientControlFlowGuard == 0) {
                     return;
                   }
@@ -528,10 +528,10 @@ final class GameScreen extends MenuScreen {
                           !(PrefixCodeDecoder.pointerXSnapshot >= 380) &&
                           !(ue.pointerYSnapshot <= 274) &&
                           !(ue.pointerYSnapshot >= 309)))) {
-                      dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
+                      FadingDialog.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
                     }
-                    dd.uiPaletteFont.drawCenteredText(hh.fullscreenCloseButtonText, buttonTextCenterOrConfirmationWidth, 30 + textYOrButtonTop, 0, -1);
-                    dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
+                    FadingDialog.uiPaletteFont.drawCenteredText(hh.fullscreenCloseButtonText, buttonTextCenterOrConfirmationWidth, 30 + textYOrButtonTop, 0, -1);
+                    FadingDialog.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
                     if (clientControlFlowGuard == 0) {
                       return;
                     }
@@ -546,17 +546,17 @@ final class GameScreen extends MenuScreen {
                     SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, panelLeftOrTextYOrOverlayAlphaOrCurtainX);
                     ma.drawNineSlicePanel(160, 160, 140, (byte) -92, 320, ll.frameNineSliceSprites);
                     textYOrButtonTop = 170;
-                    acceptancePromptText = ue.fullscreenBeforeAcceptText + " " + ArchiveRequest.fullscreenAcceptButtonText + " " + wj.fullscreenAfterAcceptText + " " + rb.fullscreenCancelButtonText + " " + uj.fullscreenAfterCancelText;
+                    acceptancePromptText = ue.fullscreenBeforeAcceptText + " " + ArchiveRequest.fullscreenAcceptButtonText + " " + OpacityWidget.fullscreenAfterAcceptText + " " + rb.fullscreenCancelButtonText + " " + uj.fullscreenAfterCancelText;
                     textYOrButtonTop = textYOrButtonTop + 16 * fi.smallFont.drawParagraph(acceptancePromptText, 170, textYOrButtonTop, 300, 300, 0, -1, 1, 0, 16);
                     textYOrButtonTop += 10;
                     acceptanceCountdownText = Integer.toString((1500 - this.activeTicks) / 150 + 1);
                     if ((1500 - this.activeTicks) / 150 <= 0) {
-                      textYOrButtonTop = textYOrButtonTop + fi.smallFont.drawParagraph(wj.a(mj.fullscreenAcceptCountdownSingularText, new String[]{acceptanceCountdownText}, (byte) -51), 170, textYOrButtonTop, 300, 300, 0, -1, 1, 0, 16) * 16;
+                      textYOrButtonTop = textYOrButtonTop + fi.smallFont.drawParagraph(OpacityWidget.a(mj.fullscreenAcceptCountdownSingularText, new String[]{acceptanceCountdownText}, (byte) -51), 170, textYOrButtonTop, 300, 300, 0, -1, 1, 0, 16) * 16;
                       if (clientControlFlowGuard == 0) {
                         break L27;
                       }
                     }
-                    textYOrButtonTop = textYOrButtonTop + fi.smallFont.drawParagraph(wj.a(jk.fullscreenAcceptCountdownPluralText, new String[]{acceptanceCountdownText}, (byte) -45), 170, textYOrButtonTop, 300, 300, 0, -1, 1, 0, 16) * 16;
+                    textYOrButtonTop = textYOrButtonTop + fi.smallFont.drawParagraph(OpacityWidget.a(jk.fullscreenAcceptCountdownPluralText, new String[]{acceptanceCountdownText}, (byte) -45), 170, textYOrButtonTop, 300, 300, 0, -1, 1, 0, 16) * 16;
                   }
                   textYOrButtonTop += 40;
                   buttonTextCenterOrConfirmationWidth = 100;
@@ -569,10 +569,10 @@ final class GameScreen extends MenuScreen {
                         !(PrefixCodeDecoder.pointerXSnapshot >= 470) &&
                         !(ue.pointerYSnapshot <= 317) &&
                         !(ue.pointerYSnapshot >= 352)))) {
-                    dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
+                    FadingDialog.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
                   }
-                  dd.uiPaletteFont.drawCenteredText(rb.fullscreenCancelButtonText, confirmationTextCenter, 30 + textYOrButtonTop, 0, -1);
-                  dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
+                  FadingDialog.uiPaletteFont.drawCenteredText(rb.fullscreenCancelButtonText, confirmationTextCenter, 30 + textYOrButtonTop, 0, -1);
+                  FadingDialog.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
                   confirmationButtonLeft = 320 - (20 + buttonTextCenterOrConfirmationWidth >> 1) - 90;
                   confirmationTextCenter = 10 + (buttonTextCenterOrConfirmationWidth >> 1) + confirmationButtonLeft;
                   ma.drawNineSlicePanel(textYOrButtonTop, confirmationButtonLeft, 36, (byte) -92, 20 + buttonTextCenterOrConfirmationWidth, eb.mouseBoxFrames);
@@ -582,10 +582,10 @@ final class GameScreen extends MenuScreen {
                         !(PrefixCodeDecoder.pointerXSnapshot >= 290) &&
                         !(ue.pointerYSnapshot <= 317) &&
                         !(ue.pointerYSnapshot >= 352)))) {
-                    dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
+                    FadingDialog.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
                   }
-                  dd.uiPaletteFont.drawCenteredText(ArchiveRequest.fullscreenAcceptButtonText, confirmationTextCenter, 30 + textYOrButtonTop, 0, -1);
-                  dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
+                  FadingDialog.uiPaletteFont.drawCenteredText(ArchiveRequest.fullscreenAcceptButtonText, confirmationTextCenter, 30 + textYOrButtonTop, 0, -1);
+                  FadingDialog.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
                   if (clientControlFlowGuard == 0) {
                     return;
                   }
@@ -610,10 +610,10 @@ final class GameScreen extends MenuScreen {
                       !(PrefixCodeDecoder.pointerXSnapshot >= 449) &&
                       !(ue.pointerYSnapshot <= 265) &&
                       !(299 <= ue.pointerYSnapshot)))) {
-                  dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
+                  FadingDialog.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
                 }
-                dd.uiPaletteFont.drawCenteredText(hh.fullscreenCloseButtonText, buttonTextCenterOrConfirmationWidth, 30 + textYOrButtonTop, 0, -1);
-                dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
+                FadingDialog.uiPaletteFont.drawCenteredText(hh.fullscreenCloseButtonText, buttonTextCenterOrConfirmationWidth, 30 + textYOrButtonTop, 0, -1);
+                FadingDialog.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
                 if (clientControlFlowGuard == 0) {
                   return;
                 }
@@ -1010,8 +1010,8 @@ final class GameScreen extends MenuScreen {
                 (null != ca.field_f.field_k)) {
               if (!ca.field_f.field_j) {
                 statusOrFriendTipText = eb.field_f;
-                statusTextY = 76 + (150 + dd.uiPaletteFont.maxAscent);
-                dd.uiPaletteFont.drawCenteredText(statusOrFriendTipText, 322, statusTextY, 0, -1);
+                statusTextY = 76 + (150 + FadingDialog.uiPaletteFont.maxAscent);
+                FadingDialog.uiPaletteFont.drawCenteredText(statusOrFriendTipText, 322, statusTextY, 0, -1);
                 if (clientControlFlowGuard == 0) {
                   break L5;
                 }
@@ -1082,8 +1082,8 @@ final class GameScreen extends MenuScreen {
               }
               if (hasDisplayedEntryFlag == 0) {
                 noHighscoresMessage = sb.noHighscoresText;
-                entryTextY = 76 + dd.uiPaletteFont.maxAscent + 150;
-                dd.uiPaletteFont.drawCenteredText(noHighscoresMessage, 322, entryTextY, 0, -1);
+                entryTextY = 76 + FadingDialog.uiPaletteFont.maxAscent + 150;
+                FadingDialog.uiPaletteFont.drawCenteredText(noHighscoresMessage, 322, entryTextY, 0, -1);
               }
               if (clientControlFlowGuard == 0) {
                 break L5;
@@ -1098,10 +1098,10 @@ final class GameScreen extends MenuScreen {
               }
               statusOrFriendTipText = sb.noHighscoresText;
             }
-            statusTextY = 150 - (-dd.uiPaletteFont.maxAscent - 76);
-            dd.uiPaletteFont.drawCenteredText(statusOrFriendTipText, 322, statusTextY, 0, -1);
+            statusTextY = 150 - (-FadingDialog.uiPaletteFont.maxAscent - 76);
+            FadingDialog.uiPaletteFont.drawCenteredText(statusOrFriendTipText, 322, statusTextY, 0, -1);
             if (fh.c(methodGuard - 147)) {
-              dd.uiPaletteFont.drawParagraph(ni.createToUseText, 125, 350, 395, 100, 0, -1, 1, 0, 26);
+              FadingDialog.uiPaletteFont.drawParagraph(ni.createToUseText, 125, 350, 395, 100, 0, -1, 1, 0, 26);
             }
           }
           if (!fh.c(methodGuard ^ -109)) {
@@ -1251,13 +1251,13 @@ final class GameScreen extends MenuScreen {
             if (bi.pointerPressButtonSnapshot != 0) {
               if (!((this.screenId != 5) &&
                     (7 != this.screenId))) {
-                oe.a(false, false, methodGuard ^ 189);
+                ResizableDialog.a(false, false, methodGuard ^ 189);
               }
               if (this.screenId == 6) {
-                oe.a(true, false, methodGuard + 131);
+                ResizableDialog.a(true, false, methodGuard + 131);
               }
               if (this.screenId == 4) {
-                oe.a(true, true, 160);
+                ResizableDialog.a(true, true, 160);
               }
             }
             L21: {
@@ -1563,23 +1563,23 @@ final class GameScreen extends MenuScreen {
           }
           L4: {
             ma.drawNineSlicePanel(140, 550, 40, (byte) -92, 60, ll.frameNineSliceSprites);
-            dd.uiPaletteFont.drawCenteredText(pageIndex + 1 + "/5", 580, 170, 0, -1);
+            FadingDialog.uiPaletteFont.drawCenteredText(pageIndex + 1 + "/5", 580, 170, 0, -1);
             pageParagraph = null;
             orbitCenterYOrTextLeft = 155;
             orbitXOrPageIndexOrLineHeight = pageIndex;
             if (orbitXOrPageIndexOrLineHeight == 0) {
-              dd.uiPaletteFont.drawText(a.field_a[0], orbitCenterYOrTextLeft, paragraphY, 0, -1);
+              FadingDialog.uiPaletteFont.drawText(a.field_a[0], orbitCenterYOrTextLeft, paragraphY, 0, -1);
               pageParagraph = ec.field_e[0];
-              dd.uiPaletteFont.drawText(a.field_a[1], orbitCenterYOrTextLeft, paragraphY + 110, 0, -1);
+              FadingDialog.uiPaletteFont.drawText(a.field_a[1], orbitCenterYOrTextLeft, paragraphY + 110, 0, -1);
             } else {
               if ((1 == orbitXOrPageIndexOrLineHeight) &&
                   (clientControlFlowGuard == 0)) {
-                dd.uiPaletteFont.drawText(a.field_a[2], orbitCenterYOrTextLeft, paragraphY, 0, -1);
+                FadingDialog.uiPaletteFont.drawText(a.field_a[2], orbitCenterYOrTextLeft, paragraphY, 0, -1);
                 pageParagraph = ec.field_e[1];
                 break L4;
               }
               if (orbitXOrPageIndexOrLineHeight == 2) {
-                dd.uiPaletteFont.drawText(a.field_a[3], orbitCenterYOrTextLeft, paragraphY, 0, -1);
+                FadingDialog.uiPaletteFont.drawText(a.field_a[3], orbitCenterYOrTextLeft, paragraphY, 0, -1);
                 pageParagraph = ec.field_e[2];
               } else {
                 if (orbitXOrPageIndexOrLineHeight == 3) {
@@ -1596,7 +1596,7 @@ final class GameScreen extends MenuScreen {
                   SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
                   vf.spriteScratchRaster.addOutline(1);
                   vf.spriteScratchRaster.draw(70 - (vf.spriteScratchRaster.fullWidth >> 1), 282 - (vf.spriteScratchRaster.fullHeight >> 1));
-                  dd.uiPaletteFont.drawText(a.field_a[4], orbitCenterYOrTextLeft, paragraphY, 0, -1);
+                  FadingDialog.uiPaletteFont.drawText(a.field_a[4], orbitCenterYOrTextLeft, paragraphY, 0, -1);
                   pageParagraph = ec.field_e[3];
                 } else {
                   if (4 == orbitXOrPageIndexOrLineHeight) {
@@ -1617,7 +1617,7 @@ final class GameScreen extends MenuScreen {
                     sh.mainRasterBuffer.setAsRasterTarget(255);
                     SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
                     vf.spriteScratchRaster.draw(70 - (vf.spriteScratchRaster.fullWidth >> 1), -(vf.spriteScratchRaster.fullHeight >> 1) + 282);
-                    dd.uiPaletteFont.drawText(a.field_a[5], orbitCenterYOrTextLeft, paragraphY, 0, -1);
+                    FadingDialog.uiPaletteFont.drawText(a.field_a[5], orbitCenterYOrTextLeft, paragraphY, 0, -1);
                     pageParagraph = ec.field_e[4];
                   }
                 }
@@ -2362,7 +2362,7 @@ final class GameScreen extends MenuScreen {
             rowY += 295;
           }
           L11: {
-            rowFont = dd.uiPaletteFont;
+            rowFont = FadingDialog.uiPaletteFont;
             buttonTextCenter = 320;
             buttonLeft = 160;
             if (!((0 != this.screenId) &&
@@ -2502,7 +2502,7 @@ final class GameScreen extends MenuScreen {
           }
           L33: {
             if (selected) {
-              dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
+              FadingDialog.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
               itemColumnOrPressOffset = this.menuPressOffset;
               if (clientControlFlowGuard == 0) {
                 break L33;
@@ -2529,7 +2529,7 @@ final class GameScreen extends MenuScreen {
             }
             rowFont.drawCenteredText(actionText, buttonTextCenter, rowY + 30, 0, -1);
           }
-          dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
+          FadingDialog.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
           return;
         } catch (java.lang.RuntimeException caughtParameter) {
           caughtFailure = caughtParameter;

@@ -33,7 +33,7 @@ final class gi implements Iterable {
             if (1 == var1) {
               ff.field_d = ih.ticketingOneUnreadText;
             } else {
-              ff.field_d = wj.a(ra.ticketingUnreadCountText, new String[]{Integer.toString(var1)}, (byte) -124);
+              ff.field_d = OpacityWidget.a(ra.ticketingUnreadCountText, new String[]{Integer.toString(var1)}, (byte) -124);
             }
             ff.field_d = gg.a(-11455, new CharSequence[]{(CharSequence) ((Object) ff.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) PacketByteCipher.ticketingGoToWebsiteText)});
           }

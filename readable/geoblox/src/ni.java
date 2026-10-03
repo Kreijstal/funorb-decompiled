@@ -99,9 +99,9 @@ final class ni extends ee implements pl {
         try {
           var4 = new hk(param1, param2);
           var4.field_q = (dh) ((Object) new ml());
-          var5 = param0 + this.field_h;
-          this.a(34 + this.field_h, this.field_r, (byte) -53, 0, 0);
-          var4.a(30, this.field_r - 14, (byte) -33, var5, 7);
+          var5 = param0 + this.widgetHeight;
+          this.a(34 + this.widgetHeight, this.widgetWidth, (byte) -53, 0, 0);
+          var4.a(30, this.widgetWidth - 14, (byte) -33, var5, 7);
           this.b((byte) -73, var4);
           stackIn_1_0 = (hk) (var4);
           return stackIn_1_0;
@@ -163,10 +163,10 @@ final class ni extends ee implements pl {
         }
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
-        super.a(param0, param1, (byte) 54, param3);
-        this.field_G.drawParagraph(this.field_K, this.field_v + (param0 + 14), 10 + param1 + this.field_m, this.field_r - 28, this.field_h, 16777215, -1, 0, 0, this.field_G.maxAscent);
-        int var5 = 35 / ((param2 - 1) / 43);
+    final void renderWidget(int parentX, int parentY, byte methodGuard, int renderPass) {
+        super.renderWidget(parentX, parentY, (byte) 54, renderPass);
+        this.field_G.drawParagraph(this.field_K, this.widgetX + (parentX + 14), 10 + parentY + this.widgetY, this.widgetWidth - 28, this.widgetHeight, 16777215, -1, 0, 0, this.field_G.maxAscent);
+        int var5 = 35 / ((methodGuard - 1) / 43);
     }
 
     public final void onButtonActivated(int param0, byte param1, int param2, int param3, hk param4) {

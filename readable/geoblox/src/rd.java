@@ -163,18 +163,18 @@ final class rd extends ff {
     }
 
     final static void b(int param0) {
-        oe.awtKeyCodeToInternalCode[45] = 26;
-        oe.awtKeyCodeToInternalCode[44] = 71;
-        oe.awtKeyCodeToInternalCode[520] = 59;
-        oe.awtKeyCodeToInternalCode[222] = 58;
-        oe.awtKeyCodeToInternalCode[192] = param0;
-        oe.awtKeyCodeToInternalCode[46] = 72;
-        oe.awtKeyCodeToInternalCode[47] = 73;
-        oe.awtKeyCodeToInternalCode[92] = 74;
-        oe.awtKeyCodeToInternalCode[91] = 42;
-        oe.awtKeyCodeToInternalCode[93] = 43;
-        oe.awtKeyCodeToInternalCode[61] = 27;
-        oe.awtKeyCodeToInternalCode[59] = 57;
+        ResizableDialog.awtKeyCodeToInternalCode[45] = 26;
+        ResizableDialog.awtKeyCodeToInternalCode[44] = 71;
+        ResizableDialog.awtKeyCodeToInternalCode[520] = 59;
+        ResizableDialog.awtKeyCodeToInternalCode[222] = 58;
+        ResizableDialog.awtKeyCodeToInternalCode[192] = param0;
+        ResizableDialog.awtKeyCodeToInternalCode[46] = 72;
+        ResizableDialog.awtKeyCodeToInternalCode[47] = 73;
+        ResizableDialog.awtKeyCodeToInternalCode[92] = 74;
+        ResizableDialog.awtKeyCodeToInternalCode[91] = 42;
+        ResizableDialog.awtKeyCodeToInternalCode[93] = 43;
+        ResizableDialog.awtKeyCodeToInternalCode[61] = 27;
+        ResizableDialog.awtKeyCodeToInternalCode[59] = 57;
     }
 
     public rd() {
@@ -245,7 +245,7 @@ final class rd extends ff {
             stackIn_3_0 = (el) (param4);
           }
           var10 = (hk) ((Object) stackIn_3_0);
-          uh.a(param4.field_m + param2, param4.field_v + param0, -14045, param4.field_h + (param2 + param4.field_m), param4.field_r + (param0 + param4.field_v));
+          uh.a(param4.widgetY + param2, param4.widgetX + param0, -14045, param4.widgetHeight + (param2 + param4.widgetY), param4.widgetWidth + (param0 + param4.widgetX));
           if (var10 != null) {
             param3 = param3 & var10.field_D;
           }

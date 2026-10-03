@@ -255,7 +255,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
           var3_int = param1.length();
           if ((var3_int >= 1) &&
               (12 >= var3_int)) {
-            var4 = oe.a(param1, param2 ^ 122);
+            var4 = ResizableDialog.a(param1, param2 ^ 122);
             if (var4 == null) {
               return false;
             }

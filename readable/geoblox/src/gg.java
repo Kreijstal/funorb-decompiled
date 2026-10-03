@@ -37,7 +37,7 @@ final class gg {
             unusedNullBytesSnapshot = (byte[]) null;
             gg.computePrefixCrc32((byte[]) null, -123, -57);
           }
-          checksumBeforeReturn = oe.computeCrc32(length, bytes, -40, 0);
+          checksumBeforeReturn = ResizableDialog.computeCrc32(length, bytes, -40, 0);
           return checksumBeforeReturn;
         } catch (java.lang.RuntimeException checksumFailure) {
           caughtChecksumFailure = checksumFailure;

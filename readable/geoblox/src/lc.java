@@ -319,7 +319,7 @@ final class lc {
             }
             var5 = ud.a(0, var4_ref_String);
             var6 = var1.readNullTerminatedText((byte) 103);
-            var7 = oe.a((CharSequence) ((Object) var4_ref_String), 12);
+            var7 = ResizableDialog.a((CharSequence) ((Object) var4_ref_String), 12);
             if (null == var7) {
               var7 = var4_ref_String;
             }
@@ -379,12 +379,12 @@ final class lc {
           if (null == var6_ref) {
             var6_ref = jg.a((byte) -62, var5_ref);
             if (null != var6_ref) {
-              ArchiveSource.field_a.a((long)oe.a((CharSequence) ((Object) var4_ref_String), 12).hashCode(), -63, var6_ref);
+              ArchiveSource.field_a.a((long)ResizableDialog.a((CharSequence) ((Object) var4_ref_String), 12).hashCode(), -63, var6_ref);
             }
           }
           if (null == var6_ref) {
             var6_ref = new j();
-            ArchiveSource.field_a.a((long)oe.a((CharSequence) ((Object) var4_ref_String), param0 ^ 100).hashCode(), 110, var6_ref);
+            ArchiveSource.field_a.a((long)ResizableDialog.a((CharSequence) ((Object) var4_ref_String), param0 ^ 100).hashCode(), 110, var6_ref);
             fieldTemp$1 = mg.field_g;
             mg.field_g = mg.field_g + 1;
             var6_ref.field_kb = fieldTemp$1;

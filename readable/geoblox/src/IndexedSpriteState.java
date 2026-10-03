@@ -78,10 +78,10 @@ abstract class IndexedSpriteState {
         int var9 = 0;
         int var13 = Geoblox.clientControlFlowFlag;
         try {
-            id.field_c = wj.loadSpriteFrames("frame_top", "commonui", param2, 0);
-            fh.field_e = wj.loadSpriteFrames("frame_bottom", "commonui", param2, 0);
+            id.field_c = OpacityWidget.loadSpriteFrames("frame_top", "commonui", param2, 0);
+            fh.field_e = OpacityWidget.loadSpriteFrames("frame_bottom", "commonui", param2, 0);
             jc.field_a = ug.loadSprite("jagex_logo_grey", param2, (byte) -78, "commonui");
-            vk.field_e = wj.loadSpriteFrames("button", "commonui", param2, 0);
+            vk.field_e = OpacityWidget.loadSpriteFrames("button", "commonui", param2, 0);
             oa.field_e = oi.a((byte) -39, "validation", "commonui", param2);
             hh.field_d = (BitmapFont) ((Object) TextInputValidator.loadCoverageFont(param3, 1, "arezzo12", "commonui", param2));
             ng.field_F = (BitmapFont) ((Object) TextInputValidator.loadCoverageFont(param3, 1, "arezzo14", "commonui", param2));

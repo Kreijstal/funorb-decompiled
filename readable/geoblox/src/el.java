@@ -5,15 +5,15 @@ import java.io.*;
 import java.util.*;
 
 class el extends IntrusiveNode {
-    int field_h;
-    int field_r;
+    int widgetHeight;
+    int widgetWidth;
     dk field_w;
-    int field_m;
+    int widgetY;
     boolean field_l;
     String field_s;
     static int field_t;
     dh field_q;
-    int field_v;
+    int widgetX;
     int field_f;
     int field_k;
     int field_n;
@@ -54,18 +54,18 @@ class el extends IntrusiveNode {
         field_p = null;
     }
 
-    void a(int param0, int param1, byte param2, int param3) {
+    void renderWidget(int parentX, int parentY, byte methodGuard, int renderPass) {
         int var5 = 0;
-        if (param3 != 0) {
-            var5 = 35 % ((1 - param2) / 43);
+        if (renderPass != 0) {
+            var5 = 35 % ((1 - methodGuard) / 43);
             return;
         }
         if (null != this.field_q) {
-            this.field_q.a(param0, -81, param1, true, (el) (this));
-            var5 = 35 % ((1 - param2) / 43);
+            this.field_q.a(parentX, -81, parentY, true, (el) (this));
+            var5 = 35 % ((1 - methodGuard) / 43);
             return;
         }
-        var5 = 35 % ((1 - param2) / 43);
+        var5 = 35 % ((1 - methodGuard) / 43);
     }
 
     int d(byte param0) {
@@ -160,16 +160,16 @@ class el extends IntrusiveNode {
         if (param1 != -1) {
             return true;
         }
-        if (param0 < this.field_v + param4) {
+        if (param0 < this.widgetX + param4) {
             return false;
         }
-        if (param2 < this.field_m + param3) {
+        if (param2 < this.widgetY + param3) {
             return false;
         }
-        if (param0 >= param4 + this.field_v + this.field_r) {
+        if (param0 >= param4 + this.widgetX + this.widgetWidth) {
             return false;
         }
-        if (this.field_h + (this.field_m + param3) > param2) {
+        if (this.widgetHeight + (this.widgetY + param3) > param2) {
             return true;
         }
         return false;
@@ -542,7 +542,7 @@ class el extends IntrusiveNode {
         var4 = this.d((byte) 105);
         var5_int = param2;
         while (var4 >= var5_int) {
-          this.a(param1, param0, (byte) 54, var5_int);
+          this.renderWidget(param1, param0, (byte) 54, var5_int);
           var5_int++;
           if (var6 == 0) {
             continue;
@@ -556,16 +556,16 @@ class el extends IntrusiveNode {
     }
 
     void a(int param0, int param1, byte param2, int param3, int param4) {
-        this.field_h = param0;
-        this.field_v = param4;
+        this.widgetHeight = param0;
+        this.widgetX = param4;
         if (param2 < -6) {
-            this.field_r = param1;
-            this.field_m = param3;
+            this.widgetWidth = param1;
+            this.widgetY = param3;
             return;
         }
         this.field_k = 112;
-        this.field_r = param1;
-        this.field_m = param3;
+        this.widgetWidth = param1;
+        this.widgetY = param3;
     }
 
     boolean a(int param0, int param1, int param2, int param3, int param4, int param5, el param6) {
@@ -648,12 +648,12 @@ class el extends IntrusiveNode {
         int var6 = 0;
         var6 = Geoblox.clientControlFlowFlag;
         try {
-          discarded$0 = param3.append(this.getClass().getName()).append("[0x").append(Integer.toHexString(this.hashCode())).append("] @").append(this.field_v).append(",").append(this.field_m).append(" ").append(this.field_r).append("x").append(this.field_h);
+          discarded$0 = param3.append(this.getClass().getName()).append("[0x").append(Integer.toHexString(this.hashCode())).append("] @").append(this.widgetX).append(",").append(this.widgetY).append(" ").append(this.widgetWidth).append("x").append(this.widgetHeight);
           if (this.field_s != null) {
             discarded$1 = param3.append(" text=\"").append(this.field_s).append('"');
           }
           if (param2 != 34) {
-            this.field_v = -101;
+            this.widgetX = -101;
           }
           if (this.field_l) {
             discarded$2 = param3.append(" mouseover");
@@ -822,7 +822,7 @@ class el extends IntrusiveNode {
 
     final void c(int param0) {
         int var2 = 117 % ((-3 - param0) / 63);
-        this.a(this.field_h, this.field_r, (byte) -113, this.field_m, this.field_v);
+        this.a(this.widgetHeight, this.widgetWidth, (byte) -113, this.widgetY, this.widgetX);
     }
 
     void a(int param0, int param1, boolean param2, el param3, int param4, int param5) {
@@ -851,8 +851,8 @@ class el extends IntrusiveNode {
             this.field_s = param0;
             if (this.field_q instanceof cc) {
                 var4 = (cc) ((Object) this.field_q);
-                this.field_r = var4.a((el) (this), (byte) -33);
-                this.field_h = var4.a(-122, (el) (this));
+                this.widgetWidth = var4.a((el) (this), (byte) -33);
+                this.widgetHeight = var4.a(-122, (el) (this));
             }
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "el.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -863,10 +863,10 @@ class el extends IntrusiveNode {
         this.field_k = 0;
         this.field_n = 0;
         try {
-            this.field_r = param2;
-            this.field_v = param0;
-            this.field_h = param3;
-            this.field_m = param1;
+            this.widgetWidth = param2;
+            this.widgetX = param0;
+            this.widgetHeight = param3;
+            this.widgetY = param1;
             this.field_u = param5;
             this.field_q = param4;
         } catch (RuntimeException runtimeException) {

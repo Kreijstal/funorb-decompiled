@@ -12,16 +12,16 @@ final class hd extends sh {
     static char[] field_D;
     private int field_G;
 
-    final void a(int param0, int param1, byte param2, int param3) {
-        int var5 = param0 + this.field_v;
-        int var6 = param1 + this.field_m;
-        super.a(param0, param1, (byte) 105, param3);
-        int var7 = -79 / ((param2 - 1) / 43);
-        if (!(param3 == 0)) {
+    final void renderWidget(int parentX, int parentY, byte methodGuard, int renderPass) {
+        int var5 = parentX + this.widgetX;
+        int var6 = parentY + this.widgetY;
+        super.renderWidget(parentX, parentY, (byte) 105, renderPass);
+        int var7 = -79 / ((methodGuard - 1) / 43);
+        if (!(renderPass == 0)) {
             return;
         }
-        int var8 = !this.field_B ? 0 : -this.field_K + (this.field_r - this.field_C * 2);
-        this.field_F.drawParagraph(this.field_J, this.field_C + (var8 + var5), this.field_C + var6, -this.field_C + this.field_K, -(this.field_C * 2) + this.field_h, this.field_G, -1, !this.field_B ? 2 : 0, 1, this.field_F.maxAscent);
+        int var8 = !this.field_B ? 0 : -this.field_K + (this.widgetWidth - this.field_C * 2);
+        this.field_F.drawParagraph(this.field_J, this.field_C + (var8 + var5), this.field_C + var6, -this.field_C + this.field_K, -(this.field_C * 2) + this.widgetHeight, this.field_G, -1, !this.field_B ? 2 : 0, 1, this.field_F.maxAscent);
     }
 
     public static void f(byte param0) {

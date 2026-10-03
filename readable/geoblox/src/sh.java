@@ -19,7 +19,7 @@ abstract class sh extends el implements ql {
         RuntimeException decompiledCaughtException = null;
         try {
           var8_int = 124 % ((-3 - param1) / 38);
-          stackIn_4_0 = (this.field_A != null) && (this.field_A.a(this.field_m + param0, -96, this.field_v + param2, param3, param4, param5, param6));
+          stackIn_4_0 = (this.field_A != null) && (this.field_A.a(this.widgetY + param0, -96, this.widgetX + param2, param3, param4, param5, param6));
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -281,14 +281,14 @@ abstract class sh extends el implements ql {
         return null;
     }
 
-    void a(int param0, int param1, byte param2, int param3) {
-        if ((0 == param3) &&
+    void renderWidget(int parentX, int parentY, byte methodGuard, int renderPass) {
+        if ((0 == renderPass) &&
             (!(this.field_q == null))) {
-            this.field_q.a(param0, -50, param1, true, (el) (this));
+            this.field_q.a(parentX, -50, parentY, true, (el) (this));
         }
-        int var5 = 85 % ((param2 - 1) / 43);
+        int var5 = 85 % ((methodGuard - 1) / 43);
         if (this.field_A != null) {
-            this.field_A.a(this.field_v + param0, param1 + this.field_m, (byte) -74, param3);
+            this.field_A.renderWidget(this.widgetX + parentX, parentY + this.widgetY, (byte) -74, renderPass);
         }
     }
 
@@ -298,7 +298,7 @@ abstract class sh extends el implements ql {
         }
         try {
             if (null != this.field_A) {
-                this.field_A.a(this.field_v + param0, param1, true, param3, param4 + this.field_m, param5);
+                this.field_A.a(this.widgetX + param0, param1, true, param3, param4 + this.widgetY, param5);
             }
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "sh.TA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
@@ -489,7 +489,7 @@ abstract class sh extends el implements ql {
         try {
             super.a(param0, param1, param2, param3);
             if (this.field_A != null) {
-                this.field_A.a(false, this.field_m + param1, param2, this.field_v + param3);
+                this.field_A.a(false, this.widgetY + param1, param2, this.widgetX + param3);
             }
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "sh.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

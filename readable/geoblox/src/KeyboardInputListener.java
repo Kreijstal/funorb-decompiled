@@ -20,8 +20,8 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
           nk.keyboardIdleTicks = 0;
           internalKeyCode = event.getKeyCode();
           if ((internalKeyCode >= 0) &&
-              (oe.awtKeyCodeToInternalCode.length > internalKeyCode)) {
-            internalKeyCode = oe.awtKeyCodeToInternalCode[internalKeyCode];
+              (ResizableDialog.awtKeyCodeToInternalCode.length > internalKeyCode)) {
+            internalKeyCode = ResizableDialog.awtKeyCodeToInternalCode[internalKeyCode];
             if (!((internalKeyCode & 128) == 0)) {
               internalKeyCode = -1;
             }
@@ -110,8 +110,8 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
             nk.keyboardIdleTicks = 0;
             internalKeyCode = event.getKeyCode();
             if ((internalKeyCode >= 0) &&
-                (oe.awtKeyCodeToInternalCode.length > internalKeyCode)) {
-              internalKeyCode = oe.awtKeyCodeToInternalCode[internalKeyCode] & -129;
+                (ResizableDialog.awtKeyCodeToInternalCode.length > internalKeyCode)) {
+              internalKeyCode = ResizableDialog.awtKeyCodeToInternalCode[internalKeyCode] & -129;
             } else {
               internalKeyCode = -1;
             }

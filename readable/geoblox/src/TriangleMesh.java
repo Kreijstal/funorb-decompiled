@@ -201,7 +201,7 @@ final class TriangleMesh {
             for (pixelIndex = 0; pixelIndex < pixelCount; pixelIndex++) {
                 rgbPixels[pixelIndex] = cm.decodedSpritePalette[cd.andInt((int) paletteIndices[pixelIndex], 255)];
             }
-            sprites[spriteIndex] = new Sprite(pg.decodedSpriteCanvasWidth, dd.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[spriteIndex], md.decodedSpriteYOffsets[spriteIndex], DualLinkNode.decodedSpriteWidths[spriteIndex], hl.decodedSpriteHeights[spriteIndex], rgbPixels);
+            sprites[spriteIndex] = new Sprite(pg.decodedSpriteCanvasWidth, FadingDialog.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[spriteIndex], md.decodedSpriteYOffsets[spriteIndex], DualLinkNode.decodedSpriteWidths[spriteIndex], hl.decodedSpriteHeights[spriteIndex], rgbPixels);
         }
         if (methodGuard != 255) {
             screenTransitionTick = 40;

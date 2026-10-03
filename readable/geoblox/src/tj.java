@@ -45,31 +45,31 @@ final class tj {
                 var3 = ml.c(7789);
                 ml.field_t = new pf(var3, (String) null, true, false, false);
                 kd.field_e.a(false, hk.field_C);
-                hk.field_C.b(ml.field_t, -85);
-                hk.field_C.b(true);
+                hk.field_C.replaceContent(ml.field_t, -85);
+                hk.field_C.finishTransition(true);
                 return;
             }
             var2 = ml.c(7789);
             ml.field_t = new pf(var2, (String) null, true, false, false);
             kd.field_e.a(false, hk.field_C);
-            hk.field_C.b(ml.field_t, -85);
-            hk.field_C.b(true);
+            hk.field_C.replaceContent(ml.field_t, -85);
+            hk.field_C.finishTransition(true);
             return;
         }
         if (param0 < -47) {
             var5 = ml.c(7789);
             ml.field_t = new pf(var5, (String) null, true, false, false);
             kd.field_e.a(false, hk.field_C);
-            hk.field_C.b(ml.field_t, -85);
-            hk.field_C.b(true);
+            hk.field_C.replaceContent(ml.field_t, -85);
+            hk.field_C.finishTransition(true);
             return;
         }
         field_a = (String) null;
         String var4 = ml.c(7789);
         ml.field_t = new pf(var4, (String) null, true, false, false);
         kd.field_e.a(false, hk.field_C);
-        hk.field_C.b(ml.field_t, -85);
-        hk.field_C.b(true);
+        hk.field_C.replaceContent(ml.field_t, -85);
+        hk.field_C.finishTransition(true);
     }
 
     public static void a(int param0) {
@@ -115,14 +115,14 @@ final class tj {
           }
           return 80;
         }
-        if (dd.field_J != null) {
-          if (!dd.field_J.ensureIndexLoaded(0)) {
+        if (FadingDialog.field_J != null) {
+          if (!FadingDialog.field_J.ensureIndexLoaded(0)) {
             return 14;
           }
-          if (!dd.field_J.hasGroupName((byte) -115, "")) {
+          if (!FadingDialog.field_J.hasGroupName((byte) -115, "")) {
             return 29;
           }
-          if (!dd.field_J.loadGroupByName("", (byte) -124)) {
+          if (!FadingDialog.field_J.loadGroupByName("", (byte) -124)) {
             return 29;
           }
         }
