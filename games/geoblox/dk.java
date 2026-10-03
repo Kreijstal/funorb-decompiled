@@ -42,10 +42,7 @@ abstract class dk {
         if (null != this.field_a) {
           var3 = this.field_a;
           var4 = 0;
-          while (true) {
-            if (var3.length <= var4) {
-              break;
-            }
+          while (!(var3.length <= var4)) {
             var5 = var3[var4];
             if (var5 == null) {
               var4++;

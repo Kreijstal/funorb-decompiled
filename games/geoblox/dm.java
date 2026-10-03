@@ -312,10 +312,7 @@ class dm extends wh {
               if ((var36 >= 0) &&
                   (var35 - (this.field_r << 12) < 0) &&
                   (var36 - (this.field_m << 12) < 0)) {
-                while (true) {
-                  if (var37 >= 0) {
-                    break;
-                  }
+                while (!(var37 >= 0)) {
                   var38 = this.field_v[(var36 >> 12) * this.field_r + (var35 >> 12)];
                   if (var38 == 0) {
                     var34++;

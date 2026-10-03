@@ -144,10 +144,7 @@ class ee extends el implements ql {
               var5 = new gb(this.field_z);
               var5.a(var4, (byte) 123);
               var6 = (el) ((Object) var5.c(26));
-              while (true) {
-                if (var6 == null) {
-                  break;
-                }
+              while (!(var6 == null)) {
                 if (!var6.a((byte) -39, param1)) {
                   var6 = (el) ((Object) var5.c(26));
                   continue;
@@ -289,10 +286,7 @@ class ee extends el implements ql {
               var5 = new gb(this.field_z);
               var5.a((byte) 56, var4);
               var6 = (el) ((Object) var5.a((byte) 114));
-              while (true) {
-                if (var6 == null) {
-                  break;
-                }
+              while (!(var6 == null)) {
                 if (!var6.a((byte) -56, param0)) {
                   var6 = (el) ((Object) var5.a((byte) 114));
                   continue;

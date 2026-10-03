@@ -880,10 +880,7 @@ final class gh {
               if ((kj.field_o[99]) &&
                   (!this.field_C)) {
                 var4 = (ja) ((Object) ji.field_r.g(0));
-                while (true) {
-                  if (null == var4) {
-                    break;
-                  }
+                while (!(null == var4)) {
                   stackIn_233_0 = var4.field_B;
                   if (var5 != 0) {
                     break L44;

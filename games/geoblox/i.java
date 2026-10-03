@@ -216,10 +216,7 @@ final class i {
                 (null != param2.field_n)) {
               var8 = 0;
               var9 = 0;
-              while (true) {
-                if (uh.field_x.length <= var9) {
-                  break;
-                }
+              while (!(uh.field_x.length <= var9)) {
                 var10 = uh.field_x[var9];
                 uh.field_x[var9] = var8;
                 var8 = var8 + var10;
@@ -384,10 +381,7 @@ final class i {
                 (null != param2.field_n)) {
               var8 = 0;
               var9 = 0;
-              while (true) {
-                if (uh.field_x.length <= var9) {
-                  break;
-                }
+              while (!(uh.field_x.length <= var9)) {
                 var10 = uh.field_x[var9];
                 uh.field_x[var9] = var8;
                 var8 = var8 + var10;

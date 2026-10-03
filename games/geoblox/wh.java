@@ -646,10 +646,7 @@ abstract class wh extends rc {
                     }
                   }
                   var36 = mh.field_b[param8];
-                  while (true) {
-                    if (~param15 >= ~param8) {
-                      break;
-                    }
+                  while (!(~param15 >= ~param8)) {
                     var37 = var17_int >> 16;
                     stackIn_73_0 = ~mh.field_c;
                     stackIn_73_1 = ~var37;

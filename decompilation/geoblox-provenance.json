@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "a3a98476775c603b4c05f34196b6ba6a0c818466",
+      "commit": "faf744e8439fd84dcc90336dbb6f1bc489eab14c",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "6388138b5ab1a91efb6893969dd008096ce7d7012c65dcf6cdd21e9b7739986e",
-        "reproduce": "git archive --format=tar a3a98476775c603b4c05f34196b6ba6a0c818466 | sha256sum",
+        "sha256": "dc190d740966d401d60800003140aacfbea8dd71680d7637c50c2fedca4001e0",
+        "reproduce": "git archive --format=tar faf744e8439fd84dcc90336dbb6f1bc489eab14c | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
@@ -93,9 +93,9 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "ba01dcb53e4008252421ea97b14937357d4b521fee2ef0952952aa4f9c448556",
-  "previousSourceTreeSha256": "413c9b8f71549b796b21abecc415d6ebf5fb103b06e32f88ea1d2623ab6e4d62",
-  "changedJavaFiles": 28,
+  "sourceTreeSha256": "1319ca918da2e00088a4b45dd86201248e104901e1b48c6c847a4ff66af0e272",
+  "previousSourceTreeSha256": "ba01dcb53e4008252421ea97b14937357d4b521fee2ef0952952aa4f9c448556",
+  "changedJavaFiles": 11,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
@@ -2625,5 +2625,49 @@
     "boardReconciliationBlockLabelsBefore": 15,
     "boardReconciliationBlockLabelsAfter": 14,
     "scope": "A labeled break to a plain block becomes an ordinary break only when its nearest breakable frame is a loop and the path from completed loop to the target is exclusively final plain blocks, if branches and plain labels. Intervening work, declarations, loops, switches, try/catch/finally and monitors refuse proof; inner cleanup remains intact on the same abrupt loop exit. Only jump spelling changes; existing safe frame cleanup then removes unused labels without enlarging declaration scopes. All303 token streams and ordered bindings match the expected rewrite;11520 native comparisons and five independent loop-update/condition/iteration oracles preserve scopes, prefix effects, unboxing/failure identity, finally overrides, ancestor transfers and monitor ownership. Larger continuation/state reconstruction and whole-game/browser/phone targets remain unfinished or unverified."
+  },
+  "leadingWhileBreakGuards": {
+    "historicalPassVersion": 103,
+    "javaToolsCommit": "faf744e8439fd84dcc90336dbb6f1bc489eab14c",
+    "sourceArchiveSha256": "dc190d740966d401d60800003140aacfbea8dd71680d7637c50c2fedca4001e0",
+    "bytecodeChanged": false,
+    "sourceBodyEditedByHand": false,
+    "changedJavaFiles": 11,
+    "sourceLinesBefore": 77875,
+    "sourceLinesAfter": 77833,
+    "sourceLinesRemoved": 42,
+    "whileConditionsRecovered": 14,
+    "directLeadingBreakCandidatesConsumed": 14,
+    "sourceDeclarationsBefore": 19591,
+    "sourceDeclarationsAfter": 19591,
+    "sourceReferenceOccurrencesBefore": 119181,
+    "sourceReferenceOccurrencesAfter": 119181,
+    "orderedDeclarationsReferencesAndOverridesUnchanged": true,
+    "localOrdinalMigrations": 0,
+    "overrideRelationshipsPreserved": 388,
+    "expectedRewriteTokenStreamsCheckedJavaFiles": 303,
+    "genericEmitterTestsRegistered": 64,
+    "genericEmitterTestsPassed": 63,
+    "genericEmitterTestsSkipped": 1,
+    "newNativeEmitterComparisons": 96768,
+    "independentNativeOracles": 6,
+    "genericExceptionExitGroups": 8,
+    "genericIntegerArgumentGroups": 2,
+    "cleanSourceArchiveByteExact": true,
+    "diagnosticsUnchanged": true,
+    "methodBodies": 2080,
+    "largeMethodSpansAtLeast300Lines": 21,
+    "largeMethodSpansWithGeneratedBlockLabelsBefore": 9,
+    "largeMethodSpansWithGeneratedBlockLabelsAfter": 9,
+    "spriteNearestRotationLinesBefore": 529,
+    "spriteNearestRotationLinesAfter": 526,
+    "spriteNearestRotationBlockLabelsAfter": 0,
+    "gameplayUpdaterLinesBefore": 641,
+    "gameplayUpdaterLinesAfter": 638,
+    "gameplayUpdaterBlockLabelsAfter": 13,
+    "sortedHalfBlendTriangleLinesBefore": 388,
+    "sortedHalfBlendTriangleLinesAfter": 385,
+    "sortedHalfBlendTriangleBlockLabelsAfter": 11,
+    "scope": "A direct first if containing only an ordinary break in a while(true) body becomes a while condition using logical negation of the verbatim predicate. No declaration, body scope, cleanup, effect or predicate is moved relative to another effect or duplicated. Conditions must be proven nonconstant by scoped nonfinal locals, actual emitted formal parameters, null literals or runtime expression forms. Final/unknown/qualified-field constant candidates, prefix work/declarations, protected entry guards, different transfer targets, unsupported/nested syntax and comments/Unicode refuse proof. Formal parameter names come from the emitted method metadata; independent corpus proof uses JDK parsed parameters.96768 native comparisons and six independent loop-entry/NaN/cleanup oracles cover nullable values, short circuits, assignments, scopes, checked/unchecked failures, ancestor/own continues, finally overrides, monitors and nested loops. Java compilation confirms constant if/while reachability differences and null comparisons. All303 expected token streams and ordered bindings match; larger continuation/state reconstruction and whole-game/browser/phone targets remain unfinished or unverified."
   }
 }
