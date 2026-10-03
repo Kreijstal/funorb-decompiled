@@ -31,17 +31,7 @@ final class sb {
         if (param0 <= 46) {
           field_a = -60;
         }
-        L1: {
-          if (hj.field_a >= 10) {
-            if (!hl.field_G) {
-              if (!t.b(13)) {
-                stackIn_7_0 = true;
-                break L1;
-              }
-            }
-          }
-          stackIn_7_0 = false;
-        }
+        stackIn_7_0 = (hj.field_a >= 10) && (!hl.field_G) && (!t.b(13));
         return stackIn_7_0;
     }
 

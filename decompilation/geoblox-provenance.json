@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "f26a115c45822808c8c9df00ce5dfb6e0b0fb6bd",
+      "commit": "cce98256b9e4c25d1ba74249abe4f019db851a0b",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "8779a07e30e5ae402ec7b8f8c7d6a723437b825378bd57064d7bd15f81524569",
-        "reproduce": "git archive --format=tar f26a115c45822808c8c9df00ce5dfb6e0b0fb6bd | sha256sum",
+        "sha256": "eb912ae16633f7b3dff0784dd1f3ddc7ee5edf5fc6329e5cc926ecfe7eae7ed2",
+        "reproduce": "git archive --format=tar cce98256b9e4c25d1ba74249abe4f019db851a0b | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
@@ -93,9 +93,9 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "a9338d980323b4418a6ee1dfed8970f48cffd57bbe752927da8c8ec7817481ed",
-  "previousSourceTreeSha256": "30d4aa4f3db79e67862d7f59381af8fd20ed178a3acf9c9b7ead4a3a4de94638",
-  "changedJavaFiles": 153,
+  "sourceTreeSha256": "4ce487c9baad355f926e36221a15e60da8c98f220df7d08b9f0474814b8083cd",
+  "previousSourceTreeSha256": "a9338d980323b4418a6ee1dfed8970f48cffd57bbe752927da8c8ec7817481ed",
+  "changedJavaFiles": 12,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
@@ -2026,5 +2026,53 @@
     "cleanSourceArchiveByteExact": true,
     "diagnosticsUnchanged": true,
     "scope": "Only redundant labels, exact nearest-loop/switch jump labels and nondeclaring plain block frames are removed. Complete Java AST event streams and transfer destinations match for all303 sources; all naming identities remain. Controlled generic native fixtures verify effects, shadows, exceptions, throwable identity and lock ownership. The same three try-with-resources fixture failures occur on the pre-cleanup baseline. Game probe evidence is maintained in the single readable manifest; large bodies, full assets/gameplay and browser/phone performance remain unverified."
+  },
+  "literalBooleanDecisionJoins": {
+    "historicalPassVersion": 78,
+    "javaToolsCommit": "cce98256b9e4c25d1ba74249abe4f019db851a0b",
+    "sourceArchiveSha256": "eb912ae16633f7b3dff0784dd1f3ddc7ee5edf5fc6329e5cc926ecfe7eae7ed2",
+    "bytecodeChanged": false,
+    "sourceBodyEditedByHand": false,
+    "changedJavaFiles": [
+      "ak.java",
+      "gh.java",
+      "ih.java",
+      "kc.java",
+      "qi.java",
+      "sb.java",
+      "sh.java",
+      "tf.java",
+      "uk.java",
+      "vh.java",
+      "wc.java",
+      "wf.java"
+    ],
+    "sourceLinesBefore": 79869,
+    "sourceLinesAfter": 79713,
+    "sourceLinesRemoved": 156,
+    "decisionsFolded": 17,
+    "uniqueVisiblePrimitiveBooleanLocalRequired": true,
+    "onlyLiteralLeavesAndSameBlockBreaksConsumed": true,
+    "originalPredicateBytesOrderFailuresAndPartialStatePreserved": true,
+    "relationalOperatorsNeverComplemented": true,
+    "protectedMonitorAndDeclarationScopesPreserved": true,
+    "maximumLeafStoresPerExpression": 12,
+    "maximumPredicateTokensPerExpression": 256,
+    "sourceDeclarationsBefore": 19558,
+    "sourceDeclarationsAfter": 19558,
+    "sourceReferenceOccurrencesBefore": 118961,
+    "sourceReferenceOccurrencesAfter": 118944,
+    "duplicateBooleanStoreReferencesRemoved": 17,
+    "allOtherOrderedBindingEventsUnchanged": true,
+    "overrideRelationshipsPreserved": 388,
+    "declarationOrdinalMigrations": 0,
+    "genericEmitterTestsRegistered": 43,
+    "genericEmitterTestsPassed": 42,
+    "genericEmitterTestsSkipped": 1,
+    "genericExceptionExitGroups": 8,
+    "newNativeEmitterComparisons": 13824,
+    "cleanSourceArchiveByteExact": true,
+    "diagnosticsUnchanged": true,
+    "scope": "Seventeen primitive local boolean decisions become short-circuit expressions after exact literal-store/consumed-break and lexical-scope proof. Native13824 comparisons cover predicates, calls, nullable unboxing, NaNs/signed zero, self-modifying predicates, failures, partial state, throwable identity and surrounding protected/monitor ownership. The optional frame-only Java AST corpus checker from pass77 is not applicable to the new boolean syntax and was skipped; its historical proof remains. Every naming declaration/override remains, with only17 duplicate boolean store references removed. Game probe evidence is in the single readable manifest; full assets, platform/server/gameplay and browser/phone performance remain unverified."
   }
 }

@@ -28,15 +28,7 @@ final class qi extends hf {
         if (param0 <= 76) {
           field_h = (gk) null;
         }
-        L1: {
-          if (ra.field_d > 0) {
-            if ((65536 & ra.field_d) != 0) {
-              stackIn_6_0 = true;
-              break L1;
-            }
-          }
-          stackIn_6_0 = false;
-        }
+        stackIn_6_0 = (ra.field_d > 0) && ((65536 & ra.field_d) != 0);
         return stackIn_6_0;
     }
 

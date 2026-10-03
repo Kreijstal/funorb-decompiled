@@ -18,16 +18,8 @@ abstract class sh extends el implements ql {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var8_int = 124 % ((-3 - param1) / 38);
-            if (this.field_A != null) {
-              if (this.field_A.a(this.field_m + param0, -96, this.field_v + param2, param3, param4, param5, param6)) {
-                stackIn_4_0 = true;
-                break L0;
-              }
-            }
-            stackIn_4_0 = false;
-          }
+          var8_int = 124 % ((-3 - param1) / 38);
+          stackIn_4_0 = (this.field_A != null) && (this.field_A.a(this.field_m + param0, -96, this.field_v + param2, param3, param4, param5, param6));
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -132,17 +124,7 @@ abstract class sh extends el implements ql {
             var4 = (el) null;
             this.a(73, 123, false, (el) null, 48, 45);
           }
-          L1: {
-            if (this.field_A != null) {
-              if (!this.field_A.e((byte) 54)) {
-                if (this.field_A.a((byte) -117, param0)) {
-                  stackIn_7_0 = true;
-                  break L1;
-                }
-              }
-            }
-            stackIn_7_0 = false;
-          }
+          stackIn_7_0 = (this.field_A != null) && (!this.field_A.e((byte) 54)) && (this.field_A.a((byte) -117, param0));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -402,18 +384,8 @@ abstract class sh extends el implements ql {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var3_int = -11 % ((param1 + 73) / 40);
-            if (null != this.field_A) {
-              if (!this.field_A.e((byte) 54)) {
-                if (this.field_A.a((byte) -85, param0)) {
-                  stackIn_5_0 = true;
-                  break L0;
-                }
-              }
-            }
-            stackIn_5_0 = false;
-          }
+          var3_int = -11 % ((param1 + 73) / 40);
+          stackIn_5_0 = (null != this.field_A) && (!this.field_A.e((byte) 54)) && (this.field_A.a((byte) -85, param0));
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -440,15 +412,7 @@ abstract class sh extends el implements ql {
           if (param0 > -30) {
             field_y = (sc) null;
           }
-          L1: {
-            if (null != this.field_A) {
-              if (this.field_A.a((byte) -34, param1)) {
-                stackIn_6_0 = true;
-                break L1;
-              }
-            }
-            stackIn_6_0 = false;
-          }
+          stackIn_6_0 = (null != this.field_A) && (this.field_A.a((byte) -34, param1));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -483,17 +447,7 @@ abstract class sh extends el implements ql {
           if (param3 != -1) {
             return true;
           }
-          L0: {
-            if (null != this.field_A) {
-              if (this.field_A.e((byte) 54)) {
-                if (this.field_A.a(param0, param1, param2, -1, param4, param5, param6)) {
-                  stackIn_8_0 = true;
-                  break L0;
-                }
-              }
-            }
-            stackIn_8_0 = false;
-          }
+          stackIn_8_0 = (null != this.field_A) && (this.field_A.e((byte) 54)) && (this.field_A.a(param0, param1, param2, -1, param4, param5, param6));
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

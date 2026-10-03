@@ -34,15 +34,7 @@ final class uk extends q {
           if (param0 != 8) {
             field_i = (int[]) null;
           }
-          L1: {
-            if (param1.indexOf(param2) == -1) {
-              if (param1.indexOf(var3) == -1) {
-                stackIn_7_0 = false;
-                break L1;
-              }
-            }
-            stackIn_7_0 = true;
-          }
+          stackIn_7_0 = !(param1.indexOf(param2) == -1) || !(param1.indexOf(var3) == -1);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

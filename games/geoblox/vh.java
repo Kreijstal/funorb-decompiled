@@ -49,15 +49,7 @@ final class vh extends ee implements pl {
         if (param0 > -68) {
           field_G = (dm) null;
         }
-        L1: {
-          if (oc.field_e != null) {
-            if (pk.field_l.a(true)) {
-              stackIn_6_0 = true;
-              break L1;
-            }
-          }
-          stackIn_6_0 = false;
-        }
+        stackIn_6_0 = (oc.field_e != null) && (pk.field_l.a(true));
         return stackIn_6_0;
     }
 

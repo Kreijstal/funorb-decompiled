@@ -30,19 +30,7 @@ final class ih {
         if (param0 != 0) {
           return true;
         }
-        L0: {
-          if (ji.field_r.c(13519)) {
-            if (wd.field_e.c(13519)) {
-              if (bh.field_c.c(param0 + 13519)) {
-                if (!jl.field_t) {
-                  stackIn_8_0 = true;
-                  break L0;
-                }
-              }
-            }
-          }
-          stackIn_8_0 = false;
-        }
+        stackIn_8_0 = (ji.field_r.c(13519)) && (wd.field_e.c(13519)) && (bh.field_c.c(param0 + 13519)) && (!jl.field_t);
         return stackIn_8_0;
     }
 

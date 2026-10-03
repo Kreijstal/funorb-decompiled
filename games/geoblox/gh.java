@@ -980,17 +980,7 @@ final class gh {
             if (this.field_a == 0) {
               ld.a(310, 320, 123, 100 + 100 * ji.field_h);
             }
-            L50: {
-              if (!fa.field_a) {
-                if (a.field_d.c(13519)) {
-                  if (0 < ul.field_b) {
-                    stackIn_252_1 = true;
-                    break L50;
-                  }
-                }
-              }
-              stackIn_252_1 = false;
-            }
+            stackIn_252_1 = (!fa.field_a) && (a.field_d.c(13519)) && (0 < ul.field_b);
             L52: {
               ((gh) (this)).field_b = stackIn_252_1;
               if (this.field_b) {
@@ -1405,15 +1395,7 @@ final class gh {
         if (!param0) {
           return true;
         }
-        L0: {
-          if (!this.field_H) {
-            if (0 == this.field_bb) {
-              stackIn_9_0 = false;
-              break L0;
-            }
-          }
-          stackIn_9_0 = true;
-        }
+        stackIn_9_0 = (this.field_H) || !(0 == this.field_bb);
         return stackIn_9_0;
     }
 

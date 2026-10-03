@@ -556,18 +556,8 @@ final class kc {
                   jl.field_t = false;
                 }
               }
-              L55: {
-                stackIn_110_0 = el.field_o;
-                if (!el.field_o.field_F) {
-                  if (!ab.field_f) {
-                    if (!w.field_f) {
-                      stackIn_112_1 = false;
-                      break L55;
-                    }
-                  }
-                }
-                stackIn_112_1 = true;
-              }
+              stackIn_110_0 = el.field_o;
+              stackIn_112_1 = (el.field_o.field_F) || (ab.field_f) || (w.field_f);
               stackIn_110_0.field_F = stackIn_112_1;
               w.field_f = false;
               if (var1_int >= 3) {
