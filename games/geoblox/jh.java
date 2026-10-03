@@ -42,7 +42,7 @@ final class jh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5_ref = (RuntimeException) (Object) decompiledCaughtException;
-          stackIn_14_0 = (RuntimeException) (var5_ref);
+          stackIn_14_0 = var5_ref;
           stackIn_14_1 = new StringBuilder().append("jh.A(");
           if (param0 == null) {
             stackIn_15_2 = "null";
@@ -84,7 +84,7 @@ final class jh {
               try {
                 if (~this.field_c.a((byte) 46) > ~(long)(param0 * 6 + 6)) {
                   stackIn_3_0 = null;
-                  return (byte[]) ((Object) stackIn_3_0);
+                  return (byte[]) (stackIn_3_0);
                 }
                 if (param1 > -14) {
                   this.field_d = (sk) null;
@@ -98,7 +98,7 @@ final class jh {
                 }
                 if (this.field_a < var4_int) {
                   stackIn_11_0 = null;
-                  return (byte[]) ((Object) stackIn_11_0);
+                  return (byte[]) (stackIn_11_0);
                 }
                 if (var5 <= 0) {
                   return null;
@@ -111,12 +111,12 @@ final class jh {
                 var8 = 0;
                 while (true) {
                   if (var7 >= var4_int) {
-                    stackIn_53_0 = (byte[]) (var6);
+                    stackIn_53_0 = var6;
                     return stackIn_53_0;
                   }
                   if (var5 == 0) {
                     stackIn_23_0 = null;
-                    return (byte[]) ((Object) stackIn_23_0);
+                    return (byte[]) (stackIn_23_0);
                   }
                   this.field_d.a(0, (long)(520 * var5));
                   var9 = -var7 + var4_int;
@@ -170,7 +170,7 @@ final class jh {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var4 = (IOException) (Object) decompiledCaughtException;
                 stackIn_56_0 = null;
-                return (byte[]) ((Object) stackIn_56_0);
+                return (byte[]) (stackIn_56_0);
               }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -355,7 +355,7 @@ final class jh {
             } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
               decompiledCaughtException = decompiledCaughtParameter3;
               var6_ref = (RuntimeException) (Object) decompiledCaughtException;
-              stackIn_71_0 = (RuntimeException) (var6_ref);
+              stackIn_71_0 = var6_ref;
               stackIn_71_1 = new StringBuilder().append("jh.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
               if (param3 == null) {
                 stackIn_72_2 = "null";

@@ -41,7 +41,7 @@ final class od {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_7_0 = (RuntimeException) (var3);
+          stackIn_7_0 = var3;
           stackIn_7_1 = new StringBuilder().append("od.E(").append(param0).append(',');
           if (param1 == null) {
             stackIn_8_2 = "null";
@@ -96,12 +96,12 @@ final class od {
           var7.setBounds(0, 0, param5, param0);
           var7.addFocusListener(var7);
           var7.requestFocus();
-          stackIn_6_0 = (he) (var7);
+          stackIn_6_0 = var7;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6_ref = decompiledCaughtException;
-          stackIn_9_0 = (RuntimeException) (var6_ref);
+          stackIn_9_0 = var6_ref;
           stackIn_9_1 = new StringBuilder().append("od.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
           if (param4 == null) {
             stackIn_10_2 = "null";

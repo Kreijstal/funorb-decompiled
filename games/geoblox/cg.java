@@ -32,7 +32,7 @@ final class cg extends ia {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_12_0 = (RuntimeException) (var3);
+          stackIn_12_0 = var3;
           stackIn_12_1 = new StringBuilder().append("cg.K(");
           if (param0 == null) {
             stackIn_13_2 = "null";
@@ -124,7 +124,7 @@ final class cg extends ia {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          stackIn_9_0 = (RuntimeException) (var4);
+          stackIn_9_0 = var4;
           stackIn_9_1 = new StringBuilder().append("cg.C(");
           if (param0 == null) {
             stackIn_10_2 = "null";

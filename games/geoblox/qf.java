@@ -121,7 +121,7 @@ abstract class qf extends oe {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_13_0 = (RuntimeException) (var5);
+          stackIn_13_0 = var5;
           stackIn_13_1 = new StringBuilder().append("qf.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_14_2 = "null";
@@ -160,7 +160,7 @@ abstract class qf extends oe {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_11_0 = (RuntimeException) (var3);
+          stackIn_11_0 = var3;
           stackIn_11_1 = new StringBuilder().append("qf.SB(").append(param0).append(',');
           if (param1 == null) {
             stackIn_12_2 = "null";
@@ -185,7 +185,7 @@ abstract class qf extends oe {
           nf.field_j.a(param3 ^ -25202, var9);
           bm.a(var9, param7, param3 ^ -25169);
           if (param3 == 25134) {
-            stackIn_4_0 = (ai) (var9);
+            stackIn_4_0 = var9;
             return stackIn_4_0;
           }
           stackIn_2_0 = (ai) null;
@@ -193,7 +193,7 @@ abstract class qf extends oe {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9_ref = decompiledCaughtException;
-          stackIn_7_0 = (RuntimeException) (var9_ref);
+          stackIn_7_0 = var9_ref;
           stackIn_7_1 = new StringBuilder().append("qf.UB(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
           if (param4 == null) {
             stackIn_8_2 = "null";
@@ -229,7 +229,7 @@ abstract class qf extends oe {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_9_0 = (RuntimeException) (var3);
+          stackIn_9_0 = var3;
           stackIn_9_1 = new StringBuilder().append("qf.PB(");
           if (param0 == null) {
             stackIn_10_2 = "null";

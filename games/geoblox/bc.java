@@ -62,7 +62,7 @@ final class bc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          stackIn_17_0 = (RuntimeException) (var4_ref);
+          stackIn_17_0 = var4_ref;
           stackIn_17_1 = new StringBuilder().append("bc.B(").append(param0).append(',');
           if (param1 == null) {
             stackIn_18_2 = "null";

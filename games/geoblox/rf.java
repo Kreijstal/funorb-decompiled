@@ -408,7 +408,7 @@ final class rf extends hf {
           var51 = new qc(this.field_f);
           var51.c((byte) 95, 1297377380);
           var51.c((byte) 95, 6);
-          stackIn_66_0 = (qc) (var51);
+          stackIn_66_0 = var51;
           if (var2 <= 1) {
             stackIn_67_1 = 0;
           } else {

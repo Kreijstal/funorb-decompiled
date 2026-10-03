@@ -52,7 +52,7 @@ final class wa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_12_0 = (RuntimeException) (var5);
+          stackIn_12_0 = var5;
           stackIn_12_1 = new StringBuilder().append("wa.C(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_13_2 = "null";
@@ -226,7 +226,7 @@ final class wa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_28_0 = (RuntimeException) (var5);
+          stackIn_28_0 = var5;
           stackIn_28_1 = new StringBuilder().append("wa.G(").append(param0).append(',');
           if (param1 == null) {
             stackIn_29_2 = "null";
@@ -256,7 +256,7 @@ final class wa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_8_0 = (RuntimeException) (var5);
+          stackIn_8_0 = var5;
           stackIn_8_1 = new StringBuilder().append("wa.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_9_2 = "null";

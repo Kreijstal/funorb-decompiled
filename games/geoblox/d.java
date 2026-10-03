@@ -357,7 +357,7 @@ final class d implements Runnable {
               }
               try {
                 var9 = new pa(new File(var8, var4), "rw", 10000L);
-                stackIn_13_0 = (pa) (var9);
+                stackIn_13_0 = var9;
                 return stackIn_13_0;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

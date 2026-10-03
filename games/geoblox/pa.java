@@ -50,7 +50,7 @@ final class pa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_8_0 = (RuntimeException) (var5);
+          stackIn_8_0 = var5;
           stackIn_8_1 = new StringBuilder().append("pa.D(").append(param0).append(',');
           if (param1 == null) {
             stackIn_9_2 = "null";
@@ -147,7 +147,7 @@ final class pa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          stackIn_44_0 = (RuntimeException) (var4);
+          stackIn_44_0 = var4;
           stackIn_44_1 = new StringBuilder().append("pa.B(");
           if (param0 == null) {
             stackIn_45_2 = "null";
@@ -193,7 +193,7 @@ final class pa {
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var4_ref = (RuntimeException) (Object) decompiledCaughtException;
-              stackIn_10_0 = (RuntimeException) (var4_ref);
+              stackIn_10_0 = var4_ref;
               stackIn_10_1 = new StringBuilder().append("pa.F(");
               if (param0 == null) {
                 stackIn_11_2 = "null";

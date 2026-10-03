@@ -43,7 +43,7 @@ final class mc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7_ref = decompiledCaughtException;
-          stackIn_15_0 = (RuntimeException) (var7_ref);
+          stackIn_15_0 = var7_ref;
           stackIn_15_1 = new StringBuilder().append("mc.B(");
           if (param0 == null) {
             stackIn_16_2 = "null";

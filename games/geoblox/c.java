@@ -1854,7 +1854,7 @@ final class c extends ka {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (runtimeException);
+          stackIn_6_0 = runtimeException;
           stackIn_6_1 = new StringBuilder().append("c.<init>(");
           if (param0 == null) {
             stackIn_7_2 = "null";

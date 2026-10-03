@@ -37,7 +37,7 @@ class hk extends el {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          stackIn_13_0 = (RuntimeException) (var8);
+          stackIn_13_0 = var8;
           stackIn_13_1 = new StringBuilder().append("hk.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
           if (param6 == null) {
             stackIn_14_2 = "null";
@@ -122,7 +122,7 @@ class hk extends el {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_12_0 = (RuntimeException) (var5);
+          stackIn_12_0 = var5;
           stackIn_12_1 = new StringBuilder().append("hk.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_13_2 = "null";
@@ -203,7 +203,7 @@ class hk extends el {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_15_0 = (RuntimeException) (var3);
+          stackIn_15_0 = var3;
           stackIn_15_1 = new StringBuilder().append("hk.UA(").append(param0).append(',');
           if (param1 == null) {
             stackIn_16_2 = "null";
@@ -243,7 +243,7 @@ class hk extends el {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_13_0 = (RuntimeException) (var5);
+          stackIn_13_0 = var5;
           stackIn_13_1 = new StringBuilder().append("hk.PA(").append(param0).append(',');
           if (param1 == null) {
             stackIn_14_2 = "null";

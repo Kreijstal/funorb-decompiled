@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "6a6275c84203e94667cfc8add2a5763d44f08f0f",
+      "commit": "28c78aa9333f9958868c8359ca0d8b77d9c62cf8",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "7b39ce315376ef968a17850878eca26ddeb06662032b8acac840418062c7aa09",
-        "reproduce": "git archive --format=tar 6a6275c84203e94667cfc8add2a5763d44f08f0f | sha256sum",
+        "sha256": "c6294dd3b9ae8f81da915bb49946f6a30643a681f46c48865afcf4aae564e9d3",
+        "reproduce": "git archive --format=tar 28c78aa9333f9958868c8359ca0d8b77d9c62cf8 | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
@@ -93,9 +93,9 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "9b9a14f0d5063ad8801b7cc7593865a2b093947780937310ed913195a8397a61",
-  "previousSourceTreeSha256": "1319ca918da2e00088a4b45dd86201248e104901e1b48c6c847a4ff66af0e272",
-  "changedJavaFiles": 17,
+  "sourceTreeSha256": "2e4f5a2dec59816c3cdc3897291d55002e7ff596d367de5a33bab1392dbac23c",
+  "previousSourceTreeSha256": "9b9a14f0d5063ad8801b7cc7593865a2b093947780937310ed913195a8397a61",
+  "changedJavaFiles": 170,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
@@ -2706,5 +2706,43 @@
     "largeMethodSpansWithGeneratedBlockLabelsBefore": 9,
     "largeMethodSpansWithGeneratedBlockLabelsAfter": 7,
     "scope": "An if arm ending in an effectful break to a plain block becomes an ordinary if/else containing the original skipped remainder. Prefix/predicate/effect order and existing arm/nested scopes remain. Normal completion must reach the same target through terminal plain blocks, if arms and plain labels only. Direct remainder declarations, intervening work, crossed loop/switch/try/finally/monitor boundaries, another prefix jump to that target and unknown/ambiguous syntax refuse proof. Enclosing or whole nested cleanup regions remain intact.24192 native comparisons plus six independent effect/remainder/cleanup/monitor/failure oracles cover nullable inputs, NaNs, short circuits, assignments, local scopes, checked/unchecked failures, own/ancestor transfers and finally overrides. All303 expected token streams and ordered bindings match. Avatar animation and music decoding lose their final generated labels. Whole-game/ending/assets/browser/phone targets remain unfinished or unverified."
+  },
+  "identityReferenceCasts": {
+    "historicalPassVersion": 105,
+    "javaToolsCommit": "28c78aa9333f9958868c8359ca0d8b77d9c62cf8",
+    "sourceArchiveSha256": "c6294dd3b9ae8f81da915bb49946f6a30643a681f46c48865afcf4aae564e9d3",
+    "bytecodeChanged": false,
+    "sourceBodyEditedByHand": false,
+    "changedJavaFiles": 170,
+    "changedMethodBodies": 423,
+    "sourceLinesBefore": 77803,
+    "sourceLinesAfter": 77803,
+    "identityCastsRemoved": 525,
+    "castTypeReferencesRemoved": 515,
+    "sourceDeclarationsBefore": 19591,
+    "sourceDeclarationsAfter": 19591,
+    "sourceReferenceOccurrencesBefore": 119181,
+    "sourceReferenceOccurrencesAfter": 118666,
+    "onlyRemovedCastTypeClassReferencesDiffer": true,
+    "orderedSurvivingDeclarationsReferencesAndOverridesUnchanged": true,
+    "localOrdinalMigrations": 0,
+    "overrideRelationshipsPreserved": 388,
+    "expectedRewriteTokenStreamsCheckedJavaFiles": 303,
+    "genericEmitterTestsRegistered": 72,
+    "genericEmitterTestsPassed": 71,
+    "genericEmitterTestsSkipped": 1,
+    "newIdentityCastTestGroups": 5,
+    "newNativeEmitterComparisons": 2880,
+    "independentNativeOracles": 7,
+    "compiledInstructionAndExceptionTablePairsCompared": 24,
+    "genericExceptionExitGroups": 8,
+    "genericIntegerArgumentGroups": 2,
+    "cleanSourceArchiveByteExact": true,
+    "diagnosticsUnchanged": true,
+    "methodBodies": 2080,
+    "largeMethodSpansAtLeast300Lines": 21,
+    "largeMethodSpansWithGeneratedBlockLabelsAfter": 7,
+    "generatedPlainBlockLabelsAfter": 252,
+    "scope": "A unique ordinary-block local reference cast to its exact declared type is replaced with the same identifier; identity cast chains and grouping can be removed together. The local must have completed its declaration and remain in the same lexical block. Fields/formals/for/catch/switch declarations, duplicate bindings, generic/annotated types, primitive scalar conversions, different reference types, Object round trips, postfix member/index/call/increment operands, unsupported/nested syntax, missing semicolons, comments/Unicode and grouping beyond128 refuse proof. Token boundaries are preserved. Diagnostics are opt-in and identify removed original type-token spans.2880 native comparisons, seven independent overload/boxing/check/monitor/cleanup oracles and24 identical javac instruction/exception-table pairs verify the supported family. All303 expected token streams match; JDK audit differs only at515 removed cast-type class references. All declaration/transfer scopes, remaining bindings, effects and overload types remain. A diagnostic prototype permitting catch-only loop boundaries found zero candidates; exception-region restructuring was not relaxed. Larger joins, unknown shared names and whole-game/assets/browser/phone acceptance remain unfinished or unverified."
   }
 }

@@ -28,7 +28,7 @@ final class rb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_9_0 = (RuntimeException) (var5);
+          stackIn_9_0 = var5;
           stackIn_9_1 = new StringBuilder().append("rb.B(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_10_2 = "null";

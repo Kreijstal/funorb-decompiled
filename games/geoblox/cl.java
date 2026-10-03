@@ -45,11 +45,11 @@ final class cl {
           cg.field_k = param1;
           me.field_g = null;
           stackIn_10_0 = null;
-          return (sl) ((Object) stackIn_10_0);
+          return (sl) (stackIn_10_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_13_0 = (RuntimeException) (var2);
+          stackIn_13_0 = var2;
           stackIn_13_1 = new StringBuilder().append("cl.A(").append(param0).append(',');
           if (param1 == null) {
             stackIn_14_2 = "null";

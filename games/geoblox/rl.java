@@ -44,7 +44,7 @@ final class rl extends oe {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var3);
+          stackIn_6_0 = var3;
           stackIn_6_1 = new StringBuilder().append("rl.E(").append(param0).append(',');
           if (param1 == null) {
             stackIn_7_2 = "null";
@@ -91,7 +91,7 @@ final class rl extends oe {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          stackIn_5_0 = (RuntimeException) (var3_ref);
+          stackIn_5_0 = var3_ref;
           stackIn_5_1 = new StringBuilder().append("rl.G(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_6_2 = "null";
@@ -155,7 +155,7 @@ final class rl extends oe {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_17_0 = (RuntimeException) (var5);
+          stackIn_17_0 = var5;
           stackIn_17_1 = new StringBuilder().append("rl.C(").append(param0).append(',');
           if (param1 == null) {
             stackIn_18_2 = "null";

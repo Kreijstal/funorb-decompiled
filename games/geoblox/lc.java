@@ -93,7 +93,7 @@ final class lc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_8_0 = (RuntimeException) (var3);
+          stackIn_8_0 = var3;
           stackIn_8_1 = new StringBuilder().append("lc.A(");
           if (param0 == null) {
             stackIn_9_2 = "null";
@@ -225,7 +225,7 @@ final class lc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var13 = decompiledCaughtException;
-          stackIn_28_0 = (RuntimeException) (var13);
+          stackIn_28_0 = var13;
           stackIn_28_1 = new StringBuilder().append("lc.C(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_29_2 = "null";
@@ -254,19 +254,19 @@ final class lc {
         try {
           if (null == param1) {
             stackIn_4_0 = null;
-            return (bg) ((Object) stackIn_4_0);
+            return (bg) (stackIn_4_0);
           }
           if (param0 != 4520) {
             lc.a(-56, -44, (int[]) null, 118, 4, -55, 25, -98, -82, -78, (byte) -35, (int[]) null, -116);
           }
           var2 = new bg(param1, gh.field_m, md.field_e, rc.field_j, hl.field_K, mj.field_a);
           kj.c(true);
-          stackIn_9_0 = (bg) (var2);
+          stackIn_9_0 = var2;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          stackIn_13_0 = (RuntimeException) (var2_ref);
+          stackIn_13_0 = var2_ref;
           stackIn_13_1 = new StringBuilder().append("lc.B(").append(param0).append(',');
           if (param1 == null) {
             stackIn_14_2 = "null";
@@ -398,7 +398,7 @@ final class lc {
           while (true) {
             L15: {
               if (null != var7_ref) {
-                stackIn_61_0 = (j) (var6_ref);
+                stackIn_61_0 = var6_ref;
                 if (var8 != 0) {
                   break L15;
                 }
@@ -409,7 +409,7 @@ final class lc {
                   }
                 }
               }
-              stackIn_61_0 = (j) (var7_ref);
+              stackIn_61_0 = var7_ref;
             }
             if (stackIn_61_0 == null) {
               hl.field_B.a(-39, var6_ref);

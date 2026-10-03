@@ -244,7 +244,7 @@ final class tf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          stackIn_7_0 = (RuntimeException) (var4_ref);
+          stackIn_7_0 = var4_ref;
           stackIn_7_1 = new StringBuilder().append("tf.J(");
           if (param0 == null) {
             stackIn_8_2 = "null";

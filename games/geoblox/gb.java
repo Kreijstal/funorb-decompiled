@@ -176,16 +176,16 @@ final class gb {
           if (this.field_a.field_a == var3) {
             this.field_d = null;
             stackIn_5_0 = null;
-            return (hf) ((Object) stackIn_5_0);
+            return (hf) (stackIn_5_0);
           }
           var4 = 59 / ((param1 - 85) / 38);
           this.field_d = var3.field_c;
-          stackIn_7_0 = (hf) (var3);
+          stackIn_7_0 = var3;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          stackIn_10_0 = (RuntimeException) (var3_ref);
+          stackIn_10_0 = var3_ref;
           stackIn_10_1 = new StringBuilder().append("gb.F(");
           if (param0 == null) {
             stackIn_11_2 = "null";
@@ -248,15 +248,15 @@ final class gb {
           if (this.field_a.field_a == var3) {
             this.field_d = null;
             stackIn_8_0 = null;
-            return (hf) ((Object) stackIn_8_0);
+            return (hf) (stackIn_8_0);
           }
           this.field_d = var3.field_b;
-          stackIn_10_0 = (hf) (var3);
+          stackIn_10_0 = var3;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          stackIn_13_0 = (RuntimeException) (var3_ref);
+          stackIn_13_0 = var3_ref;
           stackIn_13_1 = new StringBuilder().append("gb.J(").append(param0).append(',');
           if (param1 == null) {
             stackIn_14_2 = "null";

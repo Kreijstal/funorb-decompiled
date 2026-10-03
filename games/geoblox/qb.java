@@ -81,7 +81,7 @@ final class qb extends hk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          stackIn_19_0 = (RuntimeException) (var8);
+          stackIn_19_0 = var8;
           stackIn_19_1 = new StringBuilder().append("qb.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
           if (param6 == null) {
             stackIn_20_2 = "null";
@@ -138,7 +138,7 @@ final class qb extends hk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_19_0 = (RuntimeException) (var5);
+          stackIn_19_0 = var5;
           stackIn_19_1 = new StringBuilder().append("qb.C(").append(param0).append(',');
           if (param1 == null) {
             stackIn_20_2 = "null";

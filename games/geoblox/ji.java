@@ -165,7 +165,7 @@ abstract class ji {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          stackIn_19_0 = (RuntimeException) (var4);
+          stackIn_19_0 = var4;
           stackIn_19_1 = new StringBuilder().append("ji.J(");
           if (param0 == null) {
             stackIn_20_2 = "null";

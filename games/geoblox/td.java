@@ -179,7 +179,7 @@ final class td extends hk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          stackIn_20_0 = (RuntimeException) (var4);
+          stackIn_20_0 = var4;
           stackIn_20_1 = new StringBuilder().append("td.J(");
           if (param0 == null) {
             stackIn_21_2 = "null";
@@ -226,7 +226,7 @@ final class td extends hk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var3);
+          stackIn_6_0 = var3;
           stackIn_6_1 = new StringBuilder().append("td.UA(").append(param0).append(',');
           if (param1 == null) {
             stackIn_7_2 = "null";

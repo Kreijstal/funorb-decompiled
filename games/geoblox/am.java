@@ -116,7 +116,7 @@ final class am {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_16_0 = (RuntimeException) (var2);
+          stackIn_16_0 = var2;
           stackIn_16_1 = new StringBuilder().append("am.<init>(");
           if (param0 == null) {
             stackIn_17_2 = "null";

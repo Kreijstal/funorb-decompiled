@@ -63,14 +63,14 @@ abstract class jg {
           var2 = oe.a(var6, 12);
           if (var2 == null) {
             stackIn_13_0 = null;
-            return (j) ((Object) stackIn_13_0);
+            return (j) (stackIn_13_0);
           }
           var3 = (j) ((Object) nh.field_a.a((long)var2.hashCode(), -1));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.field_hb);
             var4 = oe.a(var7, 12);
             if (var4.equals(var2)) {
-              stackIn_20_0 = (j) (var3);
+              stackIn_20_0 = var3;
               return stackIn_20_0;
             }
             var3 = (j) ((Object) nh.field_a.a(-29925));
@@ -79,7 +79,7 @@ abstract class jg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          stackIn_25_0 = (RuntimeException) (var2_ref);
+          stackIn_25_0 = var2_ref;
           stackIn_25_1 = new StringBuilder().append("jg.B(").append(param0).append(',');
           if (param1 == null) {
             stackIn_26_2 = "null";
@@ -114,7 +114,7 @@ abstract class jg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var4);
+          stackIn_6_0 = var4;
           stackIn_6_1 = new StringBuilder().append("jg.C(");
           if (param0 == null) {
             stackIn_7_2 = "null";
@@ -203,7 +203,7 @@ abstract class jg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_17_0 = (RuntimeException) (var5);
+          stackIn_17_0 = var5;
           stackIn_17_1 = new StringBuilder().append("jg.E(");
           if (param0 == null) {
             stackIn_18_2 = "null";

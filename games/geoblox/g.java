@@ -42,7 +42,7 @@ final class g extends q {
           var4 = param1.toLowerCase();
           if (var4.length() == 0) {
             stackIn_2_0 = null;
-            return (String) ((Object) stackIn_2_0);
+            return (String) (stackIn_2_0);
           }
           var5 = var4;
           if (em.a(var5, param0 - 344)) {
@@ -84,7 +84,7 @@ final class g extends q {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_37_0 = (RuntimeException) (var3);
+          stackIn_37_0 = var3;
           stackIn_37_1 = new StringBuilder().append("g.A(").append(param0).append(',');
           if (param1 == null) {
             stackIn_38_2 = "null";
@@ -132,7 +132,7 @@ final class g extends q {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          stackIn_16_0 = (RuntimeException) (var3_ref);
+          stackIn_16_0 = var3_ref;
           stackIn_16_1 = new StringBuilder().append("g.B(");
           if (param0 == null) {
             stackIn_17_2 = "null";
@@ -178,7 +178,7 @@ final class g extends q {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          stackIn_16_0 = (RuntimeException) (var3_ref);
+          stackIn_16_0 = var3_ref;
           stackIn_16_1 = new StringBuilder().append("g.D(").append(param0).append(',');
           if (param1 == null) {
             stackIn_17_2 = "null";

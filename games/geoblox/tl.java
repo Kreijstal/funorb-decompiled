@@ -42,7 +42,7 @@ final class tl extends hf {
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-              stackIn_8_0 = (RuntimeException) (var2_ref2);
+              stackIn_8_0 = var2_ref2;
               stackIn_8_1 = new StringBuilder().append("tl.A(");
               if (param0 == null) {
                 stackIn_9_2 = "null";

@@ -47,7 +47,7 @@ final class bi implements dh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_17_0 = (RuntimeException) (var3);
+          stackIn_17_0 = var3;
           stackIn_17_1 = new StringBuilder().append("bi.B(").append(param0).append(',');
           if (param1 == null) {
             stackIn_18_2 = "null";
@@ -104,7 +104,7 @@ final class bi implements dh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          stackIn_17_0 = (RuntimeException) (var6);
+          stackIn_17_0 = var6;
           stackIn_17_1 = new StringBuilder().append("bi.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
           if (param4 == null) {
             stackIn_18_2 = "null";

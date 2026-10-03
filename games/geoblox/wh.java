@@ -372,7 +372,7 @@ abstract class wh extends rc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          stackIn_310_0 = (RuntimeException) (var2_ref);
+          stackIn_310_0 = var2_ref;
           stackIn_310_1 = new StringBuilder().append("wh.JA(").append(param0).append(',');
           if (param1 == null) {
             stackIn_311_2 = "null";
@@ -427,12 +427,12 @@ abstract class wh extends rc {
           var5.a(var4, (long)(param3 * param0), 0);
           var6 = new byte[64];
           var5.a(var6, 0, true);
-          stackIn_11_0 = (byte[]) (var6);
+          stackIn_11_0 = var6;
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          stackIn_15_0 = (RuntimeException) (var4_ref);
+          stackIn_15_0 = var4_ref;
           stackIn_15_1 = new StringBuilder().append("wh.MA(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_16_2 = "null";
@@ -818,7 +818,7 @@ abstract class wh extends rc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var17 = decompiledCaughtException;
-          stackIn_113_0 = (RuntimeException) (var17);
+          stackIn_113_0 = var17;
           stackIn_113_1 = new StringBuilder().append("wh.KA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',');
           if (param11 == null) {
             stackIn_114_2 = "null";
@@ -911,7 +911,7 @@ abstract class wh extends rc {
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-              stackIn_35_0 = (RuntimeException) (runtimeException);
+              stackIn_35_0 = runtimeException;
               stackIn_35_1 = new StringBuilder().append("wh.IA(");
               if (param0 == null) {
                 stackIn_36_2 = "null";

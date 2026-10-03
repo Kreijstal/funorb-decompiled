@@ -32,12 +32,12 @@ final class ij extends oe implements pl {
           var4.a(30, -14 + (this.field_r - 16), (byte) -111, var5, 15);
           this.b((byte) -70, var4);
           this.c(param1 - 198);
-          stackIn_3_0 = (hk) (var4);
+          stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var4_ref);
+          stackIn_6_0 = var4_ref;
           stackIn_6_1 = new StringBuilder().append("ij.B(");
           if (param0 == null) {
             stackIn_7_2 = "null";
@@ -126,7 +126,7 @@ final class ij extends oe implements pl {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw t.a((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -156,7 +156,7 @@ final class ij extends oe implements pl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          stackIn_8_0 = (RuntimeException) (var6);
+          stackIn_8_0 = var6;
           stackIn_8_1 = new StringBuilder().append("ij.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
           if (param4 == null) {
             stackIn_9_2 = "null";

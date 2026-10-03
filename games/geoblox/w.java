@@ -106,7 +106,7 @@ final class w {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var5);
+          stackIn_6_0 = var5;
           stackIn_6_1 = new StringBuilder().append("w.A(");
           if (param0 == null) {
             stackIn_7_2 = "null";

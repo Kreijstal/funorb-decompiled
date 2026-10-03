@@ -43,7 +43,7 @@ final class qh extends ee implements pe, pl, ta {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6_ref = decompiledCaughtException;
-          stackIn_7_0 = (RuntimeException) (var6_ref);
+          stackIn_7_0 = var6_ref;
           stackIn_7_1 = new StringBuilder().append("qh.S(").append(param0).append(',');
           if (param1 == null) {
             stackIn_8_2 = "null";
@@ -86,7 +86,7 @@ final class qh extends ee implements pe, pl, ta {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          stackIn_4_0 = (RuntimeException) (var8);
+          stackIn_4_0 = var8;
           stackIn_4_1 = new StringBuilder().append("qh.E(");
           if (param0 == null) {
             stackIn_5_2 = "null";
@@ -236,7 +236,7 @@ final class qh extends ee implements pe, pl, ta {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var6);
+          stackIn_6_0 = var6;
           stackIn_6_1 = new StringBuilder().append("qh.G(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_7_2 = "null";
@@ -281,7 +281,7 @@ final class qh extends ee implements pe, pl, ta {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_13_0 = (RuntimeException) (var5);
+          stackIn_13_0 = var5;
           stackIn_13_1 = new StringBuilder().append("qh.A(");
           if (param0 == null) {
             stackIn_14_2 = "null";
@@ -330,7 +330,7 @@ final class qh extends ee implements pe, pl, ta {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          stackIn_10_0 = (RuntimeException) (var6);
+          stackIn_10_0 = var6;
           stackIn_10_1 = new StringBuilder().append("qh.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
           if (param4 == null) {
             stackIn_11_2 = "null";
@@ -374,7 +374,7 @@ final class qh extends ee implements pe, pl, ta {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          stackIn_21_0 = (RuntimeException) (var3_ref);
+          stackIn_21_0 = var3_ref;
           stackIn_21_1 = new StringBuilder().append("qh.C(").append(param0).append(',');
           if (param1 == null) {
             stackIn_22_2 = "null";
@@ -472,7 +472,7 @@ final class qh extends ee implements pe, pl, ta {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_16_0 = (RuntimeException) (var5);
+          stackIn_16_0 = var5;
           stackIn_16_1 = new StringBuilder().append("qh.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_17_2 = "null";
@@ -505,7 +505,7 @@ final class qh extends ee implements pe, pl, ta {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          stackIn_7_0 = (RuntimeException) (var7);
+          stackIn_7_0 = var7;
           stackIn_7_1 = new StringBuilder().append("qh.L(").append(param0).append(',');
           if (param1 == null) {
             stackIn_8_2 = "null";

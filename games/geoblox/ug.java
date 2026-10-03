@@ -33,7 +33,7 @@ final class ug {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          stackIn_10_0 = (RuntimeException) (var4);
+          stackIn_10_0 = var4;
           stackIn_10_1 = new StringBuilder().append("ug.D(");
           if (param0 == null) {
             stackIn_11_2 = "null";
@@ -91,7 +91,7 @@ final class ug {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          stackIn_7_0 = (RuntimeException) (var4);
+          stackIn_7_0 = var4;
           stackIn_7_1 = new StringBuilder().append("ug.C(");
           if (param0 == null) {
             stackIn_8_2 = "null";

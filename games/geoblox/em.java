@@ -85,14 +85,14 @@ final class em {
             this.field_b.b(29915, 64, var13, 0);
             var9 = new bj(param0, param4, param3, this.field_g, this.field_f, var6_int, var13, var7, param2);
             this.field_d[param0] = var9;
-            stackIn_13_0 = (bj) (var9);
+            stackIn_13_0 = var9;
             return stackIn_13_0;
           }
           throw new RuntimeException();
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          stackIn_16_0 = (RuntimeException) (var6);
+          stackIn_16_0 = var6;
           stackIn_16_1 = new StringBuilder().append("em.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_17_2 = "null";
@@ -217,7 +217,7 @@ final class em {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (runtimeException);
+          stackIn_6_0 = runtimeException;
           stackIn_6_1 = new StringBuilder().append("em.<init>(");
           if (param0 == null) {
             stackIn_7_2 = "null";
@@ -267,7 +267,7 @@ final class em {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_12_0 = (RuntimeException) (var2);
+          stackIn_12_0 = var2;
           stackIn_12_1 = new StringBuilder().append("em.D(");
           if (param0 == null) {
             stackIn_13_2 = "null";

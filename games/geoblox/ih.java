@@ -173,7 +173,7 @@ final class ih {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          stackIn_55_0 = (RuntimeException) (var4);
+          stackIn_55_0 = var4;
           stackIn_55_1 = new StringBuilder().append("ih.A(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_56_2 = "null";
@@ -202,7 +202,7 @@ final class ih {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_7_0 = (RuntimeException) (var2);
+          stackIn_7_0 = var2;
           stackIn_7_1 = new StringBuilder().append("ih.E(").append(param0).append(',');
           if (param1 == null) {
             stackIn_8_2 = "null";

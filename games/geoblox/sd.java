@@ -54,7 +54,7 @@ final class sd extends pb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          stackIn_9_0 = (RuntimeException) (var4);
+          stackIn_9_0 = var4;
           stackIn_9_1 = new StringBuilder().append("sd.H(").append(param0).append(',');
           if (param1 == null) {
             stackIn_10_2 = "null";
@@ -239,7 +239,7 @@ final class sd extends pb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9 = decompiledCaughtException;
-          stackIn_74_0 = (RuntimeException) (var9);
+          stackIn_74_0 = var9;
           stackIn_74_1 = new StringBuilder().append("sd.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
           if (param4 == null) {
             stackIn_75_2 = "null";

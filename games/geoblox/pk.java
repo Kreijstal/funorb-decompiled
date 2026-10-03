@@ -34,7 +34,7 @@ final class pk extends qc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_7_0 = (RuntimeException) (var5);
+          stackIn_7_0 = var5;
           stackIn_7_1 = new StringBuilder().append("pk.FB(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_8_2 = "null";

@@ -82,7 +82,7 @@ final class vc extends dk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          stackIn_15_0 = (RuntimeException) (var6);
+          stackIn_15_0 = var6;
           stackIn_15_1 = new StringBuilder().append("vc.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_16_2 = "null";
@@ -266,7 +266,7 @@ final class vc extends dk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9 = decompiledCaughtException;
-          stackIn_45_0 = (RuntimeException) (var9);
+          stackIn_45_0 = var9;
           stackIn_45_1 = new StringBuilder().append("vc.B(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_46_2 = "null";
@@ -318,12 +318,12 @@ final class vc extends dk {
             this.a(-65, -103, (String) null, -76, (m) null, -99, 20, -32);
           }
           this.field_a = new lk[]{var7};
-          stackIn_3_0 = (lk) (var5);
+          stackIn_3_0 = var5;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5_ref = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var5_ref);
+          stackIn_6_0 = var5_ref;
           stackIn_6_1 = new StringBuilder().append("vc.C(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_7_2 = "null";

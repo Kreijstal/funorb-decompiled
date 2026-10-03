@@ -80,7 +80,7 @@ final class hi extends ee implements ta, pl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          stackIn_4_0 = (RuntimeException) (var8);
+          stackIn_4_0 = var8;
           stackIn_4_1 = new StringBuilder().append("hi.O(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_5_2 = "null";
@@ -286,7 +286,7 @@ final class hi extends ee implements ta, pl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8_ref = decompiledCaughtException;
-          stackIn_54_0 = (RuntimeException) (var8_ref);
+          stackIn_54_0 = var8_ref;
           stackIn_54_1 = new StringBuilder().append("hi.M(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
           if (param5 == null) {
             stackIn_55_2 = "null";
@@ -443,7 +443,7 @@ final class hi extends ee implements ta, pl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          stackIn_72_0 = (RuntimeException) (var6);
+          stackIn_72_0 = var6;
           stackIn_72_1 = new StringBuilder().append("hi.N(");
           if (param0 == null) {
             stackIn_73_2 = "null";
@@ -482,7 +482,7 @@ final class hi extends ee implements ta, pl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          stackIn_10_0 = (RuntimeException) (var3_ref);
+          stackIn_10_0 = var3_ref;
           stackIn_10_1 = new StringBuilder().append("hi.J(").append(param0).append(',');
           if (param1 == null) {
             stackIn_11_2 = "null";
@@ -517,7 +517,7 @@ final class hi extends ee implements ta, pl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          stackIn_10_0 = (RuntimeException) (var6);
+          stackIn_10_0 = var6;
           stackIn_10_1 = new StringBuilder().append("hi.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
           if (param4 == null) {
             stackIn_11_2 = "null";
@@ -588,7 +588,7 @@ final class hi extends ee implements ta, pl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_15_0 = (RuntimeException) (var5);
+          stackIn_15_0 = var5;
           stackIn_15_1 = new StringBuilder().append("hi.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_16_2 = "null";
@@ -626,7 +626,7 @@ final class hi extends ee implements ta, pl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var7);
+          stackIn_6_0 = var7;
           stackIn_6_1 = new StringBuilder().append("hi.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_7_2 = "null";

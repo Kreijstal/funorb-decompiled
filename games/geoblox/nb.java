@@ -24,7 +24,7 @@ final class nb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_7_0 = (RuntimeException) (var2);
+          stackIn_7_0 = var2;
           stackIn_7_1 = new StringBuilder().append("nb.B(").append(param0).append(',');
           if (param1 == null) {
             stackIn_8_2 = "null";
@@ -80,7 +80,7 @@ final class nb {
           if (3 == var11) {
             var12 = 1;
           }
-          stackIn_17_0 = (ja) (var6);
+          stackIn_17_0 = var6;
           stackIn_17_1 = param0 + 28113;
           stackIn_17_2 = (float)param1;
           stackIn_17_3 = var12;

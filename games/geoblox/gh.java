@@ -192,7 +192,7 @@ final class gh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-          stackIn_25_0 = (RuntimeException) (var2_ref2);
+          stackIn_25_0 = var2_ref2;
           stackIn_25_1 = new StringBuilder().append("gh.U(");
           if (param0 == null) {
             stackIn_26_2 = "null";
@@ -1964,7 +1964,7 @@ final class gh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_12_0 = (RuntimeException) (var3);
+          stackIn_12_0 = var3;
           stackIn_12_1 = new StringBuilder().append("gh.<init>(");
           if (param0 == null) {
             stackIn_13_2 = "null";

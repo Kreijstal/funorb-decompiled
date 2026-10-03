@@ -173,7 +173,7 @@ class mi extends kg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_100_0 = (RuntimeException) (var3);
+          stackIn_100_0 = var3;
           stackIn_100_1 = new StringBuilder().append("mi.B(").append(param0).append(',');
           if (param1 == null) {
             stackIn_101_2 = "null";
@@ -229,7 +229,7 @@ class mi extends kg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (runtimeException);
+          stackIn_6_0 = runtimeException;
           stackIn_6_1 = new StringBuilder().append("mi.<init>(").append(param0).append(',');
           if (param1 == null) {
             stackIn_7_2 = "null";

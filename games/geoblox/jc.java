@@ -149,7 +149,7 @@ final class jc {
           }
           if (0 < var2_int) {
             stackIn_6_0 = null;
-            return (fd[]) ((Object) stackIn_6_0);
+            return (fd[]) (stackIn_6_0);
           }
           var3 = param0.e((byte) -17, 12);
           var4 = new fd[var3];
@@ -169,12 +169,12 @@ final class jc {
               var4[var5] = var6_ref_fd;
             }
           }
-          stackIn_14_0 = (fd[]) (var4);
+          stackIn_14_0 = var4;
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_17_0 = (RuntimeException) (var2);
+          stackIn_17_0 = var2;
           stackIn_17_1 = new StringBuilder().append("jc.D(");
           if (param0 == null) {
             stackIn_18_2 = "null";

@@ -53,7 +53,7 @@ final class vd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_10_0 = (RuntimeException) (var5);
+          stackIn_10_0 = var5;
           stackIn_10_1 = new StringBuilder().append("vd.D(");
           if (param0 == null) {
             stackIn_11_2 = "null";

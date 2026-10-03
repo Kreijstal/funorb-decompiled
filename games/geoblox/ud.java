@@ -70,7 +70,7 @@ final class ud {
               var4 = var3.field_hb;
             }
             if (var4.equals(var2)) {
-              stackIn_16_0 = (j) (var3);
+              stackIn_16_0 = var3;
               return stackIn_16_0;
             }
             var3 = (j) ((Object) ug.field_a.a(param0 ^ -29925));
@@ -79,7 +79,7 @@ final class ud {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          stackIn_21_0 = (RuntimeException) (var2_ref);
+          stackIn_21_0 = var2_ref;
           stackIn_21_1 = new StringBuilder().append("ud.C(").append(param0).append(',');
           if (param1 == null) {
             stackIn_22_2 = "null";

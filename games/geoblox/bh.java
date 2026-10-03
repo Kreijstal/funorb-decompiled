@@ -227,8 +227,8 @@ final class bh extends java.awt.Canvas {
                 if (param4) {
                   var10.field_m = var10.field_m + 1;
                   dupTemp$1 = var10.field_n[var11];
-                  stackIn_31_0 = (ja) (dupTemp$1);
-                  stackIn_31_1 = (ja) (dupTemp$1);
+                  stackIn_31_0 = dupTemp$1;
+                  stackIn_31_1 = dupTemp$1;
                   stackIn_31_0.field_m = stackIn_31_1.field_m + 1;
                 }
                 if (param0) {
@@ -246,7 +246,7 @@ final class bh extends java.awt.Canvas {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_41_0 = (RuntimeException) (var5);
+          stackIn_41_0 = var5;
           stackIn_41_1 = new StringBuilder().append("bh.D(").append(param0).append(',');
           if (param1 == null) {
             stackIn_42_2 = "null";

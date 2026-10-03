@@ -81,7 +81,7 @@ final class ma extends hf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var3);
+          stackIn_6_0 = var3;
           stackIn_6_1 = new StringBuilder().append("ma.A(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_7_2 = "null";
@@ -258,7 +258,7 @@ final class ma extends hf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          stackIn_77_0 = (RuntimeException) (var6);
+          stackIn_77_0 = var6;
           stackIn_77_1 = new StringBuilder().append("ma.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
           if (param5 == null) {
             stackIn_78_2 = "null";
@@ -299,7 +299,7 @@ final class ma extends hf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          stackIn_20_0 = (RuntimeException) (var4);
+          stackIn_20_0 = var4;
           stackIn_20_1 = new StringBuilder().append("ma.D(");
           if (param0 == null) {
             stackIn_21_2 = "null";

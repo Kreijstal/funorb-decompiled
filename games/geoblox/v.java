@@ -81,7 +81,7 @@ final class v {
                 var10 = var12;
                 var5_ref_byte__ = var10;
                 var9.b(29915, var4, var12, 0);
-                stackIn_7_0 = (byte[]) (var5_ref_byte__);
+                stackIn_7_0 = var5_ref_byte__;
                 return stackIn_7_0;
               }
               var5 = var9.a((byte) -49);
@@ -99,7 +99,7 @@ final class v {
                       sc.field_b.a(param1 + 0, var9, var13);
                     }
                   }
-                  stackIn_21_0 = (byte[]) (var6);
+                  stackIn_21_0 = var6;
                   return stackIn_21_0;
                 }
               }
@@ -110,7 +110,7 @@ final class v {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (RuntimeException) (Object) decompiledCaughtException;
-          stackIn_24_0 = (RuntimeException) (var2);
+          stackIn_24_0 = var2;
           stackIn_24_1 = new StringBuilder().append("v.C(");
           if (param0 == null) {
             stackIn_25_2 = "null";
@@ -434,7 +434,7 @@ final class v {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_8_0 = (RuntimeException) (var2);
+          stackIn_8_0 = var2;
           stackIn_8_1 = new StringBuilder().append("v.B(");
           if (param0 == null) {
             stackIn_9_2 = "null";

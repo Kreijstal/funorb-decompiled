@@ -207,7 +207,7 @@ final class ul {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_18_0 = (RuntimeException) (var3);
+          stackIn_18_0 = var3;
           stackIn_18_1 = new StringBuilder().append("ul.D(");
           if (param0 == null) {
             stackIn_19_2 = "null";

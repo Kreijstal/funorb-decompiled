@@ -217,7 +217,7 @@ final class sk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var5_ref = (RuntimeException) (Object) decompiledCaughtException;
-          stackIn_64_0 = (RuntimeException) (var5_ref);
+          stackIn_64_0 = var5_ref;
           stackIn_64_1 = new StringBuilder().append("sk.B(");
           if (param0 == null) {
             stackIn_65_2 = "null";
@@ -337,7 +337,7 @@ final class sk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var5_ref = (RuntimeException) (Object) decompiledCaughtException;
-          stackIn_54_0 = (RuntimeException) (var5_ref);
+          stackIn_54_0 = var5_ref;
           stackIn_54_1 = new StringBuilder().append("sk.C(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_55_2 = "null";

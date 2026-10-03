@@ -61,7 +61,7 @@ final class ki {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_26_0 = (RuntimeException) (var2);
+          stackIn_26_0 = var2;
           stackIn_26_1 = new StringBuilder().append("ki.B(");
           if (param0 == null) {
             stackIn_27_2 = "null";

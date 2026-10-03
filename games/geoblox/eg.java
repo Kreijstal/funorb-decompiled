@@ -102,7 +102,7 @@ final class eg extends hf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          stackIn_44_0 = (RuntimeException) (var4);
+          stackIn_44_0 = var4;
           stackIn_44_1 = new StringBuilder().append("eg.B(");
           if (param0 == null) {
             stackIn_45_2 = "null";

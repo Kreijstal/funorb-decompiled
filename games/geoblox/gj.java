@@ -61,7 +61,7 @@ final class gj extends fj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          stackIn_17_0 = (RuntimeException) (var4);
+          stackIn_17_0 = var4;
           stackIn_17_1 = new StringBuilder().append("gj.A(");
           if (param0 == null) {
             stackIn_18_2 = "null";

@@ -39,7 +39,7 @@ class ff implements dh, cc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var5);
+          stackIn_6_0 = var5;
           stackIn_6_1 = new StringBuilder().append("ff.F(");
           if (param0 == null) {
             stackIn_7_2 = "null";
@@ -107,7 +107,7 @@ class ff implements dh, cc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9 = decompiledCaughtException;
-          stackIn_30_0 = (RuntimeException) (var9);
+          stackIn_30_0 = var9;
           stackIn_30_1 = new StringBuilder().append("ff.N(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_31_2 = "null";
@@ -193,7 +193,7 @@ class ff implements dh, cc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_30_0 = (RuntimeException) (var3);
+          stackIn_30_0 = var3;
           stackIn_30_1 = new StringBuilder().append("ff.H(").append(param0).append(',');
           if (param1 == null) {
             stackIn_31_2 = "null";
@@ -230,7 +230,7 @@ class ff implements dh, cc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_13_0 = (RuntimeException) (var3);
+          stackIn_13_0 = var3;
           stackIn_13_1 = new StringBuilder().append("ff.I(").append(param0).append(',');
           if (param1 == null) {
             stackIn_14_2 = "null";
@@ -264,7 +264,7 @@ class ff implements dh, cc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var7);
+          stackIn_6_0 = var7;
           stackIn_6_1 = new StringBuilder().append("ff.V(");
           if (param0 == null) {
             stackIn_7_2 = "null";
@@ -291,7 +291,7 @@ class ff implements dh, cc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_4_0 = (RuntimeException) (var3);
+          stackIn_4_0 = var3;
           stackIn_4_1 = new StringBuilder().append("ff.AA(");
           if (param0 == null) {
             stackIn_5_2 = "null";
@@ -318,7 +318,7 @@ class ff implements dh, cc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_4_0 = (RuntimeException) (var3);
+          stackIn_4_0 = var3;
           stackIn_4_1 = new StringBuilder().append("ff.G(").append(param0).append(',');
           if (param1 == null) {
             stackIn_5_2 = "null";
@@ -379,7 +379,7 @@ class ff implements dh, cc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var5);
+          stackIn_6_0 = var5;
           stackIn_6_1 = new StringBuilder().append("ff.U(");
           if (param0 == null) {
             stackIn_7_2 = "null";
@@ -406,7 +406,7 @@ class ff implements dh, cc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var3);
+          stackIn_6_0 = var3;
           stackIn_6_1 = new StringBuilder().append("ff.L(").append(param0).append(',');
           if (param1 == null) {
             stackIn_7_2 = "null";
@@ -433,7 +433,7 @@ class ff implements dh, cc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var4);
+          stackIn_6_0 = var4;
           stackIn_6_1 = new StringBuilder().append("ff.Q(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_7_2 = "null";
@@ -462,7 +462,7 @@ class ff implements dh, cc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          stackIn_7_0 = (RuntimeException) (var4);
+          stackIn_7_0 = var4;
           stackIn_7_1 = new StringBuilder().append("ff.K(").append(param0).append(',');
           if (param1 == null) {
             stackIn_8_2 = "null";
@@ -513,7 +513,7 @@ class ff implements dh, cc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_7_0 = (RuntimeException) (var3);
+          stackIn_7_0 = var3;
           stackIn_7_1 = new StringBuilder().append("ff.T(").append(param0).append(',');
           if (param1 == null) {
             stackIn_8_2 = "null";
@@ -573,7 +573,7 @@ class ff implements dh, cc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          stackIn_11_0 = (RuntimeException) (var6);
+          stackIn_11_0 = var6;
           stackIn_11_1 = new StringBuilder().append("ff.S(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_12_2 = "null";
@@ -602,7 +602,7 @@ class ff implements dh, cc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var3);
+          stackIn_6_0 = var3;
           stackIn_6_1 = new StringBuilder().append("ff.R(");
           if (param0 == null) {
             stackIn_7_2 = "null";
@@ -682,7 +682,7 @@ class ff implements dh, cc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          stackIn_25_0 = (RuntimeException) (var7);
+          stackIn_25_0 = var7;
           stackIn_25_1 = new StringBuilder().append("ff.W(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
           if (param5 == null) {
             stackIn_26_2 = "null";

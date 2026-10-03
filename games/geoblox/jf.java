@@ -67,7 +67,7 @@ final class jf implements dh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          stackIn_15_0 = (RuntimeException) (var6);
+          stackIn_15_0 = var6;
           stackIn_15_1 = new StringBuilder().append("jf.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
           if (param4 == null) {
             stackIn_16_2 = "null";
@@ -131,7 +131,7 @@ final class jf implements dh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var10_ref = decompiledCaughtException;
-          stackIn_8_0 = (RuntimeException) (var10_ref);
+          stackIn_8_0 = var10_ref;
           stackIn_8_1 = new StringBuilder().append("jf.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',');
           if (param9 == null) {
             stackIn_9_2 = "null";
@@ -189,7 +189,7 @@ final class jf implements dh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          stackIn_13_0 = (RuntimeException) (var6);
+          stackIn_13_0 = var6;
           stackIn_13_1 = new StringBuilder().append("jf.G(");
           if (param0 == null) {
             stackIn_14_2 = "null";
@@ -343,12 +343,12 @@ final class jf implements dh {
               var3[var4] = (byte)var5;
             }
           }
-          stackIn_69_0 = (byte[]) (var3);
+          stackIn_69_0 = var3;
           return stackIn_69_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_72_0 = (RuntimeException) (var2);
+          stackIn_72_0 = var2;
           stackIn_72_1 = new StringBuilder().append("jf.C(");
           if (param0 == null) {
             stackIn_73_2 = "null";

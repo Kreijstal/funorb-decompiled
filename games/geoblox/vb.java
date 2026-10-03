@@ -1543,7 +1543,7 @@ final class vb {
             var19++;
             param1 = param0[incrementValue$4];
             var21 = var27[var20] - (param1 >> 16 & 255);
-            stackIn_38_0 = (int[]) (var9);
+            stackIn_38_0 = var9;
             stackIn_38_1 = var20;
             if (var21 >= 0) {
               stackIn_39_2 = var21;
@@ -1552,7 +1552,7 @@ final class vb {
             }
             stackIn_38_0[stackIn_38_1] = stackIn_39_2;
             var21 = var28[var20] - (param1 >> 8 & 255);
-            stackIn_41_0 = (int[]) (var10);
+            stackIn_41_0 = var10;
             stackIn_41_1 = var20;
             if (var21 >= 0) {
               stackIn_42_2 = var21;
@@ -1561,7 +1561,7 @@ final class vb {
             }
             stackIn_41_0[stackIn_41_1] = stackIn_42_2;
             var21 = var29[var20] - (param1 & 255);
-            stackIn_44_0 = (int[]) (var11);
+            stackIn_44_0 = var11;
             stackIn_44_1 = var20;
             if (var21 >= 0) {
               stackIn_45_2 = var21;

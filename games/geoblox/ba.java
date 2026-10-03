@@ -122,7 +122,7 @@ final class ba implements Runnable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_12_0 = (RuntimeException) (var5);
+          stackIn_12_0 = var5;
           stackIn_12_1 = new StringBuilder().append("ba.B(");
           if (param0 == null) {
             stackIn_13_2 = "null";
@@ -173,7 +173,7 @@ final class ba implements Runnable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5_ref = (RuntimeException) (Object) decompiledCaughtException;
-          stackIn_26_0 = (RuntimeException) (var5_ref);
+          stackIn_26_0 = var5_ref;
           stackIn_26_1 = new StringBuilder().append("ba.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_27_2 = "null";

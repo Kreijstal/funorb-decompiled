@@ -87,7 +87,7 @@ final class gf {
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-              stackIn_8_0 = (RuntimeException) (var2_ref2);
+              stackIn_8_0 = var2_ref2;
               stackIn_8_1 = new StringBuilder().append("gf.D(");
               if (param0 == null) {
                 stackIn_9_2 = "null";
@@ -146,7 +146,7 @@ final class gf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_10_0 = (RuntimeException) (var5);
+          stackIn_10_0 = var5;
           stackIn_10_1 = new StringBuilder().append("gf.E(");
           if (param0 == null) {
             stackIn_11_2 = "null";

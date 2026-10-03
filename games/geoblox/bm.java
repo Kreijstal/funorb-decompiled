@@ -236,7 +236,7 @@ final class bm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_97_0 = (RuntimeException) (var3);
+          stackIn_97_0 = var3;
           stackIn_97_1 = new StringBuilder().append("bm.A(").append(param0).append(',');
           if (param1 == null) {
             stackIn_98_2 = "null";

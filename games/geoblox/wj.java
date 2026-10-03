@@ -124,7 +124,7 @@ final class wj extends sh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_28_0 = (RuntimeException) (var3);
+          stackIn_28_0 = var3;
           stackIn_28_1 = new StringBuilder().append("wj.E(");
           if (param0 == null) {
             stackIn_29_2 = "null";
@@ -211,7 +211,7 @@ final class wj extends sh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var3_ref = (RuntimeException) (Object) decompiledCaughtException;
-          stackIn_17_0 = (RuntimeException) (var3_ref);
+          stackIn_17_0 = var3_ref;
           stackIn_17_1 = new StringBuilder().append("wj.G(");
           if (param0 == null) {
             stackIn_18_2 = "null";
@@ -252,7 +252,7 @@ final class wj extends sh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var4);
+          stackIn_6_0 = var4;
           stackIn_6_1 = new StringBuilder().append("wj.C(");
           if (param0 == null) {
             stackIn_7_2 = "null";

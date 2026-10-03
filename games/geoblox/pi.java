@@ -35,11 +35,11 @@ final class pi extends vf {
             return stackIn_4_0;
           }
           stackIn_2_0 = null;
-          return (nc) ((Object) stackIn_2_0);
+          return (nc) (stackIn_2_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_7_0 = (RuntimeException) (var5);
+          stackIn_7_0 = var5;
           stackIn_7_1 = new StringBuilder().append("pi.O(");
           if (param0 == null) {
             stackIn_8_2 = "null";
@@ -104,7 +104,7 @@ final class pi extends vf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var3);
+          stackIn_6_0 = var3;
           stackIn_6_1 = new StringBuilder().append("pi.UA(").append(param0).append(',');
           if (param1 == null) {
             stackIn_7_2 = "null";

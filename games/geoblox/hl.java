@@ -133,7 +133,7 @@ final class hl extends el {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_17_0 = (RuntimeException) (var5);
+          stackIn_17_0 = var5;
           stackIn_17_1 = new StringBuilder().append("hl.G(");
           if (param0 == null) {
             stackIn_18_2 = "null";
@@ -220,7 +220,7 @@ final class hl extends el {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_8_0 = (RuntimeException) (var5);
+          stackIn_8_0 = var5;
           stackIn_8_1 = new StringBuilder().append("hl.H(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_9_2 = "null";

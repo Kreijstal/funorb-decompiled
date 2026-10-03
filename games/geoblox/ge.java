@@ -160,7 +160,7 @@ final class ge {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_26_0 = (RuntimeException) (var5);
+          stackIn_26_0 = var5;
           stackIn_26_1 = new StringBuilder().append("ge.G(");
           if (param0 == null) {
             stackIn_27_2 = "null";
@@ -189,7 +189,7 @@ final class ge {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var2);
+          stackIn_6_0 = var2;
           stackIn_6_1 = new StringBuilder().append("ge.A(");
           if (param0 == null) {
             stackIn_7_2 = "null";
@@ -254,7 +254,7 @@ final class ge {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          stackIn_15_0 = (RuntimeException) (var4);
+          stackIn_15_0 = var4;
           stackIn_15_1 = new StringBuilder().append("ge.C(");
           if (param0 == null) {
             stackIn_16_2 = "null";

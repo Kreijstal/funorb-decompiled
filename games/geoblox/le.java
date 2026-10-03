@@ -44,7 +44,7 @@ final class le implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var2);
+          stackIn_6_0 = var2;
           stackIn_6_1 = new StringBuilder().append("le.mouseClicked(");
           if (param0 == null) {
             stackIn_7_2 = "null";
@@ -116,7 +116,7 @@ final class le implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_9_0 = (RuntimeException) (var2);
+          stackIn_9_0 = var2;
           stackIn_9_1 = new StringBuilder().append("le.mouseReleased(");
           if (param0 == null) {
             stackIn_10_2 = "null";
@@ -165,7 +165,7 @@ final class le implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var2);
+          stackIn_6_0 = var2;
           stackIn_6_1 = new StringBuilder().append("le.mouseExited(");
           if (param0 == null) {
             stackIn_7_2 = "null";
@@ -213,7 +213,7 @@ final class le implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_14_0 = (RuntimeException) (var2);
+          stackIn_14_0 = var2;
           stackIn_14_1 = new StringBuilder().append("le.mousePressed(");
           if (param0 == null) {
             stackIn_15_2 = "null";
@@ -239,7 +239,7 @@ final class le implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var2);
+          stackIn_6_0 = var2;
           stackIn_6_1 = new StringBuilder().append("le.focusLost(");
           if (param0 == null) {
             stackIn_7_2 = "null";
@@ -268,7 +268,7 @@ final class le implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var2);
+          stackIn_6_0 = var2;
           stackIn_6_1 = new StringBuilder().append("le.mouseMoved(");
           if (param0 == null) {
             stackIn_7_2 = "null";

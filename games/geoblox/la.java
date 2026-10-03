@@ -89,7 +89,7 @@ final class la extends sh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_32_0 = (RuntimeException) (var5);
+          stackIn_32_0 = var5;
           stackIn_32_1 = new StringBuilder().append("la.H(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_33_2 = "null";
@@ -142,7 +142,7 @@ final class la extends sh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_11_0 = (RuntimeException) (var5);
+          stackIn_11_0 = var5;
           stackIn_11_1 = new StringBuilder().append("la.PA(").append(param0).append(',');
           if (param1 == null) {
             stackIn_12_2 = "null";
@@ -190,7 +190,7 @@ final class la extends sh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          stackIn_13_0 = (RuntimeException) (var8);
+          stackIn_13_0 = var8;
           stackIn_13_1 = new StringBuilder().append("la.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
           if (param6 == null) {
             stackIn_14_2 = "null";

@@ -214,7 +214,7 @@ final class bj extends nh {
                 ((pb) (var4)).a(false);
               }
               stackIn_55_0 = var4;
-              return (pb) ((Object) stackIn_55_0);
+              return (pb) (stackIn_55_0);
             }
             throw new RuntimeException();
           } catch (java.lang.Exception decompiledCaughtParameter1) {
@@ -316,7 +316,7 @@ final class bj extends nh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_10_0 = (RuntimeException) (var2);
+          stackIn_10_0 = var2;
           stackIn_10_1 = new StringBuilder().append("bj.A(").append(param0).append(',');
           if (param1 == null) {
             stackIn_11_2 = "null";
@@ -625,7 +625,7 @@ final class bj extends nh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var10 = decompiledCaughtException;
-          stackIn_12_0 = (RuntimeException) (var10);
+          stackIn_12_0 = var10;
           stackIn_12_1 = new StringBuilder().append("bj.<init>(").append(param0).append(',');
           if (param1 == null) {
             stackIn_13_2 = "null";

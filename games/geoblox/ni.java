@@ -74,7 +74,7 @@ final class ni extends ee implements pl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_10_0 = (RuntimeException) (var2);
+          stackIn_10_0 = var2;
           stackIn_10_1 = new StringBuilder().append("ni.KA(");
           if (param0 == null) {
             stackIn_11_2 = "null";
@@ -103,12 +103,12 @@ final class ni extends ee implements pl {
           this.a(34 + this.field_h, this.field_r, (byte) -53, 0, 0);
           var4.a(30, this.field_r - 14, (byte) -33, var5, 7);
           this.b((byte) -73, var4);
-          stackIn_1_0 = (hk) (var4);
+          stackIn_1_0 = var4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          stackIn_4_0 = (RuntimeException) (var4_ref);
+          stackIn_4_0 = var4_ref;
           stackIn_4_1 = new StringBuilder().append("ni.GA(").append(param0).append(',');
           if (param1 == null) {
             stackIn_5_2 = "null";
@@ -199,7 +199,7 @@ final class ni extends ee implements pl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          stackIn_14_0 = (RuntimeException) (var6);
+          stackIn_14_0 = var6;
           stackIn_14_1 = new StringBuilder().append("ni.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
           if (param4 == null) {
             stackIn_15_2 = "null";
@@ -246,12 +246,12 @@ final class ni extends ee implements pl {
           if (param1 >= -107) {
             field_C = (String) null;
           }
-          stackIn_6_0 = (nc) (var2);
+          stackIn_6_0 = var2;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          stackIn_9_0 = (RuntimeException) (var2_ref);
+          stackIn_9_0 = var2_ref;
           stackIn_9_1 = new StringBuilder().append("ni.MA(");
           if (param0 == null) {
             stackIn_10_2 = "null";

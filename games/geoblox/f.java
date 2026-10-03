@@ -41,7 +41,7 @@ class f extends qf implements pl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          stackIn_8_0 = (RuntimeException) (var6);
+          stackIn_8_0 = var6;
           stackIn_8_1 = new StringBuilder().append("f.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
           if (param4 == null) {
             stackIn_9_2 = "null";
@@ -147,7 +147,7 @@ class f extends qf implements pl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_7_0 = (RuntimeException) (var5);
+          stackIn_7_0 = var5;
           stackIn_7_1 = new StringBuilder().append("f.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_8_2 = "null";
@@ -655,7 +655,7 @@ class f extends qf implements pl {
             var6.a(rj.field_e, 1, 17);
           } else {
             if (param0 != 256) {
-              stackIn_14_0 = (ni) (var6);
+              stackIn_14_0 = var6;
               if (this.field_mb) {
                 stackIn_15_1 = a.field_b;
               } else {
@@ -688,7 +688,7 @@ class f extends qf implements pl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          stackIn_30_0 = (RuntimeException) (var4);
+          stackIn_30_0 = var4;
           stackIn_30_1 = new StringBuilder().append("f.KA(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_31_2 = "null";
@@ -715,7 +715,7 @@ class f extends qf implements pl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var2);
+          stackIn_6_0 = var2;
           stackIn_6_1 = new StringBuilder().append("f.JA(").append(param0).append(',');
           if (param1 == null) {
             stackIn_7_2 = "null";

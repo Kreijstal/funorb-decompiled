@@ -69,7 +69,7 @@ final class vl extends hf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_24_0 = (RuntimeException) (var5);
+          stackIn_24_0 = var5;
           stackIn_24_1 = new StringBuilder().append("vl.C(");
           if (param0 == null) {
             stackIn_25_2 = "null";
@@ -121,11 +121,11 @@ final class vl extends hf {
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
-          return (vl) ((Object) stackIn_4_0);
+          return (vl) (stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          stackIn_9_0 = (RuntimeException) (var3_ref);
+          stackIn_9_0 = var3_ref;
           stackIn_9_1 = new StringBuilder().append("vl.D(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_10_2 = "null";
@@ -181,7 +181,7 @@ final class vl extends hf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_13_0 = (RuntimeException) (var5);
+          stackIn_13_0 = var5;
           stackIn_13_1 = new StringBuilder().append("vl.B(");
           if (param0 == null) {
             stackIn_14_2 = "null";
@@ -648,7 +648,7 @@ final class vl extends hf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_205_0 = (RuntimeException) (var2);
+          stackIn_205_0 = var2;
           stackIn_205_1 = new StringBuilder().append("vl.<init>(");
           if (param0 == null) {
             stackIn_206_2 = "null";

@@ -58,7 +58,7 @@ final class ml extends ff {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          stackIn_23_0 = (RuntimeException) (var6);
+          stackIn_23_0 = var6;
           stackIn_23_1 = new StringBuilder().append("ml.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
           if (param4 == null) {
             stackIn_24_2 = "null";

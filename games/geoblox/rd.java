@@ -49,7 +49,7 @@ final class rd extends ff {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          stackIn_12_0 = (RuntimeException) (var3_ref);
+          stackIn_12_0 = var3_ref;
           stackIn_12_1 = new StringBuilder().append("rd.C(").append(param0).append(',');
           if (param1 == null) {
             stackIn_13_2 = "null";
@@ -84,14 +84,14 @@ final class rd extends ff {
                 param1.field_x[var4_int] = null;
               } else {
                 var6 = param1.field_x[var4_int];
-                stackIn_8_0 = (si) (var5);
+                stackIn_8_0 = var5;
                 stackIn_8_1 = 2;
                 if (var6 == null) {
                   dupTemp$0 = new si();
                   param1.field_x[var4_int] = dupTemp$0;
-                  stackIn_9_2 = (si) (dupTemp$0);
+                  stackIn_9_2 = dupTemp$0;
                 } else {
-                  stackIn_9_2 = (si) (var6);
+                  stackIn_9_2 = var6;
                 }
                 ((si) (Object) stackIn_8_0).a(stackIn_8_1, stackIn_9_2);
               }
@@ -103,7 +103,7 @@ final class rd extends ff {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          stackIn_15_0 = (RuntimeException) (var4);
+          stackIn_15_0 = var4;
           stackIn_15_1 = new StringBuilder().append("rd.DA(").append(param0).append(',');
           if (param1 == null) {
             stackIn_16_2 = "null";
@@ -139,7 +139,7 @@ final class rd extends ff {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          stackIn_10_0 = (RuntimeException) (var3_ref);
+          stackIn_10_0 = var3_ref;
           stackIn_10_1 = new StringBuilder().append("rd.CA(").append(param0).append(',');
           if (param1 == null) {
             stackIn_11_2 = "null";
@@ -213,7 +213,7 @@ final class rd extends ff {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          stackIn_8_0 = (RuntimeException) (var4);
+          stackIn_8_0 = var4;
           stackIn_8_1 = new StringBuilder().append("rd.GA(");
           if (param0 == null) {
             stackIn_9_2 = "null";
@@ -293,7 +293,7 @@ final class rd extends ff {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          stackIn_31_0 = (RuntimeException) (var6);
+          stackIn_31_0 = var6;
           stackIn_31_1 = new StringBuilder().append("rd.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
           if (param4 == null) {
             stackIn_32_2 = "null";
@@ -341,7 +341,7 @@ final class rd extends ff {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          stackIn_8_0 = (RuntimeException) (var4);
+          stackIn_8_0 = var4;
           stackIn_8_1 = new StringBuilder().append("rd.EA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_9_2 = "null";

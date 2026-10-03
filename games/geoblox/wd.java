@@ -186,7 +186,7 @@ final class wd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          stackIn_14_0 = (RuntimeException) (var6);
+          stackIn_14_0 = var6;
           stackIn_14_1 = new StringBuilder().append("wd.G(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_15_2 = "null";

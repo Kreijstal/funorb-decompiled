@@ -29,7 +29,7 @@ final class ag extends q {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_9_0 = (RuntimeException) (var3);
+          stackIn_9_0 = var3;
           stackIn_9_1 = new StringBuilder().append("ag.A(").append(param0).append(',');
           if (param1 == null) {
             stackIn_10_2 = "null";
@@ -96,7 +96,7 @@ final class ag extends q {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_34_0 = (RuntimeException) (var2);
+          stackIn_34_0 = var2;
           stackIn_34_1 = new StringBuilder().append("ag.E(");
           if (param0 == null) {
             stackIn_35_2 = "null";
@@ -123,7 +123,7 @@ final class ag extends q {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var2);
+          stackIn_6_0 = var2;
           stackIn_6_1 = new StringBuilder().append("ag.B(").append(param0).append(',');
           if (param1 == null) {
             stackIn_7_2 = "null";
@@ -161,7 +161,7 @@ final class ag extends q {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_12_0 = (RuntimeException) (var3);
+          stackIn_12_0 = var3;
           stackIn_12_1 = new StringBuilder().append("ag.D(").append(param0).append(',');
           if (param1 == null) {
             stackIn_13_2 = "null";

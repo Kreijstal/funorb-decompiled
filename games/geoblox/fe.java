@@ -59,7 +59,7 @@ final class fe {
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-              stackIn_15_0 = (RuntimeException) (runtimeException);
+              stackIn_15_0 = runtimeException;
               stackIn_15_1 = new StringBuilder().append("fe.D(").append(param0).append(',');
               if (param1 == null) {
                 stackIn_16_2 = "null";
@@ -144,7 +144,7 @@ final class fe {
             var6 = var4[var5];
             var7 = jk.a(255, var6);
             if (var7 != null) {
-              stackIn_19_0 = (nd) (var7);
+              stackIn_19_0 = var7;
               return stackIn_19_0;
             }
           }
@@ -153,7 +153,7 @@ final class fe {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_25_0 = (RuntimeException) (var2);
+          stackIn_25_0 = var2;
           stackIn_25_1 = new StringBuilder().append("fe.B(");
           if (param0 == null) {
             stackIn_26_2 = "null";

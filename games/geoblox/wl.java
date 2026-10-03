@@ -55,7 +55,7 @@ final class wl implements java.awt.event.KeyListener, java.awt.event.FocusListen
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_25_0 = (RuntimeException) (var2);
+          stackIn_25_0 = var2;
           stackIn_25_1 = new StringBuilder().append("wl.keyPressed(");
           if (param0 == null) {
             stackIn_26_2 = "null";
@@ -129,7 +129,7 @@ final class wl implements java.awt.event.KeyListener, java.awt.event.FocusListen
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          stackIn_16_0 = (RuntimeException) (runtimeException);
+          stackIn_16_0 = runtimeException;
           stackIn_16_1 = new StringBuilder().append("wl.keyReleased(");
           if (param0 == null) {
             stackIn_17_2 = "null";
@@ -163,7 +163,7 @@ final class wl implements java.awt.event.KeyListener, java.awt.event.FocusListen
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var2);
+          stackIn_6_0 = var2;
           stackIn_6_1 = new StringBuilder().append("wl.focusLost(");
           if (param0 == null) {
             stackIn_7_2 = "null";

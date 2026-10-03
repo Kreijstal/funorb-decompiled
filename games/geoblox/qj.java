@@ -81,7 +81,7 @@ final class qj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          stackIn_16_0 = (RuntimeException) (var4);
+          stackIn_16_0 = var4;
           stackIn_16_1 = new StringBuilder().append("qj.B(");
           if (param0 == null) {
             stackIn_17_2 = "null";

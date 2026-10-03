@@ -103,7 +103,7 @@ final class va {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_12_0 = (RuntimeException) (var5);
+          stackIn_12_0 = var5;
           stackIn_12_1 = new StringBuilder().append("va.B(").append(param0).append(',');
           if (param1 == null) {
             stackIn_13_2 = "null";

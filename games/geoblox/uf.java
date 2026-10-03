@@ -55,12 +55,12 @@ final class uf implements Runnable {
             return stackIn_2_0;
           }
           this.a(var5, 15079962);
-          stackIn_4_0 = (o) (var5);
+          stackIn_4_0 = var5;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5_ref = decompiledCaughtException;
-          stackIn_7_0 = (RuntimeException) (var5_ref);
+          stackIn_7_0 = var5_ref;
           stackIn_7_1 = new StringBuilder().append("uf.G(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_8_2 = "null";
@@ -105,7 +105,7 @@ final class uf implements Runnable {
                   (2 == var6.field_x)) {
                 var4.field_y = var6.field_y;
                 var4.field_u = false;
-                stackIn_11_0 = (o) (var4);
+                stackIn_11_0 = var4;
                 return stackIn_11_0;
               }
               var6 = (o) ((Object) this.field_k.a(-20));
@@ -114,12 +114,12 @@ final class uf implements Runnable {
           var4.field_y = param0.a(param1, (byte) -78);
           var4.field_q = true;
           var4.field_u = false;
-          stackIn_18_0 = (o) (var4);
+          stackIn_18_0 = var4;
           return stackIn_18_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = (RuntimeException) (Object) decompiledCaughtException;
-          stackIn_21_0 = (RuntimeException) (var4_ref);
+          stackIn_21_0 = var4_ref;
           stackIn_21_1 = new StringBuilder().append("uf.F(");
           if (param0 == null) {
             stackIn_22_2 = "null";
@@ -158,7 +158,7 @@ final class uf implements Runnable {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) (stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -186,7 +186,7 @@ final class uf implements Runnable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7_ref = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var7_ref);
+          stackIn_6_0 = var7_ref;
           stackIn_6_1 = new StringBuilder().append("uf.C(").append(param0).append(',');
           if (param1 == null) {
             stackIn_7_2 = "null";
@@ -255,12 +255,12 @@ final class uf implements Runnable {
             uf.a(70);
           }
           this.a(var4, 15079962);
-          stackIn_3_0 = (o) (var4);
+          stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var4_ref);
+          stackIn_6_0 = var4_ref;
           stackIn_6_1 = new StringBuilder().append("uf.D(").append(param0).append(',');
           if (param1 == null) {
             stackIn_7_2 = "null";

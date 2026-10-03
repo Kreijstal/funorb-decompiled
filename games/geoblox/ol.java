@@ -62,7 +62,7 @@ final class ol extends hk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var2);
+          stackIn_6_0 = var2;
           stackIn_6_1 = new StringBuilder().append("ol.G(").append(param0).append(',');
           if (param1 == null) {
             stackIn_7_2 = "null";
@@ -125,7 +125,7 @@ final class ol extends hk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          stackIn_26_0 = (RuntimeException) (var8);
+          stackIn_26_0 = var8;
           stackIn_26_1 = new StringBuilder().append("ol.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
           if (param6 == null) {
             stackIn_27_2 = "null";

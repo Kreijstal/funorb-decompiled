@@ -74,7 +74,7 @@ final class kj extends ia {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          stackIn_10_0 = (RuntimeException) (var4);
+          stackIn_10_0 = var4;
           stackIn_10_1 = new StringBuilder().append("kj.C(");
           if (param0 == null) {
             stackIn_11_2 = "null";
@@ -153,7 +153,7 @@ final class kj extends ia {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_22_0 = (RuntimeException) (var3);
+          stackIn_22_0 = var3;
           stackIn_22_1 = new StringBuilder().append("kj.KA(").append(param0).append(',');
           if (param1 == null) {
             stackIn_23_2 = "null";
@@ -204,7 +204,7 @@ final class kj extends ia {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_17_0 = (RuntimeException) (var3);
+          stackIn_17_0 = var3;
           stackIn_17_1 = new StringBuilder().append("kj.N(").append(param0).append(',');
           if (param1 == null) {
             stackIn_18_2 = "null";
@@ -363,7 +363,7 @@ final class kj extends ia {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          stackIn_66_0 = (RuntimeException) (var6);
+          stackIn_66_0 = var6;
           stackIn_66_1 = new StringBuilder().append("kj.K(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_67_2 = "null";
@@ -447,7 +447,7 @@ final class kj extends ia {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          stackIn_20_0 = (RuntimeException) (var6);
+          stackIn_20_0 = var6;
           stackIn_20_1 = new StringBuilder().append("kj.T(");
           if (param0 == null) {
             stackIn_21_2 = "null";
@@ -530,7 +530,7 @@ final class kj extends ia {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_9_0 = (RuntimeException) (var3);
+          stackIn_9_0 = var3;
           stackIn_9_1 = new StringBuilder().append("kj.U(");
           if (param0 == null) {
             stackIn_10_2 = "null";
@@ -572,7 +572,7 @@ final class kj extends ia {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          stackIn_13_0 = (RuntimeException) (var4);
+          stackIn_13_0 = var4;
           stackIn_13_1 = new StringBuilder().append("kj.HA(");
           if (param0 == null) {
             stackIn_14_2 = "null";
@@ -1044,7 +1044,7 @@ final class kj extends ia {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_15_0 = (RuntimeException) (var3);
+          stackIn_15_0 = var3;
           stackIn_15_1 = new StringBuilder().append("kj.IA(");
           if (param0 == null) {
             stackIn_16_2 = "null";
@@ -1122,7 +1122,7 @@ final class kj extends ia {
           var7.field_u = kl.a(var6, this.a(92, var7), this.a((byte) 117, var7), this.a(var7, 761736646));
         } else {
           var7.field_u = kl.a(var6, this.a(83, var7), 0, this.a(var7, 761736646));
-          stackIn_15_1 = (pc) (var7);
+          stackIn_15_1 = var7;
           stackIn_15_2 = -70;
           if (0 <= var9.field_j[param3]) {
             stackIn_16_0 = this;

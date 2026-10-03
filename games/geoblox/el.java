@@ -95,7 +95,7 @@ class el extends hf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var5);
+          stackIn_6_0 = var5;
           stackIn_6_1 = new StringBuilder().append("el.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_7_2 = "null";
@@ -145,7 +145,7 @@ class el extends hf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_17_0 = (RuntimeException) (var5);
+          stackIn_17_0 = var5;
           stackIn_17_1 = new StringBuilder().append("el.H(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_18_2 = "null";
@@ -194,7 +194,7 @@ class el extends hf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var3);
+          stackIn_6_0 = var3;
           stackIn_6_1 = new StringBuilder().append("el.UA(").append(param0).append(',');
           if (param1 == null) {
             stackIn_7_2 = "null";
@@ -516,7 +516,7 @@ class el extends hf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_9_0 = (RuntimeException) (var5);
+          stackIn_9_0 = var5;
           stackIn_9_1 = new StringBuilder().append("el.PA(").append(param0).append(',');
           if (param1 == null) {
             stackIn_10_2 = "null";
@@ -585,7 +585,7 @@ class el extends hf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var8);
+          stackIn_6_0 = var8;
           stackIn_6_1 = new StringBuilder().append("el.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
           if (param6 == null) {
             stackIn_7_2 = "null";
@@ -610,7 +610,7 @@ class el extends hf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var8);
+          stackIn_6_0 = var8;
           stackIn_6_1 = new StringBuilder().append("el.EB(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
           if (param5 == null) {
             stackIn_7_2 = "null";
@@ -689,7 +689,7 @@ class el extends hf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_24_0 = (RuntimeException) (var5);
+          stackIn_24_0 = var5;
           stackIn_24_1 = new StringBuilder().append("el.DC(").append(param0).append(',');
           if (param1 == null) {
             stackIn_25_2 = "null";
@@ -803,7 +803,7 @@ class el extends hf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_9_0 = (RuntimeException) (var5);
+          stackIn_9_0 = var5;
           stackIn_9_1 = new StringBuilder().append("el.CC(");
           if (param0 == null) {
             stackIn_10_2 = "null";

@@ -157,7 +157,7 @@ final class ai extends hf {
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var5_ref = (RuntimeException) (Object) decompiledCaughtException;
-              stackIn_46_0 = (RuntimeException) (var5_ref);
+              stackIn_46_0 = var5_ref;
               stackIn_46_1 = new StringBuilder().append("ai.B(");
               if (param0 == null) {
                 stackIn_47_2 = "null";

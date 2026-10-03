@@ -89,7 +89,7 @@ final class r extends f implements pl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          stackIn_32_0 = (RuntimeException) (var4_ref);
+          stackIn_32_0 = var4_ref;
           stackIn_32_1 = new StringBuilder().append("r.G(").append(param0).append(',');
           if (param1 == null) {
             stackIn_33_2 = "null";
@@ -187,11 +187,11 @@ final class r extends f implements pl {
           }
           field_sb = (String) null;
           stackIn_52_0 = null;
-          return (nd) ((Object) stackIn_52_0);
+          return (nd) (stackIn_52_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_55_0 = (RuntimeException) (var2);
+          stackIn_55_0 = var2;
           stackIn_55_1 = new StringBuilder().append("r.B(");
           if (param0 == null) {
             stackIn_56_2 = "null";

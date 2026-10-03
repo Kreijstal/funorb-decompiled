@@ -199,8 +199,8 @@ final class kc {
                                         L20: {
                                           L21: {
                                             if (var8 != null) {
-                                              stackIn_51_0 = (ja) (var8);
-                                              stackIn_51_1 = (ja) (var7);
+                                              stackIn_51_0 = var8;
+                                              stackIn_51_1 = var7;
                                               if (var9 != 0) {
                                                 break L21;
                                               }
@@ -215,8 +215,8 @@ final class kc {
                                             }
                                             var8 = (ja) ((Object) var11.c((byte) 121));
                                             while (var8 != null) {
-                                              stackIn_51_0 = (ja) (var8);
-                                              stackIn_51_1 = (ja) (var7);
+                                              stackIn_51_0 = var8;
+                                              stackIn_51_1 = var7;
                                               if (var9 != 0) {
                                                 break L21;
                                               }
@@ -320,7 +320,7 @@ final class kc {
                                               }
                                             }
                                             stackIn_51_0 = var5_ref_ja.field_n[var6_int];
-                                            stackIn_51_1 = (ja) (var5_ref_ja);
+                                            stackIn_51_1 = var5_ref_ja;
                                             continue;
                                           }
                                         }
@@ -359,7 +359,7 @@ final class kc {
                               var6_int = stackIn_56_0;
                               while (var6_int < var5_ref_ja.field_L) {
                                 stackIn_51_0 = var5_ref_ja.field_n[var6_int];
-                                stackIn_51_1 = (ja) (var5_ref_ja);
+                                stackIn_51_1 = var5_ref_ja;
                                 ((ja) (Object) stackIn_51_0).a(stackIn_51_1, 0);
                                 var6_int++;
                                 if (var9 != 0) {

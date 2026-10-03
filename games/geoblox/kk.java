@@ -291,7 +291,7 @@ final class kk extends ji {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_39_0 = (RuntimeException) (var3);
+          stackIn_39_0 = var3;
           stackIn_39_1 = new StringBuilder().append("kk.O(").append(param0).append(',');
           if (param1 == null) {
             stackIn_40_2 = "null";
@@ -384,7 +384,7 @@ final class kk extends ji {
             } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
               decompiledCaughtException = decompiledCaughtParameter3;
               var4_ref3 = (RuntimeException) (Object) decompiledCaughtException;
-              stackIn_27_0 = (RuntimeException) (var4_ref3);
+              stackIn_27_0 = var4_ref3;
               stackIn_27_1 = new StringBuilder().append("kk.C(");
               if (param0 == null) {
                 stackIn_28_2 = "null";

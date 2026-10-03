@@ -116,7 +116,7 @@ final class hd extends sh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var12 = decompiledCaughtException;
-          stackIn_14_0 = (RuntimeException) (var12);
+          stackIn_14_0 = var12;
           stackIn_14_1 = new StringBuilder().append("hd.<init>(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
           if (param4 == null) {
             stackIn_15_2 = "null";

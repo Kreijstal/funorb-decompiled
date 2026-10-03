@@ -89,7 +89,7 @@ abstract class pb extends rc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
           decompiledCaughtException = decompiledCaughtParameter2;
           var5_ref = (RuntimeException) (Object) decompiledCaughtException;
-          stackIn_21_0 = (RuntimeException) (var5_ref);
+          stackIn_21_0 = var5_ref;
           stackIn_21_1 = new StringBuilder().append("pb.B(").append(param0).append(',');
           if (param1 == null) {
             stackIn_22_2 = "null";

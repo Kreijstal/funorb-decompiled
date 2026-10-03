@@ -30,7 +30,7 @@ final class qa {
             var4 = new byte[var3_int];
             param0.field_f = param0.field_f + vj.field_b.a(var4, param0.field_f, param0.field_j, param1, -127, var3_int);
             var5 = bc.a(param1 ^ -103, var4, 0, var3_int);
-            stackIn_4_0 = (String) (var5);
+            stackIn_4_0 = var5;
             return stackIn_4_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -41,7 +41,7 @@ final class qa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var3_ref = (RuntimeException) (Object) decompiledCaughtException;
-          stackIn_9_0 = (RuntimeException) (var3_ref);
+          stackIn_9_0 = var3_ref;
           stackIn_9_1 = new StringBuilder().append("qa.A(");
           if (param0 == null) {
             stackIn_10_2 = "null";
@@ -71,12 +71,12 @@ final class qa {
           }
           var2 = new qd(param0, gh.field_m, md.field_e, rc.field_j, hl.field_K, cm.field_j, mj.field_a);
           kj.c(true);
-          stackIn_6_0 = (qd) (var2);
+          stackIn_6_0 = var2;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          stackIn_9_0 = (RuntimeException) (var2_ref);
+          stackIn_9_0 = var2_ref;
           stackIn_9_1 = new StringBuilder().append("qa.D(");
           if (param0 == null) {
             stackIn_10_2 = "null";
@@ -270,7 +270,7 @@ final class qa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          stackIn_69_0 = (RuntimeException) (var7);
+          stackIn_69_0 = var7;
           stackIn_69_1 = new StringBuilder().append("qa.E(");
           if (param0 == null) {
             stackIn_70_2 = "null";

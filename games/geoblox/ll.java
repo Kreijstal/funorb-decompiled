@@ -31,7 +31,7 @@ final class ll {
         try {
           if (!mf.a(param2, param0, 117, param3)) {
             stackIn_2_0 = null;
-            return (dm[]) ((Object) stackIn_2_0);
+            return (dm[]) (stackIn_2_0);
           }
           if (param1 == -81) {
             stackIn_7_0 = nf.b(255);
@@ -42,7 +42,7 @@ final class ll {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          stackIn_10_0 = (RuntimeException) (var4);
+          stackIn_10_0 = var4;
           stackIn_10_1 = new StringBuilder().append("ll.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_11_2 = "null";

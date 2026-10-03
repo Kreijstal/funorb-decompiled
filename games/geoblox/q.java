@@ -113,7 +113,7 @@ abstract class q extends ib implements ga {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_7_0 = (RuntimeException) (var3);
+          stackIn_7_0 = var3;
           stackIn_7_1 = new StringBuilder().append("q.J(");
           if (param0 == null) {
             stackIn_8_2 = "null";
@@ -175,7 +175,7 @@ abstract class q extends ib implements ga {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_29_0 = (RuntimeException) (var3);
+          stackIn_29_0 = var3;
           stackIn_29_1 = new StringBuilder().append("q.O(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_30_2 = "null";
@@ -214,7 +214,7 @@ abstract class q extends ib implements ga {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var5);
+          stackIn_6_0 = var5;
           stackIn_6_1 = new StringBuilder().append("q.R(");
           if (param0 == null) {
             stackIn_7_2 = "null";

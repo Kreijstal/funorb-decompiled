@@ -84,7 +84,7 @@ final class ek {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          stackIn_26_0 = (RuntimeException) (var6);
+          stackIn_26_0 = var6;
           stackIn_26_1 = new StringBuilder().append("ek.A(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_27_2 = "null";

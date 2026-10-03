@@ -65,7 +65,7 @@ abstract class oe extends dd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_7_0 = (RuntimeException) (var2);
+          stackIn_7_0 = var2;
           stackIn_7_1 = new StringBuilder().append("oe.V(").append(param0).append(',');
           if (param1 == null) {
             stackIn_8_2 = "null";
@@ -181,7 +181,7 @@ abstract class oe extends dd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          stackIn_9_0 = (RuntimeException) (var4);
+          stackIn_9_0 = var4;
           stackIn_9_1 = new StringBuilder().append("oe.P(").append(param0).append(',');
           if (param1 == null) {
             stackIn_10_2 = "null";
@@ -286,11 +286,11 @@ abstract class oe extends dd {
             return stackIn_28_0;
           }
           stackIn_26_0 = null;
-          return (String) ((Object) stackIn_26_0);
+          return (String) (stackIn_26_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_31_0 = (RuntimeException) (var2);
+          stackIn_31_0 = var2;
           stackIn_31_1 = new StringBuilder().append("oe.L(");
           if (param0 == null) {
             stackIn_32_2 = "null";

@@ -106,7 +106,7 @@ final class og extends rc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          stackIn_23_0 = (RuntimeException) (var4);
+          stackIn_23_0 = var4;
           stackIn_23_1 = new StringBuilder().append("og.H(").append(param0).append(',');
           if (param1 == null) {
             stackIn_24_2 = "null";
@@ -200,7 +200,7 @@ final class og extends rc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_9_0 = (RuntimeException) (var3);
+          stackIn_9_0 = var3;
           stackIn_9_1 = new StringBuilder().append("og.B(").append(param0).append(',');
           if (param1 == null) {
             stackIn_10_2 = "null";

@@ -86,7 +86,7 @@ final class ic {
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var15_ref = (RuntimeException) (Object) decompiledCaughtException;
-              stackIn_16_0 = (RuntimeException) (var15_ref);
+              stackIn_16_0 = var15_ref;
               stackIn_16_1 = new StringBuilder().append("ic.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',');
               if (param9 == null) {
                 stackIn_17_2 = "null";

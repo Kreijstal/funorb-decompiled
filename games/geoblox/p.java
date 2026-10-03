@@ -205,7 +205,7 @@ final class p extends hf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          stackIn_71_0 = (RuntimeException) (var7);
+          stackIn_71_0 = var7;
           stackIn_71_1 = new StringBuilder().append("p.B(");
           if (param0 == null) {
             stackIn_72_2 = "null";
@@ -274,12 +274,12 @@ final class p extends hf {
           if (null == var2) {
             var2 = "";
           }
-          stackIn_6_0 = (String) (var2);
+          stackIn_6_0 = var2;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          stackIn_10_0 = (RuntimeException) (var2_ref);
+          stackIn_10_0 = var2_ref;
           stackIn_10_1 = new StringBuilder().append("p.C(");
           if (param0 == null) {
             stackIn_11_2 = "null";

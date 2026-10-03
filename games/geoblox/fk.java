@@ -22,7 +22,7 @@ final class fk extends sh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          stackIn_7_0 = (RuntimeException) (var2);
+          stackIn_7_0 = var2;
           stackIn_7_1 = new StringBuilder().append("fk.F(").append(param0).append(',');
           if (param1 == null) {
             stackIn_8_2 = "null";
@@ -107,20 +107,20 @@ final class fk extends sh {
                 }
                 var5 = (sc) (var4.newInstance());
                 var5.a(param2, param1, param3, (byte) 127);
-                stackIn_4_0 = (sc) (var5);
+                stackIn_4_0 = var5;
                 return stackIn_4_0;
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var4_ref = decompiledCaughtException;
                 var5_ref = new bf();
                 ((sc) ((Object) var5_ref)).a(param2, param1, param3, (byte) 117);
-                stackIn_6_0 = (bf) (var5_ref);
+                stackIn_6_0 = var5_ref;
                 return (sc) ((Object) stackIn_6_0);
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-              stackIn_9_0 = (RuntimeException) (var4_ref2);
+              stackIn_9_0 = var4_ref2;
               stackIn_9_1 = new StringBuilder().append("fk.E(").append(param0).append(',');
               if (param1 == null) {
                 stackIn_10_2 = "null";
