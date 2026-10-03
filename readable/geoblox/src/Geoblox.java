@@ -739,7 +739,7 @@ public final class Geoblox extends wf {
                 }
                 if (ai.requestedScreenId != -1) {
                   og.screens[ai.requestedScreenId].updateTransition(16405);
-                  og.screens[ai.requestedScreenId].field_q = 0;
+                  og.screens[ai.requestedScreenId].tutorialPageIndex = 0;
                   if (ai.requestedScreenId != 3) {
                     og.screens[ai.requestedScreenId].selectedItemIndex = 0;
                   } else {

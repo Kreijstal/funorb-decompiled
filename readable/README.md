@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 7,015 guarded naming rules: 67 classes, 871 fields,
-603 methods, 1,776 parameters and 3,698 local declarations. Both 303-file corpora
+The current export has 7,076 guarded naming rules: 67 classes, 882 fields,
+606 methods, 1,781 parameters and 3,740 local declarations. Both 303-file corpora
 compile, comparing 138,772 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -53,6 +53,38 @@ Another 9,828 cases preserve native general-angle/extreme-scale traces. ARGB
 smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
+
+## Menu, background and tutorial names (pass 93)
+
+This naming-only pass adds 61 guarded identities: 11 fields, three methods,
+five parameters and 42 locals. Every parameter/local in `GameScreen.renderScreen`,
+`drawScrollingMenuBackground`, `renderTutorialPage` and `advanceTutorialSlide`
+now has a semantic name. Panel geometry, fullscreen overlay alpha/text/button
+layout, scrolling tile cursors, tutorial illustrations and exception snapshots
+follow the actual source reads and writes. Reused slots retain combined-role
+names, including `layoutYOrOverlayAlphaOrCurtainX` and
+`orbitXOrPageIndexOrLineHeight`; these are not independent variables.
+
+The tutorial curtain uses `tutorialPageIndex`, `previousTutorialPageIndex`,
+`tutorialSlideForward`, `tutorialSlideActive`, `tutorialSlideOffset` and
+`renderingPreviousTutorialPage`. The page index still accepts the original
+`-45` pointer-guard assignment. Background/foreground X/Y offsets and saved
+clip bounds are also named. No guard, predicate, clipping operation, diagnostic
+string, exception region or raw byte is changed.
+
+All 7,015 previous complete naming rules, raw source/decompiler pins and six
+native probe sources/traces remain. The 7,076 rules apply 57,788 identifier edits.
+Both 303-file corpora compile and compare 138,772 bindings and 388 override
+relationships. Rule-builder/source-migration/text-resource checks pass all three
+files; full reproduction and dictionary reversal recover the pinned raw Git
+input byte-for-byte. The current readable source-tree SHA-256 is
+`d2272fdac93bd61b39c204ab0aec40c431ce1bd8db120ac5d5bf504796c9eee7`.
+
+These names are source-audited; this pass adds no dynamic menu/tutorial or asset
+coverage. The structural inventory remains 21 overlapping large spans, ten with
+block labels. Other menu/input locals, mixed-effect exits, larger gameplay
+reconstruction and whole-game/browser/phone acceptance remain unfinished or
+unverified. Earlier sections below retain their historical counts and scope.
 
 ## Nested predicate-only skip trees (pass 92)
 

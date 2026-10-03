@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GameScreen extends MenuScreen {
-    private boolean field_S;
+    private boolean renderingPreviousTutorialPage;
     private int field_X;
     private boolean field_H;
     private int field_Z;
     private int field_M;
     private int field_V;
     private int field_w;
-    private int field_n;
+    private int previousTutorialPageIndex;
     private Geoblox gameApplet;
     private int screenId;
     int activeTicks;
@@ -17,7 +17,7 @@ final class GameScreen extends MenuScreen {
     private int field_B;
     private int field_t;
     private int field_L;
-    private int[] field_P;
+    private int[] savedTutorialClipBounds;
     private int field_T;
     private boolean field_C;
     static String[] quickChatShortcutHelpTexts;
@@ -26,19 +26,19 @@ final class GameScreen extends MenuScreen {
     private int field_Y;
     static int selectedThemeId;
     private double field_A;
-    private boolean field_E;
+    private boolean tutorialSlideActive;
     private int animationTick;
-    private int field_u;
-    private int field_I;
+    private int foregroundScrollX;
+    private int foregroundScrollY;
     private PcmSampleStream volumePreviewStream;
     private int volumePreviewTicks;
     static String createNameLeadingSpaceAlertText;
-    private int field_W;
-    int field_q;
-    private boolean field_v;
+    private int backgroundScrollX;
+    int tutorialPageIndex;
+    private boolean tutorialSlideForward;
     static java.applet.Applet field_x;
-    private int field_F;
-    private int field_O;
+    private int tutorialSlideOffset;
+    private int backgroundScrollY;
     private int field_z;
 
     final void handleMenuKey(int itemIndex, int param1) {
@@ -245,78 +245,78 @@ final class GameScreen extends MenuScreen {
         }
     }
 
-    private final void b(boolean param0) {
-        int stackIn_16_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        var4 = Geoblox.field_C;
+    private final void drawScrollingMenuBackground(boolean setTutorialOffsetGuard) {
+        int tileOriginYOrForegroundStartX = 0;
+        RuntimeException caughtFailure = null;
+        int tileX = 0;
+        RuntimeException backgroundFailure = null;
+        int tileY = 0;
+        int clientControlFlowGuard = 0;
+        clientControlFlowGuard = Geoblox.field_C;
         try {
-          if (param0) {
-            this.field_F = 124;
+          if (setTutorialOffsetGuard) {
+            this.tutorialSlideOffset = 124;
           }
-          this.field_W = this.field_W % ee.menuBackgroundSprite.fullWidth;
-          this.field_O = this.field_O % ee.menuBackgroundSprite.fullHeight;
-          var2_int = -ee.menuBackgroundSprite.fullWidth + this.field_W;
+          this.backgroundScrollX = this.backgroundScrollX % ee.menuBackgroundSprite.fullWidth;
+          this.backgroundScrollY = this.backgroundScrollY % ee.menuBackgroundSprite.fullHeight;
+          tileX = -ee.menuBackgroundSprite.fullWidth + this.backgroundScrollX;
           L1: while (true) {
             L2: {
               L3: {
-                if (640 > var2_int) {
-                  stackIn_16_0 = ee.menuBackgroundSprite.fullHeight + this.field_O + 480;
-                  if (var4 != 0) {
+                if (640 > tileX) {
+                  tileOriginYOrForegroundStartX = ee.menuBackgroundSprite.fullHeight + this.backgroundScrollY + 480;
+                  if (clientControlFlowGuard != 0) {
                     break L2;
                   }
-                  var3 = stackIn_16_0;
+                  tileY = tileOriginYOrForegroundStartX;
                   while (true) {
                     L5: {
-                      if (~-ee.menuBackgroundSprite.fullHeight >= ~var3) {
-                        ee.menuBackgroundSprite.drawUnmasked(var2_int, var3);
-                        var3 = var3 - ee.menuBackgroundSprite.fullHeight;
-                        if (var4 != 0) {
+                      if (~-ee.menuBackgroundSprite.fullHeight >= ~tileY) {
+                        ee.menuBackgroundSprite.drawUnmasked(tileX, tileY);
+                        tileY = tileY - ee.menuBackgroundSprite.fullHeight;
+                        if (clientControlFlowGuard != 0) {
                           break L5;
                         }
-                        if (var4 == 0) {
+                        if (clientControlFlowGuard == 0) {
                           continue;
                         }
                       }
-                      var2_int = var2_int + ee.menuBackgroundSprite.fullWidth;
+                      tileX = tileX + ee.menuBackgroundSprite.fullWidth;
                     }
-                    if (var4 == 0) {
+                    if (clientControlFlowGuard == 0) {
                       continue L1;
                     }
                     break L3;
                   }
                 }
               }
-              this.field_I = this.field_I % vc.menuForegroundSprite.fullHeight;
-              this.field_u = this.field_u % vc.menuForegroundSprite.fullWidth;
-              stackIn_16_0 = this.field_u + (vc.menuForegroundSprite.fullWidth + 640);
+              this.foregroundScrollY = this.foregroundScrollY % vc.menuForegroundSprite.fullHeight;
+              this.foregroundScrollX = this.foregroundScrollX % vc.menuForegroundSprite.fullWidth;
+              tileOriginYOrForegroundStartX = this.foregroundScrollX + (vc.menuForegroundSprite.fullWidth + 640);
             }
-            var2_int = stackIn_16_0;
+            tileX = tileOriginYOrForegroundStartX;
             L7: while (true) {
               L9: {
-                if (~-vc.menuForegroundSprite.fullWidth >= ~var2_int) {
-                  if (var4 != 0) {
+                if (~-vc.menuForegroundSprite.fullWidth >= ~tileX) {
+                  if (clientControlFlowGuard != 0) {
                     return;
                   }
-                  var3 = this.field_I + vc.menuForegroundSprite.fullHeight + 480;
+                  tileY = this.foregroundScrollY + vc.menuForegroundSprite.fullHeight + 480;
                   while (true) {
                     L11: {
-                      if (~var3 <= ~-vc.menuForegroundSprite.fullHeight) {
-                        vc.menuForegroundSprite.draw(var2_int, var3);
-                        var3 = var3 - vc.menuForegroundSprite.fullHeight;
-                        if (var4 != 0) {
+                      if (~tileY <= ~-vc.menuForegroundSprite.fullHeight) {
+                        vc.menuForegroundSprite.draw(tileX, tileY);
+                        tileY = tileY - vc.menuForegroundSprite.fullHeight;
+                        if (clientControlFlowGuard != 0) {
                           break L11;
                         }
-                        if (var4 == 0) {
+                        if (clientControlFlowGuard == 0) {
                           continue;
                         }
                       }
-                      var2_int = var2_int - vc.menuForegroundSprite.fullWidth;
+                      tileX = tileX - vc.menuForegroundSprite.fullWidth;
                     }
-                    if (var4 == 0) {
+                    if (clientControlFlowGuard == 0) {
                       continue L7;
                     }
                     break L9;
@@ -326,10 +326,10 @@ final class GameScreen extends MenuScreen {
               return;
             }
           }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var2), "c.I(" + param0 + ')');
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          backgroundFailure = caughtFailure;
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) backgroundFailure), "c.I(" + setTutorialOffsetGuard + ')');
         }
     }
 
@@ -368,52 +368,52 @@ final class GameScreen extends MenuScreen {
         }
     }
 
-    final void renderScreen(int param0) {
-        int stackIn_73_0 = 0;
-        int stackIn_122_0 = 0;
-        int stackIn_144_0 = 0;
-        int stackIn_191_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        String var7_ref_String = null;
-        int var8 = 0;
-        String var8_ref_String = null;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        var12 = Geoblox.field_C;
+    final void renderScreen(int methodGuard) {
+        int membershipOverlayAlpha = 0;
+        int unavailableOverlayAlpha = 0;
+        int acceptanceOverlayAlpha = 0;
+        int fallbackOverlayAlpha = 0;
+        RuntimeException caughtFailure = null;
+        int panelHeight = 0;
+        RuntimeException renderFailure = null;
+        int panelLeft = 0;
+        int panelWidth = 0;
+        int layoutYOrOverlayAlphaOrCurtainX = 0;
+        int textYOrButtonTop = 0;
+        int dialogButtonWidth = 0;
+        String acceptancePromptText = null;
+        int dialogButtonLeft = 0;
+        String acceptanceCountdownText = null;
+        int buttonTextCenterOrConfirmationWidth = 0;
+        int confirmationButtonLeft = 0;
+        int confirmationTextCenter = 0;
+        int clientControlFlowGuard = 0;
+        clientControlFlowGuard = Geoblox.field_C;
         try {
-          if (param0 != -28750) {
+          if (methodGuard != -28750) {
             return;
           }
-          this.b(false);
-          var2_int = 270;
-          var3 = 140;
-          var4 = 400;
+          this.drawScrollingMenuBackground(false);
+          panelHeight = 270;
+          panelLeft = 140;
+          panelWidth = 400;
           if ((this.screenId != 0) &&
               (this.screenId != 1) &&
               (this.screenId != 4)) {
             L1: {
               if (2 == this.screenId) {
-                var2_int = 235;
-                if (var12 == 0) {
+                panelHeight = 235;
+                if (clientControlFlowGuard == 0) {
                   break L1;
                 }
               }
-              var2_int = 285;
+              panelHeight = 285;
             }
             L3: {
-              var5 = 120;
+              layoutYOrOverlayAlphaOrCurtainX = 120;
               if (this.screenId == 3) {
-                var5 += 10;
-                if (var12 == 0) {
+                layoutYOrOverlayAlphaOrCurtainX += 10;
+                if (clientControlFlowGuard == 0) {
                   break L3;
                 }
               }
@@ -421,13 +421,13 @@ final class GameScreen extends MenuScreen {
                   (this.screenId != 7)) {
                 break L3;
               }
-              var4 += 20;
-              var5 -= 10;
+              panelWidth += 20;
+              layoutYOrOverlayAlphaOrCurtainX -= 10;
             }
-            ma.drawNineSlicePanel(var3, var5, var2_int, (byte) -92, var4, ll.frameNineSliceSprites);
+            ma.drawNineSlicePanel(panelLeft, layoutYOrOverlayAlphaOrCurtainX, panelHeight, (byte) -92, panelWidth, ll.frameNineSliceSprites);
           }
-          if (!this.field_E) {
-            super.renderScreen(param0 + 0);
+          if (!this.tutorialSlideActive) {
+            super.renderScreen(methodGuard + 0);
           }
           if ((this.screenId != 2) &&
               (this.screenId != 8)) {
@@ -435,21 +435,21 @@ final class GameScreen extends MenuScreen {
                   (7 != this.screenId))) {
               kh.screenTitleSprites[4].draw(0, 20);
               ac.a(false, false, (byte) -93);
-              if (var12 == 0) {
+              if (clientControlFlowGuard == 0) {
                 return;
               }
             }
             if (this.screenId != 6) {
               if (this.screenId == 4) {
                 kh.screenTitleSprites[8].draw(0, 20);
-                ma.drawNineSlicePanel(var3 + 10, 120, 100, (byte) -92, var4, ll.frameNineSliceSprites);
-                var5 = 184;
-                dd.uiPaletteFont.drawCenteredText(Geoblox.loginMessage, 320, var5, 0, -1);
-                var5 = 185;
-                fi.smallFont.drawParagraph(r.field_sb, 130, var5, 380, 300, 0, -1, 1, 0, 14);
-                ma.drawNineSlicePanel(320, 120, 60, (byte) -92, var4, ll.frameNineSliceSprites);
+                ma.drawNineSlicePanel(panelLeft + 10, 120, 100, (byte) -92, panelWidth, ll.frameNineSliceSprites);
+                layoutYOrOverlayAlphaOrCurtainX = 184;
+                dd.uiPaletteFont.drawCenteredText(Geoblox.loginMessage, 320, layoutYOrOverlayAlphaOrCurtainX, 0, -1);
+                layoutYOrOverlayAlphaOrCurtainX = 185;
+                fi.smallFont.drawParagraph(r.field_sb, 130, layoutYOrOverlayAlphaOrCurtainX, 380, 300, 0, -1, 1, 0, 14);
+                ma.drawNineSlicePanel(320, 120, 60, (byte) -92, panelWidth, ll.frameNineSliceSprites);
                 fi.smallFont.drawParagraph(bd.field_b, 130, 330, 380, 300, 0, -1, 1, 0, 14);
-                if (var12 == 0) {
+                if (clientControlFlowGuard == 0) {
                   return;
                 }
               }
@@ -464,20 +464,20 @@ final class GameScreen extends MenuScreen {
                 }
                 if (fh.c(-93)) {
                   if (this.activeTicks <= 200) {
-                    stackIn_73_0 = this.activeTicks;
+                    membershipOverlayAlpha = this.activeTicks;
                   } else {
-                    stackIn_73_0 = 200;
+                    membershipOverlayAlpha = 200;
                   }
-                  var5 = stackIn_73_0;
-                  SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, var5);
+                  layoutYOrOverlayAlphaOrCurtainX = membershipOverlayAlpha;
+                  SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, layoutYOrOverlayAlphaOrCurtainX);
                   ma.drawNineSlicePanel(160, 150, 80, (byte) -92, 340, ll.frameNineSliceSprites);
-                  var6 = 170;
-                  fi.smallFont.drawParagraph(ki.fullscreenNonmemberText, 160, var6, 320, 300, 0, -1, 1, 0, 16);
-                  var7 = 100;
-                  var8 = -(20 + var7 >> 1) + 410;
-                  var6 = 265;
-                  var9 = var8 - (-(var7 >> 1) - 10);
-                  ma.drawNineSlicePanel(var6, var8, 36, (byte) -92, 20 + var7, eb.mouseBoxFrames);
+                  textYOrButtonTop = 170;
+                  fi.smallFont.drawParagraph(ki.fullscreenNonmemberText, 160, textYOrButtonTop, 320, 300, 0, -1, 1, 0, 16);
+                  dialogButtonWidth = 100;
+                  dialogButtonLeft = -(20 + dialogButtonWidth >> 1) + 410;
+                  textYOrButtonTop = 265;
+                  buttonTextCenterOrConfirmationWidth = dialogButtonLeft - (-(dialogButtonWidth >> 1) - 10);
+                  ma.drawNineSlicePanel(textYOrButtonTop, dialogButtonLeft, 36, (byte) -92, 20 + dialogButtonWidth, eb.mouseBoxFrames);
                   if ((!(1 != this.field_o) ||
                       (!(this.field_o >= 0) &&
                         !(350 >= PrefixCodeDecoder.pointerXSnapshot) &&
@@ -486,12 +486,12 @@ final class GameScreen extends MenuScreen {
                         !(ue.pointerYSnapshot >= 299)))) {
                     dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
                   }
-                  dd.uiPaletteFont.drawCenteredText(hh.fullscreenCloseButtonText, var9, 30 + var6, 0, -1);
-                  var8 = 320 - (20 + var7 >> 1) - 90;
+                  dd.uiPaletteFont.drawCenteredText(hh.fullscreenCloseButtonText, buttonTextCenterOrConfirmationWidth, 30 + textYOrButtonTop, 0, -1);
+                  dialogButtonLeft = 320 - (20 + dialogButtonWidth >> 1) - 90;
                   dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
-                  var6 = 265;
-                  var9 = 10 + (var7 >> 1) + var8;
-                  ma.drawNineSlicePanel(var6, var8, 36, (byte) -92, var7 + 20, eb.mouseBoxFrames);
+                  textYOrButtonTop = 265;
+                  buttonTextCenterOrConfirmationWidth = 10 + (dialogButtonWidth >> 1) + dialogButtonLeft;
+                  ma.drawNineSlicePanel(textYOrButtonTop, dialogButtonLeft, 36, (byte) -92, dialogButtonWidth + 20, eb.mouseBoxFrames);
                   if ((!(this.field_o != 0) ||
                       (!(0 <= this.field_o) &&
                         !(170 >= PrefixCodeDecoder.pointerXSnapshot) &&
@@ -500,29 +500,29 @@ final class GameScreen extends MenuScreen {
                         !(ue.pointerYSnapshot >= 299)))) {
                     dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
                   }
-                  dd.uiPaletteFont.drawCenteredText(qb.fullscreenMembersButtonText, var9, 30 + var6, 0, -1);
+                  dd.uiPaletteFont.drawCenteredText(qb.fullscreenMembersButtonText, buttonTextCenterOrConfirmationWidth, 30 + textYOrButtonTop, 0, -1);
                   dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
-                  if (var12 == 0) {
+                  if (clientControlFlowGuard == 0) {
                     return;
                   }
                 }
                 if (og.field_n > 0) {
                   if (InstrumentPatch.field_n == null) {
                     if (this.activeTicks > 200) {
-                      stackIn_122_0 = 200;
+                      unavailableOverlayAlpha = 200;
                     } else {
-                      stackIn_122_0 = this.activeTicks;
+                      unavailableOverlayAlpha = this.activeTicks;
                     }
-                    var5 = stackIn_122_0;
-                    SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, var5);
+                    layoutYOrOverlayAlphaOrCurtainX = unavailableOverlayAlpha;
+                    SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, layoutYOrOverlayAlphaOrCurtainX);
                     ma.drawNineSlicePanel(160, 160, 95, (byte) -92, 320, ll.frameNineSliceSprites);
-                    var6 = 170;
-                    var6 = var6 + 16 * fi.smallFont.drawParagraph(sj.fullscreenUnavailableText, 170, var6, 300, 300, 0, -1, 1, 0, 16);
-                    var6 += 40;
-                    var7 = 100;
-                    var8 = 320 - (var7 + 20 >> 1);
-                    var9 = (var7 >> 1) + (var8 + 10);
-                    ma.drawNineSlicePanel(var6, var8, 36, (byte) -92, 20 + var7, eb.mouseBoxFrames);
+                    textYOrButtonTop = 170;
+                    textYOrButtonTop = textYOrButtonTop + 16 * fi.smallFont.drawParagraph(sj.fullscreenUnavailableText, 170, textYOrButtonTop, 300, 300, 0, -1, 1, 0, 16);
+                    textYOrButtonTop += 40;
+                    dialogButtonWidth = 100;
+                    dialogButtonLeft = 320 - (dialogButtonWidth + 20 >> 1);
+                    buttonTextCenterOrConfirmationWidth = (dialogButtonWidth >> 1) + (dialogButtonLeft + 10);
+                    ma.drawNineSlicePanel(textYOrButtonTop, dialogButtonLeft, 36, (byte) -92, 20 + dialogButtonWidth, eb.mouseBoxFrames);
                     if ((!(0 != this.field_o) ||
                         (!(260 >= PrefixCodeDecoder.pointerXSnapshot) &&
                           !(PrefixCodeDecoder.pointerXSnapshot >= 380) &&
@@ -530,39 +530,39 @@ final class GameScreen extends MenuScreen {
                           !(ue.pointerYSnapshot >= 309)))) {
                       dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
                     }
-                    dd.uiPaletteFont.drawCenteredText(hh.fullscreenCloseButtonText, var9, 30 + var6, 0, -1);
+                    dd.uiPaletteFont.drawCenteredText(hh.fullscreenCloseButtonText, buttonTextCenterOrConfirmationWidth, 30 + textYOrButtonTop, 0, -1);
                     dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
-                    if (var12 == 0) {
+                    if (clientControlFlowGuard == 0) {
                       return;
                     }
                   }
                   if (this.activeTicks <= 200) {
-                    stackIn_144_0 = this.activeTicks;
+                    acceptanceOverlayAlpha = this.activeTicks;
                   } else {
-                    stackIn_144_0 = 200;
+                    acceptanceOverlayAlpha = 200;
                   }
                   L27: {
-                    var5 = stackIn_144_0;
-                    SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, var5);
+                    layoutYOrOverlayAlphaOrCurtainX = acceptanceOverlayAlpha;
+                    SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, layoutYOrOverlayAlphaOrCurtainX);
                     ma.drawNineSlicePanel(160, 160, 140, (byte) -92, 320, ll.frameNineSliceSprites);
-                    var6 = 170;
-                    var7_ref_String = ue.fullscreenBeforeAcceptText + " " + ArchiveRequest.fullscreenAcceptButtonText + " " + wj.fullscreenAfterAcceptText + " " + rb.fullscreenCancelButtonText + " " + uj.fullscreenAfterCancelText;
-                    var6 = var6 + 16 * fi.smallFont.drawParagraph(var7_ref_String, 170, var6, 300, 300, 0, -1, 1, 0, 16);
-                    var6 += 10;
-                    var8_ref_String = Integer.toString((1500 - this.activeTicks) / 150 + 1);
+                    textYOrButtonTop = 170;
+                    acceptancePromptText = ue.fullscreenBeforeAcceptText + " " + ArchiveRequest.fullscreenAcceptButtonText + " " + wj.fullscreenAfterAcceptText + " " + rb.fullscreenCancelButtonText + " " + uj.fullscreenAfterCancelText;
+                    textYOrButtonTop = textYOrButtonTop + 16 * fi.smallFont.drawParagraph(acceptancePromptText, 170, textYOrButtonTop, 300, 300, 0, -1, 1, 0, 16);
+                    textYOrButtonTop += 10;
+                    acceptanceCountdownText = Integer.toString((1500 - this.activeTicks) / 150 + 1);
                     if ((1500 - this.activeTicks) / 150 <= 0) {
-                      var6 = var6 + fi.smallFont.drawParagraph(wj.a(mj.fullscreenAcceptCountdownSingularText, new String[]{var8_ref_String}, (byte) -51), 170, var6, 300, 300, 0, -1, 1, 0, 16) * 16;
-                      if (var12 == 0) {
+                      textYOrButtonTop = textYOrButtonTop + fi.smallFont.drawParagraph(wj.a(mj.fullscreenAcceptCountdownSingularText, new String[]{acceptanceCountdownText}, (byte) -51), 170, textYOrButtonTop, 300, 300, 0, -1, 1, 0, 16) * 16;
+                      if (clientControlFlowGuard == 0) {
                         break L27;
                       }
                     }
-                    var6 = var6 + fi.smallFont.drawParagraph(wj.a(jk.fullscreenAcceptCountdownPluralText, new String[]{var8_ref_String}, (byte) -45), 170, var6, 300, 300, 0, -1, 1, 0, 16) * 16;
+                    textYOrButtonTop = textYOrButtonTop + fi.smallFont.drawParagraph(wj.a(jk.fullscreenAcceptCountdownPluralText, new String[]{acceptanceCountdownText}, (byte) -45), 170, textYOrButtonTop, 300, 300, 0, -1, 1, 0, 16) * 16;
                   }
-                  var6 += 40;
-                  var9 = 100;
-                  var10 = -(20 + var9 >> 1) + 320 + 90;
-                  ma.drawNineSlicePanel(var6, var10, 36, (byte) -92, var9 + 20, eb.mouseBoxFrames);
-                  var11 = 10 + ((var9 >> 1) + var10);
+                  textYOrButtonTop += 40;
+                  buttonTextCenterOrConfirmationWidth = 100;
+                  confirmationButtonLeft = -(20 + buttonTextCenterOrConfirmationWidth >> 1) + 320 + 90;
+                  ma.drawNineSlicePanel(textYOrButtonTop, confirmationButtonLeft, 36, (byte) -92, buttonTextCenterOrConfirmationWidth + 20, eb.mouseBoxFrames);
+                  confirmationTextCenter = 10 + ((buttonTextCenterOrConfirmationWidth >> 1) + confirmationButtonLeft);
                   if ((!(this.field_o != 1) ||
                       (!(0 <= this.field_o) &&
                         !(PrefixCodeDecoder.pointerXSnapshot <= 350) &&
@@ -571,11 +571,11 @@ final class GameScreen extends MenuScreen {
                         !(ue.pointerYSnapshot >= 352)))) {
                     dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
                   }
-                  dd.uiPaletteFont.drawCenteredText(rb.fullscreenCancelButtonText, var11, 30 + var6, 0, -1);
+                  dd.uiPaletteFont.drawCenteredText(rb.fullscreenCancelButtonText, confirmationTextCenter, 30 + textYOrButtonTop, 0, -1);
                   dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
-                  var10 = 320 - (20 + var9 >> 1) - 90;
-                  var11 = 10 + (var9 >> 1) + var10;
-                  ma.drawNineSlicePanel(var6, var10, 36, (byte) -92, 20 + var9, eb.mouseBoxFrames);
+                  confirmationButtonLeft = 320 - (20 + buttonTextCenterOrConfirmationWidth >> 1) - 90;
+                  confirmationTextCenter = 10 + (buttonTextCenterOrConfirmationWidth >> 1) + confirmationButtonLeft;
+                  ma.drawNineSlicePanel(textYOrButtonTop, confirmationButtonLeft, 36, (byte) -92, 20 + buttonTextCenterOrConfirmationWidth, eb.mouseBoxFrames);
                   if ((!(this.field_o != 0) ||
                       (!(this.field_o >= 0) &&
                         !(PrefixCodeDecoder.pointerXSnapshot <= 170) &&
@@ -584,27 +584,27 @@ final class GameScreen extends MenuScreen {
                         !(ue.pointerYSnapshot >= 352)))) {
                     dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
                   }
-                  dd.uiPaletteFont.drawCenteredText(ArchiveRequest.fullscreenAcceptButtonText, var11, 30 + var6, 0, -1);
+                  dd.uiPaletteFont.drawCenteredText(ArchiveRequest.fullscreenAcceptButtonText, confirmationTextCenter, 30 + textYOrButtonTop, 0, -1);
                   dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
-                  if (var12 == 0) {
+                  if (clientControlFlowGuard == 0) {
                     return;
                   }
                 }
                 if (this.activeTicks > 200) {
-                  stackIn_191_0 = 200;
+                  fallbackOverlayAlpha = 200;
                 } else {
-                  stackIn_191_0 = this.activeTicks;
+                  fallbackOverlayAlpha = this.activeTicks;
                 }
-                var5 = stackIn_191_0;
-                SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, var5);
+                layoutYOrOverlayAlphaOrCurtainX = fallbackOverlayAlpha;
+                SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, layoutYOrOverlayAlphaOrCurtainX);
                 ma.drawNineSlicePanel(170, 160, 80, (byte) -92, 320, ll.frameNineSliceSprites);
-                var6 = 180;
-                fi.smallFont.drawParagraph(ki.fullscreenNonmemberText, 170, var6, 300, 300, 0, -1, 1, 0, 16);
-                var7 = 242;
-                var8 = 320 - (var7 + 20 >> 1);
-                var9 = 10 + (var8 + (var7 >> 1));
-                var6 = 265;
-                ma.drawNineSlicePanel(var6, var8, 36, (byte) -92, var7 + 20, eb.mouseBoxFrames);
+                textYOrButtonTop = 180;
+                fi.smallFont.drawParagraph(ki.fullscreenNonmemberText, 170, textYOrButtonTop, 300, 300, 0, -1, 1, 0, 16);
+                dialogButtonWidth = 242;
+                dialogButtonLeft = 320 - (dialogButtonWidth + 20 >> 1);
+                buttonTextCenterOrConfirmationWidth = 10 + (dialogButtonLeft + (dialogButtonWidth >> 1));
+                textYOrButtonTop = 265;
+                ma.drawNineSlicePanel(textYOrButtonTop, dialogButtonLeft, 36, (byte) -92, dialogButtonWidth + 20, eb.mouseBoxFrames);
                 if ((!(this.field_o != 0) ||
                     (!(PrefixCodeDecoder.pointerXSnapshot <= 190) &&
                       !(PrefixCodeDecoder.pointerXSnapshot >= 449) &&
@@ -612,64 +612,64 @@ final class GameScreen extends MenuScreen {
                       !(299 <= ue.pointerYSnapshot)))) {
                   dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
                 }
-                dd.uiPaletteFont.drawCenteredText(hh.fullscreenCloseButtonText, var9, 30 + var6, 0, -1);
+                dd.uiPaletteFont.drawCenteredText(hh.fullscreenCloseButtonText, buttonTextCenterOrConfirmationWidth, 30 + textYOrButtonTop, 0, -1);
                 dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
-                if (var12 == 0) {
+                if (clientControlFlowGuard == 0) {
                   return;
                 }
               }
               kh.screenTitleSprites[5].draw(0, 20);
-              if (!this.field_E) {
-                this.b(-97, this.field_q);
-                if (var12 == 0) {
+              if (!this.tutorialSlideActive) {
+                this.renderTutorialPage(-97, this.tutorialPageIndex);
+                if (clientControlFlowGuard == 0) {
                   return;
                 }
               }
               L37: {
-                var5 = this.field_F;
-                if (!this.field_v) {
-                  var5 = 640 - var5;
-                  SoftwareRasterizer.setClip(0, 0, var5, 480);
-                  this.b(-85, this.field_n);
-                  this.field_S = true;
+                layoutYOrOverlayAlphaOrCurtainX = this.tutorialSlideOffset;
+                if (!this.tutorialSlideForward) {
+                  layoutYOrOverlayAlphaOrCurtainX = 640 - layoutYOrOverlayAlphaOrCurtainX;
+                  SoftwareRasterizer.setClip(0, 0, layoutYOrOverlayAlphaOrCurtainX, 480);
+                  this.renderTutorialPage(-85, this.previousTutorialPageIndex);
+                  this.renderingPreviousTutorialPage = true;
                   super.renderScreen(-28750);
-                  this.field_S = false;
-                  SoftwareRasterizer.setClip(var5, 0, 640, 480);
-                  this.b(param0 ^ 28757, this.field_q);
+                  this.renderingPreviousTutorialPage = false;
+                  SoftwareRasterizer.setClip(layoutYOrOverlayAlphaOrCurtainX, 0, 640, 480);
+                  this.renderTutorialPage(methodGuard ^ 28757, this.tutorialPageIndex);
                   super.renderScreen(-28750);
                   SoftwareRasterizer.setClip(0, 0, 640, 480);
-                  qj.transitionCurtain.drawRotatedCentered((qj.transitionCurtain.fullHeight >> 1) + var5, 240, -49150, 4096);
-                  if (var12 == 0) {
+                  qj.transitionCurtain.drawRotatedCentered((qj.transitionCurtain.fullHeight >> 1) + layoutYOrOverlayAlphaOrCurtainX, 240, -49150, 4096);
+                  if (clientControlFlowGuard == 0) {
                     break L37;
                   }
                 }
-                SoftwareRasterizer.setClip(var5, 0, 640, 480);
-                this.b(-17, this.field_n);
-                this.field_S = true;
+                SoftwareRasterizer.setClip(layoutYOrOverlayAlphaOrCurtainX, 0, 640, 480);
+                this.renderTutorialPage(-17, this.previousTutorialPageIndex);
+                this.renderingPreviousTutorialPage = true;
                 super.renderScreen(-28750);
-                this.field_S = false;
-                SoftwareRasterizer.setClip(0, 0, var5, 480);
-                this.b(-48, this.field_q);
+                this.renderingPreviousTutorialPage = false;
+                SoftwareRasterizer.setClip(0, 0, layoutYOrOverlayAlphaOrCurtainX, 480);
+                this.renderTutorialPage(-48, this.tutorialPageIndex);
                 super.renderScreen(-28750);
                 SoftwareRasterizer.setClip(0, 0, 640, 480);
-                qj.transitionCurtain.drawRotatedCentered(-(qj.transitionCurtain.fullHeight >> 1) + var5, 240, -16383, 4096);
+                qj.transitionCurtain.drawRotatedCentered(-(qj.transitionCurtain.fullHeight >> 1) + layoutYOrOverlayAlphaOrCurtainX, 240, -16383, 4096);
               }
-              if (var12 == 0) {
+              if (clientControlFlowGuard == 0) {
                 return;
               }
             }
             kh.screenTitleSprites[7].draw(0, 20);
             ac.a(false, true, (byte) -122);
-            if (var12 == 0) {
+            if (clientControlFlowGuard == 0) {
               return;
             }
           }
           this.b(30);
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var2), "c.T(" + param0 + ')');
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          renderFailure = caughtFailure;
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) renderFailure), "c.T(" + methodGuard + ')');
         }
     }
 
@@ -735,13 +735,13 @@ final class GameScreen extends MenuScreen {
         var3 = Geoblox.field_C;
         try {
           if (param0 >= -40) {
-            this.b(77, -13);
+            this.renderTutorialPage(77, -13);
           }
           if ((3 == this.screenId) &&
-              (!this.field_E)) {
-            if (!((this.field_q != 4) &&
+              (!this.tutorialSlideActive)) {
+            if (!((this.tutorialPageIndex != 4) &&
                   (this.selectedItemIndex == 3))) {
-              if (4 == this.field_q) {
+              if (4 == this.tutorialPageIndex) {
                 if (this.selectedItemIndex == 2) {
                   this.selectedItemIndex = 3;
                 }
@@ -756,7 +756,7 @@ final class GameScreen extends MenuScreen {
                   return;
                 }
               }
-              if (this.field_q != 0) {
+              if (this.tutorialPageIndex != 0) {
                 return;
               }
               if (this.selectedItemIndex != 0) {
@@ -810,7 +810,7 @@ final class GameScreen extends MenuScreen {
               if (this.screenId == 3) {
                 if ((pointerY > 430) &&
                     (pointerY < 470)) {
-                  if ((this.field_q != 0) &&
+                  if ((this.tutorialPageIndex != 0) &&
                       (pointerX > 130) &&
                       (pointerX < 253)) {
                     stackIn_162_0 = 0;
@@ -821,13 +821,13 @@ final class GameScreen extends MenuScreen {
                     stackIn_168_0 = 1;
                     return stackIn_168_0;
                   }
-                  if ((this.field_q != 4) &&
+                  if ((this.tutorialPageIndex != 4) &&
                       (pointerX > 406) &&
                       (pointerX < 529)) {
                     stackIn_179_0 = 2;
                     return stackIn_179_0;
                   }
-                  if ((this.field_q == 4) &&
+                  if ((this.tutorialPageIndex == 4) &&
                       (oc.previousMenuScreenId != 1) &&
                       (pointerX > 406) &&
                       (pointerX < 635)) {
@@ -1129,16 +1129,16 @@ final class GameScreen extends MenuScreen {
           fieldTemp$0 = this.animationTick + 1;
           this.animationTick = this.animationTick + 1;
           if (fieldTemp$0 % 5 == 0) {
-            this.field_O = this.field_O - 1;
-            this.field_W = this.field_W + 1;
+            this.backgroundScrollY = this.backgroundScrollY - 1;
+            this.backgroundScrollX = this.backgroundScrollX + 1;
             this.g((byte) -102);
           }
           if (3 == (this.animationTick & 3)) {
-            this.field_I = this.field_I - 1;
-            this.field_u = this.field_u - 1;
+            this.foregroundScrollY = this.foregroundScrollY - 1;
+            this.foregroundScrollX = this.foregroundScrollX - 1;
           }
-          if (this.field_E) {
-            this.e((byte) 104);
+          if (this.tutorialSlideActive) {
+            this.advanceTutorialSlide((byte) 104);
             return;
           }
           jk.field_a = this.field_C;
@@ -1163,7 +1163,7 @@ final class GameScreen extends MenuScreen {
               }
               if ((this.screenId == 3) &&
                   (this.selectedItemIndex == 0) &&
-                  (this.field_q == 0) &&
+                  (this.tutorialPageIndex == 0) &&
                   (!this.field_H)) {
                 this.selectedItemIndex = this.selectedItemIndex + 1;
               }
@@ -1187,7 +1187,7 @@ final class GameScreen extends MenuScreen {
                 this.field_L = qi.b(7, 1);
                 this.field_z = 0;
               }
-              if ((this.field_q < 4) &&
+              if ((this.tutorialPageIndex < 4) &&
                   (this.animationTick % 24 == 0)) {
                 this.field_w = this.field_w + 1;
                 if (this.field_w >= 4) {
@@ -1195,8 +1195,8 @@ final class GameScreen extends MenuScreen {
                 }
               }
               L11: {
-                if (this.field_q != 3) {
-                  if (4 != this.field_q) {
+                if (this.tutorialPageIndex != 3) {
+                  if (4 != this.tutorialPageIndex) {
                     break L11;
                   }
                   if (49 > (this.animationTick & 255)) {
@@ -1447,29 +1447,29 @@ final class GameScreen extends MenuScreen {
         }
     }
 
-    private final void b(int param0, int param1) {
-        RuntimeException runtimeException = null;
-        int var3_int = 0;
-        int var4_int = 0;
-        Object var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        double var9 = 0.0;
-        int var11 = 0;
-        RuntimeException decompiledCaughtException = null;
-        var11 = Geoblox.field_C;
+    private final void renderTutorialPage(int methodGuard, int pageIndex) {
+        RuntimeException pageRenderFailure = null;
+        int paragraphY = 0;
+        int orbitCenterX = 0;
+        Object pageParagraph = null;
+        int orbitCenterYOrTextLeft = 0;
+        int orbitXOrPageIndexOrLineHeight = 0;
+        int orbitYOrParagraphWidth = 0;
+        int orbitAngle = 0;
+        double orbitAngleSpacing = 0.0;
+        int clientControlFlowGuard = 0;
+        RuntimeException caughtFailure = null;
+        clientControlFlowGuard = Geoblox.field_C;
         try {
           L0: {
-            var3_int = 180;
-            SoftwareRasterizer.saveClip(this.field_P);
-            if ((param1 != 0) &&
-                (1 != param1) &&
-                (param1 != 2)) {
+            paragraphY = 180;
+            SoftwareRasterizer.saveClip(this.savedTutorialClipBounds);
+            if ((pageIndex != 0) &&
+                (1 != pageIndex) &&
+                (pageIndex != 2)) {
               ma.drawNineSlicePanel(140, 30, 80, (byte) -92, 80, ll.frameNineSliceSprites);
               ma.drawNineSlicePanel(242, 30, 80, (byte) -92, 80, ll.frameNineSliceSprites);
-              if (var11 == 0) {
+              if (clientControlFlowGuard == 0) {
                 break L0;
               }
             }
@@ -1482,51 +1482,51 @@ final class GameScreen extends MenuScreen {
               SoftwareRasterizer.clearFramebuffer();
               ke.entitySpritesByThemeCategoryAndVariant[1][this.field_X][this.field_L].draw((vf.spriteScratchRaster.fullWidth >> 1) - (ke.entitySpritesByThemeCategoryAndVariant[1][this.field_X][this.field_L].fullWidth >> 1), (vf.spriteScratchRaster.fullHeight >> 1) - (ke.entitySpritesByThemeCategoryAndVariant[1][this.field_X][this.field_L].fullHeight >> 1));
               sh.mainRasterBuffer.setAsRasterTarget(255);
-              SoftwareRasterizer.restoreClip(this.field_P);
+              SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
               SoftwareRasterizer.intersectClip(50, 250, 90, 310);
               vf.spriteScratchRaster.addOutline(1);
               vf.spriteScratchRaster.draw(44, this.field_z + 200);
-              SoftwareRasterizer.restoreClip(this.field_P);
+              SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
               SoftwareRasterizer.intersectClip(40, 355, 93, 415);
-              var4_int = 70;
-              var5 = 385;
-              var6 = (int)(-Math.sin(this.field_A) * (double)this.field_Z + 0.5) + var4_int;
-              var7 = (int)(0.5 + Math.cos(this.field_A) * (double)this.field_Z) + var5;
-              var8 = (int)(this.field_A / 6.283185307179586 * 65535.0 + 0.5);
-              var9 = 2.0943741584421716;
+              orbitCenterX = 70;
+              orbitCenterYOrTextLeft = 385;
+              orbitXOrPageIndexOrLineHeight = (int)(-Math.sin(this.field_A) * (double)this.field_Z + 0.5) + orbitCenterX;
+              orbitYOrParagraphWidth = (int)(0.5 + Math.cos(this.field_A) * (double)this.field_Z) + orbitCenterYOrTextLeft;
+              orbitAngle = (int)(this.field_A / 6.283185307179586 * 65535.0 + 0.5);
+              orbitAngleSpacing = 2.0943741584421716;
               if (this.field_Z != 15) {
                 vf.spriteScratchRaster.setAsRasterTarget();
                 SoftwareRasterizer.clearFramebuffer();
-                ke.entitySpritesByThemeCategoryAndVariant[1][this.field_X][this.field_L].drawRotatedCentered(vf.spriteScratchRaster.fullWidth >> 1, vf.spriteScratchRaster.fullHeight >> 1, var8, 3072);
+                ke.entitySpritesByThemeCategoryAndVariant[1][this.field_X][this.field_L].drawRotatedCentered(vf.spriteScratchRaster.fullWidth >> 1, vf.spriteScratchRaster.fullHeight >> 1, orbitAngle, 3072);
                 sh.mainRasterBuffer.setAsRasterTarget(255);
-                SoftwareRasterizer.restoreClip(this.field_P);
+                SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
                 SoftwareRasterizer.intersectClip(40, 355, 103, 415);
                 vf.spriteScratchRaster.addOutline(1);
-                vf.spriteScratchRaster.draw(var6 - (vf.spriteScratchRaster.fullWidth >> 1), var7 - (vf.spriteScratchRaster.fullHeight >> 1));
-                var8 = (int)(0.5 + 65535.0 * ((this.field_A + var9) / 6.283185307179586));
-                var6 = var4_int + (int)(0.5 + -Math.sin(this.field_A + var9) * (double)this.field_Z);
-                var7 = (int)(0.5 + Math.cos(this.field_A + var9) * (double)this.field_Z) + var5;
+                vf.spriteScratchRaster.draw(orbitXOrPageIndexOrLineHeight - (vf.spriteScratchRaster.fullWidth >> 1), orbitYOrParagraphWidth - (vf.spriteScratchRaster.fullHeight >> 1));
+                orbitAngle = (int)(0.5 + 65535.0 * ((this.field_A + orbitAngleSpacing) / 6.283185307179586));
+                orbitXOrPageIndexOrLineHeight = orbitCenterX + (int)(0.5 + -Math.sin(this.field_A + orbitAngleSpacing) * (double)this.field_Z);
+                orbitYOrParagraphWidth = (int)(0.5 + Math.cos(this.field_A + orbitAngleSpacing) * (double)this.field_Z) + orbitCenterYOrTextLeft;
                 vf.spriteScratchRaster.setAsRasterTarget();
                 SoftwareRasterizer.clearFramebuffer();
-                ke.entitySpritesByThemeCategoryAndVariant[1][this.field_X][this.field_L].drawRotatedCentered(vf.spriteScratchRaster.fullWidth >> 1, vf.spriteScratchRaster.fullHeight >> 1, var8, 3072);
+                ke.entitySpritesByThemeCategoryAndVariant[1][this.field_X][this.field_L].drawRotatedCentered(vf.spriteScratchRaster.fullWidth >> 1, vf.spriteScratchRaster.fullHeight >> 1, orbitAngle, 3072);
                 sh.mainRasterBuffer.setAsRasterTarget(255);
-                SoftwareRasterizer.restoreClip(this.field_P);
+                SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
                 SoftwareRasterizer.intersectClip(40, 355, 103, 415);
                 vf.spriteScratchRaster.addOutline(1);
-                vf.spriteScratchRaster.draw(var6 - (vf.spriteScratchRaster.fullWidth >> 1), -(vf.spriteScratchRaster.fullHeight >> 1) + var7);
-                var9 = var9 * 2.0;
-                var8 = (int)(0.5 + 65535.0 * ((var9 + this.field_A) / 6.283185307179586));
-                var6 = (int)(-Math.sin(var9 + this.field_A) * (double)this.field_Z + 0.5) + var4_int;
-                var7 = var5 + (int)(Math.cos(var9 + this.field_A) * (double)this.field_Z + 0.5);
+                vf.spriteScratchRaster.draw(orbitXOrPageIndexOrLineHeight - (vf.spriteScratchRaster.fullWidth >> 1), -(vf.spriteScratchRaster.fullHeight >> 1) + orbitYOrParagraphWidth);
+                orbitAngleSpacing = orbitAngleSpacing * 2.0;
+                orbitAngle = (int)(0.5 + 65535.0 * ((orbitAngleSpacing + this.field_A) / 6.283185307179586));
+                orbitXOrPageIndexOrLineHeight = (int)(-Math.sin(orbitAngleSpacing + this.field_A) * (double)this.field_Z + 0.5) + orbitCenterX;
+                orbitYOrParagraphWidth = orbitCenterYOrTextLeft + (int)(Math.cos(orbitAngleSpacing + this.field_A) * (double)this.field_Z + 0.5);
                 vf.spriteScratchRaster.setAsRasterTarget();
                 SoftwareRasterizer.clearFramebuffer();
-                ke.entitySpritesByThemeCategoryAndVariant[1][this.field_X][this.field_L].drawRotatedCentered(vf.spriteScratchRaster.fullWidth >> 1, vf.spriteScratchRaster.fullHeight >> 1, var8, 3072);
+                ke.entitySpritesByThemeCategoryAndVariant[1][this.field_X][this.field_L].drawRotatedCentered(vf.spriteScratchRaster.fullWidth >> 1, vf.spriteScratchRaster.fullHeight >> 1, orbitAngle, 3072);
                 sh.mainRasterBuffer.setAsRasterTarget(255);
-                SoftwareRasterizer.restoreClip(this.field_P);
+                SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
                 SoftwareRasterizer.intersectClip(40, 355, 103, 415);
                 vf.spriteScratchRaster.addOutline(1);
-                vf.spriteScratchRaster.draw(var6 - (vf.spriteScratchRaster.fullWidth >> 1), var7 - (vf.spriteScratchRaster.fullHeight >> 1));
-                if (var11 == 0) {
+                vf.spriteScratchRaster.draw(orbitXOrPageIndexOrLineHeight - (vf.spriteScratchRaster.fullWidth >> 1), orbitYOrParagraphWidth - (vf.spriteScratchRaster.fullHeight >> 1));
+                if (clientControlFlowGuard == 0) {
                   break L2;
                 }
               }
@@ -1534,78 +1534,78 @@ final class GameScreen extends MenuScreen {
               SoftwareRasterizer.clearFramebuffer();
               mi.sparkleFrames[this.field_w].drawScaled(-10 + (KeyboardInputListener.field_a.fullWidth >> 1), (KeyboardInputListener.field_a.fullHeight >> 1) - 10, 20, 20);
               sh.mainRasterBuffer.setAsRasterTarget(255);
-              SoftwareRasterizer.restoreClip(this.field_P);
+              SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
               SoftwareRasterizer.intersectClip(40, 355, 103, 415);
-              KeyboardInputListener.field_a.draw(var6 - (KeyboardInputListener.field_a.fullWidth >> 1), var7 - (KeyboardInputListener.field_a.fullWidth >> 1));
-              var8 = (int)((this.field_A + var9) / 6.283185307179586 * 65535.0 + 0.5);
-              var6 = (int)(-Math.sin(var9 + this.field_A) * (double)this.field_Z + 0.5) + var4_int;
-              var7 = var5 + (int)(0.5 + Math.cos(var9 + this.field_A) * (double)this.field_Z);
+              KeyboardInputListener.field_a.draw(orbitXOrPageIndexOrLineHeight - (KeyboardInputListener.field_a.fullWidth >> 1), orbitYOrParagraphWidth - (KeyboardInputListener.field_a.fullWidth >> 1));
+              orbitAngle = (int)((this.field_A + orbitAngleSpacing) / 6.283185307179586 * 65535.0 + 0.5);
+              orbitXOrPageIndexOrLineHeight = (int)(-Math.sin(orbitAngleSpacing + this.field_A) * (double)this.field_Z + 0.5) + orbitCenterX;
+              orbitYOrParagraphWidth = orbitCenterYOrTextLeft + (int)(0.5 + Math.cos(orbitAngleSpacing + this.field_A) * (double)this.field_Z);
               KeyboardInputListener.field_a.setAsRasterTarget();
               SoftwareRasterizer.clearFramebuffer();
               mi.sparkleFrames[this.field_w].drawScaled((KeyboardInputListener.field_a.fullWidth >> 1) - 10, (KeyboardInputListener.field_a.fullHeight >> 1) - 10, 20, 20);
               sh.mainRasterBuffer.setAsRasterTarget(255);
-              SoftwareRasterizer.restoreClip(this.field_P);
+              SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
               SoftwareRasterizer.intersectClip(40, 355, 103, 415);
-              KeyboardInputListener.field_a.draw(var6 - (KeyboardInputListener.field_a.fullWidth >> 1), -(KeyboardInputListener.field_a.fullWidth >> 1) + var7);
-              var9 = var9 * 2.0;
-              var8 = (int)(0.5 + (this.field_A + var9) / 6.283185307179586 * 65535.0);
-              var6 = (int)(0.5 + -Math.sin(var9 + this.field_A) * (double)this.field_Z) + var4_int;
-              var7 = var5 + (int)(Math.cos(this.field_A + var9) * (double)this.field_Z + 0.5);
+              KeyboardInputListener.field_a.draw(orbitXOrPageIndexOrLineHeight - (KeyboardInputListener.field_a.fullWidth >> 1), -(KeyboardInputListener.field_a.fullWidth >> 1) + orbitYOrParagraphWidth);
+              orbitAngleSpacing = orbitAngleSpacing * 2.0;
+              orbitAngle = (int)(0.5 + (this.field_A + orbitAngleSpacing) / 6.283185307179586 * 65535.0);
+              orbitXOrPageIndexOrLineHeight = (int)(0.5 + -Math.sin(orbitAngleSpacing + this.field_A) * (double)this.field_Z) + orbitCenterX;
+              orbitYOrParagraphWidth = orbitCenterYOrTextLeft + (int)(Math.cos(this.field_A + orbitAngleSpacing) * (double)this.field_Z + 0.5);
               KeyboardInputListener.field_a.setAsRasterTarget();
               SoftwareRasterizer.clearFramebuffer();
               mi.sparkleFrames[this.field_w].drawScaled((KeyboardInputListener.field_a.fullWidth >> 1) - 10, -10 + (KeyboardInputListener.field_a.fullHeight >> 1), 20, 20);
               sh.mainRasterBuffer.setAsRasterTarget(255);
-              SoftwareRasterizer.restoreClip(this.field_P);
+              SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
               SoftwareRasterizer.intersectClip(40, 355, 103, 415);
-              KeyboardInputListener.field_a.draw(var6 - (KeyboardInputListener.field_a.fullWidth >> 1), var7 - (KeyboardInputListener.field_a.fullWidth >> 1));
+              KeyboardInputListener.field_a.draw(orbitXOrPageIndexOrLineHeight - (KeyboardInputListener.field_a.fullWidth >> 1), orbitYOrParagraphWidth - (KeyboardInputListener.field_a.fullWidth >> 1));
             }
-            SoftwareRasterizer.restoreClip(this.field_P);
+            SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
           }
           L4: {
             ma.drawNineSlicePanel(140, 550, 40, (byte) -92, 60, ll.frameNineSliceSprites);
-            dd.uiPaletteFont.drawCenteredText(param1 + 1 + "/5", 580, 170, 0, -1);
-            var4 = null;
-            var5 = 155;
-            var6 = param1;
-            if (var6 == 0) {
-              dd.uiPaletteFont.drawText(a.field_a[0], var5, var3_int, 0, -1);
-              var4 = ec.field_e[0];
-              dd.uiPaletteFont.drawText(a.field_a[1], var5, var3_int + 110, 0, -1);
+            dd.uiPaletteFont.drawCenteredText(pageIndex + 1 + "/5", 580, 170, 0, -1);
+            pageParagraph = null;
+            orbitCenterYOrTextLeft = 155;
+            orbitXOrPageIndexOrLineHeight = pageIndex;
+            if (orbitXOrPageIndexOrLineHeight == 0) {
+              dd.uiPaletteFont.drawText(a.field_a[0], orbitCenterYOrTextLeft, paragraphY, 0, -1);
+              pageParagraph = ec.field_e[0];
+              dd.uiPaletteFont.drawText(a.field_a[1], orbitCenterYOrTextLeft, paragraphY + 110, 0, -1);
             } else {
-              if ((1 == var6) &&
-                  (var11 == 0)) {
-                dd.uiPaletteFont.drawText(a.field_a[2], var5, var3_int, 0, -1);
-                var4 = ec.field_e[1];
+              if ((1 == orbitXOrPageIndexOrLineHeight) &&
+                  (clientControlFlowGuard == 0)) {
+                dd.uiPaletteFont.drawText(a.field_a[2], orbitCenterYOrTextLeft, paragraphY, 0, -1);
+                pageParagraph = ec.field_e[1];
                 break L4;
               }
-              if (var6 == 2) {
-                dd.uiPaletteFont.drawText(a.field_a[3], var5, var3_int, 0, -1);
-                var4 = ec.field_e[2];
+              if (orbitXOrPageIndexOrLineHeight == 2) {
+                dd.uiPaletteFont.drawText(a.field_a[3], orbitCenterYOrTextLeft, paragraphY, 0, -1);
+                pageParagraph = ec.field_e[2];
               } else {
-                if (var6 == 3) {
+                if (orbitXOrPageIndexOrLineHeight == 3) {
                   vf.spriteScratchRaster.setAsRasterTarget();
                   SoftwareRasterizer.clearFramebuffer();
                   MenuScreen.amorphousFramesByThemeAndVariant[1][this.field_L][this.field_w].draw(-(MenuScreen.amorphousFramesByThemeAndVariant[1][this.field_L][this.field_w].fullWidth >> 1) + (vf.spriteScratchRaster.fullWidth >> 1), (vf.spriteScratchRaster.fullHeight >> 1) - (MenuScreen.amorphousFramesByThemeAndVariant[1][this.field_L][this.field_w].fullHeight >> 1));
                   sh.mainRasterBuffer.setAsRasterTarget(255);
-                  SoftwareRasterizer.restoreClip(this.field_P);
+                  SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
                   vf.spriteScratchRaster.draw(70 - (vf.spriteScratchRaster.fullWidth >> 1), -(vf.spriteScratchRaster.fullHeight >> 1) + 180);
                   vf.spriteScratchRaster.setAsRasterTarget();
                   SoftwareRasterizer.clearFramebuffer();
                   s.geometrySpritesByThemeAndCategory[1][this.field_X].drawGrayModulated((vf.spriteScratchRaster.fullWidth >> 1) - (s.geometrySpritesByThemeAndCategory[1][this.field_X].fullWidth >> 1), (vf.spriteScratchRaster.fullHeight >> 1) - (s.geometrySpritesByThemeAndCategory[1][this.field_X].fullHeight >> 1), this.field_N);
                   sh.mainRasterBuffer.setAsRasterTarget(255);
-                  SoftwareRasterizer.restoreClip(this.field_P);
+                  SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
                   vf.spriteScratchRaster.addOutline(1);
                   vf.spriteScratchRaster.draw(70 - (vf.spriteScratchRaster.fullWidth >> 1), 282 - (vf.spriteScratchRaster.fullHeight >> 1));
-                  dd.uiPaletteFont.drawText(a.field_a[4], var5, var3_int, 0, -1);
-                  var4 = ec.field_e[3];
+                  dd.uiPaletteFont.drawText(a.field_a[4], orbitCenterYOrTextLeft, paragraphY, 0, -1);
+                  pageParagraph = ec.field_e[3];
                 } else {
-                  if (4 == var6) {
+                  if (4 == orbitXOrPageIndexOrLineHeight) {
                     vf.spriteScratchRaster.setAsRasterTarget();
                     SoftwareRasterizer.clearFramebuffer();
                     fc.blackOrbFrames[this.field_w].draw(-(fc.blackOrbFrames[this.field_w].fullWidth >> 1) + (vf.spriteScratchRaster.fullWidth >> 1), -(fc.blackOrbFrames[this.field_w].fullHeight >> 1) + (vf.spriteScratchRaster.fullHeight >> 1));
                     k.a(0, 0, vf.spriteScratchRaster.fullWidth, -27085, vf.spriteScratchRaster.fullHeight);
                     sh.mainRasterBuffer.setAsRasterTarget(255);
-                    SoftwareRasterizer.restoreClip(this.field_P);
+                    SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
                     vf.spriteScratchRaster.draw(70 - (vf.spriteScratchRaster.fullWidth >> 1), 180 - (vf.spriteScratchRaster.fullHeight >> 1));
                     vf.spriteScratchRaster.setAsRasterTarget();
                     SoftwareRasterizer.clearFramebuffer();
@@ -1615,27 +1615,27 @@ final class GameScreen extends MenuScreen {
                     hb.silverStarFrames[this.field_B].draw(-(hb.silverStarFrames[this.field_B].fullWidth >> 1) + (vf.spriteScratchRaster.fullWidth >> 1), (vf.spriteScratchRaster.fullHeight >> 1) - (hb.silverStarFrames[this.field_B].fullHeight >> 1));
                     k.a(0, 0, vf.spriteScratchRaster.fullWidth, -27085, vf.spriteScratchRaster.fullHeight);
                     sh.mainRasterBuffer.setAsRasterTarget(255);
-                    SoftwareRasterizer.restoreClip(this.field_P);
+                    SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
                     vf.spriteScratchRaster.draw(70 - (vf.spriteScratchRaster.fullWidth >> 1), -(vf.spriteScratchRaster.fullHeight >> 1) + 282);
-                    dd.uiPaletteFont.drawText(a.field_a[5], var5, var3_int, 0, -1);
-                    var4 = ec.field_e[4];
+                    dd.uiPaletteFont.drawText(a.field_a[5], orbitCenterYOrTextLeft, paragraphY, 0, -1);
+                    pageParagraph = ec.field_e[4];
                   }
                 }
               }
             }
           }
-          var6 = fi.smallFont.maxAscent + fi.smallFont.maxDescent;
-          if (param0 > -14) {
+          orbitXOrPageIndexOrLineHeight = fi.smallFont.maxAscent + fi.smallFont.maxDescent;
+          if (methodGuard > -14) {
             this.handleMenuPointer(-3, -61, false, -67, true, 116);
           }
-          var7 = 355;
-          var3_int = var3_int + fi.smallFont.drawParagraph((String) (var4), var5, var3_int, var7, 300, 0, -1, 0, 0, 16) * var6;
-          SoftwareRasterizer.restoreClip(this.field_P);
+          orbitYOrParagraphWidth = 355;
+          paragraphY = paragraphY + fi.smallFont.drawParagraph((String) (pageParagraph), orbitCenterYOrTextLeft, paragraphY, orbitYOrParagraphWidth, 300, 0, -1, 0, 0, 16) * orbitXOrPageIndexOrLineHeight;
+          SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "c.B(" + param0 + ',' + param1 + ')');
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          pageRenderFailure = caughtFailure;
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) pageRenderFailure), "c.B(" + methodGuard + ',' + pageIndex + ')');
         }
     }
 
@@ -1648,7 +1648,7 @@ final class GameScreen extends MenuScreen {
         var9 = Geoblox.field_C;
         try {
           if (initialClick) {
-            this.field_q = -45;
+            this.tutorialPageIndex = -45;
           }
           L2: {
             actionId = InstrumentEnvelope.menuActionIds[this.screenId][itemIndex];
@@ -1755,19 +1755,19 @@ final class GameScreen extends MenuScreen {
         }
     }
 
-    private final void e(byte param0) {
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
+    private final void advanceTutorialSlide(byte methodGuard) {
+        RuntimeException caughtFailure = null;
+        RuntimeException slideUpdateFailure = null;
         try {
-          if (param0 < 73) {
+          if (methodGuard < 73) {
             this.field_V = 15;
           }
           if ((0 == this.field_T) &&
               (!this.field_H)) {
             L2: {
-              if (0 == this.field_F) {
+              if (0 == this.tutorialSlideOffset) {
                 if (this.keyboardSelectionActive) {
-                  if (this.field_q != 4) {
+                  if (this.tutorialPageIndex != 4) {
                     break L2;
                   }
                   this.selectedItemIndex = 3;
@@ -1778,18 +1778,18 @@ final class GameScreen extends MenuScreen {
                 this.selectedItemIndex = this.hitTestMenuItem(PrefixCodeDecoder.pointerXSnapshot, ue.pointerYSnapshot, (byte) 54);
               }
             }
-            this.field_F = this.field_F + 8;
-            if (~(640 + qj.transitionCurtain.height) > ~this.field_F) {
-              this.field_E = false;
-              this.field_F = 0;
+            this.tutorialSlideOffset = this.tutorialSlideOffset + 8;
+            if (~(640 + qj.transitionCurtain.height) > ~this.tutorialSlideOffset) {
+              this.tutorialSlideActive = false;
+              this.tutorialSlideOffset = 0;
             }
             return;
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var2), "c.E(" + param0 + ')');
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          slideUpdateFailure = caughtFailure;
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) slideUpdateFailure), "c.E(" + methodGuard + ')');
         }
     }
 
@@ -1801,16 +1801,16 @@ final class GameScreen extends MenuScreen {
             return;
           }
           if ((3 == this.screenId) &&
-              (!this.field_E)) {
+              (!this.tutorialSlideActive)) {
             L1: {
-              if ((this.field_q != 4) &&
+              if ((this.tutorialPageIndex != 4) &&
                   (this.selectedItemIndex == 3)) {
                 this.selectedItemIndex = 2;
                 if (Geoblox.field_C == 0) {
                   break L1;
                 }
               }
-              if (this.field_q == 4) {
+              if (this.tutorialPageIndex == 4) {
                 if (this.selectedItemIndex == 2) {
                   this.selectedItemIndex = 1;
                 }
@@ -1820,7 +1820,7 @@ final class GameScreen extends MenuScreen {
                 }
               }
             }
-            if ((this.field_q == 0) &&
+            if ((this.tutorialPageIndex == 0) &&
                 (this.selectedItemIndex == 0)) {
               this.selectedItemIndex = 2;
             }
@@ -1840,21 +1840,21 @@ final class GameScreen extends MenuScreen {
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        this.field_S = false;
+        this.renderingPreviousTutorialPage = false;
         this.field_L = 0;
         this.field_H = false;
         this.field_X = 0;
         this.animationTick = 0;
-        this.field_I = 115;
-        this.field_P = new int[4];
+        this.foregroundScrollY = 115;
+        this.savedTutorialClipBounds = new int[4];
         this.field_o = -1;
         this.volumePreviewTicks = 0;
-        this.field_u = 123;
-        this.field_O = 0;
-        this.field_F = 0;
+        this.foregroundScrollX = 123;
+        this.backgroundScrollY = 0;
+        this.tutorialSlideOffset = 0;
         this.field_z = 0;
-        this.field_v = true;
-        this.field_W = 0;
+        this.tutorialSlideForward = true;
+        this.backgroundScrollX = 0;
         try {
           this.screenId = param1;
           this.gameApplet = param0;
@@ -1904,16 +1904,16 @@ final class GameScreen extends MenuScreen {
           fieldTemp$1 = this.animationTick + 1;
           this.animationTick = this.animationTick + 1;
           if (fieldTemp$1 % 5 == 0) {
-            this.field_W = this.field_W + 1;
-            this.field_O = this.field_O - 1;
+            this.backgroundScrollX = this.backgroundScrollX + 1;
+            this.backgroundScrollY = this.backgroundScrollY - 1;
             this.g((byte) -114);
           }
           if ((this.animationTick & 3) == 3) {
-            this.field_u = this.field_u - 1;
-            this.field_I = this.field_I - 1;
+            this.foregroundScrollX = this.foregroundScrollX - 1;
+            this.foregroundScrollY = this.foregroundScrollY - 1;
           }
           if (param0 != 16405) {
-            this.b(false);
+            this.drawScrollingMenuBackground(false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2149,32 +2149,32 @@ final class GameScreen extends MenuScreen {
                             break L1;
                           }
                         }
-                        if (!((this.field_q < 4) &&
-                              (!this.field_E))) {
+                        if (!((this.tutorialPageIndex < 4) &&
+                              (!this.tutorialSlideActive))) {
                           var4 = 1;
                           if (var7 == 0) {
                             break L1;
                           }
                         }
-                        this.field_n = this.field_q;
-                        this.field_q = this.field_q + 1;
-                        this.field_v = true;
-                        this.field_E = true;
+                        this.previousTutorialPageIndex = this.tutorialPageIndex;
+                        this.tutorialPageIndex = this.tutorialPageIndex + 1;
+                        this.tutorialSlideForward = true;
+                        this.tutorialSlideActive = true;
                         if (var7 == 0) {
                           break L1;
                         }
                       }
-                      if (!((this.field_q > 0) &&
-                            (!this.field_E))) {
+                      if (!((this.tutorialPageIndex > 0) &&
+                            (!this.tutorialSlideActive))) {
                         var4 = 1;
                         if (var7 == 0) {
                           break L1;
                         }
                       }
-                      this.field_n = this.field_q;
-                      this.field_E = true;
-                      this.field_q = this.field_q - 1;
-                      this.field_v = false;
+                      this.previousTutorialPageIndex = this.tutorialPageIndex;
+                      this.tutorialSlideActive = true;
+                      this.tutorialPageIndex = this.tutorialPageIndex - 1;
+                      this.tutorialSlideForward = false;
                       if (var7 == 0) {
                         break L1;
                       }
@@ -2313,10 +2313,10 @@ final class GameScreen extends MenuScreen {
           if (param1 >= -74) {
             return;
           }
-          if (this.field_S) {
-            stackIn_7_0 = this.field_n;
+          if (this.renderingPreviousTutorialPage) {
+            stackIn_7_0 = this.previousTutorialPageIndex;
           } else {
-            stackIn_7_0 = this.field_q;
+            stackIn_7_0 = this.tutorialPageIndex;
           }
           var5_int = stackIn_7_0;
           if (3 == this.screenId) {
@@ -2338,8 +2338,8 @@ final class GameScreen extends MenuScreen {
             }
           }
           if ((3 == this.screenId) &&
-              (this.field_E) &&
-              (this.field_q == 4) &&
+              (this.tutorialSlideActive) &&
+              (this.tutorialPageIndex == 4) &&
               (oc.previousMenuScreenId != 1) &&
               (itemIndex == 2) &&
               (this.selectedItemIndex == 3)) {
@@ -2669,16 +2669,16 @@ final class GameScreen extends MenuScreen {
           }
           if ((ki.currentKeyboardEventCode == 69) &&
               (this.screenId == 3) &&
-              (this.field_q < 4)) {
-            this.field_q = this.field_q + 1;
+              (this.tutorialPageIndex < 4)) {
+            this.tutorialPageIndex = this.tutorialPageIndex + 1;
             if (var3 == 0) {
               return;
             }
           }
           if ((ki.currentKeyboardEventCode == 41) &&
               (this.screenId == 3) &&
-              (this.field_q > 0)) {
-            this.field_q = this.field_q - 1;
+              (this.tutorialPageIndex > 0)) {
+            this.tutorialPageIndex = this.tutorialPageIndex - 1;
             if (var3 == 0) {
               return;
             }

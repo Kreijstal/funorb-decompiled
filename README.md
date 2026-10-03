@@ -19,6 +19,17 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 138,772 bindings,
 preserving 388 override relationships.
 
+Pass 93 adds 61 guarded menu/background/tutorial names: 11 fields, three methods,
+five parameters and 42 locals. Every parameter/local in the menu renderer,
+scrolling background renderer, tutorial page renderer and curtain updater has a
+name, including explicit combined roles for reused slots. Tutorial page/curtain
+state and layer offsets are named without changing guards or sentinel values.
+The 7,076 rules apply 57,788 edits; all 7,015 previous complete rules and raw/
+decompiler/native evidence pins remain. Full reproduction and dictionary
+reversal pass. This source-audited naming pass adds no dynamic menu/tutorial
+coverage; other opaque locals, large control bodies and browser/phone acceptance
+remain unfinished or unverified.
+
 Pass 92 reconstructs 41 nested skip frames, consuming 82 breaks and guarding
 42 remainders over 97 predicates. It saves 219 lines across 19 files. Menu
 rendering shrinks from 372 to 304 lines and ten to four block labels; gameplay

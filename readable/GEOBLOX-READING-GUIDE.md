@@ -7,9 +7,9 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-## Current control-flow readability (pass 92)
+## Current readability (pass 93)
 
-The export has 7,015 guarded names. All 303 sources compile, reproduce and
+The export has 7,076 guarded names. All 303 sources compile, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
 short-circuit guards for their original remainders, consuming 82 breaks and
 saving 219 lines. Menu hit-test trees preserve every strict boundary and
@@ -35,7 +35,9 @@ large bodies are:
 | `SpriteState.drawSortedHalfBlendRgbTriangle` | 388 | 11 |
 | `MusicDecoder.decodePacket` | 323 | 1 |
 
-Opaque menu locals and mixed-effect exits remain. Larger reconstructions need
+The menu renderer, background tiler, tutorial page renderer and curtain updater
+now have names for every parameter/local. Other menu/input locals and mixed-effect
+exits remain. Larger reconstructions need
 proofs for intermediate loops/protected regions and multiple continuations;
 control flags are not assumed constant. The 16,128-case generic comparison and
 six recorded native probes establish controlled behavior only. Complete assets/
@@ -54,6 +56,39 @@ remain intact.
 
 `MenuScreen` handles selection and hit testing. Its overridden activation/input
 methods have matching names in `GameScreen`, preserving the virtual contracts.
+
+## Menu rendering and tutorial curtain
+
+`GameScreen.renderScreen(methodGuard)` checks the original `-28750` guard,
+draws the scrolling background, then selects the panel/title/overlay/tutorial
+branch by `screenId`. `panelLeft`, `panelWidth` and `panelHeight` name its main
+panel dimensions. Separate membership, unavailable, acceptance and fallback
+alpha carriers preserve the four `activeTicks`/200 branch results. Fullscreen
+prompt/countdown text and button left/center/width slots describe their draw calls.
+The shared `layoutYOrOverlayAlphaOrCurtainX` stores layout Y, overlay alpha and
+curtain X at different points; the name does not imply independent state.
+
+`drawScrollingMenuBackground(setTutorialOffsetGuard)` tiles background and
+foreground sprites with separate `backgroundScrollX/Y` and `foregroundScrollX/Y`
+fields. `tileX` and `tileY` retain the original directional loops. Its true guard
+still assigns curtain offset 124; callers and signed remainder behavior remain.
+
+Tutorial page actions copy `tutorialPageIndex` to `previousTutorialPageIndex`,
+then increment/decrement the destination and set `tutorialSlideForward` and
+`tutorialSlideActive`. `advanceTutorialSlide(methodGuard)` advances
+`tutorialSlideOffset` by eight when the existing gates permit it, ending beyond
+640 plus curtain height. `renderScreen` clips the outgoing/current page around
+that offset and draws the curtain. `renderingPreviousTutorialPage` is true only
+around the outgoing page's inherited menu render, selecting its saved page index.
+
+`renderTutorialPage(methodGuard, pageIndex)` draws the five tutorial text/sprite
+variants, saving/restoring `savedTutorialClipBounds`. Orbit positions, rotation
+angles, paragraph text and line spacing are named. Reused slots such as
+`orbitXOrPageIndexOrLineHeight` deliberately expose their multiple roles.
+The `-45` pointer-guard page assignment, other guard side effects, control flags,
+clip order and diagnostic strings remain unchanged. These are source-audited
+names with compile/binding/reversal checks; dynamic menu/tutorial execution,
+actual assets and browser/phone performance are not newly verified.
 
 ## Gameplay graphics and theme selection
 

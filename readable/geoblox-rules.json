@@ -947,10 +947,40 @@
       "originalName": "field_D"
     },
     {
+      "symbol": "F:c.field_E:Z",
+      "originalName": "field_E",
+      "to": "tutorialSlideActive",
+      "evidence": "c tutorial actions copy field_q to field_n before incrementing/decrementing page0..4, set field_v to the direction and field_E active. c.a(I)V clips outgoing/current page renders around field_F, using field_S to select the old page for menu rows. c.e(B)V advances field_F by8 after the field_T/field_H gate, clearing the slide past640+curtain.height. Wrong-guard and pointer paths remain explicit. Set by tutorial page actions and cleared when the curtain finishes; active update dispatches the slide helper. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
+      "symbol": "F:c.field_F:I",
+      "originalName": "field_F",
+      "to": "tutorialSlideOffset",
+      "evidence": "c tutorial actions copy field_q to field_n before incrementing/decrementing page0..4, set field_v to the direction and field_E active. c.a(I)V clips outgoing/current page renders around field_F, using field_S to select the old page for menu rows. c.e(B)V advances field_F by8 after the field_T/field_H gate, clearing the slide past640+curtain.height. Wrong-guard and pointer paths remain explicit. Curtain offset advances by8; The constructor initializes0; the background helper sets124 only when its boolean guard is true. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
+      "symbol": "F:c.field_I:I",
+      "originalName": "field_I",
+      "to": "foregroundScrollY",
+      "evidence": "c.b(Z)V tiles ee.menuBackgroundSprite then vc.menuForegroundSprite, normalizing each offset with the corresponding full sprite dimension. Constructor and c update methods establish the per-layer starting offsets and scrolling increments/decrements; signed remainder and control-flag paths remain. Y offset starts115, decrements and is normalized by foreground.fullHeight. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
       "symbol": "F:c.field_K:I",
       "to": "screenId",
       "evidence": "Constructor stores screen index; indexes per-screen action IDs and selects screen-specific behavior.",
       "originalName": "field_K"
+    },
+    {
+      "symbol": "F:c.field_O:I",
+      "originalName": "field_O",
+      "to": "backgroundScrollY",
+      "evidence": "c.b(Z)V tiles ee.menuBackgroundSprite then vc.menuForegroundSprite, normalizing each offset with the corresponding full sprite dimension. Constructor and c update methods establish the per-layer starting offsets and scrolling increments/decrements; signed remainder and control-flag paths remain. Y offset starts0, decrements and is normalized by background.fullHeight. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
+      "symbol": "F:c.field_P:[I",
+      "originalName": "field_P",
+      "to": "savedTutorialClipBounds",
+      "evidence": "c tutorial actions copy field_q to field_n before incrementing/decrementing page0..4, set field_v to the direction and field_E active. c.a(I)V clips outgoing/current page renders around field_F, using field_S to select the old page for menu rows. c.e(B)V advances field_F by8 after the field_T/field_H gate, clearing the slide past640+curtain.height. Wrong-guard and pointer paths remain explicit. Four-element clip storage allocated in the constructor, saved/restored throughout page rendering. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
     },
     {
       "symbol": "F:c.field_Q:[Ljava/lang/String;",
@@ -965,10 +995,22 @@
       "originalName": "field_R"
     },
     {
+      "symbol": "F:c.field_S:Z",
+      "originalName": "field_S",
+      "to": "renderingPreviousTutorialPage",
+      "evidence": "c tutorial actions copy field_q to field_n before incrementing/decrementing page0..4, set field_v to the direction and field_E active. c.a(I)V clips outgoing/current page renders around field_F, using field_S to select the old page for menu rows. c.e(B)V advances field_F by8 after the field_T/field_H gate, clearing the slide past640+curtain.height. Wrong-guard and pointer paths remain explicit. Temporarily true only around outgoing-page super.renderScreen, so menu row rendering reads the saved page. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
       "symbol": "F:c.field_U:I",
       "to": "volumePreviewTicks",
       "evidence": "Ticks since preview start; reset when d(0) starts/restarts volume preview stream.",
       "originalName": "field_U"
+    },
+    {
+      "symbol": "F:c.field_W:I",
+      "originalName": "field_W",
+      "to": "backgroundScrollX",
+      "evidence": "c.b(Z)V tiles ee.menuBackgroundSprite then vc.menuForegroundSprite, normalizing each offset with the corresponding full sprite dimension. Constructor and c update methods establish the per-layer starting offsets and scrolling increments/decrements; signed remainder and control-flag paths remain. X offset starts0, increments and is normalized by background.fullWidth. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
     },
     {
       "symbol": "F:c.field_ab:I",
@@ -977,16 +1019,40 @@
       "originalName": "field_ab"
     },
     {
+      "symbol": "F:c.field_n:I",
+      "originalName": "field_n",
+      "to": "previousTutorialPageIndex",
+      "evidence": "c tutorial actions copy field_q to field_n before incrementing/decrementing page0..4, set field_v to the direction and field_E active. c.a(I)V clips outgoing/current page renders around field_F, using field_S to select the old page for menu rows. c.e(B)V advances field_F by8 after the field_T/field_H gate, clearing the slide past640+curtain.height. Wrong-guard and pointer paths remain explicit. Outgoing page saved before a slide. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
       "symbol": "F:c.field_p:LGeoblox;",
       "to": "gameApplet",
       "evidence": "Geoblox constructor argument retained for session creation and host operations.",
       "originalName": "field_p"
     },
     {
+      "symbol": "F:c.field_q:I",
+      "originalName": "field_q",
+      "to": "tutorialPageIndex",
+      "evidence": "c tutorial actions copy field_q to field_n before incrementing/decrementing page0..4, set field_v to the direction and field_E active. c.a(I)V clips outgoing/current page renders around field_F, using field_S to select the old page for menu rows. c.e(B)V advances field_F by8 after the field_T/field_H gate, clearing the slide past640+curtain.height. Wrong-guard and pointer paths remain explicit. Current/destination tutorial page; Geoblox resets it to0 on entry. The initialClick pointer guard can still assign-45; do not infer a validated range. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
       "symbol": "F:c.field_r:Ljava/lang/String;",
       "to": "createNameLeadingSpaceAlertText",
       "originalName": "field_r",
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_alert_nameleadingspace' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:c.field_u:I",
+      "originalName": "field_u",
+      "to": "foregroundScrollX",
+      "evidence": "c.b(Z)V tiles ee.menuBackgroundSprite then vc.menuForegroundSprite, normalizing each offset with the corresponding full sprite dimension. Constructor and c update methods establish the per-layer starting offsets and scrolling increments/decrements; signed remainder and control-flag paths remain. X offset starts123, decrements and is normalized by foreground.fullWidth. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
+      "symbol": "F:c.field_v:Z",
+      "originalName": "field_v",
+      "to": "tutorialSlideForward",
+      "evidence": "c tutorial actions copy field_q to field_n before incrementing/decrementing page0..4, set field_v to the direction and field_E active. c.a(I)V clips outgoing/current page renders around field_F, using field_S to select the old page for menu rows. c.e(B)V advances field_F by8 after the field_T/field_H gate, clearing the slide past640+curtain.height. Wrong-guard and pointer paths remain explicit. True on the increment-page action, false on decrement; selects the curtain/clip direction. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
     },
     {
       "symbol": "F:c.field_y:I",
@@ -7643,6 +7709,126 @@
       "evidence": "Value read from per-screen action ID array using item index; drives action-specific branches."
     },
     {
+      "symbol": "L:c.a(I)V#0",
+      "originalName": "stackIn_73_0",
+      "to": "membershipOverlayAlpha",
+      "evidence": "c.a(I)V renders screen panels/title sprites, fullscreen membership/unavailable/acceptance overlays and tutorial pages/slides. The four stack carriers separately preserve activeTicks<=200 alpha branch results. Button geometry and localized text roles follow their exact draw and paragraph calls. First activeTicks/200 snapshot, used by the fullscreen nonmember overlay. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
+      "symbol": "L:c.a(I)V#1",
+      "originalName": "stackIn_122_0",
+      "to": "unavailableOverlayAlpha",
+      "evidence": "c.a(I)V renders screen panels/title sprites, fullscreen membership/unavailable/acceptance overlays and tutorial pages/slides. The four stack carriers separately preserve activeTicks<=200 alpha branch results. Button geometry and localized text roles follow their exact draw and paragraph calls. Second activeTicks/200 snapshot for the unavailable dialog. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
+      "symbol": "L:c.a(I)V#10",
+      "originalName": "var6",
+      "to": "textYOrButtonTop",
+      "evidence": "c.a(I)V renders screen panels/title sprites, fullscreen membership/unavailable/acceptance overlays and tutorial pages/slides. The four stack carriers separately preserve activeTicks<=200 alpha branch results. Button geometry and localized text roles follow their exact draw and paragraph calls. Dialog text baseline and accumulated paragraph heights, then button panel top. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
+      "symbol": "L:c.a(I)V#11",
+      "originalName": "var7",
+      "to": "dialogButtonWidth",
+      "evidence": "c.a(I)V renders screen panels/title sprites, fullscreen membership/unavailable/acceptance overlays and tutorial pages/slides. The four stack carriers separately preserve activeTicks<=200 alpha branch results. Button geometry and localized text roles follow their exact draw and paragraph calls. Button content width100 or242, excluding the20 border margin. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
+      "symbol": "L:c.a(I)V#12",
+      "originalName": "var7_ref_String",
+      "to": "acceptancePromptText",
+      "evidence": "c.a(I)V renders screen panels/title sprites, fullscreen membership/unavailable/acceptance overlays and tutorial pages/slides. The four stack carriers separately preserve activeTicks<=200 alpha branch results. Button geometry and localized text roles follow their exact draw and paragraph calls. Concatenation of before/after accept/cancel localized fragments and labels. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
+      "symbol": "L:c.a(I)V#13",
+      "originalName": "var8",
+      "to": "dialogButtonLeft",
+      "evidence": "c.a(I)V renders screen panels/title sprites, fullscreen membership/unavailable/acceptance overlays and tutorial pages/slides. The four stack carriers separately preserve activeTicks<=200 alpha branch results. Button geometry and localized text roles follow their exact draw and paragraph calls. Button X derived from center320 and width/margins. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
+      "symbol": "L:c.a(I)V#14",
+      "originalName": "var8_ref_String",
+      "to": "acceptanceCountdownText",
+      "evidence": "c.a(I)V renders screen panels/title sprites, fullscreen membership/unavailable/acceptance overlays and tutorial pages/slides. The four stack carriers separately preserve activeTicks<=200 alpha branch results. Button geometry and localized text roles follow their exact draw and paragraph calls. Decimal countdown from(1500-activeTicks)/150+1; original integer division remains. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
+      "symbol": "L:c.a(I)V#15",
+      "originalName": "var9",
+      "to": "buttonTextCenterOrConfirmationWidth",
+      "evidence": "c.a(I)V renders screen panels/title sprites, fullscreen membership/unavailable/acceptance overlays and tutorial pages/slides. The four stack carriers separately preserve activeTicks<=200 alpha branch results. Button geometry and localized text roles follow their exact draw and paragraph calls. Centered label X for ordinary dialogs; reused as confirmation button width100. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
+      "symbol": "L:c.a(I)V#16",
+      "originalName": "var10",
+      "to": "confirmationButtonLeft",
+      "evidence": "c.a(I)V renders screen panels/title sprites, fullscreen membership/unavailable/acceptance overlays and tutorial pages/slides. The four stack carriers separately preserve activeTicks<=200 alpha branch results. Button geometry and localized text roles follow their exact draw and paragraph calls. Confirmation cancel/accept X, centered90 to either side of320. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
+      "symbol": "L:c.a(I)V#17",
+      "originalName": "var11",
+      "to": "confirmationTextCenter",
+      "evidence": "c.a(I)V renders screen panels/title sprites, fullscreen membership/unavailable/acceptance overlays and tutorial pages/slides. The four stack carriers separately preserve activeTicks<=200 alpha branch results. Button geometry and localized text roles follow their exact draw and paragraph calls. Confirmation label X computed from button left, half width and10 margin. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
+      "symbol": "L:c.a(I)V#18",
+      "originalName": "var12",
+      "to": "clientControlFlowGuard",
+      "evidence": "c.a(I)V renders screen panels/title sprites, fullscreen membership/unavailable/acceptance overlays and tutorial pages/slides. The four stack carriers separately preserve activeTicks<=200 alpha branch results. Button geometry and localized text roles follow their exact draw and paragraph calls. Snapshot of Geoblox.field_C; no meaning or constant value inferred. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
+      "symbol": "L:c.a(I)V#19",
+      "originalName": "decompiledCaughtParameter0",
+      "to": "caughtParameter",
+      "evidence": "c.a(I)V renders screen panels/title sprites, fullscreen membership/unavailable/acceptance overlays and tutorial pages/slides. The four stack carriers separately preserve activeTicks<=200 alpha branch results. Button geometry and localized text roles follow their exact draw and paragraph calls. Catch parameter copied to the failure snapshots. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
+      "symbol": "L:c.a(I)V#2",
+      "originalName": "stackIn_144_0",
+      "to": "acceptanceOverlayAlpha",
+      "evidence": "c.a(I)V renders screen panels/title sprites, fullscreen membership/unavailable/acceptance overlays and tutorial pages/slides. The four stack carriers separately preserve activeTicks<=200 alpha branch results. Button geometry and localized text roles follow their exact draw and paragraph calls. Third activeTicks/200 snapshot for accept/cancel confirmation. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
+      "symbol": "L:c.a(I)V#3",
+      "originalName": "stackIn_191_0",
+      "to": "fallbackOverlayAlpha",
+      "evidence": "c.a(I)V renders screen panels/title sprites, fullscreen membership/unavailable/acceptance overlays and tutorial pages/slides. The four stack carriers separately preserve activeTicks<=200 alpha branch results. Button geometry and localized text roles follow their exact draw and paragraph calls. Fourth activeTicks/200 snapshot for the remaining nonmember dialog. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
+      "symbol": "L:c.a(I)V#4",
+      "originalName": "decompiledCaughtException",
+      "to": "caughtFailure",
+      "evidence": "c.a(I)V renders screen panels/title sprites, fullscreen membership/unavailable/acceptance overlays and tutorial pages/slides. The four stack carriers separately preserve activeTicks<=200 alpha branch results. Button geometry and localized text roles follow their exact draw and paragraph calls. Exception snapshot assigned from the catch parameter. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
+      "symbol": "L:c.a(I)V#5",
+      "originalName": "var2_int",
+      "to": "panelHeight",
+      "evidence": "c.a(I)V renders screen panels/title sprites, fullscreen membership/unavailable/acceptance overlays and tutorial pages/slides. The four stack carriers separately preserve activeTicks<=200 alpha branch results. Button geometry and localized text roles follow their exact draw and paragraph calls. Main panel height270,235 for screen2 or285 for the other branch. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
+      "symbol": "L:c.a(I)V#6",
+      "originalName": "var2",
+      "to": "renderFailure",
+      "evidence": "c.a(I)V renders screen panels/title sprites, fullscreen membership/unavailable/acceptance overlays and tutorial pages/slides. The four stack carriers separately preserve activeTicks<=200 alpha branch results. Button geometry and localized text roles follow their exact draw and paragraph calls. Original exception passed to withFailureContext. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
+      "symbol": "L:c.a(I)V#7",
+      "originalName": "var3",
+      "to": "panelLeft",
+      "evidence": "c.a(I)V renders screen panels/title sprites, fullscreen membership/unavailable/acceptance overlays and tutorial pages/slides. The four stack carriers separately preserve activeTicks<=200 alpha branch results. Button geometry and localized text roles follow their exact draw and paragraph calls. Main panel X140, including the login inset+10. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
+      "symbol": "L:c.a(I)V#8",
+      "originalName": "var4",
+      "to": "panelWidth",
+      "evidence": "c.a(I)V renders screen panels/title sprites, fullscreen membership/unavailable/acceptance overlays and tutorial pages/slides. The four stack carriers separately preserve activeTicks<=200 alpha branch results. Button geometry and localized text roles follow their exact draw and paragraph calls. Main panel width400, widened20 for screens7/8. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
+      "symbol": "L:c.a(I)V#9",
+      "originalName": "var5",
+      "to": "layoutYOrOverlayAlphaOrCurtainX",
+      "evidence": "c.a(I)V renders screen panels/title sprites, fullscreen membership/unavailable/acceptance overlays and tutorial pages/slides. The four stack carriers separately preserve activeTicks<=200 alpha branch results. Button geometry and localized text roles follow their exact draw and paragraph calls. Reused slot: panel top120/130/110, login text baseline184/185, alpha snapshot and curtain clip X. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
       "symbol": "L:c.a(IB)V#2",
       "originalName": "var4",
       "to": "actionId",
@@ -7671,6 +7857,138 @@
       "originalName": "var5",
       "to": "actionId",
       "evidence": "Value read from per-screen action ID array using item index; drives action-specific branches."
+    },
+    {
+      "symbol": "L:c.b(II)V#0",
+      "originalName": "runtimeException",
+      "to": "pageRenderFailure",
+      "evidence": "c.b(II)V draws tutorial page0..4 with title/body text and demonstration sprites, saving/restoring clip bounds. Pages0..2 use rotating geometry/sparkle examples; pages3/4 use amorphous/gray-modulated or orb/star examples. Text slots reuse orbit coordinates only after sprite work. Original exception supplied to withFailureContext. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
+      "symbol": "L:c.b(II)V#1",
+      "originalName": "var3_int",
+      "to": "paragraphY",
+      "evidence": "c.b(II)V draws tutorial page0..4 with title/body text and demonstration sprites, saving/restoring clip bounds. Pages0..2 use rotating geometry/sparkle examples; pages3/4 use amorphous/gray-modulated or orb/star examples. Text slots reuse orbit coordinates only after sprite work. Text baseline180, later advanced by paragraph line count times font ascent+descent. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
+      "symbol": "L:c.b(II)V#10",
+      "originalName": "decompiledCaughtException",
+      "to": "caughtFailure",
+      "evidence": "c.b(II)V draws tutorial page0..4 with title/body text and demonstration sprites, saving/restoring clip bounds. Pages0..2 use rotating geometry/sparkle examples; pages3/4 use amorphous/gray-modulated or orb/star examples. Text slots reuse orbit coordinates only after sprite work. Caught exception snapshot. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
+      "symbol": "L:c.b(II)V#11",
+      "originalName": "decompiledCaughtParameter0",
+      "to": "caughtParameter",
+      "evidence": "c.b(II)V draws tutorial page0..4 with title/body text and demonstration sprites, saving/restoring clip bounds. Pages0..2 use rotating geometry/sparkle examples; pages3/4 use amorphous/gray-modulated or orb/star examples. Text slots reuse orbit coordinates only after sprite work. Original catch parameter. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
+      "symbol": "L:c.b(II)V#2",
+      "originalName": "var4_int",
+      "to": "orbitCenterX",
+      "evidence": "c.b(II)V draws tutorial page0..4 with title/body text and demonstration sprites, saving/restoring clip bounds. Pages0..2 use rotating geometry/sparkle examples; pages3/4 use amorphous/gray-modulated or orb/star examples. Text slots reuse orbit coordinates only after sprite work. Rotating illustration center X70. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
+      "symbol": "L:c.b(II)V#3",
+      "originalName": "var4",
+      "to": "pageParagraph",
+      "evidence": "c.b(II)V draws tutorial page0..4 with title/body text and demonstration sprites, saving/restoring clip bounds. Pages0..2 use rotating geometry/sparkle examples; pages3/4 use amorphous/gray-modulated or orb/star examples. Text slots reuse orbit coordinates only after sprite work. Object slot holds ec.field_e page text before the explicit String cast. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
+      "symbol": "L:c.b(II)V#4",
+      "originalName": "var5",
+      "to": "orbitCenterYOrTextLeft",
+      "evidence": "c.b(II)V draws tutorial page0..4 with title/body text and demonstration sprites, saving/restoring clip bounds. Pages0..2 use rotating geometry/sparkle examples; pages3/4 use amorphous/gray-modulated or orb/star examples. Text slots reuse orbit coordinates only after sprite work. Orbit center Y385, later text left155. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
+      "symbol": "L:c.b(II)V#5",
+      "originalName": "var6",
+      "to": "orbitXOrPageIndexOrLineHeight",
+      "evidence": "c.b(II)V draws tutorial page0..4 with title/body text and demonstration sprites, saving/restoring clip bounds. Pages0..2 use rotating geometry/sparkle examples; pages3/4 use amorphous/gray-modulated or orb/star examples. Text slots reuse orbit coordinates only after sprite work. Orbit X, then page-selection snapshot, then font ascent+descent. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
+      "symbol": "L:c.b(II)V#6",
+      "originalName": "var7",
+      "to": "orbitYOrParagraphWidth",
+      "evidence": "c.b(II)V draws tutorial page0..4 with title/body text and demonstration sprites, saving/restoring clip bounds. Pages0..2 use rotating geometry/sparkle examples; pages3/4 use amorphous/gray-modulated or orb/star examples. Text slots reuse orbit coordinates only after sprite work. Orbit Y, later paragraph width355. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
+      "symbol": "L:c.b(II)V#7",
+      "originalName": "var8",
+      "to": "orbitAngle",
+      "evidence": "c.b(II)V draws tutorial page0..4 with title/body text and demonstration sprites, saving/restoring clip bounds. Pages0..2 use rotating geometry/sparkle examples; pages3/4 use amorphous/gray-modulated or orb/star examples. Text slots reuse orbit coordinates only after sprite work. Radians converted to a65535 turn for rotated drawing; preserves0.5 casts. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
+      "symbol": "L:c.b(II)V#8",
+      "originalName": "var9",
+      "to": "orbitAngleSpacing",
+      "evidence": "c.b(II)V draws tutorial page0..4 with title/body text and demonstration sprites, saving/restoring clip bounds. Pages0..2 use rotating geometry/sparkle examples; pages3/4 use amorphous/gray-modulated or orb/star examples. Text slots reuse orbit coordinates only after sprite work. Radians spacing2.0943741584421716, then doubled for the third illustration. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
+      "symbol": "L:c.b(II)V#9",
+      "originalName": "var11",
+      "to": "clientControlFlowGuard",
+      "evidence": "c.b(II)V draws tutorial page0..4 with title/body text and demonstration sprites, saving/restoring clip bounds. Pages0..2 use rotating geometry/sparkle examples; pages3/4 use amorphous/gray-modulated or orb/star examples. Text slots reuse orbit coordinates only after sprite work. Geoblox.field_C snapshot retains branch/loop behavior. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
+      "symbol": "L:c.b(Z)V#0",
+      "originalName": "stackIn_16_0",
+      "to": "tileOriginYOrForegroundStartX",
+      "evidence": "c.b(Z)V tiles ee.menuBackgroundSprite then vc.menuForegroundSprite, normalizing each offset with the corresponding full sprite dimension. Constructor and c update methods establish the per-layer starting offsets and scrolling increments/decrements; signed remainder and control-flag paths remain. Carrier first stores the background starting Y, later the foreground starting X. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
+      "symbol": "L:c.b(Z)V#1",
+      "originalName": "decompiledCaughtException",
+      "to": "caughtFailure",
+      "evidence": "c.b(Z)V tiles ee.menuBackgroundSprite then vc.menuForegroundSprite, normalizing each offset with the corresponding full sprite dimension. Constructor and c update methods establish the per-layer starting offsets and scrolling increments/decrements; signed remainder and control-flag paths remain. Caught exception snapshot. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
+      "symbol": "L:c.b(Z)V#2",
+      "originalName": "var2_int",
+      "to": "tileX",
+      "evidence": "c.b(Z)V tiles ee.menuBackgroundSprite then vc.menuForegroundSprite, normalizing each offset with the corresponding full sprite dimension. Constructor and c update methods establish the per-layer starting offsets and scrolling increments/decrements; signed remainder and control-flag paths remain. Horizontal tile cursor for background and foreground loops. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
+      "symbol": "L:c.b(Z)V#3",
+      "originalName": "var2",
+      "to": "backgroundFailure",
+      "evidence": "c.b(Z)V tiles ee.menuBackgroundSprite then vc.menuForegroundSprite, normalizing each offset with the corresponding full sprite dimension. Constructor and c update methods establish the per-layer starting offsets and scrolling increments/decrements; signed remainder and control-flag paths remain. Original exception supplied to withFailureContext. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
+      "symbol": "L:c.b(Z)V#4",
+      "originalName": "var3",
+      "to": "tileY",
+      "evidence": "c.b(Z)V tiles ee.menuBackgroundSprite then vc.menuForegroundSprite, normalizing each offset with the corresponding full sprite dimension. Constructor and c update methods establish the per-layer starting offsets and scrolling increments/decrements; signed remainder and control-flag paths remain. Vertical tile cursor for both sprite layers. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
+      "symbol": "L:c.b(Z)V#5",
+      "originalName": "var4",
+      "to": "clientControlFlowGuard",
+      "evidence": "c.b(Z)V tiles ee.menuBackgroundSprite then vc.menuForegroundSprite, normalizing each offset with the corresponding full sprite dimension. Constructor and c update methods establish the per-layer starting offsets and scrolling increments/decrements; signed remainder and control-flag paths remain. Snapshot of Geoblox.field_C controlling original loop/exit paths. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
+      "symbol": "L:c.b(Z)V#6",
+      "originalName": "decompiledCaughtParameter0",
+      "to": "caughtParameter",
+      "evidence": "c.b(Z)V tiles ee.menuBackgroundSprite then vc.menuForegroundSprite, normalizing each offset with the corresponding full sprite dimension. Constructor and c update methods establish the per-layer starting offsets and scrolling increments/decrements; signed remainder and control-flag paths remain. Original catch parameter. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
+      "symbol": "L:c.e(B)V#0",
+      "originalName": "decompiledCaughtException",
+      "to": "caughtFailure",
+      "evidence": "c tutorial actions copy field_q to field_n before incrementing/decrementing page0..4, set field_v to the direction and field_E active. c.a(I)V clips outgoing/current page renders around field_F, using field_S to select the old page for menu rows. c.e(B)V advances field_F by8 after the field_T/field_H gate, clearing the slide past640+curtain.height. Wrong-guard and pointer paths remain explicit. Caught exception snapshot. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
+      "symbol": "L:c.e(B)V#1",
+      "originalName": "var2",
+      "to": "slideUpdateFailure",
+      "evidence": "c tutorial actions copy field_q to field_n before incrementing/decrementing page0..4, set field_v to the direction and field_E active. c.a(I)V clips outgoing/current page renders around field_F, using field_S to select the old page for menu rows. c.e(B)V advances field_F by8 after the field_T/field_H gate, clearing the slide past640+curtain.height. Wrong-guard and pointer paths remain explicit. Original exception passed to withFailureContext. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
+      "symbol": "L:c.e(B)V#2",
+      "originalName": "decompiledCaughtParameter0",
+      "to": "caughtParameter",
+      "evidence": "c tutorial actions copy field_q to field_n before incrementing/decrementing page0..4, set field_v to the direction and field_E active. c.a(I)V clips outgoing/current page renders around field_F, using field_S to select the old page for menu rows. c.e(B)V advances field_F by8 after the field_T/field_H gate, clearing the slide past640+curtain.height. Wrong-guard and pointer paths remain explicit. Original catch parameter. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
     },
     {
       "symbol": "L:cf.d(B)V#0",
@@ -28229,6 +28547,18 @@
       "originalName": "b"
     },
     {
+      "symbol": "M:c.b(II)V",
+      "originalName": "b",
+      "to": "renderTutorialPage",
+      "evidence": "c.b(II)V draws tutorial page0..4 with title/body text and demonstration sprites, saving/restoring clip bounds. Pages0..2 use rotating geometry/sparkle examples; pages3/4 use amorphous/gray-modulated or orb/star examples. Text slots reuse orbit coordinates only after sprite work. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
+      "symbol": "M:c.b(Z)V",
+      "originalName": "b",
+      "to": "drawScrollingMenuBackground",
+      "evidence": "c.b(Z)V tiles ee.menuBackgroundSprite then vc.menuForegroundSprite, normalizing each offset with the corresponding full sprite dimension. Constructor and c update methods establish the per-layer starting offsets and scrolling increments/decrements; signed remainder and control-flag paths remain. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
       "symbol": "M:c.c(I)V",
       "to": "updateTransition",
       "evidence": "Geoblox calls on outgoing/incoming screens while their IDs differ; advances animation without normal screen input.",
@@ -28245,6 +28575,12 @@
       "to": "previewMusicVolume",
       "evidence": "Starts sample 8 at j.field_gb volume, retaining preview stream and resetting preview ticks.",
       "originalName": "d"
+    },
+    {
+      "symbol": "M:c.e(B)V",
+      "originalName": "e",
+      "to": "advanceTutorialSlide",
+      "evidence": "c tutorial actions copy field_q to field_n before incrementing/decrementing page0..4, set field_v to the direction and field_E active. c.a(I)V clips outgoing/current page renders around field_F, using field_S to select the old page for menu rows. c.e(B)V advances field_F by8 after the field_T/field_H gate, clearing the slide past640+curtain.height. Wrong-guard and pointer paths remain explicit. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
     },
     {
       "symbol": "M:c.h(B)V",
@@ -32435,6 +32771,12 @@
       "originalName": "param1"
     },
     {
+      "symbol": "P:c.a(I)V#0",
+      "originalName": "param0",
+      "to": "methodGuard",
+      "evidence": "c.a(I)V renders screen panels/title sprites, fullscreen membership/unavailable/acceptance overlays and tutorial pages/slides. The four stack carriers separately preserve activeTicks<=200 alpha branch results. Button geometry and localized text roles follow their exact draw and paragraph calls. Only-28750 executes rendering; failure context retains the guard. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
       "symbol": "P:c.a(IB)V#0",
       "to": "itemIndex",
       "evidence": "Indexes action IDs for decrease operation.",
@@ -32519,10 +32861,34 @@
       "originalName": "param0"
     },
     {
+      "symbol": "P:c.b(II)V#0",
+      "originalName": "param0",
+      "to": "methodGuard",
+      "evidence": "c.b(II)V draws tutorial page0..4 with title/body text and demonstration sprites, saving/restoring clip bounds. Pages0..2 use rotating geometry/sparkle examples; pages3/4 use amorphous/gray-modulated or orb/star examples. Text slots reuse orbit coordinates only after sprite work. Values>-14 retain the original handleMenuPointer guard call. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
+      "symbol": "P:c.b(II)V#1",
+      "originalName": "param1",
+      "to": "pageIndex",
+      "evidence": "c.b(II)V draws tutorial page0..4 with title/body text and demonstration sprites, saving/restoring clip bounds. Pages0..2 use rotating geometry/sparkle examples; pages3/4 use amorphous/gray-modulated or orb/star examples. Text slots reuse orbit coordinates only after sprite work. Chooses five title/paragraph variants and prints pageIndex+1 followed by/5. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
+      "symbol": "P:c.b(Z)V#0",
+      "originalName": "param0",
+      "to": "setTutorialOffsetGuard",
+      "evidence": "c.b(Z)V tiles ee.menuBackgroundSprite then vc.menuForegroundSprite, normalizing each offset with the corresponding full sprite dimension. Constructor and c update methods establish the per-layer starting offsets and scrolling increments/decrements; signed remainder and control-flag paths remain. True retains the original side effect setting curtain offset124. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+    },
+    {
       "symbol": "P:c.c(II)V#1",
       "to": "itemCount",
       "evidence": "Copied into inherited item count.",
       "originalName": "param1"
+    },
+    {
+      "symbol": "P:c.e(B)V#0",
+      "originalName": "param0",
+      "to": "methodGuard",
+      "evidence": "c tutorial actions copy field_q to field_n before incrementing/decrementing page0..4, set field_v to the direction and field_E active. c.a(I)V clips outgoing/current page renders around field_F, using field_S to select the old page for menu rows. c.e(B)V advances field_F by8 after the field_T/field_H gate, clearing the slide past640+curtain.height. Wrong-guard and pointer paths remain explicit. Values<73 retain field_V=15; updateScreen passes104. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
     },
     {
       "symbol": "P:cd.a(B)V#0",
@@ -42101,8 +42467,8 @@
       "evidence": "Input source audit: wl queues translated key presses/typed characters and encoded releases; re.b(Z)V replays held-key changes and snapshots the keyboard-event frame end; hh.a(I)Z polls that frame. le AWT mouse/focus callbacks update live pointer state; mc.a(B)V copies it under the listener monitor and consumes pending presses/activity. Numeric internal codes,128-slot queues,112 held-key flags,guards,handlers and original diagnostic strings remain. The2184-case native matrix checks controlled-event/queue scopes; real concurrent AWT delivery and complete gameplay remain unverified."
     }
   ],
-  "revision": 21,
-  "version": 92,
+  "revision": 22,
+  "version": 93,
   "generators": {
     "dekoblokoWork": {
       "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
@@ -42122,11 +42488,622 @@
   "publication": {
     "format": 1,
     "previousRules": {
-      "commit": "4a0100194055ff663b3443b3abbf109a64e2eeb1",
+      "commit": "93f172392f7a5400dd30d7448e77902035d53f7f",
       "path": "readable/geoblox-rules.json",
-      "sha256": "8c001d93fdbb10dc661ae8e4f2c984aa1f6a0b79679827c2907ef3482127aa04"
+      "sha256": "55639b279d3b24ecc88245ac56364c0cad53f03c9ac24688898dab48be271c63"
     },
-    "ruleChanges": [],
+    "ruleChanges": [
+      {
+        "symbol": "F:c.field_E:Z",
+        "before": null,
+        "after": {
+          "symbol": "F:c.field_E:Z",
+          "originalName": "field_E",
+          "to": "tutorialSlideActive",
+          "evidence": "c tutorial actions copy field_q to field_n before incrementing/decrementing page0..4, set field_v to the direction and field_E active. c.a(I)V clips outgoing/current page renders around field_F, using field_S to select the old page for menu rows. c.e(B)V advances field_F by8 after the field_T/field_H gate, clearing the slide past640+curtain.height. Wrong-guard and pointer paths remain explicit. Set by tutorial page actions and cleared when the curtain finishes; active update dispatches the slide helper. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "F:c.field_F:I",
+        "before": null,
+        "after": {
+          "symbol": "F:c.field_F:I",
+          "originalName": "field_F",
+          "to": "tutorialSlideOffset",
+          "evidence": "c tutorial actions copy field_q to field_n before incrementing/decrementing page0..4, set field_v to the direction and field_E active. c.a(I)V clips outgoing/current page renders around field_F, using field_S to select the old page for menu rows. c.e(B)V advances field_F by8 after the field_T/field_H gate, clearing the slide past640+curtain.height. Wrong-guard and pointer paths remain explicit. Curtain offset advances by8; The constructor initializes0; the background helper sets124 only when its boolean guard is true. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "F:c.field_I:I",
+        "before": null,
+        "after": {
+          "symbol": "F:c.field_I:I",
+          "originalName": "field_I",
+          "to": "foregroundScrollY",
+          "evidence": "c.b(Z)V tiles ee.menuBackgroundSprite then vc.menuForegroundSprite, normalizing each offset with the corresponding full sprite dimension. Constructor and c update methods establish the per-layer starting offsets and scrolling increments/decrements; signed remainder and control-flag paths remain. Y offset starts115, decrements and is normalized by foreground.fullHeight. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "F:c.field_O:I",
+        "before": null,
+        "after": {
+          "symbol": "F:c.field_O:I",
+          "originalName": "field_O",
+          "to": "backgroundScrollY",
+          "evidence": "c.b(Z)V tiles ee.menuBackgroundSprite then vc.menuForegroundSprite, normalizing each offset with the corresponding full sprite dimension. Constructor and c update methods establish the per-layer starting offsets and scrolling increments/decrements; signed remainder and control-flag paths remain. Y offset starts0, decrements and is normalized by background.fullHeight. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "F:c.field_P:[I",
+        "before": null,
+        "after": {
+          "symbol": "F:c.field_P:[I",
+          "originalName": "field_P",
+          "to": "savedTutorialClipBounds",
+          "evidence": "c tutorial actions copy field_q to field_n before incrementing/decrementing page0..4, set field_v to the direction and field_E active. c.a(I)V clips outgoing/current page renders around field_F, using field_S to select the old page for menu rows. c.e(B)V advances field_F by8 after the field_T/field_H gate, clearing the slide past640+curtain.height. Wrong-guard and pointer paths remain explicit. Four-element clip storage allocated in the constructor, saved/restored throughout page rendering. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "F:c.field_S:Z",
+        "before": null,
+        "after": {
+          "symbol": "F:c.field_S:Z",
+          "originalName": "field_S",
+          "to": "renderingPreviousTutorialPage",
+          "evidence": "c tutorial actions copy field_q to field_n before incrementing/decrementing page0..4, set field_v to the direction and field_E active. c.a(I)V clips outgoing/current page renders around field_F, using field_S to select the old page for menu rows. c.e(B)V advances field_F by8 after the field_T/field_H gate, clearing the slide past640+curtain.height. Wrong-guard and pointer paths remain explicit. Temporarily true only around outgoing-page super.renderScreen, so menu row rendering reads the saved page. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "F:c.field_W:I",
+        "before": null,
+        "after": {
+          "symbol": "F:c.field_W:I",
+          "originalName": "field_W",
+          "to": "backgroundScrollX",
+          "evidence": "c.b(Z)V tiles ee.menuBackgroundSprite then vc.menuForegroundSprite, normalizing each offset with the corresponding full sprite dimension. Constructor and c update methods establish the per-layer starting offsets and scrolling increments/decrements; signed remainder and control-flag paths remain. X offset starts0, increments and is normalized by background.fullWidth. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "F:c.field_n:I",
+        "before": null,
+        "after": {
+          "symbol": "F:c.field_n:I",
+          "originalName": "field_n",
+          "to": "previousTutorialPageIndex",
+          "evidence": "c tutorial actions copy field_q to field_n before incrementing/decrementing page0..4, set field_v to the direction and field_E active. c.a(I)V clips outgoing/current page renders around field_F, using field_S to select the old page for menu rows. c.e(B)V advances field_F by8 after the field_T/field_H gate, clearing the slide past640+curtain.height. Wrong-guard and pointer paths remain explicit. Outgoing page saved before a slide. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "F:c.field_q:I",
+        "before": null,
+        "after": {
+          "symbol": "F:c.field_q:I",
+          "originalName": "field_q",
+          "to": "tutorialPageIndex",
+          "evidence": "c tutorial actions copy field_q to field_n before incrementing/decrementing page0..4, set field_v to the direction and field_E active. c.a(I)V clips outgoing/current page renders around field_F, using field_S to select the old page for menu rows. c.e(B)V advances field_F by8 after the field_T/field_H gate, clearing the slide past640+curtain.height. Wrong-guard and pointer paths remain explicit. Current/destination tutorial page; Geoblox resets it to0 on entry. The initialClick pointer guard can still assign-45; do not infer a validated range. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "F:c.field_u:I",
+        "before": null,
+        "after": {
+          "symbol": "F:c.field_u:I",
+          "originalName": "field_u",
+          "to": "foregroundScrollX",
+          "evidence": "c.b(Z)V tiles ee.menuBackgroundSprite then vc.menuForegroundSprite, normalizing each offset with the corresponding full sprite dimension. Constructor and c update methods establish the per-layer starting offsets and scrolling increments/decrements; signed remainder and control-flag paths remain. X offset starts123, decrements and is normalized by foreground.fullWidth. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "F:c.field_v:Z",
+        "before": null,
+        "after": {
+          "symbol": "F:c.field_v:Z",
+          "originalName": "field_v",
+          "to": "tutorialSlideForward",
+          "evidence": "c tutorial actions copy field_q to field_n before incrementing/decrementing page0..4, set field_v to the direction and field_E active. c.a(I)V clips outgoing/current page renders around field_F, using field_S to select the old page for menu rows. c.e(B)V advances field_F by8 after the field_T/field_H gate, clearing the slide past640+curtain.height. Wrong-guard and pointer paths remain explicit. True on the increment-page action, false on decrement; selects the curtain/clip direction. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "L:c.a(I)V#0",
+        "before": null,
+        "after": {
+          "symbol": "L:c.a(I)V#0",
+          "originalName": "stackIn_73_0",
+          "to": "membershipOverlayAlpha",
+          "evidence": "c.a(I)V renders screen panels/title sprites, fullscreen membership/unavailable/acceptance overlays and tutorial pages/slides. The four stack carriers separately preserve activeTicks<=200 alpha branch results. Button geometry and localized text roles follow their exact draw and paragraph calls. First activeTicks/200 snapshot, used by the fullscreen nonmember overlay. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "L:c.a(I)V#1",
+        "before": null,
+        "after": {
+          "symbol": "L:c.a(I)V#1",
+          "originalName": "stackIn_122_0",
+          "to": "unavailableOverlayAlpha",
+          "evidence": "c.a(I)V renders screen panels/title sprites, fullscreen membership/unavailable/acceptance overlays and tutorial pages/slides. The four stack carriers separately preserve activeTicks<=200 alpha branch results. Button geometry and localized text roles follow their exact draw and paragraph calls. Second activeTicks/200 snapshot for the unavailable dialog. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "L:c.a(I)V#10",
+        "before": null,
+        "after": {
+          "symbol": "L:c.a(I)V#10",
+          "originalName": "var6",
+          "to": "textYOrButtonTop",
+          "evidence": "c.a(I)V renders screen panels/title sprites, fullscreen membership/unavailable/acceptance overlays and tutorial pages/slides. The four stack carriers separately preserve activeTicks<=200 alpha branch results. Button geometry and localized text roles follow their exact draw and paragraph calls. Dialog text baseline and accumulated paragraph heights, then button panel top. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "L:c.a(I)V#11",
+        "before": null,
+        "after": {
+          "symbol": "L:c.a(I)V#11",
+          "originalName": "var7",
+          "to": "dialogButtonWidth",
+          "evidence": "c.a(I)V renders screen panels/title sprites, fullscreen membership/unavailable/acceptance overlays and tutorial pages/slides. The four stack carriers separately preserve activeTicks<=200 alpha branch results. Button geometry and localized text roles follow their exact draw and paragraph calls. Button content width100 or242, excluding the20 border margin. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "L:c.a(I)V#12",
+        "before": null,
+        "after": {
+          "symbol": "L:c.a(I)V#12",
+          "originalName": "var7_ref_String",
+          "to": "acceptancePromptText",
+          "evidence": "c.a(I)V renders screen panels/title sprites, fullscreen membership/unavailable/acceptance overlays and tutorial pages/slides. The four stack carriers separately preserve activeTicks<=200 alpha branch results. Button geometry and localized text roles follow their exact draw and paragraph calls. Concatenation of before/after accept/cancel localized fragments and labels. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "L:c.a(I)V#13",
+        "before": null,
+        "after": {
+          "symbol": "L:c.a(I)V#13",
+          "originalName": "var8",
+          "to": "dialogButtonLeft",
+          "evidence": "c.a(I)V renders screen panels/title sprites, fullscreen membership/unavailable/acceptance overlays and tutorial pages/slides. The four stack carriers separately preserve activeTicks<=200 alpha branch results. Button geometry and localized text roles follow their exact draw and paragraph calls. Button X derived from center320 and width/margins. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "L:c.a(I)V#14",
+        "before": null,
+        "after": {
+          "symbol": "L:c.a(I)V#14",
+          "originalName": "var8_ref_String",
+          "to": "acceptanceCountdownText",
+          "evidence": "c.a(I)V renders screen panels/title sprites, fullscreen membership/unavailable/acceptance overlays and tutorial pages/slides. The four stack carriers separately preserve activeTicks<=200 alpha branch results. Button geometry and localized text roles follow their exact draw and paragraph calls. Decimal countdown from(1500-activeTicks)/150+1; original integer division remains. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "L:c.a(I)V#15",
+        "before": null,
+        "after": {
+          "symbol": "L:c.a(I)V#15",
+          "originalName": "var9",
+          "to": "buttonTextCenterOrConfirmationWidth",
+          "evidence": "c.a(I)V renders screen panels/title sprites, fullscreen membership/unavailable/acceptance overlays and tutorial pages/slides. The four stack carriers separately preserve activeTicks<=200 alpha branch results. Button geometry and localized text roles follow their exact draw and paragraph calls. Centered label X for ordinary dialogs; reused as confirmation button width100. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "L:c.a(I)V#16",
+        "before": null,
+        "after": {
+          "symbol": "L:c.a(I)V#16",
+          "originalName": "var10",
+          "to": "confirmationButtonLeft",
+          "evidence": "c.a(I)V renders screen panels/title sprites, fullscreen membership/unavailable/acceptance overlays and tutorial pages/slides. The four stack carriers separately preserve activeTicks<=200 alpha branch results. Button geometry and localized text roles follow their exact draw and paragraph calls. Confirmation cancel/accept X, centered90 to either side of320. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "L:c.a(I)V#17",
+        "before": null,
+        "after": {
+          "symbol": "L:c.a(I)V#17",
+          "originalName": "var11",
+          "to": "confirmationTextCenter",
+          "evidence": "c.a(I)V renders screen panels/title sprites, fullscreen membership/unavailable/acceptance overlays and tutorial pages/slides. The four stack carriers separately preserve activeTicks<=200 alpha branch results. Button geometry and localized text roles follow their exact draw and paragraph calls. Confirmation label X computed from button left, half width and10 margin. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "L:c.a(I)V#18",
+        "before": null,
+        "after": {
+          "symbol": "L:c.a(I)V#18",
+          "originalName": "var12",
+          "to": "clientControlFlowGuard",
+          "evidence": "c.a(I)V renders screen panels/title sprites, fullscreen membership/unavailable/acceptance overlays and tutorial pages/slides. The four stack carriers separately preserve activeTicks<=200 alpha branch results. Button geometry and localized text roles follow their exact draw and paragraph calls. Snapshot of Geoblox.field_C; no meaning or constant value inferred. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "L:c.a(I)V#19",
+        "before": null,
+        "after": {
+          "symbol": "L:c.a(I)V#19",
+          "originalName": "decompiledCaughtParameter0",
+          "to": "caughtParameter",
+          "evidence": "c.a(I)V renders screen panels/title sprites, fullscreen membership/unavailable/acceptance overlays and tutorial pages/slides. The four stack carriers separately preserve activeTicks<=200 alpha branch results. Button geometry and localized text roles follow their exact draw and paragraph calls. Catch parameter copied to the failure snapshots. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "L:c.a(I)V#2",
+        "before": null,
+        "after": {
+          "symbol": "L:c.a(I)V#2",
+          "originalName": "stackIn_144_0",
+          "to": "acceptanceOverlayAlpha",
+          "evidence": "c.a(I)V renders screen panels/title sprites, fullscreen membership/unavailable/acceptance overlays and tutorial pages/slides. The four stack carriers separately preserve activeTicks<=200 alpha branch results. Button geometry and localized text roles follow their exact draw and paragraph calls. Third activeTicks/200 snapshot for accept/cancel confirmation. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "L:c.a(I)V#3",
+        "before": null,
+        "after": {
+          "symbol": "L:c.a(I)V#3",
+          "originalName": "stackIn_191_0",
+          "to": "fallbackOverlayAlpha",
+          "evidence": "c.a(I)V renders screen panels/title sprites, fullscreen membership/unavailable/acceptance overlays and tutorial pages/slides. The four stack carriers separately preserve activeTicks<=200 alpha branch results. Button geometry and localized text roles follow their exact draw and paragraph calls. Fourth activeTicks/200 snapshot for the remaining nonmember dialog. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "L:c.a(I)V#4",
+        "before": null,
+        "after": {
+          "symbol": "L:c.a(I)V#4",
+          "originalName": "decompiledCaughtException",
+          "to": "caughtFailure",
+          "evidence": "c.a(I)V renders screen panels/title sprites, fullscreen membership/unavailable/acceptance overlays and tutorial pages/slides. The four stack carriers separately preserve activeTicks<=200 alpha branch results. Button geometry and localized text roles follow their exact draw and paragraph calls. Exception snapshot assigned from the catch parameter. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "L:c.a(I)V#5",
+        "before": null,
+        "after": {
+          "symbol": "L:c.a(I)V#5",
+          "originalName": "var2_int",
+          "to": "panelHeight",
+          "evidence": "c.a(I)V renders screen panels/title sprites, fullscreen membership/unavailable/acceptance overlays and tutorial pages/slides. The four stack carriers separately preserve activeTicks<=200 alpha branch results. Button geometry and localized text roles follow their exact draw and paragraph calls. Main panel height270,235 for screen2 or285 for the other branch. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "L:c.a(I)V#6",
+        "before": null,
+        "after": {
+          "symbol": "L:c.a(I)V#6",
+          "originalName": "var2",
+          "to": "renderFailure",
+          "evidence": "c.a(I)V renders screen panels/title sprites, fullscreen membership/unavailable/acceptance overlays and tutorial pages/slides. The four stack carriers separately preserve activeTicks<=200 alpha branch results. Button geometry and localized text roles follow their exact draw and paragraph calls. Original exception passed to withFailureContext. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "L:c.a(I)V#7",
+        "before": null,
+        "after": {
+          "symbol": "L:c.a(I)V#7",
+          "originalName": "var3",
+          "to": "panelLeft",
+          "evidence": "c.a(I)V renders screen panels/title sprites, fullscreen membership/unavailable/acceptance overlays and tutorial pages/slides. The four stack carriers separately preserve activeTicks<=200 alpha branch results. Button geometry and localized text roles follow their exact draw and paragraph calls. Main panel X140, including the login inset+10. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "L:c.a(I)V#8",
+        "before": null,
+        "after": {
+          "symbol": "L:c.a(I)V#8",
+          "originalName": "var4",
+          "to": "panelWidth",
+          "evidence": "c.a(I)V renders screen panels/title sprites, fullscreen membership/unavailable/acceptance overlays and tutorial pages/slides. The four stack carriers separately preserve activeTicks<=200 alpha branch results. Button geometry and localized text roles follow their exact draw and paragraph calls. Main panel width400, widened20 for screens7/8. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "L:c.a(I)V#9",
+        "before": null,
+        "after": {
+          "symbol": "L:c.a(I)V#9",
+          "originalName": "var5",
+          "to": "layoutYOrOverlayAlphaOrCurtainX",
+          "evidence": "c.a(I)V renders screen panels/title sprites, fullscreen membership/unavailable/acceptance overlays and tutorial pages/slides. The four stack carriers separately preserve activeTicks<=200 alpha branch results. Button geometry and localized text roles follow their exact draw and paragraph calls. Reused slot: panel top120/130/110, login text baseline184/185, alpha snapshot and curtain clip X. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "L:c.b(II)V#0",
+        "before": null,
+        "after": {
+          "symbol": "L:c.b(II)V#0",
+          "originalName": "runtimeException",
+          "to": "pageRenderFailure",
+          "evidence": "c.b(II)V draws tutorial page0..4 with title/body text and demonstration sprites, saving/restoring clip bounds. Pages0..2 use rotating geometry/sparkle examples; pages3/4 use amorphous/gray-modulated or orb/star examples. Text slots reuse orbit coordinates only after sprite work. Original exception supplied to withFailureContext. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "L:c.b(II)V#1",
+        "before": null,
+        "after": {
+          "symbol": "L:c.b(II)V#1",
+          "originalName": "var3_int",
+          "to": "paragraphY",
+          "evidence": "c.b(II)V draws tutorial page0..4 with title/body text and demonstration sprites, saving/restoring clip bounds. Pages0..2 use rotating geometry/sparkle examples; pages3/4 use amorphous/gray-modulated or orb/star examples. Text slots reuse orbit coordinates only after sprite work. Text baseline180, later advanced by paragraph line count times font ascent+descent. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "L:c.b(II)V#10",
+        "before": null,
+        "after": {
+          "symbol": "L:c.b(II)V#10",
+          "originalName": "decompiledCaughtException",
+          "to": "caughtFailure",
+          "evidence": "c.b(II)V draws tutorial page0..4 with title/body text and demonstration sprites, saving/restoring clip bounds. Pages0..2 use rotating geometry/sparkle examples; pages3/4 use amorphous/gray-modulated or orb/star examples. Text slots reuse orbit coordinates only after sprite work. Caught exception snapshot. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "L:c.b(II)V#11",
+        "before": null,
+        "after": {
+          "symbol": "L:c.b(II)V#11",
+          "originalName": "decompiledCaughtParameter0",
+          "to": "caughtParameter",
+          "evidence": "c.b(II)V draws tutorial page0..4 with title/body text and demonstration sprites, saving/restoring clip bounds. Pages0..2 use rotating geometry/sparkle examples; pages3/4 use amorphous/gray-modulated or orb/star examples. Text slots reuse orbit coordinates only after sprite work. Original catch parameter. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "L:c.b(II)V#2",
+        "before": null,
+        "after": {
+          "symbol": "L:c.b(II)V#2",
+          "originalName": "var4_int",
+          "to": "orbitCenterX",
+          "evidence": "c.b(II)V draws tutorial page0..4 with title/body text and demonstration sprites, saving/restoring clip bounds. Pages0..2 use rotating geometry/sparkle examples; pages3/4 use amorphous/gray-modulated or orb/star examples. Text slots reuse orbit coordinates only after sprite work. Rotating illustration center X70. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "L:c.b(II)V#3",
+        "before": null,
+        "after": {
+          "symbol": "L:c.b(II)V#3",
+          "originalName": "var4",
+          "to": "pageParagraph",
+          "evidence": "c.b(II)V draws tutorial page0..4 with title/body text and demonstration sprites, saving/restoring clip bounds. Pages0..2 use rotating geometry/sparkle examples; pages3/4 use amorphous/gray-modulated or orb/star examples. Text slots reuse orbit coordinates only after sprite work. Object slot holds ec.field_e page text before the explicit String cast. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "L:c.b(II)V#4",
+        "before": null,
+        "after": {
+          "symbol": "L:c.b(II)V#4",
+          "originalName": "var5",
+          "to": "orbitCenterYOrTextLeft",
+          "evidence": "c.b(II)V draws tutorial page0..4 with title/body text and demonstration sprites, saving/restoring clip bounds. Pages0..2 use rotating geometry/sparkle examples; pages3/4 use amorphous/gray-modulated or orb/star examples. Text slots reuse orbit coordinates only after sprite work. Orbit center Y385, later text left155. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "L:c.b(II)V#5",
+        "before": null,
+        "after": {
+          "symbol": "L:c.b(II)V#5",
+          "originalName": "var6",
+          "to": "orbitXOrPageIndexOrLineHeight",
+          "evidence": "c.b(II)V draws tutorial page0..4 with title/body text and demonstration sprites, saving/restoring clip bounds. Pages0..2 use rotating geometry/sparkle examples; pages3/4 use amorphous/gray-modulated or orb/star examples. Text slots reuse orbit coordinates only after sprite work. Orbit X, then page-selection snapshot, then font ascent+descent. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "L:c.b(II)V#6",
+        "before": null,
+        "after": {
+          "symbol": "L:c.b(II)V#6",
+          "originalName": "var7",
+          "to": "orbitYOrParagraphWidth",
+          "evidence": "c.b(II)V draws tutorial page0..4 with title/body text and demonstration sprites, saving/restoring clip bounds. Pages0..2 use rotating geometry/sparkle examples; pages3/4 use amorphous/gray-modulated or orb/star examples. Text slots reuse orbit coordinates only after sprite work. Orbit Y, later paragraph width355. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "L:c.b(II)V#7",
+        "before": null,
+        "after": {
+          "symbol": "L:c.b(II)V#7",
+          "originalName": "var8",
+          "to": "orbitAngle",
+          "evidence": "c.b(II)V draws tutorial page0..4 with title/body text and demonstration sprites, saving/restoring clip bounds. Pages0..2 use rotating geometry/sparkle examples; pages3/4 use amorphous/gray-modulated or orb/star examples. Text slots reuse orbit coordinates only after sprite work. Radians converted to a65535 turn for rotated drawing; preserves0.5 casts. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "L:c.b(II)V#8",
+        "before": null,
+        "after": {
+          "symbol": "L:c.b(II)V#8",
+          "originalName": "var9",
+          "to": "orbitAngleSpacing",
+          "evidence": "c.b(II)V draws tutorial page0..4 with title/body text and demonstration sprites, saving/restoring clip bounds. Pages0..2 use rotating geometry/sparkle examples; pages3/4 use amorphous/gray-modulated or orb/star examples. Text slots reuse orbit coordinates only after sprite work. Radians spacing2.0943741584421716, then doubled for the third illustration. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "L:c.b(II)V#9",
+        "before": null,
+        "after": {
+          "symbol": "L:c.b(II)V#9",
+          "originalName": "var11",
+          "to": "clientControlFlowGuard",
+          "evidence": "c.b(II)V draws tutorial page0..4 with title/body text and demonstration sprites, saving/restoring clip bounds. Pages0..2 use rotating geometry/sparkle examples; pages3/4 use amorphous/gray-modulated or orb/star examples. Text slots reuse orbit coordinates only after sprite work. Geoblox.field_C snapshot retains branch/loop behavior. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "L:c.b(Z)V#0",
+        "before": null,
+        "after": {
+          "symbol": "L:c.b(Z)V#0",
+          "originalName": "stackIn_16_0",
+          "to": "tileOriginYOrForegroundStartX",
+          "evidence": "c.b(Z)V tiles ee.menuBackgroundSprite then vc.menuForegroundSprite, normalizing each offset with the corresponding full sprite dimension. Constructor and c update methods establish the per-layer starting offsets and scrolling increments/decrements; signed remainder and control-flag paths remain. Carrier first stores the background starting Y, later the foreground starting X. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "L:c.b(Z)V#1",
+        "before": null,
+        "after": {
+          "symbol": "L:c.b(Z)V#1",
+          "originalName": "decompiledCaughtException",
+          "to": "caughtFailure",
+          "evidence": "c.b(Z)V tiles ee.menuBackgroundSprite then vc.menuForegroundSprite, normalizing each offset with the corresponding full sprite dimension. Constructor and c update methods establish the per-layer starting offsets and scrolling increments/decrements; signed remainder and control-flag paths remain. Caught exception snapshot. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "L:c.b(Z)V#2",
+        "before": null,
+        "after": {
+          "symbol": "L:c.b(Z)V#2",
+          "originalName": "var2_int",
+          "to": "tileX",
+          "evidence": "c.b(Z)V tiles ee.menuBackgroundSprite then vc.menuForegroundSprite, normalizing each offset with the corresponding full sprite dimension. Constructor and c update methods establish the per-layer starting offsets and scrolling increments/decrements; signed remainder and control-flag paths remain. Horizontal tile cursor for background and foreground loops. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "L:c.b(Z)V#3",
+        "before": null,
+        "after": {
+          "symbol": "L:c.b(Z)V#3",
+          "originalName": "var2",
+          "to": "backgroundFailure",
+          "evidence": "c.b(Z)V tiles ee.menuBackgroundSprite then vc.menuForegroundSprite, normalizing each offset with the corresponding full sprite dimension. Constructor and c update methods establish the per-layer starting offsets and scrolling increments/decrements; signed remainder and control-flag paths remain. Original exception supplied to withFailureContext. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "L:c.b(Z)V#4",
+        "before": null,
+        "after": {
+          "symbol": "L:c.b(Z)V#4",
+          "originalName": "var3",
+          "to": "tileY",
+          "evidence": "c.b(Z)V tiles ee.menuBackgroundSprite then vc.menuForegroundSprite, normalizing each offset with the corresponding full sprite dimension. Constructor and c update methods establish the per-layer starting offsets and scrolling increments/decrements; signed remainder and control-flag paths remain. Vertical tile cursor for both sprite layers. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "L:c.b(Z)V#5",
+        "before": null,
+        "after": {
+          "symbol": "L:c.b(Z)V#5",
+          "originalName": "var4",
+          "to": "clientControlFlowGuard",
+          "evidence": "c.b(Z)V tiles ee.menuBackgroundSprite then vc.menuForegroundSprite, normalizing each offset with the corresponding full sprite dimension. Constructor and c update methods establish the per-layer starting offsets and scrolling increments/decrements; signed remainder and control-flag paths remain. Snapshot of Geoblox.field_C controlling original loop/exit paths. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "L:c.b(Z)V#6",
+        "before": null,
+        "after": {
+          "symbol": "L:c.b(Z)V#6",
+          "originalName": "decompiledCaughtParameter0",
+          "to": "caughtParameter",
+          "evidence": "c.b(Z)V tiles ee.menuBackgroundSprite then vc.menuForegroundSprite, normalizing each offset with the corresponding full sprite dimension. Constructor and c update methods establish the per-layer starting offsets and scrolling increments/decrements; signed remainder and control-flag paths remain. Original catch parameter. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "L:c.e(B)V#0",
+        "before": null,
+        "after": {
+          "symbol": "L:c.e(B)V#0",
+          "originalName": "decompiledCaughtException",
+          "to": "caughtFailure",
+          "evidence": "c tutorial actions copy field_q to field_n before incrementing/decrementing page0..4, set field_v to the direction and field_E active. c.a(I)V clips outgoing/current page renders around field_F, using field_S to select the old page for menu rows. c.e(B)V advances field_F by8 after the field_T/field_H gate, clearing the slide past640+curtain.height. Wrong-guard and pointer paths remain explicit. Caught exception snapshot. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "L:c.e(B)V#1",
+        "before": null,
+        "after": {
+          "symbol": "L:c.e(B)V#1",
+          "originalName": "var2",
+          "to": "slideUpdateFailure",
+          "evidence": "c tutorial actions copy field_q to field_n before incrementing/decrementing page0..4, set field_v to the direction and field_E active. c.a(I)V clips outgoing/current page renders around field_F, using field_S to select the old page for menu rows. c.e(B)V advances field_F by8 after the field_T/field_H gate, clearing the slide past640+curtain.height. Wrong-guard and pointer paths remain explicit. Original exception passed to withFailureContext. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "L:c.e(B)V#2",
+        "before": null,
+        "after": {
+          "symbol": "L:c.e(B)V#2",
+          "originalName": "decompiledCaughtParameter0",
+          "to": "caughtParameter",
+          "evidence": "c tutorial actions copy field_q to field_n before incrementing/decrementing page0..4, set field_v to the direction and field_E active. c.a(I)V clips outgoing/current page renders around field_F, using field_S to select the old page for menu rows. c.e(B)V advances field_F by8 after the field_T/field_H gate, clearing the slide past640+curtain.height. Wrong-guard and pointer paths remain explicit. Original catch parameter. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "M:c.b(II)V",
+        "before": null,
+        "after": {
+          "symbol": "M:c.b(II)V",
+          "originalName": "b",
+          "to": "renderTutorialPage",
+          "evidence": "c.b(II)V draws tutorial page0..4 with title/body text and demonstration sprites, saving/restoring clip bounds. Pages0..2 use rotating geometry/sparkle examples; pages3/4 use amorphous/gray-modulated or orb/star examples. Text slots reuse orbit coordinates only after sprite work. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "M:c.b(Z)V",
+        "before": null,
+        "after": {
+          "symbol": "M:c.b(Z)V",
+          "originalName": "b",
+          "to": "drawScrollingMenuBackground",
+          "evidence": "c.b(Z)V tiles ee.menuBackgroundSprite then vc.menuForegroundSprite, normalizing each offset with the corresponding full sprite dimension. Constructor and c update methods establish the per-layer starting offsets and scrolling increments/decrements; signed remainder and control-flag paths remain. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "M:c.e(B)V",
+        "before": null,
+        "after": {
+          "symbol": "M:c.e(B)V",
+          "originalName": "e",
+          "to": "advanceTutorialSlide",
+          "evidence": "c tutorial actions copy field_q to field_n before incrementing/decrementing page0..4, set field_v to the direction and field_E active. c.a(I)V clips outgoing/current page renders around field_F, using field_S to select the old page for menu rows. c.e(B)V advances field_F by8 after the field_T/field_H gate, clearing the slide past640+curtain.height. Wrong-guard and pointer paths remain explicit. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "P:c.a(I)V#0",
+        "before": null,
+        "after": {
+          "symbol": "P:c.a(I)V#0",
+          "originalName": "param0",
+          "to": "methodGuard",
+          "evidence": "c.a(I)V renders screen panels/title sprites, fullscreen membership/unavailable/acceptance overlays and tutorial pages/slides. The four stack carriers separately preserve activeTicks<=200 alpha branch results. Button geometry and localized text roles follow their exact draw and paragraph calls. Only-28750 executes rendering; failure context retains the guard. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "P:c.b(II)V#0",
+        "before": null,
+        "after": {
+          "symbol": "P:c.b(II)V#0",
+          "originalName": "param0",
+          "to": "methodGuard",
+          "evidence": "c.b(II)V draws tutorial page0..4 with title/body text and demonstration sprites, saving/restoring clip bounds. Pages0..2 use rotating geometry/sparkle examples; pages3/4 use amorphous/gray-modulated or orb/star examples. Text slots reuse orbit coordinates only after sprite work. Values>-14 retain the original handleMenuPointer guard call. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "P:c.b(II)V#1",
+        "before": null,
+        "after": {
+          "symbol": "P:c.b(II)V#1",
+          "originalName": "param1",
+          "to": "pageIndex",
+          "evidence": "c.b(II)V draws tutorial page0..4 with title/body text and demonstration sprites, saving/restoring clip bounds. Pages0..2 use rotating geometry/sparkle examples; pages3/4 use amorphous/gray-modulated or orb/star examples. Text slots reuse orbit coordinates only after sprite work. Chooses five title/paragraph variants and prints pageIndex+1 followed by/5. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "P:c.b(Z)V#0",
+        "before": null,
+        "after": {
+          "symbol": "P:c.b(Z)V#0",
+          "originalName": "param0",
+          "to": "setTutorialOffsetGuard",
+          "evidence": "c.b(Z)V tiles ee.menuBackgroundSprite then vc.menuForegroundSprite, normalizing each offset with the corresponding full sprite dimension. Constructor and c update methods establish the per-layer starting offsets and scrolling increments/decrements; signed remainder and control-flag paths remain. True retains the original side effect setting curtain offset124. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      },
+      {
+        "symbol": "P:c.e(B)V#0",
+        "before": null,
+        "after": {
+          "symbol": "P:c.e(B)V#0",
+          "originalName": "param0",
+          "to": "methodGuard",
+          "evidence": "c tutorial actions copy field_q to field_n before incrementing/decrementing page0..4, set field_v to the direction and field_E active. c.a(I)V clips outgoing/current page renders around field_F, using field_S to select the old page for menu rows. c.e(B)V advances field_F by8 after the field_T/field_H gate, clearing the slide past640+curtain.height. Wrong-guard and pointer paths remain explicit. Values<73 retain field_V=15; updateScreen passes104. Source-audited names only: bytecode/raw source, control flags, predicates, slot reuse, sentinel guards, clipping, call order, exceptions and diagnostic strings are unchanged. Compilation/binding/reversal checks establish naming consistency; this pass adds no native menu/tutorial execution or asset/browser/device coverage."
+        }
+      }
+    ],
     "stubJarSha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2",
     "sourceEvidence": [
       {
@@ -45344,7 +46321,7 @@
       "sourceDeclarations": 19591,
       "bindingsCompared": 138772,
       "overrideRelationships": 388,
-      "identifierEdits": 57278,
+      "identifierEdits": 57788,
       "dictionaryRestorationFiles": 303,
       "wholeGameEquivalenceVerified": false,
       "nativeMatchingScenarios": 708,
@@ -45409,7 +46386,8 @@
         "Pass89 removes102 terminal breaks whose plain-block destination is already reached by normal completion through final block statements, if branches and plain labels. Bare branches retain empty statements and predicates. Intermediate loops/switches/protected regions refuse cleanup; enclosing finally/monitors remain.5376 native comparisons cover scopes, failures, partial effects, ancestor transfers, finally state after invocation and lock ownership/release. All303 expected token streams and ordered naming bindings remain. The instrument patch constructor falls492 to468 lines and9 to1 labels.21 overlapping spans >=300 lines remain,13 with block labels. Recorded native probes keep their scopes/pins; whole-game/browser/phone acceptance remains unverified.",
         "Pass90 reconstructs64 unique plain-block exits as47 if/else alternatives and17 ordinary guards. The direct braced conditional must end in the destination's only break, followed by a nonempty fallback. Prefix work/scopes, branch effects and protected regions stay intact; no work/predicate is duplicated and no local added.6720 native comparisons cover branch/fallback selection, NaNs/unboxing, failures, partial effects, scopes, ancestor jumps, finally state and monitor release. All303 expected token streams and ordered naming bindings remain. Gameplay rendering falls395 to390 lines and22 to20 labels; board reconciliation504 to502 and17 to16; patch constructor468 to466 with no labels.21 overlapping spans >=300 lines remain,12 with block labels. Multi-exit decision trees, larger gameplay reconstruction and whole-game/browser/phone acceptance remain unfinished or unverified.",
         "Pass91 reconstructs27 ordered multi-exit plain frames, consuming75 breaks and recovering75 choices including18 logical-negation guards. All selected braced arms end in direct target breaks and every destination reference is consumed; interleaved work remains in reached fallbacks and pure fallback decisions may become else-if. Predicates/scopes/protected regions stay intact; no work/predicate is duplicated or local added. Budgets are16 choices/depth16/32 target references.16128 native comparisons and first/second/fallback oracles cover ordering, unboxing, NaNs, failures, scopes, ancestor jumps/returns, finally state and monitors. All303 expected token streams and ordered naming bindings remain. MusicScore constructor541 to519 and Bzip2 decode388 to385 now have no block labels. Gameplay rendering390 to385 and20 to19 labels; menu actions335 to325 and20 to18.21 overlapping large spans remain,10 with block labels. Larger gameplay reconstructions and whole-game/browser/phone acceptance remain unfinished or unverified.",
-        "Pass92 reconstructs41 predicate-only plain skip frames, consuming82 breaks and guarding42 remainders over97 predicates. Logical-negation/AND/OR retains original predicate bytes/order, nullable unboxing, NaNs and short circuits. All target references must be consumed. Nested remainders require final plain blocks/if branches/plain labels leading to the same target; intermediate work, loops/switches/protected wrappers refuse proof. Prefix work/declaration scopes/protected regions stay intact; no effect/predicate is duplicated or local added. Budgets are16 predicates/depth16/16 target references/512 predicate tokens.16128 native comparisons plus bypass/skip/NaN oracles cover ordering, failures, scopes, terminal branches, ancestor jumps/returns, finally state and monitors. All303 expected token streams and ordered bindings remain. Menu renderer372 to304 and10 to4 labels; gameplay renderer385 to379 and19 to18; menu actions325 to322 and18 to17; board reconciliation502 to496 and16 to15.21 overlapping large spans remain,10 with block labels. Larger gameplay reconstructions and whole-game/browser/phone acceptance remain unfinished or unverified."
+        "Pass92 reconstructs41 predicate-only plain skip frames, consuming82 breaks and guarding42 remainders over97 predicates. Logical-negation/AND/OR retains original predicate bytes/order, nullable unboxing, NaNs and short circuits. All target references must be consumed. Nested remainders require final plain blocks/if branches/plain labels leading to the same target; intermediate work, loops/switches/protected wrappers refuse proof. Prefix work/declaration scopes/protected regions stay intact; no effect/predicate is duplicated or local added. Budgets are16 predicates/depth16/16 target references/512 predicate tokens.16128 native comparisons plus bypass/skip/NaN oracles cover ordering, failures, scopes, terminal branches, ancestor jumps/returns, finally state and monitors. All303 expected token streams and ordered bindings remain. Menu renderer372 to304 and10 to4 labels; gameplay renderer385 to379 and19 to18; menu actions325 to322 and18 to17; board reconciliation502 to496 and16 to15.21 overlapping large spans remain,10 with block labels. Larger gameplay reconstructions and whole-game/browser/phone acceptance remain unfinished or unverified.",
+        "Pass93 adds61 source-audited menu/tutorial/background identities (11fields/3methods/5parameters/42locals). Every parameter/local in the menu renderer, scrolling background renderer, tutorial page renderer and curtain advancement helper has a guarded name. Reused layout/alpha/curtain and orbit/page/text slots keep combined-role names. Tutorial page0..4 usage does not remove the-45 pointer-guard sentinel, byte/int guards, control flags, clipping and exception order. Native evidence remains pinned and unchanged; this naming-only pass adds no dynamic menu/tutorial, real-asset, whole-game or browser/phone coverage.21 overlapping large spans and10 with block labels remain; other screen/input locals and larger gameplay control reconstructions are unfinished."
       ],
       "checks": {
         "ruleBuilderTests": 9,
@@ -45445,13 +46423,13 @@
         641
       ],
       "nativeBoundaryIndependentOracle": true,
-      "guardedNamingRules": 7015,
-      "namedLocalDeclarations": 3698,
+      "guardedNamingRules": 7076,
+      "namedLocalDeclarations": 3740,
       "nonselectorDeclarationsPreserved": 19549,
       "generatedSelectorsBefore": 265,
       "generatedSelectorsAfter": 9,
       "generatedSelectorsRemoved": 256,
-      "rawSourceLinesRemoved": 219,
+      "rawSourceLinesRemoved": 0,
       "returnReconstructionChangedJavaFiles": 181,
       "localOrdinalMigrations": 0,
       "obsoleteNamedSelectorsRemoved": 1,
@@ -45484,7 +46462,7 @@
       "typedAssignmentElseWrappersRemoved": 77,
       "nativeComparatorCases": 32768,
       "nativeComparatorTraceSha256": "9be228f7421970f2214c74e8890327f8592f706dc90ccd0d0933e6f2fbe0a604",
-      "referenceRemovalAttribution": "Pass92 reconstructs predicate-only plain skip trees and scope-safe frames. All ordered declarations/references/overrides, local ordinals and every guarded naming object remain.",
+      "referenceRemovalAttribution": "Pass93 adds semantic names only to menu rendering, background tiling and tutorial rendering/curtain advancement. Raw sources and generator pins, ordered bindings/ordinals, all7015 previous complete rules and native evidence remain unchanged.",
       "genericBooleanCarrierTestGroups": 3,
       "localBooleanCarriersEliminated": 221,
       "localBooleanSnapshotsRetyped": 70,
@@ -45499,8 +46477,8 @@
       "sharedTailChangedJavaFiles": 16,
       "difficultyMethodLinesBefore": 38,
       "difficultyMethodLinesAfter": 38,
-      "allGuardedNamesUnchanged": true,
-      "ruleChangesInCurrentPass": 0,
+      "allGuardedNamesUnchanged": false,
+      "ruleChangesInCurrentPass": 61,
       "genericNestedContinuationTestGroups": 2,
       "nativeNestedContinuationComparisons": 2520,
       "nestedContinuationChangedJavaFiles": 7,
@@ -45515,13 +46493,13 @@
       "ambiguousPredicateComplementsRefused": true,
       "difficultyCategoryAndRecursiveAdvanceClonesEliminated": true,
       "allPriorGuardedNamesPreserved": true,
-      "namingRulesAddedInCurrentPass": 0,
-      "sourceInputChangedInCurrentPass": true,
+      "namingRulesAddedInCurrentPass": 61,
+      "sourceInputChangedInCurrentPass": false,
       "namedVisualAssetFieldsAdded": 59,
       "namedAssetLoadingMethodsAdded": 6,
       "namedAssetLoadingParametersAdded": 24,
       "namedAssetPreparationAndLookupLocalsAdded": 28,
-      "identifierEditsAddedInCurrentPass": 0,
+      "identifierEditsAddedInCurrentPass": 510,
       "lastStructuralPassVersion": 92,
       "namingRulesRefinedInCurrentPass": 0,
       "allUnaffectedPriorRulesPreserved": true,
@@ -46176,56 +47154,16 @@
       "predicateOnlyGuardTreeReconciliationLinesBefore": 502,
       "predicateOnlyGuardTreeReconciliationLinesAfter": 496,
       "predicateOnlyGuardTreeReconciliationLabelsBefore": 16,
-      "predicateOnlyGuardTreeReconciliationLabelsAfter": 15
-    },
-    "sourceChange": {
-      "before": {
-        "source": {
-          "repository": "Kreijstal/funorb-decompiled",
-          "commit": "46219970eded7f74e43d7616f2839cf249d1fa16",
-          "subdirectory": "games/geoblox"
-        },
-        "generators": {
-          "dekoblokoWork": {
-            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
-            "trackedClean": true
-          },
-          "javaTools": {
-            "commit": "c2e73cc98972a1aad710c51cd7f72513233eab20",
-            "trackedClean": true,
-            "sourceArchive": {
-              "sha256": "c7ef91b40afcfca22ed84d74226854ce9a875db30c71749078812dbbf2c679a0",
-              "reproduce": "git archive --format=tar c2e73cc98972a1aad710c51cd7f72513233eab20 | sha256sum",
-              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
-            }
-          }
-        },
-        "inputTreeSha256": "6499347b6e0dfc27f819fc721bf550a43d9c562b6eabddfc5a8c8c9588a07e7e"
+      "predicateOnlyGuardTreeReconciliationLabelsAfter": 15,
+      "namedMenuTutorialRulesAdded": {
+        "F": 11,
+        "L": 42,
+        "M": 3,
+        "P": 5
       },
-      "after": {
-        "source": {
-          "repository": "Kreijstal/funorb-decompiled",
-          "commit": "f0b69e9d0f54e371b9ed1a99ecb06ae0dc24168b",
-          "subdirectory": "games/geoblox"
-        },
-        "generators": {
-          "dekoblokoWork": {
-            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
-            "trackedClean": true
-          },
-          "javaTools": {
-            "commit": "610045428c7686b22b38211b55db11bd11c6f641",
-            "trackedClean": true,
-            "sourceArchive": {
-              "sha256": "2ed54a58ff81b1e8ed7b11a27fd5bd3821788ee90ac8012ebc87f8256c3d5956",
-              "reproduce": "git archive --format=tar 610045428c7686b22b38211b55db11bd11c6f641 | sha256sum",
-              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
-            }
-          }
-        },
-        "inputTreeSha256": "413c9b8f71549b796b21abecc415d6ebf5fb103b06e32f88ea1d2623ab6e4d62"
-      },
-      "reason": "Pass92 reconstructs41 predicate-only skip frames, consuming82 breaks and guarding42 remainders over97 predicates across19 files, saving219 lines. Logical-negation/AND/OR retains predicate bytes/order and short circuits. All destination references must be consumed; a nested remainder must normally reach that same destination through final plain blocks, if branches or plain labels. Prefix work/scopes and protected regions stay intact; no effect/predicate is duplicated or local added. All ordered bindings/ordinals and7015 complete naming objects remain."
+      "namedMenuTutorialRulesAddedHistoricalPassVersion": 93,
+      "allMenuRendererBackgroundAndTutorialPageParametersAndLocalsNamed": true,
+      "currentNamingPassAddsNativeExecutionCoverage": false
     }
   }
 }
