@@ -7,7 +7,7 @@ import java.util.*;
 class UiWidget extends IntrusiveNode {
     int widgetHeight;
     int widgetWidth;
-    dk field_w;
+    TextLayout field_w;
     int widgetY;
     boolean pointerInside;
     String widgetText;
@@ -120,7 +120,7 @@ class UiWidget extends IntrusiveNode {
           if (hoverGuard) {
             return;
           }
-          pointerInsideFlag = this.containsPointer(PrefixCodeDecoder.pointerXSnapshot, -1, ue.pointerYSnapshot, parentY, parentX) ? 1 : 0;
+          pointerInsideFlag = this.containsPointer(PrefixCodeDecoder.pointerXSnapshot, -1, PcmResampler.pointerYSnapshot, parentY, parentX) ? 1 : 0;
           currentPointerInsideFlag = pointerInsideFlag;
           if (this.pointerInside) {
             invertedPreviousPointerInsideFlag = 0;
@@ -230,20 +230,20 @@ class UiWidget extends IntrusiveNode {
             this.clearKeyboardFocus(-126);
           }
           ij.previousUiPointerButton = gf.heldPointerButtonSnapshot;
-          sa.a(this.getHoverText((byte) 69), (byte) 72);
+          ContextualRuntimeException.a(this.getHoverText((byte) 69), (byte) 72);
           return pointerEventsAvailable;
         }
-        if (0 == vc.wheelRotationSnapshot) {
+        if (0 == CachedTextLayout.wheelRotationSnapshot) {
           if (0 == bi.pointerPressButtonSnapshot) {
             if ((gf.heldPointerButtonSnapshot == 0) &&
                 (0 != ij.previousUiPointerButton)) {
-              this.handlePointerRelease(parentX, PrefixCodeDecoder.pointerXSnapshot, true, (UiWidget) (this), parentY, ue.pointerYSnapshot);
-              releasedDragWithoutPressOrWheel = lh.activeDragWidget;
+              this.handlePointerRelease(parentX, PrefixCodeDecoder.pointerXSnapshot, true, (UiWidget) (this), parentY, PcmResampler.pointerYSnapshot);
+              releasedDragWithoutPressOrWheel = ValidationState.activeDragWidget;
               if (releasedDragWithoutPressOrWheel != null) {
                 if (releasedDragWithoutPressOrWheel.listener instanceof DropListener) {
                   ((DropListener) ((Object) releasedDragWithoutPressOrWheel.listener)).onDrop((DropTargetWidget) null, releasedDragWithoutPressOrWheel, 22176);
                 }
-                lh.activeDragWidget = null;
+                ValidationState.activeDragWidget = null;
               }
               if ((clientControlFlowSnapshot != 0) &&
                   (focusFlag != 0) &&
@@ -252,7 +252,7 @@ class UiWidget extends IntrusiveNode {
               }
             }
             ij.previousUiPointerButton = gf.heldPointerButtonSnapshot;
-            sa.a(this.getHoverText((byte) 69), (byte) 72);
+            ContextualRuntimeException.a(this.getHoverText((byte) 69), (byte) 72);
             return pointerEventsAvailable;
           }
           L19: {
@@ -260,13 +260,13 @@ class UiWidget extends IntrusiveNode {
               if (focusFlag == 0) {
                 if ((gf.heldPointerButtonSnapshot == 0) &&
                     (0 != ij.previousUiPointerButton)) {
-                  this.handlePointerRelease(parentX, PrefixCodeDecoder.pointerXSnapshot, true, (UiWidget) (this), parentY, ue.pointerYSnapshot);
-                  releasedDragAfterRejectedPressWithoutFocusOrWheel = lh.activeDragWidget;
+                  this.handlePointerRelease(parentX, PrefixCodeDecoder.pointerXSnapshot, true, (UiWidget) (this), parentY, PcmResampler.pointerYSnapshot);
+                  releasedDragAfterRejectedPressWithoutFocusOrWheel = ValidationState.activeDragWidget;
                   if (releasedDragAfterRejectedPressWithoutFocusOrWheel != null) {
                     if (releasedDragAfterRejectedPressWithoutFocusOrWheel.listener instanceof DropListener) {
                       ((DropListener) ((Object) releasedDragAfterRejectedPressWithoutFocusOrWheel.listener)).onDrop((DropTargetWidget) null, releasedDragAfterRejectedPressWithoutFocusOrWheel, 22176);
                     }
-                    lh.activeDragWidget = null;
+                    ValidationState.activeDragWidget = null;
                   }
                   if ((clientControlFlowSnapshot != 0) &&
                       (focusFlag != 0) &&
@@ -275,7 +275,7 @@ class UiWidget extends IntrusiveNode {
                   }
                 }
                 ij.previousUiPointerButton = gf.heldPointerButtonSnapshot;
-                sa.a(this.getHoverText((byte) 69), (byte) 72);
+                ContextualRuntimeException.a(this.getHoverText((byte) 69), (byte) 72);
                 return pointerEventsAvailable;
               }
               this.clearKeyboardFocus(-127);
@@ -287,21 +287,21 @@ class UiWidget extends IntrusiveNode {
           }
           if (gf.heldPointerButtonSnapshot != 0) {
             ij.previousUiPointerButton = gf.heldPointerButtonSnapshot;
-            sa.a(this.getHoverText((byte) 69), (byte) 72);
+            ContextualRuntimeException.a(this.getHoverText((byte) 69), (byte) 72);
             return pointerEventsAvailable;
           }
           if (0 == ij.previousUiPointerButton) {
             ij.previousUiPointerButton = gf.heldPointerButtonSnapshot;
-            sa.a(this.getHoverText((byte) 69), (byte) 72);
+            ContextualRuntimeException.a(this.getHoverText((byte) 69), (byte) 72);
             return pointerEventsAvailable;
           }
-          this.handlePointerRelease(parentX, PrefixCodeDecoder.pointerXSnapshot, true, (UiWidget) (this), parentY, ue.pointerYSnapshot);
-          releasedDragAfterPressWithoutWheel = lh.activeDragWidget;
+          this.handlePointerRelease(parentX, PrefixCodeDecoder.pointerXSnapshot, true, (UiWidget) (this), parentY, PcmResampler.pointerYSnapshot);
+          releasedDragAfterPressWithoutWheel = ValidationState.activeDragWidget;
           if (releasedDragAfterPressWithoutWheel != null) {
             if (releasedDragAfterPressWithoutWheel.listener instanceof DropListener) {
               ((DropListener) ((Object) releasedDragAfterPressWithoutWheel.listener)).onDrop((DropTargetWidget) null, releasedDragAfterPressWithoutWheel, 22176);
             }
-            lh.activeDragWidget = null;
+            ValidationState.activeDragWidget = null;
           }
           if ((clientControlFlowSnapshot != 0) &&
               (focusFlag != 0) &&
@@ -309,22 +309,22 @@ class UiWidget extends IntrusiveNode {
             this.clearKeyboardFocus(-126);
           }
           ij.previousUiPointerButton = gf.heldPointerButtonSnapshot;
-          sa.a(this.getHoverText((byte) 69), (byte) 72);
+          ContextualRuntimeException.a(this.getHoverText((byte) 69), (byte) 72);
           return pointerEventsAvailable;
         }
         if (focusFlag != 0) {
-          this.handlePointerWheel(parentY, vc.wheelRotationSnapshot, parentX, -1, PrefixCodeDecoder.pointerXSnapshot, (UiWidget) (this), ue.pointerYSnapshot);
+          this.handlePointerWheel(parentY, CachedTextLayout.wheelRotationSnapshot, parentX, -1, PrefixCodeDecoder.pointerXSnapshot, (UiWidget) (this), PcmResampler.pointerYSnapshot);
           if (0 == bi.pointerPressButtonSnapshot) {
             if ((gf.heldPointerButtonSnapshot == 0) &&
                 (0 != ij.previousUiPointerButton)) {
-              this.handlePointerRelease(parentX, PrefixCodeDecoder.pointerXSnapshot, true, (UiWidget) (this), parentY, ue.pointerYSnapshot);
-              releasedDragWithWheelAndNoPress = lh.activeDragWidget;
+              this.handlePointerRelease(parentX, PrefixCodeDecoder.pointerXSnapshot, true, (UiWidget) (this), parentY, PcmResampler.pointerYSnapshot);
+              releasedDragWithWheelAndNoPress = ValidationState.activeDragWidget;
               releasedDragWidgetAlias = releasedDragWithWheelAndNoPress;
               if (releasedDragWithWheelAndNoPress != null) {
                 if (releasedDragWithWheelAndNoPress.listener instanceof DropListener) {
                   ((DropListener) ((Object) releasedDragWithWheelAndNoPress.listener)).onDrop((DropTargetWidget) null, releasedDragWithWheelAndNoPress, 22176);
                 }
-                lh.activeDragWidget = null;
+                ValidationState.activeDragWidget = null;
               }
               if ((clientControlFlowSnapshot != 0) &&
                   (focusFlag != 0) &&
@@ -333,7 +333,7 @@ class UiWidget extends IntrusiveNode {
               }
             }
             ij.previousUiPointerButton = gf.heldPointerButtonSnapshot;
-            sa.a(this.getHoverText((byte) 69), (byte) 72);
+            ContextualRuntimeException.a(this.getHoverText((byte) 69), (byte) 72);
             return pointerEventsAvailable;
           }
           L0: {
@@ -347,22 +347,22 @@ class UiWidget extends IntrusiveNode {
           }
           if (gf.heldPointerButtonSnapshot != 0) {
             ij.previousUiPointerButton = gf.heldPointerButtonSnapshot;
-            sa.a(this.getHoverText((byte) 69), (byte) 72);
+            ContextualRuntimeException.a(this.getHoverText((byte) 69), (byte) 72);
             return pointerEventsAvailable;
           }
           if (0 == ij.previousUiPointerButton) {
             ij.previousUiPointerButton = gf.heldPointerButtonSnapshot;
-            sa.a(this.getHoverText((byte) 69), (byte) 72);
+            ContextualRuntimeException.a(this.getHoverText((byte) 69), (byte) 72);
             return pointerEventsAvailable;
           }
-          this.handlePointerRelease(parentX, PrefixCodeDecoder.pointerXSnapshot, true, (UiWidget) (this), parentY, ue.pointerYSnapshot);
-          releasedDragAfterPressWithWheel = lh.activeDragWidget;
+          this.handlePointerRelease(parentX, PrefixCodeDecoder.pointerXSnapshot, true, (UiWidget) (this), parentY, PcmResampler.pointerYSnapshot);
+          releasedDragAfterPressWithWheel = ValidationState.activeDragWidget;
           releasedDragWidgetAlias = releasedDragAfterPressWithWheel;
           if (releasedDragAfterPressWithWheel != null) {
             if (releasedDragAfterPressWithWheel.listener instanceof DropListener) {
               ((DropListener) ((Object) releasedDragAfterPressWithWheel.listener)).onDrop((DropTargetWidget) null, releasedDragAfterPressWithWheel, 22176);
             }
-            lh.activeDragWidget = null;
+            ValidationState.activeDragWidget = null;
           }
           if ((clientControlFlowSnapshot != 0) &&
               (focusFlag != 0) &&
@@ -370,19 +370,19 @@ class UiWidget extends IntrusiveNode {
             this.clearKeyboardFocus(-126);
           }
           ij.previousUiPointerButton = gf.heldPointerButtonSnapshot;
-          sa.a(this.getHoverText((byte) 69), (byte) 72);
+          ContextualRuntimeException.a(this.getHoverText((byte) 69), (byte) 72);
           return pointerEventsAvailable;
         }
         if (0 == bi.pointerPressButtonSnapshot) {
           if ((gf.heldPointerButtonSnapshot == 0) &&
               (0 != ij.previousUiPointerButton)) {
-            this.handlePointerRelease(parentX, PrefixCodeDecoder.pointerXSnapshot, true, (UiWidget) (this), parentY, ue.pointerYSnapshot);
-            releasedDragWithoutFocusOrPress = lh.activeDragWidget;
+            this.handlePointerRelease(parentX, PrefixCodeDecoder.pointerXSnapshot, true, (UiWidget) (this), parentY, PcmResampler.pointerYSnapshot);
+            releasedDragWithoutFocusOrPress = ValidationState.activeDragWidget;
             if (releasedDragWithoutFocusOrPress != null) {
               if (releasedDragWithoutFocusOrPress.listener instanceof DropListener) {
                 ((DropListener) ((Object) releasedDragWithoutFocusOrPress.listener)).onDrop((DropTargetWidget) null, releasedDragWithoutFocusOrPress, 22176);
               }
-              lh.activeDragWidget = null;
+              ValidationState.activeDragWidget = null;
             }
             if ((clientControlFlowSnapshot != 0) &&
                 (focusFlag != 0) &&
@@ -391,56 +391,56 @@ class UiWidget extends IntrusiveNode {
             }
           }
           ij.previousUiPointerButton = gf.heldPointerButtonSnapshot;
-          sa.a(this.getHoverText((byte) 69), (byte) 72);
+          ContextualRuntimeException.a(this.getHoverText((byte) 69), (byte) 72);
           return pointerEventsAvailable;
         }
         if (!this.handlePointerPress(parentY, -109, parentX, bi.pointerPressButtonSnapshot, mc.pointerPressXSnapshot, he.pointerPressYSnapshot, (UiWidget) (this))) {
           if (gf.heldPointerButtonSnapshot != 0) {
             ij.previousUiPointerButton = gf.heldPointerButtonSnapshot;
-            sa.a(this.getHoverText((byte) 69), (byte) 72);
+            ContextualRuntimeException.a(this.getHoverText((byte) 69), (byte) 72);
             return pointerEventsAvailable;
           }
           if (0 == ij.previousUiPointerButton) {
             ij.previousUiPointerButton = gf.heldPointerButtonSnapshot;
-            sa.a(this.getHoverText((byte) 69), (byte) 72);
+            ContextualRuntimeException.a(this.getHoverText((byte) 69), (byte) 72);
             return pointerEventsAvailable;
           }
-          this.handlePointerRelease(parentX, PrefixCodeDecoder.pointerXSnapshot, true, (UiWidget) (this), parentY, ue.pointerYSnapshot);
-          releasedDragAfterRejectedPressWithoutFocus = lh.activeDragWidget;
+          this.handlePointerRelease(parentX, PrefixCodeDecoder.pointerXSnapshot, true, (UiWidget) (this), parentY, PcmResampler.pointerYSnapshot);
+          releasedDragAfterRejectedPressWithoutFocus = ValidationState.activeDragWidget;
           releasedDragWidgetAlias = releasedDragAfterRejectedPressWithoutFocus;
           if (releasedDragAfterRejectedPressWithoutFocus != null) {
             if (releasedDragAfterRejectedPressWithoutFocus.listener instanceof DropListener) {
               ((DropListener) ((Object) releasedDragAfterRejectedPressWithoutFocus.listener)).onDrop((DropTargetWidget) null, releasedDragAfterRejectedPressWithoutFocus, 22176);
             }
-            lh.activeDragWidget = null;
+            ValidationState.activeDragWidget = null;
           }
           if (clientControlFlowSnapshot == 0) {
             ij.previousUiPointerButton = gf.heldPointerButtonSnapshot;
-            sa.a(this.getHoverText((byte) 69), (byte) 72);
+            ContextualRuntimeException.a(this.getHoverText((byte) 69), (byte) 72);
             return pointerEventsAvailable;
           }
           ij.previousUiPointerButton = gf.heldPointerButtonSnapshot;
-          sa.a(this.getHoverText((byte) 69), (byte) 72);
+          ContextualRuntimeException.a(this.getHoverText((byte) 69), (byte) 72);
           return pointerEventsAvailable;
         }
         pointerEventsAvailable = false;
         if (gf.heldPointerButtonSnapshot != 0) {
           ij.previousUiPointerButton = gf.heldPointerButtonSnapshot;
-          sa.a(this.getHoverText((byte) 69), (byte) 72);
+          ContextualRuntimeException.a(this.getHoverText((byte) 69), (byte) 72);
           return pointerEventsAvailable;
         }
         if (0 == ij.previousUiPointerButton) {
           ij.previousUiPointerButton = gf.heldPointerButtonSnapshot;
-          sa.a(this.getHoverText((byte) 69), (byte) 72);
+          ContextualRuntimeException.a(this.getHoverText((byte) 69), (byte) 72);
           return pointerEventsAvailable;
         }
-        this.handlePointerRelease(parentX, PrefixCodeDecoder.pointerXSnapshot, true, (UiWidget) (this), parentY, ue.pointerYSnapshot);
-        releasedDragAfterPressWithoutFocus = lh.activeDragWidget;
+        this.handlePointerRelease(parentX, PrefixCodeDecoder.pointerXSnapshot, true, (UiWidget) (this), parentY, PcmResampler.pointerYSnapshot);
+        releasedDragAfterPressWithoutFocus = ValidationState.activeDragWidget;
         if (releasedDragAfterPressWithoutFocus != null) {
           if (releasedDragAfterPressWithoutFocus.listener instanceof DropListener) {
             ((DropListener) ((Object) releasedDragAfterPressWithoutFocus.listener)).onDrop((DropTargetWidget) null, releasedDragAfterPressWithoutFocus, 22176);
           }
-          lh.activeDragWidget = null;
+          ValidationState.activeDragWidget = null;
         }
         if ((clientControlFlowSnapshot != 0) &&
             (focusFlag != 0) &&
@@ -448,7 +448,7 @@ class UiWidget extends IntrusiveNode {
           this.clearKeyboardFocus(-126);
         }
         ij.previousUiPointerButton = gf.heldPointerButtonSnapshot;
-        sa.a(this.getHoverText((byte) 69), (byte) 72);
+        ContextualRuntimeException.a(this.getHoverText((byte) 69), (byte) 72);
         return pointerEventsAvailable;
     }
 
@@ -692,7 +692,7 @@ class UiWidget extends IntrusiveNode {
                   var2_int = param1 - eh.field_d.position;
                 }
                 oc.field_e.readFully(eh.field_d.bytes, (byte) -97, eh.field_d.position, var2_int);
-                kh.field_e = oa.a(-12520);
+                AudioService.field_e = oa.a(-12520);
                 eh.field_d.position = eh.field_d.position + var2_int;
                 if (param1 > eh.field_d.position) {
                   return false;
@@ -801,15 +801,15 @@ class UiWidget extends IntrusiveNode {
     }
 
     UiWidget(String text, WidgetRenderer renderer, WidgetListener listener) {
-        cc measuringRenderer = null;
+        TextWidgetLayout measuringRenderer = null;
         this.field_k = 0;
         this.field_n = 0;
         try {
             this.renderer = renderer;
             this.listener = listener;
             this.widgetText = text;
-            if (this.renderer instanceof cc) {
-                measuringRenderer = (cc) ((Object) this.renderer);
+            if (this.renderer instanceof TextWidgetLayout) {
+                measuringRenderer = (TextWidgetLayout) ((Object) this.renderer);
                 this.widgetWidth = measuringRenderer.a((UiWidget) (this), (byte) -33);
                 this.widgetHeight = measuringRenderer.a(-122, (UiWidget) (this));
             }

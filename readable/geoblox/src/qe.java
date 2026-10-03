@@ -103,9 +103,9 @@ final class qe {
             fa.releasesPerTheme = fa.releasesPerTheme + 10;
           }
           fa.releasesPerTheme = fa.releasesPerTheme + additionalReleases;
-          sa.releasesPerDifficultyStep = fa.releasesPerTheme / 3;
-          while (fa.releasesPerTheme > 3 * sa.releasesPerDifficultyStep) {
-            sa.releasesPerDifficultyStep = sa.releasesPerDifficultyStep + 1;
+          ContextualRuntimeException.releasesPerDifficultyStep = fa.releasesPerTheme / 3;
+          while (fa.releasesPerTheme > 3 * ContextualRuntimeException.releasesPerDifficultyStep) {
+            ContextualRuntimeException.releasesPerDifficultyStep = ContextualRuntimeException.releasesPerDifficultyStep + 1;
           }
           return;
         } catch (java.lang.RuntimeException quotaUpdateFailure) {

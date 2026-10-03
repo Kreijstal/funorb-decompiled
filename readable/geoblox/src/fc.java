@@ -25,13 +25,13 @@ final class fc {
             if (6 == attachedThenTransientEntity.entitySpriteKindId) {
               pf.endingEntityScanClear = false;
               if (attachedThenTransientEntity.animationFrameIndex >= 3) {
-                ra.availableEntities.addLast(-67, attachedThenTransientEntity);
+                SecondaryNodeDeque.availableEntities.addLast(-67, attachedThenTransientEntity);
               }
             }
             attachedThenTransientEntity = (GameplayEntity) ((Object) a.attachedEntities.nextForIteration(1));
           }
           guardResidue = 12 % ((-69 - methodGuard) / 38);
-          attachedThenTransientEntity = (GameplayEntity) ((Object) bh.transientEntities.firstForIteration(0));
+          attachedThenTransientEntity = (GameplayEntity) ((Object) DelegatingCanvas.transientEntities.firstForIteration(0));
           while (attachedThenTransientEntity != null) {
             attachedThenTransientEntity.advanceEntityAnimation(true);
             if (!((5 != attachedThenTransientEntity.entitySpriteKindId) &&
@@ -39,10 +39,10 @@ final class fc {
                 (attachedThenTransientEntity.entitySpriteKindId != 8))) {
               pf.endingEntityScanClear = false;
               if (attachedThenTransientEntity.animationFrameIndex >= 3) {
-                ra.availableEntities.addLast(-115, attachedThenTransientEntity);
+                SecondaryNodeDeque.availableEntities.addLast(-115, attachedThenTransientEntity);
               }
             }
-            attachedThenTransientEntity = (GameplayEntity) ((Object) bh.transientEntities.nextForIteration(1));
+            attachedThenTransientEntity = (GameplayEntity) ((Object) DelegatingCanvas.transientEntities.nextForIteration(1));
           }
           return;
         } catch (java.lang.RuntimeException caughtEndingAnimationFailure) {

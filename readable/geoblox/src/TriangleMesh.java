@@ -64,7 +64,7 @@ final class TriangleMesh {
         if (methodGuard >= -55) {
             return 66;
         }
-        return AchievementQuery.b(ag.availableSpriteVariantCount, 1);
+        return AchievementQuery.b(EmailValidator.availableSpriteVariantCount, 1);
     }
 
     public static void b(byte param0) {
@@ -160,13 +160,13 @@ final class TriangleMesh {
               (fb.field_m.length >= param2))) {
           fb.field_m = new int[param2 * 2];
         }
-        if (!((null != k.field_i) &&
-              (param2 <= k.field_i.length))) {
-          k.field_i = new int[param2 * 2];
+        if (!((null != NodeHashTableIterator.field_i) &&
+              (param2 <= NodeHashTableIterator.field_i.length))) {
+          NodeHashTableIterator.field_i = new int[param2 * 2];
         }
-        if (!((null != cj.field_b) &&
-              (cj.field_b.length >= param2))) {
-          cj.field_b = new int[2 * param2];
+        if (!((null != FrameTimer.field_b) &&
+              (FrameTimer.field_b.length >= param2))) {
+          FrameTimer.field_b = new int[2 * param2];
         }
         if (!((null != gk.field_a) &&
               (gk.field_a.length >= param2))) {
@@ -183,7 +183,7 @@ final class TriangleMesh {
         md.field_c = 0;
         va.field_b = -2147483648;
         ok.field_b = 2147483647;
-        bd.field_a = -2147483648;
+        ProxyAuthenticationRequiredException.field_a = -2147483648;
         LoginPayloadKind.field_a = param0;
     }
 
@@ -199,14 +199,14 @@ final class TriangleMesh {
             paletteIndices = mj.decodedSpriteIndices[spriteIndex];
             rgbPixels = new int[pixelCount];
             for (pixelIndex = 0; pixelIndex < pixelCount; pixelIndex++) {
-                rgbPixels[pixelIndex] = cm.decodedSpritePalette[cd.andInt((int) paletteIndices[pixelIndex], 255)];
+                rgbPixels[pixelIndex] = NanoFrameTimer.decodedSpritePalette[ProxySocketConnector.andInt((int) paletteIndices[pixelIndex], 255)];
             }
             sprites[spriteIndex] = new Sprite(pg.decodedSpriteCanvasWidth, FadingDialog.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[spriteIndex], md.decodedSpriteYOffsets[spriteIndex], DualLinkNode.decodedSpriteWidths[spriteIndex], hl.decodedSpriteHeights[spriteIndex], rgbPixels);
         }
         if (methodGuard != 255) {
             screenTransitionTick = 40;
         }
-        kj.clearDecodedSpriteWorkingArrays(true);
+        MidiPcmStream.clearDecodedSpriteWorkingArrays(true);
         return sprites;
     }
 

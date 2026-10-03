@@ -16,21 +16,21 @@ final class s extends WidgetContainer implements pe, ButtonActivationListener {
             jk.fullscreenAcceptCountdownPluralText = OpacityWidget.a(jk.fullscreenAcceptCountdownPluralText, new String[]{"<br><shad=000001><%0></shad><br>"}, (byte) -123);
             mj.fullscreenAcceptCountdownSingularText = OpacityWidget.a(mj.fullscreenAcceptCountdownSingularText, new String[]{"<br><shad=000001><%0></shad><br>"}, (byte) -55);
             tl.field_f = new String[19];
-            tl.field_f[12] = lh.nextText;
+            tl.field_f[12] = ValidationState.nextText;
             tl.field_f[7] = tc.quitText;
             tl.field_f[6] = df.endGameText;
             tl.field_f[8] = wb.soundLabelText;
             tl.field_f[14] = PacketByteCipher.field_c;
             tl.field_f[5] = ij.menuText;
             tl.field_f[0] = nk.startGameText;
-            tl.field_f[4] = wf.fullscreenText;
+            tl.field_f[4] = SessionGameApplet.fullscreenText;
             tl.field_f[param0] = fc.musicLabelText;
             tl.field_f[10] = bl.achievementsText;
             tl.field_f[11] = tl.previousText;
             tl.field_f[15] = ArchiveCatalog.field_a;
             tl.field_f[1] = id.resumeGameText;
-            tl.field_f[13] = gj.field_t;
-            tl.field_f[3] = ef.instructionsText;
+            tl.field_f[13] = StrongCacheReference.field_t;
+            tl.field_f[3] = SecondaryNodeDequeIterator.instructionsText;
             tl.field_f[2] = ii.highscoresText;
             tl.field_f[18] = vd.highscoreModeNames[2];
             tl.field_f[16] = vd.highscoreModeNames[0];
@@ -58,7 +58,7 @@ final class s extends WidgetContainer implements pe, ButtonActivationListener {
           }
           if (!((param0.field_o == 0) &&
               (0 == param0.field_d))) {
-            for (var2_int = 0; oj.field_b > var2_int; var2_int++) {
+            for (var2_int = 0; ByteStorage.field_b > var2_int; var2_int++) {
               var3 = MatchingTextValidator.field_k[var2_int];
               if ((2 == var3.field_f) &&
                   (param0.field_o == var3.field_o) &&
@@ -89,7 +89,7 @@ final class s extends WidgetContainer implements pe, ButtonActivationListener {
         super(0, 0, 288, 0, (WidgetRenderer) null);
         String var7 = null;
         int var3 = 0;
-        ff var4 = null;
+        TextWidgetRenderer var4 = null;
         int var5 = 0;
         int var6 = 0;
         try {
@@ -98,7 +98,7 @@ final class s extends WidgetContainer implements pe, ButtonActivationListener {
             this.field_K.renderer = (WidgetRenderer) ((Object) new ml());
             var7 = OpacityWidget.a(nk.createUnder13TermsText, new String[]{this.f(11501), this.c(false)}, (byte) -114);
             var3 = 20;
-            var4 = new ff(DialogLayer.sharedUiFont, 0, 0, 0, 0, 16777215, -1, 3, 0, DialogLayer.sharedUiFont.maxAscent, -1, 2147483647, true);
+            var4 = new TextWidgetRenderer(DialogLayer.sharedUiFont, 0, 0, 0, 0, 16777215, -1, 3, 0, DialogLayer.sharedUiFont.maxAscent, -1, 2147483647, true);
             this.field_J = new vf(var7, var4);
             this.field_J.hoverText = "";
             this.field_J.a(0, -47, eh.openInPopupWindowText);
@@ -129,14 +129,14 @@ final class s extends WidgetContainer implements pe, ButtonActivationListener {
         var6 = Geoblox.clientControlFlowFlag;
         try {
           if (0 == param1) {
-            uk.a(false, "terms.ws");
+            UsernameAvailabilityValidator.a(false, "terms.ws");
           } else {
             if (param1 != 1) {
               if (2 == param1) {
-                uk.a(false, "conduct.ws");
+                UsernameAvailabilityValidator.a(false, "conduct.ws");
               }
             } else {
-              uk.a(false, "privacy.ws");
+              UsernameAvailabilityValidator.a(false, "privacy.ws");
             }
           }
           if (param2 == 2) {

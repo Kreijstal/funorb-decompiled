@@ -1,11 +1,50 @@
 # Readable GeoBlox
 
-The current export has 8,556 guarded naming rules: 92 classes, 999 fields,
+The current export has 8,607 guarded naming rules: 143 classes, 999 fields,
 800 methods, 2,372 parameters and 4,293 local declarations. Both 303-file corpora
 compile, comparing 137,964 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
+## Class roles and the single preview (pass 110)
+
+The canonical preview is `readable/geoblox/src` in this checkout. Update it with
+`node readable/reproduce-geoblox.mjs --update`; check it with `--check`. Do not
+keep numbered export directories or separate preview checkouts. Validation-only
+copies must be temporary and removed after the check; Git retains earlier passes.
+
+This pass adds 51 class rules, taking class coverage from 92 to 143 of 303 files.
+`Geoblox` already has a meaningful original name; 159 filenames remain opaque.
+The total rule count includes methods, fields, parameters and locals and must not
+be reported as class-name coverage. The renamed families include intrusive hash
+tables/iterators, text editing/layout/validation, audio streams/synthesis, frame
+timers, the applet/session base, sockets and resource downloads. These names
+follow instance state and callers. Obfuscation placed unrelated static helpers
+on many of those owners; the class name does not describe every static member.
+
+All 8,556 prior rule objects remain unchanged. The 51 additions change 3,064
+class declaration/reference occurrences and 46 constructor spellings, bringing
+identifier edits to 69,721. Raw source, decompiler source/archive, naming tool,
+stubs and all seven native probe source/trace pins are unchanged. There is no
+new control-flow rewrite or runtime coverage in this naming pass. Literal
+reflective lookups keep `gl`, `ve`, `tk`, `pd` and `of` unchanged; renaming those
+requires a separately verified literal-lookup transformation.
+
+The raw tree remains
+`05cac317bd3f414e1285a2b6b8edb384d684b78cd65ce948daaa1973c12a303b`;
+the current readable tree is
+`e901726c84615c4b0d0f5949c50a0b70fb077e8b1db95b3f253d4c46fd509861`.
+The pinned decompiler-source SHA-256 remains
+`181f076a1fa60e43792a4326a36369f4b82b1a00a32424e9a539fc0107c81d41`.
+All seven existing native/raw/readable probes pass with their pinned traces.
+Regeneration compares all 303 files and 137,964 bindings; dictionary reversal
+recovers all 303 pinned raw files byte-for-byte. Publication checks pass.
+Historical sections below retain their original pass counts and spellings.
+
 ## One current manifest
+
+Commit the reproducibility scripts, current naming rules and matching generated
+Java export in **funorb-decompiled**. Do not commit Java exports in
+**blank-github-cloner**; that repository owns loading and diagnostics.
 
 [geoblox-rules.json](geoblox-rules.json) is the single maintained source for
 names, source/decompiler pins, source and native-probe evidence, text-resource

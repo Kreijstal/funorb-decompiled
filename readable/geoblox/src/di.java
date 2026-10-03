@@ -5,7 +5,7 @@ final class di {
     static int releasedInDifficultyStep;
     static String createText;
     static int field_a;
-    private jj field_f;
+    private WeightedObjectCache field_f;
     static IntrusiveDeque field_e;
     private ResourceArchive field_d;
     private ResourceArchive field_b;
@@ -47,10 +47,10 @@ final class di {
         RuntimeException var2_ref = null;
         var3 = Geoblox.clientControlFlowFlag;
         try {
-          var4 = (wc) ((Object) l.field_g.firstForIteration(param1 ^ param1));
+          var4 = (wc) ((Object) DirectByteStorage.field_g.firstForIteration(param1 ^ param1));
           while (var4 != null) {
             DiskArchiveRequest.a(param0, var4, param1 - 21718);
-            var4 = (wc) ((Object) l.field_g.nextForIteration(1));
+            var4 = (wc) ((Object) DirectByteStorage.field_g.nextForIteration(1));
           }
           var2 = PrefixCodeDecoder.field_e.firstForIteration(0);
           while (var2 != null) {

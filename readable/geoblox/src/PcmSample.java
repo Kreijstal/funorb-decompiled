@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class PcmSample extends e {
+final class PcmSample extends AbstractAudioSample {
     int loopStart;
     int sampleRateHz;
     int loopEnd;
     boolean pingPongLoop;
     byte[] samples;
 
-    final PcmSample a(ue param0) {
+    final PcmSample a(PcmResampler param0) {
         this.samples = param0.a(99, this.samples);
         this.sampleRateHz = param0.a(-128, this.sampleRateHz);
         if (this.loopStart != this.loopEnd) {

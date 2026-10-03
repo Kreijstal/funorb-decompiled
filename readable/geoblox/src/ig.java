@@ -19,8 +19,8 @@ final class ig {
           if (hg.field_a[param3] > hg.field_a[param1]) {
             return false;
           }
-          var4 = cj.field_b[param3] + fb.field_m[param3] + k.field_i[param3];
-          var5 = fb.field_m[param1] + (k.field_i[param1] + cj.field_b[param1]);
+          var4 = FrameTimer.field_b[param3] + fb.field_m[param3] + NodeHashTableIterator.field_i[param3];
+          var5 = fb.field_m[param1] + (NodeHashTableIterator.field_i[param1] + FrameTimer.field_b[param1]);
           var6 = 76 % ((-38 - param2) / 45);
           if (var4 < var5) {
             return true;
@@ -42,8 +42,8 @@ final class ig {
         if (gk.field_a[param3] > gk.field_a[param1]) {
           return false;
         }
-        var4 = cj.field_b[param3] + fb.field_m[param3] + k.field_i[param3];
-        var5 = fb.field_m[param1] + (k.field_i[param1] + cj.field_b[param1]);
+        var4 = FrameTimer.field_b[param3] + fb.field_m[param3] + NodeHashTableIterator.field_i[param3];
+        var5 = fb.field_m[param1] + (NodeHashTableIterator.field_i[param1] + FrameTimer.field_b[param1]);
         var6 = 76 % ((-38 - param2) / 45);
         if (var4 < var5) {
           return true;

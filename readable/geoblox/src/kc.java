@@ -31,7 +31,7 @@ final class kc {
         RuntimeException var2 = null;
         var3 = Geoblox.clientControlFlowFlag;
         try {
-          SingleChildWidget.a(0, param0, ok.field_b, bd.field_a, (byte) 121, md.field_c, true);
+          SingleChildWidget.a(0, param0, ok.field_b, ProxyAuthenticationRequiredException.field_a, (byte) 121, md.field_c, true);
           if (param1 != -98) {
             return;
           }
@@ -309,7 +309,7 @@ final class kc {
                         break L40;
                       }
                     }
-                    if ((routedAttachedEntity.entityQueue != bh.transientEntities) &&
+                    if ((routedAttachedEntity.entityQueue != DelegatingCanvas.transientEntities) &&
                         (!w.avatarShockPending)) {
                       break L40;
                     }
@@ -329,7 +329,7 @@ final class kc {
                     categoryResetThenTransientEntity.sameCategoryEntityCount = 0;
                     entityForTransientVariantReset.sameVariantEntityCount = 0;
                     routedAttachedEntity.remainingLifetimeTicks = 50;
-                    bh.transientEntities.addLast(-100, routedAttachedEntity);
+                    DelegatingCanvas.transientEntities.addLast(-100, routedAttachedEntity);
                     routedAttachedEntity.animationFrameIndex = 0;
                     if ((routedAttachedEntity.touchesAvatar) &&
                         (w.avatarShockPending)) {
@@ -365,20 +365,20 @@ final class kc {
               break;
             }
             methodGuardResidue = -23 / ((methodGuard - 69) / 46);
-            categoryResetThenTransientEntity = (GameplayEntity) ((Object) bh.transientEntities.firstForIteration(0));
+            categoryResetThenTransientEntity = (GameplayEntity) ((Object) DelegatingCanvas.transientEntities.firstForIteration(0));
             while (true) {
               L52: {
                 if (categoryResetThenTransientEntity != null) {
                   if (clientControlSnapshot != 0) {
                     break L52;
                   }
-                  if (ra.availableEntities == categoryResetThenTransientEntity.entityQueue) {
+                  if (SecondaryNodeDeque.availableEntities == categoryResetThenTransientEntity.entityQueue) {
                     categoryResetThenTransientEntity.unlinkNode(false);
                     categoryResetThenTransientEntity.unlinkSecondaryNode((byte) 51);
-                    ra.availableEntities.addLast(-44, categoryResetThenTransientEntity);
+                    SecondaryNodeDeque.availableEntities.addLast(-44, categoryResetThenTransientEntity);
                     categoryResetThenTransientEntity.entityQueue = null;
                   }
-                  categoryResetThenTransientEntity = (GameplayEntity) ((Object) bh.transientEntities.nextForIteration(1));
+                  categoryResetThenTransientEntity = (GameplayEntity) ((Object) DelegatingCanvas.transientEntities.nextForIteration(1));
                   continue;
                 }
                 if (w.avatarShockPending) {
@@ -391,10 +391,10 @@ final class kc {
               sessionForRasterRead.boardRasterDirty = rasterDirtyDecision;
               w.avatarShockPending = false;
               if (visitedResetIndexThenKindFourCount >= 3) {
-                ra.recordAchievement(255 ^ GzipInflater.field_f, -88, GzipInflater.field_f);
+                SecondaryNodeDeque.recordAchievement(255 ^ GzipInflater.field_f, -88, GzipInflater.field_f);
               }
               if (rb.kindFourRemovalCount >= 5) {
-                ra.recordAchievement(255 ^ vd.field_p, -83, vd.field_p);
+                SecondaryNodeDeque.recordAchievement(255 ^ vd.field_p, -83, vd.field_p);
               }
               return;
             }

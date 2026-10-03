@@ -28,7 +28,7 @@ final class AchievementQuery extends IntrusiveNode {
         if (methodGuard <= 76) {
           field_h = (gk) null;
         }
-        positiveMaskContainsBitSixteen = (ra.receivedAchievementMask > 0) && ((65536 & ra.receivedAchievementMask) != 0);
+        positiveMaskContainsBitSixteen = (SecondaryNodeDeque.receivedAchievementMask > 0) && ((65536 & SecondaryNodeDeque.receivedAchievementMask) != 0);
         return positiveMaskContainsBitSixteen;
     }
 

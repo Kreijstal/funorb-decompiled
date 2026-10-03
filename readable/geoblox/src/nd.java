@@ -17,10 +17,10 @@ final class nd {
         if (ok.field_b > param5) {
           LoginPayloadKind.field_a = param5;
         }
-        if (bd.field_a >= param5) {
+        if (ProxyAuthenticationRequiredException.field_a >= param5) {
           fb.field_m[md.field_c] = param3;
-          k.field_i[md.field_c] = param4;
-          cj.field_b[md.field_c] = param0;
+          NodeHashTableIterator.field_i[md.field_c] = param4;
+          FrameTimer.field_b[md.field_c] = param0;
           var6 = param0 + (param4 + param3);
           var8 = -80 / ((30 - param2) / 42);
           if (var6 != 0) {
@@ -42,8 +42,8 @@ final class nd {
         }
         va.field_b = param5;
         fb.field_m[md.field_c] = param3;
-        k.field_i[md.field_c] = param4;
-        cj.field_b[md.field_c] = param0;
+        NodeHashTableIterator.field_i[md.field_c] = param4;
+        FrameTimer.field_b[md.field_c] = param0;
         var6 = param0 + (param4 + param3);
         var8 = -80 / ((30 - param2) / 42);
         if (var6 != 0) {

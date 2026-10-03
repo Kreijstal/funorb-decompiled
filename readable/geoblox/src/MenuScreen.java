@@ -104,7 +104,7 @@ abstract class MenuScreen {
                 } else {
                     this.decreaseMenuValue(itemIndex, (byte) 6);
                 }
-                s.menuPointerRepeatCountdown = fj.menuPointerRepeatInterval;
+                s.menuPointerRepeatCountdown = CacheReference.menuPointerRepeatInterval;
             }
         }
         if (initialClick) {
@@ -173,12 +173,12 @@ abstract class MenuScreen {
               if (hitItemIndex == -1) {
                 break L0;
               }
-              this.handleMenuPointer(hitItemIndex, PrefixCodeDecoder.pointerXSnapshot, false, -(this.itemSpacing * hitItemIndex) + (ue.pointerYSnapshot - this.firstItemY), true, gf.heldPointerButtonSnapshot);
+              this.handleMenuPointer(hitItemIndex, PrefixCodeDecoder.pointerXSnapshot, false, -(this.itemSpacing * hitItemIndex) + (PcmResampler.pointerYSnapshot - this.firstItemY), true, gf.heldPointerButtonSnapshot);
               break L0;
             }
             this.pointerInteractionActive = false;
             if (wb.pointerActivitySnapshot) {
-              hitItemIndex = this.hitTestMenuItem(PrefixCodeDecoder.pointerXSnapshot, ue.pointerYSnapshot, (byte) 126);
+              hitItemIndex = this.hitTestMenuItem(PrefixCodeDecoder.pointerXSnapshot, PcmResampler.pointerYSnapshot, (byte) 126);
               if (hitItemIndex != -1) {
                 this.selectedItemIndex = hitItemIndex;
                 this.keyboardSelectionActive = false;

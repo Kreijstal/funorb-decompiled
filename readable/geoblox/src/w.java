@@ -150,7 +150,7 @@ final class w {
             }
             long dupTemp$0 = oa.a(param1 ^ -12500);
             v.field_r = dupTemp$0;
-            kh.field_e = dupTemp$0;
+            AudioService.field_e = dupTemp$0;
             if (1 != NetworkArchiveRequest.field_B.status) {
                 PacketBuffer.field_l = AchievementQuery.field_h;
             } else {
@@ -158,14 +158,14 @@ final class w {
                     oc.field_e = new BufferedSocket((java.net.Socket) (NetworkArchiveRequest.field_B.result), GameplayEntity.field_D);
                     var4 = eh.field_d;
                     var5 = var4;
-                    fj.field_q.position = 0;
+                    CacheReference.field_q.position = 0;
                     var5.position = 0;
-                    ad.field_o = param0 ? -2 : -1;
+                    MidiNoteMixer.field_o = param0 ? -2 : -1;
                     dc.field_b = param0 ? -2 : -1;
                     kg.field_n = param0 ? -2 : -1;
-                    PacketBuffer.field_l = gi.field_d;
-                    ke.writeConnectionHeader(qe.field_b, true, ok.field_f, mk.field_l, fj.field_q);
-                    cm.a(param1 ^ -53, -1);
+                    PacketBuffer.field_l = IterableNodeHashTable.field_d;
+                    ke.writeConnectionHeader(qe.field_b, true, ok.field_f, EmailAvailabilityValidator.field_l, CacheReference.field_q);
+                    NanoFrameTimer.a(param1 ^ -53, -1);
                 } catch (IOException iOException) {
                     PacketBuffer.field_l = AchievementQuery.field_h;
                 }

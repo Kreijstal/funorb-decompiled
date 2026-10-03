@@ -5,7 +5,7 @@ import java.util.*;
 
 final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
     private java.awt.image.ColorModel colorModel;
-    static lh field_g;
+    static ValidationState field_g;
     private java.awt.image.ImageConsumer imageConsumer;
     static ResourceArchive activeTextArchive;
 
@@ -261,11 +261,11 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
         activeTextArchive = null;
         field_g = null;
         if (param0 >= -101) {
-            field_g = (lh) null;
+            field_g = (ValidationState) null;
         }
     }
 
     static {
-        field_g = new lh();
+        field_g = new ValidationState();
     }
 }

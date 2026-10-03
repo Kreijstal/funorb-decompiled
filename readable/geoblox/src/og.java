@@ -20,7 +20,7 @@ final class og extends DualLinkNode {
         String var7;
         String var8;
         var5 = Geoblox.clientControlFlowFlag;
-        var6 = "(" + ad.field_o + " " + dc.field_b + " " + kg.field_n + ") " + ScorePopup.field_l;
+        var6 = "(" + MidiNoteMixer.field_o + " " + dc.field_b + " " + kg.field_n + ") " + ScorePopup.field_l;
         var1 = var6;
         if (0 < AchievementSubmission.field_k) {
           var1 = var6 + ":";
@@ -168,7 +168,7 @@ final class og extends DualLinkNode {
             return;
         }
         try {
-            ml.field_t = new pf(b.field_a, (String) null, cf.field_i, param2, param3);
+            ml.field_t = new pf(b.field_a, (String) null, AgeValidator.field_i, param2, param3);
             ButtonWidget.field_C = new ei(kd.field_e, ml.field_t);
             kd.field_e.showDialog(false, ButtonWidget.field_C);
         } catch (RuntimeException runtimeException) {

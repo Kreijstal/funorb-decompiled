@@ -9,9 +9,9 @@ final class fh implements WidgetRenderer {
     static Sprite[] field_e;
 
     final static void b(int param0) {
-        cf.field_i = false;
+        AgeValidator.field_i = false;
         va.field_d = false;
-        pc.a(-1, false);
+        MidiNote.a(-1, false);
         si.field_g = DiskCacheWorker.field_l;
         kd.field_b = DiskCacheWorker.field_l;
         if (param0 != -6011) {

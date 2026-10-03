@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MusicScore extends IntrusiveNode {
-    fi instrumentNoteMasks;
+    IntrusiveNodeHashTable instrumentNoteMasks;
     byte[] midiBytes;
 
     final static MusicScore loadNamedScore(ResourceArchive archive, String groupName, String fileName) {
@@ -35,7 +35,7 @@ final class MusicScore extends IntrusiveNode {
         if (this.instrumentNoteMasks != null) {
           return;
         }
-        this.instrumentNoteMasks = new fi(16);
+        this.instrumentNoteMasks = new IntrusiveNodeHashTable(16);
         channelBanksStorage = new int[16];
         channelBanksAlias = channelBanksStorage;
         channelBanks = channelBanksAlias;

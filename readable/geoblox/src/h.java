@@ -45,7 +45,7 @@ final class h {
                   var4 = var4 + var2.substring(var3);
                 }
                 var5 = new java.net.URL(param0.getCodeBase(), var4);
-                param0.getAppletContext().showDocument(wf.a(var5, 58, param0), "_self");
+                param0.getAppletContext().showDocument(SessionGameApplet.a(var5, 58, param0), "_self");
                 return;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

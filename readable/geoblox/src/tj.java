@@ -9,7 +9,7 @@ final class tj {
         PacketBuffer var6 = null;
         int var4 = 0;
         try {
-            var6 = fj.field_q;
+            var6 = CacheReference.field_q;
             var6.writeCipherByte(param0, (byte) -63);
             var6.position = var6.position + 1;
             if (param1 != 86) {
@@ -35,7 +35,7 @@ final class tj {
         String var3 = null;
         String var2 = null;
         String var5 = null;
-        if (!cf.field_i) {
+        if (!AgeValidator.field_i) {
             throw new IllegalStateException();
         }
         if (Geoblox.activeMessageDialog != null) {
@@ -82,7 +82,7 @@ final class tj {
     }
 
     final static void c(byte param0) {
-        ff.field_a = null;
+        TextWidgetRenderer.field_a = null;
         int var1 = 59 % ((param0 + 30) / 37);
         hh.field_a = null;
     }
@@ -95,10 +95,10 @@ final class tj {
           return 0;
         }
         if (va.field_a == 0) {
-          if (!l.field_h.ensureIndexLoaded(0)) {
+          if (!DirectByteStorage.field_h.ensureIndexLoaded(0)) {
             return 20;
           }
-          if (!l.field_h.loadGroupByName("commonui", (byte) -127)) {
+          if (!DirectByteStorage.field_h.loadGroupByName("commonui", (byte) -127)) {
             return 40;
           }
           if (!dc.field_c.ensureIndexLoaded(0)) {
@@ -126,10 +126,10 @@ final class tj {
             return 29;
           }
         }
-        if (!l.field_h.ensureIndexLoaded(param0 ^ 73)) {
+        if (!DirectByteStorage.field_h.ensureIndexLoaded(param0 ^ 73)) {
           return 43;
         }
-        if (!l.field_h.loadGroupByName("commonui", (byte) -125)) {
+        if (!DirectByteStorage.field_h.loadGroupByName("commonui", (byte) -125)) {
           return 57;
         }
         if (!dc.field_c.ensureIndexLoaded(0)) {

@@ -22,11 +22,11 @@ final class ei extends ContentTransitionDialog {
               var3_int = 1;
               dl.field_c = false;
             }
-            ArchiveRequest.a(tj.a((byte) 73), v.field_q, var3_int != 0, false, kh.a((byte) -85));
+            ArchiveRequest.a(tj.a((byte) 73), v.field_q, var3_int != 0, false, AudioService.a((byte) -85));
           } else {
             if (OpacityWidget.isLogoAnimationComplete(7426)) {
               if (hj.field_a == 0) {
-                ue.a(param0, false, (byte) -102);
+                PcmResampler.a(param0, false, (byte) -102);
                 i.a(0, (byte) 42, param2, 0);
               } else {
                 fc.a(true, param2);

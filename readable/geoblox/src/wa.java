@@ -64,7 +64,7 @@ final class wa {
     }
 
     final void a(int param0, BitmapFont param1) {
-        ff var17 = null;
+        TextWidgetRenderer var17 = null;
         rd var4 = null;
         Sprite[] var5 = null;
         ArgbSprite var16 = null;
@@ -85,7 +85,7 @@ final class wa {
         rd var19 = null;
         int var15 = Geoblox.clientControlFlowFlag;
         try {
-            var17 = new ff(param1, 2, 2, 2236962, 1, 1, 1, 2 + (param1.maxAscent + param1.maxDescent));
+            var17 = new TextWidgetRenderer(param1, 2, 2, 2236962, 1, 1, 1, 2 + (param1.maxAscent + param1.maxDescent));
             this.field_b = (WidgetRenderer) ((Object) var17);
             var17.field_o = 16777215;
             var4 = new rd();
@@ -271,7 +271,7 @@ final class wa {
         if (param3 != 1) {
             wa.a(-34, 65, 52, 47);
         }
-        return dj.a(param0, (byte) -70, param2, param1, 1);
+        return TextInputWidget.a(param0, (byte) -70, param2, param1, 1);
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {

@@ -7,9 +7,11 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-## Current readability (pass 109)
+## Current readability (pass 110)
 
-The export has 8,556 guarded names and 66,611 identifier edits. All 303 sources
+The export has 8,607 guarded names and 69,721 identifier edits. Class coverage is
+143 semantic renames, one already meaningful `Geoblox` name and 159 opaque names.
+The total naming-rule count mostly measures members and local declarations. All 303 sources
 compile and compare 137,964 bindings, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
 short-circuit guards for their original remainders, consuming 82 breaks and
@@ -17,6 +19,26 @@ saving 219 lines. Menu hit-test trees preserve every strict boundary and
 predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
+
+Pass110 adds 51 class roles without changing raw bodies or earlier naming rules.
+Use the one current `readable/geoblox/src` preview; numbered previews are obsolete.
+These are useful entry points for the newly named families:
+
+| Role | Classes |
+|---|---|
+| Applet and frame scheduling | [GameApplet](geoblox/src/GameApplet.java), [SessionGameApplet](geoblox/src/SessionGameApplet.java), [FrameTimer](geoblox/src/FrameTimer.java), [NanoFrameTimer](geoblox/src/NanoFrameTimer.java) |
+| Collections and cache | [IntrusiveNodeHashTable](geoblox/src/IntrusiveNodeHashTable.java), [IterableNodeHashTable](geoblox/src/IterableNodeHashTable.java), [NodeHashTableIterator](geoblox/src/NodeHashTableIterator.java), [SecondaryNodeDeque](geoblox/src/SecondaryNodeDeque.java), [WeightedObjectCache](geoblox/src/WeightedObjectCache.java) |
+| Editable text and geometry | [TextInputWidget](geoblox/src/TextInputWidget.java), [ValidatedTextInputWidget](geoblox/src/ValidatedTextInputWidget.java), [TextWidgetRenderer](geoblox/src/TextWidgetRenderer.java), [TextLayout](geoblox/src/TextLayout.java), [TextLayoutLine](geoblox/src/TextLayoutLine.java), [CachedTextLayout](geoblox/src/CachedTextLayout.java) |
+| Validation | [ValidationProvider](geoblox/src/ValidationProvider.java), [DebouncedValidationProvider](geoblox/src/DebouncedValidationProvider.java), [ValidationState](geoblox/src/ValidationState.java), [EmailValidator](geoblox/src/EmailValidator.java), [AgeValidator](geoblox/src/AgeValidator.java), [PasswordValidator](geoblox/src/PasswordValidator.java) |
+| PCM and MIDI | [PcmStream](geoblox/src/PcmStream.java), [PcmStreamMixer](geoblox/src/PcmStreamMixer.java), [DelayedPcmStream](geoblox/src/DelayedPcmStream.java), [MidiPcmStream](geoblox/src/MidiPcmStream.java), [MidiNote](geoblox/src/MidiNote.java), [MidiNoteMixer](geoblox/src/MidiNoteMixer.java) |
+| Sound loading and synthesis | [SoundSampleCache](geoblox/src/SoundSampleCache.java), [SynthesizedSoundEffect](geoblox/src/SynthesizedSoundEffect.java), [SoundEnvelope](geoblox/src/SoundEnvelope.java), [SoundFilter](geoblox/src/SoundFilter.java), [PcmResampler](geoblox/src/PcmResampler.java), [JavaSoundAudioOutput](geoblox/src/JavaSoundAudioOutput.java) |
+| Network and storage | [SocketConnector](geoblox/src/SocketConnector.java), [ProxySocketConnector](geoblox/src/ProxySocketConnector.java), [AsyncResourceDownloader](geoblox/src/AsyncResourceDownloader.java), [ByteStorage](geoblox/src/ByteStorage.java), [DirectByteStorage](geoblox/src/DirectByteStorage.java) |
+
+Class names describe supported instance roles. Unrelated static helpers remain
+on the same owners because obfuscation mixed them together. `gl`, `ve`, `tk`,
+`pd` and `of` remain opaque to preserve literal reflection lookups. Historical
+sections retain their original pass counts and spellings; use the current symbol
+dictionary to resolve those spellings.
 
 The previous reconstruction converted 78 terminal labeled exits to ordinary loop
 breaks and removes 38 unused labels/blocks across 28 files, saving 76 lines.

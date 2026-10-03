@@ -161,7 +161,7 @@ abstract class SingleChildWidget extends UiWidget implements ql {
           }
           var3 = oa.a(-12520);
           if ((ab.field_b != 0) &&
-              (pc.field_f < 0)) {
+              (MidiNote.field_f < 0)) {
             var5_ref_ma = (ma) ((Object) va.field_c.firstForIteration(0));
             if ((var5_ref_ma != null) &&
                 (var3 > var5_ref_ma.field_f)) {
@@ -171,7 +171,7 @@ abstract class SingleChildWidget extends UiWidget implements ql {
               for (var6_int = 0; var6_int < AchievementSubmission.field_k; var6_int++) {
                 eh.field_d.bytes[var6_int] = var5_ref_ma.field_g[var6_int];
               }
-              ad.field_o = dc.field_b;
+              MidiNoteMixer.field_o = dc.field_b;
               dc.field_b = kg.field_n;
               kg.field_n = ScorePopup.field_l;
               ScorePopup.field_l = var5_ref_ma.field_h;
@@ -179,39 +179,39 @@ abstract class SingleChildWidget extends UiWidget implements ql {
             }
           }
           while (true) {
-            if (pc.field_f < 0) {
+            if (MidiNote.field_f < 0) {
               eh.field_d.position = 0;
               if (!UiWidget.b(30000, 1)) {
                 return false;
               }
-              pc.field_f = eh.field_d.readCipherByte((byte) 122);
+              MidiNote.field_f = eh.field_d.readCipherByte((byte) 122);
               eh.field_d.position = 0;
-              AchievementSubmission.field_k = param1[pc.field_f];
+              AchievementSubmission.field_k = param1[MidiNote.field_f];
             }
             if (!TriangleMesh.a(false)) {
               return false;
             }
             if (ab.field_b == 0) {
-              ad.field_o = dc.field_b;
+              MidiNoteMixer.field_o = dc.field_b;
               dc.field_b = kg.field_n;
               kg.field_n = ScorePopup.field_l;
-              ScorePopup.field_l = pc.field_f;
-              pc.field_f = -1;
+              ScorePopup.field_l = MidiNote.field_f;
+              MidiNote.field_f = -1;
               return true;
             }
             var5 = ab.field_b;
             if (0.0 != fc.field_a) {
-              var5 = (int)((double)var5 + bh.field_d.nextGaussian() * fc.field_a);
+              var5 = (int)((double)var5 + DelegatingCanvas.field_d.nextGaussian() * fc.field_a);
               if (var5 < 0) {
                 var5 = 0;
               }
             }
-            var6 = new ma((long)var5 + var3, pc.field_f, new byte[AchievementSubmission.field_k]);
+            var6 = new ma((long)var5 + var3, MidiNote.field_f, new byte[AchievementSubmission.field_k]);
             for (var7 = 0; AchievementSubmission.field_k > var7; var7++) {
               var6.field_g[var7] = eh.field_d.bytes[var7];
             }
             va.field_c.addLast(-108, var6);
-            pc.field_f = -1;
+            MidiNote.field_f = -1;
             continue;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -517,7 +517,7 @@ abstract class SingleChildWidget extends UiWidget implements ql {
           if (var5_int != 80) {
             return false;
           }
-          if (!kj.heldInternalKeys[81]) {
+          if (!MidiPcmStream.heldInternalKeys[81]) {
             stackIn_11_0 = this.a(param3, 22439);
           } else {
             stackIn_11_0 = this.a(param3, (byte) -119);

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class td extends ButtonWidget {
-    private dg field_F;
+    private ValidationProvider field_F;
     static od field_I;
     private int field_G;
     static boolean field_H;
@@ -76,7 +76,7 @@ final class td extends ButtonWidget {
         int var5;
         int var6;
         int var7;
-        lh var9;
+        ValidationState var9;
         int var10;
         int var11;
         int var12;
@@ -241,10 +241,10 @@ final class td extends ButtonWidget {
         if (param0 != -93) {
             return;
         }
-        md.activeScorePopups.moveAllTo(ue.availableScorePopups, (byte) -70);
+        md.activeScorePopups.moveAllTo(PcmResampler.availableScorePopups, (byte) -70);
     }
 
-    td(dg param0) {
+    td(ValidationProvider param0) {
         try {
             this.field_F = param0;
         } catch (RuntimeException runtimeException) {

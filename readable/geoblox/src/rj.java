@@ -15,10 +15,10 @@ final class rj {
     final static void a(byte param0, int param1) {
         if (param0 != 121) {
             quitToWebsiteText = (String) null;
-            oj.field_c = 1000000000L / (long)param1;
+            ByteStorage.field_c = 1000000000L / (long)param1;
             return;
         }
-        oj.field_c = 1000000000L / (long)param1;
+        ByteStorage.field_c = 1000000000L / (long)param1;
     }
 
     public static void a(int param0) {

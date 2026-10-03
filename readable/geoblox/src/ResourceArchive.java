@@ -418,7 +418,7 @@ final class ResourceArchive {
                   (decryptionKey[1] == 0) &&
                   (decryptionKey[2] == 0) &&
                   (0 == decryptionKey[3]))) {
-                copiedPackedBytes = uk.a(true, methodGuard ^ -114, this.packedGroups[groupId]);
+                copiedPackedBytes = UsernameAvailabilityValidator.a(true, methodGuard ^ -114, this.packedGroups[groupId]);
                 packedBytesForDecryption = copiedPackedBytes;
                 packedBytes = packedBytesForDecryption;
                 encryptedGroupBuffer = new ByteArrayBuffer(copiedPackedBytes);
@@ -426,7 +426,7 @@ final class ResourceArchive {
                 break L4;
               }
             }
-            packedBytes = uk.a(false, methodGuard - 90, this.packedGroups[groupId]);
+            packedBytes = UsernameAvailabilityValidator.a(false, methodGuard - 90, this.packedGroups[groupId]);
           }
           if (methodGuard != 4) {
             return false;
@@ -630,7 +630,7 @@ final class ResourceArchive {
             throw new RuntimeException("");
           }
           if (null != this.decodedFiles[groupId][fileId]) {
-            fileBytes = uk.a(false, -116, this.decodedFiles[groupId][fileId]);
+            fileBytes = UsernameAvailabilityValidator.a(false, -116, this.decodedFiles[groupId][fileId]);
             fileBytesOrFailureForContext = fileBytes;
             if (fileBytes == null) {
               throw new RuntimeException("");

@@ -10,7 +10,7 @@ final class DiskCacheWorker implements Runnable {
     int queuedRequestCount;
     private Thread workerThread;
     static int avatarFeedbackFrameIndex;
-    static ob field_e;
+    static PcmStreamMixer field_e;
     private boolean stopRequested;
     static wa field_f;
     static long field_c;
@@ -24,7 +24,7 @@ final class DiskCacheWorker implements Runnable {
             field_l = null;
             return;
         }
-        field_e = (ob) null;
+        field_e = (PcmStreamMixer) null;
         field_e = null;
         avatarTintPalette = null;
         field_f = null;
@@ -179,7 +179,7 @@ final class DiskCacheWorker implements Runnable {
           var7 = new mb(param5);
           var8 = new mb(param4);
           if (param0 != -94) {
-            field_e = (ob) null;
+            field_e = (PcmStreamMixer) null;
           }
           stackIn_3_0 = pf.a(param3, param2, var7, var8, param1, param6, 100);
           return stackIn_3_0;
@@ -322,7 +322,7 @@ final class DiskCacheWorker implements Runnable {
                 caughtWorkerFailure = requestOperationFailure;
                 operationFailure = (Exception) (Object) caughtWorkerFailure;
                 unusedFailureMessageSnapshot = (String) null;
-                gi.a((Throwable) ((Object) operationFailure), (String) null, (byte) 125);
+                IterableNodeHashTable.a((Throwable) ((Object) operationFailure), (String) null, (byte) 125);
                 completeRequestAfterOperation = 1;
               }
               if (completeRequestAfterOperation == 0) {

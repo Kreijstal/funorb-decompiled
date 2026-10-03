@@ -15,9 +15,9 @@ abstract class FadingDialog extends WidgetContainer {
     final static boolean a(byte param0) {
         if (param0 != 47) {
             field_J = (ResourceArchive) null;
-            return cg.b(true);
+            return DelayedPcmStream.b(true);
         }
-        return cg.b(true);
+        return DelayedPcmStream.b(true);
     }
 
     final void resizeAndCenter(int targetHeight, int methodGuard, int targetWidth) {
@@ -84,7 +84,7 @@ abstract class FadingDialog extends WidgetContainer {
           if (ak.a(param0, (byte) -67)) {
             return false;
           }
-          if (ra.a(18725, param0)) {
+          if (SecondaryNodeDeque.a(18725, param0)) {
             return false;
           }
           if (ArchiveCatalog.a(param0, param2 + 25409)) {
@@ -99,7 +99,7 @@ abstract class FadingDialog extends WidgetContainer {
           if (param2 != -25321) {
             FadingDialog.i(31);
           }
-          if (uk.a(8, param1, param0)) {
+          if (UsernameAvailabilityValidator.a(8, param1, param0)) {
             return false;
           }
           if (!wc.a(param0, param1, (byte) -107)) {

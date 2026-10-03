@@ -3,13 +3,13 @@
  */
 final class qh extends WidgetContainer implements pe, ButtonActivationListener, ta {
     static gk field_F;
-    private hc field_N;
-    private hc field_R;
-    private hc field_G;
+    private ValidatedTextInputWidget field_N;
+    private ValidatedTextInputWidget field_R;
+    private ValidatedTextInputWidget field_G;
     vh field_K;
-    private hc field_H;
-    private hc field_M;
-    private hc field_I;
+    private ValidatedTextInputWidget field_H;
+    private ValidatedTextInputWidget field_M;
+    private ValidatedTextInputWidget field_I;
     static int archiveHandshakeStage;
     private vf field_E;
     static Sprite[] introGeometryFrames;
@@ -111,16 +111,16 @@ final class qh extends WidgetContainer implements pe, ButtonActivationListener, 
 
     public qh() {
         super(0, 0, 496, 0, (WidgetRenderer) null);
-        this.field_H = new hc("", (WidgetListener) null, 12);
-        this.field_I = new hc("", (WidgetListener) null, 100);
-        this.field_G = new hc("", (WidgetListener) null, 100);
-        this.field_M = new hc("", (WidgetListener) null, 20);
-        this.field_N = new hc("", (WidgetListener) null, 20);
-        this.field_R = new hc("", (WidgetListener) null, 3);
+        this.field_H = new ValidatedTextInputWidget("", (WidgetListener) null, 12);
+        this.field_I = new ValidatedTextInputWidget("", (WidgetListener) null, 100);
+        this.field_G = new ValidatedTextInputWidget("", (WidgetListener) null, 100);
+        this.field_M = new ValidatedTextInputWidget("", (WidgetListener) null, 20);
+        this.field_N = new ValidatedTextInputWidget("", (WidgetListener) null, 20);
+        this.field_R = new ValidatedTextInputWidget("", (WidgetListener) null, 3);
         int var1 = 1;
         this.field_P = new vi("", (WidgetListener) null, var1 != 0);
         this.field_D = new ButtonWidget(di.createText, (WidgetListener) null);
-        this.field_L = new ButtonWidget(hc.goBackText, (WidgetListener) null);
+        this.field_L = new ButtonWidget(ValidatedTextInputWidget.goBackText, (WidgetListener) null);
         this.field_H.hoverText = ud.createDisplayNameTooltipText;
         this.field_I.hoverText = ll.createEmailTooltipText;
         this.field_G.hoverText = ok.createEmailConfirmationTooltipText;
@@ -128,12 +128,12 @@ final class qh extends WidgetContainer implements pe, ButtonActivationListener, 
         this.field_N.hoverText = oi.createPasswordConfirmationTooltipText;
         this.field_R.hoverText = ArchiveRequest.createAgeTooltipText;
         this.field_P.hoverText = vi.createNewsOptInTooltipText;
-        this.field_H.a((byte) -27, new uk(this.field_H));
-        this.field_I.a((byte) -111, new ag(this.field_I));
-        this.field_G.a((byte) 126, new mk(this.field_G, this.field_I));
-        this.field_M.a((byte) 83, new g(this.field_M, this.field_H, this.field_I));
+        this.field_H.a((byte) -27, new UsernameAvailabilityValidator(this.field_H));
+        this.field_I.a((byte) -111, new EmailValidator(this.field_I));
+        this.field_G.a((byte) 126, new EmailAvailabilityValidator(this.field_G, this.field_I));
+        this.field_M.a((byte) 83, new PasswordValidator(this.field_M, this.field_H, this.field_I));
         this.field_N.a((byte) -71, new MatchingTextValidator(this.field_N, this.field_M));
-        this.field_R.a((byte) -116, new cf(this.field_R));
+        this.field_R.a((byte) -116, new AgeValidator(this.field_R));
         this.field_D.enabled = false;
         this.field_D.renderer = (WidgetRenderer) ((Object) new ml());
         this.field_L.renderer = (WidgetRenderer) ((Object) new fh());
@@ -143,7 +143,7 @@ final class qh extends WidgetContainer implements pe, ButtonActivationListener, 
         this.field_I.renderer = (WidgetRenderer) ((Object) dupTemp$0);
         this.field_R.renderer = (WidgetRenderer) ((Object) new ac(10000536));
         this.field_P.renderer = (WidgetRenderer) ((Object) new oc());
-        uh dupTemp$1 = new uh(10000536);
+        PasswordWidgetRenderer dupTemp$1 = new PasswordWidgetRenderer(10000536);
         this.field_N.renderer = (WidgetRenderer) ((Object) dupTemp$1);
         this.field_M.renderer = (WidgetRenderer) ((Object) dupTemp$1);
         String var2 = OpacityWidget.a(ArchiveIndex.createAgreeTermsText, new String[]{this.b(false), this.c(false)}, (byte) -72);
@@ -153,11 +153,11 @@ final class qh extends WidgetContainer implements pe, ButtonActivationListener, 
         var3 = var3 + this.a(var3, LoginPayloadKind.createPasswordText, 170, this.field_M, 5);
         var3 = var3 + (this.a(-99, this.field_N, v.createPasswordConfirmationText, var3, 170, createPasswordHintText) + 5);
         var3 = var3 + (this.a(-103, this.field_H, OpacityWidget.createDisplayNameText, var3, 170, gk.createDisplayNameHintText) + 5);
-        var3 = var3 + this.a(var3, 170, this.field_R, ue.createAgeText, (byte) -127);
-        hd var4 = new hd(46, var3, this.widgetWidth - 90, 25, this.field_P, true, this.widgetWidth - 120, 5, hh.field_d, 11579568, ue.createNewsOptInText);
+        var3 = var3 + this.a(var3, 170, this.field_R, PcmResampler.createAgeText, (byte) -127);
+        hd var4 = new hd(46, var3, this.widgetWidth - 90, 25, this.field_P, true, this.widgetWidth - 120, 5, hh.field_d, 11579568, PcmResampler.createNewsOptInText);
         this.addChild((byte) -106, var4);
         var3 = var3 + var4.widgetHeight;
-        ff var5 = new ff(DialogLayer.sharedUiFont, 0, 0, 0, 0, 16777215, -1, 0, 0, DialogLayer.sharedUiFont.maxAscent, -1, 2147483647, true);
+        TextWidgetRenderer var5 = new TextWidgetRenderer(DialogLayer.sharedUiFont, 0, 0, 0, 0, 16777215, -1, 0, 0, DialogLayer.sharedUiFont.maxAscent, -1, 2147483647, true);
         this.field_E = new vf(var2, var5);
         this.field_E.hoverText = "";
         this.field_E.a(0, -42, eh.openInPopupWindowText);
@@ -265,18 +265,18 @@ final class qh extends WidgetContainer implements pe, ButtonActivationListener, 
           if (0 != param1) {
             if (param1 != 1) {
               if (param1 == 2) {
-                uk.a(false, "conduct.ws");
+                UsernameAvailabilityValidator.a(false, "conduct.ws");
               }
             } else {
-              uk.a(false, "privacy.ws");
+              UsernameAvailabilityValidator.a(false, "privacy.ws");
             }
           } else {
-            uk.a(false, "terms.ws");
+            UsernameAvailabilityValidator.a(false, "terms.ws");
           }
           if (param2 == 2) {
             return;
           }
-          this.field_N = (hc) null;
+          this.field_N = (ValidatedTextInputWidget) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -343,9 +343,9 @@ final class qh extends WidgetContainer implements pe, ButtonActivationListener, 
 
     private final boolean a(byte param0, nl param1) {
         boolean discarded$1 = false;
-        dg var3 = null;
+        ValidationProvider var3 = null;
         RuntimeException var3_ref = null;
-        lh var4 = null;
+        ValidationState var4 = null;
         nl var5 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -367,7 +367,7 @@ final class qh extends WidgetContainer implements pe, ButtonActivationListener, 
           if (ImageProducerRasterBuffer.field_g == var4) {
             return false;
           }
-          if (var4 != oj.field_d) {
+          if (var4 != ByteStorage.field_d) {
             return true;
           }
           return false;
@@ -426,13 +426,13 @@ final class qh extends WidgetContainer implements pe, ButtonActivationListener, 
     }
 
     public final void a(String param0, int param1) {
-        hc var3 = this.field_H;
+        ValidatedTextInputWidget var3 = this.field_H;
         String var4 = param0;
         if (param1 != 20) {
             return;
         }
         try {
-            ((dj) ((Object) var3)).a(-121, var4, false);
+            ((TextInputWidget) ((Object) var3)).a(-121, var4, false);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "qh.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -529,7 +529,7 @@ final class qh extends WidgetContainer implements pe, ButtonActivationListener, 
     }
 
     public final void a(byte param0) {
-        ((uk) ((Object) this.field_H.a((byte) -128))).c((byte) -89);
+        ((UsernameAvailabilityValidator) ((Object) this.field_H.a((byte) -128))).c((byte) -89);
         if (param0 != 83) {
             this.a((byte) -25);
         }

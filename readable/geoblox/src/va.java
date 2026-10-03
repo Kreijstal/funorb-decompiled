@@ -35,7 +35,7 @@ final class va {
                     wk.a(param1, "document.cookie=\"" + var5 + "\"", (byte) -92);
                 } catch (Throwable throwable) {
                 }
-                oj.a(param1, 20000000);
+                ByteStorage.a(param1, 20000000);
             } catch (RuntimeException runtimeException) {
                 throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "va.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
             }
@@ -52,7 +52,7 @@ final class va {
         }
         Sprite[] var3 = new Sprite[9];
         Sprite[] var2 = var3;
-        var3[4] = ef.a(0, param0, 64);
+        var3[4] = SecondaryNodeDequeIterator.a(0, param0, 64);
         return var2;
     }
 
@@ -75,13 +75,13 @@ final class va {
         try {
           depthBucketIndex = 0;
           L0: while (true) {
-            if (depthBucketIndex >= ch.meshFaceCountsByDepthBucket.length) {
+            if (depthBucketIndex >= GameApplet.meshFaceCountsByDepthBucket.length) {
               if (guard != -85) {
                 va.a(80, (byte) 55);
               }
               return;
             }
-            remainingFacesScratch = ch.meshFaceCountsByDepthBucket[depthBucketIndex];
+            remainingFacesScratch = GameApplet.meshFaceCountsByDepthBucket[depthBucketIndex];
             depthBucketReadIndex = depthBucketIndex << 4;
             while (true) {
               remainingBeforeDecrement = remainingFacesScratch;

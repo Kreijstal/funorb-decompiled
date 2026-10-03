@@ -28,9 +28,9 @@ final class rl extends ResizableDialog {
         }
     }
 
-    final static cg a(int param0, ia param1, int param2) {
+    final static DelayedPcmStream a(int param0, PcmStream param1, int param2) {
         RuntimeException var3 = null;
-        cg stackIn_3_0 = null;
+        DelayedPcmStream stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -39,7 +39,7 @@ final class rl extends ResizableDialog {
           if (param2 != 1000) {
             rl.n(-33);
           }
-          stackIn_3_0 = new cg(param1, param0 * AudioOutput.sampleRateHz / 1000);
+          stackIn_3_0 = new DelayedPcmStream(param1, param0 * AudioOutput.sampleRateHz / 1000);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -66,8 +66,8 @@ final class rl extends ResizableDialog {
         this.field_bb.field_C = false;
         this.field_ab = true;
         if (param0 != 23181) {
-            ia var3 = (ia) null;
-            rl.a(9, (ia) null, 122);
+            PcmStream var3 = (PcmStream) null;
+            rl.a(9, (PcmStream) null, 122);
         }
     }
 
@@ -79,7 +79,7 @@ final class rl extends ResizableDialog {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = fj.field_q;
+          var3 = CacheReference.field_q;
           var3.writeCipherByte(param0, (byte) -85);
           var3.writeByte((byte) 123, param2.field_f);
           var3.writeShortBE(param2.field_h, param1 + 28161);

@@ -102,7 +102,7 @@ final class hl extends UiWidget {
         var8 = Geoblox.clientControlFlowFlag;
         try {
           var5_int = param2 + this.widgetWidth;
-          uh.a(param1, this.field_M.width + param2, param3 ^ 6447, this.widgetHeight + param1, var5_int - this.field_M.width);
+          PasswordWidgetRenderer.a(param1, this.field_M.width + param2, param3 ^ 6447, this.widgetHeight + param1, var5_int - this.field_M.width);
           for (var6 = param2 - this.field_I; var6 < var5_int; var6 = var6 + param0.width) {
             param0.draw(var6, param1);
           }
@@ -153,7 +153,7 @@ final class hl extends UiWidget {
         int var7 = parentY + this.widgetY;
         this.a(this.field_F[0], var7, var6, -12276);
         if (this.field_x < 65536) {
-            uh.a(var7, var6 + (this.widgetWidth * this.field_x >> 16), -14045, var7 + this.widgetHeight, this.widgetWidth + var6);
+            PasswordWidgetRenderer.a(var7, var6 + (this.widgetWidth * this.field_x >> 16), -14045, var7 + this.widgetHeight, this.widgetWidth + var6);
             this.a(this.field_F[1], var7, var6, -12276);
             id.a(true);
         }

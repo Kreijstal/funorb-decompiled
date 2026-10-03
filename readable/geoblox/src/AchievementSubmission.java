@@ -6,7 +6,7 @@ final class AchievementSubmission extends IntrusiveNode {
     int primaryTrackingCounterSnapshot;
     static boolean field_m;
     int achievementCheckByte;
-    static ue field_i;
+    static PcmResampler field_i;
     static int[] field_o;
     int trackingAccumulatorSnapshot;
     int secondaryTrackingCounterSnapshot;
@@ -100,7 +100,7 @@ final class AchievementSubmission extends IntrusiveNode {
                 L5: {
                   if (nearPlaneOrNormalCapacityOrQueueMinDepth >= invertedDepthOrNormalIndexOrQueueGuard) {
                     SingleChildWidget.projectedMeshVertexX[cameraXBasisOrDeltaZOrVertexIndex] = cameraZBasisOrCameraXScaled / cameraZBasisOrCameraDepth + cameraXBasisOrDeltaXOrClipCenterXOrNormalZ;
-                    dj.projectedMeshVertexY[cameraXBasisOrDeltaZOrVertexIndex] = cameraXBasisOrDeltaYOrClipCenterY + cameraZBasisOrCameraYScaled / cameraZBasisOrCameraDepth;
+                    TextInputWidget.projectedMeshVertexY[cameraXBasisOrDeltaZOrVertexIndex] = cameraXBasisOrDeltaYOrClipCenterY + cameraZBasisOrCameraYScaled / cameraZBasisOrCameraDepth;
                     if (~cameraZBasisOrCameraDepth > ~minimumVisibleDepth) {
                       minimumVisibleDepth = cameraZBasisOrCameraDepth;
                     }
@@ -114,7 +114,7 @@ final class AchievementSubmission extends IntrusiveNode {
                 }
                 if (storeCameraCoordinates) {
                   a.cameraMeshVertexX[cameraXBasisOrDeltaZOrVertexIndex] = cameraZBasisOrCameraXScaled >> ok.meshProjectionShift;
-                  uk.cameraMeshVertexY[cameraXBasisOrDeltaZOrVertexIndex] = cameraZBasisOrCameraYScaled >> ok.meshProjectionShift;
+                  UsernameAvailabilityValidator.cameraMeshVertexY[cameraXBasisOrDeltaZOrVertexIndex] = cameraZBasisOrCameraYScaled >> ok.meshProjectionShift;
                   gf.cameraMeshVertexZ[cameraXBasisOrDeltaZOrVertexIndex] = cameraZBasisOrCameraDepth;
                 }
                 cameraXBasisOrDeltaZOrVertexIndex++;
@@ -181,7 +181,7 @@ final class AchievementSubmission extends IntrusiveNode {
                   cameraXBasisOrDeltaXOrClipCenterXOrNormalZ = mesh.normalZ[cameraXZQ16OrNormalIndex];
                   ok.transformedMeshNormalX[cameraXZQ16OrNormalIndex] = cameraXBasisOrDeltaXOrClipCenterXOrNormalZ * cameraXYOrNormalXZQ16 + (cameraXXOrNormalXYQ16 * cameraZZQ16OrNormalY + cameraYZQ16OrNormalX * cameraTranslationXScaledOrNormalXXQ16) >> 16;
                   oa.transformedMeshNormalY[cameraXZQ16OrNormalIndex] = cameraYYOrNormalYZQ16 * cameraXBasisOrDeltaXOrClipCenterXOrNormalZ + (cameraYZQ16OrNormalX * cameraTranslationYScaledOrNormalYXQ16 + cameraZZQ16OrNormalY * cameraYXOrNormalYYQ16) >> 16;
-                  gi.transformedMeshNormalZ[cameraXZQ16OrNormalIndex] = cameraZXOrNormalZYQ16 * cameraZZQ16OrNormalY + (cameraTranslationZOrNormalZXQ16 * cameraYZQ16OrNormalX + cameraZYOrNormalZZQ16 * cameraXBasisOrDeltaXOrClipCenterXOrNormalZ) >> 16;
+                  IterableNodeHashTable.transformedMeshNormalZ[cameraXZQ16OrNormalIndex] = cameraZXOrNormalZYQ16 * cameraZZQ16OrNormalY + (cameraTranslationZOrNormalZXQ16 * cameraYZQ16OrNormalX + cameraZYOrNormalZZQ16 * cameraXBasisOrDeltaXOrClipCenterXOrNormalZ) >> 16;
                   cameraXZQ16OrNormalIndex++;
                   continue;
                 }
@@ -258,7 +258,7 @@ final class AchievementSubmission extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 3) {
-            field_i = (ue) null;
+            field_i = (PcmResampler) null;
           }
           var2 = fh.a(ResourceArchive.a(param0, -48), -78);
           if (null == var2) {

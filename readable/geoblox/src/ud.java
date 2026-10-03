@@ -18,13 +18,13 @@ final class ud {
             ol.writeAchievementSubmissionPacket(packetOpcode, unacknowledgedSubmission, 30175);
             unacknowledgedSubmission = (AchievementSubmission) ((Object) ResourceArchive.unacknowledgedAchievementSubmissions.nextForIteration(1));
           }
-          pendingQuery = k.pendingAchievementQueries.firstForIteration(0);
+          pendingQuery = NodeHashTableIterator.pendingAchievementQueries.firstForIteration(0);
           if (methodGuard > -123) {
             createDisplayNameTooltipText = (String) null;
           }
           while (pendingQuery != null) {
             re.writeAchievementStateRequest(-101, packetOpcode);
-            pendingQuery = k.pendingAchievementQueries.nextForIteration(1);
+            pendingQuery = NodeHashTableIterator.pendingAchievementQueries.nextForIteration(1);
           }
           return;
         } catch (java.lang.RuntimeException caughtRetryFailure) {
@@ -121,7 +121,7 @@ final class ud {
           incomingPacket = eh.field_d;
           responseType = incomingPacket.readUnsignedByte((byte) 34);
           if (0 == responseType) {
-            allocatedResultValues = wf.createAchievementStateValues(89);
+            allocatedResultValues = SessionGameApplet.createAchievementStateValues(89);
             resultValuesForMaskRead = allocatedResultValues;
             resultValuesBeforeQueryAssignment = resultValuesForMaskRead;
             resultValuesForQuery = resultValuesBeforeQueryAssignment;
@@ -132,7 +132,7 @@ final class ud {
             for (responseValueIndex = 0; responseValueIndex < responseValueCount; responseValueIndex++) {
               mutableResultValues[responseValueIndex] = ((ByteArrayBuffer) ((Object) packetForValueReads)).readIntBE((byte) -97);
             }
-            queryReceivingValues = (AchievementQuery) ((Object) k.pendingAchievementQueries.firstForIteration(0));
+            queryReceivingValues = (AchievementQuery) ((Object) NodeHashTableIterator.pendingAchievementQueries.firstForIteration(0));
             if (queryReceivingValues == null) {
               Bzip2DecoderState.closeSessionSocket((byte) -117);
               return;
@@ -151,17 +151,17 @@ final class ud {
               acknowledgedSubmission.unlinkNode(false);
             } else {
               if (responseType == 2) {
-                queryReceivingZeroValues = (AchievementQuery) ((Object) k.pendingAchievementQueries.firstForIteration(0));
+                queryReceivingZeroValues = (AchievementQuery) ((Object) NodeHashTableIterator.pendingAchievementQueries.firstForIteration(0));
                 if (queryReceivingZeroValues == null) {
                   Bzip2DecoderState.closeSessionSocket((byte) -115);
                   return;
                 }
-                queryReceivingZeroValues.resultValues = wf.createAchievementStateValues(86);
+                queryReceivingZeroValues.resultValues = SessionGameApplet.createAchievementStateValues(86);
                 queryReceivingZeroValues.achievementMask = queryReceivingZeroValues.resultValues[0];
                 queryReceivingZeroValues.completed = true;
                 queryReceivingZeroValues.unlinkNode(false);
               } else {
-                gi.a((Throwable) null, "A1: " + og.e(55), (byte) 125);
+                IterableNodeHashTable.a((Throwable) null, "A1: " + og.e(55), (byte) 125);
                 Bzip2DecoderState.closeSessionSocket((byte) -116);
               }
             }

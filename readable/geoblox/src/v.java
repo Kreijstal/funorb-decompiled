@@ -153,12 +153,12 @@ final class v {
               }
               return;
             }
-            if (this.field_d <= kh.field_d) {
+            if (this.field_d <= AudioService.field_d) {
               if (this.field_d > 0) {
                 PrefixCodeDecoder.field_b = 0;
               }
             } else {
-              PrefixCodeDecoder.field_b = (-kh.field_d + this.field_d) / 2;
+              PrefixCodeDecoder.field_b = (-AudioService.field_d + this.field_d) / 2;
             }
           } else {
             if (this.field_t) {
@@ -175,15 +175,15 @@ final class v {
               }
               return;
             }
-            if (this.field_d > kh.field_d) {
-              PrefixCodeDecoder.field_b = (-kh.field_d + this.field_d) / 2;
+            if (this.field_d > AudioService.field_d) {
+              PrefixCodeDecoder.field_b = (-AudioService.field_d + this.field_d) / 2;
             } else {
               if (this.field_d > 0) {
                 PrefixCodeDecoder.field_b = 0;
               }
             }
           }
-          if ((kh.field_d == this.field_a) &&
+          if ((AudioService.field_d == this.field_a) &&
               (ok.field_c == this.field_h)) {
             return;
           }
@@ -206,12 +206,12 @@ final class v {
             }
             return;
           }
-          if (this.field_d <= kh.field_d) {
+          if (this.field_d <= AudioService.field_d) {
             if (this.field_d > 0) {
               PrefixCodeDecoder.field_b = 0;
             }
           } else {
-            PrefixCodeDecoder.field_b = (-kh.field_d + this.field_d) / 2;
+            PrefixCodeDecoder.field_b = (-AudioService.field_d + this.field_d) / 2;
           }
         } else {
           this.field_t = false;
@@ -229,15 +229,15 @@ final class v {
             }
             return;
           }
-          if (this.field_d > kh.field_d) {
-            PrefixCodeDecoder.field_b = (-kh.field_d + this.field_d) / 2;
+          if (this.field_d > AudioService.field_d) {
+            PrefixCodeDecoder.field_b = (-AudioService.field_d + this.field_d) / 2;
           } else {
             if (this.field_d > 0) {
               PrefixCodeDecoder.field_b = 0;
             }
           }
         }
-        if (kh.field_d != this.field_a) {
+        if (AudioService.field_d != this.field_a) {
           this.field_u.a(-2964, this.field_a, this.field_h);
         } else {
           if (ok.field_c != this.field_h) {
@@ -271,7 +271,7 @@ final class v {
             if (!param0) {
               return;
             }
-            if (kh.field_d != var2) {
+            if (AudioService.field_d != var2) {
               this.field_u.a(-2964, var2, var3);
             } else {
               if (var3 != ok.field_c) {
@@ -279,7 +279,7 @@ final class v {
               }
             }
             if (this.field_d > 0) {
-              PrefixCodeDecoder.field_b = (-kh.field_d + this.field_d) / 2;
+              PrefixCodeDecoder.field_b = (-AudioService.field_d + this.field_d) / 2;
             }
             return;
           }
@@ -291,7 +291,7 @@ final class v {
               if (!param0) {
                 return;
               }
-              if (kh.field_d != var2) {
+              if (AudioService.field_d != var2) {
                 this.field_u.a(-2964, var2, var3);
               } else {
                 if (var3 != ok.field_c) {
@@ -299,7 +299,7 @@ final class v {
                 }
               }
               if (this.field_d > 0) {
-                PrefixCodeDecoder.field_b = (-kh.field_d + this.field_d) / 2;
+                PrefixCodeDecoder.field_b = (-AudioService.field_d + this.field_d) / 2;
               }
               return;
             }
@@ -308,7 +308,7 @@ final class v {
           if (!param0) {
             return;
           }
-          if (kh.field_d != var2) {
+          if (AudioService.field_d != var2) {
             this.field_u.a(-2964, var2, var3);
           } else {
             if (var3 != ok.field_c) {
@@ -318,7 +318,7 @@ final class v {
           if (this.field_d <= 0) {
             return;
           }
-          PrefixCodeDecoder.field_b = (-kh.field_d + this.field_d) / 2;
+          PrefixCodeDecoder.field_b = (-AudioService.field_d + this.field_d) / 2;
           return;
         }
         if (var3 < this.field_o) {
@@ -328,7 +328,7 @@ final class v {
           if (!param0) {
             return;
           }
-          if (kh.field_d != var2) {
+          if (AudioService.field_d != var2) {
             this.field_u.a(-2964, var2, var3);
           } else {
             if (var3 != ok.field_c) {
@@ -338,7 +338,7 @@ final class v {
           if (this.field_d <= 0) {
             return;
           }
-          PrefixCodeDecoder.field_b = (-kh.field_d + this.field_d) / 2;
+          PrefixCodeDecoder.field_b = (-AudioService.field_d + this.field_d) / 2;
           return;
         }
         var4 = (int)(0.5f + (float)var3 * this.field_i);
@@ -347,7 +347,7 @@ final class v {
           if (!param0) {
             return;
           }
-          if (kh.field_d != var2) {
+          if (AudioService.field_d != var2) {
             this.field_u.a(-2964, var2, var3);
           } else {
             if (var3 != ok.field_c) {
@@ -360,17 +360,17 @@ final class v {
             if (!param0) {
               return;
             }
-            if (kh.field_d != var2) {
+            if (AudioService.field_d != var2) {
               this.field_u.a(-2964, var2, var3);
               if (this.field_d > 0) {
-                PrefixCodeDecoder.field_b = (-kh.field_d + this.field_d) / 2;
+                PrefixCodeDecoder.field_b = (-AudioService.field_d + this.field_d) / 2;
               }
               return;
             }
             if (var3 != ok.field_c) {
               this.field_u.a(-2964, var2, var3);
               if (this.field_d > 0) {
-                PrefixCodeDecoder.field_b = (-kh.field_d + this.field_d) / 2;
+                PrefixCodeDecoder.field_b = (-AudioService.field_d + this.field_d) / 2;
               }
               return;
             }
@@ -378,7 +378,7 @@ final class v {
             if (!param0) {
               return;
             }
-            if (kh.field_d != var2) {
+            if (AudioService.field_d != var2) {
               this.field_u.a(-2964, var2, var3);
             } else {
               if (var3 != ok.field_c) {
@@ -390,7 +390,7 @@ final class v {
         if (this.field_d <= 0) {
           return;
         }
-        PrefixCodeDecoder.field_b = (-kh.field_d + this.field_d) / 2;
+        PrefixCodeDecoder.field_b = (-AudioService.field_d + this.field_d) / 2;
         return;
     }
 
@@ -429,7 +429,7 @@ final class v {
           if (param1 <= 12) {
             field_e = (String) null;
           }
-          stackIn_5_0 = !(jg.a((byte) -62, param0) == null);
+          stackIn_5_0 = !(SocketConnector.a((byte) -62, param0) == null);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

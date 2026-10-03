@@ -11,8 +11,8 @@ final class j extends mi {
     static String quitWarningText;
 
     final static void e(int param0) {
-        wg.archiveNetworkClient.failureCount = 0;
-        wg.archiveNetworkClient.failureCode = 0;
+        AsyncResourceDownloader.archiveNetworkClient.failureCount = 0;
+        AsyncResourceDownloader.archiveNetworkClient.failureCode = 0;
         if (param0 != -21754) {
             field_lb = (String) null;
         }

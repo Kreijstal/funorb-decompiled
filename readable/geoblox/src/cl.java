@@ -36,13 +36,13 @@ final class cl {
             return null;
           }
           if ((si.field_g == va.field_e) &&
-              (param1.equals(cg.field_k))) {
+              (param1.equals(DelayedPcmStream.field_k))) {
             si.field_g = DiskCacheWorker.field_l;
             stackIn_8_0 = ScorePopup.field_g;
             return stackIn_8_0;
           }
           si.field_g = IntrusiveDeque.field_d;
-          cg.field_k = param1;
+          DelayedPcmStream.field_k = param1;
           ScorePopup.field_g = null;
           stackIn_10_0 = null;
           return (sl) (stackIn_10_0);

@@ -11,7 +11,7 @@ final class hg {
         if (param0 != -23738) {
             return;
         }
-        pc.a(4, false);
+        MidiNote.a(4, false);
     }
 
     public static void a(int param0) {

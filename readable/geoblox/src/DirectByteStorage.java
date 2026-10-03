@@ -1,0 +1,47 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class DirectByteStorage extends ByteStorage {
+    static IntrusiveDeque field_g;
+    private java.nio.ByteBuffer field_f;
+    static MeshMaterial[] meshMaterials;
+    static ResourceArchive field_h;
+
+    public static void b(int param0) {
+        field_g = null;
+        meshMaterials = null;
+        field_h = null;
+        if (param0 > -1) {
+            meshMaterials = (MeshMaterial[]) null;
+        }
+    }
+
+    DirectByteStorage() {
+    }
+
+    final byte[] a(byte param0) {
+        byte[] var4 = new byte[this.field_f.capacity()];
+        byte[] var2 = var4;
+        this.field_f.position(0);
+        this.field_f.get(var4);
+        int var3 = 39 / ((param0 - 8) / 46);
+        return var4;
+    }
+
+    final void a(byte[] param0, boolean param1) {
+        this.field_f = java.nio.ByteBuffer.allocateDirect(param0.length);
+        this.field_f.position(0);
+        if (!param1) {
+            return;
+        }
+        try {
+            this.field_f.put(param0);
+        } catch (RuntimeException runtimeException) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "l.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        }
+    }
+
+    static {
+        field_g = new IntrusiveDeque();
+    }
+}

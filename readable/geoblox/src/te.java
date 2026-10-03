@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class te {
-    static ci field_c;
+    static SoundSampleCache field_c;
     static char currentKeyboardEventCharacter;
     static MusicScore field_b;
     private static String field_z;
@@ -10,7 +10,7 @@ final class te {
     public static void a(int param0) {
         field_c = null;
         if (param0 != -8297) {
-            field_c = (ci) null;
+            field_c = (SoundSampleCache) null;
             field_b = null;
             return;
         }

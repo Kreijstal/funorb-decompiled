@@ -106,7 +106,7 @@ abstract class ResizableDialog extends FadingDialog {
         RuntimeException contextFailure = null;
         controlFlagSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          depthBucketCounts = ch.meshFaceCountsByDepthBucket;
+          depthBucketCounts = GameApplet.meshFaceCountsByDepthBucket;
           depthBucketCountsAlias = depthBucketCounts;
           clearIndex = startIndex;
           arrayLength = depthBucketCounts.length;
@@ -218,7 +218,7 @@ abstract class ResizableDialog extends FadingDialog {
     }
 
     final static void a(int param0, byte param1, int param2) {
-        k.field_g = param2;
+        NodeHashTableIterator.field_g = param2;
         if (param1 > -20) {
             return;
         }
@@ -275,7 +275,7 @@ abstract class ResizableDialog extends FadingDialog {
           for (var6 = var2_int; var6 < var3; var6++) {
             var7 = param0.charAt(var6);
             if (fb.a((char) var7, -47)) {
-              var8 = hc.a((char) var7, param1 - 239);
+              var8 = ValidatedTextInputWidget.a((char) var7, param1 - 239);
               if (var8 != 0) {
                 discarded$0 = var5.append((char) var8);
               }

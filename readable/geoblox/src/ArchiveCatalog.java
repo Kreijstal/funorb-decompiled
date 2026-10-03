@@ -257,7 +257,7 @@ final class ArchiveCatalog {
             ArchiveCatalog.a(26);
           }
           if ((param0 != null) &&
-              (param0.length() >= wg.field_m)) {
+              (param0.length() >= AsyncResourceDownloader.field_m)) {
             if (param0.length() > ArchiveIndex.field_j) {
               return true;
             }

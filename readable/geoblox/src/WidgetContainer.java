@@ -449,7 +449,7 @@ class WidgetContainer extends UiWidget implements ql {
           if (var6 != 80) {
             return false;
           }
-          if (!kj.heldInternalKeys[81]) {
+          if (!MidiPcmStream.heldInternalKeys[81]) {
             stackIn_17_0 = this.a(param3, -96);
           } else {
             stackIn_17_0 = this.a(7305, param3);

@@ -25,35 +25,35 @@ class IntrusiveNode {
               if (var2 != 0) {
                 if (6 != var2) {
                   if (var2 == 5) {
-                    fi.a(0, k.field_f);
+                    IntrusiveNodeHashTable.a(0, NodeHashTableIterator.field_f);
                   } else {
                     if (var2 == 2) {
-                      fi.a(0, j.field_ib);
+                      IntrusiveNodeHashTable.a(0, j.field_ib);
                     }
                   }
                 } else {
-                  fi.a(0, wf.field_o);
+                  IntrusiveNodeHashTable.a(0, SessionGameApplet.field_o);
                 }
               } else {
-                fi.a(0, ej.field_d);
+                IntrusiveNodeHashTable.a(0, ej.field_d);
               }
             } else {
-              fi.a(0, field_d);
+              IntrusiveNodeHashTable.a(0, field_d);
             }
           } else {
-            fi.a(0, te.field_b);
+            IntrusiveNodeHashTable.a(0, te.field_b);
           }
         } else {
-          fi.a(0, qb.field_M);
+          IntrusiveNodeHashTable.a(0, qb.field_M);
         }
     }
 
     final static Object a(int param0, byte[] param1, boolean param2) {
-        l var3 = null;
+        DirectByteStorage var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_2_0 = null;
         Object stackIn_5_0 = null;
-        l stackIn_8_0 = null;
+        DirectByteStorage stackIn_8_0 = null;
         byte[] stackIn_11_0 = null;
         byte[] stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
@@ -70,8 +70,8 @@ class IntrusiveNode {
             return stackIn_5_0;
           }
           if (param1.length > 136) {
-            var3 = new l();
-            ((oj) ((Object) var3)).a(param1, true);
+            var3 = new DirectByteStorage();
+            ((ByteStorage) ((Object) var3)).a(param1, true);
             stackIn_8_0 = var3;
             return stackIn_8_0;
           }
@@ -167,11 +167,11 @@ class IntrusiveNode {
             hl.decodedSpriteHeights[spriteIndex] = spriteDataBuffer.readUnsignedShortBE(true);
           }
           spriteDataBufferAlias.position = -(paletteSize * 3) + 3 - 8 * sb.decodedSpriteCount - 7 + spriteBytes.length;
-          cm.decodedSpritePalette = new int[paletteSize];
+          NanoFrameTimer.decodedSpritePalette = new int[paletteSize];
           for (spriteIndex = 1; spriteIndex < paletteSize; spriteIndex++) {
-            cm.decodedSpritePalette[spriteIndex] = spriteDataBuffer.readUnsignedMediumBE(108);
-            if (cm.decodedSpritePalette[spriteIndex] == 0) {
-              cm.decodedSpritePalette[spriteIndex] = 1;
+            NanoFrameTimer.decodedSpritePalette[spriteIndex] = spriteDataBuffer.readUnsignedMediumBE(108);
+            if (NanoFrameTimer.decodedSpritePalette[spriteIndex] == 0) {
+              NanoFrameTimer.decodedSpritePalette[spriteIndex] = 1;
             }
           }
           spriteDataBufferAlias.position = 0;

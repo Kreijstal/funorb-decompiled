@@ -84,9 +84,9 @@ final class jf implements WidgetRenderer {
         }
         if (!param0) {
             pendingActionPanelWidth = 78;
-            return (java.awt.Container) ((Object) k.c(122));
+            return (java.awt.Container) ((Object) NodeHashTableIterator.c(122));
         }
-        return (java.awt.Container) ((Object) k.c(122));
+        return (java.awt.Container) ((Object) NodeHashTableIterator.c(122));
     }
 
     final static void drawHalfBlendRgbGradientSpan(int destinationIndex, int redStepQ16, int guard, int redQ16, int blueStepQ16, int greenQ16, int greenStepQ16, int pixelCount, int blueQ16, int[] destinationPixels) {
@@ -121,7 +121,7 @@ final class jf implements WidgetRenderer {
             greenForWriteQ16 = greenQ16;
             blueForWriteQ16 = blueQ16;
             previousPixelHalf = destinationForRead[destinationIndexForWrite] >> 1 & 8355711;
-            destinationForWrite[destinationIndexForWrite] = cd.andInt(255, blueForWriteQ16 >> 17) + ((cd.andInt(33423689, greenForWriteQ16) >> 9) + (cd.andInt(33423360, redForWriteQ16) >> 1)) + previousPixelHalf;
+            destinationForWrite[destinationIndexForWrite] = ProxySocketConnector.andInt(255, blueForWriteQ16 >> 17) + ((ProxySocketConnector.andInt(33423689, greenForWriteQ16) >> 9) + (ProxySocketConnector.andInt(33423360, redForWriteQ16) >> 1)) + previousPixelHalf;
             destinationIndex++;
             blueQ16 = blueQ16 + blueStepQ16;
             redQ16 = redQ16 + redStepQ16;

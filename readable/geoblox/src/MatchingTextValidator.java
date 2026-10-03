@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MatchingTextValidator extends TextInputValidator {
-    private dj referenceInput;
+    private TextInputWidget referenceInput;
     static vd[] field_k;
     static IntrusiveDeque field_l;
     static int field_j;
 
-    MatchingTextValidator(dj validatedInput, dj referenceInput) {
+    MatchingTextValidator(TextInputWidget validatedInput, TextInputWidget referenceInput) {
         super(validatedInput);
         try {
             this.referenceInput = referenceInput;
@@ -188,19 +188,19 @@ final class MatchingTextValidator extends TextInputValidator {
         ButtonWidget.field_C.replaceContent(MouseWheelInput.field_d, -106);
     }
 
-    final lh validationStateForText(int guard, String candidateText) {
-        dg referenceValidation = null;
+    final ValidationState validationStateForText(int guard, String candidateText) {
+        ValidationProvider referenceValidation = null;
         RuntimeException var3_ref = null;
-        lh stackIn_2_0 = null;
-        lh stackIn_9_0 = null;
-        lh stackIn_13_0 = null;
+        ValidationState stackIn_2_0 = null;
+        ValidationState stackIn_9_0 = null;
+        ValidationState stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (guard != -257) {
-            stackIn_2_0 = (lh) null;
+            stackIn_2_0 = (ValidationState) null;
             return stackIn_2_0;
           }
           if (this.referenceInput instanceof nl) {
@@ -232,7 +232,7 @@ final class MatchingTextValidator extends TextInputValidator {
     }
 
     final String validationMessageForText(int guard, String candidateText) {
-        dg referenceValidation = null;
+        ValidationProvider referenceValidation = null;
         RuntimeException var3_ref = null;
         String stackIn_8_0 = null;
         String stackIn_10_0 = null;

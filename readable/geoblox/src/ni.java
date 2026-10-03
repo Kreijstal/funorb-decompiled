@@ -52,11 +52,11 @@ final class ni extends WidgetContainer implements ButtonActivationListener {
           logoInputAlias = logoInput;
           meshCount = logoInputAlias.readUnsignedByte((byte) 34);
           logoInputAlias.beginBitAccess(methodGuard + 8);
-          l.meshMaterials = jc.readMeshMaterials(logoInputAlias, true);
+          DirectByteStorage.meshMaterials = jc.readMeshMaterials(logoInputAlias, true);
           ArchiveIndex.logoMeshes = new TriangleMesh[meshCount];
           pi.logoMeshCenters = new int[meshCount][];
           for (meshIndexOrInitialCursor = 0; meshIndexOrInitialCursor < meshCount; meshIndexOrInitialCursor++) {
-            ArchiveIndex.logoMeshes[meshIndexOrInitialCursor] = uh.a(logoInput, (byte) 113);
+            ArchiveIndex.logoMeshes[meshIndexOrInitialCursor] = PasswordWidgetRenderer.a(logoInput, (byte) 113);
           }
           logoInputAlias.endBitAccess(-16989);
           centerMeshIndex = 0;
@@ -150,10 +150,10 @@ final class ni extends WidgetContainer implements ButtonActivationListener {
           if (methodGuard != 484842465) {
             ni.drawTransientEntities(15);
           }
-          transientEntityToDraw = (GameplayEntity) ((Object) bh.transientEntities.firstForIteration(0));
+          transientEntityToDraw = (GameplayEntity) ((Object) DelegatingCanvas.transientEntities.firstForIteration(0));
           while (transientEntityToDraw != null) {
             transientEntityToDraw.drawRotatedEntityOnCurrentRaster(1915952803);
-            transientEntityToDraw = (GameplayEntity) ((Object) bh.transientEntities.nextForIteration(1));
+            transientEntityToDraw = (GameplayEntity) ((Object) DelegatingCanvas.transientEntities.nextForIteration(1));
           }
           return;
         } catch (java.lang.RuntimeException transientDrawFailure) {
@@ -186,7 +186,7 @@ final class ni extends WidgetContainer implements ButtonActivationListener {
             }
             var7 = this.field_H[var6_int];
             if (var7 != -1) {
-              pc.a(this.field_H[var6_int], false);
+              MidiNote.a(this.field_H[var6_int], false);
             } else {
               this.field_J.dismissDialog((byte) -104);
             }
@@ -241,8 +241,8 @@ final class ni extends WidgetContainer implements ButtonActivationListener {
           if (metrics == null) {
             return null;
           }
-          font = new PaletteBitmapFont(metrics, GameplaySession.decodedSpriteXOffsets, md.decodedSpriteYOffsets, DualLinkNode.decodedSpriteWidths, hl.decodedSpriteHeights, cm.decodedSpritePalette, mj.decodedSpriteIndices);
-          kj.clearDecodedSpriteWorkingArrays(true);
+          font = new PaletteBitmapFont(metrics, GameplaySession.decodedSpriteXOffsets, md.decodedSpriteYOffsets, DualLinkNode.decodedSpriteWidths, hl.decodedSpriteHeights, NanoFrameTimer.decodedSpritePalette, mj.decodedSpriteIndices);
+          MidiPcmStream.clearDecodedSpriteWorkingArrays(true);
           if (methodGuard >= -107) {
             createToUseText = (String) null;
           }

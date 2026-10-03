@@ -162,14 +162,14 @@ final class NetworkArchiveRequest extends ArchiveRequest {
                         spanWidth = -1 + (-spanStartOrBottomXQ16 + TriangleRasterState.clipWidth);
                       }
                       if (0 <= spanStartOrBottomXQ16) {
-                        ib.drawHalfBlendSolidSpan(47, destinationPixels, edgeSwapOrRowBaseOrLowerRowsOrGuardRemainder + spanStartOrBottomXQ16, halfRgb, spanWidth);
+                        DebouncedValidationProvider.drawHalfBlendSolidSpan(47, destinationPixels, edgeSwapOrRowBaseOrLowerRowsOrGuardRemainder + spanStartOrBottomXQ16, halfRgb, spanWidth);
                       } else {
-                        ib.drawHalfBlendSolidSpan(57, destinationPixels, edgeSwapOrRowBaseOrLowerRowsOrGuardRemainder, halfRgb, spanStartOrBottomXQ16 + spanWidth);
+                        DebouncedValidationProvider.drawHalfBlendSolidSpan(57, destinationPixels, edgeSwapOrRowBaseOrLowerRowsOrGuardRemainder, halfRgb, spanStartOrBottomXQ16 + spanWidth);
                       }
                     } else {
                       if ((spanStartOrBottomXQ16 >= 0) &&
                           (TriangleRasterState.clipWidth > spanStartOrBottomXQ16)) {
-                        ib.drawHalfBlendSolidSpan(-61, destinationPixels, spanStartOrBottomXQ16 + edgeSwapOrRowBaseOrLowerRowsOrGuardRemainder, halfRgb, spanWidth);
+                        DebouncedValidationProvider.drawHalfBlendSolidSpan(-61, destinationPixels, spanStartOrBottomXQ16 + edgeSwapOrRowBaseOrLowerRowsOrGuardRemainder, halfRgb, spanWidth);
                       }
                     }
                   }
@@ -212,16 +212,16 @@ final class NetworkArchiveRequest extends ArchiveRequest {
                 if (spanWidth == 0) {
                   if ((spanStartOrBottomXQ16 >= 0) &&
                       (TriangleRasterState.clipWidth > spanStartOrBottomXQ16)) {
-                    ib.drawHalfBlendSolidSpan(-67, destinationPixels, spanStartOrBottomXQ16 + edgeSegmentRowsThenRowBase, halfRgb, spanWidth);
+                    DebouncedValidationProvider.drawHalfBlendSolidSpan(-67, destinationPixels, spanStartOrBottomXQ16 + edgeSegmentRowsThenRowBase, halfRgb, spanWidth);
                   }
                 } else {
                   if (TriangleRasterState.clipWidth <= spanWidth + spanStartOrBottomXQ16) {
                     spanWidth = -spanStartOrBottomXQ16 + TriangleRasterState.clipWidth - 1;
                   }
                   if (0 > spanStartOrBottomXQ16) {
-                    ib.drawHalfBlendSolidSpan(127, destinationPixels, edgeSegmentRowsThenRowBase, halfRgb, spanStartOrBottomXQ16 + spanWidth);
+                    DebouncedValidationProvider.drawHalfBlendSolidSpan(127, destinationPixels, edgeSegmentRowsThenRowBase, halfRgb, spanStartOrBottomXQ16 + spanWidth);
                   } else {
-                    ib.drawHalfBlendSolidSpan(115, destinationPixels, spanStartOrBottomXQ16 + edgeSegmentRowsThenRowBase, halfRgb, spanWidth);
+                    DebouncedValidationProvider.drawHalfBlendSolidSpan(115, destinationPixels, spanStartOrBottomXQ16 + edgeSegmentRowsThenRowBase, halfRgb, spanWidth);
                   }
                 }
               }
@@ -264,7 +264,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
     }
 
     final static void h(int param0) {
-        pc.a(17, false);
+        MidiNote.a(17, false);
         int var1 = -24 / ((param0 + 4) / 34);
     }
 

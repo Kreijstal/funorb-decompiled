@@ -148,14 +148,14 @@ final class PacketBuffer extends ByteArrayBuffer {
         while (bitsAvailableInByte < remainingBitCount) {
             consumedByteIndex = byteIndex;
             byteIndex++;
-            readValue = readValue + ((this.bytes[consumedByteIndex] & kj.lowBitMasks[bitsAvailableInByte]) << -bitsAvailableInByte + remainingBitCount);
+            readValue = readValue + ((this.bytes[consumedByteIndex] & MidiPcmStream.lowBitMasks[bitsAvailableInByte]) << -bitsAvailableInByte + remainingBitCount);
             remainingBitCount = remainingBitCount - bitsAvailableInByte;
             bitsAvailableInByte = 8;
         }
         if (remainingBitCount == bitsAvailableInByte) {
-            readValue = readValue + (this.bytes[byteIndex] & kj.lowBitMasks[bitsAvailableInByte]);
+            readValue = readValue + (this.bytes[byteIndex] & MidiPcmStream.lowBitMasks[bitsAvailableInByte]);
         } else {
-            readValue = readValue + (this.bytes[byteIndex] >> bitsAvailableInByte - remainingBitCount & kj.lowBitMasks[remainingBitCount]);
+            readValue = readValue + (this.bytes[byteIndex] >> bitsAvailableInByte - remainingBitCount & MidiPcmStream.lowBitMasks[remainingBitCount]);
         }
         return readValue;
     }

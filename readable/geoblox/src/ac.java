@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ac extends ff {
+class ac extends TextWidgetRenderer {
     static gk field_v;
     static int field_s;
     static String[] mustLoginAlternateTexts;
-    static ff field_t;
+    static TextWidgetRenderer field_t;
     static int[] secondVertexTransformedY;
     static int field_u;
 
@@ -23,7 +23,7 @@ class ac extends ff {
                 ik.a(param0 + param4.widgetX, param4.widgetHeight, param4.widgetY + param2, param4.widgetWidth, -1540604944);
             }
             if (param1 > -5) {
-                field_t = (ff) null;
+                field_t = (TextWidgetRenderer) null;
             }
             super.a(param0, -11, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
@@ -149,8 +149,8 @@ class ac extends ff {
                   (param1))) &&
                 ((PrefixCodeDecoder.pointerXSnapshot >= var3_int) &&
                   (32 + var3_int >= PrefixCodeDecoder.pointerXSnapshot) &&
-                  (var4 <= ue.pointerYSnapshot) &&
-                  (32 + var4 >= ue.pointerYSnapshot))) {
+                  (var4 <= PcmResampler.pointerYSnapshot) &&
+                  (32 + var4 >= PcmResampler.pointerYSnapshot))) {
               SoftwareRasterizer.fillRoundedRectangle(var3_int, var4, 32, 32, 2, 16689938);
               if (var7 < 0) {
                 var7 = var10;
@@ -195,8 +195,8 @@ class ac extends ff {
           }
           var10 = stackIn_59_0 + stackIn_60_1;
           if (var7 != -1) {
-            fi.smallFont.drawCenteredText(pg.achievementTitles[var7], 315, var10, 0, -1);
-            var11 = -fi.smallFont.maxDescent + fi.smallFont.maxAscent;
+            IntrusiveNodeHashTable.smallFont.drawCenteredText(pg.achievementTitles[var7], 315, var10, 0, -1);
+            var11 = -IntrusiveNodeHashTable.smallFont.maxDescent + IntrusiveNodeHashTable.smallFont.maxAscent;
             var12 = 280;
             if (0 != (1 << var7 & var5)) {
               sl.achievementSprites[var7].draw(160, var12);
@@ -205,19 +205,19 @@ class ac extends ff {
             } else {
               IntKeyLookup.unachievedSprite.draw(160, var12);
               var12 += 30;
-              FadingDialog.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
-              FadingDialog.uiPaletteFont.drawText(ib.field_d, 318, var12, 0, -1);
-              FadingDialog.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
+              FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.field_p] = 15488514;
+              FadingDialog.uiPaletteFont.drawText(DebouncedValidationProvider.field_d, 318, var12, 0, -1);
+              FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.field_p] = 16689938;
             }
-            var12 = var12 + (fi.smallFont.drawParagraph(ri.field_b[var7], 318, var12, 190, 200, 0, -1, 0, 0, 16) * var11 + var11);
+            var12 = var12 + (IntrusiveNodeHashTable.smallFont.drawParagraph(ri.field_b[var7], 318, var12, 190, 200, 0, -1, 0, 0, 16) * var11 + var11);
             var12 += 10;
-            fi.smallFont.drawText(OpacityWidget.a(sl.orbPointsText, new String[]{Integer.toString(th.field_h[var7])}, (byte) -50), 318, 360, 0, -1);
+            IntrusiveNodeHashTable.smallFont.drawText(OpacityWidget.a(sl.orbPointsText, new String[]{Integer.toString(th.field_h[var7])}, (byte) -50), 318, 360, 0, -1);
             for (var13 = 0; var13 < SocketArchiveNetworkClient.field_s[var7]; var13++) {
-              uk.orbCoinSprite.drawQuarterSize(318 + 10 * var13, 370);
+              UsernameAvailabilityValidator.orbCoinSprite.drawQuarterSize(318 + 10 * var13, 370);
             }
             var12 = var12 + var11;
           } else {
-            fi.smallFont.drawCenteredText(w.mouseOverIconText, 315, var10, 0, -1);
+            IntrusiveNodeHashTable.smallFont.drawCenteredText(w.mouseOverIconText, 315, var10, 0, -1);
             if (fh.c(-94)) {
               FadingDialog.uiPaletteFont.drawParagraph(ni.createToUseText, 125, 350, 395, 100, 0, -1, 1, 0, 26);
             }

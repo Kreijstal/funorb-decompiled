@@ -6,7 +6,7 @@ final class ik {
     static String waitingForFontsText;
 
     final static void a(re param0, int param1, byte param2) {
-        PacketBuffer var3 = fj.field_q;
+        PacketBuffer var3 = CacheReference.field_q;
         var3.writeCipherByte(param1, (byte) -77);
         var3.writeByte((byte) 123, param0.field_k);
         if (param2 < 80) {
@@ -159,7 +159,7 @@ final class ik {
             }
             if (!((variantPropagationThenNeighborIndex == 0) &&
                   (propagateCategory == 0))) {
-              bh.propagateContactConversion(propagateCategory != 0, secondEntity, 1, firstEntity, variantPropagationThenNeighborIndex != 0);
+              DelegatingCanvas.propagateContactConversion(propagateCategory != 0, secondEntity, 1, firstEntity, variantPropagationThenNeighborIndex != 0);
             }
             if ((secondEntity.entitySpriteKindId == 1) &&
                 (firstEntity.entitySpriteKindId == 1) &&

@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
-    static lh field_w;
+    static ValidationState field_w;
     private BufferedSocket socket;
     static int field_t;
     static float field_x;
@@ -402,7 +402,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
 
     final void closeSocket(int methodGuard) {
         if (methodGuard > -50) {
-            field_w = (lh) null;
+            field_w = (ValidationState) null;
         }
         if (!(this.socket == null)) {
             this.socket.close(-123);
@@ -507,7 +507,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
     }
 
     static {
-        field_w = new lh();
+        field_w = new ValidationState();
         loginUsernameTooltipText = "The account name you use to access RuneScape and other Jagex.com games";
         field_s = new int[]{1, 2, 5, 3, 3, 5, 5, 5, 1, 1, 1, 2, 2, 2, 3, 10, 3};
     }

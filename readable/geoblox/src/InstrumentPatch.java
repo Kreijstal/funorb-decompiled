@@ -15,7 +15,7 @@ final class InstrumentPatch extends IntrusiveNode {
     static he field_n;
     int globalVolume;
 
-    final boolean loadSelectedSamples(int[] sampleBudget, byte[] noteSelectionMask, int methodGuard, ci sampleCache) {
+    final boolean loadSelectedSamples(int[] sampleBudget, byte[] noteSelectionMask, int methodGuard, SoundSampleCache sampleCache) {
         int keyIndex = 0;
         int allLoadedResult = 0;
         RuntimeException failureContextCause = null;
@@ -402,7 +402,7 @@ final class InstrumentPatch extends IntrusiveNode {
               }
               encodedSampleId = patchInput.readVariableIntBE((byte) -116);
             }
-            this.pitchOffsetsAndLoopFlag[keyIndexOrKeyGroup] = (short)(this.pitchOffsetsAndLoopFlag[keyIndexOrKeyGroup] + cd.andInt(-1 + encodedSampleId << 14, 32768));
+            this.pitchOffsetsAndLoopFlag[keyIndexOrKeyGroup] = (short)(this.pitchOffsetsAndLoopFlag[keyIndexOrKeyGroup] + ProxySocketConnector.andInt(-1 + encodedSampleId << 14, 32768));
             this.encodedSampleIds[keyIndexOrKeyGroup] = encodedSampleId;
             remainingRunLength--;
           }

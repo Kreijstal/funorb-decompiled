@@ -39,7 +39,7 @@ final class DraggableWidget extends SingleChildWidget {
                 (!((ButtonWidget) ((Object) this.child)).enabled))) &&
               (this.pressedPointerButton == 1)) {
             dragTargetXOrLayoutDelta = PrefixCodeDecoder.pointerXSnapshot - this.grabOffsetX - parentX;
-            dragTargetY = -this.grabOffsetY + (ue.pointerYSnapshot - parentY);
+            dragTargetY = -this.grabOffsetY + (PcmResampler.pointerYSnapshot - parentY);
             if (!((this.widgetX == dragTargetXOrLayoutDelta) &&
                 (dragTargetY == this.widgetY))) {
               this.widgetY = dragTargetY;
@@ -185,7 +185,7 @@ final class DraggableWidget extends SingleChildWidget {
           }
           this.grabOffsetY = -parentY + pointerY - this.widgetY;
           this.grabOffsetX = -parentX + (pointerX - this.widgetX);
-          lh.activeDragWidget = (DraggableWidget) (this);
+          ValidationState.activeDragWidget = (DraggableWidget) (this);
           return true;
         } catch (java.lang.RuntimeException caughtDragPressFailure) {
           caughtDragPressException = caughtDragPressFailure;
@@ -205,7 +205,7 @@ final class DraggableWidget extends SingleChildWidget {
         if (param0 == 24) {
             fh.b(-6011);
             ii.field_a = true;
-            cf.field_i = true;
+            AgeValidator.field_i = true;
             kd.field_e.hideAllDialogs(param0 + 10912);
             fa.showMessageDialog(ah.connectionLostReconnectingText, 480, false);
             return;
@@ -213,7 +213,7 @@ final class DraggableWidget extends SingleChildWidget {
         DraggableWidget.g((byte) 86);
         fh.b(-6011);
         ii.field_a = true;
-        cf.field_i = true;
+        AgeValidator.field_i = true;
         kd.field_e.hideAllDialogs(param0 + 10912);
         fa.showMessageDialog(ah.connectionLostReconnectingText, 480, false);
     }

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class CachedArchiveSource extends ArchiveSource {
-    private fi groupRequests;
+    private IntrusiveNodeHashTable groupRequests;
     static boolean field_s;
     private int expectedIndexRevision;
     static int[] projectedMeshVertexDepth;
@@ -593,7 +593,7 @@ final class CachedArchiveSource extends ArchiveSource {
         String expectedDigestDescription = null;
         RuntimeException caughtConstructionFailure = null;
         RuntimeException constructionFailureForContext = null;
-        this.groupRequests = new fi(16);
+        this.groupRequests = new IntrusiveNodeHashTable(16);
         this.backgroundGroupIndex = 0;
         this.requestedGroups = new IntrusiveDeque();
         this.nextRequestSweepMillis = 0L;

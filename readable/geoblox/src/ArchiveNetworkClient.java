@@ -35,14 +35,14 @@ abstract class ArchiveNetworkClient {
           if (param0 > -99) {
             return;
           }
-          var1 = fj.field_q;
-          while (cf.c((byte) -114)) {
+          var1 = CacheReference.field_q;
+          while (AgeValidator.c((byte) -114)) {
             var1.writeCipherByte(8, (byte) -71);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             pf.a(46, var1);
-            fj.field_q.backpatchLengthByte(11700, var1.position - var2);
+            CacheReference.field_q.backpatchLengthByte(11700, var1.position - var2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -197,9 +197,9 @@ abstract class ArchiveNetworkClient {
         int unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
         IndexedSprite[] sprites = new IndexedSprite[sb.decodedSpriteCount];
         for (spriteIndex = firstSpriteIndex; sb.decodedSpriteCount > spriteIndex; spriteIndex++) {
-            sprites[spriteIndex] = new IndexedSprite(pg.decodedSpriteCanvasWidth, FadingDialog.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[spriteIndex], md.decodedSpriteYOffsets[spriteIndex], DualLinkNode.decodedSpriteWidths[spriteIndex], hl.decodedSpriteHeights[spriteIndex], mj.decodedSpriteIndices[spriteIndex], cm.decodedSpritePalette);
+            sprites[spriteIndex] = new IndexedSprite(pg.decodedSpriteCanvasWidth, FadingDialog.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[spriteIndex], md.decodedSpriteYOffsets[spriteIndex], DualLinkNode.decodedSpriteWidths[spriteIndex], hl.decodedSpriteHeights[spriteIndex], mj.decodedSpriteIndices[spriteIndex], NanoFrameTimer.decodedSpritePalette);
         }
-        kj.clearDecodedSpriteWorkingArrays(true);
+        MidiPcmStream.clearDecodedSpriteWorkingArrays(true);
         return sprites;
     }
 

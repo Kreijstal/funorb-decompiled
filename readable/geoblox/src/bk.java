@@ -19,7 +19,7 @@ final class bk {
         boardOwnershipRaster = null;
     }
 
-    final static void a(ResourceArchive param0, int param1, int param2, ob param3) {
+    final static void a(ResourceArchive param0, int param1, int param2, PcmStreamMixer param3) {
         try {
             DiskCacheWorker.logoStartDelayTicks = param1 * sb.a(true) / 1000;
             ab.a(99, param0);
@@ -29,7 +29,7 @@ final class bk {
             }
             ul.a(-21541, param0);
             jk.b((byte) -91);
-            ad.a((byte) -32);
+            MidiNoteMixer.a((byte) -32);
             DequeCursor.logoAnimationTick = -DiskCacheWorker.logoStartDelayTicks + 0;
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "bk.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -51,31 +51,31 @@ final class bk {
         var7 = Geoblox.clientControlFlowFlag;
         var8 = eh.field_d;
         var3 = var8.readUnsignedByte((byte) 34);
-        gj.field_u = var3 & 127;
+        StrongCacheReference.field_u = var3 & 127;
         stackIn_3_0 = !((param1 & var3) == 0);
         vd.field_l = stackIn_3_0;
         ArchiveIndex.field_s = var8.readUnsignedByte((byte) 34);
         DiskCacheWorker.field_c = var8.readLongBE(2901);
-        if (gj.field_u != 2) {
-          uk.field_o = 0;
+        if (StrongCacheReference.field_u != 2) {
+          UsernameAvailabilityValidator.field_o = 0;
           tj.field_b = 0;
         } else {
           tj.field_b = var8.readUnsignedShortBE(true);
-          uk.field_o = var8.readUnsignedMediumBE(105);
+          UsernameAvailabilityValidator.field_o = var8.readUnsignedMediumBE(105);
         }
         stackIn_9_0 = (var8.readUnsignedByte((byte) 34) != 1) ? 0 : 1;
         var4 = stackIn_9_0;
-        cj.field_a = var8.readNullTerminatedText((byte) 117);
+        FrameTimer.field_a = var8.readNullTerminatedText((byte) 117);
         if (var4 == 0) {
-          jc.field_b = cj.field_a;
+          jc.field_b = FrameTimer.field_a;
         } else {
           jc.field_b = var8.readNullTerminatedText((byte) 124);
         }
-        if (gj.field_u == 1) {
+        if (StrongCacheReference.field_u == 1) {
           var8.readUnsignedShortBE(true);
           var8.readNullTerminatedText((byte) 112);
         } else {
-          if (gj.field_u == 4) {
+          if (StrongCacheReference.field_u == 4) {
             var8.readUnsignedShortBE(true);
             var8.readNullTerminatedText((byte) 112);
           }
@@ -98,7 +98,7 @@ final class bk {
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
-          gi.a((Throwable) ((Object) var6), "CC1", (byte) 125);
+          IterableNodeHashTable.a((Throwable) ((Object) var6), "CC1", (byte) 125);
           vj.field_c = null;
           re.field_f = null;
           return new vd(param0);

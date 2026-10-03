@@ -28,7 +28,7 @@ final class qb extends ButtonWidget {
         var5.field_l = param1;
         var5.field_i = param0;
         ResourceArchive.field_d.addLast(-71, var5);
-        ib.a(param4, param2 + 5, var5);
+        DebouncedValidationProvider.a(param4, param2 + 5, var5);
         return var5;
     }
 
@@ -92,7 +92,7 @@ final class qb extends ButtonWidget {
         }
     }
 
-    final static void a(int param0, lk param1, String param2, int param3, BitmapFont param4) {
+    final static void a(int param0, TextLayoutLine param1, String param2, int param3, BitmapFont param4) {
         int var7 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -113,7 +113,7 @@ final class qb extends ButtonWidget {
           var5_int = 0;
           if (param3 != 60) {
             var10 = (BitmapFont) null;
-            qb.a(-58, (lk) null, (String) null, -15, (BitmapFont) null);
+            qb.a(-58, (TextLayoutLine) null, (String) null, -15, (BitmapFont) null);
           }
           var6 = -1;
           for (var7 = 1; var7 < param2.length(); var7++) {

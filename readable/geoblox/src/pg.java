@@ -10,10 +10,10 @@ final class pg {
 
     final static void resetGameplayDifficulty(int methodGuard) {
         og.entityMotionSpeed = 0.4000000059604645f;
-        sa.specialSpriteKindProbability = 0.0;
+        ContextualRuntimeException.specialSpriteKindProbability = 0.0;
         ul.releasedInCurrentTheme = 0;
-        ag.availableSpriteVariantCount = 3;
-        fj.field_m = 0;
+        EmailValidator.availableSpriteVariantCount = 3;
+        CacheReference.field_m = 0;
         ArchiveNetworkClient.difficultyStep = 0;
         fa.releasesPerTheme = 40;
         MessageDialog.availableEntityCategoryCount = 4;
@@ -24,7 +24,7 @@ final class pg {
             return;
         }
         di.releasedInDifficultyStep = 0;
-        sa.recomputeSpawnReleaseInterval(true);
+        ContextualRuntimeException.recomputeSpawnReleaseInterval(true);
         UiWidget.field_t = 0;
         DequeCursor.field_c = 0;
     }
@@ -113,10 +113,10 @@ final class pg {
                       var18 = 0;
                       var13 = var18;
                       while (var18 < var9) {
-                        var12[var18] = ag.a(var10[var18], false);
+                        var12[var18] = EmailValidator.a(var10[var18], false);
                         var18++;
                       }
-                      var19.field_i[var5] = param1.requestDeclaredMethod(var8, -126, var12, ag.a(var21, false));
+                      var19.field_i[var5] = param1.requestDeclaredMethod(var8, -126, var12, EmailValidator.a(var21, false));
                       var19.field_o[var5] = var22;
                     } else {
                       var16 = param3.readNullTerminatedText((byte) 117);
@@ -129,7 +129,7 @@ final class pg {
                       }
                       var19.field_k[var5] = var6_int;
                       var19.field_g[var5] = var9;
-                      var19.field_n[var5] = param1.requestDeclaredField(ag.a(var16, false), 0, var17);
+                      var19.field_n[var5] = param1.requestDeclaredField(EmailValidator.a(var16, false), 0, var17);
                     }
                     decompiledRegionSelector0 = 0;
                   }

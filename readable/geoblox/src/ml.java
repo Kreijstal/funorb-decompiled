@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ml extends ff {
+final class ml extends TextWidgetRenderer {
     static String createSelectAlternativeText;
     static PlatformTaskDispatcher field_s;
     static pf field_t;

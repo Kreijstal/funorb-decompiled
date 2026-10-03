@@ -36,7 +36,7 @@ final class kb {
               return;
             }
             var7 = param2;
-            ci.a(var7, 416577356);
+            SoundSampleCache.a(var7, 416577356);
             ScorePopup.field_g = ac.a(param1 - 6540, param2);
             return;
           }
@@ -48,7 +48,7 @@ final class kb {
           }
           ScorePopup.field_g = hh.a(stackIn_11_0, stackIn_12_1);
           var6 = (String[]) null;
-          ci.a((String[]) null, 416577356);
+          SoundSampleCache.a((String[]) null, 416577356);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -87,7 +87,7 @@ final class kb {
         if (param1) {
             return;
         }
-        ue.a(param0, true, (byte) -102);
+        PcmResampler.a(param0, true, (byte) -102);
     }
 
     final static void b(int param0) {

@@ -6,7 +6,7 @@ final class mf {
 
     final static void b(boolean param0) {
         if (!UiWidget.gameplaySession.tutorialMode) {
-            fj.field_m = fj.field_m + 1;
+            CacheReference.field_m = CacheReference.field_m + 1;
             if (param0) {
                 mf.a(false);
                 return;

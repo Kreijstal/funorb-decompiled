@@ -43,10 +43,10 @@ final class al {
           } else {
             if (1 == var2) {
               var3 = var9.readIntBE((byte) -101);
-              var4_ref_wc = (wc) ((Object) l.field_g.firstForIteration(0));
+              var4_ref_wc = (wc) ((Object) DirectByteStorage.field_g.firstForIteration(0));
               while (var4_ref_wc != null) {
                 if (var3 != var4_ref_wc.field_h) {
-                  var4_ref_wc = (wc) ((Object) l.field_g.nextForIteration(1));
+                  var4_ref_wc = (wc) ((Object) DirectByteStorage.field_g.nextForIteration(1));
                   continue;
                 }
                 break;
@@ -58,7 +58,7 @@ final class al {
               Bzip2DecoderState.closeSessionSocket((byte) -124);
               return;
             }
-            gi.a((Throwable) null, "A1: " + og.e(55), (byte) 125);
+            IterableNodeHashTable.a((Throwable) null, "A1: " + og.e(55), (byte) 125);
             Bzip2DecoderState.closeSessionSocket((byte) -120);
           }
           return;
@@ -176,13 +176,13 @@ final class al {
             return oc.field_a;
         }
         if (IntrusiveDeque.field_d == si.field_g) {
-            return cg.field_k;
+            return DelayedPcmStream.field_k;
         }
         if (param0 != 0) {
             al.b(66);
         }
         if (!ih.field_c.a(-91)) {
-            return cg.field_k;
+            return DelayedPcmStream.field_k;
         }
         return b.field_a;
     }

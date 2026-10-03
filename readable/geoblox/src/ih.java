@@ -30,7 +30,7 @@ final class ih {
         if (param0 != 0) {
           return true;
         }
-        stackIn_8_0 = (ArchiveNetworkClient.movingEntities.isEmpty(13519)) && (SecondaryDeque.spawnQueue.isEmpty(13519)) && (bh.transientEntities.isEmpty(param0 + 13519)) && (!Bzip2DecoderState.avatarShockContactPending);
+        stackIn_8_0 = (ArchiveNetworkClient.movingEntities.isEmpty(13519)) && (SecondaryDeque.spawnQueue.isEmpty(13519)) && (DelegatingCanvas.transientEntities.isEmpty(param0 + 13519)) && (!Bzip2DecoderState.avatarShockContactPending);
         return stackIn_8_0;
     }
 
@@ -137,7 +137,7 @@ final class ih {
                     }
                     var25 = stackIn_35_0 ^ stackIn_38_1;
                     if (var25 != 0) {
-                      var26_ref = (GameplayEntity) ((Object) ra.availableEntities.removeLast(1));
+                      var26_ref = (GameplayEntity) ((Object) SecondaryNodeDeque.availableEntities.removeLast(1));
                       if (var26_ref != null) {
                         if ((entity.entitySpriteKindId == 2) &&
                             (var25 != 0)) {
@@ -145,7 +145,7 @@ final class ih {
                         } else {
                           var26_ref.initializeEntityMotion(-121, var24.positionX, 8, var24.velocityX, var24.spriteVariantIndex, 0, var24.spriteAngleRadians, var24.positionY, var24.velocityY, var24.entityCategoryKey, 0.0f);
                         }
-                        bh.transientEntities.addLast(-42, var26_ref);
+                        DelegatingCanvas.transientEntities.addLast(-42, var26_ref);
                       }
                     }
                     if (ik.linkTouchingEntities(var24, entity, false)) {

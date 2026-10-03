@@ -19,7 +19,7 @@ final class re extends IntrusiveNode {
     }
 
     final static void writeAchievementStateRequest(int methodGuard, int packetOpcode) {
-        PacketBuffer packet = fj.field_q;
+        PacketBuffer packet = CacheReference.field_q;
         packet.writeCipherByte(packetOpcode, (byte) -66);
         packet.writeByte((byte) 124, 1);
         packet.writeByte((byte) 127, 2);
@@ -42,13 +42,13 @@ final class re extends IntrusiveNode {
             if (!methodGuard) {
               field_f = (String) null;
             }
-            vd.keyboardEventReadIndex = pc.keyboardEventFrameEndIndex;
+            vd.keyboardEventReadIndex = MidiNote.keyboardEventFrameEndIndex;
             nk.keyboardIdleTicks = nk.keyboardIdleTicks + 1;
             if (ii.keyStateWriteIndexOrResetSentinel < 0) {
               resetKeyIndex = 0;
               keyStateChangeOrResetIndex = resetKeyIndex;
               while (resetKeyIndex < 112) {
-                kj.heldInternalKeys[resetKeyIndex] = false;
+                MidiPcmStream.heldInternalKeys[resetKeyIndex] = false;
                 resetKeyIndex++;
               }
               ii.keyStateWriteIndexOrResetSentinel = gk.keyStateReadIndex;
@@ -57,13 +57,13 @@ final class re extends IntrusiveNode {
                 keyStateChangeOrResetIndex = gf.queuedKeyStateChanges[gk.keyStateReadIndex];
                 gk.keyStateReadIndex = 1 + gk.keyStateReadIndex & 127;
                 if (keyStateChangeOrResetIndex < 0) {
-                  kj.heldInternalKeys[~keyStateChangeOrResetIndex] = false;
+                  MidiPcmStream.heldInternalKeys[~keyStateChangeOrResetIndex] = false;
                   continue;
                 }
-                kj.heldInternalKeys[keyStateChangeOrResetIndex] = true;
+                MidiPcmStream.heldInternalKeys[keyStateChangeOrResetIndex] = true;
               }
             }
-            pc.keyboardEventFrameEndIndex = BufferedSocket.keyEventWriteIndex;
+            MidiNote.keyboardEventFrameEndIndex = BufferedSocket.keyEventWriteIndex;
           }
           return;
         } catch (java.lang.RuntimeException keyboardFrameFailure) {

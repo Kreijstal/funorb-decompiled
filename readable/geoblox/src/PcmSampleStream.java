@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class PcmSampleStream extends ia {
+final class PcmSampleStream extends PcmStream {
     private int field_v;
     private int field_l;
     private int field_j;
@@ -204,7 +204,7 @@ final class PcmSampleStream extends ia {
         }
     }
 
-    final ia b() {
+    final PcmStream b() {
         return null;
     }
 
@@ -544,7 +544,7 @@ final class PcmSampleStream extends ia {
         return param4 >> 1;
     }
 
-    final ia c() {
+    final PcmStream c() {
         return null;
     }
 
@@ -1686,7 +1686,7 @@ final class PcmSampleStream extends ia {
     }
 
     private PcmSampleStream(PcmSample param0, int param1, int param2) {
-        this.field_g = (e) ((Object) param0);
+        this.field_g = (AbstractAudioSample) ((Object) param0);
         this.field_q = param0.loopStart;
         this.field_m = param0.loopEnd;
         this.field_r = param0.pingPongLoop;
@@ -1820,7 +1820,7 @@ final class PcmSampleStream extends ia {
     }
 
     private PcmSampleStream(PcmSample param0, int param1, int param2, int param3) {
-        this.field_g = (e) ((Object) param0);
+        this.field_g = (AbstractAudioSample) ((Object) param0);
         this.field_q = param0.loopStart;
         this.field_m = param0.loopEnd;
         this.field_r = param0.pingPongLoop;

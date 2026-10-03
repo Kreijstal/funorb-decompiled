@@ -1,0 +1,369 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+import java.io.*;
+import java.util.*;
+
+final class ProxySocketConnector extends SocketConnector {
+    static Sprite field_l;
+    static int gameplayOriginScreenId;
+    private java.net.ProxySelector field_k;
+    static ck field_i;
+    static ResourceArchive field_m;
+
+    final static void selectThemeRenderAssets(byte methodGuard) {
+        int var2;
+        var2 = Geoblox.clientControlFlowFlag;
+        if (methodGuard <= 75) {
+          field_m = (ResourceArchive) null;
+        }
+        if (GameScreen.selectedThemeId == 4) {
+          ec.selectedThemeForeground = hi.bakingForegroundSprite;
+          mf.selectedThemeBackground = ca.bakingBackgroundSprite;
+        } else {
+          if (GameScreen.selectedThemeId == 1) {
+            mf.selectedThemeBackground = GzipInflater.sunBackgroundSprite;
+            ec.selectedThemeForeground = PacketByteCipher.sunForegroundSprite;
+          } else {
+            if (GameScreen.selectedThemeId == 3) {
+              ec.selectedThemeForeground = sl.germsForegroundSprite;
+              mf.selectedThemeBackground = sg.germsBackgroundSprite;
+            } else {
+              if (GameScreen.selectedThemeId != 0) {
+                if (6 != GameScreen.selectedThemeId) {
+                  if (GameScreen.selectedThemeId != 5) {
+                    if (2 == GameScreen.selectedThemeId) {
+                      mf.selectedThemeBackground = pi.sweetsBackgroundSprite;
+                      ec.selectedThemeForeground = lb.sweetsForegroundSprite;
+                    }
+                  } else {
+                    mf.selectedThemeBackground = th.sportsBackgroundSprite;
+                    ec.selectedThemeForeground = hd.sportsForegroundSprite;
+                  }
+                } else {
+                  ec.selectedThemeForeground = fl.spaceForegroundSprite;
+                  mf.selectedThemeBackground = df.spaceBackgroundSprite;
+                }
+              } else {
+                mf.selectedThemeBackground = CachedArchiveSource.jewelsBackgroundSprite;
+                ec.selectedThemeForeground = MidiPcmStream.jewelsForegroundSprite;
+              }
+            }
+          }
+        }
+    }
+
+    public static void e(int param0) {
+        if (param0 != 1353) {
+            return;
+        }
+        field_m = null;
+        field_l = null;
+        field_i = null;
+    }
+
+    private final java.net.Socket a(java.net.Proxy param0, byte param1) throws IOException {
+        java.net.Socket stackIn_2_0 = null;
+        Object stackIn_12_0 = null;
+        java.net.Socket stackIn_22_0 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        String stackIn_26_2 = null;
+        Throwable decompiledCaughtException = null;
+        java.net.SocketAddress var3 = null;
+        RuntimeException var3_ref = null;
+        java.net.InetSocketAddress var4 = null;
+        Object var5 = null;
+        Class var6 = null;
+        Exception var6_ref = null;
+        java.lang.reflect.Method var7 = null;
+        Object var8 = null;
+        java.lang.reflect.Method var9 = null;
+        java.lang.reflect.Method var10 = null;
+        java.lang.reflect.Method var11 = null;
+        String var12 = null;
+        String var13 = null;
+        Class var14 = null;
+        try {
+          if (param0.type() == java.net.Proxy.Type.DIRECT) {
+            stackIn_2_0 = this.a(1);
+            return stackIn_2_0;
+          }
+          var3 = param0.address();
+          if (param1 != -18) {
+            field_l = (Sprite) null;
+          }
+          if (!((Object) var3 instanceof java.net.InetSocketAddress)) {
+            return null;
+          }
+          var4 = (java.net.InetSocketAddress) ((Object) var3);
+          if (param0.type() != java.net.Proxy.Type.HTTP) {
+            if (param0.type() != java.net.Proxy.Type.SOCKS) {
+              return null;
+            }
+            var5 = new java.net.Socket(param0);
+            ((java.net.Socket) (var5)).connect((java.net.SocketAddress) ((Object) new java.net.InetSocketAddress(this.field_e, this.field_b)));
+            stackIn_12_0 = var5;
+            return (java.net.Socket) (stackIn_12_0);
+          }
+          var5 = null;
+          try {
+            var14 = Class.forName("sun.net.www.protocol.http.AuthenticationInfo");
+            var6 = var14;
+            var7 = var14.getDeclaredMethod("getProxyAuth", new Class[]{String.class, Integer.TYPE});
+            var7.setAccessible(true);
+            var8 = var7.invoke((Object) null, new Object[]{var4.getHostName(), new Integer(var4.getPort())});
+            if (var8 != null) {
+              var9 = var6.getDeclaredMethod("supportsPreemptiveAuthorization", new Class[]{});
+              var9.setAccessible(true);
+              if (((Boolean) (var9.invoke(var8, new Object[]{}))).booleanValue()) {
+                var10 = var6.getDeclaredMethod("getHeaderName", new Class[]{});
+                var10.setAccessible(true);
+                var11 = var14.getDeclaredMethod("getHeaderValue", new Class[]{java.net.URL.class, String.class});
+                var11.setAccessible(true);
+                var12 = (String) (var10.invoke(var8, new Object[]{}));
+                var13 = (String) (var11.invoke(var8, new Object[]{new java.net.URL("https://" + this.field_e + "/"), "https"}));
+                var5 = var12 + ": " + var13;
+              }
+            }
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var6_ref = (Exception) (Object) decompiledCaughtException;
+          }
+          stackIn_22_0 = this.a((byte) -60, (String) (var5), var4.getPort(), var4.getHostName());
+          return stackIn_22_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+          decompiledCaughtException = decompiledCaughtParameter1;
+          var3_ref = (RuntimeException) (Object) decompiledCaughtException;
+          stackIn_25_0 = var3_ref;
+          stackIn_25_1 = new StringBuilder().append("cd.L(");
+          if (param0 == null) {
+            stackIn_26_2 = "null";
+          } else {
+            stackIn_26_2 = "{...}";
+          }
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    final java.net.Socket b(int param0) throws IOException {
+        int stackIn_5_0 = 0;
+        java.net.ProxySelector stackIn_8_0;
+        java.net.URI stackIn_8_1;
+        java.net.URI stackIn_8_2;
+        StringBuilder stackIn_8_3;
+        java.net.URI stackIn_9_1 = null;
+        java.net.URI stackIn_9_2 = null;
+        String stackIn_9_4 = null;
+        java.net.ProxySelector stackIn_11_0;
+        java.net.URI stackIn_11_1;
+        java.net.URI stackIn_11_2;
+        StringBuilder stackIn_11_3;
+        java.net.URI stackIn_12_1;
+        java.net.URI stackIn_12_2;
+        String stackIn_12_4;
+        java.net.Socket stackIn_21_0 = null;
+        Throwable decompiledCaughtException = null;
+        List var3 = null;
+        List var4 = null;
+        int var5 = 0;
+        java.net.URISyntaxException var6 = null;
+        Object[] var6_array = null;
+        Object var7 = null;
+        Object[] var8 = null;
+        int var9 = 0;
+        Object var10 = null;
+        java.net.Proxy var11 = null;
+        java.net.Socket var12 = null;
+        ProxyAuthenticationRequiredException var12_ref = null;
+        IOException var12_ref2 = null;
+        int var13 = 0;
+        var13 = Geoblox.clientControlFlowFlag;
+        if (!Boolean.parseBoolean(System.getProperty("java.net.useSystemProxies"))) {
+          System.setProperty("java.net.useSystemProxies", "true");
+        }
+        stackIn_5_0 = (this.field_b != 443) ? 0 : 1;
+        var5 = stackIn_5_0;
+        try {
+          stackIn_8_0 = this.field_k;
+          stackIn_8_1 = null;
+          stackIn_8_2 = null;
+          stackIn_8_3 = new StringBuilder();
+          if (var5 == 0) {
+            stackIn_9_1 = null;
+            stackIn_9_2 = null;
+            stackIn_9_4 = "http";
+          } else {
+            stackIn_9_1 = null;
+            stackIn_9_2 = null;
+            stackIn_9_4 = "https";
+          }
+          var3 = ((java.net.ProxySelector) (Object) stackIn_8_0).select(new java.net.URI(((StringBuilder) (Object) stackIn_8_3).append(stackIn_9_4).append("://").append(this.field_e).toString()));
+          stackIn_11_0 = this.field_k;
+          stackIn_11_1 = null;
+          stackIn_11_2 = null;
+          stackIn_11_3 = new StringBuilder();
+          if (var5 != 0) {
+            stackIn_12_1 = null;
+            stackIn_12_2 = null;
+            stackIn_12_4 = "http";
+          } else {
+            stackIn_12_1 = null;
+            stackIn_12_2 = null;
+            stackIn_12_4 = "https";
+          }
+          var4 = ((java.net.ProxySelector) (Object) stackIn_11_0).select(new java.net.URI(((StringBuilder) (Object) stackIn_11_3).append(stackIn_12_4).append("://").append(this.field_e).toString()));
+        } catch (java.net.URISyntaxException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6 = (java.net.URISyntaxException) (Object) decompiledCaughtException;
+          return this.a(1);
+        }
+        var3.addAll((Collection) ((Object) var4));
+        var6_array = var3.toArray();
+        var7 = null;
+        var8 = var6_array;
+        var9 = param0;
+        while (var9 < var8.length) {
+          var10 = var8[var9];
+          var11 = (java.net.Proxy) (var10);
+          try {
+              if (false) throw (ProxyAuthenticationRequiredException) null;
+            var12 = this.a(var11, (byte) -18);
+            if (var12 != null) {
+              stackIn_21_0 = var12;
+              return stackIn_21_0;
+            }
+            var9++;
+          } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var12_ref = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;
+            var7 = var12_ref;
+            var9++;
+          } catch (java.io.IOException decompiledCaughtParameter2) {
+            decompiledCaughtException = decompiledCaughtParameter2;
+            var12_ref2 = (IOException) (Object) decompiledCaughtException;
+            var9++;
+          }
+        }
+        if (var7 != null) {
+          throw ProxySocketConnector.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
+        }
+        return this.a(1);
+    }
+
+    private final java.net.Socket a(byte param0, String param1, int param2, String param3) throws IOException {
+        java.net.Socket stackIn_10_0 = null;
+        Object stackIn_24_0 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        String stackIn_28_2 = null;
+        StringBuilder stackIn_30_1 = null;
+        String stackIn_31_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var5 = null;
+        OutputStream var6 = null;
+        BufferedReader var7 = null;
+        String var8 = null;
+        int var9 = 0;
+        int var10 = 0;
+        String var11 = null;
+        int var12 = 0;
+        int var13 = 0;
+        java.net.Socket var14 = null;
+        String var15 = null;
+        var13 = Geoblox.clientControlFlowFlag;
+        try {
+          var14 = new java.net.Socket(param3, param2);
+          var14.setSoTimeout(10000);
+          var6 = var14.getOutputStream();
+          if (param1 == null) {
+            var6.write(("CONNECT " + this.field_e + ":" + this.field_b + " HTTP/1.0\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
+          } else {
+            var6.write(("CONNECT " + this.field_e + ":" + this.field_b + " HTTP/1.0\n" + param1 + "\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
+          }
+          L1: {
+            var6.flush();
+            var7 = new BufferedReader((Reader) ((Object) new InputStreamReader(var14.getInputStream())));
+            var9 = -22 % ((3 - param0) / 53);
+            var8 = var7.readLine();
+            if (var8 != null) {
+              if ((!var8.startsWith("HTTP/1.0 200")) &&
+                  (!var8.startsWith("HTTP/1.1 200"))) {
+                if ((!var8.startsWith("HTTP/1.0 407")) &&
+                    (!var8.startsWith("HTTP/1.1 407"))) {
+                  break L1;
+                }
+                var10 = 0;
+                var11 = "proxy-authenticate: ";
+                var8 = var11;
+                var8 = var11;
+                var8 = var7.readLine();
+                while (var8 != null) {
+                  if (var10 < 50) {
+                    if (!var8.toLowerCase().startsWith(var11)) {
+                      var8 = var7.readLine();
+                      var10++;
+                      continue;
+                    }
+                    var15 = var8.substring(var11.length()).trim();
+                    var8 = var15;
+                    var8 = var15;
+                    var8 = var15;
+                    var12 = var15.indexOf(' ');
+                    if (var12 != -1) {
+                      var8 = var15.substring(0, var12);
+                    }
+                    throw new ProxyAuthenticationRequiredException(var8);
+                  }
+                  break;
+                }
+                throw new ProxyAuthenticationRequiredException("");
+              }
+              stackIn_10_0 = var14;
+              return stackIn_10_0;
+            }
+          }
+          var6.close();
+          var7.close();
+          var14.close();
+          stackIn_24_0 = null;
+          return (java.net.Socket) (stackIn_24_0);
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_27_0 = var5;
+          stackIn_27_1 = new StringBuilder().append("cd.J(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_28_2 = "null";
+          } else {
+            stackIn_28_2 = "{...}";
+          }
+          stackIn_30_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_31_2 = "null";
+          } else {
+            stackIn_31_2 = "{...}";
+          }
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+        }
+    }
+
+    static int andInt(int left, int right) {
+        return left & right;
+    }
+
+    ProxySocketConnector() {
+        this.field_k = java.net.ProxySelector.getDefault();
+    }
+
+    static {
+        gameplayOriginScreenId = -1;
+        field_l = new Sprite(270, 70);
+        field_i = new ck(8, 0, 4, 1);
+    }
+
+    @SuppressWarnings("unchecked")
+    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+        throw (T) throwable;
+    }
+}

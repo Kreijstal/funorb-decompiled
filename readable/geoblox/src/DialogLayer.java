@@ -58,7 +58,7 @@ final class DialogLayer extends SingleChildWidget {
     }
 
     final static void h(int param0) {
-        fj.field_p.b();
+        CacheReference.field_p.b();
         oh.field_a.b();
         if (param0 <= 9) {
             rotatedEntityScreenX = -2;

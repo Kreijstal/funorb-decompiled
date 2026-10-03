@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hi extends WidgetContainer implements ta, ButtonActivationListener {
-    private hc field_E;
+    private ValidatedTextInputWidget field_E;
     static volatile int livePointerPressY;
     vh field_D;
     private ButtonWidget field_H;
@@ -24,13 +24,13 @@ final class hi extends WidgetContainer implements ta, ButtonActivationListener {
 
     public hi() {
         super(0, 0, 496, 0, (WidgetRenderer) null);
-        this.field_E = new hc("", (WidgetListener) null, 12);
-        ff var1 = new ff(hh.field_d, 0, 0, 0, 0, 16777215, -1, 3, 0, DialogLayer.sharedUiFont.maxAscent, -1, 2147483647, true);
+        this.field_E = new ValidatedTextInputWidget("", (WidgetListener) null, 12);
+        TextWidgetRenderer var1 = new TextWidgetRenderer(hh.field_d, 0, 0, 0, 0, 16777215, -1, 3, 0, DialogLayer.sharedUiFont.maxAscent, -1, 2147483647, true);
         UiWidget var2 = new UiWidget(sb.loginNoDisplayNameText, var1, (WidgetListener) null);
         this.field_H = new ButtonWidget(ec.okText, (WidgetListener) null);
         this.field_J = new ButtonWidget(ck.cancelText, (WidgetListener) null);
         this.field_E.hoverText = ud.createDisplayNameTooltipText;
-        this.field_E.a((byte) -58, new uk(this.field_E));
+        this.field_E.a((byte) -58, new UsernameAvailabilityValidator(this.field_E));
         this.field_H.enabled = false;
         this.field_H.renderer = (WidgetRenderer) ((Object) new ml());
         this.field_J.renderer = (WidgetRenderer) ((Object) new fh());
@@ -162,9 +162,9 @@ final class hi extends WidgetContainer implements ta, ButtonActivationListener {
           if ((null != meshForPriorityDecision.facePriorities) &&
               (meshForPriorityDecision.facePriorityCount > 1)) {
             facePriorities = meshForPriorityDecision.facePriorities;
-            va.groupQueuedMeshFacesByPriority(0, facePriorities, 0, uh.meshFacePriorityWriteOffsets, (byte) -85);
+            va.groupQueuedMeshFacesByPriority(0, facePriorities, 0, PasswordWidgetRenderer.meshFacePriorityWriteOffsets, (byte) -85);
           } else {
-            vc.compactDepthBucketFaceOrder(2971);
+            CachedTextLayout.compactDepthBucketFaceOrder(2971);
           }
           if (guard != 6562) {
             return;
@@ -176,7 +176,7 @@ final class hi extends WidgetContainer implements ta, ButtonActivationListener {
           specularResponses = new int[mesh.normalCount];
           transformedNormalsX = ok.transformedMeshNormalX;
           transformedNormalsY = oa.transformedMeshNormalY;
-          transformedNormalsZ = gi.transformedMeshNormalZ;
+          transformedNormalsZ = IterableNodeHashTable.transformedMeshNormalZ;
           for (normalOrFaceQueueIndex = 0; mesh.normalCount > normalOrFaceQueueIndex; normalOrFaceQueueIndex++) {
             diffuseResponseOrFaceIndex = transformedNormalsY[normalOrFaceQueueIndex] * lightDirectionYQ8 + lightDirectionXQ8 * transformedNormalsX[normalOrFaceQueueIndex] + transformedNormalsZ[normalOrFaceQueueIndex] * lightDirectionZQ8 >> 8;
             if (0 > diffuseResponseOrFaceIndex) {
@@ -204,7 +204,7 @@ final class hi extends WidgetContainer implements ta, ButtonActivationListener {
             diffuseResponses[normalOrFaceQueueIndex] = diffuseResponseOrFaceIndex;
             specularResponses[normalOrFaceQueueIndex] = specularResponseOrVertexA;
           }
-          for (normalOrFaceQueueIndex = 0; normalOrFaceQueueIndex < ch.queuedMeshFaceCount; normalOrFaceQueueIndex++) {
+          for (normalOrFaceQueueIndex = 0; normalOrFaceQueueIndex < GameApplet.queuedMeshFaceCount; normalOrFaceQueueIndex++) {
             diffuseResponseOrFaceIndex = InstrumentNoteMask.meshFaceOrder[normalOrFaceQueueIndex];
             specularResponseOrVertexA = mesh.faceVertexA[diffuseResponseOrFaceIndex];
             faceVertexB = mesh.faceVertexB[diffuseResponseOrFaceIndex];
@@ -227,22 +227,22 @@ final class hi extends WidgetContainer implements ta, ButtonActivationListener {
               faceNormalCIndexOrMissing = -1;
             }
             faceNormalC = faceNormalCIndexOrMissing;
-            if ((l.meshMaterials != null) &&
+            if ((DirectByteStorage.meshMaterials != null) &&
                 (mesh.faceMaterialIndices != null) &&
                 (mesh.faceMaterialIndices.length > diffuseResponseOrFaceIndex) &&
                 (mesh.faceMaterialIndices[diffuseResponseOrFaceIndex] != -1) &&
-                (l.meshMaterials.length > mesh.faceMaterialIndices[diffuseResponseOrFaceIndex])) {
-              faceMaterialOrNull = l.meshMaterials[mesh.faceMaterialIndices[diffuseResponseOrFaceIndex]];
+                (DirectByteStorage.meshMaterials.length > mesh.faceMaterialIndices[diffuseResponseOrFaceIndex])) {
+              faceMaterialOrNull = DirectByteStorage.meshMaterials[mesh.faceMaterialIndices[diffuseResponseOrFaceIndex]];
             } else {
               faceMaterialOrNull = null;
             }
             faceMaterial = faceMaterialOrNull;
             vertexAX = SingleChildWidget.projectedMeshVertexX[specularResponseOrVertexA];
-            vertexAY = dj.projectedMeshVertexY[specularResponseOrVertexA];
+            vertexAY = TextInputWidget.projectedMeshVertexY[specularResponseOrVertexA];
             vertexBX = SingleChildWidget.projectedMeshVertexX[faceVertexB];
-            vertexBY = dj.projectedMeshVertexY[faceVertexB];
+            vertexBY = TextInputWidget.projectedMeshVertexY[faceVertexB];
             vertexCX = SingleChildWidget.projectedMeshVertexX[faceVertexC];
-            vertexCY = dj.projectedMeshVertexY[faceVertexC];
+            vertexCY = TextInputWidget.projectedMeshVertexY[faceVertexC];
             if ((faceNormalA == faceNormalB) &&
                 (faceNormalC == faceNormalB)) {
               diffuseA = diffuseResponses[faceNormalA];
@@ -257,7 +257,7 @@ final class hi extends WidgetContainer implements ta, ButtonActivationListener {
               flatGreenMaskOrSpecularB = 65280 & flatBaseRgbOrDiffuseC;
               flatLitRgbOrSpecularC = (-16711703 & flatRedBlueMaskOrSpecularA * diffuseA) >>> 8 | -285147392 & flatGreenMaskOrSpecularB * diffuseA >>> 8;
               flatLitRgbOrSpecularC = flatLitRgbOrSpecularC + flatSpecularOrDiffuseB * 65793;
-              gi.drawHalfBlendSolidTriangle(vertexCX, -122, vertexCY, vertexBY, vertexBX, vertexAX, vertexAY, 8355711 & flatLitRgbOrSpecularC >> 1);
+              IterableNodeHashTable.drawHalfBlendSolidTriangle(vertexCX, -122, vertexCY, vertexBY, vertexBX, vertexAX, vertexAY, 8355711 & flatLitRgbOrSpecularC >> 1);
             } else {
               diffuseA = diffuseResponses[faceNormalA];
               flatSpecularOrDiffuseB = diffuseResponses[faceNormalB];
@@ -461,10 +461,10 @@ final class hi extends WidgetContainer implements ta, ButtonActivationListener {
     }
 
     private final boolean a(int param0, nl param1) {
-        dg var3 = null;
+        ValidationProvider var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
-        lh var5 = null;
+        ValidationState var5 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -507,7 +507,7 @@ final class hi extends WidgetContainer implements ta, ButtonActivationListener {
               this.f(-50);
             }
           } else {
-            ib.d(24107);
+            DebouncedValidationProvider.d(24107);
           }
           if (param1 != -20) {
             var7 = (nl) null;
@@ -529,7 +529,7 @@ final class hi extends WidgetContainer implements ta, ButtonActivationListener {
     }
 
     public final void a(String param0, int param1) {
-        hc var3 = null;
+        ValidatedTextInputWidget var3 = null;
         String var4 = null;
         try {
             if (param1 != 20) {
@@ -537,7 +537,7 @@ final class hi extends WidgetContainer implements ta, ButtonActivationListener {
             }
             var3 = this.field_E;
             var4 = param0;
-            ((dj) ((Object) var3)).a(param1 - 136, var4, false);
+            ((TextInputWidget) ((Object) var3)).a(param1 - 136, var4, false);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "hi.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -600,7 +600,7 @@ final class hi extends WidgetContainer implements ta, ButtonActivationListener {
     }
 
     public final void a(byte param0) {
-        ((uk) ((Object) this.field_E.a((byte) -117))).c((byte) -80);
+        ((UsernameAvailabilityValidator) ((Object) this.field_E.a((byte) -117))).c((byte) -80);
         if (param0 != 83) {
             this.field_H = (ButtonWidget) null;
         }
@@ -656,7 +656,7 @@ final class hi extends WidgetContainer implements ta, ButtonActivationListener {
         if (param0 >= -42) {
             return;
         }
-        ag.c(12607, this.field_E.widgetText);
+        EmailValidator.c(12607, this.field_E.widgetText);
     }
 
     static {

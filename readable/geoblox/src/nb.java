@@ -16,10 +16,10 @@ final class nb {
           if (param0 != -2) {
             loadingFontsText = (String) null;
           }
-          if (null == vc.mouseWheelInput) {
+          if (null == CachedTextLayout.mouseWheelInput) {
             return;
           }
-          vc.mouseWheelInput.detachWheelListener((java.awt.Component) ((Object) param1), (byte) 83);
+          CachedTextLayout.mouseWheelInput.detachWheelListener((java.awt.Component) ((Object) param1), (byte) 83);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -55,7 +55,7 @@ final class nb {
         if (methodGuard != -28195) {
           return;
         }
-        pooledEntity = (GameplayEntity) ((Object) ra.availableEntities.removeLast(1));
+        pooledEntity = (GameplayEntity) ((Object) SecondaryNodeDeque.availableEntities.removeLast(1));
         if (pooledEntity == null) {
           return;
         }

@@ -19,7 +19,7 @@ final class kf {
 
     final static boolean a(int param0) {
         int var1 = -59 / ((param0 - 34) / 41);
-        return al.a((byte) -109, k.c(118));
+        return al.a((byte) -109, NodeHashTableIterator.c(118));
     }
 
     static {

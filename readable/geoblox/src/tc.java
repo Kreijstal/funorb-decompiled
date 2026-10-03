@@ -79,7 +79,7 @@ final class tc {
                     wk.a(param2, "document.cookie=\"" + var5 + "\"", (byte) -92);
                 } catch (Throwable throwable) {
                 }
-                oj.a(param2, 20000000);
+                ByteStorage.a(param2, 20000000);
             } catch (RuntimeException runtimeException) {
                 throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "tc.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
             }

@@ -17,7 +17,7 @@ final class gf {
             return;
         }
         eh.pendingActionPanelTop = 480;
-        kj.pendingActionPanelPhase = 0;
+        MidiPcmStream.pendingActionPanelPhase = 0;
         jf.pendingActionPanelWidth = 72 + FadingDialog.uiPaletteFont.measureMaximumWrappedWidth(pg.achievementTitles[pendingActionMarker.actionId], 100);
         tl.pendingActionPanelHeight = 30 * FadingDialog.uiPaletteFont.countWrappedLines(pg.achievementTitles[pendingActionMarker.actionId], 100) + 30;
         if (62 > tl.pendingActionPanelHeight) {
@@ -76,7 +76,7 @@ final class gf {
               }
               try {
                 var2 = new java.net.URL(param0.getCodeBase(), "quit.ws");
-                param0.getAppletContext().showDocument(wf.a(var2, 102, param0), "_top");
+                param0.getAppletContext().showDocument(SessionGameApplet.a(var2, 102, param0), "_top");
                 return;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -106,14 +106,14 @@ final class gf {
     final static void a(int param0, int param1) {
         PacketBuffer var2 = null;
         if (param1 >= 28) {
-            var2 = fj.field_q;
+            var2 = CacheReference.field_q;
             var2.writeCipherByte(param0, (byte) -103);
             var2.writeByte((byte) 127, 1);
             var2.writeByte((byte) -20, 0);
             return;
         }
         createPasswordContainsNameAlertText = (String) null;
-        var2 = fj.field_q;
+        var2 = CacheReference.field_q;
         var2.writeCipherByte(param0, (byte) -103);
         var2.writeByte((byte) 127, 1);
         var2.writeByte((byte) -20, 0);

@@ -6,14 +6,14 @@ import java.io.*;
 final class pf extends WidgetContainer implements ga, ButtonActivationListener {
     private String field_L;
     static ResourceArchive field_O;
-    private dj field_P;
+    private TextInputWidget field_P;
     private boolean field_C;
     private ButtonWidget field_G;
     private static gk field_K;
     static boolean endingEntityScanClear;
     private boolean field_I;
     private ButtonWidget field_M;
-    private dj field_J;
+    private TextInputWidget field_J;
     private ButtonWidget field_E;
     static String js5CrcErrorText;
     private boolean field_N;
@@ -73,7 +73,7 @@ final class pf extends WidgetContainer implements ga, ButtonActivationListener {
                 var5_int = var11.length << 2;
               }
               for (var7 = 0; var5_int > var7; var7++) {
-                var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte((byte) 34) << cd.andInt(var7 << 8, 768));
+                var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte((byte) 34) << ProxySocketConnector.andInt(var7 << 8, 768));
               }
               var4_ref_ea.unlinkNode(false);
             } else {
@@ -96,7 +96,7 @@ final class pf extends WidgetContainer implements ga, ButtonActivationListener {
                   return;
                 }
               }
-              gi.a((Throwable) null, "LR1: " + og.e(55), (byte) 125);
+              IterableNodeHashTable.a((Throwable) null, "LR1: " + og.e(55), (byte) 125);
               Bzip2DecoderState.closeSessionSocket((byte) -123);
             }
           }
@@ -120,7 +120,7 @@ final class pf extends WidgetContainer implements ga, ButtonActivationListener {
         }
     }
 
-    public final void a(dj param0, int param1) {
+    public final void a(TextInputWidget param0, int param1) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -152,7 +152,7 @@ final class pf extends WidgetContainer implements ga, ButtonActivationListener {
     }
 
     final void a(String param0, int param1) {
-        dj var3 = null;
+        TextInputWidget var3 = null;
         String var4 = null;
         try {
             var3 = this.field_J;
@@ -178,7 +178,7 @@ final class pf extends WidgetContainer implements ga, ButtonActivationListener {
         super.renderWidget(parentX, parentY, (byte) -48, renderPass);
     }
 
-    public final void a(dj param0, byte param1) {
+    public final void a(TextInputWidget param0, byte param1) {
         try {
             if (param1 != 74) {
                 js5CrcErrorText = (String) null;
@@ -271,17 +271,17 @@ final class pf extends WidgetContainer implements ga, ButtonActivationListener {
             stackIn_4_0 = -1;
             return stackIn_4_0;
           }
-          if (gi.field_d == PacketBuffer.field_l) {
-            fj.field_q.position = 0;
-            fi.field_b = null;
+          if (IterableNodeHashTable.field_d == PacketBuffer.field_l) {
+            CacheReference.field_q.position = 0;
+            IntrusiveNodeHashTable.field_b = null;
             if (param4 != null) {
               var9 = 0;
               fc.field_d.position = 0;
               if (param5) {
                 var9 = var9 | 1;
               }
-              fc.field_d.writeIntBE((byte) 95, bh.field_d.nextInt());
-              fc.field_d.writeIntBE((byte) 95, bh.field_d.nextInt());
+              fc.field_d.writeIntBE((byte) 95, DelegatingCanvas.field_d.nextInt());
+              fc.field_d.writeIntBE((byte) 95, DelegatingCanvas.field_d.nextInt());
               fc.field_d.writeZeroPrefixedNullTerminatedText(var13, (byte) -126);
               fc.field_d.writeZeroPrefixedNullTerminatedText(var8, (byte) -126);
               var14 = (CharSequence) ((Object) param4);
@@ -289,20 +289,20 @@ final class pf extends WidgetContainer implements ga, ButtonActivationListener {
               fc.field_d.writeShortBE(param0, 28695);
               fc.field_d.writeByte((byte) -94, param1);
               fc.field_d.writeByte((byte) 123, var9);
-              fj.field_q.writeByte((byte) 127, 18);
-              fj.field_q.position = fj.field_q.position + 2;
-              var10 = fj.field_q.position;
-              var11_ref_String = s.a(-1, k.c(105));
+              CacheReference.field_q.writeByte((byte) 127, 18);
+              CacheReference.field_q.position = CacheReference.field_q.position + 2;
+              var10 = CacheReference.field_q.position;
+              var11_ref_String = s.a(-1, NodeHashTableIterator.c(105));
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
-              fj.field_q.writeNullTerminatedText(var11_ref_String, 0);
-              UiWidget.a(false, fc.field_d, fj.field_q, ld.field_c, InstrumentPatch.field_l);
-              fj.field_q.backpatchLengthShortBE(-var10 + fj.field_q.position, true);
+              CacheReference.field_q.writeNullTerminatedText(var11_ref_String, 0);
+              UiWidget.a(false, fc.field_d, CacheReference.field_q, ld.field_c, InstrumentPatch.field_l);
+              CacheReference.field_q.backpatchLengthShortBE(-var10 + CacheReference.field_q.position, true);
             } else {
               fc.field_d.position = 0;
-              fc.field_d.writeIntBE((byte) 95, bh.field_d.nextInt());
-              fc.field_d.writeIntBE((byte) 95, bh.field_d.nextInt());
+              fc.field_d.writeIntBE((byte) 95, DelegatingCanvas.field_d.nextInt());
+              fc.field_d.writeIntBE((byte) 95, DelegatingCanvas.field_d.nextInt());
               stackIn_9_0 = fc.field_d;
               if (!param2.a((byte) 97)) {
                 stackIn_10_1 = "";
@@ -317,13 +317,13 @@ final class pf extends WidgetContainer implements ga, ButtonActivationListener {
                 stackIn_13_1 = var8;
               }
               ((ByteArrayBuffer) (Object) stackIn_12_0).writeZeroPrefixedNullTerminatedText(stackIn_13_1, (byte) -126);
-              fj.field_q.writeByte((byte) 124, 16);
-              fj.field_q.position = fj.field_q.position + 1;
-              var9 = fj.field_q.position;
-              UiWidget.a(false, fc.field_d, fj.field_q, ld.field_c, InstrumentPatch.field_l);
-              fj.field_q.backpatchLengthByte(11700, fj.field_q.position - var9);
+              CacheReference.field_q.writeByte((byte) 124, 16);
+              CacheReference.field_q.position = CacheReference.field_q.position + 1;
+              var9 = CacheReference.field_q.position;
+              UiWidget.a(false, fc.field_d, CacheReference.field_q, ld.field_c, InstrumentPatch.field_l);
+              CacheReference.field_q.backpatchLengthByte(11700, CacheReference.field_q.position - var9);
             }
-            cm.a(-1, -1);
+            NanoFrameTimer.a(-1, -1);
             PacketBuffer.field_l = field_K;
           }
           if ((field_K == PacketBuffer.field_l) &&
@@ -336,8 +336,8 @@ final class pf extends WidgetContainer implements ga, ButtonActivationListener {
               si.field_i = new String[var9 - 100];
             } else {
               if (var9 == 248) {
-                sj.a(k.c(124), (byte) 123);
-                kh.field_a = ph.createUnableText;
+                sj.a(NodeHashTableIterator.c(124), (byte) 123);
+                AudioService.field_a = ph.createUnableText;
                 Bzip2DecoderState.closeSessionSocket((byte) -124);
                 ck.field_e = false;
                 stackIn_31_0 = var9;
@@ -349,7 +349,7 @@ final class pf extends WidgetContainer implements ga, ButtonActivationListener {
                 ScorePopup.field_l = var9;
               } else {
                 UiWidget.b(30000, DualLinkNode.d(112));
-                fi.field_b = new Boolean(Bzip2DecoderState.a(eh.field_d, 0));
+                IntrusiveNodeHashTable.field_b = new Boolean(Bzip2DecoderState.a(eh.field_d, 0));
                 eh.field_d.position = 0;
               }
             }
@@ -374,11 +374,11 @@ final class pf extends WidgetContainer implements ga, ButtonActivationListener {
           if ((PacketBuffer.field_l == qh.field_F) &&
               (TriangleMesh.a(false))) {
             if (ScorePopup.field_l != 255) {
-              kh.field_a = eh.field_d.readNullTerminatedText((byte) 98);
+              AudioService.field_a = eh.field_d.readNullTerminatedText((byte) 98);
             } else {
               var9_ref_String = eh.field_d.readNullableNullTerminatedText((byte) 53);
               if (var9_ref_String != null) {
-                tc.a(-128, var9_ref_String, k.c(106));
+                tc.a(-128, var9_ref_String, NodeHashTableIterator.c(106));
               }
             }
             Bzip2DecoderState.closeSessionSocket((byte) -114);
@@ -392,9 +392,9 @@ final class pf extends WidgetContainer implements ga, ButtonActivationListener {
           if (oc.field_e == null) {
             if (ck.field_e) {
               if (ll.a((byte) 12) <= 30000L) {
-                kh.field_a = uj.loginMessage2Text;
+                AudioService.field_a = uj.loginMessage2Text;
               } else {
-                kh.field_a = IntrusiveNode.loginMessage3Text;
+                AudioService.field_a = IntrusiveNode.loginMessage3Text;
               }
               ck.field_e = false;
               stackIn_63_0 = 249;
@@ -685,7 +685,7 @@ final class pf extends WidgetContainer implements ga, ButtonActivationListener {
         if ((!(!SpriteState.e(param0)) ||
             (!(this.field_J.widgetText.length() <= 0) &&
               !(0 >= this.field_P.widgetText.length())))) {
-          ef.a(this.field_P.widgetText, (byte) 66, this.field_J.widgetText);
+          SecondaryNodeDequeIterator.a(this.field_P.widgetText, (byte) 66, this.field_J.widgetText);
         }
     }
 
@@ -740,10 +740,10 @@ final class pf extends WidgetContainer implements ga, ButtonActivationListener {
               throw new IllegalStateException();
             }
           }
-          this.field_J = (dj) ((Object) new hc(param0, (WidgetListener) (this), 100));
-          this.field_P = (dj) ((Object) new hc("", (WidgetListener) (this), 20));
+          this.field_J = (TextInputWidget) ((Object) new ValidatedTextInputWidget(param0, (WidgetListener) (this), 100));
+          this.field_P = (TextInputWidget) ((Object) new ValidatedTextInputWidget("", (WidgetListener) (this), 20));
           if (!this.field_N) {
-            this.field_E = new ButtonWidget(k.loginText, (WidgetListener) null);
+            this.field_E = new ButtonWidget(NodeHashTableIterator.loginText, (WidgetListener) null);
             stackIn_18_1 = null;
             stackIn_18_2 = null;
             if (this.field_I) {
@@ -765,7 +765,7 @@ final class pf extends WidgetContainer implements ga, ButtonActivationListener {
             this.field_J.enabled = false;
           }
           this.field_J.renderer = (WidgetRenderer) ((Object) new ac(10000536));
-          this.field_P.renderer = (WidgetRenderer) ((Object) new uh(10000536));
+          this.field_P.renderer = (WidgetRenderer) ((Object) new PasswordWidgetRenderer(10000536));
           var6 = new ml();
           this.field_E.renderer = (WidgetRenderer) ((Object) var6);
           if (this.field_G != null) {
@@ -793,8 +793,8 @@ final class pf extends WidgetContainer implements ga, ButtonActivationListener {
           if (this.field_L != null) {
             this.widgetY = this.widgetY + (var7.measureWrappedHeight(this.field_L, this.widgetWidth - 40, var7.maxAscent) + 5);
           }
-          var8 = jj.loginUsernameEmailText;
-          var9 = th.a(k.c(120), 200);
+          var8 = WeightedObjectCache.loginUsernameEmailText;
+          var9 = th.a(NodeHashTableIterator.c(120), 200);
           if (var9 != mb.field_b) {
             if (var9 == rl.field_W) {
               var8 = bk.loginUsernameText;
@@ -871,7 +871,7 @@ final class pf extends WidgetContainer implements ga, ButtonActivationListener {
         if (param0 != -42) {
             pf.h((byte) -98);
         }
-        return new mb(vh.f(100), jg.d(7));
+        return new mb(vh.f(100), SocketConnector.d(7));
     }
 
     final void i(int param0) {

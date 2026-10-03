@@ -29,10 +29,10 @@ final class hh {
           if (methodGuard <= 41) {
             return false;
           }
-          if (vd.keyboardEventReadIndex == pc.keyboardEventFrameEndIndex) {
+          if (vd.keyboardEventReadIndex == MidiNote.keyboardEventFrameEndIndex) {
             return false;
           }
-          ki.currentKeyboardEventCode = kj.queuedKeyboardEventCodes[vd.keyboardEventReadIndex];
+          ki.currentKeyboardEventCode = MidiPcmStream.queuedKeyboardEventCodes[vd.keyboardEventReadIndex];
           te.currentKeyboardEventCharacter = ai.queuedKeyboardEventCharacters[vd.keyboardEventReadIndex];
           vd.keyboardEventReadIndex = 1 + vd.keyboardEventReadIndex & 127;
           eventAvailable = true;

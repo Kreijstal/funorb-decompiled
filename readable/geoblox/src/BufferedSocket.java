@@ -88,12 +88,12 @@ final class BufferedSocket implements Runnable {
         return 0;
     }
 
-    final static cj createFrameClock(int guard) {
+    final static FrameTimer createFrameClock(int guard) {
         if (guard != 5000) {
             BufferedSocket.releaseTransformedVertexScratch(-113);
-            return (cj) ((Object) new cm());
+            return (FrameTimer) ((Object) new NanoFrameTimer());
         }
-        return (cj) ((Object) new cm());
+        return (FrameTimer) ((Object) new NanoFrameTimer());
     }
 
     final void readFully(byte[] destination, byte guard, int destinationOffset, int remainingLength) throws IOException {
@@ -287,7 +287,7 @@ final class BufferedSocket implements Runnable {
               caughtWriterThrowable = unexpectedWorkerFailure;
               workerFailure = (Exception) (Object) caughtWriterThrowable;
               unusedReportMessage = (String) null;
-              gi.a((Throwable) ((Object) workerFailure), (String) null, (byte) 125);
+              IterableNodeHashTable.a((Throwable) ((Object) workerFailure), (String) null, (byte) 125);
             }
         } catch (RuntimeException | Error uncheckedFailure) {
             throw uncheckedFailure;

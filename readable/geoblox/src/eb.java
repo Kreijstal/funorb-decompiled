@@ -80,27 +80,27 @@ final class eb {
 
     final static int handleArchiveHandshakeFailure(int replyCode, int methodGuard) {
         int unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
-        gj.archiveConnectTask = null;
+        StrongCacheReference.archiveConnectTask = null;
         qh.archiveHandshakeStage = 0;
         li.archiveHandshakeSocket = null;
         int previousArchivePort = vg.archivePort;
         vg.archivePort = ij.alternateArchivePort;
         ij.alternateArchivePort = previousArchivePort;
         if (replyCode == 51) {
-            wg.archiveNetworkClient.failureCode = 2;
-            wg.archiveNetworkClient.failureCount = wg.archiveNetworkClient.failureCount + 1;
-            if (wg.archiveNetworkClient.failureCount < 2) {
-                if (wg.archiveNetworkClient.failureCount >= 2 && 50 == replyCode) {
+            AsyncResourceDownloader.archiveNetworkClient.failureCode = 2;
+            AsyncResourceDownloader.archiveNetworkClient.failureCount = AsyncResourceDownloader.archiveNetworkClient.failureCount + 1;
+            if (AsyncResourceDownloader.archiveNetworkClient.failureCount < 2) {
+                if (AsyncResourceDownloader.archiveNetworkClient.failureCount >= 2 && 50 == replyCode) {
                     return 5;
                 }
                 if (methodGuard != 28625) {
                     field_i = -67;
-                    if (!(wg.archiveNetworkClient.failureCount < 4)) {
+                    if (!(AsyncResourceDownloader.archiveNetworkClient.failureCount < 4)) {
                         return 1;
                     }
                     return -1;
                 }
-                if (!(wg.archiveNetworkClient.failureCount < 4)) {
+                if (!(AsyncResourceDownloader.archiveNetworkClient.failureCount < 4)) {
                     return 1;
                 }
                 return -1;
@@ -108,15 +108,15 @@ final class eb {
             if (!(replyCode != 51)) {
                 return 2;
             }
-            if (wg.archiveNetworkClient.failureCount < 2) {
+            if (AsyncResourceDownloader.archiveNetworkClient.failureCount < 2) {
                 if (methodGuard != 28625) {
                     field_i = -67;
-                    if (!(wg.archiveNetworkClient.failureCount < 4)) {
+                    if (!(AsyncResourceDownloader.archiveNetworkClient.failureCount < 4)) {
                         return 1;
                     }
                     return -1;
                 }
-                if (!(wg.archiveNetworkClient.failureCount < 4)) {
+                if (!(AsyncResourceDownloader.archiveNetworkClient.failureCount < 4)) {
                     return 1;
                 }
                 return -1;
@@ -126,68 +126,68 @@ final class eb {
             }
             if (methodGuard != 28625) {
                 field_i = -67;
-                if (!(wg.archiveNetworkClient.failureCount < 4)) {
+                if (!(AsyncResourceDownloader.archiveNetworkClient.failureCount < 4)) {
                     return 1;
                 }
                 return -1;
             }
-            if (!(wg.archiveNetworkClient.failureCount < 4)) {
+            if (!(AsyncResourceDownloader.archiveNetworkClient.failureCount < 4)) {
                 return 1;
             }
             return -1;
         }
         if (50 != replyCode) {
-            wg.archiveNetworkClient.failureCode = 1;
-            wg.archiveNetworkClient.failureCount = wg.archiveNetworkClient.failureCount + 1;
-            if (wg.archiveNetworkClient.failureCount >= 2) {
+            AsyncResourceDownloader.archiveNetworkClient.failureCode = 1;
+            AsyncResourceDownloader.archiveNetworkClient.failureCount = AsyncResourceDownloader.archiveNetworkClient.failureCount + 1;
+            if (AsyncResourceDownloader.archiveNetworkClient.failureCount >= 2) {
                 if (replyCode == 51) {
                     return 2;
                 }
-                if (wg.archiveNetworkClient.failureCount >= 2 && 50 == replyCode) {
+                if (AsyncResourceDownloader.archiveNetworkClient.failureCount >= 2 && 50 == replyCode) {
                     return 5;
                 }
                 if (methodGuard != 28625) {
                     field_i = -67;
-                    if (!(wg.archiveNetworkClient.failureCount < 4)) {
+                    if (!(AsyncResourceDownloader.archiveNetworkClient.failureCount < 4)) {
                         return 1;
                     }
                     return -1;
                 }
-                if (!(wg.archiveNetworkClient.failureCount < 4)) {
+                if (!(AsyncResourceDownloader.archiveNetworkClient.failureCount < 4)) {
                     return 1;
                 }
                 return -1;
             }
-            if (wg.archiveNetworkClient.failureCount >= 2 && 50 == replyCode) {
+            if (AsyncResourceDownloader.archiveNetworkClient.failureCount >= 2 && 50 == replyCode) {
                 return 5;
             }
             if (methodGuard != 28625) {
                 field_i = -67;
-                if (!(wg.archiveNetworkClient.failureCount < 4)) {
+                if (!(AsyncResourceDownloader.archiveNetworkClient.failureCount < 4)) {
                     return 1;
                 }
                 return -1;
             }
-            if (!(wg.archiveNetworkClient.failureCount < 4)) {
+            if (!(AsyncResourceDownloader.archiveNetworkClient.failureCount < 4)) {
                 return 1;
             }
             return -1;
         }
-        wg.archiveNetworkClient.failureCode = 5;
-        wg.archiveNetworkClient.failureCount = wg.archiveNetworkClient.failureCount + 1;
-        if (wg.archiveNetworkClient.failureCount >= 2) {
+        AsyncResourceDownloader.archiveNetworkClient.failureCode = 5;
+        AsyncResourceDownloader.archiveNetworkClient.failureCount = AsyncResourceDownloader.archiveNetworkClient.failureCount + 1;
+        if (AsyncResourceDownloader.archiveNetworkClient.failureCount >= 2) {
             if (replyCode == 51) {
                 return 2;
             }
-            if (wg.archiveNetworkClient.failureCount < 2) {
+            if (AsyncResourceDownloader.archiveNetworkClient.failureCount < 2) {
                 if (methodGuard != 28625) {
                     field_i = -67;
-                    if (!(wg.archiveNetworkClient.failureCount < 4)) {
+                    if (!(AsyncResourceDownloader.archiveNetworkClient.failureCount < 4)) {
                         return 1;
                     }
                     return -1;
                 }
-                if (!(wg.archiveNetworkClient.failureCount < 4)) {
+                if (!(AsyncResourceDownloader.archiveNetworkClient.failureCount < 4)) {
                     return 1;
                 }
                 return -1;
@@ -197,27 +197,27 @@ final class eb {
             }
             if (methodGuard != 28625) {
                 field_i = -67;
-                if (!(wg.archiveNetworkClient.failureCount < 4)) {
+                if (!(AsyncResourceDownloader.archiveNetworkClient.failureCount < 4)) {
                     return 1;
                 }
                 return -1;
             }
-            if (!(wg.archiveNetworkClient.failureCount < 4)) {
+            if (!(AsyncResourceDownloader.archiveNetworkClient.failureCount < 4)) {
                 return 1;
             }
             return -1;
         }
-        if (wg.archiveNetworkClient.failureCount >= 2 && 50 == replyCode) {
+        if (AsyncResourceDownloader.archiveNetworkClient.failureCount >= 2 && 50 == replyCode) {
             return 5;
         }
         if (methodGuard != 28625) {
             field_i = -67;
-            if (!(wg.archiveNetworkClient.failureCount < 4)) {
+            if (!(AsyncResourceDownloader.archiveNetworkClient.failureCount < 4)) {
                 return 1;
             }
             return -1;
         }
-        if (!(wg.archiveNetworkClient.failureCount < 4)) {
+        if (!(AsyncResourceDownloader.archiveNetworkClient.failureCount < 4)) {
             return 1;
         }
         return -1;
@@ -240,7 +240,7 @@ final class eb {
                   field_f = (String) null;
                 }
                 var3 = new java.net.URL(param0.getCodeBase(), param2);
-                var3 = wf.a(var3, 59, param0);
+                var3 = SessionGameApplet.a(var3, 59, param0);
                 LimitedRandomAccessFile.a(var3.toString(), (byte) 64, true, param0);
                 return;
               } catch (java.lang.Exception decompiledCaughtParameter0) {

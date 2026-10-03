@@ -116,9 +116,9 @@ final class ab {
     }
 
     final static IndexedSprite buildFirstIndexedSpriteFromDecodedSheet(int methodGuard) {
-        IndexedSprite sprite = new IndexedSprite(pg.decodedSpriteCanvasWidth, FadingDialog.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[0], md.decodedSpriteYOffsets[0], DualLinkNode.decodedSpriteWidths[0], hl.decodedSpriteHeights[0], mj.decodedSpriteIndices[0], cm.decodedSpritePalette);
+        IndexedSprite sprite = new IndexedSprite(pg.decodedSpriteCanvasWidth, FadingDialog.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[0], md.decodedSpriteYOffsets[0], DualLinkNode.decodedSpriteWidths[0], hl.decodedSpriteHeights[0], mj.decodedSpriteIndices[0], NanoFrameTimer.decodedSpritePalette);
         int sentinelDivision = -128 / ((methodGuard - 52) / 49);
-        kj.clearDecodedSpriteWorkingArrays(true);
+        MidiPcmStream.clearDecodedSpriteWorkingArrays(true);
         return sprite;
     }
 

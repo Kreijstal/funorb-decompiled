@@ -24,7 +24,7 @@ final class ma extends IntrusiveNode {
         RuntimeException contextFailure = null;
         controlFlagSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          priorityCounts = uh.meshFacePriorityWriteOffsets;
+          priorityCounts = PasswordWidgetRenderer.meshFacePriorityWriteOffsets;
           priorityCountsAlias = priorityCounts;
           clearIndex = 0;
           arrayLength = priorityCounts.length;
@@ -97,7 +97,7 @@ final class ma extends IntrusiveNode {
         if (methodGuard != 15869) {
             return 61;
         }
-        if (!wg.archiveNetworkClient.pollResponses((byte) 95)) {
+        if (!AsyncResourceDownloader.archiveNetworkClient.pollResponses((byte) 95)) {
             return WhirlpoolHash.advanceArchiveHandshake((byte) -74);
         }
         return 0;
@@ -105,7 +105,7 @@ final class ma extends IntrusiveNode {
 
     final static boolean c(byte param0) {
         int var1 = 39 / ((param0 - 18) / 54);
-        return fa.releasesPerTheme > fj.field_m ? true : false;
+        return fa.releasesPerTheme > CacheReference.field_m ? true : false;
     }
 
     final static void drawNineSlicePanel(int panelTop, int panelLeft, int panelHeight, byte methodGuard, int panelWidth, Sprite[] nineSliceSprites) {

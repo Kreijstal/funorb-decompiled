@@ -14,7 +14,7 @@ final class DiskArchiveCache {
         RuntimeException writeFailureForContext = null;
         int writeSucceeded = 0;
         Throwable unusedThrowableSnapshot = null;
-        kj unusedAudioConfigurationSnapshot = null;
+        MidiPcmStream unusedAudioConfigurationSnapshot = null;
         int writeSucceededBeforeReturn = 0;
         RuntimeException writeFailureBeforeContext = null;
         StringBuilder writeMessagePrefix = null;
@@ -26,8 +26,8 @@ final class DiskArchiveCache {
             if ((0 <= length) &&
                 (length <= this.maximumEntryLength)) {
               if (methodGuard != -53) {
-                unusedAudioConfigurationSnapshot = (kj) null;
-                DiskArchiveCache.a((java.awt.Component) null, (PlatformTaskDispatcher) null, false, (kj) null, false, -103);
+                unusedAudioConfigurationSnapshot = (MidiPcmStream) null;
+                DiskArchiveCache.a((java.awt.Component) null, (PlatformTaskDispatcher) null, false, (MidiPcmStream) null, false, -103);
               }
               writeSucceeded = this.writeEntryChain(255, length, entryId, bytes, true) ? 1 : 0;
               if (writeSucceeded == 0) {
@@ -90,9 +90,9 @@ final class DiskArchiveCache {
                   this.dataFile = (BufferedRandomAccessFile) null;
                 }
                 this.indexFile.seek(-128, (long)(6 * entryId));
-                this.indexFile.readFully(dj.diskSectorBuffer, 6, 0, 9868);
-                entryLength = (dj.diskSectorBuffer[2] & 255) + (((255 & dj.diskSectorBuffer[0]) << 16) + (dj.diskSectorBuffer[1] << 8 & 65280));
-                sectorNumber = (dj.diskSectorBuffer[3] << 16 & 16711680) + (65280 & dj.diskSectorBuffer[4] << 8) + (255 & dj.diskSectorBuffer[5]);
+                this.indexFile.readFully(TextInputWidget.diskSectorBuffer, 6, 0, 9868);
+                entryLength = (TextInputWidget.diskSectorBuffer[2] & 255) + (((255 & TextInputWidget.diskSectorBuffer[0]) << 16) + (TextInputWidget.diskSectorBuffer[1] << 8 & 65280));
+                sectorNumber = (TextInputWidget.diskSectorBuffer[3] << 16 & 16711680) + (65280 & TextInputWidget.diskSectorBuffer[4] << 8) + (255 & TextInputWidget.diskSectorBuffer[5]);
                 if (entryLength < 0) {
                   return null;
                 }
@@ -125,21 +125,21 @@ final class DiskArchiveCache {
                       payloadLength = 510;
                     }
                     headerLength = 10;
-                    this.dataFile.readFully(dj.diskSectorBuffer, payloadLength + headerLength, 0, 9868);
-                    headerEntryId = (255 & dj.diskSectorBuffer[3]) + ((65280 & dj.diskSectorBuffer[2] << 8) + (-16777216 & dj.diskSectorBuffer[0] << 24) + (16711680 & dj.diskSectorBuffer[1] << 16));
-                    headerChunkNumber = (255 & dj.diskSectorBuffer[5]) + (65280 & dj.diskSectorBuffer[4] << 8);
-                    headerArchiveId = dj.diskSectorBuffer[9] & 255;
-                    nextSectorNumber = ((dj.diskSectorBuffer[7] & 255) << 8) + ((16711680 & dj.diskSectorBuffer[6] << 16) + (dj.diskSectorBuffer[8] & 255));
+                    this.dataFile.readFully(TextInputWidget.diskSectorBuffer, payloadLength + headerLength, 0, 9868);
+                    headerEntryId = (255 & TextInputWidget.diskSectorBuffer[3]) + ((65280 & TextInputWidget.diskSectorBuffer[2] << 8) + (-16777216 & TextInputWidget.diskSectorBuffer[0] << 24) + (16711680 & TextInputWidget.diskSectorBuffer[1] << 16));
+                    headerChunkNumber = (255 & TextInputWidget.diskSectorBuffer[5]) + (65280 & TextInputWidget.diskSectorBuffer[4] << 8);
+                    headerArchiveId = TextInputWidget.diskSectorBuffer[9] & 255;
+                    nextSectorNumber = ((TextInputWidget.diskSectorBuffer[7] & 255) << 8) + ((16711680 & TextInputWidget.diskSectorBuffer[6] << 16) + (TextInputWidget.diskSectorBuffer[8] & 255));
                   } else {
                     headerLength = 8;
                     if (payloadLength > 512) {
                       payloadLength = 512;
                     }
-                    this.dataFile.readFully(dj.diskSectorBuffer, payloadLength + headerLength, 0, 9868);
-                    nextSectorNumber = (255 & dj.diskSectorBuffer[6]) + (((dj.diskSectorBuffer[4] & 255) << 16) + ((255 & dj.diskSectorBuffer[5]) << 8));
-                    headerChunkNumber = (255 & dj.diskSectorBuffer[3]) + (dj.diskSectorBuffer[2] << 8 & 65280);
-                    headerArchiveId = 255 & dj.diskSectorBuffer[7];
-                    headerEntryId = (dj.diskSectorBuffer[1] & 255) + ((dj.diskSectorBuffer[0] & 255) << 8);
+                    this.dataFile.readFully(TextInputWidget.diskSectorBuffer, payloadLength + headerLength, 0, 9868);
+                    nextSectorNumber = (255 & TextInputWidget.diskSectorBuffer[6]) + (((TextInputWidget.diskSectorBuffer[4] & 255) << 16) + ((255 & TextInputWidget.diskSectorBuffer[5]) << 8));
+                    headerChunkNumber = (255 & TextInputWidget.diskSectorBuffer[3]) + (TextInputWidget.diskSectorBuffer[2] << 8 & 65280);
+                    headerArchiveId = 255 & TextInputWidget.diskSectorBuffer[7];
+                    headerEntryId = (TextInputWidget.diskSectorBuffer[1] & 255) + ((TextInputWidget.diskSectorBuffer[0] & 255) << 8);
                   }
                   if (headerEntryId != entryId) {
                     return null;
@@ -161,7 +161,7 @@ final class DiskArchiveCache {
                   for (sectorByteIndex = headerLength; sectorByteIndex < sectorReadLength; sectorByteIndex++) {
                     destinationIndexBeforeIncrement = bytesCopied;
                     bytesCopied++;
-                    bytes[destinationIndexBeforeIncrement] = dj.diskSectorBuffer[sectorByteIndex];
+                    bytes[destinationIndexBeforeIncrement] = TextInputWidget.diskSectorBuffer[sectorByteIndex];
                   }
                   sectorNumber = nextSectorNumber;
                   continue;
@@ -211,8 +211,8 @@ final class DiskArchiveCache {
                         return false;
                       }
                       this.indexFile.seek(methodGuard - 228, (long)(entryId * 6));
-                      this.indexFile.readFully(dj.diskSectorBuffer, 6, 0, 9868);
-                      sectorNumber = (dj.diskSectorBuffer[5] & 255) + (((255 & dj.diskSectorBuffer[4]) << 8) + ((255 & dj.diskSectorBuffer[3]) << 16));
+                      this.indexFile.readFully(TextInputWidget.diskSectorBuffer, 6, 0, 9868);
+                      sectorNumber = (TextInputWidget.diskSectorBuffer[5] & 255) + (((255 & TextInputWidget.diskSectorBuffer[4]) << 8) + ((255 & TextInputWidget.diskSectorBuffer[3]) << 16));
                       if ((sectorNumber > 0) &&
                           (this.dataFile.length((byte) 46) / 520L >= (long)sectorNumber)) {
                         break L0;
@@ -224,17 +224,17 @@ final class DiskArchiveCache {
                       sectorNumber = 1;
                     }
                   }
-                  dj.diskSectorBuffer[3] = (byte)(sectorNumber >> 16);
-                  dj.diskSectorBuffer[2] = (byte)length;
-                  dj.diskSectorBuffer[1] = (byte)(length >> 8);
+                  TextInputWidget.diskSectorBuffer[3] = (byte)(sectorNumber >> 16);
+                  TextInputWidget.diskSectorBuffer[2] = (byte)length;
+                  TextInputWidget.diskSectorBuffer[1] = (byte)(length >> 8);
                   if (methodGuard != 255) {
                     this.indexFile = (BufferedRandomAccessFile) null;
                   }
-                  dj.diskSectorBuffer[4] = (byte)(sectorNumber >> 8);
-                  dj.diskSectorBuffer[5] = (byte)sectorNumber;
-                  dj.diskSectorBuffer[0] = (byte)(length >> 16);
+                  TextInputWidget.diskSectorBuffer[4] = (byte)(sectorNumber >> 8);
+                  TextInputWidget.diskSectorBuffer[5] = (byte)sectorNumber;
+                  TextInputWidget.diskSectorBuffer[0] = (byte)(length >> 16);
                   this.indexFile.seek(methodGuard - 380, (long)(entryId * 6));
-                  this.indexFile.write(6, 0, dj.diskSectorBuffer, false);
+                  this.indexFile.write(6, 0, TextInputWidget.diskSectorBuffer, false);
                   bytesWritten = 0;
                   chunkNumber = 0;
                   while (true) {
@@ -246,7 +246,7 @@ final class DiskArchiveCache {
                             this.dataFile.seek(methodGuard - 191, (long)(520 * sectorNumber));
                             if (65535 >= entryId) {
                               try {
-                                this.dataFile.readFully(dj.diskSectorBuffer, 8, 0, 9868);
+                                this.dataFile.readFully(TextInputWidget.diskSectorBuffer, 8, 0, 9868);
                                 smallHeaderEofState = 0;
                               } catch (java.io.EOFException smallHeaderEofException) {
                                 caughtWriteFailure = smallHeaderEofException;
@@ -256,13 +256,13 @@ final class DiskArchiveCache {
                               if (!(smallHeaderEofState == 0)) {
                                 break L4;
                               }
-                              headerEntryIdOrPayloadLength = ((255 & dj.diskSectorBuffer[0]) << 8) + (255 & dj.diskSectorBuffer[1]);
-                              headerChunkNumber = (dj.diskSectorBuffer[3] & 255) + ((255 & dj.diskSectorBuffer[2]) << 8);
-                              headerArchiveId = 255 & dj.diskSectorBuffer[7];
-                              nextSectorNumber = (dj.diskSectorBuffer[6] & 255) + ((65280 & dj.diskSectorBuffer[5] << 8) + (16711680 & dj.diskSectorBuffer[4] << 16));
+                              headerEntryIdOrPayloadLength = ((255 & TextInputWidget.diskSectorBuffer[0]) << 8) + (255 & TextInputWidget.diskSectorBuffer[1]);
+                              headerChunkNumber = (TextInputWidget.diskSectorBuffer[3] & 255) + ((255 & TextInputWidget.diskSectorBuffer[2]) << 8);
+                              headerArchiveId = 255 & TextInputWidget.diskSectorBuffer[7];
+                              nextSectorNumber = (TextInputWidget.diskSectorBuffer[6] & 255) + ((65280 & TextInputWidget.diskSectorBuffer[5] << 8) + (16711680 & TextInputWidget.diskSectorBuffer[4] << 16));
                             } else {
                               try {
-                                this.dataFile.readFully(dj.diskSectorBuffer, 10, 0, 9868);
+                                this.dataFile.readFully(TextInputWidget.diskSectorBuffer, 10, 0, 9868);
                                 largeHeaderEofState = 0;
                               } catch (java.io.EOFException largeHeaderEofException) {
                                 caughtWriteFailure = largeHeaderEofException;
@@ -272,10 +272,10 @@ final class DiskArchiveCache {
                               if (!(largeHeaderEofState == 0)) {
                                 break L4;
                               }
-                              headerEntryIdOrPayloadLength = (65280 & dj.diskSectorBuffer[2] << 8) + (((255 & dj.diskSectorBuffer[0]) << 24) + (((dj.diskSectorBuffer[1] & 255) << 16) + (255 & dj.diskSectorBuffer[3])));
-                              headerArchiveId = dj.diskSectorBuffer[9] & 255;
-                              nextSectorNumber = (dj.diskSectorBuffer[8] & 255) + ((255 & dj.diskSectorBuffer[6]) << 16) + (65280 & dj.diskSectorBuffer[7] << 8);
-                              headerChunkNumber = (dj.diskSectorBuffer[4] << 8 & 65280) + (255 & dj.diskSectorBuffer[5]);
+                              headerEntryIdOrPayloadLength = (65280 & TextInputWidget.diskSectorBuffer[2] << 8) + (((255 & TextInputWidget.diskSectorBuffer[0]) << 24) + (((TextInputWidget.diskSectorBuffer[1] & 255) << 16) + (255 & TextInputWidget.diskSectorBuffer[3])));
+                              headerArchiveId = TextInputWidget.diskSectorBuffer[9] & 255;
+                              nextSectorNumber = (TextInputWidget.diskSectorBuffer[8] & 255) + ((255 & TextInputWidget.diskSectorBuffer[6]) << 16) + (65280 & TextInputWidget.diskSectorBuffer[7] << 8);
+                              headerChunkNumber = (TextInputWidget.diskSectorBuffer[4] << 8 & 65280) + (255 & TextInputWidget.diskSectorBuffer[5]);
                             }
                             if ((headerEntryIdOrPayloadLength == entryId) &&
                                 (chunkNumber == headerChunkNumber) &&
@@ -303,16 +303,16 @@ final class DiskArchiveCache {
                           nextSectorNumber = 0;
                         }
                         if (entryId <= 65535) {
-                          dj.diskSectorBuffer[4] = (byte)(nextSectorNumber >> 16);
-                          dj.diskSectorBuffer[2] = (byte)(chunkNumber >> 8);
-                          dj.diskSectorBuffer[0] = (byte)(entryId >> 8);
-                          dj.diskSectorBuffer[7] = (byte)this.archiveId;
-                          dj.diskSectorBuffer[1] = (byte)entryId;
-                          dj.diskSectorBuffer[5] = (byte)(nextSectorNumber >> 8);
-                          dj.diskSectorBuffer[3] = (byte)chunkNumber;
-                          dj.diskSectorBuffer[6] = (byte)nextSectorNumber;
+                          TextInputWidget.diskSectorBuffer[4] = (byte)(nextSectorNumber >> 16);
+                          TextInputWidget.diskSectorBuffer[2] = (byte)(chunkNumber >> 8);
+                          TextInputWidget.diskSectorBuffer[0] = (byte)(entryId >> 8);
+                          TextInputWidget.diskSectorBuffer[7] = (byte)this.archiveId;
+                          TextInputWidget.diskSectorBuffer[1] = (byte)entryId;
+                          TextInputWidget.diskSectorBuffer[5] = (byte)(nextSectorNumber >> 8);
+                          TextInputWidget.diskSectorBuffer[3] = (byte)chunkNumber;
+                          TextInputWidget.diskSectorBuffer[6] = (byte)nextSectorNumber;
                           this.dataFile.seek(-97, (long)(520 * sectorNumber));
-                          this.dataFile.write(8, 0, dj.diskSectorBuffer, false);
+                          this.dataFile.write(8, 0, TextInputWidget.diskSectorBuffer, false);
                           headerEntryIdOrPayloadLength = length - bytesWritten;
                           if (512 < headerEntryIdOrPayloadLength) {
                             headerEntryIdOrPayloadLength = 512;
@@ -320,18 +320,18 @@ final class DiskArchiveCache {
                           this.dataFile.write(headerEntryIdOrPayloadLength, bytesWritten, bytes, false);
                           bytesWritten = bytesWritten + headerEntryIdOrPayloadLength;
                         } else {
-                          dj.diskSectorBuffer[6] = (byte)(nextSectorNumber >> 16);
-                          dj.diskSectorBuffer[5] = (byte)chunkNumber;
-                          dj.diskSectorBuffer[2] = (byte)(entryId >> 8);
-                          dj.diskSectorBuffer[9] = (byte)this.archiveId;
-                          dj.diskSectorBuffer[4] = (byte)(chunkNumber >> 8);
-                          dj.diskSectorBuffer[1] = (byte)(entryId >> 16);
-                          dj.diskSectorBuffer[7] = (byte)(nextSectorNumber >> 8);
-                          dj.diskSectorBuffer[8] = (byte)nextSectorNumber;
-                          dj.diskSectorBuffer[3] = (byte)entryId;
-                          dj.diskSectorBuffer[0] = (byte)(entryId >> 24);
+                          TextInputWidget.diskSectorBuffer[6] = (byte)(nextSectorNumber >> 16);
+                          TextInputWidget.diskSectorBuffer[5] = (byte)chunkNumber;
+                          TextInputWidget.diskSectorBuffer[2] = (byte)(entryId >> 8);
+                          TextInputWidget.diskSectorBuffer[9] = (byte)this.archiveId;
+                          TextInputWidget.diskSectorBuffer[4] = (byte)(chunkNumber >> 8);
+                          TextInputWidget.diskSectorBuffer[1] = (byte)(entryId >> 16);
+                          TextInputWidget.diskSectorBuffer[7] = (byte)(nextSectorNumber >> 8);
+                          TextInputWidget.diskSectorBuffer[8] = (byte)nextSectorNumber;
+                          TextInputWidget.diskSectorBuffer[3] = (byte)entryId;
+                          TextInputWidget.diskSectorBuffer[0] = (byte)(entryId >> 24);
                           this.dataFile.seek(73, (long)(sectorNumber * 520));
-                          this.dataFile.write(10, 0, dj.diskSectorBuffer, false);
+                          this.dataFile.write(10, 0, TextInputWidget.diskSectorBuffer, false);
                           headerEntryIdOrPayloadLength = length - bytesWritten;
                           if (510 < headerEntryIdOrPayloadLength) {
                             headerEntryIdOrPayloadLength = 510;
@@ -375,20 +375,20 @@ final class DiskArchiveCache {
         return "" + this.archiveId;
     }
 
-    final static void a(java.awt.Component param0, PlatformTaskDispatcher param1, boolean param2, kj param3, boolean param4, int param5) {
+    final static void a(java.awt.Component param0, PlatformTaskDispatcher param1, boolean param2, MidiPcmStream param3, boolean param4, int param5) {
         AudioOutput.a(param5, param4, 10);
-        fj.field_p = AudioOutput.a(param1, param0, 0, 22050);
+        CacheReference.field_p = AudioOutput.a(param1, param0, 0, 22050);
         if (param2) {
             return;
         }
         try {
             oh.field_a = AudioOutput.a(param1, param0, 1, 1000);
-            WhirlpoolHash.field_d = new ob();
+            WhirlpoolHash.field_d = new PcmStreamMixer();
             oh.field_a.b(WhirlpoolHash.field_d);
-            uh.field_y = param3;
-            wg.a(-15346, oc.field_c);
-            ag.a(j.field_gb, (byte) -67);
-            fj.field_p.b(param3);
+            PasswordWidgetRenderer.field_y = param3;
+            AsyncResourceDownloader.a(-15346, oc.field_c);
+            EmailValidator.a(j.field_gb, (byte) -67);
+            CacheReference.field_p.b(param3);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "jh.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }

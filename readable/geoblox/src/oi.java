@@ -21,8 +21,8 @@ final class oi {
             (hb.field_b > 0)) {
           fieldTemp$3 = hb.field_b - 1;
           hb.field_b = hb.field_b - 1;
-          var2_ref_byte__ = dj.field_I[fieldTemp$3];
-          dj.field_I[hb.field_b] = null;
+          var2_ref_byte__ = TextInputWidget.field_I[fieldTemp$3];
+          TextInputWidget.field_I[hb.field_b] = null;
           return var2_ref_byte__;
         }
         if ((param1 == 5000) &&
@@ -37,11 +37,11 @@ final class oi {
           return (byte[]) null;
         }
         if ((param1 == 30000) &&
-            (ag.field_i > 0)) {
-          fieldTemp$5 = ag.field_i - 1;
-          ag.field_i = ag.field_i - 1;
+            (EmailValidator.field_i > 0)) {
+          fieldTemp$5 = EmailValidator.field_i - 1;
+          EmailValidator.field_i = EmailValidator.field_i - 1;
           var2_ref_byte__ = NetworkArchiveRequest.field_C[fieldTemp$5];
-          NetworkArchiveRequest.field_C[ag.field_i] = null;
+          NetworkArchiveRequest.field_C[EmailValidator.field_i] = null;
           return var2_ref_byte__;
         }
         if (sg.field_c != null) {
@@ -84,7 +84,7 @@ final class oi {
           }
           var5 = (ea) ((Object) ea.field_g.firstForIteration(0));
           while (var5 != null) {
-            gj.a((byte) -88, param0, var5);
+            StrongCacheReference.a((byte) -88, param0, var5);
             var5 = (ea) ((Object) ea.field_g.nextForIteration(1));
           }
           return;

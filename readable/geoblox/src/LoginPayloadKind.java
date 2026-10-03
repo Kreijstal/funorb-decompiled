@@ -31,7 +31,7 @@ final class LoginPayloadKind {
                 return;
             }
             if (MouseWheelInput.achievementStateQuery == null) {
-                MouseWheelInput.achievementStateQuery = cf.requestAchievementState(4, 94);
+                MouseWheelInput.achievementStateQuery = AgeValidator.requestAchievementState(4, 94);
                 return;
             }
             return;
@@ -40,7 +40,7 @@ final class LoginPayloadKind {
             return;
         }
         if (MouseWheelInput.achievementStateQuery == null) {
-            MouseWheelInput.achievementStateQuery = cf.requestAchievementState(4, 94);
+            MouseWheelInput.achievementStateQuery = AgeValidator.requestAchievementState(4, 94);
             return;
         }
     }

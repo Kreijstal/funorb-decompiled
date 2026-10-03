@@ -66,18 +66,18 @@ final class DropTargetWidget extends SingleChildWidget {
         DraggableWidget draggedWidget = null;
         try {
             super.handlePointerRelease(parentX, pointerX, releaseGuard, eventContext, parentY, pointerY);
-            draggedWidget = lh.activeDragWidget;
+            draggedWidget = ValidationState.activeDragWidget;
             if (draggedWidget != null && this.containsPointer(pointerX, -1, pointerY, parentY, parentX)) {
                 if (this.listener instanceof DropListener) {
                     ((DropListener) ((Object) this.listener)).onDrop((DropTargetWidget) (this), draggedWidget, 22176);
-                    lh.activeDragWidget = null;
+                    ValidationState.activeDragWidget = null;
                     return;
                 }
                 if (!(draggedWidget.listener instanceof DropListener)) {
                     return;
                 }
                 ((DropListener) ((Object) draggedWidget.listener)).onDrop((DropTargetWidget) (this), draggedWidget, 22176);
-                lh.activeDragWidget = null;
+                ValidationState.activeDragWidget = null;
             }
         } catch (RuntimeException dropReleaseFailure) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) dropReleaseFailure), "fk.TA(" + parentX + ',' + pointerX + ',' + releaseGuard + ',' + (eventContext != null ? "{...}" : "null") + ',' + parentY + ',' + pointerY + ')');

@@ -15,14 +15,14 @@ final class oc implements WidgetRenderer {
         int var4 = Geoblox.clientControlFlowFlag;
         GzipInflater.sunBackgroundSprite.drawRunEncoded(0, 0);
         PacketByteCipher.sunForegroundSprite.draw(320 - (PacketByteCipher.sunForegroundSprite.fullWidth >> 1), param0 - (PacketByteCipher.sunForegroundSprite.fullHeight >> 1));
-        kh.screenTitleSprites[0].draw(0, 20);
+        AudioService.screenTitleSprites[0].draw(0, 20);
         int var1 = -70 + MatchingTextValidator.field_j;
         if (var1 >= 0) {
             if (!((double)var1 * 0.0174532925 < 1.5707963267948966)) {
-                var2 = tl.introFaceFrames[vc.field_h].fullWidth >> 1;
-                if (vc.field_h >= 11) {
+                var2 = tl.introFaceFrames[CachedTextLayout.field_h].fullWidth >> 1;
+                if (CachedTextLayout.field_h >= 11) {
                     var3 = (MatchingTextValidator.field_j - fh.field_c >> 1) * (MatchingTextValidator.field_j - fh.field_c >> 1) >> 1;
-                    tl.introFaceFrames[vc.field_h].drawGrayModulated(-(tl.introFaceFrames[vc.field_h].fullWidth >> 1) + 320, var3 + (-(tl.introFaceFrames[vc.field_h].fullHeight >> 1) + 240), si.field_j);
+                    tl.introFaceFrames[CachedTextLayout.field_h].drawGrayModulated(-(tl.introFaceFrames[CachedTextLayout.field_h].fullWidth >> 1) + 320, var3 + (-(tl.introFaceFrames[CachedTextLayout.field_h].fullHeight >> 1) + 240), si.field_j);
                     qh.introGeometryFrames[0].draw(var2 + 320, -34 + var3 - (qh.introGeometryFrames[0].fullHeight >> 1) + 240);
                     qh.introGeometryFrames[1].draw(-var2 + 320 - qh.introGeometryFrames[1].fullWidth, -(qh.introGeometryFrames[1].fullHeight >> 1) + (240 + var3 + 22));
                     return;
@@ -35,19 +35,19 @@ final class oc implements WidgetRenderer {
                 }
                 if (-qh.introGeometryFrames[1].fullWidth + (320 - var2) > var3 - 1200) {
                     qh.introGeometryFrames[1].draw(var3 - 1200, 22 + (240 - (qh.introGeometryFrames[1].fullHeight >> 1)));
-                    tl.introFaceFrames[vc.field_h].drawGrayModulated(320 - var2, 240 - (tl.introFaceFrames[vc.field_h].fullHeight >> 1), si.field_j);
+                    tl.introFaceFrames[CachedTextLayout.field_h].drawGrayModulated(320 - var2, 240 - (tl.introFaceFrames[CachedTextLayout.field_h].fullHeight >> 1), si.field_j);
                     return;
                 }
                 qh.introGeometryFrames[1].draw(-qh.introGeometryFrames[1].fullWidth - var2 + 320, 240 - (qh.introGeometryFrames[1].fullHeight >> 1) + 22);
-                tl.introFaceFrames[vc.field_h].drawGrayModulated(320 - var2, 240 - (tl.introFaceFrames[vc.field_h].fullHeight >> 1), si.field_j);
+                tl.introFaceFrames[CachedTextLayout.field_h].drawGrayModulated(320 - var2, 240 - (tl.introFaceFrames[CachedTextLayout.field_h].fullHeight >> 1), si.field_j);
                 return;
             }
-            kh.screenTitleSprites[0].drawAdditive(0, 20, (int)(0.5 + Math.sin(2.0 * ((double)var1 * 0.0174532925)) * 90.0));
+            AudioService.screenTitleSprites[0].drawAdditive(0, 20, (int)(0.5 + Math.sin(2.0 * ((double)var1 * 0.0174532925)) * 90.0));
         }
-        var2 = tl.introFaceFrames[vc.field_h].fullWidth >> 1;
-        if (vc.field_h >= 11) {
+        var2 = tl.introFaceFrames[CachedTextLayout.field_h].fullWidth >> 1;
+        if (CachedTextLayout.field_h >= 11) {
             var3 = (MatchingTextValidator.field_j - fh.field_c >> 1) * (MatchingTextValidator.field_j - fh.field_c >> 1) >> 1;
-            tl.introFaceFrames[vc.field_h].drawGrayModulated(-(tl.introFaceFrames[vc.field_h].fullWidth >> 1) + 320, var3 + (-(tl.introFaceFrames[vc.field_h].fullHeight >> 1) + 240), si.field_j);
+            tl.introFaceFrames[CachedTextLayout.field_h].drawGrayModulated(-(tl.introFaceFrames[CachedTextLayout.field_h].fullWidth >> 1) + 320, var3 + (-(tl.introFaceFrames[CachedTextLayout.field_h].fullHeight >> 1) + 240), si.field_j);
             qh.introGeometryFrames[0].draw(var2 + 320, -34 + var3 - (qh.introGeometryFrames[0].fullHeight >> 1) + 240);
             qh.introGeometryFrames[1].draw(-var2 + 320 - qh.introGeometryFrames[1].fullWidth, -(qh.introGeometryFrames[1].fullHeight >> 1) + (240 + var3 + 22));
             return;
@@ -57,21 +57,21 @@ final class oc implements WidgetRenderer {
             qh.introGeometryFrames[0].draw(1000 - var3, -34 + (240 - (qh.introGeometryFrames[0].fullHeight >> 1)));
             if (-qh.introGeometryFrames[1].fullWidth + (320 - var2) > var3 - 1200) {
                 qh.introGeometryFrames[1].draw(var3 - 1200, 22 + (240 - (qh.introGeometryFrames[1].fullHeight >> 1)));
-                tl.introFaceFrames[vc.field_h].drawGrayModulated(320 - var2, 240 - (tl.introFaceFrames[vc.field_h].fullHeight >> 1), si.field_j);
+                tl.introFaceFrames[CachedTextLayout.field_h].drawGrayModulated(320 - var2, 240 - (tl.introFaceFrames[CachedTextLayout.field_h].fullHeight >> 1), si.field_j);
                 return;
             }
             qh.introGeometryFrames[1].draw(-qh.introGeometryFrames[1].fullWidth - var2 + 320, 240 - (qh.introGeometryFrames[1].fullHeight >> 1) + 22);
-            tl.introFaceFrames[vc.field_h].drawGrayModulated(320 - var2, 240 - (tl.introFaceFrames[vc.field_h].fullHeight >> 1), si.field_j);
+            tl.introFaceFrames[CachedTextLayout.field_h].drawGrayModulated(320 - var2, 240 - (tl.introFaceFrames[CachedTextLayout.field_h].fullHeight >> 1), si.field_j);
             return;
         }
         qh.introGeometryFrames[0].draw(320 + var2, 206 - (qh.introGeometryFrames[0].fullHeight >> 1));
         if (-qh.introGeometryFrames[1].fullWidth + (320 - var2) > var3 - 1200) {
             qh.introGeometryFrames[1].draw(var3 - 1200, 22 + (240 - (qh.introGeometryFrames[1].fullHeight >> 1)));
-            tl.introFaceFrames[vc.field_h].drawGrayModulated(320 - var2, 240 - (tl.introFaceFrames[vc.field_h].fullHeight >> 1), si.field_j);
+            tl.introFaceFrames[CachedTextLayout.field_h].drawGrayModulated(320 - var2, 240 - (tl.introFaceFrames[CachedTextLayout.field_h].fullHeight >> 1), si.field_j);
             return;
         }
         qh.introGeometryFrames[1].draw(-qh.introGeometryFrames[1].fullWidth - var2 + 320, 240 - (qh.introGeometryFrames[1].fullHeight >> 1) + 22);
-        tl.introFaceFrames[vc.field_h].drawGrayModulated(320 - var2, 240 - (tl.introFaceFrames[vc.field_h].fullHeight >> 1), si.field_j);
+        tl.introFaceFrames[CachedTextLayout.field_h].drawGrayModulated(320 - var2, 240 - (tl.introFaceFrames[CachedTextLayout.field_h].fullHeight >> 1), si.field_j);
     }
 
     public static void a(boolean param0) {

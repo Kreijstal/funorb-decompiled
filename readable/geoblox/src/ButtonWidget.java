@@ -82,11 +82,11 @@ class ButtonWidget extends UiWidget {
                 if (gf.heldPointerButtonSnapshot == this.pressedPointerButton) {
                     return;
                 }
-                if ((this.containsPointer(PrefixCodeDecoder.pointerXSnapshot, -1, ue.pointerYSnapshot, parentY, parentX)) &&
+                if ((this.containsPointer(PrefixCodeDecoder.pointerXSnapshot, -1, PcmResampler.pointerYSnapshot, parentY, parentX)) &&
                     (!(gf.heldPointerButtonSnapshot != 0))) {
-                    this.activateButton(ue.pointerYSnapshot - parentY, -28922, PrefixCodeDecoder.pointerXSnapshot - parentX, this.pressedPointerButton);
+                    this.activateButton(PcmResampler.pointerYSnapshot - parentY, -28922, PrefixCodeDecoder.pointerXSnapshot - parentX, this.pressedPointerButton);
                 }
-                this.handlePointerRelease(parentX, PrefixCodeDecoder.pointerXSnapshot, !hoverGuard ? true : false, eventContext, parentY, ue.pointerYSnapshot);
+                this.handlePointerRelease(parentX, PrefixCodeDecoder.pointerXSnapshot, !hoverGuard ? true : false, eventContext, parentY, PcmResampler.pointerYSnapshot);
             }
         } catch (RuntimeException pointerUpdateFailure) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) pointerUpdateFailure), "hk.H(" + hoverGuard + ',' + parentY + ',' + (eventContext != null ? "{...}" : "null") + ',' + parentX + ')');
@@ -172,7 +172,7 @@ class ButtonWidget extends UiWidget {
 
     final static void e(int param0) {
         rd.c(520);
-        pc.a(4, false);
+        MidiNote.a(4, false);
         if (param0 != 83) {
             ButtonWidget.f((byte) -65);
         }

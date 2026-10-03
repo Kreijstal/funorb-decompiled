@@ -3,15 +3,15 @@
  */
 class AudioOutput {
     static boolean field_q;
-    private static kh field_r;
+    private static AudioService field_r;
     private long field_n;
     private boolean field_h;
     private int field_l;
     int[] field_c;
     private static int field_d;
-    private ia field_k;
+    private PcmStream field_k;
     static int sampleRateHz;
-    private ia[] field_a;
+    private PcmStream[] field_a;
     private int field_g;
     private int field_f;
     private long field_e;
@@ -19,7 +19,7 @@ class AudioOutput {
     private boolean field_o;
     private long field_m;
     private int field_u;
-    private ia[] field_b;
+    private PcmStream[] field_b;
     private int field_p;
     private int field_s;
     private int field_i;
@@ -29,13 +29,13 @@ class AudioOutput {
 
     final static AudioOutput a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
         try {
-            ce var4 = null;
+            JavaSoundAudioOutput var4 = null;
             Throwable var4_ref = null;
-            ce var5 = null;
-            ce stackIn_10_0 = null;
+            JavaSoundAudioOutput var5 = null;
+            JavaSoundAudioOutput stackIn_10_0 = null;
             int stackIn_10_1 = 0;
             int stackIn_11_2 = 0;
-            ce stackIn_21_0 = null;
+            JavaSoundAudioOutput stackIn_21_0 = null;
             Throwable decompiledCaughtException = null;
             if (sampleRateHz == 0) {
               throw new IllegalStateException();
@@ -46,7 +46,7 @@ class AudioOutput {
                 param3 = 256;
               }
               try {
-                var5 = new ce();
+                var5 = new JavaSoundAudioOutput();
                 var4 = var5;
                 stackIn_10_0 = var4;
                 stackIn_10_1 = 256;
@@ -65,7 +65,7 @@ class AudioOutput {
                 ((AudioOutput) ((Object) var4)).a(((AudioOutput) ((Object) var4)).field_g);
                 if ((field_d > 0) &&
                     (field_r == null)) {
-                  field_r = new kh();
+                  field_r = new AudioService();
                   field_r.field_b = param0;
                   param0.startThread((Runnable) ((Object) field_r), 0, field_d);
                 }
@@ -137,19 +137,19 @@ class AudioOutput {
         this.field_h = true;
     }
 
-    final synchronized void b(ia param0) {
+    final synchronized void b(PcmStream param0) {
         this.field_k = param0;
     }
 
     void d() throws Exception {
     }
 
-    private final static void a(ia param0) {
+    private final static void a(PcmStream param0) {
         param0.field_f = false;
         if (param0.field_g != null) {
             param0.field_g.field_f = 0;
         }
-        ia var1 = param0.b();
+        PcmStream var1 = param0.b();
         while (var1 != null) {
             AudioOutput.a(var1);
             var1 = param0.c();
@@ -264,9 +264,9 @@ class AudioOutput {
         }
     }
 
-    private final void a(ia param0, int param1) {
+    private final void a(PcmStream param0, int param1) {
         int var3 = param1 >> 5;
-        ia var4 = this.field_b[var3];
+        PcmStream var4 = this.field_b[var3];
         if (var4 == null) {
             this.field_a[var3] = param0;
         } else {
@@ -284,15 +284,15 @@ class AudioOutput {
         int var7_int;
         Object var7;
         int var8_int;
-        ia[] var8;
+        PcmStream[] var8;
         int var9;
         Object var10;
-        ia var11;
-        e var12;
+        PcmStream var11;
+        AbstractAudioSample var12;
         int var13;
-        ia var14;
+        PcmStream var14;
         int var15_int;
-        ia var15;
+        PcmStream var15;
         var3 = param1;
         if (field_q) {
           var3 = var3 << 1;
@@ -354,12 +354,12 @@ class AudioOutput {
                       var15 = var11.field_h;
                       var11.field_h = null;
                       if (var10 != null) {
-                        ((ia) (var10)).field_h = var15;
+                        ((PcmStream) (var10)).field_h = var15;
                       } else {
                         this.field_a[var7_int] = var15;
                       }
                       if (var15 == null) {
-                        this.field_b[var7_int] = (ia) (var10);
+                        this.field_b[var7_int] = (PcmStream) (var10);
                       }
                       var11 = var15;
                       continue;
@@ -380,8 +380,8 @@ class AudioOutput {
               this.field_b[var6] = null;
               var8[var9] = null;
               while (var7 != null) {
-                var10 = ((ia) (var7)).field_h;
-                ((ia) (var7)).field_h = null;
+                var10 = ((PcmStream) (var7)).field_h;
+                ((PcmStream) (var7)).field_h = null;
                 var7 = var10;
               }
             }
@@ -423,13 +423,13 @@ class AudioOutput {
         this.field_l = 32;
         this.field_n = oa.a(-12520);
         this.field_o = true;
-        this.field_a = new ia[8];
+        this.field_a = new PcmStream[8];
         this.field_t = 0;
         this.field_e = 0L;
         this.field_f = 0;
         this.field_m = 0L;
         this.field_s = 0;
         this.field_u = 0;
-        this.field_b = new ia[8];
+        this.field_b = new PcmStream[8];
     }
 }

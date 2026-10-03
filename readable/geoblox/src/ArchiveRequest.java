@@ -35,16 +35,16 @@ abstract class ArchiveRequest extends DualLinkNode {
             }
             if (param2) {
               var9.setColor(java.awt.Color.black);
-              var9.fillRect(0, 0, kh.field_d, ok.field_c);
+              var9.fillRect(0, 0, AudioService.field_d, ok.field_c);
             }
             if (param1 == null) {
               param1 = new java.awt.Color(140, 17, 17);
             }
             try {
-              if (null == ff.field_a) {
-                ff.field_a = MessageDialog.gameCanvas.createImage(304, 34);
+              if (null == TextWidgetRenderer.field_a) {
+                TextWidgetRenderer.field_a = MessageDialog.gameCanvas.createImage(304, 34);
               }
-              var10 = ff.field_a.getGraphics();
+              var10 = TextWidgetRenderer.field_a.getGraphics();
               var10.setColor(param1);
               var10.drawRect(0, 0, 303, 33);
               var10.fillRect(2, 2, 3 * param0, 30);
@@ -57,11 +57,11 @@ abstract class ArchiveRequest extends DualLinkNode {
               var10.setFont(hh.field_a);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param4, (-(6 * param4.length()) + 304) / 2, 22);
-              var9.drawImage(ff.field_a, kh.field_d / 2 - 152, ok.field_c / 2 - 18, (java.awt.image.ImageObserver) null);
+              var9.drawImage(TextWidgetRenderer.field_a, AudioService.field_d / 2 - 152, ok.field_c / 2 - 18, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;
-              var7 = kh.field_d / 2 - 152;
+              var7 = AudioService.field_d / 2 - 152;
               var8 = ok.field_c / 2 - 18;
               var9.setColor(param1);
               var9.drawRect(var7, var8, 303, 33);
@@ -78,7 +78,7 @@ abstract class ArchiveRequest extends DualLinkNode {
             }
             var9.setFont(hh.field_a);
             var9.setColor(java.awt.Color.white);
-            var9.drawString(SpriteState.field_q, kh.field_d / 2 - 6 * SpriteState.field_q.length() / 2, -26 + ok.field_c / 2);
+            var9.drawString(SpriteState.field_q, AudioService.field_d / 2 - 6 * SpriteState.field_q.length() / 2, -26 + ok.field_c / 2);
             return;
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

@@ -3,7 +3,7 @@
  */
 final class eg extends IntrusiveNode {
     int[] field_k;
-    static cj field_p;
+    static FrameTimer field_p;
     int[] field_j;
     int[] field_g;
     int field_m;

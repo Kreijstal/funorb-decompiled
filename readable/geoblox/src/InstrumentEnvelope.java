@@ -14,13 +14,13 @@ final class InstrumentEnvelope {
     int volumeEnvelopeKeyScaling;
     int decayKeyScaling;
 
-    final static sa withFailureContext(Throwable cause, String context) {
-        sa wrappedFailure = null;
-        if (cause instanceof sa) {
-            wrappedFailure = (sa) ((Object) cause);
+    final static ContextualRuntimeException withFailureContext(Throwable cause, String context) {
+        ContextualRuntimeException wrappedFailure = null;
+        if (cause instanceof ContextualRuntimeException) {
+            wrappedFailure = (ContextualRuntimeException) ((Object) cause);
             wrappedFailure.field_d = wrappedFailure.field_d + ' ' + context;
         } else {
-            wrappedFailure = new sa(cause, context);
+            wrappedFailure = new ContextualRuntimeException(cause, context);
         }
         return wrappedFailure;
     }

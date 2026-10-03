@@ -122,7 +122,7 @@ final class ae {
 
     private final static int a(int param0, int param1) {
         int var2 = 0;
-        for (var2 = (int)Math.pow((double)param0, 1.0 / (double)param1) + 1; gi.a(param1, (byte) 21, var2) > param0; var2--) {
+        for (var2 = (int)Math.pow((double)param0, 1.0 / (double)param1) + 1; IterableNodeHashTable.a(param1, (byte) 21, var2) > param0; var2--) {
         }
         return var2;
     }

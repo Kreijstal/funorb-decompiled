@@ -9,7 +9,7 @@ final class ol extends ButtonWidget {
     static String field_I;
 
     final static void writeAchievementSubmissionPacket(int packetOpcode, AchievementSubmission submission, int methodGuard) {
-        PacketBuffer packet = fj.field_q;
+        PacketBuffer packet = CacheReference.field_q;
         packet.writeCipherByte(packetOpcode, (byte) -88);
         packet.position = packet.position + 1;
         int payloadStart = packet.position;

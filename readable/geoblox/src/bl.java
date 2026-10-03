@@ -16,7 +16,7 @@ final class bl {
             if (mi.field_C < 20) {
                 return true;
             }
-            if (!fj.f(-31456)) {
+            if (!CacheReference.f(-31456)) {
                 return true;
             }
             if (ik.field_a <= 0) {
@@ -30,7 +30,7 @@ final class bl {
         if (mi.field_C < 20) {
             return true;
         }
-        if (!fj.f(-31456)) {
+        if (!CacheReference.f(-31456)) {
             return true;
         }
         if (ik.field_a <= 0) {

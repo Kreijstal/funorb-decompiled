@@ -35,7 +35,7 @@ final class lc {
                 field_b = -11;
               }
             }
-            if ((!((!((kj.heldInternalKeys[99]) &&
+            if ((!((!((MidiPcmStream.heldInternalKeys[99]) &&
                   (ArchiveNetworkClient.movingEntities.isEmpty(13519)))) &&
                 (~kb.spawnReleaseIntervalTicks <= ~kc.ticksSinceLastEntityRelease)) ||
                 (!(ul.releasedInCurrentTheme != 0) &&
@@ -51,7 +51,7 @@ final class lc {
             if ((SecondaryDeque.spawnQueue.countNodes(methodGuard ^ 143) < 3) &&
                 (ma.c((byte) -53)) &&
                 (!UiWidget.gameplaySession.canAdvanceSession(true))) {
-              queuedEntityThenPooledEntity = (GameplayEntity) ((Object) ra.availableEntities.removeFirst((byte) -101));
+              queuedEntityThenPooledEntity = (GameplayEntity) ((Object) SecondaryNodeDeque.availableEntities.removeFirst((byte) -101));
               if (null != queuedEntityThenPooledEntity) {
                 spawnAngleRadians = 2.0 * Math.random() * 3.141592653589793;
                 spawnPositionX = 240.0f * (float)Math.cos(spawnAngleRadians) + 320.0f;
@@ -244,7 +244,7 @@ final class lc {
             lc.blendScaledDebugOverviewPixels(-56, -44, (int[]) null, 118, 4, -55, 25, -98, -82, -78, (byte) -35, (int[]) null, -116);
           }
           font = new MonochromeBitmapFont(metrics, GameplaySession.decodedSpriteXOffsets, md.decodedSpriteYOffsets, DualLinkNode.decodedSpriteWidths, hl.decodedSpriteHeights, mj.decodedSpriteIndices);
-          kj.clearDecodedSpriteWorkingArrays(true);
+          MidiPcmStream.clearDecodedSpriteWorkingArrays(true);
           fontBeforeReturn = font;
           return fontBeforeReturn;
         } catch (java.lang.RuntimeException fontFailure) {
@@ -336,7 +336,7 @@ final class lc {
               return;
             }
             if (var2 != 4) {
-              gi.a((Throwable) null, "F1: " + og.e(55), (byte) 125);
+              IterableNodeHashTable.a((Throwable) null, "F1: " + og.e(55), (byte) 125);
               Bzip2DecoderState.closeSessionSocket((byte) -119);
               return;
             }
@@ -357,9 +357,9 @@ final class lc {
           }
           var4_ref_String = var1.readNullTerminatedText((byte) 102);
           var5_ref = var1.readNullTerminatedText((byte) 110);
-          var6_ref = jg.a((byte) -62, var4_ref_String);
+          var6_ref = SocketConnector.a((byte) -62, var4_ref_String);
           if (null == var6_ref) {
-            var6_ref = jg.a((byte) -62, var5_ref);
+            var6_ref = SocketConnector.a((byte) -62, var5_ref);
             if (null != var6_ref) {
               ArchiveSource.field_a.a((long)ResizableDialog.a((CharSequence) ((Object) var4_ref_String), 12).hashCode(), -63, var6_ref);
             }

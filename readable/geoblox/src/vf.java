@@ -116,7 +116,7 @@ class vf extends ButtonWidget {
           this.field_G = null;
           if (this.pointerInside) {
             var5_int = -this.widgetX + PrefixCodeDecoder.pointerXSnapshot - parentX;
-            var6 = -this.widgetY - parentY + ue.pointerYSnapshot;
+            var6 = -this.widgetY - parentY + PcmResampler.pointerYSnapshot;
             this.field_G = this.a((byte) 72, var6, var5_int);
           }
           if (hoverGuard) {
@@ -145,7 +145,7 @@ class vf extends ButtonWidget {
         if (renderPass != 0) {
             return;
         }
-        cc var6 = (cc) ((Object) this.renderer);
+        TextWidgetLayout var6 = (TextWidgetLayout) ((Object) this.renderer);
         fb var7 = this.field_G;
         if (var7 == null) {
         } else {
@@ -159,9 +159,9 @@ class vf extends ButtonWidget {
     }
 
     final static Boolean a(byte param0) {
-        Boolean var1 = fi.field_b;
+        Boolean var1 = IntrusiveNodeHashTable.field_b;
         int var2 = -97 / ((param0 - 44) / 60);
-        fi.field_b = null;
+        IntrusiveNodeHashTable.field_b = null;
         return var1;
     }
 
@@ -178,7 +178,7 @@ class vf extends ButtonWidget {
           }
           for (var1_int = 0; 1000 > var1_int; var1_int++) {
             var2 = new GameplayEntity(0, 0, 0, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, var1_int);
-            ra.availableEntities.addLast(-117, var2);
+            SecondaryNodeDeque.availableEntities.addLast(-117, var2);
             tl.entitiesById[var1_int] = var2;
           }
           return;
@@ -228,15 +228,15 @@ class vf extends ButtonWidget {
         int stackIn_12_0 = 0;
         int var2;
         int var3;
-        cc var4;
-        dk var5;
+        TextWidgetLayout var4;
+        TextLayout var5;
         int var6;
         String var7;
         int var8;
         int var9;
         int var10;
         Object var11;
-        lk var13;
+        TextLayoutLine var13;
         int var14;
         int var15;
         fb var16;
@@ -245,7 +245,7 @@ class vf extends ButtonWidget {
         this.field_F = new IntrusiveDeque();
         var2 = 83 / ((param0 - 48) / 55);
         var3 = 0;
-        var4 = (cc) ((Object) this.renderer);
+        var4 = (TextWidgetLayout) ((Object) this.renderer);
         var5 = var4.a((byte) 116, (UiWidget) (this));
         while (true) {
           var6 = this.widgetText.indexOf("<hotspot=", var3);
@@ -331,7 +331,7 @@ class vf extends ButtonWidget {
         if (param1 != 0) {
             field_I = (ByteArrayBuffer) null;
         }
-        this.setWidgetBounds(((cc) ((Object) this.renderer)).a(14, (UiWidget) (this)), param3, (byte) -40, param2, param0);
+        this.setWidgetBounds(((TextWidgetLayout) ((Object) this.renderer)).a(14, (UiWidget) (this)), param3, (byte) -40, param2, param0);
     }
 
     final void setWidgetBounds(int height, int width, byte methodGuard, int y, int x) {

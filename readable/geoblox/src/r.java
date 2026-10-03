@@ -44,7 +44,7 @@ final class r extends MessageDialog implements ButtonActivationListener {
               var4 = param1.field_e;
               if (param1.field_j == 248) {
                 if (!param0) {
-                  cf.h(-65);
+                  AgeValidator.h(-65);
                 }
                 this.field_vb = true;
                 var4 = hi.createIneligibleText;
@@ -56,7 +56,7 @@ final class r extends MessageDialog implements ButtonActivationListener {
               }
             }
           } else {
-            var4 = lh.createAccountSuccessText;
+            var4 = ValidationState.createAccountSuccessText;
           }
           var5 = new ni((MessageDialog) (this), hh.field_c, var4);
           if (param1.field_g) {

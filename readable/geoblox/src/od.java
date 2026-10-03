@@ -125,13 +125,13 @@ final class od {
         try {
           if (null != te.field_c) {
             for (var1_int = 0; var1_int < 7; var1_int++) {
-              if (!ag.field_j[var1_int]) {
+              if (!EmailValidator.field_j[var1_int]) {
                 return;
               }
             }
             kf.field_c = null;
             sl.field_l = null;
-            uh.field_y.c((byte) 83);
+            PasswordWidgetRenderer.field_y.c((byte) 83);
             te.field_c = null;
           }
           if (param0 == -24) {

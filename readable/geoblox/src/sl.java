@@ -27,10 +27,10 @@ final class sl {
             return;
           }
           DropTargetWidget.a((java.awt.Component) ((Object) param0), param1 - 56);
-          if (null == vc.mouseWheelInput) {
+          if (null == CachedTextLayout.mouseWheelInput) {
             return;
           }
-          vc.mouseWheelInput.attachWheelListener(124, (java.awt.Component) ((Object) param0));
+          CachedTextLayout.mouseWheelInput.attachWheelListener(124, (java.awt.Component) ((Object) param0));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -119,7 +119,7 @@ final class sl {
         this.field_g = param0 ? true : false;
     }
 
-    final static int a(boolean param0, wf param1, boolean param2) {
+    final static int a(boolean param0, SessionGameApplet param1, boolean param2) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;

@@ -25,7 +25,7 @@ final class ec {
           }
           var6 = (mg) ((Object) ResourceArchive.field_d.firstForIteration(0));
           while (var6 != null) {
-            ib.a(param1, 5, var6);
+            DebouncedValidationProvider.a(param1, 5, var6);
             var6 = (mg) ((Object) ResourceArchive.field_d.nextForIteration(1));
           }
           return;
@@ -71,13 +71,13 @@ final class ec {
             return false;
           }
           if (gf.matchChainLength >= 5) {
-            ra.recordAchievement(jf.field_g ^ 255, -99, jf.field_g);
+            SecondaryNodeDeque.recordAchievement(jf.field_g ^ 255, -99, jf.field_g);
           }
           if (gf.matchChainLength >= 6) {
-            ra.recordAchievement(LoginPayloadKind.field_d ^ 255, -57, LoginPayloadKind.field_d);
+            SecondaryNodeDeque.recordAchievement(LoginPayloadKind.field_d ^ 255, -57, LoginPayloadKind.field_d);
           }
           if (gf.matchChainLength >= 7) {
-            ra.recordAchievement(255 ^ IntrusiveDeque.field_f, -97, IntrusiveDeque.field_f);
+            SecondaryNodeDeque.recordAchievement(255 ^ IntrusiveDeque.field_f, -97, IntrusiveDeque.field_f);
           }
           for (sortInsertionIndex = 1; sortInsertionIndex < h.matchCandidateCount; sortInsertionIndex++) {
             sortCursorThenFirstEntityId = sortInsertionIndex - 1;
@@ -118,7 +118,7 @@ final class ec {
                 }
                 if (-1073741824 == (-1073741824 & nk.packedMatchCandidates[candidateIndex])) {
                   awardedPoints = 90 * gf.matchChainLength;
-                  ra.recordAchievement(fa.field_e ^ 255, -100, fa.field_e);
+                  SecondaryNodeDeque.recordAchievement(fa.field_e ^ 255, -100, fa.field_e);
                 } else {
                   awardedPoints = 30 * gf.matchChainLength;
                 }

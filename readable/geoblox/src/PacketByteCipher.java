@@ -179,10 +179,10 @@ final class PacketByteCipher {
             }
           }
           this.accumulator = this.accumulator + this.stateWords[255 & 128 + wordIndex];
-          updatedStateWord = this.lastResult + (this.accumulator + this.stateWords[cd.andInt(255, previousStateWord >> 2)]);
+          updatedStateWord = this.lastResult + (this.accumulator + this.stateWords[ProxySocketConnector.andInt(255, previousStateWord >> 2)]);
           stateWordForResultLookup = updatedStateWord;
           this.stateWords[wordIndex] = updatedStateWord;
-          generatedResult = previousStateWord + this.stateWords[cd.andInt(stateWordForResultLookup >> 8, 1020) >> 2];
+          generatedResult = previousStateWord + this.stateWords[ProxySocketConnector.andInt(stateWordForResultLookup >> 8, 1020) >> 2];
           this.lastResult = generatedResult;
           this.results[wordIndex] = generatedResult;
           wordIndex++;
@@ -193,9 +193,9 @@ final class PacketByteCipher {
         int var1 = DiskCacheWorker.avatarTintPalette[-1 + DiskCacheWorker.avatarTintPalette.length];
         SocketArchiveNetworkClient.field_x = (float)(-(255 & si.field_j) + (255 & var1));
         MenuScreen.introTintGreenDelta = (float)(-(si.field_j >> 8 & 255) + (var1 >> 8 & 255));
-        lk.field_b = (float)(((var1 & 16735942) >> 16) - (si.field_j >> 16 & 255));
+        TextLayoutLine.field_b = (float)(((var1 & 16735942) >> 16) - (si.field_j >> 16 & 255));
         int var2 = 80 % ((5 - param0) / 52);
-        fi.a(0, ll.field_d);
+        IntrusiveNodeHashTable.a(0, ll.field_d);
     }
 
     public static void b(byte param0) {

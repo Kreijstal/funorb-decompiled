@@ -6,7 +6,7 @@ import java.util.*;
 
 final class WhirlpoolHash {
     private long[] hashWords;
-    static ob field_d;
+    static PcmStreamMixer field_d;
     private byte[] blockBuffer;
     private byte[] messageBitLength;
     private long[] roundScratch;
@@ -39,7 +39,7 @@ final class WhirlpoolHash {
         wordIndexOrRound = 0;
         blockByteOffsetOrWordIndex = 0;
         while (wordIndexOrRound < 8) {
-          this.messageWords[wordIndexOrRound] = MessageDialog.xorLong(cj.andLong((long)this.blockBuffer[7 + blockByteOffsetOrWordIndex], 255L), MessageDialog.xorLong(MessageDialog.xorLong(MessageDialog.xorLong(MessageDialog.xorLong(cj.andLong(1095216660480L, (long)this.blockBuffer[blockByteOffsetOrWordIndex + 3] << 32), MessageDialog.xorLong(cj.andLong(255L, (long)this.blockBuffer[blockByteOffsetOrWordIndex + 2]) << 40, MessageDialog.xorLong(cj.andLong((long)this.blockBuffer[blockByteOffsetOrWordIndex + 1] << 48, 71776119061217280L), (long)this.blockBuffer[blockByteOffsetOrWordIndex] << 56))), cj.andLong((long)this.blockBuffer[4 + blockByteOffsetOrWordIndex] << 24, 4278190080L)), cj.andLong(16711680L, (long)this.blockBuffer[blockByteOffsetOrWordIndex + 5] << 16)), cj.andLong((long)this.blockBuffer[blockByteOffsetOrWordIndex + 6] << 8, 65280L)));
+          this.messageWords[wordIndexOrRound] = MessageDialog.xorLong(FrameTimer.andLong((long)this.blockBuffer[7 + blockByteOffsetOrWordIndex], 255L), MessageDialog.xorLong(MessageDialog.xorLong(MessageDialog.xorLong(MessageDialog.xorLong(FrameTimer.andLong(1095216660480L, (long)this.blockBuffer[blockByteOffsetOrWordIndex + 3] << 32), MessageDialog.xorLong(FrameTimer.andLong(255L, (long)this.blockBuffer[blockByteOffsetOrWordIndex + 2]) << 40, MessageDialog.xorLong(FrameTimer.andLong((long)this.blockBuffer[blockByteOffsetOrWordIndex + 1] << 48, 71776119061217280L), (long)this.blockBuffer[blockByteOffsetOrWordIndex] << 56))), FrameTimer.andLong((long)this.blockBuffer[4 + blockByteOffsetOrWordIndex] << 24, 4278190080L)), FrameTimer.andLong(16711680L, (long)this.blockBuffer[blockByteOffsetOrWordIndex + 5] << 16)), FrameTimer.andLong((long)this.blockBuffer[blockByteOffsetOrWordIndex + 6] << 8, 65280L)));
           blockByteOffsetOrWordIndex += 8;
           wordIndexOrRound++;
         }
@@ -55,7 +55,7 @@ final class WhirlpoolHash {
             keyByteIndexOrStateStartSnapshot = 0;
             byteShift = 56;
             while (keyByteIndexOrStateStartSnapshot < 8) {
-              this.roundScratch[blockByteOffsetOrWordIndex] = MessageDialog.xorLong(this.roundScratch[blockByteOffsetOrWordIndex], ByteArrayBuffer.whirlpoolTables[keyByteIndexOrStateStartSnapshot][cd.andInt(255, (int)(this.roundKey[cd.andInt(7, blockByteOffsetOrWordIndex - keyByteIndexOrStateStartSnapshot)] >>> byteShift))]);
+              this.roundScratch[blockByteOffsetOrWordIndex] = MessageDialog.xorLong(this.roundScratch[blockByteOffsetOrWordIndex], ByteArrayBuffer.whirlpoolTables[keyByteIndexOrStateStartSnapshot][ProxySocketConnector.andInt(255, (int)(this.roundKey[ProxySocketConnector.andInt(7, blockByteOffsetOrWordIndex - keyByteIndexOrStateStartSnapshot)] >>> byteShift))]);
               byteShift -= 8;
               keyByteIndexOrStateStartSnapshot++;
             }
@@ -70,7 +70,7 @@ final class WhirlpoolHash {
             keyByteIndexOrStateStartSnapshot = stateByteIndex;
             byteShift = 56;
             while (stateByteIndex < 8) {
-              this.roundScratch[blockByteOffsetOrWordIndex] = MessageDialog.xorLong(this.roundScratch[blockByteOffsetOrWordIndex], ByteArrayBuffer.whirlpoolTables[stateByteIndex][cd.andInt(255, (int)(this.cipherState[cd.andInt(-stateByteIndex + blockByteOffsetOrWordIndex, 7)] >>> byteShift))]);
+              this.roundScratch[blockByteOffsetOrWordIndex] = MessageDialog.xorLong(this.roundScratch[blockByteOffsetOrWordIndex], ByteArrayBuffer.whirlpoolTables[stateByteIndex][ProxySocketConnector.andInt(255, (int)(this.cipherState[ProxySocketConnector.andInt(-stateByteIndex + blockByteOffsetOrWordIndex, 7)] >>> byteShift))]);
               stateByteIndex++;
               byteShift -= 8;
             }
@@ -127,7 +127,7 @@ final class WhirlpoolHash {
                   this.bufferBytePosition = 0;
                   this.bufferedBitCount = 0;
                 }
-                this.blockBuffer[this.bufferBytePosition] = (byte)cd.andInt(255, shiftedSourceByte << -bufferPartialByteBits + 8);
+                this.blockBuffer[this.bufferBytePosition] = (byte)ProxySocketConnector.andInt(255, shiftedSourceByte << -bufferPartialByteBits + 8);
                 remainingBitCount = remainingBitCount - 8L;
                 this.bufferedBitCount = this.bufferedBitCount + bufferPartialByteBits;
                 sourceByteIndex++;
@@ -152,7 +152,7 @@ final class WhirlpoolHash {
                 this.bufferedBitCount = 0;
                 this.bufferBytePosition = 0;
               }
-              this.blockBuffer[this.bufferBytePosition] = (byte)cd.andInt(shiftedSourceByte << -bufferPartialByteBits + 8, 255);
+              this.blockBuffer[this.bufferBytePosition] = (byte)ProxySocketConnector.andInt(shiftedSourceByte << -bufferPartialByteBits + 8, 255);
               this.bufferedBitCount = this.bufferedBitCount + (int)remainingBitCount;
             }
             return;
@@ -181,7 +181,7 @@ final class WhirlpoolHash {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 12) {
-            field_d = (ob) null;
+            field_d = (PcmStreamMixer) null;
           }
           var3 = (CharSequence) ((Object) param0);
           stackIn_3_0 = vg.field_b.equals(ResizableDialog.a(var3, 12));
@@ -214,7 +214,7 @@ final class WhirlpoolHash {
         int unusedClientGuardSnapshot = 0;
         unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          this.blockBuffer[this.bufferBytePosition] = (byte)lb.orInt((int) this.blockBuffer[this.bufferBytePosition], 128 >>> cd.andInt(this.bufferedBitCount, 7));
+          this.blockBuffer[this.bufferBytePosition] = (byte)lb.orInt((int) this.blockBuffer[this.bufferBytePosition], 128 >>> ProxySocketConnector.andInt(this.bufferedBitCount, 7));
           this.bufferBytePosition = this.bufferBytePosition + 1;
           if (this.bufferBytePosition > 32) {
             while (this.bufferBytePosition < 64) {
@@ -276,26 +276,26 @@ final class WhirlpoolHash {
             IOException handshakeIoFailure = null;
             String unusedGuardTextSnapshot = null;
             ByteArrayBuffer handshakePacket = null;
-            if (wg.archiveNetworkClient.failureCount >= 4) {
-              if (wg.archiveNetworkClient.failureCode == -1) {
+            if (AsyncResourceDownloader.archiveNetworkClient.failureCount >= 4) {
+              if (AsyncResourceDownloader.archiveNetworkClient.failureCode == -1) {
                 return 3;
               }
-              if (wg.archiveNetworkClient.failureCode != -2) {
+              if (AsyncResourceDownloader.archiveNetworkClient.failureCode != -2) {
                 return 1;
               }
               return 4;
             }
             try {
               if (qh.archiveHandshakeStage == 0) {
-                gj.archiveConnectTask = ph.archiveTaskDispatcher.requestSocket(vg.archivePort, GameplaySession.archiveHost, false);
+                StrongCacheReference.archiveConnectTask = ph.archiveTaskDispatcher.requestSocket(vg.archivePort, GameplaySession.archiveHost, false);
                 qh.archiveHandshakeStage = qh.archiveHandshakeStage + 1;
               }
               if (qh.archiveHandshakeStage == 1) {
-                if (gj.archiveConnectTask.status == 2) {
+                if (StrongCacheReference.archiveConnectTask.status == 2) {
                   connectFailureBeforeReturn = eb.handleArchiveHandshakeFailure(-1, 28625);
                   return connectFailureBeforeReturn;
                 }
-                if (1 == gj.archiveConnectTask.status) {
+                if (1 == StrongCacheReference.archiveConnectTask.status) {
                   qh.archiveHandshakeStage = qh.archiveHandshakeStage + 1;
                 }
               }
@@ -304,11 +304,11 @@ final class WhirlpoolHash {
                 WhirlpoolHash.a((String) null, (byte) -15);
               }
               if (2 == qh.archiveHandshakeStage) {
-                li.archiveHandshakeSocket = new BufferedSocket((java.net.Socket) (gj.archiveConnectTask.result), ph.archiveTaskDispatcher);
+                li.archiveHandshakeSocket = new BufferedSocket((java.net.Socket) (StrongCacheReference.archiveConnectTask.result), ph.archiveTaskDispatcher);
                 handshakePacket = new ByteArrayBuffer(13);
-                ke.writeConnectionHeader(pc.archiveLanguageId, true, hc.archiveClientId, ArchiveIndex.archiveServerNumber, handshakePacket);
+                ke.writeConnectionHeader(MidiNote.archiveLanguageId, true, ValidatedTextInputWidget.archiveClientId, ArchiveIndex.archiveServerNumber, handshakePacket);
                 handshakePacket.writeByte((byte) -54, 15);
-                handshakePacket.writeIntBE((byte) 95, ag.archiveGameCrc);
+                handshakePacket.writeIntBE((byte) 95, EmailValidator.archiveGameCrc);
                 li.archiveHandshakeSocket.enqueueWrite(100, 0, 13, handshakePacket.bytes);
                 qh.archiveHandshakeStage = qh.archiveHandshakeStage + 1;
                 eb.archiveHandshakeDeadlineMillis = 30000L + oa.a(methodGuard - 12446);
@@ -331,8 +331,8 @@ final class WhirlpoolHash {
               if (4 != qh.archiveHandshakeStage) {
                 return -1;
               }
-              wg.archiveNetworkClient.attachSocket(li.archiveHandshakeSocket, false, si.archiveUseControlOpcode2);
-              gj.archiveConnectTask = null;
+              AsyncResourceDownloader.archiveNetworkClient.attachSocket(li.archiveHandshakeSocket, false, si.archiveUseControlOpcode2);
+              StrongCacheReference.archiveConnectTask = null;
               qh.archiveHandshakeStage = 0;
               li.archiveHandshakeSocket = null;
               successBeforeReturn = 0;

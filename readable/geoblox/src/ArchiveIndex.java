@@ -25,10 +25,10 @@ final class ArchiveIndex {
     int[] fileCounts;
 
     final static int[] buildLogoRotationTransform(int xAngle8192, byte methodGuard, int yAngle8192) {
-        int sinXQ16 = bh.sineQ16((byte) 69, xAngle8192);
-        int cosXQ16 = fi.cosineQ16(xAngle8192, 2048);
-        int sinYQ16 = bh.sineQ16((byte) 101, yAngle8192);
-        int cosYQ16 = fi.cosineQ16(yAngle8192, 2048);
+        int sinXQ16 = DelegatingCanvas.sineQ16((byte) 69, xAngle8192);
+        int cosXQ16 = IntrusiveNodeHashTable.cosineQ16(xAngle8192, 2048);
+        int sinYQ16 = DelegatingCanvas.sineQ16((byte) 101, yAngle8192);
+        int cosYQ16 = IntrusiveNodeHashTable.cosineQ16(yAngle8192, 2048);
         int sinXsinYQ16 = (int)((long)sinXQ16 * (long)sinYQ16 >> 16);
         int sinXcosYQ16 = (int)((long)cosYQ16 * (long)sinXQ16 >> 16);
         int cosXsinYQ16 = (int)((long)cosXQ16 * (long)sinYQ16 >> 16);
@@ -254,7 +254,7 @@ final class ArchiveIndex {
         int var5 = 0;
         int var6 = Geoblox.clientControlFlowFlag;
         try {
-            var7 = fj.field_q;
+            var7 = CacheReference.field_q;
             var8 = var7;
             var8.writeCipherByte(param1, (byte) -125);
             var8.position = var8.position + 1;

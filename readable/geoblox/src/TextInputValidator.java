@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class TextInputValidator extends ib implements ga {
+abstract class TextInputValidator extends DebouncedValidationProvider implements ga {
     static uj field_h;
     static double field_f;
-    private dj validatedInput;
+    private TextInputWidget validatedInput;
 
     final static void a(byte param0, boolean param1) {
         if (param0 < 102) {
@@ -13,9 +13,9 @@ abstract class TextInputValidator extends ib implements ga {
         b.a(false, param1, false);
     }
 
-    final lh currentValidationState(int guard) {
+    final ValidationState currentValidationState(int guard) {
         if (guard != 32) {
-            return (lh) null;
+            return (ValidationState) null;
         }
         return this.validationStateForText(-257, this.validatedInput.widgetText);
     }
@@ -38,10 +38,10 @@ abstract class TextInputValidator extends ib implements ga {
         return true;
     }
 
-    public final void a(dj param0, int param1) {
+    public final void a(TextInputWidget param0, int param1) {
         try {
             if (param1 != -18649) {
-                this.validatedInput = (dj) null;
+                this.validatedInput = (TextInputWidget) null;
             }
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "q.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -77,26 +77,26 @@ abstract class TextInputValidator extends ib implements ga {
 
     final static void initializeArchiveServices(int clientId, int languageId, int primaryPort, int serverNumber, int methodGuard, PlatformTaskDispatcher taskDispatcher, String archiveHost, int gameCrc, int alternatePort) {
         try {
-            ag.archiveGameCrc = gameCrc;
+            EmailValidator.archiveGameCrc = gameCrc;
             ArchiveIndex.archiveServerNumber = serverNumber;
             GameplaySession.archiveHost = archiveHost;
-            hc.archiveClientId = clientId;
-            pc.archiveLanguageId = languageId;
+            ValidatedTextInputWidget.archiveClientId = clientId;
+            MidiNote.archiveLanguageId = languageId;
             vg.archivePort = primaryPort;
             ph.archiveTaskDispatcher = taskDispatcher;
             if (methodGuard != -23949) {
                 field_f = -0.8279321027589008;
             }
             ij.alternateArchivePort = alternatePort;
-            wg.archiveNetworkClient = (ArchiveNetworkClient) ((Object) new SocketArchiveNetworkClient());
+            AsyncResourceDownloader.archiveNetworkClient = (ArchiveNetworkClient) ((Object) new SocketArchiveNetworkClient());
             cl.archiveDiskWorker = new DiskCacheWorker(taskDispatcher);
-            DequeCursor.archiveCatalog = new ArchiveCatalog(wg.archiveNetworkClient, cl.archiveDiskWorker);
+            DequeCursor.archiveCatalog = new ArchiveCatalog(AsyncResourceDownloader.archiveNetworkClient, cl.archiveDiskWorker);
         } catch (RuntimeException initializationFailure) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) initializationFailure), "q.N(" + clientId + ',' + languageId + ',' + primaryPort + ',' + serverNumber + ',' + methodGuard + ',' + (taskDispatcher != null ? "{...}" : "null") + ',' + (archiveHost != null ? "{...}" : "null") + ',' + gameCrc + ',' + alternatePort + ')');
         }
     }
 
-    public final void a(dj param0, byte param1) {
+    public final void a(TextInputWidget param0, byte param1) {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -139,7 +139,7 @@ abstract class TextInputValidator extends ib implements ga {
               (Geoblox.activeMessageDialog.dialogVisible)) {
             if (8 == param1) {
               param1 = 2;
-              if (!cf.field_i) {
+              if (!AgeValidator.field_i) {
                 param2 = mi.invalidUserOrPasswordText;
               } else {
                 param2 = DualLinkNode.invalidPasswordText;
@@ -162,7 +162,7 @@ abstract class TextInputValidator extends ib implements ga {
             }
             if ((param1 != 256) &&
                 (param1 != 10) &&
-                (!cf.field_i)) {
+                (!AgeValidator.field_i)) {
               ml.field_t.i(-119);
             }
           }
@@ -243,13 +243,13 @@ abstract class TextInputValidator extends ib implements ga {
         }
     }
 
-    abstract lh validationStateForText(int guard, String candidateText);
+    abstract ValidationState validationStateForText(int guard, String candidateText);
 
     final String currentValidationMessage(byte guard) {
         if (guard == -103) {
             return this.validationMessageForText(422, this.validatedInput.widgetText);
         }
-        this.validatedInput = (dj) null;
+        this.validatedInput = (TextInputWidget) null;
         return this.validationMessageForText(422, this.validatedInput.widgetText);
     }
 
@@ -260,7 +260,7 @@ abstract class TextInputValidator extends ib implements ga {
         }
     }
 
-    TextInputValidator(dj validatedInput) {
+    TextInputValidator(TextInputWidget validatedInput) {
         try {
             this.validatedInput = validatedInput;
         } catch (RuntimeException runtimeException) {

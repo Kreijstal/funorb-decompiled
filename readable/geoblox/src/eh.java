@@ -48,13 +48,13 @@ final class eh {
             if (var6 >= 20) {
               if (var6 >= 30) {
                 var7 = 256 * (-var6 + 50) / 20;
-                cd.field_l.drawAdditive(var3, var4, var7);
+                ProxySocketConnector.field_l.drawAdditive(var3, var4, var7);
               } else {
-                cd.field_l.drawAdditive(var3, var4, 256);
+                ProxySocketConnector.field_l.drawAdditive(var3, var4, 256);
               }
             } else {
               var7 = var6 * 256 / 20;
-              cd.field_l.drawAdditive(var3, var4, var7);
+              ProxySocketConnector.field_l.drawAdditive(var3, var4, var7);
             }
           }
         } else {
@@ -69,13 +69,13 @@ final class eh {
                 if (var6 >= 20) {
                   if (var6 >= 30) {
                     var7 = 256 * (-var6 + 50) / 20;
-                    cd.field_l.drawAdditive(var3, var4, var7);
+                    ProxySocketConnector.field_l.drawAdditive(var3, var4, var7);
                   } else {
-                    cd.field_l.drawAdditive(var3, var4, 256);
+                    ProxySocketConnector.field_l.drawAdditive(var3, var4, 256);
                   }
                 } else {
                   var7 = var6 * 256 / 20;
-                  cd.field_l.drawAdditive(var3, var4, var7);
+                  ProxySocketConnector.field_l.drawAdditive(var3, var4, var7);
                 }
               }
               var6 = DequeCursor.logoAnimationTick - 140;
@@ -109,7 +109,7 @@ final class eh {
                 } else {
                   if (var6 < 20) {
                     var7 = var6 * 256 / 20;
-                    cd.field_l.drawAdditive(var3, var4, var7);
+                    ProxySocketConnector.field_l.drawAdditive(var3, var4, var7);
                     var6 = DequeCursor.logoAnimationTick - 140;
                     if (var6 > 0) {
                       var7 = 256;
@@ -120,7 +120,7 @@ final class eh {
                     }
                   } else {
                     if (var6 < 30) {
-                      cd.field_l.drawAdditive(var3, var4, 256);
+                      ProxySocketConnector.field_l.drawAdditive(var3, var4, 256);
                       var6 = DequeCursor.logoAnimationTick - 140;
                       if (var6 > 0) {
                         var7 = 256;
@@ -131,7 +131,7 @@ final class eh {
                       }
                     } else {
                       var7 = 256 * (-var6 + 50) / 20;
-                      cd.field_l.drawAdditive(var3, var4, var7);
+                      ProxySocketConnector.field_l.drawAdditive(var3, var4, var7);
                       var6 = DequeCursor.logoAnimationTick - 140;
                       if (var6 > 0) {
                         var7 = 256;
@@ -156,13 +156,13 @@ final class eh {
               if (var6 >= 20) {
                 if (var6 >= 30) {
                   var7 = 256 * (-var6 + 50) / 20;
-                  cd.field_l.drawAdditive(var3, var4, var7);
+                  ProxySocketConnector.field_l.drawAdditive(var3, var4, var7);
                 } else {
-                  cd.field_l.drawAdditive(var3, var4, 256);
+                  ProxySocketConnector.field_l.drawAdditive(var3, var4, 256);
                 }
               } else {
                 var7 = var6 * 256 / 20;
-                cd.field_l.drawAdditive(var3, var4, var7);
+                ProxySocketConnector.field_l.drawAdditive(var3, var4, var7);
               }
             }
           } else {
@@ -170,13 +170,13 @@ final class eh {
                 (var6 < 50)) {
               if (var6 < 20) {
                 var7 = var6 * 256 / 20;
-                cd.field_l.drawAdditive(var3, var4, var7);
+                ProxySocketConnector.field_l.drawAdditive(var3, var4, var7);
               } else {
                 if (var6 < 30) {
-                  cd.field_l.drawAdditive(var3, var4, 256);
+                  ProxySocketConnector.field_l.drawAdditive(var3, var4, 256);
                 } else {
                   var7 = 256 * (-var6 + 50) / 20;
-                  cd.field_l.drawAdditive(var3, var4, var7);
+                  ProxySocketConnector.field_l.drawAdditive(var3, var4, var7);
                 }
               }
             }

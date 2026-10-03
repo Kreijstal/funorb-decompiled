@@ -72,7 +72,7 @@ final class hj {
         spriteIndex = 0;
         while (true) {
           if (sb.decodedSpriteCount <= spriteIndex) {
-            kj.clearDecodedSpriteWorkingArrays(true);
+            MidiPcmStream.clearDecodedSpriteWorkingArrays(true);
             return sprites;
           }
           pixelCount = hl.decodedSpriteHeights[spriteIndex] * DualLinkNode.decodedSpriteWidths[spriteIndex];
@@ -81,7 +81,7 @@ final class hj {
             rgbPixelsForUpdates = new int[pixelCount];
             rgbPixelsSnapshot = rgbPixelsForUpdates;
             for (rgbPixelIndex = 0; pixelCount > rgbPixelIndex; rgbPixelIndex++) {
-              rgbPixelsForUpdates[rgbPixelIndex] = cm.decodedSpritePalette[cd.andInt((int) paletteIndices[rgbPixelIndex], 255)];
+              rgbPixelsForUpdates[rgbPixelIndex] = NanoFrameTimer.decodedSpritePalette[ProxySocketConnector.andInt((int) paletteIndices[rgbPixelIndex], 255)];
             }
             sprites[spriteIndex] = new Sprite(pg.decodedSpriteCanvasWidth, FadingDialog.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[spriteIndex], md.decodedSpriteYOffsets[spriteIndex], DualLinkNode.decodedSpriteWidths[spriteIndex], hl.decodedSpriteHeights[spriteIndex], rgbPixelsSnapshot);
             spriteIndex++;
@@ -95,7 +95,7 @@ final class hj {
           argbPixelsForwarded = argbPixelsSnapshot;
           argbPixelsForUpdates = argbPixelsForwarded;
           for (argbPixelIndex = 0; argbPixelIndex < pixelCount; argbPixelIndex++) {
-            argbPixelsForUpdates[argbPixelIndex] = lb.orInt(cd.andInt(alphaPlaneSnapshot[argbPixelIndex] << 24, -16777216), cm.decodedSpritePalette[cd.andInt((int) paletteIndices[argbPixelIndex], 255)]);
+            argbPixelsForUpdates[argbPixelIndex] = lb.orInt(ProxySocketConnector.andInt(alphaPlaneSnapshot[argbPixelIndex] << 24, -16777216), NanoFrameTimer.decodedSpritePalette[ProxySocketConnector.andInt((int) paletteIndices[argbPixelIndex], 255)]);
           }
           sprites[spriteIndex] = (Sprite) ((Object) new ArgbSprite(pg.decodedSpriteCanvasWidth, FadingDialog.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[spriteIndex], md.decodedSpriteYOffsets[spriteIndex], DualLinkNode.decodedSpriteWidths[spriteIndex], hl.decodedSpriteHeights[spriteIndex], argbPixelsSnapshot));
           spriteIndex++;

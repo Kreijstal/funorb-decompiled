@@ -37,7 +37,7 @@ final class mc {
           dl.field_a = null;
           ResourceArchive.field_i = param1;
           kd.field_b = IntrusiveDeque.field_d;
-          oj.field_a = param6;
+          ByteStorage.field_a = param6;
           oc.field_a = param0;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -83,7 +83,7 @@ final class mc {
             pointerPressXSnapshot = -77;
           }
           PrefixCodeDecoder.pointerXSnapshot = lj.livePointerX;
-          ue.pointerYSnapshot = eg.livePointerY;
+          PcmResampler.pointerYSnapshot = eg.livePointerY;
           wb.pointerActivitySnapshot = fc.pointerActivityPending;
           fc.pointerActivityPending = false;
           bi.pointerPressButtonSnapshot = vd.pendingPointerPressButton;

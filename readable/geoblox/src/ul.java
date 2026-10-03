@@ -61,7 +61,7 @@ final class ul {
           while (centralEntity != null) {
             if (!((centralEntity.sameVariantEntityCount <= 1) &&
                 (centralEntity.sameCategoryEntityCount <= 1))) {
-              centralEntity.entityQueue = bh.transientEntities;
+              centralEntity.entityQueue = DelegatingCanvas.transientEntities;
               stackIn_10_0 = (centralEntity.sameVariantEntityCount <= 1) ? 0 : 1;
               variantMatchingAllowed = stackIn_10_0;
               stackIn_13_0 = (centralEntity.sameCategoryEntityCount <= 1) ? 0 : 1;
@@ -97,8 +97,8 @@ final class ul {
                     tripleSharesVariant = stackIn_44_0;
                     if (!((tripleSharesCategory == 0) &&
                         (tripleSharesVariant == 0))) {
-                      centralEntity.relatedEntities[firstNeighborIndex].entityQueue = bh.transientEntities;
-                      centralEntity.relatedEntities[secondNeighborIndex].entityQueue = bh.transientEntities;
+                      centralEntity.relatedEntities[firstNeighborIndex].entityQueue = DelegatingCanvas.transientEntities;
+                      centralEntity.relatedEntities[secondNeighborIndex].entityQueue = DelegatingCanvas.transientEntities;
                       middlePackedEntityId = centralEntity.relatedEntities[firstNeighborIndex].entityId;
                       largestPackedEntityId = centralEntity.entityId;
                       smallestPackedEntityId = centralEntity.relatedEntities[secondNeighborIndex].entityId;
@@ -114,7 +114,7 @@ final class ul {
                           (tripleSharesCategory != 0)) {
                       }
                       if (tripleSharesCategory != 0) {
-                        dk.categoryMatchCandidateCount = dk.categoryMatchCandidateCount + 1;
+                        TextLayout.categoryMatchCandidateCount = TextLayout.categoryMatchCandidateCount + 1;
                       }
                       if (largestPackedEntityId >= smallestPackedEntityId) {
                         if (middlePackedEntityId > largestPackedEntityId) {

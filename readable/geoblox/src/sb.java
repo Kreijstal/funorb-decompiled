@@ -23,7 +23,7 @@ final class sb {
         if (!param0) {
             return 104;
         }
-        return (int)(1000000000L / oj.field_c);
+        return (int)(1000000000L / ByteStorage.field_c);
     }
 
     final static boolean a(int param0) {

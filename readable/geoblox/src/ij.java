@@ -88,10 +88,10 @@ final class ij extends ResizableDialog implements ButtonActivationListener {
             var3 = ei.fullscreenUnavailableTrySignedAppletText;
           } else {
             if (param1 == ei.field_hb) {
-              var3 = k.fullscreenFocusText;
+              var3 = NodeHashTableIterator.fullscreenFocusText;
               this.widgetHeight = this.widgetHeight + 10;
               if (nb.a(true)) {
-                var3 = ad.fullscreenFocusOrResolutionText;
+                var3 = MidiNoteMixer.fullscreenFocusOrResolutionText;
                 this.widgetHeight = this.widgetHeight + 20;
               }
             } else {
@@ -106,7 +106,7 @@ final class ij extends ResizableDialog implements ButtonActivationListener {
           var4.widgetHeight = 80;
           var4.widgetWidth = this.widgetWidth;
           var4.widgetY = 50;
-          var4.renderer = (WidgetRenderer) ((Object) new ff(hh.field_d, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.renderer = (WidgetRenderer) ((Object) new TextWidgetRenderer(hh.field_d, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild((byte) -91, var4);
           this.field_bb = this.a(hh.fullscreenCloseButtonText, (byte) 87, (WidgetListener) (this));
           return;

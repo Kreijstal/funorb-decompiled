@@ -5,7 +5,7 @@ final class pi extends vf {
     private Sprite field_Q;
     private int field_P;
     static int[][] logoMeshCenters;
-    private dg field_M;
+    private ValidationProvider field_M;
     static IndexedSprite sweetsBackgroundSprite;
     static MusicScore field_S;
     private String field_N;
@@ -57,27 +57,27 @@ final class pi extends vf {
     }
 
     final static void c(int param0, int param1) {
-        wg.field_a = param0 >> 4 & 3;
-        if (!(wg.field_a <= 2)) {
-            wg.field_a = 2;
+        AsyncResourceDownloader.field_a = param0 >> 4 & 3;
+        if (!(AsyncResourceDownloader.field_a <= 2)) {
+            AsyncResourceDownloader.field_a = 2;
         }
         ByteArrayBuffer.field_i = param0 >> 2 & 3;
-        ad.field_j = 3 & param0;
+        MidiNoteMixer.field_j = 3 & param0;
         if (!(ByteArrayBuffer.field_i <= 2)) {
             ByteArrayBuffer.field_i = 2;
         }
         if (param1 != -12718) {
             pi.j(-27);
-            if (ad.field_j > 2) {
-                ad.field_j = 2;
+            if (MidiNoteMixer.field_j > 2) {
+                MidiNoteMixer.field_j = 2;
                 return;
             }
             return;
         }
-        if (ad.field_j <= 2) {
+        if (MidiNoteMixer.field_j <= 2) {
             return;
         }
-        ad.field_j = 2;
+        MidiNoteMixer.field_j = 2;
     }
 
     final void updatePointerState(boolean hoverGuard, int parentY, UiWidget eventContext, int parentX) {
@@ -117,9 +117,9 @@ final class pi extends vf {
 
     final void renderWidget(int parentX, int parentY, byte methodGuard, int renderPass) {
         String var5;
-        lh var6;
+        ValidationState var6;
         int var14;
-        cc var8;
+        TextWidgetLayout var8;
         int var9;
         int var10;
         int var11;
@@ -139,7 +139,7 @@ final class pi extends vf {
             var5 = this.field_N;
           }
         } else {
-          var5 = cm.checkingText;
+          var5 = NanoFrameTimer.checkingText;
         }
         if (!var5.equals(this.widgetText)) {
           this.widgetText = var5;
@@ -147,7 +147,7 @@ final class pi extends vf {
         }
         super.renderWidget(parentX, parentY, (byte) 106, renderPass);
         var6 = this.field_M.a((byte) -105);
-        var8 = (cc) ((Object) this.renderer);
+        var8 = (TextWidgetLayout) ((Object) this.renderer);
         var9 = this.widgetX + parentX;
         var10 = var8.a(parentY, -2, (UiWidget) (this)) + (var8.a((byte) 125, (UiWidget) (this)).b(-3111) >> 1);
         var11 = 7 % ((methodGuard - 1) / 43);
@@ -235,7 +235,7 @@ final class pi extends vf {
         kd.field_e.a(0, 0, 0);
     }
 
-    pi(dg param0, String param1, int param2, int param3, int param4, int param5) {
+    pi(ValidationProvider param0, String param1, int param2, int param3, int param4, int param5) {
         super(param1, ah.a((byte) -66));
         try {
             this.field_M = param0;

@@ -27,7 +27,7 @@ final class ki {
           for (var2_int = 0; var2_int < 3; var2_int++) {
             AchievementSubmission.field_o[var2_int] = 0;
           }
-          for (var2_int = 0; var2_int < oj.field_b; var2_int++) {
+          for (var2_int = 0; var2_int < ByteStorage.field_b; var2_int++) {
             if (MatchingTextValidator.field_k[var2_int].field_f == param0.field_f) {
               dupTemp$3 = MatchingTextValidator.field_k[var2_int].c(124);
               AchievementSubmission.field_o[dupTemp$3] = AchievementSubmission.field_o[dupTemp$3] + 1;
@@ -39,11 +39,11 @@ final class ki {
           dupTemp$0 = param0.c(125);
           AchievementSubmission.field_o[dupTemp$0] = AchievementSubmission.field_o[dupTemp$0] + 1;
           var2_int = 0;
-          for (var3 = 0; oj.field_b > var3; var3++) {
+          for (var3 = 0; ByteStorage.field_b > var3; var3++) {
             L3: {
               if (param0.field_f == MatchingTextValidator.field_k[var3].field_f) {
                 var4 = MatchingTextValidator.field_k[var3].c(124);
-                if (AchievementSubmission.field_o[var4] > pc.field_v) {
+                if (AchievementSubmission.field_o[var4] > MidiNote.field_v) {
                   AchievementSubmission.field_o[var4] = AchievementSubmission.field_o[var4] - 1;
                   break L3;
                 }
@@ -53,9 +53,9 @@ final class ki {
               MatchingTextValidator.field_k[incrementValue$2] = MatchingTextValidator.field_k[var3];
             }
           }
-          oj.field_b = var2_int;
-          fieldTemp$1 = oj.field_b;
-          oj.field_b = oj.field_b + 1;
+          ByteStorage.field_b = var2_int;
+          fieldTemp$1 = ByteStorage.field_b;
+          ByteStorage.field_b = ByteStorage.field_b + 1;
           MatchingTextValidator.field_k[fieldTemp$1] = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -84,7 +84,7 @@ final class ki {
     }
 
     final static void a(int param0) {
-        r.a(ResourceArchive.field_i, (byte) -61, true, oj.field_a);
+        r.a(ResourceArchive.field_i, (byte) -61, true, ByteStorage.field_a);
         int var1 = -30 % ((param0 + 30) / 36);
         mi.field_I = true;
     }

@@ -32,18 +32,18 @@ final class DequeCursor {
               return true;
             }
             if ((0 == MatchingTextValidator.field_j % 40) &&
-                (vc.field_h < 11)) {
+                (CachedTextLayout.field_h < 11)) {
               fh.field_c = MatchingTextValidator.field_j;
-              vc.field_h = vc.field_h + 1;
-              if (10 == vc.field_h) {
+              CachedTextLayout.field_h = CachedTextLayout.field_h + 1;
+              if (10 == CachedTextLayout.field_h) {
                 td.playPcmSample(-348, fl.field_c[26]);
               }
             }
             var1_float = -((480.0f - (float)MatchingTextValidator.field_j) / 480.0f) + 1.0f;
-            if (11 > vc.field_h) {
-              si.field_j = ((int)(var1_float * MenuScreen.introTintGreenDelta) << 8) + (DiskCacheWorker.avatarTintPalette[0] + ((int)(var1_float * lk.field_b) << 16)) + (int)(SocketArchiveNetworkClient.field_x * var1_float);
+            if (11 > CachedTextLayout.field_h) {
+              si.field_j = ((int)(var1_float * MenuScreen.introTintGreenDelta) << 8) + (DiskCacheWorker.avatarTintPalette[0] + ((int)(var1_float * TextLayoutLine.field_b) << 16)) + (int)(SocketArchiveNetworkClient.field_x * var1_float);
             }
-            var2 = tl.introFaceFrames[vc.field_h].fullWidth >> 1;
+            var2 = tl.introFaceFrames[CachedTextLayout.field_h].fullWidth >> 1;
             var3 = MatchingTextValidator.field_j << 2;
             if ((!sg.field_d) &&
                 (-var3 + 900 <= 320 + var2)) {
@@ -128,7 +128,7 @@ final class DequeCursor {
           }
           if (GzipInflater.field_d != param0) {
             var1_int = GzipInflater.field_d;
-            pc.a(-1, false);
+            MidiNote.a(-1, false);
             stackIn_6_0 = var1_int;
             return stackIn_6_0;
           }

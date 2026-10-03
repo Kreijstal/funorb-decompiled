@@ -6,22 +6,22 @@ import java.util.*;
 final class ed {
     private static int[] field_b;
     private int[] field_x;
-    private uc field_t;
-    private uc field_q;
-    private ub field_e;
-    private uc field_o;
-    private uc field_y;
+    private SoundEnvelope field_t;
+    private SoundEnvelope field_q;
+    private SoundFilter field_e;
+    private SoundEnvelope field_o;
+    private SoundEnvelope field_y;
     private int[] field_j;
     private int field_h;
-    private uc field_u;
-    private uc field_k;
-    private uc field_w;
+    private SoundEnvelope field_u;
+    private SoundEnvelope field_k;
+    private SoundEnvelope field_w;
     private static int[] field_g;
     int field_d;
     private int[] field_a;
-    private uc field_n;
+    private SoundEnvelope field_n;
     private int field_r;
-    private uc field_m;
+    private SoundEnvelope field_m;
     int field_v;
     private static int[] field_f;
     private static int[] field_p;
@@ -63,32 +63,32 @@ final class ed {
     final void a(ByteArrayBuffer param0) {
         int var3 = 0;
         int var4 = 0;
-        this.field_t = new uc();
+        this.field_t = new SoundEnvelope();
         this.field_t.a(param0);
-        this.field_o = new uc();
+        this.field_o = new SoundEnvelope();
         this.field_o.a(param0);
         int var2 = param0.readUnsignedByte((byte) 34);
         if (var2 != 0) {
             param0.position = param0.position - 1;
-            this.field_y = new uc();
+            this.field_y = new SoundEnvelope();
             this.field_y.a(param0);
-            this.field_w = new uc();
+            this.field_w = new SoundEnvelope();
             this.field_w.a(param0);
         }
         var2 = param0.readUnsignedByte((byte) 34);
         if (var2 != 0) {
             param0.position = param0.position - 1;
-            this.field_u = new uc();
+            this.field_u = new SoundEnvelope();
             this.field_u.a(param0);
-            this.field_n = new uc();
+            this.field_n = new SoundEnvelope();
             this.field_n.a(param0);
         }
         var2 = param0.readUnsignedByte((byte) 34);
         if (var2 != 0) {
             param0.position = param0.position - 1;
-            this.field_q = new uc();
+            this.field_q = new SoundEnvelope();
             this.field_q.a(param0);
-            this.field_m = new uc();
+            this.field_m = new SoundEnvelope();
             this.field_m.a(param0);
         }
         for (var3 = 0; var3 < 10; var3++) {
@@ -104,8 +104,8 @@ final class ed {
         this.field_r = param0.readUnsignedSmart(1);
         this.field_d = param0.readUnsignedShortBE(true);
         this.field_v = param0.readUnsignedShortBE(true);
-        this.field_e = new ub();
-        this.field_k = new uc();
+        this.field_e = new SoundFilter();
+        this.field_k = new SoundEnvelope();
         this.field_e.a(param0, this.field_k);
     }
 
@@ -236,12 +236,12 @@ final class ed {
               var15 = param0 - var12;
             }
             while (var14 < var15) {
-              var16 = (int)((long)field_f[var14 + var12] * (long)ub.field_a >> 16);
+              var16 = (int)((long)field_f[var14 + var12] * (long)SoundFilter.field_a >> 16);
               for (var17 = 0; var17 < var12; var17++) {
-                var16 = var16 + (int)((long)field_f[var14 + var12 - 1 - var17] * (long)ub.field_g[0][var17] >> 16);
+                var16 = var16 + (int)((long)field_f[var14 + var12 - 1 - var17] * (long)SoundFilter.field_g[0][var17] >> 16);
               }
               for (var17 = 0; var17 < var14; var17++) {
-                var16 = var16 - (int)((long)field_f[var14 - 1 - var17] * (long)ub.field_g[1][var17] >> 16);
+                var16 = var16 - (int)((long)field_f[var14 - 1 - var17] * (long)SoundFilter.field_g[1][var17] >> 16);
               }
               field_f[var14] = var16;
               var11 = this.field_k.a(param0 + 1);
@@ -253,12 +253,12 @@ final class ed {
                 var15 = param0 - var12;
               }
               while (var14 < var15) {
-                var16 = (int)((long)field_f[var14 + var12] * (long)ub.field_a >> 16);
+                var16 = (int)((long)field_f[var14 + var12] * (long)SoundFilter.field_a >> 16);
                 for (var17 = 0; var17 < var12; var17++) {
-                  var16 = var16 + (int)((long)field_f[var14 + var12 - 1 - var17] * (long)ub.field_g[0][var17] >> 16);
+                  var16 = var16 + (int)((long)field_f[var14 + var12 - 1 - var17] * (long)SoundFilter.field_g[0][var17] >> 16);
                 }
                 for (var17 = 0; var17 < var13; var17++) {
-                  var16 = var16 - (int)((long)field_f[var14 - 1 - var17] * (long)ub.field_g[1][var17] >> 16);
+                  var16 = var16 - (int)((long)field_f[var14 - 1 - var17] * (long)SoundFilter.field_g[1][var17] >> 16);
                 }
                 field_f[var14] = var16;
                 var11 = this.field_k.a(param0 + 1);
@@ -273,10 +273,10 @@ final class ed {
               while (var14 < param0) {
                 var16 = 0;
                 for (var17 = var14 + var12 - param0; var17 < var12; var17++) {
-                  var16 = var16 + (int)((long)field_f[var14 + var12 - 1 - var17] * (long)ub.field_g[0][var17] >> 16);
+                  var16 = var16 + (int)((long)field_f[var14 + var12 - 1 - var17] * (long)SoundFilter.field_g[0][var17] >> 16);
                 }
                 for (var17 = 0; var17 < var13; var17++) {
-                  var16 = var16 - (int)((long)field_f[var14 - 1 - var17] * (long)ub.field_g[1][var17] >> 16);
+                  var16 = var16 - (int)((long)field_f[var14 - 1 - var17] * (long)SoundFilter.field_g[1][var17] >> 16);
                 }
                 field_f[var14] = var16;
                 var11 = this.field_k.a(param0 + 1);

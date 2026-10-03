@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rd extends ff {
+final class rd extends TextWidgetRenderer {
     static byte[][] field_s;
     static int field_u;
     static di field_r;
@@ -157,7 +157,7 @@ final class rd extends ff {
         }
         kd.field_e.hideAllDialogs(10936);
         if (!(null != vg.field_i)) {
-            vg.field_i = new rl(kd.field_e, ff.field_d);
+            vg.field_i = new rl(kd.field_e, TextWidgetRenderer.field_d);
         }
         kd.field_e.showDialog(false, vg.field_i);
     }
@@ -245,7 +245,7 @@ final class rd extends ff {
             stackIn_3_0 = (UiWidget) (param4);
           }
           var10 = (ButtonWidget) ((Object) stackIn_3_0);
-          uh.a(param4.widgetY + param2, param4.widgetX + param0, -14045, param4.widgetHeight + (param2 + param4.widgetY), param4.widgetWidth + (param0 + param4.widgetX));
+          PasswordWidgetRenderer.a(param4.widgetY + param2, param4.widgetX + param0, -14045, param4.widgetHeight + (param2 + param4.widgetY), param4.widgetWidth + (param0 + param4.widgetX));
           if (var10 != null) {
             param3 = param3 & var10.enabled;
           }

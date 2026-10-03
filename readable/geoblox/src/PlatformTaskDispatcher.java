@@ -70,7 +70,7 @@ final class PlatformTaskDispatcher implements Runnable {
             LimitedRandomAccessFile openedPreferencesFile = null;
             int cursorXOrVisibleFlag = 0;
             Exception urlLaunchFailure = null;
-            bd proxyConnectionFailure = null;
+            ProxyAuthenticationRequiredException proxyConnectionFailure = null;
             int cursorY = 0;
             String allowedUrlCharacters = null;
             java.awt.datatransfer.Transferable clipboardContents = null;
@@ -272,11 +272,11 @@ final class PlatformTaskDispatcher implements Runnable {
                         throw new IOException();
                       }
                       try {
-                          if (false) throw (bd) null;
-                        task.result = mk.a(-43, (String) (task.input), task.firstIntArgument).b(0);
-                      } catch (bd caughtProxyConnectionFailure) {
+                          if (false) throw (ProxyAuthenticationRequiredException) null;
+                        task.result = EmailAvailabilityValidator.a(-43, (String) (task.input), task.firstIntArgument).b(0);
+                      } catch (ProxyAuthenticationRequiredException caughtProxyConnectionFailure) {
                         caughtTaskThrowable = caughtProxyConnectionFailure;
-                        proxyConnectionFailure = (bd) (Object) caughtTaskThrowable;
+                        proxyConnectionFailure = (ProxyAuthenticationRequiredException) (Object) caughtTaskThrowable;
                         task.result = proxyConnectionFailure.getMessage();
                         throw proxyConnectionFailure;
                       }

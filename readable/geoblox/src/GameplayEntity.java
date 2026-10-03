@@ -50,7 +50,7 @@ final class GameplayEntity extends DualLinkNode {
           vf.spriteScratchRaster.setAsRasterTarget();
           SoftwareRasterizer.clearFramebuffer();
           this.entitySprite.drawUnmasked(-this.entitySprite.fullWidth + vf.spriteScratchRaster.fullWidth >> 1, vf.spriteScratchRaster.fullHeight - this.entitySprite.fullHeight >> 1);
-          k.a(0, 0, vf.spriteScratchRaster.fullWidth, -27085, vf.spriteScratchRaster.fullHeight);
+          NodeHashTableIterator.a(0, 0, vf.spriteScratchRaster.fullWidth, -27085, vf.spriteScratchRaster.fullHeight);
           SingleChildWidget.mainRasterBuffer.setAsRasterTarget(methodGuard + 16351);
           vf.spriteScratchRaster.rotateSmooth(vf.spriteScratchRaster.fullWidth << 3, vf.spriteScratchRaster.fullHeight << 3, rotatedEntityX << 4, rotatedEntityY << 4, (int)(65535.0 * ((double)(-UiWidget.gameplaySession.boardAngleRadians + this.spriteAngleRadians) / 6.283185307179586)), 4096);
         } else {
@@ -58,7 +58,7 @@ final class GameplayEntity extends DualLinkNode {
             vf.spriteScratchRaster.setAsRasterTarget();
             SoftwareRasterizer.clearFramebuffer();
             this.entitySprite.drawGrayModulated(-this.entitySprite.fullWidth + vf.spriteScratchRaster.fullWidth >> 1, vf.spriteScratchRaster.fullHeight - this.entitySprite.fullHeight >> 1, this.interpolatedPaletteColor);
-            k.a(0, 0, vf.spriteScratchRaster.fullWidth, -27085, vf.spriteScratchRaster.fullHeight);
+            NodeHashTableIterator.a(0, 0, vf.spriteScratchRaster.fullWidth, -27085, vf.spriteScratchRaster.fullHeight);
             SingleChildWidget.mainRasterBuffer.setAsRasterTarget(methodGuard + 16351);
             vf.spriteScratchRaster.rotateSmooth(vf.spriteScratchRaster.fullWidth << 3, vf.spriteScratchRaster.fullHeight << 3, rotatedEntityX << 4, rotatedEntityY << 4, (int)(65535.0 * ((double)(-UiWidget.gameplaySession.boardAngleRadians + this.spriteAngleRadians) / 6.283185307179586)), 4096);
           } else {
@@ -134,14 +134,14 @@ final class GameplayEntity extends DualLinkNode {
         af.avatarFrameStepTicks = 0;
         ul.currentAvatarCryFrame = null;
         gg.avatarCryPhase = 0;
-        g.avatarCryFrameCursor = 0;
+        PasswordValidator.avatarCryFrameCursor = 0;
         LimitedRandomAccessFile.avatarFeedbackHoldTicks = 0;
         jf.avatarTintFadeTicks = 0;
         DiskCacheWorker.avatarFeedbackFrameIndex = initialFrameIndex;
         IndexedSpriteState.avatarShockFrameIndex = 0;
         rj.avatarTintColor = 5167632;
         MenuScreen.avatarFeedbackFrameBase = 0;
-        gi.avatarBlinkClockTicks = 0;
+        IterableNodeHashTable.avatarBlinkClockTicks = 0;
         nd.avatarFeedbackModeId = 0;
         wa.avatarShockEffectTicks = 0;
     }
@@ -154,9 +154,9 @@ final class GameplayEntity extends DualLinkNode {
 
     private final void updatePaletteChannelDeltas(int methodGuard) {
         int sentinelDivisionGuard = -121 % ((-63 - methodGuard) / 39);
-        this.paletteRedDelta = -(jg.themeCycleColors[GameScreen.selectedThemeId][this.animationFrameIndex] >> 16 & 255) + (255 & jg.themeCycleColors[GameScreen.selectedThemeId][(this.animationFrameIndex + 1) % 7] >> 16);
-        this.paletteGreenDelta = -(jg.themeCycleColors[GameScreen.selectedThemeId][this.animationFrameIndex] >> 8 & 255) + ((jg.themeCycleColors[GameScreen.selectedThemeId][(1 + this.animationFrameIndex) % 7] & 65448) >> 8);
-        this.paletteBlueDelta = -(jg.themeCycleColors[GameScreen.selectedThemeId][this.animationFrameIndex] & 255) + (jg.themeCycleColors[GameScreen.selectedThemeId][(1 + this.animationFrameIndex) % 7] & 255);
+        this.paletteRedDelta = -(SocketConnector.themeCycleColors[GameScreen.selectedThemeId][this.animationFrameIndex] >> 16 & 255) + (255 & SocketConnector.themeCycleColors[GameScreen.selectedThemeId][(this.animationFrameIndex + 1) % 7] >> 16);
+        this.paletteGreenDelta = -(SocketConnector.themeCycleColors[GameScreen.selectedThemeId][this.animationFrameIndex] >> 8 & 255) + ((SocketConnector.themeCycleColors[GameScreen.selectedThemeId][(1 + this.animationFrameIndex) % 7] & 65448) >> 8);
+        this.paletteBlueDelta = -(SocketConnector.themeCycleColors[GameScreen.selectedThemeId][this.animationFrameIndex] & 255) + (SocketConnector.themeCycleColors[GameScreen.selectedThemeId][(1 + this.animationFrameIndex) % 7] & 255);
     }
 
     final void eraseEntityPixels(int methodGuard) {
@@ -257,7 +257,7 @@ final class GameplayEntity extends DualLinkNode {
               if (1 == this.entitySpriteKindId) {
                 this.entitySprite = s.geometrySpritesByThemeAndCategory[GameScreen.selectedThemeId][this.entityCategoryKey];
                 this.spriteVariantIndex = -1;
-                this.interpolatedPaletteColor = jg.themeCycleColors[GameScreen.selectedThemeId][this.animationFrameIndex];
+                this.interpolatedPaletteColor = SocketConnector.themeCycleColors[GameScreen.selectedThemeId][this.animationFrameIndex];
                 this.updatePaletteChannelDeltas(53);
               } else {
                 if (2 != this.entitySpriteKindId) {
@@ -355,7 +355,7 @@ final class GameplayEntity extends DualLinkNode {
             }
           } else {
             paletteBlendFraction = 0.019999999552965164f * (float)(this.entityUpdateTick % 50);
-            this.interpolatedPaletteColor = (int)((float)this.paletteBlueDelta * paletteBlendFraction) + jg.themeCycleColors[GameScreen.selectedThemeId][this.animationFrameIndex] + (((int)(paletteBlendFraction * (float)this.paletteRedDelta) << 16) + ((int)((float)this.paletteGreenDelta * paletteBlendFraction) << 8));
+            this.interpolatedPaletteColor = (int)((float)this.paletteBlueDelta * paletteBlendFraction) + SocketConnector.themeCycleColors[GameScreen.selectedThemeId][this.animationFrameIndex] + (((int)(paletteBlendFraction * (float)this.paletteRedDelta) << 16) + ((int)((float)this.paletteGreenDelta * paletteBlendFraction) << 8));
             if (this.entityUpdateTick % 50 == 49) {
               this.animationFrameIndex = this.animationFrameIndex + 1;
               this.animationFrameIndex = this.animationFrameIndex % 7;

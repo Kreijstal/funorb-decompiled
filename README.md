@@ -11,6 +11,10 @@ over the obfuscated gamepacks by the pipeline in
 
 ## Readable GeoBlox export
 
+This repository owns the generated Java exports. The cloner repository owns
+loading and diagnostics scripts and does not track `.java` files. Keep the
+readability generator/rules and matching Java export together here.
+
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
 mirror. The current [manifest](readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
@@ -18,6 +22,16 @@ and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 137,964 bindings,
 preserving 388 override relationships.
+
+Pass 110 names 51 additional class roles, including `GameApplet`,
+`TextInputWidget`, `PcmStream`, `MidiPcmStream`, `IntrusiveNodeHashTable`,
+`FrameTimer` and `ProxySocketConnector`. Class coverage is now 143 renamed
+classes, one already meaningful `Geoblox` name and 159 opaque names. The total
+is 8,607 guarded rules and 69,721 identifier edits; raw source, decompiler/tool
+pins and previous rule objects remain unchanged. Class names describe instance
+roles, with unrelated static helpers still on their original owners. Literal
+reflection spellings remain unchanged. Update the single preview in place using
+`node readable/reproduce-geoblox.mjs --update`; earlier versions live in Git.
 
 Pass 109 names `AchievementQuery`, `cf.requestAchievementState`,
 `re.writeAchievementStateRequest`, `ud.handleAchievementResponse`,

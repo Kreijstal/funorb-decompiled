@@ -39,7 +39,7 @@ final class hd extends SingleChildWidget {
         }
         di.releasedInDifficultyStep = di.releasedInDifficultyStep + 1;
         ul.releasedInCurrentTheme = ul.releasedInCurrentTheme + 1;
-        if ((sa.releasesPerDifficultyStep == di.releasedInDifficultyStep) &&
+        if ((ContextualRuntimeException.releasesPerDifficultyStep == di.releasedInDifficultyStep) &&
             (DequeCursor.field_c < 2)) {
           di.releasedInDifficultyStep = 0;
           ld.advanceDifficulty(false);
@@ -50,7 +50,7 @@ final class hd extends SingleChildWidget {
         }
         if (fa.releasesPerTheme == ul.releasedInCurrentTheme) {
           ul.releasedInCurrentTheme = 0;
-          fj.field_m = 0;
+          CacheReference.field_m = 0;
           UiWidget.gameplaySession.sessionPhase = 1;
           di.releasedInDifficultyStep = 0;
           if (DequeCursor.field_c < 2) {

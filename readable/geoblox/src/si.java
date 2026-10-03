@@ -4,7 +4,7 @@
 final class si {
     Sprite[] field_a;
     private int field_k;
-    static lh field_n;
+    static ValidationState field_n;
     private int field_d;
     private boolean field_h;
     private int field_e;
@@ -13,7 +13,7 @@ final class si {
     Sprite field_l;
     private int field_b;
     static boolean archiveUseControlOpcode2;
-    static lh field_m;
+    static ValidationState field_m;
     static int field_j;
     static al field_g;
 
@@ -131,7 +131,7 @@ final class si {
             this.field_l.draw(var6_int, var7);
           }
           if (param4 != 0) {
-            field_n = (lh) null;
+            field_n = (ValidationState) null;
           }
           var6 = param0.c(120, param3);
           if ((var6 != null) &&
@@ -351,8 +351,8 @@ final class si {
     }
 
     static {
-        field_n = new lh();
-        field_m = new lh();
+        field_n = new ValidationState();
+        field_m = new ValidationState();
         field_j = 5167632;
     }
 }

@@ -16,7 +16,7 @@ final class ll {
             ResourceArchive var2 = (ResourceArchive) null;
             ll.a(55, (byte) -55, -85, (ResourceArchive) null);
         }
-        return -kh.field_e + oa.a(-12520);
+        return -AudioService.field_e + oa.a(-12520);
     }
 
     final static Sprite[] a(int param0, byte param1, int param2, ResourceArchive param3) {

@@ -57,7 +57,7 @@ final class ic {
             RuntimeException var15_ref = null;
             try {
               eh.field_d = new PacketBuffer(param8);
-              fj.field_q = new PacketBuffer(param2);
+              CacheReference.field_q = new PacketBuffer(param2);
               GameplayEntity.field_D = param11;
               ok.field_f = param3;
               lb.field_c = param1;
@@ -65,7 +65,7 @@ final class ic {
               ac.field_s = param7;
               MessageDialog.loginHeaderInt = param0;
               rb.field_c = param4;
-              mk.field_l = param10;
+              EmailAvailabilityValidator.field_l = param10;
               ol.field_I = param9;
               ll.field_e = param5;
               qe.field_b = param6;

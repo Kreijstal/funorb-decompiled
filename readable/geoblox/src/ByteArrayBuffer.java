@@ -256,7 +256,7 @@ class ByteArrayBuffer extends IntrusiveNode {
     final static void a(float param0, String param1, boolean param2, byte param3) {
         try {
             if (vg.field_i == null) {
-                vg.field_i = new rl(kd.field_e, ff.field_d);
+                vg.field_i = new rl(kd.field_e, TextWidgetRenderer.field_d);
                 kd.field_e.showDialog(false, vg.field_i);
             }
             vg.field_i.a(param2, param1, param3 ^ -92, param0);
@@ -1020,16 +1020,16 @@ class ByteArrayBuffer extends IntrusiveNode {
             substitutionTimes8 = substitutionTimes8 ^ 285L;
           }
           substitutionTimes9 = substitutionByte ^ substitutionTimes8;
-          whirlpoolTables[0][substitutionIndexOrRound] = ue.orLong(substitutionTimes9, ue.orLong(substitutionTimes2 << 8, ue.orLong(substitutionTimes5 << 16, ue.orLong(ue.orLong(ue.orLong(substitutionTimes4 << 40, ue.orLong(substitutionByte << 56, substitutionByte << 48)), substitutionByte << 32), substitutionTimes8 << 24))));
+          whirlpoolTables[0][substitutionIndexOrRound] = PcmResampler.orLong(substitutionTimes9, PcmResampler.orLong(substitutionTimes2 << 8, PcmResampler.orLong(substitutionTimes5 << 16, PcmResampler.orLong(PcmResampler.orLong(PcmResampler.orLong(substitutionTimes4 << 40, PcmResampler.orLong(substitutionByte << 56, substitutionByte << 48)), substitutionByte << 32), substitutionTimes8 << 24))));
           for (tableRotationIndex = 1; tableRotationIndex < 8; tableRotationIndex++) {
-            whirlpoolTables[tableRotationIndex][substitutionIndexOrRound] = ue.orLong(whirlpoolTables[tableRotationIndex - 1][substitutionIndexOrRound] >>> 8, whirlpoolTables[-1 + tableRotationIndex][substitutionIndexOrRound] << 56);
+            whirlpoolTables[tableRotationIndex][substitutionIndexOrRound] = PcmResampler.orLong(whirlpoolTables[tableRotationIndex - 1][substitutionIndexOrRound] >>> 8, whirlpoolTables[-1 + tableRotationIndex][substitutionIndexOrRound] << 56);
           }
           substitutionIndexOrRound++;
         }
         whirlpoolRoundConstants[0] = 0L;
         for (substitutionIndexOrRound = 1; substitutionIndexOrRound <= 10; substitutionIndexOrRound++) {
           packedSubstitutionPairOrRoundByteOffset = substitutionIndexOrRound * 8 - 8;
-          whirlpoolRoundConstants[substitutionIndexOrRound] = MessageDialog.xorLong(MessageDialog.xorLong(MessageDialog.xorLong(cj.andLong(16711680L, whirlpoolTables[5][5 + packedSubstitutionPairOrRoundByteOffset]), MessageDialog.xorLong(cj.andLong(4278190080L, whirlpoolTables[4][packedSubstitutionPairOrRoundByteOffset + 4]), MessageDialog.xorLong(MessageDialog.xorLong(MessageDialog.xorLong(cj.andLong(whirlpoolTables[0][packedSubstitutionPairOrRoundByteOffset], -72057594037927936L), cj.andLong(whirlpoolTables[1][1 + packedSubstitutionPairOrRoundByteOffset], 71776119061217280L)), cj.andLong(280375465082880L, whirlpoolTables[2][2 + packedSubstitutionPairOrRoundByteOffset])), cj.andLong(whirlpoolTables[3][packedSubstitutionPairOrRoundByteOffset + 3], 1095216660480L)))), cj.andLong(whirlpoolTables[6][packedSubstitutionPairOrRoundByteOffset + 6], 65280L)), cj.andLong(255L, whirlpoolTables[7][packedSubstitutionPairOrRoundByteOffset + 7]));
+          whirlpoolRoundConstants[substitutionIndexOrRound] = MessageDialog.xorLong(MessageDialog.xorLong(MessageDialog.xorLong(FrameTimer.andLong(16711680L, whirlpoolTables[5][5 + packedSubstitutionPairOrRoundByteOffset]), MessageDialog.xorLong(FrameTimer.andLong(4278190080L, whirlpoolTables[4][packedSubstitutionPairOrRoundByteOffset + 4]), MessageDialog.xorLong(MessageDialog.xorLong(MessageDialog.xorLong(FrameTimer.andLong(whirlpoolTables[0][packedSubstitutionPairOrRoundByteOffset], -72057594037927936L), FrameTimer.andLong(whirlpoolTables[1][1 + packedSubstitutionPairOrRoundByteOffset], 71776119061217280L)), FrameTimer.andLong(280375465082880L, whirlpoolTables[2][2 + packedSubstitutionPairOrRoundByteOffset])), FrameTimer.andLong(whirlpoolTables[3][packedSubstitutionPairOrRoundByteOffset + 3], 1095216660480L)))), FrameTimer.andLong(whirlpoolTables[6][packedSubstitutionPairOrRoundByteOffset + 6], 65280L)), FrameTimer.andLong(255L, whirlpoolTables[7][packedSubstitutionPairOrRoundByteOffset + 7]));
         }
     }
 }

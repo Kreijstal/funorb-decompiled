@@ -40,17 +40,17 @@ final class ri {
                 stackIn_5_0 = -1;
                 return stackIn_5_0;
               }
-              if (PacketBuffer.field_l == gi.field_d) {
+              if (PacketBuffer.field_l == IterableNodeHashTable.field_d) {
                 if (!param0) {
                   ih.field_a = vf.a(false, param1, param4, false);
                 } else {
                   var11 = (String) null;
                   ih.field_a = SecondaryDeque.a(true, oa.field_c, (String) null, param1, false);
                 }
-                fj.field_q.position = 0;
-                fj.field_q.writeByte((byte) -102, 14);
-                fj.field_q.writeByte((byte) -78, ih.field_a.a((byte) -32).wireId);
-                cm.a(-1, -1);
+                CacheReference.field_q.position = 0;
+                CacheReference.field_q.writeByte((byte) -102, 14);
+                CacheReference.field_q.writeByte((byte) -78, ih.field_a.a((byte) -32).wireId);
+                NanoFrameTimer.a(-1, -1);
                 PacketBuffer.field_l = ResizableDialog.field_T;
               }
               if ((ResizableDialog.field_T == PacketBuffer.field_l) &&
@@ -69,7 +69,7 @@ final class ri {
                   (UiWidget.b(30000, 8))) {
                 ak.field_a = eh.field_d.readLongBE(2901);
                 eh.field_d.position = 0;
-                uk.a(26, param2, param0, ih.field_a, param3);
+                UsernameAvailabilityValidator.a(26, param2, param0, ih.field_a, param3);
                 PacketBuffer.field_l = da.field_g;
               }
               if (param5 != 0) {
@@ -123,9 +123,9 @@ final class ri {
                   eh.field_d.readUnsignedByte((byte) 34);
                   eh.field_d.readIntBE((byte) -48);
                   PacketBuffer.field_n = eh.field_d.readUnsignedShortBE(true);
-                  hc.field_K = new byte[PacketBuffer.field_n];
+                  ValidatedTextInputWidget.field_K = new byte[PacketBuffer.field_n];
                   for (var8 = 0; PacketBuffer.field_n > var8; var8++) {
-                    hc.field_K[var8] = eh.field_d.readSignedByte((byte) 72);
+                    ValidatedTextInputWidget.field_K[var8] = eh.field_d.readSignedByte((byte) 72);
                   }
                 }
                 SecondaryDeque.field_f = eh.field_d.readNullTerminatedText((byte) 105);
@@ -135,26 +135,26 @@ final class ri {
                 PacketBuffer.field_l = eh.field_b;
                 if (ih.field_a.a((byte) -32) != ej.field_b) {
                   if (ih.field_a.a((byte) -32) == Geoblox.longAndNameLoginType) {
-                    rl.field_W.a(k.c(108), 0);
+                    rl.field_W.a(NodeHashTableIterator.c(108), 0);
                   }
                 } else {
-                  mb.field_b.a(k.c(122), 0);
+                  mb.field_b.a(NodeHashTableIterator.c(122), 0);
                 }
                 ck.field_e = false;
                 if (var6 != null) {
-                  tc.a(100, var6, k.c(112));
+                  tc.a(100, var6, NodeHashTableIterator.c(112));
                 }
                 if ((og.field_n <= 0) &&
                     (!GzipInflater.field_b)) {
                   try {
-                    wk.a((byte) -6, k.c(107), "unzap");
+                    wk.a((byte) -6, NodeHashTableIterator.c(107), "unzap");
                   } catch (java.lang.Throwable decompiledCaughtParameter0) {
                     decompiledCaughtException = decompiledCaughtParameter0;
                     var8_ref_Throwable = decompiledCaughtException;
                   }
                 } else {
                   try {
-                    wk.a(-14882, new Object[]{fh.a(oa.field_c, param5 + 97)}, k.c(param5 + 119), "zap");
+                    wk.a(-14882, new Object[]{fh.a(oa.field_c, param5 + 97)}, NodeHashTableIterator.c(param5 + 119), "zap");
                   } catch (java.lang.Throwable decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     var8_ref_Throwable = decompiledCaughtException;
@@ -163,7 +163,7 @@ final class ri {
                 if (og.field_n > 0) {
                   rb.field_c = true;
                 }
-                fj.field_q.initializeCipher(hl.field_D, false);
+                CacheReference.field_q.initializeCipher(hl.field_D, false);
                 for (var8 = 0; var8 < 4; var8++) {
                   hl.field_D[var8] = hl.field_D[var8] + 50;
                 }
@@ -183,7 +183,7 @@ final class ri {
                 if (ScorePopup.field_l == 7) {
                   ScorePopup.field_l = 3;
                 }
-                kh.field_a = eh.field_d.readNullTerminatedText((byte) 101);
+                AudioService.field_a = eh.field_d.readNullTerminatedText((byte) 101);
                 ck.field_e = false;
                 stackIn_91_0 = ScorePopup.field_l;
                 return stackIn_91_0;
@@ -191,9 +191,9 @@ final class ri {
               if (null == oc.field_e) {
                 if (ck.field_e) {
                   if (30000L >= ll.a((byte) 12)) {
-                    kh.field_a = uj.loginMessage2Text;
+                    AudioService.field_a = uj.loginMessage2Text;
                   } else {
-                    kh.field_a = IntrusiveNode.loginMessage3Text;
+                    AudioService.field_a = IntrusiveNode.loginMessage3Text;
                   }
                   ck.field_e = false;
                   stackIn_99_0 = 3;
