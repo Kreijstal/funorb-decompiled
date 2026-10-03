@@ -166,7 +166,6 @@ final class il extends dm {
     }
 
     private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        int incrementValue$5 = 0;
         int incrementValue$6 = 0;
         int var10;
         int var11;
@@ -201,9 +200,7 @@ final class il extends dm {
               var15++;
               continue L0;
             }
-            incrementValue$5 = param3;
-            param3++;
-            param2 = param1[incrementValue$5];
+            param2 = param1[param3++];
             var17 = param2 >>> 24;
             if (var17 == 0) {
               param4++;
@@ -235,7 +232,6 @@ final class il extends dm {
     }
 
     private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        int incrementValue$11 = 0;
         int incrementValue$12 = 0;
         int var9;
         int var10;
@@ -257,9 +253,7 @@ final class il extends dm {
               var10++;
               continue L0;
             }
-            incrementValue$11 = param3;
-            param3++;
-            param2 = param1[incrementValue$11];
+            param2 = param1[param3++];
             var12 = param2 >>> 24;
             if (var12 == 0) {
               param4++;
@@ -816,7 +810,6 @@ final class il extends dm {
     }
 
     private final static void b(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
-        int incrementValue$11 = 0;
         int incrementValue$12 = 0;
         int var14;
         param8 = -param10;
@@ -832,9 +825,7 @@ final class il extends dm {
               param8++;
               continue L0;
             }
-            incrementValue$11 = param5;
-            param5++;
-            param0 = param4[incrementValue$11];
+            param0 = param4[param5++];
             if (param0 == 0) {
               param7++;
               param6++;
@@ -1078,7 +1069,6 @@ final class il extends dm {
     }
 
     private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
-        int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int var12;
         int var13;
@@ -1101,9 +1091,7 @@ final class il extends dm {
               param6++;
               continue L0;
             }
-            incrementValue$0 = param3;
-            param3++;
-            param2 = param1[incrementValue$0];
+            param2 = param1[param3++];
             var14 = param2 >>> 24;
             param2 = param2 & 16777215;
             if (var14 == 0) {
@@ -1222,7 +1210,6 @@ final class il extends dm {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        int incrementValue$0 = 0;
         int var14 = 0;
         int var15 = 0;
         int incrementValue$1 = 0;
@@ -1230,9 +1217,7 @@ final class il extends dm {
             for (var11 = -param5; var11 < 0; var11++) {
                 var12 = (param1[param3] >>> 24) * param9 >> 8;
                 var13 = 256 - var12;
-                incrementValue$0 = param3;
-                param3++;
-                var14 = param1[incrementValue$0];
+                var14 = param1[param3++];
                 var15 = param0[param4];
                 incrementValue$1 = param4;
                 param4++;

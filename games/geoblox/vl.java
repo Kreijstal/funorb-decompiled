@@ -196,14 +196,9 @@ final class vl extends hf {
         int var11_int = 0;
         int incrementValue$0 = 0;
         t dupTemp$8 = null;
-        int incrementValue$7 = 0;
         int incrementValue$5 = 0;
-        int incrementValue$6 = 0;
         int var25_int = 0;
         int incrementValue$3 = 0;
-        int incrementValue$4 = 0;
-        int incrementValue$2 = 0;
-        int incrementValue$1 = 0;
         byte[] stackIn_39_0 = null;
         byte[] stackIn_42_0 = null;
         RuntimeException stackIn_205_0 = null;
@@ -394,9 +389,7 @@ final class vl extends hf {
           for (var23 = 0; var23 < 128; var23++) {
             if (var20 == 0) {
               if (var54.length > var21) {
-                incrementValue$7 = var21;
-                var21++;
-                var20 = var18[incrementValue$7];
+                var20 = var18[var21++];
               } else {
                 var20 = -1;
               }
@@ -418,9 +411,7 @@ final class vl extends hf {
                 if (var21 >= var55.length) {
                   var20 = -1;
                 } else {
-                  incrementValue$6 = var21;
-                  var21++;
-                  var20 = var4[incrementValue$6];
+                  var20 = var4[var21++];
                 }
               }
               var20--;
@@ -437,9 +428,7 @@ final class vl extends hf {
                 var8++;
                 var24 = 16 + var38.field_j[incrementValue$3] << 2;
                 if (var56.length > var21) {
-                  incrementValue$4 = var21;
-                  var21++;
-                  var20 = var7[incrementValue$4];
+                  var20 = var7[var21++];
                 } else {
                   var20 = -1;
                 }
@@ -456,9 +445,7 @@ final class vl extends hf {
               if (var20 == 0) {
                 var25 = var13[var53[var21]];
                 if (var21 < var57.length) {
-                  incrementValue$2 = var21;
-                  var21++;
-                  var20 = var10[incrementValue$2];
+                  var20 = var10[var21++];
                 } else {
                   var20 = -1;
                 }
@@ -473,9 +460,7 @@ final class vl extends hf {
           for (var27 = 0; var27 < 128; var27++) {
             if (0 == var20) {
               if (var54.length > var21) {
-                incrementValue$1 = var21;
-                var21++;
-                var20 = var18[incrementValue$1];
+                var20 = var18[var21++];
               } else {
                 var20 = -1;
               }

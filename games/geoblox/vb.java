@@ -320,9 +320,7 @@ final class vb {
         int var13 = 0;
         int incrementValue$0 = 0;
         int incrementValue$5 = 0;
-        int incrementValue$3 = 0;
         int incrementValue$4 = 0;
-        int incrementValue$1 = 0;
         int incrementValue$2 = 0;
         int var8;
         int var9;
@@ -398,9 +396,7 @@ final class vb {
             param0[incrementValue$5] = (var21 << 16) + (var22 << 8) + var23;
           }
           while (var19 < var10) {
-            incrementValue$3 = var18;
-            var18++;
-            param1 = param0[incrementValue$3];
+            param1 = param0[var18++];
             var14 = var14 - (param1 >> 16 & 255);
             if (var14 < 0) {
               var14 = 0;
@@ -436,9 +432,7 @@ final class vb {
             var19++;
           }
           while (var19 < 0) {
-            incrementValue$1 = var18;
-            var18++;
-            param1 = param0[incrementValue$1];
+            param1 = param0[var18++];
             var14 = var14 - (param1 >> 16 & 255);
             var15 = var15 - (param1 >> 8 & 255);
             var16 = var16 - (param1 & 255);
@@ -1409,14 +1403,9 @@ final class vb {
     }
 
     private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        int incrementValue$8 = 0;
         int incrementValue$7 = 0;
-        int incrementValue$5 = 0;
         int incrementValue$6 = 0;
-        int incrementValue$4 = 0;
-        int incrementValue$3 = 0;
         int incrementValue$2 = 0;
-        int incrementValue$1 = 0;
         int incrementValue$0 = 0;
         int[] stackIn_38_0 = null;
         int stackIn_38_1 = 0;
@@ -1481,9 +1470,7 @@ final class vb {
         var17 = var15 - var13 + 1;
         while (var13 <= var15) {
           for (var18 = 0; var18 < param8; var18++) {
-            incrementValue$8 = var14;
-            var14++;
-            param1 = param0[incrementValue$8];
+            param1 = param0[var14++];
             var9[var18] = var9[var18] + (param1 >> 16 & 255);
             var10[var18] = var10[var18] + (param1 >> 8 & 255);
             var11[var18] = var11[var18] + (param1 & 255);
@@ -1510,9 +1497,7 @@ final class vb {
         while (var13 < var18) {
           if (var13 + param4 + param5 + param3 < field_d) {
             for (var20 = 0; var20 < param8; var20++) {
-              incrementValue$5 = var14;
-              var14++;
-              param1 = param0[incrementValue$5];
+              param1 = param0[var14++];
               var9[var20] = var9[var20] + (param1 >> 16 & 255);
               var10[var20] = var10[var20] + (param1 >> 8 & 255);
               var11[var20] = var11[var20] + (param1 & 255);
@@ -1539,9 +1524,7 @@ final class vb {
         }
         while (var13 < var18) {
           for (var20 = 0; var20 < param8; var20++) {
-            incrementValue$4 = var19;
-            var19++;
-            param1 = param0[incrementValue$4];
+            param1 = param0[var19++];
             var21 = var27[var20] - (param1 >> 16 & 255);
             stackIn_38_0 = var9;
             stackIn_38_1 = var20;
@@ -1572,9 +1555,7 @@ final class vb {
           }
           var19 = var19 + param6;
           for (var20 = 0; var20 < param8; var20++) {
-            incrementValue$3 = var14;
-            var14++;
-            param1 = param0[incrementValue$3];
+            param1 = param0[var14++];
             var9[var20] = var9[var20] + (param1 >> 16 & 255);
             var10[var20] = var10[var20] + (param1 >> 8 & 255);
             var11[var20] = var11[var20] + (param1 & 255);
@@ -1602,9 +1583,7 @@ final class vb {
         }
         while (var13 < 0) {
           for (var20 = 0; var20 < param8; var20++) {
-            incrementValue$1 = var19;
-            var19++;
-            param1 = param0[incrementValue$1];
+            param1 = param0[var19++];
             var9[var20] = var9[var20] - (param1 >> 16 & 255);
             var10[var20] = var10[var20] - (param1 >> 8 & 255);
             var11[var20] = var11[var20] - (param1 & 255);

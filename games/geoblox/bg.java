@@ -51,7 +51,6 @@ final class bg extends m {
     }
 
     private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int[] param11, int[] param12) {
-        int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int var13;
         int var14;
@@ -106,9 +105,7 @@ final class bg extends m {
               var15++;
               continue L0;
             }
-            incrementValue$0 = param7;
-            param7++;
-            if (param1[incrementValue$0] == 0) {
+            if (param1[param7++] == 0) {
               param8++;
               var20++;
               continue;
@@ -166,11 +163,6 @@ final class bg extends m {
     }
 
     final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        int incrementValue$0 = 0;
-        int incrementValue$2 = 0;
-        int incrementValue$4 = 0;
-        int incrementValue$6 = 0;
-        int incrementValue$8 = 0;
         int var9;
         int var10;
         int var11;
@@ -192,9 +184,7 @@ final class bg extends m {
                   var10++;
                   continue L0;
                 }
-                incrementValue$0 = param3;
-                param3++;
-                if (param1[incrementValue$0] == 0) {
+                if (param1[param3++] == 0) {
                   param4++;
                   var11++;
                   continue;
@@ -204,30 +194,22 @@ final class bg extends m {
                 continue;
               }
             }
-            incrementValue$2 = param3;
-            param3++;
-            if (param1[incrementValue$2] == 0) {
+            if (param1[param3++] == 0) {
               param4++;
             } else {
               param0[param4++] = param2;
             }
-            incrementValue$4 = param3;
-            param3++;
-            if (param1[incrementValue$4] == 0) {
+            if (param1[param3++] == 0) {
               param4++;
             } else {
               param0[param4++] = param2;
             }
-            incrementValue$6 = param3;
-            param3++;
-            if (param1[incrementValue$6] == 0) {
+            if (param1[param3++] == 0) {
               param4++;
             } else {
               param0[param4++] = param2;
             }
-            incrementValue$8 = param3;
-            param3++;
-            if (param1[incrementValue$8] == 0) {
+            if (param1[param3++] == 0) {
               param4++;
               var11++;
               continue;
@@ -240,7 +222,6 @@ final class bg extends m {
     }
 
     final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        int incrementValue$11 = 0;
         int incrementValue$12 = 0;
         int var10;
         int var11;
@@ -260,9 +241,7 @@ final class bg extends m {
               var10++;
               continue L0;
             }
-            incrementValue$11 = param3;
-            param3++;
-            if (param1[incrementValue$11] == 0) {
+            if (param1[param3++] == 0) {
               param4++;
               var11++;
               continue;
