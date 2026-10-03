@@ -17,18 +17,15 @@ final class wl implements java.awt.event.KeyListener, java.awt.event.FocusListen
           if (je.field_j == null) {
             return;
           }
-          L0: {
-            nk.field_e = 0;
-            var2_int = param0.getKeyCode();
-            if ((var2_int >= 0) &&
-                (oe.field_P.length > var2_int)) {
-              var2_int = oe.field_P[var2_int];
-              if ((var2_int & 128) == 0) {
-                break L0;
-              }
+          nk.field_e = 0;
+          var2_int = param0.getKeyCode();
+          if ((var2_int >= 0) &&
+              (oe.field_P.length > var2_int)) {
+            var2_int = oe.field_P[var2_int];
+            if (!((var2_int & 128) == 0)) {
               var2_int = -1;
-              break L0;
             }
+          } else {
             var2_int = -1;
           }
           if ((ii.field_c >= 0) &&

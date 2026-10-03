@@ -554,88 +554,66 @@ final class rf extends hf {
               if (var65 != 0) {
                 var51.d((byte) -19, 176 + var52);
               }
-              L12: {
-                incrementValue$7 = var15;
-                var15++;
-                var28 = var28 + param0.field_j[incrementValue$7] & 127;
-                var51.d((byte) 126, var28);
-                if ((var28 != 0) &&
-                    (var28 != 32)) {
-                  if (var28 == 1) {
-                    incrementValue$19 = var34;
-                    var34++;
-                    var66 = param0.field_j[incrementValue$19];
-                    break L12;
-                  }
-                  if (var28 == 33) {
-                    incrementValue$18 = var41;
-                    var41++;
-                    var66 = param0.field_j[incrementValue$18];
-                    break L12;
-                  }
-                  if (var28 == 7) {
-                    incrementValue$17 = var35;
-                    var35++;
-                    var66 = param0.field_j[incrementValue$17];
-                    break L12;
-                  }
-                  if (var28 == 39) {
-                    incrementValue$16 = var42;
-                    var42++;
-                    var66 = param0.field_j[incrementValue$16];
-                    break L12;
-                  }
-                  if (var28 == 10) {
-                    incrementValue$15 = var36;
-                    var36++;
-                    var66 = param0.field_j[incrementValue$15];
-                    break L12;
-                  }
-                  if (var28 == 42) {
-                    incrementValue$14 = var43;
-                    var43++;
-                    var66 = param0.field_j[incrementValue$14];
-                    break L12;
-                  }
-                  if (var28 == 99) {
-                    incrementValue$13 = var46;
-                    var46++;
-                    var66 = param0.field_j[incrementValue$13];
-                    break L12;
-                  }
-                  if (var28 == 98) {
-                    incrementValue$12 = var47;
-                    var47++;
-                    var66 = param0.field_j[incrementValue$12];
-                    break L12;
-                  }
-                  if (var28 == 101) {
-                    incrementValue$11 = var48;
-                    var48++;
-                    var66 = param0.field_j[incrementValue$11];
-                    break L12;
-                  }
-                  if (var28 == 100) {
-                    incrementValue$10 = var49;
-                    var49++;
-                    var66 = param0.field_j[incrementValue$10];
-                    break L12;
-                  }
-                  if ((var28 != 64) &&
-                      (var28 != 65) &&
-                      (var28 != 120) &&
-                      (var28 != 121) &&
-                      (var28 != 123)) {
-                    incrementValue$8 = var39;
-                    var39++;
-                    var66 = param0.field_j[incrementValue$8];
-                    break L12;
-                  }
+              incrementValue$7 = var15;
+              var15++;
+              var28 = var28 + param0.field_j[incrementValue$7] & 127;
+              var51.d((byte) 126, var28);
+              if ((var28 != 0) &&
+                  (var28 != 32)) {
+                if (var28 == 1) {
+                  incrementValue$19 = var34;
+                  var34++;
+                  var66 = param0.field_j[incrementValue$19];
+                } else if (var28 == 33) {
+                  incrementValue$18 = var41;
+                  var41++;
+                  var66 = param0.field_j[incrementValue$18];
+                } else if (var28 == 7) {
+                  incrementValue$17 = var35;
+                  var35++;
+                  var66 = param0.field_j[incrementValue$17];
+                } else if (var28 == 39) {
+                  incrementValue$16 = var42;
+                  var42++;
+                  var66 = param0.field_j[incrementValue$16];
+                } else if (var28 == 10) {
+                  incrementValue$15 = var36;
+                  var36++;
+                  var66 = param0.field_j[incrementValue$15];
+                } else if (var28 == 42) {
+                  incrementValue$14 = var43;
+                  var43++;
+                  var66 = param0.field_j[incrementValue$14];
+                } else if (var28 == 99) {
+                  incrementValue$13 = var46;
+                  var46++;
+                  var66 = param0.field_j[incrementValue$13];
+                } else if (var28 == 98) {
+                  incrementValue$12 = var47;
+                  var47++;
+                  var66 = param0.field_j[incrementValue$12];
+                } else if (var28 == 101) {
+                  incrementValue$11 = var48;
+                  var48++;
+                  var66 = param0.field_j[incrementValue$11];
+                } else if (var28 == 100) {
+                  incrementValue$10 = var49;
+                  var49++;
+                  var66 = param0.field_j[incrementValue$10];
+                } else if ((var28 != 64) &&
+                    (var28 != 65) &&
+                    (var28 != 120) &&
+                    (var28 != 121) &&
+                    (var28 != 123)) {
+                  incrementValue$8 = var39;
+                  var39++;
+                  var66 = param0.field_j[incrementValue$8];
+                } else {
                   incrementValue$9 = var30;
                   var30++;
                   var66 = param0.field_j[incrementValue$9];
-                  break L12;
                 }
+              } else {
                 incrementValue$20 = var44;
                 var44++;
                 var66 = param0.field_j[incrementValue$20];

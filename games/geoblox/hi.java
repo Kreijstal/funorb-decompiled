@@ -318,126 +318,122 @@ final class hi extends ee implements ta, pl {
           }
           for (var7 = 0; var7 < var6_int; var7++) {
             L1: {
-              L2: {
-                var8 = param0.charAt(param2 + var7);
-                if ((0 < var8) &&
-                    (var8 < 128)) {
-                  break L2;
-                }
-                if ((var8 >= 160) &&
-                    (var8 <= 255)) {
-                  break L2;
-                }
-                if (var8 == 8364) {
-                  param1[var7 + param4] = (byte)-128;
+              var8 = param0.charAt(param2 + var7);
+              if (!((0 < var8) &&
+                  (var8 < 128))) {
+                if (!((var8 >= 160) &&
+                    (var8 <= 255))) {
+                  if (var8 == 8364) {
+                    param1[var7 + param4] = (byte)-128;
+                    break L1;
+                  }
+                  if (var8 == 8218) {
+                    param1[param4 + var7] = (byte)-126;
+                    break L1;
+                  }
+                  if (var8 == 402) {
+                    param1[param4 + var7] = (byte)-125;
+                    break L1;
+                  }
+                  if (8222 == var8) {
+                    param1[var7 + param4] = (byte)-124;
+                    break L1;
+                  }
+                  if (8230 == var8) {
+                    param1[var7 + param4] = (byte)-123;
+                    break L1;
+                  }
+                  if (var8 == 8224) {
+                    param1[param4 + var7] = (byte)-122;
+                    break L1;
+                  }
+                  if (var8 == 8225) {
+                    param1[var7 + param4] = (byte)-121;
+                    break L1;
+                  }
+                  if (var8 == 710) {
+                    param1[var7 + param4] = (byte)-120;
+                    break L1;
+                  }
+                  if (8240 == var8) {
+                    param1[var7 + param4] = (byte)-119;
+                    break L1;
+                  }
+                  if (var8 == 352) {
+                    param1[param4 + var7] = (byte)-118;
+                    break L1;
+                  }
+                  if (var8 == 8249) {
+                    param1[param4 + var7] = (byte)-117;
+                    break L1;
+                  }
+                  if (var8 == 338) {
+                    param1[var7 + param4] = (byte)-116;
+                    break L1;
+                  }
+                  if (381 == var8) {
+                    param1[var7 + param4] = (byte)-114;
+                    break L1;
+                  }
+                  if (var8 == 8216) {
+                    param1[param4 + var7] = (byte)-111;
+                    break L1;
+                  }
+                  if (var8 == 8217) {
+                    param1[param4 + var7] = (byte)-110;
+                    break L1;
+                  }
+                  if (var8 == 8220) {
+                    param1[var7 + param4] = (byte)-109;
+                    break L1;
+                  }
+                  if (var8 == 8221) {
+                    param1[param4 + var7] = (byte)-108;
+                    break L1;
+                  }
+                  if (8226 == var8) {
+                    param1[param4 + var7] = (byte)-107;
+                    break L1;
+                  }
+                  if (8211 == var8) {
+                    param1[var7 + param4] = (byte)-106;
+                    break L1;
+                  }
+                  if (var8 == 8212) {
+                    param1[param4 + var7] = (byte)-105;
+                    break L1;
+                  }
+                  if (var8 == 732) {
+                    param1[var7 + param4] = (byte)-104;
+                    break L1;
+                  }
+                  if (var8 == 8482) {
+                    param1[param4 + var7] = (byte)-103;
+                    break L1;
+                  }
+                  if (var8 == 353) {
+                    param1[param4 + var7] = (byte)-102;
+                    break L1;
+                  }
+                  if (var8 == 8250) {
+                    param1[var7 + param4] = (byte)-101;
+                    break L1;
+                  }
+                  if (339 == var8) {
+                    param1[var7 + param4] = (byte)-100;
+                    break L1;
+                  }
+                  if (var8 == 382) {
+                    param1[var7 + param4] = (byte)-98;
+                    break L1;
+                  }
+                  if (var8 != 376) {
+                    param1[var7 + param4] = (byte)63;
+                    break L1;
+                  }
+                  param1[var7 + param4] = (byte)-97;
                   break L1;
                 }
-                if (var8 == 8218) {
-                  param1[param4 + var7] = (byte)-126;
-                  break L1;
-                }
-                if (var8 == 402) {
-                  param1[param4 + var7] = (byte)-125;
-                  break L1;
-                }
-                if (8222 == var8) {
-                  param1[var7 + param4] = (byte)-124;
-                  break L1;
-                }
-                if (8230 == var8) {
-                  param1[var7 + param4] = (byte)-123;
-                  break L1;
-                }
-                if (var8 == 8224) {
-                  param1[param4 + var7] = (byte)-122;
-                  break L1;
-                }
-                if (var8 == 8225) {
-                  param1[var7 + param4] = (byte)-121;
-                  break L1;
-                }
-                if (var8 == 710) {
-                  param1[var7 + param4] = (byte)-120;
-                  break L1;
-                }
-                if (8240 == var8) {
-                  param1[var7 + param4] = (byte)-119;
-                  break L1;
-                }
-                if (var8 == 352) {
-                  param1[param4 + var7] = (byte)-118;
-                  break L1;
-                }
-                if (var8 == 8249) {
-                  param1[param4 + var7] = (byte)-117;
-                  break L1;
-                }
-                if (var8 == 338) {
-                  param1[var7 + param4] = (byte)-116;
-                  break L1;
-                }
-                if (381 == var8) {
-                  param1[var7 + param4] = (byte)-114;
-                  break L1;
-                }
-                if (var8 == 8216) {
-                  param1[param4 + var7] = (byte)-111;
-                  break L1;
-                }
-                if (var8 == 8217) {
-                  param1[param4 + var7] = (byte)-110;
-                  break L1;
-                }
-                if (var8 == 8220) {
-                  param1[var7 + param4] = (byte)-109;
-                  break L1;
-                }
-                if (var8 == 8221) {
-                  param1[param4 + var7] = (byte)-108;
-                  break L1;
-                }
-                if (8226 == var8) {
-                  param1[param4 + var7] = (byte)-107;
-                  break L1;
-                }
-                if (8211 == var8) {
-                  param1[var7 + param4] = (byte)-106;
-                  break L1;
-                }
-                if (var8 == 8212) {
-                  param1[param4 + var7] = (byte)-105;
-                  break L1;
-                }
-                if (var8 == 732) {
-                  param1[var7 + param4] = (byte)-104;
-                  break L1;
-                }
-                if (var8 == 8482) {
-                  param1[param4 + var7] = (byte)-103;
-                  break L1;
-                }
-                if (var8 == 353) {
-                  param1[param4 + var7] = (byte)-102;
-                  break L1;
-                }
-                if (var8 == 8250) {
-                  param1[var7 + param4] = (byte)-101;
-                  break L1;
-                }
-                if (339 == var8) {
-                  param1[var7 + param4] = (byte)-100;
-                  break L1;
-                }
-                if (var8 == 382) {
-                  param1[var7 + param4] = (byte)-98;
-                  break L1;
-                }
-                if (var8 != 376) {
-                  param1[var7 + param4] = (byte)63;
-                  break L1;
-                }
-                param1[var7 + param4] = (byte)-97;
-                break L1;
               }
               param1[param4 + var7] = (byte)var8;
             }

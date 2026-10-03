@@ -88,25 +88,20 @@ final class td extends hk {
         if (0 != param3) {
           return;
         }
-        L0: {
-          var5 = (this.field_r >> 1) + (this.field_v + param0);
-          var7 = -74 % ((param2 - 1) / 43);
-          var6 = param1 - (-this.field_m - (this.field_h >> 1));
-          var9 = this.field_F.a((byte) -105);
-          if ((var9 != bf.field_g) &&
-              (si.field_n != var9)) {
-            if (si.field_m == var9) {
-              var14 = oa.field_e[2];
-              var14.c(-(var14.field_r >> 1) + var5, var6 - (var14.field_m >> 1), 256);
-              break L0;
-            }
-            if (var9 != kk.field_w) {
-              break L0;
-            }
+        var5 = (this.field_r >> 1) + (this.field_v + param0);
+        var7 = -74 % ((param2 - 1) / 43);
+        var6 = param1 - (-this.field_m - (this.field_h >> 1));
+        var9 = this.field_F.a((byte) -105);
+        if ((var9 != bf.field_g) &&
+            (si.field_n != var9)) {
+          if (si.field_m == var9) {
+            var14 = oa.field_e[2];
+            var14.c(-(var14.field_r >> 1) + var5, var6 - (var14.field_m >> 1), 256);
+          } else if (!(var9 != kk.field_w)) {
             var15 = oa.field_e[1];
             var15.c(-(var15.field_r >> 1) + var5, var6 - (var15.field_m >> 1), 256);
-            break L0;
           }
+        } else {
           var13 = oa.field_e[0];
           var10 = var13.field_s << 1;
           var11 = var13.field_o << 1;

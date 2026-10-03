@@ -176,27 +176,24 @@ class hf {
           }
           var16.field_f = 0;
           for (var4 = 0; var4 < sb.field_a; var4++) {
-            L6: {
-              var5 = rc.field_j[var4];
-              var6 = hl.field_K[var4];
-              var7 = var5 * var6;
-              var19 = new byte[var7];
-              var17 = var19;
-              var8 = var17;
-              mj.field_a[var4] = var19;
-              var20 = new byte[var7];
-              var18 = var20;
-              var9 = var18;
-              vf.field_E[var4] = var20;
-              var10 = 0;
-              var11 = var16.c((byte) 34);
-              if ((var11 & 1) == 0) {
-                for (var12 = 0; var12 < var7; var12++) {
-                  var8[var12] = var15.f((byte) 90);
-                }
-                if ((var11 & 2) == 0) {
-                  break L6;
-                }
+            var5 = rc.field_j[var4];
+            var6 = hl.field_K[var4];
+            var7 = var5 * var6;
+            var19 = new byte[var7];
+            var17 = var19;
+            var8 = var17;
+            mj.field_a[var4] = var19;
+            var20 = new byte[var7];
+            var18 = var20;
+            var9 = var18;
+            vf.field_E[var4] = var20;
+            var10 = 0;
+            var11 = var16.c((byte) 34);
+            if ((var11 & 1) == 0) {
+              for (var12 = 0; var12 < var7; var12++) {
+                var8[var12] = var15.f((byte) 90);
+              }
+              if (!((var11 & 2) == 0)) {
                 for (var12 = 0; var7 > var12; var12++) {
                   dupTemp$1 = var15.f((byte) 95);
                   var9[var12] = dupTemp$1;
@@ -209,28 +206,27 @@ class hf {
                   }
                   var10 = stackIn_28_0 | stackIn_29_1;
                 }
-                break L6;
               }
+            } else {
               for (var12 = 0; var5 > var12; var12++) {
                 for (var13 = 0; var6 > var13; var13++) {
                   var8[var13 * var5 + var12] = var15.f((byte) 90);
                 }
               }
-              if (0 == (2 & var11)) {
-                break L6;
-              }
-              for (var12 = 0; var5 > var12; var12++) {
-                for (var13 = 0; var6 > var13; var13++) {
-                  dupTemp$0 = var15.f((byte) 78);
-                  var9[var12 + var5 * var13] = dupTemp$0;
-                  var14 = dupTemp$0;
-                  stackIn_44_0 = var10;
-                  if (var14 == -1) {
-                    stackIn_45_1 = 0;
-                  } else {
-                    stackIn_45_1 = 1;
+              if (!(0 == (2 & var11))) {
+                for (var12 = 0; var5 > var12; var12++) {
+                  for (var13 = 0; var6 > var13; var13++) {
+                    dupTemp$0 = var15.f((byte) 78);
+                    var9[var12 + var5 * var13] = dupTemp$0;
+                    var14 = dupTemp$0;
+                    stackIn_44_0 = var10;
+                    if (var14 == -1) {
+                      stackIn_45_1 = 0;
+                    } else {
+                      stackIn_45_1 = 1;
+                    }
+                    var10 = stackIn_44_0 | stackIn_45_1;
                   }
-                  var10 = stackIn_44_0 | stackIn_45_1;
                 }
               }
             }

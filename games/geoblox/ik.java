@@ -93,19 +93,16 @@ final class ik {
               return false;
             }
           }
-          L1: {
-            var3_int = param2 ? 1 : 0;
-            var4 = 0;
-            fieldTemp$0 = param1.field_L;
-            param1.field_L = param1.field_L + 1;
-            param1.field_n[fieldTemp$0] = param0;
-            fieldTemp$1 = param0.field_L;
-            param0.field_L = param0.field_L + 1;
-            param0.field_n[fieldTemp$1] = param1;
-            if ((param1.field_z == 0) &&
-                (param0.field_z == 0)) {
-              break L1;
-            }
+          var3_int = param2 ? 1 : 0;
+          var4 = 0;
+          fieldTemp$0 = param1.field_L;
+          param1.field_L = param1.field_L + 1;
+          param1.field_n[fieldTemp$0] = param0;
+          fieldTemp$1 = param0.field_L;
+          param0.field_L = param0.field_L + 1;
+          param0.field_n[fieldTemp$1] = param1;
+          if (!((param1.field_z == 0) &&
+              (param0.field_z == 0))) {
             var5_int = 0;
             var6_int = 0;
             stackIn_14_0 = (param1.field_z != 1) ? 0 : 1;
@@ -169,13 +166,13 @@ final class ik {
                 (param0.field_C == param1.field_C)) {
               param1.field_N = param1.field_N + 1;
               param0.field_N = param0.field_N + 1;
-              break L1;
-            }
-            if ((param1.field_z == 2) &&
-                (param0.field_z == 2) &&
-                (param0.field_M == param1.field_M)) {
-              param1.field_m = param1.field_m + 1;
-              param0.field_m = param0.field_m + 1;
+            } else {
+              if ((param1.field_z == 2) &&
+                  (param0.field_z == 2) &&
+                  (param0.field_M == param1.field_M)) {
+                param1.field_m = param1.field_m + 1;
+                param0.field_m = param0.field_m + 1;
+              }
             }
           }
           if ((param1.field_z == 0) &&

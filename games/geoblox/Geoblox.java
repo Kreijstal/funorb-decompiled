@@ -848,36 +848,27 @@ public final class Geoblox extends wf {
           fc.a(true, (java.awt.Canvas) (var2));
           return;
         }
-        L1: {
-          sh.field_y.a(param0 - 25598);
-          vb.c();
-          if ((tc.field_c == ai.field_p) &&
-              (el.field_i == -1)) {
-            if (tc.field_c != -1) {
-              og.field_q[tc.field_c].a(-28750);
-              break L1;
-            }
-            if (!dl.field_b) {
-              el.field_o.a((byte) -49);
-              break L1;
-            }
+        sh.field_y.a(param0 - 25598);
+        vb.c();
+        if ((tc.field_c == ai.field_p) &&
+            (el.field_i == -1)) {
+          if (tc.field_c != -1) {
+            og.field_q[tc.field_c].a(-28750);
+          } else if (!dl.field_b) {
+            el.field_o.a((byte) -49);
+          } else {
             oc.c(240);
-            break L1;
           }
-          L3: {
-            var3 = -480 + (nf.field_A * 6 + 35);
-            if ((el.field_i == -1) &&
-                (!qj.field_b)) {
-              if (ai.field_p == -1) {
-                el.field_o.a((byte) -68);
-                break L3;
-              }
-              if (tc.field_c != -1) {
-                break L3;
-              }
+        } else {
+          var3 = -480 + (nf.field_A * 6 + 35);
+          if ((el.field_i == -1) &&
+              (!qj.field_b)) {
+            if (ai.field_p == -1) {
               el.field_o.a((byte) -68);
-              break L3;
+            } else if (!(tc.field_c != -1)) {
+              el.field_o.a((byte) -68);
             }
+          } else {
             vb.a(0, 0, 640, 480, 1);
           }
           if (tc.field_c == -2) {

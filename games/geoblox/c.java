@@ -2041,20 +2041,15 @@ final class c extends ka {
             this.c(-70);
           }
           L1: {
-            L2: {
-              var6_int = var5;
-              if ((var6_int == 15) &&
-                  (var7 == 0)) {
-                if (1 == oc.field_b) {
-                  return;
-                }
-                var3_int = 1;
-                break L2;
+            var6_int = var5;
+            if ((var6_int == 15) &&
+                (var7 == 0)) {
+              if (1 == oc.field_b) {
+                return;
               }
-              if ((var6_int == 0) &&
-                  (var7 == 0)) {
-                break L2;
-              }
+              var3_int = 1;
+            } else if (!((var6_int == 0) &&
+                (var7 == 0))) {
               L5: {
                 L6: {
                   L7: {
@@ -2068,19 +2063,14 @@ final class c extends ka {
                                   L15: {
                                     L16: {
                                       L17: {
-                                        L18: {
-                                          if ((1 == var6_int) &&
-                                              (var7 == 0)) {
-                                            ai.field_p = -1;
-                                            if (var7 == 0) {
-                                              break L1;
-                                            }
-                                            break L18;
+                                        if ((1 == var6_int) &&
+                                            (var7 == 0)) {
+                                          ai.field_p = -1;
+                                          if (var7 == 0) {
+                                            break L1;
                                           }
-                                          if ((var6_int == 2) &&
-                                              (var7 == 0)) {
-                                            break L18;
-                                          }
+                                        } else if (!((var6_int == 2) &&
+                                            (var7 == 0))) {
                                           if (var6_int == 3) {
                                             break L17;
                                           }

@@ -66,22 +66,16 @@ final class eg extends hf {
                     break L3;
                   }
                 }
-                L5: {
-                  if ((48 <= var9) &&
-                      (var9 <= 57)) {
-                    var9 -= 48;
-                    break L5;
-                  }
-                  if ((65 <= var9) &&
-                      (90 >= var9)) {
-                    var9 -= 55;
-                    break L5;
-                  }
-                  if ((var9 >= 97) &&
-                      (122 >= var9)) {
-                    var9 -= 87;
-                    break L5;
-                  }
+                if ((48 <= var9) &&
+                    (var9 <= 57)) {
+                  var9 -= 48;
+                } else if ((65 <= var9) &&
+                    (90 >= var9)) {
+                  var9 -= 55;
+                } else if ((var9 >= 97) &&
+                    (122 >= var9)) {
+                  var9 -= 87;
+                } else {
                   throw new NumberFormatException();
                 }
                 if (var9 >= param2) {

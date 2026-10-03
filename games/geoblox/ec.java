@@ -98,12 +98,10 @@ final class ec {
           var12 = 0;
           var1_int = var12;
           while (var12 < h.field_a) {
-            L8: {
-              if ((-1 + h.field_a > var12) &&
-                  (nk.field_f[var12] == nk.field_f[var12 + 1])) {
-                nk.field_f[var12] = 0;
-                break L8;
-              }
+            if ((-1 + h.field_a > var12) &&
+                (nk.field_f[var12] == nk.field_f[var12 + 1])) {
+              nk.field_f[var12] = 0;
+            } else {
               var2 = (nk.field_f[var12] & 1072693248) >> 20;
               var3 = nk.field_f[var12] >> 10 & 1023;
               var4 = 1023 & nk.field_f[var12];
@@ -130,14 +128,14 @@ final class ec {
                 var10 = (int)var5.field_v;
                 ug.a(var8, true, var10, gf.field_f, var9);
                 nk.field_f[var12] = 0;
-                break L8;
+              } else {
+                var8_ref_ja = var5;
+                var9_ref_ja = var6;
+                var7.field_K = null;
+                var9_ref_ja.field_K = null;
+                var8_ref_ja.field_K = null;
+                nk.field_f[var12] = 0;
               }
-              var8_ref_ja = var5;
-              var9_ref_ja = var6;
-              var7.field_K = null;
-              var9_ref_ja.field_K = null;
-              var8_ref_ja.field_K = null;
-              nk.field_f[var12] = 0;
             }
             var12++;
           }

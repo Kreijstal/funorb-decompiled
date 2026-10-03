@@ -239,20 +239,15 @@ final class gh {
                 L3: {
                   L4: {
                     L5: {
-                      L6: {
-                        var3 = c.field_ab;
-                        if ((var3 == 4) &&
-                            (var14 == 0)) {
-                          var2_ref_String = "baking";
-                          if (var14 == 0) {
-                            break L0;
-                          }
-                          break L6;
+                      var3 = c.field_ab;
+                      if ((var3 == 4) &&
+                          (var14 == 0)) {
+                        var2_ref_String = "baking";
+                        if (var14 == 0) {
+                          break L0;
                         }
-                        if ((var3 == 6) &&
-                            (var14 == 0)) {
-                          break L6;
-                        }
+                      } else if (!((var3 == 6) &&
+                          (var14 == 0))) {
                         if ((var3 == 5) &&
                             (var14 == 0)) {
                           break L5;

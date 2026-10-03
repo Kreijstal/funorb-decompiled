@@ -925,19 +925,15 @@ final class rh {
           }
           var4 = param0.length();
           for (var5 = 0; var5 < var4; var5++) {
-            L3: {
-              var2_long = var2_long * 37L;
-              var6 = param0.charAt(var5);
-              if ((var6 >= 65) &&
-                  (var6 <= 90)) {
-                var2_long = var2_long + (long)(-65 + (1 + var6));
-                break L3;
-              }
-              if ((var6 >= 97) &&
-                  (var6 <= 122)) {
-                var2_long = var2_long + (long)(-96 + var6);
-                break L3;
-              }
+            var2_long = var2_long * 37L;
+            var6 = param0.charAt(var5);
+            if ((var6 >= 65) &&
+                (var6 <= 90)) {
+              var2_long = var2_long + (long)(-65 + (1 + var6));
+            } else if ((var6 >= 97) &&
+                (var6 <= 122)) {
+              var2_long = var2_long + (long)(-96 + var6);
+            } else {
               if ((48 <= var6) &&
                   (57 >= var6)) {
                 var2_long = var2_long + (long)(-48 + var6 + 27);

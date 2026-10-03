@@ -273,26 +273,24 @@ final class tb {
                 }
                 if ((var13 != 0) &&
                     (var13 != 1)) {
-                  L17: {
-                    var33 = var13 - 1;
-                    if (var33 < 16) {
-                      var30 = param0.field_y[0];
-                      var1 = param0.field_e[var30 + var33];
-                      while (var33 > 3) {
-                        var34 = var30 + var33;
-                        param0.field_e[var34] = param0.field_e[var34 - 1];
-                        param0.field_e[var34 - 1] = param0.field_e[var34 - 2];
-                        param0.field_e[var34 - 2] = param0.field_e[var34 - 3];
-                        param0.field_e[var34 - 3] = param0.field_e[var34 - 4];
-                        var33 -= 4;
-                      }
-                      while (var33 > 0) {
-                        param0.field_e[var30 + var33] = param0.field_e[var30 + var33 - 1];
-                        var33--;
-                      }
-                      param0.field_e[var30] = (byte)var1;
-                      break L17;
+                  var33 = var13 - 1;
+                  if (var33 < 16) {
+                    var30 = param0.field_y[0];
+                    var1 = param0.field_e[var30 + var33];
+                    while (var33 > 3) {
+                      var34 = var30 + var33;
+                      param0.field_e[var34] = param0.field_e[var34 - 1];
+                      param0.field_e[var34 - 1] = param0.field_e[var34 - 2];
+                      param0.field_e[var34 - 2] = param0.field_e[var34 - 3];
+                      param0.field_e[var34 - 3] = param0.field_e[var34 - 4];
+                      var33 -= 4;
                     }
+                    while (var33 > 0) {
+                      param0.field_e[var30 + var33] = param0.field_e[var30 + var33 - 1];
+                      var33--;
+                    }
+                    param0.field_e[var30] = (byte)var1;
+                  } else {
                     var31 = var33 / 16;
                     var32 = var33 % 16;
                     var35 = param0.field_y[var31] + var32;
@@ -310,16 +308,15 @@ final class tb {
                     }
                     param0.field_y[0] = param0.field_y[0] - 1;
                     param0.field_e[param0.field_y[0]] = (byte)var1;
-                    if (param0.field_y[0] != 0) {
-                      break L17;
-                    }
-                    var29 = 4095;
-                    for (var27 = 15; var27 >= 0; var27--) {
-                      for (var28 = 15; var28 >= 0; var28--) {
-                        param0.field_e[var29] = param0.field_e[param0.field_y[var27] + var28];
-                        var29--;
+                    if (!(param0.field_y[0] != 0)) {
+                      var29 = 4095;
+                      for (var27 = 15; var27 >= 0; var27--) {
+                        for (var28 = 15; var28 >= 0; var28--) {
+                          param0.field_e[var29] = param0.field_e[param0.field_y[var27] + var28];
+                          var29--;
+                        }
+                        param0.field_y[var27] = var29 + 1;
                       }
-                      param0.field_y[var27] = var29 + 1;
                     }
                   }
                   dupTemp$0 = param0.field_x[var1 & 255] & 255;

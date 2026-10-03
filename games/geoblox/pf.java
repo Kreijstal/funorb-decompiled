@@ -585,33 +585,27 @@ final class pf extends ee implements ga, pl {
                         }
                       }
                     }
-                    L5: {
-                      if (var7_int == 3) {
-                        var27 = (java.lang.reflect.Method) (var13.field_i[var6].field_b);
-                        var24 = var13.field_o[var6];
-                        var10 = new Object[var24.length];
-                        for (var11_int = 0; var11_int < var24.length; var11_int++) {
-                          var12 = new ObjectInputStream((InputStream) ((Object) new ByteArrayInputStream(var24[var11_int])));
-                          var10[var11_int] = var12.readObject();
-                        }
-                        var11 = var27.invoke((Object) null, var10);
-                        if (var11 == null) {
-                          param1.d((byte) -88, 0);
-                          break L5;
-                        }
-                        if (var11 instanceof Number) {
-                          param1.d((byte) 126, 1);
-                          param1.b((byte) 116, ((Number) (var11)).longValue());
-                          break L5;
-                        }
-                        if (!(var11 instanceof String)) {
-                          param1.d((byte) -86, 4);
-                          break L5;
-                        }
+                    if (var7_int == 3) {
+                      var27 = (java.lang.reflect.Method) (var13.field_i[var6].field_b);
+                      var24 = var13.field_o[var6];
+                      var10 = new Object[var24.length];
+                      for (var11_int = 0; var11_int < var24.length; var11_int++) {
+                        var12 = new ObjectInputStream((InputStream) ((Object) new ByteArrayInputStream(var24[var11_int])));
+                        var10[var11_int] = var12.readObject();
+                      }
+                      var11 = var27.invoke((Object) null, var10);
+                      if (var11 == null) {
+                        param1.d((byte) -88, 0);
+                      } else if (var11 instanceof Number) {
+                        param1.d((byte) 126, 1);
+                        param1.b((byte) 116, ((Number) (var11)).longValue());
+                      } else if (!(var11 instanceof String)) {
+                        param1.d((byte) -86, 4);
+                      } else {
                         param1.d((byte) 121, 2);
                         param1.a((String) (var11), 0);
-                        break L5;
                       }
+                    } else {
                       if (var7_int == 4) {
                         var26 = (java.lang.reflect.Method) (var13.field_i[var6].field_b);
                         var9 = var26.getModifiers();
