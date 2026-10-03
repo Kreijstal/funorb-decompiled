@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "cce98256b9e4c25d1ba74249abe4f019db851a0b",
+      "commit": "d4ad201b2cc96e98089be0c4ccfe819dd7a924da",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "eb912ae16633f7b3dff0784dd1f3ddc7ee5edf5fc6329e5cc926ecfe7eae7ed2",
-        "reproduce": "git archive --format=tar cce98256b9e4c25d1ba74249abe4f019db851a0b | sha256sum",
+        "sha256": "4302defeeb32cf3910626832248610a16a676d34f6bca29002e242cbc43d0eda",
+        "reproduce": "git archive --format=tar d4ad201b2cc96e98089be0c4ccfe819dd7a924da | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
@@ -2029,8 +2029,8 @@
   },
   "literalBooleanDecisionJoins": {
     "historicalPassVersion": 78,
-    "javaToolsCommit": "cce98256b9e4c25d1ba74249abe4f019db851a0b",
-    "sourceArchiveSha256": "eb912ae16633f7b3dff0784dd1f3ddc7ee5edf5fc6329e5cc926ecfe7eae7ed2",
+    "javaToolsCommit": "d4ad201b2cc96e98089be0c4ccfe819dd7a924da",
+    "sourceArchiveSha256": "4302defeeb32cf3910626832248610a16a676d34f6bca29002e242cbc43d0eda",
     "bytecodeChanged": false,
     "sourceBodyEditedByHand": false,
     "changedJavaFiles": [
@@ -2053,7 +2053,6 @@
     "decisionsFolded": 17,
     "uniqueVisiblePrimitiveBooleanLocalRequired": true,
     "onlyLiteralLeavesAndSameBlockBreaksConsumed": true,
-    "originalPredicateBytesOrderFailuresAndPartialStatePreserved": true,
     "relationalOperatorsNeverComplemented": true,
     "protectedMonitorAndDeclarationScopesPreserved": true,
     "maximumLeafStoresPerExpression": 12,
@@ -2073,6 +2072,7 @@
     "newNativeEmitterComparisons": 13824,
     "cleanSourceArchiveByteExact": true,
     "diagnosticsUnchanged": true,
-    "scope": "Seventeen primitive local boolean decisions become short-circuit expressions after exact literal-store/consumed-break and lexical-scope proof. Native13824 comparisons cover predicates, calls, nullable unboxing, NaNs/signed zero, self-modifying predicates, failures, partial state, throwable identity and surrounding protected/monitor ownership. The optional frame-only Java AST corpus checker from pass77 is not applicable to the new boolean syntax and was skipped; its historical proof remains. Every naming declaration/override remains, with only17 duplicate boolean store references removed. Game probe evidence is in the single readable manifest; full assets, platform/server/gameplay and browser/phone performance remain unverified."
+    "scope": "Seventeen primitive local boolean decisions become short-circuit expressions after exact literal-store/consumed-break and lexical-scope proof. Native13824 comparisons cover predicates, calls, nullable unboxing, NaNs/signed zero, self-modifying predicates, failures, partial state, throwable identity and surrounding protected/monitor ownership. The optional frame-only Java AST corpus checker from pass77 is not applicable to the new boolean syntax and was skipped; its historical proof remains. Every naming declaration/override remains, with only17 duplicate boolean store references removed. Game probe evidence is in the single readable manifest; full assets, platform/server/gameplay and browser/phone performance remain unverified.",
+    "originalPredicateOperandBytesOrderFailuresAndPartialStatePreserved": true
   }
 }
