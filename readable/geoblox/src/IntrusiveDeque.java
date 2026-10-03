@@ -92,15 +92,7 @@ final class IntrusiveDeque {
         if (param0 <= 65) {
           return false;
         }
-        L0: {
-          if (oh.field_b != null) {
-            if (oh.field_b.j(75) != null) {
-              stackIn_6_0 = true;
-              break L0;
-            }
-          }
-          stackIn_6_0 = false;
-        }
+        stackIn_6_0 = (oh.field_b != null) && (oh.field_b.j(75) != null);
         return stackIn_6_0;
     }
 

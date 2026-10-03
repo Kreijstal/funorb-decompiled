@@ -980,17 +980,7 @@ final class GameplaySession {
             if (this.delayedActionCountdown == 0) {
               ld.spawnPointsPopup(310, 320, 123, 100 + 100 * ArchiveNetworkClient.difficultyStep);
             }
-            L50: {
-              if (!fa.entitiesDetachedThisTick) {
-                if (a.attachedEntities.isEmpty(13519)) {
-                  if (0 < ul.releasedInCurrentTheme) {
-                    nextBoardClearBonusEligible = true;
-                    break L50;
-                  }
-                }
-              }
-              nextBoardClearBonusEligible = false;
-            }
+            nextBoardClearBonusEligible = (!fa.entitiesDetachedThisTick) && (a.attachedEntities.isEmpty(13519)) && (0 < ul.releasedInCurrentTheme);
             L52: {
               ((GameplaySession) (this)).boardClearBonusEligible = nextBoardClearBonusEligible;
               if (this.boardClearBonusEligible) {
@@ -1405,15 +1395,7 @@ final class GameplaySession {
         if (!requirePendingTransitionOrPhase) {
           return true;
         }
-        L0: {
-          if (!this.sceneTransitionRequested) {
-            if (0 == this.sessionPhase) {
-              hasPendingTransitionOrPhase = false;
-              break L0;
-            }
-          }
-          hasPendingTransitionOrPhase = true;
-        }
+        hasPendingTransitionOrPhase = (this.sceneTransitionRequested) || !(0 == this.sessionPhase);
         return hasPendingTransitionOrPhase;
     }
 

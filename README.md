@@ -16,30 +16,33 @@ mirror. The current [manifest](readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
-identities. Both 303-file Java corpora compile and retain all 138,519 remaining bindings
+identities. Both 303-file Java corpora compile and retain all 138,502 remaining bindings
 and 388 override relationships.
 
-The current structural pass removes redundant control labels and plain blocks
-without widening variable scopes. Labeled transfers become ordinary break/
-continue only when they reach the exact same loop/switch. Try/catch/finally,
-monitor boundaries and outer exits remain. Regeneration changes 153 files and
-removes 588 lines, reducing the raw corpus from 80,457 to 79,869 lines.
-It removes 508 redundant labels and simplifies 450 labeled continues; all
-1,190 labeled breaks retain their destinations.
+The current structural pass folds 17 boolean decisions across 12 files into
+short-circuit AND/OR expressions. Board-clear eligibility, raster dirtiness,
+queue-settled and pending-transition checks now expose their conditions directly.
+Calls, nullable receivers/unboxing, predicate order, failures and partial writes
+remain, along with variable scopes and protected/monitor boundaries. The pass
+removes 156 lines, reducing the raw corpus from 79,869 to 79,713 lines.
 
-The emitter suite passes 41 groups, including 2,048 new native comparisons and
-an independent Java AST comparison of all 303 files, 1,129 loop/switch destinations
-and 1,762 jumps. Exception-exit tests pass eight groups. Three wider CFR fixture
-failures also occur on the pinned pre-cleanup baseline. Diagnostics are unchanged.
+The emitter suite passes 42 tests, including 13,824 new native comparisons; its
+optional pass77 frame-only corpus checker is skipped for this new syntax change.
+Exception-exit tests pass eight groups. All 6,081 complete naming rules survive
+without ordinal migration, applying 49,577 edits and preserving 138,502 bindings
+and 388 overrides. The only lost references are 17 duplicate boolean stores;
+all other ordered binding events match. Clean source-archive regeneration and
+diagnostics, readable reproduction and dictionary reversal are byte-exact.
+Existing native probe traces retain their pins within their documented scopes.
+The single manifest records source/decompiler migration and evidence; Git stores
+history. Opaque helpers, large bodies, full assets/platform/server/gameplay and
+browser/phone memory/startup/FPS targets remain unfinished or unverified.
 
-All 6,081 prior complete naming rules survive without ordinal migrations, applying
-49,580 edits and preserving all declaration/reference names, identities and order,
-138,519 bindings and 388 overrides. Clean pinned decompiler source regeneration,
-readable reproduction and dictionary reversal are byte-exact. Existing native
-probe traces retain their pins. The single manifest records the explicit source/
-decompiler migration and evidence; Git stores history without new report snapshots.
-Large labeled bodies, opaque helpers, comprehensive concurrency, full assets/
-gameplay and device memory/startup/FPS targets remain unfinished or unverified.
+Pass 77 removed 508 redundant labels, simplified 450 labeled continues and
+removed 588 lines across 153 files. Its independent Java AST corpus comparison
+preserved all 303 files' syntax events, 1,129 loop/switch destinations and 1,762
+jumps. That proof covers its control-frame rewrite; boolean decisions use the
+separate scope/transfer and native checks described above.
 
 Pass 76 shared a duplicate Bzip2 output-state publication/return tail through an
 existing plain exit block, removing thirteen lines while retaining its native

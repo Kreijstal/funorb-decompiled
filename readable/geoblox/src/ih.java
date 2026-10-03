@@ -30,19 +30,7 @@ final class ih {
         if (param0 != 0) {
           return true;
         }
-        L0: {
-          if (ArchiveNetworkClient.movingEntities.isEmpty(13519)) {
-            if (SecondaryDeque.spawnQueue.isEmpty(13519)) {
-              if (bh.transientEntities.isEmpty(param0 + 13519)) {
-                if (!Bzip2DecoderState.avatarShockContactPending) {
-                  stackIn_8_0 = true;
-                  break L0;
-                }
-              }
-            }
-          }
-          stackIn_8_0 = false;
-        }
+        stackIn_8_0 = (ArchiveNetworkClient.movingEntities.isEmpty(13519)) && (SecondaryDeque.spawnQueue.isEmpty(13519)) && (bh.transientEntities.isEmpty(param0 + 13519)) && (!Bzip2DecoderState.avatarShockContactPending);
         return stackIn_8_0;
     }
 

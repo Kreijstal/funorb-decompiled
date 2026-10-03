@@ -4,10 +4,10 @@
   "purpose": "Offline readable source mirror; not a runtime patch",
   "source": {
     "repository": "Kreijstal/funorb-decompiled",
-    "commit": "215c4e410a9c313870fe2dc67bc338e5f82b5b8e",
+    "commit": "1b46d772b7dd2ddb026d31dd849f0ea77424cab7",
     "subdirectory": "games/geoblox"
   },
-  "inputTreeSha256": "a9338d980323b4418a6ee1dfed8970f48cffd57bbe752927da8c8ec7817481ed",
+  "inputTreeSha256": "4ce487c9baad355f926e36221a15e60da8c98f220df7d08b9f0474814b8083cd",
   "namingPolicy": "Confirmed semantic names without opaque suffixes; unknown symbols stay unchanged. Original spellings and JVM identities remain in the reverse symbol map. Every rule guards the original spelling. Local identities also use declaration ordinals; reused variables retain all supported roles. Numeric screen/action IDs and decompiler state remain unchanged.",
   "renames": [
     {
@@ -36497,19 +36497,19 @@
       "evidence": "Input source audit: wl queues translated key presses/typed characters and encoded releases; re.b(Z)V replays held-key changes and snapshots the keyboard-event frame end; hh.a(I)Z polls that frame. le AWT mouse/focus callbacks update live pointer state; mc.a(B)V copies it under the listener monitor and consumes pending presses/activity. Numeric internal codes,128-slot queues,112 held-key flags,guards,handlers and original diagnostic strings remain. The2184-case native matrix checks controlled-event/queue scopes; real concurrent AWT delivery and complete gameplay remain unverified."
     }
   ],
-  "revision": 6,
-  "version": 77,
+  "revision": 7,
+  "version": 78,
   "generators": {
     "dekoblokoWork": {
       "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "f26a115c45822808c8c9df00ce5dfb6e0b0fb6bd",
+      "commit": "d4ad201b2cc96e98089be0c4ccfe819dd7a924da",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "8779a07e30e5ae402ec7b8f8c7d6a723437b825378bd57064d7bd15f81524569",
-        "reproduce": "git archive --format=tar f26a115c45822808c8c9df00ce5dfb6e0b0fb6bd | sha256sum",
+        "sha256": "4302defeeb32cf3910626832248610a16a676d34f6bca29002e242cbc43d0eda",
+        "reproduce": "git archive --format=tar d4ad201b2cc96e98089be0c4ccfe819dd7a924da | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
@@ -36518,9 +36518,9 @@
   "publication": {
     "format": 1,
     "previousRules": {
-      "commit": "17ca8f47a23688f5fb5c5fe2aa495531b43410b9",
+      "commit": "4e1d4cbcfaa5c6d45687e0e0fb4d38caffeb1784",
       "path": "readable/geoblox-rules.json",
-      "sha256": "1c06f5abd60705e57bf8665595ab0ff83651ad539ab43088c392efe31a65e6fd"
+      "sha256": "81548f8c601a602d80d25d428763e46bc45b029ed3aa39387e2c375e35208edb"
     },
     "ruleChanges": [],
     "stubJarSha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2",
@@ -36747,7 +36747,7 @@
       },
       {
         "file": "gh.java",
-        "sha256": "62dd56187f9ea6d2c4153e6809c0a4d564c25b99b071a73e933f475bdd4c444d"
+        "sha256": "bd4a71531ba0ca2193c5bdde25adf18322358a1c8e47bbd18891648054035a0c"
       },
       {
         "file": "gi.java",
@@ -36827,7 +36827,7 @@
       },
       {
         "file": "ih.java",
-        "sha256": "527d673a22cc4034d8758521c88704b31d31e11e1d6392965ac043d63bd7af12"
+        "sha256": "617efed8dea65d784154281e42db334bf0d3eecbd1691d176166c1ad9d2d64b0"
       },
       {
         "file": "ii.java",
@@ -36899,7 +36899,7 @@
       },
       {
         "file": "kc.java",
-        "sha256": "8672cd1aaec0535add55c3bc806bb3020ce908cd5a990bd1edd7650e8436c3d7"
+        "sha256": "d48f461ab574955a2e648ab4d11f0d338b6cdced65872b0fd2c2af10a56a8f03"
       },
       {
         "file": "kd.java",
@@ -37119,7 +37119,7 @@
       },
       {
         "file": "qi.java",
-        "sha256": "93eba7b992770c8301b60b0fb26c5d5faf5a67cbfc18fc10a6787860f9d685ab"
+        "sha256": "9a08f86bd97a7808e44cc54ed9f2b091e335ed70f153b04322059b62bb31fde2"
       },
       {
         "file": "qk.java",
@@ -37171,7 +37171,7 @@
       },
       {
         "file": "sb.java",
-        "sha256": "491b67f325179da4880213f5017a85671d0bad1a992392dfe7e8fc36249ebaf0"
+        "sha256": "9b7ffee50abacf57b9e6fb27e18c51bda04b7272325b3c15ec0cac109dede39f"
       },
       {
         "file": "sc.java",
@@ -37187,7 +37187,7 @@
       },
       {
         "file": "sh.java",
-        "sha256": "d21496e1f5eccf5f909a346d5e22bde615b23fbe92e6ee2cef0e45a96562a9ad"
+        "sha256": "c6e04f9ab1064d7792d6200e80ba4933f481c07c400c403f2c9d9136cbe07334"
       },
       {
         "file": "si.java",
@@ -37259,7 +37259,7 @@
       },
       {
         "file": "uk.java",
-        "sha256": "f140c53f142bcbc68cd18cbc8949c4a038286d8dd9865b3bc0c159e30cae06d8"
+        "sha256": "3b30ccd19d1ac105f348c4dd5cd4060dddbae1d6c898ff651e4100280a504adf"
       },
       {
         "file": "ul.java",
@@ -37299,7 +37299,7 @@
       },
       {
         "file": "vh.java",
-        "sha256": "00711a0b52460188b7248579f2650c1ff38c037da8409347659876f6919d4603"
+        "sha256": "3c16fb41d43411f684d4ce78adf3ec66b2d42f5b2da304e765e392674abdbe39"
       },
       {
         "file": "vj.java",
@@ -37315,7 +37315,7 @@
       },
       {
         "file": "wc.java",
-        "sha256": "a091f0909ab182d153c9b0d9105379c9cdbcc858f13fb268490d2e2ca5f37e77"
+        "sha256": "c65a9cee91bb9be6a9f0e2dfdbeffc07ee873bb8d51cecb80eeeddfb746161af"
       },
       {
         "file": "wd.java",
@@ -37323,7 +37323,7 @@
       },
       {
         "file": "wf.java",
-        "sha256": "10c814fd2d9f9a07c5c221fc398f56cf8ee43bd3d77b1dfd06d3032540ee8955"
+        "sha256": "3c21851367093f6d912730a7d425069a60f0933dead9654bb050ac9562d189cf"
       },
       {
         "file": "wg.java",
@@ -39635,9 +39635,9 @@
     },
     "verification": {
       "sourceDeclarations": 19558,
-      "bindingsCompared": 138519,
+      "bindingsCompared": 138502,
       "overrideRelationships": 388,
-      "identifierEdits": 49580,
+      "identifierEdits": 49577,
       "dictionaryRestorationFiles": 303,
       "wholeGameEquivalenceVerified": false,
       "nativeMatchingScenarios": 708,
@@ -39692,7 +39692,8 @@
         "Pass73 names all DiskArchiveCache instance declarations and shared diskSectorBuffer. Six-byte index rows,520-byte sectors,8/10-byte headers,512/510 payloads, int-before-long offsets, data-file synchronization/shared scratch, index-before-sector publication, reused-chain validation, append allocation and partial writes remain. Named small/large EOF state selectors retain0/1 and true exit after header EOF;512-byte end-of-chain test remains even for510-byte payloads. Native138 controlled cases verify fresh/reused chains, zero length, format boundaries, malformed reads and both header-EOF success/partial effects; original/readable bytes and result traces match native. Previous rules/source pins and six native traces remain. Full buffering/concurrency, malformed writes and guards, real cache/server/assets, whole gameplay and phone/FPS/heap behavior remain unverified. Compression, unknown static helpers and large labeled bodies remain unfinished.",
         "Pass74 names all GzipInflater instance declarations and selected archive/Bzip2 entry and bit-reader contracts/state. Signed lengths, optional nonzero maximum, complement raw branch, allocation/alias order, fixed gzip header/full backing input, ignored inflate count/finished/trailer, unchanged input cursor, reused inflater/reset, shared locks, Bzip2 unused packed length/partial output and success-only array release remain. Native74 controlled cases cover limits/routing, declared packed-length mismatch, gzip corrupted magic/deflate/trailer and partial destinations, reset/cursor, one stripped Bzh1 vector and early end. Seven previous native traces and all previous rules/source pins remain. Deep Bzip2 locals/state/control flow, arbitrary malformed inputs, optional gzip header fields, full assets/gameplay and phone/FPS/heap behavior remain unverified or unfinished.",
         "Pass75 names all Bzip2Decoder declarations and Bzip2DecoderState instance fields. Forced100k workspace, byte alphabet, canonical Huffman limits/bases/symbols,50-symbol selectors, RUNA/RUNB weighting, chunked MTF movement/rebuild, packed inverse links and signed pending-run emission keep numeric/alias/partial-state/empty-overflow effects. Reused roles remain explicit; large labeled bodies and duplicate publication tails are not restructured. Native40 controlled cases compare six fixed level1 stripped vectors including120064-byte multi-block data, independent full/partial output oracles and three malformed inputs followed by recovery. Failures retain assigned input/output arrays and successful recovery clears them. Eight previous traces, all previous complete rules and source pins remain. Arbitrary corrupt/randomized streams, comprehensive Bzip2 continuation/corruption/concurrency behavior, real assets/server/gameplay and phone/FPS/heap remain unverified. Unknown static helpers and large control-flow bodies remain unfinished.",
-        "Pass77 removes only redundant labels and nondeclaring plain block frames after exact lexical jump-destination proof. Java AST event streams and all transfer destinations match for303 files; variable scopes, try/catch/finally and monitor ownership remain. Generic2048 native comparisons verify controlled effects, shadows, failures and lock release. Three wider try-with-resources fixture failures also occur on the pinned pre-cleanup baseline. Large labeled bodies, opaque helpers, full assets/gameplay and phone/FPS/heap remain unverified."
+        "Pass77 removes only redundant labels and nondeclaring plain block frames after exact lexical jump-destination proof. Java AST event streams and all transfer destinations match for303 files; variable scopes, try/catch/finally and monitor ownership remain. Generic2048 native comparisons verify controlled effects, shadows, failures and lock release. Three wider try-with-resources fixture failures also occur on the pinned pre-cleanup baseline. Large labeled bodies, opaque helpers, full assets/gameplay and phone/FPS/heap remain unverified.",
+        "Pass78 folds17 literal primitive-local boolean decisions through exact same-block breaks. All predicate operand bytes/order, unboxing/NaNs, calls, failures and partial state remain, with no relational complement. Extra branch effects/declarations/alternate branches, protected/monitor crossings, boxed/field/ambiguous targets and unknown syntax refuse folding. Native13824 comparisons cover the generic decision/protection scopes;42 emitter tests pass and the optional pass77 frame-only AST corpus check is skipped for this syntax change. All declarations and override rows remain; only17 duplicate local-store references disappear. Full assets/platform/server/gameplay and browser/phone acceptance remain unverified."
       ],
       "checks": {
         "ruleBuilderTests": 9,
@@ -39734,7 +39735,7 @@
       "generatedSelectorsBefore": 265,
       "generatedSelectorsAfter": 9,
       "generatedSelectorsRemoved": 256,
-      "rawSourceLinesRemoved": 588,
+      "rawSourceLinesRemoved": 156,
       "returnReconstructionChangedJavaFiles": 181,
       "localOrdinalMigrations": 0,
       "obsoleteNamedSelectorsRemoved": 1,
@@ -39749,7 +39750,7 @@
       "elseWrappersRemoved": 2128,
       "genericEarlyExitTestGroups": 11,
       "nativeEmitterComparisons": 54549,
-      "sourceReferenceOccurrencesRemoved": 0,
+      "sourceReferenceOccurrencesRemoved": 17,
       "sourceReferenceOccurrencesAdded": 0,
       "nativeDifficultyFlagCases": 82944,
       "nativeDifficultyBoundsCases": 56,
@@ -39759,7 +39760,7 @@
       "nativeDifficultyResetCases": 7,
       "nativeSpawnSelectionCases": 1332,
       "nativeDifficultyTraceSha256": "8c66899b5955eac3380cc3aefd3cbe17a5063cc68f98cd507ff406cea4ae587b",
-      "genericEmitterTestGroups": 41,
+      "genericEmitterTestGroups": 42,
       "genericTypedAssignmentTestGroups": 3,
       "typedLiteralAssignmentsFolded": 77,
       "difficultyAssignmentsFolded": 17,
@@ -39767,7 +39768,7 @@
       "typedAssignmentElseWrappersRemoved": 77,
       "nativeComparatorCases": 32768,
       "nativeComparatorTraceSha256": "9be228f7421970f2214c74e8890327f8592f706dc90ccd0d0933e6f2fbe0a604",
-      "referenceRemovalAttribution": "Pass77 removes only redundant control labels/braces. Every declaration/reference identity, spelling and ordered occurrence remains; all19558 declarations,118961 references and388 override rows match pass76. All6081 complete naming rules remain unchanged without ordinal migrations.",
+      "referenceRemovalAttribution": "Pass78 removes one duplicate literal-store reference for each of17 primitive boolean locals in12 files. Every declaration identity/spelling/order and override row remains. After excluding those17 target-local reference keys, all other ordered binding events match. Three removed stores previously received names; all6081 complete rules remain without ordinal migration.",
       "genericBooleanCarrierTestGroups": 3,
       "localBooleanCarriersEliminated": 221,
       "localBooleanSnapshotsRetyped": 70,
@@ -39805,7 +39806,7 @@
       "namedAssetLoadingParametersAdded": 24,
       "namedAssetPreparationAndLookupLocalsAdded": 28,
       "identifierEditsAddedInCurrentPass": 0,
-      "lastStructuralPassVersion": 77,
+      "lastStructuralPassVersion": 78,
       "namingRulesRefinedInCurrentPass": 0,
       "allUnaffectedPriorRulesPreserved": true,
       "namedRenderingClassRulesAdded": 0,
@@ -39845,7 +39846,7 @@
       "nativePlainBlockTailComparisons": 432,
       "plainBlockTailChangedJavaFiles": 7,
       "retainedNewTailLabelPrefixTokenBudget": 512,
-      "identifierEditsRemovedInCurrentPass": 0,
+      "identifierEditsRemovedInCurrentPass": 3,
       "namedSocketAndTaskRulesAdded": {
         "C": 3,
         "F": 24,
@@ -40189,33 +40190,23 @@
       "genericCfrFixtureTests": 36,
       "genericCfrFixturePasses": 33,
       "preexistingCfrFixtureFailures": 3,
-      "nativeEmitterComparisonsHistoricalPassVersion": 52
+      "nativeEmitterComparisonsHistoricalPassVersion": 52,
+      "genericEmitterTestsRegistered": 43,
+      "genericEmitterTestsSkipped": 1,
+      "independentJavaAstCorpusHistoricalPassVersion": 77,
+      "genericCfrFixtureHistoricalPassVersion": 77,
+      "literalBooleanDecisionFoldHistoricalPassVersion": 78,
+      "literalBooleanDecisionsFolded": 17,
+      "literalBooleanDecisionChangedJavaFiles": 12,
+      "literalBooleanDecisionSourceLinesBefore": 79869,
+      "literalBooleanDecisionSourceLinesAfter": 79713,
+      "literalBooleanDuplicateStoreReferencesRemoved": 17,
+      "nativeLiteralBooleanDecisionComparisons": 13824,
+      "literalBooleanDecisionMaximumLeafStores": 12,
+      "literalBooleanDecisionMaximumPredicateTokens": 256
     },
     "sourceChange": {
       "before": {
-        "source": {
-          "repository": "Kreijstal/funorb-decompiled",
-          "commit": "f31e2a033e8b343453d3a717ac15f104435ab2df",
-          "subdirectory": "games/geoblox"
-        },
-        "generators": {
-          "dekoblokoWork": {
-            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
-            "trackedClean": true
-          },
-          "javaTools": {
-            "commit": "73b2571fd252aaef9c8552d5d72416be9632d5ab",
-            "trackedClean": true,
-            "sourceArchive": {
-              "sha256": "8c8d1fd40c52f3f831bdc78cb7295df688c7b544722030f93bde71638c3cd31a",
-              "reproduce": "git archive --format=tar 73b2571fd252aaef9c8552d5d72416be9632d5ab | sha256sum",
-              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
-            }
-          }
-        },
-        "inputTreeSha256": "30d4aa4f3db79e67862d7f59381af8fd20ed178a3acf9c9b7ead4a3a4de94638"
-      },
-      "after": {
         "source": {
           "repository": "Kreijstal/funorb-decompiled",
           "commit": "215c4e410a9c313870fe2dc67bc338e5f82b5b8e",
@@ -40237,6 +40228,29 @@
           }
         },
         "inputTreeSha256": "a9338d980323b4418a6ee1dfed8970f48cffd57bbe752927da8c8ec7817481ed"
+      },
+      "after": {
+        "source": {
+          "repository": "Kreijstal/funorb-decompiled",
+          "commit": "1b46d772b7dd2ddb026d31dd849f0ea77424cab7",
+          "subdirectory": "games/geoblox"
+        },
+        "generators": {
+          "dekoblokoWork": {
+            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
+            "trackedClean": true
+          },
+          "javaTools": {
+            "commit": "d4ad201b2cc96e98089be0c4ccfe819dd7a924da",
+            "trackedClean": true,
+            "sourceArchive": {
+              "sha256": "4302defeeb32cf3910626832248610a16a676d34f6bca29002e242cbc43d0eda",
+              "reproduce": "git archive --format=tar d4ad201b2cc96e98089be0c4ccfe819dd7a924da | sha256sum",
+              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
+            }
+          }
+        },
+        "inputTreeSha256": "4ce487c9baad355f926e36221a15e60da8c98f220df7d08b9f0474814b8083cd"
       }
     }
   }

@@ -2723,3 +2723,43 @@ Opaque helpers, large labeled bodies, real assets/server traffic, complete
 gameplay and browser/phone memory/startup/FPS behavior remain unfinished or
 unverified. The current manifest and existing provenance contain the source
 migration and evidence; no extra JSON snapshots are created.
+
+
+## Boolean decision chains (pass 78)
+
+`GameplaySession.updateSession` now expresses board-clear eligibility through
+three short-circuit checks: no entity detached this tick, the attached queue is
+empty, and the current theme has released at least one entity. The queue query
+retains guard 13519. `kc.reconcileBoardEntities` expresses raster dirtiness as
+the existing session dirtiness, contact-state dirtiness or pending avatar shock.
+Its earlier session-reference snapshot stays before the field checks, preserving
+aliases and null/failure order. The original local result stores remain.
+
+The renderer recognizes primitive-local literal selection through one existing
+plain exit block. Nested successful guards combine with AND; sequential successful
+alternatives combine with OR. Opposite literal selection applies De Morgan's law
+without complementing relational comparisons, preserving NaNs and short-circuit
+execution. Nullable conditions, effectful/repeated calls and self-modifying
+predicates keep their order and partial writes. No client guard value is assumed.
+Prefixes and protected/monitor ownership stay in place. Target declarations must
+be unique and visible; boxed/field/shadowed targets, extra branch effects, other
+exits, declarations and protected/monitor crossings refuse folding.
+
+Seventeen decisions across twelve files simplify, including queue-settled,
+pending-transition, name/host and null-guarded caller checks. This removes 156
+raw/readable lines (79,869 to 79,713). Every declaration identity/spelling and
+local ordinal remains; only 17 duplicate local-store references disappear.
+Three previously received semantic names. The 6,081 complete rules remain,
+applying 49,577 edits and preserving 138,502 bindings and 388 overrides; all other
+ordered binding events match the previous export.
+
+Two new generic groups add 13,824 native comparisons of truth tables, initial
+values, boxed/null conditions, NaNs/signed zero, repeated/self-modifying predicates,
+failure order, partial stores, throwable identity and surrounding catch/finally/
+monitor ownership. The emitter run passes 42 tests; the optional pass77 frame-only
+AST corpus checker is skipped because this rewrite changes boolean syntax.
+Exception-exit tests pass eight groups. Clean source-archive regeneration and
+diagnostics, readable reproduction and dictionary reversal are exact. Existing
+native GeoBlox traces retain their documented pins; actual host setup, model
+callbacks, real assets/server traffic, comprehensive gameplay and browser/phone
+performance remain outside the proofs. Opaque helpers and large bodies remain.

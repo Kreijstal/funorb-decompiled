@@ -2,7 +2,7 @@
 
 The current export has 6,081 guarded naming rules: 59 classes, 767 fields,
 547 methods, 1,615 parameters and 3,093 local declarations. Both 303-file corpora
-compile, preserving 138,519 bindings and 388 override relationships. Unknown
+compile, preserving 138,502 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
 ## One current manifest
@@ -21,17 +21,17 @@ tool bytes; `funorb-stubs.jar` is the frozen compilation dependency. The
 [reading guide](GEOBLOX-READING-GUIDE.md) explains the named gameplay flow.
 
 The raw input is `games/geoblox` at
-`215c4e410a9c313870fe2dc67bc338e5f82b5b8e`. It comes from java-tools
-`f26a115c45822808c8c9df00ce5dfb6e0b0fb6bd` and Deko
+`1b46d772b7dd2ddb026d31dd849f0ea77424cab7`. It comes from java-tools
+`d4ad201b2cc96e98089be0c4ccfe819dd7a924da` and Deko
 `a572c4dd0f0174bfcd7777be53d7ceba2f970f18`. The adapted naming tool is
 `a0bc835957148b9b1e1f8221c59b79d899d22738`; its source archive SHA-256 is
 `cb10756aa3ecb28159c9b81f2fb78bf559b4111d9ad203819458b30d0d84cf8c`.
 
 The **decompiler repository source** SHA-256 is
-`8779a07e30e5ae402ec7b8f8c7d6a723437b825378bd57064d7bd15f81524569`:
+`4302defeeb32cf3910626832248610a16a676d34f6bca29002e242cbc43d0eda`:
 
 ```sh
-git archive --format=tar f26a115c45822808c8c9df00ce5dfb6e0b0fb6bd | sha256sum
+git archive --format=tar d4ad201b2cc96e98089be0c4ccfe819dd7a924da | sha256sum
 ```
 
 This identifies tracked decompiler source and its Git archive metadata. It is
@@ -54,7 +54,47 @@ smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
 
-## Current redundant control-frame cleanup
+## Current short-circuit boolean decisions
+
+Pass 78 folds 17 literal boolean decisions across 12 files. A primitive boolean
+local selected through nested checks and breaks to one plain exit block becomes
+an AND/OR expression. Board-clear eligibility and raster dirtiness now expose
+their predicate chains directly. Queue-settled, pending-transition, name/host and
+null-guarded caller checks also simplify. This removes 156 lines, reducing the
+raw corpus from 79,869 to 79,713 lines.
+
+Predicate operands keep their bytes, call/read/write order, short-circuit gates,
+nullable unboxing and failure behavior. De Morgan's law combines negated decisions
+without complementing relational operators, retaining NaNs. Prefix effects and
+protected/monitor ownership remain. The target must have one visible primitive
+boolean declaration; boxed, field, shadowed or unrelated targets refuse folding.
+Branches may contain only nested conditions/plain blocks and exact literal stores
+plus breaks to the same destination. Extra effects, declarations, alternate arms,
+protected/monitor crossings, unknown syntax, Unicode escapes and comments refuse
+it. A decision has at most 12 leaf stores and 256 predicate tokens.
+
+`node test/javaAstEmitterLoopExits.test.js` passes 42 tests and skips its optional
+pass77 frame-only corpus checker when no external directories are supplied.
+The two new groups include 13,824 native comparisons of boolean truth tables,
+nullable conditions, self-modifying/repeated predicates, NaNs/signed zero,
+short-circuit failures, partial writes, throwable identity and catch/finally/
+monitor ownership. `node test/cfrExceptionLoopExits.test.js` passes eight groups.
+The frame-only AST comparison from pass77 remains historical evidence for that
+change; it does not validate the new boolean syntax.
+
+A clean pinned decompiler source archive regenerates all 303 Java files and
+diagnostics byte-for-byte. All declarations/override rows and local ordinals
+remain. The 17 removed references are exactly duplicate literal stores to 17
+boolean locals; all other ordered binding events match. All 6,081 complete rules
+remain unchanged, applying 49,577 edits and preserving 138,502 bindings and 388
+overrides. Three removed references previously received semantic names.
+Reproduction and dictionary reversal are exact, and the existing native/raw/
+readable gameplay, drawing, scoring, result-sequence, text and nine helper traces
+retain their pins in their documented scopes. Real assets/platform/server traffic,
+complete gameplay, opaque helpers, large bodies and phone/FPS/heap acceptance
+remain unfinished or unverified.
+
+## Previous redundant control-frame cleanup
 
 Pass 77 simplifies existing Java control destinations after scope normalization.
 A labeled break/continue becomes ordinary only when both reach exactly the same
@@ -77,7 +117,8 @@ shadows, protected/monitor transfers, failures, throwable identity and lock rele
 The corpus checker compares all 303 inventories and ordered Java AST events plus
 1,129 loop/switch destinations and 1,762 jump statements. Its before input is
 `games/geoblox` at `f31e2a033e8b343453d3a717ac15f104435ab2df`, and its after input
-is the current raw source commit above. Run it in the pinned java-tools checkout:
+is `games/geoblox` at `215c4e410a9c313870fe2dc67bc338e5f82b5b8e`.
+Run that historical frame-only check in the pinned java-tools checkout:
 
 ```sh
 CFR_CONTROL_FRAMES_BEFORE=PREVIOUS_JAVA CFR_CONTROL_FRAMES_AFTER=FRESH_JAVA \
@@ -1449,7 +1490,7 @@ the same manifest; no JSON snapshots are added.
 
 | Java source tree | SHA-256 |
 | --- | --- |
-| Raw | `a9338d980323b4418a6ee1dfed8970f48cffd57bbe752927da8c8ec7817481ed` |
-| Readable | `135c754142fa722e93614687f87318f9e350a407e0912dc8f09b86fd01681a2a` |
+| Raw | `4ce487c9baad355f926e36221a15e60da8c98f220df7d08b9f0474814b8083cd` |
+| Readable | `288818cec73d77bae6db768b0093b2bf264310853952f2cbfb8e7afd9ba5ea9a` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

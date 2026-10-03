@@ -556,18 +556,8 @@ final class kc {
                   Bzip2DecoderState.avatarShockContactPending = false;
                 }
               }
-              L55: {
-                sessionForRasterRead = el.gameplaySession;
-                if (!el.gameplaySession.boardRasterDirty) {
-                  if (!ab.boardContactStateDirty) {
-                    if (!w.avatarShockPending) {
-                      rasterDirtyDecision = false;
-                      break L55;
-                    }
-                  }
-                }
-                rasterDirtyDecision = true;
-              }
+              sessionForRasterRead = el.gameplaySession;
+              rasterDirtyDecision = (el.gameplaySession.boardRasterDirty) || (ab.boardContactStateDirty) || (w.avatarShockPending);
               sessionForRasterRead.boardRasterDirty = rasterDirtyDecision;
               w.avatarShockPending = false;
               if (visitedResetIndexThenKindFourCount >= 3) {

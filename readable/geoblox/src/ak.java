@@ -22,19 +22,7 @@ final class ak {
           var3 = CachedArchiveSource.a(32, param1);
           if (param0.indexOf(param1) == -1) {
             if (-1 == param0.indexOf(var3)) {
-              L1: {
-                if (!param0.startsWith(param1)) {
-                  if (!param0.startsWith(var3)) {
-                    if (!param0.endsWith(param1)) {
-                      if (!param0.endsWith(var3)) {
-                        stackIn_15_0 = false;
-                        break L1;
-                      }
-                    }
-                  }
-                }
-                stackIn_15_0 = true;
-              }
+              stackIn_15_0 = (param0.startsWith(param1)) || (param0.startsWith(var3)) || (param0.endsWith(param1)) || (param0.endsWith(var3));
               return stackIn_15_0;
             }
           }
