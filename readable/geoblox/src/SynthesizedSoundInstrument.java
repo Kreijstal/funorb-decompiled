@@ -125,7 +125,7 @@ final class SynthesizedSoundInstrument {
         int var15;
         int var16;
         int var17;
-        sf.a(sampleBuffer, 0, sampleCount);
+        ArrayOperations.clearInts(sampleBuffer, 0, sampleCount);
         if (durationMillis < 10) {
           return sampleBuffer;
         }

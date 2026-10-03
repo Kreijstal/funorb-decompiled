@@ -147,14 +147,14 @@ final class ri {
                 if ((TextTemplateDefinition.field_n <= 0) &&
                     (!GzipInflater.field_b)) {
                   try {
-                    wk.a((byte) -6, NodeHashTableIterator.c(107), "unzap");
+                    AppletJavaScriptBridge.callWithoutArguments((byte) -6, NodeHashTableIterator.c(107), "unzap");
                   } catch (java.lang.Throwable decompiledCaughtParameter0) {
                     decompiledCaughtException = decompiledCaughtParameter0;
                     var8_ref_Throwable = decompiledCaughtException;
                   }
                 } else {
                   try {
-                    wk.a(-14882, new Object[]{UnderlinedButtonRenderer.a(oa.field_c, param5 + 97)}, NodeHashTableIterator.c(param5 + 119), "zap");
+                    AppletJavaScriptBridge.callWithArguments(-14882, new Object[]{UnderlinedButtonRenderer.a(oa.field_c, param5 + 97)}, NodeHashTableIterator.c(param5 + 119), "zap");
                   } catch (java.lang.Throwable decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     var8_ref_Throwable = decompiledCaughtException;

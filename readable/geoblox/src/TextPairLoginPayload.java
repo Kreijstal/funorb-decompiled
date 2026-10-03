@@ -14,7 +14,7 @@ final class TextPairLoginPayload extends LoginPayload {
         try {
             if (methodGuard <= 107) {
                 byte[] var4 = (byte[]) null;
-                TextPairLoginPayload.a((byte[]) null, -72);
+                TextPairLoginPayload.copyBytesWithDestinationOffset((byte[]) null, -72);
             }
             buffer.writeZeroPrefixedNullTerminatedText(this.loginText, (byte) -126);
             buffer.writeBase38Text(this.base38Text, false);
@@ -23,32 +23,32 @@ final class TextPairLoginPayload extends LoginPayload {
         }
     }
 
-    final static byte[] a(byte[] param0, int param1) {
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        byte[] var3 = null;
-        byte[] stackIn_1_0 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
-        String stackIn_5_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static byte[] copyBytesWithDestinationOffset(byte[] sourceBytes, int destinationOffset) {
+        int sourceLength = 0;
+        RuntimeException copyFailure = null;
+        byte[] copiedBytes = null;
+        byte[] copiedBytesResult = null;
+        RuntimeException copyFailureForDiagnostic = null;
+        StringBuilder copyFailureDiagnostic = null;
+        String sourceDiagnostic = null;
+        RuntimeException caughtCopyFailure = null;
         try {
-          var2_int = param0.length;
-          var3 = new byte[var2_int];
-          sf.a(param0, 0, var3, param1, var2_int);
-          stackIn_1_0 = var3;
-          return stackIn_1_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_4_0 = var2;
-          stackIn_4_1 = new StringBuilder().append("nk.A(");
-          if (param0 == null) {
-            stackIn_5_2 = "null";
+          sourceLength = sourceBytes.length;
+          copiedBytes = new byte[sourceLength];
+          ArrayOperations.copyBytes(sourceBytes, 0, copiedBytes, destinationOffset, sourceLength);
+          copiedBytesResult = copiedBytes;
+          return copiedBytesResult;
+        } catch (java.lang.RuntimeException arrayCopyFailure) {
+          caughtCopyFailure = arrayCopyFailure;
+          copyFailure = caughtCopyFailure;
+          copyFailureForDiagnostic = copyFailure;
+          copyFailureDiagnostic = new StringBuilder().append("nk.A(");
+          if (sourceBytes == null) {
+            sourceDiagnostic = "null";
           } else {
-            stackIn_5_2 = "{...}";
+            sourceDiagnostic = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) copyFailureForDiagnostic), ((StringBuilder) (Object) copyFailureDiagnostic).append(sourceDiagnostic).append(',').append(destinationOffset).append(')').toString());
         }
     }
 

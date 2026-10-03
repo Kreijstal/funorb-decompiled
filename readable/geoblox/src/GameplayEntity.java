@@ -444,7 +444,7 @@ final class GameplayEntity extends DualLinkNode {
               this.sameCategoryEntityCount = this.sameCategoryEntityCount - 1;
             }
             if (5 > relatedEntitySearchIndex) {
-              sf.a(this.relatedEntities, 1 + relatedEntitySearchIndex, this.relatedEntities, relatedEntitySearchIndex, this.relatedEntityCount - relatedEntitySearchIndex);
+              ArrayOperations.copyReferences(this.relatedEntities, 1 + relatedEntitySearchIndex, this.relatedEntities, relatedEntitySearchIndex, this.relatedEntityCount - relatedEntitySearchIndex);
             }
             this.relatedEntities[this.relatedEntityCount] = null;
             break;

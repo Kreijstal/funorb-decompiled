@@ -31,7 +31,7 @@ final class CachedTextLayout extends TextLayout {
           destinationFaceOffset = GameApplet.meshFaceCountsByDepthBucket[0];
           for (depthBucketIndex = 1; depthBucketIndex < GameApplet.meshFaceCountsByDepthBucket.length; depthBucketIndex++) {
             bucketFaceCount = GameApplet.meshFaceCountsByDepthBucket[depthBucketIndex];
-            sf.a(InstrumentNoteMask.meshFaceOrder, depthBucketIndex << 4, InstrumentNoteMask.meshFaceOrder, destinationFaceOffset, bucketFaceCount);
+            ArrayOperations.copyInts(InstrumentNoteMask.meshFaceOrder, depthBucketIndex << 4, InstrumentNoteMask.meshFaceOrder, destinationFaceOffset, bucketFaceCount);
             destinationFaceOffset = destinationFaceOffset + bucketFaceCount;
           }
           return;

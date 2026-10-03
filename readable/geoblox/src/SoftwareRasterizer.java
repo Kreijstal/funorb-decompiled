@@ -1463,9 +1463,9 @@ final class SoftwareRasterizer {
         blueSumsSnapshot = blurColumnBlueSums;
         blueSumsForwarded = blueSumsSnapshot;
         blueSumsForUpdates = blueSumsForwarded;
-        sf.a(redSumsSnapshot, 0, regionWidth);
-        sf.a(greenSumsSnapshot, 0, regionWidth);
-        sf.a(blueSumsSnapshot, 0, regionWidth);
+        ArrayOperations.clearInts(redSumsSnapshot, 0, regionWidth);
+        ArrayOperations.clearInts(greenSumsSnapshot, 0, regionWidth);
+        ArrayOperations.clearInts(blueSumsSnapshot, 0, regionWidth);
         reciprocalWindowScaleQ14 = 16384 / (2 * radius + 1);
         initialWindowRowOrNegativeOutputCounter = regionTop - radius;
         if (initialWindowRowOrNegativeOutputCounter < 0) {

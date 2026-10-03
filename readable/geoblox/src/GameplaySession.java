@@ -1348,7 +1348,7 @@ final class GameplaySession {
             this.prepareNextTheme(867);
           }
           this.sceneTransitionInProgress = true;
-          sf.a(SingleChildWidget.mainRasterBuffer.pixels, 0, SpriteCheckboxRenderer.boardSceneRaster.pixels, 0, SingleChildWidget.mainRasterBuffer.pixels.length);
+          ArrayOperations.copyInts(SingleChildWidget.mainRasterBuffer.pixels, 0, SpriteCheckboxRenderer.boardSceneRaster.pixels, 0, SingleChildWidget.mainRasterBuffer.pixels.length);
           PointerInputListener.a((byte) -39);
           bk.boardOwnershipRaster.setAsRasterTarget();
           SoftwareRasterizer.clearFramebuffer();

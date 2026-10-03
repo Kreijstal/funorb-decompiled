@@ -7,10 +7,13 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-## Current readability (pass 117)
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/1f75aecb8a299ebb3c8ab06b654e044da746129b/readable/README.md) now live in
+`dekobloko-work`; the only maintained readable Java export is here.
 
-The export has 9,816 guarded names and 78,050 identifier edits. Class coverage is
-223 semantic renames, one already meaningful `Geoblox` name and 79 opaque names.
+## Current readability (pass 118)
+
+The export has 9,936 guarded names and 79,048 identifier edits. Class coverage is
+226 semantic renames, one already meaningful `Geoblox` name and 76 opaque names.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
 compile and compare 136,880 bindings, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
@@ -19,6 +22,17 @@ saving 219 lines. Menu hit-test trees preserve every strict boundary and
 predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
+
+Pass 118 adds 120 rules for shared array/cache/JavaScript helpers and the
+archive byte-storage chain. `ArrayOperations`, `CacheFileLocator` and
+`AppletJavaScriptBridge` replace three opaque class names. The complete
+`ByteStorage`/`DirectByteStorage` override families and archive storage wrappers
+now name their copy, alias, buffer and failure roles. There are 9,936 rules and
+79,048 identifier edits, retaining all 9,816 prior complete rules. Class coverage
+is 226 renames, one meaningful original name and 76 opaque names. Raw bodies,
+bytecode and decompiler/naming-tool pins stay unchanged. The source/probe paths
+move into Deko; existing native trace hashes remain fixed. Whole-game and
+browser/device performance are still unverified.
 
 Pass 117 recovers ordinary postfix array indexing in 15 bodies across five files.
 It removes 271 capture temporaries and 813 lines; the array-copy helper `sf.java`
@@ -4054,3 +4068,38 @@ comparisons and bypass/skip/NaN oracles cover short circuits, unboxing, failure
 effects, scopes, ancestor jumps, finally state and monitors. The six recorded
 game probes retain their traces and previous scope. Actual complete menu/gameplay
 rendering, live assets and browser/phone acceptance remain unverified.
+
+## Shared array, byte-storage and applet helpers (pass118)
+
+[`ArrayOperations`](geoblox/src/ArrayOperations.java) clears int ranges and copies
+byte, int and reference arrays. The eight-element unrolling remains visible.
+Equal indices on the same array return before null/range checks; overlapping
+copies with a later destination run backward. Names such as
+`lengthOrSourceBoundary` expose the original parameter reuse rather than
+silently introducing a new algorithm or validation policy.
+
+For archive payloads follow `IntrusiveNode.wrapByteStorage` into
+`DirectByteStorage.initializeStorage`, or `UsernameAvailabilityValidator.extractByteStorageBytes`
+into `ByteStorage.copyToByteArray` / `TextPairLoginPayload.copyBytesWithDestinationOffset`.
+Wrapping more than136 bytes always makes direct storage; the flag controls
+aliasing/copying only for smaller arrays. Extraction aliases or copies an array
+according to its flag, while direct storage always copies out. The copy wrapper
+allocates only source.length, so a nonzero destination offset is not a request
+for a larger allocation and may fail after partial writes. Direct storage reads
+its full capacity before the guard quotient, so a failing guard can leave its
+buffer position advanced. These source-supported contracts retain their
+original effects; this pass adds no direct-buffer/live archive coverage.
+
+[`CacheFileLocator`](geoblox/src/CacheFileLocator.java) is the transformed cache
+resolver used by `PlatformTaskDispatcher` for random.dat and cache data/index
+files. `resolveRedirectedCacheFile` delegates gameName/fileName to the launcher
+hook; its other integer parameters are unused in this transformed source.
+No original unpatched cache search is inferred. Invalid wrapper guards still
+first recurse with a null filename.
+
+[`AppletJavaScriptBridge`](geoblox/src/AppletJavaScriptBridge.java) separates
+calls with arguments, calls without arguments, and script evaluation. Calls
+reject invalid guards before obtaining the browser window. Script evaluation
+happens before the guard arithmetic; its possible division failure remains.
+The cookie, zap/unzap, logout and link-update callers now use these names.
+Actual browser JavaScript and cache startup are outside the native probes.

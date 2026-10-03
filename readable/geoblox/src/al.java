@@ -130,7 +130,7 @@ final class al {
               }
               try {
                 var8 = "tuhstatbut";
-                var3 = (String) (wk.a((byte) -6, param1, "getcookies"));
+                var3 = (String) (AppletJavaScriptBridge.callWithoutArguments((byte) -6, param1, "getcookies"));
                 var4 = FullscreenFailureReason.a(';', true, var3);
                 for (var5 = 0; var5 < var4.length; var5++) {
                   var6 = var4[var5].indexOf('=');

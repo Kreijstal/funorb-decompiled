@@ -233,7 +233,7 @@ final class WhirlpoolHash {
             this.bufferBytePosition = this.bufferBytePosition + 1;
             this.blockBuffer[finalBlockPaddingIndex] = (byte) 0;
           }
-          sf.a(this.messageBitLength, 0, this.blockBuffer, 32, 32);
+          ArrayOperations.copyBytes(this.messageBitLength, 0, this.blockBuffer, 32, 32);
           this.processBlock(117);
           hashWordIndex = 0;
           destinationByteIndex = destinationOffset;

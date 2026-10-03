@@ -594,14 +594,14 @@ final class PlatformTaskDispatcher implements Runnable {
             ignoredSetupException = (Exception) (Object) caughtSetupThrowable;
           }
         }
-        aj.a((byte) 66, gameCacheName, cacheVariant);
+        CacheFileLocator.initializeCacheEnvironment((byte) 66, gameCacheName, cacheVariant);
         if (this.privilegedServicesEnabled) {
-          this.randomSeedFile = new LimitedRandomAccessFile(aj.a((String) null, -27533, "random.dat", cacheVariant), "rw", 25L);
-          this.cacheDataFile = new LimitedRandomAccessFile(aj.a("main_file_cache.dat2", (byte) -116), "rw", 314572800L);
-          this.masterCacheIndexFile = new LimitedRandomAccessFile(aj.a("main_file_cache.idx255", (byte) -77), "rw", 1048576L);
+          this.randomSeedFile = new LimitedRandomAccessFile(CacheFileLocator.resolveRedirectedCacheFile((String) null, -27533, "random.dat", cacheVariant), "rw", 25L);
+          this.cacheDataFile = new LimitedRandomAccessFile(CacheFileLocator.resolveGameCacheFile("main_file_cache.dat2", (byte) -116), "rw", 314572800L);
+          this.masterCacheIndexFile = new LimitedRandomAccessFile(CacheFileLocator.resolveGameCacheFile("main_file_cache.idx255", (byte) -77), "rw", 1048576L);
           this.cacheIndexFiles = new LimitedRandomAccessFile[cacheIndexCount];
           for (cacheIndex = 0; cacheIndex < cacheIndexCount; cacheIndex++) {
-            this.cacheIndexFiles[cacheIndex] = new LimitedRandomAccessFile(aj.a("main_file_cache.idx" + cacheIndex, (byte) -104), "rw", 1048576L);
+            this.cacheIndexFiles[cacheIndex] = new LimitedRandomAccessFile(CacheFileLocator.resolveGameCacheFile("main_file_cache.idx" + cacheIndex, (byte) -104), "rw", 1048576L);
           }
           if (this.useMicrosoftVmBackend) {
             try {

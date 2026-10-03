@@ -1,11 +1,36 @@
 # Readable GeoBlox
 
-The current export has 9,816 guarded naming rules: 223 classes, 1,350 fields,
-953 methods, 2,845 parameters and 4,445 local declarations. Both 303-file corpora
+The current export has 9,936 guarded naming rules: 226 classes, 1,356 fields,
+970 methods, 2,896 parameters and 4,488 local declarations. Both 303-file corpora
 compile, comparing 136,880 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
-## Current recovery (pass 117)
+## Current names and ownership (pass 118)
+
+Pass 118 adds 120 rules for shared array/cache/JavaScript helpers and the
+archive byte-storage chain. `ArrayOperations`, `CacheFileLocator` and
+`AppletJavaScriptBridge` replace three opaque class names. The complete
+`ByteStorage`/`DirectByteStorage` override families and archive storage wrappers
+now name their copy, alias, buffer and failure roles. There are 9,936 rules and
+79,048 identifier edits, retaining all 9,816 prior complete rules. Class coverage
+is 226 renames, one meaningful original name and 76 opaque names. Raw bodies,
+bytecode and decompiler/naming-tool pins stay unchanged. The source/probe paths
+move into Deko; existing native trace hashes remain fixed. Whole-game and
+browser/device performance are still unverified.
+
+The maintained [workflow](https://github.com/Kreijstal/dekobloko-work/blob/1f75aecb8a299ebb3c8ab06b654e044da746129b/readable/README.md) and [manifest](https://github.com/Kreijstal/dekobloko-work/blob/1f75aecb8a299ebb3c8ab06b654e044da746129b/readable/geoblox-rules.json)
+live in `dekobloko-work`. From Deko, select this checkout and regenerate:
+
+```sh
+FUNORB_DECOMPILED_DIR=/path/to/funorb-decompiled node readable/reproduce-geoblox.mjs --update
+FUNORB_DECOMPILED_DIR=/path/to/funorb-decompiled node readable/reproduce-geoblox.mjs --check
+```
+
+Current source/export checks use Deko scripts. Commands in historical pass
+sections below show their original location. The one maintained Java preview
+is still `funorb-decompiled/readable/geoblox/src`.
+
+## Previous recovery (pass 117)
 
 Pass 117 recovers ordinary postfix array indexing in 15 bodies across five files.
 It removes 271 capture temporaries and 813 lines; the array-copy helper `sf.java`
@@ -237,7 +262,7 @@ requires a separately verified literal-lookup transformation.
 The current raw tree is
 `7149d0071e1178e4509474b5cecb8db1cc195c937106fc3d1581aed3d9b4ff89`;
 the current readable tree is
-`1c38cd50a98564a3d9f12838a2230502292b9630d41e24e7eaa0f5831da2a959`.
+`2a9b021cd43431e5245c71053fdffa11781eff1c09b95de53a6ca73313044c71`.
 The pinned decompiler-source SHA-256 is
 `0a8df4a6b454c7dbbfdf824aa8a726157459685c26ca9d426cc6200b3bd29b30`.
 All seven existing native/raw/readable probes pass with their pinned traces.
@@ -245,24 +270,24 @@ Regeneration compares all 303 files and 136,880 bindings; dictionary reversal
 recovers all 303 pinned raw files byte-for-byte. Publication checks pass.
 Historical sections below retain their original pass counts and spellings.
 
-## One current manifest
+## Current publication and workflow
 
-Commit the reproducibility scripts, current naming rules and matching generated
-Java export in **funorb-decompiled**. Do not commit Java exports in
-**blank-github-cloner**; that repository owns loading and diagnostics.
+Generated Java, [dictionary](geoblox/mapping.json), [symbol reference](geoblox/SYMBOLS.md),
+[export provenance](geoblox/provenance.json), the frozen `funorb-stubs.jar`
+compilation artifact and reading documentation belong here in **funorb-decompiled**.
+The generator, rules, proof fixtures and frozen naming dependency are maintained
+only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/1f75aecb8a299ebb3c8ab06b654e044da746129b/readable/README.md).
+**blank-github-cloner** owns loading/diagnostics and tracks no Java exports.
+The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/1f75aecb8a299ebb3c8ab06b654e044da746129b/readable/geoblox-rules.json) pins all source and tool
+identities, workflow source hashes and native trace evidence. It records the
+previous manifest's Git repository, commit and hash; the first moved manifest
+refers to this repository's pass117 history. The export records its exact
+manifest SHA-256. Old scripts and manifests remain accessible in Git history.
 
-[geoblox-rules.json](geoblox-rules.json) is the single maintained source for
-names, source/decompiler pins, source and native-probe evidence, text-resource
-assignments and verification limits. Previous snapshots live in Git rather than
-versioned JSON files in the working tree. Its `publication.previousRules` records
-a reviewed Git commit, path and SHA-256; explicit `ruleChanges` protect every
-unaffected name. A changed input uses an explicit `sourceChange` in this same file.
-
-The generated [source](geoblox/src), [dictionary](geoblox/mapping.json),
-[symbol reference](geoblox/SYMBOLS.md) and [provenance](geoblox/provenance.json)
-are current outputs. [tools/PIN.json](tools/PIN.json) pins the bundled naming
-tool bytes; `funorb-stubs.jar` is the frozen compilation dependency. The
-[reading guide](GEOBLOX-READING-GUIDE.md) explains the named gameplay flow.
+The current Deko workflow/manifest commit is `1f75aecb8a299ebb3c8ab06b654e044da746129b`; the
+manifest SHA-256 is `a75839d963eb42599f331e3616df5d9f7c31b08b750864b6367f35a12951f3a5`.
+The existing decompilation provenance records these identities and all four
+executable workflow source hashes.
 
 The raw input is `games/geoblox` at
 `8555bb25f732948fd3813f2afd886e16899b8c53`. It comes from java-tools

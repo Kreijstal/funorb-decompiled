@@ -12,16 +12,28 @@ over the obfuscated gamepacks by the pipeline in
 ## Readable GeoBlox export
 
 This repository owns the generated Java exports. The cloner repository owns
-loading and diagnostics scripts and does not track `.java` files. Keep the
-readability generator/rules and matching Java export together here.
+loading and diagnostics scripts and does not track `.java` files. The
+readability generator, rules and proof fixtures belong in `dekobloko-work`; this
+repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/1f75aecb8a299ebb3c8ab06b654e044da746129b/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 136,880 bindings,
 preserving 388 override relationships.
+
+Pass 118 adds 120 rules for shared array/cache/JavaScript helpers and the
+archive byte-storage chain. `ArrayOperations`, `CacheFileLocator` and
+`AppletJavaScriptBridge` replace three opaque class names. The complete
+`ByteStorage`/`DirectByteStorage` override families and archive storage wrappers
+now name their copy, alias, buffer and failure roles. There are 9,936 rules and
+79,048 identifier edits, retaining all 9,816 prior complete rules. Class coverage
+is 226 renames, one meaningful original name and 76 opaque names. Raw bodies,
+bytecode and decompiler/naming-tool pins stay unchanged. The source/probe paths
+move into Deko; existing native trace hashes remain fixed. Whole-game and
+browser/device performance are still unverified.
 
 Pass 117 recovers ordinary postfix array indexing in 15 bodies across five files.
 It removes 271 capture temporaries and 813 lines; the array-copy helper `sf.java`

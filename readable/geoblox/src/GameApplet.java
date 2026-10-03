@@ -228,7 +228,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 GameApplet.c((byte) -125);
               }
               try {
-                wk.a((byte) -6, NodeHashTableIterator.c(115), "loggedout");
+                AppletJavaScriptBridge.callWithoutArguments((byte) -6, NodeHashTableIterator.c(115), "loggedout");
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var3 = decompiledCaughtException;

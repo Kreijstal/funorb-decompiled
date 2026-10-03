@@ -79,7 +79,7 @@ public final class Geoblox extends SessionGameApplet {
             uiPaletteSize = FadingDialog.uiPaletteFont.colorPalettes[0].length;
             alternateUiPalette = new int[uiPaletteSize];
             FadingDialog.uiPaletteFont.colorPalettes[1] = alternateUiPalette;
-            sf.a(FadingDialog.uiPaletteFont.colorPalettes[0], 0, FadingDialog.uiPaletteFont.colorPalettes[1], 0, uiPaletteSize);
+            ArrayOperations.copyInts(FadingDialog.uiPaletteFont.colorPalettes[0], 0, FadingDialog.uiPaletteFont.colorPalettes[1], 0, uiPaletteSize);
             FadingDialog.uiPaletteFont.colorPalettes[1][SessionGameApplet.field_p] = 16777215;
             geometrySourceFrames = OpacityWidget.loadSpriteFrames("geoms", "", ll.gameGraphicsArchive, 0);
             geometryAliasThenAmorphousFrames = geometrySourceFrames;

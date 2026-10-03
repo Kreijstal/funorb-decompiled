@@ -98,7 +98,7 @@ final class StatefulWidgetRenderer extends TextWidgetRenderer {
             }
             return;
           }
-          sf.a(this.stateSkins, 0, param1.stateSkins, 0, 6);
+          ArrayOperations.copyReferences(this.stateSkins, 0, param1.stateSkins, 0, 6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

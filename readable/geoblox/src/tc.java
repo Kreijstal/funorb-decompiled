@@ -76,7 +76,7 @@ final class tc {
                         var5 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
                     }
                     int var6 = -93 % ((-64 - param0) / 61);
-                    wk.a(param2, "document.cookie=\"" + var5 + "\"", (byte) -92);
+                    AppletJavaScriptBridge.evaluateScript(param2, "document.cookie=\"" + var5 + "\"", (byte) -92);
                 } catch (Throwable throwable) {
                 }
                 ByteStorage.a(param2, 20000000);

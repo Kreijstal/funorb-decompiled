@@ -55,7 +55,7 @@ final class BufferedRandomAccessFile {
           if ((overlapStart > -1L) &&
               (overlapEnd > overlapStart)) {
             overlapLength = (int)(overlapEnd - overlapStart);
-            sf.a(this.writeBuffer, (int)(-this.writeBufferStart + overlapStart), this.readBuffer, (int)(-this.readBufferStart + overlapStart), overlapLength);
+            ArrayOperations.copyBytes(this.writeBuffer, (int)(-this.writeBufferStart + overlapStart), this.readBuffer, (int)(-this.readBufferStart + overlapStart), overlapLength);
           }
           this.writeBufferLength = 0;
           this.writeBufferStart = -1L;
@@ -107,7 +107,7 @@ final class BufferedRandomAccessFile {
             if ((-1L != this.writeBufferStart) &&
                 (this.position >= this.writeBufferStart) &&
                 ((long)this.writeBufferLength + this.writeBufferStart >= (long)remainingLength + this.position)) {
-              sf.a(this.writeBuffer, (int)(-this.writeBufferStart + this.position), destination, destinationOffset, remainingLength);
+              ArrayOperations.copyBytes(this.writeBuffer, (int)(-this.writeBufferStart + this.position), destination, destinationOffset, remainingLength);
               this.position = this.position + (long)remainingLength;
               return;
             }
@@ -123,7 +123,7 @@ final class BufferedRandomAccessFile {
               if (remainingLength < readCountOrZeroFillEnd) {
                 readCountOrZeroFillEnd = remainingLength;
               }
-              sf.a(this.readBuffer, (int)(-this.readBufferStart + this.position), destination, destinationOffset, readCountOrZeroFillEnd);
+              ArrayOperations.copyBytes(this.readBuffer, (int)(-this.readBufferStart + this.position), destination, destinationOffset, readCountOrZeroFillEnd);
               remainingLength = remainingLength - readCountOrZeroFillEnd;
               this.position = this.position + (long)readCountOrZeroFillEnd;
               destinationOffset = destinationOffset + readCountOrZeroFillEnd;
@@ -150,7 +150,7 @@ final class BufferedRandomAccessFile {
                 if (this.readBufferLength < readCountOrZeroFillEnd) {
                   readCountOrZeroFillEnd = this.readBufferLength;
                 }
-                sf.a(this.readBuffer, 0, destination, destinationOffset, readCountOrZeroFillEnd);
+                ArrayOperations.copyBytes(this.readBuffer, 0, destination, destinationOffset, readCountOrZeroFillEnd);
                 remainingLength = remainingLength - readCountOrZeroFillEnd;
                 destinationOffset = destinationOffset + readCountOrZeroFillEnd;
                 this.position = this.position + (long)readCountOrZeroFillEnd;
@@ -197,7 +197,7 @@ final class BufferedRandomAccessFile {
               if ((overlayStart > -1L) &&
                   (overlayStart < overlayEnd)) {
                 overlayLength = (int)(-overlayStart + overlayEnd);
-                sf.a(this.writeBuffer, (int)(overlayStart - this.writeBufferStart), destination, initialDestinationOffset + (int)(-initialPosition + overlayStart), overlayLength);
+                ArrayOperations.copyBytes(this.writeBuffer, (int)(overlayStart - this.writeBufferStart), destination, initialDestinationOffset + (int)(-initialPosition + overlayStart), overlayLength);
                 if (overlayEnd > this.position) {
                   remainingLength = (int)((long)remainingLength - (overlayEnd - this.position));
                   this.position = overlayEnd;
@@ -261,7 +261,7 @@ final class BufferedRandomAccessFile {
             if ((-1L != this.writeBufferStart) &&
                 ((long)remainingLength + this.position > (long)this.writeBuffer.length + this.writeBufferStart)) {
               bytesUntilWriteBufferFull = (int)((long)this.writeBuffer.length + this.writeBufferStart - this.position);
-              sf.a(source, sourceOffset, this.writeBuffer, (int)(-this.writeBufferStart + this.position), bytesUntilWriteBufferFull);
+              ArrayOperations.copyBytes(source, sourceOffset, this.writeBuffer, (int)(-this.writeBufferStart + this.position), bytesUntilWriteBufferFull);
               this.position = this.position + (long)bytesUntilWriteBufferFull;
               sourceOffset = sourceOffset + bytesUntilWriteBufferFull;
               remainingLength = remainingLength - bytesUntilWriteBufferFull;
@@ -278,7 +278,7 @@ final class BufferedRandomAccessFile {
               if (this.writeBufferStart == -1L) {
                 this.writeBufferStart = this.position;
               }
-              sf.a(source, sourceOffset, this.writeBuffer, (int)(-this.writeBufferStart + this.position), remainingLength);
+              ArrayOperations.copyBytes(source, sourceOffset, this.writeBuffer, (int)(-this.writeBufferStart + this.position), remainingLength);
               this.position = this.position + (long)remainingLength;
               if (~(long)this.writeBufferLength > ~(-this.writeBufferStart + this.position)) {
                 this.writeBufferLength = (int)(this.position - this.writeBufferStart);
@@ -324,7 +324,7 @@ final class BufferedRandomAccessFile {
             if ((overlapStart > -1L) &&
                 (~overlapStart > ~overlapEnd)) {
               overlapLength = (int)(-overlapStart + overlapEnd);
-              sf.a(source, (int)(overlapStart + ((long)sourceOffset - this.position)), this.readBuffer, (int)(overlapStart - this.readBufferStart), overlapLength);
+              ArrayOperations.copyBytes(source, (int)(overlapStart + ((long)sourceOffset - this.position)), this.readBuffer, (int)(overlapStart - this.readBufferStart), overlapLength);
             }
             this.position = this.position + (long)remainingLength;
             return;

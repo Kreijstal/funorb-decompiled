@@ -3,7 +3,7 @@
  */
 final class DirectByteStorage extends ByteStorage {
     static IntrusiveDeque field_g;
-    private java.nio.ByteBuffer field_f;
+    private java.nio.ByteBuffer directBuffer;
     static MeshMaterial[] meshMaterials;
     static ResourceArchive field_h;
 
@@ -19,25 +19,25 @@ final class DirectByteStorage extends ByteStorage {
     DirectByteStorage() {
     }
 
-    final byte[] a(byte param0) {
-        byte[] var4 = new byte[this.field_f.capacity()];
-        byte[] var2 = var4;
-        this.field_f.position(0);
-        this.field_f.get(var4);
-        int var3 = 39 / ((param0 - 8) / 46);
-        return var4;
+    final byte[] copyToByteArray(byte copyGuard) {
+        byte[] copiedBytes = new byte[this.directBuffer.capacity()];
+        byte[] unusedCopiedBytesAlias = copiedBytes;
+        this.directBuffer.position(0);
+        this.directBuffer.get(copiedBytes);
+        int unusedGuardQuotient = 39 / ((copyGuard - 8) / 46);
+        return copiedBytes;
     }
 
-    final void a(byte[] param0, boolean param1) {
-        this.field_f = java.nio.ByteBuffer.allocateDirect(param0.length);
-        this.field_f.position(0);
-        if (!param1) {
+    final void initializeStorage(byte[] sourceBytes, boolean populateBuffer) {
+        this.directBuffer = java.nio.ByteBuffer.allocateDirect(sourceBytes.length);
+        this.directBuffer.position(0);
+        if (!populateBuffer) {
             return;
         }
         try {
-            this.field_f.put(param0);
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "l.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            this.directBuffer.put(sourceBytes);
+        } catch (RuntimeException bufferPopulationFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) bufferPopulationFailure), "l.A(" + (sourceBytes != null ? "{...}" : "null") + ',' + populateBuffer + ')');
         }
     }
 

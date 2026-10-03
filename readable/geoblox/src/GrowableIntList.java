@@ -38,7 +38,7 @@ final class GrowableIntList {
             this.lastIndex = this.lastIndex - 1;
             return;
         }
-        sf.a(this.values, 1 + index, this.values, index, -index + this.lastIndex);
+        ArrayOperations.copyInts(this.values, 1 + index, this.values, index, -index + this.lastIndex);
         this.lastIndex = this.lastIndex - 1;
     }
 
@@ -103,12 +103,12 @@ final class GrowableIntList {
         int[] var4 = new int[this.capacityFor(index, 1)];
         int[] var3 = var4;
         if (methodGuard == 25177) {
-            sf.a(this.values, 0, var4, 0, this.values.length);
+            ArrayOperations.copyInts(this.values, 0, var4, 0, this.values.length);
             this.values = var4;
             return;
         }
         this.values = (int[]) null;
-        sf.a(this.values, 0, var4, 0, this.values.length);
+        ArrayOperations.copyInts(this.values, 0, var4, 0, this.values.length);
         this.values = var4;
     }
 

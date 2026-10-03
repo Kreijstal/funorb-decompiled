@@ -98,51 +98,51 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
         return ClientSessionSnapshot.tutorialShapeMatchMessage;
     }
 
-    final static byte[] a(boolean param0, int param1, Object param2) {
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        byte[] var4 = null;
-        ByteStorage var5 = null;
-        Object stackIn_2_0 = null;
-        byte[] stackIn_7_0 = null;
-        byte[] stackIn_9_0 = null;
-        byte[] stackIn_12_0 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static byte[] extractByteStorageBytes(boolean copyArray, int extractionGuard, Object storedBytes) {
+        int unusedGuardRemainder = 0;
+        RuntimeException extractionFailure = null;
+        byte[] arrayBytes = null;
+        ByteStorage byteStorage = null;
+        Object nullStorageResult = null;
+        byte[] copiedArrayResult = null;
+        byte[] aliasedArrayResult = null;
+        byte[] storageCopyResult = null;
+        RuntimeException extractionFailureForDiagnostic = null;
+        StringBuilder extractionFailureDiagnostic = null;
+        String storageDiagnostic = null;
+        RuntimeException caughtExtractionFailure = null;
         try {
-          if (param2 == null) {
-            stackIn_2_0 = null;
-            return (byte[]) (stackIn_2_0);
+          if (storedBytes == null) {
+            nullStorageResult = null;
+            return (byte[]) (nullStorageResult);
           }
-          var3_int = -35 % ((44 - param1) / 57);
-          if (!(param2 instanceof byte[])) {
-            if (!(param2 instanceof ByteStorage)) {
+          unusedGuardRemainder = -35 % ((44 - extractionGuard) / 57);
+          if (!(storedBytes instanceof byte[])) {
+            if (!(storedBytes instanceof ByteStorage)) {
               throw new IllegalArgumentException();
             }
-            var5 = (ByteStorage) (param2);
-            stackIn_12_0 = var5.a((byte) 65);
-            return stackIn_12_0;
+            byteStorage = (ByteStorage) (storedBytes);
+            storageCopyResult = byteStorage.copyToByteArray((byte) 65);
+            return storageCopyResult;
           }
-          var4 = (byte[]) (param2);
-          if (!param0) {
-            stackIn_9_0 = var4;
-            return stackIn_9_0;
+          arrayBytes = (byte[]) (storedBytes);
+          if (!copyArray) {
+            aliasedArrayResult = arrayBytes;
+            return aliasedArrayResult;
           }
-          stackIn_7_0 = TextPairLoginPayload.a(var4, 0);
-          return stackIn_7_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_16_0 = var3;
-          stackIn_16_1 = new StringBuilder().append("uk.G(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
-            stackIn_17_2 = "null";
+          copiedArrayResult = TextPairLoginPayload.copyBytesWithDestinationOffset(arrayBytes, 0);
+          return copiedArrayResult;
+        } catch (java.lang.RuntimeException byteExtractionFailure) {
+          caughtExtractionFailure = byteExtractionFailure;
+          extractionFailure = caughtExtractionFailure;
+          extractionFailureForDiagnostic = extractionFailure;
+          extractionFailureDiagnostic = new StringBuilder().append("uk.G(").append(copyArray).append(',').append(extractionGuard).append(',');
+          if (storedBytes == null) {
+            storageDiagnostic = "null";
           } else {
-            stackIn_17_2 = "{...}";
+            storageDiagnostic = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) extractionFailureForDiagnostic), ((StringBuilder) (Object) extractionFailureDiagnostic).append(storageDiagnostic).append(')').toString());
         }
     }
 

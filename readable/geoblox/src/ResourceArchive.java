@@ -87,7 +87,7 @@ final class ResourceArchive {
     private final synchronized void loadPackedGroup(int groupId, int methodGuard) {
         boolean unusedWrongGuardGroupValidation = false;
         if (!this.discardPackedGroups) {
-            this.packedGroups[groupId] = IntrusiveNode.a(-105, this.archiveSource.getPackedGroup(4, groupId), false);
+            this.packedGroups[groupId] = IntrusiveNode.wrapByteStorage(-105, this.archiveSource.getPackedGroup(4, groupId), false);
         } else {
             this.packedGroups[groupId] = this.archiveSource.getPackedGroup(4, groupId);
         }
@@ -418,7 +418,7 @@ final class ResourceArchive {
                   (decryptionKey[1] == 0) &&
                   (decryptionKey[2] == 0) &&
                   (0 == decryptionKey[3]))) {
-                copiedPackedBytes = UsernameAvailabilityValidator.a(true, methodGuard ^ -114, this.packedGroups[groupId]);
+                copiedPackedBytes = UsernameAvailabilityValidator.extractByteStorageBytes(true, methodGuard ^ -114, this.packedGroups[groupId]);
                 packedBytesForDecryption = copiedPackedBytes;
                 packedBytes = packedBytesForDecryption;
                 encryptedGroupBuffer = new ByteArrayBuffer(copiedPackedBytes);
@@ -426,7 +426,7 @@ final class ResourceArchive {
                 break L4;
               }
             }
-            packedBytes = UsernameAvailabilityValidator.a(false, methodGuard - 90, this.packedGroups[groupId]);
+            packedBytes = UsernameAvailabilityValidator.extractByteStorageBytes(false, methodGuard - 90, this.packedGroups[groupId]);
           }
           if (methodGuard != 4) {
             return false;
@@ -493,7 +493,7 @@ final class ResourceArchive {
                     copiedFileId = mappedFileIds[copyFileOrdinal];
                   }
                   if (copiedFileId == requestedFileId) {
-                    sf.a(unpackedBytesForChunkCopies, chunkLengthOrDataOffsetOrFileIndexOrChunkIndex, requestedFileBytes, requestedLengthThenWritePosition, fileIdOrChunkLengthOrFileIndex);
+                    ArrayOperations.copyBytes(unpackedBytesForChunkCopies, chunkLengthOrDataOffsetOrFileIndexOrChunkIndex, requestedFileBytes, requestedLengthThenWritePosition, fileIdOrChunkLengthOrFileIndex);
                     requestedLengthThenWritePosition = requestedLengthThenWritePosition + fileIdOrChunkLengthOrFileIndex;
                   }
                   chunkLengthOrDataOffsetOrFileIndexOrChunkIndex = chunkLengthOrDataOffsetOrFileIndexOrChunkIndex + fileIdOrChunkLengthOrFileIndex;
@@ -532,7 +532,7 @@ final class ResourceArchive {
               fileIndexOrChunkIndexOrChunkLengthOrFileId = 0;
               for (fileIdOrChunkLengthOrFileIndex = 0; actualFileCount > fileIdOrChunkLengthOrFileIndex; fileIdOrChunkLengthOrFileIndex++) {
                 fileIndexOrChunkIndexOrChunkLengthOrFileId = fileIndexOrChunkIndexOrChunkLengthOrFileId + allFilesChunkTableBuffer.readIntBE((byte) -106);
-                sf.a(unpackedBytes, chunkIndexOrChunkLengthOrFileIndexOrDataOffset, allocatedSplitFileBytes[fileIdOrChunkLengthOrFileIndex], allocatedFileLengthsThenWritePositions[fileIdOrChunkLengthOrFileIndex], fileIndexOrChunkIndexOrChunkLengthOrFileId);
+                ArrayOperations.copyBytes(unpackedBytes, chunkIndexOrChunkLengthOrFileIndexOrDataOffset, allocatedSplitFileBytes[fileIdOrChunkLengthOrFileIndex], allocatedFileLengthsThenWritePositions[fileIdOrChunkLengthOrFileIndex], fileIndexOrChunkIndexOrChunkLengthOrFileId);
                 chunkIndexOrChunkLengthOrFileIndexOrDataOffset = chunkIndexOrChunkLengthOrFileIndexOrDataOffset + fileIndexOrChunkIndexOrChunkLengthOrFileId;
                 fileLengthsThenWritePositions[fileIdOrChunkLengthOrFileIndex] = fileLengthsThenWritePositions[fileIdOrChunkLengthOrFileIndex] + fileIndexOrChunkIndexOrChunkLengthOrFileId;
               }
@@ -546,7 +546,7 @@ final class ResourceArchive {
               if (this.fileRetentionPolicy != 0) {
                 groupFileSlots[fileIndexOrChunkIndexOrChunkLengthOrFileId] = allocatedSplitFileBytes[chunkLengthOrDataOffsetOrFileIndexOrChunkIndex];
               } else {
-                groupFileSlots[fileIndexOrChunkIndexOrChunkLengthOrFileId] = IntrusiveNode.a(methodGuard - 126, allocatedSplitFileBytes[chunkLengthOrDataOffsetOrFileIndexOrChunkIndex], false);
+                groupFileSlots[fileIndexOrChunkIndexOrChunkLengthOrFileId] = IntrusiveNode.wrapByteStorage(methodGuard - 126, allocatedSplitFileBytes[chunkLengthOrDataOffsetOrFileIndexOrChunkIndex], false);
               }
             }
           } else {
@@ -558,7 +558,7 @@ final class ResourceArchive {
             if (this.fileRetentionPolicy != 0) {
               groupFileSlots[chunkTableOffsetOrSingleFileId] = unpackedBytes;
             } else {
-              groupFileSlots[chunkTableOffsetOrSingleFileId] = IntrusiveNode.a(-113, unpackedBytes, false);
+              groupFileSlots[chunkTableOffsetOrSingleFileId] = IntrusiveNode.wrapByteStorage(-113, unpackedBytes, false);
             }
           }
           return true;
@@ -630,7 +630,7 @@ final class ResourceArchive {
             throw new RuntimeException("");
           }
           if (null != this.decodedFiles[groupId][fileId]) {
-            fileBytes = UsernameAvailabilityValidator.a(false, -116, this.decodedFiles[groupId][fileId]);
+            fileBytes = UsernameAvailabilityValidator.extractByteStorageBytes(false, -116, this.decodedFiles[groupId][fileId]);
             fileBytesOrFailureForContext = fileBytes;
             if (fileBytes == null) {
               throw new RuntimeException("");

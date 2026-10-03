@@ -48,50 +48,50 @@ class IntrusiveNode {
         }
     }
 
-    final static Object a(int param0, byte[] param1, boolean param2) {
-        DirectByteStorage var3 = null;
-        RuntimeException var3_ref = null;
-        Object stackIn_2_0 = null;
-        Object stackIn_5_0 = null;
-        DirectByteStorage stackIn_8_0 = null;
-        byte[] stackIn_11_0 = null;
-        byte[] stackIn_13_0 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static Object wrapByteStorage(int storageGuard, byte[] sourceBytes, boolean copySmallArrays) {
+        DirectByteStorage directStorage = null;
+        RuntimeException storageFailure = null;
+        Object guardRejectedResult = null;
+        Object nullBytesResult = null;
+        DirectByteStorage directStorageResult = null;
+        byte[] aliasedBytesResult = null;
+        byte[] copiedBytesResult = null;
+        RuntimeException storageFailureForDiagnostic = null;
+        StringBuilder storageFailureDiagnostic = null;
+        String sourceDiagnostic = null;
+        RuntimeException caughtStorageFailure = null;
         try {
-          if (param0 > -102) {
-            stackIn_2_0 = (Object) null;
-            return stackIn_2_0;
+          if (storageGuard > -102) {
+            guardRejectedResult = (Object) null;
+            return guardRejectedResult;
           }
-          if (param1 == null) {
-            stackIn_5_0 = null;
-            return stackIn_5_0;
+          if (sourceBytes == null) {
+            nullBytesResult = null;
+            return nullBytesResult;
           }
-          if (param1.length > 136) {
-            var3 = new DirectByteStorage();
-            ((ByteStorage) ((Object) var3)).a(param1, true);
-            stackIn_8_0 = var3;
-            return stackIn_8_0;
+          if (sourceBytes.length > 136) {
+            directStorage = new DirectByteStorage();
+            ((ByteStorage) ((Object) directStorage)).initializeStorage(sourceBytes, true);
+            directStorageResult = directStorage;
+            return directStorageResult;
           }
-          if (param2) {
-            stackIn_13_0 = TextPairLoginPayload.a(param1, 0);
-            return stackIn_13_0;
+          if (copySmallArrays) {
+            copiedBytesResult = TextPairLoginPayload.copyBytesWithDestinationOffset(sourceBytes, 0);
+            return copiedBytesResult;
           }
-          stackIn_11_0 = (byte[]) (param1);
-          return stackIn_11_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_16_0 = var3_ref;
-          stackIn_16_1 = new StringBuilder().append("hf.BA(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_17_2 = "null";
+          aliasedBytesResult = (byte[]) (sourceBytes);
+          return aliasedBytesResult;
+        } catch (java.lang.RuntimeException byteStorageFailure) {
+          caughtStorageFailure = byteStorageFailure;
+          storageFailure = caughtStorageFailure;
+          storageFailureForDiagnostic = storageFailure;
+          storageFailureDiagnostic = new StringBuilder().append("hf.BA(").append(storageGuard).append(',');
+          if (sourceBytes == null) {
+            sourceDiagnostic = "null";
           } else {
-            stackIn_17_2 = "{...}";
+            sourceDiagnostic = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) storageFailureForDiagnostic), ((StringBuilder) (Object) storageFailureDiagnostic).append(sourceDiagnostic).append(',').append(copySmallArrays).append(')').toString());
         }
     }
 

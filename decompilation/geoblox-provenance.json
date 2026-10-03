@@ -3221,7 +3221,13 @@
     "previousSourceTreeSha256": "05cac317bd3f414e1285a2b6b8edb384d684b78cd65ce948daaa1973c12a303b",
     "sourceTreeSha256": "3982781d068dcb3ecceebc8a2ee6f3da14e8a7119574068204ef70ef2bc04b1a",
     "sourceProofTest": "readable/tests/test-geoblox-post-guard-source.mjs",
-    "sourceProofTestSha256": "9eac61ef53adbc3cd5c2869d0009ce27676cafb27e0841b7cb266144595b9a31"
+    "sourceProofTestSha256": "ea540578f9ab791d60b2fd57b594d17e3cdb79dc9b4271481da5609b74b5d1a6",
+    "sourceProofRelocation": {
+      "previousRepository": "Kreijstal/funorb-decompiled",
+      "previousSha256": "9eac61ef53adbc3cd5c2869d0009ce27676cafb27e0841b7cb266144595b9a31",
+      "repository": "Kreijstal/dekobloko-work",
+      "changes": "Imports and repository locations only; recovery algorithms, native trace oracles, source commits and expected token/binding assertions unchanged."
+    }
   },
   "arrayIndexIncrementRecovery": {
     "historicalPassVersion": 117,
@@ -3247,6 +3253,37 @@
     "nativeComparisons": 244944,
     "independentNativeOracles": 5,
     "sourceProofTest": "readable/tests/test-geoblox-array-increments-source.mjs",
-    "sourceProofTestSha256": "2985e96e9d815af98fc0e86d9e88538b87639708a29357ee0e4185093925a531"
+    "sourceProofTestSha256": "60ba106a56a1efae47d702c319b58d19d5ec8cca16de07b1746fc985c533963b",
+    "sourceProofRelocation": {
+      "previousRepository": "Kreijstal/funorb-decompiled",
+      "previousSha256": "2985e96e9d815af98fc0e86d9e88538b87639708a29357ee0e4185093925a531",
+      "repository": "Kreijstal/dekobloko-work",
+      "changes": "Imports and repository locations only; recovery algorithms, native trace oracles, source commits and expected token/binding assertions unchanged."
+    }
+  },
+  "readabilityWorkflow": {
+    "repository": "Kreijstal/dekobloko-work",
+    "commit": "1f75aecb8a299ebb3c8ab06b654e044da746129b",
+    "trackedClean": true,
+    "manifest": {
+      "path": "readable/geoblox-rules.json",
+      "sha256": "a75839d963eb42599f331e3616df5d9f7c31b08b750864b6367f35a12951f3a5"
+    },
+    "generatorFiles": {
+      "build-geoblox-rules.mjs": "2c484739875974414ece3eee5edc52aabfcd7ce012183ea699381ff0177687fa",
+      "layout.mjs": "2a9b891a257b9bf089dbf23d77ca788e7e76c8ca5f161b25df4dad0453af630f",
+      "reproduce-geoblox.mjs": "b5f18f72b5ddfb008f4e9dfd52facc95b3347d06f5af83bf6e856a3f7a64c98f",
+      "text-resource-evidence.mjs": "b3df24bd91653055689544164cce208e5544f7558eb4cb5c2b8512e35ccce496"
+    },
+    "outputRepository": "Kreijstal/funorb-decompiled",
+    "outputDirectory": "readable/geoblox",
+    "outputTreeSha256": "2a9b021cd43431e5245c71053fdffa11781eff1c09b95de53a6ca73313044c71",
+    "files": 303,
+    "rules": 9936,
+    "identifierEdits": 79048,
+    "bindingsCompared": 136880,
+    "overrideRelationshipsPreserved": 388,
+    "relocation": "Current scripts, manifest, proofs and frozen naming dependency moved from FunOrb to Deko; previous reviewed rules remain in FunOrb Git history. Source proof imports and repository paths change, native trace/oracle constants do not.",
+    "runtimeEquivalenceVerified": false
   }
 }

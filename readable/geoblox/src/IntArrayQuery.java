@@ -47,7 +47,7 @@ final class IntArrayQuery extends IntrusiveNode {
                 } else {
                   var7 = var10 + "; Expires=" + md.a((byte) -79, 1000L * param1 + oa.a(-12520)) + "; Max-Age=" + param1;
                 }
-                wk.a(param2, "document.cookie=\"" + var7 + "\"", (byte) -10);
+                AppletJavaScriptBridge.evaluateScript(param2, "document.cookie=\"" + var7 + "\"", (byte) -10);
                 return;
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

@@ -25,12 +25,12 @@ abstract class ByteStorage {
                   ByteStorage.a(-109);
                 }
                 var3 = SessionGameApplet.a(var4, param1 - 19999938, param0).getFile();
-                wk.a(param1 - 20014882, new Object[]{"home", var3 + "home.ws"}, param0, "updatelinks");
-                wk.a(-14882, new Object[]{"gamelist", var3 + "togamelist.ws"}, param0, "updatelinks");
-                wk.a(-14882, new Object[]{"serverlist", var3 + "toserverlist.ws"}, param0, "updatelinks");
-                wk.a(param1 - 20014882, new Object[]{"options", var3 + "options.ws"}, param0, "updatelinks");
-                wk.a(-14882, new Object[]{"terms", var3 + "terms.ws"}, param0, "updatelinks");
-                wk.a(-14882, new Object[]{"privacy", var3 + "privacy.ws"}, param0, "updatelinks");
+                AppletJavaScriptBridge.callWithArguments(param1 - 20014882, new Object[]{"home", var3 + "home.ws"}, param0, "updatelinks");
+                AppletJavaScriptBridge.callWithArguments(-14882, new Object[]{"gamelist", var3 + "togamelist.ws"}, param0, "updatelinks");
+                AppletJavaScriptBridge.callWithArguments(-14882, new Object[]{"serverlist", var3 + "toserverlist.ws"}, param0, "updatelinks");
+                AppletJavaScriptBridge.callWithArguments(param1 - 20014882, new Object[]{"options", var3 + "options.ws"}, param0, "updatelinks");
+                AppletJavaScriptBridge.callWithArguments(-14882, new Object[]{"terms", var3 + "terms.ws"}, param0, "updatelinks");
+                AppletJavaScriptBridge.callWithArguments(-14882, new Object[]{"privacy", var3 + "privacy.ws"}, param0, "updatelinks");
                 return;
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -72,9 +72,9 @@ abstract class ByteStorage {
         }
     }
 
-    abstract byte[] a(byte param0);
+    abstract byte[] copyToByteArray(byte copyGuard);
 
-    abstract void a(byte[] param0, boolean param1);
+    abstract void initializeStorage(byte[] sourceBytes, boolean populateBuffer);
 
     static {
         field_d = new ValidationState();
