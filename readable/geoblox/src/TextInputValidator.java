@@ -158,7 +158,7 @@ abstract class TextInputValidator extends ib implements ga {
               if (mi.field_I) {
                 param2 = kf.pleaseTryAgainText;
               }
-              Geoblox.activeMessageDialog.a(param1, param0 + 19686, param2);
+              Geoblox.activeMessageDialog.installErrorContent(param1, param0 + 19686, param2);
             }
             if ((param1 != 256) &&
                 (param1 != 10) &&

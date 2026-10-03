@@ -57,7 +57,7 @@ class hk extends el {
                 }
                 return;
             }
-            ((pl) ((Object) this.field_u)).a(param2, (byte) -20, param0, param3, (hk) (this));
+            ((pl) ((Object) this.field_u)).onButtonActivated(param2, (byte) -20, param0, param3, (hk) (this));
         }
         if (param1 == -28922) {
             return;
@@ -100,7 +100,7 @@ class hk extends el {
         this.field_A = false;
     }
 
-    boolean a(int param0, int param1, char param2, el param3) {
+    boolean handleKeyInput(int param0, int param1, char param2, el param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;

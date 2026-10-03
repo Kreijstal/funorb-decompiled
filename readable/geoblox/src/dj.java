@@ -354,7 +354,7 @@ class dj extends hk {
         }
     }
 
-    final boolean a(int param0, int param1, char param2, el param3) {
+    final boolean handleKeyInput(int param0, int param1, char param2, el param3) {
         int dupTemp$0 = 0;
         int stackIn_48_1 = 0;
         int stackIn_55_1 = 0;

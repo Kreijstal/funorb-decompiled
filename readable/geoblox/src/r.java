@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class r extends f implements pl {
+final class r extends MessageDialog implements pl {
     private qh field_tb;
     private boolean field_vb;
     static String field_sb;
@@ -18,7 +18,7 @@ final class r extends f implements pl {
             b.field_a = param0;
             hg.field_d = param3;
             int var4_int = -62 % ((13 - param1) / 62);
-            fa.a(rj.loggingInText, 480, param2);
+            fa.showMessageDialog(rj.loggingInText, 480, param2);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "r.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -58,7 +58,7 @@ final class r extends f implements pl {
           } else {
             var4 = lh.createAccountSuccessText;
           }
-          var5 = new ni((f) (this), hh.field_c, var4);
+          var5 = new ni((MessageDialog) (this), hh.field_c, var4);
           if (param1.field_g) {
             if (param1.field_d) {
               this.b(new s((r) (this)), -111);
@@ -209,7 +209,7 @@ final class r extends f implements pl {
         }
     }
 
-    public final void a(int param0, byte param1, int param2, int param3, hk param4) {
+    public final void onButtonActivated(int param0, byte param1, int param2, int param3, hk param4) {
         if (!(!this.field_vb)) {
             b.a(true, false, false);
             return;
@@ -219,7 +219,7 @@ final class r extends f implements pl {
         }
         try {
             ki.a(-112);
-            this.h((byte) -104);
+            this.dismissDialog((byte) -104);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "r.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

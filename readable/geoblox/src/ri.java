@@ -62,10 +62,10 @@ final class ri {
                   PacketBuffer.field_l = ac.field_v;
                   ScorePopup.field_l = var6_int;
                 } else {
-                  PacketBuffer.field_l = f.field_hb;
+                  PacketBuffer.field_l = MessageDialog.awaitingLoginLongState;
                 }
               }
-              if ((f.field_hb == PacketBuffer.field_l) &&
+              if ((MessageDialog.awaitingLoginLongState == PacketBuffer.field_l) &&
                   (el.b(30000, 8))) {
                 ak.field_a = eh.field_d.readLongBE(2901);
                 eh.field_d.position = 0;

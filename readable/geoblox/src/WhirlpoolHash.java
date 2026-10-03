@@ -39,7 +39,7 @@ final class WhirlpoolHash {
         wordIndexOrRound = 0;
         blockByteOffsetOrWordIndex = 0;
         while (wordIndexOrRound < 8) {
-          this.messageWords[wordIndexOrRound] = f.xorLong(cj.andLong((long)this.blockBuffer[7 + blockByteOffsetOrWordIndex], 255L), f.xorLong(f.xorLong(f.xorLong(f.xorLong(cj.andLong(1095216660480L, (long)this.blockBuffer[blockByteOffsetOrWordIndex + 3] << 32), f.xorLong(cj.andLong(255L, (long)this.blockBuffer[blockByteOffsetOrWordIndex + 2]) << 40, f.xorLong(cj.andLong((long)this.blockBuffer[blockByteOffsetOrWordIndex + 1] << 48, 71776119061217280L), (long)this.blockBuffer[blockByteOffsetOrWordIndex] << 56))), cj.andLong((long)this.blockBuffer[4 + blockByteOffsetOrWordIndex] << 24, 4278190080L)), cj.andLong(16711680L, (long)this.blockBuffer[blockByteOffsetOrWordIndex + 5] << 16)), cj.andLong((long)this.blockBuffer[blockByteOffsetOrWordIndex + 6] << 8, 65280L)));
+          this.messageWords[wordIndexOrRound] = MessageDialog.xorLong(cj.andLong((long)this.blockBuffer[7 + blockByteOffsetOrWordIndex], 255L), MessageDialog.xorLong(MessageDialog.xorLong(MessageDialog.xorLong(MessageDialog.xorLong(cj.andLong(1095216660480L, (long)this.blockBuffer[blockByteOffsetOrWordIndex + 3] << 32), MessageDialog.xorLong(cj.andLong(255L, (long)this.blockBuffer[blockByteOffsetOrWordIndex + 2]) << 40, MessageDialog.xorLong(cj.andLong((long)this.blockBuffer[blockByteOffsetOrWordIndex + 1] << 48, 71776119061217280L), (long)this.blockBuffer[blockByteOffsetOrWordIndex] << 56))), cj.andLong((long)this.blockBuffer[4 + blockByteOffsetOrWordIndex] << 24, 4278190080L)), cj.andLong(16711680L, (long)this.blockBuffer[blockByteOffsetOrWordIndex + 5] << 16)), cj.andLong((long)this.blockBuffer[blockByteOffsetOrWordIndex + 6] << 8, 65280L)));
           blockByteOffsetOrWordIndex += 8;
           wordIndexOrRound++;
         }
@@ -47,7 +47,7 @@ final class WhirlpoolHash {
           hashWordSnapshot = this.hashWords[wordIndexOrRound];
           messageWordSnapshot = this.messageWords[wordIndexOrRound];
           this.roundKey[wordIndexOrRound] = hashWordSnapshot;
-          this.cipherState[wordIndexOrRound] = f.xorLong(messageWordSnapshot, hashWordSnapshot);
+          this.cipherState[wordIndexOrRound] = MessageDialog.xorLong(messageWordSnapshot, hashWordSnapshot);
         }
         for (wordIndexOrRound = 1; 10 >= wordIndexOrRound; wordIndexOrRound++) {
           for (blockByteOffsetOrWordIndex = 0; blockByteOffsetOrWordIndex < 8; blockByteOffsetOrWordIndex++) {
@@ -55,7 +55,7 @@ final class WhirlpoolHash {
             keyByteIndexOrStateStartSnapshot = 0;
             byteShift = 56;
             while (keyByteIndexOrStateStartSnapshot < 8) {
-              this.roundScratch[blockByteOffsetOrWordIndex] = f.xorLong(this.roundScratch[blockByteOffsetOrWordIndex], ByteArrayBuffer.whirlpoolTables[keyByteIndexOrStateStartSnapshot][cd.andInt(255, (int)(this.roundKey[cd.andInt(7, blockByteOffsetOrWordIndex - keyByteIndexOrStateStartSnapshot)] >>> byteShift))]);
+              this.roundScratch[blockByteOffsetOrWordIndex] = MessageDialog.xorLong(this.roundScratch[blockByteOffsetOrWordIndex], ByteArrayBuffer.whirlpoolTables[keyByteIndexOrStateStartSnapshot][cd.andInt(255, (int)(this.roundKey[cd.andInt(7, blockByteOffsetOrWordIndex - keyByteIndexOrStateStartSnapshot)] >>> byteShift))]);
               byteShift -= 8;
               keyByteIndexOrStateStartSnapshot++;
             }
@@ -63,14 +63,14 @@ final class WhirlpoolHash {
           for (blockByteOffsetOrWordIndex = 0; blockByteOffsetOrWordIndex < 8; blockByteOffsetOrWordIndex++) {
             this.roundKey[blockByteOffsetOrWordIndex] = this.roundScratch[blockByteOffsetOrWordIndex];
           }
-          this.roundKey[0] = f.xorLong(this.roundKey[0], ByteArrayBuffer.whirlpoolRoundConstants[wordIndexOrRound]);
+          this.roundKey[0] = MessageDialog.xorLong(this.roundKey[0], ByteArrayBuffer.whirlpoolRoundConstants[wordIndexOrRound]);
           for (blockByteOffsetOrWordIndex = 0; blockByteOffsetOrWordIndex < 8; blockByteOffsetOrWordIndex++) {
             this.roundScratch[blockByteOffsetOrWordIndex] = this.roundKey[blockByteOffsetOrWordIndex];
             stateByteIndex = 0;
             keyByteIndexOrStateStartSnapshot = stateByteIndex;
             byteShift = 56;
             while (stateByteIndex < 8) {
-              this.roundScratch[blockByteOffsetOrWordIndex] = f.xorLong(this.roundScratch[blockByteOffsetOrWordIndex], ByteArrayBuffer.whirlpoolTables[stateByteIndex][cd.andInt(255, (int)(this.cipherState[cd.andInt(-stateByteIndex + blockByteOffsetOrWordIndex, 7)] >>> byteShift))]);
+              this.roundScratch[blockByteOffsetOrWordIndex] = MessageDialog.xorLong(this.roundScratch[blockByteOffsetOrWordIndex], ByteArrayBuffer.whirlpoolTables[stateByteIndex][cd.andInt(255, (int)(this.cipherState[cd.andInt(-stateByteIndex + blockByteOffsetOrWordIndex, 7)] >>> byteShift))]);
               stateByteIndex++;
               byteShift -= 8;
             }
@@ -80,7 +80,7 @@ final class WhirlpoolHash {
           }
         }
         for (wordIndexOrRound = 0; wordIndexOrRound < 8; wordIndexOrRound++) {
-          this.hashWords[wordIndexOrRound] = f.xorLong(this.hashWords[wordIndexOrRound], f.xorLong(this.cipherState[wordIndexOrRound], this.messageWords[wordIndexOrRound]));
+          this.hashWords[wordIndexOrRound] = MessageDialog.xorLong(this.hashWords[wordIndexOrRound], MessageDialog.xorLong(this.cipherState[wordIndexOrRound], this.messageWords[wordIndexOrRound]));
         }
         return;
     }

@@ -12,17 +12,17 @@ final class fa {
     static int field_i;
     static String[] membersExpansionBenefitTexts;
 
-    final static void a(String param0, int param1, boolean param2) {
-        mi.field_I = param2;
-        if (param1 != 480) {
+    final static void showMessageDialog(String messageText, int methodGuard, boolean showLoginOnDismiss) {
+        mi.field_I = showLoginOnDismiss;
+        if (methodGuard != 480) {
             return;
         }
         try {
             va.field_d = true;
-            Geoblox.activeMessageDialog = new f(kd.field_e, hh.field_c, param0, cf.field_i, mi.field_I);
+            Geoblox.activeMessageDialog = new MessageDialog(kd.field_e, hh.field_c, messageText, cf.field_i, mi.field_I);
             kd.field_e.a(false, Geoblox.activeMessageDialog);
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "fa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+        } catch (RuntimeException messageDialogFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) messageDialogFailure), "fa.B(" + (messageText != null ? "{...}" : "null") + ',' + methodGuard + ',' + showLoginOnDismiss + ')');
         }
     }
 

@@ -112,10 +112,10 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
             decompiledCaughtException = decompiledCaughtParameter0;
             exception = (Exception) (Object) decompiledCaughtException;
           }
-          if (f.field_kb != null) {
+          if (MessageDialog.gameCanvas != null) {
             try {
-              f.field_kb.removeFocusListener((java.awt.event.FocusListener) (this));
-              f.field_kb.getParent().remove((java.awt.Component) ((Object) f.field_kb));
+              MessageDialog.gameCanvas.removeFocusListener((java.awt.event.FocusListener) (this));
+              MessageDialog.gameCanvas.getParent().remove((java.awt.Component) ((Object) MessageDialog.gameCanvas));
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               exception = (Exception) (Object) decompiledCaughtException;
@@ -321,7 +321,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                               break;
                             }
                             var4 = var2.substring(6, var3);
-                            if (!f.b((byte) -115, (CharSequence) ((Object) var4))) {
+                            if (!MessageDialog.isSignedDecimalInt((byte) -115, (CharSequence) ((Object) var4))) {
                               break L4;
                             }
                             if (ol.a(false, (CharSequence) ((Object) var4)) >= 10) {
@@ -386,7 +386,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                   }
                   oc.a(75);
                   this.b(true);
-                  sh.mainRasterBuffer = fk.createCanvasRasterBuffer(false, (java.awt.Component) ((Object) f.field_kb), ok.field_c, kh.field_d);
+                  sh.mainRasterBuffer = fk.createCanvasRasterBuffer(false, (java.awt.Component) ((Object) MessageDialog.gameCanvas), ok.field_c, kh.field_d);
                   this.initializeGame(117);
                   eg.field_p = BufferedSocket.createFrameClock(5000);
                   L17: while (true) {
@@ -417,7 +417,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                           }
                         }
                         this.d(32000);
-                        wj.a(MenuScreen.platformTaskDispatcher, (byte) 83, f.field_kb);
+                        wj.a(MenuScreen.platformTaskDispatcher, (byte) 83, MessageDialog.gameCanvas);
                       }
                       if (var5 == 0) {
                         continue L17;
@@ -484,10 +484,10 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
         RuntimeException decompiledCaughtException = null;
         var4 = Geoblox.clientControlFlowFlag;
         try {
-          if (f.field_kb != null) {
-            f.field_kb.removeFocusListener((java.awt.event.FocusListener) (this));
-            f.field_kb.getParent().setBackground(java.awt.Color.black);
-            f.field_kb.getParent().remove((java.awt.Component) ((Object) f.field_kb));
+          if (MessageDialog.gameCanvas != null) {
+            MessageDialog.gameCanvas.removeFocusListener((java.awt.event.FocusListener) (this));
+            MessageDialog.gameCanvas.getParent().setBackground(java.awt.Color.black);
+            MessageDialog.gameCanvas.getParent().remove((java.awt.Component) ((Object) MessageDialog.gameCanvas));
           }
           L1: {
             if (he.field_a == null) {
@@ -512,21 +512,21 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
           }
           L5: {
             ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
-            f.field_kb = (java.awt.Canvas) ((Object) new bh((java.awt.Component) (this)));
-            ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) f.field_kb));
-            f.field_kb.setSize(kh.field_d, ok.field_c);
-            f.field_kb.setVisible(param0);
+            MessageDialog.gameCanvas = (java.awt.Canvas) ((Object) new bh((java.awt.Component) (this)));
+            ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) MessageDialog.gameCanvas));
+            MessageDialog.gameCanvas.setSize(kh.field_d, ok.field_c);
+            MessageDialog.gameCanvas.setVisible(param0);
             if (sg.field_a != var2) {
-              f.field_kb.setLocation(PrefixCodeDecoder.field_b, hk.field_B);
+              MessageDialog.gameCanvas.setLocation(PrefixCodeDecoder.field_b, hk.field_B);
               if (var4 == 0) {
                 break L5;
               }
             }
             var3 = sg.field_a.getInsets();
-            f.field_kb.setLocation(var3.left + PrefixCodeDecoder.field_b, var3.top + hk.field_B);
+            MessageDialog.gameCanvas.setLocation(var3.left + PrefixCodeDecoder.field_b, var3.top + hk.field_B);
           }
-          f.field_kb.addFocusListener((java.awt.event.FocusListener) (this));
-          f.field_kb.requestFocus();
+          MessageDialog.gameCanvas.addFocusListener((java.awt.event.FocusListener) (this));
+          MessageDialog.gameCanvas.requestFocus();
           lh.field_d = true;
           wc.field_g = true;
           dl.field_c = true;
@@ -894,17 +894,17 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
             if (fieldTemp$1 > 50) {
               rj.field_i = rj.field_i - 50;
               dl.field_c = true;
-              f.field_kb.setSize(kh.field_d, ok.field_c);
-              f.field_kb.setVisible(true);
+              MessageDialog.gameCanvas.setSize(kh.field_d, ok.field_c);
+              MessageDialog.gameCanvas.setVisible(true);
               if (!((sg.field_a != null) &&
                   (he.field_a == null))) {
-                f.field_kb.setLocation(PrefixCodeDecoder.field_b, hk.field_B);
+                MessageDialog.gameCanvas.setLocation(PrefixCodeDecoder.field_b, hk.field_B);
                 if (Geoblox.clientControlFlowFlag == 0) {
                   break L2;
                 }
               }
               var6 = sg.field_a.getInsets();
-              f.field_kb.setLocation(var6.left + PrefixCodeDecoder.field_b, hk.field_B + var6.top);
+              MessageDialog.gameCanvas.setLocation(var6.left + PrefixCodeDecoder.field_b, hk.field_B + var6.top);
             }
           }
           this.renderFrame(25853);

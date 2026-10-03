@@ -29,7 +29,7 @@ abstract class ArchiveRequest extends DualLinkNode {
         int var8 = 0;
         try {
           try {
-            var9 = f.field_kb.getGraphics();
+            var9 = MessageDialog.gameCanvas.getGraphics();
             if (null == hh.field_a) {
               hh.field_a = new java.awt.Font("Helvetica", 1, 13);
             }
@@ -42,7 +42,7 @@ abstract class ArchiveRequest extends DualLinkNode {
             }
             try {
               if (null == ff.field_a) {
-                ff.field_a = f.field_kb.createImage(304, 34);
+                ff.field_a = MessageDialog.gameCanvas.createImage(304, 34);
               }
               var10 = ff.field_a.getGraphics();
               var10.setColor(param1);
@@ -83,7 +83,7 @@ abstract class ArchiveRequest extends DualLinkNode {
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var5 = (Exception) (Object) decompiledCaughtException;
-            f.field_kb.repaint();
+            MessageDialog.gameCanvas.repaint();
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {

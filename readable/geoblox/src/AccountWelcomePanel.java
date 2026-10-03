@@ -40,7 +40,7 @@ final class AccountWelcomePanel extends ee implements pl {
         }
     }
 
-    final boolean a(int param0, int param1, char param2, el param3) {
+    final boolean handleKeyInput(int param0, int param1, char param2, el param3) {
         RuntimeException var5 = null;
         boolean stackIn_8_0 = false;
         boolean stackIn_13_0 = false;
@@ -49,7 +49,7 @@ final class AccountWelcomePanel extends ee implements pl {
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1 + 0, param2, param3)) {
+          if (super.handleKeyInput(param0, param1 + 0, param2, param3)) {
             return true;
           }
           if (param1 != 13) {
@@ -92,7 +92,7 @@ final class AccountWelcomePanel extends ee implements pl {
         }
     }
 
-    public final void a(int param0, byte param1, int param2, int param3, hk param4) {
+    public final void onButtonActivated(int param0, byte param1, int param2, int param3, hk param4) {
         int var7 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -2633,27 +2633,27 @@ final class AccountWelcomePanel extends ee implements pl {
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "quickchat_shortcut_keys,0");
                 if (null != textResourceBytes) {
-                  f.quickChatShortcutKeys[0] = ag.decodeTextBytes(1, textResourceBytes);
+                  MessageDialog.quickChatShortcutKeys[0] = ag.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "quickchat_shortcut_keys,1");
                 if (null != textResourceBytes) {
-                  f.quickChatShortcutKeys[1] = ag.decodeTextBytes(1, textResourceBytes);
+                  MessageDialog.quickChatShortcutKeys[1] = ag.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "quickchat_shortcut_keys,2");
                 if (null != textResourceBytes) {
-                  f.quickChatShortcutKeys[2] = ag.decodeTextBytes(1, textResourceBytes);
+                  MessageDialog.quickChatShortcutKeys[2] = ag.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "quickchat_shortcut_keys,3");
                 if (null != textResourceBytes) {
-                  f.quickChatShortcutKeys[3] = ag.decodeTextBytes(1, textResourceBytes);
+                  MessageDialog.quickChatShortcutKeys[3] = ag.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "quickchat_shortcut_keys,4");
                 if (null != textResourceBytes) {
-                  f.quickChatShortcutKeys[4] = ag.decodeTextBytes(1, textResourceBytes);
+                  MessageDialog.quickChatShortcutKeys[4] = ag.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "quickchat_shortcut_keys,5");
                 if (textResourceBytes != null) {
-                  f.quickChatShortcutKeys[5] = ag.decodeTextBytes(1, textResourceBytes);
+                  MessageDialog.quickChatShortcutKeys[5] = ag.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "keychar_the_character_under_questionmark");
                 if (textResourceBytes != null) {
@@ -2837,7 +2837,7 @@ final class AccountWelcomePanel extends ee implements pl {
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "fs_timeout");
                 if (textResourceBytes != null) {
-                  f.fullscreenTimeoutText = ag.decodeTextBytes(1, textResourceBytes);
+                  MessageDialog.fullscreenTimeoutText = ag.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "fs_button_tryagain");
                 if (textResourceBytes != null) {

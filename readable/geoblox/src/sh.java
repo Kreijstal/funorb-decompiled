@@ -496,7 +496,7 @@ abstract class sh extends el implements ql {
         }
     }
 
-    final boolean a(int param0, int param1, char param2, el param3) {
+    final boolean handleKeyInput(int param0, int param1, char param2, el param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_11_0 = false;
@@ -507,7 +507,7 @@ abstract class sh extends el implements ql {
         try {
           if ((null != this.field_A) &&
               (this.field_A.e((byte) 54)) &&
-              (this.field_A.a(param0, 13, param2, param3))) {
+              (this.field_A.handleKeyInput(param0, 13, param2, param3))) {
             return true;
           }
           if (param1 != 13) {

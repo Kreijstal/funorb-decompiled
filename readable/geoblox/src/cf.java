@@ -30,7 +30,7 @@ final class cf extends TextInputValidator {
             field_k = false;
           }
           var4 = (CharSequence) ((Object) candidateText);
-          if (!f.b((byte) -123, var4)) {
+          if (!MessageDialog.isSignedDecimalInt((byte) -123, var4)) {
             stackIn_4_0 = si.field_m;
             return stackIn_4_0;
           }

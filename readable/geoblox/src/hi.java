@@ -493,7 +493,7 @@ final class hi extends ee implements ta, pl {
         }
     }
 
-    public final void a(int param0, byte param1, int param2, int param3, hk param4) {
+    public final void onButtonActivated(int param0, byte param1, int param2, int param3, hk param4) {
         boolean discarded$1 = false;
         nl var7 = null;
         RuntimeException stackIn_10_0 = null;
@@ -560,7 +560,7 @@ final class hi extends ee implements ta, pl {
         bakingForegroundSprite = null;
     }
 
-    final boolean a(int param0, int param1, char param2, el param3) {
+    final boolean handleKeyInput(int param0, int param1, char param2, el param3) {
         boolean discarded$1 = false;
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
@@ -573,7 +573,7 @@ final class hi extends ee implements ta, pl {
           if (param1 != 13) {
             discarded$1 = this.h((byte) -45);
           }
-          if (super.a(param0, param1 + 0, param2, param3)) {
+          if (super.handleKeyInput(param0, param1 + 0, param2, param3)) {
             return true;
           }
           if (98 == param0) {

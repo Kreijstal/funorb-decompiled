@@ -229,7 +229,7 @@ final class ul {
         int var3 = 0;
         int var4 = 0;
         try {
-            var2 = new Sprite(param1.getNamedFile(0, "", "final_frame.jpg"), (java.awt.Component) ((Object) f.field_kb));
+            var2 = new Sprite(param1.getNamedFile(0, "", "final_frame.jpg"), (java.awt.Component) ((Object) MessageDialog.gameCanvas));
             var3 = var2.width;
             var4 = var2.height;
             oc.b(param0 + 21619);

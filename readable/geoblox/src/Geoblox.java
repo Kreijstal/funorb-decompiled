@@ -5,7 +5,7 @@ public final class Geoblox extends wf {
     static String[] reconnectMessages;
     static String loginMessage;
     static volatile long canvasCreationTimeMillis;
-    static f activeMessageDialog;
+    static MessageDialog activeMessageDialog;
     static LoginPayloadKind longAndNameLoginType;
     public static int clientControlFlowFlag;
 
@@ -385,7 +385,7 @@ public final class Geoblox extends wf {
         r.r(-60);
         rl.h((byte) 57);
         ei.n(methodGuard ^ 69);
-        f.n(-107);
+        MessageDialog.releaseStaticReferences(-107);
         qh.h(0);
         AccountWelcomePanel.f(1);
         pf.a((byte) -97);
@@ -713,7 +713,7 @@ public final class Geoblox extends wf {
                     InstrumentEnvelope.menuActionIds[1] = new int[]{1, 8, 9, 4, 3, 6};
                     og.screens[1].setItemCount(-12831, InstrumentEnvelope.menuActionIds[1].length);
                     if (0 == el.gameplayReturnScreenId) {
-                      f.i((byte) -112);
+                      MessageDialog.requestFullscreen((byte) -112);
                       og.screens[0].activeTicks = 0;
                     }
                   }
@@ -818,7 +818,7 @@ public final class Geoblox extends wf {
         if (InstrumentPatch.field_n != null) {
           renderTargetCanvasSnapshot = InstrumentPatch.field_n;
         } else {
-          renderTargetCanvasSnapshot = f.field_kb;
+          renderTargetCanvasSnapshot = MessageDialog.gameCanvas;
         }
         renderTargetCanvas = renderTargetCanvasSnapshot;
         if (bl.b(255)) {
@@ -1067,7 +1067,7 @@ public final class Geoblox extends wf {
         this.a((byte) -70, 9, 8, 10, 0, false, 7, 1);
         kj musicPlaybackStream = new kj();
         musicPlaybackStream.e(-1636, 9, 128);
-        DiskArchiveCache.a((java.awt.Component) ((Object) f.field_kb), MenuScreen.platformTaskDispatcher, false, musicPlaybackStream, true, 22050);
+        DiskArchiveCache.a((java.awt.Component) ((Object) MessageDialog.gameCanvas), MenuScreen.platformTaskDispatcher, false, musicPlaybackStream, true, 22050);
         this.a(false, false, true, true, -95);
     }
 

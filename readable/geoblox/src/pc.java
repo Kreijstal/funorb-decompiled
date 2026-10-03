@@ -31,8 +31,8 @@ final class pc extends IntrusiveNode {
     final static void a(byte param0) {
         int var1 = -125 / ((param0 - 56) / 54);
         jk.a((byte) -90);
-        if (null != f.field_kb) {
-            nb.a(-2, f.field_kb);
+        if (null != MessageDialog.gameCanvas) {
+            nb.a(-2, MessageDialog.gameCanvas);
             kj.c(-11099);
             hc.b(true);
             dk.a((byte) -121);

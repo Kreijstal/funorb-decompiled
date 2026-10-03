@@ -221,7 +221,7 @@ final class ag extends TextInputValidator {
             if (param0 != 12607) {
                 archiveGameCrc = 32;
             }
-            fa.a(rj.loggingInText, 480, false);
+            fa.showMessageDialog(rj.loggingInText, 480, false);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ag.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

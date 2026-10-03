@@ -167,7 +167,7 @@ final class s extends ee implements pe, pl {
         return "<u=2164A2><col=2164A2>";
     }
 
-    final boolean a(int param0, int param1, char param2, el param3) {
+    final boolean handleKeyInput(int param0, int param1, char param2, el param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_10_0 = false;
@@ -176,7 +176,7 @@ final class s extends ee implements pe, pl {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKeyInput(param0, param1, param2, param3)) {
             return true;
           }
           if (param0 == 98) {
@@ -223,7 +223,7 @@ final class s extends ee implements pe, pl {
         return "</col></u>";
     }
 
-    public final void a(int param0, byte param1, int param2, int param3, hk param4) {
+    public final void onButtonActivated(int param0, byte param1, int param2, int param3, hk param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -232,7 +232,7 @@ final class s extends ee implements pe, pl {
         try {
           if (param4 == this.field_K) {
             ki.a(77);
-            this.field_C.h((byte) -104);
+            this.field_C.dismissDialog((byte) -104);
           }
           if (param1 == -20) {
             return;

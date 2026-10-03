@@ -39,7 +39,7 @@ final class tj {
             throw new IllegalStateException();
         }
         if (Geoblox.activeMessageDialog != null) {
-            Geoblox.activeMessageDialog.h((byte) -104);
+            Geoblox.activeMessageDialog.dismissDialog((byte) -104);
             if (param0 >= -47) {
                 field_a = (String) null;
                 var3 = ml.c(7789);

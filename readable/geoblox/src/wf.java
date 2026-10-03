@@ -112,7 +112,7 @@ abstract class wf extends ch {
             TextInputValidator.initializeArchiveServices(param7, va.field_a, this.field_l, this.field_x, -23949, MenuScreen.platformTaskDispatcher, this.field_n, this.field_s, this.field_w);
             rd.b(28);
             vc.field_f = nd.a(param0 + 113);
-            sl.a(f.field_kb, 57);
+            sl.a(MessageDialog.gameCanvas, 57);
             lk.field_e = param2;
             ib.field_c = param4;
             ArchiveRequest.field_r = param6;
@@ -455,9 +455,9 @@ abstract class wf extends ch {
         }
         if ((!param0) &&
             (ab.field_a)) {
-          nb.a(-2, f.field_kb);
+          nb.a(-2, MessageDialog.gameCanvas);
           this.b(true);
-          sl.a(f.field_kb, 57);
+          sl.a(MessageDialog.gameCanvas, 57);
         }
         if (wj.field_G[8]) {
           ArchiveNetworkClient.f(-102);

@@ -69,7 +69,7 @@ final class wj extends sh {
                 break;
               }
               var7_ref_String = param0.substring(var6_int + 2, var5);
-              if (!f.b((byte) -123, (CharSequence) ((Object) var7_ref_String))) {
+              if (!MessageDialog.isSignedDecimalInt((byte) -123, (CharSequence) ((Object) var7_ref_String))) {
                 continue;
               }
               if (var5 >= var3_int) {
@@ -104,7 +104,7 @@ final class wj extends sh {
                 break;
               }
               var9 = param0.substring(2 + var8, var5);
-              if (!f.b((byte) -125, (CharSequence) ((Object) var9))) {
+              if (!MessageDialog.isSignedDecimalInt((byte) -125, (CharSequence) ((Object) var9))) {
                 continue;
               }
               if (var3_int <= var5) {

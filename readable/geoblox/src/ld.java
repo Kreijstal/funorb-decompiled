@@ -122,8 +122,8 @@ final class ld {
             ld.advanceDifficulty(true);
           }
           if (((kd.difficultyStepFlags[ArchiveNetworkClient.difficultyStep] & 2) != 0) &&
-              (f.availableEntityCategoryCount < 7)) {
-            f.availableEntityCategoryCount = f.availableEntityCategoryCount + 1;
+              (MessageDialog.availableEntityCategoryCount < 7)) {
+            MessageDialog.availableEntityCategoryCount = MessageDialog.availableEntityCategoryCount + 1;
           }
           if (0 != (kd.difficultyStepFlags[ArchiveNetworkClient.difficultyStep] & 16)) {
             sa.specialSpriteKindProbability = sa.specialSpriteKindProbability + 0.05;

@@ -942,7 +942,7 @@ final class GameplaySession {
               BufferedRandomAccessFile.checkBoundaryLossAndStartCascade(methodGuard ^ 1578896190);
             }
             cf.advanceScorePopups((byte) 27);
-            f.advanceGameplayAvatarAnimation(600);
+            MessageDialog.advanceGameplayAvatarAnimation(600);
             if (this.tutorialMode) {
               this.advanceTutorialStep(109);
             }
@@ -960,7 +960,7 @@ final class GameplaySession {
           }
           fc.advanceEndingEntityAnimations(19);
           cf.advanceScorePopups((byte) 24);
-          f.advanceGameplayAvatarAnimation(600);
+          MessageDialog.advanceGameplayAvatarAnimation(600);
           this.sceneAnimationTick = this.sceneAnimationTick + 1;
           this.boardRasterDirty = true;
         }
@@ -1106,7 +1106,7 @@ final class GameplaySession {
               }
               if (ki.currentKeyboardEventCode == 3) {
                 ag.availableSpriteVariantCount = 7;
-                f.availableEntityCategoryCount = 7;
+                MessageDialog.availableEntityCategoryCount = 7;
               }
               if (ki.currentKeyboardEventCode == 4) {
                 hd.recordEntityRelease(2);
@@ -1709,7 +1709,7 @@ final class GameplaySession {
           ld.spawnPointsPopup(310, 320, 90, this.resultBonusPoints);
         }
         cf.advanceScorePopups((byte) 33);
-        f.advanceGameplayAvatarAnimation(600);
+        MessageDialog.advanceGameplayAvatarAnimation(600);
         if (methodGuard != 10) {
           GameplaySession.releaseStaticReferences(-70);
         }

@@ -16,7 +16,7 @@ final class pg {
         fj.field_m = 0;
         ArchiveNetworkClient.difficultyStep = 0;
         fa.releasesPerTheme = 40;
-        f.availableEntityCategoryCount = 4;
+        MessageDialog.availableEntityCategoryCount = 4;
         qe.adjustThemeReleaseQuota(10);
         ij.spawnIntervalScale = 0.75f;
         DualLinkNode.rotationStepRadians = 0.01666666753590107f;

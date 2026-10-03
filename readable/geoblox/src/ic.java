@@ -63,7 +63,7 @@ final class ic {
               lb.field_c = param1;
               NetworkArchiveRequest.field_x = param13;
               ac.field_s = param7;
-              f.field_ib = param0;
+              MessageDialog.loginHeaderInt = param0;
               rb.field_c = param4;
               mk.field_l = param10;
               ol.field_I = param9;

@@ -7,9 +7,9 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-## Current readability (pass 97)
+## Current readability (pass 98)
 
-The export has 7,482 guarded names. All 303 sources compile, reproduce and
+The export has 7,597 guarded names. All 303 sources compile, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
 short-circuit guards for their original remainders, consuming 82 breaks and
 saving 219 lines. Menu hit-test trees preserve every strict boundary and
@@ -30,7 +30,7 @@ large bodies are:
 | `GameplaySession.renderSession` | 379 | 18 |
 | `GameplaySession.updateSession` | 643 | 14 |
 | `kc.reconcileBoardEntities` | 496 | 15 |
-| `f.advanceGameplayAvatarAnimation` | 434 | 1 |
+| `MessageDialog.advanceGameplayAvatarAnimation` | 434 | 1 |
 | `Sprite.rotateNearest` | 531 | 1 |
 | `SpriteState.drawSortedHalfBlendRgbTriangle` | 388 | 11 |
 | `MusicDecoder.decodePacket` | 323 | 1 |
@@ -58,6 +58,66 @@ remain intact.
 
 `MenuScreen` handles selection and hit testing. Its overridden activation/input
 methods have matching names in `GameScreen`, preserving the virtual contracts.
+
+## MessageDialog and shared widget entry points
+
+`MessageDialog` is the original `f` class. It owns the font/status panel, error
+content and dismissal options; its static avatar/fullscreen/login/text/style
+utilities remain colocated. All its own declarations have guarded semantic names,
+while inherited widget implementation and related classes remain partly opaque.
+
+`fa.showMessageDialog` writes the login-dismiss option before checking guard480,
+then creates/stores/registers the dialog for the correct guard. The constructor's
+base/text-content work happens before its own catch. `dismissDialog` returns if
+already invisible; otherwise it hides first, then gives `showRetryLoginOnDismiss`
+priority over `showLoginOnDismiss`. Their existing follow-up helpers may call
+dismissal again. Wrong guard still sets `retryButtonAction` before follow-up.
+
+`installErrorContent` checks the one-shot flag then guard19810. It sets
+`errorContentInstallationStarted` before status colors/new text/buttons, preserving
+partial failure and exact numeric error/action IDs. Kind256 sets the retry-button
+route; other installed kinds keep the existing display-name URL route.
+`showConnectionRestoredContent` installs return-to-game action15 and retains its
+optional canvas-clearing guard. The static `showLoginForm` dismisses the current
+dialog before checking its own guard and creates the original login form options.
+
+All 11 members of the `onButtonActivated` override family share that name.
+The button emitter sends relative X/Y, guard-20, pointer-button ID and the button
+object. Keyboard activation sends X/Y=-1 and button1. All 13 members of the
+`handleKeyInput` override family share that name. MessageDialog's second argument
+is `methodGuardOrDismissKeyCode`: it normally carries a guard, but this class also
+compares it with the actual key code before dismissal. Those overload/virtual
+contracts and diagnostic argument values remain unchanged.
+
+`gameCanvas` is the shared applet canvas; cleanup/wrong guards can still null it.
+`awaitingLoginLongState` is the identity token entered after the initial response,
+then waiting for eight bytes before reading the login long. `loginHeaderInt` is
+copied from initialization and serialized before the long/flags; its exact meaning
+is not inferred. `requestFullscreen`, `getSharedUiStyle`, `isSignedDecimalInt`
+and `releaseStaticReferences` name independently traced static roles, preserving
+negative guards, overflow checks, initialization side effects and partial cleanup.
+
+Compilation, full binding/override comparison, reproduction, dictionary reversal
+and existing native gameplay traces pass. No new dialog, input dispatch, actual
+login/server, fullscreen/thread or browser/device runtime coverage is claimed.
+
+## Why the latest structural prototypes were discarded
+
+A leading-break loop-header prototype found zero candidates in the pinned raw
+bodies: the remaining large loops put their exits behind nested destinations or
+effects. An alternate predicate-only guard prototype found one exception-helper
+candidate (`sa.a`) and no large-body candidates. Both were removed; the decompiler
+pin and raw corpus are unchanged by pass98. Their scans used independent JDK
+body positions rather than inferred method spans.
+
+The menu action ladder can enter several different destinations and then fall
+through when the control flag is nonzero. It cannot be represented by an ordinary
+exclusive switch without preserving that dispatch/fallthrough graph. Avatar tails
+repeat equivalent-looking work under different local bindings and after prefixes
+that can throw. Sharing them needs explicit binding/exception proof. The next
+structural work should reconstruct those destination/continuation relationships
+and verify both control-flag paths, rather than hoisting tests across effects or
+assuming zero. The ten large labeled bodies remain in the current inventory.
 
 ## Avatar ending state and branch snapshots
 
@@ -117,9 +177,9 @@ unused control snapshots retain their side effects.
 `canvasCreationTimeMillis` is the volatile adjusted-millisecond timestamp written
 after canvas creation and compared against1000 in the applet paint path. The
 initial0 and wrong-render-guard -11 sentinels remain. `activeMessageDialog` is
-the `f` UI dialog created with message/font/container data, dismissed by its
+the `MessageDialog` UI dialog created with message/font/container data, dismissed by its
 visibility method and replaced with connection-restored content when required.
-Its remaining shared widget methods are still opaque.
+Its own declarations are named; inherited/shared widget internals remain opaque.
 
 `longAndNameLoginType` is the `LoginPayloadKind` singleton with `wireId`2,
 returned by `lf`'s kind method. That payload writes a long then Base38 text;
@@ -790,7 +850,7 @@ retains Java's negative frame remainder rather than clamping it.
 raster within the 640 by 480 viewport. Their normal values are 90 and 10 for a
 460 by 460 raster. Entity trail and contact drawing subtract these offsets.
 
-`qa.advanceMenuAvatarAnimation` and `f.advanceGameplayAvatarAnimation` update
+`PrefixCodeDecoder.advanceMenuAvatarAnimation` and `MessageDialog.advanceGameplayAvatarAnimation` update
 the shared avatar feedback state. `avatarFrameStepTicks` is tested before its
 decrement: an old negative value resets it to 20 and steps the frame. An offset
 of zero first jumps to three. Otherwise `avatarSteeringDirectionId` zero moves

@@ -426,7 +426,7 @@ class ee extends el implements ql {
         }
     }
 
-    boolean a(int param0, int param1, char param2, el param3) {
+    boolean handleKeyInput(int param0, int param1, char param2, el param3) {
         RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
@@ -447,7 +447,7 @@ class ee extends el implements ql {
           while (var8 != null) {
             if (var8.a(120)) {
               if ((var8.e((byte) 54)) &&
-                  (var8.a(param0, 13, param2, param3))) {
+                  (var8.handleKeyInput(param0, 13, param2, param3))) {
                 return true;
               }
               var8 = (el) ((Object) var9.a((byte) 110));

@@ -19,6 +19,17 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 138,772 bindings,
 preserving 388 override relationships.
 
+Pass 98 adds 115 guarded names, completing MessageDialog's own declarations and
+two shared UI override families (11 button callbacks and 13 key-input methods).
+Dialog error/dismissal/restored content and colocated static utilities follow
+source-proven guards and partial effects. All 7,482 previous complete rules and
+raw/decompiler/native pins remain. The 7,597 rules apply 60,415 edits.
+Compilation/binding checks, native gameplay traces, full reproduction and dictionary
+reversal pass. Two structural prototypes were discarded after finding zero loop-
+entry candidates and one alternate-guard exception helper, with no large-body
+candidates. Larger dispatch/continuation reconstruction, shared opaque code and
+whole-game/browser/phone acceptance remain unfinished or unverified.
+
 Pass 97 adds 91 guarded avatar/ending/shared-input identities, completing the
 parameters/locals of both avatar updaters and board reconciliation. Cry phases,
 frame cursor, ending scan result and session-start attempt counter follow exact

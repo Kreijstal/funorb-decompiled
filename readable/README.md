@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 7,482 guarded naming rules: 68 classes, 915 fields,
-623 methods, 1,852 parameters and 4,024 local declarations. Both 303-file corpora
+The current export has 7,597 guarded naming rules: 69 classes, 924 fields,
+656 methods, 1,887 parameters and 4,061 local declarations. Both 303-file corpora
 compile, comparing 138,772 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -53,6 +53,52 @@ Another 9,828 cases preserve native general-angle/extreme-scale traces. ARGB
 smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
+
+## Message dialog and shared UI contracts (pass 98)
+
+This naming-only pass adds 115 guarded identities: one class, nine fields,
+33 methods, 35 parameters and 37 locals. `MessageDialog` maps back to `f`.
+Every own field, nonconstructor method, parameter and local in that class now
+has a name; the constructor spelling follows the class rule. Its inherited
+widget internals and related classes still contain opaque names. The shared
+`onButtonActivated` contract names all 11 methods in its connected override
+family; `handleKeyInput` names all 13 methods in its own family. Both full
+families preserve their original virtual relationships.
+
+Dialog state exposes the font/status panel, error-installation-started flag,
+retry-button action and two ordered login-on-dismiss options. Error setup writes
+its installation flag before recoloring and creating content, so a later failure
+keeps that flag. Dismissal clears visibility before its follow-up helpers, which
+can call dismissal again. Error-kind IDs, callback coordinates, key IDs, text,
+nulls and diagnostic strings remain. `fa.showMessageDialog` preserves its boolean
+write even for the wrong guard. Static utilities name fullscreen requests, shared
+UI style, signed-decimal validation, login-form creation and cleanup separately
+from instance dialog behavior. Shared canvas, login-header integer and the
+awaiting-login-long token have independently traced roles; the header integer
+and long are not assigned undocumented version/cryptographic meanings.
+
+All 7,482 previous complete rules and raw/decompiler/native pins remain. The
+7,597 rules apply 60,415 identifier edits, including constructor class spelling.
+Both 303-file corpora compile, preserving 138,772 bindings and 388 overrides.
+Rule-builder/source-migration/text-resource checks pass all three files. The
+existing native/raw/readable gameplay probe retains every fixed trace after
+renaming its shared avatar helper's owning class. Reproduction and dictionary
+reversal recover the pinned raw input byte-for-byte. Pass98's readable source-
+tree SHA-256 is
+`23329622a87f0e3c12fabcc4ed0ba2e53bdd5f1f4091612f29c4fc7b06358828`.
+These checks add no dialog/input/fullscreen/login/network/device runtime coverage.
+
+Two structural prototypes were tested against independent JDK body positions
+for the current raw corpus and discarded. A direct infinite-loop entry-break
+fold found zero candidates. Predicate-only alternate guards found one candidate
+in `sa.a`, an exception helper, and none in the large bodies. Neither prototype
+is a published decompiler change. The main menu ladder has multiple destinations
+and nonzero-control fallthrough; a conventional exclusive switch would not preserve
+those paths without a stronger dispatch proof. Avatar tail copies retain distinct
+local bindings and exceptional prefixes, requiring a separate sharing proof.
+The structural inventory remains 21 overlapping large spans, ten with block
+labels. Further shared names, larger control-flow reconstruction and whole-game/
+browser/phone acceptance remain unfinished or unverified.
 
 ## Avatar animation and ending flow names (pass 97)
 

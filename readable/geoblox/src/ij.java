@@ -67,9 +67,9 @@ final class ij extends oe implements pl {
     final static int chooseSpawnEntityCategory(int methodGuard) {
         if (methodGuard <= 18) {
             ij.chooseSpawnEntityCategory(48);
-            return qi.b(f.availableEntityCategoryCount, 1);
+            return qi.b(MessageDialog.availableEntityCategoryCount, 1);
         }
-        return qi.b(f.availableEntityCategoryCount, 1);
+        return qi.b(MessageDialog.availableEntityCategoryCount, 1);
     }
 
     ij(ng param0, uj param1) {
@@ -96,7 +96,7 @@ final class ij extends oe implements pl {
               }
             } else {
               if (param1 == LimitedRandomAccessFile.field_b) {
-                var3 = f.fullscreenTimeoutText;
+                var3 = MessageDialog.fullscreenTimeoutText;
                 this.field_h = this.field_h + 30;
               }
             }
@@ -138,7 +138,7 @@ final class ij extends oe implements pl {
         this.field_I = false;
     }
 
-    public final void a(int param0, byte param1, int param2, int param3, hk param4) {
+    public final void onButtonActivated(int param0, byte param1, int param2, int param3, hk param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

@@ -26,7 +26,7 @@ final class gi implements Iterable {
         }
         ff.field_d = null;
         if (cf.field_i) {
-          Geoblox.activeMessageDialog.c(false);
+          Geoblox.activeMessageDialog.showConnectionRestoredContent(false);
         } else {
           var1 = ik.field_a;
           if (var1 > 0) {
@@ -37,7 +37,7 @@ final class gi implements Iterable {
             }
             ff.field_d = gg.a(-11455, new CharSequence[]{(CharSequence) ((Object) ff.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) PacketByteCipher.ticketingGoToWebsiteText)});
           }
-          Geoblox.activeMessageDialog.h((byte) -104);
+          Geoblox.activeMessageDialog.dismissDialog((byte) -104);
           rd.c(520);
         }
     }

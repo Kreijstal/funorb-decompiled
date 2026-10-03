@@ -98,14 +98,14 @@ abstract class qf extends oe {
         this.field_W.field_D = 0;
     }
 
-    boolean a(int param0, int param1, char param2, el param3) {
+    boolean handleKeyInput(int param0, int param1, char param2, el param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKeyInput(param0, param1, param2, param3)) {
             return true;
           }
           if (this.field_W != null) {
@@ -155,7 +155,7 @@ abstract class qf extends oe {
             return;
           }
           var4 = (el) null;
-          this.a(-67, -54, 'ﾽ', (el) null);
+          this.handleKeyInput(-67, -54, 'ﾽ', (el) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

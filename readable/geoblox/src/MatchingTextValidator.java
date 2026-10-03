@@ -237,7 +237,7 @@ final class MatchingTextValidator extends TextInputValidator {
 
     final static void c(byte param0) {
         if (!(Geoblox.activeMessageDialog == null)) {
-            Geoblox.activeMessageDialog.h((byte) -104);
+            Geoblox.activeMessageDialog.dismissDialog((byte) -104);
         }
         vk.field_d = new hi();
         int var1 = 32 / ((param0 - 43) / 47);

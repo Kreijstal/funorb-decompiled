@@ -100,7 +100,7 @@ final class vh extends ee implements pl {
         }
     }
 
-    final boolean a(int param0, int param1, char param2, el param3) {
+    final boolean handleKeyInput(int param0, int param1, char param2, el param3) {
         RuntimeException var5 = null;
         boolean stackIn_8_0 = false;
         boolean stackIn_11_0 = false;
@@ -112,7 +112,7 @@ final class vh extends ee implements pl {
           if (param1 != 13) {
             tutorialRotationMessage = (String) null;
           }
-          if (super.a(param0, param1 + 0, param2, param3)) {
+          if (super.handleKeyInput(param0, param1 + 0, param2, param3)) {
             return true;
           }
           if (param0 == 98) {
@@ -138,7 +138,7 @@ final class vh extends ee implements pl {
         }
     }
 
-    public final void a(int param0, byte param1, int param2, int param3, hk param4) {
+    public final void onButtonActivated(int param0, byte param1, int param2, int param3, hk param4) {
         int var6_int = 0;
         int var7 = 0;
         RuntimeException stackIn_15_0 = null;

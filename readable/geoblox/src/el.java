@@ -35,7 +35,7 @@ class el extends IntrusiveNode {
             }
             return this.a((byte) -75, (el) (this));
         }
-        if (this.a(param2, 13, param1, (el) (this))) {
+        if (this.handleKeyInput(param2, 13, param1, (el) (this))) {
             return true;
         }
         var4 = 71 / ((param0 + 40) / 63);
@@ -80,7 +80,7 @@ class el extends IntrusiveNode {
         return this.a(0, new StringBuilder(), new Hashtable(), 0).toString();
     }
 
-    boolean a(int param0, int param1, char param2, el param3) {
+    boolean handleKeyInput(int param0, int param1, char param2, el param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -775,7 +775,7 @@ class el extends IntrusiveNode {
 
     boolean e(byte param0) {
         if (param0 != 54) {
-            this.a(65, 5, '￦', (el) null);
+            this.handleKeyInput(65, 5, '￦', (el) null);
             return false;
         }
         return false;

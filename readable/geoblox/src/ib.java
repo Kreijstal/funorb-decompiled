@@ -98,7 +98,7 @@ abstract class ib implements dg {
 
     final static void d(int param0) {
         String var2 = (String) null;
-        f.b("", (String) null, 7697781);
+        MessageDialog.showLoginForm("", (String) null, 7697781);
         if (param0 != 24107) {
             gameAssetsInitialized = false;
         }

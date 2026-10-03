@@ -207,7 +207,7 @@ final class la extends sh {
             ii.field_a = true;
             cf.field_i = true;
             kd.field_e.f(param0 + 10912);
-            fa.a(ah.connectionLostReconnectingText, 480, false);
+            fa.showMessageDialog(ah.connectionLostReconnectingText, 480, false);
             return;
         }
         la.g((byte) 86);
@@ -215,7 +215,7 @@ final class la extends sh {
         ii.field_a = true;
         cf.field_i = true;
         kd.field_e.f(param0 + 10912);
-        fa.a(ah.connectionLostReconnectingText, 480, false);
+        fa.showMessageDialog(ah.connectionLostReconnectingText, 480, false);
     }
 
     final void b(boolean param0) {

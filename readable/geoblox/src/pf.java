@@ -188,7 +188,7 @@ final class pf extends ee implements ga, pl {
         }
     }
 
-    final boolean a(int param0, int param1, char param2, el param3) {
+    final boolean handleKeyInput(int param0, int param1, char param2, el param3) {
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
         boolean stackIn_9_0 = false;
@@ -197,7 +197,7 @@ final class pf extends ee implements ga, pl {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKeyInput(param0, param1, param2, param3)) {
             return true;
           }
           if (98 == param0) {
@@ -229,7 +229,7 @@ final class pf extends ee implements ga, pl {
         }
         if (param0 < 62) {
             el var3 = (el) null;
-            this.a(28, 70, '"', (el) null);
+            this.handleKeyInput(28, 70, '"', (el) null);
         }
         return this.field_J.field_s;
     }
@@ -435,7 +435,7 @@ final class pf extends ee implements ga, pl {
         }
     }
 
-    public final void a(int param0, byte param1, int param2, int param3, hk param4) {
+    public final void onButtonActivated(int param0, byte param1, int param2, int param3, hk param4) {
         int var7 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;

@@ -18,7 +18,7 @@ final class jk {
             if (!(null == rb.field_d)) {
                 rb.field_d.b((byte) -101);
             }
-            f.field_kb.requestFocus();
+            MessageDialog.gameCanvas.requestFocus();
             return;
         }
         PlatformTaskDispatcher var2 = (PlatformTaskDispatcher) null;
@@ -27,7 +27,7 @@ final class jk {
         if (!(null == rb.field_d)) {
             rb.field_d.b((byte) -101);
         }
-        f.field_kb.requestFocus();
+        MessageDialog.gameCanvas.requestFocus();
     }
 
     public static void a(int param0) {

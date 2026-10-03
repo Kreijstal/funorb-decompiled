@@ -293,7 +293,7 @@ final class qh extends ee implements pe, pl, ta {
     }
 
     final static void h(byte param0) {
-        hb.field_j = f.p(125);
+        hb.field_j = MessageDialog.getSharedUiStyle(125);
         int var1 = -117 / ((12 - param0) / 57);
         kd.field_e = new ng();
         b.a(true, true, false);
@@ -307,7 +307,7 @@ final class qh extends ee implements pe, pl, ta {
         return "</col></u>";
     }
 
-    public final void a(int param0, byte param1, int param2, int param3, hk param4) {
+    public final void onButtonActivated(int param0, byte param1, int param2, int param3, hk param4) {
         boolean discarded$1 = false;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -445,7 +445,7 @@ final class qh extends ee implements pe, pl, ta {
         return "<u=2164A2><col=2164A2>";
     }
 
-    final boolean a(int param0, int param1, char param2, el param3) {
+    final boolean handleKeyInput(int param0, int param1, char param2, el param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_13_0 = false;
@@ -454,7 +454,7 @@ final class qh extends ee implements pe, pl, ta {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1 ^ 0, param2, param3)) {
+          if (super.handleKeyInput(param0, param1 ^ 0, param2, param3)) {
             return true;
           }
           if (98 == param0) {

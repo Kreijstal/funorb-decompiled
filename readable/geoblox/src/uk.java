@@ -176,7 +176,7 @@ final class uk extends TextInputValidator {
           }
           fj.field_q.position = fj.field_q.position + 2;
           var5_int = fj.field_q.position;
-          fj.field_q.writeIntBE((byte) 95, f.field_ib);
+          fj.field_q.writeIntBE((byte) 95, MessageDialog.loginHeaderInt);
           fj.field_q.writeLongBE((byte) 116, lb.field_c);
           var6 = 0;
           if (param0 <= 20) {

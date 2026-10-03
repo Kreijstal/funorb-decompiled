@@ -3,7 +3,7 @@
  */
 final class ni extends ee implements pl {
     private String field_K;
-    private f field_J;
+    private MessageDialog field_J;
     private hk[] field_F;
     private int[] field_H;
     private BitmapFont field_G;
@@ -125,7 +125,7 @@ final class ni extends ee implements pl {
         }
     }
 
-    ni(f param0, BitmapFont param1, String param2) {
+    ni(MessageDialog param0, BitmapFont param1, String param2) {
         super(0, 0, 288, 0, (dh) null);
         int var4_int = 0;
         this.field_D = 0;
@@ -169,7 +169,7 @@ final class ni extends ee implements pl {
         int var5 = 35 / ((param2 - 1) / 43);
     }
 
-    public final void a(int param0, byte param1, int param2, int param3, hk param4) {
+    public final void onButtonActivated(int param0, byte param1, int param2, int param3, hk param4) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
@@ -188,7 +188,7 @@ final class ni extends ee implements pl {
             if (var7 != -1) {
               pc.a(this.field_H[var6_int], false);
             } else {
-              this.field_J.h((byte) -104);
+              this.field_J.dismissDialog((byte) -104);
             }
             break;
           }
