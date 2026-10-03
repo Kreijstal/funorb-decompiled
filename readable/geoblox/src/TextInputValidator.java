@@ -54,7 +54,7 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
         if (!(!Character.isISOControl(param0))) {
             return false;
         }
-        if (pf.a(-123, param0)) {
+        if (LoginPanel.a(-123, param0)) {
             return true;
         }
         if (param0 == 45) {
@@ -87,7 +87,7 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
             if (methodGuard != -23949) {
                 field_f = -0.8279321027589008;
             }
-            ij.alternateArchivePort = alternatePort;
+            FullscreenErrorDialog.alternateArchivePort = alternatePort;
             AsyncResourceDownloader.archiveNetworkClient = (ArchiveNetworkClient) ((Object) new SocketArchiveNetworkClient());
             cl.archiveDiskWorker = new DiskCacheWorker(taskDispatcher);
             DequeCursor.archiveCatalog = new ArchiveCatalog(AsyncResourceDownloader.archiveNetworkClient, cl.archiveDiskWorker);

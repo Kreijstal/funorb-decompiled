@@ -97,7 +97,7 @@ final class GameScreen extends MenuScreen {
                     break L10;
                   }
                 }
-                ai.requestedScreenId = oc.previousMenuScreenId;
+                ai.requestedScreenId = SpriteCheckboxRenderer.previousMenuScreenId;
               }
               if (~ai.requestedScreenId == ~this.screenId) {
                 break L0;
@@ -106,7 +106,7 @@ final class GameScreen extends MenuScreen {
                   (this.screenId != 0)) {
                 break L0;
               }
-              oc.previousMenuScreenId = this.screenId;
+              SpriteCheckboxRenderer.previousMenuScreenId = this.screenId;
               if (clientControlFlowGuard == 0) {
                 break L0;
               }
@@ -116,7 +116,7 @@ final class GameScreen extends MenuScreen {
                   (83 != ki.currentKeyboardEventCode)) {
                 break L0;
               }
-              if (!fh.c(-103)) {
+              if (!UnderlinedButtonRenderer.c(-103)) {
                 if ((!(og.field_n <= 0) ||
                     (!(this.fullscreenDialogButtonIndex == 0) &&
                       !((PrefixCodeDecoder.pointerXSnapshot > 190) &&
@@ -416,7 +416,7 @@ final class GameScreen extends MenuScreen {
                 panelLeftOrTextYOrOverlayAlphaOrCurtainX = 184;
                 FadingDialog.uiPaletteFont.drawCenteredText(Geoblox.loginMessage, 320, panelLeftOrTextYOrOverlayAlphaOrCurtainX, 0, -1);
                 panelLeftOrTextYOrOverlayAlphaOrCurtainX = 185;
-                IntrusiveNodeHashTable.smallFont.drawParagraph(r.field_sb, 130, panelLeftOrTextYOrOverlayAlphaOrCurtainX, 380, 300, 0, -1, 1, 0, 14);
+                IntrusiveNodeHashTable.smallFont.drawParagraph(AccountCreationDialog.field_sb, 130, panelLeftOrTextYOrOverlayAlphaOrCurtainX, 380, 300, 0, -1, 1, 0, 14);
                 ma.drawNineSlicePanel(320, 120, 60, (byte) -92, panelWidth, ll.frameNineSliceSprites);
                 IntrusiveNodeHashTable.smallFont.drawParagraph(ProxyAuthenticationRequiredException.field_b, 130, 330, 380, 300, 0, -1, 1, 0, 14);
                 if (clientControlFlowGuard == 0) {
@@ -432,7 +432,7 @@ final class GameScreen extends MenuScreen {
                 if (!this.fullscreenDialogActive) {
                   return;
                 }
-                if (fh.c(-93)) {
+                if (UnderlinedButtonRenderer.c(-93)) {
                   if (this.activeTicks <= 200) {
                     membershipOverlayAlpha = this.activeTicks;
                   } else {
@@ -666,8 +666,8 @@ final class GameScreen extends MenuScreen {
               return;
             }
           }
-          if (oc.field_c > 10) {
-            AsyncResourceDownloader.a(-15346, oc.field_c - 10);
+          if (SpriteCheckboxRenderer.field_c > 10) {
+            AsyncResourceDownloader.a(-15346, SpriteCheckboxRenderer.field_c - 10);
             if (clientControlFlowGuard == 0) {
               return;
             }
@@ -711,7 +711,7 @@ final class GameScreen extends MenuScreen {
                 if (this.selectedItemIndex == 2) {
                   this.selectedItemIndex = 3;
                 }
-                if (oc.previousMenuScreenId != 1) {
+                if (SpriteCheckboxRenderer.previousMenuScreenId != 1) {
                   return;
                 }
                 if (this.selectedItemIndex != 3) {
@@ -794,7 +794,7 @@ final class GameScreen extends MenuScreen {
                     return tutorialNextItemResult;
                   }
                   if ((this.tutorialPageIndex == 4) &&
-                      (oc.previousMenuScreenId != 1) &&
+                      (SpriteCheckboxRenderer.previousMenuScreenId != 1) &&
                       (pointerX > 406) &&
                       (pointerX < 635)) {
                     tutorialFinalItemResult = 3;
@@ -947,7 +947,7 @@ final class GameScreen extends MenuScreen {
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           if ((ca.field_f == null) &&
-              (!fh.c(-115))) {
+              (!UnderlinedButtonRenderer.c(-115))) {
             ca.field_f = DialWidget.b(22, 1, 0, 10, 3);
           }
           L1: {
@@ -1048,7 +1048,7 @@ final class GameScreen extends MenuScreen {
               }
             }
             L15: {
-              if (!fh.c(-89)) {
+              if (!UnderlinedButtonRenderer.c(-89)) {
                 statusOrFriendTipText = PasswordValidator.serviceUnavailableText;
                 if (clientControlFlowGuard == 0) {
                   break L15;
@@ -1058,11 +1058,11 @@ final class GameScreen extends MenuScreen {
             }
             statusTextY = 150 - (-FadingDialog.uiPaletteFont.maxAscent - 76);
             FadingDialog.uiPaletteFont.drawCenteredText(statusOrFriendTipText, 322, statusTextY, 0, -1);
-            if (fh.c(methodGuard - 147)) {
-              FadingDialog.uiPaletteFont.drawParagraph(ni.createToUseText, 125, 350, 395, 100, 0, -1, 1, 0, 26);
+            if (UnderlinedButtonRenderer.c(methodGuard - 147)) {
+              FadingDialog.uiPaletteFont.drawParagraph(MessageDialogContent.createToUseText, 125, 350, 395, 100, 0, -1, 1, 0, 26);
             }
           }
-          if (!fh.c(methodGuard ^ -109)) {
+          if (!UnderlinedButtonRenderer.c(methodGuard ^ -109)) {
             statusOrFriendTipText = PcmResampler.highscoreFriendTipText;
             IntrusiveNodeHashTable.smallFont.drawParagraph(statusOrFriendTipText, 140, 325, 360, 300, 0, -1, 1, 0, 16);
           }
@@ -1224,7 +1224,7 @@ final class GameScreen extends MenuScreen {
                 }
               }
               if (CheckboxRenderer.pointerPressButtonSnapshot != 0) {
-                if (fh.c(-104)) {
+                if (UnderlinedButtonRenderer.c(-104)) {
                   if ((265 < FullscreenFocusCanvas.pointerPressYSnapshot) &&
                       (FullscreenFocusCanvas.pointerPressYSnapshot < 299)) {
                     if ((mc.pointerPressXSnapshot > 350) &&
@@ -1434,14 +1434,14 @@ final class GameScreen extends MenuScreen {
               ma.drawNineSlicePanel(242, 30, 80, (byte) -92, 80, ll.frameNineSliceSprites);
               ma.drawNineSlicePanel(345, 30, 80, (byte) -92, 80, ll.frameNineSliceSprites);
               ri.a(70, 180, 29497);
-              vf.spriteScratchRaster.setAsRasterTarget();
+              HotspotTextWidget.spriteScratchRaster.setAsRasterTarget();
               SoftwareRasterizer.clearFramebuffer();
-              ke.entitySpritesByThemeCategoryAndVariant[1][this.tutorialGeometryCategory][this.tutorialGeometryVariant].draw((vf.spriteScratchRaster.fullWidth >> 1) - (ke.entitySpritesByThemeCategoryAndVariant[1][this.tutorialGeometryCategory][this.tutorialGeometryVariant].fullWidth >> 1), (vf.spriteScratchRaster.fullHeight >> 1) - (ke.entitySpritesByThemeCategoryAndVariant[1][this.tutorialGeometryCategory][this.tutorialGeometryVariant].fullHeight >> 1));
+              ke.entitySpritesByThemeCategoryAndVariant[1][this.tutorialGeometryCategory][this.tutorialGeometryVariant].draw((HotspotTextWidget.spriteScratchRaster.fullWidth >> 1) - (ke.entitySpritesByThemeCategoryAndVariant[1][this.tutorialGeometryCategory][this.tutorialGeometryVariant].fullWidth >> 1), (HotspotTextWidget.spriteScratchRaster.fullHeight >> 1) - (ke.entitySpritesByThemeCategoryAndVariant[1][this.tutorialGeometryCategory][this.tutorialGeometryVariant].fullHeight >> 1));
               SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
               SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
               SoftwareRasterizer.intersectClip(50, 250, 90, 310);
-              vf.spriteScratchRaster.addOutline(1);
-              vf.spriteScratchRaster.draw(44, this.tutorialDemoTick + 200);
+              HotspotTextWidget.spriteScratchRaster.addOutline(1);
+              HotspotTextWidget.spriteScratchRaster.draw(44, this.tutorialDemoTick + 200);
               SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
               SoftwareRasterizer.intersectClip(40, 355, 93, 415);
               orbitCenterX = 70;
@@ -1451,37 +1451,37 @@ final class GameScreen extends MenuScreen {
               orbitAngle = (int)(this.tutorialOrbitAngleRadians / 6.283185307179586 * 65535.0 + 0.5);
               orbitAngleSpacing = 2.0943741584421716;
               if (this.tutorialOrbitRadius != 15) {
-                vf.spriteScratchRaster.setAsRasterTarget();
+                HotspotTextWidget.spriteScratchRaster.setAsRasterTarget();
                 SoftwareRasterizer.clearFramebuffer();
-                ke.entitySpritesByThemeCategoryAndVariant[1][this.tutorialGeometryCategory][this.tutorialGeometryVariant].drawRotatedCentered(vf.spriteScratchRaster.fullWidth >> 1, vf.spriteScratchRaster.fullHeight >> 1, orbitAngle, 3072);
+                ke.entitySpritesByThemeCategoryAndVariant[1][this.tutorialGeometryCategory][this.tutorialGeometryVariant].drawRotatedCentered(HotspotTextWidget.spriteScratchRaster.fullWidth >> 1, HotspotTextWidget.spriteScratchRaster.fullHeight >> 1, orbitAngle, 3072);
                 SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
                 SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
                 SoftwareRasterizer.intersectClip(40, 355, 103, 415);
-                vf.spriteScratchRaster.addOutline(1);
-                vf.spriteScratchRaster.draw(orbitXOrPageIndexOrLineHeight - (vf.spriteScratchRaster.fullWidth >> 1), orbitYOrParagraphWidth - (vf.spriteScratchRaster.fullHeight >> 1));
+                HotspotTextWidget.spriteScratchRaster.addOutline(1);
+                HotspotTextWidget.spriteScratchRaster.draw(orbitXOrPageIndexOrLineHeight - (HotspotTextWidget.spriteScratchRaster.fullWidth >> 1), orbitYOrParagraphWidth - (HotspotTextWidget.spriteScratchRaster.fullHeight >> 1));
                 orbitAngle = (int)(0.5 + 65535.0 * ((this.tutorialOrbitAngleRadians + orbitAngleSpacing) / 6.283185307179586));
                 orbitXOrPageIndexOrLineHeight = orbitCenterX + (int)(0.5 + -Math.sin(this.tutorialOrbitAngleRadians + orbitAngleSpacing) * (double)this.tutorialOrbitRadius);
                 orbitYOrParagraphWidth = (int)(0.5 + Math.cos(this.tutorialOrbitAngleRadians + orbitAngleSpacing) * (double)this.tutorialOrbitRadius) + orbitCenterYOrTextLeft;
-                vf.spriteScratchRaster.setAsRasterTarget();
+                HotspotTextWidget.spriteScratchRaster.setAsRasterTarget();
                 SoftwareRasterizer.clearFramebuffer();
-                ke.entitySpritesByThemeCategoryAndVariant[1][this.tutorialGeometryCategory][this.tutorialGeometryVariant].drawRotatedCentered(vf.spriteScratchRaster.fullWidth >> 1, vf.spriteScratchRaster.fullHeight >> 1, orbitAngle, 3072);
+                ke.entitySpritesByThemeCategoryAndVariant[1][this.tutorialGeometryCategory][this.tutorialGeometryVariant].drawRotatedCentered(HotspotTextWidget.spriteScratchRaster.fullWidth >> 1, HotspotTextWidget.spriteScratchRaster.fullHeight >> 1, orbitAngle, 3072);
                 SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
                 SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
                 SoftwareRasterizer.intersectClip(40, 355, 103, 415);
-                vf.spriteScratchRaster.addOutline(1);
-                vf.spriteScratchRaster.draw(orbitXOrPageIndexOrLineHeight - (vf.spriteScratchRaster.fullWidth >> 1), -(vf.spriteScratchRaster.fullHeight >> 1) + orbitYOrParagraphWidth);
+                HotspotTextWidget.spriteScratchRaster.addOutline(1);
+                HotspotTextWidget.spriteScratchRaster.draw(orbitXOrPageIndexOrLineHeight - (HotspotTextWidget.spriteScratchRaster.fullWidth >> 1), -(HotspotTextWidget.spriteScratchRaster.fullHeight >> 1) + orbitYOrParagraphWidth);
                 orbitAngleSpacing = orbitAngleSpacing * 2.0;
                 orbitAngle = (int)(0.5 + 65535.0 * ((orbitAngleSpacing + this.tutorialOrbitAngleRadians) / 6.283185307179586));
                 orbitXOrPageIndexOrLineHeight = (int)(-Math.sin(orbitAngleSpacing + this.tutorialOrbitAngleRadians) * (double)this.tutorialOrbitRadius + 0.5) + orbitCenterX;
                 orbitYOrParagraphWidth = orbitCenterYOrTextLeft + (int)(Math.cos(orbitAngleSpacing + this.tutorialOrbitAngleRadians) * (double)this.tutorialOrbitRadius + 0.5);
-                vf.spriteScratchRaster.setAsRasterTarget();
+                HotspotTextWidget.spriteScratchRaster.setAsRasterTarget();
                 SoftwareRasterizer.clearFramebuffer();
-                ke.entitySpritesByThemeCategoryAndVariant[1][this.tutorialGeometryCategory][this.tutorialGeometryVariant].drawRotatedCentered(vf.spriteScratchRaster.fullWidth >> 1, vf.spriteScratchRaster.fullHeight >> 1, orbitAngle, 3072);
+                ke.entitySpritesByThemeCategoryAndVariant[1][this.tutorialGeometryCategory][this.tutorialGeometryVariant].drawRotatedCentered(HotspotTextWidget.spriteScratchRaster.fullWidth >> 1, HotspotTextWidget.spriteScratchRaster.fullHeight >> 1, orbitAngle, 3072);
                 SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
                 SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
                 SoftwareRasterizer.intersectClip(40, 355, 103, 415);
-                vf.spriteScratchRaster.addOutline(1);
-                vf.spriteScratchRaster.draw(orbitXOrPageIndexOrLineHeight - (vf.spriteScratchRaster.fullWidth >> 1), orbitYOrParagraphWidth - (vf.spriteScratchRaster.fullHeight >> 1));
+                HotspotTextWidget.spriteScratchRaster.addOutline(1);
+                HotspotTextWidget.spriteScratchRaster.draw(orbitXOrPageIndexOrLineHeight - (HotspotTextWidget.spriteScratchRaster.fullWidth >> 1), orbitYOrParagraphWidth - (HotspotTextWidget.spriteScratchRaster.fullHeight >> 1));
                 if (clientControlFlowGuard == 0) {
                   break L2;
                 }
@@ -1537,40 +1537,40 @@ final class GameScreen extends MenuScreen {
                 pageParagraph = ec.field_e[2];
               } else {
                 if (orbitXOrPageIndexOrLineHeight == 3) {
-                  vf.spriteScratchRaster.setAsRasterTarget();
+                  HotspotTextWidget.spriteScratchRaster.setAsRasterTarget();
                   SoftwareRasterizer.clearFramebuffer();
-                  MenuScreen.amorphousFramesByThemeAndVariant[1][this.tutorialGeometryVariant][this.tutorialEffectFrame].draw(-(MenuScreen.amorphousFramesByThemeAndVariant[1][this.tutorialGeometryVariant][this.tutorialEffectFrame].fullWidth >> 1) + (vf.spriteScratchRaster.fullWidth >> 1), (vf.spriteScratchRaster.fullHeight >> 1) - (MenuScreen.amorphousFramesByThemeAndVariant[1][this.tutorialGeometryVariant][this.tutorialEffectFrame].fullHeight >> 1));
+                  MenuScreen.amorphousFramesByThemeAndVariant[1][this.tutorialGeometryVariant][this.tutorialEffectFrame].draw(-(MenuScreen.amorphousFramesByThemeAndVariant[1][this.tutorialGeometryVariant][this.tutorialEffectFrame].fullWidth >> 1) + (HotspotTextWidget.spriteScratchRaster.fullWidth >> 1), (HotspotTextWidget.spriteScratchRaster.fullHeight >> 1) - (MenuScreen.amorphousFramesByThemeAndVariant[1][this.tutorialGeometryVariant][this.tutorialEffectFrame].fullHeight >> 1));
                   SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
                   SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
-                  vf.spriteScratchRaster.draw(70 - (vf.spriteScratchRaster.fullWidth >> 1), -(vf.spriteScratchRaster.fullHeight >> 1) + 180);
-                  vf.spriteScratchRaster.setAsRasterTarget();
+                  HotspotTextWidget.spriteScratchRaster.draw(70 - (HotspotTextWidget.spriteScratchRaster.fullWidth >> 1), -(HotspotTextWidget.spriteScratchRaster.fullHeight >> 1) + 180);
+                  HotspotTextWidget.spriteScratchRaster.setAsRasterTarget();
                   SoftwareRasterizer.clearFramebuffer();
-                  s.geometrySpritesByThemeAndCategory[1][this.tutorialGeometryCategory].drawGrayModulated((vf.spriteScratchRaster.fullWidth >> 1) - (s.geometrySpritesByThemeAndCategory[1][this.tutorialGeometryCategory].fullWidth >> 1), (vf.spriteScratchRaster.fullHeight >> 1) - (s.geometrySpritesByThemeAndCategory[1][this.tutorialGeometryCategory].fullHeight >> 1), this.tutorialTintRgb);
+                  Under13TermsPanel.geometrySpritesByThemeAndCategory[1][this.tutorialGeometryCategory].drawGrayModulated((HotspotTextWidget.spriteScratchRaster.fullWidth >> 1) - (Under13TermsPanel.geometrySpritesByThemeAndCategory[1][this.tutorialGeometryCategory].fullWidth >> 1), (HotspotTextWidget.spriteScratchRaster.fullHeight >> 1) - (Under13TermsPanel.geometrySpritesByThemeAndCategory[1][this.tutorialGeometryCategory].fullHeight >> 1), this.tutorialTintRgb);
                   SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
                   SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
-                  vf.spriteScratchRaster.addOutline(1);
-                  vf.spriteScratchRaster.draw(70 - (vf.spriteScratchRaster.fullWidth >> 1), 282 - (vf.spriteScratchRaster.fullHeight >> 1));
+                  HotspotTextWidget.spriteScratchRaster.addOutline(1);
+                  HotspotTextWidget.spriteScratchRaster.draw(70 - (HotspotTextWidget.spriteScratchRaster.fullWidth >> 1), 282 - (HotspotTextWidget.spriteScratchRaster.fullHeight >> 1));
                   FadingDialog.uiPaletteFont.drawText(a.field_a[4], orbitCenterYOrTextLeft, paragraphY, 0, -1);
                   pageParagraph = ec.field_e[3];
                 } else {
                   if (4 == orbitXOrPageIndexOrLineHeight) {
-                    vf.spriteScratchRaster.setAsRasterTarget();
+                    HotspotTextWidget.spriteScratchRaster.setAsRasterTarget();
                     SoftwareRasterizer.clearFramebuffer();
-                    fc.blackOrbFrames[this.tutorialEffectFrame].draw(-(fc.blackOrbFrames[this.tutorialEffectFrame].fullWidth >> 1) + (vf.spriteScratchRaster.fullWidth >> 1), -(fc.blackOrbFrames[this.tutorialEffectFrame].fullHeight >> 1) + (vf.spriteScratchRaster.fullHeight >> 1));
-                    NodeHashTableIterator.a(0, 0, vf.spriteScratchRaster.fullWidth, -27085, vf.spriteScratchRaster.fullHeight);
+                    fc.blackOrbFrames[this.tutorialEffectFrame].draw(-(fc.blackOrbFrames[this.tutorialEffectFrame].fullWidth >> 1) + (HotspotTextWidget.spriteScratchRaster.fullWidth >> 1), -(fc.blackOrbFrames[this.tutorialEffectFrame].fullHeight >> 1) + (HotspotTextWidget.spriteScratchRaster.fullHeight >> 1));
+                    NodeHashTableIterator.a(0, 0, HotspotTextWidget.spriteScratchRaster.fullWidth, -27085, HotspotTextWidget.spriteScratchRaster.fullHeight);
                     SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
                     SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
-                    vf.spriteScratchRaster.draw(70 - (vf.spriteScratchRaster.fullWidth >> 1), 180 - (vf.spriteScratchRaster.fullHeight >> 1));
-                    vf.spriteScratchRaster.setAsRasterTarget();
+                    HotspotTextWidget.spriteScratchRaster.draw(70 - (HotspotTextWidget.spriteScratchRaster.fullWidth >> 1), 180 - (HotspotTextWidget.spriteScratchRaster.fullHeight >> 1));
+                    HotspotTextWidget.spriteScratchRaster.setAsRasterTarget();
                     SoftwareRasterizer.clearFramebuffer();
                     if (this.tutorialStarFrameOrColorIndex >= 4) {
                       this.tutorialStarFrameOrColorIndex = 0;
                     }
-                    DialRenderer.silverStarFrames[this.tutorialStarFrameOrColorIndex].draw(-(DialRenderer.silverStarFrames[this.tutorialStarFrameOrColorIndex].fullWidth >> 1) + (vf.spriteScratchRaster.fullWidth >> 1), (vf.spriteScratchRaster.fullHeight >> 1) - (DialRenderer.silverStarFrames[this.tutorialStarFrameOrColorIndex].fullHeight >> 1));
-                    NodeHashTableIterator.a(0, 0, vf.spriteScratchRaster.fullWidth, -27085, vf.spriteScratchRaster.fullHeight);
+                    DialRenderer.silverStarFrames[this.tutorialStarFrameOrColorIndex].draw(-(DialRenderer.silverStarFrames[this.tutorialStarFrameOrColorIndex].fullWidth >> 1) + (HotspotTextWidget.spriteScratchRaster.fullWidth >> 1), (HotspotTextWidget.spriteScratchRaster.fullHeight >> 1) - (DialRenderer.silverStarFrames[this.tutorialStarFrameOrColorIndex].fullHeight >> 1));
+                    NodeHashTableIterator.a(0, 0, HotspotTextWidget.spriteScratchRaster.fullWidth, -27085, HotspotTextWidget.spriteScratchRaster.fullHeight);
                     SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
                     SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
-                    vf.spriteScratchRaster.draw(70 - (vf.spriteScratchRaster.fullWidth >> 1), -(vf.spriteScratchRaster.fullHeight >> 1) + 282);
+                    HotspotTextWidget.spriteScratchRaster.draw(70 - (HotspotTextWidget.spriteScratchRaster.fullWidth >> 1), -(HotspotTextWidget.spriteScratchRaster.fullHeight >> 1) + 282);
                     FadingDialog.uiPaletteFont.drawText(a.field_a[5], orbitCenterYOrTextLeft, paragraphY, 0, -1);
                     pageParagraph = ec.field_e[4];
                   }
@@ -1768,7 +1768,7 @@ final class GameScreen extends MenuScreen {
                 if (this.selectedItemIndex == 2) {
                   this.selectedItemIndex = 1;
                 }
-                if ((oc.previousMenuScreenId == 1) &&
+                if ((SpriteCheckboxRenderer.previousMenuScreenId == 1) &&
                     (this.selectedItemIndex == 3)) {
                   this.selectedItemIndex = 1;
                 }
@@ -1889,7 +1889,7 @@ final class GameScreen extends MenuScreen {
         int clientControlFlowGuard = 0;
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
-          td.playPcmSample(-348, fl.field_c[29]);
+          ValidationIconWidget.playPcmSample(-348, fl.field_c[29]);
           newSessionTutorialModeFlag = 0;
           suppressPressAnimationFlag = 0;
           actionId = InstrumentEnvelope.menuActionIds[this.screenId][itemIndex];
@@ -1900,7 +1900,7 @@ final class GameScreen extends MenuScreen {
             selectedActionSnapshot = actionId;
             if ((selectedActionSnapshot == 15) &&
                 (clientControlFlowGuard == 0)) {
-              if (1 == oc.previousMenuScreenId) {
+              if (1 == SpriteCheckboxRenderer.previousMenuScreenId) {
                 return;
               }
               newSessionTutorialModeFlag = 1;
@@ -1923,7 +1923,7 @@ final class GameScreen extends MenuScreen {
                     break L1;
                   }
                 case 2:
-                  if (!fh.c(-100)) {
+                  if (!UnderlinedButtonRenderer.c(-100)) {
                     ai.requestedScreenId = 2;
                     if (clientControlFlowGuard == 0) {
                       break L1;
@@ -1961,7 +1961,7 @@ final class GameScreen extends MenuScreen {
                   if ((2 != this.screenId) &&
                       (this.screenId != 4) &&
                       (6 != this.screenId) &&
-                      (oc.previousMenuScreenId == 1)) {
+                      (SpriteCheckboxRenderer.previousMenuScreenId == 1)) {
                     ai.requestedScreenId = 1;
                     if (clientControlFlowGuard == 0) {
                       break L1;
@@ -2005,7 +2005,7 @@ final class GameScreen extends MenuScreen {
                     UiWidget.gameplaySession.addScore((byte) 127, wa.collectUnfinishedPopupPoints(methodGuard ^ 25864));
                     UiWidget.gameplaySession.addScore((byte) 127, UiWidget.gameplaySession.resultBonusPoints);
                     UiWidget.gameplaySession.resultBonusPoints = 0;
-                    if (fh.c(-114)) {
+                    if (UnderlinedButtonRenderer.c(-114)) {
                       if (!((!UiWidget.gameplaySession.tutorialMode) &&
                             (UiWidget.gameplaySession.score == 0) &&
                             (ug.newAchievementMask == 0)) &&
@@ -2084,7 +2084,7 @@ final class GameScreen extends MenuScreen {
                     break L1;
                   }
                 case 10:
-                  if (fh.c(-112)) {
+                  if (UnderlinedButtonRenderer.c(-112)) {
                     ai.requestedScreenId = 7;
                     if (clientControlFlowGuard == 0) {
                       break L1;
@@ -2114,7 +2114,7 @@ final class GameScreen extends MenuScreen {
             }
             L47: {
               if (newSessionTutorialModeFlag == 0) {
-                if ((fh.c(methodGuard ^ 107)) &&
+                if ((UnderlinedButtonRenderer.c(methodGuard ^ 107)) &&
                     (kc.sessionStartAttemptCount == 0)) {
                   newSessionTutorialModeFlag = 1;
                   if (clientControlFlowGuard == 0) {
@@ -2145,7 +2145,7 @@ final class GameScreen extends MenuScreen {
                 (this.screenId != 0)) {
               return;
             }
-            oc.previousMenuScreenId = this.screenId;
+            SpriteCheckboxRenderer.previousMenuScreenId = this.screenId;
           }
           return;
         } catch (java.lang.RuntimeException caughtParameter) {
@@ -2180,13 +2180,13 @@ final class GameScreen extends MenuScreen {
                 break L0;
               }
             }
-            if (oc.field_c >= 70) {
+            if (SpriteCheckboxRenderer.field_c >= 70) {
               AsyncResourceDownloader.a(-15346, 80);
               if (clientControlFlowGuard == 0) {
                 break L0;
               }
             }
-            AsyncResourceDownloader.a(-15346, 10 + oc.field_c);
+            AsyncResourceDownloader.a(-15346, 10 + SpriteCheckboxRenderer.field_c);
           }
           if (methodGuard != 90) {
             this.activeTicks = 120;
@@ -2242,14 +2242,14 @@ final class GameScreen extends MenuScreen {
           actionText = tl.field_f[actionId];
           if (actionId == 15) {
             if (!((displayedTutorialPageIndex == 4) &&
-                (oc.previousMenuScreenId != 1))) {
+                (SpriteCheckboxRenderer.previousMenuScreenId != 1))) {
               return;
             }
           }
           if ((3 == this.screenId) &&
               (this.tutorialSlideActive) &&
               (this.tutorialPageIndex == 4) &&
-              (oc.previousMenuScreenId != 1) &&
+              (SpriteCheckboxRenderer.previousMenuScreenId != 1) &&
               (itemIndex == 2) &&
               (this.selectedItemIndex == 3)) {
             selected = true;
@@ -2427,7 +2427,7 @@ final class GameScreen extends MenuScreen {
               if (actionId == 8) {
                 volumeLevelSnapshot = j.field_gb;
               } else {
-                volumeLevelSnapshot = oc.field_c;
+                volumeLevelSnapshot = SpriteCheckboxRenderer.field_c;
               }
               volumeLevelOrSliderOffset = volumeLevelSnapshot;
               volumeLevelOrSliderOffset = volumeLevelOrSliderOffset * (-4 + NetworkArchiveRequest.barSprite.fullWidth) / 80;
@@ -2526,7 +2526,7 @@ final class GameScreen extends MenuScreen {
                   if (this.fullscreenDialogButtonIndex == 1) {
                     break L4;
                   }
-                  if ((!fh.c(-122)) &&
+                  if ((!UnderlinedButtonRenderer.c(-122)) &&
                       (og.field_n <= 0)) {
                     break L4;
                   }
@@ -2604,7 +2604,7 @@ final class GameScreen extends MenuScreen {
               }
               if ((this.screenId != 6) &&
                   (this.screenId != 2)) {
-                ai.requestedScreenId = oc.previousMenuScreenId;
+                ai.requestedScreenId = SpriteCheckboxRenderer.previousMenuScreenId;
                 if (clientControlFlowGuard == 0) {
                   break L22;
                 }
@@ -2616,7 +2616,7 @@ final class GameScreen extends MenuScreen {
                   (this.screenId != 0)) {
                 return;
               }
-              oc.previousMenuScreenId = this.screenId;
+              SpriteCheckboxRenderer.previousMenuScreenId = this.screenId;
             }
           }
           return;

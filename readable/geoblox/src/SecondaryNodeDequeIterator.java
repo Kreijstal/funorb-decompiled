@@ -15,7 +15,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
             if (param1 != 66) {
                 instructionsText = (String) null;
             }
-            r.a(param2, (byte) 87, false, param0);
+            AccountCreationDialog.a(param2, (byte) 87, false, param0);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ef.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

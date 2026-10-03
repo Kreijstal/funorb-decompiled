@@ -220,7 +220,7 @@ final class MidiPcmStream extends PcmStream {
         if (!clearRemainingArrays) {
             return;
         }
-        hl.decodedSpriteHeights = null;
+        ProgressBarWidget.decodedSpriteHeights = null;
         mj.decodedSpriteIndices = (byte[][]) null;
         DualLinkNode.decodedSpriteWidths = null;
         GameplaySession.decodedSpriteXOffsets = null;

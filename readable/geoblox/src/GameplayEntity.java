@@ -47,20 +47,20 @@ final class GameplayEntity extends DualLinkNode {
         rotatedEntityY = (int)(Math.sin((double)UiWidget.gameplaySession.boardAngleRadians) * (double)entityOffsetX + (double)entityOffsetY * Math.cos((double)UiWidget.gameplaySession.boardAngleRadians) + 240.0);
         if ((this.entitySpriteKindId != 2) &&
             (1 != this.entitySpriteKindId)) {
-          vf.spriteScratchRaster.setAsRasterTarget();
+          HotspotTextWidget.spriteScratchRaster.setAsRasterTarget();
           SoftwareRasterizer.clearFramebuffer();
-          this.entitySprite.drawUnmasked(-this.entitySprite.fullWidth + vf.spriteScratchRaster.fullWidth >> 1, vf.spriteScratchRaster.fullHeight - this.entitySprite.fullHeight >> 1);
-          NodeHashTableIterator.a(0, 0, vf.spriteScratchRaster.fullWidth, -27085, vf.spriteScratchRaster.fullHeight);
+          this.entitySprite.drawUnmasked(-this.entitySprite.fullWidth + HotspotTextWidget.spriteScratchRaster.fullWidth >> 1, HotspotTextWidget.spriteScratchRaster.fullHeight - this.entitySprite.fullHeight >> 1);
+          NodeHashTableIterator.a(0, 0, HotspotTextWidget.spriteScratchRaster.fullWidth, -27085, HotspotTextWidget.spriteScratchRaster.fullHeight);
           SingleChildWidget.mainRasterBuffer.setAsRasterTarget(methodGuard + 16351);
-          vf.spriteScratchRaster.rotateSmooth(vf.spriteScratchRaster.fullWidth << 3, vf.spriteScratchRaster.fullHeight << 3, rotatedEntityX << 4, rotatedEntityY << 4, (int)(65535.0 * ((double)(-UiWidget.gameplaySession.boardAngleRadians + this.spriteAngleRadians) / 6.283185307179586)), 4096);
+          HotspotTextWidget.spriteScratchRaster.rotateSmooth(HotspotTextWidget.spriteScratchRaster.fullWidth << 3, HotspotTextWidget.spriteScratchRaster.fullHeight << 3, rotatedEntityX << 4, rotatedEntityY << 4, (int)(65535.0 * ((double)(-UiWidget.gameplaySession.boardAngleRadians + this.spriteAngleRadians) / 6.283185307179586)), 4096);
         } else {
           if (1 == this.entitySpriteKindId) {
-            vf.spriteScratchRaster.setAsRasterTarget();
+            HotspotTextWidget.spriteScratchRaster.setAsRasterTarget();
             SoftwareRasterizer.clearFramebuffer();
-            this.entitySprite.drawGrayModulated(-this.entitySprite.fullWidth + vf.spriteScratchRaster.fullWidth >> 1, vf.spriteScratchRaster.fullHeight - this.entitySprite.fullHeight >> 1, this.interpolatedPaletteColor);
-            NodeHashTableIterator.a(0, 0, vf.spriteScratchRaster.fullWidth, -27085, vf.spriteScratchRaster.fullHeight);
+            this.entitySprite.drawGrayModulated(-this.entitySprite.fullWidth + HotspotTextWidget.spriteScratchRaster.fullWidth >> 1, HotspotTextWidget.spriteScratchRaster.fullHeight - this.entitySprite.fullHeight >> 1, this.interpolatedPaletteColor);
+            NodeHashTableIterator.a(0, 0, HotspotTextWidget.spriteScratchRaster.fullWidth, -27085, HotspotTextWidget.spriteScratchRaster.fullHeight);
             SingleChildWidget.mainRasterBuffer.setAsRasterTarget(methodGuard + 16351);
-            vf.spriteScratchRaster.rotateSmooth(vf.spriteScratchRaster.fullWidth << 3, vf.spriteScratchRaster.fullHeight << 3, rotatedEntityX << 4, rotatedEntityY << 4, (int)(65535.0 * ((double)(-UiWidget.gameplaySession.boardAngleRadians + this.spriteAngleRadians) / 6.283185307179586)), 4096);
+            HotspotTextWidget.spriteScratchRaster.rotateSmooth(HotspotTextWidget.spriteScratchRaster.fullWidth << 3, HotspotTextWidget.spriteScratchRaster.fullHeight << 3, rotatedEntityX << 4, rotatedEntityY << 4, (int)(65535.0 * ((double)(-UiWidget.gameplaySession.boardAngleRadians + this.spriteAngleRadians) / 6.283185307179586)), 4096);
           } else {
             this.entitySprite.draw(-(this.entitySprite.fullWidth >> 1) + rotatedEntityX, rotatedEntityY - (this.entitySprite.fullHeight >> 1));
           }
@@ -68,11 +68,11 @@ final class GameplayEntity extends DualLinkNode {
     }
 
     final void drawEntityIdOnBoardMask(int verticalDivisor) {
-        vf.spriteScratchRaster.setAsRasterTarget();
+        HotspotTextWidget.spriteScratchRaster.setAsRasterTarget();
         SoftwareRasterizer.clearFramebuffer();
-        this.entitySprite.rotateSmooth(this.entitySprite.fullWidth << 3, this.entitySprite.fullHeight << 3, vf.spriteScratchRaster.fullWidth << 3, vf.spriteScratchRaster.fullHeight << 3, (int)(65535.0 * ((double)this.spriteAngleRadians / 6.283185307179586)), 4096);
+        this.entitySprite.rotateSmooth(this.entitySprite.fullWidth << 3, this.entitySprite.fullHeight << 3, HotspotTextWidget.spriteScratchRaster.fullWidth << 3, HotspotTextWidget.spriteScratchRaster.fullHeight << 3, (int)(65535.0 * ((double)this.spriteAngleRadians / 6.283185307179586)), 4096);
         bk.boardOwnershipRaster.setAsRasterTarget();
-        vf.spriteScratchRaster.drawSilhouette(-(vf.spriteScratchRaster.fullWidth / 2) + (int)this.positionX, (int)this.positionY - vf.spriteScratchRaster.fullHeight / verticalDivisor, this.entityId + 1);
+        HotspotTextWidget.spriteScratchRaster.drawSilhouette(-(HotspotTextWidget.spriteScratchRaster.fullWidth / 2) + (int)this.positionX, (int)this.positionY - HotspotTextWidget.spriteScratchRaster.fullHeight / verticalDivisor, this.entityId + 1);
         SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
         bk.boardOwnershipRaster.setAsRasterTarget();
         i.avatarMaskRaster.drawSilhouette(320 + UiWidget.gameplaySession.boardMaskOffsetX, 240 + UiWidget.gameplaySession.boardMaskOffsetY, 16777215);
@@ -98,27 +98,27 @@ final class GameplayEntity extends DualLinkNode {
         rotatedEntityY = (int)(240.0 + ((double)entityOffsetX * Math.sin((double)boardAngle) + Math.cos((double)boardAngle) * (double)entityOffsetY));
         if ((this.entitySpriteKindId != 1) &&
             (2 != this.entitySpriteKindId)) {
-          vf.spriteScratchRaster.setAsRasterTarget();
+          HotspotTextWidget.spriteScratchRaster.setAsRasterTarget();
           SoftwareRasterizer.clearFramebuffer();
-          this.entitySprite.rotateSmooth(this.entitySprite.fullWidth << 3, this.entitySprite.fullHeight << 3, vf.spriteScratchRaster.fullWidth << 3, vf.spriteScratchRaster.fullHeight << 3, (int)(((double)this.spriteAngleRadians - (double)boardAngle / 6.283185307179586) * 65535.0), 4096);
+          this.entitySprite.rotateSmooth(this.entitySprite.fullWidth << 3, this.entitySprite.fullHeight << 3, HotspotTextWidget.spriteScratchRaster.fullWidth << 3, HotspotTextWidget.spriteScratchRaster.fullHeight << 3, (int)(((double)this.spriteAngleRadians - (double)boardAngle / 6.283185307179586) * 65535.0), 4096);
         } else {
           if (this.entitySpriteKindId != 1) {
-            vf.spriteScratchRaster.setAsRasterTarget();
+            HotspotTextWidget.spriteScratchRaster.setAsRasterTarget();
             SoftwareRasterizer.clearFramebuffer();
-            this.entitySprite.draw(-(this.entitySprite.fullWidth >> 1) + (vf.spriteScratchRaster.fullWidth >> 1), (vf.spriteScratchRaster.fullHeight >> 1) - (this.entitySprite.fullHeight >> 1));
+            this.entitySprite.draw(-(this.entitySprite.fullWidth >> 1) + (HotspotTextWidget.spriteScratchRaster.fullWidth >> 1), (HotspotTextWidget.spriteScratchRaster.fullHeight >> 1) - (this.entitySprite.fullHeight >> 1));
           } else {
             KeyboardInputListener.field_a.setAsRasterTarget();
             SoftwareRasterizer.clearFramebuffer();
             this.entitySprite.drawGrayModulated(-this.entitySprite.fullWidth + KeyboardInputListener.field_a.fullWidth >> 1, -this.entitySprite.fullHeight + KeyboardInputListener.field_a.fullHeight >> 1, this.interpolatedPaletteColor);
-            vf.spriteScratchRaster.setAsRasterTarget();
+            HotspotTextWidget.spriteScratchRaster.setAsRasterTarget();
             SoftwareRasterizer.clearFramebuffer();
-            KeyboardInputListener.field_a.rotateSmooth(KeyboardInputListener.field_a.fullWidth << 3, KeyboardInputListener.field_a.fullHeight << 3, vf.spriteScratchRaster.fullWidth << 3, vf.spriteScratchRaster.fullHeight << 3, (int)(65535.0 * (-((double)boardAngle / 6.283185307179586) + (double)this.spriteAngleRadians)), 4096);
+            KeyboardInputListener.field_a.rotateSmooth(KeyboardInputListener.field_a.fullWidth << 3, KeyboardInputListener.field_a.fullHeight << 3, HotspotTextWidget.spriteScratchRaster.fullWidth << 3, HotspotTextWidget.spriteScratchRaster.fullHeight << 3, (int)(65535.0 * (-((double)boardAngle / 6.283185307179586) + (double)this.spriteAngleRadians)), 4096);
           }
         }
         sentinelDivisionGuard = 2 % ((-23 - methodGuard) / 60);
         SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
-        entityDrawX = rotatedEntityX - (vf.spriteScratchRaster.fullWidth >> 1);
-        entityDrawY = rotatedEntityY - (vf.spriteScratchRaster.fullHeight >> 1);
+        entityDrawX = rotatedEntityX - (HotspotTextWidget.spriteScratchRaster.fullWidth >> 1);
+        entityDrawY = rotatedEntityY - (HotspotTextWidget.spriteScratchRaster.fullHeight >> 1);
         fadeOpacity = (int)(0.5 + Math.sin((double)(this.remainingLifetimeTicks - this.initialLifetimeTicks + this.initialLifetimeTicks >> 4)) * (double)(100 * (this.initialLifetimeTicks - this.remainingLifetimeTicks)) / (double)this.initialLifetimeTicks) - (-(100 * (this.initialLifetimeTicks - this.remainingLifetimeTicks) / this.initialLifetimeTicks) - 56);
         if (fadeOpacity > 256) {
           fadeOpacity = 256;
@@ -127,7 +127,7 @@ final class GameplayEntity extends DualLinkNode {
             fadeOpacity = 0;
           }
         }
-        vf.spriteScratchRaster.drawAlpha(entityDrawX, entityDrawY, fadeOpacity);
+        HotspotTextWidget.spriteScratchRaster.drawAlpha(entityDrawX, entityDrawY, fadeOpacity);
     }
 
     final static void resetAvatarFeedbackState(int initialFrameIndex) {
@@ -171,10 +171,10 @@ final class GameplayEntity extends DualLinkNode {
         int controlFlowGuard;
         int[] framebufferPixels;
         controlFlowGuard = Geoblox.clientControlFlowFlag;
-        clipLeftX = (int)this.positionX - ((vf.spriteScratchRaster.fullWidth >> 1) + 4);
-        clipTopY = -4 - (vf.spriteScratchRaster.fullHeight >> 1) + (int)this.positionY;
-        clippedWidth = 8 + vf.spriteScratchRaster.fullWidth;
-        clippedHeight = 8 + vf.spriteScratchRaster.fullHeight;
+        clipLeftX = (int)this.positionX - ((HotspotTextWidget.spriteScratchRaster.fullWidth >> 1) + 4);
+        clipTopY = -4 - (HotspotTextWidget.spriteScratchRaster.fullHeight >> 1) + (int)this.positionY;
+        clippedWidth = 8 + HotspotTextWidget.spriteScratchRaster.fullWidth;
+        clippedHeight = 8 + HotspotTextWidget.spriteScratchRaster.fullHeight;
         if (clipLeftX < 0) {
           clippedWidth = clippedWidth + clipLeftX;
           clipLeftX = 0;
@@ -255,7 +255,7 @@ final class GameplayEntity extends DualLinkNode {
               this.entitySprite = DialRenderer.silverStarFrames[0];
             } else {
               if (1 == this.entitySpriteKindId) {
-                this.entitySprite = s.geometrySpritesByThemeAndCategory[GameScreen.selectedThemeId][this.entityCategoryKey];
+                this.entitySprite = Under13TermsPanel.geometrySpritesByThemeAndCategory[GameScreen.selectedThemeId][this.entityCategoryKey];
                 this.spriteVariantIndex = -1;
                 this.interpolatedPaletteColor = SocketConnector.themeCycleColors[GameScreen.selectedThemeId][this.animationFrameIndex];
                 this.updatePaletteChannelDeltas(53);
@@ -276,15 +276,15 @@ final class GameplayEntity extends DualLinkNode {
     }
 
     final void drawEntityIdOnPointerMask(byte methodGuard) {
-        vf.spriteScratchRaster.setAsRasterTarget();
+        HotspotTextWidget.spriteScratchRaster.setAsRasterTarget();
         SoftwareRasterizer.clearFramebuffer();
-        this.entitySprite.rotateSmooth(this.entitySprite.fullWidth << 3, this.entitySprite.fullHeight << 3, vf.spriteScratchRaster.fullWidth << 3, vf.spriteScratchRaster.fullHeight << 3, (int)((double)(this.spriteAngleRadians - UiWidget.gameplaySession.boardAngleRadians) / 6.283185307179586 * 65535.0), 4096);
+        this.entitySprite.rotateSmooth(this.entitySprite.fullWidth << 3, this.entitySprite.fullHeight << 3, HotspotTextWidget.spriteScratchRaster.fullWidth << 3, HotspotTextWidget.spriteScratchRaster.fullHeight << 3, (int)((double)(this.spriteAngleRadians - UiWidget.gameplaySession.boardAngleRadians) / 6.283185307179586 * 65535.0), 4096);
         if (methodGuard <= 46) {
             this.paletteBlueDelta = 17;
         }
-        vf.spriteScratchRaster.addOutline(this.entityId + 1);
+        HotspotTextWidget.spriteScratchRaster.addOutline(this.entityId + 1);
         SecondaryDeque.contactProbeRaster.setAsRasterTarget();
-        vf.spriteScratchRaster.drawSilhouette(-SecondaryDeque.contactProbeOffsetX - (vf.spriteScratchRaster.fullWidth >> 1) + DialogLayer.rotatedEntityScreenX, -(vf.spriteScratchRaster.fullHeight >> 1) + (td.rotatedEntityScreenY - SecondaryDeque.contactProbeOffsetY), 1 + this.entityId);
+        HotspotTextWidget.spriteScratchRaster.drawSilhouette(-SecondaryDeque.contactProbeOffsetX - (HotspotTextWidget.spriteScratchRaster.fullWidth >> 1) + DialogLayer.rotatedEntityScreenX, -(HotspotTextWidget.spriteScratchRaster.fullHeight >> 1) + (ValidationIconWidget.rotatedEntityScreenY - SecondaryDeque.contactProbeOffsetY), 1 + this.entityId);
         SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
     }
 
@@ -488,14 +488,14 @@ final class GameplayEntity extends DualLinkNode {
         entityOffsetY = -240.0f + this.positionY;
         rotatedEntityX = (int)(Math.cos((double)UiWidget.gameplaySession.boardAngleRadians) * (double)entityOffsetX - (double)entityOffsetY * Math.sin((double)UiWidget.gameplaySession.boardAngleRadians) + 320.0);
         rotatedEntityY = (int)((double)entityOffsetX * Math.sin((double)UiWidget.gameplaySession.boardAngleRadians) + Math.cos((double)UiWidget.gameplaySession.boardAngleRadians) * (double)entityOffsetY + 240.0);
-        clipLeftX = -(vf.spriteScratchRaster.fullWidth / 2) + (rotatedEntityX - 4 - SecondaryDeque.contactProbeOffsetX);
-        clipTopY = -SecondaryDeque.contactProbeOffsetY - 4 + (rotatedEntityY - vf.spriteScratchRaster.fullHeight / 2);
-        clippedSpriteWidth = vf.spriteScratchRaster.fullWidth + 8;
+        clipLeftX = -(HotspotTextWidget.spriteScratchRaster.fullWidth / 2) + (rotatedEntityX - 4 - SecondaryDeque.contactProbeOffsetX);
+        clipTopY = -SecondaryDeque.contactProbeOffsetY - 4 + (rotatedEntityY - HotspotTextWidget.spriteScratchRaster.fullHeight / 2);
+        clippedSpriteWidth = HotspotTextWidget.spriteScratchRaster.fullWidth + 8;
         if (clipLeftX < 0) {
           clippedSpriteWidth = clippedSpriteWidth + clipLeftX;
           clipLeftX = 0;
         }
-        clippedSpriteHeight = 8 + vf.spriteScratchRaster.fullHeight;
+        clippedSpriteHeight = 8 + HotspotTextWidget.spriteScratchRaster.fullHeight;
         if (SecondaryDeque.contactProbeRaster.width < clipLeftX + clippedSpriteWidth) {
           clippedSpriteWidth = -clipLeftX + SecondaryDeque.contactProbeRaster.width;
         }
@@ -583,13 +583,13 @@ final class GameplayEntity extends DualLinkNode {
             this.entityId = -123;
         }
         if (this.entitySpriteKindId == 1) {
-            vf.spriteScratchRaster.setAsRasterTarget();
+            HotspotTextWidget.spriteScratchRaster.setAsRasterTarget();
             SoftwareRasterizer.clearFramebuffer();
-            this.entitySprite.drawGrayModulated(vf.spriteScratchRaster.fullWidth - this.entitySprite.fullWidth >> 1, -this.entitySprite.fullHeight + vf.spriteScratchRaster.fullHeight >> 1, this.interpolatedPaletteColor);
-            oc.boardSceneRaster.setAsRasterTarget();
-            vf.spriteScratchRaster.rotateSmooth(vf.spriteScratchRaster.fullWidth << 3, vf.spriteScratchRaster.fullHeight << 3, (int)this.positionX << 4, (int)this.positionY << 4, (int)((double)this.spriteAngleRadians / 6.283185307179586 * 65535.0), 4096);
+            this.entitySprite.drawGrayModulated(HotspotTextWidget.spriteScratchRaster.fullWidth - this.entitySprite.fullWidth >> 1, -this.entitySprite.fullHeight + HotspotTextWidget.spriteScratchRaster.fullHeight >> 1, this.interpolatedPaletteColor);
+            SpriteCheckboxRenderer.boardSceneRaster.setAsRasterTarget();
+            HotspotTextWidget.spriteScratchRaster.rotateSmooth(HotspotTextWidget.spriteScratchRaster.fullWidth << 3, HotspotTextWidget.spriteScratchRaster.fullHeight << 3, (int)this.positionX << 4, (int)this.positionY << 4, (int)((double)this.spriteAngleRadians / 6.283185307179586 * 65535.0), 4096);
         } else {
-            oc.boardSceneRaster.setAsRasterTarget();
+            SpriteCheckboxRenderer.boardSceneRaster.setAsRasterTarget();
             this.entitySprite.rotateSmooth(this.entitySprite.fullWidth << 3, this.entitySprite.fullHeight << 3, (int)this.positionX << 4, (int)this.positionY << 4, (int)((double)this.spriteAngleRadians / 6.283185307179586 * 65535.0), 4096);
         }
     }

@@ -7,10 +7,10 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-## Current readability (pass 112)
+## Current readability (pass 113)
 
-The export has 8,898 guarded names and 71,946 identifier edits. Class coverage is
-169 semantic renames, one already meaningful `Geoblox` name and 133 opaque names.
+The export has 9,152 guarded names and 73,820 identifier edits. Class coverage is
+189 semantic renames, one already meaningful `Geoblox` name and 113 opaque names.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
 compile and compare 137,964 bindings, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
@@ -19,6 +19,17 @@ saving 219 lines. Menu hit-test trees preserve every strict boundary and
 predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
+
+Pass113 adds 20 account/widget class roles, 81 fields, 27 methods and 126
+parameters. Read `LoginPanel` for login/retry controls, `AccountCreationForm`
+for the validated registration fields and `DisplayNamePanel` for display-name
+selection. `UsernameSuggestionsPanel` dispatches `onSuggestionSelected` or
+`onMoreSuggestionsRequested`; the latter asks for more alternatives, not dismissal.
+`HotspotTextWidget.rebuildHotspotBounds` parses clickable markup into per-line
+rectangles; `findHotspot` selects a hit and `onHotspotActivated` opens its page.
+`ProgressBarWidget.fillFractionQ16` selects bright/dim portions of the striped bar.
+These are guarded renames; all 8,898 previous naming objects and raw bodies remain.
+No additional live account/UI coverage is claimed.
 
 Pass112 revisits proven exits exposed by final guard cleanup, replacing 13
 generated labels across nine bodies with ordinary guards and alternatives.
@@ -50,6 +61,9 @@ These are useful entry points for the newly named families:
 | Decoding and synthesis internals | [VorbisCodebook](geoblox/src/VorbisCodebook.java), [VorbisResidue](geoblox/src/VorbisResidue.java), [VorbisMapping](geoblox/src/VorbisMapping.java), [SynthesizedSoundInstrument](geoblox/src/SynthesizedSoundInstrument.java) |
 | Checkbox, dial and slider | [CheckboxWidget](geoblox/src/CheckboxWidget.java), [DialWidget](geoblox/src/DialWidget.java), [MultiHandleSliderWidget](geoblox/src/MultiHandleSliderWidget.java), [GrowableIntList](geoblox/src/GrowableIntList.java) |
 | Skins and validation queries | [StatefulWidgetRenderer](geoblox/src/StatefulWidgetRenderer.java), [WidgetSkinState](geoblox/src/WidgetSkinState.java), [ValidationProviderSource](geoblox/src/ValidationProviderSource.java), [EmailAvailabilityQuery](geoblox/src/EmailAvailabilityQuery.java), [UsernameAvailabilityQuery](geoblox/src/UsernameAvailabilityQuery.java) |
+| Account panels | [LoginPanel](geoblox/src/LoginPanel.java), [DisplayNamePanel](geoblox/src/DisplayNamePanel.java), [AccountCreationForm](geoblox/src/AccountCreationForm.java), [AccountCreationDialog](geoblox/src/AccountCreationDialog.java), [AccountContentDialog](geoblox/src/AccountContentDialog.java), [Under13TermsPanel](geoblox/src/Under13TermsPanel.java) |
+| Suggestions and text hotspots | [UsernameSuggestionsPanel](geoblox/src/UsernameSuggestionsPanel.java), [UsernameSuggestionListener](geoblox/src/UsernameSuggestionListener.java), [HotspotTextWidget](geoblox/src/HotspotTextWidget.java), [TextHotspotBounds](geoblox/src/TextHotspotBounds.java), [HotspotActivationListener](geoblox/src/HotspotActivationListener.java) |
+| Status and auxiliary controls | [ValidationMessageWidget](geoblox/src/ValidationMessageWidget.java), [ValidationIconWidget](geoblox/src/ValidationIconWidget.java), [ProgressBarWidget](geoblox/src/ProgressBarWidget.java), [ProgressDialog](geoblox/src/ProgressDialog.java), [LabeledChildWidget](geoblox/src/LabeledChildWidget.java), [MessageDialogContent](geoblox/src/MessageDialogContent.java), [FullscreenErrorDialog](geoblox/src/FullscreenErrorDialog.java), [UnderlinedButtonRenderer](geoblox/src/UnderlinedButtonRenderer.java), [SpriteCheckboxRenderer](geoblox/src/SpriteCheckboxRenderer.java) |
 | Login payloads | [LoginPayload](geoblox/src/LoginPayload.java), [LongAndTextLoginPayload](geoblox/src/LongAndTextLoginPayload.java), [TextPairLoginPayload](geoblox/src/TextPairLoginPayload.java), [AlternateLongAndTextLoginPayload](geoblox/src/AlternateLongAndTextLoginPayload.java), [LoginMethod](geoblox/src/LoginMethod.java) |
 | Network and storage | [SocketConnector](geoblox/src/SocketConnector.java), [ProxySocketConnector](geoblox/src/ProxySocketConnector.java), [AsyncResourceDownloader](geoblox/src/AsyncResourceDownloader.java), [ByteStorage](geoblox/src/ByteStorage.java), [DirectByteStorage](geoblox/src/DirectByteStorage.java) |
 

@@ -31,7 +31,7 @@ final class sb {
         if (param0 <= 46) {
           decodedSpriteCount = -60;
         }
-        stackIn_7_0 = (hj.field_a >= 10) && (!hl.field_G) && (!InstrumentEnvelope.b(13));
+        stackIn_7_0 = (hj.field_a >= 10) && (!ProgressBarWidget.field_G) && (!InstrumentEnvelope.b(13));
         return stackIn_7_0;
     }
 

@@ -43,14 +43,14 @@ final class tj {
             if (param0 >= -47) {
                 field_a = (String) null;
                 var3 = SpriteButtonRenderer.c(7789);
-                SpriteButtonRenderer.field_t = new pf(var3, (String) null, true, false, false);
+                SpriteButtonRenderer.field_t = new LoginPanel(var3, (String) null, true, false, false);
                 kd.field_e.showDialog(false, ButtonWidget.field_C);
                 ButtonWidget.field_C.replaceContent(SpriteButtonRenderer.field_t, -85);
                 ButtonWidget.field_C.finishTransition(true);
                 return;
             }
             var2 = SpriteButtonRenderer.c(7789);
-            SpriteButtonRenderer.field_t = new pf(var2, (String) null, true, false, false);
+            SpriteButtonRenderer.field_t = new LoginPanel(var2, (String) null, true, false, false);
             kd.field_e.showDialog(false, ButtonWidget.field_C);
             ButtonWidget.field_C.replaceContent(SpriteButtonRenderer.field_t, -85);
             ButtonWidget.field_C.finishTransition(true);
@@ -58,7 +58,7 @@ final class tj {
         }
         if (param0 < -47) {
             var5 = SpriteButtonRenderer.c(7789);
-            SpriteButtonRenderer.field_t = new pf(var5, (String) null, true, false, false);
+            SpriteButtonRenderer.field_t = new LoginPanel(var5, (String) null, true, false, false);
             kd.field_e.showDialog(false, ButtonWidget.field_C);
             ButtonWidget.field_C.replaceContent(SpriteButtonRenderer.field_t, -85);
             ButtonWidget.field_C.finishTransition(true);
@@ -66,7 +66,7 @@ final class tj {
         }
         field_a = (String) null;
         String var4 = SpriteButtonRenderer.c(7789);
-        SpriteButtonRenderer.field_t = new pf(var4, (String) null, true, false, false);
+        SpriteButtonRenderer.field_t = new LoginPanel(var4, (String) null, true, false, false);
         kd.field_e.showDialog(false, ButtonWidget.field_C);
         ButtonWidget.field_C.replaceContent(SpriteButtonRenderer.field_t, -85);
         ButtonWidget.field_C.finishTransition(true);

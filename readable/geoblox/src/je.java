@@ -22,7 +22,7 @@ final class je extends IntrusiveNode {
             if (methodGuard >= -119) {
                 keyboardListener = (KeyboardInputListener) null;
             }
-            if (!fh.c(-91)) {
+            if (!UnderlinedButtonRenderer.c(-91)) {
                 while (true) {
                     pendingSubmission = (AchievementSubmission) ((Object) GameplayEntity.pendingAchievementSubmissions.removeFirst((byte) -118));
                     if (pendingSubmission == null) {

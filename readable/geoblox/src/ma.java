@@ -76,7 +76,7 @@ final class ma extends IntrusiveNode {
           if (!methodGuard) {
             ma.tickArchiveLoading(-91);
           }
-          overlapFound = PixelOverlapProbe.findFirstNonzeroPixelOverlap(SecondaryDeque.contactProbeRaster, 0, 0, vf.spriteScratchRaster, -SecondaryDeque.contactProbeOffsetX + DialogLayer.rotatedEntityScreenX - (vf.spriteScratchRaster.fullWidth >> 1), -SecondaryDeque.contactProbeOffsetY - (vf.spriteScratchRaster.fullHeight >> 1) + td.rotatedEntityScreenY);
+          overlapFound = PixelOverlapProbe.findFirstNonzeroPixelOverlap(SecondaryDeque.contactProbeRaster, 0, 0, HotspotTextWidget.spriteScratchRaster, -SecondaryDeque.contactProbeOffsetX + DialogLayer.rotatedEntityScreenX - (HotspotTextWidget.spriteScratchRaster.fullWidth >> 1), -SecondaryDeque.contactProbeOffsetY - (HotspotTextWidget.spriteScratchRaster.fullHeight >> 1) + ValidationIconWidget.rotatedEntityScreenY);
           return overlapFound;
         } catch (java.lang.RuntimeException contactOverlapFailure) {
           caughtContactOverlapFailure = contactOverlapFailure;
@@ -183,7 +183,7 @@ final class ma extends IntrusiveNode {
             }
             centerClipTop = centerTileTop;
             centerClipBottom = centerTileBottom;
-            SoftwareRasterizer.saveClip(hd.nineSliceSavedClip);
+            SoftwareRasterizer.saveClip(LabeledChildWidget.nineSliceSavedClip);
             if (centerClipBottom < centerClipTop) {
               centerClipBottom = panelHeight * topBorderHeight / (topBorderHeight + bottomBorderHeight) + panelTop;
               centerClipTop = panelHeight * topBorderHeight / (topBorderHeight + bottomBorderHeight) + panelTop;
@@ -191,22 +191,22 @@ final class ma extends IntrusiveNode {
             if (null != nineSliceSprites[0]) {
               SoftwareRasterizer.intersectClip(panelLeft, panelTop, centerClipLeft, centerClipTop);
               nineSliceSprites[0].draw(panelLeft, panelTop);
-              SoftwareRasterizer.restoreClip(hd.nineSliceSavedClip);
+              SoftwareRasterizer.restoreClip(LabeledChildWidget.nineSliceSavedClip);
             }
             if (nineSliceSprites[2] != null) {
               SoftwareRasterizer.intersectClip(centerClipRight, panelTop, panelRight, centerClipTop);
               nineSliceSprites[2].draw(centerTileRight, panelTop);
-              SoftwareRasterizer.restoreClip(hd.nineSliceSavedClip);
+              SoftwareRasterizer.restoreClip(LabeledChildWidget.nineSliceSavedClip);
             }
             if (null != nineSliceSprites[6]) {
               SoftwareRasterizer.intersectClip(panelLeft, centerClipBottom, centerClipLeft, panelBottom);
               nineSliceSprites[6].draw(panelLeft, centerTileBottom);
-              SoftwareRasterizer.restoreClip(hd.nineSliceSavedClip);
+              SoftwareRasterizer.restoreClip(LabeledChildWidget.nineSliceSavedClip);
             }
             if (null != nineSliceSprites[8]) {
               SoftwareRasterizer.intersectClip(centerClipRight, centerClipBottom, panelRight, panelBottom);
               nineSliceSprites[8].draw(centerTileRight, centerTileBottom);
-              SoftwareRasterizer.restoreClip(hd.nineSliceSavedClip);
+              SoftwareRasterizer.restoreClip(LabeledChildWidget.nineSliceSavedClip);
             }
             if ((null != nineSliceSprites[1]) &&
                 (nineSliceSprites[1].fullWidth != 0)) {
@@ -214,7 +214,7 @@ final class ma extends IntrusiveNode {
               for (edgeTileCoordinateOrCenterY = centerTileLeft; centerTileRight > edgeTileCoordinateOrCenterY; edgeTileCoordinateOrCenterY = edgeTileCoordinateOrCenterY + nineSliceSprites[1].fullWidth) {
                 nineSliceSprites[1].draw(edgeTileCoordinateOrCenterY, panelTop);
               }
-              SoftwareRasterizer.restoreClip(hd.nineSliceSavedClip);
+              SoftwareRasterizer.restoreClip(LabeledChildWidget.nineSliceSavedClip);
             }
             if ((nineSliceSprites[7] != null) &&
                 (0 != nineSliceSprites[7].fullWidth)) {
@@ -222,7 +222,7 @@ final class ma extends IntrusiveNode {
               for (edgeTileCoordinateOrCenterY = centerTileLeft; edgeTileCoordinateOrCenterY < centerTileRight; edgeTileCoordinateOrCenterY = edgeTileCoordinateOrCenterY + nineSliceSprites[7].fullWidth) {
                 nineSliceSprites[7].draw(edgeTileCoordinateOrCenterY, centerTileBottom);
               }
-              SoftwareRasterizer.restoreClip(hd.nineSliceSavedClip);
+              SoftwareRasterizer.restoreClip(LabeledChildWidget.nineSliceSavedClip);
             }
             if ((nineSliceSprites[3] != null) &&
                 (0 != nineSliceSprites[3].fullHeight)) {
@@ -230,7 +230,7 @@ final class ma extends IntrusiveNode {
               for (edgeTileCoordinateOrCenterY = centerTileTop; centerTileBottom > edgeTileCoordinateOrCenterY; edgeTileCoordinateOrCenterY = edgeTileCoordinateOrCenterY + nineSliceSprites[3].fullHeight) {
                 nineSliceSprites[3].draw(panelLeft, edgeTileCoordinateOrCenterY);
               }
-              SoftwareRasterizer.restoreClip(hd.nineSliceSavedClip);
+              SoftwareRasterizer.restoreClip(LabeledChildWidget.nineSliceSavedClip);
             }
             if ((nineSliceSprites[5] != null) &&
                 (nineSliceSprites[5].fullHeight != 0)) {
@@ -238,7 +238,7 @@ final class ma extends IntrusiveNode {
               for (edgeTileCoordinateOrCenterY = centerTileTop; edgeTileCoordinateOrCenterY < centerTileBottom; edgeTileCoordinateOrCenterY = edgeTileCoordinateOrCenterY + nineSliceSprites[5].fullHeight) {
                 nineSliceSprites[5].draw(centerTileRight, edgeTileCoordinateOrCenterY);
               }
-              SoftwareRasterizer.restoreClip(hd.nineSliceSavedClip);
+              SoftwareRasterizer.restoreClip(LabeledChildWidget.nineSliceSavedClip);
             }
             if ((nineSliceSprites[4] != null) &&
                 (nineSliceSprites[4].fullWidth != 0) &&
@@ -249,7 +249,7 @@ final class ma extends IntrusiveNode {
                   nineSliceSprites[4].draw(centerTileX, edgeTileCoordinateOrCenterY);
                 }
               }
-              SoftwareRasterizer.restoreClip(hd.nineSliceSavedClip);
+              SoftwareRasterizer.restoreClip(LabeledChildWidget.nineSliceSavedClip);
               return;
             }
             return;

@@ -43,7 +43,7 @@ final class lc {
               if ((0 < SecondaryDeque.spawnQueue.countNodes(methodGuard ^ -170)) &&
                   (!UiWidget.gameplaySession.spawnReleaseDisabled)) {
                 ArchiveNetworkClient.movingEntities.addLast(-48, SecondaryDeque.spawnQueue.removeFirst((byte) -124));
-                hd.recordEntityRelease(2);
+                LabeledChildWidget.recordEntityRelease(2);
                 kc.ticksSinceLastEntityRelease = 0;
               }
             }
@@ -61,7 +61,7 @@ final class lc {
                 inverseSpawnDistance = 1.0 / Math.sqrt((double)(inwardDirectionY * inwardDirectionY + inwardDirectionX * inwardDirectionX));
                 inwardDirectionY = (float)((double)inwardDirectionY * inverseSpawnDistance);
                 inwardDirectionX = (float)((double)inwardDirectionX * inverseSpawnDistance);
-                queuedEntityThenPooledEntity.initializeEntityMotion(101, spawnPositionX, ClientSessionSnapshot.chooseSpawnSpriteKind(methodGuard ^ 741924143), og.entityMotionSpeed * inwardDirectionX, TriangleMesh.chooseSpawnSpriteVariant((byte) -67), kc.ticksSinceLastEntityRelease + kb.spawnReleaseIntervalTicks * (1 + SecondaryDeque.spawnQueue.countNodes(111)), 0.0f, spawnPositionY, inwardDirectionY * og.entityMotionSpeed, ij.chooseSpawnEntityCategory(methodGuard ^ 131), 0.0f);
+                queuedEntityThenPooledEntity.initializeEntityMotion(101, spawnPositionX, ClientSessionSnapshot.chooseSpawnSpriteKind(methodGuard ^ 741924143), og.entityMotionSpeed * inwardDirectionX, TriangleMesh.chooseSpawnSpriteVariant((byte) -67), kc.ticksSinceLastEntityRelease + kb.spawnReleaseIntervalTicks * (1 + SecondaryDeque.spawnQueue.countNodes(111)), 0.0f, spawnPositionY, inwardDirectionY * og.entityMotionSpeed, FullscreenErrorDialog.chooseSpawnEntityCategory(methodGuard ^ 131), 0.0f);
                 SecondaryDeque.spawnQueue.addLast(-47, queuedEntityThenPooledEntity);
                 mf.b(false);
               }
@@ -243,7 +243,7 @@ final class lc {
           if (methodGuard != 4520) {
             lc.blendScaledDebugOverviewPixels(-56, -44, (int[]) null, 118, 4, -55, 25, -98, -82, -78, (byte) -35, (int[]) null, -116);
           }
-          font = new MonochromeBitmapFont(metrics, GameplaySession.decodedSpriteXOffsets, md.decodedSpriteYOffsets, DualLinkNode.decodedSpriteWidths, hl.decodedSpriteHeights, mj.decodedSpriteIndices);
+          font = new MonochromeBitmapFont(metrics, GameplaySession.decodedSpriteXOffsets, md.decodedSpriteYOffsets, DualLinkNode.decodedSpriteWidths, ProgressBarWidget.decodedSpriteHeights, mj.decodedSpriteIndices);
           MidiPcmStream.clearDecodedSpriteWorkingArrays(true);
           fontBeforeReturn = font;
           return fontBeforeReturn;
@@ -344,7 +344,7 @@ final class lc {
             var3 = var1.readNullTerminatedText((byte) 122);
             eg.field_l = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte((byte) 34);
-            pi.c(var4, param0 ^ -12742);
+            ValidationMessageWidget.c(var4, param0 ^ -12742);
             return;
           }
           if (ArchiveSource.field_a == null) {
@@ -370,7 +370,7 @@ final class lc {
             fieldTemp$1 = mg.field_g;
             mg.field_g = mg.field_g + 1;
             var6_ref.field_kb = fieldTemp$1;
-            hl.field_B.addLast(-59, var6_ref);
+            ProgressBarWidget.field_B.addLast(-59, var6_ref);
           }
           if (var3 != null) {
             var3 = ((String) (var3)).intern();
@@ -378,7 +378,7 @@ final class lc {
           var6_ref.field_hb = var4_ref_String;
           var6_ref.field_mb = (String) (var3);
           var6_ref.unlinkNode(false);
-          var7_ref = (j) ((Object) hl.field_B.firstForIteration(0));
+          var7_ref = (j) ((Object) ProgressBarWidget.field_B.firstForIteration(0));
           while (true) {
             L15: {
               if (null != var7_ref) {
@@ -387,14 +387,14 @@ final class lc {
                   break L15;
                 }
                 if (ul.a(stackIn_61_0, var7_ref, (byte) 127)) {
-                  var7_ref = (j) ((Object) hl.field_B.nextForIteration(1));
+                  var7_ref = (j) ((Object) ProgressBarWidget.field_B.nextForIteration(1));
                   continue;
                 }
               }
               stackIn_61_0 = var7_ref;
             }
             if (stackIn_61_0 == null) {
-              hl.field_B.addLast(-39, var6_ref);
+              ProgressBarWidget.field_B.addLast(-39, var6_ref);
               if (var8 == 0) {
                 return;
               }

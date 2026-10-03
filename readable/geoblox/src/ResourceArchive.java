@@ -171,7 +171,7 @@ final class ResourceArchive {
             return false;
         }
         if (0 > groupId || fileId < 0 || this.index.fileSlotCounts.length <= groupId || this.index.fileSlotCounts[groupId] <= fileId) {
-            if (!vf.field_K) {
+            if (!HotspotTextWidget.field_K) {
                 return false;
             }
             throw new IllegalArgumentException(groupId + " " + fileId);
@@ -281,7 +281,7 @@ final class ResourceArchive {
         if (groupId >= 0 && groupId < this.index.fileSlotCounts.length && this.index.fileSlotCounts[groupId] != 0) {
             return true;
         }
-        if (vf.field_K) {
+        if (HotspotTextWidget.field_K) {
             throw new IllegalArgumentException(Integer.toString(groupId));
         }
         return false;

@@ -203,7 +203,7 @@ final class DraggableWidget extends SingleChildWidget {
 
     final static void f(byte param0) {
         if (param0 == 24) {
-            fh.b(-6011);
+            UnderlinedButtonRenderer.b(-6011);
             ii.field_a = true;
             AgeValidator.field_i = true;
             kd.field_e.hideAllDialogs(param0 + 10912);
@@ -211,7 +211,7 @@ final class DraggableWidget extends SingleChildWidget {
             return;
         }
         DraggableWidget.g((byte) 86);
-        fh.b(-6011);
+        UnderlinedButtonRenderer.b(-6011);
         ii.field_a = true;
         AgeValidator.field_i = true;
         kd.field_e.hideAllDialogs(param0 + 10912);

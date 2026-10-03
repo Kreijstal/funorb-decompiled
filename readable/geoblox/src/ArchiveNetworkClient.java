@@ -41,7 +41,7 @@ abstract class ArchiveNetworkClient {
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
-            pf.a(46, var1);
+            LoginPanel.a(46, var1);
             CacheReference.field_q.backpatchLengthByte(11700, var1.position - var2);
           }
           return;
@@ -197,7 +197,7 @@ abstract class ArchiveNetworkClient {
         int unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
         IndexedSprite[] sprites = new IndexedSprite[sb.decodedSpriteCount];
         for (spriteIndex = firstSpriteIndex; sb.decodedSpriteCount > spriteIndex; spriteIndex++) {
-            sprites[spriteIndex] = new IndexedSprite(pg.decodedSpriteCanvasWidth, FadingDialog.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[spriteIndex], md.decodedSpriteYOffsets[spriteIndex], DualLinkNode.decodedSpriteWidths[spriteIndex], hl.decodedSpriteHeights[spriteIndex], mj.decodedSpriteIndices[spriteIndex], NanoFrameTimer.decodedSpritePalette);
+            sprites[spriteIndex] = new IndexedSprite(pg.decodedSpriteCanvasWidth, FadingDialog.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[spriteIndex], md.decodedSpriteYOffsets[spriteIndex], DualLinkNode.decodedSpriteWidths[spriteIndex], ProgressBarWidget.decodedSpriteHeights[spriteIndex], mj.decodedSpriteIndices[spriteIndex], NanoFrameTimer.decodedSpritePalette);
         }
         MidiPcmStream.clearDecodedSpriteWorkingArrays(true);
         return sprites;

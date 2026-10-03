@@ -81,11 +81,11 @@ final class eb {
     final static int handleArchiveHandshakeFailure(int replyCode, int methodGuard) {
         int unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
         StrongCacheReference.archiveConnectTask = null;
-        qh.archiveHandshakeStage = 0;
+        AccountCreationForm.archiveHandshakeStage = 0;
         li.archiveHandshakeSocket = null;
         int previousArchivePort = vg.archivePort;
-        vg.archivePort = ij.alternateArchivePort;
-        ij.alternateArchivePort = previousArchivePort;
+        vg.archivePort = FullscreenErrorDialog.alternateArchivePort;
+        FullscreenErrorDialog.alternateArchivePort = previousArchivePort;
         if (replyCode == 51) {
             AsyncResourceDownloader.archiveNetworkClient.failureCode = 2;
             AsyncResourceDownloader.archiveNetworkClient.failureCount = AsyncResourceDownloader.archiveNetworkClient.failureCount + 1;

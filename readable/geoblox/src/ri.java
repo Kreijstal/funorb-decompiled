@@ -35,14 +35,14 @@ final class ri {
             CharSequence var12 = null;
             var9 = Geoblox.clientControlFlowFlag;
             try {
-              if ((null == oc.field_e) &&
+              if ((null == SpriteCheckboxRenderer.field_e) &&
                   (!w.a(param0, 52))) {
                 stackIn_5_0 = -1;
                 return stackIn_5_0;
               }
               if (PacketBuffer.field_l == IterableNodeHashTable.field_d) {
                 if (!param0) {
-                  ih.field_a = vf.a(false, param1, param4, false);
+                  ih.field_a = HotspotTextWidget.a(false, param1, param4, false);
                 } else {
                   var11 = (String) null;
                   ih.field_a = SecondaryDeque.a(true, oa.field_c, (String) null, param1, false);
@@ -102,7 +102,7 @@ final class ri {
               if ((da.field_f == PacketBuffer.field_l) &&
                   (TriangleMesh.a(false))) {
                 oa.field_c = eh.field_d.readLongBE(2901);
-                oc.field_f = eh.field_d.readUnsignedByte((byte) 34);
+                SpriteCheckboxRenderer.field_f = eh.field_d.readUnsignedByte((byte) 34);
                 eh.field_d.readUnsignedByte((byte) 34);
                 og.field_n = eh.field_d.readUnsignedShortBE(true);
                 var6 = eh.field_d.readNullableNullTerminatedText((byte) 53);
@@ -114,8 +114,8 @@ final class ri {
                   stackIn_45_0 = !((var7 & 4) == 0);
                   GzipInflater.field_b = stackIn_45_0;
                   stackIn_48_0 = !((var7 & 8) == 0);
-                  fb.field_l = stackIn_48_0;
-                  if (!fb.field_l) {
+                  TextHotspotBounds.field_l = stackIn_48_0;
+                  if (!TextHotspotBounds.field_l) {
                   }
                 }
                 if (ll.field_e) {
@@ -135,7 +135,7 @@ final class ri {
                 PacketBuffer.field_l = eh.field_b;
                 if (ih.field_a.payloadKind((byte) -32) != ej.field_b) {
                   if (ih.field_a.payloadKind((byte) -32) == Geoblox.longAndNameLoginType) {
-                    rl.field_W.rememberMethod(NodeHashTableIterator.c(108), 0);
+                    ProgressDialog.field_W.rememberMethod(NodeHashTableIterator.c(108), 0);
                   }
                 } else {
                   mb.field_b.rememberMethod(NodeHashTableIterator.c(122), 0);
@@ -154,7 +154,7 @@ final class ri {
                   }
                 } else {
                   try {
-                    wk.a(-14882, new Object[]{fh.a(oa.field_c, param5 + 97)}, NodeHashTableIterator.c(param5 + 119), "zap");
+                    wk.a(-14882, new Object[]{UnderlinedButtonRenderer.a(oa.field_c, param5 + 97)}, NodeHashTableIterator.c(param5 + 119), "zap");
                   } catch (java.lang.Throwable decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     var8_ref_Throwable = decompiledCaughtException;
@@ -163,11 +163,11 @@ final class ri {
                 if (og.field_n > 0) {
                   rb.field_c = true;
                 }
-                CacheReference.field_q.initializeCipher(hl.field_D, false);
+                CacheReference.field_q.initializeCipher(ProgressBarWidget.field_D, false);
                 for (var8 = 0; var8 < 4; var8++) {
-                  hl.field_D[var8] = hl.field_D[var8] + 50;
+                  ProgressBarWidget.field_D[var8] = ProgressBarWidget.field_D[var8] + 50;
                 }
-                eh.field_d.initializeCipher(hl.field_D, false);
+                eh.field_d.initializeCipher(ProgressBarWidget.field_D, false);
                 stackIn_78_0 = ScorePopup.field_l;
                 return stackIn_78_0;
               }
@@ -188,7 +188,7 @@ final class ri {
                 stackIn_91_0 = ScorePopup.field_l;
                 return stackIn_91_0;
               }
-              if (null == oc.field_e) {
+              if (null == SpriteCheckboxRenderer.field_e) {
                 if (ck.field_e) {
                   if (30000L >= ll.a((byte) 12)) {
                     AudioService.field_a = uj.loginMessage2Text;
@@ -238,7 +238,7 @@ final class ri {
         }
         int var4 = (i.avatarMaskRaster.fullHeight >> 1) + 2;
         fc.avatarEyeFrames[DiskCacheWorker.avatarFeedbackFrameIndex].drawGrayModulated(param0 - var3, param1 - var4, rj.avatarTintColor);
-        vh.avatarMouthFrames[nd.avatarFeedbackModeId].drawGrayModulated(-var3 + param0, -var4 + param1, rj.avatarTintColor);
+        UsernameSuggestionsPanel.avatarMouthFrames[nd.avatarFeedbackModeId].drawGrayModulated(-var3 + param0, -var4 + param1, rj.avatarTintColor);
     }
 
     public static void a(int param0) {

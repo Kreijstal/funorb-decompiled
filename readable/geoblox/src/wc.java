@@ -48,7 +48,7 @@ final class wc extends IntrusiveNode {
         if (!(MultiHandleSliderRenderer.avatarTintFadeTicks <= 0)) {
             return;
         }
-        r.avatarTintStartColor = rj.avatarTintColor;
+        AccountCreationDialog.avatarTintStartColor = rj.avatarTintColor;
         int sentinelDivisionGuard = -71 / ((-59 - methodGuard) / 47);
         float normalizedRadiusSquared = maxAttachedRadiusSquared / 52900.0f;
         int tintPaletteIndex = (int)(0.5f + 4.0f * normalizedRadiusSquared);

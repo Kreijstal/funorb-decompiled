@@ -233,7 +233,7 @@ class ByteArrayBuffer extends IntrusiveNode {
                 throw new IllegalArgumentException("");
             }
             textForEncoding = (CharSequence) ((Object) text);
-            this.position = this.position + hi.encodeTextSlice(textForEncoding, this.bytes, characterStart, text.length(), this.position, 98);
+            this.position = this.position + DisplayNamePanel.encodeTextSlice(textForEncoding, this.bytes, characterStart, text.length(), this.position, 98);
             terminatorByteIndex = this.position;
             this.position = this.position + 1;
             this.bytes[terminatorByteIndex] = (byte) 0;
@@ -256,15 +256,15 @@ class ByteArrayBuffer extends IntrusiveNode {
     final static void a(float param0, String param1, boolean param2, byte param3) {
         try {
             if (vg.field_i == null) {
-                vg.field_i = new rl(kd.field_e, TextWidgetRenderer.field_d);
+                vg.field_i = new ProgressDialog(kd.field_e, TextWidgetRenderer.field_d);
                 kd.field_e.showDialog(false, vg.field_i);
             }
-            vg.field_i.a(param2, param1, param3 ^ -92, param0);
+            vg.field_i.updateProgress(param2, param1, param3 ^ -92, param0);
             SoftwareRasterizer.clearFramebuffer();
             if (param3 != -40) {
                 whirlpoolTables = (long[][]) null;
             }
-            pi.a(true, false);
+            ValidationMessageWidget.a(true, false);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "qc.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -307,7 +307,7 @@ class ByteArrayBuffer extends IntrusiveNode {
         try {
           var3 = (ph) ((Object) UiWidget.field_p.firstForIteration(0));
           while (var3 != null) {
-            rl.a(param1, 534, var3);
+            ProgressDialog.a(param1, 534, var3);
             var3 = (ph) ((Object) UiWidget.field_p.nextForIteration(1));
           }
           if (!param0) {
@@ -788,7 +788,7 @@ class ByteArrayBuffer extends IntrusiveNode {
             this.position = this.position + 1;
             this.bytes[prefixByteIndex] = (byte) 0;
             textForEncoding = (CharSequence) ((Object) text);
-            this.position = this.position + hi.encodeTextSlice(textForEncoding, this.bytes, 0, text.length(), this.position, 98);
+            this.position = this.position + DisplayNamePanel.encodeTextSlice(textForEncoding, this.bytes, 0, text.length(), this.position, 98);
             terminatorByteIndex = this.position;
             this.position = this.position + 1;
             this.bytes[terminatorByteIndex] = (byte) 0;
@@ -915,7 +915,7 @@ class ByteArrayBuffer extends IntrusiveNode {
         try {
           var3_int = 2 / ((param2 + 41) / 54);
           var4 = (String) null;
-          stackIn_1_0 = pf.a(0, 0, param0, param1, (String) null, false, 94);
+          stackIn_1_0 = LoginPanel.a(0, 0, param0, param1, (String) null, false, 94);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

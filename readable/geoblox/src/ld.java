@@ -132,8 +132,8 @@ final class ld {
             DualLinkNode.rotationStepRadians = DualLinkNode.rotationStepRadians * 1.100000023841858f;
           }
           if (0 != (kd.difficultyStepFlags[ArchiveNetworkClient.difficultyStep] & 128)) {
-            if (0.800000011920929f > ij.spawnIntervalScale) {
-              ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
+            if (0.800000011920929f > FullscreenErrorDialog.spawnIntervalScale) {
+              FullscreenErrorDialog.spawnIntervalScale = FullscreenErrorDialog.spawnIntervalScale + 0.02857142873108387f;
             }
             ContextualRuntimeException.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard);
           }

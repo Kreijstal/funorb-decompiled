@@ -260,7 +260,7 @@ final class AchievementSubmission extends IntrusiveNode {
           if (param1 != 3) {
             field_i = (PcmResampler) null;
           }
-          var2 = fh.a(ResourceArchive.a(param0, -48), -78);
+          var2 = UnderlinedButtonRenderer.a(ResourceArchive.a(param0, -48), -78);
           if (null == var2) {
             var2 = "";
           }

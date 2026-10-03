@@ -286,7 +286,7 @@ final class GameplaySession {
           sceneTransitionFlag = selectedSceneTransitionFlag;
           if (sceneTransitionFlag == 0) {
             if (!this.boardRasterDirty) {
-              oc.boardSceneRaster.setAsRasterTarget();
+              SpriteCheckboxRenderer.boardSceneRaster.setAsRasterTarget();
               if (this.debugReducedRendering) {
                 break L13;
               }
@@ -295,7 +295,7 @@ final class GameplaySession {
                 break L13;
               }
             }
-            oc.boardSceneRaster.setAsRasterTarget();
+            SpriteCheckboxRenderer.boardSceneRaster.setAsRasterTarget();
             SoftwareRasterizer.clearFramebuffer();
             if (!this.debugReducedRendering) {
               dc.drawAttachedEntities(7838);
@@ -346,7 +346,7 @@ final class GameplaySession {
           lj.smallBoxSprite.draw(selectedThemeIdOrScoreBoxX, loadingPanelWidthOrScoreBoxY);
           if (!((0 == this.sessionPhase) &&
               (!ih.areEntityQueuesSettled(0)))) {
-            vh.largeBoxSprite.draw(446, 410);
+            UsernameSuggestionsPanel.largeBoxSprite.draw(446, 410);
             if (clientControlFlowGuard == 0) {
               break L19;
             }
@@ -366,11 +366,11 @@ final class GameplaySession {
         }
         if ((!this.debugReducedRendering) &&
             (sceneTransitionFlag == 0)) {
-          oc.boardSceneRaster.draw(0, 0);
+          SpriteCheckboxRenderer.boardSceneRaster.draw(0, 0);
         }
-        ij.drawAvatarFaceOrCryFrame((byte) 18);
+        FullscreenErrorDialog.drawAvatarFaceOrCryFrame((byte) 18);
         if (!this.debugReducedRendering) {
-          ni.drawTransientEntities(484842465);
+          MessageDialogContent.drawTransientEntities(484842465);
         }
         MultiHandleSliderRenderer.rotatedThemeForegroundRaster.setAsRasterTarget();
         SoftwareRasterizer.clearFramebuffer();
@@ -483,7 +483,7 @@ final class GameplaySession {
                           break L43;
                         }
                       }
-                      vh.largeBoxSprite.drawScaledSilhouette(223, 205, vh.largeBoxSprite.fullWidth / 2, vh.largeBoxSprite.fullHeight / 2, tutorialTopOrDebugColorOrTransitionClipTop);
+                      UsernameSuggestionsPanel.largeBoxSprite.drawScaledSilhouette(223, 205, UsernameSuggestionsPanel.largeBoxSprite.fullWidth / 2, UsernameSuggestionsPanel.largeBoxSprite.fullHeight / 2, tutorialTopOrDebugColorOrTransitionClipTop);
                     }
                     SoftwareRasterizer.fillCircle(160, 120, 21, 16777215);
                     SoftwareRasterizer.blurRasterRegion(2, 2, 0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight);
@@ -540,7 +540,7 @@ final class GameplaySession {
                   tutorialTopOrDebugColorOrTransitionClipTop = 35 + (6 * this.sceneAnimationTick - 480);
                   SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
                   SoftwareRasterizer.setClip(0, tutorialTopOrDebugColorOrTransitionClipTop, 640, 480);
-                  oc.boardSceneRaster.draw(0, 0);
+                  SpriteCheckboxRenderer.boardSceneRaster.draw(0, 0);
                   SoftwareRasterizer.setClip(0, 0, 640, 480);
                   qj.transitionCurtain.draw(0, -480 + 6 * this.sceneAnimationTick);
                   if (clientControlFlowGuard == 0) {
@@ -917,9 +917,9 @@ final class GameplaySession {
             }
           }
           if (this.sceneAnimationTick == 0) {
-            IntrusiveNodeHashTable.a(methodGuard ^ -1578896191, pi.field_S);
+            IntrusiveNodeHashTable.a(methodGuard ^ -1578896191, ValidationMessageWidget.field_S);
           }
-          if ((pf.endingEntityScanClear) &&
+          if ((LoginPanel.endingEntityScanClear) &&
               (LoginMethod.isAvatarCryHoldExpired(-3)) &&
               (this.sceneAnimationTick > 1000)) {
             this.requestSessionExitScreen(28809);
@@ -946,7 +946,7 @@ final class GameplaySession {
                   }
                   ((GameplaySession) (this)).showDebugOverview = toggledDebugOverview;
                 }
-                if ((oc.field_f >= 2) &&
+                if ((SpriteCheckboxRenderer.field_f >= 2) &&
                     (PacketBuffer.field_r.equalsIgnoreCase("brk"))) {
                   this.gameApplet.h((byte) 41);
                 }
@@ -1005,7 +1005,7 @@ final class GameplaySession {
                 ((GameplaySession) (this)).rotationControlsSwapped = toggledRotationControlsSwapped;
                 jc.requestAvatarFeedback(7, false);
               }
-              if (2 > oc.field_f) {
+              if (2 > SpriteCheckboxRenderer.field_f) {
                 continue;
               }
               debugKeyCodeOrPointerEventComplement = ki.currentKeyboardEventCode;
@@ -1075,7 +1075,7 @@ final class GameplaySession {
                 MessageDialog.availableEntityCategoryCount = 7;
               }
               if (ki.currentKeyboardEventCode == 4) {
-                hd.recordEntityRelease(2);
+                LabeledChildWidget.recordEntityRelease(2);
                 this.submissionBlocked = true;
               }
               if (ki.currentKeyboardEventCode == 5) {
@@ -1137,7 +1137,7 @@ final class GameplaySession {
           }
           if (debugKeyCodeOrPointerEventComplement != debugKeySentinelOrPointerEventSentinel) {
             if ((this.debugPointerSpawnEnabled) &&
-                (oc.field_f >= 2)) {
+                (SpriteCheckboxRenderer.field_f >= 2)) {
               nb.spawnEntityAtPointer(-28195, mc.pointerPressXSnapshot, this.debugSpawnCategoryId, FullscreenFocusCanvas.pointerPressYSnapshot, this.debugSpawnVariantId, this.debugSpawnSpecialKinds);
             }
             L100: {
@@ -1206,13 +1206,13 @@ final class GameplaySession {
           this.score = this.score + points;
           if (this.score > 9999999) {
             cappedScoreText = (CharSequence) ((Object) Integer.toString(9999999));
-            td.writeTextAtOffset(cappedScoreText, this.scoreText, 0, 47);
+            ValidationIconWidget.writeTextAtOffset(cappedScoreText, this.scoreText, 0, 47);
             if (controlFlowGuard == 0) {
               break L0;
             }
           }
           scoreValueText = (CharSequence) ((Object) Integer.toString(this.score));
-          td.writeTextAtOffset(scoreValueText, this.scoreText, 0, 69);
+          ValidationIconWidget.writeTextAtOffset(scoreValueText, this.scoreText, 0, 69);
         }
         pointsForCounters = points;
         if (methodGuard != 127) {
@@ -1348,7 +1348,7 @@ final class GameplaySession {
             this.prepareNextTheme(867);
           }
           this.sceneTransitionInProgress = true;
-          sf.a(SingleChildWidget.mainRasterBuffer.pixels, 0, oc.boardSceneRaster.pixels, 0, SingleChildWidget.mainRasterBuffer.pixels.length);
+          sf.a(SingleChildWidget.mainRasterBuffer.pixels, 0, SpriteCheckboxRenderer.boardSceneRaster.pixels, 0, SingleChildWidget.mainRasterBuffer.pixels.length);
           PointerInputListener.a((byte) -39);
           bk.boardOwnershipRaster.setAsRasterTarget();
           SoftwareRasterizer.clearFramebuffer();
@@ -1553,17 +1553,17 @@ final class GameplaySession {
                   break L2;
                 }
               }
-              vf.spriteScratchRaster.setAsRasterTarget();
+              HotspotTextWidget.spriteScratchRaster.setAsRasterTarget();
               SoftwareRasterizer.clearFramebuffer();
-              endingEntity.entitySprite.rotateSmooth(endingEntity.entitySprite.fullWidth << 3, endingEntity.entitySprite.fullHeight << 3, vf.spriteScratchRaster.fullWidth << 3, vf.spriteScratchRaster.fullHeight << 3, (int)(65535.0 * ((double)endingEntity.spriteAngleRadians / 6.283185307179586)), 4096);
+              endingEntity.entitySprite.rotateSmooth(endingEntity.entitySprite.fullWidth << 3, endingEntity.entitySprite.fullHeight << 3, HotspotTextWidget.spriteScratchRaster.fullWidth << 3, HotspotTextWidget.spriteScratchRaster.fullHeight << 3, (int)(65535.0 * ((double)endingEntity.spriteAngleRadians / 6.283185307179586)), 4096);
               SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
               maxRadiusSquared = 0;
-              spriteOffsetFromCenterX = (int)(endingEntity.positionX + 0.5f) + (-(vf.spriteScratchRaster.width >> 1) - 320);
-              spriteOffsetFromCenterY = -240 + ((int)(endingEntity.positionY + 0.5f) - (vf.spriteScratchRaster.height >> 1));
+              spriteOffsetFromCenterX = (int)(endingEntity.positionX + 0.5f) + (-(HotspotTextWidget.spriteScratchRaster.width >> 1) - 320);
+              spriteOffsetFromCenterY = -240 + ((int)(endingEntity.positionY + 0.5f) - (HotspotTextWidget.spriteScratchRaster.height >> 1));
               spriteColumn = 0;
               L4: while (true) {
                 comparisonLeftColumnOrZero = spriteColumn;
-                comparisonRightWidthOrPixel = vf.spriteScratchRaster.width;
+                comparisonRightWidthOrPixel = HotspotTextWidget.spriteScratchRaster.width;
                 while (true) {
                   if (comparisonLeftColumnOrZero < comparisonRightWidthOrPixel) {
                     rowStartOrMusicGuard = 0;
@@ -1571,9 +1571,9 @@ final class GameplaySession {
                       break L1;
                     }
                     spriteRow = rowStartOrMusicGuard;
-                    while (vf.spriteScratchRaster.height > spriteRow) {
+                    while (HotspotTextWidget.spriteScratchRaster.height > spriteRow) {
                       comparisonLeftColumnOrZero = 0;
-                      comparisonRightWidthOrPixel = vf.spriteScratchRaster.pixels[vf.spriteScratchRaster.width * spriteRow + spriteColumn];
+                      comparisonRightWidthOrPixel = HotspotTextWidget.spriteScratchRaster.pixels[HotspotTextWidget.spriteScratchRaster.width * spriteRow + spriteColumn];
                       if (comparisonLeftColumnOrZero != comparisonRightWidthOrPixel) {
                         pixelOffsetFromCenterX = spriteOffsetFromCenterX + spriteColumn;
                         pixelOffsetFromCenterY = spriteRow + spriteOffsetFromCenterY;
@@ -1625,7 +1625,7 @@ final class GameplaySession {
             }
             if (this.sessionPhase != 2) {
               if (this.resultSequenceCountdown == 150) {
-                td.playPcmSample(-348, fl.field_c[28]);
+                ValidationIconWidget.playPcmSample(-348, fl.field_c[28]);
               }
               this.resultSequenceCountdown = this.resultSequenceCountdown - 1;
               if (controlFlowGuard == 0) {
@@ -1668,7 +1668,7 @@ final class GameplaySession {
             return;
         }
         if ((0 < this.score && !this.submissionBlocked) &&
-            (!fh.c(-102))) {
+            (!UnderlinedButtonRenderer.c(-102))) {
             ContentTransitionDialog.a(oa.field_a, 22, kb.field_d, 25134, new int[]{this.score}, SpriteButtonRenderer.field_r, 65513, 3, DequeCursor.field_g);
         }
         ca.field_f = null;
@@ -1685,13 +1685,13 @@ final class GameplaySession {
           this.pendingPopupPoints = this.pendingPopupPoints + points;
           if (this.pendingPopupPoints > 99999) {
             cappedPopupPointsText = (CharSequence) ((Object) Integer.toString(99999));
-            td.writeTextAtOffset(cappedPopupPointsText, this.popupPointsText, 0, 26);
+            ValidationIconWidget.writeTextAtOffset(cappedPopupPointsText, this.popupPointsText, 0, 26);
             if (Geoblox.clientControlFlowFlag == 0) {
               break L0;
             }
           }
           popupPointsValueText = (CharSequence) ((Object) Integer.toString(this.pendingPopupPoints));
-          td.writeTextAtOffset(popupPointsValueText, this.popupPointsText, 0, 73);
+          ValidationIconWidget.writeTextAtOffset(popupPointsValueText, this.popupPointsText, 0, 73);
         }
         clientControlFlowGuard = -83 % ((-19 - methodGuard) / 54);
     }
@@ -1743,7 +1743,7 @@ final class GameplaySession {
           this.debugPointerSpawnEnabled = true;
         }
         L1: {
-          if (!fh.c(-93)) {
+          if (!UnderlinedButtonRenderer.c(-93)) {
             if (this.newActionCount <= 0) {
               if (this.score > 0) {
                 ai.requestedScreenId = 2;
@@ -1789,7 +1789,7 @@ final class GameplaySession {
         gf.matchChainLength = 1;
         this.pointsPanelSlideDirection = 1;
         this.pointsPanelX = 640;
-        td.a((byte) -93);
+        ValidationIconWidget.a((byte) -93);
         if (methodGuard < 104) {
           GameplaySession.releaseStaticReferences(-111);
         }
@@ -1826,7 +1826,7 @@ final class GameplaySession {
             this.submissionBlocked = true;
         }
         ld.spawnPointsPopup(34, 20 + (this.pointsPanelX + 60), 79, this.pendingPopupPoints);
-        td.playPcmSample(-348, fl.field_c[32]);
+        ValidationIconWidget.playPcmSample(-348, fl.field_c[32]);
         this.pendingPopupPoints = 0;
     }
 
@@ -1883,7 +1883,7 @@ final class GameplaySession {
           bk.boardOwnershipRaster.setAsRasterTarget();
           SoftwareRasterizer.clearFramebuffer();
           i.avatarMaskRaster.drawSilhouette(320 + this.boardMaskOffsetX, this.boardMaskOffsetY + 240, 16777215);
-          oc.boardSceneRaster.setAsRasterTarget();
+          SpriteCheckboxRenderer.boardSceneRaster.setAsRasterTarget();
           SoftwareRasterizer.clearFramebuffer();
           SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
           this.sceneTransitionRequested = false;
@@ -1896,7 +1896,7 @@ final class GameplaySession {
             DiskCacheWorker.avatarTintPalette[0] = 14788623;
             DiskCacheWorker.avatarTintPalette[1] = 15439657;
           }
-          td.a((byte) -93);
+          ValidationIconWidget.a((byte) -93);
           GameplayEntity.resetAvatarFeedbackState(0);
           GameScreen.selectedThemeId = WidgetContainer.field_B[0];
           ProxySocketConnector.selectThemeRenderAssets((byte) 104);

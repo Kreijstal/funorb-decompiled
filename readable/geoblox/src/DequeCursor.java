@@ -21,7 +21,7 @@ final class DequeCursor {
         var4 = Geoblox.clientControlFlowFlag;
         try {
           if (MatchingTextValidator.field_j == param0) {
-            td.playPcmSample(-348, fl.field_c[25]);
+            ValidationIconWidget.playPcmSample(-348, fl.field_c[25]);
           }
           MatchingTextValidator.field_j = MatchingTextValidator.field_j + 1;
           while (true) {
@@ -33,10 +33,10 @@ final class DequeCursor {
             }
             if ((0 == MatchingTextValidator.field_j % 40) &&
                 (CachedTextLayout.field_h < 11)) {
-              fh.field_c = MatchingTextValidator.field_j;
+              UnderlinedButtonRenderer.field_c = MatchingTextValidator.field_j;
               CachedTextLayout.field_h = CachedTextLayout.field_h + 1;
               if (10 == CachedTextLayout.field_h) {
-                td.playPcmSample(-348, fl.field_c[26]);
+                ValidationIconWidget.playPcmSample(-348, fl.field_c[26]);
               }
             }
             var1_float = -((480.0f - (float)MatchingTextValidator.field_j) / 480.0f) + 1.0f;
@@ -47,12 +47,12 @@ final class DequeCursor {
             var3 = MatchingTextValidator.field_j << 2;
             if ((!sg.field_d) &&
                 (-var3 + 900 <= 320 + var2)) {
-              td.playPcmSample(-348, fl.field_c[7]);
+              ValidationIconWidget.playPcmSample(-348, fl.field_c[7]);
               sg.field_d = true;
             }
             if ((!ab.field_d) &&
-                (-var2 + (320 - qh.introGeometryFrames[1].fullWidth) <= -1200 + var3)) {
-              td.playPcmSample(-348, fl.field_c[8]);
+                (-var2 + (320 - AccountCreationForm.introGeometryFrames[1].fullWidth) <= -1200 + var3)) {
+              ValidationIconWidget.playPcmSample(-348, fl.field_c[8]);
               ab.field_d = true;
             }
             stackIn_25_0 = !(494 > MatchingTextValidator.field_j);

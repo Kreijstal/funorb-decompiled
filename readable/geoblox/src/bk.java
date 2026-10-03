@@ -23,7 +23,7 @@ final class bk {
         try {
             DiskCacheWorker.logoStartDelayTicks = param1 * sb.a(true) / 1000;
             ab.a(99, param0);
-            ni.loadLogoMeshesAndMaterials(param0, 0);
+            MessageDialogContent.loadLogoMeshesAndMaterials(param0, 0);
             if (param2 < 97) {
                 bk.a(true, -54);
             }

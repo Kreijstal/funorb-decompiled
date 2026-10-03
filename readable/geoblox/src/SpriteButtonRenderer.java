@@ -4,7 +4,7 @@
 final class SpriteButtonRenderer extends TextWidgetRenderer {
     static String createSelectAlternativeText;
     static PlatformTaskDispatcher field_s;
-    static pf field_t;
+    static LoginPanel field_t;
     static int field_r;
     private int normalColor;
     private int highlightColor;

@@ -18,12 +18,12 @@ final class fc {
         int clientControlFlowSnapshot = 0;
         clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          pf.endingEntityScanClear = true;
+          LoginPanel.endingEntityScanClear = true;
           attachedThenTransientEntity = (GameplayEntity) ((Object) a.attachedEntities.firstForIteration(0));
           while (attachedThenTransientEntity != null) {
             attachedThenTransientEntity.advanceEntityAnimation(true);
             if (6 == attachedThenTransientEntity.entitySpriteKindId) {
-              pf.endingEntityScanClear = false;
+              LoginPanel.endingEntityScanClear = false;
               if (attachedThenTransientEntity.animationFrameIndex >= 3) {
                 SecondaryNodeDeque.availableEntities.addLast(-67, attachedThenTransientEntity);
               }
@@ -37,7 +37,7 @@ final class fc {
             if (!((5 != attachedThenTransientEntity.entitySpriteKindId) &&
                 (attachedThenTransientEntity.entitySpriteKindId != 7) &&
                 (attachedThenTransientEntity.entitySpriteKindId != 8))) {
-              pf.endingEntityScanClear = false;
+              LoginPanel.endingEntityScanClear = false;
               if (attachedThenTransientEntity.animationFrameIndex >= 3) {
                 SecondaryNodeDeque.availableEntities.addLast(-115, attachedThenTransientEntity);
               }

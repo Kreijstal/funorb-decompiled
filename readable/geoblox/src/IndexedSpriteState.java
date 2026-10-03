@@ -79,7 +79,7 @@ abstract class IndexedSpriteState {
         int var13 = Geoblox.clientControlFlowFlag;
         try {
             id.field_c = OpacityWidget.loadSpriteFrames("frame_top", "commonui", param2, 0);
-            fh.field_e = OpacityWidget.loadSpriteFrames("frame_bottom", "commonui", param2, 0);
+            UnderlinedButtonRenderer.field_e = OpacityWidget.loadSpriteFrames("frame_bottom", "commonui", param2, 0);
             jc.field_a = ug.loadSprite("jagex_logo_grey", param2, (byte) -78, "commonui");
             MouseWheelInput.field_e = OpacityWidget.loadSpriteFrames("button", "commonui", param2, 0);
             oa.field_e = oi.a((byte) -39, "validation", "commonui", param2);
@@ -112,7 +112,7 @@ abstract class IndexedSpriteState {
                 }
             }
             var9 = var18.height;
-            oc.b(-105);
+            SpriteCheckboxRenderer.b(-105);
             if (param0 <= 98) {
                 IndexedSprite var14 = (IndexedSprite) null;
                 IndexedSpriteState.a(72, (int[]) null, (IndexedSprite) null);

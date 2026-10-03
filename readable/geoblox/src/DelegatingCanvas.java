@@ -97,11 +97,11 @@ final class DelegatingCanvas extends java.awt.Canvas {
               var11 = AchievementQuery.field_i[var9];
               var6[0][var10] = oi.field_a[var11];
               var18[0][4 * var10] = hg.field_a[var11];
-              var18[0][4 * var10 + 1] = fb.field_m[var11];
+              var18[0][4 * var10 + 1] = TextHotspotBounds.field_m[var11];
               var18[0][4 * var10 + 2] = NodeHashTableIterator.field_i[var11];
               var18[0][4 * var10 + 3] = FrameTimer.field_b[var11];
               if ((WhirlpoolHash.a(oi.field_a[var11], (byte) 12)) &&
-                  (FrameTimer.field_b[var11] + (fb.field_m[var11] + NodeHashTableIterator.field_i[var11]) == 0)) {
+                  (FrameTimer.field_b[var11] + (TextHotspotBounds.field_m[var11] + NodeHashTableIterator.field_i[var11]) == 0)) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -115,11 +115,11 @@ final class DelegatingCanvas extends java.awt.Canvas {
               var11 = AchievementQuery.field_i[var9 + var5];
               var6[1][var13] = oi.field_a[var11];
               var18[1][4 * var13] = hg.field_a[var11];
-              var18[1][1 + 4 * var13] = fb.field_m[var11];
+              var18[1][1 + 4 * var13] = TextHotspotBounds.field_m[var11];
               var18[1][var13 * 4 + 2] = NodeHashTableIterator.field_i[var11];
               var18[1][var13 * 4 + 3] = FrameTimer.field_b[var11];
               if ((WhirlpoolHash.a(oi.field_a[var11], (byte) 12)) &&
-                  (FrameTimer.field_b[var11] + NodeHashTableIterator.field_i[var11] + fb.field_m[var11] == 0)) {
+                  (FrameTimer.field_b[var11] + NodeHashTableIterator.field_i[var11] + TextHotspotBounds.field_m[var11] == 0)) {
                 var6[1][var13] = null;
                 var13--;
               }

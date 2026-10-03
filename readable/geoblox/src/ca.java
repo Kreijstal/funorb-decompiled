@@ -31,7 +31,7 @@ final class ca extends IntrusiveNode {
             }
             var3 = param0.substring(0, var2_int);
             var4 = param0.substring(param1 + var2_int);
-            var5 = r.a(var3, true);
+            var5 = AccountCreationDialog.a(var3, true);
             if (var5 == null) {
               stackIn_12_0 = GzipInflater.a(var4, false);
               return stackIn_12_0;
@@ -39,7 +39,7 @@ final class ca extends IntrusiveNode {
             stackIn_10_0 = var5;
             return stackIn_10_0;
           }
-          stackIn_4_0 = fb.field_j;
+          stackIn_4_0 = TextHotspotBounds.field_j;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

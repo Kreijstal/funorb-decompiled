@@ -5,7 +5,7 @@ import java.util.*;
 
 class ButtonWidget extends UiWidget {
     boolean active;
-    static ei field_C;
+    static AccountContentDialog field_C;
     static int field_B;
     private boolean focusable;
     boolean enabled;

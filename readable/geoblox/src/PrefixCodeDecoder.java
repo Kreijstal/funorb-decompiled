@@ -69,7 +69,7 @@ final class PrefixCodeDecoder {
           if (metrics == null) {
             return null;
           }
-          font = new CoverageBitmapFont(metrics, GameplaySession.decodedSpriteXOffsets, md.decodedSpriteYOffsets, DualLinkNode.decodedSpriteWidths, hl.decodedSpriteHeights, NanoFrameTimer.decodedSpritePalette, mj.decodedSpriteIndices);
+          font = new CoverageBitmapFont(metrics, GameplaySession.decodedSpriteXOffsets, md.decodedSpriteYOffsets, DualLinkNode.decodedSpriteWidths, ProgressBarWidget.decodedSpriteHeights, NanoFrameTimer.decodedSpritePalette, mj.decodedSpriteIndices);
           MidiPcmStream.clearDecodedSpriteWorkingArrays(true);
           fontBeforeReturn = font;
           return fontBeforeReturn;
@@ -353,7 +353,7 @@ final class PrefixCodeDecoder {
             if (heldFrameTintWithoutShockSnapshot <= 0) {
               return;
             }
-            rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * UsernameAvailabilityValidator.avatarTintBlueDelta));
+            rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (AccountCreationDialog.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * UsernameAvailabilityValidator.avatarTintBlueDelta));
             return;
           }
           IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
@@ -362,7 +362,7 @@ final class PrefixCodeDecoder {
           if (heldFrameTintAfterShockSnapshot <= 0) {
             return;
           }
-          rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * UsernameAvailabilityValidator.avatarTintBlueDelta));
+          rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (AccountCreationDialog.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * UsernameAvailabilityValidator.avatarTintBlueDelta));
           return;
         }
         if (DiskCacheWorker.avatarFeedbackFrameIndex == 0 + MenuScreen.avatarFeedbackFrameBase) {
@@ -382,7 +382,7 @@ final class PrefixCodeDecoder {
             if (blinkFrameResetTintWithoutShockSnapshot <= 0) {
               return;
             }
-            rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * UsernameAvailabilityValidator.avatarTintBlueDelta));
+            rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (AccountCreationDialog.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * UsernameAvailabilityValidator.avatarTintBlueDelta));
             return;
           }
           IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
@@ -391,7 +391,7 @@ final class PrefixCodeDecoder {
           if (blinkFrameResetTintAfterShockSnapshot <= 0) {
             return;
           }
-          rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * UsernameAvailabilityValidator.avatarTintBlueDelta));
+          rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (AccountCreationDialog.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * UsernameAvailabilityValidator.avatarTintBlueDelta));
           return;
         }
         avatarFrameOffsetInSegment = DiskCacheWorker.avatarFeedbackFrameIndex - MenuScreen.avatarFeedbackFrameBase;
@@ -414,7 +414,7 @@ final class PrefixCodeDecoder {
             rightSteerTintTicksSnapshot = MultiHandleSliderRenderer.avatarTintFadeTicks;
             MultiHandleSliderRenderer.avatarTintFadeTicks = MultiHandleSliderRenderer.avatarTintFadeTicks - 1;
             if (rightSteerTintTicksSnapshot > 0) {
-              rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * UsernameAvailabilityValidator.avatarTintBlueDelta));
+              rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (AccountCreationDialog.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * UsernameAvailabilityValidator.avatarTintBlueDelta));
             }
             return;
           }
@@ -436,7 +436,7 @@ final class PrefixCodeDecoder {
             neutralStepUpTintTicksSnapshot = MultiHandleSliderRenderer.avatarTintFadeTicks;
             MultiHandleSliderRenderer.avatarTintFadeTicks = MultiHandleSliderRenderer.avatarTintFadeTicks - 1;
             if (neutralStepUpTintTicksSnapshot > 0) {
-              rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * UsernameAvailabilityValidator.avatarTintBlueDelta));
+              rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (AccountCreationDialog.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * UsernameAvailabilityValidator.avatarTintBlueDelta));
             }
             return;
           }
@@ -456,7 +456,7 @@ final class PrefixCodeDecoder {
             nonneutralHoldTintTicksSnapshot = MultiHandleSliderRenderer.avatarTintFadeTicks;
             MultiHandleSliderRenderer.avatarTintFadeTicks = MultiHandleSliderRenderer.avatarTintFadeTicks - 1;
             if (nonneutralHoldTintTicksSnapshot > 0) {
-              rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * UsernameAvailabilityValidator.avatarTintBlueDelta));
+              rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (AccountCreationDialog.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * UsernameAvailabilityValidator.avatarTintBlueDelta));
             }
             return;
           }
@@ -476,7 +476,7 @@ final class PrefixCodeDecoder {
             neutralHoldTintTicksSnapshot = MultiHandleSliderRenderer.avatarTintFadeTicks;
             MultiHandleSliderRenderer.avatarTintFadeTicks = MultiHandleSliderRenderer.avatarTintFadeTicks - 1;
             if (neutralHoldTintTicksSnapshot > 0) {
-              rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * UsernameAvailabilityValidator.avatarTintBlueDelta));
+              rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (AccountCreationDialog.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * UsernameAvailabilityValidator.avatarTintBlueDelta));
             }
             return;
           }
@@ -496,7 +496,7 @@ final class PrefixCodeDecoder {
           neutralStepDownTintTicksSnapshot = MultiHandleSliderRenderer.avatarTintFadeTicks;
           MultiHandleSliderRenderer.avatarTintFadeTicks = MultiHandleSliderRenderer.avatarTintFadeTicks - 1;
           if (neutralStepDownTintTicksSnapshot > 0) {
-            rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * UsernameAvailabilityValidator.avatarTintBlueDelta));
+            rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (AccountCreationDialog.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * UsernameAvailabilityValidator.avatarTintBlueDelta));
           }
           return;
         }
@@ -517,14 +517,14 @@ final class PrefixCodeDecoder {
             if (leftSteerTintWithoutShockSnapshot <= 0) {
               return;
             }
-            rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * UsernameAvailabilityValidator.avatarTintBlueDelta));
+            rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (AccountCreationDialog.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * UsernameAvailabilityValidator.avatarTintBlueDelta));
             return;
           }
           IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
           leftSteerTintAfterShockSnapshot = MultiHandleSliderRenderer.avatarTintFadeTicks;
           MultiHandleSliderRenderer.avatarTintFadeTicks = MultiHandleSliderRenderer.avatarTintFadeTicks - 1;
           if (leftSteerTintAfterShockSnapshot > 0) {
-            rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * UsernameAvailabilityValidator.avatarTintBlueDelta));
+            rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (AccountCreationDialog.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * UsernameAvailabilityValidator.avatarTintBlueDelta));
           }
           return;
         }
@@ -546,7 +546,7 @@ final class PrefixCodeDecoder {
           leftFallbackRightSteerTintTicksSnapshot = MultiHandleSliderRenderer.avatarTintFadeTicks;
           MultiHandleSliderRenderer.avatarTintFadeTicks = MultiHandleSliderRenderer.avatarTintFadeTicks - 1;
           if (leftFallbackRightSteerTintTicksSnapshot > 0) {
-            rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * UsernameAvailabilityValidator.avatarTintBlueDelta));
+            rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (AccountCreationDialog.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * UsernameAvailabilityValidator.avatarTintBlueDelta));
           }
           return;
         }
@@ -568,7 +568,7 @@ final class PrefixCodeDecoder {
           leftFallbackNeutralStepUpTintTicksSnapshot = MultiHandleSliderRenderer.avatarTintFadeTicks;
           MultiHandleSliderRenderer.avatarTintFadeTicks = MultiHandleSliderRenderer.avatarTintFadeTicks - 1;
           if (leftFallbackNeutralStepUpTintTicksSnapshot > 0) {
-            rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * UsernameAvailabilityValidator.avatarTintBlueDelta));
+            rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (AccountCreationDialog.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * UsernameAvailabilityValidator.avatarTintBlueDelta));
           }
           return;
         }
@@ -588,7 +588,7 @@ final class PrefixCodeDecoder {
           leftFallbackNonneutralHoldTintTicksSnapshot = MultiHandleSliderRenderer.avatarTintFadeTicks;
           MultiHandleSliderRenderer.avatarTintFadeTicks = MultiHandleSliderRenderer.avatarTintFadeTicks - 1;
           if (leftFallbackNonneutralHoldTintTicksSnapshot > 0) {
-            rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * UsernameAvailabilityValidator.avatarTintBlueDelta));
+            rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (AccountCreationDialog.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * UsernameAvailabilityValidator.avatarTintBlueDelta));
           }
           return;
         }
@@ -608,7 +608,7 @@ final class PrefixCodeDecoder {
           leftFallbackNeutralHoldTintTicksSnapshot = MultiHandleSliderRenderer.avatarTintFadeTicks;
           MultiHandleSliderRenderer.avatarTintFadeTicks = MultiHandleSliderRenderer.avatarTintFadeTicks - 1;
           if (leftFallbackNeutralHoldTintTicksSnapshot > 0) {
-            rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * UsernameAvailabilityValidator.avatarTintBlueDelta));
+            rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (AccountCreationDialog.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * UsernameAvailabilityValidator.avatarTintBlueDelta));
           }
           return;
         }
@@ -628,7 +628,7 @@ final class PrefixCodeDecoder {
         leftFallbackNeutralStepDownTintTicksSnapshot = MultiHandleSliderRenderer.avatarTintFadeTicks;
         MultiHandleSliderRenderer.avatarTintFadeTicks = MultiHandleSliderRenderer.avatarTintFadeTicks - 1;
         if (leftFallbackNeutralStepDownTintTicksSnapshot > 0) {
-          rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * UsernameAvailabilityValidator.avatarTintBlueDelta));
+          rj.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (AccountCreationDialog.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * UsernameAvailabilityValidator.avatarTintBlueDelta));
         }
         return;
     }

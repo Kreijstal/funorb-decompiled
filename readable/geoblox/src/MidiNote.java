@@ -36,7 +36,7 @@ final class MidiNote extends IntrusiveNode {
             MidiPcmStream.c(-11099);
             ValidatedTextInputWidget.b(true);
             TextLayout.a((byte) -121);
-            if (vh.g(-88)) {
+            if (UsernameSuggestionsPanel.g(-88)) {
                 CacheReference.field_q.writeCipherByte(1, (byte) -27);
                 NanoFrameTimer.a(-1, 0);
                 Bzip2DecoderState.closeSessionSocket((byte) -126);
@@ -48,7 +48,7 @@ final class MidiNote extends IntrusiveNode {
         MidiPcmStream.c(-11099);
         ValidatedTextInputWidget.b(true);
         TextLayout.a((byte) -121);
-        if (!vh.g(-88)) {
+        if (!UsernameSuggestionsPanel.g(-88)) {
             Bzip2DecoderState.closeSessionSocket((byte) -126);
             return;
         }

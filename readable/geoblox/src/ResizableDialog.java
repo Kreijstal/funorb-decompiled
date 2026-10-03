@@ -57,7 +57,7 @@ abstract class ResizableDialog extends FadingDialog {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 44) {
-            stackIn_4_0 = ei.a(false, false, param1);
+            stackIn_4_0 = AccountContentDialog.a(false, false, param1);
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;
@@ -274,7 +274,7 @@ abstract class ResizableDialog extends FadingDialog {
           var5 = new StringBuilder(var4);
           for (var6 = var2_int; var6 < var3; var6++) {
             var7 = param0.charAt(var6);
-            if (fb.a((char) var7, -47)) {
+            if (TextHotspotBounds.a((char) var7, -47)) {
               var8 = ValidatedTextInputWidget.a((char) var7, param1 - 239);
               if (var8 != 0) {
                 discarded$0 = var5.append((char) var8);
@@ -521,7 +521,7 @@ abstract class ResizableDialog extends FadingDialog {
           this.resizeTargetHeight = -34;
         }
         InstrumentPatch.a(id.field_c, -10 + this.widgetWidth, 35 + param2, 5 + param0, (byte) 107);
-        InstrumentPatch.a(fh.field_e, this.widgetWidth, -22 + (this.widgetHeight + param2), param0, (byte) 107);
+        InstrumentPatch.a(UnderlinedButtonRenderer.field_e, this.widgetWidth, -22 + (this.widgetHeight + param2), param0, (byte) 107);
         var4 = this.widgetHeight - 79;
         var5 = 169;
         var6 = 127;

@@ -386,7 +386,7 @@ final class DiskArchiveCache {
             WhirlpoolHash.field_d = new PcmStreamMixer();
             oh.field_a.b(WhirlpoolHash.field_d);
             PasswordWidgetRenderer.field_y = param3;
-            AsyncResourceDownloader.a(-15346, oc.field_c);
+            AsyncResourceDownloader.a(-15346, SpriteCheckboxRenderer.field_c);
             EmailValidator.a(j.field_gb, (byte) -67);
             CacheReference.field_p.b(param3);
         } catch (RuntimeException runtimeException) {

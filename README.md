@@ -23,6 +23,17 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 137,964 bindings,
 preserving 388 override relationships.
 
+Pass 113 names 20 account/widget classes and 234 fields, methods and parameters.
+`LoginPanel`, `AccountCreationForm`, `DisplayNamePanel` and
+`AccountCreationDialog` expose the account flow; `HotspotTextWidget` parses
+clickable text and `ProgressBarWidget` renders Q16 progress. Suggestion selection,
+more-suggestions requests and hotspot activation have complete named callback
+families. There are 9,152 guarded rules, 73,820 identifier edits, 189 renamed
+classes, one already meaningful `Geoblox` name and 113 opaque names. All 8,898
+previous rule objects, raw source and tool/probe pins stay unchanged. The existing
+seven native probes retain their original scopes; this naming pass adds no live
+account/UI or whole-game coverage.
+
 Pass 112 revisits proven exits after final guard/frame cleanup. Nine bodies in
 eight files lose 13 generated block labels and 20 lines, leaving 207 labels.
 Board reconciliation falls from 345 to 339 lines and 11 to 9 labels; the sorted

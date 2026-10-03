@@ -190,7 +190,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "error_js5crc");
                 if (null != textResourceBytes) {
-                  pf.js5CrcErrorText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  LoginPanel.js5CrcErrorText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "error_js5io");
                 if (textResourceBytes != null) {
@@ -214,7 +214,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "create_ineligible");
                 if (textResourceBytes != null) {
-                  hi.createIneligibleText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  DisplayNamePanel.createIneligibleText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "usernameprompt");
                 if (textResourceBytes != null) {
@@ -1660,11 +1660,11 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "create_password_tooltip");
                 if (null != textResourceBytes) {
-                  ij.createPasswordTooltipText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  FullscreenErrorDialog.createPasswordTooltipText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "create_password_hint");
                 if (textResourceBytes != null) {
-                  qh.createPasswordHintText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  AccountCreationForm.createPasswordHintText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "create_password_confirm_tooltip");
                 if (null != textResourceBytes) {
@@ -2103,7 +2103,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "menu");
                 if (textResourceBytes != null) {
-                  ij.menuText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  FullscreenErrorDialog.menuText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "selectlevel");
                 if (textResourceBytes != null) {
@@ -2825,7 +2825,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "fs_unavailable_try_signed_applet");
                 if (null != textResourceBytes) {
-                  ei.fullscreenUnavailableTrySignedAppletText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  AccountContentDialog.fullscreenUnavailableTrySignedAppletText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "fs_focus");
                 if (textResourceBytes != null) {
@@ -2961,7 +2961,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "createtouse");
                 if (null != textResourceBytes) {
-                  ni.createToUseText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  MessageDialogContent.createToUseText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "achievementsoffline");
                 if (textResourceBytes != null) {

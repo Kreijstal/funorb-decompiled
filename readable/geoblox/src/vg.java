@@ -4,7 +4,7 @@
 final class vg {
     static String field_b;
     static int archivePort;
-    static rl field_i;
+    static ProgressDialog field_i;
     private int field_h;
     static String pleaseWaitText;
     private long field_e;

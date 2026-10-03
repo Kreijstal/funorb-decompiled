@@ -81,30 +81,30 @@ final class al {
         var3 = param1;
         if (var3 != 4) {
           if (var3 == 3) {
-            td.playPcmSample(-348, fl.field_c[var2 + 13]);
+            ValidationIconWidget.playPcmSample(-348, fl.field_c[var2 + 13]);
           } else {
             if (var3 != 1) {
               if (var3 != 0) {
                 if (var3 == 6) {
-                  td.playPcmSample(-348, fl.field_c[var2 + 4]);
+                  ValidationIconWidget.playPcmSample(-348, fl.field_c[var2 + 4]);
                 } else {
                   if (5 == var3) {
-                    td.playPcmSample(-348, fl.field_c[16 + var2]);
+                    ValidationIconWidget.playPcmSample(-348, fl.field_c[16 + var2]);
                   } else {
                     if (var3 == 2) {
-                      td.playPcmSample(-348, fl.field_c[var2 + 19]);
+                      ValidationIconWidget.playPcmSample(-348, fl.field_c[var2 + 19]);
                     }
                   }
                 }
               } else {
-                td.playPcmSample(-348, fl.field_c[var2 + 1]);
+                ValidationIconWidget.playPcmSample(-348, fl.field_c[var2 + 1]);
               }
             } else {
-              td.playPcmSample(-348, fl.field_c[7 + var2]);
+              ValidationIconWidget.playPcmSample(-348, fl.field_c[7 + var2]);
             }
           }
         } else {
-          td.playPcmSample(-348, fl.field_c[10 + var2]);
+          ValidationIconWidget.playPcmSample(-348, fl.field_c[10 + var2]);
         }
     }
 
@@ -125,7 +125,7 @@ final class al {
             Throwable var2_ref = null;
             var7 = Geoblox.clientControlFlowFlag;
             try {
-              if (td.field_H) {
+              if (ValidationIconWidget.field_H) {
                 return true;
               }
               try {
@@ -173,7 +173,7 @@ final class al {
 
     final static String b(int param0) {
         if (!(IntrusiveDeque.field_d != kd.field_b)) {
-            return oc.field_a;
+            return SpriteCheckboxRenderer.field_a;
         }
         if (IntrusiveDeque.field_d == WidgetSkinState.field_g) {
             return DelayedPcmStream.field_k;

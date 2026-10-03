@@ -1,9 +1,37 @@
 # Readable GeoBlox
 
-The current export has 8,898 guarded naming rules: 169 classes, 1,106 fields,
-846 methods, 2,484 parameters and 4,293 local declarations. Both 303-file corpora
+The current export has 9,152 guarded naming rules: 189 classes, 1,187 fields,
+873 methods, 2,610 parameters and 4,293 local declarations. Both 303-file corpora
 compile, comparing 137,964 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
+
+## Current names (pass 113)
+
+This pass adds 20 account/widget class names and 234 field/method/parameter names,
+including constructor arguments. Class coverage is 189 semantic renames, one
+already meaningful `Geoblox` name and 113 opaque filenames. There are 73,820
+identifier edits: 1,855 additional bound occurrences and 19 constructor spellings.
+All 8,898 prior complete naming objects remain, and raw source, decompiler,
+naming tool, dependency and native-probe pins are unchanged.
+
+The account path now has `LoginPanel`, `DisplayNamePanel`, `AccountCreationForm`,
+`AccountCreationDialog`, `AccountContentDialog` and `Under13TermsPanel`.
+`UsernameSuggestionsPanel` uses `onSuggestionSelected` and
+`onMoreSuggestionsRequested`; each callback is named in its interface and both
+implementations. `HotspotTextWidget` parses `<hotspot=id>` markup into linked
+`TextHotspotBounds` and dispatches `onHotspotActivated` through another complete
+three-declaration family. `ValidationMessageWidget` and `ValidationIconWidget`
+render validation state. `ProgressDialog` owns a `ProgressBarWidget` whose
+`fillFractionQ16` controls bright/dim striped rendering.
+`LabeledChildWidget`, `MessageDialogContent`, `UnderlinedButtonRenderer`,
+`SpriteCheckboxRenderer` and `FullscreenErrorDialog` describe their instance roles.
+Mixed-purpose static helpers remain on the same owners.
+
+Regeneration compiles all 303 raw/readable sources and compares 137,964 bindings
+and 388 override relationships. Exact dictionary reversal and the seven existing
+native probes retain their previous validation scopes. This pass does not add
+live account/UI/assets/network/browser/phone coverage or reconstruct more control
+flow; there remain 207 block labels and six large labeled spans.
 
 ## Current reconstruction (pass 112)
 
@@ -38,7 +66,7 @@ NODE_PATH=/path/to/java-tools/node_modules JAVA_TOOL_OPTIONS=-XX:-UsePerfData \
   node readable/tests/test-geoblox-post-guard-source.mjs /path/to/java-tools
 ```
 
-## Class roles and the single preview (naming pass 111)
+## Earlier class roles and the single preview (naming pass 111)
 
 The canonical preview is `readable/geoblox/src` in this checkout. Update it with
 `node readable/reproduce-geoblox.mjs --update`; check it with `--check`. Do not
@@ -74,7 +102,7 @@ requires a separately verified literal-lookup transformation.
 The current raw tree is
 `3982781d068dcb3ecceebc8a2ee6f3da14e8a7119574068204ef70ef2bc04b1a`;
 the current readable tree is
-`ab46af3f937b8228344ef1f321f11a94a6a7f77680376666dda9c5aa17786ea0`.
+`093bdf691f6f30f5de0ef5e6a012b039c9ccbe81d433d86a185d58e912b37b1c`.
 The pinned decompiler-source SHA-256 is
 `f931fad10ba711145115262619cc04e5c81e13450de01a56d1c7c350f6c465b5`.
 All seven existing native/raw/readable probes pass with their pinned traces.

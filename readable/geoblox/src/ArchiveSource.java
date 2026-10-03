@@ -59,24 +59,24 @@ abstract class ArchiveSource {
           fa.field_c.writeBytes(param5, -97, param4, param2);
           fa.field_c.padZerosToPosition((byte) -84, var7_int);
           fa.field_c.encryptXteaBlocks(var12, (byte) -33);
-          if (!((vf.field_I != null) &&
-              (vf.field_I.bytes.length >= 100))) {
-            vf.field_I = new ByteArrayBuffer(100);
+          if (!((HotspotTextWidget.field_I != null) &&
+              (HotspotTextWidget.field_I.bytes.length >= 100))) {
+            HotspotTextWidget.field_I = new ByteArrayBuffer(100);
           }
-          vf.field_I.position = 0;
-          vf.field_I.writeByte((byte) -69, 10);
+          HotspotTextWidget.field_I.position = 0;
+          HotspotTextWidget.field_I.writeByte((byte) -69, 10);
           var10 = 0;
           var9 = var10;
           while (var10 < 4) {
-            vf.field_I.writeIntBE((byte) 95, var12[var10]);
+            HotspotTextWidget.field_I.writeIntBE((byte) 95, var12[var10]);
             var10++;
           }
           if (!param6) {
             return;
           }
-          vf.field_I.writeShortBE(param5, 28695);
-          vf.field_I.replaceWithModPowResult(0, param0, param1);
-          param3.writeBytes(vf.field_I.position, -97, vf.field_I.bytes, 0);
+          HotspotTextWidget.field_I.writeShortBE(param5, 28695);
+          HotspotTextWidget.field_I.replaceWithModPowResult(0, param0, param1);
+          param3.writeBytes(HotspotTextWidget.field_I.position, -97, HotspotTextWidget.field_I.bytes, 0);
           param3.writeBytes(fa.field_c.position, -97, fa.field_c.bytes, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

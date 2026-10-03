@@ -63,7 +63,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
             orbCoinSprite = (Sprite) null;
             var2 = tutorialStepId;
             if (var2 == 0) {
-                return vh.tutorialRotationMessage;
+                return UsernameSuggestionsPanel.tutorialRotationMessage;
             }
             if (var2 == 1) {
                 return oi.tutorialColourMatchMessage;
@@ -73,7 +73,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
                     return li.tutorialCompleteMessage;
                 }
                 if (var2 == 5) {
-                    return qh.tutorialFailedMessage;
+                    return AccountCreationForm.tutorialFailedMessage;
                 }
                 return null;
             }
@@ -81,7 +81,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
         }
         var2 = tutorialStepId;
         if (var2 == 0) {
-            return vh.tutorialRotationMessage;
+            return UsernameSuggestionsPanel.tutorialRotationMessage;
         }
         if (var2 == 1) {
             return oi.tutorialColourMatchMessage;
@@ -91,7 +91,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
                 return li.tutorialCompleteMessage;
             }
             if (var2 == 5) {
-                return qh.tutorialFailedMessage;
+                return AccountCreationForm.tutorialFailedMessage;
             }
             return null;
         }
@@ -156,15 +156,15 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
         int var6 = 0;
         String var7 = null;
         try {
-          hl.field_D[0] = DelegatingCanvas.field_d.nextInt();
-          hl.field_D[1] = DelegatingCanvas.field_d.nextInt();
-          hl.field_D[2] = (int)(ak.field_a >> 32);
-          hl.field_D[3] = (int)ak.field_a;
+          ProgressBarWidget.field_D[0] = DelegatingCanvas.field_d.nextInt();
+          ProgressBarWidget.field_D[1] = DelegatingCanvas.field_d.nextInt();
+          ProgressBarWidget.field_D[2] = (int)(ak.field_a >> 32);
+          ProgressBarWidget.field_D[3] = (int)ak.field_a;
           fc.field_d.position = 0;
-          fc.field_d.writeIntBE((byte) 95, hl.field_D[0]);
-          fc.field_d.writeIntBE((byte) 95, hl.field_D[1]);
-          fc.field_d.writeIntBE((byte) 95, hl.field_D[2]);
-          fc.field_d.writeIntBE((byte) 95, hl.field_D[3]);
+          fc.field_d.writeIntBE((byte) 95, ProgressBarWidget.field_D[0]);
+          fc.field_d.writeIntBE((byte) 95, ProgressBarWidget.field_D[1]);
+          fc.field_d.writeIntBE((byte) 95, ProgressBarWidget.field_D[2]);
+          fc.field_d.writeIntBE((byte) 95, ProgressBarWidget.field_D[3]);
           SpriteState.a(fc.field_d, true);
           fc.field_d.writeShortBE(param1, 28695);
           param3.writePayload(124, fc.field_d);
@@ -195,7 +195,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
             var6 = var6 | 16;
           }
           CacheReference.field_q.writeByte((byte) 127, var6);
-          var7 = s.a(-1, NodeHashTableIterator.c(111));
+          var7 = Under13TermsPanel.a(-1, NodeHashTableIterator.c(111));
           if (var7 == null) {
             var7 = "";
           }
@@ -338,13 +338,13 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
         if (param0 < 29) {
             orbCoinSprite = (Sprite) null;
             LoginPayloadKind.ensureAchievementStateRequested(9313);
-            if (!fh.c(-117)) {
+            if (!UnderlinedButtonRenderer.c(-117)) {
                 return hj.achievementMaskReceived ? true : false;
             }
             return true;
         }
         LoginPayloadKind.ensureAchievementStateRequested(9313);
-        if (fh.c(-117)) {
+        if (UnderlinedButtonRenderer.c(-117)) {
             return true;
         }
         if (!hj.achievementMaskReceived) {

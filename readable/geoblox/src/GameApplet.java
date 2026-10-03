@@ -380,7 +380,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                       var3_ref_Throwable = decompiledCaughtException;
                     }
                   }
-                  oc.a(75);
+                  SpriteCheckboxRenderer.a(75);
                   this.b(true);
                   SingleChildWidget.mainRasterBuffer = DropTargetWidget.createCanvasRasterBuffer(false, (java.awt.Component) ((Object) MessageDialog.gameCanvas), ok.field_c, AudioService.field_d);
                   this.initializeGame(117);
@@ -668,9 +668,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             queuedMeshFaceCount = -102;
           }
           var2_long = oa.a(param0 ^ 12526);
-          var4 = tl.field_l[ij.field_cb];
-          tl.field_l[ij.field_cb] = var2_long;
-          ij.field_cb = 31 & 1 + ij.field_cb;
+          var4 = tl.field_l[FullscreenErrorDialog.field_cb];
+          tl.field_l[FullscreenErrorDialog.field_cb] = var2_long;
+          FullscreenErrorDialog.field_cb = 31 & 1 + FullscreenErrorDialog.field_cb;
           if ((var4 != 0L) &&
               (var2_long > var4)) {
           }

@@ -7,7 +7,7 @@ final class PendingActionMarker extends IntrusiveNode {
     static int field_g;
 
     final static void a(byte param0) {
-        if (!hl.field_G) {
+        if (!ProgressBarWidget.field_G) {
             throw new IllegalStateException();
         }
         kf.field_e = true;

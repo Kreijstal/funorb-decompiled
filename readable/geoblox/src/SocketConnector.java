@@ -109,7 +109,7 @@ abstract class SocketConnector {
             field_a = 100;
           }
           archiveFileId = graphicsArchive.findFileId(resourceName, -110, archiveGroupId);
-          stackIn_3_0 = vh.a(archiveFileId, graphicsArchive, archiveGroupId, true);
+          stackIn_3_0 = UsernameSuggestionsPanel.a(archiveFileId, graphicsArchive, archiveGroupId, true);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -169,14 +169,14 @@ abstract class SocketConnector {
           UsernameAvailabilityQuery.field_l = param4;
           AchievementSubmission.field_i = new PcmResampler(22050, AudioOutput.sampleRateHz);
           ll.field_d = MusicScore.loadNamedScore(kf.field_c, "", "title_music_loop");
-          pi.field_S = MusicScore.loadNamedScore(kf.field_c, "", "game_over");
+          ValidationMessageWidget.field_S = MusicScore.loadNamedScore(kf.field_c, "", "game_over");
           IntrusiveNode.field_d = MusicScore.loadNamedScore(kf.field_c, "", "sun");
           ContentTransitionDialog.resultMusicTrack = MusicScore.loadNamedScore(kf.field_c, "", "bonus_bubble_jingle");
           te.field_c = new SoundSampleCache(param0, param2);
           PasswordWidgetRenderer.field_y.a(te.field_c, 0, -1, IntrusiveNode.field_d, UsernameAvailabilityQuery.field_l);
           EmailValidator.field_j[1] = true;
           PasswordWidgetRenderer.field_y.a(te.field_c, 0, -1, ContentTransitionDialog.resultMusicTrack, UsernameAvailabilityQuery.field_l);
-          PasswordWidgetRenderer.field_y.a(te.field_c, 0, -1, pi.field_S, UsernameAvailabilityQuery.field_l);
+          PasswordWidgetRenderer.field_y.a(te.field_c, 0, -1, ValidationMessageWidget.field_S, UsernameAvailabilityQuery.field_l);
           PasswordWidgetRenderer.field_y.a(te.field_c, 0, -1, ll.field_d, UsernameAvailabilityQuery.field_l);
           var5_int = 0;
           if (param1 < 69) {

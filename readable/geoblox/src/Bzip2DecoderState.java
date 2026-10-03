@@ -71,16 +71,16 @@ final class Bzip2DecoderState {
 
     final static void closeSessionSocket(byte methodGuard) {
         if (methodGuard < -113) {
-            if (!(oc.field_e == null)) {
-                oc.field_e.close(-122);
-                oc.field_e = null;
+            if (!(SpriteCheckboxRenderer.field_e == null)) {
+                SpriteCheckboxRenderer.field_e.close(-122);
+                SpriteCheckboxRenderer.field_e = null;
             }
             return;
         }
         avatarShockContactPending = true;
-        if (!(oc.field_e == null)) {
-            oc.field_e.close(-122);
-            oc.field_e = null;
+        if (!(SpriteCheckboxRenderer.field_e == null)) {
+            SpriteCheckboxRenderer.field_e.close(-122);
+            SpriteCheckboxRenderer.field_e = null;
         }
     }
 

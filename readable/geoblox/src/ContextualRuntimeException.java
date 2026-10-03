@@ -102,7 +102,7 @@ final class ContextualRuntimeException extends RuntimeException {
     }
 
     final static void recomputeSpawnReleaseInterval(boolean preserveReleaseQuota) {
-        int intervalTicks = (int)(201.0f / og.entityMotionSpeed * ij.spawnIntervalScale + 0.5f);
+        int intervalTicks = (int)(201.0f / og.entityMotionSpeed * FullscreenErrorDialog.spawnIntervalScale + 0.5f);
         kb.spawnReleaseIntervalTicks = intervalTicks;
         if (!preserveReleaseQuota) {
             releasesPerDifficultyStep = -10;

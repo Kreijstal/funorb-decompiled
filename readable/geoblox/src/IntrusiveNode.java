@@ -144,9 +144,9 @@ class IntrusiveNode {
           spriteDataBufferAlias.position = spriteBytes.length - 2;
           sb.decodedSpriteCount = spriteDataBufferAlias.readUnsignedShortBE(readGuard);
           DualLinkNode.decodedSpriteWidths = new int[sb.decodedSpriteCount];
-          hl.decodedSpriteHeights = new int[sb.decodedSpriteCount];
+          ProgressBarWidget.decodedSpriteHeights = new int[sb.decodedSpriteCount];
           DialogLayer.decodedSpriteHasNonOpaqueAlpha = new boolean[sb.decodedSpriteCount];
-          vf.decodedSpriteAlpha = new byte[sb.decodedSpriteCount][];
+          HotspotTextWidget.decodedSpriteAlpha = new byte[sb.decodedSpriteCount][];
           GameplaySession.decodedSpriteXOffsets = new int[sb.decodedSpriteCount];
           mj.decodedSpriteIndices = new byte[sb.decodedSpriteCount][];
           md.decodedSpriteYOffsets = new int[sb.decodedSpriteCount];
@@ -164,7 +164,7 @@ class IntrusiveNode {
             DualLinkNode.decodedSpriteWidths[spriteIndex] = spriteDataBuffer.readUnsignedShortBE(true);
           }
           for (spriteIndex = 0; spriteIndex < sb.decodedSpriteCount; spriteIndex++) {
-            hl.decodedSpriteHeights[spriteIndex] = spriteDataBuffer.readUnsignedShortBE(true);
+            ProgressBarWidget.decodedSpriteHeights[spriteIndex] = spriteDataBuffer.readUnsignedShortBE(true);
           }
           spriteDataBufferAlias.position = -(paletteSize * 3) + 3 - 8 * sb.decodedSpriteCount - 7 + spriteBytes.length;
           NanoFrameTimer.decodedSpritePalette = new int[paletteSize];
@@ -177,7 +177,7 @@ class IntrusiveNode {
           spriteDataBufferAlias.position = 0;
           for (spriteIndex = 0; spriteIndex < sb.decodedSpriteCount; spriteIndex++) {
             spriteWidth = DualLinkNode.decodedSpriteWidths[spriteIndex];
-            spriteHeight = hl.decodedSpriteHeights[spriteIndex];
+            spriteHeight = ProgressBarWidget.decodedSpriteHeights[spriteIndex];
             pixelCount = spriteWidth * spriteHeight;
             allocatedPaletteIndices = new byte[pixelCount];
             paletteIndicesForwarded = allocatedPaletteIndices;
@@ -186,7 +186,7 @@ class IntrusiveNode {
             allocatedAlphaPlane = new byte[pixelCount];
             alphaPlaneForwarded = allocatedAlphaPlane;
             alphaPlaneForUpdates = alphaPlaneForwarded;
-            vf.decodedSpriteAlpha[spriteIndex] = allocatedAlphaPlane;
+            HotspotTextWidget.decodedSpriteAlpha[spriteIndex] = allocatedAlphaPlane;
             hasNonOpaqueAlphaFlag = 0;
             storageFlags = spriteDataBufferAlias.readUnsignedByte((byte) 34);
             if ((storageFlags & 1) == 0) {

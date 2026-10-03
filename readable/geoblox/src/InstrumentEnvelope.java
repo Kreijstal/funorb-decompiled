@@ -28,7 +28,7 @@ final class InstrumentEnvelope {
     final static boolean b(int param0) {
         if (param0 != 13) {
             field_k = (String[]) null;
-            if (oc.field_e == null) {
+            if (SpriteCheckboxRenderer.field_e == null) {
                 return false;
             }
             if (PacketBuffer.field_l == eh.field_b) {
@@ -36,7 +36,7 @@ final class InstrumentEnvelope {
             }
             return false;
         }
-        if (oc.field_e == null) {
+        if (SpriteCheckboxRenderer.field_e == null) {
             return false;
         }
         if (PacketBuffer.field_l == eh.field_b) {

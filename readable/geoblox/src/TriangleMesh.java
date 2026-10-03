@@ -156,9 +156,9 @@ final class TriangleMesh {
               (param2 <= hg.field_a.length))) {
           hg.field_a = new int[param2 * 2];
         }
-        if (!((null != fb.field_m) &&
-              (fb.field_m.length >= param2))) {
-          fb.field_m = new int[param2 * 2];
+        if (!((null != TextHotspotBounds.field_m) &&
+              (TextHotspotBounds.field_m.length >= param2))) {
+          TextHotspotBounds.field_m = new int[param2 * 2];
         }
         if (!((null != NodeHashTableIterator.field_i) &&
               (param2 <= NodeHashTableIterator.field_i.length))) {
@@ -176,9 +176,9 @@ final class TriangleMesh {
               (AchievementQuery.field_i.length >= param2 + param1))) {
           AchievementQuery.field_i = new int[(param2 + param1) * 2];
         }
-        if (!((null != qh.field_C) &&
-              (qh.field_C.length >= param2))) {
-          qh.field_C = new boolean[2 * param2];
+        if (!((null != AccountCreationForm.field_C) &&
+              (AccountCreationForm.field_C.length >= param2))) {
+          AccountCreationForm.field_C = new boolean[2 * param2];
         }
         md.field_c = 0;
         va.field_b = -2147483648;
@@ -195,13 +195,13 @@ final class TriangleMesh {
         int pixelIndex = 0;
         Sprite[] sprites = new Sprite[sb.decodedSpriteCount];
         for (spriteIndex = 0; sb.decodedSpriteCount > spriteIndex; spriteIndex++) {
-            pixelCount = hl.decodedSpriteHeights[spriteIndex] * DualLinkNode.decodedSpriteWidths[spriteIndex];
+            pixelCount = ProgressBarWidget.decodedSpriteHeights[spriteIndex] * DualLinkNode.decodedSpriteWidths[spriteIndex];
             paletteIndices = mj.decodedSpriteIndices[spriteIndex];
             rgbPixels = new int[pixelCount];
             for (pixelIndex = 0; pixelIndex < pixelCount; pixelIndex++) {
                 rgbPixels[pixelIndex] = NanoFrameTimer.decodedSpritePalette[ProxySocketConnector.andInt((int) paletteIndices[pixelIndex], 255)];
             }
-            sprites[spriteIndex] = new Sprite(pg.decodedSpriteCanvasWidth, FadingDialog.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[spriteIndex], md.decodedSpriteYOffsets[spriteIndex], DualLinkNode.decodedSpriteWidths[spriteIndex], hl.decodedSpriteHeights[spriteIndex], rgbPixels);
+            sprites[spriteIndex] = new Sprite(pg.decodedSpriteCanvasWidth, FadingDialog.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[spriteIndex], md.decodedSpriteYOffsets[spriteIndex], DualLinkNode.decodedSpriteWidths[spriteIndex], ProgressBarWidget.decodedSpriteHeights[spriteIndex], rgbPixels);
         }
         if (methodGuard != 255) {
             screenTransitionTick = 40;

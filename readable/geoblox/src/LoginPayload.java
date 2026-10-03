@@ -17,7 +17,7 @@ abstract class LoginPayload {
                 spaceBackgroundSprite = (IndexedSprite) null;
             }
             param1.removeFocusListener(pg.pointerListener);
-            s.liveHeldPointerButton = 0;
+            Under13TermsPanel.liveHeldPointerButton = 0;
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "df.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -218,8 +218,8 @@ class TextInputRenderer extends TextWidgetRenderer {
             var12 = var12 + var11;
           } else {
             IntrusiveNodeHashTable.smallFont.drawCenteredText(w.mouseOverIconText, 315, var10, 0, -1);
-            if (fh.c(-94)) {
-              FadingDialog.uiPaletteFont.drawParagraph(ni.createToUseText, 125, 350, 395, 100, 0, -1, 1, 0, 26);
+            if (UnderlinedButtonRenderer.c(-94)) {
+              FadingDialog.uiPaletteFont.drawParagraph(MessageDialogContent.createToUseText, 125, 350, 395, 100, 0, -1, 1, 0, 26);
             }
           }
           if (param2 > -61) {

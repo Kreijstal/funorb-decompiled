@@ -11,7 +11,7 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
         SecondaryDeque.spawnQueue.moveAllTo(SecondaryNodeDeque.availableEntities, (byte) -70);
         DelegatingCanvas.transientEntities.moveAllTo(SecondaryNodeDeque.availableEntities, (byte) -70);
         kc.ticksSinceLastEntityRelease = 0;
-        vf.spriteScratchRaster.setAsRasterTarget();
+        HotspotTextWidget.spriteScratchRaster.setAsRasterTarget();
         SoftwareRasterizer.clearFramebuffer();
         SecondaryDeque.contactProbeRaster.setAsRasterTarget();
         SoftwareRasterizer.clearFramebuffer();
@@ -22,7 +22,7 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
         fa.entitiesDetachedThisTick = false;
         w.avatarShockPending = false;
         wb.newAttachmentCount = 0;
-        pf.endingEntityScanClear = false;
+        LoginPanel.endingEntityScanClear = false;
         re.connectivityDirty = false;
         if (param0 != -39) {
             PointerInputListener.a((byte) 97);
@@ -98,7 +98,7 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
         try {
           if (null != pg.pointerListener) {
             GameplaySession.pointerIdleTicks = 0;
-            s.liveHeldPointerButton = 0;
+            Under13TermsPanel.liveHeldPointerButton = 0;
             fc.pointerActivityPending = true;
             eventModifiers = event.getModifiers();
             if (0 == (eventModifiers & 4)) {
@@ -187,14 +187,14 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
           if (pg.pointerListener != null) {
             GameplaySession.pointerIdleTicks = 0;
             ah.livePointerPressX = event.getX();
-            hi.livePointerPressY = event.getY();
+            DisplayNamePanel.livePointerPressY = event.getY();
             oa.a(-12520);
             if (javax.swing.SwingUtilities.isRightMouseButton(event)) {
               ClientSessionSnapshot.pendingPointerPressButton = 2;
-              s.liveHeldPointerButton = 2;
+              Under13TermsPanel.liveHeldPointerButton = 2;
             } else {
               ClientSessionSnapshot.pendingPointerPressButton = 1;
-              s.liveHeldPointerButton = 1;
+              Under13TermsPanel.liveHeldPointerButton = 1;
             }
             eventModifiers = event.getModifiers();
             if ((8 & eventModifiers) == 0) {
@@ -234,7 +234,7 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
           if (null == pg.pointerListener) {
             return;
           }
-          s.liveHeldPointerButton = 0;
+          Under13TermsPanel.liveHeldPointerButton = 0;
           return;
         } catch (java.lang.RuntimeException callbackFailure) {
           caughtCallbackFailure = callbackFailure;

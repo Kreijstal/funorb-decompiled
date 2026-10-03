@@ -232,7 +232,7 @@ final class ul {
             var2 = new Sprite(param1.getNamedFile(0, "", "final_frame.jpg"), (java.awt.Component) ((Object) MessageDialog.gameCanvas));
             var3 = var2.width;
             var4 = var2.height;
-            oc.b(param0 + 21619);
+            SpriteCheckboxRenderer.b(param0 + 21619);
             bk.field_b = new Sprite(var3, 3 * var4 / 4);
             bk.field_b.setAsRasterTarget();
             var2.drawUnmasked(0, 0);

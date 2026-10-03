@@ -24,7 +24,7 @@ abstract class SpriteState extends DualLinkNode {
         int var3 = 0;
         var3 = Geoblox.clientControlFlowFlag;
         try {
-          pf.field_O = param1;
+          LoginPanel.field_O = param1;
           var2 = ih.a(122, "achievement_names,0");
           if (null != var2) {
             pg.achievementTitles[0] = EmailValidator.decodeTextBytes(1, var2);
@@ -242,7 +242,7 @@ abstract class SpriteState extends DualLinkNode {
           }
           var2 = ih.a(121, "waitingForPumpkin");
           if (var2 != null) {
-            s.field_F = EmailValidator.decodeTextBytes(1, var2);
+            Under13TermsPanel.field_F = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = ih.a(121, "loadingPumpkin");
           if (var2 != null) {
@@ -254,7 +254,7 @@ abstract class SpriteState extends DualLinkNode {
           }
           var2 = ih.a(126, "tutorial1");
           if (null != var2) {
-            vh.tutorialRotationMessage = EmailValidator.decodeTextBytes(1, var2);
+            UsernameSuggestionsPanel.tutorialRotationMessage = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = ih.a(127, "tutorial2");
           if (var2 != null) {
@@ -270,7 +270,7 @@ abstract class SpriteState extends DualLinkNode {
           }
           var2 = ih.a(120, "tutorial5");
           if (null != var2) {
-            qh.tutorialFailedMessage = EmailValidator.decodeTextBytes(1, var2);
+            AccountCreationForm.tutorialFailedMessage = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = ih.a(123, "cont");
           if (null != var2) {
@@ -350,7 +350,7 @@ abstract class SpriteState extends DualLinkNode {
           }
           var2 = ih.a(125, "youAreNotLoggedIn");
           if (null != var2) {
-            r.field_sb = EmailValidator.decodeTextBytes(1, var2);
+            AccountCreationDialog.field_sb = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = ih.a(120, "alternatively");
           if (var2 != null) {
@@ -368,7 +368,7 @@ abstract class SpriteState extends DualLinkNode {
           if (null != var2) {
             SocketConnector.swapRotationControlsKeyCode = var2[0] & 255;
           }
-          pf.field_O = null;
+          LoginPanel.field_O = null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;

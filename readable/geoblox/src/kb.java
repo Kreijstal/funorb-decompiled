@@ -71,7 +71,7 @@ final class kb {
     }
 
     final static void a(int param0) {
-        if (!hl.field_G) {
+        if (!ProgressBarWidget.field_G) {
             throw new IllegalStateException();
         }
         kf.field_e = true;
@@ -95,7 +95,7 @@ final class kb {
         if (null != kd.field_e) {
             kd.field_e.settleDialogAnimations(0);
             if (vg.field_i != null) {
-                vg.field_i.m(23181);
+                vg.field_i.stopNormalAnimation(23181);
                 eh.a((byte) -2);
                 var1 = -121 % ((-38 - param0) / 59);
                 return;
@@ -109,7 +109,7 @@ final class kb {
             var1 = -121 % ((-38 - param0) / 59);
             return;
         }
-        vg.field_i.m(23181);
+        vg.field_i.stopNormalAnimation(23181);
         eh.a((byte) -2);
         var1 = -121 % ((-38 - param0) / 59);
     }

@@ -31,7 +31,7 @@ final class AlternateLongAndTextLoginPayload extends LongAndTextLoginPayload {
           }
           var2 = AchievementQuery.a("jagex-last-login-method", applet, -114);
           if (var2 == null) {
-            stackIn_5_0 = td.field_I;
+            stackIn_5_0 = ValidationIconWidget.field_I;
             return stackIn_5_0;
           }
           var3 = ak.a(false);
@@ -42,7 +42,7 @@ final class AlternateLongAndTextLoginPayload extends LongAndTextLoginPayload {
               return stackIn_11_0;
             }
           }
-          stackIn_14_0 = td.field_I;
+          stackIn_14_0 = ValidationIconWidget.field_I;
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -70,9 +70,9 @@ final class AlternateLongAndTextLoginPayload extends LongAndTextLoginPayload {
     final LoginPayloadKind payloadKind(byte methodGuard) {
         if (methodGuard != -32) {
             this.payloadKind((byte) 104);
-            return vh.field_D;
+            return UsernameSuggestionsPanel.field_D;
         }
-        return vh.field_D;
+        return UsernameSuggestionsPanel.field_D;
     }
 
     static {

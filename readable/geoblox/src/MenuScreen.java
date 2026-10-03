@@ -95,16 +95,16 @@ abstract class MenuScreen {
             } else {
                 this.activateMenuItem(itemIndex, (byte) -2);
             }
-            s.menuPointerRepeatCountdown = lj.menuPointerInitialRepeatDelay;
+            Under13TermsPanel.menuPointerRepeatCountdown = lj.menuPointerInitialRepeatDelay;
         } else {
-            s.menuPointerRepeatCountdown = s.menuPointerRepeatCountdown - 1;
-            if (s.menuPointerRepeatCountdown <= 0) {
+            Under13TermsPanel.menuPointerRepeatCountdown = Under13TermsPanel.menuPointerRepeatCountdown - 1;
+            if (Under13TermsPanel.menuPointerRepeatCountdown <= 0) {
                 if (pointerButton == 1) {
                     this.activateMenuItem(itemIndex, (byte) -2);
                 } else {
                     this.decreaseMenuValue(itemIndex, (byte) 6);
                 }
-                s.menuPointerRepeatCountdown = CacheReference.menuPointerRepeatInterval;
+                Under13TermsPanel.menuPointerRepeatCountdown = CacheReference.menuPointerRepeatInterval;
             }
         }
         if (initialClick) {

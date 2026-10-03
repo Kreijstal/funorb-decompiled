@@ -18,7 +18,7 @@ final class nd {
           LoginPayloadKind.field_a = param5;
         }
         if (ProxyAuthenticationRequiredException.field_a >= param5) {
-          fb.field_m[md.field_c] = param3;
+          TextHotspotBounds.field_m[md.field_c] = param3;
           NodeHashTableIterator.field_i[md.field_c] = param4;
           FrameTimer.field_b[md.field_c] = param0;
           var6 = param0 + (param4 + param3);
@@ -41,7 +41,7 @@ final class nd {
           return;
         }
         va.field_b = param5;
-        fb.field_m[md.field_c] = param3;
+        TextHotspotBounds.field_m[md.field_c] = param3;
         NodeHashTableIterator.field_i[md.field_c] = param4;
         FrameTimer.field_b[md.field_c] = param0;
         var6 = param0 + (param4 + param3);

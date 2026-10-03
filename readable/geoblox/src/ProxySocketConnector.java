@@ -18,7 +18,7 @@ final class ProxySocketConnector extends SocketConnector {
           field_m = (ResourceArchive) null;
         }
         if (GameScreen.selectedThemeId == 4) {
-          ec.selectedThemeForeground = hi.bakingForegroundSprite;
+          ec.selectedThemeForeground = DisplayNamePanel.bakingForegroundSprite;
           mf.selectedThemeBackground = ca.bakingBackgroundSprite;
         } else {
           if (GameScreen.selectedThemeId == 1) {
@@ -33,12 +33,12 @@ final class ProxySocketConnector extends SocketConnector {
                 if (6 != GameScreen.selectedThemeId) {
                   if (GameScreen.selectedThemeId != 5) {
                     if (2 == GameScreen.selectedThemeId) {
-                      mf.selectedThemeBackground = pi.sweetsBackgroundSprite;
+                      mf.selectedThemeBackground = ValidationMessageWidget.sweetsBackgroundSprite;
                       ec.selectedThemeForeground = lb.sweetsForegroundSprite;
                     }
                   } else {
                     mf.selectedThemeBackground = AlternateLongAndTextLoginPayload.sportsBackgroundSprite;
-                    ec.selectedThemeForeground = hd.sportsForegroundSprite;
+                    ec.selectedThemeForeground = LabeledChildWidget.sportsForegroundSprite;
                   }
                 } else {
                   ec.selectedThemeForeground = fl.spaceForegroundSprite;

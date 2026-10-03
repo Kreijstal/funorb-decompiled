@@ -52,7 +52,7 @@ abstract class CacheReference extends DualLinkNode {
             int var5_int = 103 / ((param0 - 70) / 34);
             ih.field_c.complete((byte) -126, false);
             IndexedSpriteState.a((byte) 103, param1, param4, param3);
-            qh.h((byte) -121);
+            AccountCreationForm.h((byte) -121);
             kd.field_b = DiskCacheWorker.field_l;
             WidgetSkinState.field_g = DiskCacheWorker.field_l;
         } catch (RuntimeException runtimeException) {

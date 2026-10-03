@@ -157,7 +157,7 @@ final class StatefulWidgetRenderer extends TextWidgetRenderer {
         }
         kd.field_e.hideAllDialogs(10936);
         if (!(null != vg.field_i)) {
-            vg.field_i = new rl(kd.field_e, TextWidgetRenderer.field_d);
+            vg.field_i = new ProgressDialog(kd.field_e, TextWidgetRenderer.field_d);
         }
         kd.field_e.showDialog(false, vg.field_i);
     }

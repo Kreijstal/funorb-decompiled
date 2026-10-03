@@ -101,10 +101,10 @@ final class ck {
             selectedMesh = ArchiveIndex.logoMeshes[selectedMeshIndex];
             Geoblox.prepareLogoMeshRotation((byte) -112, selectedMeshIndex);
             for (translationComponentIndex = 0; translationComponentIndex < 3; translationComponentIndex++) {
-              TextLayoutLine.meshModelTransform[translationComponentIndex] = TextLayoutLine.meshModelTransform[translationComponentIndex] + pi.logoMeshCenters[drawOrderIndexOrFinalGuardQuotient][translationComponentIndex];
+              TextLayoutLine.meshModelTransform[translationComponentIndex] = TextLayoutLine.meshModelTransform[translationComponentIndex] + ValidationMessageWidget.logoMeshCenters[drawOrderIndexOrFinalGuardQuotient][translationComponentIndex];
             }
             AchievementSubmission.projectMeshAndQueueFaces(IntKeyLookup.meshCameraTransform, TextLayoutLine.meshModelTransform, selectedMesh, true, false, false, true);
-            hi.renderLitQueuedMeshFaces(halfVectorZQ8, cameraDepthBasisYQ14OrLightDirectionZQ8, meshDepthFromYQ16OrHalfVectorXQ8, 6562, boundsCenterZOrLightDirectionXQ8, selectedMesh, meshDepthFromZQ16OrHalfVectorYQ8, cameraDepthBasisXQ14OrLightDirectionYQ8);
+            DisplayNamePanel.renderLitQueuedMeshFaces(halfVectorZQ8, cameraDepthBasisYQ14OrLightDirectionZQ8, meshDepthFromYQ16OrHalfVectorXQ8, 6562, boundsCenterZOrLightDirectionXQ8, selectedMesh, meshDepthFromZQ16OrHalfVectorYQ8, cameraDepthBasisXQ14OrLightDirectionYQ8);
           }
           drawOrderIndexOrFinalGuardQuotient = 123 / ((48 - methodGuard) / 59);
           return;
@@ -135,14 +135,14 @@ final class ck {
             if ((InstrumentPatch.field_n != null) &&
                 (InstrumentPatch.field_n.focusLost)) {
               jk.a((byte) -87);
-              oh.field_b.showDialog(false, new ij(oh.field_b, ei.field_hb));
+              oh.field_b.showDialog(false, new FullscreenErrorDialog(oh.field_b, AccountContentDialog.field_hb));
             }
             return;
           }
           if (param0 != 1) {
             ck.renderLogoMeshes((byte) 8);
           }
-          oh.field_b.processPointerFrame(true, 127, TextLayout.field_c, ni.field_I);
+          oh.field_b.processPointerFrame(true, 127, TextLayout.field_c, MessageDialogContent.field_I);
           oh.field_b.advanceDialogAnimations(-50);
           while (hh.pollKeyboardEvent(125)) {
             oh.field_b.a((byte) -126, te.currentKeyboardEventCharacter, ki.currentKeyboardEventCode);

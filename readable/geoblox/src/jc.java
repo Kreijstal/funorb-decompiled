@@ -14,12 +14,12 @@ final class jc {
           MenuScreen.avatarFeedbackFrameBase = 36;
           LimitedRandomAccessFile.avatarFeedbackHoldTicks = 110;
           nd.avatarFeedbackModeId = 6;
-          td.playPcmSample(-348, fl.field_c[23]);
+          ValidationIconWidget.playPcmSample(-348, fl.field_c[23]);
         }
         if (LimitedRandomAccessFile.avatarFeedbackHoldTicks > 0) {
           if (feedbackRequestId == 3) {
             wa.avatarShockEffectTicks = 50;
-            td.playPcmSample(-348, fl.field_c[27]);
+            ValidationIconWidget.playPcmSample(-348, fl.field_c[27]);
           }
         } else {
           if (!clearSpriteGuard) {
@@ -34,7 +34,7 @@ final class jc {
                     wa.avatarShockEffectTicks = 50;
                     LimitedRandomAccessFile.avatarFeedbackHoldTicks = 110;
                     nd.avatarFeedbackModeId = 3;
-                    td.playPcmSample(-348, fl.field_c[27]);
+                    ValidationIconWidget.playPcmSample(-348, fl.field_c[27]);
                   } else {
                     if (feedbackRequestId == 4) {
                       LimitedRandomAccessFile.avatarFeedbackHoldTicks = 110;
@@ -45,7 +45,7 @@ final class jc {
                         LimitedRandomAccessFile.avatarFeedbackHoldTicks = 110;
                         nd.avatarFeedbackModeId = 5;
                         MenuScreen.avatarFeedbackFrameBase = 30;
-                        td.playPcmSample(-348, fl.field_c[24]);
+                        ValidationIconWidget.playPcmSample(-348, fl.field_c[24]);
                       }
                     }
                   }
@@ -54,7 +54,7 @@ final class jc {
                       (MenuScreen.avatarFeedbackFrameBase != 24) &&
                       (30 != MenuScreen.avatarFeedbackFrameBase) &&
                       (36 != MenuScreen.avatarFeedbackFrameBase)) {
-                    td.playPcmSample(-348, fl.field_c[26]);
+                    ValidationIconWidget.playPcmSample(-348, fl.field_c[26]);
                   }
                   nd.avatarFeedbackModeId = 2;
                   MenuScreen.avatarFeedbackFrameBase = 12;
@@ -65,7 +65,7 @@ final class jc {
                   (24 != MenuScreen.avatarFeedbackFrameBase) &&
                   (MenuScreen.avatarFeedbackFrameBase != 30) &&
                   (MenuScreen.avatarFeedbackFrameBase != 36)) {
-                td.playPcmSample(-348, fl.field_c[25]);
+                ValidationIconWidget.playPcmSample(-348, fl.field_c[25]);
               }
               MenuScreen.avatarFeedbackFrameBase = 0;
               nd.avatarFeedbackModeId = 0;
@@ -77,7 +77,7 @@ final class jc {
                   (24 != MenuScreen.avatarFeedbackFrameBase) &&
                   (MenuScreen.avatarFeedbackFrameBase != 30) &&
                   (MenuScreen.avatarFeedbackFrameBase != 36)) {
-                td.playPcmSample(-348, fl.field_c[25]);
+                ValidationIconWidget.playPcmSample(-348, fl.field_c[25]);
               }
               MenuScreen.avatarFeedbackFrameBase = 0;
               nd.avatarFeedbackModeId = 0;
@@ -92,7 +92,7 @@ final class jc {
                     wa.avatarShockEffectTicks = 50;
                     LimitedRandomAccessFile.avatarFeedbackHoldTicks = 110;
                     nd.avatarFeedbackModeId = 3;
-                    td.playPcmSample(-348, fl.field_c[27]);
+                    ValidationIconWidget.playPcmSample(-348, fl.field_c[27]);
                   } else {
                     if (feedbackRequestId == 4) {
                       LimitedRandomAccessFile.avatarFeedbackHoldTicks = 110;
@@ -103,7 +103,7 @@ final class jc {
                         LimitedRandomAccessFile.avatarFeedbackHoldTicks = 110;
                         nd.avatarFeedbackModeId = 5;
                         MenuScreen.avatarFeedbackFrameBase = 30;
-                        td.playPcmSample(-348, fl.field_c[24]);
+                        ValidationIconWidget.playPcmSample(-348, fl.field_c[24]);
                       }
                     }
                   }
@@ -112,7 +112,7 @@ final class jc {
                       (MenuScreen.avatarFeedbackFrameBase != 24) &&
                       (30 != MenuScreen.avatarFeedbackFrameBase) &&
                       (36 != MenuScreen.avatarFeedbackFrameBase)) {
-                    td.playPcmSample(-348, fl.field_c[26]);
+                    ValidationIconWidget.playPcmSample(-348, fl.field_c[26]);
                   }
                   nd.avatarFeedbackModeId = 2;
                   MenuScreen.avatarFeedbackFrameBase = 12;
@@ -155,7 +155,7 @@ final class jc {
           materials = new MeshMaterial[materialCount];
           for (materialIndex = 0; materialCount > materialIndex; materialIndex++) {
             if (!TextInputRenderer.a((byte) 71, input)) {
-              referencedMaterialIndex = input.readBits((byte) -17, td.a(materialIndex - 1, (byte) 66));
+              referencedMaterialIndex = input.readBits((byte) -17, ValidationIconWidget.a(materialIndex - 1, (byte) 66));
               materials[materialIndex] = materials[referencedMaterialIndex];
             } else {
               newMaterial = new MeshMaterial();

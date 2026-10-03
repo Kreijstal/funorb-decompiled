@@ -83,20 +83,20 @@ final class ih {
         var26 = null;
         var27 = Geoblox.clientControlFlowFlag;
         try {
-          var4_int = contactX - vf.spriteScratchRaster.fullWidth / 2;
-          var4_int = var4_int + vf.spriteScratchRaster.trimX;
-          var5 = -(vf.spriteScratchRaster.fullHeight / 2) + contactY;
-          var5 = var5 + vf.spriteScratchRaster.trimY;
+          var4_int = contactX - HotspotTextWidget.spriteScratchRaster.fullWidth / 2;
+          var4_int = var4_int + HotspotTextWidget.spriteScratchRaster.trimX;
+          var5 = -(HotspotTextWidget.spriteScratchRaster.fullHeight / 2) + contactY;
+          var5 = var5 + HotspotTextWidget.spriteScratchRaster.trimY;
           var6 = -var4_int + bk.boardOwnershipRaster.trimX;
           var7 = bk.boardOwnershipRaster.trimY - var5;
-          var8 = vf.spriteScratchRaster.width;
+          var8 = HotspotTextWidget.spriteScratchRaster.width;
           if (var8 <= var6) {
             stackIn_4_0 = 0;
           } else {
             stackIn_4_0 = bk.boardOwnershipRaster.width;
           }
           var9 = stackIn_4_0;
-          var10 = vf.spriteScratchRaster.height;
+          var10 = HotspotTextWidget.spriteScratchRaster.height;
           if (var7 >= var10) {
             stackIn_7_0 = 0;
           } else {
@@ -121,7 +121,7 @@ final class ih {
           var17 = -var14 + var8;
           var18 = var12 + (-var6 + (-var7 + var13) * var9);
           var19 = -var14 + var9;
-          var34 = vf.spriteScratchRaster.pixels;
+          var34 = HotspotTextWidget.spriteScratchRaster.pixels;
           var35 = bk.boardOwnershipRaster.pixels;
           for (var22 = var15; 0 < var22; var22--) {
             for (var23 = var14; var23 > 0; var23--) {
@@ -194,7 +194,7 @@ final class ih {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > 119) {
-            stackIn_4_0 = pf.field_O.getNamedFile(0, param1, "");
+            stackIn_4_0 = LoginPanel.field_O.getNamedFile(0, param1, "");
             return stackIn_4_0;
           }
           stackIn_2_0 = (byte[]) null;

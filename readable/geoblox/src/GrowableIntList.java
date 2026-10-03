@@ -118,7 +118,7 @@ final class GrowableIntList {
     }
 
     final static void a(java.applet.Applet param0, byte param1) {
-        td.field_H = true;
+        ValidationIconWidget.field_H = true;
         String var2 = "tuhstatbut";
         String var3 = "rvnadlm";
         long var4 = -1L;

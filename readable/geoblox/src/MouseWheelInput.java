@@ -5,7 +5,7 @@ abstract class MouseWheelInput {
     static int field_a;
     static AchievementQuery achievementStateQuery;
     static Sprite[] field_e;
-    static hi field_d;
+    static DisplayNamePanel field_d;
     static int[] secondVertexTransformedZ;
 
     abstract void detachWheelListener(java.awt.Component component, byte methodGuard);

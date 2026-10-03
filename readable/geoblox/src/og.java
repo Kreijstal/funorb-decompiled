@@ -162,14 +162,14 @@ final class og extends DualLinkNode {
     }
 
     final static void a(int param0, String param1, boolean param2, boolean param3) {
-        fh.b(-6011);
+        UnderlinedButtonRenderer.b(-6011);
         kd.field_e.hideAllDialogs(10936);
         if (param0 != 2274) {
             return;
         }
         try {
-            SpriteButtonRenderer.field_t = new pf(b.field_a, (String) null, AgeValidator.field_i, param2, param3);
-            ButtonWidget.field_C = new ei(kd.field_e, SpriteButtonRenderer.field_t);
+            SpriteButtonRenderer.field_t = new LoginPanel(b.field_a, (String) null, AgeValidator.field_i, param2, param3);
+            ButtonWidget.field_C = new AccountContentDialog(kd.field_e, SpriteButtonRenderer.field_t);
             kd.field_e.showDialog(false, ButtonWidget.field_C);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "og.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');

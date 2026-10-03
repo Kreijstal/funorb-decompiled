@@ -191,7 +191,7 @@ final class NanoFrameTimer extends FrameTimer {
         try {
             IOException iOException = null;
             Throwable decompiledCaughtException = null;
-            if (null != oc.field_e) {
+            if (null != SpriteCheckboxRenderer.field_e) {
               if (!((param1 >= 0) &&
                   (PacketBuffer.field_l != eh.field_b))) {
                 if ((0 == CacheReference.field_q.position) &&
@@ -200,7 +200,7 @@ final class NanoFrameTimer extends FrameTimer {
                 }
                 if (param0 > ~CacheReference.field_q.position) {
                   try {
-                    oc.field_e.enqueueWrite(100, 0, CacheReference.field_q.position, CacheReference.field_q.bytes);
+                    SpriteCheckboxRenderer.field_e.enqueueWrite(100, 0, CacheReference.field_q.position, CacheReference.field_q.bytes);
                     v.field_r = oa.a(-12520);
                   } catch (java.io.IOException decompiledCaughtParameter0) {
                     decompiledCaughtException = decompiledCaughtParameter0;

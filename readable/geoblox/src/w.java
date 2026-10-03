@@ -101,7 +101,7 @@ final class w {
           }
           archiveGroupId = glyphGraphicsArchive.findGroupId((byte) 127, groupName);
           archiveFileId = glyphGraphicsArchive.findFileId(resourceName, -107, archiveGroupId);
-          fontBeforeReturn = pi.loadPaletteFontById(fontMetricsArchive, archiveGroupId, -128, glyphGraphicsArchive, archiveFileId);
+          fontBeforeReturn = ValidationMessageWidget.loadPaletteFontById(fontMetricsArchive, archiveGroupId, -128, glyphGraphicsArchive, archiveFileId);
           return fontBeforeReturn;
         } catch (java.lang.RuntimeException fontFailure) {
           caughtFontFailure = fontFailure;
@@ -155,7 +155,7 @@ final class w {
                 PacketBuffer.field_l = AchievementQuery.field_h;
             } else {
                 try {
-                    oc.field_e = new BufferedSocket((java.net.Socket) (NetworkArchiveRequest.field_B.result), GameplayEntity.field_D);
+                    SpriteCheckboxRenderer.field_e = new BufferedSocket((java.net.Socket) (NetworkArchiveRequest.field_B.result), GameplayEntity.field_D);
                     var4 = eh.field_d;
                     var5 = var4;
                     CacheReference.field_q.position = 0;

@@ -4,10 +4,10 @@
 final class mc {
     static int pointerPressXSnapshot;
 
-    final static boolean a(String param0, String param1, int param2, qh param3, int param4, boolean param5, String param6) {
-        r var7 = null;
+    final static boolean a(String param0, String param1, int param2, AccountCreationForm param3, int param4, boolean param5, String param6) {
+        AccountCreationDialog var7 = null;
         RuntimeException var7_ref = null;
-        r var8 = null;
+        AccountCreationDialog var8 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -22,14 +22,14 @@ final class mc {
           if (kd.field_b != DiskCacheWorker.field_l) {
             return false;
           }
-          var8 = new r(kd.field_e, param3);
+          var8 = new AccountCreationDialog(kd.field_e, param3);
           var7 = var8;
           kd.field_e.showDialog(false, var8);
           if (param4 != 0) {
             return false;
           }
           if (kf.a(122)) {
-            var8.q(12086);
+            var8.showIneligibleResult(12086);
             return true;
           }
           CachedArchiveSource.field_s = param5;
@@ -38,7 +38,7 @@ final class mc {
           ResourceArchive.field_i = param1;
           kd.field_b = IntrusiveDeque.field_d;
           ByteStorage.field_a = param6;
-          oc.field_a = param0;
+          SpriteCheckboxRenderer.field_a = param0;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -78,7 +78,7 @@ final class mc {
         pointerMonitor = pg.pointerListener;
         synchronized (pointerMonitor) {
           GameplaySession.pointerIdleTicks = GameplaySession.pointerIdleTicks + 1;
-          gf.heldPointerButtonSnapshot = s.liveHeldPointerButton;
+          gf.heldPointerButtonSnapshot = Under13TermsPanel.liveHeldPointerButton;
           if (methodGuard >= -126) {
             pointerPressXSnapshot = -77;
           }
@@ -88,7 +88,7 @@ final class mc {
           fc.pointerActivityPending = false;
           CheckboxRenderer.pointerPressButtonSnapshot = ClientSessionSnapshot.pendingPointerPressButton;
           pointerPressXSnapshot = ah.livePointerPressX;
-          FullscreenFocusCanvas.pointerPressYSnapshot = hi.livePointerPressY;
+          FullscreenFocusCanvas.pointerPressYSnapshot = DisplayNamePanel.livePointerPressY;
           ClientSessionSnapshot.pendingPointerPressButton = 0;
         }
     }

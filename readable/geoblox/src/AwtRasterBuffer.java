@@ -17,7 +17,7 @@ abstract class AwtRasterBuffer {
 
     final static Sprite buildFirstRgbSpriteFromDecodedSheet(byte methodGuard) {
         int pixelIndex = 0;
-        int pixelCount = DualLinkNode.decodedSpriteWidths[0] * hl.decodedSpriteHeights[0];
+        int pixelCount = DualLinkNode.decodedSpriteWidths[0] * ProgressBarWidget.decodedSpriteHeights[0];
         byte[] paletteIndices = mj.decodedSpriteIndices[0];
         int[] rgbPixels = new int[pixelCount];
         if (methodGuard != -60) {
@@ -27,7 +27,7 @@ abstract class AwtRasterBuffer {
         for (pixelIndex = 0; pixelIndex < pixelCount; pixelIndex++) {
             rgbPixels[pixelIndex] = NanoFrameTimer.decodedSpritePalette[ProxySocketConnector.andInt(255, (int) paletteIndices[pixelIndex])];
         }
-        Sprite sprite = new Sprite(pg.decodedSpriteCanvasWidth, FadingDialog.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[0], md.decodedSpriteYOffsets[0], DualLinkNode.decodedSpriteWidths[0], hl.decodedSpriteHeights[0], rgbPixels);
+        Sprite sprite = new Sprite(pg.decodedSpriteCanvasWidth, FadingDialog.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[0], md.decodedSpriteYOffsets[0], DualLinkNode.decodedSpriteWidths[0], ProgressBarWidget.decodedSpriteHeights[0], rgbPixels);
         MidiPcmStream.clearDecodedSpriteWorkingArrays(true);
         return sprite;
     }

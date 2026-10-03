@@ -116,7 +116,7 @@ final class ab {
     }
 
     final static IndexedSprite buildFirstIndexedSpriteFromDecodedSheet(int methodGuard) {
-        IndexedSprite sprite = new IndexedSprite(pg.decodedSpriteCanvasWidth, FadingDialog.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[0], md.decodedSpriteYOffsets[0], DualLinkNode.decodedSpriteWidths[0], hl.decodedSpriteHeights[0], mj.decodedSpriteIndices[0], NanoFrameTimer.decodedSpritePalette);
+        IndexedSprite sprite = new IndexedSprite(pg.decodedSpriteCanvasWidth, FadingDialog.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[0], md.decodedSpriteYOffsets[0], DualLinkNode.decodedSpriteWidths[0], ProgressBarWidget.decodedSpriteHeights[0], mj.decodedSpriteIndices[0], NanoFrameTimer.decodedSpritePalette);
         int sentinelDivision = -128 / ((methodGuard - 52) / 49);
         MidiPcmStream.clearDecodedSpriteWorkingArrays(true);
         return sprite;
@@ -199,7 +199,7 @@ final class ab {
                 }
                 gf.renderEntityCollisionSprite(movingEntity, -1232328029, boardAngleRadians);
                 if (uj.scratchSpriteOverlapsBoard(movingEntity, boardAngleRadians, 0)) {
-                  vf.spriteScratchRaster.addOutline(1);
+                  HotspotTextWidget.spriteScratchRaster.addOutline(1);
                   if (movingEntity.matchCooldownTicks <= 0) {
                     al.a(9666, GameScreen.selectedThemeId);
                   }
@@ -211,13 +211,13 @@ final class ab {
                   movingEntity.relatedEntityCount = 0;
                   wasKind2IntSnapshot = (movingEntity.entitySpriteKindId != 2) ? 0 : 1;
                   neighborIndexOrKindFlagOrContactIdOrDivisionGuard = wasKind2IntSnapshot;
-                  ih.linkEntityAtMaskContacts(-1, td.rotatedEntityScreenY, movingEntity, DialogLayer.rotatedEntityScreenX);
+                  ih.linkEntityAtMaskContacts(-1, ValidationIconWidget.rotatedEntityScreenY, movingEntity, DialogLayer.rotatedEntityScreenX);
                   if (!((neighborIndexOrKindFlagOrContactIdOrDivisionGuard != 0) &&
                       (movingEntity.entitySpriteKindId != 2))) {
                     if (movingEntity.entitySpriteKindId != 2) {
                       movingEntity.spriteAngleRadians = movingEntity.spriteAngleRadians - boardAngleRadians;
                     }
-                    movingEntity.positionY = (float)td.rotatedEntityScreenY;
+                    movingEntity.positionY = (float)ValidationIconWidget.rotatedEntityScreenY;
                     movingEntity.entityQueue = a.attachedEntities;
                     movingEntity.positionX = (float)DialogLayer.rotatedEntityScreenX;
                   }

@@ -6,7 +6,7 @@ final class gf {
     static int heldPointerButtonSnapshot;
     static int[] queuedKeyStateChanges;
     static int[] cameraMeshVertexZ;
-    static qh field_d;
+    static AccountCreationForm field_d;
     static String createPasswordContainsNameAlertText;
 
     final static void preparePendingActionPanel(byte methodGuard) {
@@ -51,10 +51,10 @@ final class gf {
                 java.applet.Applet nullAppletForInvalidGuard = (java.applet.Applet) null;
                 gf.a((java.applet.Applet) null, 60);
             }
-            td.rotatedEntityScreenY = (int)(240.0 + (Math.sin((double)boardAngleRadians) * (double)boardCenterOffsetX + (double)boardCenterOffsetY * Math.cos((double)boardAngleRadians)) + 0.5);
-            vf.spriteScratchRaster.setAsRasterTarget();
+            ValidationIconWidget.rotatedEntityScreenY = (int)(240.0 + (Math.sin((double)boardAngleRadians) * (double)boardCenterOffsetX + (double)boardCenterOffsetY * Math.cos((double)boardAngleRadians)) + 0.5);
+            HotspotTextWidget.spriteScratchRaster.setAsRasterTarget();
             SoftwareRasterizer.clearFramebuffer();
-            entity.entitySprite.rotateNearest(entity.entitySprite.fullWidth << 3, entity.entitySprite.fullHeight << 3, vf.spriteScratchRaster.fullWidth << 3, vf.spriteScratchRaster.fullHeight << 3, (int)(65535.0 * ((double)(-boardAngleRadians + entity.spriteAngleRadians) / 6.283185307179586)), 4096);
+            entity.entitySprite.rotateNearest(entity.entitySprite.fullWidth << 3, entity.entitySprite.fullHeight << 3, HotspotTextWidget.spriteScratchRaster.fullWidth << 3, HotspotTextWidget.spriteScratchRaster.fullHeight << 3, (int)(65535.0 * ((double)(-boardAngleRadians + entity.spriteAngleRadians) / 6.283185307179586)), 4096);
             SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
         } catch (RuntimeException collisionSpriteRenderFailure) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) collisionSpriteRenderFailure), "gf.F(" + (entity != null ? "{...}" : "null") + ',' + methodGuard + ',' + boardAngleRadians + ')');

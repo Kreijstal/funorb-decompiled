@@ -27,7 +27,7 @@ final class LoginPayloadKind {
     final static void ensureAchievementStateRequested(int methodGuard) {
         if (methodGuard != 9313) {
             LoginPayloadKind.a(116);
-            if (fh.c(-114)) {
+            if (UnderlinedButtonRenderer.c(-114)) {
                 return;
             }
             if (MouseWheelInput.achievementStateQuery == null) {
@@ -36,7 +36,7 @@ final class LoginPayloadKind {
             }
             return;
         }
-        if (fh.c(-114)) {
+        if (UnderlinedButtonRenderer.c(-114)) {
             return;
         }
         if (MouseWheelInput.achievementStateQuery == null) {

@@ -16,7 +16,7 @@ final class MultiHandleSliderRenderer implements WidgetRenderer {
     static int pendingActionPanelWidth;
 
     final static void a(byte param0) {
-        gf.field_d = new qh();
+        gf.field_d = new AccountCreationForm();
         if (param0 >= 19) {
             ButtonWidget.field_C.replaceContent(gf.field_d, -54);
             return;
