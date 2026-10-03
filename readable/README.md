@@ -1,11 +1,34 @@
 # Readable GeoBlox
 
-The current export has 9,862 guarded naming rules: 223 classes, 1,350 fields,
-953 methods, 2,845 parameters and 4,491 local declarations. Both 303-file corpora
-compile, comparing 137,964 bindings and preserving 388 override relationships. Unknown
+The current export has 9,816 guarded naming rules: 223 classes, 1,350 fields,
+953 methods, 2,845 parameters and 4,445 local declarations. Both 303-file corpora
+compile, comparing 136,880 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
-## Current names (pass 116)
+## Current recovery (pass 117)
+
+Pass 117 recovers ordinary postfix array indexing in 15 bodies across five files.
+It removes 271 capture temporaries and 813 lines; the array-copy helper `sf.java`
+falls from 943 to 268 lines. The map explicitly retires 46 deleted capture names
+and migrates 55 surviving local identities, retaining every other complete rule.
+There are 9,816 rules and 78,050 identifier edits; class coverage remains 223
+renames, one meaningful original name and 79 opaque filenames. All 303 raw and
+readable sources compile, compare 136,880 bindings and preserve 388 overrides.
+A historical source proof checks every expected token stream, declaration
+migration and predicted binding; 244,944 native comparisons and five independent
+oracles cover array exceptions, partial writes, aliasing, overlap, overflow and
+cleanup. A clean tracked decompiler-source archive reproduces all Java and
+diagnostics bytes. Fields, calls, escaping captures and ambiguous bindings retain
+their original statements. The six large labeled bodies remain; this does not
+establish whole-game or device/performance equivalence.
+
+Recheck the structural proof using the committed source/tool identities:
+
+```sh
+JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-array-increments-source.mjs /path/to/java-tools
+```
+
+## Previous names (pass 116)
 
 This pass adds 326 rules: 33 fields, 26 methods, 69 parameters and 198 local
 declarations, producing 1,421 additional bound edits and 78,234 edits in total.
@@ -212,13 +235,13 @@ reflective lookups keep `gl`, `ve`, `tk`, `pd` and `of` unchanged; renaming thos
 requires a separately verified literal-lookup transformation.
 
 The current raw tree is
-`3982781d068dcb3ecceebc8a2ee6f3da14e8a7119574068204ef70ef2bc04b1a`;
+`7149d0071e1178e4509474b5cecb8db1cc195c937106fc3d1581aed3d9b4ff89`;
 the current readable tree is
-`3da88a5dde1fb8565b49a2c8e5bac90bdbc834733fb29f403a400a0ab3ae65db`.
+`1c38cd50a98564a3d9f12838a2230502292b9630d41e24e7eaa0f5831da2a959`.
 The pinned decompiler-source SHA-256 is
-`f931fad10ba711145115262619cc04e5c81e13450de01a56d1c7c350f6c465b5`.
+`0a8df4a6b454c7dbbfdf824aa8a726157459685c26ca9d426cc6200b3bd29b30`.
 All seven existing native/raw/readable probes pass with their pinned traces.
-Regeneration compares all 303 files and 137,964 bindings; dictionary reversal
+Regeneration compares all 303 files and 136,880 bindings; dictionary reversal
 recovers all 303 pinned raw files byte-for-byte. Publication checks pass.
 Historical sections below retain their original pass counts and spellings.
 
@@ -242,17 +265,17 @@ tool bytes; `funorb-stubs.jar` is the frozen compilation dependency. The
 [reading guide](GEOBLOX-READING-GUIDE.md) explains the named gameplay flow.
 
 The raw input is `games/geoblox` at
-`7e18b39724d1743768edf69a96887e3c4c895c7b`. It comes from java-tools
-`09e713519641a1b628f1353a6398e327e1fe9fdd` and Deko
+`8555bb25f732948fd3813f2afd886e16899b8c53`. It comes from java-tools
+`97a6e5e3b10426f11c59814d8fe5243ac1127a6e` and Deko
 `a572c4dd0f0174bfcd7777be53d7ceba2f970f18`. The adapted naming tool is
 `a0bc835957148b9b1e1f8221c59b79d899d22738`; its source archive SHA-256 is
 `cb10756aa3ecb28159c9b81f2fb78bf559b4111d9ad203819458b30d0d84cf8c`.
 
 The **decompiler repository source** SHA-256 is
-`f931fad10ba711145115262619cc04e5c81e13450de01a56d1c7c350f6c465b5`:
+`0a8df4a6b454c7dbbfdf824aa8a726157459685c26ca9d426cc6200b3bd29b30`:
 
 ```sh
-git archive --format=tar 09e713519641a1b628f1353a6398e327e1fe9fdd | sha256sum
+git archive --format=tar 97a6e5e3b10426f11c59814d8fe5243ac1127a6e | sha256sum
 ```
 
 This identifies tracked decompiler source and its Git archive metadata. It is

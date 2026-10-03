@@ -693,16 +693,13 @@ class Sprite extends SpriteState {
         int negativeRow = 0;
         int sourceRowOffset = 0;
         int negativeColumn = 0;
-        int destinationWriteIndex = 0;
         int rowSourceX16 = sourceX16;
         for (negativeRow = -drawHeight; negativeRow < 0; negativeRow++) {
             sourceRowOffset = (sourceY16 >> 16) * sourceWidth;
             for (negativeColumn = -drawWidth; negativeColumn < 0; negativeColumn++) {
                 sourcePixel = sourcePixels[(sourceX16 >> 16) + sourceRowOffset];
                 if (sourcePixel != 0) {
-                    destinationWriteIndex = destinationIndex;
-                    destinationIndex++;
-                    destinationPixels[destinationWriteIndex] = sourcePixel;
+                    destinationPixels[destinationIndex++] = sourcePixel;
                 } else {
                     destinationIndex++;
                 }
@@ -807,7 +804,6 @@ class Sprite extends SpriteState {
     final void addOutline(int color) {
         int row = 0;
         int column = 0;
-        int destinationWriteIndex = 0;
         int[] outlinedPixels;
         int pixelIndex;
         int pixelOrOutlineColor;
@@ -837,9 +833,7 @@ class Sprite extends SpriteState {
                 }
               }
             }
-            destinationWriteIndex = pixelIndex;
-            pixelIndex++;
-            outlinedPixels[destinationWriteIndex] = pixelOrOutlineColor;
+            outlinedPixels[pixelIndex++] = pixelOrOutlineColor;
           }
         }
         this.pixels = outlinedPixels;
@@ -1151,7 +1145,6 @@ class Sprite extends SpriteState {
         int sourceReadIndex = 0;
         int destinationWriteIndex = 0;
         int destinationWriteIndex2 = 0;
-        int destinationWriteIndex3 = 0;
         int tintRed;
         int tintGreen;
         int tintBlue;
@@ -1207,9 +1200,7 @@ class Sprite extends SpriteState {
               negativeColumn++;
               continue;
             }
-            destinationWriteIndex3 = destinationIndex;
-            destinationIndex++;
-            destinationPixels[destinationWriteIndex3] = sourcePixel;
+            destinationPixels[destinationIndex++] = sourcePixel;
             negativeColumn++;
             continue;
           }
@@ -1409,15 +1400,10 @@ class Sprite extends SpriteState {
 
     private final static void blitColorKey(int[] destinationPixels, int[] sourcePixels, int sourcePixel, int sourceIndex, int destinationIndex, int widthThenNegativeTail, int drawHeight, int destinationRowSkip, int sourceRowSkip) {
         int sourceReadIndex = 0;
-        int destinationWriteIndex = 0;
         int sourceReadIndex2 = 0;
-        int destinationWriteIndex2 = 0;
         int sourceReadIndex3 = 0;
-        int destinationWriteIndex3 = 0;
         int sourceReadIndex4 = 0;
-        int destinationWriteIndex4 = 0;
         int sourceReadIndex5 = 0;
-        int destinationWriteIndex5 = 0;
         int negativeQuadCount;
         int negativeRow;
         int quadOrTailCounter;
@@ -1447,9 +1433,7 @@ class Sprite extends SpriteState {
                   quadOrTailCounter++;
                   continue;
                 }
-                destinationWriteIndex = destinationIndex;
-                destinationIndex++;
-                destinationPixels[destinationWriteIndex] = sourcePixel;
+                destinationPixels[destinationIndex++] = sourcePixel;
                 quadOrTailCounter++;
                 continue;
               }
@@ -1460,9 +1444,7 @@ class Sprite extends SpriteState {
             if (sourcePixel == 0) {
               destinationIndex++;
             } else {
-              destinationWriteIndex2 = destinationIndex;
-              destinationIndex++;
-              destinationPixels[destinationWriteIndex2] = sourcePixel;
+              destinationPixels[destinationIndex++] = sourcePixel;
             }
             sourceReadIndex3 = sourceIndex;
             sourceIndex++;
@@ -1470,9 +1452,7 @@ class Sprite extends SpriteState {
             if (sourcePixel == 0) {
               destinationIndex++;
             } else {
-              destinationWriteIndex3 = destinationIndex;
-              destinationIndex++;
-              destinationPixels[destinationWriteIndex3] = sourcePixel;
+              destinationPixels[destinationIndex++] = sourcePixel;
             }
             sourceReadIndex4 = sourceIndex;
             sourceIndex++;
@@ -1480,9 +1460,7 @@ class Sprite extends SpriteState {
             if (sourcePixel == 0) {
               destinationIndex++;
             } else {
-              destinationWriteIndex4 = destinationIndex;
-              destinationIndex++;
-              destinationPixels[destinationWriteIndex4] = sourcePixel;
+              destinationPixels[destinationIndex++] = sourcePixel;
             }
             sourceReadIndex5 = sourceIndex;
             sourceIndex++;
@@ -1492,9 +1470,7 @@ class Sprite extends SpriteState {
               quadOrTailCounter++;
               continue;
             }
-            destinationWriteIndex5 = destinationIndex;
-            destinationIndex++;
-            destinationPixels[destinationWriteIndex5] = sourcePixel;
+            destinationPixels[destinationIndex++] = sourcePixel;
             quadOrTailCounter++;
             continue;
           }
@@ -1646,15 +1622,10 @@ class Sprite extends SpriteState {
 
     private final static void blitSilhouette(int[] destinationPixels, int[] sourcePixels, int color, int sourceIndex, int destinationIndex, int widthThenNegativeTail, int drawHeight, int destinationRowSkip, int sourceRowSkip) {
         int sourceReadIndex = 0;
-        int destinationWriteIndex = 0;
         int sourceReadIndex2 = 0;
-        int destinationWriteIndex2 = 0;
         int sourceReadIndex3 = 0;
-        int destinationWriteIndex3 = 0;
         int sourceReadIndex4 = 0;
-        int destinationWriteIndex4 = 0;
         int sourceReadIndex5 = 0;
-        int destinationWriteIndex5 = 0;
         int negativeQuadCount;
         int negativeRow;
         int quadOrTailCounter;
@@ -1683,9 +1654,7 @@ class Sprite extends SpriteState {
                   quadOrTailCounter++;
                   continue;
                 }
-                destinationWriteIndex = destinationIndex;
-                destinationIndex++;
-                destinationPixels[destinationWriteIndex] = color;
+                destinationPixels[destinationIndex++] = color;
                 quadOrTailCounter++;
                 continue;
               }
@@ -1695,27 +1664,21 @@ class Sprite extends SpriteState {
             if (sourcePixels[sourceReadIndex2] == 0) {
               destinationIndex++;
             } else {
-              destinationWriteIndex2 = destinationIndex;
-              destinationIndex++;
-              destinationPixels[destinationWriteIndex2] = color;
+              destinationPixels[destinationIndex++] = color;
             }
             sourceReadIndex3 = sourceIndex;
             sourceIndex++;
             if (sourcePixels[sourceReadIndex3] == 0) {
               destinationIndex++;
             } else {
-              destinationWriteIndex3 = destinationIndex;
-              destinationIndex++;
-              destinationPixels[destinationWriteIndex3] = color;
+              destinationPixels[destinationIndex++] = color;
             }
             sourceReadIndex4 = sourceIndex;
             sourceIndex++;
             if (sourcePixels[sourceReadIndex4] == 0) {
               destinationIndex++;
             } else {
-              destinationWriteIndex4 = destinationIndex;
-              destinationIndex++;
-              destinationPixels[destinationWriteIndex4] = color;
+              destinationPixels[destinationIndex++] = color;
             }
             sourceReadIndex5 = sourceIndex;
             sourceIndex++;
@@ -1724,9 +1687,7 @@ class Sprite extends SpriteState {
               quadOrTailCounter++;
               continue;
             }
-            destinationWriteIndex5 = destinationIndex;
-            destinationIndex++;
-            destinationPixels[destinationWriteIndex5] = color;
+            destinationPixels[destinationIndex++] = color;
             quadOrTailCounter++;
             continue;
           }
@@ -1847,47 +1808,17 @@ class Sprite extends SpriteState {
     private final static void blitUnmasked(int[] destinationPixels, int[] sourcePixels, int sourceIndex, int destinationIndex, int drawWidth, int drawHeight, int destinationRowSkip, int sourceRowSkip) {
         int negativeRow = 0;
         int quadEndThenRowEnd = 0;
-        int destinationWriteIndex = 0;
-        int sourceReadIndex = 0;
-        int destinationWriteIndex2 = 0;
-        int sourceReadIndex2 = 0;
-        int destinationWriteIndex3 = 0;
-        int sourceReadIndex3 = 0;
-        int destinationWriteIndex4 = 0;
-        int sourceReadIndex4 = 0;
-        int destinationWriteIndex5 = 0;
-        int sourceReadIndex5 = 0;
         for (negativeRow = -drawHeight; negativeRow < 0; negativeRow++) {
             quadEndThenRowEnd = destinationIndex + drawWidth - 3;
             while (destinationIndex < quadEndThenRowEnd) {
-                destinationWriteIndex = destinationIndex;
-                destinationIndex++;
-                sourceReadIndex = sourceIndex;
-                sourceIndex++;
-                destinationPixels[destinationWriteIndex] = sourcePixels[sourceReadIndex];
-                destinationWriteIndex2 = destinationIndex;
-                destinationIndex++;
-                sourceReadIndex2 = sourceIndex;
-                sourceIndex++;
-                destinationPixels[destinationWriteIndex2] = sourcePixels[sourceReadIndex2];
-                destinationWriteIndex3 = destinationIndex;
-                destinationIndex++;
-                sourceReadIndex3 = sourceIndex;
-                sourceIndex++;
-                destinationPixels[destinationWriteIndex3] = sourcePixels[sourceReadIndex3];
-                destinationWriteIndex4 = destinationIndex;
-                destinationIndex++;
-                sourceReadIndex4 = sourceIndex;
-                sourceIndex++;
-                destinationPixels[destinationWriteIndex4] = sourcePixels[sourceReadIndex4];
+                destinationPixels[destinationIndex++] = sourcePixels[sourceIndex++];
+                destinationPixels[destinationIndex++] = sourcePixels[sourceIndex++];
+                destinationPixels[destinationIndex++] = sourcePixels[sourceIndex++];
+                destinationPixels[destinationIndex++] = sourcePixels[sourceIndex++];
             }
             quadEndThenRowEnd += 3;
             while (destinationIndex < quadEndThenRowEnd) {
-                destinationWriteIndex5 = destinationIndex;
-                destinationIndex++;
-                sourceReadIndex5 = sourceIndex;
-                sourceIndex++;
-                destinationPixels[destinationWriteIndex5] = sourcePixels[sourceReadIndex5];
+                destinationPixels[destinationIndex++] = sourcePixels[sourceIndex++];
             }
             destinationIndex = destinationIndex + destinationRowSkip;
             sourceIndex = sourceIndex + sourceRowSkip;
@@ -1940,7 +1871,6 @@ class Sprite extends SpriteState {
 
     private final static void blitGrayModulated(int[] destinationPixels, int[] sourcePixels, int sourcePixel, int sourceIndex, int destinationIndex, int negativeColumnScratch, int negativeRowScratch, int drawWidth, int drawHeight, int destinationRowSkip, int sourceRowSkip, int tintColor) {
         int sourceReadIndex = 0;
-        int destinationWriteIndex = 0;
         int destinationWriteIndex2 = 0;
         int tintRedBlue;
         int tintGreen;
@@ -1968,9 +1898,7 @@ class Sprite extends SpriteState {
               continue;
             }
             if (sourcePixel >> 8 != (sourcePixel & 65535)) {
-              destinationWriteIndex = destinationIndex;
-              destinationIndex++;
-              destinationPixels[destinationWriteIndex] = sourcePixel;
+              destinationPixels[destinationIndex++] = sourcePixel;
               negativeColumnScratch++;
               continue;
             }
@@ -2524,16 +2452,13 @@ class Sprite extends SpriteState {
         int negativeRow = 0;
         int sourceRowOffset = 0;
         int negativeColumn = 0;
-        int destinationWriteIndex = 0;
         int rowSourceX16 = sourceX16;
         for (negativeRow = -drawHeight; negativeRow < 0; negativeRow++) {
             sourceRowOffset = (sourceY16 >> 16) * sourceWidth;
             for (negativeColumn = -drawWidth; negativeColumn < 0; negativeColumn++) {
                 sourcePixel = sourcePixels[(sourceX16 >> 16) + sourceRowOffset];
                 if (sourcePixel != 0) {
-                    destinationWriteIndex = destinationIndex;
-                    destinationIndex++;
-                    destinationPixels[destinationWriteIndex] = color;
+                    destinationPixels[destinationIndex++] = color;
                 } else {
                     destinationIndex++;
                 }

@@ -7,14 +7,6 @@ final class DelayedIncomingPacket extends IntrusiveNode {
     byte[] payload;
 
     final static void clearMeshPriorityCounts(byte methodGuard) {
-        int clearIndex0 = 0;
-        int clearIndex1 = 0;
-        int clearIndex2 = 0;
-        int clearIndex3 = 0;
-        int clearIndex4 = 0;
-        int clearIndex5 = 0;
-        int clearIndex6 = 0;
-        int clearIndex7 = 0;
         int[] priorityCountsAlias = null;
         int clearIndex = 0;
         int arrayLength = 0;
@@ -32,30 +24,14 @@ final class DelayedIncomingPacket extends IntrusiveNode {
             return;
           }
           while (clearIndex < arrayLength) {
-            clearIndex0 = clearIndex;
-            clearIndex++;
-            priorityCounts[clearIndex0] = 0;
-            clearIndex1 = clearIndex;
-            clearIndex++;
-            priorityCounts[clearIndex1] = 0;
-            clearIndex2 = clearIndex;
-            clearIndex++;
-            priorityCounts[clearIndex2] = 0;
-            clearIndex3 = clearIndex;
-            clearIndex++;
-            priorityCounts[clearIndex3] = 0;
-            clearIndex4 = clearIndex;
-            clearIndex++;
-            priorityCounts[clearIndex4] = 0;
-            clearIndex5 = clearIndex;
-            clearIndex++;
-            priorityCounts[clearIndex5] = 0;
-            clearIndex6 = clearIndex;
-            clearIndex++;
-            priorityCounts[clearIndex6] = 0;
-            clearIndex7 = clearIndex;
-            clearIndex++;
-            priorityCounts[clearIndex7] = 0;
+            priorityCounts[clearIndex++] = 0;
+            priorityCounts[clearIndex++] = 0;
+            priorityCounts[clearIndex++] = 0;
+            priorityCounts[clearIndex++] = 0;
+            priorityCounts[clearIndex++] = 0;
+            priorityCounts[clearIndex++] = 0;
+            priorityCounts[clearIndex++] = 0;
+            priorityCounts[clearIndex++] = 0;
           }
           return;
         } catch (java.lang.RuntimeException caughtParameter) {

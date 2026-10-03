@@ -167,15 +167,10 @@ final class MonochromeBitmapFont extends BitmapFont {
 
     final static void blitGlyphMask(int[] destinationPixels, byte[] glyphMask, int color, int sourceIndex, int destinationIndex, int widthOrNegativeTailCount, int height, int destinationRowSkip, int sourceRowSkip) {
         int tailSourceIndexBeforeIncrement = 0;
-        int tailDestinationIndexBeforeIncrement = 0;
         int firstSourceIndexBeforeIncrement = 0;
-        int firstDestinationIndexBeforeIncrement = 0;
         int secondSourceIndexBeforeIncrement = 0;
-        int secondDestinationIndexBeforeIncrement = 0;
         int thirdSourceIndexBeforeIncrement = 0;
-        int thirdDestinationIndexBeforeIncrement = 0;
         int fourthSourceIndexBeforeIncrement = 0;
-        int fourthDestinationIndexBeforeIncrement = 0;
         int negativeFourPixelGroupCount;
         int negativeRowCounter;
         int negativeGroupOrTailCounter;
@@ -204,9 +199,7 @@ final class MonochromeBitmapFont extends BitmapFont {
                   negativeGroupOrTailCounter++;
                   continue;
                 }
-                tailDestinationIndexBeforeIncrement = destinationIndex;
-                destinationIndex++;
-                destinationPixels[tailDestinationIndexBeforeIncrement] = color;
+                destinationPixels[destinationIndex++] = color;
                 negativeGroupOrTailCounter++;
                 continue;
               }
@@ -216,27 +209,21 @@ final class MonochromeBitmapFont extends BitmapFont {
             if (glyphMask[firstSourceIndexBeforeIncrement] == 0) {
               destinationIndex++;
             } else {
-              firstDestinationIndexBeforeIncrement = destinationIndex;
-              destinationIndex++;
-              destinationPixels[firstDestinationIndexBeforeIncrement] = color;
+              destinationPixels[destinationIndex++] = color;
             }
             secondSourceIndexBeforeIncrement = sourceIndex;
             sourceIndex++;
             if (glyphMask[secondSourceIndexBeforeIncrement] == 0) {
               destinationIndex++;
             } else {
-              secondDestinationIndexBeforeIncrement = destinationIndex;
-              destinationIndex++;
-              destinationPixels[secondDestinationIndexBeforeIncrement] = color;
+              destinationPixels[destinationIndex++] = color;
             }
             thirdSourceIndexBeforeIncrement = sourceIndex;
             sourceIndex++;
             if (glyphMask[thirdSourceIndexBeforeIncrement] == 0) {
               destinationIndex++;
             } else {
-              thirdDestinationIndexBeforeIncrement = destinationIndex;
-              destinationIndex++;
-              destinationPixels[thirdDestinationIndexBeforeIncrement] = color;
+              destinationPixels[destinationIndex++] = color;
             }
             fourthSourceIndexBeforeIncrement = sourceIndex;
             sourceIndex++;
@@ -245,9 +232,7 @@ final class MonochromeBitmapFont extends BitmapFont {
               negativeGroupOrTailCounter++;
               continue;
             }
-            fourthDestinationIndexBeforeIncrement = destinationIndex;
-            destinationIndex++;
-            destinationPixels[fourthDestinationIndexBeforeIncrement] = color;
+            destinationPixels[destinationIndex++] = color;
             negativeGroupOrTailCounter++;
             continue;
           }

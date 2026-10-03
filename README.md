@@ -20,8 +20,26 @@ mirror. The current [manifest](readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
-identities. Both 303-file Java corpora compile and compare 137,964 bindings,
+identities. Both 303-file Java corpora compile and compare 136,880 bindings,
 preserving 388 override relationships.
+
+Pass 117 recovers ordinary postfix array indexing in 15 bodies across five files.
+It removes 271 capture temporaries and 813 lines; the array-copy helper `sf.java`
+falls from 943 to 268 lines. The map explicitly retires 46 deleted capture names
+and migrates 55 surviving local identities, retaining every other complete rule.
+There are 9,816 rules and 78,050 identifier edits; class coverage remains 223
+renames, one meaningful original name and 79 opaque filenames. All 303 raw and
+readable sources compile, compare 136,880 bindings and preserve 388 overrides.
+A historical source proof checks every expected token stream, declaration
+migration and predicted binding; 244,944 native comparisons and five independent
+oracles cover array exceptions, partial writes, aliasing, overlap, overflow and
+cleanup. A clean tracked decompiler-source archive reproduces all Java and
+diagnostics bytes. Fields, calls, escaping captures and ambiguous bindings retain
+their original statements. The six large labeled bodies remain; this does not
+establish whole-game or device/performance equivalence.
+
+The current decompiler-source SHA-256 is
+`0a8df4a6b454c7dbbfdf824aa8a726157459685c26ca9d426cc6200b3bd29b30`.
 
 Pass 116 names 33 fields, 26 methods, 69 parameters and 198 local declarations
 along theme audio preparation, sample caching and PCM resampling. Session calls

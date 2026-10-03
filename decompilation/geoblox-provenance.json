@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "09e713519641a1b628f1353a6398e327e1fe9fdd",
+      "commit": "97a6e5e3b10426f11c59814d8fe5243ac1127a6e",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "f931fad10ba711145115262619cc04e5c81e13450de01a56d1c7c350f6c465b5",
-        "reproduce": "git archive --format=tar 09e713519641a1b628f1353a6398e327e1fe9fdd | sha256sum",
+        "sha256": "0a8df4a6b454c7dbbfdf824aa8a726157459685c26ca9d426cc6200b3bd29b30",
+        "reproduce": "git archive --format=tar 97a6e5e3b10426f11c59814d8fe5243ac1127a6e | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
@@ -93,9 +93,9 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "3982781d068dcb3ecceebc8a2ee6f3da14e8a7119574068204ef70ef2bc04b1a",
-  "previousSourceTreeSha256": "05cac317bd3f414e1285a2b6b8edb384d684b78cd65ce948daaa1973c12a303b",
-  "changedJavaFiles": 8,
+  "sourceTreeSha256": "7149d0071e1178e4509474b5cecb8db1cc195c937106fc3d1581aed3d9b4ff89",
+  "previousSourceTreeSha256": "3982781d068dcb3ecceebc8a2ee6f3da14e8a7119574068204ef70ef2bc04b1a",
+  "changedJavaFiles": 5,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
@@ -3222,5 +3222,31 @@
     "sourceTreeSha256": "3982781d068dcb3ecceebc8a2ee6f3da14e8a7119574068204ef70ef2bc04b1a",
     "sourceProofTest": "readable/tests/test-geoblox-post-guard-source.mjs",
     "sourceProofTestSha256": "9eac61ef53adbc3cd5c2869d0009ce27676cafb27e0841b7cb266144595b9a31"
+  },
+  "arrayIndexIncrementRecovery": {
+    "historicalPassVersion": 117,
+    "previousSourceCommit": "7e18b39724d1743768edf69a96887e3c4c895c7b",
+    "sourceCommit": "8555bb25f732948fd3813f2afd886e16899b8c53",
+    "previousRulesCommit": "890a6ec010f2d3bd9f61bb699394b5047a320613",
+    "previousSourceTreeSha256": "3982781d068dcb3ecceebc8a2ee6f3da14e8a7119574068204ef70ef2bc04b1a",
+    "sourceTreeSha256": "7149d0071e1178e4509474b5cecb8db1cc195c937106fc3d1581aed3d9b4ff89",
+    "javaToolsCommit": "97a6e5e3b10426f11c59814d8fe5243ac1127a6e",
+    "sourceArchiveSha256": "0a8df4a6b454c7dbbfdf824aa8a726157459685c26ca9d426cc6200b3bd29b30",
+    "capturesFolded": 271,
+    "changedJavaFiles": 5,
+    "changedMethodBodies": 15,
+    "sourceLinesBefore": 77334,
+    "sourceLinesAfter": 76521,
+    "sourceDeclarationsBefore": 19591,
+    "sourceDeclarationsAfter": 19320,
+    "sourceReferenceOccurrencesBefore": 118373,
+    "sourceReferenceOccurrencesAfter": 117560,
+    "fullOverridePairsPreserved": 388,
+    "survivingLocalOrdinalMigrations": 55,
+    "namedCapturesRetired": 46,
+    "nativeComparisons": 244944,
+    "independentNativeOracles": 5,
+    "sourceProofTest": "readable/tests/test-geoblox-array-increments-source.mjs",
+    "sourceProofTestSha256": "2985e96e9d815af98fc0e86d9e88538b87639708a29357ee0e4185093925a531"
   }
 }

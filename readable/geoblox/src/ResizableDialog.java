@@ -89,14 +89,6 @@ abstract class ResizableDialog extends FadingDialog {
     }
 
     final static void clearMeshDepthBucketCounts(int startIndex) {
-        int clearIndex0 = 0;
-        int clearIndex1 = 0;
-        int clearIndex2 = 0;
-        int clearIndex3 = 0;
-        int clearIndex4 = 0;
-        int clearIndex5 = 0;
-        int clearIndex6 = 0;
-        int clearIndex7 = 0;
         int[] depthBucketCountsAlias = null;
         int clearIndex = 0;
         int arrayLength = 0;
@@ -111,30 +103,14 @@ abstract class ResizableDialog extends FadingDialog {
           clearIndex = startIndex;
           arrayLength = depthBucketCounts.length;
           while (clearIndex < arrayLength) {
-            clearIndex0 = clearIndex;
-            clearIndex++;
-            depthBucketCounts[clearIndex0] = 0;
-            clearIndex1 = clearIndex;
-            clearIndex++;
-            depthBucketCounts[clearIndex1] = 0;
-            clearIndex2 = clearIndex;
-            clearIndex++;
-            depthBucketCounts[clearIndex2] = 0;
-            clearIndex3 = clearIndex;
-            clearIndex++;
-            depthBucketCounts[clearIndex3] = 0;
-            clearIndex4 = clearIndex;
-            clearIndex++;
-            depthBucketCounts[clearIndex4] = 0;
-            clearIndex5 = clearIndex;
-            clearIndex++;
-            depthBucketCounts[clearIndex5] = 0;
-            clearIndex6 = clearIndex;
-            clearIndex++;
-            depthBucketCounts[clearIndex6] = 0;
-            clearIndex7 = clearIndex;
-            clearIndex++;
-            depthBucketCounts[clearIndex7] = 0;
+            depthBucketCounts[clearIndex++] = 0;
+            depthBucketCounts[clearIndex++] = 0;
+            depthBucketCounts[clearIndex++] = 0;
+            depthBucketCounts[clearIndex++] = 0;
+            depthBucketCounts[clearIndex++] = 0;
+            depthBucketCounts[clearIndex++] = 0;
+            depthBucketCounts[clearIndex++] = 0;
+            depthBucketCounts[clearIndex++] = 0;
           }
           return;
         } catch (java.lang.RuntimeException caughtParameter) {

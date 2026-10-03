@@ -7,18 +7,33 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-## Current readability (pass 116)
+## Current readability (pass 117)
 
-The export has 9,862 guarded names and 78,234 identifier edits. Class coverage is
+The export has 9,816 guarded names and 78,050 identifier edits. Class coverage is
 223 semantic renames, one already meaningful `Geoblox` name and 79 opaque names.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
-compile and compare 137,964 bindings, reproduce and
+compile and compare 136,880 bindings, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
 short-circuit guards for their original remainders, consuming 82 breaks and
 saving 219 lines. Menu hit-test trees preserve every strict boundary and
 predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
+
+Pass 117 recovers ordinary postfix array indexing in 15 bodies across five files.
+It removes 271 capture temporaries and 813 lines; the array-copy helper `sf.java`
+falls from 943 to 268 lines. The map explicitly retires 46 deleted capture names
+and migrates 55 surviving local identities, retaining every other complete rule.
+There are 9,816 rules and 78,050 identifier edits; class coverage remains 223
+renames, one meaningful original name and 79 opaque filenames. All 303 raw and
+readable sources compile, compare 136,880 bindings and preserve 388 overrides.
+A historical source proof checks every expected token stream, declaration
+migration and predicted binding; 244,944 native comparisons and five independent
+oracles cover array exceptions, partial writes, aliasing, overlap, overflow and
+cleanup. A clean tracked decompiler-source archive reproduces all Java and
+diagnostics bytes. Fields, calls, escaping captures and ambiguous bindings retain
+their original statements. The six large labeled bodies remain; this does not
+establish whole-game or device/performance equivalence.
 
 Pass116 adds 33 fields, 26 methods, 69 parameters and 198 local names in the
 theme audio path. `selectThemeAudio` prepares music and samples, checks the
