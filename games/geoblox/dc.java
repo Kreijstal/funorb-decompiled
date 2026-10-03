@@ -21,7 +21,7 @@ final class dc {
         var2 = Geoblox.field_C;
         try {
           var3 = (ja) ((Object) a.field_d.g(0));
-          L0: while (var3 != null) {
+          while (var3 != null) {
             var3.e(1643839728);
             var3 = (ja) ((Object) a.field_d.d(1));
           }

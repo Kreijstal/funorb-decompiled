@@ -61,11 +61,11 @@ final class aa {
                 var30 = param0.field_v;
                 var31 = param3.field_v;
                 for (var22 = var15; var22 > 0; var22--) {
-                  L7: for (var23 = var13; var23 > 0; var23--) {
+                  for (var23 = var13; var23 > 0; var23--) {
                     if (var30[var16] == 0) {
                       var16++;
                       var18++;
-                      continue L7;
+                      continue;
                     }
                     if (var31[var18] != 0) {
                       field_a = param1 + var12 + var13 - var23;

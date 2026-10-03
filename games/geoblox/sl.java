@@ -73,7 +73,7 @@ final class sl {
             var6 = (java.awt.Canvas) null;
             sl.a((java.awt.Canvas) null, 58);
           }
-          L2: while (var2_int > var4) {
+          while (var2_int > var4) {
             L3: {
               var5 = param0.charAt(var4);
               if (var5 >= 65) {

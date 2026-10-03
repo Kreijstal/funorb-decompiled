@@ -58,33 +58,31 @@ final class vc extends dk {
             this.field_a = null;
             return;
           }
-          {
-            if (this.field_p == param3) {
-              if (this.field_d) {
-                if (this.field_k == 2) {
-                  if (null != this.field_n) {
-                    if (this.field_n.equals(param4)) {
-                      return;
-                    }
+          if (this.field_p == param3) {
+            if (this.field_d) {
+              if (this.field_k == 2) {
+                if (null != this.field_n) {
+                  if (this.field_n.equals(param4)) {
+                    return;
                   }
                 }
               }
             }
-            this.field_p = param3;
-            this.field_n = param4;
-            this.field_d = true;
-            this.field_k = 2;
-            var9 = this.a(-1, param1, param3, param4);
-            var10 = var9;
-            var10.field_c[0] = param0 - param3.a(param4);
-            var10.field_c[param4.length()] = param0;
-            qb.a(0, var10, param4, 60, param3);
-            if (param2 >= -12) {
-              var7 = (m) null;
-              this.a(98, 34, (String) null, 56, (m) null, 65, 122, -79);
-            }
-            return;
           }
+          this.field_p = param3;
+          this.field_n = param4;
+          this.field_d = true;
+          this.field_k = 2;
+          var9 = this.a(-1, param1, param3, param4);
+          var10 = var9;
+          var10.field_c[0] = param0 - param3.a(param4);
+          var10.field_c[param4.length()] = param0;
+          qb.a(0, var10, param4, 60, param3);
+          if (param2 >= -12) {
+            var7 = (m) null;
+            this.a(98, 34, (String) null, 56, (m) null, 65, 122, -79);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
@@ -195,18 +193,16 @@ final class vc extends dk {
             this.field_a = null;
             return;
           }
-          {
-            if (param4 == this.field_p) {
-              if (!this.field_d) {
-                if (this.field_k == param6) {
-                  if (this.field_m == param0) {
-                    if (this.field_e == param3) {
-                      if (param7 == this.field_o) {
-                        if (param5 == this.field_l) {
-                          if (null != this.field_n) {
-                            if (this.field_n.equals(param2)) {
-                              return;
-                            }
+          if (param4 == this.field_p) {
+            if (!this.field_d) {
+              if (this.field_k == param6) {
+                if (this.field_m == param0) {
+                  if (this.field_e == param3) {
+                    if (param7 == this.field_o) {
+                      if (param5 == this.field_l) {
+                        if (null != this.field_n) {
+                          if (this.field_n.equals(param2)) {
+                            return;
                           }
                         }
                       }
@@ -215,72 +211,72 @@ final class vc extends dk {
                 }
               }
             }
-            this.field_o = param7;
-            this.field_k = param6;
-            this.field_m = param0;
-            this.field_e = param3;
-            this.field_l = param5;
-            this.field_n = param2;
-            this.field_d = false;
-            this.field_p = param4;
-            var16 = new String[param1 + param4.b(param2, param5)];
-            var17 = var16;
-            var10 = Math.max(1, param4.a(param2, new int[]{param5}, var17));
-            if (this.field_m == 3) {
-              if (var10 == 1) {
-                this.field_m = 1;
-              }
+          }
+          this.field_o = param7;
+          this.field_k = param6;
+          this.field_m = param0;
+          this.field_e = param3;
+          this.field_l = param5;
+          this.field_n = param2;
+          this.field_d = false;
+          this.field_p = param4;
+          var16 = new String[param1 + param4.b(param2, param5)];
+          var17 = var16;
+          var10 = Math.max(1, param4.a(param2, new int[]{param5}, var17));
+          if (this.field_m == 3) {
+            if (var10 == 1) {
+              this.field_m = 1;
             }
-            this.field_a = new lk[var10];
-            if (this.field_m != 0) {
-              if (this.field_m != 1) {
-                if (this.field_m == 2) {
-                  var11 = -param4.field_q + this.field_o - var10 * this.field_e;
-                } else {
-                  var12 = (-(this.field_e * var10) + this.field_o) / (var10 + 1);
-                  if (var12 < 0) {
-                    var12 = 0;
-                  }
-                  this.field_e = this.field_e + var12;
-                  var11 = param4.field_o + var12;
-                }
+          }
+          this.field_a = new lk[var10];
+          if (this.field_m != 0) {
+            if (this.field_m != 1) {
+              if (this.field_m == 2) {
+                var11 = -param4.field_q + this.field_o - var10 * this.field_e;
               } else {
-                var11 = param4.field_o + (this.field_o - this.field_e * var10 >> 1);
+                var12 = (-(this.field_e * var10) + this.field_o) / (var10 + 1);
+                if (var12 < 0) {
+                  var12 = 0;
+                }
+                this.field_e = this.field_e + var12;
+                var11 = param4.field_o + var12;
               }
             } else {
-              var11 = param4.field_o;
+              var11 = param4.field_o + (this.field_o - this.field_e * var10 >> 1);
             }
-            for (var12 = 0; var12 < var10; var12++) {
-              var13 = var16[var12];
-              stackIn_35_0 = null;
-              stackIn_35_1 = null;
-              stackIn_35_2 = -param4.field_o + var11;
-              stackIn_35_3 = var11 + param4.field_q;
-              if (var13 == null) {
-                stackIn_36_0 = null;
-                stackIn_36_1 = null;
-                stackIn_36_4 = 0;
-              } else {
-                stackIn_36_0 = null;
-                stackIn_36_1 = null;
-                stackIn_36_4 = var13.length();
-              }
-              var14 = new lk(stackIn_35_2, stackIn_35_3, stackIn_36_4);
-              var14.field_c[0] = 0;
-              if (var13 != null) {
-                var14.field_c[var13.length()] = param4.a(var13);
-                if (param6 != 3) {
-                  stackIn_40_0 = 0;
-                } else {
-                  stackIn_40_0 = this.a(-116, param4.a(var13), param5, var13);
-                }
-                qb.a(stackIn_40_0, var14, var13, 60, param4);
-              }
-              this.field_a[var12] = var14;
-              var11 = var11 + param3;
-            }
-            return;
+          } else {
+            var11 = param4.field_o;
           }
+          for (var12 = 0; var12 < var10; var12++) {
+            var13 = var16[var12];
+            stackIn_35_0 = null;
+            stackIn_35_1 = null;
+            stackIn_35_2 = -param4.field_o + var11;
+            stackIn_35_3 = var11 + param4.field_q;
+            if (var13 == null) {
+              stackIn_36_0 = null;
+              stackIn_36_1 = null;
+              stackIn_36_4 = 0;
+            } else {
+              stackIn_36_0 = null;
+              stackIn_36_1 = null;
+              stackIn_36_4 = var13.length();
+            }
+            var14 = new lk(stackIn_35_2, stackIn_35_3, stackIn_36_4);
+            var14.field_c[0] = 0;
+            if (var13 != null) {
+              var14.field_c[var13.length()] = param4.a(var13);
+              if (param6 != 3) {
+                stackIn_40_0 = 0;
+              } else {
+                stackIn_40_0 = this.a(-116, param4.a(var13), param5, var13);
+              }
+              qb.a(stackIn_40_0, var14, var13, 60, param4);
+            }
+            this.field_a[var12] = var14;
+            var11 = var11 + param3;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9 = decompiledCaughtException;

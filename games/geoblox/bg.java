@@ -69,62 +69,56 @@ final class bg extends m {
           if (var15 >= var14 + param5) {
             return;
           }
-          {
-            var16 = param11[var15];
-            var17 = param12[var15];
-            var18 = param4;
-            if (var13 <= var16) {
-              var19 = var16 - var13;
-              if (var19 >= param4) {
-                param7 = param7 + (param4 + param10);
-                param8 = param8 + (param4 + param9);
-                var15++;
-                continue L0;
-              }
-              param7 = param7 + var19;
-              var18 = var18 - var19;
-              param8 = param8 + var19;
-            } else {
-              var19 = var13 - var16;
-              if (var19 >= var17) {
-                param7 = param7 + (param4 + param10);
-                param8 = param8 + (param4 + param9);
-                var15++;
-                continue L0;
-              }
-              var17 = var17 - var19;
+          var16 = param11[var15];
+          var17 = param12[var15];
+          var18 = param4;
+          if (var13 <= var16) {
+            var19 = var16 - var13;
+            if (var19 >= param4) {
+              param7 = param7 + (param4 + param10);
+              param8 = param8 + (param4 + param9);
+              var15++;
+              continue;
             }
-            var19 = 0;
-            if (var18 >= var17) {
-              var19 = var18 - var17;
-            } else {
-              var17 = var18;
+            param7 = param7 + var19;
+            var18 = var18 - var19;
+            param8 = param8 + var19;
+          } else {
+            var19 = var13 - var16;
+            if (var19 >= var17) {
+              param7 = param7 + (param4 + param10);
+              param8 = param8 + (param4 + param9);
+              var15++;
+              continue;
             }
-            var20 = -var17;
-            L3: while (true) {
-              if (var20 >= 0) {
-                param7 = param7 + (var19 + param10);
-                param8 = param8 + (var19 + param9);
-                var15++;
-                continue L0;
-              }
-              {
-                incrementValue$0 = param7;
-                param7++;
-                if (param1[incrementValue$0] == 0) {
-                  param8++;
-                  var20++;
-                  continue L3;
-                }
-                {
-                  incrementValue$1 = param8;
-                  param8++;
-                  vb.field_c[incrementValue$1] = param6;
-                  var20++;
-                  continue L3;
-                }
-              }
+            var17 = var17 - var19;
+          }
+          var19 = 0;
+          if (var18 >= var17) {
+            var19 = var18 - var17;
+          } else {
+            var17 = var18;
+          }
+          var20 = -var17;
+          while (true) {
+            if (var20 >= 0) {
+              param7 = param7 + (var19 + param10);
+              param8 = param8 + (var19 + param9);
+              var15++;
+              continue L0;
             }
+            incrementValue$0 = param7;
+            param7++;
+            if (param1[incrementValue$0] == 0) {
+              param8++;
+              var20++;
+              continue;
+            }
+            incrementValue$1 = param8;
+            param8++;
+            vb.field_c[incrementValue$1] = param6;
+            var20++;
+            continue;
           }
         }
     }
@@ -193,80 +187,70 @@ final class bg extends m {
           if (var10 >= 0) {
             return;
           }
-          {
-            var11 = var9;
-            L1: while (true) {
-              if (var11 >= 0) {
-                var11 = param5;
-                L2: while (true) {
-                  if (var11 >= 0) {
-                    param4 = param4 + param7;
-                    param3 = param3 + param8;
-                    var10++;
-                    continue L0;
-                  }
-                  {
-                    incrementValue$0 = param3;
-                    param3++;
-                    if (param1[incrementValue$0] == 0) {
-                      param4++;
-                      var11++;
-                      continue L2;
-                    }
-                    {
-                      incrementValue$1 = param4;
-                      param4++;
-                      param0[incrementValue$1] = param2;
-                      var11++;
-                      continue L2;
-                    }
-                  }
+          var11 = var9;
+          while (true) {
+            if (var11 >= 0) {
+              var11 = param5;
+              while (true) {
+                if (var11 >= 0) {
+                  param4 = param4 + param7;
+                  param3 = param3 + param8;
+                  var10++;
+                  continue L0;
                 }
-              }
-              {
-                incrementValue$2 = param3;
+                incrementValue$0 = param3;
                 param3++;
-                if (param1[incrementValue$2] == 0) {
-                  param4++;
-                } else {
-                  incrementValue$3 = param4;
-                  param4++;
-                  param0[incrementValue$3] = param2;
-                }
-                incrementValue$4 = param3;
-                param3++;
-                if (param1[incrementValue$4] == 0) {
-                  param4++;
-                } else {
-                  incrementValue$5 = param4;
-                  param4++;
-                  param0[incrementValue$5] = param2;
-                }
-                incrementValue$6 = param3;
-                param3++;
-                if (param1[incrementValue$6] == 0) {
-                  param4++;
-                } else {
-                  incrementValue$7 = param4;
-                  param4++;
-                  param0[incrementValue$7] = param2;
-                }
-                incrementValue$8 = param3;
-                param3++;
-                if (param1[incrementValue$8] == 0) {
+                if (param1[incrementValue$0] == 0) {
                   param4++;
                   var11++;
-                  continue L1;
+                  continue;
                 }
-                {
-                  incrementValue$9 = param4;
-                  param4++;
-                  param0[incrementValue$9] = param2;
-                  var11++;
-                  continue L1;
-                }
+                incrementValue$1 = param4;
+                param4++;
+                param0[incrementValue$1] = param2;
+                var11++;
+                continue;
               }
             }
+            incrementValue$2 = param3;
+            param3++;
+            if (param1[incrementValue$2] == 0) {
+              param4++;
+            } else {
+              incrementValue$3 = param4;
+              param4++;
+              param0[incrementValue$3] = param2;
+            }
+            incrementValue$4 = param3;
+            param3++;
+            if (param1[incrementValue$4] == 0) {
+              param4++;
+            } else {
+              incrementValue$5 = param4;
+              param4++;
+              param0[incrementValue$5] = param2;
+            }
+            incrementValue$6 = param3;
+            param3++;
+            if (param1[incrementValue$6] == 0) {
+              param4++;
+            } else {
+              incrementValue$7 = param4;
+              param4++;
+              param0[incrementValue$7] = param2;
+            }
+            incrementValue$8 = param3;
+            param3++;
+            if (param1[incrementValue$8] == 0) {
+              param4++;
+              var11++;
+              continue;
+            }
+            incrementValue$9 = param4;
+            param4++;
+            param0[incrementValue$9] = param2;
+            var11++;
+            continue;
           }
         }
     }
@@ -285,30 +269,26 @@ final class bg extends m {
             return;
           }
           var11 = -param5;
-          L1: while (true) {
+          while (true) {
             if (var11 >= 0) {
               param4 = param4 + param7;
               param3 = param3 + param8;
               var10++;
               continue L0;
             }
-            {
-              incrementValue$11 = param3;
-              param3++;
-              if (param1[incrementValue$11] == 0) {
-                param4++;
-                var11++;
-                continue L1;
-              }
-              {
-                var12 = param0[param4];
-                incrementValue$12 = param4;
-                param4++;
-                param0[incrementValue$12] = (((var12 & 16711935) * param9 & -16711936) + ((var12 & 65280) * param9 & 16711680) >> 8) + param2;
-                var11++;
-                continue L1;
-              }
+            incrementValue$11 = param3;
+            param3++;
+            if (param1[incrementValue$11] == 0) {
+              param4++;
+              var11++;
+              continue;
             }
+            var12 = param0[param4];
+            incrementValue$12 = param4;
+            param4++;
+            param0[incrementValue$12] = (((var12 & 16711935) * param9 & -16711936) + ((var12 & 65280) * param9 & 16711680) >> 8) + param2;
+            var11++;
+            continue;
           }
         }
     }

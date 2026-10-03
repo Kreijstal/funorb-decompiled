@@ -90,10 +90,10 @@ class dj extends hk {
         if (param0 != -57) {
           discarded$1 = this.k((byte) -79);
         }
-        L1: while (var3 < var2) {
+        while (var3 < var2) {
           if (32 != this.field_s.charAt(-1 + var3)) {
             var3++;
-            continue L1;
+            continue;
           }
           break;
         }
@@ -333,9 +333,9 @@ class dj extends hk {
         if (param0 != 77) {
           return 108;
         }
-        L0: for (var2 = this.field_H - 1; var2 > 0; var2--) {
+        for (var2 = this.field_H - 1; var2 > 0; var2--) {
           if (this.field_s.charAt(var2 - 1) != 32) {
-            continue L0;
+            continue;
           }
           break;
         }

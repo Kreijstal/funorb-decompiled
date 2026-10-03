@@ -103,11 +103,9 @@ final class td extends hk {
               if (var9 != kk.field_w) {
                 break L0;
               }
-              {
-                var15 = oa.field_e[1];
-                var15.c(-(var15.field_r >> 1) + var5, var6 - (var15.field_m >> 1), 256);
-                break L0;
-              }
+              var15 = oa.field_e[1];
+              var15.c(-(var15.field_r >> 1) + var5, var6 - (var15.field_m >> 1), 256);
+              break L0;
             }
           }
           L2: {

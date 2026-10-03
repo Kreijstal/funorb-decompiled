@@ -211,31 +211,29 @@ class hf {
                 }
                 break L6;
               }
-              {
-                for (var12 = 0; var5 > var12; var12++) {
-                  for (var13 = 0; var6 > var13; var13++) {
-                    var8[var13 * var5 + var12] = var15.f((byte) 90);
-                  }
+              for (var12 = 0; var5 > var12; var12++) {
+                for (var13 = 0; var6 > var13; var13++) {
+                  var8[var13 * var5 + var12] = var15.f((byte) 90);
                 }
-                if (0 == (2 & var11)) {
-                  break L6;
-                }
-                for (var12 = 0; var5 > var12; var12++) {
-                  for (var13 = 0; var6 > var13; var13++) {
-                    dupTemp$0 = var15.f((byte) 78);
-                    var9[var12 + var5 * var13] = dupTemp$0;
-                    var14 = dupTemp$0;
-                    stackIn_44_0 = var10;
-                    if (var14 == -1) {
-                      stackIn_45_1 = 0;
-                    } else {
-                      stackIn_45_1 = 1;
-                    }
-                    var10 = stackIn_44_0 | stackIn_45_1;
-                  }
-                }
+              }
+              if (0 == (2 & var11)) {
                 break L6;
               }
+              for (var12 = 0; var5 > var12; var12++) {
+                for (var13 = 0; var6 > var13; var13++) {
+                  dupTemp$0 = var15.f((byte) 78);
+                  var9[var12 + var5 * var13] = dupTemp$0;
+                  var14 = dupTemp$0;
+                  stackIn_44_0 = var10;
+                  if (var14 == -1) {
+                    stackIn_45_1 = 0;
+                  } else {
+                    stackIn_45_1 = 1;
+                  }
+                  var10 = stackIn_44_0 | stackIn_45_1;
+                }
+              }
+              break L6;
             }
             ng.field_E[var4] = var10 != 0;
           }

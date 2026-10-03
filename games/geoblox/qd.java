@@ -67,10 +67,10 @@ final class qd extends m {
         var2 = param1;
         for (var3 = 0; var3 < var2.length; var3++) {
           var4 = var2[var3];
-          L2: for (var5 = 0; var5 < var4.length; var5++) {
+          for (var5 = 0; var5 < var4.length; var5++) {
             var6 = var4[var5];
             if (var6 == 0) {
-              continue L2;
+              continue;
             }
             var4[var5] = (byte)param0[var6];
           }
@@ -145,33 +145,29 @@ final class qd extends m {
             return;
           }
           var11 = -param5;
-          L1: while (true) {
+          while (true) {
             if (var11 >= 0) {
               param4 = param4 + param7;
               param3 = param3 + param8;
               var10++;
               continue L0;
             }
-            {
-              incrementValue$11 = param3;
-              param3++;
-              var12 = (255 & param1[incrementValue$11]) * param9 >> 8;
-              if (var12 == 0) {
-                param4++;
-                var11++;
-                continue L1;
-              }
-              {
-                var13 = ((param2 & 16711935) * var12 & -16711936) + ((param2 & 65280) * var12 & 16711680) >> 8;
-                var12 = 256 - var12;
-                var14 = param0[param4];
-                incrementValue$12 = param4;
-                param4++;
-                param0[incrementValue$12] = (((var14 & 16711935) * var12 & -16711936) + ((var14 & 65280) * var12 & 16711680) >> 8) + var13;
-                var11++;
-                continue L1;
-              }
+            incrementValue$11 = param3;
+            param3++;
+            var12 = (255 & param1[incrementValue$11]) * param9 >> 8;
+            if (var12 == 0) {
+              param4++;
+              var11++;
+              continue;
             }
+            var13 = ((param2 & 16711935) * var12 & -16711936) + ((param2 & 65280) * var12 & 16711680) >> 8;
+            var12 = 256 - var12;
+            var14 = param0[param4];
+            incrementValue$12 = param4;
+            param4++;
+            param0[incrementValue$12] = (((var14 & 16711935) * var12 & -16711936) + ((var14 & 65280) * var12 & 16711680) >> 8) + var13;
+            var11++;
+            continue;
           }
         }
     }
@@ -190,33 +186,29 @@ final class qd extends m {
             return;
           }
           var10 = -param5;
-          L1: while (true) {
+          while (true) {
             if (var10 >= 0) {
               param4 = param4 + param7;
               param3 = param3 + param8;
               var9++;
               continue L0;
             }
-            {
-              incrementValue$11 = param3;
-              param3++;
-              var11 = 255 & param1[incrementValue$11];
-              if (var11 == 0) {
-                param4++;
-                var10++;
-                continue L1;
-              }
-              {
-                var12 = ((param2 & 16711935) * var11 & -16711936) + ((param2 & 65280) * var11 & 16711680) >> 8;
-                var11 = 256 - var11;
-                var13 = param0[param4];
-                incrementValue$12 = param4;
-                param4++;
-                param0[incrementValue$12] = (((var13 & 16711935) * var11 & -16711936) + ((var13 & 65280) * var11 & 16711680) >> 8) + var12;
-                var10++;
-                continue L1;
-              }
+            incrementValue$11 = param3;
+            param3++;
+            var11 = 255 & param1[incrementValue$11];
+            if (var11 == 0) {
+              param4++;
+              var10++;
+              continue;
             }
+            var12 = ((param2 & 16711935) * var11 & -16711936) + ((param2 & 65280) * var11 & 16711680) >> 8;
+            var11 = 256 - var11;
+            var13 = param0[param4];
+            incrementValue$12 = param4;
+            param4++;
+            param0[incrementValue$12] = (((var13 & 16711935) * var11 & -16711936) + ((var13 & 65280) * var11 & 16711680) >> 8) + var12;
+            var10++;
+            continue;
           }
         }
     }

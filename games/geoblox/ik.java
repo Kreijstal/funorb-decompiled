@@ -44,7 +44,7 @@ final class ik {
           if (param4 != -1540604944) {
             field_b = (String) null;
           }
-          L3: while (var7 < var6) {
+          while (var7 < var6) {
             var8 = 152 + 48 * var7 / param1;
             var9 = var8 << 8 | var8 << 16 | var8;
             vb.field_c[param0 + vb.field_f * (var7 + param2)] = var9;

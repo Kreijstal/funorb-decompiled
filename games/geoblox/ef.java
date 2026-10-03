@@ -48,7 +48,7 @@ final class ef implements Iterator {
             ef.a((byte) -11);
           }
           var2 = (ja) ((Object) bh.field_c.g(0));
-          L1: while (var2 != null) {
+          while (var2 != null) {
             var2.b(true);
             if (var2.field_G >= 3) {
               var2.field_K = ra.field_a;

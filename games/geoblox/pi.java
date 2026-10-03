@@ -190,39 +190,35 @@ final class pi extends vf {
           if (kk.field_w != var6) {
             return;
           }
-          {
-            var16 = oa.field_e[1];
-            var16.c(var9, var10 - (var16.field_m >> 1), 256);
-            return;
-          }
+          var16 = oa.field_e[1];
+          var16.c(var9, var10 - (var16.field_m >> 1), 256);
+          return;
         }
-        {
-          var18 = oa.field_e[0];
-          var15 = var18;
-          var12 = var18.field_s << 1;
-          var13 = var18.field_o << 1;
-          if (this.field_Q == null) {
+        var18 = oa.field_e[0];
+        var15 = var18;
+        var12 = var18.field_s << 1;
+        var13 = var18.field_o << 1;
+        if (this.field_Q == null) {
+          this.field_Q = new dm(var12, var13);
+          Geoblox.a(1, this.field_Q);
+        } else {
+          if (this.field_Q.field_r < var12) {
             this.field_Q = new dm(var12, var13);
             Geoblox.a(1, this.field_Q);
           } else {
-            if (this.field_Q.field_r < var12) {
+            if (this.field_Q.field_m < var13) {
               this.field_Q = new dm(var12, var13);
               Geoblox.a(1, this.field_Q);
             } else {
-              if (this.field_Q.field_m < var13) {
-                this.field_Q = new dm(var12, var13);
-                Geoblox.a(1, this.field_Q);
-              } else {
-                Geoblox.a(1, this.field_Q);
-                vb.c();
-              }
+              Geoblox.a(1, this.field_Q);
+              vb.c();
             }
           }
-          var18.a(112, 144, var18.field_s << 4, var18.field_o << 4, -this.field_P << 10, 4096);
-          id.a(true);
-          this.field_Q.c(-(var18.field_s >> 1) + var9, var10 - var18.field_o, 256);
-          return;
         }
+        var18.a(112, 144, var18.field_s << 4, var18.field_o << 4, -this.field_P << 10, 4096);
+        id.a(true);
+        this.field_Q.c(-(var18.field_s >> 1) + var9, var10 - var18.field_o, 256);
+        return;
     }
 
     public static void j(int param0) {

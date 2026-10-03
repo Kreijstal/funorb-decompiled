@@ -32,7 +32,7 @@ final class i {
           if (param0 >= -127) {
             i.a(false);
           }
-          L1: while (null != var3) {
+          while (null != var3) {
             var4 = (-240.0f + var3.field_v) * (-240.0f + var3.field_v) + (-320.0f + var3.field_o) * (var3.field_o - 320.0f);
             if (var1_float < var4) {
               var1_float = var4;
@@ -40,7 +40,7 @@ final class i {
             }
             var3 = (ja) ((Object) a.field_d.b(0));
             if (var5 == 0) {
-              continue L1;
+              continue;
             }
             break;
           }
@@ -128,7 +128,7 @@ final class i {
           }
           ch.field_b = 0;
           var8 = 0;
-          L1: while (true) {
+          while (true) {
             L2: {
               if (var8 < param2.field_f) {
                 var9 = param2.field_r[var8];
@@ -174,7 +174,7 @@ final class i {
                     }
                     var16 = -stackIn_28_0 + (-1 + ch.field_d.length);
                     var17 = ch.field_d[var16];
-                    L9: while (true) {
+                    while (true) {
                       L10: {
                         if (var17 >> 4 != 0) {
                           var16--;
@@ -190,7 +190,7 @@ final class i {
                           }
                           var17 = ch.field_d[var16];
                           if (var19 == 0) {
-                            continue L9;
+                            continue;
                           }
                         }
                         stackIn_39_0 = (var16 << 4) + var17;
@@ -211,7 +211,7 @@ final class i {
                 }
                 var8++;
                 if (var19 == 0) {
-                  continue L1;
+                  continue;
                 }
               }
               stackIn_49_0 = -1;
@@ -222,7 +222,7 @@ final class i {
                   if (null != param2.field_n) {
                     var8 = 0;
                     var9 = 0;
-                    L16: while (true) {
+                    while (true) {
                       if (uh.field_x.length <= var9) {
                         break L15;
                       }
@@ -234,7 +234,7 @@ final class i {
                         break L14;
                       }
                       if (var19 == 0) {
-                        continue L16;
+                        continue;
                       }
                       break L15;
                     }

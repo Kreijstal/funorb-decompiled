@@ -207,10 +207,10 @@ final class wa {
             var11 = this.field_m.a(param1, new int[]{var12}, dd.field_E);
             var9 = 0;
             var10 = var10 + (var11 - 1) * var7;
-            L5: for (var13 = 0; var13 < var11; var13++) {
+            for (var13 = 0; var13 < var11; var13++) {
               var14 = this.field_m.a(dd.field_E[var13]);
               if (var14 <= var9) {
-                continue L5;
+                continue;
               }
               var9 = var14;
             }
@@ -311,7 +311,7 @@ final class wa {
             wa.a(53, -56, 122, 126);
           }
           var2 = (me) ((Object) md.field_a.b((byte) -121));
-          L1: while (var2 != null) {
+          while (var2 != null) {
             var1_int = var1_int + var2.field_f;
             var2 = (me) ((Object) md.field_a.b((byte) -99));
           }

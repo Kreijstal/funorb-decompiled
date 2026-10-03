@@ -237,24 +237,22 @@ class f extends qf implements pl {
                   }
                   return;
                 }
-                {
-                  gg.field_b = gg.field_b + 1;
-                  g.field_j = 0;
-                  fd.a(300, fl.field_c[22], false, j.field_gb);
-                  g.field_j = g.field_j + 1;
-                  var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
-                  fieldTemp$51 = wa.field_a;
-                  wa.field_a = wa.field_a - 1;
-                  if (fieldTemp$51 > 0) {
-                    ha.field_g = wa.field_a % 15 % 2;
-                  }
-                  fieldTemp$52 = jf.field_j;
-                  jf.field_j = jf.field_j - 1;
-                  if (fieldTemp$52 > 0) {
-                    rj.field_c = ((int)(md.field_b * var1) << 16) + (r.field_ub + ((int)(var1 * fe.field_c) << 8) + (int)(uk.field_j * var1));
-                  }
-                  return;
+                gg.field_b = gg.field_b + 1;
+                g.field_j = 0;
+                fd.a(300, fl.field_c[22], false, j.field_gb);
+                g.field_j = g.field_j + 1;
+                var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+                fieldTemp$51 = wa.field_a;
+                wa.field_a = wa.field_a - 1;
+                if (fieldTemp$51 > 0) {
+                  ha.field_g = wa.field_a % 15 % 2;
                 }
+                fieldTemp$52 = jf.field_j;
+                jf.field_j = jf.field_j - 1;
+                if (fieldTemp$52 > 0) {
+                  rj.field_c = ((int)(md.field_b * var1) << 16) + (r.field_ub + ((int)(var1 * fe.field_c) << 8) + (int)(uk.field_j * var1));
+                }
+                return;
               }
               if (gg.field_b == 1) {
                 if (ok.field_a.length > g.field_j) {
@@ -273,23 +271,21 @@ class f extends qf implements pl {
                   }
                   return;
                 }
-                {
-                  gg.field_b = gg.field_b + 1;
-                  pa.field_g = 200;
-                  g.field_j = g.field_j + 1;
-                  var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
-                  fieldTemp$57 = wa.field_a;
-                  wa.field_a = wa.field_a - 1;
-                  if (fieldTemp$57 > 0) {
-                    ha.field_g = wa.field_a % 15 % 2;
-                  }
-                  fieldTemp$58 = jf.field_j;
-                  jf.field_j = jf.field_j - 1;
-                  if (fieldTemp$58 > 0) {
-                    rj.field_c = ((int)(md.field_b * var1) << 16) + (r.field_ub + ((int)(var1 * fe.field_c) << 8) + (int)(uk.field_j * var1));
-                  }
-                  return;
+                gg.field_b = gg.field_b + 1;
+                pa.field_g = 200;
+                g.field_j = g.field_j + 1;
+                var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+                fieldTemp$57 = wa.field_a;
+                wa.field_a = wa.field_a - 1;
+                if (fieldTemp$57 > 0) {
+                  ha.field_g = wa.field_a % 15 % 2;
                 }
+                fieldTemp$58 = jf.field_j;
+                jf.field_j = jf.field_j - 1;
+                if (fieldTemp$58 > 0) {
+                  rj.field_c = ((int)(md.field_b * var1) << 16) + (r.field_ub + ((int)(var1 * fe.field_c) << 8) + (int)(uk.field_j * var1));
+                }
+                return;
               }
               g.field_j = g.field_j % 4;
               ul.field_a = ld.field_b[g.field_j];
@@ -308,15 +304,13 @@ class f extends qf implements pl {
             rj.field_c = ((int)(md.field_b * var1) << 16) + (r.field_ub + ((int)(var1 * fe.field_c) << 8) + (int)(uk.field_j * var1));
             return;
           }
-          {
-            ha.field_g = wa.field_a % 15 % 2;
-            fieldTemp$61 = jf.field_j;
-            jf.field_j = jf.field_j - 1;
-            if (fieldTemp$61 > 0) {
-              rj.field_c = ((int)(md.field_b * var1) << 16) + (r.field_ub + ((int)(var1 * fe.field_c) << 8) + (int)(uk.field_j * var1));
-            }
-            return;
+          ha.field_g = wa.field_a % 15 % 2;
+          fieldTemp$61 = jf.field_j;
+          jf.field_j = jf.field_j - 1;
+          if (fieldTemp$61 > 0) {
+            rj.field_c = ((int)(md.field_b * var1) << 16) + (r.field_ub + ((int)(var1 * fe.field_c) << 8) + (int)(uk.field_j * var1));
           }
+          return;
         }
         L0: {
           af.field_c = 20;
@@ -375,24 +369,22 @@ class f extends qf implements pl {
                       }
                       return;
                     }
-                    {
-                      gg.field_b = gg.field_b + 1;
-                      g.field_j = 0;
-                      fd.a(300, fl.field_c[22], false, j.field_gb);
-                      g.field_j = g.field_j + 1;
-                      var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
-                      fieldTemp$24 = wa.field_a;
-                      wa.field_a = wa.field_a - 1;
-                      if (fieldTemp$24 > 0) {
-                        ha.field_g = wa.field_a % 15 % 2;
-                      }
-                      fieldTemp$25 = jf.field_j;
-                      jf.field_j = jf.field_j - 1;
-                      if (fieldTemp$25 > 0) {
-                        rj.field_c = ((int)(md.field_b * var1) << 16) + (r.field_ub + ((int)(var1 * fe.field_c) << 8) + (int)(uk.field_j * var1));
-                      }
-                      return;
+                    gg.field_b = gg.field_b + 1;
+                    g.field_j = 0;
+                    fd.a(300, fl.field_c[22], false, j.field_gb);
+                    g.field_j = g.field_j + 1;
+                    var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+                    fieldTemp$24 = wa.field_a;
+                    wa.field_a = wa.field_a - 1;
+                    if (fieldTemp$24 > 0) {
+                      ha.field_g = wa.field_a % 15 % 2;
                     }
+                    fieldTemp$25 = jf.field_j;
+                    jf.field_j = jf.field_j - 1;
+                    if (fieldTemp$25 > 0) {
+                      rj.field_c = ((int)(md.field_b * var1) << 16) + (r.field_ub + ((int)(var1 * fe.field_c) << 8) + (int)(uk.field_j * var1));
+                    }
+                    return;
                   }
                   if (gg.field_b == 1) {
                     if (ok.field_a.length > g.field_j) {
@@ -411,23 +403,21 @@ class f extends qf implements pl {
                       }
                       return;
                     }
-                    {
-                      gg.field_b = gg.field_b + 1;
-                      pa.field_g = 200;
-                      g.field_j = g.field_j + 1;
-                      var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
-                      fieldTemp$30 = wa.field_a;
-                      wa.field_a = wa.field_a - 1;
-                      if (fieldTemp$30 > 0) {
-                        ha.field_g = wa.field_a % 15 % 2;
-                      }
-                      fieldTemp$31 = jf.field_j;
-                      jf.field_j = jf.field_j - 1;
-                      if (fieldTemp$31 > 0) {
-                        rj.field_c = ((int)(md.field_b * var1) << 16) + (r.field_ub + ((int)(var1 * fe.field_c) << 8) + (int)(uk.field_j * var1));
-                      }
-                      return;
+                    gg.field_b = gg.field_b + 1;
+                    pa.field_g = 200;
+                    g.field_j = g.field_j + 1;
+                    var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+                    fieldTemp$30 = wa.field_a;
+                    wa.field_a = wa.field_a - 1;
+                    if (fieldTemp$30 > 0) {
+                      ha.field_g = wa.field_a % 15 % 2;
                     }
+                    fieldTemp$31 = jf.field_j;
+                    jf.field_j = jf.field_j - 1;
+                    if (fieldTemp$31 > 0) {
+                      rj.field_c = ((int)(md.field_b * var1) << 16) + (r.field_ub + ((int)(var1 * fe.field_c) << 8) + (int)(uk.field_j * var1));
+                    }
+                    return;
                   }
                   g.field_j = g.field_j % 4;
                   ul.field_a = ld.field_b[g.field_j];
@@ -446,15 +436,13 @@ class f extends qf implements pl {
                 rj.field_c = ((int)(md.field_b * var1) << 16) + (r.field_ub + ((int)(var1 * fe.field_c) << 8) + (int)(uk.field_j * var1));
                 return;
               }
-              {
-                ha.field_g = wa.field_a % 15 % 2;
-                fieldTemp$34 = jf.field_j;
-                jf.field_j = jf.field_j - 1;
-                if (fieldTemp$34 > 0) {
-                  rj.field_c = ((int)(md.field_b * var1) << 16) + (r.field_ub + ((int)(var1 * fe.field_c) << 8) + (int)(uk.field_j * var1));
-                }
-                return;
+              ha.field_g = wa.field_a % 15 % 2;
+              fieldTemp$34 = jf.field_j;
+              jf.field_j = jf.field_j - 1;
+              if (fieldTemp$34 > 0) {
+                rj.field_c = ((int)(md.field_b * var1) << 16) + (r.field_ub + ((int)(var1 * fe.field_c) << 8) + (int)(uk.field_j * var1));
               }
+              return;
             }
             if (var1_int <= 1) {
               if (2 == jk.field_d) {
@@ -503,138 +491,124 @@ class f extends qf implements pl {
             rj.field_c = ((int)(md.field_b * var1) << 16) + (r.field_ub + ((int)(var1 * fe.field_c) << 8) + (int)(uk.field_j * var1));
             return;
           }
-          {
-            ha.field_g = wa.field_a % 15 % 2;
-            fieldTemp$50 = jf.field_j;
-            jf.field_j = jf.field_j - 1;
-            if (fieldTemp$50 <= 0) {
-              return;
-            }
-            rj.field_c = ((int)(md.field_b * var1) << 16) + (r.field_ub + ((int)(var1 * fe.field_c) << 8) + (int)(uk.field_j * var1));
+          ha.field_g = wa.field_a % 15 % 2;
+          fieldTemp$50 = jf.field_j;
+          jf.field_j = jf.field_j - 1;
+          if (fieldTemp$50 <= 0) {
             return;
           }
+          rj.field_c = ((int)(md.field_b * var1) << 16) + (r.field_ub + ((int)(var1 * fe.field_c) << 8) + (int)(uk.field_j * var1));
+          return;
         }
-        {
-          if (gi.field_e % 18 == 0) {
-            if (gg.field_b == 0) {
-              if (!pf.field_D) {
-                g.field_j = g.field_j % 4;
-                ul.field_a = vf.field_H[g.field_j];
-                g.field_j = g.field_j + 1;
-                var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
-                fieldTemp$35 = wa.field_a;
-                wa.field_a = wa.field_a - 1;
-                if (fieldTemp$35 <= 0) {
-                  fieldTemp$36 = jf.field_j;
-                  jf.field_j = jf.field_j - 1;
-                  if (fieldTemp$36 <= 0) {
-                    return;
-                  }
-                  rj.field_c = ((int)(md.field_b * var1) << 16) + (r.field_ub + ((int)(var1 * fe.field_c) << 8) + (int)(uk.field_j * var1));
-                  return;
-                }
-                {
-                  ha.field_g = wa.field_a % 15 % 2;
-                  fieldTemp$37 = jf.field_j;
-                  jf.field_j = jf.field_j - 1;
-                  if (fieldTemp$37 <= 0) {
-                    return;
-                  }
-                  rj.field_c = ((int)(md.field_b * var1) << 16) + (r.field_ub + ((int)(var1 * fe.field_c) << 8) + (int)(uk.field_j * var1));
-                  return;
-                }
-              }
-              {
-                gg.field_b = gg.field_b + 1;
-                g.field_j = 0;
-                fd.a(300, fl.field_c[22], false, j.field_gb);
-                g.field_j = g.field_j + 1;
-                var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
-                fieldTemp$38 = wa.field_a;
-                wa.field_a = wa.field_a - 1;
-                if (fieldTemp$38 <= 0) {
-                  fieldTemp$39 = jf.field_j;
-                  jf.field_j = jf.field_j - 1;
-                  if (fieldTemp$39 <= 0) {
-                    return;
-                  }
-                  rj.field_c = ((int)(md.field_b * var1) << 16) + (r.field_ub + ((int)(var1 * fe.field_c) << 8) + (int)(uk.field_j * var1));
-                  return;
-                }
-                {
-                  ha.field_g = wa.field_a % 15 % 2;
-                  fieldTemp$40 = jf.field_j;
-                  jf.field_j = jf.field_j - 1;
-                  if (fieldTemp$40 > 0) {
-                    rj.field_c = ((int)(md.field_b * var1) << 16) + (r.field_ub + ((int)(var1 * fe.field_c) << 8) + (int)(uk.field_j * var1));
-                  }
-                  return;
-                }
-              }
-            }
-            if (gg.field_b == 1) {
-              if (ok.field_a.length > g.field_j) {
-                ul.field_a = ok.field_a[g.field_j];
-                g.field_j = g.field_j + 1;
-                var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
-                fieldTemp$43 = wa.field_a;
-                wa.field_a = wa.field_a - 1;
-                if (fieldTemp$43 > 0) {
-                  ha.field_g = wa.field_a % 15 % 2;
-                }
-                fieldTemp$44 = jf.field_j;
+        if (gi.field_e % 18 == 0) {
+          if (gg.field_b == 0) {
+            if (!pf.field_D) {
+              g.field_j = g.field_j % 4;
+              ul.field_a = vf.field_H[g.field_j];
+              g.field_j = g.field_j + 1;
+              var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+              fieldTemp$35 = wa.field_a;
+              wa.field_a = wa.field_a - 1;
+              if (fieldTemp$35 <= 0) {
+                fieldTemp$36 = jf.field_j;
                 jf.field_j = jf.field_j - 1;
-                if (fieldTemp$44 > 0) {
-                  rj.field_c = ((int)(md.field_b * var1) << 16) + (r.field_ub + ((int)(var1 * fe.field_c) << 8) + (int)(uk.field_j * var1));
-                }
-                return;
-              }
-              {
-                gg.field_b = gg.field_b + 1;
-                pa.field_g = 200;
-                g.field_j = g.field_j + 1;
-                var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
-                fieldTemp$41 = wa.field_a;
-                wa.field_a = wa.field_a - 1;
-                if (fieldTemp$41 > 0) {
-                  ha.field_g = wa.field_a % 15 % 2;
-                }
-                fieldTemp$42 = jf.field_j;
-                jf.field_j = jf.field_j - 1;
-                if (fieldTemp$42 <= 0) {
+                if (fieldTemp$36 <= 0) {
                   return;
                 }
                 rj.field_c = ((int)(md.field_b * var1) << 16) + (r.field_ub + ((int)(var1 * fe.field_c) << 8) + (int)(uk.field_j * var1));
                 return;
               }
+              ha.field_g = wa.field_a % 15 % 2;
+              fieldTemp$37 = jf.field_j;
+              jf.field_j = jf.field_j - 1;
+              if (fieldTemp$37 <= 0) {
+                return;
+              }
+              rj.field_c = ((int)(md.field_b * var1) << 16) + (r.field_ub + ((int)(var1 * fe.field_c) << 8) + (int)(uk.field_j * var1));
+              return;
             }
-            g.field_j = g.field_j % 4;
-            ul.field_a = ld.field_b[g.field_j];
+            gg.field_b = gg.field_b + 1;
+            g.field_j = 0;
+            fd.a(300, fl.field_c[22], false, j.field_gb);
             g.field_j = g.field_j + 1;
-          }
-          var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
-          fieldTemp$45 = wa.field_a;
-          wa.field_a = wa.field_a - 1;
-          if (fieldTemp$45 <= 0) {
-            fieldTemp$46 = jf.field_j;
-            jf.field_j = jf.field_j - 1;
-            if (fieldTemp$46 <= 0) {
+            var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+            fieldTemp$38 = wa.field_a;
+            wa.field_a = wa.field_a - 1;
+            if (fieldTemp$38 <= 0) {
+              fieldTemp$39 = jf.field_j;
+              jf.field_j = jf.field_j - 1;
+              if (fieldTemp$39 <= 0) {
+                return;
+              }
+              rj.field_c = ((int)(md.field_b * var1) << 16) + (r.field_ub + ((int)(var1 * fe.field_c) << 8) + (int)(uk.field_j * var1));
               return;
             }
-            rj.field_c = ((int)(md.field_b * var1) << 16) + (r.field_ub + ((int)(var1 * fe.field_c) << 8) + (int)(uk.field_j * var1));
-            return;
-          }
-          {
             ha.field_g = wa.field_a % 15 % 2;
-            fieldTemp$47 = jf.field_j;
+            fieldTemp$40 = jf.field_j;
             jf.field_j = jf.field_j - 1;
-            if (fieldTemp$47 <= 0) {
+            if (fieldTemp$40 > 0) {
+              rj.field_c = ((int)(md.field_b * var1) << 16) + (r.field_ub + ((int)(var1 * fe.field_c) << 8) + (int)(uk.field_j * var1));
+            }
+            return;
+          }
+          if (gg.field_b == 1) {
+            if (ok.field_a.length > g.field_j) {
+              ul.field_a = ok.field_a[g.field_j];
+              g.field_j = g.field_j + 1;
+              var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+              fieldTemp$43 = wa.field_a;
+              wa.field_a = wa.field_a - 1;
+              if (fieldTemp$43 > 0) {
+                ha.field_g = wa.field_a % 15 % 2;
+              }
+              fieldTemp$44 = jf.field_j;
+              jf.field_j = jf.field_j - 1;
+              if (fieldTemp$44 > 0) {
+                rj.field_c = ((int)(md.field_b * var1) << 16) + (r.field_ub + ((int)(var1 * fe.field_c) << 8) + (int)(uk.field_j * var1));
+              }
+              return;
+            }
+            gg.field_b = gg.field_b + 1;
+            pa.field_g = 200;
+            g.field_j = g.field_j + 1;
+            var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+            fieldTemp$41 = wa.field_a;
+            wa.field_a = wa.field_a - 1;
+            if (fieldTemp$41 > 0) {
+              ha.field_g = wa.field_a % 15 % 2;
+            }
+            fieldTemp$42 = jf.field_j;
+            jf.field_j = jf.field_j - 1;
+            if (fieldTemp$42 <= 0) {
               return;
             }
             rj.field_c = ((int)(md.field_b * var1) << 16) + (r.field_ub + ((int)(var1 * fe.field_c) << 8) + (int)(uk.field_j * var1));
             return;
           }
+          g.field_j = g.field_j % 4;
+          ul.field_a = ld.field_b[g.field_j];
+          g.field_j = g.field_j + 1;
         }
+        var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+        fieldTemp$45 = wa.field_a;
+        wa.field_a = wa.field_a - 1;
+        if (fieldTemp$45 <= 0) {
+          fieldTemp$46 = jf.field_j;
+          jf.field_j = jf.field_j - 1;
+          if (fieldTemp$46 <= 0) {
+            return;
+          }
+          rj.field_c = ((int)(md.field_b * var1) << 16) + (r.field_ub + ((int)(var1 * fe.field_c) << 8) + (int)(uk.field_j * var1));
+          return;
+        }
+        ha.field_g = wa.field_a % 15 % 2;
+        fieldTemp$47 = jf.field_j;
+        jf.field_j = jf.field_j - 1;
+        if (fieldTemp$47 <= 0) {
+          return;
+        }
+        rj.field_c = ((int)(md.field_b * var1) << 16) + (r.field_ub + ((int)(var1 * fe.field_c) << 8) + (int)(uk.field_j * var1));
+        return;
     }
 
     final static wa p(int param0) {
@@ -679,52 +653,50 @@ class f extends qf implements pl {
           if (param1 != 19810) {
             return;
           }
-          {
-            if (256 != param0) {
-              stackIn_9_1 = false;
-            } else {
-              stackIn_9_1 = true;
-            }
-            ((f) (this)).field_ob = stackIn_9_1;
-            this.field_rb = true;
-            this.field_pb.a(4210752, 8405024, (byte) -103);
-            var6 = new ni((f) (this), this.field_jb, param2);
-            if (param0 == 5) {
-              var6.a(nf.field_E, 1, 11);
-              var6.a(rj.field_e, 1, 17);
-            } else {
-              if (param0 != 256) {
-                stackIn_14_0 = (ni) (var6);
-                if (this.field_mb) {
-                  stackIn_15_1 = a.field_b;
-                } else {
-                  stackIn_15_1 = ll.field_b;
-                }
-                ((ni) (Object) stackIn_14_0).a(stackIn_15_1, 1, -1);
-              } else {
-                var6.a(-2, a.field_b, (bb) (this));
-              }
-            }
-            if (param0 == 3) {
-              var6.a(ee.field_y, param1 ^ 19811, 7);
-            } else {
-              if (param0 != 4) {
-                if (param0 == 6) {
-                  var6.a(jc.field_c, 1, 9);
-                } else {
-                  if (param0 != 9) {
-                    this.b(var6, param1 ^ -19736);
-                    return;
-                  }
-                  var6.a(-2, fi.field_h, (bb) (this));
-                }
-              } else {
-                var6.a(hb.field_h, 1, 8);
-              }
-            }
-            this.b(var6, param1 ^ -19736);
-            return;
+          if (256 != param0) {
+            stackIn_9_1 = false;
+          } else {
+            stackIn_9_1 = true;
           }
+          ((f) (this)).field_ob = stackIn_9_1;
+          this.field_rb = true;
+          this.field_pb.a(4210752, 8405024, (byte) -103);
+          var6 = new ni((f) (this), this.field_jb, param2);
+          if (param0 == 5) {
+            var6.a(nf.field_E, 1, 11);
+            var6.a(rj.field_e, 1, 17);
+          } else {
+            if (param0 != 256) {
+              stackIn_14_0 = (ni) (var6);
+              if (this.field_mb) {
+                stackIn_15_1 = a.field_b;
+              } else {
+                stackIn_15_1 = ll.field_b;
+              }
+              ((ni) (Object) stackIn_14_0).a(stackIn_15_1, 1, -1);
+            } else {
+              var6.a(-2, a.field_b, (bb) (this));
+            }
+          }
+          if (param0 == 3) {
+            var6.a(ee.field_y, param1 ^ 19811, 7);
+          } else {
+            if (param0 != 4) {
+              if (param0 == 6) {
+                var6.a(jc.field_c, 1, 9);
+              } else {
+                if (param0 != 9) {
+                  this.b(var6, param1 ^ -19736);
+                  return;
+                }
+                var6.a(-2, fi.field_h, (bb) (this));
+              }
+            } else {
+              var6.a(hb.field_h, 1, 8);
+            }
+          }
+          this.b(var6, param1 ^ -19736);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;

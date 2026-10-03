@@ -36,53 +36,51 @@ final class ek {
           if (!param1) {
             return;
           }
-          {
-            var10 = param2.field_s;
-            var11 = param2.field_o;
-            var12 = (var10 << 16) / param4;
-            var13 = (var11 << 16) / param0;
-            if (param2.field_u > 0) {
-              var14 = ((param2.field_u << 16) + (var12 - 1)) / var12;
-              var8 = var8 + (-(param2.field_u << 16) + var12 * var14);
-              param5 = param5 + var14;
-            }
-            if (var6_int < var10) {
-              param4 = (var12 + ((var6_int << 16) + (-var8 - 1))) / var12;
-            }
-            if (param2.field_p > 0) {
-              var14 = ((param2.field_p << 16) + var13 - 1) / var13;
-              var9 = var9 + (var14 * var13 - (param2.field_p << 16));
-              param3 = param3 + var14;
-            }
-            if (var11 > var7) {
-              param0 = (var13 + (-var9 + (var7 << 16)) - 1) / var13;
-            }
-            var14 = param5 + vb.field_f * param3;
-            var15 = vb.field_f - param4;
-            if (vb.field_d < param3 + param0) {
-              param0 = param0 - (-vb.field_d + param3 + param0);
-            }
-            if (vb.field_i > param3) {
-              var16 = vb.field_i - param3;
-              var9 = var9 + var13 * var16;
-              param0 = param0 - var16;
-              var14 = var14 + vb.field_f * var16;
-            }
-            if (param4 + param5 > vb.field_k) {
-              var16 = param5 + (param4 - vb.field_k);
-              var15 = var15 + var16;
-              param4 = param4 - var16;
-            }
-            if (param5 < vb.field_e) {
-              var16 = vb.field_e - param5;
-              var14 = var14 + var16;
-              var15 = var15 + var16;
-              var8 = var8 + var16 * var12;
-              param4 = param4 - var16;
-            }
-            lc.a(var8, param0, vb.field_c, var12, var13, var6_int, var9, var15, var14, param4, (byte) -104, param2.field_v, 0);
-            return;
+          var10 = param2.field_s;
+          var11 = param2.field_o;
+          var12 = (var10 << 16) / param4;
+          var13 = (var11 << 16) / param0;
+          if (param2.field_u > 0) {
+            var14 = ((param2.field_u << 16) + (var12 - 1)) / var12;
+            var8 = var8 + (-(param2.field_u << 16) + var12 * var14);
+            param5 = param5 + var14;
           }
+          if (var6_int < var10) {
+            param4 = (var12 + ((var6_int << 16) + (-var8 - 1))) / var12;
+          }
+          if (param2.field_p > 0) {
+            var14 = ((param2.field_p << 16) + var13 - 1) / var13;
+            var9 = var9 + (var14 * var13 - (param2.field_p << 16));
+            param3 = param3 + var14;
+          }
+          if (var11 > var7) {
+            param0 = (var13 + (-var9 + (var7 << 16)) - 1) / var13;
+          }
+          var14 = param5 + vb.field_f * param3;
+          var15 = vb.field_f - param4;
+          if (vb.field_d < param3 + param0) {
+            param0 = param0 - (-vb.field_d + param3 + param0);
+          }
+          if (vb.field_i > param3) {
+            var16 = vb.field_i - param3;
+            var9 = var9 + var13 * var16;
+            param0 = param0 - var16;
+            var14 = var14 + vb.field_f * var16;
+          }
+          if (param4 + param5 > vb.field_k) {
+            var16 = param5 + (param4 - vb.field_k);
+            var15 = var15 + var16;
+            param4 = param4 - var16;
+          }
+          if (param5 < vb.field_e) {
+            var16 = vb.field_e - param5;
+            var14 = var14 + var16;
+            var15 = var15 + var16;
+            var8 = var8 + var16 * var12;
+            param4 = param4 - var16;
+          }
+          lc.a(var8, param0, vb.field_c, var12, var13, var6_int, var9, var15, var14, param4, (byte) -104, param2.field_v, 0);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;

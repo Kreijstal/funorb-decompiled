@@ -97,7 +97,7 @@ final class nd {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = param1;
-          L0: while (param2 > 0) {
+          while (param2 > 0) {
             var3_int = var3_int << 1 | param0 & 1;
             param2--;
             param0 = param0 >>> 1;

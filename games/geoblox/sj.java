@@ -50,14 +50,14 @@ final class sj {
           return 80;
         }
         var3 = this.field_f.length;
-        L0: while (param0 >= var3) {
+        while (param0 >= var3) {
           if (!this.field_c) {
             var3 = var3 + this.field_a;
-            continue L0;
+            continue;
           }
           if (0 == var3) {
             var3 = 1;
-            continue L0;
+            continue;
           }
           var3 = var3 * this.field_a;
         }

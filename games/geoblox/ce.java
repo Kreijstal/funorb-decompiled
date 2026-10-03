@@ -63,29 +63,27 @@ final class ce extends qk {
           if (var2 != null) {
             var3 = var2;
             var4 = 0;
-            L1: while (true) {
+            while (true) {
               if (var4 >= var3.length) {
                 break L0;
               }
               var5 = var3[var4];
               if (var5 == null) {
                 var4++;
-                continue L1;
+                continue;
               }
-              {
-                var6 = var5.getName();
-                if (var6 == null) {
-                  var4++;
-                  continue L1;
-                }
-                if (var6.toLowerCase().indexOf(field_A) < 0) {
-                  var4++;
-                  continue L1;
-                }
-                this.field_v = true;
+              var6 = var5.getName();
+              if (var6 == null) {
                 var4++;
-                continue L1;
+                continue;
               }
+              if (var6.toLowerCase().indexOf(field_A) < 0) {
+                var4++;
+                continue;
+              }
+              this.field_v = true;
+              var4++;
+              continue;
             }
           }
         }

@@ -58,7 +58,7 @@ final class ul {
           if (param0 != -2) {
             field_a = (dm) null;
           }
-          L1: while (var3 != null) {
+          while (var3 != null) {
             L3: {
               if (var3.field_m <= 1) {
                 if (var3.field_N <= 1) {
@@ -90,7 +90,7 @@ final class ul {
                       break L10;
                     }
                   }
-                  L12: for (var9 = var6 + 1; var9 < var3.field_L; var9++) {
+                  for (var9 = var6 + 1; var9 < var3.field_L; var9++) {
                     if (var8 != 0) {
                       stackIn_38_0 = (var3.field_n[var9].field_C == var3.field_C) ? 1 : 0;
                     } else {
@@ -159,7 +159,7 @@ final class ul {
                       h.field_a = h.field_a + 1;
                     }
                     if (var10 == 0) {
-                      continue L12;
+                      continue;
                     }
                     if (var11 != 0) {
                       var2 = 1;

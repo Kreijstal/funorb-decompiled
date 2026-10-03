@@ -90,61 +90,59 @@ final class uh extends ac {
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
-          {
-            var3 = ac.a((byte) 81, param0) ? 1 : 0;
-            var4 = ac.a((byte) 7, param0) ? 1 : 0;
-            var5 = new nf();
-            var5.field_o = (short)param0.e((byte) -17, 16);
-            var5.field_O = ji.a(var5.field_O, 16, 0, param0);
-            var5.field_q = ji.a(var5.field_q, 16, 0, param0);
-            var5.field_K = ji.a(var5.field_K, 16, 0, param0);
-            var5.field_f = (short)param0.e((byte) -17, 16);
-            var5.field_r = ji.a(var5.field_r, 16, 0, param0);
-            if (param1 < 111) {
-              field_y = (kj) null;
-            }
-            var5.field_B = ji.a(var5.field_B, 16, 0, param0);
-            var5.field_c = ji.a(var5.field_c, 16, 0, param0);
-            if (var3 != 0) {
-              var5.field_m = (short)param0.e((byte) -17, 16);
-              var5.field_M = ji.a(var5.field_M, 16, 0, param0);
-              var5.field_t = ji.a(var5.field_t, 16, 0, param0);
-              var5.field_i = ji.a(var5.field_i, 16, 0, param0);
-              var5.field_P = ji.a(var5.field_P, 16, 0, param0);
-              var5.field_u = ji.a(var5.field_u, 16, 0, param0);
-              var5.field_e = ji.a(var5.field_e, 16, 0, param0);
-            }
-            if (var4 != 0) {
-              param0.e((byte) -17, 16);
-              var5.field_J = ji.a(var5.field_J, 16, 0, param0);
-              var5.field_z = ji.a(var5.field_z, 16, 0, param0);
-              var5.field_h = ji.a(var5.field_h, 16, 0, param0);
-              var5.field_k = ji.a(var5.field_k, 16, 0, param0);
-              var5.field_g = ji.a(var5.field_g, 16, 0, param0);
-            }
-            if (ac.a((byte) 102, param0)) {
-              var5.field_G = ji.a(var5.field_G, 16, 0, param0);
-            }
-            L4: {
-              if (ac.a((byte) 37, param0)) {
-                var5.field_n = vk.a(var5.field_n, param0, 16, 8);
-                var6 = 0;
-                for (var7 = 0; var5.field_n.length > var7; var7++) {
-                  if (~(255 & var5.field_n[var7]) < ~var6) {
-                    var6 = 255 & var5.field_n[var7];
-                  }
+          var3 = ac.a((byte) 81, param0) ? 1 : 0;
+          var4 = ac.a((byte) 7, param0) ? 1 : 0;
+          var5 = new nf();
+          var5.field_o = (short)param0.e((byte) -17, 16);
+          var5.field_O = ji.a(var5.field_O, 16, 0, param0);
+          var5.field_q = ji.a(var5.field_q, 16, 0, param0);
+          var5.field_K = ji.a(var5.field_K, 16, 0, param0);
+          var5.field_f = (short)param0.e((byte) -17, 16);
+          var5.field_r = ji.a(var5.field_r, 16, 0, param0);
+          if (param1 < 111) {
+            field_y = (kj) null;
+          }
+          var5.field_B = ji.a(var5.field_B, 16, 0, param0);
+          var5.field_c = ji.a(var5.field_c, 16, 0, param0);
+          if (var3 != 0) {
+            var5.field_m = (short)param0.e((byte) -17, 16);
+            var5.field_M = ji.a(var5.field_M, 16, 0, param0);
+            var5.field_t = ji.a(var5.field_t, 16, 0, param0);
+            var5.field_i = ji.a(var5.field_i, 16, 0, param0);
+            var5.field_P = ji.a(var5.field_P, 16, 0, param0);
+            var5.field_u = ji.a(var5.field_u, 16, 0, param0);
+            var5.field_e = ji.a(var5.field_e, 16, 0, param0);
+          }
+          if (var4 != 0) {
+            param0.e((byte) -17, 16);
+            var5.field_J = ji.a(var5.field_J, 16, 0, param0);
+            var5.field_z = ji.a(var5.field_z, 16, 0, param0);
+            var5.field_h = ji.a(var5.field_h, 16, 0, param0);
+            var5.field_k = ji.a(var5.field_k, 16, 0, param0);
+            var5.field_g = ji.a(var5.field_g, 16, 0, param0);
+          }
+          if (ac.a((byte) 102, param0)) {
+            var5.field_G = ji.a(var5.field_G, 16, 0, param0);
+          }
+          L4: {
+            if (ac.a((byte) 37, param0)) {
+              var5.field_n = vk.a(var5.field_n, param0, 16, 8);
+              var6 = 0;
+              for (var7 = 0; var5.field_n.length > var7; var7++) {
+                if (~(255 & var5.field_n[var7]) < ~var6) {
+                  var6 = 255 & var5.field_n[var7];
                 }
-                if (var6 != 0) {
-                  var5.field_v = (byte)(1 + var6);
-                  break L4;
-                }
-                var5.field_n = null;
+              }
+              if (var6 != 0) {
+                var5.field_v = (byte)(1 + var6);
                 break L4;
               }
+              var5.field_n = null;
+              break L4;
             }
-            stackIn_28_0 = (nf) (var5);
-            return stackIn_28_0;
           }
+          stackIn_28_0 = (nf) (var5);
+          return stackIn_28_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -201,7 +199,7 @@ final class uh extends ac {
             var7 += 778;
           }
           var13 = (ja) ((Object) wd.field_e.g(0));
-          L1: while (var13 != null) {
+          while (var13 != null) {
             var13.n(param0 - 4830);
             var13 = (ja) ((Object) wd.field_e.d(1));
           }

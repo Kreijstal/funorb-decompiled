@@ -158,7 +158,7 @@ final class bm {
                 var17 = (byte[]) null;
                 this.a((byte) -96, (byte[]) null);
               }
-              L18: while (this.field_h > var10) {
+              while (this.field_h > var10) {
                 this.field_t[this.field_i[var10]] = var18.a((byte) -110);
                 var10++;
               }
@@ -201,14 +201,14 @@ final class bm {
                   array$5 = new int[var12];
                   this.field_o[var11] = array$5;
                   var13 = -1;
-                  L27: for (var14 = 0; var12 > var14; var14++) {
+                  for (var14 = 0; var12 > var14; var14++) {
                     dupTemp$6 = var8 + var18.b(true);
                     var8 = dupTemp$6;
                     dupTemp$7 = this.field_o[var11];
                     dupTemp$7[var14] = dupTemp$6;
                     var15 = dupTemp$6;
                     if (~var13 <= ~var15) {
-                      continue L27;
+                      continue;
                     }
                     var13 = var15;
                   }

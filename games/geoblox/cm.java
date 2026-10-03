@@ -59,10 +59,10 @@ final class cm extends cj {
             if (var2 == 0) {
               var3 = var27.b(true);
               var4 = (mg) ((Object) rh.field_d.g(0));
-              L2: while (var4 != null) {
+              while (var4 != null) {
                 if (var4.field_i != var3) {
                   var4 = (mg) ((Object) rh.field_d.d(1));
-                  continue L2;
+                  continue;
                 }
                 break;
               }
@@ -105,64 +105,62 @@ final class cm extends cj {
                   if (0 >= var18) {
                     break L4;
                   }
-                  {
-                    for (var19 = 0; var19 < var18; var19++) {
-                      L7: {
-                        var20 = var27.c((byte) 34);
-                        var21 = id.field_b[var20].field_d;
-                        var22 = var27.b(2901);
-                        var24 = var27.field_f;
-                        if (var6 > var19) {
-                          var8[0][var12] = var21;
-                          var9[0][var12] = id.field_b[var20].field_a;
-                          var31[0][var12] = var22;
+                  for (var19 = 0; var19 < var18; var19++) {
+                    L7: {
+                      var20 = var27.c((byte) 34);
+                      var21 = id.field_b[var20].field_d;
+                      var22 = var27.b(2901);
+                      var24 = var27.field_f;
+                      if (var6 > var19) {
+                        var8[0][var12] = var21;
+                        var9[0][var12] = id.field_b[var20].field_a;
+                        var31[0][var12] = var22;
+                        for (var25 = 0; var25 < var7; var25++) {
+                          incrementValue$2 = var15;
+                          var15++;
+                          var11[0][incrementValue$2] = var27.a((byte) -76);
+                        }
+                        var12++;
+                        break L7;
+                      }
+                    }
+                    L9: {
+                      if (var21 != null) {
+                        if (ge.a(var21, (byte) 12)) {
+                          var8[1][var13] = wd.field_f;
+                          var9[1][var13] = null;
+                          var31[1][var13] = var22;
+                          var13++;
+                          var27.field_f = var24;
                           for (var25 = 0; var25 < var7; var25++) {
-                            incrementValue$2 = var15;
-                            var15++;
-                            var11[0][incrementValue$2] = var27.a((byte) -76);
+                            incrementValue$3 = var16;
+                            var16++;
+                            var11[1][incrementValue$3] = var27.a((byte) -122);
                           }
-                          var12++;
-                          break L7;
-                        }
-                      }
-                      L9: {
-                        if (var21 != null) {
-                          if (ge.a(var21, (byte) 12)) {
-                            var8[1][var13] = wd.field_f;
-                            var9[1][var13] = null;
-                            var31[1][var13] = var22;
-                            var13++;
-                            var27.field_f = var24;
-                            for (var25 = 0; var25 < var7; var25++) {
-                              incrementValue$3 = var16;
-                              var16++;
-                              var11[1][incrementValue$3] = var27.a((byte) -122);
-                            }
-                            break L9;
-                          }
-                        }
-                      }
-                      L11: {
-                        if (var14 < var6) {
-                          if (!id.field_b[var20].field_c) {
-                            id.field_b[var20].field_c = true;
-                            var8[2][var14] = var21;
-                            var9[2][var14] = id.field_b[var20].field_a;
-                            var31[2][var14] = var22;
-                            var14++;
-                            var27.field_f = var24;
-                            for (var25 = 0; var7 > var25; var25++) {
-                              incrementValue$4 = var17;
-                              var17++;
-                              var11[2][incrementValue$4] = var27.a((byte) -101);
-                            }
-                            break L11;
-                          }
+                          break L9;
                         }
                       }
                     }
-                    break L4;
+                    L11: {
+                      if (var14 < var6) {
+                        if (!id.field_b[var20].field_c) {
+                          id.field_b[var20].field_c = true;
+                          var8[2][var14] = var21;
+                          var9[2][var14] = id.field_b[var20].field_a;
+                          var31[2][var14] = var22;
+                          var14++;
+                          var27.field_f = var24;
+                          for (var25 = 0; var7 > var25; var25++) {
+                            incrementValue$4 = var17;
+                            var17++;
+                            var11[2][incrementValue$4] = var27.a((byte) -101);
+                          }
+                          break L11;
+                        }
+                      }
+                    }
                   }
+                  break L4;
                 }
               }
               var4.field_j = true;
@@ -173,10 +171,10 @@ final class cm extends cj {
               var3 = var27.b(true);
               var27.b(param0 + 27740);
               var4_ref = (ai) ((Object) nf.field_j.g(0));
-              L14: while (var4_ref != null) {
+              while (var4_ref != null) {
                 if (var3 != var4_ref.field_q) {
                   var4_ref = (ai) ((Object) nf.field_j.d(1));
-                  continue L14;
+                  continue;
                 }
                 break;
               }
@@ -268,12 +266,12 @@ final class cm extends cj {
           return 1;
         }
         var4 = 0;
-        L1: while (true) {
+        while (true) {
           var4++;
           this.field_c = this.field_c + param1;
           if (var4 < 10) {
             if (~this.field_c > ~this.field_e) {
-              continue L1;
+              continue;
             }
           }
           if (this.field_e > this.field_c) {

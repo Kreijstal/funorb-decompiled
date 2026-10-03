@@ -83,7 +83,7 @@ final class p extends hf {
           var21 = mh.field_d;
           var22 = mh.field_i;
           var23 = 0;
-          L1: while (true) {
+          while (true) {
             L2: {
               L3: {
                 if (param2.field_o > var23) {
@@ -122,7 +122,7 @@ final class p extends hf {
                   }
                   var23++;
                   if (var30 == 0) {
-                    continue L1;
+                    continue;
                   }
                 }
                 L10: {
@@ -136,7 +136,7 @@ final class p extends hf {
                                 if (null != param2.field_p) {
                                   if (param2.field_b != null) {
                                     var23 = 0;
-                                    L11: while (true) {
+                                    while (true) {
                                       if (~var23 <= ~param2.field_f) {
                                         break L10;
                                       }
@@ -163,7 +163,7 @@ final class p extends hf {
                                         break L2;
                                       }
                                       if (var30 == 0) {
-                                        continue L11;
+                                        continue;
                                       }
                                       break L10;
                                     }
@@ -189,7 +189,7 @@ final class p extends hf {
                     var16 = param1[10];
                     var17 = param1[11];
                     var18 = 0;
-                    L13: while (true) {
+                    while (true) {
                       if (~param2.field_m >= ~var18) {
                         break L12;
                       }
@@ -209,7 +209,7 @@ final class p extends hf {
                       gi.field_b[var18] = var14 * var20 + (var11 * var19 + var17 * var21) >> 16;
                       var18++;
                       if (var30 == 0) {
-                        continue L13;
+                        continue;
                       }
                       break L12;
                     }

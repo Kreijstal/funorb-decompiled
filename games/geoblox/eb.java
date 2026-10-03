@@ -50,7 +50,7 @@ final class eb {
           var4 = (String) null;
           eb.a((java.applet.Applet) null, (byte) -56, (String) null);
         }
-        L1: while (this.field_h < this.field_d) {
+        while (this.field_h < this.field_d) {
           var5 = this.field_a[this.field_h];
           if (!var5.field_i.a(0)) {
             this.a(0, var5, -123);

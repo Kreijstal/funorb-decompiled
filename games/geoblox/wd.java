@@ -125,7 +125,7 @@ final class wd {
         var3 = Geoblox.field_C;
         try {
           var4 = (re) ((Object) nj.field_f.g(0));
-          L0: while (var4 != null) {
+          while (var4 != null) {
             ik.a(var4, param1, (byte) 107);
             var4 = (re) ((Object) nj.field_f.d(1));
           }

@@ -98,33 +98,31 @@ final class tg extends com.ms.dll.Callback {
           com.ms.win32.User32.SetCursor(stackIn_7_0);
           return 0;
         }
-        {
-          var5 = 65535 & param3;
-          if (var5 == 1) {
-            if (!this.field_e) {
-              stackIn_16_0 = 0;
-            } else {
-              stackIn_16_0 = this.field_a;
-            }
-            com.ms.win32.User32.SetCursor(stackIn_16_0);
-            return 0;
-          }
-          if (param1 != 101024) {
-            if (1 != param1) {
-              return com.ms.win32.User32.CallWindowProc(this.field_c, param0, param1, param2, param3);
-            }
-            this.field_b = 0;
-            this.field_e = true;
-            return com.ms.win32.User32.CallWindowProc(this.field_c, param0, param1, param2, param3);
-          }
-          if (this.field_e) {
-            stackIn_21_0 = this.field_a;
+        var5 = 65535 & param3;
+        if (var5 == 1) {
+          if (!this.field_e) {
+            stackIn_16_0 = 0;
           } else {
-            stackIn_21_0 = 0;
+            stackIn_16_0 = this.field_a;
           }
-          com.ms.win32.User32.SetCursor(stackIn_21_0);
+          com.ms.win32.User32.SetCursor(stackIn_16_0);
           return 0;
         }
+        if (param1 != 101024) {
+          if (1 != param1) {
+            return com.ms.win32.User32.CallWindowProc(this.field_c, param0, param1, param2, param3);
+          }
+          this.field_b = 0;
+          this.field_e = true;
+          return com.ms.win32.User32.CallWindowProc(this.field_c, param0, param1, param2, param3);
+        }
+        if (this.field_e) {
+          stackIn_21_0 = this.field_a;
+        } else {
+          stackIn_21_0 = 0;
+        }
+        com.ms.win32.User32.SetCursor(stackIn_21_0);
+        return 0;
     }
 
     tg() {

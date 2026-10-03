@@ -77,7 +77,7 @@ final class pg {
               var19.field_k = new int[var19.field_f];
               var19.field_o = new byte[var19.field_f][][];
               var5 = 0;
-              L0: while (var5 < var19.field_f) {
+              while (var5 < var19.field_f) {
                 try {
                   L2: {
                     L3: {
@@ -117,7 +117,7 @@ final class pg {
                             var12 = new Class[var9];
                             var18 = 0;
                             var13 = var18;
-                            L9: while (var18 < var9) {
+                            while (var18 < var9) {
                               var12[var18] = ag.a(var10[var18], false);
                               var18++;
                             }
@@ -168,7 +168,7 @@ final class pg {
                   decompiledRegionSelector0 = 0;
                 }
                 if (!(decompiledRegionSelector0 == 0)) {
-                  continue L0;
+                  continue;
                 }
                 var5++;
               }

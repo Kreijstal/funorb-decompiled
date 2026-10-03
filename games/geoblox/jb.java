@@ -112,12 +112,12 @@ final class jb {
         var1 = this.field_e.length;
         var2 = -1;
         var3 = 2147483647;
-        L0: for (var4 = 0; var4 < var1; var4++) {
+        for (var4 = 0; var4 < var1; var4++) {
           if (this.field_e[var4] < 0) {
-            continue L0;
+            continue;
           }
           if (this.field_a[var4] >= var3) {
-            continue L0;
+            continue;
           }
           var2 = var4;
           var3 = this.field_a[var4];

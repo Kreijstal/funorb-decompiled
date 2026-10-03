@@ -89,93 +89,85 @@ final class jh {
                   stackIn_3_0 = null;
                   return (byte[]) ((Object) stackIn_3_0);
                 }
-                {
-                  if (param1 > -14) {
-                    this.field_d = (sk) null;
+                if (param1 > -14) {
+                  this.field_d = (sk) null;
+                }
+                this.field_c.a(-128, (long)(6 * param0));
+                this.field_c.a(dj.field_F, 6, 0, 9868);
+                var4_int = (dj.field_F[2] & 255) + (((255 & dj.field_F[0]) << 16) + (dj.field_F[1] << 8 & 65280));
+                var5 = (dj.field_F[3] << 16 & 16711680) + (65280 & dj.field_F[4] << 8) + (255 & dj.field_F[5]);
+                if (var4_int < 0) {
+                  return null;
+                }
+                if (this.field_a < var4_int) {
+                  stackIn_11_0 = null;
+                  return (byte[]) ((Object) stackIn_11_0);
+                }
+                if (var5 <= 0) {
+                  return null;
+                }
+                if ((long)var5 > this.field_d.a((byte) 46) / 520L) {
+                  return null;
+                }
+                var6 = new byte[var4_int];
+                var7 = 0;
+                var8 = 0;
+                while (true) {
+                  if (var7 >= var4_int) {
+                    stackIn_53_0 = (byte[]) (var6);
+                    return stackIn_53_0;
                   }
-                  this.field_c.a(-128, (long)(6 * param0));
-                  this.field_c.a(dj.field_F, 6, 0, 9868);
-                  var4_int = (dj.field_F[2] & 255) + (((255 & dj.field_F[0]) << 16) + (dj.field_F[1] << 8 & 65280));
-                  var5 = (dj.field_F[3] << 16 & 16711680) + (65280 & dj.field_F[4] << 8) + (255 & dj.field_F[5]);
-                  if (var4_int < 0) {
-                    return null;
+                  if (var5 == 0) {
+                    stackIn_23_0 = null;
+                    return (byte[]) ((Object) stackIn_23_0);
                   }
-                  if (this.field_a < var4_int) {
-                    stackIn_11_0 = null;
-                    return (byte[]) ((Object) stackIn_11_0);
-                  }
-                  if (var5 <= 0) {
-                    return null;
-                  }
-                  if ((long)var5 > this.field_d.a((byte) 46) / 520L) {
-                    return null;
-                  }
-                  {
-                    var6 = new byte[var4_int];
-                    var7 = 0;
-                    var8 = 0;
-                    L1: while (true) {
-                      if (var7 >= var4_int) {
-                        stackIn_53_0 = (byte[]) (var6);
-                        return stackIn_53_0;
-                      }
-                      if (var5 == 0) {
-                        stackIn_23_0 = null;
-                        return (byte[]) ((Object) stackIn_23_0);
-                      }
-                      {
-                        this.field_d.a(0, (long)(520 * var5));
-                        var9 = -var7 + var4_int;
-                        if (65535 < param0) {
-                          if (510 < var9) {
-                            var9 = 510;
-                          }
-                          var14 = 10;
-                          this.field_d.a(dj.field_F, var9 + var14, 0, 9868);
-                          var10 = (255 & dj.field_F[3]) + ((65280 & dj.field_F[2] << 8) + (-16777216 & dj.field_F[0] << 24) + (16711680 & dj.field_F[1] << 16));
-                          var11 = (255 & dj.field_F[5]) + (65280 & dj.field_F[4] << 8);
-                          var13 = dj.field_F[9] & 255;
-                          var12 = ((dj.field_F[7] & 255) << 8) + ((16711680 & dj.field_F[6] << 16) + (dj.field_F[8] & 255));
-                        } else {
-                          var14 = 8;
-                          if (var9 > 512) {
-                            var9 = 512;
-                          }
-                          this.field_d.a(dj.field_F, var9 + var14, 0, 9868);
-                          var12 = (255 & dj.field_F[6]) + (((dj.field_F[4] & 255) << 16) + ((255 & dj.field_F[5]) << 8));
-                          var11 = (255 & dj.field_F[3]) + (dj.field_F[2] << 8 & 65280);
-                          var13 = 255 & dj.field_F[7];
-                          var10 = (dj.field_F[1] & 255) + ((dj.field_F[0] & 255) << 8);
-                        }
-                        if (var10 != param0) {
-                          return null;
-                        }
-                        if (var11 != var8) {
-                          return null;
-                        }
-                        if (this.field_b != var13) {
-                          return null;
-                        }
-                        if (var12 < 0) {
-                          return null;
-                        }
-                        if (this.field_d.a((byte) 46) / 520L < (long)var12) {
-                          return null;
-                        }
-                        {
-                          var15 = var9 + var14;
-                          var8++;
-                          for (var16 = var14; var16 < var15; var16++) {
-                            incrementValue$0 = var7;
-                            var7++;
-                            var6[incrementValue$0] = dj.field_F[var16];
-                          }
-                          var5 = var12;
-                          continue L1;
-                        }
-                      }
+                  this.field_d.a(0, (long)(520 * var5));
+                  var9 = -var7 + var4_int;
+                  if (65535 < param0) {
+                    if (510 < var9) {
+                      var9 = 510;
                     }
+                    var14 = 10;
+                    this.field_d.a(dj.field_F, var9 + var14, 0, 9868);
+                    var10 = (255 & dj.field_F[3]) + ((65280 & dj.field_F[2] << 8) + (-16777216 & dj.field_F[0] << 24) + (16711680 & dj.field_F[1] << 16));
+                    var11 = (255 & dj.field_F[5]) + (65280 & dj.field_F[4] << 8);
+                    var13 = dj.field_F[9] & 255;
+                    var12 = ((dj.field_F[7] & 255) << 8) + ((16711680 & dj.field_F[6] << 16) + (dj.field_F[8] & 255));
+                  } else {
+                    var14 = 8;
+                    if (var9 > 512) {
+                      var9 = 512;
+                    }
+                    this.field_d.a(dj.field_F, var9 + var14, 0, 9868);
+                    var12 = (255 & dj.field_F[6]) + (((dj.field_F[4] & 255) << 16) + ((255 & dj.field_F[5]) << 8));
+                    var11 = (255 & dj.field_F[3]) + (dj.field_F[2] << 8 & 65280);
+                    var13 = 255 & dj.field_F[7];
+                    var10 = (dj.field_F[1] & 255) + ((dj.field_F[0] & 255) << 8);
                   }
+                  if (var10 != param0) {
+                    return null;
+                  }
+                  if (var11 != var8) {
+                    return null;
+                  }
+                  if (this.field_b != var13) {
+                    return null;
+                  }
+                  if (var12 < 0) {
+                    return null;
+                  }
+                  if (this.field_d.a((byte) 46) / 520L < (long)var12) {
+                    return null;
+                  }
+                  var15 = var9 + var14;
+                  var8++;
+                  for (var16 = var14; var16 < var15; var16++) {
+                    incrementValue$0 = var7;
+                    var7++;
+                    var6[incrementValue$0] = dj.field_F[var16];
+                  }
+                  var5 = var12;
+                  continue;
                 }
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -231,11 +223,9 @@ final class jh {
                       }
                       return false;
                     }
-                    {
-                      var7_int = (int)((this.field_d.a((byte) 46) + 519L) / 520L);
-                      if (var7_int == 0) {
-                        var7_int = 1;
-                      }
+                    var7_int = (int)((this.field_d.a((byte) 46) + 519L) / 520L);
+                    if (var7_int == 0) {
+                      var7_int = 1;
                     }
                   }
                   dj.field_F[3] = (byte)(var7_int >> 16);
@@ -251,7 +241,7 @@ final class jh {
                   this.field_c.a(6, 0, dj.field_F, false);
                   var8 = 0;
                   var9 = 0;
-                  L3: while (true) {
+                  while (true) {
                     L4: {
                       if (param1 > var8) {
                         L5: {
@@ -270,12 +260,10 @@ final class jh {
                               if (!(decompiledRegionSelector0 == 0)) {
                                 break L4;
                               }
-                              {
-                                var11 = ((255 & dj.field_F[0]) << 8) + (255 & dj.field_F[1]);
-                                var12 = (dj.field_F[3] & 255) + ((255 & dj.field_F[2]) << 8);
-                                var13 = 255 & dj.field_F[7];
-                                var10 = (dj.field_F[6] & 255) + ((65280 & dj.field_F[5] << 8) + (16711680 & dj.field_F[4] << 16));
-                              }
+                              var11 = ((255 & dj.field_F[0]) << 8) + (255 & dj.field_F[1]);
+                              var12 = (dj.field_F[3] & 255) + ((255 & dj.field_F[2]) << 8);
+                              var13 = 255 & dj.field_F[7];
+                              var10 = (dj.field_F[6] & 255) + ((65280 & dj.field_F[5] << 8) + (16711680 & dj.field_F[4] << 16));
                             } else {
                               try {
                                 this.field_d.a(dj.field_F, 10, 0, 9868);
@@ -360,7 +348,7 @@ final class jh {
                         }
                         var7_int = var10;
                         var9++;
-                        continue L3;
+                        continue;
                       }
                     }
                     return true;

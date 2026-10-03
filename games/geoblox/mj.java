@@ -44,32 +44,30 @@ final class mj {
             stackIn_9_0 = "null";
             return stackIn_9_0;
           }
-          {
-            var4_int = param0 + param1;
-            var5 = 0;
-            if (param3 != 96) {
-              field_b = 111;
-            }
-            for (var6_int = param0; var4_int > var6_int; var6_int++) {
-              var7_ref_CharSequence = param2[var6_int];
-              if (var7_ref_CharSequence == null) {
-                var5 += 4;
-              } else {
-                var5 = var5 + var7_ref_CharSequence.length();
-              }
-            }
-            var6 = new StringBuilder(var5);
-            for (var7 = param0; var4_int > var7; var7++) {
-              var8 = param2[var7];
-              if (var8 != null) {
-                discarded$0 = var6.append(var8);
-              } else {
-                discarded$1 = var6.append("null");
-              }
-            }
-            stackIn_27_0 = var6.toString();
-            return stackIn_27_0;
+          var4_int = param0 + param1;
+          var5 = 0;
+          if (param3 != 96) {
+            field_b = 111;
           }
+          for (var6_int = param0; var4_int > var6_int; var6_int++) {
+            var7_ref_CharSequence = param2[var6_int];
+            if (var7_ref_CharSequence == null) {
+              var5 += 4;
+            } else {
+              var5 = var5 + var7_ref_CharSequence.length();
+            }
+          }
+          var6 = new StringBuilder(var5);
+          for (var7 = param0; var4_int > var7; var7++) {
+            var8 = param2[var7];
+            if (var8 != null) {
+              discarded$0 = var6.append(var8);
+            } else {
+              discarded$1 = var6.append("null");
+            }
+          }
+          stackIn_27_0 = var6.toString();
+          return stackIn_27_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;

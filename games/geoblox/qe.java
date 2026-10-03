@@ -27,59 +27,55 @@ final class qe {
           if (!param4.b(-26098)) {
             return null;
           }
-          {
-            L0: {
-              if (param1 == ~param0) {
-                var10 = vi.a(param1 ^ -112, param4);
-                var6 = var10;
-                if (var6 == null) {
-                  stackIn_7_0 = null;
-                  return (java.awt.Frame) ((Object) stackIn_7_0);
+          L0: {
+            if (param1 == ~param0) {
+              var10 = vi.a(param1 ^ -112, param4);
+              var6 = var10;
+              if (var6 == null) {
+                stackIn_7_0 = null;
+                return (java.awt.Frame) ((Object) stackIn_7_0);
+              }
+              var7_int = 0;
+              for (var8 = 0; var8 < var10.length; var8++) {
+                if (param3 != var10[var8].field_d) {
+                  continue;
                 }
-                {
-                  var7_int = 0;
-                  L1: for (var8 = 0; var8 < var10.length; var8++) {
-                    if (param3 != var10[var8].field_d) {
-                      continue L1;
-                    }
-                    if (var10[var8].field_f == param2) {
-                      if (param5 != 0) {
-                        if (param5 != var10[var8].field_a) {
-                          continue L1;
-                        }
-                      }
-                      if (var7_int != 0) {
-                        if (param0 >= var10[var8].field_h) {
-                          continue L1;
-                        }
-                      }
-                      var7_int = 1;
-                      param0 = var10[var8].field_h;
+                if (var10[var8].field_f == param2) {
+                  if (param5 != 0) {
+                    if (param5 != var10[var8].field_a) {
+                      continue;
                     }
                   }
                   if (var7_int != 0) {
-                    break L0;
+                    if (param0 >= var10[var8].field_h) {
+                      continue;
+                    }
                   }
-                  return null;
+                  var7_int = 1;
+                  param0 = var10[var8].field_h;
                 }
               }
-            }
-            var11 = param4.a(param2, param1 ^ 1743550127, param5, param0, param3);
-            L5: while (var11.field_a == 0) {
-              bc.a(0, 10L);
-            }
-            var7 = (java.awt.Frame) (var11.field_b);
-            if (var7 == null) {
+              if (var7_int != 0) {
+                break L0;
+              }
               return null;
             }
-            if (var11.field_a != 2) {
-              stackIn_37_0 = (java.awt.Frame) (var7);
-              return stackIn_37_0;
-            }
-            jk.a(var7, 10, param4);
-            stackIn_35_0 = null;
-            return (java.awt.Frame) ((Object) stackIn_35_0);
           }
+          var11 = param4.a(param2, param1 ^ 1743550127, param5, param0, param3);
+          while (var11.field_a == 0) {
+            bc.a(0, 10L);
+          }
+          var7 = (java.awt.Frame) (var11.field_b);
+          if (var7 == null) {
+            return null;
+          }
+          if (var11.field_a != 2) {
+            stackIn_37_0 = (java.awt.Frame) (var7);
+            return stackIn_37_0;
+          }
+          jk.a(var7, 10, param4);
+          stackIn_35_0 = null;
+          return (java.awt.Frame) ((Object) stackIn_35_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6_ref = decompiledCaughtException;
@@ -114,7 +110,7 @@ final class qe {
           }
           fa.field_b = fa.field_b + param0;
           sa.field_b = fa.field_b / 3;
-          L1: while (fa.field_b > 3 * sa.field_b) {
+          while (fa.field_b > 3 * sa.field_b) {
             sa.field_b = sa.field_b + 1;
           }
           return;

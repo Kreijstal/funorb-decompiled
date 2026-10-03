@@ -165,11 +165,11 @@ final class wg implements Runnable {
             Throwable decompiledCaughtException = null;
             var4 = Geoblox.field_C;
             try {
-              L0: while (this.field_n.field_f < this.field_n.field_j.length) {
+              while (this.field_n.field_f < this.field_n.field_j.length) {
                 var1_int = this.field_c.read(this.field_n.field_j, this.field_n.field_f, -this.field_n.field_f + this.field_n.field_j.length);
                 if (0 <= var1_int) {
                   this.field_n.field_f = this.field_n.field_f + var1_int;
-                  continue L0;
+                  continue;
                 }
                 break;
               }

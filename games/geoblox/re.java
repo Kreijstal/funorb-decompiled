@@ -48,19 +48,19 @@ final class re extends hf {
               if (ii.field_c < 0) {
                 var5 = 0;
                 var2 = var5;
-                L3: while (var5 < 112) {
+                while (var5 < 112) {
                   kj.field_o[var5] = false;
                   var5++;
                 }
                 ii.field_c = gk.field_b;
                 break L2;
               }
-              L4: while (gk.field_b != ii.field_c) {
+              while (gk.field_b != ii.field_c) {
                 var2 = gf.field_c[gk.field_b];
                 gk.field_b = 1 + gk.field_b & 127;
                 if (var2 < 0) {
                   kj.field_o[~var2] = false;
-                  continue L4;
+                  continue;
                 }
                 kj.field_o[var2] = true;
               }

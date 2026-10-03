@@ -89,55 +89,49 @@ final class cd extends jg {
             stackIn_2_0 = this.a(1);
             return stackIn_2_0;
           }
-          {
-            var3 = param0.address();
-            if (param1 != -18) {
-              field_l = (dm) null;
-            }
-            if (!((Object) var3 instanceof java.net.InetSocketAddress)) {
+          var3 = param0.address();
+          if (param1 != -18) {
+            field_l = (dm) null;
+          }
+          if (!((Object) var3 instanceof java.net.InetSocketAddress)) {
+            return null;
+          }
+          var4 = (java.net.InetSocketAddress) ((Object) var3);
+          if (param0.type() != java.net.Proxy.Type.HTTP) {
+            if (param0.type() != java.net.Proxy.Type.SOCKS) {
               return null;
             }
-            {
-              var4 = (java.net.InetSocketAddress) ((Object) var3);
-              if (param0.type() != java.net.Proxy.Type.HTTP) {
-                if (param0.type() != java.net.Proxy.Type.SOCKS) {
-                  return null;
-                }
-                var5 = new java.net.Socket(param0);
-                ((java.net.Socket) (var5)).connect((java.net.SocketAddress) ((Object) new java.net.InetSocketAddress(this.field_e, this.field_b)));
-                stackIn_12_0 = var5;
-                return (java.net.Socket) ((Object) stackIn_12_0);
-              }
-              {
-                var5 = null;
-                try {
-                  var14 = Class.forName("sun.net.www.protocol.http.AuthenticationInfo");
-                  var6 = var14;
-                  var7 = var14.getDeclaredMethod("getProxyAuth", new Class[]{String.class, Integer.TYPE});
-                  var7.setAccessible(true);
-                  var8 = var7.invoke((Object) null, new Object[]{var4.getHostName(), new Integer(var4.getPort())});
-                  if (var8 != null) {
-                    var9 = var6.getDeclaredMethod("supportsPreemptiveAuthorization", new Class[]{});
-                    var9.setAccessible(true);
-                    if (((Boolean) (var9.invoke(var8, new Object[]{}))).booleanValue()) {
-                      var10 = var6.getDeclaredMethod("getHeaderName", new Class[]{});
-                      var10.setAccessible(true);
-                      var11 = var14.getDeclaredMethod("getHeaderValue", new Class[]{java.net.URL.class, String.class});
-                      var11.setAccessible(true);
-                      var12 = (String) (var10.invoke(var8, new Object[]{}));
-                      var13 = (String) (var11.invoke(var8, new Object[]{new java.net.URL("https://" + this.field_e + "/"), "https"}));
-                      var5 = var12 + ": " + var13;
-                    }
-                  }
-                } catch (java.lang.Exception decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  var6_ref = (Exception) (Object) decompiledCaughtException;
-                }
-                stackIn_22_0 = this.a((byte) -60, (String) (var5), var4.getPort(), var4.getHostName());
-                return stackIn_22_0;
+            var5 = new java.net.Socket(param0);
+            ((java.net.Socket) (var5)).connect((java.net.SocketAddress) ((Object) new java.net.InetSocketAddress(this.field_e, this.field_b)));
+            stackIn_12_0 = var5;
+            return (java.net.Socket) ((Object) stackIn_12_0);
+          }
+          var5 = null;
+          try {
+            var14 = Class.forName("sun.net.www.protocol.http.AuthenticationInfo");
+            var6 = var14;
+            var7 = var14.getDeclaredMethod("getProxyAuth", new Class[]{String.class, Integer.TYPE});
+            var7.setAccessible(true);
+            var8 = var7.invoke((Object) null, new Object[]{var4.getHostName(), new Integer(var4.getPort())});
+            if (var8 != null) {
+              var9 = var6.getDeclaredMethod("supportsPreemptiveAuthorization", new Class[]{});
+              var9.setAccessible(true);
+              if (((Boolean) (var9.invoke(var8, new Object[]{}))).booleanValue()) {
+                var10 = var6.getDeclaredMethod("getHeaderName", new Class[]{});
+                var10.setAccessible(true);
+                var11 = var14.getDeclaredMethod("getHeaderValue", new Class[]{java.net.URL.class, String.class});
+                var11.setAccessible(true);
+                var12 = (String) (var10.invoke(var8, new Object[]{}));
+                var13 = (String) (var11.invoke(var8, new Object[]{new java.net.URL("https://" + this.field_e + "/"), "https"}));
+                var5 = var12 + ": " + var13;
               }
             }
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var6_ref = (Exception) (Object) decompiledCaughtException;
           }
+          stackIn_22_0 = this.a((byte) -60, (String) (var5), var4.getPort(), var4.getHostName());
+          return stackIn_22_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var3_ref = (RuntimeException) (Object) decompiledCaughtException;
@@ -229,7 +223,7 @@ final class cd extends jg {
         var7 = null;
         var8 = var6_array;
         var9 = param0;
-        L5: while (var9 < var8.length) {
+        while (var9 < var8.length) {
           var10 = var8[var9];
           var11 = (java.net.Proxy) (var10);
           try {
@@ -305,24 +299,22 @@ final class cd extends jg {
                   var8 = var11;
                   var8 = var11;
                   var8 = var7.readLine();
-                  L4: while (var8 != null) {
+                  while (var8 != null) {
                     if (var10 < 50) {
                       if (!var8.toLowerCase().startsWith(var11)) {
                         var8 = var7.readLine();
                         var10++;
-                        continue L4;
+                        continue;
                       }
-                      {
-                        var15 = var8.substring(var11.length()).trim();
-                        var8 = var15;
-                        var8 = var15;
-                        var8 = var15;
-                        var12 = var15.indexOf(' ');
-                        if (var12 != -1) {
-                          var8 = var15.substring(0, var12);
-                        }
-                        throw new bd(var8);
+                      var15 = var8.substring(var11.length()).trim();
+                      var8 = var15;
+                      var8 = var15;
+                      var8 = var15;
+                      var12 = var15.indexOf(' ');
+                      if (var12 != -1) {
+                        var8 = var15.substring(0, var12);
                       }
+                      throw new bd(var8);
                     }
                     break;
                   }

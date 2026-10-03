@@ -100,7 +100,7 @@ final class uf implements Runnable {
           synchronized (var5) {
             L1: {
               var6 = (o) ((Object) this.field_k.c((byte) 121));
-              L2: while (var6 != null) {
+              while (var6 != null) {
                 if ((long)param1 == var6.field_i) {
                   if (var6.field_w == param0) {
                     if (2 == var6.field_x) {
@@ -288,7 +288,7 @@ final class uf implements Runnable {
             Exception var2_ref = null;
             String var6 = null;
             var5 = Geoblox.field_C;
-            L0: while (!this.field_j) {
+            while (!this.field_j) {
               var2 = this.field_k;
               synchronized (var2) {
                 var7 = (o) ((Object) this.field_k.a(true));
@@ -306,7 +306,7 @@ final class uf implements Runnable {
                 }
               }
               if (decompiledRegionSelector0 == 0) {
-                continue L0;
+                continue;
               }
               try {
                 L4: {
@@ -331,7 +331,7 @@ final class uf implements Runnable {
                 decompiledRegionSelector1 = 1;
               }
               if (decompiledRegionSelector1 == 0) {
-                continue L0;
+                continue;
               }
               var7.field_u = false;
             }

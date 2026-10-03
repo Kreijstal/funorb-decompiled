@@ -41,14 +41,14 @@ final class vg {
         }
         var2 = this.field_g[(int)(this.field_e & (long)(-1 + this.field_h))];
         if (param0 == -29925) {
-          L1: while (true) {
+          while (true) {
             if (this.field_c == var2) {
               this.field_c = null;
               return null;
             }
             if (this.field_e != this.field_c.field_i) {
               this.field_c = this.field_c.field_k;
-              continue L1;
+              continue;
             }
             var3 = this.field_c;
             this.field_c = this.field_c.field_k;
@@ -56,14 +56,14 @@ final class vg {
           }
         }
         this.field_g = (rc[]) null;
-        L0: while (true) {
+        while (true) {
           if (this.field_c == var2) {
             this.field_c = null;
             return null;
           }
           if (this.field_e != this.field_c.field_i) {
             this.field_c = this.field_c.field_k;
-            continue L0;
+            continue;
           }
           var3 = this.field_c;
           this.field_c = this.field_c.field_k;
@@ -79,14 +79,14 @@ final class vg {
         this.field_e = param0;
         var4 = this.field_g[(int)(param0 & (long)(param1 + this.field_h))];
         this.field_c = var4.field_k;
-        L0: while (true) {
+        while (true) {
           if (var4 == this.field_c) {
             this.field_c = null;
             return null;
           }
           if (param0 != this.field_c.field_i) {
             this.field_c = this.field_c.field_k;
-            continue L0;
+            continue;
           }
           var5 = this.field_c;
           this.field_c = this.field_c.field_k;

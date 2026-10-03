@@ -29,33 +29,29 @@ final class nc extends m {
             return;
           }
           var13 = -param6;
-          L1: while (true) {
+          while (true) {
             if (var13 >= 0) {
               param5 = param5 + param8;
               param4 = param4 + param9;
               var12++;
               continue L0;
             }
-            {
-              incrementValue$16 = param4;
-              param4++;
-              dupTemp$17 = param2[incrementValue$16];
-              param0 = dupTemp$17;
-              if (dupTemp$17 == 0) {
-                param5++;
-                var13++;
-                continue L1;
-              }
-              {
-                var14 = param1[param5];
-                var15 = param3[param0 & 255];
-                incrementValue$18 = param5;
-                param5++;
-                param1[incrementValue$18] = ((var15 & 16711935) * param10 + (var14 & 16711935) * var11 & -16711936) + ((var15 & 65280) * param10 + (var14 & 65280) * var11 & 16711680) >> 8;
-                var13++;
-                continue L1;
-              }
+            incrementValue$16 = param4;
+            param4++;
+            dupTemp$17 = param2[incrementValue$16];
+            param0 = dupTemp$17;
+            if (dupTemp$17 == 0) {
+              param5++;
+              var13++;
+              continue;
             }
+            var14 = param1[param5];
+            var15 = param3[param0 & 255];
+            incrementValue$18 = param5;
+            param5++;
+            param1[incrementValue$18] = ((var15 & 16711935) * param10 + (var14 & 16711935) * var11 & -16711936) + ((var15 & 65280) * param10 + (var14 & 65280) * var11 & 16711680) >> 8;
+            var13++;
+            continue;
           }
         }
     }
@@ -165,14 +161,14 @@ final class nc extends m {
         int var9;
         var2 = 0;
         var3 = 2147483647;
-        L0: for (var4 = 1; var4 < param0.length; var4++) {
+        for (var4 = 1; var4 < param0.length; var4++) {
           var5 = param0[var4];
           var6 = (var5 >> 16) - (param1 >> 16);
           var7 = (var5 >> 8 & 255) - (param1 >> 8 & 255);
           var8 = (var5 & 255) - (param1 & 255);
           var9 = var6 * var6 + var7 * var7 + var8 * var8;
           if (var9 >= var3) {
-            continue L0;
+            continue;
           }
           var2 = var4;
           var3 = var9;
@@ -210,90 +206,80 @@ final class nc extends m {
           if (var11 >= 0) {
             return;
           }
-          {
-            var12 = var10;
-            L1: while (true) {
-              if (var12 >= 0) {
-                var12 = param6;
-                L2: while (true) {
-                  if (var12 >= 0) {
-                    param5 = param5 + param8;
-                    param4 = param4 + param9;
-                    var11++;
-                    continue L0;
-                  }
-                  {
-                    incrementValue$0 = param4;
-                    param4++;
-                    dupTemp$1 = param2[incrementValue$0];
-                    param0 = dupTemp$1;
-                    if (dupTemp$1 == 0) {
-                      param5++;
-                      var12++;
-                      continue L2;
-                    }
-                    {
-                      incrementValue$2 = param5;
-                      param5++;
-                      param1[incrementValue$2] = param3[param0 & 255];
-                      var12++;
-                      continue L2;
-                    }
-                  }
+          var12 = var10;
+          while (true) {
+            if (var12 >= 0) {
+              var12 = param6;
+              while (true) {
+                if (var12 >= 0) {
+                  param5 = param5 + param8;
+                  param4 = param4 + param9;
+                  var11++;
+                  continue L0;
                 }
-              }
-              {
-                incrementValue$3 = param4;
+                incrementValue$0 = param4;
                 param4++;
-                dupTemp$4 = param2[incrementValue$3];
-                param0 = dupTemp$4;
-                if (dupTemp$4 == 0) {
-                  param5++;
-                } else {
-                  incrementValue$5 = param5;
-                  param5++;
-                  param1[incrementValue$5] = param3[param0 & 255];
-                }
-                incrementValue$6 = param4;
-                param4++;
-                dupTemp$7 = param2[incrementValue$6];
-                param0 = dupTemp$7;
-                if (dupTemp$7 == 0) {
-                  param5++;
-                } else {
-                  incrementValue$8 = param5;
-                  param5++;
-                  param1[incrementValue$8] = param3[param0 & 255];
-                }
-                incrementValue$9 = param4;
-                param4++;
-                dupTemp$10 = param2[incrementValue$9];
-                param0 = dupTemp$10;
-                if (dupTemp$10 == 0) {
-                  param5++;
-                } else {
-                  incrementValue$11 = param5;
-                  param5++;
-                  param1[incrementValue$11] = param3[param0 & 255];
-                }
-                incrementValue$12 = param4;
-                param4++;
-                dupTemp$13 = param2[incrementValue$12];
-                param0 = dupTemp$13;
-                if (dupTemp$13 == 0) {
+                dupTemp$1 = param2[incrementValue$0];
+                param0 = dupTemp$1;
+                if (dupTemp$1 == 0) {
                   param5++;
                   var12++;
-                  continue L1;
+                  continue;
                 }
-                {
-                  incrementValue$14 = param5;
-                  param5++;
-                  param1[incrementValue$14] = param3[param0 & 255];
-                  var12++;
-                  continue L1;
-                }
+                incrementValue$2 = param5;
+                param5++;
+                param1[incrementValue$2] = param3[param0 & 255];
+                var12++;
+                continue;
               }
             }
+            incrementValue$3 = param4;
+            param4++;
+            dupTemp$4 = param2[incrementValue$3];
+            param0 = dupTemp$4;
+            if (dupTemp$4 == 0) {
+              param5++;
+            } else {
+              incrementValue$5 = param5;
+              param5++;
+              param1[incrementValue$5] = param3[param0 & 255];
+            }
+            incrementValue$6 = param4;
+            param4++;
+            dupTemp$7 = param2[incrementValue$6];
+            param0 = dupTemp$7;
+            if (dupTemp$7 == 0) {
+              param5++;
+            } else {
+              incrementValue$8 = param5;
+              param5++;
+              param1[incrementValue$8] = param3[param0 & 255];
+            }
+            incrementValue$9 = param4;
+            param4++;
+            dupTemp$10 = param2[incrementValue$9];
+            param0 = dupTemp$10;
+            if (dupTemp$10 == 0) {
+              param5++;
+            } else {
+              incrementValue$11 = param5;
+              param5++;
+              param1[incrementValue$11] = param3[param0 & 255];
+            }
+            incrementValue$12 = param4;
+            param4++;
+            dupTemp$13 = param2[incrementValue$12];
+            param0 = dupTemp$13;
+            if (dupTemp$13 == 0) {
+              param5++;
+              var12++;
+              continue;
+            }
+            incrementValue$14 = param5;
+            param5++;
+            param1[incrementValue$14] = param3[param0 & 255];
+            var12++;
+            continue;
           }
         }
     }

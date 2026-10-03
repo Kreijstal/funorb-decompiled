@@ -198,29 +198,25 @@ final class ja extends rc {
         if (param0 < 78) {
           return;
         }
-        {
-          var6 = var2 + bk.field_a.field_r * var3;
-          var7 = -var4 + bk.field_a.field_r;
-          var14 = bk.field_a.field_v;
-          L4: while (true) {
-            incrementValue$0 = var5;
-            var5--;
-            if (incrementValue$0 <= 0) {
-              return;
-            }
-            {
-              L5: for (var9 = -var4; var9 < 0; var9++) {
-                if (~var14[var6] != ~(this.field_H + 1)) {
-                  var6++;
-                  continue L5;
-                }
-                var14[var6] = 0;
-                var6++;
-              }
-              var6 = var6 + var7;
-              continue L4;
-            }
+        var6 = var2 + bk.field_a.field_r * var3;
+        var7 = -var4 + bk.field_a.field_r;
+        var14 = bk.field_a.field_v;
+        while (true) {
+          incrementValue$0 = var5;
+          var5--;
+          if (incrementValue$0 <= 0) {
+            return;
           }
+          for (var9 = -var4; var9 < 0; var9++) {
+            if (~var14[var6] != ~(this.field_H + 1)) {
+              var6++;
+              continue;
+            }
+            var14[var6] = 0;
+            var6++;
+          }
+          var6 = var6 + var7;
+          continue;
         }
     }
 
@@ -444,9 +440,9 @@ final class ja extends rc {
         RuntimeException decompiledCaughtException = null;
         var4 = Geoblox.field_C;
         try {
-          L0: for (var3_int = param1; var3_int < this.field_L; var3_int++) {
+          for (var3_int = param1; var3_int < this.field_L; var3_int++) {
             if (this.field_n[var3_int] != param0) {
-              continue L0;
+              continue;
             }
             this.field_n[var3_int] = null;
             if (this.field_M == param0.field_M) {
@@ -526,24 +522,22 @@ final class ja extends rc {
         }
         var11 = -var8 + wd.field_b.field_r;
         var18 = wd.field_b.field_v;
-        L5: while (true) {
+        while (true) {
           incrementValue$0 = var9;
           var9--;
           if (0 >= incrementValue$0) {
             return;
           }
-          {
-            L6: for (var13 = -var8; 0 > var13; var13++) {
-              if (~(this.field_H + 1) != ~var18[var10]) {
-                var10++;
-                continue L6;
-              }
-              var18[var10] = 0;
+          for (var13 = -var8; 0 > var13; var13++) {
+            if (~(this.field_H + 1) != ~var18[var10]) {
               var10++;
+              continue;
             }
-            var10 = var10 + var11;
-            continue L5;
+            var18[var10] = 0;
+            var10++;
           }
+          var10 = var10 + var11;
+          continue;
         }
     }
 

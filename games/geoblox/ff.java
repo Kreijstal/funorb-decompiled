@@ -153,51 +153,49 @@ class ff implements dh, cc {
           if (param0 != 109) {
             return;
           }
-          {
-            var6 = this.field_i;
-            if (var6 != 0) {
-              if (var6 != 2) {
+          var6 = this.field_i;
+          if (var6 != 0) {
+            if (var6 != 2) {
+              if (var6 != 3) {
+                if (var6 == 1) {
+                }
+              }
+              var5 = (var4 - (this.field_n.field_o + this.field_n.field_q) >> 1) + this.field_n.field_o;
+            } else {
+              var5 = var4 - this.field_n.field_q;
+            }
+          } else {
+            var5 = this.field_n.field_o;
+          }
+          L3: {
+            L4: {
+              var6 = this.field_g;
+              if (var6 != 0) {
                 if (var6 != 3) {
                   if (var6 == 1) {
-                  }
-                }
-                var5 = (var4 - (this.field_n.field_o + this.field_n.field_q) >> 1) + this.field_n.field_o;
-              } else {
-                var5 = var4 - this.field_n.field_q;
-              }
-            } else {
-              var5 = this.field_n.field_o;
-            }
-            L3: {
-              L4: {
-                var6 = this.field_g;
-                if (var6 != 0) {
-                  if (var6 != 3) {
-                    if (var6 == 1) {
-                      if (!(param1.field_w instanceof vc)) {
-                        break L4;
-                      }
-                      ((vc) ((Object) param1.field_w)).a(this.c(122, param1), var5, var3_int >> 1, (byte) 58, this.field_n);
-                      break L3;
-                    }
-                    if (var6 != 2) {
-                      break L4;
-                    }
                     if (!(param1.field_w instanceof vc)) {
                       break L4;
                     }
-                    ((vc) ((Object) param1.field_w)).a(var3_int, var5, (byte) -21, this.field_n, this.c(125, param1));
+                    ((vc) ((Object) param1.field_w)).a(this.c(122, param1), var5, var3_int >> 1, (byte) 58, this.field_n);
                     break L3;
                   }
-                }
-                if (param1.field_w instanceof vc) {
-                  ((vc) ((Object) param1.field_w)).a(var5, 0, this.c(param0 ^ 18, param1), -91, this.field_n);
+                  if (var6 != 2) {
+                    break L4;
+                  }
+                  if (!(param1.field_w instanceof vc)) {
+                    break L4;
+                  }
+                  ((vc) ((Object) param1.field_w)).a(var3_int, var5, (byte) -21, this.field_n, this.c(125, param1));
                   break L3;
                 }
               }
+              if (param1.field_w instanceof vc) {
+                ((vc) ((Object) param1.field_w)).a(var5, 0, this.c(param0 ^ 18, param1), -91, this.field_n);
+                break L3;
+              }
             }
-            return;
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;

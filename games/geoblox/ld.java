@@ -55,7 +55,7 @@ final class ld {
           if (vb.field_c[var4] != 0) {
             return true;
           }
-          L0: while (true) {
+          while (true) {
             incrementValue$0 = var6;
             var6++;
             var9 = var9 + (incrementValue$0 + var6);
@@ -92,7 +92,7 @@ final class ld {
               return true;
             }
             if (vb.field_c[var4 + var6] == 0) {
-              continue L0;
+              continue;
             }
             return true;
           }

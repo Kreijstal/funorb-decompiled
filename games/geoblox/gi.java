@@ -187,33 +187,31 @@ final class gi implements Iterable {
                 if (null == c.field_x) {
                   return;
                 }
-                {
-                  stackIn_13_0 = ml.field_s;
-                  stackIn_13_1 = -14;
-                  stackIn_13_2 = null;
-                  stackIn_13_3 = null;
-                  stackIn_13_4 = c.field_x.getCodeBase();
-                  stackIn_13_5 = new StringBuilder().append("clienterror.ws?c=").append(kk.field_t).append("&u=");
-                  if (null == uk.field_p) {
-                    stackIn_14_2 = null;
-                    stackIn_14_3 = null;
-                    stackIn_14_6 = "" + vi.field_H;
-                  } else {
-                    stackIn_14_2 = null;
-                    stackIn_14_3 = null;
-                    stackIn_14_6 = uk.field_p;
-                  }
-                  var4 = ((d) (Object) stackIn_13_0).a(stackIn_13_1, new java.net.URL(stackIn_13_4, ((StringBuilder) (Object) stackIn_13_5).append(stackIn_14_6).append("&v1=").append(d.field_o).append("&v2=").append(d.field_t).append("&e=").append(var9).toString()));
-                  L5: while (var4.field_a == 0) {
-                    bc.a(param2 - 125, 1L);
-                  }
-                  if (var4.field_a == 1) {
-                    var5 = (DataInputStream) (var4.field_b);
-                    var5.read();
-                    var5.close();
-                  }
-                  break L0;
+                stackIn_13_0 = ml.field_s;
+                stackIn_13_1 = -14;
+                stackIn_13_2 = null;
+                stackIn_13_3 = null;
+                stackIn_13_4 = c.field_x.getCodeBase();
+                stackIn_13_5 = new StringBuilder().append("clienterror.ws?c=").append(kk.field_t).append("&u=");
+                if (null == uk.field_p) {
+                  stackIn_14_2 = null;
+                  stackIn_14_3 = null;
+                  stackIn_14_6 = "" + vi.field_H;
+                } else {
+                  stackIn_14_2 = null;
+                  stackIn_14_3 = null;
+                  stackIn_14_6 = uk.field_p;
                 }
+                var4 = ((d) (Object) stackIn_13_0).a(stackIn_13_1, new java.net.URL(stackIn_13_4, ((StringBuilder) (Object) stackIn_13_5).append(stackIn_14_6).append("&v1=").append(d.field_o).append("&v2=").append(d.field_t).append("&e=").append(var9).toString()));
+                while (var4.field_a == 0) {
+                  bc.a(param2 - 125, 1L);
+                }
+                if (var4.field_a == 1) {
+                  var5 = (DataInputStream) (var4.field_b);
+                  var5.read();
+                  var5.close();
+                }
+                break L0;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -239,7 +237,7 @@ final class gi implements Iterable {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 1;
-          L0: while (param0 > 1) {
+          while (param0 > 1) {
             if (0 != (param0 & 1)) {
               var3_int = var3_int * param2;
             }
@@ -281,14 +279,14 @@ final class gi implements Iterable {
         var4 = -95 / ((param1 + 9) / 43);
         var5 = this.field_a[(int)((long)(-1 + this.field_c) & param0)];
         this.field_f = var5.field_b;
-        L0: while (true) {
+        while (true) {
           if (this.field_f == var5) {
             this.field_f = null;
             return null;
           }
           if (~this.field_f.field_a != ~param0) {
             this.field_f = this.field_f.field_b;
-            continue L0;
+            continue;
           }
           var6 = this.field_f;
           this.field_f = this.field_f.field_b;

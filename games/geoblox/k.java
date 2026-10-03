@@ -68,21 +68,19 @@ final class k implements Iterator {
           this.field_c = var4;
           return var4;
         }
-        L0: while (true) {
+        while (true) {
           if (this.field_j >= this.field_d.field_c) {
             return null;
           }
-          {
-            fieldTemp$0 = this.field_j;
-            this.field_j = this.field_j + 1;
-            var3 = this.field_d.field_a[fieldTemp$0].field_b;
-            if (var3 == this.field_d.field_a[this.field_j - 1]) {
-              continue L0;
-            }
-            this.field_h = var3.field_b;
-            this.field_c = var3;
-            return var3;
+          fieldTemp$0 = this.field_j;
+          this.field_j = this.field_j + 1;
+          var3 = this.field_d.field_a[fieldTemp$0].field_b;
+          if (var3 == this.field_d.field_a[this.field_j - 1]) {
+            continue;
           }
+          this.field_h = var3.field_b;
+          this.field_c = var3;
+          return var3;
         }
     }
 
@@ -115,7 +113,7 @@ final class k implements Iterator {
         if (this.field_d.field_a[this.field_j - 1] != this.field_h) {
           return true;
         }
-        L0: while (this.field_d.field_c > this.field_j) {
+        while (this.field_d.field_c > this.field_j) {
           fieldTemp$0 = this.field_j;
           this.field_j = this.field_j + 1;
           if (this.field_d.field_a[fieldTemp$0].field_b != this.field_d.field_a[this.field_j - 1]) {

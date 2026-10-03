@@ -27,7 +27,7 @@ final class am {
         }
         var3 = (this.field_c.length >> 1) - 1;
         var4 = var3 & param1;
-        L1: while (true) {
+        while (true) {
           var5 = this.field_c[1 + var4 + var4];
           if (-1 == var5) {
             return -1;
@@ -36,7 +36,7 @@ final class am {
             return var5;
           }
           var4 = var4 + 1 & var3;
-          continue L1;
+          continue;
         }
     }
 
@@ -99,7 +99,7 @@ final class am {
         RuntimeException var2 = null;
         try {
           var2_int = 1;
-          L0: while (param0.length + (param0.length >> 1) >= var2_int) {
+          while (param0.length + (param0.length >> 1) >= var2_int) {
             var2_int = var2_int << 1;
           }
           this.field_c = new int[var2_int + var2_int];

@@ -72,35 +72,33 @@ abstract class sh extends el implements ql {
               if (param4 < 106) {
                 return;
               }
-              {
-                var10 = param2;
-                L1: for (var11 = param0; var11 < param5; var11++) {
-                  var12 = qi.field_i[var11];
-                  if (!param6) {
-                    stackIn_24_0 = gk.field_a[var12];
-                  } else {
-                    stackIn_24_0 = hg.field_a[var12];
-                  }
-                  var13 = stackIn_24_0;
-                  if (var13 > var7_int) {
-                    qi.field_i[var11] = qi.field_i[var8];
-                    incrementValue$0 = var8;
-                    var8++;
-                    qi.field_i[incrementValue$0] = var12;
-                    if (var9 > var13) {
-                      var9 = var13;
-                    }
-                  } else {
-                    if (var10 >= var13) {
-                      continue L1;
-                    }
-                    var10 = var13;
-                  }
+              var10 = param2;
+              for (var11 = param0; var11 < param5; var11++) {
+                var12 = qi.field_i[var11];
+                if (!param6) {
+                  stackIn_24_0 = gk.field_a[var12];
+                } else {
+                  stackIn_24_0 = hg.field_a[var12];
                 }
-                sh.a(param0, param1, var9, param3, (byte) 118, var8, param6);
-                sh.a(var8, param1, param2, var10, (byte) 107, param5, param6);
-                return;
+                var13 = stackIn_24_0;
+                if (var13 > var7_int) {
+                  qi.field_i[var11] = qi.field_i[var8];
+                  incrementValue$0 = var8;
+                  var8++;
+                  qi.field_i[incrementValue$0] = var12;
+                  if (var9 > var13) {
+                    var9 = var13;
+                  }
+                } else {
+                  if (var10 >= var13) {
+                    continue;
+                  }
+                  var10 = var13;
+                }
               }
+              sh.a(param0, param1, var9, param3, (byte) 118, var8, param6);
+              sh.a(var8, param1, param2, var10, (byte) 107, param5, param6);
+              return;
             }
           }
           for (var7_int = -1 + param5; var7_int > param0; var7_int--) {
@@ -180,66 +178,62 @@ abstract class sh extends el implements ql {
           if (eh.field_b != pk.field_l) {
             return false;
           }
-          {
-            var3 = oa.a(-12520);
-            if (ab.field_b != 0) {
-              if (pc.field_f < 0) {
-                var5_ref_ma = (ma) ((Object) va.field_c.g(0));
-                if (var5_ref_ma != null) {
-                  if (var3 > var5_ref_ma.field_f) {
-                    var5_ref_ma.a(false);
-                    p.field_k = var5_ref_ma.field_g.length;
-                    eh.field_d.field_f = 0;
-                    for (var6_int = 0; var6_int < p.field_k; var6_int++) {
-                      eh.field_d.field_j[var6_int] = var5_ref_ma.field_g[var6_int];
-                    }
-                    ad.field_o = dc.field_b;
-                    dc.field_b = kg.field_n;
-                    kg.field_n = me.field_l;
-                    me.field_l = var5_ref_ma.field_h;
-                    return true;
+          var3 = oa.a(-12520);
+          if (ab.field_b != 0) {
+            if (pc.field_f < 0) {
+              var5_ref_ma = (ma) ((Object) va.field_c.g(0));
+              if (var5_ref_ma != null) {
+                if (var3 > var5_ref_ma.field_f) {
+                  var5_ref_ma.a(false);
+                  p.field_k = var5_ref_ma.field_g.length;
+                  eh.field_d.field_f = 0;
+                  for (var6_int = 0; var6_int < p.field_k; var6_int++) {
+                    eh.field_d.field_j[var6_int] = var5_ref_ma.field_g[var6_int];
                   }
+                  ad.field_o = dc.field_b;
+                  dc.field_b = kg.field_n;
+                  kg.field_n = me.field_l;
+                  me.field_l = var5_ref_ma.field_h;
+                  return true;
                 }
               }
             }
-            L2: while (true) {
-              if (pc.field_f < 0) {
-                eh.field_d.field_f = 0;
-                if (!el.b(30000, 1)) {
-                  return false;
-                }
-                pc.field_f = eh.field_d.j((byte) 122);
-                eh.field_d.field_f = 0;
-                p.field_k = param1[pc.field_f];
-              }
-              if (!nf.a(false)) {
+          }
+          while (true) {
+            if (pc.field_f < 0) {
+              eh.field_d.field_f = 0;
+              if (!el.b(30000, 1)) {
                 return false;
               }
-              if (ab.field_b == 0) {
-                ad.field_o = dc.field_b;
-                dc.field_b = kg.field_n;
-                kg.field_n = me.field_l;
-                me.field_l = pc.field_f;
-                pc.field_f = -1;
-                return true;
-              }
-              {
-                var5 = ab.field_b;
-                if (0.0 != fc.field_a) {
-                  var5 = (int)((double)var5 + bh.field_d.nextGaussian() * fc.field_a);
-                  if (var5 < 0) {
-                    var5 = 0;
-                  }
-                }
-                var6 = new ma((long)var5 + var3, pc.field_f, new byte[p.field_k]);
-                for (var7 = 0; p.field_k > var7; var7++) {
-                  var6.field_g[var7] = eh.field_d.field_j[var7];
-                }
-                va.field_c.a(-108, var6);
-                pc.field_f = -1;
-                continue L2;
+              pc.field_f = eh.field_d.j((byte) 122);
+              eh.field_d.field_f = 0;
+              p.field_k = param1[pc.field_f];
+            }
+            if (!nf.a(false)) {
+              return false;
+            }
+            if (ab.field_b == 0) {
+              ad.field_o = dc.field_b;
+              dc.field_b = kg.field_n;
+              kg.field_n = me.field_l;
+              me.field_l = pc.field_f;
+              pc.field_f = -1;
+              return true;
+            }
+            var5 = ab.field_b;
+            if (0.0 != fc.field_a) {
+              var5 = (int)((double)var5 + bh.field_d.nextGaussian() * fc.field_a);
+              if (var5 < 0) {
+                var5 = 0;
               }
             }
+            var6 = new ma((long)var5 + var3, pc.field_f, new byte[p.field_k]);
+            for (var7 = 0; p.field_k > var7; var7++) {
+              var6.field_g[var7] = eh.field_d.field_j[var7];
+            }
+            va.field_c.a(-108, var6);
+            pc.field_f = -1;
+            continue;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

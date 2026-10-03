@@ -61,7 +61,7 @@ final class ni extends ee implements pl {
           var10.i(-16989);
           var9 = 0;
           var4 = var9;
-          L1: while (var3 > var9) {
+          while (var3 > var9) {
             var5 = bm.field_l[var9];
             var5.a(6, 1, (byte) 89, 6, 6);
             var5.a((byte) -99);
@@ -151,7 +151,7 @@ final class ni extends ee implements pl {
             ni.f(15);
           }
           var3 = (ja) ((Object) bh.field_c.g(0));
-          L1: while (var3 != null) {
+          while (var3 != null) {
             var3.l(1915952803);
             var3 = (ja) ((Object) bh.field_c.d(1));
           }
@@ -180,9 +180,9 @@ final class ni extends ee implements pl {
         RuntimeException var6 = null;
         var8 = Geoblox.field_C;
         try {
-          L0: for (var6_int = 0; var6_int < this.field_D; var6_int++) {
+          for (var6_int = 0; var6_int < this.field_D; var6_int++) {
             if (param4 != this.field_F[var6_int]) {
-              continue L0;
+              continue;
             }
             var7 = this.field_H[var6_int];
             if (var7 != -1) {

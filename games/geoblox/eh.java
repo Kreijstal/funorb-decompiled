@@ -18,139 +18,50 @@ final class eh {
         if (gb.field_f < 0) {
           return;
         }
-        {
-          var3 = -135 + param1;
-          var4 = param0 - 35;
-          var5 = 256;
-          if (75 > gb.field_f) {
-            var5 = (gb.field_f << 8) / 75;
-          }
-          if (gb.field_f > 200) {
-            var5 = (250 - gb.field_f << 8) / 50;
-          }
-          Geoblox.a(1, ki.field_c);
-          mh.b();
-          vb.c();
-          ck.a((byte) 123);
-          if (var5 < 256) {
-            vb.b(0, 0, vb.field_f, vb.field_b, 0, -var5 + 256);
-            id.a(true);
-            if (gb.field_f >= 150) {
-              bk.field_b.d(15 + var3, var4 + 10, var5);
-            } else {
-              ki.field_c.d(var3, var4);
-            }
-            var6 = -125 + gb.field_f;
-            if (param2 != -51) {
-              field_a = (String) null;
-            }
-            if (var6 > 0) {
-              if (var6 < 50) {
-                if (var6 >= 20) {
-                  if (var6 >= 30) {
-                    var7 = 256 * (-var6 + 50) / 20;
-                    cd.field_l.c(var3, var4, var7);
-                  } else {
-                    cd.field_l.c(var3, var4, 256);
-                  }
-                } else {
-                  var7 = var6 * 256 / 20;
-                  cd.field_l.c(var3, var4, var7);
-                }
-              }
-            }
+        var3 = -135 + param1;
+        var4 = param0 - 35;
+        var5 = 256;
+        if (75 > gb.field_f) {
+          var5 = (gb.field_f << 8) / 75;
+        }
+        if (gb.field_f > 200) {
+          var5 = (250 - gb.field_f << 8) / 50;
+        }
+        Geoblox.a(1, ki.field_c);
+        mh.b();
+        vb.c();
+        ck.a((byte) 123);
+        if (var5 < 256) {
+          vb.b(0, 0, vb.field_f, vb.field_b, 0, -var5 + 256);
+          id.a(true);
+          if (gb.field_f >= 150) {
+            bk.field_b.d(15 + var3, var4 + 10, var5);
           } else {
-            id.a(true);
-            if (gb.field_f >= 150) {
-              bk.field_b.d(15 + var3, var4 + 10, var5);
-              var6 = -125 + gb.field_f;
-              if (param2 != -51) {
-                field_a = (String) null;
-                if (var6 > 0) {
-                  if (var6 < 50) {
-                    if (var6 >= 20) {
-                      if (var6 >= 30) {
-                        var7 = 256 * (-var6 + 50) / 20;
-                        cd.field_l.c(var3, var4, var7);
-                      } else {
-                        cd.field_l.c(var3, var4, 256);
-                      }
-                    } else {
-                      var7 = var6 * 256 / 20;
-                      cd.field_l.c(var3, var4, var7);
-                    }
-                  }
-                }
-                var6 = gb.field_f - 140;
-                if (var6 > 0) {
-                  var7 = 256;
-                  if (var6 < 20) {
-                    var7 = var6 * 256 / 20;
-                  }
-                  cl.field_b.d(15 + var3, var4 + 10, var5 * var7 >> 8);
+            ki.field_c.d(var3, var4);
+          }
+          var6 = -125 + gb.field_f;
+          if (param2 != -51) {
+            field_a = (String) null;
+          }
+          if (var6 > 0) {
+            if (var6 < 50) {
+              if (var6 >= 20) {
+                if (var6 >= 30) {
+                  var7 = 256 * (-var6 + 50) / 20;
+                  cd.field_l.c(var3, var4, var7);
+                } else {
+                  cd.field_l.c(var3, var4, 256);
                 }
               } else {
-                if (var6 <= 0) {
-                  var6 = gb.field_f - 140;
-                  if (var6 > 0) {
-                    var7 = 256;
-                    if (var6 < 20) {
-                      var7 = var6 * 256 / 20;
-                    }
-                    cl.field_b.d(15 + var3, var4 + 10, var5 * var7 >> 8);
-                  }
-                } else {
-                  if (var6 >= 50) {
-                    var6 = gb.field_f - 140;
-                    if (var6 > 0) {
-                      var7 = 256;
-                      if (var6 < 20) {
-                        var7 = var6 * 256 / 20;
-                      }
-                      cl.field_b.d(15 + var3, var4 + 10, var5 * var7 >> 8);
-                    }
-                  } else {
-                    if (var6 < 20) {
-                      var7 = var6 * 256 / 20;
-                      cd.field_l.c(var3, var4, var7);
-                      var6 = gb.field_f - 140;
-                      if (var6 > 0) {
-                        var7 = 256;
-                        if (var6 < 20) {
-                          var7 = var6 * 256 / 20;
-                        }
-                        cl.field_b.d(15 + var3, var4 + 10, var5 * var7 >> 8);
-                      }
-                    } else {
-                      if (var6 < 30) {
-                        cd.field_l.c(var3, var4, 256);
-                        var6 = gb.field_f - 140;
-                        if (var6 > 0) {
-                          var7 = 256;
-                          if (var6 < 20) {
-                            var7 = var6 * 256 / 20;
-                          }
-                          cl.field_b.d(15 + var3, var4 + 10, var5 * var7 >> 8);
-                        }
-                      } else {
-                        var7 = 256 * (-var6 + 50) / 20;
-                        cd.field_l.c(var3, var4, var7);
-                        var6 = gb.field_f - 140;
-                        if (var6 > 0) {
-                          var7 = 256;
-                          if (var6 < 20) {
-                            var7 = var6 * 256 / 20;
-                          }
-                          cl.field_b.d(15 + var3, var4 + 10, var5 * var7 >> 8);
-                        }
-                      }
-                    }
-                  }
-                }
+                var7 = var6 * 256 / 20;
+                cd.field_l.c(var3, var4, var7);
               }
-              return;
             }
-            ki.field_c.d(var3, var4);
+          }
+        } else {
+          id.a(true);
+          if (gb.field_f >= 150) {
+            bk.field_b.d(15 + var3, var4 + 10, var5);
             var6 = -125 + gb.field_f;
             if (param2 != -51) {
               field_a = (String) null;
@@ -169,34 +80,121 @@ final class eh {
                   }
                 }
               }
-            } else {
+              var6 = gb.field_f - 140;
               if (var6 > 0) {
-                if (var6 < 50) {
+                var7 = 256;
+                if (var6 < 20) {
+                  var7 = var6 * 256 / 20;
+                }
+                cl.field_b.d(15 + var3, var4 + 10, var5 * var7 >> 8);
+              }
+            } else {
+              if (var6 <= 0) {
+                var6 = gb.field_f - 140;
+                if (var6 > 0) {
+                  var7 = 256;
+                  if (var6 < 20) {
+                    var7 = var6 * 256 / 20;
+                  }
+                  cl.field_b.d(15 + var3, var4 + 10, var5 * var7 >> 8);
+                }
+              } else {
+                if (var6 >= 50) {
+                  var6 = gb.field_f - 140;
+                  if (var6 > 0) {
+                    var7 = 256;
+                    if (var6 < 20) {
+                      var7 = var6 * 256 / 20;
+                    }
+                    cl.field_b.d(15 + var3, var4 + 10, var5 * var7 >> 8);
+                  }
+                } else {
                   if (var6 < 20) {
                     var7 = var6 * 256 / 20;
                     cd.field_l.c(var3, var4, var7);
+                    var6 = gb.field_f - 140;
+                    if (var6 > 0) {
+                      var7 = 256;
+                      if (var6 < 20) {
+                        var7 = var6 * 256 / 20;
+                      }
+                      cl.field_b.d(15 + var3, var4 + 10, var5 * var7 >> 8);
+                    }
                   } else {
                     if (var6 < 30) {
                       cd.field_l.c(var3, var4, 256);
+                      var6 = gb.field_f - 140;
+                      if (var6 > 0) {
+                        var7 = 256;
+                        if (var6 < 20) {
+                          var7 = var6 * 256 / 20;
+                        }
+                        cl.field_b.d(15 + var3, var4 + 10, var5 * var7 >> 8);
+                      }
                     } else {
                       var7 = 256 * (-var6 + 50) / 20;
                       cd.field_l.c(var3, var4, var7);
+                      var6 = gb.field_f - 140;
+                      if (var6 > 0) {
+                        var7 = 256;
+                        if (var6 < 20) {
+                          var7 = var6 * 256 / 20;
+                        }
+                        cl.field_b.d(15 + var3, var4 + 10, var5 * var7 >> 8);
+                      }
                     }
                   }
                 }
               }
             }
+            return;
           }
-          var6 = gb.field_f - 140;
-          if (var6 > 0) {
-            var7 = 256;
-            if (var6 < 20) {
-              var7 = var6 * 256 / 20;
+          ki.field_c.d(var3, var4);
+          var6 = -125 + gb.field_f;
+          if (param2 != -51) {
+            field_a = (String) null;
+            if (var6 > 0) {
+              if (var6 < 50) {
+                if (var6 >= 20) {
+                  if (var6 >= 30) {
+                    var7 = 256 * (-var6 + 50) / 20;
+                    cd.field_l.c(var3, var4, var7);
+                  } else {
+                    cd.field_l.c(var3, var4, 256);
+                  }
+                } else {
+                  var7 = var6 * 256 / 20;
+                  cd.field_l.c(var3, var4, var7);
+                }
+              }
             }
-            cl.field_b.d(15 + var3, var4 + 10, var5 * var7 >> 8);
+          } else {
+            if (var6 > 0) {
+              if (var6 < 50) {
+                if (var6 < 20) {
+                  var7 = var6 * 256 / 20;
+                  cd.field_l.c(var3, var4, var7);
+                } else {
+                  if (var6 < 30) {
+                    cd.field_l.c(var3, var4, 256);
+                  } else {
+                    var7 = 256 * (-var6 + 50) / 20;
+                    cd.field_l.c(var3, var4, var7);
+                  }
+                }
+              }
+            }
           }
-          return;
         }
+        var6 = gb.field_f - 140;
+        if (var6 > 0) {
+          var7 = 256;
+          if (var6 < 20) {
+            var7 = var6 * 256 / 20;
+          }
+          cl.field_b.d(15 + var3, var4 + 10, var5 * var7 >> 8);
+        }
+        return;
     }
 
     public static void a(int param0) {

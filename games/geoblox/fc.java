@@ -20,7 +20,7 @@ final class fc {
         try {
           pf.field_D = true;
           var1 = (ja) ((Object) a.field_d.g(0));
-          L0: while (var1 != null) {
+          while (var1 != null) {
             var1.b(true);
             if (6 == var1.field_z) {
               pf.field_D = false;
@@ -32,7 +32,7 @@ final class fc {
           }
           var2 = 12 % ((-69 - param0) / 38);
           var1 = (ja) ((Object) bh.field_c.g(0));
-          L1: while (var1 != null) {
+          while (var1 != null) {
             L2: {
               var1.b(true);
               if (5 != var1.field_z) {

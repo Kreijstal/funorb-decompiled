@@ -88,7 +88,7 @@ final class h {
         var2 = Geoblox.field_C;
         try {
           var3 = (ja) ((Object) ji.field_r.g(0));
-          L0: while (var3 != null) {
+          while (var3 != null) {
             var3.g(-16096);
             var3 = (ja) ((Object) ji.field_r.d(1));
           }

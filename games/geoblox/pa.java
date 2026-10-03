@@ -139,17 +139,15 @@ final class pa {
                   if (var9 >= param2) {
                     return false;
                   }
-                  {
-                    if (var4_int != 0) {
-                      var9 = -var9;
-                    }
-                    var10 = var6 * param2 + var9;
-                    if (var6 != var10 / param2) {
-                      return false;
-                    }
-                    var6 = var10;
-                    var5 = 1;
+                  if (var4_int != 0) {
+                    var9 = -var9;
                   }
+                  var10 = var6 * param2 + var9;
+                  if (var6 != var10 / param2) {
+                    return false;
+                  }
+                  var6 = var10;
+                  var5 = 1;
                 }
               }
               stackIn_41_0 = var5;

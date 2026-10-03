@@ -50,10 +50,10 @@ final class pd {
         }
         var2 = var1.getScreenDevices();
         var3 = var2;
-        L0: for (var4 = 0; var4 < var3.length; var4++) {
+        for (var4 = 0; var4 < var3.length; var4++) {
           var5 = var3[var4];
           if (var5 == null) {
-            continue L0;
+            continue;
           }
           if (var5.isFullScreenSupported()) {
             this.field_a = var5;
@@ -82,7 +82,7 @@ final class pd {
             var7 = this.field_a.getDisplayModes();
             var8 = 0;
             var9 = 0;
-            L1: while (true) {
+            while (true) {
               if (var7.length <= var9) {
                 if (var8 != 0) {
                   break L0;
@@ -92,29 +92,27 @@ final class pd {
               }
               if (var7[var9].getWidth() != param1) {
                 var9++;
-                continue L1;
+                continue;
               }
               if (param2 != var7[var9].getHeight()) {
                 var9++;
-                continue L1;
+                continue;
               }
               if (var7[var9].getBitDepth() != param3) {
                 var9++;
-                continue L1;
+                continue;
               }
-              {
-                var10 = var7[var9].getRefreshRate();
-                if (var8 != 0) {
-                  if (Math.abs(-var6 + var10) >= Math.abs(-var6 + param4)) {
-                    var9++;
-                    continue L1;
-                  }
+              var10 = var7[var9].getRefreshRate();
+              if (var8 != 0) {
+                if (Math.abs(-var6 + var10) >= Math.abs(-var6 + param4)) {
+                  var9++;
+                  continue;
                 }
-                param4 = var10;
-                var8 = 1;
-                var9++;
-                continue L1;
               }
+              param4 = var10;
+              var8 = 1;
+              var9++;
+              continue;
             }
           }
         }

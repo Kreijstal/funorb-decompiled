@@ -84,20 +84,18 @@ final class em {
                 stackIn_9_0 = this.field_d[param0];
                 return stackIn_9_0;
               }
-              {
-                this.field_b.field_f = 6 + 72 * param0;
-                var6_int = this.field_b.a((byte) -108);
-                var7 = this.field_b.a((byte) -55);
-                var13 = new byte[64];
-                if (param1 != -9) {
-                  this.field_h = (sd) null;
-                }
-                this.field_b.b(29915, 64, var13, 0);
-                var9 = new bj(param0, param4, param3, this.field_g, this.field_f, var6_int, var13, var7, param2);
-                this.field_d[param0] = var9;
-                stackIn_13_0 = (bj) (var9);
-                return stackIn_13_0;
+              this.field_b.field_f = 6 + 72 * param0;
+              var6_int = this.field_b.a((byte) -108);
+              var7 = this.field_b.a((byte) -55);
+              var13 = new byte[64];
+              if (param1 != -9) {
+                this.field_h = (sd) null;
               }
+              this.field_b.b(29915, 64, var13, 0);
+              var9 = new bj(param0, param4, param3, this.field_g, this.field_f, var6_int, var13, var7, param2);
+              this.field_d[param0] = var9;
+              stackIn_13_0 = (bj) (var9);
+              return stackIn_13_0;
             }
           }
           throw new RuntimeException();
@@ -129,18 +127,18 @@ final class em {
         if (null == this.field_d) {
           return;
         }
-        L0: for (var2 = 0; this.field_d.length > var2; var2++) {
+        for (var2 = 0; this.field_d.length > var2; var2++) {
           if (this.field_d[var2] == null) {
-            continue L0;
+            continue;
           }
           this.field_d[var2].a(6924);
         }
         if (param0 != -65) {
           em.a('', 15);
         }
-        L2: for (var2 = 0; var2 < this.field_d.length; var2++) {
+        for (var2 = 0; var2 < this.field_d.length; var2++) {
           if (null == this.field_d[var2]) {
-            continue L2;
+            continue;
           }
           stackIn_16_0 = this.field_d[var2];
           ((bj) (Object) stackIn_16_0).b((byte) -38);
@@ -197,17 +195,15 @@ final class em {
         if (var5.length != 65) {
           throw new RuntimeException();
         }
-        {
-          var15 = wh.a(-var13.length + var10.field_f - 5, 5, var10.field_j, 8);
-          for (var7 = 0; var7 < 64; var7++) {
-            if (var15[var7] != var5[1 + var7]) {
-              throw new RuntimeException();
-            }
+        var15 = wh.a(-var13.length + var10.field_f - 5, 5, var10.field_j, 8);
+        for (var7 = 0; var7 < 64; var7++) {
+          if (var15[var7] != var5[1 + var7]) {
+            throw new RuntimeException();
           }
-          this.field_b = var10;
-          this.field_d = new bj[var3];
-          return true;
         }
+        this.field_b = var10;
+        this.field_d = new bj[var3];
+        return true;
     }
 
     private em(ji param0, uf param1, java.math.BigInteger param2, java.math.BigInteger param3) {

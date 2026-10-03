@@ -24,44 +24,42 @@ final class gb {
             td.a(-348, fl.field_c[25]);
           }
           n.field_j = n.field_j + 1;
-          L1: while (true) {
+          while (true) {
             if (hh.a(93)) {
               if (ki.field_d != 13) {
-                continue L1;
+                continue;
               }
               return true;
             }
-            {
-              if (0 == n.field_j % 40) {
-                if (vc.field_h < 11) {
-                  fh.field_c = n.field_j;
-                  vc.field_h = vc.field_h + 1;
-                  if (10 == vc.field_h) {
-                    td.a(-348, fl.field_c[26]);
-                  }
+            if (0 == n.field_j % 40) {
+              if (vc.field_h < 11) {
+                fh.field_c = n.field_j;
+                vc.field_h = vc.field_h + 1;
+                if (10 == vc.field_h) {
+                  td.a(-348, fl.field_c[26]);
                 }
               }
-              var1_float = -((480.0f - (float)n.field_j) / 480.0f) + 1.0f;
-              if (11 > vc.field_h) {
-                si.field_j = ((int)(var1_float * ka.field_c) << 8) + (uf.field_h[0] + ((int)(var1_float * lk.field_b) << 16)) + (int)(kk.field_x * var1_float);
-              }
-              var2 = tl.field_r[vc.field_h].field_s >> 1;
-              var3 = n.field_j << 2;
-              if (!sg.field_d) {
-                if (-var3 + 900 <= 320 + var2) {
-                  td.a(-348, fl.field_c[7]);
-                  sg.field_d = true;
-                }
-              }
-              if (!ab.field_d) {
-                if (-var2 + (320 - qh.field_O[1].field_s) <= -1200 + var3) {
-                  td.a(-348, fl.field_c[8]);
-                  ab.field_d = true;
-                }
-              }
-              stackIn_25_0 = !(494 > n.field_j);
-              return stackIn_25_0;
             }
+            var1_float = -((480.0f - (float)n.field_j) / 480.0f) + 1.0f;
+            if (11 > vc.field_h) {
+              si.field_j = ((int)(var1_float * ka.field_c) << 8) + (uf.field_h[0] + ((int)(var1_float * lk.field_b) << 16)) + (int)(kk.field_x * var1_float);
+            }
+            var2 = tl.field_r[vc.field_h].field_s >> 1;
+            var3 = n.field_j << 2;
+            if (!sg.field_d) {
+              if (-var3 + 900 <= 320 + var2) {
+                td.a(-348, fl.field_c[7]);
+                sg.field_d = true;
+              }
+            }
+            if (!ab.field_d) {
+              if (-var2 + (320 - qh.field_O[1].field_s) <= -1200 + var3) {
+                td.a(-348, fl.field_c[8]);
+                ab.field_d = true;
+              }
+            }
+            stackIn_25_0 = !(494 > n.field_j);
+            return stackIn_25_0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -128,7 +126,7 @@ final class gb {
         try {
           kd.field_e.a(true, 127, ec.field_d, mj.field_b);
           kd.field_e.i(-65);
-          L0: while (hh.a(77)) {
+          while (hh.a(77)) {
             kd.field_e.a((byte) 105, te.field_a, ki.field_d);
           }
           if (fe.field_d != param0) {

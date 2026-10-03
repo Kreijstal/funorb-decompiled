@@ -163,7 +163,7 @@ final class ne {
         if (param0 >= -10) {
           ne.a((byte) 89);
         }
-        L1: while (var2 < 256) {
+        while (var2 < 256) {
           var3 = this.field_a[var2];
           if (0 == (2 & var2)) {
             if ((1 & var2) != 0) {

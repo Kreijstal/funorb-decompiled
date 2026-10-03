@@ -406,14 +406,14 @@ abstract class wh extends rc {
               if (param1 > 0) {
                 var4 = new byte[param0];
                 var5_int = 0;
-                L2: while (~param0 < ~var5_int) {
+                while (~param0 < ~var5_int) {
                   var4[var5_int] = param2[param1 + var5_int];
                   var5_int++;
                   if (var7 != 0) {
                     break L0;
                   }
                   if (var7 == 0) {
-                    continue L2;
+                    continue;
                   }
                   break;
                 }
@@ -653,65 +653,63 @@ abstract class wh extends rc {
                       }
                     }
                     var36 = mh.field_b[param8];
-                    L14: while (true) {
+                    while (true) {
                       if (~param15 >= ~param8) {
                         break L11;
                       }
-                      {
-                        var37 = var17_int >> 16;
-                        stackIn_73_0 = ~mh.field_c;
-                        stackIn_73_1 = ~var37;
-                        if (var42 != 0) {
-                          break L10;
-                        }
-                        L15: {
-                          if (stackIn_73_0 < stackIn_73_1) {
-                            var38 = (var18 >> 16) - (var17_int >> 16);
-                            if (var38 != 0) {
-                              var39 = (var22 - var21) / var38;
-                              var40 = (-var25 + var26) / var38;
-                              var41 = (var30 - var29) / var38;
-                              if (mh.field_c <= var38 + var37) {
-                                var38 = -1 + (mh.field_c - var37);
-                              }
-                              L18: {
-                                if (0 <= var37) {
-                                  jf.a(var37 + var36, var39, 33423689, var21, var41, var25, var40, var38, var29, param11);
-                                  if (var42 == 0) {
-                                    break L18;
-                                  }
-                                }
-                                jf.a(var36, var39, 33423689, -(var39 * var37) + var21, var41, var25 - var37 * var40, var40, var38 + var37, -(var41 * var37) + var29, param11);
-                              }
-                              if (var42 == 0) {
-                                break L15;
-                              }
+                      var37 = var17_int >> 16;
+                      stackIn_73_0 = ~mh.field_c;
+                      stackIn_73_1 = ~var37;
+                      if (var42 != 0) {
+                        break L10;
+                      }
+                      L15: {
+                        if (stackIn_73_0 < stackIn_73_1) {
+                          var38 = (var18 >> 16) - (var17_int >> 16);
+                          if (var38 != 0) {
+                            var39 = (var22 - var21) / var38;
+                            var40 = (-var25 + var26) / var38;
+                            var41 = (var30 - var29) / var38;
+                            if (mh.field_c <= var38 + var37) {
+                              var38 = -1 + (mh.field_c - var37);
                             }
-                            if (var37 >= 0) {
-                              if (~var37 > ~mh.field_c) {
-                                jf.a(var37 + var36, 0, 33423689, var21, 0, var25, 0, var38, var29, param11);
+                            L18: {
+                              if (0 <= var37) {
+                                jf.a(var37 + var36, var39, 33423689, var21, var41, var25, var40, var38, var29, param11);
+                                if (var42 == 0) {
+                                  break L18;
+                                }
                               }
+                              jf.a(var36, var39, 33423689, -(var39 * var37) + var21, var41, var25 - var37 * var40, var40, var38 + var37, -(var41 * var37) + var29, param11);
+                            }
+                            if (var42 == 0) {
+                              break L15;
+                            }
+                          }
+                          if (var37 >= 0) {
+                            if (~var37 > ~mh.field_c) {
+                              jf.a(var37 + var36, 0, 33423689, var21, 0, var25, 0, var38, var29, param11);
                             }
                           }
                         }
-                        param8++;
-                        if (~param8 <= ~mh.field_h) {
-                          return;
-                        }
-                        var18 = var18 + var20;
-                        var26 = var26 + var28;
-                        var22 = var22 + var24;
-                        var25 = var25 + var27;
-                        var29 = var29 + var31;
-                        var30 = var30 + var32;
-                        var17_int = var17_int + var19;
-                        var21 = var21 + var23;
-                        var36 = var36 + vb.field_f;
-                        if (var42 == 0) {
-                          continue L14;
-                        }
-                        break L11;
                       }
+                      param8++;
+                      if (~param8 <= ~mh.field_h) {
+                        return;
+                      }
+                      var18 = var18 + var20;
+                      var26 = var26 + var28;
+                      var22 = var22 + var24;
+                      var25 = var25 + var27;
+                      var29 = var29 + var31;
+                      var30 = var30 + var32;
+                      var17_int = var17_int + var19;
+                      var21 = var21 + var23;
+                      var36 = var36 + vb.field_f;
+                      if (var42 == 0) {
+                        continue;
+                      }
+                      break L11;
                     }
                   }
                   var36 = param4 - param15;
@@ -772,7 +770,7 @@ abstract class wh extends rc {
                 param8 = 0;
               }
               var35 = mh.field_b[param8];
-              L24: while (true) {
+              while (true) {
                 L25: {
                   if (param4 > param8) {
                     var36 = var17_int >> 16;
@@ -823,7 +821,7 @@ abstract class wh extends rc {
                     var17_int = var17_int + var19;
                     var30 = var30 + var32;
                     if (var42 == 0) {
-                      continue L24;
+                      continue;
                     }
                   }
                 }
@@ -871,7 +869,7 @@ abstract class wh extends rc {
                       af.field_b.a(51, 0L);
                       af.field_b.a((byte) -76, var2);
                       var3_int = 0;
-                      L3: while (true) {
+                      while (true) {
                         L4: {
                           L5: {
                             if (var3_int < 24) {
@@ -887,7 +885,7 @@ abstract class wh extends rc {
                               }
                               var3_int++;
                               if (var5 == 0) {
-                                continue L3;
+                                continue;
                               }
                             }
                           }
@@ -906,7 +904,7 @@ abstract class wh extends rc {
                     L7: {
                       var3 = (Exception) (Object) decompiledCaughtException;
                       var4 = 0;
-                      L8: while (var4 < 24) {
+                      while (var4 < 24) {
                         var2[var4] = (byte) -1;
                         var4++;
                         if (var5 != 0) {
@@ -914,7 +912,7 @@ abstract class wh extends rc {
                           break L7;
                         }
                         if (var5 == 0) {
-                          continue L8;
+                          continue;
                         }
                         break;
                       }

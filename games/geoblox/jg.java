@@ -66,7 +66,7 @@ abstract class jg {
             return (j) ((Object) stackIn_13_0);
           }
           var3 = (j) ((Object) nh.field_a.a((long)var2.hashCode(), -1));
-          L0: while (var3 != null) {
+          while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.field_hb);
             var4 = oe.a(var7, 12);
             if (var4.equals(var2)) {
@@ -183,11 +183,11 @@ abstract class jg {
             var8 = (String) null;
             jg.a((byte) 74, (String) null);
           }
-          L1: while (var5_int < 33) {
+          while (var5_int < 33) {
             if (ck.field_c[var5_int] > 0) {
               if (ck.field_c[var5_int] != 1) {
                 var5_int++;
-                continue L1;
+                continue;
               }
             }
             L3: {
@@ -334,12 +334,12 @@ abstract class jg {
             var3 = -1 + var2;
             var4 = var18[var2];
             var5 = field_h[var1][var2];
-            L4: while (var3 >= 0) {
+            while (var3 >= 0) {
               if (var18[var3] > var4) {
                 var0[var3 + 1] = var18[var3];
                 field_h[var1][1 + var3] = field_h[var1][var3];
                 var3--;
-                continue L4;
+                continue;
               }
               break;
             }

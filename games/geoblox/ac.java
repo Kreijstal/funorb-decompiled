@@ -147,11 +147,11 @@ class ac extends ff {
           if (8 <= var9) {
             var3_int = var3_int + (-160 + var8);
           }
-          L7: for (var10 = 0; var10 < pg.field_a.length; var10++) {
+          for (var10 = 0; var10 < pg.field_a.length; var10++) {
             if (!da.a(0, -119)) {
               if (var10 == 16) {
                 if (!qi.d(105)) {
-                  continue L7;
+                  continue;
                 }
               }
             }
@@ -181,7 +181,7 @@ class ac extends ff {
             }
             if ((var5 & 1 << var10) == 0) {
               if (param1) {
-                continue L7;
+                continue;
               }
               am.field_b.f(var3_int, var4);
             } else {
@@ -196,7 +196,7 @@ class ac extends ff {
                 var4 += 5;
               }
               if (!param1) {
-                continue L7;
+                continue;
               }
               if (var9 < 8) {
                 var3_int = var3_int + var8;

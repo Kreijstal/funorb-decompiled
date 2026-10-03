@@ -74,16 +74,14 @@ final class lh {
         if (var1 != 2) {
           return;
         }
-        {
-          fieldTemp$7 = eh.field_c;
-          eh.field_c = eh.field_c + 1;
-          if (fieldTemp$7 <= 480) {
-            return;
-          }
-          pb.field_t.b((byte) -118);
-          gf.a((byte) -12);
+        fieldTemp$7 = eh.field_c;
+        eh.field_c = eh.field_c + 1;
+        if (fieldTemp$7 <= 480) {
           return;
         }
+        pb.field_t.b((byte) -118);
+        gf.a((byte) -12);
+        return;
     }
 
     public final String toString() {

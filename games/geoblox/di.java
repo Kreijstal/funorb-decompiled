@@ -48,12 +48,12 @@ final class di {
         var3 = Geoblox.field_C;
         try {
           var4 = (wc) ((Object) l.field_g.g(param1 ^ param1));
-          L0: while (var4 != null) {
+          while (var4 != null) {
             o.a(param0, var4, param1 - 21718);
             var4 = (wc) ((Object) l.field_g.d(1));
           }
           var2 = qa.field_e.g(0);
-          L1: while (var2 != null) {
+          while (var2 != null) {
             gf.a(param0, 125);
             var2 = qa.field_e.d(1);
           }

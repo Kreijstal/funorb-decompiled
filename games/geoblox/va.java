@@ -81,27 +81,23 @@ final class va {
               }
               return;
             }
-            {
-              param2 = ch.field_d[var5_int];
-              var6 = var5_int << 4;
-              L2: while (true) {
-                incrementValue$0 = param2;
-                param2--;
-                if (0 == incrementValue$0) {
-                  var5_int++;
-                  continue L0;
-                }
-                {
-                  incrementValue$1 = var6;
-                  var6++;
-                  param0 = pj.field_i[incrementValue$1];
-                  dupTemp$2 = param1[param0];
-                  dupTemp$3 = param3[dupTemp$2];
-                  param3[dupTemp$2] = dupTemp$3 + 1;
-                  pj.field_i[dupTemp$3] = param0;
-                  continue L2;
-                }
+            param2 = ch.field_d[var5_int];
+            var6 = var5_int << 4;
+            while (true) {
+              incrementValue$0 = param2;
+              param2--;
+              if (0 == incrementValue$0) {
+                var5_int++;
+                continue L0;
               }
+              incrementValue$1 = var6;
+              var6++;
+              param0 = pj.field_i[incrementValue$1];
+              dupTemp$2 = param1[param0];
+              dupTemp$3 = param3[dupTemp$2];
+              param3[dupTemp$2] = dupTemp$3 + 1;
+              pj.field_i[dupTemp$3] = param0;
+              continue;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

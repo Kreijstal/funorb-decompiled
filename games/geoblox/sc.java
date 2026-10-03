@@ -64,10 +64,10 @@ abstract class sc {
             return stackIn_7_0;
           }
           var3_int = -(int)(4294967296L % (long)param2) + -2147483648;
-          L0: while (true) {
+          while (true) {
             var4 = param1.nextInt();
             if (var3_int <= var4) {
-              continue L0;
+              continue;
             }
             stackIn_12_0 = jc.a(var4, param2, param0 ^ 121);
             return stackIn_12_0;

@@ -85,11 +85,11 @@ final class d implements Runnable {
             java.awt.datatransfer.Clipboard var16 = null;
             Object[] var17 = null;
             Object[] var18 = null;
-            L0: while (true) {
+            while (true) {
               var2 = this;
               synchronized (var2) {
                 L1: {
-                  L2: while (!this.field_c) {
+                  while (!this.field_c) {
                     if (this.field_d != null) {
                       var9 = this.field_d;
                       this.field_d = this.field_d.field_e;
@@ -154,10 +154,8 @@ final class d implements Runnable {
                                     if (~oa.a(-12520) > ~field_m) {
                                       throw new IOException();
                                     }
-                                    {
-                                      var14 = (255 & var9.field_c >> 24) + "." + ((var9.field_c & 16718053) >> 16) + "." + (var9.field_c >> 8 & 255) + "." + (255 & var9.field_c);
-                                      var9.field_b = java.net.InetAddress.getByName(var14).getHostName();
-                                    }
+                                    var14 = (255 & var9.field_c >> 24) + "." + ((var9.field_c & 16718053) >> 16) + "." + (var9.field_c >> 8 & 255) + "." + (255 & var9.field_c);
+                                    var9.field_b = java.net.InetAddress.getByName(var14).getHostName();
                                   } else {
                                     if (var2_int == 21) {
                                       if (~oa.a(-12520) > ~field_m) {
@@ -231,23 +229,21 @@ final class d implements Runnable {
                                                     if (!field_b.startsWith("win")) {
                                                       throw d.<RuntimeException>$cfr$sneakyThrow(new Exception());
                                                     }
-                                                    {
-                                                      var8 = (String) (var9.field_f);
-                                                      if (!var8.startsWith("http://")) {
-                                                        if (!var8.startsWith("https://")) {
-                                                          throw d.<RuntimeException>$cfr$sneakyThrow(new Exception());
-                                                        }
+                                                    var8 = (String) (var9.field_f);
+                                                    if (!var8.startsWith("http://")) {
+                                                      if (!var8.startsWith("https://")) {
+                                                        throw d.<RuntimeException>$cfr$sneakyThrow(new Exception());
                                                       }
-                                                      var4 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
-                                                      for (var5 = 0; var5 < var8.length(); var5++) {
-                                                        if (-1 == var4.indexOf((int) var8.charAt(var5))) {
-                                                          throw d.<RuntimeException>$cfr$sneakyThrow(new Exception());
-                                                        }
-                                                      }
-                                                      Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var8 + "\"");
-                                                      var9.field_b = null;
-                                                      break L14;
                                                     }
+                                                    var4 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
+                                                    for (var5 = 0; var5 < var8.length(); var5++) {
+                                                      if (-1 == var4.indexOf((int) var8.charAt(var5))) {
+                                                        throw d.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                                                      }
+                                                    }
+                                                    Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var8 + "\"");
+                                                    var9.field_b = null;
+                                                    break L14;
                                                   }
                                                 } catch (java.lang.Exception decompiledCaughtParameter1) {
                                                   decompiledCaughtException = decompiledCaughtParameter1;
@@ -315,7 +311,7 @@ final class d implements Runnable {
               synchronized (var2) {
                 var9.notify();
               }
-              continue L0;
+              continue;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -361,12 +357,12 @@ final class d implements Runnable {
             var5 = new String[]{"c:/rscache/", "/rscache/", field_x, "c:/windows/", "c:/winnt/", "c:/", "/tmp/", ""};
             var7 = -95 % ((-46 - param0) / 35);
             var6 = 0;
-            L1: while (var6 < var5.length) {
+            while (var6 < var5.length) {
               var8 = var5[var6];
               if (0 < var8.length()) {
                 if (!new File(var8).exists()) {
                   var6++;
-                  continue L1;
+                  continue;
                 }
               }
               try {
@@ -431,10 +427,10 @@ final class d implements Runnable {
             L10: {
               if (null != this.field_r) {
                 var2_int = 0;
-                L11: while (var2_int < this.field_r.length) {
+                while (var2_int < this.field_r.length) {
                   if (this.field_r[var2_int] == null) {
                     var2_int++;
-                    continue L11;
+                    continue;
                   }
                   try {
                     this.field_r[var2_int].a((byte) -5);
@@ -495,21 +491,19 @@ final class d implements Runnable {
         if (param0 != 1) {
           return (cb) null;
         }
-        {
-          var6.field_d = param3;
-          var7 = this;
-          synchronized (var7) {
-            if (this.field_g == null) {
-              this.field_d = var6;
-              this.field_g = var6;
-            } else {
-              this.field_g.field_e = var6;
-              this.field_g = var6;
-            }
-            this.notify();
+        var6.field_d = param3;
+        var7 = this;
+        synchronized (var7) {
+          if (this.field_g == null) {
+            this.field_d = var6;
+            this.field_g = var6;
+          } else {
+            this.field_g.field_e = var6;
+            this.field_g = var6;
           }
-          return var6;
+          this.notify();
         }
+        return var6;
     }
 
     final cb a(String param0, int param1, Class[] param2, Class param3) {

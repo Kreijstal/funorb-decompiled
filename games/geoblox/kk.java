@@ -76,7 +76,7 @@ final class kk extends ji {
             try {
               this.field_u.d(-108);
               var2 = (sd) ((Object) this.field_g.c((byte) 121));
-              L4: while (var2 != null) {
+              while (var2 != null) {
                 this.field_m.field_f = 0;
                 this.field_m.d((byte) -54, 1);
                 this.field_m.a((byte) -127, var2.field_i);
@@ -88,7 +88,7 @@ final class kk extends ji {
               if (param0 != 95) {
                 this.e(-90);
               }
-              L6: while (var2 != null) {
+              while (var2 != null) {
                 this.field_m.field_f = 0;
                 this.field_m.d((byte) 8, 0);
                 this.field_m.a((byte) -127, var2.field_i);
@@ -127,7 +127,7 @@ final class kk extends ji {
                     if (this.field_i != 0) {
                       var17 = 0;
                       var7 = var17;
-                      L13: while (var6 > var17) {
+                      while (var6 > var17) {
                         this.field_f.field_A.field_j[this.field_f.field_A.field_f + var17] = (byte)h.a((int) this.field_f.field_A.field_j[this.field_f.field_A.field_f + var17], (int) this.field_i);
                         var17++;
                       }
@@ -175,7 +175,7 @@ final class kk extends ji {
                         var14 = null;
                         if (var11 != 0) {
                           var14_ref = (sd) ((Object) this.field_c.c((byte) 121));
-                          L19: while (var14_ref != null) {
+                          while (var14_ref != null) {
                             if (var12 == var14_ref.field_i) {
                               break L18;
                             }
@@ -184,7 +184,7 @@ final class kk extends ji {
                           break L18;
                         }
                         var14_ref = (sd) ((Object) this.field_e.c((byte) 121));
-                        L20: while (var14_ref != null) {
+                        while (var14_ref != null) {
                           if (~var12 == ~var14_ref.field_i) {
                             break L18;
                           }
@@ -195,16 +195,14 @@ final class kk extends ji {
                       if (var14_ref == null) {
                         throw new IOException();
                       }
-                      {
-                        this.field_f = var14_ref;
-                        stackIn_66_0 = (0 != var10) ? 9 : 5;
-                        var15 = stackIn_66_0;
-                        this.field_f.field_A = new qc(var9 + var15 + this.field_f.field_E);
-                        this.field_f.field_A.d((byte) -26, var10);
-                        this.field_f.field_A.c((byte) 95, var9);
-                        this.field_j.field_f = 0;
-                        this.field_f.field_D = 10;
-                      }
+                      this.field_f = var14_ref;
+                      stackIn_66_0 = (0 != var10) ? 9 : 5;
+                      var15 = stackIn_66_0;
+                      this.field_f.field_A = new qc(var9 + var15 + this.field_f.field_E);
+                      this.field_f.field_A.d((byte) -26, var10);
+                      this.field_f.field_A.c((byte) 95, var9);
+                      this.field_j.field_f = 0;
+                      this.field_f.field_D = 10;
                     } else {
                       if (0 != this.field_f.field_D) {
                         throw new IOException();
@@ -263,47 +261,45 @@ final class kk extends ji {
           if (param1 == null) {
             return false;
           }
-          {
-            var3_int = param1.length();
-            if (var3_int >= 1) {
-              if (12 >= var3_int) {
-                var4 = oe.a(param1, param2 ^ 122);
-                if (var4 == null) {
-                  return false;
-                }
-                if (var4.length() < 1) {
-                  return false;
-                }
-                if (!gg.a((byte) -62, var4.charAt(0))) {
-                  if (!gg.a((byte) -98, var4.charAt(-1 + var4.length()))) {
-                    var5 = 0;
-                    for (var6 = 0; var6 < param1.length(); var6++) {
-                      var7 = param1.charAt(var6);
-                      if (!gg.a((byte) -93, (char) var7)) {
-                        var5 = 0;
-                      } else {
-                        var5++;
-                      }
-                      if (var5 >= 2) {
-                        if (!param0) {
-                          return false;
-                        }
-                      }
-                    }
-                    if (param2 != 118) {
-                      return false;
-                    }
-                    if (var5 <= 0) {
-                      return true;
-                    }
-                    return false;
-                  }
-                }
+          var3_int = param1.length();
+          if (var3_int >= 1) {
+            if (12 >= var3_int) {
+              var4 = oe.a(param1, param2 ^ 122);
+              if (var4 == null) {
                 return false;
               }
+              if (var4.length() < 1) {
+                return false;
+              }
+              if (!gg.a((byte) -62, var4.charAt(0))) {
+                if (!gg.a((byte) -98, var4.charAt(-1 + var4.length()))) {
+                  var5 = 0;
+                  for (var6 = 0; var6 < param1.length(); var6++) {
+                    var7 = param1.charAt(var6);
+                    if (!gg.a((byte) -93, (char) var7)) {
+                      var5 = 0;
+                    } else {
+                      var5++;
+                    }
+                    if (var5 >= 2) {
+                      if (!param0) {
+                        return false;
+                      }
+                    }
+                  }
+                  if (param2 != 118) {
+                    return false;
+                  }
+                  if (var5 <= 0) {
+                    return true;
+                  }
+                  return false;
+                }
+              }
+              return false;
             }
-            return false;
           }
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -356,20 +352,20 @@ final class kk extends ji {
               this.a(param1, param2);
               this.field_j.field_f = 0;
               this.field_f = null;
-              L3: while (true) {
+              while (true) {
                 var4_ref = (sd) ((Object) this.field_e.a(true));
                 if (var4_ref != null) {
                   this.field_g.a(-74, var4_ref);
-                  continue L3;
+                  continue;
                 }
                 if (param1) {
                   field_t = 110;
                 }
-                L5: while (true) {
+                while (true) {
                   var4_ref = (sd) ((Object) this.field_c.a(true));
                   if (var4_ref != null) {
                     this.field_p.a(116, var4_ref);
-                    continue L5;
+                    continue;
                   }
                   if (this.field_i != 0) {
                     try {

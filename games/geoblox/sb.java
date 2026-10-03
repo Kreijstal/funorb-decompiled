@@ -54,10 +54,10 @@ final class sb {
         field_c = "You need to choose a name before you can log in. This is the name that will be displayed to other players.";
         for (var1 = 0; var1 < 256; var1++) {
           var0 = var1;
-          L1: for (var2 = 0; 8 > var2; var2++) {
+          for (var2 = 0; 8 > var2; var2++) {
             if (1 != (var0 & 1)) {
               var0 = var0 >>> 1;
-              continue L1;
+              continue;
             }
             var0 = -306674912 ^ var0 >>> 1;
           }

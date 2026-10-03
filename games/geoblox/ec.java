@@ -19,12 +19,12 @@ final class ec {
         try {
           var3 = 57 % ((param0 - 57) / 46);
           var5 = (ai) ((Object) nf.field_j.g(0));
-          L0: while (var5 != null) {
+          while (var5 != null) {
             bm.a(var5, param1, -127);
             var5 = (ai) ((Object) nf.field_j.d(1));
           }
           var6 = (mg) ((Object) rh.field_d.g(0));
-          L1: while (var6 != null) {
+          while (var6 != null) {
             ib.a(param1, 5, var6);
             var6 = (mg) ((Object) rh.field_d.d(1));
           }
@@ -71,84 +71,82 @@ final class ec {
           if (h.field_a == 0) {
             return false;
           }
-          {
-            if (gf.field_f >= 5) {
-              ra.a(jf.field_g ^ 255, -99, jf.field_g);
-            }
-            if (gf.field_f >= 6) {
-              ra.a(qg.field_d ^ 255, -57, qg.field_d);
-            }
-            if (gf.field_f >= 7) {
-              ra.a(255 ^ tf.field_f, -97, tf.field_f);
-            }
-            for (var1_int = 1; var1_int < h.field_a; var1_int++) {
-              var2 = var1_int - 1;
-              var3 = nk.field_f[var1_int];
-              L13: while (var2 >= 0) {
-                if (~nk.field_f[var2] < ~var3) {
-                  nk.field_f[1 + var2] = nk.field_f[var2];
-                  var2--;
-                  continue L13;
-                }
-                break;
+          if (gf.field_f >= 5) {
+            ra.a(jf.field_g ^ 255, -99, jf.field_g);
+          }
+          if (gf.field_f >= 6) {
+            ra.a(qg.field_d ^ 255, -57, qg.field_d);
+          }
+          if (gf.field_f >= 7) {
+            ra.a(255 ^ tf.field_f, -97, tf.field_f);
+          }
+          for (var1_int = 1; var1_int < h.field_a; var1_int++) {
+            var2 = var1_int - 1;
+            var3 = nk.field_f[var1_int];
+            while (var2 >= 0) {
+              if (~nk.field_f[var2] < ~var3) {
+                nk.field_f[1 + var2] = nk.field_f[var2];
+                var2--;
+                continue;
               }
-              nk.field_f[1 + var2] = var3;
+              break;
             }
-            if (param0 != -18913) {
-              ec.b(-33);
-            }
-            var12 = 0;
-            var1_int = var12;
-            L7: while (var12 < h.field_a) {
-              L8: {
-                if (-1 + h.field_a > var12) {
-                  if (nk.field_f[var12] == nk.field_f[var12 + 1]) {
+            nk.field_f[1 + var2] = var3;
+          }
+          if (param0 != -18913) {
+            ec.b(-33);
+          }
+          var12 = 0;
+          var1_int = var12;
+          while (var12 < h.field_a) {
+            L8: {
+              if (-1 + h.field_a > var12) {
+                if (nk.field_f[var12] == nk.field_f[var12 + 1]) {
+                  nk.field_f[var12] = 0;
+                  break L8;
+                }
+              }
+              var2 = (nk.field_f[var12] & 1072693248) >> 20;
+              var3 = nk.field_f[var12] >> 10 & 1023;
+              var4 = 1023 & nk.field_f[var12];
+              var5 = tl.field_g[var2];
+              var6 = tl.field_g[var3];
+              var7 = tl.field_g[var4];
+              if (var5.field_E <= 0) {
+                if (var6.field_E <= 0) {
+                  if (var7.field_E <= 0) {
+                    td.a(-348, fl.field_c[31]);
+                    gf.field_f = gf.field_f + 1;
+                    if (gf.field_f > 1) {
+                      el.field_o.field_y = -1;
+                    }
+                    if (-1073741824 == (-1073741824 & nk.field_f[var12])) {
+                      var8 = 90 * gf.field_f;
+                      ra.a(fa.field_e ^ 255, -100, fa.field_e);
+                    } else {
+                      var8 = 30 * gf.field_f;
+                    }
+                    var9 = 0;
+                    var9 = (int)var5.field_o;
+                    var10 = 0;
+                    var10 = (int)var5.field_v;
+                    ug.a(var8, true, var10, gf.field_f, var9);
                     nk.field_f[var12] = 0;
                     break L8;
                   }
                 }
-                var2 = (nk.field_f[var12] & 1072693248) >> 20;
-                var3 = nk.field_f[var12] >> 10 & 1023;
-                var4 = 1023 & nk.field_f[var12];
-                var5 = tl.field_g[var2];
-                var6 = tl.field_g[var3];
-                var7 = tl.field_g[var4];
-                if (var5.field_E <= 0) {
-                  if (var6.field_E <= 0) {
-                    if (var7.field_E <= 0) {
-                      td.a(-348, fl.field_c[31]);
-                      gf.field_f = gf.field_f + 1;
-                      if (gf.field_f > 1) {
-                        el.field_o.field_y = -1;
-                      }
-                      if (-1073741824 == (-1073741824 & nk.field_f[var12])) {
-                        var8 = 90 * gf.field_f;
-                        ra.a(fa.field_e ^ 255, -100, fa.field_e);
-                      } else {
-                        var8 = 30 * gf.field_f;
-                      }
-                      var9 = 0;
-                      var9 = (int)var5.field_o;
-                      var10 = 0;
-                      var10 = (int)var5.field_v;
-                      ug.a(var8, true, var10, gf.field_f, var9);
-                      nk.field_f[var12] = 0;
-                      break L8;
-                    }
-                  }
-                }
-                var8_ref_ja = var5;
-                var9_ref_ja = var6;
-                var7.field_K = null;
-                var9_ref_ja.field_K = null;
-                var8_ref_ja.field_K = null;
-                nk.field_f[var12] = 0;
               }
-              var12++;
+              var8_ref_ja = var5;
+              var9_ref_ja = var6;
+              var7.field_K = null;
+              var9_ref_ja.field_K = null;
+              var8_ref_ja.field_K = null;
+              nk.field_f[var12] = 0;
             }
-            h.field_a = 0;
-            return true;
+            var12++;
           }
+          h.field_a = 0;
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;

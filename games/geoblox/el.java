@@ -224,209 +224,27 @@ class el extends hf {
         if (param1 <= 126) {
           return true;
         }
-        {
-          this.a(false, param3, (el) (this), param2);
-          var5 = this.e((byte) 54) ? 1 : 0;
-          if (!param0) {
-            if (var5 != 0) {
-              if (bi.field_g != 0) {
-                this.d(-126);
-              }
-            }
-            ij.field_X = gf.field_a;
-            sa.a(this.c((byte) 69), (byte) 72);
-            return param0;
-          }
-          if (0 == vc.field_i) {
-            if (0 == bi.field_g) {
-              if (gf.field_a == 0) {
-                if (0 != ij.field_X) {
-                  this.a(param2, qa.field_a, true, (el) (this), param3, ue.field_e);
-                  var8 = lh.field_b;
-                  if (var8 != null) {
-                    if (var8.field_u instanceof rg) {
-                      ((rg) ((Object) var8.field_u)).a((fk) null, var8, 22176);
-                    }
-                    lh.field_b = null;
-                  }
-                  if (var7 != 0) {
-                    if (var5 != 0) {
-                      if (bi.field_g != 0) {
-                        this.d(-126);
-                      }
-                    }
-                  }
-                }
-              }
-              ij.field_X = gf.field_a;
-              sa.a(this.c((byte) 69), (byte) 72);
-              return param0;
-            }
-            L19: {
-              if (!this.a(param3, -109, param2, bi.field_g, mc.field_a, he.field_d, (el) (this))) {
-                if (var5 == 0) {
-                  if (gf.field_a == 0) {
-                    if (0 != ij.field_X) {
-                      this.a(param2, qa.field_a, true, (el) (this), param3, ue.field_e);
-                      var9 = lh.field_b;
-                      if (var9 != null) {
-                        if (var9.field_u instanceof rg) {
-                          ((rg) ((Object) var9.field_u)).a((fk) null, var9, 22176);
-                        }
-                        lh.field_b = null;
-                      }
-                      if (var7 != 0) {
-                        if (var5 != 0) {
-                          if (bi.field_g != 0) {
-                            this.d(-126);
-                          }
-                        }
-                      }
-                    }
-                  }
-                  ij.field_X = gf.field_a;
-                  sa.a(this.c((byte) 69), (byte) 72);
-                  return param0;
-                }
-                this.d(-127);
-                if (var7 == 0) {
-                  break L19;
-                }
-              }
-              param0 = false;
-            }
-            if (gf.field_a != 0) {
-              ij.field_X = gf.field_a;
-              sa.a(this.c((byte) 69), (byte) 72);
-              return param0;
-            }
-            if (0 == ij.field_X) {
-              ij.field_X = gf.field_a;
-              sa.a(this.c((byte) 69), (byte) 72);
-              return param0;
-            }
-            {
-              this.a(param2, qa.field_a, true, (el) (this), param3, ue.field_e);
-              var10 = lh.field_b;
-              if (var10 != null) {
-                if (var10.field_u instanceof rg) {
-                  ((rg) ((Object) var10.field_u)).a((fk) null, var10, 22176);
-                }
-                lh.field_b = null;
-              }
-              if (var7 != 0) {
-                if (var5 != 0) {
-                  if (bi.field_g != 0) {
-                    this.d(-126);
-                  }
-                }
-              }
-              ij.field_X = gf.field_a;
-              sa.a(this.c((byte) 69), (byte) 72);
-              return param0;
-            }
-          }
+        this.a(false, param3, (el) (this), param2);
+        var5 = this.e((byte) 54) ? 1 : 0;
+        if (!param0) {
           if (var5 != 0) {
-            this.a(param3, vc.field_i, param2, -1, qa.field_a, (el) (this), ue.field_e);
-            if (0 == bi.field_g) {
-              if (gf.field_a == 0) {
-                if (0 != ij.field_X) {
-                  this.a(param2, qa.field_a, true, (el) (this), param3, ue.field_e);
-                  var15 = lh.field_b;
-                  var6 = var15;
-                  if (var15 != null) {
-                    if (var15.field_u instanceof rg) {
-                      ((rg) ((Object) var15.field_u)).a((fk) null, var15, 22176);
-                    }
-                    lh.field_b = null;
-                  }
-                  if (var7 != 0) {
-                    if (var5 != 0) {
-                      if (bi.field_g != 0) {
-                        this.d(-126);
-                      }
-                    }
-                  }
-                }
-              }
-              ij.field_X = gf.field_a;
-              sa.a(this.c((byte) 69), (byte) 72);
-              return param0;
-            }
-            L0: {
-              if (!this.a(param3, -109, param2, bi.field_g, mc.field_a, he.field_d, (el) (this))) {
-                if (var5 == 0) {
-                  if (gf.field_a == 0) {
-                    if (0 != ij.field_X) {
-                      this.a(param2, qa.field_a, true, (el) (this), param3, ue.field_e);
-                      var16 = lh.field_b;
-                      var6 = var16;
-                      if (var16 != null) {
-                        if (var16.field_u instanceof rg) {
-                          ((rg) ((Object) var16.field_u)).a((fk) null, var16, 22176);
-                        }
-                        lh.field_b = null;
-                      }
-                      if (var7 != 0) {
-                        if (var5 != 0) {
-                          if (bi.field_g != 0) {
-                            this.d(-126);
-                          }
-                        }
-                      }
-                    }
-                  }
-                  ij.field_X = gf.field_a;
-                  sa.a(this.c((byte) 69), (byte) 72);
-                  return param0;
-                }
-                this.d(-127);
-                if (var7 == 0) {
-                  break L0;
-                }
-              }
-              param0 = false;
-            }
-            if (gf.field_a != 0) {
-              ij.field_X = gf.field_a;
-              sa.a(this.c((byte) 69), (byte) 72);
-              return param0;
-            }
-            if (0 == ij.field_X) {
-              ij.field_X = gf.field_a;
-              sa.a(this.c((byte) 69), (byte) 72);
-              return param0;
-            }
-            {
-              this.a(param2, qa.field_a, true, (el) (this), param3, ue.field_e);
-              var17 = lh.field_b;
-              var6 = var17;
-              if (var17 != null) {
-                if (var17.field_u instanceof rg) {
-                  ((rg) ((Object) var17.field_u)).a((fk) null, var17, 22176);
-                }
-                lh.field_b = null;
-              }
-              if (var7 != 0) {
-                if (var5 != 0) {
-                  if (bi.field_g != 0) {
-                    this.d(-126);
-                  }
-                }
-              }
-              ij.field_X = gf.field_a;
-              sa.a(this.c((byte) 69), (byte) 72);
-              return param0;
+            if (bi.field_g != 0) {
+              this.d(-126);
             }
           }
+          ij.field_X = gf.field_a;
+          sa.a(this.c((byte) 69), (byte) 72);
+          return param0;
+        }
+        if (0 == vc.field_i) {
           if (0 == bi.field_g) {
             if (gf.field_a == 0) {
               if (0 != ij.field_X) {
                 this.a(param2, qa.field_a, true, (el) (this), param3, ue.field_e);
-                var11 = lh.field_b;
-                if (var11 != null) {
-                  if (var11.field_u instanceof rg) {
-                    ((rg) ((Object) var11.field_u)).a((fk) null, var11, 22176);
+                var8 = lh.field_b;
+                if (var8 != null) {
+                  if (var8.field_u instanceof rg) {
+                    ((rg) ((Object) var8.field_u)).a((fk) null, var8, 22176);
                   }
                   lh.field_b = null;
                 }
@@ -443,53 +261,35 @@ class el extends hf {
             sa.a(this.c((byte) 69), (byte) 72);
             return param0;
           }
-          L10: {
+          L19: {
             if (!this.a(param3, -109, param2, bi.field_g, mc.field_a, he.field_d, (el) (this))) {
               if (var5 == 0) {
-                if (gf.field_a != 0) {
-                  ij.field_X = gf.field_a;
-                  sa.a(this.c((byte) 69), (byte) 72);
-                  return param0;
-                }
-                if (0 == ij.field_X) {
-                  ij.field_X = gf.field_a;
-                  sa.a(this.c((byte) 69), (byte) 72);
-                  return param0;
-                }
-                {
-                  this.a(param2, qa.field_a, true, (el) (this), param3, ue.field_e);
-                  var12 = lh.field_b;
-                  var6 = var12;
-                  if (var12 != null) {
-                    if (var12.field_u instanceof rg) {
-                      ((rg) ((Object) var12.field_u)).a((fk) null, var12, 22176);
+                if (gf.field_a == 0) {
+                  if (0 != ij.field_X) {
+                    this.a(param2, qa.field_a, true, (el) (this), param3, ue.field_e);
+                    var9 = lh.field_b;
+                    if (var9 != null) {
+                      if (var9.field_u instanceof rg) {
+                        ((rg) ((Object) var9.field_u)).a((fk) null, var9, 22176);
+                      }
+                      lh.field_b = null;
                     }
-                    lh.field_b = null;
+                    if (var7 != 0) {
+                      if (var5 != 0) {
+                        if (bi.field_g != 0) {
+                          this.d(-126);
+                        }
+                      }
+                    }
                   }
-                  if (var7 == 0) {
-                    ij.field_X = gf.field_a;
-                    sa.a(this.c((byte) 69), (byte) 72);
-                    return param0;
-                  }
-                  if (var5 == 0) {
-                    ij.field_X = gf.field_a;
-                    sa.a(this.c((byte) 69), (byte) 72);
-                    return param0;
-                  }
-                  if (bi.field_g == 0) {
-                    ij.field_X = gf.field_a;
-                    sa.a(this.c((byte) 69), (byte) 72);
-                    return param0;
-                  }
-                  this.d(-126);
-                  ij.field_X = gf.field_a;
-                  sa.a(this.c((byte) 69), (byte) 72);
-                  return param0;
                 }
+                ij.field_X = gf.field_a;
+                sa.a(this.c((byte) 69), (byte) 72);
+                return param0;
               }
               this.d(-127);
               if (var7 == 0) {
-                break L10;
+                break L19;
               }
             }
             param0 = false;
@@ -504,19 +304,45 @@ class el extends hf {
             sa.a(this.c((byte) 69), (byte) 72);
             return param0;
           }
-          {
-            this.a(param2, qa.field_a, true, (el) (this), param3, ue.field_e);
-            var14 = lh.field_b;
-            if (var14 != null) {
-              if (var14.field_u instanceof rg) {
-                ((rg) ((Object) var14.field_u)).a((fk) null, var14, 22176);
-              }
-              lh.field_b = null;
+          this.a(param2, qa.field_a, true, (el) (this), param3, ue.field_e);
+          var10 = lh.field_b;
+          if (var10 != null) {
+            if (var10.field_u instanceof rg) {
+              ((rg) ((Object) var10.field_u)).a((fk) null, var10, 22176);
             }
-            if (var7 != 0) {
-              if (var5 != 0) {
-                if (bi.field_g != 0) {
-                  this.d(-126);
+            lh.field_b = null;
+          }
+          if (var7 != 0) {
+            if (var5 != 0) {
+              if (bi.field_g != 0) {
+                this.d(-126);
+              }
+            }
+          }
+          ij.field_X = gf.field_a;
+          sa.a(this.c((byte) 69), (byte) 72);
+          return param0;
+        }
+        if (var5 != 0) {
+          this.a(param3, vc.field_i, param2, -1, qa.field_a, (el) (this), ue.field_e);
+          if (0 == bi.field_g) {
+            if (gf.field_a == 0) {
+              if (0 != ij.field_X) {
+                this.a(param2, qa.field_a, true, (el) (this), param3, ue.field_e);
+                var15 = lh.field_b;
+                var6 = var15;
+                if (var15 != null) {
+                  if (var15.field_u instanceof rg) {
+                    ((rg) ((Object) var15.field_u)).a((fk) null, var15, 22176);
+                  }
+                  lh.field_b = null;
+                }
+                if (var7 != 0) {
+                  if (var5 != 0) {
+                    if (bi.field_g != 0) {
+                      this.d(-126);
+                    }
+                  }
                 }
               }
             }
@@ -524,7 +350,171 @@ class el extends hf {
             sa.a(this.c((byte) 69), (byte) 72);
             return param0;
           }
+          L0: {
+            if (!this.a(param3, -109, param2, bi.field_g, mc.field_a, he.field_d, (el) (this))) {
+              if (var5 == 0) {
+                if (gf.field_a == 0) {
+                  if (0 != ij.field_X) {
+                    this.a(param2, qa.field_a, true, (el) (this), param3, ue.field_e);
+                    var16 = lh.field_b;
+                    var6 = var16;
+                    if (var16 != null) {
+                      if (var16.field_u instanceof rg) {
+                        ((rg) ((Object) var16.field_u)).a((fk) null, var16, 22176);
+                      }
+                      lh.field_b = null;
+                    }
+                    if (var7 != 0) {
+                      if (var5 != 0) {
+                        if (bi.field_g != 0) {
+                          this.d(-126);
+                        }
+                      }
+                    }
+                  }
+                }
+                ij.field_X = gf.field_a;
+                sa.a(this.c((byte) 69), (byte) 72);
+                return param0;
+              }
+              this.d(-127);
+              if (var7 == 0) {
+                break L0;
+              }
+            }
+            param0 = false;
+          }
+          if (gf.field_a != 0) {
+            ij.field_X = gf.field_a;
+            sa.a(this.c((byte) 69), (byte) 72);
+            return param0;
+          }
+          if (0 == ij.field_X) {
+            ij.field_X = gf.field_a;
+            sa.a(this.c((byte) 69), (byte) 72);
+            return param0;
+          }
+          this.a(param2, qa.field_a, true, (el) (this), param3, ue.field_e);
+          var17 = lh.field_b;
+          var6 = var17;
+          if (var17 != null) {
+            if (var17.field_u instanceof rg) {
+              ((rg) ((Object) var17.field_u)).a((fk) null, var17, 22176);
+            }
+            lh.field_b = null;
+          }
+          if (var7 != 0) {
+            if (var5 != 0) {
+              if (bi.field_g != 0) {
+                this.d(-126);
+              }
+            }
+          }
+          ij.field_X = gf.field_a;
+          sa.a(this.c((byte) 69), (byte) 72);
+          return param0;
         }
+        if (0 == bi.field_g) {
+          if (gf.field_a == 0) {
+            if (0 != ij.field_X) {
+              this.a(param2, qa.field_a, true, (el) (this), param3, ue.field_e);
+              var11 = lh.field_b;
+              if (var11 != null) {
+                if (var11.field_u instanceof rg) {
+                  ((rg) ((Object) var11.field_u)).a((fk) null, var11, 22176);
+                }
+                lh.field_b = null;
+              }
+              if (var7 != 0) {
+                if (var5 != 0) {
+                  if (bi.field_g != 0) {
+                    this.d(-126);
+                  }
+                }
+              }
+            }
+          }
+          ij.field_X = gf.field_a;
+          sa.a(this.c((byte) 69), (byte) 72);
+          return param0;
+        }
+        L10: {
+          if (!this.a(param3, -109, param2, bi.field_g, mc.field_a, he.field_d, (el) (this))) {
+            if (var5 == 0) {
+              if (gf.field_a != 0) {
+                ij.field_X = gf.field_a;
+                sa.a(this.c((byte) 69), (byte) 72);
+                return param0;
+              }
+              if (0 == ij.field_X) {
+                ij.field_X = gf.field_a;
+                sa.a(this.c((byte) 69), (byte) 72);
+                return param0;
+              }
+              this.a(param2, qa.field_a, true, (el) (this), param3, ue.field_e);
+              var12 = lh.field_b;
+              var6 = var12;
+              if (var12 != null) {
+                if (var12.field_u instanceof rg) {
+                  ((rg) ((Object) var12.field_u)).a((fk) null, var12, 22176);
+                }
+                lh.field_b = null;
+              }
+              if (var7 == 0) {
+                ij.field_X = gf.field_a;
+                sa.a(this.c((byte) 69), (byte) 72);
+                return param0;
+              }
+              if (var5 == 0) {
+                ij.field_X = gf.field_a;
+                sa.a(this.c((byte) 69), (byte) 72);
+                return param0;
+              }
+              if (bi.field_g == 0) {
+                ij.field_X = gf.field_a;
+                sa.a(this.c((byte) 69), (byte) 72);
+                return param0;
+              }
+              this.d(-126);
+              ij.field_X = gf.field_a;
+              sa.a(this.c((byte) 69), (byte) 72);
+              return param0;
+            }
+            this.d(-127);
+            if (var7 == 0) {
+              break L10;
+            }
+          }
+          param0 = false;
+        }
+        if (gf.field_a != 0) {
+          ij.field_X = gf.field_a;
+          sa.a(this.c((byte) 69), (byte) 72);
+          return param0;
+        }
+        if (0 == ij.field_X) {
+          ij.field_X = gf.field_a;
+          sa.a(this.c((byte) 69), (byte) 72);
+          return param0;
+        }
+        this.a(param2, qa.field_a, true, (el) (this), param3, ue.field_e);
+        var14 = lh.field_b;
+        if (var14 != null) {
+          if (var14.field_u instanceof rg) {
+            ((rg) ((Object) var14.field_u)).a((fk) null, var14, 22176);
+          }
+          lh.field_b = null;
+        }
+        if (var7 != 0) {
+          if (var5 != 0) {
+            if (bi.field_g != 0) {
+              this.d(-126);
+            }
+          }
+        }
+        ij.field_X = gf.field_a;
+        sa.a(this.c((byte) 69), (byte) 72);
+        return param0;
     }
 
     StringBuilder a(int param0, StringBuilder param1, Hashtable param2, int param3) {
@@ -575,11 +565,11 @@ class el extends hf {
         var6 = Geoblox.field_C;
         var4 = this.d((byte) 105);
         var5_int = param2;
-        L0: while (var4 >= var5_int) {
+        while (var4 >= var5_int) {
           this.a(param1, param0, (byte) 54, var5_int);
           var5_int++;
           if (var6 == 0) {
-            continue L0;
+            continue;
           }
           break;
         }

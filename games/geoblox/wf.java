@@ -28,32 +28,30 @@ abstract class wf extends ch {
         if (ii.field_e) {
           return -1;
         }
-        {
-          var2 = ri.a(true, sa.a(true), this.field_r, this.field_v, al.b(param0 + 1), 0);
-          if (var2 == param0) {
-            return -1;
-          }
-          if (var2 != 0) {
-            if (var2 != 1) {
-              if (!ff.field_k) {
-                this.a((byte) 79, "reconnect");
-              }
-              kd.b((byte) 103);
-              q.a((byte) 124, var2, kh.field_a);
-              ii.field_e = true;
-              hi.field_G = oa.a(-12520) + 15000L;
-              return var2;
+        var2 = ri.a(true, sa.a(true), this.field_r, this.field_v, al.b(param0 + 1), 0);
+        if (var2 == param0) {
+          return -1;
+        }
+        if (var2 != 0) {
+          if (var2 != 1) {
+            if (!ff.field_k) {
+              this.a((byte) 79, "reconnect");
             }
-          }
-          if (hj.field_a != 11) {
+            kd.b((byte) 103);
+            q.a((byte) 124, var2, kh.field_a);
+            ii.field_e = true;
+            hi.field_G = oa.a(-12520) + 15000L;
             return var2;
           }
-          if (ib.field_e != 0) {
-            return var2;
-          }
-          gi.b(param0 - 12617);
+        }
+        if (hj.field_a != 11) {
           return var2;
         }
+        if (ib.field_e != 0) {
+          return var2;
+        }
+        gi.b(param0 - 12617);
+        return var2;
     }
 
     final static java.net.URL a(java.net.URL param0, int param1, java.applet.Applet param2) {
@@ -715,44 +713,42 @@ abstract class wf extends ch {
             if (!this.a(false)) {
               return;
             }
-            {
-              L1: {
-                this.field_n = this.getCodeBase().getHost();
-                var6 = this.field_n.toLowerCase();
-                if (!var6.equals("jagex.com")) {
-                  if (!var6.endsWith(".jagex.com")) {
-                    stackIn_7_1 = false;
-                    break L1;
-                  }
+            L1: {
+              this.field_n = this.getCodeBase().getHost();
+              var6 = this.field_n.toLowerCase();
+              if (!var6.equals("jagex.com")) {
+                if (!var6.endsWith(".jagex.com")) {
+                  stackIn_7_1 = false;
+                  break L1;
                 }
-                stackIn_7_1 = true;
               }
-              ((wf) (this)).field_v = stackIn_7_1;
-              this.field_l = Integer.parseInt(this.getParameter("gameport1"));
-              this.field_w = Integer.parseInt(this.getParameter("gameport2"));
-              var7 = this.getParameter("servernum");
-              if (var7 != null) {
-                this.field_x = Integer.parseInt(var7);
-              }
-              this.field_s = Integer.parseInt(this.getParameter("gamecrc"));
-              this.field_k = Long.parseLong(this.getParameter("instanceid"));
-              this.field_m = this.getParameter("member").equals("yes");
-              var8 = this.getParameter("lang");
-              if (var8 != null) {
-                this.field_u = Integer.parseInt(var8);
-              }
-              if (this.field_u >= 5) {
-                this.field_u = 0;
-              }
-              var9 = this.getParameter("affid");
-              if (var9 != null) {
-                this.field_r = Integer.parseInt(var9);
-              }
-              p.field_m = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
-              this.a(32, -14948, this.field_s, param0, param4, param1, param2);
-              if (param3 != 81) {
-                this.a((byte) -103, -111, -55, -20, 80, false, -81, 86);
-              }
+              stackIn_7_1 = true;
+            }
+            ((wf) (this)).field_v = stackIn_7_1;
+            this.field_l = Integer.parseInt(this.getParameter("gameport1"));
+            this.field_w = Integer.parseInt(this.getParameter("gameport2"));
+            var7 = this.getParameter("servernum");
+            if (var7 != null) {
+              this.field_x = Integer.parseInt(var7);
+            }
+            this.field_s = Integer.parseInt(this.getParameter("gamecrc"));
+            this.field_k = Long.parseLong(this.getParameter("instanceid"));
+            this.field_m = this.getParameter("member").equals("yes");
+            var8 = this.getParameter("lang");
+            if (var8 != null) {
+              this.field_u = Integer.parseInt(var8);
+            }
+            if (this.field_u >= 5) {
+              this.field_u = 0;
+            }
+            var9 = this.getParameter("affid");
+            if (var9 != null) {
+              this.field_r = Integer.parseInt(var9);
+            }
+            p.field_m = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
+            this.a(32, -14948, this.field_s, param0, param4, param1, param2);
+            if (param3 != 81) {
+              this.a((byte) -103, -111, -55, -20, 80, false, -81, 86);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

@@ -61,7 +61,7 @@ final class jk {
           }
           var6 = 256;
           var1_int = var6;
-          L1: while (jf.field_b.length > var6) {
+          while (jf.field_b.length > var6) {
             jf.field_b[var6] = 255;
             var6++;
           }
@@ -154,14 +154,14 @@ final class jk {
         RuntimeException var3_ref = null;
         var4 = Geoblox.field_C;
         try {
-          L0: while (true) {
+          while (true) {
             var3 = param2.a(param0, 0);
-            L1: while (var3.field_a == 0) {
+            while (var3.field_a == 0) {
               bc.a(0, 10L);
             }
             if (var3.field_a != 1) {
               bc.a(0, 100L);
-              continue L0;
+              continue;
             }
             param0.setVisible(false);
             if (param1 != 10) {

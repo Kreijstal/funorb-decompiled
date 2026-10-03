@@ -73,43 +73,41 @@ final class ue {
         if (param1 == param0) {
           return;
         }
-        {
-          var3 = ic.a(param0, param1, -126);
-          param0 = param0 / var3;
-          param1 = param1 / var3;
-          this.field_i = param0;
-          this.field_a = new int[param0][14];
-          this.field_h = param1;
-          for (var4 = 0; param0 > var4; var4++) {
-            var5 = this.field_a[var4];
-            var6 = 6.0 + (double)var4 / (double)param0;
-            var8 = (int)Math.floor(var6 - 7.0 + 1.0);
-            if (var8 < 0) {
-              var8 = 0;
-            }
-            var9 = (int)Math.ceil(var6 + 7.0);
-            if (var9 > 14) {
-              var9 = 14;
-            }
-            var10 = (double)param1 / (double)param0;
-            L3: while (var8 < var9) {
-              L4: {
-                var12 = ((double)var8 - var6) * 3.141592653589793;
-                var14 = var10;
-                if (!(var12 < -0.0001)) {
-                  if (!(0.0001 < var12)) {
-                    break L4;
-                  }
-                }
-                var14 = var14 * (Math.sin(var12) / var12);
-              }
-              var14 = var14 * (Math.cos(0.2243994752564138 * (-var6 + (double)var8)) * 0.46 + 0.54);
-              var5[var8] = (int)Math.floor(0.5 + 65536.0 * var14);
-              var8++;
-            }
+        var3 = ic.a(param0, param1, -126);
+        param0 = param0 / var3;
+        param1 = param1 / var3;
+        this.field_i = param0;
+        this.field_a = new int[param0][14];
+        this.field_h = param1;
+        for (var4 = 0; param0 > var4; var4++) {
+          var5 = this.field_a[var4];
+          var6 = 6.0 + (double)var4 / (double)param0;
+          var8 = (int)Math.floor(var6 - 7.0 + 1.0);
+          if (var8 < 0) {
+            var8 = 0;
           }
-          return;
+          var9 = (int)Math.ceil(var6 + 7.0);
+          if (var9 > 14) {
+            var9 = 14;
+          }
+          var10 = (double)param1 / (double)param0;
+          while (var8 < var9) {
+            L4: {
+              var12 = ((double)var8 - var6) * 3.141592653589793;
+              var14 = var10;
+              if (!(var12 < -0.0001)) {
+                if (!(0.0001 < var12)) {
+                  break L4;
+                }
+              }
+              var14 = var14 * (Math.sin(var12) / var12);
+            }
+            var14 = var14 * (Math.cos(0.2243994752564138 * (-var6 + (double)var8)) * 0.46 + 0.54);
+            var5[var8] = (int)Math.floor(0.5 + 65536.0 * var14);
+            var8++;
+          }
         }
+        return;
     }
 
     final byte[] a(int param0, byte[] param1) {
@@ -155,7 +153,7 @@ final class ue {
               param1 = new byte[var4];
               var12 = 0;
               var8 = var12;
-              L2: while (var12 < var4) {
+              while (var12 < var4) {
                 var9 = var16[var12] + 32768 >> 16;
                 if (-128 > var9) {
                   param1[var12] = (byte)-128;

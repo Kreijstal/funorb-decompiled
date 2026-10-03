@@ -143,14 +143,14 @@ final class vd {
         field_a = 0;
         field_m = new String[]{"All scores", "My scores", "Best each"};
         field_p = 6;
-        L0: for (var0 = 0; field_b.length > var0; var0++) {
+        for (var0 = 0; field_b.length > var0; var0++) {
           if (var0 != 0) {
             field_b[var0] = (1 + var0) * 51 << 16;
           } else {
             field_b[var0] = (var0 + 1) * 20 << 16;
           }
           if (var0 <= 2) {
-            continue L0;
+            continue;
           }
           field_b[var0] = lb.a(field_b[var0], (var0 - 2) * 22 << 8);
         }

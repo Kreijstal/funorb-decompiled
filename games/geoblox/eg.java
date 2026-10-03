@@ -91,17 +91,15 @@ final class eg extends hf {
                   if (var9 >= param2) {
                     throw new NumberFormatException();
                   }
-                  {
-                    if (var4_int != 0) {
-                      var9 = -var9;
-                    }
-                    var10 = var6 * param2 + var9;
-                    if (var6 != var10 / param2) {
-                      throw new NumberFormatException();
-                    }
-                    var5 = 1;
-                    var6 = var10;
+                  if (var4_int != 0) {
+                    var9 = -var9;
                   }
+                  var10 = var6 * param2 + var9;
+                  if (var6 != var10 / param2) {
+                    throw new NumberFormatException();
+                  }
+                  var5 = 1;
+                  var6 = var10;
                 }
               }
               if (var5 == 0) {

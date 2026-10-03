@@ -94,12 +94,12 @@ final class ub {
             for (var5 = 0; var5 < 2; var5++) {
               var7 = 0;
               var6 = var7;
-              L5: while (var7 < this.field_b[var5]) {
+              while (var7 < this.field_b[var5]) {
                 if ((var4 & 1 << var5 * 4 << var7) == 0) {
                   this.field_c[var5][1][var7] = this.field_c[var5][0][var7];
                   this.field_h[var5][1][var7] = this.field_h[var5][0][var7];
                   var7++;
-                  continue L5;
+                  continue;
                 }
                 this.field_c[var5][1][var7] = param0.b(true);
                 this.field_h[var5][1][var7] = param0.b(true);
@@ -116,11 +116,9 @@ final class ub {
             }
             break L0;
           }
-          {
-            var11 = this.field_e;
-            this.field_e[1] = 0;
-            var11[0] = 0;
-          }
+          var11 = this.field_e;
+          this.field_e[1] = 0;
+          var11[0] = 0;
         }
     }
 

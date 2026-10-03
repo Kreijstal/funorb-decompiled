@@ -647,7 +647,7 @@ public final class Geoblox extends wf {
           this.f(stackIn_14_1);
           cf.field_k = false;
         }
-        L4: while (sh.a((byte) -118, pb.field_m)) {
+        while (sh.a((byte) -118, pb.field_m)) {
           this.l(121);
         }
         L5: {

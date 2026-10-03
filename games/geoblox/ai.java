@@ -75,7 +75,7 @@ final class ai extends hf {
             try {
               var5 = param2.getFile();
               var6 = 0;
-              L0: while (true) {
+              while (true) {
                 L1: {
                   if (var5.regionMatches(var6, "/l=", 0, 3)) {
                     var7_int = var5.indexOf('/', var6 + 1);
@@ -84,7 +84,7 @@ final class ai extends hf {
                         break L1;
                       }
                       var5 = var5.substring(0, var6) + var5.substring(var7_int);
-                      continue L0;
+                      continue;
                     }
                   }
                   if (var5.regionMatches(var6, "/a=", 0, 3)) {
@@ -100,7 +100,7 @@ final class ai extends hf {
                         break L1;
                       }
                       var5 = var5.substring(0, var6) + var5.substring(var7_int);
-                      continue L0;
+                      continue;
                     }
                   }
                   L5: {
@@ -113,10 +113,10 @@ final class ai extends hf {
                     if (0 <= var7_int) {
                       if (param0 != null) {
                         var5 = var5.substring(0, var6) + var5.substring(var7_int);
-                        continue L0;
+                        continue;
                       }
                       var6 = var7_int;
-                      continue L0;
+                      continue;
                     }
                   }
                   if (!param4) {
@@ -158,7 +158,7 @@ final class ai extends hf {
                   }
                 }
                 var6 = var7_int;
-                continue L0;
+                continue;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;

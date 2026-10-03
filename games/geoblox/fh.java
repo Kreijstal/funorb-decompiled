@@ -109,28 +109,26 @@ final class fh implements dh {
           if (!param4.e((byte) 54)) {
             return;
           }
-          {
-            var7 = this.field_d.a(param4.field_s);
-            var8 = this.field_d.field_q + this.field_d.field_o;
-            var9 = param4.field_v + param0;
-            if (this.field_b == 2) {
-              var9 = var9 + (-var7 + param4.field_r);
-            } else {
-              if (this.field_b == 1) {
-                var9 = var9 + (-var7 + param4.field_r >> 1);
-              }
+          var7 = this.field_d.a(param4.field_s);
+          var8 = this.field_d.field_q + this.field_d.field_o;
+          var9 = param4.field_v + param0;
+          if (this.field_b == 2) {
+            var9 = var9 + (-var7 + param4.field_r);
+          } else {
+            if (this.field_b == 1) {
+              var9 = var9 + (-var7 + param4.field_r >> 1);
             }
-            var10 = param2 + param4.field_m;
-            if (this.field_a == 2) {
-              var10 = var10 + (param4.field_h - var8);
-            } else {
-              if (this.field_a == 1) {
-                var10 = var10 + (param4.field_h - var8 >> 1);
-              }
-            }
-            bf.a(var10 + 2, 4 + var7, 14164, var8, -2 + var9);
-            return;
           }
+          var10 = param2 + param4.field_m;
+          if (this.field_a == 2) {
+            var10 = var10 + (param4.field_h - var8);
+          } else {
+            if (this.field_a == 1) {
+              var10 = var10 + (param4.field_h - var8 >> 1);
+            }
+          }
+          bf.a(var10 + 2, 4 + var7, 14164, var8, -2 + var9);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;

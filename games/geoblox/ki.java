@@ -36,30 +36,28 @@ final class ki {
           if (param1 != 31274) {
             return;
           }
-          {
-            dupTemp$0 = param0.c(125);
-            p.field_o[dupTemp$0] = p.field_o[dupTemp$0] + 1;
-            var2_int = 0;
-            for (var3 = 0; oj.field_b > var3; var3++) {
-              L3: {
-                if (param0.field_f == n.field_k[var3].field_f) {
-                  var4 = n.field_k[var3].c(124);
-                  if (p.field_o[var4] > pc.field_v) {
-                    p.field_o[var4] = p.field_o[var4] - 1;
-                    break L3;
-                  }
+          dupTemp$0 = param0.c(125);
+          p.field_o[dupTemp$0] = p.field_o[dupTemp$0] + 1;
+          var2_int = 0;
+          for (var3 = 0; oj.field_b > var3; var3++) {
+            L3: {
+              if (param0.field_f == n.field_k[var3].field_f) {
+                var4 = n.field_k[var3].c(124);
+                if (p.field_o[var4] > pc.field_v) {
+                  p.field_o[var4] = p.field_o[var4] - 1;
+                  break L3;
                 }
-                incrementValue$2 = var2_int;
-                var2_int++;
-                n.field_k[incrementValue$2] = n.field_k[var3];
               }
+              incrementValue$2 = var2_int;
+              var2_int++;
+              n.field_k[incrementValue$2] = n.field_k[var3];
             }
-            oj.field_b = var2_int;
-            fieldTemp$1 = oj.field_b;
-            oj.field_b = oj.field_b + 1;
-            n.field_k[fieldTemp$1] = param0;
-            return;
           }
+          oj.field_b = var2_int;
+          fieldTemp$1 = oj.field_b;
+          oj.field_b = oj.field_b + 1;
+          n.field_k[fieldTemp$1] = param0;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

@@ -350,10 +350,40 @@ final class v {
           qa.field_b = (-kh.field_d + this.field_d) / 2;
           return;
         }
-        {
-          var4 = (int)(0.5f + (float)var3 * this.field_i);
-          if (var4 > var2) {
-            var3 = (int)((float)var2 / this.field_i);
+        var4 = (int)(0.5f + (float)var3 * this.field_i);
+        if (var4 > var2) {
+          var3 = (int)((float)var2 / this.field_i);
+          if (!param0) {
+            return;
+          }
+          if (kh.field_d != var2) {
+            this.field_u.a(-2964, var2, var3);
+          } else {
+            if (var3 != ok.field_c) {
+              this.field_u.a(-2964, var2, var3);
+            }
+          }
+        } else {
+          if (var4 < var2) {
+            var2 = var4;
+            if (!param0) {
+              return;
+            }
+            if (kh.field_d != var2) {
+              this.field_u.a(-2964, var2, var3);
+              if (this.field_d > 0) {
+                qa.field_b = (-kh.field_d + this.field_d) / 2;
+              }
+              return;
+            }
+            if (var3 != ok.field_c) {
+              this.field_u.a(-2964, var2, var3);
+              if (this.field_d > 0) {
+                qa.field_b = (-kh.field_d + this.field_d) / 2;
+              }
+              return;
+            }
+          } else {
             if (!param0) {
               return;
             }
@@ -364,45 +394,13 @@ final class v {
                 this.field_u.a(-2964, var2, var3);
               }
             }
-          } else {
-            if (var4 < var2) {
-              var2 = var4;
-              if (!param0) {
-                return;
-              }
-              if (kh.field_d != var2) {
-                this.field_u.a(-2964, var2, var3);
-                if (this.field_d > 0) {
-                  qa.field_b = (-kh.field_d + this.field_d) / 2;
-                }
-                return;
-              }
-              if (var3 != ok.field_c) {
-                this.field_u.a(-2964, var2, var3);
-                if (this.field_d > 0) {
-                  qa.field_b = (-kh.field_d + this.field_d) / 2;
-                }
-                return;
-              }
-            } else {
-              if (!param0) {
-                return;
-              }
-              if (kh.field_d != var2) {
-                this.field_u.a(-2964, var2, var3);
-              } else {
-                if (var3 != ok.field_c) {
-                  this.field_u.a(-2964, var2, var3);
-                }
-              }
-            }
           }
-          if (this.field_d <= 0) {
-            return;
-          }
-          qa.field_b = (-kh.field_d + this.field_d) / 2;
+        }
+        if (this.field_d <= 0) {
           return;
         }
+        qa.field_b = (-kh.field_d + this.field_d) / 2;
+        return;
     }
 
     final boolean a(int param0) {

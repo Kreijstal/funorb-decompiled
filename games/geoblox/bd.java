@@ -22,7 +22,7 @@ final class bd extends IOException {
           if (param0 > -112) {
             return;
           }
-          L0: while (var1 != null) {
+          while (var1 != null) {
             if (var1.field_h != 1) {
               var2 = "X" + var1.field_h + " - " + var1.field_m;
               var3 = dd.field_G.field_K[0][wf.field_p];

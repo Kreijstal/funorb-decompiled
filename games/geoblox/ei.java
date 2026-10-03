@@ -80,13 +80,13 @@ final class ei extends qf {
             return stackIn_7_0;
           }
           var4 = 0;
-          L0: while (true) {
+          while (true) {
             if (var4 >= param2.length()) {
               return null;
             }
             if (q.a(param2.charAt(var4), (byte) 97)) {
               var4++;
-              continue L0;
+              continue;
             }
             stackIn_13_0 = kc.field_b;
             return stackIn_13_0;

@@ -100,7 +100,7 @@ final class ua extends hf {
           this.field_J = 0;
           this.field_x = 0;
         }
-        L2: while (this.field_x < this.field_p.length) {
+        while (this.field_x < this.field_p.length) {
           if (param0 != null) {
             if (param0[0] <= 0) {
               return null;
@@ -238,7 +238,7 @@ final class ua extends hf {
         var1 = new byte[this.field_H];
         var2 = 0;
         var3 = 0;
-        L0: while (true) {
+        while (true) {
           if (var3 >= this.field_p.length) {
             this.field_C = null;
             return new gd(this.field_q, var1, this.field_I, this.field_n, this.field_A);
@@ -246,25 +246,23 @@ final class ua extends hf {
           var4 = this.c(var3);
           if (var4 == null) {
             var3++;
-            continue L0;
+            continue;
           }
-          {
-            var5 = var4.length;
-            if (var5 > this.field_H - var2) {
-              var5 = this.field_H - var2;
-            }
-            for (var6 = 0; var6 < var5; var6++) {
-              var7 = (int)(128.0f + var4[var6] * 128.0f);
-              if ((var7 & -256) != 0) {
-                var7 = ~var7 >> 31;
-              }
-              incrementValue$0 = var2;
-              var2++;
-              var1[incrementValue$0] = (byte)(var7 - 128);
-            }
-            var3++;
-            continue L0;
+          var5 = var4.length;
+          if (var5 > this.field_H - var2) {
+            var5 = this.field_H - var2;
           }
+          for (var6 = 0; var6 < var5; var6++) {
+            var7 = (int)(128.0f + var4[var6] * 128.0f);
+            if ((var7 & -256) != 0) {
+              var7 = ~var7 >> 31;
+            }
+            incrementValue$0 = var2;
+            var2++;
+            var1[incrementValue$0] = (byte)(var7 - 128);
+          }
+          var3++;
+          continue;
         }
     }
 
@@ -292,7 +290,7 @@ final class ua extends hf {
         field_v = 1 << ua.b(4);
         field_t = 1 << ua.b(4);
         field_B = new float[field_t];
-        L0: for (var1 = 0; var1 < 2; var1++) {
+        for (var1 = 0; var1 < 2; var1++) {
           if (var1 == 0) {
             stackIn_5_0 = field_v;
           } else {
@@ -327,7 +325,7 @@ final class ua extends hf {
             field_K = var7;
             field_r = var8;
             field_f = var9;
-            continue L0;
+            continue;
           }
           field_w = var6_ref_float__;
           field_g = var7;
@@ -534,166 +532,162 @@ final class ua extends hf {
             }
             break L11;
           }
-          {
-            var17_int = var4 >> 1;
-            var18_int = var4 >> 2;
-            var19 = var4 >> 3;
-            var49 = field_B;
-            var45 = var49;
-            var20_ref_float__ = var45;
-            for (var21_int = 0; var21_int < var17_int; var21_int++) {
-              var20_ref_float__[var21_int] = var20_ref_float__[var21_int] * 0.5f;
-            }
-            var41 = var17_int;
-            var21_int = var41;
-            L13: while (var41 < var4) {
-              var20_ref_float__[var41] = -var20_ref_float__[var4 - var41 - 1];
-              var41++;
-            }
-            if (var3 == 0) {
-              stackIn_40_0 = (float[]) (field_s);
-            } else {
-              stackIn_40_0 = (float[]) (field_w);
-            }
-            var21 = stackIn_40_0;
-            if (var3 == 0) {
-              stackIn_43_0 = (float[]) (field_K);
-            } else {
-              stackIn_43_0 = (float[]) (field_g);
-            }
-            var22 = stackIn_43_0;
-            if (var3 == 0) {
-              stackIn_46_0 = (float[]) (field_r);
-            } else {
-              stackIn_46_0 = (float[]) (field_h);
-            }
-            var23 = stackIn_46_0;
-            if (var3 == 0) {
-              stackIn_49_0 = (int[]) (field_f);
-            } else {
-              stackIn_49_0 = (int[]) (field_l);
-            }
-            var48 = stackIn_49_0;
-            var44 = var48;
-            var24 = var44;
-            for (var25 = 0; var25 < var18_int; var25++) {
-              var26_float = var20_ref_float__[4 * var25] - var20_ref_float__[var4 - 4 * var25 - 1];
-              var27 = var20_ref_float__[4 * var25 + 2] - var20_ref_float__[var4 - 4 * var25 - 3];
-              var28 = var21[2 * var25];
-              var29 = var21[2 * var25 + 1];
-              var20_ref_float__[var4 - 4 * var25 - 1] = var26_float * var28 - var27 * var29;
-              var20_ref_float__[var4 - 4 * var25 - 3] = var26_float * var29 + var27 * var28;
-            }
-            for (var25 = 0; var25 < var19; var25++) {
-              var26_float = var20_ref_float__[var17_int + 3 + 4 * var25];
-              var27 = var20_ref_float__[var17_int + 1 + 4 * var25];
-              var28 = var20_ref_float__[4 * var25 + 3];
-              var29 = var20_ref_float__[4 * var25 + 1];
-              var20_ref_float__[var17_int + 3 + 4 * var25] = var26_float + var28;
-              var20_ref_float__[var17_int + 1 + 4 * var25] = var27 + var29;
-              var30 = var21[var17_int - 4 - 4 * var25];
-              var31 = var21[var17_int - 3 - 4 * var25];
-              var20_ref_float__[4 * var25 + 3] = (var26_float - var28) * var30 - (var27 - var29) * var31;
-              var20_ref_float__[4 * var25 + 1] = (var27 - var29) * var30 + (var26_float - var28) * var31;
-            }
-            var25 = hj.a((byte) 58, var4 - 1);
-            for (var26 = 0; var26 < var25 - 3; var26++) {
-              var27_int = var4 >> var26 + 2;
-              var28_int = 8 << var26;
-              for (var29_int = 0; var29_int < 2 << var26; var29_int++) {
-                var30_int = var4 - var27_int * 2 * var29_int;
-                var31_int = var4 - var27_int * (2 * var29_int + 1);
-                for (var32_int = 0; var32_int < var4 >> var26 + 4; var32_int++) {
-                  var33_int = 4 * var32_int;
-                  var34 = var20_ref_float__[var30_int - 1 - var33_int];
-                  var35 = var20_ref_float__[var30_int - 3 - var33_int];
-                  var36 = var20_ref_float__[var31_int - 1 - var33_int];
-                  var37 = var20_ref_float__[var31_int - 3 - var33_int];
-                  var20_ref_float__[var30_int - 1 - var33_int] = var34 + var36;
-                  var20_ref_float__[var30_int - 3 - var33_int] = var35 + var37;
-                  var38 = var21[var32_int * var28_int];
-                  var39 = var21[var32_int * var28_int + 1];
-                  var20_ref_float__[var31_int - 1 - var33_int] = (var34 - var36) * var38 - (var35 - var37) * var39;
-                  var20_ref_float__[var31_int - 3 - var33_int] = (var35 - var37) * var38 + (var34 - var36) * var39;
-                }
+          var17_int = var4 >> 1;
+          var18_int = var4 >> 2;
+          var19 = var4 >> 3;
+          var49 = field_B;
+          var45 = var49;
+          var20_ref_float__ = var45;
+          for (var21_int = 0; var21_int < var17_int; var21_int++) {
+            var20_ref_float__[var21_int] = var20_ref_float__[var21_int] * 0.5f;
+          }
+          var41 = var17_int;
+          var21_int = var41;
+          while (var41 < var4) {
+            var20_ref_float__[var41] = -var20_ref_float__[var4 - var41 - 1];
+            var41++;
+          }
+          if (var3 == 0) {
+            stackIn_40_0 = (float[]) (field_s);
+          } else {
+            stackIn_40_0 = (float[]) (field_w);
+          }
+          var21 = stackIn_40_0;
+          if (var3 == 0) {
+            stackIn_43_0 = (float[]) (field_K);
+          } else {
+            stackIn_43_0 = (float[]) (field_g);
+          }
+          var22 = stackIn_43_0;
+          if (var3 == 0) {
+            stackIn_46_0 = (float[]) (field_r);
+          } else {
+            stackIn_46_0 = (float[]) (field_h);
+          }
+          var23 = stackIn_46_0;
+          if (var3 == 0) {
+            stackIn_49_0 = (int[]) (field_f);
+          } else {
+            stackIn_49_0 = (int[]) (field_l);
+          }
+          var48 = stackIn_49_0;
+          var44 = var48;
+          var24 = var44;
+          for (var25 = 0; var25 < var18_int; var25++) {
+            var26_float = var20_ref_float__[4 * var25] - var20_ref_float__[var4 - 4 * var25 - 1];
+            var27 = var20_ref_float__[4 * var25 + 2] - var20_ref_float__[var4 - 4 * var25 - 3];
+            var28 = var21[2 * var25];
+            var29 = var21[2 * var25 + 1];
+            var20_ref_float__[var4 - 4 * var25 - 1] = var26_float * var28 - var27 * var29;
+            var20_ref_float__[var4 - 4 * var25 - 3] = var26_float * var29 + var27 * var28;
+          }
+          for (var25 = 0; var25 < var19; var25++) {
+            var26_float = var20_ref_float__[var17_int + 3 + 4 * var25];
+            var27 = var20_ref_float__[var17_int + 1 + 4 * var25];
+            var28 = var20_ref_float__[4 * var25 + 3];
+            var29 = var20_ref_float__[4 * var25 + 1];
+            var20_ref_float__[var17_int + 3 + 4 * var25] = var26_float + var28;
+            var20_ref_float__[var17_int + 1 + 4 * var25] = var27 + var29;
+            var30 = var21[var17_int - 4 - 4 * var25];
+            var31 = var21[var17_int - 3 - 4 * var25];
+            var20_ref_float__[4 * var25 + 3] = (var26_float - var28) * var30 - (var27 - var29) * var31;
+            var20_ref_float__[4 * var25 + 1] = (var27 - var29) * var30 + (var26_float - var28) * var31;
+          }
+          var25 = hj.a((byte) 58, var4 - 1);
+          for (var26 = 0; var26 < var25 - 3; var26++) {
+            var27_int = var4 >> var26 + 2;
+            var28_int = 8 << var26;
+            for (var29_int = 0; var29_int < 2 << var26; var29_int++) {
+              var30_int = var4 - var27_int * 2 * var29_int;
+              var31_int = var4 - var27_int * (2 * var29_int + 1);
+              for (var32_int = 0; var32_int < var4 >> var26 + 4; var32_int++) {
+                var33_int = 4 * var32_int;
+                var34 = var20_ref_float__[var30_int - 1 - var33_int];
+                var35 = var20_ref_float__[var30_int - 3 - var33_int];
+                var36 = var20_ref_float__[var31_int - 1 - var33_int];
+                var37 = var20_ref_float__[var31_int - 3 - var33_int];
+                var20_ref_float__[var30_int - 1 - var33_int] = var34 + var36;
+                var20_ref_float__[var30_int - 3 - var33_int] = var35 + var37;
+                var38 = var21[var32_int * var28_int];
+                var39 = var21[var32_int * var28_int + 1];
+                var20_ref_float__[var31_int - 1 - var33_int] = (var34 - var36) * var38 - (var35 - var37) * var39;
+                var20_ref_float__[var31_int - 3 - var33_int] = (var35 - var37) * var38 + (var34 - var36) * var39;
               }
             }
-            var26 = 1;
-            L21: while (true) {
-              if (var26 < var19 - 1) {
-                var27_int = var48[var26];
-                if (var26 >= var27_int) {
-                  var26++;
-                  continue L21;
-                }
-                {
-                  var28_int = 8 * var26;
-                  var29_int = 8 * var27_int;
-                  var30 = var20_ref_float__[var28_int + 1];
-                  var20_ref_float__[var28_int + 1] = var20_ref_float__[var29_int + 1];
-                  var20_ref_float__[var29_int + 1] = var30;
-                  var30 = var20_ref_float__[var28_int + 3];
-                  var20_ref_float__[var28_int + 3] = var20_ref_float__[var29_int + 3];
-                  var20_ref_float__[var29_int + 3] = var30;
-                  var30 = var20_ref_float__[var28_int + 5];
-                  var20_ref_float__[var28_int + 5] = var20_ref_float__[var29_int + 5];
-                  var20_ref_float__[var29_int + 5] = var30;
-                  var30 = var20_ref_float__[var28_int + 7];
-                  var20_ref_float__[var28_int + 7] = var20_ref_float__[var29_int + 7];
-                  var20_ref_float__[var29_int + 7] = var30;
-                  var26++;
-                  continue L21;
-                }
+          }
+          var26 = 1;
+          while (true) {
+            if (var26 < var19 - 1) {
+              var27_int = var48[var26];
+              if (var26 >= var27_int) {
+                var26++;
+                continue;
               }
-              for (var26 = 0; var26 < var17_int; var26++) {
-                var20_ref_float__[var26] = var20_ref_float__[2 * var26 + 1];
-              }
-              for (var26 = 0; var26 < var19; var26++) {
-                var20_ref_float__[var4 - 1 - 2 * var26] = var20_ref_float__[4 * var26];
-                var20_ref_float__[var4 - 2 - 2 * var26] = var20_ref_float__[4 * var26 + 1];
-                var20_ref_float__[var4 - var18_int - 1 - 2 * var26] = var20_ref_float__[4 * var26 + 2];
-                var20_ref_float__[var4 - var18_int - 2 - 2 * var26] = var20_ref_float__[4 * var26 + 3];
-              }
-              for (var26 = 0; var26 < var19; var26++) {
-                var27 = var23[2 * var26];
-                var28 = var23[2 * var26 + 1];
-                var29 = var20_ref_float__[var17_int + 2 * var26];
-                var30 = var20_ref_float__[var17_int + 2 * var26 + 1];
-                var31 = var20_ref_float__[var4 - 2 - 2 * var26];
-                var32 = var20_ref_float__[var4 - 1 - 2 * var26];
-                var33 = var28 * (var29 - var31) + var27 * (var30 + var32);
-                var20_ref_float__[var17_int + 2 * var26] = (var29 + var31 + var33) * 0.5f;
-                var20_ref_float__[var4 - 2 - 2 * var26] = (var29 + var31 - var33) * 0.5f;
-                var33 = var28 * (var30 + var32) - var27 * (var29 - var31);
-                var20_ref_float__[var17_int + 2 * var26 + 1] = (var30 - var32 + var33) * 0.5f;
-                var20_ref_float__[var4 - 1 - 2 * var26] = (-var30 + var32 + var33) * 0.5f;
-              }
-              for (var26 = 0; var26 < var18_int; var26++) {
-                var20_ref_float__[var26] = var20_ref_float__[2 * var26 + var17_int] * var22[2 * var26] + var20_ref_float__[2 * var26 + 1 + var17_int] * var22[2 * var26 + 1];
-                var20_ref_float__[var17_int - 1 - var26] = var20_ref_float__[2 * var26 + var17_int] * var22[2 * var26 + 1] - var20_ref_float__[2 * var26 + 1 + var17_int] * var22[2 * var26];
-              }
-              for (var26 = 0; var26 < var18_int; var26++) {
-                var20_ref_float__[var4 - var18_int + var26] = -var49[var26];
-              }
-              for (var26 = 0; var26 < var18_int; var26++) {
-                var20_ref_float__[var26] = var20_ref_float__[var18_int + var26];
-              }
-              for (var26 = 0; var26 < var18_int; var26++) {
-                var20_ref_float__[var18_int + var26] = -var20_ref_float__[var18_int - var26 - 1];
-              }
-              for (var26 = 0; var26 < var18_int; var26++) {
-                var20_ref_float__[var17_int + var26] = var20_ref_float__[var4 - var26 - 1];
-              }
-              for (var26 = var8; var26 < var9; var26++) {
-                var27 = (float)Math.sin(((double)(var26 - var8) + 0.5) / (double)var10 * 0.5 * 3.141592653589793);
-                field_B[var26] = field_B[var26] * (float)Math.sin(1.5707963267948966 * (double)var27 * (double)var27);
-              }
-              for (var26 = var11; var26 < var12; var26++) {
-                var27 = (float)Math.sin(((double)(var26 - var11) + 0.5) / (double)var13 * 0.5 * 3.141592653589793 + 1.5707963267948966);
-                field_B[var26] = field_B[var26] * (float)Math.sin(1.5707963267948966 * (double)var27 * (double)var27);
-              }
-              break L11;
+              var28_int = 8 * var26;
+              var29_int = 8 * var27_int;
+              var30 = var20_ref_float__[var28_int + 1];
+              var20_ref_float__[var28_int + 1] = var20_ref_float__[var29_int + 1];
+              var20_ref_float__[var29_int + 1] = var30;
+              var30 = var20_ref_float__[var28_int + 3];
+              var20_ref_float__[var28_int + 3] = var20_ref_float__[var29_int + 3];
+              var20_ref_float__[var29_int + 3] = var30;
+              var30 = var20_ref_float__[var28_int + 5];
+              var20_ref_float__[var28_int + 5] = var20_ref_float__[var29_int + 5];
+              var20_ref_float__[var29_int + 5] = var30;
+              var30 = var20_ref_float__[var28_int + 7];
+              var20_ref_float__[var28_int + 7] = var20_ref_float__[var29_int + 7];
+              var20_ref_float__[var29_int + 7] = var30;
+              var26++;
+              continue;
             }
+            for (var26 = 0; var26 < var17_int; var26++) {
+              var20_ref_float__[var26] = var20_ref_float__[2 * var26 + 1];
+            }
+            for (var26 = 0; var26 < var19; var26++) {
+              var20_ref_float__[var4 - 1 - 2 * var26] = var20_ref_float__[4 * var26];
+              var20_ref_float__[var4 - 2 - 2 * var26] = var20_ref_float__[4 * var26 + 1];
+              var20_ref_float__[var4 - var18_int - 1 - 2 * var26] = var20_ref_float__[4 * var26 + 2];
+              var20_ref_float__[var4 - var18_int - 2 - 2 * var26] = var20_ref_float__[4 * var26 + 3];
+            }
+            for (var26 = 0; var26 < var19; var26++) {
+              var27 = var23[2 * var26];
+              var28 = var23[2 * var26 + 1];
+              var29 = var20_ref_float__[var17_int + 2 * var26];
+              var30 = var20_ref_float__[var17_int + 2 * var26 + 1];
+              var31 = var20_ref_float__[var4 - 2 - 2 * var26];
+              var32 = var20_ref_float__[var4 - 1 - 2 * var26];
+              var33 = var28 * (var29 - var31) + var27 * (var30 + var32);
+              var20_ref_float__[var17_int + 2 * var26] = (var29 + var31 + var33) * 0.5f;
+              var20_ref_float__[var4 - 2 - 2 * var26] = (var29 + var31 - var33) * 0.5f;
+              var33 = var28 * (var30 + var32) - var27 * (var29 - var31);
+              var20_ref_float__[var17_int + 2 * var26 + 1] = (var30 - var32 + var33) * 0.5f;
+              var20_ref_float__[var4 - 1 - 2 * var26] = (-var30 + var32 + var33) * 0.5f;
+            }
+            for (var26 = 0; var26 < var18_int; var26++) {
+              var20_ref_float__[var26] = var20_ref_float__[2 * var26 + var17_int] * var22[2 * var26] + var20_ref_float__[2 * var26 + 1 + var17_int] * var22[2 * var26 + 1];
+              var20_ref_float__[var17_int - 1 - var26] = var20_ref_float__[2 * var26 + var17_int] * var22[2 * var26 + 1] - var20_ref_float__[2 * var26 + 1 + var17_int] * var22[2 * var26];
+            }
+            for (var26 = 0; var26 < var18_int; var26++) {
+              var20_ref_float__[var4 - var18_int + var26] = -var49[var26];
+            }
+            for (var26 = 0; var26 < var18_int; var26++) {
+              var20_ref_float__[var26] = var20_ref_float__[var18_int + var26];
+            }
+            for (var26 = 0; var26 < var18_int; var26++) {
+              var20_ref_float__[var18_int + var26] = -var20_ref_float__[var18_int - var26 - 1];
+            }
+            for (var26 = 0; var26 < var18_int; var26++) {
+              var20_ref_float__[var17_int + var26] = var20_ref_float__[var4 - var26 - 1];
+            }
+            for (var26 = var8; var26 < var9; var26++) {
+              var27 = (float)Math.sin(((double)(var26 - var8) + 0.5) / (double)var10 * 0.5 * 3.141592653589793);
+              field_B[var26] = field_B[var26] * (float)Math.sin(1.5707963267948966 * (double)var27 * (double)var27);
+            }
+            for (var26 = var11; var26 < var12; var26++) {
+              var27 = (float)Math.sin(((double)(var26 - var11) + 0.5) / (double)var13 * 0.5 * 3.141592653589793 + 1.5707963267948966);
+              field_B[var26] = field_B[var26] * (float)Math.sin(1.5707963267948966 * (double)var27 * (double)var27);
+            }
+            break L11;
           }
         }
         L35: {
