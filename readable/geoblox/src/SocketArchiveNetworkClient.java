@@ -48,7 +48,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
             int bodyXorByteIndex = 0;
             unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
             if (this.socket != null) {
-              currentTimeMillis = oa.a(-12520);
+              currentTimeMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520);
               elapsedMillisOrHeaderTargetBytes = (int)(-this.lastPollMillis + currentTimeMillis);
               if (elapsedMillisOrHeaderTargetBytes > 200) {
                 elapsedMillisOrHeaderTargetBytes = 200;
@@ -377,7 +377,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
                     }
                   }
                   this.responseIdleMillis = 0;
-                  this.lastPollMillis = oa.a(-12520);
+                  this.lastPollMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520);
                   return;
                 }
               }

@@ -122,10 +122,10 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
         this.createButton = new ButtonWidget(TextTemplateDefinitionLoader.createText, (WidgetListener) null);
         this.backButton = new ButtonWidget(ValidatedTextInputWidget.goBackText, (WidgetListener) null);
         this.displayNameInput.hoverText = AchievementProtocolSupport.createDisplayNameTooltipText;
-        this.emailInput.hoverText = ll.createEmailTooltipText;
+        this.emailInput.hoverText = GameGraphicsResources.createEmailTooltipText;
         this.confirmEmailInput.hoverText = ok.createEmailConfirmationTooltipText;
         this.passwordInput.hoverText = FullscreenErrorDialog.createPasswordTooltipText;
-        this.confirmPasswordInput.hoverText = oi.createPasswordConfirmationTooltipText;
+        this.confirmPasswordInput.hoverText = ByteArrayPoolSupport.createPasswordConfirmationTooltipText;
         this.ageInput.hoverText = ArchiveRequest.createAgeTooltipText;
         this.newsOptInCheckbox.hoverText = CheckboxWidget.createNewsOptInTooltipText;
         this.displayNameInput.a((byte) -27, new UsernameAvailabilityValidator(this.displayNameInput));

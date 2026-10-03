@@ -3,7 +3,7 @@
  */
 final class DialRenderer implements WidgetRenderer {
     static int[] field_l;
-    static int field_b;
+    static int byteArrayPool100Count;
     static ResourceArchive field_n;
     private int textColor;
     static String playFreeVersionText;
@@ -84,7 +84,7 @@ final class DialRenderer implements WidgetRenderer {
     }
 
     static {
-        field_b = 0;
+        byteArrayPool100Count = 0;
         playFreeVersionText = "Play free version";
     }
 }

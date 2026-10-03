@@ -67,7 +67,7 @@ final class ic {
               rb.field_c = param4;
               EmailAvailabilityValidator.field_l = param10;
               MultiHandleSliderWidget.field_I = param9;
-              ll.field_e = param5;
+              GameGraphicsResources.field_e = param5;
               qe.field_b = param6;
               if (GameplayEntity.field_D.randomSeedFile != null) {
                 try {

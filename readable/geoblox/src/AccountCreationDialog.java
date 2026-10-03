@@ -71,7 +71,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
                 var5.appendActionButton(TriangleMesh.reloadGameText, 1, 11);
                 var5.appendActionButton(DisplayModeInfo.quitToWebsiteText, 1, 17);
               } else {
-                var5.appendActionButton(ll.backText, 1, -1);
+                var5.appendActionButton(GameGraphicsResources.backText, 1, -1);
               }
             } else {
               var5.appendButton(-2, UsernameQuerySupport.continueText, (WidgetListener) (this));

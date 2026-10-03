@@ -14,10 +14,10 @@ final class Under13TermsPanel extends WidgetContainer implements HotspotActivati
     final static void g(int param0) {
         if (null == RasterTargetSnapshot.field_f) {
             FullscreenSupport.fullscreenAcceptCountdownPluralText = OpacityWidget.a(FullscreenSupport.fullscreenAcceptCountdownPluralText, new String[]{"<br><shad=000001><%0></shad><br>"}, (byte) -123);
-            mj.fullscreenAcceptCountdownSingularText = OpacityWidget.a(mj.fullscreenAcceptCountdownSingularText, new String[]{"<br><shad=000001><%0></shad><br>"}, (byte) -55);
+            TextConcatenationSupport.fullscreenAcceptCountdownSingularText = OpacityWidget.a(TextConcatenationSupport.fullscreenAcceptCountdownSingularText, new String[]{"<br><shad=000001><%0></shad><br>"}, (byte) -55);
             RasterTargetSnapshot.field_f = new String[19];
             RasterTargetSnapshot.field_f[12] = ValidationState.nextText;
-            RasterTargetSnapshot.field_f[7] = tc.quitText;
+            RasterTargetSnapshot.field_f[7] = SettingsCookieSupport.quitText;
             RasterTargetSnapshot.field_f[6] = LoginPayload.endGameText;
             RasterTargetSnapshot.field_f[8] = wb.soundLabelText;
             RasterTargetSnapshot.field_f[14] = PacketByteCipher.field_c;
@@ -291,11 +291,11 @@ final class Under13TermsPanel extends WidgetContainer implements HotspotActivati
               if (param0 != -1) {
                 Under13TermsPanel.g(14);
               }
-              if (null == NetworkArchiveRequest.field_z) {
+              if (null == NetworkArchiveRequest.settingsCookieValue) {
                 stackIn_15_0 = param1.getParameter("settings");
                 return stackIn_15_0;
               }
-              stackIn_13_0 = NetworkArchiveRequest.field_z;
+              stackIn_13_0 = NetworkArchiveRequest.settingsCookieValue;
               return stackIn_13_0;
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;

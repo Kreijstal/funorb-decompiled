@@ -971,7 +971,7 @@ class ByteArrayBuffer extends IntrusiveNode {
     }
 
     ByteArrayBuffer(int capacity) {
-        this.bytes = oi.a(false, capacity);
+        this.bytes = ByteArrayPoolSupport.acquireByteArray(false, capacity);
         this.position = 0;
     }
 

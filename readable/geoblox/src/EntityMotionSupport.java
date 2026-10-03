@@ -116,7 +116,7 @@ final class EntityMotionSupport {
     }
 
     final static IndexedSprite buildFirstIndexedSpriteFromDecodedSheet(int methodGuard) {
-        IndexedSprite sprite = new IndexedSprite(GameplaySetupSupport.decodedSpriteCanvasWidth, FadingDialog.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[0], md.decodedSpriteYOffsets[0], DualLinkNode.decodedSpriteWidths[0], ProgressBarWidget.decodedSpriteHeights[0], mj.decodedSpriteIndices[0], NanoFrameTimer.decodedSpritePalette);
+        IndexedSprite sprite = new IndexedSprite(GameplaySetupSupport.decodedSpriteCanvasWidth, FadingDialog.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[0], GmtTimestampSupport.decodedSpriteYOffsets[0], DualLinkNode.decodedSpriteWidths[0], ProgressBarWidget.decodedSpriteHeights[0], TextConcatenationSupport.decodedSpriteIndices[0], NanoFrameTimer.decodedSpritePalette);
         int sentinelDivision = -128 / ((methodGuard - 52) / 49);
         MidiPcmStream.clearDecodedSpriteWorkingArrays(true);
         return sprite;

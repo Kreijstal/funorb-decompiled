@@ -45,10 +45,10 @@ final class DequeCursor {
             }
             var2 = RasterTargetSnapshot.introFaceFrames[CachedTextLayout.field_h].fullWidth >> 1;
             var3 = MatchingTextValidator.field_j << 2;
-            if ((!sg.field_d) &&
+            if ((!SharedBufferPools.introFirstGeometrySoundPlayed) &&
                 (-var3 + 900 <= 320 + var2)) {
               ValidationIconWidget.playPcmSample(-348, GameSoundResources.gameSoundSamples[7]);
-              sg.field_d = true;
+              SharedBufferPools.introFirstGeometrySoundPlayed = true;
             }
             if ((!EntityMotionSupport.field_d) &&
                 (-var2 + (320 - AccountCreationForm.introGeometryFrames[1].fullWidth) <= -1200 + var3)) {
@@ -121,7 +121,7 @@ final class DequeCursor {
         RuntimeException decompiledCaughtException = null;
         var2 = Geoblox.clientControlFlowFlag;
         try {
-          kd.field_e.processPointerFrame(true, 127, MatchScoringSupport.field_d, mj.field_b);
+          kd.field_e.processPointerFrame(true, 127, MatchScoringSupport.field_d, TextConcatenationSupport.field_b);
           kd.field_e.advanceDialogAnimations(-65);
           while (UiFontResources.pollKeyboardEvent(77)) {
             kd.field_e.a((byte) 105, te.currentKeyboardEventCharacter, SessionSnapshotSupport.currentKeyboardEventCode);

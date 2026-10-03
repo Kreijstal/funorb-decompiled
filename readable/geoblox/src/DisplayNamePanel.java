@@ -175,7 +175,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
           diffuseResponsesThirdAlias = diffuseResponsesSecondAlias;
           specularResponses = new int[mesh.normalCount];
           transformedNormalsX = ok.transformedMeshNormalX;
-          transformedNormalsY = oa.transformedMeshNormalY;
+          transformedNormalsY = ClientClockSupport.transformedMeshNormalY;
           transformedNormalsZ = IterableNodeHashTable.transformedMeshNormalZ;
           for (normalOrFaceQueueIndex = 0; mesh.normalCount > normalOrFaceQueueIndex; normalOrFaceQueueIndex++) {
             diffuseResponseOrFaceIndex = transformedNormalsY[normalOrFaceQueueIndex] * lightDirectionYQ8 + lightDirectionXQ8 * transformedNormalsX[normalOrFaceQueueIndex] + transformedNormalsZ[normalOrFaceQueueIndex] * lightDirectionZQ8 >> 8;

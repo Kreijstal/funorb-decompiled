@@ -57,7 +57,7 @@ final class MultiHandleSliderWidget extends ButtonWidget {
           if (param0) {
             field_I = (String) null;
           }
-          stackIn_3_0 = ReflectionCheckRequest.a(param1, (byte) 39, 10, true);
+          stackIn_3_0 = ReflectionCheckRequest.parseSignedInt(param1, (byte) 39, 10, true);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -83,7 +83,7 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
         try {
             if (!(TrackedPcmStream.keyboardListener == null)) {
                 typedCharacterCode = event.getKeyChar();
-                if (typedCharacterCode != 0 && typedCharacterCode != 65535 && tc.a((byte) -112, (char) typedCharacterCode)) {
+                if (typedCharacterCode != 0 && typedCharacterCode != 65535 && SettingsCookieSupport.isRepresentableTextCharacter((byte) -112, (char) typedCharacterCode)) {
                     nextEventWriteIndex = 1 + BufferedSocket.keyEventWriteIndex & 127;
                     if (nextEventWriteIndex != ClientSessionSnapshot.keyboardEventReadIndex) {
                         MidiPcmStream.queuedKeyboardEventCodes[BufferedSocket.keyEventWriteIndex] = -1;

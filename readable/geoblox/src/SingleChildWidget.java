@@ -159,7 +159,7 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
           if (LogoCompositor.connectedSessionStage != PacketBuffer.currentProtocolStage) {
             return false;
           }
-          var3 = oa.a(-12520);
+          var3 = ClientClockSupport.correctedCurrentTimeMillis(-12520);
           if ((EntityMotionSupport.field_b != 0) &&
               (MidiNote.field_f < 0)) {
             var5_ref_ma = (DelayedIncomingPacket) ((Object) MeshPrioritySupport.field_c.firstForIteration(0));

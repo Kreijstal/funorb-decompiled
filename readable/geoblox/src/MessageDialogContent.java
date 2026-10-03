@@ -241,7 +241,7 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
           if (metrics == null) {
             return null;
           }
-          font = new PaletteBitmapFont(metrics, GameplaySession.decodedSpriteXOffsets, md.decodedSpriteYOffsets, DualLinkNode.decodedSpriteWidths, ProgressBarWidget.decodedSpriteHeights, NanoFrameTimer.decodedSpritePalette, mj.decodedSpriteIndices);
+          font = new PaletteBitmapFont(metrics, GameplaySession.decodedSpriteXOffsets, GmtTimestampSupport.decodedSpriteYOffsets, DualLinkNode.decodedSpriteWidths, ProgressBarWidget.decodedSpriteHeights, NanoFrameTimer.decodedSpritePalette, TextConcatenationSupport.decodedSpriteIndices);
           MidiPcmStream.clearDecodedSpriteWorkingArrays(true);
           if (methodGuard >= -107) {
             createToUseText = (String) null;

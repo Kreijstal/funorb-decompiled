@@ -148,9 +148,9 @@ final class w {
             if (!(NetworkArchiveRequest.field_B.status != 0)) {
                 return false;
             }
-            long dupTemp$0 = oa.a(param1 ^ -12500);
+            long dupTemp$0 = ClientClockSupport.correctedCurrentTimeMillis(param1 ^ -12500);
             CanvasResizeController.field_r = dupTemp$0;
-            AudioService.field_e = dupTemp$0;
+            AudioService.sessionActivityStartMillis = dupTemp$0;
             if (1 != NetworkArchiveRequest.field_B.status) {
                 PacketBuffer.currentProtocolStage = AchievementQuery.field_h;
             } else {

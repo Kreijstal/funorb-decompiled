@@ -5,7 +5,7 @@ class TextInputRenderer extends TextWidgetRenderer {
     static ClientProtocolStage awaitingLoginFailureTextStage;
     static int field_s;
     static String[] mustLoginAlternateTexts;
-    static TextWidgetRenderer field_t;
+    static TextWidgetRenderer sharedDefaultTextWidgetRenderer;
     static int[] secondVertexTransformedY;
     static int field_u;
 
@@ -23,7 +23,7 @@ class TextInputRenderer extends TextWidgetRenderer {
                 EntityLinkSupport.drawGradientWidgetBorder(parentX + widget.widgetX, widget.widgetHeight, widget.widgetY + parentY, widget.widgetWidth, -1540604944);
             }
             if (methodGuard > -5) {
-                field_t = (TextWidgetRenderer) null;
+                sharedDefaultTextWidgetRenderer = (TextWidgetRenderer) null;
             }
             super.drawWidget(parentX, -11, parentY, widgetEnabled, widget);
         } catch (RuntimeException runtimeException) {
@@ -234,7 +234,7 @@ class TextInputRenderer extends TextWidgetRenderer {
     }
 
     public static void a(byte param0) {
-        field_t = null;
+        sharedDefaultTextWidgetRenderer = null;
         mustLoginAlternateTexts = null;
         secondVertexTransformedY = null;
         awaitingLoginFailureTextStage = null;

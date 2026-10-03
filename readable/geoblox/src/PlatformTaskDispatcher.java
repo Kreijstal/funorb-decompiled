@@ -115,7 +115,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     if (taskType != 22) {
                       if (taskType != 2) {
                         if (4 == taskType) {
-                          if (oa.a(-12520) < networkBlockedUntilMillis) {
+                          if (ClientClockSupport.correctedCurrentTimeMillis(-12520) < networkBlockedUntilMillis) {
                             throw new IOException();
                           }
                           task.result = new DataInputStream(((java.net.URL) (task.input)).openStream());
@@ -149,14 +149,14 @@ final class PlatformTaskDispatcher implements Runnable {
                                     throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
                                   }
                                   if (taskType == 3) {
-                                    if (~oa.a(-12520) > ~networkBlockedUntilMillis) {
+                                    if (~ClientClockSupport.correctedCurrentTimeMillis(-12520) > ~networkBlockedUntilMillis) {
                                       throw new IOException();
                                     }
                                     reverseLookupAddress = (255 & task.firstIntArgument >> 24) + "." + ((task.firstIntArgument & 16718053) >> 16) + "." + (task.firstIntArgument >> 8 & 255) + "." + (255 & task.firstIntArgument);
                                     task.result = java.net.InetAddress.getByName(reverseLookupAddress).getHostName();
                                   } else {
                                     if (taskType == 21) {
-                                      if (~oa.a(-12520) > ~networkBlockedUntilMillis) {
+                                      if (~ClientClockSupport.correctedCurrentTimeMillis(-12520) > ~networkBlockedUntilMillis) {
                                         throw new IOException();
                                       }
                                       task.result = java.net.InetAddress.getByName((String) (task.input)).getAddress();
@@ -268,7 +268,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         task.result = startedThread;
                       }
                     } else {
-                      if (oa.a(-12520) < networkBlockedUntilMillis) {
+                      if (ClientClockSupport.correctedCurrentTimeMillis(-12520) < networkBlockedUntilMillis) {
                         throw new IOException();
                       }
                       try {
@@ -282,7 +282,7 @@ final class PlatformTaskDispatcher implements Runnable {
                       }
                     }
                   } else {
-                    if (~oa.a(-12520) > ~networkBlockedUntilMillis) {
+                    if (~ClientClockSupport.correctedCurrentTimeMillis(-12520) > ~networkBlockedUntilMillis) {
                       throw new IOException();
                     }
                     task.result = new java.net.Socket(java.net.InetAddress.getByName((String) (task.input)), task.firstIntArgument);

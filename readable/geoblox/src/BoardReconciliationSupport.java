@@ -31,14 +31,14 @@ final class BoardReconciliationSupport {
         RuntimeException sortFailureForContext = null;
         clientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          SingleChildWidget.a(0, entryLimit, ok.field_b, ProxyAuthenticationRequiredException.field_a, (byte) 121, md.field_c, true);
+          SingleChildWidget.a(0, entryLimit, ok.field_b, ProxyAuthenticationRequiredException.field_a, (byte) 121, GmtTimestampSupport.field_c, true);
           if (methodGuard != -98) {
             return;
           }
           secondaryEntryIndex = 0;
           while (true) {
             L1: {
-              if (md.field_c > secondaryEntryIndex) {
+              if (GmtTimestampSupport.field_c > secondaryEntryIndex) {
                 AchievementQuery.field_i[entryLimit + secondaryEntryIndex] = secondaryEntryIndex;
                 secondaryEntryIndex++;
                 if (clientControlSnapshot != 0) {
@@ -46,10 +46,10 @@ final class BoardReconciliationSupport {
                 }
                 continue;
               }
-              SingleChildWidget.a(entryLimit, entryLimit + entryLimit, LoginPayloadKind.field_a, MeshPrioritySupport.field_b, (byte) 112, md.field_c + entryLimit, false);
+              SingleChildWidget.a(entryLimit, entryLimit + entryLimit, LoginPayloadKind.field_a, MeshPrioritySupport.field_b, (byte) 112, GmtTimestampSupport.field_c + entryLimit, false);
             }
-            if (entryLimit < md.field_c) {
-              md.field_c = entryLimit;
+            if (entryLimit < GmtTimestampSupport.field_c) {
+              GmtTimestampSupport.field_c = entryLimit;
             }
             return;
           }

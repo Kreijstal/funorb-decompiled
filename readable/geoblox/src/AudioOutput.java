@@ -98,7 +98,7 @@ class AudioOutput {
                 this.d();
             } catch (Exception exception) {
                 this.f();
-                this.field_m = oa.a(-12520) + 2000L;
+                this.field_m = ClientClockSupport.correctedCurrentTimeMillis(-12520) + 2000L;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -179,7 +179,7 @@ class AudioOutput {
             if (this.field_h) {
               return;
             }
-            var1 = oa.a(-12520);
+            var1 = ClientClockSupport.correctedCurrentTimeMillis(-12520);
             try {
               if (var1 > this.field_n + 6000L) {
                 this.field_n = var1 - 6000L;
@@ -187,7 +187,7 @@ class AudioOutput {
               while (var1 > this.field_n + 5000L) {
                 this.b(256);
                 this.field_n = this.field_n + (long)(256000 / sampleRateHz);
-                var1 = oa.a(-12520);
+                var1 = ClientClockSupport.correctedCurrentTimeMillis(-12520);
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -394,7 +394,7 @@ class AudioOutput {
         if (this.field_k != null) {
           this.field_k.a(param0, 0, param1);
         }
-        this.field_n = oa.a(-12520);
+        this.field_n = ClientClockSupport.correctedCurrentTimeMillis(-12520);
     }
 
     private final void b(int param0) {
@@ -421,7 +421,7 @@ class AudioOutput {
     AudioOutput() {
         this.field_h = false;
         this.field_l = 32;
-        this.field_n = oa.a(-12520);
+        this.field_n = ClientClockSupport.correctedCurrentTimeMillis(-12520);
         this.field_o = true;
         this.field_a = new PcmStream[8];
         this.field_t = 0;

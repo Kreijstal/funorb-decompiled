@@ -152,7 +152,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         var10 = var8.a(parentY, -2, (UiWidget) (this)) + (var8.a((byte) 125, (UiWidget) (this)).b(-3111) >> 1);
         var11 = 7 % ((methodGuard - 1) / 43);
         if (ImageProducerRasterBuffer.field_g == var6) {
-          var19 = oa.field_e[0];
+          var19 = ClientClockSupport.validationStateSprites[0];
           var12 = var19.fullWidth << 1;
           var13 = var19.fullHeight << 1;
           if (this.spinnerSprite == null) {
@@ -179,18 +179,18 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         }
         if (var6 != WidgetSkinState.field_n) {
           if (WidgetSkinState.field_m == var6) {
-            var17 = oa.field_e[2];
+            var17 = ClientClockSupport.validationStateSprites[2];
             var17.drawAdditive(var9, var10 - (var17.height >> 1), 256);
             return;
           }
           if (SocketArchiveNetworkClient.field_w != var6) {
             return;
           }
-          var16 = oa.field_e[1];
+          var16 = ClientClockSupport.validationStateSprites[1];
           var16.drawAdditive(var9, var10 - (var16.height >> 1), 256);
           return;
         }
-        var18 = oa.field_e[0];
+        var18 = ClientClockSupport.validationStateSprites[0];
         var15 = var18;
         var12 = var18.fullWidth << 1;
         var13 = var18.fullHeight << 1;
@@ -236,7 +236,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
     }
 
     ValidationMessageWidget(ValidationProvider validationProvider, String fallbackMessage, int x, int y, int width, int height) {
-        super(fallbackMessage, ah.a((byte) -66));
+        super(fallbackMessage, TextWidgetSupport.getDefaultTextWidgetRenderer((byte) -66));
         try {
             this.validationProvider = validationProvider;
             this.fallbackMessage = fallbackMessage;

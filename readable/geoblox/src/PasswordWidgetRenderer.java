@@ -29,7 +29,7 @@ final class PasswordWidgetRenderer extends TextInputRenderer {
             var4 = (UiWidget) null;
             this.c(-111, (UiWidget) null);
           }
-          stackIn_3_0 = ah.a(0, '*', param1.widgetText.length());
+          stackIn_3_0 = TextWidgetSupport.buildRepeatedCharacterRange(0, '*', param1.widgetText.length());
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

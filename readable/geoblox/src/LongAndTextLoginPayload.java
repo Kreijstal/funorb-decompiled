@@ -53,7 +53,7 @@ class LongAndTextLoginPayload extends LoginPayload {
                 return null;
             }
             if (!(PcmResampler.field_j + AsyncResourceDownloader.field_e <= ResizableDialog.field_V)) {
-                return tc.field_a;
+                return SettingsCookieSupport.field_a;
             }
             return null;
         }
@@ -64,7 +64,7 @@ class LongAndTextLoginPayload extends LoginPayload {
             return null;
         }
         if (!(PcmResampler.field_j + AsyncResourceDownloader.field_e <= ResizableDialog.field_V)) {
-            return tc.field_a;
+            return SettingsCookieSupport.field_a;
         }
         return null;
     }

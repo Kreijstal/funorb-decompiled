@@ -65,14 +65,14 @@ class DualLinkNode extends IntrusiveNode {
         return 1;
     }
 
-    final static boolean a(int param0, char param1) {
-        if (param0 != -58) {
+    final static boolean isAsciiDigit(int methodGuard, char character) {
+        if (methodGuard != -58) {
             return false;
         }
-        if (48 > param1) {
+        if (48 > character) {
             return false;
         }
-        if (param1 > 57) {
+        if (character > 57) {
             return false;
         }
         return true;

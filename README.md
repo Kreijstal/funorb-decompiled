@@ -17,14 +17,37 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/326816a3f5fbb4099ae77ed336b8e174e8fe3a6c/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/30b63ee42afe0d38a548029c66bd62503565e21f/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 136,612 bindings,
 preserving 388 override relationships.
 
-Pass 123 names the five previously held reflective implementations:
+Pass 124 adds 306 guarded names: ten classes, 23 fields, 32 methods,
+63 parameters and 178 locals. All 10,596 previous complete rules and source,
+naming-tool, decompiler, bytecode and native fixture pins remain. The export now
+has 10,902 rules and 84,798 identifier edits, with the same 11 separately recorded
+class-name literal edits. All parameters and locals in the ten audited owners,
+plus the selected cross-owner text primitives, have guarded semantic names.
+Both 303-file corpora compile and compare 136,612 bindings, 388 override
+relationships and 11 reflected class-literal records. Dictionary reversal recovers
+all 303 pinned raw files byte-for-byte. Class coverage is 275 renamed, one meaningful
+original name and 27 opaque top-level names; six large labeled bodies and 207
+plain-block labels remain.
+
+The named chains cover exact-size byte-array pool acquisition/storage, corrected
+wall-clock sampling and session elapsed time, shared GMT cookie timestamps,
+settings-cookie writing, UTF-16 reversal, ASCII letter/digit predicates, signed
+radix parsing, selected-range concatenation, character replacement and sprite
+loading. Shared statics remain on their original owners. The calendar remains
+mutable/shared; wrong guards, recursion, partial writes, numeric flags, arithmetic
+overflow, strings and exception/monitor boundaries remain unchanged. No new live
+clock/cookie/archive/platform/game/browser/phone performance coverage is added.
+The 25 publication checks and all eight fixed native probes pass within their
+existing scopes; all sources reproduce from clean committed checkouts.
+
+Pass 123 named the five previously held reflective implementations:
 `AwtMouseWheelListener`, `BufferedImageRasterBuffer`, `AwtFullscreenBridge`,
 `AwtCursorBridge` and `LegacyDirectSoundBridge`. It adds 58 guarded naming rules:
 five classes, six fields, two methods, 18 parameters and 27 locals. All 10,538

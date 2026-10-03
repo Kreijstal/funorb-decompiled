@@ -207,7 +207,7 @@ final class DraggableWidget extends SingleChildWidget {
             ArchiveLoadStep.field_a = true;
             AgeValidator.field_i = true;
             kd.field_e.hideAllDialogs(param0 + 10912);
-            MessageDialogSupport.showMessageDialog(ah.connectionLostReconnectingText, 480, false);
+            MessageDialogSupport.showMessageDialog(TextWidgetSupport.connectionLostReconnectingText, 480, false);
             return;
         }
         DraggableWidget.g((byte) 86);
@@ -215,7 +215,7 @@ final class DraggableWidget extends SingleChildWidget {
         ArchiveLoadStep.field_a = true;
         AgeValidator.field_i = true;
         kd.field_e.hideAllDialogs(param0 + 10912);
-        MessageDialogSupport.showMessageDialog(ah.connectionLostReconnectingText, 480, false);
+        MessageDialogSupport.showMessageDialog(TextWidgetSupport.connectionLostReconnectingText, 480, false);
     }
 
     final void refreshChildLayout(boolean layoutGuard) {

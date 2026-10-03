@@ -26,7 +26,7 @@ final class id {
         if (!returnToPool) {
             return;
         }
-        sg.rasterSnapshotPool.addLast(-110, var1);
+        SharedBufferPools.rasterSnapshotPool.addLast(-110, var1);
     }
 
     static {

@@ -77,7 +77,7 @@ final class NameCharacterSupport {
         RuntimeException caughtJoinFailure = null;
         try {
           if (methodGuard == -11455) {
-            joinedTextBeforeReturn = mj.a(0, parts.length, parts, (byte) 96);
+            joinedTextBeforeReturn = TextConcatenationSupport.joinCharSequenceRange(0, parts.length, parts, (byte) 96);
             return joinedTextBeforeReturn;
           }
           nullTextBeforeReturn = (String) null;

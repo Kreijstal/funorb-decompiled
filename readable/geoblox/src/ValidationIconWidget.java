@@ -95,14 +95,14 @@ final class ValidationIconWidget extends ButtonWidget {
         if ((var9 != ImageProducerRasterBuffer.field_g) &&
             (WidgetSkinState.field_n != var9)) {
           if (WidgetSkinState.field_m == var9) {
-            var14 = oa.field_e[2];
+            var14 = ClientClockSupport.validationStateSprites[2];
             var14.drawAdditive(-(var14.width >> 1) + var5, var6 - (var14.height >> 1), 256);
           } else if (!(var9 != SocketArchiveNetworkClient.field_w)) {
-            var15 = oa.field_e[1];
+            var15 = ClientClockSupport.validationStateSprites[1];
             var15.drawAdditive(-(var15.width >> 1) + var5, var6 - (var15.height >> 1), 256);
           }
         } else {
-          var13 = oa.field_e[0];
+          var13 = ClientClockSupport.validationStateSprites[0];
           var10 = var13.fullWidth << 1;
           var11 = var13.fullHeight << 1;
           if ((null != da.field_b) &&
@@ -241,7 +241,7 @@ final class ValidationIconWidget extends ButtonWidget {
         if (methodGuard != -93) {
             return;
         }
-        md.activeScorePopups.moveAllTo(PcmResampler.availableScorePopups, (byte) -70);
+        GmtTimestampSupport.activeScorePopups.moveAllTo(PcmResampler.availableScorePopups, (byte) -70);
     }
 
     ValidationIconWidget(ValidationProvider validationProvider) {

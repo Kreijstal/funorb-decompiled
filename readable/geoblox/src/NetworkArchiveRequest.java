@@ -6,20 +6,20 @@ final class NetworkArchiveRequest extends ArchiveRequest {
     static PlatformTask field_B;
     ByteArrayBuffer responseBuffer;
     byte reservedTailBytes;
-    static byte[][] field_C;
+    static byte[][] byteArrayPool30000;
     int blockPosition;
     static int field_x;
     static Sprite barSprite;
-    static String field_z;
+    static String settingsCookieValue;
 
     public static void e(byte param0) {
         if (param0 < 88) {
             return;
         }
         barSprite = null;
-        field_z = null;
+        settingsCookieValue = null;
         field_B = null;
-        field_C = (byte[][]) null;
+        byteArrayPool30000 = (byte[][]) null;
     }
 
     final byte[] getBytes(int methodGuard) {
@@ -269,7 +269,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
     }
 
     static {
-        field_C = new byte[50][];
+        byteArrayPool30000 = new byte[50][];
         DiskCacheWorker.a(116, 50);
     }
 }

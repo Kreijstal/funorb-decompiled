@@ -195,13 +195,13 @@ final class NanoFrameTimer extends FrameTimer {
               if (!((param1 >= 0) &&
                   (PacketBuffer.currentProtocolStage != LogoCompositor.connectedSessionStage))) {
                 if ((0 == CacheReference.field_q.position) &&
-                    (~oa.a(-12520) < ~(10000L + CanvasResizeController.field_r))) {
+                    (~ClientClockSupport.correctedCurrentTimeMillis(-12520) < ~(10000L + CanvasResizeController.field_r))) {
                   CacheReference.field_q.writeCipherByte(param1, (byte) -76);
                 }
                 if (param0 > ~CacheReference.field_q.position) {
                   try {
                     SpriteCheckboxRenderer.field_e.enqueueWrite(100, 0, CacheReference.field_q.position, CacheReference.field_q.bytes);
-                    CanvasResizeController.field_r = oa.a(-12520);
+                    CanvasResizeController.field_r = ClientClockSupport.correctedCurrentTimeMillis(-12520);
                   } catch (java.io.IOException decompiledCaughtParameter0) {
                     decompiledCaughtException = decompiledCaughtParameter0;
                     iOException = (IOException) (Object) decompiledCaughtException;

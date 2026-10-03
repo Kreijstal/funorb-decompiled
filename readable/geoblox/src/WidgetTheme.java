@@ -305,10 +305,10 @@ final class WidgetTheme {
           if (param0 != -25866) {
             WidgetTheme.a(53, -56, 122, 126);
           }
-          popup = (ScorePopup) ((Object) md.activeScorePopups.removeFirst((byte) -121));
+          popup = (ScorePopup) ((Object) GmtTimestampSupport.activeScorePopups.removeFirst((byte) -121));
           while (popup != null) {
             unfinishedPoints = unfinishedPoints + popup.points;
-            popup = (ScorePopup) ((Object) md.activeScorePopups.removeFirst((byte) -99));
+            popup = (ScorePopup) ((Object) GmtTimestampSupport.activeScorePopups.removeFirst((byte) -99));
           }
           stackIn_7_0 = unfinishedPoints;
           return stackIn_7_0;

@@ -216,12 +216,12 @@ final class MidiPcmStream extends PcmStream {
     }
 
     final static void clearDecodedSpriteWorkingArrays(boolean clearRemainingArrays) {
-        md.decodedSpriteYOffsets = null;
+        GmtTimestampSupport.decodedSpriteYOffsets = null;
         if (!clearRemainingArrays) {
             return;
         }
         ProgressBarWidget.decodedSpriteHeights = null;
-        mj.decodedSpriteIndices = (byte[][]) null;
+        TextConcatenationSupport.decodedSpriteIndices = (byte[][]) null;
         DualLinkNode.decodedSpriteWidths = null;
         GameplaySession.decodedSpriteXOffsets = null;
         NanoFrameTimer.decodedSpritePalette = null;

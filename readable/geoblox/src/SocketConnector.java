@@ -168,7 +168,7 @@ abstract class SocketConnector {
           kf.musicScoreArchive = musicScoreArchive;
           UsernameAvailabilityQuery.instrumentPatchArchive = instrumentPatchArchive;
           AchievementSubmission.gameSoundResampler = new PcmResampler(22050, AudioOutput.sampleRateHz);
-          ll.titleMusicTrack = MusicScore.loadNamedScore(kf.musicScoreArchive, "", "title_music_loop");
+          GameGraphicsResources.titleMusicTrack = MusicScore.loadNamedScore(kf.musicScoreArchive, "", "title_music_loop");
           ValidationMessageWidget.gameOverMusicTrack = MusicScore.loadNamedScore(kf.musicScoreArchive, "", "game_over");
           IntrusiveNode.sunMusicTrack = MusicScore.loadNamedScore(kf.musicScoreArchive, "", "sun");
           ContentTransitionDialog.resultMusicTrack = MusicScore.loadNamedScore(kf.musicScoreArchive, "", "bonus_bubble_jingle");
@@ -177,7 +177,7 @@ abstract class SocketConnector {
           EmailValidator.themeMusicPreparationFlags[1] = true;
           PasswordWidgetRenderer.gameMusicStream.prepareScoreInstruments(te.gameSoundSampleCache, 0, -1, ContentTransitionDialog.resultMusicTrack, UsernameAvailabilityQuery.instrumentPatchArchive);
           PasswordWidgetRenderer.gameMusicStream.prepareScoreInstruments(te.gameSoundSampleCache, 0, -1, ValidationMessageWidget.gameOverMusicTrack, UsernameAvailabilityQuery.instrumentPatchArchive);
-          PasswordWidgetRenderer.gameMusicStream.prepareScoreInstruments(te.gameSoundSampleCache, 0, -1, ll.titleMusicTrack, UsernameAvailabilityQuery.instrumentPatchArchive);
+          PasswordWidgetRenderer.gameMusicStream.prepareScoreInstruments(te.gameSoundSampleCache, 0, -1, GameGraphicsResources.titleMusicTrack, UsernameAvailabilityQuery.instrumentPatchArchive);
           soundIndex = 0;
           if (methodGuard < 69) {
             invalidGuardLookupName = (String) null;

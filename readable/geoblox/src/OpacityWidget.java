@@ -63,7 +63,7 @@ final class OpacityWidget extends SingleChildWidget {
             var6_int = param0.indexOf("<%", var5);
             if (0 <= var6_int) {
               for (var5 = var6_int + 2; var3_int > var5; var5++) {
-                if (DualLinkNode.a(-58, param0.charAt(var5))) {
+                if (DualLinkNode.isAsciiDigit(-58, param0.charAt(var5))) {
                   continue;
                 }
                 break;
@@ -98,7 +98,7 @@ final class OpacityWidget extends SingleChildWidget {
                 return stackIn_25_0;
               }
               for (var5 = var8 + 2; var5 < var3_int; var5++) {
-                if (DualLinkNode.a(-58, param0.charAt(var5))) {
+                if (DualLinkNode.isAsciiDigit(-58, param0.charAt(var5))) {
                   continue;
                 }
                 break;
@@ -247,7 +247,7 @@ final class OpacityWidget extends SingleChildWidget {
           if (methodGuard != 0) {
             field_G = (boolean[]) null;
           }
-          stackIn_3_0 = ll.a(archiveGroupId, (byte) -81, archiveFileId, graphicsArchive);
+          stackIn_3_0 = GameGraphicsResources.loadRgbSpritesById(archiveGroupId, (byte) -81, archiveFileId, graphicsArchive);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

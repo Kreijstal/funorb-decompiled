@@ -81,7 +81,7 @@ abstract class FadingDialog extends WidgetContainer {
         String stackIn_33_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (ak.a(param0, (byte) -67)) {
+          if (TextValidationSupport.containsNonAsciiAlphanumeric(param0, (byte) -67)) {
             return false;
           }
           if (SecondaryNodeDeque.a(18725, param0)) {
@@ -93,7 +93,7 @@ abstract class FadingDialog extends WidgetContainer {
           if (param1.length() == 0) {
             return true;
           }
-          if (ak.a(param0, param1, -75)) {
+          if (TextValidationSupport.containsTextOrReverse(param0, param1, -75)) {
             return false;
           }
           if (param2 != -25321) {
@@ -183,46 +183,46 @@ abstract class FadingDialog extends WidgetContainer {
             super.renderWidget(parentX, parentY, (byte) -52, renderPass);
             return;
         }
-        if (oi.field_b == null) {
-            oi.field_b = new Sprite(this.widgetWidth, this.widgetHeight);
+        if (ByteArrayPoolSupport.fadingDialogScratchSprite == null) {
+            ByteArrayPoolSupport.fadingDialogScratchSprite = new Sprite(this.widgetWidth, this.widgetHeight);
             guardResidue = 111 / ((1 - methodGuard) / 43);
-            Geoblox.setRasterTarget(1, oi.field_b);
+            Geoblox.setRasterTarget(1, ByteArrayPoolSupport.fadingDialogScratchSprite);
             SoftwareRasterizer.clearFramebuffer();
             this.b(0, 20, 0);
             super.renderWidget(-parentX - this.widgetX, -parentY - this.widgetY, (byte) 104, renderPass);
             id.restoreRasterTarget(true);
-            oi.field_b.drawAlpha(parentX + this.widgetX, this.widgetY + parentY, this.dialogOpacity);
+            ByteArrayPoolSupport.fadingDialogScratchSprite.drawAlpha(parentX + this.widgetX, this.widgetY + parentY, this.dialogOpacity);
             return;
         }
-        if (oi.field_b.width < this.widgetWidth) {
-            oi.field_b = new Sprite(this.widgetWidth, this.widgetHeight);
+        if (ByteArrayPoolSupport.fadingDialogScratchSprite.width < this.widgetWidth) {
+            ByteArrayPoolSupport.fadingDialogScratchSprite = new Sprite(this.widgetWidth, this.widgetHeight);
             guardResidue = 111 / ((1 - methodGuard) / 43);
-            Geoblox.setRasterTarget(1, oi.field_b);
+            Geoblox.setRasterTarget(1, ByteArrayPoolSupport.fadingDialogScratchSprite);
             SoftwareRasterizer.clearFramebuffer();
             this.b(0, 20, 0);
             super.renderWidget(-parentX - this.widgetX, -parentY - this.widgetY, (byte) 104, renderPass);
             id.restoreRasterTarget(true);
-            oi.field_b.drawAlpha(parentX + this.widgetX, this.widgetY + parentY, this.dialogOpacity);
+            ByteArrayPoolSupport.fadingDialogScratchSprite.drawAlpha(parentX + this.widgetX, this.widgetY + parentY, this.dialogOpacity);
             return;
         }
-        if (oi.field_b.height < this.widgetHeight) {
-            oi.field_b = new Sprite(this.widgetWidth, this.widgetHeight);
+        if (ByteArrayPoolSupport.fadingDialogScratchSprite.height < this.widgetHeight) {
+            ByteArrayPoolSupport.fadingDialogScratchSprite = new Sprite(this.widgetWidth, this.widgetHeight);
             guardResidue = 111 / ((1 - methodGuard) / 43);
-            Geoblox.setRasterTarget(1, oi.field_b);
+            Geoblox.setRasterTarget(1, ByteArrayPoolSupport.fadingDialogScratchSprite);
             SoftwareRasterizer.clearFramebuffer();
             this.b(0, 20, 0);
             super.renderWidget(-parentX - this.widgetX, -parentY - this.widgetY, (byte) 104, renderPass);
             id.restoreRasterTarget(true);
-            oi.field_b.drawAlpha(parentX + this.widgetX, this.widgetY + parentY, this.dialogOpacity);
+            ByteArrayPoolSupport.fadingDialogScratchSprite.drawAlpha(parentX + this.widgetX, this.widgetY + parentY, this.dialogOpacity);
             return;
         }
         guardResidue = 111 / ((1 - methodGuard) / 43);
-        Geoblox.setRasterTarget(1, oi.field_b);
+        Geoblox.setRasterTarget(1, ByteArrayPoolSupport.fadingDialogScratchSprite);
         SoftwareRasterizer.clearFramebuffer();
         this.b(0, 20, 0);
         super.renderWidget(-parentX - this.widgetX, -parentY - this.widgetY, (byte) 104, renderPass);
         id.restoreRasterTarget(true);
-        oi.field_b.drawAlpha(parentX + this.widgetX, this.widgetY + parentY, this.dialogOpacity);
+        ByteArrayPoolSupport.fadingDialogScratchSprite.drawAlpha(parentX + this.widgetX, this.widgetY + parentY, this.dialogOpacity);
     }
 
     static {

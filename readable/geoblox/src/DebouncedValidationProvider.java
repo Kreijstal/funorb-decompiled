@@ -43,7 +43,7 @@ abstract class DebouncedValidationProvider implements ValidationProvider {
         if (this.a(-26556)) {
             return null;
         }
-        if (oa.a(param0 ^ 25670) < 350L + this.field_b) {
+        if (ClientClockSupport.correctedCurrentTimeMillis(param0 ^ 25670) < 350L + this.field_b) {
             return null;
         }
         if (param0 == -21666) {
@@ -55,7 +55,7 @@ abstract class DebouncedValidationProvider implements ValidationProvider {
     abstract String currentValidationMessage(byte guard);
 
     public final void b(int param0) {
-        this.field_b = oa.a(param0 ^ 23811);
+        this.field_b = ClientClockSupport.correctedCurrentTimeMillis(param0 ^ 23811);
         if (param0 != -28133) {
             archiveLoadStatus = 55;
         }
@@ -82,7 +82,7 @@ abstract class DebouncedValidationProvider implements ValidationProvider {
             if (this.a(param0 ^ 26579)) {
                 return ByteStorage.field_d;
             }
-            if (~(350L + this.field_b) >= ~oa.a(-12520)) {
+            if (~(350L + this.field_b) >= ~ClientClockSupport.correctedCurrentTimeMillis(-12520)) {
                 return this.currentValidationState(32);
             }
             return ImageProducerRasterBuffer.field_g;
@@ -90,7 +90,7 @@ abstract class DebouncedValidationProvider implements ValidationProvider {
         if (this.a(param0 ^ 26579)) {
             return ByteStorage.field_d;
         }
-        if (~(350L + this.field_b) >= ~oa.a(-12520)) {
+        if (~(350L + this.field_b) >= ~ClientClockSupport.correctedCurrentTimeMillis(-12520)) {
             return this.currentValidationState(32);
         }
         return ImageProducerRasterBuffer.field_g;

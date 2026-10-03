@@ -27,89 +27,89 @@ final class ReflectionCheckRequest extends IntrusiveNode {
         currentSocialLocationLabel = null;
     }
 
-    final static int a(CharSequence param0, byte param1, int param2, boolean param3) {
-        int var8 = 0;
-        int stackIn_41_0 = 0;
-        RuntimeException stackIn_44_0 = null;
-        StringBuilder stackIn_44_1 = null;
-        String stackIn_45_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var4_int = 0;
-        RuntimeException var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        CharSequence var11 = null;
+    final static int parseSignedInt(CharSequence text, byte methodGuard, int radix, boolean allowLeadingPlus) {
+        int characterIndex = 0;
+        int parsedIntegerBeforeReturn = 0;
+        RuntimeException parseFailureBeforeContext = null;
+        StringBuilder parseMessagePrefix = null;
+        String textDescription = null;
+        RuntimeException caughtParseFailure = null;
+        int negativeSignInt = 0;
+        RuntimeException parseFailureForContext = null;
+        int digitSeenInt = 0;
+        int accumulator = 0;
+        int textLength = 0;
+        int characterCodeOrSignedDigit = 0;
+        int nextAccumulator = 0;
+        CharSequence guardedNullTextSnapshot = null;
         try {
-          if ((2 <= param2) &&
-              (param2 <= 36)) {
-            var4_int = 0;
-            var5 = 0;
-            var6 = 0;
-            var7 = param0.length();
-            if (param1 <= 2) {
-              var11 = (CharSequence) null;
-              ReflectionCheckRequest.a((CharSequence) null, (byte) 58, 6, false);
+          if ((2 <= radix) &&
+              (radix <= 36)) {
+            negativeSignInt = 0;
+            digitSeenInt = 0;
+            accumulator = 0;
+            textLength = text.length();
+            if (methodGuard <= 2) {
+              guardedNullTextSnapshot = (CharSequence) null;
+              ReflectionCheckRequest.parseSignedInt((CharSequence) null, (byte) 58, 6, false);
             }
-            for (var8 = 0; var7 > var8; var8++) {
+            for (characterIndex = 0; textLength > characterIndex; characterIndex++) {
               L3: {
-                var9 = param0.charAt(var8);
-                if (var8 == 0) {
-                  if (var9 == 45) {
-                    var4_int = 1;
+                characterCodeOrSignedDigit = text.charAt(characterIndex);
+                if (characterIndex == 0) {
+                  if (characterCodeOrSignedDigit == 45) {
+                    negativeSignInt = 1;
                     break L3;
                   }
-                  if ((var9 == 43) &&
-                      (param3)) {
+                  if ((characterCodeOrSignedDigit == 43) &&
+                      (allowLeadingPlus)) {
                     break L3;
                   }
                 }
-                if ((48 <= var9) &&
-                    (var9 <= 57)) {
-                  var9 -= 48;
-                } else if ((65 <= var9) &&
-                    (90 >= var9)) {
-                  var9 -= 55;
-                } else if ((var9 >= 97) &&
-                    (122 >= var9)) {
-                  var9 -= 87;
+                if ((48 <= characterCodeOrSignedDigit) &&
+                    (characterCodeOrSignedDigit <= 57)) {
+                  characterCodeOrSignedDigit -= 48;
+                } else if ((65 <= characterCodeOrSignedDigit) &&
+                    (90 >= characterCodeOrSignedDigit)) {
+                  characterCodeOrSignedDigit -= 55;
+                } else if ((characterCodeOrSignedDigit >= 97) &&
+                    (122 >= characterCodeOrSignedDigit)) {
+                  characterCodeOrSignedDigit -= 87;
                 } else {
                   throw new NumberFormatException();
                 }
-                if (var9 >= param2) {
+                if (characterCodeOrSignedDigit >= radix) {
                   throw new NumberFormatException();
                 }
-                if (var4_int != 0) {
-                  var9 = -var9;
+                if (negativeSignInt != 0) {
+                  characterCodeOrSignedDigit = -characterCodeOrSignedDigit;
                 }
-                var10 = var6 * param2 + var9;
-                if (var6 != var10 / param2) {
+                nextAccumulator = accumulator * radix + characterCodeOrSignedDigit;
+                if (accumulator != nextAccumulator / radix) {
                   throw new NumberFormatException();
                 }
-                var5 = 1;
-                var6 = var10;
+                digitSeenInt = 1;
+                accumulator = nextAccumulator;
               }
             }
-            if (var5 == 0) {
+            if (digitSeenInt == 0) {
               throw new NumberFormatException();
             }
-            stackIn_41_0 = var6;
-            return stackIn_41_0;
+            parsedIntegerBeforeReturn = accumulator;
+            return parsedIntegerBeforeReturn;
           }
-          throw new IllegalArgumentException("" + param2);
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_44_0 = var4;
-          stackIn_44_1 = new StringBuilder().append("eg.B(");
-          if (param0 == null) {
-            stackIn_45_2 = "null";
+          throw new IllegalArgumentException("" + radix);
+        } catch (java.lang.RuntimeException parseFailure) {
+          caughtParseFailure = parseFailure;
+          parseFailureForContext = caughtParseFailure;
+          parseFailureBeforeContext = parseFailureForContext;
+          parseMessagePrefix = new StringBuilder().append("eg.B(");
+          if (text == null) {
+            textDescription = "null";
           } else {
-            stackIn_45_2 = "{...}";
+            textDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) parseFailureBeforeContext), ((StringBuilder) (Object) parseMessagePrefix).append(textDescription).append(',').append(methodGuard).append(',').append(radix).append(',').append(allowLeadingPlus).append(')').toString());
         }
     }
 

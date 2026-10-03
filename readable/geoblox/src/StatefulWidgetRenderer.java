@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class StatefulWidgetRenderer extends TextWidgetRenderer {
-    static byte[][] field_s;
+    static byte[][] byteArrayPool5000;
     static int field_u;
     static TextTemplateDefinitionLoader field_r;
     static int field_v;
@@ -189,7 +189,7 @@ final class StatefulWidgetRenderer extends TextWidgetRenderer {
     public static void a(byte param0) {
         int var1 = -71 / ((32 - param0) / 50);
         field_r = null;
-        field_s = (byte[][]) null;
+        byteArrayPool5000 = (byte[][]) null;
         field_w = null;
     }
 
@@ -251,7 +251,7 @@ final class StatefulWidgetRenderer extends TextWidgetRenderer {
           }
           var7 = this.stateSkins[0];
           if (methodGuard >= -5) {
-            field_s = (byte[][]) null;
+            byteArrayPool5000 = (byte[][]) null;
           }
           this.workingSkin.a((byte) -28);
           var7.a(parentX, parentY, this.workingSkin, (StatefulWidgetRenderer) (this), -16566, widget);
@@ -332,7 +332,7 @@ final class StatefulWidgetRenderer extends TextWidgetRenderer {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 >= -61) {
-            field_s = (byte[][]) null;
+            byteArrayPool5000 = (byte[][]) null;
           }
           if (mf.decodeSpritesFromArchive(param2, param0, 114, param3)) {
             return SpriteConstructionSupport.buildSpritesWithDecodedAlpha(104);
@@ -353,7 +353,7 @@ final class StatefulWidgetRenderer extends TextWidgetRenderer {
     }
 
     static {
-        field_s = new byte[250][];
+        byteArrayPool5000 = new byte[250][];
         field_w = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&'*+-/=?^_{}~";
     }
 }

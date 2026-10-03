@@ -27,7 +27,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             if (GameScreen.selectedThemeId == 3) {
               MatchScoringSupport.selectedThemeForeground = UsernameAvailabilityQuery.germsForegroundSprite;
-              mf.selectedThemeBackground = sg.germsBackgroundSprite;
+              mf.selectedThemeBackground = SharedBufferPools.germsBackgroundSprite;
             } else {
               if (GameScreen.selectedThemeId != 0) {
                 if (6 != GameScreen.selectedThemeId) {

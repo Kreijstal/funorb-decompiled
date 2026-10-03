@@ -186,9 +186,9 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
         try {
           if (GameplaySetupSupport.pointerListener != null) {
             GameplaySession.pointerIdleTicks = 0;
-            ah.livePointerPressX = event.getX();
+            TextWidgetSupport.livePointerPressX = event.getX();
             DisplayNamePanel.livePointerPressY = event.getY();
-            oa.a(-12520);
+            ClientClockSupport.correctedCurrentTimeMillis(-12520);
             if (javax.swing.SwingUtilities.isRightMouseButton(event)) {
               ClientSessionSnapshot.pendingPointerPressButton = 2;
               Under13TermsPanel.liveHeldPointerButton = 2;

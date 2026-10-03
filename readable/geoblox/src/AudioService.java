@@ -9,7 +9,7 @@ final class AudioService implements Runnable {
     static int canvasWidth;
     volatile boolean field_c;
     volatile boolean field_f;
-    static long field_e;
+    static long sessionActivityStartMillis;
 
     public static void a(int param0) {
         field_a = null;

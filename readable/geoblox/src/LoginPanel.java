@@ -378,7 +378,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
             } else {
               var9_ref_String = LogoCompositor.sessionPacketBuffer.readNullableNullTerminatedText((byte) 53);
               if (var9_ref_String != null) {
-                tc.a(-128, var9_ref_String, NodeHashTableIterator.c(106));
+                SettingsCookieSupport.storeSettingsCookie(-128, var9_ref_String, NodeHashTableIterator.c(106));
               }
             }
             Bzip2DecoderState.closeSessionSocket((byte) -114);
@@ -391,7 +391,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
           }
           if (SpriteCheckboxRenderer.field_e == null) {
             if (TextTemplateArgumentType.field_e) {
-              if (ll.a((byte) 12) <= 30000L) {
+              if (GameGraphicsResources.elapsedSinceSessionActivity((byte) 12) <= 30000L) {
                 AudioService.field_a = FullscreenFailureReason.loginMessage2Text;
               } else {
                 AudioService.field_a = IntrusiveNode.loginMessage3Text;
@@ -753,7 +753,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
             } else {
               stackIn_19_1 = null;
               stackIn_19_2 = null;
-              stackIn_19_3 = ll.backText;
+              stackIn_19_3 = GameGraphicsResources.backText;
             }
             ((LoginPanel) (this)).alternateButton = new ButtonWidget(stackIn_19_3, (WidgetListener) null);
             if (this.showCreateAccount) {

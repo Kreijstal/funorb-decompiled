@@ -26,11 +26,11 @@ final class ContextualRuntimeException extends RuntimeException {
           L1: {
             ResizableDialog.field_V = ResizableDialog.field_V + 1;
             if (param0 != null) {
-              if (param0.equals(tc.field_a)) {
+              if (param0.equals(SettingsCookieSupport.field_a)) {
                 break L1;
               }
             } else {
-              if (null != tc.field_a) {
+              if (null != SettingsCookieSupport.field_a) {
                 break L1;
               }
             }
@@ -74,7 +74,7 @@ final class ContextualRuntimeException extends RuntimeException {
             ByteTextDecodingSupport.field_a = NodeHashTableIterator.field_g;
             PendingActionMarker.field_g = DequeCursor.field_e;
           }
-          tc.field_a = param0;
+          SettingsCookieSupport.field_a = param0;
           if ((InstrumentPatch.field_q) &&
               (UsernameQuerySupport.field_a == ResizableDialog.field_V)) {
             InstrumentPatch.field_q = false;

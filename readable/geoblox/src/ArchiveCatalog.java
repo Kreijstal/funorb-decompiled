@@ -24,20 +24,20 @@ final class ArchiveCatalog {
         return true;
     }
 
-    final static boolean a(char param0, int param1) {
-        boolean stackIn_10_0 = false;
-        if (param1 != 97) {
+    final static boolean isAsciiLetter(char character, int methodGuard) {
+        boolean asciiLetterBeforeReturn = false;
+        if (methodGuard != 97) {
           field_a = (String) null;
         }
-        if (!((65 <= param0) &&
-              (param0 <= 90)) &&
-            !((97 <= param0) &&
-              (param0 <= 122))) {
-          stackIn_10_0 = false;
+        if (!((65 <= character) &&
+              (character <= 90)) &&
+            !((97 <= character) &&
+              (character <= 122))) {
+          asciiLetterBeforeReturn = false;
         } else {
-          stackIn_10_0 = true;
+          asciiLetterBeforeReturn = true;
         }
-        return stackIn_10_0;
+        return asciiLetterBeforeReturn;
     }
 
     public static void a(int param0) {
@@ -124,7 +124,7 @@ final class ArchiveCatalog {
           this.archiveSources[archiveId].processRequestedGroups(6924);
         }
         if (methodGuard != -65) {
-          ArchiveCatalog.a('', 15);
+          ArchiveCatalog.isAsciiLetter('', 15);
         }
         for (archiveId = 0; archiveId < this.archiveSources.length; archiveId++) {
           if (null == this.archiveSources[archiveId]) {

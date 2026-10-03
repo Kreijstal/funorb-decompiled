@@ -79,8 +79,8 @@ final class MultiHandleSliderRenderer implements WidgetRenderer {
     }
 
     final static java.awt.Container a(boolean param0) {
-        if (sg.field_a != null) {
-            return (java.awt.Container) ((Object) sg.field_a);
+        if (SharedBufferPools.fullscreenFrame != null) {
+            return (java.awt.Container) ((Object) SharedBufferPools.fullscreenFrame);
         }
         if (!param0) {
             pendingActionPanelWidth = 78;

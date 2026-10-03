@@ -311,7 +311,7 @@ final class WhirlpoolHash {
                 handshakePacket.writeIntBE((byte) 95, EmailValidator.archiveGameCrc);
                 li.archiveHandshakeSocket.enqueueWrite(100, 0, 13, handshakePacket.bytes);
                 AccountCreationForm.archiveHandshakeStage = AccountCreationForm.archiveHandshakeStage + 1;
-                ArchiveLoadSequence.archiveHandshakeDeadlineMillis = 30000L + oa.a(methodGuard - 12446);
+                ArchiveLoadSequence.archiveHandshakeDeadlineMillis = 30000L + ClientClockSupport.correctedCurrentTimeMillis(methodGuard - 12446);
               }
               if (AccountCreationForm.archiveHandshakeStage == 3) {
                 if (0 < li.archiveHandshakeSocket.available((byte) 78)) {
@@ -322,7 +322,7 @@ final class WhirlpoolHash {
                   }
                   AccountCreationForm.archiveHandshakeStage = AccountCreationForm.archiveHandshakeStage + 1;
                 } else {
-                  if (oa.a(-12520) > ArchiveLoadSequence.archiveHandshakeDeadlineMillis) {
+                  if (ClientClockSupport.correctedCurrentTimeMillis(-12520) > ArchiveLoadSequence.archiveHandshakeDeadlineMillis) {
                     timeoutStatusBeforeReturn = ArchiveLoadSequence.handleArchiveHandshakeFailure(-2, methodGuard ^ -28569);
                     return timeoutStatusBeforeReturn;
                   }

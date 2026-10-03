@@ -692,7 +692,7 @@ class UiWidget extends IntrusiveNode {
                   var2_int = param1 - LogoCompositor.sessionPacketBuffer.position;
                 }
                 SpriteCheckboxRenderer.field_e.readFully(LogoCompositor.sessionPacketBuffer.bytes, (byte) -97, LogoCompositor.sessionPacketBuffer.position, var2_int);
-                AudioService.field_e = oa.a(-12520);
+                AudioService.sessionActivityStartMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520);
                 LogoCompositor.sessionPacketBuffer.position = LogoCompositor.sessionPacketBuffer.position + var2_int;
                 if (param1 > LogoCompositor.sessionPacketBuffer.position) {
                   return false;
@@ -703,7 +703,7 @@ class UiWidget extends IntrusiveNode {
               if (var2_int < 0) {
                 Bzip2DecoderState.closeSessionSocket((byte) -127);
               } else {
-                if (ll.a((byte) 12) <= 30000L) {
+                if (GameGraphicsResources.elapsedSinceSessionActivity((byte) 12) <= 30000L) {
                   return false;
                 }
                 Bzip2DecoderState.closeSessionSocket((byte) -127);

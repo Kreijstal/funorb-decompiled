@@ -441,7 +441,7 @@ abstract class BitmapFont extends DualLinkNode {
                                 }
                               } else {
                                 shadowValue = (CharSequence) ((Object) tag.substring(5));
-                                currentShadowColor = oa.a(16, shadowValue, 8192);
+                                currentShadowColor = ClientClockSupport.parseIntWithRadix(16, shadowValue, 8192);
                               }
                             } else {
                               underlineColor = -1;
@@ -451,7 +451,7 @@ abstract class BitmapFont extends DualLinkNode {
                           }
                         } else {
                           underlineValue = (CharSequence) ((Object) tag.substring(2));
-                          underlineColor = oa.a(16, underlineValue, 8192);
+                          underlineColor = ClientClockSupport.parseIntWithRadix(16, underlineValue, 8192);
                         }
                       } else {
                         strikethroughColor = -1;
@@ -461,7 +461,7 @@ abstract class BitmapFont extends DualLinkNode {
                     }
                   } else {
                     strikethroughValue = (CharSequence) ((Object) tag.substring(4));
-                    strikethroughColor = oa.a(16, strikethroughValue, 8192);
+                    strikethroughColor = ClientClockSupport.parseIntWithRadix(16, strikethroughValue, 8192);
                   }
                 } else {
                   currentAlpha256 = defaultAlpha256;
@@ -475,7 +475,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
           } else {
             textColorValue = (CharSequence) ((Object) tag.substring(4));
-            currentTextColor = oa.a(16, textColorValue, 8192);
+            currentTextColor = ClientClockSupport.parseIntWithRadix(16, textColorValue, 8192);
           }
         } catch (java.lang.Exception styleTagFailure) {
           caughtStyleTagFailure = styleTagFailure;

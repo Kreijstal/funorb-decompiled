@@ -1242,7 +1242,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "connectionlost_reconnecting");
                 if (null != textResourceBytes) {
-                  ah.connectionLostReconnectingText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  TextWidgetSupport.connectionLostReconnectingText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "connectionlost_withreason");
                 if (null != textResourceBytes) {
@@ -1264,7 +1264,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "back");
                 if (null != textResourceBytes) {
-                  ll.backText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  GameGraphicsResources.backText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "exitfullscreenmode");
                 if (textResourceBytes != null) {
@@ -1584,7 +1584,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "create_more_suggestions");
                 if (null != textResourceBytes) {
-                  ll.createMoreSuggestionsText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  GameGraphicsResources.createMoreSuggestionsText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "create_select_alternative");
                 if (null != textResourceBytes) {
@@ -1668,11 +1668,11 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "create_password_confirm_tooltip");
                 if (null != textResourceBytes) {
-                  oi.createPasswordConfirmationTooltipText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  ByteArrayPoolSupport.createPasswordConfirmationTooltipText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "create_email_tooltip");
                 if (null != textResourceBytes) {
-                  ll.createEmailTooltipText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  GameGraphicsResources.createEmailTooltipText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "create_email_confirm_tooltip");
                 if (null != textResourceBytes) {
@@ -2067,7 +2067,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "quit");
                 if (null != textResourceBytes) {
-                  tc.quitText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  SettingsCookieSupport.quitText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "login_createaccount");
                 if (null != textResourceBytes) {
@@ -2801,7 +2801,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "fs_accept_countdown_sing");
                 if (null != textResourceBytes) {
-                  mj.fullscreenAcceptCountdownSingularText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  TextConcatenationSupport.fullscreenAcceptCountdownSingularText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "fs_accept_countdown_pl");
                 if (textResourceBytes != null) {
@@ -3041,31 +3041,31 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "mustlogin4,1");
                 if (null != textResourceBytes) {
-                  md.mustLogin4Texts[1] = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  GmtTimestampSupport.mustLogin4Texts[1] = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "mustlogin4,2");
                 if (null != textResourceBytes) {
-                  md.mustLogin4Texts[2] = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  GmtTimestampSupport.mustLogin4Texts[2] = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "mustlogin4,3");
                 if (textResourceBytes != null) {
-                  md.mustLogin4Texts[3] = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  GmtTimestampSupport.mustLogin4Texts[3] = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "mustlogin4,4");
                 if (null != textResourceBytes) {
-                  md.mustLogin4Texts[4] = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  GmtTimestampSupport.mustLogin4Texts[4] = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "mustlogin4,5");
                 if (null != textResourceBytes) {
-                  md.mustLogin4Texts[5] = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  GmtTimestampSupport.mustLogin4Texts[5] = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "mustlogin4,6");
                 if (textResourceBytes != null) {
-                  md.mustLogin4Texts[6] = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  GmtTimestampSupport.mustLogin4Texts[6] = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "mustlogin4,7");
                 if (textResourceBytes != null) {
-                  md.mustLogin4Texts[7] = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  GmtTimestampSupport.mustLogin4Texts[7] = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "mustlogin_notloggedin");
                 if (null != textResourceBytes) {
@@ -3101,55 +3101,55 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "subscription_cost_monthly,0");
                 if (textResourceBytes != null) {
-                  oa.subscriptionMonthlyCostTexts[0] = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  ClientClockSupport.subscriptionMonthlyCostTexts[0] = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "subscription_cost_monthly,1");
                 if (textResourceBytes != null) {
-                  oa.subscriptionMonthlyCostTexts[1] = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  ClientClockSupport.subscriptionMonthlyCostTexts[1] = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "subscription_cost_monthly,2");
                 if (null != textResourceBytes) {
-                  oa.subscriptionMonthlyCostTexts[2] = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  ClientClockSupport.subscriptionMonthlyCostTexts[2] = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "subscription_cost_monthly,3");
                 if (textResourceBytes != null) {
-                  oa.subscriptionMonthlyCostTexts[3] = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  ClientClockSupport.subscriptionMonthlyCostTexts[3] = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "subscription_cost_monthly,4");
                 if (null != textResourceBytes) {
-                  oa.subscriptionMonthlyCostTexts[4] = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  ClientClockSupport.subscriptionMonthlyCostTexts[4] = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "subscription_cost_monthly,5");
                 if (textResourceBytes != null) {
-                  oa.subscriptionMonthlyCostTexts[5] = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  ClientClockSupport.subscriptionMonthlyCostTexts[5] = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "subscription_cost_monthly,6");
                 if (textResourceBytes != null) {
-                  oa.subscriptionMonthlyCostTexts[6] = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  ClientClockSupport.subscriptionMonthlyCostTexts[6] = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "subscription_cost_monthly,7");
                 if (null != textResourceBytes) {
-                  oa.subscriptionMonthlyCostTexts[7] = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  ClientClockSupport.subscriptionMonthlyCostTexts[7] = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "subscription_cost_monthly,8");
                 if (textResourceBytes != null) {
-                  oa.subscriptionMonthlyCostTexts[8] = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  ClientClockSupport.subscriptionMonthlyCostTexts[8] = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "subscription_cost_monthly,9");
                 if (textResourceBytes != null) {
-                  oa.subscriptionMonthlyCostTexts[9] = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  ClientClockSupport.subscriptionMonthlyCostTexts[9] = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "subscription_cost_monthly,10");
                 if (textResourceBytes != null) {
-                  oa.subscriptionMonthlyCostTexts[10] = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  ClientClockSupport.subscriptionMonthlyCostTexts[10] = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "subscription_cost_monthly,11");
                 if (null != textResourceBytes) {
-                  oa.subscriptionMonthlyCostTexts[11] = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  ClientClockSupport.subscriptionMonthlyCostTexts[11] = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "subscription_cost_monthly,12");
                 if (null != textResourceBytes) {
-                  oa.subscriptionMonthlyCostTexts[12] = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  ClientClockSupport.subscriptionMonthlyCostTexts[12] = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "sentence_separator");
                 if (null != textResourceBytes) {

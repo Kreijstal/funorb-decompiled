@@ -40,7 +40,7 @@ abstract class SessionGameApplet extends GameApplet {
           kd.b((byte) 103);
           TextInputValidator.a((byte) 124, var2, AudioService.field_a);
           ArchiveLoadStep.field_e = true;
-          DisplayNamePanel.field_G = oa.a(-12520) + 15000L;
+          DisplayNamePanel.field_G = ClientClockSupport.correctedCurrentTimeMillis(-12520) + 15000L;
           return var2;
         }
         if (SpriteConstructionSupport.clientScreenStage != 11) {
@@ -68,9 +68,9 @@ abstract class SessionGameApplet extends GameApplet {
           var4 = -16 / ((param1 + 4) / 62);
           var3 = null;
           var5 = null;
-          if ((null != NetworkArchiveRequest.field_z) &&
-              (!NetworkArchiveRequest.field_z.equals(param2.getParameter("settings")))) {
-            var3 = NetworkArchiveRequest.field_z;
+          if ((null != NetworkArchiveRequest.settingsCookieValue) &&
+              (!NetworkArchiveRequest.settingsCookieValue.equals(param2.getParameter("settings")))) {
+            var3 = NetworkArchiveRequest.settingsCookieValue;
             var5 = var3;
             var5 = var3;
           }
@@ -117,7 +117,7 @@ abstract class SessionGameApplet extends GameApplet {
             DebouncedValidationProvider.field_c = param4;
             ArchiveRequest.field_r = param6;
             ClientTimingSupport.field_d = param3;
-            ah.field_a = param1;
+            TextWidgetSupport.field_a = param1;
             this.e(123);
             PacketBuffer.k((byte) -13);
             return;
@@ -179,7 +179,7 @@ abstract class SessionGameApplet extends GameApplet {
             AchievementProtocolSupport.resendAchievementMessages((byte) -125, 4);
           }
           if (OpacityWidget.field_G[4]) {
-            oi.resendIntRecordRequests(5, 116);
+            ByteArrayPoolSupport.resendIntRecordRequests(5, 116);
           }
           if (OpacityWidget.field_G[5]) {
             TextTemplateDefinitionLoader.a(6, param0 + 21789);
@@ -267,7 +267,7 @@ abstract class SessionGameApplet extends GameApplet {
             TextInputValidator.a((byte) 124, 2, MessageDialogSupport.idleMessage20MinText);
             bl.c(-113);
             ArchiveLoadStep.field_e = true;
-            DisplayNamePanel.field_G = oa.a(-12520) + 15000L;
+            DisplayNamePanel.field_G = ClientClockSupport.correctedCurrentTimeMillis(-12520) + 15000L;
           }
         }
         if (!((DebouncedValidationProvider.archiveLoadStatus != -1) &&
@@ -283,7 +283,7 @@ abstract class SessionGameApplet extends GameApplet {
           }
           if ((-1 != DebouncedValidationProvider.archiveLoadStatus) &&
               (DebouncedValidationProvider.archiveLoadStatus != 0)) {
-            DisplayNamePanel.field_G = 15000L + oa.a(-12520);
+            DisplayNamePanel.field_G = 15000L + ClientClockSupport.correctedCurrentTimeMillis(-12520);
           }
         }
         if ((DebouncedValidationProvider.archiveLoadStatus != -1) &&
@@ -333,7 +333,7 @@ abstract class SessionGameApplet extends GameApplet {
         if ((!((!((DebouncedValidationProvider.archiveLoadStatus != -1) &&
                 (DebouncedValidationProvider.archiveLoadStatus != 0))) &&
               (!ClientTimingSupport.isClientReadyForSessionActions(param1 - 19585)))) &&
-            (~DisplayNamePanel.field_G >= ~oa.a(param1 - 32180))) {
+            (~DisplayNamePanel.field_G >= ~ClientClockSupport.correctedCurrentTimeMillis(param1 - 32180))) {
           ArchiveLoadStep.field_e = false;
           if ((-1 != DebouncedValidationProvider.archiveLoadStatus) &&
               (DebouncedValidationProvider.archiveLoadStatus != 0)) {
@@ -382,7 +382,7 @@ abstract class SessionGameApplet extends GameApplet {
             (DisplayModeInfo.a((byte) -127, DialRenderer.field_n))) {
           tj.c((byte) -105);
           ke.b((byte) 120);
-          oi.field_e = ArchiveSource.loadingText;
+          ByteArrayPoolSupport.field_e = ArchiveSource.loadingText;
           kf.field_e = false;
           CacheReference.a((byte) 114, DialRenderer.field_n, rb.field_c, AttachedEntityRenderer.field_c, DirectByteStorage.field_h);
           if (!((!LoginProtocolSupport.field_a) &&
@@ -418,16 +418,16 @@ abstract class SessionGameApplet extends GameApplet {
         }
         if (10 == VisualPropertyOverrides.field_C) {
           if (MeshPrioritySupport.field_a != 0) {
-            ak.field_b = SocketArchiveNetworkClient.createResourceArchive(ah.field_a, (byte) -62);
+            TextValidationSupport.field_b = SocketArchiveNetworkClient.createResourceArchive(TextWidgetSupport.field_a, (byte) -62);
           }
           VisualPropertyOverrides.field_C = 11;
         }
         L30: {
           if (VisualPropertyOverrides.field_C == 11) {
-            if (null != ak.field_b) {
-              if (!((ak.field_b.ensureIndexLoaded(0)) &&
-                  (ak.field_b.loadAllGroups(true)))) {
-                HighscoreNameEntry.a(WidgetSkinState.a(LoginProtocolSupport.field_c, 2147483647, CachedTextLayout.field_g, ak.field_b), -2, 0.0f);
+            if (null != TextValidationSupport.field_b) {
+              if (!((TextValidationSupport.field_b.ensureIndexLoaded(0)) &&
+                  (TextValidationSupport.field_b.loadAllGroups(true)))) {
+                HighscoreNameEntry.a(WidgetSkinState.a(LoginProtocolSupport.field_c, 2147483647, CachedTextLayout.field_g, TextValidationSupport.field_b), -2, 0.0f);
                 break L30;
               }
             }
@@ -535,7 +535,7 @@ abstract class SessionGameApplet extends GameApplet {
               }
             }
             if (var4 == 2) {
-              var5_int = DiskCacheWorker.a((byte) -94, ContextualRuntimeException.a(true), qj.b((byte) 81), this.field_r, UsernameSuggestionsPanel.f(100), al.b(0), DelayedPcmStream.a((byte) 27));
+              var5_int = DiskCacheWorker.a((byte) -94, ContextualRuntimeException.a(true), CharacterReplacementSupport.getAccountAgeYears((byte) 81), this.field_r, UsernameSuggestionsPanel.f(100), al.b(0), DelayedPcmStream.a((byte) 27));
               if (var5_int != -1) {
                 StrongCacheReference.a(AudioService.field_a, var5_int, (byte) 30, WidgetSkinState.field_i);
                 AudioService.field_a = null;
@@ -552,7 +552,7 @@ abstract class SessionGameApplet extends GameApplet {
                 var5_int = LoginProtocolSupport.advanceLoginHandshake(false, ContextualRuntimeException.a(true), this.field_r, this.field_v, al.b(~param2), ~param2);
                 if (var5_int != -1) {
                   if (var5_int == 0) {
-                    CheckboxWidget.field_H = oa.field_c;
+                    CheckboxWidget.field_H = ClientClockSupport.field_c;
                     IterableNodeHashTable.b(-12618);
                     ProgressBarWidget.field_G = false;
                     SpriteConstructionSupport.clientScreenStage = 10;

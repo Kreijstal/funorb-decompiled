@@ -5,7 +5,7 @@ final class TextPairLoginPayload extends LoginPayload {
     static String createUnder13TermsText;
     static String startGameText;
     private String loginText;
-    static int[] field_c;
+    static int[] additionalByteArrayPoolLengths;
     private String base38Text;
     static int[] packedMatchCandidates;
     static volatile int keyboardIdleTicks;
@@ -56,7 +56,7 @@ final class TextPairLoginPayload extends LoginPayload {
         createUnder13TermsText = null;
         packedMatchCandidates = null;
         startGameText = null;
-        field_c = null;
+        additionalByteArrayPoolLengths = null;
         if (param0 != -17226) {
             startGameText = (String) null;
         }
@@ -64,7 +64,7 @@ final class TextPairLoginPayload extends LoginPayload {
 
     final LoginPayloadKind payloadKind(byte methodGuard) {
         if (methodGuard != -32) {
-            field_c = (int[]) null;
+            additionalByteArrayPoolLengths = (int[]) null;
             return RatingPresentationResources.loginPayloadKindThree;
         }
         return RatingPresentationResources.loginPayloadKindThree;

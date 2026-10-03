@@ -45,7 +45,7 @@ final class IntArrayQuery extends IntrusiveNode {
                 if (param1 < 0L) {
                   var7 = var10 + "; Discard;";
                 } else {
-                  var7 = var10 + "; Expires=" + md.a((byte) -79, 1000L * param1 + oa.a(-12520)) + "; Max-Age=" + param1;
+                  var7 = var10 + "; Expires=" + GmtTimestampSupport.formatGmtTimestamp((byte) -79, 1000L * param1 + ClientClockSupport.correctedCurrentTimeMillis(-12520)) + "; Max-Age=" + param1;
                 }
                 AppletJavaScriptBridge.evaluateScript(param2, "document.cookie=\"" + var7 + "\"", (byte) -10);
                 return;

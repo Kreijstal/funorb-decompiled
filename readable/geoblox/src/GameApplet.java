@@ -22,7 +22,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         java.net.URL stackIn_12_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (sg.field_a != null) {
+          if (SharedBufferPools.fullscreenFrame != null) {
             stackIn_4_0 = null;
             return (java.net.URL) (stackIn_4_0);
           }
@@ -130,7 +130,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             }
           }
           this.releaseGameResources((byte) -64);
-          if (null != sg.field_a) {
+          if (null != SharedBufferPools.fullscreenFrame) {
             try {
               System.exit(0);
             } catch (java.lang.Throwable decompiledCaughtParameter3) {
@@ -308,7 +308,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                           if (var2.startsWith("1.6.0_")) {
                             var3 = 6;
                             while (var2.length() > var3) {
-                              stackIn_66_0 = DualLinkNode.a(-58, var2.charAt(var3));
+                              stackIn_66_0 = DualLinkNode.isAsciiDigit(-58, var2.charAt(var3));
                               if (var5 != 0) {
                                 break L3;
                               }
@@ -388,7 +388,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   L17: while (true) {
                     L18: {
                       if (0L != MenuScreen.appletStopDeadlineMillis) {
-                        stackIn_99_0 = $cfr$lcmp(~MenuScreen.appletStopDeadlineMillis, ~oa.a(-12520));
+                        stackIn_99_0 = $cfr$lcmp(~MenuScreen.appletStopDeadlineMillis, ~ClientClockSupport.correctedCurrentTimeMillis(-12520));
                         if (var5 != 0) {
                           break L18;
                         }
@@ -447,7 +447,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         java.applet.AppletContext stackIn_10_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (sg.field_a != null) {
+          if (SharedBufferPools.fullscreenFrame != null) {
             stackIn_2_0 = null;
             return (java.applet.AppletContext) (stackIn_2_0);
           }
@@ -485,7 +485,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           }
           L1: {
             if (FullscreenFocusCanvas.field_a == null) {
-              if (null == sg.field_a) {
+              if (null == SharedBufferPools.fullscreenFrame) {
                 if (VisualPropertyNode.field_m != null) {
                   var2 = VisualPropertyNode.field_m;
                   if (var4 == 0) {
@@ -497,7 +497,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   break L1;
                 }
               }
-              var2 = sg.field_a;
+              var2 = SharedBufferPools.fullscreenFrame;
               if (var4 == 0) {
                 break L1;
               }
@@ -510,13 +510,13 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) MessageDialog.gameCanvas));
             MessageDialog.gameCanvas.setSize(AudioService.canvasWidth, ok.canvasHeight);
             MessageDialog.gameCanvas.setVisible(param0);
-            if (sg.field_a != var2) {
+            if (SharedBufferPools.fullscreenFrame != var2) {
               MessageDialog.gameCanvas.setLocation(PrefixCodeDecoder.field_b, ButtonWidget.field_B);
               if (var4 == 0) {
                 break L5;
               }
             }
-            var3 = sg.field_a.getInsets();
+            var3 = SharedBufferPools.fullscreenFrame.getInsets();
             MessageDialog.gameCanvas.setLocation(var3.left + PrefixCodeDecoder.field_b, var3.top + ButtonWidget.field_B);
           }
           MessageDialog.gameCanvas.addFocusListener((java.awt.event.FocusListener) (this));
@@ -525,7 +525,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           CrcAcknowledgedPacket.field_g = true;
           dl.field_c = true;
           EntityMotionSupport.field_a = false;
-          Geoblox.canvasCreationTimeMillis = oa.a(-12520);
+          Geoblox.canvasCreationTimeMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -622,7 +622,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
 
     public final java.net.URL getCodeBase() {
         RuntimeException var1;
-        if (null != sg.field_a) {
+        if (null != SharedBufferPools.fullscreenFrame) {
           return null;
         }
         if ((null != VisualPropertyNode.field_m) &&
@@ -667,7 +667,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (param0 != -10) {
             queuedMeshFaceCount = -102;
           }
-          var2_long = oa.a(param0 ^ 12526);
+          var2_long = ClientClockSupport.correctedCurrentTimeMillis(param0 ^ 12526);
           var4 = RasterTargetSnapshot.field_l[FullscreenErrorDialog.field_cb];
           RasterTargetSnapshot.field_l[FullscreenErrorDialog.field_cb] = var2_long;
           FullscreenErrorDialog.field_cb = 31 & 1 + FullscreenErrorDialog.field_cb;
@@ -703,7 +703,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               (!MidiNoteMixer.field_p)) {
             dl.field_c = true;
             if ((ResizableDialog.field_S) &&
-                (-Geoblox.canvasCreationTimeMillis + oa.a(-12520) > 1000L)) {
+                (-Geoblox.canvasCreationTimeMillis + ClientClockSupport.correctedCurrentTimeMillis(-12520) > 1000L)) {
               var2 = param0.getClipBounds();
               if (null != var2) {
                 if (~var2.width > ~DialWidget.field_G) {
@@ -737,7 +737,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             return;
         }
         try {
-            MenuScreen.appletStopDeadlineMillis = oa.a(-12520);
+            MenuScreen.appletStopDeadlineMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520);
             ByteTextDecodingSupport.sleepMillis(0, 5000L);
             SpriteButtonRenderer.field_s = null;
             this.a((byte) 14, false);
@@ -832,7 +832,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (sg.field_a != null) {
+          if (SharedBufferPools.fullscreenFrame != null) {
             stackIn_4_0 = null;
             return (String) (stackIn_4_0);
           }
@@ -869,7 +869,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (param0 != 32000) {
             this.windowActivated((java.awt.event.WindowEvent) null);
           }
-          var2_long = oa.a(param0 - 44520);
+          var2_long = ClientClockSupport.correctedCurrentTimeMillis(param0 - 44520);
           var4 = ArchiveRequest.field_p[GzipInflater.field_k];
           ArchiveRequest.field_p[GzipInflater.field_k] = var2_long;
           GzipInflater.field_k = 31 & GzipInflater.field_k + 1;
@@ -886,14 +886,14 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               dl.field_c = true;
               MessageDialog.gameCanvas.setSize(AudioService.canvasWidth, ok.canvasHeight);
               MessageDialog.gameCanvas.setVisible(true);
-              if (!((sg.field_a != null) &&
+              if (!((SharedBufferPools.fullscreenFrame != null) &&
                   (FullscreenFocusCanvas.field_a == null))) {
                 MessageDialog.gameCanvas.setLocation(PrefixCodeDecoder.field_b, ButtonWidget.field_B);
                 if (Geoblox.clientControlFlowFlag == 0) {
                   break L2;
                 }
               }
-              var6 = sg.field_a.getInsets();
+              var6 = SharedBufferPools.fullscreenFrame.getInsets();
               MessageDialog.gameCanvas.setLocation(var6.left + PrefixCodeDecoder.field_b, ButtonWidget.field_B + var6.top);
             }
           }
@@ -912,7 +912,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           if ((this == PrefixCodeDecoder.field_d) &&
               (!MidiNoteMixer.field_p)) {
-            MenuScreen.appletStopDeadlineMillis = 4000L + oa.a(-12520);
+            MenuScreen.appletStopDeadlineMillis = 4000L + ClientClockSupport.correctedCurrentTimeMillis(-12520);
             return;
           }
           return;

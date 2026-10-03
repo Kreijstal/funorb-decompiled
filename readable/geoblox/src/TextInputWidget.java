@@ -9,7 +9,7 @@ class TextInputWidget extends ButtonWidget {
     private boolean field_G;
     private boolean field_E;
     private long field_P;
-    static byte[][] field_I;
+    static byte[][] byteArrayPool100;
     private int field_M;
     private long field_O;
     static int[] projectedMeshVertexY;
@@ -54,10 +54,10 @@ class TextInputWidget extends ButtonWidget {
                 this.field_H = var6;
               }
             }
-            this.field_O = oa.a(-12520);
+            this.field_O = ClientClockSupport.correctedCurrentTimeMillis(-12520);
           }
           if (hoverGuard) {
-            field_I = (byte[][]) null;
+            byteArrayPool100 = (byte[][]) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -137,7 +137,7 @@ class TextInputWidget extends ButtonWidget {
             this.renderer = DialRenderer.field_j.field_g;
             this.a(-128, param0, true);
             this.field_E = true;
-            this.field_O = oa.a(-12520);
+            this.field_O = ClientClockSupport.correctedCurrentTimeMillis(-12520);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "dj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -207,7 +207,7 @@ class TextInputWidget extends ButtonWidget {
             return;
         }
         projectedMeshVertexY = null;
-        field_I = (byte[][]) null;
+        byteArrayPool100 = (byte[][]) null;
     }
 
     final boolean handlePointerPress(int parentY, int methodGuard, int parentX, int pointerButton, int pointerX, int pointerY, UiWidget eventContext) {
@@ -230,7 +230,7 @@ class TextInputWidget extends ButtonWidget {
               stackIn_5_1 = 0;
             }
             this.a(stackIn_5_1, (byte) -123);
-            var8_long = oa.a(-12520);
+            var8_long = ClientClockSupport.correctedCurrentTimeMillis(-12520);
             if (var8_long - this.field_P >= 250L) {
               stackIn_8_1 = false;
             } else {
@@ -298,7 +298,7 @@ class TextInputWidget extends ButtonWidget {
             if (this.field_H != this.field_L) {
               var6.a(this.field_L, 0, parentY, parentX, this.field_H, (UiWidget) (this));
             }
-            var7 = oa.a(-12520);
+            var7 = ClientClockSupport.correctedCurrentTimeMillis(-12520);
             if ((-this.field_O + var7) % 1000L < 500L) {
               var6.a(parentX, this.field_H, -2, (UiWidget) (this), parentY);
             }
@@ -367,7 +367,7 @@ class TextInputWidget extends ButtonWidget {
           if (param1 != 13) {
             return false;
           }
-          this.field_O = oa.a(-12520);
+          this.field_O = ClientClockSupport.correctedCurrentTimeMillis(-12520);
           if (60 == param2) {
             return false;
           }
@@ -588,7 +588,7 @@ class TextInputWidget extends ButtonWidget {
 
     static {
         diskSectorBuffer = new byte[520];
-        field_I = new byte[1000][];
+        byteArrayPool100 = new byte[1000][];
         projectedMeshVertexY = new int[8192];
     }
 }

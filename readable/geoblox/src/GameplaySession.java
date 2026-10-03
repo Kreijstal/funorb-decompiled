@@ -101,7 +101,7 @@ final class GameplaySession {
           promptTop = 270;
         }
         L3: {
-          DelayedIncomingPacket.drawNineSlicePanel(promptTop, 70, 10 + promptHeight, (byte) -92, 500, ll.frameNineSliceSprites);
+          DelayedIncomingPacket.drawNineSlicePanel(promptTop, 70, 10 + promptHeight, (byte) -92, 500, GameGraphicsResources.frameNineSliceSprites);
           IntrusiveNodeHashTable.smallFont.drawParagraph(promptText, 95, 15 + promptTop, promptWidthThenButtonX, 300, 1, -1, 0, 0, lineSpacing);
           if (this.tutorialStepId == 5) {
             if ((PrefixCodeDecoder.pointerXSnapshot > 100) &&
@@ -230,7 +230,7 @@ final class GameplaySession {
         IntrusiveDeque debugSpawnQueueSnapshot = null;
         IntrusiveDeque debugMovingQueueSnapshot = null;
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
-        if (!ll.themesLoaded[GameScreen.selectedThemeId]) {
+        if (!GameGraphicsResources.themesLoaded[GameScreen.selectedThemeId]) {
           selectedThemeIdOrScoreBoxX = GameScreen.selectedThemeId;
           switch ((clientControlFlowGuard == 0
               || selectedThemeIdOrScoreBoxX == 0
@@ -269,9 +269,9 @@ final class GameplaySession {
             default:
               themeResourceGroup = "";
           }
-          graphicsLoadingMessage = EntityCollisionSupport.formatArchiveGroupProgress(TextWidgetRenderer.waitingForGraphicsText, ll.gameGraphicsArchive, themeResourceGroup, AccountWelcomePanel.loadingGraphicsText, true);
+          graphicsLoadingMessage = EntityCollisionSupport.formatArchiveGroupProgress(TextWidgetRenderer.waitingForGraphicsText, GameGraphicsResources.gameGraphicsArchive, themeResourceGroup, AccountWelcomePanel.loadingGraphicsText, true);
           loadingPanelWidthOrScoreBoxY = 30 + FadingDialog.uiPaletteFont.measureTextWidth(graphicsLoadingMessage);
-          DelayedIncomingPacket.drawNineSlicePanel(215, 320 - loadingPanelWidthOrScoreBoxY / 2, 50, (byte) -92, loadingPanelWidthOrScoreBoxY, ll.frameNineSliceSprites);
+          DelayedIncomingPacket.drawNineSlicePanel(215, 320 - loadingPanelWidthOrScoreBoxY / 2, 50, (byte) -92, loadingPanelWidthOrScoreBoxY, GameGraphicsResources.frameNineSliceSprites);
           FadingDialog.uiPaletteFont.drawCenteredText(graphicsLoadingMessage, 320, 250, 0, -1);
           return;
         }
@@ -336,7 +336,7 @@ final class GameplaySession {
             tutorialLineHeightOrDebugEntityRadius = -IntrusiveNodeHashTable.smallFont.maxDescent + IntrusiveNodeHashTable.smallFont.maxAscent;
             tutorialPanelWidth = IntrusiveNodeHashTable.smallFont.measureMaximumWrappedWidth(CanvasResizeController.tutorialSkipMessage, 640) + 40;
             tutorialTextHeightOrDebugPanelTop = IntrusiveNodeHashTable.smallFont.countWrappedLines(CanvasResizeController.tutorialSkipMessage, 640) * tutorialLineHeightOrDebugEntityRadius + 10;
-            DelayedIncomingPacket.drawNineSlicePanel(tutorialTopOrDebugColorOrTransitionClipTop, -(tutorialPanelWidth / 2) + 320, 20 + tutorialTextHeightOrDebugPanelTop, (byte) -92, tutorialPanelWidth, ll.frameNineSliceSprites);
+            DelayedIncomingPacket.drawNineSlicePanel(tutorialTopOrDebugColorOrTransitionClipTop, -(tutorialPanelWidth / 2) + 320, 20 + tutorialTextHeightOrDebugPanelTop, (byte) -92, tutorialPanelWidth, GameGraphicsResources.frameNineSliceSprites);
             IntrusiveNodeHashTable.smallFont.drawCenteredText(CanvasResizeController.tutorialSkipMessage, 320, tutorialTopOrDebugColorOrTransitionClipTop + 28, 1, -1);
             IntrusiveNodeHashTable.smallFont.drawCenteredText(CanvasResizeController.tutorialSkipMessage, 319, 28 + tutorialTopOrDebugColorOrTransitionClipTop, 1, -1);
             if (clientControlFlowGuard == 0) {
@@ -542,7 +542,7 @@ final class GameplaySession {
                   SoftwareRasterizer.setClip(0, tutorialTopOrDebugColorOrTransitionClipTop, 640, 480);
                   SpriteCheckboxRenderer.boardSceneRaster.draw(0, 0);
                   SoftwareRasterizer.setClip(0, 0, 640, 480);
-                  qj.transitionCurtain.draw(0, -480 + 6 * this.sceneAnimationTick);
+                  CharacterReplacementSupport.transitionCurtain.draw(0, -480 + 6 * this.sceneAnimationTick);
                   if (clientControlFlowGuard == 0) {
                     break L55;
                   }
@@ -642,7 +642,7 @@ final class GameplaySession {
                 break L7;
               }
             }
-            if (!ll.themesLoaded[GameScreen.selectedThemeId]) {
+            if (!GameGraphicsResources.themesLoaded[GameScreen.selectedThemeId]) {
               return;
             }
             L14: {
@@ -662,14 +662,14 @@ final class GameplaySession {
                 ScorePopup.setAvatarNegativeRotationSteering((byte) 38);
                 inputDerivedModuloIndex = (SessionSnapshotSupport.currentKeyboardEventCode + kd.field_c + PrefixCodeDecoder.pointerXSnapshot + FullscreenFocusCanvas.pointerPressYSnapshot) % 8;
                 if (inputDerivedModuloIndex == 0) {
-                  oa.field_a = oa.field_a + kb.field_d;
+                  ClientClockSupport.field_a = ClientClockSupport.field_a + kb.field_d;
                   DequeCursor.field_g = DequeCursor.field_g - 1;
                   if (clientControlFlowGuard == 0) {
                     break L17;
                   }
                 }
                 if (inputDerivedModuloIndex == 1) {
-                  oa.field_a = oa.field_a + DequeCursor.field_g;
+                  ClientClockSupport.field_a = ClientClockSupport.field_a + DequeCursor.field_g;
                   kb.field_d = kb.field_d - 1;
                   if (clientControlFlowGuard == 0) {
                     break L17;
@@ -677,7 +677,7 @@ final class GameplaySession {
                 }
                 if (inputDerivedModuloIndex != 2) {
                   if (3 == inputDerivedModuloIndex) {
-                    oa.field_a = oa.field_a - DequeCursor.field_g;
+                    ClientClockSupport.field_a = ClientClockSupport.field_a - DequeCursor.field_g;
                     kb.field_d = kb.field_d + 1;
                     if (clientControlFlowGuard == 0) {
                       break L17;
@@ -714,7 +714,7 @@ final class GameplaySession {
                   }
                 }
                 DequeCursor.field_g = DequeCursor.field_g + 1;
-                oa.field_a = oa.field_a - kb.field_d;
+                ClientClockSupport.field_a = ClientClockSupport.field_a - kb.field_d;
               }
               L25: {
                 inputDerivedModuloIndex = (kd.field_c + FullscreenFocusCanvas.pointerPressYSnapshot + PrefixCodeDecoder.pointerXSnapshot + SessionSnapshotSupport.currentKeyboardEventCode) % 5;
@@ -769,7 +769,7 @@ final class GameplaySession {
                       if (inputDerivedModuloIndex != 2) {
                         if (inputDerivedModuloIndex == 3) {
                           kb.field_d = kb.field_d + 1;
-                          oa.field_a = oa.field_a - DequeCursor.field_g;
+                          ClientClockSupport.field_a = ClientClockSupport.field_a - DequeCursor.field_g;
                           if (clientControlFlowGuard == 0) {
                             break L32;
                           }
@@ -805,19 +805,19 @@ final class GameplaySession {
                         }
                       }
                       DequeCursor.field_g = DequeCursor.field_g + 1;
-                      oa.field_a = oa.field_a - kb.field_d;
+                      ClientClockSupport.field_a = ClientClockSupport.field_a - kb.field_d;
                       if (clientControlFlowGuard == 0) {
                         break L32;
                       }
                     }
-                    oa.field_a = oa.field_a + DequeCursor.field_g;
+                    ClientClockSupport.field_a = ClientClockSupport.field_a + DequeCursor.field_g;
                     kb.field_d = kb.field_d - 1;
                     if (clientControlFlowGuard == 0) {
                       break L32;
                     }
                   }
                   DequeCursor.field_g = DequeCursor.field_g - 1;
-                  oa.field_a = oa.field_a + kb.field_d;
+                  ClientClockSupport.field_a = ClientClockSupport.field_a + kb.field_d;
                 }
                 inputDerivedModuloIndex = (kd.field_c + PrefixCodeDecoder.pointerXSnapshot + FullscreenFocusCanvas.pointerPressYSnapshot + SessionSnapshotSupport.currentKeyboardEventCode) % 5;
                 if (inputDerivedModuloIndex != 0) {
@@ -1228,13 +1228,13 @@ final class GameplaySession {
               }
             }
             oneThirdPoints = pointsForCounters / 3;
-            oa.field_a = oa.field_a + oneThirdPoints;
+            ClientClockSupport.field_a = ClientClockSupport.field_a + oneThirdPoints;
             SpriteButtonRenderer.field_r = SpriteButtonRenderer.field_r - (pointsForCounters - oneThirdPoints);
             if (controlFlowGuard == 0) {
               break L3;
             }
           }
-          oa.field_a = oa.field_a + pointsForCounters;
+          ClientClockSupport.field_a = ClientClockSupport.field_a + pointsForCounters;
         }
         if ((da.a(0, -117)) &&
             (this.score >= 7000)) {
@@ -1489,7 +1489,7 @@ final class GameplaySession {
           if (2 == this.sessionPhase) {
             PacketBuffer.resultBubbleSprite.drawScaledAlpha(320 - (this.sceneAnimationTick >> 1), 240 - (this.sceneAnimationTick >> 1), this.sceneAnimationTick, this.sceneAnimationTick, 150);
             lj.smallBoxSprite.draw(this.resultPanelX, -(lj.smallBoxSprite.fullHeight >> 1) + 240 + 60);
-            FadingDialog.uiPaletteFont.drawText(sg.field_f, 15 + this.resultPanelX, 312, 0, -1);
+            FadingDialog.uiPaletteFont.drawText(SharedBufferPools.bubbleBonusText, 15 + this.resultPanelX, 312, 0, -1);
             if (clientControlFlowGuard == 0) {
               break L1;
             }
@@ -1669,7 +1669,7 @@ final class GameplaySession {
         }
         if ((0 < this.score && !this.submissionBlocked) &&
             (!UnderlinedButtonRenderer.c(-102))) {
-            ContentTransitionDialog.createAndSubmitScore(oa.field_a, 22, kb.field_d, 25134, new int[]{this.score}, SpriteButtonRenderer.field_r, 65513, 3, DequeCursor.field_g);
+            ContentTransitionDialog.createAndSubmitScore(ClientClockSupport.field_a, 22, kb.field_d, 25134, new int[]{this.score}, SpriteButtonRenderer.field_r, 65513, 3, DequeCursor.field_g);
         }
         FifoResponseToken.activeHighscoreQuery = null;
     }
@@ -1770,7 +1770,7 @@ final class GameplaySession {
           }
           ScoreSubmission.requestedScreenId = 0;
         }
-        IntrusiveNodeHashTable.selectLoopingBackgroundMusic(0, ll.titleMusicTrack);
+        IntrusiveNodeHashTable.selectLoopingBackgroundMusic(0, GameGraphicsResources.titleMusicTrack);
     }
 
     private final void resetScoreState(int methodGuard) {
@@ -1780,7 +1780,7 @@ final class GameplaySession {
         UiWidget.achievementTrackingAccumulator = 8801;
         SpriteButtonRenderer.field_r = 1385;
         AttachedEntityRenderer.achievementTrackingBits = 0;
-        oa.field_a = 4703;
+        ClientClockSupport.field_a = 4703;
         DequeCursor.field_g = 5997;
         kb.field_d = 275;
         lb.secondaryAchievementTrackingCounter = 935;
@@ -1908,7 +1908,7 @@ final class GameplaySession {
           if (MultiHandleSliderRenderer.rotatedThemeForegroundRaster == null) {
             MultiHandleSliderRenderer.rotatedThemeForegroundRaster = new Sprite(MatchScoringSupport.selectedThemeForeground.width, MatchScoringSupport.selectedThemeForeground.height);
           }
-          oa.field_a = 4703;
+          ClientClockSupport.field_a = 4703;
           kb.field_d = 275;
           lb.secondaryAchievementTrackingCounter = 935;
           AttachedEntityRenderer.achievementTrackingBits = 0;

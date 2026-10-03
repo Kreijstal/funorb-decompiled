@@ -180,7 +180,7 @@ final class AchievementSubmission extends IntrusiveNode {
                   cameraZZQ16OrNormalY = mesh.normalY[cameraXZQ16OrNormalIndex];
                   cameraXBasisOrDeltaXOrClipCenterXOrNormalZ = mesh.normalZ[cameraXZQ16OrNormalIndex];
                   ok.transformedMeshNormalX[cameraXZQ16OrNormalIndex] = cameraXBasisOrDeltaXOrClipCenterXOrNormalZ * cameraXYOrNormalXZQ16 + (cameraXXOrNormalXYQ16 * cameraZZQ16OrNormalY + cameraYZQ16OrNormalX * cameraTranslationXScaledOrNormalXXQ16) >> 16;
-                  oa.transformedMeshNormalY[cameraXZQ16OrNormalIndex] = cameraYYOrNormalYZQ16 * cameraXBasisOrDeltaXOrClipCenterXOrNormalZ + (cameraYZQ16OrNormalX * cameraTranslationYScaledOrNormalYXQ16 + cameraZZQ16OrNormalY * cameraYXOrNormalYYQ16) >> 16;
+                  ClientClockSupport.transformedMeshNormalY[cameraXZQ16OrNormalIndex] = cameraYYOrNormalYZQ16 * cameraXBasisOrDeltaXOrClipCenterXOrNormalZ + (cameraYZQ16OrNormalX * cameraTranslationYScaledOrNormalYXQ16 + cameraZZQ16OrNormalY * cameraYXOrNormalYYQ16) >> 16;
                   IterableNodeHashTable.transformedMeshNormalZ[cameraXZQ16OrNormalIndex] = cameraZXOrNormalZYQ16 * cameraZZQ16OrNormalY + (cameraTranslationZOrNormalZXQ16 * cameraYZQ16OrNormalX + cameraZYOrNormalZZQ16 * cameraXBasisOrDeltaXOrClipCenterXOrNormalZ) >> 16;
                   cameraXZQ16OrNormalIndex++;
                   continue;

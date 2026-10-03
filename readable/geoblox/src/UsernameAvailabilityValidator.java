@@ -29,8 +29,8 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          param1 = qj.a(param1, "", '_', (byte) 119);
-          var3 = CachedArchiveSource.a(105, param2);
+          param1 = CharacterReplacementSupport.replaceCharacter(param1, "", '_', (byte) 119);
+          var3 = CachedArchiveSource.reverseTextCodeUnits(105, param2);
           if (param0 != 8) {
             cameraMeshVertexY = (int[]) null;
           }
@@ -66,7 +66,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
                 return UsernameSuggestionsPanel.tutorialRotationMessage;
             }
             if (var2 == 1) {
-                return oi.tutorialColourMatchMessage;
+                return ByteArrayPoolSupport.tutorialColourMatchMessage;
             }
             if (!(var2 == 2)) {
                 if (var2 == 3) {
@@ -84,7 +84,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
             return UsernameSuggestionsPanel.tutorialRotationMessage;
         }
         if (var2 == 1) {
-            return oi.tutorialColourMatchMessage;
+            return ByteArrayPoolSupport.tutorialColourMatchMessage;
         }
         if (!(var2 == 2)) {
             if (var2 == 3) {
@@ -158,8 +158,8 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
         try {
           ProgressBarWidget.field_D[0] = DelegatingCanvas.field_d.nextInt();
           ProgressBarWidget.field_D[1] = DelegatingCanvas.field_d.nextInt();
-          ProgressBarWidget.field_D[2] = (int)(ak.field_a >> 32);
-          ProgressBarWidget.field_D[3] = (int)ak.field_a;
+          ProgressBarWidget.field_D[2] = (int)(TextValidationSupport.field_a >> 32);
+          ProgressBarWidget.field_D[3] = (int)TextValidationSupport.field_a;
           EndingAnimationSupport.loginPayloadBuffer.position = 0;
           EndingAnimationSupport.loginPayloadBuffer.writeIntBE((byte) 95, ProgressBarWidget.field_D[0]);
           EndingAnimationSupport.loginPayloadBuffer.writeIntBE((byte) 95, ProgressBarWidget.field_D[1]);
@@ -185,7 +185,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
           if (rb.field_c) {
             var6 = var6 | 1;
           }
-          if (ll.field_e) {
+          if (GameGraphicsResources.field_e) {
             var6 = var6 | 4;
           }
           if (param4) {

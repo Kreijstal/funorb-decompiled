@@ -207,7 +207,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
               this.suggestionButtons[var5].setWidgetBounds(15, 80, (byte) -14, var5 * 16 + 20, 0);
               this.addChild((byte) -126, this.suggestionButtons[var5]);
             }
-            this.suggestionButtons[var3_int] = new ButtonWidget(ll.createMoreSuggestionsText, (WidgetListener) (this));
+            this.suggestionButtons[var3_int] = new ButtonWidget(GameGraphicsResources.createMoreSuggestionsText, (WidgetListener) (this));
             this.suggestionButtons[var3_int].renderer = (WidgetRenderer) ((Object) var4);
             this.suggestionButtons[var3_int].setWidgetBounds(15, 100, (byte) -59, 16 + (var3_int * 16 + 20), 0);
             this.addChild((byte) -122, this.suggestionButtons[var3_int]);

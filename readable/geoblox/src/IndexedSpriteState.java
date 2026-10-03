@@ -82,7 +82,7 @@ abstract class IndexedSpriteState {
             UnderlinedButtonRenderer.field_e = OpacityWidget.loadSpriteFrames("frame_bottom", "commonui", param2, 0);
             AvatarFeedbackSupport.grayJagexLogoSprite = ScorePopupSupport.loadSprite("jagex_logo_grey", param2, (byte) -78, "commonui");
             MouseWheelInput.field_e = OpacityWidget.loadSpriteFrames("button", "commonui", param2, 0);
-            oa.field_e = oi.a((byte) -39, "validation", "commonui", param2);
+            ClientClockSupport.validationStateSprites = ByteArrayPoolSupport.loadSpritesByName((byte) -39, "validation", "commonui", param2);
             UiFontResources.commonUiSmallFont = (BitmapFont) ((Object) TextInputValidator.loadCoverageFont(param3, 1, "arezzo12", "commonui", param2));
             DialogLayer.sharedUiFont = (BitmapFont) ((Object) TextInputValidator.loadCoverageFont(param3, 1, "arezzo14", "commonui", param2));
             UiFontResources.commonUiBoldFont = (BitmapFont) ((Object) TextInputValidator.loadCoverageFont(param3, 1, "arezzo14bold", "commonui", param2));

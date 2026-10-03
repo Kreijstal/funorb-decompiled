@@ -6,7 +6,7 @@ final class EmailValidator extends TextInputValidator {
     static int archiveGameCrc;
     static boolean[] themeMusicPreparationFlags;
     static int availableSpriteVariantCount;
-    static int field_i;
+    static int byteArrayPool30000Count;
 
     final String validationMessageForText(int guard, String candidateText) {
         RuntimeException var3 = null;
@@ -244,6 +244,6 @@ final class EmailValidator extends TextInputValidator {
           field_m[var2] = var0;
         }
         themeMusicPreparationFlags = new boolean[7];
-        field_i = 0;
+        byteArrayPool30000Count = 0;
     }
 }

@@ -6,7 +6,7 @@ final class DisplayModeInfo {
     static String quitToWebsiteText;
     int height;
     static int avatarTintColor;
-    static long field_b;
+    static long backwardClockCorrectionMillis;
     int width;
     static String loggingInText;
     int refreshRate;

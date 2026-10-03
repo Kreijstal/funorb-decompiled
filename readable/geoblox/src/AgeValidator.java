@@ -114,7 +114,7 @@ final class AgeValidator extends TextInputValidator {
           if (methodGuard < 8) {
             AgeValidator.c((byte) 121);
           }
-          popup = (ScorePopup) ((Object) md.activeScorePopups.firstForIteration(0));
+          popup = (ScorePopup) ((Object) GmtTimestampSupport.activeScorePopups.firstForIteration(0));
           while (popup != null) {
             if (!(popup.progress >= 1.0f)) {
               popup.progress = popup.progress + (0.03999999910593033f * popup.progress + 0.00004999999873689376f);
@@ -127,7 +127,7 @@ final class AgeValidator extends TextInputValidator {
                 PcmResampler.availableScorePopups.addLast(-35, popup);
               }
             }
-            popup = (ScorePopup) ((Object) md.activeScorePopups.nextForIteration(1));
+            popup = (ScorePopup) ((Object) GmtTimestampSupport.activeScorePopups.nextForIteration(1));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

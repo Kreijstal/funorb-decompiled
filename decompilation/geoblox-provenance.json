@@ -3277,11 +3277,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "326816a3f5fbb4099ae77ed336b8e174e8fe3a6c",
+    "commit": "30b63ee42afe0d38a548029c66bd62503565e21f",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "183a3184d2160b6524c7fa7dc1123c8792f5c932aef6f8af506aeb2db3f79d96"
+      "sha256": "3e341440f1950878a3bda5f95fb778ab36015f092aefeded3e9e35f3f077026e"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "1cc93fe6ce2f5ebe827371ae7bbff4c444254ba838f6ad4749fc2b9697156e85",
@@ -3291,15 +3291,15 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "5088f96cf997cb2418a5518c922435c5f0860f37f1b7418ea1bfc7185df030c5",
+    "outputTreeSha256": "7db0a8b65a52e2d56daf01db71ac1ae06269a8a6216451b2a23643f8c5e2ff78",
     "files": 303,
-    "rules": 10596,
-    "identifierEdits": 83103,
+    "rules": 10902,
+    "identifierEdits": 84798,
     "bindingsCompared": 136612,
     "overrideRelationshipsPreserved": 388,
     "relocation": "Current scripts, manifest, proofs and frozen naming dependency moved from FunOrb to Deko; previous reviewed rules remain in FunOrb Git history. Source proof imports and repository paths change, native trace/oracle constants do not.",
     "runtimeEquivalenceVerified": false,
-    "totalEdits": 83114,
+    "totalEdits": 84809,
     "classNameLiteralEdits": 11,
     "classNameLiteralBindingsCompared": 11
   },
@@ -3530,5 +3530,51 @@
     "rawSourceAndDecompilerInputsChanged": false,
     "wholeGameEquivalenceVerified": false,
     "limits": "Headless factories, wheel events/drain and raster drawing are asserted. Three hardware bridges are loaded and their member signatures resolved; successful fullscreen, Robot and COM operations are not executed. Dynamic strings and arbitrary foreign-loader compatibility are outside the literal policy. Full game, phone, FPS and heap remain unverified."
+  },
+  "textClockPoolNaming": {
+    "passVersion": 124,
+    "workflowCommit": "30b63ee42afe0d38a548029c66bd62503565e21f",
+    "manifestSha256": "3e341440f1950878a3bda5f95fb778ab36015f092aefeded3e9e35f3f077026e",
+    "previousRules": {
+      "repository": "Kreijstal/dekobloko-work",
+      "commit": "326816a3f5fbb4099ae77ed336b8e174e8fe3a6c",
+      "path": "readable/geoblox-rules.json",
+      "sha256": "183a3184d2160b6524c7fa7dc1123c8792f5c932aef6f8af506aeb2db3f79d96"
+    },
+    "rulesAdded": 306,
+    "rulesAddedByKind": {
+      "C": 10,
+      "F": 23,
+      "L": 178,
+      "M": 32,
+      "P": 63
+    },
+    "previousCompleteRulesPreserved": 10596,
+    "classesNamed": [
+      "TextWidgetSupport",
+      "TextValidationSupport",
+      "GameGraphicsResources",
+      "GmtTimestampSupport",
+      "TextConcatenationSupport",
+      "ClientClockSupport",
+      "ByteArrayPoolSupport",
+      "CharacterReplacementSupport",
+      "SharedBufferPools",
+      "SettingsCookieSupport"
+    ],
+    "allAuditedOwnerParametersAndLocalsNamed": true,
+    "identifierEditsAdded": 1695,
+    "classConstructorSpellingEdits": 0,
+    "classNameLiteralEdits": 11,
+    "bindingsCompared": 136612,
+    "classNameLiteralBindingsCompared": 11,
+    "overrideRelationshipsPreserved": 388,
+    "publicationTestGroupsPassed": 25,
+    "nativeProbeFilesPassed": 8,
+    "nativeProbeSourceAndTracePinsUnchanged": true,
+    "dictionaryRestorationFiles": 303,
+    "sourceToolAndBytecodePinsUnchanged": true,
+    "wholeGameEquivalenceVerified": false,
+    "limits": "Source-audited static text/pool/clock/cookie/graphics helpers retain guard, overflow, alias, exception and monitor behavior. Shared calendar and recursion remain. Optional byte pools have no fixed-source non-null setup/refill. Existing native fixtures keep their scopes; no new live clock/cookie/archive/platform/game/server/browser/phone or performance coverage."
   }
 }

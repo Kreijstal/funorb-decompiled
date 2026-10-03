@@ -9,7 +9,7 @@ abstract class ArchiveNetworkClient {
     static int difficultyStep;
     SecondaryDeque pendingBackgroundRequests;
     static String createPasswordLengthAlertText;
-    static String[] field_a;
+    static String[] gmtWeekdayAbbreviations;
     static String waitingForMusicText;
     SecondaryDeque sentBackgroundRequests;
     int responseIdleMillis;
@@ -93,7 +93,7 @@ abstract class ArchiveNetworkClient {
             try {
               Thread.sleep(durationMillis);
               if (methodGuard != -33) {
-                field_a = (String[]) null;
+                gmtWeekdayAbbreviations = (String[]) null;
                 return;
               }
             } catch (java.lang.InterruptedException sleepInterruption) {
@@ -197,7 +197,7 @@ abstract class ArchiveNetworkClient {
         int unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
         IndexedSprite[] sprites = new IndexedSprite[ClientTimingSupport.decodedSpriteCount];
         for (spriteIndex = firstSpriteIndex; ClientTimingSupport.decodedSpriteCount > spriteIndex; spriteIndex++) {
-            sprites[spriteIndex] = new IndexedSprite(GameplaySetupSupport.decodedSpriteCanvasWidth, FadingDialog.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[spriteIndex], md.decodedSpriteYOffsets[spriteIndex], DualLinkNode.decodedSpriteWidths[spriteIndex], ProgressBarWidget.decodedSpriteHeights[spriteIndex], mj.decodedSpriteIndices[spriteIndex], NanoFrameTimer.decodedSpritePalette);
+            sprites[spriteIndex] = new IndexedSprite(GameplaySetupSupport.decodedSpriteCanvasWidth, FadingDialog.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[spriteIndex], GmtTimestampSupport.decodedSpriteYOffsets[spriteIndex], DualLinkNode.decodedSpriteWidths[spriteIndex], ProgressBarWidget.decodedSpriteHeights[spriteIndex], TextConcatenationSupport.decodedSpriteIndices[spriteIndex], NanoFrameTimer.decodedSpritePalette);
         }
         MidiPcmStream.clearDecodedSpriteWorkingArrays(true);
         return sprites;
@@ -206,7 +206,7 @@ abstract class ArchiveNetworkClient {
     public static void d(int param0) {
         waitingForMusicText = null;
         movingEntities = null;
-        field_a = null;
+        gmtWeekdayAbbreviations = null;
         createPasswordLengthAlertText = null;
         createWelcomeText = null;
         int var1 = 78 / ((15 - param0) / 56);
@@ -230,6 +230,6 @@ abstract class ArchiveNetworkClient {
         difficultyStep = 0;
         createPasswordLengthAlertText = "Passwords must be between 5 and 20 characters long";
         waitingForMusicText = "Waiting for music";
-        field_a = new String[]{"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
+        gmtWeekdayAbbreviations = new String[]{"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
     }
 }

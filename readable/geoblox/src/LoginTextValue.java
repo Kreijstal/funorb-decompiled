@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class LoginTextValue {
-    static String[] field_a;
+    static String[] gmtMonthAbbreviations;
     private String text;
     private boolean includeInLookupRequest;
     static LoginMethod field_b;
@@ -60,7 +60,7 @@ final class LoginTextValue {
         if (param0 != -1) {
             return;
         }
-        field_a = null;
+        gmtMonthAbbreviations = null;
         field_b = null;
     }
 
@@ -72,7 +72,7 @@ final class LoginTextValue {
     }
 
     static {
-        field_a = new String[]{"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
+        gmtMonthAbbreviations = new String[]{"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
         field_b = new LoginMethod("email");
     }
 }

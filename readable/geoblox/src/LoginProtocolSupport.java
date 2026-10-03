@@ -45,7 +45,7 @@ final class LoginProtocolSupport {
                   EntityContactSupport.pendingLoginPayload = HotspotTextWidget.a(false, primaryLoginText, secondaryLoginText, false);
                 } else {
                   unusedNullLongPayloadTextSnapshot = (String) null;
-                  EntityContactSupport.pendingLoginPayload = SecondaryDeque.a(true, oa.field_c, (String) null, primaryLoginText, false);
+                  EntityContactSupport.pendingLoginPayload = SecondaryDeque.a(true, ClientClockSupport.field_c, (String) null, primaryLoginText, false);
                 }
                 CacheReference.field_q.position = 0;
                 CacheReference.field_q.writeByte((byte) -102, 14);
@@ -67,7 +67,7 @@ final class LoginProtocolSupport {
               }
               if ((MessageDialog.awaitingLoginLongState == PacketBuffer.currentProtocolStage) &&
                   (UiWidget.b(30000, 8))) {
-                ak.field_a = LogoCompositor.sessionPacketBuffer.readLongBE(2901);
+                TextValidationSupport.field_a = LogoCompositor.sessionPacketBuffer.readLongBE(2901);
                 LogoCompositor.sessionPacketBuffer.position = 0;
                 UsernameAvailabilityValidator.a(26, affiliateId, useLongLoginPayload, EntityContactSupport.pendingLoginPayload, enableLoginFlagBitEight);
                 PacketBuffer.currentProtocolStage = da.awaitingLoginResultStage;
@@ -101,7 +101,7 @@ final class LoginProtocolSupport {
               }
               if ((da.awaitingLoginDetailsStage == PacketBuffer.currentProtocolStage) &&
                   (TriangleMesh.a(false))) {
-                oa.field_c = LogoCompositor.sessionPacketBuffer.readLongBE(2901);
+                ClientClockSupport.field_c = LogoCompositor.sessionPacketBuffer.readLongBE(2901);
                 SpriteCheckboxRenderer.field_f = LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
                 LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
                 TextTemplateDefinition.field_n = LogoCompositor.sessionPacketBuffer.readUnsignedShortBE(true);
@@ -118,7 +118,7 @@ final class LoginProtocolSupport {
                   if (!TextHotspotBounds.field_l) {
                   }
                 }
-                if (ll.field_e) {
+                if (GameGraphicsResources.field_e) {
                   LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
                   LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
                   LogoCompositor.sessionPacketBuffer.readIntBE((byte) -48);
@@ -142,7 +142,7 @@ final class LoginProtocolSupport {
                 }
                 TextTemplateArgumentType.field_e = false;
                 if (settingsCookieValue != null) {
-                  tc.a(100, settingsCookieValue, NodeHashTableIterator.c(112));
+                  SettingsCookieSupport.storeSettingsCookie(100, settingsCookieValue, NodeHashTableIterator.c(112));
                 }
                 if ((TextTemplateDefinition.field_n <= 0) &&
                     (!GzipInflater.field_b)) {
@@ -154,7 +154,7 @@ final class LoginProtocolSupport {
                   }
                 } else {
                   try {
-                    AppletJavaScriptBridge.callWithArguments(-14882, new Object[]{UnderlinedButtonRenderer.a(oa.field_c, methodGuard + 97)}, NodeHashTableIterator.c(methodGuard + 119), "zap");
+                    AppletJavaScriptBridge.callWithArguments(-14882, new Object[]{UnderlinedButtonRenderer.a(ClientClockSupport.field_c, methodGuard + 97)}, NodeHashTableIterator.c(methodGuard + 119), "zap");
                   } catch (java.lang.Throwable zapScriptFailure) {
                     caughtLoginOrScriptFailure = zapScriptFailure;
                     ignoredScriptFailure = caughtLoginOrScriptFailure;
@@ -190,7 +190,7 @@ final class LoginProtocolSupport {
               }
               if (null == SpriteCheckboxRenderer.field_e) {
                 if (TextTemplateArgumentType.field_e) {
-                  if (30000L >= ll.a((byte) 12)) {
+                  if (30000L >= GameGraphicsResources.elapsedSinceSessionActivity((byte) 12)) {
                     AudioService.field_a = FullscreenFailureReason.loginMessage2Text;
                   } else {
                     AudioService.field_a = IntrusiveNode.loginMessage3Text;

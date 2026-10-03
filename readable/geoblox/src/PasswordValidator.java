@@ -49,7 +49,7 @@ final class PasswordValidator extends TextInputValidator {
             stackIn_6_0 = ArchiveNetworkClient.createPasswordLengthAlertText;
             return stackIn_6_0;
           }
-          if (ak.a(var5, (byte) -120)) {
+          if (TextValidationSupport.containsNonAsciiAlphanumeric(var5, (byte) -120)) {
             stackIn_10_0 = ScoreSubmission.createPasswordCharacterAlertText;
             return stackIn_10_0;
           }
@@ -68,7 +68,7 @@ final class PasswordValidator extends TextInputValidator {
             stackIn_22_0 = ArchiveLoadStep.createPasswordValidText;
             return stackIn_22_0;
           }
-          if (ak.a(var5, var6, -98)) {
+          if (TextValidationSupport.containsTextOrReverse(var5, var6, -98)) {
             stackIn_26_0 = EntityCollisionSupport.createPasswordContainsNameAlertText;
             return stackIn_26_0;
           }

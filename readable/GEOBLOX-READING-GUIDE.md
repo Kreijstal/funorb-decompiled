@@ -7,14 +7,14 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/326816a3f5fbb4099ae77ed336b8e174e8fe3a6c/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/30b63ee42afe0d38a548029c66bd62503565e21f/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 123)
+## Current readability (pass 124)
 
-The export has 10,596 guarded names and 83,103 identifier edits, plus 11 recorded
-class-name literal edits. Class coverage is 265 semantic renames, one already
-meaningful `Geoblox` name and 37 opaque names.
+The export has 10,902 guarded names and 84,798 identifier edits, plus 11 recorded
+class-name literal edits. Class coverage is 275 semantic renames, one already
+meaningful `Geoblox` name and 27 opaque top-level names.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
 compile and compare 136,612 bindings, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
@@ -24,7 +24,30 @@ predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
 
-Pass 123 names the five previously held reflective implementations:
+Pass 124 adds 306 guarded names: ten classes, 23 fields, 32 methods,
+63 parameters and 178 locals. All 10,596 previous complete rules and source,
+naming-tool, decompiler, bytecode and native fixture pins remain. The export now
+has 10,902 rules and 84,798 identifier edits, with the same 11 separately recorded
+class-name literal edits. All parameters and locals in the ten audited owners,
+plus the selected cross-owner text primitives, have guarded semantic names.
+Both 303-file corpora compile and compare 136,612 bindings, 388 override
+relationships and 11 reflected class-literal records. Dictionary reversal recovers
+all 303 pinned raw files byte-for-byte. Class coverage is 275 renamed, one meaningful
+original name and 27 opaque top-level names; six large labeled bodies and 207
+plain-block labels remain.
+
+The named chains cover exact-size byte-array pool acquisition/storage, corrected
+wall-clock sampling and session elapsed time, shared GMT cookie timestamps,
+settings-cookie writing, UTF-16 reversal, ASCII letter/digit predicates, signed
+radix parsing, selected-range concatenation, character replacement and sprite
+loading. Shared statics remain on their original owners. The calendar remains
+mutable/shared; wrong guards, recursion, partial writes, numeric flags, arithmetic
+overflow, strings and exception/monitor boundaries remain unchanged. No new live
+clock/cookie/archive/platform/game/browser/phone performance coverage is added.
+The 25 publication checks and all eight fixed native probes pass within their
+existing scopes; all sources reproduce from clean committed checkouts.
+
+Pass 123 named the five previously held reflective implementations:
 `AwtMouseWheelListener`, `BufferedImageRasterBuffer`, `AwtFullscreenBridge`,
 `AwtCursorBridge` and `LegacyDirectSoundBridge`. It adds 58 guarded naming rules:
 five classes, six fields, two methods, 18 parameters and 27 locals. All 10,538
@@ -4405,3 +4428,65 @@ by silently returning null or selecting the image-producer fallback. Wheel check
 cover overflow, event consumption, null-event failure without draining, reset and
 listener-removal guard timing. Raster checks cover shared storage, image pixel
 values, draw offsets and observer guards. All prior seven probe hashes remain.
+
+## Text, clock, cookie and buffer helpers
+
+| Readable owner | Raw identity | Named entry points |
+| --- | --- | --- |
+| `TextWidgetSupport` | `ah` | `buildRepeatedCharacterRange`, `getDefaultTextWidgetRenderer` |
+| `TextValidationSupport` | `ak` | `containsTextOrReverse`, `containsNonAsciiAlphanumeric`, `listLoginMethods` |
+| `GameGraphicsResources` | `ll` | `loadRgbSpritesById`, `elapsedSinceSessionActivity` |
+| `GmtTimestampSupport` | `md` | `formatGmtTimestamp` |
+| `TextConcatenationSupport` | `mj` | `joinCharSequenceRange`, `validateAsciiDigits` |
+| `ClientClockSupport` | `oa` | `correctedCurrentTimeMillis`, `parseIntWithRadix` |
+| `ByteArrayPoolSupport` | `oi` | `acquireByteArray`, `loadSpritesByName`, `resendIntRecordRequests` |
+| `CharacterReplacementSupport` | `qj` | `replaceCharacter`, `getAccountAgeYears` |
+| `SharedBufferPools` | `sg` | `rasterSnapshotPool`, `additionalByteArrayPools` |
+| `SettingsCookieSupport` | `tc` | `storeSettingsCookie`, `isRepresentableTextCharacter` |
+
+`acquireByteArray(earlyReturnGuard, length)` first checks the 100-byte and 5,000-byte
+pool counts and pops their exact-length stack slots. Only after those checks does
+the true guard return null. A false guard continues to the 30,000-byte pool and
+optional configured-size pools, then allocates a new array. Each pop decrements
+the count before reading, and clears the selected slot after the read. Storage,
+counts and optional lengths remain on their original owners; the field names now
+connect this chain. In the fixed source the optional pools lack non-null setup,
+and standard counts initialize to zero with no refill/release path. The names do
+not imply that pool reuse occurs during ordinary gameplay.
+
+`correctedCurrentTimeMillis` remains synchronized on its class. It samples
+`System.currentTimeMillis`, adds `previousWallClockMillis - wallClockMillis` to
+`backwardClockCorrectionMillis` if the clock moves backward, saves the sample and
+returns sample plus correction. Its guard still clears subscription text and
+all signed overflow behavior remains. `elapsedSinceSessionActivity` subtracts
+`sessionActivityStartMillis`, which is also assigned by socket/UI protocol paths.
+It is a corrected wall-clock helper, with no nanoTime or overflow guarantee.
+
+`formatGmtTimestamp` mutates the existing shared GMT calendar and uses the named
+`gmtWeekdayAbbreviations` and `gmtMonthAbbreviations` tables. It is not pure or
+synchronized. For a wrong guard, the original recursive call changes the shared
+calendar to -99 milliseconds while the previously read weekday remains. The
+settings writer stores `settingsCookieValue` before attempting the JavaScript
+cookie, uses the applet's `cookieprefix` and `cookiehost`, retains its fixed
+three-year expiry or epoch-deletion string, catches the inner `Throwable`, then
+refreshes settings. These names describe source behavior; live browser cookie
+operation and current server compatibility are not verified.
+
+`reverseTextCodeUnits` on `CachedArchiveSource` reverses UTF-16 code units;
+`containsTextOrReverse` uses that result plus the original substring and retained
+edge checks. Surrogate pairs are not treated as single characters.
+`ArchiveCatalog.isAsciiLetter` and `DualLinkNode.isAsciiDigit` make the
+alphanumeric scan explicit. `SettingsCookieSupport.isRepresentableTextCharacter`
+accepts the original direct byte ranges and nonzero extended CP1252 entries.
+`ReflectionCheckRequest.parseSignedInt` names the radix2..36 scan, optional
+leading plus, negative accumulator flag, digit-seen flag and division overflow
+check. Its explicit integer flags and labeled first-character skip remain.
+
+`joinCharSequenceRange(startIndex, count, parts, methodGuard)` keeps its separate
+zero-count and single-part paths, literal `null` substitution, capacity scan and
+append order. `validateAsciiDigits` accepts the empty string via its original
+marker. `replaceCharacter` scans occurrences to estimate capacity, then appends
+prefixes, replacements and a tail. `buildRepeatedCharacterRange` fills only the
+selected start-to-length range; earlier characters remain zero. Guard effects,
+negative lengths/counts, alias snapshots, diagnostic literals and exception
+context all stay visible. No raw body or generic tool is rewritten in this pass.

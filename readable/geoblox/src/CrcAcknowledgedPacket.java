@@ -17,8 +17,8 @@ final class CrcAcknowledgedPacket extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          param1 = qj.a(param1, "", '_', (byte) 127);
-          var3 = CachedArchiveSource.a(82, param1);
+          param1 = CharacterReplacementSupport.replaceCharacter(param1, "", '_', (byte) 127);
+          var3 = CachedArchiveSource.reverseTextCodeUnits(82, param1);
           if (param2 > -77) {
             field_g = true;
           }
@@ -52,7 +52,7 @@ final class CrcAcknowledgedPacket extends IntrusiveNode {
         int sentinelDivisionGuard = -71 / ((-59 - methodGuard) / 47);
         float normalizedRadiusSquared = maxAttachedRadiusSquared / 52900.0f;
         int tintPaletteIndex = (int)(0.5f + 4.0f * normalizedRadiusSquared);
-        md.avatarTintRedDelta = (float)(-(DisplayModeInfo.avatarTintColor >> 16 & 255) + ((DiskCacheWorker.avatarTintPalette[tintPaletteIndex] & 16722826) >> 16));
+        GmtTimestampSupport.avatarTintRedDelta = (float)(-(DisplayModeInfo.avatarTintColor >> 16 & 255) + ((DiskCacheWorker.avatarTintPalette[tintPaletteIndex] & 16722826) >> 16));
         GzipInflater.avatarTintGreenDelta = (float)((DiskCacheWorker.avatarTintPalette[tintPaletteIndex] >> 8 & 255) - (DisplayModeInfo.avatarTintColor >> 8 & 255));
         UsernameAvailabilityValidator.avatarTintBlueDelta = (float)(-(255 & DisplayModeInfo.avatarTintColor) + (255 & DiskCacheWorker.avatarTintPalette[tintPaletteIndex]));
         MultiHandleSliderRenderer.avatarTintFadeTicks = 50;

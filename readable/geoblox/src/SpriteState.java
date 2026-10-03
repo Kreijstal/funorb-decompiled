@@ -195,7 +195,7 @@ abstract class SpriteState extends DualLinkNode {
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(120, "bubbleBonus");
           if (var2 != null) {
-            sg.field_f = EmailValidator.decodeTextBytes(1, var2);
+            SharedBufferPools.bubbleBonusText = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(126, "endOfFreeGame");
           if (var2 != null) {
@@ -258,7 +258,7 @@ abstract class SpriteState extends DualLinkNode {
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(127, "tutorial2");
           if (var2 != null) {
-            oi.tutorialColourMatchMessage = EmailValidator.decodeTextBytes(1, var2);
+            ByteArrayPoolSupport.tutorialColourMatchMessage = EmailValidator.decodeTextBytes(1, var2);
           }
           var2 = EntityContactSupport.readNamedRootArchiveFile(121, "tutorial3");
           if (null != var2) {

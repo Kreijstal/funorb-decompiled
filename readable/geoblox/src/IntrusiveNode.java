@@ -148,8 +148,8 @@ class IntrusiveNode {
           DialogLayer.decodedSpriteHasNonOpaqueAlpha = new boolean[ClientTimingSupport.decodedSpriteCount];
           HotspotTextWidget.decodedSpriteAlpha = new byte[ClientTimingSupport.decodedSpriteCount][];
           GameplaySession.decodedSpriteXOffsets = new int[ClientTimingSupport.decodedSpriteCount];
-          mj.decodedSpriteIndices = new byte[ClientTimingSupport.decodedSpriteCount][];
-          md.decodedSpriteYOffsets = new int[ClientTimingSupport.decodedSpriteCount];
+          TextConcatenationSupport.decodedSpriteIndices = new byte[ClientTimingSupport.decodedSpriteCount][];
+          GmtTimestampSupport.decodedSpriteYOffsets = new int[ClientTimingSupport.decodedSpriteCount];
           spriteDataBufferAlias.position = -7 + spriteBytes.length - ClientTimingSupport.decodedSpriteCount * 8;
           GameplaySetupSupport.decodedSpriteCanvasWidth = spriteDataBufferAlias.readUnsignedShortBE(true);
           FadingDialog.decodedSpriteCanvasHeight = spriteDataBufferAlias.readUnsignedShortBE(true);
@@ -158,7 +158,7 @@ class IntrusiveNode {
             GameplaySession.decodedSpriteXOffsets[spriteIndex] = spriteDataBuffer.readUnsignedShortBE(readGuard);
           }
           for (spriteIndex = 0; spriteIndex < ClientTimingSupport.decodedSpriteCount; spriteIndex++) {
-            md.decodedSpriteYOffsets[spriteIndex] = spriteDataBuffer.readUnsignedShortBE(true);
+            GmtTimestampSupport.decodedSpriteYOffsets[spriteIndex] = spriteDataBuffer.readUnsignedShortBE(true);
           }
           for (spriteIndex = 0; ClientTimingSupport.decodedSpriteCount > spriteIndex; spriteIndex++) {
             DualLinkNode.decodedSpriteWidths[spriteIndex] = spriteDataBuffer.readUnsignedShortBE(true);
@@ -182,7 +182,7 @@ class IntrusiveNode {
             allocatedPaletteIndices = new byte[pixelCount];
             paletteIndicesForwarded = allocatedPaletteIndices;
             paletteIndicesForUpdates = paletteIndicesForwarded;
-            mj.decodedSpriteIndices[spriteIndex] = allocatedPaletteIndices;
+            TextConcatenationSupport.decodedSpriteIndices[spriteIndex] = allocatedPaletteIndices;
             allocatedAlphaPlane = new byte[pixelCount];
             alphaPlaneForwarded = allocatedAlphaPlane;
             alphaPlaneForUpdates = alphaPlaneForwarded;

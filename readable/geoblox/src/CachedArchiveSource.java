@@ -288,42 +288,42 @@ final class CachedArchiveSource extends ArchiveSource {
         return (ArchiveRequest) (request);
     }
 
-    final static String a(int param0, String param1) {
-        int var4 = 0;
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        char[] var3 = null;
-        int var5 = 0;
-        String var6 = null;
-        String stackIn_7_0 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var5 = Geoblox.clientControlFlowFlag;
+    final static String reverseTextCodeUnits(int methodGuard, String text) {
+        int characterIndex = 0;
+        int textLength = 0;
+        RuntimeException reverseFailureForContext = null;
+        char[] reversedCharacters = null;
+        int clientControlFlowGuard = 0;
+        String guardedNullTextSnapshot = null;
+        String reversedTextBeforeReturn = null;
+        RuntimeException reverseFailureBeforeContext = null;
+        StringBuilder reverseMessagePrefix = null;
+        String textDescription = null;
+        RuntimeException caughtReverseFailure = null;
+        clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
-          var2_int = param1.length();
-          var3 = new char[var2_int];
-          for (var4 = 0; var4 < var2_int; var4++) {
-            var3[-var4 + (-1 + var2_int)] = param1.charAt(var4);
+          textLength = text.length();
+          reversedCharacters = new char[textLength];
+          for (characterIndex = 0; characterIndex < textLength; characterIndex++) {
+            reversedCharacters[-characterIndex + (-1 + textLength)] = text.charAt(characterIndex);
           }
-          if (param0 < 26) {
-            var6 = (String) null;
-            CachedArchiveSource.a(68, (String) null);
+          if (methodGuard < 26) {
+            guardedNullTextSnapshot = (String) null;
+            CachedArchiveSource.reverseTextCodeUnits(68, (String) null);
           }
-          stackIn_7_0 = new String(var3);
-          return stackIn_7_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_10_0 = var2;
-          stackIn_10_1 = new StringBuilder().append("bj.A(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_11_2 = "null";
+          reversedTextBeforeReturn = new String(reversedCharacters);
+          return reversedTextBeforeReturn;
+        } catch (java.lang.RuntimeException reverseFailure) {
+          caughtReverseFailure = reverseFailure;
+          reverseFailureForContext = caughtReverseFailure;
+          reverseFailureBeforeContext = reverseFailureForContext;
+          reverseMessagePrefix = new StringBuilder().append("bj.A(").append(methodGuard).append(',');
+          if (text == null) {
+            textDescription = "null";
           } else {
-            stackIn_11_2 = "{...}";
+            textDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) reverseFailureBeforeContext), ((StringBuilder) (Object) reverseMessagePrefix).append(textDescription).append(')').toString());
         }
     }
 
@@ -526,7 +526,7 @@ final class CachedArchiveSource extends ArchiveSource {
                       if (!this.sweepCompletedRequests) {
                         break L0;
                       }
-                      if (~oa.a(-12520) > ~this.nextRequestSweepMillis) {
+                      if (~ClientClockSupport.correctedCurrentTimeMillis(-12520) > ~this.nextRequestSweepMillis) {
                         break L1;
                       }
                       cleanupRequest = (ArchiveRequest) ((Object) this.groupRequests.a((byte) 125));
@@ -555,7 +555,7 @@ final class CachedArchiveSource extends ArchiveSource {
               if (!this.sweepCompletedRequests) {
                 break L0;
               }
-              if (~oa.a(-12520) > ~this.nextRequestSweepMillis) {
+              if (~ClientClockSupport.correctedCurrentTimeMillis(-12520) > ~this.nextRequestSweepMillis) {
                 break L1;
               }
               cleanupRequest = (ArchiveRequest) ((Object) this.groupRequests.a((byte) 125));
@@ -573,7 +573,7 @@ final class CachedArchiveSource extends ArchiveSource {
                 cleanupRequest = (ArchiveRequest) ((Object) this.groupRequests.b(74));
               }
             }
-            this.nextRequestSweepMillis = 1000L + oa.a(methodGuard - 12482);
+            this.nextRequestSweepMillis = 1000L + ClientClockSupport.correctedCurrentTimeMillis(methodGuard - 12482);
           }
         }
     }

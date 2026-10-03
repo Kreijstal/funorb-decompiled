@@ -204,7 +204,7 @@ final class LogoCompositor {
 
     final static void resetUiInteractionState(byte methodGuard) {
         InstrumentPatch.field_q = false;
-        tc.field_a = null;
+        SettingsCookieSupport.field_a = null;
         int sentinelDivision = 46 / ((methodGuard + 64) / 39);
         ResizableDialog.field_V = 0;
         ByteTextDecodingSupport.field_a = -1;

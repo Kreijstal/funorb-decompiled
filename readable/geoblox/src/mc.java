@@ -87,7 +87,7 @@ final class mc {
           wb.pointerActivitySnapshot = EndingAnimationSupport.pointerActivityPending;
           EndingAnimationSupport.pointerActivityPending = false;
           CheckboxRenderer.pointerPressButtonSnapshot = ClientSessionSnapshot.pendingPointerPressButton;
-          pointerPressXSnapshot = ah.livePointerPressX;
+          pointerPressXSnapshot = TextWidgetSupport.livePointerPressX;
           FullscreenFocusCanvas.pointerPressYSnapshot = DisplayNamePanel.livePointerPressY;
           ClientSessionSnapshot.pendingPointerPressButton = 0;
         }

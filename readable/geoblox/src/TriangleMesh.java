@@ -180,7 +180,7 @@ final class TriangleMesh {
               (AccountCreationForm.field_C.length >= param2))) {
           AccountCreationForm.field_C = new boolean[2 * param2];
         }
-        md.field_c = 0;
+        GmtTimestampSupport.field_c = 0;
         MeshPrioritySupport.field_b = -2147483648;
         ok.field_b = 2147483647;
         ProxyAuthenticationRequiredException.field_a = -2147483648;
@@ -196,12 +196,12 @@ final class TriangleMesh {
         Sprite[] sprites = new Sprite[ClientTimingSupport.decodedSpriteCount];
         for (spriteIndex = 0; ClientTimingSupport.decodedSpriteCount > spriteIndex; spriteIndex++) {
             pixelCount = ProgressBarWidget.decodedSpriteHeights[spriteIndex] * DualLinkNode.decodedSpriteWidths[spriteIndex];
-            paletteIndices = mj.decodedSpriteIndices[spriteIndex];
+            paletteIndices = TextConcatenationSupport.decodedSpriteIndices[spriteIndex];
             rgbPixels = new int[pixelCount];
             for (pixelIndex = 0; pixelIndex < pixelCount; pixelIndex++) {
                 rgbPixels[pixelIndex] = NanoFrameTimer.decodedSpritePalette[ProxySocketConnector.andInt((int) paletteIndices[pixelIndex], 255)];
             }
-            sprites[spriteIndex] = new Sprite(GameplaySetupSupport.decodedSpriteCanvasWidth, FadingDialog.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[spriteIndex], md.decodedSpriteYOffsets[spriteIndex], DualLinkNode.decodedSpriteWidths[spriteIndex], ProgressBarWidget.decodedSpriteHeights[spriteIndex], rgbPixels);
+            sprites[spriteIndex] = new Sprite(GameplaySetupSupport.decodedSpriteCanvasWidth, FadingDialog.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[spriteIndex], GmtTimestampSupport.decodedSpriteYOffsets[spriteIndex], DualLinkNode.decodedSpriteWidths[spriteIndex], ProgressBarWidget.decodedSpriteHeights[spriteIndex], rgbPixels);
         }
         if (methodGuard != 255) {
             screenTransitionTick = 40;

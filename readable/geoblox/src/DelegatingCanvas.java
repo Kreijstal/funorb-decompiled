@@ -73,10 +73,10 @@ final class DelegatingCanvas extends java.awt.Canvas {
           }
           var4 = var14.readUnsignedByte((byte) 34);
           if (var4 != 0) {
-            oi.field_a[0] = SecondaryDeque.field_f;
+            ByteArrayPoolSupport.rankedListResponseNames[0] = SecondaryDeque.field_f;
             var5 = var3.entryLimit;
             for (var6_int = 1; var4 > var6_int; var6_int++) {
-              oi.field_a[var6_int] = var14.readNullTerminatedText((byte) 120);
+              ByteArrayPoolSupport.rankedListResponseNames[var6_int] = var14.readNullTerminatedText((byte) 120);
             }
             TriangleMesh.a(2147483647, var5, var4);
             for (var6_int = 0; var4 > var6_int; var6_int++) {
@@ -90,17 +90,17 @@ final class DelegatingCanvas extends java.awt.Canvas {
             BoardReconciliationSupport.sortRankedListIndices(var5, (byte) -98);
             var6 = new String[2][var5];
             var18 = new int[2][4 * var5];
-            var8 = md.field_c;
+            var8 = GmtTimestampSupport.field_c;
             var9 = 0;
             var10 = 0;
             while (var9 < var8) {
               var11 = AchievementQuery.field_i[var9];
-              var6[0][var10] = oi.field_a[var11];
+              var6[0][var10] = ByteArrayPoolSupport.rankedListResponseNames[var11];
               var18[0][4 * var10] = hg.field_a[var11];
               var18[0][4 * var10 + 1] = TextHotspotBounds.field_m[var11];
               var18[0][4 * var10 + 2] = NodeHashTableIterator.field_i[var11];
               var18[0][4 * var10 + 3] = FrameTimer.field_b[var11];
-              if ((WhirlpoolHash.a(oi.field_a[var11], (byte) 12)) &&
+              if ((WhirlpoolHash.a(ByteArrayPoolSupport.rankedListResponseNames[var11], (byte) 12)) &&
                   (FrameTimer.field_b[var11] + (TextHotspotBounds.field_m[var11] + NodeHashTableIterator.field_i[var11]) == 0)) {
                 var6[0][var10] = null;
                 var10--;
@@ -113,12 +113,12 @@ final class DelegatingCanvas extends java.awt.Canvas {
             var10 = var13;
             while (var9 < var8) {
               var11 = AchievementQuery.field_i[var9 + var5];
-              var6[1][var13] = oi.field_a[var11];
+              var6[1][var13] = ByteArrayPoolSupport.rankedListResponseNames[var11];
               var18[1][4 * var13] = hg.field_a[var11];
               var18[1][1 + 4 * var13] = TextHotspotBounds.field_m[var11];
               var18[1][var13 * 4 + 2] = NodeHashTableIterator.field_i[var11];
               var18[1][var13 * 4 + 3] = FrameTimer.field_b[var11];
-              if ((WhirlpoolHash.a(oi.field_a[var11], (byte) 12)) &&
+              if ((WhirlpoolHash.a(ByteArrayPoolSupport.rankedListResponseNames[var11], (byte) 12)) &&
                   (FrameTimer.field_b[var11] + NodeHashTableIterator.field_i[var11] + TextHotspotBounds.field_m[var11] == 0)) {
                 var6[1][var13] = null;
                 var13--;

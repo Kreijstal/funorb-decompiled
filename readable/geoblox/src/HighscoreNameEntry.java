@@ -85,7 +85,7 @@ final class HighscoreNameEntry {
           if (param1 != -2) {
             HighscoreNameEntry.handleSocialListResponse((byte) -59);
           }
-          oi.field_e = param0;
+          ByteArrayPoolSupport.field_e = param0;
           ArchiveRequest.field_s = param2;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -243,7 +243,7 @@ final class HighscoreNameEntry {
           if (methodGuard != 4520) {
             HighscoreNameEntry.blendScaledDebugOverviewPixels(-56, -44, (int[]) null, 118, 4, -55, 25, -98, -82, -78, (byte) -35, (int[]) null, -116);
           }
-          font = new MonochromeBitmapFont(metrics, GameplaySession.decodedSpriteXOffsets, md.decodedSpriteYOffsets, DualLinkNode.decodedSpriteWidths, ProgressBarWidget.decodedSpriteHeights, mj.decodedSpriteIndices);
+          font = new MonochromeBitmapFont(metrics, GameplaySession.decodedSpriteXOffsets, GmtTimestampSupport.decodedSpriteYOffsets, DualLinkNode.decodedSpriteWidths, ProgressBarWidget.decodedSpriteHeights, TextConcatenationSupport.decodedSpriteIndices);
           MidiPcmStream.clearDecodedSpriteWorkingArrays(true);
           fontBeforeReturn = font;
           return fontBeforeReturn;

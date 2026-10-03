@@ -57,12 +57,12 @@ final class ScorePopupSupport {
         popup.chainMultiplier = chainMultiplier;
         if (methodGuard) {
             popup.originY = (float)originY;
-            md.activeScorePopups.addLast(-95, popup);
+            GmtTimestampSupport.activeScorePopups.addLast(-95, popup);
             return;
         }
         createEmailText = (String) null;
         popup.originY = (float)originY;
-        md.activeScorePopups.addLast(-95, popup);
+        GmtTimestampSupport.activeScorePopups.addLast(-95, popup);
     }
 
     final static Sprite loadSprite(String resourceName, ResourceArchive graphicsArchive, byte methodGuard, String groupName) {
