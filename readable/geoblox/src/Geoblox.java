@@ -848,36 +848,27 @@ public final class Geoblox extends wf {
           fc.a(true, (java.awt.Canvas) (var2));
           return;
         }
-        L1: {
-          sh.mainRasterBuffer.setAsRasterTarget(param0 - 25598);
-          SoftwareRasterizer.clearFramebuffer();
-          if ((tc.currentScreenId == ai.requestedScreenId) &&
-              (el.gameplayReturnScreenId == -1)) {
-            if (tc.currentScreenId != -1) {
-              og.screens[tc.currentScreenId].renderScreen(-28750);
-              break L1;
-            }
-            if (!dl.field_b) {
-              el.gameplaySession.renderSession((byte) -49);
-              break L1;
-            }
+        sh.mainRasterBuffer.setAsRasterTarget(param0 - 25598);
+        SoftwareRasterizer.clearFramebuffer();
+        if ((tc.currentScreenId == ai.requestedScreenId) &&
+            (el.gameplayReturnScreenId == -1)) {
+          if (tc.currentScreenId != -1) {
+            og.screens[tc.currentScreenId].renderScreen(-28750);
+          } else if (!dl.field_b) {
+            el.gameplaySession.renderSession((byte) -49);
+          } else {
             oc.c(240);
-            break L1;
           }
-          L3: {
-            transitionSplitY = -480 + (TriangleMesh.screenTransitionTick * 6 + 35);
-            if ((el.gameplayReturnScreenId == -1) &&
-                (!qj.clearGameplayDuringTransition)) {
-              if (ai.requestedScreenId == -1) {
-                el.gameplaySession.renderSession((byte) -68);
-                break L3;
-              }
-              if (tc.currentScreenId != -1) {
-                break L3;
-              }
+        } else {
+          transitionSplitY = -480 + (TriangleMesh.screenTransitionTick * 6 + 35);
+          if ((el.gameplayReturnScreenId == -1) &&
+              (!qj.clearGameplayDuringTransition)) {
+            if (ai.requestedScreenId == -1) {
               el.gameplaySession.renderSession((byte) -68);
-              break L3;
+            } else if (!(tc.currentScreenId != -1)) {
+              el.gameplaySession.renderSession((byte) -68);
             }
+          } else {
             SoftwareRasterizer.fillRectangle(0, 0, 640, 480, 1);
           }
           if (tc.currentScreenId == -2) {

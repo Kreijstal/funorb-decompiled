@@ -94,23 +94,17 @@ class ByteArrayBuffer extends IntrusiveNode {
           for (characterIndex = 19; characterIndex >= 0; characterIndex--) {
             accumulatedChunk = accumulatedChunk * 38L;
             if (textLength > characterIndex) {
-              L3: {
-                characterCode = text.charAt(characterIndex);
-                if ((characterCode >= 65) &&
-                    (90 >= characterCode)) {
-                  accumulatedChunk = accumulatedChunk + (long)(-63 + characterCode);
-                  break L3;
-                }
-                if ((characterCode >= 97) &&
-                    (characterCode <= 122)) {
-                  accumulatedChunk = accumulatedChunk + (long)(-97 + (2 + characterCode));
-                  break L3;
-                }
-                if ((characterCode >= 48) &&
-                    (characterCode <= 57)) {
-                  accumulatedChunk = accumulatedChunk + (long)(-48 + characterCode + 28);
-                  break L3;
-                }
+              characterCode = text.charAt(characterIndex);
+              if ((characterCode >= 65) &&
+                  (90 >= characterCode)) {
+                accumulatedChunk = accumulatedChunk + (long)(-63 + characterCode);
+              } else if ((characterCode >= 97) &&
+                  (characterCode <= 122)) {
+                accumulatedChunk = accumulatedChunk + (long)(-97 + (2 + characterCode));
+              } else if ((characterCode >= 48) &&
+                  (characterCode <= 57)) {
+                accumulatedChunk = accumulatedChunk + (long)(-48 + characterCode + 28);
+              } else {
                 accumulatedChunk = accumulatedChunk + 1L;
               }
               if (characterIndex != 10) {

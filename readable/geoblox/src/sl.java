@@ -74,20 +74,16 @@ final class sl {
             sl.a((java.awt.Canvas) null, 58);
           }
           while (var2_int > var4) {
-            L3: {
-              var5 = param0.charAt(var4);
-              if ((var5 >= 65) &&
-                  (var5 <= 90)) {
-                var3[var4] = (char)(-65 + (var5 + 97));
-                break L3;
-              }
-              if (!((var5 >= 97) &&
-                    (var5 <= 122)) &&
-                  !((var5 >= 48) &&
-                    (var5 <= 57))) {
-                var3[var4] = (char)95;
-                break L3;
-              }
+            var5 = param0.charAt(var4);
+            if ((var5 >= 65) &&
+                (var5 <= 90)) {
+              var3[var4] = (char)(-65 + (var5 + 97));
+            } else if (!((var5 >= 97) &&
+                  (var5 <= 122)) &&
+                !((var5 >= 48) &&
+                  (var5 <= 57))) {
+              var3[var4] = (char)95;
+            } else {
               var3[var4] = (char)var5;
             }
             var4++;

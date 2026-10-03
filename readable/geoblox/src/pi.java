@@ -130,18 +130,15 @@ final class pi extends vf {
         Sprite var17;
         Sprite var18;
         Sprite var19;
-        L0: {
-          var14 = Geoblox.field_C;
-          var6 = this.field_M.a((byte) -105);
-          if ((var6 != ImageProducerRasterBuffer.field_g) &&
-              (var6 != si.field_n)) {
-            var5 = this.field_M.c(-21666);
-            if (var5 != null) {
-              break L0;
-            }
+        var14 = Geoblox.field_C;
+        var6 = this.field_M.a((byte) -105);
+        if ((var6 != ImageProducerRasterBuffer.field_g) &&
+            (var6 != si.field_n)) {
+          var5 = this.field_M.c(-21666);
+          if (!(var5 != null)) {
             var5 = this.field_N;
-            break L0;
           }
+        } else {
           var5 = cm.checkingText;
         }
         if (!var5.equals(this.field_s)) {

@@ -318,126 +318,122 @@ final class hi extends ee implements ta, pl {
           }
           for (characterIndex = 0; characterIndex < encodedLength; characterIndex++) {
             L1: {
-              L2: {
-                characterCode = text.charAt(characterStart + characterIndex);
-                if ((0 < characterCode) &&
-                    (characterCode < 128)) {
-                  break L2;
-                }
-                if ((characterCode >= 160) &&
-                    (characterCode <= 255)) {
-                  break L2;
-                }
-                if (characterCode == 8364) {
-                  destination[characterIndex + destinationOffset] = (byte)-128;
+              characterCode = text.charAt(characterStart + characterIndex);
+              if (!((0 < characterCode) &&
+                  (characterCode < 128))) {
+                if (!((characterCode >= 160) &&
+                    (characterCode <= 255))) {
+                  if (characterCode == 8364) {
+                    destination[characterIndex + destinationOffset] = (byte)-128;
+                    break L1;
+                  }
+                  if (characterCode == 8218) {
+                    destination[destinationOffset + characterIndex] = (byte)-126;
+                    break L1;
+                  }
+                  if (characterCode == 402) {
+                    destination[destinationOffset + characterIndex] = (byte)-125;
+                    break L1;
+                  }
+                  if (8222 == characterCode) {
+                    destination[characterIndex + destinationOffset] = (byte)-124;
+                    break L1;
+                  }
+                  if (8230 == characterCode) {
+                    destination[characterIndex + destinationOffset] = (byte)-123;
+                    break L1;
+                  }
+                  if (characterCode == 8224) {
+                    destination[destinationOffset + characterIndex] = (byte)-122;
+                    break L1;
+                  }
+                  if (characterCode == 8225) {
+                    destination[characterIndex + destinationOffset] = (byte)-121;
+                    break L1;
+                  }
+                  if (characterCode == 710) {
+                    destination[characterIndex + destinationOffset] = (byte)-120;
+                    break L1;
+                  }
+                  if (8240 == characterCode) {
+                    destination[characterIndex + destinationOffset] = (byte)-119;
+                    break L1;
+                  }
+                  if (characterCode == 352) {
+                    destination[destinationOffset + characterIndex] = (byte)-118;
+                    break L1;
+                  }
+                  if (characterCode == 8249) {
+                    destination[destinationOffset + characterIndex] = (byte)-117;
+                    break L1;
+                  }
+                  if (characterCode == 338) {
+                    destination[characterIndex + destinationOffset] = (byte)-116;
+                    break L1;
+                  }
+                  if (381 == characterCode) {
+                    destination[characterIndex + destinationOffset] = (byte)-114;
+                    break L1;
+                  }
+                  if (characterCode == 8216) {
+                    destination[destinationOffset + characterIndex] = (byte)-111;
+                    break L1;
+                  }
+                  if (characterCode == 8217) {
+                    destination[destinationOffset + characterIndex] = (byte)-110;
+                    break L1;
+                  }
+                  if (characterCode == 8220) {
+                    destination[characterIndex + destinationOffset] = (byte)-109;
+                    break L1;
+                  }
+                  if (characterCode == 8221) {
+                    destination[destinationOffset + characterIndex] = (byte)-108;
+                    break L1;
+                  }
+                  if (8226 == characterCode) {
+                    destination[destinationOffset + characterIndex] = (byte)-107;
+                    break L1;
+                  }
+                  if (8211 == characterCode) {
+                    destination[characterIndex + destinationOffset] = (byte)-106;
+                    break L1;
+                  }
+                  if (characterCode == 8212) {
+                    destination[destinationOffset + characterIndex] = (byte)-105;
+                    break L1;
+                  }
+                  if (characterCode == 732) {
+                    destination[characterIndex + destinationOffset] = (byte)-104;
+                    break L1;
+                  }
+                  if (characterCode == 8482) {
+                    destination[destinationOffset + characterIndex] = (byte)-103;
+                    break L1;
+                  }
+                  if (characterCode == 353) {
+                    destination[destinationOffset + characterIndex] = (byte)-102;
+                    break L1;
+                  }
+                  if (characterCode == 8250) {
+                    destination[characterIndex + destinationOffset] = (byte)-101;
+                    break L1;
+                  }
+                  if (339 == characterCode) {
+                    destination[characterIndex + destinationOffset] = (byte)-100;
+                    break L1;
+                  }
+                  if (characterCode == 382) {
+                    destination[characterIndex + destinationOffset] = (byte)-98;
+                    break L1;
+                  }
+                  if (characterCode != 376) {
+                    destination[characterIndex + destinationOffset] = (byte)63;
+                    break L1;
+                  }
+                  destination[characterIndex + destinationOffset] = (byte)-97;
                   break L1;
                 }
-                if (characterCode == 8218) {
-                  destination[destinationOffset + characterIndex] = (byte)-126;
-                  break L1;
-                }
-                if (characterCode == 402) {
-                  destination[destinationOffset + characterIndex] = (byte)-125;
-                  break L1;
-                }
-                if (8222 == characterCode) {
-                  destination[characterIndex + destinationOffset] = (byte)-124;
-                  break L1;
-                }
-                if (8230 == characterCode) {
-                  destination[characterIndex + destinationOffset] = (byte)-123;
-                  break L1;
-                }
-                if (characterCode == 8224) {
-                  destination[destinationOffset + characterIndex] = (byte)-122;
-                  break L1;
-                }
-                if (characterCode == 8225) {
-                  destination[characterIndex + destinationOffset] = (byte)-121;
-                  break L1;
-                }
-                if (characterCode == 710) {
-                  destination[characterIndex + destinationOffset] = (byte)-120;
-                  break L1;
-                }
-                if (8240 == characterCode) {
-                  destination[characterIndex + destinationOffset] = (byte)-119;
-                  break L1;
-                }
-                if (characterCode == 352) {
-                  destination[destinationOffset + characterIndex] = (byte)-118;
-                  break L1;
-                }
-                if (characterCode == 8249) {
-                  destination[destinationOffset + characterIndex] = (byte)-117;
-                  break L1;
-                }
-                if (characterCode == 338) {
-                  destination[characterIndex + destinationOffset] = (byte)-116;
-                  break L1;
-                }
-                if (381 == characterCode) {
-                  destination[characterIndex + destinationOffset] = (byte)-114;
-                  break L1;
-                }
-                if (characterCode == 8216) {
-                  destination[destinationOffset + characterIndex] = (byte)-111;
-                  break L1;
-                }
-                if (characterCode == 8217) {
-                  destination[destinationOffset + characterIndex] = (byte)-110;
-                  break L1;
-                }
-                if (characterCode == 8220) {
-                  destination[characterIndex + destinationOffset] = (byte)-109;
-                  break L1;
-                }
-                if (characterCode == 8221) {
-                  destination[destinationOffset + characterIndex] = (byte)-108;
-                  break L1;
-                }
-                if (8226 == characterCode) {
-                  destination[destinationOffset + characterIndex] = (byte)-107;
-                  break L1;
-                }
-                if (8211 == characterCode) {
-                  destination[characterIndex + destinationOffset] = (byte)-106;
-                  break L1;
-                }
-                if (characterCode == 8212) {
-                  destination[destinationOffset + characterIndex] = (byte)-105;
-                  break L1;
-                }
-                if (characterCode == 732) {
-                  destination[characterIndex + destinationOffset] = (byte)-104;
-                  break L1;
-                }
-                if (characterCode == 8482) {
-                  destination[destinationOffset + characterIndex] = (byte)-103;
-                  break L1;
-                }
-                if (characterCode == 353) {
-                  destination[destinationOffset + characterIndex] = (byte)-102;
-                  break L1;
-                }
-                if (characterCode == 8250) {
-                  destination[characterIndex + destinationOffset] = (byte)-101;
-                  break L1;
-                }
-                if (339 == characterCode) {
-                  destination[characterIndex + destinationOffset] = (byte)-100;
-                  break L1;
-                }
-                if (characterCode == 382) {
-                  destination[characterIndex + destinationOffset] = (byte)-98;
-                  break L1;
-                }
-                if (characterCode != 376) {
-                  destination[characterIndex + destinationOffset] = (byte)63;
-                  break L1;
-                }
-                destination[characterIndex + destinationOffset] = (byte)-97;
-                break L1;
               }
               destination[destinationOffset + characterIndex] = (byte)characterCode;
             }

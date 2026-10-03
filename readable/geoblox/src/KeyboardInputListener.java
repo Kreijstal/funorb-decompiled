@@ -17,18 +17,15 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
           if (je.keyboardListener == null) {
             return;
           }
-          L0: {
-            nk.keyboardIdleTicks = 0;
-            internalKeyCode = event.getKeyCode();
-            if ((internalKeyCode >= 0) &&
-                (oe.awtKeyCodeToInternalCode.length > internalKeyCode)) {
-              internalKeyCode = oe.awtKeyCodeToInternalCode[internalKeyCode];
-              if ((internalKeyCode & 128) == 0) {
-                break L0;
-              }
+          nk.keyboardIdleTicks = 0;
+          internalKeyCode = event.getKeyCode();
+          if ((internalKeyCode >= 0) &&
+              (oe.awtKeyCodeToInternalCode.length > internalKeyCode)) {
+            internalKeyCode = oe.awtKeyCodeToInternalCode[internalKeyCode];
+            if (!((internalKeyCode & 128) == 0)) {
               internalKeyCode = -1;
-              break L0;
             }
+          } else {
             internalKeyCode = -1;
           }
           if ((ii.keyStateWriteIndexOrResetSentinel >= 0) &&

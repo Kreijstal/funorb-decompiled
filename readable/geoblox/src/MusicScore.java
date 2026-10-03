@@ -554,88 +554,66 @@ final class MusicScore extends IntrusiveNode {
               if (statusChanged != 0) {
                 midiOutput.writeByte((byte) -19, 176 + channelNumber);
               }
-              L12: {
-                controllerReadIndex = eventCodeOrControllerCursor;
-                eventCodeOrControllerCursor++;
-                controllerNumber = controllerNumber + packedInput.bytes[controllerReadIndex] & 127;
-                midiOutput.writeByte((byte) 126, controllerNumber);
-                if ((controllerNumber != 0) &&
-                    (controllerNumber != 32)) {
-                  if (controllerNumber == 1) {
-                    controller1ReadIndex = controller1Cursor;
-                    controller1Cursor++;
-                    controllerValueOrDelta = packedInput.bytes[controller1ReadIndex];
-                    break L12;
-                  }
-                  if (controllerNumber == 33) {
-                    controller33ReadIndex = controller33Cursor;
-                    controller33Cursor++;
-                    controllerValueOrDelta = packedInput.bytes[controller33ReadIndex];
-                    break L12;
-                  }
-                  if (controllerNumber == 7) {
-                    controller7ReadIndex = controller7Cursor;
-                    controller7Cursor++;
-                    controllerValueOrDelta = packedInput.bytes[controller7ReadIndex];
-                    break L12;
-                  }
-                  if (controllerNumber == 39) {
-                    controller39ReadIndex = controller39Cursor;
-                    controller39Cursor++;
-                    controllerValueOrDelta = packedInput.bytes[controller39ReadIndex];
-                    break L12;
-                  }
-                  if (controllerNumber == 10) {
-                    controller10ReadIndex = controller10Cursor;
-                    controller10Cursor++;
-                    controllerValueOrDelta = packedInput.bytes[controller10ReadIndex];
-                    break L12;
-                  }
-                  if (controllerNumber == 42) {
-                    controller42ReadIndex = controller42Cursor;
-                    controller42Cursor++;
-                    controllerValueOrDelta = packedInput.bytes[controller42ReadIndex];
-                    break L12;
-                  }
-                  if (controllerNumber == 99) {
-                    controller99ReadIndex = controller99Cursor;
-                    controller99Cursor++;
-                    controllerValueOrDelta = packedInput.bytes[controller99ReadIndex];
-                    break L12;
-                  }
-                  if (controllerNumber == 98) {
-                    controller98ReadIndex = controller98Cursor;
-                    controller98Cursor++;
-                    controllerValueOrDelta = packedInput.bytes[controller98ReadIndex];
-                    break L12;
-                  }
-                  if (controllerNumber == 101) {
-                    controller101ReadIndex = controller101Cursor;
-                    controller101Cursor++;
-                    controllerValueOrDelta = packedInput.bytes[controller101ReadIndex];
-                    break L12;
-                  }
-                  if (controllerNumber == 100) {
-                    controller100ReadIndex = controller100Cursor;
-                    controller100Cursor++;
-                    controllerValueOrDelta = packedInput.bytes[controller100ReadIndex];
-                    break L12;
-                  }
-                  if ((controllerNumber != 64) &&
-                      (controllerNumber != 65) &&
-                      (controllerNumber != 120) &&
-                      (controllerNumber != 121) &&
-                      (controllerNumber != 123)) {
-                    otherControllerReadIndex = otherControllerCursor;
-                    otherControllerCursor++;
-                    controllerValueOrDelta = packedInput.bytes[otherControllerReadIndex];
-                    break L12;
-                  }
+              controllerReadIndex = eventCodeOrControllerCursor;
+              eventCodeOrControllerCursor++;
+              controllerNumber = controllerNumber + packedInput.bytes[controllerReadIndex] & 127;
+              midiOutput.writeByte((byte) 126, controllerNumber);
+              if ((controllerNumber != 0) &&
+                  (controllerNumber != 32)) {
+                if (controllerNumber == 1) {
+                  controller1ReadIndex = controller1Cursor;
+                  controller1Cursor++;
+                  controllerValueOrDelta = packedInput.bytes[controller1ReadIndex];
+                } else if (controllerNumber == 33) {
+                  controller33ReadIndex = controller33Cursor;
+                  controller33Cursor++;
+                  controllerValueOrDelta = packedInput.bytes[controller33ReadIndex];
+                } else if (controllerNumber == 7) {
+                  controller7ReadIndex = controller7Cursor;
+                  controller7Cursor++;
+                  controllerValueOrDelta = packedInput.bytes[controller7ReadIndex];
+                } else if (controllerNumber == 39) {
+                  controller39ReadIndex = controller39Cursor;
+                  controller39Cursor++;
+                  controllerValueOrDelta = packedInput.bytes[controller39ReadIndex];
+                } else if (controllerNumber == 10) {
+                  controller10ReadIndex = controller10Cursor;
+                  controller10Cursor++;
+                  controllerValueOrDelta = packedInput.bytes[controller10ReadIndex];
+                } else if (controllerNumber == 42) {
+                  controller42ReadIndex = controller42Cursor;
+                  controller42Cursor++;
+                  controllerValueOrDelta = packedInput.bytes[controller42ReadIndex];
+                } else if (controllerNumber == 99) {
+                  controller99ReadIndex = controller99Cursor;
+                  controller99Cursor++;
+                  controllerValueOrDelta = packedInput.bytes[controller99ReadIndex];
+                } else if (controllerNumber == 98) {
+                  controller98ReadIndex = controller98Cursor;
+                  controller98Cursor++;
+                  controllerValueOrDelta = packedInput.bytes[controller98ReadIndex];
+                } else if (controllerNumber == 101) {
+                  controller101ReadIndex = controller101Cursor;
+                  controller101Cursor++;
+                  controllerValueOrDelta = packedInput.bytes[controller101ReadIndex];
+                } else if (controllerNumber == 100) {
+                  controller100ReadIndex = controller100Cursor;
+                  controller100Cursor++;
+                  controllerValueOrDelta = packedInput.bytes[controller100ReadIndex];
+                } else if ((controllerNumber != 64) &&
+                    (controllerNumber != 65) &&
+                    (controllerNumber != 120) &&
+                    (controllerNumber != 121) &&
+                    (controllerNumber != 123)) {
+                  otherControllerReadIndex = otherControllerCursor;
+                  otherControllerCursor++;
+                  controllerValueOrDelta = packedInput.bytes[otherControllerReadIndex];
+                } else {
                   switchControllerReadIndex = switchControllerCursor;
                   switchControllerCursor++;
                   controllerValueOrDelta = packedInput.bytes[switchControllerReadIndex];
-                  break L12;
                 }
+              } else {
                 bankControllerReadIndex = programAndBankCursor;
                 programAndBankCursor++;
                 controllerValueOrDelta = packedInput.bytes[bankControllerReadIndex];

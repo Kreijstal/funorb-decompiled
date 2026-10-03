@@ -269,28 +269,24 @@ abstract class jg {
         var0 = var17;
         for (var1 = 0; var1 < 7; var1++) {
           for (var2 = 0; 7 > var2; var2++) {
-            L6: {
-              var3_float = (float)((themeSpriteColors[var1][var2] & 16776188) >> 16) / 255.0f;
-              var4_float = (float)((themeSpriteColors[var1][var2] & 65454) >> 8) / 255.0f;
-              var5_float = (float)(255 & themeSpriteColors[var1][var2]) / 255.0f;
-              var9 = 0;
-              if ((var3_float > var4_float) &&
-                  (var3_float > var5_float)) {
-                var7 = var3_float;
-                if (!(var4_float > var5_float)) {
-                  var6 = var4_float;
-                  break L6;
-                }
+            var3_float = (float)((themeSpriteColors[var1][var2] & 16776188) >> 16) / 255.0f;
+            var4_float = (float)((themeSpriteColors[var1][var2] & 65454) >> 8) / 255.0f;
+            var5_float = (float)(255 & themeSpriteColors[var1][var2]) / 255.0f;
+            var9 = 0;
+            if ((var3_float > var4_float) &&
+                (var3_float > var5_float)) {
+              var7 = var3_float;
+              if (!(var4_float > var5_float)) {
+                var6 = var4_float;
+              } else {
                 var6 = var5_float;
-                break L6;
               }
-              if ((var4_float > var3_float) &&
-                  (var4_float > var5_float)) {
-                var6 = (!(var3_float > var5_float)) ? var3_float : var5_float;
-                var9 = 1;
-                var7 = var4_float;
-                break L6;
-              }
+            } else if ((var4_float > var3_float) &&
+                (var4_float > var5_float)) {
+              var6 = (!(var3_float > var5_float)) ? var3_float : var5_float;
+              var9 = 1;
+              var7 = var4_float;
+            } else {
               var7 = var5_float;
               var9 = 2;
               var6 = (!(var4_float < var3_float)) ? var3_float : var4_float;

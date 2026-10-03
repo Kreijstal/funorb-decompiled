@@ -98,12 +98,10 @@ final class ec {
           candidateIndex = 0;
           sortInsertionIndex = candidateIndex;
           while (candidateIndex < h.matchCandidateCount) {
-            L8: {
-              if ((-1 + h.matchCandidateCount > candidateIndex) &&
-                  (nk.packedMatchCandidates[candidateIndex] == nk.packedMatchCandidates[candidateIndex + 1])) {
-                nk.packedMatchCandidates[candidateIndex] = 0;
-                break L8;
-              }
+            if ((-1 + h.matchCandidateCount > candidateIndex) &&
+                (nk.packedMatchCandidates[candidateIndex] == nk.packedMatchCandidates[candidateIndex + 1])) {
+              nk.packedMatchCandidates[candidateIndex] = 0;
+            } else {
               sortCursorThenFirstEntityId = (nk.packedMatchCandidates[candidateIndex] & 1072693248) >> 20;
               packedCandidateThenSecondEntityId = nk.packedMatchCandidates[candidateIndex] >> 10 & 1023;
               thirdEntityId = 1023 & nk.packedMatchCandidates[candidateIndex];
@@ -130,14 +128,14 @@ final class ec {
                 popupY = (int)firstMatchedEntity.positionY;
                 ug.spawnScorePopup(awardedPoints, true, popupY, gf.matchChainLength, popupX);
                 nk.packedMatchCandidates[candidateIndex] = 0;
-                break L8;
+              } else {
+                firstBlockedEntity = firstMatchedEntity;
+                secondBlockedEntity = secondMatchedEntity;
+                thirdMatchedEntity.entityQueue = null;
+                secondBlockedEntity.entityQueue = null;
+                firstBlockedEntity.entityQueue = null;
+                nk.packedMatchCandidates[candidateIndex] = 0;
               }
-              firstBlockedEntity = firstMatchedEntity;
-              secondBlockedEntity = secondMatchedEntity;
-              thirdMatchedEntity.entityQueue = null;
-              secondBlockedEntity.entityQueue = null;
-              firstBlockedEntity.entityQueue = null;
-              nk.packedMatchCandidates[candidateIndex] = 0;
             }
             candidateIndex++;
           }

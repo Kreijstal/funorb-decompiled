@@ -210,19 +210,17 @@ final class ArgbSprite extends Sprite {
               negativeColumn++;
               continue;
             }
-            L2: {
-              sourceRed = sourcePixel >> 16 & 255;
-              sourceGreen = sourcePixel >> 8 & 255;
-              sourceBlue = sourcePixel & 255;
-              if ((sourceRed == sourceGreen) &&
-                  (sourceGreen == sourceBlue)) {
-                if (sourceRed > 128) {
-                  tintedPixel = (tintRed * (256 - sourceRed) + 255 * (sourceRed - 128) >> 7 << 16) + (tintGreen * (256 - sourceGreen) + 255 * (sourceGreen - 128) >> 7 << 8) + (tintBlue * (256 - sourceBlue) + 255 * (sourceBlue - 128) >> 7);
-                  break L2;
-                }
+            sourceRed = sourcePixel >> 16 & 255;
+            sourceGreen = sourcePixel >> 8 & 255;
+            sourceBlue = sourcePixel & 255;
+            if ((sourceRed == sourceGreen) &&
+                (sourceGreen == sourceBlue)) {
+              if (sourceRed > 128) {
+                tintedPixel = (tintRed * (256 - sourceRed) + 255 * (sourceRed - 128) >> 7 << 16) + (tintGreen * (256 - sourceGreen) + 255 * (sourceGreen - 128) >> 7 << 8) + (tintBlue * (256 - sourceBlue) + 255 * (sourceBlue - 128) >> 7);
+              } else {
                 tintedPixel = (sourceRed * tintRed >> 7 << 16) + (sourceGreen * tintGreen >> 7 << 8) + (sourceBlue * tintBlue >> 7);
-                break L2;
               }
+            } else {
               tintedPixel = sourcePixel;
             }
             inverseAlpha256 = 256 - storedAlpha;

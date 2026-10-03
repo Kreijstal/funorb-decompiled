@@ -567,20 +567,17 @@ final class kj extends ia {
           if (param1 != -70) {
             heldInternalKeys = (boolean[]) null;
           }
-          L1: {
-            var4_int = param0.field_i.samples.length;
-            if ((param2) &&
-                (param0.field_i.pingPongLoop)) {
-              var6 = -param0.field_i.loopStart + var4_int + var4_int;
-              var4_int = var4_int << 8;
-              var5 = (int)((long)var6 * (long)this.field_u[param0.field_t] >> 6);
-              if (var4_int > var5) {
-                break L1;
-              }
+          var4_int = param0.field_i.samples.length;
+          if ((param2) &&
+              (param0.field_i.pingPongLoop)) {
+            var6 = -param0.field_i.loopStart + var4_int + var4_int;
+            var4_int = var4_int << 8;
+            var5 = (int)((long)var6 * (long)this.field_u[param0.field_t] >> 6);
+            if (!(var4_int > var5)) {
               param0.field_u.b(true);
               var5 = -var5 + (var4_int + var4_int) - 1;
-              break L1;
             }
+          } else {
             var5 = (int)((long)var4_int * (long)this.field_u[param0.field_t] >> 6);
           }
           param0.field_u.e(var5);

@@ -7,16 +7,16 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-## Current control-flow readability (pass 90)
+## Current control-flow readability (pass 91)
 
 The export has 7,015 guarded names. All 303 sources compile, reproduce and
-reverse to the pinned raw Git input. Sixty-four single conditional exits now
-read as 47 `if/else` alternatives and 17 ordinary guards, saving 145 lines.
-The original prefix runs before the predicate, and the original remainder is
-the fallback; neither is duplicated. Prefix/branch scopes and protected regions
-stay intact. The patch constructor now has no labels and retains its 77 names.
+reverse to the pinned raw Git input. Twenty-seven multi-exit frames now read
+as ordered alternatives, consuming 75 breaks and saving 126 lines. The music
+controller decoder becomes an `if/else if` chain. `MusicScore`'s constructor
+and `Bzip2Decoder.decodeBlocks` have no block labels, as does the instrument
+patch constructor. Prefix/branch scopes and protected regions remain intact.
 
-There remain 21 method/constructor spans of at least 300 lines, 12 with generated
+There remain 21 method/constructor spans of at least 300 lines, 10 with generated
 block labels. The 3,042-line interface text-loader span includes three nested
 helpers, so this inventory does not count unique state machines. The labeled
 large bodies are:
@@ -25,24 +25,20 @@ large bodies are:
 | --- | ---: | ---: |
 | `GameScreen.renderScreen` | 372 | 10 |
 | `GameScreen.updateScreen` | 330 | 6 |
-| `GameScreen.activateMenuItem` | 335 | 20 |
-| `GameplaySession.renderSession` | 390 | 20 |
+| `GameScreen.activateMenuItem` | 325 | 18 |
+| `GameplaySession.renderSession` | 385 | 19 |
 | `GameplaySession.updateSession` | 643 | 14 |
 | `kc.reconcileBoardEntities` | 502 | 16 |
 | `f.advanceGameplayAvatarAnimation` | 434 | 1 |
 | `Sprite.rotateNearest` | 531 | 1 |
 | `SpriteState.drawSortedHalfBlendRgbTriangle` | 388 | 11 |
 | `MusicDecoder.decodePacket` | 323 | 1 |
-| `Bzip2Decoder.decodeBlocks` | 388 | 1 |
-| `MusicScore` constructor | 541 | 1 |
 
-The next structural work should address multiple exits to one plain destination.
-For example, `MusicScore`'s controller decoding has 12 breaks to one label;
-turning that exclusive tree into ordinary alternatives requires preserving
-predicate order and every fallback. Intermediate protected regions and loop
-continuations need separate proofs. Control flags are not assumed constant.
-The 6,720-case generic comparison and six recorded native probes establish
-controlled behavior only. Complete assets/gameplay and browser/phone
+The next structural work needs a proof for exits that do not end a selected
+arm directly: intermediate loops/protected regions and branches with multiple
+continuations still refuse reconstruction. Control flags are not assumed
+constant. The 16,128-case generic comparison and six recorded native probes
+establish controlled behavior only. Complete assets/gameplay and browser/phone
 memory/startup/FPS targets remain unverified. Sections labeled with earlier
 passes below describe their historical counts and verification scope.
 
@@ -3285,3 +3281,33 @@ cover effects/failures, scopes, ancestor jumps, finally state and monitors. All
 six recorded game probes retain their trace pins. The constructor has 466 lines
 and no labels; there are still 21 large method spans, 12 with block labels.
 Complete gameplay/assets and browser/phone acceptance remain unverified.
+
+
+## Ordered alternatives from shared exits (pass 91)
+
+`MusicScore` now reads controller values through an ordered alternative chain.
+Bank controllers 0/32 retain their separate value stream. Controllers 1/33,
+7/39, 10/42, 99/98 and 101/100 each retain their exact stream/cursor update;
+64/65/120/121/123 use the switch-controller stream, and the remaining controllers
+use the general stream. The selected delta still updates the previous value,
+then writes the same seven-bit MIDI byte. Later predicates/streams remain skipped
+after selection. All 96 constructor locals keep their guarded names.
+
+The generic reconstruction consumes every reference to one plain destination.
+Each selected direct braced arm must end in a direct target break; fallbacks
+are built recursively. Work between decisions stays in the reached fallback.
+An `else if` chain is used only without prefix work/declarations requiring a
+block. A predicate whose effect cannot be discarded still executes even when
+its branch becomes empty. Scopes, protected regions and ancestor transfers
+stay intact, with no duplicated work/predicate or new local.
+
+The pass consumes 75 breaks and 27 labels across 24 files, saving 126 lines.
+The music-score constructor has 519 lines with no block labels; Bzip2 block
+decoding has 385 lines and no block labels. All 7,015 complete rules and ordered
+bindings remain identical. Native 16,128-case generic comparisons and explicit
+first/second/fallback oracles cover effect order, unboxing, NaNs, failures, scopes,
+ancestor jumps/returns, finally state and monitor ownership/release. All six
+recorded game probes retain their traces, including music/patch/archive cases.
+The music fixture independently builds expected MIDI and repeats 19 controller
+numbers, covering every retained controller-stream route.
+Larger gameplay paths, real assets and browser/phone acceptance remain unverified.

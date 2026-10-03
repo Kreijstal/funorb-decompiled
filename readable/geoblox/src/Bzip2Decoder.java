@@ -273,26 +273,24 @@ final class Bzip2Decoder {
                 }
                 if ((symbol != 0) &&
                     (symbol != 1)) {
-                  L17: {
-                    mtfRank = symbol - 1;
-                    if (mtfRank < 16) {
-                      mtfPosition = state.moveToFrontBlockStarts[0];
-                      byteOrBitValue = state.moveToFrontBytes[mtfPosition + mtfRank];
-                      while (mtfRank > 3) {
-                        mtfShiftPosition = mtfPosition + mtfRank;
-                        state.moveToFrontBytes[mtfShiftPosition] = state.moveToFrontBytes[mtfShiftPosition - 1];
-                        state.moveToFrontBytes[mtfShiftPosition - 1] = state.moveToFrontBytes[mtfShiftPosition - 2];
-                        state.moveToFrontBytes[mtfShiftPosition - 2] = state.moveToFrontBytes[mtfShiftPosition - 3];
-                        state.moveToFrontBytes[mtfShiftPosition - 3] = state.moveToFrontBytes[mtfShiftPosition - 4];
-                        mtfRank -= 4;
-                      }
-                      while (mtfRank > 0) {
-                        state.moveToFrontBytes[mtfPosition + mtfRank] = state.moveToFrontBytes[mtfPosition + mtfRank - 1];
-                        mtfRank--;
-                      }
-                      state.moveToFrontBytes[mtfPosition] = (byte)byteOrBitValue;
-                      break L17;
+                  mtfRank = symbol - 1;
+                  if (mtfRank < 16) {
+                    mtfPosition = state.moveToFrontBlockStarts[0];
+                    byteOrBitValue = state.moveToFrontBytes[mtfPosition + mtfRank];
+                    while (mtfRank > 3) {
+                      mtfShiftPosition = mtfPosition + mtfRank;
+                      state.moveToFrontBytes[mtfShiftPosition] = state.moveToFrontBytes[mtfShiftPosition - 1];
+                      state.moveToFrontBytes[mtfShiftPosition - 1] = state.moveToFrontBytes[mtfShiftPosition - 2];
+                      state.moveToFrontBytes[mtfShiftPosition - 2] = state.moveToFrontBytes[mtfShiftPosition - 3];
+                      state.moveToFrontBytes[mtfShiftPosition - 3] = state.moveToFrontBytes[mtfShiftPosition - 4];
+                      mtfRank -= 4;
                     }
+                    while (mtfRank > 0) {
+                      state.moveToFrontBytes[mtfPosition + mtfRank] = state.moveToFrontBytes[mtfPosition + mtfRank - 1];
+                      mtfRank--;
+                    }
+                    state.moveToFrontBytes[mtfPosition] = (byte)byteOrBitValue;
+                  } else {
                     mtfBlockIndexForMove = mtfRank / 16;
                     mtfOffsetInBlock = mtfRank % 16;
                     mtfCursor = state.moveToFrontBlockStarts[mtfBlockIndexForMove] + mtfOffsetInBlock;
@@ -310,16 +308,15 @@ final class Bzip2Decoder {
                     }
                     state.moveToFrontBlockStarts[0] = state.moveToFrontBlockStarts[0] - 1;
                     state.moveToFrontBytes[state.moveToFrontBlockStarts[0]] = (byte)byteOrBitValue;
-                    if (state.moveToFrontBlockStarts[0] != 0) {
-                      break L17;
-                    }
-                    selectorRankOrMtfWritePosition = 4095;
-                    for (mtfBlockIndex = 15; mtfBlockIndex >= 0; mtfBlockIndex--) {
-                      for (selectorTableOrMtfByteIndex = 15; selectorTableOrMtfByteIndex >= 0; selectorTableOrMtfByteIndex--) {
-                        state.moveToFrontBytes[selectorRankOrMtfWritePosition] = state.moveToFrontBytes[state.moveToFrontBlockStarts[mtfBlockIndex] + selectorTableOrMtfByteIndex];
-                        selectorRankOrMtfWritePosition--;
+                    if (!(state.moveToFrontBlockStarts[0] != 0)) {
+                      selectorRankOrMtfWritePosition = 4095;
+                      for (mtfBlockIndex = 15; mtfBlockIndex >= 0; mtfBlockIndex--) {
+                        for (selectorTableOrMtfByteIndex = 15; selectorTableOrMtfByteIndex >= 0; selectorTableOrMtfByteIndex--) {
+                          state.moveToFrontBytes[selectorRankOrMtfWritePosition] = state.moveToFrontBytes[state.moveToFrontBlockStarts[mtfBlockIndex] + selectorTableOrMtfByteIndex];
+                          selectorRankOrMtfWritePosition--;
+                        }
+                        state.moveToFrontBlockStarts[mtfBlockIndex] = selectorRankOrMtfWritePosition + 1;
                       }
-                      state.moveToFrontBlockStarts[mtfBlockIndex] = selectorRankOrMtfWritePosition + 1;
                     }
                   }
                   frequencyByteValue = state.alphabetBytes[byteOrBitValue & 255] & 255;

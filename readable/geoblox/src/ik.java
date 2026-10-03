@@ -93,19 +93,16 @@ final class ik {
               return false;
             }
           }
-          L1: {
-            neighborIndexThenDetachSecond = forceDetachSecond ? 1 : 0;
-            detachFirst = 0;
-            secondNeighborInsertionIndex = secondEntity.relatedEntityCount;
-            secondEntity.relatedEntityCount = secondEntity.relatedEntityCount + 1;
-            secondEntity.relatedEntities[secondNeighborInsertionIndex] = firstEntity;
-            firstNeighborInsertionIndex = firstEntity.relatedEntityCount;
-            firstEntity.relatedEntityCount = firstEntity.relatedEntityCount + 1;
-            firstEntity.relatedEntities[firstNeighborInsertionIndex] = secondEntity;
-            if ((secondEntity.entitySpriteKindId == 0) &&
-                (firstEntity.entitySpriteKindId == 0)) {
-              break L1;
-            }
+          neighborIndexThenDetachSecond = forceDetachSecond ? 1 : 0;
+          detachFirst = 0;
+          secondNeighborInsertionIndex = secondEntity.relatedEntityCount;
+          secondEntity.relatedEntityCount = secondEntity.relatedEntityCount + 1;
+          secondEntity.relatedEntities[secondNeighborInsertionIndex] = firstEntity;
+          firstNeighborInsertionIndex = firstEntity.relatedEntityCount;
+          firstEntity.relatedEntityCount = firstEntity.relatedEntityCount + 1;
+          firstEntity.relatedEntities[firstNeighborInsertionIndex] = secondEntity;
+          if (!((secondEntity.entitySpriteKindId == 0) &&
+              (firstEntity.entitySpriteKindId == 0))) {
             variantPropagationThenNeighborIndex = 0;
             propagateCategory = 0;
             secondIsKindOne = (secondEntity.entitySpriteKindId != 1) ? 0 : 1;
@@ -169,13 +166,13 @@ final class ik {
                 (firstEntity.entityCategoryKey == secondEntity.entityCategoryKey)) {
               secondEntity.sameCategoryEntityCount = secondEntity.sameCategoryEntityCount + 1;
               firstEntity.sameCategoryEntityCount = firstEntity.sameCategoryEntityCount + 1;
-              break L1;
-            }
-            if ((secondEntity.entitySpriteKindId == 2) &&
-                (firstEntity.entitySpriteKindId == 2) &&
-                (firstEntity.spriteVariantIndex == secondEntity.spriteVariantIndex)) {
-              secondEntity.sameVariantEntityCount = secondEntity.sameVariantEntityCount + 1;
-              firstEntity.sameVariantEntityCount = firstEntity.sameVariantEntityCount + 1;
+            } else {
+              if ((secondEntity.entitySpriteKindId == 2) &&
+                  (firstEntity.entitySpriteKindId == 2) &&
+                  (firstEntity.spriteVariantIndex == secondEntity.spriteVariantIndex)) {
+                secondEntity.sameVariantEntityCount = secondEntity.sameVariantEntityCount + 1;
+                firstEntity.sameVariantEntityCount = firstEntity.sameVariantEntityCount + 1;
+              }
             }
           }
           if ((secondEntity.entitySpriteKindId == 0) &&

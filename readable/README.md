@@ -21,17 +21,17 @@ tool bytes; `funorb-stubs.jar` is the frozen compilation dependency. The
 [reading guide](GEOBLOX-READING-GUIDE.md) explains the named gameplay flow.
 
 The raw input is `games/geoblox` at
-`f36911c124271fef31024e90327379b4ec058e72`. It comes from java-tools
-`fba5c0b47a3ff2c62fcbca3d49654f8bae8ad2f8` and Deko
+`46219970eded7f74e43d7616f2839cf249d1fa16`. It comes from java-tools
+`c2e73cc98972a1aad710c51cd7f72513233eab20` and Deko
 `a572c4dd0f0174bfcd7777be53d7ceba2f970f18`. The adapted naming tool is
 `a0bc835957148b9b1e1f8221c59b79d899d22738`; its source archive SHA-256 is
 `cb10756aa3ecb28159c9b81f2fb78bf559b4111d9ad203819458b30d0d84cf8c`.
 
 The **decompiler repository source** SHA-256 is
-`9e15df0c94b6052b0419e15dc09fb1e35069a45b42e1ffcffb86549fd16a2ec2`:
+`c7ef91b40afcfca22ed84d74226854ce9a875db30c71749078812dbbf2c679a0`:
 
 ```sh
-git archive --format=tar fba5c0b47a3ff2c62fcbca3d49654f8bae8ad2f8 | sha256sum
+git archive --format=tar c2e73cc98972a1aad710c51cd7f72513233eab20 | sha256sum
 ```
 
 This identifies tracked decompiler source and its Git archive metadata. It is
@@ -53,6 +53,59 @@ Another 9,828 cases preserve native general-angle/extreme-scale traces. ARGB
 smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
+
+## Ordered multi-exit decisions (pass 91)
+
+The generic decompiler reconstructs 27 plain exit frames and consumes 75 breaks,
+recovering 75 ordered choices including 18 logical-negation guards. Scope-safe
+cleanup unwraps 27 blocks across 24 files and saves 126 lines (78,296 to 78,170).
+`MusicScore`'s controller decoder now reads as an ordered `if/else if` chain;
+its constructor shrinks from 541 to 519 lines and has no block labels.
+`Bzip2Decoder.decodeBlocks` also loses its final block label, shrinking from
+388 to 385 lines. Gameplay rendering falls from 390 to 385 lines and 20 to 19
+labels; menu action handling from 335 to 325 lines and 20 to 18 labels.
+
+Every selected direct braced arm must end in a direct break to the same unique
+plain destination. Its remainder becomes the fallback, recursively, and every
+destination reference must be consumed before removing the label. Interleaved
+work stays in the fallback that originally reached it. A pure fallback choice
+becomes `else if` only with no prefix work/declaration requiring a block.
+Prefix/branch scopes and predicate bytes/order remain. No work or predicate is
+duplicated, and no local is added. A live predicate with no remaining effects
+still executes in an empty conditional arm rather than disappearing.
+
+Protected work inside branches or surrounding the whole destination remains
+intact. Target exits crossing an intermediate loop, switch, protected wrapper,
+existing alternate or unsupported construct refuse this proof. Comments,
+Unicode escapes, nested executables, duplicate/unbound labels, invalid ancestor
+transfers and unknown extents also refuse it. Budgets are 16 recovered choices,
+depth 16 and 32 target references per frame; an oversized tree stays intact.
+Control flags are not assumed constant, and this does not yet reconstruct
+branches whose only exits lie within intermediate loops/protected wrappers.
+
+`NODE_PATH=/path/to/dependencies JAVA_TOOL_OPTIONS=-XX:-UsePerfData node test/javaAstEmitterLoopExits.test.js`
+passes 54 groups with one optional historical corpus check skipped. Two new
+groups include 16,128 native comparisons plus first/second/fallback oracles.
+They check skipped later predicates, nullable unboxing, NaNs, ordered/interleaved
+effects, partial failures, scopes, nested destinations, ancestor break/continue,
+returns, finally state after invocation and monitor ownership/release.
+Exception-exit and integer-argument regressions retain eight and two groups.
+Independent JDK body positions plus only the exit-tree/frame rules reproduce
+all 303 token streams. Raw sources compile, and every ordered declaration,
+reference, local ordinal and override remains (19,591/119,181/388).
+
+A clean committed decompiler Git-source tar reproduces all raw sources and
+unchanged diagnostics byte-for-byte. All six native/raw/readable probes retain
+their source and trace pins. Rules/migration/text checks pass all three files.
+Full reproduction compiles both 303-file corpora and compares 138,772 bindings;
+dictionary reversal recovers the pinned raw Git input byte-for-byte. All 7,015
+complete naming objects and 57,278 edits remain. The single current manifest
+records the source migration with an empty `ruleChanges` list.
+
+There remain 2,080 method/constructor bodies and 21 spans of at least 300 lines,
+10 containing generated block labels. Some spans include nested helpers.
+Larger gameplay reconstructions, opaque names, real assets and complete
+whole-game/browser/phone acceptance remain unfinished or unverified.
 
 ## Conditional alternatives from plain exits (pass 90)
 
@@ -99,7 +152,7 @@ dictionary reversal recovers the pinned raw Git input byte-for-byte. The single
 current manifest records an explicit source migration with no naming changes:
 all 7,015 complete naming objects and 57,278 edits remain.
 
-The current survey has 2,080 method/constructor bodies and 21 spans of at least
+The pass 90 survey had 2,080 method/constructor bodies and 21 spans of at least
 300 lines, 12 with generated block labels. Some spans include nested helpers.
 Larger gameplay/decision-tree reconstruction, unknown names, real assets and
 whole-game/browser/phone acceptance remain unfinished or unverified.
@@ -2021,10 +2074,10 @@ identity and naming migrations live in the single manifest. `ruleChanges`
 records naming changes; `sourceChange` is recorded when input identity changes.
 Pass 86 recorded its source migration in `sourceChange` with an empty
 `ruleChanges` list. Pass 87 retained that source identity and added 188 naming rules.
-Pass 88 retained it and added 144 naming rules. Pass 89 recorded its terminal
-break source migration. Current pass 90 records the conditional-alternative
-source migration and an empty `ruleChanges` list, preserving all 7,015 previous
-complete naming objects.
+Pass 88 retained it and added 144 naming rules. Passes 89 and 90 recorded
+terminal-break and single-alternative source migrations. Current pass 91 records
+the ordered multi-exit source migration and an empty `ruleChanges` list,
+preserving all 7,015 previous complete naming objects.
 All native probe sources and their traces are pinned in
 the same manifest; no JSON snapshots are added.
 
@@ -2047,7 +2100,7 @@ the same manifest; no JSON snapshots are added.
 
 | Java source tree | SHA-256 |
 | --- | --- |
-| Raw | `f776980914ad1eb66192c516599a34f8afa5052ada3675be33dd5550465fb915` |
-| Readable | `b5b894269717ad1f2a5cf1878015e7c66072fade8542465c11c784efafd443b1` |
+| Raw | `6499347b6e0dfc27f819fc721bf550a43d9c562b6eabddfc5a8c8c9588a07e7e` |
+| Readable | `fa356e3cadba39120b73daae6717b9147a39e8209cb9e52164d20c68e20a5a1f` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

@@ -176,27 +176,24 @@ class IntrusiveNode {
           }
           spriteDataBufferAlias.position = 0;
           for (spriteIndex = 0; spriteIndex < sb.decodedSpriteCount; spriteIndex++) {
-            L6: {
-              spriteWidth = DualLinkNode.decodedSpriteWidths[spriteIndex];
-              spriteHeight = hl.decodedSpriteHeights[spriteIndex];
-              pixelCount = spriteWidth * spriteHeight;
-              allocatedPaletteIndices = new byte[pixelCount];
-              paletteIndicesForwarded = allocatedPaletteIndices;
-              paletteIndicesForUpdates = paletteIndicesForwarded;
-              mj.decodedSpriteIndices[spriteIndex] = allocatedPaletteIndices;
-              allocatedAlphaPlane = new byte[pixelCount];
-              alphaPlaneForwarded = allocatedAlphaPlane;
-              alphaPlaneForUpdates = alphaPlaneForwarded;
-              vf.decodedSpriteAlpha[spriteIndex] = allocatedAlphaPlane;
-              hasNonOpaqueAlphaFlag = 0;
-              storageFlags = spriteDataBufferAlias.readUnsignedByte((byte) 34);
-              if ((storageFlags & 1) == 0) {
-                for (pixelIndexOrColumn = 0; pixelIndexOrColumn < pixelCount; pixelIndexOrColumn++) {
-                  paletteIndicesForUpdates[pixelIndexOrColumn] = spriteDataBuffer.readSignedByte((byte) 90);
-                }
-                if ((storageFlags & 2) == 0) {
-                  break L6;
-                }
+            spriteWidth = DualLinkNode.decodedSpriteWidths[spriteIndex];
+            spriteHeight = hl.decodedSpriteHeights[spriteIndex];
+            pixelCount = spriteWidth * spriteHeight;
+            allocatedPaletteIndices = new byte[pixelCount];
+            paletteIndicesForwarded = allocatedPaletteIndices;
+            paletteIndicesForUpdates = paletteIndicesForwarded;
+            mj.decodedSpriteIndices[spriteIndex] = allocatedPaletteIndices;
+            allocatedAlphaPlane = new byte[pixelCount];
+            alphaPlaneForwarded = allocatedAlphaPlane;
+            alphaPlaneForUpdates = alphaPlaneForwarded;
+            vf.decodedSpriteAlpha[spriteIndex] = allocatedAlphaPlane;
+            hasNonOpaqueAlphaFlag = 0;
+            storageFlags = spriteDataBufferAlias.readUnsignedByte((byte) 34);
+            if ((storageFlags & 1) == 0) {
+              for (pixelIndexOrColumn = 0; pixelIndexOrColumn < pixelCount; pixelIndexOrColumn++) {
+                paletteIndicesForUpdates[pixelIndexOrColumn] = spriteDataBuffer.readSignedByte((byte) 90);
+              }
+              if (!((storageFlags & 2) == 0)) {
                 for (pixelIndexOrColumn = 0; pixelCount > pixelIndexOrColumn; pixelIndexOrColumn++) {
                   rowMajorAlphaByte = spriteDataBuffer.readSignedByte((byte) 95);
                   alphaPlaneForUpdates[pixelIndexOrColumn] = rowMajorAlphaByte;
@@ -209,28 +206,27 @@ class IntrusiveNode {
                   }
                   hasNonOpaqueAlphaFlag = rowMajorOpacityFlagBeforeMerge | rowMajorNonOpaqueFlag;
                 }
-                break L6;
               }
+            } else {
               for (pixelIndexOrColumn = 0; spriteWidth > pixelIndexOrColumn; pixelIndexOrColumn++) {
                 for (alphaByteOrRow = 0; spriteHeight > alphaByteOrRow; alphaByteOrRow++) {
                   paletteIndicesForUpdates[alphaByteOrRow * spriteWidth + pixelIndexOrColumn] = spriteDataBuffer.readSignedByte((byte) 90);
                 }
               }
-              if (0 == (2 & storageFlags)) {
-                break L6;
-              }
-              for (pixelIndexOrColumn = 0; spriteWidth > pixelIndexOrColumn; pixelIndexOrColumn++) {
-                for (alphaByteOrRow = 0; spriteHeight > alphaByteOrRow; alphaByteOrRow++) {
-                  columnMajorAlphaByte = spriteDataBuffer.readSignedByte((byte) 78);
-                  alphaPlaneForUpdates[pixelIndexOrColumn + spriteWidth * alphaByteOrRow] = columnMajorAlphaByte;
-                  columnAlphaValue = columnMajorAlphaByte;
-                  columnMajorOpacityFlagBeforeMerge = hasNonOpaqueAlphaFlag;
-                  if (columnAlphaValue == -1) {
-                    columnMajorNonOpaqueFlag = 0;
-                  } else {
-                    columnMajorNonOpaqueFlag = 1;
+              if (!(0 == (2 & storageFlags))) {
+                for (pixelIndexOrColumn = 0; spriteWidth > pixelIndexOrColumn; pixelIndexOrColumn++) {
+                  for (alphaByteOrRow = 0; spriteHeight > alphaByteOrRow; alphaByteOrRow++) {
+                    columnMajorAlphaByte = spriteDataBuffer.readSignedByte((byte) 78);
+                    alphaPlaneForUpdates[pixelIndexOrColumn + spriteWidth * alphaByteOrRow] = columnMajorAlphaByte;
+                    columnAlphaValue = columnMajorAlphaByte;
+                    columnMajorOpacityFlagBeforeMerge = hasNonOpaqueAlphaFlag;
+                    if (columnAlphaValue == -1) {
+                      columnMajorNonOpaqueFlag = 0;
+                    } else {
+                      columnMajorNonOpaqueFlag = 1;
+                    }
+                    hasNonOpaqueAlphaFlag = columnMajorOpacityFlagBeforeMerge | columnMajorNonOpaqueFlag;
                   }
-                  hasNonOpaqueAlphaFlag = columnMajorOpacityFlagBeforeMerge | columnMajorNonOpaqueFlag;
                 }
               }
             }

@@ -185,17 +185,15 @@ final class PcmSampleStream extends ia {
           if (var6 > param3) {
             var6 = param3;
           }
-          L3: {
-            this.field_l = this.field_l + param1;
-            if ((this.sampleStepFixed == -256) &&
-                ((this.samplePositionFixed & 255) == 0)) {
-              if (!AudioOutput.field_q) {
-                param1 = PcmSampleStream.a(((PcmSample) ((Object) this.field_g)).samples, param0, this.samplePositionFixed, param1, this.field_k, this.field_j, 0, var6, param2, (PcmSampleStream) (this));
-                break L3;
-              }
+          this.field_l = this.field_l + param1;
+          if ((this.sampleStepFixed == -256) &&
+              ((this.samplePositionFixed & 255) == 0)) {
+            if (!AudioOutput.field_q) {
+              param1 = PcmSampleStream.a(((PcmSample) ((Object) this.field_g)).samples, param0, this.samplePositionFixed, param1, this.field_k, this.field_j, 0, var6, param2, (PcmSampleStream) (this));
+            } else {
               param1 = PcmSampleStream.a(0, ((PcmSample) ((Object) this.field_g)).samples, param0, this.samplePositionFixed, param1, this.field_n, this.field_s, this.field_t, this.field_w, 0, var6, param2, (PcmSampleStream) (this));
-              break L3;
             }
+          } else {
             if (!AudioOutput.field_q) {
               param1 = PcmSampleStream.a(0, 0, ((PcmSample) ((Object) this.field_g)).samples, param0, this.samplePositionFixed, param1, this.field_k, this.field_j, 0, var6, param2, (PcmSampleStream) (this), this.sampleStepFixed, param4);
             } else {
@@ -241,17 +239,15 @@ final class PcmSampleStream extends ia {
           if (var6 > param3) {
             var6 = param3;
           }
-          L3: {
-            this.field_l = this.field_l + param1;
-            if ((this.sampleStepFixed == 256) &&
-                ((this.samplePositionFixed & 255) == 0)) {
-              if (!AudioOutput.field_q) {
-                param1 = PcmSampleStream.b(((PcmSample) ((Object) this.field_g)).samples, param0, this.samplePositionFixed, param1, this.field_k, this.field_j, 0, var6, param2, (PcmSampleStream) (this));
-                break L3;
-              }
+          this.field_l = this.field_l + param1;
+          if ((this.sampleStepFixed == 256) &&
+              ((this.samplePositionFixed & 255) == 0)) {
+            if (!AudioOutput.field_q) {
+              param1 = PcmSampleStream.b(((PcmSample) ((Object) this.field_g)).samples, param0, this.samplePositionFixed, param1, this.field_k, this.field_j, 0, var6, param2, (PcmSampleStream) (this));
+            } else {
               param1 = PcmSampleStream.b(0, ((PcmSample) ((Object) this.field_g)).samples, param0, this.samplePositionFixed, param1, this.field_n, this.field_s, this.field_t, this.field_w, 0, var6, param2, (PcmSampleStream) (this));
-              break L3;
             }
+          } else {
             if (!AudioOutput.field_q) {
               param1 = PcmSampleStream.c(0, 0, ((PcmSample) ((Object) this.field_g)).samples, param0, this.samplePositionFixed, param1, this.field_k, this.field_j, 0, var6, param2, (PcmSampleStream) (this), this.sampleStepFixed, param4);
             } else {

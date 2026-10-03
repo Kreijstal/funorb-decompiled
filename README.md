@@ -19,13 +19,24 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 138,772 bindings,
 preserving 388 override relationships.
 
+Pass 91 reconstructs 27 multi-exit frames, consuming 75 breaks and saving 126
+lines across 24 files. Music controller decoding becomes an ordered alternative
+chain; the music-score constructor and Bzip2 block decoder now have no block
+labels. Gameplay rendering and menu action handling also lose labels. Every
+ordered binding and all 7,015 complete naming objects remain. The clean
+committed decompiler Git-source tar reproduces raw sources and unchanged
+diagnostics; all six native/raw/readable probes retain their traces. Full
+reproduction and dictionary reversal pass. There remain 21 large method spans,
+10 with block labels; larger reconstructions and whole-game/browser/phone
+acceptance remain unfinished or unverified.
+
 Pass 90 reconstructs 64 labeled exits as 47 conditional alternatives and 17
 ordinary guards, saving 145 lines across 45 files. Gameplay rendering loses two
 labels; board reconciliation loses one. The instrument-patch constructor now
 has no labels. All 7,015 complete naming objects and ordered bindings remain.
 The clean decompiler Git-source tar reproduces all 303 raw files and unchanged
 diagnostics; all six recorded native probes retain their traces. Full readable
-reproduction/dictionary reversal passes. There remain 21 large method spans,
+reproduction/dictionary reversal passes. That pass left 21 large method spans,
 12 with block labels; multi-exit decision trees and whole-game/browser/phone
 acceptance remain unfinished or unverified.
 

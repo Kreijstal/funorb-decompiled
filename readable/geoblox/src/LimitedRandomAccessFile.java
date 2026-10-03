@@ -114,22 +114,16 @@ final class LimitedRandomAccessFile {
                     break L3;
                   }
                 }
-                L5: {
-                  if ((var9 >= 48) &&
-                      (var9 <= 57)) {
-                    var9 -= 48;
-                    break L5;
-                  }
-                  if ((var9 >= 65) &&
-                      (var9 <= 90)) {
-                    var9 -= 55;
-                    break L5;
-                  }
-                  if ((var9 >= 97) &&
-                      (var9 <= 122)) {
-                    var9 -= 87;
-                    break L5;
-                  }
+                if ((var9 >= 48) &&
+                    (var9 <= 57)) {
+                  var9 -= 48;
+                } else if ((var9 >= 65) &&
+                    (var9 <= 90)) {
+                  var9 -= 55;
+                } else if ((var9 >= 97) &&
+                    (var9 <= 122)) {
+                  var9 -= 87;
+                } else {
                   return false;
                 }
                 if (var9 >= param2) {

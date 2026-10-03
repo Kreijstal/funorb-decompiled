@@ -239,20 +239,15 @@ final class GameplaySession {
                 L3: {
                   L4: {
                     L5: {
-                      L6: {
-                        selectedThemeIdOrScoreBoxX = GameScreen.selectedThemeId;
-                        if ((selectedThemeIdOrScoreBoxX == 4) &&
-                            (clientControlFlowGuard == 0)) {
-                          themeResourceGroup = "baking";
-                          if (clientControlFlowGuard == 0) {
-                            break L0;
-                          }
-                          break L6;
+                      selectedThemeIdOrScoreBoxX = GameScreen.selectedThemeId;
+                      if ((selectedThemeIdOrScoreBoxX == 4) &&
+                          (clientControlFlowGuard == 0)) {
+                        themeResourceGroup = "baking";
+                        if (clientControlFlowGuard == 0) {
+                          break L0;
                         }
-                        if ((selectedThemeIdOrScoreBoxX == 6) &&
-                            (clientControlFlowGuard == 0)) {
-                          break L6;
-                        }
+                      } else if (!((selectedThemeIdOrScoreBoxX == 6) &&
+                          (clientControlFlowGuard == 0))) {
                         if ((selectedThemeIdOrScoreBoxX == 5) &&
                             (clientControlFlowGuard == 0)) {
                           break L5;
