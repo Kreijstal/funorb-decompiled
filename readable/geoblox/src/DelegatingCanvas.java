@@ -54,7 +54,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         int[][] var18 = null;
         var12 = Geoblox.clientControlFlowFlag;
         try {
-          var14 = eh.field_d;
+          var14 = LogoCompositor.sessionPacketBuffer;
           if (methodGuard != 2) {
             return;
           }

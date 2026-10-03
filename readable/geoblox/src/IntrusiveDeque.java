@@ -67,8 +67,8 @@ final class IntrusiveDeque {
                   PasswordWidgetRenderer.gameMusicStream.prepareScoreInstruments(te.gameSoundSampleCache, 0, -1, SessionGameApplet.spaceMusicTrack, UsernameAvailabilityQuery.instrumentPatchArchive);
                 }
               } else {
-                ej.jewelleryMusicTrack = MusicScore.loadNamedScore(kf.musicScoreArchive, "", "jewellery");
-                PasswordWidgetRenderer.gameMusicStream.prepareScoreInstruments(te.gameSoundSampleCache, 0, -1, ej.jewelleryMusicTrack, UsernameAvailabilityQuery.instrumentPatchArchive);
+                RatingPresentationResources.jewelleryMusicTrack = MusicScore.loadNamedScore(kf.musicScoreArchive, "", "jewellery");
+                PasswordWidgetRenderer.gameMusicStream.prepareScoreInstruments(te.gameSoundSampleCache, 0, -1, RatingPresentationResources.jewelleryMusicTrack, UsernameAvailabilityQuery.instrumentPatchArchive);
               }
             } else {
               te.germsMusicTrack = MusicScore.loadNamedScore(kf.musicScoreArchive, "", "germs");

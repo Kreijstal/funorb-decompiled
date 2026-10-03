@@ -89,8 +89,8 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
             }
             FullscreenErrorDialog.alternateArchivePort = alternatePort;
             AsyncResourceDownloader.archiveNetworkClient = (ArchiveNetworkClient) ((Object) new SocketArchiveNetworkClient());
-            cl.archiveDiskWorker = new DiskCacheWorker(taskDispatcher);
-            DequeCursor.archiveCatalog = new ArchiveCatalog(AsyncResourceDownloader.archiveNetworkClient, cl.archiveDiskWorker);
+            UsernameQuerySupport.archiveDiskWorker = new DiskCacheWorker(taskDispatcher);
+            DequeCursor.archiveCatalog = new ArchiveCatalog(AsyncResourceDownloader.archiveNetworkClient, UsernameQuerySupport.archiveDiskWorker);
         } catch (RuntimeException initializationFailure) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) initializationFailure), "q.N(" + clientId + ',' + languageId + ',' + primaryPort + ',' + serverNumber + ',' + methodGuard + ',' + (taskDispatcher != null ? "{...}" : "null") + ',' + (archiveHost != null ? "{...}" : "null") + ',' + gameCrc + ',' + alternatePort + ')');
         }

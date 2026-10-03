@@ -31,7 +31,7 @@ final class InstrumentEnvelope {
             if (SpriteCheckboxRenderer.field_e == null) {
                 return false;
             }
-            if (PacketBuffer.currentProtocolStage == eh.connectedSessionStage) {
+            if (PacketBuffer.currentProtocolStage == LogoCompositor.connectedSessionStage) {
                 return true;
             }
             return false;
@@ -39,7 +39,7 @@ final class InstrumentEnvelope {
         if (SpriteCheckboxRenderer.field_e == null) {
             return false;
         }
-        if (PacketBuffer.currentProtocolStage == eh.connectedSessionStage) {
+        if (PacketBuffer.currentProtocolStage == LogoCompositor.connectedSessionStage) {
             return true;
         }
         return false;

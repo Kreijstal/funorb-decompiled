@@ -30,7 +30,7 @@ final class MidiNote extends IntrusiveNode {
 
     final static void a(byte param0) {
         int var1 = -125 / ((param0 - 56) / 54);
-        jk.a((byte) -90);
+        FullscreenSupport.exitActiveFullscreen((byte) -90);
         if (null != MessageDialog.gameCanvas) {
             EntitySpawnSupport.detachCanvasInputListeners(-2, MessageDialog.gameCanvas);
             MidiPcmStream.c(-11099);

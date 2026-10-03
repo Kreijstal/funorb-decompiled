@@ -54,7 +54,7 @@ final class PasswordValidator extends TextInputValidator {
             return stackIn_10_0;
           }
           if (SecondaryNodeDeque.a(guard + 18303, var5)) {
-            stackIn_13_0 = gg.createRepeatedPasswordAlertText;
+            stackIn_13_0 = NameCharacterSupport.createRepeatedPasswordAlertText;
             return stackIn_13_0;
           }
           if (guard != 422) {
@@ -73,7 +73,7 @@ final class PasswordValidator extends TextInputValidator {
             return stackIn_26_0;
           }
           if (UsernameAvailabilityValidator.a(8, var6, var5)) {
-            stackIn_30_0 = gg.createPasswordContainsPartialNameAlertText;
+            stackIn_30_0 = NameCharacterSupport.createPasswordContainsPartialNameAlertText;
             return stackIn_30_0;
           }
           if (!CrcAcknowledgedPacket.a(var5, var6, (byte) -96)) {

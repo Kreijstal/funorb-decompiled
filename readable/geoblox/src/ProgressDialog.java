@@ -15,7 +15,7 @@ final class ProgressDialog extends ResizableDialog {
         try {
             this.introductoryText = introductoryText;
             if (this.introductoryText != null) {
-                var3_int = hh.field_c.measureWrappedHeight(this.introductoryText, 260, hh.field_c.maxAscent);
+                var3_int = UiFontResources.commonUiBoldFont.measureWrappedHeight(this.introductoryText, 260, UiFontResources.commonUiBoldFont.maxAscent);
                 this.resizeAndCenter(var3_int + 150, 103, 300);
             }
             this.progressBar = new ProgressBarWidget(13, 50, 274, 30, 15, 2113632, 4210752);
@@ -168,10 +168,10 @@ final class ProgressDialog extends ResizableDialog {
 
     final void b(int param0, int param1, int param2) {
         super.b(param0, param1, param2);
-        hh.field_c.drawCenteredText(this.statusText, (this.widgetWidth >> 1) + param0, param2 + 103, 16777215, -1);
+        UiFontResources.commonUiBoldFont.drawCenteredText(this.statusText, (this.widgetWidth >> 1) + param0, param2 + 103, 16777215, -1);
         if (this.introductoryText != null) {
             SoftwareRasterizer.drawHorizontalLine(20 + param0, -7 + param2 + 120, 260, 8421504);
-            hh.field_c.drawParagraph(this.introductoryText, param0 + 20, 8 + (120 + param2), 260, 100, 16777215, -1, 1, 0, hh.field_c.maxAscent);
+            UiFontResources.commonUiBoldFont.drawParagraph(this.introductoryText, param0 + 20, 8 + (120 + param2), 260, 100, 16777215, -1, 1, 0, UiFontResources.commonUiBoldFont.maxAscent);
         }
     }
 

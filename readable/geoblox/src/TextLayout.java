@@ -137,12 +137,12 @@ abstract class TextLayout {
               if (param0 >= -65) {
                 categoryMatchCandidateCount = 18;
               }
-              if (cl.archiveDiskWorker != null) {
-                cl.archiveDiskWorker.shutdown((byte) 51);
+              if (UsernameQuerySupport.archiveDiskWorker != null) {
+                UsernameQuerySupport.archiveDiskWorker.shutdown((byte) 51);
               }
-              if (null != af.field_d) {
+              if (null != CacheFileState.cacheDataFile) {
                 try {
-                  af.field_d.close(27034);
+                  CacheFileState.cacheDataFile.close(27034);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   iOException = (IOException) (Object) decompiledCaughtException;

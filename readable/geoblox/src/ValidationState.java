@@ -19,8 +19,8 @@ final class ValidationState {
           if (null != ArchiveRequest.pendingActionMarkers.firstForIteration(0)) {
             panelPhase = MidiPcmStream.pendingActionPanelPhase;
             if (panelPhase == 0) {
-              eh.pendingActionPanelTop = eh.pendingActionPanelTop - 1;
-              if (eh.pendingActionPanelTop <= -10 - (RasterTargetSnapshot.pendingActionPanelHeight - 480)) {
+              LogoCompositor.pendingActionPanelTop = LogoCompositor.pendingActionPanelTop - 1;
+              if (LogoCompositor.pendingActionPanelTop <= -10 - (RasterTargetSnapshot.pendingActionPanelHeight - 480)) {
                 EmailAvailabilityQuery.pendingActionPanelHoldTicks = 0;
                 MidiPcmStream.pendingActionPanelPhase = 1;
                 return;
@@ -36,8 +36,8 @@ final class ValidationState {
                 return;
               }
               if (panelPhase == 2) {
-                panelTopBeforeIncrement = eh.pendingActionPanelTop;
-                eh.pendingActionPanelTop = eh.pendingActionPanelTop + 1;
+                panelTopBeforeIncrement = LogoCompositor.pendingActionPanelTop;
+                LogoCompositor.pendingActionPanelTop = LogoCompositor.pendingActionPanelTop + 1;
                 if (panelTopBeforeIncrement > 480) {
                   ArchiveRequest.pendingActionMarkers.removeFirst((byte) -118);
                   EntityCollisionSupport.preparePendingActionPanel((byte) -12);
@@ -54,8 +54,8 @@ final class ValidationState {
         }
         panelPhase = MidiPcmStream.pendingActionPanelPhase;
         if (panelPhase == 0) {
-          eh.pendingActionPanelTop = eh.pendingActionPanelTop - 1;
-          if (eh.pendingActionPanelTop > -10 - (RasterTargetSnapshot.pendingActionPanelHeight - 480)) {
+          LogoCompositor.pendingActionPanelTop = LogoCompositor.pendingActionPanelTop - 1;
+          if (LogoCompositor.pendingActionPanelTop > -10 - (RasterTargetSnapshot.pendingActionPanelHeight - 480)) {
             return;
           }
           EmailAvailabilityQuery.pendingActionPanelHoldTicks = 0;
@@ -74,8 +74,8 @@ final class ValidationState {
         if (panelPhase != 2) {
           return;
         }
-        panelTopBeforeInvalidGuardIncrement = eh.pendingActionPanelTop;
-        eh.pendingActionPanelTop = eh.pendingActionPanelTop + 1;
+        panelTopBeforeInvalidGuardIncrement = LogoCompositor.pendingActionPanelTop;
+        LogoCompositor.pendingActionPanelTop = LogoCompositor.pendingActionPanelTop + 1;
         if (panelTopBeforeInvalidGuardIncrement <= 480) {
           return;
         }

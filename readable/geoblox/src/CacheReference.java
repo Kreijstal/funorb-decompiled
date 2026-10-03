@@ -19,7 +19,7 @@ abstract class CacheReference extends DualLinkNode {
     final static boolean f(int param0) {
         if (param0 != -31456) {
             field_q = (PacketBuffer) null;
-            if (hj.field_a < 10) {
+            if (SpriteConstructionSupport.clientScreenStage < 10) {
                 return false;
             }
             if (VisualPropertyOverrides.field_C >= 13) {
@@ -27,7 +27,7 @@ abstract class CacheReference extends DualLinkNode {
             }
             return false;
         }
-        if (hj.field_a < 10) {
+        if (SpriteConstructionSupport.clientScreenStage < 10) {
             return false;
         }
         if (VisualPropertyOverrides.field_C >= 13) {

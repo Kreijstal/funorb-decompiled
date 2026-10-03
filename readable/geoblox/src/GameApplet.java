@@ -396,7 +396,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                           break L1;
                         }
                       }
-                      TriangleMesh.field_w = ReflectionCheckRequest.field_p.a((byte) -6, ByteStorage.field_c);
+                      TriangleMesh.field_w = ReflectionCheckRequest.field_p.a((byte) -6, ByteStorage.updatePeriodNanoseconds);
                       stackIn_99_0 = 0;
                     }
                     var3 = stackIn_99_0;
@@ -738,7 +738,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
         try {
             MenuScreen.appletStopDeadlineMillis = oa.a(-12520);
-            bc.sleepMillis(0, 5000L);
+            ByteTextDecodingSupport.sleepMillis(0, 5000L);
             SpriteButtonRenderer.field_s = null;
             this.a((byte) 14, false);
         } catch (RuntimeException runtimeException) {
@@ -789,7 +789,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 var8 = MenuScreen.platformTaskDispatcher.startThread((Runnable) (this), 0, 1);
                 while (true) {
                   if (var8.status == 0) {
-                    bc.sleepMillis(0, 10L);
+                    ByteTextDecodingSupport.sleepMillis(0, 10L);
                     if (!(var9 != 0)) {
                       continue;
                     }

@@ -6,10 +6,10 @@
     "commit": "1ede093bd14022751b56a4736ac6fb7ae72703c5",
     "subdirectory": "games/geoblox"
   },
-  "rulesSha256": "9e76bcbb70c58303301e29e52c5e15b80a51fdc92744dd4d45e525963bbc72fb",
+  "rulesSha256": "c4e04826c1512078f83c432af10df922f6ea2d52f94c73849f67db3a0a24e544",
   "generatorSha256": "604e3e8169da62467fd1913ac2b5fc632ac17637191de8dd1ecb47b18e1258f5",
   "inputTreeSha256": "ed3b8d3273e80abdca9bb56ff0354f6d23734ac2a90e6778ac871e1feabd6f8f",
-  "outputTreeSha256": "a06e79f283fe68d05b4cb34b0d48a28959d28d7d016bd1a4b98b77ee7481a7d2",
+  "outputTreeSha256": "7254ad7253ed77c819e4d7289766198a149f7d4ea3e75272d9ac8eacf1112bc7",
   "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
   "classpath": [
     {

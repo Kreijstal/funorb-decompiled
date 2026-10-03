@@ -35,7 +35,7 @@ final class IterableNodeHashTable implements Iterable {
             } else {
               TextWidgetRenderer.field_d = OpacityWidget.a(SecondaryNodeDeque.ticketingUnreadCountText, new String[]{Integer.toString(var1)}, (byte) -124);
             }
-            TextWidgetRenderer.field_d = gg.a(-11455, new CharSequence[]{(CharSequence) ((Object) TextWidgetRenderer.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) PacketByteCipher.ticketingGoToWebsiteText)});
+            TextWidgetRenderer.field_d = NameCharacterSupport.joinTextParts(-11455, new CharSequence[]{(CharSequence) ((Object) TextWidgetRenderer.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) PacketByteCipher.ticketingGoToWebsiteText)});
           }
           Geoblox.activeMessageDialog.dismissDialog((byte) -104);
           StatefulWidgetRenderer.c(520);
@@ -203,7 +203,7 @@ final class IterableNodeHashTable implements Iterable {
               }
               var4 = ((PlatformTaskDispatcher) (Object) stackIn_13_0).requestUrlStream(stackIn_13_1, new java.net.URL(stackIn_13_4, ((StringBuilder) (Object) stackIn_13_5).append(stackIn_14_6).append("&v1=").append(PlatformTaskDispatcher.javaVendor).append("&v2=").append(PlatformTaskDispatcher.javaVersion).append("&e=").append(var9).toString()));
               while (var4.status == 0) {
-                bc.sleepMillis(param2 - 125, 1L);
+                ByteTextDecodingSupport.sleepMillis(param2 - 125, 1L);
               }
               if (var4.status == 1) {
                 var5 = (DataInputStream) (var4.result);

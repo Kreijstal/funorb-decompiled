@@ -56,7 +56,7 @@ final class ic {
             IOException var15 = null;
             RuntimeException var15_ref = null;
             try {
-              eh.field_d = new PacketBuffer(param8);
+              LogoCompositor.sessionPacketBuffer = new PacketBuffer(param8);
               CacheReference.field_q = new PacketBuffer(param2);
               GameplayEntity.field_D = param11;
               ok.field_f = param3;
@@ -71,7 +71,7 @@ final class ic {
               qe.field_b = param6;
               if (GameplayEntity.field_D.randomSeedFile != null) {
                 try {
-                  af.field_b = new BufferedRandomAccessFile(GameplayEntity.field_D.randomSeedFile, 64, 0);
+                  CacheFileState.randomSeedFile = new BufferedRandomAccessFile(GameplayEntity.field_D.randomSeedFile, 64, 0);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var15 = (IOException) (Object) decompiledCaughtException;
@@ -115,16 +115,16 @@ final class ic {
             if (param0 != 65) {
               field_a = (String) null;
             }
-            if (null != af.field_b) {
+            if (null != CacheFileState.randomSeedFile) {
               try {
-                af.field_b.seek(22, 0L);
-                af.field_b.write(24, eh.field_d.position, eh.field_d.bytes, false);
+                CacheFileState.randomSeedFile.seek(22, 0L);
+                CacheFileState.randomSeedFile.write(24, LogoCompositor.sessionPacketBuffer.position, LogoCompositor.sessionPacketBuffer.bytes, false);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var1 = (Exception) (Object) decompiledCaughtException;
               }
             }
-            eh.field_d.position = eh.field_d.position + 24;
+            LogoCompositor.sessionPacketBuffer.position = LogoCompositor.sessionPacketBuffer.position + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

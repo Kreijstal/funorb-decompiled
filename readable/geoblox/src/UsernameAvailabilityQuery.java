@@ -22,7 +22,7 @@ final class UsernameAvailabilityQuery {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          hj.a((byte) -85, (java.awt.Component) ((Object) param0));
+          SpriteConstructionSupport.attachKeyboardListeners((byte) -85, (java.awt.Component) ((Object) param0));
           if (param1 != 57) {
             return;
           }

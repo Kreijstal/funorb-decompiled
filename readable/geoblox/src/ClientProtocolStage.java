@@ -39,7 +39,7 @@ final class ClientProtocolStage {
         if (da.awaitingLoginDetailsStage == this) {
             return true;
         }
-        if (eh.connectedSessionStage != this) {
+        if (LogoCompositor.connectedSessionStage != this) {
             return false;
         }
         return true;

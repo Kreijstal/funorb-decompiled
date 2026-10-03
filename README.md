@@ -17,14 +17,33 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/9581255db52d2cb80b3d612a04f3f360e578e365/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/f5e43aaad42307da97f8447100c8e2c86719e36d/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 136,612 bindings,
 preserving 388 override relationships.
 
-Pass 121 adds 286 guarded names: 14 classes, 19 fields, 24 methods,
+Pass 122 adds 214 guarded names: 13 classes, 17 fields, 32 methods,
+49 parameters and 103 locals. The logo loading path now reads through
+`LogoPreparationSupport.prepareLogoAnimation`, `EntityMotionSupport.decodeLogoAudio`,
+`FullscreenSupport.prepareMeshSpecularResponse`, `MidiNoteMixer.prepareLogoGlowRaster`
+and `LogoCompositor.drawLogoAnimation`. The shared owners also expose snapshot
+retention, fullscreen exit, username-query reuse, common UI fonts, cache handles,
+name separators and configured timer rate. All parameters and locals in the
+13 audited owners have names. The top/bottom final-frame slices, scene/glow
+rasters, packet buffer and encrypted scratch have source-supported roles.
+All 10,324 previous complete rules, raw bodies, local ordinals, bytecode and
+source/tool/native trace pins remain. The export has 10,538 rules and 82,881
+identifier edits. All 303 raw/readable sources compile, compare 136,612 bindings
+and preserve 388 override relationships. Class coverage is 260 renamed, one
+meaningful original name and 42 opaque names. Six large labeled bodies and
+207 block labels remain. Configured update rate is a timer setting, not measured
+presented FPS. Mixed-purpose statics stay on their owners. This naming pass adds
+no whole-game, successful asset/audio/AWT fullscreen, live server, browser/phone
+or heap/FPS equivalence claim.
+
+Pass 121 added 286 guarded names: 14 classes, 19 fields, 24 methods,
 44 parameters and 185 locals. The game now reads through `MatchCandidateSupport`,
 `MatchScoringSupport`, `PlayfieldRules`, `ScorePopupSupport`,
 `AttachedEntityRenderer`, `EndingAnimationSupport`, `DebugOverviewCompositor`,

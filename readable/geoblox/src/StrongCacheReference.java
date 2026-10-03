@@ -56,7 +56,7 @@ final class StrongCacheReference extends CacheReference {
           } else {
             stackIn_7_1 = true;
           }
-          dl.field_a = hh.a(stackIn_6_0, stackIn_7_1);
+          dl.field_a = UiFontResources.createAcceptedUsernameQuery(stackIn_6_0, stackIn_7_1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

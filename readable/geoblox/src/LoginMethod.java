@@ -8,7 +8,7 @@ final class LoginMethod {
     final static boolean isAvatarCryHoldExpired(int methodGuard) {
         if (methodGuard != -3) {
             field_b = (String) null;
-            if (gg.avatarCryPhase != 2) {
+            if (NameCharacterSupport.avatarCryPhase != 2) {
                 return false;
             }
             if (LimitedRandomAccessFile.avatarFeedbackHoldTicks < 0) {
@@ -16,7 +16,7 @@ final class LoginMethod {
             }
             return false;
         }
-        if (gg.avatarCryPhase != 2) {
+        if (NameCharacterSupport.avatarCryPhase != 2) {
             return false;
         }
         if (LimitedRandomAccessFile.avatarFeedbackHoldTicks < 0) {

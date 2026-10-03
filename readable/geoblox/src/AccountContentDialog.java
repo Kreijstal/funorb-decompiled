@@ -25,7 +25,7 @@ final class AccountContentDialog extends ContentTransitionDialog {
             ArchiveRequest.a(tj.a((byte) 73), CanvasResizeController.field_q, var3_int != 0, false, AudioService.a((byte) -85));
           } else {
             if (OpacityWidget.isLogoAnimationComplete(7426)) {
-              if (hj.field_a == 0) {
+              if (SpriteConstructionSupport.clientScreenStage == 0) {
                 PcmResampler.a(param0, false, (byte) -102);
                 MeshDepthSupport.drawMainRasterToCanvas(0, (byte) 42, param2, 0);
               } else {
@@ -33,7 +33,7 @@ final class AccountContentDialog extends ContentTransitionDialog {
               }
             } else {
               SoftwareRasterizer.clearFramebuffer();
-              eh.a(240, 320, -51);
+              LogoCompositor.drawLogoAnimation(240, 320, -51);
               MeshDepthSupport.drawMainRasterToCanvas(0, (byte) 51, param2, 0);
             }
           }

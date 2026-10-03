@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class DialWidget extends ButtonWidget {
-    static hh contentFadeInPhase;
+    static UiFontResources contentFadeInPhase;
     static MusicScore bakingMusicTrack;
     static String js5IoErrorText;
     int centerOffsetX;
@@ -166,7 +166,7 @@ final class DialWidget extends ButtonWidget {
     }
 
     static {
-        contentFadeInPhase = new hh();
+        contentFadeInPhase = new UiFontResources();
         js5IoErrorText = "IO error - unable to communicate reliably with the data server. Please check any firewall/antivirus/filtering software.";
         fullscreenMembersButtonText = "Members";
     }

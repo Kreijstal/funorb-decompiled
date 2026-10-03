@@ -163,7 +163,7 @@ final class VorbisCodebook {
           var2 = 0;
           var3_int = MusicDecoder.readBits(5) + 1;
           while (var2 < this.entryCount) {
-            var4_int = MusicDecoder.readBits(hj.unsignedBitLength((byte) 58, this.entryCount - var2));
+            var4_int = MusicDecoder.readBits(SpriteConstructionSupport.unsignedBitLength((byte) 58, this.entryCount - var2));
             for (var5 = 0; var5 < var4_int; var5++) {
               incrementValue$0 = var2;
               var2++;

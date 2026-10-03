@@ -53,7 +53,7 @@ final class EndingAnimationSupport {
     }
 
     final static void presentPreparedFrame(boolean drawEnabled, java.awt.Canvas canvas) {
-        if (!(hj.field_a != 11)) {
+        if (!(SpriteConstructionSupport.clientScreenStage != 11)) {
             w.a(31);
         }
         if (!drawEnabled) {

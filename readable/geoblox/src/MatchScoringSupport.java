@@ -118,7 +118,7 @@ final class MatchScoringSupport {
                 }
                 if (-1073741824 == (-1073741824 & TextPairLoginPayload.packedMatchCandidates[candidateIndex])) {
                   awardedPoints = 90 * EntityCollisionSupport.matchChainLength;
-                  SecondaryNodeDeque.recordAchievement(fa.field_e ^ 255, -100, fa.field_e);
+                  SecondaryNodeDeque.recordAchievement(MessageDialogSupport.field_e ^ 255, -100, MessageDialogSupport.field_e);
                 } else {
                   awardedPoints = 30 * EntityCollisionSupport.matchChainLength;
                 }
@@ -154,7 +154,7 @@ final class MatchScoringSupport {
             Bzip2DecoderState.closeSessionSocket((byte) -122);
             return;
         }
-        PacketBuffer incomingPacket = eh.field_d;
+        PacketBuffer incomingPacket = LogoCompositor.sessionPacketBuffer;
         incomingPacket.readIntBE((byte) -102);
         incomingPacket.readIntBE((byte) -108);
         incomingPacket.readIntBE((byte) -71);

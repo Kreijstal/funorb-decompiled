@@ -117,7 +117,7 @@ final class MeshDepthSupport {
         int controlFlagSnapshot = 0;
         controlFlagSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          depthRangeBitLength = hj.unsignedBitLength((byte) 58, (maximumVisibleDepth - minimumVisibleDepth) * 3);
+          depthRangeBitLength = SpriteConstructionSupport.unsignedBitLength((byte) 58, (maximumVisibleDepth - minimumVisibleDepth) * 3);
           minimumDepthTimesThree = minimumVisibleDepth * 3;
           depthBucketShift = depthRangeBitLength - 10;
           ResizableDialog.clearMeshDepthBucketCounts(0);
@@ -268,7 +268,7 @@ final class MeshDepthSupport {
         int controlFlagSnapshot = 0;
         controlFlagSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          depthRangeBitLength = hj.unsignedBitLength((byte) 58, (maximumVisibleDepth - minimumVisibleDepth) * 3);
+          depthRangeBitLength = SpriteConstructionSupport.unsignedBitLength((byte) 58, (maximumVisibleDepth - minimumVisibleDepth) * 3);
           minimumDepthTimesThree = minimumVisibleDepth * 3;
           depthBucketShift = depthRangeBitLength - 10;
           ResizableDialog.clearMeshDepthBucketCounts(0);

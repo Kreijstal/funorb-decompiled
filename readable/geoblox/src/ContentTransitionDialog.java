@@ -7,7 +7,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
     private UiWidget pendingContent;
     private int fadeOutDurationTicks;
     private int contentFadeTick;
-    private hh contentTransitionPhase;
+    private UiFontResources contentTransitionPhase;
     static int[] secondVertexTransformedX;
     static MusicScore resultMusicTrack;
     private OpacityWidget contentOpacityWidget;

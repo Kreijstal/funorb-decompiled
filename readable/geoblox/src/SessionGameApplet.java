@@ -22,7 +22,7 @@ abstract class SessionGameApplet extends GameApplet {
         if (this.field_a) {
           return -1;
         }
-        if (!sb.a(75)) {
+        if (!ClientTimingSupport.isClientReadyForSessionActions(75)) {
           return -1;
         }
         if (ArchiveLoadStep.field_e) {
@@ -43,7 +43,7 @@ abstract class SessionGameApplet extends GameApplet {
           DisplayNamePanel.field_G = oa.a(-12520) + 15000L;
           return var2;
         }
-        if (hj.field_a != 11) {
+        if (SpriteConstructionSupport.clientScreenStage != 11) {
           return var2;
         }
         if (DebouncedValidationProvider.archiveLoadStatus != 0) {
@@ -116,7 +116,7 @@ abstract class SessionGameApplet extends GameApplet {
             TextLayoutLine.field_e = param2;
             DebouncedValidationProvider.field_c = param4;
             ArchiveRequest.field_r = param6;
-            sb.field_d = param3;
+            ClientTimingSupport.field_d = param3;
             ah.field_a = param1;
             this.e(123);
             PacketBuffer.k((byte) -13);
@@ -250,21 +250,21 @@ abstract class SessionGameApplet extends GameApplet {
         RankedListQuery.updateKeyboardStateForFrame(true);
         mc.snapshotPointerInput((byte) -128);
         if ((!bl.b(255)) &&
-            (hj.field_a != 11)) {
+            (SpriteConstructionSupport.clientScreenStage != 11)) {
           TextTemplateArgumentType.c(1);
         }
         if (null != CachedTextLayout.mouseWheelInput) {
           CachedTextLayout.wheelRotationSnapshot = CachedTextLayout.mouseWheelInput.drainWheelRotation(true);
         }
         if (InstrumentEnvelope.b(param1 ^ 19649)) {
-          var3 = 1200 * sb.a(true);
+          var3 = 1200 * ClientTimingSupport.getConfiguredUpdateRate(true);
           if ((!(!this.field_t) ||
               (!(~var3 <= ~IndexedSpriteState.a(-76)) &&
-                !(var3 >= jk.a(false))))) {
+                !(var3 >= FullscreenSupport.getPointerIdleTicks(false))))) {
             this.field_t = false;
             Bzip2DecoderState.closeSessionSocket((byte) -115);
             kd.b((byte) 81);
-            TextInputValidator.a((byte) 124, 2, fa.idleMessage20MinText);
+            TextInputValidator.a((byte) 124, 2, MessageDialogSupport.idleMessage20MinText);
             bl.c(-113);
             ArchiveLoadStep.field_e = true;
             DisplayNamePanel.field_G = oa.a(-12520) + 15000L;
@@ -277,8 +277,8 @@ abstract class SessionGameApplet extends GameApplet {
           DebouncedValidationProvider.archiveLoadStatus = DelayedIncomingPacket.tickArchiveLoading(15869);
           if ((var3 != 0) &&
               (DebouncedValidationProvider.archiveLoadStatus == 0) &&
-              (11 == hj.field_a) &&
-              (!sb.a(73))) {
+              (11 == SpriteConstructionSupport.clientScreenStage) &&
+              (!ClientTimingSupport.isClientReadyForSessionActions(73))) {
             IterableNodeHashTable.b(-12618);
           }
           if ((-1 != DebouncedValidationProvider.archiveLoadStatus) &&
@@ -289,7 +289,7 @@ abstract class SessionGameApplet extends GameApplet {
         if ((DebouncedValidationProvider.archiveLoadStatus != -1) &&
             (DebouncedValidationProvider.archiveLoadStatus != 0)) {
           if (VisualPropertyOverrides.field_C >= 10) {
-            if (hj.field_a >= 10) {
+            if (SpriteConstructionSupport.clientScreenStage >= 10) {
               kd.b((byte) 114);
               if (DebouncedValidationProvider.archiveLoadStatus != 3) {
                 if (4 != DebouncedValidationProvider.archiveLoadStatus) {
@@ -297,7 +297,7 @@ abstract class SessionGameApplet extends GameApplet {
                     TextInputValidator.a((byte) 124, 256, DualLinkNode.js5ConnectFullErrorText);
                   } else {
                     if (DebouncedValidationProvider.archiveLoadStatus != 5) {
-                      TextInputValidator.a((byte) 124, 256, ki.js5ConnectErrorText);
+                      TextInputValidator.a((byte) 124, 256, SessionSnapshotSupport.js5ConnectErrorText);
                     } else {
                       TextInputValidator.a((byte) 124, 5, SocketConnector.loginGameUpdatedText);
                     }
@@ -332,7 +332,7 @@ abstract class SessionGameApplet extends GameApplet {
         }
         if ((!((!((DebouncedValidationProvider.archiveLoadStatus != -1) &&
                 (DebouncedValidationProvider.archiveLoadStatus != 0))) &&
-              (!sb.a(param1 - 19585)))) &&
+              (!ClientTimingSupport.isClientReadyForSessionActions(param1 - 19585)))) &&
             (~DisplayNamePanel.field_G >= ~oa.a(param1 - 32180))) {
           ArchiveLoadStep.field_e = false;
           if ((-1 != DebouncedValidationProvider.archiveLoadStatus) &&
@@ -342,7 +342,7 @@ abstract class SessionGameApplet extends GameApplet {
           }
         }
         if ((DebouncedValidationProvider.archiveLoadStatus == 0) &&
-            (!sb.a(93))) {
+            (!ClientTimingSupport.isClientReadyForSessionActions(93))) {
           lb.field_a = false;
         }
         if ((VisualPropertyOverrides.field_C == 0) &&
@@ -355,8 +355,8 @@ abstract class SessionGameApplet extends GameApplet {
           }
           DirectByteStorage.field_h = DisplayModeInfo.a(DebouncedValidationProvider.field_c, (byte) -18, true, false, 1);
           AttachedEntityRenderer.field_c = DisplayModeInfo.a(ArchiveRequest.field_r, (byte) -124, true, false, 1);
-          DialRenderer.field_n = DisplayModeInfo.a(sb.field_d, (byte) -41, true, false, 1);
-          ki.basicUiGraphicsArchive = DirectByteStorage.field_h;
+          DialRenderer.field_n = DisplayModeInfo.a(ClientTimingSupport.field_d, (byte) -41, true, false, 1);
+          SessionSnapshotSupport.basicUiGraphicsArchive = DirectByteStorage.field_h;
           VisualPropertyOverrides.field_C = 2;
           RankedListQuery.field_i = AttachedEntityRenderer.field_c;
         }
@@ -408,7 +408,7 @@ abstract class SessionGameApplet extends GameApplet {
             DelegatingCanvas.field_a = LoginPayload.b((byte) 72);
             ValidatedTextInputWidget.field_R = GzipInflater.b(110);
           }
-          bk.a(DialRenderer.field_n, ValidatedTextInputWidget.field_R, 111, DelegatingCanvas.field_a);
+          LogoPreparationSupport.prepareLogoAnimation(DialRenderer.field_n, ValidatedTextInputWidget.field_R, 111, DelegatingCanvas.field_a);
           DialRenderer.field_n = null;
           AttachedEntityRenderer.field_c = null;
           DirectByteStorage.field_h = null;
@@ -476,7 +476,7 @@ abstract class SessionGameApplet extends GameApplet {
             if (!OpacityWidget.isLogoAnimationComplete(7426)) {
               ValidationIconWidget.advanceLogoAnimationTick((byte) 88);
             } else {
-              if (hj.field_a != 0) {
+              if (SpriteConstructionSupport.clientScreenStage != 0) {
                 ByteStorage.a(CachedTextLayout.wheelRotationSnapshot, (byte) -96);
               } else {
                 discarded$55 = this.a(false, false, -1);
@@ -555,7 +555,7 @@ abstract class SessionGameApplet extends GameApplet {
                     CheckboxWidget.field_H = oa.field_c;
                     IterableNodeHashTable.b(-12618);
                     ProgressBarWidget.field_G = false;
-                    hj.field_a = 10;
+                    SpriteConstructionSupport.clientScreenStage = 10;
                   } else {
                     TextInputValidator.a((byte) 124, var5_int, AudioService.field_a);
                     AudioService.field_a = null;
@@ -568,7 +568,7 @@ abstract class SessionGameApplet extends GameApplet {
             if (var4 == 4) {
               if (!rb.field_c) {
                 ProgressBarWidget.field_G = true;
-                hj.field_a = 10;
+                SpriteConstructionSupport.clientScreenStage = 10;
               } else {
                 BufferedSocket.clearSessionAndReload((byte) 116, NodeHashTableIterator.c(param2 ^ -122));
               }
@@ -578,7 +578,7 @@ abstract class SessionGameApplet extends GameApplet {
             }
             if ((var4 == 6) &&
                 (kf.field_e)) {
-              hj.field_a = 10;
+              SpriteConstructionSupport.clientScreenStage = 10;
             }
             if (var4 == 7) {
               TrackedPcmStream.a((byte) 114, NodeHashTableIterator.c(107));
@@ -609,7 +609,7 @@ abstract class SessionGameApplet extends GameApplet {
                     var9 = (String) null;
                     SecondaryDeque.a((byte) 69, (String) null);
                   } else {
-                    var7 = bc.decodeTextSlice(-46, var12.bytes, 0, var12.position);
+                    var7 = ByteTextDecodingSupport.decodeTextSlice(-46, var12.bytes, 0, var12.position);
                     SecondaryDeque.a((byte) 69, var7);
                   }
                   EmailAvailabilityValidator.field_n = null;
@@ -624,7 +624,7 @@ abstract class SessionGameApplet extends GameApplet {
               }
             }
             if (var4 == 15) {
-              hj.field_a = 10;
+              SpriteConstructionSupport.clientScreenStage = 10;
             }
             if (16 == var4) {
               return 1;
@@ -754,7 +754,7 @@ abstract class SessionGameApplet extends GameApplet {
                     } else {
                       if (var2 != 7) {
                         if (8 == var2) {
-                          GameplaySetupSupport.readReflectionCheckRequest(-4, MenuScreen.platformTaskDispatcher, AchievementSubmission.field_k, eh.field_d);
+                          GameplaySetupSupport.readReflectionCheckRequest(-4, MenuScreen.platformTaskDispatcher, AchievementSubmission.field_k, LogoCompositor.sessionPacketBuffer);
                         } else {
                           if (var2 == 16) {
                             DualLinkNode.b(1);
@@ -778,7 +778,7 @@ abstract class SessionGameApplet extends GameApplet {
                               return;
                             }
                             stackIn_30_0 = !(var2 != 12);
-                            var3 = bk.a(stackIn_30_0, 128);
+                            var3 = LogoPreparationSupport.readSessionSnapshot(stackIn_30_0, 128);
                             Under13TermsPanel.a(var3, 0);
                           }
                         }
@@ -800,14 +800,14 @@ abstract class SessionGameApplet extends GameApplet {
     }
 
     private final void g(byte param0) {
-        int var2 = eh.field_d.readUnsignedByte((byte) 34);
+        int var2 = LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
         int var3 = (var2 & 1) != 0 ? 1 : 0;
         if (param0 != 12) {
             this.h(106);
         }
         int var4 = -1 + AchievementSubmission.field_k;
         byte[] var5 = new byte[var4];
-        eh.field_d.readCipherBytes(96, 0, var5, var4);
+        LogoCompositor.sessionPacketBuffer.readCipherBytes(96, 0, var5, var4);
         LimitedRandomAccessFile.a(EmailValidator.decodeTextBytes(1, var5), (byte) -128, var3 != 0, NodeHashTableIterator.c(112));
     }
 

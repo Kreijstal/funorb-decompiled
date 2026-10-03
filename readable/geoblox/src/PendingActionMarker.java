@@ -13,12 +13,12 @@ final class PendingActionMarker extends IntrusiveNode {
         kf.field_e = true;
         if (param0 > 115) {
             TextInputValidator.a((byte) 107, false);
-            hj.field_a = 0;
+            SpriteConstructionSupport.clientScreenStage = 0;
             return;
         }
         pendingRankedListQueries = (IntrusiveDeque) null;
         TextInputValidator.a((byte) 107, false);
-        hj.field_a = 0;
+        SpriteConstructionSupport.clientScreenStage = 0;
     }
 
     public static void c(byte param0) {

@@ -118,7 +118,7 @@ final class EmailValidator extends TextInputValidator {
           if (decodeGuard != 1) {
             themeMusicPreparationFlags = (boolean[]) null;
           }
-          decodedTextBeforeReturn = bc.decodeTextSlice(-8, textBytes, 0, textBytes.length);
+          decodedTextBeforeReturn = ByteTextDecodingSupport.decodeTextSlice(-8, textBytes, 0, textBytes.length);
           return decodedTextBeforeReturn;
         } catch (java.lang.RuntimeException decodingFailure) {
           caughtDecodingFailure = decodingFailure;
@@ -221,7 +221,7 @@ final class EmailValidator extends TextInputValidator {
             if (param0 != 12607) {
                 archiveGameCrc = 32;
             }
-            fa.showMessageDialog(DisplayModeInfo.loggingInText, 480, false);
+            MessageDialogSupport.showMessageDialog(DisplayModeInfo.loggingInText, 480, false);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ag.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

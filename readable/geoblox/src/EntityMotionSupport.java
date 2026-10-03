@@ -9,32 +9,32 @@ final class EntityMotionSupport {
     static int field_b;
     static volatile boolean field_a;
 
-    final static void a(int param0, ResourceArchive param1) {
-        MusicDecoder var2 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2_ref = null;
+    final static void decodeLogoAudio(int methodGuard, ResourceArchive logoArchive) {
+        MusicDecoder logoAudioDecoder = null;
+        RuntimeException decodeFailureBeforeDescription = null;
+        StringBuilder decodeMessagePrefix = null;
+        String archiveDescription = null;
+        RuntimeException caughtDecodeFailure = null;
+        RuntimeException decodeFailureForContext = null;
         try {
-          MusicDecoder.a(param1.getNamedFile(0, "", "headers.packvorbis"));
-          var2 = MusicDecoder.a(param1, "jagex logo2.packvorbis", "");
-          var2.decodePcm();
-          if (param0 < 29) {
+          MusicDecoder.a(logoArchive.getNamedFile(0, "", "headers.packvorbis"));
+          logoAudioDecoder = MusicDecoder.a(logoArchive, "jagex logo2.packvorbis", "");
+          logoAudioDecoder.decodePcm();
+          if (methodGuard < 29) {
             boardContactStateDirty = true;
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
-          stackIn_5_0 = var2_ref;
-          stackIn_5_1 = new StringBuilder().append("ab.F(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_6_2 = "null";
+        } catch (java.lang.RuntimeException decodeFailure) {
+          caughtDecodeFailure = decodeFailure;
+          decodeFailureForContext = caughtDecodeFailure;
+          decodeFailureBeforeDescription = decodeFailureForContext;
+          decodeMessagePrefix = new StringBuilder().append("ab.F(").append(methodGuard).append(',');
+          if (logoArchive == null) {
+            archiveDescription = "null";
           } else {
-            stackIn_6_2 = "{...}";
+            archiveDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) decodeFailureBeforeDescription), ((StringBuilder) (Object) decodeMessagePrefix).append(archiveDescription).append(')').toString());
         }
     }
 
@@ -59,7 +59,7 @@ final class EntityMotionSupport {
         var8 = Geoblox.clientControlFlowFlag;
         try {
           if (param2 == null) {
-            stackIn_4_0 = gg.createNameLengthAlertText;
+            stackIn_4_0 = NameCharacterSupport.createNameLengthAlertText;
             return stackIn_4_0;
           }
           var3_int = param2.length();
@@ -71,19 +71,19 @@ final class EntityMotionSupport {
             }
             if ((var4 != null) &&
                 (var4.length() >= 1)) {
-              if ((!gg.a((byte) -32, var4.charAt(0))) &&
-                  (!gg.a((byte) -75, var4.charAt(-1 + var4.length())))) {
+              if ((!NameCharacterSupport.isNameSeparator((byte) -32, var4.charAt(0))) &&
+                  (!NameCharacterSupport.isNameSeparator((byte) -75, var4.charAt(-1 + var4.length())))) {
                 var5 = 0;
                 for (var6 = 0; var6 < param2.length(); var6++) {
                   var7 = param2.charAt(var6);
-                  if (gg.a((byte) -96, (char) var7)) {
+                  if (NameCharacterSupport.isNameSeparator((byte) -96, (char) var7)) {
                     var5++;
                   } else {
                     var5 = 0;
                   }
                   if ((2 <= var5) &&
                       (!param0)) {
-                    stackIn_31_0 = fa.createDoubleSpaceAlertText;
+                    stackIn_31_0 = MessageDialogSupport.createDoubleSpaceAlertText;
                     return stackIn_31_0;
                   }
                 }
@@ -96,10 +96,10 @@ final class EntityMotionSupport {
               stackIn_21_0 = GameScreen.createNameLeadingSpaceAlertText;
               return stackIn_21_0;
             }
-            stackIn_16_0 = gg.createNameLengthAlertText;
+            stackIn_16_0 = NameCharacterSupport.createNameLengthAlertText;
             return stackIn_16_0;
           }
-          stackIn_9_0 = gg.createNameLengthAlertText;
+          stackIn_9_0 = NameCharacterSupport.createNameLengthAlertText;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

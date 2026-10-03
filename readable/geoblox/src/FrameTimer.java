@@ -20,7 +20,7 @@ abstract class FrameTimer {
     final int a(byte param0, long param1) {
         long var4 = this.a((byte) -49);
         if (!(0L >= var4)) {
-            bc.sleepMillis(0, var4);
+            ByteTextDecodingSupport.sleepMillis(0, var4);
         }
         if (param0 == -6) {
             return this.a(true, param1);

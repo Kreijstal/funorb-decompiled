@@ -510,7 +510,7 @@ class UiWidget extends IntrusiveNode {
         }
         var5 = LongAndTextLoginPayload.c((byte) 55);
         if (var5 != null) {
-          DialRenderer.field_j.drawTooltip(PendingActionMarker.field_g, true, bc.field_a, var5);
+          DialRenderer.field_j.drawTooltip(PendingActionMarker.field_g, true, ByteTextDecodingSupport.field_a, var5);
         }
     }
 
@@ -676,7 +676,7 @@ class UiWidget extends IntrusiveNode {
             int var2_int = 0;
             Throwable decompiledCaughtException = null;
             IOException var2 = null;
-            if (eh.field_d.position >= param1) {
+            if (LogoCompositor.sessionPacketBuffer.position >= param1) {
               return true;
             }
             if (SpriteCheckboxRenderer.field_e == null) {
@@ -688,16 +688,16 @@ class UiWidget extends IntrusiveNode {
               }
               var2_int = SpriteCheckboxRenderer.field_e.available((byte) 110);
               if (var2_int > 0) {
-                if (-eh.field_d.position + param1 < var2_int) {
-                  var2_int = param1 - eh.field_d.position;
+                if (-LogoCompositor.sessionPacketBuffer.position + param1 < var2_int) {
+                  var2_int = param1 - LogoCompositor.sessionPacketBuffer.position;
                 }
-                SpriteCheckboxRenderer.field_e.readFully(eh.field_d.bytes, (byte) -97, eh.field_d.position, var2_int);
+                SpriteCheckboxRenderer.field_e.readFully(LogoCompositor.sessionPacketBuffer.bytes, (byte) -97, LogoCompositor.sessionPacketBuffer.position, var2_int);
                 AudioService.field_e = oa.a(-12520);
-                eh.field_d.position = eh.field_d.position + var2_int;
-                if (param1 > eh.field_d.position) {
+                LogoCompositor.sessionPacketBuffer.position = LogoCompositor.sessionPacketBuffer.position + var2_int;
+                if (param1 > LogoCompositor.sessionPacketBuffer.position) {
                   return false;
                 }
-                eh.field_d.position = 0;
+                LogoCompositor.sessionPacketBuffer.position = 0;
                 return true;
               }
               if (var2_int < 0) {

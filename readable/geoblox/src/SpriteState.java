@@ -824,10 +824,10 @@ abstract class SpriteState extends DualLinkNode {
             try {
               L0: {
                 var2 = new byte[24];
-                if (null != af.field_b) {
+                if (null != CacheFileState.randomSeedFile) {
                   try {
-                    af.field_b.seek(51, 0L);
-                    af.field_b.readAll((byte) -76, var2);
+                    CacheFileState.randomSeedFile.seek(51, 0L);
+                    CacheFileState.randomSeedFile.readAll((byte) -76, var2);
                     var3_int = 0;
                     while (true) {
                       L4: {

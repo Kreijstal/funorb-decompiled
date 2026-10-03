@@ -149,7 +149,7 @@ abstract class ResizableDialog extends FadingDialog {
           }
           crcAccumulator = -1;
           for (byteIndex = startPosition; byteIndex < endPosition; byteIndex++) {
-            crcAccumulator = sb.crc32Table[(crcAccumulator ^ bytes[byteIndex]) & 255] ^ crcAccumulator >>> 8;
+            crcAccumulator = ClientTimingSupport.crc32Table[(crcAccumulator ^ bytes[byteIndex]) & 255] ^ crcAccumulator >>> 8;
           }
           crcAccumulator = ~crcAccumulator;
           checksumBeforeReturn = crcAccumulator;
@@ -224,14 +224,14 @@ abstract class ResizableDialog extends FadingDialog {
           var2_int = 0;
           var3 = param0.length();
           while (var3 > var2_int) {
-            if (gg.a((byte) 125, param0.charAt(var2_int))) {
+            if (NameCharacterSupport.isNameSeparator((byte) 125, param0.charAt(var2_int))) {
               var2_int++;
               continue;
             }
             break;
           }
           while (var2_int < var3) {
-            if (gg.a((byte) -47, param0.charAt(var3 - 1))) {
+            if (NameCharacterSupport.isNameSeparator((byte) -47, param0.charAt(var3 - 1))) {
               var3--;
               continue;
             }

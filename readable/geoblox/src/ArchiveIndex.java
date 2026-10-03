@@ -290,7 +290,7 @@ final class ArchiveIndex {
     ArchiveIndex(byte[] packedIndexBytes, int expectedCrc32, byte[] expectedWhirlpoolDigest) {
         int digestByteIndex = 0;
         try {
-            this.indexCrc32 = gg.computePrefixCrc32(packedIndexBytes, 107, packedIndexBytes.length);
+            this.indexCrc32 = NameCharacterSupport.computePrefixCrc32(packedIndexBytes, 107, packedIndexBytes.length);
             if (expectedCrc32 != this.indexCrc32) {
                 throw new RuntimeException();
             }

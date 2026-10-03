@@ -35,7 +35,7 @@ class IntrusiveNode {
                   IntrusiveNodeHashTable.selectLoopingBackgroundMusic(0, SessionGameApplet.spaceMusicTrack);
                 }
               } else {
-                IntrusiveNodeHashTable.selectLoopingBackgroundMusic(0, ej.jewelleryMusicTrack);
+                IntrusiveNodeHashTable.selectLoopingBackgroundMusic(0, RatingPresentationResources.jewelleryMusicTrack);
               }
             } else {
               IntrusiveNodeHashTable.selectLoopingBackgroundMusic(0, sunMusicTrack);
@@ -142,31 +142,31 @@ class IntrusiveNode {
           spriteDataBuffer = new ByteArrayBuffer(spriteBytes);
           spriteDataBufferAlias = spriteDataBuffer;
           spriteDataBufferAlias.position = spriteBytes.length - 2;
-          sb.decodedSpriteCount = spriteDataBufferAlias.readUnsignedShortBE(readGuard);
-          DualLinkNode.decodedSpriteWidths = new int[sb.decodedSpriteCount];
-          ProgressBarWidget.decodedSpriteHeights = new int[sb.decodedSpriteCount];
-          DialogLayer.decodedSpriteHasNonOpaqueAlpha = new boolean[sb.decodedSpriteCount];
-          HotspotTextWidget.decodedSpriteAlpha = new byte[sb.decodedSpriteCount][];
-          GameplaySession.decodedSpriteXOffsets = new int[sb.decodedSpriteCount];
-          mj.decodedSpriteIndices = new byte[sb.decodedSpriteCount][];
-          md.decodedSpriteYOffsets = new int[sb.decodedSpriteCount];
-          spriteDataBufferAlias.position = -7 + spriteBytes.length - sb.decodedSpriteCount * 8;
+          ClientTimingSupport.decodedSpriteCount = spriteDataBufferAlias.readUnsignedShortBE(readGuard);
+          DualLinkNode.decodedSpriteWidths = new int[ClientTimingSupport.decodedSpriteCount];
+          ProgressBarWidget.decodedSpriteHeights = new int[ClientTimingSupport.decodedSpriteCount];
+          DialogLayer.decodedSpriteHasNonOpaqueAlpha = new boolean[ClientTimingSupport.decodedSpriteCount];
+          HotspotTextWidget.decodedSpriteAlpha = new byte[ClientTimingSupport.decodedSpriteCount][];
+          GameplaySession.decodedSpriteXOffsets = new int[ClientTimingSupport.decodedSpriteCount];
+          mj.decodedSpriteIndices = new byte[ClientTimingSupport.decodedSpriteCount][];
+          md.decodedSpriteYOffsets = new int[ClientTimingSupport.decodedSpriteCount];
+          spriteDataBufferAlias.position = -7 + spriteBytes.length - ClientTimingSupport.decodedSpriteCount * 8;
           GameplaySetupSupport.decodedSpriteCanvasWidth = spriteDataBufferAlias.readUnsignedShortBE(true);
           FadingDialog.decodedSpriteCanvasHeight = spriteDataBufferAlias.readUnsignedShortBE(true);
           paletteSize = (255 & spriteDataBufferAlias.readUnsignedByte((byte) 34)) + 1;
-          for (spriteIndex = 0; spriteIndex < sb.decodedSpriteCount; spriteIndex++) {
+          for (spriteIndex = 0; spriteIndex < ClientTimingSupport.decodedSpriteCount; spriteIndex++) {
             GameplaySession.decodedSpriteXOffsets[spriteIndex] = spriteDataBuffer.readUnsignedShortBE(readGuard);
           }
-          for (spriteIndex = 0; spriteIndex < sb.decodedSpriteCount; spriteIndex++) {
+          for (spriteIndex = 0; spriteIndex < ClientTimingSupport.decodedSpriteCount; spriteIndex++) {
             md.decodedSpriteYOffsets[spriteIndex] = spriteDataBuffer.readUnsignedShortBE(true);
           }
-          for (spriteIndex = 0; sb.decodedSpriteCount > spriteIndex; spriteIndex++) {
+          for (spriteIndex = 0; ClientTimingSupport.decodedSpriteCount > spriteIndex; spriteIndex++) {
             DualLinkNode.decodedSpriteWidths[spriteIndex] = spriteDataBuffer.readUnsignedShortBE(true);
           }
-          for (spriteIndex = 0; spriteIndex < sb.decodedSpriteCount; spriteIndex++) {
+          for (spriteIndex = 0; spriteIndex < ClientTimingSupport.decodedSpriteCount; spriteIndex++) {
             ProgressBarWidget.decodedSpriteHeights[spriteIndex] = spriteDataBuffer.readUnsignedShortBE(true);
           }
-          spriteDataBufferAlias.position = -(paletteSize * 3) + 3 - 8 * sb.decodedSpriteCount - 7 + spriteBytes.length;
+          spriteDataBufferAlias.position = -(paletteSize * 3) + 3 - 8 * ClientTimingSupport.decodedSpriteCount - 7 + spriteBytes.length;
           NanoFrameTimer.decodedSpritePalette = new int[paletteSize];
           for (spriteIndex = 1; spriteIndex < paletteSize; spriteIndex++) {
             NanoFrameTimer.decodedSpritePalette[spriteIndex] = spriteDataBuffer.readUnsignedMediumBE(108);
@@ -175,7 +175,7 @@ class IntrusiveNode {
             }
           }
           spriteDataBufferAlias.position = 0;
-          for (spriteIndex = 0; spriteIndex < sb.decodedSpriteCount; spriteIndex++) {
+          for (spriteIndex = 0; spriteIndex < ClientTimingSupport.decodedSpriteCount; spriteIndex++) {
             spriteWidth = DualLinkNode.decodedSpriteWidths[spriteIndex];
             spriteHeight = ProgressBarWidget.decodedSpriteHeights[spriteIndex];
             pixelCount = spriteWidth * spriteHeight;

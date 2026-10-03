@@ -262,12 +262,12 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
             if (var4.length() < 1) {
               return false;
             }
-            if ((!gg.a((byte) -62, var4.charAt(0))) &&
-                (!gg.a((byte) -98, var4.charAt(-1 + var4.length())))) {
+            if ((!NameCharacterSupport.isNameSeparator((byte) -62, var4.charAt(0))) &&
+                (!NameCharacterSupport.isNameSeparator((byte) -98, var4.charAt(-1 + var4.length())))) {
               var5 = 0;
               for (var6 = 0; var6 < param1.length(); var6++) {
                 var7 = param1.charAt(var6);
-                if (!gg.a((byte) -93, (char) var7)) {
+                if (!NameCharacterSupport.isNameSeparator((byte) -93, (char) var7)) {
                   var5 = 0;
                 } else {
                   var5++;

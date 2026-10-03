@@ -58,7 +58,7 @@ final class ContextualRuntimeException extends RuntimeException {
               }
             }
             PendingActionMarker.field_g = DequeCursor.field_e;
-            bc.field_a = NodeHashTableIterator.field_g;
+            ByteTextDecodingSupport.field_a = NodeHashTableIterator.field_g;
             if (param0 == null) {
               if (var2_int != 0) {
                 InstrumentPatch.field_q = true;
@@ -71,12 +71,12 @@ final class ContextualRuntimeException extends RuntimeException {
               (AsyncResourceDownloader.field_e > ResizableDialog.field_V) &&
               (wb.pointerActivitySnapshot)) {
             ResizableDialog.field_V = 0;
-            bc.field_a = NodeHashTableIterator.field_g;
+            ByteTextDecodingSupport.field_a = NodeHashTableIterator.field_g;
             PendingActionMarker.field_g = DequeCursor.field_e;
           }
           tc.field_a = param0;
           if ((InstrumentPatch.field_q) &&
-              (cl.field_a == ResizableDialog.field_V)) {
+              (UsernameQuerySupport.field_a == ResizableDialog.field_V)) {
             InstrumentPatch.field_q = false;
             ResizableDialog.field_V = 0;
           }

@@ -193,8 +193,8 @@ final class TriangleMesh {
         byte[] paletteIndices = null;
         int[] rgbPixels = null;
         int pixelIndex = 0;
-        Sprite[] sprites = new Sprite[sb.decodedSpriteCount];
-        for (spriteIndex = 0; sb.decodedSpriteCount > spriteIndex; spriteIndex++) {
+        Sprite[] sprites = new Sprite[ClientTimingSupport.decodedSpriteCount];
+        for (spriteIndex = 0; ClientTimingSupport.decodedSpriteCount > spriteIndex; spriteIndex++) {
             pixelCount = ProgressBarWidget.decodedSpriteHeights[spriteIndex] * DualLinkNode.decodedSpriteWidths[spriteIndex];
             paletteIndices = mj.decodedSpriteIndices[spriteIndex];
             rgbPixels = new int[pixelCount];
@@ -218,15 +218,15 @@ final class TriangleMesh {
             if (!UiWidget.b(30000, 1)) {
                 return false;
             }
-            AchievementSubmission.field_k = eh.field_d.readUnsignedByte((byte) 34);
-            eh.field_d.position = 0;
+            AchievementSubmission.field_k = LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
+            LogoCompositor.sessionPacketBuffer.position = 0;
         }
         if (AchievementSubmission.field_k == -2) {
             if (!(UiWidget.b(30000, 2))) {
                 return false;
             }
-            AchievementSubmission.field_k = eh.field_d.readUnsignedShortBE(true);
-            eh.field_d.position = 0;
+            AchievementSubmission.field_k = LogoCompositor.sessionPacketBuffer.readUnsignedShortBE(true);
+            LogoCompositor.sessionPacketBuffer.position = 0;
         }
         return UiWidget.b(30000, AchievementSubmission.field_k);
     }

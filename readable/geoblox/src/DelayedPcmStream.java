@@ -50,7 +50,7 @@ final class DelayedPcmStream extends PcmStream {
     final static boolean b(boolean param0) {
         TextWidgetRenderer.field_k = param0 ? true : false;
         DisplayNamePanel.field_G = 15000L + oa.a(-12520);
-        return hj.field_a == 11 ? true : false;
+        return SpriteConstructionSupport.clientScreenStage == 11 ? true : false;
     }
 
     final void b(int param0) {

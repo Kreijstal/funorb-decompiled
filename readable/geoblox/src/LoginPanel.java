@@ -56,7 +56,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
         var8 = Geoblox.clientControlFlowFlag;
         try {
           L0: {
-            var9 = eh.field_d;
+            var9 = LogoCompositor.sessionPacketBuffer;
             var2 = var9.readUnsignedByte((byte) 34);
             var3 = var9.readUnsignedByte((byte) 34);
             if (0 == var2) {
@@ -328,8 +328,8 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
           }
           if ((field_K == PacketBuffer.currentProtocolStage) &&
               (UiWidget.b(30000, 1))) {
-            var9 = eh.field_d.readUnsignedByte((byte) 34);
-            eh.field_d.position = 0;
+            var9 = LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
+            LogoCompositor.sessionPacketBuffer.position = 0;
             if ((var9 >= 100) &&
                 (var9 <= 105)) {
               PacketBuffer.currentProtocolStage = CanvasResizeController.field_l;
@@ -349,20 +349,20 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
                 ScorePopup.field_l = var9;
               } else {
                 UiWidget.b(30000, DualLinkNode.d(112));
-                IntrusiveNodeHashTable.field_b = new Boolean(Bzip2DecoderState.a(eh.field_d, 0));
-                eh.field_d.position = 0;
+                IntrusiveNodeHashTable.field_b = new Boolean(Bzip2DecoderState.a(LogoCompositor.sessionPacketBuffer, 0));
+                LogoCompositor.sessionPacketBuffer.position = 0;
               }
             }
           }
           if (PacketBuffer.currentProtocolStage == CanvasResizeController.field_l) {
             var9 = 2;
             if (UiWidget.b(30000, var9)) {
-              var10 = eh.field_d.readUnsignedShortBE(true);
-              eh.field_d.position = 0;
+              var10 = LogoCompositor.sessionPacketBuffer.readUnsignedShortBE(true);
+              LogoCompositor.sessionPacketBuffer.position = 0;
               if (UiWidget.b(30000, var10)) {
                 var11 = WidgetSkinState.field_i.length;
                 for (var12 = 0; var12 < var11; var12++) {
-                  WidgetSkinState.field_i[var12] = eh.field_d.readZeroPrefixedNullTerminatedText(27425);
+                  WidgetSkinState.field_i[var12] = LogoCompositor.sessionPacketBuffer.readZeroPrefixedNullTerminatedText(27425);
                 }
                 Bzip2DecoderState.closeSessionSocket((byte) -114);
                 TextTemplateArgumentType.field_e = false;
@@ -374,9 +374,9 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
           if ((PacketBuffer.currentProtocolStage == AccountCreationForm.field_F) &&
               (TriangleMesh.a(false))) {
             if (ScorePopup.field_l != 255) {
-              AudioService.field_a = eh.field_d.readNullTerminatedText((byte) 98);
+              AudioService.field_a = LogoCompositor.sessionPacketBuffer.readNullTerminatedText((byte) 98);
             } else {
-              var9_ref_String = eh.field_d.readNullableNullTerminatedText((byte) 53);
+              var9_ref_String = LogoCompositor.sessionPacketBuffer.readNullableNullTerminatedText((byte) 53);
               if (var9_ref_String != null) {
                 tc.a(-128, var9_ref_String, NodeHashTableIterator.c(106));
               }
@@ -797,7 +797,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
           var9 = AlternateLongAndTextLoginPayload.readRememberedMethod(NodeHashTableIterator.c(120), 200);
           if (var9 != LoginTextValue.field_b) {
             if (var9 == ProgressDialog.field_W) {
-              var8 = bk.loginUsernameText;
+              var8 = LogoPreparationSupport.loginUsernameText;
             }
           } else {
             var8 = UsernameAvailabilityQuery.loginEmailText;

@@ -233,16 +233,16 @@ final class MatchCandidateSupport {
             finalFrameWidth = finalFrameSprite.width;
             finalFrameHeight = finalFrameSprite.height;
             SpriteCheckboxRenderer.pushRasterTarget(methodGuard + 21619);
-            bk.field_b = new Sprite(finalFrameWidth, 3 * finalFrameHeight / 4);
-            bk.field_b.setAsRasterTarget();
+            LogoPreparationSupport.logoFinalFrameTop = new Sprite(finalFrameWidth, 3 * finalFrameHeight / 4);
+            LogoPreparationSupport.logoFinalFrameTop.setAsRasterTarget();
             finalFrameSprite.drawUnmasked(0, 0);
-            cl.field_b = new Sprite(finalFrameWidth, finalFrameHeight - bk.field_b.height);
-            cl.field_b.setAsRasterTarget();
+            UsernameQuerySupport.logoFinalFrameBottom = new Sprite(finalFrameWidth, finalFrameHeight - LogoPreparationSupport.logoFinalFrameTop.height);
+            UsernameQuerySupport.logoFinalFrameBottom.setAsRasterTarget();
             if (methodGuard != -21541) {
                 currentAvatarCryFrame = (Sprite) null;
             }
-            finalFrameSprite.drawUnmasked(0, -bk.field_b.height);
-            cl.field_b.trimY = bk.field_b.height;
+            finalFrameSprite.drawUnmasked(0, -LogoPreparationSupport.logoFinalFrameTop.height);
+            UsernameQuerySupport.logoFinalFrameBottom.trimY = LogoPreparationSupport.logoFinalFrameTop.height;
             id.restoreRasterTarget(true);
         } catch (RuntimeException slicePreparationFailure) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) slicePreparationFailure), "ul.A(" + methodGuard + ',' + (graphicsArchive != null ? "{...}" : "null") + ')');

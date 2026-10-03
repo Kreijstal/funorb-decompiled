@@ -186,7 +186,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "idlemessage20min");
                 if (null != textResourceBytes) {
-                  fa.idleMessage20MinText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  MessageDialogSupport.idleMessage20MinText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "error_js5crc");
                 if (null != textResourceBytes) {
@@ -202,7 +202,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "error_js5connect");
                 if (null != textResourceBytes) {
-                  ki.js5ConnectErrorText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  SessionSnapshotSupport.js5ConnectErrorText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "login_gameupdated");
                 if (null != textResourceBytes) {
@@ -1420,7 +1420,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "openinpopupwindow");
                 if (null != textResourceBytes) {
-                  eh.openInPopupWindowText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  LogoCompositor.openInPopupWindowText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "create");
                 if (textResourceBytes != null) {
@@ -1608,7 +1608,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "login_username");
                 if (textResourceBytes != null) {
-                  bk.loginUsernameText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  LogoPreparationSupport.loginUsernameText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "login_email");
                 if (textResourceBytes != null) {
@@ -1640,7 +1640,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "login_no_displayname");
                 if (textResourceBytes != null) {
-                  sb.loginNoDisplayNameText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  ClientTimingSupport.loginNoDisplayNameText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "create_username_tooltip");
                 if (null != textResourceBytes) {
@@ -1720,7 +1720,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "create_alert_namelength");
                 if (textResourceBytes != null) {
-                  gg.createNameLengthAlertText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  NameCharacterSupport.createNameLengthAlertText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "create_alert_namechars");
                 if (textResourceBytes != null) {
@@ -1732,7 +1732,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "create_alert_doublespace");
                 if (textResourceBytes != null) {
-                  fa.createDoubleSpaceAlertText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  MessageDialogSupport.createDoubleSpaceAlertText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "create_alert_passchars");
                 if (textResourceBytes != null) {
@@ -1740,7 +1740,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "create_alert_passrepeated");
                 if (null != textResourceBytes) {
-                  gg.createRepeatedPasswordAlertText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  NameCharacterSupport.createRepeatedPasswordAlertText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "create_alert_passlength");
                 if (textResourceBytes != null) {
@@ -1756,7 +1756,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "create_alert_passcontainsname_partial");
                 if (textResourceBytes != null) {
-                  gg.createPasswordContainsPartialNameAlertText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  NameCharacterSupport.createPasswordContainsPartialNameAlertText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "create_alert_checkname");
                 if (null != textResourceBytes) {
@@ -2199,7 +2199,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "returntogame");
                 if (null != textResourceBytes) {
-                  jk.returnToGameText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  FullscreenSupport.returnToGameText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "endgameresign");
                 if (null != textResourceBytes) {
@@ -2227,7 +2227,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "cont");
                 if (textResourceBytes != null) {
-                  cl.continueText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  UsernameQuerySupport.continueText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "continue_spectating");
                 if (textResourceBytes != null) {
@@ -2429,7 +2429,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "no_highscores");
                 if (null != textResourceBytes) {
-                  sb.noHighscoresText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  ClientTimingSupport.noHighscoresText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "hs_name");
                 if (null != textResourceBytes) {
@@ -2697,15 +2697,15 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "members_expansion_benefits,0");
                 if (null != textResourceBytes) {
-                  fa.membersExpansionBenefitTexts[0] = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  MessageDialogSupport.membersExpansionBenefitTexts[0] = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "members_expansion_benefits,1");
                 if (textResourceBytes != null) {
-                  fa.membersExpansionBenefitTexts[1] = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  MessageDialogSupport.membersExpansionBenefitTexts[1] = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "members_expansion_benefits,2");
                 if (textResourceBytes != null) {
-                  fa.membersExpansionBenefitTexts[2] = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  MessageDialogSupport.membersExpansionBenefitTexts[2] = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "members_expansion_price_top");
                 if (null != textResourceBytes) {
@@ -2805,15 +2805,15 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "fs_accept_countdown_pl");
                 if (textResourceBytes != null) {
-                  jk.fullscreenAcceptCountdownPluralText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  FullscreenSupport.fullscreenAcceptCountdownPluralText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "fs_nonmember");
                 if (null != textResourceBytes) {
-                  ki.fullscreenNonmemberText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  SessionSnapshotSupport.fullscreenNonmemberText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "fs_button_close");
                 if (null != textResourceBytes) {
-                  hh.fullscreenCloseButtonText = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  UiFontResources.fullscreenCloseButtonText = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "fs_button_members");
                 if (textResourceBytes != null) {
@@ -2905,11 +2905,11 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "rating_mode_name,0");
                 if (textResourceBytes != null) {
-                  ej.ratingModeNames[0] = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  RatingPresentationResources.ratingModeNames[0] = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "rating_mode_name,1");
                 if (textResourceBytes != null) {
-                  ej.ratingModeNames[1] = EmailValidator.decodeTextBytes(1, textResourceBytes);
+                  RatingPresentationResources.ratingModeNames[1] = EmailValidator.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = DropTargetWidget.readTextResourceBytes(2229, "rating_mode_long_name,0");
                 if (null != textResourceBytes) {

@@ -19,7 +19,7 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
         Bzip2DecoderState.avatarShockContactPending = false;
         rb.kindFourRemovalCount = 0;
         EntityMotionSupport.boardContactStateDirty = false;
-        fa.entitiesDetachedThisTick = false;
+        MessageDialogSupport.entitiesDetachedThisTick = false;
         w.avatarShockPending = false;
         wb.newAttachmentCount = 0;
         LoginPanel.endingEntityScanClear = false;

@@ -66,7 +66,7 @@ final class AudioService implements Runnable {
                         var2.b();
                     }
                 }
-                bc.sleepMillis(0, 10L);
+                ByteTextDecodingSupport.sleepMillis(0, 10L);
                 Object var5 = (Object) null;
                 OpacityWidget.a(this.field_b, (byte) 116, (Object) null);
             }

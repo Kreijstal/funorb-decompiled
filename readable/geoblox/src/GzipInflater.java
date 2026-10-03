@@ -142,7 +142,7 @@ final class GzipInflater {
           var4 = var3;
           for (var5 = 0; var4.length > var5; var5++) {
             var6 = var4[var5];
-            var7 = jk.a(255, var6);
+            var7 = FullscreenSupport.validateDomainLabel(255, var6);
             if (var7 != null) {
               stackIn_19_0 = var7;
               return stackIn_19_0;

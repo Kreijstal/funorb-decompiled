@@ -190,7 +190,7 @@ class ByteArrayBuffer extends IntrusiveNode {
           }
           textLength = -textStart + (this.position - 1);
           if (textLength != 0) {
-            return bc.decodeTextSlice(methodGuard ^ -27439, this.bytes, textStart, textLength);
+            return ByteTextDecodingSupport.decodeTextSlice(methodGuard ^ -27439, this.bytes, textStart, textLength);
           }
           return "";
         }
@@ -888,7 +888,7 @@ class ByteArrayBuffer extends IntrusiveNode {
           if (methodGuard < 94) {
             field_i = 68;
           }
-          return bc.decodeTextSlice(-45, this.bytes, textStart, textLength);
+          return ByteTextDecodingSupport.decodeTextSlice(-45, this.bytes, textStart, textLength);
         }
     }
 

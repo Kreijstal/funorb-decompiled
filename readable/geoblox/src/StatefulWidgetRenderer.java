@@ -335,7 +335,7 @@ final class StatefulWidgetRenderer extends TextWidgetRenderer {
             field_s = (byte[][]) null;
           }
           if (mf.decodeSpritesFromArchive(param2, param0, 114, param3)) {
-            return hj.buildSpritesWithDecodedAlpha(104);
+            return SpriteConstructionSupport.buildSpritesWithDecodedAlpha(104);
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -3263,11 +3263,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "9581255db52d2cb80b3d612a04f3f360e578e365",
+    "commit": "f5e43aaad42307da97f8447100c8e2c86719e36d",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "9e76bcbb70c58303301e29e52c5e15b80a51fdc92744dd4d45e525963bbc72fb"
+      "sha256": "c4e04826c1512078f83c432af10df922f6ea2d52f94c73849f67db3a0a24e544"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "2c484739875974414ece3eee5edc52aabfcd7ce012183ea699381ff0177687fa",
@@ -3277,10 +3277,10 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "a06e79f283fe68d05b4cb34b0d48a28959d28d7d016bd1a4b98b77ee7481a7d2",
+    "outputTreeSha256": "7254ad7253ed77c819e4d7289766198a149f7d4ea3e75272d9ac8eacf1112bc7",
     "files": 303,
-    "rules": 10324,
-    "identifierEdits": 81351,
+    "rules": 10538,
+    "identifierEdits": 82881,
     "bindingsCompared": 136612,
     "overrideRelationshipsPreserved": 388,
     "relocation": "Current scripts, manifest, proofs and frozen naming dependency moved from FunOrb to Deko; previous reviewed rules remain in FunOrb Git history. Source proof imports and repository paths change, native trace/oracle constants do not.",
@@ -3415,5 +3415,52 @@
     "nativeProbeFilesPassed": 7,
     "dictionaryReversalByteExactFiles": 303,
     "scope": "Mixed-purpose static owners retain unrelated functions and globals. Source-supported names expose candidate packing, scoring, difficulty, popup/render helpers, shared login stages, achievement protocol and reflection decoder data, reuse and failures. Original numeric protocol/state values, guards, arithmetic, control flow and exception order remain. Existing native fixture hashes match; no new live login/reflection/server, asset/audio/AWT/browser/phone or heap/FPS equivalence claim."
+  },
+  "logoUiSupportNaming": {
+    "historicalPassVersion": 122,
+    "workflowRepository": "Kreijstal/dekobloko-work",
+    "workflowCommit": "f5e43aaad42307da97f8447100c8e2c86719e36d",
+    "previousRulesCommit": "9581255db52d2cb80b3d612a04f3f360e578e365",
+    "rulesAdded": 214,
+    "kindsAdded": {
+      "C": 13,
+      "F": 17,
+      "L": 103,
+      "M": 32,
+      "P": 49
+    },
+    "allPreviousCompleteRulesPreserved": 10324,
+    "identifierEditsAdded": 1530,
+    "classNamesAfter": {
+      "renamed": 260,
+      "originalMeaningful": 1,
+      "opaque": 42
+    },
+    "owners": {
+      "af": "CacheFileState",
+      "bc": "ByteTextDecodingSupport",
+      "bk": "LogoPreparationSupport",
+      "cl": "UsernameQuerySupport",
+      "eh": "LogoCompositor",
+      "ej": "RatingPresentationResources",
+      "fa": "MessageDialogSupport",
+      "gg": "NameCharacterSupport",
+      "hh": "UiFontResources",
+      "hj": "SpriteConstructionSupport",
+      "jk": "FullscreenSupport",
+      "ki": "SessionSnapshotSupport",
+      "sb": "ClientTimingSupport"
+    },
+    "allAuditedOwnerParametersAndLocalsNamed": true,
+    "sourceToolAndNativePinsUnchanged": true,
+    "rawSourceBodiesEdited": false,
+    "bytecodeChanged": false,
+    "declarationLocalOrdinalsChanged": false,
+    "bindingsCompared": 136612,
+    "overrideRelationshipsPreserved": 388,
+    "publicationTestsPassed": 24,
+    "nativeProbeFilesPassed": 7,
+    "dictionaryReversalByteExactFiles": 303,
+    "scope": "Source-supported mixed-purpose owner names clarify logo audio/mesh/slice/specular/glow preparation and animated fade compositing, fullscreen task retry/disposal, snapshot decoding/category quota compaction, username query reuse, font/cache/text helpers and configured nanosecond timer frequency. All prior complete rules, literal diagnostics, numeric protocol/stage values, guards, partial effects, overflow, aliasing and failure boundaries remain. Existing native hashes match; no new whole-game, successful archive/audio/AWT fullscreen, live server, browser/phone or heap/FPS coverage. Configured tick frequency is not actual presented FPS."
   }
 }

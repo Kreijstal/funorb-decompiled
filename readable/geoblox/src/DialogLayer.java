@@ -81,7 +81,7 @@ final class DialogLayer extends SingleChildWidget {
     }
 
     public DialogLayer() {
-        super(0, 0, kb.field_b, fa.field_i, (WidgetRenderer) null, (WidgetListener) null);
+        super(0, 0, kb.field_b, MessageDialogSupport.field_i, (WidgetRenderer) null, (WidgetListener) null);
         this.dialogs = new IntrusiveDeque();
     }
 

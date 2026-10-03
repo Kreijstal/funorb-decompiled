@@ -286,7 +286,7 @@ final class HighscoreNameEntry {
           if (methodGuard != 104) {
             field_b = 67;
           }
-          var1 = eh.field_d;
+          var1 = LogoCompositor.sessionPacketBuffer;
           var2 = var1.readUnsignedByte((byte) 34);
           if (var2 == 0) {
             if (ScorePopupSupport.secondarySocialEntriesByNameHash == null) {

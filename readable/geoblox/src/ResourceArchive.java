@@ -446,7 +446,7 @@ final class ResourceArchive {
             } else {
               keySuppliedForDiagnostic = true;
             }
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) decompressionFailureBeforeContext), ((StringBuilder) (Object) decompressionMessagePrefix).append(keySuppliedForDiagnostic).append(" ").append(groupId).append(" ").append(packedBytes.length).append(" ").append(gg.computePrefixCrc32(packedBytes, methodGuard + 95, packedBytes.length)).append(" ").append(gg.computePrefixCrc32(packedBytes, methodGuard ^ 73, packedBytes.length - 2)).append(" ").append(this.index.groupCrc32[groupId]).append(" ").append(this.index.indexCrc32).toString());
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) decompressionFailureBeforeContext), ((StringBuilder) (Object) decompressionMessagePrefix).append(keySuppliedForDiagnostic).append(" ").append(groupId).append(" ").append(packedBytes.length).append(" ").append(NameCharacterSupport.computePrefixCrc32(packedBytes, methodGuard + 95, packedBytes.length)).append(" ").append(NameCharacterSupport.computePrefixCrc32(packedBytes, methodGuard ^ 73, packedBytes.length - 2)).append(" ").append(this.index.groupCrc32[groupId]).append(" ").append(this.index.indexCrc32).toString());
           }
           if (this.discardPackedGroups) {
             this.packedGroups[groupId] = null;

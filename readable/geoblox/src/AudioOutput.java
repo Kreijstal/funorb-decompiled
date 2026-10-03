@@ -127,7 +127,7 @@ class AudioOutput {
           if (!(var1 == 0)) {
             field_r.field_f = true;
             while (field_r.field_c) {
-              bc.sleepMillis(0, 50L);
+              ByteTextDecodingSupport.sleepMillis(0, 50L);
             }
             field_r = null;
           }

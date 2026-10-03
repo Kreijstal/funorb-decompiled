@@ -7,13 +7,13 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/9581255db52d2cb80b3d612a04f3f360e578e365/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/f5e43aaad42307da97f8447100c8e2c86719e36d/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 121)
+## Current readability (pass 122)
 
-The export has 10,324 guarded names and 81,351 identifier edits. Class coverage is
-247 semantic renames, one already meaningful `Geoblox` name and 55 opaque names.
+The export has 10,538 guarded names and 82,881 identifier edits. Class coverage is
+260 semantic renames, one already meaningful `Geoblox` name and 42 opaque names.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
 compile and compare 136,612 bindings, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
@@ -23,7 +23,26 @@ predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
 
-Pass 121 adds 286 guarded names: 14 classes, 19 fields, 24 methods,
+Pass 122 adds 214 guarded names: 13 classes, 17 fields, 32 methods,
+49 parameters and 103 locals. The logo loading path now reads through
+`LogoPreparationSupport.prepareLogoAnimation`, `EntityMotionSupport.decodeLogoAudio`,
+`FullscreenSupport.prepareMeshSpecularResponse`, `MidiNoteMixer.prepareLogoGlowRaster`
+and `LogoCompositor.drawLogoAnimation`. The shared owners also expose snapshot
+retention, fullscreen exit, username-query reuse, common UI fonts, cache handles,
+name separators and configured timer rate. All parameters and locals in the
+13 audited owners have names. The top/bottom final-frame slices, scene/glow
+rasters, packet buffer and encrypted scratch have source-supported roles.
+All 10,324 previous complete rules, raw bodies, local ordinals, bytecode and
+source/tool/native trace pins remain. The export has 10,538 rules and 82,881
+identifier edits. All 303 raw/readable sources compile, compare 136,612 bindings
+and preserve 388 override relationships. Class coverage is 260 renamed, one
+meaningful original name and 42 opaque names. Six large labeled bodies and
+207 block labels remain. Configured update rate is a timer setting, not measured
+presented FPS. Mixed-purpose statics stay on their owners. This naming pass adds
+no whole-game, successful asset/audio/AWT fullscreen, live server, browser/phone
+or heap/FPS equivalence claim.
+
+Pass 121 added 286 guarded names: 14 classes, 19 fields, 24 methods,
 44 parameters and 185 locals. The game now reads through `MatchCandidateSupport`,
 `MatchScoringSupport`, `PlayfieldRules`, `ScorePopupSupport`,
 `AttachedEntityRenderer`, `EndingAnimationSupport`, `DebugOverviewCompositor`,
@@ -583,7 +602,7 @@ content and dismissal options; its static avatar/fullscreen/login/text/style
 utilities remain colocated. All its own declarations have guarded semantic names,
 while inherited widget implementation and related classes remain partly opaque.
 
-`fa.showMessageDialog` writes the login-dismiss option before checking guard480,
+`MessageDialogSupport.showMessageDialog` writes the login-dismiss option before checking guard480,
 then creates/stores/registers the dialog for the correct guard. The constructor's
 base/text-content work happens before its own catch. `dismissDialog` returns if
 already invisible; otherwise it hides first, then gives `showRetryLoginOnDismiss`
@@ -1052,7 +1071,7 @@ probe controls these gates directly; it does not simulate their physics producer
 It is a root for the graph traversal, rather than a transitive connectivity flag.
 `re.connectivityDirty` requests a rebuild, and `pk.connectivityVisitedByEntityId`
 records traversal visits. Detached components set `detachedFromBoard`, return to
-the moving queue and set `fa.entitiesDetachedThisTick`.
+the moving queue and set `MessageDialogSupport.entitiesDetachedThisTick`.
 
 `EntityMotionSupport.boardContactStateDirty` covers contact changes and cooldowns reaching zero.
 The session snapshots it as `boundaryCheckRequested` before advancing motion.
@@ -1160,7 +1179,7 @@ helper side effect; it is outside the direct text-writer probe.
 `lc.updateSpawnQueue` advances `SecondaryDeque.spawnQueue` and releases ready members into
 `ji.movingEntities` unless `spawnReleaseDisabled` is set. `hd.recordEntityRelease`
 increments `MatchCandidateSupport.releasedInCurrentTheme` and `di.releasedInDifficultyStep` outside
-tutorial mode. The theme threshold is `fa.releasesPerTheme`; `qe.a` calculates
+tutorial mode. The theme threshold is `MessageDialogSupport.releasesPerTheme`; `qe.a` calculates
 `sa.releasesPerDifficultyStep` as its ceiling divided by three.
 `PlayfieldRules.advanceDifficulty` increments `ji.difficultyStep` and reads
 `kd.difficultyStepFlags`. Its normal callers pass `recursiveAdvanceGuard=false`.
@@ -1484,7 +1503,7 @@ was already named; the 151 new field names include `loadingGraphicsText`,
 `monthNames`, account alerts and fullscreen prompts. The 526 discarded decode
 results have no destination field to name; their calls remain present.
 
-`bc.decodeTextSlice` iterates `textBytes[offset + byteIndex]`, omits zero bytes,
+`ByteTextDecodingSupport.decodeTextSlice` iterates `textBytes[offset + byteIndex]`, omits zero bytes,
 maps values 128 through 159 using `lf.extendedTextCharacters`, and constructs
 its string from `decodedBuffer` and `decodedLength`. Zero mapping entries become
 question marks. The guard's side effect remains explicit. This is a legacy
@@ -1625,8 +1644,8 @@ scoring. Full contact physics and asset-dependent transitions remain unverified.
 
 ## Cache-write continuation
 
-`ic.a(byte)` seeks `af.field_b` to zero and writes 24 bytes from the packet
-buffer in `eh.field_d`, when the cache handle exists. It catches `Exception`
+`ic.a(byte)` seeks `CacheFileState.randomSeedFile` to zero and writes 24 bytes from the packet
+buffer in `LogoCompositor.sessionPacketBuffer`, when the cache handle exists. It catches `Exception`
 from those two calls and their argument reads, then advances the packet offset
 by 24 regardless of whether the cache was absent or the write failed. The
 packet access in that following increment remains outside the inner catch;
@@ -1846,8 +1865,8 @@ previous fence. Unpolled events in the preceding frame are therefore discarded.
 A separate 128-slot queue pairs `kj.queuedKeyboardEventCodes` with
 `ai.queuedKeyboardEventCharacters`. Presses store an internal code and character
 zero; typed characters store code -1. A full queue drops new events.
-`hh.pollKeyboardEvent` reads only up to the captured frame fence, publishes
-`ki.currentKeyboardEventCode` and `te.currentKeyboardEventCharacter`, then wraps
+`UiFontResources.pollKeyboardEvent` reads only up to the captured frame fence, publishes
+`SessionSnapshotSupport.currentKeyboardEventCode` and `te.currentKeyboardEventCharacter`, then wraps
 `vd.keyboardEventReadIndex`. Empty/invalid-guard polls retain the previous payload.
 The poll holds `je.keyboardListener` as its monitor; keyTyped retains the original
 unsynchronized method. Gameplay reads held keys for rotation/fast-forward and
@@ -1888,7 +1907,7 @@ around (320,240) into `ng.rotatedEntityScreenX`/`td.rotatedEntityScreenY`, rende
 the entity sprite into `vf.spriteScratchRaster` with nearest rotation, then
 restores the display raster. This renderer remains supported by source inspection.
 `uj.scratchSpriteOverlapsBoard` centers the scratch raster at those coordinates
-and compares it with `bk.boardOwnershipRaster`; a nonzero method guard returns
+and compares it with `LogoPreparationSupport.boardOwnershipRaster`; a nonzero method guard returns
 false. Its entity/angle parameters are used only in diagnostic wrapping.
 `ma.contactProbeOverlapsScratchSprite` subtracts contact-probe offsets before
 comparing the probe against the scratch raster. The moving-contact producer
@@ -2409,7 +2428,7 @@ the changed position. All original index expressions and truncation remain.
 
 `oe.computeCrc32` initializes its accumulator to-1, processes
 bytes[startPosition,endPosition) with low-byte lookup and unsigned shift8, then
-complements it. `sb.crc32Table` is built using eight reflected0xedb88320 steps
+complements it. `ClientTimingSupport.crc32Table` is built using eight reflected0xedb88320 steps
 per entry. Guard>-27 retains the original null-text helper call before computing.
 `appendCrc32` returns -122 with no writes for guard<=4; otherwise it appends and
 returns the checksum. `verifyTrailingCrc32` first subtracts4 from position,
@@ -2583,7 +2602,7 @@ undefined slots. There is no surrogate joining or UTF-8 conversion.
 | `hi.encodeTextSlice(text, destination, characterStart, characterEnd, destinationOffset, methodGuard)` | Compute end-start, then encode sequential charAt calls into the destination; guard other than 98 returns 52 before argument reads |
 | `jf.encodeTextBytes(text, methodGuard)` | Allocate one byte per code unit and map each character; guard below 117 retains a helper call before text.length |
 | `EntityMotionSupport.hashEncodedText(methodGuard, text)` | Accumulate wrapping 31*hash plus the signed encoded byte; guard at most 42 retains the recursive null-text call |
-| `bc.decodeTextSlice(decodeGuard, textBytes, offset, length)` | Skip zero bytes; decode extended slots through the shared table, using `?` for undefined entries |
+| `ByteTextDecodingSupport.decodeTextSlice(decodeGuard, textBytes, offset, length)` | Skip zero bytes; decode extended slots through the shared table, using `?` for undefined entries |
 | `ag.decodeTextBytes(decodeGuard, textBytes)` | Decode the whole array; guard other than 1 clears field_j before inspecting length |
 
 Font lookup masks encoded bytes with 255 to obtain unsigned glyph indices.
@@ -2773,7 +2792,7 @@ return null. Clearing the completed request and allocating group-state storage
 retain their original order. Private provider fields/requests/helpers remained opaque at pass 67;
 pass 68 names their instance declarations and request records.
 
-`gg.computePrefixCrc32(bytes, methodGuard, length)` delegates to the existing
+`NameCharacterSupport.computePrefixCrc32(bytes, methodGuard, length)` delegates to the existing
 CRC helper at start position 0; guard below 56 retains recursive null-input
 behavior. `SpriteState.computeWhirlpoolDigest(length, sourceOffset, source, bitsPerByte)`
 uses the existing hash instance with reset 52 and a 64-byte result. Positive
@@ -3010,7 +3029,7 @@ validation guards retain only their attempted close. `closeSocket` closes but
 retains the socket reference and queues. No new retry, null handling, unsigned
 normalization or ownership/visibility changes are introduced.
 
-`bc.sleepMillis(splitRemainder, durationMillis)` returns for nonpositive duration.
+`ByteTextDecodingSupport.sleepMillis(splitRemainder, durationMillis)` returns for nonpositive duration.
 When duration modulo 10 equals splitRemainder, it sleeps duration minus one,
 then one; otherwise it sleeps once. The first argument is a real comparison
 operand, normally zero. `sleepIgnoringInterrupt` retains the ignored
@@ -3791,7 +3810,7 @@ remain unknown; this pass does not label them as texture coordinates.
 
 `MeshDepthSupport.queueMeshFacesByDepth` optionally rejects backfaces using the projected signed
 cross product and skips a face if any vertex has clipped depth. It normalizes the
-sum of its relative depths into a bucket using `hj.unsignedBitLength`, then queues
+sum of its relative depths into a bucket using `SpriteConstructionSupport.unsignedBitLength`, then queues
 the face in a 16-entry bucket. Full buckets spill toward lower indices. Face
 priorities use signed byte indices, count into offsets and then turn into prefix
 sums. `oe.clearMeshDepthBucketCounts` and `ma.clearMeshPriorityCounts` preserve
@@ -4234,7 +4253,7 @@ shared object-identity stages:
 | `da.awaitingLoginResultStage` | Wait for one byte; original 0/1/8 and rejection paths remain distinct |
 | `da.awaitingLoginDetailsStage` | Gate the existing detail parser, optional extension, cookie, name and cipher setup |
 | `TextInputRenderer.awaitingLoginFailureTextStage` | Read failure text, close and retain response7 retry handling |
-| `eh.connectedSessionStage` | Select connected-session identity before directional cipher initialization |
+| `LogoCompositor.connectedSessionStage` | Select connected-session identity before directional cipher initialization |
 
 `useLongLoginPayload` selects the existing long-plus-text form or two-text form.
 `affiliateId` comes from applet `affid`; `enableLoginFlagBitEight` describes only
@@ -4256,3 +4275,63 @@ Exception and Throwable record -1, -2, -3, -4, -5 respectively. Unknown operatio
 increment their index before `operationIncrementAlreadyApplied` skips the ordinary
 increment. Its values and generated control flow remain intact. The accepted
 guard -4 enqueues the request; the invalid recursive path is preserved.
+
+## Logo preparation, compositing and adjacent UI helpers
+
+These names describe functions retained on mixed-purpose static owners. No
+method, global, initialization or diagnostic literal moved to another class.
+
+| Readable owner | Original owner | Audited helper family |
+| --- | --- | --- |
+| `LogoPreparationSupport` | `bk` | Logo setup and source session-snapshot decoder |
+| `LogoCompositor` | `eh` | Scene/final-frame/glow fades and shared packet/UI state |
+| `FullscreenSupport` | `jk` | Input detachment, fullscreen tasks, frame disposal; also specular response and domain-label checks |
+| `SessionSnapshotSupport` | `ki` | Category counting, quota compaction and append; also logo raster and account UI preparation |
+| `CacheFileState` | `af` | Random-seed/cache-data handles, debug overview and avatar timer |
+| `ByteTextDecodingSupport` | `bc` | Byte text decoder and ten-millisecond sleep splitting |
+| `UsernameQuerySupport` | `cl` | Query staging/reuse, payload-key RNG and lower final-frame slice |
+| `UiFontResources` | `hh` | AWT loading/common UI fonts, keyboard polling and accepted username query |
+| `SpriteConstructionSupport` | `hj` | Decoded RGB/ARGB construction, keyboard attach and client-screen stage |
+| `MessageDialogSupport` | `fa` | Active message dialog, encrypted payload scratch and gameplay constants |
+| `NameCharacterSupport` | `gg` | Name separators, CRC prefix, text joining and password messages |
+| `RatingPresentationResources` | `ej` | Rating labels, crack frames, music and neutral login kind three |
+| `ClientTimingSupport` | `sb` | Configured timer frequency, session readiness and CRC/sprite globals |
+
+`prepareLogoAnimation` converts its delay milliseconds using the configured
+tick rate, decodes the two named Vorbis resources, loads meshes/materials,
+prepares the final-frame JPEG slices, specular response and blurred glow, then
+sets the negative start tick. `unusedPcmMixer` is only printed in failure context;
+source decoding does not enqueue sound for playback. The specular table retains
+its exponent 15, projection shift 11, 256 computed entries and four saturated
+tail entries. `prepareLogoGlowRaster` renders tick zero into a temporary
+540×140 target, repeats silhouette/blur 15 times and downsamples to the 270×70
+glow target. These methods preserve their original raster restoration behavior
+on success and exceptions.
+
+`drawLogoAnimation(centerY, centerX, methodGuard)` retains its asymmetric source
+argument order. It derives left/top offsets of -135/-35, fades the scene over
+ticks 0–75 and 200–250, switches to the top final-frame slice at tick 150,
+fades the additive glow over ticks 125–175 and fades the bottom slice after
+tick 140. The bottom slice retains the top slice's height in `trimY`. Repeated
+branches and invalid-guard side effects remain visible rather than being folded
+with assumed guard or client-control-flow values.
+
+`readSessionSnapshot` reads a header whose low seven bits select source kind;
+`headerFlagMask` controls the separate retained flag. Kind two adds unsigned
+short/medium fields. The existing alternate-name byte controls whether a second
+name is read. Plain mode reads compressed text; template mode resolves a ushort
+ID, summarizes literals and conditionally retains referenced template IDs.
+Template failures clear both text and IDs, report the same failure and still
+construct the snapshot. Unknown header fields keep neutral roles.
+`retainSessionSnapshot` counts the three classification categories only for the
+same source kind, includes the new snapshot, compacts over-quota old entries in
+place and appends it. Guard failure still occurs after the initial counting.
+
+`exitFullscreenAndDisposeFrame` polls submitted tasks every 10 milliseconds,
+retries failed submissions after 100 milliseconds and hides/disposes the frame
+only after success. It does not add a timeout, finally disposal or exception
+suppression. `validateDomainLabel` is called for dot-separated domain labels;
+it keeps length 1–63, allowed-character and edge-hyphen rules and source failure
+objects. `getConfiguredUpdateRate` and `setConfiguredUpdateRate` expose the
+reciprocal nanosecond timer setting; integer truncation, division by zero,
+negative values and guarded fallback remain. They do not count presented frames.

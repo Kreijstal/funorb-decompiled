@@ -22,15 +22,15 @@ final class kd {
         if (param0 <= 79) {
             return;
         }
-        if (10 == hj.field_a) {
+        if (10 == SpriteConstructionSupport.clientScreenStage) {
             DraggableWidget.f((byte) 24);
-            hj.field_a = 11;
+            SpriteConstructionSupport.clientScreenStage = 11;
             lb.field_a = true;
             return;
         }
         if (!TextTemplateArgumentType.b(0)) {
             DraggableWidget.f((byte) 24);
-            hj.field_a = 11;
+            SpriteConstructionSupport.clientScreenStage = 11;
             lb.field_a = true;
             return;
         }

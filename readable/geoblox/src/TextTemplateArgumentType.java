@@ -134,7 +134,7 @@ final class TextTemplateArgumentType {
           if (!IntrusiveDeque.a((byte) 124)) {
             if ((InstrumentPatch.field_n != null) &&
                 (InstrumentPatch.field_n.focusLost)) {
-              jk.a((byte) -87);
+              FullscreenSupport.exitActiveFullscreen((byte) -87);
               oh.field_b.showDialog(false, new FullscreenErrorDialog(oh.field_b, AccountContentDialog.field_hb));
             }
             return;
@@ -144,8 +144,8 @@ final class TextTemplateArgumentType {
           }
           oh.field_b.processPointerFrame(true, 127, TextLayout.field_c, MessageDialogContent.field_I);
           oh.field_b.advanceDialogAnimations(-50);
-          while (hh.pollKeyboardEvent(125)) {
-            oh.field_b.a((byte) -126, te.currentKeyboardEventCharacter, ki.currentKeyboardEventCode);
+          while (UiFontResources.pollKeyboardEvent(125)) {
+            oh.field_b.a((byte) -126, te.currentKeyboardEventCharacter, SessionSnapshotSupport.currentKeyboardEventCode);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

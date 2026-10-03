@@ -12,13 +12,13 @@ final class DisplayModeInfo {
     int refreshRate;
     int bitDepth;
 
-    final static void a(byte param0, int param1) {
-        if (param0 != 121) {
+    final static void setConfiguredUpdateRate(byte methodGuard, int ticksPerSecond) {
+        if (methodGuard != 121) {
             quitToWebsiteText = (String) null;
-            ByteStorage.field_c = 1000000000L / (long)param1;
+            ByteStorage.updatePeriodNanoseconds = 1000000000L / (long)ticksPerSecond;
             return;
         }
-        ByteStorage.field_c = 1000000000L / (long)param1;
+        ByteStorage.updatePeriodNanoseconds = 1000000000L / (long)ticksPerSecond;
     }
 
     public static void a(int param0) {

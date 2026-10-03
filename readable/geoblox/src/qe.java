@@ -58,7 +58,7 @@ final class qe {
           }
           var11 = param4.requestEnterFullscreen(param2, param1 ^ 1743550127, param5, param0, param3);
           while (var11.status == 0) {
-            bc.sleepMillis(0, 10L);
+            ByteTextDecodingSupport.sleepMillis(0, 10L);
           }
           var7 = (java.awt.Frame) (var11.result);
           if (var7 == null) {
@@ -68,7 +68,7 @@ final class qe {
             stackIn_37_0 = var7;
             return stackIn_37_0;
           }
-          jk.a(var7, 10, param4);
+          FullscreenSupport.exitFullscreenAndDisposeFrame(var7, 10, param4);
           stackIn_35_0 = null;
           return (java.awt.Frame) (stackIn_35_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -100,11 +100,11 @@ final class qe {
         try {
           if ((ArchiveNetworkClient.difficultyStep != 0) &&
               (ArchiveNetworkClient.difficultyStep < 21)) {
-            fa.releasesPerTheme = fa.releasesPerTheme + 10;
+            MessageDialogSupport.releasesPerTheme = MessageDialogSupport.releasesPerTheme + 10;
           }
-          fa.releasesPerTheme = fa.releasesPerTheme + additionalReleases;
-          ContextualRuntimeException.releasesPerDifficultyStep = fa.releasesPerTheme / 3;
-          while (fa.releasesPerTheme > 3 * ContextualRuntimeException.releasesPerDifficultyStep) {
+          MessageDialogSupport.releasesPerTheme = MessageDialogSupport.releasesPerTheme + additionalReleases;
+          ContextualRuntimeException.releasesPerDifficultyStep = MessageDialogSupport.releasesPerTheme / 3;
+          while (MessageDialogSupport.releasesPerTheme > 3 * ContextualRuntimeException.releasesPerDifficultyStep) {
             ContextualRuntimeException.releasesPerDifficultyStep = ContextualRuntimeException.releasesPerDifficultyStep + 1;
           }
           return;

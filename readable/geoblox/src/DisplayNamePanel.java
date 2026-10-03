@@ -25,8 +25,8 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
     public DisplayNamePanel() {
         super(0, 0, 496, 0, (WidgetRenderer) null);
         this.displayNameInput = new ValidatedTextInputWidget("", (WidgetListener) null, 12);
-        TextWidgetRenderer var1 = new TextWidgetRenderer(hh.field_d, 0, 0, 0, 0, 16777215, -1, 3, 0, DialogLayer.sharedUiFont.maxAscent, -1, 2147483647, true);
-        UiWidget var2 = new UiWidget(sb.loginNoDisplayNameText, var1, (WidgetListener) null);
+        TextWidgetRenderer var1 = new TextWidgetRenderer(UiFontResources.commonUiSmallFont, 0, 0, 0, 0, 16777215, -1, 3, 0, DialogLayer.sharedUiFont.maxAscent, -1, 2147483647, true);
+        UiWidget var2 = new UiWidget(ClientTimingSupport.loginNoDisplayNameText, var1, (WidgetListener) null);
         this.confirmButton = new ButtonWidget(MatchScoringSupport.okText, (WidgetListener) null);
         this.cancelButton = new ButtonWidget(TextTemplateArgumentType.cancelText, (WidgetListener) null);
         this.displayNameInput.hoverText = AchievementProtocolSupport.createDisplayNameTooltipText;

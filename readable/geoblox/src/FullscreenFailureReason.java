@@ -24,7 +24,7 @@ final class FullscreenFailureReason {
         RuntimeException caughtBoardOverlapFailure = null;
         try {
           if (methodGuard == 0) {
-            overlapFound = PixelOverlapProbe.findFirstNonzeroPixelOverlap(HotspotTextWidget.spriteScratchRaster, -(HotspotTextWidget.spriteScratchRaster.fullWidth >> 1) + DialogLayer.rotatedEntityScreenX, -(HotspotTextWidget.spriteScratchRaster.fullHeight >> 1) + ValidationIconWidget.rotatedEntityScreenY, bk.boardOwnershipRaster, 0, 0);
+            overlapFound = PixelOverlapProbe.findFirstNonzeroPixelOverlap(HotspotTextWidget.spriteScratchRaster, -(HotspotTextWidget.spriteScratchRaster.fullWidth >> 1) + DialogLayer.rotatedEntityScreenX, -(HotspotTextWidget.spriteScratchRaster.fullHeight >> 1) + ValidationIconWidget.rotatedEntityScreenY, LogoPreparationSupport.boardOwnershipRaster, 0, 0);
             return overlapFound;
           }
           return false;

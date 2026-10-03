@@ -156,7 +156,7 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
         var8 = Geoblox.clientControlFlowFlag;
         try {
           var2_int = -108 / ((-71 - param0) / 45);
-          if (eh.connectedSessionStage != PacketBuffer.currentProtocolStage) {
+          if (LogoCompositor.connectedSessionStage != PacketBuffer.currentProtocolStage) {
             return false;
           }
           var3 = oa.a(-12520);
@@ -167,9 +167,9 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
                 (var3 > var5_ref_ma.deliveryTimeMillis)) {
               var5_ref_ma.unlinkNode(false);
               AchievementSubmission.field_k = var5_ref_ma.payload.length;
-              eh.field_d.position = 0;
+              LogoCompositor.sessionPacketBuffer.position = 0;
               for (var6_int = 0; var6_int < AchievementSubmission.field_k; var6_int++) {
-                eh.field_d.bytes[var6_int] = var5_ref_ma.payload[var6_int];
+                LogoCompositor.sessionPacketBuffer.bytes[var6_int] = var5_ref_ma.payload[var6_int];
               }
               MidiNoteMixer.field_o = AttachedEntityRenderer.field_b;
               AttachedEntityRenderer.field_b = VisualPropertyNode.field_n;
@@ -180,12 +180,12 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
           }
           while (true) {
             if (MidiNote.field_f < 0) {
-              eh.field_d.position = 0;
+              LogoCompositor.sessionPacketBuffer.position = 0;
               if (!UiWidget.b(30000, 1)) {
                 return false;
               }
-              MidiNote.field_f = eh.field_d.readCipherByte((byte) 122);
-              eh.field_d.position = 0;
+              MidiNote.field_f = LogoCompositor.sessionPacketBuffer.readCipherByte((byte) 122);
+              LogoCompositor.sessionPacketBuffer.position = 0;
               AchievementSubmission.field_k = param1[MidiNote.field_f];
             }
             if (!TriangleMesh.a(false)) {
@@ -208,7 +208,7 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
             }
             var6 = new DelayedIncomingPacket((long)var5 + var3, MidiNote.field_f, new byte[AchievementSubmission.field_k]);
             for (var7 = 0; AchievementSubmission.field_k > var7; var7++) {
-              var6.payload[var7] = eh.field_d.bytes[var7];
+              var6.payload[var7] = LogoCompositor.sessionPacketBuffer.bytes[var7];
             }
             MeshPrioritySupport.field_c.addLast(-108, var6);
             MidiNote.field_f = -1;

@@ -42,23 +42,23 @@ abstract class ArchiveSource {
         int[] var12 = null;
         try {
           var7_int = GameplayEntity.alignBitOffset(1221916132, param5);
-          if (cl.field_e == null) {
-            cl.field_e = new java.security.SecureRandom();
+          if (UsernameQuerySupport.payloadKeyRandom == null) {
+            UsernameQuerySupport.payloadKeyRandom = new java.security.SecureRandom();
           }
           var12 = new int[4];
           var11 = var12;
           var8 = var11;
           for (var9 = 0; var9 < 4; var9++) {
-            var8[var9] = cl.field_e.nextInt();
+            var8[var9] = UsernameQuerySupport.payloadKeyRandom.nextInt();
           }
-          if (!((null != fa.field_c) &&
-                (fa.field_c.bytes.length >= var7_int))) {
-            fa.field_c = new ByteArrayBuffer(var7_int);
+          if (!((null != MessageDialogSupport.encryptedPayloadScratchBuffer) &&
+                (MessageDialogSupport.encryptedPayloadScratchBuffer.bytes.length >= var7_int))) {
+            MessageDialogSupport.encryptedPayloadScratchBuffer = new ByteArrayBuffer(var7_int);
           }
-          fa.field_c.position = 0;
-          fa.field_c.writeBytes(param5, -97, param4, param2);
-          fa.field_c.padZerosToPosition((byte) -84, var7_int);
-          fa.field_c.encryptXteaBlocks(var12, (byte) -33);
+          MessageDialogSupport.encryptedPayloadScratchBuffer.position = 0;
+          MessageDialogSupport.encryptedPayloadScratchBuffer.writeBytes(param5, -97, param4, param2);
+          MessageDialogSupport.encryptedPayloadScratchBuffer.padZerosToPosition((byte) -84, var7_int);
+          MessageDialogSupport.encryptedPayloadScratchBuffer.encryptXteaBlocks(var12, (byte) -33);
           if (!((HotspotTextWidget.field_I != null) &&
               (HotspotTextWidget.field_I.bytes.length >= 100))) {
             HotspotTextWidget.field_I = new ByteArrayBuffer(100);
@@ -77,7 +77,7 @@ abstract class ArchiveSource {
           HotspotTextWidget.field_I.writeShortBE(param5, 28695);
           HotspotTextWidget.field_I.replaceWithModPowResult(0, param0, param1);
           param3.writeBytes(HotspotTextWidget.field_I.position, -97, HotspotTextWidget.field_I.bytes, 0);
-          param3.writeBytes(fa.field_c.position, -97, fa.field_c.bytes, 0);
+          param3.writeBytes(MessageDialogSupport.encryptedPayloadScratchBuffer.position, -97, MessageDialogSupport.encryptedPayloadScratchBuffer.bytes, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

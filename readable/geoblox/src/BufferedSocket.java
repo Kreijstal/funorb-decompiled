@@ -40,7 +40,7 @@ final class BufferedSocket implements Runnable {
             }
             if (this.writerTask != null) {
               while (0 == this.writerTask.status) {
-                bc.sleepMillis(0, 1L);
+                ByteTextDecodingSupport.sleepMillis(0, 1L);
               }
               if (1 == this.writerTask.status) {
                 try {

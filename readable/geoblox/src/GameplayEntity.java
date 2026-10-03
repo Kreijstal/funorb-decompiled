@@ -71,10 +71,10 @@ final class GameplayEntity extends DualLinkNode {
         HotspotTextWidget.spriteScratchRaster.setAsRasterTarget();
         SoftwareRasterizer.clearFramebuffer();
         this.entitySprite.rotateSmooth(this.entitySprite.fullWidth << 3, this.entitySprite.fullHeight << 3, HotspotTextWidget.spriteScratchRaster.fullWidth << 3, HotspotTextWidget.spriteScratchRaster.fullHeight << 3, (int)(65535.0 * ((double)this.spriteAngleRadians / 6.283185307179586)), 4096);
-        bk.boardOwnershipRaster.setAsRasterTarget();
+        LogoPreparationSupport.boardOwnershipRaster.setAsRasterTarget();
         HotspotTextWidget.spriteScratchRaster.drawSilhouette(-(HotspotTextWidget.spriteScratchRaster.fullWidth / 2) + (int)this.positionX, (int)this.positionY - HotspotTextWidget.spriteScratchRaster.fullHeight / verticalDivisor, this.entityId + 1);
         SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
-        bk.boardOwnershipRaster.setAsRasterTarget();
+        LogoPreparationSupport.boardOwnershipRaster.setAsRasterTarget();
         MeshDepthSupport.avatarMaskRaster.drawSilhouette(320 + UiWidget.gameplaySession.boardMaskOffsetX, 240 + UiWidget.gameplaySession.boardMaskOffsetY, 16777215);
         SingleChildWidget.mainRasterBuffer.setAsRasterTarget(verticalDivisor + 253);
     }
@@ -131,9 +131,9 @@ final class GameplayEntity extends DualLinkNode {
     }
 
     final static void resetAvatarFeedbackState(int initialFrameIndex) {
-        af.avatarFrameStepTicks = 0;
+        CacheFileState.avatarFrameStepTicks = 0;
         MatchCandidateSupport.currentAvatarCryFrame = null;
-        gg.avatarCryPhase = 0;
+        NameCharacterSupport.avatarCryPhase = 0;
         PasswordValidator.avatarCryFrameCursor = 0;
         LimitedRandomAccessFile.avatarFeedbackHoldTicks = 0;
         MultiHandleSliderRenderer.avatarTintFadeTicks = 0;
@@ -183,18 +183,18 @@ final class GameplayEntity extends DualLinkNode {
           clippedHeight = clippedHeight + clipTopY;
           clipTopY = 0;
         }
-        if (bk.boardOwnershipRaster.width < clippedWidth + clipLeftX) {
-          clippedWidth = -clipLeftX + bk.boardOwnershipRaster.width;
+        if (LogoPreparationSupport.boardOwnershipRaster.width < clippedWidth + clipLeftX) {
+          clippedWidth = -clipLeftX + LogoPreparationSupport.boardOwnershipRaster.width;
         }
-        if (clippedHeight + clipTopY > bk.boardOwnershipRaster.height) {
-          clippedHeight = bk.boardOwnershipRaster.height - clipTopY;
+        if (clippedHeight + clipTopY > LogoPreparationSupport.boardOwnershipRaster.height) {
+          clippedHeight = LogoPreparationSupport.boardOwnershipRaster.height - clipTopY;
         }
         if (methodGuard < 78) {
           return;
         }
-        framebufferIndex = clipLeftX + bk.boardOwnershipRaster.width * clipTopY;
-        rowSkip = -clippedWidth + bk.boardOwnershipRaster.width;
-        framebufferPixels = bk.boardOwnershipRaster.pixels;
+        framebufferIndex = clipLeftX + LogoPreparationSupport.boardOwnershipRaster.width * clipTopY;
+        rowSkip = -clippedWidth + LogoPreparationSupport.boardOwnershipRaster.width;
+        framebufferPixels = LogoPreparationSupport.boardOwnershipRaster.pixels;
         while (true) {
           rowHeightBeforeDecrement = clippedHeight;
           clippedHeight--;
@@ -262,7 +262,7 @@ final class GameplayEntity extends DualLinkNode {
               } else {
                 if (2 != this.entitySpriteKindId) {
                   if (8 == this.entitySpriteKindId) {
-                    this.entitySprite = ej.amorphousCrackFrames[this.animationFrameIndex];
+                    this.entitySprite = RatingPresentationResources.amorphousCrackFrames[this.animationFrameIndex];
                     this.entityCategoryKey = -1;
                   }
                 } else {
@@ -349,7 +349,7 @@ final class GameplayEntity extends DualLinkNode {
                   (this.entityUpdateTick % 24 == 0)) {
                 kind8AnimationFrame = this.animationFrameIndex;
                 this.animationFrameIndex = this.animationFrameIndex + 1;
-                this.entitySprite = ej.amorphousCrackFrames[kind8AnimationFrame];
+                this.entitySprite = RatingPresentationResources.amorphousCrackFrames[kind8AnimationFrame];
                 this.animationFrameIndex = this.animationFrameIndex % 4;
               }
             }

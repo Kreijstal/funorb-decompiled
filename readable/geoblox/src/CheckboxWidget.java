@@ -64,7 +64,7 @@ final class CheckboxWidget extends ButtonWidget {
           }
           var8 = param1.requestDisplayModes(34);
           while (var8.status == 0) {
-            bc.sleepMillis(0, 10L);
+            ByteTextDecodingSupport.sleepMillis(0, 10L);
           }
           if (var8.status == 2) {
             stackIn_9_0 = new DisplayModeInfo[]{};

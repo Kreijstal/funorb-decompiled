@@ -29,7 +29,7 @@ final class PrefixCodeDecoder {
             }
             decodedBytes = new byte[decodedLength];
             buffer.position = buffer.position + vj.compressedTextDecoder.decodePrefixBytes(decodedBytes, buffer.position, buffer.bytes, guardAndDestinationOffset, -127, decodedLength);
-            decodedText = bc.decodeTextSlice(guardAndDestinationOffset ^ -103, decodedBytes, 0, decodedLength);
+            decodedText = ByteTextDecodingSupport.decodeTextSlice(guardAndDestinationOffset ^ -103, decodedBytes, 0, decodedLength);
             decodedTextBeforeReturn = decodedText;
             return decodedTextBeforeReturn;
           } catch (java.lang.Exception decodeFailure) {
@@ -336,8 +336,8 @@ final class PrefixCodeDecoder {
         if (methodGuard < 72) {
           return;
         }
-        frameStepTicksBeforeDecrement = af.avatarFrameStepTicks;
-        af.avatarFrameStepTicks = af.avatarFrameStepTicks - 1;
+        frameStepTicksBeforeDecrement = CacheFileState.avatarFrameStepTicks;
+        CacheFileState.avatarFrameStepTicks = CacheFileState.avatarFrameStepTicks - 1;
         if (0 <= frameStepTicksBeforeDecrement) {
           LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
           IterableNodeHashTable.avatarBlinkClockTicks = IterableNodeHashTable.avatarBlinkClockTicks + 1;
@@ -367,7 +367,7 @@ final class PrefixCodeDecoder {
         }
         if (DiskCacheWorker.avatarFeedbackFrameIndex == 0 + MenuScreen.avatarFeedbackFrameBase) {
           DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 3;
-          af.avatarFrameStepTicks = 20;
+          CacheFileState.avatarFrameStepTicks = 20;
           LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
           IterableNodeHashTable.avatarBlinkClockTicks = IterableNodeHashTable.avatarBlinkClockTicks + 1;
           if (IterableNodeHashTable.avatarBlinkClockTicks % 600 < 30) {
@@ -395,11 +395,11 @@ final class PrefixCodeDecoder {
           return;
         }
         avatarFrameOffsetInSegment = DiskCacheWorker.avatarFeedbackFrameIndex - MenuScreen.avatarFeedbackFrameBase;
-        if (jk.avatarSteeringDirectionId != 1) {
-          if ((jk.avatarSteeringDirectionId == 2) &&
+        if (FullscreenSupport.avatarSteeringDirectionId != 1) {
+          if ((FullscreenSupport.avatarSteeringDirectionId == 2) &&
               (avatarFrameOffsetInSegment < 5)) {
             DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex + 1;
-            af.avatarFrameStepTicks = 20;
+            CacheFileState.avatarFrameStepTicks = 20;
             LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
             IterableNodeHashTable.avatarBlinkClockTicks = IterableNodeHashTable.avatarBlinkClockTicks + 1;
             if (IterableNodeHashTable.avatarBlinkClockTicks % 600 < 30) {
@@ -418,10 +418,10 @@ final class PrefixCodeDecoder {
             }
             return;
           }
-          if ((jk.avatarSteeringDirectionId == 0) &&
+          if ((FullscreenSupport.avatarSteeringDirectionId == 0) &&
               (avatarFrameOffsetInSegment < 3)) {
             DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex + 1;
-            af.avatarFrameStepTicks = 20;
+            CacheFileState.avatarFrameStepTicks = 20;
             LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
             IterableNodeHashTable.avatarBlinkClockTicks = IterableNodeHashTable.avatarBlinkClockTicks + 1;
             if (IterableNodeHashTable.avatarBlinkClockTicks % 600 < 30) {
@@ -440,8 +440,8 @@ final class PrefixCodeDecoder {
             }
             return;
           }
-          if (jk.avatarSteeringDirectionId != 0) {
-            af.avatarFrameStepTicks = 20;
+          if (FullscreenSupport.avatarSteeringDirectionId != 0) {
+            CacheFileState.avatarFrameStepTicks = 20;
             LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
             IterableNodeHashTable.avatarBlinkClockTicks = IterableNodeHashTable.avatarBlinkClockTicks + 1;
             if (IterableNodeHashTable.avatarBlinkClockTicks % 600 < 30) {
@@ -461,7 +461,7 @@ final class PrefixCodeDecoder {
             return;
           }
           if (avatarFrameOffsetInSegment <= 3) {
-            af.avatarFrameStepTicks = 20;
+            CacheFileState.avatarFrameStepTicks = 20;
             LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
             IterableNodeHashTable.avatarBlinkClockTicks = IterableNodeHashTable.avatarBlinkClockTicks + 1;
             if (IterableNodeHashTable.avatarBlinkClockTicks % 600 < 30) {
@@ -481,7 +481,7 @@ final class PrefixCodeDecoder {
             return;
           }
           DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex - 1;
-          af.avatarFrameStepTicks = 20;
+          CacheFileState.avatarFrameStepTicks = 20;
           LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
           IterableNodeHashTable.avatarBlinkClockTicks = IterableNodeHashTable.avatarBlinkClockTicks + 1;
           if (IterableNodeHashTable.avatarBlinkClockTicks % 600 < 30) {
@@ -502,7 +502,7 @@ final class PrefixCodeDecoder {
         }
         if (avatarFrameOffsetInSegment > 1) {
           DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex - 1;
-          af.avatarFrameStepTicks = 20;
+          CacheFileState.avatarFrameStepTicks = 20;
           LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
           IterableNodeHashTable.avatarBlinkClockTicks = IterableNodeHashTable.avatarBlinkClockTicks + 1;
           if (IterableNodeHashTable.avatarBlinkClockTicks % 600 < 30) {
@@ -528,10 +528,10 @@ final class PrefixCodeDecoder {
           }
           return;
         }
-        if ((jk.avatarSteeringDirectionId == 2) &&
+        if ((FullscreenSupport.avatarSteeringDirectionId == 2) &&
             (avatarFrameOffsetInSegment < 5)) {
           DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex + 1;
-          af.avatarFrameStepTicks = 20;
+          CacheFileState.avatarFrameStepTicks = 20;
           LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
           IterableNodeHashTable.avatarBlinkClockTicks = IterableNodeHashTable.avatarBlinkClockTicks + 1;
           if (IterableNodeHashTable.avatarBlinkClockTicks % 600 < 30) {
@@ -550,10 +550,10 @@ final class PrefixCodeDecoder {
           }
           return;
         }
-        if ((jk.avatarSteeringDirectionId == 0) &&
+        if ((FullscreenSupport.avatarSteeringDirectionId == 0) &&
             (avatarFrameOffsetInSegment < 3)) {
           DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex + 1;
-          af.avatarFrameStepTicks = 20;
+          CacheFileState.avatarFrameStepTicks = 20;
           LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
           IterableNodeHashTable.avatarBlinkClockTicks = IterableNodeHashTable.avatarBlinkClockTicks + 1;
           if (IterableNodeHashTable.avatarBlinkClockTicks % 600 < 30) {
@@ -572,8 +572,8 @@ final class PrefixCodeDecoder {
           }
           return;
         }
-        if (jk.avatarSteeringDirectionId != 0) {
-          af.avatarFrameStepTicks = 20;
+        if (FullscreenSupport.avatarSteeringDirectionId != 0) {
+          CacheFileState.avatarFrameStepTicks = 20;
           LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
           IterableNodeHashTable.avatarBlinkClockTicks = IterableNodeHashTable.avatarBlinkClockTicks + 1;
           if (IterableNodeHashTable.avatarBlinkClockTicks % 600 < 30) {
@@ -593,7 +593,7 @@ final class PrefixCodeDecoder {
           return;
         }
         if (avatarFrameOffsetInSegment <= 3) {
-          af.avatarFrameStepTicks = 20;
+          CacheFileState.avatarFrameStepTicks = 20;
           LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
           IterableNodeHashTable.avatarBlinkClockTicks = IterableNodeHashTable.avatarBlinkClockTicks + 1;
           if (IterableNodeHashTable.avatarBlinkClockTicks % 600 < 30) {
@@ -613,7 +613,7 @@ final class PrefixCodeDecoder {
           return;
         }
         DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex - 1;
-        af.avatarFrameStepTicks = 20;
+        CacheFileState.avatarFrameStepTicks = 20;
         LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
         IterableNodeHashTable.avatarBlinkClockTicks = IterableNodeHashTable.avatarBlinkClockTicks + 1;
         if (IterableNodeHashTable.avatarBlinkClockTicks % 600 < 30) {

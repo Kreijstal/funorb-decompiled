@@ -86,10 +86,10 @@ final class WeightedObjectCache {
     final static void clearAvatarSteering(int methodGuard) {
         if (methodGuard > -96) {
             loginUsernameEmailText = (String) null;
-            jk.avatarSteeringDirectionId = 0;
+            FullscreenSupport.avatarSteeringDirectionId = 0;
             return;
         }
-        jk.avatarSteeringDirectionId = 0;
+        FullscreenSupport.avatarSteeringDirectionId = 0;
     }
 
     private final void a(int param0, CacheReference param1) {

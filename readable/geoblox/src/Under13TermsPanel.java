@@ -13,7 +13,7 @@ final class Under13TermsPanel extends WidgetContainer implements HotspotActivati
 
     final static void g(int param0) {
         if (null == RasterTargetSnapshot.field_f) {
-            jk.fullscreenAcceptCountdownPluralText = OpacityWidget.a(jk.fullscreenAcceptCountdownPluralText, new String[]{"<br><shad=000001><%0></shad><br>"}, (byte) -123);
+            FullscreenSupport.fullscreenAcceptCountdownPluralText = OpacityWidget.a(FullscreenSupport.fullscreenAcceptCountdownPluralText, new String[]{"<br><shad=000001><%0></shad><br>"}, (byte) -123);
             mj.fullscreenAcceptCountdownSingularText = OpacityWidget.a(mj.fullscreenAcceptCountdownSingularText, new String[]{"<br><shad=000001><%0></shad><br>"}, (byte) -55);
             RasterTargetSnapshot.field_f = new String[19];
             RasterTargetSnapshot.field_f[12] = ValidationState.nextText;
@@ -69,7 +69,7 @@ final class Under13TermsPanel extends WidgetContainer implements HotspotActivati
           }
           if (null == param0.field_g) {
           }
-          ki.a(param0, 31274);
+          SessionSnapshotSupport.retainSessionSnapshot(param0, 31274);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -94,15 +94,15 @@ final class Under13TermsPanel extends WidgetContainer implements HotspotActivati
         int var6 = 0;
         try {
             this.accountCreationDialog = accountCreationDialog;
-            this.continueButton = new ButtonWidget(cl.continueText, (WidgetListener) null);
+            this.continueButton = new ButtonWidget(UsernameQuerySupport.continueText, (WidgetListener) null);
             this.continueButton.renderer = (WidgetRenderer) ((Object) new SpriteButtonRenderer());
             var7 = OpacityWidget.a(TextPairLoginPayload.createUnder13TermsText, new String[]{this.f(11501), this.c(false)}, (byte) -114);
             var3 = 20;
             var4 = new TextWidgetRenderer(DialogLayer.sharedUiFont, 0, 0, 0, 0, 16777215, -1, 3, 0, DialogLayer.sharedUiFont.maxAscent, -1, 2147483647, true);
             this.termsText = new HotspotTextWidget(var7, var4);
             this.termsText.hoverText = "";
-            this.termsText.setHotspotHoverText(0, -47, eh.openInPopupWindowText);
-            this.termsText.setHotspotHoverText(1, 118, eh.openInPopupWindowText);
+            this.termsText.setHotspotHoverText(0, -47, LogoCompositor.openInPopupWindowText);
+            this.termsText.setHotspotHoverText(1, 118, LogoCompositor.openInPopupWindowText);
             this.termsText.listener = (WidgetListener) (this);
             this.termsText.widgetWidth = this.widgetWidth - 40;
             this.termsText.fitTextBounds(26, 0, var3, this.widgetWidth - 40);
@@ -231,7 +231,7 @@ final class Under13TermsPanel extends WidgetContainer implements HotspotActivati
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 == this.continueButton) {
-            ki.a(77);
+            SessionSnapshotSupport.prepareAccountCreationUi(77);
             this.accountCreationDialog.dismissDialog((byte) -104);
           }
           if (param1 == -20) {

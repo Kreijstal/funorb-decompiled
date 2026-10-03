@@ -417,7 +417,7 @@ final class BufferedRandomAccessFile {
           if (UiWidget.gameplaySession.sceneTransitionRequested) {
             return false;
           }
-          bk.boardOwnershipRaster.setAsRasterTarget();
+          LogoPreparationSupport.boardOwnershipRaster.setAsRasterTarget();
           if (!PlayfieldRules.hasPixelsAtPlayfieldBoundary(-61)) {
             SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
             return false;

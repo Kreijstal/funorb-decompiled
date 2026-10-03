@@ -55,8 +55,8 @@ final class LoginProtocolSupport {
               }
               if ((ResizableDialog.awaitingInitialLoginReplyStage == PacketBuffer.currentProtocolStage) &&
                   (UiWidget.b(30000, 1))) {
-                responseByteThenPortSwapValue = eh.field_d.readUnsignedByte((byte) 34);
-                eh.field_d.position = 0;
+                responseByteThenPortSwapValue = LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
+                LogoCompositor.sessionPacketBuffer.position = 0;
                 if (responseByteThenPortSwapValue != 0) {
                   AchievementSubmission.field_k = -1;
                   PacketBuffer.currentProtocolStage = TextInputRenderer.awaitingLoginFailureTextStage;
@@ -67,8 +67,8 @@ final class LoginProtocolSupport {
               }
               if ((MessageDialog.awaitingLoginLongState == PacketBuffer.currentProtocolStage) &&
                   (UiWidget.b(30000, 8))) {
-                ak.field_a = eh.field_d.readLongBE(2901);
-                eh.field_d.position = 0;
+                ak.field_a = LogoCompositor.sessionPacketBuffer.readLongBE(2901);
+                LogoCompositor.sessionPacketBuffer.position = 0;
                 UsernameAvailabilityValidator.a(26, affiliateId, useLongLoginPayload, EntityContactSupport.pendingLoginPayload, enableLoginFlagBitEight);
                 PacketBuffer.currentProtocolStage = da.awaitingLoginResultStage;
               }
@@ -79,8 +79,8 @@ final class LoginProtocolSupport {
               L6: {
                 if ((da.awaitingLoginResultStage == PacketBuffer.currentProtocolStage) &&
                     (UiWidget.b(30000, 1))) {
-                  responseByteThenPortSwapValue = eh.field_d.readUnsignedByte((byte) 34);
-                  eh.field_d.position = 0;
+                  responseByteThenPortSwapValue = LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
+                  LogoCompositor.sessionPacketBuffer.position = 0;
                   GameSoundResources.optionalLoginText = null;
                   ScorePopup.field_l = responseByteThenPortSwapValue;
                   if ((responseByteThenPortSwapValue != 0) &&
@@ -101,12 +101,12 @@ final class LoginProtocolSupport {
               }
               if ((da.awaitingLoginDetailsStage == PacketBuffer.currentProtocolStage) &&
                   (TriangleMesh.a(false))) {
-                oa.field_c = eh.field_d.readLongBE(2901);
-                SpriteCheckboxRenderer.field_f = eh.field_d.readUnsignedByte((byte) 34);
-                eh.field_d.readUnsignedByte((byte) 34);
-                TextTemplateDefinition.field_n = eh.field_d.readUnsignedShortBE(true);
-                settingsCookieValue = eh.field_d.readNullableNullTerminatedText((byte) 53);
-                loginResponseFlags = eh.field_d.readUnsignedByte((byte) 34);
+                oa.field_c = LogoCompositor.sessionPacketBuffer.readLongBE(2901);
+                SpriteCheckboxRenderer.field_f = LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
+                LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
+                TextTemplateDefinition.field_n = LogoCompositor.sessionPacketBuffer.readUnsignedShortBE(true);
+                settingsCookieValue = LogoCompositor.sessionPacketBuffer.readNullableNullTerminatedText((byte) 53);
+                loginResponseFlags = LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
                 if ((1 & loginResponseFlags) != 0) {
                   ic.a((byte) 65);
                 }
@@ -119,21 +119,21 @@ final class LoginProtocolSupport {
                   }
                 }
                 if (ll.field_e) {
-                  eh.field_d.readUnsignedByte((byte) 34);
-                  eh.field_d.readUnsignedByte((byte) 34);
-                  eh.field_d.readIntBE((byte) -48);
-                  PacketBuffer.field_n = eh.field_d.readUnsignedShortBE(true);
+                  LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
+                  LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
+                  LogoCompositor.sessionPacketBuffer.readIntBE((byte) -48);
+                  PacketBuffer.field_n = LogoCompositor.sessionPacketBuffer.readUnsignedShortBE(true);
                   ValidatedTextInputWidget.field_K = new byte[PacketBuffer.field_n];
                   for (extensionByteIndexThenCipherSeedIndex = 0; PacketBuffer.field_n > extensionByteIndexThenCipherSeedIndex; extensionByteIndexThenCipherSeedIndex++) {
-                    ValidatedTextInputWidget.field_K[extensionByteIndexThenCipherSeedIndex] = eh.field_d.readSignedByte((byte) 72);
+                    ValidatedTextInputWidget.field_K[extensionByteIndexThenCipherSeedIndex] = LogoCompositor.sessionPacketBuffer.readSignedByte((byte) 72);
                   }
                 }
-                SecondaryDeque.field_f = eh.field_d.readNullTerminatedText((byte) 105);
+                SecondaryDeque.field_f = LogoCompositor.sessionPacketBuffer.readNullTerminatedText((byte) 105);
                 receivedNameCharacters = (CharSequence) ((Object) SecondaryDeque.field_f);
                 SecondaryNodeHashTable.field_b = ResizableDialog.a(receivedNameCharacters, 12);
-                EntityLinkSupport.field_a = eh.field_d.readUnsignedByte((byte) 34);
-                PacketBuffer.currentProtocolStage = eh.connectedSessionStage;
-                if (EntityContactSupport.pendingLoginPayload.payloadKind((byte) -32) != ej.field_b) {
+                EntityLinkSupport.field_a = LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
+                PacketBuffer.currentProtocolStage = LogoCompositor.connectedSessionStage;
+                if (EntityContactSupport.pendingLoginPayload.payloadKind((byte) -32) != RatingPresentationResources.loginPayloadKindThree) {
                   if (EntityContactSupport.pendingLoginPayload.payloadKind((byte) -32) == Geoblox.longAndNameLoginType) {
                     ProgressDialog.field_W.rememberMethod(NodeHashTableIterator.c(108), 0);
                   }
@@ -167,7 +167,7 @@ final class LoginProtocolSupport {
                 for (extensionByteIndexThenCipherSeedIndex = 0; extensionByteIndexThenCipherSeedIndex < 4; extensionByteIndexThenCipherSeedIndex++) {
                   ProgressBarWidget.field_D[extensionByteIndexThenCipherSeedIndex] = ProgressBarWidget.field_D[extensionByteIndexThenCipherSeedIndex] + 50;
                 }
-                eh.field_d.initializeCipher(ProgressBarWidget.field_D, false);
+                LogoCompositor.sessionPacketBuffer.initializeCipher(ProgressBarWidget.field_D, false);
                 connectedResponseResult = ScorePopup.field_l;
                 return connectedResponseResult;
               }
@@ -183,7 +183,7 @@ final class LoginProtocolSupport {
                 if (ScorePopup.field_l == 7) {
                   ScorePopup.field_l = 3;
                 }
-                AudioService.field_a = eh.field_d.readNullTerminatedText((byte) 101);
+                AudioService.field_a = LogoCompositor.sessionPacketBuffer.readNullTerminatedText((byte) 101);
                 TextTemplateArgumentType.field_e = false;
                 failedResponseResult = ScorePopup.field_l;
                 return failedResponseResult;

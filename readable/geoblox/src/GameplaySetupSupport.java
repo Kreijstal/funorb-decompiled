@@ -15,7 +15,7 @@ final class GameplaySetupSupport {
         EmailValidator.availableSpriteVariantCount = 3;
         CacheReference.field_m = 0;
         ArchiveNetworkClient.difficultyStep = 0;
-        fa.releasesPerTheme = 40;
+        MessageDialogSupport.releasesPerTheme = 40;
         MessageDialog.availableEntityCategoryCount = 4;
         qe.adjustThemeReleaseQuota(10);
         FullscreenErrorDialog.spawnIntervalScale = 0.75f;

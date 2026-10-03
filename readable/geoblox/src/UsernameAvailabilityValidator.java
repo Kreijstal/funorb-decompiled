@@ -242,7 +242,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
             return stackIn_2_0;
           }
           if (!candidateText.equals(this.field_k)) {
-            var4 = cl.a((byte) 94, candidateText);
+            var4 = UsernameQuerySupport.requestOrReuseUsernameQuery((byte) 94, candidateText);
             if (var4 == null) {
               return null;
             }
@@ -304,7 +304,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
             return stackIn_4_0;
           }
           if (!candidateText.equals(this.field_k)) {
-            var3 = cl.a((byte) 108, candidateText);
+            var3 = UsernameQuerySupport.requestOrReuseUsernameQuery((byte) 108, candidateText);
             if ((var3 != null) &&
                 (var3.field_e == null)) {
               this.field_n = var3.field_g;
@@ -339,7 +339,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
             orbCoinSprite = (Sprite) null;
             LoginPayloadKind.ensureAchievementStateRequested(9313);
             if (!UnderlinedButtonRenderer.c(-117)) {
-                return hj.achievementMaskReceived ? true : false;
+                return SpriteConstructionSupport.achievementMaskReceived ? true : false;
             }
             return true;
         }
@@ -347,7 +347,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
         if (UnderlinedButtonRenderer.c(-117)) {
             return true;
         }
-        if (!hj.achievementMaskReceived) {
+        if (!SpriteConstructionSupport.achievementMaskReceived) {
             return false;
         }
         return true;

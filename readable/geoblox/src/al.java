@@ -19,7 +19,7 @@ final class al {
           if (param0 != 26146) {
             return;
           }
-          var9 = eh.field_d;
+          var9 = LogoCompositor.sessionPacketBuffer;
           var2 = var9.readUnsignedByte((byte) 34);
           if (var2 == 0) {
             var8 = (FifoResponseToken) ((Object) PrefixCodeDecoder.field_e.firstForIteration(0));

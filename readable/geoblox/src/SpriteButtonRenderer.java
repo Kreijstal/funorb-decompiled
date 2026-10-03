@@ -83,7 +83,7 @@ final class SpriteButtonRenderer extends TextWidgetRenderer {
     }
 
     private SpriteButtonRenderer(int param0, int param1, int param2) {
-        this.field_n = hh.field_c;
+        this.field_n = UiFontResources.commonUiBoldFont;
         this.normalColor = param0;
         this.disabledColor = param2;
         this.highlightColor = param1;

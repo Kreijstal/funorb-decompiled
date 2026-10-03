@@ -65,9 +65,9 @@ final class TextPairLoginPayload extends LoginPayload {
     final LoginPayloadKind payloadKind(byte methodGuard) {
         if (methodGuard != -32) {
             field_c = (int[]) null;
-            return ej.field_b;
+            return RatingPresentationResources.loginPayloadKindThree;
         }
-        return ej.field_b;
+        return RatingPresentationResources.loginPayloadKindThree;
     }
 
     TextPairLoginPayload(String loginText, String base38Text) {

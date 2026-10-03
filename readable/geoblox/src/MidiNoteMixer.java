@@ -13,7 +13,7 @@ final class MidiNoteMixer extends PcmStream {
     public static void c(int param0) {
         fullscreenFocusOrResolutionText = null;
         if (param0 != -1) {
-            MidiNoteMixer.a((byte) -81);
+            MidiNoteMixer.prepareLogoGlowRaster((byte) -81);
         }
     }
 
@@ -127,31 +127,31 @@ final class MidiNoteMixer extends PcmStream {
         }
     }
 
-    final static void a(byte param0) {
-        Sprite var1 = null;
-        Sprite var2 = null;
-        int var3 = 0;
-        int var4 = Geoblox.clientControlFlowFlag;
+    final static void prepareLogoGlowRaster(byte methodGuard) {
+        Sprite logoRenderRaster = null;
+        Sprite logoSilhouette = null;
+        int blurPass = 0;
+        int clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
-            if (param0 != -32) {
+            if (methodGuard != -32) {
                 field_p = false;
             }
-            var1 = new Sprite(540, 140);
-            Geoblox.setRasterTarget(1, var1);
+            logoRenderRaster = new Sprite(540, 140);
+            Geoblox.setRasterTarget(1, logoRenderRaster);
             TriangleRasterState.prepareTriangleClipFromRasterizer();
             SoftwareRasterizer.clearFramebuffer();
             DequeCursor.logoAnimationTick = 0;
             TextTemplateArgumentType.renderLogoMeshes((byte) -73);
-            var2 = var1.copy();
-            for (var3 = 0; var3 < 15; var3++) {
-                var2.drawSilhouette(-2, -2, 16777215);
+            logoSilhouette = logoRenderRaster.copy();
+            for (blurPass = 0; blurPass < 15; blurPass++) {
+                logoSilhouette.drawSilhouette(-2, -2, 16777215);
                 SoftwareRasterizer.blurRasterRegion(4, 4, 0, 0, 540, 140);
             }
-            ProxySocketConnector.field_l.setAsRasterTarget();
-            var1.drawHalfSize(0, 0);
+            ProxySocketConnector.logoGlowRaster.setAsRasterTarget();
+            logoRenderRaster.drawHalfSize(0, 0);
             id.restoreRasterTarget(true);
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ad.H(" + param0 + ')');
+        } catch (RuntimeException glowPreparationFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) glowPreparationFailure), "ad.H(" + methodGuard + ')');
         }
     }
 

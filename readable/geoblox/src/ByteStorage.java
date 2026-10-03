@@ -3,7 +3,7 @@
  */
 abstract class ByteStorage {
     static ValidationState field_d;
-    static long field_c;
+    static long updatePeriodNanoseconds;
     static String loadingExtraDataText;
     static int field_b;
     static String field_a;
@@ -79,6 +79,6 @@ abstract class ByteStorage {
     static {
         field_d = new ValidationState();
         loadingExtraDataText = "Loading extra data";
-        field_c = 20000000L;
+        updatePeriodNanoseconds = 20000000L;
     }
 }

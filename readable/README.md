@@ -1,11 +1,32 @@
 # Readable GeoBlox
 
-The current export has 10,324 guarded naming rules: 247 classes, 1,379 fields,
-1,009 methods, 2,968 parameters and 4,721 local declarations. Both 303-file corpora
+The current export has 10,538 guarded naming rules: 260 classes, 1,396 fields,
+1,041 methods, 3,017 parameters and 4,824 local declarations. Both 303-file corpora
 compile, comparing 136,612 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
-## Current progression and session names (pass 121)
+## Current logo and UI support names (pass 122)
+
+Pass 122 adds 214 guarded names: 13 classes, 17 fields, 32 methods,
+49 parameters and 103 locals. The logo loading path now reads through
+`LogoPreparationSupport.prepareLogoAnimation`, `EntityMotionSupport.decodeLogoAudio`,
+`FullscreenSupport.prepareMeshSpecularResponse`, `MidiNoteMixer.prepareLogoGlowRaster`
+and `LogoCompositor.drawLogoAnimation`. The shared owners also expose snapshot
+retention, fullscreen exit, username-query reuse, common UI fonts, cache handles,
+name separators and configured timer rate. All parameters and locals in the
+13 audited owners have names. The top/bottom final-frame slices, scene/glow
+rasters, packet buffer and encrypted scratch have source-supported roles.
+All 10,324 previous complete rules, raw bodies, local ordinals, bytecode and
+source/tool/native trace pins remain. The export has 10,538 rules and 82,881
+identifier edits. All 303 raw/readable sources compile, compare 136,612 bindings
+and preserve 388 override relationships. Class coverage is 260 renamed, one
+meaningful original name and 42 opaque names. Six large labeled bodies and
+207 block labels remain. Configured update rate is a timer setting, not measured
+presented FPS. Mixed-purpose statics stay on their owners. This naming pass adds
+no whole-game, successful asset/audio/AWT fullscreen, live server, browser/phone
+or heap/FPS equivalence claim.
+
+## Previous progression and session names (pass 121)
 
 Pass 121 adds 286 guarded names: 14 classes, 19 fields, 24 methods,
 44 parameters and 185 locals. The game now reads through `MatchCandidateSupport`,
@@ -89,7 +110,7 @@ bytecode and decompiler/naming-tool pins stay unchanged. The source/probe paths
 move into Deko; existing native trace hashes remain fixed. Whole-game and
 browser/device performance are still unverified.
 
-The maintained [workflow](https://github.com/Kreijstal/dekobloko-work/blob/9581255db52d2cb80b3d612a04f3f360e578e365/readable/README.md) and [manifest](https://github.com/Kreijstal/dekobloko-work/blob/9581255db52d2cb80b3d612a04f3f360e578e365/readable/geoblox-rules.json)
+The maintained [workflow](https://github.com/Kreijstal/dekobloko-work/blob/f5e43aaad42307da97f8447100c8e2c86719e36d/readable/README.md) and [manifest](https://github.com/Kreijstal/dekobloko-work/blob/f5e43aaad42307da97f8447100c8e2c86719e36d/readable/geoblox-rules.json)
 live in `dekobloko-work`. From Deko, select this checkout and regenerate:
 
 ```sh
@@ -333,7 +354,7 @@ requires a separately verified literal-lookup transformation.
 The current raw tree is
 `ed3b8d3273e80abdca9bb56ff0354f6d23734ac2a90e6778ac871e1feabd6f8f`;
 the current readable tree is
-`a06e79f283fe68d05b4cb34b0d48a28959d28d7d016bd1a4b98b77ee7481a7d2`.
+`7254ad7253ed77c819e4d7289766198a149f7d4ea3e75272d9ac8eacf1112bc7`.
 The pinned decompiler-source SHA-256 is
 `c5ea1520d6be43f14bf44349fed7ffdf0e08be03c5e14cc59db89df4155a45e3`.
 All seven existing native/raw/readable probes pass with their pinned traces.
@@ -347,16 +368,16 @@ Generated Java, [dictionary](geoblox/mapping.json), [symbol reference](geoblox/S
 [export provenance](geoblox/provenance.json), the frozen `funorb-stubs.jar`
 compilation artifact and reading documentation belong here in **funorb-decompiled**.
 The generator, rules, proof fixtures and frozen naming dependency are maintained
-only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/9581255db52d2cb80b3d612a04f3f360e578e365/readable/README.md).
+only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/f5e43aaad42307da97f8447100c8e2c86719e36d/readable/README.md).
 **blank-github-cloner** owns loading/diagnostics and tracks no Java exports.
-The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/9581255db52d2cb80b3d612a04f3f360e578e365/readable/geoblox-rules.json) pins all source and tool
+The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/f5e43aaad42307da97f8447100c8e2c86719e36d/readable/geoblox-rules.json) pins all source and tool
 identities, workflow source hashes and native trace evidence. It records the
-previous manifest's Git repository, commit and hash; pass121 refers to the
-Deko-owned pass120 manifest. Pass118 refers to this repository's pass117 history. The export records its exact
+previous manifest's Git repository, commit and hash; pass122 refers to the
+Deko-owned pass121 manifest. Pass118 refers to this repository's pass117 history. The export records its exact
 manifest SHA-256. Old scripts and manifests remain accessible in Git history.
 
-The current Deko workflow/manifest commit is `9581255db52d2cb80b3d612a04f3f360e578e365`; the
-manifest SHA-256 is `9e76bcbb70c58303301e29e52c5e15b80a51fdc92744dd4d45e525963bbc72fb`.
+The current Deko workflow/manifest commit is `f5e43aaad42307da97f8447100c8e2c86719e36d`; the
+manifest SHA-256 is `c4e04826c1512078f83c432af10df922f6ea2d52f94c73849f67db3a0a24e544`.
 The existing decompilation provenance records these identities and all four
 executable workflow source hashes.
 
@@ -1081,7 +1102,7 @@ retry-button action and two ordered login-on-dismiss options. Error setup writes
 its installation flag before recoloring and creating content, so a later failure
 keeps that flag. Dismissal clears visibility before its follow-up helpers, which
 can call dismissal again. Error-kind IDs, callback coordinates, key IDs, text,
-nulls and diagnostic strings remain. `fa.showMessageDialog` preserves its boolean
+nulls and diagnostic strings remain. `MessageDialogSupport.showMessageDialog` preserves its boolean
 write even for the wrong guard. Static utilities name fullscreen requests, shared
 UI style, signed-decimal validation, login-form creation and cleanup separately
 from instance dialog behavior. Shared canvas, login-header integer and the
@@ -1780,7 +1801,7 @@ are not inferred from this dormant optional path.
 The face collector optionally rejects backfaces by signed projected cross product,
 skips clipped depths and queues indices into 16-entry depth buckets. A full bucket
 spills toward lower bucket indices. Signed priority bytes increment counts, then
-prefix sums replace those counts. `hj.unsignedBitLength`,
+prefix sums replace those counts. `SpriteConstructionSupport.unsignedBitLength`,
 `oe.clearMeshDepthBucketCounts` and `ma.clearMeshPriorityCounts` expose its helpers.
 The clearing loops retain eight sequential stores without a partial-group check.
 Bad indices, null/short buffers, guard timing, control flags, integer overflow,
@@ -2290,7 +2311,7 @@ methods, thirty parameters and seventy locals. `ArchiveNetworkClient` and
 `SocketArchiveNetworkClient` name every instance declaration, constructor
 contract and local. `secondaryKey` names the independent dual-link key shared
 by request records and secondary hash buckets. Direct `h.xorInt`,
-`ArchiveNetworkClient.sleepIgnoringInterrupt` and `bc.sleepMillis` contracts
+`ArchiveNetworkClient.sleepIgnoringInterrupt` and `ByteTextDecodingSupport.sleepMillis` contracts
 also have complete parameter/local names. Static gameplay/UI/sprite helpers
 remain on their existing owners.
 

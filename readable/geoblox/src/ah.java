@@ -27,7 +27,7 @@ final class ah {
 
     final static TextWidgetRenderer a(byte param0) {
         if (TextInputRenderer.field_t == null) {
-            TextInputRenderer.field_t = new TextWidgetRenderer(hh.field_d, 20, 0, 0, 0, 11579568, -1, 0, 0, hh.field_d.maxAscent, -1, 2147483647, true);
+            TextInputRenderer.field_t = new TextWidgetRenderer(UiFontResources.commonUiSmallFont, 20, 0, 0, 0, 11579568, -1, 0, 0, UiFontResources.commonUiSmallFont.maxAscent, -1, 2147483647, true);
         }
         if (param0 >= -39) {
             ah.a(-8);

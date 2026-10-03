@@ -6,12 +6,12 @@ import java.util.*;
 final class DraggableWidget extends SingleChildWidget {
     private int grabOffsetX;
     private boolean childPressTakesPriority;
-    static hh contentFadeOutPhase;
+    static UiFontResources contentFadeOutPhase;
     private int layoutTargetY;
     private int layoutTargetX;
     private boolean easeToLayoutPosition;
     private int grabOffsetY;
-    static hh contentResizePhase;
+    static UiFontResources contentResizePhase;
 
     final void handlePointerRelease(int parentX, int pointerX, boolean releaseGuard, UiWidget eventContext, int parentY, int pointerY) {
         try {
@@ -135,7 +135,7 @@ final class DraggableWidget extends SingleChildWidget {
             }
           }
           if (param0 != 0) {
-            contentResizePhase = (hh) null;
+            contentResizePhase = (UiFontResources) null;
           }
           stackIn_8_0 = (StringBuilder) (param1);
           return stackIn_8_0;
@@ -207,7 +207,7 @@ final class DraggableWidget extends SingleChildWidget {
             ArchiveLoadStep.field_a = true;
             AgeValidator.field_i = true;
             kd.field_e.hideAllDialogs(param0 + 10912);
-            fa.showMessageDialog(ah.connectionLostReconnectingText, 480, false);
+            MessageDialogSupport.showMessageDialog(ah.connectionLostReconnectingText, 480, false);
             return;
         }
         DraggableWidget.g((byte) 86);
@@ -215,7 +215,7 @@ final class DraggableWidget extends SingleChildWidget {
         ArchiveLoadStep.field_a = true;
         AgeValidator.field_i = true;
         kd.field_e.hideAllDialogs(param0 + 10912);
-        fa.showMessageDialog(ah.connectionLostReconnectingText, 480, false);
+        MessageDialogSupport.showMessageDialog(ah.connectionLostReconnectingText, 480, false);
     }
 
     final void refreshChildLayout(boolean layoutGuard) {
@@ -232,7 +232,7 @@ final class DraggableWidget extends SingleChildWidget {
     }
 
     static {
-        contentFadeOutPhase = new hh();
-        contentResizePhase = new hh();
+        contentFadeOutPhase = new UiFontResources();
+        contentResizePhase = new UiFontResources();
     }
 }

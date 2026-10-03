@@ -46,7 +46,7 @@ final class kb {
           } else {
             stackIn_12_1 = true;
           }
-          ScorePopup.field_g = hh.a(stackIn_11_0, stackIn_12_1);
+          ScorePopup.field_g = UiFontResources.createAcceptedUsernameQuery(stackIn_11_0, stackIn_12_1);
           var6 = (String[]) null;
           SoundSampleCache.a((String[]) null, 416577356);
           return;
@@ -76,7 +76,7 @@ final class kb {
         }
         kf.field_e = true;
         TextInputValidator.a((byte) 123, true);
-        hj.field_a = 0;
+        SpriteConstructionSupport.clientScreenStage = 0;
         if (param0 < -90) {
             return;
         }
@@ -96,21 +96,21 @@ final class kb {
             kd.field_e.settleDialogAnimations(0);
             if (SecondaryNodeHashTable.field_i != null) {
                 SecondaryNodeHashTable.field_i.stopNormalAnimation(23181);
-                eh.a((byte) -2);
+                LogoCompositor.resetUiInteractionState((byte) -2);
                 var1 = -121 % ((-38 - param0) / 59);
                 return;
             }
-            eh.a((byte) -2);
+            LogoCompositor.resetUiInteractionState((byte) -2);
             var1 = -121 % ((-38 - param0) / 59);
             return;
         }
         if (SecondaryNodeHashTable.field_i == null) {
-            eh.a((byte) -2);
+            LogoCompositor.resetUiInteractionState((byte) -2);
             var1 = -121 % ((-38 - param0) / 59);
             return;
         }
         SecondaryNodeHashTable.field_i.stopNormalAnimation(23181);
-        eh.a((byte) -2);
+        LogoCompositor.resetUiInteractionState((byte) -2);
         var1 = -121 % ((-38 - param0) / 59);
     }
 

@@ -84,7 +84,7 @@ final class tj {
     final static void c(byte param0) {
         TextWidgetRenderer.field_a = null;
         int var1 = 59 % ((param0 + 30) / 37);
-        hh.field_a = null;
+        UiFontResources.awtLoadingFont = null;
     }
 
     final static int a(byte param0) {

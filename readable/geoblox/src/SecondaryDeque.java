@@ -111,7 +111,7 @@ final class SecondaryDeque {
     }
 
     final static void setAvatarPositiveRotationSteering(byte methodGuard) {
-        jk.avatarSteeringDirectionId = 2;
+        FullscreenSupport.avatarSteeringDirectionId = 2;
         if (methodGuard < 45) {
             SecondaryDeque.resendRankedListQueries(true, -75);
         }

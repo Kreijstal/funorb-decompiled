@@ -37,7 +37,7 @@ final class ScorePopup extends IntrusiveNode {
     }
 
     final static void setAvatarNegativeRotationSteering(byte methodGuard) {
-        jk.avatarSteeringDirectionId = 1;
+        FullscreenSupport.avatarSteeringDirectionId = 1;
         if (methodGuard != 38) {
             ScorePopup.c((byte) -26);
         }

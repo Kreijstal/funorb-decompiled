@@ -311,7 +311,7 @@ final class MusicDecoder extends IntrusiveNode {
             var8[2 * var9_int + 1] = -(float)Math.sin((double)(4 * var9_int + 2) * 3.141592653589793 / (double)var2);
           }
           var9 = new int[var5];
-          var10 = hj.unsignedBitLength((byte) 58, var5 - 1);
+          var10 = SpriteConstructionSupport.unsignedBitLength((byte) 58, var5 - 1);
           for (var11 = 0; var11 < var5; var11++) {
             var9[var11] = TextValidationFailure.a(var11, 0, var10);
           }
@@ -461,7 +461,7 @@ final class MusicDecoder extends IntrusiveNode {
         float[] var52;
         MusicDecoder.setBitInput(this.packets[packetIndex], 0);
         MusicDecoder.readBit();
-        var2 = MusicDecoder.readBits(hj.unsignedBitLength((byte) 58, field_D.length - 1));
+        var2 = MusicDecoder.readBits(SpriteConstructionSupport.unsignedBitLength((byte) 58, field_D.length - 1));
         var3 = field_o[var2] ? 1 : 0;
         if (var3 == 0) {
           stackIn_3_0 = shortBlockSize;
@@ -580,7 +580,7 @@ final class MusicDecoder extends IntrusiveNode {
             var20_ref_float__[4 * var25 + 3] = (var26_float - var28) * var30 - (var27 - var29) * var31;
             var20_ref_float__[4 * var25 + 1] = (var27 - var29) * var30 + (var26_float - var28) * var31;
           }
-          var25 = hj.unsignedBitLength((byte) 58, var4 - 1);
+          var25 = SpriteConstructionSupport.unsignedBitLength((byte) 58, var4 - 1);
           for (var26 = 0; var26 < var25 - 3; var26++) {
             var27_int = var4 >> var26 + 2;
             var28_int = 8 << var26;

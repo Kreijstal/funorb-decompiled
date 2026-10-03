@@ -5,7 +5,7 @@ import java.io.*;
 import java.util.*;
 
 final class ProxySocketConnector extends SocketConnector {
-    static Sprite field_l;
+    static Sprite logoGlowRaster;
     static int gameplayOriginScreenId;
     private java.net.ProxySelector field_k;
     static TextTemplateArgumentType field_i;
@@ -58,7 +58,7 @@ final class ProxySocketConnector extends SocketConnector {
             return;
         }
         field_m = null;
-        field_l = null;
+        logoGlowRaster = null;
         field_i = null;
     }
 
@@ -91,7 +91,7 @@ final class ProxySocketConnector extends SocketConnector {
           }
           var3 = param0.address();
           if (param1 != -18) {
-            field_l = (Sprite) null;
+            logoGlowRaster = (Sprite) null;
           }
           if (!((Object) var3 instanceof java.net.InetSocketAddress)) {
             return null;
@@ -358,7 +358,7 @@ final class ProxySocketConnector extends SocketConnector {
 
     static {
         gameplayOriginScreenId = -1;
-        field_l = new Sprite(270, 70);
+        logoGlowRaster = new Sprite(270, 70);
         field_i = new TextTemplateArgumentType(8, 0, 4, 1);
     }
 

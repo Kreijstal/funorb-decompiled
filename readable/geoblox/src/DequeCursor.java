@@ -25,8 +25,8 @@ final class DequeCursor {
           }
           MatchingTextValidator.field_j = MatchingTextValidator.field_j + 1;
           while (true) {
-            if (hh.pollKeyboardEvent(93)) {
-              if (ki.currentKeyboardEventCode != 13) {
+            if (UiFontResources.pollKeyboardEvent(93)) {
+              if (SessionSnapshotSupport.currentKeyboardEventCode != 13) {
                 continue;
               }
               return true;
@@ -123,8 +123,8 @@ final class DequeCursor {
         try {
           kd.field_e.processPointerFrame(true, 127, MatchScoringSupport.field_d, mj.field_b);
           kd.field_e.advanceDialogAnimations(-65);
-          while (hh.pollKeyboardEvent(77)) {
-            kd.field_e.a((byte) 105, te.currentKeyboardEventCharacter, ki.currentKeyboardEventCode);
+          while (UiFontResources.pollKeyboardEvent(77)) {
+            kd.field_e.a((byte) 105, te.currentKeyboardEventCharacter, SessionSnapshotSupport.currentKeyboardEventCode);
           }
           if (GzipInflater.field_d != param0) {
             var1_int = GzipInflater.field_d;

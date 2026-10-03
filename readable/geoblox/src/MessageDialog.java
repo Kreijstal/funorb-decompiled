@@ -209,8 +209,8 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
         int avatarFrameOffsetInSegment;
         int unusedClientControlSnapshot;
         unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
-        int frameStepTicksBeforeDecrement = af.avatarFrameStepTicks;
-        af.avatarFrameStepTicks = af.avatarFrameStepTicks - 1;
+        int frameStepTicksBeforeDecrement = CacheFileState.avatarFrameStepTicks;
+        CacheFileState.avatarFrameStepTicks = CacheFileState.avatarFrameStepTicks - 1;
         if (0 <= frameStepTicksBeforeDecrement) {
           LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
           IterableNodeHashTable.avatarBlinkClockTicks = IterableNodeHashTable.avatarBlinkClockTicks + 1;
@@ -219,7 +219,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
           }
           if ((UiWidget.gameplaySession.sessionEnding) &&
               (IterableNodeHashTable.avatarBlinkClockTicks % 18 == 0)) {
-            if (gg.avatarCryPhase == 0) {
+            if (NameCharacterSupport.avatarCryPhase == 0) {
               if (!LoginPanel.endingEntityScanClear) {
                 PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor % 4;
                 MatchCandidateSupport.currentAvatarCryFrame = HotspotTextWidget.avatarCryBeginFrames[PasswordValidator.avatarCryFrameCursor];
@@ -237,7 +237,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
                 }
                 return;
               }
-              gg.avatarCryPhase = gg.avatarCryPhase + 1;
+              NameCharacterSupport.avatarCryPhase = NameCharacterSupport.avatarCryPhase + 1;
               PasswordValidator.avatarCryFrameCursor = 0;
               MeshMaterial.a(300, GameSoundResources.gameSoundSamples[22], false, SocialListEntry.field_gb);
               PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
@@ -254,7 +254,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
               }
               return;
             }
-            if (gg.avatarCryPhase == 1) {
+            if (NameCharacterSupport.avatarCryPhase == 1) {
               if (ok.avatarCryMiddleFrames.length > PasswordValidator.avatarCryFrameCursor) {
                 MatchCandidateSupport.currentAvatarCryFrame = ok.avatarCryMiddleFrames[PasswordValidator.avatarCryFrameCursor];
                 PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
@@ -271,7 +271,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
                 }
                 return;
               }
-              gg.avatarCryPhase = gg.avatarCryPhase + 1;
+              NameCharacterSupport.avatarCryPhase = NameCharacterSupport.avatarCryPhase + 1;
               LimitedRandomAccessFile.avatarFeedbackHoldTicks = 200;
               PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
               avatarTintFadeFactor = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
@@ -311,27 +311,27 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
           }
           return;
         }
-        af.avatarFrameStepTicks = 20;
+        CacheFileState.avatarFrameStepTicks = 20;
         if (DiskCacheWorker.avatarFeedbackFrameIndex == MenuScreen.avatarFeedbackFrameBase + 0) {
           DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 3;
         } else {
           avatarFrameOffsetInSegment = -MenuScreen.avatarFeedbackFrameBase + DiskCacheWorker.avatarFeedbackFrameIndex;
-          if (1 != jk.avatarSteeringDirectionId) {
-            if ((2 == jk.avatarSteeringDirectionId) &&
+          if (1 != FullscreenSupport.avatarSteeringDirectionId) {
+            if ((2 == FullscreenSupport.avatarSteeringDirectionId) &&
                 (5 > avatarFrameOffsetInSegment)) {
               DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex + 1;
             } else {
-              if (0 == jk.avatarSteeringDirectionId) {
+              if (0 == FullscreenSupport.avatarSteeringDirectionId) {
                 if (avatarFrameOffsetInSegment < 3) {
                   DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex + 1;
                 } else {
-                  if ((0 == jk.avatarSteeringDirectionId) &&
+                  if ((0 == FullscreenSupport.avatarSteeringDirectionId) &&
                       (3 < avatarFrameOffsetInSegment)) {
                     DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex - 1;
                   }
                 }
               } else {
-                if ((0 == jk.avatarSteeringDirectionId) &&
+                if ((0 == FullscreenSupport.avatarSteeringDirectionId) &&
                     (3 < avatarFrameOffsetInSegment)) {
                   DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex - 1;
                 }
@@ -344,7 +344,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
             }
             if ((UiWidget.gameplaySession.sessionEnding) &&
                 (IterableNodeHashTable.avatarBlinkClockTicks % 18 == 0)) {
-              if (gg.avatarCryPhase == 0) {
+              if (NameCharacterSupport.avatarCryPhase == 0) {
                 if (!LoginPanel.endingEntityScanClear) {
                   PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor % 4;
                   MatchCandidateSupport.currentAvatarCryFrame = HotspotTextWidget.avatarCryBeginFrames[PasswordValidator.avatarCryFrameCursor];
@@ -362,7 +362,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
                   }
                   return;
                 }
-                gg.avatarCryPhase = gg.avatarCryPhase + 1;
+                NameCharacterSupport.avatarCryPhase = NameCharacterSupport.avatarCryPhase + 1;
                 PasswordValidator.avatarCryFrameCursor = 0;
                 MeshMaterial.a(300, GameSoundResources.gameSoundSamples[22], false, SocialListEntry.field_gb);
                 PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
@@ -379,7 +379,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
                 }
                 return;
               }
-              if (gg.avatarCryPhase == 1) {
+              if (NameCharacterSupport.avatarCryPhase == 1) {
                 if (ok.avatarCryMiddleFrames.length > PasswordValidator.avatarCryFrameCursor) {
                   MatchCandidateSupport.currentAvatarCryFrame = ok.avatarCryMiddleFrames[PasswordValidator.avatarCryFrameCursor];
                   PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
@@ -396,7 +396,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
                   }
                   return;
                 }
-                gg.avatarCryPhase = gg.avatarCryPhase + 1;
+                NameCharacterSupport.avatarCryPhase = NameCharacterSupport.avatarCryPhase + 1;
                 LimitedRandomAccessFile.avatarFeedbackHoldTicks = 200;
                 PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
                 avatarTintFadeFactor = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
@@ -437,21 +437,21 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
             return;
           }
           if (avatarFrameOffsetInSegment <= 1) {
-            if ((2 == jk.avatarSteeringDirectionId) &&
+            if ((2 == FullscreenSupport.avatarSteeringDirectionId) &&
                 (5 > avatarFrameOffsetInSegment)) {
               DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex + 1;
             } else {
-              if (0 == jk.avatarSteeringDirectionId) {
+              if (0 == FullscreenSupport.avatarSteeringDirectionId) {
                 if (avatarFrameOffsetInSegment < 3) {
                   DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex + 1;
                 } else {
-                  if ((0 == jk.avatarSteeringDirectionId) &&
+                  if ((0 == FullscreenSupport.avatarSteeringDirectionId) &&
                       (3 < avatarFrameOffsetInSegment)) {
                     DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex - 1;
                   }
                 }
               } else {
-                if ((0 == jk.avatarSteeringDirectionId) &&
+                if ((0 == FullscreenSupport.avatarSteeringDirectionId) &&
                     (3 < avatarFrameOffsetInSegment)) {
                   DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex - 1;
                 }
@@ -489,7 +489,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
           return;
         }
         if (IterableNodeHashTable.avatarBlinkClockTicks % 18 == 0) {
-          if (gg.avatarCryPhase == 0) {
+          if (NameCharacterSupport.avatarCryPhase == 0) {
             if (!LoginPanel.endingEntityScanClear) {
               PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor % 4;
               MatchCandidateSupport.currentAvatarCryFrame = HotspotTextWidget.avatarCryBeginFrames[PasswordValidator.avatarCryFrameCursor];
@@ -515,7 +515,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
               DisplayModeInfo.avatarTintColor = ((int)(md.avatarTintRedDelta * avatarTintFadeFactor) << 16) + (AccountCreationDialog.avatarTintStartColor + ((int)(avatarTintFadeFactor * GzipInflater.avatarTintGreenDelta) << 8) + (int)(UsernameAvailabilityValidator.avatarTintBlueDelta * avatarTintFadeFactor));
               return;
             }
-            gg.avatarCryPhase = gg.avatarCryPhase + 1;
+            NameCharacterSupport.avatarCryPhase = NameCharacterSupport.avatarCryPhase + 1;
             PasswordValidator.avatarCryFrameCursor = 0;
             MeshMaterial.a(300, GameSoundResources.gameSoundSamples[22], false, SocialListEntry.field_gb);
             PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
@@ -539,7 +539,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
             }
             return;
           }
-          if (gg.avatarCryPhase == 1) {
+          if (NameCharacterSupport.avatarCryPhase == 1) {
             if (ok.avatarCryMiddleFrames.length > PasswordValidator.avatarCryFrameCursor) {
               MatchCandidateSupport.currentAvatarCryFrame = ok.avatarCryMiddleFrames[PasswordValidator.avatarCryFrameCursor];
               PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
@@ -556,7 +556,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
               }
               return;
             }
-            gg.avatarCryPhase = gg.avatarCryPhase + 1;
+            NameCharacterSupport.avatarCryPhase = NameCharacterSupport.avatarCryPhase + 1;
             LimitedRandomAccessFile.avatarFeedbackHoldTicks = 200;
             PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
             avatarTintFadeFactor = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
@@ -610,7 +610,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
             DiskCacheWorker.field_f.field_e = 5;
             DiskCacheWorker.field_f.field_i = 0;
             DiskCacheWorker.field_f.field_p = 4;
-            DiskCacheWorker.field_f.tooltipFont = hh.field_d;
+            DiskCacheWorker.field_f.tooltipFont = UiFontResources.commonUiSmallFont;
             if (methodGuard >= 71) {
                 return DiskCacheWorker.field_f;
             }
@@ -731,13 +731,13 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
         this.dialogStatusPanel.setStripeColors(4210752, 2121792, (byte) -103);
         if (!clearCanvasGuard) {
             restoredTextContent = new MessageDialogContent((MessageDialog) (this), this.messageFont, ResizableDialog.connectionRestoredText);
-            restoredTextContent.appendActionButton(jk.returnToGameText, 1, 15);
+            restoredTextContent.appendActionButton(FullscreenSupport.returnToGameText, 1, 15);
             this.replaceContent(restoredTextContent, -23);
             return;
         }
         gameCanvas = (java.awt.Canvas) null;
         restoredTextContent = new MessageDialogContent((MessageDialog) (this), this.messageFont, ResizableDialog.connectionRestoredText);
-        restoredTextContent.appendActionButton(jk.returnToGameText, 1, 15);
+        restoredTextContent.appendActionButton(FullscreenSupport.returnToGameText, 1, 15);
         this.replaceContent(restoredTextContent, -23);
     }
 

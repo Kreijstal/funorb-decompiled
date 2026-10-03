@@ -156,7 +156,7 @@ final class w {
             } else {
                 try {
                     SpriteCheckboxRenderer.field_e = new BufferedSocket((java.net.Socket) (NetworkArchiveRequest.field_B.result), GameplayEntity.field_D);
-                    var4 = eh.field_d;
+                    var4 = LogoCompositor.sessionPacketBuffer;
                     var5 = var4;
                     CacheReference.field_q.position = 0;
                     var5.position = 0;

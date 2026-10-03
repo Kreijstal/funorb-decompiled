@@ -118,7 +118,7 @@ final class AchievementProtocolSupport {
         int[] resultValuesForMaskRead = null;
         unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          incomingPacket = eh.field_d;
+          incomingPacket = LogoCompositor.sessionPacketBuffer;
           responseType = incomingPacket.readUnsignedByte((byte) 34);
           if (0 == responseType) {
             allocatedResultValues = SessionGameApplet.createAchievementStateValues(89);

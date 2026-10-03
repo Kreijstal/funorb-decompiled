@@ -12,10 +12,10 @@ final class TrackedPcmStream extends IntrusiveNode {
         AchievementSubmission pendingSubmission = null;
         int unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-            if ((!hj.achievementMaskReceived && null != MouseWheelInput.achievementStateQuery) &&
+            if ((!SpriteConstructionSupport.achievementMaskReceived && null != MouseWheelInput.achievementStateQuery) &&
                 (!(!MouseWheelInput.achievementStateQuery.completed))) {
                 SecondaryNodeDeque.receivedAchievementMask = MouseWheelInput.achievementStateQuery.achievementMask;
-                hj.achievementMaskReceived = true;
+                SpriteConstructionSupport.achievementMaskReceived = true;
                 ScorePopupSupport.newAchievementMask = ScorePopupSupport.newAchievementMask & ~SecondaryNodeDeque.receivedAchievementMask;
                 InstrumentPatch.earnedAchievementMask = InstrumentPatch.earnedAchievementMask | SecondaryNodeDeque.receivedAchievementMask;
             }

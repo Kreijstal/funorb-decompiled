@@ -154,14 +154,14 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
         var3 = var3 + (this.a(-99, this.confirmPasswordInput, CanvasResizeController.createPasswordConfirmationText, var3, 170, createPasswordHintText) + 5);
         var3 = var3 + (this.a(-103, this.displayNameInput, OpacityWidget.createDisplayNameText, var3, 170, ClientProtocolStage.createDisplayNameHintText) + 5);
         var3 = var3 + this.a(var3, 170, this.ageInput, PcmResampler.createAgeText, (byte) -127);
-        LabeledChildWidget var4 = new LabeledChildWidget(46, var3, this.widgetWidth - 90, 25, this.newsOptInCheckbox, true, this.widgetWidth - 120, 5, hh.field_d, 11579568, PcmResampler.createNewsOptInText);
+        LabeledChildWidget var4 = new LabeledChildWidget(46, var3, this.widgetWidth - 90, 25, this.newsOptInCheckbox, true, this.widgetWidth - 120, 5, UiFontResources.commonUiSmallFont, 11579568, PcmResampler.createNewsOptInText);
         this.addChild((byte) -106, var4);
         var3 = var3 + var4.widgetHeight;
         TextWidgetRenderer var5 = new TextWidgetRenderer(DialogLayer.sharedUiFont, 0, 0, 0, 0, 16777215, -1, 0, 0, DialogLayer.sharedUiFont.maxAscent, -1, 2147483647, true);
         this.termsText = new HotspotTextWidget(var2, var5);
         this.termsText.hoverText = "";
-        this.termsText.setHotspotHoverText(0, -42, eh.openInPopupWindowText);
-        this.termsText.setHotspotHoverText(1, -62, eh.openInPopupWindowText);
+        this.termsText.setHotspotHoverText(0, -42, LogoCompositor.openInPopupWindowText);
+        this.termsText.setHotspotHoverText(1, -62, LogoCompositor.openInPopupWindowText);
         this.termsText.listener = (WidgetListener) (this);
         this.termsText.fitTextBounds(46, 0, var3, -90 + this.widgetWidth);
         var3 = var3 + (this.termsText.widgetHeight + 15);

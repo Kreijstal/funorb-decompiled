@@ -18,12 +18,12 @@ final class dl {
     final static void a(int param0) {
         if (param0 == 11560) {
             TextHotspotBounds.field_l = false;
-            eh.field_d.readUnsignedByte((byte) 34);
+            LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
             return;
         }
         field_b = false;
         TextHotspotBounds.field_l = false;
-        eh.field_d.readUnsignedByte((byte) 34);
+        LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
     }
 
     static {

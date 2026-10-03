@@ -30,8 +30,8 @@ abstract class ArchiveRequest extends DualLinkNode {
         try {
           try {
             var9 = MessageDialog.gameCanvas.getGraphics();
-            if (null == hh.field_a) {
-              hh.field_a = new java.awt.Font("Helvetica", 1, 13);
+            if (null == UiFontResources.awtLoadingFont) {
+              UiFontResources.awtLoadingFont = new java.awt.Font("Helvetica", 1, 13);
             }
             if (param2) {
               var9.setColor(java.awt.Color.black);
@@ -54,7 +54,7 @@ abstract class ArchiveRequest extends DualLinkNode {
               }
               var10.drawRect(1, 1, 301, 31);
               var10.fillRect(3 * param0 + 2, 2, 300 - 3 * param0, 30);
-              var10.setFont(hh.field_a);
+              var10.setFont(UiFontResources.awtLoadingFont);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param4, (-(6 * param4.length()) + 304) / 2, 22);
               var9.drawImage(TextWidgetRenderer.field_a, AudioService.canvasWidth / 2 - 152, ok.canvasHeight / 2 - 18, (java.awt.image.ImageObserver) null);
@@ -69,14 +69,14 @@ abstract class ArchiveRequest extends DualLinkNode {
               var9.setColor(java.awt.Color.black);
               var9.drawRect(1 + var7, 1 + var8, 301, 31);
               var9.fillRect(param0 * 3 + (2 + var7), 2 + var8, -(param0 * 3) + 300, 30);
-              var9.setFont(hh.field_a);
+              var9.setFont(UiFontResources.awtLoadingFont);
               var9.setColor(java.awt.Color.white);
               var9.drawString(param4, (-(6 * param4.length()) + 304) / 2 + var7, 22 + var8);
             }
             if (SpriteState.field_q == null) {
               return;
             }
-            var9.setFont(hh.field_a);
+            var9.setFont(UiFontResources.awtLoadingFont);
             var9.setColor(java.awt.Color.white);
             var9.drawString(SpriteState.field_q, AudioService.canvasWidth / 2 - 6 * SpriteState.field_q.length() / 2, -26 + ok.canvasHeight / 2);
             return;

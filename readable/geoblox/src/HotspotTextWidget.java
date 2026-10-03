@@ -219,7 +219,7 @@ class HotspotTextWidget extends ButtonWidget {
             String var2 = (String) null;
             HotspotTextWidget.a(false, (String) null, (String) null, true);
         }
-        return eh.field_d.readNullTerminatedText((byte) 101);
+        return LogoCompositor.sessionPacketBuffer.readNullTerminatedText((byte) 101);
     }
 
     final void rebuildHotspotBounds(int methodGuard) {

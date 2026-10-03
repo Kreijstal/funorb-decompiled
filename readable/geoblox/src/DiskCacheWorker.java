@@ -345,7 +345,7 @@ final class DiskCacheWorker implements Runnable {
         try {
             threadTask = taskDispatcher.startThread((Runnable) (this), 0, 5);
             while (threadTask.status == 0) {
-                bc.sleepMillis(0, 10L);
+                ByteTextDecodingSupport.sleepMillis(0, 10L);
             }
             if (2 == threadTask.status) {
                 throw new RuntimeException();

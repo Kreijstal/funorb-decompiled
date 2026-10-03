@@ -55,12 +55,12 @@ final class IntKeyLookup {
               }
               indexDiskCacheOrIoFailure = null;
               if (ByteShortQuery.archiveTaskDispatcher.cacheDataFile != null) {
-                af.field_d = new BufferedRandomAccessFile(ByteShortQuery.archiveTaskDispatcher.cacheDataFile, 5200, 0);
+                CacheFileState.cacheDataFile = new BufferedRandomAccessFile(ByteShortQuery.archiveTaskDispatcher.cacheDataFile, 5200, 0);
                 ByteShortQuery.archiveTaskDispatcher.cacheDataFile = null;
-                indexDiskCacheOrIoFailure = new DiskArchiveCache(255, af.field_d, new BufferedRandomAccessFile(ByteShortQuery.archiveTaskDispatcher.masterCacheIndexFile, 12000, 0), 2097152);
+                indexDiskCacheOrIoFailure = new DiskArchiveCache(255, CacheFileState.cacheDataFile, new BufferedRandomAccessFile(ByteShortQuery.archiveTaskDispatcher.masterCacheIndexFile, 12000, 0), 2097152);
               }
               groupDiskCache = null;
-              if (af.field_d != null) {
+              if (CacheFileState.cacheDataFile != null) {
                 if (TrackedPcmStream.field_h == null) {
                   TrackedPcmStream.field_h = new BufferedRandomAccessFile[ByteShortQuery.archiveTaskDispatcher.cacheIndexFiles.length];
                 }
@@ -68,7 +68,7 @@ final class IntKeyLookup {
                   TrackedPcmStream.field_h[archiveId] = new BufferedRandomAccessFile(ByteShortQuery.archiveTaskDispatcher.cacheIndexFiles[archiveId], 12000, 0);
                   ByteShortQuery.archiveTaskDispatcher.cacheIndexFiles[archiveId] = null;
                 }
-                groupDiskCache = new DiskArchiveCache(archiveId, af.field_d, TrackedPcmStream.field_h[archiveId], 2097152);
+                groupDiskCache = new DiskArchiveCache(archiveId, CacheFileState.cacheDataFile, TrackedPcmStream.field_h[archiveId], 2097152);
               }
               archiveSource = DequeCursor.archiveCatalog.getArchiveSource(archiveId, (byte) -9, sweepCompletedRequests, (DiskArchiveCache) (indexDiskCacheOrIoFailure), (DiskArchiveCache) (groupDiskCache));
               if (downloadAllGroups) {

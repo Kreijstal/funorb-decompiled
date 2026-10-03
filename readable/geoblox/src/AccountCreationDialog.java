@@ -18,7 +18,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
             b.field_a = param0;
             hg.field_d = param3;
             int var4_int = -62 % ((13 - param1) / 62);
-            fa.showMessageDialog(DisplayModeInfo.loggingInText, 480, param2);
+            MessageDialogSupport.showMessageDialog(DisplayModeInfo.loggingInText, 480, param2);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "r.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -58,13 +58,13 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
           } else {
             var4 = ValidationState.createAccountSuccessText;
           }
-          var5 = new MessageDialogContent((MessageDialog) (this), hh.field_c, var4);
+          var5 = new MessageDialogContent((MessageDialog) (this), UiFontResources.commonUiBoldFont, var4);
           if (result.field_g) {
             if (result.field_d) {
               this.replaceContent(new Under13TermsPanel((AccountCreationDialog) (this)), -111);
               return;
             }
-            var5.appendButton(-2, cl.continueText, (WidgetListener) (this));
+            var5.appendButton(-2, UsernameQuerySupport.continueText, (WidgetListener) (this));
           } else {
             if (!this.accountIneligible) {
               if (result.field_j == 5) {
@@ -74,7 +74,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
                 var5.appendActionButton(ll.backText, 1, -1);
               }
             } else {
-              var5.appendButton(-2, cl.continueText, (WidgetListener) (this));
+              var5.appendButton(-2, UsernameQuerySupport.continueText, (WidgetListener) (this));
             }
             if (result.field_j == 3) {
               var5.appendActionButton(WidgetContainer.toServerListText, 1, 7);
@@ -101,7 +101,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
     }
 
     AccountCreationDialog(DialogLayer dialogLayer, AccountCreationForm accountForm) {
-        super(dialogLayer, hh.field_c, KeyedIntRecordSubmission.creatingYourAccountText, false, false);
+        super(dialogLayer, UiFontResources.commonUiBoldFont, KeyedIntRecordSubmission.creatingYourAccountText, false, false);
         try {
             this.accountForm = accountForm;
         } catch (RuntimeException runtimeException) {
@@ -218,7 +218,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
             return;
         }
         try {
-            ki.a(-112);
+            SessionSnapshotSupport.prepareAccountCreationUi(-112);
             this.dismissDialog((byte) -104);
         } catch (RuntimeException runtimeException) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "r.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');

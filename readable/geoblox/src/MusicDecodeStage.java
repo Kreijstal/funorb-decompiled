@@ -235,7 +235,7 @@ final class MusicDecodeStage {
         var2 = this.field_c.length;
         System.arraycopy(this.field_c, 0, field_a, 0, var2);
         var3 = field_b[this.field_d - 1];
-        var4 = hj.unsignedBitLength((byte) 58, var3 - 1);
+        var4 = SpriteConstructionSupport.unsignedBitLength((byte) 58, var3 - 1);
         field_g[0] = MusicDecoder.readBits(var4);
         field_g[1] = MusicDecoder.readBits(var4);
         var5 = 2;

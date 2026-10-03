@@ -193,7 +193,7 @@ final class OpacityWidget extends SingleChildWidget {
           }
           for (var3_int = 0; var3_int < 50; var3_int++) {
             if (null != param0.systemEventQueue.peekEvent()) {
-              bc.sleepMillis(0, 1L);
+              ByteTextDecodingSupport.sleepMillis(0, 1L);
               continue;
             }
             break;

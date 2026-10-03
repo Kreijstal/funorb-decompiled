@@ -103,7 +103,7 @@ final class BoardReconciliationSupport {
         SecondaryDeque visitedNonAvatarEntities = null;
         clientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          fa.entitiesDetachedThisTick = false;
+          MessageDialogSupport.entitiesDetachedThisTick = false;
           activeEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.firstForIteration(0));
           while (true) {
             L1: {
@@ -116,7 +116,7 @@ final class BoardReconciliationSupport {
                     }
                     if (entityQueueThenAttachedQueue != BoardEntityState.attachedEntities) {
                       if (!(!activeEntity.detachedFromBoard)) {
-                        fa.entitiesDetachedThisTick = true;
+                        MessageDialogSupport.entitiesDetachedThisTick = true;
                       }
                     } else {
                       activeEntity.eraseEntityTrail(30383);
@@ -219,7 +219,7 @@ final class BoardReconciliationSupport {
                               connectivityAliasThenDetachingEntity.entityQueue = ArchiveNetworkClient.movingEntities;
                               connectivityAliasThenDetachingEntity.touchesAvatar = false;
                               connectivityAliasThenDetachingEntity.detachedFromBoard = true;
-                              fa.entitiesDetachedThisTick = true;
+                              MessageDialogSupport.entitiesDetachedThisTick = true;
                               visitedFlagThenResetIndex = 0;
                               componentNeighborIndex = visitedFlagThenResetIndex;
                               while (componentNeighborIndex < connectivityAliasThenDetachingEntity.relatedEntityCount) {

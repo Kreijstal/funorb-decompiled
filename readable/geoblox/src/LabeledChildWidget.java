@@ -48,7 +48,7 @@ final class LabeledChildWidget extends SingleChildWidget {
         if (param0 != 2) {
           nineSliceSavedClip = (int[]) null;
         }
-        if (fa.releasesPerTheme == MatchCandidateSupport.releasedInCurrentTheme) {
+        if (MessageDialogSupport.releasesPerTheme == MatchCandidateSupport.releasedInCurrentTheme) {
           MatchCandidateSupport.releasedInCurrentTheme = 0;
           CacheReference.field_m = 0;
           UiWidget.gameplaySession.sessionPhase = 1;

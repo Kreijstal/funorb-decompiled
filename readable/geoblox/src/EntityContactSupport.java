@@ -87,20 +87,20 @@ final class EntityContactSupport {
           scratchLeft = scratchLeft + HotspotTextWidget.spriteScratchRaster.trimX;
           scratchTop = -(HotspotTextWidget.spriteScratchRaster.fullHeight / 2) + contactY;
           scratchTop = scratchTop + HotspotTextWidget.spriteScratchRaster.trimY;
-          ownershipOffsetX = -scratchLeft + bk.boardOwnershipRaster.trimX;
-          ownershipOffsetY = bk.boardOwnershipRaster.trimY - scratchTop;
+          ownershipOffsetX = -scratchLeft + LogoPreparationSupport.boardOwnershipRaster.trimX;
+          ownershipOffsetY = LogoPreparationSupport.boardOwnershipRaster.trimY - scratchTop;
           scratchWidth = HotspotTextWidget.spriteScratchRaster.width;
           if (scratchWidth <= ownershipOffsetX) {
             ownershipWidthOrZero = 0;
           } else {
-            ownershipWidthOrZero = bk.boardOwnershipRaster.width;
+            ownershipWidthOrZero = LogoPreparationSupport.boardOwnershipRaster.width;
           }
           ownershipWidthOrEmptyOverlap = ownershipWidthOrZero;
           scratchHeight = HotspotTextWidget.spriteScratchRaster.height;
           if (ownershipOffsetY >= scratchHeight) {
             ownershipHeightOrZero = 0;
           } else {
-            ownershipHeightOrZero = bk.boardOwnershipRaster.height;
+            ownershipHeightOrZero = LogoPreparationSupport.boardOwnershipRaster.height;
           }
           ownershipHeightOrEmptyOverlap = ownershipHeightOrZero;
           firstScratchColumnValue = (~ownershipOffsetX >= negativeHorizontalClipGuard) ? 0 : ownershipOffsetX;
@@ -122,7 +122,7 @@ final class EntityContactSupport {
           ownershipPixelIndex = firstScratchColumn + (-ownershipOffsetX + (-ownershipOffsetY + firstScratchRow) * ownershipWidthOrEmptyOverlap);
           ownershipRowSkip = -overlapWidth + ownershipWidthOrEmptyOverlap;
           scratchPixels = HotspotTextWidget.spriteScratchRaster.pixels;
-          ownershipPixels = bk.boardOwnershipRaster.pixels;
+          ownershipPixels = LogoPreparationSupport.boardOwnershipRaster.pixels;
           for (overlapRowsRemaining = overlapHeight; 0 < overlapRowsRemaining; overlapRowsRemaining--) {
             for (overlapColumnsRemaining = overlapWidth; overlapColumnsRemaining > 0; overlapColumnsRemaining--) {
               if (scratchPixels[scratchPixelIndex] != 0) {
