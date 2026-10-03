@@ -1366,15 +1366,15 @@ final class GameScreen extends MenuScreen {
               if (0 != inputDerivedStateBranch) {
                 if (inputDerivedStateBranch != 1) {
                   if (inputDerivedStateBranch == 2) {
-                    UiWidget.field_g = UiWidget.field_g - AwtRasterBuffer.field_f;
-                    lb.field_b = lb.field_b - 1;
+                    UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator - AwtRasterBuffer.primaryAchievementTrackingCounter;
+                    lb.secondaryAchievementTrackingCounter = lb.secondaryAchievementTrackingCounter - 1;
                     if (clientControlFlowGuard == 0) {
                       return;
                     }
                   }
                   if (inputDerivedStateBranch == 3) {
-                    AwtRasterBuffer.field_f = AwtRasterBuffer.field_f + 1;
-                    UiWidget.field_g = UiWidget.field_g + lb.field_b;
+                    AwtRasterBuffer.primaryAchievementTrackingCounter = AwtRasterBuffer.primaryAchievementTrackingCounter + 1;
+                    UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator + lb.secondaryAchievementTrackingCounter;
                     if (clientControlFlowGuard == 0) {
                       return;
                     }
@@ -1382,19 +1382,19 @@ final class GameScreen extends MenuScreen {
                   if (inputDerivedStateBranch != 4) {
                     return;
                   }
-                  UiWidget.field_g = UiWidget.field_g - lb.field_b;
-                  AwtRasterBuffer.field_f = AwtRasterBuffer.field_f - 1;
+                  UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator - lb.secondaryAchievementTrackingCounter;
+                  AwtRasterBuffer.primaryAchievementTrackingCounter = AwtRasterBuffer.primaryAchievementTrackingCounter - 1;
                   if (clientControlFlowGuard == 0) {
                     return;
                   }
                 }
-                UiWidget.field_g = UiWidget.field_g + AwtRasterBuffer.field_f;
-                lb.field_b = lb.field_b + 1;
+                UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator + AwtRasterBuffer.primaryAchievementTrackingCounter;
+                lb.secondaryAchievementTrackingCounter = lb.secondaryAchievementTrackingCounter + 1;
                 if (clientControlFlowGuard == 0) {
                   return;
                 }
               }
-              dc.field_a = dc.field_a | lb.field_b + UiWidget.field_g << 17;
+              dc.achievementTrackingBits = dc.achievementTrackingBits | lb.secondaryAchievementTrackingCounter + UiWidget.achievementTrackingAccumulator << 17;
             }
             return;
           }
@@ -1956,9 +1956,9 @@ final class GameScreen extends MenuScreen {
                     break L1;
                   }
                 case 14:
-                  InstrumentPatch.field_p = 0;
-                  ug.field_c = 0;
-                  ra.field_d = -2147483648;
+                  InstrumentPatch.earnedAchievementMask = 0;
+                  ug.newAchievementMask = 0;
+                  ra.receivedAchievementMask = -2147483648;
                 case 5:
                   if ((2 != this.screenId) &&
                       (this.screenId != 4) &&
@@ -2010,11 +2010,11 @@ final class GameScreen extends MenuScreen {
                     if (fh.c(-114)) {
                       if (!((!UiWidget.gameplaySession.tutorialMode) &&
                             (UiWidget.gameplaySession.score == 0) &&
-                            (ug.field_c == 0)) &&
+                            (ug.newAchievementMask == 0)) &&
                           !((UiWidget.gameplaySession.tutorialMode) &&
                             (UiWidget.gameplaySession.updateTick < 750))) {
                         if ((0 == UiWidget.gameplaySession.score) &&
-                            (0 == ug.field_c)) {
+                            (0 == ug.newAchievementMask)) {
                           ai.requestedScreenId = 0;
                           if (clientControlFlowGuard == 0) {
                             break L34;
@@ -2031,7 +2031,7 @@ final class GameScreen extends MenuScreen {
                       }
                     }
                     if ((UiWidget.gameplaySession.score == 0) &&
-                        (ug.field_c == 0)) {
+                        (ug.newAchievementMask == 0)) {
                       ai.requestedScreenId = 0;
                       if (clientControlFlowGuard == 0) {
                         break L34;

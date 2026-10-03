@@ -339,7 +339,7 @@ final class uk extends TextInputValidator {
             orbCoinSprite = (Sprite) null;
             LoginPayloadKind.b(9313);
             if (!fh.c(-117)) {
-                return hj.field_c ? true : false;
+                return hj.achievementMaskReceived ? true : false;
             }
             return true;
         }
@@ -347,7 +347,7 @@ final class uk extends TextInputValidator {
         if (fh.c(-117)) {
             return true;
         }
-        if (!hj.field_c) {
+        if (!hj.achievementMaskReceived) {
             return false;
         }
         return true;

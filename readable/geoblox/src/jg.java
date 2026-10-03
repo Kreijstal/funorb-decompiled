@@ -167,7 +167,7 @@ abstract class jg {
         try {
           kf.field_c = param3;
           sl.field_l = param4;
-          p.field_i = new ue(22050, AudioOutput.sampleRateHz);
+          AchievementSubmission.field_i = new ue(22050, AudioOutput.sampleRateHz);
           ll.field_d = MusicScore.loadNamedScore(kf.field_c, "", "title_music_loop");
           pi.field_S = MusicScore.loadNamedScore(kf.field_c, "", "game_over");
           IntrusiveNode.field_d = MusicScore.loadNamedScore(kf.field_c, "", "sun");
@@ -195,7 +195,7 @@ abstract class jg {
             } else {
               var6 = te.field_c.b(1, w.field_b[var5_int]);
             }
-            fl.field_c[var5_int] = var6.a(p.field_i);
+            fl.field_c[var5_int] = var6.a(AchievementSubmission.field_i);
             vg.field_j[var5_int] = true;
             var5_int++;
           }

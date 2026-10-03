@@ -17,7 +17,7 @@ final class gf {
             return;
         }
         eh.pendingActionPanelTop = 480;
-        kj.field_J = 0;
+        kj.pendingActionPanelPhase = 0;
         jf.pendingActionPanelWidth = 72 + FadingDialog.uiPaletteFont.measureMaximumWrappedWidth(pg.achievementTitles[pendingActionMarker.actionId], 100);
         tl.pendingActionPanelHeight = 30 * FadingDialog.uiPaletteFont.countWrappedLines(pg.achievementTitles[pendingActionMarker.actionId], 100) + 30;
         if (62 > tl.pendingActionPanelHeight) {

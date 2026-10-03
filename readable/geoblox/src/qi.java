@@ -28,7 +28,7 @@ final class qi extends IntrusiveNode {
         if (param0 <= 76) {
           field_h = (gk) null;
         }
-        stackIn_6_0 = (ra.field_d > 0) && ((65536 & ra.field_d) != 0);
+        stackIn_6_0 = (ra.receivedAchievementMask > 0) && ((65536 & ra.receivedAchievementMask) != 0);
         return stackIn_6_0;
     }
 

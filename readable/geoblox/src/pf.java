@@ -65,7 +65,7 @@ final class pf extends WidgetContainer implements ga, ButtonActivationListener {
                 Bzip2DecoderState.a((byte) -116);
                 return;
               }
-              var5_int = -var9.position + p.field_k;
+              var5_int = -var9.position + AchievementSubmission.field_k;
               var11 = var4_ref_ea.field_h;
               var10 = var11;
               var6 = var10;
@@ -345,7 +345,7 @@ final class pf extends WidgetContainer implements ga, ButtonActivationListener {
               }
               if (99 != var9) {
                 PacketBuffer.field_l = qh.field_F;
-                p.field_k = -1;
+                AchievementSubmission.field_k = -1;
                 ScorePopup.field_l = var9;
               } else {
                 UiWidget.b(30000, DualLinkNode.d(112));

@@ -10,13 +10,13 @@ final class sj {
     static String createMismatchAlertText;
     private int field_a;
 
-    final static void a(p param0, int param1, int param2) {
+    final static void submitAchievementRecord(AchievementSubmission submission, int methodGuard, int packetOpcode) {
         try {
-            ResourceArchive.field_a.addLast(-81, param0);
-            ol.a(param2, param0, 30175);
-            int var3_int = -18 % ((param1 - 3) / 40);
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "sj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            ResourceArchive.unacknowledgedAchievementSubmissions.addLast(-81, submission);
+            ol.writeAchievementSubmissionPacket(packetOpcode, submission, 30175);
+            int guardRemainder = -18 % ((methodGuard - 3) / 40);
+        } catch (RuntimeException submissionFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) submissionFailure), "sj.A(" + (submission != null ? "{...}" : "null") + ',' + methodGuard + ',' + packetOpcode + ')');
         }
     }
 

@@ -11,7 +11,7 @@ final class InstrumentPatch extends IntrusiveNode {
     short[] pitchOffsetsAndLoopFlag;
     InstrumentEnvelope[] keyEnvelopes;
     byte[] keyGroups;
-    static int field_p;
+    static int earnedAchievementMask;
     static he field_n;
     int globalVolume;
 
@@ -114,7 +114,7 @@ final class InstrumentPatch extends IntrusiveNode {
           packedPatchResult = archive.getSingleFile(28319, patchId);
           packedPatch = packedPatchResult;
           if (methodGuard < 26) {
-            field_p = 30;
+            earnedAchievementMask = 30;
           }
           if (packedPatchResult != null) {
             decodedPatchResult = new InstrumentPatch(packedPatchResult);

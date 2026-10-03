@@ -71,13 +71,13 @@ final class ec {
             return false;
           }
           if (gf.matchChainLength >= 5) {
-            ra.a(jf.field_g ^ 255, -99, jf.field_g);
+            ra.recordAchievement(jf.field_g ^ 255, -99, jf.field_g);
           }
           if (gf.matchChainLength >= 6) {
-            ra.a(LoginPayloadKind.field_d ^ 255, -57, LoginPayloadKind.field_d);
+            ra.recordAchievement(LoginPayloadKind.field_d ^ 255, -57, LoginPayloadKind.field_d);
           }
           if (gf.matchChainLength >= 7) {
-            ra.a(255 ^ IntrusiveDeque.field_f, -97, IntrusiveDeque.field_f);
+            ra.recordAchievement(255 ^ IntrusiveDeque.field_f, -97, IntrusiveDeque.field_f);
           }
           for (sortInsertionIndex = 1; sortInsertionIndex < h.matchCandidateCount; sortInsertionIndex++) {
             sortCursorThenFirstEntityId = sortInsertionIndex - 1;
@@ -118,7 +118,7 @@ final class ec {
                 }
                 if (-1073741824 == (-1073741824 & nk.packedMatchCandidates[candidateIndex])) {
                   awardedPoints = 90 * gf.matchChainLength;
-                  ra.a(fa.field_e ^ 255, -100, fa.field_e);
+                  ra.recordAchievement(fa.field_e ^ 255, -100, fa.field_e);
                 } else {
                   awardedPoints = 30 * gf.matchChainLength;
                 }

@@ -4,7 +4,7 @@
 final class ResourceArchive {
     static String field_i;
     private Object[][] decodedFiles;
-    static IntrusiveDeque field_a;
+    static IntrusiveDeque unacknowledgedAchievementSubmissions;
     private ArchiveIndex index;
     private boolean discardPackedGroups;
     private Object[] packedGroups;
@@ -288,11 +288,11 @@ final class ResourceArchive {
     }
 
     public static void b(int param0) {
-        field_a = null;
+        unacknowledgedAchievementSubmissions = null;
         field_d = null;
         createUsernameUnavailableText = null;
         if (param0 != 30261) {
-            field_a = (IntrusiveDeque) null;
+            unacknowledgedAchievementSubmissions = (IntrusiveDeque) null;
         }
         field_i = null;
     }
@@ -965,7 +965,7 @@ final class ResourceArchive {
     }
 
     static {
-        field_a = new IntrusiveDeque();
+        unacknowledgedAchievementSubmissions = new IntrusiveDeque();
         field_d = new IntrusiveDeque();
         createUsernameUnavailableText = "That name is not available";
     }

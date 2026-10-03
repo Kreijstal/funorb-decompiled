@@ -22,9 +22,9 @@ final class og extends DualLinkNode {
         var5 = Geoblox.clientControlFlowFlag;
         var6 = "(" + ad.field_o + " " + dc.field_b + " " + kg.field_n + ") " + ScorePopup.field_l;
         var1 = var6;
-        if (0 < p.field_k) {
+        if (0 < AchievementSubmission.field_k) {
           var1 = var6 + ":";
-          for (var2 = 0; var2 < p.field_k; var2++) {
+          for (var2 = 0; var2 < AchievementSubmission.field_k; var2++) {
             var7 = var1 + ' ';
             var1 = var7;
             var3 = 255 & eh.field_d.bytes[var2];

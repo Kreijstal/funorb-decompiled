@@ -102,7 +102,7 @@ final class PacketBuffer extends ByteArrayBuffer {
               } else {
                 var3 = te.field_c.b(1, w.field_b[var2_int]);
               }
-              fl.field_c[var2_int] = var3.a(p.field_i);
+              fl.field_c[var2_int] = var3.a(AchievementSubmission.field_i);
               vg.field_j[var2_int] = true;
             }
             var2_int++;
@@ -115,7 +115,7 @@ final class PacketBuffer extends ByteArrayBuffer {
             }
             var4++;
           }
-          p.field_i = null;
+          AchievementSubmission.field_i = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

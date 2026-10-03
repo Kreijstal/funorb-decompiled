@@ -19,7 +19,7 @@ final class kj extends ia {
     int[] field_m;
     private int[] field_L;
     private int[] field_M;
-    static int field_J;
+    static int pendingActionPanelPhase;
     private int[] field_K;
     private int field_R;
     private int[] field_y;
@@ -1181,7 +1181,7 @@ final class kj extends ia {
           }
         }
         if (param0 != -11099) {
-          field_J = 4;
+          pendingActionPanelPhase = 4;
         }
     }
 
@@ -1246,7 +1246,7 @@ final class kj extends ia {
     }
 
     static {
-        field_J = 0;
+        pendingActionPanelPhase = 0;
         heldInternalKeys = new boolean[112];
         queuedKeyboardEventCodes = new int[128];
         lowBitMasks = new int[]{0, 1, 3, 7, 15, 31, 63, 127, 255, 511, 1023, 2047, 4095, 8191, 16383, 32767, 65535, 131071, 262143, 524287, 1048575, 2097151, 4194303, 8388607, 16777215, 33554431, 67108863, 134217727, 268435455, 536870911, 1073741823, 2147483647, -1};

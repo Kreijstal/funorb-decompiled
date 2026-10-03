@@ -166,9 +166,9 @@ abstract class SingleChildWidget extends UiWidget implements ql {
             if ((var5_ref_ma != null) &&
                 (var3 > var5_ref_ma.field_f)) {
               var5_ref_ma.unlinkNode(false);
-              p.field_k = var5_ref_ma.field_g.length;
+              AchievementSubmission.field_k = var5_ref_ma.field_g.length;
               eh.field_d.position = 0;
-              for (var6_int = 0; var6_int < p.field_k; var6_int++) {
+              for (var6_int = 0; var6_int < AchievementSubmission.field_k; var6_int++) {
                 eh.field_d.bytes[var6_int] = var5_ref_ma.field_g[var6_int];
               }
               ad.field_o = dc.field_b;
@@ -186,7 +186,7 @@ abstract class SingleChildWidget extends UiWidget implements ql {
               }
               pc.field_f = eh.field_d.readCipherByte((byte) 122);
               eh.field_d.position = 0;
-              p.field_k = param1[pc.field_f];
+              AchievementSubmission.field_k = param1[pc.field_f];
             }
             if (!TriangleMesh.a(false)) {
               return false;
@@ -206,8 +206,8 @@ abstract class SingleChildWidget extends UiWidget implements ql {
                 var5 = 0;
               }
             }
-            var6 = new ma((long)var5 + var3, pc.field_f, new byte[p.field_k]);
-            for (var7 = 0; p.field_k > var7; var7++) {
+            var6 = new ma((long)var5 + var3, pc.field_f, new byte[AchievementSubmission.field_k]);
+            for (var7 = 0; AchievementSubmission.field_k > var7; var7++) {
               var6.field_g[var7] = eh.field_d.bytes[var7];
             }
             va.field_c.addLast(-108, var6);

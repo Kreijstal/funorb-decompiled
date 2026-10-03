@@ -196,7 +196,7 @@ final class vh extends WidgetContainer implements ButtonActivationListener {
             var3_int = param1.length;
             this.field_C = new String[var3_int];
             for (var4_int = 0; var3_int > var4_int; var4_int++) {
-              this.field_C[var4_int] = p.a((CharSequence) ((Object) param1[var4_int]), param0 - 123).replace(' ', ' ');
+              this.field_C[var4_int] = AchievementSubmission.a((CharSequence) ((Object) param1[var4_int]), param0 - 123).replace(' ', ' ');
             }
             var4 = new fh(DialogLayer.sharedUiFont, 0, 1);
             this.field_I = new ButtonWidget[var3_int + 1];

@@ -391,10 +391,10 @@ final class kc {
               sessionForRasterRead.boardRasterDirty = rasterDirtyDecision;
               w.avatarShockPending = false;
               if (visitedResetIndexThenKindFourCount >= 3) {
-                ra.a(255 ^ GzipInflater.field_f, -88, GzipInflater.field_f);
+                ra.recordAchievement(255 ^ GzipInflater.field_f, -88, GzipInflater.field_f);
               }
               if (rb.kindFourRemovalCount >= 5) {
-                ra.a(255 ^ vd.field_p, -83, vd.field_p);
+                ra.recordAchievement(255 ^ vd.field_p, -83, vd.field_p);
               }
               return;
             }

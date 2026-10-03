@@ -5,7 +5,7 @@ final class lb {
     static long field_c;
     static Sprite sweetsForegroundSprite;
     static boolean field_a;
-    static int field_b;
+    static int secondaryAchievementTrackingCounter;
 
     static int orInt(int left, int right) {
         return left | right;

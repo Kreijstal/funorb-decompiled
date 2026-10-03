@@ -7,7 +7,7 @@ abstract class AwtRasterBuffer {
     int width;
     int[] pixels;
     int height;
-    static int field_f;
+    static int primaryAchievementTrackingCounter;
     java.awt.Image image;
     static GzipInflater archiveGzipInflater;
 

@@ -3,7 +3,7 @@
  */
 final class hj {
     static int field_a;
-    static boolean field_c;
+    static boolean achievementMaskReceived;
     static int field_b;
 
     final static int unsignedBitLength(byte methodGuard, int remainingBits) {
@@ -37,7 +37,7 @@ final class hj {
     final static void a(byte param0, java.awt.Component param1) {
         try {
             if (param0 != -85) {
-                field_c = false;
+                achievementMaskReceived = false;
             }
             param1.setFocusTraversalKeysEnabled(false);
             param1.addKeyListener(je.keyboardListener);
@@ -104,7 +104,7 @@ final class hj {
     }
 
     static {
-        field_c = false;
+        achievementMaskReceived = false;
         field_b = 8;
     }
 }

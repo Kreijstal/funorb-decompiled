@@ -22,7 +22,7 @@ class UiWidget extends IntrusiveNode {
     static IntrusiveDeque field_p;
     static int gameplayReturnScreenId;
     static GameplaySession gameplaySession;
-    static int field_g;
+    static int achievementTrackingAccumulator;
 
     final boolean a(byte param0, char param1, int param2) {
         int var4 = 0;

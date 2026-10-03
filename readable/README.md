@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 8,439 guarded naming rules: 90 classes, 976 fields,
-787 methods, 2,344 parameters and 4,242 local declarations. Both 303-file corpora
+The current export has 8,503 guarded naming rules: 91 classes, 994 fields,
+792 methods, 2,361 parameters and 4,265 local declarations. Both 303-file corpora
 compile, comparing 137,964 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -53,6 +53,51 @@ Another 9,828 cases preserve native general-angle/extreme-scale traces. ARGB
 smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
+
+## Achievement registration and submission names (pass 108)
+
+The gameplay achievement path now reads through `ra.recordAchievement`,
+`AchievementSubmission`, `je.updateAchievementSubmissions`,
+`sj.submitAchievementRecord` and `ol.writeAchievementSubmissionPacket`.
+Earned, newly earned and received achievement masks are separate from the
+client's tracking bits, accumulator and two tracking counters. The submission
+stores snapshots of those four tracking values. `lh.updatePendingActionPanel`
+names its entering/holding/exiting phase and hold timer. Numeric IDs, original
+JVM identities, reused local roles, source scopes and diagnostic strings remain.
+
+This adds 64 guarded identities: one class, 18 fields, five methods, 17 parameters
+and 23 locals. All 8,439 prior rule objects and source/decompiler/native pins stay
+unchanged. There are now 66,358 edits, adding 424 declaration/reference edits and
+one class-supplied constructor spelling. Both 303-file corpora compile and compare
+137,964 bindings and 388 full override pairs. No raw Java body or bytecode changes.
+
+The new `tests/test-geoblox-achievements.mjs` passes against pinned native classes,
+raw Java and readable Java with the same fixed trace. Its 864 registration cases
+use zero/nonzero control flags, tutorial/blocked/duplicate paths, already-earned
+and already-tracked bits, valid/invalid guards, extreme tracking integers and IDs
+that wrap Java shifts and bytes. Independent checks cover masks, counter changes,
+notification order/identity, guard effects and submission gating. The 108 submitted
+records retain identity in the unacknowledged queue and match an independent
+version/ID/check/four-integer big-endian payload, CRC32 and length oracle. The
+packet is 25 bytes including opcode and length; its payload is 23 bytes. A cipher
+seed fixes the emitted opcode trace without claiming server semantics.
+
+All seven recorded native probes, publication checks, exact dictionary reversal
+and clean-bundle reproduction pass. The new native probe output SHA-256 is
+`d6c2a9615dc04f73a8983a99f676bb23f2e00cd87573fae3a0701ce552f2dd00`.
+The raw tree remains
+`05cac317bd3f414e1285a2b6b8edb384d684b78cd65ce948daaa1973c12a303b`;
+the readable tree is
+`29461ca63bcfe4f0895404c471640fefe16c2415cc01ab47feb4142d251f9639`.
+The decompiler-source SHA-256 above remains unchanged.
+
+The new probe preloads a title notification to avoid font/assets; empty-panel
+preparation, received-mask/login/retry/ack execution, real networking and server
+validation remain source-audited or unknown. The four tracking integers are named
+by their observable client-side operations, not an inferred server algorithm.
+The 220 plain labels and six large labeled spans are unchanged; unknown shared
+names, remaining reconstruction and whole-game/browser/phone acceptance remain.
+Earlier sections below describe their historical counts and scope.
 
 ## Path-implied integer guards (pass 107)
 
@@ -2662,6 +2707,7 @@ JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-gameplay.mjs
 JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-result-sequence.mjs /path/to/verified-geoblox-classes
 JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-result-helpers.mjs /path/to/verified-geoblox-classes
 JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-nine-slice.mjs /path/to/verified-geoblox-classes
+JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-achievements.mjs /path/to/verified-geoblox-classes
 ```
 
 The drawing probe retains its 2,592 nine-slice cases and separate original trace.
@@ -2951,9 +2997,11 @@ Pass 92 recorded the predicate-only guard-tree migration with no naming changes.
 Passes 93 through 101 retained that source and expanded guarded semantic names.
 Pass 102 recorded terminal-loop exit reconstruction. Pass103 recorded
 leading nonconstant while guards. Pass104 recorded effectful plain-block
-exits. Pass105 recorded exact local-reference cast cleanup. Pass106 recorded scalar dispatch switches. Current pass107 records
-path-implied local guards in `sourceChange`, with an empty `ruleChanges` list preserving all 8,439 complete
-naming objects.
+exits. Pass105 recorded exact local-reference cast cleanup. Pass106 recorded scalar
+dispatch switches. Pass107 recorded path-implied local guards in `sourceChange`,
+with an empty `ruleChanges` list preserving all 8,439 complete naming objects.
+Current pass108 retains that raw input and generator identity, adds 64 guarded
+achievement-path names through `ruleChanges`, and pins the seventh native probe.
 All native probe sources and their traces are pinned in
 the same manifest; no JSON snapshots are added.
 

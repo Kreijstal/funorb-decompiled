@@ -6,7 +6,7 @@ import java.util.*;
 final class ra implements Iterable {
     static String ticketingUnreadCountText;
     DualLinkNode field_c;
-    static int field_d;
+    static int receivedAchievementMask;
     static IntrusiveDeque availableEntities;
 
     final void a(int param0, DualLinkNode param1) {
@@ -48,7 +48,7 @@ final class ra implements Iterable {
         }
         try {
             if (methodGuard != 0) {
-                field_d = -114;
+                receivedAchievementMask = -114;
             }
             uh.field_y.d(-9268);
             fj.field_p.a();
@@ -59,59 +59,59 @@ final class ra implements Iterable {
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
-        int stackIn_8_0 = 0;
-        int stackIn_13_0 = 0;
-        int stackIn_23_0 = 0;
-        int stackIn_35_0 = 0;
-        int stackIn_45_0 = 0;
-        int var3;
-        int var4;
-        int var5;
+    final static void recordAchievement(int achievementCheckByte, int methodGuard, int achievementId) {
+        int alreadyTrackedFlagValue = 0;
+        int panelEmptyAfterNewTrackingInvalidGuard = 0;
+        int panelEmptyAfterExistingTrackingInvalidGuard = 0;
+        int panelEmptyAfterExistingTracking = 0;
+        int panelEmptyAfterNewTracking = 0;
+        int achievementBit;
+        int achievementIdThenPanelEmptyFlag;
+        int alreadyTrackedFlag;
         if (UiWidget.gameplaySession.tutorialMode) {
           return;
         }
-        var3 = 1 << param2;
-        if ((InstrumentPatch.field_p & var3) != 0) {
+        achievementBit = 1 << achievementId;
+        if ((InstrumentPatch.earnedAchievementMask & achievementBit) != 0) {
           return;
         }
-        ug.field_c = ug.field_c | var3;
+        ug.newAchievementMask = ug.newAchievementMask | achievementBit;
         UiWidget.gameplaySession.newActionCount = UiWidget.gameplaySession.newActionCount + 1;
-        var4 = param2;
-        stackIn_8_0 = ((1 << var4 & dc.field_a) == 0) ? 0 : 1;
-        var5 = stackIn_8_0;
-        if (param1 < -47) {
-          if (var5 != 0) {
-            InstrumentPatch.field_p = InstrumentPatch.field_p | var3;
-            stackIn_35_0 = (!ArchiveRequest.pendingActionMarkers.isEmpty(13519)) ? 0 : 1;
-            var4 = stackIn_35_0;
+        achievementIdThenPanelEmptyFlag = achievementId;
+        alreadyTrackedFlagValue = ((1 << achievementIdThenPanelEmptyFlag & dc.achievementTrackingBits) == 0) ? 0 : 1;
+        alreadyTrackedFlag = alreadyTrackedFlagValue;
+        if (methodGuard < -47) {
+          if (alreadyTrackedFlag != 0) {
+            InstrumentPatch.earnedAchievementMask = InstrumentPatch.earnedAchievementMask | achievementBit;
+            panelEmptyAfterExistingTracking = (!ArchiveRequest.pendingActionMarkers.isEmpty(13519)) ? 0 : 1;
+            achievementIdThenPanelEmptyFlag = panelEmptyAfterExistingTracking;
           } else {
-            dc.field_a = dc.field_a | 1 << var4;
-            UiWidget.field_g = UiWidget.field_g - (1 << var4);
-            InstrumentPatch.field_p = InstrumentPatch.field_p | var3;
-            stackIn_45_0 = (!ArchiveRequest.pendingActionMarkers.isEmpty(13519)) ? 0 : 1;
-            var4 = stackIn_45_0;
+            dc.achievementTrackingBits = dc.achievementTrackingBits | 1 << achievementIdThenPanelEmptyFlag;
+            UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator - (1 << achievementIdThenPanelEmptyFlag);
+            InstrumentPatch.earnedAchievementMask = InstrumentPatch.earnedAchievementMask | achievementBit;
+            panelEmptyAfterNewTracking = (!ArchiveRequest.pendingActionMarkers.isEmpty(13519)) ? 0 : 1;
+            achievementIdThenPanelEmptyFlag = panelEmptyAfterNewTracking;
           }
         } else {
           ticketingUnreadCountText = (String) null;
-          if (var5 != 0) {
-            InstrumentPatch.field_p = InstrumentPatch.field_p | var3;
-            stackIn_23_0 = (!ArchiveRequest.pendingActionMarkers.isEmpty(13519)) ? 0 : 1;
-            var4 = stackIn_23_0;
+          if (alreadyTrackedFlag != 0) {
+            InstrumentPatch.earnedAchievementMask = InstrumentPatch.earnedAchievementMask | achievementBit;
+            panelEmptyAfterExistingTrackingInvalidGuard = (!ArchiveRequest.pendingActionMarkers.isEmpty(13519)) ? 0 : 1;
+            achievementIdThenPanelEmptyFlag = panelEmptyAfterExistingTrackingInvalidGuard;
           } else {
-            dc.field_a = dc.field_a | 1 << var4;
-            UiWidget.field_g = UiWidget.field_g - (1 << var4);
-            InstrumentPatch.field_p = InstrumentPatch.field_p | var3;
-            stackIn_13_0 = (!ArchiveRequest.pendingActionMarkers.isEmpty(13519)) ? 0 : 1;
-            var4 = stackIn_13_0;
+            dc.achievementTrackingBits = dc.achievementTrackingBits | 1 << achievementIdThenPanelEmptyFlag;
+            UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator - (1 << achievementIdThenPanelEmptyFlag);
+            InstrumentPatch.earnedAchievementMask = InstrumentPatch.earnedAchievementMask | achievementBit;
+            panelEmptyAfterNewTrackingInvalidGuard = (!ArchiveRequest.pendingActionMarkers.isEmpty(13519)) ? 0 : 1;
+            achievementIdThenPanelEmptyFlag = panelEmptyAfterNewTrackingInvalidGuard;
           }
         }
-        ArchiveRequest.pendingActionMarkers.addLast(-35, new PendingActionMarker(param2));
-        if (var4 != 0) {
+        ArchiveRequest.pendingActionMarkers.addLast(-35, new PendingActionMarker(achievementId));
+        if (achievementIdThenPanelEmptyFlag != 0) {
           gf.preparePendingActionPanel((byte) -122);
         }
         if (!UiWidget.gameplaySession.submissionBlocked) {
-          GameplayEntity.field_A.addLast(-44, new p(param2, param0, dc.field_a, UiWidget.field_g, AwtRasterBuffer.field_f, lb.field_b));
+          GameplayEntity.pendingAchievementSubmissions.addLast(-44, new AchievementSubmission(achievementId, achievementCheckByte, dc.achievementTrackingBits, UiWidget.achievementTrackingAccumulator, AwtRasterBuffer.primaryAchievementTrackingCounter, lb.secondaryAchievementTrackingCounter));
         }
         return;
     }
@@ -166,7 +166,7 @@ final class ra implements Iterable {
         availableEntities = null;
         ticketingUnreadCountText = null;
         if (param0 != -1) {
-            field_d = -36;
+            receivedAchievementMask = -36;
         }
     }
 

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class dc {
-    static int field_a;
+    static int achievementTrackingBits;
     static ResourceArchive field_c;
     static int field_b;
 

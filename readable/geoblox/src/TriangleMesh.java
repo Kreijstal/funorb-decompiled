@@ -214,21 +214,21 @@ final class TriangleMesh {
         if (param0) {
             return false;
         }
-        if (!(p.field_k != -1)) {
+        if (!(AchievementSubmission.field_k != -1)) {
             if (!UiWidget.b(30000, 1)) {
                 return false;
             }
-            p.field_k = eh.field_d.readUnsignedByte((byte) 34);
+            AchievementSubmission.field_k = eh.field_d.readUnsignedByte((byte) 34);
             eh.field_d.position = 0;
         }
-        if (p.field_k == -2) {
+        if (AchievementSubmission.field_k == -2) {
             if (!(UiWidget.b(30000, 2))) {
                 return false;
             }
-            p.field_k = eh.field_d.readUnsignedShortBE(true);
+            AchievementSubmission.field_k = eh.field_d.readUnsignedShortBE(true);
             eh.field_d.position = 0;
         }
-        return UiWidget.b(30000, p.field_k);
+        return UiWidget.b(30000, AchievementSubmission.field_k);
     }
 
     private final void invalidateBounds(int guard) {

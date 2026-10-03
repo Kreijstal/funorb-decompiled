@@ -103,7 +103,7 @@ final class ck {
             for (translationComponentIndex = 0; translationComponentIndex < 3; translationComponentIndex++) {
               lk.meshModelTransform[translationComponentIndex] = lk.meshModelTransform[translationComponentIndex] + pi.logoMeshCenters[drawOrderIndexOrFinalGuardQuotient][translationComponentIndex];
             }
-            p.projectMeshAndQueueFaces(IntKeyLookup.meshCameraTransform, lk.meshModelTransform, selectedMesh, true, false, false, true);
+            AchievementSubmission.projectMeshAndQueueFaces(IntKeyLookup.meshCameraTransform, lk.meshModelTransform, selectedMesh, true, false, false, true);
             hi.renderLitQueuedMeshFaces(halfVectorZQ8, cameraDepthBasisYQ14OrLightDirectionZQ8, meshDepthFromYQ16OrHalfVectorXQ8, 6562, boundsCenterZOrLightDirectionXQ8, selectedMesh, meshDepthFromZQ16OrHalfVectorYQ8, cameraDepthBasisXQ14OrLightDirectionYQ8);
           }
           drawOrderIndexOrFinalGuardQuotient = 123 / ((48 - methodGuard) / 59);

@@ -8,15 +8,15 @@ final class ud {
     final static void a(byte param0, int param1) {
         IntrusiveNode var2 = null;
         int var3 = 0;
-        p var4 = null;
+        AchievementSubmission var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         var3 = Geoblox.clientControlFlowFlag;
         try {
-          var4 = (p) ((Object) ResourceArchive.field_a.firstForIteration(0));
+          var4 = (AchievementSubmission) ((Object) ResourceArchive.unacknowledgedAchievementSubmissions.firstForIteration(0));
           while (var4 != null) {
-            ol.a(param1, var4, 30175);
-            var4 = (p) ((Object) ResourceArchive.field_a.nextForIteration(1));
+            ol.writeAchievementSubmissionPacket(param1, var4, 30175);
+            var4 = (AchievementSubmission) ((Object) ResourceArchive.unacknowledgedAchievementSubmissions.nextForIteration(1));
           }
           var2 = k.field_e.firstForIteration(0);
           if (param0 > -123) {
@@ -110,7 +110,7 @@ final class ud {
         int var8 = 0;
         int[] var9 = null;
         int[] var10 = null;
-        p var11 = null;
+        AchievementSubmission var11 = null;
         PacketBuffer var12 = null;
         int[] var13 = null;
         qi var14 = null;
@@ -143,7 +143,7 @@ final class ud {
             var14.unlinkNode(false);
           } else {
             if (var2 == 1) {
-              var11 = (p) ((Object) ResourceArchive.field_a.firstForIteration(0));
+              var11 = (AchievementSubmission) ((Object) ResourceArchive.unacknowledgedAchievementSubmissions.firstForIteration(0));
               if (var11 == null) {
                 Bzip2DecoderState.a((byte) -120);
                 return;

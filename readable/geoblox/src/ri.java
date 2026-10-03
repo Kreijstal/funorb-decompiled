@@ -58,7 +58,7 @@ final class ri {
                 var6_int = eh.field_d.readUnsignedByte((byte) 34);
                 eh.field_d.position = 0;
                 if (var6_int != 0) {
-                  p.field_k = -1;
+                  AchievementSubmission.field_k = -1;
                   PacketBuffer.field_l = ac.field_v;
                   ScorePopup.field_l = var6_int;
                 } else {
@@ -87,7 +87,7 @@ final class ri {
                       (var6_int != 1)) {
                     if (var6_int != 8) {
                       PacketBuffer.field_l = ac.field_v;
-                      p.field_k = -1;
+                      AchievementSubmission.field_k = -1;
                       break L6;
                     }
                     Bzip2DecoderState.a((byte) -116);
@@ -95,7 +95,7 @@ final class ri {
                     stackIn_33_0 = var6_int;
                     return stackIn_33_0;
                   }
-                  p.field_k = -1;
+                  AchievementSubmission.field_k = -1;
                   PacketBuffer.field_l = da.field_f;
                 }
               }

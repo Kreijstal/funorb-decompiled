@@ -21,7 +21,7 @@ final class GameplayEntity extends DualLinkNode {
     boolean touchesAvatar;
     int sameVariantEntityCount;
     int matchCooldownTicks;
-    static IntrusiveDeque field_A;
+    static IntrusiveDeque pendingAchievementSubmissions;
     Sprite entitySprite;
     int animationFrameIndex;
     float velocityY;
@@ -147,7 +147,7 @@ final class GameplayEntity extends DualLinkNode {
     }
 
     public static void e(byte param0) {
-        field_A = null;
+        pendingAchievementSubmissions = null;
         field_D = null;
         int var1 = 106 % ((33 - param0) / 39);
     }
@@ -624,6 +624,6 @@ final class GameplayEntity extends DualLinkNode {
     }
 
     static {
-        field_A = new IntrusiveDeque();
+        pendingAchievementSubmissions = new IntrusiveDeque();
     }
 }

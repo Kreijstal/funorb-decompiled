@@ -7,7 +7,7 @@ final class h {
     private boolean field_e;
     static int matchCandidateCount;
     private boolean field_f;
-    static int field_d;
+    static int pendingActionPanelHoldTicks;
 
     final void a(byte param0, boolean param1) {
         if (param0 > -47) {

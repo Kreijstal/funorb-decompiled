@@ -117,9 +117,9 @@ class ac extends ff {
             var4 -= 10;
           }
           if (!param1) {
-            stackIn_7_0 = InstrumentPatch.field_p;
+            stackIn_7_0 = InstrumentPatch.earnedAchievementMask;
           } else {
-            stackIn_7_0 = ug.field_c;
+            stackIn_7_0 = ug.newAchievementMask;
           }
           var5 = stackIn_7_0;
           var6 = 0;

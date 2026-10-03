@@ -534,7 +534,7 @@ public final class Geoblox extends wf {
         gk.a(methodGuard ^ -64);
         ni.a((byte) -113);
         qi.c(59);
-        p.b(methodGuard ^ 25);
+        AchievementSubmission.b(methodGuard ^ 25);
         od.a((byte) -92);
         lf.b(8221);
         th.d((byte) -109);
@@ -731,7 +731,7 @@ public final class Geoblox extends wf {
               }
               if (ai.requestedScreenId != tc.currentScreenId) {
                 if ((6 == ai.requestedScreenId) &&
-                    (ug.field_c <= 0)) {
+                    (ug.newAchievementMask <= 0)) {
                   ai.requestedScreenId = 2;
                 }
                 if (-1 < tc.currentScreenId) {
@@ -787,7 +787,7 @@ public final class Geoblox extends wf {
               }
             }
           }
-          je.c((byte) -122);
+          je.updateAchievementSubmissions((byte) -122);
           cm.a(-1, 0);
           if (sb.a(54)) {
             uiServiceResultOrOverlayMode = this.d((byte) -67);
@@ -1035,10 +1035,10 @@ public final class Geoblox extends wf {
         oa.field_a = 4703;
         kb.field_d = 275;
         ml.field_r = 1385;
-        lb.field_b = 935;
-        dc.field_a = 0;
-        UiWidget.field_g = 8801;
-        AwtRasterBuffer.field_f = 3382;
+        lb.secondaryAchievementTrackingCounter = 935;
+        dc.achievementTrackingBits = 0;
+        UiWidget.achievementTrackingAccumulator = 8801;
+        AwtRasterBuffer.primaryAchievementTrackingCounter = 3382;
         if (methodGuard <= 68) {
             this.loadJewelsTheme(true);
         }

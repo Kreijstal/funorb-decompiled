@@ -7,9 +7,9 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-## Current readability (pass 107)
+## Current readability (pass 108)
 
-The export has 8,439 guarded names and 65,933 identifier edits. All 303 sources
+The export has 8,503 guarded names and 66,358 identifier edits. All 303 sources
 compile and compare 137,964 bindings, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
 short-circuit guards for their original remainders, consuming 82 breaks and
@@ -105,11 +105,60 @@ comparison, 11,520-case terminal-loop comparison, new 96,768-case leading-loop
 comparison with six independent oracles, the new 24,192-case effectful-exit
 comparison with six independent oracles, the new 61,152-case scalar dispatch
 comparison with ten independent checks, the 16,560-case path-guard comparison
-with twelve independent checks, and six recorded native probes
+with twelve independent checks, and seven recorded native probes
 establish controlled behavior only.
 Complete assets/gameplay and browser/phone memory/startup/FPS targets remain
 unverified. Sections
 labeled with earlier passes below describe their historical counts and scope.
+
+## Gameplay achievements and submission (pass 108)
+
+Read `ra.recordAchievement(checkByte, guard, achievementId)` first. Tutorials
+and already-earned bits return immediately. A new achievement sets the newly
+earned mask, increments the session count, updates tracking bits/accumulator if
+not already tracked, sets the earned mask and queues a `PendingActionMarker`.
+A first notification calls `gf.preparePendingActionPanel`; subsequent notifications
+wait in order. `lh.updatePendingActionPanel` moves the panel through phase 0
+(entering), 1 (holding) and 2 (exiting), then consumes the marker and prepares
+the next one. Title text comes from `pg.achievementTitles[actionId]`.
+
+When the session permits submission, `AchievementSubmission` captures the ID,
+caller-supplied check byte and four tracking integers. Normal gameplay supplies
+`255 ^ achievementId` as the check value. Keep the full int in source: truncation
+occurs at packet writing, and guards/nonstandard callers retain their effects.
+`je.updateAchievementSubmissions` also imports a received achievement mask into
+the earned mask and removes its bits from the newly earned mask, then drains
+pending records when login permits. `sj.submitAchievementRecord` first moves the
+same record into `ResourceArchive.unacknowledgedAchievementSubmissions` and then
+calls `ol.writeAchievementSubmissionPacket`.
+
+| Packet part | Bytes | Meaning supported by client source |
+| --- | ---: | --- |
+| Ciphered opcode | 1 | Caller-supplied opcode plus cipher value |
+| Backpatched length | 1 | 23-byte payload length |
+| Version | 1 | Literal 1 |
+| Achievement ID | 1 | Low byte of record ID |
+| Check value | 1 | Low byte of caller-supplied check value |
+| Tracking bits | 4 | Big-endian snapshot of `dc.achievementTrackingBits` |
+| Tracking accumulator | 4 | Big-endian snapshot of `UiWidget.achievementTrackingAccumulator` |
+| Primary tracking counter | 4 | Big-endian snapshot from `AwtRasterBuffer` |
+| Secondary tracking counter | 4 | Big-endian snapshot from `lb` |
+| CRC32 | 4 | CRC over the preceding 19 payload bytes |
+
+`ud.a(byte,int)` resends retained records; the type-1 response arm removes the
+first retained record. Those paths are source-audited, with login/ack/retry and
+server execution still unverified. Input handling mutates the tracking accumulator
+and counters and combines tracking bits with upper bits; their names describe
+observed client operations. Do not infer a complete server validation algorithm.
+
+The pass adds 64 identities while retaining all previous complete rule objects.
+The new fixed native/raw/readable trace covers 864 registration cases and 108
+independent packet/CRC checks. It uses a preloaded notification, so font/assets
+and empty-panel preparation are outside its scope. Existing seven recorded game
+probes establish controlled behavior; live network/server, full assets/gameplay
+and browser/phone performance remain unverified. Mixed-purpose static helpers
+remain on their original owner, including mesh projection on the newly named
+submission class; class names describe its instance role.
 
 ## Menu to gameplay
 

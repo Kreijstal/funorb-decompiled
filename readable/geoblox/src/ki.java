@@ -25,26 +25,26 @@ final class ki {
         var5 = Geoblox.clientControlFlowFlag;
         try {
           for (var2_int = 0; var2_int < 3; var2_int++) {
-            p.field_o[var2_int] = 0;
+            AchievementSubmission.field_o[var2_int] = 0;
           }
           for (var2_int = 0; var2_int < oj.field_b; var2_int++) {
             if (MatchingTextValidator.field_k[var2_int].field_f == param0.field_f) {
               dupTemp$3 = MatchingTextValidator.field_k[var2_int].c(124);
-              p.field_o[dupTemp$3] = p.field_o[dupTemp$3] + 1;
+              AchievementSubmission.field_o[dupTemp$3] = AchievementSubmission.field_o[dupTemp$3] + 1;
             }
           }
           if (param1 != 31274) {
             return;
           }
           dupTemp$0 = param0.c(125);
-          p.field_o[dupTemp$0] = p.field_o[dupTemp$0] + 1;
+          AchievementSubmission.field_o[dupTemp$0] = AchievementSubmission.field_o[dupTemp$0] + 1;
           var2_int = 0;
           for (var3 = 0; oj.field_b > var3; var3++) {
             L3: {
               if (param0.field_f == MatchingTextValidator.field_k[var3].field_f) {
                 var4 = MatchingTextValidator.field_k[var3].c(124);
-                if (p.field_o[var4] > pc.field_v) {
-                  p.field_o[var4] = p.field_o[var4] - 1;
+                if (AchievementSubmission.field_o[var4] > pc.field_v) {
+                  AchievementSubmission.field_o[var4] = AchievementSubmission.field_o[var4] - 1;
                   break L3;
                 }
               }

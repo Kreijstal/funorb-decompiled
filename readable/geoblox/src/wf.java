@@ -401,7 +401,7 @@ abstract class wf extends ch {
             }
             og.a(stackIn_100_0, stackIn_100_1, stackIn_101_2, stackIn_104_3);
           }
-          if (p.field_m) {
+          if (AchievementSubmission.field_m) {
             ButtonWidget.e(83);
           }
           if (null == bh.field_a) {
@@ -687,7 +687,7 @@ abstract class wf extends ch {
             if (var9 != null) {
               this.field_r = Integer.parseInt(var9);
             }
-            p.field_m = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
+            AchievementSubmission.field_m = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
             this.a(32, -14948, this.field_s, param0, param4, param1, param2);
             if (param3 != 81) {
               this.a((byte) -103, -111, -55, -20, 80, false, -81, 86);
@@ -754,7 +754,7 @@ abstract class wf extends ch {
                     } else {
                       if (var2 != 7) {
                         if (8 == var2) {
-                          pg.a(-4, MenuScreen.platformTaskDispatcher, p.field_k, eh.field_d);
+                          pg.a(-4, MenuScreen.platformTaskDispatcher, AchievementSubmission.field_k, eh.field_d);
                         } else {
                           if (var2 == 16) {
                             DualLinkNode.b(1);
@@ -805,7 +805,7 @@ abstract class wf extends ch {
         if (param0 != 12) {
             this.h(106);
         }
-        int var4 = -1 + p.field_k;
+        int var4 = -1 + AchievementSubmission.field_k;
         byte[] var5 = new byte[var4];
         eh.field_d.readCipherBytes(96, 0, var5, var4);
         LimitedRandomAccessFile.a(ag.decodeTextBytes(1, var5), (byte) -128, var3 != 0, k.c(112));

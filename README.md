@@ -19,6 +19,20 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 137,964 bindings,
 preserving 388 override relationships.
 
+Pass 108 names the achievement path from gameplay to notification and submission:
+`ra.recordAchievement`, `AchievementSubmission`,
+`je.updateAchievementSubmissions`, `sj.submitAchievementRecord`,
+`ol.writeAchievementSubmissionPacket` and `lh.updatePendingActionPanel`.
+The 64 additional guarded identities bring the total to 8,503 names and 66,358
+identifier edits, preserving all 8,439 previous rules and the raw/tool pins.
+A new 864-case native/raw/readable probe checks tutorial, duplicate and blocked
+submissions, earned/new/tracking masks, queue identity/order, guard side effects,
+shift/byte wrapping and signed overflow. Its 108 independent packet checks verify
+the version, ID/check bytes, four big-endian tracking integers, CRC and length.
+The tracking integers keep neutral client-side names; server validation semantics
+are unknown. Empty-panel font preparation, login/retry/ack execution, live
+networking and whole-game/device acceptance remain unverified.
+
 Pass 107 removes 97 path-implied guards in 24 bodies across ten files. Only
 comparisons of captured int locals are specialized; later/cyclic writes invalidate
 facts, and no global flag or field is assumed constant. Selected scopes and

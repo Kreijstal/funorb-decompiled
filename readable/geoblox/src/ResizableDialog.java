@@ -323,9 +323,9 @@ abstract class ResizableDialog extends FadingDialog {
             var4 -= 10;
           }
           if (param0) {
-            stackIn_7_0 = ug.field_c;
+            stackIn_7_0 = ug.newAchievementMask;
           } else {
-            stackIn_7_0 = InstrumentPatch.field_p;
+            stackIn_7_0 = InstrumentPatch.earnedAchievementMask;
           }
           var5 = stackIn_7_0;
           var6 = 0;

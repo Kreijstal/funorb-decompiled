@@ -7,38 +7,38 @@ final class lh {
     static String nextText;
     static String createAccountSuccessText;
 
-    final static void a(int param0) {
-        int fieldTemp$4 = 0;
-        int fieldTemp$5 = 0;
-        int fieldTemp$6 = 0;
-        int fieldTemp$7 = 0;
-        int var1;
-        int var2;
-        var2 = Geoblox.clientControlFlowFlag;
-        if (param0 <= -78) {
+    final static void updatePendingActionPanel(int methodGuard) {
+        int holdTicksBeforeIncrement = 0;
+        int panelTopBeforeIncrement = 0;
+        int holdTicksBeforeInvalidGuardIncrement = 0;
+        int panelTopBeforeInvalidGuardIncrement = 0;
+        int panelPhase;
+        int unusedClientControlSnapshot;
+        unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
+        if (methodGuard <= -78) {
           if (null != ArchiveRequest.pendingActionMarkers.firstForIteration(0)) {
-            var1 = kj.field_J;
-            if (var1 == 0) {
+            panelPhase = kj.pendingActionPanelPhase;
+            if (panelPhase == 0) {
               eh.pendingActionPanelTop = eh.pendingActionPanelTop - 1;
               if (eh.pendingActionPanelTop <= -10 - (tl.pendingActionPanelHeight - 480)) {
-                h.field_d = 0;
-                kj.field_J = 1;
+                h.pendingActionPanelHoldTicks = 0;
+                kj.pendingActionPanelPhase = 1;
                 return;
               }
             } else {
-              if (var1 == 1) {
-                fieldTemp$4 = h.field_d;
-                h.field_d = h.field_d + 1;
-                if (fieldTemp$4 <= 450) {
+              if (panelPhase == 1) {
+                holdTicksBeforeIncrement = h.pendingActionPanelHoldTicks;
+                h.pendingActionPanelHoldTicks = h.pendingActionPanelHoldTicks + 1;
+                if (holdTicksBeforeIncrement <= 450) {
                   return;
                 }
-                kj.field_J = 2;
+                kj.pendingActionPanelPhase = 2;
                 return;
               }
-              if (var1 == 2) {
-                fieldTemp$5 = eh.pendingActionPanelTop;
+              if (panelPhase == 2) {
+                panelTopBeforeIncrement = eh.pendingActionPanelTop;
                 eh.pendingActionPanelTop = eh.pendingActionPanelTop + 1;
-                if (fieldTemp$5 > 480) {
+                if (panelTopBeforeIncrement > 480) {
                   ArchiveRequest.pendingActionMarkers.removeFirst((byte) -118);
                   gf.preparePendingActionPanel((byte) -12);
                   return;
@@ -52,31 +52,31 @@ final class lh {
         if (null == ArchiveRequest.pendingActionMarkers.firstForIteration(0)) {
           return;
         }
-        var1 = kj.field_J;
-        if (var1 == 0) {
+        panelPhase = kj.pendingActionPanelPhase;
+        if (panelPhase == 0) {
           eh.pendingActionPanelTop = eh.pendingActionPanelTop - 1;
           if (eh.pendingActionPanelTop > -10 - (tl.pendingActionPanelHeight - 480)) {
             return;
           }
-          h.field_d = 0;
-          kj.field_J = 1;
+          h.pendingActionPanelHoldTicks = 0;
+          kj.pendingActionPanelPhase = 1;
           return;
         }
-        if (var1 == 1) {
-          fieldTemp$6 = h.field_d;
-          h.field_d = h.field_d + 1;
-          if (fieldTemp$6 <= 450) {
+        if (panelPhase == 1) {
+          holdTicksBeforeInvalidGuardIncrement = h.pendingActionPanelHoldTicks;
+          h.pendingActionPanelHoldTicks = h.pendingActionPanelHoldTicks + 1;
+          if (holdTicksBeforeInvalidGuardIncrement <= 450) {
             return;
           }
-          kj.field_J = 2;
+          kj.pendingActionPanelPhase = 2;
           return;
         }
-        if (var1 != 2) {
+        if (panelPhase != 2) {
           return;
         }
-        fieldTemp$7 = eh.pendingActionPanelTop;
+        panelTopBeforeInvalidGuardIncrement = eh.pendingActionPanelTop;
         eh.pendingActionPanelTop = eh.pendingActionPanelTop + 1;
-        if (fieldTemp$7 <= 480) {
+        if (panelTopBeforeInvalidGuardIncrement <= 480) {
           return;
         }
         ArchiveRequest.pendingActionMarkers.removeFirst((byte) -118);
@@ -91,7 +91,7 @@ final class lh {
     public static void b(int param0) {
         activeDragWidget = null;
         if (param0 != -481) {
-            lh.a(90);
+            lh.updatePendingActionPanel(90);
             nextText = null;
             createAccountSuccessText = null;
             return;

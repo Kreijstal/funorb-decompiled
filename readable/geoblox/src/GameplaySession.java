@@ -578,7 +578,7 @@ final class GameplaySession {
         int clientControlFlowGuard = 0;
         L0: {
           clientControlFlowGuard = Geoblox.clientControlFlowFlag;
-          lh.a(methodGuard ^ 1578896222);
+          lh.updatePendingActionPanel(methodGuard ^ 1578896222);
           pointsPanelTickBeforeIncrement = this.updateTick;
           this.updateTick = this.updateTick + 1;
           if ((pointsPanelTickBeforeIncrement & 15) == 0) {
@@ -719,7 +719,7 @@ final class GameplaySession {
               L25: {
                 inputDerivedModuloIndex = (kd.field_c + he.pointerPressYSnapshot + PrefixCodeDecoder.pointerXSnapshot + ki.currentKeyboardEventCode) % 5;
                 if (0 == inputDerivedModuloIndex) {
-                  dc.field_a = dc.field_a | lb.field_b + UiWidget.field_g << 17;
+                  dc.achievementTrackingBits = dc.achievementTrackingBits | lb.secondaryAchievementTrackingCounter + UiWidget.achievementTrackingAccumulator << 17;
                   if (clientControlFlowGuard == 0) {
                     break L25;
                   }
@@ -727,8 +727,8 @@ final class GameplaySession {
                 if (inputDerivedModuloIndex != 1) {
                   if (inputDerivedModuloIndex != 2) {
                     if (3 == inputDerivedModuloIndex) {
-                      AwtRasterBuffer.field_f = AwtRasterBuffer.field_f + 1;
-                      UiWidget.field_g = UiWidget.field_g + lb.field_b;
+                      AwtRasterBuffer.primaryAchievementTrackingCounter = AwtRasterBuffer.primaryAchievementTrackingCounter + 1;
+                      UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator + lb.secondaryAchievementTrackingCounter;
                       if (clientControlFlowGuard == 0) {
                         break L25;
                       }
@@ -736,20 +736,20 @@ final class GameplaySession {
                     if (inputDerivedModuloIndex != 4) {
                       break L25;
                     }
-                    AwtRasterBuffer.field_f = AwtRasterBuffer.field_f - 1;
-                    UiWidget.field_g = UiWidget.field_g - lb.field_b;
+                    AwtRasterBuffer.primaryAchievementTrackingCounter = AwtRasterBuffer.primaryAchievementTrackingCounter - 1;
+                    UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator - lb.secondaryAchievementTrackingCounter;
                     if (clientControlFlowGuard == 0) {
                       break L25;
                     }
                   }
-                  lb.field_b = lb.field_b - 1;
-                  UiWidget.field_g = UiWidget.field_g - AwtRasterBuffer.field_f;
+                  lb.secondaryAchievementTrackingCounter = lb.secondaryAchievementTrackingCounter - 1;
+                  UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator - AwtRasterBuffer.primaryAchievementTrackingCounter;
                   if (clientControlFlowGuard == 0) {
                     break L25;
                   }
                 }
-                UiWidget.field_g = UiWidget.field_g + AwtRasterBuffer.field_f;
-                lb.field_b = lb.field_b + 1;
+                UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator + AwtRasterBuffer.primaryAchievementTrackingCounter;
+                lb.secondaryAchievementTrackingCounter = lb.secondaryAchievementTrackingCounter + 1;
               }
               if (this.tutorialStepId == 0) {
                 this.tutorialProgressMetric = this.tutorialProgressMetric + 1;
@@ -824,8 +824,8 @@ final class GameplaySession {
                   if (1 != inputDerivedModuloIndex) {
                     if (2 != inputDerivedModuloIndex) {
                       if (inputDerivedModuloIndex == 3) {
-                        AwtRasterBuffer.field_f = AwtRasterBuffer.field_f + 1;
-                        UiWidget.field_g = UiWidget.field_g + lb.field_b;
+                        AwtRasterBuffer.primaryAchievementTrackingCounter = AwtRasterBuffer.primaryAchievementTrackingCounter + 1;
+                        UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator + lb.secondaryAchievementTrackingCounter;
                         if (clientControlFlowGuard == 0) {
                           break L30;
                         }
@@ -833,25 +833,25 @@ final class GameplaySession {
                       if (4 != inputDerivedModuloIndex) {
                         break L30;
                       }
-                      UiWidget.field_g = UiWidget.field_g - lb.field_b;
-                      AwtRasterBuffer.field_f = AwtRasterBuffer.field_f - 1;
+                      UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator - lb.secondaryAchievementTrackingCounter;
+                      AwtRasterBuffer.primaryAchievementTrackingCounter = AwtRasterBuffer.primaryAchievementTrackingCounter - 1;
                       if (clientControlFlowGuard == 0) {
                         break L30;
                       }
                     }
-                    lb.field_b = lb.field_b - 1;
-                    UiWidget.field_g = UiWidget.field_g - AwtRasterBuffer.field_f;
+                    lb.secondaryAchievementTrackingCounter = lb.secondaryAchievementTrackingCounter - 1;
+                    UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator - AwtRasterBuffer.primaryAchievementTrackingCounter;
                     if (clientControlFlowGuard == 0) {
                       break L30;
                     }
                   }
-                  lb.field_b = lb.field_b + 1;
-                  UiWidget.field_g = UiWidget.field_g + AwtRasterBuffer.field_f;
+                  lb.secondaryAchievementTrackingCounter = lb.secondaryAchievementTrackingCounter + 1;
+                  UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator + AwtRasterBuffer.primaryAchievementTrackingCounter;
                   if (clientControlFlowGuard == 0) {
                     break L30;
                   }
                 }
-                dc.field_a = dc.field_a | UiWidget.field_g + lb.field_b << 17;
+                dc.achievementTrackingBits = dc.achievementTrackingBits | UiWidget.achievementTrackingAccumulator + lb.secondaryAchievementTrackingCounter << 17;
               }
             }
             L44: {
@@ -890,7 +890,7 @@ final class GameplaySession {
                 this.connectivityRebuiltThisTick = false;
                 this.delayedActionCountdown = 300;
                 this.boardClearBonusEligible = false;
-                ra.a(PointerInputListener.field_a ^ 255, -88, PointerInputListener.field_a);
+                ra.recordAchievement(PointerInputListener.field_a ^ 255, -88, PointerInputListener.field_a);
                 if (clientControlFlowGuard == 0) {
                   break L52;
                 }
@@ -1238,7 +1238,7 @@ final class GameplaySession {
         }
         if ((da.a(0, -117)) &&
             (this.score >= 7000)) {
-          ra.a(239, -120, 16);
+          ra.recordAchievement(239, -120, 16);
         }
         return;
     }
@@ -1421,42 +1421,42 @@ final class GameplaySession {
                                 break L11;
                               }
                             }
-                            ra.a(fa.field_f ^ 255, -61, fa.field_f);
+                            ra.recordAchievement(fa.field_f ^ 255, -61, fa.field_f);
                             if (clientControlFlowGuard == 0) {
                               break;
                             }
                           }
-                          ra.a(255 ^ hj.field_b, -84, hj.field_b);
+                          ra.recordAchievement(255 ^ hj.field_b, -84, hj.field_b);
                           if (clientControlFlowGuard == 0) {
                             break;
                           }
                         }
-                        ra.a(255 ^ ac.field_u, -50, ac.field_u);
+                        ra.recordAchievement(255 ^ ac.field_u, -50, ac.field_u);
                         if (clientControlFlowGuard == 0) {
                           break;
                         }
                       }
-                      ra.a(255 ^ kf.field_d, -71, kf.field_d);
+                      ra.recordAchievement(255 ^ kf.field_d, -71, kf.field_d);
                       if (clientControlFlowGuard == 0) {
                         break;
                       }
                     }
-                    ra.a(255 ^ vi.field_E, -115, vi.field_E);
+                    ra.recordAchievement(255 ^ vi.field_E, -115, vi.field_E);
                     if (clientControlFlowGuard == 0) {
                       break;
                     }
                   }
-                  ra.a(255 ^ jj.field_g, -92, jj.field_g);
+                  ra.recordAchievement(255 ^ jj.field_g, -92, jj.field_g);
                   if (clientControlFlowGuard == 0) {
                     break;
                   }
                 }
-                ra.a(255 ^ jg.field_a, -121, jg.field_a);
+                ra.recordAchievement(255 ^ jg.field_a, -121, jg.field_a);
                 if (clientControlFlowGuard == 0) {
                   break;
                 }
               }
-              ra.a(hj.field_b ^ 255, -95, hj.field_b);
+              ra.recordAchievement(hj.field_b ^ 255, -95, hj.field_b);
               break;
             }
           }
@@ -1651,7 +1651,7 @@ final class GameplaySession {
           this.sessionPhase = 5;
           if (this.boardEmptyAtResultStart) {
             ld.spawnPointsPopup(350, 320, 66, 2000);
-            ra.a(eb.field_i ^ 255, methodGuard - 101, eb.field_i);
+            ra.recordAchievement(eb.field_i ^ 255, methodGuard - 101, eb.field_i);
             this.connectivityRebuiltThisTick = false;
           }
           ld.spawnPointsPopup(310, 320, 90, this.resultBonusPoints);
@@ -1776,14 +1776,14 @@ final class GameplaySession {
     private final void resetScoreState(int methodGuard) {
         this.score = 0;
         this.pendingPopupPoints = 0;
-        AwtRasterBuffer.field_f = 3382;
-        UiWidget.field_g = 8801;
+        AwtRasterBuffer.primaryAchievementTrackingCounter = 3382;
+        UiWidget.achievementTrackingAccumulator = 8801;
         ml.field_r = 1385;
-        dc.field_a = 0;
+        dc.achievementTrackingBits = 0;
         oa.field_a = 4703;
         DequeCursor.field_g = 5997;
         kb.field_d = 275;
-        lb.field_b = 935;
+        lb.secondaryAchievementTrackingCounter = 935;
         this.addScore((byte) 127, 0);
         this.addPopupPoints(0, -96);
         gf.matchChainLength = 1;
@@ -1810,7 +1810,7 @@ final class GameplaySession {
             this.renderTutorialPrompt(20);
         }
         if (ArchiveNetworkClient.difficultyStep >= 41) {
-            ra.a(255 ^ PacketBuffer.field_m, -103, PacketBuffer.field_m);
+            ra.recordAchievement(255 ^ PacketBuffer.field_m, -103, PacketBuffer.field_m);
         }
         int nextThemeId = uh.b(16);
         GameScreen.selectedThemeId = nextThemeId;
@@ -1871,7 +1871,7 @@ final class GameplaySession {
         this.sessionPhase = 0;
         try {
           this.gameApplet = ownerApplet;
-          ug.field_c = 0;
+          ug.newAchievementMask = 0;
           ArchiveRequest.pendingActionMarkers.clearNodes((byte) -126);
           this.pendingPopupPoints = 0;
           this.boardMaskOffsetX = -(i.avatarMaskRaster.width >> 1);
@@ -1910,11 +1910,11 @@ final class GameplaySession {
           }
           oa.field_a = 4703;
           kb.field_d = 275;
-          lb.field_b = 935;
-          dc.field_a = 0;
+          lb.secondaryAchievementTrackingCounter = 935;
+          dc.achievementTrackingBits = 0;
           ml.field_r = 1385;
-          UiWidget.field_g = 8801;
-          AwtRasterBuffer.field_f = 3382;
+          UiWidget.achievementTrackingAccumulator = 8801;
+          AwtRasterBuffer.primaryAchievementTrackingCounter = 3382;
           DequeCursor.field_g = 5997;
           this.newActionCount = 0;
           return;

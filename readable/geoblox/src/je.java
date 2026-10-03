@@ -8,31 +8,31 @@ final class je extends IntrusiveNode {
     IntrusiveNode field_f;
     static BufferedRandomAccessFile[] field_h;
 
-    final static void c(byte param0) {
-        p var1 = null;
-        int var2 = Geoblox.clientControlFlowFlag;
+    final static void updateAchievementSubmissions(byte methodGuard) {
+        AchievementSubmission pendingSubmission = null;
+        int unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-            if ((!hj.field_c && null != MouseWheelInput.field_b) &&
+            if ((!hj.achievementMaskReceived && null != MouseWheelInput.field_b) &&
                 (!(!MouseWheelInput.field_b.field_f))) {
-                ra.field_d = MouseWheelInput.field_b.field_j;
-                hj.field_c = true;
-                ug.field_c = ug.field_c & ~ra.field_d;
-                InstrumentPatch.field_p = InstrumentPatch.field_p | ra.field_d;
+                ra.receivedAchievementMask = MouseWheelInput.field_b.field_j;
+                hj.achievementMaskReceived = true;
+                ug.newAchievementMask = ug.newAchievementMask & ~ra.receivedAchievementMask;
+                InstrumentPatch.earnedAchievementMask = InstrumentPatch.earnedAchievementMask | ra.receivedAchievementMask;
             }
-            if (param0 >= -119) {
+            if (methodGuard >= -119) {
                 keyboardListener = (KeyboardInputListener) null;
             }
             if (!fh.c(-91)) {
                 while (true) {
-                    var1 = (p) ((Object) GameplayEntity.field_A.removeFirst((byte) -118));
-                    if (var1 == null) {
+                    pendingSubmission = (AchievementSubmission) ((Object) GameplayEntity.pendingAchievementSubmissions.removeFirst((byte) -118));
+                    if (pendingSubmission == null) {
                         break;
                     }
-                    sj.a(var1, -56, 4);
+                    sj.submitAchievementRecord(pendingSubmission, -56, 4);
                 }
             }
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "je.C(" + param0 + ')');
+        } catch (RuntimeException achievementSubmissionFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) achievementSubmissionFailure), "je.C(" + methodGuard + ')');
         }
     }
 
@@ -84,7 +84,7 @@ final class je extends IntrusiveNode {
     public static void a(byte param0) {
         keyboardListener = null;
         if (param0 <= 49) {
-            je.c((byte) -123);
+            je.updateAchievementSubmissions((byte) -123);
             field_h = null;
             return;
         }
